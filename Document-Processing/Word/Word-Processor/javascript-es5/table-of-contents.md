@@ -27,13 +27,14 @@ Document Editor exposes an API to insert table of contents at cursor position pr
 
 The following code illustrates how to insert table of content in Document Editor.
 
-```ts
-let tocSettings: TableOfContentsSettings =
+```js
+var tocSettings = 
 {
       startLevel: 1, endLevel: 3, includeHyperlink: true, includePageNumber: true, rightAlign: true
 };
 //Insert table of contents in Document Editor.
 editor.editorModule.insertTableOfContents(tocSettings);
+
 ```
 
 {% tabs %}
@@ -58,18 +59,19 @@ You can update or edit the table of contents using the built-in context menu sho
 
 You can also do it programmatically by using the exposed API. Refer to the following sample code.
 
-```ts
-let documentEditor: DocumentEditor = new DocumentEditor({ enableEditor: true, isReadOnly: false, enableSelection: true });
+```js
+
+var documentEditor = new ej.documenteditor.DocumentEditor({ enableEditor: true, isReadOnly: false, enableSelection: true });
 documentEditor.appendTo('#DocumentEditor');
 /*Open any existing document*/
 documentEditor.open('');
 //Table of contents settings.
-let tocSettings: TableOfContentsSettings =
-{
+var tocSettings = {
       startLevel: 1, endLevel: 3, includeHyperlink: true, includePageNumber: true, rightAlign: true
 };
 //Insert table of contents in Document Editor.
 documentEditor.editorModule.insertTableOfContents(tocSettings);
+
 ```
 
 >Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.

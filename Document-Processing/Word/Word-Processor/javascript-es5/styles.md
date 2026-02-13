@@ -197,11 +197,11 @@ editor.editorModule.applyStyle('New Linked', true);
 
 You can get the styles in the document using the below code snippet.
 
-```ts
+```js
 //Get paragraph styles
-let paragraphStyles = documentEditor.getStyles('Paragraph');
+var paragraphStyles = documentEditor.getStyles('Paragraph');
 //Get character styles
-let paragraphStyles = documentEditor.getStyles('Character');
+var paragraphStyles = documentEditor.getStyles('Character');
 ```
 
 ## Modify an existing style
@@ -210,8 +210,8 @@ You can modify a existing style with the specified style properties using [`crea
 
 The following illustrate to modify an existing style.
 
-```ts
-let styleJson: any = {
+```js
+var styleJson = {
     "type": "Paragraph",
     "name": "Heading 1",
     "characterFormat": {

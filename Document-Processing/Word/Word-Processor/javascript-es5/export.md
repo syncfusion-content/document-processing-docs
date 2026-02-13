@@ -131,23 +131,19 @@ The following example shows how to export document as text document (.txt).
 
 Document Editor also supports API to store the document into a blob. Refer to the following sample to export document into blob in client-side.
 
-```ts
-import { DocumentEditor, FormatType, WordExport, SfdtExport } from '@syncfusion/ej2-documenteditor';
+```js
 
-//Inject require modules for Export.
-DocumentEditor.Inject(WordExport, SfdtExport);
-
-let documenteditor: DocumentEditor = new DocumentEditor({ enableSfdtExport: true, enableWordExport: true, enableTextExport: true });
+var documenteditor = new ej.documenteditor.DocumentEditor({ enableSfdtExport: true, enableWordExport: true, enableTextExport: true });
 
 documenteditor.appendTo('#DocumentEditor');
 
 documenteditor.open(sfdt);
 
-document.getElementById('export').addEventListener('click', () => {
-    //Export the current document as `Blob` object.
-    documenteditor.saveAsBlob('Docx').then((exportedDocument: Blob) => {
-      // The blob can be processed further
-    });
+document.getElementById('export').addEventListener('click', function () {
+  // Export the current document as `Blob` object.
+  documenteditor.saveAsBlob('Docx').then(function (exportedDocument) {
+    // The blob can be processed further
+  });
 });
 
 ```
@@ -173,57 +169,57 @@ For instance, to export the document as Rich Text Format file, implement an ASP.
 
 In client-side, you can consume this web service and save the document as Rich Text Format (.rtf) file. Refer to the following example.
 
-```ts
-document.getElementById('export').addEventListener('click', () => {
-    //Expor the document as `Blob` object.
-    documenteditor.saveAsBlob('Docx').then((exportedDocument: Blob) => {
+```js
+document.getElementById('export').addEventListener('click', function () {
+    // Expor the document as `Blob` object.
+    documenteditor.saveAsBlob('Docx').then(function (exportedDocument) {
         // The blob can be processed further
-        let formData: FormData = new FormData();
+        var formData = new FormData();
         formData.append('fileName', 'sample.docx');
         formData.append('data', exportedDocument);
         saveAsRtf(formData);
     });
 });
 
-function saveAsRtf(formData: FormData): void {
-    //Send the blob object to server to process further.
-    let httpRequest: XMLHttpRequest = new XMLHttpRequest();
+function saveAsRtf(formData) {
+    // Send the blob object to server to process further.
+    var httpRequest = new XMLHttpRequest();
     httpRequest.open('POST', '/api/DocumentEditor/ExportAsRtf', true);
-    httpRequest.onreadystatechange = () => {
+    httpRequest.onreadystatechange = function () {
         if (httpRequest.readyState === 4) {
             if (httpRequest.status === 200 || httpRequest.status === 304) {
                 if (!(!navigator.msSaveBlob)) {
                     navigator.msSaveBlob(httpRequest.response, 'sample.rtf');
                 } else {
-                    let downloadLink: HTMLAnchorElement = document.createElementNS('http://www.w3.org/1999/xhtml', 'a') as HTMLAnchorElement;
+                    var downloadLink = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
                     download('sample.rtf', 'rtf', httpRequest.response, downloadLink, 'download' in downloadLink);
                 }
             } else {
                 console.error(httpRequest.response);
             }
         }
-    }
+    };
     httpRequest.responseType = 'blob';
     httpRequest.send(formData);
 }
 
-//Download the document in client side.
-function download(fileName: string, extension: string, buffer: Blob, downloadLink: HTMLAnchorElement, hasDownloadAttribute: Boolean): void {
+// Download the document in client side.
+function download(fileName, extension, buffer, downloadLink, hasDownloadAttribute) {
     if (hasDownloadAttribute) {
         downloadLink.download = fileName;
-        let dataUrl: string = window.URL.createObjectURL(buffer);
+        var dataUrl = window.URL.createObjectURL(buffer);
         downloadLink.href = dataUrl;
-        let event: MouseEvent = document.createEvent('MouseEvent');
+        var event = document.createEvent('MouseEvent');
         event.initEvent('click', true, true);
         downloadLink.dispatchEvent(event);
-        setTimeout((): void => {
+        setTimeout(function () {
             window.URL.revokeObjectURL(dataUrl);
             dataUrl = undefined;
         });
     } else {
         if (extension !== 'docx' && extension !== 'xlsx') {
-            let url: string = window.URL.createObjectURL(buffer);
-            let isPopupBlocked: Window = window.open(url, '_blank');
+            var url = window.URL.createObjectURL(buffer);
+            var isPopupBlocked = window.open(url, '_blank');
             if (!isPopupBlocked) {
                 window.location.href = url;
             }
