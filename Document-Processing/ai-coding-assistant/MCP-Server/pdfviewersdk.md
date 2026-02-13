@@ -225,7 +225,7 @@ Here are some effective ways to use [SyncfusionPDFViewerSDKAssistant](https://ww
  * "Show me a code snippet to load a PDF from Google Drive into Syncfusion PDF Viewer using React"
  * "How do I toggle the annotation toolbar using Angular PDF Viewer"
  * "Explain how to open the thumbnail panel programmatically in Syncfusion PDF Viewer using Vue."
- * "Provide code to restrict zoom levels between 150% and 300% in Javascript PDF Viewer."
+ * "Provide code to restrict zoom levels between 150% and 300% in JavaScript PDF Viewer."
 
 ## Troubleshooting
 
