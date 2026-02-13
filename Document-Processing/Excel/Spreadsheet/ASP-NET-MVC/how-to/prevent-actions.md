@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Prevent actions without read-only and protection in ASP.NET MVC Spreadsheet
+# Prevent actions without read-only and protection in Spreadsheet
 
 In Syncfusion ASP.NET MVC Spreadsheet, the [**read-only**](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/protect-sheet#make-cells-read-only-without-protecting-worksheet) feature makes a range of cells, rows, or columns completely non-editable and restricts all spreadsheet actions on those cells. Similarly, the [**sheet protection**](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/protect-sheet#protect-sheet) feature locks the entire sheet and restricts all spreadsheet actions on the sheet. It does not allow actions such as formatting cells, rows, or columns, selecting cells, or inserting hyperlinks—unless these options are explicitly enabled in the [`protectSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/protectsettingsmodel).
 
@@ -42,7 +42,7 @@ The following example demonstrates how to prevent actions such as cut, paste, au
 {% include code-snippet/spreadsheet/asp-net-mvc/prevent-actions-cs1/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="PreventActionController.cs" %}
-{% include code-snippet/spreadsheet/asp-net-mvc/change-active-sheet/PreventActionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/prevent-actions-cs1/PreventActionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

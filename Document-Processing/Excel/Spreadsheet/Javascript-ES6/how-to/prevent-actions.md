@@ -1,15 +1,15 @@
 ---
 layout: post
 title:  Prevent actions without read-only and sheet protection | Syncfusion
-description: Learn here all about to prevent actions without read-only and sheet protection in Typescript Spreadsheet component of Syncfusion Essential JS 2 and more. 
+description: Learn here all about to prevent actions without read-only and sheet protection in TypeScript Spreadsheet component of Syncfusion Essential JS 2 and more. 
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Prevent actions without read-only and protection in Typescript Spreadsheet
+# Prevent actions without read-only and protection in Spreadsheet
 
-In Syncfusion Typescript Spreadsheet, the [**read-only**](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/protect-sheet#make-cells-read-only-without-protecting-worksheet) feature makes a range of cells, rows, or columns completely non-editable and restricts all spreadsheet actions on those cells. Similarly, the [**sheet protection**](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/protect-sheet#protect-sheet) feature locks the entire sheet and restricts all spreadsheet actions on the sheet. It does not allow actions such as formatting cells, rows, or columns, selecting cells, or inserting hyperlinks—unless these options are explicitly enabled in the [`protectSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet/protectsettingsmodel).
+In Syncfusion TypeScript Spreadsheet, the [**read-only**](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/protect-sheet#make-cells-read-only-without-protecting-worksheet) feature makes a range of cells, rows, or columns completely non-editable and restricts all spreadsheet actions on those cells. Similarly, the [**sheet protection**](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/protect-sheet#protect-sheet) feature locks the entire sheet and restricts all spreadsheet actions on the sheet. It does not allow actions such as formatting cells, rows, or columns, selecting cells, or inserting hyperlinks—unless these options are explicitly enabled in the [`protectSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet/protectsettingsmodel).
 
 If your requirement is to prevent actions (such as cut, paste, autofill, formatting, and validation) without locking the entire sheet using the [`protectSheet`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#protectsheet) method or making the cells read-only via the [`setRangeReadOnly`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#setrangereadonly) method, you can achieve this through event-based customization. This approach allows you to restrict specific actions on selected cells while keeping the rest of the sheet fully interactive.
 
@@ -38,15 +38,14 @@ This approach ensures that spreadsheet actions such as cut, paste, autofill, for
 The following example demonstrates how to prevent actions such as cut, paste, autofill, formatting, validation, and conditional formatting for specific cells(in the first and third columns) in the spreadsheet without protecting the sheet or making the cells read-only. You can also restrict additional actions by following the same approach.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/prevent-actions-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/javascript-es6/prevent-actions-cs1/index.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/prevent-actions-cs1/src/main.ts %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es6/prevent-actions-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-
-
+        
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/prevent-actions-cs1" %}
 
 ## See Also
