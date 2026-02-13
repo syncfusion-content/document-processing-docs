@@ -1,0 +1,69 @@
+@Html.EJS().Spreadsheet("spreadsheet").Created("created").CellEdit("cellEdit").ActionBegin("actionBegin").Sheets(sheet =>
+{
+    sheet.Ranges(ranges =>
+    {
+        ranges.DataSource((IEnumerable<object>)ViewBag.DefaultData).Add();
+  
+    }).Columns(column =>
+    {
+        column.Width(130).Add();
+        column.Width(220).Add();
+        column.Width(90).Add();
+        column.Width(140).Add();
+        column.Width(90).Add();
+        column.Width(100).Add();
+        column.Width(100).Add();
+    }).Add();
+}).Render()
+
+
+<script>
+
+    // Columns to be prevented editing.
+    var readOnlyColumns = [0, 2];
+
+    function created() {
+        this.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' },
+            'A1:H1');
+    }
+
+    function cellEdit(args) {
+        var addressRange = ej.spreadsheet.getCellIndexes(args.address.split('!')[1]);
+        // preventing cellEditing from the readOnly columns
+        if (readOnlyColumns.includes(addressRange[1])) {
+            args.cancel = true;
+        }
+    }
+
+    function actionBegin(args) {
+        var address;
+        if (args.action == "clipboard") {
+            address = args.args.eventArgs.pastedRange;
+        }
+        else if (args.action == "autofill") {
+            address = args.args.eventArgs.fillRange;
+        }
+        else if (args.action == "format" || args.action == "validation" || args.action == "conditionalFormat") {
+            address = args.args.eventArgs.range;
+        }
+        else if (args.action == "cut") {
+            address = args.args.copiedRange
+        }
+        if (address) {
+            var addressRange = ej.spreadsheet.getRangeIndexes(address);
+            var colStart = addressRange[1];
+            var colEnd = addressRange[3];
+            // preventing other actions from the readOnly columns
+            for (var col = colStart; col <= colEnd; col++) {
+                if (readOnlyColumns.includes(col)) {
+                    if (args.args.action == "cut") {
+                        args.args.cancel = true;
+                    } else {
+                        args.args.eventArgs.cancel = true;
+                    }
+                    break;
+                }
+            }
+        }
+    }
+</script>
