@@ -109,7 +109,7 @@ The following code example shows how to set `isFullPost` to **false** in the Spr
 
 ```js
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
-  beforeSave: (args) => {
+  beforeSave: function (args) {
       args.isFullPost = false;
   }
 });
