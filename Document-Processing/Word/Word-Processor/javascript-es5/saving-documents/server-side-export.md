@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Server side export in JavaScript (ES5) Document editor control | Syncfusion
+title: Server side export in JavaScript (ES5) Document editor | Syncfusion
 description: Learn here all about Server side export in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Server side export 
@@ -65,4 +65,4 @@ document.getElementById('export').addEventListener('click', function () {
 
 ```
 
-> DocumentEditor object is available in DocumentEditorContainer component(DocumentEditor packaged with toolbar, statusbar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#documenteditor)
+> DocumentEditor object is available in DocumentEditorContainer component(DocumentEditor packaged with toolbar, status bar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#documenteditor)

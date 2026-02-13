@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Table of contents in JavaScript (ES5) Document editor control | Syncfusion
+title: Table of contents in JavaScript (ES5) Document editor | Syncfusion
 description: Learn here all about Table of contents in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table of contents 
@@ -16,7 +16,7 @@ The table of contents in a document is same as the list of chapters at the begin
 
 Document Editor exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
-[`TableOfContentsSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/tableOfContentsSettings/) contain the following properties:
+[`TableOfContentsSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/tableOfContentsSettings) contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
 * **endLevel**: Specifies the end level for constructing table of contents.
 * **includeHyperlink**: Specifies whether the link for headings is included.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resize document editor in JavaScript (ES5) Document editor control | Syncfusion
+title: Resize document editor in JavaScript (ES5) Docx editor | Syncfusion
 description: Learn here all about Resize document editor in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Resize document editor 
@@ -14,7 +14,7 @@ In this article, we are going to see how to change height and width of Document 
 
 ## Change height of Document Editor
 
-DocumentEditorContainer initially render with default height. You can change height of documenteditor using [`height`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documentEditorContainerModel/#height) property, the value which is in pixel.
+DocumentEditorContainer initially render with default height. You can change height of documenteditor using [`height`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documentEditorContainerModel#height) property, the value which is in pixel.
 
 The following example code illustrates how to change height of Document Editor.
 
@@ -29,7 +29,7 @@ Similarly, you can use [`height`](https://ej2.syncfusion.com/javascript/document
 
 ## Change width of Document Editor
 
-DocumentEditorContainer initially render with default width. You can change width of documenteditor using [`width`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documenteditorcontainermodel/#width) property, the value which is in percent.
+DocumentEditorContainer initially render with default width. You can change width of documenteditor using [`width`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documenteditorcontainermodel#width) property, the value which is in percent.
 
 The following example code illustrates how to change width of Document Editor.
 

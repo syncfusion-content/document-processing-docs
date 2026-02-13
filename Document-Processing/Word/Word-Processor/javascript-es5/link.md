@@ -99,7 +99,7 @@ Refer to the following example.
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/hyperlink-cs2" %}
 
-Also Document Editor expose API [`insertHyperlink()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#inserthyperlink)to insert hyperlink.
+Also Document Editor expose API [`insertHyperlink()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#inserthyperlink)to insert hyperlink.
 
 Refer to the following sample code.
 

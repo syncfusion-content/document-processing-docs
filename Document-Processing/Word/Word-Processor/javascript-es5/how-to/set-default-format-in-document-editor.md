@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set default format in document editor in JavaScript (ES5) Document editor control | Syncfusion
+title: Set default format in Docx editor in JavaScript (ES5) Docx Editor | Syncfusion
 description: Learn here all about Set default format in document editor in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Set default format in document editor 
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set default format in document editor in JavaScript (ES5) Document editor control
+# Set default format in document editor in JavaScript (ES5) Docx editor
 
 You can set the default character format, paragraph format and section format in Document editor.
 
