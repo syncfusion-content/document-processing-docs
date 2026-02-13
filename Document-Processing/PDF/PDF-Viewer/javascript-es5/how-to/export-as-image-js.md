@@ -10,14 +10,13 @@ domainurl: ##DomainURL##
 
 # Export pages as images in JavaScript PDF Viewer
 
-Export a single page as a Base64-encoded image using `exportAsImage()` or export a range of pages using `exportAsImages()`.
+Export pages as Base64-encoded images using `exportAsImage()` for a single page or `exportAsImages()` for a range. These APIs return Base64-encoded image strings suitable for further processing or download.
 
 ### Steps to export pages as images
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Create a simple PDF Viewer sample by following the getting-started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/
 
-**Step 2:** Use the following code to export a specified page as a Base64-encoded image or a range of pages as Base64-encoded images.
-
+**Step 2:** Use the following code to export a specified page as a Base64-encoded image or a range of pages as Base64-encoded images. Place the button elements in the HTML and attach event handlers after the viewer is initialized.
 ```
 
  <button id="exportAsImage">ExportAsImage</button>

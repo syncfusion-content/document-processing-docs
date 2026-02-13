@@ -7,17 +7,17 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Modify PDF Form Field Properties in JavaScript PDF Viewer
-You can modify form fields using the **UI** or **API**.
+# Modify PDF form field properties in JavaScript
+Form fields can be modified using the UI or API.
 
-## Modify PDF Form Field Properties using the UI
-- Right click a field → **Properties** to update settings.
+## Modify PDF form field properties using the UI
+- Right-click a field → **Properties** to update settings.
 ![Textbox properties panel](../../../javascript-es6/images/ui-textbox-edit.png)
 - Drag to move; use handles to resize.
 - Use the toolbar to toggle field mode or add new fields.
 
-## Modify PDF Form Field Properties programmatically
-Use [updateFormField()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#updateformfields) to change behavior/data (including position and size):
+## Modify PDF form field properties programmatically
+Use [`updateFormField()`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#updateformfields) to change behavior or data (including position and size):
 
 ```html
 <button id="modifyTextbox">Apply Textbox Changes</button>
@@ -46,12 +46,12 @@ document.getElementById('modifyTextbox').addEventListener('click', function () {
 });
 ```
 
-## Modify PDF Form Field Properties by Field type
+## Modify PDF form field properties by field type
 
 ### Textbox
 - UI: Update value, font, size, colors, border thickness, alignment, max length, multiline.
 ![Textbox properties panel](../../../javascript-es6/images/ui-textbox-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for value, typography, alignment, colors, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for value, typography, alignment, colors, borders.
 
 ```html
 <button id="modifyTextbox">Apply Textbox Changes</button>
@@ -84,7 +84,7 @@ document.getElementById('modifyTextbox').addEventListener('click', function () {
 
 - UI: Tooltip, required, max length, font, appearance.
 ![Password edited from UI](../../../javascript-es6/images/ui-password-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, validation flags, typography, colors, alignment, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, validation flags, typography, colors, alignment, borders.
 ```html
  <button id="modifyPasswordBox">Edit PasswordBox</button>
 ```
@@ -117,7 +117,7 @@ document.getElementById('modifyPasswordBox').addEventListener('click', function 
 ### CheckBox
 - UI: Toggle checked state.
 ![CheckBox edited from UI](../../../javascript-es6/images/ui-checkbox-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for isChecked, tooltip, colors, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for isChecked, tooltip, colors, borders.
 ```html
 <button id="modifyCheckbox">Modify CheckBox</button>
 ```
@@ -141,9 +141,9 @@ document.getElementById('modifyCheckbox').addEventListener('click', function () 
 ```
 
 ### RadioButton
-•	UI: Set selected item in a group (same Name).
+- UI: Set selected item in a group (same Name).
 ![RadioButton edited from UI](../../../javascript-es6/images/ui-radiobutton-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
 ```html
 <button id="editRadio">Modify RadioButton</button>
 ```
@@ -162,9 +162,9 @@ document.getElementById('editRadio').addEventListener('click', function () {
 ```
 
 ### ListBox
-•	UI: Add/remove items, set selection, adjust fonts/colors.
+- UI: Add/remove items, set selection, adjust fonts/colors.
 ![ListBox edited from UI](../../../javascript-es6/images/ui-listbox-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
 ```html
 <button id="editListBox">Edit ListBox</button>
 ```
@@ -195,9 +195,9 @@ document.getElementById('editListBox').addEventListener('click', function () {
 ```
 
 ### DropDown
-•	UI: Add/remove items, default value, appearance.
+- UI: Add/remove items, default value, appearance.
 ![DropDown edited from UI](../../../javascript-es6/images/ui-dropdown-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
 ```html
 <button id="editDropDown">Edit DropDown</button>
 ```
@@ -227,9 +227,9 @@ document.getElementById('editDropDown').addEventListener('click', function () {
 ```
 
 ### Signature Field
-•	UI: Tooltip, thickness, indicator text, required/visibility.
+- UI: Tooltip, thickness, indicator text, required/visibility.
 ![Signature field edited from UI](../../../javascript-es6/images/ui-signature-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 ```html
 <button id="editSignature">Edit Signature</button>
 ```
@@ -254,9 +254,9 @@ document.getElementById('editSignature').addEventListener('click', function () {
 ```
 
 ### Initial Field
-•	UI: Tooltip, indicator text, thickness, required/visibility.
+- UI: Tooltip, indicator text, thickness, required/visibility.
 ![Initial field edited from UI](../../../javascript-es6/images/ui-initial-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 ```html
 <button id="editInitial">Edit Initial</button>
 ```
@@ -287,7 +287,7 @@ document.getElementById('editInitial').addEventListener('click', function () {
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./create-form-fields)
-- [Remove form Fields](./remove-form-fields)
+- [Remove form fields](./remove-form-fields)
 - [Style form fields](./customize-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)

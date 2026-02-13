@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show custom items in the Custom Stamp dropdown
+# Show custom items in the custom stamp dropdown
 
 ### Overview
 
 Add and display custom items in the Custom Stamp dropdown using JavaScript. This enables users to quickly apply personalized stamps in the PDF Viewer.
 
-### Steps to show custom items in the Custom Stamp dropdown
+### Steps to show custom items in the custom stamp dropdown
 
-**Step 1:** Follow the steps in the [Get started with JavaScript ES5 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) guide to create a sample.
+**Step 1:** Create a basic Angular PDF Viewer sample using the getting started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started
 
 **Step 2:** Configure custom stamp settings
 
-Use `customStampSettings` to specify the custom stamps that should appear in the dropdown menu.
+Use `customStampSettings` to define stamps that appear in the dropdown. The `customStampImageSource` value accepts a Base64 data URI or an absolute URL pointing to an image.
 
 ```js
 

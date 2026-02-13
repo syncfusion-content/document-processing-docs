@@ -31,10 +31,10 @@ The following flags are supported in the PDF Viewer:
 - [isPrint](#control-print-behavior)  
   Controls whether the form field appears when the document is printed.
 
-## Key Actions
+## Key actions
 
-### Make Fields Read Only
-Use the **isReadOnly** property to prevent users from modifying a form field through the UI. This is useful for displaying pre filled or calculated values that should not be changed by the user.
+### Make fields read only
+Use the `isReadOnly` property to prevent users from modifying a form field through the UI. This is useful for displaying pre-filled or calculated values that should not be changed by the user.
 
 ```js
 // Use this setting to make Read-only as Default for new Textbox fields
@@ -59,8 +59,8 @@ pdfviewer.documentLoad = function () {
 };
 ```
 
-### Mark Fields as Required
-Use the **isRequired** property to mark form fields as mandatory. To enforce this constraint, enable form field validation and validate fields before allowing actions such as printing or downloading.
+### Mark fields as required
+Use the `isRequired` property to mark form fields as mandatory. To enforce this constraint, enable form field validation and validate fields before allowing actions such as printing or downloading.
 
 - Enable validation using [enableFormFieldsValidation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enableformfieldsvalidation)
 - [Validate fields](./form-validation) using [validateFormFields()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#validateformfields) 
@@ -94,8 +94,8 @@ pdfviewer.documentLoad = function () {
 pdfviewer.appendTo('#pdfViewer'); // Ensure an element with id="pdfViewer" exists in your HTML
 ```
 
-### Control Print Behavior
-Use the **isPrint** property to control whether a form field appears in the printed output of the PDF document.
+### Control print behavior
+Use the `isPrint` property to control whether a form field appears in the printed output of the PDF document.
 
 ```js
 // 1) Default for new signature fields
@@ -119,22 +119,22 @@ pdfviewer.documentLoad = function () {
 pdfviewer.appendTo('#pdfViewer'); // Ensure <div id="pdfViewer"></div> exists
 ```
 
-N> Printing can be triggered programmatically using **pdfviewer.print()**. Form fields with **isPrint: false** are excluded from the printed output.
+Note: Printing can be triggered programmatically using `pdfviewer.print()`. Form fields with `isPrint: false` are excluded from the printed output.
 
-## Apply PDF Form Field Flags Using the UI
+## Apply PDF form field flags using the UI
 
 **Steps**
 1. Enable **Form Designer** mode in the PDF Viewer.  
 2. Select an existing form field on the PDF page.  
-3. The **Right click To open context menu - > Properties** popover is displayed.
+3. The right-click context menu → Properties popover is displayed.
 4. Configure the required constraint options.  
-5. Click “Ok” and Close the properties popover to apply the changes.  
+5. Click OK to close the properties popover and apply the changes.  
 
 Changes are reflected immediately in the viewer.
 
-[Applying form field flags using the UI](../../javascript-es6/images/formfields-flag.gif) 
+[Applying form field flags using the UI](../../javascript-es6/images/formfields-flag.gif)
 
-## Apply PDF Form Field Flags Programmatically
+## Apply PDF form field flags programmatically
 
 You can apply or modify form field flags in the following ways.
 

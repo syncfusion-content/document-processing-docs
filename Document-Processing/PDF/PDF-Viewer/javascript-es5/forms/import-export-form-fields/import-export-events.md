@@ -7,23 +7,23 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# PDF Form Import and Export Events in JavaScript
+# PDF form import and export events in JavaScript
 
-Import/Export events let you **track and customize the entire life cycle** of form data being imported into or exported from the PDF Viewer.
+Import/export events let users track and customize the lifecycle of form data imported into or exported from the PDF Viewer.
 Use these events to:
-- Validate inputs before processing.
-- Show progress indicators.
-- Log audit trails.
-- Block operations based on business rules.
+- validate inputs before processing
+- show progress indicators
+- log audit trails
+- block operations based on business rules
 
 Each event provides detailed context through typed event arguments such as [ImportStartEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/importstarteventargs), [ImportSuccessEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/importsuccesseventargs), [ImportFailureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/importfailureeventargs), [ExportStartEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/exportstarteventargs), [ExportSuccessEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/exportsuccesseventargs), and [ExportFailureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/exportfailureeventargs).
 
-## Import Events
-- [importStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importstart) — Fires when an import begins.
-- [importSuccess](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importsuccess) — Fires when form fields are successfully imported.
-- [importFailed](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importfailed) — Fires if the import fails.
+## Import events
+- [`importStart`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importstart) — Fires when an import begins.
+- [`importSuccess`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importsuccess) — Fires when form fields are successfully imported.
+- [`importFailed`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importfailed) — Fires if the import fails.
 
-**Example: Handle Import Events**
+**Example: Handle import events**
 
 ```js
 // ...viewer initialization...
@@ -41,12 +41,12 @@ viewer.importFailed = function (args) {
 };
 ```
 
-## Export Events
-- [exportStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportstart) — Fires when an export begins.
-- [exportSuccess](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportsuccess) — Fires when form fields are successfully exported.
-- [exportFailed](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportfailed) — Fires if the export fails.
+## Export events
+- [`exportStart`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportstart) — Fires when an export begins.
+- [`exportSuccess`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportsuccess) — Fires when form fields are successfully exported.
+- [`exportFailed`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportfailed) — Fires if the export fails.
 
-**Example: Handle Export Events**
+**Example: Handle export events**
 
 ```js
 // ...viewer initialization...
@@ -64,9 +64,9 @@ viewer.exportFailed = function (args) {
 };
 ```
 
-## Key Notes
-- importStart, importSuccess, importFailed cover the full import life cycle.
-- exportStart, exportSuccess, exportFailed cover the full export life cycle.
+## Key notes
+- `importStart`, `importSuccess`, `importFailed` cover the full import lifecycle.
+- `exportStart`, `exportSuccess`, `exportFailed` cover the full export lifecycle.
 
 ## See also
 
@@ -79,5 +79,4 @@ viewer.exportFailed = function (args) {
 - [Import form fields](./import-form-fields)
 - [Export form fields](./export-form-fields)
 - [Form validation](../form-validation)
-- [Form fields API](../form-fields-api)
 - [Form fields API](../form-fields-api)

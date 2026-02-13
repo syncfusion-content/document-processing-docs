@@ -7,17 +7,17 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Remove PDF Form Fields from a PDF in JavaScript
+# Remove PDF form fields from a PDF in JavaScript
 
-## Remove Form Fields Using the UI
+## Remove form fields using the UI
 **Steps:**
 1.	Enable **Form Designer mode**.
 2.	Select the form field.
 3.	Click **Delete** in the toolbar or press the **Delete** key.
 ![Form Designer toolbar with Delete icon](../../../javascript-es6/images/ui-del-formfields.png)
 
-## Remove Form Fields Programmatically
-Use [deleteFormField()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formdesigner#deleteformfield) with a field reference or ID.
+## Remove form fields programmatically
+Use [`deleteFormField()`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formdesigner#deleteformfield) with a field reference or ID.
 
 ```html
 <button id="deleteAllFields">Delete Form Fields</button>

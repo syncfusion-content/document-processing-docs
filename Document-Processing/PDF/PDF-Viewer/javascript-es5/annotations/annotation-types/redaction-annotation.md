@@ -16,9 +16,9 @@ Redaction annotations permanently remove sensitive content from a PDF. You can d
 
 ## Add Redaction Annotation
 
-### Add redaction annotation in UI
+### Add redaction annotations in UI
 
-- Use the Redaction tool from the toolbar to draw over content to hide.
+- Use the Redaction tool from the toolbar to draw over content to hide it.
 - Redaction marks can show overlay text (for example, "Confidential") and can be styled.
 
 ![Drawing a redaction annotation on the page](../../Redaction/redaction-annotations-images/adding-redaction-annotation.png)
@@ -29,15 +29,15 @@ Redaction annotations are interactive:
 - Resizable
 ![Resizing a redaction annotation](../../Redaction/redaction-annotations-images/resizing-redaction-annotation.png)
 
-You can also add redaction from the context menu by selecting content and choosing Redact Annotation.
+You can also add redaction annotations from the context menu by selecting content and choosing Redact Annotation.
 
 ![Context menu showing Redact Annotation option](../../Redaction/redaction-annotations-images/redact-text-context-menu.png)
 
-N> Ensure the Redaction tool is included in the toolbar. See [RedactionToolbar](../../Redaction/toolbar.md)for configuration.
+N> Ensure the Redaction tool is included in the toolbar. See [RedactionToolbar](../../Redaction/toolbar.md) for configuration.
 
-### Add a redaction annotation programmatically
+### Add redaction annotations programmatically
 
-Use the addAnnotation method with the Redaction type.
+Use the `addAnnotation` method with the Redaction type to add redaction annotations programmatically.
 
 ```html
 <button id="addRedactAnnot">Add Redaction Annotation</button>
@@ -67,11 +67,11 @@ viewer.annotationAdd = (args) => {
 };
 ```
 
-## Edit Redaction Annotation
+## Edit Redaction Annotations
 
-### Edit redaction annotation in UI
+### Edit redaction annotations in UI
 
-You can select, move, and resize Redaction annotations directly in the viewer. Use the context menu for additional actions.
+Use the viewer to select, move, and resize Redaction annotations. Use the context menu for additional actions.
 
 #### Edit the properties of redaction annotations in UI
 
@@ -80,7 +80,7 @@ Use the property panel or context menu Properties to change overlay text, font, 
 ![Redaction Property Panel Icon](../../Redaction/redaction-annotations-images/redaction-property-panel-icon.png)
 ![Redaction Property Panel via Context Menu](../../Redaction/redaction-annotations-images/redaction-property-panel-via-context-menu.png)
 
-### Edit a redaction annotation programmatically
+### Edit redaction annotations programmatically
 
 Use editAnnotation to modify overlay text, colors, fonts, etc.
 

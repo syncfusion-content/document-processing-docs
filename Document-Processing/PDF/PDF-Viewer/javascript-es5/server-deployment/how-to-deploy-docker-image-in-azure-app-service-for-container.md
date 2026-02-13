@@ -41,8 +41,10 @@ az webapp create --resource-group pdfviewerresourcegroup --plan pdfviewerappserv
 
 **Step 4:** Browse to the app.
 
-Open the app at http://<app_name>.azurewebsites.net (for example, http://pdfviewerappservice.azurewebsites.net). Verify the API at http://pdfviewerappservice.azurewebsites.net/api/pdfviewer to confirm a default GET response.
+Open the app at `https://<app_name>.azurewebsites.net` (for example, `https://pdfviewerappservice.azurewebsites.net`). Use HTTPS in production. Verify the server API returns a default response at `https://<app_name>.azurewebsites.net/api/pdfviewer`.
 
-Append the service endpoint (for example, http://pdfviewerappservice.azurewebsites.net/api/pdfviewer) to the PDF Viewer client’s serviceUrl. Refer this [Getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/)
+Append the service endpoint (for example, `https://pdfviewerappservice.azurewebsites.net/api/pdfviewer`) to the PDF Viewer client's `serviceUrl`.
 
-For production guidance, see [Microsoft Azure App Service for containers](https://docs.microsoft.com/azure/app-service/containers/quickstart-multi-container)
+See the PDF Viewer getting started guide for client configuration: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/
+
+For guidance on deploying multi-container apps to Azure App Service for Containers, see the Azure quickstart: https://docs.microsoft.com/azure/app-service/containers/quickstart-multi-container

@@ -37,7 +37,7 @@ This guide explains how to create the PDF Viewer component and configure its fea
 {% endhighlight %}
 {% endtabs %}
 
-N> We have provided the support to dynamically change the [serviceURL](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl). So, after changing the `serviceURL` dynamically, you need invoke the `pdfViewer.dataBind()` method to update the `serviceURL` quickly. This will effectively change the `serviceURL` dynamically. Ensure that this step is performed after version 23.1.36.
+N> The PDF Viewer supports dynamically changing the [serviceURL](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl). After changing `serviceUrl` at runtime, call `pdfViewer.dataBind()` to apply the new value. This behavior applies to versions after 23.1.36.
 document.getElementById('load').addEventListener('click', function () {
    pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
    pdfViewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
@@ -45,7 +45,7 @@ document.getElementById('load').addEventListener('click', function () {
    pdfViewer.load(pdfViewer.documentPath, null);
 });
 
-N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
+N> The demo Web API hosted at https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer is provided for evaluation only. For production, host a web service with appropriate server configuration. See the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for reference. Standalone mode is recommended for client-side rendering.
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs1" %}
 
@@ -102,7 +102,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 });
 ```
 
-N> When configuring the server-backed PDF viewer, it's essential to understand that there is no need to include the pdfium.js and pdfium.wasm files. Unlike the standalone PDF viewer, which relies on these files for local rendering, the server-backed PDF viewer fetches and renders PDFs directly from the server. Consequently, you can exclude the copy command for deployment process, as they are not required to load and display PDFs in this context.
+N> The server-backed PDF Viewer does not require `pdfium.js` and `pdfium.wasm` files. Those files are used by the standalone viewer for client-side rendering; server-backed setups render PDFs on the server and therefore do not need to include them in deployment.
 
 > Refer to the [JavaScript PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk) for an overview of capabilities. Explore the [JavaScript PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/default.html) to see core features in action.
 

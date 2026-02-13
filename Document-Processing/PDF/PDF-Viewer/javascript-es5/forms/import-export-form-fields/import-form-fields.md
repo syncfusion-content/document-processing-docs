@@ -16,9 +16,9 @@ The **PDF Viewer** lets you import values into interactive form fields in the cu
 - [JSON](#import-json)
 
 ## API to use
-- [importFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format)
+- [`importFormFields(sourceOrObject, format)`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importformfields) — Imports form data into the currently loaded PDF. The `sourceOrObject` parameter accepts a file path or URL, a file stream, or a JavaScript object; the `format` parameter accepts `FDF`, `XFDF`, or `JSON`.
 
-N>If you’re using a **server-backed viewer**, set serviceUrl before importing.
+Note: For server-backed viewers, set `serviceUrl` before importing. The method triggers import events (`importStart`, `importSuccess`, `importFailed`); see the import/export events page for recommended handling.
 
 ### Import FDF
 
@@ -74,7 +74,7 @@ document.getElementById('importJson').addEventListener('click', function () {
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Export form fields](./export-form-fields)
 - [Import Export Events](./import-export-events)
-- [Create Edit form fields](../overview-create-forms)
+- [Create form fields](../overview-create-forms)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
 - [Add custom data to form fields](../custom-data)
