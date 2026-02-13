@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Extract pages in Angular PDF Viewer
 
-The PDF Viewer component lets you extract pages from a document using the Extract Pages option in the Organize Pages UI, and also control extraction programmatically. The Extract Pages tool is available by default in Organize Pages.
+The PDF Viewer component enables users to extract pages from a document using the Extract Pages option in the Organize Pages UI and to control extraction programmatically. The Extract Pages tool is available by default in Organize Pages.
 
 ## Extract Pages in Organize Pages
 
@@ -37,7 +37,7 @@ You can extract by typing page numbers/ranges or by selecting thumbnails.
 
 ![Extract Pages with selected thumbnails](../images/extract-page-selected-thumbnail.png)
 
- N> Page numbers are 1-based (first page is 1). Invalid or out-of-range entries are ignored.
+Note: Page numbers are 1-based (first page is 1). Invalid or out-of-range entries are ignored.
 
 ## Extraction options (checkboxes)
 

@@ -6,18 +6,18 @@ description: Learn here all about how to install the packages required for versi
 
 # Install packages required for versions below 12
 
-For Angular version below 12, you can use the legacy (ngcc) package of the Syncfusion<sup style="font-size:70%">&reg;</sup> Angular components. To download the `ngcc` package use the below.
+For Angular versions below 12, use the legacy (ngcc) package of the Syncfusion<sup style="font-size:70%">&reg;</sup> Angular components. To download the `ngcc` package, use the commands below.
 
-Add [`@syncfusion/ej2-angular-pdfviewer@ngcc`](https://www.npmjs.com/package/@syncfusion/ej2-angular-pdfviewer/v/20.2.38-ngcc) package to the application.
+Add [`@syncfusion/ej2-angular-pdfviewer@ngcc`](https://www.npmjs.com/package/@syncfusion/ej2-angular-pdfviewer/v/20.2.38-ngcc) to the application:
 
 ```bash
 npm install @syncfusion/ej2-angular-pdfviewer@ngcc --save
 ```
 
-To mention the ngcc package in the `package.json` file, add the suffix `-ngcc` with the package version as below.
+To reference the ngcc package in the `package.json` file, append the `-ngcc` suffix to the package version:
 
 ```bash
-@syncfusion/ej2-angular-pdfviewer:"20.2.38-ngcc"
+"@syncfusion/ej2-angular-pdfviewer": "20.2.38-ngcc"
 ```
 
->Note: If the ngcc tag is not specified while installing the package, the Ivy Library Package will be installed and this package will throw a warning.
+N> If the `-ngcc` tag is not specified during installation, the Ivy library package will be installed. In View Engine projects this may produce compatibility warnings; use the `-ngcc` package for Angular versions below 12.

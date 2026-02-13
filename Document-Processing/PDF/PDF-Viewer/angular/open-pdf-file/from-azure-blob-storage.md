@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open PDF from Azure Blob Storage
 
-The Angular PDF Viewer component supports loading PDF files from Azure Blob Storage using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
+The Angular PDF Viewer supports loading PDF files from Azure Blob Storage using either the standalone or server-backed viewer. The following steps demonstrate both approaches.
 
 ## Using the standalone PDF Viewer
 
@@ -18,13 +18,13 @@ Follow these steps to load a PDF from Azure Blob Storage in the standalone PDF V
 
 **Step 1:** Create a Simple PDF Viewer Sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will give you a basic setup of the PDF Viewer component.
+Follow the getting-started guide in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a basic PDF Viewer sample in Angular.
 
 **Step 2:** Modify the `src/app/app.component.ts` File in the Angular Project
 
 1. Add the following private properties to the `AppComponent` class, and assign the values from the configuration to the corresponding properties
 
-N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account and **Your container name in Azure** with the actual container name and **Your Blob name in Azure** with the actual container name.
+N> Replace **Your account name in Azure** with the Azure storage account name, **Your container name in Azure** with the container name, and **Your Blob name in Azure** with the blob name.
 
 ```typescript
 private accountName: string = "*Your account name in Azure*";
@@ -94,7 +94,7 @@ Follow these steps to load a PDF from Azure Blob Storage using the server-backed
 
 **Step 1:** Create a Simple PDF Viewer Sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will give you a basic setup of the PDF Viewer component.
+Follow the getting-started guide in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a basic PDF Viewer sample in Angular.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -177,7 +177,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace the placeholders with your actual values: Azure storage connection string and container name.
+Note: Do not store secrets in source control. Use secure configuration options such as Azure Key Vault, environment variables, or a secrets manager to hold connection strings.
 
 **Step 3:** Configure the PDF Viewer component
 
@@ -211,6 +211,6 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 ```
 
-N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
+N> The `Azure.Storage.Blobs` NuGet package must be installed in your application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage).

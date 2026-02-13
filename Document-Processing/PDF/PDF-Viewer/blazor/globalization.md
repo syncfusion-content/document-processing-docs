@@ -14,15 +14,15 @@ documentation: ug
 The [Blazor SfPdfViewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component can be localized to display culture-specific text. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) guide for steps to add culture resource files, register localization services, and set the current culture.
 
 N>
-* Provide localized string resources for the viewer’s UI texts (such as toolbar tooltips, dialog messages).
-* Ensure the app culture (CurrentCulture and CurrentUICulture) is set before the component renders for correct resource lookup.
-* Localization applies to the viewer UI; it does not translate the PDF document content.
+* Provide localized string resources for the viewer’s UI text (for example, toolbar tooltips and dialog messages).
+* Ensure the application culture (`CurrentCulture` and `CurrentUICulture`) is set before the component renders for correct resource lookup.
+* Localization applies to the viewer UI only; it does not translate PDF document content.
 
 ## Right to Left
 
-To enable right-to-left (RTL) rendering for the viewer UI, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableRtl) property to true. This mirrors the layout and aligns UI elements for RTL languages such as Arabic, Hebrew, Azerbaijani, Persian, and Urdu. The following code snippet demonstrates how to enable RTL rendering.
+To enable right-to-left (RTL) rendering for the viewer UI, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableRtl) property to `true`. This mirrors the layout and aligns UI elements for RTL languages such as Arabic, Hebrew, Azerbaijani, Persian, and Urdu. The following code snippet demonstrates how to enable RTL rendering.
 
-By setting EnableRtl to `true`, the control will adjust its layout and appearance to align text, icons, and other elements from right to left, providing an optimized user experience for RTL language users.
+When `EnableRtl` is `true`, the component adjusts its layout and appearance to align text, icons, and other elements from right to left, providing an optimized experience for RTL language users.
 
 ```cshtml
 

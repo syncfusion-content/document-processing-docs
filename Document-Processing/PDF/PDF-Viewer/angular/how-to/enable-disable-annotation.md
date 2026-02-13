@@ -10,9 +10,10 @@ domainurl: ##DomainURL##
 
 # How to enable and disable the delete button based on annotation selection and unselection events
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer, enable and disable the delete button while selecting and unselecting annotations by using the **annotationSelect** and **annotationUnSelect** events.
+This article demonstrates how to enable and disable a toolbar delete button in response to annotation selection and unselection events using `annotationSelect` and `annotationUnSelect`.
 
-Here is an example of how you can enable and disable the delete button while selecting and unselecting annotations:
+Ensure the viewer's annotation module is available before invoking `this.pdfviewerControl.annotation.deleteAnnotation()`.
+Example:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}

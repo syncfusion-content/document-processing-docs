@@ -18,20 +18,20 @@ The PDF Viewer provides options to add measurement annotations. The supported me
 * Radius
 * Volume
 
-![Measurement annotations overview](../images/calibrate_annotation.png)
+![PDF Viewer measurement annotations toolbar overview](../images/calibrate_annotation.png)
 
 ## Adding measurement annotations to the PDF document
 
-The measurement annotations can be added to the PDF document using the annotation toolbar.
+Measurement annotations can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
 * Click the **Measurement Annotation** drop-down button. The pop-up lists available measurement annotation types.
 * Select a measurement type to enable its annotation mode.
 * Measure and add annotations on the pages of the PDF document.
 
-When in pan mode, selecting a measurement annotation switches the PDF Viewer to text select mode.
+When the viewer is in pan mode, selecting a measurement annotation switches it to text selection mode.
 
-![CalibrateTool](../images/calibrate_tool.png)
+![Annotation toolbar showing measurement tools](../images/calibrate_tool.png)
 
 The following example switches to distance annotation mode.
 
@@ -114,7 +114,7 @@ export class AppComponent implements OnInit {
 
 ## Add a measurement annotation to the PDF document Programmatically
 
-The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here is an example showing how to add measurement annotations programmatically using addAnnotation():
 
@@ -511,35 +511,35 @@ The fill color, stroke color, thickness, and opacity can be edited using the Edi
 
 The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
-![CalibrateFillColor](../images/calibrate_fillcolor.png)
+![Edit Color palette for measurement annotations](../images/calibrate_fillcolor.png)
 
 ### Edit stroke color
 
 The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
 
-![CalibrateStrokeColor](../images/calibrate_stroke.png)
+![Edit Stroke Color palette for measurement annotations](../images/calibrate_stroke.png)
 
 ### Edit thickness
 
 Edit border thickness using the range slider provided in the Edit Thickness tool.
 
-![CalibrateThickness](../images/calibrate_thickness.png)
+![Thickness slider in the Edit Thickness tool](../images/calibrate_thickness.png)
 
 ### Edit opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![CalibrateOpacity](../images/calibarte_opacity.png)
+![Opacity slider in the Edit Opacity tool](../images/calibarte_opacity.png)
 
 ### Editing the line properties
 
 Line-based measurement annotations (distance and perimeter) have additional options in the Line Properties window. Open it by right-clicking the annotation and selecting Properties from the context menu.
 
-![CalibrateProperty](../images/calibrate_lineprop.png)
+![Line properties dialog for measurement annotations](../images/calibrate_lineprop.png)
 
 ## Set default properties during control initialization
 
-Default properties for measurement annotations can be set before creating the control using distanceSettings, perimeterSettings, areaSettings, radiusSettings, and volumeSettings.
+Default properties for measurement annotations can be set before creating the control using `distanceSettings`, `perimeterSettings`, `areaSettings`, `radiusSettings`, and `volumeSettings`.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -633,9 +633,9 @@ export class AppComponent implements OnInit {
 
 The scale ratio and unit of measurement can be modified using the scale ratio option provided in the context menu of the PDF Viewer control.
 
-![CalibrateScaleRatio](../images/calibrate_scaleratio.png)
+![Scale ratio option in the context menu](../images/calibrate_scaleratio.png)
 
-The Units of measurements support for the measurement annotations in the PDF Viewer are
+The PDF Viewer supports the following measurement units:
 
 * Inch
 * Millimeter
@@ -644,7 +644,7 @@ The Units of measurements support for the measurement annotations in the PDF Vie
 * Pica
 * Feet
 
-![CalibrateScaleDialog](../images/calibrate_scaledialog.png)
+![Scale ratio settings dialog for measurement annotations](../images/calibrate_scaledialog.png)
 
 ## Setting default scale ratio settings during control initialization
 

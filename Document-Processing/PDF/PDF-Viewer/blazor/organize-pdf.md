@@ -9,9 +9,9 @@ documentation: ug
 
 # Organize pages in Blazor PDF Viewer
 
-The Blazor PDF Viewer component provides an Organize Pages panel that helps you prepare documents before sharing them. Use it to tidy scanned files, move pages into the right order, and duplicate important content without leaving the viewer.
+The SfPdfViewer component provides an Organize Pages panel that helps prepare documents before sharing. Use it to tidy scanned files, move pages into the correct order, and duplicate content without leaving the viewer.
 
-To open the Organize Pages panel, load a document, ensure that the Organize Pages toolbar item is enabled, and choose **Organize Pages** from the left vertical toolbar. The document must allow page-level edits; otherwise, the toolbar item is hidden.
+To open the Organize Pages panel, load a document, ensure that the Organize Pages toolbar item is enabled, and choose **Organize Pages** from the left vertical toolbar. The document must allow page-level edits for the toolbar item to be available.
 
 The Organize Pages panel supports the following actions:
 
@@ -21,11 +21,11 @@ The Organize Pages panel supports the following actions:
 * **Delete pages**: Remove pages that are no longer needed.
 * **Duplicate pages**: Duplicate selected pages to reuse content elsewhere in the document.
 * **Import a PDF document**: Merge the current document with pages from another PDF file.
-* **Extract Pages**: Extract the current document pages as a PDF file.
+* **Extract pages**: Extract pages from the current document as a separate PDF file.
 * **Select all pages**: Apply bulk actions, such as rotation or deletion, to every page.
 * **Save updates**: Review changes in real time and use **Save** or **Save As** to download the revised document.
 
-After completing the changes, apply them by selecting **Save** to overwrite the current document or **Save As** to download a new copy that retains the updated page order.
+After completing the changes, select **Save** to overwrite the current document or **Save As** to download a new copy that retains the updated page order.
 
 For a full guide to Organize Pages in Blazor, see the feature landing page: [Organize pages in Blazor PDF Viewer](./organize-pages/overview).
 
