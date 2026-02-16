@@ -16,7 +16,7 @@ This page shows how to load and display PDF documents in the Syncfusion React PD
 
 This simple example demonstrates the minimal steps to show a PDF document in the viewer. It uses the [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentpath) API to point to a publicly accessible PDF URL. For more advanced scenarios (server processing, streaming), see the Server‑backed tutorial.
 
-1. Create a small React app with the PDF Viewer (see getting-started).
+1. Create a small React app with the PDF Viewer (see [getting-started](./getting-started-overview)).
 2. Set `documentPath` to a publicly accessible URL.
 
 Example (TypeScript / React):
