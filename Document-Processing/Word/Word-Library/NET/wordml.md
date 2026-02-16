@@ -19,7 +19,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/refs/heads/main/WordML-conversion/Convert-Word-to-WordML/.NET/Convert-Word-to-WordML/Program.cs" %}
-FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+
 //Loads an existing Word document into DocIO instance
 using (FileStream fileStreamPath = new FileStream(Path.GetFullPath(@"Data/Template.docx"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
 {
@@ -66,9 +66,9 @@ The following code example shows how to convert a WordML file into Word document
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/refs/heads/main/WordML-conversion/Convert-WordML-to-Word/.NET/Convert-WordML-to-Word/Program.cs" %}
-FileStream fileStreamPath = new FileStream("Template.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+
 //Loads an existing WordML file into DocIO instance
-using (FileStream fileStreamPath = new FileStream(Path.GetFullPath(@"Data/Template.xml"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+using (FileStream fileStreamPath = new FileStream(Path.GetFullPath(@"Data/Input.xml"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
 {
     using (WordDocument document = new WordDocument(fileStreamPath, FormatType.WordML))
     {
@@ -86,7 +86,7 @@ using (FileStream fileStreamPath = new FileStream(Path.GetFullPath(@"Data/Templa
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads a WordML file
-WordDocument document = new WordDocument("Template.xml");
+WordDocument document = new WordDocument("Input.xml");
 //Saves the document as Word document
 document.Save("WordMLToWord.docx", FormatType.Docx);
 //Closes the document
@@ -95,7 +95,7 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads a WordML file
-Dim document As New WordDocument("Template.xml")
+Dim document As New WordDocument("Input.xml")
 'Saves the document as Word document
 document.Save("WordMLToWord.docx", FormatType.Docx)
 'Closes the document
