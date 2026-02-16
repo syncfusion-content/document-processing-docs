@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set default format in DOCX editor in JavaScript (ES5) DOCX Editor | Syncfusion
+title: Set default format in DOCX editor in JavaScript (ES5) | Syncfusion
 description: Learn here all about Set default format in document editor in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Set default format in document editor 

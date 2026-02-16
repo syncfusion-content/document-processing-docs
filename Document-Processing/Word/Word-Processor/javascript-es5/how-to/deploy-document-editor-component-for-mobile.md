@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploy DOCX editor for mobile in JavaScript (ES5) DOCX Editor | Syncfusion
+title: Deploy DOCX editor for mobile in JavaScript (ES5) | Syncfusion
 description: Learn here all about Deploy document editor component for mobile in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Deploy document editor component for mobile 

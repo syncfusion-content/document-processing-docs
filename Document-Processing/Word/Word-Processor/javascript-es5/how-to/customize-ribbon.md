@@ -235,4 +235,4 @@ container.ribbon.addItem({ tabId: 'Home', index: 0 }, ribbonItem, 1);
 
 ## Related Links
 
-- [File menu Customization Demo](https://document.syncfusion.com/demos/word-editor/javascript/index.html#/tailwind3/document-editor/ribbon-customization.html)
+- [File menu Customization Demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/ribbon-customization)
