@@ -1904,3 +1904,176 @@ End Using
 {% endtabs %}
 
 You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Adding-Line-Breaks-Using-OCR/.NET).
+
+## Perform OCR on Multi-frame TIFF images
+
+The below code example illustrates how to perform OCR on Multi-frame TIFF images using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_System_Drawing_Bitmap_System_String_) method in [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.OCRProcessor;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Text;
+
+string filePath = "multipage_tiff_example.tif";
+
+StringBuilder output = new StringBuilder();
+
+using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
+using (Image img = Image.FromStream(fs, useEmbeddedColorManagement: false, validateImageData: false))
+using (OCRProcessor processor = new OCRProcessor())
+{
+    processor.TessDataPath = "TessdataBest/";
+    processor.Settings.Language = Languages.English;
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+
+    // Determine how many frames/pages the TIFF contains.
+    int frameCount = img.GetFrameCount(FrameDimension.Page);
+    if (frameCount <= 1)
+    {
+        // Some TIFFs may use other dimensions; try Time/Resolution as fallback
+        frameCount = Math.Max(frameCount, img.GetFrameCount(FrameDimension.Time));
+        frameCount = Math.Max(frameCount, img.GetFrameCount(FrameDimension.Resolution));
+    }
+    if (frameCount < 1) frameCount = 1;
+
+    for (int i = 0; i < frameCount; i++)
+    {
+        // Prefer Page dimension
+        try { img.SelectActiveFrame(FrameDimension.Page, i); }
+        catch { /* fallback if needed */ }
+
+        // Clone the selected frame to a standalone Bitmap for OCR (important for some engines)
+        using (Bitmap frameBmp = new Bitmap(img.Width, img.Height))
+        using (Graphics g = Graphics.FromImage(frameBmp))
+        {
+            g.DrawImage(img, 0, 0, img.Width, img.Height);
+            MemoryStream ms = new MemoryStream();
+            frameBmp.Save(ms, ImageFormat.Png);
+            ms.Position = 0;
+            string pageText = processor.PerformOCR(ms, processor.TessDataPath);
+            output.AppendLine($"--- Page {i + 1} ---");
+            output.AppendLine(pageText ?? string.Empty);
+            output.AppendLine();
+        }
+    }
+}
+File.WriteAllText("Output.txt", output.ToString());
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using System;
+using System.IO;
+using System.Text;
+using System.Drawing;
+using System.Drawing.Imaging;
+
+string filePath = "multipage_tiff_example.tif";
+
+StringBuilder output = new StringBuilder();
+
+using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
+using (Image img = Image.FromStream(fs, useEmbeddedColorManagement: false, validateImageData: false))
+using (OCRProcessor processor = new OCRProcessor())
+{
+    processor.TessDataPath = "TessdataBest/";
+    processor.Settings.Language = Languages.English;
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+
+    // Determine how many frames/pages the TIFF contains.
+    int frameCount = img.GetFrameCount(FrameDimension.Page);
+    if (frameCount <= 1)
+    {
+        // Some TIFFs may use other dimensions; try Time/Resolution as fallback
+        frameCount = Math.Max(frameCount, img.GetFrameCount(FrameDimension.Time));
+        frameCount = Math.Max(frameCount, img.GetFrameCount(FrameDimension.Resolution));
+    }
+    if (frameCount < 1) frameCount = 1;
+
+    for (int i = 0; i < frameCount; i++)
+    {
+        // Prefer Page dimension
+        try { img.SelectActiveFrame(FrameDimension.Page, i); }
+        catch { /* fallback if needed */ }
+
+        // Clone the selected frame to a standalone Bitmap for OCR (important for some engines)
+        using (Bitmap frameBmp = new Bitmap(img.Width, img.Height))
+        using (Graphics g = Graphics.FromImage(frameBmp))
+        {
+            g.DrawImage(img, 0, 0, img.Width, img.Height);
+
+            string pageText = processor.PerformOCR(frameBmp, processor.TessDataPath);
+            output.AppendLine($"--- Page {i + 1} ---");
+            output.AppendLine(pageText ?? string.Empty);
+            output.AppendLine();
+        }
+    }
+}
+File.WriteAllText("Output.txt", output.ToString());
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports System.Drawing.Imaging
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf
+
+Dim filePath As String = "multipage_tiff_example.tif"
+Dim output = New StringBuilder()
+
+Dim fs = New FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read)
+Dim img = Image.FromStream(fs, useEmbeddedColorManagement:=False, validateImageData:=False)
+
+Using processor As New OCRProcessor()
+    processor.TessDataPath = "TessdataBest\"
+    processor.Settings.Language = Languages.English
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0
+
+    ' Determine how many frames/pages the TIFF contains.
+    Dim frameCount As Integer = img.GetFrameCount(FrameDimension.Page)
+    If frameCount <= 1 Then
+        ' Some TIFFs may use other dimensions; try Time/Resolution as fallback
+        frameCount = Math.Max(frameCount, img.GetFrameCount(FrameDimension.Time))
+        frameCount = Math.Max(frameCount, img.GetFrameCount(FrameDimension.Resolution))
+    End If
+    If frameCount < 1 Then frameCount = 1
+
+    For i As Integer = 0 To frameCount - 1
+        ' Prefer Page dimension
+        Try
+            img.SelectActiveFrame(FrameDimension.Page, i)
+        Catch
+            ' fallback if needed
+        End Try
+
+        ' Clone the selected frame to a standalone Bitmap for OCR (important for some engines)
+        Using frameBmp As New Bitmap(img.Width, img.Height)
+            Using g As Graphics = Graphics.FromImage(frameBmp)
+                g.DrawImage(img, 0, 0, img.Width, img.Height)
+            End Using
+
+            Dim pageText As String = processor.PerformOCR(frameBmp, processor.TessDataPath)
+            output.AppendLine($"--- Page {i + 1} ---")
+            output.AppendLine(If(pageText, String.Empty))
+            output.AppendLine()
+        End Using
+    Next
+End Using
+
+File.WriteAllText("Output.txt", output.ToString())
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can downloaded a complete working sample from GitHub.
