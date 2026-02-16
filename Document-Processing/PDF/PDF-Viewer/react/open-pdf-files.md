@@ -45,7 +45,7 @@ root.render(<App />);
 
 ## Open PDF Files Using Different Source Types
 
-Below are concise instructions and short snippets for loading PDFs from several source types. Each subsection links to or describes the minimal approach — keep these pages as focused how‑tos if you expand them.
+Below are concise instructions and short snippets for loading PDFs from several source types. Each subsection links to or describes the minimal approach — keep these pages as focused how-to guides if you expand them.
 ### Open PDF from URL
 
 - Set  [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentpath) to the external URL (see example above).
