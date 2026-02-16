@@ -40,6 +40,7 @@ Please find the below table for the beforeOpen event arguments.
 | file | FileList or string or File | To get the file stream. `FileList` -  contains length and item index. <br/> `File` - specifies the file lastModified and file name. |
 | cancel | boolean | To prevent the open operation. |
 | requestData | object |  To provide the Form data. |
+| parseOptions | WorkbookParseOptions |  Specifies options to control how the Excel file is loaded. You can skip specific properties to optimize performance. |
 
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
 > * The default value of the [allowOpen](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowopen) property in previous code snippet.
@@ -330,22 +331,41 @@ The following code snippet demonstrates how to configure the deserialization opt
 
 ### Improving Excel file open performance with parsing options
 
-Opening large Excel files into the Angular Spreadsheet can sometimes lead to slower performance and increased memory usage. This is often caused by the processing of additional elements such as styles and number formats—even when the actual data content is minimal. For example, an Excel file with only a small amount of data but a large number of styled or formatted empty cells can significantly impact load time and memory consumption.
+Opening large Excel files into the EJ2 Spreadsheet Control can sometimes lead to slower performance and increased memory usage. This is often caused by the processing of additional elements such as styles, number formats, formulas, validations, conditional formats, merged cells, charts, and images—even when the actual data content is minimal. For example, an Excel file with only a small amount of data but a large number of styled or formatted empty cells can significantly impact load time and memory consumption.
 
-To address this, we've introduced parsing options that allow users to selectively skip non-essential features during the open process. By enabling options like `IgnoreStyle` and `IgnoreFormat`, you can reduce the amount of data processed, resulting in:
+To address this, we've introduced parsing options that allow users to selectively skip non-essential properties during the open process. By enabling parse options, you can reduce the amount of data processed, resulting in:
 * Faster load times
 * Lower memory usage
 * Smaller JSON responses
 
 These enhancements are especially beneficial for users working with large or complex Excel files, offering a more efficient and responsive experience.
 
-> **Note:** These options are ideal when styles and number formats are not critical to your use case and the focus is on loading the actual data efficiently. 
+Please find the table below for available parsing options
+| Option                  | Description                                                        |
+|-------------------------|--------------------------------------------------------------------|
+| `IgnoreStyle`           | Skips cell styling such as font, color, borders, and alignment. |
+| `IgnoreFormat`          | Skips number formatting rules (e.g., currency, date formats). |
+| `IgnoreFormula`         | Skips formula cells and imports only the last calculated values. |
+| `IgnoreValidation`      | Skips data validation rules. |
+| `IgnoreConditionalFormat` | Skips conditional formatting rules. |
+| `IgnoreMergedCell`      | Skips merged cell information. |
+| `IgnoreChart`           | Skips embedded chart objects. |
+| `IgnoreImage`           | Skips embedded images. |
+--- 
 
-The code example below demonstrates how to configure the `IgnoreStyle` and `IgnoreFormat` parsing options on the `server-side`.
+> **Note:** These options are ideal when styles, formats, formulas, and other visual elements are not critical to your use case and the focus is on loading the actual data efficiently.
+
+**Ways to Configure Parsing Option**
+
+You can configure parsing options in two ways:
+
+**1. Server-Side Configuration:**
+Set the parsing options directly in the `server-side` when handling the Excel file open request.
+
+The code example below demonstrates how to configure parse options on the `server-side`.
 
 **Code Snippet:**
 
-**Server-Side Configuration:**
 ```csharp
 public IActionResult Open(IFormCollection openRequest) 
 {
@@ -353,8 +373,51 @@ public IActionResult Open(IFormCollection openRequest)
     ...
     open.ParseOptions = new WorkbookParseOptions() { 
         IgnoreStyle = true, 
-        IgnoreFormat = true
+        IgnoreFormat = true,
+        IgnoreFormula = true,
+        IgnoreValidation = true,
+        IgnoreConditionalFormat = true,
+        IgnoreMergedCell = true,
+        IgnoreChart = true,
+        IgnoreImage = true
     }; 
+    ...
+    return Content(Workbook.Open(open)); 
+} 
+```
+
+**2. Client-Side Configuration Using beforeOpen Event:**
+Use the beforeOpen event in the EJ2 Spreadsheet Control to pass parsing options before the file is opened. These options are then handled on the server side during deserialization.
+
+The code example below demonstrates how to configure parse options on the `client-side`.
+
+{% tabs %}
+{% highlight ts tabtitle="app.component.ts" %}
+{% include code-snippet/excel/spreadsheet/angular/open-save-cs13/src/app.component.ts %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/excel/spreadsheet/angular/open-save-cs13/src/main.ts %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/open-save-cs13" %}
+
+To receive and apply the parsing options passed from the client, add deserialization logic in the server-side open request handler
+
+**Code Snippet:**
+
+```csharp
+public IActionResult Open(IFormCollection openRequest) 
+{ 
+    OpenRequest open = new OpenRequest();
+    ...
+    // Assigning the parse options to control which properties to skip while loading Excel files.
+    var parseOptions = openRequest["ParseOptions"];
+    if (!string.IsNullOrEmpty(parseOptions))
+    {
+        open.ParseOptions = System.Text.Json.JsonSerializer.Deserialize<WorkbookParseOptions (parseOptions.ToString(), new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+    }
     ...
     return Content(Workbook.Open(open)); 
 } 
@@ -498,6 +561,7 @@ Please find the below table for the beforeSave event arguments.
 | isFullPost | boolean | It sends the form data from client to server, when set to true. It fetches the data from client to server and returns the data from server to client, when set to false. |
 | needBlobData | boolean | You can get the blob data if set to true. |
 | cancel | boolean | To prevent the save operations. |
+| jsonConfig | SerializationOptions |  Specifies options to control how the Excel file is saved. You can skip specific properties to optimize performance. |
 
 > * Use `Ctrl + S` keyboard shortcut to save the Spreadsheet data as Excel file.
 > * The default value of [allowSave](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowsave) property is `true`. For demonstration purpose, we have showcased the [allowSave](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowsave) property in previous code snippet.
@@ -888,6 +952,7 @@ The following list of Excel file formats are supported in Spreadsheet:
 * Microsoft Excel (.xlsx)
 * Microsoft Excel 97-2003 (.xls)
 * Comma Separated Values (.csv)
+* Portable Document Format (.pdf)
 
 ## Note
 
