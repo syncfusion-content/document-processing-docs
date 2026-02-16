@@ -2,7 +2,7 @@ node('content')
 { 
 timestamps
   {
-     timeout(time: 7200000, unit: 'MILLISECONDS') {
+     timeout(time: 10800000 , unit: 'MILLISECONDS') {
 String platform='file-formats';
    try
 	{   
