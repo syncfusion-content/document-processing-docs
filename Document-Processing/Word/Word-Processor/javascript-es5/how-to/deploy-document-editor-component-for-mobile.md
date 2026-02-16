@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy Docx editor component for mobile in JavaScript(ES5) DOCX editor
+# Deploy DOCX editor component for mobile in JavaScript(ES5) DOCX editor
 
 ## Document editor component for Mobile
 
