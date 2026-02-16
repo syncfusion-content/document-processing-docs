@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer
+# Getting started with Syncfusion React PDF Viewer
 
 
 If you're starting to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer into your application, choose the path below that matches how you'll run the viewer in your app (client-only or via a web service) and follow that tutorial.
