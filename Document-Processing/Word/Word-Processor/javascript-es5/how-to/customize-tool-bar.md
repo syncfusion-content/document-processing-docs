@@ -18,7 +18,7 @@ DocumentEditorContainer allows you to customize(add, show, hide, enable, and dis
 
 * Show, Hide - Existing items can be shown or hidden using the [`toolbarItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#toolbaritems) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/toolbarItem).
 
-* Enable, Disable -  Toolbar items can be enabled or disable using [`enableItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/toolbar/#enableItems)
+* Enable, Disable -  Toolbar items can be enabled or disable using [`enableItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/toolbar#enableItems)
 
 ```js
 
