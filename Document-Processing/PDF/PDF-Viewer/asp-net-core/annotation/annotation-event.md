@@ -1,14 +1,18 @@
 ---
-title: Annotations Events in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Annotations Events in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Annotation Events in ASP.NET Core PDF Viewer | Syncfusion
+description: Comprehensive guide to annotation events in the Syncfusion ASP.NET Core PDF Viewer component. Learn to handle add, remove, select, move, resize, and property-change events for annotations and signatures with complete code examples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Annotations Events in ASP.NET Core PDF Viewer control
+# Annotation Events in ASP.NET Core PDF Viewer
 
-The PDF Viewer component triggers various events based on user interactions and changes in the component's state. These events can be used to perform actions when a specific event occurs. This section describes the events available in the PDF Viewer component.
+The PDF Viewer component triggers various events based on user interactions and annotation changes. These events allow to respond to specific annotation operations such as adding, removing, selecting, moving, and resizing annotations. Signature-related events can also be monitored for signature lifecycle management.
+
+## Available events
+
+The PDF Viewer component triggers the following annotation and signature events:
 
 | Event                                                              | Description                                                                        |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
@@ -31,16 +35,15 @@ The PDF Viewer component triggers various events based on user interactions and 
 | [`signatureSelect`](#signatureselect)                              | Triggers when a signature is selected on a page in the PDF document.               |
 | [`signatureUnselect`](#signatureunselect)                          | Triggers when a signature is unselected on a page in the PDF document.             |
 
+## Annotation events
 
 ### annotationAdd
 
 The [annotationAdd](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationAdd) event is triggered when an annotation is added to a PDF document's page.
 
-#### Event Arguments
+**Event Arguments:** [AnnotationAddEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationAddEventArgs/)
 
-For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationAddEventArgs/). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
-
-The following example illustrates how to handle the `annotationAdd` event.
+**Example: Handle annotation add event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -83,11 +86,9 @@ The following example illustrates how to handle the `annotationAdd` event.
 
 The [annotationDoubleClick](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationDoubleClick) event is triggered when an annotation is double-clicked.
 
-#### Event Arguments
+**Event Arguments:** [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationDoubleClickEventArgs)
 
-For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationDoubleClickEventArgs/).
-
-The following example illustrates how to handle the `annotationDoubleClick` event.
+**Example: Handle annotation double-click event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -128,11 +129,11 @@ The following example illustrates how to handle the `annotationDoubleClick` even
 
 The [annotationMouseLeave](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationMouseLeave) event is triggered when the user's mouse pointer moves away from an annotation object.
 
-#### Event Arguments
+**Event Arguments:** [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMouseLeaveEventArgs)
+- `pageIndex`
+- `name`
 
-For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMouseLeaveEventArgs/).
-
-The following example illustrates how to handle the `annotationMouseLeave` event.
+**Example: Handle annotation mouse leave event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -173,11 +174,9 @@ The following example illustrates how to handle the `annotationMouseLeave` event
 
 The [annotationMouseover](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationMouseover) event is triggered when the mouse is moved over an annotation object.
 
-#### Event Arguments
+**Event Arguments:** [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMouseOverEventArgs)
 
-For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMouseOverEventArgs/).
-
-The following example illustrates how to handle the `annotationMouseover` event.
+**Example: Handle annotation mouse over event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -216,13 +215,11 @@ The following example illustrates how to handle the `annotationMouseover` event.
 
 ### annotationMove
 
-The [annotationMove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationMove) event is triggered when an annotation is moved over the page of the PDF document.
+The [annotationMove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationMove) event is triggered when an annotation drag operation completes and the annotation is positioned on the page.
 
-#### Event Arguments
+**Event Arguments:** [AnnotationMoveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMoveEventArgs)
 
-For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMoveEventArgs/).
-
-The following example illustrates how to handle the `annotationMove` event.
+**Example: Handle annotation move event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -261,13 +258,11 @@ The following example illustrates how to handle the `annotationMove` event.
 
 ### annotationMoving
 
-The [annotationMoving](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationMoving) event is triggered while an annotation is being moved.
+The [annotationMoving](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationMoving) event is triggered continuously while an annotation is being dragged.
 
-#### Event Arguments
+**Event Arguments:** [AnnotationMovingEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationmovingeventargs)
 
-For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMovingEventArgs/).
-
-The following example illustrates how to handle the `annotationMoving` event.
+**Example: Handle annotation moving event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -306,13 +301,11 @@ The following example illustrates how to handle the `annotationMoving` event.
 
 ### annotationPropertiesChange
 
-The [annotationPropertiesChange](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationPropertiesChange) event is triggered when an annotation's property is modified on a PDF document page.
+The [annotationPropertiesChange](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationPropertiesChange) event is triggered when an annotation's properties (color, opacity, thickness, etc.) are modified.
 
-#### Event Arguments
+**Event Arguments:** [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs)
 
-For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs/). It provides properties such as `annotationId`, `pageNumber`, and `action`.
-
-The following example illustrates how to handle the `annotationPropertiesChange` event.
+**Example: Handle annotation properties change event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -353,13 +346,11 @@ The following example illustrates how to handle the `annotationPropertiesChange`
 
 ### annotationRemove
 
-The [annotationRemove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationRemove) event is triggered when an annotation is removed from a PDF document's page.
+The [annotationRemove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationRemove) event is triggered when an annotation is deleted from the PDF document.
 
-#### Event Arguments
+**Event Arguments:** [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationRemoveEventArgs)
 
-For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationRemoveEventArgs/). It provides properties such as `annotationId` and `pageNumber`.
-
-The following example illustrates how to handle the `annotationRemove` event.
+**Example: Handle annotation remove event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -398,13 +389,11 @@ The following example illustrates how to handle the `annotationRemove` event.
 
 ### annotationResize
 
-The [annotationResize](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationResize) event is triggered when an annotation is resized on a PDF document page.
+The [annotationResize](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationResize) event is triggered when an annotation is resized.
 
-#### Event Arguments
+**Event Arguments:** [AnnotationResizeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationResizeEventArgs)
 
-For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationResizeEventArgs/).
-
-The following example illustrates how to handle the `annotationResize` event.
+**Example: Handle annotation resize event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -443,13 +432,11 @@ The following example illustrates how to handle the `annotationResize` event.
 
 ### annotationSelect
 
-The [annotationSelect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationSelect) event is triggered when an annotation is selected on a PDF document's page.
+The [annotationSelect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationSelect) event is triggered when the user selects or clicks on an annotation.
 
-#### Event Arguments
+**Event Arguments:** [AnnotationSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationSelectEventArgs)
 
-For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationSelectEventArgs/).
-
-The following example illustrates how to handle the `annotationSelect` event.
+**Example: Handle annotation select event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -488,13 +475,11 @@ The following example illustrates how to handle the `annotationSelect` event.
 
 ### annotationUnselect
 
-The [annotationUnselect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationUnSelect) event is triggered when an annotation is unselected from the PDF document's page.
+The [annotationUnselect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationUnSelect) event is triggered when the user deselects an annotation by clicking elsewhere.
 
-#### Event Arguments
+**Event Arguments:** [AnnotationUnselectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationUnselectEventArgs)
 
-For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationUnSelectEventArgs/).
-
-The following example illustrates how to handle the `annotationUnselect` event.
+**Example: Handle annotation unselect event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -533,13 +518,11 @@ The following example illustrates how to handle the `annotationUnselect` event.
 
 ### beforeAddFreeText
 
-The [beforeAddFreeText](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_BeforeAddFreeText) event is triggered before adding a text in the freeText annotation.
+The [beforeAddFreeText](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_BeforeAddFreeText) event is triggered before a free text annotation is added.
 
-#### Event Arguments
+**Event Arguments:** [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/beforeAddFreeTextEventArgs)
 
-For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/beforeAddFreeTextEventArgs/).
-
-The following example illustrates how to handle the `beforeAddFreeText` event.
+**Example: Handle before add free text event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -584,13 +567,11 @@ The following example illustrates how to handle the `beforeAddFreeText` event.
 
 ### addSignature
 
-The [addSignature](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AddSignature) event is triggered when a signature is added to a page of a PDF document.
+The [addSignature](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AddSignature) event is triggered when a signature is successfully added to the PDF document page.
 
-#### Event Arguments
+**Event Arguments:** [AddSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/addSignatureEventArgs)
 
-For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/addSignatureEventArgs/). It provides properties such as `pageNumber`.
-
-The following example illustrates how to handle the `addSignature` event.
+**Example: Handle add signature event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -629,13 +610,11 @@ The following example illustrates how to handle the `addSignature` event.
 
 ### removeSignature
 
-The [removeSignature](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RemoveSignature) event is triggered when the signature is removed from the page of a PDF document.
+The [removeSignature](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RemoveSignature) event is triggered when a signature is deleted from the PDF document.
 
-#### Event Arguments
+**Event Arguments:** [RemoveSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/removeSignatureEventArgs)
 
-For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/removeSignatureEventArgs/). It provides properties such as `pageNumber`.
-
-The following example illustrates how to handle the `removeSignature` event.
+**Example: Handle remove signature event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -674,13 +653,11 @@ The following example illustrates how to handle the `removeSignature` event.
 
 ### resizeSignature
 
-The [resizeSignature](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ResizeSignature) event is triggered when the signature is resized and placed on a page of a PDF document.
+The [resizeSignature](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ResizeSignature) event is triggered when a signature is resized.
 
-#### Event Arguments
+**Event Arguments:** [ResizeSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/resizeSignatureEventArgs)
 
-For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/resizeSignatureEventArgs/).
-
-The following example illustrates how to handle the `resizeSignature` event.
+**Example: Handle resize signature event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -719,13 +696,11 @@ The following example illustrates how to handle the `resizeSignature` event.
 
 ### signaturePropertiesChange
 
-The [signaturePropertiesChange](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_SignaturePropertiesChange) event is triggered when the property of the signature is changed in the page of the PDF document.
+The [signaturePropertiesChange](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_SignaturePropertiesChange) event is triggered when a signature's properties are modified.
 
-#### Event Arguments
+**Event Arguments:** [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs)
 
-For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs/).
-
-The following example illustrates how to handle the `signaturePropertiesChange` event.
+**Example: Handle signature properties change event**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

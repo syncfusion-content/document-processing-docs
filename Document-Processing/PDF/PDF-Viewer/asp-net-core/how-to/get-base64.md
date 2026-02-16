@@ -7,17 +7,17 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Get Base64 value from a loaded PDF in ASP.NET Core
+# Convert a loaded PDF to Base64 string in ASP.NET Core PDF Viewer
 
-### Overview
+Extract the current PDF as a Base64-encoded string from the Syncfusion ASP.NET Core PDF Viewer. This is useful for transmitting PDFs to a server, storing them in databases, or performing further processing on the client side.
 
-This guide shows how to get the base64-encoded value of a PDF loaded in the Syncfusion ASP.NET Core PDF Viewer. Use this to send the PDF as a Base64 string or process it on the client.
+## Retrieve the Base64 value
 
-### How to retrieve Base64 value
+Follow these steps to convert the displayed PDF to a Base64 string:
 
-**Step 1:** Follow the steps in the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple viewer sample.
+**Step 1:** Follow the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer instance.
 
-**Step 2:** Add a button to trigger the Base64 conversion.
+**Step 2:** Add a button and JavaScript code to trigger the Base64 conversion:
 
 ```html
 <div class="text-center">
@@ -52,4 +52,4 @@ This guide shows how to get the base64-encoded value of a PDF loaded in the Sync
 
 With these steps, a loaded PDF can be converted to a Base64 string on button click for transfer or additional processing.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

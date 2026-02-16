@@ -107,9 +107,9 @@ public IActionResult OnPostLoad([FromBody] jsonObjects responseData)
 }
 ```
 
-N> Replace **Your Bucket name from Google Cloud Storage** with the actual name of your Google Cloud Storage bucket
+N> Replace **Your Bucket name from Google Cloud Storage** with the actual name of the Google Cloud Storage bucket.
 
-N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
+N> Replace **path/to/service-account-key.json** with the actual file path to the service account key JSON file. The correct path and filename must be provided.
 
 **Step 4:** Configure the PDF Viewer component
 
@@ -130,6 +130,6 @@ Set the `documentPath` property of the PDF Viewer to the PDF file name to load f
 
 ```
 
-N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your application to use the previous code example.
+**Note:** The **Google.Cloud.Storage.V1** NuGet package must be installed in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-cloud-storage)

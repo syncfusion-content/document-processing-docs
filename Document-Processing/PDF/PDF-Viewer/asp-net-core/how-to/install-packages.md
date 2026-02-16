@@ -7,14 +7,25 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Install EJ2 PDF Viewer packages automatically in ASP.NET Core
+# Install PDF Viewer packages in ASP.NET Core
 
-Install the Syncfusion ASP.NET Core PDF Viewer dependencies by adding the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core/) package to the project file. When the project is built or a `dotnet restore` runs, NuGet downloads the package and its dependencies.
+Add the Syncfusion PDF Viewer dependency to your ASP.NET Core project using NuGet. The [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core/) package includes all required assemblies and components for the PDF Viewer control.
 
-Open the `.csproj` file in Visual Studio or another editor and add the package reference entry shown below.
+## Add the package to the project
+
+Edit the `.csproj` file to include the PDF Viewer package reference:
 
 ```cs
 <PackageReference Include="Syncfusion.EJ2.PdfViewer.AspNet.Core" Version="*" />
 ```
 
-Alternatively, install the package through **Manage NuGet Packages** in Visual Studio or by running `dotnet add package Syncfusion.EJ2.PdfViewer.AspNet.Core`. Ensure the Syncfusion license is registered in the application before publishing. For license requirements, refer to the [Syncfusion licensing](https://help.syncfusion.com/common/essential-studio/licensing/license-key) documentation.
+When the project is compiled or run `dotnet restore`, NuGet automatically downloads the package and its dependencies.
+
+## Alternative installation methods
+
+- **Visual Studio:** Use **Manage NuGet Packages** to search for and install the package.
+- **Command Line:** Run `dotnet add package Syncfusion.EJ2.PdfViewer.AspNet.Core` in the project directory.
+
+## Licensing requirement
+
+Ensure you register the Syncfusion license key in the application before deployment. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/license-key).

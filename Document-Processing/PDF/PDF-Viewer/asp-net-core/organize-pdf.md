@@ -1,98 +1,147 @@
 ---
 layout: post
-title: Organize Pages with EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Organize Pages in ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Organizing Pages in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to organize PDF pages in the ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Organize Pages in PDF Viewer component
+# Organize Pages in PDF Viewer
 
-The PDF Viewer allows you to manage your PDF documents efficiently by organizing pages seamlessly. Whether you need to add new pages, remove unnecessary ones, rotate pages, move pages within the document, and copy or duplicate pages, the PDF Viewer facilitate these tasks effortlessly.
+The ASP.NET Core PDF Viewer provides comprehensive page organization capabilities for efficient document management. Users can seamlessly modify PDF documents by rotating pages, rearranging their order, inserting new pages, deleting unwanted pages, copying and duplicating pages, and importing additional PDF documents. These features empower users to customize and restructure PDF documents directly within the viewer without requiring external tools.
 
 ## Getting started
 
-To access the organize pages feature, simply open the PDF document in the PDF Viewer and navigate to the left vertical toolbar. Look for the `Organize Pages` option to begin utilizing these capabilities.
+The page organizer is accessed through the left vertical toolbar of the PDF Viewer. When opened, it displays a panel with thumbnail representations of all pages in the document, along with tools for performing various page management operations.
 
-![Alt text](./images/organize-page.png)
+**To access the page organizer:**
 
-The page organization support enables you to perform various actions such as rotating, rearranging, inserting, copying, and deleting pages within a PDF document using organize pages dialog.
+1. Open a PDF document in the PDF Viewer
+2. Navigate to the left vertical toolbar
+3. Click the **Organize Pages** icon to open the page organizer panel
+4. The organizer displays page thumbnails with options for managing pages
+
+![PDF Viewer page organizer icon](./images/organize-page.png)
+
+The page organizer supports comprehensive page management operations. All actions are performed on page thumbnails within the organizer panel and can be saved to create a modified version of the PDF document.
 
 ### Rotating PDF pages
 
-You can adjust the orientation of PDF pages to ensure proper alignment. The rotate icon offers the following options:
+Rotate page orientation to ensure proper alignment and readability. This is useful for pages scanned at incorrect angles or documents with mixed orientations.
 
-* `Rotate clockwise`: Rotate the selected pages 90 degrees clockwise.
-* `Rotate counter-clockwise`: Rotate the selected pages 90 degrees counter-clockwise.
+**Rotation options:**
+- **Rotate clockwise**: Rotate selected pages 90 degrees clockwise
+- **Rotate counter-clockwise**: Rotate selected pages 90 degrees counter-clockwise
+
+You can rotate single or multiple pages at once. Simply select the pages and use the rotation buttons in the organizer toolbar.
 
 ### Rearranging PDF pages
 
-You can easily change the sequence of pages within your document using the drag and drop method:
+Change the sequence of pages within your document using intuitive drag-and-drop functionality.
 
-* `Drag and drop`: Click and drag a page thumbnail to the desired position within the document, then release it to rearrange the page order.
+**To rearrange pages:**
+1. Click and hold on a page thumbnail
+2. Drag it to the desired position within the document
+3. Release the mouse to drop the page in its new location
 
-![Alt text](./images/rotate-rearrange.gif)
+![Rotate and rearrange pages in PDF Viewer](./images/rotate-rearrange.gif)
 
 ### Inserting new pages
 
-Effortlessly add new pages to your document with the following options:
+Add blank pages to your document at specific locations. This is useful for adding cover pages, separators, or additional content.
 
-* `Insert blank page left`: Insert a blank page to the left of the selected page using the respective icon.
-* `Insert blank page right`: Insert a blank page to the right of the selected page using the corresponding icon.
+**Insert page options:**
+- **Insert blank page left**: Add a blank page to the left of the selected page
+- **Insert blank page right**: Add a blank page to the right of the selected page
 
 ### Deleting PDF pages
 
-Removing unwanted pages from your document is straight forward:
+Remove unwanted pages from your document efficiently.
 
-* `Select pages to delete`: Click on the page thumbnails you wish to remove. You can select multiple pages at once.
-* `Delete selected pages`: Use the delete option in the organize pages pane to remove the selected pages from the document.
+**To delete pages:**
+1. Click on the page thumbnails you wish to remove
+2. Click the **Delete** button in the organizer toolbar
+3. The selected pages are immediately removed from the document
+
+You can select and delete single or multiple pages at once, making bulk cleanup operations fast and efficient.
 
 ### Copying PDF pages
 
-Duplicate the pages within your PDF document effortlessly:
+Duplicate pages within your PDF document to reuse content.
 
-* `Select pages to copy`: Click on the page thumbnails you wish to duplicate. Use the copy option to create duplicates. When a page is copied, the duplicate is automatically added to the right of the selected page. Multiple copies can be made using the toolbar action.
+**To copy pages:**
+1. Click on the page thumbnails you wish to duplicate
+2. Click the **Copy** button in the organizer toolbar
+3. The duplicated page automatically appears to the right of the selected page
+4. Multiple copies can be created by repeating the process
 
-![Alt text](./images/insert-delete-copy.gif)
+This feature is useful for creating variations of pages or duplicating important content within the same document.
+
+![Insert, delete, and copy pages in PDF Viewer](./images/insert-delete-copy.gif)
 
 ### Importing a PDF Document
 
-Seamlessly import a PDF document into your existing document:
+Merge multiple PDF documents by importing one into another:
 
-* `Import PDF document`: Click the **Import Document** button to import a PDF. If a page is selected, the imported document’s thumbnail will be inserted to the right of the selected page. If multiple or no pages are selected, the thumbnail will be added as the first page. When **Save** or **Save As** is clicked, the imported PDF will be merged with the current document. You can insert a blank page to the left or right of the imported thumbnail, delete it, or drag and drop it to reposition as needed.
+**To import a PDF document:**
+1. Click the **Import Document** button in the organizer toolbar
+2. Select the PDF file to import from your file system
+3. The imported document's pages are inserted based on page selection:
+   - If a page is selected: imported pages appear to the right of the selected page
+   - If multiple pages or no pages are selected: imported pages become the first pages
+4. Use drag-and-drop to reposition imported pages as needed
+5. Click **Save** or **Save As** to merge the documents permanently
 
-![Alt text](./images/import.gif)
+After import, you can manage the imported pages just like any other pages in the document—rotate them, delete unwanted pages, or rearrange them.
+
+![Import PDF documents in PDF Viewer](./images/import.gif)
 
 ### Selecting all pages
 
-Make comprehensive adjustments by selecting all pages simultaneously. This facilitates efficient editing and formatting across the entire document.
+Perform bulk operations on all pages simultaneously. This is especially useful for applying operations to the entire document.
 
-![Alt text](./images/selectall.png)
+**To select all pages:**
+- Click the **Select All** button in the organizer toolbar, or
+- Press <kbd>Ctrl+A</kbd> to select all pages at once
 
-### Zooming Page Thumbnails
+After selecting all pages, you can perform actions like rotating, copying, or deleting all pages in one operation.
 
-Adjust the size of page thumbnails within the organizer panel for better visibility and precision when editing. The zoom functionality allows you to:
+![Select all pages in PDF Viewer organizer](./images/selectall.png)
+
+### Zooming page thumbnails
+
+Adjust the size of page thumbnails for better visibility and precision when organizing pages. This is particularly useful for documents with complex layouts or small details.
 
 * Increase or decrease the size of page thumbnails using the zoom slider
 * See more details on pages when zoomed in
 * View more pages simultaneously when zoomed out
 
-This feature is especially useful when working with documents containing complex layouts or small details that need careful examination during organization.
+Zooming helps you identify pages accurately, especially in large documents, and makes it easier to select and manipulate specific pages.
 
-![Alt text](./images/zoomOrganize.png)
+![Zoom page thumbnails in PDF Viewer organizer](./images/zoomOrganize.png)
 
 ### Real-time updates
 
-Witness instant changes in page organization reflected within the PDF Viewer. Simply click the **Save** button to preserve your modifications.
+After organizing your PDF pages, save your modifications to preserve the changes.
 
-### SaveAs functionality
+**Save options:**
+- **Save**: Update the current document with the page changes
+- **Save As**: Download a new copy of the modified PDF document with a different filename
 
-Safeguard your edits by utilizing the **Save As** feature. This enables you to download the modified version of the PDF document for future reference, ensuring that your changes are securely stored.
+Real-time updates reflect all your page organization changes (rotations, rearrangements, deletions, insertions, etc.) immediately in the PDF Viewer. Simply click **Save** or **Save As** when you're ready to finalize your changes.
 
 ## API's supported
 
-**enablePageOrganizer:** This API enables or disables the page organizer feature in the PDF Viewer. By default, it is set to `true`, indicating that the page organizer is enabled.
+The page organizer feature provides several APIs for programmatic control and configuration of page organization capabilities.
+
+### enablePageOrganizer
+
+Enables or disables the page organizer feature in the PDF Viewer. When disabled, users cannot access page organization tools.
+
+**Default value:** `true` (page organizer is enabled)
+
+**Example: Enabling page organizer**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -116,7 +165,13 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
 {% endhighlight %}
 {% endtabs %}
 
-**isPageOrganizerOpen:** This API determines whether the page organizer dialog will be displayed automatically when a document is loaded into the PDF Viewer. By default, it is set to `false`, meaning the dialog is not displayed initially.
+### isPageOrganizerOpen
+
+Determines whether the page organizer panel is displayed automatically when a document is loaded into the PDF Viewer. This setting controls the initial state of the organizer panel.
+
+**Default value:** `false`
+
+**Example: Opening page organizer automatically**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -140,7 +195,11 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
 {% endhighlight %}
 {% endtabs %}
 
-**pageOrganizerSettings:** This API allows control over various page management functionalities within the PDF Viewer. It includes options to enable or disable actions such as deleting, inserting, rotating, copying, importing and rearranging pages, as well as configuring thumbnail zoom settings. By default, all these actions are enabled and standard zoom settings are applied.
+### pageOrganizerSettings
+
+Provides granular control over page organizer features and thumbnail display. This API allows you to enable/disable specific page management actions and configure thumbnail zoom behavior.
+
+**Example: Configuring page organizer settings**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -166,7 +225,11 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
 {% endhighlight %}
 {% endtabs %}
 
-**openPageOrganizer:** This API opens the page organizer dialog within the PDF Viewer, providing access to manage PDF pages.
+### openPageOrganizer
+
+Programmatically opens the page organizer panel. Use this API to provide users with a way to open the organizer from custom UI elements or based on application logic.
+
+**Example: Opening page organizer from a button**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -247,7 +310,11 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
 {% endhighlight %}
 {% endtabs %}
 
-**closePageOrganizer:** This API closes the currently open page organizer dialog within the PDF Viewer, if it is present. It allows users to dismiss the dialog when done with page organization tasks.
+### closePageOrganizer
+
+Programmatically closes the page organizer panel. Use this API to dismiss the organizer when users are done managing pages or to control the UI based on application logic.
+
+**Example: Closing page organizer from a button**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -295,13 +362,15 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
 
 ## Keyboard shortcuts
 
-The following keyboard shortcuts are available at the organize pages dialog.
+Keyboard shortcuts are available in the page organizer to improve productivity and accessibility.
 
 * **Ctrl+Z** : Undo the last action performed.
 * **Ctrl+Y** : Redo the action that was undone
 * **Ctrl+Scroll** : Zoom in and zoom out page thumbnails for better visibility.
 
-![Alt text](./images/undo-redo.png)
+These shortcuts enable efficient keyboard-based navigation and operations, making the page organizer accessible to power users and those who prefer keyboard interaction.
+
+![Undo and redo operations in page organizer](./images/undo-redo.png)
 
 #### Conclusion
 

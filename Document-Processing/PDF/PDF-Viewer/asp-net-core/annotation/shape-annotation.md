@@ -1,15 +1,19 @@
 ---
 layout: post
-title: Shape annotation in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn about shape annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
+title: Shape Annotations in ASP.NET Core PDF Viewer | Syncfusion
+description: Add and customize shape annotations in ASP.NET Core PDF Viewer. Support for lines, arrows, rectangles, circles, polygons with stroke, fill, and opacity properties.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Shape annotation in ASP.NET Core PDF Viewer control
+# Shape Annotations in ASP.NET Core PDF Viewer
 
-The PDF Viewer control provides options to add, edit, and delete shape annotations. The supported shape annotation types are:
+The PDF Viewer control provides comprehensive shape annotation capabilities for adding, editing, deleting, and customizing various geometric shapes. This guide covers toolbar-based and programmatic approaches to shape creation.
+
+## Shape types
+
+The PDF Viewer supports five primary shape annotation types:
 
 * Line
 * Arrow
@@ -21,18 +25,30 @@ The PDF Viewer control provides options to add, edit, and delete shape annotatio
 
 ## Adding a shape annotation to the PDF document
 
-Shape annotations can be added to the PDF document using the annotation toolbar.
+Shape annotations can be added to PDF documents using the built-in annotation toolbar with an intuitive multi-step interface.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Shape Annotation** drop-down button. The pop-up lists available shape annotation types.
-* Select a shape type to enable its annotation mode.
-* Draw the shape on the pages of the PDF document.
+**1. Enable annotation mode**
+- Click the **Edit Annotation** button in the PDF Viewer toolbar
+- A secondary toolbar appears below the main toolbar
 
-N> When in pan mode and a shape annotation tool is selected, the PDF Viewer switches to text select mode automatically to ensure a smooth interaction experience.
+**2. Select shape type**
+- Click the **Shape Annotation** drop-down button
+- The pop-up displays all available shape annotation types
 
 ![Shape annotation toolbar](../images/shape_toolbar.png)
 
-Refer to the following code sample to switch to the circle annotation mode.
+**3. Choose specific shape**
+- Select a shape type to activate its annotation mode
+- The cursor changes to indicate annotation mode is active
+
+**4. Draw the shape**
+- Click and drag on the PDF page to draw the shape
+- Release to complete the shape placement
+- Use handles to resize and reposition as needed
+
+> **Note:** When in pan mode and a shape annotation tool is selected, the PDF Viewer automatically switches to text select mode for smooth interaction.
+
+**Example: Switch to circle annotation mode**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -76,9 +92,9 @@ Refer to the following code sample to switch to the circle annotation mode.
 
 ## Add a shape annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding a shape annotation programmatically using the **addAnnotation()** method.
+The PDF Viewer library provides the **addAnnotation()** API method for programmatic shape insertion, enabling dynamic workflow automation and batch operations.
 
-Here is an example showing how to add shape annotations programmatically using addAnnotation():
+**Examples: Add shapes programmatically**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -203,9 +219,9 @@ Here is an example showing how to add shape annotations programmatically using a
 
 ## Edit an existing shape annotation programmatically
 
-To modify an existing shape annotation programmatically, use the **editAnnotation()** method.
+Modify shape properties such as colors, thickness, and appearance using the **editAnnotation()** API method.
 
-Here is an example of using editAnnotation():
+**Example: Edit shape annotation properties**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -365,43 +381,50 @@ Here is an example of using editAnnotation():
 
 ## Editing the properties of the shape annotation
 
-The fill color, stroke color, thickness, and opacity of shape annotations can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
+Shape annotations support comprehensive styling options through the annotation toolbar and context menus.
 
-### Editing fill color
+The annotation toolbar provides four primary editing tools for all shapes:
 
-The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
+**1. Edit Fill Color**
+- Access the color palette via the Edit Color tool
+- Select a color to apply fill to the shape
 
 ![Edit fill color for shapes](../images/shape_fillcolor.png)
 
-### Editing stroke color
-
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+**2. Edit Stroke Color**
+- Use the Edit Stroke Color tool to change the border color
+- Open color palette and select desired stroke color
 
 ![Edit stroke color for shapes](../images/shape_strokecolor.png)
 
-### Editing thickness
+**3. Edit Thickness**
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+Adjust border thickness using the range slider in the Edit Thickness tool
 
 ![Edit thickness for shapes](../images/shape_thickness.png)
 
-### Editing opacity
+**4. Edit Opacity**
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Control shape transparency using the range slider in the Edit Opacity tool.
 
 ![Edit opacity for shapes](../images/shape_opacity.png)
 
-### Editing the line properties
+### Line and arrow properties
 
-Line and arrow annotations have additional options in the Line Properties window. Open it by right-clicking a line or arrow annotation and selecting Properties from the context menu.
+Line and arrow annotations offer additional customization through a dedicated properties dialog.
 
-Refer to the following code sample to set the default annotation settings.
+**Accessing line properties:**
+1. Right-click on a line or arrow annotation
+2. Select **Properties** from the context menu
+3. Modify line start/end style, dash pattern, and other options
 
 ![Line properties dialog](../images/shape_lineproperty.png)
 
 ## Set default properties during control initialization
 
-Default properties for shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
+Configure default shape annotation properties globally during PDF Viewer initialization. These defaults apply to all subsequently created shapes of each type.
+
+**Example: Configure default shape properties**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

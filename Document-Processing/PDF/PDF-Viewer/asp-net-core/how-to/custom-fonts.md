@@ -8,39 +8,37 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Custom Fonts to PDF Forms in Core PDF Viewer
+# Add custom fonts to PDF forms in ASP.NET Core PDF Viewer
 
-The Syncfusion **Core PDF Viewer** supports loading, editing, and saving **custom fonts** in form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown) fields using the customFonts property. This ensures consistent text rendering even when the required fonts are not installed on the user’s system.  
-Custom fonts are embedded and preserved when form fields are modified or saved, making the PDF display correctly across environments.
+The Syncfusion ASP.NET Core PDF Viewer supports loading, editing, and saving custom fonts in interactive form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown). Use the `customFonts` property to ensure consistent text rendering even when specific fonts are not installed on the user's system.
 
-## When dynamic fonts are used
-Dynamic fonts are currently used in the following scenarios:
-- **Text annotations** — When users enter text annotations that use non standard fonts, the viewer dynamically loads the required fonts to ensure correct character rendering. 
-- **PDF forms** — When users fill form fields that rely on fonts not included by default, dynamic font loading ensures the entered text is rendered correctly.
+## Scenarios for custom fonts
 
-## How Custom Fonts Work
-The custom font workflow in the PDF Viewer is as follows:
-- Place the required **TrueType Font (TTF)** files in the resource directory used by the viewer.
-- Specify the font names using the customFonts property.
-- The specified fonts become available for:
-  - Rendering form field content
-  - Editing text in form fields
-  - Saving and downloading the PDF with embedded fonts
+Custom fonts are essential in the following scenarios:
 
-## Steps to Add Custom Fonts
+- **Text Annotations:** When users create or view text annotations that use non-standard fonts, the viewer dynamically loads the required fonts to ensure correct character rendering.
+- **Interactive PDF Forms:** When users fill form fields that rely on proprietary or specialized fonts, dynamic font loading ensures the entered text is displayed accurately across all environments.
 
-### Add TTF Font Files
-1. Place the TTF font files in the resource path used by the PDF Viewer (for example, the ej2-pdfviewer-lib folder).  
-2. Fonts can be referenced in either of the following ways:
-   - **Relative path** 
-     Example:  
-     calibri.ttf  
-     fallback-fonts/calibri.ttf
-   - **Absolute URL**
-     Fonts can be hosted on a server and referenced using a fully qualified URL. Ensure that the hosting server has **CORS** enabled.
+## How custom fonts work
 
-### Configure Custom Fonts in the PDF Viewer
-Specify the required font names in the customFonts property.
+The custom font workflow in the PDF Viewer involves these key steps:
+
+1. Place the required **TrueType Font (TTF)** files in the resource directory accessible by the viewer.
+2. Specify the font names in the `customFonts` property of the PDF Viewer instance.
+3. The viewer dynamically loads these fonts for rendering, editing, and embedding during the save process.
+
+## Configure custom fonts
+
+### Step 1: Add TTF font files
+
+Place the TTF font files in the resource path used by the PDF Viewer. Fonts can be referenced in two ways:
+
+* **Relative Path:** (for example: `calibri.ttf` or `fallback-fonts/calibri.ttf`)
+* **Absolute URL:** Host fonts on a secure server and reference them using a fully qualified URL. Ensure that the hosting server has **CORS** enabled.
+
+### Step 2: Configure the PDF Viewer
+
+Specify the required font filenames in the `customFonts` property. Ensure that the filenames in the array match the actual files in the resource path.
 
 ```html
 
@@ -67,18 +65,11 @@ Specify the required font names in the customFonts property.
 
 ```
 
-N>Ensure that the font file names match the specified font names.
-
 ## Supported Form Fields
-Custom fonts can be applied to the following form field types:
-- [TextBox](../forms/manage-form-fields/create-form-fields#textbox)
-- [ListBox](../forms/manage-form-fields/create-form-fields#listbox)
-- [DropDown](../forms/manage-form-fields/create-form-fields#dropdown)
 
-## Notes and Limitations
-- If text rendered using a custom font exceeds the form field’s bounds, the downloaded PDF may render incorrectly in some third party PDF viewers.
-- The same content displays correctly in the **Syncfusion PDF Viewer**.
+Custom fonts are supported for [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown) form field types.
 
-## To avoid rendering issues:
-- Use an appropriate font size that fits within the form field.
-- Increase the size of the form field before saving or downloading the PDF.
+## Important considerations
+
+- **Font Size:** Ensure the chosen font size fits within the form field bounds to prevent rendering issues in third-party viewers.
+- **Layout Integrity:** If text rendered with a custom font exceeds the field bounds, the downloaded PDF might display incorrectly in some external viewers, though it will render perfectly within the Syncfusion PDF Viewer.

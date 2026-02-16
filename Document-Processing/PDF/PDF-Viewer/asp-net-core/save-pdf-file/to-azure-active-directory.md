@@ -93,7 +93,7 @@ The ASP.NET Core PDF Viewer component supports loading and saving PDF files with
 ### **Save the PDF document to Azure**
 
 1. Save PDF to AAD:
-   - The user can click the **Save to AAD** button to upload any modifications to the PDF back to Azure Blob Storage.
+   - Clicking the **Save to AAD** button uploads any modifications to the PDF to Azure Blob Storage.
    - This action sends the modified PDF to the server, where it is converted into a byte array and saved to the specified Azure Blob container.
 
 ### **Server-side code snippets**

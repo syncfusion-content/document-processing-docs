@@ -1,16 +1,18 @@
 ---
-title: Events in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Events in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Events in ASP.NET Core PDF Viewer Control | Syncfusion
+description: Learn all events in ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Events in ASP.NET Core PDF Viewer control
+# Events in ASP.NET Core PDF Viewer Control
 
-The PDF Viewer component triggers events for creation, page navigation, document life cycle, context menu interactions, comments, bookmarks, downloads/exports, hyperlinks, import/export of annotations, keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into your application workflows.
+The PDF Viewer component provides a comprehensive event system for integrating custom logic into application workflows. Events are triggered throughout the document lifecycle, user interactions, and feature operations.
 
-The following table lists the commonly used events supported by the PDF Viewer control:
+## Event reference table
+
+The following table lists all events supported by the PDF Viewer control, organized by category:
 
 | Event | Description |
 | ----- | ----------- |
@@ -2350,4 +2352,4 @@ Example:
 {% endhighlight %}
 {% endtabs %}
 
-> Tip: For annotation and signature events, see the dedicated Annotations Events topic.
+> For comprehensive documentation on **annotation events** and **signature events**, see the dedicated [Annotation Events](annotation/annotation-event) topic with complete examples and use cases.

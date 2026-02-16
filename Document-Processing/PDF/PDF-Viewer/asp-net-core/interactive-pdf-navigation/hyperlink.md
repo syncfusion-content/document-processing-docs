@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hyperlink navigation in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for ASP.NET Core.
+title: Hyperlink Navigation in ASP.NET Core PDF Viewer | Syncfusion
+description: Configure hyperlink and table-of-contents navigation in ASP.NET Core PDF Viewer. Learn how to enable/disable links and handle hyperlink events.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -43,7 +43,7 @@ By default, the PDF Viewer automatically detects and enables all hyperlinks pres
 
 When `enableHyperlink` is set to `false`, all hyperlinks in the document become non-interactive. This means that users cannot click them, and no hyperlink-related events will be triggered.
 
-The following example demonstrates how to disable hyperlink navigation:
+**Example: Disable hyperlinks**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -80,7 +80,7 @@ The `hyperlinkOpenState` property determines how external URLs are opened when a
 
 By default, links open in the same browser tab (`CurrentTab`). To open links in a new tab, set this property to `'NewTab'`. This is useful for preserving the user's current viewing session.
 
-The following example configures hyperlinks to open in a new tab:
+**Example: Open links in a new tab**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -125,7 +125,7 @@ The `hyperlinkMouseOver` event is triggered when the mouse pointer hovers over a
 The event arguments include:
 - `hyperlinkElement`: The HTML anchor element (`<a>`) corresponding to the hyperlink.
 
-The following example demonstrates how to use these events:
+**Example: Hyperlink event handlers**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
