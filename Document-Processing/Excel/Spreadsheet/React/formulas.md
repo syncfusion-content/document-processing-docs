@@ -308,5 +308,5 @@ You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-
 
 * [Editing](./editing)
 * [Formatting](./formatting)
-* [Open](./open/open)
-* [Save](./save/save)
+* [Open](./open-save#open)
+* [Save](./open-save#save)
