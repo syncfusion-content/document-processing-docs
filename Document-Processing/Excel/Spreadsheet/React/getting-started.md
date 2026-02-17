@@ -123,4 +123,5 @@ The following example shows a basic spreadsheet component.
 ## See Also
 
 * [Data Binding](./data-binding)
-* [Open and Save](./open-save)
+* [Open](./open/open)
+* [Save](./save/save)

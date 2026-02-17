@@ -28,7 +28,7 @@ When opening large Excel files with extensive data and features, server response
 These chunks are combined on the client side to load the Excel data smoothly into the Spreadsheet. This approach avoids transmission failures due to memory constraints and ensures reliable and efficient loading of large files.
 
 To enable the chunk response processing feature, you can refer to the following UG section:
-* [Chunk Response Processing](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save#chunk-response-processing)
+* [Chunk Response Processing](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open/open#chunk-response-processing)
 
 ### Configure JSON serialization options during open
 
@@ -41,7 +41,7 @@ This is particularly useful when:
 
 Refer to the following UG section to learn how to configure these options:
 
-* [Configure JSON serialization options during open](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save#configure-json-deserialization-options)
+* [Configure JSON serialization options during open](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open/open#configure-json-deserialization-options)
 
 ### Configuring threshold limits
 
@@ -80,7 +80,7 @@ public IActionResult Open(IFormCollection openRequest)
 To improve performance when opening large Excel files, use parsing options like `IgnoreStyle` and `IgnoreFormat` to skip unnecessary styles and formats. This reduces memory usage, speeds up loading, and minimizes JSON size—especially helpful for files with many styled but empty cells.
 
 To learn how to configure these parsing options, please refer to the UG section below.
-* [Configure Parsing Options](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save#improving-excel-file-open-performance-with-parsing-options)
+* [Configure Parsing Options](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open/open#improving-excel-file-open-performance-with-parsing-options)
 
 ## How to improve performance on formula calculation in Spreadsheet?
 
@@ -171,7 +171,7 @@ Proper use of serialization options during save improves performance and reduces
 
 Refer to the following UG section to learn how to configure these options:
 
-* [Configure JSON serialization options during save](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save#configure-json-serialization-options)
+* [Configure JSON serialization options during save](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open/open#configure-json-serialization-options)
 
 ## How to improve cell selection performance in Spreadsheet?
 
@@ -234,6 +234,7 @@ root.render(<App />);
 
 ## See Also
 
-* [Open and Save](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save)
-* [Docker Deployment](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/docker-deployment)
+* [Open](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open/open)
+* [Save](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/save/save)
+* [Docker Deployment](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/server-deployment/docker-deployment)
 * [Scrolling](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/scrolling)
