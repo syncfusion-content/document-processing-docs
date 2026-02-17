@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Restrict zoom percentage on mobile devices in TypeScript
+# Restrict zoom percentage on mobile devices in TypeScript  
 
 Restrict zoom on mobile devices using the `maxZoom` and `minZoom` properties. This improves scrolling performance and document loading on mobile.
 
