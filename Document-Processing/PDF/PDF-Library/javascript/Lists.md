@@ -137,3 +137,203 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+## Customize list markers
+
+This example demonstrates how to customize the marker style of an unordered list in a PDF document using the `PdfUnorderedList` class. The marker defines the symbol that appears before each list item. You can choose from four predefined marker styles: disk, square, asterisk, and circle. These options allow you to visually distinguish different list types or emphasize specific content, enhancing readability and structure within the document.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfUnorderedList, PdfUnorderedListStyle, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+// Load the existing document
+let document: PdfDocument = new PdfDocument(data);
+// Access the first page
+let page: PdfPage = document.getPage(0);
+// Define the items in the unordered list
+let products: string[] = ['PDF', 'XlsIO', 'DocIO', 'PPT'];
+// Add the items to list item collection by passing the array of products
+let items: PdfListItemCollection = new PdfListItemCollection(products);
+// Initialize the instance of the unordered list and pass the list item collection and settings
+let list: PdfUnorderedList = new PdfUnorderedList(items, {
+    style: PdfUnorderedListStyle.disk
+});
+// Draw the unordered list on the page
+list.draw(page, {x: 50, y: 50});
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the existing document
+var document = new ej.pdf.PdfDocument(data);
+// Access the first page
+var page = document.getPage(0);
+// Define the items in the unordered list
+var products = ['PDF', 'XlsIO', 'DocIO', 'PPT'];
+// Add the items to list item collection by passing the array of products
+var items = new ej.pdf.PdfListItemCollection(products);
+// Initialize the instance of the unordered list and pass the list item collection and settings
+var list = new ej.pdf.PdfUnorderedList(items, {
+    style: ej.pdf.PdfUnorderedListStyle.disk
+});
+// Draw the unordered list on the page
+list.draw(page, {x: 50, y: 50});
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customizing list fonts
+
+This example demonstrates how to customize the font used for list items in a PDF document using the `PdfUnorderedList` class. The list supports multiple font types, allowing you to tailor the appearance to different languages and stylistic requirements. You can apply standard PDF fonts, TrueType fonts, or CJK fonts to ensure proper rendering of Western, Unicode, and East Asian text. By selecting an appropriate font family and size, you can create lists that match your document design and provide better readability across various languages.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfUnorderedList, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+// Load the existing document
+let document: PdfDocument = new PdfDocument(data);
+// Access the first page
+let page: PdfPage = document.getPage(0);
+// Define the items in the unordered list
+let products: string[] = ['PDF', 'XlsIO', 'DocIO', 'PPT'];
+// Add the items to list item collection by passing the array of products
+let items: PdfListItemCollection = new PdfListItemCollection(products);
+// Initialize the instance of the unordered list and pass the list item collection and settings
+let list: PdfUnorderedList = new PdfUnorderedList(items, {
+    font: document.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular)
+});
+// Draw the unordered list on the page
+list.draw(page, {x: 50, y: 50});
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the existing document
+var document = new ej.pdf.PdfDocument(data);
+// Access the first page
+var page = document.getPage(0);
+// Define the items in the unordered list
+var products = ['PDF', 'XlsIO', 'DocIO', 'PPT'];
+// Add the items to list item collection by passing the array of products
+var items = new ej.pdf.PdfListItemCollection(products);
+// Initialize the instance of the unordered list and pass the list item collection and settings
+var list = new ej.pdf.PdfUnorderedList(items, {
+    font: document.embedFont(ej.pdf.PdfFontFamily.helvetica, 36, ej.pdf.PdfFontStyle.regular)
+});
+// Draw the unordered list on the page
+list.draw(page, {x: 50, y: 50});
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Creating nested list structures
+
+This example demonstrates how to create nested list structures in a PDF document using the `PdfUnorderedList` and `PdfOrderedList` classes. Nested lists allow you to organize information hierarchically by placing one list inside another. This is useful when representing multi‑level data, outlining topics with subpoints, or grouping related items clearly. Each nested level can have its own marker style, font settings, and giving you full control over the appearance and structure of complex list content.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfOrderedList, PdfUnorderedList, PdfUnorderedListStyle, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+// Load the existing document
+let document: PdfDocument = new PdfDocument(data);
+// Access the first page
+let page: PdfPage = document.getPage(0);
+// Initialize the instance of the unordered list and pass the list item collection
+let list: PdfUnorderedList = new PdfUnorderedList(new PdfListItemCollection(['PDF', 'XlsIO', 'DocIO', 'PPT']));
+// Set the marker style for the unordered list
+list.style = PdfUnorderedListStyle.circle;
+// Add a nested ordered list to the first list item
+list.items.at(0).subList = new PdfOrderedList(new PdfListItemCollection(['PDF.Base', 'PDF.Portable', 'Flutter', 'EJ2']));
+// Draw the unordered list on the page
+list.draw(page, {x: 50, y: 150});
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the existing document
+var document = new ej.pdf.PdfDocument(data);
+// Access the first page
+var page = document.getPage(0);
+// Initialize the instance of the unordered list and pass the list item collection
+var list = new ej.pdf.PdfUnorderedList(new ej.pdf.PdfListItemCollection(['PDF', 'XlsIO', 'DocIO', 'PPT']));
+// Set the marker style for the unordered list
+list.style = ej.pdf.PdfUnorderedListStyle.circle;
+// Add a nested ordered list to the first list item
+list.items.at(0).subList = new ej.pdf.PdfOrderedList(new ej.pdf.PdfListItemCollection(['PDF.Base', 'PDF.Portable', 'Flutter', 'EJ2']));
+// Draw the unordered list on the page
+list.draw(page, {x: 50, y: 150});
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% endtabs %}
+
+## list pagination
+
+This example demonstrates how the `PdfUnorderedList` class automatically handle pagination when drawing long lists in a PDF document. List pagination ensures that long lists automatically continue onto the next page when there is no remaining space on the current one. The list layout engine preserves marker styles, indentation, and nested levels across page breaks. This provides a smooth and consistent reading experience, even for multi‑page or dynamically generated list content.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfList, PdfLayoutFormat, PdfUnorderedList, PdfLayoutBreakType, PdfLayoutType, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+// Load the existing document
+let document: PdfDocument = new PdfDocument(data);
+// Access the first page
+let page: PdfPage = document.getPage(0);
+// Create an instance for PDF layout format
+let format: PdfLayoutFormat = new PdfLayoutFormat();
+// Set the layout format
+format.layout = PdfLayoutType.paginate;
+format.break = PdfLayoutBreakType.fitElement;
+// Initialize the instance of the unordered list and pass the list item collection and settings
+let list1: PdfList = new PdfUnorderedList(new PdfListItemCollection(['PDF', 'XlsIO', 'DocIO', 'PPT', 'PDF', 'XlsIO', 'DocIO', 'PPT']));
+let list2: PdfList = new PdfUnorderedList(new PdfListItemCollection(['A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.']), {suffix: '_'});
+// Draw the unordered list on the page
+list1.draw(page, {x: 50, y: page.size.height - 100}, format);
+list2.draw(page, {x: 180, y: page.size.height - 100}, format);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the existing document
+var document = new ej.pdf.PdfDocument(data);
+// Access the first page
+var page = document.getPage(0);
+// Create an instance for PDF layout format
+var format = new ej.pdf.PdfLayoutFormat();
+// Set the layout format
+format.layout = ej.pdf.PdfLayoutType.paginate;
+format.break = ej.pdf.PdfLayoutBreakType.fitElement;
+// Initialize the instance of the unordered list and pass the list item collection and settings
+var list1 = new ej.pdf.PdfUnorderedList(new ej.pdf.PdfListItemCollection(['PDF', 'XlsIO', 'DocIO', 'PPT', 'PDF', 'XlsIO', 'DocIO', 'PPT']));
+var list2 = new ej.pdf.PdfUnorderedList(new ej.pdf.PdfListItemCollection(['A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.']), {suffix: '_'});
+// Draw the unordered list on the page
+list1.draw(page, {x: 50, y: page.size.height - 100}, format);
+list2.draw(page, {x: 180, y: page.size.height - 100}, format);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% endtabs %}

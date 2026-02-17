@@ -851,6 +851,70 @@ document. Destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Add a date field to a PDF form
+
+This section shows how to add a date field to a PDF form, allowing users to enter or select a date within the document. The JavaScript PDF library lets you configure the date field’s appearance, format, and behavior. You can also use `dateField.actions` to trigger custom scripts or validations when the field is focused, changed, or submitted.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, pdfPage, PdfForm, PdfTextBoxField, PdfJavaScriptAction, PdfFormFieldsTabOrder } from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a new page to the document
+let page: pdfPage = document.addPage();
+// Access loaded form
+let form: PdfForm = document.form;
+// Create a new text box field
+const field: PdfTextBoxField = new PdfTextBoxField(page, 'fieldF', {
+  x: 50, y: 200, width: 150, height: 20,
+});
+// Sets the text value to text box field
+field.text = '18/08/2003';
+// Sets date formate
+const format: string = 'yyyy-mm-dd';
+// Create a new `PdfJavaScriptAction` for adding the action
+field.actions.format = new PdfJavaScriptAction(`AFDate_FormatEx("${format}");`);
+field.actions.keyPressed = new PdfJavaScriptAction(`AFDate_KeystrokeEx("${format}"):`);
+field.actions.validate = new PdfJavaScriptAction(`AFDate_Validate("${format}");`);
+// Add a new form field
+form.add(field);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document. Destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document instance
+var document = new ej.pdf.PdfDocument();
+// Add a new page to the document
+var page = document.addPage();
+// Access loaded form
+var form = document.form;
+// Create a new text box field
+const field = new ej.pdf.PdfTextBoxField(page, 'fieldF', {
+  x: 50, y: 200, width: 150, height: 20,
+});
+// Sets the text value to text box field
+field.text = '18/08/2003';
+// Sets date formate
+const format = 'yyyy-mm-dd';
+// Create a new `PdfJavaScriptAction` for adding the action
+field.actions.format = new ej.pdf.PdfJavaScriptAction(`AFDate_FormatEx("${format}");`);
+field.actions.keyPressed = new ej.pdf.PdfJavaScriptAction(`AFDate_KeystrokeEx("${format}"):`);
+field.actions.validate = new ej.pdf.PdfJavaScriptAction(`AFDate_Validate("${format}");`);
+// Add a new form field
+form.add(field);
+// Save the document
+document.save('Output.pdf');
+// Destroy the document
+document. Destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Field Auto Naming
 
 To prevent grouping when adding fields with the same name, you can enable the `fieldAutoNaming` property of `PdfForm` class. Setting fieldAutoNaming to true ensures that each field gets a unique name internally, even if you specify the same name during creation.
