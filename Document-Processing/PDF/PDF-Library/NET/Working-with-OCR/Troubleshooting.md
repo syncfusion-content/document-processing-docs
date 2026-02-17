@@ -634,3 +634,20 @@ By applying these configuration changes, you can ensure that your AKS workloads 
 
 </table>
 
+## Does OCRProcessor require Microsoft.mshtml?
+
+<table>
+<tr>
+<th style="font-size:14px" width="100px">Query
+</th>
+<td>
+Is Microsoft.mshtml required when using the OCRProcessor in the .NET Framework?
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+Yes, the Microsoft.mshtml component is required when using the OCRProcessor in .NET Framework applications. We internally rely on this package to parse the hOCR results, which are delivered in HTML format. Because of this, Microsoft.mshtml is necessary for .NET Framework projects that use the OCRProcessor.
+</td>
+</tr>
+</table>

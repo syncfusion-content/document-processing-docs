@@ -1560,10 +1560,12 @@ N> We have option to exclude the default Blink binaries from the installation pa
 
 ## How to Exclude BlinkBinaries or Runtime Files in Build or Deployment
 
-The runtime files, or blink binaries, will be copied into a bin or published folder while building and publishing the application.
-By including the <ExcludeAssets>native</ExcludeAssets> option in the package reference of the csproj file, you can exclude the runtime files or blink binaries from being copied into the bin or publish folder while building and publishing the application. But you need to place the BlinkBinaries in the server disk and set the BlinkPath in the BlinkConverterSettings to perform the conversion. 
+When you build or publish the application, the Syncfusion HTML‑to‑PDF converter automatically copies the Blink runtime files (BlinkBinaries) into the <i>bin</i> or <i>publish</i> output folder. These binaries are required for HTML‑to‑PDF conversion at runtime. However, in certain deployment scenarios—such as reducing the deployment size or using a shared/system‑installed Chromium—you can exclude these files and instead provide the Blink binaries manually on the host machine.
 
-N> Using this approach, you can reduce the deployment size on your own servers. 
+To exclude BlinkBinaries during the build process, configure your project file depending on whether you are using <b>.NET Core/.NET or .NET Framework</b>.
+
+<b>Exclude BlinkBinaries in .NET Core</b>
+You can prevent runtime files from being included by restricting the package to <b>compile-only</b> assets using the <b>IncludeAssets</b> tag in the <b>PackageReference</b>. This stops all Blink runtime binaries from being copied into the output folder.
 
 Refer to the following package reference:
 
@@ -1571,11 +1573,33 @@ Refer to the following package reference:
 {% highlight C# %}
 
 <ItemGroup>
-    <PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Windows" Version="31.1.23">
-      <ExcludeAssets>native</ExcludeAssets>
+    <PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Windows" Version="32.1.21">
+        <IncludeAssets>compile;runtime</IncludeAssets>
     </PackageReference>
 </ItemGroup>
 
 {% endhighlight %}
 {% endtabs %}
+
+By using <b>IncludeAssets="compile"</b>, only the required compile-time metadata is included, and all runtime dependencies (BlinkBinaries) are excluded from the final build or publish output.
+
+N> If you exclude runtime files, you must manually place BlinkBinaries on the server and configure BlinkPath in BlinkConverterSettings for conversion to work.
+
+<b>Exclude BlinkBinaries in .NET Framework Projects</b>
+
+For .NET Framework applications, Blink runtime files are included through a .targets file referenced in the project.
+To exclude BlinkBinaries, simply remove this import entry.
+
+{% tabs %}
+{% highlight C# %}
+
+<Import Project="packages\Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.32.1.20\build\net462\Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.targets" Condition="Exists('packages\Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.32.1.20\build\net462\Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.targets')" />
+
+{% endhighlight %}
+{% endtabs %}
+
+Removing this line prevents the Syncfusion<sup>&reg;</sup> build targets from copying BlinkBinaries and other runtime files into your bin folder during build or publish.
+
+N> By excluding BlinkBinaries, you can significantly reduce the size of your deployment package, especially in server environments where disk usage and deployment time matter.
+
 

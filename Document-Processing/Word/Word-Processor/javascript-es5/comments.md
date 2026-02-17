@@ -16,7 +16,7 @@ Document Editor allows you to add comments to documents. You can add, navigate a
 
 Comments can be inserted to the selected text.
 
-```ts
+```js
 //Add new commnt in the document.
 documentEditor.editor.insertComment('Test comment');
 ```
@@ -47,7 +47,7 @@ documentEditor.editor.insertComment('Hello world', commentProperties);
 
 ## Add a Reply Comment with Date, Author, and Status
 
-Reply comments can be inserted into the parent comment with a specified date, author using [`insertReplyComment`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertreplycomment/).
+Reply comments can be inserted into the parent comment with a specified date, author using [`insertReplyComment`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertreplycomment).
 
 {% highlight js %}
 // In this example, a comment with the text "Hello world"
@@ -73,7 +73,7 @@ documentEditor.editor.insertReplyComment(comment.id, 'Hello world', commentPrope
 
 ## Get Comments
 
-Document Editor allows to get the comments along with its reply and comment properties using [`getComments`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#getComments/).
+Document Editor allows to get the comments along with its reply and comment properties using [`getComments`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#getComments).
 
 {% highlight js %}
 //Get Comments in the document along with the properties author, date, status.
@@ -85,7 +85,7 @@ var commentInfo = container.documentEditor.getComments();
 
 Next and previous comments can be navigated using the below code snippet.
 
-```ts
+```js
 //Navigate to next comment
 documentEditor.selection.navigateNextComment();
 
@@ -96,7 +96,7 @@ documentEditor.selection.navigatePreviousComment();
 
 ## Delete comment
 
-Current comment can be be deleted using [`deleteComment`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#deletecomment/).
+Current comment can be be deleted using [`deleteComment`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#deletecomment).
 
 
 {% highlight js %}
@@ -117,7 +117,7 @@ container.documentEditor.editor.deleteComment(commentinfo[0].replies[0].id);
 
 All the comments in the document can be deleted using the below code snippet.
 
-```ts
+```js
 //Delete all the comments present in the current document.
 documentEditor.editor.deleteAllComments();
 ```
@@ -126,18 +126,18 @@ documentEditor.editor.deleteAllComments();
 
 Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user allowed to add or edit comments alone in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#enforceprotection/) and [`stopProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#stopprotection/) API.
+Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
-```ts
-let container: DocumentEditorContainer = new DocumentEditorContainer({
+```js
+
+var container = new ej.documenteditor.DocumentEditorContainer({
   enableToolbar: true,
-  height: '590px',
+  height: '590px'
 });
-DocumentEditorContainer.Inject(Toolbar);
-container.serviceUrl =
-  'http://localhost:5000/api/documenteditor/';
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+container.serviceUrl = 'http://localhost:5000/api/documenteditor/';
 container.appendTo('#container');
 
 //enforce protection
@@ -145,6 +145,7 @@ container.documentEditor.editor.enforceProtection('123', 'CommentsOnly');
 
 //stop the document protection
 container.documentEditor.editor.stopProtection('123');
+
 ```
 
 Comment only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
@@ -159,28 +160,33 @@ Mention support displays a list of items that users can select or tag from the s
 
 The following example illustrates how to enable mention support in Document Editor
 
-```ts
-let mentionData: any = [
+```js
+var mentionData = [
     { "Name": "Mary Kate", "EmailId": "marry@company.com" },
     { "Name": "Andrew James", "EmailId": "james@company.com" },
-    { "Name": "Andrew Fuller", "EmailId": "andrew@company.com"}
+    { "Name": "Andrew Fuller", "EmailId": "andrew@company.com" }
 ];
-let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true,height: '590px',
-// Enable mention support in document editor
-  documentEditorSettings: {
-    mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }},
-  }
+
+var container = new ej.documenteditor.DocumentEditorContainer({
+    enableToolbar: true,
+    height: '590px',
+    // Enable mention support in document editor
+    documentEditorSettings: {
+        mentionSettings: { dataSource: mentionData, fields: { text: 'Name' } }
+    }
 });
-DocumentEditorContainer.Inject(Toolbar);
+
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#container');
+
 ```
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Events
 
-DocumentEditor provides [beforeCommentAction](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#beforecommentaction/) event, which is triggered on comment actions like Post, edit, reply, resolve and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve and reopen. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/commentActionEventArgs/) object as an argument, which allows access to information about the comment.
+DocumentEditor provides [beforeCommentAction](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#beforecommentaction) event, which is triggered on comment actions like Post, edit, reply, resolve and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve and reopen. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
 
 To demonstrate a specific use case, let’s consider an example where we want to restrict the delete functionality based on the author’s name. The following code snippet illustrates how to allow only the author of a comment to delete:
 
