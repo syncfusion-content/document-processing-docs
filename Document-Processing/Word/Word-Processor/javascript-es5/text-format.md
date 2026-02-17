@@ -16,10 +16,10 @@ Document Editor supports several formatting options for text like bold, italic, 
 
 The bold formatting for selected text can be get or set by using the following sample code.
 
-```ts
+```js
 
 //Gets the value for bold formatting of selected text.
-let bold : boolean = documenteditor.selection.characterFormat.bold;
+let bold = documenteditor.selection.characterFormat.bold;
 //Sets bold formatting for selected text.
 documenteditor.selection.characterFormat.bold = true;
 
@@ -27,7 +27,7 @@ documenteditor.selection.characterFormat.bold = true;
 
 You can toggle the bold formatting based on existing value at selection. Refer to the following sample code.
 
-```ts
+```js
 documenteditor.editor.toggleBold();
 ```
 
@@ -35,16 +35,16 @@ documenteditor.editor.toggleBold();
 
 The Italic formatting for selected text can be get or set by using the following sample code.
 
-```ts
+```js
 //Gets the value for italic formatting of selected text.
-let italic : boolean = documenteditor.selection.characterFormat.italic;
+var italic = documenteditor.selection.characterFormat.italic;
 //Sets italic formatting for selected text.
 documenteditor.selection.characterFormat.italic = true|false;
 ```
 
 You can toggle the Italic formatting based on existing value at selection. Refer to the following sample code.
 
-```ts
+```js
 documenteditor.editor.toggleItalic();
 ```
 
@@ -52,16 +52,16 @@ documenteditor.editor.toggleItalic();
 
 The underline style for selected text can be get or set by using the following sample code.
 
-```ts
+```js
 //Gets the value for underline formatting of selected text.
-let underline : Underline = documenteditor.selection.characterFormat.underline;
+var underline = documenteditor.selection.characterFormat.underline;
 //Sets underline formatting for selected text.
 documenteditor.selection.characterFormat.underline = 'Single' | 'None';
 ```
 
 You can toggle the underline style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
 
-```ts
+```js
 documenteditor.editor.toggleUnderline('Single');
 ```
 
@@ -69,16 +69,16 @@ documenteditor.editor.toggleUnderline('Single');
 
 The strikethrough style for selected text can be get or set by using the following sample code.
 
-```ts
+```js
 //Gets the value for strikethrough formatting of selected text.
-let strikethrough : Strikethrough = documenteditor.selection.characterFormat.strikethrough;
+var strikethrough = documenteditor.selection.characterFormat.strikethrough;
 //Sets strikethrough formatting for selected text.
 documenteditor.selection.characterFormat.strikethrough = 'Single' | 'Normal';
 ```
 
 You can toggle the strikethrough style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
 
-```ts
+```js
 documenteditor.editor.toggleStrikethrough();
 ```
 
@@ -86,16 +86,16 @@ documenteditor.editor.toggleStrikethrough();
 
 The selected text can be made superscript by using the following sample code.
 
-```ts
+```js
 //Gets the value for baselineAlignment formatting of selected text.
-let baselineAlignment : BaselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
+var baselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
 //Sets baselineAlignment formatting for selected text.
 documenteditor.selection.characterFormat.baselineAlignment = 'Superscript';
 ```
 
 Toggle the selected text as superscript or normal using the following sample code.
 
-```ts
+```js
 documenteditor.editor.toggleSuperscript();
 ```
 
@@ -103,22 +103,22 @@ documenteditor.editor.toggleSuperscript();
 
 The selected text can be made subscript by using the following sample code.
 
-```ts
+```js
 //Gets the value for baselineAlignment formatting of selected text.
-let baselineAlignment : BaselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
+var baselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
 //Sets baselineAlignment formatting for selected text.
 documenteditor.selection.characterFormat.baselineAlignment = 'Subscript';
 ```
 
 Toggle the selected text as subscript or normal using the following sample code.
 
-```ts
+```js
 documenteditor.editor.toggleSubscript();
 ```
 
 You can make a subscript or superscript text as normal using the following code.
 
-```ts
+```js
 documenteditor.selection.characterFormat.baselineAlignment = 'Normal';
 ```
 
@@ -126,7 +126,7 @@ documenteditor.selection.characterFormat.baselineAlignment = 'Normal';
 
 You can apply different case formatting based on the selected text. Refer to the following sample code.
 
-```ts
+```js
 documenteditor.editor.changeCase('Uppercase'|'Lowercase'|'SentenceCase'|'ToggleCase'|'CapitalizeEachWord');
 ```
 
@@ -134,9 +134,9 @@ documenteditor.editor.changeCase('Uppercase'|'Lowercase'|'SentenceCase'|'ToggleC
 
 The size of selected text can be get or set using the following code.
 
-```ts
+```js
 //Gets the value for fontSize formatting of selected text.
-let fontSize : number = documenteditor.selection.characterFormat.fontSize;
+var fontSize = documenteditor.selection.characterFormat.fontSize;
 //Sets fontSize formatting for selected text.
 documenteditor.selection.characterFormat.fontSize = 32;
 ```
@@ -158,9 +158,9 @@ This Font Color option appear as follows.
 
 The color of selected text can be get or set using the following code.
 
-```ts
+```js
 //Gets the value for fontColor formatting of selected text.
-let fontColor : string = documenteditor.selection.characterFormat.fontColor;
+var fontColor = documenteditor.selection.characterFormat.fontColor;
 //Sets fontColor formatting for selected text.
 documenteditor.selection.characterFormat.fontColor = 'Pink';
 documenteditor.selection.characterFormat.fontColor = '#FFC0CB';
@@ -170,9 +170,9 @@ documenteditor.selection.characterFormat.fontColor = '#FFC0CB';
 
 The font style of selected text can be get or set using the following sample code.
 
-```ts
+```js
 //Gets the value for fontFamily formatting of selected text.
-let baselineAlignment : string = documenteditor.selection.characterFormat.fontFamily;
+var baselineAlignment = documenteditor.selection.characterFormat.fontFamily;
 //Sets fontFamily formatting for selected text.
 documenteditor.selection.characterFormat.fontFamily = 'Arial';
 ```
@@ -181,9 +181,9 @@ documenteditor.selection.characterFormat.fontFamily = 'Arial';
 
 The highlight color of the selected text can be get or set using the following sample code.
 
-```ts
+```js
 //Gets the value for highlightColor formatting of selected text.
-let highlightColor : HighlightColor = documenteditor.selection.characterFormat.highlightColor;
+var highlightColor = documenteditor.selection.characterFormat.highlightColor;
 //Sets highlightColor formatting for selected text.
 documenteditor.selection.characterFormat.highlightColor = 'Pink';
 ```
