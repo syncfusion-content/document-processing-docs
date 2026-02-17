@@ -8,13 +8,14 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add signature in React Pdfviewer component
+## Add signature in React PDF Viewer component
 
-The PDF Viewer library allows you to add signature in the signature field of the loaded PDF document programmatically using the **formFieldClick** event.
+The PDF Viewer library allows adding a signature to a signature field in a loaded PDF document programmatically by handling the `formFieldClick` event.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create simple PDF Viewer sample in React.
+Follow these steps
 
-**Step 2:** Add the following code snippet to add signature in signature field.
+1. Follow the Syncfusion [getting-started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) guide for React PDF Viewer.
+2. Add the following code snippet to handle signature field clicks and set or clear the signature value.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

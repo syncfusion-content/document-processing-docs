@@ -14,16 +14,16 @@ The PDF Viewer control supports adding handwritten signatures to a PDF document.
 
 ## Adding a handwritten signature to the PDF document
 
-The handwritten signature can be added to the PDF document using the annotation toolbar.
+Add a handwritten signature using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **HandWritten Signature** button in the annotation toolbar. The signature panel appears.
+* Open the annotation toolbar by clicking the **Edit Annotation** button on the PDF Viewer toolbar.
+* Select the **HandWritten Signature** button in the annotation toolbar to open the signature panel.
 
-![[Open the handwritten signature panel](../images/handwritten_sign.png)
+![Handwritten signature button and panel](../images/handwritten_sign.png)
 
 * Draw the signature in the panel.
 
-![[Open the handwritten signature panel](../images/signature_panel.png)
+![Draw a signature in the signature panel](../images/signature_panel.png)
 
 * Click **Create**, move the signature, and place it at the desired location.
 
@@ -31,9 +31,9 @@ The handwritten signature can be added to the PDF document using the annotation 
 
 ## Adding a handwritten signature to the PDF document Programmatically
 
-With the PDF Viewer library, you can programmatically add handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation/#addannotation) method.
+With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
-Here is an example of how you can use the **addAnnotation()** method to add the Handwritten signature programmatically
+Here is an example of using the `addAnnotation()` method to add a handwritten signature programmatically
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -187,6 +187,6 @@ export class AppComponent implements OnInit {
 
 ## Editing the properties of handwritten signature
 
-The stroke color, border thickness, and opacity of the handwritten signature can be edited using the edit stroke color tool, edit thickness tool, and edit opacity tool in the annotation toolbar.
+Edit the stroke color, border thickness, and opacity of a handwritten signature using the annotation toolbar's edit stroke color, thickness, and opacity tools.
 
-![SignatureProperties](../images/signature_properties.png)
+![Signature properties in the annotation toolbar](../images/signature_properties.png)

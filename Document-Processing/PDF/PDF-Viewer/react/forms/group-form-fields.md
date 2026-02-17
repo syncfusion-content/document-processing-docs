@@ -9,9 +9,7 @@ documentation: ug
 
 # Group form fields in React PDF Viewer
 
-The **Syncfusion React PDF Viewer** allows you to **group multiple form fields into a single logical field** by assigning the **same Name** to them. Grouped form fields share their values and states automatically based on the field type. You can group form fields using the **Form Designer UI** or **programmatically using APIs**, making it easy to keep related fields synchronized across the PDF document.
-
-This page covers:
+The **Syncfusion React PDF Viewer** allows grouping multiple form fields into a single logical field by assigning the same `Name` to them. Grouped form fields share their values and states automatically based on the field type. Use the Form Designer UI for manual grouping or the Form Designer APIs for programmatic grouping to keep related fields synchronized across the document.
 - [How form field grouping works](#how-grouping-works)
 - [Field behavior based on type](#field-behavior-by-type)
 - [How to group form fields using the UI](#group-using-the-form-designer-ui)
@@ -20,17 +18,17 @@ This page covers:
 
 ## How grouping works
 
-In a PDF form, multiple PDF Form Fields can represent the same logical form field. When PDF Form Fields share the same **Name**, they are treated as a group and stay synchronized.
+In a PDF form, multiple widgets can represent the same logical form field. When widgets share the same `Name`, they are treated as a group and remain synchronized.
 
 ## Field behavior by type
 
-- **Textbox and Password** — Text entered in one widget appears in all widgets with the same Name.  
-- **CheckBox** — Checking one widget sets the checked state for all checkboxes with the same Name.  
-- **RadioButton** — Widgets with the same Name form a radio group; only one option can be selected.  
-- **ListBox and DropDown** — The selected value is shared across widgets with the same Name.  
+- **Textbox and Password** — Text entered in one widget appears in all widgets with the same name.  
+- **CheckBox** — Checking one widget sets the checked state for all checkboxes with the same name.  
+- **RadioButton** — Widgets with the same name form a radio group; only one option can be selected.  
+- **ListBox and DropDown** — The selected value is shared across widgets with the same name.  
 - **Signature and Initial fields** — Applied signature/initial is mirrored across grouped widgets.
 
-N>Form field grouping is controlled by the **Name** property. The position of each widget is determined only by its bounds; grouping is not affected by location.
+N> form field grouping is controlled by the `Name` property. The position of each widget is determined by its bounds; grouping is independent of location.
 
 ## Group using the Form Designer UI
 

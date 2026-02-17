@@ -12,27 +12,27 @@ domainurl: ##DomainURL##
 
 The PDF Viewer provides options to add, edit, and delete text markup annotations, including Highlight, Underline, Strikethrough, and Squiggly.
 
-![Alt text](../images/text_markup_annotation.png)
+![Text markup annotation toolbar and examples](../images/text_markup_annotation.png)
 
 ## Highlight text
 
-There are two ways to highlight text:
+Two ways to add highlights:
 
-1.Using the context menu
+1. Using the context menu
 * Select text in the PDF document and right-click it.
 * Select **Highlight** in the context menu.
 
-  ![Alt text](../images/highlight_context.png)
+  ![Highlight using context menu](../images/highlight_context.png)
 
-2.Using the annotation toolbar
+2. Using the annotation toolbar
 * Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
 * Select **Highlight** to enable highlight mode.
 * Select text to add the highlight annotation.
 * Alternatively, select text first and then click **Highlight**.
 
-  ![Alt text](../images/highlight_button.png)
+  ![Highlight button in annotation toolbar](../images/highlight_button.png)
 
-When pan mode is active and a text markup mode is entered, the PDF Viewer switches to text selection mode to enable selection.
+When pan mode is active, entering any text markup mode switches the PDF Viewer to text selection mode.
 
 Refer to the following code snippet to switch to highlight mode.
 
@@ -203,7 +203,7 @@ root.render(<App />);
 
 ## Highlight text programmatically
 
-Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -292,23 +292,23 @@ root.render(<App />);
 
 ## Underline text
 
-There are two ways to underline text:
+Two ways to add underlines:
 
-1.Using the context menu
+1. Using the context menu
 * Select text in the PDF document and right-click it.
 * Select **Underline** in the context menu.
 
-   ![Alt text](../images/underline_context.png)
+  ![Underline using context menu](../images/underline_context.png)
 
-2.Using the annotation toolbar
+2. Using the annotation toolbar
 * Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
 * Select **Underline** to enable underline mode.
 * Select text to add the underline annotation.
 * Alternatively, select text first and then click **Underline**.
 
-   ![Alt text](../images/underline_button.png)
+  ![Underline button in annotation toolbar](../images/underline_button.png)
 
-In the pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
+When pan mode is active, entering underline mode switches the PDF Viewer to text selection mode to enable text selection for underlining.
 
 Refer to the following code snippet to switch to underline mode.
 
@@ -476,7 +476,7 @@ root.render(<App />);
 
 ## Underline text programmatically
 
-Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -565,23 +565,23 @@ root.render(<App />);
 
 ## Strikethrough text
 
-There are two ways to strikethrough text:
+Two ways to add strikethroughs:
 
-1.Using the context menu
+1. Using the context menu
 * Select text in the PDF document and right-click it.
 * Select **Strikethrough** in the context menu.
 
-   ![Alt text](../images/strikethrough_context.png)
+  ![Strikethrough using context menu](../images/strikethrough_context.png)
 
-2.Using the annotation toolbar
+2. Using the annotation toolbar
 * Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
 * Select **Strikethrough** to enable strikethrough mode.
 * Select text to add the strikethrough annotation.
 * Alternatively, select text first and then click **Strikethrough**.
 
-   ![Alt text](../images/strikethrough_button.png)
+  ![Strikethrough button in annotation toolbar](../images/strikethrough_button.png)
 
-In the pan mode, if the strikethrough mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for striking through the text.
+When pan mode is active, entering strikethrough mode switches the PDF Viewer to text selection mode to enable text selection for striking through.
 
 Refer to the following code snippet to switch to strikethrough mode.
 
@@ -754,7 +754,7 @@ root.render(<App />);
 
 ## Strikethrough text programmatically
 
-Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -843,23 +843,23 @@ root.render(<App />);
 
 ## Add squiggly to text
 
-There are two ways to add squiggly to text:
+Two ways to add squiggly annotations:
 
-1.Using the context menu
+1. Using the context menu
 * Select text in the PDF document and right-click it.
 * Select **Squiggly** in the context menu.
 
-   ![Alt text](../images/squiggly_context.png)
+  ![Squiggly using context menu](../images/squiggly_context.png)
 
-2.Using the annotation toolbar
+2. Using the annotation toolbar
 * Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
 * Select **Squiggly** to enable squiggly mode.
 * Select text to add the squiggly annotation.
 * Alternatively, select text first and then click **Squiggly**.
 
-   ![Alt text](../images/squiggly_button.png)
+  ![Squiggly button in annotation toolbar](../images/squiggly_button.png)
 
-In the pan mode, if the squiggly mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for adding squiggly to the text.
+When pan mode is active, entering squiggly mode switches the PDF Viewer to text selection mode to enable text selection for adding squiggly annotations.
 
 Refer to the following code snippet to switch to squiggly mode.
 
@@ -1032,7 +1032,7 @@ root.render(<App />);
 
 ## Add squiggly to text programmatically
 
-Programmatically add squiggly using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add squiggly using the [addAnnotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -1123,15 +1123,15 @@ root.render(<App />);
 
 The selected annotation can be deleted in the following ways:
 
-1.Using the Delete/Backspace key
-    * Select the annotation.
-    * Press Delete (or Backspace). The selected annotation is removed.
+1. Using the Delete/Backspace key
+  * Select the annotation.
+  * Press Delete (or Backspace). The selected annotation is removed.
 
-2.Using the annotation toolbar
-    * Select the annotation.
-    * Click **Delete Annotation** in the annotation toolbar. The selected annotation is removed.
+2. Using the annotation toolbar
+  * Select the annotation.
+  * Click **Delete Annotation** in the annotation toolbar. The selected annotation is removed.
 
-   ![Alt text](../images/delete_button.png)
+   ![Delete annotation button in toolbar](../images/delete_button.png)
 
 ## Edit text markup annotation properties
 
@@ -1141,13 +1141,13 @@ The color and the opacity of the text markup annotation can be edited using the 
 
 Use the color palette in the Edit Color tool to change the annotation color.
 
-![Alt text](../images/edit_color.png)
+![Edit color palette for annotations](../images/edit_color.png)
 
 ### Edit opacity
 
 Use the range slider in the Edit Opacity tool to change annotation opacity.
 
-![Alt text](../images/edit_opacity.png)
+![Edit opacity slider for annotations](../images/edit_opacity.png)
 
 ## Set default properties during control initialization
 

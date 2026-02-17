@@ -18,19 +18,25 @@ To protect a PDF document, send a request to the /v1/edit-pdf/protect-pdf endpoi
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/protect-pdf' \
---form 'file=@"invoice.pdf"' \
---form 'settings="{
-  \"File\": \"file\",
-  \"Password\": \"12345678\"
-}"'
+--form 'file=@Input1.pdf' \
+--form 'settings={
+  "File": "file",
+  "Password": "12345678"
+}'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "invoice.pdf");
-formdata.append("settings", "{\n  \"File\": \"file\",\n    \"Password\": \"12345678\"\n}");
+formdata.append("file", fileInput.files[0], "Input1.pdf");
+formdata.append(
+  "settings",
+  JSON.stringify({
+    File: "file",
+    Password: "12345678"
+  })
+);
 
 const requestOptions = {
   method: "POST",
@@ -38,7 +44,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/protect-pdf", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/protect-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -50,12 +56,18 @@ fetch("http://localhost:4000/v1/edit-pdf/protect-pdf", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/protect-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("invoice.pdf")), "file", "invoice.pdf");
-content.Add(new StringContent("{
-  \"File\": \"file\",
-  \"Password\": \"12345678\"
-}"), "settings");
+content.Add(new StreamContent(File.OpenRead("Image1.pdf")), "file", "Image1.pdf");
+var settings = new
+{
+  File = "file",
+  Password = "12345678",    
+};
+
+var json = JsonSerializer.Serialize(settings);
+var settingsContent = new StringContent(json, Encoding.UTF8, "application/json");
+content.Add(settingsContent, "settings");
 request.Content = content;
+
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
@@ -94,7 +106,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

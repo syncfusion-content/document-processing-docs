@@ -8,10 +8,10 @@ documentation: ug
 ---
 
 # Form Designer events in Blazor PDF Viewer
-The Blazor PDF Viewer includes Form Designer events to handle form field interactions. These events enable tracking and customizing behaviors such as adding, deleting, selecting, resizing, validating, importing, and exporting form fields.
+The Blazor SfPdfViewer exposes Form Designer events for handling form field interactions. These events let applications track, validate, and customize behaviors such as adding, deleting, selecting, resizing, validating, importing, and exporting form fields.
 
-## Event List
-Below are the key events provided by the Form Designer to handle form field interactions in the PDF Viewer.
+## Event list
+The table below lists key Form Designer events available in the PDF Viewer and their purpose.
 
 | Event Name                | Description |
 |---------------------------|-------------|

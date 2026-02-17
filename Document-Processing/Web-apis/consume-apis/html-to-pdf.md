@@ -11,32 +11,62 @@ With the Syncfusion document processing engine, you can easily convert an HTML t
 
 ## Convert HTML to PDF
 
-To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoint, including both the HTML file as input and its assets as follows:
+To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoint, including the webpage URL as input as follows:
 
 {% tabs %}
 
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
---form 'Index.html=@"html/index.html"' \
---form 'logo.png=@"html/logo.png"' \
---form 'font=@"html/SourceSansPro-Regular.ttf"' \
---form 'style=@"html/style.css"' \
---form 'settings="{
-  \"IndexFile\": \"index.html\",
-  \"Assets\": [\"logo.png\", \"font\",\"style\"]
-}"'
+  --form-string 'settings={
+    "JobID": "job-123",
+    "IndexFile":"",
+    "PaperSize": "A4",
+    "Settings": {
+      "Url": "https://www.syncfusion.com/",
+      "AdditionalDelay": 500,
+      "EnableScripts": true,
+      "EnableLinks": true,
+      "EnableBookmarks": true,
+      "EnableForms": false,
+      "EnableToc": false,
+      "Margins": 24,
+      "Rotation": 0,
+      "Orientation": "Portrait",
+      "SinglePagePdf": false,
+      "ShowHeader": true,
+      "ShowFooter": true
+    }
+  }'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("Index.html", fileInput.files[0], "html/index.html");
-formdata.append("logo.png", fileInput.files[0], "html/logo.png");
-formdata.append("font", fileInput.files[0], "html/SourceSansPro-Regular.ttf");
-formdata.append("style", fileInput.files[0], "html/style.css");
-formdata.append("settings", "{\n  \"IndexFile\": \"index.html\",\n  \"Assets\": [\"logo.png\", \"font\",\"style\"]\n}");
+formdata.append(
+    "settings",
+    JSON.stringify({
+      JobID: "job-200",
+      "IndexFile":"",
+      PaperSize: "A4",
+      Settings: {
+        Url: "https://example.com/invoice/5678",
+        AdditionalDelay: 800,
+        EnableScripts: true,
+        Enablelinks: true,
+        EnableBookmarks: true,
+        EnableForms: false,
+        EnableToc: false,
+        Margins: 24, // points
+        Rotation: 0,
+        Orientation: "Portrait", // or "Landscape"
+        SinglePagePdf: false,
+        ShowHeader: true,
+        ShowFooter: true
+      }
+    })
+  );
 
 const requestOptions = {
   method: "POST",
@@ -44,7 +74,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/conversion/html-to-pdf", requestOptions)
+fetch("http://localhost:8003/v1/conversion/html-to-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -56,15 +86,143 @@ fetch("http://localhost:4000/v1/conversion/html-to-pdf", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/html-to-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("html/index.html")), "Index.html", "html/index.html");
-content.Add(new StreamContent(File.OpenRead("html/logo.png")), "logo.png", "html/logo.png");
-content.Add(new StreamContent(File.OpenRead("html/SourceSansPro-Regular.ttf")), "font", "html/SourceSansPro-Regular.ttf");
-content.Add(new StreamContent(File.OpenRead("html/style.css")), "style", "html/style.css");
-content.Add(new StringContent("{
-  \"IndexFile\": \"index.html\",
-  \"Assets\": [\"logo.png\", \"font\",\"style\"]
-}"), "settings");
+
+var settings = new
+{
+    JobID = "job-300",
+    "IndexFile":"",
+    PaperSize = "A4",
+    Settings = new
+    {
+        Url = "https://example.com/guide",
+        AdditionalDelay = 700,
+        EnableScripts = true,
+        Enablelinks = true,
+        EnableBookmarks = true,
+        EnableForms = false,
+        EnableToc = false,
+        Margins = 24,
+        Rotation = 0,
+        Orientation = "Portrait",
+        SinglePagePdf = false,
+        ShowHeader = true,
+        ShowFooter = true
+    }
+};
+
+content.Add(new StringContent(JsonSerializer.Serialize(settings)), "settings");
 request.Content = content;
+
+var response = await client.SendAsync(request);
+response.EnsureSuccessStatusCode();
+Console.WriteLine(await response.Content.ReadAsStringAsync());
+
+{% endhighlight %} 
+
+{% endtabs %}
+
+To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoint, including the HTML file as input as follows:
+
+{% tabs %}
+
+{% highlight c# tabtitle="Curl" %}
+
+curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
+  --form-string 'settings={
+    "JobID": "job-123",
+    "IndexFile":"index.html",
+    "PaperSize": "A4",
+    "Settings": {
+      "Url": "",
+      "AdditionalDelay": 500,
+      "EnableScripts": true,
+      "EnableLinks": true,
+      "EnableBookmarks": true,
+      "EnableForms": false,
+      "EnableToc": false,
+      "Margins": 24,
+      "Rotation": 0,
+      "Orientation": "Portrait",
+      "SinglePagePdf": false,
+      "ShowHeader": true,
+      "ShowFooter": true
+    }
+  }'
+
+{% endhighlight %}
+
+{% highlight javaScript tabtitle="JavaScript" %}
+
+const formdata = new FormData();
+formdata.append(
+    "settings",
+    JSON.stringify({
+      JobID: "job-200",
+      "IndexFile":"index.html",
+      PaperSize: "A4",
+      Settings: {
+        Url: "",
+        AdditionalDelay: 800,
+        EnableScripts: true,
+        Enablelinks: true,
+        EnableBookmarks: true,
+        EnableForms: false,
+        EnableToc: false,
+        Margins: 24, // points
+        Rotation: 0,
+        Orientation: "Portrait", // or "Landscape"
+        SinglePagePdf: false,
+        ShowHeader: true,
+        ShowFooter: true
+      }
+    })
+  );
+
+const requestOptions = {
+  method: "POST",
+  body: formdata,
+  redirect: "follow"
+};
+
+fetch("http://localhost:8003/v1/conversion/html-to-pdf", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+
+{% endhighlight %} 
+
+{% highlight c# tabtitle="C#" %}
+
+var client = new HttpClient();
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/html-to-pdf");
+var content = new MultipartFormDataContent();
+
+var settings = new
+{
+    JobID = "job-300",
+    "IndexFile":"index.html",
+    PaperSize = "A4",
+    Settings = new
+    {
+        Url = "",
+        AdditionalDelay = 700,
+        EnableScripts = true,
+        Enablelinks = true,
+        EnableBookmarks = true,
+        EnableForms = false,
+        EnableToc = false,
+        Margins = 24,
+        Rotation = 0,
+        Orientation = "Portrait",
+        SinglePagePdf = false,
+        ShowHeader = true,
+        ShowFooter = true
+    }
+};
+
+content.Add(new StringContent(JsonSerializer.Serialize(settings)), "settings");
+request.Content = content;
+
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
@@ -91,7 +249,8 @@ Next, you can retrieve the job status by sending a request to the /v1/conversion
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+curl --location 'http://localhost:8003/v1/conversion/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
+  --output Output.pdf
 
 {% endhighlight %}
 
@@ -102,7 +261,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

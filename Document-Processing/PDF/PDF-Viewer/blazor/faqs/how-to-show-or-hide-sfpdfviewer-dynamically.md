@@ -13,7 +13,7 @@ The following example initializes the PDF Viewer hidden and toggles its visibili
 
 ```cshtml
 
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Buttons;
 @using Syncfusion.Blazor.SfPdfViewer;
 @using System.Net;
 

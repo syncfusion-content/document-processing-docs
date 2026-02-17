@@ -13,7 +13,7 @@ The Syncfusion&reg; Blazor SfPdfViewer component supports rendering the EJ2 Java
 
 The following steps show how to embed the JavaScript PDF Viewer in a Blazor component.
 
->Note: Ensure that the EJ2 PDF Viewer scripts and styles are referenced in the application, and that the serviceUrl points to a reachable EJ2 PDF Viewer web service endpoint.
+N> Ensure that the EJ2 PDF Viewer scripts and styles are referenced in the application, and that the serviceUrl points to a reachable EJ2 PDF Viewer web service endpoint.
 
 **Step 1:** Add a JavaScript file to the application and reference it in the head element.
 

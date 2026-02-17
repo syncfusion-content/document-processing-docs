@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Table of contents navigation in PDF Viewer
 
-The PDF Viewer supports a built-in table of contents (TOC) experience to help users jump to sections defined by the document’s bookmarks or outline.
+The PDF Viewer provides a built-in table of contents (TOC) experience to help users jump to sections defined by the document’s bookmarks or outline.
 
 ## Table of contents navigation
 
