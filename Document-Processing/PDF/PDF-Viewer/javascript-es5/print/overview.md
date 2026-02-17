@@ -143,7 +143,7 @@ if (printButton) {
 - Choose where printing happens with printMode (Default or NewWindow)
  - Track the lifecycle with printStart and printEnd events
 
-Note: Ensure the `resourceUrl` value matches the deployed `ej2-pdfviewer-lib` version. Calling `print()` launches the browser print dialog; behavior varies by browser and may be affected by popup blockers or browser settings.
+N> Ensure the `resourceUrl` value matches the deployed `ej2-pdfviewer-lib` version. Calling `print()` launches the browser print dialog; behavior varies by browser and may be affected by popup blockers or browser settings.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples)
 

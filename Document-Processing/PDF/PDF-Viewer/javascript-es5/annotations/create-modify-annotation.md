@@ -59,9 +59,7 @@ N> Each annotation type page includes both UI steps and programmatic examples sp
 
 ![Annotation toolbar](../images/shape_toolbar.png)
 
-Note:
-- When pan mode is active and a shape or stamp tool is selected, the viewer switches to text select mode automatically.
-- Property pickers in the annotation toolbar let users choose color, stroke color, thickness, and opacity while drawing.
+N> When pan mode is active and a shape or stamp tool is selected, the viewer switches to text select mode automatically. Property pickers in the annotation toolbar let users choose color, stroke color, thickness, and opacity while drawing.
 
 ### Create programmatically
 

@@ -119,7 +119,7 @@ pdfviewer.documentLoad = function () {
 pdfviewer.appendTo('#pdfViewer'); // Ensure <div id="pdfViewer"></div> exists
 ```
 
-Note: Printing can be triggered programmatically using `pdfviewer.print()`. Form fields with `isPrint: false` are excluded from the printed output.
+N> Printing can be triggered programmatically using `pdfviewer.print()`. Form fields with `isPrint: false` are excluded from the printed output.
 
 ## Apply PDF form field flags using the UI
 

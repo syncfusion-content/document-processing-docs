@@ -16,7 +16,7 @@ Add and display custom items in the Custom Stamp dropdown using JavaScript. This
 
 ### Steps to show custom items in the custom stamp dropdown
 
-**Step 1:** Create a basic Angular PDF Viewer sample using the getting started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started
+**Step 1:** Create a basic JavaScript PDF Viewer sample using the getting started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started
 
 **Step 2:** Configure custom stamp settings
 
