@@ -153,4 +153,59 @@ pivotChartSheet.Series(0).SerieFormat.CommonSerieOptions.Overlap = 100
 {% endhighlight %}
 {% endtabs %} 
 
- 
+## Refresh PivotChart
+
+To refresh a PivotChart, update the PivotTable's cache data source so the chart uses the updated cached data.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Charts/Refresh%20Pivot%20Chart/.NET/Refresh%20Pivot%20Chart/Refresh%20Pivot%20Chart/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Excel2013;
+    IWorkbook workbook = application.Workbooks.Open("PivotChart.xlsx");
+
+    IWorksheet dataSheet = workbook.Worksheets[0];
+    IWorksheet pivotSheet = workbook.Worksheets[1];
+
+    // Update pivot cache source range to refresh the PivotChart
+    (pivotSheet.PivotTables[0] as PivotTableImpl).Cache.SourceRange = dataSheet["A1:H50"];
+
+    workbook.SaveAs("PivotChart_Refreshed.xlsx");
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Excel2013;
+    IWorkbook workbook = application.Workbooks.Open("PivotChart.xlsx");
+
+    IWorksheet dataSheet = workbook.Worksheets[0];
+    IWorksheet pivotSheet = workbook.Worksheets[1];
+
+    (pivotSheet.PivotTables[0] as PivotTableImpl).Cache.SourceRange = dataSheet["A1:H50"];
+
+    workbook.SaveAs("PivotChart_Refreshed.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As New ExcelEngine()
+    Dim application As IApplication = excelEngine.Excel
+    application.DefaultVersion = ExcelVersion.Excel2013
+    Dim workbook As IWorkbook = application.Workbooks.Open("PivotChart.xlsx")
+
+    ' set these to the actual sheets in your file
+    Dim dataSheet As IWorksheet = workbook.Worksheets(0)
+    Dim pivotSheet As IWorksheet = workbook.Worksheets(1)
+
+    DirectCast(pivotSheet.PivotTables(0), PivotTableImpl).Cache.SourceRange = dataSheet("A1:H50")
+
+    workbook.SaveAs("PivotChart_Refreshed.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to create pivot chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Charts/Refresh%20Pivot%20Chart/.NET/Refresh%20Pivot%20Chart).  
