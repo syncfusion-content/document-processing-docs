@@ -16,7 +16,7 @@ This example demonstrates how to create an ordered list in a PDF document using 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfListItemCollection, PdfBrush, PdfStringFormat, PdfPen, PdfNumberStyle, PdfOrderedList, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfListItemCollection, PdfBrush, PdfStringFormat, PdfPen, PdfNumberStyle, PdfOrderedList, PdfListItemCollection, PdfFontFamily, PdfFontStyle, PdfTextAlignment } from '@syncfusion/ej2-pdf';
 
 // Load an existing document
 let document: PdfDocument = new PdfDocument(data);
@@ -80,7 +80,7 @@ This example demonstrates how to create an unordered list in a PDF document usin
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfList, PdfStandardFont, PdfBrush, PdfStringFormat, PdfPen, PdfNumberStyle, PdfUnorderedListStyle, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfBrush, PdfStringFormat, PdfFontFamily, PdfUnorderedList, PdfFontStyle, PdfPen, PdfUnorderedListStyle, PdfListItemCollection } from '@syncfusion/ej2-pdf';
 
 // Load the existing document
 let document: PdfDocument = new PdfDocument(data);
@@ -98,7 +98,7 @@ let list: PdfUnorderedList = new PdfUnorderedList(items, {
     brush: new PdfBrush({ r: 0, g: 255, b: 255 }),
     indent: 30,
     textIndent: 50,
-    style: PdfNumberStyle.numeric,
+    style: PdfUnorderedListStyle.disk,
     delimiter:  ')'
 });
 // Draw the unordered list on the page
@@ -125,7 +125,7 @@ var list = new ej.pdf.PdfUnorderedList(items, {
     brush: new ej.pdf.PdfBrush({ r: 0, g: 255, b: 255 }),
     indent: 30,
     textIndent: 50,
-    style: ej.pdf.PdfNumberStyle.numeric,
+    style: ej.pdf.PdfUnorderedListStyle.disk,
     delimiter:  ')'
 });
 // Draw the unordered list on the page
@@ -145,6 +145,7 @@ This example demonstrates how to customize the marker style of an unordered list
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfUnorderedList, PdfUnorderedListStyle, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+
 // Load the existing document
 let document: PdfDocument = new PdfDocument(data);
 // Access the first page
@@ -189,13 +190,14 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Customizing list fonts
+## Applying custom fonts to list items
 
-This example demonstrates how to customize the font used for list items in a PDF document using the `PdfUnorderedList` class. The list supports multiple font types, allowing you to tailor the appearance to different languages and stylistic requirements. You can apply standard PDF fonts, TrueType fonts, or CJK fonts to ensure proper rendering of Western, Unicode, and East Asian text. By selecting an appropriate font family and size, you can create lists that match your document design and provide better readability across various languages.
+This example shows how to apply custom fonts to list items in a PDF by using embedded fonts through `document.embedFont()`. The list supports Standard, TrueType, and CJK fonts, allowing accurate rendering of multilingual text. By selecting an embedded font and applying it to the list, you can control the style and appearance of list content with better consistency across platforms.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfUnorderedList, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfUnorderedList, PdfListItemCollection, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf';
+
 // Load the existing document
 let document: PdfDocument = new PdfDocument(data);
 // Access the first page
@@ -242,11 +244,12 @@ document.destroy();
 
 ## Creating nested list structures
 
-This example demonstrates how to create nested list structures in a PDF document using the `PdfUnorderedList` and `PdfOrderedList` classes. Nested lists allow you to organize information hierarchically by placing one list inside another. This is useful when representing multi‑level data, outlining topics with subpoints, or grouping related items clearly. Each nested level can have its own marker style, font settings, and giving you full control over the appearance and structure of complex list content.
+This example demonstrates how to create nested list structures in a PDF document using the `PdfUnorderedList` and `PdfOrderedList` classes. Nested lists allow you to organize information hierarchically by placing one list inside another. This is useful when representing multi‑level data, outlining topics with subpoints, or grouping related items clearly.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfOrderedList, PdfUnorderedList, PdfUnorderedListStyle, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+
 // Load the existing document
 let document: PdfDocument = new PdfDocument(data);
 // Access the first page
@@ -283,16 +286,18 @@ list.draw(page, {x: 50, y: 150});
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ## list pagination
 
-This example demonstrates how the `PdfUnorderedList` class automatically handle pagination when drawing long lists in a PDF document. List pagination ensures that long lists automatically continue onto the next page when there is no remaining space on the current one. The list layout engine preserves marker styles, indentation, and nested levels across page breaks. This provides a smooth and consistent reading experience, even for multi‑page or dynamically generated list content.
+This example shows how long lists automatically continue onto the next page when drawn using the `PdfUnorderedList` class. By applying a `PdfLayoutFormat`, the layout engine handles page breaks smoothly while preserving markers, indentation, and nested levels. This ensures consistent rendering of multi‑page or dynamically generated list content.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfList, PdfLayoutFormat, PdfUnorderedList, PdfLayoutBreakType, PdfLayoutType, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+
 // Load the existing document
 let document: PdfDocument = new PdfDocument(data);
 // Access the first page

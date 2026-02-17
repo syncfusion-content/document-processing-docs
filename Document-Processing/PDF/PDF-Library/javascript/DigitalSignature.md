@@ -929,7 +929,7 @@ document.destroy();
 
 ## Sign existing signature field
 
-This section explains how to apply a digital signature to an existing unsigned signature field in a PDF form. The JavaScript PDF library lets you locate predefined signature fields and sign them without modifying the document layout. This is especially useful for templates where signature placeholders already exist. By applying a certificate and signature settings, you can securely complete the signature field and follow standard PDF signing workflows.
+This section explains how to sign an existing unsigned signature field in a PDF using the JavaScript PDF library. You can locate predefined signature fields and apply a digital signature directly by calling `field.setSignature()`, without altering the document layout. This is ideal for templates where signature placeholders already exist, allowing you to securely complete the field using a certificate and signature settings.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -948,9 +948,9 @@ const signature: PdfSignature = PdfSignature.create(certificate, 'password', {
 });
 // Apply the signature to the field 
 field.setSignature(signature);
-// Add a form field
-document.form.add(field);
-// Destroy the document
+// Save the document
+document.save('Output.pdf');
+// Close the document
 document.destroy();
 
 {% endhighlight %}
@@ -969,9 +969,9 @@ const signature = ej.pdf.PdfSignature.create(certificate, 'password', {
 });
 // Apply the signature to the field 
 field.setSignature(signature);
-// Add a form field
-document.form.add(field);
-// Destroy the document
+// Save the document
+document.save('Output.pdf');
+// Close the document
 document.destroy();
 
 {% endhighlight %}
@@ -979,7 +979,7 @@ document.destroy();
 
 ## Remove existing digital signature
 
-This section explains how to remove one or more digital signatures from a PDF and restore the document to an signed or unsigned state. The JavaScript PDF library allows you to clear signature dictionaries so the file can be edited, re‑signed, or corrected. Removing a signature also invalidates any associated certification, making the document fully editable again. This is useful when preparing a PDF for updates or resolving signature‑related issues.
+This section explains how to remove an existing digital signature from a PDF by using `removeField()` to delete the signature field entirely. Removing the field clears the signature dictionary, allowing the document to be edited, corrected, or re‑signed as needed. This is useful when preparing a PDF for updates or resolving signature‑related issues.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -990,9 +990,9 @@ let document: PdfDocument = new PdfDocument(data);
 // Access loaded form
 let form: PdfForm = document.form;
 // Access the loaded form field
-let field: PdfSignatureField = form.fieldAt(0) as PdfSignatureField;
+let field: PdfSignatureField = form.fieldAt(0);
 // Remove the form field
-if (field instanceof PdfSignatureField ) { 
+if (field instanceof PdfSignatureField) { 
     document.form.removeField(field); 
 }
 // Destroy the document

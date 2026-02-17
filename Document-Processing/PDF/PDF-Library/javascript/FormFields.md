@@ -853,11 +853,11 @@ document. Destroy();
 
 ## Add a date field to a PDF form
 
-This section shows how to add a date field to a PDF form, allowing users to enter or select a date within the document. The JavaScript PDF library lets you configure the date field’s appearance, format, and behavior. You can also use `dateField.actions` to trigger custom scripts or validations when the field is focused, changed, or submitted.
+This section shows how to add a date field to a PDF form, allowing users to enter or select a date within the document. The JavaScript PDF library lets you configure the date field’s appearance, format, and behavior. You can use `dateField.actions` to trigger custom scripts or validations when the field is focused, changed, or submitted.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, pdfPage, PdfForm, PdfTextBoxField, PdfJavaScriptAction, PdfFormFieldsTabOrder } from '@syncfusion/ej2-pdf';
+import {PdfDocument, pdfPage, PdfForm, PdfTextBoxField, PdfJavaScriptAction } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -895,7 +895,7 @@ var page = document.addPage();
 var form = document.form;
 // Create a new text box field
 const field = new ej.pdf.PdfTextBoxField(page, 'fieldF', {
-  x: 50, y: 200, width: 150, height: 20,
+  x: 50, y: 200, width: 150, height: 20
 });
 // Sets the text value to text box field
 field.text = '18/08/2003';

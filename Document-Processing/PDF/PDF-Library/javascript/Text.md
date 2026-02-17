@@ -357,13 +357,14 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Draw RTL text using TrueType fonts
+## Drawing Right-To-Left text
 
 This example shows how to draw right-to-left (RTL) text using a TrueType font that supports the target RTL script (for example, Hebrew or Arabic). Embed a TTF font that contains the needed glyphs and pass a `PdfStringFormat` when calling `drawString`.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument, PdfPage, PdfTrueTypeFont, PdfStringFormat, PdfBrush } from '@syncfusion/ej2-pdf';
+
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page
@@ -373,7 +374,7 @@ let font: PdfTrueTypeFont = document.embedFont(data, 13);
 // Draw text
 page.graphics.drawString(`שלום עולם!!!`, font, { x: 0, y: 200, width: 100, height: 100 }, new PdfBrush({ r: 0, g: 0, b: 0 }), new PdfStringFormat());
 // Save the document
-document.save('RTL_Text.pdf');
+document.save('Output.pdf');
 // Close the document
 document.destroy();
 
@@ -389,34 +390,36 @@ var font = document.embedFont(data, 13);
 // Draw text
 page.graphics.drawString(`שלום עולם!!!`, font, { x: 0, y: 200, width: 100, height: 100 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }), new ej.pdf.PdfStringFormat());
 // Save the document
-document.save('RTL_Text.pdf');
+document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ## Embedded font
 
-This example demonstrates how to embed fonts in a PDF document to ensure accurate and consistent text rendering across all platforms. The library supports embedding PdfStandardFont, PdfCjkStandardFont, and PdfTrueTypeFont, enabling reliable display of Western, CJK, and Unicode text even when the required fonts are not installed on the viewing device. Embedded fonts also provide easy access to different font sizes, and styles, allowing you to format text precisely while maintaining the document’s visual consistency.
+This example shows how to embed fonts using `document.embedFont()` to ensure consistent text rendering across all platforms. The library supports embedding `PdfStandardFont`, `PdfCjkStandardFont`, and `PdfTrueTypeFont` for reliable Western, CJK, and Unicode text display. After embedding, the font can be applied through `embedded.getFont()`, allowing precise control over size and style.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfFont, PdfFontFamily, PdfFontStyle, PdfCjkFontFamily, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfFont, PdfStandardFont, PdfCjkStandardFont, PdfFontFamily, PdfFontStyle, PdfCjkFontFamily, PdfBrush } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
 // Embed a font into the PDF document.
-const embedded: PdfFont = document.embedFont(PdfFontFamily.timesRoman, 12,  PdfFontStyle.regular);
-const embedded1: PdfFont = embedded.getFont(14, PdfFontStyle.bold);
-const embedded2: PdfFont = document.embedFont(PdfCjkFontFamily.hanyangSystemsGothicMedium, 12,  PdfFontStyle.regular , true);
-const embedded3: PdfFont = embedded3.getFont(14, PdfFontStyle.bold);
+const embedded1: PdfStandardFont = document.embedFont(PdfFontFamily.timesRoman, 12,  PdfFontStyle.regular);
+const embedded2: PdfCjkStandardFont = document.embedFont(PdfCjkFontFamily.hanyangSystemsGothicMedium, 12,  PdfFontStyle.regular , true);
+// Gets a font variant from the base font with the given size and style
+const embedded3: PdfFont = embedded1.getFont(14, PdfFontStyle.bold);
+const embedded4: PdfFont = embedded2.getFont(14, PdfFontStyle.bold);
 // Draw string using embed font.
-page.graphics.drawString('timesRoman with regular', embedded, {x: 10, y: 10, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
-page.graphics.drawString('timesRoman with bold', embedded1, {x: 10, y: 50, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('timesRoman with regular', embedded1, {x: 10, y: 10, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('timesRoman with bold', embedded3, {x: 10, y: 50, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
 page.graphics.drawString('Cjkfont with regular', embedded2, {x: 200, y: 10, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
-page.graphics.drawString('Cjkfont with bold', embedded3, {x: 200, y: 50, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('Cjkfont with bold', embedded4, {x: 200, y: 50, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -430,15 +433,16 @@ var document = new new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
 // Embed a font into the PDF document.
-const embedded = document.embedFont(new ej.pdf.PdfFontFamily.timesRoman, 12,  new ej.pdf.PdfFontStyle.regular);
-const embedded1 = embedded.getFont(14, new ej.pdf.PdfFontStyle.bold);
+const embedded1 = document.embedFont(new ej.pdf.PdfFontFamily.timesRoman, 12,  new ej.pdf.PdfFontStyle.regular);
 const embedded2 = document.embedFont(new ej.pdf.PdfCjkFontFamily.hanyangSystemsGothicMedium, 12,  new ej.pdf.PdfFontStyle.regular , true);
-const embedded3 = embedded3.getFont(14, new ej.pdf.PdfFontStyle.bold);
+// Gets a font variant from the base font with the given size and style
+const embedded3 = embedded1.getFont(14, new ej.pdf.PdfFontStyle.bold);
+const embedded4 = embedded4.getFont(14, new ej.pdf.PdfFontStyle.bold);
 // Draw string using embed font.
-page.graphics.drawString('timesRoman with regular', embedded, {x: 10, y: 10, width: 300, height: 24}, new new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
-page.graphics.drawString('timesRoman with bold', embedded1, {x: 10, y: 50, width: 300, height: 24}, new new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
-page.graphics.drawString('Cjkfont with regular', embedded2, {x: 200, y: 10, width: 300, height: 24}, new new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
-page.graphics.drawString('Cjkfont with bold', embedded3, {x: 200, y: 50, width: 300, height: 24}, new new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('timesRoman with regular', embedded1, {x: 10, y: 10, width: 300, height: 24}, new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('timesRoman with bold', embedded3, {x: 10, y: 50, width: 300, height: 24}, new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('Cjkfont with regular', embedded2, {x: 200, y: 10, width: 300, height: 24}, new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('Cjkfont with bold', embedded4, {x: 200, y: 50, width: 300, height: 24}, new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
 document.save('Output.pdf');
 // Close the document
