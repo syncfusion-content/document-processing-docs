@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Print in TypeScript PDF Viewer
 
-The Syncfusion TypeScript PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the `enablePrint` property.
+The Syncfusion JavaScript PDF Viewer component allows users to print a loaded PDF document through the built-in toolbar or programmatic calls. Control printing availability by setting the `enablePrint` property.
 
 The following HTML and TypeScript examples render the PDF Viewer with printing enabled in standalone and server-backed applications.
 
@@ -107,9 +107,10 @@ The PDF Viewer allows you to adjust the print rendering quality by setting the [
 
 By default, `printScaleFactor` is set to 1.
 
-N> Values outside the 0.5–5 range revert to the standard print quality (value 1).
+N> Values outside the 0.5–5 range revert to the default print quality (value 1).
 
-The following example demonstrates how to update the scale factor before printing.
+The following example demonstrates how to update the scale factor before printing. Note: increasing `printScaleFactor` improves output sharpness but also increases rendering time.
+
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 

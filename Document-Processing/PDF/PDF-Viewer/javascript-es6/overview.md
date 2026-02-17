@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of TypeScript PDF Viewer Control 
 
-The Syncfusion TypeScript PDF Viewer component enables users to view, annotate, prepare and fill forms, and print PDF files directly in web applications.
+The Syncfusion [TypeScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) component enables users to view, annotate, prepare, and fill forms, and print PDF files directly in web applications.
 
 ## Setup
 
