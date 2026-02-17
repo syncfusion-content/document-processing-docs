@@ -27,18 +27,18 @@ You can add squiggly annotations in two ways:
 ![Squiggly context](../../../javascript-es6/annotations/annotation-images/squiggle-context.gif)
 
 2. Using the annotation toolbar
-* Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
-* Select **Squiggly** to enable squiggly mode.
-* Select text to add the squiggly annotation.
-* Alternatively, select text first and then click **Squiggly**.
+- Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+- Select **Squiggly** to enable squiggly mode.
+- Select text to add a squiggly annotation.
+- Alternatively, select text first and then click **Squiggly**.
 
 ![Squiggly toolbar](../../../javascript-es6/annotations/annotation-images/squiggle-tool.gif)
 
 N> When in pan mode, selecting a text markup annotation switches the PDF Viewer to text select mode.
 
-### Enable Squiggly Mode 
+### Enable squiggly mode 
 
-Enable/exit squiggly mode using the following code:
+Enable or exit squiggly mode using the following code:
 
 ```html
 <button id="squigglyMode">Squiggly</button>
@@ -107,7 +107,7 @@ document.getElementById('setNone').addEventListener('click', function () {
 {% endhighlight %}
 {% endtabs %}
 
-### Add squiggly annotation programmatically
+### Add squiggly annotations programmatically
 
 Add squiggly annotations programmatically using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
@@ -175,11 +175,11 @@ document.getElementById('addSquiggly').addEventListener('click', function () {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit Squiggly Annotation
+## Edit Squiggly Annotations
 
-### Edit squiggly annotation in UI
+### Edit squiggly annotations in UI
 
-You can select and delete squiggly annotations directly in the viewer. Use the context menu or toolbar options as needed.
+Use the viewer to select and delete squiggly annotations. Use the context menu or toolbar options as needed.
 
 Delete the selected annotation in the following ways:
 
@@ -195,7 +195,7 @@ Delete the selected annotation in the following ways:
 
 #### Edit squiggly annotation properties in UI
 
-The color and opacity of the squiggly annotation can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
+The color and opacity of squiggly annotations can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
 
 - Edit color: Use the color palette in the Edit Color tool to change the annotation color.
 
@@ -286,7 +286,7 @@ document.getElementById('editSquiggly').addEventListener('click', function () {
 
 Set default properties before creating the control using `squigglySettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -332,11 +332,11 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `SquigglySettings`.
+Set properties for individual annotations before creating the control using `SquigglySettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default highlight settings.
+Refer to the following code snippet to set the default squiggly settings.
 
 ```html
 <button id="squiggly">Add Squiggly</button>

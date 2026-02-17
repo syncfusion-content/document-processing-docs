@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # Custom annotation tools in TypeScript PDF Viewer
 
-PDF viewer allows to add your own toolbar and toggle PDF annotation tools programmatically using the setAnnotationMode method. You can enable tools such as Highlight, Underline, Rectangle, Circle, Arrow, Free Text, Ink, and Measurement annotations (Distance, Perimeter, Area, Radius).
+The PDF Viewer supports adding a custom toolbar and toggling annotation tools programmatically using the `setAnnotationMode` method. The viewer can enable tools such as Highlight, Underline, Rectangle, Circle, Arrow, Free Text, Ink, and measurement annotations (Distance, Perimeter, Area, Radius)  
 
 Follow these steps to build a minimal custom annotation toolbar.
 
 Step 1: Start from a basic PDF Viewer sample
 
-See the [Getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a basic sample.
+Refer to the [Getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a basic sample.
 
 Step 2: Add HTML for a lightweight custom toolbar
 
-Add buttons for the tools you want to expose. You can use plain buttons or Syncfusion Toolbar. Below is a plain-HTML variant that keeps things simple.
+Add buttons for the tools to expose. The sample below uses plain HTML buttons for simplicity; replace with a Syncfusion Toolbar for a richer UI if desired.
 
 ```html
 <div id="annotationToolbar" class="e-pv-custom-anno-toolbar">
@@ -46,7 +46,7 @@ Add buttons for the tools you want to expose. You can use plain buttons or Syncf
 
 Step 3: Import and inject modules
 
-Make sure the Annotation module is injected. If you also want text selection/search, include those as needed.
+Ensure the `Annotation` module is injected. Include text selection and search modules if those capabilities are required.
 
 ```ts
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch } from '@syncfusion/ej2-pdfviewer';
@@ -87,9 +87,9 @@ const bindAnnoTools = () => {
 bindAnnoTools();
 ```
 
-## Custom Tools Using Syncfusion Toolbar for a richer UI
+## Custom tools using Syncfusion Toolbar for a richer UI
 
-You can replace the plain buttons with Syncfusion EJ2 Toolbar items and icons similar to the custom toolbar sample. Here is a compact example showing a few common tools. Add the Toolbar package (@syncfusion/ej2-navigations) and wire each item’s click to setAnnotationMode.
+Replace the plain buttons with Syncfusion EJ2 Toolbar items and icons for a richer UI. The compact example below shows common tools. Add the Toolbar package `@syncfusion/ej2-navigations` and wire each item’s click handler to `setAnnotationMode`.
 
 ```ts
 import { Toolbar as Tool, ClickEventArgs, ItemModel } from '@syncfusion/ej2-navigations';
@@ -147,11 +147,10 @@ const annoToolbar = new Tool({
 annoToolbar.appendTo('#annotationToolbar');
 ```
 
-Notes
+Note
 
-- setAnnotationMode accepts the annotation type name. Common values include: Highlight, Underline, Strikethrough, StickyNotes, FreeText, Ink, Rectangle, Circle, Line, Arrow, Polygon, Polyline, Distance, Perimeter, Area, Radius, and None to exit.
-- You can predefine default annotation styles using the corresponding settings properties (for example, areaSettings as shown in the Area annotation topic).
-- To combine with a fully custom viewer toolbar, see Custom Toolbar in TypeScript PDF Viewer.
+- `setAnnotationMode` accepts the annotation type name. Common values include: `Highlight`, `Underline`, `Strikethrough`, `StickyNotes`, `FreeText`, `Ink`, `Rectangle`, `Circle`, `Line`, `Arrow`, `Polygon`, `Polyline`, `Distance`, `Perimeter`, `Area`, `Radius`, and `None` to exit.
+- Default annotation styles can be predefined using the corresponding settings properties (for example, `areaSettings`).
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master)
 

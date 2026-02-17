@@ -9,11 +9,11 @@ documentation: ug
 
 # Save PDF files to Azure Blob Storage in TypeScript
 
-The TypeScript PDF Viewer component supports saving PDF files to Azure Blob Storage using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
+The TypeScript PDF Viewer component supports saving PDF files to Azure Blob Storage using either a standalone (browser) configuration or a server-backed configuration. The following steps demonstrate both approaches and include prerequisites and security guidance for production deployments.
 
 ## Using Standalone PDF Viewer
 
-To save a PDF file to Azure Blob Storage, follow these steps:
+Follow the steps below to save a PDF file to Azure Blob Storage from an TypeScript PDF Viewer.
 
 **Step 1:** Create a PDF Viewer sample in TypeScript
 
@@ -29,7 +29,7 @@ import { BlockBlobClient } from "@azure/storage-blob";
 
 2. Add the following private property to `app.ts`, and assign the value from the configuration to the corresponding property.
 
-N> Replace **Your SAS Url in Azure** with the actual SAS URL for the Azure Blob Storage account.
+N> Replace **Your SAS Url in Azure** with the SAS URL generated for the target blob. For production, generate short-lived SAS tokens on the server rather than embedding SAS URLs in client code.
 
 ```typescript
 private SASUrl: string = "*Your SAS Url in Azure*";
@@ -74,7 +74,7 @@ function saveDocument() {
 };
 ```
 
-N> Install the @azure/storage-blob package in the application to use the previous code example: npm install @azure/storage-blob
+N> Install the Azure Storage Blob client package for browser use: `npm install @azure/storage-blob`. For server-side operations use `dotnet add package Azure.Storage.Blobs`.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
@@ -167,7 +167,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace the placeholders with the actual Azure Storage connection string and container name.
+N> Replace the placeholders with the actual Azure Storage connection string and container name. For enhanced security, avoid storing connection strings in source-controlled files; use environment variables, managed identities, or a secret store such as Azure Key Vault.
 
 **Step 3:** Set the PDF Viewer properties in the TypeScript PDF Viewer component
 
@@ -188,6 +188,6 @@ viewer.load('PDF_Succinctly.pdf', null);
 
 ```
 
-N> Install the Azure.Storage.Blobs NuGet package in the web service application to use the previous code example.
+N> Install the `Azure.Storage.Blobs` NuGet package in the web service project to use the server example. For security, avoid committing connection strings to source control and prefer environment variables, managed identities, or Azure Key Vault for secret management.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Server-Backend).

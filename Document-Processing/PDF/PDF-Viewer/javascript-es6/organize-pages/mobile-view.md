@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Organize Pages in Mobile PDF Viewer TypeScript
 
-The PDF Viewer offers a mobile-responsive layout for the `Organize Pages` feature, ensuring a seamless experience on smaller devices. When viewed on a mobile device, the toolbar and navigation elements adapt to the screen size, providing easy access to all page management tools.
+The PDF Viewer offers a mobile-responsive layout for the `Organize Pages` feature, ensuring a seamless experience on smaller devices. On mobile devices, the toolbar and navigation elements adapt to screen size to provide easy access to page management tools.
 
 ## Mobile-Friendly Toolbar
 
@@ -18,7 +18,7 @@ In the mobile view, the `Organize Pages` toolbar is displayed at the bottom of t
 
 ## Context Menu for Page Operations
 
-To perform actions on a page thumbnail, tap and hold on the thumbnail to open a context menu. This menu contains all the available page operations:
+To perform actions on a page thumbnail, tap and hold the thumbnail to open a context menu. This menu contains the available page operations:
 
 *   **Rotate Clockwise**: Rotate the selected page 90 degrees clockwise.
 *   **Rotate Counter-Clockwise**: Rotate the selected page 90 degrees counter-clockwise.
@@ -28,10 +28,10 @@ To perform actions on a page thumbnail, tap and hold on the thumbnail to open a 
 *   **Select All**: Select all pages in the document.
 
 
-![Alt text](../images/Context-Menu-Page-Operations1.png)
+![Context menu for page operations on mobile](../images/Context-Menu-Page-Operations1.png)
 
 ## Rearranging Pages on Mobile
 
 To rearrange pages, tap and hold a page thumbnail to select it, then drag it to the desired position. A blue line will indicate the drop location.
 
-By providing a mobile-friendly interface, the PDF Viewer ensures that users can efficiently manage their PDF documents from any device, anywhere.
+The mobile interface enables efficient PDF page management on handheld devices.
