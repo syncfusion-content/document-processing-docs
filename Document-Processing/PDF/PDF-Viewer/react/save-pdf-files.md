@@ -16,7 +16,7 @@ After editing a PDF with annotation tools, you can save the updated file to a se
 
 After editing the PDF document, follow this short, linear flow to persist and retrieve the updated file:
 
-1. Persist the edited document to your backend (server or database). See "Save modified PDF to server" and "Save modified PDF to a database" below for server-side examples.
+1. Persist the edited document to your back end (server or database). See "Save modified PDF to server" and "Save modified PDF to a database" below for server-side examples.
 2. Provide the updated file to the user. For a simple download use the built-in toolbar or call the viewer API [`download()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download).
 3. If you need the edited PDF for custom uploads or processing, use the viewer [`saveAsBlob()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#saveasblob) API to obtain a Blob (or convert it to Base64).
 
@@ -71,7 +71,8 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 Set the `serviceUrl` to point to your web service (for example, replace `https://localhost:44396/pdfviewer` with your server URL). Also set `documentPath` to the document URL you want to load.
 
-{% raw %}
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -97,8 +98,8 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-{% endraw %}
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Save%20and%20Load/Save%20PDF%20file%20to%20server)
 
@@ -106,8 +107,8 @@ root.render(<App />);
 
 The built-in toolbar includes a download option that saves the updated PDF to the user's local file system. You can also trigger the same behavior programmatically by calling the viewer's [`download()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) API.
 
-{% raw %}
-
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css';
@@ -141,8 +142,8 @@ return (<div>
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-{% endraw %}
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
 
 ## Save modified PDF to a database
 

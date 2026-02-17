@@ -10,6 +10,8 @@ domainurl: ##DomainURL##
 
 # Creating a Next.js application using Syncfusion<sup style="font-size:70%">&reg;</sup> React components
 
+What you'll build / time: A Next.js app integrating the Syncfusion React PDF Viewer — ~15 minutes.
+
 This guide shows how to set up a Next.js application and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer component.
 
 ## What is Next.js?
@@ -22,7 +24,9 @@ Before getting started with the Next.js application, ensure the following prereq
 
 * [Node.js 18.17](https://nodejs.org/en) or later.
 
-* The application is compatible with macOS, Windows, and Linux operating systems.
+ * The application is compatible with macOS, Windows, and Linux operating systems.
+
+* See the [System requirements](../../../../System-Requirements.md) for detailed platform requirements.
 
 ## Create a Next.js application
 
@@ -100,21 +104,18 @@ yarn add @syncfusion/ej2-react-pdfviewer
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components include built-in themes. Import a theme to match the look and feel of the application.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React components include built-in themes. Import the PDF Viewer theme and base styles to match the look and feel of the application.
 
-For projects using the App Router, add the imports to `src/app/globals.css`. For projects using the Pages Router, add them to a global stylesheet such as `pages/_app.js` or its CSS import. Remove or consolidate any conflicting styles as needed.
+/* Where to add the imports: */
+/* - App Router: put these in `src/app/globals.css` */
+/* - Pages Router: put them in `pages/_app.js` or its imported global CSS */
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
+/* Minimal recommended imports: PDF Viewer theme and base styles */
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
 
 {% endhighlight %}
 {% endtabs %}
@@ -174,4 +175,4 @@ yarn run dev
 
 To learn more about the PDF Viewer component, see the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started#module-injection).
 
-N> [View the Next.js PDF Viewer sample in the GitHub repository]https://github.com/SyncfusionExamples/syncfusion-react-pdfviewer-component-in-nextjs
+N> [View the Next.js PDF Viewer sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pdfviewer-component-in-nextjs)

@@ -24,7 +24,8 @@ Example (TypeScript / React):
 ```tsx
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { PdfViewerComponent, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+         Print, TextSelection, Annotation, TextSearch, Inject, FormDesigner, FormFields }
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       resourceUrl="https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib"
       style={{ height: '640px' }}>
-      <Inject />
+      <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                Print, TextSelection, TextSearch, FormDesigner, FormFields ]} />
     </PdfViewerComponent>
   );
 }
