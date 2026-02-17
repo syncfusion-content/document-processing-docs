@@ -125,7 +125,7 @@ viewer.appendTo('#pdfViewer');
 viewer.load('PDF_Succinctly.pdf', null);
 
 ```
-
+  
 N> Install the `Google.Cloud.Storage.V1` NuGet package in the web service application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-cloud-storage)

@@ -155,7 +155,7 @@ Add the below `serviceUrl` in the `index.ts` file
 
 ### Add underline annotations programmatically
 
-Programmatically add underline annotations using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add underline annotations using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
