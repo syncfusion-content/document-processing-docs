@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in Syncfusion PDF Viewer control TypeScript
 
-The PDF Viewer component follows established accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
-
+The PDF Viewer complies with widely adopted accessibility standards and guidance, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and WAI-ARIA roles. The following table summarizes the component's accessibility coverage.
 The accessibility compliance for the PDF Viewer component is summarized below.
 
 | Accessibility Criteria | Compatibility |
@@ -42,7 +41,7 @@ Note: Mobile device support is marked as partial due to platform-level constrain
 
 ## WAI-ARIA attributes
 
-[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component:
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Accessible Rich Internet Applications) provides semantics that improve the accessibility of dynamic web content. The following ARIA attributes are used by the PDF Viewer to expose roles, states, and relationships to assistive technologies:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -62,7 +61,7 @@ Note: Mobile device support is marked as partial due to platform-level constrain
 
 ## Keyboard interaction
 
-The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the PDF Viewer component.
+The PDF Viewer follows WAI-ARIA [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) recommendations to support users who rely on keyboard navigation and assistive technologies. The following keyboard shortcuts are supported.
 
 | **Press (Windows)** |**Press (Macintosh)** | **To do this** |
 | --- | --- | --- |
