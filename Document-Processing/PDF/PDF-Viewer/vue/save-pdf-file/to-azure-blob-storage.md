@@ -120,17 +120,17 @@ N> Install the Azure Storage Blob client package for browser use: `npm install @
 
 ## Using server-backed PDF Viewer
 
-To save a PDF file to Azure Blob Storage, you can follow the steps below
+To save a PDF file to Azure Blob Storage, follow the steps below
 
 **Step 1:** Create a PDF Viewer sample in Vue
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of the PDF Viewer application.
 
 **Step 2:** Modify the `PdfViewerController.cs` file in the web service project
 
 1. Create a web service project in .NET Core 3.0 or later. For instructions, see this article: https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
 3. Import the required namespaces at the top of the file:
 
@@ -230,7 +230,7 @@ import {
   ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-// Replace the "localhost:44396" with the actual URL of your server
+// Replace the "localhost:44396" with the actual URL of the server
 const serviceUrl = "https://localhost:44396/pdfviewer";
 const documentPath = "PDF_Succinctly.pdf";
 
@@ -262,7 +262,7 @@ export default {
   },
   data() {
     return {
-      // Replace the "localhost:44396" with the actual URL of your server
+      // Replace the "localhost:44396" with the actual URL of the server
       serviceUrl: "https://localhost:44396/pdfviewer",
       documentPath: "PDF_Succinctly.pdf"
     };

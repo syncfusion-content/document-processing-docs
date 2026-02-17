@@ -49,8 +49,8 @@ This article explains how to load and save PDF files from Azure Active Directory
 1. **Assign the Storage Blob Data Contributor role**
   - In the Storage account, open **Access control (IAM)** → **Add role assignment**.
   - Select **Storage Blob Data Contributor**, choose **User, group, or service principal**, and add the registered application as a member.
-  - Click on **Select members** and search for your registered application by name or client ID.
-  - Select your application and click **Select**.
+  - Click on **Select members** and search for the registered application by name or client ID.
+  - Select the application and click **Select**.
   - Click **Review + assign** to finalize the role assignment.
 
   ![Assign role to application in Azure](../images/add-role.png)
@@ -62,7 +62,7 @@ This article explains how to load and save PDF files from Azure Active Directory
   - In the Storage account, open **Containers**, create or select a container, and upload the PDF document intended for viewing.
 
 2. **Upload the PDF file**:
-  - Create a new container and upload the PDF document you want to access in the PDF Viewer.
+  - Create a new container and upload the PDF document the want to access in the PDF Viewer.
 
   ![Upload PDF to Azure Blob container](../images/upload-pdf.png)
 ---
@@ -71,11 +71,11 @@ This article explains how to load and save PDF files from Azure Active Directory
 
 1. **Configure server-side code**:
    - Open the server-side application (for example, ASP.NET Core) and configure the following details in the `PdfViewerController` file:
-     - `tenantId` (your Azure AD tenant ID),
-     - `clientId` (your registered application client ID),
-     - `clientSecret` (your registered application client secret),
-     - `blobServiceEndpoint` (your storage account blob service URL),
-     - `containerName` (your container name in Azure Blob Storage).
+     - `tenantId` (Azure AD tenant ID),
+     - `clientId` (registered application client ID),
+     - `clientSecret` (registered application client secret),
+     - `blobServiceEndpoint` (storage account blob service URL),
+     - `containerName` (container name in Azure Blob Storage).
 
 2. **Run the web service**:
    - After saving the configuration values, run the web service so that the Vue application can reach it.
@@ -207,7 +207,7 @@ export default {
 
     return {
       // Path to the document
-      documentPath: "",  // You can set this to an initial document URL or keep it empty
+      documentPath: "",  // Set this to an initial document URL or keep it empty
       // URL for the service (used by the Syncfusion PDF Viewer)
       serviceUrl: "https://localhost:44308/pdfviewer",
       // Toolbar settings

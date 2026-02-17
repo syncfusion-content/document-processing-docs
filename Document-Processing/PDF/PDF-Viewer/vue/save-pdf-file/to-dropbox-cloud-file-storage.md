@@ -18,7 +18,7 @@ To save a PDF file to Dropbox, follow these steps:
 
 **Step 1:** Create a Dropbox API app
 
-To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+To create a Dropbox API App, follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up the API app. This app will allows to interact with Dropbox programmatically, enabling secure access to files and data.
 
 **Step 2:** Create a Simple PDF Viewer Sample in Vue
 
@@ -128,7 +128,7 @@ N> Install the `dropbox` package in the Vue project before running the sample: `
 
 ## Using server-backed PDF Viewer
 
-To save a PDF file to Dropbox cloud file storage, you can follow the steps below
+To save a PDF file to Dropbox cloud file storage, follow the steps below
 
 **Step 1:** Create a Dropbox API app
 
@@ -142,7 +142,7 @@ Follow the Syncfusion getting-started instructions for the Vue PDF Viewer: [Vue 
 
 1. Create a web service project in .NET Core 3.0 or above. Refer to the Syncfusion knowledge base article on creating a PDF Viewer web service: [Create a PDF Viewer web service in .NET Core 3.0 and above](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above).
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
 3. Import the required namespaces at the top of the file:
 
@@ -279,7 +279,7 @@ export default {
   },
   data() {
     return {
-      // Replace the "localhost:44396" with the actual URL of your server
+      // Replace the "localhost:44396" with the actual URL of the server
       serviceUrl: "https://localhost:44396/pdfviewer",
       documentPath: "PDF_Succinctly.pdf"
     };

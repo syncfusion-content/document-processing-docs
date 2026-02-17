@@ -23,9 +23,9 @@ The Vue PDF Viewer component supports loading and saving PDF files using Azure A
 1. Go to the Azure Portal:
    - Navigate to [Azure Portal](https://portal.azure.com).
 
-2. Register your Application:
+2. Register the Application:
    - In the Azure portal, go to **Azure Active Directory** > **App registrations** > **New registration**.
-   - Register your application and note down the **Application (client) ID** and **Directory (tenant) ID**.
+   - Register the application and note down the **Application (client) ID** and **Directory (tenant) ID**.
 
    ![Register an application in Azure AD](../images/app-registration.png)
 
@@ -53,13 +53,13 @@ The Vue PDF Viewer component supports loading and saving PDF files using Azure A
 ### Step 3: Assign a role to the application
 
 1. Go to the storage account:
-   - Navigate to **Access control (IAM)** > **Add role assignment** in your Azure Storage Account.
+   - Navigate to **Access control (IAM)** > **Add role assignment** in the Azure Storage Account.
 
 2. Assign a role:
-   - Assign the **Storage Blob Data Contributor** role to your registered application.
+   - Assign the **Storage Blob Data Contributor** role to the registered application.
    - In the **Assign access to** dropdown, select **User, group, or service principal**.
-   - Click on **Select members** and search for your registered application by name or client ID.
-   - Select your application and click **Select**.
+   - Click on **Select members** and search for the registered application by name or client ID.
+   - Select the application and click **Select**.
    - Click **Review + assign** to finalize the role assignment.
 
     ![Assign Storage Blob Data Contributor role to the application](../images/add-role.png)
@@ -71,7 +71,7 @@ The Vue PDF Viewer component supports loading and saving PDF files using Azure A
    - In the Azure portal, go to **Data storage** > **Containers**.
 
 2. Upload the PDF file:
-   - Create a new container and upload the PDF document you want to access in the PDF Viewer.
+   - Create a new container and upload the PDF document that needs to be accessed in the PDF Viewer.
 
     ![Upload a PDF file to an Azure Blob container](../images/upload-pdf.png)
 ---
@@ -80,11 +80,11 @@ The Vue PDF Viewer component supports loading and saving PDF files using Azure A
 
 1. Configure server-side code:
    - Open the server-side application (e.g., ASP.NET Core) and configure the following details in the `PdfViewerController` file:
-     - `tenantId` (your Azure AD tenant ID),
-     - `clientId` (your registered application client ID),
-     - `clientSecret` (your registered application client secret),
-     - `blobServiceEndpoint` (your storage account blob service URL),
-     - `containerName` (your container name in Azure Blob Storage).
+     - `tenantId` (Azure AD tenant ID),
+     - `clientId` (registered application client ID),
+     - `clientSecret` (registered application client secret),
+     - `blobServiceEndpoint` (storage account blob service URL),
+     - `containerName` (container name in Azure Blob Storage).
 
 2. Run the web service:
    - After configuring the necessary details, run the web service to make it accessible.
@@ -216,7 +216,7 @@ export default {
 
     return {
       // Path to the document
-      documentPath: "",  // You can set this to an initial document URL or keep it empty
+      documentPath: "",  // Set this to an initial document URL or keep it empty
       // URL for the service (used by the Syncfusion PDF Viewer)
       serviceUrl: "https://localhost:44308/pdfviewer",
       // Toolbar settings

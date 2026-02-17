@@ -13,7 +13,7 @@ The Vue PDF Viewer lets users download the currently loaded PDF. Enable the down
 
 ![PDF Viewer toolbar with download button](./images/download.png)
 
-> Note: When loading documents from other origins, ensure that CORS is correctly configured on the server. In server-backed mode, the document is streamed through the serviceUrl endpoint, which must allow download requests.
+N> When loading documents from other origins, ensure that CORS is correctly configured on the server. In server-backed mode, the document is streamed through the serviceUrl endpoint, which must allow download requests.
 
 To invoke download programmatically, use the following snippet:
 

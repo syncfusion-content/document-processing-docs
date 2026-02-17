@@ -38,7 +38,7 @@ The accessibility compliance for the PDF Viewer component is summarized below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-Note: Mobile device support is marked as partial due to platform-level constraints on hover interactions, complex keyboard navigation, and screen reader capabilities that vary by device and browser.
+N> Mobile device support is marked as partial due to platform-level constraints on hover interactions, complex keyboard navigation, and screen reader capabilities that vary by device and browser.
 
 ## WAI-ARIA attributes
 

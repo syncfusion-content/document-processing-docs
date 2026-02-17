@@ -68,7 +68,7 @@ The following table lists commonly used events supported by the PDF Viewer compo
 | [`validateFormFields`](#validateformfields) | Triggers when form field validation fails. |
 | [`zoomChange`](#zoomchange) | Triggers when the magnification value changes. |
 
-Note: For annotation and signature events, see the dedicated Annotations Events topic.
+For annotation and signature events, see the dedicated Annotations Events topic.
 
 ## bookmarkClick
 

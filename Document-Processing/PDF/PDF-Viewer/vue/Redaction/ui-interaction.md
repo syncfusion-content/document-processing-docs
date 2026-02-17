@@ -72,7 +72,7 @@ Use the Appearance tab to style the redaction annotation itself (before applying
 * Outline Color – Optional border for the annotation.
 * Fill Opacity – Controls how transparent the annotation appears during review.
 
-Note: The Appearance tab affects only the temporary annotation. The final look after applying redaction comes from the General tab settings.
+N> The Appearance tab affects only the temporary annotation. The final look after applying redaction comes from the General tab settings.
 
 ![Appearance Tab Settings](redaction-annotations-images/redaction-annotation-appearance.png)
 

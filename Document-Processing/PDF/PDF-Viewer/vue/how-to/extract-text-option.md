@@ -15,7 +15,7 @@ The `extractTextOption` property controls the amount of text and layout informat
 ### Available Options:
 
 - **None** — Do not extract or return any text or layout data. Use this option to minimize memory usage when textual information is not required.
-- **TextOnly** — Return plain text only; layout and bounds are omitted. Note: using `TextOnly` may disable some viewer text features such as synchronous `findText`; use `findTextAsync` when asynchronous search is required.
+- **TextOnly** — Return plain text only; layout and bounds are omitted. Using `TextOnly` may disable some viewer text features such as synchronous `findText`; use `findTextAsync` when asynchronous search is required.
 - **BoundsOnly** — Return layout and positional data (bounds) without the plain text content.
 - **TextAndBounds** — Return both plain text and its positional information (bounds). This is the default and is useful when both content and layout are required.
 

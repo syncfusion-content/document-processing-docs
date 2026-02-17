@@ -37,7 +37,7 @@ You can extract by typing page numbers/ranges or by selecting thumbnails.
 
 ![Extract Pages with selected thumbnails](../images/extract-page-selected-thumbnail.png)
 
-Note: Page numbers are 1-based (first page is 1). Invalid or out-of-range entries are ignored.
+N> Page numbers are 1-based (first page is 1). Invalid or out-of-range entries are ignored.
 
 ## Extraction options (checkboxes)
 

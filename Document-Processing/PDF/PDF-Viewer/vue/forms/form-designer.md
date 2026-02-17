@@ -45,7 +45,7 @@ Designed form fields can be saved into the PDF document and printed with their a
 
 ## Enable Form Designer
 
-To enable form design features, inject the [FormDesigner](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner) module into the PDF Viewer. After injecting the module, use the `enableFormDesigner` property or API to enable or disable the Form Designer option in the main toolbar (set to `true` to enable). Note: the standalone examples below show `enableFormDesigner` set to `false`; change this to `true` to enable form design in those samples.
+To enable form design features, inject the [FormDesigner](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner) module into the PDF Viewer. After injecting the module, use the `enableFormDesigner` property or API to enable or disable the Form Designer option in the main toolbar (set to `true` to enable). The standalone examples below show `enableFormDesigner` set to `false`; change this to `true` to enable form design in those samples.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
