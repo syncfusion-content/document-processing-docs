@@ -33,8 +33,8 @@ The PDF Viewer control provides the support to different Form Field events. The 
 The [formFieldAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldAddArgs/) event is triggered when a new form field is added, either programmatically or through user interaction. The event arguments provide the necessary information about the form field addition.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfieldaddevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfieldaddevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -47,8 +47,8 @@ The [formFieldAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewe
 The [formFieldClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldClickArgs/) event is triggered when a form field is clicked. The event arguments provide the necessary information about the form field click event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfieldclickevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfieldclickevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -61,8 +61,8 @@ The [formFieldClick](https://ej2.syncfusion.com/angular/documentation/api/pdfvie
 The [formFieldDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldDoubleClickArgs/) event is triggered when a form field is double-clicked. The event arguments provide the necessary information about the form field double-click event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfielddoubleclickevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfielddoubleclickevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -75,8 +75,8 @@ The [formFieldDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/
 The [formFieldFocusOut](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldFocusOutEventArgs/) event is triggered when a form field loses focus. The event arguments provide the necessary information about the form field focus out event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfieldfocusoutevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfieldfocusoutevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -89,8 +89,8 @@ The [formFieldFocusOut](https://ej2.syncfusion.com/angular/documentation/api/pdf
 The [formFieldMouseLeave](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldMouseLeaveArgs/) event is triggered when the mouse leaves a form field. The event arguments provide the necessary information about the form field mouse leave event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfieldmouseleaveevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfieldmouseleaveevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -103,8 +103,8 @@ The [formFieldMouseLeave](https://ej2.syncfusion.com/angular/documentation/api/p
 The [formFieldMouseOver](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldMouseoverArgs/) event is triggered when the mouse hovers over a form field. The event arguments provide the necessary information about the form field mouse over event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfieldmouseoverevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfieldmouseoverevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -117,8 +117,8 @@ The [formFieldMouseOver](https://ej2.syncfusion.com/angular/documentation/api/pd
 The [formFieldMove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldMoveArgs/) event is triggered when the mouse moves inside a form field. The event arguments provide the necessary information about the form field mouse move event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfieldmousemoveevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfieldmousemoveevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -131,8 +131,8 @@ The [formFieldMove](https://ej2.syncfusion.com/angular/documentation/api/pdfview
 The [formFieldPropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldPropertiesChangeArgs/) event is triggered when the properties of a form field are changed. The event arguments provide the necessary information about which property of the form field has been changed.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfieldpropertieschangeevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfieldpropertieschangeevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -145,8 +145,8 @@ The [formFieldPropertiesChange](https://ej2.syncfusion.com/angular/documentation
 The [formFieldRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldRemoveArgs/) event is triggered when a form field is removed from the PDF. The event arguments provide the necessary information about which form field has been removed.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfieldremoveevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfieldremoveevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -159,8 +159,8 @@ The [formFieldRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfvi
 The [formFieldResize](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldResizeArgs/) events are triggered when a form field in a PDF is resized. These events provide the relevant details about the specific form field that has been resized.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfieldresizeevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfieldresizeevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -173,8 +173,8 @@ The [formFieldResize](https://ej2.syncfusion.com/angular/documentation/api/pdfvi
 The [formFieldSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldSelectArgs/) events are triggered when a form field in a PDF is selected. These events provide the necessary details about the specific form field that has been selected.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfieldselectevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfieldselectevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -187,8 +187,8 @@ The [formFieldSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfvi
 The [formFieldUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldUnselectArgs/) events are triggered when a form field in a PDF is unselected. These events provide the necessary details about the specific form field that has been unselected.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfieldunselectevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfieldunselectevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -201,8 +201,8 @@ The [formFieldUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdf
 The [validateFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/validateFormFieldsArgs/) events are triggered when a required form field is left unfilled before downloading the PDF. These events provide the necessary information for validating which form fields are incomplete.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/pdfviewer/angular/formfieldvalidationevent-cs2/src/app/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/pdfviewer/angular/formfieldvalidationevent-cs2/src/app/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

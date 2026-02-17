@@ -20,7 +20,7 @@ Follow these steps to load a PDF from Azure Blob Storage in the standalone PDF V
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will give you a basic setup of the PDF Viewer component.
 
-**Step 2:** Modify the `src/app/app.component.ts` File in the Angular Project
+**Step 2:** Modify the `src/app/app.ts` File in the Angular Project
 
 1. Add the following private properties to the `AppComponent` class, and assign the values from the configuration to the corresponding properties
 

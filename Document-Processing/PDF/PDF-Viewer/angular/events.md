@@ -70,14 +70,14 @@ Note: For annotation and signature events, see the dedicated Annotations Events 
 
 ## bookmarkClick
 
-The [bookmarkClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#bookmarkclickevent) event triggers when a bookmark item is clicked in the bookmark panel.
+The [bookmarkClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#bookmarkclick) event triggers when a bookmark item is clicked in the bookmark panel.
 
 - Event arguments: [BookmarkClickEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/bookmarkClickEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -95,7 +95,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -121,7 +121,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -134,14 +134,14 @@ export class AppComponent {
 
 ## toolbarClick
 
-The [toolbarClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#toolbarclickevent) event triggers when a toolbar item is clicked. Use it to handle actions based on the clicked item's id or name.
+The [toolbarClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#toolbarclick) event triggers when a toolbar item is clicked. Use it to handle actions based on the clicked item's id or name.
 
 - Event arguments: `ClickEventArgs`.
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -159,7 +159,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -185,7 +185,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -198,7 +198,7 @@ export class AppComponent {
 
 ## validateFormFields
 
-The [validateFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#validateformfieldsevent) event triggers when form field validation fails, typically before a download or submit action proceeds. Use this event to inspect which required fields are empty and show custom messages or block application logic if needed.
+The [validateFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#validateformfields) event triggers when form field validation fails, typically before a download or submit action proceeds. Use this event to inspect which required fields are empty and show custom messages or block application logic if needed.
 
 - Event arguments: [ValidateFormFieldsArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/validateFormFieldsArgs/)
   - name: Event name
@@ -213,7 +213,7 @@ When it triggers
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -231,7 +231,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -261,7 +261,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -278,14 +278,14 @@ Tip
 
 ## zoomChange
 
-The [zoomChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#zoomchangeevent) event triggers when the magnification value changes.
+The [zoomChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#zoomchange) event triggers when the magnification value changes.
 
 - Event arguments: [ZoomChangeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/zoomChangeEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -303,7 +303,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -329,7 +329,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -342,14 +342,14 @@ export class AppComponent {
 
 ## buttonFieldClick
 
-The [buttonFieldClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#buttonfieldclickevent) event triggers when a button form field is clicked.
+The [buttonFieldClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#buttonfieldclick) event triggers when a button form field is clicked.
 
 - Event arguments: [ButtonFieldClickEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/buttonFieldClickEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -367,7 +367,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -393,7 +393,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -406,14 +406,14 @@ export class AppComponent {
 
 ## commentAdd
 
-The [commentAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#commentaddevent) event triggers when a comment is added in the comment panel.
+The [commentAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#commentadd) event triggers when a comment is added in the comment panel.
 
 - Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/commentEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -431,7 +431,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -457,7 +457,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -470,14 +470,14 @@ export class AppComponent {
 
 ## commentDelete
 
-The [commentDelete](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#commentdeleteevent) event triggers when a comment is deleted in the comment panel.
+The [commentDelete](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#commentdelete) event triggers when a comment is deleted in the comment panel.
 
 - Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/commentEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -495,7 +495,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -521,7 +521,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -534,14 +534,14 @@ export class AppComponent {
 
 ## commentEdit
 
-The [commentEdit](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#commenteditevent) event triggers when a comment is edited in the comment panel.
+The [commentEdit](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#commentedit) event triggers when a comment is edited in the comment panel.
 
 - Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/commentEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -559,7 +559,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -585,7 +585,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -598,14 +598,14 @@ export class AppComponent {
 
 ## commentSelect
 
-The [commentSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#commentselectevent) event triggers when a comment is selected in the comment panel.
+The [commentSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#commentselect) event triggers when a comment is selected in the comment panel.
 
 - Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/commentEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -623,7 +623,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -649,7 +649,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -662,14 +662,14 @@ export class AppComponent {
 
 ## commentStatusChanged
 
-The [commentStatusChanged](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#commentstatuschangedevent) event triggers when a comment status is changed in the comment panel.
+The [commentStatusChanged](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#commentstatuschanged) event triggers when a comment status is changed in the comment panel.
 
 - Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/commentEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -687,7 +687,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -713,7 +713,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -726,14 +726,14 @@ export class AppComponent {
 
 ## created
 
-The [created](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#createdevent) event is triggered during the creation of the PDF Viewer component.
+The [created](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#created) event is triggered during the creation of the PDF Viewer component.
 
 - Event arguments: `void`.
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -751,7 +751,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -777,7 +777,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -790,7 +790,7 @@ export class AppComponent {
 
 ## customContextMenuBeforeOpen
 
-The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#customcontextmenubeforeopenevent) event fires just before the context menu is shown. Use it to show or hide items based on the current state (for example, only show search items when text is selected).
+The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#customcontextmenubeforeopen) event fires just before the context menu is shown. Use it to show or hide items based on the current state (for example, only show search items when text is selected).
 
 - Event arguments: [CustomContextMenuBeforeOpenEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customContextMenuBeforeOpenEventArgs/)
   - name: Event name
@@ -799,13 +799,13 @@ The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/angular/documentati
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component, ViewChild } from '@angular/core';
 import { PdfViewerComponent, ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -854,7 +854,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   #pdfViewer
   id="pdfViewer"
@@ -869,7 +869,7 @@ export class AppComponent {
 
 ## customContextMenuSelect
 
-The [customContextMenuSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#customcontextmenuselectevent) event fires when a custom menu item is clicked. Use it to branch logic by the clicked item's id.
+The [customContextMenuSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#customcontextmenuselect) event fires when a custom menu item is clicked. Use it to branch logic by the clicked item's id.
 
 - Event arguments: [CustomContextMenuSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customContextMenuSelectEventArgs/).
 
@@ -879,13 +879,13 @@ The [customContextMenuSelect](https://ej2.syncfusion.com/angular/documentation/a
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component, ViewChild } from '@angular/core';
 import { PdfViewerComponent, ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -934,7 +934,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   #pdfViewer
   id="pdfViewer"
@@ -949,20 +949,20 @@ export class AppComponent {
 
 ## documentLoad
 
-The [documentLoad](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#documentloadevent) event occurs after a document is successfully loaded and parsed.
+The [documentLoad](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#documentload) event occurs after a document is successfully loaded and parsed.
 
 - Event arguments: [LoadEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/loadEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -988,7 +988,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1001,20 +1001,20 @@ export class AppComponent {
 
 ## documentLoadFailed
 
-The [documentLoadFailed](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#documentloadfailedevent) event triggers when loading a document fails.
+The [documentLoadFailed](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#documentloadfailed) event triggers when loading a document fails.
 
 - Event arguments: [LoadFailedEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/loadFailedEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1039,7 +1039,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1051,20 +1051,20 @@ export class AppComponent {
 
 ## documentUnload
 
-The [documentUnload](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#documentunloadevent) event triggers when closing the current document.
+The [documentUnload](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#documentunload) event triggers when closing the current document.
 
 - Event arguments: [UnloadEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/unloadEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1090,7 +1090,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1103,20 +1103,20 @@ export class AppComponent {
 
 ## downloadEnd
 
-The [downloadEnd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#downloadendevent) event triggers after a document download completes.
+The [downloadEnd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#downloadend) event triggers after a document download completes.
 
 - Event arguments: [DownloadEndEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/downloadEndEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1142,7 +1142,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1155,20 +1155,20 @@ export class AppComponent {
 
 ## downloadStart
 
-The [downloadStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#downloadstartevent) event triggers when the download operation is initiated.
+The [downloadStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#downloadstart) event triggers when the download operation is initiated.
 
 - Event arguments: [DownloadStartEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/downloadStartEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1194,7 +1194,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1207,20 +1207,20 @@ export class AppComponent {
 
 ## exportFailed
 
-The [exportFailed](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#exportfailedevent) event triggers when exporting annotations fails.
+The [exportFailed](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#exportfailed) event triggers when exporting annotations fails.
 
 - Event arguments: [ExportFailureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/exportFailureEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1246,7 +1246,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1259,20 +1259,20 @@ export class AppComponent {
 
 ## exportStart
 
-The [exportStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#exportstartevent) event triggers when exporting annotations starts.
+The [exportStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#exportstart) event triggers when exporting annotations starts.
 
 - Event arguments: [ExportStartEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/exportStartEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1298,7 +1298,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1311,20 +1311,20 @@ export class AppComponent {
 
 ## exportSuccess
 
-The [exportSuccess](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#exportsuccessevent) event triggers when annotations are exported successfully.
+The [exportSuccess](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#exportsuccess) event triggers when annotations are exported successfully.
 
 - Event arguments: [ExportSuccessEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/exportSuccessEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import { ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1350,7 +1350,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1363,14 +1363,14 @@ export class AppComponent {
 
 ## extractTextCompleted
 
-The [extractTextCompleted](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#extracttextcompletedevent) event triggers when text extraction completes.
+The [extractTextCompleted](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#extracttextcompleted) event triggers when text extraction completes.
 
 - Event arguments: [ExtractTextCompletedEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/extractTextCompletedEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1388,7 +1388,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1414,7 +1414,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1427,14 +1427,14 @@ export class AppComponent {
 
 ## hyperlinkClick
 
-The [hyperlinkClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#hyperlinkclickevent) event triggers when a hyperlink is clicked.
+The [hyperlinkClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#hyperlinkclick) event triggers when a hyperlink is clicked.
 
 - Event arguments: [HyperlinkClickEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/hyperlinkClickEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1452,7 +1452,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1478,7 +1478,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1491,14 +1491,14 @@ export class AppComponent {
 
 ## hyperlinkMouseOver
 
-The [hyperlinkMouseOver](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#hyperlinkmouseoverevent) event triggers when hovering over a hyperlink.
+The [hyperlinkMouseOver](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#hyperlinkmouseover) event triggers when hovering over a hyperlink.
 
 - Event arguments: HyperlinkMouseOverArgs.
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1516,7 +1516,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1542,7 +1542,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1555,14 +1555,14 @@ export class AppComponent {
 
 ## importFailed
 
-The [importFailed](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#importfailedevent) event triggers when importing annotations fails.
+The [importFailed](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#importfailed) event triggers when importing annotations fails.
 
 - Event arguments: [ImportFailureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/importFailureEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1580,7 +1580,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1606,7 +1606,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1619,14 +1619,14 @@ export class AppComponent {
 
 ## importStart
 
-The [importStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#importstartevent) event triggers when importing annotations starts.
+The [importStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#importstart) event triggers when importing annotations starts.
 
 - Event arguments: [ImportStartEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/importStartEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1644,7 +1644,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1670,7 +1670,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1683,14 +1683,14 @@ export class AppComponent {
 
 ## importSuccess
 
-The [importSuccess](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#importsuccessevent) event triggers when annotations are imported successfully.
+The [importSuccess](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#importsuccess) event triggers when annotations are imported successfully.
 
 - Event arguments: [ImportSuccessEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/importSuccessEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1708,7 +1708,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1734,7 +1734,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1747,7 +1747,7 @@ export class AppComponent {
 
 ## keyboardCustomCommands
 
-The [keyboardCustomCommands](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#keyboardcustomcommandsevent) event triggers when customized keyboard command keys are pressed.
+The [keyboardCustomCommands](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#keyboardcustomcommands) event triggers when customized keyboard command keys are pressed.
 
 - Event arguments: [KeyboardCustomCommandsEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/keyboardCustomCommandsEventArgs/).
 
@@ -1761,13 +1761,13 @@ Refer to [Keyboard interaction](./accessibility#keyboard-interaction) for detail
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component, ViewChild } from '@angular/core';
 import { PdfViewerComponent, ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1810,7 +1810,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   #pdfViewer
   id="pdfViewer"
@@ -1825,14 +1825,14 @@ export class AppComponent {
 
 ## moveSignature
 
-The [moveSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#movesignatureevent) event triggers when a signature is moved across the page.
+The [moveSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#movesignature) event triggers when a signature is moved across the page.
 
 - Event arguments: `MoveSignatureEventArgs`.
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1850,7 +1850,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1876,7 +1876,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1889,14 +1889,14 @@ export class AppComponent {
 
 ## pageChange
 
-The [pageChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#pagechangeevent) event triggers when the current page number changes (for example, via scrolling or navigation controls).
+The [pageChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#pagechange) event triggers when the current page number changes (for example, via scrolling or navigation controls).
 
 - Event arguments: [PageChangeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageChangeEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1914,7 +1914,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1940,7 +1940,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -1953,14 +1953,14 @@ export class AppComponent {
 
 ## pageClick
 
-The [pageClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#pageclickevent) event triggers when a mouse click occurs on a page.
+The [pageClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#pageclick) event triggers when a mouse click occurs on a page.
 
 - Event arguments: [PageClickEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageClickEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -1978,7 +1978,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2004,7 +2004,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2017,14 +2017,14 @@ export class AppComponent {
 
 ## pageMouseover
 
-The [pageMouseover](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#pagemouseoverevent) event triggers when the mouse moves over a page.
+The [pageMouseover](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#pagemouseover) event triggers when the mouse moves over a page.
 
 - Event arguments: `PageMouseoverEventArgs`.
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2042,7 +2042,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2068,7 +2068,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2081,14 +2081,14 @@ export class AppComponent {
 
 ## pageOrganizerSaveAs
 
-The [pageOrganizerSaveAs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#pageorganizersaveasevent) event triggers when a Save As action is performed in the page organizer.
+The [pageOrganizerSaveAs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#pageorganizersaveas) event triggers when a Save As action is performed in the page organizer.
 
 - Event arguments: `PageOrganizerSaveAsEventArgs`.
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2106,7 +2106,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2132,7 +2132,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2145,14 +2145,14 @@ export class AppComponent {
 
 ## pageRenderComplete
 
-The [pageRenderComplete](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#pagerendercompleteevent) event triggers after a page finishes rendering.
+The [pageRenderComplete](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#pagerendercomplete) event triggers after a page finishes rendering.
 
 - Event arguments: [PageRenderCompleteEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageRenderCompleteEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2170,7 +2170,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2196,7 +2196,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2209,14 +2209,14 @@ export class AppComponent {
 
 ## pageRenderInitiate
 
-The [pageRenderInitiate](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#pagerenderinitiateevent) event triggers when page rendering begins.
+The [pageRenderInitiate](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#pagerenderinitiate) event triggers when page rendering begins.
 
 - Event arguments: [PageRenderInitiateEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageRenderInitiateEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2234,7 +2234,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2260,7 +2260,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2273,14 +2273,14 @@ export class AppComponent {
 
 ## printEnd
 
-The [printEnd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#printendevent) event triggers when a print action completes.
+The [printEnd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#printend) event triggers when a print action completes.
 
 - Event arguments: [PrintEndEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printEndEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2298,7 +2298,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2324,7 +2324,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2337,14 +2337,14 @@ export class AppComponent {
 
 ## printStart
 
-The [printStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#printstartevent) event triggers when a print action is initiated.
+The [printStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#printstart) event triggers when a print action is initiated.
 
 - Event arguments: [PrintStartEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printStartEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2362,7 +2362,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2388,7 +2388,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2401,14 +2401,14 @@ export class AppComponent {
 
 ## removeSignature
 
-The [removeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#removesignatureevent) event triggers when a signature is removed.
+The [removeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#removesignature) event triggers when a signature is removed.
 
 - Event arguments: [RemoveSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/removeSignatureEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2426,7 +2426,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2452,7 +2452,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2465,14 +2465,14 @@ export class AppComponent {
 
 ## resizeSignature
 
-The [resizeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#resizesignatureevent) event triggers when a signature is resized.
+The [resizeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#resizesignature) event triggers when a signature is resized.
 
 - Event arguments: [ResizeSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/resizeSignatureEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2490,7 +2490,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2516,7 +2516,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2529,14 +2529,14 @@ export class AppComponent {
 
 ## resourcesLoaded
 
-The [resourcesLoaded](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#resourcesloadedevent) event triggers after the viewer's required resources are loaded.
+The [resourcesLoaded](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#resourcesloaded) event triggers after the viewer's required resources are loaded.
 
 - Event arguments: `void`.
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2554,7 +2554,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2580,7 +2580,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2593,14 +2593,14 @@ export class AppComponent {
 
 ## signaturePropertiesChange
 
-The [signaturePropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signaturepropertieschangeevent) event triggers when signature properties change.
+The [signaturePropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signaturepropertieschange) event triggers when signature properties change.
 
 - Event arguments: [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2618,7 +2618,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2644,7 +2644,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2657,14 +2657,14 @@ export class AppComponent {
 
 ## signatureSelect
 
-The [signatureSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureselectevent) event triggers when a signature is selected.
+The [signatureSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureselect) event triggers when a signature is selected.
 
 - Event arguments: [SignatureSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureSelectEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2682,7 +2682,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2708,7 +2708,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2721,14 +2721,14 @@ export class AppComponent {
 
 ## signatureUnselect
 
-The [signatureUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureunselectevent) event triggers when a signature is unselected.
+The [signatureUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureunselect) event triggers when a signature is unselected.
 
 - Event arguments: [SignatureUnselectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureUnselectEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2746,7 +2746,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2772,7 +2772,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2785,14 +2785,14 @@ export class AppComponent {
 
 ## textSearchComplete
 
-The [textSearchComplete](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textsearchcompleteevent) event triggers when a text search completes.
+The [textSearchComplete](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textsearchcomplete) event triggers when a text search completes.
 
 - Event arguments: [TextSearchCompleteEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textSearchCompleteEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2810,7 +2810,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2836,7 +2836,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2849,14 +2849,14 @@ export class AppComponent {
 
 ## textSearchHighlight
 
-The [textSearchHighlight](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textsearchhighlightevent) event triggers when searched text is highlighted.
+The [textSearchHighlight](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textsearchhighlight) event triggers when searched text is highlighted.
 
 - Event arguments: [TextSearchHighlightEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textSearchHighlightEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2874,7 +2874,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2900,7 +2900,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2913,14 +2913,14 @@ export class AppComponent {
 
 ## textSearchStart
 
-The [textSearchStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textsearchstartevent) event triggers when a text search is initiated.
+The [textSearchStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textsearchstart) event triggers when a text search is initiated.
 
 - Event arguments: [TextSearchStartEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textSearchStartEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -2938,7 +2938,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -2964,7 +2964,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -2977,14 +2977,14 @@ export class AppComponent {
 
 ## textSelectionEnd
 
-The [textSelectionEnd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textselectionendevent) event triggers when text selection is complete.
+The [textSelectionEnd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textselectionend) event triggers when text selection is complete.
 
 - Event arguments: [TextSelectionEndEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textSelectionEndEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -3002,7 +3002,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -3028,7 +3028,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -3041,14 +3041,14 @@ export class AppComponent {
 
 ## textSelectionStart
 
-The [textSelectionStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textselectionstartevent) event triggers when text selection is initiated.
+The [textSelectionStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textselectionstart) event triggers when text selection is initiated.
 
 - Event arguments: `TextSelectionStartEventArgs`.
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -3066,7 +3066,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -3092,7 +3092,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
@@ -3105,14 +3105,14 @@ export class AppComponent {
 
 ## thumbnailClick
 
-The [thumbnailClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#thumbnailclickevent) event triggers when a thumbnail is clicked.
+The [thumbnailClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#thumbnailclick) event triggers when a thumbnail is clicked.
 
 - Event arguments: [ThumbnailClickEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/thumbnailClickEventArgs/).
 
 Example:
 
 ```ts
-// app.component.ts
+// app.ts
 import { Component } from '@angular/core';
 import {
   ToolbarService,
@@ -3130,7 +3130,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   providers: [
     ToolbarService,
     MagnificationService,
@@ -3156,7 +3156,7 @@ export class AppComponent {
 ```
 
 ```html
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="pdfViewer"
   [documentPath]="documentPath"
