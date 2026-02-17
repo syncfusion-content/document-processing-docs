@@ -27,7 +27,7 @@ Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</
 
 1. Add the following properties to the `Views/Home/index.cshtml`, and assign the values from the configuration to the corresponding properties
 
-**Note:** Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account, **Your container name in Azure** with the actual container name, and **Your Blob name in Azure** with the actual blob name.
+N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account, **Your container name in Azure** with the actual container name, and **Your Blob name in Azure** with the actual blob name.
 
 ```csharp
 var accountName = "*Your account name in Azure*";

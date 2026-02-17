@@ -46,7 +46,7 @@ Shape annotations can be added to PDF documents using the built-in annotation to
 - Release to complete the shape placement
 - Use handles to resize and reposition as needed
 
-> **Note:** When in pan mode and a shape annotation tool is selected, the PDF Viewer automatically switches to text select mode for smooth interaction.
+N> When in pan mode and a shape annotation tool is selected, the PDF Viewer automatically switches to text select mode for smooth interaction.
 
 **Example: Switch to circle annotation mode**
 

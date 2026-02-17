@@ -130,6 +130,6 @@ Set the `documentPath` property of the PDF Viewer to the PDF file name to load f
 
 ```
 
-**Note:** The **Google.Cloud.Storage.V1** NuGet package must be installed in the application to use the previous code example.
+N> The **Google.Cloud.Storage.V1** NuGet package must be installed in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-cloud-storage)

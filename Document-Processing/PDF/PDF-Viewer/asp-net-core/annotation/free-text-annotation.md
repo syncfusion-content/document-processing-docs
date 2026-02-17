@@ -35,7 +35,7 @@ Free text annotations can be added to PDF documents using the built-in annotatio
 - Type your text directly into the text box
 - Use the formatting toolbar to adjust font, size, color, and alignment
 
-> **Note:** When in pan mode and free text annotation is selected, the PDF Viewer automatically switches to text select mode for smooth interaction.
+N> When in pan mode and free text annotation is selected, the PDF Viewer automatically switches to text select mode for smooth interaction.
 
 **Example: Enable free text annotation mode**
 

@@ -66,7 +66,7 @@ The following table lists all events supported by the PDF Viewer control, organi
 | [`validateFormFields`](#validateformfields) | Triggers when form field validation fails. |
 | [`zoomChange`](#zoomchange) | Triggers when the magnification value changes. |
 
-Note: For annotation and signature events, see the dedicated Annotations Events topic.
+For annotation and signature events, see the dedicated Annotations Events topic.
 
 ## bookmarkClick
 

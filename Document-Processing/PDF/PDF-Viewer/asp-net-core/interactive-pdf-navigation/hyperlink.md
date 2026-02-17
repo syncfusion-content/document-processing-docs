@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF Viewer consolidates hyperlink-driven experiences, including inline links and table-of-contents (TOC) entries that target in-document destinations. These elements surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
 
-> **Note:** The table of contents pane and hyperlink interactions rely on the same navigation infrastructure. When these capabilities are enabled, the PDF Viewer automatically surfaces TOC entries and clickable links defined in the PDF.
+N> The table of contents pane and hyperlink interactions rely on the same navigation infrastructure. When these capabilities are enabled, the PDF Viewer automatically surfaces TOC entries and clickable links defined in the PDF.
 
 ## Required modules
 
@@ -69,7 +69,8 @@ When `enableHyperlink` is set to `false`, all hyperlinks in the document become 
 {% endhighlight %}
 {% endtabs %}
 
-> Note: Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
+N> Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
+
 ### Controlling Link Behavior
 
 The `hyperlinkOpenState` property determines how external URLs are opened when a hyperlink is clicked.
