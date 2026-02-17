@@ -8,13 +8,18 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the context menu in PDF Viewer in React
+# How to Customize the context menu in PDF Viewer in React
 
-The PDF Viewer supports extensive customization of the context menu, including adding new items, hiding default options, and handling custom click events.
+The PDF Viewer supports extensive customization of the context menu, including reaching specific goals like adding new items, hiding default options, and handling custom click events.
 
 ## Add Custom Context Menu Items
 
-Custom options can be added to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#addcustommenu) method. This is typically implemented during the `documentLoad` event.
+You can add custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#addcustommenu) method. This is typically implemented during the `documentLoad` event.
+
+### Implementation Guide
+
+1. Define the menu items as an array of objects.
+2. Call the `addCustomMenu` method within the `documentLoad` event handler.
 
 ```jsx
    export function App() {
