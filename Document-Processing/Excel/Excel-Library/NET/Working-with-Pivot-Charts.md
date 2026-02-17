@@ -208,4 +208,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to create pivot chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Charts/Refresh%20Pivot%20Chart/.NET/Refresh%20Pivot%20Chart).  
+A complete working example to refresh pivot chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Charts/Refresh%20Pivot%20Chart/.NET/Refresh%20Pivot%20Chart).
