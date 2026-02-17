@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print events in Typescript PDF Viewer
 
-Subscribe to print life cycle events to track usage and implement custom workflows.
+Subscribe to print lifecycle events to track usage and implement custom workflows.
 
 | Name         | Description |
 |--------------|-------------|
@@ -21,7 +21,14 @@ Subscribe to print life cycle events to track usage and implement custom workflo
 The [`printStart`](https://ej2.syncfusion.com/documentation/api/pdfviewer#printstart) event runs when printing starts from the toolbar or from code. Use it to validate prerequisites or cancel the action.
 
 ### Event arguments
+
+Common properties:
+- `fileName`: Name of the document being printed.
+- `cancel` (boolean): Set to `true` to cancel the print operation.
+
 Review [`PrintStartEventArgs`](https://ej2.syncfusion.com/documentation/api/pdfviewer/printStartEventArgs) for details such as `fileName` and the `cancel` option.
+
+N> Setting `args.cancel = true` prevents the print action and, depending on the environment, prevents the print dialog from appearing. In server-backed printing, cancellation prevents the service call that generates print output.
 
 The following example logs the file that is being printed and shows how to cancel the operation.
 
@@ -68,6 +75,10 @@ pdfviewer.appendTo('#PdfViewer');
 The [`printEnd`](https://ej2.syncfusion.com/documentation/api/pdfviewer#printend) event triggers after printing completes. Use it to finalize analytics or inform users that printing finished.
 
 ### Event arguments
+
+Common properties:
+- `fileName`: Name of the document that was printed.
+
 See [`PrintEndEventArgs`](https://ej2.syncfusion.com/documentation/api/pdfviewer/printEndEventArgs) for available values such as `fileName`.
 
 The following example logs the printed file name.
