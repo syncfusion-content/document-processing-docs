@@ -14,7 +14,7 @@ The PDF Viewer supports extensive customization of the context menu, including r
 
 ## Add Custom Context Menu Items
 
-You can add custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#addcustommenu) method. This is typically implemented during the `documentLoad` event.
+You can add custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#addcustommenu) method. This is typically implemented during the `documentLoad` event.
 
 ### Implementation Guide
 
@@ -81,7 +81,7 @@ root.render(<App />);
 
 ## Handle Click Events for Custom Menu Items
 
-The [customContextMenuSelect()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#customcontextMenuselect) method defines actions for custom menu items.
+The [customContextMenuSelect()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#customcontextMenuselect) method defines actions for custom menu items.
 
 ```jsx
 export function App() {
@@ -221,7 +221,7 @@ root.render(<App />);
 
 ## Dynamic Context Menu Customization
 
-The [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#customcontextMenubeforeopen) event allows for dynamic showing or hiding of items based on selection or document state.
+The [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#customcontextMenubeforeopen) event allows for dynamic showing or hiding of items based on selection or document state.
 
 ```jsx
 export function App() {
@@ -338,7 +338,7 @@ The following is the output of the custom context menu with customization.
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.tsx` or `index.jsx` file:
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
 **serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
 
 {% previewsample "Document-Processing/code-snippet/pdfviewer/react/custom-context-menu/index.html" %}
