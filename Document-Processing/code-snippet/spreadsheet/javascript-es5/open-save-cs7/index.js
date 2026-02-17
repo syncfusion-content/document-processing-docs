@@ -1,4 +1,3 @@
-
 var sheet = [{
   rows: [{
     index: 0,
@@ -64,7 +63,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
   fileMenuItemSelect: function (args) {
     if (args.item.text === 'Microsoft Excel') {
       args.cancel = true;
-      spreadsheet.saveAsJson().then((response) => {
+      spreadsheet.saveAsJson().then(function (response) {
         var formData = new FormData();
         formData.append(
           'JSONData',
@@ -72,18 +71,18 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
         );
         formData.append('fileName', 'Sample');
         formData.append('saveType', 'Xlsx');
-        formData.append('pdfLayoutSettings', JSON.stringify({ fitSheetOnOnePage: false, orientation: 'Portrait' })),
+        formData.append('pdfLayoutSettings', JSON.stringify({ fitSheetOnOnePage: false, orientation: 'Portrait' }));
         fetch(
           'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
           {
             method: 'POST',
             headers: { Authorization: 'YOUR TEXT' },
-            body: formData,
+            body: formData
           }
-        ).then((response) => {
-          response.blob().then((data) => {
+        ).then(function (response) {
+          response.blob().then(function (data) {
             var anchor = ej.base.createElement('a', {
-              attrs: { download: 'Sample.xlsx' },
+              attrs: { download: 'Sample.xlsx' }
             });
             var url = URL.createObjectURL(data);
             anchor.href = url;
@@ -95,8 +94,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
         });
       });
     }
-  },
+  }
 });
 //Render initialized Spreadsheet component.
 spreadsheet.appendTo('#spreadsheet');
-
