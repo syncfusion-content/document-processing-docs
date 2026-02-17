@@ -25,7 +25,7 @@ DOC
 {{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/open-and-save-word-document-in-console-application#open-and-save-word-document-using-net-core-and-latest)'| markdownify }}
 </th>
 <th>
-{{'[Word Processing XML (2007)]()'| markdownify }}
+{{'[Word Processing XML (2007)](https://help.syncfusion.com/document-processing/word/word-library/net/wordml)'| markdownify }}
 </th>
 <th>
 DOT
@@ -113,7 +113,7 @@ DOTM
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[Word Processing XML (2007)]()'| markdownify }}</th>
+<th>{{'[Word Processing XML (2007)](https://help.syncfusion.com/document-processing/word/word-library/net/wordml)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>

@@ -1,15 +1,15 @@
 //Initialize the Spreadsheet control
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
-    beforeOpen: (args) => {
+    beforeOpen: function (args) {
         args.cancel = true;
         var valueOnlyCheckbox = document.getElementById("valueOnly").checked;
         var options = valueOnlyCheckbox ? { onlyValues: true } : createOptions();
         fetch(
             'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
             args.requestData
-        ).then((response) => {
-            response.json().then((data) => {
-                spreadsheet.openFromJson({ file: data }, options)
+        ).then(function (response) {
+            response.json().then(function (data) {
+                spreadsheet.openFromJson({ file: data }, options);
             });
         });
     }
@@ -26,9 +26,9 @@ var uploader = new ej.inputs.Uploader({
     allowedExtensions: '.xlsx, .xls, .csv',
     showFileList: false,
     buttons: {
-        browse: 'Choose file',
+        browse: 'Choose file'
     },
-    success: (args) => {
+    success: function (args) {
         if (args.operation == 'upload') {
             spreadsheet.open({ file: args.file.rawFile });
         }
@@ -54,12 +54,13 @@ function createOptions() {
 function toggleCheckboxes() {
     var valueOnlyCheckbox = document.getElementById('valueOnly');
     var checkboxes = document.querySelectorAll('#Openfromjson input[type="checkbox"]:not(#valueOnly)');
-    checkboxes.forEach(checkbox => {
-        (checkbox).disabled = valueOnlyCheckbox.checked;
+    for (var i = 0; i < checkboxes.length; i++) {
+        var checkbox = checkboxes[i];
+        checkbox.disabled = valueOnlyCheckbox.checked;
         if (valueOnlyCheckbox.checked) {
-            (checkbox).checked = false;
+            checkbox.checked = false;
         }
-    });
+    }
 }
 
 var valueOnlyElement = document.getElementById('valueOnly');

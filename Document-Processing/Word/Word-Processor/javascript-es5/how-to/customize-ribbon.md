@@ -27,9 +27,8 @@ Document Editor provides APIs to remove existing File menu items and add new cus
 In below code example, In the example below, the "Open" and "Export" items have been removed from the File Menu Items, and new custom items have been added.
 
 ```js
-import { DocumentEditorContainer, Ribbon } from '@syncfusion/ej2-documenteditor';
 
-var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true, 
+var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enabvaroolbar: true, 
 toolbarMode: 'Ribbon', // Options: 'Ribbon' or 'Toolbar'
 ribbonLayout: 'Classic', // Options: 'Simplified' or 'Classic',
 fileMenuItems: ["New", "Print", { text: 'Export', id: 'custom_item',iconCss: 'e-icons e-export' }
@@ -52,10 +51,8 @@ The Document Editor provides an [`backStageMenu`](https://ej2.syncfusion.com/jav
 
 The following code example shows how to add the backstage menu items.
 
-```ts
-import { DocumentEditorContainer, Ribbon } from '@syncfusion/ej2-documenteditor';
-
-var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true, 
+```js
+var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enabvaroolbar: true, 
 toolbarMode: 'Ribbon', // Options: 'Ribbon' or 'Toolbar'
 ribbonLayout: 'Classic', // Options: 'Simplified' or 'Classic',
 backstageMenu: {
@@ -83,7 +80,7 @@ You can customize the ribbon tabs in the Document Editor by showing, hiding, or 
 Document editor provides the [`showTab`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#showtab) API to show and hide the existing tab using existing `RibbonTabType` and `tabId`.
 
 The following code example how to show/hide existing tab using existing tab type and tab id.
-```ts
+```js
 // To hide the Home tab using the built-in `RibbonTabType`
 container.ribbon.showTab('Home', false);
 
@@ -95,11 +92,9 @@ container.ribbon.showTab('custom_tab', false);
 
 The Document Editor provides the [`addTab`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#addtab) API, which allows you to insert a new custom tab either between existing tabs or at the end of the ribbon tabs.
 
-```ts
-import { RibbonTabModel } from '@syncfusion/ej2-ribbon';
-
+```js
 // To add the tab at end of tab
-let ribbonTab: RibbonTabModel = {
+var ribbonTab = {
     header: 'Custom Tab', id: 'custom_tab', groups: [{
         header: 'Custom Group', collections: [{
             items: [{
@@ -132,7 +127,7 @@ Document Editor provides an [`showGroup`](https://ej2.syncfusion.com/javascript/
 
 The following code example show how to show/hide the group using group Id or [`RibbonGroupInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#ribbongroupinfo).
 
-```ts
+```js
 
 // To hide the clipboard group using group index
 container.ribbon.showGroup({tabId: 'Home', index: 1} , false);
@@ -149,12 +144,10 @@ container.ribbon.showGroup('custom_group', false);
 
 To extend the ribbon's functionality, you can add custom groups to any tab. This allows you to organize related commands together within a tab.
 
-```ts
-
-import { RibbonGroupModel } from '@syncfusion/ej2-ribbon';
+```js
 
 // Add the new group at the end of the Home tab
-let ribbonGroup: RibbonGroupModel =
+var ribbonGroup =
 {
     header: 'Custom Group', collections: [{
         items: [{
@@ -187,7 +180,7 @@ Using [`showItems`](https://ej2.syncfusion.com/javascript/documentation/api/docu
 
 The following code example show how to show/hide the item using item Id or [`RibbonItemInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#ribboniteminfo).
 
-```ts
+```js
 // To hide the Bold and Italic items using ribbon item information
 container.ribbon.showItems({ tabId: 'Home', groupIndex: 2, itemIndexes: [5, 6] } , false);
 
@@ -202,7 +195,7 @@ container.ribbon.showItems('custom_item', false);
 
 Using [`enableItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#enableitems) API in Document editor ribbon to enable/disable the existing item.
 
-```ts
+```js
 // To disable the underline using ribbon item info
 container.ribbon.enableItems({ tabId: 'Home', groupIndex: 2, itemIndexes: [7] },false);
 
@@ -218,10 +211,10 @@ container.ribbon.enableItems('custom_item', false);
 
 You can use the [`addItem`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#additem) API in the Document Editor ribbon to add a new item. Additionally, you can specify the target tab and group where the new item should be placed.
 
-```ts
+```js
 
 // To add the item at the end of the specified group (the item will be added at the end of the Undo group)
-let ribbonItem: RibbonItemModel = {
+var ribbonItem = {
     type: 'Button',
     buttonSettings: {
         content: 'New',
@@ -242,4 +235,4 @@ container.ribbon.addItem({ tabId: 'Home', index: 0 }, ribbonItem, 1);
 
 ## Related Links
 
-- [File menu Customization Demo](https://document.syncfusion.com/demos/word-editor/javascript/index.html#/tailwind3/document-editor/ribbon-customization.html)
+- [File menu Customization Demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/ribbon-customization)
