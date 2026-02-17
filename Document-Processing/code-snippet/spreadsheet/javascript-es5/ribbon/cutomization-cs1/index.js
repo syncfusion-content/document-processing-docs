@@ -75,7 +75,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
 spreadsheet.appendTo('#spreadsheet');
 
 function appendDropdownBtn(id) {
-    let ddlItems = [
+    var ddlItems = [
         {
             text: 'Download Excel',
         },
@@ -83,7 +83,7 @@ function appendDropdownBtn(id) {
             text: 'Download CSV',
         },
     ];
-    let btnObj = new ej.splitbuttons.DropDownButton({
+    var btnObj = new ej.splitbuttons.DropDownButton({
         items: ddlItems,
         content: 'Download',
         iconCss: 'e-icons e-download',
