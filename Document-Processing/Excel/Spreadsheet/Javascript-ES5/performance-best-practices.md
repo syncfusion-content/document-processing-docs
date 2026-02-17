@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Performance best practices in EJ2 Javascript Spreadsheet Control | Syncfusion
+title: Performance best practices in EJ2 Javascript Spreadsheet | Syncfusion
 description: Learn here all about how to optimize the performance EJ2 Javascript Spreadsheet control, its elements and more.
 platform: document-processing
 control: Performance 
