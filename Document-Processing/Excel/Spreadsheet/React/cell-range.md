@@ -17,13 +17,13 @@ To get start quickly with Cell Range, you can check on this video:
 
 ## Wrap text
 
-Wrap text allows you to display large content as multiple lines in a single cell. By default, the wrap text support is enabled. Use the [`allowWrap`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowwrap) property to enable or disable the wrap text support in spreadsheet.
+Wrap text allows you to display large content as multiple lines in a single cell. By default, the wrap text support is enabled. Use the [`allowWrap`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowwrap) property to enable or disable the wrap text support in spreadsheet.
 
 Wrap text can be applied or removed to a cell or range of cells in the following ways,
 
 * Using the `wrap` property in `cell`, you can enable or disable wrap text to a cell at initial load.
 * Select or deselect wrap button from ribbon toolbar to apply or remove the wrap text to the selected range.
-* Using the [`wrap`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#wrap) method, you can apply or remove the wrap text once the component is loaded.
+* Using the [`wrap`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#wrap) method, you can apply or remove the wrap text once the component is loaded.
 
 The following code example shows the wrap text functionality in spreadsheet.
 
@@ -53,13 +53,13 @@ The following features have some limitations in wrap text:
 
 ## Merge cells
 
-Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowmerge) property to enable or disable the merge cells option in spreadsheet.
+Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowmerge) property to enable or disable the merge cells option in spreadsheet.
 
 You can merge the range of cells in the following ways,
 
 * Set the `rowSpan` and `colSpan` property in `cell` to merge the number of cells at initial load.
 * Select the range of cells and apply merge by selecting the desired option from ribbon toolbar.
-* Use [`merge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#merge) method to merge the range of cells, once the component is loaded.
+* Use [`merge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#merge) method to merge the range of cells, once the component is loaded.
 
 The available merge options in spreadsheet are,
 
@@ -192,7 +192,7 @@ Clear feature helps you to clear the cell contents (formulas and data), formats 
 You can apply clear feature by using one of the following ways,
 
 * Select the clear icon in the Ribbon toolbar under the Home Tab.
-* Using the [`clear()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#clear) method to clear the values.
+* Using the [`clear()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method to clear the values.
 
 Clear has the following types in the spreadsheet,
 
@@ -205,7 +205,7 @@ Clear has the following types in the spreadsheet,
 
 ### Methods
 
-Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#clear) method. The [clear](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
+Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method. The [clear](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
