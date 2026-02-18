@@ -335,3 +335,83 @@ End Using
 {% endtabs %}  
 
 A complete working example to add calculated field in pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Calculated%20Field/.NET/Calculated%20Field).
+
+### Get PivotTable end column
+
+To obtain a PivotTable's end column, call PivotTable.Layout(), then read the EndLocation property from the implementation type. The EndLocation range's LastColumn value is the pivot table's last column index.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/End%20Column/.NET/End%20Column/End%20Column/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+
+    // Open workbook (update path as needed)
+    IWorkbook workbook = application.Workbooks.Open("PivotTable.xlsx");
+
+    // Get the first pivot table
+    IPivotTable pivotTable = workbook.Worksheets[0].PivotTables[0];
+
+    // Ensure layout is calculated
+    pivotTable.Layout();
+
+    // Read EndLocation from the implementation type
+    IRange endRange = (pivotTable as Syncfusion.XlsIO.Implementation.PivotTables.PivotTableImpl).EndLocation;
+    int lastColumn = endRange.LastColumn;
+
+    // Use lastColumn as needed (e.g., log)
+    Console.WriteLine("PivotTable last column: " + lastColumn);
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+
+    // Open workbook (update path as needed)
+    IWorkbook workbook = application.Workbooks.Open("PivotTable.xlsx");
+
+    // Get the first pivot table
+    IPivotTable pivotTable = workbook.Worksheets[0].PivotTables[0];
+
+    // Ensure layout is calculated
+    pivotTable.Layout();
+
+    // Read EndLocation from the implementation type
+    IRange endRange = (pivotTable as Syncfusion.XlsIO.Implementation.PivotTables.PivotTableImpl).EndLocation;
+    int lastColumn = endRange.LastColumn;
+
+    // Use lastColumn as needed (e.g., log)
+    Console.WriteLine("PivotTable last column: " + lastColumn);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports System
+Imports Syncfusion.XlsIO
+
+Using excelEngine As New ExcelEngine()
+    Dim application As IApplication = excelEngine.Excel
+    application.DefaultVersion = ExcelVersion.Xlsx
+
+    ' Open workbook (update path as needed)
+    Dim workbook As IWorkbook = application.Workbooks.Open("PivotTable.xlsx")
+
+    Dim pivotTable As IPivotTable = workbook.Worksheets(0).PivotTables(0)
+
+    ' Calculate layout
+    pivotTable.Layout()
+
+    ' Read EndLocation from implementation and get last column
+    Dim endRange As IRange = DirectCast(pivotTable, Syncfusion.XlsIO.Implementation.PivotTables.PivotTableImpl).EndLocation
+    Dim lastColumn As Integer = endRange.LastColumn
+
+    Console.WriteLine("PivotTable last column: " & lastColumn)
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to get the end column of a pivot table in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/End%20Column/.NET/End%20Column).
