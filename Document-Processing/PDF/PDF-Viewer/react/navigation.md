@@ -8,21 +8,21 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in React Pdfviewer component
+# Navigation in React PDF Viewer component
 
-The PDF Viewer supports different internal and external navigations.
+The PDF Viewer supports several internal and external navigation options.
 
-## Toolbar page navigation option
+## Toolbar page navigation options
 
-The default toolbar of PDF Viewer contains the following navigation options
+The default toolbar of the PDF Viewer contains the following page navigation options:
 
-* [**Go to page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
-* [**Show next page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
-* [**Show previous page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page of a PDF document.
-* [**Show first page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
-* [**Show last page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
+- [**Go to page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotopage): Navigate to a specific page of a PDF document.
+- [**Show next page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotonextpage): Navigate to the next page.
+- [**Show previous page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotopreviouspage): Navigate to the previous page.
+- [**Show first page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotofirstpage): Navigate to the first page.
+- [**Show last page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotolastpage): Navigate to the last page.
 
-You can enable/disable page navigation option in PDF Viewer using the following code snippet.,
+Enable or disable page navigation in the PDF Viewer using the following code snippet.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -89,11 +89,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/navigation.png)
+![PDF Viewer page navigation toolbar](./images/navigation.png)
 
 ## Bookmark navigation
 
-The Bookmarks saved in PDF files are loaded and made ready for easy navigation. You can enable/disable bookmark navigation by using the following code snippet.,
+Bookmarks embedded in PDF files are loaded for quick navigation. Enable or disable bookmark navigation using the following code snippet.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -160,11 +160,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/bookmark.png)
+![PDF Viewer bookmark panel](./images/bookmark.png)
 
 ## Thumbnail navigation
 
-Thumbnails is the miniature representation of actual pages in PDF files. This feature displays thumbnails of the pages and allows navigation. You can enable/disable thumbnail navigation by using the following code snippet.,
+Thumbnails are miniature representations of the pages in a PDF. This feature displays page thumbnails and enables quick navigation. Enable or disable thumbnail navigation using the following code snippet.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -233,19 +233,19 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/thumbnail.png)
+![PDF Viewer page thumbnails](./images/thumbnail.png)
 
 ## Hyperlink navigation
 
-Hyperlink navigation features enables navigation to the URLs (website links) in a PDF file.
+Hyperlink navigation enables navigation to external URLs contained in a PDF file.
 
-![Alt text](./images/link.png)
+![PDF Viewer hyperlink navigation example](./images/link.png)
 
-## Table of content navigation
+## Table of contents navigation
 
-Table of contents navigation allows users to navigate to different parts of a PDF file that are listed in the table of contents section.
+Table of contents navigation lets users jump to sections listed in a PDF's table of contents.
 
-You can enable/disable link navigation by using the following code snippet.,
+Enable or disable link navigation using the following code snippet.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -314,7 +314,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-You can change the open state of the hyperlink in the PDF Viewer by using the following code snippet,
+Change the hyperlink open state using the following code snippet.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -385,7 +385,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/toc.png)
+![PDF Viewer table of contents](./images/toc.png)
 
 ## See also
 

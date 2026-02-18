@@ -41,14 +41,16 @@ Steps to configure annotation selector settings
 
 Key properties
 
-- selectionBorderColor: Sets the color for the border around selected annotations.
-- resizerBorderColor: Sets the color for the border of the resizer handles.
-- resizerFillColor: Defines the fill color for the resizer handles.
-- resizerSize: Determines the size of the resizer handles.
-- selectionBorderThickness: Specifies the thickness of the selection border.
-- resizerShape: Sets the shape of the resizer handles (for example, Circle or Square).
-- selectorLineDashArray: Specifies the dash pattern for the selector line.
-- resizerLocation: Determines where the resizers appear relative to the annotation (for example, Corners or Edges).
-- resizerCursorType: Sets the cursor style when hovering over a resizer.
+- `selectionBorderColor`: Sets the color for the border around selected annotations. Provide a color value (for example, `#4070FF`) to make the selection visible.
+- `resizerBorderColor`: Sets the color for the border of the resizer handles.
+- `resizerFillColor`: Defines the fill color for the resizer handles.
+- `resizerSize`: Determines the size of the resizer handles.
+- `selectionBorderThickness`: Specifies the thickness of the selection border.
+- `resizerShape`: Sets the shape of the resizer handles (for example, `Circle` or `Square`).
+- `selectorLineDashArray`: Specifies the dash pattern for the selector line.
+- `resizerLocation`: Determines where the resizers appear relative to the annotation (for example, `Corners` or `Edges`).
+- `resizerCursorType`: Sets the cursor style when hovering over a resizer.
+
+N> In the example code block `selectionBorderColor` is left empty for demonstration; supply a color string when configuring the viewer. Also ensure `resizerShape` and `resizerBorderColor` use the correct value types — `resizerShape` expects a shape name (for example, `Circle`) while `resizerBorderColor` expects a color value.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/)

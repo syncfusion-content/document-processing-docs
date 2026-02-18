@@ -9,7 +9,7 @@ documentation: ug
 
 # Sticky notes annotations in Blazor SfPdfViewer Component
 
-The SfPdfViewer control provides options to add, edit, and delete sticky notes annotations in a PDF document.
+The SfPdfViewer component provides options to add, edit, and delete sticky notes annotations in a PDF document.
 
 ![StickyNotes Annotation in Blazor SfPdfViewer](../images/blazor-pdfviewer-stickynotes-annotation.png)
 
@@ -121,9 +121,9 @@ Below is an example demonstrating how to add a sticky note annotation to a PDF d
     public async void AddStickyNoteAnnotationAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
-        // Set the annotation type sticky note
+        // Set the annotation type to sticky note
         annotation.Type = AnnotationType.StickyNotes;
-        // Set the PageNumber starts from 0. So, if set 0 it represents the page 1.
+        // Page numbers start from 0. So, if set to 0 it represents page 1.
         annotation.PageNumber = 0;
 
         // Bound of the sticky note annotation

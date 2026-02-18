@@ -99,9 +99,9 @@ The **Form Designer toolbar** appears at the top of the PDF Viewer and provides 
 
 Each toolbar item allows users to place the corresponding form field by selecting the tool and clicking on the desired location in the PDF document.
 
-![Adding Text Box](../../javascript-es6/images/AddTextBox.gif)
+![Adding a text box using the Form Designer toolbar](../../javascript-es6/images/AddTextBox.gif)
 
-Use the following Code-snippet to enable Form Designer by injecting **Form Designer mode** Module.
+Use the following code snippet to enable Form Designer by injecting the `FormDesigner` module.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

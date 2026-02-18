@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Load PDF documents dynamically
 
-The PDF Viewer library allows to switch or load the PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or file name in PDF Viewer control using the [**Load()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#load) method dynamically.
+The PDF Viewer supports loading or switching PDF documents at runtime after the initial viewer initialization. Use the [load](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#load) method to open a document from a URL or a Base64 string.
 
-The following steps are used to load the PDF document dynamically.
+The following steps show common approaches for loading documents dynamically.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular.
+**Step 1:** Follow the getting started guide to create a basic Angular PDF Viewer sample: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started
 
-**Step 2:** Use the following code snippet to load the document from Base64 string.
+**Step 2:** Use the following code snippet to load the document from a Base64 string.
 
 ```html
 <button (click)="load_1()">LoadDocumentFromBase64</button>
@@ -32,7 +32,7 @@ load_1() {
 }
 ```
 
-**Step 3:** Use the following code snippet to load PDF document using document name.
+**Step 3:** Use the following code snippet to load a PDF document from a URL (document name).
 
 ```html
 <button (click)="load_2()">LoadDocumentFromBase64</button>

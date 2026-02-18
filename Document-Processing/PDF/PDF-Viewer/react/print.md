@@ -7,9 +7,9 @@ platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Print in React Pdfviewer component
+# Print in React PDF Viewer component
 
-The PDF Viewer supports printing the loaded PDF file. You can enable/disable the print using the following code snippet.
+The PDF Viewer supports printing the loaded PDF document. Enable or disable printing with the `enablePrint` API as shown in the examples below.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -76,9 +76,9 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/print.png)
+![PDF Viewer print dialog and toolbar](./images/print.png)
 
-You can invoke print action using the following code snippet.,
+Invoke the print action programmatically using the example below.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -153,16 +153,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Customizing Print Quality using printScaleFactor API
+## Customize print quality with printScaleFactor
 
-The PDF Viewer allows you to adjust the print quality using the [PrintScaleFactor](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#printScaleFactor) API. The quality of the print improves as the printScaleFactor value increases from 0.5 to 5.
+Adjust print quality using the `printScaleFactor` API. Valid values are between 0.5 and 5. Increasing the value improves print quality but may increase print time. Values below 0.5 or above 5 produce standard quality; the default value is `1`.
 
-When the value is less than 0.5, the PDF is printed at a standard quality. When the value exceeds 5, the PDF is still printed at the standard quality. In standard quality, printScaleFactor value is set to 1 as default value.
-The effective range for printScaleFactor is between 0.5 and 5. Higher values within this range will result in better print quality, but also increase the print time.
-
-By default, the printScaleFactor is set to 1.
-
-* **The following code snippet demonstrates how to customize print quality using the printScaleFactor API in the PDF Viewer.**
+The example below demonstrates how to set `printScaleFactor`.
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %}
@@ -234,7 +229,7 @@ root.render(<App />);
 
 ## EnablePrintRotation in the PDF Viewer
 
-The `EnablePrintRotation` property controls whether landscape pages are auto-rotated to best fit when printing. The default value is `true`. Set to `false` to preserve the original page orientation and suppress automatic rotation during print.
+The `enablePrintRotation` option controls whether landscape pages are automatically rotated to best fit when printing. The default value is `true`. Set it to `false` to preserve the original page orientation during printing.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -293,13 +288,13 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Print modes in the PDF Viewer
+## Print modes
 
-The `printMode` property allows you to specify how the document is printed.
+Use the `printMode` property to control how the document is printed.
 
-The supported values are:
-*   `Default`: Prints the document from the same window.
-*   `NewWindow`: Prints the document from a new window/tab, which can be useful depending on browser popup policies.
+Supported values:
+- `Default`: Print from the same window.
+- `NewWindow`: Print from a new window or tab (useful to avoid popup restrictions in some browsers).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -360,22 +355,20 @@ root.render(<App />);
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Customization%20of%20print%20Quality)
 
-## Print Events
+## Print events
 
-The following events are available in the PDF Viewer component.
+The PDF Viewer exposes print-related events:
 
-| Name         | Description                            |
-|--------------|----------------------------------------|
-| `printStart` | Triggers when a print action starts.   |
-| `printEnd`   | Triggers when a print action is completed. |
+| Name | Description |
+|------|-------------|
+| `printStart` | Fired when a print action starts. |
+| `printEnd` | Fired when a print action completes. |
 
 ### printStart Event
-The [`printStart`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#printstart) event triggers when the print action is started.
 
-#### Event Arguments
-See [`PrintStartEventArgs`](https://ej2.syncfusion.com/documentation/api/pdfviewer/printStartEventArgs/) for details such as `fileName` and the `cancel` option.
+The `printStart` event fires when printing begins. See `PrintStartEventArgs` for event details such as `fileName` and the `cancel` option.
 
-The following example illustrates how to handle the `printStart` event.
+The example below shows handling `printStart`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

@@ -7,38 +7,40 @@ control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Create PDF Viewer service using ASP.NET MVC
+# Create a PDF Viewer service using ASP.NET MVC
 
-The PDF Viewer relies on a server-side service to process PDF documents for rendering. This section explains how to create an ASP.NET MVC Web API service to perform server-side preprocessing for the client.
+The JavaScript PDF Viewer requires a server-side service to process PDF documents for rendering. This document explains how to create an ASP.NET MVC Web API service that performs server-side preprocessing and operations used by the client.
+
+This guide covers rendering, text extraction, thumbnail generation, annotation import/export, and other server-side capabilities required by the viewer.
 
 ## Prerequisites
 
-To get started with an ASP.NET MVC Web API service, ensure the following software is installed:
+To get started with an ASP.NET MVC Web API service, ensure the following software and tooling are available:
 
-* .NET Framework 4.5 or later
-* ASP.NET MVC 4 or ASP.NET MVC 5
-* Web API
-* Visual Studio
+- Visual Studio 2019 or later (recommended)
+- .NET Framework 4.5 or later (use the version supported by the target project)
+- ASP.NET MVC 4 or 5 and Web API 2
+- `Syncfusion.EJ2.PdfViewer.AspNet.MVC5` — use the latest stable release compatible with the target framework
 
 ## Set up an ASP.NET MVC application with Web API for the PDF Viewer service
 
 Follow these steps to create the PDF Viewer service
 
-**Step 1:** Create an ASP.NET web application using the default template in Visual Studio 2017.
+**Step 1:** Create a new ASP.NET web application using the default template in Visual Studio.
 
-![Alt text](./images/default-template.png)
+![Create new ASP.NET web application template](./images/default-template.png)
 
-**Step 2:** After creating the project, add the `Syncfusion.EJ2.PdfViewer.AspNet.MVC5` dependency using NuGet Package Manager.
+**Step 2:** After creating the project, add the `Syncfusion.EJ2.PdfViewer.AspNet.MVC5` dependency using the NuGet Package Manager.
 
-Open the `NuGet` package manager.
-![Alt text](./images/solution-explorer.png)
+Open the NuGet Package Manager and install the `Syncfusion.EJ2.PdfViewer.AspNet.MVC5` package.
 
-Install the **Syncfusion.EJ2.PdfViewer.AspNet.Mvc5** package for the application.
+![NuGet Package Manager - Solution Explorer view](./images/solution-explorer.png)
 
-![Alt text](./images/pdfviewer-dependency.png)
+![Install Syncfusion.EJ2.PdfViewer.AspNet.MVC5 package](./images/pdfviewer-dependency.png)
 
 **Step 3:** Add a Web API 2 controller to the project and name it `PdfViewerController`.
-![Alt text](./images/api-controller.png)
+
+![Add Web API controller dialog](./images/api-controller.png)
 
 **Step 4:** Add the following code to `PdfViewerController.cs`.
 
@@ -251,7 +253,7 @@ namespace MvcWebService.webapi
 
 ```
 
-**Step 5:** Configure the CORS policy in the `web.config` file.
+**Step 5:** Configure the CORS policy in `web.config` to allow cross-origin requests from the client application. Example custom headers are shown below; adjust origins and headers to follow security best practices for production.
 
 ```xml
  <system.webServer>
@@ -265,7 +267,7 @@ namespace MvcWebService.webapi
   </system.webServer>
 ```
 
-**Step 6:** Set global configuration in `Global.asax`:
+**Step 6:** Configure global Web API routing in `Global.asax`:
 
 ```
     System.Web.Http.GlobalConfiguration.Configuration.Routes.MapHttpRoute(
@@ -275,4 +277,4 @@ namespace MvcWebService.webapi
     AppDomain.CurrentDomain.SetData("SQLServerCompactEditionUnderWebHosting", true);
 ```
 
-Download the sample to [create a PDF Viewer web service](https://www.syncfusion.com/downloads/support/directtrac/general/ze/MvcWebService587924662.zip)
+Download the sample: [PDF Viewer web service sample (MVC)](https://www.syncfusion.com/downloads/support/directtrac/general/ze/MvcWebService587924662.zip)

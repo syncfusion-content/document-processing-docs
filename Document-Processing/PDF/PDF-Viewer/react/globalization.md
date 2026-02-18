@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in React Pdfviewer component
+# Globalization in React PDF Viewer component
 
-The text contents provided in the PDF Viewer can be localized using the collection of localized strings for different cultures. By default, the PDF Viewer is localized in “__en-US__”.
+The text content in the PDF Viewer can be localized using collections of localized strings for different cultures. By default, the PDF Viewer uses the “__en-US__”. locale.
 
 The following table shows the default text values used in PDF Viewer in 'en-US' culture:
 
@@ -39,7 +39,7 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 |Zoom Out|Zoom out|
 |Page Thumbnails|Page thumbnails|
 |Bookmarks|Bookmarks|
-|Print|Print file
+|Print|Print file|
 |Password Protected|Password required|
 |Copy|Copy|
 |Text Selection|Text selection tool|
@@ -65,7 +65,7 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 |Highlight context|Highlight|
 |Underline context|Underline|
 |Strikethrough context|Strike through|
-|Server error|Web-service is not listening. PDF Viewer depends on web-service for all it|s features. Please start the web service to continue.|
+|Server error|Web-service is not listening. PDF Viewer depends on web-service for all its features. Please start the web service to continue.|
 |Client error|Client-side error is found. Please check the custom headers provided in the AjaxRequestSettings property and web action methods in the ServerActionSettings property.|
 |Open text|Open|
 |First text|First Page|
@@ -78,7 +78,7 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 |Pan text|Pan|
 |Print text|Print|
 |Search text|Search|
-|Annotation Edit text|Edit Annotation| Please start the web service to continue.|
+|Annotation Edit text|Edit Annotation|
 |FormDesigner Edit text|Add and Edit Form Fields|
 |Line Thickness|Line Thickness|
 |Line Properties|Line Properties|

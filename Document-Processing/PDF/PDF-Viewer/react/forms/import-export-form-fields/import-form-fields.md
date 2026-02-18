@@ -9,7 +9,7 @@ documentation: ug
 
 # Import PDF Form Data into React PDF Viewer
 
-The **PDF Viewer** lets you import values into interactive form fields in the currently loaded PDF. You can import data from these formats:
+The PDF Viewer imports values into interactive form fields in the currently loaded PDF. Supported formats:
 
 - [FDF](#import-as-fdf)
 - [XFDF](#import-xfdf)
@@ -18,7 +18,9 @@ The **PDF Viewer** lets you import values into interactive form fields in the cu
 ## API to use
 - [importFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format)
 
-N>If you’re using a **server-backed viewer**, set serviceUrl before importing.
+The `sourceOrObject` parameter accepts a file path/URL or a JavaScript object with field-value pairs when importing from an object.
+
+N> For a server-backed viewer set the `serviceUrl` before importing so the control can forward requests to the server.
 
 ### Import FDF
 

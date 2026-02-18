@@ -10,42 +10,42 @@ domainurl: ##DomainURL##
 
 # Customize annotations
 
-You can customize annotation color, stroke color, thickness, opacity, and other properties using the built‑in UI or via code. This page summarizes common customization patterns and shows how to set defaults per annotation type.
+Annotation appearance and behavior (for example color, stroke color, thickness, and opacity) can be customized using the built‑in UI or programmatically. This page summarizes common customization patterns and shows how to set defaults per annotation type.
 
 ## Customize via UI
 
 Use the annotation toolbar after selecting an annotation:
-- Edit Color: changes the annotation fill/text color
+- Edit color: changes the annotation fill/text color
 ![Edit color](../images/edit_color.png)
-- Edit Stroke Color: changes border/line color (shapes and lines)
+- Edit stroke color: changes border or line color for shapes and lines types.
 ![Edit stroke color](../images/shape_strokecolor.png)
-- Edit Thickness: adjusts border/line thickness
+- Edit thickness: adjusts border or line thickness
 ![Edit thickness](../images/shape_thickness.png)
-- Edit Opacity: adjusts transparency
+- Edit opacity: adjusts transparency
 ![Edit opacity](../images/shape_opacity.png)
 
-Type‑specific options (for example, Line Properties) are available from the context menu (right‑click > Properties) where supported.
+Type‑specific options (for example, Line properties) are available from the context menu (right‑click > Properties) where supported.
 
 ## Set default properties during initialization
 
-You can set defaults for specific annotation types when creating the PdfViewer instance. You can set author, subject, color, opacity using Annotation Settings. Below are examples using settings already used in the annotation type pages.
+Set defaults for specific annotation types when creating the `PdfViewer` instance. Configure properties such as author, subject, color, and opacity using annotation settings. The examples below reference settings used on the annotation type pages.
 
-TextMarkup Annotations:
+Text markup annotations:
 
-- Highlight : Set default properties before creating the control using [`highlightSettings`](./annotation-types/highlight-annotation/#set-default-properties-during-control-initialization)
+- Highlight: Set default properties before creating the control using [`highlightSettings`](./annotation-types/highlight-annotation/#set-default-properties-during-control-initialization)
 - Strikethrough: Use [`strikethroughSettings`](./annotation-types/strikethrough-annotation/#default-strikethrough-settings-during-initialization)
 - Underline: Use [`underlineSettings`](./annotation-types/underline-annotation/#default-underline-settings-during-initialization)
 - Squiggly: Use [`squigglySettings`](./annotation-types/Squiggly-annotation/#set-default-properties-during-control-initialization)
 
-Shape Annotations:
+Shape annotations:
 
 - Line: Use [`lineSettings`](./annotation-types/line-annotation/#default-line-settings-during-initialization)
 - Arrow: Use [`arrowSettings`](./annotation-types/arrow-annotation/#default-arrow-settings-during-initialization)
 - Rectangle: Use [`rectangleSettings`](./annotation-types/rectangle-annotation/#default-rectangle-settings-during-initialization)
-- Circle : Use [`circleSettings`](./annotation-types/circle-annotation/#default-circle-settings-during-initialization)
+- Circle: Use [`circleSettings`](./annotation-types/circle-annotation/#default-circle-settings-during-initialization)
 - Polygon: Use [`polygonSettings`](./annotation-types/polygon-annotation/#default-polygon-settings-during-initialization)
 
-Measurement Annotations:
+Measurement annotations:
 
 - Distance: Use [`distanceSettings`](./annotation-types/distance-annotation/#default-distance-settings-during-initialization)
 - Perimeter: Use [`perimeterSettings`](./annotation-types/perimeter-annotation/#default-perimeter-settings-during-initialization)
@@ -56,10 +56,10 @@ Measurement Annotations:
 Other Annotations:
 
 - Redaction: Use [`redactionSettings`](./annotation-types/redaction-annotation/#default-redaction-settings-during-initialization)
-- Free Text: Use [`freeTextSettings`](./annotation-types/free-text-annotation/#default-free-text-settings-during-initialization)
-- Ink (Freehand): Use [`inkAnnotationSettings`](./annotation-types/ink-annotation/#default-ink-settings-during-initialization)
+- Free text: Use [`freeTextSettings`](./annotation-types/free-text-annotation/#default-free-text-settings-during-initialization)
+- Ink (freehand): Use [`inkAnnotationSettings`](./annotation-types/ink-annotation/#default-ink-settings-during-initialization)
 - Stamp: Use [`stampSettings`](./annotation-types/stamp-annotation/#default-stamp-settings-during-initialization)
-- Sticky Notes: Use [`stickyNotesSettings`](./annotation-types/sticky-notes-annotation/#default-sticky-notes-settings-during-initialization)
+- Sticky notes: Use [`stickyNotesSettings`](./annotation-types/sticky-notes-annotation/#default-sticky-notes-settings-during-initialization)
 
 Set defaults for specific annotation types when creating the PdfViewer instance. Below are examples using settings already used in the annotation type pages.
 
@@ -137,7 +137,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-N> After changing defaults using UI tools (Edit Color, Edit Opacity, etc.), the values will reflect the latest selection for subsequent annotations in the same session.
+N> After changing defaults using UI tools (for example, Edit color or Edit opacity), the updated values apply to subsequent annotations within the same session.
 
 ## Customize programmatically at runtime
 

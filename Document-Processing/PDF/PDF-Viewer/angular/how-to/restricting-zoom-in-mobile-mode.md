@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Restrict Zoom Percentage on Mobile Devices
+# Restrict zoom percentage on mobile devices
 
-In Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you can easily restrict the zoom percentage on mobile devices using the **maxZoom** and **minZoom** property. This feature allows you to set specific limits for zooming, ensuring smoother scrolling performance and efficient document loading, on mobile devices.
+Use `minZoom` and `maxZoom` to restrict zoom levels on mobile devices and improve scrolling performance and perceived load time. Restricting zoom prevents extreme zoom levels that can degrade rendering performance on constrained devices.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

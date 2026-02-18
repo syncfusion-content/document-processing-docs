@@ -10,15 +10,18 @@ documentation: ug
 
 # Remove PDF Form Fields from a PDF in React
 
-## Remove Form Fields Using the UI
-**Steps:**
-1.	Enable **Form Designer mode**.
-2.	Select the form field.
-3.	Click **Delete** in the toolbar or press the **Delete** key.
-![Form Designer toolbar with Delete icon](../../../javascript-es6/images/ui-del-formfields.png)
+The PDF Viewer supports removing form fields using the Form Designer UI or programmatically via the API.
 
-## Remove Form Fields Programmatically
-Use **deleteFormField()** with a field reference or ID.
+## Remove form fields using the UI
+**Steps:**
+1. Enable **Form Designer** mode.
+2. Select the form field.
+3. Click **Delete** in the toolbar or press the **Delete** key.
+
+![Form Designer toolbar showing Delete form field icon](../../../javascript-es6/images/ui-del-formfields.png)
+
+## Remove form fields programmatically
+Use `deleteFormField()` with a field reference or the field `id`. The method accepts either a field object returned by `retrieveFormFields()` or a numeric/string id. Example usage is shown in the code sample below.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

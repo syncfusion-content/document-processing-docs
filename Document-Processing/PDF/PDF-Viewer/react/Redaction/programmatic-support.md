@@ -7,7 +7,7 @@ control: PdfViewer
 documentation: ug
 ---
 
-# Programmatic support for redaction in React PdfViewer
+# Programmatic support for redaction in React PDF Viewer
 
 The Syncfusion React PDF Viewer provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
 
@@ -15,7 +15,7 @@ The Syncfusion React PDF Viewer provides APIs to add, update, delete, and apply 
 
 To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
 
-The following example shows how to enable the redaction toolbar:
+The example below shows a PdfViewer with the redaction toolbar enabled:
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -69,6 +69,8 @@ root.render(<App />);
 ## Add redaction annotations programmatically
 
 You can add redaction annotations to a PDF document using the `addAnnotation` method of the `annotation` module. You can listen to the `annotationAdd` event to track when annotations are added.
+
+The example below adds a redaction annotation at a fixed location on the first page.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -186,6 +188,8 @@ root.render(<App />);
 
 Redaction annotations can be removed using the `deleteAnnotationById` event or by selecting and deleting them through code.
 
+This example removes a redaction annotation by id.
+
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 
@@ -281,11 +285,13 @@ root.render(<App />);
 {% endtabs %}
 
 
-Alternatively, you can remove annotations by selecting them in the UI and pressing the **Delete** key.
+Annotations can also be removed by selecting them in the UI and pressing the **Delete** key.
 
 ## Update redaction annotation properties programmatically
 
 You can update properties of an existing redaction annotation using the `editAnnotation` API. For example, to change overlay text or fill color:
+
+The example below updates properties of existing redaction annotations.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -399,6 +405,8 @@ root.render(<App />);
 
 Entire pages can be marked for redaction using the `addPageRedactions` method:
 
+This example marks full pages for redaction.
+
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 
@@ -496,6 +504,8 @@ root.render(<App />);
 
 Once annotations are added, you can permanently apply them to the document using the `redact` method:
 
+This example applies all pending redactions, permanently modifying the document.
+
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 
@@ -589,11 +599,13 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> Applying redaction is irreversible. Once applied, the original content cannot be recovered.
+N> Applying redaction is irreversible. Create a backup of the original document before applying redactions; once applied, the original content cannot be recovered.
 
 ## Configure default redaction annotation properties
 
 You can configure default properties for redaction annotations (such as fill color, overlay text, and font) when adding them programmatically:
+
+The example below sets default redaction properties during viewer initialization.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -704,7 +716,7 @@ The redaction property panel allows users to update annotation properties throug
 ## See also
 
 * [Overview of Redaction](./overview)
-* [Redaction UI interactions](./ui-interaction)
+* [Redaction UI interactions](./ui-interactions)
 * [Redaction Toolbar](./toolbar)
-* [Reaction in Mobile view](./mobile-view)
+* [Redaction in Mobile view](./mobile-view)
 * [Search Text and Redact](./search-redact)

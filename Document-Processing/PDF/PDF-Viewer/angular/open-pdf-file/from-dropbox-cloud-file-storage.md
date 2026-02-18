@@ -22,7 +22,7 @@ Follow the Dropbox documentation to create an API app: [link](https://www.dropbo
 
 **Step 2:** Create a Simple PDF Viewer Sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will give you a basic setup of the PDF Viewer component.
+Start by following the PDF Viewer [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) guide for Angular to create a simple PDF Viewer sample. This provides the basic setup for the PDF Viewer component.
 
 **Step 3:** Modify the src/app/app.ts file in the Angular project
 
@@ -32,9 +32,9 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 import { Dropbox } from 'dropbox';
 ```
 
-2. Create an instance of the Dropbox class using an access token for authentication. Next, call the filesDownload method of this Dropbox instance to download the file located at /PDF_Succinctly.pdf. Upon successfully downloading the file, extract the file blob from the response. Convert this file blob to a Base64 string using the blobToBase64 method. Finally, load the Base64 string into a PDF viewer control.
+2. Create an instance of the Dropbox class using an access token for authentication. Call the `filesDownload` method to download the desired file (for example, `/PDF_Succinctly.pdf`). Extract the file blob from the response, convert it to a Base64 string using the `blobToBase64` helper, and load the Base64 string into the PDF Viewer control.
 
-N> Replace the placeholder with your actual Dropbox access token.
+Note: Replace the placeholder with the actual Dropbox access token. For production, store secrets securely (for example, environment variables, user secrets, or a secret store such as Azure Key Vault) and do not commit credentials to source control.
 
 ```typescript
 async loadPdfDocument(): Promise<void> {
@@ -61,7 +61,7 @@ private blobToBase64(blob: Blob): Promise<string> {
 }
 ```
 
-N> The **npm install dropbox** package must be installed in your application to use the previous code example.
+N> The **npm install dropbox** package must be installed in the Angular application to use the Dropbox SDK.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Standalone)
 
@@ -204,8 +204,8 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 ```
 
-N> The **Dropbox.Api** NuGet package must be installed in your application to use the previous code example.
+N> The **Dropbox.Api** NuGet package must be installed in the web service project to use the Dropbox SDK.
 
-N> Replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Dropbox cloud file storage. Make sure to pass the document name from the dropbox folder to the `documentPath` property of the PDF viewer component
+N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Dropbox. Ensure the specified document exists in the configured Dropbox folder and is passed to the `documentPath` property of the PDF Viewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Server-Backed)

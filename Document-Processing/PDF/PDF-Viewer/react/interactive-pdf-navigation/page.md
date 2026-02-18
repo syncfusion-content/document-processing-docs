@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in React PDF Viewer control
+# Page navigation in React PDF Viewer
 
-The ASP.NET Core PDF Viewer supports different internal and external navigations.
+The React PDF Viewer supports multiple internal and external navigation options.
 
 ## Toolbar page navigation option
 
-The default toolbar of PDF Viewer contains the following navigation options
+The default toolbar of the PDF Viewer contains the following navigation options
 
 * [**Go to page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
 * [**Show next page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
@@ -51,7 +51,7 @@ The default toolbar of PDF Viewer contains the following navigation options
 </html>
 ```
 
-You can enable/disable page navigation option in PDF Viewer using the following code snippet.,
+To enable or disable page navigation, set `enableNavigation` on the `PdfViewerComponent`. Example:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -144,7 +144,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/navigation.png)
+![Page navigation toolbar in the PDF Viewer](../images/navigation.png)
 
 Also, you can programmatically perform page navigation options as follows.
 
@@ -320,7 +320,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-Find the [here](https://stackblitz.com/edit/5dqbkd?file=index.ts) to perform the page navigation options programmatically.
+See the [StackBlitz sample](https://stackblitz.com/edit/5dqbkd?file=index.ts) for an interactive demonstration.
 
 ## See also
 

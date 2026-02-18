@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Fields API in TypeScript PDF Viewer
+# Form fields API in TypeScript PDF Viewer
 
-The PDF Viewer provides comprehensive APIs to create, edit, validate, navigate, and manage form fields programmatically. The following APIs are available:
+The PDF Viewer exposes APIs to create, edit, validate, navigate, export, and manage form fields programmatically. The following APIs are available:
 
 | API | Description |
 |---|---|
@@ -148,6 +148,8 @@ if (btn) {
 {% endhighlight %}
 {% endtabs %}
 
+N> Supported import/export formats include `FDF`, `XFDF`, and `JSON`. Ensure the format token passed to import/export APIs matches one of these values.
+
 ## focusFormField
 
 Moves focus to a form field by name or ID.
@@ -160,6 +162,7 @@ Moves focus to a form field by name or ID.
 const btn = document.getElementById('focusFormField');
 if (btn) {
   btn.onclick = () => {
+    // This API returns a Promise that resolves with the exported data object
     pdfviewer.focusFormField('FirstName');
   };
 }

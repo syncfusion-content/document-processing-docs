@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Print in Angular PDF Viewer component
 
-The PDF Viewer supports printing the loaded PDF file. You can enable/disable the print using the following code snippet.
+The PDF Viewer supports printing loaded PDF files. Enable printing by setting the `enablePrint` property, as shown in the examples below.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -73,9 +73,9 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](images/print.png)
+![Print toolbar in Angular PDF Viewer](images/print.png)
 
-You can invoke print action using the following code snippet.,
+Invoke the print action using the following snippet.
 
 ```html
 <script>
@@ -89,7 +89,7 @@ You can invoke print action using the following code snippet.,
 
 ## Print the PDF document in the new window.
 
-PDF Viewer extension supports printing functionality for loaded PDF files directly within the browser. You can utilize the [printMode](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printMode/) parameter to specify the printing mode, with the option to choose [NewWindow](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printMode/) for printing. Below is a code snippet demonstrating how to implement this functionality
+The PDF Viewer supports printing loaded PDF files directly in the browser. Use the [printMode](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printMode/) parameter to select the printing mode; set it to [NewWindow](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printMode/) to open print output in a separate browser window. Below is a code snippet demonstrating how to configure this option.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -156,11 +156,11 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-By setting the printMode to [NewWindow](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printMode/), the extension will open a new window for printing the PDF document, providing a seamless and user-friendly printing experience.
+Setting `printMode` to `NewWindow` opens a separate window for printing the PDF document.
 
 ## Limiting the Dialog Opening for Printing
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you can control the printing process by leveraging the [printStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printStartEventArgs/) event. This event enables you to customize the printing behavior, particularly restricting the dialog opening. Below is a code snippet demonstrating how to utilize this event
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer raises the [printStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printStartEventArgs/) event before printing begins. Use this event to customize printing behavior—for example, to prevent the browser print dialog from opening. Below is a code snippet demonstrating this.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -238,16 +238,11 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-In this code snippet, the [printStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printStartEventArgs/) function is defined to handle the printStart event. By setting args.cancel to **true**, the print dialog opening is restricted. By default, the [cancel](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printStartEventArgs/) property is set to `false`.
+In these examples, the `printStart` handler sets `args.cancel = true` to prevent the print dialog from opening. By default, the [cancel](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printStartEventArgs/) property is `false`.
 
 ## Customizing Print Quality using printScaleFactor API
 
-The PDF Viewer allows you to adjust the print quality using the [printScaleFactor](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/PrintScaleFactor/) API. The quality of the print improves as the print quality value increases from 0.5 to 5.
-
-When the value is less than 0.5, the PDF is printed at a standard quality. When the value exceeds 5, the PDF is still printed at the standard quality. In standard quality, printScaleFactor value is set to 1 as default value.
-The effective range for print quality is between 0.5 and 5. Higher values within this range will result in better print quality, but also increase the print time.
-
-By default, the printScaleFactor is set to 1.
+Adjust print quality with the [printScaleFactor](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/PrintScaleFactor/) API. Valid values are 0.5–5 (default is 1). Values below 0.5 or above 5 revert to standard quality. Increasing the value within this range improves print fidelity but can increase print time.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

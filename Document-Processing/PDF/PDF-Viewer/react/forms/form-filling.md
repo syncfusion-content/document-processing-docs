@@ -22,7 +22,7 @@ The Syncfusion PDF Viewer supports three types of form-filling:
 
 3.	[Importing Form Field Data](#fill-pdf-forms-through-import-data)
 
-    The PDF Viewer allows you to import form field data into an existing PDF document. This enables pre filled forms using external data sources.
+The PDF Viewer allows importing form field data into an existing PDF document. This enables pre-filled forms using external data sources.
 
 ## Fill PDF forms programmatically 
 
@@ -223,7 +223,7 @@ For more details, see [Import Form Data](./import-export-form-fields/import-form
 
 ## How to get the filled data and store it to a backing system
 
-You can export the filled form field data from the PDF Viewer and store it in a backing system such as a database or file storage. The exported data can later be imported to restore the form state.
+You can export the filled form field data from the PDF Viewer and store it in a backend system such as a database or file storage. The exported data can later be imported to restore the form state.
 
 For more details, see [Export Form Data](./import-export-form-fields/export-form-fields).
 

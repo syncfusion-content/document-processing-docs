@@ -18,18 +18,18 @@ Radius is a measurement annotation used to measure the radius of a circle in the
 
 ### Add radius annotation via UI
 
-Use the annotation toolbar:
-- Click the Edit Annotation button in the PDF Viewer toolbar.
-- Open the Measurement Annotation dropdown.
-- Choose Radius, then draw on the page.
+Use the annotation toolbar to:
+- Click the **Edit Annotation** button in the PDF Viewer toolbar.
+- Open the **Measurement Annotation** dropdown.
+- Choose **Radius**, then draw on the page
 
-N> When in pan mode, selecting a measurement annotation switches the viewer to text select mode.
+N> When in pan mode, selecting measurement annotations switches the viewer to text select mode.
 
 ![Measurement toolbar](../../images/calibrate_tool.png)
 
 ### Enable radius mode
 
-The PDF Viewer component allows drawing Radius annotations programmatically after enabling Radius mode in button clicks.
+The PDF Viewer component allows drawing radius annotations programmatically after enabling radius mode via button clicks.
 
 ```html
 <button id="radiusMode">Radius</button>
@@ -82,7 +82,7 @@ document.getElementById('setNone')?.addEventListener('click', () => {
 
 ### Add a radius annotation programmatically
 
-Add measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
+Add radius annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 ```html
 <button id="addRadiusAnnotation">Add Radius annotation programmatically</button>
@@ -133,7 +133,7 @@ document.getElementById('addRadiusAnnotation')?.addEventListener('click', () => 
 
 ### Edit radius annotation in UI
 
-You can select, move, and resize Radius annotations directly in the viewer:
+Use the viewer to select, move, and resize Radius annotations:
 - Select a Radius measurement to show its handles.
 - Move: drag the shape to reposition it on the page.
 - Resize: drag the handles to adjust its size.
@@ -251,9 +251,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `RadiusSettings`.
+Set properties for individual annotations before creating the control using `RadiusSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default Radius settings.
 

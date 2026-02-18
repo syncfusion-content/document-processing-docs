@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Open PDF files
 
-You might need to open and view the PDF files from various location. In this section, you can find the information about how to open PDF files from URL, database and as base64 string.
+This article explains how to open and view PDF files from various locations in the Syncfusion React PDF Viewer: from a URL, from a database, and from a base64 string.
 
-## Opening a PDF from URL
+## Opening a PDF from a URL
 
-If you have your PDF files in the web, you can open it in the viewer using URL.
+To open a PDF hosted on the web, provide its URL to the viewer.
 
 **Step 1:** Create a Simple PDF Viewer Sample in React
 
@@ -76,7 +76,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 
 **Step 3:**  Set the PDF Viewer Properties in React PDF viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
+Set the `serviceUrl` property to the web service URL (for example, replace `https://localhost:44396/pdfviewer` with your server URL). Set `documentPath` to the PDF document URL to be loaded.
 
 {% raw %}
 
@@ -116,7 +116,7 @@ root.render(<App />);
 
 ## Opening a PDF from base64 data
 
-The following code steps how the PDF file can be loaded in PDF Viewer as base64 string.
+This section shows how to load a PDF document into the viewer from a base64 string.
 
 **Step 1:** Create a Simple PDF Viewer Sample in Angular
 

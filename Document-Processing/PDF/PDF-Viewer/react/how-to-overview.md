@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Use the Frequently Asked Questions Section in the PDF Viewer
+# How-to overview for PDF Viewer
 
-The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
+The following how-to articles and frequently asked questions for the Syncfusion PDF Viewer are listed below.
 
 * [How to add annotation in text search in react?](./how-to/add-annotation-in-text-search-ts)
 * [How to add custom header to the PDF Viewer ajax request?](./how-to/add-header-value)

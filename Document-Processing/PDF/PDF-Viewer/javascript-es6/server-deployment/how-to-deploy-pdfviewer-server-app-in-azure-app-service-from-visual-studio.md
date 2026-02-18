@@ -24,23 +24,23 @@ Follow these steps to publish the Web API and generate the App Service endpoint 
 
 **Step 1:** In Solution Explorer, right-click the project and choose Publish (or use Build > Publish) to open the publishing wizard.
 
-![azure publish](../images/azure_publish.png)
+![Visual Studio Publish dialog](../images/azure_publish.png)
 
 **Step 2:** If no profile exists, select **Create new profile** to configure deployment settings.
 
 **Step 3:** In **Pick a publish target**, choose **App Service** so Visual Studio provisions or reuses an Azure App Service instance.
 
-![azure target](../images/azure_target.png)
+![Pick a publish target dialog](../images/azure_target.png)
 
 **Step 4:** Select **Publish**. In **Create App Service**, sign in if prompted and review the default resource group, plan, and hosting settings.
 
-![azure pdfviewer](../images/azure_pdfviewer.png)
+![Create App Service settings dialog](../images/azure_pdfviewer.png)
 
 > **Security note:** Store the `SYNCFUSION_LICENSE_KEY` in Azure App Service application settings or Azure Key Vault references instead of embedding it in source code or publish profiles.
 
-**Step 5:** Select **Create**. After deployment, browse to `https://<app_name>.azurewebsites.net` (for example, `https://ej2-pdfviewer-server20200513053326.azurewebsites.net`). Configure a custom domain and TLS certificate for production environments.
+**Step 5:** Select Create. After deployment, the app is available at `https://<app_name>.azurewebsites.net` (for example, `https://ej2-pdfviewer-server20200513053326.azurewebsites.net`).
 
-**Step 6:** Verify the API at `https://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer`. A default GET response confirms the server is running and reachable.
+**Step 6:** Verify the API at `https://<app_name>.azurewebsites.net/api/pdfviewer`. A default GET response indicates the server is running.
 
 Update the TypeScript PDF Viewer client to use the secure service endpoint (for example, `https://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer`) as the `serviceUrl`. Refer to the [Getting started with the TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide for client configuration steps.
 

@@ -8,16 +8,16 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perform undo and redo in TypeScript 
+#  Undo and redo annotations in JavaScript PDF Viewer 
 
-The PDF Viewer supports undo and redo for Annotations.
+The PDF Viewer supports undo and redo for annotations.
 
 ![Undo-redo](../annotations/annotation-images/annotation-undo-redo.png)
 
-Undo and redo actions can be performed in the following ways:
+Undo and redo actions can be performed by using either of the following methods:
 
-1. Using keyboard shortcuts:
-    After performing a highlight annotation action, press Ctrl+Z to undo and Ctrl+Y to redo.
+1. Using keyboard shortcuts (desktop):
+    After performing an annotation action, press `Ctrl+Z` to undo and `Ctrl+Y` to redo on Windows and Linux. On macOS, use `Command+Z` to undo and `Command+Shift+Z` to redo.
 2. Using the toolbar:
     Use the **Undo** and **Redo** tools in the toolbar.
 

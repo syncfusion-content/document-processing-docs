@@ -220,8 +220,8 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 }
 ```
 
-N> Replace **Your connection string for SQL server** with the actual connection string for your SQL Server database.
+N> Replace **Your connection string for SQL server** with the actual connection string for the target SQL Server database.
 
-N> Install the **System.Data.SqlClient** package and update the `connectionString` value to match your environment before running the sample.
+N> Install the **System.Data.SqlClient** package and update the `connectionString` value to match the environment before running the sample.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-database)

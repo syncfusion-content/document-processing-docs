@@ -7,19 +7,19 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Open PDF file from Google Drive in Blazor SfPdfViewer
+# Open PDF from Google Drive in SfPdfViewer
 
-To load a PDF file from Google Drive in the Blazor SfPdfViewer, follow the steps below.
+This article shows how to load a PDF stored in Google Drive into the Syncfusion Blazor `SfPdfViewer` component.
 
-**Step 1** Set up Google Drive API
+## Step 1 — Enable the Google Drive API
 
 Create a project in Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For detailed guidance, see the [Google Drive documentation](https://developers.google.com/drive/api/guides/enable-sdk).
 
-**Step 2:** Create a simple SfPdfViewer sample in Blazor
+## Step 2 — Create a minimal SfPdfViewer sample
 
 Follow the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide to create a basic Blazor application with the SfPdfViewer component.
 
-**Step 3:** Include the following namespaces in the **Index.razor** file.
+## Step 3 — Add required namespaces
 
 1. Import the required namespaces at the top of the file:
 
@@ -32,7 +32,9 @@ Follow the [getting started](https://help.syncfusion.com/document-processing/pdf
 @using Syncfusion.Blazor.SfPdfViewer;
 ```
 
-**Step 4:** Add the below code example to load a PDF from `Google drive` file.
+## Step 4 — Example: authorize, download, and load
+
+The example below authenticates with OAuth 2.0, lists PDF files in a folder, downloads the selected file into memory, converts it to a Base64 data URI, and assigns it to `DocumentPath`.
 
 ```csharp
 @page "/"
@@ -67,10 +69,10 @@ Follow the [getting started](https://help.syncfusion.com/document-processing/pdf
         }
 
         var service = new DriveService(new BaseClientService.Initializer()
-            {
-                HttpClientInitializer = credential,
-                ApplicationName = ApplicationName,
-            });
+        {
+            HttpClientInitializer = credential,
+            ApplicationName = ApplicationName,
+        });
 
         var listRequest = service.Files.List();
         listRequest.Q = $"mimeType='application/pdf' and '{FolderId}' in parents and trashed=false";

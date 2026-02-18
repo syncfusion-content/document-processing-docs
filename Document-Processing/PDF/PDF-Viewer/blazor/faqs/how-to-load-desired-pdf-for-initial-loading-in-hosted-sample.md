@@ -15,7 +15,7 @@ Load a specific PDF on initial display and change the document at runtime in the
 
 @inject HttpClient Http;
 @using Syncfusion.Blazor.Buttons;
-@using Syncfusion.Blazor.SfPdfViewer
+@using Syncfusion.Blazor.SfPdfViewer;
 
 <SfButton OnClick="LoadAnotherDocument">Load Another Document</SfButton>
 

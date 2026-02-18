@@ -8,90 +8,88 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# UI Interactions for Organizing Pages in React PDF Viewer
+# UI interactions for organizing pages in React PDF Viewer
 
-The PDF Viewer provides an intuitive user interface for managing and organizing pages within a PDF document. This section covers the various UI interactions available in the `Organize Pages` dialog.
+The PDF Viewer provides an intuitive interface for organizing pages. This section documents the UI interactions available in the `Organize Pages` dialog.
 
+## Rotate PDF pages
 
+Adjust page orientation using the rotate controls in the Organize Pages dialog.
 
-## Rotating PDF pages
+- **Rotate clockwise**: Rotate selected pages 90 degrees clockwise.
+- **Rotate counter-clockwise**: Rotate selected pages 90 degrees counter-clockwise.
 
-You can adjust the orientation of pages to ensure proper alignment. The rotate icon in the Organize Pages dialog provides the following options:
+![Rotate and rearrange pages animation showing rotate control usage](../images/rotate-rearrange.gif)
 
-*   **Rotate clockwise**: Rotate the selected pages 90 degrees clockwise.
-*   **Rotate counter-clockwise**: Rotate the selected pages 90 degrees counter-clockwise.
+## Rearrange PDF pages
 
-![Alt text](../images/rotate-rearrange.gif)
+Change page sequence using drag-and-drop.
 
-## Rearranging PDF pages
+- **Drag and drop**: Drag a page thumbnail to the desired position and release to reorder pages.
 
-Easily change the sequence of pages using the drag-and-drop method:
+![Rearrange pages animation showing drag-and-drop behavior](../images/rotate-rearrange.gif)
 
-*   **Drag and drop**: Click and drag a page thumbnail to the desired position within the document, then release it to reorder the pages.
+## Insert new pages
 
-![Alt text](../images/rotate-rearrange.gif)
+Add blank pages to the document at the required position.
 
-## Inserting new pages
+- **Insert blank page left**: Insert a blank page to the left of the selected page.
+- **Insert blank page right**: Insert a blank page to the right of the selected page.
 
-Effortlessly add blank pages to your document with the following options:
+![Insert page control in the Organize Pages toolbar](../images/organize-insert.png)
 
-*   **Insert blank page left**: Insert a blank page to the left of the selected page.
-*   **Insert blank page right**: Insert a blank page to the right of the selected page.
+## Delete PDF pages
 
-![insert](../images/organize-insert.png)
+Remove unwanted pages from the document:
 
-## Deleting PDF pages
+1. **Select pages to delete**: Click or tap thumbnails to select pages; multiple selection is supported.
+2. **Delete selected pages**: Use the delete option in the Organize Pages pane to remove the selected pages.
 
-Remove unwanted pages from your document with these steps:
+![Delete selected pages using the Organize Pages delete control](../images/organize-delete.png)
 
-1.  **Select pages to delete**: Click on the thumbnails of the pages you wish to remove. You can select multiple pages at once.
-2.  **Delete selected pages**: Use the delete option in the Organize Pages pane to remove the selected pages from the document.
+## Copy PDF pages
 
-![Delete](../images/organize-delete.png)
+Duplicate pages within the document:
 
-## Copying PDF pages
+- **Select pages to copy**: Click or tap thumbnails to select pages to duplicate.
+- **Copy selected pages**: Use the copy option; copied pages are inserted to the right of the selection.
 
-Duplicate pages within your PDF document effortlessly:
+![Copy pages control and thumbnail insertion preview](../images/organize-copy.png)
 
-*   **Select pages to copy**: Click on the page thumbnails you wish to duplicate.
-*   **Copy selected pages**: Use the copy option to create duplicates. The copied pages will be added to the right of the selected pages.
+## Import a PDF document
 
-![Copying](../images/organize-copy.png)
+Import another PDF into the current document:
 
-## Importing a PDF document
+- **Import PDF document**: Click **Import Document** to select and import a PDF. The imported pages appear as thumbnails. If a page is selected, thumbnails are inserted to its right; otherwise they are added at the start. Imported pages are merged with the current document when saved.
 
-Seamlessly import another PDF document into your current document:
+![Import PDF animation showing thumbnail insertion](../images/import.gif)
 
-*   **Import PDF document**: Click the **Import Document** button to select and import a PDF. The imported document will be inserted as a thumbnail. If a page is selected, the thumbnail will be added to its right. If no pages are selected, it will be added as the first page. The imported PDF will be merged with the current document upon saving.
+## Select all pages
 
-![Alt text](../images/import.gif)
+Select all pages to perform bulk operations (for example, rotate or delete all pages).
 
-## Selecting all pages
+![Select all thumbnail control and selection state](../images/selectall.png)
 
-Select all pages simultaneously to perform bulk operations, such as rotating or deleting all pages at once.
+## Zoom page thumbnails
 
-![Alt text](../images/selectall.png)
+Adjust thumbnail size for better visibility and precision:
 
-## Zooming page thumbnails
+- Use the zoom slider to increase or decrease thumbnail size.
+- Zoom in to see more detail on each page.
+- Zoom out to view more pages at once.
 
-Adjust the size of page thumbnails for better visibility and precision:
-
-*   Use the zoom slider to increase or decrease the thumbnail size.
-*   Zoom in to see more detail on each page.
-*   Zoom out to view more pages at once.
-
-![Alt text](../images/zoomOrganize.png)
+![Thumbnail zoom slider and preview](../images/zoomOrganize.png)
 
 ## Real-time updates and saving
 
-All changes are reflected instantly in the Organize Pages dialog. Click the **Save** button to apply the modifications to the document. Use the **Save As** feature to download a new version of the PDF with your changes.
+Changes are reflected instantly in the Organize Pages dialog. Click **Save** to apply changes to the loaded document or **Save As** to download a new copy with the updated page order.
 
 ## Keyboard shortcuts
 
-The following keyboard shortcuts are available in the Organize Pages dialog:
+Common keyboard shortcuts in the Organize Pages dialog:
 
-*   **Ctrl+Z**: Undo the last action.
-*   **Ctrl+Y**: Redo the last undone action.
-*   **Ctrl+Scroll**: Zoom in and out on page thumbnails for better visibility.
+- **Ctrl+Z**: Undo the last action.
+- **Ctrl+Y**: Redo the last undone action.
+- **Ctrl+Scroll**: Zoom thumbnails in/out.
 
-![Alt text](../images/undo-redo.png)
+![Undo and redo controls in the Organize Pages toolbar](../images/undo-redo.png)

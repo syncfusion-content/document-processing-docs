@@ -17,13 +17,13 @@ To get start quickly with Cell Range, you can check on this video:
 
 ## Wrap text
 
-Wrap text allows you to display large content as multiple lines in a single cell. By default, the wrap text support is enabled. Use the [`allowWrap`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowwrap) property to enable or disable the wrap text support in spreadsheet.
+Wrap text allows you to display large content as multiple lines in a single cell. By default, the wrap text support is enabled. Use the [`allowWrap`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowwrap) property to enable or disable the wrap text support in spreadsheet.
 
 Wrap text can be applied or removed to a cell or range of cells in the following ways,
 
 * Using the `wrap` property in `cell`, you can enable or disable wrap text to a cell at initial load.
 * Select or deselect wrap button from ribbon toolbar to apply or remove the wrap text to the selected range.
-* Using the [`wrap`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#wrap) method, you can apply or remove the wrap text once the component is loaded.
+* Using the [`wrap`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#wrap) method, you can apply or remove the wrap text once the component is loaded.
 
 The following code example shows the wrap text functionality in spreadsheet.
 
@@ -53,13 +53,13 @@ The following features have some limitations in wrap text:
 
 ## Merge cells
 
-Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowmerge) property to enable or disable the merge cells option in spreadsheet.
+Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowmerge) property to enable or disable the merge cells option in spreadsheet.
 
 You can merge the range of cells in the following ways,
 
 * Set the `rowSpan` and `colSpan` property in `cell` to merge the number of cells at initial load.
 * Select the range of cells and apply merge by selecting the desired option from ribbon toolbar.
-* Use [`merge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#merge) method to merge the range of cells, once the component is loaded.
+* Use [`merge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#merge) method to merge the range of cells, once the component is loaded.
 
 The available merge options in spreadsheet are,
 
@@ -95,96 +95,6 @@ The following features have some limitations in Merge:
 
 * Merge with filter.
 * Merge with wrap text.
-
-## Data Validation
-
-Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowdatavalidation) property to enable or disable data validation.
-
-> * The default value for `allowDataValidation` property is `true`.
-
-### Apply Validation
-
-You can apply data validation to restrict the type of data or the values that users enter into a cell.
-
-You can apply data validation by using one of the following ways,
-
-* Select the Data tab in the Ribbon toolbar, and then choose the Data Validation item.
-* Use the [`addDataValidation()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#adddatavalidation) method programmatically.
-
-### Clear Validation
-
-Clear validation feature is used to remove data validations from the specified ranges or the whole worksheet.
-
-You can clear data validation rule by one of the following ways,
-
-* Select the Data tab in the Ribbon toolbar, and then choose the Clear Validation item.
-* Use the [`removeDataValidation()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#removedatavalidation) method programmatically.
-
-### Highlight Invalid Data
-
-Highlight invalid data feature is used to highlight the previously entered invalid values.
-
-You can highlight an invalid data by using one of the following ways,
-
-* Select the Data tab in the Ribbon toolbar, and then choose the Highlight Invalid Data item.
-* Use the [`addInvalidHighlight()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#addinvalidhighlight) method programmatically.
-
-### Clear Highlighted Invalid Data
-
-Clear highlight feature is used to remove the highlight from invalid cells.
-
-You can clear the highlighted invalid data by using the following ways,
-
-* Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
-* Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#removeinvalidhighlight) method programmatically.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/data-validation-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/data-validation-cs1/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/data-validation-cs1" %}
-
-### Custom Data validation
-
-The Spreadsheet supports custom data validation, allowing users to define their own validation rules for specific cells or ranges. This feature enables you to set conditions that the entered data must meet, making it particularly useful when predefined validation options, such as numbers, dates, or lists, are insufficient.
-
-With custom validation, you can enforce rules using logical expressions or formulas, ensuring that only valid data is entered into the Spreadsheet.
-
-For example, consider a scenario where you want to ensure that a cell contains a number between 10 and 100. To achieve this, define a validation rule using a formula that checks if the entered value is greater than 10 and less than 100. The formula for this validation is =AND(A1>10, A1<100), where A1 refers to the cell being validated.
-
-When this rule is applied, the Spreadsheet evaluates the entered value against the formula. If a user enters a value outside the specified range, an alert notifies them of the invalid input. This helps users correct errors efficiently and ensures that only desired values are accepted.
-
-You can apply custom data validation using two methods.
-
-* The first is through the Data Validation dialog in the Ribbon toolbar. Navigate to the Data tab, select the Data Validation option, and choose the Custom type from the Allow dropdown menu.
-* The second method is programmatically, using the [`addDataValidation()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#adddatavalidation) method, which allows developers to set custom rules dynamically via code.
-
-The following code example demonstrates how to add custom data validation with a formula in a Spreadsheet.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/data-validation-cs2/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/data-validation-cs2/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/data-validation-cs2" %}
-
-### Limitations of Data validation
-
-The following features have some limitations in Data Validation:
-
-* Entire row data validation.
-* Insert row between the data validation.
-* Copy/paste with data validation.
-* Delete cells between data validation applied range.
 
 ## Auto Fill
 
@@ -282,7 +192,7 @@ Clear feature helps you to clear the cell contents (formulas and data), formats 
 You can apply clear feature by using one of the following ways,
 
 * Select the clear icon in the Ribbon toolbar under the Home Tab.
-* Using the [`clear()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#clear) method to clear the values.
+* Using the [`clear()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method to clear the values.
 
 Clear has the following types in the spreadsheet,
 
@@ -295,7 +205,7 @@ Clear has the following types in the spreadsheet,
 
 ### Methods
 
-Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#clear) method. The [clear](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
+Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method. The [clear](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

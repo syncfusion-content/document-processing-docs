@@ -18,18 +18,18 @@ Free Text is a text box annotation used to place formatted text anywhere on the 
 
 ### Add Free Text annotation via UI
 
-Use the annotation toolbar:
+Use the annotation toolbar to:
 - Click the **Edit Annotation** button in the PDF Viewer toolbar.
 - Click the **Free Text Annotation** button to enable Free Text mode.
 - Click on the page to add text.
 
-When in pan mode, selecting Free Text switches the viewer to text select mode.
+N> When in pan mode, selecting Free Text switches the viewer to text select mode.
 
 ![Free text tool in the annotation toolbar](../annotation-images/free-text-annot.png)
 
 ### Switch to Free Text mode
 
-The PDF Viewer component allows drawing Distance annotations programmatically after enabling Distance mode in button clicks.
+The PDF Viewer component allows drawing free text annotations programmatically after enabling Free Text mode via button clicks.
 
 ```html
 <button id="addFreeTextAnnotation">FreeText</button>
@@ -374,9 +374,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `FreeTextSettings`.
+Set properties for individual annotations before creating the control using `FreeTextSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default FreeText settings.
 

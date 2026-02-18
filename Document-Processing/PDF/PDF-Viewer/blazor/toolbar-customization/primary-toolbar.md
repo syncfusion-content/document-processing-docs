@@ -392,7 +392,7 @@ Customize the appearance of toolbar icons for custom toolbar items. The followin
     }
 
     .e-icons.e-save::before {
-        content: '\e7a8'
+        content: '\e7a8';
     }
 </style> 
 

@@ -8,10 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark navigation in React PDF Viewer control
+# Bookmark navigation in React PDF Viewer
 
-The Bookmarks saved in PDF files are loaded and made ready for easy navigation.
-You can enable/disable bookmark navigation by using the following code snippet.,
+Bookmarks embedded in a PDF are loaded and presented for easy navigation. Enable bookmark navigation using the snippet below.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -108,11 +107,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/bookmark.png)
+![Bookmarks panel in the PDF Viewer](../images/bookmark.png)
 
-To perform bookmark navigation, you can use the **goToBookmark** method. It's important to note that the **goToBookmark** method will throw an error if the specified bookmark does not exist in the PDF document.
+To perform bookmark navigation, use the `goToBookmark` method. The method throws an error if the specified bookmark does not exist in the document.
 
-Here is an example of how to use the **goToBookmark** method:
+Here is an example of how to use the `goToBookmark` method:
 
 ```
   <button id="gotobookmark">Specfic Page</button>
@@ -145,9 +144,9 @@ const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
 root.render(<App />);
 ```
 
-x - Specifies the pageIndex for Navigate.
+x — the zero-based page index to navigate to.
 
-y - Specifies the Y coordinates value of the Page.
+y — the vertical Y coordinate on the target page to position the viewport.
 
 Also, you can use the **getBookmarks** method to retrieve a list of all the bookmarks in a PDF document. This method returns a List of Bookmark objects, which contain information about each bookmark.
 

@@ -8,15 +8,18 @@ documentation: ug
 ---
 
 # Move and Resize PDF Form Fields in React
-- **Move**: Drag the form field to reposition it.
-- **Resize**: Use the resize handles to change width and height.
+The PDF Viewer supports moving and resizing form fields.
 
-![Moveing and Resizing a form field](../../../javascript-es6/images/move-resize-forms.gif)
+- **Move**: drag the form field to reposition it.
+- **Resize**: use the resize handles to change width and height.
 
-## Move and Resize Fields Programmatically (API)
-You can set absolute bounds or move fields by a delta.
+![Moving and resizing a form field using the Form Designer UI](../../../javascript-es6/images/move-resize-forms.gif)
 
-**Set absolute bounds**
+## Move and resize fields programmatically
+
+The API supports setting absolute bounds or moving fields by a delta.
+
+### Set absolute bounds
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

@@ -7,33 +7,23 @@ platform: document-processing
 documentation: ug
 ---
 
-# Extract text using extractText in React PDF Viewer
+## Extract text method in the PDF Viewer
 
-The `extractText` method extracts text from one or more pages and can return plain text or text with bounds for each element.
+The `extractText` method retrieves text content and, optionally, positional data for elements on one or more pages. It returns a Promise that resolves to an object containing extracted `textData` (detailed items with bounds) and `pageText` (concatenated plain text).
 
-### extractText method
-Retrieves text data from one page or a range of pages based on the specified options.
+**Parameters overview:**
 
-#### Parameters:
-**startIndex:** The starting page index for text extraction (0-based index).
+- `startIndex` — Starting page index (0-based).
+- `endIndex` or options — Either the ending page index for a range extraction, or an options object specifying extraction criteria for a single page.
+- `options` (optional) — Extraction options such as `TextOnly` or `TextAndBounds` to control whether bounds are included.
 
-**endIndex or isOptions:** Either the ending page index (for multiple pages) or an option specifying extraction criteria for a single page.
+**Returned object shape (example):**
 
-**options (optional):** Specifies additional options, such as extracting plain text `TextOnly` or more detailed text data `TextAndBounds`. You can specify various options for text extraction. These options determine whether you want to extract plain text, text with bounds, or detailed text data.
-
-- TextOnly: Extracts only plain text without bounds.
-- TextAndBounds: Extracts text with bounds (coordinates).
-
-#### Returns:
-Returns a Promise with:
-- textData: An array of TextDataSettingsModel with details including bounds and page text.
-- pageText: A concatenated string of plain text from the specified page(s).
-
-**textData:** An array of TextDataSettingsModel objects, each representing the details of the extracted text (including bounds, page text, etc.).
-
-**pageText:** A concatenated string of plain text extracted from the specified page(s).
+- `textData` — Array of objects describing extracted text items, including bounds and page-level text.
+- `pageText` — Concatenated plain text for the specified page(s).
 
 ### Usage of extractText in Syncfusion PDF Viewer Control
+
 Here is an example that demonstrates how to use the extractText method along with event handling:
 
 ```html

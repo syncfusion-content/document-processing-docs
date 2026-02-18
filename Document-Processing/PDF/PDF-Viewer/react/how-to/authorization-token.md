@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Authorization token in React Pdfviewer component
+## Authorization token in React PDF Viewer component
 
-The PDF Viewer library allows you to include the authorization token in the PDF viewer AJAX request using the properties of the ajaxRequest header available in `AjaxRequestSettings`, and it will be included in every AJAX request send from PDF Viewer.
+This article shows how to include an authorization token in AJAX requests issued by the React PDF Viewer by using the `ajaxRequestSettings` property. The token is included in every AJAX request sent by the viewer when configured via `ajaxHeaders`.
 
-Here is an example of how you can use the **AjaxRequestSettings** property to include the authorization token to the PDF viewer control:
+Here is an example that adds an Authorization header using `AjaxRequestSettings`:
 
 {% raw %}
 

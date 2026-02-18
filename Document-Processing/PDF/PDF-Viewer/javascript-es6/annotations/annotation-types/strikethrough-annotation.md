@@ -14,9 +14,9 @@ The PDF Viewer provides options to add, edit, and delete Strikethrough annotatio
 
 ![Strikethrough overview](../../images/strikethrough_button.png)
 
-## Add strikethrough annotation
+## Add strikethrough annotations
 
-### Add strikethrough annotation via UI
+### Add strikethrough annotations via UI
 
 You can add strikethrough in two ways:
 
@@ -28,10 +28,10 @@ You can add strikethrough in two ways:
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
-* Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
-* Select **Strikethrough** to enable strikethrough mode.
-* Select text to add the strikethrough annotation.
-* Alternatively, select text first and then click **Strikethrough**.
+- Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+- Select **Strikethrough** to enable strikethrough mode.
+- Select text to add a strikethrough annotation.
+- Alternatively, select text first and then click **Strikethrough**.
 
 ![Strikethrough toolbar](../annotation-images/strikethrough-tool.gif)
 
@@ -153,9 +153,9 @@ Add the below `serviceUrl` in the `index.ts` file
 
 {% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/strikethrough-normal-mode-cs1/index.html" %}
 
-### Add strikethrough annotation programmatically
+### Add strikethrough annotations programmatically
 
-Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add strikethrough annotations using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -214,11 +214,11 @@ if (strikethrough) {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit strikethrough annotation
+## Edit strikethrough annotations
 
-### Edit strikethrough annotation in UI
+### Edit strikethrough annotations in UI
 
-The color and opacity of the strikethrough annotation can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
+The color and opacity of strikethrough annotations can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
 
 #### Edit color
 Use the color palette in the Edit Color tool to change the annotation color.
@@ -230,16 +230,16 @@ Use the range slider in the Edit Opacity tool to change annotation opacity.
 
 ![Edit opacity](../../images/edit_opacity.png)
 
-#### Delete strikethrough annotation
+#### Delete strikethrough annotations
 
 - Select the annotation and press Delete, or
 - Click **Delete Annotation** in the annotation toolbar.
 
 ![Delete button](../../images/delete_button.png)
 
-### Edit an existing strikethrough annotation programmatically
+### Edit existing strikethrough annotations programmatically
 
-To modify an existing strikethrough annotation programmatically, use the editAnnotation() method. Example:
+To modify existing strikethrough annotations programmatically, use the `editAnnotation()` method. Example:
 
 ```html
 <button id="editStrikethroughAnnotation">Edit Strikethrough annotation Programmatically</button>
@@ -309,7 +309,7 @@ if (editStrikethroughAnnotation) {
 
 Set default properties before creating the control using `strikethroughSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default strikethrough settings.
 
@@ -345,9 +345,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `StrikethroughSettings`.
+Set properties for individual annotations before creating the control using `StrikethroughSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default highlight settings.
 

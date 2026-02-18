@@ -14,7 +14,7 @@ A PDF document can be created during the SfPdfViewer `Created` event and immedia
 The following example creates a PDF in memory using the Syncfusion PDF library, converts it to a Base64 data URL, and assigns it to `DocumentPath` to load it in the SfPdfViewer.
 
 ```cshtml
-@using Syncfusion.Blazor.SfPdfViewer
+@using Syncfusion.Blazor.SfPdfViewer;
 @using Syncfusion.Pdf;
 @using Syncfusion.Pdf.Interactive;
 @using System.IO;

@@ -9,17 +9,17 @@ documentation: ug
 
 # Form Designer UI Interactions in Blazor PDF Viewer
 
-The Form Designer in the Blazor PDF Viewer enables adding, editing, and manipulating form fields directly within a PDF document. It provides an intuitive interface to design interactive forms efficiently.
+The Form Designer in `SfPdfViewer` enables adding, editing, and manipulating form fields directly within a PDF document. It provides an intuitive interface for designing interactive forms efficiently.
 
 ## Form Field Interactions
 
 ### Adding Form Fields
 
-Click the **Edit Form Fields** icon on the toolbar, choose the required form field, and place it on the PDF document.
+Click the **Edit Form Fields** icon in the toolbar, select the desired field type, and place it on the PDF document.
 
 ![Add form fields using the Form Designer in SfPdfViewer](form-designer-images/add-formfields-formdesigner-sfpdfviewer.gif)
 
-N> Form fields can also be added programmatically in SfPdfViewer for advanced scenarios.
+N> Form fields can also be added programmatically in `SfPdfViewer` for advanced scenarios.
 [See Add form fields programmatically](./create-programmatically).
 
 ### Dragging Form Fields
@@ -40,7 +40,7 @@ Edit form fields using the Form Field Properties panel. Open the panel by select
 
 The Form Field Properties panel consists of three tabs that provide customization options. Available options may vary by field type.
 
-N> Edit form fields can also be performed programmatically in SfPdfViewer for precise customization.
+N> Editing form fields can also be performed programmatically in `SfPdfViewer` for precise customization.
 [See Edit form fields programmatically](./create-programmatically).
 
 #### General Tab
@@ -88,7 +88,7 @@ Remove form fields by selecting the desired field and clicking the Delete icon i
 
 ![Delete a form field through the UI](form-designer-images/delete-formfields-formdesigner-sfpdfviewer.png)
 
-N> Form fields can also be deleted programmatically in SfPdfViewer.
+N> Form fields can also be deleted programmatically in `SfPdfViewer`.
 [See Delete form fields programmatically](./create-programmatically).
 
 ## See also

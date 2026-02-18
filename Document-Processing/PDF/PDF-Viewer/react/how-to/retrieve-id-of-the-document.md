@@ -8,17 +8,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve id of the document in React Pdfviewer component
+## Retrieve document ID in React PDF Viewer
 
-View the PDF document's id by passing the `hashId` value to the `getItem()` method of session storage API.
+This article shows how to retrieve the PDF document ID that the viewer stores in `sessionStorage` under the key `hashId`.
 
-Refer to the following code to get the id of a PDF document in a button click.
+Refer to the following minimal example that logs the stored document ID when a button is clicked:
 
 ```
 <button onclick="uniqueId()">UniqueId</button>
 
 <script>
-    //Event triggers when you click the UniqueId button.
+    // Event triggers when you click the UniqueId button.
     function uniqueId() {
         //Prints the PDF document id in the console window.
         console.log(window.sessionStorage.getItem("hashId"));

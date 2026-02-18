@@ -10,11 +10,9 @@ domainurl: ##DomainURL##
 
 # Magnification in React Pdfviewer component
 
-The magnification tools of the PDF Viewer contains ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth tools in the
-default toolbar. The PDF Viewer also has an option to show or hide the magnification tools in the
-default toolbar.
+The PDF Viewer includes built-in magnification tools: ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth. These tools appear in the default toolbar and can be shown or hidden as needed.
 
-The following code snippet describes how to enable the magnification in PDF Viewer.
+The following code snippet shows how to enable magnification in the PDF Viewer.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -81,16 +79,17 @@ root.render(<App />);
 {% endtabs %}
 
 The following magnification options are available in the default toolbar of PDF Viewer,
+The following magnification options are available in the default toolbar of the PDF Viewer:
 
-* [**ZoomIn**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification/#zoomin):- Zoom in from the current zoom value of PDF pages.
-* [**ZoomOut**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification/#zoomout):- Zoom out from the current zoom value of PDF pages.
-* [**Zoom**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification/#zoomto):- Zoom to specific zoom value of PDF pages.
-* [**FitPage**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification/#fittopage):- Fits the page width with in the available view port size.
-* [**FitWidth**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification/#fittowidth):- Fits the view port width based on the page content size.
+- [**ZoomIn**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification/#zoomin): Zoom in from the current zoom value of the PDF pages.
+- [**ZoomOut**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification/#zoomout): Zoom out from the current zoom value of the PDF pages.
+- [**Zoom**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification/#zoomto): Zoom to a specific zoom value for the PDF pages.
+- [**FitPage**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification/#fittopage): Fit the page to the available viewport size.
+- [**FitWidth**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification/#fittowidth): Fit the page width to the viewport based on page content size.
 
-![Alt text ](./images/zoom.png)
+![PDF Viewer magnification toolbar](./images/zoom.png)
 
->PDF Viewer can support the zoom value ranges from 10 to 400.
+N> The PDF Viewer supports zoom values from 10–400%.
 
 ## See also
 

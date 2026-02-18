@@ -7,99 +7,82 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# UI Interactions for Organizing Pages in Blazor PDF Viewer
+# UI interactions for Organize Pages
 
-The PDF Viewer provides an intuitive user interface for managing and organizing pages within a PDF document. This section covers the various UI interactions available in the `Organize Pages` dialog.
+The Organize Pages dialog provides simple, touch-friendly controls to manage page thumbnails and perform common page operations.
 
-## Rotating PDF pages
+## Rotate pages
 
 You can adjust the orientation of pages to ensure proper alignment. The rotate icon in the Organize Pages dialog provides the following options:
 
-*   **Rotate clockwise**: Rotate the selected pages 90 degrees clockwise.
+- **Rotate clockwise** — rotate selected pages 90° clockwise.
 
-![Rotating Clockwise](./images/organize-ui-rotate-right.png)
+![Rotate clockwise](./images/organize-ui-rotate-right.png)
 
-*   **Rotate counter-clockwise**: Rotate the selected pages 90 degrees counter-clockwise.
+- **Rotate counter-clockwise** — rotate selected pages 90° counter-clockwise.
 
-![Rotating Counter Clockwise](./images/organize-ui-rotate-left.png)
+![Rotate counter-clockwise](./images/organize-ui-rotate-left.png)
 
-## Rearranging PDF pages
+## Rearrange pages
 
-Easily change the sequence of pages using the drag-and-drop method:
+Drag and drop thumbnails to change page order.
 
-*   **Drag and drop**: Click and drag a page thumbnail to the desired position within the document, then release it to reorder the pages.
+![Rearrange pages](./images/Drag_and_Drop.gif)
 
-![Rearranging](./images/Drag_and_Drop.gif)
+## Insert pages
 
-## Inserting new pages
+- **Insert blank page left** — insert a blank page to the left of the selected page.
+- **Insert blank page right** — insert a blank page to the right of the selected page.
 
-Effortlessly add blank pages to your document with the following options:
+![Insert pages](./images/Insert_Pages.gif)
 
-*   **Insert blank page left**: Insert a blank page to the left of the selected page.
-*   **Insert blank page right**: Insert a blank page to the right of the selected page.
+## Delete pages
 
-![Rearranging](./images/Insert_Pages.gif)
+1. Select thumbnails to remove (multi-select supported).
+2. Use the Delete action in the organizer to remove the selected pages.
 
-## Deleting PDF pages
+![Delete pages](./images/organize-ui-delete.png)
 
-Remove unwanted pages from your document with these steps:
+## Duplicate pages
 
-1.  **Select pages to delete**: Click on the thumbnails of the pages you wish to remove. You can select multiple pages at once.
-2.  **Delete selected pages**: Use the delete option in the Organize Pages pane to remove the selected pages from the document.
+- Select thumbnails to duplicate.
+- Use the Duplicate action to add copies (copies appear to the right of the originals).
 
-![Delete](./images/organize-ui-delete.png)
+![Duplicate pages](./images/Duplicate_Pages.gif)
 
-## Duplicating PDF pages
+## Import pages
 
-Duplicate pages within your PDF document effortlessly:
+- **Import PDF** — select a PDF to insert pages into the current document. If a page is selected the imported pages are added to its right; otherwise they are added at the start. Imported pages are merged with the document when you save.
 
-*   **Select pages to duplicate**: Click on the page thumbnails you wish to duplicate.
-*   **Duplicate selected pages**: Use the duplicate option to create duplicates. The copied pages will be added to the right of the selected pages.
+![Import pages](./images/organize-ui-extract-page.png)
 
-![Duplicating](./images/Duplicate_Pages.gif)
+## Extract pages
 
-## Importing a PDF document
+- **Extract Document** — export selected pages as a separate PDF file.
 
-Seamlessly import another PDF document into your current document:
+![Extract pages](./images/organize-ui-import-page.png)
 
-*   **Import PDF document**: Click the **Import Document** button to select and import a PDF. The imported document will be inserted as a thumbnail. If a page is selected, the thumbnail will be added to its right. If no pages are selected, it will be added as the first page. The imported PDF will be merged with the current document upon saving.
+## Select all
 
-![Importing](./images/organize-ui-extract-page.png)
+- **Select all** — select every page for bulk operations such as rotate, delete, or duplicate.
 
-### Extract Document Pages
+![Select all](./images/organize-ui-select.png)
 
-* `Extract Document Pages`: Click the **Extract Document** button to extract a PDF pages. If a pages are selected, the selected pages are extracted as a separate document.
+## Thumbnail zoom
 
-![Alt text](./images/organize-ui-import-page.png)
+- Use the zoom slider to increase or decrease thumbnail size.
+- Zoom in to inspect page details or zoom out to view more pages.
 
-## Selecting all pages
-
-Select all pages simultaneously to perform bulk operations, such as rotating or deleting all pages at once.
-
-![Selecting](./images/organize-ui-select.png)
-
-## Zooming page thumbnails
-
-Adjust the size of page thumbnails for better visibility and precision:
-
-*   Use the zoom slider to increase or decrease the thumbnail size.
-*   Zoom in to see more detail on each page.
-*   Zoom out to view more pages at once.
-
-![Zooming](./images/organize-zoom-panel.png)
+![Thumbnail zoom](./images/organize-zoom-panel.png)
 
 ## Real-time updates and saving
 
-All changes are reflected instantly in the Organize Pages dialog. Click the **Save** button to apply the modifications to the document. Use the **Save As** feature to download a new version of the PDF with your changes.
+Changes in the organizer are reflected instantly in the viewer. Click **Save** to persist changes or **Save As** to download a modified copy.
 
 ## Keyboard shortcuts
 
-The following keyboard shortcuts are available in the Organize Pages dialog:
+- **Ctrl+Z** — undo.
+- **Ctrl+Y** — redo.
 
-*   **Ctrl+Z**: Undo the last action.
-
-![Keyboard](./images/organize-ui-undo.png)
-
-*   **Ctrl+Y**: Redo the last undone action.
-
-![Keyboard](./images/organize-ui-redo.png)
+![Undo](./images/organize-ui-undo.png)
+![Redo](./images/organize-ui-redo.png)

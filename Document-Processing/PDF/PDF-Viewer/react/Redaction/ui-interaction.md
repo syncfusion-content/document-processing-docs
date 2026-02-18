@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Redaction UI interactions in React PDF Viewer | Syncfusion
-description: Learn about UI interactions in Redaction annotations of the Syncfusion React PDF Viewer component.
+description: Learn about UI interactions like add, edit and modify in Redaction annotations of the Syncfusion React PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction UI interactions in React PdfViewer
+# Redaction UI interactions in React PDF Viewer
 
 ## Add redaction annotations from the toolbar
 
@@ -51,7 +51,7 @@ The property panel can be opened in two ways:
 
 Use the General tab to define how the content will look after redaction. These settings control the final, burned‑in result and provide a live preview on hover.
 
-* Use Overlay Text – Enable to show text (for example, Confidential) over the redacted area.
+* Enable 'Overlay Text' to show text (for example, Confidential) over the redacted area.
 * Overlay Text – Enter the text to display.
 * Repeat Overlay Text – Tile the text to cover the whole region.
 
@@ -62,7 +62,7 @@ Use the General tab to define how the content will look after redaction. These s
 
 ![Fill Color in General Tab](redaction-annotations-images/after-redaction-fill-color.png)
 
-Note: Hovering the mouse over a redaction annotation shows a preview of this final look. After you click Apply Redaction, these settings are flattened into the page and can’t be edited. Tip: Click Save in the dialog to keep your changes.
+N> Hovering the mouse over a redaction annotation shows a preview of the final look. After you click Apply Redaction, these settings are flattened into the page and cannot be edited. Tip: Click Save in the dialog to keep your changes.
 
 #### Appearance tab
 
@@ -124,7 +124,7 @@ A confirmation dialog appears before applying redaction to ensure you acknowledg
 
 ![Apply Redaction Dialog](redaction-annotations-images/apply-redaction-dialog.png)
 
-N> Redaction is permanent. Once applied, the original content cannot be restored.
+N> Redaction is permanent. Create a backup of the original document before applying redaction; once applied, the original content cannot be restored.
 
 ## See also
 

@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frequently Asked Questions Section in PDF Viewer control
+## Frequently Asked Questions in TypeScript PDF Viewer
 
-The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
+The frequently asked questions for the Essential<sup>&reg;</sup> PDF Viewer are listed below.
 
 * [How to add annotation in text search in typescript?](./how-to/add-annotation-in-text-search-ts)
 * [How to add custom header to the PDF Viewer ajax request?](./how-to/add-header-value)

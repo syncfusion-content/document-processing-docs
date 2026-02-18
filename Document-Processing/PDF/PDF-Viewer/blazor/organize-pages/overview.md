@@ -7,110 +7,75 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Organize Pages in Blazor PDF Viewer component
+# Organize pages in SfPdfViewer
 
-The PDF Viewer allows you to manage your PDF documents efficiently by organizing pages seamlessly. Whether you need to add new pages, remove unnecessary ones, rotate pages, move pages within the document, and duplicate pages, the PDF Viewer facilitates these tasks effortlessly.
+The Organize Pages feature in `SfPdfViewer` helps you manage PDF pages quickly — add, remove, rotate, reorder, duplicate, import, extract, and save changes with a few clicks.
 
 ## Getting started
 
-To access the organize pages feature, simply open the PDF document in the PDF Viewer and navigate to the left vertical toolbar. Look for the `Organize Pages` option to begin utilizing these capabilities.
+Open a PDF in the viewer and choose **Organize Pages** from the left toolbar to open the organizer dialog.
 
-![Alt text](./images/organize-pages.png)
+![Organize pages](./images/organize-pages.png)
 
-The page organization support enables you to perform various actions such as rotating, rearranging, inserting, duplicating, and deleting pages within a PDF document using organize pages dialog.
+## Common actions
 
-### Rotating PDF pages
+### Rotate pages
 
-You can adjust the orientation of PDF pages to ensure proper alignment. The rotate icon offers the following options:
+- **Rotate clockwise** — rotate selected pages 90° clockwise.
 
-* `Rotate clockwise`: Rotate the selected pages 90 degrees clockwise.
+![Rotate right](./images/organize-rotate-right.png)
 
-![Organzie Rotate Clockwise](./images/organize-rotate-right.png)
+- **Rotate counter-clockwise** — rotate selected pages 90° counter-clockwise.
 
-* `Rotate counter-clockwise`: Rotate the selected pages 90 degrees counter-clockwise.
+![Rotate left](./images/organize-rotate-left.png)
 
-![Organzie Rotate Counter Clockwise](./images/organize-rotate-left.png)
+### Rearrange pages
 
-### Rearranging PDF pages
+Drag and drop thumbnails to change page order.
 
-You can easily change the sequence of pages within your document using the drag and drop method:
+![Drag and drop](./images/Drag_and_Drop.gif)
 
-* `Drag and drop`: Click and drag a page thumbnail to the desired position within the document, then release it to rearrange the page order.
+### Insert, duplicate, delete
 
-![Drag and Drop Organize](./images/Drag_and_Drop.gif)
+- **Insert page** — add a blank page to the left or right of the selection.
 
-### Inserting new pages
+![Insert left](./images/organize-insert-left.png)
 
-Effortlessly add new pages to your document with the following options:
+- **Duplicate page** — create a copy placed to the right of the original.
 
-* `Insert blank page left`: Insert a blank page to the left of the selected page using the respective icon.
+![Insert right](./images/organize-insert-right.png)
 
-![Organzie Insert Left](./images/organize-insert-left.png)
+- **Delete page** — remove selected pages.
 
-* `Insert blank page right`: Insert a blank page to the right of the selected page using the corresponding icon.
+![Select and delete](./images/organize-select-delete.png)
 
-![Organzie Insert Right](./images/organize-insert-right.png)
+### Import and extract
 
-### Deleting PDF pages
+- **Import PDF** — insert pages from another PDF; imported pages are merged when you save.
 
-Removing unwanted pages from your document is straight forward:
+![Import pages](./images/Import_Pages.gif)
 
-* `Select pages to delete`: Click on the page thumbnails you wish to remove. You can select multiple pages at once.
-* `Delete selected pages`: Use the delete option in the organize pages pane to remove the selected pages from the document.
+- **Extract pages** — export selected pages as a separate PDF.
 
-![Organzie Select and Delete](./images/organize-select-delete.png)
+![Extract pages](./images/Extract_Pages.gif)
 
-### Duplicating PDF pages
+### Select all and thumbnail zoom
 
-Duplicate the pages within your PDF document effortlessly:
+- **Select all** — select every page for bulk actions.
 
-* `Select pages to Duplicate`: Click on the page thumbnails you wish to duplicate. Use the duplicate option to create duplicates. When a page is copied, the duplicate is automatically added to the right of the selected page. Multiple copies can be made using the toolbar action.
+![Select all thumbnails](./images/organize-select-all.png)
 
-![Organzie Copy Pages](./images/organize-copy-page.png)
+- **Thumbnail zoom** — adjust thumbnail size with the zoom slider for better visibility or overview.
 
-### Importing a PDF Document
+![Thumbnail zoom panel](./images/organize-zoom-panel.png)
 
-Seamlessly import a PDF document into your existing document:
+## Real-time edits and saving
 
-* `Import PDF document`: Click the **Import Document** button to import a PDF. If a page is selected, the imported document’s thumbnail will be inserted to the right of the selected page. If multiple or no pages are selected, the thumbnail will be added as the first page. When **Save** or **Save As** is clicked, the imported PDF will be merged with the current document. You can insert a blank page to the left or right of the imported thumbnail, delete it, or drag and drop it to reposition as needed.
+Changes in the organizer are reflected in the viewer immediately. Use **Save** to overwrite the document or **Save As** to download a modified copy.
 
-![Alt text](./images/Import_Pages.gif)
+## Supported APIs
 
-### Extract Document Pages
-
-* `Extract Document Pages`: Click the **Extract Document** button to extract a PDF pages. If a pages are selected, the selected pages are extracted as a separate document.
-
-![Alt text](./images/Extract_Pages.gif)
-
-### Selecting all pages
-
-Make comprehensive adjustments by selecting all pages simultaneously. This facilitates efficient editing and formatting across the entire document.
-
-![Organzie Select Pages](./images/organize-select-all.png)
-
-### Zooming Page Thumbnails
-
-Adjust the size of page thumbnails within the organizer panel for better visibility and precision when editing. The zoom functionality allows you to:
-
-* Increase or decrease the size of page thumbnails using the zoom slider
-* See more details on pages when zoomed in
-* View more pages simultaneously when zoomed out
-
-This feature is especially useful when working with documents containing complex layouts or small details that need careful examination during organization.
-
-![Organzie Zoom Panel](./images/organize-zoom-panel.png)
-
-### Real-time updates
-
-Witness instant changes in page organization reflected within the PDF Viewer. Simply click the **Save** button to preserve your modifications.
-
-### SaveAs functionality
-
-Safeguard your edits by utilizing the **Save As** feature. This enables you to download the modified version of the PDF document for future reference, ensuring that your changes are securely stored.
-
-## API's supported
-
-**EnablePageOrganizer:** This API enables or disables the page organizer feature in the PDF Viewer. By default, it is set to `true`, indicating that the page organizer is enabled.
+- `EnablePageOrganizer` (bool) — enable or disable the organizer. Default: `true`.
 
 {% tabs %}
 {% highlight razor %}
@@ -124,7 +89,7 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
 {% endhighlight %}
 {% endtabs %}
 
-**PageOrganizerVisibility:** This API determines whether the page organizer dialog will be displayed automatically when a document is loaded into the PDF Viewer. By default, it is set to `false`, meaning the dialog is not displayed initially.
+- `PageOrganizerVisibility` (bool) — show the organizer dialog on load. Default: `false`.
 
 {% tabs %}
 {% highlight razor %}
@@ -135,25 +100,23 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
               Width="100%" PageOrganizerVisibility="true">
 </SfPdfViewer2>
 
-{% endhighlight %}
-{% endtabs %}
+{% tabs %}
+{% highlight razor %}
 
-**PageOrganizerSettings:** This API allows control over various page management functionalities within the PDF Viewer. It includes options to enable or disable actions such as deleting, inserting, rotating, duplicating, importing and rearranging pages, as well as configuring thumbnail zoom settings. By default, all these actions are enabled and standard zoom settings are applied.
+- `PageOrganizerSettings` — controls available actions and thumbnail zoom settings. Common properties:
 
-* **CanDelete** : It allow users to enable or disable the delete pages from the document. By default it set as `true`.
-* **CanInsert** : It allow users to enable or disable the insert new pages from the document. By default it set as `true`.
-* **CanRotate** : It allow users to enable or disable the rotate pages from the document. By default it set as `true`.
-* **CanDuplicate** : It allow users to enable or disable the duplicate pages from the document. By default it set as `true`.
-* **CanRearrange** : It allow users to enable or disable the order of pages from the document. By default it set as `true`.
-* **CanExtractPages** : It allow users to enable or disable extract pages into a separate document. By default it set as `true`.
-* **ShowImageZoomingSlider** : It allow users to enable or disable the zoom slider for images. By default it set as `true`.
-* **ImageZoom** : It represents the current zoom value of the images in the page organizer view. By default it set as `1`.
-* **ImageZoomMin** : It represent minimum value for the image zooming slider in the page organizer view. By default it set as `1` and acceptable values: `1` to `4`.
-* **ImageZoomMin** : It represent maximum value for the image zooming slider in the page organizer view. By default it set as `5` and acceptable values: `2` to `5`.
-* **FooterButtons** : It specifies which buttons are visible in the Page Organizer dialog footer.
-  * `None` - Hide both Save and Save As buttons.
-  * `Save` - Show only the "Save" button.
-  * `Save As` - Show only the "SaveAs" button.
+* `CanDelete` — allow delete. Default: `true`.
+* `CanInsert` — allow insert. Default: `true`.
+* `CanRotate` — allow rotate. Default: `true`.
+* `CanDuplicate` — allow duplicate. Default: `true`.
+* `CanRearrange` — allow rearrange. Default: `true`.
+* `CanExtractPages` — allow extract. Default: `true`.
+* `CanImport` — allow import. Default: `true`.
+* `ShowImageZoomingSlider` — show thumbnail zoom slider. Default: `true`.
+* `ImageZoom` — current thumbnail zoom. Default: `1`.
+* `ImageZoomMin` — minimum zoom (1).
+* `ImageZoomMax` — maximum zoom (5).
+* `FooterButtons` — which footer buttons to show: `None`, `Save`, `SaveAs`, or combinations.
 
 {% tabs %}
 {% highlight razor %}
@@ -168,13 +131,11 @@ Safeguard your edits by utilizing the **Save As** feature. This enables you to d
 
 ## Keyboard shortcuts
 
-The following keyboard shortcuts are available at the organize pages dialog.
+- **Ctrl+Z** — undo.
+- **Ctrl+Y** — redo.
 
-* **Ctrl+Z** : Undo the last action performed.
-* **Ctrl+Y** : Redo the action that was undone.
+## Conclusion
 
-#### Conclusion
-
-With the Organize Pages feature in the PDF Viewer, managing your PDF documents has never been easier. Whether you are adding new content, adjusting page orientation, moving the pages, duplicating the pages, or removing unnecessary pages, this feature provides the tools you need to streamline your document management workflow. Explore these capabilities today and take control of your PDF documents with ease!
+Organize Pages provides a compact, efficient interface to manage document pages in `SfPdfViewer`. Use the available settings and APIs to tailor the organizer to your application's needs.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Page%20Organizer)
