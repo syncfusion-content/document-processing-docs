@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in TypeScript PDF Viewer control
+# Page navigation in TypeScript PDF Viewer
 
-The TypeScript PDF Viewer supports different internal and external navigations.
+The JavaScript PDF Viewer supports internal and external navigation.
 
-## Toolbar page navigation option
+## Toolbar page navigation options
 
-The default toolbar of PDF Viewer contains the following navigation options
+The default PDF Viewer toolbar provides the following navigation options:
 
-* [**Go to page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
-* [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
-* [**Show previous page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page of a PDF document.
-* [**Show first page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
-* [**Show last page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
+- [**Go to page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopage) — Navigate to a specific page.
+- [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotonextpage) — Navigate to the next page.
+- [**Show previous page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopreviouspage) — Navigate to the previous page.
+- [**Show first page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotofirstpage) — Navigate to the first page.
+- [**Show last page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotolastpage) — Navigate to the last page.
 
 ```html
 <!DOCTYPE html>
@@ -51,7 +51,7 @@ The default toolbar of PDF Viewer contains the following navigation options
 </html>
 ```
 
-You can enable/disable page navigation option in PDF Viewer using the following code snippet.,
+Use the following code snippet to enable or disable page navigation.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -79,7 +79,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/navigation.png)
+![Page navigation toolbar in PDF Viewer](../images/navigation.png)
 
 Also, you can programmatically perform page navigation options as follows.
 

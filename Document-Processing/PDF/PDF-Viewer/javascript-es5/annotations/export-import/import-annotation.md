@@ -9,10 +9,7 @@ documentation: ug
 
 # Import annotations in JavaScript PDF Viewer
 
-You can import annotations into the PDF Viewer in two ways:
-
-- Using the built-in UI in the Comments panel (import JSON or XFDF files)
-- Programmatically by passing an annotation object exported from the viewer
+Annotations can be imported into the PDF Viewer using the built-in UI or programmatically. The UI accepts JSON and XFDF files from the Comments panel; programmatic import accepts an annotation object previously exported by the viewer.
 
 ## Import using the UI (Comments panel)
 
@@ -24,23 +21,25 @@ The Comments panel provides import options in its overflow menu:
 Steps:
 1. Open the Comments panel in the PDF Viewer.
 2. Click the overflow menu (three dots) at the top of the panel.
-3. Choose Import annotations from JSON file or Import annotations from XFDF file and pick the file.
+3. Choose the appropriate import option and select the file.
 
-All annotations in the selected file will be applied to the current document.
+All annotations in the selected file are applied to the current document.
 
-![Export Annotation](../annotation-images/import-annot.png)
+![Import annotations](../annotation-images/import-annot.png)
 
 ## Import programmatically (from object)
 
-Import annotations from an object previously exported using exportAnnotationsAsObject(). Only objects returned by the viewer can be re-imported using [importAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importannotation) method.
+Import annotations from an object previously exported using `exportAnnotationsAsObject()`. Only objects produced by the viewer can be re-imported with the `importAnnotation` method (`importAnnotation` documentation: https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importannotation).
 
-The following end-to-end example initializes the viewer and wires a button to import annotations from a pasted/exported object.
+Example: HTML markup for export/import buttons and the viewer container.
 
 ```html
 <button id="ExportAsObject">Export as Object</button>
 <button id="ImportFromObject">Import from Object</button>
 <div id="pdfViewer" style="height:650px;"></div>
 ```
+
+Example: initialize the viewer and wire export/import handlers.
 
 ```js
 // Inject required modules (ES5/vanilla JS using global ej namespace)
@@ -89,14 +88,16 @@ if (btnImport) {
 }
 ```
 
+N> Only objects produced by the viewer (for example, by `exportAnnotationsAsObject()`) are compatible with `importAnnotation`. Persist exported objects in a safe storage location (database or API) and validate them before import.
+
 ## Common use cases
 
-- Restore annotations saved earlier (e.g., from a database or API)
+- Restore annotations saved earlier (for example, from a database or API)
 - Apply reviewer annotations shared as JSON/XFDF files via the Comments panel
 - Migrate or merge annotations between documents or sessions
 - Support collaborative workflows by reloading team annotations
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master)
+[View sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master)
 
 ## See also
 

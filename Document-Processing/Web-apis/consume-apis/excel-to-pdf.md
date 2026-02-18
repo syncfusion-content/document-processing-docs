@@ -18,20 +18,27 @@ To convert an Excel document to PDF, send a request to the /v1/conversion/excel-
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/excel-to-pdf' \
---form 'file=@"ExpenseReport.xlsx"' \
---form 'settings="{
-  \"File\": \"file\",
-  \"Password\": null,
-  \"PdfComplaince\": \"PDF/A-1B\"
-}"'
+--form 'file=@"Sample.xlsx"' \
+--form 'settings={
+  "File": "file",
+  "Password": null,
+  "PdfCompliance": "PDF/A-1B"
+}'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "ExpenseReport.xlsx");
-formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"PdfComplaince\": \"PDF/A-1B\"\n}");
+formdata.append("file", fileInput.files[0], "Input.xlsx");
+formdata.append(
+    "settings",
+    JSON.stringify({
+      File: "file",
+      Password: null,
+      PdfCompliance: "PDF/A-1B", 
+    })
+  );
 
 const requestOptions = {
   method: "POST",
@@ -39,7 +46,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/conversion/excel-to-pdf", requestOptions)
+fetch("http://localhost:8003/v1/conversion/excel-to-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -83,7 +90,8 @@ Next, you can retrieve the job status by sending a request to the /v1/conversion
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+curl --location 'http://localhost:8003/v1/conversion/status/7d0b62cd-c5a1-4035-9728-50c4efd1f0e1' \
+  --output Output.pdf
 
 {% endhighlight %}
 
@@ -94,7 +102,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

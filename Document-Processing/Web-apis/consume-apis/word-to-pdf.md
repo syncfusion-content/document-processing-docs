@@ -17,23 +17,32 @@ To convert a Word document to PDF, send a request to the /v1/conversion/word-to-
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/word-to-pdf' \
---form 'file=@"SalesInvoice.docx"' \
---form 'settings="{
-  \"File\": \"file\",
-  \"Password\": null,
-  \"PreserveFormFields\": true,
-  \"PdfComplaince\": \"PDF/A-1B\",
-  \"EnableAccessibility\": false
-}"
+curl -v --location 'http://localhost:8003/v1/conversion/word-to-pdf' \
+  --form 'file=@"Input.docx"' \
+  --form 'settings={
+    "File": "file",
+    "Password": null,
+    "PreserveFormFields": true,
+    "PdfCompliance": "PDF/A-1B",
+    "EnableAccessibility": false
+  }'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "SalesInvoice.docx");
-formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"PreserveFormFields\": true,\n  \"PdfComplaince\": \"PDF/A-1B\",\n  \"EnableAccessibility\": false\n}");
+formdata.append("file", fileInput.files[0], "Input.docx");
+ formdata.append(
+    "settings",
+    JSON.stringify({
+      File: "file",
+      Password: null,
+      PreserveFormFields: true,
+      PdfCompliance: "PDF/A-1B", // use whatever your backend expects
+      EnableAccessibility: false
+    })
+  );
 
 const requestOptions = {
   method: "POST",
@@ -52,15 +61,21 @@ fetch("http://localhost:8003/v1/conversion/word-to-pdf", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/word-to-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("SalesInvoice.docx")), "file", "SalesInvoice.docx");
-content.Add(new StringContent("{
-  \"File\": \"file\",
-  \"Password\": null,
-  \"PreserveFormFields\": true,
-  \"PdfComplaince\": \"PDF/A-1B\",
-  \"EnableAccessibility\": false
-}"), "settings");
+content.Add(new StreamContent(File.OpenRead("Input.docx")), "file", "Input.docx");
+var settings = new
+{
+    File = "file",
+    Password = (string?)null,
+    PreserveFormFields = true,
+    PdfCompliance = "PDF/A-1B",  
+    EnableAccessibility = false
+};
+
+var json = JsonSerializer.Serialize(settings);
+var settingsContent = new StringContent(json, Encoding.UTF8, "application/json");
+content.Add(settingsContent, "settings");
 request.Content = content;
+
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
@@ -87,8 +102,9 @@ Next, you can retrieve the job status by sending a request to the /v1/conversion
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
-
+curl --location 'http://localhost:8003/v1/conversion/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
+  --output Output.pdf
+  
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
@@ -98,7 +114,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

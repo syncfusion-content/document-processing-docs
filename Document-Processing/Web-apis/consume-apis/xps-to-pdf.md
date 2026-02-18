@@ -18,26 +18,30 @@ To convert an XPS document to PDF, send a request to the /v1/conversion/xps-to-p
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/xps-to-pdf' \
---form 'file=@"example.xps"' \
---form 'settings="{
-  \"File\": \"file\"
-}"'
+--form 'file=@Input.xps' \
+--form 'settings={
+  "File": "file"
+}'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "example.xps");
-formdata.append("settings", "{\n  \"File\": \"file\"\n}");
-
+formdata.append("file", fileInput.files[0], "Input.xps");
+formdata.append(
+  "settings",
+  JSON.stringify({
+    File: "file"
+  })
+);
 const requestOptions = {
   method: "POST",
   body: formdata,
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/conversion/xps-to-pdf", requestOptions)
+fetch("http://localhost:8003/v1/conversion/xps-to-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -49,11 +53,18 @@ fetch("http://localhost:4000/v1/conversion/xps-to-pdf", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/xps-to-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("example.xps")), "file", "example.xps");
-content.Add(new StringContent("{
-  \"File\": \"file\"
-}"), "settings");
+content.Add(new StreamContent(File.OpenRead("Input.xps")), "file", "Input.xps");
+var settings = new
+{
+  File = "file",
+  Password = "12345678",    
+};
+
+var json = JsonSerializer.Serialize(settings);
+var settingsContent = new StringContent(json, Encoding.UTF8, "application/json");
+content.Add(settingsContent, "settings");
 request.Content = content;
+
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
@@ -79,7 +90,8 @@ Next, you can retrieve the job status by sending a request to the /v1/conversion
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+curl --location 'http://localhost:8003/v1/conversion/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
+  --output Output.pdf
 
 {% endhighlight %}
 
@@ -90,7 +102,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
