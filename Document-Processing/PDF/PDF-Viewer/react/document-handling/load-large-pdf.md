@@ -47,10 +47,10 @@ Base64 encoding increases file size by ~33% and consumes more memory. For large 
 ### 3. Minimize Injected Modules
 
 Reduce the number of injected modules in the PDF Viewer to lower background processing and memory usage. For large files, avoid modules like:
-- Text Search
-- Text Selection
-- Organize Pages
-- Thumbnail View
+- [Text Search](https://helpstaging.syncfusion.com:14038/document-processing/pdf/pdf-viewer/react/text-search)
+- [Text Selection](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer/react/text-selection)
+- [Organize Pages](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer/react/organize-pages/overview)
+- [Thumbnail View](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page-thumbnail)
 
 **Example:**
 ```tsx
@@ -68,7 +68,7 @@ Reduce the number of injected modules in the PDF Viewer to lower background proc
 
 Enabling local storage in the PDF Viewer can improve performance and smoothness when working with large files. This allows the viewer to cache document data locally, reducing repeated network requests and memory spikes.
 
-Use the `enableLocalStorage` property to control this behavior. When set to `true`, session data is stored in memory for the current session; when `false` (default), browser session storage is used.
+Use the [`enableLocalStorage`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enablelocalstorage) property to control this behavior. When set to `true`, session data is stored in memory for the current session; when `false` (default), browser session storage is used.
 
 **Example:**
 ```tsx

@@ -16,35 +16,18 @@ This article explains how to load and display password-protected PDF files in th
 
 ## Tutorial: Open a Password-Protected PDF
 
-To open a password-protected PDF, provide the password as part of the `documentPath` object. The viewer will use this password to decrypt and display the file.
+To open a password-protected PDF, provide the password as part of the [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentpath) object. The viewer will use this password to decrypt and display the file.
 
 ---
 
 ## How-to Guide: Minimal Example
 
 ```tsx
-import { createRoot } from 'react-dom/client';
-import './index.css';
+import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  BookmarkView,
-  ThumbnailView,
-  Print,
-  TextSelection,
-  TextSearch,
-  Annotation,
-  FormFields,
-  FormDesigner,
-  PageOrganizer,
-  Inject,
-} from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, Print, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
-function Default() {
+function App() {
   let viewer;
   const resourcesLoaded = () => {
     //pass PDF URL and passwod here as string
@@ -66,33 +49,14 @@ function Default() {
           resourceUrl="https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib"
           style={{ height: '640px' }}
         >
-          <Inject
-            services={[
-              Toolbar,
-              Magnification,
-              Navigation,
-              LinkAnnotation,
-              BookmarkView,
-              ThumbnailView,
-              Print,
-              TextSelection,
-              TextSearch,
-              Annotation,
-              FormFields,
-              FormDesigner,
-              PageOrganizer,
-            ]}
-          />
+        	<Inject services={[Toolbar, Magnification, Navigation, Print]} />
         </PdfViewerComponent>
       </div>
     </div>
   );
 }
-export default Default;
-
-const root = createRoot(document.getElementById('sample'));
-root.render(<Default />);
-
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
 ```
 
 ---
