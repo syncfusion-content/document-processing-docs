@@ -8,15 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in JavaScript Standalone PDF Viewer control
+# Getting started in JavaScript standalone PDF Viewer control
 
-The Essential JS 2 for JavaScript (global script) is an ES5 formatted pure JavaScript framework which can be directly used in latest web browsers.
+Essential JS 2 for JavaScript provides an ES5-compatible global script build that works in modern browsers without a build step.
 
-## Component Initialization with CDN link for script and style reference
+## Component initialization with CDN links for script and style reference
 
 **Step 1:** Create an app folder `my-app` for the Essential JS 2 JavaScript components.
 
-**Step 2:** The Essential JS 2 component's global scripts and styles are already hosted in the below CDN link formats.
+**Step 2:** The Essential JS 2 component's global scripts and styles are hosted at the following CDN link formats.
 
 **Syntax:**
 > Script: `https://cdn.syncfusion.com/ej2/{Version}/dist/{PACKAGE_NAME}.min.js`
