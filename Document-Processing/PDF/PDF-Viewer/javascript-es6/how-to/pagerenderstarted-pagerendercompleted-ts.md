@@ -13,11 +13,11 @@ In the Syncfusion PDF Viewer, the [pageRenderInitiate](https://ej2.syncfusion.co
 
 **pageRenderInitiate**
 
-Triggered when page rendering begins. Use this event to initialize or set up resources before rendering starts.
+Triggered when page rendering begins. Use this event to initialize or set up resources before rendering starts, or to display a progress indicator.
 
 **pageRenderComplete**
 
-Triggered when page rendering completes. Use this event to perform cleanup or finalize rendering-related tasks.
+Triggered when page rendering completes. Use this event to perform cleanup, hide progress indicators, or finalize rendering-related tasks.
 
 
 ```ts
