@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance Metrics in EJ2 TypeScript Spreadsheet Control | Syncfusion
-description: Learn here all about performance metrics in EJ2 TypeScript Spreadsheet control, its elements and more.
+description: Learn about performance metrics for the EJ2 TypeScript Spreadsheet control, measured results, and environment details.
 platform: document-processing
 control: Performance 
 documentation: ug
@@ -9,46 +9,48 @@ documentation: ug
 
 # Performance Metrics in EJ2 TypeScript Spreadsheet Control
 
-Performance metrics show how efficiently the [Syncfusion® TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) handles large datasets and core operations such as rendering, styling, validation, and file import/export. This documentation provides the measured results for these operations to give a clear view of how the control performs under different workloads.
-
+This document presents measured performance results for the [Syncfusion® TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) when working with large datasets and common operations such as styling, number formats, validation, and file import/export.
 
 ## Environment
 
-The following environment configuration is used for performance evaluation:
+The following configuration was used for the performance evaluations:
 
-* **Browser**: Edge (latest)
+* **Browser**: Microsoft Edge (latest stable)
 * **Hardware**: Modern multi‑core processor
 * **RAM**: 16 GB or higher
-* **Spreadsheet Version**: 
+* **Spreadsheet Version**:
   * [NPM Version](https://www.npmjs.com/package/@syncfusion/ej2-spreadsheet/v/32.2.4)  
   * [NuGet Version](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core/32.2.4)  
-* **Data Source Format**: Mixed data types (numbers, text, formats, validations)
+* **Data Source**: Mixed data types (numbers, text, formats, validations)
 
+## Evaluated Features
 
-## Spreadsheet Features
+The following operations were measured to evaluate the Spreadsheet's performance with large datasets: applying styles, number formatting, and data validation.
 
-This section outlines the operations evaluated in the Spreadsheet when working with large datasets. It covers actions such as rendering cells, applying styles, number formats and data validations to help understand how the control processes common spreadsheet tasks.
+| Dataset Size | Styles     | Number Format     | Data Validation     |
+|--------------|------------|-------------------|---------------------|
+| 100k cells   | 0.72s      | 0.86s             | 0.82s               |
+| 250k cells   | 1.51s      | 1.81s             | 2.11s               |
+| 500k cells   | 3.00s      | 3.69s             | 3.95s               |
 
-| Operation                   | Dataset Size | Time (sec) |
-|-----------------------------|--------------|-------------|
-| Initial Rendering           | 250k cells   | 3.30 sec    |
-| Applying Styles             | 250k cells   | 0.61 sec    |
-| Applying Number Formats     | 250k cells   | 0.97 sec    |
-| Applying Data Validation    | 250k cells   | 0.94 sec    |
+## Import and Export Performance
 
+Measured import and export times for datasets with formatting, validation, sorting, and filtering.
 
-## Import and export performance metrics
+| Dataset Description                         | Import     | Export     |
+|---------------------------------------------|------------|------------|
+| 100k cells with formats                     | 3.85s      | 4.38s      |
+| 250k cells with formats                     | 3.96s      | 6.61s      |
+| 100k cells with validation                  | 2.06s      | 2.25s      |
+| 250k cells with validation                  | 3.77s      | 24.04s     |
+| 500k cells with validation                  | 4.16s      | 24.05s     |
+| 100k cells with sorting and filtering       | 3.68s      | 2.31s      |
+| 250k cells with sorting and filtering       | 5.73s      | 5.60s      |
+| 500k cells with sorting and filtering       | 8.59s      | 13.29s     |
 
-This section focuses on evaluating how the Spreadsheet handles file import and export operations involving large datasets with formatting and validation. It provides insight into how efficiently these operations are processed under varying data conditions.
+> Disclaimer: These metrics and memory measurements were obtained from internal tests under specific conditions. Actual results may vary depending on environment, data characteristics, and usage patterns.
 
-| Operation                               | Dataset Size                     | Time (sec) |
-|-----------------------------------------|-----------------------------------|------------|
-| Importing                               | 250k cells with formats           | 3.12 sec   |
-| Importing                               | 500k cells with validation        | 5.04 sec   |
-| Exporting                               | 250k cells with formats           | 2.72 sec   |
-| Exporting                               | 500k cells with validation        | 6.58 sec   |
-
-> **Disclaimer:**  Performance metrics and memory benchmarking are based on internal tests under specific conditions. Actual results may vary depending on the environment and usage. 
+You can download the Excel files used for these measurements here.
 
 ## See Also
 
