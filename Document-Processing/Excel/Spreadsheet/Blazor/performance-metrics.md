@@ -43,9 +43,9 @@ This section outlines the operations evaluated in the Spreadsheet when working w
 
 | Operation                   | Dataset Size | Time (sec) |
 |-----------------------------|--------------|-------------|
-| Initial Rendering           | 250k cells   | 1.31 sec    |
-| Applying Styles             | 250k cells   | 12.0 sec    |
-| Applying Number Formats     | 250k cells   | 0.97 sec    |
+| Initial Rendering           | 250k cells   | 6.99 sec    |
+| Applying Styles             | 250k cells   | 15.98 sec    |
+| Applying Number Formats     | 250k cells   | 9.45 sec    |
 
 
 ## Import and export performance metrics
@@ -56,20 +56,20 @@ This section focuses on evaluating how the Spreadsheet handles file import and e
 
 | Operation                               | Dataset Size                     | Time (sec) |
 |-----------------------------------------|-----------------------------------|------------|
-| Importing                               | 250k cells with formats           | 3.12 sec   |
-| Importing                               | 500k cells with validation        | 5.04 sec   |
-| Exporting                               | 250k cells with formats           | 1.26 sec   |
-| Exporting                               | 500k cells with validation        | 1.57 sec   |
+| Importing                               | 250k cells without formats           | 2.35 sec   |
+| Importing                               | 250k cells with formats         | 3.12 sec   |
+| Exporting                               | 250k cells without formats           | 1.07 sec   |
+| Exporting                               | 250k cells with formats        | 1.26 sec   |
 
 ### Wasm
 
 
 | Operation                               | Dataset Size                     | Time (sec) |
 |-----------------------------------------|-----------------------------------|------------|
-| Importing                               | 250k cells with formats           | 3.12 sec   |
-| Importing                               | 500k cells with validation        | 5.04 sec   |
-| Exporting                               | 250k cells with formats           | 1.26 sec   |
-| Exporting                               | 500k cells with validation        | 1.57 sec   |
+| Importing                               | 250k cells without formats           |  38 sec   |
+| Importing                               | 250k cells with formats         |  50 sec   |
+| Exporting                               | 250k cells without formats           | 6.25 sec   |
+| Exporting                               | 250k cells with formats         |  8.14 sec  |
 
 > **Disclaimer:**  Performance metrics and memory benchmarking are based on internal tests under specific conditions. Actual results may vary depending on the environment and usage. 
 ## See Also
