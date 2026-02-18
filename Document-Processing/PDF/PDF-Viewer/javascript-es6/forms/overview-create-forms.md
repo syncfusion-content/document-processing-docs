@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Create, Edit, Style, and Remove Form Fields in TypeScript PDF Viewer
+# Create and manage form fields in JavaScript PDF Viewer
 
 The [TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview) allows you to create interactive PDF form fields, update their behavior and appearance, and remove them when they are no longer needed.
 All form field operations can be performed using either the [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) or [TypeScript APIs.](https://ej2.syncfusion.com/documentation/api/pdfviewer/overview)

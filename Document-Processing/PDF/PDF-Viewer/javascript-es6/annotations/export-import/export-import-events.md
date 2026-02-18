@@ -1,33 +1,32 @@
 ---
 layout: post
-<<<<<<<< HEAD:Document-Processing/PDF/PDF-Viewer/javascript-es5/form-designer/import-export-formfields/import-export-events.md
-title: Import/Export events in the JavaScript PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion JavaScript PDF Viewer component.
-========
-title: Import/Export events for annotations in TypeScript PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for annotations in the Syncfusion TypeScript PDF Viewer component.
->>>>>>>> remotes/origin/hotfix/hotfix-v32.1.19:Document-Processing/PDF/PDF-Viewer/javascript-es6/annotations/export-import/export-import-events.md
+title: Import/Export events in the TypeScript PDF Viewer | Syncfusion
+description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-<<<<<<<< HEAD:Document-Processing/PDF/PDF-Viewer/javascript-es5/form-designer/import-export-formfields/import-export-events.md
-# Import/Export events in Javascript
-========
-# Import/Export events for annotations
->>>>>>>> remotes/origin/hotfix/hotfix-v32.1.19:Document-Processing/PDF/PDF-Viewer/javascript-es6/annotations/export-import/export-import-events.md
+# Import/Export events in TypeScript
 
-Import/Export events let you track and customize the full lifecycle of annotation data flowing into and out of the PDF Viewer.
+Import/export events let developers monitor and control annotation data as it flows into and out of the PDF Viewer. These events enable validation, progress reporting, audit logging, and conditional blocking of import/export operations.
 
-Use them to validate inputs, show progress UI, log audit trails, or block operations based on your business rules. Each event exposes typed event-args (ImportStartEventArgs, ImportSuccessEventArgs, ImportFailureEventArgs, ExportStartEventArgs, ExportSuccessEventArgs, ExportFailureEventArgs) describing the operation context.
+Common use cases:
+- Progress UI and user feedback
+- Validation and sanitization of imported annotation data
+- Audit logging and telemetry
+- Blocking or altering operations based on business rules
+
+Each event exposes typed event-args: `ImportStartEventArgs`, `ImportSuccessEventArgs`, `ImportFailureEventArgs`, `ExportStartEventArgs`, `ExportSuccessEventArgs`, and `ExportFailureEventArgs` that describe the operation context.
 
 ## Import events
-- [importStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importstart): Triggers when an import operation starts.
-- [importSuccess](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importsuccess): Triggers when annotations are successfully imported.
-- [importFailed](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importfailed): Triggers when importing annotations fails.
+- [`importStart`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importstart): Triggers when an import operation starts.
+- [`importSuccess`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importsuccess): Triggers when annotations are successfully imported.
+- [`importFailed`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importfailed): Triggers when importing annotations fails.
 
 ## Handle import events
+Example: handle import events by assigning callback handlers.
+
 ```js
 viewer.importStart = (args: any) => {
   console.log('Import started', args);
@@ -41,9 +40,9 @@ viewer.importFailed = (args: any) => {
 ```
 
 ## Export events
-- [exportStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportstart): Triggers when an export operation starts.
-- [exportSuccess](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportsuccess): Triggers when annotations are successfully exported.
-- [exportFailed](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportfailed): Triggers when exporting annotations fails.
+- [`exportStart`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportstart): Triggers when an export operation starts.
+- [`exportSuccess`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportsuccess): Triggers when annotations are successfully exported.
+- [`exportFailed`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportfailed): Triggers when exporting annotations fails.
 
 ## Handle export events
 ```js
@@ -58,9 +57,7 @@ viewer.exportFailed = (args: any) => {
 };
 ```
 
-Notes:
-- importStart/importSuccess/importFailed cover the lifecycle of annotation imports.
-- exportStart/exportSuccess/exportFailed cover the lifecycle of annotation exports.
+N> `importStart`, `importSuccess`, and `importFailed` cover the lifecycle of annotation imports; `exportStart`, `exportSuccess`, and `exportFailed` cover the lifecycle of annotation exports.
 
 ## See also
 

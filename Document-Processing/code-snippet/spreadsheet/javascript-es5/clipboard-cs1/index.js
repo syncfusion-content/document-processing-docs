@@ -1,5 +1,5 @@
 //Initialize action items.
-let items = [
+var items = [
   {
     text: "Copy"
   },
@@ -12,10 +12,10 @@ let items = [
 ];
 
 // Initialize the DropDownButton component.
-let drpDownBtn = new ej.splitbuttons.DropDownButton({
+var drpDownBtn = new ej.splitbuttons.DropDownButton({
   items: items,
   cssClass: "e-round-corner",
-  select: (args) => {
+  select: function (args) {
     if (args.item.text === 'Copy')
       spreadsheet.copy();
     if (args.item.text === 'Cut')

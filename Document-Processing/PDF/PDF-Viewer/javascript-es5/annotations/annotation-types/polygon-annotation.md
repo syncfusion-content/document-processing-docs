@@ -18,18 +18,18 @@ Polygon is a shape annotation used to outline irregular regions, highlight areas
 
 ### Add polygon annotation via UI
 
-Use the annotation toolbar:
-- Click the Edit Annotation button in the PDF Viewer toolbar.
-- Open the Shape Annotation dropdown.
-- Choose Polygon, then draw on the page.
+Use the annotation toolbar to:
+- Click the **Edit Annotation** button in the PDF Viewer toolbar.
+- Open the **Shape Annotation** dropdown.
+- Choose **Polygon**, then draw on the page.
 
-N> When in pan mode, selecting a shape annotation switches the viewer to text select mode.
+N> When in pan mode, selecting shape annotations switches the viewer to text select mode.
 
 ![Shape toolbar](../../images/shape_toolbar.png)
 
 ### Enable polygon mode
 
-The PDF Viewer library allows drawing shape annotations programmatically after enabling polygon mode in button clicks.
+The PDF Viewer library allows drawing polygon annotations programmatically after enabling polygon mode via button clicks.
 
 ```html
 <button id="polygonMode">Polygon</button>
@@ -179,18 +179,18 @@ document.getElementById('addPolygonAnnotation') && document.getElementById('addP
 
 ### Edit Polygon Annotation in UI
 
-You can select, move, and resize Polygon annotations directly in the viewer:
+Use the viewer to select, move, and resize Polygon annotations:
 - Select a Polygon to show its vertex handles.
 - Move: drag inside the shape to reposition it on the page.
 - Resize/reshape: drag any vertex handle to adjust the polygon points and size.
 - Delete or access more options from the context menu.
 
 Use the toolbar to change appearance:
-- Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools.
+- Use the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools.
 
 See the sections below for details.
 
-#### Edit the properties of area annotations
+#### Edit the properties of polygon annotations
 
 The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -348,9 +348,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `PolygonSettings`.
+Set properties for individual annotations before creating the control using `PolygonSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default Polygon settings.
 
