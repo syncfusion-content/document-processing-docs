@@ -189,10 +189,6 @@ The following table contains the default name and value details used in the SfPd
 </tr>
 <tr>
 <td>CanOpenWebPage</td>
-<td>Do you want to open</td> 
-</tr>
-<tr>
-<td>CanOpenWebPage</td>
 <td>Do you want to open</td>
 </tr>
 <tr>
@@ -254,6 +250,10 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>CustomStamps</td>
 <td>Custom Stamps</td>
+</tr>
+<tr>
+<td>CustomText</td>
+<td>Custom text</td>
 </tr>
 <tr>
 <td>Delete</td>
@@ -360,6 +360,14 @@ The following table contains the default name and value details used in the SfPd
 <td>Fit to Width</td>
 </tr>
 <tr>
+<td>Font</td>
+<td>Font</td>
+</tr>
+<tr>
+<td>FontColor</td>
+<td>Font color</td>
+</tr>
+<tr>
 <td>FontSize</td>
 <td>Font size</td>
 </tr>
@@ -370,10 +378,6 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>FreeTextEditorPlaceHolder</td>
 <td>Text…</td>
-</tr>
-<tr>
-<td>FreeTextEditorPlaceHolder</td>
-<td>Text...</td>
 </tr>
 <tr>
 <td>GoToPage</td>
@@ -508,6 +512,10 @@ The following table contains the default name and value details used in the SfPd
 <td>Outline color</td> 
 </tr>
 <tr>
+<td>Page</td>
+<td>Page</td>
+</tr>
+<tr>
 <td>PageByPage</td>
 <td>Page by page</td>
 </tr>
@@ -526,6 +534,10 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>PageNumberHint</td>
 <td>Enter page number here</td>
+</tr>
+<tr>
+<td>PageRange</td>
+<td>Page range</td>
 </tr>
 <tr>
 <td>Paragraph</td>
@@ -551,6 +563,22 @@ The following table contains the default name and value details used in the SfPd
 <td>Print</td>
 <td>Print</td>
 </tr>
+<tr>
+<td>Properties</td>
+<td>Properties</td>
+</tr>
+<tr>
+<td>RedactArea</td>
+<td>Redact area</td>
+</tr>
+<tr>
+<td>RedactPages</td>
+<td>Redact pages</td>
+</tr>
+<tr>
+<td>RedactText</td>
+<td>Redact text</td>
+</tr>
 <tr> 
 <td>RedactedAreaFillColor</td> 
 <td>Redacted area fill color</td> 
@@ -570,6 +598,14 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>Rename</td>
 <td>Rename</td>
+</tr>
+<tr>
+<td>RepeatOverlayText</td>
+<td>Repeat overlay text</td>
+</tr>
+<tr>
+<td>Replies</td>
+<td>Replies</td>
 </tr>
 <tr>
 <td>RequestPassword</td>
@@ -602,10 +638,6 @@ The following table contains the default name and value details used in the SfPd
 <tr> 
 <td>SpecificPage</td> 
 <td>Specific page</td> 
-</tr>
-<tr>
-<td>Square</td>
-<td>Square</td>
 </tr>
 <tr>
 <td>Square</td>
