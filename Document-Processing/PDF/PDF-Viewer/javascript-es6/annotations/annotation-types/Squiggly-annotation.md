@@ -27,18 +27,18 @@ You can add squiggly annotations in two ways:
 ![Squiggly context](../annotation-images/squiggle-context.gif)
 
 2. Using the annotation toolbar
-* Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
-* Select **Squiggly** to enable squiggly mode.
-* Select text to add the squiggly annotation.
-* Alternatively, select text first and then click **Squiggly**.
+- Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+- Select **Squiggly** to enable squiggly mode.
+- Select text to add a squiggly annotation.
+- Alternatively, select text first and then click **Squiggly**.
 
 ![Squiggly toolbar](../annotation-images/squiggle-tool.gif)
 
 N> When in pan mode, selecting a text markup annotation switches the PDF Viewer to text select mode.
 
-### Enable Squiggly Mode 
+### Enable squiggly mode
 
-Enable/exit squiggly mode using the following code:
+Enable or exit squiggly mode using the following code:
 
 ```html
 <button id="squigglyMode">Squiggly</button>
@@ -83,7 +83,7 @@ document.getElementById('setNone')?.addEventListener('click', () => {
 {% endhighlight %}
 {% endtabs %}
 
-### Add squiggly annotation programmatically
+### Add squiggly annotations programmatically
 
 Add squiggly annotations programmatically using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
@@ -127,11 +127,11 @@ document.getElementById('addSquiggly')?.addEventListener('click', () => {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit Squiggly Annotation
+## Edit Squiggly Annotations
 
-### Edit Squiggly annotation in UI
+### Edit Squiggly annotations in UI
 
-The color and opacity of the squiggly annotation can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
+Use the viewer to select and delete squiggly annotations. Use the context menu or toolbar options as needed.
 
 #### Edit color
 Use the color palette in the Edit Color tool to change the annotation color.

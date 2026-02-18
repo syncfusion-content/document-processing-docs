@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize color picker in JavaScript (ES5) Document editor control | Syncfusion
+title: Customize color picker in JavaScript(ES5) Document Editor | Syncfusion
 description: Learn here all about Customize color picker in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize Color Picker 
@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Customize color picker in JavaScript (ES5) Document editor control
 
-Document editor provides an options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettingsModel#colorpickersettings/) in Document editor settings. The color picker offers customization options for default appearance, by allowing selection between Picker or Palette mode, for font and border colors."
+Document editor provides an options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettingsModel#colorpickersettings) in Document editor settings. The color picker offers customization options for default appearance, by allowing selection between Picker or Palette mode, for font and border colors."
 
-Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#documenteditorsettings/) property for DocumentEditor also.
+Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#documenteditorsettings) property for DocumentEditor also.
 
 The following example code illustrates how to Customize the color picker in Document editor container.
 
-```ts
-let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true,height: '590px',
+```js
+var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true,height: '590px',
   //Customizing options for color picker.
   documentEditorSettings: {
     colorPickerSettings: { mode: 'Palette', modeSwitcher: true, showButtons: true },
