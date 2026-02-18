@@ -10,8 +10,6 @@ domainurl: ##DomainURL##
 
 # Creating a Next.js application using Syncfusion<sup style="font-size:70%">&reg;</sup> React components
 
-What you'll build / time: A Next.js app integrating the Syncfusion React PDF Viewer — ~15 minutes.
-
 This guide shows how to set up a Next.js application and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer component.
 
 ## What is Next.js?
@@ -113,9 +111,15 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React components include built-
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-/* Minimal recommended imports: PDF Viewer theme and base styles */
+/* PDF Viewer theme and base styles */
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
 
 {% endhighlight %}
 {% endtabs %}
