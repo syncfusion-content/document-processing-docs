@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Saving PDF files
+# Saving PDF files
 
 After editing a PDF with annotation tools, you can save the updated file to a server, a database, or download it locally. The following sections show common approaches.
 
@@ -71,8 +71,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 Set the `serviceUrl` to point to your web service (for example, replace `https://localhost:44396/pdfviewer` with your server URL). Also set `documentPath` to the document URL you want to load.
 
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
+```tsx
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -98,8 +97,7 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
+```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Save%20and%20Load/Save%20PDF%20file%20to%20server)
 
@@ -107,8 +105,7 @@ root.render(<App />);
 
 The built-in toolbar includes a download option that saves the updated PDF to the user's local file system. You can also trigger the same behavior programmatically by calling the viewer's [`download()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) API.
 
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
+```tsx
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css';
@@ -142,8 +139,7 @@ return (<div>
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
+```
 
 ## Save modified PDF to a database
 

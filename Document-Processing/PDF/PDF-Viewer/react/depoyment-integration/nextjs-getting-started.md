@@ -1,14 +1,14 @@
 ---
 layout: post
 title: React getting started with Next.js | Syncfusion
-description: Check out and learn here all about how to use the Syncfusion React UI components in the Next.js project.
+description: Check out and learn here all about how to use the Syncfusion React PDF Viewer in the Next.js project.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Creating a Next.js application using Syncfusion<sup style="font-size:70%">&reg;</sup> React components
+# Creating a Next.js application using Syncfusion React PDF Viewer
 
 This guide shows how to set up a Next.js application and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer component.
 
@@ -45,11 +45,11 @@ yarn create next-app
 
 Using one of the above commands will prompt for project configuration options.
 
-1. Define the project name. For example: `ej2-nextjs-pdfviewer`.
+1. Define the project name. For example: `ej2-next-js-pdfviewer`.
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-√ What is your project named? » ej2-nextjs-pdfviewer
+√ What is your project named? » ej2-next-js-pdfviewer
 
 {% endhighlight %}
 {% endtabs %}
@@ -58,14 +58,14 @@ Using one of the above commands will prompt for project configuration options.
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-√ What is your project named? ... ej2-nextjs-pdfviewer
+√ What is your project named? ... ej2-next-js-pdfviewer
 √ Would you like to use TypeScript? ... No / `Yes`
 √ Would you like to use ESLint? ... No / `Yes`
 √ Would you like to use Tailwind CSS? ... `No` / Yes
 √ Would you like to use `src/` directory? ... No / `Yes`
 √ Would you like to use App Router? (recommended) ... No / `Yes`
 √ Would you like to customize the default import alias? ... `No`/ Yes
-Creating a new Next.js app in D:\ej2-nextjs-pdfviewer.
+Creating a new Next.js app in D:\ej2-next-js-pdfviewer.
 
 {% endhighlight %}
 {% endtabs %}
@@ -74,7 +74,7 @@ Creating a new Next.js app in D:\ej2-nextjs-pdfviewer.
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-cd ej2-nextjs-pdfviewer
+cd ej2-next-js-pdfviewer
 
 {% endhighlight %}
 {% endtabs %}
@@ -124,7 +124,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> React components include built-
 {% endhighlight %}
 {% endtabs %}
 
-N> To learn more about built-in themes and CSS references for individual components, see the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme/) documentation.
+N> To learn more about built-in themes and CSS references for individual components, see the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
