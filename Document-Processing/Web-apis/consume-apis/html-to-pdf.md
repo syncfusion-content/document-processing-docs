@@ -160,23 +160,28 @@ formdata.append(
     "settings",
     JSON.stringify({
       JobID: "job-200",
-      "IndexFile":"index.html",
+      IndexFile: "index.html",
+      Assets: ["image1.jpeg", "style.css"],
       PaperSize: "A4",
       Settings: {
         Url: "",
         AdditionalDelay: 800,
         EnableScripts: true,
-        Enablelinks: true,
+        EnableLinks: true,        
         EnableBookmarks: true,
         EnableForms: false,
         EnableToc: false,
-        Margins: 24, // points
+        Margins: 24,              
         Rotation: 0,
-        Orientation: "Portrait", // or "Landscape"
+        Orientation: "Portrait",  
         SinglePagePdf: false,
         ShowHeader: true,
         ShowFooter: true
-      }
+    },
+      AssetMap: [
+          { saveAs: "image1.jpeg", original: "image1.jpeg" },
+          { saveAs: "style.css",   original: "style.css" }
+        ]
     })
   );
 
@@ -201,15 +206,16 @@ var content = new MultipartFormDataContent();
 
 var settings = new
 {
-    JobID = "job-300",
-    "IndexFile":"index.html",
+    JobID = "job-300",               
+    "IndexFile" = "index.html",
+    Assets = new[] { "image1.jpeg", "style.css" },
     PaperSize = "A4",
     Settings = new
     {
         Url = "",
-        AdditionalDelay = 700,
+        AdditionalDelay = 700,        
         EnableScripts = true,
-        Enablelinks = true,
+        EnableLinks = true,         
         EnableBookmarks = true,
         EnableForms = false,
         EnableToc = false,
@@ -219,6 +225,11 @@ var settings = new
         SinglePagePdf = false,
         ShowHeader = true,
         ShowFooter = true
+    },
+    AssetMap = new[]
+    {
+        new { saveAs = "image1.jpeg", original = "image1.jpeg" },
+        new { saveAs = "style.css",   original = "style.css" }
     }
 };
 
