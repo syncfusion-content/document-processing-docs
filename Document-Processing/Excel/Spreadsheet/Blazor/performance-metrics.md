@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance Metrics in Blazor Spreadsheet Control | Syncfusion
-description: Learn here all about performance metrics in blazor Spreadsheet control, its elements and more.
+description: Learn here all about performance metrics in the Blazor Spreadsheet control, including how it manages data, handles rendering speed and more. 
 platform: document-processing
 control: Performance 
 documentation: ug
