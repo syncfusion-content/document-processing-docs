@@ -7,11 +7,11 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Show or hide annotations in the PDF Viewer
+# Show or hide annotations in PDF Viewer
 
 ### Overview
 
-Toggle annotation visibility in the Syncfusion PDF Viewer using TypeScript. Hide annotations for a cleaner view and show them again as needed.
+This guide shows how to temporarily hide annotations and restore them later in the TypeScript PDF Viewer. This is useful for presenting a clean view of the document while preserving annotation data for later use.
 
 ### How to Toggle Annotation Visibility
 
