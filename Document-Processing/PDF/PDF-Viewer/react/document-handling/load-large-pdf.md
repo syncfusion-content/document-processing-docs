@@ -47,10 +47,10 @@ Base64 encoding increases file size by ~33% and consumes more memory. For large 
 ### 3. Minimize Injected Modules
 
 Reduce the number of injected modules in the PDF Viewer to lower background processing and memory usage. For large files, avoid modules like:
-- [Text Search](https://helpstaging.syncfusion.com:14038/document-processing/pdf/pdf-viewer/react/text-search)
-- [Text Selection](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer/react/text-selection)
-- [Organize Pages](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer/react/organize-pages/overview)
-- [Thumbnail View](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page-thumbnail)
+- [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/text-search)
+- [Text Selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/text-selection)
+- [Organize Pages](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/organize-pages/overview)
+- [Thumbnail View](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page-thumbnail)
 
 **Example:**
 ```tsx
