@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of JavaScript PDF Viewer component
 
-The Syncfusion [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) component enables users to view, annotate, prepare and fill forms, and print PDF files directly in web applications.
+The Syncfusion [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) component enables users to view, annotate, prepare, and fill forms, and print PDF files directly in web applications.
 
 ## Setup
 
@@ -34,7 +34,7 @@ npm install @syncfusion/ej2-pdfviewer
 
 ## Supported web platforms
 
-* [JavaScript (ES5)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started)
+* [JavaScript (ES5)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
 * [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
 * [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
 * [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started)

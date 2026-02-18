@@ -12,7 +12,7 @@ var items = [
 var drpDownBtn = new ej.splitbuttons.DropDownButton({
   items: items,
   cssClass: "e-round-corner",
-  select: (args) => {
+  select: function (args) {
     if (args.item.text === 'Print') {
       printElement.querySelector(".e-sheet-content").innerHTML = document.querySelector(
         ".e-sheet-content"
@@ -73,13 +73,13 @@ var columns = [{ width: 100 }, { width: 100 },{ width: 100},
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
   sheets: [{ name: 'Budget', ranges: [{ dataSource: budgetData }], columns: columns },
                 {name: 'Salary', ranges: [{ dataSource: salaryData }], columns: columns}],
-  created: () => {
+  created: function () {
     spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:D1');
     spreadsheet.cellFormat({ fontWeight: 'bold'}, 'A11:D11');
     spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'Salary!A1:D1');
     spreadsheet.cellFormat({ fontWeight: 'bold'}, 'Salary!A7:D7');
   },
-  dataBound: () => {
+  dataBound: function () {
     if (isPrint) {
       printElement.querySelector(".e-sheet-content").innerHTML += document
         .querySelector(".e-sheet-content").outerHTML;
