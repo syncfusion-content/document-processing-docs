@@ -8,9 +8,20 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Saving PDF files
+# Saving PDF Files in the React PDF Viewer
 
 After editing a PDF with annotation tools, you can save the updated file to a server, a database, or download it locally. The following sections show common approaches.
+
+### Save and Download the Edited PDF
+
+After editing the PDF document, follow this short, linear flow to persist and retrieve the updated file:
+
+1. Persist the edited document to your back end (server or database). See "Save modified PDF to server" and "Save modified PDF to a database" below for server-side examples.
+2. Provide the updated file to the user. For a simple download use the built-in toolbar or call the viewer API [`download()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download).
+3. If you need the edited PDF for custom uploads or processing, use the viewer [`saveAsBlob()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#saveasblob) API to obtain a Blob (or convert it to Base64).
+
+This is a summary; use the detailed subsections below for full code samples and server-side instructions.
+
 
 ## Save modified PDF to server
 
@@ -60,7 +71,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 Set the `serviceUrl` to point to your web service (for example, replace `https://localhost:44396/pdfviewer` with your server URL). Also set `documentPath` to the document URL you want to load.
 
-{% raw %}
+```tsx
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -86,17 +97,15 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-{% endraw %}
+```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Save%20and%20Load/Save%20PDF%20file%20to%20server)
 
 ## Download PDF file as a copy
 
-The built-in toolbar includes a download option that saves the updated PDF to the user's local file system. You can also trigger the same behavior programmatically by calling the viewer's `download()` method.
+The built-in toolbar includes a download option that saves the updated PDF to the user's local file system. You can also trigger the same behavior programmatically by calling the viewer's [`download()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) API.
 
-{% raw %}
-
+```tsx
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css';
@@ -130,8 +139,7 @@ return (<div>
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
-{% endraw %}
+```
 
 ## Save modified PDF to a database
 
@@ -224,3 +232,22 @@ N> Replace `Your connection string for SQL Server` with your actual connection s
 N>: Ensure the `System.Data.SqlClient` package (or `Microsoft.Data.SqlClient`) is installed in your project. Use parameterized queries (as shown) and validate inputs to avoid SQL injection risks.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-database)
+
+### Save to Cloud Storage Services
+
+Each link below goes to a provider page with simple, step-by-step instructions and example code for saving the edited PDF to that cloud storage service.
+
+- [AWS S3](./save-pdf-file/to-amazon-s3)
+- [Azure Blob Storage](./save-pdf-file/to-azure-blob-storage)
+- [Google Cloud Storage](./save-pdf-file/to-google-cloud-storage)
+- [Google Drive](./save-pdf-file/to-google-drive)
+- [OneDrive](./save-pdf-file/to-one-drive)
+- [Dropbox](./save-pdf-file/to-dropbox-cloud-file-storage)
+- [Box](./save-pdf-file/to-box-cloud-file-storage)
+- [Azure AD (auth notes)](./save-pdf-file/to-azure-active-directory)
+---
+
+See also:
+
+- [Get Base64 value from a loaded PDF using saveAsBlob API](./how-to/get-base64)
+- [Open PDF files overview](./open-pdf-files)
