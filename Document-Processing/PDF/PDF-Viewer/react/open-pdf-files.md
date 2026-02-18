@@ -59,8 +59,10 @@ Below are concise instructions and short snippets for loading PDFs from several 
 
 ```js
 // Using load API
-const viewer = document.getElementById('container').ej2_instances[0];
-viewer.load('data:application/pdf;base64,' + base64String, null);
+const viewerRef = useRef(null);
+const loadBase64 = (base64String: string) => {
+  viewerRef.current?.load('data:application/pdf;base64,' + base64String, null);
+};
 ```
 
 - Recommendation: avoid Base64 for very large files (memory and payload size concerns).
@@ -70,12 +72,12 @@ viewer.load('data:application/pdf;base64,' + base64String, null);
 - Fetch a Blob and create an object URL, then load it into the viewer:
 
 ```js
+const viewerRef = useRef(null);
 fetch(url)
   .then(r => r.blob())
   .then(blob => {
     const objectUrl = URL.createObjectURL(blob);
-    const viewer = document.getElementById('container').ej2_instances[0];
-    viewer.load(objectUrl, null);
+    viewerRef.current?.load(objectUrl, null);
   });
 ```
 
