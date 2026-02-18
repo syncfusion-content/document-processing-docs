@@ -10,20 +10,21 @@ domainurl: ##DomainURL##
 
 # Remove annotations
 
-You can remove annotations using the built-in UI or programmatically. This page shows the common ways to delete annotations in the viewer.
+Annotations can be removed using the built-in UI or programmatically. This page shows common methods to delete annotations in the viewer.
 
 ## Delete via UI
 
-You can delete a selected annotation in three ways:
-- Context menu: Right-click the annotation and choose Delete.
+A selected annotation can be deleted in three ways:
+
+- Context menu: right-click the annotation and choose Delete.
 ![Delete via context menu](../annotations/annotation-images/delete-annot-context-menu.png)
-- Secondary toolbar: Select the annotation and click the Delete button on the annotation toolbar.
+- Annotation toolbar: select the annotation and click the Delete button on the annotation toolbar.
 ![Delete via annotation toolbar](../annotations/annotation-images/delete-annot.png)
-- Keyboard: Select the annotation and press the `Delete` key.
+- Keyboard: select the annotation and press the `Delete` key.
 
 ## Delete programmatically
 
-You can delete the currently selected annotation, or delete a specific annotation by its id.
+Annotations can be deleted programmatically either by removing the currently selected annotation or by specifying an annotation id.
 
 ```html
 <div class="toolbar">
@@ -76,7 +77,7 @@ if (delByIdBtn) {
 }
 ```
 
-N> Deleting via API requires the annotation to exist in the current document. Ensure an annotation is selected when using deleteAnnotation(), or pass a valid id to deleteAnnotationById().
+N> Deleting via the API requires the annotation to exist in the current document. Ensure an annotation is selected when using `deleteAnnotation()`, or pass a valid id to `deleteAnnotationById()`.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master)
 
