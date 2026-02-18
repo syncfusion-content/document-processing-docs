@@ -50,9 +50,7 @@ This short, guided walkthrough shows a minimal end-to-end customization flow:
 
 4. Add a theme switcher using the dark-mode logic in later shown in this file
 
-5. Create `custom-overrides.css`, scope rules under `.e-custom-style`, load it after the theme CSS, and verify appearance and accessibility.
-
-6. Pin or host theme files to avoid breaking changes when CDN versions update.
+5. Add additional CSS rules under `.e-custom-style` and load it after the theme CSS, and verify appearance and accessibility.
 
 ## Theming for Dark Mode
 
