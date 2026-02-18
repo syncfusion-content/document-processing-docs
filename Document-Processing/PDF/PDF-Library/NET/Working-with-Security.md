@@ -1608,7 +1608,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Read a PDF document permission flags via the [Security.Permissions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Permissions) property, which returns a bitwise combination of values from the [PdfPermissionsFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfPermissionsFlags.html) enumeration.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/PDF-permission-viewer/.NET/PDF-permission-viewer/Program.cs" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
 // Load an existing PDF
 using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
@@ -1633,6 +1636,9 @@ using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
 // Load an existing PDF
 using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
 {
@@ -1656,6 +1662,9 @@ using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+
 ' Load an existing PDF
 Using loadedDocument As New PdfLoadedDocument("Input.pdf")
     ' Access the document security settings
@@ -1678,7 +1687,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/PDF-permission-viewer/.NET).
 
 ## Remove password from the user password PDF document
 
