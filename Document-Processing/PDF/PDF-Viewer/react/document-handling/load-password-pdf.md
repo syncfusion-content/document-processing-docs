@@ -8,19 +8,62 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load Password Protected PDFs in React PDF Viewer
+# Load a Password-Protected PDF
 
-This article explains how to load and display password-protected PDF files in the Syncfusion React PDF Viewer. The viewer can automatically decrypt and display the file when the correct password is provided.
-
----
-
-## Tutorial: Open a Password-Protected PDF
-
-To open a password-protected PDF, provide the password as part of the [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentpath) object. The viewer will use this password to decrypt and display the file.
+This article explains how to open password-protected PDF files in the Syncfusion React PDF Viewer. The viewer supports both user‑interactive loading (Open File dialog) and programmatic loading using APIs.
 
 ---
 
-## How-to Guide: Minimal Example
+## 1. Opening a Password-Protected PDF Using the **Open File** Dialog
+
+When the user selects a password-protected PDF using the built‑in **Open File** option:
+
+1. The viewer detects that the document is encrypted
+
+![Open PDF Document](../images/open-pdf.png)
+
+2. A **password input popup** is automatically displayed
+
+![Password Protected Pop-up](../images/password-popup.png)
+
+3. The user enters the password
+
+4. The document is decrypted and loaded
+
+No additional configuration or code is required.
+
+This approach works for all password-protected PDFs opened locally by the user.
+
+---
+
+## 2. Opening a Password-Protected PDF Programmatically
+
+If you load a password-protected PDF from a URL or through custom logic, the viewer provides two behaviors depending on how the file is loaded.
+
+---
+
+### 2.1 Load the Document Using `viewer.load(url, password)`
+
+You can directly pass the password in the [`load`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) method:
+
+```tsx
+viewer.load(
+  'https://cdn.syncfusion.com/content/pdf/password-protected.pdf',
+  'Password'
+);
+```
+
+- If the password is correct → the PDF loads immediately
+- If the password is incorrect → the viewer displays the incorrect password popup
+- If no password is provided → the password popup is shown automatically
+
+This is useful when the password is known beforehand.
+
+---
+
+### 2.2 Loading a Password-Protected Document's URL Using `documentPath`
+
+If the [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentpath) points to a password-protected PDF:
 
 ```tsx
 import * as ReactDOM from 'react-dom';
@@ -28,52 +71,76 @@ import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Print, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
-  let viewer;
-  const resourcesLoaded = () => {
-    //pass PDF URL and passwod here as string
-    viewer.load(
-      'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      'Password'
-    );
-  };
-  return (
-    <div>
-      <div className="control-section">
-        {/* Render the PDF Viewer */}
-        <PdfViewerComponent
-          ref={(scope) => {
-            viewer = scope;
-          }}
-          id="container"
-          resourcesLoaded={resourcesLoaded}
-          resourceUrl="https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib"
-          style={{ height: '640px' }}
-        >
-        	<Inject services={[Toolbar, Magnification, Navigation, Print]} />
-        </PdfViewerComponent>
-      </div>
-    </div>
-  );
+	return (
+		<div className='control-section'>
+			<PdfViewerComponent
+				id="container"
+                //Load URL for Password Protected Document 
+				documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+				resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+				style={{ height: '640px' }}
+			>
+				<Inject services={[Toolbar, Magnification, Navigation, Print]} />
+			</PdfViewerComponent>
+		</div>
+	);
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 ```
 
----
+The viewer will:
 
-## Explanation
+- Detect encryption
+- Show the **password popup automatically**
+- Allow the user to enter the correct password
+- Then load the PDF
 
-When a password-protected PDF is loaded, the Syncfusion React PDF Viewer automatically uses the provided password to decrypt the file. If the password is incorrect or missing, the viewer will prompt for the password or display an error.
+![Password Protected Pop-up](../images/password-popup.png)
 
----
-
-## Reference
-
-- [React PDF Viewer API Reference](https://ej2.syncfusion.com/react/documentation/api/pdfviewer)
-- [PDF Viewer Features](https://ej2.syncfusion.com/react/documentation/pdfviewer/getting-started)
+N> No password should be passed inside `documentPath`.
 
 ---
 
-## See Also
+## Complete Example Using `viewer.load`
 
-- [Load PDF from URL (GitHub Sample)](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20URL)
+```tsx
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Print,
+  Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  let viewer;
+
+  const onDocumentLoad = () => {
+    viewer.load(
+      'https://cdn.syncfusion.com/content/pdf/password-protected.pdf',
+      'Password'
+    );
+  };
+
+  return (
+    <PdfViewerComponent
+      id="container"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      style={{ height: '640px' }}
+      ref={(scope) => (viewer = scope)}
+      documentLoad={onDocumentLoad}
+    >
+      <Inject services={[Toolbar, Magnification, Navigation, Print]} />
+    </PdfViewerComponent>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+```
+
+---
