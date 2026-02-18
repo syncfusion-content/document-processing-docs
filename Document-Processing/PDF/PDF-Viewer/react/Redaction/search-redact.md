@@ -8,18 +8,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Search text and redact in React PdfViewer
+# Search text and redact in React PDF Viewer
 
-You can search for a keyword in the loaded PDF and automatically add redaction annotations over each match. The example below wires the extractTextCompleted event, triggers text extraction, performs a search, and places redaction annotations for every result.
+You can search for a keyword in the loaded PDF and automatically add redaction annotations over each match. The example below wires the `extractTextCompleted` event, triggers text extraction, performs a search, and places redaction annotations for every result.
 
-N> Prerequisites: Add the PdfViewer control to your React application and ensure a document is loaded. Make sure the redaction feature is available in the version you are using. Once applied, redaction permanently removes the selected content.
+N> Prerequisites — add the PdfViewer control to your React application and ensure a document is loaded. Confirm that the redaction feature is available in the product version you are using. Create a backup of the original document before applying redactions; applied redactions are permanent and cannot be recovered.
 
-## Steps to add Redaction annotations on search Text Bounds
+## Steps to add redaction annotations to search text bounds
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample.
 
-
-**Step 2:** Use the following code-snippets to Add Redaction annotation on Search Text Bounds.
+**Step 2:** The example below searches for a term, adds redaction annotations for each match, and exposes a button to apply redactions. Use the following code snippets to add redaction annotations on search text bounds.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -159,12 +158,12 @@ root.render(<App />);
 - Ensure the PDF is fully loaded before triggering extraction and search.
 - Bounds from search are in points (72 DPI). Convert to pixels (96 DPI) to align with annotation coordinates.
 - Customize overlay text, colors, and typography as needed.
-- Adding a redaction annotation covers the content visually. To permanently remove sensitive data, use the viewer's Apply Redaction action or equivalent API if available in your version.
+- Adding a redaction annotation only marks the content visually. To permanently remove sensitive data, use the viewer's Apply Redaction action or the `annotation.redact()` API; this operation is irreversible.
 
 ## See also
 
 * [Overview of Redaction](./overview)
 * [Programmatic Support in Redaction](./programmatic-support)
-* [UI interactions](./ui-interaction)
+* [Redaction UI interactions](./ui-interactions)
 * [Redaction in Mobile View](./mobile-view)
 * [Redaction Toolbar](./toolbar)

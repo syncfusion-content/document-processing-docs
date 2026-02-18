@@ -7,20 +7,20 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Validate PDF Form Fields in TypeScript PDF Viewer
+# Validate PDF form fields in JavaScript PDF Viewer
 
-The Syncfusion **TypeScript PDF Viewer** provides built in support for **validating form fields** before users perform actions such as **printing**, **downloading**, or **submitting** a PDF document. Validation ensures that all required form fields are filled before allowing these actions to complete.  
-This feature helps enforce data completeness and improves the reliability of collected form data.
+The Syncfusion **JavaScript PDF Viewer** provides built-in support for **validating form fields** before users perform actions such as **printing**, **downloading**, or **submitting** a PDF document. Validation ensures that required form fields are completed before allowing these actions to proceed and improves the reliability of collected data.
 
 ## How PDF Form Validation Works
 
 Form field validation follows this flow:
 - Enable validation using the [enableFormFieldsValidation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property.
 - Handle the [validateFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields) event to determine which required fields are not filled.
-- When validation is enabled and a user attempts to print, download, or submit the document:
-  - The [validateFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields) event is triggered.
-  - Unfilled required fields are listed in args.nonFillableFields.
-  - You can cancel the action, show an error message, or move focus to an invalid field.
+
+When validation is enabled and a user attempts to print, download, or submit the document:
+- The [validateFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields) event is triggered.
+- Unfilled required fields are listed in `args.formField` (or `args.nonFillableFields` in some viewer versions).
+- Cancel the action, show an error message, or move focus to an invalid field.
 
 ## Enable PDF Form Field Validation
 
@@ -88,7 +88,7 @@ pdfviewer.validateFormFields = (args: any) => {
 
 ## Tips
 
-- Use isRequired to clearly mark mandatory fields.
+- Use `isRequired` to clearly mark mandatory fields.
 - Validation is triggered only during [print](../print), [download](../download), or **submit** actions.
 - For custom validation logic (such as validating an email format):
   - Retrieve all form fields using [retrieveFormFields()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#retrieveformfields).

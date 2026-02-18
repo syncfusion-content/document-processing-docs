@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in Standalone PDF Viewer control in React
+# Getting started with standalone React PDF Viewer component
 
-This section explains the steps required to create a simple Standalone React PDF Viewer and demonstrates the basic usage of the PDF Viewer control in a React application.
+This section explains the steps to create a standalone React PDF Viewer and demonstrates basic usage of the PDF Viewer component in a React application.
 
 ## Prerequisites
 
@@ -20,9 +20,9 @@ To get started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI co
 
 ## Setup for Local Development
 
-To easily set up a React application, use `create-vite-app`, which provides a faster development environment, smaller bundle sizes, and optimized builds compared to traditional tools like `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/). Vite sets up your environment using JavaScript and optimizes your application for production.
+To set up a React application, use Vite (for example, `npm create vite@latest`), which provides a fast development environment, smaller bundle sizes, and optimized production builds compared to tools such as `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/).
 
-> **Note:**  To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
+N> To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
 
 To create a new React application, run the following command.
 
@@ -69,7 +69,7 @@ N> The following changes apply to React version 18 and above.
 
 ## Adding PDF Viewer component and the CSS reference
 
-* Add an HTML div element to act as the PDF Viewer element `public/index.html` using the following code.
+* Add an HTML div element to act as the PDF Viewer element `index.html` using the following code.
 
 ```
    <!DOCTYPE html>
@@ -84,6 +84,7 @@ N> The following changes apply to React version 18 and above.
    <body>
       <div id='sample'>
          <div id='loader'>Loading....</div>
+         <script type="module" src="/src/main.tsx"></script>
       </div>
    </body>
    </html>
@@ -102,7 +103,7 @@ N> The following changes apply to React version 18 and above.
    @import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
 ```
 
-* Add the React PDF Viewer as shown below in `src/index.js` when using JavaScript (JSX). If you're using TypeScript (TSX), add it in `src/index.tsx` to render the PDF Viewer component.
+* Add the React PDF Viewer as shown below in `src/index.js` when using JavaScript (JSX). If you're using TypeScript (TSX), add it in `src/app.tsx` to render the PDF Viewer component.
 
 
 {% tabs %}
@@ -224,8 +225,7 @@ N> When running the sample, if you encounter the **ERR_OSSL_EVP_UNSUPPORTED erro
 $env:NODE_OPTIONS = "--openssl-legacy-provider"
 ```
 
-
-Output will be appears as follows.
+Output appears as follows.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -276,8 +276,10 @@ return (<div>
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -294,6 +296,7 @@ root.render(<App />);
 <body>
         <div id='sample'>
             <div id='loader'>Loading....</div>
+            <script type="module" src="/src/main.tsx"></script>
         </div>
 </body>
 </html>

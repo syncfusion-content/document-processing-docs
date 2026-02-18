@@ -14,26 +14,26 @@ Sticky Notes are comment annotations used to leave notes, replies, and review st
 
 ![Sticky notes overview](../../images/stickynotes_annotation.png)
 
-## Add Annotation
+## Add annotations
 
-### Add Annotation in UI
+### Add annotations in UI
 
-Use the Comments tool:
+Use the Comments tool to:
 - Click the Comments button in the PDF Viewer toolbar.
 - Click on the page where the sticky note should be added.
 - The sticky note icon is placed at the clicked position.
 
 ![Sticky notes tool](../../images/stickynotes_tool.png)
 
-Add and manage comments using the comment panel:
+Use the comment panel to add and manage comments:
 - Select a sticky note, right‑click, and choose Comment.
 - Add comments, replies, and statuses in the panel.
 
 ![Sticky notes comment panel](../../images/stickynotes_comment.png)
 
-### Add Annotation programmatically
+### Add annotations programmatically
 
-Use addAnnotation to programmatically create a sticky note.
+Use the `addAnnotation` method to programmatically create sticky note annotations.
 
 ```html
 <button id="stickyNote">Add sticky note annotation programmatically</button>
@@ -102,11 +102,11 @@ document.getElementById('stickyNote').addEventListener('click', function () {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit Annotation
+## Edit annotations
 
-### Edit Annotation in UI
+### Edit annotations in UI
 
-You can select and manage sticky notes directly in the viewer:
+Use the viewer to select and manage sticky notes:
 - Select: click the sticky note icon to focus it and show context actions.
 - Move: drag the icon to reposition on the page.
 - Delete or more options: use the context menu on the selected note.
@@ -132,9 +132,9 @@ Modify or delete comments or replies, and change status using the menu options i
 
   ![StickyNotesEdit](../../images/sticky_editbtn.png)
 
-### Edit Annotation programmatically
+### Edit annotations programmatically
 
-Use editAnnotation to update an existing note's bounds.
+Use `editAnnotation` to update an existing note's bounds.
 
 ```html
 <button id="editSticky">Edit sticky note annotation programmatically</button>
@@ -264,9 +264,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `StickyNotesSettings`.
+Set properties for individual annotations before creating the control using `StickyNotesSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default StickyNotes settings.
 

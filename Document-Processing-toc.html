@@ -14,7 +14,7 @@
 			<li>
 				<a href="/document-processing/ai-coding-assistant/overview">Overview</a>
 			</li>
-	        <li>MCP Server
+			<li>MCP Server
 				<ul>
 					<li>
 						<a href="/document-processing/ai-coding-assistant/mcp-server/documentsdk">Document SDK</a>
@@ -22,12 +22,15 @@
 					<li>
 						<a href="/document-processing/ai-coding-assistant/mcp-server/spreadsheeteditorsdk">Spreadsheet Editor SDK</a>
 					</li>
+					<li>
+						<a href="/document-processing/ai-coding-assistant/mcp-server/pdfviewersdk">PDF Viewer SDK</a>
+					</li>
 				</ul>
 			</li>
 			<li>
 				<a href="/document-processing/ai-coding-assistant/prompt-library">Prompt Library</a>
 			</li>
-      	</ul>
+		</ul>
     </li>
 	<li>Installation<ul>
 			<li>Web Installer
@@ -392,16 +395,36 @@
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/interaction-mode">Interaction Mode</a></li>
-							<li>Form Designer
+							<li>Forms
 								<ul>
-									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/form-designer/create-programmatically">Create Programmatically</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/form-designer/create-with-user-interface-interaction">Create with UI Interaction</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/toolbar-customization/form-designer-toolbar">Form Designer Toolbar</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/form-designer/form-field-events">Form Field events</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/overview">Overview</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/form-filling">Fill form fields</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/form-designer">Form Designer and Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/overview-create-forms">Create, Edit, Style and Remove Form Fields</a>
+										<ul>
+											<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/manage-form-fields/create-form-fields">Create form fields</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/manage-form-fields/modify-form-fields">Modify form fields</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/manage-form-fields/customize-form-fields">Customize form fields</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/manage-form-fields/move-resize-form-fields">Move and Resize form fields</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/manage-form-fields/remove-form-fields">Remove form fields</a></li>
+										</ul>
+									</li>
+									<li>Import/Export form data
+										<ul>
+											<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/import-export-form-fields/import-form-fields">Import form data</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/import-export-form-fields/export-form-fields">Export form data</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/import-export-form-fields/import-export-events">Import/Export events</a></li>
+										</ul>
+									</li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/custom-data">Add custom data in form fields</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/group-form-fields">Grouping form fields</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/form-constrain">Form Field Flags</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/form-validation">Form Validation</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/how-to/custom-fonts">Custom fonts</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/form-field-events">Form Field events</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/form-fields-api">APIs</a></li>
 								</ul>
 							</li>
-							<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/form-filling">Form Filling</a></li>
 							<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/organize-pdf">Organize Pages</a>
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/organize-pages/overview">Overview</a></li>
@@ -663,6 +686,7 @@
 									<li><a href="/document-processing/pdf/pdf-viewer/angular/how-to/custom-fonts">Add custom fonts to the PDF Viewer using the PDF document</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/angular/how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-with-no-standalone-flag">Create a Standalone PDF Viewer in Angular 17 and above with --no-standalone flag</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/angular/how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-without-no-standalone-flag">Create a Standalone PDF Viewer in Angular 17 and above without --no-standalone flag</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/angular/how-to/create-a-standalone-pdf-viewer-in-angular-12">Create a Standalone PDF Viewer in Angular 12</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/angular/how-to/configure-annotation-selector-setting">Configure Annotation Selector Setting</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/angular/how-to/convert-pdf-library-bounds-to-pdf-viewer-bounds">Convert Pdf Library Bounds to Pdf viewer bounds</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/angular/how-to/show-custom-stamp-item">Display Custom Stamp items in Custom Stamp</a></li>
@@ -864,11 +888,18 @@
 					<li>
 						<a href="/document-processing/pdf/pdf-viewer/react/overview">React</a>
 						<ul>
-							<li>Getting Started
+							<li>
+								<a href="/document-processing/pdf/pdf-viewer/react/getting-started-overview">Getting Started</a>
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/react/preact">Preact</a></li>
+								</ul>
+							</li>
+							<li>
+								Environment Integration
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/react/depoyment-integration/preact">Preact</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/react/depoyment-integration/nextjs-getting-started">NextJS</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/react/feature-module">Feature Modules</a></li>
@@ -1140,16 +1171,36 @@
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/vue/interaction-mode">Interaction Mode</a></li>
-							<li>Form Designer
+							<li>Forms
 								<ul>
-									<li><a href="/document-processing/pdf/pdf-viewer/vue/form-designer/create-programmatically">Create form fields programmatically</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/vue/form-designer/create-with-user-interface-interaction">Create form fields with UI interaction</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/vue/toolbar-customization/form-designer-toolbar">Form Designer Toolbar</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/vue/form-designer/form-field-events">Form Field events</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/vue/how-to/custom-fonts">Custom Fonts</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/overview">Overview</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/form-filling">Fill form fields</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/form-designer">Form Designer and Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/overview-create-forms">Create, Edit, Style and Remove Form Fields</a>
+										<ul>
+											<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/manage-form-fields/create-form-fields">Create form fields</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/manage-form-fields/modify-form-fields">Modify form fields</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/manage-form-fields/customize-form-fields">Customize form fields</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/manage-form-fields/move-resize-form-fields">Move and Resize form fields</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/manage-form-fields/remove-form-fields">Remove form fields</a></li>
+										</ul>
+									</li>
+									<li>Import/Export form data
+										<ul>
+											<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/import-export-form-fields/import-form-fields">Import form data</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/import-export-form-fields/export-form-fields">Export form data</a></li>
+											<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/import-export-form-fields/import-export-events">Import/Export events</a></li>
+										</ul>
+									</li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/custom-data">Add custom data in form fields</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/group-form-fields">Grouping form fields</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/form-constrain">Form Field Flags</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/form-validation">Form Validation</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/how-to/custom-fonts">Custom fonts</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/form-field-events">Form Field events</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/forms/form-fields-api">APIs</a></li>
 								</ul>
 							</li>
-							<li><a href="/document-processing/pdf/pdf-viewer/vue/form-filling">Form Filling</a></li>
 							<li><a href="/document-processing/pdf/pdf-viewer/vue/organize-pdf">Organize Pages</a>
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/vue/organize-pages/overview">Overview</a></li>
@@ -1356,7 +1407,7 @@
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/javascript-es5/interaction-mode">Interaction Mode</a></li>
-							<li>Form Designer
+							<li>Forms
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es5/forms/overview">Overview</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es5/forms/form-filling">Fill form fields</a></li>
@@ -5152,13 +5203,51 @@
 							<li><a href="/document-processing/excel/spreadsheet/react/getting-started">Getting Started</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/nextjs-getting-started">Getting Started with NextJS</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/data-binding">Data Binding</a></li>
-							<li><a href="/document-processing/excel/spreadsheet/react/open-save">Open and Save</a></li>
-							<li><a href="/document-processing/excel/spreadsheet/react/docker-deployment">Docker Deployment</a></li>
+							<li><a href="/document-processing/excel/spreadsheet/react/open/open">Open Excel File</a>
+								<ul>
+									<li><a href="/document-processing/excel/spreadsheet/react/open/open-excel-file/file-uploader">using a file uploader</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/open/open-excel-file/external-url">using an external URL</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/open/open-excel-file/blob-data">from blob data</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/open/open-excel-file/base64-string">from base64 string</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/open/open-excel-file/server">located on a server</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/open/open-excel-file/aws-lambda">using AWS Lambda hosted web service</a></li>
+								</ul>
+							</li>
+							<li><a href="/document-processing/excel/spreadsheet/react/save/save">Save Excel File</a>
+								<ul>
+									<li><a href="/document-processing/excel/spreadsheet/react/save/save-excel-file/blob-data">as blob data</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/save/save-excel-file/base64-string">as base64 string</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/save/save-excel-file/server">to a server</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/save/save-excel-file/aws-lambda">using AWS Lambda hosted web service</a></li>
+								</ul>
+							</li>
+							<li><a href="/document-processing/excel/spreadsheet/react/open-from-cloud">Open From Cloud</a>
+								<ul>
+									<li><a href="/document-processing/excel/spreadsheet/react/cloud-storage/open-from-cloud/aws-s3-bucket">AWS S3</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/cloud-storage/open-from-cloud/azure-blob-storage">Azure Blob Storage</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/cloud-storage/open-from-cloud/google-cloud-storage">Google Cloud Storage</a></li>
+								</ul>
+							</li>
+							<li><a href="/document-processing/excel/spreadsheet/react/save-to-cloud">Save To Cloud</a>
+								<ul>
+									<li><a href="/document-processing/excel/spreadsheet/react/cloud-storage/save-to-cloud/aws-s3-bucket">AWS S3</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/cloud-storage/save-to-cloud/azure-blob-storage">Azure Blob Storage</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/cloud-storage/save-to-cloud/google-cloud-storage">Google Cloud Storage</a></li>
+								</ul>
+							</li>
+							<li><a href="/document-processing/excel/spreadsheet/react/server-deployment">Server Deployment</a>
+							    <ul>
+									<li><a href="/document-processing/excel/spreadsheet/react/server-deployment/docker-deployment">How to Deploy Spreadsheet Docker Image Locally</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/server-deployment/how-to-deploy-spreadsheet-server-to-azure-app-service-using-visual-studio">Deploy Spreadsheet Server Docker Image to Azure App Service using Azure CLI</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/server-deployment/how-to-deploy-spreadsheet-server-to-azure-app-service-using-azure-cli">Deploy Spreadsheet Server to Azure App Service using Visual Studio</a></li>
+								</ul>
+							</li>
 							<li><a href="/document-processing/excel/spreadsheet/react/worksheet">Worksheet</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/cell-range">Cell Range</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/editing">Editing</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/context-menu">Context Menu</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/formulas">Formulas</a></li>
+							<li><a href="/document-processing/excel/spreadsheet/react/data-validation">Data Validation</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/formatting">Formatting</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/illustrations">Illustrations</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/rows-and-columns">Rows and Columns</a></li>

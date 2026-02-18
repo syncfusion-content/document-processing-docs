@@ -7,19 +7,19 @@ platform: document-processing
 documentation: ug
 ---
 
-# Show or hide annotations in the PDF Viewer
+# Show and hide annotations in PDF Viewer
 
-### Overview
+## Overview
 
-Toggle annotation visibility in the Syncfusion PDF Viewer using React. Hide annotations for a cleaner view and show them again as needed.
+This guide shows how to temporarily hide annotations and restore them later in the React PDF Viewer. This is useful for presenting a clean view of the document while preserving annotation data for later use.
 
-### How to Show and Hide Annotations
+## How to show and hide annotations
 
-**Step 1:** Follow the steps in the [Get started with React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide to create a sample.
+**Step 1:** Create a basic React PDF Viewer sample using the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide.
 
-**Step 2:** Set Up Your React Component with Annotation Toggle Functionality
+**Step 2:** Set up the React component and template
 
-Create a React component that includes the Syncfusion PDF Viewer and buttons to show and hide annotations. The sample uses the standalone version of the PDF Viewer with the `resourceUrl` property pointing to the CDN, eliminating the need for a backend service. The implementation leverages the `exportAnnotationsAsObject`, `deleteAnnotations`, and `importAnnotation` methods to manage the annotations. Here is a sample implementation:
+Add UI controls (for example, buttons) that trigger hide and unhide behaviors. The sample below exports annotations to an object, removes them from the viewer, and later imports them back to restore the annotations.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

@@ -48,8 +48,10 @@ az webapp create --resource-group pdfviewerresourcegroup --plan pdfviewerappserv
 
 **Step 4:** Browse to the app.
 
-Open the app at `https://<app_name>.azurewebsites.net` (for example, `https://pdfviewerappservice.azurewebsites.net`). Verify the API at `https://pdfviewerappservice.azurewebsites.net/api/pdfviewer` to confirm a default GET response. Configure a custom domain and certificate for production deployments.
+Open the app at `https://<app_name>.azurewebsites.net` (for example, `https://pdfviewerappservice.azurewebsites.net`). Use HTTPS in production. Verify the server API returns a default response at `https://<app_name>.azurewebsites.net/api/pdfviewer`.
 
-Append the service endpoint (for example, `https://pdfviewerappservice.azurewebsites.net/api/pdfviewer`) to the PDF Viewer client’s `serviceUrl`. See the [Getting started with the TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide for client configuration steps.
+Append the service endpoint (for example, `https://pdfviewerappservice.azurewebsites.net/api/pdfviewer`) to the PDF Viewer client's `serviceUrl`.
 
-For production guidance, review the [Azure App Service for Containers documentation](https://learn.microsoft.com/azure/app-service/containers/quickstart-multi-container). Consider adding an architecture diagram that illustrates how the hosted PDF Viewer server communicates with the TypeScript PDF Viewer client.
+See the PDF Viewer getting started guide for client configuration: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/
+
+For guidance on deploying multi-container apps to Azure App Service for Containers, see the Azure quickstart: https://docs.microsoft.com/azure/app-service/containers/quickstart-multi-container

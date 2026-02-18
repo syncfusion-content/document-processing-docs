@@ -7,15 +7,15 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction toolbar customization in React
+# Redaction toolbar customization in React PDF Viewer
 
-The redaction toolbar in the Syncfusion React PDF Viewer can be customized by rearranging existing items, hiding default items, or adding new ones. You can also place custom items at specific index positions among the existing toolbar items.
+The redaction toolbar in the Syncfusion React PDF Viewer can be customized by rearranging, hiding, or adding toolbar items. You can also insert custom items at specific positions among the existing toolbar items.
 
 ## Enable the redaction toolbar
 
 To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
 
-The following example shows how to enable the redaction toolbar:
+The following example shows how to enable the redaction toolbar.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -51,7 +51,6 @@ export function App() {
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         resourceUrl= "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         toolbarSettings={toolbarSettings}
-        
         style={{ 'height': '680px' }} 
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -85,7 +84,7 @@ When **RedactionEditTool** is included in the toolbar settings, clicking the red
 
 You can also control visibility through code by calling `viewer.toolbar.showRedactionToolbar(true/false)`.
 
-The following example demonstrates toggling the redaction toolbar programmatically:
+The example below demonstrates toggling the redaction toolbar programmatically.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -190,7 +189,7 @@ Refer to the following image for details:
 ## See also
 
 * [Adding the redaction annotation in PDF viewer](../redaction/overview)
-* [UI interactions](./ui-interaction)
+* [Redaction UI interactions](./ui-interactions)
 * [Programmatic support](./programmatic-support)
 * [Mobile view](./mobile-view)
 * [Search Text and Redact](./search-redact)

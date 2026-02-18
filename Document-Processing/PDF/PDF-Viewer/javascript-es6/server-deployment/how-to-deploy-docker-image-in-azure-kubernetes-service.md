@@ -105,6 +105,6 @@ It can take several minutes for Azure to provision the LoadBalancer  IP. When th
 
 **Step 6:** Connect the client to the server endpoint.
 
-Update the TypeScript PDF Viewer client configuration with the service endpoint (for example, `https://<external-ip-or-dns>/api/pdfviewer`). See the [Getting started with the TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide for client configuration steps.
+Use the service endpoint (for example, `https://<external-ip-or-dns>/api/pdfviewer`) as the client's `serviceUrl`. See the PDF Viewer getting-started guide for client configuration: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/
 
-For production guidance, review the [Azure Kubernetes Service documentation](https://learn.microsoft.com/azure/aks/kubernetes-walkthrough). Consider including an architecture diagram illustrating the AKS cluster, LoadBalancer, and PDF Viewer client communication path to help onboarding teams.
+For guidance on production deployments and AKS configuration, see the Azure Kubernetes Service walkthrough: https://docs.microsoft.com/azure/aks/kubernetes-walkthrough

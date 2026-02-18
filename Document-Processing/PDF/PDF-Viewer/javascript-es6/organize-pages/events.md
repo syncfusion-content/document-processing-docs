@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Organize Pages Events in TypeScript PDF Viewer
 
-The PDF Viewer provides events to track and respond to actions within the page organizer, allowing for the customization of page manipulation features.
+The PDF Viewer exposes events for tracking and responding to actions within the page organizer, enabling customization of page manipulation workflows.
 
 ## pageOrganizerSaveAs
 
@@ -18,7 +18,7 @@ The `pageOrganizerSaveAs` event is triggered when a save action is performed in 
 
 -  Occurs when the **Save as** button in the page organizer toolbar is clicked after modifying the document structure.
 
-The event arguments provide the necessary information about the save event:
+The event arguments provide information about the save event:
 
 - `fileName`: The name of the currently loaded PDF document.
 - `downloadDocument`: A base64 string of the modified PDF document data.
@@ -50,8 +50,8 @@ The `pageOrganizerZoomChanged` event is triggered when the zoom level of the pag
 
 Event arguments:
 
-- `previousZoomValue`: The previous zoom value.
-- `currentZoomValue`: The current zoom value.
+- `previousZoom`: The previous zoom value.
+- `currentZoom`: The current zoom value.
 
 ```typescript
 import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView, BookmarkView,

@@ -37,29 +37,29 @@ The accessibility compliance for the Blazor SfPdfViewer component is outlined be
 
 ## WAI-ARIA attributes
 
-[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to enhance the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the Blazor SfPdfViewer component:
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to enhance the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are commonly applied in the SfPdfViewer component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `aria-disabled`| Indicates whether the Blazor SfPdfViewer component is in a disabled state or not.|
-| `aria-expanded`| Indicates whether the suggestion list has expanded or not. |
-| `aria-readonly` | Indicates the readonly state of the Blazor SfPdfViewer element. |
-| `aria-haspopup` | Indicates whether the Blazor SfPdfViewer input element has a suggestion list or not. |
-| `aria-label` | Indicates the breadcrumb item text. |
-| `aria-labelledby` | Provides a label for the SfPdfViewer. Typically, the "aria-labelledby" attribute will contain the id of the element used as the Blazor SfPdfViewer's title. |
-| `aria-describedby` | This attribute points to the Blazor SfPdfViewer element describing the one it's set on. |
-| `aria-orientation` | Indicates whether the Blazor SfPdfViewer element is oriented horizontally or vertically. |
-| `aria-valuetext` | Returns the current text of the SfPdfViewer. |
-| `aria-valuemax` | Indicates the Maximum value of the SfPdfViewer. |
-| `aria-valuemin` | Indicates the Minimum value of the SfPdfViewer. |
-| `aria-valuenow` | Indicates the current value of the SfPdfViewer. |
-| `aria-controls` | Attribute is set to the button and it points to the corresponding content. |
+| `aria-disabled` | Indicates whether an interactive control (for example, a toolbar button) is disabled and not operable. |
+| `aria-expanded` | Indicates whether an expandable element (for example, a panel or toolbar menu) is currently expanded. |
+| `aria-readonly` | Indicates that the element is read-only and user input is not expected. |
+| `aria-haspopup` | Identifies that the element opens a popup (menu, dialog, or toolbar). |
+| `aria-label` | Provides an accessible name for controls or regions when a visible label is not available. |
+| `aria-labelledby` | Identifies the element that labels this element by referencing that element's id. |
+| `aria-describedby` | Identifies the element that provides a description for this element by referencing that element's id. |
+| `aria-orientation` | Indicates the orientation (horizontal or vertical) of widgets such as sliders or splitters. |
+| `aria-valuetext` | Provides a human-readable text alternative of the current value (for example, a zoom level). |
+| `aria-valuemax` | Indicates the maximum value for range widgets (for example, maximum zoom). |
+| `aria-valuemin` | Indicates the minimum value for range widgets (for example, minimum zoom). |
+| `aria-valuenow` | Indicates the current numeric value for range widgets (for example, current zoom). |
+| `aria-controls` | Identifies the element or region controlled by this element (for example, a button that opens a panel). |
 
 ## Keyboard interaction
 
 The Blazor SfPdfViewer component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it accessible to users who rely on assistive technologies (AT) and keyboard navigation. The following keyboard shortcuts are supported by the SfPdfViewer component.
 
-| Windows | Mac | Actions |
+| Windows | Mac | Action |
 | --- | --- | --- |
 |||**Shortcuts for page navigation**|
 | <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>Ctrl</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>←</kbd> / <kbd>⌘</kbd> + <kbd>↑</kbd> |Navigate to the first page |

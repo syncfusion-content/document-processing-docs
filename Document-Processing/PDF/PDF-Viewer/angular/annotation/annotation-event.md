@@ -8,38 +8,40 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer Annotations events in Angular
+# PDF Viewer annotation events in Angular
 
-The PDF Viewer control provides support for several annotation events. The annotation events supported by the PDF Viewer control are:
+The PDF Viewer control supports several annotation events that enable applications to respond to user interactions—adding, moving, resizing, selecting, and removing annotations. Examples in this article reference the resource URL shown in the code samples.
+
+The annotation events supported by the PDF Viewer control are:
 
 | Annotation events               | Description                                                        |
 |---------------------------------|--------------------------------------------------------------------|
-| [annotationAdd](#annotationadd)                      | Event triggers when an annotation is added.                        |
-| [annotationDoubleClick](#annotationdoubleclick)      | Event triggers when an annotation is double-clicked.              |
-| [annotationMouseLeave](#annotationmouseleave)        | Event triggers when the mouse cursor leaves an annotation.        |
-| [annotationMouseover](#annotationmouseover)          | Event triggers when the mouse cursor moves over an annotation.    |
-| [annotationMove](#annotationmove)                    | Event triggers when an annotation is moved.                       |
-| [annotationMoving](#annotationmoving)                | Event triggers while an annotation is being moved.                |
-| [annotationPropertiesChange](#annotationpropertieschange) | Event triggers when an annotation’s properties are changed.       |
-| [annotationRemove](#annotationremove)                | Event triggers when an annotation is removed.                     |
-| [annotationResize](#annotationresize)                | Event triggers when an annotation is resized.                     |
-| [annotationSelect](#annotationselect)                | Event triggers when an annotation is selected.                    |
-| [annotationUnselect](#annotationunselect)            | Event triggers when an annotation is unselected.                  |
-| [beforeAddFreeText](#beforeaddfreetext)              | Event triggers before adding free text.                           |
-| [addSignature](#addsignature)                        | Event triggers when a signature is added.                         |
-| [removeSignature](#removesignature)                  | Event triggers when a signature is removed.                       |
-| [resizeSignature](#resizesignature)                  | Event triggers when a signature is resized.                       |
-| [signaturePropertiesChange](#signaturepropertieschange) | Event triggers when signature properties change.                  |
-| [signatureSelect](#signatureselect)                  | Event triggers when a signature is selected.                      |
-| [signatureUnselect](#signatureunselect)              | Event triggers when a signature is unselected.                    |
+| [annotationAdd](#annotationadd)                      | Triggers when an annotation is added.                             |
+| [annotationDoubleClick](#annotationdoubleclick)      | Triggers when an annotation is double-clicked.                    |
+| [annotationMouseLeave](#annotationmouseleave)        | Triggers when the mouse cursor leaves an annotation.              |
+| [annotationMouseover](#annotationmouseover)          | Triggers when the mouse cursor moves over an annotation.          |
+| [annotationMove](#annotationmove)                    | Triggers when an annotation is moved.                             |
+| [annotationMoving](#annotationmoving)                | Triggers while an annotation is being moved.                      |
+| [annotationPropertiesChange](#annotationpropertieschange) | Triggers when an annotation's properties are changed.             |
+| [annotationRemove](#annotationremove)                | Triggers when an annotation is removed.                           |
+| [annotationResize](#annotationresize)                | Triggers when an annotation is resized.                           |
+| [annotationSelect](#annotationselect)                | Triggers when an annotation is selected.                          |
+| [annotationUnselect](#annotationunselect)            | Triggers when an annotation is unselected.                        |
+| [beforeAddFreeText](#beforeaddfreetext)              | Triggers before adding free text.                                 |
+| [addSignature](#addsignature)                        | Triggers when a signature is added.                               |
+| [removeSignature](#removesignature)                  | Triggers when a signature is removed.                             |
+| [resizeSignature](#resizesignature)                  | Triggers when a signature is resized.                             |
+| [signaturePropertiesChange](#signaturepropertieschange) | Triggers when signature properties change.                        |
+| [signatureSelect](#signatureselect)                  | Triggers when a signature is selected.                            |
+| [signatureUnselect](#signatureunselect)              | Triggers when a signature is unselected.                          |
 
 ### annotationAdd 
 
-The [annotationAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationadd) event is triggered when an annotation is added to the PDF Viewer.
+The [annotationAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationadd) event triggers when an annotation is added to the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationaddeventargs/). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
+For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationaddeventargs). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
 
 The following example illustrates how to handle the `annotationAdd` event.
 
@@ -56,7 +58,7 @@ The following example illustrates how to handle the `annotationAdd` event.
   </div>
 ```
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewEncapsulation, OnInit, ViewChild } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -79,7 +81,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html',
+  templateUrl: 'app.html',
   encapsulation: ViewEncapsulation.None,
   providers: [
     LinkAnnotationService,
@@ -96,7 +98,7 @@ import {
     FormDesignerService,
     PageOrganizerService,
   ],
-  styleUrls: ['app.component.css'],
+  styleUrls: ['app.css'],
   standalone: true,
   imports: [PdfViewerModule],
 })
@@ -124,11 +126,11 @@ export class AppComponent {
 
 ### annotationDoubleClick
 
-The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationdoubleclick) event is triggered when an annotation is double-clicked.
+The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationdoubleclick) event triggers when an annotation is double-clicked.
 
 #### Event Arguments
 
-For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationDoubleClickEventArgs/).
+For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationDoubleClickEventArgs).
 
 The following example illustrates how to handle the `annotationDoubleClick` event.
 
@@ -145,7 +147,7 @@ The following example illustrates how to handle the `annotationDoubleClick` even
   </div>
 ```
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewEncapsulation, OnInit, ViewChild } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -168,7 +170,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html',
+  templateUrl: 'app.html',
   encapsulation: ViewEncapsulation.None,
   providers: [
     LinkAnnotationService,
@@ -185,7 +187,7 @@ import {
     FormDesignerService,
     PageOrganizerService,
   ],
-  styleUrls: ['app.component.css'],
+  styleUrls: ['app.css'],
   standalone: true,
   imports: [PdfViewerModule],
 })
@@ -211,21 +213,15 @@ export class AppComponent {
 
 
 
-The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationDoubleClickArgs/) event is triggered when an annotation is double-clicked.
 
-{% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-
-{% endhighlight %}
-{% endtabs %}
 
 ### annotationMouseLeave
 
-The [annotationMouseLeave](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmouseleave) event is triggered when the mouse cursor leaves an annotation.
+The [annotationMouseLeave](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationmouseleave) event triggers when the mouse cursor leaves an annotation.
 
 #### Event Arguments
 
-For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMouseLeaveEventArgs/).
+For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMouseLeaveEventArgs).
 
 The following example illustrates how to handle the `annotationMouseLeave` event.
 
@@ -243,7 +239,7 @@ The following example illustrates how to handle the `annotationMouseLeave` event
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewEncapsulation, OnInit, ViewChild } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -265,7 +261,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html',
+  templateUrl: 'app.html',
   encapsulation: ViewEncapsulation.None,
 
   providers: [
@@ -283,7 +279,7 @@ import {
     FormDesignerService,
     PageOrganizerService,
   ],
-  styleUrls: ['app.component.css'],
+  styleUrls: ['app.css'],
   standalone: true,
   imports: [PdfViewerModule],
 })
@@ -311,12 +307,11 @@ export class AppComponent {
 
 ### annotationMouseover
 
-The [annotationMouseover](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmouseover) event is triggered when the mouse cursor moves 
-over an annotation.
+The [annotationMouseover](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationmouseover) event triggers when the mouse cursor moves over an annotation.
 
 #### Event Arguments
 
-For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMouseOverEventArgs/).
+For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMouseOverEventArgs).
 
 The following example illustrates how to handle the `annotationMouseover` event.
 
@@ -333,7 +328,7 @@ The following example illustrates how to handle the `annotationMouseover` event.
 </div>
 ```
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -354,9 +349,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -394,11 +389,11 @@ export class AppComponent implements OnInit {
 
 ### annotationMove
 
-The [annotationMove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmove) event is triggered when an annotation is moved.
+The [annotationMove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationmove) event triggers when an annotation is moved.
 
 #### Event Arguments
 
-For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMoveEventArgs/).
+For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMoveEventArgs).
 
 The following example illustrates how to handle the `annotationMove` event.
 
@@ -416,7 +411,7 @@ The following example illustrates how to handle the `annotationMove` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -437,9 +432,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -477,11 +472,11 @@ export class AppComponent implements OnInit {
 
 ### annotationMoving
 
-The [annotationMoving](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationmoving) event is triggered while an annotation is being moved.
+The [annotationMoving](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationmoving) event triggers while an annotation is being moved.
 
 #### Event Arguments
 
-For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMovingEventArgs/).
+For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMovingEventArgs).
 
 The following example illustrates how to handle the `annotationMoving` event.
 
@@ -499,7 +494,7 @@ The following example illustrates how to handle the `annotationMoving` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -520,9 +515,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -560,11 +555,11 @@ export class AppComponent implements OnInit {
 
 ### annotationPropertiesChange
 
-The [annotationPropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationpropertieschange) event is triggered when an annotation’s properties are changed.
+The [annotationPropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationpropertieschange) event triggers when an annotation’s properties are changed.
 
 #### Event Arguments
 
-For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs/). It provides properties such as `annotationId`, `pageNumber`, and `action`.
+For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs). It provides properties such as `annotationId`, `pageNumber`, and `action`.
 
 The following example illustrates how to handle the `annotationPropertiesChange` event.
 
@@ -582,7 +577,7 @@ The following example illustrates how to handle the `annotationPropertiesChange`
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -603,9 +598,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -645,11 +640,11 @@ export class AppComponent implements OnInit {
 
 ### annotationRemove
 
-The [annotationRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationremove) event is triggered when an annotation is removed.
+The [annotationRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationremove) event triggers when an annotation is removed.
 
 #### Event Arguments
 
-For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationRemoveEventArgs/). It provides properties such as `annotationId` and `pageNumber`.
+For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationRemoveEventArgs). It provides properties such as `annotationId` and `pageNumber`.
 
 The following example illustrates how to handle the `annotationRemove` event.
 
@@ -667,7 +662,7 @@ The following example illustrates how to handle the `annotationRemove` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -688,9 +683,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -728,11 +723,11 @@ export class AppComponent implements OnInit {
 
 ### annotationResize
 
-The [annotationResize](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationresize) event is triggered when an annotation is resized.
+The [annotationResize](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationresize) event triggers when an annotation is resized.
 
 #### Event Arguments
 
-For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationResizeEventArgs/).
+For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationResizeEventArgs).
 
 The following example illustrates how to handle the `annotationResize` event.
 
@@ -750,7 +745,7 @@ The following example illustrates how to handle the `annotationResize` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -771,9 +766,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -811,11 +806,11 @@ export class AppComponent implements OnInit {
 
 ### annotationSelect
 
-The [annotationSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationselect) event is triggered when an annotation is selected.
+The [annotationSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationselect) event triggers when an annotation is selected.
 
 #### Event Arguments
 
-For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectEventArgs/).
+For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectEventArgs).
 
 The following example illustrates how to handle the `annotationSelect` event.
 
@@ -833,7 +828,7 @@ The following example illustrates how to handle the `annotationSelect` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
@@ -854,9 +849,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -894,11 +889,11 @@ export class AppComponent implements OnInit {
 
 ### annotationUnselect
 
-The [annotationUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#annotationunselect) event is triggered when an annotation is unselected.
+The [annotationUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationunselect) event triggers when an annotation is unselected.
 
 #### Event Arguments
 
-For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationUnSelectEventArgs/).
+For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationUnSelectEventArgs).
 
 The following example illustrates how to handle the `annotationUnselect` event.
 
@@ -916,7 +911,7 @@ The following example illustrates how to handle the `annotationUnselect` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -936,9 +931,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -975,11 +970,11 @@ export class AppComponent implements OnInit {
 
 ### beforeAddFreeText
 
-The [beforeAddFreeText](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#beforeaddfreetext) event is triggered before adding free text to the PDF Viewer.
+The [beforeAddFreeText](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#beforeaddfreetext) event triggers before adding free text to the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/beforeAddFreeTextEventArgs/).
+For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/beforeAddFreeTextEventArgs).
 
 The following example illustrates how to handle the `beforeAddFreeText` event.
 
@@ -997,7 +992,7 @@ The following example illustrates how to handle the `beforeAddFreeText` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1017,9 +1012,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1061,11 +1056,11 @@ export class AppComponent implements OnInit {
 
 ### addSignature
 
-The [addSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#addsignature) event is triggered when a signature is added to the PDF Viewer.
+The [addSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#addsignature) event triggers when a signature is added to the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/addSignatureEventArgs/). It provides properties such as `pageNumber`.
+For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/addSignatureEventArgs). It provides properties such as `pageNumber`.
 
 The following example illustrates how to handle the `addSignature` event.
 
@@ -1083,7 +1078,7 @@ The following example illustrates how to handle the `addSignature` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1103,9 +1098,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1142,11 +1137,11 @@ export class AppComponent implements OnInit {
 
 ### removeSignature
 
-The [removeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#removesignature) event is triggered when a signature is removed from the PDF Viewer.
+The [removeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#removesignature) event triggers when a signature is removed from the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/removeSignatureEventArgs/). It provides properties such as `pageNumber`.
+For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/removeSignatureEventArgs). It provides properties such as `pageNumber`.
 
 The following example illustrates how to handle the `removeSignature` event.
 
@@ -1163,7 +1158,7 @@ The following example illustrates how to handle the `removeSignature` event.
 </div>
 ```
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1183,9 +1178,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1222,11 +1217,11 @@ export class AppComponent implements OnInit {
 
 ### resizeSignature
 
-The [resizeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#resizesignature) event is triggered when a signature is resized in the PDF Viewer.
+The [resizeSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resizesignature) event triggers when a signature is resized in the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/resizeSignatureEventArgs/).
+For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/resizeSignatureEventArgs).
 
 The following example illustrates how to handle the `resizeSignature` event.
 
@@ -1244,7 +1239,7 @@ The following example illustrates how to handle the `resizeSignature` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1264,9 +1259,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1303,11 +1298,11 @@ export class AppComponent implements OnInit {
 
 ### signaturePropertiesChange
 
-The [signaturePropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signaturepropertieschange) event is triggered when signature properties are changed in the PDF Viewer.
+The [signaturePropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#signaturepropertieschange) event triggers when signature properties are changed in the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs/).
+For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs).
 
 The following example illustrates how to handle the `signaturePropertiesChange` event.
 
@@ -1324,7 +1319,7 @@ The following example illustrates how to handle the `signaturePropertiesChange` 
 </div>
 ```
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1344,9 +1339,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1383,11 +1378,11 @@ export class AppComponent implements OnInit {
 
 ### signatureSelect
 
-The [signatureSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureselect) event is triggered when a signature is selected in the PDF Viewer.
+The [signatureSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#signatureselect) event triggers when a signature is selected in the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureSelectEventArgs/).
+For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureSelectEventArgs).
 
 The following example illustrates how to handle the `signatureSelect` event.
 
@@ -1405,7 +1400,7 @@ The following example illustrates how to handle the `signatureSelect` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1425,9 +1420,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
@@ -1465,11 +1460,11 @@ export class AppComponent implements OnInit {
 
 ### signatureUnselect
 
-The [signatureUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#signatureunselect) event is triggered when a signature is unselected in the PDF Viewer.
+The [signatureUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#signatureunselect) event triggers when a signature is unselected in the PDF Viewer.
 
 #### Event Arguments
 
-For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureUnSelectEventArgs/).
+For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureUnSelectEventArgs).
 
 The following example illustrates how to handle the `signatureUnselect` event.
 
@@ -1487,7 +1482,7 @@ The following example illustrates how to handle the `signatureUnselect` event.
 ```
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import {
   PdfViewerComponent,
@@ -1507,9 +1502,9 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.css'],
   providers: [
     ToolbarService,
     MagnificationService,
