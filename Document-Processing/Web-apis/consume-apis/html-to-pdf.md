@@ -121,7 +121,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoint, including the HTML file as input as follows:
+To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoint, including both the HTML file as input and its assets as follows:
 
 {% tabs %}
 
@@ -131,6 +131,7 @@ curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
   --form-string 'settings={
     "JobID": "job-123",
     "IndexFile":"index.html",
+    "Assets":["image1.jpeg","style.css"],
     "PaperSize": "A4",
     "Settings": {
       "Url": "",
@@ -146,7 +147,8 @@ curl --location 'http://localhost:8003/v1/conversion/html-to-pdf' \
       "SinglePagePdf": false,
       "ShowHeader": true,
       "ShowFooter": true
-    }
+    },
+  "AssetMap":[{"saveAs":"image1.jpeg","original":"image1.jpeg"},{"saveAs":"style.css","original":"style.css"}]
   }'
 
 {% endhighlight %}
