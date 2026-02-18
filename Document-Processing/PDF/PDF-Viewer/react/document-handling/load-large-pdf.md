@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handling Large PDF Files in React PDF Viewer
+# Load Large PDF Files in React PDF Viewer
 
 This article explains how to efficiently load and view large PDF files using the Syncfusion React PDF Viewer. It includes recommended best practices and performance tips for documents ranging from **50 MB to 2 GB**.
 
