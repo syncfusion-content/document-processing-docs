@@ -390,9 +390,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Imports System
-Imports Syncfusion.XlsIO
-
 Using excelEngine As New ExcelEngine()
     Dim application As IApplication = excelEngine.Excel
     application.DefaultVersion = ExcelVersion.Xlsx
