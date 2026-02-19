@@ -30,13 +30,13 @@ Performance may vary if the user’s system is heavily loaded or low on availabl
 
 ---
 
-# Best Practices for Loading Large PDFs
+## Best Practices for Loading Large PDFs
 
-## 1. Load PDFs Using Blob (Recommended)
+### 1. Load PDFs Using Blob (Recommended)
 
 Blob loading provides the fastest and most efficient performance for large PDFs.
 
-### Why Blob Loading Is Better
+#### Why Blob Loading Is Better
 
 When a large PDF (for example, 1 GB) is loaded directly via `documentPath` (URL):
 
@@ -51,7 +51,7 @@ But when the PDF is fetched as a **Blob**:
 - The viewer can begin rendering faster
 - Improves load time, memory usage, and overall responsiveness
 
-### Example: Load a PDF as Blob
+#### Example: Load a PDF as Blob
 ```js
 fetch('https://your-api/large-file.pdf')
   .then(response => response.blob())
@@ -66,7 +66,7 @@ Blob loading is highly recommended for all PDFs above **200 MB**, especially whe
 
 ---
 
-## 2. Viewer Performance Range
+### 2. Viewer Performance Range
 
 The Syncfusion PDF Viewer is optimized to handle:
 
@@ -77,11 +77,11 @@ This suits enterprise workflows involving large engineering drawings, client rec
 
 ---
 
-## 3. Minimize Injected Modules
+### 3. Minimize Injected Modules
 
 The PDF Viewer internally uses background workers for text processing, thumbnail generation, image rendering, and metadata extraction. Disabling modules that are not needed helps reduce background activity and improves performance.
 
-### 3.1 Text Search & Text Selection
+#### 3.1 Text Search & Text Selection
 
 Modules:
 - [`Text Search`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/text-search)
@@ -101,14 +101,14 @@ If these features are not required in your application:
 - Improve page rendering speed
 - Provide a smoother experience for large documents
 
-### Example (remove text search & selection)
+#### Example (remove text search & selection)
 ```tsx
 <Inject services={[Toolbar, Magnification, Navigation, Print]} />
 ```
 
 ---
 
-### 3.2 Thumbnail View & Organize Pages
+#### 3.2 Thumbnail View & Organize Pages
 
 Modules:
 - [`Organize Pages`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/organize-pages/overview)
@@ -126,7 +126,7 @@ If thumbnails or page reordering are not essential:
 
 ---
 
-## 4. Enable Local Storage for Large PDFs With Many Form Fields or Annotations
+### 4. Enable Local Storage for Large PDFs With Many Form Fields or Annotations
 
 PDFs with a high number of:
 
@@ -156,7 +156,7 @@ By default, the viewer uses **sessionStorage** to store interactive session data
 - Enhances stability when navigating large documents
 - Reduces repeated processing for form/annotation‑heavy pages
 
-### Enable Local Storage
+#### Enable Local Storage
 ```tsx
 enableLocalStorage={true}
 ```
@@ -165,7 +165,7 @@ This is highly recommended when working with legal documents, tax forms, interac
 
 ---
 
-## 5. Reduce Unnecessary Background System Processes
+### 5. Reduce Unnecessary Background System Processes
 
 For the best large‑PDF experience:
 
@@ -178,7 +178,7 @@ This ensures the viewer receives enough system resources.
 
 ---
 
-# Minimal Recommended Configuration Example
+## Minimal Recommended Configuration Example
 
 ```tsx
 import * as ReactDOM from 'react-dom';
