@@ -168,6 +168,10 @@ The following table contains the default name and value details used in the SfPd
 <td>Apply</td>
 </tr>
 <tr>
+<td>ApplyRedactionsConfirmation</td>
+<td>You are about to permanently remove all content that has been marked for redaction. Once the document is saved, this operation cannot be undone. Are you sure you want to continue?</td>
+</tr>
+<tr>
 <td>Arrow</td>
 <td>Arrow</td>
 </tr>
@@ -262,6 +266,10 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>DocumentLoadFailed</td>
 <td>Failed to load the PDF document.</td>
+</tr>
+<tr>
+<td>Drag and drop an image here</td>
+<td>Drag and drop an image here</td>
 </tr>
 <tr>
 <td>DragAndDropImage</td>
