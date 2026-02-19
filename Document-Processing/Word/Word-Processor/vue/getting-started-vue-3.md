@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Getting started vue 3 with Vue Document editor component | Syncfusion
-description:  Checkout and learn about Getting started vue 3 with Vue Document editor component of Syncfusion Essential JS 2 and more details.
+description: Check out and learn about Getting started vue 3 with Vue Document editor component of Syncfusion Essential JS 2 and more details.
 control: Getting started vue 3 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor Component in Vue 3
+# Getting Started with Syncfusion® Document editor Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Document Editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Document editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -85,7 +85,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue Document Editor component](https://www.syncfusion.com/vue-components/vue-word-processor) as an example. To use the Vue Document Editor component in the project, the `@syncfusion/ej2-vue-documenteditor` package needs to be installed using the following command:
+This article uses the [Vue Document editor component](https://www.syncfusion.com/vue-components/vue-word-processor) as an example. To use the Vue Document editor component in the project, the `@syncfusion/ej2-vue-documenteditor` package needs to be installed using the following command:
 
 ```bash
   npm install @syncfusion/ej2-vue-documenteditor --save
@@ -99,9 +99,9 @@ yarn add @syncfusion/ej2-vue-documenteditor
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Document Editor component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Document editor component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -121,7 +121,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 {% endhighlight %}
 {% endtabs %}
 
-> Document editor has different themes, please refer to [supported themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) section.
+> Document editor has different themes, please refer to [supported themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) section.
 
 ## Adding Component
 
@@ -129,11 +129,11 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 ### Adding DocumentEditor component in the application
 
-Document Editor Component is used to create, view and edit word documents. In this, you can customize the UI options based on your requirements to modify the document.
+Document editor Component is used to create, view and edit word documents. In this, you can customize the UI options based on your requirements to modify the document.
 
-You have completed all the necessary configurations needed for rendering the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component. Now, you are going to add the Document Editor component using following steps.
+You have completed all the necessary configurations needed for rendering the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component. Now, you are going to add the Document editor component using following steps.
 
-Follow the below steps to add the Vue Document Editor component using `Composition API` or `Options API`:
+Follow the below steps to add the Vue Document editor component using `Composition API` or `Options API`:
 
 **Step 1:** First, import and register the DocumentEditor component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
@@ -208,7 +208,7 @@ import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Sel
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 **Step 4:** Summarizing the above steps, update the `src/App.vue` file with following code.
 
@@ -284,7 +284,7 @@ import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Sel
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 #### Running the DocumentEditor application
 
@@ -306,7 +306,7 @@ The output will appear as follows:
 
 ### Adding DocumentEditorContainer component in the application
 
-Document Editor Container Component is also used to create, view and edit word document. But here, you can use predefined toolbar and properties pane to view and modify word document.
+Document editor Container Component is also used to create, view and edit word document. But here, you can use predefined toolbar and properties pane to view and modify word document.
 
 You have completed all the necessary configurations needed  for rendering the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component. Now, you are going to add the DocumentEditorContainer component using following steps.
 
@@ -385,7 +385,7 @@ Follow the below steps to add the Vue DocumentEditorContainer component using `C
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 **Step 4:** Summarizing the above steps, update the `src/App.vue` file with following code.
 
@@ -461,7 +461,7 @@ Follow the below steps to add the Vue DocumentEditorContainer component using `C
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 #### Running the DocumentEditorContainer application
 

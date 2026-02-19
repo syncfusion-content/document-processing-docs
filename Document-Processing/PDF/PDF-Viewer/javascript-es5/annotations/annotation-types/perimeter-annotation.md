@@ -18,18 +18,18 @@ Perimeter is a measurement annotation used to measure the length around a closed
 
 ### Add perimeter annotation via UI
 
-Use the annotation toolbar:
-- Click the Edit Annotation button in the PDF Viewer toolbar.
-- Click the Measurement Annotation dropdown.
-- Choose Perimeter, then draw the polyline on the page.
+Use the annotation toolbar to:
+- Click the **Edit Annotation** button in the PDF Viewer toolbar.
+- Open the **Measurement Annotation** dropdown.
+- Choose **Perimeter**, then draw the polyline on the page.
 
-N> When in pan mode, selecting a measurement annotation switches the viewer to text select mode.
+N> When in pan mode, selecting measurement annotations switches the viewer to text select mode.
 
 ![Measurement toolbar](../../images/calibrate_tool.png)
 
 ### Enable perimeter mode
 
-The PDF Viewer library allows drawing measurement annotations programmatically after enabling perimeter mode in button clicks.
+The PDF Viewer library allows drawing perimeter annotations programmatically after enabling perimeter mode via button clicks.
 
 ```html
 <button id="perimeterMode">Perimeter</button>
@@ -95,7 +95,7 @@ if (perimeterBtn) {
 
 ### Add a perimeter annotation programmatically
 
-The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
+The PDF Viewer library allows adding perimeter annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 ```html
 <button id="addPerimeterAnnotation">Add Perimeter annotation Programmatically</button>
@@ -181,7 +181,7 @@ if (addBtn) {
 
 ### Edit perimeter annotation in UI
 
-You can select, move, and resize Perimeter annotations directly in the viewer:
+Use the viewer to select, move, and resize Perimeter annotations:
 - Select a Perimeter to show its vertex handles.
 - Move: drag inside the shape to reposition it on the page.
 - Resize/reshape: drag any vertex handle to adjust the polyline points and size.
@@ -363,9 +363,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `PerimeterSettings`.
+Set properties for individual annotations before creating the control using `PerimeterSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default Perimeter settings.
 

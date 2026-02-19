@@ -27,7 +27,7 @@ The PDF Viewer allows you to export form field data in multiple formats for easy
 Use [exportFormFields()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportformfields) with an optional destination path and the format type.
 
 ### Export as FDF
-The following example exports form field data as FDF.
+The example below exports form field data as FDF.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -66,7 +66,7 @@ root.render(<App />);
 {% endtabs %}
 
 ### Export as XFDF
-The following example exports form field data as XFDF.
+The example below exports form field data as XFDF.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -105,7 +105,7 @@ root.render(<App />);
 {% endtabs %}
 
 ### Export as JSON
-The following example exports form field data as JSON.
+The example below exports form field data as JSON.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

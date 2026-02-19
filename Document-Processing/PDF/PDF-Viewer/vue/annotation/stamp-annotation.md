@@ -55,7 +55,7 @@ The following examples switch to stamp annotation modes.
 import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-  TextSearch, FormFields, FormDesigner, PageOrganizer
+  TextSearch, FormFields, FormDesigner, PageOrganizer, SignStampItem
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide, ref } from 'vue';
 
@@ -91,7 +91,7 @@ const documentLoad = () => {
 import {
   PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-  TextSearch, FormFields, FormDesigner, PageOrganizer
+  TextSearch, FormFields, FormDesigner, PageOrganizer, SignStampItem
 } from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
@@ -137,7 +137,7 @@ export default {
 import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-  TextSearch, FormFields, FormDesigner, PageOrganizer
+  TextSearch, FormFields, FormDesigner, PageOrganizer, SignStampItem
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide, ref } from 'vue';
 
@@ -174,7 +174,7 @@ const documentLoad = () => {
 import {
   PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-  TextSearch, FormFields, FormDesigner, PageOrganizer
+  TextSearch, FormFields, FormDesigner, PageOrganizer, SignStampItem
 } from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
@@ -208,7 +208,7 @@ export default {
 
 ## Adding a Stamp annotation to the PDF document Programmatically
 
-With the PDF Viewer library, you can add a Stamp annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+With the PDF Viewer library, you can add a Stamp annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here's a example of how you can utilize the **addAnnotation()** method to include a Stamp annotation programmatically:
 

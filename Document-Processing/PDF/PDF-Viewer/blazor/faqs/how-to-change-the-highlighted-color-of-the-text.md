@@ -9,9 +9,9 @@ documentation: ug
 
 # Change the highlight color of the text in Blazor SfPdfViewer Component
 
-Use the `Color` property of the [PdfViewerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerHighlightSettings.html) class to set the default highlight color for the Highlight text markup annotation. This setting applies only to Highlight annotations. Other text markup types (such as Underline or Strikethrough) have their own settings.
+Use the `Color` property of [PdfViewerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerHighlightSettings.html) to set the default highlight color for text markup highlights. This applies only to Highlight annotations; other text-markup types (such as Underline or Strikethrough) use their own settings.
 
-The following code illustrates how to change the highlight color of the text.
+The following example shows how to set the highlight color.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

@@ -16,7 +16,7 @@ The PDF Viewer allows you to manage your PDF documents efficiently by organizing
 
 To access the organize pages feature, simply open the PDF document in the PDF Viewer and navigate to the left vertical toolbar. Look for the [Organize Pages](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageOrganizer/) option to begin utilizing these capabilities.
 
-![Alt text](images/organize-page.png)
+![Organize pages toolbar option](images/organize-page.png)
 
 The page organization support enables you to perform various actions such as rotating, rearranging, inserting, copying, and deleting pages within a PDF document using organize pages dialog.
 
@@ -33,7 +33,7 @@ You can easily change the sequence of pages within your document using the drag 
 
 * `Drag and drop`: Click and drag a page thumbnail to the desired position within the document, then release it to rearrange the page order.
 
-![Alt text](images/rotate-rearrange.gif)
+![Rotate and rearrange pages animation](images/rotate-rearrange.gif)
 
 ### Inserting new pages
 
@@ -55,7 +55,7 @@ Duplicate the pages within your PDF document effortlessly:
 
 * `Select pages to copy`: Click on the page thumbnails you wish to duplicate. Use the copy option to create duplicates. When a page is copied, the duplicate is automatically added to the right of the selected page. Multiple copies can be made using the toolbar action.
 
-![Alt text](images/insert-delete-copy.gif)
+![Insert, delete, and copy pages animation](images/insert-delete-copy.gif)
 
 ### Importing a PDF Document
 
@@ -63,13 +63,13 @@ Seamlessly import a PDF document into your existing document:
 
 * `Import PDF document`: Click the **Import Document** button to import a PDF. If a page is selected, the imported document’s thumbnail will be inserted to the right of the selected page. If multiple or no pages are selected, the thumbnail will be added as the first page. When **Save** or **Save As** is clicked, the imported PDF will be merged with the current document. You can insert a blank page to the left or right of the imported thumbnail, delete it, or drag and drop it to reposition as needed.
 
-![Alt text](images/import.gif)
+![Import PDF into document animation](images/import.gif)
 
 ### Selecting all pages
 
 Make comprehensive adjustments by selecting all pages simultaneously. This facilitates efficient editing and formatting across the entire document.
 
-![Alt text](images/selectall.png)
+![Select all pages thumbnail view](images/selectall.png)
 
 ### Zooming Page Thumbnails
 
@@ -81,17 +81,17 @@ Adjust the size of page thumbnails within the organizer panel for better visibil
 
 This feature is especially useful when working with documents containing complex layouts or small details that need careful examination during organization.
 
-![Alt text](./images/zoomOrganize.png)
+![Thumbnail zoom slider in organizer](images/zoomOrganize.png)
 
 ### Real-time updates
 
 Witness instant changes in page organization reflected within the PDF Viewer. Simply click the **Save** button to preserve your modifications.
 
-### SaveAs functionality
+### Save As functionality
 
 Safeguard your edits by utilizing the **Save As** feature. This enables you to download the modified version of the PDF document for future reference, ensuring that your changes are securely stored.
 
-## API's supported
+## APIs supported
 
 **enablePageOrganizer:** This API enables or disables the page organizer feature in the PDF Viewer. By default, it is set to `true`, indicating that the page organizer is enabled.
 
@@ -355,7 +355,7 @@ The following keyboard shortcuts are available at the organize pages dialog.
 * **Ctrl+Y** : Redo the action that was undone
 * **Ctrl+Scroll** : Zoom in and zoom out page thumbnails for better visibility.
 
-![Alt text](images/undo-redo.png)
+![Undo and redo icons in organizer](images/undo-redo.png)
 
 #### Conclusion
 

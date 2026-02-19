@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Extract text using extractText in TypeScript PDF Viewer
+# Extract text using `extractText` in TypeScript PDF Viewer
 
 The `extractText` method extracts text from one or more pages and can return plain text or text with bounds for each element.
 
@@ -25,13 +25,10 @@ Retrieves text data from one page or a range of pages based on the specified opt
 
 #### Available Options
 
-- **None:** No text information is extracted or returned. This is useful when you want to optimize memory usage and don't need any text data.
-
-- **TextOnly:** Extracts only the plain text from the document. This option excludes any layout or positional information.
-
-- **BoundsOnly:** Extracts layout information, such as bounds or coordinates, without including the plain text data.
-
-- **TextAndBounds:** Extracts both the plain text and the layout (bounds) information, which is the default behavior.
+- **None** — Do not extract or return any text or layout data. Use this option to minimize memory usage when textual information is not required.
+- **TextOnly** — Return plain text only; layout and bounds are omitted. Note: using `TextOnly` may disable some viewer text features such as synchronous `findText`; use `findTextAsync` when asynchronous search is required.
+- **BoundsOnly** — Return layout and positional data (bounds) without the plain text content.
+- **TextAndBounds** — Return both plain text and its positional information (bounds). This is the default and is useful when both content and layout are required.
 
 #### Returns
 Returns a Promise with:
