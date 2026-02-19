@@ -60,7 +60,7 @@ Add CSS references needed for a PDF Viewer in `src/styles.css` from the `../node
 ```
 ### Add PDF Viewer component
 
-In `src/app/app.component.ts``, use <ejs-pdfviewer> selector in the template attribute of the @Component directive to render the Syncfusion Angular PDF Viewer component.
+In `src/app/app.ts``, use <ejs-pdfviewer> selector in the template attribute of the @Component directive to render the Syncfusion Angular PDF Viewer component.
 
 ```
 import { Component, OnInit } from '@angular/core';
@@ -97,7 +97,7 @@ export class AppComponent implements OnInit {
 
 *[`View PDF Document`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
 *[`Annotations`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/text-markup-annotation) - Annotate with text markup, shapes, stamps, ink, and sticky notes.Form filling and form designing can be done.
-*[`Form Fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/form-designer/create-programmatically) - Form filling and form designing can be done.
+*[`Form Fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/forms/overview) - Form filling and form designing can be done.
 *[`Signature`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/signature-annotation) - Hand-written and digital signatures are allowed.
 *[`Toolbar`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/toolbar) - Built-in-toolbar and custom toolbars to perform user interaction of PDF Viewer functionalities.
 *[`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/navigation) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.

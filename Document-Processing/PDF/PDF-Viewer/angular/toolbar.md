@@ -262,11 +262,11 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs/).
+* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customToolbarItemModel) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs).
 
-* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarItem/).
+* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarItem).
 
-* Enable, Disable - Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
+* Enable, Disable - Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar#enabletoolbaritem)
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -682,9 +682,9 @@ The PDF Viewer provides API for user interactions options provided in its built-
 }
 ```
 
->The icons are embedded in the font file used in the previous code snippet.
+N> The icons are embedded in the font file used in the previous code snippet.
 
-**Step 5:** Add the following code snippet in `app.component.ts` file for performing a user interaction in PDF Viewer in code behind.
+**Step 5:** Add the following code snippet in `app.ts` file for performing a user interaction in PDF Viewer in code behind.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

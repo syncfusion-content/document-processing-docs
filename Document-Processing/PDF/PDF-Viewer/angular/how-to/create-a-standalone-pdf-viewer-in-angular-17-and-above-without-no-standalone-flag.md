@@ -52,7 +52,7 @@ cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib  src/asset
 
 ## Registering PDF Viewer Module and Adding PDF Viewer component
 
-Import PDF Viewer module into Angular application from the package `@syncfusion/ej2-angular-pdfviewer` and Add the Angular PDF Viewer by using `<ejs-pdfviewer>` selector in `template` section of the `src/app/app.component.ts` file to render the PDF Viewer component.
+Import PDF Viewer module into Angular application from the package `@syncfusion/ej2-angular-pdfviewer` and Add the Angular PDF Viewer by using `<ejs-pdfviewer>` selector in `template` section of the `src/app/app.ts` file to render the PDF Viewer component.
 
 ```typescript
 
@@ -79,7 +79,7 @@ import {
                     style="height:640px;display:block">
                 </ejs-pdfviewer>
              </div>`,
-  styleUrl: './app.component.css',
+  styleUrl: './app.css',
   providers: [LinkAnnotationService, BookmarkViewService, MagnificationService,
     ThumbnailViewService, ToolbarService, NavigationService,
     TextSearchService, TextSelectionService, PrintService,
@@ -120,7 +120,7 @@ ng serve --open
 The output will appear as follows.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {
@@ -143,7 +143,7 @@ import {
                     style="height:640px;display:block">
                 </ejs-pdfviewer>
              </div>`,
-  styleUrl: './app.component.css',
+  styleUrl: './app.css',
   providers: [LinkAnnotationService, BookmarkViewService, MagnificationService,
     ThumbnailViewService, ToolbarService, NavigationService,
     TextSearchService, TextSelectionService, PrintService,
@@ -161,7 +161,7 @@ export class AppComponent implements OnInit {
 
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { AppComponent } from './app/app';
 
 bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));

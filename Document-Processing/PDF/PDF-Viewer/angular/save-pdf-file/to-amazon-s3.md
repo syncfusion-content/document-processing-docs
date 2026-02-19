@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to AWS S3
+# Save PDF files to AWS S3 in Angular
 
 The TypeScript PDF Viewer component supports saving PDF files to AWS S3 using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
@@ -20,7 +20,7 @@ To save a PDF file to AWS S3, you can follow the steps below
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in TypeScript. This will set up the basic structure of your PDF Viewer application.
 
-**Step 2:** Modify the `src/app/app.component.ts` File in the Angular Project
+**Step 2:** Modify the `src/app/app.ts` File in the Angular Project
 
 1. Import the required namespaces at the top of the file:
 

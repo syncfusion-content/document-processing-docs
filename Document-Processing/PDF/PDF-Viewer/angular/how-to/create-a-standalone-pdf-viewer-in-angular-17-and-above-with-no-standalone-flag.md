@@ -63,7 +63,7 @@ import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
          NavigationService, TextSearchService, TextSelectionService,
          PrintService, FormDesignerService, FormFieldsService,
          AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
-import { AppComponent } from './app.component';
+import { AppComponent } from './app';
 
 @NgModule({
   //declaration of ej2-angular-pdfviewer module into NgModule
@@ -96,7 +96,7 @@ Add the Angular PDF Viewer component’s styles as given below in `src/styles.cs
 
 ## Adding PDF Viewer component
 
-Add the Angular PDF Viewer by using `<ejs-pdfviewer>` selector in `template` section of the `src/app/app.component.ts` file to render the PDF Viewer component.
+Add the Angular PDF Viewer by using `<ejs-pdfviewer>` selector in `template` section of the `src/app/app.ts` file to render the PDF Viewer component.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -140,7 +140,7 @@ ng serve --open
 The output will appear as follows.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 import { Component, OnInit } from '@angular/core';
 import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
          MagnificationService, ThumbnailViewService, ToolbarService,

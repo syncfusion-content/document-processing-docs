@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Azure Blob Storage
+# Save PDF files to Azure Blob Storage in Angular
 
 The TypeScript PDF Viewer component supports saving PDF files to Azure Blob Storage using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
@@ -20,7 +20,7 @@ To save a PDF file to Azure Blob Storage, follow these steps:
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
 
-**Step 2:** Modify the `src/app/app.component.ts` File in the Angular Project
+**Step 2:** Modify the `src/app/app.ts` File in the Angular Project
 
 1. Import the required namespaces at the top of the file:
 
@@ -142,7 +142,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Azure Blob Storage container.
+5. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#download) method to save the downloaded PDF file to the Azure Blob Storage container.
 
 ```csharp
 
@@ -239,7 +239,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 **Step 4:**   Set the PDF Viewer Properties in Angular PDF viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Azure Blob Storage, and ensure that the document exists in the target container.
+Modify the [serviceUrl](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Azure Blob Storage, and ensure that the document exists in the target container.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
