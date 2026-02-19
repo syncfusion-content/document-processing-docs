@@ -418,7 +418,7 @@ const observer = new ResizeObserver(() => {
 observer.observe(document.querySelector('#pdfViewer')!);
 ```
 
-- Lazy-render inside tabs/dialogs/accordions: only mount `PdfViewerComponent` when the pane is visible.
+- Lazy-render inside tabs/dialogs/accordions: only mount the PDF Viewer when the pane is visible.
 
 ## When to use these patterns
 

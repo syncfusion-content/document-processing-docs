@@ -46,7 +46,7 @@ This short, guided walkthrough shows a minimal end-to-end customization flow:
 
 2. Add the Tailwind theme imports to your global CSS (see Quick start).
 
-3. Render `PdfViewerComponent` in `src/App.tsx` and verify the default look.
+3. Render the PDF Viewer in `src/App.tsx` and verify the default look.
 
 4. Add a theme switcher using the dark-mode logic in later shown in this file
 
