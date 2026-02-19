@@ -20,9 +20,9 @@ For a quick walkthrough on how the save functionality works, refer to the follow
 
 In user interface, you can save Spreadsheet data as Excel document by clicking `File > Save As` menu item in ribbon.
 
-The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event to trigger before saving the Spreadsheet as an Excel file.
+The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event to customize or cancel the save action which gets triggerred before saving the Spreadsheet as an Excel file.
 
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/spreadsheet/javascript-es6/open-save-cs5/index.ts %}
 {% endhighlight %}
@@ -153,19 +153,13 @@ By default, the Spreadsheet control saves the Excel file and downloads it to the
 **Server Endpoint**:
 
 ```csharp
-
     public string Save(SaveSettings saveSettings)
     {
-        ExcelEngine excelEngine = new ExcelEngine();
-        IApplication application = excelEngine.Excel;
         try
         {
-            
             // Save the workbook as stream.
             Stream fileStream = Workbook.Save<Stream>(saveSettings);
-            // Using XLSIO, we are opening the file stream and saving the file in the server under "Files" folder.
             // You can also save the stream file in your server location.
-            IWorkbook workbook = application.Workbooks.Open(fileStream);
             string basePath = _env.ContentRootPath + "\\Files\\" + saveSettings.FileName + ".xlsx";
             var file = System.IO.File.Create(basePath);
             fileStream.Seek(0, SeekOrigin.Begin);
@@ -180,7 +174,6 @@ By default, the Spreadsheet control saves the Excel file and downloads it to the
             return ex.Message;
         }
     }
-
 ```
 
 You can find the server endpoint code to save the spreadsheet data as an Excel file in this [attachment](https://www.syncfusion.com/downloads/support/directtrac/general/ze/WebApplication1_(1)-880363187). After launching the server endpoint, you need to update the URL on the client side sample as shown below.
