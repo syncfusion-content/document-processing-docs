@@ -371,8 +371,14 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Set font
 let font: PdfTrueTypeFont = document.embedFont(data, 13);
-// Draw text
-page.graphics.drawString(`שלום עולם!!!`, font, { x: 0, y: 200, width: 100, height: 100 }, new PdfBrush({ r: 0, g: 0, b: 0 }), new PdfStringFormat());
+// Create a new PDF string format
+let format: PdfStringFormat =  new PdfStringFormat();
+// Sets the text alignment of form field as right
+format.alignment = PdfTextAlignment.right; 
+// Sets the text direction of form field as rightToLeft
+format.textDirection = PdfTextDirection.rightToLeft;
+// Draw RTL text
+page.graphics.drawString(`שלום עולם!!!`, font, { x: 0, y: 200, width: 100, height: 100 }, new PdfBrush({ r: 0, g: 0, b: 0 }), format);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -387,8 +393,14 @@ var document = new ej.pdf.PdfDocument();
 var page = document.addPage();
 // Set font
 var font = document.embedFont(data, 13);
-// Draw text
-page.graphics.drawString(`שלום עולם!!!`, font, { x: 0, y: 200, width: 100, height: 100 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }), new ej.pdf.PdfStringFormat());
+// Create a new PDF string format
+let format =  new ej.pdf.PdfStringFormat();
+// Sets the text alignment of form field as right
+format.alignment = PdfTextAlignment.right; 
+// Sets the text direction of form field as rightToLeft
+format.textDirection = PdfTextDirection.rightToLeft;
+// Draw RTL text
+page.graphics.drawString(`שלום עולם!!!`, font, { x: 0, y: 200, width: 100, height: 100 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }), format);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -409,17 +421,18 @@ import { PdfDocument, PdfPage, PdfFont, PdfStandardFont, PdfCjkStandardFont, Pdf
 let document: PdfDocument = new PdfDocument();
 // Add a page
 let page: PdfPage = document.addPage();
-// Embed a font into the PDF document.
+// Embed a standard font into the PDF document.
 const embedded1: PdfStandardFont = document.embedFont(PdfFontFamily.timesRoman, 12,  PdfFontStyle.regular);
-const embedded2: PdfCjkStandardFont = document.embedFont(PdfCjkFontFamily.hanyangSystemsGothicMedium, 12,  PdfFontStyle.regular , true);
 // Gets a font variant from the base font with the given size and style
-const embedded3: PdfFont = embedded1.getFont(14, PdfFontStyle.bold);
-const embedded4: PdfFont = embedded2.getFont(14, PdfFontStyle.bold);
+const embedded2: PdfFont = embedded1.getFont(14, PdfFontStyle.bold);
+const embedded3: PdfFont = embedded1.getFont(14, PdfFontStyle.italic);
+// Embed a CJK font into the PDF document.
+const embedded4: PdfCjkStandardFont = document.embedFont(PdfCjkFontFamily.hanyangSystemsGothicMedium, 12,  PdfFontStyle.regular , true);
 // Draw string using embed font.
 page.graphics.drawString('timesRoman with regular', embedded1, {x: 10, y: 10, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
-page.graphics.drawString('timesRoman with bold', embedded3, {x: 10, y: 50, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
-page.graphics.drawString('Cjkfont with regular', embedded2, {x: 200, y: 10, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
-page.graphics.drawString('Cjkfont with bold', embedded4, {x: 200, y: 50, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('timesRoman with bold', embedded2, {x: 10, y: 50, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('timesRoman with italic', embedded3, {x: 200, y: 50, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('Cjkfont with regular', embedded4, {x: 200, y: 10, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
 document.save('Output.pdf');
 // Close the document

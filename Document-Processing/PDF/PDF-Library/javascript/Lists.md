@@ -259,7 +259,7 @@ let list: PdfUnorderedList = new PdfUnorderedList(new PdfListItemCollection(['PD
 // Set the marker style for the unordered list
 list.style = PdfUnorderedListStyle.circle;
 // Add a nested ordered list to the first list item
-list.items.at(0).subList = new PdfOrderedList(new PdfListItemCollection(['PDF.Base', 'PDF.Portable', 'Flutter', 'EJ2']));
+list.items.at(0).subList = new PdfOrderedList(new PdfListItemCollection(['JS', 'TS', 'Vue', 'Angular', 'ASP.Net Core']));
 // Draw the unordered list on the page
 list.draw(page, {x: 50, y: 150});
 // Save the document
@@ -279,7 +279,7 @@ var list = new ej.pdf.PdfUnorderedList(new ej.pdf.PdfListItemCollection(['PDF', 
 // Set the marker style for the unordered list
 list.style = ej.pdf.PdfUnorderedListStyle.circle;
 // Add a nested ordered list to the first list item
-list.items.at(0).subList = new ej.pdf.PdfOrderedList(new ej.pdf.PdfListItemCollection(['PDF.Base', 'PDF.Portable', 'Flutter', 'EJ2']));
+list.items.at(0).subList = new ej.pdf.PdfOrderedList(new ej.pdf.PdfListItemCollection(['JS', 'TS', 'Vue', 'Angular', 'ASP.Net Core']));
 // Draw the unordered list on the page
 list.draw(page, {x: 50, y: 150});
 // Save the document
@@ -290,7 +290,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## list pagination
+## List pagination
 
 This example shows how long lists automatically continue onto the next page when drawn using the `PdfUnorderedList` class. By applying a `PdfLayoutFormat`, the layout engine handles page breaks smoothly while preserving markers, indentation, and nested levels. This ensures consistent rendering of multi‑page or dynamically generated list content.
 

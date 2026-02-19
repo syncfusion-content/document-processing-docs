@@ -866,14 +866,14 @@ let page: pdfPage = document.addPage();
 // Access loaded form
 let form: PdfForm = document.form;
 // Create a new text box field
-const field: PdfTextBoxField = new PdfTextBoxField(page, 'fieldF', {
+const field: PdfTextBoxField = new PdfTextBoxField(page, 'DateField', {
   x: 50, y: 200, width: 150, height: 20,
 });
 // Sets the text value to text box field
 field.text = '18/08/2003';
 // Sets date formate
 const format: string = 'yyyy-mm-dd';
-// Create a new `PdfJavaScriptAction` for adding the action
+// Add a JavaScript action to run custom scripts or validations
 field.actions.format = new PdfJavaScriptAction(`AFDate_FormatEx("${format}");`);
 field.actions.keyPressed = new PdfJavaScriptAction(`AFDate_KeystrokeEx("${format}"):`);
 field.actions.validate = new PdfJavaScriptAction(`AFDate_Validate("${format}");`);
@@ -901,7 +901,7 @@ const field = new ej.pdf.PdfTextBoxField(page, 'fieldF', {
 field.text = '18/08/2003';
 // Sets date formate
 const format = 'yyyy-mm-dd';
-// Create a new `PdfJavaScriptAction` for adding the action
+// Add a JavaScript action to run custom scripts or validations
 field.actions.format = new ej.pdf.PdfJavaScriptAction(`AFDate_FormatEx("${format}");`);
 field.actions.keyPressed = new ej.pdf.PdfJavaScriptAction(`AFDate_KeystrokeEx("${format}"):`);
 field.actions.validate = new ej.pdf.PdfJavaScriptAction(`AFDate_Validate("${format}");`);

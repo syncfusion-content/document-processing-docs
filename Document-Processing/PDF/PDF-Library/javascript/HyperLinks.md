@@ -164,3 +164,91 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+## Modifying or updating existing hyperlinks
+
+This example shows how to update hyperlink annotations in a PDF using Syncfusion’s JavaScript PDF Library. By accessing an annotation through `page.annotations.at()`, you can check whether it’s a link annotation and then update its URL or bounding region. This makes it easy to refresh outdated links or adjust navigation behavior whenever the document changes.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfTextWebLinkAnnotation } from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Access the first page
+let page: PdfPage = document.getPage(0);
+// Get the first annotation of the page
+let annotation: PdfTextWebLinkAnnotation = page.annotations.at(0) as PdfTextWebLinkAnnotation;
+// Modified its properties
+annotation.url = 'https://www.google.co.in/';
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Access the first page
+var page = document.getPage(0);
+// Get the first annotation of the page
+var annotation = page.annotations.at(0);
+// Modified its properties
+if (annotation instanceof ej.pdf.PdfTextWebLinkAnnotation) {
+    annotation.url = 'https://www.google.co.in/';
+}
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Removing hyperlinks
+
+This example demonstrates how to remove hyperlink annotations from a PDF using Syncfusion’s JavaScript PDF Library. By reviewing each annotation and checking whether it represents a hyperlink, you can remove it using either `remove()` or `removeAt()`. This helps clean up outdated or unwanted links while keeping the rest of the document content intact.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfTextWebLinkAnnotation } from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Access the first page
+let page: PdfPage = document.getPage(0);
+// Access first annotation from the PDF page
+let annotation: PdfTextWebLinkAnnotation = page.annotations.at(0) as PdfTextWebLinkAnnotation;
+// Remove an annotation from the collection
+page.annotations.remove(annotation);
+// Remove an annotation with specific index
+page.annotations.removeAt(1);
+// Save the document
+document.save('output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Access the first page
+var page = document.getPage(0);
+// Access first annotation from the PDF page
+var annotation = page.annotations.at(0);
+// Remove an annotation from the collection
+if (annotation instanceof ej.pdf.PdfTextWebLinkAnnotation) {
+    page.annotations.remove(annotation);
+}
+// Remove an annotation with specific index
+page.annotations.removeAt(1);
+// Save the document
+document.save('output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
