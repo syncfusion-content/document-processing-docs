@@ -17,7 +17,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
 ## How‑To
 
 - **Place the viewer inside layout components:**
-    - Insert the PDF Viewer inside standard divs, CSS Grid cells, Flexbox containers, and multi‑column panels. The viewer will expand to fill its parent container when the container has a defined height.
+    - Insert the PDF Viewer inside standard divs, CSS Grid cells, Flex box containers, and multi‑column panels. The viewer will expand to fill its parent container when the container has a defined height.
 
 	Basic div:
 

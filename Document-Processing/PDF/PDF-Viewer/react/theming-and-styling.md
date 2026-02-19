@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Theming and Styling
+# Theming and Styling in React PDF Viewer
 
 The React PDF Viewer supports a wide range of built-in themes and flexible UI customization to match your application's design.
 
@@ -46,7 +46,7 @@ This short, guided walkthrough shows a minimal end-to-end customization flow:
 
 2. Add the Tailwind theme imports to your global CSS (see Quick start).
 
-3. Render the PDF Viewer in `src/App.tsx` and verify the default look.
+3. Render the PDF Viewer in `src/App` and verify the default look.
 
 4. Add a theme switcher using the dark-mode logic in later shown in this file
 
