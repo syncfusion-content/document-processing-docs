@@ -7,7 +7,8 @@ platform: document-processing
 documentation: ug
 ---
 
-# Deploy Spreadsheet Server to Azure App Service from Visual Studio
+# Publish Spreadsheet Server to Azure App Service using Visual Studio
+
 
 ## Prerequisites
 

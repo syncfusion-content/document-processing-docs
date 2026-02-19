@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Deploy Spreadsheet Server Docker Image to Azure App Service via CLI
+# Deploy Spreadsheet Docker to Azure App Service using Azure CLI
 
 ## Prerequisites
 
