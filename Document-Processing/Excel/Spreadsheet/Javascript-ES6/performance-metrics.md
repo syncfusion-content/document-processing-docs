@@ -21,8 +21,8 @@ The following configuration was used for the performance evaluations:
 * **Hardware**: Modern multi‑core processor
 * **RAM**: 16 GB or higher
 * **Spreadsheet Version**:
-  * [NPM Version](https://www.npmjs.com/package/@syncfusion/ej2-spreadsheet/v/32.2.4)  
-  * [NuGet Version](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core/32.2.4)  
+  * [NPM Version](https://www.npmjs.com/package/@syncfusion/ej2-spreadsheet/v/32.2.5)  
+  * [NuGet Version](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core/32.2.5)  
 * **Data Source**: Mixed data types (numbers, text, formats, validations)
 
 ## Evaluated Features
