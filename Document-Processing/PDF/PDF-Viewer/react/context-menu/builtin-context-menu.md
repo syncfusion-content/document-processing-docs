@@ -17,12 +17,19 @@ The React PDF Viewer includes a context-sensitive menu that updates dynamically 
 Menu items vary depending on the target element:
 
 * **Text**: Displays options to annotate and copy selected text.
+
   ![context menu on text](../images/context-menu-text.png)
+
 * **Annotations**: Provides options to copy, cut, paste, or remove annotations, and add comments.
+
   ![context menu on annotation](../images/context-menu-annotation.png)
+
 * **Form Fields**: Shows standard form field interactions, such as modifying properties. The context menu for form fields appears only when the viewer is in **designer mode**.
+
   ![context menu on form fields](../images/context-menu-forms.png)
+
 * **Empty Space**: Displays the option to paste a previously copied annotation or form field.
+
   ![context menu on empty space](../images/context-menu-empty.png)
 
 ## Default Item Reference
@@ -57,7 +64,7 @@ The following items are available when interacting with annotations:
 These items appear when the viewer is in designer mode and a form field is selected:
 
 | Item | Description |
-| :--- | : :--- |
+| :--- | :--- |
 | **Copy** | Copies the selected form field for duplication. |
 | **Cut** | Removes the selected form field for relocation. |
 | **Paste** | Pastes a copied or cut form field. |

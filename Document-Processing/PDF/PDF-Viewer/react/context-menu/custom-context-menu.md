@@ -14,12 +14,12 @@ The PDF Viewer supports extensive customization of the context menu, including r
 
 ## Add Custom Context Menu Items
 
-You can add custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#addcustommenu) method. This is typically implemented during the `documentLoad` event.
+You can add custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#addcustommenu) method. This is typically implemented during the [`documentLoad`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#documentload) event.
 
 ### Implementation Guide
 
 1. Define the menu items as an array of objects.
-2. Call the `addCustomMenu` method within the `documentLoad` event handler.
+2. Call the [`addCustomMenu`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#addcustommenu) method within the [`documentLoad`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#documentload) event handler.
 
 ```jsx
    export function App() {
@@ -314,12 +314,20 @@ root.render(<App />);
 
 ## Disable the Context Menu Entirely
 
-The context menu in the PDF Viewer can be fully disabled by setting the `enableContextMenu` property to `false`.
+The context menu in the PDF Viewer can be fully disabled by setting the [`contextMenuOption`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#contextmenuoption) property to `None`.
 
 ```js
 <PdfViewerComponent
-    id="container"
-    enableContextMenu={false}>
+    id="pdfViewer"
+    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    height="100%"
+    width="100%"
+    contextMenuOption='None' >
+    <Inject
+        services={[
+            Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields
+        ]}
+    />
 </PdfViewerComponent>
 ```
 
@@ -341,6 +349,6 @@ The following is the output of the custom context menu with customization.
 N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` within the <div> element in either the `index.TSX` or `index.JSX` file:
 **serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**.
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/react/custom-context-menu/index.html" %}
+{% previewsample "document-Processing/code-snippet/pdfviewer/react/custom-context-menu" %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Custom%20Context%20Menu)
