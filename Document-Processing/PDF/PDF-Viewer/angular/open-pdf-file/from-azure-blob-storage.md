@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open PDF from Azure Blob Storage into PDF Viewer Component | Syncfusion
+title: Open PDF from Azure Blob Storage into PDF Viewer | Syncfusion
 description: Learn here all about how to Open PDF files from Azure Blob Storage in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open PDF files from Azure Blob Storage
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Azure Blob Storage
+# Open PDF from Azure Blob Storage in Angular
 
 The Angular PDF Viewer component supports loading PDF files from Azure Blob Storage using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 

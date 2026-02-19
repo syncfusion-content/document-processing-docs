@@ -26,7 +26,7 @@ The PDF Viewer component provides options to add, edit, and delete form fields. 
 Use the addFormField method to add form fields programmatically. Pass the form field type and the corresponding property object as parameters. The following example demonstrates adding multiple fields on document load.
 
 {% tabs %}
-{% highlight ts tabtitle="app.ts" %}
+{% highlight ts tabtitle="app.component.ts" %}
 import { ViewChild } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import {PdfViewerComponent, LinkAnnotationService, BookmarkViewService, MagnificationService, ThumbnailViewService,
@@ -101,7 +101,7 @@ Within the template, configure the PDF Viewer by adding the `[serviceUrl]='servi
 Use the updateFormField method to modify a form field programmatically. Retrieve the target field from the formFieldCollections property (by object or ID) and pass it as the first parameter. Provide the properties to update as the second parameter. The following example updates the background color of a Textbox field.
 
 {% tabs %}
-{% highlight ts tabtitle="app.ts" %}
+{% highlight ts tabtitle="app.component.ts" %}
 import { ViewChild } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import {PdfViewerComponent, LinkAnnotationService, BookmarkViewService, MagnificationService, ThumbnailViewService,
@@ -177,7 +177,7 @@ Within the template, configure the PDF Viewer by adding the `[serviceUrl]='servi
 Use the deleteFormField method to remove a form field programmatically. Retrieve the target field from the formFieldCollections property (by object or ID) and pass it to deleteFormField. The following example deletes the first form field.
 
 {% tabs %}
-{% highlight ts tabtitle="app.ts" %}
+{% highlight ts tabtitle="app.component.ts" %}
 import { ViewChild } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import {PdfViewerComponent, LinkAnnotationService, BookmarkViewService, MagnificationService, ThumbnailViewService,
