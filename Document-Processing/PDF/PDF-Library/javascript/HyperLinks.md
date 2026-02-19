@@ -29,6 +29,8 @@ let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 36, PdfF
 let size: Size = font.measureString('Syncfusion');
 // Create a new text web link annotation
 let annotation: PdfTextWebLinkAnnotation = new PdfTextWebLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0}, { r: 165, g: 42, b: 42 }, 1);
+// Sets the URL of the annotation.
+annotation.url = ‘http://www.syncfusion.com’;
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document
@@ -51,6 +53,8 @@ var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFont
 var size = font.measureString('Syncfusion');
 // Create a new text web link annotation
 var annotation = new ej.pdf.PdfTextWebLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0 }, { r: 165, g: 42, b: 42 }, 1);
+// Sets the URL of the annotation.
+annotation.url = ‘http://www.syncfusion.com’;
 // Add annotation to the page
 page.annotations.add(annotation);
 // Save the document

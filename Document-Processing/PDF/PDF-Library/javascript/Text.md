@@ -411,7 +411,7 @@ document.destroy();
 
 ## Embedded font
 
-This example shows how to embed fonts using `document.embedFont()` to ensure consistent text rendering across all platforms. The library supports embedding `PdfStandardFont`, `PdfCjkStandardFont`, and `PdfTrueTypeFont` for reliable Western, CJK, and Unicode text display. After embedding, the font can be applied through `embedded.getFont()`, allowing precise control over size and style.
+This example shows how to embed fonts using `document.embedFont()` to ensure consistent text rendering across all platforms. The library supports embedding `PdfStandardFont`, `PdfCjkStandardFont`, and `PdfTrueTypeFont` for reliable Unicode text display. After embedding, the font can be applied through `embedded.getFont()`, allowing precise control over size and style. Additionally, using embedded fonts helps reduce overall PDF size, since the font dictionary is not duplicated for each usage—ensuring cleaner and more efficient output.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

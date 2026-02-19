@@ -244,7 +244,7 @@ document.destroy();
 
 ## Creating nested list structures
 
-This example demonstrates how to create nested list structures in a PDF document using the `PdfUnorderedList` and `PdfOrderedList` classes. Nested lists allow you to organize information hierarchically by placing one list inside another. This is useful when representing multi‑level data, outlining topics with subpoints, or grouping related items clearly.
+This example demonstrates how to create nested list structures in a PDF document using the `PdfUnorderedList` and `PdfOrderedList` classes. Nested lists allow you to organize information hierarchically by placing one list inside another. This is useful when representing multi‑level data, outlining topics with sub points, or grouping related items clearly.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
