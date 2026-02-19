@@ -20,7 +20,7 @@ For a quick walkthrough on how the save functionality works, refer to the follow
 
 In user interface, you can save Spreadsheet data as Excel document by clicking `File > Save As` menu item in ribbon.
 
-The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event to customize or cancel the save action which gets triggerred before saving the Spreadsheet as an Excel file.
+The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event to customize or cancel the save action which gets triggered before saving the Spreadsheet as an Excel file.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
