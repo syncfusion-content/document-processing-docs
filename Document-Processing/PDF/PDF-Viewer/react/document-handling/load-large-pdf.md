@@ -22,7 +22,7 @@ The **Syncfusion PDF Viewer is fully optimized for these heavy workloads**, and 
 
 ### Viewer Capability Highlights
 - **Smooth performance for PDFs up to 1 GB**
-- **Supports viewing files up to ~2 GB** depending on system capacity
+- **Supports viewing files up to ~2 GB**
 - **1 GB PDFs typically load within 5–6 seconds** 
 - **Optimized incremental page loading** for faster interaction
 
@@ -71,7 +71,7 @@ Blob loading is highly recommended for all PDFs above **200 MB**, especially whe
 The Syncfusion PDF Viewer is optimized to handle:
 
 - **Up to 1 GB** → very smooth
-- **Up to ~2 GB** → supported based on system capability
+- **Up to ~2 GB**
 
 This suits enterprise workflows involving large engineering drawings, client records, scanned books, and multi‑page financial reports.
 
@@ -100,12 +100,6 @@ If these features are not required in your application:
 - Disable them to reduce background tasks
 - Improve page rendering speed
 - Provide a smoother experience for large documents
-
-#### Example (remove text search & selection)
-```tsx
-<Inject services={[Toolbar, Magnification, Navigation, Print]} />
-```
-
 ---
 
 #### 3.2 Thumbnail View & Organize Pages
@@ -123,6 +117,11 @@ If thumbnails or page reordering are not essential:
 - Prevent background thumbnail rendering
 - Reduce memory usage
 - Improve navigation responsiveness
+
+#### Example (remove unneccesary modules)
+```tsx
+<Inject services={[Toolbar, Magnification, Navigation, Print]} />
+```
 
 ---
 
@@ -158,7 +157,15 @@ By default, the viewer uses **sessionStorage** to store interactive session data
 
 #### Enable Local Storage
 ```tsx
-enableLocalStorage={true}
+			<PdfViewerComponent
+				id="container"
+				documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+				resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+				style={{ height: '640px' }}
+				enableLocalStorage={true}
+			>
+				<Inject services={[Toolbar, Magnification, Navigation, Print, Annotation, FormFields]} />
+			</PdfViewerComponent>
 ```
 
 This is highly recommended when working with legal documents, tax forms, interactive applications, or PDFs containing thousands of annotations.
@@ -175,34 +182,6 @@ For the best large‑PDF experience:
 - Avoid opening multiple large PDFs simultaneously
 
 This ensures the viewer receives enough system resources.
-
----
-
-## Minimal Recommended Configuration Example
-
-```tsx
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Print, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-	return (
-		<div className='control-section'>
-			<PdfViewerComponent
-				id="container"
-				documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-				resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-				style={{ height: '640px' }}
-				enableLocalStorage={true}
-			>
-				<Inject services={[Toolbar, Magnification, Navigation, Print]} />
-			</PdfViewerComponent>
-		</div>
-	);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-```
 
 ---
 

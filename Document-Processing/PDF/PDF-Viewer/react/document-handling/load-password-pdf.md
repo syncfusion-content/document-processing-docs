@@ -48,7 +48,7 @@ You can directly pass the password in the [`load`](https://ej2.syncfusion.com/re
 
 ```tsx
 viewer.load(
-  'https://cdn.syncfusion.com/content/pdf/password-protected.pdf',
+  'https://your-api/password-protected.pdf',
   'Password'
 );
 ```
@@ -66,27 +66,13 @@ This is useful when the password is known beforehand.
 If the [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentpath) points to a password-protected PDF:
 
 ```tsx
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Print, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-	return (
-		<div className='control-section'>
-			<PdfViewerComponent
-				id="container"
-                //Load URL for Password Protected Document 
-				documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-				resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-				style={{ height: '640px' }}
-			>
-				<Inject services={[Toolbar, Magnification, Navigation, Print]} />
-			</PdfViewerComponent>
-		</div>
-	);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+    <PdfViewerComponent
+        id="container"
+        //Load URL for Password Protected Document 
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ height: '640px' }}
+    >
 ```
 
 The viewer will:
@@ -99,48 +85,5 @@ The viewer will:
 ![Password Protected Pop-up](../images/password-popup.png)
 
 N> No password should be passed inside `documentPath`.
-
----
-
-## Complete Example Using `viewer.load`
-
-```tsx
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  Print,
-  Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  let viewer;
-
-  const onDocumentLoad = () => {
-    viewer.load(
-      'https://cdn.syncfusion.com/content/pdf/password-protected.pdf',
-      'Password'
-    );
-  };
-
-  return (
-    <PdfViewerComponent
-      id="container"
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      style={{ height: '640px' }}
-      ref={(scope) => (viewer = scope)}
-      documentLoad={onDocumentLoad}
-    >
-      <Inject services={[Toolbar, Magnification, Navigation, Print]} />
-    </PdfViewerComponent>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-```
 
 ---
