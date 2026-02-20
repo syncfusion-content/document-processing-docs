@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Syncfusion React PDF Viewer with React Router
+# React Router v7 Quickstart
 
-Note: Remix's framework features were merged into React Router v7 and later. This guide targets React Router v7's framework-mode and shows a client-only (standalone) integration of the Syncfusion React PDF Viewer.
+N> Remix's framework features were merged into React Router v7 and later. This guide targets React Router v7's framework-mode and shows a client-only (standalone) integration of the Syncfusion React PDF Viewer.
 
 ## Prerequisites
 
@@ -24,20 +24,20 @@ Note: Remix's framework features were merged into React Router v7 and later. Thi
 Different starters create different folder layouts. Pick the mapping that matches your project and follow the file locations shown below.
 
 - create-react-router (framework-mode — `app/` tree)
-  - Global CSS: `app/app.css` (imported by `root.tsx`)
-  - Component: `app/components/PdfViewerClient.jsx`
-  - Route: `app/routes/home.tsx` or `app/routes/index.tsx`
+  - Global CSS: `app/app.css` (imported by `root.ts`)
+  - Component: `app/components/PdfViewerClient.ts`
+  - Route: `app/routes/home.ts` or `app/routes/index.ts`
 
 - Vite / plain React (traditional — `src/` tree)
-  - Global CSS: `src/index.css` (imported from `src/main.jsx`)
-  - Component: `src/components/PdfViewerClient.jsx`
-  - Route wrapper: `src/App.jsx` + `BrowserRouter` in `src/main.jsx`
+  - Global CSS: `src/index.css` (imported from `src/main.ts`)
+  - Component: `src/components/PdfViewerClient.ts`
+  - Route wrapper: `src/App.ts` + `BrowserRouter` in `src/main.ts`
 
 Use the file paths that match your project layout when following the steps below.
 
 ## Step 1 — Create a React + React Router (v7) app
 
-If you want the React Router framework-mode project (creates an `app/` tree), use the official scaffolder:
+If you want the React Router framework-mode project (creates an `app/` tree), use the official scaffolding tool:
 
 ```bash
 npx create-react-router@latest remix-pdf-viewer
@@ -87,11 +87,11 @@ Place the Syncfusion CSS imports in your project's global stylesheet. Choose the
 
 create-react-router (`app/` tree)
 
- - File: `app/app.css` (or similar global CSS imported by `root.tsx`)
+ - File: `app/app.css` (or similar global CSS imported by `root.ts`)
 
 Vite / plain React (`src/` tree)
 
- - File: `src/index.css` (imported from `src/main.jsx`)
+ - File: `src/index.css` (imported from `src/main.ts`)
 
 Example CSS (same for both):
 
@@ -108,9 +108,9 @@ Example CSS (same for both):
 
 Then import the stylesheet according to your starter:
 
-create-react-router (`app/root.tsx` or `app/root.jsx`): ensure the global CSS is imported or linked from `root` following the starter conventions.
+create-react-router (`app/root.ts` or `app/root.ts`): ensure the global CSS is imported or linked from `root` following the starter conventions.
 
-Vite / plain React (`src/main.jsx`):
+Vite / plain React (`src/main.ts`):
 
 ```js
 import React from 'react';
@@ -132,16 +132,16 @@ The PDF Viewer depends on browser APIs and WebAssembly; avoid server-side render
 
 create-react-router (`app/` tree)
 
- - `app/components/PdfViewerClient.jsx`
+ - `app/components/PdfViewerClient.ts`
 
 Vite / plain React (`src/` tree)
 
- - `src/components/PdfViewerClient.jsx`
+ - `src/components/PdfViewerClient.ts`
 
 Example component (works in either location):
 
-```jsx
-// components/PdfViewerClient.jsx
+```ts
+// components/PdfViewerClient.ts
 import React, { useEffect, useState } from 'react';
 import {
   PdfViewerComponent,
@@ -175,9 +175,9 @@ export default function PdfViewerClient() {
 
 Routing / usage examples:
 
-create-react-router (`app/routes/home.tsx` or `app/routes/index.tsx`):
+create-react-router (`app/routes/home.ts` or `app/routes/index.ts`):
 
-```tsx
+```ts
 import PdfViewerClient from '../components/PdfViewerClient';
 
 export default function Home() {
@@ -185,9 +185,9 @@ export default function Home() {
 }
 ```
 
-Vite / plain React (`src/App.jsx`):
+Vite / plain React (`src/App.ts`):
 
-```jsx
+```ts
 import { Routes, Route } from 'react-router-dom';
 import PdfViewerClient from './components/PdfViewerClient';
 
@@ -211,4 +211,3 @@ npm run dev
 
 - [Getting started overview](../getting-started-overview)
 - [Creating a Next.js application using Syncfusion React PDF Viewer](./nextjs-getting-started)
-- [Getting started with Syncfusion React PDF Viewer in Preact](./nextjs-getting-started)

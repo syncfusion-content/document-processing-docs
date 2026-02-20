@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion React PDF Viewer in SharePoint Framework (SPFx)
+title: Syncfusion React PDF Viewer in SPFx
 description: Quickstart to integrate the Syncfusion React PDF Viewer into an SPFx React web part (standalone/client-side rendering).
 control: PDF Viewer
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Syncfusion React PDF Viewer in SharePoint Framework (SPFx)
+# Syncfusion React PDF Viewer in SPFx
 
 ## Overview
 
@@ -61,7 +61,7 @@ import '@syncfusion/ej2-splitbuttons/styles/material.css';
 import '@syncfusion/ej2-pdfviewer/styles/material.css';
 ```
 
-If your SPFx build configuration forbids direct CSS imports from node_modules, add these `@import` lines to your component SCSS (for example `PdfViewer.module.scss`) using the appropriate path or deploy the CSS from a CDN.
+If your SPFx build configuration forbids direct CSS imports from node_modules, add these `@import` lines to your component CSS (for example `PdfViewer.module.css`) using the appropriate path or deploy the CSS from a CDN.
 
 ## Step 4 — Provide runtime assets and choose rendering mode
 
