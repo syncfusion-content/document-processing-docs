@@ -8,19 +8,21 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieving Base64 Value from a PDF in PDF Viewer
+# Retrieving Base64 from a PDF in Vue PDF Viewer
 
 ### Overview
 
-This guide shows how to get the base64-encoded value of a PDF loaded in the Syncfusion PDF Viewer using Vue. This is useful for sending the PDF as a base64 string or processing it on the client.
+This guide shows how to obtain the Base64-encoded value of a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using Vue. Producing a Base64 string is useful for sending the PDF to a server, embedding it in JSON payloads, or client-side processing.
 
-### How to Retrieve Base64 Value
+### How to retrieve the Base64 value
 
-**Step 1:** Follow the steps provided in the [Vue PDF Viewer Getting Started documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
+**Step 1: Create the PDF Viewer sample**
 
-**Step 2:** Set Up Your Vue Component
+Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide for the Vue PDF Viewer.
 
-Create a Vue component and set up the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. Add a button to trigger the conversion to a base64 string.
+**Step 2: Set up the Vue component**
+
+Create an Vue component and update the template to include a button that triggers conversion to a Base64 string. The samples below show both standalone and server-backed viewer configurations.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -176,6 +178,6 @@ export default {
 
 ### Conclusion
 
-By following these steps, a loaded PDF can be converted to a Base64 string on button click for transfer or processing.
+By implementing these steps in the Vue component, a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer can be converted into a Base64-encoded data URL when a button is clicked. This facilitates the manipulation or transfer of PDF data as needed.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)
