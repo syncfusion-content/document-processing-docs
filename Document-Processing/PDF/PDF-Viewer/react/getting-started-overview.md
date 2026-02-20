@@ -22,12 +22,12 @@ This page is intentionally a short introduction — choose a path and follow its
 - [Standalone tutorial](./getting-started)
 - [Server‑backed tutorial](./getting-started-with-server-backed)
 
-Related:
+**Related**
 
 - [Annotations](./annotation/text-markup-annotation)
 - [Form designer](./forms/form-designer)
 - [Organize pages](./organize-pages/overview)
 
-See also:
+**See also**
 
 - [PDF Viewer overview](../overview)

@@ -72,5 +72,5 @@ render(<App />, document.getElementById('app'));
 
 **See also**
 
-- [Getting started with the Syncfusion React PDF Viewer](./getting-started-overview)
-- [System requirements for Syncfusion React PDF Viewer](https://help.syncfusion.com/document-processing/system-requirements)
+- [Getting started with the Syncfusion React PDF Viewer](../getting-started-overview)
+- [System requirements for Syncfusion React PDF Viewer](../../../../System-Requirements)
