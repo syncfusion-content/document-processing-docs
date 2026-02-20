@@ -14,7 +14,7 @@ You can modify form fields values using the **UI** or **API**.
 ## Modify PDF Form Field values using the UI
 The Syncfusion WPF PDF Viewer allows users to modify PDF form fields values directly through the user interface without using code. Users can click on form fields and enter or select values based on the field type.
 
-![Modify Form fields](./images/ModifyFormFieldsUI.gif)
+![Modify Form fields](./images/FormFillingUI.gif)
 
 The WPF PDF Viewer supports common form fields such as text boxes, check boxes, radio buttons,list boxes, and signature fields. Filled values can be edited at any time, and the entered data is retained during the viewing session.
 
