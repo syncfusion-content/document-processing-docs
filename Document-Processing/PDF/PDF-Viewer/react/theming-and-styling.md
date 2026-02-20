@@ -145,34 +145,36 @@ Apply overrides using a wrapper class so the rules are scoped and safe to mainta
 
 ```css
 /* App.css */
+/* This rule sets a scoped, custom black background for the PDF viewer page container */
 .e-custom-style .e-pv-page-container {
-	background: #0b1220; /* custom viewer background */
+        background: #0b1220;
 }
-/* Adds custom styles for signature fields */
+
+/* The following rules style the signature form fields with blue background. See screenshot below for more clarity */
 .e-custom-style .e-pdfviewer-signatureformfields,
 .e-custom-style .e-pdfviewer-signatureformfields-signature {
-  border: 1px solid #b3d1ff !important;
-  border-radius: 5px;
+    border: 1px solid #b3d1ff !important;
+    border-radius: 5px;
 }
 .e-custom-style span[id^='signIcon'] {
-  background-color: #e6f2ff !important;
-  border: 1px solid #b3d1ff !important;
-  border-radius: 4px !important;
-  font-weight: bold !important;
-  color: #003366 !important;
-  display: inline-block !important;
-  height: 100% !important;
-  text-align: center !important;
+    background-color: #e6f2ff !important;
+    border: 1px solid #b3d1ff !important;
+    border-radius: 4px !important;
+    font-weight: bold !important;
+    color: #003366 !important;
+    display: inline-block !important;
+    height: 100% !important;
+    text-align: center !important;
 }
 .e-custom-style span[id^='initialIcon'] {
-  background-color: #e6f2ff !important;
-  border: 1px solid #b3d1ff !important;
-  border-radius: 4px !important;
-  font-weight: bold !important;
-  color: #003366 !important;
-  display: inline-block !important;
-  height: 100% !important;
-  text-align: center !important;
+    background-color: #e6f2ff !important;
+    border: 1px solid #b3d1ff !important;
+    border-radius: 4px !important;
+    font-weight: bold !important;
+    color: #003366 !important;
+    display: inline-block !important;
+    height: 100% !important;
+    text-align: center !important;
 }
 ```
 
@@ -188,14 +190,15 @@ export function App() {
                 id="container"
                 documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                 resourceUrl="https://cdn.syncfusion.com/ej2/32.2.5/dist/ej2-pdfviewer-lib"
-                style={{ 'height': '640px' }}>
-
+                style={{ 'height': '100%' }} >
                 <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]} />
             </PdfViewerComponent>
         </div>
     );
 }
 ```
+
+![Viewer background and signature fields example](images/styling-siganture-page-container.png)
 
 ### Explanation
 

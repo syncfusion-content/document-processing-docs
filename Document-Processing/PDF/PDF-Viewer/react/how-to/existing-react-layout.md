@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrating into Existing React Layout
+# Integrating PDF Viewer into Existing React Layouts
 
 ## Overview
 
@@ -41,6 +41,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
         );
 	}
 	```
+    ![PDF Viewer in div](../images/react-layouts-div.png)
 
 	Flex container: keep `minHeight: 0` on flex children so the viewer can shrink/grow correctly:
 
@@ -52,7 +53,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
 	export function App() {
         return (
             <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-                <header style={{ height: '100px' }}>Toolbar</header>
+                <header style={{ height: '100px', textAlign: 'center' }}>Header Content</header>
                 <main style={{ flex: 1, minHeight: 0 }}>
                     <div style={{ height: '100%' }}>
                         <PdfViewerComponent
@@ -69,6 +70,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
         );
 	}
 	```
+    ![PDF Viewer in Flex box](../images/react-layouts-flexbox.png)
 
 	CSS Grid - reserve rows/columns using `grid-template-rows` or `grid-template-columns`:
 
@@ -150,6 +152,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
         }
     };
 	```
+    ![PDF Viewer in grid](../images/react-layouts-grid.png)
 
 - **Use viewer inside Tab components**
 	- The react PDF Viewer are also supported inside Syncfusion tab components. 
@@ -187,7 +190,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
         return (
             <div className="page">
                 <header className="header">
-                    <h3 style={{ margin: 0 }}>Tab + PDF Viewer</h3>
+                    <h3 style={{ margin: 0 }}>PDF Viewer in tab</h3>
                 </header>
 
                 <div className="tab-host">
@@ -222,6 +225,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
         );
     };
 	```
+    ![PDF Viewer in tab](../images/react-layouts-tab.png)
 
 - **Use viewer inside Dialog**
 	- If the viewer sits inside a dialog, for example Syncfusion Dialog, render or initialize the viewer after the dialog open events. The DOM must be visible for the viewer to measure layout.
@@ -292,6 +296,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
         );
     };
 	```
+    ![PDF Viewer in dialog](../images/react-layouts-dialog.png)
 
 - **Use viewer inside Collapsible sections**
 	- For accordions or collapsible containers, either render the viewer lazily when the section expands or dispatch the resize event after expansion so the viewer can recompute layout.
@@ -394,6 +399,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
         border-bottom: 1px solid #e5e5e5;
     }
     ```
+    ![PDF Viewer in accordion](../images/react-layouts-accordion.png)
 
 ## Why visibility and height matter
 
