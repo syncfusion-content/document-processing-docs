@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Field Events in WPF Pdfviewer control | Syncfusion
-description: Learn here all about different form field event in Syncfusion WPF Pdfviewer.
+description: Learn about the different form field events supported in the Syncfusion WPF PDF Viewer and how they help manage user interactions and enhance form workflows.
 control: Form Field Events
 control: PDF Viewer
 documentation: ug

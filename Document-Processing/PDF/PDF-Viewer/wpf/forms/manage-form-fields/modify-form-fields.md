@@ -14,7 +14,7 @@ You can modify form fields values using the **UI** or **API**.
 ## Modify PDF Form Field values using the UI
 The Syncfusion WPF PDF Viewer allows users to modify PDF form fields values directly through the user interface without using code. Users can click on form fields and enter or select values based on the field type.
 
-![FormFilling](./images/ModifyFormFieldsUI.gif)
+![Modify Form fields](./images/ModifyFormFieldsUI.gif)
 
 The WPF PDF Viewer supports common form fields such as text boxes, check boxes, radio buttons,list boxes, and signature fields. Filled values can be edited at any time, and the entered data is retained during the viewing session.
 
@@ -26,7 +26,7 @@ You can Modify PDF form fields values programmatically by acessing the existing 
 ### Textbox
 Update TextBox Field Through the UI
 You can modify text box fields at runtime from UI.
-![FormFilling](./images/ModifyFormFieldsUI.gif)
+![TextboxField](./images/TextBoxField.gif)
 
 Update TextBox Field Programmatically (Code‑Behind)
 
@@ -67,6 +67,7 @@ End Sub
 ### CheckBox
 Update CheckBox Field Through the UI
 You can set checkbox fields at runtime from UI.
+![CheckboxField](./images/CheckBoxField.gif)
 
 Update CheckBox Field Programmatically (Code‑Behind)
 
@@ -101,6 +102,7 @@ End Sub
 ### RadioButton
 Update Radio Button Field Through the UI
 You can change radio button selections at runtime from UI.
+![RadioButtonField](./images/Radiobutton.gif)
 
 Update Radio Button Field Programmatically (Code‑Behind)
 
@@ -136,6 +138,7 @@ End Sub
 ### ListBox
 Update ListBox Field Through the UI
 You can set list box selections at runtime from UI.
+![ListBoxField](./images/ListBoxField.gif)
 
 Update ListBox Field Programmatically (Code‑Behind)
 
@@ -171,6 +174,7 @@ End Sub
 ### ComboBox
 Update ComboBox Field Through the UI
 You can set combo box selections at runtime from UI.
+![ComboBoxField](./images/ComboboxField.gif)
 
 Update ComboBox Field Programmatically (Code‑Behind)
 
@@ -204,7 +208,6 @@ End Sub
 {% endtabs %}
 
 ### Signature Field
-Update Signature Field Through the UI
 You can apply or update signature fields at runtime from UI.
 #### Add a signature from signature field in UI
 

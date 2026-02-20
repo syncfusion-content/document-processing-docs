@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Keyboard shortcuts for Form Fields in WPF PDF Viewer | Syncfusion
-description:  Learn Keyboard shortcuts for Form Fields in WPF PDF Viewer.
+description: Learn essential keyboard shortcuts for navigating and filling PDF form fields in the WPF PDF Viewer to improve speed, accuracy, and workflow efficiency.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-## Keyboard Shortcuts:
+# Keyboard Shortcuts:
 
 The below keyboard shortcuts are used to navigate through the form fields present in the PDF document.
 
