@@ -96,7 +96,7 @@ The `pageOrganizerSettings` API allows you to customize the page management func
 
 ## Open the page organizer dialog
 
-The `openPageOrganizer` method programmatically opens the page organizer dialog, providing access to page management tools.
+The `openPageOrganizer` method opens the page organizer dialog programmatically.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

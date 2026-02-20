@@ -8,7 +8,9 @@ documentation: ug
 ---
 # Accessibility in Syncfusion PDF Viewer component
 
-The PDF Viewer component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It also integrates [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used for accessibility evaluation.
+The PDF Viewer component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It implements [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) to ensure comprehensive accessibility support for all users.
+
+## Accessibility compliance
 
 Below is an outline of the accessibility compliance for the PDF Viewer component:
 
@@ -58,7 +60,9 @@ Below is an outline of the accessibility compliance for the PDF Viewer component
 
 ## Keyboard interaction
 
-The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guidelines, making it easy for users of assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the PDF Viewer component:
+The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guidelines, making it accessible for users of assistive technologies and those who rely solely on keyboard navigation. The built-in keyboard shortcuts support common operations such as document navigation, zooming, searching, text selection, and annotation management.
+
+### Built-in keyboard shortcuts
 
 | **Press (Windows)** | **Press (Macintosh)** | **To do this** |
 | --- | --- | --- |
@@ -93,15 +97,30 @@ The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/W
 | <kbd>Shift + H</kbd> | <kbd>Shift + H</kbd> | Enable pan mode |
 | <kbd>Shift + V</kbd> | <kbd>Shift + V</kbd> | Enable text selection mode |
 
-The current implementation of our PDF Viewer includes keyboard shortcuts for functions such as scrolling, zooming, text search, printing, and annotation deletion.
+## Custom keyboard commands
 
-To enhance user experience, we are adding additional keyboard shortcuts for actions like navigating between pages, accessing specific pages, toggling annotation tools, and displaying PDF elements (outlines, annotations, bookmarks, and thumbnails).
+In addition to the built-in keyboard shortcuts, the PDF Viewer component supports custom keyboard commands, allowing developers to define application-specific keyboard gestures and actions. This feature enhances user experience by enabling efficient navigation and interaction tailored to specific workflows.
 
-To support these enhancements, we are introducing a new class called **commandManager**. This class handles custom commands triggered by specific key gestures, which are defined by users and executed accordingly.
+### Configuring custom keyboard commands
 
-The **commandManager** includes a parameter called `keyboardCommand` (which replaces `Commands`). This parameter holds a collection of custom keyboard commands specified by users. Each custom command is represented by a `KeyboardCommand` class, containing the `name` of the command and its associated `gesture` (keyboard combination).
+Custom keyboard commands are configured through the **CommandManager** class, which manages keyboard events and executes defined commands. The CommandManager accepts a collection of custom keyboard commands via the `keyboardCommand` parameter, where each command specifies a unique name and its associated keyboard gesture.
 
-Additionally, we are introducing an `EventCallback` to the `keyboardCustomCommands` parameter for the `CommandManager`. This will handle keyboard events and trigger appropriate methods when specific key combinations are pressed.
+Each keyboard gesture consists of two components:
+- **Key**: The primary key (represented using the `PdfKeys` enum)
+- **Modifier keys**: Optional modifier keys (Shift, Ctrl, Alt, or Meta combinations)
+
+### Modifier keys reference
+
+The following modifier keys can be combined with primary keys:
+
+- **Ctrl** (Control key): represented by the value `1`
+- **Alt** (Alt key): represented by the value `2`
+- **Shift** (Shift key): represented by the value `4`
+- **Meta** (Command key on macOS or Windows key on Windows): represented by the value `8`
+
+Multiple modifiers can be combined using the bitwise OR operator (`|`).
+
+### Example: Defining custom keyboard commands
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -196,21 +215,17 @@ Additionally, we are introducing an `EventCallback` to the `keyboardCustomComman
 {% endhighlight %}
 {% endtabs %}
 
-Each `keyboardCommand` object consists of a name property, specifying the `name` of the `custom command`, and a `gesture property`, defining the key gesture associated with the command.
+Each `keyboardCommand` object consists of the following properties:
 
-For example, the first command named `customCopy` is associated with the **G** key and requires both the **Shift** and **Alt** modifier keys to be pressed simultaneously.
+- **name**: The identifier for the custom command (e.g., `customCopy`, `customPaste`)
+- **gesture**: An object containing the key binding configuration:
+  - **pdfKeys**: The primary key from the `PdfKeys` enum
+  - **modifierKeys**: A combination of modifier keys using the `ModifierKeys` enum with bitwise OR operations
 
-Additionally, there's an explanation of the key modifiers used in the gestures:
-
-* Ctrl corresponds to the Control key, represented by the value `1`.
-* Alt corresponds to the Alt key, represented by the value `2`.
-* Shift corresponds to the Shift key, represented by the value `4`.
-* Meta corresponds to the Command key on macOS or the Windows key on Windows, represented by the value `8`.
-
-This setup allows users to perform custom actions within the PDF viewer by pressing specific key combinations, enhancing the user experience and providing more efficient navigation and interaction options.
+In the example above, the `customCopy` command is triggered by pressing **G** in combination with **Shift** and **Alt** keys. The gesture definition allows multiple modifier keys to be combined, enabling flexible keyboard accessibility patterns.
 
 ## Ensuring accessibility
 
-The PDF Viewer component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The PDF Viewer component's accessibility compliance is validated through automated testing using [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools.
 
 N> Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.

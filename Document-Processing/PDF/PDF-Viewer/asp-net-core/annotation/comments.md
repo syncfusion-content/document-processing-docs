@@ -1,15 +1,19 @@
 ---
 layout: post
-title: Comments in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn about comments, replies, and status in the Syncfusion ASP.NET Core PDF Viewer control (Essential JS 2).
+title: Comments in ASP.NET Core PDF Viewer | Syncfusion
+description: Add, reply, and manage comments and annotations in ASP.NET Core PDF Viewer. Support for comment threads, replies, status tracking, and programmatic access to comments.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Comments in ASP.NET Core PDF Viewer control
+# Comments in ASP.NET Core PDF Viewer
 
-The PDF Viewer control provides options to add, edit, and delete comments for the following annotations in PDF documents:
+The PDF Viewer control provides comprehensive comment management capabilities for annotation discussions and collaboration. Add, reply, edit, and delete comments across multiple annotation types.
+
+## Supported annotation types
+
+Comments can be added to the following annotation types in PDF documents:
 
 * Shape annotation
 * Stamp annotation
@@ -25,94 +29,142 @@ The PDF Viewer control provides options to add, edit, and delete comments for th
 
 Annotation comments, replies, and status can be managed in the PDF document using the comment panel.
 
-### Comment panel
+## Comment panel
 
-Annotation comments can be added to the PDF using the comment panel. The comment panel can be opened in the following ways:
+The comment panel provides a centralized interface for managing all annotation comments and discussions. The comment panel can be opened in multiple ways:
 
-1. Using the annotation menu
+### Opening the comment panel
 
-    * Click the Edit Annotation button in the PDF Viewer toolbar. A toolbar appears below it.
-    * Click the Comment Panel button. The comment panel opens.
+**Method 1: Using the annotation toolbar**
+1. Click the **Edit Annotation** button in the PDF Viewer toolbar
+2. A secondary toolbar appears below the main toolbar
+3. Click the **Comment Panel** button
+4. The comment panel opens on the right side of the screen
 
-2. Using Context menu
+**Method 2: Using context menu**
+1. Select an annotation in the PDF document
+2. Right-click to open the context menu
+3. Select **Comment** from the menu
+4. The comment panel opens and shows that annotation's thread
 
-    * Select the annotation in the PDF document and right-click it.
-    * Select Comment from the context menu.
+**Method 3: Using double-click**
+1. Select an annotation in the PDF document
+2. Double-click the annotation
+3. The comment panel opens automatically
 
-3. Using the Mouse click
+![Comment panel overview](../images/commentannot.png)
 
-    * Select the annotation in the PDF document and double-click it. The comment panel opens.
+### Working with the comment panel
 
-If the comment panel is already open, select the annotation and add comments using the panel.
+Once the comment panel is open:
+- The corresponding comment thread for the selected annotation is automatically highlighted
+- Add new comments using the text input field
+- View all replies to parent comments
+- Edit or delete existing comments
+- Change comment status from the options menu
 
 ### Adding comments
 
-* Select the annotation in the PDF document.
-* The corresponding comment thread is highlighted in the comment panel.
-* Add comments and replies using the comment panel.
+**Step-by-step guide:**
+
+1. **Select the annotation** - Click on any annotation in the PDF document
+2. **View comment thread** - The corresponding comment thread is automatically highlighted in the comment panel
+3. **Enter comment text** - Type your comment in the text input field at the bottom of the thread
+4. **Submit comment** - Press Enter or click the Post button to post the comment
 
 ![Adding comments to a sticky note annotation](../images/stickycomment.png)
 
-### Adding Comment Replies
+### Adding comment replies
 
-* Multiple replies can be added to a comment.
-* After adding a comment, add replies as needed.
+Comments support threaded discussions through replies.
 
-### Adding Comment or Reply Status
+- Multiple replies can be added to a single comment
+- Replies maintain the conversation context within the thread
+- All replies are nested under the parent comment
+- Edit and delete options available for each reply
 
-* Select the annotation comment in the comment panel.
-* Click More options in the comment or reply container.
-* Select Set Status from the context menu.
-* Choose a status for the comment.
+**Creating a reply:**
+1. Click an existing comment in the thread
+2. Click the **Add a reply** button
+3. Type your reply text in the reply input field
+4. Press Enter or click submit to post the reply
+
+### Adding comment or reply status
+
+Comments and replies can have status indicators for workflow tracking.
+
+**Setting status:**
+
+1. Select the annotation comment in the comment panel
+2. Click the **More options** menu (three dots) on the comment or reply container
+3. Select **Set Status** from the context menu
+4. Choose a status from the dropdown:
+   - **None** - Default state
+   - **Accepted** - Comment approved
+   - **Rejected** - Comment rejected
+   - **Cancelled** - Comment cancelled
 
 ![Set status for a comment](../images/commentstatus.png)
 
 ### Editing the comments and comments replies of the annotations
 
-Comments, replies, and status can be edited using the comment panel.
+Comments, replies, and status can be edited at any time using the comment panel interface.
 
-### Editing the Comment or Comment Replies
+### Editing comments or replies
 
-Edit comments and replies in the following ways:
+Edit comments and replies using one of these methods:
 
-1. Using the Context menu
+**Method 1: Using the context menu**
+1. Select the annotation comment in the comment panel
+2. Click the **More options** menu on the comment or reply container
+3. Select **Edit** from the context menu
+4. An editable text box appears
+5. Change the comment or reply content
+6. Press Enter or click Post to confirm changes
 
-    * Select the annotation comment in the comment panel.
-    * Click More options in the comment or reply container.
-    * Select Edit from the context menu.
-    * An editable text box appears. Change the content of the comment or reply.
+**Method 2: Using mouse click**
+1. Select the annotation comment in the comment panel
+2. Double-click directly on the comment or reply text
+3. The text becomes editable inline
+4. Modify the content as needed
+5. Press Enter to save or Escape to cancel
 
-2. Using the Mouse Click
+### Editing comment or reply status
 
-    * Select the annotation comment in the comment panel.
-    * Double-click the comment or reply content.
-    * An editable text box appears. Change the content of the comment or reply.
+Status can be changed at any time:
 
-### Editing Comment or Reply Status
+1. Select the annotation comment in the comment panel
+2. Click the **More options** menu on the comment or reply
+3. Select **Set Status** from the context menu
+4. Choose a new status from the dropdown
 
-* Select the annotation comment in the comment panel.
-* Click More options in the comment or reply container.
-* Select Set Status from the context menu.
-* Choose a status for the comment.
-* None is the default state. Selecting None clears the status indicator; the comment or reply remains visible.
+**Status states:**
+- **None**
+- **Accepted**
+- **Rejected**
+- **Cancelled**
+- **Completed**
 
 ![Edit comments and replies](../images/commentsedit.png)
 
-### Delete Comment or Comment Replies
+### Delete comments or replies
 
-* Select the annotation comment in the comment panel.
-* Click More options in the comment or reply container.
-* Select Delete from the context menu.
+Remove comments and replies from the discussion thread:
+
+1. Select the annotation comment in the comment panel
+2. Click the **More options** menu on the comment or reply
+3. Select **Delete** from the context menu
+4. The comment or reply is removed from the thread
 
 ![Delete comments or replies](../images/commentsdelete.png)
 
->Deleting the root comment from the comment panel also deletes the associated annotation.
+N> Deleting the root comment (the first comment in a thread) from the comment panel also deletes the associated annotation from the PDF document.
 
 ## How to check the comments added by the user
 
-Comments added to the PDF document can be read using the annotation's `comments` property.
+Comments can be accessed and processed programmatically through the annotation's `comments` property, enabling integration with external systems and custom workflows.
 
-The following example logs comments in response to a button click.
+### Example: Access and log comments from annotations
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

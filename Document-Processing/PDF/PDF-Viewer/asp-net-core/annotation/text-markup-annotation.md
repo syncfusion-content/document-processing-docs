@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Text markup annotation in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Syncfusion ASP.NET Core PDF Viewer.
+title: Text markup annotations in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn to add, edit, delete, and customize text markup annotations (highlight, underline, strikethrough, squiggly) in the Syncfusion ASP.NET Core PDF Viewer, with programmatic APIs and examples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Text markup annotation in ASP.NET Core PDF Viewer control
+# Text markup annotations in ASP.NET Core PDF Viewer
 
-The PDF Viewer provides options to add, edit, and delete text markup annotations, including Highlight, Underline, Strikethrough, and Squiggly.
+The PDF Viewer provides options to add, edit, and delete text markup annotations. Supported types include Highlight, Underline, Strikethrough, and Squiggly.
 
 ![Text markup annotations overview](../images/text_markup_annotation.png)
 
@@ -34,7 +34,7 @@ There are two ways to highlight text:
 
 When pan mode is active and a text markup mode is entered, the PDF Viewer switches to text selection mode to enable selection.
 
-Refer to the following code sample to switch to highlight mode.
+**Example: Switch to highlight mode**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -136,7 +136,7 @@ Refer to the following code sample to switch back to normal mode from highlight 
 
 Programmatically add highlights using the **addAnnotation()** method.
 
-Here is an example showing how to add highlights programmatically using addAnnotation():
+**Example: Add highlights programmatically**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -203,7 +203,7 @@ There are two ways to underline text:
 
 In the pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
 
-Refer to the following code sample to switch to underline mode.
+**Example: Switch to underline mode**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -305,7 +305,7 @@ Refer to the following code sample to switch back to normal mode from underline 
 
 Programmatically add underlines using the **addAnnotation()** method.
 
-Example:
+**Example: Add underline programmatically**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -372,7 +372,7 @@ There are two ways to strikethrough text:
 
 In the pan mode, if the strikethrough mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for striking through the text.
 
-Refer to the following code sample to switch to strikethrough mode.
+**Example: Switch to strikethrough mode**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -474,7 +474,7 @@ Refer to the following code sample to switch back to normal mode from strikethro
 
 Programmatically add strikethrough using the **addAnnotation()** method.
 
-Here is an example showing how to add strikethrough programmatically using addAnnotation():
+**Example: Add strikethrough programmatically**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -541,7 +541,7 @@ There are two ways to add squiggly to text:
 
 In the pan mode, if the squiggly mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for adding squiggly to the text.
 
-Refer to the following code sample to switch to squiggly mode.
+**Example: Switch to squiggly mode**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -643,7 +643,7 @@ Refer to the following code sample to switch back to normal mode from squiggly m
 
 Programmatically add squiggly using the **addAnnotation()** method.
 
-Example:
+**Example: Add squiggly programmatically**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
