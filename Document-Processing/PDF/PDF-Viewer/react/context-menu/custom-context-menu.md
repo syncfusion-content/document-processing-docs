@@ -238,4 +238,4 @@ N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` wi
 
 {% previewsample "document-processing/code-snippet/pdfviewer/react/custom-context-menu" %}
 
-[View the sample in Stackblitz](https://stackblitz.com/edit/react-zmbkebwq?file=index.js)
+[View the sample in Stack blitz](https://stackblitz.com/edit/react-zmbkebwq?file=index.js)
