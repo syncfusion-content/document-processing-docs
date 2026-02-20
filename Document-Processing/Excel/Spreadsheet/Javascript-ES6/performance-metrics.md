@@ -9,7 +9,7 @@ documentation: ug
 
 # Performance Metrics in EJ2 TypeScript Spreadsheet Control
 
-The [Syncfusion® TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) is an Excel‑like web component that lets users create, edit, and format data directly in modern applications. It provides essential features such as formulas, styling, validation, sorting, filtering, and file import/export, making it ideal for handling large or data‑driven workflows.
+The [Syncfusion® Spreadsheet component](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) provides a powerful, Excel‑like experience for web applications, allowing users to create, edit, view, and manage spreadsheets with ease. It supports large datasets, formulas, and interactive features such as styling, validation, sorting, filtering, and file import/export while maintaining a smooth and responsive user experience.
 
 This document presents measured performance results for the Spreadsheet when working with large datasets and common operations such as rendering, styling, validation, and file import/export.
 
@@ -18,12 +18,11 @@ This document presents measured performance results for the Spreadsheet when wor
 The following configuration was used for the performance evaluations:
 
 * **Browser**: Microsoft Edge (latest stable)
-* **Hardware**: Modern multi‑core processor
+* **Hardware**: 12th Gen Intel(R) Core(TM) i5-1235U
 * **RAM**: 16 GB or higher
 * **Spreadsheet Version**:
   * [NPM Version](https://www.npmjs.com/package/@syncfusion/ej2-spreadsheet/v/32.2.5)  
   * [NuGet Version](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core/32.2.5)  
-* **Data Source**: Mixed data types (numbers, text, formats, validations)
 
 ## Evaluated Features
 
@@ -37,7 +36,7 @@ The following operations were measured to evaluate the Spreadsheet's performance
 
 ## Import and Export Performance
 
-Measured import and export times for datasets with formatting, validation, sorting, and filtering.
+The following table summarizes the import and export times for datasets that include various features such as formatting, validation, sorting, and filtering.
 
 | Dataset Description                         | Import     | Export     |
 |---------------------------------------------|------------|------------|
@@ -50,7 +49,7 @@ Measured import and export times for datasets with formatting, validation, sorti
 | 250k cells with sorting and filtering       | 5.73s      | 5.60s      |
 | 500k cells with sorting and filtering       | 8.59s      | 13.29s     |
 
-You can download the Excel files used for these measurements here.
+You can download the Excel files used for these measurements [here](https://drive.google.com/file/d/1VJN3g7SUnnzdpxtRPCL575QdB1MjeKj5/view?usp=sharing).
 
 ## See Also
 
