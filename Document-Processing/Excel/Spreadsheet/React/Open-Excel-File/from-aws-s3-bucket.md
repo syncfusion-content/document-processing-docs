@@ -13,11 +13,11 @@ To load a file from AWS S3 in a Spreadsheet Component, you can follow the steps 
 
 **Step 1:** Create a Simple Spreadsheet Sample in React
 
-Start by following the steps provided in this [link](../../React//getting-started.md) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
 
 **Step 2:** Modify the `SpreadsheetController.cs` File in the Web Service Project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../../../Spreadsheet/React/open-save.md) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) for instructions on how to create a web service project.
 
 2. Open the `SpreadsheetController.cs` file in your web service project.
 
@@ -141,7 +141,7 @@ N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and
 
 **Step 3:**  Modify the index File in the Spreadsheet sample to make a fetch call to the server to retrieve and load the Excel file from the AWS S3 bucket into the client-side spreadsheet.
 
-```typescript
+```ts
 
 <button class="e-btn" (click)="openFromS3()">Import XLS files from AWS S3 bucket</button>
 
