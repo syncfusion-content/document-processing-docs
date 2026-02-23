@@ -1,4 +1,4 @@
----
+--- 
 layout: post
 title: Accessibility in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Accessibility in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
