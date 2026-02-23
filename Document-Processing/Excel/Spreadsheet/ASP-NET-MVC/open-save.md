@@ -355,6 +355,7 @@ When you open an excel file that contains external workbook references, you will
 public ActionResult Open(OpenRequest openRequest)
 {
     openRequest.AllowExternalWorkbook = false;
+    openRequest.Guid = openRequest["Guid"];
     return Content(Workbook.Open(open));
 }
 ```
@@ -454,16 +455,11 @@ By default, the Spreadsheet control saves the Excel file and downloads it to the
 
     public string Save(SaveSettings saveSettings)
     {
-        ExcelEngine excelEngine = new ExcelEngine();
-        IApplication application = excelEngine.Excel;
         try
         {
-            
             // Save the workbook as stream.
             Stream fileStream = Workbook.Save<Stream>(saveSettings);
-            // Using XLSIO, we are opening the file stream and saving the file in the server under "Files" folder.
             // You can also save the stream file in your server location.
-            IWorkbook workbook = application.Workbooks.Open(fileStream);
             string basePath = _env.ContentRootPath + "\\Files\\" + saveSettings.FileName + ".xlsx";
             var file = System.IO.File.Create(basePath);
             fileStream.Seek(0, SeekOrigin.Begin);
