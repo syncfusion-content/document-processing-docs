@@ -43,7 +43,7 @@ The following table summarizes the import and export times for datasets that inc
 | 100k cells with formats                     | 3.85s      | 4.38s      |
 | 250k cells with formats                     | 3.96s      | 6.61s      |
 | 100k cells with validation                  | 2.06s      | 2.25s      |
-| 250k cells with validation                  | 3.77s      | 24.04s     |
+| 250k cells with validation                  | 3.77s      | 18.04s     |
 | 500k cells with validation                  | 4.16s      | 24.05s     |
 | 100k cells with sorting and filtering       | 3.68s      | 2.31s      |
 | 250k cells with sorting and filtering       | 5.73s      | 5.60s      |
