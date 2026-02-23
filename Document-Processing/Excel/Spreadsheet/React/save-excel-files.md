@@ -9,7 +9,11 @@ documentation: ug
 
 # Save Excel Files in Syncfusion React Spreadsheet
 
-The Syncfusion React Spreadsheet allows you to save spreadsheet data as Excel files by sending the client‑side Spreadsheet model to the server, where it is processed and exported with full support for data, styles, formats, and more.
+When exporting an Excel file from the React Spreadsheet component, the workflow is handled through a clear server‑side process. First, the Spreadsheet content displayed in the browser is serialized into a structured JSON workbook. This JSON contains all the necessary details—such as data, formatting, formulas, styles, and sheet structure.
+
+This JSON workbook is then sent to the server, where the [`Syncfusion.EJ2.Spreadsheet library`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) uses [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview) to convert the JSON data into a fully formatted Excel file. XlsIO rebuilds the workbook with complete fidelity, preserving all the features applied in the Spreadsheet.
+
+Since, the server is responsible for generating the final Excel file, the total export time can vary depending on the workbook’s complexity, including the number of sheets, amount of formatting, and usage of advanced features like formulas or conditional formatting. Once the generation is complete, the Excel file is returned to the client for download.
 
 To enable saving Excel files, set the [`allowSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowsave) property to **true** and specify the service URL using the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property. When a save action is triggered, the control sends the spreadsheet model to this endpoint, where it is processed and returned as a downloadable Excel file.
 
@@ -33,7 +37,7 @@ The following sample shows the `Save` option by using the [`saveUrl`](https://ej
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/open-save-cs5" %}
 
-Please find the below table for the beforeSave event arguments.
+Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave)  event arguments.
 
 | **Parameter** | **Type** | **Description** |
 | ----- | ----- | ----- |
@@ -53,6 +57,13 @@ Please find the below table for the beforeSave event arguments.
 ## Save Excel files programmatically
 
 To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property is properly configured, as it is required for processing and generating the file on the server.
+
+Please find the below table for the [`save`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#save) method arguments.
+
+| **Parameter**             | **Type**                   | **Description**                                                      |
+|-----------------------|------------------------|------------------------------------------------------------------|
+| options               | `Object`                 | Options for opening the JSON object.                            |
+| jsonConfig *(optional)* | [`SerializationOptions`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationOptions) | Specify the serialization options to customize the loading of the JSON data. |
 
 The following code example demonstrates how to save an Excel file programmatically in the Spreadsheet.
 

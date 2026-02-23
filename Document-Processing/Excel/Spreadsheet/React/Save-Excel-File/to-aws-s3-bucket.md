@@ -9,7 +9,7 @@ documentation: ug
 
 # Save spreadsheet to AWS S3
 
-To save a file to the AWS S3, you can follow the steps below
+To save a file to the AWS S3, you can follow the steps below.
 
 **Step 1:** Create a Simple Spreadsheet Sample in React
 
@@ -118,8 +118,7 @@ N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and
 
 **Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
 
-```tsx
-
+```js
 // Function to save the current spreadsheet to AWS S3 via an API call
 const saveToS3 = () => {
   // Convert the current spreadsheet to JSON format
@@ -155,7 +154,6 @@ const saveToS3 = () => {
       });
   });
 };
-
 ```
 
 N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.

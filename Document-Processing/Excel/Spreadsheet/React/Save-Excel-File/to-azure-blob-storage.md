@@ -23,7 +23,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 3. Import the required namespaces at the top of the file:
 
-```Csharp
+```csharp
 
 using System;
 using System.IO;
@@ -37,7 +37,7 @@ using Azure.Storage.Blobs;
 
 4. Add the following private fields and constructor parameters to the `SpreadsheetController` class, In the constructor, assign the values from the configuration to the corresponding fields.
 
-```Csharp
+```csharp
 
 private readonly string _storageConnectionString;
 private readonly string _storageContainerName;
@@ -52,7 +52,7 @@ public SpreadsheetController(IConfiguration configuration)
 
 5. Create the `SaveToAzure()` method to save the document to the Azure Blob storage.
 
-```Csharp
+```csharp
 
 [HttpPost]
 [Route("SaveToAzure")]
@@ -92,7 +92,7 @@ N> Note: Install the Azure.Storage.Blobs NuGet package in the service project. E
 
 **Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
 
-```typescript
+```js
 
 <button class="e-btn" onClick={saveToAzure}>
   Save to Azure Blob Storage

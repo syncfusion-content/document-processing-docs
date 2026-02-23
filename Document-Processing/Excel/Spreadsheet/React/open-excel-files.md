@@ -9,7 +9,11 @@ documentation: ug
 
 # Open Excel Files in Syncfusion React Spreadsheet
 
-The Syncfusion React Spreadsheet allows you to open Excel files (.xlsx) by reading the file, converting it into the client‑side Spreadsheet model, and rendering it with full support for data, styles, formats, and more.
+The React Spreadsheet component follows an open, server‑assisted workflow to import Excel files accurately and efficiently. When a user uploads an Excel file, the component sends it to the server instead of handling the parsing in the browser. This ensures smooth performance even for large or heavily formatted workbooks.
+
+On the server, the [`Syncfusion.EJ2.Spreadsheet library`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core), built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), reads the Excel file and extracts all relevant details—data, styles, formulas, formatting, and sheet structure. The server then converts this information into a Spreadsheet‑compatible JSON workbook.
+
+Once the processing is complete, the JSON data is returned to the client, where the React Spreadsheet component renders the workbook in the browser. This process preserves the original Excel layout and ensures the imported content appears with full fidelity.
 
 To enable opening Excel files, set the [`allowOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowopen) property to **true** and specify the service url using th [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property. The control will send the uploaded file to this endpoint, where it is processed and returned as JSON for the Spreadsheet to render.
 
@@ -33,7 +37,7 @@ The following sample shows the `Open` option by using the [`openUrl`](https://ej
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs1" %}
 
-Please find the below table for the beforeOpen event arguments.
+Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event arguments.
 
  | **Parameter** | **Type** | **Description** |
 | ----- | ----- | ----- |
@@ -47,6 +51,13 @@ Please find the below table for the beforeOpen event arguments.
 ## Open Excel files programmatically
 
 To open Excel files programmatically in the Spreadsheet, you can use the [`open`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method of the Spreadsheet component. Before invoking this method, ensure that the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property is properly configured, as it is required for processing the file on the server.
+
+Please find the table below for the [`open`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method arguments.
+
+| **Parameter** | **Type**         | **Description**                       |
+|----------|--------------|-----------------------------------|
+| options  | [OpenOptions](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/openOptions)  | Options for opening the excel file. |
+
 
 The following code example demonstrates how to open an Excel file programmatically in the Spreadsheet.
 
