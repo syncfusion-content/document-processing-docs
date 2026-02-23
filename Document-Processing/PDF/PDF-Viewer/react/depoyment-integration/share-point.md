@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React PDF Viewer in SharePoint
+title: Syncfusion React PDF Viewer in SharePoint
 description: Quickstart to integrate the Syncfusion React PDF Viewer into an SPFx React web part (standalone/client-side rendering).
 control: PDF Viewer
 platform: document-processing
