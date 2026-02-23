@@ -13,11 +13,11 @@ To save a file to Google Cloud Storage in a Spreadsheet Component, you can follo
 
 **Step 1:** Create a Simple Spreadsheet Sample in React
 
-Start by following the steps provided in this [link](../../React//getting-started.md) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
 
 **Step 2:** Modify the `SpreadsheetController.cs` File in the Web Service Project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../../../Spreadsheet/React/open-save.md) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) for instructions on how to create a web service project.
 
 2. Open the `SpreadsheetController.cs` file in your web service project.
 
@@ -33,8 +33,7 @@ using Syncfusion.EJ2.Spreadsheet;
 
 4. Add the following private fields and constructor parameters to the `SpreadsheetController` class, In the constructor, assign the values from the configuration to the corresponding fields.
 
-```Csharp
-
+```csharp
 private readonly string _bucketName;
 private readonly StorageClient _storageClient;
 
@@ -50,13 +49,11 @@ public SpreadsheetController(IConfiguration configuration)
     // Bucket that stores the Excel files
     _bucketName = configuration.GetValue<string>("BucketName");
 }
-
 ```
 
 5. Create the `SaveToGoogleCloud()` method to save the document to the Google Cloud storage.
 
-```Csharp
-
+```csharp
 [HttpPost]
 [Route("SaveToGoogleCloud")]
 public async Task<IActionResult> SaveToGoogleCloud([FromForm] SaveSettings saveSettings)
@@ -80,17 +77,14 @@ public async Task<IActionResult> SaveToGoogleCloud([FromForm] SaveSettings saveS
         return BadRequest("Error saving file to Google Cloud Storage: " + ex.Message);
     }
 }
-
 ```
 
 **Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
 
-```csharp
-
+```js
 <button class="e-btn" onClick={saveToGoogleCloud}>
   Save to Google Cloud Storage
 </button>
-
 const saveToGoogleCloud = () => {
   spreadsheet.saveAsJson().then(json => {
     const formData = new FormData();
@@ -115,7 +109,6 @@ const saveToGoogleCloud = () => {
       .catch(err => window.alert('Error saving to server: ' + err));
   });
 };
-
 ```
 
 N> Note: The back-end requires the Google.Cloud.Storage.V1 NuGet package and a service-account key that has Storage Object Admin (or equivalent) permissions on the target bucket.

@@ -13,11 +13,11 @@ To load a file from Azure Blob Storage in a Spreadsheet Component, you can follo
 
 **Step 1:** Create a Simple Spreadsheet Sample in React
 
-Start by following the steps provided in this [link](../../React//getting-started.md) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
 
 **Step 2:** Modify the `SpreadsheetController.cs` File in the Web Service Project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../../../Spreadsheet/React/open-save.md) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) for instructions on how to create a web service project.
 
 2. Open the `SpreadsheetController.cs` file in your web service project.
 
@@ -39,7 +39,7 @@ using Azure.Storage.Blobs.Specialized;
 
 4. Add the following private fields and constructor parameters to the `SpreadsheetController` class, In the constructor, assign the values from the configuration to the corresponding fields.
 
-```Csharp
+```csharp
 
 private readonly string _storageConnectionString;
 private readonly string _storageContainerName;
@@ -55,7 +55,7 @@ public SpreadsheetController(IConfiguration configuration)
 
 5. Create the `OpenFromAzure()` method to open the document from the Azure Blob Storage.
 
-```Csharp
+```csharp
 
 [HttpPost]
 [Route("OpenFromAzure")]
@@ -107,7 +107,7 @@ public class FileOptions
 
 6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration.
 
-```Json
+```json
 
 {
   "Logging": {
@@ -126,7 +126,7 @@ N> Note: Install the Azure.Storage.Blobs NuGet package in the service project.
 
 **Step 3:** Modify the index File in the Spreadsheet sample to make a fetch call to the server to retrieve and load the Excel file from the Google Cloud Storage into the client-side spreadsheet.
 
-```typescript
+```ts
 
 <button class="e-btn" onClick={openFromAzure}>
   Import XLS file from Azure Blob Storage
