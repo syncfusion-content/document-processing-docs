@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Retrieve the Loaded Document Instance in React PDF Viewer | Syncfusion
-description: Learn how to access the loaded PDF document instance in the React PDF Viewer using refs and the documentLoad event. Retrieve metadata, page details, and safely call viewer APIs after the document is ready.
-control: PDF Viewer
+title: Retrieve the Loaded Document Instance in React PDF Viewer
+description: Learn how to access the loaded PDF document instance in the React PDF Viewer using refs and the documentLoad event.
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +9,7 @@ domainurl: ##DomainURL##
 
 # Retrieve the Loaded Document Instance in React PDF Viewer
 
-This page explains how to access the React PDF Viewer instance using a React ref, listen for the [`documentLoad`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload) lifecycle event, and retrieve document information, page details, and metadata—so you can safely invoke viewer APIs after the PDF is loaded.
+This page explains how to access the React PDF Viewer instance using a React ref, listen for the [`documentLoad`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload) life-cycle event, and retrieve document information, page details, and metadata—so you can safely invoke viewer APIs after the PDF is loaded.
 
 ---
 
