@@ -9,7 +9,7 @@ documentation: ug
 
 # Save spreadsheet to AWS S3
 
-To save a file to the AWS S3, you can follow the steps below
+To save a file to the AWS S3, you can follow the steps below.
 
 **Step 1:** Create a Simple Spreadsheet Sample in React
 
