@@ -9,11 +9,11 @@ documentation: ug
 
 # Save Excel Files in Syncfusion React Spreadsheet
 
-When exporting an Excel file from the React Spreadsheet component, the workflow is handled through a clear server‑side process. First, the Spreadsheet content displayed in the browser is serialized into a structured JSON workbook. This JSON contains all the necessary details—such as data, formatting, formulas, styles, and sheet structure.
+When exporting an Excel file from the React Spreadsheet component, the process is handled through a streamlined server‑side workflow. The Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
 
-This JSON workbook is then sent to the server, where the [`Syncfusion.EJ2.Spreadsheet library`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) uses [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview) to convert the JSON data into a fully formatted Excel file. XlsIO rebuilds the workbook with complete fidelity, preserving all the features applied in the Spreadsheet.
+Once generated, this JSON workbook is sent to the server, where the [`Syncfusion.EJ2.Spreadsheet library`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) uses [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview) to convert the JSON data into a fully formatted Excel file. During this process, the JSON workbook is parsed and its contents are mapped to an XlsIO Workbook instance, ensuring that all data, styles, formulas, and other Spreadsheet features are accurately preserved.
 
-Since, the server is responsible for generating the final Excel file, the total export time can vary depending on the workbook’s complexity, including the number of sheets, amount of formatting, and usage of advanced features like formulas or conditional formatting. Once the generation is complete, the Excel file is returned to the client for download.
+Since the server is responsible for generating the final Excel file, the total export time can vary depending on the workbook’s complexity. Factors such as the level of formatting, styles and the use of advanced features like formulas or conditional formatting can influence processing time. After the file is successfully generated, it is sent back to the client for download.
 
 To enable saving Excel files, set the [`allowSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowsave) property to **true** and specify the service URL using the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property. When a save action is triggered, the control sends the spreadsheet model to this endpoint, where it is processed and returned as a downloadable Excel file.
 
@@ -62,7 +62,7 @@ Please find the below table for the [`save`](https://ej2.syncfusion.com/document
 
 | **Parameter**             | **Type**                   | **Description**                                                      |
 |-----------------------|------------------------|------------------------------------------------------------------|
-| options               | `Object`                 | Options for opening the JSON object.                            |
+| options               | [`SaveOptions`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/saveoptions)                 | Options for opening the JSON object.                            |
 | jsonConfig *(optional)* | [`SerializationOptions`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationOptions) | Specify the serialization options to customize the loading of the JSON data. |
 
 The following code example demonstrates how to save an Excel file programmatically in the Spreadsheet.
