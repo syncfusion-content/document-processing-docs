@@ -78,7 +78,7 @@ Below is an approach that can be copied into the app that switches themes by dyn
 
 **Link-swap approach:**
 
-```tsx
+```ts
 // App.tsx
 type ThemeName = 'material3' | 'material3-dark';
 const THEME_LINK_ID = 'e-current-theme';
@@ -178,7 +178,7 @@ Apply overrides using a wrapper class so the rules are scoped and safe to mainta
 }
 ```
 
-```tsx
+```ts
 // src/App.tsx
 import './App.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';

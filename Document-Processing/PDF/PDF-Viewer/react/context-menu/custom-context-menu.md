@@ -21,7 +21,7 @@ You can add custom options to the context menu using the [addCustomMenu()](https
 1. Define the menu items as an array of objects.
 2. Call the [`addCustomMenu`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#addcustommenu) method within the [`documentLoad`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#documentload) event handler.
 
-```jsx
+```js
    export function App() {
 
     let menuItems = [
@@ -83,7 +83,7 @@ root.render(<App />);
 
 The [customContextMenuSelect()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#customcontextMenuselect) method defines actions for custom menu items.
 
-```jsx
+```js
 function customContextMenuSelect(args) {
     var viewer = document.getElementById('container').ej2_instances[0];
     switch (args.id) {
@@ -167,7 +167,7 @@ function setReadOnlyFalse(args) {
 
 The [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#customcontextMenubeforeopen) event allows for dynamic showing or hiding of items based on selection or document state.
 
-```jsx
+```js
 function customContextMenuBeforeOpen(args) {
     for (var i = 0; i < args.ids.length; i++) {
         var search = document.getElementById(args.ids[i]);
