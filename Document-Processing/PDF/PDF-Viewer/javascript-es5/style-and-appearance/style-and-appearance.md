@@ -14,7 +14,7 @@ Override the default CSS classes to tailor the Syncfusion JavaScript PDF Viewer 
 
 ## Customize the PDF Viewer root element
 
-Use the following CSS to adjust the border of the PDF Viewer root element.
+Use the following CSS to adjust the border of the PDF Viewer root element. Prefer CSS variables for color values so themes can be changed centrally.
 
 ```
 .e-pdfviewer{
@@ -23,7 +23,7 @@ Use the following CSS to adjust the border of the PDF Viewer root element.
 ```
 ## Customize the PDF Viewer container
 
-Use the following CSS to update the background color of the PDF Viewer container.
+Use the following CSS to update the background color of the PDF Viewer container. Use semantic variables for accessible theming.
 
 ```
 /* To specify background color*/
@@ -33,7 +33,7 @@ Use the following CSS to update the background color of the PDF Viewer container
 ```
 ## Customize the PDF Viewer page container
 
-Use the following CSS to update the page container background within the PDF Viewer.
+Use the following CSS to update the page container background within the PDF Viewer. If a distinct selector exists for page elements (for example, `.e-pv-page-container`), target that selector instead.
 
 ```
 /* To specify background color*/
@@ -44,7 +44,7 @@ Use the following CSS to update the page container background within the PDF Vie
 
 ## Customize the bookmark icon
 
-Use the following CSS to adjust the bookmark icon color in the PDF Viewer toolbar.
+Use the following CSS to adjust the bookmark icon color in the PDF Viewer toolbar. Use `rem` for hover and base sizes to remain responsive.
 
 ```
 /* To specify color of the bookmark */

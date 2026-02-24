@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ### Overview
 
-The JavaScript PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps describe how to securely load and store PDF documents using a server-backed web service.
+The JavaScript PDF Viewer component supports loading and saving PDF files using Azure Active Directory (AAD). This article describes a server-backed pattern to securely load and store PDF documents. It is intended for developers implementing a server-client integration that avoids exposing secrets or long-lived credentials in the browser.
 
 ### Steps to open the PDF file from Azure Active Directory
 
@@ -27,7 +27,7 @@ The JavaScript PDF Viewer component supports loading and saving PDF files with A
    - In the Azure portal, go to **Azure Active Directory** > **App registrations** > **New registration**.
    - Register your application and note down the **Application (client) ID** and **Directory (tenant) ID**.
 
-   ![app-registration](../images/app-registration.png)
+   ![Register an application in Azure AD](../images/app-registration.png)
 
 3. Create a client secret:
    - In the registered application, go to **Certificates & secrets**.
@@ -36,7 +36,7 @@ The JavaScript PDF Viewer component supports loading and saving PDF files with A
    - Click **Add**.
    - Copy the client secret value immediately, as it will be hidden later. Store it securely.
 
-   ![client-secret](../images/client-secret.png)
+   ![Create a client secret in Azure AD](../images/client-secret.png)
 
 ---
 
@@ -46,7 +46,7 @@ The JavaScript PDF Viewer component supports loading and saving PDF files with A
    - In the Azure portal, use the search bar to search for **Storage accounts**.
    - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
 
-    ![storage-account](../images/storage-account.png)
+    ![Create an Azure Storage account](../images/storage-account.png)
 
 ---
 
@@ -62,7 +62,7 @@ The JavaScript PDF Viewer component supports loading and saving PDF files with A
    - Select your application and click **Select**.
    - Click **Review + assign** to finalize the role assignment.
 
-    ![add-role](../images/add-role.png)
+    ![Assign Storage Blob Data Contributor role to the application](../images/add-role.png)
 ---
 
 ### Step 4: Upload the PDF document to Azure Storage
@@ -73,7 +73,7 @@ The JavaScript PDF Viewer component supports loading and saving PDF files with A
 2. Upload the PDF file:
    - Create a new container and upload the PDF document you want to access in the PDF Viewer.
 
-    ![upload-pdf](../images/upload-pdf.png)
+    ![Upload a PDF file to an Azure Blob container](../images/upload-pdf.png)
 ---
 
 ### Step 5: Server-side configuration
@@ -171,89 +171,52 @@ public async Task<IActionResult> SaveToAAD([FromBody] Dictionary<string, string>
 
 ### Client-side code snippets
 
+```html
+<div id="PdfViewer"></div>
+<button id="btnLoad">Load from AAD</button>
+<button id="btnSave">Save to AAD</button>
+```
 ```js
-import { PdfViewer, Toolbar, TextSelection, TextSearch, Print, Navigation, Magnification, Annotation, FormDesigner, FormFields, CustomToolbarItemModel } from '@syncfusion/ej2-pdfviewer';
-import { ComboBox } from "@syncfusion/ej2-dropdowns";
-
-// Inject required modules for PDF Viewer functionality
-PdfViewer.Inject(
-    TextSelection,
-    TextSearch,
-    Print,
-    Navigation,
-    Toolbar,
-    Magnification,
-    Annotation,
-    FormDesigner,
-    FormFields
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.Print,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.PageOrganizer
 );
 
-// Define custom toolbar items
-let toolItem1: CustomToolbarItemModel = {
-    id: 'loadFromAAD',
-    text: 'Load From AAD',
-    tooltipText: 'Custom toolbar item',
-    align: 'left'
-};
-
-let toolItem2: CustomToolbarItemModel = {
-    id: 'saveToAAD',
-    text: 'Save To AAD',
-    tooltipText: 'Custom toolbar item',
-    align: 'left'
-};
-
-// Initialize the PDF Viewer with custom toolbar items
-let pdfviewer: PdfViewer = new PdfViewer({
-    serviceUrl: 'https://localhost:44308/pdfviewer', //provide the service url here
-    toolbarSettings: {
-        toolbarItems: [
-            toolItem1,
-            toolItem2,
-            'OpenOption',
-            'PageNavigationTool',
-            'MagnificationTool',
-            'PanTool',
-            'SelectionTool',
-            'SearchOption',
-            'PrintOption',
-            'DownloadOption',
-            'UndoRedoTool',
-            'AnnotationEditTool',
-            'FormDesignerEditTool',
-            'CommentTool',
-            'SubmitForm',
-        ]
-    }
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
 });
-
-// Render the PDF Viewer in the DOM
 pdfviewer.appendTo('#PdfViewer');
 
-// Handle toolbar clicks
-pdfviewer.toolbarClick = (args: { item?: { id: string } }) => {
-    if (args.item) {
-        if (args.item.id === 'loadFromAAD') {
-            // Handle 'Load From AAD' logic
-            const xhr = new XMLHttpRequest();
-            //modify the url based on the file name
-            xhr.open('POST', `https://localhost:44308/pdfviewer/LoadFromAAD?fileName=pdf-succinctly.pdf`, true);
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    const data = xhr.responseText;
-                    console.log(data); // Handle the response
-                    pdfviewer.load(data,''); // Load the document
-                }
-            };
-            xhr.send();
-        } else if (args.item.id === 'saveToAAD') {
-            // Handle 'Save To AAD' logic
-            pdfviewer.serverActionSettings.download = "SaveToAAD";
-            pdfviewer.download(); // Trigger download
+document.getElementById('btnLoad').onclick = function () {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://localhost:44308/pdfviewer/LoadFromAAD?fileName=pdf-succinctly.pdf', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                var data = xhr.responseText;
+                pdfviewer.load(data, '');
+            } else {
+                console.error('LoadFromAAD failed', xhr.status, xhr.responseText);
+            }
         }
-    }
+    };
+    xhr.send();
 };
 
+document.getElementById('btnSave').onclick = function () {
+    pdfviewer.serverActionSettings.download = 'SaveToAAD';
+    pdfviewer.download();
+};
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aad).

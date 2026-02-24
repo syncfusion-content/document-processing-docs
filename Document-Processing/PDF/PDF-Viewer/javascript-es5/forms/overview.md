@@ -9,9 +9,9 @@ documentation: ug
 
 # Overview of Forms in JavaScript PDF Viewer
 
-The Syncfusion PDF Viewer delivers a complete, easy-to-use PDF forms experience. You can read, fill, add, edit, and delete form fields directly within your PDF documents. These actions are supported through both the intuitive user interface and powerful programmatic APIs.
+The Syncfusion PDF Viewer delivers a complete, easy-to-use PDF forms experience. Users can read, fill, add, edit, and delete form fields directly within PDF documents via the intuitive user interface or programmatic APIs.
 
-The viewer also includes smooth import and export support for form data, making integration effortless. Developers benefit from extensive API control, while end users enjoy a clean and simple interface designed for a seamless and stress-free form-filling experience.
+The viewer includes import and export support for form data, making integration straightforward. Developers benefit from extensive API control, while end users enjoy a simple interface for seamless form filling.
 
 ## Filling PDF Forms
 
@@ -43,7 +43,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 ```
 
-![FormFilling](../../javascript-es6/images/FormFields.gif)
+![Fill text and signature fields in PDF Viewer](../../javascript-es6/images/FormFields.gif)
 
 1. [Programmatically Form fill](./form-filling#fill-pdf-forms-programmatically)
 2. [Form Fill Using UI](./form-filling#fill-pdf-forms-through-the-user-interface)
@@ -51,7 +51,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Form Designer
 
-A built in Form Designer lets you quickly add, edit, move, and delete form fields in the PDF documents. This viewer allows you to design fillable PDF forms interactively either using the built-in form designer tools or building your own customized form designer tools.
+A built-in Form Designer lets you quickly add, edit, move, and delete form fields in PDF documents. Use the built-in Form Designer tools or build custom form designer tools to design fillable PDF forms interactively.
 
 See the [Form Designer](./form-designer) page for full details.
 
@@ -80,7 +80,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 ```
 
-![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
+![Form Designer toolbar and field creation](../../javascript-es6/images/FormDesigner.gif)
 
 Create and customize interactive fields directly on the PDF page.
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), or [remove](./manage-form-fields/remove-form-fields) forms

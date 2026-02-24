@@ -11,7 +11,7 @@ documentation: ug
 
 Content Security Policy (CSP) is a browser security feature that helps mitigate attacks such as cross-site scripting (XSS) and data injection by restricting the sources from which content can load.
 
-When strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html) is enabled, several browser capabilities are disabled by default. To run the Syncfusion PDF Viewer control under strict CSP, include the following directives in the CSP meta tag.
+When strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html) is enabled, several browser capabilities are disabled by default. To run the Syncfusion PDF Viewer control under strict CSP, include the following directives in the CSP meta tag. These directives can also be provided by the HTTP `Content-Security-Policy` response header from the server; the examples below show client-side meta tag usage.
 
 * The Syncfusion PDF Viewer control renders calculated **inline styles** and **base64** font icons, which strict CSP blocks. Allow these assets by adding the [`style-src 'self' 'unsafe-inline';`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives, as shown below.
 
@@ -25,7 +25,7 @@ When strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/stri
 {% endhighlight %}
 {% endtabs %}
 
-* The Syncfusion **material** and **tailwind** built-in themes reference the [`Roboto external font`](https://fonts.googleapis.com/css?family=Roboto:400,500), which strict CSP also blocks. Permit these resources by adding the font URLs to the [`style-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the meta tag.
+* The Syncfusion **material** and **tailwind** built-in themes reference the [`Roboto external font`](https://fonts.googleapis.com/css?family=Roboto:400,500), which strict CSP also blocks. Permit these external fonts by adding their URLs to both the [`style-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the meta tag.
 
 The resulting meta tag must be placed within the `<head>` element to resolve CSP violations when using the Syncfusion PDF Viewer control with the material and tailwind themes.
 
@@ -56,6 +56,6 @@ The resulting meta tag must be placed within the `<head>` element to resolve CSP
 {% endhighlight %}
 {% endtabs %}
 
-N> Starting with the 2023 Vol 2 (v22.1) release, the Content Security Policy for the Syncfusion PDF Viewer control has been improved by using a [function template](../template#function-template) approach for template properties, eliminating the need for the `unsafe-eval` directive in the CSP meta tag.
+N> Starting with the 2023 Vol 2 (v22.1) release, the Content Security Policy for the Syncfusion PDF Viewer control was improved by using a [function template](../template#function-template) approach for template properties, which eliminates the need for the `unsafe-eval` directive in the CSP meta tag. For older releases (pre-v22.1) that use previous template patterns, the `unsafe-eval` directive may still be required.
 
 [View the sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Troubleshooting/Content%20Security%20Policy)

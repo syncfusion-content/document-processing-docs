@@ -7,19 +7,19 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Show custom items in the Custom Stamp dropdown
+# Show custom items in the custom stamp dropdown in TypeScript
 
 ### Overview
 
 Add and display custom items in the Custom Stamp dropdown using TypeScript. This enables users to quickly apply personalized stamps in the PDF Viewer.
 
-### Steps to show custom items in the Custom Stamp dropdown
+### Steps to show custom items in the custom stamp dropdown
 
-**Step 1:** Follow the steps in the [Get started with JavaScript ES6 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) guide to create a sample.
+**Step 1:** Create a basic TypeScript PDF Viewer sample using the getting started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started
 
 **Step 2:** Configure custom stamp settings
 
-Use `customStampSettings` to specify the custom stamps that should appear in the dropdown menu.
+Use `customStampSettings` to define stamps that appear in the dropdown. The `customStampImageSource` value accepts a Base64 data URI or an absolute URL pointing to an image.
 
 ```ts
 

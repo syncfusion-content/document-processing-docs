@@ -21,7 +21,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above (NET 6 LTS or later recommended). You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -141,9 +141,9 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> Replace the placeholders with your actual values: Google Drive Folder ID, Application name, and the path to the OAuth 2.0 client IDs JSON file.
+N> Replace the placeholders with your actual values: Google Drive Folder ID, application name, and the path to the OAuth 2.0 client IDs JSON file. Store these values and any credentials securely (for example, using environment variables or a secrets manager).
 
-N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+N> The Folder ID is the unique identifier for the folder. For example, if your folder URL is `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
 **Step 4:** Configure the PDF Viewer component
 
@@ -151,20 +151,28 @@ Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#ser
 
 ```javascript
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,
-         BookmarkView, TextSelection, Annotation, FormFields, FormDesigner} from '@syncfusion/ej2-pdfviewer';
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.FormDesigner
+);
 
-PdfViewer.Inject( Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,
-                  BookmarkView, TextSelection, Annotation, FormFields, FormDesigner);
-
-let viewer: PdfViewer = new PdfViewer();
-// Replace the "localhost:44309" with the actual URL of your server
+var viewer = new ej.pdfviewer.PdfViewer();
+// Replace the "localhost:44396" with the actual URL of your server
 viewer.serviceUrl = 'https://localhost:44396/pdfviewer';
 viewer.appendTo('#pdfViewer');
 viewer.load('PDF_Succinctly.pdf', null);
 
 ```
 
-N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the previous code example.
+N> Install the `Google.Apis.Drive.v3` NuGet package in the server project to use the Google Drive client APIs shown above.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-drive)
