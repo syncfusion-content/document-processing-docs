@@ -8,9 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React Router v7 Quickstart
+# React Router v7 (Remix) Quickstart
 
-N> Remix's framework features were merged into React Router v7 and later. This guide targets React Router v7's framework-mode and shows a client-only (standalone) integration of the Syncfusion React PDF Viewer.
+## Overview
+
+N> Remix's framework features were merged into React Router v7 and later. This guide targets React Router v7's framework-mode and shows a client-only (standalone) integration of the Syncfusion React PDF Viewer. Keep the viewer client-only to avoid SSR/runtime errors.
+
+## Quickstart
 
 ## Prerequisites
 
@@ -35,7 +39,7 @@ Different starters create different folder layouts. Pick the mapping that matche
 
 Use the file paths that match your project layout when following the steps below.
 
-## Step 1 — Create a React + React Router (v7) app
+## Step 1 — Create a Remix or React Router v7 app
 
 If you want the React Router framework-mode project (creates an `app/` tree), use the official scaffolding tool:
 
