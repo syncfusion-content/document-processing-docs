@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Preprocess PDF Document Before Displaying in React PDF Viewer | Syncfusion
+title: Preprocess PDF Document in React PDF Viewer | Syncfusion
 description: Learn how to preprocess PDF documents using Syncfusion PDF Library before displaying them in the React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
