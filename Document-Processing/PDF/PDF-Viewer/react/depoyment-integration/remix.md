@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 N> Remix's framework features were merged into React Router v7 and later. This guide targets React Router v7's framework-mode and shows a client-only (standalone) integration of the Syncfusion React PDF Viewer. Keep the viewer client-only to avoid SSR/runtime errors.
 
-## Tutorial — Quickstart
+## Quickstart
 
 ## Prerequisites
 

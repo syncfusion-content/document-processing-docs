@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 How to integrate the Syncfusion React PDF Viewer into a Gatsby site. Use the Quickstart below to get a working viewer, then consult the How-to and Reference sections for configuration details (WASM, static assets, and SSR notes).
 
-## Tutorial — Quickstart for Gatsby
+## Quickstart for Gatsby
 
 1. Create or open your Gatsby site.
 

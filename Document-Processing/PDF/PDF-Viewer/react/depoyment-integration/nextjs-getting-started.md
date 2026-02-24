@@ -104,9 +104,10 @@ yarn add @syncfusion/ej2-react-pdfviewer
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React components include built-in themes. Import the PDF Viewer theme and base styles to match the look and feel of the application.
 
-/* Where to add the imports: */
-/* - App Router: put these in `src/app/globals.css` */
-/* - Pages Router: put them in `pages/_app.js` or its imported global CSS */
+Where to add the imports:
+
+- App Router: put these in `src/app/globals.css`
+- Pages Router: put them in `pages/_app.js` or its imported global CSS
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
