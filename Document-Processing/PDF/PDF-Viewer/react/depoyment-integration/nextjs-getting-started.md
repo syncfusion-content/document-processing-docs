@@ -24,7 +24,7 @@ Before getting started with the Next.js application, ensure the following prereq
 
  * The application is compatible with macOS, Windows, and Linux operating systems.
 
-* See the [System requirements](../../../../System-Requirements.md) for detailed platform requirements.
+* See the [System requirements](../../../../System-Requirements) for detailed platform requirements.
 
 ## Create a Next.js application
 
@@ -104,9 +104,10 @@ yarn add @syncfusion/ej2-react-pdfviewer
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React components include built-in themes. Import the PDF Viewer theme and base styles to match the look and feel of the application.
 
-/* Where to add the imports: */
-/* - App Router: put these in `src/app/globals.css` */
-/* - Pages Router: put them in `pages/_app.js` or its imported global CSS */
+Where to add the imports:
+
+- App Router: put these in `src/app/globals.css`
+- Pages Router: put them in `pages/_app.js` or its imported global CSS
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
@@ -145,7 +146,7 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
+            resourceUrl="https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}>
                {/* Inject the required services */}
                <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -180,3 +181,7 @@ yarn run dev
 To learn more about the PDF Viewer component, see the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started#module-injection).
 
 N> [View the Next.js PDF Viewer sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pdfviewer-component-in-nextjs)
+
+**See also**
+
+- [Adding Next.js Configuration for deployment](../getting-started#adding-nextjs-configuration)

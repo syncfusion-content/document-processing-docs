@@ -71,7 +71,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 Set the `serviceUrl` to point to your web service (for example, replace `https://localhost:44396/pdfviewer` with your server URL). Also set `documentPath` to the document URL you want to load.
 
-```tsx
+```js
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -105,7 +105,7 @@ root.render(<App />);
 
 The built-in toolbar includes a download option that saves the updated PDF to the user's local file system. You can also trigger the same behavior programmatically by calling the viewer's [`download()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) API.
 
-```tsx
+```js
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css';
