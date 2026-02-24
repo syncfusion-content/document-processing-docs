@@ -20,7 +20,7 @@ This simple example demonstrates the minimal steps to show a PDF document in the
 2. Set `documentPath` to a publicly accessible URL.
 
 Example (TypeScript / React):
-```jsx
+```ts
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,

@@ -92,7 +92,7 @@ Important: ensure any host you use serves `.wasm` files with Content-Type `appli
 
 Create `PdfViewerClient.tsx` under `src/webparts/pdfViewer/components` and paste the minimal example below. This component is client-only and safe for SPFx (which runs in the browser):
 
-```jsx
+```ts
 // src/webparts/pdfViewer/components/PdfViewerClient.tsx
 import * as React from 'react';
 import {
@@ -131,7 +131,7 @@ export default PdfViewerClient;
 
 Open the web part main React file (for example `src/webparts/pdfViewer/components/PdfViewer.tsx` created by the generator) and render `PdfViewerClient`:
 
-```jsx
+```ts
 import * as React from 'react';
 import PdfViewerClient from './PdfViewerClient';
 
