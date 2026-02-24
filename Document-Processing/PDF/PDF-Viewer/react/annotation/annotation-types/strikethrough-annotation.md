@@ -123,7 +123,7 @@ function addStrikethrough() {
 ---
 
 ## Customize Strikethrough Appearance
-Configure default strikethrough settings such as **color**, **opacity**, and **author** using []`strikethroughSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#strikethroughsettings).
+Configure default strikethrough settings such as **color**, **opacity**, and **author** using [`strikethroughSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#strikethroughsettings).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
