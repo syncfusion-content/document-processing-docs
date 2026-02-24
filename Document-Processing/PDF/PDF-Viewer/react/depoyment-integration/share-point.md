@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React PDF Viewer in SharePoint
+# React PDF Viewer in SharePoint Framework
 
 ## Overview
 
