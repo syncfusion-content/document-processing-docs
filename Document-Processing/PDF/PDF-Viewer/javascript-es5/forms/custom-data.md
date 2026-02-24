@@ -7,11 +7,11 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Add Custom Data to PDF Form Fields in JavaScript PDF Viewer
+# Add custom data to PDF form fields in JavaScript PDF Viewer
 
-The **Syncfusion JavaScript PDF Viewer** allows you to attach **custom application-specific data** to form fields by using the customData property. This enables you to associate business identifiers, tags, validation hints, or workflow metadata with form fields.
+The Syncfusion JavaScript PDF Viewer allows attaching application-specific data to form fields using the `customData` property. This enables associating business identifiers, tags, validation hints, or workflow metadata with form fields.
 
-The custom data remains linked to the form field throughout the viewer session and can be accessed or updated whenever the field is queried or modified.
+Custom data remains linked to the form field throughout the viewer session and can be accessed or updated whenever the field is queried or modified.
 
 This page explains how to:
 - [Add custom data when creating form fields](#add-custom-data-while-creating-pdf-form-fields)
@@ -27,7 +27,7 @@ This page explains how to:
 
 ## Add Custom Data While Creating PDF Form Fields
 
-You can attach custom data at the time of field creation by passing a **customData** object in the settings parameter of **addFormField()**.
+You can attach custom data at the time of field creation by passing a `customData` object in the settings parameter of `addFormField()`.
 
 ```js
 viewer.documentLoad = function () {
@@ -42,20 +42,20 @@ viewer.documentLoad = function () {
 
 ## Set Default Custom Data for PDF Form Fields Added Using UI
 
-When users add form fields using the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar), you can define default customData so that newly created fields automatically inherit it. Default custom data can be configured using per-field settings objects such as:
+When users add form fields using the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar), define default `customData` so newly created fields automatically inherit it. Default custom data can be configured using per-field settings objects such as:
 
-- [textFieldSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#textfieldsettings)
-- [passwordFieldSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#passwordfieldsettings)
-- [checkBoxFieldSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#checkboxfieldsettings)
-- [radioButtonFieldSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#radiobuttonfieldsettings)
-- [listBoxFieldSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#listboxfieldsettings)
-- [dropDownFieldSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#dropdownfieldsettings)
-- [signatureFieldSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#signaturefieldsettings)
-- [initialFieldSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#initialfieldsettings)
+- [`textFieldSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#textfieldsettings)
+- [`passwordFieldSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#passwordfieldsettings)
+- [`checkBoxFieldSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#checkboxfieldsettings)
+- [`radioButtonFieldSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#radiobuttonfieldsettings)
+- [`listBoxFieldSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#listboxfieldsettings)
+- [`dropDownFieldSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#dropdownfieldsettings)
+- [`signatureFieldSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#signaturefieldsettings)
+- [`initialFieldSettings`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#initialfieldsettings)
 
 ```js
 // ...viewer initialization as above...
-// Example for texbox defaults
+// Example for textbox defaults
 viewer.textFieldSettings = {
   name: 'Textbox',
   customData: { group: 'contact', createdBy: 'designer', requiredRole: 'user' }
@@ -70,7 +70,7 @@ viewer.checkBoxFieldSettings = {
 
 ## Update or Replace PDF Form Field Custom Data
 
-You can modify the customData of an existing form field by using the [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) method. The field can be identified using either its object reference or field ID.
+Modify the `customData` of an existing form field using [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields). The field can be identified using its object reference or field ID.
 
 ```js
 // Retrieve existing fields
@@ -85,7 +85,7 @@ if (target) {
 ```
 
 **Tip:**
-Merge new values with the existing customData object before calling [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) to avoid overwriting previously stored data.
+Merge new values with the existing `customData` object before calling [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) to avoid overwriting previously stored data.
 
 ## Read Custom Data from PDF Form Fields
 
@@ -116,7 +116,7 @@ viewer.documentLoad = function () {
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples)
 
-## See Also
+## See also
 
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)

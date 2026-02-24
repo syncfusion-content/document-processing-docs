@@ -888,11 +888,20 @@
 					<li>
 						<a href="/document-processing/pdf/pdf-viewer/react/overview">React</a>
 						<ul>
-							<li>Getting Started
+							<li>
+								<a href="/document-processing/pdf/pdf-viewer/react/getting-started-overview">Getting Started</a>
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/react/preact">Preact</a></li>
+								</ul>
+							</li>
+							<li>
+								Environment Integration
+								<ul>
+                                    <li><a href="/document-processing/pdf/pdf-viewer/react/depoyment-integration/nextjs-getting-started">NextJS</a></li>
+                                    <li><a href="/document-processing/pdf/pdf-viewer/react/depoyment-integration/share-point">SharePoint Framework (SPFx)</a></li>
+                                    <li><a href="/document-processing/pdf/pdf-viewer/react/depoyment-integration/preact">Preact</a></li>
+                                    <li><a href="/document-processing/pdf/pdf-viewer/react/depoyment-integration/remix">Remix</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/react/feature-module">Feature Modules</a></li>
@@ -1027,6 +1036,13 @@
 							<li><a href="/document-processing/pdf/pdf-viewer/react/text-selection">Text Selection</a></li>
 							<li><a href="/document-processing/pdf/pdf-viewer/react/globalization">Globalization</a></li>
 							<li><a href="/document-processing/pdf/pdf-viewer/react/accessibility">Accessibility</a></li>
+							<li><a href="/document-processing/pdf/pdf-viewer/react/theming-and-styling">Theming and Styling</a></li>
+							<li><a href="/document-processing/pdf/pdf-viewer/react/context-menu/context-menu">Context Menu</a>
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/react/context-menu/builtin-context-menu">Built-in Context Menu</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/react/context-menu/custom-context-menu">Customize Context Menu</a></li>
+								</ul>
+							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/react/how-to-overview">How to</a> 
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/how-to/load-document">Load the PDF documents dynamically</a></li>
@@ -1050,7 +1066,6 @@
 									<li><a href="/document-processing/pdf/pdf-viewer/react/how-to/retry-timeout">Retry Timeout</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/how-to/load-n-number-page">Load N number of pages on initial loading</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/how-to/conformance">Supported conformance documents</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/react/how-to/custom-context-menu">Customize context menu</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/how-to/pagerenderstarted-pagerendercompleted-event">PageRenderInitiate and PageRenderComplete event</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/how-to/open-bookmark">Open and Close Bookmark pane programmatically</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/how-to/signatureselect-signatureunselect">SignatureSelect and SignatureUnselect event</a></li>
@@ -1075,6 +1090,7 @@
 									<li><a href="/document-processing/pdf/pdf-viewer/react/how-to/show-hide-annotation">Show and Hide Annotation</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/how-to/enable-text-selection">Dynamically Enable or Disable Text Selection</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/how-to/load-document-after-resources-loaded">Load document after resources loaded</a></li>
+									<li><a href="/document-Processing/pdf/pdf-viewer/react/how-to/existing-react-layout">Integrate PDF Viewer into existing react layout</a></li>
 								</ul>
 							</li>
 							<li>Troubleshooting
@@ -5204,13 +5220,33 @@
 							<li><a href="/document-processing/excel/spreadsheet/react/getting-started">Getting Started</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/nextjs-getting-started">Getting Started with NextJS</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/data-binding">Data Binding</a></li>
-							<li><a href="/document-processing/excel/spreadsheet/react/open-save">Open and Save</a></li>
-							<li><a href="/document-processing/excel/spreadsheet/react/docker-deployment">Docker Deployment</a></li>
+							<li><a href="/document-processing/excel/spreadsheet/react/open-excel-files">Open Excel Files</a>
+								<ul>
+									<li><a href="/document-processing/excel/spreadsheet/react/open-excel-file/from-aws-s3-bucket">From AWS S3</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/open-excel-file/from-azure-blob-storage">From Azure Blob Storage</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/open-excel-file/from-google-cloud-storage">From Google Cloud Storage</a></li>
+								</ul>
+							</li>
+							<li><a href="/document-processing/excel/spreadsheet/react/save-excel-files">Save Excel Files</a>
+								<ul>
+									<li><a href="/document-processing/excel/spreadsheet/react/save-excel-file/to-aws-s3-bucket">To AWS S3</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/save-excel-file/to-azure-blob-storage">To Azure Blob Storage</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/save-excel-file/to-google-cloud-storage">To Google Cloud Storage</a></li>
+								</ul>
+							</li>
+							<li><a href="/document-processing/excel/spreadsheet/react/server-deployment/spreadsheet-server-docker-image-overview">Server Deployment</a>
+							    <ul>
+									<li><a href="/document-processing/excel/spreadsheet/react/server-deployment/spreadsheet-server-docker-image-overview">Spreadsheet Server Docker Overview</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/server-deployment/deploy-spreadsheet-docker-to-azure-using-azure-cli">Deploy Spreadsheet Docker to Azure App Service using Azure CLI</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/server-deployment/publish-spreadsheet-server-to-azure-using-visual-studio">Publish Spreadsheet Server to Azure App Service using Visual Studio</a></li>
+								</ul>
+							</li>
 							<li><a href="/document-processing/excel/spreadsheet/react/worksheet">Worksheet</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/cell-range">Cell Range</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/editing">Editing</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/context-menu">Context Menu</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/formulas">Formulas</a></li>
+							<li><a href="/document-processing/excel/spreadsheet/react/data-validation">Data Validation</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/formatting">Formatting</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/illustrations">Illustrations</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/rows-and-columns">Rows and Columns</a></li>
@@ -5376,6 +5412,7 @@
 							<li><a href="/document-processing/excel/spreadsheet/javascript-es6/styles">Styles and Appearance</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/javascript-es6/print">Print</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/javascript-es6/performance-best-practices">Performance Best Practices</a></li>
+							<li><a href="/document-processing/excel/spreadsheet/javascript-es6/performance-metrics">Performance Metrics</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/javascript-es6/global-local">Globalization</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/javascript-es6/accessibility">Accessibility</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/javascript-es6/keyboard-shortcuts">Keyboard Shortcuts</a></li>

@@ -115,7 +115,7 @@ var allowRowColumnHeader;
 var drpDownBtn = new ej.splitbuttons.DropDownButton({
   items: items,
   cssClass: 'e-round-corner',
-  select: (args) => {
+  select: function (args) {
     spreadsheet.print({
       type: args.item.text,
       allowGridLines: allowGridLines,
