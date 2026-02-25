@@ -22,7 +22,7 @@ XlsIO supports grouping pivot data based on the following categories.
 
 ## Group
 
-The pivot fields can be grouped by using the [GroupBy](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotFieldGroup.html#Syncfusion_XlsIO_IPivotFieldGroup_GroupBy) property in the IPivotField.FieldGroup.
+The pivot fields can be grouped by using the [GroupBy](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFieldGroup.html#Syncfusion_XlsIO_IPivotFieldGroup_GroupBy) property in the IPivotField.FieldGroup.
 
 The following code example illustrates how to group pivot fields based on a period.
 
@@ -116,7 +116,7 @@ By executing the program, you will get the Excel file as below
 
 ## Ungroup
 
-The grouping in the pivot table can be removed by making the [GroupBy](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotFieldGroup.html#Syncfusion_XlsIO_IPivotFieldGroup_GroupBy) property value None.
+The grouping in the pivot table can be removed by making the [GroupBy](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFieldGroup.html#Syncfusion_XlsIO_IPivotFieldGroup_GroupBy) property value None.
 
 The following code example illustrates how to remove grouping from the pivot table.
 
@@ -186,7 +186,7 @@ End Using
 
 ## Expand or collapse
 
-XlsIO allows you to expand and collapse the [PivotFieldItems](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotFieldItems.html) or simply the pivot table rows using [IsHiddenDetails](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotItemOptions_IsHiddenDetails) of [PivotItemOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html).
+XlsIO allows you to expand and collapse the [PivotFieldItems](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFieldItems.html) or simply the pivot table rows using [IsHiddenDetails](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotItemOptions_IsHiddenDetails) of [PivotItemOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html).
 
 The following code example illustrates how to expand or collapse rows in the pivot table.
 
