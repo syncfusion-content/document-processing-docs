@@ -50,6 +50,10 @@ This guide describes inserting new blank pages into a PDF using the **Organize P
 
 - A blank page thumbnail appears at the chosen position and is present in any saved or downloaded PDF.
 
+## Enable or disable Insert Pages button
+
+To enable or disable the **Insert Pages** button in the page thumbnails, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-insert-option) for the guidelines
+
 ## Troubleshooting
 
 - **Organize Pages button missing**: Verify `PageOrganizer` is included in `Inject` and `Toolbar` is enabled.

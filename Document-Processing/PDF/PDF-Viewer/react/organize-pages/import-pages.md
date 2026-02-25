@@ -46,6 +46,10 @@ This guide explains how to import pages from another PDF into the current docume
 
 - Imported pages display as a single thumbnail in Organize Pages and are merged into the original PDF when saved or exported.
 
+## Enable or disable Import Pages button
+
+To enable or disable the **Import Pages** button in the Organize Pages toolbar, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-import-option) for the guidelines.
+
 ## Troubleshooting
 
 - **Import fails**: Ensure the selected file is a valid PDF and the browser file picker is permitted.

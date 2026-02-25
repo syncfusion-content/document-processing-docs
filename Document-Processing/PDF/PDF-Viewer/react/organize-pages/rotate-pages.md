@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rotate pages in Organize Pages (React PDF Viewer) | Syncfusion
-description: How to rotate one or more pages using the Organize Pages UI in the Syncfusion React PDF Viewer.
+description: Learn how to rotate one or more pages using the Organize Pages UI in the Syncfusion React PDF Viewer and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -58,6 +58,10 @@ This guide explains how to rotate individual or multiple pages using the **Organ
 
 - Pages rotate in-place in the Organize Pages dialog when using the rotate controls.
 - Saving or exporting the document preserves the new orientation.
+
+## Enable or disable Rotate Pages button
+
+To enable or disable the **Rotate Pages** button in the Organize Pages toolbar, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-rotate-option) for the guidelines
 
 ## Troubleshooting
 

@@ -51,6 +51,10 @@ This guide describes how to rearrange pages in a PDF using the **Organize Pages*
 
 - Thumbnails reflect the new page order immediately and saved / downloaded PDFs preserve the reordered sequence.
 
+## Enable or disable reorder option
+
+To enable or disable the **Reorder pages** option in the Organize Pages, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-rearrange-option) for the guidelines
+
 ## Troubleshooting
 
 - **Thumbnails won't move**: Confirm [`pageOrganizerSettings.canRearrange`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettingsmodel#canrearrange) is is not set to `false`.

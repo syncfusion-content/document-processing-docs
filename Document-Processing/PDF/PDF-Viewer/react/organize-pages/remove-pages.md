@@ -59,6 +59,10 @@ This guide shows how to delete single or multiple pages from a PDF using the **O
 - Selected pages are removed from the document immediately in the Organize Pages dialog.
 - After clicking **Save** or **Save As**, the resulting PDF reflects the deletions.
 
+## Enable or disable Remove Pages button
+
+To enable or disable the **Remove Pages** button in the Organize Pages toolbar, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-delete-option) for the guidelines.
+
 ## Troubleshooting
 
 - **Delete button disabled**: Ensure `PageOrganizer` is injected and [`pageOrganizerSettings.canDelete`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettingsmodel#candelete) is not set to `false`.
