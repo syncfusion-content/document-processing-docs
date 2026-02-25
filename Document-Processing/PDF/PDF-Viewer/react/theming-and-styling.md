@@ -78,8 +78,9 @@ Below is an approach that can be copied into the app that switches themes by dyn
 
 **Link-swap approach:**
 
-```ts
-// App.tsx
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
 type ThemeName = 'material3' | 'material3-dark';
 const THEME_LINK_ID = 'e-current-theme';
 function applyTheme(theme: ThemeName) {
@@ -127,7 +128,9 @@ export function App() {
         </div>
     </div>);
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Custom Styles
 
@@ -143,8 +146,9 @@ While built-in themes provide a comprehensive look and feel, you might need to a
 
 Apply overrides using a wrapper class so the rules are scoped and safe to maintain. The following example adds custom styles to signature form fields:
 
-```css
-/* App.css */
+{% tabs %}
+{% highlight css tabtitle="App.css" %}
+{% raw %}
 /* This rule sets a scoped, custom black background for the PDF viewer page container */
 .e-custom-style .e-pv-page-container {
         background: #0b1220;
@@ -176,10 +180,10 @@ Apply overrides using a wrapper class so the rules are scoped and safe to mainta
     height: 100% !important;
     text-align: center !important;
 }
-```
-
-```ts
-// src/App.tsx
+{% endraw %}
+{% endhighlight %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
 import './App.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -196,7 +200,9 @@ export function App() {
         </div>
     );
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ![Viewer background and signature fields example](images/styling-siganture-page-container.png)
 
