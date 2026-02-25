@@ -39,9 +39,11 @@ In order to develop applications with the Syncfusion<sup>&reg;</sup> Document Pr
 * Microsoft Visual Studio 2019
 * Microsoft Visual Studio 2022
 
+### .NET Versions
+
 Syncfusion<sup>&reg;</sup> Document Processing libraries supports the following .NET Framework and .NET versions
 
-* .NET Framework 4.6.2
+* .NET Framework 4.6.2 and above
 * .NET Standard 2.0
 * .NET 8.0
 * .NET 9.0
