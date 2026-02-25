@@ -1,6 +1,6 @@
 ---
 title: Formulas reference errors | Syncfusion
-description: This page tells why formulas referencing the deleted column show REF! errors.
+description: Why formulas referencing the deleted column show REF! errors.
 platform: document-processing
 control: XlsIO
 documentation: UG
