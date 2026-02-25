@@ -44,7 +44,9 @@ Below is a focused snippet showing:
 2) Wiring the **`documentLoad`** event, and
 3) Reading basic **document info** and **page count**, then calling **viewer APIs** safely.
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
@@ -100,7 +102,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 **Notes**
 - The event name is `documentLoad` (the callback receives load args).
@@ -117,7 +121,9 @@ This example demonstrates a complete flow:
 - Extracting **metadata** and **pages**
 - Exposing **buttons** to call viewer APIs only after load
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import {
@@ -257,7 +263,9 @@ function App() {
 // Render like your previous example (ensure an element with id="sample" exists in index.html)
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ---
 

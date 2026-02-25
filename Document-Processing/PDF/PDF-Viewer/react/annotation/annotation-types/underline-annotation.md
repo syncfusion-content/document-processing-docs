@@ -72,6 +72,7 @@ Right-click a selected text region → select **Underline**.
 ![Underline Context](../../../javascript-es6/annotations/annotation-images/underline-context.gif)
 
 To customize menu items, refer to [**Customize Context Menu**](../../context-menu/custom-context-menu) documentation.
+
 ---
 
 ### Enable Underline Mode
