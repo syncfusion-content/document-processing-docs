@@ -144,7 +144,9 @@ Vite / plain React (`src/` tree)
 
 Example component (works in either location):
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 // components/PdfViewerClient.ts
 import React, { useEffect, useState } from 'react';
 import {
@@ -175,7 +177,9 @@ export default function PdfViewerClient() {
     </div>
   );
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 Routing / usage examples:
 
