@@ -21,7 +21,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
 
 	Basic div:
 
-	```tsx
+	```ts
 	// App.tsx
 	import React from 'react';
 	import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -45,7 +45,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
 
 	Flex container: keep `minHeight: 0` on flex children so the viewer can shrink/grow correctly:
 
-	```tsx
+	```ts
 	// App.tsx
 	import React from 'react';
 	import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -74,7 +74,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
 
 	CSS Grid - reserve rows/columns using `grid-template-rows` or `grid-template-columns`:
 
-	```tsx
+	```ts
 	// App.tsx
 	import React from 'react';
     import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -157,7 +157,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
 - **Use viewer inside Tab components**
 	- The react PDF Viewer are also supported inside Syncfusion tab components. 
 
-	```tsx
+	```ts
 	// App.tsx
 	import React, { useRef } from 'react';
     import { TabComponent, TabItemsDirective, TabItemDirective } from '@syncfusion/ej2-react-navigations';
@@ -230,7 +230,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
 - **Use viewer inside Dialog**
 	- If the viewer sits inside a dialog, for example Syncfusion Dialog, render or initialize the viewer after the dialog open events. The DOM must be visible for the viewer to measure layout.
 
-	```tsx
+	```ts
 	// App.tsx
 	import React, { useRef, useCallback } from 'react';
     import { DialogComponent } from '@syncfusion/ej2-react-popups';
@@ -301,7 +301,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
 - **Use viewer inside Collapsible sections**
 	- For accordions or collapsible containers, either render the viewer lazily when the section expands or dispatch the resize event after expansion so the viewer can recompute layout.
 
-	```tsx
+	```ts
 	// App.tsx
 	import React, { useCallback, useRef } from 'react';
     import {
