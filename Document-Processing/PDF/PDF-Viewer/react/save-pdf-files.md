@@ -71,7 +71,9 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 Set the `serviceUrl` to point to your web service (for example, replace `https://localhost:44396/pdfviewer` with your server URL). Also set `documentPath` to the document URL you want to load.
 
-```js
+{% tabs %}
+{% highlight js tabtitle="JSX" %}
+{% raw %}
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -97,7 +99,9 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Save%20and%20Load/Save%20PDF%20file%20to%20server)
 
@@ -105,7 +109,9 @@ root.render(<App />);
 
 The built-in toolbar includes a download option that saves the updated PDF to the user's local file system. You can also trigger the same behavior programmatically by calling the viewer's [`download()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) API.
 
-```js
+{% tabs %}
+{% highlight js tabtitle="JSX" %}
+{% raw %}
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css';
@@ -139,7 +145,9 @@ return (<div>
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Save modified PDF to a database
 
@@ -247,7 +255,7 @@ Each link below goes to a provider page with simple, step-by-step instructions a
 - [Azure AD (auth notes)](./save-pdf-file/to-azure-active-directory)
 ---
 
-See also:
+**See also**
 
 - [Get Base64 value from a loaded PDF using saveAsBlob API](./how-to/get-base64)
 - [Open PDF files overview](./open-pdf-files)
