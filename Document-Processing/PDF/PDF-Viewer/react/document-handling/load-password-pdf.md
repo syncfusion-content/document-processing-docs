@@ -46,7 +46,7 @@ If you load a password-protected PDF from a URL or through custom logic, the vie
 
 You can directly pass the password in the [`load`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) method:
 
-```tsx
+```js
 viewer.load(
   'https://your-api/password-protected.pdf',
   'Password'
