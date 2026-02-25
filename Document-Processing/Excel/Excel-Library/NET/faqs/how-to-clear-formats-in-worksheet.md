@@ -1,6 +1,6 @@
 ---
 title: How to clear formats in a worksheet | XlsIO | Syncfusion
-description: This page shows how to clear formats in a worksheet using Syncfusion .NET Excel library (XlsIO).
+description: This page explains about how to clear all the formats in a worksheet using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
