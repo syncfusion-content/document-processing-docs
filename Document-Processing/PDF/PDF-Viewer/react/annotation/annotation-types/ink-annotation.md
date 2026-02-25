@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Freehand Drawing (Ink) Annotations in React PDF Viewer | Syncfusion
+title: Add Freehand Drawing (Ink) Annotation in React PDF Viewer | Syncfusion
 description: Learn how to enable, draw, customize, and manage Ink (freehand) annotations in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -49,7 +49,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 ---
 
-## Add Ink annotatinon
+## Add Ink annotation
 
 ### Draw Freehand Using the Toolbar
 1. Open the **Annotation Toolbar**.
