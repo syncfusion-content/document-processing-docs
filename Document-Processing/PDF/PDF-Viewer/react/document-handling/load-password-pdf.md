@@ -65,7 +65,9 @@ This is useful when the password is known beforehand.
 
 If the [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentpath) points to a password-protected PDF:
 
-```tsx
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
     <PdfViewerComponent
         id="container"
         //Load URL for Password Protected Document 
@@ -73,7 +75,9 @@ If the [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfvi
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ height: '640px' }}
     >
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 The viewer will:
 

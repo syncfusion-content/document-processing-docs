@@ -119,7 +119,7 @@ If thumbnails or page reordering are not essential:
 - Improve navigation responsiveness
 
 #### Example (remove unneccesary modules)
-```tsx
+```js
 <Inject services={[Toolbar, Magnification, Navigation, Print]} />
 ```
 
@@ -156,7 +156,9 @@ By default, the viewer uses **sessionStorage** to store interactive session data
 - Reduces repeated processing for form/annotation‑heavy pages
 
 #### Enable Local Storage
-```tsx
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 			<PdfViewerComponent
 				id="container"
 				documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
@@ -166,7 +168,9 @@ By default, the viewer uses **sessionStorage** to store interactive session data
 			>
 				<Inject services={[Toolbar, Magnification, Navigation, Print, Annotation, FormFields]} />
 			</PdfViewerComponent>
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 This is highly recommended when working with legal documents, tax forms, interactive applications, or PDFs containing thousands of annotations.
 
