@@ -28,14 +28,14 @@ The PDF Viewer applies styles to the toolbar, buttons, panels, annotations, and 
 **Step-2:** To change the theme to tailwind, add the imports to tailwind theme in `app.css`.
 
 ```css
-   @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-   @import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-   @import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-   @import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-   @import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-   @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-   @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-   @import "../node_modules/@syncfusion/ej2-pdfviewer/styles/tailwind3.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import "../node_modules/@syncfusion/ej2-pdfviewer/styles/tailwind3.css";
 ```
 
 ### Tutorial
