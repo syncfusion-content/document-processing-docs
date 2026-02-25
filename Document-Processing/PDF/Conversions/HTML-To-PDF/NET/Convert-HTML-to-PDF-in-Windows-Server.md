@@ -82,10 +82,12 @@ Step 4: It will generate and publish all necessary files to the local publish di
 
 Step 5: Copy the published output folder to the server and host the application in IIS.
 i.Open **IIS Manager** on the server and create a new website.
+
 ii.Enter a **site name** and select the **physical path** that points to the published output folder on the server.
 ![IIS Website](htmlconversion_images/IIS-Website.png)
 
 iii. Obtain the server’s IP address after adding the website in the local IIS server.
+
 iv. From your local computer, browse the website using the server’s IP address and port number. Once the site loads successfully, export the webpage to PDF.
 ![IIS Browser](htmlconversion_images/IIS-RunBrowser.png)
 
