@@ -8,7 +8,7 @@ documentation: UG
 
 # How to copy/paste the cell values that contain only formula?
 
-You can copy and paste the values of the cell which contain only formula using [CopyTo](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_ExcelCopyRangeOptions_) method by specifying the [ExcelCopyRangeOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelCopyRangeOptions.html) as **None**. The following code snippet illustrates this.
+You can copy and paste the values of the cell which contain only formula using [CopyTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_ExcelCopyRangeOptions_) method by specifying the [ExcelCopyRangeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelCopyRangeOptions.html) as **None**. The following code snippet illustrates this.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -75,11 +75,11 @@ End Using
 
 ## See Also
 
-* [How to copy a range from one workbook to another?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-copy-a-range-from-one-workbook-to-another)
-* [How to protect certain cells in a worksheet?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-protect-certain-cells-in-a-worksheet)
-* [How to set a line break inside a cell?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-set-a-line-break-inside-a-cell)
-* [How to format text within a cell?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-format-text-within-a-cell)
-* [How to copy or move a range?](https://help.syncfusion.com/file-formats/xlsio/worksheet-cells-manipulation#copy-or-move-a-range)
-* [How to copy and paste as link?](https://help.syncfusion.com/file-formats/xlsio/worksheet-cells-manipulation#copy-and-paste-as-link)
-* [How to skip blanks while copying?](https://help.syncfusion.com/file-formats/xlsio/worksheet-cells-manipulation#skip-blanks-while-copying)
+* [How to copy a range from one workbook to another?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-copy-a-range-from-one-workbook-to-another)
+* [How to protect certain cells in a worksheet?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-protect-certain-cells-in-a-worksheet)
+* [How to set a line break inside a cell?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-set-a-line-break-inside-a-cell)
+* [How to format text within a cell?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-format-text-within-a-cell)
+* [How to copy or move a range?](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-cells-manipulation#copy-or-move-a-range)
+* [How to copy and paste as link?](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-cells-manipulation#copy-and-paste-as-link)
+* [How to skip blanks while copying?](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-cells-manipulation#skip-blanks-while-copying)
 
