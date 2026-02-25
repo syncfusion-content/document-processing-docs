@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Add Custom Fonts to PDF Forms in React PDF Viewer
 
-The **Syncfusion React PDF Viewer** supports loading, editing, and saving **custom fonts** in form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown) fields using the customFonts property. This ensures consistent text rendering even when the required fonts are not installed on the user’s system.  
+The Syncfusion **React PDF Viewer** supports loading, editing, and saving **custom fonts** in form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown) fields using the `customFonts` property. This ensures consistent text rendering even when the required fonts are not installed on the user's system.
 Custom fonts are embedded and preserved when form fields are modified or saved, making the PDF display correctly across environments.
 
 ## When dynamic fonts are used
 Dynamic fonts are currently used in the following scenarios:
-- **Text annotations** — When users enter text annotations that use non standard fonts, the viewer dynamically loads the required fonts to ensure correct character rendering. 
-- **PDF forms** — When users fill form fields that rely on fonts not included by default, dynamic font loading ensures the entered text is rendered correctly.
+- **Text annotations** — When text annotations use non-standard fonts, the viewer dynamically loads the required fonts to ensure correct character rendering.
+- **PDF forms** — When form fields rely on fonts not included by default, dynamic font loading ensures the entered text is rendered correctly.
 
 ## How Custom Fonts Work
 The custom font workflow in the PDF Viewer is as follows:
@@ -116,7 +116,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N>Ensure that the font file names match the specified font names.
+N> Ensure that the font file names match the specified font names.
 
 ## Supported Form Fields
 Custom fonts can be applied to the following form field types:

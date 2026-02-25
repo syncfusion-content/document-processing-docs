@@ -9,8 +9,9 @@ documentation: ug
 
 # PDF Form Import and Export Events in React
 
-Import/Export events let you **track and customize the entire life cycle** of form data being imported into or exported from the PDF Viewer.
-Use these events to:
+Import and export events enable tracking and customization of the full life cycle of form data imported into or exported from the PDF Viewer.
+
+Use events to:
 - Validate inputs before processing.
 - Show progress indicators.
 - Log audit trails.

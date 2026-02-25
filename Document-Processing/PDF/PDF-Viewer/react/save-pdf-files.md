@@ -8,26 +8,36 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Saving PDF file
+# Saving PDF Files in the React PDF Viewer
 
-After editing the PDF file with various annotation tools, you will need to save the updated PDF to the server, database, or local file system.
+After editing a PDF with annotation tools, you can save the updated file to a server, a database, or download it locally. The following sections show common approaches.
 
-## Save PDF file to Server
+### Save and Download the Edited PDF
 
-Need to save the modified PDF back to a server. To achieve this, proceed with the following steps
+After editing the PDF document, follow this short, linear flow to persist and retrieve the updated file:
 
-**Step 1:** Create a Simple PDF Viewer Sample in React
+1. Persist the edited document to your back end (server or database). See "Save modified PDF to server" and "Save modified PDF to a database" below for server-side examples.
+2. Provide the updated file to the user. For a simple download use the built-in toolbar or call the viewer API [`download()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download).
+3. If you need the edited PDF for custom uploads or processing, use the viewer [`saveAsBlob()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#saveasblob) API to obtain a Blob (or convert it to Base64).
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
+This is a summary; use the detailed subsections below for full code samples and server-side instructions.
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+## Save modified PDF to server
+
+To save the modified PDF back to a server, follow these steps.
+
+**Step 1:** Create a simple PDF Viewer sample in React
+
+Follow the [getting-started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide to create a basic PDF Viewer implementation.
+
+**Step 2:** Modify the `PdfViewerController.cs` in the web service project
+
+1. Create a web service project targeting .NET Core 3.0 or later. See this [KB Link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for details.
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
-3. Modify the `Download()` method to open it in the viewer using URL
-
+3. Modify the `Download()` method so it returns the modified document for the viewer to download or store.
 ```csharp
 
 public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
@@ -57,12 +67,13 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 ```
 
-**Step 3:**  Set the PDF Viewer Properties in React PDF viewer component
+**Step 3:** Set the PDF Viewer properties in your React app
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
+Set the `serviceUrl` to point to your web service (for example, replace `https://localhost:44396/pdfviewer` with your server URL). Also set `documentPath` to the document URL you want to load.
 
+{% tabs %}
+{% highlight js tabtitle="JSX" %}
 {% raw %}
-
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -88,17 +99,19 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
 {% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Save%20and%20Load/Save%20PDF%20file%20to%20server)
 
 ## Download PDF file as a copy
 
-In the built-in toolbar, you have an option to download the updated PDF to the local file system, you can use it to download the PDF file.
+The built-in toolbar includes a download option that saves the updated PDF to the user's local file system. You can also trigger the same behavior programmatically by calling the viewer's [`download()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) API.
 
+{% tabs %}
+{% highlight js tabtitle="JSX" %}
 {% raw %}
-
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css';
@@ -132,31 +145,30 @@ return (<div>
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-
 {% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
-## Save PDF file to Database
+## Save modified PDF to a database
 
-If you have plenty of PDF files stored in database and you want to save the updated PDF file back to the database, use the following code example.
+If your application stores PDF files in a database, you can save the updated PDF bytes back to the database from your web service. The following steps outline a typical server-side flow.
 
-**Step 1:** Create a Simple PDF Viewer Sample in React
+**Step 1:** Create the React sample viewer
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
+Follow the [getting-started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide to set up a basic Viewer instance.
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 2:** Update `PdfViewerController.cs` in the web service
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project targeting .NET Core 3.0 or later (see the KB link above). Open the `PdfViewerController.cs` file in your web service project.
 
-2. Open the `PdfViewerController.cs` file in your web service project.
-
-3. Import the required namespaces at the top of the file:
+2. Import required namespaces:
 
 ```csharp
 using System.IO;
 using System.Data.SqlClient;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+3. Add configuration fields to your controller and read the connection string from configuration:
 
 ```csharp
 private IConfiguration _configuration;
@@ -171,15 +183,12 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the `Download()` method to open it in the viewer using URL
+4. In the `Download()` method, convert the returned base64 document to bytes and insert it into your database (the example below uses parameterized commands to avoid SQL injection):
 
 ```csharp
-
 [HttpPost("Download")]
 [Microsoft.AspNetCore.Cors.EnableCors("MyPolicy")]
 [Route("[controller]/Download")]
-//Post action for downloading the PDF documents
-
 public async Task<IActionResult> Download([FromBody] Dictionary<string, string> jsonObject)
 {
   //Initialize the PDF Viewer object with memory cache object
@@ -211,7 +220,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+5. Add the connection string to `appsettings.json`:
 
 ```json
 {
@@ -222,12 +231,31 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
     }
   },
   "AllowedHosts": "*",
-  "ConnectionString": "Your connection string for SQL server"
+  "ConnectionString": "Your connection string for SQL Server"
 }
 ```
 
-N> Replace **Your Connection string from SQL server** with the actual connection string for your SQL Server database
+N> Replace `Your connection string for SQL Server` with your actual connection string.
 
-N> The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString variable in the previous code example as per the connection string of your database.
+N>: Ensure the `System.Data.SqlClient` package (or `Microsoft.Data.SqlClient`) is installed in your project. Use parameterized queries (as shown) and validate inputs to avoid SQL injection risks.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-database)
+
+### Save to Cloud Storage Services
+
+Each link below goes to a provider page with simple, step-by-step instructions and example code for saving the edited PDF to that cloud storage service.
+
+- [AWS S3](./save-pdf-file/to-amazon-s3)
+- [Azure Blob Storage](./save-pdf-file/to-azure-blob-storage)
+- [Google Cloud Storage](./save-pdf-file/to-google-cloud-storage)
+- [Google Drive](./save-pdf-file/to-google-drive)
+- [OneDrive](./save-pdf-file/to-one-drive)
+- [Dropbox](./save-pdf-file/to-dropbox-cloud-file-storage)
+- [Box](./save-pdf-file/to-box-cloud-file-storage)
+- [Azure AD (auth notes)](./save-pdf-file/to-azure-active-directory)
+---
+
+**See also**
+
+- [Get Base64 value from a loaded PDF using saveAsBlob API](./how-to/get-base64)
+- [Open PDF files overview](./open-pdf-files)
