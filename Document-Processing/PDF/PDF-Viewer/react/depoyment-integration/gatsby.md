@@ -65,7 +65,9 @@ import './src/components/layout.css';
 
 5. Use a client-only approach (Gatsby is server-side rendered). A simple and reliable pattern is to render the viewer after mount with a mounted flag. Create `src/components/pdfviewer.js` with the component below (the example also shows where to register a Syncfusion license if you have one):
 
-```js
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 // src/components/pdfviewer.js
 import React, { useEffect, useState } from 'react';
 import {
@@ -99,11 +101,15 @@ export default function PdfViewer() {
         </div>
     );
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 Add a page that uses the component at `src/pages/index.js`:
 
-```js
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 // src/pages/index.js
 import React from "react";
 import PdfViewer from "../components/pdfviewer";
@@ -117,7 +123,9 @@ export default function PdfViewerPage() {
     </main>
   );
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 6. Run the Gatsby dev server:
 
