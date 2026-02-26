@@ -38,8 +38,8 @@ Follow the [getting-started](https://help.syncfusion.com/document-processing/pdf
 2. Open the `PdfViewerController.cs` file in your web service project.
 
 3. Modify the `Download()` method so it returns the modified document for the viewer to download or store.
-```csharp
 
+```csharp
 public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 {
   //Initialize the PDF Viewer object with memory cache object
@@ -64,7 +64,6 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
   }
   return Content(documentBase);
 }
-
 ```
 
 **Step 3:** Set the PDF Viewer properties in your React app
@@ -253,6 +252,7 @@ Each link below goes to a provider page with simple, step-by-step instructions a
 - [Dropbox](./save-pdf-file/to-dropbox-cloud-file-storage)
 - [Box](./save-pdf-file/to-box-cloud-file-storage)
 - [Azure AD (auth notes)](./save-pdf-file/to-azure-active-directory)
+
 ---
 
 **See also**
