@@ -1,184 +1,93 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in React Pdfviewer control | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion React Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Customize mobile Toolbar in React PDF Viewer | Syncfusion
+description: Learn how to customize the toolbar for mobile devices in the Syncfusion React PdfViewer and ensure smooth touch interactions.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Mobile Toolbar Interface in React Pdfviewer control
 
-The Mobile PDF Viewer provides features for viewing, searching, annotating, and managing PDF documents on mobile devices. It exposes core tools such as search, download, bookmarking, annotation, and page organization. The desktop toolbar can also be enabled in mobile mode to expose additional actions when required.
+# Customize mobile toolbar in React PdfViewer
 
-## Mobile Mode Toolbar Configuration
+## Overview
 
-In mobile mode, the toolbar is optimized for small screens and presents the most common actions for interacting with a PDF document. The following key features are available in mobile mode:
+This how-to explains how to enable the desktop toolbar on mobile devices running the Syncfusion React PDF Viewer, and how to preserve touch scrolling when the desktop toolbar is used.
 
-![Mobile toolbar with primary PDF interaction options](../images/mobileToolbar.png)
+## Prerequisites
 
-### Main Toolbar Options:
+- EJ2 React PDF Viewer installed and imported in your React app.
+- For standalone mode: a valid [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) hosting the PDF Viewer assets.
+- For server-backed mode: a working [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) endpoint.
 
-**OpenOption:** Tap to load a PDF document.
+## Steps
 
-**SearchOption:** Access the search bar to find text within the document.
+**Step 1:** Enable desktop toolbar on mobile: set [`enableDesktopMode`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabledesktopmode) to `true` on PDF Viewer.
 
-![Search bar displayed for finding text within a PDF](../images/searchOption.png)
+**Step 2:** (Optional, recommended) Disable text-selection to preserve smooth touch scrolling: set [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextselection) to `false`.
 
-**UndoRedoTool:** Quickly undo or redo any annotations made.
+**Step 3:** Inject the [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar) and other services required by your toolbar features via `Inject`.
 
-**OrganizePagesTool:** Enable or disable page organization features to modify document pages.
-
-![Page organization interface for modifying PDF pages](../images/organizePages.png)
-
-**AnnotationEditTool:** Activate or deactivate annotation editing to add or modify annotations.
-
-![Annotation editing toolbar allowing users to add, edit, or delete annotations on a PDF](../images/editAnnotation.png)
-
-N> In mobile mode, the annotation toolbar is displayed at the bottom of the viewer.
-
-### More Options Menu:
-When you open the "more options" menu, you will see additional actions such as:
-
-**DownloadOption:** Tap to download the currently opened PDF document.
-
-**BookmarkOption:** Allows you to view bookmarks within the document.
-
-![More options menu showing additional actions like download and bookmark](../images/more-options.png)
-
-## Enabling Desktop Mode in Mobile
-
-The desktop toolbar can be enabled on mobile devices by setting the `enableDesktopMode` option. Enabling this option exposes desktop-style toolbar actions in the mobile PDF Viewer.
-
-### Steps to Enable Desktop Mode:
-
-**Step 1:** Set `enableDesktopMode` to true in the component configuration.
-
-**Step 2:** The viewer will use the desktop toolbar layout, granting access to additional actions and controls.
+**Example:**
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
-
-import React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  let pdfviewer;
-  return (
-    <div>
-      <PdfViewerComponent
-        id="PdfViewer"
-        ref={(scope) => { pdfviewer = scope; }}
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        enableDesktopMode={true}
-        height="640px"
-      >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-      </PdfViewerComponent>
-    </div>
-  );
+{% raw %}
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+export default function App() {
+    return (
+        <div>
+            <PdfViewerComponent
+                id="PdfViewer"
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.5/dist/ej2-pdfviewer-lib"
+                enableDesktopMode={true}
+                enableTextSelection={false}
+                height="640px"
+            >
+                <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+            </PdfViewerComponent>
+        </div>
+    );
 }
-
-export default App;
-
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
-
-import React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  let pdfviewer;
-  return (
-    <div>
-      <PdfViewerComponent
-        id="PdfViewer"
-        ref={(scope) => { pdfviewer = scope; }}
-        serviceUrl='https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableDesktopMode={true}
-        height="640px"
-      >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-      </PdfViewerComponent>
-    </div>
-  );
+{% raw %}
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+export default function App() {
+    return (
+        <div>
+            <PdfViewerComponent
+                id="PdfViewer"
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
+                enableDesktopMode={true}
+                enableTextSelection={false}
+                height="640px"
+            >
+                <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+            </PdfViewerComponent>
+        </div>
+    );
 }
-
-export default App;
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-## Enable Scrolling in Desktop Mode with Touch Gestures
+## Troubleshooting
 
-To ensure smooth touch scrolling of documents on mobile devices when the desktop toolbar is enabled, set the `enableTextSelection` option to **false**. This disables text-selection interactions that can interfere with touch-based scrolling.
+- Print option not visible on mobile: set [`enableDesktopMode`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabledesktopmode) to `true`; otherwise the mobile toolbar omits Print.
+- Touch scrolling is jerky after enabling desktop toolbar: set [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextselection) to `false` to avoid text-selection capturing touch events.
+- Missing assets or broken UI: confirm [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) points to the correct version of the `ej2-pdfviewer-lib` and is reachable from the device.
+- Server errors in server-backed mode: verify [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) CORS configuration and that the backend is running.
 
-{% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+## Related topics
 
-import React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  let pdfviewer;
-  return (
-    <div>
-      <PdfViewerComponent
-        id="PdfViewer"
-        ref={(scope) => { pdfviewer = scope; }}
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        enableDesktopMode={true}
-        enableTextSelection={false}
-        height="640px"
-      >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-      </PdfViewerComponent>
-    </div>
-  );
-}
-
-export default App;
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import React from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  let pdfviewer;
-  return (
-    <div>
-      <PdfViewerComponent
-        id="PdfViewer"
-        ref={(scope) => { pdfviewer = scope; }}
-        serviceUrl='https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        enableDesktopMode={true}
-        enableTextSelection={false}
-        height="640px"
-      >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-      </PdfViewerComponent>
-    </div>
-  );
-}
-
-export default App;
-
-{% endhighlight %}
-{% endtabs %}
-
-## Print Option Not Available
-
-The Print option is not available in mobile mode by default. Enabling the desktop toolbar on mobile via `enableDesktopMode` makes the Print option available.
-
-### How to Use Print on Mobile:
-
-- Set `enableDesktopMode` to true to load the desktop toolbar on mobile.
-- After enabling desktop mode, the Print option appears in the toolbar and can be used to print the document from the mobile device.
-
-N> Print functionality remains unavailable in the default mobile toolbar unless desktop mode is enabled.
+- [Customize form designer toolbar](./form-designer-toolbar)
+- [Customize annotation toolbar](./annotation-toolbar)
+- [Create a custom toolbar](./custom-toolbar)
