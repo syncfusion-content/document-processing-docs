@@ -263,7 +263,7 @@ Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.co
 
 ## Handle Perimeter Events
 
-Listen to annotation lifecycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).
+Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).
 
 ---
 
