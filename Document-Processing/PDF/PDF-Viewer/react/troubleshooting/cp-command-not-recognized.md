@@ -9,15 +9,15 @@ documentation: ug
 
 # Troubleshoot error 'cp' is not recognized as a command
 
-The Unix `cp` command is not available in the Windows Command Prompt. Use one of the following Windows-native alternatives to copy the required assets.
+The Unix `cp` command is not available in the Windows Command Prompt. Use one of the following Windows-native alternatives to copy the required `ej2-pdfviewer-lib` assets into a public or source folder used by the application.
 
-- CMD (xcopy) — recursive directory copy:
+CMD (xcopy) — recursive directory copy
 
 ```batch
 xcopy /s /e /i .\node_modules\@syncfusion\ej2-pdfviewer\dist\ej2-pdfviewer-lib public\ej2-pdfviewer-lib
 ```
 
-- PowerShell (Copy-Item) — recursive directory copy:
+PowerShell (Copy-Item) — recursive directory copy
 
 ```powershell
 Copy-Item .\node_modules\@syncfusion\ej2-pdfviewer\dist\ej2-pdfviewer-lib -Destination .\src\ej2-pdfviewer-lib -Recurse -Force
@@ -28,4 +28,4 @@ Notes:
 - Windows paths use backslashes (\). Adjust paths if your project structure differs.
 - Ensure sufficient permissions to write to the destination folder.
 
-For cross-platform scripts in package.json, consider tools such as "shx" or "copyfiles" to avoid OS-specific commands.
+For cross-platform scripts in `package.json`, consider tools such as `shx` or `copyfiles` to avoid OS-specific commands.

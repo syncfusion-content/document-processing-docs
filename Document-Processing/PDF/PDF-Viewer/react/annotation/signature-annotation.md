@@ -10,26 +10,26 @@ domainurl: ##DomainURL##
 
 # Handwritten signature in React PDF Viewer
 
-The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
+The PDF Viewer supports handwritten signatures for adding sign-offs and initials directly within a PDF document. Handwritten signatures streamline document workflows and support common signature capture modes (draw, text, upload).
 
-## Adding a handwritten signature to the PDF document
+## Add a handwritten signature
 
-The handwritten signature can be added to the PDF document using the annotation toolbar.
+Handwritten signatures are available from the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **HandWritten Signature** button in the annotation toolbar. The signature panel appears.
+* Open the annotation toolbar by using the **Edit Annotation** button in the PDF Viewer toolbar.
+* Choose the **HandWritten Signature** button to open the signature panel.
 
 ![Open the handwritten signature panel](../images/select_sign.png)
 
-* Draw the signature in the panel.
+* Draw the signature inside the signature panel.
 
 ![Draw the handwritten signature](../images/add_sign.png)
 
-* Click **Create**, move the signature, and place it at the desired location.
+* Click **Create**, then move and place the signature at the desired location on the page.
 
 ![Place the handwritten signature on the page](../images/create_sign.png)
 
-Refer to the following code sample to switch to the handwritten signature mode programmatically.
+The sample below demonstrates switching the viewer to handwritten signature mode programmatically.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -178,9 +178,9 @@ root.render(<App />);
 
 ## Add a handwritten signature programmatically to the PDF document
 
-With the PDF Viewer library, you can programmatically add handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer API supports programmatic creation of handwritten signatures via the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method.
 
-Here is an example of adding a handwritten signature programmatically using addAnnotation():
+The examples below demonstrate how to add handwritten signatures programmatically using `addAnnotation()`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -326,26 +326,26 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/blob/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
+[View sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/blob/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
 
-## Edit the properties of handwritten signatures
+## Edit properties of handwritten signatures
 
-Stroke color, border thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
+Change stroke color, border thickness, and opacity using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
 ### Edit stroke color
 
-Edit the stroke color using the color palette in the Edit Stroke Color tool.
+Change the stroke color using the color palette in the Edit Stroke Color tool.
 
 ![Change signature stroke color](../images/change_stroke.png)
 
 ### Edit thickness
 
-Edit border thickness using the range slider in the Edit Thickness tool.
+Change border thickness using the range slider in the Edit Thickness tool.
 
 ![Change signature border thickness](../images/change_thickness.png)
 
 ### Edit opacity
 
-Edit opacity using the range slider in the Edit Opacity tool.
+Change opacity using the range slider in the Edit Opacity tool.
 
 ![Change signature opacity](../images/change_opacity.png)

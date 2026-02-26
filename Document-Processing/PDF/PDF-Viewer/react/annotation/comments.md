@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Comments in React PDF Viewer
 
-The PDF Viewer control provides options to add, edit, and delete comments for the following annotations in PDF documents:
+The PDF Viewer component lets you add, edit, reply to, and delete comments for many annotation types, including:
 
 * Shape annotation
 * Stamp annotation
@@ -22,67 +22,54 @@ The PDF Viewer control provides options to add, edit, and delete comments for th
 
 ![Comments panel overview](../images/commentannot.png)
 
-## Adding a comment to the annotation
+## Adding a comment to an annotation
 
+Use the comment panel to manage annotation comments, replies, and status.
 
-Annotation comments, replies, and status can be managed to the PDF document using the comment panel.
+### Opening the comment panel
 
-### Comment panel
-
-Annotation comments can be added to the PDF using the comment panel. The comment panel can be opened in the following ways:
+Open the comment panel in one of these ways:
 
 1. Using the annotation menu
 
-    * Click the Edit Annotation button in the PDF Viewer toolbar. A toolbar appears below it.
-    * Click the Comment Panel button. The comment panel opens.
+    * Click the Edit Annotation button in the PDF Viewer toolbar. A secondary toolbar appears below it.
+    * Click the Comment Panel button to open the panel.
 
-2. Using Context menu
+2. Using the context menu
 
-    * Select the annotation in the PDF document and right-click it.
-    * Select Comment from the context menu.
+    * Select an annotation and right-click it.
+    * Choose Comment from the context menu.
 
-3. Using the Mouse click
+3. Using double-click
 
-    * Select the annotation in the PDF document and double-click it. The comment panel opens.
+    * Select the annotation and double-click it to open the comment panel.
 
-If the comment panel is already open, select the annotation and add comments using the panel.
+If the comment panel is already open, select the annotation to view or add comments.
 
-### Adding comments
+### Adding comments and replies
 
-* Select the annotation in the PDF document.
-* The corresponding comment thread is highlighted in the comment panel.
-* Add comments and replies using the comment panel.
+- Select the annotation in the PDF document.
+- The corresponding comment thread is highlighted in the comment panel.
+- Add comments and replies using the panel.
 
-![Adding comments to a sticky note annotation](../images/stickycomment.png)
+![Add comment to sticky note](../images/stickycomment.png)
 
-### Adding Comment Replies
+### Setting a comment or reply status
 
-* Multiple replies can be added to a comment.
-* After adding a comment, add replies as needed.
-
-### Adding Comment or Reply Status
-
-* Select the annotation comment in the comment panel.
-* Click More options in the comment or reply container.
-* Select Set Status from the context menu.
-* Choose a status for the comment.
+- Select the comment in the comment panel.
+- Click More options on the comment or reply container.
+- Choose Set Status and pick a status.
 
 ![Set status for a comment](../images/commentstatus.png)
 
-### Editing the comments and comments replies of the annotations
+### Editing comments and replies
 
-Comments, replies, and status can be edited using the comment panel.
+Edit comments in two ways:
 
-### Editing the Comment or Comment Replies
+1. Context menu
 
-Edit comments and replies in the following ways:
-
-1. Using the Context menu
-
-    * Select the annotation comment in the comment panel.
-    * Click More options in the comment or reply container.
-    * Select Edit from the context menu.
-    * An editable text box appears. Change the content of the comment or reply.
+    * Select the comment in the comment panel and click More options.
+    * Choose Edit to open an editable text box.
 
 2. Using the Mouse Click
 
@@ -100,15 +87,17 @@ Edit comments and replies in the following ways:
 
 ![Edit comments and replies](../images/commentsedit.png)
 
-### Delete Comment or Comment Replies
+### Deleting comments or replies
 
-* Select the annotation comment in the comment panel.
-* Click More options in the comment or reply container.
-* Select Delete from the context menu.
+* Select the comment in the comment panel.
+* Click More options and choose Delete.
+
+Deleting a root comment also removes the associated annotation.
 
 ![Delete comments or replies](../images/commentsdelete.png)
 
->Deleting the root comment from the comment panel also deletes the associated annotation.
+N> Deleting the root comment from the comment panel also deletes the associated annotation.
+
 ```html
 <button id="checkComments">Check the Comments</button>
 ```
@@ -116,7 +105,7 @@ Edit comments and replies in the following ways:
 
 Comments added to the PDF document can be read using the annotation's `comments` property.
 
-The following example logs comments in response to a button click.
+The following example logs comments when a button is clicked:
 
 ```html
 <button id="checkComments">Check the Comments</button>
@@ -151,16 +140,16 @@ pdfviewer.appendTo('#PdfViewer');
 {% endtabs %}
 
 ```typescript
-//Method to check the comments added in the PDF document.
+// Method to check the comments added in the PDF document.
 document.getElementById('checkComments').addEventListener('click', function () {
     var annotationCollections = pdfviewer.annotationCollection;
     for (var x = 0; x < annotationCollections.length; x++) {
-      //Prints the annotation id in the console window.
+      // Prints the annotation id in the console window.
       console.log("annotation Id : " +annotationCollections[x].annotationId);
       var comments = annotationCollections[x].comments;
       for (var y = 0; y < comments.length; y++) {
         var comment = comments[y];
-        //Prints the PDF document's comments in the console window.
+        // Prints the PDF document's comments in the console window.
         console.log("comment" + "[" + y + "] :" + comment.note);
       }
       var note = annotationCollections[x].note;

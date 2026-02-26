@@ -9,17 +9,17 @@ documentation: ug
 
 # Save PDF files to Azure Blob Storage in React
 
-The React PDF Viewer component supports saving PDF files to Azure Blob Storage using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
+The React PDF Viewer component supports saving PDF files to Azure Blob Storage using either a standalone (browser) configuration or a server-backed configuration. The following steps demonstrate both approaches and include prerequisites and security guidance for production deployments.
 
 ## Using Standalone PDF Viewer
 
-To save a PDF file to Azure Blob Storage, follow these steps:
+Follow the steps below to save a PDF file to Azure Blob Storage from an React PDF Viewer.
 
 **Step 1:** Create a PDF Viewer sample in React
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample in React. This will set up the basic structure of your PDF Viewer application.
 
-**Step 2:** Modify the `src/app/app.ts` file in the Angular project
+**Step 2:** Modify the `src/app/app.ts` file in the React project
 
 1. Import the required namespaces at the top of the file:
 
@@ -29,7 +29,7 @@ import { BlockBlobClient } from "@azure/storage-blob";
 
 2. Add the following private property to `app.ts`, and assign the value from the configuration to the corresponding property.
 
-N> Replace **Your SAS Url in Azure** with the actual SAS URL for the Azure Blob Storage account.
+N> Replace **Your SAS Url in Azure** with the SAS URL generated for the target blob. For production, generate short-lived SAS tokens on the server rather than embedding SAS URLs in client code.
 
 ```typescript
 var SASUrl = "*Your SAS Url in Azure*";
@@ -99,7 +99,7 @@ function saveDocument() {
 }
 ```
 
-N> Install the @azure/storage-blob package in the application to use the previous code example: npm install @azure/storage-blob
+N> Install the Azure Storage Blob client package for browser use: `npm install @azure/storage-blob`. For server-side operations use `dotnet add package Azure.Storage.Blobs`.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
