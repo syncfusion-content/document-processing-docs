@@ -84,7 +84,7 @@ export default function App() {
 - Print option not visible on mobile: set [`enableDesktopMode`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabledesktopmode) to `true`; otherwise the mobile toolbar omits Print.
 - Touch scrolling is jerky after enabling desktop toolbar: set [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextselection) to `false` to avoid text-selection capturing touch events.
 - Missing assets or broken UI: confirm [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) points to the correct version of the `ej2-pdfviewer-lib` and is reachable from the device.
-- Server errors in server-backed mode: verify [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) CORS configuration and that the backend is running.
+- Server errors in server-backed mode: verify [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) CORS configuration and that the back end is running.
 
 ## Related topics
 

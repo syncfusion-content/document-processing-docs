@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the Form Designer Toolbar in React PDF Viewer | Syncfusion
-description: Learn how to show or hide and customize the Form Designer toolbar in the EJ2 React PDF Viewer.
+description: Learn how to show or hide and customize the Form Designer toolbar in the Syncfusion EJ2 React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -34,12 +34,12 @@ import React from 'react';
 import { PdfViewerComponent, Toolbar, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 export default function App() {
     return (
-        <PdfViewerComponent{% raw %}
+        <PdfViewerComponent
             ref={(scope) => { pdfviewer = scope; }}
             id="PdfViewer"
             isFormDesignerToolbarVisible={true}
             documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"{% raw %}
+            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             style={{ height: '500px', width: '100%' }}>
             <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
                 BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]} />
