@@ -21,8 +21,9 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
 
 	Basic div:
 
-	```tsx
-	// App.tsx
+	{% tabs %}
+    {% highlight ts tabtitle="App.tsx" %}
+    {% raw %}
 	import React from 'react';
 	import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -40,13 +41,17 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
             </div>
         );
 	}
-	```
+	{% endraw %}
+    {% endhighlight %}
+    {% endtabs %}
+
     ![PDF Viewer in div](../images/react-layouts-div.png)
 
 	Flex container: keep `minHeight: 0` on flex children so the viewer can shrink/grow correctly:
 
-	```tsx
-	// App.tsx
+    {% tabs %}
+    {% highlight ts tabtitle="App.tsx" %}
+    {% raw %}
 	import React from 'react';
 	import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -69,13 +74,17 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
             </div>
         );
 	}
-	```
+	{% endraw %}
+    {% endhighlight %}
+    {% endtabs %}
+
     ![PDF Viewer in Flex box](../images/react-layouts-flexbox.png)
 
 	CSS Grid - reserve rows/columns using `grid-template-rows` or `grid-template-columns`:
 
-	```tsx
-	// App.tsx
+	{% tabs %}
+    {% highlight ts tabtitle="App.tsx" %}
+    {% raw %}
 	import React from 'react';
     import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -151,14 +160,18 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
             minHeight: 0 // critical so the viewer can grow/shrink
         }
     };
-	```
+	{% endraw %}
+    {% endhighlight %}
+    {% endtabs %}
+
     ![PDF Viewer in grid](../images/react-layouts-grid.png)
 
 - **Use viewer inside Tab components**
 	- The react PDF Viewer are also supported inside Syncfusion tab components. 
 
-	```tsx
-	// App.tsx
+	{% tabs %}
+    {% highlight ts tabtitle="App.tsx" %}
+    {% raw %}
 	import React, { useRef } from 'react';
     import { TabComponent, TabItemsDirective, TabItemDirective } from '@syncfusion/ej2-react-navigations';
     import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -224,14 +237,18 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
             </div>
         );
     };
-	```
+	{% endraw %}
+    {% endhighlight %}
+    {% endtabs %}
+
     ![PDF Viewer in tab](../images/react-layouts-tab.png)
 
 - **Use viewer inside Dialog**
 	- If the viewer sits inside a dialog, for example Syncfusion Dialog, render or initialize the viewer after the dialog open events. The DOM must be visible for the viewer to measure layout.
 
-	```tsx
-	// App.tsx
+	{% tabs %}
+    {% highlight ts tabtitle="App.tsx" %}
+    {% raw %}
 	import React, { useRef, useCallback } from 'react';
     import { DialogComponent } from '@syncfusion/ej2-react-popups';
     import {
@@ -295,14 +312,18 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
             </div>
         );
     };
-	```
+	{% endraw %}
+    {% endhighlight %}
+    {% endtabs %}
+
     ![PDF Viewer in dialog](../images/react-layouts-dialog.png)
 
 - **Use viewer inside Collapsible sections**
 	- For accordions or collapsible containers, either render the viewer lazily when the section expands or dispatch the resize event after expansion so the viewer can recompute layout.
 
-	```tsx
-	// App.tsx
+	{% tabs %}
+    {% highlight ts tabtitle="App.tsx" %}
+    {% raw %}
 	import React, { useCallback, useRef } from 'react';
     import {
         AccordionComponent, AccordionItemsDirective, AccordionItemDirective, ExpandEventArgs
@@ -382,9 +403,10 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
             </div>
         );
     };
-	```
-    ```css
-    /* App.css */
+	{% endraw %}
+    {% endhighlight %}
+    {% highlight css tabtitle="App.css" %}
+    {% raw %}
     .page {
         height: 100vh;
         display: grid;
@@ -398,7 +420,10 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
         background: #fff;
         border-bottom: 1px solid #e5e5e5;
     }
-    ```
+    {% endraw %}
+    {% endhighlight %}
+    {% endtabs %}
+
     ![PDF Viewer in accordion](../images/react-layouts-accordion.png)
 
 ## Why visibility and height matter
@@ -412,12 +437,12 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
 - Short patterns:
   - Dispatch a global resize right after the container becomes visible:
 
-```ts
+```js
 setTimeout(() => window.dispatchEvent(new Event('resize')), 0);
 ```
 - Use a `ResizeObserver` when the host size may change frequently:
 
-```ts
+```js
 const observer = new ResizeObserver(() => {
   window.dispatchEvent(new Event('resize'));
 });

@@ -7,7 +7,7 @@ control: Docker deployment
 documentation: ug
 ---
 
-# Spreadsheet server docker image overview in React Spreadsheet
+# Docker Image Overview in React Spreadsheet
 
 The [**Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet (also known as Excel Viewer)**](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) is a feature-rich control for organizing and analyzing data in a tabular format. It provides all the common Excel features, including data binding, selection, editing, formatting, resizing, sorting, filtering, importing, and exporting Excel documents.
 

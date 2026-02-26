@@ -20,7 +20,9 @@ This simple example demonstrates the minimal steps to show a PDF document in the
 2. Set `documentPath` to a publicly accessible URL.
 
 Example (TypeScript / React):
-```jsx
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -41,12 +43,15 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('sample') as HTMLElement);
 root.render(<App />);
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Open PDF Files Using Different Source Types
 
 Below are concise instructions and short snippets for loading PDFs from several source types. Each subsection links to or describes the minimal approach — keep these pages as focused how-to guides if you expand them.
+
 ### Open PDF from URL
 
 - Set  [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentpath) to the external URL (see example above).
@@ -81,7 +86,7 @@ fetch(url)
 ```
 
 
-  ### Open PDF from database
+### Open PDF from database
 
   To load a PDF file from SQL Server database in a PDF Viewer, you can follow the steps below
 
@@ -190,7 +195,7 @@ fetch(url)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-database)
 
-  ### Open from Cloud Storage Services
+### Open from Cloud Storage Services
 
 Each link goes to a provider page with simple step-by-step instructions, sample code, and any authentication notes.
 
@@ -204,7 +209,7 @@ Each link goes to a provider page with simple step-by-step instructions, sample 
 
 ---
 
-See also:
+**See also**
 
 
 - [Load documents dynamically in React PDF Viewer](./how-to/load-document)
