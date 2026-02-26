@@ -11,14 +11,14 @@ documentation: ug
 
 **Styling** customizes appearance only (font, color, alignment, border, background, indicator text).
 
-## Customize Appearance of Form Fields Using the UI
+## Customize appearance of form fields using the UI
 Use the **Properties** panel to adjust:
-- Font family/size, text color, alignment
-- Border color/thickness
+- Font family and size, text color, and alignment
+- Border color and thickness
 - Background color
-![Textbox style from UI](../../../javascript-es6/images/ui-textbox-style.png)
+![Textbox style from UI showing font, color, and border settings](../../../javascript-es6/images/ui-textbox-style.png)
 
-## Customize appearance Form Fields Programmatically
+## Customize appearance of form fields programmatically
 Use [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) to apply styles:
 
 {% tabs %}

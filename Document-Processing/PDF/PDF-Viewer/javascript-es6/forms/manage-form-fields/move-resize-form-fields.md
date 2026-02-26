@@ -7,18 +7,18 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Move and Resize PDF Form Fields
+# Move and resize PDF form fields
 - **Move**: Drag the form field to reposition it.
 - **Resize**: Use the resize handles to change width and height.
 
-![Moveing and Resizing a form field](../../images/move-resize-forms.gif)
+![Moving and resizing a form field](../../images/move-resize-forms.gif)
 
-## Move and Resize Fields Programmatically (API)
+## Move and resize fields programmatically (API)
 You can set absolute bounds or move fields by a delta.
 
 **Set absolute bounds**
 ```html
-<button id="resizeMove">Resize and Move FormFields</button>
+<button id="resizeMove">Resize and Move form fields</button>
 ```
 ```ts
 // Move & resize by setting absolute bounds
@@ -30,7 +30,7 @@ You can set absolute bounds or move fields by a delta.
     // Find the textbox field by name (Here field name is First Name)
     const field = fields.find((f: any) => f.name === 'First Name') || fields[0]; //Update Name accordingly
     if (field) {
-      // Update bounds to move or rezie formfields
+      // Update bounds to move or rezie form fields
       pdfviewer.formDesignerModule.updateFormField(field, {
         bounds: { X: 140, Y: 210, Width: 220, Height: 24 }, // new absolute position & size
       } as TextFieldSettings);

@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Line angle constraints in JavaScript PDF Viewer
 
-The PDF Viewer control provides robust **line angle constraints** functionality. This allows users to draw line type annotations with controlled angle snapping, improving accuracy and consistency across technical drawings and measurements across your PDF documents.
+The PDF Viewer provides line angle constraints functionality that allows drawing line-type annotations with controlled angle snapping. This improves precision for technical drawings and measurements in PDF documents.
 
-![Line Angle Constraint](../annotations/annotation-images/line-angle-constraint.gif)
+![Line angle constraint](../annotations/annotation-images/line-angle-constraint.gif)
 
 ## Enable line angle constraints
 
-Configure the `enableLineAngleConstraints` property within `annotationDrawingOptions`. When enabled, supported line-type annotations snap to fixed angles.
+Set the `enableLineAngleConstraints` property within `annotationDrawingOptions` to enable angle snapping for supported line-type annotations.
 
-The following code demonstrates how to enable line angle constraints:
+The following code demonstrates enabling line angle constraints:
 
 ```js
 
@@ -35,7 +35,7 @@ ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearc
 
 ## Work with constrained annotations
 
-### Drawing Behavior
+### Drawing behavior
 
 When line angle constraints are enabled:
 
@@ -44,12 +44,13 @@ When line angle constraints are enabled:
 - A visual indicator reflects snapping in real time.
 - Release to complete the annotation.
 
-### Keyboard Shortcuts
+### Keyboard shortcuts
 
 Desktop platforms:
-- Shift + drag: toggles snapping. If constraints are disabled, Shift temporarily enables them; if enabled, Shift enforces snapping.
 
-### Selector-Based Modifications
+- `Shift` + drag: toggles snapping. If constraints are disabled, `Shift` temporarily enables them; if enabled, `Shift` enforces snapping.
+
+### Selector-based modifications
 
 When modifying existing line annotations using selectors:
 
@@ -58,7 +59,7 @@ When modifying existing line annotations using selectors:
 - Constraint snapping during modification is supported for Line and Arrow.
 - Adjustments snap to the configured angle increment.
 
-## Configuration Properties
+## Configuration properties
 
 ### enableLineAngleConstraints
 
@@ -72,11 +73,11 @@ The `enableLineAngleConstraints` property activates angle snapping for line-base
 - Area measurements
 - Volume measurements
 
-**Key Benefits:**
+Key benefits:
 
-- Automatic angle snapping during the drawing
+- Automatic angle snapping during drawing
 - Enhanced precision for technical drawings and measurements
-- Desktop behavior: hold Shift while drawing to toggle constraints (when disabled, Shift temporarily enables; when enabled, Shift enforces snapping)
+- Desktop behavior: hold `Shift` while drawing to toggle constraints (when disabled, `Shift` temporarily enables; when enabled, `Shift` enforces snapping)
 - Real-time visual feedback showing angle snapping behavior
 
 ### restrictLineAngleTo
@@ -85,19 +86,18 @@ Defines the angle increment (in degrees) used to constrain supported annotations
 
 Angle snapping rules:
 
-- The initial drawing direction is treated as the 0° reference point
-- Snapped angles are calculated based on the increment
-- If the increment doesn’t divide 360 evenly, angles reset after 360°
+- The initial drawing direction is treated as the 0° reference point.
+- Snapped angles are calculated based on the increment.
+- If the increment does not divide 360 evenly, angles reset after 360°.
 
 Examples:
 
-- restrictLineAngleTo: 45 → Snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
-- restrictLineAngleTo: 100 → Snapped angles: 0°, 100°, 200°, 300°, 360°
+- `restrictLineAngleTo: 45` → Snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
+- `restrictLineAngleTo: 100` → Snapped angles: 0°, 100°, 200°, 300°, 360°
 
+[View a sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to)
 
-[View a sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to)
-
-N> Refer to the JavaScript PDF Viewer [feature tour](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) for feature highlights. Explore the [JavaScript PDF Viewer examples](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples) to learn how to render and configure the PDF Viewer.
+N> Refer to the JavaScript PDF Viewer [feature tour](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) for feature highlights, and to the [JavaScript PDF Viewer examples](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples) for rendering and configuration examples.
 
 ## See also
 

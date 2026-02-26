@@ -8,10 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page Thumbnail navigation in React PDF Viewer control
+# Page thumbnail navigation in React PDF Viewer
 
-Thumbnails is the miniature representation of actual pages in PDF files. This feature displays thumbnails of the pages and allows navigation.
-You can enable/disable thumbnail navigation by using the following code snippet.,
+Thumbnails are miniature representations of pages in a PDF. The thumbnails panel displays page previews and enables quick navigation. You can enable or disable thumbnail navigation using the code snippet below.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -108,7 +107,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/thumbnail.png)
+![Page thumbnails panel in the PDF Viewer](../images/thumbnail.png)
 
 
 ## See also
