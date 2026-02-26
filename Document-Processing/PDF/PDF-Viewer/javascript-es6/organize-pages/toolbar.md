@@ -45,9 +45,9 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## Show or hide the delete option
+## Show or hide the Delete option
 
-The `canDelete` property controls the visibility of the delete tool. When set to `false`, the delete tool will be hidden.
+The `canDelete` property controls the visibility of the delete tool. Set to `false` to hide the delete tool.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -78,9 +78,9 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## Show or hide the rotate option
+## Show or hide the Rotate option
 
-The `canRotate` property controls the visibility of the rotate tool. When set to `false`, the rotate tool will be hidden.
+The `canRotate` property controls the visibility of the rotate tool. Set to `false` to hide the rotate tool.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -111,7 +111,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## Show or hide the copy option
+## Show or hide the Copy option
 
 The `canCopy` property controls the visibility of the copy tool. When set to `false`, the copy tool will be hidden.
 

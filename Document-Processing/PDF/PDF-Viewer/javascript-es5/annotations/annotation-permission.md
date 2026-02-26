@@ -10,13 +10,15 @@ domainurl: ##DomainURL##
 
 # Annotation permissions in JavaScript PDF Viewer
 
-Use [annotationSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationsettings) to control creation-time permissions and behavior of annotations in the PDF Viewer.
+Use [annotationSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#annotationsettings) to control creation-time permissions and default behavior for annotations in the PDF Viewer. These settings establish defaults for annotations created through the UI and programmatic flows.
 
 ## Common permissions
 
-- isLock: Locks the annotation so it cannot be moved, resized, edited, or deleted.
-- skipPrint: Excludes annotations from the print output when the document is printed from the viewer.
-- skipDownload: Excludes annotations from the exported/downloaded document.
+- `isLock`: Lock an annotation so it cannot be moved, resized, edited, or deleted.
+- `skipPrint`: Exclude annotations from the print output when printing from the viewer.
+- `skipDownload`: Exclude annotations from the exported/downloaded PDF.
+
+Example: inject modules and create a viewer instance with default `annotationSettings`.
 
 ```js
 // Ensure you have included the required EJ2 PDF Viewer scripts and styles via CDN before this script
@@ -61,8 +63,10 @@ viewer.appendTo('#pdfViewer');
 
 ## Individual permissions
 
-- isPrint: Controls whether a specific annotation participates in printing. Set to false to prevent just that annotation from printing.
-- isLock: You can also lock/unlock a specific annotation instance programmatically.
+- `isPrint`: Controls whether a specific annotation participates in printing. Set to `false` to exclude only that annotation from print output.
+- `isLock`: Lock or unlock a specific annotation instance programmatically.
+
+Example: create a viewer instance with per-annotation defaults for text markup, shapes, and measurements.
 
 ```js
 // Ensure you have included the required EJ2 PDF Viewer scripts and styles via CDN before this script
