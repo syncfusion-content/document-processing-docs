@@ -18,31 +18,40 @@ To convert the Images to PDF, send a request to the /v1/conversion/image-to-pdf 
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/image-to-pdf' \
---form 'file1=@"page_0b199abad.jpeg"' \
---form 'file2=@"page_1d859a4b3.jpeg"' \
---form 'settings="{
-  \"Files\": [
-    {
-      \"File\": \"file1\",
-    },
-    {
-      \"File\": \"file2\",
-    }
+--form 'file1=@image1.jpeg' \
+--form 'file2=@image2.jpeg' \
+--form 'settings={
+  "Files": [
+    { "File": "file1","RotationValue": "RotateAngle0" },
+    { "File": "file2" ,"RotationValue": "RotateAngle0"}
   ],
-  \"Orientation\": Syncfusion.Pdf.PdfPageOrientation.Portrait,
-  \"Margin\": 0,
-  \"EnableSaveAsSeperateFile\": false,
-  \"PageSize\": ImageToPdfPageSize.A4
-}"'
+ 
+ "Orientation": "Portrait",
+  "Margin": 0,
+  "EnableSaveAsSeperateFile": false,
+  "PageSize": "A4"
+}'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file1", fileInput.files[0], "page_0b199abad.jpeg");
-formdata.append("file2", fileInput.files[0], "page_1d859a4b3.jpeg");
-formdata.append("settings", "{\n  \"Files\": [\n    {\n      \"File\": \"file1\",\n    },\n    {\n      \"File\": \"file2\",\n    }\n  ],\n  \"Orientation\": Syncfusion.Pdf.PdfPageOrientation.Portrait,\n  \"Margin\": 0,\n  \"EnableSaveAsSeperateFile\": false,\n  \"PageSize\": ImageToPdfPageSize.A4\n}");
+formdata.append("files", fileInput.files[0], "Image1.png");
+formdata.append("files", fileInput.files[0], "Image2.png");
+formdata.append(
+  "settings",
+  JSON.stringify({
+    Files: [
+      { File: "file1", RotationValue: "RotateAngle0" },
+      { File: "file2", RotationValue: "RotateAngle0" }
+    ],
+    Orientation: "Portrait",
+    Margin: 0,
+    EnableSaveAsSeperateFile: false,
+    PageSize: "A4"
+  })
+);
 
 const requestOptions = {
   method: "POST",
@@ -50,7 +59,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/conversion/image-to-pdf", requestOptions)
+fetch("http://localhost:8003/v1/conversion/image-to-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -62,23 +71,28 @@ fetch("http://localhost:4000/v1/conversion/image-to-pdf", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/image-to-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("page_0b199abad.jpeg")), "file1", "page_0b199abad.jpeg");
-content.Add(new StreamContent(File.OpenRead("page_1d859a4b3.jpeg")), "file2", "page_1d859a4b3.jpeg");
-content.Add(new StringContent("{
-  \"Files\": [
+
+content.Add(new StreamContent(File.OpenRead("image1.jpeg")), "file1", "image1.jpeg");
+content.Add(new StreamContent(File.OpenRead("image2.jpeg")), "file2", "image2.jpeg");
+
+var settings = new
+{
+    Files = new[]
     {
-      \"File\": \"file1\",
+        new { File = "file1", RotationValue = "RotateAngle0" },
+        new { File = "file2", RotationValue = "RotateAngle0" }
     },
-    {
-      \"File\": \"file2\",
-    }
-  ],
-  \"Orientation\": Syncfusion.Pdf.PdfPageOrientation.Portrait,
-  \"Margin\": 0,
-  \"EnableSaveAsSeperateFile\": false,
-  \"PageSize\": ImageToPdfPageSize.A4
-}"), "settings");
+    Orientation = "Portrait",
+    Margin = 0,
+    EnableSaveAsSeperateFile = false,
+    PageSize = "A4",
+};
+
+var json = JsonSerializer.Serialize(settings);
+var settingsContent = new StringContent(json, Encoding.UTF8, "application/json");
+content.Add(settingsContent, "settings");
 request.Content = content;
+
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
@@ -105,7 +119,8 @@ Next, you can retrieve the job status by sending a request to the /v1/conversion
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+curl --location 'http://localhost:8003/v1/conversion/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
+  --output Output.pdf
 
 {% endhighlight %}
 
@@ -116,7 +131,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

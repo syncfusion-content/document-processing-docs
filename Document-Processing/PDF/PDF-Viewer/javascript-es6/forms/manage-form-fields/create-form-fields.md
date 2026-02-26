@@ -7,12 +7,12 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Create PDF Form Fields in TypeScript
+# Create PDF form fields in TypeScript
 
-You can create or add new form fields either visually using the [Form Designer UI](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) or dynamically using APIs.
+Form fields can be created visually using the [Form Designer UI](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) or dynamically using APIs.
 
-## Create Form Fields Using the Form Designer UI 
-Use this approach when you want to design forms manually without writing code.
+## Create form fields using the Form Designer UI 
+Use this approach when designing forms manually without writing code.
 
 **Steps:**
 
@@ -24,9 +24,9 @@ Use this approach when you want to design forms manually without writing code.
 
 ![Adding a form field using the Form Designer UI](../../images/FormDesigner.gif)
 
-## Add Form Fields Programmatically (API)
+## Add form fields programmatically (API)
 
-Use this approach when you want to generate form fields dynamically based on data or application logic.
+Use this approach to generate form fields dynamically based on data or application logic.
 
 ```ts
 //Add Text Box using addFormField Method
@@ -199,15 +199,15 @@ pdfviewer.formDesignerModule.addFormField('Password', {
   } as InitialFieldSettings);
 ```
 
-## Add Fields Dynamically with setFormFieldMode
+## Add fields dynamically with setFormFieldMode
 
-Use **setFormFieldMode()** to add fields on the fly based on user actions.
+Use `setFormFieldMode()` to add fields on the fly based on user actions.
 
 ### Edit Form Fields in TypeScript PDF Viewer
-You can edit form fields using the UI or API.
+Form Fields can be edited using the UI or API.
 
 #### Edit Using the UI
-- Right click a field → **Properties** to update settings. (Image here)
+- Right-click a field → **Properties** to update settings.
 - Drag to move; use handles to resize.
 - Use the toolbar to toggle field mode or add new fields.
 
