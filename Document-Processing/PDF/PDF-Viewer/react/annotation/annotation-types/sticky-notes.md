@@ -156,7 +156,7 @@ Configure scale defaults using [`stickyNotesSettings`](https://ej2.syncfusion.co
 
 ## Sticky Note Events
 
-Listen to annotation lifecycle events and filter for sticky notes. See [**Annotation Events**](../annotation-event) for the full list and argument details. 
+Listen to annotation life-cycle events and filter for sticky notes. See [**Annotation Events**](../annotation-event) for the full list and argument details. 
 
 ## Export and Import
 Sticky Notes are included when exporting or importing annotations. For supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations). 

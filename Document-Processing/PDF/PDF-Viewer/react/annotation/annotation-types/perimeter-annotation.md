@@ -48,7 +48,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 ## Add Perimeter Annotation
 
-### Add Perimeter Annotaion Using the Toolbar
+### Add Perimeter Annotation Using the Toolbar
 
 1. Open the **Annotation Toolbar**.
 2. Select **Measurement** → **Perimeter**.

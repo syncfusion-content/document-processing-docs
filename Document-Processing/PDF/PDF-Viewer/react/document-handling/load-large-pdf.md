@@ -109,7 +109,7 @@ If thumbnails or page reordering are not essential:
 - Reduce memory usage
 - Improve navigation responsiveness
 
-#### Example (remove unneccesary modules)
+#### Example (remove unnecessary modules)
 ```js
 <Inject services={[Toolbar, Magnification, Navigation, Print]} />
 ```
