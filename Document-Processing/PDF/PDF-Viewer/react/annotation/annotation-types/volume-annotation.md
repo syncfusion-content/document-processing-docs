@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Volume Measurement Annotations in React PDF Viewer \ Syncfusion
+title: Add Volume Measurement Annotations in React PDF Viewer | Syncfusion
 description: Learn how to enable, draw, customize, and manage Volume measurement annotations in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -12,8 +12,6 @@ domainurl: ##DomainURL##
 Volume measurement annotations allow users to draw circular regions and calculate the volume visually.
 
 ![Volume overview](../../../javascript-es6/annotations/annotation-images/volume-annot.png)
-
----
 
 ## Enable Volume Measurement
 Inject the **Annotation** and **Toolbar** modules to enable volume annotation tools.
@@ -42,8 +40,6 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App/>);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Add Volume Annotation
 
@@ -84,8 +80,6 @@ function exitVolumeMode() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Add Volume Programmatically
 Configure default properties using the [`Volume Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
@@ -104,8 +98,6 @@ function addVolume() {
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Customize Volume Appearance
 Configure default properties using the [`Volume Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property (for example, default **fill color**, **stroke color**, **opacity**).
@@ -126,15 +118,11 @@ Configure default properties using the [`Volume Settings`](https://ej2.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
----
-
----
-
 ## Manage Volume (Move, Resize, Delete)
 - **Move**: Drag inside the polygon to reposition it.
 - **Reshape**: Drag any vertex handle to adjust points and shape.
 
-### Edit Volume Annotaion
+### Edit Volume Annotation
 
 #### Edit Volume (UI)
 
@@ -171,13 +159,13 @@ function editVolumeProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
+
 
 ### Delete Volume Annotation
 
 Delete Volume Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
----
+
 
 
 ## Set Default Properties During Initialization
@@ -199,7 +187,7 @@ Apply defaults for Volume using the [`volumeSettings`](https://ej2.syncfusion.co
 {% endhighlight %}
 {% endtabs %}
 
----
+
 
 ## Set Properties While Adding Individual Annotation
 Apply defaults for Area using the [`volumeSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property.
@@ -223,7 +211,7 @@ function addStyledVolume() {
 {% endhighlight %}
 {% endtabs %}
 
----
+
 
 ## Scale Ratio & Units
 - Use **Scale Ratio** from the context menu.  
@@ -250,18 +238,21 @@ Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.co
 {% endhighlight %}
 {% endtabs %}
 
----
+
 
 ## Handle Volume Events
 Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).
 
----
+
 
 ## Export and Import
 Volume measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import-annotations).
----
+
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
+- [Customize Context Menu](../../context-menu/custom-context-menu)
+- [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import](../export-import-annotations)
+- [Export and Import annotations](../export-import-annotations)
+- [Delete Annotations](../remove-annotations)

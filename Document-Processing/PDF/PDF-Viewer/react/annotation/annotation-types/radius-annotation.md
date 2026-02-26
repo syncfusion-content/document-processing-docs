@@ -13,8 +13,6 @@ Radius measurement annotations allow users to draw circular regions and calculat
 
 ![Radius overview](../../../javascript-es6/annotations/annotation-images/radius-annot.png)
 
----
-
 ## Enable Radius Measurement
 
 To enable Radius annotations, inject the following modules into the React PDF Viewer:
@@ -47,11 +45,9 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App/>);
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Add Radius Annotation
 
-### Draw Radius Using the Toolbar
+### Add Radius Using the Toolbar
 1. Open the **Annotation Toolbar**.
 2. Select **Measurement → Radius**.
 3. Click and drag on the page to draw the radius.
@@ -86,8 +82,6 @@ function exitRadiusMode() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Add Radius Programmatically
 Configure default properties using the [`Radius Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
@@ -107,8 +101,6 @@ function addRadius() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Customize Radius Appearance
 Configure default properties using the [`Radius Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
@@ -127,8 +119,6 @@ Configure default properties using the [`Radius Settings`](https://ej2.syncfusio
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Manage Radius (Move, Reshape, Edit, Delete)
 - **Move**: Drag inside the polygon to reposition it.
@@ -172,14 +162,9 @@ function editRadiusProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Delete Radius Annotation
 
 Delete Radius Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
-
----
-
 
 ## Set Default Properties During Initialization
 Apply defaults for Radius using the [`radiusSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property.
@@ -199,8 +184,6 @@ Apply defaults for Radius using the [`radiusSettings`](https://ej2.syncfusion.co
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Set Properties While Adding Individual Annotation
 Apply defaults for Area using the [`radiusSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property.
@@ -223,8 +206,6 @@ function addStyledRadius() {
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Scale Ratio & Units
 - Use **Scale Ratio** from the context menu.  
@@ -251,17 +232,11 @@ Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.co
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Handle Radius Events
 Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).
 
----
-
 ## Export and Import
 Radius measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import-annotations).
-
----
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)

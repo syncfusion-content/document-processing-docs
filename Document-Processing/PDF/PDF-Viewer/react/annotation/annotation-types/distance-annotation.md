@@ -13,8 +13,6 @@ Distance is a measurement annotation used to measure the length between two poin
 
 ![Distance overview](../../../javascript-es6/annotations/annotation-images/distance-annot.png)
 
----
-
 ## Enable Distance Annotation
 
 To enable Distance annotation, inject the following modules into the React PDF Viewer:
@@ -48,11 +46,9 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Add Distance Annotation
 
-### Measure Distance Using the Toolbar
+### Add Distance Using the Toolbar
 1. Open the **Annotation Toolbar**.
 2. Select **Measurement** → **Distance**.
 3. Click to set the start point, then click again to set the end point.
@@ -87,8 +83,6 @@ function exitDistanceMode() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Add Distance Programmatically
 Use the [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) API to draw a Distance measurement by providing two **vertexPoints**.
 
@@ -110,8 +104,6 @@ function addDistance() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Customize Distance Appearance
 Configure default properties using the [`Distance Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#distancesettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
@@ -130,8 +122,6 @@ Configure default properties using the [`Distance Settings`](https://ej2.syncfus
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Manage Distance (Move, Resize, Edit, Delete)
 - **Move**: Drag the measurement to reposition it.
@@ -175,13 +165,9 @@ function editDistanceProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Delete Distance Annotation
 
 Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
-
----
 
 ## Set Default Properties During Initialization
 Apply defaults for Distance using the [`distanceSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#distancesettings) property.
@@ -201,8 +187,6 @@ Apply defaults for Distance using the [`distanceSettings`](https://ej2.syncfusio
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Set Properties While Adding Individual Annotation
 Pass per-annotation values directly when calling [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
@@ -228,8 +212,6 @@ function addStyledDistance() {
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Scale Ratio and Units
 
@@ -257,18 +239,12 @@ Configure scale defaults using `measurementSettings`.
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Handle Distance Events
 
 Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).
 
----
-
 ## Export and Import
 Distance measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import-annotations).
-
----
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)

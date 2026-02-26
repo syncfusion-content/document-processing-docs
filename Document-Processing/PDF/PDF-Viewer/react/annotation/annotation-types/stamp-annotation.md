@@ -13,8 +13,6 @@ Stamp annotations allow you to place predefined or custom stamps (such as **Dyna
 
 ![Stamp annotations](../../../javascript-es6/images/stamp_annot.png)
 
----
-
 ## Enable Stamp Annotation in the Viewer
 
 To enable Stamp annotations, inject the following modules into the React PDF Viewer:
@@ -47,8 +45,6 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Add Stamp Annotation
 
 ### Add Stamp Using the Toolbar
@@ -59,8 +55,6 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 ![Select stamp](../../../javascript-es6/images/selectstamp_annot.png)
 
 N> When Pan mode is active and a stamp tool is chosen, the viewer automatically switches to selection mode for a smoother interaction.
-
----
 
 ### Enable a Specific Stamp Mode
 Switch the viewer into a specific stamp annotation mode programmatically.
@@ -99,8 +93,6 @@ function exitStampMode() {
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ### Add Stamp Programmatically
 Use the [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) API to place stamps at specific coordinates.
@@ -150,8 +142,6 @@ function addCustomStamp() {
 
 N> For **Custom Stamp** via the UI, only **JPG/JPEG** image formats are supported.
 
----
-
 ## Customize Stamp Appearance
 Configure default properties using the [`stampSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#stampsettings) property (for example, default **opacity** and **author**).
 
@@ -172,8 +162,6 @@ Configure default properties using the [`stampSettings`](https://ej2.syncfusion.
 {% endtabs %}
 
 N> After changing opacity via the **Edit Opacity** tool in the toolbar, the updated value becomes the working default for subsequent placements in the current session.
-
----
 
 ## Manage Stamp (Move, Resize, Rotate, Lock/Unlock, Delete)
 
@@ -213,8 +201,6 @@ function editStampProgrammatically() {
 ### Delete Stamp
 Delete stamps via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
----
-
 ## Set properties while adding Individual Annotation
 You can pass per‑annotation values (e.g., **type**, **position**, **size**, **author**, **isLock**, or **customStamps**) when calling [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
@@ -237,19 +223,13 @@ function addMultipleStamps() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Handle Stamp Events
 
 The PDF viewer provides annotation life‑cycle events that notify when Stamp annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
 
----
-
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations, allowing you to save stamps and reload them later. For supported formats and steps, see [**Export and Import annotations**](../export-import-annotations).
-
----
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)

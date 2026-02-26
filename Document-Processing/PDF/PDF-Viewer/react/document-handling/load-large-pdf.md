@@ -12,8 +12,6 @@ domainurl: ##DomainURL##
 
 This article explains how to efficiently load and view large PDF files using the Syncfusion React PDF Viewer. It includes recommended best practices and performance tips for documents ranging from **50 MB to 2 GB**.
 
----
-
 ## Why Large PDFs Need Special Handling
 
 Large PDF files often contain thousands of embedded objects such as images, compressed streams, digital signatures, form fields, annotations, vector graphics, and complex page structures. Rendering such heavy documents requires more processing time and memory.
@@ -27,8 +25,6 @@ The **Syncfusion PDF Viewer is fully optimized for these heavy workloads**, and 
 - **Optimized incremental page loading** for faster interaction
 
 Performance may vary if the user’s system is heavily loaded or low on available RAM. In such cases, enabling the recommended optimizations below ensures maximum performance.
-
----
 
 ## Best Practices for Loading Large PDFs
 
@@ -64,8 +60,6 @@ fetch('https://your-api/large-file.pdf')
 
 Blob loading is highly recommended for all PDFs above **200 MB**, especially when working with 500 MB – 1 GB files.
 
----
-
 ### 2. Viewer Performance Range
 
 The Syncfusion PDF Viewer is optimized to handle:
@@ -74,8 +68,6 @@ The Syncfusion PDF Viewer is optimized to handle:
 - **Up to ~2 GB**
 
 This suits enterprise workflows involving large engineering drawings, client records, scanned books, and multi‑page financial reports.
-
----
 
 ### 3. Minimize Injected Modules
 
@@ -100,7 +92,6 @@ If these features are not required in your application:
 - Disable them to reduce background tasks
 - Improve page rendering speed
 - Provide a smoother experience for large documents
----
 
 #### 3.2 Thumbnail View & Organize Pages
 
@@ -122,8 +113,6 @@ If thumbnails or page reordering are not essential:
 ```js
 <Inject services={[Toolbar, Magnification, Navigation, Print]} />
 ```
-
----
 
 ### 4. Enable Local Storage for Large PDFs With Many Form Fields or Annotations
 
@@ -174,8 +163,6 @@ By default, the viewer uses **sessionStorage** to store interactive session data
 
 This is highly recommended when working with legal documents, tax forms, interactive applications, or PDFs containing thousands of annotations.
 
----
-
 ### 5. Reduce Unnecessary Background System Processes
 
 For the best large‑PDF experience:
@@ -186,8 +173,6 @@ For the best large‑PDF experience:
 - Avoid opening multiple large PDFs simultaneously
 
 This ensures the viewer receives enough system resources.
-
----
 
 ## See Also
 

@@ -13,8 +13,6 @@ Ink annotations allow users to draw freehand strokes using mouse, pen, or touch 
 
 ![Ink overview](../../images/ink_annotation.png)
 
----
-
 ## Enable Freehand Drawing (Ink)
 
 To enable ink annotations, inject the following modules into the React PDF Viewer:
@@ -46,8 +44,6 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Add Ink annotation
 
@@ -84,8 +80,6 @@ function exitInkMode() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Add Ink Programmatically
 Use the [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) API to create an ink stroke by providing a path (an array of move/line commands), bounds, and target page.
 
@@ -106,8 +100,6 @@ function addInkProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Customize Ink Appearance
 You can customize **stroke color**, **thickness**, and **opacity** using the [`inkAnnotationSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#inkannotationsettings) property.
 
@@ -126,8 +118,6 @@ You can customize **stroke color**, **thickness**, and **opacity** using the [`i
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Erase, Modify, or Delete Ink Strokes
 - **Move**: Drag the annotation.
@@ -176,30 +166,22 @@ function editInkProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Delete Stamp
 
 Delete Ink via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
-
----
 
 ## Ink Annotation Events
 
 The PDF viewer provides annotation life‑cycle events that notify when Ink annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
 
-
----
-
 ## Export and Import
 
 Ink annotations can be exported or imported along with other annotations.
 See [Export and Import annotations](../export-import-annotations).
 
----
-
 ## See Also
+
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Annotation Events](../annotation-event)

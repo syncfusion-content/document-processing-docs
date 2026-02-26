@@ -11,8 +11,6 @@ domainurl: ##DomainURL##
 # Add Free Text Annotations in React PDF Viewer
 Free Text annotations let users place editable text boxes on a PDF page to add comments, labels, or notes without changing the original document content.
 
----
-
 ## Enable Free Text in the Viewer
 
 To enable ink annotations, inject the following modules into the React PDF Viewer:
@@ -44,8 +42,6 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Add Free Text
 
@@ -85,8 +81,6 @@ function exitFreeTextMode() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Add Free Text Programmatically
 
 Use the [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) API to create a text box at a given location with desired styles.
@@ -117,8 +111,6 @@ function addFreeTextProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Customize Free Text Appearance
 
 Configure default properties using the [`FreeTextSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#freeTextsettings) property (for example, default **fill color**, **border color**, **font color**, **opacity**, and **auto‑fit**). 
@@ -146,8 +138,6 @@ Configure default properties using the [`FreeTextSettings`](https://ej2.syncfusi
 {% endtabs %}
 
 N> To tailor right‑click options, see [**Customize Context Menu**](../../context-menu/custom-context-menu).
-
----
 
 ## Modify, Edit, Delete Free Text
 
@@ -213,13 +203,9 @@ function editFreeTextProgrammatically() {
 
 N> Free Text annotations do **not** modify the original PDF text; they overlay editable text boxes on top of the page content.
 
----
-
 ### Delete Free Text
 
 Delete Free Text via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
-
----
 
 ## Set Default Properties During Initialization
 Apply defaults for new text boxes using the [`freeTextSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#inkannotationsettings) property. You can also enable **Auto‑fit** so the box expands with content.
@@ -245,19 +231,13 @@ Apply defaults for new text boxes using the [`freeTextSettings`](https://ej2.syn
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Free Text Annotation Events
 
 Listen to add/modify/select/remove events for Free Text and handle them as needed. For the full list and parameters, see [**Annotation Events**](../annotation-event).
 
----
-
 ## Export and Import
 
 Free Text annotations can be exported or imported just like other annotations. For supported formats and steps, see [**Export and Import annotations**](../export-import-annotations).
-
----
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)

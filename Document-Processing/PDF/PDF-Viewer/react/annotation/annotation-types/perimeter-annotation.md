@@ -13,8 +13,6 @@ Perimeter is a measurement annotation used to calculate the length around a clos
 
 ![Perimeter overview](../../../javascript-es6/annotations/annotation-images/perimeter-annot.png)
 
----
-
 ## Enable Perimeter Measurement
 
 To enable Perimeter annotations, inject the following modules into the React PDF Viewer:
@@ -48,11 +46,9 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
----
+## Add Perimeter Annotation
 
-## Add Distance Annotation
-
-### Draw Perimeter Using the Toolbar
+### Add Perimeter Annotaion Using the Toolbar
 
 1. Open the **Annotation Toolbar**.
 2. Select **Measurement** → **Perimeter**.
@@ -88,8 +84,6 @@ function exitPerimeterMode() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Add Perimeter Programmatically
 Use the [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) API to draw a perimeter by providing multiple **vertexPoints**.
 
@@ -112,8 +106,6 @@ function addPerimeter() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Customize Perimeter Appearance
 Configure default properties using the [`Perimeter Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#perimetersettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
@@ -132,8 +124,6 @@ Configure default properties using the [`Perimeter Settings`](https://ej2.syncfu
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Manage Perimeter (Move, Reshape, Edit, Delete)
 - **Move**: Drag inside the shape to reposition it.
@@ -176,13 +166,9 @@ function editPerimeterProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Delete Distance Annotation
 
 Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
-
----
 
 ## Set Default Properties During Initialization
 Apply defaults for Perimeter using the [`perimeterSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#perimetersettings) property.
@@ -202,8 +188,6 @@ Apply defaults for Perimeter using the [`perimeterSettings`](https://ej2.syncfus
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Set Properties While Adding Individual Annotation
 Pass per‑annotation values directly when calling [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
@@ -231,8 +215,6 @@ function addStyledPerimeter() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Scale Ratio and Units
 
 - Use **Scale Ratio** from the context menu to set the actual‑to‑page scale.  
@@ -259,18 +241,12 @@ Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.co
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Handle Perimeter Events
 
 Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).
 
----
-
 ## Export and Import
 Perimeter measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import-annotations).
-
----
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)

@@ -13,8 +13,6 @@ Area is a measurement annotation used to calculate the surface of a closed regio
 
 ![Area overview](../../../javascript-es6/annotations/annotation-images/area-annot.png)
 
----
-
 ## Enable Area Measurement
 
 To enable Area annotations, inject the following modules into the React PDF Viewer:
@@ -47,11 +45,9 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Add Area Annotation
 
-### Draw Area Using the Toolbar
+### Add Area Using the Toolbar
 
 1. Open the **Annotation Toolbar**.
 2. Select **Measurement** → **Area**.
@@ -87,8 +83,6 @@ function exitAreaMode() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Add Area Programmatically
 Use the [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) API to draw an area by providing **vertexPoints** for a closed region.
 
@@ -112,8 +106,6 @@ function addArea() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Customize Area Appearance
 Configure default properties using the [`Area Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#areasettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
@@ -132,8 +124,6 @@ Configure default properties using the [`Area Settings`](https://ej2.syncfusion.
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Manage Area (Move, Reshape, Edit, Delete)
 - **Move**: Drag inside the polygon to reposition it.
@@ -177,14 +167,9 @@ function editAreaProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Delete Distance Annotation
 
 Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
-
----
-
 
 ## Set Default Properties During Initialization
 Apply defaults for Area using the [`areaSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#areasettings) property.
@@ -204,8 +189,6 @@ Apply defaults for Area using the [`areaSettings`](https://ej2.syncfusion.com/re
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Set Properties While Adding Individual Annotation
 Pass per‑annotation values directly when calling [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
@@ -234,8 +217,6 @@ function addStyledArea() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Scale Ratio and Units
 - Use **Scale Ratio** from the context menu to set the actual‑to‑page scale.  
   ![Scale ratio](../../images/calibrate_scaleratio.png)
@@ -261,18 +242,12 @@ Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.co
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Handle Area Events
 
 Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).
 
----
-
 ## Export and Import
 Area measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import-annotations).
-
----
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
