@@ -18,30 +18,32 @@ To delete PDF pages, send a request to the /v1/edit-pdf/delete-pages endpoint wi
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/delete-pages' \
---form 'file=@"merge/example.pdf"' \
---form 'settings="{
-  \"RotationAngle\": \"90\",
-  \"File\": \"file\",
-  \"Password\": null,
-  \"PageRanges\": [
+--form 'file=@"Input.pdf"' \
+--form 'settings={
+   "File": "file",
+  "Password": null,
+  "PageRanges": [
     {
-      \"Start\": 1,
-      \"End\": 5
-    },
-    {
-      \"Start\": 6,
-      \"End\": 10
-    }
-  ]
-}"'
+      "Start": 1,
+      "End": 2
+    }]
+}'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "merge/example.pdf");
-formdata.append("settings", "{\n  \"RotationAngle\": \"90\",\n  \"File\": \"file\",\n  \"Password\": null,\n  \"PageRanges\": [\n    {\n      \"Start\": 1,\n      \"End\": 5\n    },\n    {\n      \"Start\": 6,\n      \"End\": 10\n    }\n  ]\n}");
+formdata.append("file", fileInput.files[0], "Input.pdf");
+formdata.append(
+  "settings",
+  JSON.stringify({    
+    File: "file",      
+    Password: null,
+    PageRanges: [
+      { Start: 1, End: 2 }         ]
+  })
+);
 
 const requestOptions = {
   method: "POST",
@@ -49,7 +51,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/delete-pages", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/delete-pages", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -61,24 +63,24 @@ fetch("http://localhost:4000/v1/edit-pdf/delete-pages", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/delete-pages");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("merge/example.pdf")), "file", "merge/example.pdf");
-content.Add(new StringContent("{
-  \"RotationAngle\": \"90\",
-  \"File\": \"file\",
-  \"Password\": null,
-  \"PageRanges\": [
+content.Add(new StreamContent(File.OpenRead("Input.pdf")), "file1", "Input.pdf");
+
+var settings = new
+{
+    File = "file",
+    Password = (string?)null,
+    PageRanges = new[]
     {
-      \"Start\": 1,
-      \"End\": 5
-    },
-    {
-      \"Start\": 6,
-      \"End\": 10
+        (Start: 1, End: 2)
     }
-  ]
-}"), "settings");
+};
+
+var json = JsonSerializer.Serialize(settings);
+var settingsContent = new StringContent(json, Encoding.UTF8, "application/json");
+content.Add(settingsContent, "settings");
 request.Content = content;
-var response = await client.SendAsync(request);
+
+using var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
 
@@ -104,7 +106,8 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+curl --location 'http://localhost:8003/v1/conversion/status/9b131bfe-d4eb-4f1d-b946-46443a363eb5' \
+  --output Output.pdf
 
 {% endhighlight %}
 
@@ -115,7 +118,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

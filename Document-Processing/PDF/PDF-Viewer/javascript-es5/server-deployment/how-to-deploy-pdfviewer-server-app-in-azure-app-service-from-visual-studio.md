@@ -21,22 +21,22 @@ domainurl: ##DomainURL##
 
 **Step 1:** In Solution Explorer, right-click the project and choose Publish (or use Build > Publish).
 
-![azure publish](../images/azure_publish.png)
+![Visual Studio Publish dialog](../images/azure_publish.png)
 
 **Step 2:** If a profile exists, select Create new profile.
 
 **Step 3:** In Pick a publish target, choose App Service.
 
-![azure target](../images/azure_target.png)
+![Pick a publish target dialog](../images/azure_target.png)
 
 **Step 4:** Select Publish. In Create App Service, sign in if prompted and review the default settings.
 
-![azure pdfviewer](../images/azure_pdfviewer.png)
+![Create App Service settings dialog](../images/azure_pdfviewer.png)
 
-**Step 5:** Select Create. After deployment, the app loads at http://<app_name>.azurewebsites.net (for example, http://ej2-pdfviewer-server20200513053326.azurewebsites.net).
+**Step 5:** Select Create. After deployment, the app is available at `https://<app_name>.azurewebsites.net` (for example, `https://ej2-pdfviewer-server20200513053326.azurewebsites.net`).
 
-**Step 6:** Verify the API at http://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer. A default GET response indicates the server is running.
+**Step 6:** Verify the API at `https://<app_name>.azurewebsites.net/api/pdfviewer`. A default GET response indicates the server is running.
 
 Use the service endpoint (for example, http://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer) as the PDF Viewer client’s serviceUrl. Refer to the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/)
 
-For production guidance, see Azure App Service deployment [documentation](https://docs.microsoft.com/visualstudio/deployment/).
+For Azure App Service deployment guidance, see: https://docs.microsoft.com/visualstudio/deployment/

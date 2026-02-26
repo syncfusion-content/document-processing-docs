@@ -9,21 +9,21 @@ documentation: ug
 
 # Save PDF files to OneDrive
 
-To save a PDF file to One Drive, you can follow the steps below:
+This article describes how to save a PDF file to OneDrive from the Syncfusion TypeScript PDF Viewer using a server-side web service. Follow the steps below.
 
 **Step 1:** Create a Microsoft Graph API application
 
-Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs.
+Create a Microsoft Graph API application, and obtain the application (client) ID and tenant ID. For details, see the [Microsoft Graph guide](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) for accessing files in OneDrive.
 
 **Step 2:** Create a PDF Viewer sample in TypeScript
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This sets up the basic structure of the PDF Viewer application.
+Create a simple PDF Viewer sample in TypeScript by following the Syncfusion PDF Viewer for TypeScript [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) guide. This establishes the application structure required for the integration.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project targeting .NET Core 3.0 or later. For guidance, see the Syncfusion knowledge base article on creating a PDF Viewer web service in .NET Core.
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
 3. Import the required namespaces at the top of the file:
 
@@ -53,7 +53,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the OneDrive folder.
+5. Modify the `Download()` method to save the downloaded PDF file to the configured OneDrive folder.
 
 ```csharp
 [HttpPost("Download")]
@@ -100,7 +100,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open the `appsettings.json` file in the web service project and add the following lines below the existing `"AllowedHosts"` configuration.
+6. Open `appsettings.json` in the web service project and add the following keys below the existing `AllowedHosts` configuration
 
 ```json
 {
@@ -118,12 +118,11 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 ```
 
-N> Replace the placeholders with the actual tenant ID, application ID, and OneDrive folder name.
+N> Replace the placeholders with actual values for the Tenant ID, Application ID, and OneDrive folder name.
 
 **Step 4:** Set the PDF Viewer properties in the TypeScript PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from OneDrive, and ensure that the document exists in the target folder.
-
+Update the `serviceUrl` property with the web service endpoint and set `documentPath` to the PDF file name stored in OneDrive. Ensure the document exists in the target OneDrive folder.
 ```typescript
 
 import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,
@@ -140,11 +139,11 @@ viewer.load('PDF_Succinctly.pdf', null);
 
 ```
 
-N> Install the following NuGet packages in the web service application:
-- Microsoft.Identity.Client
-- Microsoft.Graph
-- Microsoft.Extensions.Configuration
-- Microsoft.Extensions.Configuration.FileExtensions
-- Microsoft.Extensions.Configuration.Json
+N> Install the following NuGet packages in the web service application when required:
+- `Microsoft.Identity.Client`
+- `Microsoft.Graph`
+- `Microsoft.Extensions.Configuration`
+- `Microsoft.Extensions.Configuration.FileExtensions`
+- `Microsoft.Extensions.Configuration.Json`
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-one-drive)
