@@ -14,7 +14,7 @@ How to integrate the Syncfusion React PDF Viewer into a Gatsby site. Use the Qui
 
 ## Quickstart for Gatsby
 
-1. Create or open your Gatsby site.
+#### Create or open your Gatsby site.
 
 ```bash
 # create a new Gatsby site (or use an existing one)
@@ -23,13 +23,13 @@ cd my-gatsby-site
 npm install
 ```
 
-2. Install the PDF Viewer package:
+#### Install the PDF Viewer package:
 
 ```bash
 npm install @syncfusion/ej2-react-pdfviewer --save
 ```
 
-3. Optional — host runtime locally or use the CDN
+#### Optional — host runtime resources locally or use the CDN
 
 If you want to host the viewer runtime and WASM locally, copy the runtime files into Gatsby's `static` directory so they are served at the root URL (`/`). The example component below uses the CDN `resourceUrl` for a quick demo; hosting locally is recommended for production.
 
@@ -41,7 +41,7 @@ cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib static/ej2
 mkdir -p static/assets && cp ./path/to/sample.pdf static/assets/sample.pdf
 ```
 
-4. Add viewer CSS imports to `src/components/layout.css` (recommended for Gatsby component-scoped styling):
+- Add viewer CSS imports to `src/components/layout.css` (recommended for Gatsby component-scoped styling):
 
 Create `src/components/layout.css` and add the imports below (relative path to `node_modules` used from `src/components`):
 
@@ -63,7 +63,7 @@ Then import the stylesheet in `gatsby-browser.js` at your project root so it is 
 import './src/components/layout.css';
 ```
 
-5. Use a client-only approach (Gatsby is server-side rendered). A simple and reliable pattern is to render the viewer after mount with a mounted flag. Create `src/components/pdfviewer.js` with the component below (the example also shows where to register a Syncfusion license if you have one):
+- Use a client-only approach (Gatsby is server-side rendered). A simple and reliable pattern is to render the viewer after mount with a mounted flag. Create `src/components/pdfviewer.js` with the component below (the example also shows where to register a Syncfusion license if you have one):
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -127,7 +127,7 @@ export default function PdfViewerPage() {
 {% endhighlight %}
 {% endtabs %}
 
-6. Run the Gatsby dev server:
+#### Run the Gatsby dev server:
 
 ```bash
 npm run develop
