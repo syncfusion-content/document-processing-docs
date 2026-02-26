@@ -34,7 +34,7 @@ The following flags are supported in the PDF Viewer:
 ## Key Actions
 
 ### Make Fields Read Only
-Use the **isReadOnly** property to prevent users from modifying a form field through the UI. This is useful for displaying pre filled or calculated values that should not be changed by the user.
+Use the **isReadOnly** property to prevent users from modifying a form field through the UI. This is useful for displaying pre-filled or calculated values that should not be changed by the user.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -334,26 +334,26 @@ root.render(<App />);
 {% endtabs %}
 
 
-N> Printing can be triggered programmatically using **pdfviewer.print()**. Form fields with **isPrint: false** are excluded from the printed output.
+N> Printing can be triggered programmatically using `pdfviewer.print()`. Form fields with `isPrint: false` are excluded from printed output.
 
 ## Apply PDF Form Field Flags Using the UI
 
 **Steps**
 1. Enable **Form Designer** mode in the PDF Viewer.  
 2. Select an existing form field on the PDF page.  
-3. The **Right click To open context menu - > Properties** popover is displayed.
+3. Right-click the field, open the context menu, and select Properties.  
 4. Configure the required constraint options.  
-5. Click “Ok” and Close the properties popover to apply the changes.  
+5. Click OK to apply changes and close the properties popover.  
 
 Changes are reflected immediately in the viewer.
 
-[Applying form field flags using the UI](../../javascript-es6/images/formfields-flag.gif) 
+![Applying form field flags using the UI](../../javascript-es6/images/formfields-flag.gif)
 
 ## Apply PDF Form Field Flags Programmatically
 
 You can apply or modify form field flags in the following ways.
 
-### Apply flags When Creating Fields
+### Apply flags when creating fields
 Pass the flags properties in the settings object when creating form fields using **addFormField()**.
 
 {% tabs %}
@@ -439,7 +439,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-### Update flags on Existing Fields programmatically
+### Update flags on existing fields programmatically
 Use the [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) method to modify constraint values on existing form fields.
 
 {% tabs %}
@@ -530,7 +530,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-### Set Default Flags for New PDF Form Fields
+### Set default flags for new PDF form fields
 You can configure default flag values so that form fields added using the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar) automatically inherit them. This helps ensure consistent behavior for all newly created fields.
 
 {% tabs %}
