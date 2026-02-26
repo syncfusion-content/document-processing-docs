@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Why Do I Have to Manually Copy Files from node_modules into My App?
+## Why do I have to manually copy files from node_modules into my app?
 
 The PDF Viewer supports multiple build systems and can work without a bundler by referencing assets directly using HTML tags. To keep load times efficient, the library is split into smaller modules and uses lazy loading for certain assets.
 
@@ -16,4 +16,4 @@ The PDF Viewer supports multiple build systems and can work without a bundler by
 
 When not using a bundler (or when the bundler does not emit these assets), copy the required files from node_modules to a web-accessible path in your app (for example, "src/ej2-pdfviewer-lib") and reference them accordingly. This ensures the viewer can fetch the lazy-loaded assets when needed and prevents runtime 404 errors.
 
-If a bundler is configured to emit static assets from node_modules, verify that the output contains the necessary files from "@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib" and that your app serves them from a public path. Otherwise, perform a manual copy step during your build process.
+If the bundler is configured to emit static assets from `node_modules`, verify that the build output contains the necessary files from `@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib` and that your app serves them from a public path. Otherwise, perform a manual or scripted copy step during your build process.

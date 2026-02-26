@@ -9,15 +9,10 @@ documentation: ug
 
 # Handle pageRenderInitiate and pageRenderComplete events
 
-In the Syncfusion PDF Viewer, the [pageRenderInitiate](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#pagerendercomplete) events occur during page rendering.
+In the PDF Viewer, the `pageRenderInitiate` and `pageRenderComplete` events fire during the page rendering lifecycle:
 
-**pageRenderInitiate**
-
-Triggered when page rendering begins. Use this event to initialize or set up resources before rendering starts.
-
-**PageRenderComplete**
-
-Triggered when page rendering completes. Use this event to perform cleanup or finalize rendering-related tasks.
+- `pageRenderInitiate`: fired when the rendering of a page begins. Use this event to initialize resources, show loading indicators, or set up rendering parameters before the page content is drawn.
+- `pageRenderComplete`: fired when the rendering of a page finishes. Use this event to hide loading indicators, record render timing, or run post-render processing.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
