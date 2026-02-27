@@ -1,12 +1,12 @@
 ---
-title: How to access external connection name and change table name | Syncfusion
+title: How to get external connection name and rename the table | Syncfusion
 description: This page shows how to access a QueryTable's external connection name and how to change a table name using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to get the external connection name from a QueryTable in an IListObject and how to change the table name using XlsIO?
+# How to access the external connection name and rename the table name?
 
 The example below shows how to read the external connection name from a [QueryTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.QueryTableImpl.html#Syncfusion_XlsIO_Implementation_QueryTableImpl_ExternalConnection) on a [ListObject](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObjects.html) (table) and how to rename the table using Syncfusion XlsIO. Ensure the worksheet contains a ListObject with an associated QueryTable.
 
