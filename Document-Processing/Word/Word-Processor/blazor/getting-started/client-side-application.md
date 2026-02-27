@@ -81,7 +81,6 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
-
 {% endtabs %}
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
@@ -120,7 +119,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
-....
+.... 
 
 {% endhighlight %}
 {% endtabs %}
