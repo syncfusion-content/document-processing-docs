@@ -46,7 +46,7 @@ Form field events can be used to:
 
 ## Handle PDF Form Field Events
 
-You can wire up form field events on the PDF Viewer component to execute custom logic when specific actions occur. The following Vue Composition API example demonstrates wiring up the events and handling validation.
+Form field events can be wired on the PDF Viewer instance to execute custom logic when specific actions occur. The following Vue Composition API example demonstrates wiring up the events and handling validation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

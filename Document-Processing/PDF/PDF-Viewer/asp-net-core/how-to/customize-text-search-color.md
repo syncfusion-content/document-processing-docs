@@ -3,36 +3,24 @@ layout: post
 title: Customize text search color in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn here all about Customize text search color in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Customize text search color
+control: PDF Viewer
 documentation: ug
 ---
 
 # Customize text search color in ASP.NET Core PDF Viewer
 
-To change the text search color in the Syncfusion PDF viewer, you can use the **searchColor** property of the searchModule object. This property accepts a string value that represents the color in hexadecimal format.
+Personalize the appearance of text search results by modifying the search and highlight colors. Use the **searchColor** and **searchHighlightColor** properties within the `textSearchColorSettings` object to align the search experience with your application's theme.
 
-```ts
+## Configure search color settings
 
-viewer.textSearchColorSettings.searchColor = "#FF0000";
+* [**searchColor**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerTextSearchColorSettings_SearchColor): Defines the color for the currently active search result.
+* [**searchHighlightColor**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerTextSearchColorSettings_SearchHighlightColor): Defines the color for all other matching search results in the document.
 
-```
+Both properties accept valid CSS color strings (e.g., hexadecimal codes like `#FF0000`).
 
-This will set the text search color to red. You can use any valid hexadecimal color code to set the text search color to the desired color.
+## Implementation example
 
-You can also use the **searchHighlightColor** property of the searchModule object to change the highlight color of the search results. This property also accepts a string value in hexadecimal format.
-
-```ts
-
-viewer.textSearchColorSettings.searchHighlightColor = "#0000FF";
-
-```
-
-This will set the highlight color of the search results to blue.
-
-* [**searchColor**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerTextSearchColorSettings_SearchColor)
-* [**searchHighlightColor**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerTextSearchColorSettings_SearchHighlightColor)
-
-Here is an example of how you can use the searchHighlightColor property and searchColor property:
+The following example demonstrates how to configure these colors in both Standalone and Server-Backed modes:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
