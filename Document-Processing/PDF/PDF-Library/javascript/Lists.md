@@ -192,7 +192,7 @@ document.destroy();
 
 ## Applying custom fonts to list items
 
-This example shows how to apply custom fonts to list items in a PDF by using embedded fonts through `document.embedFont()`. The list supports Standard, TrueType, and CJK fonts, allowing accurate rendering of multilingual text. By selecting an embedded font and applying it to the list, you can control the style and appearance of list content with better consistency across platforms.
+Custom fonts, including Standard, TrueType, and CJK types, can be embedded and applied to list items for consistent multilingual text rendering across platforms.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -296,7 +296,7 @@ This example shows how long lists automatically continue onto the next page when
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfList, PdfLayoutFormat, PdfUnorderedList, PdfLayoutBreakType, PdfLayoutType, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfList, PdfLayoutFormat, PdfUnorderedList, PdfLayoutBreakType, PdfLayoutType, PdfListItemCollection, PdfLayoutResult } from '@syncfusion/ej2-pdf';
 
 // Load the existing document
 let document: PdfDocument = new PdfDocument(data);
@@ -311,8 +311,8 @@ format.break = PdfLayoutBreakType.fitElement;
 let list1: PdfList = new PdfUnorderedList(new PdfListItemCollection(['PDF', 'XlsIO', 'DocIO', 'PPT', 'PDF', 'XlsIO', 'DocIO', 'PPT']));
 let list2: PdfList = new PdfUnorderedList(new PdfListItemCollection(['A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.']), {suffix: '_'});
 // Draw the unordered list on the page
-list1.draw(page, {x: 50, y: page.size.height - 100}, format);
-list2.draw(page, {x: 180, y: page.size.height - 100}, format);
+let result1: PdfLayoutResult = list1.draw(page, {x: 50, y: page.size.height - 100}, format);
+let result2: PdfLayoutResult = list2.draw(result1.Page, {x: 50, y: result1.bounds.height + 50}, format);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -334,8 +334,8 @@ format.break = ej.pdf.PdfLayoutBreakType.fitElement;
 var list1 = new ej.pdf.PdfUnorderedList(new ej.pdf.PdfListItemCollection(['PDF', 'XlsIO', 'DocIO', 'PPT', 'PDF', 'XlsIO', 'DocIO', 'PPT']));
 var list2 = new ej.pdf.PdfUnorderedList(new ej.pdf.PdfListItemCollection(['A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.']), {suffix: '_'});
 // Draw the unordered list on the page
-list1.draw(page, {x: 50, y: page.size.height - 100}, format);
-list2.draw(page, {x: 180, y: page.size.height - 100}, format);
+let result1 = list1.draw(page, {x: 50, y: page.size.height - 100}, format);
+let result2 = list2.draw(result1.Page, {x: 50, y: result1.bounds.height + 50}, format);
 // Save the document
 document.save('output.pdf');
 // Destroy the document

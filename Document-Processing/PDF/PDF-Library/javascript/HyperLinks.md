@@ -171,7 +171,7 @@ document.destroy();
 
 ## Modifying or updating existing hyperlinks
 
-This example shows how to update hyperlink annotations in a PDF using Syncfusion’s JavaScript PDF Library. By accessing an annotation through `page.annotations.at()`, you can check whether it’s a link annotation and then update its URL or bounding region. This makes it easy to refresh outdated links or adjust navigation behavior whenever the document changes.
+This example shows how to update hyperlink annotations in a PDF using Syncfusion’s JavaScript PDF Library. Link annotations retrieved from a page can have their URL or bounding region updated as needed. This makes it easy to refresh outdated links or adjust navigation behavior whenever the document changes.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -182,9 +182,11 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the first page
 let page: PdfPage = document.getPage(0);
 // Get the first annotation of the page
-let annotation: PdfTextWebLinkAnnotation = page.annotations.at(0) as PdfTextWebLinkAnnotation;
+let annotation: PdfAnnotation = page.annotations.at(0);
 // Modified its properties
-annotation.url = 'https://www.google.co.in/';
+if (annotation instanceof PdfTextWebLinkAnnotation) {
+    annotation.url = 'https://www.google.co.in/';
+}
 // Save the document
 document.save('Output.pdf');
 // Close the document

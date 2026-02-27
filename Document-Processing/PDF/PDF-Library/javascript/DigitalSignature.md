@@ -900,7 +900,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access loaded form
 let form: PdfForm = document.form;
 // Access the loaded form field
-let field: PdfSignatureField = form.fieldAt(0);
+let field: PdfSignatureField = form.fieldAt(0) as PdfSignatureField;
 // Create a digital signature with CMS + SHA-256
 const signature: PdfSignature = PdfSignature.create(certificate, 'password', {
     digestAlgorithm: DigestAlgorithm.sha256,

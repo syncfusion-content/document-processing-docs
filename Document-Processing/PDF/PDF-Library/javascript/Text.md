@@ -359,7 +359,7 @@ document.destroy();
 
 ## Drawing Right-To-Left text
 
-This example shows how to draw right-to-left (RTL) text using a TrueType font that supports the target RTL script (for example, Hebrew or Arabic). Embed a TTF font that contains the needed glyphs and pass a `PdfStringFormat` when calling `drawString`.
+This example demonstrates how to render right-to-left (RTL) text in a PDF document using a TrueType font that supports RTL scripts such as Hebrew or Arabic.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -411,7 +411,7 @@ document.destroy();
 
 ## Embedded font
 
-This example shows how to embed fonts using `document.embedFont()` to ensure consistent text rendering across all platforms. The library supports embedding `PdfStandardFont`, `PdfCjkStandardFont`, and `PdfTrueTypeFont` for reliable Unicode text display. After embedding, the font can be applied through `embedded.getFont()`, allowing precise control over size and style. Additionally, using embedded fonts helps reduce overall PDF size, since the font dictionary is not duplicated for each usage—ensuring cleaner and more efficient output.
+This example shows how to embed fonts using `PdfDocument.embedFont()` method to ensure consistent text rendering across all platforms. The library supports embedding `PdfStandardFont`, `PdfCjkStandardFont`, and `PdfTrueTypeFont` for reliable Unicode text display. After embedding, the font can be applied through `PdfFont.getFont()` method, allowing precise control over size and style. Additionally, using embedded fonts helps reduce overall PDF size, since the font dictionary is not duplicated for each usage—ensuring cleaner and more efficient output.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
