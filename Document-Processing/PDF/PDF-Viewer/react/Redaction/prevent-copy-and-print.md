@@ -20,7 +20,7 @@ This guide shows how to prevent users from copying text or printing documents in
 1. Use a PDF with permissions already set
     - Load a PDF that already disallows copy or print functionality itself. The Viewer enforces these permission automatically.
 
-2. Preprocess restrictions in server-side
+2. Pre process restrictions in server-side
     - Use Syncfusion PDF Library to set permission flags before sending the file to the client. See the server-side example below.
     - Disabling print and copy in server-side automatically enforces them in the PDF Viewer.
 

@@ -30,13 +30,13 @@ This section outlines common security controls and how they interact with the vi
 
 - **Redaction**: Permanently remove text, images, or regions at the document level on the server before delivering the file. Redaction produces a new PDF with the sensitive content removed. See [redacting sensitive content](./overview)
 
-- **Preprocessing and sanitization**: On the server, remove metadata, embedded files, hidden layers, form field values, JavaScript actions, and flatten form fields. Compress and linearize PDFs if needed. See [preprocessing PDFs](../document-handling/preprocess-pdf)
+- **Preprocessing**: On the server, remove metadata, embedded files, hidden layers, form field values, JavaScript actions, and flatten form fields. Compress and linearize PDFs if needed. See [preprocessing PDFs](../document-handling/preprocess-pdf)
 
 ## Design decisions and trade-offs
 
 - Client vs server enforcement: Client-side settings which disable disabling print in the viewer improve user experience but are not a security boundary. True protection requires server-side changes which actually enforces the restrictions (encryption, permissions, redaction).
 
-- Usability vs security: Strong encryption and heavy sanitization can break some workflows (search, form interactivity). Choose operations appropriate to the document lifecycle.
+- Usability vs security: Strong encryption and sanitizing heavily can break some workflows (search, form interactivity). Choose operations appropriate to the document life cycle.
 
 - Redaction permanence: Redaction is irreversible; keep originals securely archived if needed for audit.
 
