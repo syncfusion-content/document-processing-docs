@@ -7,9 +7,9 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# PDF form field flags in ASP.NET Core PDF Viewer
+# PDF Form Field Flags in ASP.NET Core PDF Viewer
 
-The Syncfusion **ASP.NET Core PDF Viewer** allows you to control how users interact with form fields and how those fields behave during validation and printing by applying **form field flags**. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
+The Syncfusion ASP.NET Core PDF Viewer allows controlling how users interact with form fields and how those fields behave during validation and printing by applying form field flags. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
 
 This topic explains:
 - [Supported form field flags](#supported-pdf-form-field-flags)
@@ -34,7 +34,8 @@ The following flags are supported in the PDF Viewer:
 ## Key Actions
 
 ### Make Fields Read Only
-Use the **isReadOnly** property to prevent users from modifying a form field through the UI. This is useful for displaying pre filled or calculated values that should not be changed by the user.
+
+The **isReadOnly** property prevents users from modifying a form field through the UI. This is useful for displaying prefilled or calculated values that should not be changed.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -64,12 +65,13 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endtabs %}
 
 ### Mark Fields as Required
-Use the **isRequired** property to mark form fields as mandatory. To enforce this constraint, enable form field validation and validate fields before allowing actions such as printing or downloading.
+
+The **isRequired** property marks form fields as mandatory. To enforce this constraint, enable form field validation and validate fields before allowing actions such as printing or downloading.
 
 - Enable validation using [enableFormFieldsValidation](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormFieldsValidation)
 - [Validate fields](./form-validation) using [validateFormFields()](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields)
 
-If required fields are empty, validation can prevent further actions.
+When required fields are empty, validation can prevent further actions.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -103,7 +105,8 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endtabs %}
 
 ### Control Print Behavior
-Use the **isPrint** property to control whether a form field appears in the printed output of the PDF document.
+
+The **isPrint** property controls whether a form field appears in the printed output of the PDF document.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -137,22 +140,24 @@ N> Printing can be triggered programmatically using **pdfviewer.print()**. Form 
 ## Apply PDF Form Field Flags Using the UI
 
 **Steps**
-1. Enable **Form Designer** mode in the PDF Viewer.  
-2. Select an existing form field on the PDF page.  
-3. The **Right click To open context menu - > Properties** popover is displayed.
-4. Configure the required constraint options.  
-5. Click “Ok” and Close the properties popover to apply the changes.  
+1. Enable Form Designer mode in the PDF Viewer.
+2. Select an existing form field on the PDF page.
+3. Right-click to open the context menu and select Properties.
+4. Configure the required constraint options.
+5. Click OK to close the properties popover and apply changes.
 
 Changes are reflected immediately in the viewer.
 
-[Applying form field flags using the UI](../../javascript-es6/images/formfields-flag.gif) 
+![Applying form field flags using the UI](../../javascript-es6/images/formfields-flag.gif)
 
 ## Apply PDF Form Field Flags Programmatically
 
-You can apply or modify form field flags in the following ways.
+Form field flags can be applied or modified in the following ways.
 
-### Apply flags When Creating Fields
-Pass the flags properties in the settings object when creating form fields using **addFormField()**.
+### Apply Flags When Creating Fields
+
+Flags properties can be passed in the settings object when creating form fields using **addFormField()**.
+
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div class="text-center">
@@ -189,8 +194,9 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endhighlight %}
 {% endtabs %}
 
-### Update flags on Existing Fields programmatically
-Use the [updateFormField()](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html) method to modify constraint values on existing form fields.
+### Update Flags on Existing Fields Programmatically
+
+The [updateFormField()](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html) method modifies constraint values on existing form fields.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -226,7 +232,8 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endtabs %}
 
 ### Set Default Flags for New PDF Form Fields
-You can configure default flag values so that form fields added using the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar) automatically inherit them. This helps ensure consistent behavior for all newly created fields.
+
+Default flag values can be configured so that form fields added using the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar) automatically inherit them. This ensures consistent behavior for all newly created fields.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

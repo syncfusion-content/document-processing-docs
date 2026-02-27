@@ -7,13 +7,19 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Load N number of pages on initial loading in ASP.NET Core
+# Load specific number of pages on initial rendering in ASP.NET Core
 
-The initial rendering in a PDF Viewer allows users to control how many pages appear when opening a PDF document. Loading only a subset of pages can improve responsiveness because the viewer fetches additional pages on demand as the user scrolls, reducing initial download time for large files.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer optimizes initialization performance by rendering only a subset of pages when a document first opens. This approach improves responsiveness for large documents by deferring the rendering of remaining pages until the user scrolls them into view.
 
-To utilize this capability in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, use the [initialRenderPages](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html?_ga=2.144520115.723518961.1687236178-1796867613.1686804317#:~:text=value%20is%20null-,InitialRenderPages,-Initially%20renders%20the) property. Set this property to the number of pages that should be visible during the first render. Choose the value carefully for large documents because rendering too many pages at once increases memory usage and can degrade performance.
+## Enable initial page rendering
 
-Using the `initialRenderPages` property prudently works well when a smaller range of pages, such as 10–20, provides the essential overview users need before scrolling to additional content.
+To implement this optimization, use the [`initialRenderPages`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_InitialRenderPages) property. Assign an integer value representing the number of pages that should be rendered immediately upon document load.
+
+N> A typical optimization range is 5 to 20 pages. Rendering too many pages initially can increase memory consumption and delay the initial display of the viewer.
+
+### Examples
+
+The following examples demonstrate how to set the `initialRenderPages` property in both standalone and server-backed configurations.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
