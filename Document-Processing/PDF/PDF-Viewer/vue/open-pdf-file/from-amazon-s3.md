@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from AWS S3
+# Open PDF files from AWS S3
 
-The Vue PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
+The Vue PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. The following sections demonstrate both approaches and include prerequisites and security guidance.
 
 ## Using the standalone PDF Viewer
 
@@ -36,16 +36,16 @@ Follow the instructions in the [getting started guide (Vue)](https://help.syncfu
 
 2. Configure the AWS SDK with the region, access key, and secret access key so the application can interact with S3.
 
-N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
+N> Replace the placeholder values with valid values when testing. Do not embed production credentials in client-side code; use server-side authentication or pre-signed URLs for secure access.
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
   AWS.config.update({
-    region: '**Your Region**', // Update this your region
-    accessKeyId: '*Your Access Key*', // Update this with your access key id
-    secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
+    region: '**Your Region**', // Update this with the region
+    accessKeyId: '*Your Access Key*', // Update this with the access key id
+    secretAccessKey: '*Your Security Access Key*', // Update this with the secret access key
   });
 </script>
 
@@ -54,7 +54,7 @@ N> Replace **Your Region** with the actual Region of your AWS S3 account and **Y
 
 3. Set parameters for fetching the PDF document from S3, including the bucket name and file key. Use S3.getObject to retrieve the document, convert it to a Base64 string, and pass it to viewer.load in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
 
-N> Replace **Your Bucket Name** with the actual Bucket name of your AWS S3 account and **Your Key** with the actual File Key of your AWS S3 account.
+N> Replace **Your Bucket Name** and **Your Key** with the target S3 bucket name and object key when testing.
 
 
 {% tabs %}
@@ -93,7 +93,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> The **npm install aws-sdk** package must be installed in your application to use the previous code example.
+N> Install the AWS SDK package appropriate for the project. For v2 use `npm install aws-sdk`; for v3 prefer the modular packages such as `@aws-sdk/client-s3`.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Standalone).
 
@@ -107,9 +107,9 @@ Create a basic PDF Viewer sample by following the instructions in the [getting s
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. Refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
 3. Import the required namespaces at the top of the file:
 
@@ -161,7 +161,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
     {
       RegionEndpoint bucketRegion = RegionEndpoint.USEast1;
 
-      // Configure the AWS SDK with your access credentials and other settings
+      // Configure the AWS SDK with the access credentials and other settings
       var s3Client = new AmazonS3Client(_accessKey, _secretKey, bucketRegion);
 
       string document = jsonObject["document"];
@@ -186,7 +186,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
+6. Open the `appsettings.json` file in the web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -203,11 +203,11 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
+N> Replace the placeholders with actual values when testing. For production deployments, avoid storing AWS credentials in configuration files; use secure server-side credential management, IAM roles, or pre-signed URLs.
 
 **Step 3:** Configure the PDF Viewer component
 
-Set the serviceUrl to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from AWS S3. Ensure the document name matches an object in your bucket.
+Set the serviceUrl to the web service endpoint (replace the localhost URL with the server URL). Set documentPath to the PDF file name to load from AWS S3. Ensure the document name matches an object in the bucket.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -226,7 +226,7 @@ import {
   ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-// Replace the "localhost:44396" with the actual URL of your server
+// Replace the "localhost:44396" with the actual URL of the server
 const serviceUrl = "https://localhost:44396/pdfviewer";
 const documentPath = "PDF_Succinctly.pdf";
 
@@ -258,7 +258,7 @@ export default {
   },
   data() {
     return {
-      // Replace the "localhost:44396" with the actual URL of your server
+      // Replace the "localhost:44396" with the actual URL of the server
       serviceUrl: "https://localhost:44396/pdfviewer",
       documentPath: "PDF_Succinctly.pdf"
     };
@@ -273,6 +273,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
+N> The **AWSSDK.S3** NuGet package must be installed in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Server-Backend)

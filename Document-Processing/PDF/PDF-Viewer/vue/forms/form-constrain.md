@@ -218,20 +218,20 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> Printing can be triggered programmatically using **pdfviewer.print()**. Form fields with **isPrint: false** are excluded from the printed output.
+N> Printing can be triggered programmatically using `pdfviewer.print()`. Form fields with `isPrint: false` are excluded from the printed output.
 
 ## Apply PDF Form Field Flags Using the UI
 
 **Steps**
 1. Enable **Form Designer** mode in the PDF Viewer.  
 2. Select an existing form field on the PDF page.  
-3. The **Right click To open context menu - > Properties** popover is displayed.
+3. Right-click the field and choose **Properties** from the context menu.
 4. Configure the required constraint options.  
-5. Click “Ok” and Close the properties popover to apply the changes.  
+5. Click OK to apply the changes and close the properties popover.
 
 Changes are reflected immediately in the viewer.
 
-[Applying form field flags using the UI](../../javascript-es6/images/formfields-flag.gif) 
+![Applying form field flags using the UI](../../javascript-es6/images/formfields-flag.gif)
 
 ## Apply PDF Form Field Flags Programmatically
 

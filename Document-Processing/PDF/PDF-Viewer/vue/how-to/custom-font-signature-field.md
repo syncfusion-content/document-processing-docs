@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Change the font family for type signatures in Vue
 
-Change the font family for Type Signature and Initial fields by adding a stylesheet to load fonts and assigning them via the PDF Viewer settings. Include Google Font links in the HTML head to use those fonts.
+Change the font family in the type signature of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer by adding a custom CSS stylesheet to the document and applying the desired font family to the type signature element. Include the Google Fonts link in the HTML head section to apply the font.
 
 ### Signature field property
 
 The PDF Viewer supports changing fonts for Signature and Initial fields using the `typeSignatureFonts` and `typeInitialFonts` properties.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code to apply custom fonts to the Signature field.
 
@@ -98,4 +98,4 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 {% endhighlight %}
 {% endtabs %}
 
-By implementing this configuration, custom fonts can be used for both Signature and Initial form fields.
+Implementing this enables use of custom fonts in form-field signature and initial fields.
