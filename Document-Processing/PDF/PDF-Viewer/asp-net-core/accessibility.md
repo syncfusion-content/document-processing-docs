@@ -6,7 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
-# Accessibility in Syncfusion PDF Viewer component
+# Accessibility in ASP.NET Core PDF Viewer component
 
 The PDF Viewer component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It implements [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) to ensure comprehensive accessibility support for all users.
 

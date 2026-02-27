@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stamp Annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Add, edit, and customize stamp annotations in ASP.NET Core PDF Viewer. Support for dynamic, sign here, standard business stamps, and custom image stamps with complete API documentation.
+description: Add, edit, and customize stamp annotations in ASP.NET Core PDF Viewer. Learn about various stamps, and custom image stamps with programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

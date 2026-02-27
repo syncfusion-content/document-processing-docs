@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shape Annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Add and customize shape annotations in ASP.NET Core PDF Viewer. Support for lines, arrows, rectangles, circles, polygons with stroke, fill, and opacity properties.
+description: Add and customize shape annotations in ASP.NET Core PDF Viewer with for  support for lines, arrows, rectangles, circles, polygons with formatting tools.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

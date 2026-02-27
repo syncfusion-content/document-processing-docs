@@ -1,6 +1,6 @@
 ---
 title: Annotation Events in ASP.NET Core PDF Viewer | Syncfusion
-description: Comprehensive guide to annotation events in the Syncfusion ASP.NET Core PDF Viewer component. Learn to handle add, remove, select, move, resize, and property-change events for annotations and signatures with complete code examples.
+description: Comprehensive guide to annotation events in the Syncfusion ASP.NET Core PDF Viewer component with runnable examples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -41,7 +41,7 @@ The PDF Viewer component triggers the following annotation and signature events:
 
 The [annotationAdd](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationAdd) event is triggered when an annotation is added to a PDF document's page.
 
-**Event Arguments:** [AnnotationAddEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationAddEventArgs/)
+**Event Arguments:** [AnnotationAddEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationAddEventArgs)
 
 **Example: Handle annotation add event**
 
@@ -743,7 +743,7 @@ The [signatureSelect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.e
 
 #### Event Arguments
 
-For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signatureSelectEventArgs/).
+For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signatureSelectEventArgs).
 
 The following example illustrates how to handle the `signatureSelect` event.
 
@@ -788,7 +788,7 @@ The [signatureUnselect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion
 
 #### Event Arguments
 
-For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signatureUnSelectEventArgs/).
+For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signatureUnSelectEventArgs).
 
 The following example illustrates how to handle the `signatureUnselect` event.
 

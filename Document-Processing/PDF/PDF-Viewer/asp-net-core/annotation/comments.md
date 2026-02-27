@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in ASP.NET Core PDF Viewer | Syncfusion
-description: Add, reply, and manage comments and annotations in ASP.NET Core PDF Viewer. Support for comment threads, replies, status tracking, and programmatic access to comments.
+description: Add, reply, and manage comments in ASP.NET Core PDF Viewer with support for comment threads, replies, status tracking and programmatic controls.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

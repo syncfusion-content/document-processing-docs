@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Free Text Annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Add and customize free text annotations in ASP.NET Core PDF Viewer. Complete control over font, size, color, alignment, borders, and opacity with programmatic APIs.
+description: Add and customize free text annotations in ASP.NET Core PDF Viewer with  control over formatting tools with programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
