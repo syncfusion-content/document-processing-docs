@@ -7,7 +7,12 @@ documentation: UG
 ---
 # Working with Pictures 
 
-XlsIO allows to insert Pictures into a worksheet. Refer to the following code snippet. 
+XlsIO allows to insert Pictures into a worksheet. 
+
+To quickly get started on adding, modifying, and removing pictures in an Excel document using the Excel Library, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=9wp2-BH-CL4&t=2s" %}
+
+Refer to the following code snippet. 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/Add%20Picture/.NET/Add%20Picture/Add%20Picture/Program.cs,180" %}
