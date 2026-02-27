@@ -14,8 +14,6 @@ Line annotations allow users to draw straight connectors or callouts on PDFs for
 
 ![Line overview](../../../javascript-es6/annotations/annotation-images/line-annot.png)
 
----
-
 ## Enable Line Annotation in the Viewer
 
 To enable Line annotations, inject the following modules into the React PDF Viewer:
@@ -48,11 +46,9 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
----
+## Add Line Annotation
 
-## Apply Line Annotation
-
-### Apply Line Annotation Using the Toolbar
+### Add Line Annotation Using the Toolbar
 
 1. Open the **Annotation Toolbar**.
 2. Select **Shapes** → **Line**.
@@ -61,8 +57,6 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 ![Shape toolbar](../../../javascript-es6/annotations/annotation-images/line-annot.png)
 
 N> When in Pan mode, selecting a shape tool automatically switches the viewer to selection mode for smooth interaction.
-
----
 
 ### Enable Line Mode
 
@@ -94,8 +88,6 @@ function exitLineMode() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Add Line Programmatically
 
 You can add line annotations using the [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) API.
@@ -118,8 +110,6 @@ function addLine() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Customize Line Appearance
 
 Configure default line appearance using the [`lineSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#linesettings) property.
@@ -141,8 +131,6 @@ Configure default line appearance using the [`lineSettings`](https://ej2.syncfus
 {% endtabs %}
 
 N> Fill color is available only when an arrowhead style is applied at the Start or End of the line. If both are set to `None`, the Fill option is disabled.
-
----
 
 ## Manage Line (Edit, Move, Resize, Delete)
 
@@ -189,20 +177,14 @@ function editLineProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Delete Line
 
 The PDF Viewer supports deleting existing annotations through the UI and API.
 See [**Delete Annotation**](../remove-annotations) for full behavior and workflows.
 
----
-
 ### Comments
 
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to line annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
-
----
 
 ## Set properties while adding Individual Annotation
 
@@ -246,8 +228,6 @@ function addMultipleLines() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Disable Line Annotation
 
 Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enableshapeannotation) property.
@@ -268,19 +248,14 @@ Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Handle Line Events
 
 The PDF viewer provides annotation life-cycle events that notify when Line annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
 
----
 
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).
-
----
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
