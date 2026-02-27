@@ -21,7 +21,7 @@ Follow the below steps to import data to PDF document with `AcroForm`.
 1.	Click the form data tool button in the left pane, the form data toolbar will appear as a secondary toolbar in the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
 2.	Select **Import** option in form data toolbar to import the PDF form data.
 
-![WPF PDF Viewer Import Form Data](form-filling-images/wpf-pdf-viewer-import-form-data.png)  
+![WPF PDF Viewer Import Form Data](../form-filling-images/wpf-pdf-viewer-import-form-data.png)  
 
 ## How to Import Programmatically
 [ImportFormData](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ImportFormData_System_String_Syncfusion_Pdf_Parsing_DataFormat_) API is used to import the form fields data in code behind.

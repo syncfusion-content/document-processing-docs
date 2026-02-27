@@ -26,7 +26,7 @@ You can Modify PDF form fields values programmatically by acessing the existing 
 ### Textbox
 Update TextBox Field Through the UI
 You can modify text box fields at runtime from UI.
-![TextboxField](../images/TextBoxField.png)
+![TextboxField](./images/TextBoxField.png)
 
 Update TextBox Field Programmatically (Code‑Behind)
 
@@ -67,7 +67,7 @@ End Sub
 ### CheckBox
 Update CheckBox Field Through the UI
 You can set checkbox fields at runtime from UI.
-![CheckboxField](../images/CheckBoxField.png)
+![CheckboxField](./images/CheckBoxField.png)
 
 Update CheckBox Field Programmatically (Code‑Behind)
 
@@ -213,13 +213,13 @@ You can apply or update signature fields at runtime from UI.
 
 Clicking the signature box will open the signature pad, requesting the user to draw the signature. clicking on the apply button will add the drawn signature to the signature field.
 
-![WPF PDF Viewer Delete a Signature from Signature field](form-filling-images/wpf-pdf-viewer-signature-form-field-add.png)
+![WPF PDF Viewer Delete a Signature from Signature field](../form-filling-images/wpf-pdf-viewer-signature-form-field-add.png)
 
 #### Deleting a signature from signature field in UI
 
 Selecting the delete option from the context menu, which is displayed when right-clicking on the selected signature, would delete the respective signature from the signature field.
 
-![WPF PDF Viewer Delete a Signature from Signature field](form-filling-images/wpf-pdf-viewer-signature-form-field-delete.png)
+![WPF PDF Viewer Delete a Signature from Signature field](../form-filling-images/wpf-pdf-viewer-signature-form-field-delete.png)
 
 Update Signature Field Programmatically (Code‑Behind)
 

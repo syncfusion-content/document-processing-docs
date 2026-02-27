@@ -23,17 +23,17 @@ See the [Filling PDF Forms](./form-filling) page for full details.
 
 ![FormFilling](./images/FormFillingUI.gif)
 
-1. [Programmatically Form fill](./form-filling#fill-pdf-forms-programmatically)
-2. [Form Fill Using UI](./form-filling#fill-pdf-forms-through-the-user-interface)
-3. [Import the Form data](./form-filling#fill-pdf-forms-through-import-data)
+1. [Programmatically Form fill](./form-filling## Fill PDF forms programmatically)
+2. [Form Fill Using UI](./form-filling## Fill PDF forms through the User Interface)
+3. [Import the Form data](./form-filling## Fill PDF forms through Import Data )
 
 
 ## Supported form field types
 
-- [Textbox](./manage-form-fields/add-form-fields#add-textbox)
-- [Password](./manage-form-fields/add-form-fields#add-password)
-- [CheckBox](./manage-form-fields/add-form-fields#add-checkbox)
-- [RadioButton](./manage-form-fields/add-form-fields#add-radiobutton)
-- [ListBox](./manage-form-fields/add-form-fields#add-listbox)
-- [ComboBox](./manage-form-fields/add-form-fields#add-combobox)
-- [Signature field](./manage-form-fields/add-form-fields#add-signature-field)
+- [Textbox](./manage-form-fields/add-form-fields### Textbox)
+- [Password](./manage-form-fields/add-form-fields### Password)
+- [CheckBox](./manage-form-fields/add-form-fields### CheckBox)
+- [RadioButton](./manage-form-fields/add-form-fields### RadioButton)
+- [ListBox](./manage-form-fields/add-form-fields### ListBox)
+- [ComboBox](./manage-form-fields/add-form-fields### ComboBox)
+- [Signature field](./manage-form-fields/add-form-fields### Signature Field)
