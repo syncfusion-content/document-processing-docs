@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remove annotations
+# Remove annotations in React
 
 Annotations can be removed using the built-in UI or programmatically. This page shows common methods to delete annotations in the viewer.
 

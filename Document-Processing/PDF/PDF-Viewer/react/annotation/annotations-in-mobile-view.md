@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations mobileView in React PDF Viewer | Syncfusion
-description: Learn how to use annotations in mobile view with the Syncfusion React PDF Viewer.
+description: Learn here all about how to use annotations in mobile view with the Syncfusion React PDF Viewer Component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -83,7 +83,7 @@ This article describes how to use annotation tools in the Syncfusion React PDF V
 
 **Step 2:** The ink annotation is rendered on the page.
 
-![Ink annotation drawn on the page](../how-to/images/ink-annotation.png)
+![Ink annotation drawn on the page](../../javascript-es6/how-to/images/ink-annotation.png)
 
 ## Change annotation properties (before adding)
 

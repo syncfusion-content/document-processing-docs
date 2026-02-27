@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotations API in TypeScript PDF Viewer | Syncfusion
-description: Learn how to read and configure annotations using APIs in the Syncfusion TypeScript PDF Viewer.
+title: Annotations API in React PDF Viewer | Syncfusion
+description: Learn here all about how to read and configure annotations using APIs in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations API in TypeScript PDF Viewer
+# Annotations API in React
 
 The PDF Viewer provides APIs to read the loaded annotations and to configure global defaults for creating/editing annotations.
 

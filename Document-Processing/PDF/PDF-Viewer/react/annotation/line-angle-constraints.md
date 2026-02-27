@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer provides line angle constraints functionality that allows drawing line-type annotations with controlled angle snapping. This improves precision for technical drawings and measurements in PDF documents.
 
-![Line angle constraint](../annotations/annotation-images/line-angle-constraint.gif)
+![Line angle constraint](../../javascript-es6/annotations/annotation-images/line-angle-constraint.gif)
 
 ## Enable line angle constraints
 
