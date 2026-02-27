@@ -8,28 +8,30 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handwritten signature in React PDF Viewer
+# Handwritten signature in React PDF Viewer component
 
-The PDF Viewer supports handwritten signatures for adding sign-offs and initials directly within a PDF document. Handwritten signatures streamline document workflows and support common signature capture modes (draw, text, upload).
+The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
 
-## Add a handwritten signature
+## Add signature annotation
 
-Handwritten signatures are available from the annotation toolbar.
+### Adding a handwritten signature in UI
 
-* Open the annotation toolbar by using the **Edit Annotation** button in the PDF Viewer toolbar.
-* Choose the **HandWritten Signature** button to open the signature panel.
+The handwritten signature can be added to the PDF document using the annotation toolbar.
+
+- Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
+- Select the **Handwritten signature** button in the annotation toolbar. The signature panel appears.
 
 ![Open the handwritten signature panel](../images/select_sign.png)
 
-* Draw the signature inside the signature panel.
+- Draw the signature in the panel.
 
 ![Draw the handwritten signature](../images/add_sign.png)
 
-* Click **Create**, then move and place the signature at the desired location on the page.
+- Click **Create**, move the signature, and place it at the desired location.
 
 ![Place the handwritten signature on the page](../images/create_sign.png)
 
-The sample below demonstrates switching the viewer to handwritten signature mode programmatically.
+Refer to the following code sample to switch to the handwritten signature mode programmatically.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -103,84 +105,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Enable the handwritten signature
+### Add a handwritten signature programmatically
 
-The following example enables or disables the handwritten signature in the PDF Viewer. Setting the value to `false` disables the feature.
+With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#annotation) method.
 
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  return (<div>
-    <div className='control-section'>
-      {/* Render the PDF Viewer */}
-      <PdfViewerComponent
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        // Enable or disable handwritten signature.
-        enableHandwrittenSignature = {true}
-        style={{ 'height': '640px' }}>
-
-          <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                            Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  return (<div>
-    <div className='control-section'>
-      {/* Render the PDF Viewer */}
-      <PdfViewerComponent
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        // Enable or disable handwritten signature.
-        enableHandwrittenSignature = {true}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        style={{ 'height': '640px' }}>
-
-          <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                            Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
-## Add a handwritten signature programmatically to the PDF document
-
-The PDF Viewer API supports programmatic creation of handwritten signatures via the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation) method.
-
-The examples below demonstrate how to add handwritten signatures programmatically using `addAnnotation()`.
+Here is an example of adding a handwritten signature programmatically using the `addAnnotation()` method:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -328,24 +257,314 @@ root.render(<App />);
 
 [View sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/blob/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
 
-## Edit properties of handwritten signatures
+## Edit signature annotation
 
-Change stroke color, border thickness, and opacity using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
+### Edit signature annotation in UI
 
-### Edit stroke color
+Stroke color, border thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-Change the stroke color using the color palette in the Edit Stroke Color tool.
+#### Edit stroke color
+
+Edit the stroke color using the color palette in the Edit Stroke Color tool.
 
 ![Change signature stroke color](../images/change_stroke.png)
 
-### Edit thickness
+#### Edit thickness
 
-Change border thickness using the range slider in the Edit Thickness tool.
+Edit border thickness using the range slider in the Edit Thickness tool.
 
 ![Change signature border thickness](../images/change_thickness.png)
 
-### Edit opacity
+#### Edit opacity
 
-Change opacity using the range slider in the Edit Opacity tool.
+Edit opacity using the range slider in the Edit Opacity tool.
 
 ![Change signature opacity](../images/change_opacity.png)
+
+### Edit Signature Annotation Programmatically
+
+With the PDF Viewer library, you can programmatically edit a handwritten signature in the PDF Viewer control using the `editSignature()` method.
+
+Here is an example of editing a handwritten signature programmatically using the `editSignature()` method:
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import {
+  PdfViewerComponent,
+  Inject,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  LinkAnnotation,
+  ThumbnailView,
+  BookmarkView,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner
+} from '@syncfusion/ej2-react-pdfviewer';
+import { DisplayMode } from '@syncfusion/ej2-pdfviewer';
+
+function App() {
+  const addSignature = () => {
+    const viewer = (document.getElementById('container')?.ej2_instances || [])[0];
+    if (!viewer) return;
+
+    // Add Signature annotation (Text mode)
+    viewer.annotation.addAnnotation('HandWrittenSignature', {
+      offset: { x: 200, y: 310 },
+      pageNumber: 1,
+      width: 200,
+      height: 65,
+      signatureItem: ['Signature'],
+      signatureDialogSettings: {
+        displayMode: DisplayMode.Text,
+        hideSaveSignature: false
+      },
+      canSave: false,
+      path: 'Syncfusion',
+      fontFamily: 'Helvetica'
+    });
+  };
+
+  const editSignature = () => {
+    const viewer = (document.getElementById('container')?.ej2_instances || [])[0];
+    if (!viewer) return;
+
+    for (let i = 0; i < viewer.signatureCollection.length; i++) {
+      if (viewer.signatureCollection[i].shapeAnnotationType === 'SignatureText') {
+        viewer.signatureCollection[i].fontSize = 12;
+        viewer.signatureCollection[i].thickness = 2;
+        viewer.signatureCollection[i].strokeColor = '#0000FF';
+        viewer.signatureCollection[i].opacity = 0.8;
+        viewer.annotationModule.editSignature(viewer.signatureCollection[i]);
+      }
+    }
+  };
+
+  return (
+    <div>
+      <div style={{ marginBottom: '12px', display: 'flex', gap: '8px' }}>
+        <button id="Signature" onClick={addSignature}>Add Signature Annotation</button>
+        <button id="editSignatureAnnotation" onClick={editSignature}>Edit Signature Annotation</button>
+      </div>
+
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ height: '650px' }}
+      >
+        <Inject
+          services={[
+            Toolbar,
+            Magnification,
+            Navigation,
+            Annotation,
+            LinkAnnotation,
+            ThumbnailView,
+            BookmarkView,
+            TextSelection,
+            TextSearch,
+            FormFields,
+            FormDesigner
+          ]}
+        />
+      </PdfViewerComponent>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import {
+  PdfViewerComponent,
+  Inject,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  LinkAnnotation,
+  ThumbnailView,
+  BookmarkView,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner
+} from '@syncfusion/ej2-react-pdfviewer';
+import { DisplayMode } from '@syncfusion/ej2-pdfviewer';
+
+function App() {
+  const addSignature = () => {
+    const viewer = (document.getElementById('container')?.ej2_instances || [])[0];
+    if (!viewer) return;
+
+    // Add Signature annotation (Text mode)
+    viewer.annotation.addAnnotation('HandWrittenSignature', {
+      offset: { x: 200, y: 310 },
+      pageNumber: 1,
+      width: 200,
+      height: 65,
+      signatureItem: ['Signature'],
+      signatureDialogSettings: {
+        displayMode: DisplayMode.Text,
+        hideSaveSignature: false
+      },
+      canSave: false,
+      path: 'Syncfusion',
+      fontFamily: 'Helvetica'
+    });
+  };
+
+  const editSignature = () => {
+    const viewer = (document.getElementById('container')?.ej2_instances || [])[0];
+    if (!viewer) return;
+
+    for (let i = 0; i < viewer.signatureCollection.length; i++) {
+      if (viewer.signatureCollection[i].shapeAnnotationType === 'SignatureText') {
+        viewer.signatureCollection[i].fontSize = 12;
+        viewer.signatureCollection[i].thickness = 2;
+        viewer.signatureCollection[i].strokeColor = '#0000FF';
+        viewer.signatureCollection[i].opacity = 0.8;
+        viewer.annotationModule.editSignature(viewer.signatureCollection[i]);
+      }
+    }
+  };
+
+  return (
+    <div>
+      <div style={{ marginBottom: '12px', display: 'flex', gap: '8px' }}>
+        <button id="Signature" onClick={addSignature}>Add Signature Annotation</button>
+        <button id="editSignatureAnnotation" onClick={editSignature}>Edit Signature Annotation</button>
+      </div>
+
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ height: '650px' }}
+      >
+        <Inject
+          services={[
+            Toolbar,
+            Magnification,
+            Navigation,
+            Annotation,
+            LinkAnnotation,
+            ThumbnailView,
+            BookmarkView,
+            TextSelection,
+            TextSearch,
+            FormFields,
+            FormDesigner
+          ]}
+        />
+      </PdfViewerComponent>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Enable or disable handwritten signature
+
+The following example enables or disables the handwritten signature in the PDF Viewer. Setting the value to `false` disables the feature.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
+
+import * as ReactDOM from 'react-dom/client';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        // Enable or disable handwritten signature.
+        enableHandwrittenSignature = {true}
+        style={{ 'height': '640px' }}>
+
+          <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                            Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+{% raw %}
+
+import * as ReactDOM from 'react-dom/client';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  return (<div>
+    <div className='control-section'>
+      {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        // Enable or disable handwritten signature.
+        enableHandwrittenSignature = {true}
+        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
+        style={{ 'height': '640px' }}>
+
+          <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+                                            Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+N> When `enableHandwrittenSignature` is set to `false`, the handwritten signature toolbar and related UI are disabled; existing handwritten signature annotations remain in the document unless removed. The `canSave` option in annotation examples controls whether a signature can be saved for reuse; when `canSave` is `false`, signatures are not persisted in the signature collection for later reuse.
+
+## See also
+
+- [Annotation Overview](../overview)
+- [Annotation Types](../annotation/annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](../annotation/create-modify-annotation)
+- [Customize Annotation](../annotation/customize-annotation)
+- [Remove Annotation](../annotation/delete-annotation)
+- [Export and Import Annotation](../annotation/export-import/export-annotation)
+- [Annotation Permission](../annotation/annotation-permission)
+- [Annotation in Mobile View](../annotation/annotations-in-mobile-view)
+- [Annotation Events](../annotation/annotation-event)
+- [Annotation API](../annotation/annotations-api)

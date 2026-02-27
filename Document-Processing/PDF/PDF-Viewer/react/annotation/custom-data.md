@@ -1,0 +1,183 @@
+---
+layout: post
+title: Custom Data in annotations in React PDF Viewer | Syncfusion
+description: Learn how to use add custom Data in annotation in Syncfusion React PDF Viewer
+platform: document-processing
+control: PDF Viewer
+documentation: ug
+domainurl: ##DomainURL##
+---
+
+# Custom data in annotations
+
+Annotations can include custom key–value data via the `customData` property. This is supported at two levels:
+
+- Default level via `annotationSettings`: applies to all annotations created through the UI.
+- Per-annotation-type level: provide `customData` inside specific annotation-type settings (for example, `highlightSettings`, `rectangleSettings`).
+
+The `customData` value can be any JSON-serializable object. It is preserved during annotation export/import and is available at runtime on the annotation object.
+
+## Default custom data (annotationSettings)
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import {
+  PdfViewerComponent, Inject,
+  Toolbar, Annotation, TextSelection,
+  AllowedInteraction
+} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  return (
+    <PdfViewerComponent
+      id="container"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      style={{ height: '650px' }}
+      annotationSettings={{
+        author: 'XYZ',
+        minHeight: 10,
+        minWidth: 10,
+        maxWidth: 100,
+        maxHeight: 100,
+        allowedInteractions: [AllowedInteraction.Resize],
+        // Custom data applied to all newly created annotations
+        customData: {
+          appId: 'pdf-review',
+          tenant: 'northwind',
+          featureFlags: { allowShare: true, qaStamp: false }
+        }
+      }}
+    >
+      <Inject services={[Toolbar, Annotation, TextSelection]} />
+    </PdfViewerComponent>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Custom data for Individual Annotation
+
+Provide customData inside individual annotation-type settings when you want specific payloads for different tools.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import {
+  PdfViewerComponent, Inject,
+  Toolbar, Annotation, TextSelection
+} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  return (
+    <PdfViewerComponent
+      id="container"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      style={{ height: '650px' }}
+
+      // Text markup
+      highlightSettings={{ author: 'QA', subject: 'Review', color: '#ffff00', opacity: 0.6, customData: { tag: 'needs-review', priority: 'high' } }}
+      strikethroughSettings={{ author: 'QA', subject: 'Remove', color: '#ff0000', opacity: 0.6, customData: { tag: 'remove', priority: 'medium' } }}
+      underlineSettings={{ author: 'Guest User', subject: 'Notes', color: '#00ffff', opacity: 0.9, customData: { tag: 'note', owner: 'guest' } }}
+      squigglySettings={{ author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9, customData: { tag: 'typo' } }}
+
+      // Shapes
+      lineSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8, customData: { id: 'ln-1', category: 'connector' } }}
+      arrowSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8, customData: { id: 'ar-1', category: 'direction' } }}
+      rectangleSettings={{ fillColor: '#ffffff00', strokeColor: '#222222', thickness: 1, opacity: 1, customData: { id: 'rect-1', zone: 'content' } }}
+      circleSettings={{ fillColor: '#ffffff00', strokeColor: '#222222', thickness: 1, opacity: 1, customData: { id: 'circ-1', zone: 'highlight' } }}
+      polygonSettings={{ fillColor: '#ffffff00', strokeColor: '#222222', thickness: 1, opacity: 1, customData: { id: 'poly-1', group: 'area' } }}
+
+      // Measurements
+      distanceSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8, customData: { units: 'cm', scale: 1 } }}
+      perimeterSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8, customData: { units: 'cm', calc: 'perimeter' } }}
+      areaSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8, fillColor: '#ffffff00', customData: { units: 'cm^2', calc: 'area' } }}
+      radiusSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8, fillColor: '#ffffff00', customData: { units: 'cm', calc: 'radius' } }}
+      volumeSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8, fillColor: '#ffffff00', customData: { units: 'cm^3', calc: 'volume' } }}
+
+      // Others
+      freeTextSettings={{ borderColor: '#222222', opacity: 1, customData: { template: 'comment', mentions: ['qa'] } }}
+      inkAnnotationSettings={{ strokeColor: '#0000ff', thickness: 3, opacity: 0.8, customData: { tool: 'pen', userId: 12345 } }}
+      stampSettings={{ opacity: 0.9, customData: { stampType: 'Approved', by: 'Manager' } }}
+      stickyNotesSettings={{ author: 'QA', subject: 'Review', opacity: 1, customData: { channel: 'inbox', unread: true } }}
+    >
+      <Inject services={[Toolbar, Annotation, TextSelection]} />
+    </PdfViewerComponent>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Retrieve custom data at runtime
+
+You can access the customData for any annotation through the viewer's annotationCollection. For example, wire a button click to iterate all annotations and read their custom payloads.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import { PdfViewerComponent, Inject, Toolbar, Annotation, TextSelection } from '@syncfusion/ej2-react-pdfviewer';
+
+function getViewer() { return document.getElementById('container').ej2_instances[0]; }
+
+function showCustomData() {
+  const viewer = getViewer();
+  viewer.annotationCollection.forEach((a) => {
+    console.log('Annotation', a.id, 'customData:', a.customData);
+  });
+}
+
+function App() {
+  return (
+    <>
+      <button onClick={showCustomData}>Show Custom Data</button>
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ height: '650px' }}
+      >
+        <Inject services={[Toolbar, Annotation, TextSelection]} />
+      </PdfViewerComponent>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Note
+- `customData` can be any JSON-serializable object and is stored with the annotation.
+- Use `annotationSettings.customData` for global defaults and override with per-tool settings as needed.
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
+
+## See also
+
+- [Annotation Overview](../overview)
+- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](../annotations/create-modify-annotation)
+- [Customize Annotation](../annotations/customize-annotation)
+- [Remove Annotation](../annotations/delete-annotation)
+- [Handwritten Signature](../annotations/signature-annotation)
+- [Export and Import Annotation](../annotations/export-import/export-annotation)
+- [Annotation Permission](../annotations/annotation-permission)
+- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
+- [Annotation Events](../annotations/annotation-event)
+- [Annotation API](../annotations/annotations-api)
