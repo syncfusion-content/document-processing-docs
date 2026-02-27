@@ -7,19 +7,19 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Customize the appearance of PDF Form Fields in JavaScript PDF Viewer
+## Customize the appearance of PDF form fields in JavaScript
 
-**Styling** customizes appearance only (font, color, alignment, border, background, indicator text).
+Styling customizes appearance only (font, color, alignment, border, background, indicator text).
 
-## Customize Appearance of Form Fields Using the UI
+## Customize appearance of form fields using the UI
 Use the **Properties** panel to adjust:
-- Font family/size, text color, alignment
-- Border color/thickness
-- Background color
+- font family/size, text color, alignment
+- border color/thickness
+- background color
 ![Textbox style from UI](../../../javascript-es6/images/ui-textbox-style.png)
 
-## Customize appearance Form Fields Programmatically
-Use [updateFormField()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#updateformfields) to apply styles:
+## Customize appearance of form fields programmatically
+Use [`updateFormField()`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#updateformfields) to apply styles:
 ```html
 <button id="CustomizeTextboxStyle">Update Textbox Style</button>
 ```
@@ -47,7 +47,7 @@ document.getElementById('CustomizeTextboxStyle').addEventListener('click', funct
 });
 ```
 
-## Set Default Styles for New Form Fields
+## Set default styles for new form fields
 Define defaults so fields added from the toolbar inherit styles.
 ```js
 // Apply as defaults for Textbox added from toolbar
