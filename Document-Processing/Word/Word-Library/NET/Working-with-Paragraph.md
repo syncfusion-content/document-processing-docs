@@ -1778,6 +1778,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to apply highlight color to fields in a Word document?](https://support.syncfusion.com/kb/article/20092/how-to-apply-highlight-color-to-fields-in-a-word-document)
 * [How to Replace DISPLAYBARCODE Field with Image in DocIO .NET Core?](https://support.syncfusion.com/kb/article/19842/how-to-replace-displaybarcode-field-with-image-in-docio-net-core)
 * [How to resize images to fit owner element in NET Core Word document?](https://support.syncfusion.com/kb/article/21490/how-to-resize-images-to-fit-owner-element-in-net-core-word-document)
+* [How to find and remove highlight color in a .NET Core Word Document](https://support.syncfusion.com/kb/article/22151/how-to-find-and-remove-highlight-color-in-a-net-core-word-document)
+* [How to Retrieve specific Headings with List Numbers in a .NET Core Word Document?](https://support.syncfusion.com/kb/article/17713/how-to-retrieve-specific-headings-with-list-numbers-in-a-net-core-word-document)
+* [How to set the proofing language to text in the Word document in .NET?](https://support.syncfusion.com/kb/article/22694/how-to-set-the-proofing-language-to-text-in-the-word-document-in-net)
+* [How to Apply Style for a Text Range in a Paragraph in .NET?](https://support.syncfusion.com/kb/article/22370/how-to-apply-style-for-a-text-range-in-a-paragraph-in-net)
+* [How to set proofing language for the contents in the Word document in .NET?](https://support.syncfusion.com/kb/article/22783/how-to-set-proofing-language-for-the-contents-in-the-word-document-in-net)
 
 ## Frequently Asked Questions
 

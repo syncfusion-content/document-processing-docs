@@ -1151,4 +1151,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to add bookmarks in the header and footer sections of a Word document?](https://support.syncfusion.com/kb/article/20101/how-to-add-bookmarks-in-the-header-and-footer-sections-of-a-word-document)
 * [How to export content between two bookmarks as HTML in a Word document?](https://support.syncfusion.com/kb/article/20097/how-to-export-content-between-two-bookmarks-as-html-in-a-word-document)
 * [How to apply a style to bookmark content in a Word document?](https://support.syncfusion.com/kb/article/20093/how-to-apply-a-style-to-bookmark-content-in-a-word-document)
-
+* [How to export Bookmarks content as HTML in .NET Core Word Document?](https://support.syncfusion.com/kb/article/22282/how-to-export-bookmarks-content-as-html-in-net-core-word-document)
+* [How to Add Bookmarks to All Paragraphs and Retrieve Their Contents in .NET Core Word document?](https://support.syncfusion.com/kb/article/22282/how-to-export-bookmarks-content-as-html-in-net-core-word-document)
+* [How to format bookmark content in ASP.NET Core Word Document?](https://support.syncfusion.com/kb/article/22143/how-to-format-bookmark-content-in-aspnet-core-word-document)
+* [How to Identify Bookmark Placement in Word Document in .NET Core?](https://support.syncfusion.com/kb/article/22205/how-to-identify-bookmark-placement-in-word-document-in-net-core)
+* [How to Find Nested Bookmarks in a Word Document in C# .NET Core?](https://support.syncfusion.com/kb/article/22187/how-to-find-nested-bookmarks-in-a-word-document-in-c-net-core)
+* [How to Rename a Bookmark in a Word Document using C# in ASP.NET Core?](https://support.syncfusion.com/kb/article/22347/how-to-rename-a-bookmark-in-a-word-document-using-c-in-aspnet-core)
+* [How to remove editable range in bookmark in DOCX using C# .NET Core?](https://support.syncfusion.com/kb/article/22315/how-to-remove-editable-range-in-bookmark-in-docx-using-c-net-core)
+* [How to replace a text with bookmark hyperlink in Word using .NET core?](https://support.syncfusion.com/kb/article/22577/how-to-replace-a-text-with-bookmark-hyperlink-in-word-using-net-core)

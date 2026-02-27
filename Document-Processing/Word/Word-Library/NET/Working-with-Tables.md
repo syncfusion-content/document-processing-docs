@@ -2166,6 +2166,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to Keep Paragraphs Inside a Table in ASP.NET Core Word?](https://support.syncfusion.com/kb/article/19678/how-to-keep-paragraphs-inside-a-table-in-aspnet-core-word)
 * [How to copy rows from one table to another while preserving formatting in a Word document?](https://support.syncfusion.com/kb/article/20307/how-to-copy-rows-from-one-table-to-another-while-preserving-formatting-in-a-word-document)
 * [How to Remove Empty Tables from .NET Core Word Document?](https://support.syncfusion.com/kb/article/20090/how-to-remove-empty-tables-from-net-core-word-document)
+* [How to Find and Modify Table Content by Title in .NET Core Word?](https://support.syncfusion.com/kb/article/22375/how-to-find-and-modify-table-content-by-title-in-net-core-word)
+* [How to Add Table Row with Restarted Numbered List in .NET Core DocIO?](https://support.syncfusion.com/kb/article/22420/how-to-add-table-row-with-restarted-numbered-list-in-net-core-docio)
 
 ## Frequently Asked Questions
 
