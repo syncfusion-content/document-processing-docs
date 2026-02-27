@@ -11,8 +11,6 @@ domainurl: ##DomainURL##
 # Strikethrough Annotation (Text Markup) in React PDF Viewer
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Strikethrough* text markup annotations in the Syncfusion **React PDF Viewer**. You can apply strikethrough using the toolbar or context menu, programmatically invoke strikethrough mode, customize default settings, handle events, and export the PDF with annotations.
 
----
-
 ## Enable Strikethrough in the Viewer
 To enable Strikethrough annotations, inject the following modules into the React PDF Viewer:
 - [**Annotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation)
@@ -52,26 +50,20 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
----
+## Add Strikethrough Annotation
 
-## Apply Strikethrough Annotation
-
-### Apply Strikethrough Using the Toolbar
+### Add Strikethrough Using the Toolbar
 1. Select the text you want to strike through.
 2. Click the **Strikethrough** icon in the annotation toolbar.
    - If **Pan Mode** is active, the viewer automatically switches to **Text Selection** mode.
 
 ![Strikethrough tool](../../../javascript-es6/annotations/annotation-images/strikethrough-tool.gif)
 
----
-
-### Apply strikethrough using Context Menu
+### Add strikethrough using Context Menu
 Right-click a selected text region → select **Strikethrough**.
 
 ![Strikethrough Context](../../../javascript-es6/annotations/annotation-images/strikethrough-context.gif)
 To customize menu items, refer to [**Customize Context Menu**](../../context-menu/custom-context-menu) documentation.
-
----
 
 ### Enable Strikethrough Mode
 Switch the viewer into strikethrough mode using `setAnnotationMode('Strikethrough')`.
@@ -101,8 +93,6 @@ function disableStrikethroughMode() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Add Strikethrough Programmatically
 Use [`addAnnotation()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) to insert a strikethrough at a specific location.
 
@@ -119,8 +109,6 @@ function addStrikethrough() {
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Customize Strikethrough Appearance
 Configure default strikethrough settings such as **color**, **opacity**, and **author** using [`strikethroughSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#strikethroughsettings).
@@ -146,8 +134,6 @@ Configure default strikethrough settings such as **color**, **opacity**, and **a
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Manage Strikethrough (Edit, Delete, Comment)
 
 ### Edit Strikethrough
@@ -158,8 +144,6 @@ Use the annotation toolbar:
 ![Edit color](../../../javascript-es6/images/edit_color.png)
 - **Edit Opacity** slider  
 ![Edit opacity](../../../javascript-es6/images/edit_opacity.png)
-
----
 
 #### Edit Strikethrough Programmatically
 Modify an existing strikethrough programmatically using `editAnnotation()` and `annotationCollection`.
@@ -182,17 +166,11 @@ function editStrikethroughProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Delete Strikethrough
 The PDF Viewer supports deleting existing annotations through both the UI and API. For detailed behavior, supported deletion workflows, and API reference, see [**Delete Annotation**](../remove-annotation).
 
----
-
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to strikethrough annotations. It provides a dedicated UI for reviewing feedback, tracking conversations, and collaborating on annotation–related notes within the PDF Viewer.
-
----
 
 ## Set properties while adding Individual Annotation
 Set properties for individual annotations when adding them programmatically by supplying fields on each `addAnnotation('Strikethrough', …)` call.
@@ -223,8 +201,6 @@ function addMultipleStrikethroughs() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Disable TextMarkup Annotation
 Disable text markup annotations (including strikethrough) using the [`enableTextMarkupAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enabletextmarkupannotation) property.
 
@@ -244,17 +220,11 @@ Disable text markup annotations (including strikethrough) using the [`enableText
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Handle Strikethrough Events
 The PDF viewer provides annotation life-cycle events that notify when strikethrough annotations are added, modified, selected, or removed. For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
----
-
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [**Export and Import Annotation**](../export-import-annotations).
-
----
 
 ## See Also
 
