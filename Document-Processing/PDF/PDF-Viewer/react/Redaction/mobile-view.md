@@ -7,11 +7,11 @@ control: PdfViewer
 documentation: ug
 ---
 
-# Redaction in Mobile View in React PdfViewer Component
+# Redaction in mobile view in React PdfViewer component
 
-The Redaction Tool enables users to permanently mark and remove sensitive content from PDF documents in mobile view using the React PdfViewer component. This feature is optimized for touch interactions and provides a streamlined redaction workflow specifically designed for mobile devices.
+The Redaction tool lets users permanently mark and remove sensitive content from PDF documents in mobile view. It is optimized for touch interactions and provides a streamlined redaction workflow for phones and tablets.
 
-![Redaction in Mobile View](./redaction-annotations-images/redaction-mobile-view.png)
+![Redaction toolbar displayed at bottom of mobile PDF viewer](./redaction-annotations-images/redaction-mobile-view.png)
 
 N> In mobile view, the redaction toolbar appears at the bottom of the viewer for easy thumb access. Mobile layout activates automatically on small screens.
 
@@ -69,129 +69,129 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Understanding Mobile Redaction Toolbar Tools
+## Understanding mobile redaction toolbar tools
 
-When you enter redaction mode in mobile view, a specialized redaction toolbar appears with multiple tools optimized for touch interaction. Each tool serves a specific purpose in the redaction workflow.
+When entering redaction mode in mobile view, a specialized redaction toolbar appears with tools optimized for touch. Each tool supports a specific step in the redaction workflow.
 
-### Redaction Annotation Tool
+### Redaction annotation tool
 
-The Redaction Annotation tool is the primary redaction feature that allows you to draw redaction rectangles on specific content:
+The Redaction Annotation tool creates rectangular overlays that mark content for removal.
 
-Function: Creates visual redaction annotations that mark content for permanent removal
-Usage:
-Touch and drag to draw rectangular redaction overlays on any content area.
+Function: create visual redaction annotations that mark content for permanent removal.
+
+Usage: touch and drag to draw rectangular redaction overlays.
 
 Process:
-- Selected content appears with a customizable overlay (default black)
-- Annotations remain editable until explicitly applied
-- Can be repositioned or deleted before final application
 
-![Redaction Annotation Tool](./redaction-annotations-images/redaction-annotation-annot.png)
+- Selected content shows a customizable overlay (default black).
+- Annotations remain editable until explicitly applied and can be repositioned or deleted.
 
-### Page Redaction Tool
+![Redaction annotation tool overlay preview](./redaction-annotations-images/redaction-annotation-annot.png)
 
-The Page Redaction tool enables batch redaction of entire pages based on specific patterns.
+### Page redaction tool
 
-![Page Redaction Tool](./redaction-annotations-images/page-redaction-annot.png)
+The Page Redaction tool supports batch redaction of entire pages based on patterns.
 
-Function: Redacts complete pages or page ranges with a single action
-Options Available:
-- Odd Pages: Redacts only odd-numbered pages (1, 3, 5, etc.)
-- Even Pages: Redacts only even-numbered pages (2, 4, 6, etc.)
-- Specific Page: Specify single pages, ranges (e.g., 1-5, 10-15), or comma-separated lists (e.g., 1,3,5-7)
-- Current Page: Redacts only the currently displayed page
+![Page redaction tool options and dialog](./redaction-annotations-images/page-redaction-annot.png)
 
-Usage:
-Select desired pattern → Review affected pages in the viewer → Confirm redaction scope
+Function: redact complete pages or page ranges with one action.
 
-![Page Redaction Tool Dialog](./redaction-annotations-images/page-redaction-dialog-annot.png)
+Options:
 
-### Redaction Properties Tool
+- **Odd pages**: redact pages 1, 3, 5, etc.
+- **Even pages**: redact pages 2, 4, 6, etc.
+- **Specific pages**: specify single pages, ranges (for example, 1-5), or comma-separated lists (for example, 1,3,5-7).
+- **Current page**: redact the currently displayed page.
 
-The Redaction Properties tool allows customization of redaction appearance before application.
+Usage: choose a pattern, review affected pages in the viewer, and confirm the redaction scope.
 
-![Redaction Properties Mobile View](./redaction-annotations-images/redaction-properties-annot.png)
+![Page redaction dialog preview](./redaction-annotations-images/page-redaction-dialog-annot.png)
 
-Function: Customize the visual appearance of redaction overlays and text replacement
-Customizable Properties:
-- Fill Color: Change the redaction overlay color (default: black)
-- Outline Color: Set outline color for redaction boxes (optional)
-- Overlay Text: Add custom text to appear on redacted areas (e.g., "REDACTED", "CONFIDENTIAL")
-- Text Color: Change overlay text color for better visibility
-- Text Font: Select font family for overlay text
-- Text Alignment: Position overlay text within redaction boxes
-- Text Size: Adjust overlay text size relative to redaction area
+### Redaction properties tool
 
-![Redaction Properties Dialog Mobile View](./redaction-annotations-images/redaction-properties-dialog-annot.png)
+The Redaction Properties tool customizes redaction appearance before applying changes.
 
-## Enabling Redaction Mode in Mobile View
+![Redaction properties options preview](./redaction-annotations-images/redaction-properties-annot.png)
 
-Step 1: Tap the Redaction button in the mobile toolbar to activate redaction mode. The redaction toolbar will appear at the bottom of the viewer.
+Customizable properties include:
+
+- **Fill color**: redaction overlay color (default black).
+- **Outline color**: optional outline for redaction boxes.
+- **Overlay text**: custom text shown on redacted areas (for example, "REDACTED").
+- **Text color and font**: control visibility and style of overlay text.
+- **Text alignment and size**: position and scale overlay text within the redaction area.
+
+![Redaction properties dialog preview](./redaction-annotations-images/redaction-properties-dialog-annot.png)
+
+## Enabling redaction mode in mobile view
+
+1. Tap the Redaction button in the mobile toolbar to activate redaction mode; the redaction toolbar appears at the bottom of the viewer.
 
 ![Redaction toolbar displayed at bottom of mobile PDF viewer with three distinct tools](./redaction-annotations-images/redaction-mobile-view.png)
 
-Step 2: From the redaction toolbar, select your desired redaction tool:
-- First Tool (Redaction Annotation): For selective content redaction
-- Second Tool (Page Redaction): For page-wide or pattern-based redaction
-- Third Tool (Redaction Properties): For appearance customization
+2. From the redaction toolbar, select a redaction tool:
 
-Step 3: Configure your redaction parameters using the selected tool interface.
+- **Redaction Annotation**: selective content redaction.
+- **Page Redaction**: page-wide or pattern-based redaction.
+- **Redaction Properties**: configure appearance options.
 
-## Applying Different Redaction Types in Mobile View
+3. Configure redaction parameters using the selected tool interface.
 
-### Selective Content Redaction
-1. Select Redaction Annotation tool (first button)
-2. Choose Content: Tap and drag over text or draw rectangular areas
-3. Preview: Check redaction overlays for accuracy
-4. Apply: Tap "Apply Redactions" button
+## Applying different redaction types in mobile view
 
-### Page-Wide Redaction
-1. Select Page Redaction tool (second button)
-2. Choose Pattern: Select odd pages, even pages, or custom range
-3. Review: Verify affected pages in the viewer
-4. Apply: Confirm page redaction scope and apply
+### Selective content redaction
 
-### Custom Appearance Redaction
-1. Select Redaction Properties tool (third button)
-2. Customize: Adjust colors, overlay text, and formatting
-3. Preview: See changes applied to existing annotations
-4. Apply: Use customized appearance for final redaction
+1. Select the Redaction Annotation tool.
+2. Tap and drag to select content or draw rectangular areas.
+3. Preview overlays for accuracy.
+4. Tap **Apply Redactions** to apply selected annotations.
 
-## Applying Redactions in Mobile View
+### Page-wide redaction
 
-N> Applying redactions is permanent. After applying, the underlying content and text are removed from the document and cannot be recovered.
+1. Select the Page Redaction tool.
+2. Choose a pattern (odd, even, specific range).
+3. Review affected pages in the viewer.
+4. Confirm and apply redaction for chosen pages.
 
-Once you have configured redactions using any combination of tools.
+### Custom appearance redaction
 
-Step 1: Review all redaction marks and configurations.
+1. Select the Redaction Properties tool.
+2. Adjust colors, overlay text, and formatting.
+3. Preview changes on existing annotations.
+4. Apply to use the customized appearance for final redaction.
 
-![Review Redaction Annotation](./redaction-annotations-images/review-redaction-annotation-mv-annot.png)
+## Applying redactions in mobile view
 
-Step 2: Tap the Apply Redactions button in the redaction toolbar
+Note: Applying redactions is permanent. After applying, underlying content and extracted text are removed and cannot be recovered. Back up the original document before applying redactions.
 
-![Apply Redaction Button](./redaction-annotations-images/apply-redaction-button-mv.png)
+After configuring redactions using any combination of tools:
 
-Step 3: Confirm the action when prompted - this operation is permanent and cannot be undone
+1. Review all redaction marks and configurations.
 
-![Apply Redaction Dialog](./redaction-annotations-images/apply-redaction-dialog-mv-annot.png)
+![Review redaction annotations before applying](./redaction-annotations-images/review-redaction-annotation-mv-annot.png)
+2. Tap the **Apply Redactions** button in the redaction toolbar.
 
-The selected content will be permanently removed and replaced according to your redaction properties (solid color blocks or custom overlay text).
+![Apply redaction button in mobile view](./redaction-annotations-images/apply-redaction-button-mv.png)
 
-![Applied Redaction](./redaction-annotations-images/applied-redaction-annot.png)
+3. Confirm the action when prompted — this operation is irreversible.
 
-## Removing Redaction Annotations
+![Apply redaction confirmation dialog](./redaction-annotations-images/apply-redaction-dialog-mv-annot.png)
+
+The selected content is permanently removed and replaced according to redaction properties (solid overlays or custom overlay text).
+
+![Result of applied redaction](./redaction-annotations-images/applied-redaction-annot.png)
+
+## Removing redaction annotations
 
 To remove existing redaction annotations before they are applied:
 
-- Step 1: Tap the Redaction Edit button in the mobile toolbar to enter annotation editing mode
-- Step 2: Tap on any existing redaction annotation you wish to remove
-- Step 3: Select Delete from the context menu that appears
+1. Tap the Redaction Edit button in the mobile toolbar to enter annotation editing mode.
+2. Tap an existing redaction annotation to select it.
+3. Choose **Delete** from the context menu or use the delete option in the annotation properties panel.
 
-Alternative: Tap redaction annotation → Use delete button in annotation properties panel
+![Delete a redaction annotation before applying](./redaction-annotations-images/delete-redaction-annotation-annot.png)
 
-![Delete Redaction Annotation](./redaction-annotations-images/delete-redaction-annotation-annot.png)
-
-N> Once redactions have been applied to the document, they become part of the PDF content and cannot be removed or modified.
+N> Once redactions are applied they become part of the PDF content and cannot be removed or modified.
 
 ## See Also
 

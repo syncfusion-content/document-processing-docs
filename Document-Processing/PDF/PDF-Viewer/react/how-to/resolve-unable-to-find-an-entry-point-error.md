@@ -11,9 +11,9 @@ documentation: ug
 
 Starting with **21.1.0.35 (2023 Volume 1)**, the Pdfium package was upgraded to improve text search, selection, rendering, and performance. After upgrading, the PDF Viewer may display a **“Web-Service is not listening”** error. In most cases, the Network tab reveals that an outdated Pdfium assembly is referenced in the local web service project. Ensure the correct native assembly is deployed for the target OS:
 
-- Windows: pdfium.dll
-- Linux: libpdfium.so
-- macOS: libpdfium.dylib
+- Windows: `pdfium.dll`
+- Linux: `libpdfium.so`
+- macOS: `libpdfium.dylib`
 
 ![Error information in the Network tab](../images/ErrorinformationuintheNetworkTab.png)
 

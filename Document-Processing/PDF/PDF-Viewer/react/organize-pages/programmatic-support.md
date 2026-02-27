@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Programmatic Support for Organize Pages in React PDF Viewer control
 
-The PDF Viewer provides comprehensive programmatic support for organizing pages, allowing you to integrate and manage PDF functionalities directly within your application. This section details the available APIs to enable, control, and interact with the page organization features.
+The PDF Viewer exposes programmatic APIs for organizing pages so applications can integrate page-management workflows (for example: enable/disable organizer, open/close the organizer, and customize behavior). This section documents the available properties, methods, and settings used to control the Organize Pages experience.
 
 ## Enable or disable the page organizer
 
-The page organizer feature can be enabled or disabled using the `enablePageOrganizer` property. By default, this feature is enabled.
+The page organizer feature can be enabled or disabled using the `enablePageOrganizer` property. By default, the page organizer is enabled.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -59,7 +59,7 @@ export default function App() {
 
 ## Open the page organizer on document load
 
-You can control whether the page organizer dialog opens automatically when a document is loaded using the `isPageOrganizerOpen` property. The default value is `false`.
+Use the `isPageOrganizerOpen` property to control whether the page organizer opens automatically when a document loads. The default value is `false`.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -104,7 +104,7 @@ export default function App() {
 
 ## Customize page organizer settings
 
-The `pageOrganizerSettings` API allows you to customize the page management functionalities. You can enable or disable actions such as deleting, inserting, rotating, copying, importing, and rearranging pages, as well as configure thumbnail zoom settings. By default, all actions are enabled, and standard zoom settings are applied.
+The `pageOrganizerSettings` API customizes page-management capabilities. Use it to enable or disable actions (delete, insert, rotate, copy, import, rearrange) and to configure thumbnail zoom settings. By default, actions are enabled and standard zoom settings apply.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
