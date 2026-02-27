@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to read all values from a specific column in an Excel worksheet using XlsIO?
+# How to read all values from a column in an Excel worksheet?
 
 The following code example illustrates how to read all values from a specific column in an Excel worksheet using XlsIO in C# (cross-platform and Windows-specific) and VB.NET.
 
