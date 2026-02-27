@@ -8,11 +8,9 @@ documentation: ug
 ---
 
 
-# Feature modules in ASP.NET Core PDF Viewer
+# Feature Modules in ASP.NET Core PDF Viewer
 
-The PDF Viewer features are organized into individual feature modules to enable selective referencing in your application. Inject the required modules to extend functionality. The following modules can be included as needed:
-
-The available PdfViewer modules are:
+PDF Viewer features are organized into individual feature modules to enable selective referencing in the application. Required modules can be injected to extend functionality. The available modules include:
 
 * [**Toolbar**](./toolbar-customization):- Built-in toolbar for better user interaction.
 * [**Magnification**](./magnification):- Perform zooming operation for better viewing experience.
@@ -27,7 +25,7 @@ The available PdfViewer modules are:
 * [**FormFields**](./form-designer/create-programmatically):- Preserve the form fields in the PDF document.
 * [**FormDesigner**](./form-designer/create-programmatically):- Form fields can be added or edited in the PDF document.
 
-N> In addition to injecting the required modules in your application, enable the corresponding properties to extend the functionality for a PDF Viewer instance. Refer to the following table.
+N> In addition to injecting required modules in the application, enable the corresponding properties to extend functionality for a PDF Viewer instance. Refer to the following table.
 
 | Module | Property to enable the functionality for a PDF Viewer instance |
 |---|---|

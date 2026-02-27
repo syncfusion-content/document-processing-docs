@@ -9,17 +9,17 @@ documentation: ug
 
 # Save original document at the server side
 
-The PDF Viewer can persist the original PDF file on the server by redirecting the download action to a custom controller method. Use this approach when audit trails, archival policies, or downstream processing require access to the unmodified document after users view it in the browser.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer can persist the original PDF file on the server by redirecting the download action to a custom controller method. This approach is useful for audit trails, archival policies, or downstream processing that requires access to the unmodified document after the user views it.
 
 Follow these steps to enable server-side persistence:
 
-**Step 1:** Create a PDF Viewer project by following the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started/) so that the viewer scripts, Razor markup, and controller endpoints are configured.
+**Step 1:** Create a PDF Viewer project by following the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started/) to configure the necessary scripts, Razor markup, and controller endpoints.
 
-**Step 2:** Add a button that overrides the download action before invoking the viewer’s `download` method. The snippet below toggles the `serverActionSettings.download` endpoint, triggers the download call, and then restores the default action.
+**Step 2:** Add a button to the user interface that overrides the download action before invoking the viewer's `download` method. The script below targets the `serverActionSettings.download` endpoint, triggers the download, and then restores the default action.
 
 ```html
+<button onclick="save()">Save Document</button>
 
-<button onclick="save()">SaveDocument</button>
 <script>
     function save() {
         var pdfViewer = document.getElementById('pdfviewer1').ej2_instances[0];
@@ -28,10 +28,9 @@ Follow these steps to enable server-side persistence:
         pdfViewer.serverActionSettings.download = "Download";
     }
 </script>
-
 ```
 
-**Step 3:** Implement the `SaveDocument` action in `PDFViewerController.cs`. The controller uses `PdfRenderer.GetDocumentAsBase64` to retrieve the original file stream and writes it to disk.
+**Step 3:** Implement the `SaveDocument` action in the `PDFViewerController.cs`. Use `PdfRenderer.GetDocumentAsBase64` to retrieve the original file data and write it to the server's disk.
 
 ```cs
 
@@ -53,6 +52,6 @@ public ActionResult SaveDocument([FromBody] Dictionary<string, string> jsonObjec
 
 ```
 
-Download the sample [how to save original document at the server side](https://www.syncfusion.com/downloads/support/directtrac/general/ze/EJ2PDF~11039397667)
+Download the sample: [How to save original document at the server side](https://www.syncfusion.com/downloads/support/directtrac/general/ze/EJ2PDF~11039397667)
 
-N> Ensure that the controller has permission to write to the target folder, validate user authorization before saving sensitive files, and update the output path and file name to match your deployment standards.
+N> Ensure the controller has the necessary write permissions for the target directory. It is also recommended to validate user authorization before saving files and to manage file naming conventions to prevent overwriting existing data.

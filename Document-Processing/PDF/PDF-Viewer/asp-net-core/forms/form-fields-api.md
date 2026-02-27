@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form Fields API in ASP.NET Core PDF Viewer
 
-The PDF Viewer provides comprehensive APIs to create, edit, validate, navigate, and manage form fields programmatically. The following APIs are available:
+The PDF Viewer provides comprehensive APIs to create, edit, validate, navigate, and manage form fields programmatically. The table below lists the available APIs:
 
 | API | Description |
 |---|---|
@@ -32,7 +32,7 @@ The PDF Viewer provides comprehensive APIs to create, edit, validate, navigate, 
 
 ## updateFormFieldsValue
 
-Updates the value of one or more form fields programmatically.
+Form field values can be updated programmatically using this API.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## updateFormFields
 
-Updates form field properties such as bounds, color, font, isReadOnly, required, and more.
+Form field properties such as bounds, color, font, isReadOnly, required, and more can be updated using this API.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## retrieveFormFields
 
-Retrieves all form fields and their properties or filters by type/name.
+All form fields and their properties can be retrieved, or results can be filtered by type or name.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## resetFormFields
 
-Resets specified form fields or all fields to their default values.
+Specified form fields or all fields can be reset to their default values.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## importFormFields
 
-Imports form field data from an object or file into the current document.
+Form field data can be imported from an object or file into the current document.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## focusFormField
 
-Moves focus to a form field by name or ID.
+Focus can be moved to a form field by name or ID.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## exportFormFieldsAsObject
 
-Exports current form field values and states as a JSON object.
+Current form field values and states can be exported as a JSON object.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## exportFormFields
 
-Exports form field data to a file for download.
+Form field data can be exported to a file for download.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## clearFormFields
 
-Clears values of specified or all fields without removing the fields themselves.
+Values of specified or all fields can be cleared without removing the fields.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## isFormFieldDocument
 
-Returns true if the loaded document contains one or more form fields.
+Returns true if the loaded document contains form fields.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -319,8 +319,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## isFormDesignerToolbarVisible
 
-Opens the form designer toolbar when the PDF document is loaded in the PDF Viewer control initially
-and get the form designer Toolbar Visible status.
+Gets the visibility status of the Form Designer toolbar.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -343,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## formFieldCollections
 
-Gets the current collection of form fields with their properties from the viewer instance.
+The current collection of form fields with their properties can be retrieved from the viewer instance.
 
 ```html
 <button id="formfieldcollection">formfieldcollection</button>
@@ -372,7 +371,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## enableFormFieldsValidation
 
-Enables or disables built-in validation for required and constrained fields.
+Built-in validation for required and constrained fields can be enabled or disabled.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -393,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## enableFormFields
 
-Enables or disables user interaction with form fields globally.
+User interaction with form fields can be enabled or disabled globally.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -414,7 +413,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## enableFormDesignerToolbar
 
-Shows or hides the Form Designer toolbar at runtime.
+The Form Designer toolbar can be shown or hidden at runtime.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

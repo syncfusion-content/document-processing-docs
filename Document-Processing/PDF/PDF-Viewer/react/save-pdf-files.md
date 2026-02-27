@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 After editing a PDF with annotation tools, you can save the updated file to a server, a database, or download it locally. The following sections show common approaches.
 
-### Save and Download the Edited PDF
+**Save and Download the Edited PDF**
 
 After editing the PDF document, follow this short, linear flow to persist and retrieve the updated file:
 
@@ -236,7 +236,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 N> Replace `Your connection string for SQL Server` with your actual connection string.
 
-N>: Ensure the `System.Data.SqlClient` package (or `Microsoft.Data.SqlClient`) is installed in your project. Use parameterized queries (as shown) and validate inputs to avoid SQL injection risks.
+N> Ensure the `System.Data.SqlClient` package (or `Microsoft.Data.SqlClient`) is installed in your project. Use parameterized queries (as shown) and validate inputs to avoid SQL injection risks.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-database)
 

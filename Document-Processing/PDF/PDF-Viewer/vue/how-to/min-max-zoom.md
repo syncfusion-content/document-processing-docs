@@ -8,17 +8,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure Minimum and Maximum Zoom Properties
+# Configure minimum and maximum zoom properties
 
-Control zoom levels in the PDF Viewer using the [minZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer/#minzoom) and [maxZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer/#maxzoom) properties to ensure a consistent viewing experience.
+The PDF Viewer exposes `minZoom` and `maxZoom` to control the allowable zoom range for document viewing. Setting these properties helps maintain readability, performance, and a consistent experience across devices.
 
 ### minZoom
 
-The `minZoom` property specifies the minimum zoom percentage allowed in the PDF Viewer. This ensures that users cannot zoom out beyond a certain limit, which helps maintain readability and performance. Developers can set the `minZoom` property programmatically, defining the minimum zoom level based on the application's requirements. This is particularly useful for preventing users from zooming out too much, which could make the content difficult to read.
+`minZoom` sets the minimum zoom percentage the viewer supports. Use this to prevent users from zooming out to levels that make content unreadable or negatively affect layout.
 
 ### maxZoom
 
-The `maxZoom` property defines the maximum zoom percentage allowed in the PDF Viewer. By setting this property, developers can prevent users from zooming in too much, helping to avoid performance issues and maintain a smooth viewing experience. The `maxZoom` property can be set programmatically to control the upper limit of the zoom level. This is useful for applications where extremely high zoom levels might degrade performance or user experience.
+`maxZoom` sets the maximum zoom percentage the viewer supports. Restricting the maximum helps avoid excessive memory use and degraded rendering performance when users zoom in very far.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}

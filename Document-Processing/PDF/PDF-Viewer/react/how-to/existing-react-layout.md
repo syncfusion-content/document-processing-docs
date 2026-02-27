@@ -16,291 +16,98 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
 
 ## How‑To
 
-- **Place the viewer inside layout components:**
-    - Insert the PDF Viewer inside standard divs, CSS Grid cells, Flex box containers, and multi‑column panels. The viewer will expand to fill its parent container when the container has a defined height.
+### Place the viewer inside basic divs
 
-	Basic div:
+Insert the PDF Viewer inside a div with a defined height. The viewer will automatically expand to fill the available space in that div.
 
-	{% tabs %}
-    {% highlight ts tabtitle="App.tsx" %}
-    {% raw %}
-	import React from 'react';
-	import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+import React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
-	export function App() {
-        return (
-            <div style={{ height: '80vh' }}>
-                <PdfViewerComponent
-                    id="pdfViewer"
-                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                    resourceUrl="https://cdn.syncfusion.com/ej2/32.2.5/dist/ej2-pdfviewer-lib"
-                    style={{ height: '100%', width: '100%' }}
-                >
-                    <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]} />
-                </PdfViewerComponent>
-            </div>
-        );
-	}
-	{% endraw %}
-    {% endhighlight %}
-    {% endtabs %}
+export function App() {
+    return ({% raw %}
+        <div style={{ height: '80vh' }}>{% endraw %}
+            <PdfViewerComponent
+                id="pdfViewer"
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.5/dist/ej2-pdfviewer-lib"{% raw %}
+                style={{ height: '100%', width: '100%' }}{% endraw %}
+            >
+                <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]} />
+            </PdfViewerComponent>
+        </div>
+    );
+}
+{% endhighlight %}
+{% endtabs %}
 
-    ![PDF Viewer in div](../images/react-layouts-div.png)
+![PDF Viewer in div](../images/react-layouts-div.png)
 
-	Flex container: keep `minHeight: 0` on flex children so the viewer can shrink/grow correctly:
+### Place the viewer inside flex box
 
-    {% tabs %}
-    {% highlight ts tabtitle="App.tsx" %}
-    {% raw %}
-	import React from 'react';
-	import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+Use `min-height: 0` on the flex item containing the Viewer so it can shrink and grow properly. The flex container must have a defined height for the Viewer to fill it.
 
-	export function App() {
-        return (
-            <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-                <header style={{ height: '100px', textAlign: 'center' }}>Header Content</header>
-                <main style={{ flex: 1, minHeight: 0 }}>
-                    <div style={{ height: '100%' }}>
-                        <PdfViewerComponent
-                            id="pdfViewer"
-                            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                            resourceUrl="https://cdn.syncfusion.com/ej2/32.2.5/dist/ej2-pdfviewer-lib"
-                            style={{ height: '100%', width: '100%' }}
-                        >
-                            <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]} />
-                        </PdfViewerComponent>
-                    </div>
-                </main>
-            </div>
-        );
-	}
-	{% endraw %}
-    {% endhighlight %}
-    {% endtabs %}
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+import React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
-    ![PDF Viewer in Flex box](../images/react-layouts-flexbox.png)
-
-	CSS Grid - reserve rows/columns using `grid-template-rows` or `grid-template-columns`:
-
-	{% tabs %}
-    {% highlight ts tabtitle="App.tsx" %}
-    {% raw %}
-	import React from 'react';
-    import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-    export const App: React.FC = () => {
-        return (
-            <div style={styles.page}>
-                <header style={styles.header}>
-                    <h3 style={{ margin: 0 }}>Dashboard</h3>
-                </header>
-
-                <main style={styles.grid}>
-                    <aside style={styles.sidebar}>
-                        <div style={{ padding: 12 }}>
-                            <h4 style={{ marginTop: 0 }}>Filters</h4>
-                            <p>Put other controls here</p>
-                        </div>
-                    </aside>
-
-                    <section style={styles.viewerArea}>
-                        <PdfViewerComponent
-                            id="pdfViewer"
-                            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                            height="100%"
-                            width="100%"
-                            style={{ border: '1px solid #e0e0e0', borderRadius: 8 }}
-                        >
-                            <Inject
-                                services={[
-                                    Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields
-                                ]}
-                            />
-                        </PdfViewerComponent>
-                    </section>
-                </main>
-            </div>
-        );
-    };
-
-    const styles: Record<string, React.CSSProperties> = {
-        page: {
-            height: '100vh',
-            display: 'grid',
-            gridTemplateRows: '56px 1fr',
-            background: '#fafafa'
-        },
-        header: {
-            display: 'flex',
-            alignItems: 'center',
-            padding: '0 16px',
-            background: '#fff',
-            borderBottom: '1px solid #e5e5e5'
-        },
-        grid: {
-            display: 'grid',
-            gridTemplateColumns: '280px 1fr',
-            gap: 16,
-            padding: 16,
-            minHeight: 0 // lets children use available height
-        },
-        sidebar: {
-            background: '#fff',
-            border: '1px solid #e5e5e5',
-            borderRadius: 8,
-            overflow: 'auto'
-        },
-        viewerArea: {
-            background: '#fff',
-            border: '1px solid #e5e5e5',
-            borderRadius: 8,
-            padding: 8,
-            display: 'grid',
-            gridTemplateRows: '1fr',
-            minHeight: 0 // critical so the viewer can grow/shrink
-        }
-    };
-	{% endraw %}
-    {% endhighlight %}
-    {% endtabs %}
-
-    ![PDF Viewer in grid](../images/react-layouts-grid.png)
-
-- **Use viewer inside Tab components**
-	- The react PDF Viewer are also supported inside Syncfusion tab components. 
-
-	{% tabs %}
-    {% highlight ts tabtitle="App.tsx" %}
-    {% raw %}
-	import React, { useRef } from 'react';
-    import { TabComponent, TabItemsDirective, TabItemDirective } from '@syncfusion/ej2-react-navigations';
-    import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-    const ViewerTabContent: React.FC = () => {
-        const viewerRef = useRef<PdfViewerComponent | null>(null);
-        return (
-            <div className="viewer-pane">
-                <PdfViewerComponent
-                    ref={(instance) => (viewerRef.current = instance)}
-                    id="pdfViewerInTab"
-                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                    enableToolbar={true}
-                    height="100%"
-                    width="100%"
-                    style={{ border: '1px solid #e0e0e0', borderRadius: 8 }}
-                >
-                    <Inject
-                        services={[ Toolbar,
-                            Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields
-                        ]}
-                    />
-                </PdfViewerComponent>
-            </div>
-        );
-    };
-
-    export const App: React.FC = () => {
-        return (
-            <div className="page">
-                <header className="header">
-                    <h3 style={{ margin: 0 }}>PDF Viewer in tab</h3>
-                </header>
-
-                <div className="tab-host">
-                    <TabComponent height="100%">
-                        <TabItemsDirective>
-                            <TabItemDirective
-                                header={{ text: 'Overview' }}
-                                content={() => (
-                                    <div className="panel">
-                                        <h4>Overview</h4>
-                                        <p>Put general dashboard content here.</p>
-                                    </div>
-                                )}
-                            />
-                            <TabItemDirective
-                                header={{ text: 'PDF Viewer' }}
-                                content={ViewerTabContent}
-                            />
-                            <TabItemDirective
-                                header={{ text: 'Settings' }}
-                                content={() => (
-                                    <div className="panel">
-                                        <h4>Settings</h4>
-                                        <p>Any settings or forms can go here.</p>
-                                    </div>
-                                )}
-                            />
-                        </TabItemsDirective>
-                    </TabComponent>
-                </div>
-            </div>
-        );
-    };
-	{% endraw %}
-    {% endhighlight %}
-    {% endtabs %}
-
-    ![PDF Viewer in tab](../images/react-layouts-tab.png)
-
-- **Use viewer inside Dialog**
-	- If the viewer sits inside a dialog, for example Syncfusion Dialog, render or initialize the viewer after the dialog open events. The DOM must be visible for the viewer to measure layout.
-
-	{% tabs %}
-    {% highlight ts tabtitle="App.tsx" %}
-    {% raw %}
-	import React, { useRef, useCallback } from 'react';
-    import { DialogComponent } from '@syncfusion/ej2-react-popups';
-    import {
-        PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, Inject
-    } from '@syncfusion/ej2-react-pdfviewer';
-
-    export const App: React.FC = () => {
-        const viewerRef = useRef<PdfViewerComponent | null>(null);
-        const dialogRef = useRef<DialogComponent | null>(null);
-        const openDialog = () => {
-            dialogRef.current.show();
-        };
-        const closeDialog = () => {
-            dialogRef.current.hide();
-        };
-        const onDialogOpen = useCallback(() => {
-            setTimeout(() => {
-                window.dispatchEvent(new Event('resize'));
-            }, 0);
-        }, []);
-
-        return (
-            <div className="page">
-                <header className="header">
-                    <h3 style={{ margin: 0 }}>PDF Viewer inside Dialog</h3>
-                    <div style={{ marginLeft: 'auto' }}>
-                        <button onClick={openDialog}>Open Viewer</button>
-                    </div>
-                </header>
-                <DialogComponent
-                    ref={(dlg: any) => (dialogRef.current = dlg)}
-                    isModal={true}
-                    visible={false}
-                    header="Document preview"
-                    showCloseIcon={true}
-                    minHeight="80vh"
-                    width="80vw"
-                    height="80vh"
-                    allowDragging={true}
-                    closeOnEscape={true}
-                    target={document.body as any}
-                    overlayClick={closeDialog}
-                    open={onDialogOpen}
-                >
+export function App() {
+    return ({% raw %}
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+            <header style={{ height: '100px', textAlign: 'center' }}>Header Content</header>
+            <main style={{ flex: 1, minHeight: 0 }}>
+                <div style={{ height: '100%' }}>{% endraw %}
                     <PdfViewerComponent
-                        ref={(instance: any) => (viewerRef.current = instance)}
-                        id="pdfViewerInDialog"
+                        id="pdfViewer"
                         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                        enableToolbar={true}
+                        resourceUrl="https://cdn.syncfusion.com/ej2/32.2.5/dist/ej2-pdfviewer-lib"{% raw %}
+                        style={{ height: '100%', width: '100%' }}{% endraw %}
+                    >
+                        <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]} />
+                    </PdfViewerComponent>
+                </div>
+            </main>
+        </div>
+    );
+}
+{% endhighlight %}
+{% endtabs %}
+
+![PDF Viewer in Flex box](../images/react-layouts-flexbox.png)
+
+### Place the viewer inside CSS grid
+
+Define row or column sizes in `grid-template-rows` or `grid-template-columns` so the grid track has a real height. The Viewer will then expand to fill its grid cell.
+
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+import React from 'react';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+export const App: React.FC = () => {
+    return (
+        <div style={styles.page}>
+            <header style={styles.header}>{% raw %}
+                <h3 style={{ margin: 0 }}>Dashboard</h3>{% endraw %}
+            </header>
+
+            <main style={styles.grid}>
+                <aside style={styles.sidebar}>{% raw %}
+                    <div style={{ padding: 12 }}>
+                        <h4 style={{ marginTop: 0 }}>Filters</h4>{% endraw %}
+                        <p>Put other controls here</p>
+                    </div>
+                </aside>
+
+                <section style={styles.viewerArea}>
+                    <PdfViewerComponent
+                        id="pdfViewer"
+                        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                         height="100%"
-                        width="100%"
-                        style={{ border: '1px solid #e0e0e0', borderRadius: 8 }}
+                        width="100%"{% raw %}
+                        style={{ border: '1px solid #e0e0e0', borderRadius: 8 }}{% endraw %}
                     >
                         <Inject
                             services={[
@@ -308,45 +115,186 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
                             ]}
                         />
                     </PdfViewerComponent>
-                </DialogComponent>
+                </section>
+            </main>
+        </div>
+    );
+};
+
+const styles: Record<string, React.CSSProperties> = {
+    page: {
+        height: '100vh',
+        display: 'grid',
+        gridTemplateRows: '56px 1fr',
+        background: '#fafafa'
+    },
+    header: {
+        display: 'flex',
+        alignItems: 'center',
+        padding: '0 16px',
+        background: '#fff',
+        borderBottom: '1px solid #e5e5e5'
+    },
+    grid: {
+        display: 'grid',
+        gridTemplateColumns: '280px 1fr',
+        gap: 16,
+        padding: 16,
+        minHeight: 0 // lets children use available height
+    },
+    sidebar: {
+        background: '#fff',
+        border: '1px solid #e5e5e5',
+        borderRadius: 8,
+        overflow: 'auto'
+    },
+    viewerArea: {
+        background: '#fff',
+        border: '1px solid #e5e5e5',
+        borderRadius: 8,
+        padding: 8,
+        display: 'grid',
+        gridTemplateRows: '1fr',
+        minHeight: 0 // critical so the viewer can grow/shrink
+    }
+};
+{% endhighlight %}
+{% endtabs %}
+
+![PDF Viewer in grid](../images/react-layouts-grid.png)
+
+### Use viewer inside Tab components
+	
+The react PDF Viewer are also supported inside Syncfusion tab components. 
+
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import React, { useRef } from 'react';
+import { TabComponent, TabItemsDirective, TabItemDirective } from '@syncfusion/ej2-react-navigations';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+const ViewerTabContent: React.FC = () => {
+    const viewerRef = useRef<PdfViewerComponent | null>(null);
+    return (
+        <div className="viewer-pane">
+            <PdfViewerComponent
+                ref={(instance) => (viewerRef.current = instance)}
+                id="pdfViewerInTab"
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                enableToolbar={true}
+                height="100%"
+                width="100%"
+                style={{ border: '1px solid #e0e0e0', borderRadius: 8 }}
+            >
+                <Inject
+                    services={[ Toolbar,
+                        Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
+    );
+};
+
+export const App: React.FC = () => {
+    return (
+        <div className="page">
+            <header className="header">
+                <h3 style={{ margin: 0 }}>PDF Viewer in tab</h3>
+            </header>
+
+            <div className="tab-host">
+                <TabComponent height="100%">
+                    <TabItemsDirective>
+                        <TabItemDirective
+                            header={{ text: 'Overview' }}
+                            content={() => (
+                                <div className="panel">
+                                    <h4>Overview</h4>
+                                    <p>Put general dashboard content here.</p>
+                                </div>
+                            )}
+                        />
+                        <TabItemDirective
+                            header={{ text: 'PDF Viewer' }}
+                            content={ViewerTabContent}
+                        />
+                        <TabItemDirective
+                            header={{ text: 'Settings' }}
+                            content={() => (
+                                <div className="panel">
+                                    <h4>Settings</h4>
+                                    <p>Any settings or forms can go here.</p>
+                                </div>
+                            )}
+                        />
+                    </TabItemsDirective>
+                </TabComponent>
             </div>
-        );
+        </div>
+    );
+};
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+![PDF Viewer in tab](../images/react-layouts-tab.png)
+
+### Use viewer inside Dialog
+
+If the viewer sits inside a dialog, for example Syncfusion Dialog, render or initialize the viewer after the dialog open events. The DOM must be visible for the viewer to measure layout.
+
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import React, { useRef, useCallback } from 'react';
+import { DialogComponent } from '@syncfusion/ej2-react-popups';
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+
+export const App: React.FC = () => {
+    const viewerRef = useRef<PdfViewerComponent | null>(null);
+    const dialogRef = useRef<DialogComponent | null>(null);
+    const openDialog = () => {
+        dialogRef.current.show();
     };
-	{% endraw %}
-    {% endhighlight %}
-    {% endtabs %}
+    const closeDialog = () => {
+        dialogRef.current.hide();
+    };
+    const onDialogOpen = useCallback(() => {
+        setTimeout(() => {
+            window.dispatchEvent(new Event('resize'));
+        }, 0);
+    }, []);
 
-    ![PDF Viewer in dialog](../images/react-layouts-dialog.png)
-
-- **Use viewer inside Collapsible sections**
-	- For accordions or collapsible containers, either render the viewer lazily when the section expands or dispatch the resize event after expansion so the viewer can recompute layout.
-
-	{% tabs %}
-    {% highlight ts tabtitle="App.tsx" %}
-    {% raw %}
-	import React, { useCallback, useRef } from 'react';
-    import {
-        AccordionComponent, AccordionItemsDirective, AccordionItemDirective, ExpandEventArgs
-    } from '@syncfusion/ej2-react-navigations';
-
-    import {
-        PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, Inject
-    } from '@syncfusion/ej2-react-pdfviewer';
-
-    export const App: React.FC = () => {
-        const viewerRef = useRef<PdfViewerComponent | null>(null);
-        const onExpanded = useCallback((args: ExpandEventArgs) => {
-            setTimeout(() => {
-                window.dispatchEvent(new Event('resize'));
-            }, 0);
-        }, []);
-
-        // PDF viewer panel content
-        const pdfContent = () => (
-            <div className="pdf-pane">
+    return (
+        <div className="page">
+            <header className="header">
+                <h3 style={{ margin: 0 }}>PDF Viewer inside Dialog</h3>
+                <div style={{ marginLeft: 'auto' }}>
+                    <button onClick={openDialog}>Open Viewer</button>
+                </div>
+            </header>
+            <DialogComponent
+                ref={(dlg: any) => (dialogRef.current = dlg)}
+                isModal={true}
+                visible={false}
+                header="Document preview"
+                showCloseIcon={true}
+                minHeight="80vh"
+                width="80vw"
+                height="80vh"
+                allowDragging={true}
+                closeOnEscape={true}
+                target={document.body as any}
+                overlayClick={closeDialog}
+                open={onDialogOpen}
+            >
                 <PdfViewerComponent
-                    ref={(inst) => (viewerRef.current = inst)}
-                    id="pdfViewerInAccordion"
+                    ref={(instance: any) => (viewerRef.current = instance)}
+                    id="pdfViewerInDialog"
                     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                     enableToolbar={true}
                     height="100%"
@@ -359,72 +307,124 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
                         ]}
                     />
                 </PdfViewerComponent>
-            </div>
-        );
+            </DialogComponent>
+        </div>
+    );
+};
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
-        return (
-            <div className="page">
-                <header className="header">
-                    <h3 style={{ margin: 0 }}>PDF Viewer inside an Accordion</h3>
-                </header>
-                <main className="content">
-                    <AccordionComponent
-                        expandMode="Single"
-                        expanding={onExpanded}
-                        expanded={onExpanded}
-                    >
-                        <AccordionItemsDirective>
-                            <AccordionItemDirective
-                                header="Overview"
-                                expanded={true}
-                                content={() => (
-                                    <div className="panel">
-                                        <h4>Overview</h4>
-                                        <p>Place any introductory content here.</p>
-                                    </div>
-                                )}
-                            />
-                            <AccordionItemDirective
-                                header="PDF Viewer"
-                                content={pdfContent}
-                            />
-                            <AccordionItemDirective
-                                header="Settings"
-                                content={() => (
-                                    <div className="panel">
-                                        <h4>Settings</h4>
-                                        <p>Your forms and other controls here.</p>
-                                    </div>
-                                )}
-                            />
-                        </AccordionItemsDirective>
-                    </AccordionComponent>
-                </main>
-            </div>
-        );
-    };
-	{% endraw %}
-    {% endhighlight %}
-    {% highlight css tabtitle="App.css" %}
-    {% raw %}
-    .page {
-        height: 100vh;
-        display: grid;
-        grid-template-rows: 56px 1fr;
-        background: #fafafa;
-    }
-    .header {
-        display: flex;
-        align-items: center;
-        padding: 0 16px;
-        background: #fff;
-        border-bottom: 1px solid #e5e5e5;
-    }
-    {% endraw %}
-    {% endhighlight %}
-    {% endtabs %}
+![PDF Viewer in dialog](../images/react-layouts-dialog.png)
 
-    ![PDF Viewer in accordion](../images/react-layouts-accordion.png)
+### Use viewer inside Collapsible sections
+
+For accordions or collapsible containers, either render the viewer lazily when the section expands or dispatch the resize event after expansion so the viewer can recompute layout.
+
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import React, { useCallback, useRef } from 'react';
+import {
+    AccordionComponent, AccordionItemsDirective, AccordionItemDirective, ExpandEventArgs
+} from '@syncfusion/ej2-react-navigations';
+
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+
+export const App: React.FC = () => {
+    const viewerRef = useRef<PdfViewerComponent | null>(null);
+    const onExpanded = useCallback((args: ExpandEventArgs) => {
+        setTimeout(() => {
+            window.dispatchEvent(new Event('resize'));
+        }, 0);
+    }, []);
+
+    // PDF viewer panel content
+    const pdfContent = () => (
+        <div className="pdf-pane">
+            <PdfViewerComponent
+                ref={(inst) => (viewerRef.current = inst)}
+                id="pdfViewerInAccordion"
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                enableToolbar={true}
+                height="100%"
+                width="100%"
+                style={{ border: '1px solid #e0e0e0', borderRadius: 8 }}
+            >
+                <Inject
+                    services={[
+                        Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
+    );
+
+    return (
+        <div className="page">
+            <header className="header">
+                <h3 style={{ margin: 0 }}>PDF Viewer inside an Accordion</h3>
+            </header>
+            <main className="content">
+                <AccordionComponent
+                    expandMode="Single"
+                    expanding={onExpanded}
+                    expanded={onExpanded}
+                >
+                    <AccordionItemsDirective>
+                        <AccordionItemDirective
+                            header="Overview"
+                            expanded={true}
+                            content={() => (
+                                <div className="panel">
+                                    <h4>Overview</h4>
+                                    <p>Place any introductory content here.</p>
+                                </div>
+                            )}
+                        />
+                        <AccordionItemDirective
+                            header="PDF Viewer"
+                            content={pdfContent}
+                        />
+                        <AccordionItemDirective
+                            header="Settings"
+                            content={() => (
+                                <div className="panel">
+                                    <h4>Settings</h4>
+                                    <p>Your forms and other controls here.</p>
+                                </div>
+                            )}
+                        />
+                    </AccordionItemsDirective>
+                </AccordionComponent>
+            </main>
+        </div>
+    );
+};
+{% endraw %}
+{% endhighlight %}
+{% highlight css tabtitle="App.css" %}
+{% raw %}
+.page {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 56px 1fr;
+    background: #fafafa;
+}
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+![PDF Viewer in accordion](../images/react-layouts-accordion.png)
 
 ## Why visibility and height matter
 
@@ -434,8 +434,7 @@ The React PDF Viewer can be embedded into dashboards, admin panels, split‑scre
 
 ## Resize & visibility tips
 
-- Short patterns:
-  - Dispatch a global resize right after the container becomes visible:
+- Dispatch a global resize right after the container becomes visible:
 
 ```js
 setTimeout(() => window.dispatchEvent(new Event('resize')), 0);

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Magnification in Vue PDF viewer control
 
-The PDF Viewer includes magnification tools in the default toolbar: Zoom In, Zoom Out, Zoom (to a specific value), Fit to Page, and Fit to Width. The toolbar can be configured to show or hide these tools.
+The PDF Viewer includes magnification controls—ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth—in the default toolbar. The magnification controls can be shown or hidden in the toolbar.
 
-Use the following configuration to enable magnification in the PDF Viewer:
+The following examples show how to enable magnification in the PDF Viewer.
 
 
 {% tabs %}
@@ -139,17 +139,18 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-The following magnification options are available in the default toolbar of PDF Viewer,
+The following magnification options are available in the default toolbar:
 
-* [**ZoomIn**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#zoomin):- Zoom in from the current zoom value of PDF pages.
-* [**ZoomOut**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#zoomout):- Zoom out from the current zoom value of PDF pages.
-* [**Zoom**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#zoomto):- Zoom to specific zoom value of PDF pages.
-* [**FitPage**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#fittopage):- Fits the page width with in the available view port size.
-* [**FitWidth**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#fittowidth):- Fits the view port width based on the page content size.
+* **ZoomIn**: Zoom in from the current zoom value.
+* **ZoomOut**: Zoom out from the current zoom value.
+* **Zoom**: Select a specific zoom level.
+* **FitPage**: Fit the page height within the available viewport.
+* **FitWidth**: Fit the page width to the viewport.
+* **Auto**: Automatically adjust zoom to fit content when the viewport size changes.
 
-![Alt text ](./images/zoom.png)
+![PDF Viewer magnification controls showing toolbar buttons](./images/zoom.png)
 
->PDF Viewer can support the zoom value ranges from 10 to 400.
+N> The PDF Viewer supports zoom values from 10% to 400%.
 
 ## See also
 

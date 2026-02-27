@@ -9,7 +9,7 @@ documentation: ug
 
 # Document Loading Issues in Version 23.1 or Newer
 
-If the document does not render in the viewer when using version 23.1 or newer, follow these steps:
+If a PDF does not render after upgrading to v23.1+, use the checklist below to resolve common causes. The most frequent fix is calling `dataBind()` before `load()`.
 
 1. Call `pdfViewer.dataBind()` before `load()`. Starting with v23.1, an explicit dataBind call is required to initialize data binding and render correctly.
 
@@ -44,4 +44,4 @@ If the document does not render in the viewer when using version 23.1 or newer, 
 
 8. Review Content Security Policy (CSP) settings. Ensure external resources are permitted. See the [Content Security Policy troubleshooting guide](https://ej2.syncfusion.com/javascript/documentation/common/troubleshoot/content-security-policy) for details.
 
-Following this checklist typically resolves document loading issues in v23.1 or newer.
+This checklist typically resolves document loading issues after upgrading to v23.1+.

@@ -9,7 +9,7 @@ documentation: ug
 
 # Open PDF from AWS S3
 
-The ASP.NET Core PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
+The ASP.NET Core PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. Both approaches are demonstrated below.
 
 ## Using the standalone PDF Viewer
 
@@ -42,7 +42,7 @@ Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</
 
 1. Configures AWS SDK with the region, access key, and secret access key. This configuration allows the application to interact with AWS services like S3.
 
-N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
+N> Replace **Your Region** with the actual region of your AWS S3 account, **Your Access Key** with the actual access key of your AWS S3 account, and **Your Security Access Key** with the actual security access key of your AWS S3 account.
 
 ```csharp
 AWS.config.update({
@@ -54,7 +54,7 @@ AWS.config.update({
 
 2. Sets the parameters for fetching the PDF document from S3, including the bucket name and file key. Then Uses the getObject method of the S3 instance to retrieve the document. Converts the document data to a Base64 string and loads it into the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer then load Base64 string generated into the viewer.load method.
 
-N> Replace **Your Bucket Name** with the actual Bucket name of your AWS S3 account and **Your Key** with the actual File Key of your AWS S3 account.
+N> Replace **Your Bucket Name** with the actual bucket name of your AWS S3 account and **Your Key** with the actual file key of your AWS S3 account.
 
 ```csharp
 loadDocument() {

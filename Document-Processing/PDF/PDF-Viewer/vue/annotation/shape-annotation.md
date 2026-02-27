@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Shape annotation in Vue PDF Viewer control
 
-The PDF Viewer control provides options to add, edit, and delete shape annotations. The supported shape annotation types are:
+The PDF Viewer provides options to add, edit, and delete shape annotations. Supported shape annotation types include:
 
 * Line
 * Arrow
@@ -24,16 +24,15 @@ The PDF Viewer control provides options to add, edit, and delete shape annotatio
 
 Shape annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Shape Annotation** drop-down button. The pop-up lists available shape annotation types.
-* Select a shape type to enable its annotation mode.
-* Draw the shape on the pages of the PDF document.
+* Select the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+* Open the **Shape Annotation** drop-down to view available shape types.
+* Select a shape type to enable its annotation mode, then draw the shape on the page.
 
-N> When in pan mode and a shape annotation tool is selected, the PDF Viewer switches to text select mode automatically to ensure a smooth interaction experience.
+N> When the PDF Viewer is in pan mode and a shape annotation tool is selected, the viewer automatically switches to text select mode to ensure a smooth interaction experience.
 
 ![Shape annotation toolbar](../images/shape_toolbar.png)
 
-Refer to the following code sample to switch to the circle annotation mode.
+Use the following sample to switch the viewer to circle annotation mode.
 
 
 {% tabs %}
@@ -204,7 +203,7 @@ export default {
 
 ## Add a shape annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding a shape annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows adding a shape annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here is an example showing how to add shape annotations programmatically using addAnnotation():
 
