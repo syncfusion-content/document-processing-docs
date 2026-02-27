@@ -21,7 +21,7 @@ This quickstart shows how to integrate the Syncfusion React PDF Viewer into a Sh
 - Yeoman and the SPFx generator: `npm install -g yo @microsoft/generator-sharepoint`.
 - Gulp: `npm install -g gulp-cli`.
 
-## Step 1 — Create an SPFx React web part
+## Create an SPFx React web part
 
 Run the SharePoint generator and choose the React framework (TypeScript recommended). Example answers shown in parentheses.
 
@@ -36,7 +36,7 @@ yo @microsoft/sharepoint
 
 This creates the usual SPFx project tree (no `src/`/`app/` ambiguity): React components live under `src/webparts/pdfViewer/components` and global web part assets are under `src/webparts/pdfViewer/assets`.
 
-## Step 2 — Install Syncfusion package
+## Install Syncfusion package
 
 In the project root run:
 
@@ -44,9 +44,9 @@ In the project root run:
 npm install @syncfusion/ej2-react-pdfviewer --save
 ```
 
-Keep the package version aligned with the runtime assets you host (see Step 4).
+Keep the package version aligned with the runtime assets you host.
 
-## Step 3 — Add Syncfusion CSS
+## Add Syncfusion CSS
 
 Import the Syncfusion theme CSS so the viewer styles are bundled with the web part. In your React component file (TypeScript example below) import the CSS from node_modules:
 
@@ -63,7 +63,7 @@ import '@syncfusion/ej2-pdfviewer/styles/material.css';
 
 If your SPFx build configuration forbids direct CSS imports from node_modules, add these `@import` lines to your component CSS (for example `PdfViewer.module.css`) using the appropriate path or deploy the CSS from a CDN.
 
-## Step 4 — Provide runtime assets and choose rendering mode
+## Provide runtime assets and choose rendering mode
 
 SPFx web parts run in the browser (client-side). That makes standalone (client-only) rendering the natural default: the PDF Viewer runs in the user's browser and uses `resourceUrl` to load runtime assets (pdfium.js, pdfium.wasm and supporting files).
 
@@ -88,11 +88,13 @@ Notes on rendering modes and SPFx:
 
 Important: ensure any host you use serves `.wasm` files with Content-Type `application/wasm` and that tenant/content security policies permit fetching assets from the chosen host.
 
-## Step 5 — Add the React component (TypeScript)
+## Add the React component (TypeScript)
 
 Create `PdfViewerClient.tsx` under `src/webparts/pdfViewer/components` and paste the minimal example below. This component is client-only and safe for SPFx (which runs in the browser):
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 // src/webparts/pdfViewer/components/PdfViewerClient.tsx
 import * as React from 'react';
 import {
@@ -125,9 +127,11 @@ export const PdfViewerClient: React.FC = () => {
 };
 
 export default PdfViewerClient;
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
-## Step 6 — Use the component in the web part
+## Use the component in the web part
 
 Open the web part main React file (for example `src/webparts/pdfViewer/components/PdfViewer.tsx` created by the generator) and render `PdfViewerClient`:
 
@@ -144,7 +148,7 @@ export default function PdfViewer(): JSX.Element {
 }
 ```
 
-## Step 7 — Test and package
+## Test and package
 
 Run the local workbench for development:
 
