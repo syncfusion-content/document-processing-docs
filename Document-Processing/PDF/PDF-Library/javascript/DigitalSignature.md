@@ -889,7 +889,7 @@ document.destroy();
 
 ## Sign existing signature field
 
-This section explains how to sign an existing unsigned signature field in a PDF using the JavaScript PDF library. You can locate predefined signature fields and apply a digital signature directly by calling `field.setSignature()`, without altering the document layout. This is ideal for templates where signature placeholders already exist, allowing you to add digital signatures to the field using a certificate and signature settings.
+This section explains how to sign an existing unsigned signature field in a PDF using the JavaScript PDF library. You can locate predefined signature fields and apply a digital signature directly by calling `PdfSignatureField.setSignature()` method, without altering the document layout. This is ideal for templates where signature placeholders already exist, allowing you to add digital signatures to the field using a certificate and signature settings.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -939,7 +939,7 @@ document.destroy();
 
 ## Remove existing digital signature
 
-This section explains how to remove an existing digital signature from a PDF by using `removeField()` to delete the signature field entirely. Removing the field clears the signature dictionary, allowing the document to be edited, corrected, or re‑signed as needed. This is useful when preparing a PDF for updates or resolving signature‑related issues.
+This section explains how to remove an existing digital signature from a PDF by using `PdfForm.removeField()` method to delete the signature field entirely. Removing the field clears the signature dictionary, allowing the document to be edited, corrected, or re‑signed as needed. This is useful when preparing a PDF for updates or resolving signature‑related issues.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -979,7 +979,7 @@ document.destroy();
 
 ## Document revisions
 
-Digital signatures create incremental revisions in a PDF, preserving each version of the document as new signatures are added. These revisions allow you to view the state of the document at the time of signing and verify whether any changes occurred afterward. The API provides access to these versions through `getRevisions()` for all revisions and `getRevision()` for the specific revision tied to a signature.
+Digital signatures in a PDF create new revisions, keeping every previous version intact. These revisions let you see how the document looked when each signature was applied and check if anything changed later. You can access all revisions using `PdfDocument.getRevisions()` method or get a specific one using `PdfSignatureField.getRevision()` method.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

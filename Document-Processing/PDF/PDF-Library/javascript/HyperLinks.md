@@ -215,7 +215,7 @@ document.destroy();
 
 ## Removing hyperlinks
 
-This example demonstrates how to remove hyperlink annotations from a PDF using Syncfusion’s JavaScript PDF Library. By reviewing each annotation and checking whether it represents a hyperlink, you can remove it using either `remove()` or `removeAt()`. This helps clean up outdated or unwanted links while keeping the rest of the document content intact.
+This example demonstrates how to remove hyperlink annotations from a PDF using Syncfusion’s JavaScript PDF Library. By reviewing each annotation and checking whether it represents a hyperlink, you can remove it using either `remove()` or `removeAt()` methods. This helps clean up outdated or unwanted links while keeping the rest of the document content intact.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
