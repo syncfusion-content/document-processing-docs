@@ -712,6 +712,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to Find and Remove Corrupted Images in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19605/how-to-find-and-remove-corrupted-images-in-net-core-word-document)
 * [How to Convert Excel Worksheets to Images in .NET Core Word document?](https://support.syncfusion.com/kb/article/20162/how-to-convert-excel-worksheets-to-images-in-net-core-word-document)
 * [How to resize images to fit owner element in NET Core Word document?](https://support.syncfusion.com/kb/article/21490/how-to-resize-images-to-fit-owner-element-in-net-core-word-document)
+* [How to extract all images from ASP.NET Core Word Document?](https://support.syncfusion.com/kb/article/19583/how-to-extract-all-images-from-aspnet-core-word-document)
 
 ## Frequently Asked Questions
 

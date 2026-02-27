@@ -341,3 +341,6 @@ You can restart the list numbering in a Word document during Mail merge. For fur
 * [How to Convert Mail Merge to PDF in ASP.NET Core?](https://support.syncfusion.com/kb/article/20107/how-to-convert-mail-merge-to-pdf-in-aspnet-core)
 * [How to perform mail merge in Word with XML data containing HTML tags in C#?](https://support.syncfusion.com/kb/article/20109/how-to-perform-mail-merge-in-word-with-xml-data-containing-html-tags-in-c)
 * [How to Change the Merge Field Name in ASP.NET Word?](https://support.syncfusion.com/kb/article/19117/how-to-change-the-merge-field-name-in-aspnet-word)
+* [How to Generate Invoices from XML Data in .NET Core Word Document?](https://support.syncfusion.com/kb/article/22139/how-to-generate-invoices-from-xml-data-in-net-core-word-document)
+* [How to Insert Hyperlink during Mail Merge in .NET Core Word Document?](https://support.syncfusion.com/kb/article/22223/how-to-insert-hyperlink-during-mail-merge-in-net-core-word-document)
+* [How to Modify Number or Date Formats in Word Mail Merge Fields at Runtime using C# .NET Core?](https://support.syncfusion.com/kb/article/22487/how-to-modify-number-or-date-formats-in-word-mail-merge-fields-at-runtime-using-c-net-core)
