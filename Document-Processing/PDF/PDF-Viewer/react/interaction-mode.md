@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interaction mode in React Pdfviewer component
+# Interaction mode in React PDF Viewer component
 
-The PDF Viewer provides interaction mode for easy interaction with the loaded PDF document.  Selection mode and panning mode are the two interactions modes.
+The PDF Viewer provides interaction modes for interacting with the loaded PDF document. Selection mode and panning mode are the two interaction modes.
 
 ## Selection mode
 
-In this mode, the text selection can be performed in the PDF document loaded in PDF Viewer. The panning and scrolling of the pages by touch cannot be performed in this mode. It allows users to select and copy text from the PDF files. This is helpful for copying and sharing text content. You can enable/disable the text selection using the following code snippet.
+In this mode, users can select and copy text from the loaded PDF document. Panning and touch scrolling are disabled while text selection is enabled. Use the following snippet to enable or disable text selection.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -85,15 +85,15 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/selection.png)
+![Selection mode screenshot](./images/selection.png)
 
 ## Panning Mode
 
-In this mode, the panning and scrolling of the pages by touch can be performed in the PDF document loaded in the PDF Viewer, but the text selection cannot be performed.
+In this mode, panning and touch scrolling are enabled for the loaded PDF document; text selection is not available.
 
-![Alt text](./images/pan.png)
+![Panning mode screenshot](./images/pan.png)
 
-You can switch the interaction mode of PDF Viewer by using the following code snippet.,
+You can switch the PDF Viewer interaction mode using the following snippet.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
