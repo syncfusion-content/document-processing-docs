@@ -565,7 +565,7 @@ root.render(<App />);
 
 ## Strikethrough text
 
-There are two ways to add strikethrough:
+Two ways to add strikethroughs:
 
 1. Using the context menu
 * Select text in the PDF document and right-click it.
