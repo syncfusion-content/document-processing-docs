@@ -707,7 +707,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to extract images from ASP.NET Core Word Document?](https://support.syncfusion.com/kb/article/19583/how-to-extract-images-from-aspnet-core-word-document?)
 * [How to replace SVG and other images in ASP.NET Word document?](https://support.syncfusion.com/kb/article/19459/how-to-replace-svg-and-other-images-in-aspnet-word-document?)
 * [How to convert a chart to an image and replace it in a Word document?](https://support.syncfusion.com/kb/article/19752/how-to-convert-a-chart-to-an-image-and-replace-it-in-a-word-document)
-* [How to fix Images in a Specific Position in .Net Core Word Document?](https://support.syncfusion.com/kb/article/19660/how-to-fix-images-in-a-specific-position-in-net-core-word-document)
+* [How to fix Images in a Specific Position in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19660/how-to-fix-images-in-a-specific-position-in-net-core-word-document)
 * [How to Apply Border to an Image in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19726/how-to-apply-border-to-an-image-in-net-core-word-document)
 * [How to Find and Remove Corrupted Images in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19605/how-to-find-and-remove-corrupted-images-in-net-core-word-document)
 * [How to Convert Excel Worksheets to Images in .NET Core Word document?](https://support.syncfusion.com/kb/article/20162/how-to-convert-excel-worksheets-to-images-in-net-core-word-document)

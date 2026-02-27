@@ -167,6 +167,6 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Text-file-conversion/Retrieve-Word-document-as-plain-text).
 
-# See Also
+## See Also
 
 * [How to convert text file to RTF in .NET?](https://support.syncfusion.com/kb/article/22691/how-to-convert-text-file-to-rtf-in-net)
