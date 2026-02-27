@@ -26,7 +26,7 @@ You can Modify PDF form fields values programmatically by acessing the existing 
 ### Textbox
 Update TextBox Field Through the UI
 You can modify text box fields at runtime from UI.
-![TextboxField](./images/TextBoxField.png)
+![TextboxField](../images/TextBoxField.png)
 
 Update TextBox Field Programmatically (Code‑Behind)
 
@@ -67,7 +67,7 @@ End Sub
 ### CheckBox
 Update CheckBox Field Through the UI
 You can set checkbox fields at runtime from UI.
-![CheckboxField](./images/CheckBoxField.png)
+![CheckboxField](../images/CheckBoxField.png)
 
 Update CheckBox Field Programmatically (Code‑Behind)
 
@@ -294,7 +294,7 @@ N > To ensure the signature appears in the document, save the loaded PDF after a
 
 ## See also
 
--  [Overview](./overview)
+-  [Overview](../overview)
 - [Add form fields](./add-form-fields)
 - [Remove form Fields](./remove-form-fields)
 - [Form fields API](../form-fields-api)

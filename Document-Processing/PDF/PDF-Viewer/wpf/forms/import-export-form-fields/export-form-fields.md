@@ -128,7 +128,7 @@ End Sub
 
 -  [Overview](../overview)
 - [Import form fields](./import-form-fields)
-- [Add form fields](../add-form-fields)
-- [Modify form fields](../modify-form-fields)
-- [Remove form fields](../remove-form-fields)
+- [Add form fields](./manage-form-fields/add-form-fields)
+- [Modify form fields](./manage-form-fields/modify-form-fields)
+- [Remove form fields](./manage-form-fields/remove-form-fields)
 - [Form fields API](../form-fields-api)

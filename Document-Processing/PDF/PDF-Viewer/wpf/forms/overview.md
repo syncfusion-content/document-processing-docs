@@ -13,7 +13,7 @@ The Syncfusion WPF PDF Viewer delivers a complete, easy-to-use PDF forms experie
 
 The viewer also includes smooth import and export support for form data, making integration effortless. Developers benefit from extensive API control, while end users enjoy a clean and simple interface designed for a seamless and stress-free form-filling experience.
 
-![WPF PDF Viewer Form Filling](form-filling-images/wpf-pdf-viewer-form-filling.png)
+![WPF PDF Viewer Form Filling](../form-filling-images/wpf-pdf-viewer-form-filling.png)
 
 ## Filling PDF Forms
 
@@ -30,10 +30,10 @@ See the [Filling PDF Forms](./form-filling) page for full details.
 
 ## Supported form field types
 
-- [Textbox](../forms/manage-form-fields/add-form-fields#add-textbox)
-- [Password](../forms/manage-form-fields/add-form-fields#add-password)
-- [CheckBox](../forms/manage-form-fields/add-form-fields#add-checkbox)
-- [RadioButton](../forms/manage-form-fields/add-form-fields#add-radiobutton)
-- [ListBox](../forms/manage-form-fields/add-form-fields#add-listbox)
-- [ComboBox](../forms/manage-form-fields/add-form-fields#add-combobox)
-- [Signature field](../forms/manage-form-fields/add-form-fields#add-signature-field)
+- [Textbox](./manage-form-fields/add-form-fields#add-textbox)
+- [Password](./manage-form-fields/add-form-fields#add-password)
+- [CheckBox](./manage-form-fields/add-form-fields#add-checkbox)
+- [RadioButton](./manage-form-fields/add-form-fields#add-radiobutton)
+- [ListBox](./manage-form-fields/add-form-fields#add-listbox)
+- [ComboBox](./manage-form-fields/add-form-fields#add-combobox)
+- [Signature field](./manage-form-fields/add-form-fields#add-signature-field)

@@ -77,9 +77,9 @@ Form field events can be used to:
 ## See also
 
 -  [Overview](./overview)
-- [Import form fields](./import-form-fields)
-- [Export form fields](./export-form-fields)
-- [Add form fields](./add-form-fields)
-- [Modify form fields](./modify-form-fields)
-- [Remove form fields](./remove-form-fields) 
+- [Import form fields](./import-export-form-fields/import-form-fields)
+- [Export form fields](./import-export-form-fields/export-form-fields)
+- [Add form fields](./manage-form-fields/add-form-fields)
+- [Modify form fields](./manage-form-fields/modify-form-fields)
+- [Remove form fields](./manage-form-fields/remove-form-fields) 
 - [Form fields API](./form-fields-api)

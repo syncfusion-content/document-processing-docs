@@ -209,7 +209,7 @@ For more details, see [Export Form Data](./import-export-form-fields/export-form
 ## See also
 
 -  [Overview](./overview)
--  [Add](../manage-form-fields/create-form-fields)
--  [Modify](../manage-form-fields/modify-form-fields) 
--  [remove](../manage-form-fields/remove-form-fields) 
+-  [Add form fields](./manage-form-fields/add-form-fields)
+-  [Modify form fields values](./manage-form-fields/modify-form-fields) 
+-  [Remove form fields](./manage-form-fields/remove-form-fields) 
 -  [Form fields API](./form-fields-api)
