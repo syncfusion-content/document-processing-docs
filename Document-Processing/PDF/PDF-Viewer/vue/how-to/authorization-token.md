@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Authorization token in Vue PDF Viewer control
 
-The PDF Viewer library allows you to include the authorization token in the PDF viewer AJAX request using the properties of the ajaxRequest header available in `AjaxRequestSettings`, and it will be included in every AJAX request send from PDF Viewer.
+The PDF Viewer supports adding an authorization token to every AJAX request by configuring the `ajaxRequestSettings.ajaxHeaders` property. Set the header once and the library includes it in all requests initiated by the viewer.
 
 The following steps are used to include the authorization token to the PDF viewer control.
 

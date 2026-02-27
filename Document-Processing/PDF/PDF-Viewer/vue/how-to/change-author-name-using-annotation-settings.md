@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Change author name using annotation settings in Vue PDF Viewer
 
-The PDF Viewer allows customizing individual annotation settings using the annotationSettings API, which exposes properties common to all annotations.
+The `annotationSettings` API provides a central way to configure properties that apply to all annotations in the viewer.
 
 API name: annotationSettings
 

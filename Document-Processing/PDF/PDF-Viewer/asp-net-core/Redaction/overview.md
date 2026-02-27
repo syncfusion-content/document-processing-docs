@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Redaction in ASP.NET Core PdfViewer
 
-Redaction annotations are used to hide confidential or sensitive information in a PDF. The Syncfusion ASP.NET Core PDF Viewer lets you mark areas or entire pages for redaction, customize their appearance, and permanently apply them with a single action.
+Redaction annotations hide confidential or sensitive information in a PDF. The Syncfusion ASP.NET Core PDF Viewer enables marking areas or entire pages for redaction, customizing their appearance, and permanently applying redactions.
 
 ## Enable the redaction toolbar
 
@@ -55,40 +55,40 @@ window.onload = function () {
 {% endhighlight %}
 {% endtabs %}
 
-N> Prerequisites: Add the PdfViewer control to your ASP.NET Core application and ensure the redaction feature is available in the version you are using. Once applied, redaction permanently removes the selected content.
+N> Prerequisites: Add the PdfViewer control to the ASP.NET Core application and confirm that the redaction feature is available in the used product version. Applying redaction permanently removes the selected content.
 
 ![Toolbar with the Redaction tool highlighted](redaction-annotations-images/redaction-icon-toolbar.png)
 
 ## Add Redaction Annotations
 
-You can mark specific content for redaction using the toolbar or through code.  
+Mark specific content for redaction using the toolbar or programmatically.
 
-Select the **Redaction tool** and draw over the text or graphics you want to hide. You can also add overlay text (such as “Confidential”) and adjust the style — fill color, border color, and opacity.
+Select the **Redaction tool** and draw over the text or graphics to hide. Optionally add overlay text (for example, “Confidential”) and adjust the style: fill color, border color, and opacity.
 
 ![Drawing a redaction region over page content](redaction-annotations-images/adding-redaction-annotation.png)
 
 ## Delete Redaction Annotations
 
-Redaction annotations can be removed easily:
+Remove redaction annotations by either:
 
-- Click the **Delete** button on the toolbar, or  
-- Select the annotation and press the **Delete** key.
+- Clicking the **Delete** button on the toolbar, or
+- Selecting the annotation and pressing the **Delete** key.
 
 ![Toolbar showing the Delete command for redaction](redaction-annotations-images/redaction-delete-icon.png)
 
 ## Redact Entire Pages
 
-The viewer allows you to redact whole pages that contain sensitive information. You can choose specific pages, page ranges, or redact all pages using the built‑in dialog, or perform the same action programmatically.
+Redact whole pages that contain sensitive information. Choose specific pages, page ranges, or redact all pages using the built‑in dialog, or perform the same action programmatically.
 
 ![Toolbar showing the Redact Page option](redaction-annotations-images/redact-page-icon.png)
 
 ## Apply Redaction
 
-Once annotations are added, you can permanently apply them to the document. This action cannot be undone.  
+After adding annotations, permanently apply them to the document. This action is irreversible.
 
 Use the **Apply Redaction** button on the toolbar or call the API method:
 
-- The button is disabled until at least one redaction annotation exists.  
+- The button remains disabled until at least one redaction annotation exists.
 - It becomes active when redaction annotations are present.
 
 ![Toolbar showing the Apply Redaction button](redaction-annotations-images/redact-button-icon.png)

@@ -7,7 +7,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Frequently Asked Questions Section in Vue PDF Viewer control
+# Vue PDF Viewer - Frequently Asked Questions
+
+The following FAQ provides concise solutions and links to detailed how-to articles for the Vue PDF Viewer. Each entry links to a step-by-step article with examples and troubleshooting notes.
 
 The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
 

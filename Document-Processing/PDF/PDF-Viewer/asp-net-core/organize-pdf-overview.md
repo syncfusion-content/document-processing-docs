@@ -8,20 +8,20 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in ASP.NET Core PDF Viewer control
+# Organize Pages in ASP.NET Core PDF Viewer
 
-The PDF Viewer allows you to manage your PDF documents efficiently by organizing pages seamlessly. Whether you need to add new pages, remove unnecessary ones, rotate pages, move pages within the document, and copy or duplicate pages, the PDF Viewer facilitates these tasks effortlessly.
+The PDF Viewer enables efficient document management by organizing pages seamlessly. Pages can be added, removed, rotated, moved, and copied or duplicated as needed.
 
 The Organize Pages feature provides the following options:
 
-* **Rotate pages**: You can adjust the orientation of PDF pages to ensure proper alignment.
-* **Rearrange pages**: You can easily change the sequence of pages within your document.
-* **Insert new pages**: Effortlessly add new blank pages to your document.
-* **Delete pages**: Removing unwanted pages from your document is straightforward.
-* **Copy pages**: Duplicate the pages within your PDF document effortlessly.
-* **Import a PDF Document**: Seamlessly import a PDF document into your existing document.
-* **Select all pages**: Make comprehensive adjustments by selecting all pages simultaneously.
-* **Real-time updates**: Witness instant changes in page organization reflected within the PDF Viewer. Simply click the **Save** button to preserve your modifications.
-* **SaveAs functionality**: Safeguard your edits by utilizing the **Save As** feature. This enables you to download the modified version of the PDF document for future reference, ensuring that your changes are securely stored.
+* **Rotate pages:** Adjust the orientation of PDF pages to ensure proper alignment.
+* **Rearrange pages:** Change the sequence of pages within the document.
+* **Insert new pages:** Add new blank pages to the document.
+* **Delete pages:** Remove unwanted pages from the document.
+* **Copy pages:** Duplicate pages within the PDF document.
+* **Import a PDF document:** Seamlessly import a PDF document into an existing document.
+* **Select all pages:** Make comprehensive adjustments by selecting all pages simultaneously.
+* **Real-time updates:** Changes in page organization are reflected immediately in the PDF Viewer. Click the **Save** button to preserve modifications.
+* **SaveAs functionality:** Use the **Save As** feature to download the modified version of the PDF document, ensuring changes are securely stored.
 
-To access the organize pages feature, simply open the PDF document in the PDF Viewer and navigate to the left vertical toolbar. Look for the `Organize Pages` option to begin utilizing these capabilities.
+To access the Organize Pages feature, open the PDF document in the PDF Viewer and navigate to the left vertical toolbar. Select the **Organize Pages** option.

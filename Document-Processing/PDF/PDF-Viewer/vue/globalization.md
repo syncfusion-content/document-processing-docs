@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Globalization in Vue PDF Viewer
 
-The PDF Viewer supports localization using culture-specific string collections. By default, the component uses the "en-US" culture.
+The PDF Viewer supports localization using culture-specific string collections, enabling you to display the interface in different languages and adapt UI text to regional preferences. By default, the component uses the "en-US" culture. Use the `locale` property to switch between cultures, and use the `L10n` class to load custom translations for your target language.
+
+## Default locale strings
 
 The following table lists the default text values used by the PDF Viewer in the "en-US" culture:
 
@@ -265,7 +267,11 @@ The following table lists the default text values used by the PDF Viewer in the 
 |Exact Matches                         |EXACT MATCHES                                                                                                                  |
 |Total Matches                         |TOTAL MATCHES                                                                                                                  |
 
-Set the locale for the PDF Viewer using the `locale` property.
+## Configure locale and load translations
+
+Set the locale for the PDF Viewer using the `locale` property. Use the `L10n.load()` method to add custom translations for your target language. The locale string follows the standard BCP 47 format (e.g., 'ar-AE' for Arabic, 'fr-FR' for French, 'de-DE' for German).
+
+You can define translations directly in your Vue component or import them from a separate localization file. The L10n configuration applies globally to all PDF Viewer instances that use the specified locale.
 
 
 {% tabs %}

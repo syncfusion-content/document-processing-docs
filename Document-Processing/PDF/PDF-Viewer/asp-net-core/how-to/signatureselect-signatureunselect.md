@@ -7,24 +7,24 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# signatureSelect and signatureUnselect events
+# Handle signatureSelect and signatureUnselect events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer raises the `signatureSelect` and `signatureUnselect` events whenever a handwritten signature annotation gains or loses focus. Use these callbacks to log reviewer actions, update guidance in the surrounding UI, or validate that a signer completes required steps before saving a document.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer triggers the `signatureSelect` and `signatureUnselect` events when a handwritten signature annotation gains or loses focus. These events enable applications to log reviewer actions, update contextual UI elements, or validate signatures before finalizing the document.
 
 **signatureSelect**
 
-This event fires when the user taps or clicks an existing handwritten signature or finishes drawing a new one. The event argument includes metadata such as the annotation ID, bounds, and page number so that applications can highlight related UI elements or load signer details.
+This event fires when a user selects an existing handwritten signature or completes a new signature drawing. The event arguments provide metadata such as the annotation ID, bounds, and page index, allowing the application to synchronize the signature state with other UI components.
 
 **signatureUnselect**
 
-This event fires after the focus moves away from a signature or the user deselects it. Handle the callback to persist edits, disable context commands, or reset state that should only be active while a signature is selected.
+This event fires when focus moves away from a signature or the user deselects it. Use this callback to persist changes, disable signature-specific toolbar actions, or reset state that is only relevant while a signature is active.
 
-Follow these steps to wire the events in an ASP.NET Core application:
+Follow these steps to integrate signature event handling in an ASP.NET Core application:
 
-1. Create a PDF Viewer sample by following the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started). The guide explains how to register the viewer scripts, styles, and controller endpoints.
-2. Place the buttons and script inside the Razor page so the handlers attach after the viewer initializes. The console output appears in the browser developer tools and can be replaced with custom UI updates or service calls.
+1. Create a PDF Viewer project by following the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started).
+2. Define the event handlers and assign them to the `signatureSelect` and `signatureUnselect` properties of the PDF Viewer component.
 
-The following sample subscribes to both events in standalone and server-backed configurations.
+The following example demonstrates how to subscribe to these events in both standalone and server-backed configurations.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -41,6 +41,7 @@ The following sample subscribes to both events in standalone and server-backed c
                    signatureUnselect="signatureUnselect">
     </ejs-pdfviewer>
 </div>
+
 <script type="text/javascript">
 
     function signatureSelect(args) {
@@ -67,6 +68,7 @@ The following sample subscribes to both events in standalone and server-backed c
                    signatureUnselect="signatureUnselect">
     </ejs-pdfviewer>
 </div>
+
 <script type="text/javascript">
 
     function signatureSelect(args) {
@@ -80,4 +82,4 @@ The following sample subscribes to both events in standalone and server-backed c
 {% endhighlight %}
 {% endtabs %}
 
-By handling `signatureSelect` and `signatureUnselect`, applications can audit signer activity, enable or disable toolbar actions, and provide immediate feedback when signatures change state.
+By implementing `signatureSelect` and `signatureUnselect`, developers can audit user interactions, manage toolbar states, and provide immediate visual feedback during the signing process.

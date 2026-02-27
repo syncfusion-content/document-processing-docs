@@ -7,15 +7,15 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Include Authorization token to header
+# Add authorization tokens to PDF Viewer requests in ASP.NET Core
 
-The PDF Viewer component enables adding authorization tokens to each AJAX request through the `ajaxHeaders` collection in `AjaxRequestSettings`, ensuring the header is appended to every call initiated by the viewer.
+Secure PDF Viewer requests by automatically including authorization tokens in every AJAX call. Configure custom headers through the `AjaxRequestSettings` property to append authentication credentials to all viewer-initiated requests.
 
-Use the following steps to configure the authorization token for the PDF Viewer control.
+Follow these steps to configure authorization headers for your PDF Viewer instance.
 
-**Step 1:** Follow the steps in the [Getting Started with ASP.NET Core PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to configure a basic ASP.NET Core project with the PDF Viewer component.
+**Step 1:** Follow the [Getting Started with ASP.NET Core PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer instance in your ASP.NET Core project.
 
-**Step 2:** Add the following script after the PDF Viewer instance is rendered (for example, in the Razor view or layout file) to include the authorization token in subsequent requests.
+**Step 2:** Add the following script to configure the authorization token. This should be executed after the PDF Viewer instance is initialized (for example, in the Razor view or layout file).
 
 ```html
 <script>

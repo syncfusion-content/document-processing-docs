@@ -2,14 +2,18 @@
 layout: post
 title: Text search in Vue PDF Viewer component | Syncfusion
 description: Learn how to configure text search, handle search events, and run programmatic searches in the Syncfusion Vue PDF Viewer component.
-control: Text search
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text search in Vue PDF viewer control
+# Text search in Vue PDF Viewer
 
-The text search feature in the PDF Viewer locates and highlights matching content within a document. Enable or disable this capability with the following configuration.
+The text search feature enables users to locate and highlight matching content within PDF documents. The Vue PDF Viewer provides both interactive toolbar-based search and programmatic search capabilities through the `TextSearch` module.
+
+## Enable text search
+
+To use text search functionality, ensure the `TextSearch` module is provided to the PDF Viewer component and set `enableTextSearch` to `true`:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -136,41 +140,45 @@ export default {
 
 ## Text search features
 
-### Real-time search suggestions while typing
-Typing in the search box immediately surfaces suggestions that match the entered text. The list refreshes on every keystroke so users can quickly jump to likely results without completing the entire term.
+The PDF Viewer toolbar provides an intuitive search interface with the following capabilities:
+
+### Real-time search suggestions
+Typing in the search box immediately displays suggestions matching the entered text. The suggestions list updates with each keystroke, allowing users to quickly jump to results without completing the full term.
 
 ![Search suggestion popup](./images/SingleSearchPopup.png)
 
-### Select search suggestions from the popup
-After typing in the search box, the popup lists relevant matches. Selecting an item jumps directly to the corresponding occurrence in the PDF.
+### Select results from suggestions
+The suggestions popup displays relevant matches. Selecting a suggestion jumps directly to that occurrence in the PDF.
 
 ![Search results from popup](./images/SearchResultFromPopup.png)
 
-### Search text with the Match Case option
-Enable the Match Case checkbox to limit results to case-sensitive matches. Navigation commands then step through each exact match in sequence.
+### Case-sensitive search
+Enable the **Match Case** checkbox to perform case-sensitive searches. Navigation controls step through exact matches only.
 
 ![Match case navigation](./images/SearchNavigationMatchCase.png)
 
-### Search text without Match Case
-Leave the Match Case option cleared to highlight every occurrence of the query, regardless of capitalization, and navigate through each result.
+### Case-insensitive search
+Leave **Match Case** unchecked to highlight all occurrences regardless of capitalization.
 
 ![Search navigation without match case](./images/SearchNavigationNoMatchCase.png)
 
-### Search a list of words with Match Any Word
-Enable Match Any Word to split the query into separate words. The popup proposes matches for each word and highlights them throughout the document.
+### Multi-word search with Match Any Word
+Enable **Match Any Word** to split the search term into separate words and find matches for any of them throughout the document.
 
 ![Match any word search results](./images/MultiSearchPopup.png)
 
-### Programmatic search with settings
+## Programmatic text search
 
-While the PDF Viewer toolbar offers an interactive search experience, you can also trigger and customize searches programmatically by calling the `searchText` method with tailored options.
+Beyond the interactive toolbar, trigger searches programmatically using the `searchText` method with customizable options.
 
-#### Using `searchText`
+### Using `searchText` method
 
-Use the `searchText` method to start a search with optional filters that control case sensitivity and whole-word behavior. In Vue, obtain the PDF Viewer instance (for example, through a template reference) and call `viewer.textSearch.searchText('search text', false, false);`.
+The `searchText` method initiates a search with optional filters for case sensitivity and whole-word matching. Call it on the PDF Viewer's `textSearch` instance:
 
-- `isMatchCase` (optional boolean): Determines whether the search should be case-sensitive.
-- `isMatchWholeWord` (optional boolean): Ensures the entire string is matched as a standalone word.
+**Parameters:**
+- `text` (string): The term to search for
+- `isMatchCase` (optional boolean): Enable case-sensitive matching
+- `isMatchWholeWord` (optional boolean): Match only complete words
 
 {% highlight html %}
 <template>
@@ -215,9 +223,9 @@ function searchWholeWord() {
 </script>
 {% endhighlight %}
 
-#### Match Case
+### Case-sensitive search
 
-Set the `isMatchCase` parameter to `true` to perform a case-sensitive search that mirrors the Match Case option in the search panel. The following Options API sample shows how to trigger a case-sensitive search programmatically.
+Set `isMatchCase` to `true` for case-sensitive searches:
 
 ```html
 <template>
@@ -255,10 +263,9 @@ export default {
 };
 </script>
 ```
+### Whole-word search
 
-#### Match Whole Word
-
-Set the `isMatchWholeWord` parameter to `true` to restrict results to whole-word matches. The following example searches for the whole word "pdf" when a button is clicked.
+Set `isMatchWholeWord` to `true` to match only complete words:
 
 ```html
 <template>
@@ -296,23 +303,33 @@ export default {
 };
 </script>
 ```
+> **Note**: The toolbar's **Match Any Word** option splits the search term into separate words and finds any of them. This differs from `isMatchWholeWord`, which matches the entire query as a single complete word.
 
-**Note on Match Any Word:** The Match Any Word checkbox in the toolbar splits the input into multiple words and searches for each term individually. This differs from the `isMatchWholeWord` parameter, which enforces a whole-word match on the entire query string.
+### Available search methods
 
-The following text search methods are available in the PDF Viewer,
+The `textSearch` module provides these methods for search navigation:
 
-* [**Search text**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchtext): Searches the target text in the PDF document and highlights each occurrence in the pages.
-* [**Search next**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchnext): Searches the next occurrence of the current query from the active match.
-* [**Search previous**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchprevious): Searches the previous occurrence of the current query from the active match.
-* [**Cancel text search**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#canceltextsearch): Cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
+| Method | Purpose |
+|--------|---------|
+| [**searchText()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchtext) | Search for text and highlight all occurrences in the document |
+| [**searchNext()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchnext) | Navigate to the next occurrence of the current search term |
+| [**searchPrevious()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchprevious) | Navigate to the previous occurrence of the current search term |
+| [**cancelTextSearch()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#canceltextsearch) | Cancel the current search and clear all highlights |
 
-![Alt text](./images/search.png)
+![Text search interface](./images/search.png)
 
 ## Find text method
-Use the `findText` method to locate a string or an array of strings and return the bounding rectangles for each match. Optional parameters support case-sensitive comparisons and page scoping so you can retrieve coordinates for a single page or the entire document.
 
-### Find and get the bounds of a text
-Searches for the specified text within the document and returns the bounding rectangles of the matched text. The search can be case-sensitive based on the provided parameter. It returns the bounding rectangles for all pages in the document where the text was found. The following code snippet shows how to get the bounds of the specified text:
+Use the `findText` method to retrieve bounding coordinates of text matches. This is useful for programmatically locating text and accessing its position data for custom rendering or layout calculations.
+
+**Parameters:**
+- `text` (string | string[]): Text or array of text to find
+- `isMatchCase` (boolean): Enable case-sensitive matching
+- `pageNumber` (optional number): Limit search to a specific page
+
+**Returns:** Bounding rectangles for all matches
+
+### Find text on all pages
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -389,8 +406,9 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 {% endhighlight %}
 {% endtabs %}
 
-### Find and get the bounds of a text on the desired page
-Searches for the specified text within the document and returns the bounding rectangles of the matched text. The search can be case-sensitive based on the provided parameter. It returns the bounding rectangles for that page in the document where the text was found. The following code snippet shows how to retrieve bounds for the specified text on a selected page:
+### Find text on a specific page
+
+Limit the search to a specific page by passing the page number as the third parameter:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -467,8 +485,9 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 {% endhighlight %}
 {% endtabs %}
 
-### Find and get the bounds of the list of text
-Searches for an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. It returns the bounding rectangles for all pages in the document where the strings were found.
+### Find multiple text strings
+
+Search for multiple terms by passing an array of strings:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -545,8 +564,9 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 {% endhighlight %}
 {% endtabs %}
 
-### Find and get the bounds of the list of text on desired page
-Searches for an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. It returns the bounding rectangles for these search strings on that particular page where the strings were found.
+### Find multiple text strings on a specific page
+
+Search for multiple terms on a specific page by providing the page number as the third parameter:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}

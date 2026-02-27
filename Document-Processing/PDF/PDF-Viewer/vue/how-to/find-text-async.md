@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find Text using findTextAsync Method in Syncfusion Vue PDF Viewer Control
+# Find text using findTextAsync method in Vue PDF Viewer
 
 The `findTextAsync` method searches for a string or array of strings asynchronously and returns bounding rectangles for each match. Use it to locate text positions across the document or on a specific page.
 
@@ -70,7 +70,7 @@ export default {
 
 ### Description:
 
-The `findTextAsync` method is designed for performing an asynchronous text search within a PDF document. You can use it to search for a single string or multiple strings, with the ability to control case sensitivity. By default, the search is applied to all pages of the document. However, you can adjust this behavior by specifying the page number (pageIndex), which allows you to search only a specific page if needed.
+The `findTextAsync` method performs an asynchronous text search within a PDF document. It returns a Promise that resolves with an array of result objects describing each match. Each match object contains information such as the page index and the bounding rectangles for the matched text, which can be used to highlight or navigate to occurrences. By default, the search runs across all pages; supply the optional `pageIndex` parameter to limit the search to a specific page.
 
 ### Parameters:
 
@@ -78,7 +78,7 @@ The `findTextAsync` method is designed for performing an asynchronous text searc
 
 **matchCase (boolean):** Whether the search is case-sensitive. `true` matches exact case; `false` ignores case.
 
-**pageIndex (optional, number):** Zero-based page index to search. If omitted, searches all pages.
+**pageIndex (optional, number):** Zero-based page index to search. If not provided, the search will be performed across all pages in the document. For example, passing `0` searches only the first page of the document. If the search finds no matches, the returned array will be empty; the Promise still resolves (it does not reject) in this case.
 
 ### Example Workflow:
 

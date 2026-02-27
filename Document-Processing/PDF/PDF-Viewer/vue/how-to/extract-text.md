@@ -8,32 +8,22 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract Text Method in Syncfusion PDF Viewer control
+# Extract text method in the Vue PDF Viewer
 
-The `extractText` method extracts text from one or more pages and can return plain text or text with bounds for each element.
+The `extractText` method retrieves text content and, optionally, positional data for elements on one or more pages. It returns a Promise that resolves to an object containing extracted `textData` (detailed items with bounds) and `pageText` (concatenated plain text).
 
-### extractText method
-Retrieves text data from one page or a range of pages based on the specified options.
+**Parameters overview:**
+- `startIndex` — Starting page index (0-based).
+- `endIndex` or options — Either the ending page index for a range extraction, or an options object specifying extraction criteria for a single page.
+- `options` (optional) — Extraction options such as `TextOnly` or `TextAndBounds` to control whether bounds are included.
 
-#### Parameters:
-**startIndex:** The starting page index for text extraction (0-based index).
+**Returned object shape (example):**
 
-**endIndex or isOptions:** Either the ending page index (for multiple pages) or an option specifying extraction criteria for a single page.
-
-**options (optional):** Additional options, such as `TextOnly` for plain text or `TextAndBounds` for detailed text data with bounds.
-
-- TextOnly: Extracts only plain text without bounds.
-- TextAndBounds: Extracts text with bounds (coordinates).
-
-#### Returns:
-The method returns a Promise that resolves to an object containing two properties:
-
-Returns a Promise with:
-
-- textData: An array of TextDataSettingsModel with details including bounds and page text.
-- pageText: A concatenated string of plain text from the specified page(s).
+- `textData` — Array of objects describing extracted text items, including bounds and page-level text.
+- `pageText` — Concatenated plain text for the specified page(s).
 
 ### Usage of extractText in Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer Control
+
 Here is an example that demonstrates how to use the extractText method:
 
 ```html

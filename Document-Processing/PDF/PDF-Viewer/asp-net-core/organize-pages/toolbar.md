@@ -10,7 +10,7 @@ documentation: ug
 
 # Organize Page Toolbar Customization in ASP.NET Core PDF Viewer control
 
-The PDF Viewer allows you to customize the toolbar for the organize pages feature, enabling you to show or hide specific tools based on your application's requirements. The `pageOrganizerSettings` API provides properties to control the visibility of each tool in the organize pages dialog.
+Customize the Organize Pages toolbar to show or hide tools using the `pageOrganizerSettings` API to control visibility based on application requirements.
 
 ## Show or hide the insert option
 
