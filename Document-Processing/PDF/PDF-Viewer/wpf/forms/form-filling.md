@@ -208,8 +208,8 @@ For more details, see [Export Form Data](./import-export-form-fields/export-form
 
 ## See also
 
--  [Overviewe](./overview)
--  [Add](./manage-form-fields/create-form-fields)
--  [Modify](./manage-form-fields/modify-form-fields) 
--  [remove](./manage-form-fields/remove-form-fields) 
+-  [Overview](./overview)
+-  [Add](../manage-form-fields/create-form-fields)
+-  [Modify](../manage-form-fields/modify-form-fields) 
+-  [remove](../manage-form-fields/remove-form-fields) 
 -  [Form fields API](./form-fields-api)
