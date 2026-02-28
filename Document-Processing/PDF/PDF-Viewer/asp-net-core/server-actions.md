@@ -7,11 +7,20 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Server Actions
+# Server Actions in ASP.NET Core PDF Viewer
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer is a client-server control that processes PDF documents on the server and sends incremental responses to the client for rendering and interaction. Ensure the ASP.NET Core controller routes are registered, dependency injection supplies `IHostingEnvironment` and `IMemoryCache`, and caching is configured to persist page data between requests. Validate file paths and restrict inputs to trusted locations to avoid exposing sensitive files.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer is a client-server control that performs all heavy document processing on the server while sending incremental responses to the client for rendering and user interaction. This architecture ensures optimal performance, memory efficiency, and scalability by processing PDF documents on the backend and streaming only the necessary data to the browser.
 
-The server actions exposed by the PDF Viewer controller include:
+**Key requirements for proper operation:**
+- ASP.NET Core controller routes must be properly registered
+- Dependency injection must supply `IHostingEnvironment` and `IMemoryCache`
+- Memory caching must be configured to persist page data between requests
+- File path validation must restrict access to trusted locations only
+- Input sanitization must prevent path traversal and file access vulnerabilities
+
+## Available server actions
+
+The PDF Viewer controller exposes the following server actions that handle different aspects of document processing and interaction:
 
 * Load
 * RenderPdfPages
@@ -28,9 +37,23 @@ The server actions exposed by the PDF Viewer controller include:
 
 ## Load action
 
-N> public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
+**Method signature:**
+```csharp
+public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
+```
 
-The [Load](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_Load_System_String_) action initiates PDF loading. The PDF Viewer caches the document using the supplied hash ID, streaming the first 100 pages and fetching the remainder on demand through virtual loading. The `jsonObject` payload must include either a file name or base64 content, and the controller should resolve the document path by calling `GetDocumentPath`. The action invokes the [Load](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_Load_System_IO_Stream_System_Collections_Generic_Dictionary_System_String_System_String__) API, returning serialized JSON to the viewer.
+Initializes PDF document loading and establishes server-side caching for the document.
+
+**Workflow:**
+1. Accepts document reference (file name or base64 content)
+2. Resolves file path using `GetDocumentPath` for file-based documents
+3. Creates memory stream from file or base64 data
+4. Invokes `PdfRenderer.Load()` to initialize the document
+5. Caches document using a hash ID for subsequent page requests
+6. Streams first 100 pages to client for immediate rendering
+7. Remaining pages are fetched on-demand through virtual loading
+
+**Example: Loading a PDF from file**
 
 ```cs
 public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
@@ -66,11 +89,24 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-## RenderPdfPages
+## Rendering actions
 
-N> public IActionResult RenderPdfPages([FromBody] Dictionary<string, string> jsonObject)
+### RenderPdfPages action
 
-Whenever the client requests a new page segment, the [RenderPdfPages](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_RenderPages_System_String_) action retrieves the necessary bitmap information. The request payload contains the page index and size constraints. The action calls [GetPage](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_GetPage_System_Collections_Generic_Dictionary_System_String_System_String__) and returns the serialized page data to the viewer for incremental rendering.
+**Method signature:**
+```csharp
+public IActionResult RenderPdfPages([FromBody] Dictionary<string, string> jsonObject)
+```
+
+[RenderPdfPages](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_RenderPages_System_String_) generates and returns page images for display as user scrolls or navigates. As user scrolls, client requests pages that are not yet rendered, server returns only those pages on-demand
+
+**Workflow:**
+1. Client requests specific page segments
+2. Server retrieves cached document using provided document ID
+3. [`PdfRenderer.GetPage()`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_GetPage_System_Collections_Generic_Dictionary_System_String_System_String__) renders requested pages to bitmap
+4. Bitmap is encoded as base64 image data
+5. Response includes rendered page image and metadata
+6. Client receives only the pages needed
 
 ```cs
 public IActionResult RenderPdfPages([FromBody] Dictionary<string, string> jsonObject)
@@ -82,11 +118,20 @@ public IActionResult RenderPdfPages([FromBody] Dictionary<string, string> jsonOb
 }
 ```
 
-## RenderThumbnailImages action
+### RenderThumbnailImages action
 
-N> public IActionResult RenderThumbnailImages([FromBody] Dictionary<string, string> jsonObject)
+**Method signature:**
+```csharp
+public IActionResult RenderThumbnailImages([FromBody] Dictionary<string, string> jsonObject)
+```
 
-The [RenderThumbnailImages](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_RenderThumbnail_System_String_) action generates thumbnail previews for page navigation. The viewer requests thumbnails once during initialization and whenever documents change. The action invokes [GetThumbnailImages](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_GetThumbnailImages_System_Collections_Generic_Dictionary_System_String_System_String__) to return the encoded image list that populates the thumbnail pane.
+[RenderThumbnailImages](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_RenderThumbnail_System_String_) generates thumbnail previews for the sidebar navigation panel. It populates the left sidebar thumbnail panel for quick visual navigation
+
+**Workflow:**
+1. Client requests thumbnails (typically during document load)
+2. [`PdfRenderer.GetThumbnailImages()`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_GetThumbnailImages_System_Collections_Generic_Dictionary_System_String_System_String__) generates small preview images for all pages
+4. All thumbnail images are encoded as base64 strings
+5. Response includes array of thumbnail images for every page
 
 ```cs
 public IActionResult RenderThumbnailImages([FromBody] Dictionary<string, string> jsonObject)
@@ -98,11 +143,21 @@ public IActionResult RenderThumbnailImages([FromBody] Dictionary<string, string>
 }
 ```
 
-## Bookmarks
+### Bookmarks action
 
-N> public IActionResult Bookmarks([FromBody] Dictionary<string, string> jsonObject)
+**Method signature:**
+```csharp
+public IActionResult Bookmarks([FromBody] Dictionary<string, string> jsonObject)
+```
 
-The Bookmarks action extracts document outlines during initialization to populate the bookmarks panel. The action calls [GetBookmarks](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_GetBookmarks_System_Collections_Generic_Dictionary_System_String_System_String__) and returns a hierarchical JSON structure that links bookmark selections to their corresponding page indices.
+Extract document outline/bookmarks for hierarchical navigation and populate bookmarks panel for users to jump to document sections
+
+**How it works:**
+1. [`PdfRenderer.GetBookmarks()`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_GetBookmarks_System_Collections_Generic_Dictionary_System_String_System_String__) extracts document outline from PDF
+2. Bookmarks are organized in a hierarchical tree structure
+3. Each bookmark includes title and target page reference
+4. Nested bookmarks maintain parent-child relationships
+5. Returns JSON structure mapping bookmarks to page indices
 
 ```cs
 public IActionResult Bookmarks([FromBody] Dictionary<string, string> jsonObject)
@@ -114,11 +169,30 @@ public IActionResult Bookmarks([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-## RenderAnnotationComments
+## Annotation actions
 
-N> public IActionResult RenderAnnotationComments([FromBody] Dictionary<string, string> jsonObject)
+### RenderAnnotationComments action
 
-The [RenderAnnotationComments](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_RenderComments_System_String_) action synchronizes annotation discussions. It calls [GetAnnotationComments](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_GetAnnotationComments_System_Collections_Generic_Dictionary_System_String_System_String__) to retrieve comment threads and metadata, enabling the client to display the comments panel with the latest entries.
+**Method signature:**
+```csharp
+public IActionResult RenderAnnotationComments([FromBody] Dictionary<string, string> jsonObject)
+```
+
+Retrieve annotation comment threads for display in the comments panel.
+
+**Workflow:**
+1. `PdfRenderer.GetAnnotationComments()` retrieves all comment data from document
+2. Comments are organized by annotation and sorted chronologically
+3. Includes metadata: author, timestamp, status
+4. Returns comment threads linked to specific annotations
+5. Client displays comments in sidebar panel
+
+**Request payload:**
+- `uniqueId` (string): Document cache ID
+
+**Response:** JSON array of comment threads with metadata
+
+**Use case:** Display collaboration comments and annotation discussions
 
 ```cs
 public IActionResult RenderAnnotationComments([FromBody] Dictionary<string, string> jsonObject)
@@ -130,11 +204,23 @@ public IActionResult RenderAnnotationComments([FromBody] Dictionary<string, stri
 }
 ```
 
-## Unload action
+### Unload action
 
-N> public IActionResult Unload([FromBody] Dictionary<string, string> jsonObject)
+**Method signature:**
+```csharp
+public IActionResult Unload([FromBody] Dictionary<string, string> jsonObject)
+```
 
-The [Unload](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_Unload_System_String_) action clears cached artifacts when the viewer closes or refreshes. Callers do not need additional payload details beyond the document GUID. The action invokes [ClearCache](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_ClearCache_System_Collections_Generic_Dictionary_System_String_System_String__) to release memory for the stored document.
+Clear cached document data and free server memory.
+
+**Workflow:**
+1. [Unload](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_Unload_System_String_) should be called when viewer is closed or document is unloaded
+2. [`PdfRenderer.ClearCache()`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_ClearCache_System_Collections_Generic_Dictionary_System_String_System_String__) removes document from memory cache
+3. All rendered pages and metadata for this document are cleared
+4. Memory is freed for other documents or operations
+5. Document ID becomes invalid for subsequent requests
+
+Unload should be called to prevent memory leaks when documents are no longer needed
 
 ```cs
 public IActionResult Unload([FromBody] Dictionary<string, string> jsonObject)
@@ -146,11 +232,21 @@ public IActionResult Unload([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-## ExportAnnotations action
+### ExportAnnotations action
 
-N> public IActionResult ExportAnnotations([FromBody] Dictionary<string, string> jsonObject)
+**Method signature:**
+```csharp
+public IActionResult ExportAnnotations([FromBody] Dictionary<string, string> jsonObject)
+```
 
-The [ExportAnnotations](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_ExportAnnotations_System_String_) action responds to the “Export annotation to JSON” and “Export annotation to XFDF” toolbar commands. The `jsonObject` parameter identifies the format. The action delegates to [ExportAnnotation](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_ExportAnnotation_System_Collections_Generic_Dictionary_System_String_System_String__) and returns the exported data so the client can trigger a download.
+Export annotations to JSON or XFDF format for storage or sharing using the [ExportAnnotations](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_ExportAnnotations_System_String_) action.
+
+**Workflow:**
+1. User clicks "Export annotations" in toolbar
+2. [`PdfRenderer.ExportAnnotation()`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_ExportAnnotation_System_Collections_Generic_Dictionary_System_String_System_String__) serializes all annotations from document
+3. Supports two formats: JSON or XFDF
+4. Returns serialized annotation data
+5. Client initiates file download with exported data
 
 ```cs
 public IActionResult ExportAnnotations([FromBody] Dictionary<string, string> jsonObject)
@@ -161,11 +257,22 @@ public IActionResult ExportAnnotations([FromBody] Dictionary<string, string> jso
 }
 ```
 
-## ImportAnnotations
+### ImportAnnotations action
 
-N> public IActionResult ImportAnnotations([FromBody] Dictionary<string, string> jsonObject)
+**Method signature:**
+```csharp
+public IActionResult ImportAnnotations([FromBody] Dictionary<string, string> jsonObject)
+```
 
-The [ImportAnnotations](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_ImportAnnotations_System_String_) action imports XFDF or JSON annotation data supplied by the toolbar. The payload either provides a file name that resolves through `GetDocumentPath` or contains base64 data. Update error responses to echo available keys such as `fileName` to keep diagnostics consistent when documents are missing. The action ultimately calls [ImportAnnotation](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_ImportAnnotation_System_Collections_Generic_Dictionary_System_String_System_String__) and returns the serialized result.
+Import annotations from JSON or XFDF file into the current document using [ImportAnnotations](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_ImportAnnotations_System_String_) action. Validate file paths and restrict access to trusted locations only
+
+**Workflow:**
+1. User selects annotation file to import from toolbar
+2. File can be specified by filename or as base64-encoded data
+3. Controller resolves file path for file-based imports
+4. [`PdfRenderer.ImportAnnotation()`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_ImportAnnotation_System_Collections_Generic_Dictionary_System_String_System_String__) parses annotation data
+5. Annotations are merged into the current document
+6. Client UI updates to display imported annotations
 
 ```cs
 public IActionResult ImportAnnotations([FromBody] Dictionary<string, string> jsonObject)
@@ -213,11 +320,23 @@ public IActionResult ImportAnnotations([FromBody] Dictionary<string, string> jso
 }
 ```
 
-## ImportFormFields action
+## Form field actions
 
-N> public IActionResult ImportFormFields([FromBody] Dictionary<string, string> jsonObject)
+### ImportFormFields action
 
-The [ImportFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_ImportFormFields_System_String_) action hydrates form fields from JSON data supplied by the viewer or a stored file. The controller should resolve the source path and ensure the input is sanitized before calling [ImportFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_ImportFormFields_System_Collections_Generic_Dictionary_System_String_System_String__) to populate the form fields within the loaded document.
+**Method signature:**
+```csharp
+public IActionResult ImportFormFields([FromBody] Dictionary<string, string> jsonObject)
+```
+
+Populate form fields from saved field data using [ImportFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_ImportFormFields_System_String_) action. Validate and sanitize input file paths to prevent directory traversal.
+
+**How it works:**
+1. User imports form field data from a previously saved file
+2. Controller resolves file path or accepts base64-encoded data
+3. [`PdfRenderer.ImportFormFields()`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_ImportFormFields_System_Collections_Generic_Dictionary_System_String_System_String__) parses field data and maps to form fields
+4. Form field values are populated in the document
+5. Client UI updates to display imported field values
 
 ```cs
 public IActionResult ImportFormFields([FromBody] Dictionary<string, string> jsonObject)
@@ -229,11 +348,21 @@ public IActionResult ImportFormFields([FromBody] Dictionary<string, string> json
 }
 ```
 
-## ExportFormFields action
+### ExportFormFields action
 
-N> public IActionResult ExportFormFields([FromBody] Dictionary<string, string> jsonObject)
+**Method signature:**
+```csharp
+public IActionResult ExportFormFields([FromBody] Dictionary<string, string> jsonObject)
+```
 
-The [ExportFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_ExportFormFields_System_String_) action runs when end users submit PDF forms. It serializes the current form values to JSON for custom processing or download. The action delegates to [ExportFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_ExportFormFields_System_Collections_Generic_Dictionary_System_String_System_String__) and returns the generated JSON string to the viewer.
+Export form field values to JSON format for storage or submission using [ExportFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_ExportFormFields_System_String_).
+
+**Workflow:**
+1. User submits form or exports form data
+2. [`PdfRenderer.ExportFormFields()`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_ExportFormFields_System_Collections_Generic_Dictionary_System_String_System_String__) serializes all form field values
+3. Each field includes name and current value
+4. Returns JSON object mapping field names to values
+5. Client can save or transmit this data
 
 ```cs
 public IActionResult ExportFormFields([FromBody] Dictionary<string, string> jsonObject)
@@ -244,11 +373,21 @@ public IActionResult ExportFormFields([FromBody] Dictionary<string, string> json
 }
 ```
 
-## Download action
+### Download action
 
-N> public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
+**Method signature:**
+```csharp
+public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
+```
 
-The [Download](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_Download_System_String_) action streams the current PDF to the client when the toolbar download command is used. The controller calls [GetDocumentAsBase64](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_GetDocumentAsBase64_System_Collections_Generic_Dictionary_System_String_System_String__), and the client decodes the base64 string to initiate a file download.
+Stream the current PDF document to client for download using [Download](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_Download_System_String_) action.
+
+**Workflow:**
+1. User clicks download button in toolbar
+2. [`PdfRenderer.GetDocumentAsBase64()`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_GetDocumentAsBase64_System_Collections_Generic_Dictionary_System_String_System_String__) retrieves current document
+3. Document is encoded as base64 string for safe transmission
+4. Server returns base64-encoded PDF data
+5. Client decodes and initiates browser download with original filename
 
 ```cs
 public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
@@ -260,11 +399,24 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-## PrintImages
+### PrintImages action
 
-N> public IActionResult PrintImages([FromBody] Dictionary<string, string> jsonObject)
+**Method signature:**
+```csharp
+public IActionResult PrintImages([FromBody] Dictionary<string, string> jsonObject)
+```
 
-The [PrintImages](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_Print_System_String_) action supports client-side printing. The viewer requests each page image sequentially, and the controller calls [GetPrintImage](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_GetPrintImage_System_Collections_Generic_Dictionary_System_String_System_String__) to return serialized image data that the browser uses to compose printable markup.
+[PrintImages](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerServerActionSettingsBuilder.html#Syncfusion_EJ2_PdfViewer_PdfViewerServerActionSettingsBuilder_Print_System_String_) action generates print-ready page images for client-side printing.
+
+**How it works:**
+1. User clicks print button in toolbar
+2. Browser opens print preview dialog
+3. For each page visible in print range:
+   - [`PdfRenderer.GetPrintImage()`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfRenderer.html#Syncfusion_EJ2_PdfViewer_PdfRenderer_GetPrintImage_System_Collections_Generic_Dictionary_System_String_System_String__) renders page at print resolution
+   - Image is encoded as base64
+   - Client receives image data
+4. Browser composes HTML with images for printing
+5. User can print to physical printer or PDF
 
 ```cs
 public IActionResult PrintImages([FromBody] Dictionary<string, string> jsonObject)
@@ -276,11 +428,22 @@ public IActionResult PrintImages([FromBody] Dictionary<string, string> jsonObjec
 }
 ```
 
-## GetDocumentPath method
+## Helper methods
 
-N> private string GetDocumentPath(string document)
+### GetDocumentPath method
 
-`GetDocumentPath` resolves the document file system path used by multiple actions. Ensure the implementation restricts file access to known directories and logs attempts to access missing resources for diagnostics.
+**Method signature:**
+```csharp
+private string GetDocumentPath(string document)
+```
+
+`GetDocumentPath` resolves document file path from a relative or absolute reference.
+
+**Workflow:**
+1. Checks if provided path is absolute and file exists
+2. If not found, tries to locate file in `Data/` subdirectory
+3. Logs path for diagnostics and security auditing
+4. Returns resolved file path or empty string if not found
 
 ```cs
 private string GetDocumentPath(string document)
@@ -301,11 +464,23 @@ private string GetDocumentPath(string document)
 }
 ```
 
-## PdfViewerController constructor
+### PdfViewerController constructor
 
-N> public PdfViewerController(IHostingEnvironment hostingEnvironment, IMemoryCache cache)
+**Method signature:**
+```csharp
+public PdfViewerController(IHostingEnvironment hostingEnvironment, IMemoryCache cache)
+```
 
-`IMemoryCache` stores rendered document resources, while `IHostingEnvironment` exposes the application path for locating files. Inject both services through the constructor so that each controller action reuses the same cache instance for optimal performance.
+Initializes the PDF Viewer controller with required dependencies.
+
+**Dependencies:**
+- **IHostingEnvironment**: Provides application root path via `ContentRootPath` property
+  - Used by `GetDocumentPath` to locate documents relative to application directory
+  - Enables secure path resolution
+- **IMemoryCache**: ASP.NET Core in-memory cache service
+  - Stores rendered pages and document metadata
+  - Improves performance by avoiding repeated processing
+  - Critical for multi-user scenarios
 
 ```cs
 private IHostingEnvironment _hostingEnvironment;

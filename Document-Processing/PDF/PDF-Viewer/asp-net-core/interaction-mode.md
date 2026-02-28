@@ -8,13 +8,13 @@ documentation: ug
 ---
 
 
-# Interaction mode in PDF Viewer
+# Interaction Mode in PDF Viewer
 
-The PDF Viewer provides two interaction modes to work with the loaded PDF document: selection mode and panning mode.
+The PDF Viewer provides two interaction modes for working with loaded PDF documents: selection mode and panning mode.
 
-## Selection mode
+## Selection Mode
 
-In this mode, users can select and copy text in the loaded PDF document. Panning and touch-based scrolling are disabled. This is useful for copying and sharing text content. Enable or disable text selection as shown in the following example.
+In selection mode, text can be selected and copied from the loaded PDF document. Panning and touch-based scrolling are disabled. This is useful for copying and sharing text content. Text selection can be enabled or disabled as shown in the following example:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -44,13 +44,13 @@ In this mode, users can select and copy text in the loaded PDF document. Panning
 
 ![Alt text](./images/selection.png)
 
-## Panning mode
+## Panning Mode
 
-In this mode, panning and touch-based scrolling are enabled, while text selection is disabled.
+In panning mode, panning and touch-based scrolling are enabled, while text selection is disabled.
 
-![Alt text](./images/pan.png)
+![Panning mode interface](./images/pan.png)
 
-Switch the interaction mode of the PDF Viewer using the following example:
+The interaction mode can be switched using the following example:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

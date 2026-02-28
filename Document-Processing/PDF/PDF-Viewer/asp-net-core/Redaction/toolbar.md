@@ -9,7 +9,7 @@ documentation: ug
 
 # Redaction toolbar customization in ASP.NET Core
 
-The redaction toolbar in the Syncfusion ASP.NET Core PDF Viewer can be customized by rearranging existing items, hiding default items, or adding new ones. You can also place custom items at specific index positions among the existing toolbar items.
+Customize the redaction toolbar by rearranging existing items, hiding default items, or adding custom items. Custom items can be inserted at specific index positions among existing toolbar items.
 
 ## Enable the redaction toolbar
 
@@ -60,17 +60,17 @@ Refer to the following image for the toolbar view:
 
 ## Show or hide the redaction toolbar
 
-You can toggle the redaction toolbar either using the built‑in toolbar icon or programmatically with the `showRedactionToolbar` method.
+Toggle the redaction toolbar using the built‑in toolbar icon or programmatically with the `showRedactionToolbar` method.
 
 ### Display the redaction toolbar using the toolbar icon
 
-When **RedactionEditTool** is included in the toolbar settings, clicking the redaction icon in the primary toolbar will show or hide the redaction toolbar.
+When `RedactionEditTool` is included in the toolbar settings, clicking the redaction icon in the primary toolbar shows or hides the redaction toolbar.
 
 ![Show redaction toolbar from the primary toolbar](../redaction/redaction-annotations-images/redaction-icon-toolbar.png)
 
 ### Display the redaction toolbar programmatically
 
-You can also control visibility through code by calling `viewer.toolbar.showRedactionToolbar(true/false)`.
+Control visibility in code by calling `viewer.toolbar.showRedactionToolbar(true)` or `viewer.toolbar.showRedactionToolbar(false)`.
 
 The following example demonstrates toggling the redaction toolbar programmatically:
 

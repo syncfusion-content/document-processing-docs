@@ -140,9 +140,9 @@ public async Task<IActionResult> OnPostLoadAsync([FromBody] jsonObjects response
 }
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
+N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with the actual Google Drive folder ID, application name, and path for the JSON file.
 
-N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+N> The **FolderId** is the unique identifier for the folder. For example, if the folder URL is `https://drive.google.com/drive/folders/abc123xyz456`, the folder ID is `abc123xyz456`.
 
 **Step 4:** Configure the PDF Viewer component
 
@@ -163,6 +163,6 @@ Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serv
 
 ```
 
-N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the previous code example.
+N> The **Google.Apis.Drive.v3** NuGet package must be installed in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-drive)

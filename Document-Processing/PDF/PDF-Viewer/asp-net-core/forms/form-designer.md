@@ -12,12 +12,13 @@ domainurl: ##DomainURL##
 
 When **Form Designer mode** is enabled in the Syncfusion ASP.NET Core PDF Viewer, a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/formdesigner#/tailwind3) is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
 
-Using the Form Designer UI, users can place form fields on the PDF, move and resize them, configure field and widget properties, preview the designed form, and remove fields when required. The Form Designer toolbar can also be shown or hidden and customized to control the available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
+Form fields can be placed on the PDF, moved and resized, configured with field and widget properties, previewed, and removed as needed. The Form Designer toolbar can be shown, hidden, and customized to control available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
 ## Key Features
 
 **Add Form Fields**
-You can add the following form fields to the PDF:
+
+The following form fields can be added to the PDF:
 
 - [Text box](../forms/manage-form-fields/create-form-fields#add-textbox)
 - [Password Field](../forms/manage-form-fields/create-form-fields#add-password)
@@ -29,23 +30,28 @@ You can add the following form fields to the PDF:
 - [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
 
 **Edit Form Fields**
-You can move, resize, align, distribute, copy, paste, and undo or redo changes to form fields.
+
+Form fields can be moved, resized, aligned, distributed, copied, pasted, and changes can be undone or redone.
 
 **Set Field Properties**
-You can configure field properties such as name, value, font, color, border, alignment, visibility, tab order, and required or read only state.
+
+Field properties such as name, value, font, color, border, alignment, visibility, tab order, and required or read-only state can be configured.
 
 **Control Field Behavior**
-You can enable or disable read only mode, show or hide fields, and control whether fields appear when printing the document.
+
+Read-only mode can be enabled or disabled, fields can be shown or hidden, and visibility during printing can be controlled.
 
 **Manage Form Fields**
-You can select, group or ungroup, reorder, and delete form fields as needed.
+
+Form fields can be selected, grouped or ungrouped, reordered, and deleted as needed.
 
 **Save and Print Forms**
-Designed form fields can be saved into the PDF document and printed with their appearances.
+
+Designed form fields can be saved to the PDF document and printed with their appearances.
 
 ## Enable Form Designer
 
-To enable form design features, use the ASP.NET Core TagHelper for the PDF Viewer. The TagHelper renders the client component and loads the EJ2 bundle (via `resourceUrl`) which provides the Form Designer modules at runtime.
+Form design features are enabled using the ASP.NET Core TagHelper for the PDF Viewer. The TagHelper renders the client component and loads the EJ2 bundle (via `resourceUrl`), which provides the Form Designer modules at runtime.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -72,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## Form Designer UI
 
-When **Form Designer mode** is enabled in the Syncfusion ASP.NET Core PDF Viewer, a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/formdesigner#/tailwind3) is displayed. This UI provides a built in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
+When Form Designer mode is enabled in the Syncfusion ASP.NET Core PDF Viewer, a default [Form Designer UI](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/formdesigner#/tailwind3) is displayed. This UI provides a built-in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop-down lists, and signature fields. Fields can be placed on the PDF, selected, resized or moved, and configured using available editing options, enabling interactive form creation directly within the viewer.
 
 ![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 
@@ -82,7 +88,7 @@ For more information about creating and editing form fields in the PDF Viewer, r
 
 ## Form Designer Toolbar
 
-The **Form Designer toolbar** appears at the top of the PDF Viewer and provides quick access to form field creation tools. It includes frequently used field types such as:
+The Form Designer toolbar appears at the top of the PDF Viewer and provides quick access to form field creation tools. It includes frequently used field types such as:
 
 - [Text box](../forms/manage-form-fields/create-form-fields#add-textbox)
 - [Password Field](../forms/manage-form-fields/create-form-fields#add-password)
@@ -93,11 +99,11 @@ The **Form Designer toolbar** appears at the top of the PDF Viewer and provides 
 - [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
 - [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
 
-Each toolbar item allows users to place the corresponding form field by selecting the tool and clicking on the desired location in the PDF document.
+Each toolbar item allows placing the corresponding form field by selecting the tool and clicking the desired location in the PDF document.
 
 ![Adding Text Box](../../javascript-es6/images/AddTextBox.gif)
 
-Use the following code snippet to enable Form Designer using the ASP.NET Core TagHelper.
+The following code snippet enables Form Designer using the ASP.NET Core TagHelper:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -127,11 +133,11 @@ For more information about creating and editing form fields in the PDF Viewer, r
 
 ## Show or Hide the Built-in Form Designer Toolbar
 
-You can control the visibility of the Form Designer toolbar using the [isFormDesignerToolbarVisible()](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_IsFormDesignerToolbarVisible) method. This allows you to display or hide the Form Designer tools in the PDF Viewer based on your application requirements.
+The visibility of the Form Designer toolbar can be controlled using the [isFormDesignerToolbarVisible()](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_IsFormDesignerToolbarVisible) method. This allows displaying or hiding the Form Designer tools based on application requirements.
 
 **Use this method to:**
-- Show the Form Designer toolbar when form design is required
-- Hide the toolbar to provide cleaner viewing experience
+- Show the Form Designer toolbar when form design is required.
+- Hide the toolbar to provide a cleaner viewing experience.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -159,13 +165,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## Customize the Built-in Form Designer Toolbar
 
-You can customize the Form Designer toolbar by specifying the tools to display and arranging them in the required order using the [FormDesignerToolbarItems](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormDesignerToolbar) property.
-
-This customization helps you limit the available tools and simplify the user interface.
+The Form Designer toolbar can be customized by specifying the tools to display and arranging them in the required order using the [FormDesignerToolbarItems](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormDesignerToolbar) property. This customization limits available tools and simplifies the user interface.
 
 **Key Points**
-- Include only the toolbar items you need, in the exact order you specify.
-- Any toolbar items not listed remain hidden, resulting in a cleaner and more focused UI.
+- Include only the toolbar items needed, in the exact order specified.
+- Toolbar items not listed remain hidden, resulting in a cleaner, more focused UI.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -196,25 +200,22 @@ This customization helps you limit the available tools and simplify the user int
 
 ## Move, Resize, and Edit Form Fields
 
-You can move, resize, and edit an existing form field directly in the PDF Viewer using the Form Designer.
+Existing form fields can be moved, resized, and edited directly in the PDF Viewer using the Form Designer.
 
 - Move a field by selecting it and dragging it to the required position.
-
 - Resize a field using the handles displayed on the field boundary.
 
-![Moveing and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
+![Moving and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
 
-- Edit a field by selecting it to open the Form Field Properties popover. The popover allows you to modify the form field and widget annotation properties. Changes are reflected immediately in the viewer and are saved when the properties popover is closed.
-For more information, see Editing Form Fields
+- Edit a field by selecting it to open the Form Field Properties popover. The popover allows modifying form field and widget annotation properties. Changes are reflected immediately and saved when the properties popover is closed. For more information, see [Editing Form Fields](./manage-form-fields/modify-form-fields).
 
 ## Deleting Form Fields
 
-You can remove a form field from the PDF document by selecting the field and using one of the following methods:
-- Click the `Delete option` in the Form Designer UI.
-- Press the `Delete key` on the keyboard after selecting the form field.
+Form fields can be removed from the PDF document by selecting the field and using one of the following methods:
+- Click the Delete option in the Form Designer UI.
+- Press the Delete key after selecting the form field.
 
-The selected form field and its associated widget annotation are permanently removed from the page.
-For more information, see  [Deleting Form Fields](./manage-form-fields/remove-form-fields)
+The selected form field and its associated widget annotation are permanently removed from the page. For more information, see [Deleting Form Fields](./manage-form-fields/remove-form-fields).
 
 ## See Also
 
