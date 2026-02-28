@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export As Image in Vue PDF Viewer
+# Export as image in Vue PDF Viewer
 
-Export a single page as a Base64-encoded image using `exportAsImage()` or export a range of pages using `exportAsImages()`.
+The PDF Viewer component can export pages as Base64-encoded image strings using the `exportAsImage()` method (single page) and `exportAsImages()` method (page range). The examples below demonstrate single-page export, range export, and how to specify a custom image size.
 
 Steps to export pages as images
 
@@ -105,7 +105,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Export a specified page as a Base64-encoded image with a custom size:
+### Export a single page with a custom size
+
+Use the same API and pass a `Size` object to request a custom image size.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -196,7 +198,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Export a range of pages as Base64-encoded image strings:
+### Export a range of pages
+
+Export a page range; the method returns an array of Base64-encoded image strings for the requested pages.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -285,7 +289,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Export a range of pages as Base64-encoded images with a custom size:
+### Export a range of pages with a custom size
+
+Pass a `Size` object when exporting a page range to control the output image dimensions.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -376,4 +382,8 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, you can successfully integrate and use the export as image API in the EJ2 PDF Viewer.
+Notes:
+
+- Examples use `pageIndex` values starting at `1` as shown; confirm indexing for the viewer version in use.
+- Keep code-blocks unchanged when copying samples; adjust variable names and method names to match application conventions (for example, use `exportAsImagesWithSize` for a range export if that naming improves clarity).
+- For complete API details, consult the PDF Viewer documentation and API reference.

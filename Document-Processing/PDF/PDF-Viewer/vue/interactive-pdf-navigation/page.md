@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Page navigation in PDF Viewer
 
-The Syncfusion Vue PDF Viewer offers built-in page navigation through its toolbar and exposes APIs so you can create tailored navigation experiences. This section explains how to enable toolbar commands and invoke navigation methods from your own UI.
+The Vue PDF Viewer supports internal and external navigation methods.
 
 ## Toolbar page navigation options
 
-The default toolbar includes the following commands:
+The PDF Viewer default toolbar includes the following page navigation options:
 
-* [**Go to page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotopage) – Navigate to a specific page number.
-* [**Show next page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotonextpage) – Move to the next page in the document.
-* [**Show previous page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotopreviouspage) – Return to the previous page.
-* [**Show first page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotofirstpage) – Jump to the first page.
-* [**Show last page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotolastpage) – Jump to the final page.
+* [**Go to page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to a specified page in the PDF document.
+* [**Show next page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page in the PDF document.
+* [**Show previous page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page in the PDF document.
+* [**Show first page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotofirstpage):- Navigates to the first page of the PDF document.
+* [**Show last page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of the PDF document.
 
-Control the toolbar navigation availability with the `enableNavigation` property.
+Enable or disable the page navigation option in the PDF Viewer using the following code snippet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -203,11 +203,13 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-![PDF Viewer toolbar navigation options](../images/navigation.png)
+![PDF Viewer toolbar showing page navigation controls](../images/navigation.png)
 
 ## Programmatic page navigation
 
 Trigger navigation methods from your own UI elements—like buttons or menu items—by using the `navigation` object exposed by the PDF Viewer instance.
+
+The following examples show how to perform page navigation programmatically.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}

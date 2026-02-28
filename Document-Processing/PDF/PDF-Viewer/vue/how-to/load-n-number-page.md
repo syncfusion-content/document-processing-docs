@@ -8,13 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load N number of pages on initial loading in Vue
+# Load N pages initially
 
-The initial rendering in a PDF viewer allows users to control the number of pages displayed when opening a PDF document. This improves the user experience by providing flexibility in loading a specific number of pages initially, while additional pages are dynamically rendered as the user scrolls through the document. This approach enhances the responsiveness of the PDF viewer and minimizes delays as users can access specific pages without waiting for the entire document to load.
+Control the number of pages the PDF Viewer renders on the initial load to improve perceived performance and reduce initial memory usage. Additional pages are rendered dynamically as the user scrolls through the document, allowing quick access to early pages without loading the entire file.
 
-To utilize this capability in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, use the `initialRenderPages` property. You can achieve the desired outcome by setting this property to the desired number of pages you want to load initially. However, it's important to exercise caution when setting a high value for the initialRenderPages in large documents with numerous pages. Rendering a large number of pages simultaneously can increase memory usage and slow down loading times, impacting the performance of the PDF viewer.
-
-Using the `initialRenderPages` property judiciously is advisable, especially when dealing with larger documents. It is more suitable for scenarios where a smaller range of pages, such as 10-20, can be loaded to provide a quick initial view of the document.
+Set the [initialRenderPages](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#initialrenderpages) property to specify how many pages to render initially. For large documents, avoid high values for `initialRenderPages` because rendering many pages at once increases memory use and may slow loading. Typical ranges of 10–20 pages work well for most documents; adjust based on document size and client capabilities.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
