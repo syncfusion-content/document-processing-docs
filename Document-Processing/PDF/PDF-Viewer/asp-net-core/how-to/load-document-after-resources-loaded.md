@@ -3,23 +3,24 @@ layout: post
 title: Load document after resources Loaded Core PDF Viewer | Syncfusion
 description: Learn here how to load a PDF only after assets are ready in the Syncfusion ASP.NET Core PDF Viewer (Standalone) using the resourcesLoaded event.
 platform: document-processing
-control: PDF Viewer 
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load a PDF only after PDFium resources are ready
+# Defer document loading until PDFium resources are ready
 
-In Standalone mode, the ASP.NET Core PDF Viewer downloads its PDFium runtime assets (scripts/wasm) from the location specified in the resourceUrl property. Attempting to load a document before those assets are available can cause errors. Use the resourcesLoaded event to defer document loading until all required assets are ready.
+In Standalone mode, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer downloads the required PDFium runtime assets (scripts and WebAssembly) from the location specified in the [`resourceUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ResourceUrl) property. Attempting to load a document before these assets are fully initialized can lead to errors. Use the `resourcesLoaded` event to ensure the document is only loaded once the viewer's runtime is fully prepared.
 
 ## When does resourcesLoaded trigger?
 
-The resourcesLoaded event fires once the viewer finishes loading all required PDFium assets. At this point, it is safe to call the load method to open a document (by URL or Base64).
+The [`resourcesLoaded`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ResourcesLoaded) event fires after the viewer has successfully downloaded and initialized all internal PDFium dependencies. This event indicates that it is safe to invoke the `load()` method via the viewer instance.
 
-## How to Load Document after resourcesLoaded
+Follow these steps to synchronize document loading with asset readiness:
 
-- Set the resourceUrl to a valid PDF Viewer assets path (CDN or your hosted path).
-- Listen to resourcesLoaded and call load inside the handler.
+1. Specify a valid `resourceUrl` (using a CDN or a locally hosted path).
+2. Assign a handler to the `resourcesLoaded` event.
+3. Programmatically call the `load()` method inside the handler.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -63,11 +64,11 @@ The resourcesLoaded event fires once the viewer finishes loading all required PD
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to)
 
-## Notes and best practices
+## Best practices
 
-- Always set a valid resourceUrl when using the Standalone PDF Viewer. If the path is incorrect or blocked by the network, the event cannot fire.
-- Load documents inside resourcesLoaded. This guarantees the PDFium runtime is ready and prevents intermittent errors on slower networks.
-- The event fires for the viewer’s asset load life cycle, not for every document load. After it fires once, you can safely call load again later (for example, in response to user actions) without waiting for the event.
+*   **Path Verification:** Ensure the `resourceUrl` is accurate and accessible. If the network blocks the asset location or the path is incorrect, the `resourcesLoaded` event will not fire.
+*   **One-Time Lifecycle:** The `resourcesLoaded` event typically fires once during the component's lifecycle initialization. Subsequent document loads (e.g., in response to user selection) do not need to wait for this event if it has already occurred.
+*   **Error Handling:** For mission-critical viewers, monitor network failures for the `resourceUrl` to provide appropriate fallback messages to the user.
 
 ## See also
 

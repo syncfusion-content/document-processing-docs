@@ -13,7 +13,7 @@ The Redaction Tool enables users to permanently mark and remove sensitive conten
 
 ![Redaction in Mobile View](./redaction-annotations-images/redaction-mobile-view.png)
 
-N> In mobile view, the redaction toolbar appears at the bottom of the viewer for easy thumb access. Mobile layout activates automatically on small screens.
+N> In mobile view, the redaction toolbar appears at the bottom of the viewer for thumb access. The mobile layout activates automatically on small screens.
 
 ## Adding Redaction in Mobile View
 

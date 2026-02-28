@@ -9,42 +9,42 @@ documentation: ug
 
 # UI Interactions for Organizing Pages in ASP.NET Core PDF Viewer
 
-The PDF Viewer provides an intuitive user interface for managing and organizing pages within a PDF document. This section covers the various UI interactions available in the `Organize Pages` dialog.
+The PDF Viewer provides an intuitive interface for organizing pages with the following UI interactions.
 
 
 
 ## Rotating PDF pages
 
-You can adjust the orientation of pages to ensure proper alignment. The rotate icon in the Organize Pages dialog provides the following options:
+Adjust page orientation using the rotate controls in the Organize Pages dialog.
 
-*   **Rotate clockwise**: Rotate the selected pages 90 degrees clockwise.
-*   **Rotate counter-clockwise**: Rotate the selected pages 90 degrees counter-clockwise.
+* **Rotate clockwise:** Rotates selected pages 90 degrees clockwise.
+* **Rotate counter-clockwise:** Rotates selected pages 90 degrees counter-clockwise.
 
 ![Rotating Pages](../images/rotate-rearrange.gif)
 
 ## Rearranging PDF pages
 
-Easily change the sequence of pages using the drag-and-drop method:
+Change page sequence with drag-and-drop.
 
-*   **Drag and drop**: Click and drag a page thumbnail to the desired position within the document, then release it to reorder the pages.
+* **Drag and drop:** Drag a thumbnail to the desired position and release to reorder.
 
 ![Rearranging Pages](../images/rotate-rearrange.gif)
 
 ## Inserting new pages
 
-Effortlessly add blank pages to your document with the following options:
+Add blank pages at the required position.
 
-*   **Insert blank page left**: Insert a blank page to the left of the selected page.
-*   **Insert blank page right**: Insert a blank page to the right of the selected page.
+* **Insert blank page left** Inserts a blank page to the left of the selected page.
+* **Insert blank page right** Inserts a blank page to the right of the selected page.
 
 ![insert](../images/organize-insert.png)
 
 ## Deleting PDF pages
 
-Remove unwanted pages from your document with these steps:
+Remove unwanted pages from the document:
 
-1.  **Select pages to delete**: Click on the thumbnails of the pages you wish to remove. You can select multiple pages at once.
-2.  **Delete selected pages**: Use the delete option in the Organize Pages pane to remove the selected pages from the document.
+1. **Select pages to delete:** Click or tap thumbnails to select pages; multiple selection is supported.
+2. **Delete selected pages:** Use the delete option to remove selected pages.
 
 ![Delete](../images/organize-delete.png)
 
@@ -52,45 +52,45 @@ Remove unwanted pages from your document with these steps:
 
 Duplicate pages within your PDF document effortlessly:
 
-*   **Select pages to copy**: Click on the page thumbnails you wish to duplicate.
-*   **Copy selected pages**: Use the copy option to create duplicates. The copied pages will be added to the right of the selected pages.
+* **Select pages to copy:** Click or tap thumbnails to select pages to duplicate.
+* **Copy selected pages:** Copied pages insert to the right of the selection.
 
 ![Copying](../images/organize-copy.png)
 
 ## Importing a PDF document
 
-Seamlessly import another PDF document into your current document:
+Import another PDF document into the current document:
 
-*   **Import PDF document**: Click the **Import Document** button to select and import a PDF. The imported document will be inserted as a thumbnail. If a page is selected, the thumbnail will be added to its right. If no pages are selected, it will be added as the first page. The imported PDF will be merged with the current document upon saving.
+* **Import PDF Document:** Click **Import Document** to select and import a PDF. Imported pages appear as thumbnails and insert to the right of selection (or at start if none selected). Pages merge when saved.
 
 ![Importing](../images/import.gif)
 
 ## Selecting all pages
 
-Select all pages simultaneously to perform bulk operations, such as rotating or deleting all pages at once.
+Select all pages for bulk operations such as rotation or deletion.
 
 ![Selecting](../images/selectall.png)
 
 ## Zooming page thumbnails
 
-Adjust the size of page thumbnails for better visibility and precision:
+Adjust thumbnail size for better visibility:
 
-*   Use the zoom slider to increase or decrease the thumbnail size.
-*   Zoom in to see more detail on each page.
-*   Zoom out to view more pages at once.
+* Use the zoom slider to adjust thumbnail size.
+* Zoom in for detailed page view.
+* Zoom out to display more pages simultaneously.
 
 ![Zooming](../images/zoomOrganize.png)
 
 ## Real-time updates and saving
 
-All changes are reflected instantly in the Organize Pages dialog. Click the **Save** button to apply the modifications to the document. Use the **Save As** feature to download a new version of the PDF with your changes.
+Changes display instantly. Click **Save** to apply changes or **Save As** to download an updated copy.
 
 ## Keyboard shortcuts
 
-The following keyboard shortcuts are available in the Organize Pages dialog:
+The following keyboard shortcuts are available:
 
-*   **Ctrl+Z**: Undo the last action.
-*   **Ctrl+Y**: Redo the last undone action.
-*   **Ctrl+Scroll**: Zoom in and out on page thumbnails for better visibility.
+* **Ctrl+Z:** Undo the previous action.
+* **Ctrl+Y:** Redo the last undone action.
+* **Ctrl+Scroll:** Zoom thumbnails in or out.
 
 ![Keyboard](../images/undo-redo.png)

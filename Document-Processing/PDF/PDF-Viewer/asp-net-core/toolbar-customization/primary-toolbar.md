@@ -9,13 +9,13 @@ documentation: ug
 
 # Primary Toolbar in ASP.NET Core PDF Viewer Component
 
-The primary toolbar of the PDF Viewer can be customized by rearranging existing items, disabling default items, and adding custom items. New items can be placed at specific index positions among the existing items.
+The primary toolbar of the PDF Viewer can be customized by rearranging existing items, disabling default items, and adding custom items. New items can be inserted at specific index positions among existing items.
 
 ## Show or hide the primary toolbar
 
-Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. In scenarios where a custom toolbar is required, the built-in toolbar can be hidden. Use the [enableToolbar](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableToolbar) property or the [showToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide the primary toolbar.
+Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. When a custom toolbar is required, hide the built-in toolbar. Use the [enableToolbar](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableToolbar) property or the [showToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide the primary toolbar.
 
-Show or hide the toolbar using the `enableToolbar` property:
+Use the `enableToolbar` property to show or hide the toolbar:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -41,7 +41,7 @@ Show or hide the toolbar using the `enableToolbar` property:
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet explains how to show or hide the toolbar using the `showToolbar` method.
+The following code snippet shows how to show or hide the toolbar using the `showToolbar` method.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -85,9 +85,9 @@ The following code snippet explains how to show or hide the toolbar using the `s
 
 ## Show or hide toolbar items
 
-The PDF Viewer has an option to show or hide these grouped items in the built-in toolbar.
+The PDF Viewer provides options to show or hide grouped items in the built-in toolbar.
 
-* Show or hide toolbar items using toolbarSettings:
+* Show or hide toolbar items using `toolbarSettings`:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -161,13 +161,13 @@ The PDF Viewer has an option to show or hide these grouped items in the built-in
 
 ## Customize the built-in toolbar
 
-The PDF Viewer allows you to customize (add, show, hide, enable, and disable) existing items in the toolbar.
+The PDF Viewer supports customization of existing toolbar items (add, show, hide, enable, and disable).
 
-- Add: Define new items using **CustomToolbarItemModel** and include them with existing items via the [**ToolbarSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) property. Handle clicks in the toolbarClick event.
+- Add: Define new items using `CustomToolbarItemModel` and include them with existing items via the [`ToolbarSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) property. Handle item interactions in the `toolbarClick` event.
 
-- Show/Hide: Show or hide existing items using the [**ToolbarSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) property. Predefined toolbar items are available via [`ToolbarItem`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_ToolbarItems).
+- Show/Hide: Control visibility of existing items using the [`ToolbarSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) property. Predefined toolbar items are available via [`ToolbarItem`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_ToolbarItems).
 
-- Enable/Disable: Toolbar items can be enabled or disabled using enableToolbarItem.
+- Enable/Disable: Enable or disable toolbar items using `enableToolbarItem`.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -313,9 +313,10 @@ The Prefix property sets the CSS class or icon added as a prefix to the existing
 
 The Id property of a CustomToolbarItemModel uniquely identifies a toolbar item and is required for customization.
 
-When defining or customizing toolbar items, assign a specific and descriptive Id to each item.
-These properties are commonly used when defining custom toolbar items with the CustomToolbarItemModel in the context of the Syncfusion PDF Viewer. When configuring the toolbar using the ToolbarSettings property, you can include these properties to customize the appearance and behavior of each toolbar item.
+Assign a specific and descriptive `Id` to each custom toolbar item.
 
-N> When customizing toolbar items, you have the flexibility to include either icons or text based on your design preference.
+These properties are commonly used when defining custom toolbar items with `CustomToolbarItemModel`. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize the appearance and behavior of each toolbar item.
+
+N> Customization allows inclusion of either icons or text based on design preference.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Customize%20existing%20toolbar)

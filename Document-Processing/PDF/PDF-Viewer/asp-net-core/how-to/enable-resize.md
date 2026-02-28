@@ -3,15 +3,19 @@ layout: post
 title: Enable resize in ASP.NET Core PDF Viewer control | Syncfusion
 description: Learn here all about Enable resize in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Enable resize
+control: PDF Viewer
 documentation: ug
 ---
 
-# Enable resize in ASP.NET Core PDF Viewer control
+# Resize text markup annotations in ASP.NET Core PDF Viewer
 
-To enable the resizer for the text markup annotation in Syncfusion PDF viewer, you can use the [**enableTextMarkupResizer**](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableTextMarkupResizer) property. Default value of the property is false.
+The PDF Viewer has the option to display resizers for text markup annotations using the **enableTextMarkupResizer** property. This feature allows users to adjust the dimensions of the markup after it has been added to the document.
 
-Here is an example of how you can enable the resizer for the text markup annotation:
+The default value for this property is `false`.
+
+## Enable text markup resizer
+
+Set the **EnableTextMarkupResizer** property to `true` in the Razor view to display resizer handles on text markup annotations:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -21,7 +25,7 @@ Here is an example of how you can enable the resizer for the text markup annotat
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
                    resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"
-                   enableTextMarkupResizer=false>
+                   enableTextMarkupResizer="true">
     </ejs-pdfviewer>
 </div>
 
@@ -33,7 +37,7 @@ Here is an example of how you can enable the resizer for the text markup annotat
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
                    serviceUrl="/api/PdfViewer"
-                   enableTextMarkupResizer=false>
+                   enableTextMarkupResizer="true">
     </ejs-pdfviewer>
 </div>
 

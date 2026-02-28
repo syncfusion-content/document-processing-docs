@@ -9,7 +9,7 @@ documentation: ug
 
 # Save PDF files to Google Drive
 
-To save a PDF file to Google Drive using the ASP.NET Core PDF Viewer, follow the steps below. This approach uses a server-backed web service.
+Follow the steps below to save a PDF file to Google Drive using the ASP.NET Core PDF Viewer with a server-backed web service.
 
 **Step 1:** Set up the Google Drive API
 
