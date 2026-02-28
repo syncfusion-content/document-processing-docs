@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 AnnotationSelectorSettingsModel
 
-Use the [**annotationSelectorSettings**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationSelectorSettings/) property to customize the appearance and behavior of the annotation selector in the UI.
+Use the [annotationSelectorSettings](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationSelectorSettings/) property to customize the appearance and interaction behavior of the annotation selector in the Vue PDF Viewer UI.
 
-The [**AnnotationSelectorSettingsModel**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines settings such as border colors, sizes, and shapes, enabling fine-grained control over how annotations are displayed and interacted with.
+The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines selector appearance and behavior settings—such as border colors, resizer appearance, and selector line style—providing fine-grained control over how annotations are displayed and manipulated.
 
 ### How to Configure Annotation Selector Settings
 
