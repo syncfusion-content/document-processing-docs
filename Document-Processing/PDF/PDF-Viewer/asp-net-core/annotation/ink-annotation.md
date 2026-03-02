@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Ink annotation in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn about ink annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+title: Ink Annotations in ASP.NET Core PDF Viewer | Syncfusion
+description: Add and customize ink annotations in ASP.NET Core PDF Viewer. Create freehand drawings, sketches, handwritten marks and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Ink annotation in ASP.NET Core PDF Viewer control
+# Ink Annotations in ASP.NET Core PDF Viewer
 
-The PDF Viewer control provides options to add, edit, and delete ink annotations.
+The PDF Viewer control provides comprehensive ink annotation capabilities for creating freehand drawings, sketches, and handwritten marks on PDF documents. Add, edit, and customize ink annotations with full control over appearance and properties.
 
 ![Ink annotations overview](../images/ink_annotation.png)
 
@@ -17,13 +17,14 @@ The PDF Viewer control provides options to add, edit, and delete ink annotations
 
 Ink annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
-* Select the **Draw Ink** button to enable ink annotation mode.
-* Draw on any page of the PDF document.
+1. **Click the Edit Annotation button** in the PDF Viewer toolbar
+2. **Select the Draw Ink button** to enable ink annotation mode
+3. **Draw on the page** using continuous strokes
+4. Multiple strokes can be added to the same annotation
 
 ![Ink tool in the annotation toolbar](../images/ink_tool.png)
 
-The following example switches to ink annotation mode.
+**Example: Enable ink annotation mode with button click**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -67,9 +68,9 @@ The following example switches to ink annotation mode.
 
 ## Add an ink annotation programmatically to the PDF document
 
-The PDF Viewer library allows adding an ink annotation programmatically using the **addAnnotation()** method.
+The PDF Viewer library allows adding ink annotations programmatically using the **addAnnotation()** method. This enables dynamic creation of freehand drawings with precise path definition.
 
-Here is an example of adding an ink annotation programmatically using **addAnnotation()**:
+**Example: Add ink annotation programmatically with custom path**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -123,9 +124,9 @@ Here is an example of adding an ink annotation programmatically using **addAnnot
 
 ## Edit an existing ink annotation programmatically
 
-To modify an existing ink annotation programmatically, use the **editAnnotation()** method.
+To modify an existing ink annotation programmatically, use the **editAnnotation()** method. This allows updating appearance and position after creation.
 
-Here is an example of using **editAnnotation()**:
+**Example: Edit ink annotation styling and position**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -189,21 +190,21 @@ Here is an example of using **editAnnotation()**:
 
 ## Edit the properties of ink annotations
 
-Stroke color, thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
+Ink annotation appearance can be customized using the toolbar tools or the annotation properties panel. The following editing options are available:
 
-### Edit stroke color
+### 1. Edit stroke color
 
 Edit the stroke color using the color palette in the Edit Stroke Color tool.
 
 ![Change ink stroke color](../images/ink_strokecolor.png)
 
-### Edit thickness
+### 2. Edit thickness
 
 Edit thickness using the range slider in the Edit Thickness tool.
 
 ![Change ink thickness](../images/ink_thickness.png)
 
-### Edit opacity
+### 3. Edit opacity
 
 Edit opacity using the range slider in the Edit Opacity tool.
 
@@ -211,10 +212,9 @@ Edit opacity using the range slider in the Edit Opacity tool.
 
 ## Set default properties during control initialization
 
-Default properties for ink annotations can be set before creating the control using InkAnnotationSettings.
+Default properties for ink annotations can be set before creating the control using the InkAnnotationSettings object. This ensures consistent styling for all ink annotations without requiring individual customization.
 
-After changing default values, the selected values are applied.
-Refer to the following code sample to set the default ink annotation settings.
+**Example: Configure default ink annotation styling**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

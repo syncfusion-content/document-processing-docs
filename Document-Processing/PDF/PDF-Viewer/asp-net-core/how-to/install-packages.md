@@ -7,14 +7,40 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Install EJ2 PDF Viewer packages automatically in ASP.NET Core
+# Install PDF Viewer packages in ASP.NET Core
 
-Install the Syncfusion ASP.NET Core PDF Viewer dependencies by adding the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core/) package to the project file. When the project is built or a `dotnet restore` runs, NuGet downloads the package and its dependencies.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer requires the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core/) NuGet package. This package contains all the necessary assemblies, managed wrappers, and server-side components to render and interact with PDF documents.
 
-Open the `.csproj` file in Visual Studio or another editor and add the package reference entry shown below.
+## Installation methods
 
-```cs
-<PackageReference Include="Syncfusion.EJ2.PdfViewer.AspNet.Core" Version="*" />
+The PDF Viewer dependency can be added to the ASP.NET Core project using one of the following methods:
+
+### Visual Studio NuGet Manager
+
+1. Right-click on the project in **Solution Explorer** and select **Manage NuGet Packages**.
+2. Search for `Syncfusion.EJ2.PdfViewer.AspNet.Core`.
+3. Select the required version and click **Install**.
+
+### .NET CLI
+
+Run the following command in the project directory:
+
+```bash
+dotnet add package Syncfusion.EJ2.PdfViewer.AspNet.Core
 ```
 
-Alternatively, install the package through **Manage NuGet Packages** in Visual Studio or by running `dotnet add package Syncfusion.EJ2.PdfViewer.AspNet.Core`. Ensure the Syncfusion license is registered in the application before publishing. For license requirements, refer to the [Syncfusion licensing](https://help.syncfusion.com/common/essential-studio/licensing/license-key) documentation.
+### Manual Package Reference
+
+Add the following `<PackageReference>` entry directly to the `.csproj` file:
+
+```xml
+<ItemGroup>
+    <PackageReference Include="Syncfusion.EJ2.PdfViewer.AspNet.Core" Version="*" />
+</ItemGroup>
+```
+
+Replace `*` with the specific version matching the other Syncfusion dependencies. NuGet automatically restores the package and its dependencies during the next build or `dotnet restore` operation.
+
+## Licensing requirement
+
+Syncfusion provides a license key that must be registered in the application. Ensure that  the key is registered in the `Program.cs` or `Startup.cs` file before deploying the application to avoid licensing watermarks. For detailed instructions, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/license-key).
