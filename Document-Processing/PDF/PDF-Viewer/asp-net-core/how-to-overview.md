@@ -9,7 +9,7 @@ documentation: ug
 
 # Frequently Asked Questions Section in ASP.NET Core PDF Viewer
 
-The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
+The following frequently asked questions address common ASP.NET Core PDF Viewer topics:
 
 * [How to add annotation in text search in ASP.NET Core ?](./how-to/add-annotation-in-text-search)
 * [How to add custom header to the PDF Viewer ajax request?](./how-to/authorization-token)

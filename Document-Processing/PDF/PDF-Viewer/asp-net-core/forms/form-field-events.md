@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # PDF Viewer Form Field Events in ASP.NET Core
 
-The Syncfusion **ASP.NET Core PDF Viewer** provides a comprehensive set of **form field events** that allow developers to track user interactions, respond to form changes, and implement custom business logic. These events can be used for scenarios such as [validation](./form-validation), **UI updates**, **logging**, and **workflow automation**. 
+The Syncfusion ASP.NET Core PDF Viewer provides comprehensive form field events for tracking user interactions, responding to form changes, and implementing custom business logic. Events support scenarios such as [validation](./form-validation), UI updates, logging, and workflow automation.
 
-Form field events are triggered during actions such as adding, selecting, modifying, moving, resizing, and removing form fields.
+Form field events are triggered when adding, selecting, modifying, moving, resizing, and removing form fields.
 
 ## Supported PDF Form Field Events
 
@@ -36,17 +36,17 @@ The following table lists all supported form field events and their descriptions
 
 **Common Use Cases**
 
-Form field events can be used to:
-- Validate form data before printing or downloading
-- Track user interaction with form fields
-- Update UI elements dynamically
-- Log form changes for auditing
-- Trigger workflow actions based on field changes
-- Enforce business rules during form editing
+Form field events support:
+- Validating form data before printing or downloading.
+- Tracking user interactions with form fields.
+- Updating UI elements dynamically.
+- Logging form changes for auditing.
+- Triggering workflow actions based on field changes.
+- Enforcing business rules during form editing.
 
 ## Handle PDF Form Field Events
 
-You can wire up form field events on the PDF Viewer instance to execute custom logic when specific actions occur.
+Form field events can be wired on the PDF Viewer instance to execute custom logic when specific actions occur.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
 **Event Behavior Notes**
 
 - Events triggered through the UI and programmatic APIs use the same event handlers.
-- Property related events are raised immediately when changes occur.
+- Property-related events are raised immediately when changes occur.
 - Validation events are triggered only during print or download operations.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples)

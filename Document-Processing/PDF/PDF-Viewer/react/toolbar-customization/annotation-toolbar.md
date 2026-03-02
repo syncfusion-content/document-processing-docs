@@ -1,199 +1,135 @@
 ---
 layout: post
-title: Annotation Toolbar in React PDF viewer control | Syncfusion
-description: Learn here all about annotation toolbar customization in Syncfusion React PDF viewer control of Syncfusion Essential JS 2 and more.
+title: Customize the Annotation Toolbar in React PDF Viewer | Syncfusion
+description: Show or hide and customize the annotation toolbar in the EJ2 React PDF Viewer with runnable examples.
 platform: document-processing
-control: PDF Viewer 
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation Toolbar Customization in React
+# Customize the Annotation Toolbar in React PDF Viewer
 
-The annotation toolbar can be customized by showing or hiding default items and by controlling the order in which they appear.
+## Overview
 
-## Show or hide the annotation toolbar
+This guide shows how to show or hide the annotation toolbar and how to choose which tools appear and their order.
 
-Show or hide the annotation toolbar programmatically during initialization or at runtime.
+**Outcome:** A working React example that toggles the annotation toolbar and uses [`annotationToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#annotationtoolbaritems) to customize the toolbar.
 
-Use the [EnableAnnotationToolbar](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pdfViewerModel#enableannotationtoolbar) property or the [showAnnotationToolbar](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar#showannotationtoolbar) method to toggle visibility.
+## Prerequisites
 
-The following example shows how to show or hide the annotation toolbar using the `showAnnotationToolbar` method.
+- EJ2 React PDF Viewer installed and added in your project. See [getting started guide](../getting-started)
+- A valid [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) or [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) for viewer assets when running locally
+
+## Steps
+
+**Step 1:** Show or hide the annotation toolbar
+
+   - Use the [`showAnnotationToolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar#showannotationtoolbar) method on the viewer toolbar to control visibility.
 
 {% tabs %}
-{% highlight ts tabtitle="app.tsx" %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-    ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-react-pdfviewer';
-
-PdfViewerComponent.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
-    BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-const App = () => {
-    let pdfviewer;
-
-    React.useEffect(() => {
-        const buttonElement = document.getElementById('showAnnotationToolbar');
-        const handleClick = () => {
-            if (pdfviewer) {
-                pdfviewer.toolbar.showAnnotationToolbar(false);
-            }
-        };
-        buttonElement?.addEventListener('click', handleClick);
-        return () => buttonElement?.removeEventListener('click', handleClick);
-    }, []);
-
-    return (
-        <div>
-        <button id='showAnnotationToolbar'>showAnnotationToolbar</button>
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+const viewer: RefObject<PdfViewerComponent> = useRef(null);
+const [show, setShow] = useState(true);
+const hideToolbar = () => {
+    viewer.current.toolbar.showAnnotationToolbar(show);
+    setShow(!show);
+};
+return (
+    <div>
+        <button onClick={hideToolbar}>Hide Annotation Toolbar</button>
         <PdfViewerComponent
             id="PdfViewer"
-            ref={(scope) => { pdfviewer = scope; }}
-            documentPath='https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
+            ref={viewer}
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
             resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-            height="500px"
-            width="100%"
-        />
+            height="600px"
+            width="100%" >
+            <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+                BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+        </PdfViewerComponent>
+    </div>
+);
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+**Step 2:** Customize which tools appear
+
+   - Use [`annotationToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#annotationtoolbaritems) with a list of [`AnnotationToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationtoolbaritem) values. The toolbar shows only items in this list.
+
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+const annotationToolbarItems: AnnotationToolbarItem[] = [
+    'HighlightTool', 'UnderlineTool', 'StrikethroughTool', 'ColorEditTool', 'OpacityEditTool', 'AnnotationDeleteTool', 'CommentPanelTool'
+];
+<PdfViewerComponent
+    id="PdfViewer"
+    ref={viewer}
+    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+    toolbarSettings={{ annotationToolbarItems }}
+    width="100%" >
+    <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+        BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+**Complete example**
+
+The following is a complete, runnable example. It wires a toggle button and a viewer with a custom annotation toolbar list.
+
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import { useRef, RefObject, useState } from 'react';
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+    ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner,
+    AnnotationToolbarItem, PageOrganizer, Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+const annotationToolbarItems: AnnotationToolbarItem[] = [
+    'HighlightTool', 'UnderlineTool', 'StrikethroughTool', 'ColorEditTool', 'OpacityEditTool', 'AnnotationDeleteTool', 'CommentPanelTool'
+];
+export default function App() {
+    const viewer: RefObject<PdfViewerComponent> = useRef(null);
+    const [show, setShow] = useState(true);
+    const hideToolbar = () => {
+        viewer.current.toolbar.showAnnotationToolbar(show);
+        setShow(!show);
+    };
+    return (
+        <div>
+            <button onClick={hideToolbar}>Hide Annotation Toolbar</button>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={viewer}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+                toolbarSettings={{ annotationToolbarItems }}
+                height="600px"
+                width="100%" >
+                <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+                    BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+            </PdfViewerComponent>
         </div>
     );
 };
-
-ReactDOM.render(<App />, document.getElementById('container'));
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>EJ2 PDF Viewer</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="React PDF Viewer Control" />
-    <meta name="author" content="Syncfusion" />
-    <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-notifications/styles/material.css" rel="stylesheet" />
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
-   <script src="systemjs.config.js"></script>
-</head>
-<body>
-    <div id='loader'>Loading....</div>
-    <button id="set">Change Annotation Toolbar Visibility</button>
-    <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>
-    </div>
-</body>
-</html>
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-## How to customize the annotation toolbar
+## Troubleshooting
 
-Choose which tools appear and control their order in the annotation toolbar.
+- Annotation toolbar tools do not appear.
+    - **Cause**: The items are not valid [`AnnotationToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationtoolbaritem) strings or the viewer is not injected with [`Annotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation) / [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar) modules.
+    - **Solution**: Confirm services in `Inject` includes [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar) and [`Annotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation) and use valid item names.
 
-Use [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarSettings) with the [`AnnotationToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarSettings#annotationtoolbaritems) property to choose which tools are displayed in the annotation toolbar. The property accepts a list of [`AnnotationToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationToolbarItem) values. Only the items included in this list are shown; any item not listed is hidden. The rendered order follows the sequence of items in the list.
+## Related topics
 
-The annotation toolbar is presented when entering annotation mode in PDF Viewer and adapts responsively based on the available width. Include the Close tool to allow users to exit the annotation toolbar when needed.
-
-The following example demonstrates how to customize the annotation toolbar by specifying a selected set of tools using `AnnotationToolbarItem`.
-
-{% tabs %}
-{% highlight ts tabtitle="app.tsx" %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-    ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, AnnotationToolbarItem } from '@syncfusion/ej2-react-pdfviewer';
-
-PdfViewerComponent.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
-    BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-const App = () => {
-    let pdfviewer;
-    const annotationToolbarItems = [
-        "HighlightTool",
-        "UnderlineTool",
-        "StrikethroughTool",
-        "ColorEditTool",
-        "OpacityEditTool",
-        "AnnotationDeleteTool",
-        "StampAnnotationTool",
-        "HandWrittenSignatureTool",
-        "InkAnnotationTool",
-        "ShapeTool",
-        "CalibrateTool",
-        "StrokeColorEditTool",
-        "ThicknessEditTool",
-        "FreeTextAnnotationTool",
-        "FontFamilyAnnotationTool",
-        "FontSizeAnnotationTool",
-        "FontStylesAnnotationTool",
-        "FontAlignAnnotationTool",
-        "FontColorAnnotationTool",
-        "CommentPanelTool"
-    ];
-
-    return (
-        <PdfViewerComponent
-            id="PdfViewer"
-            ref={(scope) => { pdfviewer = scope; }}
-            documentPath='https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
-            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-            height="500px"
-            width="100%"
-            toolbarSettings={{ annotationToolbarItems }}
-        />
-    );
-};
-
-ReactDOM.render(<App />, document.getElementById('container'));
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>EJ2 PDF Viewer</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="React PDF Viewer Control" />
-    <meta name="author" content="Syncfusion" />
-    <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-notifications/styles/material.css" rel="stylesheet" />
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
-   <script src="systemjs.config.js"></script>
-</head>
-<body>
-    <div id='loader'>Loading....</div>
-    <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>
-    </div>
-</body>
-</html>
-
-{% endhighlight %}
-{% endtabs %}
+- [Customize form designer toolbar](./form-designer-toolbar)
+- [customize primary toolbar](./primary-toolbar)

@@ -10,21 +10,21 @@ domainurl: ##DomainURL##
 
 # Save PDF files to Box cloud storage
 
-To save a PDF file to Box cloud file storage, you can follow the steps below
+The Vue PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
 
 **Step 1:** Set up a Box developer account and create a Box application
 
-To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
+To access Box storage programmatically, a developer account with Box is needed. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide the necessary credentials like Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, authenticate the application to access the Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
 
 **Step 2:** Create a PDF Viewer sample in Vue
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of the PDF Viewer application.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. Refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
 3. Import the required namespaces at the top of the file:
 
@@ -76,7 +76,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
   string result = Path.GetFileNameWithoutExtension(documentId);
   string fileName = result + "_downloaded.pdf";
 
-  // Initialize the Box API client with your authentication credentials
+  // Initialize the Box API client with the authentication credentials
   var auth = new OAuthSession(_accessToken, "YOUR_REFRESH_TOKEN", 3600, "bearer");
   var config = new BoxConfigBuilder(_clientID, _clientSecret, new Uri("http://boxsdk")).Build();
   var client = new BoxClient(config, auth);
@@ -95,7 +95,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open the `appsettings.json` file in the web service project and add the following lines below the existing `"AllowedHosts"` configuration.
+6. Open the `appsettings.json` file in the web service project, add the required settings below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -113,7 +113,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-N> Replace the placeholders with the actual Box access token, folder ID, client ID, and client secret.
+N> Replace the placeholders with the appropriate Box access token, folder ID, client ID, and client secret. For production, avoid storing secrets in configuration files; use environment variables or a secure secret manager and follow Box best practices for OAuth or JWT authentication.
 
 **Step 4:**  Set the PDF Viewer Properties in Vue PDF viewer component
 
@@ -136,7 +136,7 @@ import {
   ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-// Replace the "localhost:44396" with the actual URL of your server
+// Replace the "localhost:44396" with the actual URL of the server
 const serviceUrl = "https://localhost:44396/pdfviewer";
 const documentPath = "PDF_Succinctly.pdf";
 
@@ -168,7 +168,7 @@ export default {
   },
   data() {
     return {
-      // Replace the "localhost:44396" with the actual URL of your server
+      // Replace the "localhost:44396" with the actual URL of the server
       serviceUrl: "https://localhost:44396/pdfviewer",
       documentPath: "PDF_Succinctly.pdf"
     };
@@ -183,9 +183,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> Install the Box.V2.Core NuGet package in the web service application to use the previous code example.
+N> Install the Box .NET SDK in the web service project: `dotnet add package Box.V2`.
 
-N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the PDF Viewer component.
+N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the `Vue PDF Viewer` component.
 
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-box-cloud-file-storage)

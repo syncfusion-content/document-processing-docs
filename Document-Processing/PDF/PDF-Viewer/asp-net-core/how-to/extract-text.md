@@ -7,40 +7,38 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Extract text using extractText in the ASP.NET Core PDF Viewer
+# Extract text from PDFs in ASP.NET Core PDF Viewer
 
-The `extractText` APIs let you retrieve text from one or more pages, returning either plain text or text with bounds for each element. Use them on the server or in the standalone viewer depending on your scenario.
+Retrieve text content from one or more pages using the `extractText` method. The viewer supports both plain text extraction and detailed text extraction with positional bounds information. You can extract text on the server side or client side depending on your use case.
 
-N>From Volume 2 2019 release Syncfusion.Pdf.Net.Core and Syncfusion.Compression.Net.Core packages are added as dependency for PDF Viewer control. Ensure the dependency packages are referred in your application properly.
+N> From the Volume 2 2019 release, the PDF Viewer depends on the `Syncfusion.Pdf.Net.Core` and `Syncfusion.Compression.Net.Core` NuGet packages. Ensure these dependencies are properly referenced in your project.
 
-## Extract text on the server (optional)
+## Extract text on the server side
 
-The server-side `ExtractText()` method returns text along with bounds so you can process it outside the viewer.
+Use the server-side `ExtractText()` method to retrieve text with bounds information for processing outside the viewer.
 
 ```cs
-
-//Uses the Syncfusion.EJ2.PdfViewer assembly
+// Uses the Syncfusion.EJ2.PdfViewer assembly
 PdfRenderer pdfExtractText = new PdfRenderer();
 pdfExtractText.Load(@"currentDirectory\..\..\..\..\Data\HTTP Succinctly.pdf");
 //Returns the bounds of the text
 List<Syncfusion.EJ2.PdfViewer.TextData> textCollection = new List<Syncfusion.EJ2.PdfViewer.TextData>();
-//Extracts the text from the first page of the PDF document along with its bounds
+// Extract text from the first page along with its bounds
 string text = pdfExtractText.ExtractText(0, out textCollection);
+// Save the extracted text to a file
 System.IO.File.WriteAllText(@"currentDirectory\..\..\..\..\Data\data.txt", text);
-
 ```
 
-N> From Volume 2 2019, the control depends on `Syncfusion.Pdf.Net.Core` and `Syncfusion.Compression.Net.Core`. Ensure all dependency packages are referenced correctly.
+N> Ensure all required dependency packages (`Syncfusion.Pdf.Net.Core` and `Syncfusion.Compression.Net.Core`) are properly referenced in the project. Update the document path and output locations according to the application configuration.
 
-Sample: [Download ExtractText sample](http://www.syncfusion.com/downloads/support/directtrac/general/ze/ExtractText-1972118166)
+**Sample:** [Download ExtractText sample](http://www.syncfusion.com/downloads/support/directtrac/general/ze/ExtractText-1972118166)
 
-N> Ensure the document path and output locations are updated for your application.
+## Extract text in standalone mode
 
-## extractText method (standalone mode)
+The `extractText()` method in the PDF Viewer retrieves text from a single page or multiple pages. Use optional parameters to specify the extraction format: plain text only or text with positional bounds.
 
-The viewer’s `extractText` method retrieves text from a single page or a range of pages. Use the optional arguments to choose between plain text (`TextOnly`) and detailed text data (`TextAndBounds`).
+### Method parameters
 
-### Parameters
 - **startIndex:** The starting page index (0-based).
 
 - **endIndex or isOptions:** Either the ending page index for multi-page extraction or an option for single-page extraction.
@@ -51,11 +49,11 @@ The viewer’s `extractText` method retrieves text from a single page or a range
 
 - **TextAndBounds:** Extracts text content along with its bounds (coordinates) within the PDF.
 
-### Returns
-A Promise that resolves with:
-- **textData:** An array of `TextDataSettingsModel` entries containing detailed text information, including bounds.
+### Return value
 
-- **pageText:** A concatenated string of text from the requested page range.
+Returns a Promise that resolves with an object containing:
+- **textData:** An array of `TextDataSettingsModel` objects with detailed text information, including bounding box coordinates.
+- **pageText:** A concatenated string containing all extracted text from the specified page range.
 
 ### Usage example
 
@@ -95,9 +93,11 @@ A Promise that resolves with:
 {% endhighlight %}
 {% endtabs %}
 
-### Explanation
-- **Single page extraction:** Extracts text from page 1 (`startIndex = 1`) using the `'TextOnly'` option.
+### Example explanation
 
-- **Multiple page extraction:** Extracts text from pages 0–2 (`startIndex = 0`, `endIndex = 2`) using the `'TextOnly'` option.
+The code examples above demonstrate:
+
+- **Single-page extraction:** Retrieves text from page 1 using `startIndex = 1` with the `'TextOnly'` option, returning plain text without positional data.
+- **Multi-page extraction:** Retrieves text from pages 0 through 2 using `startIndex = 0` and `endIndex = 2` with the `'TextOnly'` option.
 
 [Use extractText in ASP.NET Core](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)
