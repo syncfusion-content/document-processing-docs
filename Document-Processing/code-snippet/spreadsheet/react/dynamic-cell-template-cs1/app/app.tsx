@@ -1,126 +1,74 @@
-import React, { useRef } from 'react';
-import { createRoot } from 'react-dom/client';
-import {
-  SpreadsheetComponent,
-  SheetsDirective,
-  SheetDirective,
-  RangesDirective,
-  RangeDirective,
-  ColumnsDirective,
-  ColumnDirective,
-  getCellIndexes,
-  getCell,
-  setCell,
-  getRangeAddress
-} from '@syncfusion/ej2-react-spreadsheet';
-import {DropDownList} from '@syncfusion/ej2-dropdowns';
-import { getComponent } from '@syncfusion/ej2-base';
+import { useRef } from 'react';
+import { SpreadsheetComponent, setCell } from '@syncfusion/ej2-react-spreadsheet';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
 
-function App(): React.ReactElement {
-  const spreadsheetRef = useRef<SpreadsheetComponent | null>(null)
+function App() {
+  let spreadsheet: SpreadsheetComponent | null = null;
+  const spreadsheetRef = useRef<SpreadsheetComponent | null>(null);
 
-  const dropdownData: string[] = ['Option 1', 'Option 2', 'Option 3', 'Other'];
+  const dropDownOptions: number[] = [10, 20, 30, 40, 50, 60];
 
-  const addDropDownToCell = (
-    data: string[],
-    placeholder: string,
-    row: number,
-    col: number,
-    cellModel: any,
-    element: HTMLElement,
-    selectedValue?: string
-  ) => {
-    var inputEle = document.createElement('input');
+  const onCreated = (): void => {
+    spreadsheet = spreadsheetRef.current;
+    if (!spreadsheet) return;
+    spreadsheet.setRowsHeight(35, ['1:100']);
+    // Rendering dropdown list for a specific range initially.
+    const activeSheet = spreadsheet.getActiveSheet();
+    for (let colIdx = 0; colIdx <= 3; colIdx++) {
+        setCell(0, colIdx, activeSheet as any, { template: 'dropdown-list' } as any, true);
+    }
+    spreadsheet.resize();
+  };
+
+  // If you want to handle the dropdown via a custom ribbon button, you can
+  // create a small handler like this:
+  // const handleCreated = (): void => {
+  //   const spreadsheet = spreadsheetRef.current!;
+  //   spreadsheet.addRibbonTabs([{ header: { text: 'Template' }, content: [{
+  //     text: 'DropDown List', click: () => {
+  //       const sheet = spreadsheet.getActiveSheet();
+  //       const [rowIdx, colIdx] = getCellIndexes((sheet as any).activeCell);
+  //       const cellModel = getCell(rowIdx, colIdx, sheet as any);
+  //       const cellEle = spreadsheet.getCell(rowIdx, colIdx);
+  //       if (cellModel && (cellModel as any).template === 'dropdown-list') return;
+  //       addDropDownlist(cellModel, cellEle as any, dropDownOptions);
+  //       spreadsheet.updateCell({ template: 'dropdown-list' } as any, (sheet as any).activeCell);
+  //     }
+  //   }] }]);
+  // };
+
+  // Triggers before the cell is appended to the DOM.
+  const beforeCellRender = (args: any): void => {
+    if (args.rowIndex !== undefined && args.colIndex !== undefined) {
+      // To render dropdown if template property 'dropdown-list' is set.
+      if (args.cell && args.cell.template === 'dropdown-list') {
+        addDropDownlist(args.cell, args.element as HTMLElement, dropDownOptions);
+      }
+    }
+  };
+
+  // To render the dropdown list.
+  const addDropDownlist = (cell: any, element: HTMLElement, legendOptions: number[]): void => {
+    element.innerHTML = '';
+    const inputEle = document.createElement('input');
     element.appendChild(inputEle);
     new DropDownList({
-      placeholder: placeholder,
-      dataSource: data,
-      cssClass: 'cell-dropdown',
-      value: selectedValue || null,
-      change: (event: any)=>{
-        dropDownChangeHandler(event, row, col, element);
-      }
-    }, element.firstElementChild as any);
-  };
-
-  const dropDownChangeHandler = (event: any, row: number, col: number, element: HTMLElement)=>{
-    const sheet = spreadsheetRef.current?.getActiveSheet();
-        if (event.value === "Other") {
-            const dropDownEle = element.querySelector('.cell-dropdown .e-dropdownlist.e-control');
-            if (dropDownEle) {
-                const ddlComp = getComponent(dropDownEle as any, 'dropdownlist') as any;
-                const cell = getCell(row, col, sheet as any);
-                if(cell && (cell as any).template) {
-                  delete (cell as any).template;
-                  delete (cell as any).value;
-                }
-                ddlComp.destroy();
-                (dropDownEle as HTMLElement).remove();
-                
-            }
-        } else {
-            spreadsheetRef.current?.updateCell({value: event.value.toString()}, (sheet as any).activeCell);
-        }
-  }
-
-  const handleCreated = (): void => {
-    const spreadsheet = spreadsheetRef.current!;
-    spreadsheet.addRibbonTabs([{
-      header: { text: 'Template' }, content: [{
-        text: 'DropDown List',
-        tooltipText: 'DropDown List',
-        click: () => {
-          const spreadsheet = spreadsheetRef.current!;
-          const sheet = spreadsheet.getActiveSheet();
-          const [rowIdx, colIdx] = getCellIndexes((sheet as any).activeCell);
-          const cellModel = getCell(rowIdx, colIdx, sheet as any);
-          const cellEle = spreadsheet.getCell(rowIdx, colIdx);
-
-          if (cellModel && (cellModel as any).template === 'dropdown-list') return;
-          addDropDownToCell(dropdownData, 'Value', rowIdx, colIdx, cellModel, cellEle as any);
-          spreadsheet.updateCell({template: 'dropdown-list'} as any, (sheet as any).activeCell)
-          spreadsheet.setRowHeight(40, rowIdx);
-        }
-      }]
-    }]);
-  };
-
-  const handleBeforeCellRender = (args: any) => {
-    if (args.cell?.template === 'dropdown-list') {
-    const selectedValue = args.cell.value || '';
-     // Clear any previous content — including text and dropdown
-     if(args.element.firstChild) {
-      args.element.removeChild(args.element.firstChild);
-    }
-      addDropDownToCell(dropdownData, 'Value', args.rowIndex, args.colIndex, args.cell, args.element, selectedValue);
-    }
+      placeholder: 'Select a value',
+      dataSource: legendOptions,
+      cssClass: 'e-dropdown-list',
+      // Preserve existing value if present
+      value: cell && cell.value ? (cell.value as any) : null,
+    }, inputEle);
   };
 
   return (
-    <div>
-      <SpreadsheetComponent
-        ref={spreadsheetRef}
-        created={handleCreated}
-        beforeCellRender={handleBeforeCellRender}
-        openUrl="https://services.syncfusion.com/js/production/api/spreadsheet/open"
-        saveUrl="https://services.syncfusion.com/js/production/api/spreadsheet/save"
-      >
-          <SheetsDirective>
-                    <SheetDirective>
-                        <ColumnsDirective>
-                            <ColumnDirective width={180}></ColumnDirective>
-                            <ColumnDirective width={130}></ColumnDirective>
-                            <ColumnDirective width={130}></ColumnDirective>
-                            <ColumnDirective width={180}></ColumnDirective>
-                            <ColumnDirective width={130}></ColumnDirective>
-                            <ColumnDirective width={120}></ColumnDirective>
-                        </ColumnsDirective>
-                    </SheetDirective>
-                </SheetsDirective>
-      </SpreadsheetComponent>
-    </div>
+    <SpreadsheetComponent
+      ref={spreadsheetRef}
+      created={onCreated}
+      beforeCellRender={beforeCellRender}
+    />
   );
-};
+}
 
 export default App;
 

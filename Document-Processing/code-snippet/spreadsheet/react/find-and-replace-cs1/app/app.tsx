@@ -51,9 +51,11 @@ function App() {
   const generateCellCollection = (range: string, spreadsheet: SpreadsheetComponent): string[] => {
     // Initialize the collection that will hold cell references.
     const collection: string[] = [];
+
     // Split the range string into start and end cell references.
     let [startCell, endCell]: string[] = range.split(':');
     endCell = endCell || startCell;
+    
     // Get the name of the active sheet.
     const activeSheetName: string = spreadsheet.getActiveSheet().name!;
 
@@ -63,8 +65,10 @@ function App() {
 
     // Calculate ASCII codes for start and end columns.
     const colRange: [number, number] = [startCol.toUpperCase().charCodeAt(0), endCol.toUpperCase().charCodeAt(0)];
+
     // Parse start and end row numbers.
     const rowRange: [number, number] = [parseInt(startRow), parseInt(endRow)];
+
     // Iterate over columns and rows within the specified range.
     for (let col: number = colRange[0]; col <= colRange[1]; col++) {
       for (let row: number = rowRange[0]; row <= rowRange[1]; row++) {
