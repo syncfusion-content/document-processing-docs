@@ -9,15 +9,31 @@ documentation: ug
 
 ## Find and replace the text within the selected range of cells
 
-What it does: Limits “Replace All” so replacements occur only inside the currently selected cells.
-
-Select a cell range, open Find and Replace, enter Find/Replace values, then choose Replace All.
+This guide explains how to limit the “Replace All” operation so that replacements occur only within the currently selected range of cells in the Syncfusion React Spreadsheet component.
 
 How it works: Intercepts the beforeReplaceAll action via [actionBegin](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actionbegin), reads getActiveSheet().selectedRange, expands it to cell addresses, and filters eventArgs.addressCollection to match only the selection.
 
-Key APIs: actionBegin, getActiveSheet().selectedRange, eventArgs.addressCollection, and optional programmatic replace({ value, replaceValue, mode: 'Sheet', isCSen, isEMatch }).
+### Use Case
 
-Only cells in your selection are processed; all others are excluded before the replace runs.
+You want to ensure that the Find and Replace feature only updates cells inside the user’s current selection, rather than the entire worksheet.
+
+### Steps
+Select the desired cell range in the Spreadsheet.
+Open the Find and Replace dialog.
+Enter the text to find and the replacement text.
+Click Replace All. Only cells within the selected range will be updated.
+
+### Implementation Details
+The Spreadsheet’s actionBegin event is used to intercept the Replace All action.
+The selected range is determined using getActiveSheet().selectedRange.
+The event argument addressCollection is filtered to include only addresses within the selection.
+Only the selected cells are processed for replacement.
+
+### Key APIs
+
+- actionBegin
+- getActiveSheet().selectedRange
+- eventArgs.addressCollection
 
 The following code example shows how to find and replace the text within the selected range of cells
 

@@ -7,27 +7,51 @@ platform: document-processing
 documentation: ug
 ---
 
-## Dynamic Cell Template — Dropdown to Input Behavior
+## How to Create Dynamic Cell Templates with Dropdowns in React Spreadsheet
 
-A custom Ribbon tab ("Template" -> "DropDown List") is added via addRibbonTabs in created, enabling a dropdown to be injected into the active cell.
+This guide demonstrates three different approaches to implement dropdown functionality within cells using custom templates in the Syncfusion React Spreadsheet component.
 
-On click, the code resolves the active cell using getActiveSheet, getCellIndexes, retrieves the cell model/element via getCell, and marks it with template: 'dropdown-list';
+---
 
-During beforeCellRender, if cell.template === 'dropdown-list', the cell DOM is cleared and an input element is appended.
+## Method 1: Add Dropdown from Custom Ribbon Tab
 
-A Syncfusion DropDownList is instantiated on that input with dataSource, placeholder, cssClass, and initial value, and hooked to its change event.
+This approach allows users to inject a dropdown into any active cell using a custom ribbon toolbar button.
 
-When a non-"Other" option is chosen, the selection is written back into the sheet using updateCell({ value }) on sheet.activeCell.
+### Use Case
 
-When "Other" is chosen, the dropdown element is located with getComponent().
+You want to provide users with a toolbar option to dynamically add dropdown lists to specific cells for data entry.
 
-The dropdown is recreated automatically for any cell whose model retains template: 'dropdown-list', ensuring consistent behavior as users navigate.
+### Implementation Steps
 
-Layout helpers like ColumnsDirective configure column widths, while SpreadsheetComponent, SheetsDirective, and SheetDirective provide the Spreadsheet structure.
+1. **Add a custom Ribbon tab** using `addRibbonTabs` in the `created` event.
+2. **Create a toolbar button** (e.g., "Template" -> "DropDown List") that triggers the dropdown injection.
+3. **Resolve the active cell** using `getActiveSheet`, `getCellIndexes`, and `getCell`.
+4. **Mark the cell** with a custom template property: `template: 'dropdown-list'`.
+5. **Render the dropdown** in the `beforeCellRender` event when detecting the template flag.
+6. **Instantiate a Syncfusion DropDownList** with data source, placeholder, and change event handler.
+7. **Update the cell value** using `updateCell({ value })` when a selection is made.
 
-The options list (dropdownData) includes "Other" to trigger the switch from templated dropdown to native text entry.
+### How It Works
 
-The following code example shows how to add dropdown from custom template
+- The `beforeCellRender` event checks if `cell.template === 'dropdown-list'`.
+- When detected, the cell DOM is cleared and a DropDownList component is appended.
+- Selecting an option updates the spreadsheet cell value automatically.
+- Selecting "Other" switches the cell from dropdown to native text input mode.
+- The dropdown persists as users navigate, as long as the cell retains the template property.
+
+### Key APIs
+
+- `addRibbonTabs` - Add custom ribbon tabs
+- `getActiveSheet` - Get the current active sheet
+- `getCellIndexes` - Convert cell address to row/column indexes
+- `getCell` - Retrieve cell model and DOM element
+- `beforeCellRender` - Event triggered before rendering each cell
+- `updateCell({ value })` - Update cell value programmatically
+- `getComponent` - Access the DropDownList component instance
+
+### Example
+
+The following code example shows how to add a dropdown from a custom template:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -40,20 +64,46 @@ The following code example shows how to add dropdown from custom template
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/dynamic-cell-template-cs1" %}
 
-## Initialize the dropdown for cells
+---
 
-This implementation initializes a SpreadsheetComponent and in the created handler sets row height, applies a 'dropdown-list' template to a range using setCell, and calls resize.
+## Method 2: Initialize Dropdown Templates for Specific Cells
 
-The beforeCellRender event checks each cell's template and injects an ej2-dropdowns DropDownList into the cell DOM when the template equals 'dropdown-list'.
+This approach pre-configures cells with dropdown templates during spreadsheet initialization, ensuring dropdowns are automatically rendered when cells are displayed.
 
-On selection, dropDownChangeHandler updates the spreadsheet by calling updateCell on the spreadsheetRef, writing the chosen value into the active cell.
-Clipboard operations are detected via actionBegin and actionComplete.
+### Use Case
 
-In beforeCellUpdate, pasted cells with the dropdown template are fixed up: if a dropdown component exists it’s updated via getComponent, otherwise addDropDownlist re-renders it.
+You want to set up dropdown lists for specific cells or ranges during spreadsheet creation, and maintain the dropdown behavior even after copy/paste operations.
 
-The pattern uses a template flag on cells and lazy-mounts the interactive dropdown only when the cell is rendered or updated, keeping the sheet performant and editable.
+### Implementation Steps
 
-The following code example shows how to initialize the dropdown for cells
+1. **Initialize the Spreadsheet** and set row heights in the `created` event.
+2. **Apply the dropdown template** to specific cells or ranges using `setCell` with `template: 'dropdown-list'`.
+3. **Call `resize`** to ensure proper rendering.
+4. **Use `beforeCellRender`** to detect cells with the dropdown template and inject the DropDownList component.
+5. **Handle value changes** in the dropdown change handler by calling `updateCell`.
+6. **Handle clipboard operations** using `actionBegin` and `actionComplete` events.
+7. **Fix pasted cells** in `beforeCellUpdate` to restore dropdown functionality after paste operations.
+
+### How It Works
+
+- Cells are marked with the `dropdown-list` template flag during initialization.
+- The `beforeCellRender` event lazy-loads the DropDownList component only when the cell is rendered.
+- When users paste cells, the `beforeCellUpdate` event checks for the dropdown template and either updates the existing component or re-renders it.
+- This pattern keeps the spreadsheet performant by only mounting interactive dropdowns as needed.
+
+### Key APIs
+
+- `setCell` - Apply template to specific cells
+- `resize` - Refresh spreadsheet layout
+- `beforeCellRender` - Event for custom cell rendering
+- `beforeCellUpdate` - Event triggered before cell updates
+- `actionBegin` / `actionComplete` - Track clipboard operations
+- `updateCell` - Update cell value programmatically
+- `getComponent` - Access existing DropDownList instance
+
+### Example
+
+The following code example shows how to initialize dropdowns for specific cells:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -66,23 +116,53 @@ The following code example shows how to initialize the dropdown for cells
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/initialize-cell-dropdown-cs1" %}
 
-## Dynamic Cell Template — In-Cell Dropdown via Data Validation
+---
 
-The sample adds a dropdown into cells by applying list validation with addDataValidation (using inCellDropDown) inside the onCreated handler.
+## Method 3: Create In-Cell Dropdown Using Data Validation
 
-It formats headers and columns via cellFormat and numberFormat to prepare the spreadsheet UI.
-The cellSave event inspects the edited cell using getCellIndexes, getSheet, getSheetIndex, getCell, and getColumn.
+This approach uses the built-in data validation feature to create dropdown lists within cells, providing a native Excel-like experience.
 
-Validation is detected with the cell's validation property or checkColumnValidation, ensuring list-type rules are honored.
+### Use Case
 
-When the user selects Other, the code removes validation with removeDataValidation, clears the cell using clear, and calls startEdit to allow free-text input.
-The spreadsheet instance is accessed via the component ref on SpreadsheetComponent (also configured with openUrl/saveUrl).
+You want to implement dropdown lists using standard Excel data validation, with the ability to switch to free-text input when users select a special option like "Other".
 
-As an alternative to the toolbar demo, you can update the custom cell using updateCell and embed a dropdown directly with addDropDownToCell during any event, avoiding extra UI controls.
+### Implementation Steps
 
-Together these methods implement a dynamic cell template that presents an in-cell dropdown, detects special selections, and swaps to editable mode when needed.
+1. **Initialize the Spreadsheet** with `openUrl` and `saveUrl` configurations.
+2. **Apply data validation** to specific cells or ranges using `addDataValidation` with the `inCellDropDown` option in the `created` event.
+3. **Format headers and columns** using `cellFormat` and `numberFormat` to prepare the UI.
+4. **Handle cell save events** using `cellSave` to inspect the edited cell.
+5. **Detect validation rules** using the cell's `validation` property or `checkColumnValidation`.
+6. **Detect special selections** (e.g., "Other") and remove validation using `removeDataValidation`.
+7. **Clear the cell** and call `startEdit` to allow free-text input when needed.
 
-The following code example shows how the dropdown applied via data validation.
+### How It Works
+
+- Data validation with `inCellDropDown: true` creates native dropdown lists in cells.
+- The `cellSave` event inspects edited cells using `getCellIndexes`, `getSheet`, `getCell`, and `getColumn`.
+- When "Other" is selected, validation is removed and the cell switches to editable mode.
+- The spreadsheet instance is accessed via a component ref for programmatic control.
+- As an alternative, you can use `updateCell` and `addDropDownToCell` to embed dropdowns during any event.
+
+### Key APIs
+
+- `addDataValidation` - Apply validation rules with dropdown
+- `removeDataValidation` - Remove validation from cells
+- `cellFormat` - Format cell appearance
+- `numberFormat` - Apply number formatting
+- `cellSave` - Event triggered when a cell is saved
+- `getCellIndexes` - Convert cell address to indexes
+- `getSheet` / `getSheetIndex` - Access sheet data
+- `getCell` / `getColumn` - Retrieve cell or column data
+- `checkColumnValidation` - Check if validation exists
+- `clear` - Clear cell content
+- `startEdit` - Enable edit mode for a cell
+- `updateCell` - Update cell value programmatically
+- `addDropDownToCell` - Embed dropdown directly
+
+### Example
+
+The following code example shows how to create dropdowns using data validation:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -94,3 +174,16 @@ The following code example shows how the dropdown applied via data validation.
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/data-validation-dropdown-cs1" %}
+
+---
+
+## Comparison of Methods
+
+| Feature | Custom Ribbon Tab | Initialize Template | Data Validation |
+|---------|------------------|--------------------|--------------------|
+| **Initialization** | User-triggered | Programmatic | Programmatic |
+| **User Experience** | Requires toolbar action | Automatic rendering | Native Excel-like |
+| **Persistence** | Template flag | Template flag | Validation rules |
+| **Copy/Paste Support** | Manual handling | Automatic fix-up | Built-in |
+| **Customization** | Full control | Full control | Limited |
+| **Best For** | Dynamic user input | Pre-configured cells | Standard dropdowns |
