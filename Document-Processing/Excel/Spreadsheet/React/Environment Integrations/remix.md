@@ -33,7 +33,7 @@ Remix automatically manages loading states during navigation or data fetching. D
 
 To set up a basic Remix sample, run the following command:
 
-```
+```bash
 npx create-react-router@latest
 ```
 
@@ -41,7 +41,7 @@ The `create-react-router@latest` command create a remix app using the latest pac
 
 When you run this command, you will be asked the following questions.
 
-```
+```bash
    dir   Where should we create your new project?
          ./my-react-router-app
 
@@ -57,7 +57,7 @@ When you run this command, you will be asked the following questions.
 
 Navigate into the project directory with the below command and install the `react-router` package:
 
-```
+```bash
 cd my-react-router-app
 ```
 
@@ -65,7 +65,7 @@ cd my-react-router-app
 
 To include the React Spreadsheet component in your project, use the following command:
 
-```
+```bash
 npm install @syncfusion/ej2-react-spreadsheet --save
 ```
 
@@ -74,23 +74,23 @@ npm install @syncfusion/ej2-react-spreadsheet --save
 Import the Syncfusion® component themes in the `app.css` file as shown below:
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
 
 ## Configure Server-Side Rendering (SSR)
 
 For Syncfusion React Spreadsheet to function with Remix server-side rendering (via Vite), update your `vite.config.ts` file as shown:
 
-```
+```js
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -128,18 +128,18 @@ export default function Index() {
 
 Start your Remix application in development mode:
 
-```
+```bash
 npm run dev
 ```
 
 For deployment, build your app for production,
-```
+```bash
 npm run build
 ```
 
 Then run the app in production mode:
 
-```
+```bash
 npm run start
 ```
 

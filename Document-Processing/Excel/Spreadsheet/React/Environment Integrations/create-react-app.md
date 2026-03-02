@@ -22,28 +22,28 @@ The recommended approach is to use the [`Create React App`](https://github.com/f
 
 To create a new application using JavaScript:
 
-```
+```bash
 npx create-react-app my-app
 cd my-app
 ```
 
 or
 
-```
+```bash
 yarn create react-app my-app
 cd my-app
 ```
 
 To create a React application in `TypeScript` environment, run the following command:
 
-```
+```bash
 npx create-react-app my-app --template typescript
 cd my-app
 ```
 
 Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6`+.
 
-```
+```bash
 npm init react-app my-app
 cd my-app
 ```
@@ -54,13 +54,13 @@ After running the above commands, the project will be created and all required d
 
 To install the React Spreadsheet package, use the following command:
 
-```
+```bash
 npm install @syncfusion/ej2-react-spreadsheet --save
 ```
 or
 
-```
-yarn add @syncfusion/ej2-react-grids
+```bash
+yarn add @syncfusion/ej2-react-spreadsheet
 ```
 
 ## Import CSS
@@ -108,13 +108,13 @@ export default function App() {
 ## Run the application
 Run the app using the following commands:
 
-```
+```bash
 npm start
 ```
 
 or
 
-```
+```bash
 yarn start
 ```
 

@@ -22,12 +22,12 @@ Ensure the following requirements are met before starting:
 
 To create a new Preact project, use one of the commands that are specific to either NPM or Yarn.
 
-```
+```bash
 npm init preact@latest
 ```
 or
 
-```
+```bash
 yarn create preact
 ```
 
@@ -35,7 +35,7 @@ Using one of the above commands will lead you to set up additional configuration
 
 **Step 1: Define the project name** - You can specify the name of the project directly. Let’s specify the name of the project as `my-project` for this article.
 
-```
+```bash
 T  Preact - Fast 3kB alternative to React with the same modern API
 |
 *  Project directory:
@@ -45,7 +45,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 
 **Step 2: Choose the project language** - Select JavaScript as the framework variant to build this Preact project using JavaScript.
 
-```
+```bash
 T  Preact - Fast 3kB alternative to React with the same modern API
 |
 *  Project language:
@@ -56,7 +56,7 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 
 **Step 3: Configure project options** - Configure the project as shown below for this article.
 
-```
+```bash
 T  Preact - Fast 3kB alternative to React with the same modern API
 |
 *  Use router?
@@ -74,14 +74,14 @@ T  Preact - Fast 3kB alternative to React with the same modern API
 
 **Step 4: Navigate to the project directory** - After completing the above steps to create `my-project`, navigate to the project directory using the following command:
 
-```
+```bash
 cd my-project
 ```
 
 Ensure your HTML has a mount point for the app. For example, in `index.html` add:
 
 
-```
+```html
 <div id="app"></div>
 ```
 
@@ -91,12 +91,12 @@ Now that `my-project` is ready to run with default settings, let’s add Syncfus
 
 To install the React Spreadsheet component package, use the following command:
 
-```
+```bash
 npm install @syncfusion/ej2-react-spreadsheet --save
 ```
 or
 
-```
+```bash
 yarn add @syncfusion/ej2-react-spreadsheet
 ```
 
@@ -105,16 +105,16 @@ yarn add @syncfusion/ej2-react-spreadsheet
 Import the Syncfusion® component themes in the `src/style.css` file as shown below:
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
 
 ## Adding Spreadsheet component
@@ -134,15 +134,14 @@ export default function App() {
 ## Run the project
 To run the project, use the following command:
 
-```
+```bash
 npm run dev
 ```
 or
 
-```
+```bash
 yarn run dev
 ```
-
 
 ## See also
 
