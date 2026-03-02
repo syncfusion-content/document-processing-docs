@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Disable optimized text measuring in JavaScript (ES5) Document editor control | Syncfusion
+title: Disable optimized text measuring in JavaScript (ES5) | Syncfusion
 description: Learn here all about Disable optimized text measuring in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Disable optimized text measuring 
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable optimized text measuring in JavaScript (ES5) Document editor control
+# Disable optimized text measuring in JavaScript (ES5) Document editor
 
 Starting from v19.3.0.x, the accuracy of text size measurements in Document editor is improved such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) in Document editor settings.  
 
@@ -18,12 +18,12 @@ If you want the Document editor component to retain the document pagination (dis
 
 The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditorContainer` instance.
 
-```ts
-import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
+```js
 
-DocumentEditorContainer.Inject(Toolbar);
-
-let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px' });
+var container = new ej.documenteditor.DocumentEditorContainer({
+    enableToolbar: true,
+    height: '590px'
+});
 
 // Disable optimized text measuring improvement
 container.documentEditorSettings = { enableOptimizedTextMeasuring: false };
@@ -37,10 +37,9 @@ container.appendTo('#container');
 
 The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditor` instance.
 
-```ts
-import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
+```js
 
-let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, height: '370px', serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/' });
+var documenteditor = new ej.documenteditor.DocumentEditor({ isReadOnly: false, height: '370px', serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/' });
 
 documenteditor.enableAllModules();
 
