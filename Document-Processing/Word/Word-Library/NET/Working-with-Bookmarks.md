@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Bookmarks
+# Working with Bookmarks in Word Library
 
 A bookmark identifies a location or a selection of text within a document that you can name and identify for future reference.
 
