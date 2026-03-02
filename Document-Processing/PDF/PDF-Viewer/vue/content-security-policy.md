@@ -10,11 +10,33 @@ domainurl: ##DomainURL##
 
 # Content Security Policy in Vue PDF Viewer
 
-Content Security Policy (CSP) is a security feature implemented by web browsers that helps to protect against attacks such as cross-site scripting (XSS) and data injection. It limits the sources from which content can be loaded on a web page.
+Content Security Policy (CSP) is a security feature implemented by web browsers that helps protect against attacks such as cross-site scripting (XSS) and data injection. It restricts the sources from which content can be loaded on a web page.
 
-To enable strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html), certain browser features are disabled by default. In order to use Syncfusion PDF Viewer control with strict CSP mode, it is essential to include following directives in the CSP meta tag.
+When enabling strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html), certain browser features are disabled by default for enhanced security. To use the Syncfusion PDF Viewer control in strict CSP mode, specific directives must be configured in the CSP meta tag to allow the control's necessary resources.
 
-* Syncfusion PDF Viewer control are rendered with calculated **inline styles** and **base64** font icons, which are blocked on a strict CSP-enabled site. To allow them, add the [`style-src 'self' 'wasm-unsafe' blob:;` ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the meta tag as follows.
+## CSP Directives Reference
+
+The following table describes each CSP directive and its usage with the Syncfusion PDF Viewer:
+
+| Directive                          |  Usage                                                                                                                                                                                                                  |
+|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `default-src 'self';`              | Sets the default policy for loading resources. `'self'` restricts loading to the same origin (same domain).                                                                                                 |
+| `script-src 'self' 'wasm-unsafe-eval' blob:;` | Defines where JavaScript and WebAssembly code can be loaded. `'self'` allows scripts from the same origin. `'wasm-unsafe-eval'` permits WebAssembly compilation from JavaScript functions. `blob:` allows loading scripts from Blob URLs. |
+| `worker-src 'self' blob:;`         | Controls where web workers can be loaded. `'self'` allows same-origin workers. `blob:` enables blob-based workers, which are common in PDF viewers and compute-intensive applications.                                                     |
+| `connect-src 'self' data:;`        | Restricts network requests (fetch, XHR, WebSockets) to specified sources. `'self'` limits requests to the same origin. `data:` allows data URIs.                                                          |
+| `style-src 'self' blob:;`          | Defines stylesheet sources. `'self'` restricts to the same origin. `blob:` allows dynamically generated styles necessary for runtime CSS generation.                               |
+| `font-src 'self' data:;`           | Controls font loading sources. `'self'` allows local fonts. `data:` permits inline fonts (base64 encoded), and URLs enable loading from external font CDNs.                                                 |
+| `img-src 'self' data: blob:;`      | Controls image loading sources. `'self'` restricts to the same origin. `data:` allows inline images (base64 encoded). `blob:` allows Blob URLs for dynamically generated images.                                                                                                 |
+
+## Configuring CSP for PDF Viewer
+
+The following sections describe CSP configurations required for different PDF Viewer features.
+
+### Styles and Fonts
+
+The PDF Viewer is rendered with calculated inline styles and base64-encoded font icons, which are blocked in strict CSP mode. Additionally, the material and tailwind built-in themes reference the external Roboto font from Google Fonts, which must also be allowed.
+
+Include the following directives to permit inline styles and external fonts:
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}
@@ -26,9 +48,7 @@ To enable strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs
 {% endhighlight %}
 {% endtabs %}
 
-* Syncfusion **material** and **tailwind** built-in themes contain a reference to the [`Roboto’s external font`](https://fonts.googleapis.com/css?family=Roboto:400,500), which is also blocked. To allow them, add the [`external font`](https://fonts.googleapis.com/css?family=Roboto:400,500) reference to the [`style-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the above meta tag.
-
-The resultant meta tag is included within the `<head>` tag and resolves the CSP violation on the application's side when utilizing Syncfusion PDF Viewer control with material and tailwind themes.
+The meta tag should be placed within the `<head>` section of the HTML document to resolve CSP violations when using material or tailwind themes:
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}
@@ -43,7 +63,9 @@ The resultant meta tag is included within the `<head>` tag and resolves the CSP 
 {% endhighlight %}
 {% endtabs %}
 
-* Syncfusion PDF Viewer control when images are added as **blob** and **base64**, which are blocked on a strict CSP-enabled site.To overcome this restriction, it is necessary to add the image-src data: directive in the meta tag. To allow them, add the  [`style-src  'self' blob:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`image-src 'self' data:;`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directives as follows.
+### Images and Blobs
+
+When images are added as blob or base64 data to the PDF Viewer, they are blocked in strict CSP mode. To permit these resources, include the [`img-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directive in the CSP meta tag:
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}
@@ -57,7 +79,9 @@ The resultant meta tag is included within the `<head>` tag and resolves the CSP 
 {% endhighlight %}
 {% endtabs %}
 
-* Syncfusion PDF Viewer control when **web worker** and   is used, which is blocked on a strict CSP-enabled site. To allow them, add the [`worker-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src) and [`connect-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src) directives in the above meta tag as follows.
+### Scripts, WebAssembly, and Workers
+
+The PDF Viewer uses WebAssembly and web workers for processing and rendering. Both are blocked in strict CSP mode. To enable these features, include the [`script-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src), [`worker-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src), and [`connect-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src) directives:
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}
@@ -73,18 +97,13 @@ The resultant meta tag is included within the `<head>` tag and resolves the CSP 
 {% endhighlight %}
 {% endtabs %}
 
-N> In accordance with the latest security practices, the Syncfusion PDF Viewer control now recommends using `wasm-unsafe` in the Content Security Policy (CSP) settings to enhance the security of WebAssembly operations. This change ensures a safer execution environment while maintaining the necessary functionality. Make sure to update your CSP meta tags to reflect this change for optimal security compliance.
+N> In accordance with the latest security practices, the Syncfusion PDF Viewer control recommends using `wasm-unsafe-eval` in the Content Security Policy (CSP) settings to enable secure WebAssembly compilation. This directive allows WebAssembly to be compiled from JavaScript functions while maintaining a secure execution environment. Update your CSP meta tags to reflect this change for optimal security compliance.
 
-### Please find the usage of each directives:
+## Security Best Practices
 
-| Directive                          | Usage                                                                                                                                                                                                                  |
-|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `default-src 'none';`              | Sets the default policy for loading resources. `'self'` means only allow resources from the same origin (same domain).                                                                                                 |
-| `script-src 'self' 'wasm-unsafe-eval' blob:;` | Defines where JavaScript (and WebAssembly) code can come from. `'self'` allows scripts from the same origin. `'wasm-unsafe-eval'` allows compilation of WebAssembly using JS eval()-like functions (security-sensitive). `blob:` allows loading scripts from Blob URLs. |
-| `worker-src 'self' blob:;`         | Controls where workers can be loaded from. `'self'` allows same-origin workers. `blob:` allows blob-based workers, common in PDF viewers and heavy JS applications.                                                     |
-| `connect-src 'self';`              | Controls where the application can make network requests, such as `fetch()`, XHR, and WebSockets. `'self'` restricts this to the same origin.                                                                          |
-| `style-src 'self' blob:;`          | Defines the sources for stylesheets. `'self'` restricts to the same origin. `blob:` allows dynamically generated styles, which might be necessary for apps with dynamically generated CSS.                               |
-| `font-src 'self' data:`            | Controls where fonts can be loaded from. `'self'` allows local fonts. `data:` allows inline fonts (base64 embedded), and the URLs allow loading from external font CDN.                                                 |
-| `img-src 'self' data:;`            | Controls where images can be loaded from. `'self'` restricts to the same origin. `data:` allows inline images (base64).                                                                                                 |
+- Test CSP configurations thoroughly in development to identify blocked resources before deployment.
+- Monitor browser console for CSP violations that may indicate missing directives.
+- Use the most restrictive CSP possible while maintaining required functionality.
+- Regularly review CSP settings when upgrading the Syncfusion PDF Viewer to the latest version.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master)
