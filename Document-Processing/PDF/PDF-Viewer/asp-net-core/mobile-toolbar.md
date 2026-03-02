@@ -7,24 +7,25 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Mobile toolbar interface in ASP.NET Core PDF Viewer
+# Mobile Toolbar Interface in ASP.NET Core PDF Viewer
 
-The Mobile PDF Viewer offers a variety of features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools like search, download, bookmarking, annotation, and page organization. Users also have the option to enable desktop toolbar features in mobile mode, providing a more extensive set of actions.
+The mobile PDF Viewer provides various features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools such as search, download, bookmarking, annotation, and page organization. Users can enable desktop toolbar features in mobile mode to access a more extensive set of actions.
 
-## Mobile mode toolbar configuration
-In mobile mode, the toolbar is optimized for small screens and presents the most common actions for working with a PDF document. The key features available in mobile mode include:
+## Mobile Mode Toolbar Configuration
+
+In mobile mode, the toolbar is optimized for small screens and presents the most common actions for working with PDF documents. Key features available in mobile mode include:
 
 ![Mobile toolbar with primary PDF interaction options](./images/mobileToolbar.png)
 
-### Main toolbar options
+### Main Toolbar Options
 
 **OpenOption:** Tap to load a PDF document.
 
 **SearchOption:** Access the search bar to find text within the document.
 
-![Search bar displayed for finding text within a PDF](./images/searchOption.png)
+![Search bar for finding text within a PDF](./images/searchOption.png)
 
-**UndoRedoTool:** Quickly undo or redo any annotations made.
+**UndoRedoTool:** Quickly undo or redo annotations.
 
 **OrganizePagesTool:** Enable or disable page organization features to modify document pages.
 
@@ -32,26 +33,25 @@ In mobile mode, the toolbar is optimized for small screens and presents the most
 
 **AnnotationEditTool:** Activate or deactivate annotation editing to add or modify annotations.
 
-![Annotation editing toolbar allowing users to add, edit, or delete annotations on a PDF](./images/editAnnotation.png)
+![Annotation editing toolbar for adding, editing, or deleting PDF annotations](./images/editAnnotation.png)
 
+N> In mobile mode, the annotation toolbar is displayed at the bottom of the viewer.
 
-N> In mobile mode, the annotation toolbar is conveniently displayed at the bottom of the viewer.
-
-### More options menu
+### More Options Menu
 
 The More options menu provides additional actions such as:
 
 **DownloadOption:** Tap to download the currently opened PDF document.
 
-**BookmarkOption:** Allows you to view bookmarks within the document.
+**BookmarkOption:** View bookmarks within the document.
 
 ![More options menu showing additional actions like download and bookmark](./images/more-options.png)
 
-## Enable desktop mode on mobile
+## Enable Desktop Mode on Mobile
 
-Enable the desktop toolbar on mobile devices using the `enableDesktopMode` API. This brings desktop-like features to the mobile PDF Viewer, providing access to additional toolbar actions typically available on desktop platforms.
+The desktop toolbar can be enabled on mobile devices using the `enableDesktopMode` API. This brings desktop-like features to the mobile PDF Viewer, providing access to additional toolbar actions typically available on desktop platforms.
 
-### Steps to enable desktop mode
+### Steps to Enable Desktop Mode
 
 - Set `enableDesktopMode` to true in the configuration.
 - The desktop toolbar layout replaces the mobile toolbar, allowing access to more actions and controls.
@@ -78,9 +78,9 @@ Enable the desktop toolbar on mobile devices using the `enableDesktopMode` API. 
 {% endhighlight %}
 {% endtabs %}
 
-## Enable scrolling in desktop mode with touch gestures
+## Enable Scrolling in Desktop Mode with Touch Gestures
 
-To ensure smooth scrolling of PDF documents on a mobile device in desktop mode, enable touch-gesture scrolling by setting `enableTextSelection` to false.
+Smooth scrolling of PDF documents on mobile devices in desktop mode can be enabled by setting `enableTextSelection` to false.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -106,13 +106,13 @@ To ensure smooth scrolling of PDF documents on a mobile device in desktop mode, 
 {% endhighlight %}
 {% endtabs %}
 
-## Print option availability
+## Print Option Availability
 
 The Print option is not available in mobile mode by default. To use print on mobile devices, enable the desktop toolbar using the `enableDesktopMode` API.
 
-### How to use print on mobile
+### How to Use Print on Mobile
 
 - Enable desktop mode: Set `enableDesktopMode` to true to load the desktop toolbar on a mobile device.
-- **Print option**: Once desktop mode is enabled, the print option becomes available to print the document.
+- **Print option**: Once desktop mode is enabled, the print option becomes available.
 
-N> In mobile mode, print is unavailable unless desktop mode is enabled.
+N> Print is unavailable in mobile mode unless desktop mode is enabled.

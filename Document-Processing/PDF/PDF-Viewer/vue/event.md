@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Events in Vue PDF Viewer
 
-The PDF Viewer component triggers events for creation, page navigation, document life cycle, context menu interactions, comments, bookmarks, download and export, hyperlinks, annotation import/export, custom keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into application workflows.
+The PDF Viewer component triggers events throughout its lifecycle, enabling you to respond to user interactions and document state changes. These events are organized into categories: **Component Lifecycle** (created, resourcesLoaded), **Navigation** (pageChange, pageClick), **Document Operations** (documentLoad, documentLoadFailed, downloadStart, downloadEnd, printStart, printEnd), **User Interactions** (toolbarClick, bookmarkClick, thumbnailClick), **Text Operations** (textSelectionStart, textSelectionEnd, textSearchStart, textSearchComplete), **Annotations** (commentAdd, commentEdit, commentDelete), **Forms** (buttonFieldClick, validateFormFields), and **Customization** (customContextMenuBeforeOpen, customContextMenuSelect). Subscribe to events using the `@eventName` syntax to execute custom code when specific actions occur.
+
+## Commonly used events
 
 The following table lists commonly used events supported by the PDF Viewer component:
 
@@ -66,13 +68,13 @@ The following table lists commonly used events supported by the PDF Viewer compo
 | [`validateFormFields`](#validateformfields) | Triggers when form field validation fails. |
 | [`zoomChange`](#zoomchange) | Triggers when the magnification value changes. |
 
-Note: For annotation and signature events, see the dedicated Annotations Events topic.
+For annotation and signature events, see the dedicated Annotations Events topic.
 
 ## bookmarkClick
 
-The [bookmarkClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#bookmarkclick) event triggers when a bookmark item is clicked in the bookmark panel.
+The [bookmarkClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#bookmarkclick) event triggers when a bookmark item is clicked in the bookmark panel.
 
-- Event arguments: [BookmarkClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/bookmarkClickEventArgs/).
+- Event arguments: [BookmarkClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/bookmarkClickEventArgs).
 
 Example:
 
@@ -150,7 +152,7 @@ export default {
 
 ## toolbarClick
 
-The [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#toolbarclick) event triggers when a toolbar item is clicked. Use it to handle actions based on the clicked item's id or name.
+The [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#toolbarclick) event triggers when a toolbar item is clicked. Use it to handle actions based on the clicked item's id or name.
 
 - Event arguments: `ClickEventArgs`.
 
@@ -229,9 +231,9 @@ export default {
 
 ## validateFormFields
 
-The [validateFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#validateformfields) event triggers when form field validation fails, typically before a download or submit action proceeds. Use this event to inspect which required fields are empty and show custom messages or block application logic if needed.
+The [validateFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#validateformfields) event triggers when form field validation fails, typically before a download or submit action proceeds. Use this event to inspect which required fields are empty and show custom messages or block application logic if needed.
 
-- Event arguments: [ValidateFormFieldsArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/validateFormFieldsArgs/)
+- Event arguments: [ValidateFormFieldsArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/validateFormFieldsArgs)
   - name: Event name
   - documentName: Current document name
   - formField: The last interacted field’s data (if applicable)
@@ -320,9 +322,9 @@ Tip
 
 ## zoomChange
 
-The [zoomChange](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#zoomchange) event triggers when the magnification value changes.
+The [zoomChange](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#zoomchange) event triggers when the magnification value changes.
 
-- Event arguments: [ZoomChangeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/zoomChangeEventArgs/).
+- Event arguments: [ZoomChangeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/zoomChangeEventArgs).
 
 Example:
 
@@ -400,9 +402,9 @@ export default {
 
 ## buttonFieldClick
 
-The [buttonFieldClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#buttonfieldclick) event triggers when a button form field is clicked.
+The [buttonFieldClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#buttonfieldclick) event triggers when a button form field is clicked.
 
-- Event arguments: [ButtonFieldClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/buttonFieldClickEventArgs/).
+- Event arguments: [ButtonFieldClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/buttonFieldClickEventArgs).
 
 Example:
 
@@ -480,9 +482,9 @@ export default {
 
 ## commentAdd
 
-The [commentAdd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#commentadd) event triggers when a comment is added in the comment panel.
+The [commentAdd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#commentadd) event triggers when a comment is added in the comment panel.
 
-- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/commentEventArgs/).
+- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/commentEventArgs).
 
 Example:
 
@@ -560,9 +562,9 @@ export default {
 
 ## commentDelete
 
-The [commentDelete](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#commentdelete) event triggers when a comment is deleted in the comment panel.
+The [commentDelete](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#commentdelete) event triggers when a comment is deleted in the comment panel.
 
-- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/commentEventArgs/).
+- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/commentEventArgs).
 
 Example:
 
@@ -640,9 +642,9 @@ export default {
 
 ## commentEdit
 
-The [commentEdit](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#commentedit) event triggers when a comment is edited in the comment panel.
+The [commentEdit](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#commentedit) event triggers when a comment is edited in the comment panel.
 
-- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/commentEventArgs/).
+- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/commentEventArgs).
 
 Example:
 
@@ -720,9 +722,9 @@ export default {
 
 ## commentSelect
 
-The [commentSelect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#commentselect) event triggers when a comment is selected in the comment panel.
+The [commentSelect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#commentselect) event triggers when a comment is selected in the comment panel.
 
-- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/commentEventArgs/).
+- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/commentEventArgs).
 
 Example:
 
@@ -784,9 +786,9 @@ export default {
 
 ## commentStatusChanged
 
-The [commentStatusChanged](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#commentstatuschanged) event triggers when a comment status is changed in the comment panel.
+The [commentStatusChanged](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#commentstatuschanged) event triggers when a comment status is changed in the comment panel.
 
-- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/commentEventArgs/).
+- Event arguments: [CommentEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/commentEventArgs).
 
 Example:
 
@@ -834,7 +836,7 @@ export default {
 
 ## created
 
-The [created](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#created) event is triggered during the creation of the PDF Viewer component.
+The [created](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#created) event is triggered during the creation of the PDF Viewer component.
 
 - Event arguments: `void`.
 
@@ -915,9 +917,9 @@ export default {
 
 ## customContextMenuBeforeOpen
 
-The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#customcontextmenubeforeopen) event fires just before the context menu is shown. Use it to show or hide items based on the current state (for example, only show search items when text is selected).
+The [customContextMenuBeforeOpen](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#customcontextmenubeforeopen) event fires just before the context menu is shown. Use it to show or hide items based on the current state (for example, only show search items when text is selected).
 
-- Event arguments: [CustomContextMenuBeforeOpenEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/customContextMenuBeforeOpenEventArgs/)
+- Event arguments: [CustomContextMenuBeforeOpenEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/customContextMenuBeforeOpenEventArgs)
   - name: Event name
   - ids: Array of menu item ids that will be shown; remove ids to hide items for this open
 
@@ -1015,9 +1017,9 @@ export default {
 
 ## customContextMenuSelect
 
-The [customContextMenuSelect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#customcontextmenuselect) event fires when a custom menu item is clicked. Use it to branch logic by the clicked item's id.
+The [customContextMenuSelect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#customcontextmenuselect) event fires when a custom menu item is clicked. Use it to branch logic by the clicked item's id.
 
-- Event arguments: [CustomContextMenuSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/customContextMenuSelectEventArgs/).
+- Event arguments: [CustomContextMenuSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/customContextMenuSelectEventArgs).
 
 - name: Event name
 - id: The id of the clicked menu item
@@ -1115,9 +1117,9 @@ export default {
 
 ## documentLoad
 
-The [documentLoad](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#documentload) event occurs after a document is successfully loaded and parsed.
+The [documentLoad](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#documentload) event occurs after a document is successfully loaded and parsed.
 
-- Event arguments: [LoadEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/loadEventArgs/).
+- Event arguments: [LoadEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/loadEventArgs).
 
 Example:
 
@@ -1195,9 +1197,9 @@ export default {
 
 ## documentLoadFailed
 
-The [documentLoadFailed](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#documentloadfailed) event triggers when loading a document fails.
+The [documentLoadFailed](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#documentloadfailed) event triggers when loading a document fails.
 
-- Event arguments: [LoadFailedEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/loadFailedEventArgs/).
+- Event arguments: [LoadFailedEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/loadFailedEventArgs).
 
 Example:
 
@@ -1276,9 +1278,9 @@ export default {
 
 ## documentUnload
 
-The [documentUnload](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#documentunload) event triggers when closing the current document.
+The [documentUnload](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#documentunload) event triggers when closing the current document.
 
-- Event arguments: [UnloadEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/unloadEventArgs/).
+- Event arguments: [UnloadEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/unloadEventArgs).
 
 Example:
 
@@ -1358,9 +1360,9 @@ export default {
 
 ## downloadEnd
 
-The [downloadEnd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#downloadend) event triggers after a document download completes.
+The [downloadEnd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#downloadend) event triggers after a document download completes.
 
-- Event arguments: [DownloadEndEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/downloadEndEventArgs/).
+- Event arguments: [DownloadEndEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/downloadEndEventArgs).
 
 Example:
 
@@ -1440,9 +1442,9 @@ export default {
 
 ## downloadStart
 
-The [downloadStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#downloadstart) event triggers when the download operation is initiated.
+The [downloadStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#downloadstart) event triggers when the download operation is initiated.
 
-- Event arguments: [DownloadStartEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/downloadStartEventArgs/).
+- Event arguments: [DownloadStartEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/downloadStartEventArgs).
 
 Example:
 
@@ -1521,9 +1523,9 @@ export default {
 
 ## exportFailed
 
-The [exportFailed](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#exportfailed) event triggers when exporting annotations fails.
+The [exportFailed](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#exportfailed) event triggers when exporting annotations fails.
 
-- Event arguments: [ExportFailureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/exportFailureEventArgs/).
+- Event arguments: [ExportFailureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/exportFailureEventArgs).
 
 Example:
 
@@ -1602,9 +1604,9 @@ export default {
 
 ## exportStart
 
-The [exportStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#exportstart) event triggers when exporting annotations starts.
+The [exportStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#exportstart) event triggers when exporting annotations starts.
 
-- Event arguments: [ExportStartEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/exportStartEventArgs/).
+- Event arguments: [ExportStartEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/exportStartEventArgs).
 
 Example:
 
@@ -1683,9 +1685,9 @@ export default {
 
 ## exportSuccess
 
-The [exportSuccess](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#exportsuccess) event triggers when annotations are exported successfully.
+The [exportSuccess](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#exportsuccess) event triggers when annotations are exported successfully.
 
-- Event arguments: [ExportSuccessEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/exportSuccessEventArgs/).
+- Event arguments: [ExportSuccessEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/exportSuccessEventArgs).
 
 Example:
 
@@ -1764,9 +1766,9 @@ export default {
 
 ## extractTextCompleted
 
-The [extractTextCompleted](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#extracttextcompleted) event triggers when text extraction completes.
+The [extractTextCompleted](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#extracttextcompleted) event triggers when text extraction completes.
 
-- Event arguments: [ExtractTextCompletedEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/extractTextCompletedEventArgs/).
+- Event arguments: [ExtractTextCompletedEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/extractTextCompletedEventArgs).
 
 Example:
 
@@ -1845,9 +1847,9 @@ export default {
 
 ## hyperlinkClick
 
-The [hyperlinkClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#hyperlinkclick) event triggers when a hyperlink is clicked.
+The [hyperlinkClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#hyperlinkclick) event triggers when a hyperlink is clicked.
 
-- Event arguments: [HyperlinkClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/hyperlinkClickEventArgs/).
+- Event arguments: [HyperlinkClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/hyperlinkClickEventArgs).
 
 Example:
 
@@ -1926,7 +1928,7 @@ export default {
 
 ## hyperlinkMouseOver
 
-The [hyperlinkMouseOver](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#hyperlinkmouseover) event triggers when hovering over a hyperlink.
+The [hyperlinkMouseOver](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#hyperlinkmouseover) event triggers when hovering over a hyperlink.
 
 - Event arguments: HyperlinkMouseOverArgs.
 
@@ -2007,9 +2009,9 @@ export default {
 
 ## importFailed
 
-The [importFailed](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#importfailed) event triggers when importing annotations fails.
+The [importFailed](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#importfailed) event triggers when importing annotations fails.
 
-- Event arguments: [ImportFailureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/importFailureEventArgs/).
+- Event arguments: [ImportFailureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/importFailureEventArgs).
 
 Example:
 
@@ -2088,9 +2090,9 @@ export default {
 
 ## importStart
 
-The [importStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#importstart) event triggers when importing annotations starts.
+The [importStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#importstart) event triggers when importing annotations starts.
 
-- Event arguments: [ImportStartEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/importStartEventArgs/).
+- Event arguments: [ImportStartEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/importStartEventArgs).
 
 Example:
 
@@ -2169,9 +2171,9 @@ export default {
 
 ## importSuccess
 
-The [importSuccess](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#importsuccess) event triggers when annotations are imported successfully.
+The [importSuccess](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#importsuccess) event triggers when annotations are imported successfully.
 
-- Event arguments: [ImportSuccessEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/importSuccessEventArgs/).
+- Event arguments: [ImportSuccessEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/importSuccessEventArgs).
 
 Example:
 
@@ -2251,9 +2253,9 @@ export default {
 
 ## keyboardCustomCommands
 
-The [keyboardCustomCommands](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#keyboardcustomcommands) event triggers when customized keyboard command keys are pressed.
+The [keyboardCustomCommands](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#keyboardcustomcommands) event triggers when customized keyboard command keys are pressed.
 
-- Event arguments: [KeyboardCustomCommandsEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/keyboardCustomCommandsEventArgs/).
+- Event arguments: [KeyboardCustomCommandsEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/keyboardCustomCommandsEventArgs).
 
   - name: Event name
   - keyboardCommand: The command metadata raised by Command Manager
@@ -2372,7 +2374,7 @@ export default {
 
 ## moveSignature
 
-The [moveSignature](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#movesignature) event triggers when a signature is moved across the page.
+The [moveSignature](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#movesignature) event triggers when a signature is moved across the page.
 
 - Event arguments: `MoveSignatureEventArgs`.
 
@@ -2453,9 +2455,9 @@ export default {
 
 ## pageChange
 
-The [pageChange](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#pagechange) event triggers when the current page number changes (for example, via scrolling or navigation controls).
+The [pageChange](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#pagechange) event triggers when the current page number changes (for example, via scrolling or navigation controls).
 
-- Event arguments: [PageChangeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pageChangeEventArgs/).
+- Event arguments: [PageChangeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pageChangeEventArgs).
 
 Example:
 
@@ -2535,9 +2537,9 @@ export default {
 
 ## pageClick
 
-The [pageClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#pageclick) event triggers when a mouse click occurs on a page.
+The [pageClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#pageclick) event triggers when a mouse click occurs on a page.
 
-- Event arguments: [PageClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pageClickEventArgs/).
+- Event arguments: [PageClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pageClickEventArgs).
 
 Example:
 
@@ -2616,7 +2618,7 @@ export default {
 
 ## pageMouseover
 
-The [pageMouseover](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#pagemouseover) event triggers when the mouse moves over a page.
+The [pageMouseover](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#pagemouseover) event triggers when the mouse moves over a page.
 
 - Event arguments: PageMouseoverEventArgs.
 
@@ -2697,7 +2699,7 @@ export default {
 
 ## pageOrganizerSaveAs
 
-The [pageOrganizerSaveAs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#pageorganizersaveas) event triggers when a Save As action is performed in the page organizer.
+The [pageOrganizerSaveAs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#pageorganizersaveas) event triggers when a Save As action is performed in the page organizer.
 
 - Event arguments: `PageOrganizerSaveAsEventArgs`.
 
@@ -2778,9 +2780,9 @@ export default {
 
 ## pageRenderComplete
 
-The [pageRenderComplete](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#pagerendercomplete) event triggers after a page finishes rendering.
+The [pageRenderComplete](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#pagerendercomplete) event triggers after a page finishes rendering.
 
-- Event arguments: [PageRenderCompleteEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pageRenderCompleteEventArgs/).
+- Event arguments: [PageRenderCompleteEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pageRenderCompleteEventArgs).
 
 Example:
 
@@ -2860,9 +2862,9 @@ export default {
 
 ## pageRenderInitiate
 
-The [pageRenderInitiate](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#pagerenderinitiate) event triggers when page rendering begins.
+The [pageRenderInitiate](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#pagerenderinitiate) event triggers when page rendering begins.
 
-- Event arguments: [PageRenderInitiateEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pageRenderInitiateEventArgs/).
+- Event arguments: [PageRenderInitiateEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pageRenderInitiateEventArgs).
 
 Example:
 
@@ -2941,9 +2943,9 @@ export default {
 
 ## printEnd
 
-The [printEnd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#printend) event triggers when a print action completes.
+The [printEnd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#printend) event triggers when a print action completes.
 
-- Event arguments: [PrintEndEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/printEndEventArgs/).
+- Event arguments: [PrintEndEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/printEndEventArgs).
 
 Example:
 
@@ -3005,9 +3007,9 @@ export default {
 
 ## printStart
 
-The [printStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#printstart) event triggers when a print action is initiated.
+The [printStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#printstart) event triggers when a print action is initiated.
 
-- Event arguments: [PrintStartEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/printStartEventArgs/).
+- Event arguments: [PrintStartEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/printStartEventArgs).
 
 Example:
 
@@ -3069,9 +3071,9 @@ export default {
 
 ## removeSignature
 
-The [removeSignature](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#removesignature) event triggers when a signature is removed.
+The [removeSignature](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#removesignature) event triggers when a signature is removed.
 
-- Event arguments: [RemoveSignatureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/removeSignatureEventArgs/).
+- Event arguments: [RemoveSignatureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/removeSignatureEventArgs).
 
 Example:
 
@@ -3133,9 +3135,9 @@ export default {
 
 ## resizeSignature
 
-The [resizeSignature](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#resizesignature) event triggers when a signature is resized.
+The [resizeSignature](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#resizesignature) event triggers when a signature is resized.
 
-- Event arguments: [ResizeSignatureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/resizeSignatureEventArgs/).
+- Event arguments: [ResizeSignatureEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/resizeSignatureEventArgs).
 
 Example:
 
@@ -3197,7 +3199,7 @@ export default {
 
 ## resourcesLoaded
 
-The [resourcesLoaded](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#resourcesLoaded) event triggers after the viewer's required resources are loaded.
+The [resourcesLoaded](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#resourcesLoaded) event triggers after the viewer's required resources are loaded.
 
 - Event arguments: `void`.
 
@@ -3261,9 +3263,9 @@ export default {
 
 ## signaturePropertiesChange
 
-The [signaturePropertiesChange](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#signaturepropertieschange) event triggers when signature properties change.
+The [signaturePropertiesChange](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#signaturepropertieschange) event triggers when signature properties change.
 
-- Event arguments: [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs/).
+- Event arguments: [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs).
 
 Example:
 
@@ -3326,9 +3328,9 @@ export default {
 
 ## signatureSelect
 
-The [signatureSelect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#signatureselect) event triggers when a signature is selected.
+The [signatureSelect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#signatureselect) event triggers when a signature is selected.
 
-- Event arguments: [SignatureSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signatureSelectEventArgs/).
+- Event arguments: [SignatureSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signatureSelectEventArgs).
 
 Example:
 
@@ -3390,9 +3392,9 @@ export default {
 
 ## signatureUnselect
 
-The [signatureUnselect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#signatureunselect) event triggers when a signature is unselected.
+The [signatureUnselect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#signatureunselect) event triggers when a signature is unselected.
 
-- Event arguments: [SignatureUnselectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signatureUnselectEventArgs/).
+- Event arguments: [SignatureUnselectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signatureUnselectEventArgs).
 
 Example:
 
@@ -3471,9 +3473,9 @@ export default {
 
 ## textSearchComplete
 
-The [textSearchComplete](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#textsearchcomplete) event triggers when a text search completes.
+The [textSearchComplete](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#textsearchcomplete) event triggers when a text search completes.
 
-- Event arguments: [TextSearchCompleteEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearchCompleteEventArgs/).
+- Event arguments: [TextSearchCompleteEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearchCompleteEventArgs).
 
 Example:
 
@@ -3535,9 +3537,9 @@ export default {
 
 ## textSearchHighlight
 
-The [textSearchHighlight](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#textsearchhighlight) event triggers when searched text is highlighted.
+The [textSearchHighlight](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#textsearchhighlight) event triggers when searched text is highlighted.
 
-- Event arguments: [TextSearchHighlightEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearchHighlightEventArgs/).
+- Event arguments: [TextSearchHighlightEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearchHighlightEventArgs).
 
 Example:
 
@@ -3616,9 +3618,9 @@ export default {
 
 ## textSearchStart
 
-The [textSearchStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#textsearchstart) event triggers when a text search is initiated.
+The [textSearchStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#textsearchstart) event triggers when a text search is initiated.
 
-- Event arguments: [TextSearchStartEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearchStartEventArgs/).
+- Event arguments: [TextSearchStartEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearchStartEventArgs).
 
 Example:
 
@@ -3697,9 +3699,9 @@ export default {
 
 ## textSelectionEnd
 
-The [textSelectionEnd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#textselectionend) event triggers when text selection is complete.
+The [textSelectionEnd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#textselectionend) event triggers when text selection is complete.
 
-- Event arguments: [TextSelectionEndEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSelectionEndEventArgs/).
+- Event arguments: [TextSelectionEndEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSelectionEndEventArgs).
 
 Example:
 
@@ -3761,7 +3763,7 @@ export default {
 
 ## textSelectionStart
 
-The [textSelectionStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#textselectionstart) event triggers when text selection is initiated.
+The [textSelectionStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#textselectionstart) event triggers when text selection is initiated.
 
 - Event arguments: `TextSelectionStartEventArgs`.
 
@@ -3825,9 +3827,9 @@ export default {
 
 ## thumbnailClick
 
-The [thumbnailClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#thumbnailclick) event triggers when a thumbnail is clicked.
+The [thumbnailClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#thumbnailclick) event triggers when a thumbnail is clicked.
 
-- Event arguments: [ThumbnailClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/thumbnailClickEventArgs/).
+- Event arguments: [ThumbnailClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/thumbnailClickEventArgs).
 
 Example:
 
