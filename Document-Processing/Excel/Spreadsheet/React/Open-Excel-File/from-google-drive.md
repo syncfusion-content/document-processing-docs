@@ -11,11 +11,15 @@ documentation: ug
 
 To load a file from Google Drive in a Spreadsheet Component, you can follow the steps below
 
-**Step 1:** Create a Simple Spreadsheet Sample in React
+**Step 1:** Set up Google Drive API
+
+You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/workspace/drive/api/guides/enable-sdk).
+
+**Step 2:** Create a Simple Spreadsheet Sample in React
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
 
-**Step 2:** Modify the `SpreadsheetController.cs` File in the Web Service Project
+**Step 3:** Modify the `SpreadsheetController.cs` File in the Web Service Project
 
 1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) for instructions on how to create a web service project.
 
@@ -50,6 +54,8 @@ public SpreadsheetController(IConfiguration configuration)
 }
 
 ```
+
+N> Note: Change your FolderId, CredentialPath, ApplicationName with your own
 
 5. Create the `OpenExcelFromGoogleDrive()` method to open the document from the Google Drive.
 
@@ -138,7 +144,7 @@ public class FileOptions
 
 N> Note: Install the Google.Apis.Drive.v3 NuGet package in the service project.
 
-**Step 3:** Modify the index File in the Spreadsheet sample to make a fetch call to the server to retrieve and load the Excel file from the Google Drive into the client-side spreadsheet.
+**Step 4:** Modify the index File in the Spreadsheet sample to make a fetch call to the server to retrieve and load the Excel file from the Google Drive into the client-side spreadsheet.
 
 ```typescript
 <button className="e-btn" onClick={openFromGoogleDrive} style={{ marginLeft: '10px' }}>
