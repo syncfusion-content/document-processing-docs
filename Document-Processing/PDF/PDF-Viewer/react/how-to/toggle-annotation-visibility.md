@@ -121,7 +121,7 @@ async function hideTextMarkup() {
 
 Implement role filters on top of the export/delete/import strategy:
 
-- **Admins →** see **all annotations**
+- **Admin →** see **all annotations**
 - **Editors →** see **all markup**
 - **Viewers →** see **only comments or approved stamps**
 
@@ -160,7 +160,7 @@ For a simple UI toggle (single button), reuse the **toggle all** function above.
 
 ## Events Related to Visibility
 
-There aren’t built‑in `annotationShown`/`annotationHidden` events. Use **export/import** lifecycle events to infer visibility changes (e.g., `exportStart`/`exportSuccess` when hiding, and `importStart`/`importSuccess` when showing). For all annotation‑level events (add/remove/select/resize/etc.), see **Annotation Events** (link below).
+There aren’t built‑in `annotationShown`/`annotationHidden` events. Use **export/import** life-cycle events to infer visibility changes (e.g., `exportStart`/`exportSuccess` when hiding, and `importStart`/`importSuccess` when showing). For all annotation‑level events (add/remove/select/resize/etc.), see **Annotation Events** (link below).
 
 **Tiny example:**
 

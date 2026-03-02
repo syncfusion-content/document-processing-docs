@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Flatten Annotations Before Saving the PDF in React
+# Flatten Annotations Before Saving the PDF in React
 Flattening annotations permanently merges them into the PDF content. Once flattened:
 - Annotations are **no longer editable** in any PDF viewer.
 - Useful for **secure sharing**, preventing modifications.
