@@ -2,18 +2,18 @@
 layout: post
 title: Text selection in Vue PDF Viewer | Syncfusion
 description: Learn how to configure text selection, react to selection events, and manage copy workflows in the Syncfusion Vue PDF Viewer component.
-control: Text selection
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 # Text selection in Vue PDF Viewer
 
-The TextSelection module lets users highlight and copy text from the loaded PDF. Selection is enabled by default and can be configured or monitored programmatically to match application workflows.
+The text selection feature allows users to highlight and copy content from PDF documents directly in the viewer interface. The TextSelection module is enabled by default, enabling interactive selection and copy operations. You can also programmatically control selection behavior and respond to selection events to customize the user experience.
 
 ## Enable or disable text selection
 
-Use the `enableTextSelection` property to enable or disable choosing text in the PDF Viewer.
+Control text selection behavior with the `enableTextSelection` property. By default, text selection is enabled allowing users to select and copy text. Set to `false` to restrict user interactions:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -219,15 +219,19 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Text selection events
+## Respond to text selection events
 
-Monitor user interaction with selection events to coordinate downstream actions such as showing tooltips, enabling context menus, or storing analytics.
+The PDF Viewer fires selection events at key moments during the user's interaction with text, enabling you to build responsive workflows such as showing copy confirmations, tracking selections for audit trails, or updating related UI elements.
 
 ### textSelectionStart
 
-The [textSelectionStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textselectionstartevent) event fires when a user begins selecting text. Use it to reset temporary UI, pause conflicting shortcuts, or capture the starting context.
+The [textSelectionStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#textselectionstart) event fires when a user begins selecting text. Use it to track selection initiation, disable conflicting UI controls, or log analytics about user interaction patterns.
 
-- Event arguments: `TextSelectionStartEventArgs` supplies details such as `pageNumber`, `bounds`, and `selectionBehavior`.
+Event arguments (`TextSelectionStartEventArgs`):
+- `pageNumber`: Zero-indexed page where selection started
+- `bounds`: Bounding rectangle of the initial selection point
+- `selectionBehavior`: Indicates whether the selection is new or continuing from a previous selection
+- `name`: Event name ("textSelectionStart")
 
 {% tabs %}
 {% highlight html tabtitle="Composition API" %}
@@ -335,9 +339,14 @@ export default {
 
 ### textSelectionEnd
 
-The [textSelectionEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textselectionendevent) event triggers after the selection is finalized. Use it to access the selected text, toggle contextual commands, or store telemetry.
+The [textSelectionEnd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#textselectionend) event triggers after the user completes a text selection. Use it to capture the selected text content, enable context-sensitive options (e.g., "Add to notes" button), or send selection data to your application backend for processing.
 
-- Event arguments: `TextSelectionEndEventArgs` includes `pageNumber`, `bounds`, `selectedText`, and `isSelectionCopied`.
+Event arguments (`TextSelectionEndEventArgs`):
+- `pageNumber`: Zero-indexed page where selection ended
+- `bounds`: Bounding rectangle(s) of the completed selection
+- `selectedText`: The actual text content that was selected (plain text string)
+- `isSelectionCopied`: Boolean indicating whether the user copied the selection to clipboard
+- `name`: Event name ("textSelectionEnd")
 
 {% tabs %}
 {% highlight html tabtitle="Composition API" %}

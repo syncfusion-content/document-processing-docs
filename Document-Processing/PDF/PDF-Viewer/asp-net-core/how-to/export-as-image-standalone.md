@@ -9,13 +9,11 @@ documentation: ug
 
 # Export PDF pages as images in ASP.NET Core PDF Viewer
 
-The PDF Viewer library enables exporting individual pages as Base64-encoded image strings by using the **exportAsImage()** method and exporting page ranges as Base64-encoded image strings by using the **exportAsImages()** method.
+The PDF Viewer allows you to export individual pages or specific page ranges as Base64-encoded image strings directly from the client side.
 
-Follow these steps to export PDF pages as images.
+## Export a single page
 
-**Step 1:** Follow the steps in the [Getting Started with ASP.NET Core PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a sample and reference the required EJ2 script and style resources.
-
-**Step 2:** Add the following code to enable exporting a specified page or a range of pages as Base64-encoded image strings. Place the script after the viewer markup so it executes once the PDF Viewer instance is available.
+To export a specific page as a Base64-encoded image string, use the **exportAsImage()** method. This method returns a promise that resolves to the image data.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -40,7 +38,9 @@ Follow these steps to export PDF pages as images.
 {% endhighlight %}
 {% endtabs %}
 
-Use the following code snippet to export a specified page as a Base64-encoded image string while supplying a custom image size:
+### Export with custom size
+
+Custom size for the exported image can also be specified by passing a `Size` object as the second parameter:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -66,7 +66,9 @@ Use the following code snippet to export a specified page as a Base64-encoded im
 {% endhighlight %}
 {% endtabs %}
 
-Use this code snippet to export a range of pages as Base64-encoded image strings:
+## Export a range of pages
+
+To export multiple pages within a range, use the **exportAsImages()** method. This method returns a promise that resolves to an array of Base64-encoded strings.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

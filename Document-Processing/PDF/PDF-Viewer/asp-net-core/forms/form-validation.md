@@ -9,18 +9,17 @@ documentation: ug
 
 # Validate PDF Form Fields in ASP.NET Core PDF Viewer
 
-The Syncfusion **ASP.NET Core PDF Viewer** provides built in support for **validating form fields** before users perform actions such as **printing**, **downloading**, or **submitting** a PDF document. Validation ensures that all required form fields are filled before allowing these actions to complete.  
-This feature helps enforce data completeness and improves the reliability of collected form data.
+The Syncfusion **ASP.NET Core PDF Viewer** provides built-in support for validating form fields before printing, downloading, or submitting a PDF document. Validation ensures all required form fields are filled, helping enforce data completeness and improving the reliability of collected data.
 
 ## How PDF Form Validation Works
 
 Form field validation follows this flow:
 - Enable validation using the [enableFormFieldsValidation](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormFieldsValidation) property.
-- Handle the [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event to determine which required fields are not filled.
-- When validation is enabled and a user attempts to print, download, or submit the document:
+- Handle the [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event to determine which required fields remain unfilled.
+- When validation is enabled and the user attempts to print, download, or submit:
   - The [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event is triggered.
   - Unfilled required fields are listed in args.nonFillableFields.
-  - You can cancel the action, show an error message, or move focus to an invalid field.
+  - Cancel the action, show an error message, or focus an invalid field as needed.
 
 ## Enable PDF Form Field Validation
 
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## Mark Fields as Required
 
-Only fields marked as **required** participate in validation. Use the **isRequired** property when creating or updating a form field.
+Only fields marked as required participate in validation. Use the **isRequired** property when creating or updating form fields.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -92,10 +91,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## Handle PDF Form Validation Results
 
-In the [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event, you can control the behavior when fields are missing. Typical actions include:
-- Cancel the print or download operation
-- Display an error message to the user
-- Set focus to the first unfilled required field
+In the [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event, control the behavior when fields are missing. Typical actions include:
+- Cancel the print or download operation.
+- Display an error message to the user.
+- Focus the first unfilled required field.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -121,9 +120,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## Tips
 
-- Use isRequired to clearly mark mandatory fields.
-- Validation is triggered only during [print](../print), [download](../download), or **submit** actions.
-- For custom validation logic (such as validating an email format):
+- Use **isRequired** to mark mandatory fields clearly.
+- Validation is triggered only during [print](../print), [download](../download), or submit actions.
+- For custom validation logic (such as validating email format):
   - Retrieve all form fields using [retrieveFormFields()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#retrieveformfields).
   - Apply custom checks before allowing the action to proceed.
 
