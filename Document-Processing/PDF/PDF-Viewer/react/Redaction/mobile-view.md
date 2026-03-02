@@ -27,7 +27,7 @@ N> In mobile view the redaction toolbar appears at the bottom of the viewer for 
 
 1. Add the PdfViewer to your React app and include the redaction toolbar item.
 
-    - Create or update `src/App.tsx` with the example in this [guide](./toolbar#enable-redaction-toolbar). The example includes a toolbar entry for [`RedactionEditTool`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbaritem) which enables redaction controls in the viewer.
+    - Create or update `src/App.tsx` or (`src/App.jsx`) with the example in this [guide](./toolbar#enable-redaction-toolbar). The example includes a toolbar entry for [`RedactionEditTool`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbaritem) which enables redaction controls in the viewer.
 
 2. Start the app and open it on a narrow viewport (phone width) to trigger mobile layout.
 
