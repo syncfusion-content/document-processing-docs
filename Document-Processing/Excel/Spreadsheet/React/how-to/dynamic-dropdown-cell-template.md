@@ -9,7 +9,7 @@ documentation: ug
 
 ## How to Create Dynamic Cell Templates with Dropdowns in React Spreadsheet
 
-This guide demonstrates three different approaches to implement dropdown functionality within cells using custom templates in the Syncfusion React Spreadsheet component.
+This guide demonstrates two different approaches to implement dropdown functionality within cells using custom templates in the Syncfusion React Spreadsheet component.
 
 ---
 
@@ -118,72 +118,13 @@ The following code example shows how to initialize dropdowns for specific cells:
 
 ---
 
-## Method 3: Create In-Cell Dropdown Using Data Validation
-
-This approach uses the built-in data validation feature to create dropdown lists within cells, providing a native Excel-like experience.
-
-### Use Case
-
-You want to implement dropdown lists using standard Excel data validation, with the ability to switch to free-text input when users select a special option like "Other".
-
-### Implementation Steps
-
-1. **Initialize the Spreadsheet** with `openUrl` and `saveUrl` configurations.
-2. **Apply data validation** to specific cells or ranges using `addDataValidation` with the `inCellDropDown` option in the `created` event.
-3. **Format headers and columns** using `cellFormat` and `numberFormat` to prepare the UI.
-4. **Handle cell save events** using `cellSave` to inspect the edited cell.
-5. **Detect validation rules** using the cell's `validation` property or `checkColumnValidation`.
-6. **Detect special selections** (e.g., "Other") and remove validation using `removeDataValidation`.
-7. **Clear the cell** and call `startEdit` to allow free-text input when needed.
-
-### How It Works
-
-- Data validation with `inCellDropDown: true` creates native dropdown lists in cells.
-- The `cellSave` event inspects edited cells using `getCellIndexes`, `getSheet`, `getCell`, and `getColumn`.
-- When "Other" is selected, validation is removed and the cell switches to editable mode.
-- The spreadsheet instance is accessed via a component ref for programmatic control.
-- As an alternative, you can use `updateCell` and `addDropDownToCell` to embed dropdowns during any event.
-
-### Key APIs
-
-- `addDataValidation` - Apply validation rules with dropdown
-- `removeDataValidation` - Remove validation from cells
-- `cellFormat` - Format cell appearance
-- `numberFormat` - Apply number formatting
-- `cellSave` - Event triggered when a cell is saved
-- `getCellIndexes` - Convert cell address to indexes
-- `getSheet` / `getSheetIndex` - Access sheet data
-- `getCell` / `getColumn` - Retrieve cell or column data
-- `checkColumnValidation` - Check if validation exists
-- `clear` - Clear cell content
-- `startEdit` - Enable edit mode for a cell
-- `updateCell` - Update cell value programmatically
-- `addDropDownToCell` - Embed dropdown directly
-
-### Example
-
-The following code example shows how to create dropdowns using data validation:
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/data-validation-dropdown-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/data-validation-dropdown-cs1/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/data-validation-dropdown-cs1" %}
-
----
-
 ## Comparison of Methods
 
-| Feature | Custom Ribbon Tab | Initialize Template | Data Validation |
-|---------|------------------|--------------------|--------------------|
-| **Initialization** | User-triggered | Programmatic | Programmatic |
-| **User Experience** | Requires toolbar action | Automatic rendering | Native Excel-like |
-| **Persistence** | Template flag | Template flag | Validation rules |
-| **Copy/Paste Support** | Manual handling | Automatic fix-up | Built-in |
-| **Customization** | Full control | Full control | Limited |
-| **Best For** | Dynamic user input | Pre-configured cells | Standard dropdowns |
+| Feature | Custom Ribbon Tab | Initialize Template |
+|---------|------------------|---------------------|
+| **Initialization** | User-triggered | Programmatic |
+| **User Experience** | Requires toolbar action | Automatic rendering |
+| **Persistence** | Template flag | Template flag |
+| **Copy/Paste Support** | Manual handling | Automatic fix-up |
+| **Customization** | Full control | Full control |
+| **Best For** | Dynamic user input | Pre-configured cells |
