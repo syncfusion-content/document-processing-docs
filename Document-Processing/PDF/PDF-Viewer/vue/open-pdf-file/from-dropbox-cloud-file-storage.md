@@ -22,7 +22,7 @@ Follow the Dropbox documentation to create an API app: https://www.dropbox.com/d
 
 **Step 2:** Create a PDF Viewer sample in Vue
 
-Follow the steps in this [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to set up a basic Vue PDF Viewer application.
+Start by following the PDF Viewer [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide for Vue to create a simple PDF Viewer sample. This provides the basic setup for the PDF Viewer component.
 
 **Step 3:** Modify the `src/App.vue` file in the Vue project
 
@@ -36,9 +36,9 @@ import { Dropbox } from 'dropbox';
 {% endhighlight %}
 {% endtabs %}
 
-2. Create an instance of the `Dropbox` class with an access token, download the target PDF file, convert it to Base64, and then load it into the PDF Viewer component.
+2. Create an instance of the Dropbox class using an access token for authentication. Call the `filesDownload` method to download the desired file (for example, `/PDF_Succinctly.pdf`). Extract the file blob from the response, convert it to a Base64 string using the `blobToBase64` helper, and load the Base64 string into the PDF Viewer control.
 
-N> Replace the placeholder with your actual Dropbox access token.
+N> Replace the placeholder with the actual Dropbox access token. For production, store secrets securely (for example, environment variables, user secrets, or a secret store such as Azure Key Vault) and do not commit credentials to source control.
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
@@ -71,7 +71,7 @@ N> Replace the placeholder with your actual Dropbox access token.
 {% endhighlight %}
 {% endtabs %}
 
-N> Install the **dropbox** package (`npm install dropbox`) in your application to use the previous code example.
+N> The **npm install dropbox** package must be installed in the Vue application to use the Dropbox SDK.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Standalone)
 
@@ -89,9 +89,9 @@ Follow the steps in this [getting started guide](https://help.syncfusion.com/doc
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [article](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for guidance on creating the web service project.
+1. Create a web service project in .NET Core 3.0 or above. Refer to this [article](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for guidance on creating the web service project.
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
 3. Import the required namespaces at the top of the file:
 
@@ -160,7 +160,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project and add the following lines below the existing `"AllowedHosts"` configuration:
+6. Open the `appsettings.json` file in the web service project and add the following lines below the existing `"AllowedHosts"` configuration:
 
 ```json
 {
@@ -176,11 +176,11 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> Replace the placeholders with your actual Dropbox access token and folder name.
+N> Replace the placeholders with the actual Dropbox access token and folder name.
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the `serviceUrl` property of the PDF Viewer component to the URL of your web service project (replace `https://localhost:44396/pdfviewer` with the actual server URL). Set the `documentPath` property to the name of the PDF file you want to load from Dropbox. Ensure the document name matches a file in your Dropbox folder.
+Set the `serviceUrl` property of the PDF Viewer component to the URL of the web service project (replace `https://localhost:44396/pdfviewer` with the actual server URL). Set the `documentPath` property to the name of the PDF file that needs to be loaded from Dropbox. Ensure the document name matches a file in the Dropbox folder.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -198,7 +198,7 @@ import {
   ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-// Replace the "localhost:44396" with the actual URL of your server
+// Replace the "localhost:44396" with the actual URL of the server
 const serviceUrl = "https://localhost:44396/pdfviewer";
 const documentPath = "PDF_Succinctly.pdf";
 
@@ -227,7 +227,7 @@ export default {
   },
   data() {
     return {
-      // Replace the "localhost:44396" with the actual URL of your server
+      // Replace the "localhost:44396" with the actual URL of the server
       serviceUrl: "https://localhost:44396/pdfviewer",
       documentPath: "PDF_Succinctly.pdf"
     };
@@ -241,6 +241,8 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> Install the **Dropbox.Api** NuGet package in your application to use the previous code example.
+N> The **Dropbox.Api** NuGet package must be installed in the web service project to use the Dropbox SDK.
+
+N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Dropbox. Ensure the specified document exists in the configured Dropbox folder and is passed to the `documentPath` property of the PDF Viewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Server-Backed)

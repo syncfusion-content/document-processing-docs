@@ -9,15 +9,17 @@ documentation: ug
 
 # Configure retry timeout and retry count
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer can automatically retry failed AJAX requests by using the [`retryTimeout`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RetryTimeout) and [`retryCount`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RetryCount) properties. Configure these settings to handle transient network errors or brief service outages without interrupting the document viewing experience.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer provides the [`retryTimeout`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RetryTimeout) and [`retryCount`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RetryCount) properties to manage failed AJAX requests automatically. Configuring these settings improves application resilience by handling transient network fluctuations or temporary service unavailability without disrupting the user experience.
 
-Set `retryTimeout` to define how long (in seconds) the viewer waits before retrying the failed request, and use `retryCount` to control how many attempts occur before the viewer reports an error. By default, `retryTimeout` is `0`, which disables the retry delay and causes the viewer to keep the request open indefinitely, while `retryCount` defaults to `0`, meaning no additional attempts occur.
+* **retryTimeout:** Defines the duration (in seconds) the viewer waits for a response before aborting and retrying the request. The default value is `0`, which disables the retry delay.
+* **retryCount:** Specifies the maximum number of retry attempts the viewer should perform before reporting a definitive error. The default value is `0`, meaning no retries are attempted.
 
-Assign positive values to both properties to limit how long the viewer waits for a response and how many retries should run before surfacing an error message.
-Use the properties in Razor markup as shown below. This sample demonstrates a server-backed viewer configuration.
+Assigning positive values to both properties ensures the viewer proactively manages connection issues.
 
-```html
 
+The following example demonstrates how to configure these properties in a server-backed PDF Viewer setup.
+
+```cshtml
 @{
     ViewData["Title"] = "Home page";
     double RetryTimeout = 10;
@@ -33,11 +35,12 @@ Use the properties in Razor markup as shown below. This sample demonstrates a se
                    documentPath="Data/PDF_Succinctly.pdf">
     </ejs-pdfviewer>
 </div>
-
 ```
 
-In the sample, `retryTimeout` is set to 10 seconds and `retryCount` to 5. If the service does not respond within 10 seconds, the viewer aborts the request and queues a new attempt. The process continues until the document loads or all five retries finish without success.
+In this configuration, if the service does not respond within 10 seconds, the viewer cancels the current request and initiates a new one. This process continues until either the document loads successfully or the five retry attempts are exhausted.
 
-Monitor the [`ajaxRequestFailed`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AjaxRequestFailed) event to log or display messages when the viewer exhausts all retries. This makes it easier to alert users and diagnose persistent outages.
+## Monitoring failures
+
+To provide a better user experience, monitor the [`ajaxRequestFailed`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AjaxRequestFailed) event. This helps in logging failures or displaying custom notifications once all retry attempts have finished.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/RetryTimeout)

@@ -7,11 +7,11 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Find text with findTextAsync in the ASP.NET Core PDF Viewer
+# Search for text asynchronously in ASP.NET Core PDF Viewer
 
-The `findTextAsync` method searches for a string or array of strings asynchronously and returns bounding rectangles for each match. Use it to locate text positions across the document or on a specific page.
+Use the `findTextAsync` method to search for text strings and retrieve bounding box coordinates for all matches. Perform case-sensitive or case-insensitive searches across the entire document or on specific pages.
 
-Here is an example of how to use `findTextAsync`:
+## Asynchronous text search with findTextAsync
 
 
 {% tabs %}
@@ -74,4 +74,4 @@ The `findTextAsync` method performs an asynchronous text search within a PDF doc
 
 - **findTextAsync(['pdf', 'the'], false, 1)**: Searches for "pdf" and "the" case-insensitively on page 1 only.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

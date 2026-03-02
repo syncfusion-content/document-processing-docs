@@ -607,7 +607,7 @@ Edit opacity using the range slider in the Edit Opacity tool.
 
 Default properties for ink annotations can be set before creating the control using InkAnnotationSettings.
 
-After changing default values, the selected values are applied. Refer to the following code sample to set the default ink annotation settings.
+After changing default values, the new defaults are applied to subsequently created ink annotations.. Refer to the following code sample to set the default ink annotation settings.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}

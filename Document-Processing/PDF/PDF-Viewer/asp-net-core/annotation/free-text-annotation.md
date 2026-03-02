@@ -1,29 +1,43 @@
 ---
 layout: post
-title: Free text annotation in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn about free text annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+title: Free Text Annotations in ASP.NET Core PDF Viewer | Syncfusion
+description: Add and customize free text annotations in ASP.NET Core PDF Viewer with  control over formatting tools with programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Free text annotation in ASP.NET Core PDF Viewer control
+# Free Text Annotations in ASP.NET Core PDF Viewer
 
-The PDF Viewer control provides options to add, edit, and delete free text annotations.
+The PDF Viewer control provides comprehensive free text annotation capabilities for adding, editing, deleting, and customizing text annotations with full typographic and styling control.
 
 ## Add a free text annotation to the PDF document
 
-Free text annotations can be added to the PDF document using the annotation toolbar.
+Free text annotations can be added to PDF documents using the built-in annotation toolbar with simple click and type functionality.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
-* Select the **Free Text Annotation** button to enable free text annotation mode.
-* Add text anywhere on the pages of the PDF document.
+### Step-by-step guide
 
-When in pan mode, selecting free text annotation switches the PDF Viewer to text select mode.
+**1. Enable annotation mode**
+- Click the **Edit Annotation** button in the PDF Viewer toolbar
+- The annotation toolbar appears below the main toolbar
+
+**2. Select free text tool**
+- Click the **Free Text Annotation** button in the annotation toolbar
+- The cursor changes to text input mode
 
 ![Free text tool in the annotation toolbar](../images/freetext_tool.png)
 
-The following example switches to free text annotation mode using a button click.
+**3. Place text box on document**
+- Click on the PDF page where you want to add text
+- A text box appears at the clicked location
+
+**4. Enter text content**
+- Type your text directly into the text box
+- Use the formatting toolbar to adjust font, size, color, and alignment
+
+N> When in pan mode and free text annotation is selected, the PDF Viewer automatically switches to text select mode for smooth interaction.
+
+**Example: Enable free text annotation mode**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -67,9 +81,9 @@ The following example switches to free text annotation mode using a button click
 
 ## Add a free text annotation programmatically to the PDF document
 
-The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library provides the [`addAnnotation()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) API method for programmatic free text insertion, enabling dynamic form filling and batch annotation operations.
 
-Here is an example of adding a free text annotation programmatically using addAnnotation():
+**Example: Add free text annotation programmatically**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -141,9 +155,9 @@ Here is an example of adding a free text annotation programmatically using addAn
 
 ## Change the content of an existing free text annotation programmatically
 
-To change the content of an existing free text annotation programmatically, use the **editAnnotation()** method.
+Modify free text annotation properties including text content, position, formatting, and styling using the **editAnnotation()** API method.
 
-Here is an example of changing the content of a free text annotation using **editAnnotation()**:
+**Example: Edit free text annotation content and properties**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -203,67 +217,73 @@ N> The current version of the PDF Viewer does not edit existing document text. N
 
 ## Edit the properties of free text annotations
 
-Font family, font size, styles, font color, text alignment, fill color, stroke color, border thickness, and opacity can be edited using the Font Family, Font Size, Font Color, Text Align, Font Style, Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
+Free text annotations support comprehensive typography and styling options through the annotation toolbar. Select any free text annotation to access these editing tools.
 
-### Edit font family
+### Text formatting tools
 
-Edit the font family by selecting a font in the Font Family tool.
+**1. Edit Font Family**
+- Select from available fonts in the Font Family tool
+- Changes apply to the selected free text
 
 ![Change font family](../images/fontfamily.png)
 
-### Edit font size
+**2. Edit Font Size**
 
-Edit the font size by selecting a size in the Font Size tool.
+Choose font size from the Font Size tool
 
 ![Change font size](../images/fontsize.png)
 
-### Edit font color
-
-Edit the font color using the color palette in the Font Color tool.
+**3. Edit Font Color**
+- Use the color palette in the Font Color tool
+- Click to select text color
 
 ![Change font color](../images/fontcolor.png)
 
-### Edit text alignment
+### Text alignment
 
-Align text by selecting an option from the Text Align tool.
+**4. Edit Text Alignment**
+
+Select alignment from the Text Align tool
 
 ![Set text alignment](../images/textalign.png)
 
-### Edit text styles
+**5. Edit Text Styles**
 
-Edit text styles by selecting options in the Font Style tool.
+Apply formatting from the Font Style tool
 
 ![Change text styles](../images/fontstyle.png)
 
-### Edit fill color
+### Free Text appearance tools
 
-Edit the fill color using the color palette in the Edit Color tool.
+**6. Edit Fill Color**
+
+Use the color palette in the Edit Color tool to edit the fill color.
 
 ![Change fill color](../images/fillcolor.png)
 
-### Edit stroke color
-
-Edit the stroke color using the color palette in the Edit Stroke Color tool.
+**7. Edit Stroke Color (Border)**
+- Use the color palette in the Edit Stroke Color tool
+- Select border color for the free text box outline
 
 ![Change stroke color](../images/fontstroke.png)
 
-### Edit thickness
+**8. Edit Thickness (Border Width)**
 
-Edit border thickness using the range slider in the Edit Thickness tool.
+Use the range slider in the Edit Thickness tool.
 
 ![Change border thickness](../images/fontthickness.png)
 
-### Edit opacity
-
-Edit opacity using the range slider in the Edit Opacity tool.
+**9. Edit Opacity**
+- Use the range slider in the Edit Opacity tool
+- Adjust from 0 (fully transparent) to 1 (fully opaque)
 
 ![Change opacity](../images/fontopacity.png)
 
 ## Set default properties during control initialization
 
-Default properties for free text annotations can be set before creating the control using FreeTextSettings.
+Configure default free text annotation properties globally during PDF Viewer initialization using the **freeTextSettings** property. These defaults apply to all subsequently created free text annotations.
 
-After changing default values, the selected values are applied. The following example sets default free text annotation settings.
+**Example: Configure default free text properties**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
