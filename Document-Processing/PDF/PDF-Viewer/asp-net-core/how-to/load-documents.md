@@ -9,13 +9,13 @@ documentation: ug
 
 # Load documents dynamically in the ASP.NET Core PDF Viewer
 
-Load or switch PDF documents dynamically after the initial load. Use the **load()** method to load a PDF by Base64 string or file name.
+Switch between PDF documents or replace the currently displayed document after the PDF Viewer is rendered. The **load()** method enables dynamic document loading using either a Base64 string or a file path.
 
-## Steps to load PDF documents dynamically
+## Load PDF documents dynamically
 
-**Step 1:** Follow the steps in the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a sample.
+**Step 1:** Follow the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer instance.
 
-**Step 2:** Use the following code to load a PDF using a Base64 string.
+**Step 2:** Use the following code snippet to load a PDF from a Base64 string.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -65,7 +65,7 @@ Load or switch PDF documents dynamically after the initial load. Use the **load(
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3:** Use the following code snippet to load PDF document using document name.
+**Step 3:** Use the following code snippet to load a PDF document using a file path or URL.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -113,6 +113,6 @@ Load or switch PDF documents dynamically after the initial load. Use the **load(
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, the load API can be used to switch documents dynamically in the ASP.NET Core PDF Viewer.
+These steps demonstrate how to use the **load()** API to switch documents dynamically at runtime in the ASP.NET Core PDF Viewer.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Load%20PDF%20documents%20dynamically)

@@ -39,7 +39,7 @@ Different starters create different folder layouts. Pick the mapping that matche
 
 Use the file paths that match your project layout when following the steps below.
 
-## Step 1 — Create a Remix or React Router v7 app
+## Create a Remix or React Router v7 app
 
 If you want the React Router framework-mode project (creates an `app/` tree), use the official scaffolding tool:
 
@@ -61,13 +61,13 @@ npm install react-router@7 react-router-dom@7
 npm run dev
 ```
 
-## Step 2 — Install the PDF Viewer package
+## Install the PDF Viewer package
 
 ```bash
 npm install @syncfusion/ej2-react-pdfviewer --save
 ```
 
-## Step 3 — Copy viewer runtime assets to `public`
+## Copy viewer runtime assets to public folder
 
 The PDF Viewer requires runtime assets (pdfium.js, pdfium.wasm, supporting files). Copy them from the `ej2-pdfviewer` package to your `public` folder so `resourceUrl` can point to `/ej2-pdfviewer-lib`.
 
@@ -85,7 +85,7 @@ Copy-Item -Path .\node_modules\@syncfusion\ej2-pdfviewer\dist\ej2-pdfviewer-lib 
 
 Confirm `public/ej2-pdfviewer-lib` contains `pdfium.js` and `pdfium.wasm`.
 
-## Step 4 — Add global CSS for the viewer
+## Add global CSS for the viewer
 
 Place the Syncfusion CSS imports in your project's global stylesheet. Choose the path that matches your project layout.
 
@@ -130,7 +130,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 );
 ```
 
-## Step 5 — Client-only rendering
+## Client-only rendering
 
 The PDF Viewer depends on browser APIs and WebAssembly; avoid server-side rendering it. Render it only after the component mounts. Create a client-only component in the folder that matches your project layout.
 
@@ -144,7 +144,9 @@ Vite / plain React (`src/` tree)
 
 Example component (works in either location):
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 // components/PdfViewerClient.ts
 import React, { useEffect, useState } from 'react';
 import {
@@ -175,7 +177,9 @@ export default function PdfViewerClient() {
     </div>
   );
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 Routing / usage examples:
 
@@ -204,7 +208,7 @@ export default function App() {
 }
 ```
 
-## Step 6 — Run the app
+## Run the app
 
 ```bash
 npm run dev

@@ -230,47 +230,71 @@ The Syncfusion PowerPoint Library enables developers to create, read, edit, and 
 
 The Syncfusion Spreadsheet Editor SDK component enables developers to create, view, edit, and analyze spreadsheets directly in web and desktop applications across multiple platforms, including Angular, React, Vue, JavaScript, Blazor, ASP.NET Core, and more.
 
-{% promptcards %}
-{% promptcard Initialize Spreadsheet %}
+{% tabs %}
+{% highlight tabtitle="Initialize Spreadsheet" %}
 #SyncfusionSpreadsheetEditorSDKAssistant How do I initialize a basic Spreadsheet in Angular with default settings?
-{% endpromptcard %}
-{% promptcard Data Binding %}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight tabtitle="Data Binding" %}
 #SyncfusionSpreadsheetEditorSDKAssistant Show me how to bind local JSON data to the Spreadsheet in React?
-{% endpromptcard %}
-{% promptcard Remote Data Binding %}
-#SyncfusionSpreadsheetEditorSDKAssistant Provide an example of binding remote data in Vue Spreadsheet?
-{% endpromptcard %}
-{% promptcard Formulas and Calculation %}
-#SyncfusionSpreadsheetEditorSDKAssistant How can I enable formula support and use named ranges in the Typescript Spreadsheet?
-{% endpromptcard %}
-{% promptcard Charts %}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight tabtitle="Remote Data Binding" %}
+#SyncfusionSpreadsheetEditorSDKAssistant Provide an example of binding remote data in a Vue Spreadsheet?
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight tabtitle="Formulas and Calculation" %}
+#SyncfusionSpreadsheetEditorSDKAssistant How can I enable formula support and use named ranges in the TypeScript Spreadsheet?
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight tabtitle="Charts" %}
 #SyncfusionSpreadsheetEditorSDKAssistant How do I insert and customize a column chart in the Blazor Spreadsheet?
-{% endpromptcard %}
-{% promptcard Data Validation %}
-#SyncfusionSpreadsheetEditorSDKAssistant Provide an example of adding list validation in cells in Typescript?
-{% endpromptcard %}
-{% promptcard Import and Export %}
-#SyncfusionSpreadsheetEditorSDKAssistant How to import an Excel file and export the Spreadsheet as XLSX in ASP.NET Core?
-{% endpromptcard %}
-{% promptcard Ribbon and Toolbar %}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight tabtitle="Data Validation" %}
+#SyncfusionSpreadsheetEditorSDKAssistant Provide an example of adding list validation to cells in TypeScript?
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight tabtitle="Import and Export" %}
+#SyncfusionSpreadsheetEditorSDKAssistant How do I import an Excel file and export the Spreadsheet as XLSX in ASP.NET Core?
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight tabtitle="Ribbon and Toolbar" %}
 #SyncfusionSpreadsheetEditorSDKAssistant Show how to customize the ribbon toolbar and add custom buttons in the ASP.NET MVC Spreadsheet?
-{% endpromptcard %}
-{% promptcard Grid Lines and Headers %}
-#SyncfusionSpreadsheetEditorSDKAssistant How do I show or hide grid lines and row/column headers in Windows Forms Spreadsheet?
-{% endpromptcard %}
-{% promptcard Sheet Protection %}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight tabtitle="Grid Lines and Headers" %}
+#SyncfusionSpreadsheetEditorSDKAssistant How do I show or hide grid lines and row/column headers in the Windows Forms Spreadsheet?
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight tabtitle="Sheet Protection" %}
 #SyncfusionSpreadsheetEditorSDKAssistant How can I protect a sheet with a password in the WPF Spreadsheet control?
-{% endpromptcard %}
-{% promptcard Conditional Formatting %}
-#SyncfusionSpreadsheetEditorSDKAssistant How to apply conditional formatting such as color scales or data bars in UWP Spreadsheet?
-{% endpromptcard %}
-{% promptcard Cell Formatting %}
-#SyncfusionSpreadsheetEditorSDKAssistant How to apply cell styles, number formatting, and wrap text in the Typescript Spreadsheet?
-{% endpromptcard %}
-{% promptcard Sorting and Filtering %}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight tabtitle="Conditional Formatting" %}
+#SyncfusionSpreadsheetEditorSDKAssistant How do I apply conditional formatting such as color scales or data bars in the UWP Spreadsheet?
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight tabtitle="Cell Formatting" %}
+#SyncfusionSpreadsheetEditorSDKAssistant How do I apply cell styles, number formatting, and wrap text in the TypeScript Spreadsheet?
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight tabtitle="Sorting and Filtering" %}
 #SyncfusionSpreadsheetEditorSDKAssistant Show me how to enable sorting and filtering features in the React Spreadsheet?
-{% endpromptcard %}
-{% endpromptcards %}
+{% endhighlight %}
+{% endtabs %}
 
 ## See also
 

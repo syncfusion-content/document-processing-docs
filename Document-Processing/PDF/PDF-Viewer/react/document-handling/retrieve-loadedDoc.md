@@ -11,15 +11,11 @@ domainurl: ##DomainURL##
 
 This page explains how to access the React PDF Viewer instance using a React ref, listen for the [`documentLoad`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload) life-cycle event, and retrieve document information, page details, and metadata—so you can safely invoke viewer APIs after the PDF is loaded.
 
----
-
 ## Explanation: Why access the loaded document instance?
 
 - The viewer instance (via **React ref**) gives you a stable handle to call APIs such as [`zoom`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/magnification), [`print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/print), [`download`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/download), and [`navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/navigation).
 - The **document load event** (fires after the PDF is parsed and pages are ready) is the correct moment to read **document information** (title, author, page count, etc.) and **page metrics**, and to trigger post‑load UI logic.
 - Accessing the instance too early (before load completes) may cause null/undefined errors or incomplete information.
-
----
 
 ## Reference: What you can access/call after load
 
@@ -35,8 +31,6 @@ After the PDF is loaded you can:
 
 > Always invoke these after the `documentLoad` event fires, or from user actions that occur after load. Guard calls with optional chaining or readiness flags.
 
----
-
 ## How‑to: Get the instance with a ref and read details on load
 
 Below is a focused snippet showing:
@@ -44,7 +38,9 @@ Below is a focused snippet showing:
 2) Wiring the **`documentLoad`** event, and
 3) Reading basic **document info** and **page count**, then calling **viewer APIs** safely.
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import {
@@ -100,14 +96,14 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 **Notes**
 - The event name is `documentLoad` (the callback receives load args).
 - The exact event args and public methods available on the component may vary with the package version and injected services. Use `console.log(args)` once to see what’s present in your build.
 - Always guard calls with optional chaining (e.g., `viewer?.magnification?.zoomTo(125)`).
-
----
 
 ## Tutorial: End‑to‑End — Read metadata & call APIs after load
 
@@ -117,7 +113,9 @@ This example demonstrates a complete flow:
 - Extracting **metadata** and **pages**
 - Exposing **buttons** to call viewer APIs only after load
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import {
@@ -257,9 +255,9 @@ function App() {
 // Render like your previous example (ensure an element with id="sample" exists in index.html)
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
-
----
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## See also
 - React PDF Viewer – [API Reference](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default) ([methods](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#methods), [events](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#events), [properties](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#properties))
