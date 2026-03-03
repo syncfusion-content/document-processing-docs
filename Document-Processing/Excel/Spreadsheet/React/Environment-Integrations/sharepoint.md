@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with React Spreadsheet in the SharePoint Framework (SPFx)
+# Getting Started with React Spreadsheet in SharePoint Framework(SPFx)
 
 This article provides a step-by-step guide for setting up a SharePoint project and integrating the Syncfusion® React components.
 
