@@ -21,11 +21,11 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 **Step 3:** Modify the `SpreadsheetController.cs` File in the Web Service Project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) for instructions on how to create a web service project.
+* Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) for instructions on how to create a web service project.
 
-2. Open the `SpreadsheetController.cs` file in your web service project.
+* Open the `SpreadsheetController.cs` file in your web service project.
 
-3. Import the required namespaces at the top of the file:
+* Import the required namespaces at the top of the file:
 
 ```csharp
 
@@ -36,9 +36,9 @@ using Syncfusion.EJ2.Spreadsheet;
 
 ```
 
-4. Add the following private fields and constructor parameters to the `SpreadsheetController` class, In the constructor, assign the values from the configuration to the corresponding fields.
+* Add the following private fields and constructor parameters to the `SpreadsheetController` class, In the constructor, assign the values from the configuration to the corresponding fields.
 
-```Csharp
+```csharp
 
 //variables for storing GDrive folderId, ApplicationName and Service-Accountkey credentials
 public readonly string folderId;
@@ -55,9 +55,9 @@ public SpreadsheetController(IConfiguration configuration)
 
 ```
 
-5. Create the `OpenExcelFromGoogleDrive()` method to open the document from the Google Drive.
+* Create the `OpenExcelFromGoogleDrive()` method to open the document from the Google Drive.
 
-```Csharp
+```csharp
 
 [HttpPost]
 [Route("OpenExcelFromGoogleDrive")]
@@ -128,19 +128,28 @@ public class FileOptions
 
 ```
 
-6. Open the `appsettings.json` file in your web service project, add your Google Drive configuration details.
+N> You can also refer to this [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-spreadsheet-google-drive-integration/tree/master) repository for reference.
 
-```Json
+* Open the `appsettings.json` file in your web service project, add your Google Drive configuration details.
+
+```json
 
 {
- "CredentialPath": "path-to-your-service-account-key.json",
- "FolderId": "your-google-drive-folder-id",
- "ApplicationName": "YourAppName"
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "CredentialPath": "path-to-your-service-account-key.json",
+  "FolderId": "your-google-drive-folder-id",
+  "ApplicationName": "YourAppName"
 }
 
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
+N> Replace the **credential path**, **folderId** and **application name** in json file with your actual Google drive folder ID , your name for your application and the path for the JSON file.
 
 **Step 4:** Modify the index File in the Spreadsheet sample to make a fetch call to the server to retrieve and load the Excel file from the Google Drive into the client-side spreadsheet.
 
@@ -176,4 +185,4 @@ const openFromGoogleDrive = () => {
 };
 ```
 
-N> Install the Google.Apis.Drive.v3 NuGet package must be installed in your application to use the previous code example.
+N> The Google.Apis.Drive.v3 NuGet package must be installed in your application to use the previous code example.

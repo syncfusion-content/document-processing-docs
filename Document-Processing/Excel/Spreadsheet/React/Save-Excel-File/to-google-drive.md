@@ -21,11 +21,11 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 **Step 3:** Modify the `SpreadsheetController.cs` File in the Web Service Project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) for instructions on how to create a web service project.
+* Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) for instructions on how to create a web service project.
 
-2. Open the `SpreadsheetController.cs` file in your web service project.
+* Open the `SpreadsheetController.cs` file in your web service project.
 
-3. Import the required namespaces at the top of the file:
+* Import the required namespaces at the top of the file:
 
 ```csharp
 
@@ -36,7 +36,7 @@ using Syncfusion.EJ2.Spreadsheet;
 
 ```
 
-4. Add the following private fields and constructor parameters to the `SpreadsheetController` class, In the constructor, assign the values from the configuration to the corresponding fields.
+* Add the following private fields and constructor parameters to the `SpreadsheetController` class, In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 
@@ -57,7 +57,7 @@ public SpreadsheetController(IConfiguration configuration)
 
 N> Note: Change your FolderId, CredentialPath, ApplicationName with your own.
 
-5. Create the `SaveExcelToGoogleDrive()` method to save the document to the Google Drive.
+* Create the `SaveExcelToGoogleDrive()` method to save the document to the Google Drive.
 
 ```csharp
 
@@ -139,6 +139,8 @@ public async Task<IActionResult> SaveExcelToGoogleDrive([FromForm] SaveSettings 
 
 ```
 
+N> You can also refer to this [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-spreadsheet-google-drive-integration/tree/master) repository for reference.
+
 * Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
@@ -150,17 +152,17 @@ public async Task<IActionResult> SaveExcelToGoogleDrive([FromForm] SaveSettings 
     }
   },
   "AllowedHosts": "*",
-  "FolderId": "Your Google Drive Folder ID",
-  "CredentialPath": "Your Path to the OAuth 2.0 Client IDs json file",
-  "ApplicationName": "Your Application name"
+  "CredentialPath": "path-to-your-service-account-key.json",
+  "FolderId": "your-google-drive-folder-id",
+  "ApplicationName": "YourAppName"
 }
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
+N> Replace the **credential path**, **folderId** and **application name** in json file with your actual Google drive folder ID , your name for your application and the path for the JSON file.
 
-**Step 4:** Modify the index file in the Spreadsheet sample to use the [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send the JSON to the backend.
+**Step 4:** Modify the index file in the Spreadsheet sample to save the file as json using the [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method and send the JSON to the backend.
 
-```js
+```typescript
 <button class="e-btn" onClick={saveToGoogleDrive}>
   Save to Google Drive
 </button>;
@@ -197,4 +199,4 @@ const saveToGoogleDrive = () => {
 };
 ```
 
-N> Install the Google.Apis.Drive.v3 NuGet package must be installed in your application to use the previous code example.
+N> The Google.Apis.Drive.v3 NuGet package must be installed in your application to use the previous code example.
