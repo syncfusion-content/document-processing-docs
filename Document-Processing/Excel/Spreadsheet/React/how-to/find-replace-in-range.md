@@ -7,21 +7,13 @@ platform: document-processing
 documentation: ug
 ---
 
-## Find and replace the text within the selected range of cells
+# Find and replace the text within the selected range of cells
 
-It explains how you can limit the Find and Replace action so it works only inside the cells that the user has selected.
+You can limit Replace All so it only updates the cells inside the selected range. When the action runs, the selected range is expanded into individual cell addresses and compared with the cells returned by Replace All.
 
-When the user clicks Replace All, the Spreadsheet normally searches the whole sheet. To avoid that, the action is checked before it runs. During this check, the selected range in the active sheet is read and expanded into individual cell addresses.
+Intercepts the beforeReplaceAll action via [actionBegin](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actionbegin), reads selectedRange, expands it to cell addresses, and filters addressCollection to match only the selection.
 
-The list of cells that the Replace All action plans to update is then filtered, keeping only the addresses that fall inside the selected range. With this, Replace All updates only the cells the user has selected and nothing outside that area.
-
-Limit the Replace All operation to the user’s current selection by intercepting the Replace action (`actionBegin`) and filtering `eventArgs.addressCollection` using `getActiveSheet().selectedRange`. This ensures only addresses inside the selected range are updated.
-
-This guide explains how to limit the “Replace All” operation so that replacements occur only within the currently selected range of cells in the Syncfusion React Spreadsheet component.
-
-Intercepts the beforeReplaceAll action via [actionBegin](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actionbegin), reads getActiveSheet().selectedRange, expands it to cell addresses, and filters eventArgs.addressCollection to match only the selection.
-
-The following code example shows how to find and replace the text within the selected range of cells
+The following code example shows how to find and replace the text within the selected range of cells:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

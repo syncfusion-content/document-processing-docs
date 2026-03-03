@@ -17,7 +17,12 @@ function App(): React.ReactElement {
   // Triggers after the component is created
   const handleCreated = (): void => {
     if (!spreadsheetRef.current) return;
-    // Add a header Ribbon tab with a button to initialize everything on click.
+    // Initialize icons in the cells when the spreadsheet loads.
+    spreadsheetRef.current.updateCell({ template: 'plus-icon' } as any, 'A1');
+    spreadsheetRef.current.updateCell({ template: 'plus-icon' } as any, 'B1');
+    spreadsheetRef.current.updateCell({ template: 'plus-icon' } as any, 'C1');
+    spreadsheetRef.current.resize();
+    // This is to Add a header Ribbon tab with a button to initialize everything on click.
     spreadsheetRef.current.addRibbonTabs([
       {
         header: { text: 'Template' },
@@ -53,8 +58,6 @@ function App(): React.ReactElement {
         ref={spreadsheetRef}
         created={handleCreated}
         beforeCellRender={handleBeforeCellRender}
-        openUrl="https://services.syncfusion.com/js/production/api/spreadsheet/open"
-        saveUrl="https://services.syncfusion.com/js/production/api/spreadsheet/save"
       />
     </div>
   );
