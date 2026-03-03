@@ -9,15 +9,13 @@ domainurl: ##DomainURL##
 ---
 # Download in Vue PDF viewer control
 
-The PDF Viewer supports downloading the loaded PDF document. Use the enableDownload property to enable or disable the download option, as shown below.
+The Vue PDF Viewer lets users download the currently loaded PDF. Enable the download toolbar button with `enableDownload` for both standalone and server-backed viewers. The examples below demonstrate typical configurations and how to trigger a programmatic download.
 
-![Alt text](./images/download.png)
+![PDF Viewer toolbar with download button](./images/download.png)
 
-> Note: When loading documents from other origins, ensure that CORS is correctly configured on the server. In server-backed mode, the document is streamed through the serviceUrl endpoint, which must allow download requests.
+N> When loading documents from other origins, ensure that CORS is correctly configured on the server. In server-backed mode, the document is streamed through the serviceUrl endpoint, which must allow download requests.
 
-![PDF Viewer toolbar showing the download button](./images/download.png)
-
-You can invoke the download action using the following code snippet:
+To invoke download programmatically, use the following snippet:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}

@@ -12,31 +12,31 @@ domainurl: ##DomainURL##
 
 The PDF Viewer control provides options to add, edit, and delete sticky note annotations in the PDF document.
 
-![StickyNotesAnnotation](../images/stickynotes_annotation.png)
+![Sticky note annotation added to a PDF page](../images/stickynotes_annotation.png)
 
 ## Add a sticky note annotation to the PDF document
 
 Sticky note annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Comments** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
+* Click the **Comments** button in the PDF Viewer toolbar to open the annotation toolbar.
 * Click the position where the sticky note annotation should be added.
-* The sticky note annotation is added at the clicked position.
+* The sticky note annotation appears at the selected position.
 
-![StickyNotesTool](../images/stickynotes_tool.png)
+![Sticky note annotation tool](../images/stickynotes_tool.png)
 
 Annotation comments can be added using the comment panel.
 
 * Select a sticky note annotation in the PDF document and right-click it.
-* Select Comment from the context menu.
+* Choose Comment from the context menu.
 * Add comments, replies, and status using the comment panel.
 
-![StickyNotesComment](../images/stickynotes_comment.png)
+![Open the comment panel to add or view comments for a sticky note annotation](../images/stickynotes_comment.png)
 
 ## Add a sticky note annotation to the PDF document programmatically
 
 The PDF Viewer library allows adding a sticky note annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
-Here is an example showing how to add a sticky note annotation programmatically using addAnnotation():
+The following example shows how to add a sticky note annotation programmatically using `addAnnotation()`:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -211,7 +211,7 @@ export default {
 
 To modify an existing sticky note annotation programmatically, use the editAnnotation() method.
 
-Here is an example of using editAnnotation():
+The following example shows how to modify an existing sticky note annotation using `editAnnotation()`:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -400,25 +400,25 @@ export default {
 
 Edit opacity using the range slider in the Edit Opacity tool.
 
-![StickyNotesOpacity](../images/sticky_opacity.png)
+![Adjust opacity for a sticky note annotation using the Edit Opacity slider](../images/sticky_opacity.png)
 
 ### Editing comments
 
-Comment text, replies, and status can be edited using the comment panel.
+Comment text, replies, and status can be edited in the comment panel.
 
 * Open the comment panel using the Comment Panel button in the annotation toolbar.
 
-![StickyNotesComment](../images/commentPanel.png)
+![Comment panel showing comments and replies for sticky note annotations](../images/commentPanel.png)
 
 Modify or delete comments or replies, and change status using the menu options in the comment panel.
 
-![StickyNotesEdit](../images/sticky_editbtn.png)
+![Comment panel showing comments and replies for sticky note annotations](../images/sticky_editbtn.png)
 
 ## Set default properties during control initialization
 
-Default properties for sticky note annotations can be set before creating the control using StickyNotesSettings.
+Default properties for sticky note annotations can be set before creating the control using `StickyNotesSettings`.
 
-After changing default opacity using the Edit Opacity tool, the selected value is applied. The following example sets default sticky note annotation settings.
+After changing default opacity with the Edit Opacity tool, the selected value is applied to new sticky note annotations. The following example sets default sticky note annotation properties.
 
 
 {% tabs %}
@@ -557,7 +557,7 @@ export default {
 
 ## Disable sticky note annotations
 
-The PDF Viewer control provides an option to disable sticky note annotations. The following example disables the feature.
+The PDF Viewer control provides an option to disable sticky note annotations. The following example shows how to disable the feature.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}

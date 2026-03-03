@@ -24,7 +24,7 @@ Use the enableAnnotationToolbar property or the showAnnotationToolbar method to 
 - enableAnnotationToolbar API: https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#enableannotationtoolbar
 - showAnnotationToolbar method: https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar/#showannotationtoolbar
 
-The following code snippet explains how to show or hide the annotation toolbar using the showAnnotationToolbar method.
+The following example shows how to show or hide the annotation toolbar using the `showAnnotationToolbar` method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

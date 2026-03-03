@@ -13,8 +13,6 @@ domainurl: ##DomainURL##
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Highlight* text markup annotations in the Syncfusion **React PDF Viewer**.
 You can highlight text using the toolbar or context menu, programmatically invoke highlight mode, customize default settings, handle events, and export the PDF with annotations.
 
----
-
 ## Enable Highlight in the Viewer
 
 To enable Highlight annotations, inject the following modules into the React PDF Viewer:
@@ -56,19 +54,15 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
----
+## Add Highlight Annotation
 
-## Apply Highlight Annotation
-
-### Apply Highlight Using the Toolbar
+### Add Highlight Using the Toolbar
 
 1. Select the text you want to highlight.
 2. Click the **Highlight** icon in the annotation toolbar.
    - If **Pan Mode** is active, the viewer automatically switches to **Text Selection** mode.
 
 ![Highlight tool](../../../javascript-es6/annotations/annotation-images/highlight-tool.gif)
-
----
 
 ### Apply highlight using Context Menu
 
@@ -77,8 +71,6 @@ Right-click a selected text region → select **Highlight**.
 ![Highlight Context](../../../javascript-es6/annotations/annotation-images/highlight-context.gif)
 
 To customize menu items, refer to [**Customize Context Menu**](../../context-menu/custom-context-menu) documentation.
-
----
 
 ### Enable Highlight Mode
 
@@ -110,8 +102,6 @@ function disableHighlightMode() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Add Highlight Programmatically
 
 Use [`addAnnotation()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) to insert highlight at a specific location.
@@ -130,8 +120,6 @@ function addHighlight() {
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Customize Highlight Appearance
 
@@ -158,8 +146,6 @@ Configure default highlight settings such as **color**, **opacity**, and **autho
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Manage Highlight (Edit, Delete, Comment)
 
 ### Edit Highlight
@@ -172,8 +158,6 @@ Use the annotation toolbar:
 
 - **Edit Opacity** slider
 ![Edit opacity](../../../javascript-es6/images/edit_opacity.png)
-
----
 
 #### Edit Highlight Programmatically
 
@@ -198,21 +182,15 @@ function editHighlightProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Delete Highlight
 
 The PDF Viewer supports deleting existing annotations through both the UI and API.
 For detailed behavior, supported deletion workflows, and API reference, see [Delete Annotation](../remove-annotations)
 
----
-
 ### Comments
 
 Use the [Comments panel](../comments) to add, view, and reply to threaded discussions linked to underline annotations.
 It provides a dedicated UI for reviewing feedback, tracking conversations, and collaborating on annotation‑related notes within the PDF Viewer.
-
----
 
 ## Set properties while adding Individual Annotation
 
@@ -246,8 +224,6 @@ function addMultipleHighlights() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Disable TextMarkup Annotation
 
 Disable text markup annotations (including highlight) using the [`enableTextMarkupAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enabletextmarkupannotation) property.
@@ -268,21 +244,15 @@ Disable text markup annotations (including highlight) using the [`enableTextMark
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Handle Highlight Events
 
 The PDF viewer provides annotation life-cycle events that notify when highlight annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
 
----
-
 ## Export and Import
 
 The PDF Viewer supports exporting and importing annotations, allowing you to save annotations as a separate file or load existing annotations back into the viewer.
 For full details on supported formats and steps to export or import annotations, see [Export and Import Annotation](../export-import-annotations)
-
----
 
 ## See Also
 

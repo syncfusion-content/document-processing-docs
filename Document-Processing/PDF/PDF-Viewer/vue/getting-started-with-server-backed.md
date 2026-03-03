@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Getting started with Vue PDF Viewer component | Syncfusion
-description:  Checkout and learn about Getting started with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
+title: Getting started with server-backed Vue PDF Viewer component | Syncfusion
+description: Learn how to create a server-backed Vue PDF Viewer component in a Vue 2 application using Syncfusion Essential JS 2 and more details.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in Vue PDF viewer control
+# Getting started with server-backed Vue PDF Viewer
 
-This section briefly explains how to create the **PDF Viewer** component and configure its available functionalities in a Vue 2 application using [Vue-CLI](https://cli.vuejs.org/). Ensure that your machine meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
+This section explains how to create the **PDF Viewer** component and configure its available functionalities in a Vue 2 application using [Vue-CLI](https://cli.vuejs.org/) with a server-backed architecture. Ensure that your machine meets the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements).
 
 > This application uses the Vue CLI tooling and requires Node `v14.15.0` or later. For more information about the CLI, refer to the [Vue-CLI documentation](https://cli.vuejs.org/).
+
+> **Important**: The server-backed PDF Viewer requires a backend web service to process and render PDFs. Unlike the standalone mode, which renders PDFs locally in the browser, the server-backed architecture offloads processing to a server, enabling better performance for large documents and advanced features.
 
 ## Set up development environment
 
@@ -76,7 +78,7 @@ In this example, the `Material` theme styles required for the PDF Viewer compone
 {% endtabs %}
 
 
-> PDF Viewer has different themes, please refer to [Supported themes](../appearance/theme) section.
+> PDF Viewer has different themes; refer to [Supported themes](../appearance/theme) section.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -262,9 +264,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> We have provided the support to dynamically change the `serviceUrl`. After updating the `serviceUrl` dynamically, invoke the `pdfViewer.dataBind()` method before calling the `load` method. This ensures that the updated `serviceUrl` is applied immediately. Make sure to perform this step in versions 23.1.36 and later.
+N> We have provided support to dynamically change the `serviceUrl`. After updating the `serviceUrl` dynamically, invoke the `pdfViewer.dataBind()` method before calling the `load` method. This ensures that the updated `serviceUrl` is applied immediately. Make sure to perform this step in versions 23.1.36 and later.
 
-N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
+N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF Viewer's `serviceUrl` property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with your required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use it for the `serviceUrl` property.
 
 ## Run the project
 
@@ -339,13 +341,13 @@ These modules are registered with the component by providing them through the `p
     }}
   ```
 
-N> When configuring the server-backed PDF Viewer, it's essential to understand that there is no need to include the pdfium.js and pdfium.wasm files. Unlike the standalone PDF Viewer, which relies on these files for local rendering, the server-backed PDF Viewer fetches and renders PDFs directly from the server. Consequently, you can exclude the copy command for the deployment process, as these files are not required to load and display PDFs in this context.
+N> When configuring the server-backed PDF Viewer, there is no need to include the `pdfium.js` and `pdfium.wasm` files. Unlike the standalone PDF Viewer, which relies on these files for local rendering, the server-backed PDF Viewer fetches and renders PDFs directly from the server. Consequently, these files are not required for deployment, and you can exclude the copy command for the deployment process.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20-%20server-back).
 
-> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
+> Explore the [Vue PDF Viewer](https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer) feature tour page for comprehensive feature demonstrations. You can also review the [Vue PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/default.html) to understand the core features of the PDF Viewer.
 
-N> For hosting the web service on the Linux platform, ensure to include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1). Additionally, for AWS environments, utilize the following packages:
+N> For hosting the web service on Linux, ensure you include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1) package. Additionally, for AWS environments, use the following packages:
 
 | **Amazon Web Services (AWS)** |**NuGet package name** |
 | --- | --- |

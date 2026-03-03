@@ -1,20 +1,21 @@
 ---
 layout: post
-title: Line angle constraints in ASP.NET Core PDF Viewer | Syncfusion
-description: Explore how to apply and manage text markup annotations such as highlight, underline, and strikethrough in ASP.NET Core PDF Viewer.
+title: Line Angle Constraints in ASP.NET Core PDF Viewer | Syncfusion
+description: Master line angle constraints in ASP.NET Core PDF Viewer. Enable angle snapping for precise technical drawings, measurements, and consistent annotation angles.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Line angle constraints in ASP.NET Core PDF Viewer
+# Line Angle Constraints in ASP.NET Core PDF Viewer
 
-The PDF Viewer control provides robust **line angle constraints** functionality. This allows users to draw line type annotations with controlled angle snapping, improving accuracy and consistency across technical drawings and measurements across your PDF documents.
+The PDF Viewer control provides robust line angle constraints functionality for precise technical drawings and measurements. Enable angle snapping to automatically align line-based annotations to fixed angles, improving accuracy and consistency across professional documents.
 
 ## Enable line angle constraints
-Configure the `enableLineAngleConstraints` property within `annotationDrawingOptions`. When enabled, supported line-type annotations snap to fixed angles.
 
-The following code demonstrates how to enable line angle constraints:
+Configure the `enableLineAngleConstraints` property within `annotationDrawingOptions` to enable automatic angle snapping. When enabled, supported line-type annotations snap to fixed angles as defined by the `restrictLineAngleTo` property.
+
+**Example: Enable line angle constraints configuration**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -45,12 +46,13 @@ The following code demonstrates how to enable line angle constraints:
 {% endhighlight %}
 {% endtabs %}
 
-## Configuration Properties
+## Configuration properties
+
+Line angle constraints are configured through two main properties in the `annotationDrawingOptions` object.
 
 ### enableLineAngleConstraints
 
-The `enableLineAngleConstraints` property activates angle snapping for line-based annotations. When set to `true`, the following annotation types will snap to fixed angles as defined by the `restrictLineAngleTo` property:
-
+When `enableLineAngleConstraints` is set to `true`, the following annotation types automatically snap to fixed angles:
 - Lines
 - Arrows
 - Polygon
@@ -59,22 +61,22 @@ The `enableLineAngleConstraints` property activates angle snapping for line-base
 - Area measurements
 - Volume measurements
 
-**Key Benefits:**
-
-- Automatic angle snapping during the drawing
-- Enhanced precision for technical drawings and measurements
-- Desktop behavior: hold Shift while drawing to toggle constraints (when disabled, Shift temporarily enables; when enabled, Shift enforces snapping)
-- Real-time visual feedback showing angle snapping behavior
+#### Key behaviors
+- **Automatic snapping** - Angles align to configured increment during drawing
+- **Precision enhancement** - Improved accuracy for technical documents
+- **Shift key toggle** - Hold Shift to temporarily toggle constraint behavior
+- **Real-time feedback** - Visual indicators show angle alignment
+- **Persistent constraints** - Constraints apply during modification via selectors
 
 ### restrictLineAngleTo
 
-Defines the angle increment (in degrees) used to constrain supported annotations. The default is 45.
+Defines the angle increment in degrees for snapping. The default value is 45.
 
-Angle snapping rules:
+#### Angle snapping rules
 
-- The initial drawing direction is treated as the 0° reference point
-- Snapped angles are calculated based on the increment
-- If the increment doesn’t divide 360 evenly, angles reset after 360°
+- **Initial reference** - The first drawing direction is treated as 0° reference point
+- **Increment calculation** - Snapped angles are multiples of the specified increment
+- **Angle wrapping** - Angles reset after 360° based on the increment value
 
 Examples:
 
@@ -83,21 +85,22 @@ Examples:
 
 ## Work with constrained annotations
 
-### Drawing Behavior
+### Drawing behavior
 
-When line angle constraints are enabled:
+When line angle constraints are enabled, constrained drawing provides automatic angle alignment:
 
-- Start drawing a supported annotation (Line, Arrow, Polyline, Distance, or Perimeter).
-- The segment snaps to the nearest allowed angle.
-- A visual indicator reflects snapping in real time.
-- Release to complete the annotation.
+1. **Start drawing** - Click to start drawing a supported annotation type
+2. **Snapping occurs** - Annotation segment snaps to nearest allowed angle
+3. **Visual feedback** - Real-time indicators show angle alignment
+4. **Continue or release** - Continue drawing for multi-segment shapes or release to complete
+5. **Angle confirmation** - Final annotation locks to the snapped angle
 
-### Keyboard Shortcuts
+### Keyboard shortcuts
 
 Desktop platforms:
 - Shift + drag: toggles snapping. If constraints are disabled, Shift temporarily enables them; if enabled, Shift enforces snapping.
 
-### Selector-Based Modifications
+### Selector-based modifications
 
 When modifying existing line annotations using selectors:
 
