@@ -24,7 +24,7 @@ This page explains best practices for securing PDF content displayed in React ap
 
 This section outlines common security controls and how they interact with the viewer.
 
-- **Password protection**: Use user/owner passwords on PDFs. The viewer can open password-protected files when the password is provided at load time. Password-based encryption prevents opening without credentials. See [loading password protected PDFs](../document-handling/load-password-pdf)
+- **Password protection**: Use user/owner passwords on PDFs. The viewer can open password-protected files when the password is provided at load time. Password-based encryption prevents opening without credentials. See [loading password protected PDFs](../document-handling/load-password-pdf) and [encrypting PDF documents](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security).
 
 - **Permission restrictions**: Set PDF permissions (copy, print) using Syncfusion PDF library. The viewer respects these permissions at display time but cannot enforce protections if the client receives an unprotected full file. See [prevent copy and print permissions](./prevent-copy-and-print)
 
@@ -53,3 +53,4 @@ This section outlines common security controls and how they interact with the vi
 ## See also
 
 - [Prevent copy/print](./prevent-copy-and-print)
+- [Restrict download/print](./restricting-download-and-print)
