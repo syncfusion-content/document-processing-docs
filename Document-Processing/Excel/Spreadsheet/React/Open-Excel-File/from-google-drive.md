@@ -128,8 +128,6 @@ public class FileOptions
 
 ```
 
-N> You can also refer to this [GitHub](https://github.com/SyncfusionExamples/syncfusion-react-spreadsheet-google-drive-integration/tree/master) repository for reference.
-
 * Open the `appsettings.json` file in your web service project, add your Google Drive configuration details.
 
 ```json
@@ -186,3 +184,5 @@ const openFromGoogleDrive = () => {
 ```
 
 N> The Google.Apis.Drive.v3 NuGet package must be installed in your application to use the previous code example.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/syncfusion-react-spreadsheet-google-drive-integration)
