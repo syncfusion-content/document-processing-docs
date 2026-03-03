@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Interaction mode in Vue PDF Viewer
 
-The PDF Viewer provides two interaction modes for working with the loaded PDF document: selection mode and panning mode. Use these modes to control whether users select text or pan/scroll the document.
+The PDF Viewer provides two interaction modes for working with a loaded PDF document: Selection mode and Panning mode.
 
 ## Selection mode
 
-In this mode, users can select text in the PDF document loaded in the PDF Viewer. Panning and touch-based scrolling are disabled in this mode. Enable or disable text selection using the following configuration:
+Selection mode allows users to select and copy text from the loaded PDF. Touch-based panning and page scrolling are disabled in this mode. Enable or disable text selection using the following code snippet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -141,15 +141,17 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/selection.png)
+![PDF Viewer selection mode](./images/selection.png)
 
 ## Panning mode
 
-In this mode, users can pan and scroll pages (including touch). Text selection is disabled.
+Panning mode enables touch-based panning and page scrolling of the loaded PDF; text selection is disabled in this mode.
 
-![Panning mode in PDF Viewer](./images/pan.png)
+![PDF Viewer panning mode](./images/pan.png)
 
-Switch the interaction mode of the PDF Viewer using the following configuration (set the `interactionMode` property, for example, to `InteractionMode.Pan`):
+N> When `interactionMode` is set to 'Pan', touch panning is enabled and text selection is not available even if `enableTextSelection` is set to true.
+
+You can switch the interaction mode of the PDF Viewer using the following code snippet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}

@@ -886,3 +886,133 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+## Sign existing signature field
+
+This section explains how to sign an existing unsigned signature field in a PDF using the JavaScript PDF library. You can locate predefined signature fields and apply a digital signature directly by calling `PdfSignatureField.setSignature()` method, without altering the document layout. This is ideal for templates where signature placeholders already exist, allowing you to add digital signatures to the field using a certificate and signature settings.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfForm, DigestAlgorithm, CryptographicStandard, PdfSignatureField} from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Access loaded form
+let form: PdfForm = document.form;
+// Access the loaded form field
+let field: PdfSignatureField = form.fieldAt(0) as PdfSignatureField;
+// Create a digital signature with CMS + SHA-256
+const signature: PdfSignature = PdfSignature.create(certificate, 'password', {
+    digestAlgorithm: DigestAlgorithm.sha256,
+    cryptographicStandard: CryptographicStandard.cms
+});
+// Apply the signature to the field 
+field.setSignature(signature);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Access loaded form
+var form = document.form;
+// Access the loaded form field
+var field = form.fieldAt(0);
+// Create a digital signature with CMS + SHA-256
+const signature = ej.pdf.PdfSignature.create(certificate, 'password', {
+    digestAlgorithm: ej.pdf.DigestAlgorithm.sha256,
+    cryptographicStandard: ej.pdf.CryptographicStandard.cms
+});
+// Apply the signature to the field 
+field.setSignature(signature);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Remove existing digital signature
+
+This section explains how to remove an existing digital signature from a PDF by using `PdfForm.removeField()` method to delete the signature field entirely. Removing the field clears the signature dictionary, allowing the document to be edited, corrected, or re‑signed as needed. This is useful when preparing a PDF for updates or resolving signature‑related issues.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfForm, PdfSignatureField} from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Access loaded form
+let form: PdfForm = document.form;
+// Access the loaded form field
+let field: PdfSignatureField = form.fieldAt(0) as PdfSignatureField;
+// Remove the signature field
+if (field instanceof PdfSignatureField) { 
+    document.form.removeField(field); 
+}
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Access loaded form
+var form = document.form;
+// Access the loaded form field
+var field = form.fieldAt(0);
+// Remove the signature field
+if (field instanceof ej.pdf.PdfSignatureField) { 
+    document.form.removeField(field); 
+}
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Document revisions
+
+Digital signatures in a PDF create new revisions, keeping every previous version intact. These revisions let you see how the document looked when each signature was applied and check if anything changed later. You can access all revisions using `PdfDocument.getRevisions()` method or get a specific one using `PdfSignatureField.getRevision()` method.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfForm, PdfSignatureField} from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Access loaded form
+let form: PdfForm = document.form;
+// Access the loaded form field
+let signature: PdfSignatureField = form.fieldAt(0);
+// Retrieve all revision indexes of the PDF document
+let revisions: number[] = document.getRevisions();
+// Gets the revision number associated with the signature field
+let revision: number = signature.getRevision();
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Access loaded form
+var form = document.form;
+// Access the loaded form field
+var signature = form.fieldAt(0);
+// Retrieve all revision indexes of the PDF document
+var revisions = document.getRevisions();
+// Gets the revision number associated with the signature field
+var revision = signature.getRevision();
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}

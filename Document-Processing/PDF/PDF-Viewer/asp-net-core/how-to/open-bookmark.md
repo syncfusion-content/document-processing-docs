@@ -7,15 +7,15 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Open or close the bookmark pane programmatically
+# Open or close the bookmark pane in ASP.NET Core PDF Viewer
 
-The PDF Viewer exposes methods to toggle the bookmark pane at runtime. Call **openBookmarkPane()** to display the pane and **closeBookmarkPane()** to hide it. These APIs enable workflows where bookmarks are revealed only when users request them.
+Toggle the bookmark sidebar at runtime using **openBookmarkPane()** and **closeBookmarkPane()** methods. These APIs allow flexible document navigation workflows where bookmarks appear only when needed.
 
-Follow these steps to add the bookmark toggle buttons:
+Follow these steps to implement bookmark pane toggling:
 
-**Step 1:** Create an ASP.NET Core PDF Viewer sample by following the [getting started instructions](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started). Ensure that the Razor page includes the required Syncfusion EJ2 script and style references.
+**Step 1:** Follow the [Getting Started with ASP.NET Core PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer instance with required Syncfusion EJ2 script and style references.
 
-**Step 2:** Place a button and the PDF Viewer Tag Helper in the same Razor page. Add a script block after the viewer markup so the handler can retrieve the viewer instance and call the bookmark module when the button is clicked. If the button is disabled or the bookmark tree is empty, confirm that the loaded document contains bookmarks before invoking the API.
+**Step 2:** Add buttons to open and close the bookmark pane. Place the viewer and script blocks in the Razor page. Ensure the document contains bookmarks before invoking the API, otherwise the pane will appear empty.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -45,7 +45,7 @@ Follow these steps to add the bookmark toggle buttons:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   serviceUrl='/Index'
+                   serviceUrl="/Index"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     </ejs-pdfviewer>
 </div>
@@ -60,7 +60,9 @@ Follow these steps to add the bookmark toggle buttons:
 {% endhighlight %}
 {% endtabs %}
 
-To close the bookmark pane with a button click, reuse the same structure and call the close method in the handler.
+## Close the bookmark pane
+
+To hide the bookmark pane, call the `closeBookmarkPane()` method. Use the following code:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -71,7 +73,7 @@ To close the bookmark pane with a button click, reuse the same structure and cal
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
 
@@ -89,7 +91,7 @@ To close the bookmark pane with a button click, reuse the same structure and cal
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   serviceUrl='/Index'
+                   serviceUrl="/Index"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     </ejs-pdfviewer>
 </div>
@@ -104,4 +106,4 @@ To close the bookmark pane with a button click, reuse the same structure and cal
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Open%20and%20Close%20bookmark%20pane/PDFViewerSample)
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Open%20and%20Close%20bookmark%20pane/PDFViewerSample)
