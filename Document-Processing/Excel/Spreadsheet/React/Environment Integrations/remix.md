@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Spreadsheet getting started with Remix | Syncfusion
-description: Integrate and use React Spreadsheet within a Remix app.
+description: Checkout and learn how to use the React Spreadsheet component of Syncfusion Essential JS 2 in a Remix project.
 control: Spreadsheet
 platform: document-processing
 documentation: ug

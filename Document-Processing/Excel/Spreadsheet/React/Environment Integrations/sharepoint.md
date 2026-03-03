@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion React Spreadsheet in SharePoint
-description: To integrate React Spreadsheet into an SPFx React web part.
+description: Checkout and learn how to use the React Spreadsheet component of Syncfusion Essential JS 2 in a SharePoint web part.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
