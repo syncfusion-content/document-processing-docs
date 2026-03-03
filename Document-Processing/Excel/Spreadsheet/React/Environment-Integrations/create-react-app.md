@@ -84,7 +84,7 @@ For more details on built-in themes and usage, refer to the [Themes topic](https
 
 ## Adding Spreadsheet component
 
-Now, you can import the spreadsheet component into your `src/App.jsx` file.
+Now, you can import the spreadsheet component into your `src/App.js` file.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
