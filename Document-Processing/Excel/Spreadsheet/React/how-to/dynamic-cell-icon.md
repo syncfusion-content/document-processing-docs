@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add icons to cells — React Spreadsheet | Syncfusion
-description: Short guide to add plus-icons inside Spreadsheet cells using a custom template or a template button.
+description: Add plus-icons inside Spreadsheet cells using a custom template in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug

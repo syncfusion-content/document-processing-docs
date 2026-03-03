@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dynamic cell template with dropdowns — React Spreadsheet | Syncfusion
-description: Rendering a dropdown inside a Spreadsheet cell using a dynamic cell template.
+description: Rendering a dropdown inside a cell using a dynamic cell template in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
