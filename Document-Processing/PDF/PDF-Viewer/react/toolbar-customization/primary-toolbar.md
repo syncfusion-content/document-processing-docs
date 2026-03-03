@@ -22,7 +22,7 @@ This guide explains how to show or hide the primary toolbar, remove default item
 
 ## Steps
 
-**Step 1:** Show or hide the primary toolbar at initialization
+### Show or hide primary toolbar
 
 - Set [`enableToolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletoolbar) to `false` to hide the built-in toolbar.
 
@@ -48,8 +48,6 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Toggle the toolbar at runtime
-
 - Use the viewer's [`showToolbar()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar#showtoolbar) method to show or hide dynamically.
 
 ```ts
@@ -57,7 +55,7 @@ export default function App() {
 pdfviewer.toolbar.showToolbar(false);
 ```
 
-**Step 3:** Remove or reorder default items
+### Show or hide primary toolbar items
 
 - Provide the [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) array with the exact set and order of items you want to show. Any item omitted is hidden.
 
@@ -71,7 +69,7 @@ pdfviewer.toolbar.showToolbar(false);
 {% endraw %}
 {% endhighlight %}
 
-**Step 4:** Add a custom toolbar item
+### Add or remove primary toolbar items
 
 - Add a custom item by including an object in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) and handling its action via [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#toolbarclick). The following example shows adding a simple custom button at initialization.
 

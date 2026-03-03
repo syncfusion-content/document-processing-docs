@@ -48,6 +48,20 @@ This page provides a concise reference describing the toolbars available in the 
 
         ![mobile annotation toolbar](../images/mobile-annotation-toolbar.png)
 
+## Show or hide toolbar items
+
+The following quick links describe how to customize, show, or hide specific toolbar items. Each linked page defines custom toolbar configurations and examples.
+
+- [Show or hide annotation toolbar items](./annotation-toolbar#show-or-hide-annotation-toolbar-items)
+- [Show or hide form designer toolbar items](./form-designer-toolbar#show-or-hide-form-designer-toolbar-items)
+- [Show or hide primary toolbar items](./primary-toolbar#show-or-hide-primary-toolbar-items)
+
+## Add or remove toolbar items
+
+The primary toolbar provides the option to add customized toolbar items to it. The following quick link describes how to add an item to the primary toolbar with an example.
+
+- [Add or remove primary toolbar items](./primary-toolbar#add-or-remove-primary-toolbar-items)
+
 ## Further Reading
 
 - [Customize annotation toolbar](./annotation-toolbar)
