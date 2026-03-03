@@ -1,6 +1,6 @@
 ---
-title: Syncfusion Excel to PDF Converter API Guide
-description: Convert Excel to PDF seamlessly using Syncfusion's API. Customize settings, monitor job status, and integrate effortlessly into your applications.
+title: Convert Excel to PDF Using Syncfusion Web API 
+description: Convert Excel files to highquality PDFs using Syncfusion Web API. Preserve formulas, charts, formatting, and layout with fast, reliable serverside conversion.
 platform: document-processing
 control: general
 documentation: UG

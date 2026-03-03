@@ -1,6 +1,6 @@
 ---
-title: Syncfusion PDF Protecting Service Guide
-description: Protect PDF documents seamlessly using Syncfusion's API. Ensure document integrity and security by protecting.
+title: Protect PDF Files Using Syncfusion Web API
+description: Apply passwords and permission restrictions to safeguard sensitive PDFs using Syncfusion strong encryption and protection Web API.
 platform: document-processing
 control: general
 documentation: UG
