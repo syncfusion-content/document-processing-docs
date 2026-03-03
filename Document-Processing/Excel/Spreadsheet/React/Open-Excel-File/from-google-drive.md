@@ -55,8 +55,6 @@ public SpreadsheetController(IConfiguration configuration)
 
 ```
 
-N> Note: Change your FolderId, CredentialPath, ApplicationName with your own
-
 5. Create the `OpenExcelFromGoogleDrive()` method to open the document from the Google Drive.
 
 ```Csharp
@@ -142,7 +140,7 @@ public class FileOptions
 
 ```
 
-N> Note: Install the Google.Apis.Drive.v3 NuGet package in the service project.
+N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
 
 **Step 4:** Modify the index File in the Spreadsheet sample to make a fetch call to the server to retrieve and load the Excel file from the Google Drive into the client-side spreadsheet.
 
@@ -177,3 +175,5 @@ const openFromGoogleDrive = () => {
     });
 };
 ```
+
+N> Install the Google.Apis.Drive.v3 NuGet package must be installed in your application to use the previous code example.

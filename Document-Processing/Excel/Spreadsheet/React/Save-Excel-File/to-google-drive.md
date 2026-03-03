@@ -139,7 +139,26 @@ public async Task<IActionResult> SaveExcelToGoogleDrive([FromForm] SaveSettings 
 
 ```
 
-**Step 4:** Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
+* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "FolderId": "Your Google Drive Folder ID",
+  "CredentialPath": "Your Path to the OAuth 2.0 Client IDs json file",
+  "ApplicationName": "Your Application name"
+}
+```
+
+N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
+
+**Step 4:** Modify the index file in the Spreadsheet sample to use the [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send the JSON to the backend.
 
 ```js
 <button class="e-btn" onClick={saveToGoogleDrive}>
@@ -178,4 +197,4 @@ const saveToGoogleDrive = () => {
 };
 ```
 
-N> Note: Install the Google.Apis.Drive.v3 NuGet package in the service project.
+N> Install the Google.Apis.Drive.v3 NuGet package must be installed in your application to use the previous code example.
