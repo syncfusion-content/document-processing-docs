@@ -139,6 +139,8 @@ PdfViewer.ZoomFactor = 1.75;
 {% endhighlight %}
 {% endtabs %}
 
+![Enable PersistZoomOnPageChange](Images/EnablePersistZoom.gif)
+
 ### Disable PersistZoomOnPageChange
 
 Set `PersistZoomOnPageChange` to `False` to keep the viewer's default behavior. When disabled, navigating to a different page resets the viewer to the default zoom level unless you explicitly set a zoom after navigation. Refer to the following example:
@@ -155,5 +157,7 @@ Set `PersistZoomOnPageChange` to `False` to keep the viewer's default behavior. 
 PdfViewer.PersistZoomOnPageChange = false;
 {% endhighlight %}
 {% endtabs %}
+
+![Disable PersistZoomOnPageChange](Images/DisablePersistZoom.gif)
 
 N> The default value of `PersistZoomOnPageChange` is `False`; enable it to maintain reading continuity in single-page mode.
