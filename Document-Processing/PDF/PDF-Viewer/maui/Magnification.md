@@ -110,4 +110,50 @@ pdfViewer.ZoomMode = ZoomMode.FitToWidth;
 {% endhighlight %}
 {% endtabs %}
 
-N> When the `ZoomFactor` is manually changed, the `ZoomMode` resets to `Default`. You can reapply the desired zoom mode afterward. 
+N> When the `ZoomFactor` is manually changed, the `ZoomMode` resets to `Default`. You can reapply the desired zoom mode afterward.
+
+## Maintain Zoom Level in Single Page View Mode
+
+The PDF Viewer supports persisting the zoom level in single-page view via the `PersistZoomOnPageChange` property.
+
+You can persist the current zoom level across page changes in single-page view mode by enabling the `PersistZoomOnPageChange` property. This behavior keeps the zoom level consistent when navigating between pages using the built-in controls or programmatic APIs.
+
+The default value of `PersistZoomOnPageChange` is `False`.
+
+### Enable PersistZoomOnPageChange
+
+You can enable persistent zoom by setting the `PersistZoomOnPageChange` property to `True`. When enabled, the viewer preserves the numeric `ZoomFactor` when switching pages in `SinglePage` layout and applies that same zoom to the destination page. Refer to the following code example:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfPdfViewer x:Name="PdfViewer"
+                        PageLayoutMode="SinglePage"
+                        PersistZoomOnPageChange="True" />
+{% endhighlight %}
+
+{% highlight c# %}
+// Enable persistence and set an initial zoom
+PdfViewer.PageLayoutMode = PageLayoutMode.SinglePage;
+PdfViewer.PersistZoomOnPageChange = true;
+PdfViewer.ZoomFactor = 1.75;
+{% endhighlight %}
+{% endtabs %}
+
+### Disable PersistZoomOnPageChange
+
+Set `PersistZoomOnPageChange` to `False` to keep the viewer's default behavior. When disabled, navigating to a different page resets the viewer to the default zoom level unless you explicitly set a zoom after navigation. Refer to the following example:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfPdfViewer x:Name="PdfViewer"
+                        PageLayoutMode="SinglePage"
+                        PersistZoomOnPageChange="False" />
+{% endhighlight %}
+
+{% highlight c# %}
+// Disable persistence
+PdfViewer.PersistZoomOnPageChange = false;
+{% endhighlight %}
+{% endtabs %}
+
+N> The default value of `PersistZoomOnPageChange` is `False`; enable it to maintain reading continuity in single-page mode.
