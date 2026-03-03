@@ -151,7 +151,7 @@ N> You can also refer to this [GitHub](https://github.com/SyncfusionExamples/syn
 
 N> Replace the **credential path**, **folderId** and **application name** in json file with your actual Google drive folder ID , your name for your application and the path for the JSON file.
 
-**Step 4:** Modify the index File in the Spreadsheet sample to make a fetch call to the server to retrieve and load the Excel file from the Google Drive into the client-side spreadsheet.
+**Step 4:** Modify the index File in the Spreadsheet sample to make a fetch call to the server to retrieve and process the Excel file from the Google Drive and load the JSON result into the client-side spreadsheet using the [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method.
 
 ```typescript
 <button className="e-btn" onClick={openFromGoogleDrive} style={{ marginLeft: '10px' }}>
