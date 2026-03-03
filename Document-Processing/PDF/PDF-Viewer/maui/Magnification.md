@@ -114,10 +114,7 @@ N> When the `ZoomFactor` is manually changed, the `ZoomMode` resets to `Default`
 
 ## Maintain Zoom Level in Single Page View Mode
 
-The PDF Viewer supports persisting the zoom level in single-page view via the `PersistZoomOnPageChange` property.
-
 In single-page view mode, the zoom level resets to default each time you navigate to a new page. To maintain a consistent zoom factor throughout the document, enable the PersistZoomOnPageChange property. This applies whether navigation is triggered by the built-in toolbar controls or programmatic APIs.
-
 The default value of `PersistZoomOnPageChange` is `False`.
 
 ### Enable PersistZoomOnPageChange
