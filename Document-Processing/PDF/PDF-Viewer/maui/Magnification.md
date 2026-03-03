@@ -135,7 +135,6 @@ You can enable persistent zoom by setting the `PersistZoomOnPageChange` property
 // Enable persistence and set an initial zoom
 PdfViewer.PageLayoutMode = PageLayoutMode.SinglePage;
 PdfViewer.PersistZoomOnPageChange = true;
-PdfViewer.ZoomFactor = 1.75;
 {% endhighlight %}
 {% endtabs %}
 
