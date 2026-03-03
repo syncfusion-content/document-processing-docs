@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Redaction sensitive content in React PDF Viewer | Syncfusion
+title: Redact sensitive content in React PDF Viewer | Syncfusion
 description: Learn how to hide sensitive information with interactive and programmatic redaction using the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer

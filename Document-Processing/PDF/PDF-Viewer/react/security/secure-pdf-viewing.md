@@ -28,7 +28,7 @@ This section outlines common security controls and how they interact with the vi
 
 - **Permission restrictions**: Set PDF permissions (copy, print) using Syncfusion PDF library. The viewer respects these permissions at display time but cannot enforce protections if the client receives an unprotected full file. See [prevent copy and print permissions](./prevent-copy-and-print)
 
-- **Redaction**: Permanently remove text, images, or regions at the document level on the server before delivering the file. Redaction produces a new PDF with the sensitive content removed. See [redacting sensitive content](./overview)
+- **Redaction**: Permanently remove text, images, or regions at the document level on the server before delivering the file. Redaction produces a new PDF with the sensitive content removed. See [redacting sensitive content](../Redaction/overview)
 
 - **Preprocessing**: On the server, remove metadata, embedded files, hidden layers, form field values, JavaScript actions, and flatten form fields. Compress and linearize PDFs if needed. See [preprocessing PDFs](../document-handling/preprocess-pdf)
 
@@ -49,3 +49,7 @@ This section outlines common security controls and how they interact with the vi
 - Flatten form fields and sanitize form data when exporting public PDFs.
 - Use short-lived, authenticated URLs or a tokenized download endpoint rather than serving files from a public bucket.
 - Log access and apply rate limits and CORS policies on APIs that serve PDFs.
+
+## See also
+
+- [Prevent copy/print](./prevent-copy-and-print)
