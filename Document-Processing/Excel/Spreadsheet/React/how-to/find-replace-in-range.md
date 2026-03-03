@@ -9,6 +9,12 @@ documentation: ug
 
 ## Find and replace the text within the selected range of cells
 
+It explains how you can limit the Find and Replace action so it works only inside the cells that the user has selected.
+
+When the user clicks Replace All, the Spreadsheet normally searches the whole sheet. To avoid that, the action is checked before it runs. During this check, the selected range in the active sheet is read and expanded into individual cell addresses.
+
+The list of cells that the Replace All action plans to update is then filtered, keeping only the addresses that fall inside the selected range. With this, Replace All updates only the cells the user has selected and nothing outside that area.
+
 Limit the Replace All operation to the user’s current selection by intercepting the Replace action (`actionBegin`) and filtering `eventArgs.addressCollection` using `getActiveSheet().selectedRange`. This ensures only addresses inside the selected range are updated.
 
 This guide explains how to limit the “Replace All” operation so that replacements occur only within the currently selected range of cells in the Syncfusion React Spreadsheet component.
