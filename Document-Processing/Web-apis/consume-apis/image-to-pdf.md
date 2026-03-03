@@ -1,6 +1,6 @@
 ---
-title: Syncfusion Image to PDF Converter Service Guide
-description: Convert Images to PDF seamlessly using Syncfusion's API. Customize settings, monitor job status, and integrate effortlessly into your applications.
+title: Convert Images to PDF Using Syncfusion Web API 
+description: Convert JPG, PNG, BMP, and TIFF images into single or multi‑page PDFs efficiently using Syncfusion image-to-PDF Web API.
 platform: document-processing
 control: general
 documentation: UG

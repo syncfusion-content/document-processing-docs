@@ -1,6 +1,6 @@
 ---
-title: Syncfusion PDF Merge Service Guide
-description: Seamlessly combine one or multiple PDF documents into a unified PDF file with the PDF Merge Service.
+title: Merge PDF Files Using Syncfusion Web API 
+description: Merge multiple PDF files into a single structured document with preserved bookmarks, metadata, and ordering using Syncfusion PDF merge Web API. 
 platform: document-processing
 control: general
 documentation: UG
