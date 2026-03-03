@@ -1,15 +1,19 @@
 ---
 layout: post
-title: Measurement annotation in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn about measurement annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): distance, perimeter, area, radius, and volume.
+title: Measurement Annotations in ASP.NET Core PDF Viewer | Syncfusion
+description: Add and customize measurement annotations in ASP.NET Core PDF Viewer. Support for distance, perimeter, area, radius, volume measurements.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Measurement annotation in ASP.NET Core PDF Viewer control
+# Measurement Annotations in ASP.NET Core PDF Viewer
 
-The PDF Viewer provides options to add measurement annotations. The supported measurement annotations are:
+The PDF Viewer provides comprehensive measurement annotation capabilities for precise calculations and dimensional analysis on PDF documents. Add and customize various measurement types with accurate scale calibration and unit conversion.
+
+## Measurement types
+
+The PDF Viewer supports five measurement annotation types with distinct use cases and calculation methods:
 
 * Distance
 * Perimeter
@@ -32,7 +36,7 @@ When in pan mode, selecting a measurement annotation switches the PDF Viewer to 
 
 ![CalibrateTool](../images/calibrate_tool.png)
 
-The following example switches to distance annotation mode.
+**Example: Enable Distance annotation mode using button click**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -78,7 +82,7 @@ The following example switches to distance annotation mode.
 
 The PDF Viewer library allows adding measurement annotations programmatically using the **addAnnotation()** method.
 
-Here is an example showing how to add measurement annotations programmatically using **addAnnotation()**:
+**Example: Add all measurement annotation types programmatically**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -204,7 +208,7 @@ Here is an example showing how to add measurement annotations programmatically u
 
 To modify an existing measurement annotation programmatically, use the **editAnnotation()** method.
 
-Here is an example of using **editAnnotation()**:
+**Example: Edit measurement annotations**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -366,33 +370,33 @@ Here is an example of using **editAnnotation()**:
 
 ## Edit the properties of measurement annotations
 
-The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
+Measurement annotation appearance can be customized using the toolbar tools or the Properties dialog. The following editing options are available:
 
-### Edit fill color
+### 1. Edit fill color
 
 The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
 ![CalibrateFillColor](../images/calibrate_fillcolor.png)
 
-### Edit stroke color
+### 2. Edit stroke color
 
 The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
 
 ![CalibrateStrokeColor](../images/calibrate_stroke.png)
 
-### Edit thickness
+### 3. Edit thickness
 
 Edit border thickness using the range slider provided in the Edit Thickness tool.
 
 ![CalibrateThickness](../images/calibrate_thickness.png)
 
-### Edit opacity
+### 4. Edit opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
 ![CalibrateOpacity](../images/calibrate_opacity.png)
 
-### Edit the line properties
+### 5. Edit line properties
 
 Line-based measurement annotations (distance and perimeter) have additional options in the Line Properties window. Open it by right-clicking the annotation and selecting Properties from the context menu.
 
@@ -400,9 +404,9 @@ Line-based measurement annotations (distance and perimeter) have additional opti
 
 ## Set default properties during control initialization
 
-Default properties for measurement annotations can be set before creating the control using DistanceSettings, PerimeterSettings, AreaSettings, RadiusSettings, and VolumeSettings.
+Default properties for measurement annotations can be set before creating the control using type-specific settings objects. This allows consistent styling across all annotations of the same type without individual customization.
 
-Refer to the following code sample to set the default annotation settings.
+**Example: Configure default measurement annotation styling**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -454,7 +458,9 @@ The scale ratio and unit of measurement can be modified using the scale ratio op
 
 ![CalibrateScaleRatio](../images/calibrate_scaleratio.png)
 
-The Units of measurements support for the measurement annotations in the PDF Viewer are
+### Supported Measurement Units
+
+The PDF Viewer supports six standard measurement units for converting raw pixel measurements to real-world dimensions:
 
 * Inch
 * Millimeter
@@ -467,7 +473,9 @@ The Units of measurements support for the measurement annotations in the PDF Vie
 
 ## Set default scale ratio settings during control initialization
 
-The properties of scale ratio for measurement annotation can be set before creating the control using the ScaleRatioSettings as shown in the following code sample.
+The properties of scale ratio for measurement annotation can be set before creating the control using the MeasurementSettings object. This ensures all measurements use consistent calibration without requiring manual adjustment.
+
+**Example: Configure default scale ratio during PDF Viewer initialization**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

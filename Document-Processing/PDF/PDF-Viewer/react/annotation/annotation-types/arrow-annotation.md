@@ -13,8 +13,6 @@ Arrow annotations let users point, direct attention, or indicate flow on PDFs—
 
 ![Arrow overview](../../../javascript-es6/annotations/annotation-images/arrow-annot.png)
 
----
-
 ## Enable Arrow Annotation in the Viewer
 
 To enable Arrow annotations, inject the following modules into the React PDF Viewer:
@@ -47,11 +45,9 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
----
+## Add Arrow Annotation
 
-## Apply Arrow Annotation
-
-### Apply Arrow Annotation Using the Toolbar
+### Add Arrow Annotation Using the Toolbar
 1. Open the **Annotation Toolbar**.
 2. Select **Shapes** → **Arrow**.
 3. Click and drag on the PDF page to draw the arrow.
@@ -59,8 +55,6 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 ![Shape toolbar](../../images/shape_toolbar.png)
 
 N> When in Pan mode, selecting a shape tool automatically switches the viewer to selection mode for smooth interaction.
-
----
 
 ### Enable Arrow Mode
 Switch the viewer into highlight mode using `setAnnotationMode('Arrow')`.
@@ -88,8 +82,6 @@ function exitArrowMode() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Add Arrow Programmatically
 Use the [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) API to draw an arrow at a specific location (defined by two **vertexPoints**).
 
@@ -111,8 +103,6 @@ function addArrow() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Customize Arrow Appearance
 Configure default arrow appearance (fill color, stroke color, thickness, opacity) using the [`arrowSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#arrowsettings) property.
 
@@ -133,8 +123,6 @@ Configure default arrow appearance (fill color, stroke color, thickness, opacity
 {% endtabs %}
 
 N> For **Line** and **Arrow** annotations, **Fill Color** is available only when an arrowhead style is applied at the **Start** or **End**. If both are `None`, lines do not render fill and the Fill option remains disabled.
-
----
 
 ## Manage Arrow (Edit, Move, Resize, Delete)
 ### Edit Arrow 
@@ -181,20 +169,14 @@ function editArrowProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Delete Arrow
 
 The PDF Viewer supports deleting existing annotations through the UI and API.
 See [**Delete Annotation**](../remove-annotations) for full behavior and workflows.
 
----
-
 ### Comments
 
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to arrow annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
-
----
 
 ## Set properties while adding Individual Annotation
 
@@ -240,8 +222,6 @@ function addMultipleArrows() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Disable Arrow Annotation
 
 Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enableshapeannotation) property.
@@ -262,19 +242,13 @@ Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Handle Arrow Events
 
 The PDF viewer provides annotation life-cycle events that notify when Arrow annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
 
----
-
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).
-
----
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)

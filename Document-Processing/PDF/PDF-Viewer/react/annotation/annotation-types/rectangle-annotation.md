@@ -13,8 +13,6 @@ Rectangle annotations let users highlight regions, group content, or draw callou
 
 ![Rectangle overview](../../../javascript-es6/annotations/annotation-images/rect-annot.png)
 
----
-
 ## Enable Rectangle Annotation in the Viewer
 
 To enable Line annotations, inject the following modules into the React PDF Viewer:
@@ -47,9 +45,10 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
----
+## Add Rectangle Annotation
 
-## Apply Rectangle Annotation Using the Toolbar
+### Add Rectangle Annotation Using the Toolbar
+
 1. Open the **Annotation Toolbar**.
 2. Select **Shapes** → **Rectangle**.
 3. Click and drag on the PDF page to draw the rectangle.
@@ -58,9 +57,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 N> When in Pan mode, selecting a shape tool automatically switches the viewer to selection mode for smooth interaction.
 
----
-
-## Enable Rectangle Mode
+### Enable Rectangle Mode
 Switch the viewer into highlight mode using `setAnnotationMode('Rectangle')`.
 
 {% tabs %}
@@ -86,9 +83,7 @@ function exitRectangleMode() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
-## Add Rectangle Programmatically
+### Add Rectangle Programmatically
 Use the [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) API to draw a rectangle at a specific location.
 
 {% tabs %}
@@ -106,8 +101,6 @@ function addRectangle() {
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Customize Rectangle Appearance
 Configure default rectangle appearance (fill color, stroke color, thickness, opacity) using the [`rectangleSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#rectanglesettings) property.
@@ -127,8 +120,6 @@ Configure default rectangle appearance (fill color, stroke color, thickness, opa
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Manage Rectangle (Edit, Move, Resize, Delete)
 ### Edit Rectangle 
@@ -177,18 +168,12 @@ function editRectangleProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ### Delete Rectangle
 The PDF Viewer supports deleting existing annotations through the UI and API.
 See [**Delete Annotation**](../remove-annotations) for full behavior and workflows.
 
----
-
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to rectangle annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
-
----
 
 ## Set properties while adding Individual Annotation
 Set properties for individual rectangle annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
@@ -227,8 +212,6 @@ function addMultipleRectangles() {
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Disable Rectangle Annotation
 Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enableshapeannotation) property.
 
@@ -248,19 +231,13 @@ Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## Handle Rectangle Events
 
 The PDF viewer provides annotation life-cycle events that notify when Rectangle annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
 
----
-
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).
-
----
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)

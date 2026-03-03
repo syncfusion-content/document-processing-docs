@@ -45,7 +45,7 @@ yarn create next-app
 
 Using one of the above commands will prompt for project configuration options.
 
-1. Define the project name. For example: `ej2-next-js-pdfviewer`.
+- Define the project name. For example: `ej2-next-js-pdfviewer`.
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
@@ -54,7 +54,7 @@ Using one of the above commands will prompt for project configuration options.
 {% endhighlight %}
 {% endtabs %}
 
-2. Select the required packages.
+- Select the required packages.
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
@@ -70,7 +70,7 @@ Creating a new Next.js app in D:\ej2-next-js-pdfviewer.
 {% endhighlight %}
 {% endtabs %}
 
-3. After the project is created, navigate to the project directory:
+- After the project is created, navigate to the project directory:
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
@@ -131,7 +131,7 @@ N> To learn more about built-in themes and CSS references for individual compone
 
 Follow these steps to add the React PDF Viewer component to the Next.js project:
 
-1. Define the PDF Viewer component in `src/app/page.tsx`, as shown below:
+- Define the PDF Viewer component in `src/app/page.tsx`, as shown below:
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}

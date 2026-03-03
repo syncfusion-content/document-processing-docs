@@ -1,15 +1,19 @@
 ---
 layout: post
-title: Stamp annotation in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn about stamp annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps.
+title: Stamp Annotations in ASP.NET Core PDF Viewer | Syncfusion
+description: Add, edit, and customize stamp annotations in ASP.NET Core PDF Viewer. Learn about various stamps, and custom image stamps with programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Stamp annotation in ASP.NET Core PDF Viewer control
+# Stamp Annotations in ASP.NET Core PDF Viewer
 
-The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotations in PDF documents:
+The PDF Viewer control provides comprehensive stamp annotation features for adding, editing, deleting, and rotating various stamp types. This guide covers adding stamps through the UI, programmatic APIs, and customization options.
+
+### Stamp types
+
+The PDF Viewer supports four primary stamp annotation types:
 
 * Dynamic
 * Sign Here
@@ -20,22 +24,31 @@ The PDF Viewer control provides options to add, edit, delete, and rotate the fol
 
 ## Add stamp annotations to the PDF document
 
-The stamp annotations can be added to the PDF document using the annotation toolbar.
+Stamp annotations can be added using the built-in annotation toolbar with an intuitive multi-step interface.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Stamp Annotation** drop-down button. The pop-up lists available stamp annotation types.
+**1. Enable annotation mode**
+- Click the **Edit Annotation** button in the PDF Viewer toolbar
+- A secondary toolbar appears below the main toolbar
+
+**2. Select stamp type**
+- Click the **Stamp Annotation** drop-down button
+- The pop-up displays all available stamp annotation types
 
 ![Stamp annotation toolbar](../images/stamp_tool.png)
 
-* Select a stamp type to enable its annotation mode.
+**3. Choose stamp variant**
+
+Select a stamp type to activate its annotation mode.
 
 ![Stamp selection pop-up](../images/selectstamp_annot.png)
 
-* Place the stamp on the pages of the PDF document.
+**4. Place stamp on document**
+- Click on any page to place the stamp at that location
+- Resize and position using handles as needed
 
-N> When in pan mode and a stamp annotation tool is selected, the PDF Viewer switches to text select mode automatically for a smooth interaction experience.
+N> When in pan mode and a stamp annotation tool is selected, the PDF Viewer automatically switches to text select mode for smooth interaction.
 
-The following examples switch to stamp annotation modes.
+**Example: Add stamp annotations using toolbar**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -101,21 +114,35 @@ The following examples switch to stamp annotation modes.
 
 ## Add a custom stamp to the PDF document
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Stamp Annotation** drop-down button. The pop-up lists available stamp annotation types.
-* Click the Custom Stamp button.
+Custom image stamps allow you to add logos, signatures, or branded elements to PDF documents.
+
+### Supported image formats
+
+Only **JPG** and **JPEG** image formats are supported for custom stamp annotations. Other formats must be converted before use.
+
+### Adding a custom stamp
+
+**1. Open stamp annotation panel**
+- Click **Edit Annotation** and select  **Stamp Annotation** dropdown
+
+**2. Select custom stamp option**
+- Click the **Custom Stamp** button
 
 ![Custom stamp button](../images/customstamp.png)
 
-* In the file explorer dialog, choose an image and add it to the PDF page.
+**3. Choose image file**
+- In the file explorer dialog, browse and select a JPG/JPEG image
+- The selected image becomes available as a stamp
 
-N> Only JPG and JPEG image formats are supported for custom stamp annotations.
+**4. Place on document**
+- Click on the PDF page to place the custom image stamp
+- Resize and position as needed
 
 ## Add a stamp annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding a stamp annotation programmatically using the **addAnnotation()** method.
+The PDF Viewer library provides the **addAnnotation()** API method for programmatic stamp insertion, enabling dynamic workflow automation and batch operations.
 
-Here are examples showing how to add stamp annotations programmatically using addAnnotation():
+**Examples: Add stamps programmatically**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -235,9 +262,9 @@ Here are examples showing how to add stamp annotations programmatically using ad
 
 ## Edit an existing stamp annotation programmatically
 
-To modify an existing stamp annotation programmatically, use the **editAnnotation()** method.
+Modify stamp properties such as position, size, and lock status using the **editAnnotation()** API method.
 
-Here is an example of how you can use the **editAnnotation()** method:
+**Example: Edit stamp annotation properties**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -294,9 +321,9 @@ Here is an example of how you can use the **editAnnotation()** method:
 
 ## Set default properties during control initialization
 
-Default properties for stamp annotations can be set before creating the control using StampSettings.
+Configure default stamp annotation properties globally during PDF Viewer initialization using the **stampSettings** property. These defaults apply to all subsequently created stamps.
 
-After changing default opacity using the Edit Opacity tool, the selected value is applied. The following example sets default stamp annotation settings.
+**Example: Configure default stamp properties**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

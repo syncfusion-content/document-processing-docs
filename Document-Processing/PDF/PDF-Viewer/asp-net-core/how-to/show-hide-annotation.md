@@ -7,15 +7,15 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Toggle annotation visibility
+# Show and hide annotations in ASP.NET Core PDF Viewer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer lets developers temporarily hide annotations by exporting them, clearing them from the UI, and then importing them back on demand. This workflow is helpful when presenters need to focus on document content or compare marked-up and clean versions of the same file.
+Temporarily hide and restore annotations by exporting them to memory, removing them from the view, and then re-importing them on demand. This is useful for presentations or comparing annotated versus clean document versions.
 
-Follow these steps to add annotation toggle controls:
+Follow these steps to implement annotation visibility toggling:
 
-**Step 1:** Create a PDF Viewer sample by following the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started). Ensure the viewer scripts, styles, and Razor Page model are registered before wiring annotation logic.
+**Step 1:** Follow the [ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up the viewer with required scripts, styles, and configuration.
 
-**Step 2:** Add buttons that export and delete annotations to hide them, and re-import the cached annotations to show them again. Place the markup and script within the Razor page so the code runs after the viewer is initialized.
+**Step 2:** Add buttons to export, clear, and re-import annotations. Place the markup and script in the Razor page to execute after the viewer initializes:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -55,6 +55,8 @@ ViewData["Title"] = "Home page";
 {% endhighlight %}
 {% endtabs %}
 
-The `exportAnnotationsAsObject` method returns a promise whose resolved value stores the serialized annotations; persist this object securely if it contains sensitive content. The `resourceUrl` must reference a PDF Viewer build that matches your application version, and similar logic can be applied in server-backed samples by replacing the `resourceUrl` with `serviceUrl`.
+- The `exportAnnotationsAsObject()` method returns a promise containing serialized annotation data. Store this securely if it contains sensitive information.
+- The `resourceUrl` must match the application's PDF Viewer library version.
+- In server-backed scenarios, replace `resourceUrl` with `serviceUrl` pointing to the ASP.NET Core controller.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/ShowHideAnnotations)
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/ShowHideAnnotations)

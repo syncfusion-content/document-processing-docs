@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 After editing a PDF with annotation tools, you can save the updated file to a server, a database, or download it locally. The following sections show common approaches.
 
-### Save and Download the Edited PDF
+**Save and Download the Edited PDF**
 
 After editing the PDF document, follow this short, linear flow to persist and retrieve the updated file:
 
@@ -38,8 +38,8 @@ Follow the [getting-started](https://help.syncfusion.com/document-processing/pdf
 2. Open the `PdfViewerController.cs` file in your web service project.
 
 3. Modify the `Download()` method so it returns the modified document for the viewer to download or store.
-```csharp
 
+```csharp
 public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 {
   //Initialize the PDF Viewer object with memory cache object
@@ -64,7 +64,6 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
   }
   return Content(documentBase);
 }
-
 ```
 
 **Step 3:** Set the PDF Viewer properties in your React app
@@ -237,7 +236,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 N> Replace `Your connection string for SQL Server` with your actual connection string.
 
-N>: Ensure the `System.Data.SqlClient` package (or `Microsoft.Data.SqlClient`) is installed in your project. Use parameterized queries (as shown) and validate inputs to avoid SQL injection risks.
+N> Ensure the `System.Data.SqlClient` package (or `Microsoft.Data.SqlClient`) is installed in your project. Use parameterized queries (as shown) and validate inputs to avoid SQL injection risks.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-database)
 
@@ -253,6 +252,7 @@ Each link below goes to a provider page with simple, step-by-step instructions a
 - [Dropbox](./save-pdf-file/to-dropbox-cloud-file-storage)
 - [Box](./save-pdf-file/to-box-cloud-file-storage)
 - [Azure AD (auth notes)](./save-pdf-file/to-azure-active-directory)
+
 ---
 
 **See also**

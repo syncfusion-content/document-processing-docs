@@ -7,13 +7,13 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Manage local storage in the ASP.NET Core PDF Viewer
+# Enable local storage in ASP.NET Core PDF Viewer
 
-Use the `enableLocalStorage` property to control whether session-specific data is stored in session storage (default) or an internal in-memory collection.
+The PDF Viewer uses the **enableLocalStorage** property to determine how session-specific data is stored. By default, this property is set to `false`, and data is stored in the browser's session storage. When set to `true`, the data is maintained in an internal in-memory collection.
 
-## Use enableLocalStorage
+## Configure local storage
 
-Set `enableLocalStorage` to manage storage behavior. When `true`, data is kept in memory; otherwise, session storage is used.
+Set the **EnableLocalStorage** property to `true` in the Razor view to keep session data in memory:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -37,8 +37,8 @@ Set `enableLocalStorage` to manage storage behavior. When `true`, data is kept i
 
 ## Considerations
 
-- Memory usage can increase when using in-memory storage with large documents or many interactive elements.
-- Dispose of the PDF Viewer instance when no longer needed to avoid memory leaks.
-- Default: `enableLocalStorage` is `false`, so session storage is used unless changed.
+* **Memory Usage**: Storing data in memory can increase the memory footprint of the application, especially when processing large documents or multiple interactive elements.
+* **Instance Disposal**: Ensure the PDF Viewer instance is properly disposed of when no longer needed to prevent memory leaks.
+* **Default Behavior**: If **enableLocalStorage** is omitted or set to `false`, the component automatically utilizes session storage.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

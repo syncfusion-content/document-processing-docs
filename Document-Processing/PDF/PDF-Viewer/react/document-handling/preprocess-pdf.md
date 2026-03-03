@@ -126,5 +126,3 @@ Use for small files.
 viewer.load('https://yourdomain.com/files/doc.pdf');
 ```
 Ideal for stored/static files.
-
----
