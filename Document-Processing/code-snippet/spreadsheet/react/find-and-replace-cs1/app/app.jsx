@@ -8,7 +8,7 @@ function App() {
 
   const actionBegin = (args) => {
     const action = args?.action;
-    const eventArgs = args?.args?.eventArgs ?? args?.eventArgs;
+    const eventArgs = args?.eventArgs;
 
     // Check the action is beforeReplaceAll.
     if (action === 'beforeReplaceAll') {
