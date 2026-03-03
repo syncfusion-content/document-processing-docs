@@ -1,6 +1,6 @@
 ---
-title: Syncfusion PDF Page Rotation Service Guide
-description: Rotate pages in a PDF document with precision using Syncfusion's Rotate Pages API. Specify rotation options and the PDF file for seamless adjustments.
+title: Rotate PDF Pages Using Syncfusion Web API 
+description: Rotate PDF pages by 90, 180, or 270 degrees and regenerate updated files instantly using Syncfusion rotation Web API. 
 platform: document-processing
 control: general
 documentation: UG
