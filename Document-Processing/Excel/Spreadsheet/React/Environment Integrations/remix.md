@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Spreadsheet getting started with Remix | Syncfusion
-description: Integrate and use the Syncfusion React Spreadsheet component within a Remix app.
+description: Integrate and use React Spreadsheet within a Remix app.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
@@ -102,15 +102,15 @@ export default defineConfig({
 });
 ```
 
-This configuration ensures Syncfusion modules are properly transpiled for SSR compatibility.
+This configuration ensures Syncfusion modules are properly compiled for SSR compatibility.
 
 ## Adding Spreadsheet component
 
-Add the React Spreadsheet component in `~/app/routes/_index.tsx` file using the following code:
+Add the React Spreadsheet component in `~/app/routes/_index.ts` file using the following code:
 
 ```js
 import type { Route } from "./+types/home";
-import  {Spreadsheet}  from '../components/spreadsheet';
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -120,7 +120,7 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Index() {
-  return <Spreadsheet />;
+  return <SpreadsheetComponent />;
 }
 ```
 

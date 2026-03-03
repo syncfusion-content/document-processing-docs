@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion React Spreadsheet in SharePoint
-description: Quickstart to integrate the Syncfusion React Spreadsheet into an SPFx React web part.
+description: To integrate React Spreadsheet into an SPFx React web part.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 This article provides a step-by-step guide for setting up a SharePoint project and integrating the Syncfusion® React components.
 
-`SharePoint` Framework (SPFx) is a development model and framework provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams. It is a modern, client-side framework that allows developers to create web parts, extensions, and customizations that can be deployed and used within SharePoint sites and Teams applications.
+`SharePoint` Framework is a development model and framework provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams. It is a modern, client-side framework that allows developers to create web parts, extensions, and customizations that can be deployed and used within SharePoint sites and Teams applications.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ This article provides a step-by-step guide for setting up a SharePoint project a
 
 ## Set up the SharePoint project
 
-Create a new SPFx project using the following command:
+Create a new project using the following command:
 
 **Step 1:** To initiate the creation of a new SharePoint project, use the following command:
 
@@ -58,7 +58,7 @@ npm install @syncfusion/ej2-react-spreadsheet --save
 ## Adding CSS reference
 Themes for Syncfusion React Spreadsheet can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more detail.
 
-This example demonstrates importing the Material theme CSS within the `App.tsx` file located at `~/src/webparts/app/components/App.tsx`:
+This example demonstrates importing the `Tailwind 3` theme CSS within the `App.ts` file located at `~/src/webparts/app/components/App.ts`:
 
 ```ts
 require('@syncfusion/ej2-base/styles/tailwind3.css');
@@ -75,7 +75,7 @@ require('@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css');
 
 ## Add Spreadsheet Component
 
-Add the below code in the App.tsx file inside the ~/src/webparts/app/components folder to render the spreadsheet.
+Add the below code in the `App.ts` file inside the ~/src/webparts/app/components folder to render the spreadsheet.
 
 ```ts
 import * as React from 'react';

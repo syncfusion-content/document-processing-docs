@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Spreadsheet getting started with Preact | Syncfusion
-description: Integrate and use the Syncfusion React Spreadsheet component within a Preact app.
+description: Integrate and use React Spreadsheet within a Preact app.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
@@ -119,7 +119,7 @@ Import the Syncfusion® component themes in the `src/style.css` file as shown be
 
 ## Adding Spreadsheet component
 
-Add the React Spreadsheet component in `src/index.jsx` file using the following code:
+Add the React Spreadsheet component in `src/index.js` file using the following code:
 
 ```js
 import * as React from 'react';

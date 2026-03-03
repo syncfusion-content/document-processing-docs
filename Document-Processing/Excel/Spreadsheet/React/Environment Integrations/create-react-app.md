@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React Spreadsheet getting started with Create React App | Syncfusion
-description: Integrate and use the Syncfusion React Spreadsheet component using create react app.
+description: Integrate and use React Spreadsheet using create react app.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
@@ -41,7 +41,7 @@ npx create-react-app my-app --template typescript
 cd my-app
 ```
 
-Besides using the [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6`+.
+Besides using the `npx` package runner tool, also create an application from the `npm init`. To begin with the `npm init`, upgrade the `npm` version to `npm 6`+.
 
 ```bash
 npm init react-app my-app
@@ -65,7 +65,7 @@ yarn add @syncfusion/ej2-react-spreadsheet
 
 ## Import CSS
 
-Syncfusion React Spreadshet come with built-in [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme). Import the CSS styles for the Srpeadsheet component and its dependent components in the `src/App.css` file. The example below demonstrates importing the `Tailwind 3` theme.
+Syncfusion React Spreadsheet come with built-in [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme). Import the CSS styles for the Spreadsheet component and its dependent components in the `src/App.css` file. The example below demonstrates importing the `Tailwind 3` theme.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -84,7 +84,7 @@ For more details on built-in themes and usage, refer to the [Themes topic](https
 
 ## Adding Spreadsheet component
 
-Now, you can import the spreadsheet component into your `src/App.jsx` file.
+Now, you can import the spreadsheet component into your `src/App.js` file.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
