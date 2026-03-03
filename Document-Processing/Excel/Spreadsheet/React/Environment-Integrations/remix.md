@@ -106,7 +106,7 @@ This configuration ensures Syncfusion modules are properly compiled for SSR comp
 
 ## Adding Spreadsheet component
 
-Add the React Spreadsheet component in `~/app/routes/_index.ts` file using the following code:
+Add the React Spreadsheet component in `~/app/routes/_index.tsx` file using the following code:
 
 ```js
 import type { Route } from "./+types/home";
