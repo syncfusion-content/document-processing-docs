@@ -82,8 +82,6 @@ function App() {
 
   return (
     <SpreadsheetComponent
-      openUrl="https://services.syncfusion.com/react/production/api/spreadsheet/open"
-      saveUrl="https://services.syncfusion.com/react/production/api/spreadsheet/save"
       ref={spreadsheetRef}
       actionBegin={actionBegin}
       sheets={[
