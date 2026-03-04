@@ -255,7 +255,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-[View sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/blob/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
+[View sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
 
 ## Edit signature annotation
 
@@ -557,7 +557,7 @@ N> When `enableHandwrittenSignature` is set to `false`, the handwritten signatur
 
 ## Signature Workflow Best Practices
 
-Designing a well‑structured [signature](#add-signature-annotation) workflow is essential for ensuring clarity, security, and efficiency when working with PDF documents. Signature workflows typically involve multiple participants—reviewers, approvers, and finalizers—each interacting with the document at different stages. The Syncfusion React PDF Viewer provides annotation, commenting, and flattening capabilities that support these multi‑stage signature processes.
+Designing a well‑structured [signature](#add-signature-annotation) workflow is essential for ensuring clarity, security, and efficiency when working with PDF documents. Signature workflows typically involve multiple participants—reviewers and approvers each interacting with the document at different stages. The Syncfusion React PDF Viewer provides annotation, commenting, and flattening capabilities that support these multi‑stage signature processes.
 
 ### Why structured signature workflows matter
 
@@ -598,7 +598,7 @@ A well-structured signature workflow assigns specific responsibilities to each r
 - **Approver** – Examines the feedback, ensures all comments are addressed, and applies their signature once the document is finalized. Approvers may use handwritten, typed, or image-based signatures as per policy.  
   ![Signature Image](../images/handwritten-sign.png)
 
-- **Finalizer** – Verifies that all approval requirements are met, then applies [flattening](../document-handling/preprocess-pdf#flatten-form-fields--annotations) to make annotations and signatures permanent. The finalizer may also lock the document or export annotations for record-keeping.  
+- **Final Approver** – Verifies that all approval requirements are met, then applies [flattening](../document-handling/preprocess-pdf#flatten-form-fields--annotations) to make annotations and signatures permanent. The final approver may also lock the document or export annotations for record-keeping.
 
 N> For more details on flattening PDF documents and making annotations permanent, see [Flatten Annotations and Form Fields](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-library/javascript/pdf-document#flatten-annotations-and-form-fields).
 
@@ -622,8 +622,6 @@ When managing sensitive or confidential documents (such as legal, financial, med
 - **Audit and traceability:** Log all signature placements, edits, and finalization events for compliance and audit purposes. This helps track who signed, when, and what changes were made.
 - **Data protection:** Avoid storing confidential or high-value documents directly on client devices. Use secure storage and transmission practices.
 - **Finalize documents:** After all signatures are collected, apply flattening or locking to make annotations and signatures permanent, preventing further edits.
-
-![Secure PDF signature workflow](../images/signature-security.png)
 
 N> Always follow your organization’s data protection and compliance policies when handling sensitive documents. For more details on flattening and securing signed PDFs, see [Flatten Annotations and Form Fields](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-library/javascript/pdf-document#flatten-annotations-and-form-fields).
 

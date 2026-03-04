@@ -24,7 +24,7 @@ Field names are critical for automation, data mapping, and debugging. Always:
 
 ![Forms Unique Field Name](../../javascript-es6/images/ui-textbox-edit.png)
 
-You can refer to [Create Form Fields](../forms/manage-form-fields/create-form-fields) in React PDF Viewer to know more about creating formfields.
+You can refer to [Create Form Fields](../forms/manage-form-fields/create-form-fields) in React PDF Viewer to know more about creating form fields.
 
 ## 2. Maintain Consistent Field Types
 
@@ -36,7 +36,7 @@ Changing a field’s type (e.g., from textbox to dropdown) can break data mappin
 
 ![Grouping Form Fields](../../javascript-es6/images/groupTextFileds.png)
 
-You can refer to [Group Form Fields](../forms/group-form-fields) in React PDF Viewer to know more about grouping formfields.
+You can refer to [Group Form Fields](../forms/group-form-fields) in React PDF Viewer to know more about grouping form fields.
 
 ## 3. Validate Data Before Submission
 
@@ -47,7 +47,7 @@ Validation ensures data quality and prevents errors downstream. Always:
 - Use custom validation logic for business rules.
 - Prevent submission or export if validation fails.
 
-You can refer to [Form Validation](../forms/form-validation) in React PDF Viewer to know more about formfields Validation.
+You can refer to [Form Validation](../forms/form-validation) in React PDF Viewer to know more about form fields Validation.
 
 ## 4. Pre-Fill Known Values
 
@@ -87,7 +87,7 @@ Benefits:
 
 ![Grouping Form Fields](../../javascript-es6/images/groupTextFileds.png)
 
-You can refer to [Group Form Fields](../forms/group-form-fields) in React PDF Viewer to know more about grouping formfields.
+You can refer to [Group Form Fields](../forms/group-form-fields) in React PDF Viewer to know more about grouping form fields.
 
 ## 7. Keep Form Design Clean and Accessible
 
@@ -100,7 +100,7 @@ Good design improves usability and accessibility. Tips:
 
 ![Form Fields](../../javascript-es6/images/FormFill.png)
 
-You can refer to [Group Form Fields](../forms/group-form-fields) in React PDF Viewer to know more about grouping formfields.
+You can refer to [Group Form Fields](../forms/group-form-fields) in React PDF Viewer to know more about grouping form fields.
 
 ## See Also
 
