@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Ink
+# Working with Ink Elements
 
 An Ink annotation is a freehand drawing or handwritten input composed of stroke points that conveys signatures, notes, or sketches directly on a page. You can add and modify Ink in Word documents using Syncfusion<sup>&reg;</sup> Word library (DocIO).
 
@@ -17,7 +17,7 @@ The following code example illustrating how to create an Ink in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Creates a new Word document.
 WordDocument document = new WordDocument();
@@ -133,7 +133,7 @@ The following code example illustrating how to create an Ink with Multiple Tra
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Creates a new Word document.
 WordDocument document = new WordDocument();
@@ -250,7 +250,7 @@ The following code example shows GetPoints method which is used to get trace poi
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 public List<PointF[]> GetPoints()
 {
@@ -375,7 +375,7 @@ The following code example demonstrates how to customize the Ink Effect.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -442,7 +442,7 @@ The following code example demonstrates how to customize the Ink Color.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -511,7 +511,7 @@ The following code example demonstrates how to customize the Ink thickness.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -580,7 +580,7 @@ The following code example demonstrates how to customize the Ink Points.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -650,7 +650,7 @@ You can remove ink by iterating through Ink objects or specifying an index. The 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -723,14 +723,28 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Remove-ink/.NET/).																																	 																																			  
-
+You can download a complete working sample from [GitHub]().																																	 																																			  
 ## Limitations
 
+The .NET Word Library (DocIO) has the following limitations when creating Ink programmatically or processing Ink from an existing Word document.
+
+**Document Processing Functionalities**
+
+Document Comparison - Ink elements are not included in document comparison operations. 
+
+**Compatibility with Older Documents**
+
+DocIO supports Ink elements only in DOCX format. However, documents created in Word 2003 compatibility mode are an exception. In these documents, DocIO does not treat the Ink as Ink elements but instead treats it as document model data stored as base64-encoded ISF data. As a result, Ink content cannot be **edited or converted**.
+
+**To resolve this**, upgrade the document to the latest Word compatibility format. Open the document in **Microsoft Word**, save it with the **latest compatibility** version, and then reload it in DocIO. After upgrading, you can edit or convert the Ink elements as needed.
+
+**Word-to-PDF and Image Conversion**
+
+During Word-to-PDF and Word-to-Image conversions, Syncfusion Word Library uses fallback images embedded in the document to preserve the Ink visual appearance. However, when Ink is created or modified using the Syncfusion Word Library, some Ink effects cannot be rendered accurately due to rendering engine limitations. Although the Ink stroke geometry is preserved, visual brush effects are lost.
+
+**To resolve this**, save the document using DocIO first. Then, open the saved document in Microsoft Word and save it again. Finally, convert it to PDF or Image using DocIO. This process regenerates the required Ink fallback images, ensuring accurate visual output.
 
 ## Online Demo
 
 * Explore how to create a Word document with Ink using the .NET Word Library (DocIO) in a live demo [here]().
 * Explore how to edit a Word document with Ink using the .NET Word Library (DocIO) in a live demo [here]().
-
-## Frequently Asked Questions

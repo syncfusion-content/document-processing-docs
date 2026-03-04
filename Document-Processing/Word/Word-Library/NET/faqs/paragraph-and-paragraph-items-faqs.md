@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about paragraph and paragraph items in Word document
+# Frequently asked questions on paragraphs and items in Word document
 
 The frequently asked questions about working with paragraph and paragraph items in Word documents using DocIO are listed below.
 
