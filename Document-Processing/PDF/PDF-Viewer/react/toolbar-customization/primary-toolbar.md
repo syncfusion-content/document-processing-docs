@@ -1,154 +1,161 @@
 ---
 layout: post
-title: Primary Toolbar Customization in React PDF Viewer | Syncfusion
-description: Learn here all about primary toolbar customization in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Customize the Primary Toolbar in React PDF Viewer | Syncfusion
+description: Learn how to show or hide, reorder, and add items to the primary toolbar in the Syncfusion EJ2 React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Primary Toolbar Customization in React PDF Viewer
+# Customize Primary Toolbar in React PDF Viewer
 
-The primary toolbar of the PDF Viewer can be customized by rearranging existing items, disabling default items, and adding custom items. New items can be inserted at a specific index among existing toolbar items to control placement.
+## Overview
 
-## Show or hide the primary toolbar
+This guide explains how to show or hide the primary toolbar, remove default items, and add custom toolbar items. 
 
-Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. When a custom toolbar is required, hide the built-in toolbar. Use the [enableToolbar](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pdfViewerModel/#enabletoolbar) property or the [showToolbar](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide the primary toolbar.
+**Outcome**: Working React example customizing the primary toolbar.
 
-### Show or hide the toolbar using the enableToolbar property:
+## Prerequisites
+
+- EJ2 React PDF Viewer installed and added in project. See [getting started guide](../getting-started)
+
+## Steps
+
+**Step 1:** Show or hide the primary toolbar at initialization
+
+- Set [`enableToolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletoolbar) to `false` to hide the built-in toolbar.
 
 {% tabs %}
-{% highlight ts tabtitle="app.tsx" %}
-import React, { useRef } from 'react';
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
-function App() {
-  let pdfviewer;
-
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      enableToolbar={false}
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      style={{ height: '500px', width: '100%' }}
-    >
-      <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]} />
-    </PdfViewerComponent>
-  );
+export default function App() {
+    return (
+        <PdfViewerComponent
+            id="pdfViewer"
+            enableToolbar={false}
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+            style={{ height: '500px' }}>
+            <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]} />
+        </PdfViewerComponent>
+    );
 }
-
-export default App;
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>EJ2 PDF Viewer</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="React PDF Viewer Control" />
-    <meta name="author" content="Syncfusion" />
-    <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-notifications/styles/material.css" rel="stylesheet" />
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
-	<script src="systemjs.config.js"></script>
-</head>
-<body>
-    <div id='loader'>Loading....</div>
-    <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>
-    </div>
-</body>
-</html>
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet explains how to show or hide the toolbar using the `showToolbar` method.
+**Step 2:** Toggle the toolbar at runtime
+
+- Use the viewer's [`showToolbar()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar#showtoolbar) method to show or hide dynamically.
+
+```ts
+// with a ref named pdfviewer
+pdfviewer.toolbar.showToolbar(false);
+```
+
+**Step 3:** Remove or reorder default items
+
+- Provide the [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) array with the exact set and order of items you want to show. Any item omitted is hidden.
+
+{% highlight ts %}
+{% raw %}
+<PdfViewerComponent
+    toolbarSettings={{
+    toolbarItems: ['OpenOption', 'DownloadOption', 'PrintOption', 'MagnificationTool']
+    }}
+/>
+{% endraw %}
+{% endhighlight %}
+
+**Step 4:** Add a custom toolbar item
+
+- Add a custom item by including an object in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) and handling its action via [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#toolbarclick). The following example shows adding a simple custom button at initialization.
+
+{% highlight ts %}
+{% raw %}
+const customItems: (CustomToolbarItem | ToolbarItem)[] = [
+    'OpenOption',
+    {
+        id: 'custom_btn',
+        text: 'Fit to Width',
+        align: 'Center'
+    } as CustomToolbarItem,
+    'DownloadOption'
+];
+<PdfViewerComponent toolbarSettings={{ toolbarItems: customItems }} />
+{% endraw %}
+{% endhighlight %}
+
+**Complete example:**
 
 {% tabs %}
-{% highlight ts tabtitle="app.tsx" %}
-import React, { useEffect, useRef } from 'react';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import { useRef, RefObject, useState } from 'react';
+import { PdfViewerComponent, Toolbar, Inject, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSearch, TextSelection, FormFields, FormDesigner, PageOrganizer, CustomToolbarItem, ToolbarItem } from '@syncfusion/ej2-react-pdfviewer';
+import { ClickEventArgs } from '@syncfusion/ej2-react-navigations';
 
-function App() {
-  let pdfviewer;
-
-  useEffect(() => {
-    const btn = document.getElementById('set');
+export function App() {
+    const pdfviewerRef: RefObject<PdfViewerComponent> = useRef<any>(null);
+    const buttonRef: RefObject<HTMLButtonElement> = useRef<any>(null);
+    const [showTool, setShowTool] = useState<boolean>(false);
     const handler = () => {
-      pdfviewer?.toolbar.showToolbar(false);
-    };
-    btn?.addEventListener('click', handler);
-    return () => btn?.removeEventListener('click', handler);
-  }, []);
-
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      style={{ height: '500px', width: '100%' }}
-    >
-      <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]} />
-    </PdfViewerComponent>
-  );
+        const temp: boolean = showTool;
+        pdfviewerRef.current?.toolbar.showToolbar(temp);
+        setShowTool(!temp);
+    }
+    const handleToolbarClick = (event: ClickEventArgs) => {
+        if (event.item.id === 'custom_btn') {
+            handleFitToWidth();
+        }
+    }
+    const handleFitToWidth = () => pdfviewerRef.current?.magnification.fitToWidth();
+    const toolbarItems: (CustomToolbarItem | ToolbarItem)[] = [
+        'OpenOption',
+        {
+            id: 'custom_btn',
+            text: 'Fit to Width',
+            align: 'Center'
+        } as CustomToolbarItem,
+        'DownloadOption'
+    ];
+    return (
+        <div>
+            <button id="set" ref={buttonRef} onClick={() => handler()}>Hide toolbar</button>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={pdfviewerRef}
+                enableNavigationToolbar={false}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+                toolbarSettings={{ toolbarItems: toolbarItems }}
+                toolbarClick={handleToolbarClick}
+                style={{ height: '500px' }}>
+                <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+                    BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]} />
+            </PdfViewerComponent>
+        </div>
+    );
 }
-
-export default App;
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>EJ2 PDF Viewer</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="React PDF Viewer Control" />
-    <meta name="author" content="Syncfusion" />
-    <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-pdfviewer/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/23.1.40/ej2-notifications/styles/material.css" rel="stylesheet" />
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
-   <script src="systemjs.config.js"></script>
-</head>
-<body>
-    <div id='loader'>Loading....</div>
-    <button id="set">showToolbarItem</button>
-    <div id='container'>
-        <div id='PdfViewer' style="height:500px;width:100%;"></div>
-    </div>
-</body>
-</html>
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
+
+## Expected result
+
+- The primary toolbar shows only the items you list in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems).
+- Clicking `Hide toolbar` calls [`showToolbar(false)`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar#showtoolbar) and hides or shows the toolbar at runtime.
+
+## Troubleshooting
+
+- Toolbar still shows all default items.
+    - **Solution**: [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) must be supplied exactly; verify names and that [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar) service is injected.
+
+## Related topics
+
+- [Annotation toolbar customization](./annotation-toolbar)
+- [Form designer toolbar customization](./form-designer-toolbar)
