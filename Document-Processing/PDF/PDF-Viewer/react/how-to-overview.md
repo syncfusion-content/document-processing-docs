@@ -20,7 +20,7 @@ The following how-to articles and frequently asked questions for the Syncfusion 
 * [How to clear all the annotations from the PDF document?](./how-to/clear-annotations)
 * [How to configure the annotation selector settings?](./how-to/configure-annotationselector-setting-ts)
 * [What are the supported conformance or standards of PDF Viewer?](./how-to/conformance)
-* [How to Show, Hide or Toggle Annotation Visibility](./how-to/toggle-annotation-visibility)
+* [How to control the visibility of the annotation?](./how-to/control-annotation-visibility-ts)
 * [How to convert the PDF library bounds to PDF viewer bounds?](./how-to/convert-pdf-library-bounds-to-pdf-viewer-bounds-ts)
 * [How to create PDF Viewer service using ASP.NET Core?](./how-to/create-pdfviewer-service-core)
 * [How to create PDF viewer web service using ASP.NET MVC?](./how-to/create-pdfviewer-service)
