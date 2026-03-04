@@ -23,9 +23,9 @@ This guide shows how to show or hide the annotation toolbar and how to choose wh
 
 ## Steps
 
-**Step 1:** Show or hide the annotation toolbar
+### 1. Show or hide the annotation toolbar
 
-   - Use the [`showAnnotationToolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar#showannotationtoolbar) method on the viewer toolbar to control visibility.
+Use the [`showAnnotationToolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar#showannotationtoolbar) method on the viewer toolbar to control visibility.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -55,9 +55,9 @@ return (
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Customize which tools appear
+### 2. Show or hide annotation toolbar items
 
-   - Use [`annotationToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#annotationtoolbaritems) with a list of [`AnnotationToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationtoolbaritem) values. The toolbar shows only items in this list.
+Use [`annotationToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#annotationtoolbaritems) with a list of [`AnnotationToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationtoolbaritem) values. The toolbar shows only items in this list.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
