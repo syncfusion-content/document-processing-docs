@@ -555,6 +555,78 @@ root.render(<App />);
 
 N> When `enableHandwrittenSignature` is set to `false`, the handwritten signature toolbar and related UI are disabled; existing handwritten signature annotations remain in the document unless removed. The `canSave` option in annotation examples controls whether a signature can be saved for reuse; when `canSave` is `false`, signatures are not persisted in the signature collection for later reuse.
 
+## Signature Workflow Best Practices
+
+Designing a well‑structured [signature](#add-signature-annotation) workflow is essential for ensuring clarity, security, and efficiency when working with PDF documents. Signature workflows typically involve multiple participants—reviewers, approvers, and finalizers—each interacting with the document at different stages. The Syncfusion React PDF Viewer provides annotation, commenting, and flattening capabilities that support these multi‑stage signature processes.
+
+### Why structured signature workflows matter
+
+A clear signature workflow prevents improper edits, guarantees document authenticity, and reduces bottlenecks during review cycles. When multiple stakeholders sign or comment on a document, maintaining order is crucial for compliance, traceability, and preventing accidental overwrites.
+
+### Choosing the appropriate signature type
+
+Different business scenarios require different signature types. Consider the purpose, regulatory requirements, and level of trust demanded by the workflow.
+- **Handwritten image signature** – Best for informal approvals, acknowledgment of reading, and internal confirmation flows.
+  ![Handwritten Signature](../images/handwritten-sign.png)
+
+- **Typed signature** – Provides a polished, consistent appearance suitable for branded communications or standardized approval templates.
+  ![Type Signature](../images/type-sign.png)
+
+- **Image-based signature** – Allows users to upload a scanned signature image, ideal for customer-facing assets or when a handwritten look is required.
+  ![Upload Signature](../images/upload-sign.png)
+
+- **Digital certificate signature** – Essential for legally binding contracts, regulatory documents, and workflows that require tamper detection and verified signer identity. For more details on certified signatures, refer to the [Certified Signature documentation](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#certified-signature).
+
+N> You can explore and try out live demos for [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/react/#/bootstrap5/pdfviewer/invisible-digital-signature) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/react/#/bootstrap5/pdfviewer/visible-digital-signature) in our Sample Browser.
+
+### Pre‑signing validation checklist
+
+To ensure accuracy and prevent rework, [validate](../forms/form-validation) the document before signatures are added. This step is especially important in finance, HR, procurement, or contract review pipelines.
+
+- Confirm all **required form fields** are completed—names, dates, IDs, totals, etc.
+- Re‑validate key values like **financial totals**, **tax calculations**, or **contract amounts**.
+- Lock or restrict editing during review to prevent unauthorized modifications between the review and signing stages.
+- Use [annotations](../annotation/overview) and [comments](../annotation/comments) to flag issues before signatures are placed.
+
+### Role-based authorization flow
+
+A well-structured signature workflow assigns specific responsibilities to each role:
+
+- **Reviewer** – Reviews the document, adds [comments](../annotation/comments), [highlights](../annotation/annotation-types/highlight-annotation), and other markups to suggest changes or request clarifications. Reviewers should avoid placing [signatures](#add-signature-annotation) until all issues are resolved.  
+  ![Reviewer using highlights and comments](../images/highlight-comments.png)
+
+- **Approver** – Examines the feedback, ensures all comments are addressed, and applies their signature once the document is finalized. Approvers may use handwritten, typed, or image-based signatures as per policy.  
+  ![Signature Image](../images/handwritten-sign.png)
+
+- **Finalizer** – Verifies that all approval requirements are met, then applies [flattening](../document-handling/preprocess-pdf#flatten-form-fields--annotations) to make annotations and signatures permanent. The finalizer may also lock the document or export annotations for record-keeping.  
+
+N> For more details on flattening PDF documents and making annotations permanent, see [Flatten Annotations and Form Fields](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-library/javascript/pdf-document#flatten-annotations-and-form-fields).
+
+### Multi‑signer patterns and iterative approvals
+
+In practice, documents often require several rounds of review and signatures from multiple stakeholders. Syncfusion’s support for annotation exchange formats (XFDF/JSON) and the integrated comments panel makes it easy to manage these collaborative workflows.
+
+- Route the document through a defined sequence of signers to ensure proper order.
+- Use [comments and replies](../annotation/comments#add-comments-and-replies) to communicate feedback and clarifications without altering the original document content.
+- For external participants, share only the annotation data using [XFDF/JSON](../annotation/export-import/export-annotation) rather than distributing the entire PDF file.
+- Once all signers have completed their actions, use **flattening** to finalize and lock the signatures within the document.
+
+N> To explore advanced e-signature workflows and see a live demo, visit the [eSigning Form Designer sample](https://document.syncfusion.com/demos/pdf-viewer/react/#/bootstrap5/pdfviewer/esigning-form-designer).
+
+### Security, deployment, and audit considerations
+
+When managing sensitive or confidential documents (such as legal, financial, medical, or HR records), it’s important to implement robust security and compliance measures throughout the signature workflow.
+
+- **Restrict document access:** Ensure only authorized users can view or sign documents by enforcing authentication and role-based permissions.
+- **Secure endpoints:** Protect PDF endpoints with token-based access, expiration controls, and authorization checks to prevent unauthorized access.
+- **Audit and traceability:** Log all signature placements, edits, and finalization events for compliance and audit purposes. This helps track who signed, when, and what changes were made.
+- **Data protection:** Avoid storing confidential or high-value documents directly on client devices. Use secure storage and transmission practices.
+- **Finalize documents:** After all signatures are collected, apply flattening or locking to make annotations and signatures permanent, preventing further edits.
+
+![Secure PDF signature workflow](../images/signature-security.png)
+
+N> Always follow your organization’s data protection and compliance policies when handling sensitive documents. For more details on flattening and securing signed PDFs, see [Flatten Annotations and Form Fields](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-library/javascript/pdf-document#flatten-annotations-and-form-fields).
+
 ## See also
 
 - [Annotation Overview](../overview)
