@@ -132,6 +132,13 @@ The following code example shows the three types of sheet visibility state.
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/sheet-visiblity-cs1" %}
 
+## Quick Lookup
+
+- `insertSheet(index | sheetModel, count)` — add one or more sheets.  
+- delete(index) — remove sheet(s).  
+- `goTo(address) `— focus/start cell to make a sheet active.  
+- Visibility: Visible | Hidden | VeryHidden — set via sheets[i].state or the sheet tab UI.
+
 ## Note
 
 You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.

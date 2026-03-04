@@ -357,6 +357,13 @@ The following features have some limitations in Conditional Formatting:
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
 
+## Quick Lookup
+
+- `allowNumberFormatting` — boolean to enable number formatting.  
+- `cellFormat(style,range)| numberFormat(format,range)` — apply number/text/cell formatting to a range.
+- Common Format IDs: General(0), Number(2), Percentage(10), Fraction(12), Scientific(11), Text(49).
+
+
 ## Note
 
 You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.

@@ -139,6 +139,13 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/selection-cs3" %}
 
+
+## Quick Lookup
+
+- `selectionSettings.mode` — `Single` | `Multiple` | `None` (Default: `Multiple`)
+- `selectRange(address)` — range string (e.g., `"A1:B2"` or `"Sheet1!A1:B2"`) to programmatically select cells/rows/columns
+- `getData(address)` — returns the selected cell values as a collection/object
+
 ## Limitations
 
 * We have a limitation while performing the Select All(`ctrl + A`). You can do this only by clicking the Select All button at the top left corner.

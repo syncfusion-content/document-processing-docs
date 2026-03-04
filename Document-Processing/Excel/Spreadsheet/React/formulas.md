@@ -300,6 +300,13 @@ If you enter an invalid formula in a cell, an error dialog with an error message
 
 ![Formula Alert Dialog](./images/formula-alert-dialog.png)
 
+## Quick Lookup
+
+- `updateCell({ formula },range)` — set or update a cell's formula.
+- `addCustomFunction(fn)` — add custom handler for the formula.
+- `computeExpression(formula)` — evaluate an expression.
+
+
 ## Note
 
 You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.

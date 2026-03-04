@@ -224,6 +224,18 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/clear-cs1" %}
 
+## Quick Lookup
+
+- `allowWrap` — enable or disable wrap‑text support.
+- `wrap(range, isWrap)` — apply or remove wrap text for a range.
+- `allowDataValidation` — enable or disable data validation.
+- `addDataValidation(rule, range)` — apply a validation rule to a cell or range.
+- `removeDataValidation(range)` — remove validation rules.
+- `addInvalidHighlight(range)` — highlight invalid cells.
+- `removeInvalidHighlight(range)` — clear invalid‑data highlights.
+- `allowAutoFill` — enable or disable Auto Fill.
+- `autoFill(fillRange, dataRange, direction, fillType)` — fill cells based on pattern or series.
+
 ## Note
 
 You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
