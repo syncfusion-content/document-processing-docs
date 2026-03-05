@@ -160,6 +160,27 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-from-blobdata-cs1" %}
 
+### Open from JSON
+
+The [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method lets you load a complete workbook into the Spreadsheet using a JSON object. This JSON is usually created on the server after converting an Excel file, but it can also be generated manually. The method reads the JSON and restores all sheets, cells, styles, formulas, formatting, and other workbook details inside the component.
+
+openFromJson is used because it provides a smooth and reliable way to load Excel data into the browser without needing the actual Excel file. Since the file is already processed into JSON on the server, the client only handles lightweight data. This reduces the workload on the browser and ensures that the document structure, formatting, and content appear exactly as intended. It also allows developers to modify or build workbook data directly in JSON form before loading it into the spreadsheet.
+
+The main benefit for users is a faster and more stable loading experience. Because the heavy Excel‑processing work is completed on the server, the spreadsheet opens quickly in the browser and maintains the correct layout, values, and styles. The JSON format helps avoid common issues that might occur with large or complex Excel files, making the entire experience more dependable and easier for users.
+
+The following code snippet demonstrates openFromJson method:
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/open-from-json-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/open-from-json-cs1/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-from-json-cs1" %}
+
 ### Load server-side Excel files into Spreadsheet
 
 By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to load an Excel file located on a server, you need to configure the server endpoint to fetch the Excel file from the server location, process it using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, and send it back to the client side as `JSON data`. On the client side, you should use the [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method to load that `JSON data` into the Spreadsheet component.
