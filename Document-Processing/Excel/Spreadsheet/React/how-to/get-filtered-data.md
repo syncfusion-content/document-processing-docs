@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get filtered row data — React Spreadsheet | Syncfusion
-description: Learn how to get filtered row data in the Syncfusion React Spreadsheet component of Syncfusion Essential JS 2.
+title: Retrieve filtered row data in React Spreadsheet component | Syncfusion
+description: Learn here all about getting filtered row data in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
