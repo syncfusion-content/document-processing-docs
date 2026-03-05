@@ -448,3 +448,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to replace particular text with hyperlink in the Word document](https://support.syncfusion.com/kb/article/10326/how-to-replace-the-particular-text-with-hyperlink-in-word-document)
 * [How to replace the URL of image hyperlink in Word document in C# and VB](https://support.syncfusion.com/kb/article/11259/how-to-replace-url-of-image-hyperlink-in-word-document)
 * [How to remove a hyperlink from Word document in C# and VB](https://support.syncfusion.com/kb/article/9534/how-to-remove-hyperlink-from-a-word-document-using-c-vb-net)
+* [How to Remove the Underline from a Hyperlink in a Word Document?](https://support.syncfusion.com/kb/article/22778/how-to-remove-the-underline-from-a-hyperlink-in-a-word-document)

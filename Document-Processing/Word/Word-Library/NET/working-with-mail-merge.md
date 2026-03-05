@@ -344,3 +344,4 @@ You can restart the list numbering in a Word document during Mail merge. For fur
 * [How to Generate Invoices from XML Data in .NET Core Word Document?](https://support.syncfusion.com/kb/article/22139/how-to-generate-invoices-from-xml-data-in-net-core-word-document)
 * [How to Insert Hyperlink during mail merge in .NET Core Word Document?](https://support.syncfusion.com/kb/article/22223/how-to-insert-hyperlink-during-mail-merge-in-net-core-word-document)
 * [How to Modify Number or Date Formats in Word mail merge Fields at Runtime using C# .NET Core?](https://support.syncfusion.com/kb/article/22487/how-to-modify-number-or-date-formats-in-word-mail-merge-fields-at-runtime-using-c-net-core)
+* [How to Insert Merge Field at Bookmark in Word Document in .NET Core?](https://support.syncfusion.com/kb/article/22574/how-to-insert-merge-field-at-bookmark-in-word-document-in-net-core)
