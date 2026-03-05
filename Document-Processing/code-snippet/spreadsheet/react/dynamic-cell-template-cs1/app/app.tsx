@@ -1,8 +1,9 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, getCellIndexes, getCell, setCell } from '@syncfusion/ej2-react-spreadsheet';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 
-function App() {
+function App(): React.ReactElement {
   let spreadsheet: SpreadsheetComponent | null = null;
   const spreadsheetRef = useRef<SpreadsheetComponent | null>(null);
 
@@ -16,10 +17,10 @@ function App() {
     spreadsheet.addRibbonTabs([{ header: { text: 'Template' }, content: [{
       text: 'DropDown List', click: () => {
         if (!spreadsheet) return;
-        const sheet = spreadsheet.getActiveSheet();
-        const [rowIdx, colIdx] = getCellIndexes((sheet as any).activeCell);
-        const cellModel = getCell(rowIdx, colIdx, sheet as any);
-        const cellEle = spreadsheet.getCell(rowIdx, colIdx);
+        const sheet: any = spreadsheet.getActiveSheet();
+        const [rowIdx, colIdx]: number[] = getCellIndexes((sheet as any).activeCell);
+        const cellModel: any = getCell(rowIdx, colIdx, sheet as any);
+        const cellEle: HTMLElement = spreadsheet.getCell(rowIdx, colIdx) as HTMLElement;
         if (cellModel && (cellModel as any).template === 'dropdown-list') return;
         addDropDownlist(cellEle as any, dropDownOptions);
       }
@@ -27,7 +28,7 @@ function App() {
 
     spreadsheet.setRowsHeight(35, ['1:100']);
     // Rendering dropdown list for a specific range initially.
-    const activeSheet = spreadsheet.getActiveSheet();
+    const activeSheet: any = spreadsheet.getActiveSheet();
     for (let colIdx = 0; colIdx <= 3; colIdx++) {
         setCell(0, colIdx, activeSheet as any, { template: 'dropdown-list' } as any, true);
     }
@@ -47,12 +48,15 @@ function App() {
   // To render the dropdown list.
   const addDropDownlist = (element: HTMLElement, legendOptions: number[]): void => {
     element.innerHTML = '';
-    const inputEle = document.createElement('input');
+    const inputEle: HTMLInputElement = document.createElement('input');
     element.appendChild(inputEle);
     new DropDownList({
       placeholder: 'Select a value',
       dataSource: legendOptions,
       cssClass: 'e-dropdown-list',
+      change: (event: any)=>{
+        spreadsheetRef.current?.updateCell({value: event.value.toString()}, ( spreadsheet?.getActiveSheet() as any).activeCell);
+      }
     }, inputEle);
   };
 

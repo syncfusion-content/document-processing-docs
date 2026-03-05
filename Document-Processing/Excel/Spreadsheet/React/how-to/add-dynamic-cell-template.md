@@ -9,11 +9,9 @@ documentation: ug
 
 # Create Dynamic Cell Templates with Dropdowns in React Spreadsheet
 
-In the Syncfusion Spreadsheet, you can add custom templates in cells. Before, cell templates were added by using the `template` property inside ranges, and templates were rendered through the `beforeCellRender` event.
+You can add templates to cells in the Syncfusion Spreadsheet component by dynamically assigning a custom template property directly to individual cells. When a cell has this custom template property, you can use the [beforeCellRender](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforecellrender) event to append the desired template element to the cell. You can initialize programmatically in the [created](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#created) event to apply templates to cells.
 
-But you can apply custom templates by assigning a template name directly to a cell. During `beforeCellRender`, the Spreadsheet checks for this template and renders the template. Templates can be added when the sheet loads or applied to any selected cell.
-
-The following sample shows how to add custom dropdown template in cells. It includes a custom Ribbon tab named template with a dropdown button. You can also initialize the templates to the cells. When the dropdown list button is clicked, the Spreadsheet dynamically applies the dropdown template to the currently active cell.
+The following sample demonstrates how to insert a [Syncfusion Dropdown component](https://www.npmjs.com/package/@syncfusion/ej2-dropdowns) into Spreadsheet cells using this custom template property. Additionally, a custom ribbon item named "DropDown List" is included under a new "Template" ribbon tab. When this ribbon item is selected, the Spreadsheet dynamically inserts a dropdown into the currently active cell.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

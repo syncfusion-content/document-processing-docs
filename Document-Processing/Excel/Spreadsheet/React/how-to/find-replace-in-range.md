@@ -9,9 +9,9 @@ documentation: ug
 
 # Find and replace the text within the selected range of cells
 
-In the Syncfusion Spreadsheet, you can limit the Replace All action so that it updates only the cells inside the user’s selected range. When the replace operation begins, the selection is read and converted into individual cell addresses. During the beforeReplaceAll action, the list of cells targeted by Replace All is filtered so only the addresses inside the selected ranges are collected by generateCellCollection method.
+In Syncfusion Spreadsheet, the "Replace all" action normally searches the entire sheet and does not consider the user's selected range. The sample below shows how you can prevent the Replace all operation to entire sheet, so it updates only the cells inside the selected range.
 
-The following sample shows how the selected range is expanded, compared with address collection, and updated so that Replace All applies only the chosen cells in the active sheet.
+The selected range is captured during the [actionBegin](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#actionbegin) event. This range is then expanded into individual cell addresses. The cell value is replaced only if it falls within this selected range.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

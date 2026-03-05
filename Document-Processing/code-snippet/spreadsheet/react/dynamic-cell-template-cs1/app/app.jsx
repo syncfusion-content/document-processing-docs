@@ -54,6 +54,9 @@ function App() {
       placeholder: 'Select a value',
       dataSource: legendOptions,
       cssClass: 'e-dropdown-list',
+      change: (event)=>{
+        spreadsheetRef.current?.updateCell({value: event.value.toString()}, ( spreadsheet?.getActiveSheet()).activeCell);
+      }
     }, inputEle);
   };
 

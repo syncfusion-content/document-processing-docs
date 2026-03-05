@@ -1,49 +1,46 @@
 import * as React from 'react';
-import './App.css';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 import { getDefaultData } from './data';
 
-function App() {
-  const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
+function App(): React.ReactElement {
+  const spreadsheetRef = React.useRef<SpreadsheetComponent | null>(null);
 
   const actionBegin = (args: any): void => {
-    const action = args?.action;
-    const eventArgs = args?.eventArgs;
+    const action: string = args.action;
+    const eventArgs: any= args.args.eventArgs;
 
     // Check the action is beforeReplaceAll.
     if (action === 'beforeReplaceAll') {
-      // Check the mode is Sheet.
-      if (eventArgs?.mode === 'Sheet') {
-        const spreadsheet = spreadsheetRef.current;
-        if (!spreadsheet) return;
+      const spreadsheet = spreadsheetRef.current;
+      if (!spreadsheet) return;
 
-        // Get the active sheet's selected range.
-        const selectedRange: string | undefined = spreadsheet.getActiveSheet()?.selectedRange;
-        if (!selectedRange) return;
+      // Get the active sheet's selected range.
+      const selectedRange: string | undefined = spreadsheet.getActiveSheet()?.selectedRange;
+      if (!selectedRange) return;
 
-        // Convert the selected range into cell collection.
-        const selectedRangeCollection: string[] = generateCellCollection(selectedRange, spreadsheet);
-        const replaceAllCollection: Array<string | null> = eventArgs.addressCollection as Array<string | null>;
-        if (!Array.isArray(replaceAllCollection)) return;
+      // Convert the selected range into cell collection.
+      const selectedRangeCollection: string[] = generateCellCollection(selectedRange, spreadsheet);
+      const replaceAllCollection: Array<string | null> = eventArgs.addressCollection as Array<string | null>;
+      if (!Array.isArray(replaceAllCollection)) return;
 
-        // Create a Set from selectedRangeCollection for efficient lookup.
-        const selectedSet = new Set(selectedRangeCollection);
-        const updatedCollection: Array<string | null> = [];
+      // Create a Set from selectedRangeCollection for efficient lookup.
+      const selectedSet: Set<string> = new Set<string>(selectedRangeCollection);
+      const updatedCollection: Array<string | null> = [];
 
-        // Iterate through replaceAllCollection and keep only cells within selection.
-        for (const cell of replaceAllCollection) {
-          if (cell && selectedSet.has(cell)) {
-            updatedCollection.push(cell);
-          } else {
-            // If the cell is not in selectedRangeCollection, add null to the updated collection
-            updatedCollection.push(null);
-          }
+      // Iterate through replaceAllCollection and keep only cells within selection.
+      for (const cell of replaceAllCollection) {
+        if (cell && selectedSet.has(cell)) {
+          updatedCollection.push(cell);
+        } else {
+          // If the cell is not in selectedRangeCollection, add null to the updated collection
+          updatedCollection.push(null);
         }
+      }
 
-        if (updatedCollection.length > 0) {
-          // Assign the newly created cell collection to the addressCollection of replaceAll action.
-          eventArgs.addressCollection = updatedCollection;
-        }
+      if (updatedCollection.length > 0) {
+        // Assign the newly created cell collection to the addressCollection of replaceAll action.
+        eventArgs.addressCollection = updatedCollection;
       }
     }
   };

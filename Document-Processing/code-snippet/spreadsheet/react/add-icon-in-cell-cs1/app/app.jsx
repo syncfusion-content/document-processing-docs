@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {

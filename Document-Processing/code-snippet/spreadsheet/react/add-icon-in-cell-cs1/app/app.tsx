@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App(): React.ReactElement {
@@ -6,9 +7,9 @@ function App(): React.ReactElement {
 
   // To create plus icon wrapper.
   const createPlusIconWrapper = (): HTMLElement => {
-    const wrapperDiv = document.createElement('div');
+    const wrapperDiv: HTMLDivElement = document.createElement('div');
     wrapperDiv.className = 'e-custom-wrapper';
-    const iconSpan = document.createElement('span');
+    const iconSpan: HTMLSpanElement = document.createElement('span');
     iconSpan.className = 'e-icons e-plus e-custom-icon';
     wrapperDiv.appendChild(iconSpan);
     return wrapperDiv;
@@ -33,7 +34,7 @@ function App(): React.ReactElement {
             click: () => {
               if (!spreadsheetRef.current) return;
               // Add the plus icon template to the selected cell
-              const sheet = spreadsheetRef.current.getActiveSheet();
+              const sheet: any = spreadsheetRef.current.getActiveSheet();
               spreadsheetRef.current.updateCell({ template: 'plus-icon' } as any, (sheet as any).activeCell);
               spreadsheetRef.current.resize();
             },
@@ -47,7 +48,7 @@ function App(): React.ReactElement {
   const handleBeforeCellRender = (args: any) => {
     if (args.cell && args.cell.template === 'plus-icon') {
       // Pass the rowIndex to the wrapper to make the click handler reliable.
-      const wrapperDiv = createPlusIconWrapper();
+      const wrapperDiv: HTMLElement = createPlusIconWrapper();
       args.element.insertBefore(wrapperDiv, args.element.firstChild);
     }
   };
