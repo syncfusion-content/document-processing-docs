@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Perform find and replace within a selected range in React Spreadsheet component | Syncfusion
-description: Learn here all about performing find and replace limited to the current selection in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Perform find and replace within a range in React Spreadsheet component | Syncfusion
+description: Learn here all about performing find and replace limited to the range in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
