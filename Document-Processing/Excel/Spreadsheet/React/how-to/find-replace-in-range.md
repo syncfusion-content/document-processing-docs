@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find and replace in a range in React Spreadsheet component | Syncfusion
+title: Find and replace in range in React Spreadsheet component | Syncfusion
 description: Learn here all about performing find and replace limited to the range in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
