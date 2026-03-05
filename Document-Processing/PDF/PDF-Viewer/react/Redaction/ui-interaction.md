@@ -9,127 +9,100 @@ documentation: ug
 
 # Redaction UI interactions in React PDF Viewer
 
-## Add redaction annotations from the toolbar
+## Overview
 
-Use the redaction tool in the toolbar to draw over content that should be hidden. After marking, an annotation can display overlay text (for example, “Confidential”) and can be styled using fill color and other properties.
+This guide explains how to use the Redaction UI in the Syncfusion React PDF Viewer: drawing redaction marks, customizing their appearance, deleting marks, redacting whole pages, and applying redaction. The page provides step-by-step UI instructions to redact a PDF.
 
-![Drawing a redaction annotation on the page](redaction-annotations-images/adding-redaction-annotation.png)
+## Prerequisites
 
-#### Redaction annotations are interactive
+- A React project with PDF Viewer added to it. See [getting started guide](../getting-started)
+- The EJ2 React PDF Viewer version you use must include the Redaction feature.
 
-* **Movable** – Drag and reposition the annotation within the same page.  
-![Moving a redaction annotation](redaction-annotations-images/moving-redaction-annotation.png)
+## Steps
 
-* **Resizable** – Resize the annotation to cover the required area.  
-![Resizing a redaction annotation](redaction-annotations-images/resizing-redaction-annotation.png)
+1. Enable the Redaction tool
 
-N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see the [Toolbar customization](../toolbar).
+	- Open the viewer with the [`toolbarSettings.toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) configured to include the Redaction tool.
+	- The Redaction tool is hidden by default; adding it to [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) makes it visible.
 
-## Add redaction annotations using the context menu
+2. Add a redaction annotation from the toolbar
 
-In addition to the toolbar, you can add redaction annotations directly from the context menu. Select the text or region, right‑click (or long‑press on mobile), and choose the **Redact Annotation** option. This creates a redaction mark over the selected content.
+	- Select the Redaction tool in the toolbar, then draw a rectangle over the text or graphics to hide.
 
-![Context menu showing Redact Annotation option](redaction-annotations-images/redact-text-context-menu.png)
+	    ![Drawing a redaction annotation on the page](redaction-annotations-images/adding-redaction-annotation.png)
 
-## Update redaction properties
+3. Add a redaction annotation from the context menu
 
-After adding a redaction annotation, you can update its properties through the property panel or programmatically.
+	- Select text or region, right‑click (or long‑press on mobile), and choose **Redact Annotation**.
 
-### Update using the property panel
+	    ![Context menu showing Redact Annotation option](redaction-annotations-images/redact-text-context-menu.png)
 
-When a redaction annotation is selected, a two‑tab property panel (General and Appearance) lets you customize text and styling. Changes are reflected instantly on the redaction mark.
+4. Move or resize a redaction annotation
 
-The property panel can be opened in two ways:
+	- Drag to move the box
 
-* By clicking the **redaction property panel** icon in the toolbar.  
-![Redaction Property Panel Icon](redaction-annotations-images/redaction-property-panel-icon.png)
+	    ![Moving a redaction annotation](redaction-annotations-images/moving-redaction-annotation.png)
 
-* By right‑clicking (or long‑pressing) the annotation and choosing **Properties** from the context menu.  
-![Redaction Property Panel via Context Menu](redaction-annotations-images/redaction-property-panel-via-context-menu.png)
+    - Drag the handles to resize.
 
-#### General tab
+	    ![Resizing a redaction annotation](redaction-annotations-images/resizing-redaction-annotation.png)
 
-Use the General tab to define how the content will look after redaction. These settings control the final, burned‑in result and provide a live preview on hover.
+5. Update redaction properties using the property panel
 
-* Enable 'Overlay Text' to show text (for example, Confidential) over the redacted area.
-* Overlay Text – Enter the text to display.
-* Repeat Overlay Text – Tile the text to cover the whole region.
+	- Select an annotation and open the Property Panel from the toolbar icon or choose **Properties** from the context menu.
 
-![Overlay Text Options](redaction-annotations-images/redaction-overalytext.png)
+	    ![Redaction Property Panel Icon](redaction-annotations-images/redaction-property-panel-icon.png)
 
-* Font options – Choose family, size, color, and alignment for the overlay text.
-* Fill Color – Select the color that will fill the region after redaction is applied.
+	    ![Redaction Property Panel via Context Menu](redaction-annotations-images/redaction-property-panel-via-context-menu.png)
 
-![Fill Color in General Tab](redaction-annotations-images/after-redaction-fill-color.png)
+	- General tab: set Overlay Text, Repeat Overlay Text, font, and final Fill Color (these values are used when you apply redaction).
 
-N> Hovering the mouse over a redaction annotation shows a preview of the final look. After you click Apply Redaction, these settings are flattened into the page and cannot be edited. Tip: Click Save in the dialog to keep your changes.
+	    ![Overlay Text Options](redaction-annotations-images/redaction-overalytext.png)
 
-#### Appearance tab
+	    ![Fill Color in General Tab](redaction-annotations-images/after-redaction-fill-color.png)
 
-Use the Appearance tab to style the redaction annotation itself (before applying). These options help you see and manage the box on the page but do not change the final redacted output.
+	- Appearance tab: style the temporary annotation (fill, outline, opacity).
 
-* Fill Color – Sets the annotation’s fill while you review and move/resize it.
-* Outline Color – Optional border for the annotation.
-* Fill Opacity – Controls how transparent the annotation appears during review.
+	    ![Appearance Tab Settings](redaction-annotations-images/redaction-annotation-appearance.png)
 
-Note: The Appearance tab affects only the temporary annotation. The final look after applying redaction comes from the General tab settings.
+6. Delete a redaction annotation
 
-![Appearance Tab Settings](redaction-annotations-images/redaction-annotation-appearance.png)
+	- Right‑click the annotation and select **Delete**, press the **Delete** key, or click the toolbar Delete button.
 
-### What changes after applying redaction?
+	    ![Context menu showing Delete for a redaction](redaction-annotations-images/redaction-delete-context-menu.png)
 
-When you click Apply Redaction:
+	    ![Toolbar delete icon for redaction](redaction-annotations-images/redaction-delete-icon.png)
 
-* The selected content is permanently removed from the page.
-* The redaction region is flattened into the page with a solid fill that uses the General tab Fill Color.
-* If overlay text was enabled, the text is burned into the page. If Repeat Overlay Text was enabled, the text is tiled across the region.
-* All properties become read‑only. You cannot edit overlay text, fill color, outline, or opacity after applying. Set the final look in the General tab and use the Appearance tab only to style the annotation before you apply.
+7. Redact pages using the UI
 
-## Delete redaction annotations
+	- Use **Redact Pages** from the toolbar to mark whole pages (Current, Odd, Even, or Specific page ranges). Click **Save** to apply page marks.
 
-Delete redaction annotations using any of the following:
+	    ![Page Redaction Panel](redaction-annotations-images/page-redaction-panel.png)
 
-* **Right-click and select Delete** from the context menu.
+8. Apply redaction
 
-![Context menu showing Delete for a redaction](redaction-annotations-images/redaction-delete-context-menu.png)
+	- Click **Apply Redaction** in the toolbar or select **Apply redactions** in context menu to permanently remove marked content.
 
-* **Click the Delete button** on the toolbar.  
-![Toolbar delete icon for redaction](redaction-annotations-images/redaction-delete-icon.png)
+	    ![Redact Button Icon](redaction-annotations-images/redact-button-icon.png)
 
-* **Press the Delete key** after selecting the annotation.
+        ![Redact option in context menu](./redaction-annotations-images/apply-redaction-context-menu.png)
 
-## Redact pages using the UI
+    - A confirmation dialog appears before changes are flattened.
 
-Entire pages can be marked for redaction using the **Redact Pages** option in the toolbar. Clicking the icon opens a dialog with options:
+	    ![Apply Redaction Dialog](redaction-annotations-images/apply-redaction-dialog.png)
 
-* **Current Page** – Redacts the page currently in view.  
-* **Odd Pages Only** – Redacts all odd‑numbered pages.  
-* **Even Pages Only** – Redacts all even‑numbered pages.  
-* **Specific Pages** – Enter page numbers or ranges (e.g., 1, 3–5, 7) to redact.
+	- After applying: the selected content is permanently removed, overlay text (if enabled) is burned in, and properties become read‑only.
 
-After choosing the range, click **Save** to apply redaction marks to the selected pages.
+## Troubleshooting
 
-![Page Redaction Panel](redaction-annotations-images/page-redaction-panel.png)
+- Redaction tool not visible: ensure you added `RedactionEditTool` to [`toolbarSettings.toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) and injected required services.
+- Apply Redaction disabled: there are no redaction annotations present; add at least one mark.
+- Final redacted content not editable: this is expected — applied redaction flattens content and becomes read‑only. Keep a backup of the original file before applying.
 
-## Apply redaction from the toolbar
+## Related topics
 
-The **Apply Redaction** button permanently removes all marked content from the document.
-
-* The button is disabled when no redaction annotations exist.  
-* It automatically enables once at least one annotation is present.
-
-![Redact Button Icon](redaction-annotations-images/redact-button-icon.png)
-
-A confirmation dialog appears before applying redaction to ensure you acknowledge the irreversible nature of the process.
-
-![Apply Redaction Dialog](redaction-annotations-images/apply-redaction-dialog.png)
-
-N> Redaction is permanent. Create a backup of the original document before applying redaction; once applied, the original content cannot be restored.
-
-## See also
-
-* [Overview of Redaction](./overview)
-* [Programmatic Support in Redaction](./programmatic-support)
-* [Redaction in Mobile View](./mobile-view)
-* [Redaction Toolbar](./toolbar)
-* [Search Text and Redact](./search-redact)
+- [Redaction overview](./overview)
+- [Programmatic Support in Redaction](./programmatic-support)
+- [Redaction in Mobile View](./mobile-view)
+- [Redaction Toolbar](./toolbar)
+- [Search Text and Redact](./search-redact)
