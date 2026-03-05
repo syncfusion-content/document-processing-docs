@@ -50,7 +50,7 @@ recognizer.FormRecognizeOptions.DetectCheckboxes = true;
 {% endtabs %}
 
 ### DetectRadioButtons
-`DetectRadioButtons` is a boolean property in FormRecognizeOptions that specifies whether the form recognizer should detect radio button elements in the document. When enabled (default: true), the recognizer identifies circular selection controls. Turning this option off can streamline processing, reduce unnecessary output, and improve performance when radio buttons are not relevant to the form you are analyzing.
+`DetectRadioButtons` is a boolean property in FormRecognizeOptions that specifies whether the form recognizer should detect radio button elements in the document. When enabled (default: true), the recognizer identifies circular objects in images or in the Pdf documnets then add radio buttons in that identified locations.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -68,7 +68,7 @@ recognizer.FormRecognizeOptions.DetectRadioButtons = true;
 {% endtabs %}
 
 ### DetectSignatures
-`DetectSignatures` is a boolean property in FormRecognizeOptions that controls whether the form recognizer should identify signature fields within a document. When enabled (default: true), the recognizer scans for handwritten-style areas, signature lines, or regions typically used for signing, and includes these detected signature blocks in the structured output. 
+`DetectSignatures` is a boolean property in FormRecognizeOptions that controls whether the form recognizer should identify signature fields within a document. When enabled (default: true), the recognizer scans for handwritten-style areas, signature lines, or regions typically used for signing, and includes these detected signature blocks in the output. 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -101,14 +101,17 @@ recognizer.FormRecognizeOptions.ConfidenceThreshold = 0.9;
 {% endtabs %}
 
 ### PageRange
-`PageRange` is an optional int[,]? property in FormRecognizeOptions that allows you to control exactly which pages of a document the form recognizer should process. Each row in this 2‑dimensional array represents a 1‑based inclusive range in the form [start, end], the recognizer processes all pages in the document. Defining page ranges helps improve performance, reduce unnecessary processing, and target only the sections of the document relevant to your extraction workflow.
+`PageRange` is an optional int[,]? property in FormRecognizeOptions that allows you to control exactly which pages of a document the form recognizer should process. Each row in this 2‑dimensional array represents a 1‑based inclusive range in the form [start, end], the recognizer processes all pages in the document. Defining page ranges helps improve performance, reduce unnecessary processing, and target only the sections of the document relevant to your extraction workflow.We can also provide values in single page.Also If we provide values in decending order it will consider as ascending order and perform detection.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 FormRecognizer recognizer = new FormRecognizer();
 
-// Set a page range
+// Set a page range single
+recognizer.FormRecognizeOptions.PageRange = new int[,] { { 3 } };
+
+// Set a page range 2D
 recognizer.FormRecognizeOptions.PageRange = new int[,] { { 3, 3 } };
 
 {% endhighlight %}

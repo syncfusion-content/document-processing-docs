@@ -150,7 +150,7 @@ public  async void Button_Click(object sender, RoutedEventArgs e)
 
 ## Async variants with CancellationToken
 
-The async overloads accept an optional `CancellationToken` to cancel long-running operations:
+The async overloads accept an optional `CancellationToken` to cancel long-running operations.Initially cancellationToken value in default.Based on our requirement we can optimize the cancellationToken value.
 
 - `Task<PdfLoadedDocument> RecognizeFormAsPdfDocumentAsync(Stream inputStream, CancellationToken cancellationToken = default)`
 - `Task<Stream> RecognizeFormAsPdfStreamAsync(Stream inputStream, CancellationToken cancellationToken = default)`
@@ -158,34 +158,22 @@ The async overloads accept an optional `CancellationToken` to cancel long-runnin
 
 Example with cancellation token (PDF stream):
 
-```csharp
-public async Task RecognizeWithCancellationAsync(CancellationToken token)
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+public async Task RecognizeWithCancellationAsync()
 {
     FormRecognizer recognizer = new FormRecognizer();
 
     using FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-
+    CancellationTokenSource cts = new CancellationTokenSource();
+    cts.CancelAfter(TimeSpan.FromSeconds(5)); // cancel in 5 seconds
+    CancellationToken token = cts.Token;
     using Stream resultStream = await recognizer.RecognizeFormAsPdfStreamAsync(inputStream, token);
 
     using FileStream fileStream = File.Create("Output.pdf");
     await resultStream.CopyToAsync(fileStream, token);
 }
-```
 
-Notes:
-- Always forward cancellation tokens to I/O methods when available.
-
----
-
-## Common corrections and best practices shown in the examples
-
-- Use `using` (or `await using` for IAsyncDisposable) to ensure streams are disposed.
-- Use `FileAccess.Read` when only reading input files.
-- Do not reuse mismatched variable names (e.g., `smartFormRecognizer` vs `recognizer`) — pick one consistent name.
-- Prefer `async`/`await` in UI event handlers but avoid `async void` except for top-level event handlers; prefer `async Task` where possible for testability.
-
----
-
-If you want, I can also:
-- Add a short snippet showing how to handle `FormRecognizeOptions` with these calls.
-- Add a unit test or a small console app sample demonstrating each method.
+{% endhighlight %}
+{% endtabs %}
