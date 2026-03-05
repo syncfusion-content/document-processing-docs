@@ -1,6 +1,6 @@
 ---
-title: Syncfusion PDF Organize Service Guide
-description: Organize and customize pages within PDF files by reordering, rotating, deleting, or inserting blank pages using the PDF Organize Service.
+title: Organize PDF Pages Using Syncfusion Web API
+description: Reorder, rearrange, and structure PDF pages programmatically to streamline document assembly using Syncfusion organize Web API.
 platform: document-processing
 control: general
 documentation: UG
