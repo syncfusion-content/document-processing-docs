@@ -14,8 +14,11 @@ Flattening annotations permanently merges them into the PDF content. Once flatte
 - Useful for **secure sharing**, preventing modifications.
 - Ideal when **finalizing markup** before distribution.
 
-## How to Flatten Annotations (React)
-Follow these steps to flatten annotations and form fields before saving the PDF.
+## How to Flatten Annotations
+
+To flatten documents when they are uploaded/loaded into the viewer, see [Flatten on Load](../document-handling/preprocess-pdf#flatten-on-load).  
+
+Use the example below to flatten at export time (on download).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -103,6 +106,7 @@ root.render(<Default />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
+
 
 ## Notes
 
