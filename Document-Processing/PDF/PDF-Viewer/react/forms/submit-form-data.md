@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-The React PDF Viewer allows submitting filled form data like text fields, checkboxes, radio buttons and dropdown values to a backend server for processing. This guide shows how to extract form data from the viewer and **post** it as `JSON` to a server endpoint.
+The React PDF Viewer allows submitting filled form data like text fields, checkboxes, radio buttons and dropdown values to a back end server for processing. This guide shows how to extract form data from the viewer and **post** it as `JSON` to a server endpoint.
 
 ## Prerequisites
 
@@ -31,9 +31,9 @@ The React PDF Viewer allows submitting filled form data like text fields, checkb
 
    - Use `viewer.exportFormFieldsAsObject()` to obtain the filled values as JSON.
 
-3. POST the exported JSON to your backend
+3. POST the exported JSON to your back end
 
-   - Use `fetch` or `axios` to send the JSON. The server must accept `application/json` and handle CORS if cross-domain.
+   - Use `fetch` to send the JSON. The server must accept `application/json` and handle CORS if cross-domain.
 
 4. Trigger submission from a UI action
 
@@ -104,15 +104,15 @@ export default function SubmitFormExample() {
 ## Troubleshooting
 
 - **No form values returned**: Ensure the PDF has interactive fields and the viewer has finished loading before calling `exportFormFieldsAsObject()`.
-- **CORS errors**: Enable CORS on the server or serve both frontend and backend from the same origin during testing.
+- **CORS errors**: Enable CORS on the server or serve both frontend and back end from the same origin during testing.
 - **Server rejects payload**: Confirm the server expects `application/json` and validates shape of the object.
 - **WASM or resource errors**: Ensure `resourceUrl` points to the correct Syncfusion PDF Viewer library files.
 
 ## Use cases
 
-- Enable remote verification and approval workflows by sending submitted form data to a backend service for review and sign-off.
+- Enable remote verification and approval workflows by sending submitted form data to a back end service for review and sign-off.
 - Store submitted form responses in a database to persist user inputs for auditing, reporting, or later retrieval.
-- Trigger workflow automation and downstream processing by sending form data to business systems or serverless functions.
+- Trigger workflow automation and downstream processing by sending form data to business systems or server less functions.
 - Merge submitted values into a final flattened PDF on the server to produce a non-editable document that combines the form data with the original PDF.
 
 ## Related topics

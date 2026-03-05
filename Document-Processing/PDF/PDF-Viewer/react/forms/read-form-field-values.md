@@ -16,7 +16,7 @@ This guide shows common patterns with concise code snippets you can copy into yo
 
 ## Access the Form Field Collection
 
-Get all available form field ata by reading  viewer's `formFieldCollections`. For more information, see [`formFieldCollections`](./form-fields-api#formfieldcollections).
+Get all available form field data by reading  viewer's `formFieldCollections`. For more information, see [`formFieldCollections`](./form-fields-api#formfieldcollections).
 
 ```ts
 const formFields = viewer.formFieldCollections;
@@ -91,7 +91,7 @@ viewer.documentLoaded = () => {
 ## Use Cases
 
 - Validate and pre-fill form fields in your application before user submission.
-- Submit filled form data from the viewer to a backend service for processing or storage.
+- Submit filled form data from the viewer to a back end service for processing or storage.
 - Synchronize form field values with external UI components to keep application state in sync.
 - Export form data for reporting, archival, or integration with other systems.
 
