@@ -122,9 +122,6 @@ document.Close()
 
 {% endtabs %}
 
-By running the above code, you will generate a modified SmartArt as shown below.
-![Modify SmartArts](SmartArts_images/Edit-SmartArt.png)
-
 You can download a complete working sample from [GitHub]().																																	 
 
 ## Create Ink with Multiple Traces 
