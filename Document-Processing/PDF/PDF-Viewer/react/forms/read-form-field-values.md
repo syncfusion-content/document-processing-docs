@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Read and Extract PDF Form Field Values in React PDF Viewer | Syncfusion
+title: Read and Extract PDF Form Field Values in React | Syncfusion
 description: Learn how to read and extract values from PDF form fields in the EJ2 React PDF Viewer, including text, checkboxes, radio buttons, dropdowns, and signatures.
 platform: document-processing
 control: PDF Viewer

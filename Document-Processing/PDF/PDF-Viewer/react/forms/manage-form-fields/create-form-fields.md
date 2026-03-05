@@ -492,7 +492,7 @@ root.render(<App />);
 
 ## Add fields dynamically with setFormFieldMode
 
-Use `setFormFieldMode()` to switch the designer into a specific field mode and let users add fields on the fly.
+Use [`setFormFieldMode()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#setformfieldmode) to switch the designer into a specific field mode and let users add fields on the fly.
 
 ### Edit Form Fields in React PDF Viewer
 You can edit form fields using the UI or API.

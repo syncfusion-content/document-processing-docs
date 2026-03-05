@@ -11,8 +11,8 @@ documentation: ug
 
 This guide shows concise, actionable steps to export PDF form field data for storage or integration. It covers:
 
-- Exporting as [FDF](#3-export-as-fdf), [XFDF](#4-export-as-xfdf), and [JSON](#5-export-as-json) using `exportFormFields()`
-- Exporting as a [JavaScript object](#6-export-as-a-javascript-object) using `exportFormFieldsAsObject()`
+- Exporting as [FDF](#3-export-as-fdf), [XFDF](#4-export-as-xfdf), and [JSON](#5-export-as-json) using [`exportFormFields()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#exportformfields).
+- Exporting as a [JavaScript object](#6-export-as-a-javascript-object) using [`exportFormFieldsAsObject()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#exportformfieldsasobject).
 
 ## Steps
 
@@ -39,7 +39,7 @@ const viewerRef: RefObject<PdfViewerComponent> = useRef(null);
 
 ### 3. Export as FDF
 
-Use `exportFormFields(destination?, FormFieldDataFormat.Fdf)` to download an FDF file.
+Use [`exportFormFields(destination?, FormFieldDataFormat.Fdf)`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#exportformfields) to download an FDF file.
 
 {% highlight ts %}
 viewerRef.current?.exportFormFields('FormData', FormFieldDataFormat.Fdf);
@@ -47,7 +47,7 @@ viewerRef.current?.exportFormFields('FormData', FormFieldDataFormat.Fdf);
 
 ### 4. Export as XFDF
 
-Use `FormFieldDataFormat.Xfdf` to export XFDF.
+Use [`FormFieldDataFormat.Xfdf`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formfielddataformat) to export XFDF.
 
 {% highlight ts %}
 viewerRef.current?.exportFormFields('FormData', FormFieldDataFormat.Xfdf);
@@ -55,7 +55,7 @@ viewerRef.current?.exportFormFields('FormData', FormFieldDataFormat.Xfdf);
 
 ### 5. Export as JSON
 
-Use `FormFieldDataFormat.Json` to export form data as a JSON file.
+Use [`FormFieldDataFormat.Json`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formfielddataformat) to export form data as a JSON file.
 
 {% highlight ts %}
 viewerRef.current?.exportFormFields('FormData', FormFieldDataFormat.Json);
@@ -63,7 +63,7 @@ viewerRef.current?.exportFormFields('FormData', FormFieldDataFormat.Json);
 
 ### 6. Export as a JavaScript object
 
-Use `exportFormFieldsAsObject(format)` to get data for API calls or storing in a database.
+Use [`exportFormFieldsAsObject(format)`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#exportformfieldsasobject) to get data for API calls or storing in a database.
 
 {% highlight ts %}
 const data = await viewerRef.current?.exportFormFieldsAsObject();
@@ -131,10 +131,10 @@ export default function App() {
 
 ## Troubleshooting
 
-- Ensure `FormFields` and `FormDesigner` services are injected when using form APIs.
-- Confirm `resourceUrl` points to the matching `ej2-pdfviewer-lib` version.
+- Ensure `FormFields` and [`FormDesigner`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner) services are injected when using form APIs.
+- Confirm [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) points to the matching `ej2-pdfviewer-lib` version.
 - If exports fail in restrictive browsers, check popup/download settings and CORS for hosted endpoints.
-- For server-side persistence, use `exportFormFieldsAsObject()` and send the result to your API.
+- For server-side persistence, use [`exportFormFieldsAsObject()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#exportformfieldsasobject) and send the result to your API.
 
 ## See also
 
