@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Hyperlinks
+# Working with Hyperlinks in Word Library
 
 Hyperlinks have two parts: the address and display content. 
 
