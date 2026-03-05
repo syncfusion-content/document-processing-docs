@@ -1,0 +1,73 @@
+---
+title: Extract structured data from PDF and image documents in .NET | Syncfusion
+description: Syncfusion® Smart Data Extractor is a .NET library that extracts tables, form fields, text blocks, and images from PDF and image documents, producing PDFs and structured JSON for verification, automation and processing.
+platform: SmartDataExtractor
+control: PDF
+documentation: UG
+keywords: Assemblies
+---
+# Assemblies Required to work with PDF 
+
+The following assemblies need to be referenced in your application based on the platform.
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>Assembly</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{'[WPF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)'| markdownify }},
+        {{'[Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms)'| markdownify }} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}      
+      </td>
+      <td>
+        Syncfusion.Compression.Base<br/>
+        Syncfusion.ImagePreProcessor.Base<br/>
+        Syncfusion.OCRProcessor.Base<br/>
+        Syncfusion.Pdf.Imaging.Base<br/>
+        Syncfusion.Pdf.Base<br/>
+        Syncfusion.PdfToImageConverter.Base<br/>
+        Syncfusion.SmartFormRecognizer.Base<br/>
+        Syncfusion.SmartTableExtractor.Base<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      {{'[Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor)'| markdownify }},
+      {{'[.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)'| markdownify }}
+      and {{'[.NET Platforms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}
+      </td>
+      <td>
+        Syncfusion.Compression.Portable<br/>
+        Syncfusion.ImagePreProcessor.Portable<br/>
+        Syncfusion.OCRProcessor.Portable<br/>
+        Syncfusion.Pdf.Imaging.Portable<br/>
+        Syncfusion.Pdf.Portable<br/>
+        Syncfusion.PdfToImageConverter.Portable<br/>
+        Syncfusion.SmartFormRecognizer.Portable<br/>
+        Syncfusion.SmartTableExtractor.Portable<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      {{'[Windows UI library (WinUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui)'| markdownify }},
+      {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui)'| markdownify }}
+      </td>
+      <td>
+        Syncfusion.Compression.NET<br/>
+        Syncfusion.ImagePreProcessor.NET<br/>
+        Syncfusion.OCRProcessor.NET<br/>
+        Syncfusion.Pdf.Imaging.NET<br/>
+        Syncfusion.Pdf.NET<br/>
+        Syncfusion.PdfToImageConverter.NET<br/>
+        Syncfusion.SmartFormRecognizer.NET<br/>
+        Syncfusion.SmartTableExtractor.NET<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
