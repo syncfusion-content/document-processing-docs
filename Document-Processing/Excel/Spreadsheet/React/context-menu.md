@@ -54,7 +54,7 @@ Please find the table below for default context menu items and their actions.
 | [`Protect Sheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#protectsheet) | Prevent unwanted changes from others by limiting their ability to edit. |
 | [`Hide`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#hide) |Hide the selected worksheet. |
 
-## Context Menu Customization
+## Customizing Context Menu
 
 You can perform the following context menu customization options in the spreadsheet
 
@@ -62,9 +62,9 @@ You can perform the following context menu customization options in the spreadsh
 * Remove Context Menu Items
 * Enable/Disable Context Menu Items
 
-### Add Context Menu Items
+### Add Custom Context Menu Items
 
-You can add the custom items in context menu using the [`addContextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#addcontextmenuitems) in `contextmenuBeforeOpen` event
+You can add the custom items in context menu using the [`addContextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#addcontextmenuitems) in [contextmenuBeforeOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#contextmenubeforeopen) event
 
 In this demo, Custom Item is added after the Paste item in the context menu.
 
@@ -81,7 +81,7 @@ In this demo, Custom Item is added after the Paste item in the context menu.
 
 ### Remove Context Menu Items
 
-You can remove the items in context menu using the [`removeContextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#removecontextmenuitems) in `contextmenuBeforeOpen` event
+You can remove the items in context menu using the [`removeContextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#removecontextmenuitems) in [contextmenuBeforeOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#contextmenubeforeopen) event
 
 In this demo, Insert Column item has been removed from the row/column header context menu.
 
@@ -98,7 +98,7 @@ In this demo, Insert Column item has been removed from the row/column header con
 
 ### Enable/Disable Context Menu Items
 
-You can enable/disable the items in context menu using the [`enableContextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#enablecontextmenuitems) in `contextmenuBeforeOpen` event
+You can enable/disable the items in context menu using the [`enableContextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#enablecontextmenuitems) in [contextmenuBeforeOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#contextmenubeforeopen) event
 
 In this demo, Rename item is disabled in the pager context menu.
 

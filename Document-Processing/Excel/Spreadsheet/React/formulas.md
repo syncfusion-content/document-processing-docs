@@ -11,16 +11,16 @@ documentation: ug
 
 Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
 
-## Usage
+## How to Apply Formulas
 
 You can set formula for a cell in the following ways,
 
-* Using the `formula` property from `cell`, you can set the formula or expression to each cell at initial load.
+* Using the [formula](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#formula) property from `cell`, you can set the formula or expression to each cell at initial load.
 * Set the formula or expression through data binding.
 * You can set formula for a cell by [`editing`](./editing).
-* Using the [`updateCell`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#updatecell) method, you can set or update the cell formula.
+* Using the [`updateCell()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#updatecell) method, you can set or update the cell formula.
 
-## Culture-Based Argument Separator
+## Culture-Specific Formula Separators
 
 Previously, although you could import culture-based Excel files into the Spreadsheet component, the formulas wouldn't calculate correctly. This was due to the absence of culture-based argument separators and support for culture-based formatted numeric values as arguments. However, starting from version 25.1.35, you can now import culture-based Excel files into the Spreadsheet component.
 
@@ -54,7 +54,7 @@ In the example below, the Spreadsheet component is rendered with the `German cul
 
 The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/formulas#supported-formulas).
 
-You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the [addCustomFunction](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#addcustomfunction) function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
+You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the [addCustomFunction()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#addcustomfunction) function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
 
 The following code example shows an unsupported formula in the spreadsheet.
 
@@ -75,7 +75,7 @@ The following code example shows an unsupported formula in the spreadsheet.
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/formula-cs1" %}
 
-Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
+Second, if you want to directly compute any formula or expression, you can use the [computeExpression()](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
 
 The following code example shows how to use `computeExpression` method in the spreadsheet.
 
@@ -96,17 +96,17 @@ The following code example shows how to use `computeExpression` method in the sp
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/formula-cs2" %}
 
-## Formula bar
+## Using the Formula Bar
 
 Formula bar is used to edit or enter cell data in much easier way. By default, the formula bar is enabled in the spreadsheet. Use the [`showFormulaBar`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#showformulabar) property to enable or disable the formula bar.
 
-## Named Ranges
+## Using Named Ranges in Formulas
 
 You can define a meaningful name for a cell range and use it in the formula for calculation. It makes your formula much easier to understand and maintain. You can add named ranges to the Spreadsheet in the following ways,
 
 * Using the [`definedNames`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#definednames) collection, you can add multiple named ranges at initial load.
-* Use the [`addDefinedName`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#adddefinedname) method to add a named range dynamically.
-* You can remove an added named range dynamically using the [`removeDefinedName`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#removedefinedname) method.
+* Use the [`addDefinedName()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#adddefinedname) method to add a named range dynamically.
+* You can remove an added named range dynamically using the [`removeDefinedName()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#removedefinedname) method.
 * Select the range of cells, and then enter the name for the selected range in the name box.
 
 The following code example shows the usage of named ranges support.
@@ -128,7 +128,7 @@ The following code example shows the usage of named ranges support.
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/defined-name-cs1" %}
 
-## Calculation Mode
+## Formula Calculation Modes
 
 The Spreadsheet provides a `Calculation Mode` feature like the calculation options in online Excel. This feature allows you to control when and how formulas are recalculated in the spreadsheet. The available modes are:
 
@@ -137,7 +137,7 @@ The Spreadsheet provides a `Calculation Mode` feature like the calculation optio
 
 You can configure the calculate mode using the [`calculationMode`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#calculationmode) property of the Spreadsheet. These modes offer flexibility to balance real-time updates and performance optimization.
 
-### Automatic Mode
+### Automatic Recalculation Mode
 
 In Automatic Mode, formulas are recalculated instantly whenever a dependent cell is modified. This mode is perfect for scenarios where real-time updates are essential, ensuring that users see the latest results without additional actions.
 
@@ -162,7 +162,7 @@ The following code example demonstrates how to set the Automatic calculation mod
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/calculation-cs1" %}
 
-### Manual Mode
+### Manual Recalculation Mode
 
 In Manual Mode, formulas are not recalculated automatically when cell values are modified. Instead, recalculations must be triggered explicitly. This mode is ideal for scenarios where performance optimization is a priority, such as working with large datasets or computationally intensive formulas.
 
@@ -190,7 +190,7 @@ The following code example demonstrates how to set the Manual calculation mode i
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/calculation-cs2" %}
 
-## Supported Formulas
+## List of Supported Formulas
 
 The following are the list of formulas supported in spreadsheet,
 
@@ -282,7 +282,7 @@ The following are the list of formulas supported in spreadsheet,
 | UNIQUE | Returns a unique values from a range or array. |
 | VLOOKUP | Looks for a specific value in the first column of a lookup range and returns a corresponding value from a different column within the same row. |
 
-## Formula Error Dialog
+## Handling Formula Errors in Dialog
 
 If you enter an invalid formula in a cell, an error dialog with an error message will appear. For instance, a formula with the incorrect number of arguments, a formula without parenthesis, etc.
 
@@ -302,9 +302,15 @@ If you enter an invalid formula in a cell, an error dialog with an error message
 
 ## Quick Lookup
 
-- `updateCell({ formula },range)` — set or update a cell's formula.
-- `addCustomFunction(fn)` — add custom handler for the formula.
-- `computeExpression(formula)` — evaluate an expression.
+- `updateCell({ formula }, range)` - set or update a cell’s formula at a specific address.
+- `addCustomFunction(handler, name)` - register a user‑defined function for use in formulas.
+- `computeExpression(expression)` - evaluate a formula or expression string and return the computed value.
+- `listSeparator` - property that specifies the culture‑based argument separator used in formulas.
+- `showFormulaBar` - property to enable or disable the formula bar.
+- `definedNames` (collection) - define named ranges during initial load.
+- `addDefinedName({ name, refersTo, comment })` - create a named range dynamically.
+- `removeDefinedName(name, scopeSheetName)` - remove a named range.
+- `calculationMode` (property: `'Automatic' | 'Manual'`) - control whether formulas recalculate automatically or only on demand.
 
 
 ## Note

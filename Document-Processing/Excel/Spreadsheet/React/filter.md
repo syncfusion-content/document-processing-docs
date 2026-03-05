@@ -15,7 +15,7 @@ Filtering helps you to view specific rows in the spreadsheet by hiding the other
 
 By default, the `Filter` module is injected internally into Spreadsheet to perform filtering.
 
-## Apply filter on UI
+## Apply Filters from the UI
 
 In the active sheet, select a range of cells to filter by value of the cell. The filtering can be done by any of the following ways:
 
@@ -79,7 +79,7 @@ When you want to reapply the filter after some changes happened in the rows. It 
 * You can choose `Reapply` option in ribbon toolbar under `Filter and Sort` to reapply the filtered columns again.
 * You can right-click on a filtered cell and choose `Reapply` option from the context menu. It reapplies the filters again in the Spreadsheet for all the fields.
 
-## Known error validations
+## Filter Validation & Error Messages
 
 The following errors have been handled for filtering,
 * *Out of range validation:* When the selected range is not a used range of the active sheet, it is considered as invalid and the out of range alert with the message `Select a cell or range inside the used range and try again` will be displayed. No filter will be performed if the range is invalid.
@@ -107,13 +107,23 @@ The following code example shows how to get the filtered rows.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/filter-cs2" %}
 
-## Limitations
+## Limitations of Filter
 
 The following features have some limitations in Filter:
 
 * Insert/delete row/column between the filter applied cells.
 * Merge cells with filter.
 * Copy/cut paste the filter applied cells.
+
+## Quick Lookups
+
+- `allowFiltering` - property that enables or disables filtering support in the spreadsheet.
+- `applyFilter()` - method that applies a filter to a selected range or based on specified criteria.
+- `clearFilter()` - method that clears all applied filters or clears the filter for a specific column.
+- `beforeFilter` - event fired before filtering begins, allowing you to modify filter options.
+- `filterComplete` - event fired after filtering finishes, useful for post‑filter actions.
+- `Ctrl + Shift + L` - quickly apply or remove filters on the selected range.
+- `Alt + Up/Down` - open the filter dialog for the active column.
 
 ## Note
 

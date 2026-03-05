@@ -10,7 +10,9 @@ documentation: ug
 
 # Notes in React Spreadsheet component
 
-The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
+The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enablenotes) property.
+
+> * The default value for `enableNotes` property is `true`.
 
 When opening the Excel document with notes in the Spreadsheet, they will be displayed in the control. The cells containing notes will be indicated with a red colored triangle at the top-right corner. Hovering the mouse over these cells will display the content of the notes.
 
@@ -37,7 +39,7 @@ In the active worksheet, you can add a note in the following ways:
 * **Ribbon**: Select the cell, navigate to the **Review** tab, click the **Notes** dropdown, and select **Add Note**.
 * **Keyboard Shortcut**: Select the cell and press <kbd>Shift</kbd> + <kbd>F2</kbd>.
 * **Programmatically**: 
-    * Use the `updateCell` method with the note model to add a note to a specific cell.
+    * Use the [updateCell()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#updatecell) method with the note model to add a note to a specific cell.
     * Bind notes via code-behind during initial load by associating the note model with the cell model.
 
 A dialog box will open where you can enter the note content. After entering the content, you can either click on other cells or press the <kbd>Esc</kbd> button to automatically save the note and close the dialog box.
@@ -150,7 +152,7 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
 The notes can be added initially when the Spreadsheet loads using cell data binding. You need to use the `notes` property in the cell settings to add notes to the Spreadsheet.
 
-In the below example, you can navigate between notes using **Previous Note** and **Next Note** options, toggle individual note visibility with **Show/Hide Note**, display all notes at once using **Show All Notes** and see how notes are added using the `updateCell` method in the `created` event.
+In the below example, you can navigate between notes using **Previous Note** and **Next Note** options, toggle individual note visibility with **Show/Hide Note**, display all notes at once using **Show All Notes** and see how notes are added using the [updateCell()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method in the [created](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#created) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -163,9 +165,18 @@ In the below example, you can navigate between notes using **Previous Note** and
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/note-cs3" %}
 
-## Limitations
+## Limitations of notes
 
 * When importing the document with notes, the formatting of the content in the notes will not be available. Similarly, while adding notes, we cannot apply formatting to them.
 * The style and appearance of the dialog box for the notes, including size, color, border, and other elements, cannot be directly changed.
 * Exporting the workbook along with notes is not supported in file formats such as Comma Separated Values (.csv), Excel Macro-Enabled Workbook (.xlsm), Excel Binary Workbook (.xlsb), and PDF Document (.pdf).
 * Notes added outside the used ranges of the worksheet will not be included in the exported document.
+
+## Quick Lookup
+
+- `enableNotes` - property that enables or disables the notes feature in the spreadsheet.
+- `notes` - cell property used to attach a note during initial load or through data binding.
+- `updateCell({ notes }, address)` - method used to add or modify a note programmatically for a specific cell.
+- `Shift + F2` - keyboard shortcut used to add or edit a note in the selected cell.
+- `Show/Hide Note` and `Show All Notes` - options used to toggle visibility of individual notes or display all notes as sticky notes.
+

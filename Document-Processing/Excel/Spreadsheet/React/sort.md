@@ -15,7 +15,7 @@ Sorting helps arranging the data to a specific order in a selected range of cell
 
 By default, the `sort` module is injected internally into Spreadsheet to perform sorting.
 
-## Sort by cell value
+## Sort a Range by Cell Values
 
 In the active Spreadsheet, select a range of cells to sort by cell value. The range sort can be done by any of the following ways:
 * Select the sort item in the Ribbon toolbar and choose the ascending or descending item.
@@ -26,9 +26,9 @@ The cell values can be sorted in the following orders:
 * Ascending
 * Descending
 
-> * Ascending is the default order for sorting.
+> * The default order of sorting is `Ascending`
 
-The `sort()` method with empty arguments will sort the selected range by active cell’s column as sort column in ascending order.
+The [sort()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sort) method with empty arguments will sort the selected range by active cell’s column as sort column in ascending order.
 
 > * The [`beforeSort`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#beforesort) event will be triggered before sorting the specified range.
 > * The [`sortComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sortcomplete) event will be triggered after the sort action is completed successfully.
@@ -54,11 +54,11 @@ The following code example shows `sort` functionality in the Spreadsheet control
 
 ## Data contains header
 
-You can specify whether the selected range of cells contains header. To specify, you need to set the [`containsHeader`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#containsheader) property to `true` and pass it as `sortOption` arguments of the sort() method.
+You can specify whether the selected range of cells contains header. To specify, you need to set the [`containsHeader`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#containsheader) property to `true` and pass it as [sortOption](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sortoptions) arguments of the [sort()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sort) method.
 
 > * If the `containsHeader` property is not set and active cell column’s first cell value type is differed from the second cell value type, the first row data in the range are marked as column headers.
 
-You can also enable or disable this property using `beforeSort` event arguments,
+You can also enable or disable this property using [beforeSort](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#beforesort) event arguments,
 
 ```ts
 
@@ -70,15 +70,15 @@ You can also enable or disable this property using `beforeSort` event arguments,
 
 In the custom sort dialog, the `Data contains header` checkbox is checked on load. Thus, the default value for `containsHeader` is `true` in custom sort dialog.
 
-## Case sensitive sort
+## Case sensitive sorting
 
-The default sort functionality of Spreadsheet is a case insensitive sorting. When you want to perform sorting with case sensitive, you need to set the [`caseSensitive`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#casesensitive) property to `true` and pass it as `sortOption` arguments of the sort() method.
+The default sort functionality of Spreadsheet is a case insensitive sorting. When you want to perform sorting with case sensitive, you need to set the [`caseSensitive`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#casesensitive) property to `true` and pass it as [sortOption](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sortoptions) arguments of the [sort()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sort) method.
 
 Case sensitive sorting is applicable only for cells with alphabets. In ascending order sorting with case sensitive enabled, the cells with lower case text will be placed above the cells with upper case text.
 
 > * The default value for the `caseSensitive` property is `false`.
 
-You can also enable or disable this property using `beforeSort` event arguments,
+You can also enable or disable this property using [beforeSort](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#beforesort) event arguments,
 
 ```ts
    const beforeSort = (args: BeforeSortEventArgs): void => {
@@ -87,13 +87,13 @@ You can also enable or disable this property using `beforeSort` event arguments,
 
 ```
 
-In the custom sort dialog, the `Case sensitive` checkbox is unchecked on load as the default value is `false`.
+In the custom sort dialog, the [caseSensitive](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sortoptions#casesensitive) checkbox is unchecked on load as the default value is `false`.
 
 ## Sort multiple columns
 
 When you want to perform sorting on multiple columns, it can be done by any of the following ways:
 * Select the `Custom sort…` menu item from the Ribbon toolbar item or context menu item.
-* Use the `sort()` method programmatically by providing sort criteria.
+* Use the [sort()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sort) method programmatically by providing sort criteria.
 
 > * The current sorting functionality supports sorting based on cell values only.
 
@@ -107,13 +107,13 @@ You can refer to the [`Data contains header`](./sort/#data-contains-header) topi
 
 ### Passing sort criteria manually
 
-The multi-column sorting can also be performed manually by passing sort options to the `sort()` method programmatically. The `sortOption` have the following arguments:
+The multi-column sorting can also be performed manually by passing sort options to the [sort()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sort) method programmatically. The [sortOption](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sortoptions) have the following arguments:
 * [`sortDescriptors`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sortdescriptors) – Sort criteria collection that holds the collection of field name, sort order, and [`sortComparer`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sortcomparer).
 * `containsHeader` – Boolean argument that specifies whether the range has headers in it.
 * `caseSensitive` – Boolean argument that specifies whether the range needs to consider case.
 
 > * All the arguments are optional.
-> * When a `sortDescriptor` is specified without field, the field of the first `sortDescriptor` from the collection will be assigned from active cell’s column name and others will be ignored. Hence, it will act as single column sorting.
+> * When a [`sortDescriptors`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sortdescriptors) is specified without field, the field of the first `sortDescriptor` from the collection will be assigned from active cell’s column name and others will be ignored. Hence, it will act as single column sorting.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -165,7 +165,7 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/custom-sort-cs1" %}
 
-## Known error validations
+## Sort Validation & Error Messages
 
 The following errors have been handled for sorting,
 * *Out of range validation:* When the selected range is not a used range of the active sheet, it is considered as invalid and the out of range alert with the message `Select a cell or range inside the used range and try again` will be displayed. No sort will be performed if the range is invalid.
@@ -174,9 +174,18 @@ The following errors have been handled for sorting,
 
 * *Duplicate field validation:* When the column names of added sort criteria are repeated more than once in the custom sort dialog, it will become invalid and an error message `<Column name> is mentioned more than once. Duplicate columns must be removed` will be displayed on `OK` button click.
 
-## Limitations
+## Limitations of Sort
 
 * Sorting is not supported with formula contained cells.
+
+## Quick Lookup
+
+- `allowSorting` - property that enables or disables sorting functionality in the spreadsheet.
+- `sort(options)` - method that sorts a selected range using the provided sort options or defaults.
+- `beforeSort` - event fired before sorting begins, allowing you to adjust or cancel the sort action.
+- `sortComplete` - event fired after sorting completes, useful for handling post‑sort operations.
+- `sortOptions` - object that supports `sortDescriptors`, `containsHeader`, and `caseSensitive` to define how sorting should behave.
+- `sortDescriptor` - object that defines a single sort rule with `field`, `order`, and an optional `sortComparer` for custom comparison logic.
 
 ## Note
 
