@@ -1591,7 +1591,7 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Insert-New-Page-in-Existing-PDF-with-Same-Size/.NET).
 
-## Support for Page‑Level Actions in PDF
+## Page-level actions in PDF documents
 
 Added full support for page‑level actions in the .NET PDF library, enabling developers to add, retrieve, edit, and remove actions triggered by PDF page events such as `OnOpen` and `OnClose`.
 
@@ -1674,7 +1674,6 @@ using (PdfDocument document = new PdfDocument())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
