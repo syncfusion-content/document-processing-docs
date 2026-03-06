@@ -7,21 +7,20 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Configure extractTextOption in the ASP.NET Core PDF Viewer
+# Configure extractTextOption in ASP.NET Core PDF Viewer
 
-The `extractTextOption` property controls how text is extracted and optimizes memory usage. It also affects the data returned in the `extractTextCompleted` event. Choose one of the following options to determine the text and layout data to retrieve.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer provides the [`extractTextOption`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ExtractTextOption) property to control how the component extracts text data. Adjusting this property allows you to optimize memory consumption and determine the specific metadata returned in the `extractTextCompleted` event.
 
-### Available Options:
+## Available options
 
-**None:** No text information is extracted or returned. This is useful when you want to optimize memory usage and don't need any text data.
+The following values can be assigned to `extractTextOption`:
 
-**TextOnly:** Extracts only the plain text from the document. This option excludes any layout or positional information.
+*   **None:** Disables text extraction entirely. Use this to minimize memory footprint when text interactions or extraction are not required.
+*   **TextOnly:** Extracts plain text strings only. This option excludes all layout, positional, and coordinate metadata.
+*   **BoundsOnly:** Extracts positional information (bounds) for text elements without retrieving the actual text content.
+*   **TextAndBounds (default):** Extracts both string content and corresponding layout metadata.
 
-**BoundsOnly:** Extracts layout information, such as bounds or coordinates, without including the plain text data.
-
-**TextAndBounds:** Extracts both the plain text and the layout (bounds) information, which is the default behavior.
-
-The following example demonstrates how to configure the `extractTextOption` property to control the level of text extraction:
+The following example demonstrates how to set `extractTextOption` to `None` in a standalone viewer configuration:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -44,16 +43,18 @@ The following example demonstrates how to configure the `extractTextOption` prop
 {% endhighlight %}
 {% endtabs %}
 
-### Description of each option
-**extractTextOption.TextAndBounds (default):** Returns both plain text and positional data (bounds). Use this option when you need both the content of the PDF and its layout for further processing.
+The `extractTextOption` property controls how text is extracted and optimizes memory usage. It also affects the data returned in the `extractTextCompleted` event. Choose one of the following options to determine the text and layout data to retrieve.
 
-**extractTextOption.TextOnly:** Returns only the plain text from the PDF. No positional data is included. Text search functionality is disabled when using this option; use `findTextAsync` for searching.
+### Available Options:
 
-**extractTextOption.BoundsOnly:** Returns only layout information (bounds) of the text, excluding the actual content. Useful when focusing on text positions rather than the text itself.
+**None:** No text information is extracted or returned. This is useful when you want to optimize memory usage and don't need any text data.
 
-**extractTextOption.None:** Does not extract or return any text or layout information. Use this setting to optimize memory usage when text extraction is unnecessary. This setting applies to the `extractTextCompleted` event and cannot be used with the `ExtractText` method.
+**TextOnly:** Extracts only the plain text from the document. This option excludes any layout or positional information.
 
-N> Text search: When using the `extractTextOption.TextOnly` or `extractTextOption.None` options, the `findText` method is unavailable. Use the `findTextAsync` method to perform text searches asynchronously.
+**BoundsOnly:** Extracts layout information, such as bounds or coordinates, without including the plain text data.
 
-Sample: How to configure extractTextOption  
+**TextAndBounds:** Extracts both the plain text and the layout (bounds) information, which is the default behavior.
+
+N> **Text Search Compatibility:** When `extractTextOption` is set to `TextOnly` or `None`, the standard `findText` method is unavailable. Use the `findTextAsync` method to perform asynchronous text searches in these modes.
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Controlling File Downloads PDF Viewer
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, we've introduced a new feature that enables you to manage file downloads more effectively. This feature allows you to intercept and potentially skip the download process of a PDF document, providing enhanced control over user interactions within your application.
+The PDF Viewer exposes a `downloadStart` event that enables interception of a document download before it begins. Use this event to apply custom logic and, if needed, cancel the download by setting the event's `cancel` flag.
 
 ### Using the downloadStart Event
 
-The key to this functionality lies in the downloadStart event, which offers a mechanism to intercept the initiation of the download process. Within the event handler, you can set the cancel argument to true to programmatically prevent the download action from proceeding.
+The `downloadStart` event fires immediately before the download process starts. The event handler receives a `DownloadStartEventArgs` object (for example, `args`) that exposes properties such as `cancel` and `fileName` which can be used to inspect or stop the download.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -171,8 +171,8 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-By default, `args.cancel` is `false`, so the download proceeds unless explicitly canceled.
+By default, the `cancel` argument is `false`, so the download proceeds unless the handler explicitly sets `args.cancel = true`.
 
 ### Enhanced Flexibility
 
-Leverage the [downloadStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadstart) event to apply custom rules for allowing or preventing downloads based on application needs.
+Using the [downloadStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/downloadStartEventArgs/) event enables conditional control over downloads—for example, to enforce authentication, restrict downloads for certain documents, or prompt users for confirmation. When using server-backed viewers, confirm whether server-side behavior requires additional handling; canceling the client-side event prevents the local download but may not affect server workflows.

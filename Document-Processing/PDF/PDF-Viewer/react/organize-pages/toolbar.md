@@ -10,10 +10,11 @@ domainurl: ##DomainURL##
 
 # Organize page toolbar customization in React PDF Viewer control
 
-The PDF Viewer lets applications customize the Organize Pages toolbar to show or hide tools according to project requirements. Use the `pageOrganizerSettings` API to control each tool's visibility and behavior.
-## Show or hide the insert option
+The PDF Viewer lets applications customize the Organize Pages toolbar to enable or disable tools according to project requirements. Use the `pageOrganizerSettings` API to control each tool's interactivity and behavior.
 
-The `canInsert` property controls the insert tool visibility. Set it to `false` to hide the insert tool.
+## Enable or disable the insert option
+
+The `canInsert` property controls the insert tool visibility. Set it to `false` to disable the insert tool.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -74,9 +75,9 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Show or hide the delete option
+## Enable or disable the delete option
 
-The `canDelete` property controls the delete tool visibility. Set it to `false` to hide the delete tool.
+The `canDelete` property controls the delete tool visibility. Set it to `false` to disable the delete tool.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -137,9 +138,9 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Show or hide the rotate option
+## Enable or disable the rotate option
 
-The `canRotate` property controls the rotate tool visibility. Set it to `false` to hide the rotate tool.
+The `canRotate` property controls the rotate tool visibility. Set it to `false` to disable the rotate tool.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -200,14 +201,18 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Show or hide the copy option
+## Enable or disable the copy option
 
-The `canCopy` property controls the copy tool visibility. Set it to `false` to hide the copy tool.
+The `canCopy` property controls the copy tool interaction. Set it to `false` to disable the copy tool.
 
-## Show or hide the import option
+## Enable or disable the import option
 
-The `canImport` property controls the import tool visibility. Set it to `false` to hide the import tool.
+The `canImport` property controls the import tool interaction. Set it to `false` to disable the import tool.
 
-## Show or hide the rearrange option
+## Enable or disable the rearrange option
 
 The `canRearrange` property controls whether pages can be rearranged. Set it to `false` to disable page reordering.
+
+## Show or hide the zoom pages option
+
+The `showImageZoomingSlider` property controls the zooming tool visibility. Set it to `false` to hide the zoom page tool.

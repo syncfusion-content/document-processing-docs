@@ -100,8 +100,8 @@ Changes in the organizer are reflected in the viewer immediately. Use **Save** t
               Width="100%" PageOrganizerVisibility="true">
 </SfPdfViewer2>
 
-{% tabs %}
-{% highlight razor %}
+{% endhighlight %}
+{% endtabs %}
 
 - `PageOrganizerSettings` — controls available actions and thumbnail zoom settings. Common properties:
 

@@ -7,17 +7,17 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Change the font family for type signatures in ASP.NET Core
+# Change font family for type signatures in ASP.NET Core
 
-Change the font family for Type Signature and Initial fields by adding a stylesheet to load fonts and assigning them via the PDF Viewer settings. Include Google Font links in the HTML head to use those fonts.
+Customize the font options available for Type Signature and Initial fields. By adding custom stylesheets and configuring the PDF Viewer settings, you can provide users with various professional or decorative font choices for their digital signatures.
 
-### Signature field property
+## Custom font configuration
 
 The PDF Viewer supports changing fonts for Signature and Initial fields using the `typeSignatureFonts` and `typeInitialFonts` properties.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the [Getting Started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer instance.
 
-**Step 2:** Use the following code to apply custom fonts to the Signature field.
+**Step 2:** Define the signature and initial field settings in your application:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -87,4 +87,8 @@ Use the following code to apply custom fonts to the Initial field.
 {% endhighlight %}
 {% endtabs %}
 
-By implementing this configuration, custom fonts can be used for both Signature and Initial form fields.
+## Applying custom fonts to form fields
+
+By implementing this configuration, users can select from the defined custom fonts when signing or initialing document form fields. Ensure the external font resources are accessible from the client browser.
+
+N> Any number of custom fonts can be added to the array. The fonts will appear in the signature/initial dialog dropdown in the order they are defined.
