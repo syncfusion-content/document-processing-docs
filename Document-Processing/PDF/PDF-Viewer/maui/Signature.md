@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Electronic Signature in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about Electronic Signature in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its types.
+title: Electronic Signature in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to add and manage electronic signatures in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Electronic Signature in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -54,7 +54,7 @@ Similarly, refer to the following code to disable the signature mode.
 
 {% tabs %}
 {% highlight c# %}
-// Disable or deactivate the ink drawing mode.
+// Disable or deactivate the signature mode.
 void DisableSignatureMode()
 {
     // Set the annotation mode to none using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
@@ -223,3 +223,10 @@ private void PdfViewer_SignatureCreated(object? sender, SignatureCreatedEventArg
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+* [Electronic Signature (Form Field)](https://help.syncfusion.com/maui/pdf-viewer/form-filling-overview)
+* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
+* [Add, Remove, and Modify Annotations](https://help.syncfusion.com/maui/pdf-viewer/add-remove-modify-annotations)
+* [Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document)

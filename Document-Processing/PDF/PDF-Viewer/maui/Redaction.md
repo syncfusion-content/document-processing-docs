@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Redaction in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about Redaction in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its functionalities.
+title: Redaction in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to redact sensitive content in a PDF document using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Redaction in .NET MAUI PDF Viewer (SfPdfViewer)
 
-Redaction support of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to conceal sensitive or confidential information in text and images within a PDF document. This ensures that private data, such as personal details or financial information, is securely hidden before sharing or publishing. Once redaction is applied and the document is resaved, the concealed content cannot be recovered.
+Before sharing a PDF externally, use redaction to permanently remove sensitive data — such as personal details, financial figures, or confidential text — from the document. Unlike simply covering content with a shape or annotation, redaction in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) eliminates the underlying content entirely once the document is saved, making recovery impossible.
 
 ## Types of Redactions
 
@@ -171,3 +171,10 @@ void CustomizeDefaultRedactionSettings()
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+* [Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document)
+* [Text Search](https://help.syncfusion.com/maui/pdf-viewer/text-search)
+* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
+* [Undo and Redo](https://help.syncfusion.com/maui/pdf-viewer/undo-redo)

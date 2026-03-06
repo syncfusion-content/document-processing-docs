@@ -1,20 +1,39 @@
 ---
 layout: post
-title: About .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about introduction of Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control, its key features and more.
+title: Overview of .NET MAUI PDF Viewer control | Syncfusion
+description: Learn about the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control, its key features, and the problems it solves.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # .NET MAUI PDF Viewer (SfPdfViewer) Overview
 
-The [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) control lets you view PDF documents seamlessly and efficiently. It has highly interactive and customizable features such as magnification, page navigation, text selection, text search, document link navigation, hyperlink navigation, outline view, form filling, and the ability to review PDF files with annotations.
+Build powerful PDF experiences into your .NET MAUI app with the [SfPdfViewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) control. Whether you need to display documents for review, let users fill out forms, redact sensitive data, or annotate content — the PDF Viewer gives you a full-featured, cross-platform solution that works on Android, iOS, macOS, and Windows from a single codebase.
 
-**Key Features**
+## In This Section
 
-* **Virtual scrolling** - Easily scroll through the pages in the document fluently. The pages are rendered only when required to increase the loading and scrolling performance.
+| Topic | Description |
+|---|---|
+| [Getting Started](https://help.syncfusion.com/maui/pdf-viewer/getting-started) | Install the package, configure the handler, and load your first PDF document. |
+| [Open a Document](https://help.syncfusion.com/maui/pdf-viewer/open-a-document) | Load documents from streams, local storage, URLs, Base64 strings, or password-protected files. |
+| [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview) | Add, edit, import, and export highlights, shapes, ink, stamps, sticky notes, and more. |
+| [Form Filling Overview](https://help.syncfusion.com/maui/pdf-viewer/form-filling-overview) | Fill, edit, import, and export PDF form fields including text boxes, checkboxes, and signatures. |
+| [Text Search](https://help.syncfusion.com/maui/pdf-viewer/text-search) | Search for text and navigate all occurrences in a document. |
+| [Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document) | Save modified documents to a file stream, with optional annotation flattening. |
+| [Toolbar](https://help.syncfusion.com/maui/pdf-viewer/toolbar) | Reference guide to all built-in toolbar names and toolbar item names. |
+| [Toolbar Customization](https://help.syncfusion.com/maui/pdf-viewer/toolbar-customization) | Show, hide, add, remove, and reorder toolbar items. |
+| [UI Customization](https://help.syncfusion.com/maui/pdf-viewer/ui-customization) | Customize the appearance of the PDF Viewer control. |
+| [Redaction](https://help.syncfusion.com/maui/pdf-viewer/redaction) | Permanently remove sensitive content from PDF documents. |
+| [Electronic Signature](https://help.syncfusion.com/maui/pdf-viewer/signature) | Add handwritten, typed, or image-based signatures. |
+| [Keyboard Shortcuts](https://help.syncfusion.com/maui/pdf-viewer/keyboard-shortcuts) | Keyboard shortcuts available on desktop platforms. |
+| [Localization](https://help.syncfusion.com/maui/pdf-viewer/localization) | Translate all built-in strings into any supported language. |
+| [Migration Guide](https://help.syncfusion.com/maui/pdf-viewer/migration) | Migrate from Xamarin.Forms SfPdfViewer to .NET MAUI SfPdfViewer. |
+
+## Key Features
+
+* **Virtual scrolling** - Easily scroll through the pages in the document fluently. Pages are rendered only when required to improve loading and scrolling performance.
 * **Magnification** - The content of a PDF document can be efficiently zoomed in and out by pinching or changing the zoom factor programmatically.
 * **Zoom modes** - Improve document readability by adjusting magnification to suit your viewing needs. Use *Fit to Page* to display the entire page without scrolling, ideal for quick overviews. Choose *Fit to Width* for optimal reading of content with narrow columns, such as newspapers or multi-column layouts.
 * **Page navigation** - Navigate to the desired pages instantly using the page navigation option programmatically or by dragging the scroll head in the UI.
@@ -41,3 +60,9 @@ The [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 * **Print** - Print the PDF files.
 * **Coordinates conversion** - Obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also helps to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
 * **Localization** - All static text within the PDF Viewer can be localized to any supported language.
+
+## See Also
+
+* [Getting Started](https://help.syncfusion.com/maui/pdf-viewer/getting-started)
+* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
+* [Form Filling Overview](https://help.syncfusion.com/maui/pdf-viewer/form-filling-overview)

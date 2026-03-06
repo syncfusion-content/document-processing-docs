@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here all about how to add comments or replies to annotations in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to add and manage comments or replies on annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -92,3 +92,8 @@ Comments and replies can be deleted through the context menu available under the
 3. Select Delete from the context menu.
    
 **Note :** Deleting the root comment from the comment panel also deletes the associated annotation.
+
+## See Also
+
+* [Add, Remove, and Modify Annotations](https://help.syncfusion.com/maui/pdf-viewer/add-remove-modify-annotations)
+* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)

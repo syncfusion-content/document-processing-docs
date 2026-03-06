@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Magnification in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn to use magnification in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer including zoom factor control and zoom mode options.
+title: Magnification in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to control zoom factor and zoom modes in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Magnification .NET MAUI PDF Viewer (SfPdfViewer)
+# Magnification in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control supports intuitive magnification features, allowing users to zoom in and out of PDF content using gestures or programmatic controls.
+Give users precise control over how PDF content is displayed — from pinch-to-zoom on touch screens to setting an exact zoom percentage in code. You can also lock the view to predefined zoom modes like *Fit to Page* or *Fit to Width* to optimize readability for different document types.
 
 ## Adjusting the Zoom Factor
 
@@ -57,10 +57,11 @@ You can download a sample project demonstrating magnification features [here](ht
 
 The PDF Viewer supports the following zoom modes via the [ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) property:
 
-1. **Fit to Page** – Displays the entire page within the viewport.
-2. **Fit to Width** – Expands the page to fill the width of the viewer.
+1. **Default** – Restores the viewer to the last user-set zoom level. This is the initial mode when a document is loaded.
+2. **Fit to Page** – Displays the entire page within the viewport.
+3. **Fit to Width** – Expands the page to fill the width of the viewer.
 
-The default value is [ZoomMode.Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_Default)
+The default value is [ZoomMode.Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_Default).
 
 ### Zoom Mode via Built-In Toolbar
 
@@ -111,3 +112,49 @@ pdfViewer.ZoomMode = ZoomMode.FitToWidth;
 {% endtabs %}
 
 N> When the `ZoomFactor` is manually changed, the `ZoomMode` resets to `Default`. You can reapply the desired zoom mode afterward. 
+
+## Maintain Zoom Level in Single Page View Mode
+
+In single-page view mode, the zoom level resets to default each time you navigate to a new page. To maintain a consistent zoom factor throughout the document, enable the PersistZoomOnPageChange property. This applies whether navigation is triggered by the built-in toolbar controls or programmatic APIs.
+The default value of `PersistZoomOnPageChange` is `False`.
+
+### Enable PersistZoomOnPageChange
+
+You can enable persistent zoom by setting the `PersistZoomOnPageChange` property to `True`. When enabled, the viewer preserves the numeric `ZoomFactor` when switching pages in `SinglePage` layout and applies that same zoom to the destination page. Refer to the following code example:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfPdfViewer x:Name="PdfViewer"
+                        PageLayoutMode="SinglePage"
+                        PersistZoomOnPageChange="True" />
+{% endhighlight %}
+
+{% highlight c# %}
+// Enable persistence and set an initial zoom
+PdfViewer.PageLayoutMode = PageLayoutMode.SinglePage;
+PdfViewer.PersistZoomOnPageChange = true;
+{% endhighlight %}
+{% endtabs %}
+
+### Disable PersistZoomOnPageChange
+
+Set `PersistZoomOnPageChange` to `False` to keep the viewer's default behavior. When disabled, navigating to a different page resets the viewer to the default zoom level unless you explicitly set a zoom after navigation. Refer to the following example:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfPdfViewer x:Name="PdfViewer"
+                        PageLayoutMode="SinglePage"
+                        PersistZoomOnPageChange="False" />
+{% endhighlight %}
+
+{% highlight c# %}
+// Disable persistence
+PdfViewer.PersistZoomOnPageChange = false;
+{% endhighlight %}
+{% endtabs %}
+
+## See Also
+
+* [Scrolling](https://help.syncfusion.com/maui/pdf-viewer/scrolling)
+* [Page Navigation](https://help.syncfusion.com/maui/pdf-viewer/page-navigation)
+* [Gesture Events](https://help.syncfusion.com/maui/pdf-viewer/gesture-events)

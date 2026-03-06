@@ -1,17 +1,29 @@
 ---
 layout: post
-title: Open a Document in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about opening a PDF document in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and more.
+title: Open a Document in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to open a PDF document in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control from various sources.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Open a Document in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to open PDF documents from various sources, like local storage or URLs. It also lets you view password-protected documents.
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to open PDF documents from various sources, such as local storage or URLs. It also supports viewing password-protected documents.
 
-This section walks you through the loading and unloading of documents in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) and handling the load-specific events.
+This section walks you through loading and unloading documents in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) and handling load-specific events.
+
+## In This Section
+
+| Topic | Description |
+|---|---|
+| [Open a Document](https://help.syncfusion.com/maui/pdf-viewer/open-a-document) | Load from a stream or byte array, unload documents, and handle loading events. |
+| [Open from a URL](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-url) | Download and display a PDF directly from a remote URL. |
+| [Open from Local Storage](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-local-storage) | Open a PDF from the device's file system using the file picker. |
+| [Open from Base64](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-base64string) | Load a PDF encoded as a Base64 string. |
+| [Open a Password-Protected Document](https://help.syncfusion.com/maui/pdf-viewer/open-a-password-protected-document) | Display a password dialog and open encrypted PDF documents. |
+| [Document Load Notifications](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications) | Subscribe to document and page load/unload events for custom logic. |
 
 ## Document and page loading indications
 
@@ -79,8 +91,31 @@ The .NET MAUI PDF Viewer does not currently support annotations comparable to Xa
 N> * All the [LoadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_LoadDocument_System_IO_Stream_System_String_System_Nullable_Syncfusion_Maui_PdfViewer_FlattenOptions__) methods accept the flatten options parameter.
 N> * Refer to this [section](https://help.syncfusion.com/maui/pdf-viewer/migration#upcoming-features) for the upcoming annotation features in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
+## Optimizing document loading on Android
+
+When your application handles large images, complex graphics, or memory-intensive operations, the default heap size may not be sufficient, leading to performance issues or crashes. Enabling a larger heap allows the app to allocate more memory, ensuring smooth performance and preventing out-of-memory errors in such scenarios. You can enable this by adding the following highlighted attribute in your AndroidManifest.xml under the <application> tag.
+
+{% tabs %}
+{% highlight xml hl_lines="4" %}
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" 
+        android:largeHeap="true" ></application>
+	...
+</manifest>
+{% endhighlight %}
+{% endtabs %}
+
 ## Check other PDF opening options
 
 * [Open a document from local storage](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-local-storage)
 * [Open a document from a URL](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-url)
 * [Open a password-protected document](https://help.syncfusion.com/maui/pdf-viewer/open-a-password-protected-document)
+
+## See Also
+
+* [Open from URL](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-url)
+* [Open from Base64](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-base64string)
+* [Open from Local Storage](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-local-storage)
+* [Open a Password-Protected Document](https://help.syncfusion.com/maui/pdf-viewer/open-a-password-protected-document)
+* [Document Load Notifications](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications)

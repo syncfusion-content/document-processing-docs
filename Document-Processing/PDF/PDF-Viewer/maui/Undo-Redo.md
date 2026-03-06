@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Undo and Redo actions in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here all about Undo and Redo actions on the annotations using Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to undo and redo annotation changes using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -52,7 +52,7 @@ void PerformUndo()
 
 ## Redo
 
-You can perform redo to restore the last undone function using the [RedoCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedoCommand) of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).. The following code examples explains how to bind the command to a button in XAML to perform the action on button click and also executing the command programmatically as well.
+You can perform redo to restore the last undone function using the [RedoCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedoCommand) of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following code examples explain how to bind the command to a button in XAML to perform the action on button click, and also execute the command programmatically.
 
 {% tabs %}
 {% highlight XAML %}
@@ -66,3 +66,19 @@ void PerformRedo()
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Limitations
+
+The undo and redo history covers annotation changes only. The following operations **cannot** be undone:
+
+* Saving a document using [SaveDocumentAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocumentAsync).
+* Applying redaction using [RedactAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RedactAsync_System_Threading_CancellationToken_).
+* Unloading a document using [UnloadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument). Unloading clears the undo/redo history entirely.
+
+N> The undo/redo stack is also cleared when a new document is loaded.
+
+## See Also
+
+* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
+* [Add, Remove, and Modify Annotations](https://help.syncfusion.com/maui/pdf-viewer/add-remove-modify-annotations)
+* [Keyboard Shortcuts](https://help.syncfusion.com/maui/pdf-viewer/keyboard-shortcuts)

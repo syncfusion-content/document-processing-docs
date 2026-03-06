@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Select and Deselect Annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here all about select and deselect annotations in PDF documents using the .NET MAUI PDF Viewer (SfPdfViewer) control and its settings customization.
+description: Learn how to select and deselect annotations in PDF documents using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -175,3 +175,9 @@ private void OnAnnotationDeselected(object sender, AnnotationEventArgs e)
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
+* [Add, Remove, and Modify Annotations](https://help.syncfusion.com/maui/pdf-viewer/add-remove-modify-annotations)
+* [Lock and Unlock Annotations](https://help.syncfusion.com/maui/pdf-viewer/lock-unlock)
