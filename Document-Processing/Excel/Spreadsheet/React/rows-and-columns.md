@@ -155,11 +155,7 @@ You can change the size of rows and columns in the spreadsheet by using [setRows
 
 You can change the height of single or multiple rows by using the [setRowsHeight](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#setrowsheight) method.
 
-There is a property `customHeight` on a row's model that indicates the row height has been explicitly set by dragging the row header boundary with the mouse or by a programmatic resize. The Spreadsheet sets this property using the setRow method during a resize operation.
-
-When customHeight is true, it means the height was manually defined rather than automatically determined from cell content or formatting.
-
-Actions such as enabling Wrap Text, increasing font size, or changing the font family do not set `customHeight` property.
+Additionally, each row model includes a `customHeight` property that indicates the row height was explicitly set either by manually adjusting the row header boundary or programmatically. When `customHeight` is true, the height is treated as manually defined and will not change automatically when enabling wrap text, increasing font size, or changing the font family; the height remains fixed until the user or code updates it.
 
 You can provide the following type of ranges to the method:
 
@@ -191,11 +187,7 @@ The following code example shows how to change the height for single/multiple ro
 
 You can change the width of single or multiple columns by using the [setColumnsWidth](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#setcolumnswidth) method.
 
-There is a property `customWidth` on a column’s model that indicates the column width has been explicitly set by dragging the column header boundary with the mouse or by a programmatic resize. The Spreadsheet sets this property using the `setColumn` method during a resize operation.
-
-When `customWidth` is true, it means the width was manually defined rather than automatically determined based on cell content or formatting.
-
-Actions such as enabling Wrap Text, increasing font size, or changing the font family do not set `customHeight` property.
+Additionally, each column model includes a `customWidth` property that indicates the column width was explicitly set either by manually adjusting the row header boundary or programmatically. When `customWidth` is true, the width is treated as manually defined.
 
 You can provide the following type of ranges to the method:
 

@@ -136,11 +136,11 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
 
 ### Save Excel files as JSON
 
-The [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method converts the entire Spreadsheet workbook into a JSON object. This JSON includes sheets, cell values, formulas, styles, formatting, charts, and other workbook settings. It acts as a complete representation of the current spreadsheet state, which can be stored, sent to a server, or later restored using openFromJson.
+The [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method converts the entire Spreadsheet workbook into a JSON object that contains sheets, cell values, formulas, styles, formatting, charts, and other workbook settings. This JSON acts as a complete representation of the current spreadsheet state and can be stored, sent to a server, or later loaded back using openFromJson.
 
-saveAsJson is used to capture the full state of the Spreadsheet in a simple, structured format. Instead of creating an Excel file immediately, the workbook is converted into JSON, which is easier for applications to handle. This makes it useful when you want to store spreadsheet data temporarily, save it to a database, send it through an API, or allow another system to process or modify the data before creating an Excel file. It also helps when you want to restore the same workbook later without losing styles, formulas, or layout.
+This method is useful when the workbook needs to be saved in a structured format without generating an Excel file immediately. Because the data is captured as JSON, it is easier to store in a database, send through an API, or process on the server before creating an Excel file. It also allows the workbook to be restored later with all styles, formulas, and layout intact.
 
-The main benefit for users is that the Spreadsheet state can be saved quickly without waiting for the server to generate an Excel file. Because JSON is lightweight, it can be stored or transferred very fast, making the save operation feel smoother. When the JSON is loaded again, the workbook looks exactly as before, which gives users a consistent experience. This also reduces errors and makes the application more responsive during save operations.
+This approach is faster and produces a lightweight JSON that's easy to store or transfer. When reloaded, the workbook is restored exactly as before.
 
 Please find below the code to retrieve JSON data from the Spreadsheet control below.
 

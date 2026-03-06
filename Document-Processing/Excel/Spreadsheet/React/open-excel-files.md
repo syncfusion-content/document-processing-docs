@@ -162,11 +162,11 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 
 ### Open from JSON
 
-The [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method lets you load a complete workbook into the Spreadsheet using a JSON object. This JSON is usually created on the server after converting an Excel file, but it can also be generated manually. The method reads the JSON and restores all sheets, cells, styles, formulas, formatting, and other workbook details inside the component.
+The [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method allows you to load a complete workbook into the Spreadsheet using a JSON object. This JSON is typically generated on the server when an Excel file is converted, but it can also be created manually. When the method loads the JSON, it restores all workbook details, including sheets, cell values, styles, formulas, and formatting.
 
-openFromJson is used because it provides a smooth and reliable way to load Excel data into the browser without needing the actual Excel file. Since the file is already processed into JSON on the server, the client only handles lightweight data. This reduces the workload on the browser and ensures that the document structure, formatting, and content appear exactly as intended. It also allows developers to modify or build workbook data directly in JSON form before loading it into the spreadsheet.
+This method is useful when you need to load Excel data in the browser without working with the actual Excel file. Because the Excel processing is handled on the server, the client works only with lightweight JSON, resulting in faster loading and accurate restoration of the workbook’s structure and formatting. Developers can also modify the workbook in JSON form before loading it into the component.
 
-The main benefit for users is a faster and more stable loading experience. Because the heavy Excel‑processing work is completed on the server, the spreadsheet opens quickly in the browser and maintains the correct layout, values, and styles. The JSON format helps avoid common issues that might occur with large or complex Excel files, making the entire experience more dependable and easier for users.
+This approach provides a quicker and more consistent loading experience. Large or complex Excel files can be displayed smoothly in the browser, which helps maintain a stable and efficient workflow.
 
 Please find the code to fetch the JSON data and load it into the Spreadsheet component below.
 
