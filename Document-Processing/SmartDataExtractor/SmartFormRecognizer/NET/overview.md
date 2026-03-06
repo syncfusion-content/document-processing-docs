@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Smart Form Recognizer
 
-Smart Form Recognizer is a deterministic, on premise C# library for .NET designed to reliably detect and extract form data from PDFs and scanned images. Unlike AI‑based approaches, this library uses visual layout heuristics including lines, boxes, and circular markers to identify form structures with high consistency and predictability. It supports It supports to identify the common form controls such as text fields, checkboxes, radio buttons, and signature regions, producing clean, structured JSON that can be fed directly into review and workflow systems.
+Smart Form Recognizer is a deterministic, on premise C# library for .NET designed to reliably detect form data from PDFs and scanned images. Unlike AI‑based approaches, this library uses visual layout heuristics including lines, boxes, and circular markers to identify form structures with high consistency and predictability.It supports to identify the common form controls such as text fields, checkboxes, radio buttons, and signature regions, producing clean, structured JSON that can be fed directly into review and workflow systems.
 
 
 Core Capabilities

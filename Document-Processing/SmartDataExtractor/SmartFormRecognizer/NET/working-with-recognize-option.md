@@ -20,26 +20,21 @@ Additionally, it supports restricting processing to specific pages through an op
 {% highlight c# tabtitle="C#" %}
 
 FormRecognizer recognizer = new FormRecognizer();
-
 // Disable textbox detection
 recognizer.FormRecognizeOptions.DetectTextboxes = false;
-
 
 {% endhighlight %}
 {% endtabs %}
 
 ### DetectCheckboxes
-`DetectCheckboxes` is a boolean option in FormRecognizeOptions that controls whether the form recognizer should identify checkbox elements during document processing. When enabled (default: true), the recognizer scans the page layout for checkbox shapes,Rounded square,determines their positions. 
+`DetectCheckboxes` is a boolean option in FormRecognizeOptions that controls whether the form recognizer should identify checkbox elements during document processing. When enabled (default: true), the recognizer scans the page layout for checkbox shapes,Rounded square and determines their positions. 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-
 FormRecognizer recognizer = new FormRecognizer();
-
 // Disable checkbox detection
 recognizer.FormRecognizeOptions.DetectCheckboxes = false;
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -51,10 +46,8 @@ recognizer.FormRecognizeOptions.DetectCheckboxes = false;
 {% highlight c# tabtitle="C#" %}
 
 FormRecognizer recognizer = new FormRecognizer();
-
 // Disable radio button detection
 recognizer.FormRecognizeOptions.DetectRadioButtons = false;
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +59,6 @@ recognizer.FormRecognizeOptions.DetectRadioButtons = false;
 {% highlight c# tabtitle="C#" %}
 
 FormRecognizer recognizer = new FormRecognizer();
-
 // Disable signature detection
 recognizer.FormRecognizeOptions.DetectSignatures = false;
 
@@ -80,10 +72,8 @@ recognizer.FormRecognizeOptions.DetectSignatures = false;
 {% highlight c# tabtitle="C#" %}
 
 FormRecognizer recognizer = new FormRecognizer();
-
 // Set a ConfidenceThreshold
 recognizer.FormRecognizeOptions.ConfidenceThreshold = 0.9;
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +85,6 @@ recognizer.FormRecognizeOptions.ConfidenceThreshold = 0.9;
 {% highlight c# tabtitle="C#" %}
 
 FormRecognizer recognizer = new FormRecognizer();
-
 // Set a single page range – detects only the specified page
 recognizer.FormRecognizeOptions.PageRange = new int[,] { { 3 } };
 recognizer.FormRecognizeOptions.PageRange = new int[,] { { 8 } };
