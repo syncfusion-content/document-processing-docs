@@ -222,7 +222,7 @@ Unprotect Workbook is used to enable the insert, delete, rename, move, copy, hid
 
 **User Interface**:
 
-In the active Spreadsheet, the workbook Unprotection can be done in any of the following ways:
+In the active Spreadsheet, the workbook can be unprotected in any of the following ways:
 
 * Select the `Unprotect Workbook` item in the Ribbon toolbar under the Data Tab and provide the valid password in the dialog box.
 
