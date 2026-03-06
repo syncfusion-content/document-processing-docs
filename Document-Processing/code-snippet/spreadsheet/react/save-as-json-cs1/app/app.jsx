@@ -1,29 +1,19 @@
 import * as React from 'react';
+import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
   const spreadsheetRef = React.useRef(null);
 
+  const [savedJson, setSavedJson] = React.useState(null);
+
   const handleSaveAsJson = React.useCallback(async () => {
     if (!spreadsheetRef.current) return;
-    try {
-      const options = {};
-      const result = await spreadsheetRef.current.saveAsJson(options);
-      const jsonObject = result && result.jsonObject ? result.jsonObject : result;
-      const content = typeof jsonObject === 'string' ? jsonObject : JSON.stringify(jsonObject, null, 2);
-      const blob = new Blob([content], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'spreadsheet.json';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-    } catch (e) {
-      console.error('Failed to save as JSON', e);
-      alert('Failed to save as JSON.');
-    }
+    const options = {};
+    const result = await spreadsheetRef.current.saveAsJson(options);
+    const jsonObject = result && (result).jsonObject ? (result).jsonObject : result;
+    const content = typeof jsonObject === 'string' ? jsonObject : JSON.stringify(jsonObject, null, 2);
+    setSavedJson(content);
   }, []);
 
   return (
@@ -38,6 +28,15 @@ function App() {
         <div>
           <SpreadsheetComponent id="spreadsheet" ref={spreadsheetRef} />
         </div>
+
+        {savedJson && (
+          <div style={{ marginTop: 12 }}>
+            <strong>Saved JSON</strong>
+            <pre style={{ maxHeight: 200, overflow: 'auto', background: '#f5f5f5', padding: 12 }}>
+              {savedJson}
+            </pre>
+          </div>
+        )}
       </div>
     </div>
   );
