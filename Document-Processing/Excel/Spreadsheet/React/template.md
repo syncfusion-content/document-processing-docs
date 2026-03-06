@@ -13,7 +13,7 @@ Cell Template is used for adding HTML elements into Spreadsheet. You can add the
 
 ## Template Customization
 
-You can customize the Html elements similar to Syncfusion<sup style="font-size:70%">&reg;</sup> components (TextBox, DropDownList, RadioButton, MultiSelect, DatePicker etc) by using the [beforeCellRender](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#beforecellrender) event. In this demo, Cell template is applied to `C2:C9` and instantiated with Html input components like TextBox, RadioButton, TextArea.
+You can customize the Html elements similar to Syncfusion<sup style="font-size:70%">&reg;</sup> components (TextBox, DropDownList, RadioButton, MultiSelect, DatePicker etc) by using the [beforeCellRender](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#beforecellrender) event. In this demo, Cell template is applied to `C2:C9` and instantiated with Html input components like TextBox, RadioButton, TextArea.
 
 ## Events & data flow
 
