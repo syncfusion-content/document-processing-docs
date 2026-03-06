@@ -9,7 +9,10 @@ documentation: ug
 
 # Print in React Spreadsheet component
 
-The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet or entire workbook in the Spreadsheet. You can enable or disable print functionality by using the `allowPrint` property, which defaults to **true**.
+The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet or entire workbook in the Spreadsheet. You can enable or disable print functionality by using the [allowPrint](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowprint) property.
+
+>* The default value for the `allowPrint` property is `true`.
+
 
 ## Default printing
 
@@ -19,15 +22,15 @@ The active worksheet in the Spreadsheet can be printed by selecting the **File >
 
 ## Custom printing
 
-The active worksheet or entire workbook can be printed with customized options using the `print` method. The `print` method takes one parameter, that is, `printOptions`, which can be used for customization.
+The active worksheet or entire workbook can be printed with customized options using the [print()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#print) method. The `print` method takes one parameter, that is, [printOptions](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions), which can be used for customization.
 
 The `printOptions` contain three properties, as described below.
 
-* `type` - It specifies whether to print the current sheet or the entire workbook. The value for this property is either **ActiveSheet** or **Workbook**.
-* `allowGridLines` - This property specifies whether grid lines should be included in the printing or not. The grid lines will be included in the printed copy when set to **true**. When set to **false**, it will not be available.
-* `allowRowColumnHeader` - This property specifies whether row and column headers should be included in the printing or not. The headers will be included in the printed copy when set to **true**. When set to **false**, it will not be available.
+* [type](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#type) - It specifies whether to print the current sheet or the entire workbook. The value for this property is either `ActiveSheet` or `Workbook`.
+* [allowGridLines](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#allowgridlines) - This property specifies whether grid lines should be included in the printing or not. The grid lines will be included in the printed copy when set to `true`. When set to `false`, it will not be available.
+* [allowRowColumnHeader](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#allowrowcolumnheader) - This property specifies whether row and column headers should be included in the printing or not. The headers will be included in the printed copy when set to `true`. When set to `false`, it will not be available.
 
-> When the `print` method is called without any parameters, the default printing will be performed.
+> When the [print()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#print) method is called without any parameters, the default printing will be performed.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -42,7 +45,7 @@ The `printOptions` contain three properties, as described below.
 
 ## Disable printing
 
-The printing functionality in the Spreadsheet can be disabled by setting the [`allowPrint`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowprint) property to **false**. After disabling, the **"Print"** option will not be available in the **"File"** menu of the ribbon and as a keyboard shortcut.
+The printing functionality in the Spreadsheet can be disabled by setting the [`allowPrint`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowprint) property to `false`. After disabling, the `Print` option will not be available in the `File` menu of the ribbon and as a keyboard shortcut.
 
 ![Spreadsheet with print option disabled](./images/spreadsheet_print_disable.png)
 
@@ -62,3 +65,8 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 * When printing the document, changing the page orientation to landscape is not supported in both the `print` method and print preview dialog of the web browser.
 * The styles provided for the data validation functionality will not be available in the printed copy of the document.
 * The content added to the cell templates, such as HTML elements, Syncfusion<sup style="font-size:70%">&reg;</sup> controls, and others, will not be available in the printed copy of the document.
+
+## Quick Lookup
+
+- `allowPrint` - enables or disables Spreadsheet printing (default: true).
+- `print(printOptions?)` - prints the active sheet or the entire workbook with customizable options.

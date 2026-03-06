@@ -45,11 +45,11 @@ Performing this operation remove a single hyperlink without losing the display t
 
 In the active spreadsheet, click the cell where you want to remove a hyperlink. remove hyperlink can be done by any of the following ways:
 * Right-click the cell and then click Remove Hyperlink item in the context menu.
-* Use the [`removeHyperlink()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#removehyperlink) method programmatically.
+* Use the [`removeHyperlink()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#removehyperlink) method programmatically.
 
 ## How to change target attribute
 
-There is an event named `beforeHyperlinkClick` which triggers only on clicking hyperlink. You can customize where to open the hyperlink by using the `target` property in the arguments of that event.
+There is an event named [beforeHyperlinkClick](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforehyperlinkclick) which triggers only on clicking hyperlink. You can customize where to open the hyperlink by using the [target](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforehyperlinkargs#target) property in the arguments of that event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -62,9 +62,17 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/link-cs1" %}
 
-## Limitations
+## Limitations in HyperLink
 
 * Inserting hyperlink not supported for multiple ranges.
+
+## Quick Lookup
+
+- `allowHyperlink` — property that enables or disables hyperlink support in the spreadsheet.
+- `addHyperlink(link, address)` — method that inserts a hyperlink into the specified cell using the given options.
+- `removeHyperlink(address)` — method that removes a hyperlink from a cell while keeping the display text unchanged.
+- `beforeHyperlinkClick` — event fired before a hyperlink opens, allowing customization of the target location.
+- `hyperlink` — cell property used to assign a URL or a sheet‑range reference directly to a cell.
 
 ## Note
 

@@ -56,9 +56,9 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/do
 
 ## Save Excel files programmatically
 
-To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property is properly configured, as it is required for processing and generating the file on the server.
+To save Excel files programmatically in the Spreadsheet, you can use the [`save()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#saveurl) property is properly configured, as it is required for processing and generating the file on the server.
 
-Please find the below table for the [`save`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#save) method arguments.
+Please find the below table for the [`save()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#save) method arguments.
 
 | **Parameter**             | **Type**                   | **Description**                                                      |
 |-----------------------|------------------------|------------------------------------------------------------------|
@@ -136,7 +136,7 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
 
 ### Save Excel files to a server
 
-By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file to a server location, you need to configure the server endpoint to convert the spreadsheet data into a file stream and save it to the server location. To do this, first, on the client side, you must convert the spreadsheet data into `JSON` format using the [saveAsJson](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveasjson) method and send it to the server endpoint. On the server endpoint, you should convert the received spreadsheet `JSON` data into a file stream using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, then convert the stream into an Excel file, and finally save it to the server location.
+By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file to a server location, you need to configure the server endpoint to convert the spreadsheet data into a file stream and save it to the server location. To do this, first, on the client side, you must convert the spreadsheet data into `JSON` format using the [saveAsJson()](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveasjson) method and send it to the server endpoint. On the server endpoint, you should convert the received spreadsheet `JSON` data into a file stream using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, then convert the stream into an Excel file, and finally save it to the server location.
 
 **Client Side**:
 
@@ -200,9 +200,9 @@ Before proceeding with the save process, you should deploy the spreadsheet open/
 
 [How to deploy a spreadsheet open and save web API service to AWS Lambda](https://support.syncfusion.com/kb/article/17184/how-to-deploy-a-spreadsheet-open-and-save-web-api-service-to-aws-lambda)
 
-After deployment, you will get the AWS service URL for the open and save actions. Before saving the Excel file with this hosted save URL, you need to prevent the default save action to avoid getting a corrupted excel file on the client end. The save service returns the file stream as a result to the client, which can cause the file to become corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event. After that, convert the spreadsheet data into JSON format using the [saveAsJson](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveasjson) method in the `beforeSave` event and send it to the save service endpoint URL using a fetch request.
+After deployment, you will get the AWS service URL for the open and save actions. Before saving the Excel file with this hosted save URL, you need to prevent the default save action to avoid getting a corrupted excel file on the client end. The save service returns the file stream as a result to the client, which can cause the file to become corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event. After that, convert the spreadsheet data into JSON format using the [saveAsJson()](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveasjson) method in the `beforeSave` event and send it to the save service endpoint URL using a fetch request.
 
-On the server side, the save service will take the received JSON data, pass it to the workbook `Save` method, and return the result as a base64 string. The fetch success callback will receive the Excel file in base64 string format on the client side. Finally, you can then convert the base64 string back to a file on the client end to obtain a non-corrupted Excel file.
+On the server side, the save service will take the received JSON data, pass it to the workbook `Save()` method, and return the result as a base64 string. The fetch success callback will receive the Excel file in base64 string format on the client side. Finally, you can then convert the base64 string back to a file on the client end to obtain a non-corrupted Excel file.
 
 The following code example shows how to save an Excel file using a hosted web service in AWS Lambda, as mentioned above.
 
@@ -305,7 +305,7 @@ The following code example shows how to save the spreadsheet data as base64 stri
 
 ### Configure JSON serialization
 
-Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object. 
+Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object. 
 
 Now, you have the option to selectively ignore some features while saving the Spreadsheet as a JSON object by configuring serialization options and passing them as arguments to the `saveAsJson` method. This argument is optional, and if not configured, the entire workbook JSON object will be saved without ignoring any features.
 
@@ -327,7 +327,7 @@ spreadsheet.saveAsJson({ onlyValues: true });
 | ignoreImage | If **true**, excludes images from the JSON output. |
 | ignoreNote | If **true**, excludes notes from the JSON output. |
 
-The following code snippet demonstrates how to configure the serialization options and pass them as arguments to the saveAsJson method:
+The following code snippet demonstrates how to configure the serialization options and pass them as arguments to the `saveAsJson` method:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
