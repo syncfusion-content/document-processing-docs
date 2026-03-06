@@ -14,13 +14,11 @@ N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-ext
 ## Removing sensitive content from the PDF document
 
 Redaction permanently removes confidential or sensitive information from a PDF. The `PdfRedactor` and `PdfRedactionRegion` classes allow you to mark specific areas and apply irreversible redaction to the document.
-> **Note:**  
-> When calling `redact(callback)`, the callback is executed to render each redaction region on a canvas before the content is permanently removed. This allows customizing the final appearance of the redacted area.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument } from '@syncfusion/ej2-pdf';
-import { PdfRedactor, PdfRedactionRegion } from '@syncfusion/ej2-pdf-data-extract';
+import { PdfRedactor, PdfRedactionRegion, ApplicationPlatform } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load the document
 let document: PdfDocument = new PdfDocument(data);
@@ -30,8 +28,13 @@ let redactor: PdfRedactor = new PdfRedactor(document);
 let redactions: PdfRedactionRegion[] = [];
 redactions.push(new PdfRedactionRegion(0, {x: 10, y: 10, width: 100, height: 50}));
 redactor.add(redactions);
+// Define a canvas render callback that returns a canvas element and the application platform.
+const canvasRenderCallback = (): {canvas: any, applicationPlatform: ApplicationPlatform} => {
+    const canvas = document.createElement('canvas');
+    return { canvas: canvas, applicationPlatform: ApplicationPlatform.typescript };
+};
 // Apply redactions on the PDF document
-redactor.redactSync();
+await redactor.redact(callBack: canvasRenderCallback);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -48,14 +51,21 @@ var redactor = new ej.pdfdataextract.PdfRedactor(document);
 var redactions = [];
 redactions.push(new PdfRedactionRegion(0, {x: 10, y: 10, width: 100, height: 50}));
 redactor.add(redactions);
+// Define a canvas render callback that returns a canvas element and the application platform.
+const canvasRenderCallback = (): {canvas, applicationPlatform} => {
+    const canvas = document.createElement('canvas');
+    return { canvas: canvas, applicationPlatform: ej.pdf.ApplicationPlatform.typescript };
+};
 // Apply redactions on the PDF document
-redactor.redactSync();
+await redactor.redact(canvasRenderCallback);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
 {% endhighlight %}
 {% endtabs %}
+
+N>  The `PdfRedactor.redact(callback)` method allows you to customize redaction appearance through a canvas callback and supports removing both **text and images**. In contrast, `PdfRedactor.redactSync()` performs faster synchronous redaction but can remove **only text**, and does not support image redaction or custom drawing.
 
 ## Fill color on the redacted area
 
@@ -64,7 +74,7 @@ You can apply a solid fill color to cover the redacted content. This is the most
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument } from '@syncfusion/ej2-pdf';
-import { PdfRedactor, PdfRedactionRegion} from '@syncfusion/ej2-pdf-data-extract';
+import { PdfRedactor, PdfRedactionRegion, ApplicationPlatform } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -79,8 +89,13 @@ redaction.fillColor = {r: 255, g: 0, b: 0};
 redactions.push(redaction);
 // Add redactions with specified options.
 redactor.add(redactions);
+// Define a canvas render callback that returns a canvas element and the application platform.
+const canvasRenderCallback = (): {canvas: any, applicationPlatform: ApplicationPlatform} => {
+    const canvas = document.createElement('canvas');
+    return { canvas: canvas, applicationPlatform: ApplicationPlatform.typescript };
+};
 // Apply redactions on the PDF document
-redactor.redactSync();
+await redactor.redact(callBack: canvasRenderCallback);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -102,8 +117,13 @@ redaction.fillColor = {r: 255, g: 0, b: 0};
 redactions.push(redaction);
 // Add redactions with specified options.
 redactor.add(redactions);
+// Define a canvas render callback that returns a canvas element and the application platform.
+const canvasRenderCallback = (): {canvas, applicationPlatform} => {
+    const canvas = document.createElement('canvas');
+    return { canvas: canvas, applicationPlatform: ej.pdf.ApplicationPlatform.typescript };
+};
 // Apply redactions on the PDF document
-redactor.redactSync();
+await redactor.redact(canvasRenderCallback);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -118,7 +138,7 @@ Customize the redacted region by drawing text or graphics over it, using `PdfRed
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { PdfDocument } from '@syncfusion/ej2-pdf';
-import { PdfRedactor, PdfRedactionRegion } from '@syncfusion/ej2-pdf-data-extract';
+import { PdfRedactor, PdfRedactionRegion, ApplicationPlatform } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document = new PdfDocument(data);
@@ -141,8 +161,13 @@ redactions.push(redaction);
 let redactor = new PdfRedactor(document);
 // Add redactions with specified options
 redactor.add(redactions);
+// Define a canvas render callback that returns a canvas element and the application platform.
+const canvasRenderCallback = (): {canvas: any, applicationPlatform: ApplicationPlatform} => {
+    const canvas = document.createElement('canvas');
+    return { canvas: canvas, applicationPlatform: ApplicationPlatform.typescript };
+};
 // Apply redactions on the PDF document
-redactor.redactSync();
+await redactor.redact(callBack: canvasRenderCallback);
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -171,9 +196,15 @@ redaction = new ej.pdf.PdfRedactionRegion(0, {  x: 40, y: 43, width: 80, height:
 redactions.push(redaction);
 // Initialize redactor
 var redactor = new ej.pdf.PdfRedactor(document);
-// Add redactions and apply them
+// Add redactions with specified options
 redactor.add(redactions);
-redactor.redactSync();
+// Define a canvas render callback that returns a canvas element and the application platform.
+const canvasRenderCallback = (): {canvas, applicationPlatform} => {
+    const canvas = document.createElement('canvas');
+    return { canvas: canvas, applicationPlatform: ej.pdf.ApplicationPlatform.typescript };
+};
+// Apply redactions on the PDF document
+await redactor.redact(canvasRenderCallback);
 // Save and dispose
 document.save('output.pdf');
 document.destroy();
