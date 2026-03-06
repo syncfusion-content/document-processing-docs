@@ -9,7 +9,7 @@ documentation: ug
 
 # Feature list in React Spreadsheet component
 
-The following table shows the availability of ej2 spreadsheet features.
+The following table shows the features available in our Syncfusion EJ2 Spreadsheet.
 
 | **Features** | **Available in EJ2 Spreadsheet** | **Comments** |
 | --- | --- | --- |
@@ -32,7 +32,6 @@ The following table shows the availability of ej2 spreadsheet features.
 | Filtering | Yes | - |
 | Hyperlink | Yes | - |
 | Undo & redo | Yes | - |
-| Open and Save | Yes | - |
 | Import | Yes | - |
 | Export | Yes | - |
 | Resize / Autofit | Yes | - |
