@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Freeze pane in React Spreadsheet component | Syncfusion
+title: Freeze panes in React Spreadsheet component | Syncfusion
 description: Learn here all about Freeze pane in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Freeze pane 
 platform: document-processing
 documentation: ug
 ---
 
-# Freeze pane in React Spreadsheet component
+# Freeze panes in React Spreadsheet component
 
 Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#frozencolumns) properties inside the [`Sheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sheets) property.
 
@@ -22,7 +22,7 @@ To get start quickly with Freeze Panes in React Spreadsheet, you can check on th
 In the active spreadsheet, click the cell where you want to create freeze panes. Freeze panes can be done in any of the following ways:
 
 * Select the View tab in the Ribbon toolbar and choose the `Freeze Panes` item.
-* Use the [`freezePanes`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#freezepanes) method programmatically.
+* Use the [`freezePanes()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#freezepanes) method programmatically.
 
 ## FrozenRows
 
@@ -33,7 +33,7 @@ It allows you to keep a certain number of rows visible while scrolling verticall
 In the active spreadsheet, select the cell where you want to create frozen rows. Frozen rows can be done in any one of the following ways:
 
 * Select the View tab in the Ribbon toolbar and choose the `Freeze Rows` item.
-* You can specify the number of frozen rows using the `frozenRows` property inside the `Sheet` property.
+* You can specify the number of frozen rows using the [frozenRows](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sheet#frozenrows) property inside the `Sheet` property.
 
 ## FrozenColumns
 
@@ -44,7 +44,7 @@ It allows you to keep a certain number of columns visible while scrolling horizo
 In the active spreadsheet, select the cell where you want to create frozen columns. Frozen columns can be done in any one of the following ways:
 
 * Select the View tab in the Ribbon toolbar and choose the `Freeze Columns` item.
-* You can specify the number of frozen columns using the `frozenColumns` property inside the `Sheet` property.
+* You can specify the number of frozen columns using the [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sheet#frozencolumns) property inside the `Sheet` property.
 
 In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as ‘2’. Hence, the two columns on the left and the top two rows are frozen.
 
@@ -65,6 +65,18 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/freeze-pane-cs1" %}
 
+## Unfreeze Panes
+
+Unfreeze Panes allows you to remove previously frozen rows and columns so the worksheet scrolls normally again. You can unfreeze the `active sheet` or a specific `sheet` by index or name. [1](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#unfreezepanes)
+
+**User Interface**:
+
+In the active Spreadsheet, unfreezing can be done in any of the following ways:
+
+* Select the **View** tab in the Ribbon toolbar and choose the **Unfreeze Panes** item.
+* Use the [unfreezePanes()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#unfreezepanes) method to remove freeze panes on the active sheet, or pass a sheet identifier to target another sheet. 
+
+
 ## Limitations
 
 Here, we have listed out the limitations with Freeze Panes feature.
@@ -74,7 +86,7 @@ Here, we have listed out the limitations with Freeze Panes feature.
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to know how to present and manipulate data.
 
 ## See Also
 

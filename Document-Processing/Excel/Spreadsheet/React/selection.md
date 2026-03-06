@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Selection in React Spreadsheet component
+# Selecting Cells, Rows, and Columns in React Spreadsheet component
 
 Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` / `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
 
@@ -19,9 +19,9 @@ You have the following options in Selection,
 * Row selection
 * Column selection
 
-## Cell selection
+## Cell & Range Selection
 
-Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#selectrange) method.
+Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#selectrange) method.
 
 **User Interface**:
 
@@ -31,7 +31,7 @@ Cell selection is used to select a single or multiple cells. It can be performed
 
 You can quickly locate and select specific cells or ranges by entering their names or cell references in the Name box, which is located to the left of the formula bar, and also select named or unnamed cells or ranges by using the Go To (`Ctrl+G`) command.
 
-## Row selection
+## Selecting Rows
 
 Row selection is used to select a single or multiple rows.
 
@@ -42,7 +42,7 @@ You can perform row selection in any of the following ways,
 * By clicking the row header.
 * To select multiple rows, select a row header with the left mouse button and drag over to other row headers (or) use the `Shift + arrow` keys to select multiple rows.
 * To select non-adjacent rows, hold `Ctrl` and select the row header.
-* You can also use the `selectRange` method for row selection.
+* You can also use the [selectRange()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#selectrange) method for row selection.
 
 The following sample shows the row selection in the spreadsheet, here selecting the 5th row using the `selectRange` method.
 
@@ -63,7 +63,7 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/selection-cs1" %}
 
-## Column selection
+## Selecting Columns
 
 Column selection is used to select a single or multiple columns.
 
@@ -74,7 +74,7 @@ You can perform column selection in any of the following ways,
 * By clicking the column header.
 * To select multiple columns, select a column header with the left mouse button and drag over to other column headers (or) use the `Shift + arrow` keys to select the multiple columns.
 * To select non-adjacent columns, hold `Ctrl` and select the column header.
-* You can also use the `selectRange` method for row selection.
+* You can also use the [selectRange()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#selectrange) method for column selection.
 
 The following sample shows the column selection in the spreadsheet, here selecting the 3rd column using  the `selectRange` method.
 
@@ -97,7 +97,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 ## Get selected cell values
 
-You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. Additionally, you can also programmatically perform selection using the [selectRange](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#selectrange) method. This selection behavior is controlled based on the [selectionSettings](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#selectionsettings) property. Now, retrieving the selected cell values as a collection is achievable using the [getData](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#getdata) method.
+You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. Additionally, you can also programmatically perform selection using the [selectRange()](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#selectrange) method. This selection behavior is controlled based on the [selectionSettings](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#selectionsettings) property. Now, retrieving the selected cell values as a collection is achievable using the [getData()](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#getdata) method.
 
 Below is a code example demonstrating how to retrieve the selected cell values as a collection programmatically:
 
@@ -143,6 +143,17 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 * We have a limitation while performing the Select All(`ctrl + A`). You can do this only by clicking the Select All button at the top left corner.
 
+## Quick Lookup
+
+- `selectionSettings.mode` - Used to enable, disable, or control the selection behavior (None, Single, or Multiple).
+- `selectRange(address) `- Programmatically selects a specific cell, range, row, or column using an A1‑style address.
+- `getData(range)` - Retrieves all cell values from the selected or specified range as a collection.
+- `selectedRange` - Returns the currently selected cell or range in A1 notation.
+- `getRangeIndexes(range)` - Converts an A1‑style range (like "A1:C3") into numeric row/column indexes.
+- `getRangeAddress(indexes)` - Converts numeric row/column indexes back into an A1‑style address.
+- `getSwapRange(range)` - Normalizes a reversed or diagonal selection to ensure proper top‑left to bottom‑right ordering.
+
+
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to know how to present and manipulate data.
