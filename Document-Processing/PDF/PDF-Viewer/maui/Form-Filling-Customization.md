@@ -122,8 +122,7 @@ private void Widget_PropertyChanged(object? sender, System.ComponentModel.Proper
 {% endtabs %}
 
 ## See Also
-
-* [Form Filling Overview](https://help.syncfusion.com/maui/pdf-viewer/form-filling-overview)
-* [Show and Hide Form Fields](https://help.syncfusion.com/maui/pdf-viewer/form-filling-show-hide)
-* [Form Fields Collection](https://help.syncfusion.com/maui/pdf-viewer/form-filling-collection)
-* [Form Field Events](https://help.syncfusion.com/maui/pdf-viewer/form-filling-events)
+- [Form Filling Overview](../form-filling-overview)
+- [Show and Hide Form Fields](../form-filling-show-hide)
+- [Form Fields Collection](../form-filling-collection)
+- [Form Field Events](../form-filling-events)

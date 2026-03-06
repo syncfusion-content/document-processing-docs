@@ -96,8 +96,7 @@ async void ValidateAndSaveForm()
 {% endtabs %}
 
 ## See Also
-
-* [Form Field Events](https://help.syncfusion.com/maui/pdf-viewer/form-filling-events)
-* [Form Fields Collection](https://help.syncfusion.com/maui/pdf-viewer/form-filling-collection)
-* [Import and Export Form Data](https://help.syncfusion.com/maui/pdf-viewer/form-filling-import-export)
-* [Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document)
+- [Form Field Events](../form-filling-events)
+- [Form Fields Collection](../form-filling-collection)
+- [Import and Export Form Data](../form-filling-import-export)
+- [Save a Document](../save-a-document)

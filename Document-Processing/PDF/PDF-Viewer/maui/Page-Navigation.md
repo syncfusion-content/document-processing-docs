@@ -124,8 +124,7 @@ private void LastPageButton_Clicked(object sender, EventArgs e)
 The example project with the page navigation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples).
 
 ## See Also
-
-* [Scrolling](https://help.syncfusion.com/maui/pdf-viewer/scrolling)
-* [Document Link Annotations](https://help.syncfusion.com/maui/pdf-viewer/document-link-annotations)
-* [Document Outline](https://help.syncfusion.com/maui/pdf-viewer/document-outline)
-* [Hyperlink Navigation](https://help.syncfusion.com/maui/pdf-viewer/hyperlink-navigation)
+- [Scrolling](../scrolling)
+- [Document Link Annotations](../document-link-annotations)
+- [Document Outline](../document-outline)
+- [Hyperlink Navigation](../hyperlink-navigation)

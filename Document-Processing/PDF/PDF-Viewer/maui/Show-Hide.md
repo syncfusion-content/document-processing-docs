@@ -83,7 +83,6 @@ N> * On iOS and Mac, while printing a document containing hidden annotations, th
 N> * When a document containing hidden annotations is loaded, it will not only disappear in the UI but also will not be added to the [SfPdfViewer.Annotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_Annotations) collection as well. 
 
 ## See Also
-
-* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
-* [Lock and Unlock Annotations](https://help.syncfusion.com/maui/pdf-viewer/lock-unlock)
-* [Select and Deselect Annotations](https://help.syncfusion.com/maui/pdf-viewer/select-deselect-annotations)
+- [Annotations Overview](../annotations-overview)
+- [Lock and Unlock Annotations](../lock-unlock)
+- [Select and Deselect Annotations](../select-deselect-annotations)

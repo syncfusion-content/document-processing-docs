@@ -140,8 +140,7 @@ if (annotation is SquareAnnotation squareAnnotation)
 {% endtabs %}
 
 ## See Also
-
-* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
-* [Page Navigation](https://help.syncfusion.com/maui/pdf-viewer/page-navigation)
-* [Scrolling](https://help.syncfusion.com/maui/pdf-viewer/scrolling)
+- [Annotations Overview](../annotations-overview)
+- [Page Navigation](../page-navigation)
+- [Scrolling](../scrolling)
 

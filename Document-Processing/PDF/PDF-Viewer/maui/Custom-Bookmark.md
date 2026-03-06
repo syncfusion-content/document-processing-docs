@@ -287,7 +287,6 @@ if (customBookmark != null)
 {% endtabs %}
 
 ## See Also
-
-* [Document Outline](https://help.syncfusion.com/maui/pdf-viewer/document-outline)
-* [Page Navigation](https://help.syncfusion.com/maui/pdf-viewer/page-navigation)
-* [Hyperlink Navigation](https://help.syncfusion.com/maui/pdf-viewer/hyperlink-navigation)
+- [Document Outline](../document-outline)
+- [Page Navigation](../page-navigation)
+- [Hyperlink Navigation](../hyperlink-navigation)

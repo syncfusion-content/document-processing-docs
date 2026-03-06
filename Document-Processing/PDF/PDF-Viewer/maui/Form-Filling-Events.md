@@ -74,8 +74,7 @@ private void PdfViewer_FormFieldFocusChanged(object? sender, FormFieldFocusChang
 N> `FormFieldFocusChanged` is raised only for text and signature form fields.
 
 ## See Also
-
-* [Form Filling Overview](https://help.syncfusion.com/maui/pdf-viewer/form-filling-overview)
-* [Edit Form Fields](https://help.syncfusion.com/maui/pdf-viewer/form-filling-edit)
-* [Form Data Validation](https://help.syncfusion.com/maui/pdf-viewer/form-filling-validation)
-* [Form Fields Collection](https://help.syncfusion.com/maui/pdf-viewer/form-filling-collection)
+- [Form Filling Overview](../form-filling-overview)
+- [Edit Form Fields](../form-filling-edit)
+- [Form Data Validation](../form-filling-validation)
+- [Form Fields Collection](../form-filling-collection)

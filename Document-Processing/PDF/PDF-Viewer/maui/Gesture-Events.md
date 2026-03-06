@@ -64,7 +64,6 @@ private void PdfViewer_Tapped(object sender, GestureEventArgs e)
 {% endtabs %}	
 
 ## See Also
-
-* [Scrolling](https://help.syncfusion.com/maui/pdf-viewer/scrolling)
-* [Magnification](https://help.syncfusion.com/maui/pdf-viewer/magnification)
-* [Page Navigation](https://help.syncfusion.com/maui/pdf-viewer/page-navigation)
+- [Scrolling](../scrolling)
+- [Magnification](../magnification)
+- [Page Navigation](../page-navigation)

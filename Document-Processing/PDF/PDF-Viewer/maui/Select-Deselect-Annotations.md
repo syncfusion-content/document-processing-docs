@@ -177,7 +177,6 @@ private void OnAnnotationDeselected(object sender, AnnotationEventArgs e)
 {% endtabs %}
 
 ## See Also
-
-* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
-* [Add, Remove, and Modify Annotations](https://help.syncfusion.com/maui/pdf-viewer/add-remove-modify-annotations)
-* [Lock and Unlock Annotations](https://help.syncfusion.com/maui/pdf-viewer/lock-unlock)
+- [Annotations Overview](../annotations-overview)
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
+- [Lock and Unlock Annotations](../lock-unlock)

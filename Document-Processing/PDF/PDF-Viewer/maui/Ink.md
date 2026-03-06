@@ -186,7 +186,6 @@ void EditSelectedInkAnnotation(Annotation selectedAnnotation)
 {% endtabs %}
 
 ## See Also
-
-* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
-* [Ink Eraser](https://help.syncfusion.com/maui/pdf-viewer/ink-eraser)
-* [Add, Remove, and Modify Annotations](https://help.syncfusion.com/maui/pdf-viewer/add-remove-modify-annotations)
+- [Annotations Overview](../annotations-overview)
+- [Ink Eraser](../ink-eraser)
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)

@@ -60,7 +60,6 @@ PdfViewer.EnableHyperlinkNavigation = false;
 {% endhighlight %}
 {% endtabs %}
 ## See Also
-
-* [Document Link Annotations](https://help.syncfusion.com/maui/pdf-viewer/document-link-annotations)
-* [Page Navigation](https://help.syncfusion.com/maui/pdf-viewer/page-navigation)
-* [Document Outline](https://help.syncfusion.com/maui/pdf-viewer/document-outline)
+- [Document Link Annotations](../document-link-annotations)
+- [Page Navigation](../page-navigation)
+- [Document Outline](../document-outline)

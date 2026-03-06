@@ -62,7 +62,6 @@ Build powerful PDF experiences into your .NET MAUI app with the [SfPdfViewer](ht
 * **Localization** - All static text within the PDF Viewer can be localized to any supported language.
 
 ## See Also
-
-* [Getting Started](https://help.syncfusion.com/maui/pdf-viewer/getting-started)
-* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
-* [Form Filling Overview](https://help.syncfusion.com/maui/pdf-viewer/form-filling-overview)
+- [Getting Started](../getting-started)
+- [Annotations Overview](../annotations-overview)
+- [Form Filling Overview](../form-filling-overview)

@@ -81,7 +81,6 @@ namespace PdfViewerExample
 The example project to open a PDF document from a given URL can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
 
 ## See Also
-
-* [Open a Document](https://help.syncfusion.com/maui/pdf-viewer/open-a-document)
-* [Open from Base64](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-base64string)
-* [Document Load Notifications](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications)
+- [Open a Document](../open-a-document)
+- [Open from Base64](../open-a-document-from-base64string)
+- [Document Load Notifications](../documentloadnotifications)

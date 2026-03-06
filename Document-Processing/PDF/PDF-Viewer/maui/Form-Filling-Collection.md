@@ -97,8 +97,7 @@ private void PdfViewer_FormFieldValueChanged(object sender, FormFieldValueChange
 {% endtabs %}
 
 ## See Also
-
-* [Form Filling Overview](https://help.syncfusion.com/maui/pdf-viewer/form-filling-overview)
-* [Edit Form Fields](https://help.syncfusion.com/maui/pdf-viewer/form-filling-edit)
-* [Show and Hide Form Fields](https://help.syncfusion.com/maui/pdf-viewer/form-filling-show-hide)
-* [Form Field Events](https://help.syncfusion.com/maui/pdf-viewer/form-filling-events)
+- [Form Filling Overview](../form-filling-overview)
+- [Edit Form Fields](../form-filling-edit)
+- [Show and Hide Form Fields](../form-filling-show-hide)
+- [Form Field Events](../form-filling-events)

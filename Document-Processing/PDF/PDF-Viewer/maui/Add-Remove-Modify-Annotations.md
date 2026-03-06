@@ -192,8 +192,7 @@ private void OnAnnotationAdded(object sender, AnnotationEventArgs e)
 {% endtabs %}
 
 ## See Also
-
-* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
-* [Select and Deselect Annotations](https://help.syncfusion.com/maui/pdf-viewer/select-deselect-annotations)
-* [Import and Export Annotations](https://help.syncfusion.com/maui/pdf-viewer/import-export-annotations)
-* [Undo and Redo](https://help.syncfusion.com/maui/pdf-viewer/undo-redo)
+- [Annotations Overview](../annotations-overview)
+- [Select and Deselect Annotations](../select-deselect-annotations)
+- [Import and Export Annotations](../import-export-annotations)
+- [Undo and Redo](../undo-redo)

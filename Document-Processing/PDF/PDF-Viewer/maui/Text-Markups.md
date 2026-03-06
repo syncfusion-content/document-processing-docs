@@ -159,7 +159,6 @@ void EditSelectedHighlightAnnotation(Annotation selectedAnnotation)
 {% endtabs %}
 
 ## See Also
-
-* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
-* [Text Selection](https://help.syncfusion.com/maui/pdf-viewer/text-selection)
-* [Add, Remove, and Modify Annotations](https://help.syncfusion.com/maui/pdf-viewer/add-remove-modify-annotations)
+- [Annotations Overview](../annotations-overview)
+- [Text Selection](../text-selection)
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)

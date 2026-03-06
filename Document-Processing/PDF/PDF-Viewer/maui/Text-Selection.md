@@ -121,7 +121,6 @@ private void PdfViewer_TextSelectionChanged(object sender, TextSelectionChangedE
 The text from the images cannot be selected and, the multiple-page text selection is not supported for now.
 
 ## See Also
-
-* [Text Search](https://help.syncfusion.com/maui/pdf-viewer/text-search)
-* [Text Markups](https://help.syncfusion.com/maui/pdf-viewer/text-markups)
-* [Copy and Annotations from Selection](https://help.syncfusion.com/maui/pdf-viewer/add-remove-modify-annotations)
+- [Text Search](../text-search)
+- [Text Markups](../text-markups)
+- [Copy and Annotations from Selection](../add-remove-modify-annotations)

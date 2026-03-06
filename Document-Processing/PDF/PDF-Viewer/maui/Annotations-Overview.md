@@ -90,8 +90,7 @@ For more information, see [Ink Annotations](https://help.syncfusion.com/maui/pdf
 | [Annotation Comments](https://help.syncfusion.com/maui/pdf-viewer/annotations-comment) | Add review comments and status to annotations. |
 
 ## See Also
-
-* [Add, Remove, and Modify Annotations](https://help.syncfusion.com/maui/pdf-viewer/add-remove-modify-annotations)
-* [Import and Export Annotations](https://help.syncfusion.com/maui/pdf-viewer/import-export-annotations)
-* [Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document)
-* [Undo and Redo](https://help.syncfusion.com/maui/pdf-viewer/undo-redo)
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
+- [Import and Export Annotations](../import-export-annotations)
+- [Save a Document](../save-a-document)
+- [Undo and Redo](../undo-redo)

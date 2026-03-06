@@ -27,7 +27,6 @@ pdfViewer.EnableDocumentLinkNavigation = false;
 {% endtabs %}
 
 ## See Also
-
-* [Hyperlink Navigation](https://help.syncfusion.com/maui/pdf-viewer/hyperlink-navigation)
-* [Page Navigation](https://help.syncfusion.com/maui/pdf-viewer/page-navigation)
-* [Document Outline (Bookmarks)](https://help.syncfusion.com/maui/pdf-viewer/document-outline)
+- [Hyperlink Navigation](../hyperlink-navigation)
+- [Page Navigation](../page-navigation)
+- [Document Outline (Bookmarks)](../document-outline)

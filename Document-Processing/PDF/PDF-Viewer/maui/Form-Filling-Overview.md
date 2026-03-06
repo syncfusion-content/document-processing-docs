@@ -57,7 +57,6 @@ Refer to [Handling document load failures](https://help.syncfusion.com/maui/pdf-
 | [Form Data Validation](https://help.syncfusion.com/maui/pdf-viewer/form-filling-validation) | Validate form field values before saving the document. |
 
 ## See Also
-
-* [Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document)
-* [Electronic Signature](https://help.syncfusion.com/maui/pdf-viewer/signature)
-* [Document Load Notifications](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications)
+- [Save a Document](../save-a-document)
+- [Electronic Signature](../signature)
+- [Document Load Notifications](../documentloadnotifications)

@@ -261,8 +261,7 @@ for (int i = 0; i < pdfViewer?.Toolbars?.Count; i++)
 N> You can identify items that appear in multiple toolbars by checking the availability column in [Mobile toolbar item names](https://help.syncfusion.com/maui/pdf-viewer/toolbar#mobile-toolbar-item-names) and [Desktop toolbar item names](https://help.syncfusion.com/maui/pdf-viewer/toolbar#desktop-toolbar-item-names).
 
 ## See Also
-
-* [Toolbar — toolbar names and toolbar item names](https://help.syncfusion.com/maui/pdf-viewer/toolbar)
-* [UI Customization](https://help.syncfusion.com/maui/pdf-viewer/ui-customization)
-* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
-* [Show or Hide Annotations](https://help.syncfusion.com/maui/pdf-viewer/show-hide)
+- [Toolbar](../toolbar)
+- [UI Customization](../ui-customization)
+- [Annotations Overview](../annotations-overview)
+- [Show or Hide Annotations](../show-hide)

@@ -96,9 +96,8 @@ formField.FlattenOnSave = true;
 Currently, when saving a document by flattening that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the saved document.
 
 ## See Also
-
-* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
-* [Form Filling Overview](https://help.syncfusion.com/maui/pdf-viewer/form-filling-overview)
-* [Import and Export Annotations](https://help.syncfusion.com/maui/pdf-viewer/import-export-annotations)
-* [Redaction](https://help.syncfusion.com/maui/pdf-viewer/redaction)
-* [Electronic Signature](https://help.syncfusion.com/maui/pdf-viewer/signature)
+- [Annotations Overview](../annotations-overview)
+- [Form Filling Overview](../form-filling-overview)
+- [Import and Export Annotations](../import-export-annotations)
+- [Redaction](../redaction)
+- [Electronic Signature](../signature)

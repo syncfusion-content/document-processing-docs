@@ -173,8 +173,7 @@ void CustomizeDefaultRedactionSettings()
 {% endtabs %}
 
 ## See Also
-
-* [Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document)
-* [Text Search](https://help.syncfusion.com/maui/pdf-viewer/text-search)
-* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
-* [Undo and Redo](https://help.syncfusion.com/maui/pdf-viewer/undo-redo)
+- [Save a Document](../save-a-document)
+- [Text Search](../text-search)
+- [Annotations Overview](../annotations-overview)
+- [Undo and Redo](../undo-redo)

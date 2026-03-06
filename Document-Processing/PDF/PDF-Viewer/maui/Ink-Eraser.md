@@ -86,6 +86,5 @@ N> When the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 
 ## See Also
-
-* [Ink Annotations](https://help.syncfusion.com/maui/pdf-viewer/ink)
-* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
+- [Ink Annotations](../ink)
+- [Annotations Overview](../annotations-overview)

@@ -154,7 +154,6 @@ PdfViewer.PersistZoomOnPageChange = false;
 {% endtabs %}
 
 ## See Also
-
-* [Scrolling](https://help.syncfusion.com/maui/pdf-viewer/scrolling)
-* [Page Navigation](https://help.syncfusion.com/maui/pdf-viewer/page-navigation)
-* [Gesture Events](https://help.syncfusion.com/maui/pdf-viewer/gesture-events)
+- [Scrolling](../scrolling)
+- [Page Navigation](../page-navigation)
+- [Gesture Events](../gesture-events)

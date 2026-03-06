@@ -99,6 +99,5 @@ N>
 * This feature is available only in `.NET 10.`
 
 ## See Also
-
-* [UI Customization](https://help.syncfusion.com/maui/pdf-viewer/ui-customization)
-* [Toolbar Customization](https://help.syncfusion.com/maui/pdf-viewer/toolbar-customization)
+- [UI Customization](../ui-customization)
+- [Toolbar Customization](../toolbar-customization)

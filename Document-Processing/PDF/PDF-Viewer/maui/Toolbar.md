@@ -735,7 +735,6 @@ The names of these toolbar items, along with their descriptions and availability
 
 
 ## See Also
-
-* [Toolbar Customization — show, hide, add, remove, reorder toolbar items](https://help.syncfusion.com/maui/pdf-viewer/toolbar-customization)
-* [UI Customization](https://help.syncfusion.com/maui/pdf-viewer/ui-customization)
-* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)
+- [Toolbar Customization](../toolbar-customization)
+- [UI Customization](../ui-customization)
+- [Annotations Overview](../annotations-overview)

@@ -73,8 +73,7 @@ void ExportFormData()
 {% endtabs %}
 
 ## See Also
-
-* [Form Filling Overview](https://help.syncfusion.com/maui/pdf-viewer/form-filling-overview)
-* [Form Data Validation](https://help.syncfusion.com/maui/pdf-viewer/form-filling-validation)
-* [Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document)
-* [Import and Export Annotations](https://help.syncfusion.com/maui/pdf-viewer/import-export-annotations)
+- [Form Filling Overview](../form-filling-overview)
+- [Form Data Validation](../form-filling-validation)
+- [Save a Document](../save-a-document)
+- [Import and Export Annotations](../import-export-annotations)

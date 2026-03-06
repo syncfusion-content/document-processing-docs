@@ -747,6 +747,5 @@ The following table contains the default name and value details used in the SfPd
 
 
 ## See Also
-
-* [Right To Left](https://help.syncfusion.com/maui/pdf-viewer/right-to-left)
-* [Getting Started](https://help.syncfusion.com/maui/pdf-viewer/getting-started)
+- [Right To Left](../right-to-left)
+- [Getting Started](../getting-started)

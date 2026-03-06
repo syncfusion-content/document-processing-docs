@@ -589,6 +589,5 @@ For detailed implementation guidance, please refer to the following API document
 </table>
 
 ## See Also
-
-* [Getting Started](https://help.syncfusion.com/maui/pdf-viewer/getting-started)
-* [Overview](https://help.syncfusion.com/maui/pdf-viewer/overview)
+- [Getting Started](../getting-started)
+- [Overview](../overview)

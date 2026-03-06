@@ -86,7 +86,6 @@ namespace PdfViewerExample
 The example project to open a PDF document from a Base64 string can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Open%20PDF%20From%20Base-64%20String). 
 
 ## See Also
-
-* [Open a Document](https://help.syncfusion.com/maui/pdf-viewer/open-a-document)
-* [Open from URL](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-url)
-* [Open from Local Storage](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-local-storage)
+- [Open a Document](../open-a-document)
+- [Open from URL](../open-a-document-from-url)
+- [Open from Local Storage](../open-a-document-from-local-storage)

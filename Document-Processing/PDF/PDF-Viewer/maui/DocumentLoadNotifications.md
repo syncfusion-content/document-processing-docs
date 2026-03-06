@@ -110,7 +110,6 @@ private void PdfDocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
 {% endtabs %}
 
 ## See Also
-
-* [Open a Document](https://help.syncfusion.com/maui/pdf-viewer/open-a-document)
-* [Getting Started](https://help.syncfusion.com/maui/pdf-viewer/getting-started)
-* [Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document)
+- [Open a Document](../open-a-document)
+- [Getting Started](../getting-started)
+- [Save a Document](../save-a-document)

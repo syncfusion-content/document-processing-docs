@@ -168,7 +168,6 @@ N> - Use a reasonable OverscanCount value. Large values can cause memory spikes 
 N> - Pages with very high resolution may still render slowly due to native rendering limitations.
 
 ## See Also
-
-* [Page Navigation](https://help.syncfusion.com/maui/pdf-viewer/page-navigation)
-* [Magnification](https://help.syncfusion.com/maui/pdf-viewer/magnification)
-* [Gesture Events](https://help.syncfusion.com/maui/pdf-viewer/gesture-events)
+- [Page Navigation](../page-navigation)
+- [Magnification](../magnification)
+- [Gesture Events](../gesture-events)
