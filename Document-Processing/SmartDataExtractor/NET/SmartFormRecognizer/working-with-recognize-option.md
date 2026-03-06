@@ -1,6 +1,6 @@
 ---
-title: Working with FormRecognizeOptions in SmartFormRecognizer| Syncfusion&reg;
-description: Learn how to use FormRecognizeOptions in Syncfusion&reg; SmartFormRecognizer library.
+title: Using FormRecognizeOptions in SmartFormRecognizer| Syncfusion&reg;
+description: Discover how to configure and apply FormRecognizeOptions in the Syncfusion&reg; SmartFormRecognizer library to enhance form processing workflows.
 platform: document-processing
 control: SmartFormRecognizer
 documentation: UG
@@ -50,7 +50,7 @@ recognizer.FormRecognizeOptions.DetectCheckboxes = true;
 {% endtabs %}
 
 ### DetectRadioButtons
-`DetectRadioButtons` is a boolean property in FormRecognizeOptions that specifies whether the form recognizer should detect radio button elements in the document. When enabled (default: true), the recognizer identifies circular objects in images or in the Pdf documnets then add radio buttons in that identified locations.
+`DetectRadioButtons` is a boolean property in FormRecognizeOptions that specifies whether the form recognizer should detect radio button elements in the document. When enabled (default: true), the recognizer identifies circular objects in images or in the PDF documents then add radio buttons in that identified locations.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -101,7 +101,7 @@ recognizer.FormRecognizeOptions.ConfidenceThreshold = 0.9;
 {% endtabs %}
 
 ### PageRange
-`PageRange` is an optional int[,]? property in FormRecognizeOptions that allows you to control exactly which pages of a document the form recognizer should process. Each row in this 2‑dimensional array represents a 1‑based inclusive range in the form [start, end], the recognizer processes all pages in the document. Defining page ranges helps improve performance, reduce unnecessary processing, and target only the sections of the document relevant to your extraction workflow.We can also provide values in single page.Also If we provide values in decending order it will consider as ascending order and perform detection.
+`PageRange` is an optional int[,]? property in FormRecognizeOptions that allows you to control exactly which pages of a document the form recognizer should process. Each row in this 2‑dimensional array represents a 1‑based inclusive range in the form [start, end], the recognizer processes all pages in the document. Defining page ranges helps improve performance, reduce unnecessary processing, and target only the sections of the document relevant to your extraction workflow.We can also provide values in single page.Also If we provide values in descending order it will consider as ascending order and perform detection.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}

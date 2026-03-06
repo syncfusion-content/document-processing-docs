@@ -1,5 +1,5 @@
 ---
-title:Smart Form Recognizer| Syncfusion&reg;
+title:Smart Form Recognizer | Syncfusion&reg;
 description: Learn how to detects form data from PDFs and scanned images using Syncfusion&reg; Essential Studio&reg; SmartFormRecognizer.
 platform: document-processing
 control: SmartFormRecognizer
@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Smart Form Recognizer
 
-Smart Form Recognizer is a deterministic, on‑premise C# library for .NET designed to reliably detect and extract form data from PDFs and scanned images. Unlike AI/ML‑based approaches, this library uses visual layout heuristics—including lines, boxes, and circular markers—to identify form structures with high consistency and predictability. It supports extraction of common form controls such as text fields, checkboxes, radio buttons, and signature regions, producing clean, structured JSON that can be fed directly into review and workflow systems.
+Smart Form Recognizer is a deterministic, on premise C# library for .NET designed to reliably detect and extract form data from PDFs and scanned images. Unlike AI/ML‑based approaches, this library uses visual layout heuristics—including lines, boxes, and circular markers—to identify form structures with high consistency and predictability. It supports extraction of common form controls such as text fields, checkboxes, radio buttons, and signature regions, producing clean, structured JSON that can be fed directly into review and workflow systems.
 
 In addition to extraction, the library can also generate fillable PDFs, automatically placing form fields where they were detected, enabling instant integration into digital form processing pipelines.
 
@@ -42,7 +42,7 @@ Core Capabilities
 Windows Forms
 </td>
 <td>
-{{'[Syncfusion.SmartFormRecognizer.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.WinForms/)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.WinForms.nupkg]'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -50,18 +50,18 @@ Windows Forms
 WPF
 </td>
 <td>
-{{'[Syncfusion.SmartFormRecognizer.WPF.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.WPF/)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.WPF.nupkg]'| markdownify }}
 </td>
 </tr>
 <tr>
 <td rowspan="2">Blazor, .NET Core and .NET Platforms</td>
 <td>
-{{'[Syncfusion.SmartFormRecognizer.NET.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.Net/)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.NET.nupkg]'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[Syncfusion.SmartFormRecognizer.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.Net.Core/)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.Net.Core.nupkg]'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -69,7 +69,7 @@ WPF
 ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.SmartFormRecognizer.AspNet.MVC5.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.AspNet.Mvc5/)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.AspNet.MVC5.nupkg]'| markdownify }}
 </td>
 </tr>
 </table>

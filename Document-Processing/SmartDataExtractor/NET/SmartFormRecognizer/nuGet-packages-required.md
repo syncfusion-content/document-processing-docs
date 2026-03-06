@@ -6,7 +6,7 @@ control: SmartFormRecognizer
 documentation: UG
 ---
 
-# NuGet Packages Required 
+# NuGet Packages Required for SmartFormRecognizer
 
 To work with SmartFormRecognizer, the following NuGet packages need to be installed in your application.
 
@@ -22,7 +22,7 @@ To work with SmartFormRecognizer, the following NuGet packages need to be instal
 Windows Forms
 </td>
 <td>
-{{'[Syncfusion.SmartFormRecognizer.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.WinForms/)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.WinForms.nupkg]'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -30,18 +30,18 @@ Windows Forms
 WPF
 </td>
 <td>
-{{'[Syncfusion.SmartFormRecognizer.WPF.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.WPF/)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.WPF.nupkg]'| markdownify }}
 </td>
 </tr>
 <tr>
 <td rowspan="2">Blazor, .NET Core and .NET Platforms</td>
 <td>
-{{'[Syncfusion.SmartFormRecognizer.NET.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.Net/)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.NET.nupkg]'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[Syncfusion.SmartFormRecognizer.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.Net.Core/)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.Net.Core.nupkg]'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -49,7 +49,7 @@ WPF
 ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.SmartFormRecognizer.AspNet.MVC5.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.AspNet.Mvc5/)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.AspNet.MVC5.nupkg]'| markdownify }}
 </td>
 </tr>
 </table>
