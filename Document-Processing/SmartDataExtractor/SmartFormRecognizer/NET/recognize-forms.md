@@ -1,6 +1,6 @@
 ---
 title: Working with Recognize methods in SmartFormRecognizer| Syncfusion&reg;
-description: Learn how to effectively use the Recognize methods in the Syncfusion&reg; SmartFormRecognizer library to process and extract data from forms with ease.
+description: Learn how to effectively use the Recognize methods in the Syncfusion&reg; SmartFormRecognizer library to process and detects from forms with ease.
 platform: document-processing
 control: SmartFormRecognizer
 documentation: UG
@@ -13,7 +13,7 @@ The `FormRecognizer` exposes several convenience methods to recognize forms from
 Below each method signature you'll find a explanation and corrected example usage (both synchronous and asynchronous where applicable).
 
 ## Recognize forms using PdfLoadedDocument
-Using `PdfLoadedDocument` this operation analyzes the form content supplied through the inputStream whether it contains a PDF or an image and produces a fully enriched PdfLoadedDocument that includes recognized form elements such as checkboxes, radio buttons, textboxes, and signatures, according to the options defined in `FormRecognizeOptions`. This recognition process supports both execution patterns: the synchronous `RecognizeFormAsPdfDocument` method for immediate, blocking processing, and the asynchronous `RecognizeFormAsPdfDocumentAsync` method for non‑blocking, await processing ideal for responsive UI applications or scalable server‑side workflows.
+Using `PdfLoadedDocument` this operation analyzes the form content supplied through the inputStream whether it contains a PDF or an image and produces a fully enriched PdfLoadedDocument that includes recognized form elements such as checkboxes, radio buttons, textboxes, and signatures, according to the options defined in `FormRecognizeOptions`. This recognition process supports both execution patterns: the synchronous `RecognizeFormAsPdfDocument` method for immediate, blocking processing, and the asynchronous `RecognizeFormAsPdfDocumentAsync` method for non‑blocking, await processing ideal for responsive UI applications or scalable server side workflows.
 
 Example (synchronous):
 
@@ -55,7 +55,7 @@ public  async void Button_Click(object sender, RoutedEventArgs e)
 
 
 ## Recognize forms using Stream 
-Using `Stream`this operation processes the form content provided through the inputStream—whether it contains a PDF or an image—and returns the fully recognized PDF as a Stream.This functionality is available through both the synchronous `RecognizeFormAsPdfStream` method for immediate, blocking execution and the asynchronous `RecognizeFormAsPdfStreamAsync` method for non‑blocking, await processing suitable for responsive UI applications, background services, and scalable server‑side workflows.
+Using `Stream`this operation processes the form content provided through the inputStream whether it contains a PDF or an image and returns the fully recognized PDF as a Stream.This functionality is available through both the synchronous `RecognizeFormAsPdfStream` method for immediate, blocking execution and the asynchronous `RecognizeFormAsPdfStreamAsync` method for non‑blocking, await processing suitable for responsive UI applications, background services, and scalable server‑side workflows.
 
 Example (synchronous):
 
@@ -105,7 +105,7 @@ public  async void Button_Click(object sender, RoutedEventArgs e)
 
 ## Recognize forms using JSON
 
-Using `JSON`this operation recognizes the form contained in the inputStream whether the source document is a PDF or an image—and returns the complete recognition output serialized as a JSON string. This functionality is accessible through both the synchronous `RecognizeFormAsJson` method, which performs immediate, blocking processing, and the asynchronous `RecognizeFormAsJsonAsync` method, which provides non‑blocking, await execution suitable for UI applications, background workers, and scalable cloud or server‑side workflows.
+Using `JSON`this operation recognizes the form contained in the inputStream whether the source document is a PDF or an image and returns the complete recognition output serialized as a JSON string. This functionality is accessible through both the synchronous `RecognizeFormAsJson` method, which performs immediate, blocking processing, and the asynchronous `RecognizeFormAsJsonAsync` method, which provides non‑blocking, await execution suitable for UI applications, background workers, and scalable cloud or server‑side workflows.
 
 Example (synchronous):
 
@@ -150,11 +150,8 @@ public  async void Button_Click(object sender, RoutedEventArgs e)
 
 ## Async variants with CancellationToken
 
-The async overloads accept an optional `CancellationToken` to cancel long-running operations.Initially cancellationToken value in default.Based on our requirement we can optimize the cancellationToken value.
+The async overloads accept an optional `CancellationToken` to cancel long running operations. Initially, the cancellationToken uses its default value, and based on our requirements, we can optimize or supply a custom token as needed. This behavior is supported across all async methods, including PDF, JSON, and PdfLoadedDocument asynchronous operations
 
-- `Task<PdfLoadedDocument> RecognizeFormAsPdfDocumentAsync(Stream inputStream, CancellationToken cancellationToken = default)`
-- `Task<Stream> RecognizeFormAsPdfStreamAsync(Stream inputStream, CancellationToken cancellationToken = default)`
-- `Task<string> RecognizeFormAsJsonAsync(Stream inputStream, CancellationToken cancellationToken = default)`
 
 Example with cancellation token (PDF stream):
 
