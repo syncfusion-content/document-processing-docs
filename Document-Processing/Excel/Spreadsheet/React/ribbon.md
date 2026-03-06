@@ -46,6 +46,14 @@ The following code example shows the usage of ribbon customization.
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/ribbon-cs1" %}
 
+## Quick Lookup
+
+- `hideRibbonTabs(tabTexts[])` — show/hide existing ribbon tabs.
+- `enableRibbonTabs(tabTexts[], isEnable)` — enable/disable specific ribbon tabs.
+- `addRibbonTabs(tabs, insertBefore)` — add custom tabs (with content items).
+- `hideToolbarItems(tabText, itemIndexes|itemIds)` / `enableToolbarItems(tabText, itemIds|indexes, isEnable)` — control items within a tab.
+- `hideFileMenuItems(itemTexts|itemIds)` / `enableFileMenuItems(itemTexts|itemIds, isEnable, isUniqueId?)` / `addFileMenuItems(items, targetText, insertAfter)` — control File menu options.
+
 ## Note
 
 You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
