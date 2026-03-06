@@ -16,8 +16,6 @@ N> * Appearance customizations support undo and redo.
 N> * Customizations cannot be applied when a form field is locked.
 N> * Customized colors and border width are preserved during import, export, printing, and saving.
 
-N> **Version note:** In versions prior to v29.1.33, the PDF Viewer rendered all form fields with a default semitransparent blue background (`Color.FromRgba(204, 215, 255, 200)`), ignoring the background color defined in the PDF document. Starting with v29.1.33, the PDF Viewer renders the background color specified in the field's appearance settings. To restore the earlier blue background, apply it manually as shown in the background color example below.
-
 ## Customize the background color
 
 The [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Widget.html#Syncfusion_Maui_PdfViewer_Widget_BackgroundColor) property sets the fill color behind the field content. The following example applies a uniform background color to all form fields in the document.

@@ -29,7 +29,7 @@ Build powerful PDF experiences into your .NET MAUI app with the [SfPdfViewer](ht
 | [Electronic Signature](https://help.syncfusion.com/maui/pdf-viewer/signature) | Add handwritten, typed, or image-based signatures. |
 | [Keyboard Shortcuts](https://help.syncfusion.com/maui/pdf-viewer/keyboard-shortcuts) | Keyboard shortcuts available on desktop platforms. |
 | [Localization](https://help.syncfusion.com/maui/pdf-viewer/localization) | Translate all built-in strings into any supported language. |
-| [Migration Guide](https://help.syncfusion.com/maui/pdf-viewer/migration) | Upgrade from previous versions with minimal breaking changes. |
+| [Migration Guide](https://help.syncfusion.com/maui/pdf-viewer/migration) | Migrate from Xamarin.Forms SfPdfViewer to .NET MAUI SfPdfViewer. |
 
 ## Key Features
 
