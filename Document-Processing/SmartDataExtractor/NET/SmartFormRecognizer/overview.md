@@ -1,5 +1,5 @@
 ---
-title:Smart Form Recognizer | Syncfusion&reg;
+title: Smart Form Recognizer | Syncfusion&reg;
 description: Learn how to detects form data from PDFs and scanned images using Syncfusion&reg; Essential Studio&reg; SmartFormRecognizer.
 platform: document-processing
 control: SmartFormRecognizer
@@ -25,7 +25,7 @@ Core Capabilities
 
 *Confidence filtering: Per-field confidence scores with configurable thresholds to control output quality and drive review logic. 
 
-*Ready for .NET integration: Deterministic, onpremise library that outputs JSON and integrates into existing .NET pipelines and review UIs. 
+*Ready for .NET integration: Deterministic, on premise library that outputs JSON and integrates into existing .NET pipelines and review UIs. 
 
 
 <b>NuGet</b>

@@ -25,7 +25,7 @@ Core Capabilities
 
 *Confidence filtering: Per-field confidence scores with configurable thresholds to control output quality and drive review logic. 
 
-*Ready for .NET integration: Deterministic, onpremise library that outputs JSON and integrates into existing .NET pipelines and review UIs. 
+*Ready for .NET integration: Deterministic, on premise library that outputs JSON and integrates into existing .NET pipelines and review UIs. 
 
 The following code snippet illustrates how to detects form data from PDFs using FormRecognizer method in SmartFormRecognizer.
 
