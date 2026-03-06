@@ -155,7 +155,7 @@ You can change the size of rows and columns in the spreadsheet by using [setRows
 
 You can change the height of single or multiple rows by using the [setRowsHeight](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#setrowsheight) method.
 
-There is a property `customHeight` on a row’s model that indicates the row height has been explicitly set by dragging the row header boundary with the mouse or by a programmatic resize. The Spreadsheet sets this property using the setRow method during a resize operation.
+There is a property `customHeight` on a row's model that indicates the row height has been explicitly set by dragging the row header boundary with the mouse or by a programmatic resize. The Spreadsheet sets this property using the setRow method during a resize operation.
 
 When customHeight is true, it means the height was manually defined rather than automatically determined from cell content or formatting.
 

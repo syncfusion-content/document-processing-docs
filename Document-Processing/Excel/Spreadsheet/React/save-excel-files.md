@@ -134,9 +134,7 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/save-as-blobdata-cs1" %}
 
-### Save as JSON
-
- serializes the current workbook into a JSON object that contains sheets, cell data, styles, formulas, and workbook settings. you can store that object and later restore it with openFromJson.
+### Save Excel files as JSON
 
 The [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method converts the entire Spreadsheet workbook into a JSON object. This JSON includes sheets, cell values, formulas, styles, formatting, charts, and other workbook settings. It acts as a complete representation of the current spreadsheet state, which can be stored, sent to a server, or later restored using openFromJson.
 
@@ -144,8 +142,7 @@ saveAsJson is used to capture the full state of the Spreadsheet in a simple, str
 
 The main benefit for users is that the Spreadsheet state can be saved quickly without waiting for the server to generate an Excel file. Because JSON is lightweight, it can be stored or transferred very fast, making the save operation feel smoother. When the JSON is loaded again, the workbook looks exactly as before, which gives users a consistent experience. This also reduces errors and makes the application more responsive during save operations.
 
-
-The following code snippet demonstrates saveAsJson method:
+Please find below the code to retrieve JSON data from the Spreadsheet control below.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

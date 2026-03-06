@@ -168,7 +168,7 @@ openFromJson is used because it provides a smooth and reliable way to load Excel
 
 The main benefit for users is a faster and more stable loading experience. Because the heavy Excel‑processing work is completed on the server, the spreadsheet opens quickly in the browser and maintains the correct layout, values, and styles. The JSON format helps avoid common issues that might occur with large or complex Excel files, making the entire experience more dependable and easier for users.
 
-The following code snippet demonstrates openFromJson method:
+Please find the code to fetch the JSON data and load it into the Spreadsheet component below.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
