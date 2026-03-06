@@ -33,7 +33,7 @@ Use these annotations to mark up text content within the PDF document.
 | Strikeout | Draws a line through selected text to indicate deletion. |
 | Squiggly | Draws a wavy underline to indicate a possible error or area of concern. |
 
-For more information, see [Text Markup Annotations](https://help.syncfusion.com/maui/pdf-viewer/text-markups).
+For more information, see [Text Markup Annotations](../text-markups).
 
 ### Shape Annotations
 
@@ -48,7 +48,7 @@ Use these annotations to draw geometric shapes over PDF content.
 | Polyline | Draws an open multi-segment line. |
 | Square | Draws a rectangle over the page. |
 
-For more information, see [Shape Annotations](https://help.syncfusion.com/maui/pdf-viewer/shapes).
+For more information, see [Shape Annotations](../shapes).
 
 ### Freehand and Rich Content Annotations
 
@@ -60,7 +60,7 @@ For more information, see [Shape Annotations](https://help.syncfusion.com/maui/p
 | Stamp | Places an image or predefined stamp on the page. |
 | Sticky notes | Attaches a pop-up note to a specific location on the page. |
 
-For more information, see [Ink Annotations](https://help.syncfusion.com/maui/pdf-viewer/ink), [Free Text Annotations](https://help.syncfusion.com/maui/pdf-viewer/free-text), [Stamps](https://help.syncfusion.com/maui/pdf-viewer/stamps), and [Sticky Notes](https://help.syncfusion.com/maui/pdf-viewer/sticky-notes).
+For more information, see [Ink Annotations](../ink), [Free Text Annotations](../free-text), [Stamps](../stamps), and [Sticky Notes](../sticky-notes).
 
 ## In This Section
 
@@ -68,26 +68,26 @@ For more information, see [Ink Annotations](https://help.syncfusion.com/maui/pdf
 
 | Topic | Description |
 |---|---|
-| [Text Markup Annotations](https://help.syncfusion.com/maui/pdf-viewer/text-markups) | Highlight, underline, strikeout, and squiggly annotations on selected text. |
-| [Shape Annotations](https://help.syncfusion.com/maui/pdf-viewer/shapes) | Draw arrows, circles, lines, polygons, polylines, and rectangles over pages. |
-| [Ink Annotations](https://help.syncfusion.com/maui/pdf-viewer/ink) | Draw freehand strokes over any page area. |
-| [Ink Eraser](https://help.syncfusion.com/maui/pdf-viewer/ink-eraser) | Erase portions of existing ink annotations. |
-| [Free Text Annotations](https://help.syncfusion.com/maui/pdf-viewer/free-text) | Place a text box directly on the page. |
-| [Stamps](https://help.syncfusion.com/maui/pdf-viewer/stamps) | Apply predefined or custom image stamps on a page. |
-| [Sticky Notes](https://help.syncfusion.com/maui/pdf-viewer/sticky-notes) | Attach pop-up notes to specific locations on a page. |
+| [Text Markup Annotations](../text-markups) | Highlight, underline, strikeout, and squiggly annotations on selected text. |
+| [Shape Annotations](../shapes) | Draw arrows, circles, lines, polygons, polylines, and rectangles over pages. |
+| [Ink Annotations](../ink) | Draw freehand strokes over any page area. |
+| [Ink Eraser](../ink-eraser) | Erase portions of existing ink annotations. |
+| [Free Text Annotations](../free-text) | Place a text box directly on the page. |
+| [Stamps](../stamps) | Apply predefined or custom image stamps on a page. |
+| [Sticky Notes](../sticky-notes) | Attach pop-up notes to specific locations on a page. |
 
 ### Common Annotation Operations
 
 | Topic | Description |
 |---|---|
-| [Add, Remove, and Modify Annotations](https://help.syncfusion.com/maui/pdf-viewer/add-remove-modify-annotations) | Programmatically add, update, and delete any annotation type. |
-| [Annotation Collection](https://help.syncfusion.com/maui/pdf-viewer/annotation-collection) | Access and iterate the full annotation collection. |
-| [Select and Deselect Annotations](https://help.syncfusion.com/maui/pdf-viewer/select-deselect-annotations) | Select one or more annotations programmatically. |
-| [Lock and Unlock Annotations](https://help.syncfusion.com/maui/pdf-viewer/lock-unlock) | Prevent annotations from being edited or deleted. |
-| [Show and Hide Annotations](https://help.syncfusion.com/maui/pdf-viewer/show-hide) | Toggle visibility of annotations without removing them. |
-| [Import and Export Annotations](https://help.syncfusion.com/maui/pdf-viewer/import-export-annotations) | Import/export annotation data in XFDF, FDF, JSON, and XML formats. |
-| [Undo and Redo](https://help.syncfusion.com/maui/pdf-viewer/undo-redo) | Reverse or reapply recent annotation changes. |
-| [Annotation Comments](https://help.syncfusion.com/maui/pdf-viewer/annotations-comment) | Add review comments and status to annotations. |
+| [Add, Remove, and Modify Annotations](../add-remove-modify-annotations) | Programmatically add, update, and delete any annotation type. |
+| [Annotation Collection](../annotation-collection) | Access and iterate the full annotation collection. |
+| [Select and Deselect Annotations](../select-deselect-annotations) | Select one or more annotations programmatically. |
+| [Lock and Unlock Annotations](../lock-unlock) | Prevent annotations from being edited or deleted. |
+| [Show and Hide Annotations](../show-hide) | Toggle visibility of annotations without removing them. |
+| [Import and Export Annotations](../import-export-annotations) | Import/export annotation data in XFDF, FDF, JSON, and XML formats. |
+| [Undo and Redo](../undo-redo) | Reverse or reapply recent annotation changes. |
+| [Annotation Comments](../annotations-comment) | Add review comments and status to annotations. |
 
 ## See Also
 - [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
