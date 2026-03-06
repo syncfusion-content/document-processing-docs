@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Open a PDF From Local Storage in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here about opening a PDF document from local storage in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to open a PDF document from local storage in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Open a PDF from Local Storage in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -168,3 +169,9 @@ namespace OpenLocalFile
 {% endtabs %}
 
 The example project to open a PDF document from local storage using `File Picker` can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
+
+## See Also
+
+* [Open a Document](https://help.syncfusion.com/maui/pdf-viewer/open-a-document)
+* [Open from URL](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-url)
+* [Document Load Notifications](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications)

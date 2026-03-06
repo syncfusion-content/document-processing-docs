@@ -1,11 +1,11 @@
 ﻿---
 layout: post
-title: Localization in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about to localize the static text used in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control to other languages .
+title: Localization in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to localize the static text in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control to other languages.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Localization in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -168,6 +168,10 @@ The following table contains the default name and value details used in the SfPd
 <td>Apply</td>
 </tr>
 <tr>
+<td>ApplyRedactionsConfirmation</td>
+<td>You are about to permanently remove all content that has been marked for redaction. Once the document is saved, this operation cannot be undone. Are you sure you want to continue?</td>
+</tr>
+<tr>
 <td>Arrow</td>
 <td>Arrow</td>
 </tr>
@@ -186,10 +190,6 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>Cancel</td>
 <td>Cancel</td>
-</tr>
-<tr>
-<td>CanOpenWebPage</td>
-<td>Do you want to open</td> 
 </tr>
 <tr>
 <td>CanOpenWebPage</td>
@@ -254,6 +254,10 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>CustomStamps</td>
 <td>Custom Stamps</td>
+</tr>
+<tr>
+<td>CustomText</td>
+<td>Custom text</td>
 </tr>
 <tr>
 <td>Delete</td>
@@ -360,6 +364,14 @@ The following table contains the default name and value details used in the SfPd
 <td>Fit to Width</td>
 </tr>
 <tr>
+<td>Font</td>
+<td>Font</td>
+</tr>
+<tr>
+<td>FontColor</td>
+<td>Font color</td>
+</tr>
+<tr>
 <td>FontSize</td>
 <td>Font size</td>
 </tr>
@@ -370,10 +382,6 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>FreeTextEditorPlaceHolder</td>
 <td>Text…</td>
-</tr>
-<tr>
-<td>FreeTextEditorPlaceHolder</td>
-<td>Text...</td>
 </tr>
 <tr>
 <td>GoToPage</td>
@@ -508,6 +516,10 @@ The following table contains the default name and value details used in the SfPd
 <td>Outline color</td> 
 </tr>
 <tr>
+<td>Page</td>
+<td>Page</td>
+</tr>
+<tr>
 <td>PageByPage</td>
 <td>Page by page</td>
 </tr>
@@ -526,6 +538,10 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>PageNumberHint</td>
 <td>Enter page number here</td>
+</tr>
+<tr>
+<td>PageRange</td>
+<td>Page range</td>
 </tr>
 <tr>
 <td>Paragraph</td>
@@ -551,6 +567,14 @@ The following table contains the default name and value details used in the SfPd
 <td>Print</td>
 <td>Print</td>
 </tr>
+<tr>
+<td>Properties</td>
+<td>Properties</td>
+</tr>
+<tr>
+<td>RedactArea</td>
+<td>Redact area</td>
+</tr>
 <tr> 
 <td>RedactedAreaFillColor</td> 
 <td>Redacted area fill color</td> 
@@ -564,12 +588,28 @@ The following table contains the default name and value details used in the SfPd
 <td>Redaction properties</td> 
 </tr>
 <tr>
+<td>RedactPages</td>
+<td>Redact pages</td>
+</tr>
+<tr>
+<td>RedactText</td>
+<td>Redact text</td>
+</tr>
+<tr>
 <td>Redo</td>
 <td>Redo</td>
 </tr>
 <tr>
 <td>Rename</td>
 <td>Rename</td>
+</tr>
+<tr>
+<td>RepeatOverlayText</td>
+<td>Repeat overlay text</td>
+</tr>
+<tr>
+<td>Replies</td>
+<td>Replies</td>
 </tr>
 <tr>
 <td>RequestPassword</td>
@@ -602,10 +642,6 @@ The following table contains the default name and value details used in the SfPd
 <tr> 
 <td>SpecificPage</td> 
 <td>Specific page</td> 
-</tr>
-<tr>
-<td>Square</td>
-<td>Square</td>
 </tr>
 <tr>
 <td>Square</td>
@@ -709,3 +745,8 @@ The following table contains the default name and value details used in the SfPd
 </tr>
 </table>
 
+
+## See Also
+
+* [Right To Left](https://help.syncfusion.com/maui/pdf-viewer/right-to-left)
+* [Getting Started](https://help.syncfusion.com/maui/pdf-viewer/getting-started)

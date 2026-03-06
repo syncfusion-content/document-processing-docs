@@ -1,10 +1,11 @@
 ---
 layout: post
-title: UI Customization in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about the UI customization options in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and more.
+title: UI Customization in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to customize the UI of the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control, including the loading indicator and theming.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # UI Customization in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -31,3 +32,9 @@ You can customize the loading indicator’s properties by applying a style with 
 {% endtabs %}
 
 N> For complete customization of the PDF Viewer, themes can be applied. Refer to the [theme user guide](https://help.syncfusion.com/maui/themes/themes) for detailed instructions. You can also explore the [sample project](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Styles/PDFViewerThemes), which demonstrates the custom theme implementation for the PDF Viewer in .NET MAUI applications.
+
+## See Also
+
+* [Toolbar Customization](https://help.syncfusion.com/maui/pdf-viewer/toolbar-customization)
+* [Toolbar](https://help.syncfusion.com/maui/pdf-viewer/toolbar)
+* [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview)

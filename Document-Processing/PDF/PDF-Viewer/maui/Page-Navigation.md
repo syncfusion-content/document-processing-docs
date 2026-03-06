@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Page Navigation in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about page navigation feature in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and more.
+title: Page Navigation in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to navigate pages in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control programmatically and through the UI.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Page Navigation in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -29,7 +30,7 @@ To enable the continuous page layout mode, you can call the following code in a 
 // Enable or activate the Continuous Page Layout mode.
 void EnableContinuousPageLayoutMode()
 {
-    // Set the PageLayout mode to Continuous using the `SfPdfViewer` instance.
+    // Set the PageLayoutMode to Continuous on the SfPdfViewer instance.
     PdfViewer.PageLayoutMode = PageLayoutMode.Continuous;
 }
 
@@ -47,7 +48,7 @@ To enable the single page layout mode, you can call the following code in a butt
 // Enable or activate the Single Page Layout mode.
 void EnableSinglePageLayoutMode()
 {
-    // Set the PageLayout mode to Single using the `SfPdfViewer` instance.
+    // Set the PageLayoutMode to Single on the SfPdfViewer instance.
     PdfViewer.PageLayoutMode = PageLayoutMode.Single;
 }
 
@@ -121,3 +122,9 @@ private void LastPageButton_Clicked(object sender, EventArgs e)
 {% endtabs %}
 
 The example project with the page navigation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples).
+## See Also
+
+* [Scrolling](https://help.syncfusion.com/maui/pdf-viewer/scrolling)
+* [Document Link Annotations](https://help.syncfusion.com/maui/pdf-viewer/document-link-annotations)
+* [Document Outline](https://help.syncfusion.com/maui/pdf-viewer/document-outline)
+* [Hyperlink Navigation](https://help.syncfusion.com/maui/pdf-viewer/hyperlink-navigation)

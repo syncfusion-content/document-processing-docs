@@ -1,17 +1,22 @@
 ---
 layout: post
-title: Document link navigation in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here about document link navigation in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+title: Document Link Navigation in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to navigate using document link annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Document Link Navigation in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The PDF viewer allows navigating from one part of the PDF document to another using document link annotations. When a document link annotation is tapped, the PDF viewer scrolls to its destination. This type of link annotation is most often used to represent the table of contents of a PDF document. 
+The PDF viewer allows navigating from one part of the PDF document to another using document link annotations. When a document link annotation is tapped, the PDF viewer scrolls to the destination page or location defined by that annotation. This type of annotation is most commonly used to make a PDF's table of contents interactive — each entry links directly to the corresponding page in the document.
 
-The document link navigation can be turned on or off using the [EnableDocumentLinkNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableDocumentLinkNavigation) property. The default value of this property is true. The code snippet below illustrates disabling the document link navigation.
+N> Document link annotations differ from hyperlink annotations. Document links navigate **within** the same PDF document, while hyperlinks open an external URL in the device browser. See [Hyperlink Navigation](https://help.syncfusion.com/maui/pdf-viewer/hyperlink-navigation) for details on handling external links.
+
+## Enable or Disable Document Link Navigation
+
+The document link navigation can be turned on or off using the [EnableDocumentLinkNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableDocumentLinkNavigation) property. The default value of this property is `true`. The code snippet below illustrates disabling the document link navigation.
 
 {% tabs %}
 {% highlight c# %}
@@ -20,3 +25,9 @@ pdfViewer.EnableDocumentLinkNavigation = false;
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+* [Hyperlink Navigation](https://help.syncfusion.com/maui/pdf-viewer/hyperlink-navigation)
+* [Page Navigation](https://help.syncfusion.com/maui/pdf-viewer/page-navigation)
+* [Document Outline (Bookmarks)](https://help.syncfusion.com/maui/pdf-viewer/document-outline)
