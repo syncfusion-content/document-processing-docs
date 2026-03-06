@@ -23,9 +23,9 @@ This guide shows how to show or hide the form designer toolbar, and how to confi
 
 ## Steps
 
-**Step 1:** Show or hide the Form Designer toolbar at initialization
+### 1. Show or hide Form Designer toolbar at initialization
 
-- Set the [`isFormDesignerToolbarVisible`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#isformdesignertoolbarvisible) property on PDF Viewer instance to `true` or `false` to control initial visibility.
+Set the [`isFormDesignerToolbarVisible`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#isformdesignertoolbarvisible) property on PDF Viewer instance to `true` or `false` to control initial visibility.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -50,9 +50,9 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Toggle visibility at runtime
+### 2. Show or hide form designer toolbar at runtime
 
-- Use the [`isFormDesignerToolbarVisible`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#isformdesignertoolbarvisible) API on the viewer's instance on a custom method to toggle form designer visibility at runtime.
+Use the [`isFormDesignerToolbarVisible`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#isformdesignertoolbarvisible) API on the viewer's instance on a custom method to toggle form designer visibility at runtime.
 
 {% highlight ts %}
 {% raw %}
@@ -60,9 +60,9 @@ pdfviewer.isFormDesignerToolbarVisible = true;
 {% endraw %}
 {% endhighlight %}
 
-**Step 3:** Customize the form designer tools and their order
+### 3. Show or hide form designer toolbar items
 
-- Use [`formDesignerToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#formdesignertoolbaritems) and supply an ordered array of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesignertoolbaritem) names.
+Use [`formDesignerToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#formdesignertoolbaritems) and supply an ordered array of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesignertoolbaritem) names.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}

@@ -22,9 +22,9 @@ This guide explains how to show or hide the primary toolbar, remove default item
 
 ## Steps
 
-**Step 1:** Show or hide the primary toolbar at initialization
+### 1. Show or hide primary toolbar at initialization
 
-- Set [`enableToolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletoolbar) to `false` to hide the built-in toolbar.
+Set [`enableToolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletoolbar) to `false` to hide the built-in toolbar.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -48,18 +48,18 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Toggle the toolbar at runtime
+### 2. Show or hide primary toolbar at runtime
 
-- Use the viewer's [`showToolbar()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar#showtoolbar) method to show or hide dynamically.
+Use the viewer's [`showToolbar()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar#showtoolbar) method to show or hide dynamically.
 
 ```ts
 // with a ref named pdfviewer
 pdfviewer.toolbar.showToolbar(false);
 ```
 
-**Step 3:** Remove or reorder default items
+### 3. Show or hide primary toolbar items
 
-- Provide the [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) array with the exact set and order of items you want to show. Any item omitted is hidden.
+Provide the [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) array with the exact set and order of items you want to show. Any item omitted is hidden.
 
 {% highlight ts %}
 {% raw %}
@@ -71,9 +71,9 @@ pdfviewer.toolbar.showToolbar(false);
 {% endraw %}
 {% endhighlight %}
 
-**Step 4:** Add a custom toolbar item
+### 4. Add a custom primary toolbar item
 
-- Add a custom item by including an object in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) and handling its action via [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#toolbarclick). The following example shows adding a simple custom button at initialization.
+Add a custom item by including an object in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) and handling its action via [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#toolbarclick). The following example shows adding a simple custom button at initialization.
 
 {% highlight ts %}
 {% raw %}
