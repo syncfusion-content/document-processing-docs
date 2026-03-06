@@ -65,7 +65,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N>  The `PdfRedactor.redact(callback)` method allows you to customize redaction appearance through a canvas callback and supports removing both **text and images**. In contrast, `PdfRedactor.redactSync()` performs faster synchronous redaction but can remove **only text**, and does not support image redaction or custom drawing.
+N>  Use PdfRedactor.redact(callback) when you need to redact images along with other PDF content. In contrast, PdfRedactor.redactSync() is faster because it runs synchronously, but it cannot redact images—only text and other non‑image elements.
 
 ## Fill color on the redacted area
 
