@@ -27,8 +27,6 @@ The following assemblies need to be referenced in your application based on the 
         <li>Syncfusion.Pdf.Base</li>
         <li>Syncfusion.Compression.Base</li>
         <li>Syncfusion.PdfToImageConverter.Base</li>
-        <li>Microsoft.ML.OnnxRuntime – Version="1.18.0"</li>
-        <li>Newtonsoft.Json – Version="13.0"</li>
       </ul>
     </td>
   </tr>
@@ -42,8 +40,6 @@ The following assemblies need to be referenced in your application based on the 
         <li>Syncfusion.Pdf.Portable</li>
         <li>Syncfusion.Compression.Portable</li>
         <li>Syncfusion.PdfToImageConverter.Portable</li>
-        <li>Microsoft.ML.OnnxRuntime – Version="1.18.0"</li>
-        <li>Newtonsoft.Json – Version="13.0.2"</li>
       </ul>
     </td>
   </tr>
@@ -56,8 +52,6 @@ The following assemblies need to be referenced in your application based on the 
         <li>Syncfusion.Pdf.NET</li>
         <li>Syncfusion.Compression.NET</li>
         <li>Syncfusion.PdfToImageConverter.NET</li>
-        <li>Microsoft.ML.OnnxRuntime – Version="1.18.0"</li>
-        <li>Newtonsoft.Json – Version="13.0.2"</li>
       </ul>
     </td>
   </tr>
