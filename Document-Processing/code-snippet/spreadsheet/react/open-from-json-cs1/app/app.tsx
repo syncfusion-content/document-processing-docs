@@ -8,12 +8,7 @@ function App(): React.ReactElement {
 
   const handleOpenFromJson = React.useCallback((): void => {
     if (!spreadsheetRef.current) return;
-    try {
       spreadsheetRef.current.openFromJson({ file: jsonData });
-    } catch (e) {
-      console.error('Failed to open from JSON', e);
-      alert('Failed to open from JSON.');
-    }
   }, []);
 
   return (
