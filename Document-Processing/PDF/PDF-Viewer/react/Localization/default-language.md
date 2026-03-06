@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in React PDF Viewer | Syncfusion
-description: Learn about the default language culture and localization in Syncfusion React PDF Viewer component.
+description: Learn here all about the default language culture and localization in Syncfusion React PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

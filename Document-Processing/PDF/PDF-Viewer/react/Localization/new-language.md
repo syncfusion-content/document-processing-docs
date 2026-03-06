@@ -22,9 +22,9 @@ Use the React PDF Viewer’s [locale](https://ej2.syncfusion.com/react/documenta
 - `@syncfusion/ej2-react-pdfviewer` installed in a React app.
 - (Optional) A list of keys you want to override.
 
-## Quick start (set `de` – German)
+## Quick start (set German)
 1. **Load translations** with `L10n.load` at app start (only include the keys you want to change).
-2. **Set the culture** by passing `locale="de"` to `<PdfViewerComponent/>`.
+2. **Set the culture** by passing `locale` value to `<PdfViewerComponent/>`.
 3. **Render the viewer** as usual. Missing keys will automatically fall back to `en-US`.
 
 {% tabs %}
