@@ -14,6 +14,8 @@ N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-ext
 ## Removing sensitive content from the PDF document
 
 Redaction permanently removes confidential or sensitive information from a PDF. The `PdfRedactor` and `PdfRedactionRegion` classes allow you to mark specific areas and apply irreversible redaction to the document.
+> **Note:**  
+> When calling `redact(callback)`, the callback is executed to render each redaction region on a canvas before the content is permanently removed. This allows customizing the final appearance of the redacted area.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -29,7 +31,7 @@ let redactions: PdfRedactionRegion[] = [];
 redactions.push(new PdfRedactionRegion(0, {x: 10, y: 10, width: 100, height: 50}));
 redactor.add(redactions);
 // Apply redactions on the PDF document
-redactor.redact();
+redactor.redactSync();
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -37,6 +39,7 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load the document
 var document = new ej.pdf.PdfDocument(data);
 // Create a new text extractor
@@ -46,7 +49,7 @@ var redactions = [];
 redactions.push(new PdfRedactionRegion(0, {x: 10, y: 10, width: 100, height: 50}));
 redactor.add(redactions);
 // Apply redactions on the PDF document
-redactor.redact();
+redactor.redactSync();
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -77,13 +80,15 @@ redactions.push(redaction);
 // Add redactions with specified options.
 redactor.add(redactions);
 // Apply redactions on the PDF document
-redactor.redact();
+redactor.redactSync();
 // Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Add redactions to the collection
@@ -98,7 +103,7 @@ redactions.push(redaction);
 // Add redactions with specified options.
 redactor.add(redactions);
 // Apply redactions on the PDF document
-redactor.redact();
+redactor.redactSync();
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -137,7 +142,7 @@ let redactor = new PdfRedactor(document);
 // Add redactions with specified options
 redactor.add(redactions);
 // Apply redactions on the PDF document
-redactor.redact();
+redactor.redactSync();
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -168,7 +173,7 @@ redactions.push(redaction);
 var redactor = new ej.pdf.PdfRedactor(document);
 // Add redactions and apply them
 redactor.add(redactions);
-redactor.redact();
+redactor.redactSync();
 // Save and dispose
 document.save('output.pdf');
 document.destroy();
