@@ -78,7 +78,7 @@ Paste can be done in one of the following ways.
 
 ## Prevent the paste functionality
 
-The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#actionbegin) event, you can set `cancel` argument as false in paste request type.
+The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#actionbegin) event, you can set `cancel` argument as false in paste request type.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing in React Spreadsheet component
 
-You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowediting) property to enable or disable the editing feature.
+You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowediting) property to enable or disable the editing feature.
 
 To get start quickly with Editing, you can check on this video:
 
@@ -23,7 +23,7 @@ You can start editing by one of the following ways,
 * Press `F2` key to edit the active cell.
 * Use formula bar to perform editing.
 * Use `BACKSPACE` or `SPACE` key to clear the cell content and start the edit mode.
-* Using the [`startEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#startedit) method.
+* Using the [`startEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#startedit) method.
 
 ## Save Cell changes
 

@@ -45,7 +45,7 @@ The `printOptions` contain three properties, as described below.
 
 ## Disable printing
 
-The printing functionality in the Spreadsheet can be disabled by setting the [`allowPrint`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowprint) property to `false`. After disabling, the `Print` option will not be available in the `File` menu of the ribbon and as a keyboard shortcut.
+The printing functionality in the Spreadsheet can be disabled by setting the [`allowPrint`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowprint) property to `false`. After disabling, the `Print` option will not be available in the `File` menu of the ribbon and as a keyboard shortcut.
 
 ![Spreadsheet with print option disabled](./images/spreadsheet_print_disable.png)
 

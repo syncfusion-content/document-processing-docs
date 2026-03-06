@@ -170,7 +170,7 @@ The following example demonstrates how to make rows, columns, and cells read-onl
 
 ## Protect a Workbook
 
-Protect workbook feature helps you to protect the workbook so that users cannot insert, delete, rename, hide the sheets in the spreadsheet. You can use the [`password`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#password) property to protect workbook with password. You can use the [`isProtected`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#isprotected) property to protect or unprotect the workbook without the password.
+Protect workbook feature helps you to protect the workbook so that users cannot insert, delete, rename, hide the sheets in the spreadsheet. You can use the [`password`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#password) property to protect workbook with password. You can use the [`isProtected`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#isprotected) property to protect or unprotect the workbook without the password.
 
 > The default value for `isProtected` property is `false`.
 
@@ -178,7 +178,7 @@ Protect workbook feature helps you to protect the workbook so that users cannot 
 
 In the active Spreadsheet, you can protect the worksheet by selecting the Data tab in the Ribbon toolbar and choosing the `Protect Workbook` item. Then, enter the password and confirm it and click on OK.
 
-The following example shows `Protect Workbook` by using the [`isProtected`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#isprotected) property in the Spreadsheet control.
+The following example shows `Protect Workbook` by using the [`isProtected`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#isprotected) property in the Spreadsheet control.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

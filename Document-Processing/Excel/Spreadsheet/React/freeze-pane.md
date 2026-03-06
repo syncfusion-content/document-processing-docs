@@ -15,7 +15,7 @@ To get start quickly with Freeze Panes in React Spreadsheet, you can check on th
 
 {% youtube "https://www.youtube.com/watch?v=TX4P6gFymwo" %}
 
-## Apply freezepanes on UI
+## Apply freeze panes on UI
 
 **User Interface**:
 
