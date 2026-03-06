@@ -9,20 +9,20 @@ documentation: ug
 
 # Freeze panes in React Spreadsheet component
 
-Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#frozencolumns) properties inside the [`Sheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#sheets) property.
+Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#frozencolumns) properties inside the [`Sheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sheets) property.
 
 To get start quickly with Freeze Panes in React Spreadsheet, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=TX4P6gFymwo" %}
 
-## Apply freezepanes on UI
+## Apply freeze panes on UI
 
 **User Interface**:
 
 In the active spreadsheet, click the cell where you want to create freeze panes. Freeze panes can be done in any of the following ways:
 
 * Select the View tab in the Ribbon toolbar and choose the `Freeze Panes` item.
-* Use the [`freezePanes()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#freezepanes) method programmatically.
+* Use the [`freezePanes()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#freezepanes) method programmatically.
 
 ## FrozenRows
 

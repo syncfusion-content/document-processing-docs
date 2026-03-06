@@ -56,9 +56,9 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/do
 
 ## Save Excel files programmatically
 
-To save Excel files programmatically in the Spreadsheet, you can use the [`save()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#saveurl) property is properly configured, as it is required for processing and generating the file on the server.
+To save Excel files programmatically in the Spreadsheet, you can use the [`save()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#saveurl) property is properly configured, as it is required for processing and generating the file on the server.
 
-Please find the below table for the [`save()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#save) method arguments.
+Please find the below table for the [`save()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#save) method arguments.
 
 | **Parameter**             | **Type**                   | **Description**                                                      |
 |-----------------------|------------------------|------------------------------------------------------------------|
