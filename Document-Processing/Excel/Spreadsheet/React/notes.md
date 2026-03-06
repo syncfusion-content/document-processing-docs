@@ -39,7 +39,7 @@ In the active worksheet, you can add a note in the following ways:
 * **Ribbon**: Select the cell, navigate to the **Review** tab, click the **Notes** dropdown, and select **Add Note**.
 * **Keyboard Shortcut**: Select the cell and press <kbd>Shift</kbd> + <kbd>F2</kbd>.
 * **Programmatically**: 
-    * Use the [updateCell()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#updatecell) method with the note model to add a note to a specific cell.
+    * Use the [updateCell()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updatecell) method with the note model to add a note to a specific cell.
     * Bind notes via code-behind during initial load by associating the note model with the cell model.
 
 A dialog box will open where you can enter the note content. After entering the content, you can either click on other cells or press the <kbd>Esc</kbd> button to automatically save the note and close the dialog box.
