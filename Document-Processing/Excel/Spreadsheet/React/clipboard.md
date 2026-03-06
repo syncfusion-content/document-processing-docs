@@ -99,10 +99,13 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 
 ## Limitations
 
-* External clipboard is not fully supported while copying data from another source and pasting into a spreadsheet, it only works with basic supports (Values, Number, cell, and Text formatting).
-* If you copy =SUM(A2,B2) and paste, the formula reference will change depending on the pasted cell address but we don't have support for nested formula(formula reference will be same).
-* Clipboard is not supported with conditional formatting (values only pasting).
-* We have limitation while copying the whole sheet data and pasting it into another sheet.
+- **External clipboard:** Copying from external sources (web pages, other apps) only supports basic content — values, numbers, plain text and simple cell formatting. Rich HTML, images, embedded objects, and complex formatting are not preserved.
+- **Formulas:** Formulas such as `=SUM(A2,B2)` update their cell references relative to the paste location. Copying nested or workbook-scoped formulas may not preserve references correctly when pasted across different sheets or workbooks.
+- **Conditional formatting:** Clipboard operations do not preserve conditional formatting rules; only values (or basic formats via Paste Special) are applied.
+- **Whole-sheet copy/paste:** Copying an entire sheet and pasting into another sheet has limitations and may not retain some sheet-level settings (for example, named ranges, certain sheet-level formats, or merged regions).
+- **Merged cells:** Cut/copy/paste operations that involve merged cells may behave inconsistently or be restricted.
+- **Data validation and charts:** Pasting into cells with data validation or chart sources may not preserve validation rules or linked chart data.
+- **Browser/Platform clipboard restrictions:** Browser or OS security restrictions can limit programmatic clipboard access; keyboard shortcuts (`Ctrl+C`, `Ctrl+V`) are more reliable in some environments.
 
 ## Note
 

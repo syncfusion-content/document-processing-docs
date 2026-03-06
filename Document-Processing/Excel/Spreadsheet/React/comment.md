@@ -188,11 +188,18 @@ In the below sample, comments are added to a specific cell using cell data bindi
 * **Author Identity**: The author name for each comment and reply is static once set. When exporting, the author information is preserved for all comments, even if multiple authors exist in the workbook.
 * **New comment**: When the "Comments" review pane is enabled, adding a new comment renders the drafted comment editor directly in the "Comments" review pane.
 
-## Limitations
 * **Un-posted comments are not stored**: If you type in the comment editor and close it without clicking **Post**, the entered text is not saved and will not appear when you reopen the editor. Only posted content is persisted in the comment model.
 * **Comments and Notes cannot coexist**: When a cell contains comment, notes cannot be added. Similarly, if a cell already has a notes, comment cannot be added.
 * **Comments in Print**: Comments are not included in print output.
 * **Non-collaborative**: Real-time multi-user synchronization is not supported. However, when exporting and re-importing the workbook, the author information for each comment and reply is preserved.
+
+## Limitations
+- **Un-posted comments are not stored**: Text entered in the comment editor is discarded unless you click **Post**; drafts are not persisted.
+- **One thread per cell**: Each cell supports a single comment thread. New remarks should be added as replies within the existing thread.
+- **Comments and Notes cannot coexist**: If a cell contains a comment thread, you cannot add a note to that same cell, and vice versa.
+- **Author identity is client-provided**: The control does not authenticate users. Set the `author` property in your app to tag comments; otherwise "Guest User" is shown by default.
+- **Print and export rendering**: Comments and the Comments review pane are not included in print output or some export flows.
+- **Performance considerations**: Very large numbers of comment threads may impact UI responsiveness; for heavy workloads, consider batching updates or virtualized rendering.
 
 ## See Also
 * [Notes](./notes)
