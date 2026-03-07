@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Show and Hide annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here about showing and hiding annotations in a document in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and more.
+title: Show and Hide Annotations in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to show and hide annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
-# Show and Hide annotations in .NET MAUI PDF Viewer (SfPdfViewer)
+
+# Show and Hide Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
  
 You can manage the visibility of annotations using the `Hidden` property. It helps you to hide annotations containing confidential data when sharing documents externally or presenting documents, ensuring data privacy and security. Also, it makes it easier to read the documents that are cluttered with more annotations. Like other annotation properties, you can undo and redo the hiding or showing actions. Additionally, when an annotation is locked, it cannot be hidden. Annotations that are hidden will remain hidden during import, export, printing, and saving.
 
@@ -80,3 +81,8 @@ private void HideAnnotationButton_Clicked(object sender, EventArgs e)
 
 N> * On iOS and Mac, while printing a document containing hidden annotations, the hidden annotations will be visible in the print preview or the printed document. 
 N> * When a document containing hidden annotations is loaded, it will not only disappear in the UI but also will not be added to the [SfPdfViewer.Annotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_Annotations) collection as well. 
+
+## See Also
+- [Annotations Overview](../annotations-overview)
+- [Lock and Unlock Annotations](../lock-unlock)
+- [Select and Deselect Annotations](../select-deselect-annotations)
