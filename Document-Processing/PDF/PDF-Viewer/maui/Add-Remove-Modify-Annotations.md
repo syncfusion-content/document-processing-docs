@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Add, Remove, and Edit Annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here all about adding, removing and editing annotations in a PDF document using Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to add, remove, and edit annotations in a PDF document using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Add, Remove, and Edit Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
+# Add, Remove, and Edit Annotations
 
 This section will review the various functions in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for adding, removing, and  editing annotations in a PDF document. 
 
@@ -190,3 +190,9 @@ private void OnAnnotationAdded(object sender, AnnotationEventArgs e)
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Annotations Overview](../annotations-overview)
+- [Select and Deselect Annotations](../select-deselect-annotations)
+- [Import and Export Annotations](../import-export-annotations)
+- [Undo and Redo](../undo-redo)
