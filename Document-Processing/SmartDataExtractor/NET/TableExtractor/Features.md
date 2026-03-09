@@ -43,7 +43,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %} 
 
-## Extract Tables with detect borderless tables
+## Extract Tables with detect border less tables
 
 To extract structured table data from a PDF document that contains tables without visible borders using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code examples. 
 
@@ -134,6 +134,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     string data = extractor.ExtractTableAsJson(stream);
     File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
 
 {% endtabs %}  
 
