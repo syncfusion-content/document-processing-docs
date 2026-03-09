@@ -37,7 +37,34 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
     // Extract and save
     string data = extractor.ExtractTableAsJson(stream);
-    File.WriteAllText("TableOutput_AllOptions.json", data, Encoding.UTF8);
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using System.Text;
+using Syncfusion.SmartTableExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Smart Table Extractor
+    TableExtractor extractor = new TableExtractor();
+
+    // Set all three options together
+    TableExtractionOptions options = new TableExtractionOptions();
+    options.DetectBorderlessTables = true;
+    options.PageRange = new int[,] { { 1, 5 } };
+    options.ConfidenceThreshold = 0.75;
+
+    extractor.TableExtractionOptions = options;
+
+    // Extract and save
+    string data = extractor.ExtractTableAsJson(stream);
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
 
 {% endhighlight %}
@@ -51,6 +78,30 @@ To extract structured table data from a PDF document that contains tables withou
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using System.Text;
+using Syncfusion.SmartTableExtractor;
+
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Smart Table Extractor
+    TableExtractor extractor = new TableExtractor();
+
+    // Set DetectBorderlessTables
+    TableExtractionOptions options = new TableExtractionOptions();
+    options.DetectBorderlessTables = true;
+
+    extractor.TableExtractionOptions = options;
+
+    // Extract and save
+    string data = extractor.ExtractTableAsJson(stream);
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.IO;
 using System.Text;
@@ -106,6 +157,30 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 			
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using System.Text;
+using Syncfusion.SmartTableExtractor;
+
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Smart Table Extractor
+    TableExtractor extractor = new TableExtractor();
+
+    // Set only PageRange
+    TableExtractionOptions options = new TableExtractionOptions();
+    options.PageRange = new int[,] { { 2, 4 } };
+
+    extractor.TableExtractionOptions = options;
+
+    // Extract and save
+    string data = extractor.ExtractTableAsJson(stream);
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
 {% endtabs %}   
 
 ## Apply confidence threshold to extract the Table
@@ -115,6 +190,30 @@ To apply confidence thresholding when extracting table data from a PDF document 
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using System.Text;
+using Syncfusion.SmartTableExtractor;
+
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Smart Table Extractor
+    TableExtractor extractor = new TableExtractor();
+
+    // Set ConfidenceThreshold
+    TableExtractionOptions options = new TableExtractionOptions();
+    options.ConfidenceThreshold = 0.6;
+
+    extractor.TableExtractionOptions = options;
+
+    // Extract and save
+    string data = extractor.ExtractTableAsJson(stream);
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.IO;
 using System.Text;
@@ -170,7 +269,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     string data = await tableExtractor.ExtractTableAsJsonAsync(stream, cts.Token);
 
     // Save the extracted data as JSON
-    File.WriteAllText("TableOutput.json", data, Encoding.UTF8);
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
 
 
@@ -200,7 +299,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     string data = await tableExtractor.ExtractTableAsJsonAsync(stream, cts.Token);
 
     // Save the extracted data as JSON
-    File.WriteAllText("TableOutput.json", data, Encoding.UTF8);
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
 
 

@@ -19,8 +19,8 @@ The following assemblies need to be referenced in your application based on the 
   <tbody>
     <tr>
       <td>
-        {{'[WPF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)'| markdownify }},
-        {{'[Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms)'| markdownify }} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}      
+        {{'[WPF]'| markdownify }},
+        {{'[Windows Forms]'| markdownify }} and {{'[ASP.NET MVC]'| markdownify }}      
       </td>
       <td>
         Syncfusion.Compression.Base<br/>
@@ -32,9 +32,9 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-      {{'[Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor)'| markdownify }},
-      {{'[.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)'| markdownify }}
-      and {{'[.NET Platforms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}
+      {{'[Blazor]'| markdownify }},
+      {{'[.NET Core]'| markdownify }}
+      and {{'[.NET Platforms]'| markdownify }}
       </td>
       <td>
         Syncfusion.Compression.Portable<br/>
@@ -47,8 +47,7 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-      {{'[Windows UI library (WinUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui)'| markdownify }},
-      {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui)'| markdownify }}
+      {{'[.NET Multi-platform App UI (.NET MAUI)]'| markdownify }}
       </td>
       <td>
         Syncfusion.Compression.NET<br/>

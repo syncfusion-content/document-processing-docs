@@ -83,10 +83,33 @@ using System.IO;
 using Syncfusion.SmartDataExtractor;
 using System.Text;
 
-string inputPath = "Image.png";
+//Open the input image file as a stream.
+using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Enable form detection in the image document.
+    extractor.EnableFormDetection = true;
+    //Enable table detection in the image document.
+    extractor.EnableTableDetection = true;
+    //Set confidence threshold for extraction.
+    extractor.ConfidenceThreshold = 0.6;
+    //Extract data as JSON from the image stream.
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using System.Text;
 
 //Open the input image file as a stream.
-using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
+using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess.Read))
 {
     //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
@@ -119,16 +142,15 @@ using Syncfusion.SmartDataExtractor;
 using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
-string inputPath = "Input.pdf";
-
 //Open the input PDF file as a stream.
-using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     //Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
 
     //Enable form detection in the document.
     extractor.EnableFormDetection = true;
+    extractor.EnableTableDetection = false;
     //Set confidence threshold for extraction.
     extractor.ConfidenceThreshold = 0.6
     //Configure form recognition options.
@@ -160,16 +182,15 @@ using Syncfusion.SmartDataExtractor;
 using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
-string inputPath = "Input.pdf";
-
 //Open the input PDF file as a stream.
-using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     //Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
 
     //Enable form detection in the document.
     extractor.EnableFormDetection = true;
+    extractor.EnableTableDetection = false;
     //Set confidence threshold for extraction.
     extractor.ConfidenceThreshold = 0.6
     //Configure form recognition options.
@@ -209,16 +230,15 @@ using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 using Syncfusion.SmartFormRecognizer;
 
-string inputPath = "Input.pdf";
-
 //Open the input PDF file as a stream.
-using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     //Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
 
     //Enable form detection in the document to identify form fields.
     extractor.EnableFormDetection = true;
+    extractor.EnableTableDetection = false;
     //Apply confidence threshold to extract only reliable data.
     extractor.ConfidenceThreshold = 0.6;
 
@@ -258,10 +278,8 @@ using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 using Syncfusion.SmartFormRecognizer;
 
-string inputPath = "Input.pdf";
-
 //Open the input PDF file as a stream.
-using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     //Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
@@ -315,14 +333,14 @@ using Syncfusion.SmartDataExtractor;
 using Syncfusion.SmartTableExtractor;
 
 // Load the input PDF file.
-string inputPath = "Input.pdf";
-using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     // Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
 
     // Enable table detection and set confidence threshold.
     extractor.EnableTableDetection = true;
+    extractor.EnableFormDetection = false;
     extractor.ConfidenceThreshold = 0.6;
 
     // Configure table extraction options.
@@ -355,14 +373,14 @@ using Syncfusion.SmartDataExtractor;
 using Syncfusion.SmartTableExtractor;
 
 // Load the input PDF file.
-string inputPath = "Input.pdf";
-using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     // Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
 
     // Enable table detection and set confidence threshold.
     extractor.EnableTableDetection = true;
+    extractor.EnableFormDetection = false;
     extractor.ConfidenceThreshold = 0.6;
 
     // Configure table extraction options.
@@ -401,14 +419,14 @@ using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
 //  Load the input PDF file.
-string inputPath = "Input.pdf";
-using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     // Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
 
     //  Apply confidence threshold to extract the data.
     // Only elements with confidence >= 0.75 will be included in the results.
+    //default confidence threshold value is 0.6
     extractor.ConfidenceThreshold = 0.75;
     //  Extract data and return as a loaded PDF document.
     PdfLoadedDocument pdf = extractor.ExtractDataAsPdfDocument(stream);
@@ -428,14 +446,14 @@ using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
 //  Load the input PDF file.
-string inputPath = "Input.pdf";
-using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     // Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
 
     //  Apply confidence threshold to extract the data.
     // Only elements with confidence >= 0.75 will be included in the results.
+    //default confidence threshold value is 0.6
     extractor.ConfidenceThreshold = 0.75;
     //  Extract data and return as a loaded PDF document.
     PdfLoadedDocument pdf = extractor.ExtractDataAsPdfDocument(stream);
@@ -462,10 +480,8 @@ using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
-string inputPath = "Input.pdf";
-
 //Open the input PDF file as a stream.
-using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     //Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
@@ -491,10 +507,8 @@ using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
-string inputPath = "Input.pdf";
-
 //Open the input PDF file as a stream.
-using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.Read))
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     //Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
