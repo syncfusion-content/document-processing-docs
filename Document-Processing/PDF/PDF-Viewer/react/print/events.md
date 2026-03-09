@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print events in React PDF Viewer
 
-This page lists each event emitted by the React PDF Viewer's [`Print`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/print) feature, the argument schema, and the minimal behaviour notes needed for implementation.
+This page lists each event emitted by the React PDF Viewer's [`Print`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/print) feature, the argument schema, and the minimal behavior notes needed for implementation.
 
 ## Events
 

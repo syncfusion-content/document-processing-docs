@@ -103,7 +103,7 @@ export default function App() {
 - Control output quality with the [`printScaleFactor`](./print-quality) property (0.5–5)
 - Auto‑rotate pages during print using [`enablePrintRotation`](./enable-print-rotation)
 - Choose where printing happens with [`printMode`](./print-modes) (Default or NewWindow)
-- Track the lifecycle with [`printStart` and `printEnd` events](./events)
+- Track the life cycle with [`printStart` and `printEnd` events](./events)
 
 ## Troubleshooting
 
