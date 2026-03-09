@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sticky Note Annotations in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about Sticky Note Annotations in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its functionalities.
+title: Sticky Note Annotations in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to add and manage sticky note annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Sticky Note Annotation in .NET MAUI PDF Viewer (SfPdfViewer)
+# Sticky Note Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
 The sticky note annotation feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove, and modify sticky notes in a PDF document. This feature will help add comments or notes to specific parts of a document to clarify complex concepts, terms, or ideas. This section will cover the various functions available in [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for working with sticky note annotations.
 
@@ -221,3 +221,8 @@ Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 {% endtabs %}
 
 N> For WinUI and MacCatalyst platforms, there is no separate modal view to receive text input from the users. As a result, the `StickyNoteModalViewAppearing` and `StickyNoteModalViewDisappearing` events are not applicable to these platforms. 
+
+## See Also
+- [Annotations Overview](../annotations-overview)
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
+- [Annotation Comments](../annotations-comment)

@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Gesture events in .NET MAUI PDF Viewer control | Syncfusion
-description: This guide discusses about the gesture events provided by Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+title: Gesture Events in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to handle gesture events in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Gesture Events in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -62,3 +62,8 @@ private void PdfViewer_Tapped(object sender, GestureEventArgs e)
 }
 {% endhighlight %}
 {% endtabs %}	
+
+## See Also
+- [Scrolling](../scrolling)
+- [Magnification](../magnification)
+- [Page Navigation](../page-navigation)
