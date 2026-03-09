@@ -74,4 +74,4 @@ You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-
 
 * [Sorting](./sort)
 * [Filtering](./filter)
-* [Undo Redo](./undo-redo)z
+* [Undo Redo](./undo-redo)
