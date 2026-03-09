@@ -521,6 +521,69 @@ ldocument.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Adding a timestamp in digital signature
+
+This example shows how to apply a digital signature with a trusted timestamp, ensuring the signature remains valid even after the certificate expires. A timestamp callback contacts a Time Stamping Authority (TSA) to add an official time record to the signature. This provides long‑term proof of when the document was signed.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfSignature, CryptographicStandard, DigestAlgorithm } from '@syncfusion/ej2-pdf';
+
+// Load the document
+let document: PdfDocument = new PdfDocument(data);
+// Gets the first page of the document
+let page: PdfPage = document.getPage(0);
+// Access the PDF form
+let form: PdfForm = document.form;
+// Create a new signature field
+let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', {x: 10, y: 10, width: 100, height: 50});
+// Create a timestamp callback
+async function timestampCallback(request: Uint8Array): Promise<{ response: Uint8Array }> {
+    // Implement timestamp response logic here
+    return { response: new Uint8Array() }; // Placeholder return
+}
+// Create a new signature using PFX data, private key and call back function for timestamp
+const signature: PdfSignature = PdfSignature.create(certData, password, { cryptographicStandard: CryptographicStandard.cms, digestAlgorithm: DigestAlgorithm.sha256 }, timestampCallback);
+// Sets the signature to the field
+field.setSignature(signature);
+// Add the field into PDF form
+form.add(field);
+// Save the document
+await document.saveAsync('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the document
+var document = new ej.pdf.PdfDocument(data);
+// Gets the first page of the document
+var page = document.getPage(0);
+// Access the PDF form
+var form = document.form;
+// Create a new signature field
+var field = new ej.pdf.PdfSignatureField(page, 'Signature', {x: 10, y: 10, width: 100, height: 50});
+// Create a timestamp callback
+async function timestampCallback(request) {
+    // Implement timestamp response logic here
+    return { response: new Uint8Array() }; // Placeholder return
+}
+// Create a new signature using PFX data, private key and call back function for timestamp
+const signature = PdfSignature.create(certData, password, { cryptographicStandard: ej.pdf.CryptographicStandard.cms, digestAlgorithm: ej.pdf.DigestAlgorithm.sha256 }, timestampCallback);
+// Sets the signature to the field
+field.setSignature(signature);
+// Add the field into PDF form
+form.add(field);
+// Save the document
+await document.saveAsync('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Drawing text/image in the Signature Appearance
 
 This example demonstrates how to create a visible signature field, apply a CMS (SHA-256) digital signature with signer information, customize the signature appearance using a base64-encoded image, and save the signed PDF document.

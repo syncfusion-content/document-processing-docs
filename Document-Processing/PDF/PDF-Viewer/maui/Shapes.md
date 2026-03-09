@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Shape Annotations in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about Shape Annotations in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its types.
+title: Shape Annotations in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to add and manage shape annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -270,3 +270,8 @@ void AddCloudAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
+
+## See Also
+- [Annotations Overview](../annotations-overview)
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
+- [Undo and Redo](../undo-redo)
