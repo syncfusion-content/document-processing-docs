@@ -194,14 +194,10 @@ In the below sample, comments are added to a specific cell using cell data bindi
 * **Non-collaborative**: Real-time multi-user synchronization is not supported. However, when exporting and re-importing the workbook, the author information for each comment and reply is preserved.
 
 ## Limitations
-
-- Only posted comments are saved. If you close the editor without posting, the text is lost.
-- Each cell can have only one comment thread. Add new notes as replies in that thread.
-- Replies are flat. You cannot reply to a reply (no nested replies).
-- When a thread is resolved, the reply box and some actions are hidden.
-- A cell cannot have both a comment and a note at the same time.
-- The control does not provide real-time live collaboration (no automatic multi-user sync).
-- The app must provide the author name, when exporting and re-importing the workbook, the author information for each comment and reply is preserved.
+- **Un-posted comments are not stored**: If you type in the comment editor and close it without clicking **Post**, the entered text is not saved and will not appear when you reopen the editor. Only posted content is persisted in the comment model.
+* **Comments and Notes cannot coexist**: When a cell contains comment, notes cannot be added. Similarly, if a cell already has a notes, comment cannot be added.
+* **Comments in Print**: Comments are not included in print output.
+* **Non-collaborative**: Real-time multi-user synchronization is not supported. However, when exporting and re-importing the workbook, the author information for each comment and reply is preserved.
 
 ## See Also
 * [Notes](./notes)

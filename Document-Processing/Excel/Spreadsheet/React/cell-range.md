@@ -48,8 +48,8 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 The following features have some limitations when using wrap text:
 
-- **Sorting:** Sorting data that contains wrapped text may not auto-adjust row heights after the sort.
-- **Merge cells:** Wrap text behavior inside merged cells may be inconsistent and row height may not update correctly.
+- Sorting with wrap text applied data.
+- Merge with wrap text
 
 ## Merge cells
 
@@ -93,9 +93,9 @@ The following code example shows the merge cells operation in spreadsheet.
 
 The following features have some limitations when using merged cells:
 
-- **Filter:** Merged cells are not fully compatible with filtering and may prevent proper filter behavior.
-- **Wrap text:** Wrapped text inside merged cells may not render or adjust row height correctly.
-- **Copy/Paste and Autofill:** Operations that span merged regions may be limited or behave unexpectedly.
+- Merge with filter.
+- Merge with wrap text.
+- Merge with border style.
 
 ## Auto Fill
 
@@ -179,11 +179,8 @@ In the following sample, you can enable/disable the fill option on the button cl
 
 ### Limitations
 
-The following features have some limitations in Auto Fill:
-
-- **Flash Fill:** The Flash Fill feature is not supported in the Auto Fill workflow.
-- **Conditional formatting:** Filling cells that have conditional formatting may not preserve or apply rules exactly as expected.
-- **Merged cells:** Auto Fill operations involving merged cells may be limited or behave inconsistently.
+- The Flash Fill feature is not supported in the Auto Fill workflow.
+- There is limitation for autofill with conditional formatting applied cells.
 
 ## Clear
 

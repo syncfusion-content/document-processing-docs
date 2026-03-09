@@ -69,8 +69,8 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 
 Here, we have listed out the limitations with Freeze Panes feature.
 
-- Merged cells across the frozen and unfrozen areas may not work correctly.
-- If images and charts are added inside the freeze area cells, their portion in the unfreeze area will not move when scrolling.
+* Merging the cells between freeze and unfreeze area.
+* If images and charts are added inside the freeze area cells, their portion in the unfreeze area will not move when scrolling.
 
 ## Note
 

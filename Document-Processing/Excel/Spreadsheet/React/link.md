@@ -64,7 +64,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 ## Limitations
 
-- You cannot insert a hyperlink for multiple ranges at once.
+* Inserting hyperlink not supported for multiple ranges.
 
 ## Note
 
@@ -74,4 +74,4 @@ You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-
 
 * [Sorting](./sort)
 * [Filtering](./filter)
-* [Undo Redo](./undo-redo)
+* [Undo Redo](./undo-redo)z

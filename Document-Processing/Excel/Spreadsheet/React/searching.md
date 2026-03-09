@@ -81,7 +81,9 @@ In the following sample, searching can be done by following ways:
 
 ## Limitations
 
-- Undo/redo is not supported for Replace All.
+* Undo/redo for Replace All is not supported in this feature.
+* Replace All is not supported for selected range.
+* Find and Replace in Formulas, Notes not supported.
 
 ## Note
 

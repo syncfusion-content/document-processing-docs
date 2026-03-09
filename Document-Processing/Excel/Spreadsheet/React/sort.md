@@ -176,7 +176,8 @@ The following errors have been handled for sorting,
 
 ## Limitations
 
-- Sorting does not work on cells that contain formulas.
+* Sorting is not supported with formula contained cells.
+* Sort by color is not supported.
 
 ## Note
 

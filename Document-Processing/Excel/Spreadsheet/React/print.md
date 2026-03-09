@@ -59,7 +59,6 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 
 ## Limitations
 
-- * When printing the document, changing the page orientation to landscape is not supported in both the `print` method and print preview dialog of the web browser.
-- The styles provided for the data validation functionality will not be available in the printed copy of the document.
-- The content added to the cell templates, such as HTML elements, Syncfusion<sup style="font-size:70%">&reg;</sup> controls, and others, will not be available in the printed copy of the document.
-- Large sheets with many images or charts may print slowly or may be clipped by the browser's print limits.
+* When printing the document, changing the page orientation to landscape is not supported in both the `print` method and print preview dialog of the web browser.
+* The styles provided for the data validation functionality will not be available in the printed copy of the document.
+* The content added to the cell templates, such as HTML elements, Syncfusion<sup style="font-size:70%">&reg;</sup> controls, and others, will not be available in the printed copy of the document.

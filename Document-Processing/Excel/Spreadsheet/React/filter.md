@@ -109,9 +109,12 @@ The following code example shows how to get the filtered rows.
 
 ## Limitations
 
-- Inserting or deleting rows/columns where a filter is applied can change or remove the filter.
-- Filters do not work well on merged cells.
-- Copying or cutting and pasting filtered cells may not keep the filter and can paste hidden rows.
+The following features have some limitations in Filter:
+
+* Insert/delete row/column between the filter applied cells.
+* Merge cells with filter.
+* Copy/cut paste the filter applied cells.
+* Filter by color.
 
 ## Note
 

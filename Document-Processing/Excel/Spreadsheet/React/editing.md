@@ -61,8 +61,7 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 
 ## Limitations
 
-- Text overflow in cells is not supported in Editing.
-- Very large amounts of text or many quick edits may slow the spreadsheet.
+* Text overflow in cells is not supported in Editing.
 
 ## Note
 
