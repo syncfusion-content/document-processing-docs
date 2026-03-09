@@ -1,12 +1,12 @@
 ---
 title: Convert PPTX to Image in Azure Functions Flex Consumption | Syncfusion
-description: Convert PPTX to image in Azure Functions Flex Consumption using .NET isolated worker PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
+description: Convert PPTX to PNG in Azure Functions Flex Consumption using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 
-# Convert PowerPoint Presentation to Image in Azure Functions (Flex Consumption)
+# Convert PPTX to Image in Azure Functions (Flex Consumption)
 
 Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Azure Functions deployed on Flex (Consumption) plan**.
 
