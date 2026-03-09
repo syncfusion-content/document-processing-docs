@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flatten Annotations Before Saving the PDF | Syncfusion
+title: Flatten Annotations in the Syncfusion React PDF Viewer
 description: Learn how all about how to flatten annotations and formfields before saving a PDF in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,10 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Flatten Annotations Before Saving the PDF in React
+# Flatten Annotations in the Syncfusion React PDF Viewer
+
+Flattening takes the visual appearance of annotations and embeds them into each page's content stream. The visual result remains visible, but the annotation objects and interactive form field structures are removed or converted so they can no longer be selected, edited, or filled.
+
 Flattening annotations permanently merges them into the PDF content. Once flattened:
 - Annotations are **no longer editable** in any PDF viewer.
 - Useful for **secure sharing**, preventing modifications.
@@ -16,7 +19,13 @@ Flattening annotations permanently merges them into the PDF content. Once flatte
 
 ## How to Flatten Annotations
 
-To flatten documents when they are uploaded/loaded into the viewer, see [Flatten on Load](../document-handling/preprocess-pdf#flatten-on-load).  
+You can flatten annotations either when a document is loaded (preprocessing) or when exporting/saving the file. Flattening on load makes the viewer display a flattened version immediately; flattening on export preserves the original viewer session while producing a flattened output file.
+
+Typical export-time steps:
+- Save the viewer contents to a Blob.
+- Create a `PdfDocument` from the saved bytes.
+- Enable `document.flatten = true` to merge annotations and form field appearances.
+- Save the resulting PDF.
 
 Use the example below to flatten at export time (on download).
 
@@ -57,7 +66,8 @@ function Default() {
         const arrayBuffer = reader.result;
         const byteArray = new Uint8Array(arrayBuffer);
         const document = new PdfDocument(byteArray);
-        // Flatten all annotations and form fields
+        // Flatten all annotations and form fields: this embeds appearances
+        // into the page content so annotations are no longer interactive.
         document.flatten = true;
         document.save('flattened.pdf');
       };
@@ -106,6 +116,8 @@ root.render(<Default />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
+
+N> To flatten documents when they are uploaded/loaded into the viewer, see [Flatten on Load](../document-handling/preprocess-pdf#flatten-on-load).
 
 
 ## Notes
