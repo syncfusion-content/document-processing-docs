@@ -498,7 +498,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 ## Annotation and Review Workflow Patterns
 
-The PDF Viewer supports collaborative review workflows by combining [annotations](../annotation/overview), [comments](../annotation/comments), and threaded [replies](../annotation/comments#add-comments-and-replies). These capabilities help reviewers mark content, discuss changes, and navigate feedback efficiently during document review cycles.
+The PDF Viewer supports review workflows by combining [annotations](../annotation/overview), [comments](../annotation/comments), and threaded [replies](../annotation/comments#add-comments-and-replies). These capabilities help reviewers mark content, discuss changes, and navigate feedback efficiently during document review cycles.
 
 ### Understanding Review Workflows
 
@@ -516,12 +516,12 @@ During a review cycle, users typically:
 
 ### Using Comments in Review Workflows
 
-Comments are a key part of collaborative review workflows. They allow reviewers to communicate directly on annotations without altering the underlying PDF content.
+Comments are a key part of review workflows. They allow reviewers to communicate directly on annotations without altering the underlying PDF content.
 
 Key behaviors in review workflows:
 
 - Comments allow multiple reviewers to discuss changes directly on annotations.
-- Replies help maintain a threaded discussion for collaborative review.
+ - Replies help maintain a threaded discussion during review.
 - Selecting a comment highlights the related annotation, improving navigation.
 - Comments can be combined with Sticky Notes, Highlights, Shapes, Stamps, and other annotation types.
 
@@ -535,7 +535,7 @@ Review workflows help teams:
 - Maintain a clear discussion history on each annotation.
 - Avoid duplicated or conflicting feedback.
 - Navigate long documents quickly using comment threads.
-- Improve clarity during multi‑reviewer collaboration.
+ - Improve clarity when multiple reviewers participate.
 
 These review patterns are especially useful in content editing, design review, legal documentation, product validation, and quality control workflows.
 
