@@ -81,7 +81,7 @@ In the following sample, searching can be done by following ways:
 
 ## Limitations
 
-* Undo/redo for Replace All is not supported in this feature.
+- Undo/redo is not supported for Replace All.
 
 ## Note
 

@@ -245,12 +245,10 @@ The following code example shows the style formatting in text and cells of the s
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/cellformat-cs1" %}
 
-### Limitations of Formatting
+### Limitations
 
-The following features are not supported in Formatting:
-
-* Insert row/column between the formatting applied cells.
-* Formatting support for row/column.
+- Inserting or deleting rows/columns where formatting is applied can change or remove the formatting.
+- Applying formatting to whole rows or whole columns may not work well.
 
 ## Conditional Formatting
 
@@ -348,14 +346,12 @@ You can clear the defined rules by using one of the following ways,
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/conditional-formatting-cs1" %}
 
-### Limitations of Conditional formatting
+### Limitations
 
-The following features have some limitations in Conditional Formatting:
-
-* Insert row/column between the conditional formatting.
-* Conditional formatting with formula support.
-* Copy and paste the conditional formatting applied cells.
-* Custom rule support.
+- Inserting or deleting rows/columns inside a conditional formatted range can remove or shift the rules.
+- Conditional formats that use complex formulas may not work in every case.
+- Copying and pasting cells may not keep conditional formatting.
+- Some custom conditional rules are not supported.
 
 ## Note
 

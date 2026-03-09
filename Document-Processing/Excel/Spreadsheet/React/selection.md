@@ -141,7 +141,8 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 ## Limitations
 
-* We have a limitation while performing the Select All(`ctrl + A`). You can do this only by clicking the Select All button at the top left corner.
+- We have a limitation while performing the Select All(`ctrl + A`). Use the Select All button at the top-left corner.
+- Some host apps or custom UIs may change keyboard or mouse behavior for selection.
 
 ## Note
 

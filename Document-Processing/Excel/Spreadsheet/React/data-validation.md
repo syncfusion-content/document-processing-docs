@@ -89,14 +89,13 @@ The following code example demonstrates how to add custom data validation with a
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/data-validation-cs2" %}
 
-## Limitations of Data validation
+## Limitations
 
-The following features have some limitations in Data Validation:
-
-* Entire row data validation.
-* Insert row between the data validation.
-* Copy/paste with data validation.
-* Delete cells between data validation applied range.
+- Applying validation to whole rows or whole columns can be slow or unreliable.
+- Inserting rows or columns inside a validated range may not copy the rule to the new rows/columns.
+- Copying and pasting cells can overwrite or remove validation.
+- Deleting cells inside a validated area can move or remove validation rules unexpectedly.
+- Validation on merged cells may not work correctly.
 
 ## See Also
 

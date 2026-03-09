@@ -85,12 +85,12 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/image-cs1" %}
 
-### Limitations of Image
+### Limitations
 
-The following features have some limitations in Image:
-
-* Corner resizing option in the image element.
-* Copy and paste the external image.
+- Corner resizing may be limited or not available for some images.
+- Copying and pasting images from other applications may not preserve the image or its properties.
+- Very large image files can slow the spreadsheet.
+- Moving or inserting rows/columns can change image position unexpectedly.
 
 ## Chart
 
@@ -205,13 +205,12 @@ Using the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spr
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/chart-cs3" %}
 
-### Limitations of Chart
+### Limitations
 
-The following features have some limitations in the Chart:
-
-* Insert row/delete row between the chart data source will not reflect the chart.
-* Copy/paste into the chart data source will not reflect the chart.
-* Corner resizing option in chart element.
+- Inserting or deleting rows inside the chart data range may not update the chart.
+- Copying and pasting data into the chart range may not refresh the chart.
+- Corner resizing for charts may be limited in some hosts.
+- Very large data ranges can slow chart drawing and interaction.
 
 ## Note
 

@@ -64,7 +64,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 ## Limitations
 
-* Inserting hyperlink not supported for multiple ranges.
+- You cannot insert a hyperlink for multiple ranges at once.
 
 ## Note
 

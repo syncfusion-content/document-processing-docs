@@ -176,7 +176,7 @@ The following errors have been handled for sorting,
 
 ## Limitations
 
-* Sorting is not supported with formula contained cells.
+- Sorting does not work on cells that contain formulas.
 
 ## Note
 
