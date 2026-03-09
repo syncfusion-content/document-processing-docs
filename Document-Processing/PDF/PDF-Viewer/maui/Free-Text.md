@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Free Text Annotation in .NET MAUI PDF Viewer Control | Syncfusion
-description: Learn here about Free Text Annotation in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its functions.
+title: Free Text Annotations in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to add and manage free text annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Free Text Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -124,11 +124,11 @@ void CustomizeDefaultFreeTextSettings()
 {% endhighlight %}
 {% endtabs %}
 
-### How to create a borderless free text annotation?
+### How to create a free text annotation without a border?
 
-The PDF Viewer allows you to customize annotation properties using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property. By default, free text annotations include a visible border. To create a borderless free text annotation, set the [BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#Syncfusion_Maui_PdfViewer_FreeTextAnnotationSettings_BorderWidth) property to 0 using the [FreeTextAnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#properties).
+The PDF Viewer allows you to customize annotation properties using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property. By default, free text annotations include a visible border. To create a free text annotation without a border, set the [BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#Syncfusion_Maui_PdfViewer_FreeTextAnnotationSettings_BorderWidth) property to 0 using the [FreeTextAnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#properties).
 
-The following example demonstrates how to create a borderless free text annotation:
+The following example demonstrates how to create a free text annotation without a border:
 
 {% tabs %}
 {% highlight C# %}
@@ -246,3 +246,8 @@ Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 {% endtabs %}
 
 N> For WinUI and MacCatalyst platforms, there is no separate modal view to receive text input from the users. As a result, the [FreeTextModalViewAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FreeTextModalViewAppearing) and [FreeTextModalViewDisappearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FreeTextModalViewDisappearing) events are not applicable for these platforms. 
+
+## See Also
+- [Annotations Overview](../annotations-overview)
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
+- [Text Markups](../text-markups)

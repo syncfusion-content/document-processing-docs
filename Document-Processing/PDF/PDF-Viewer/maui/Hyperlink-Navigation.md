@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Hyperlink navigation in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about how to perform hyperlink navigation in the PDF documents using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer).
+title: Hyperlink Navigation in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to navigate hyperlinks in PDF documents using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Hyperlink navigation in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -58,3 +59,7 @@ PdfViewer.EnableHyperlinkNavigation = false;
 	
 {% endhighlight %}
 {% endtabs %}
+## See Also
+- [Document Link Annotations](../document-link-annotations)
+- [Page Navigation](../page-navigation)
+- [Document Outline](../document-outline)
