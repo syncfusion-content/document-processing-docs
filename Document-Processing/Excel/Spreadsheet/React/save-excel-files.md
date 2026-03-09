@@ -134,15 +134,18 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/save-as-blobdata-cs1" %}
 
-### Save Excel files as JSON
+### Save Workbook as JSON
 
-The [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method converts the entire Spreadsheet workbook into a JSON object that contains sheets, cell values, formulas, styles, formatting, charts, and other workbook settings. This JSON acts as a complete representation of the current spreadsheet state and can be stored, sent to a server, or later loaded back using openFromJson.
+The Spreadsheet component allows you to save an entire workbook as a JSON object. This JSON object, which contains all workbook details such as sheets, cell values, formulas, styles, formatting, and other settings—can be stored, transferred, or used later to recreate the workbook.
 
-This method is useful when the workbook needs to be saved in a structured format without generating an Excel file immediately. Because the data is captured as JSON, it is easier to store in a database, send through an API, or process on the server before creating an Excel file. It also allows the workbook to be restored later with all styles, formulas, and layout intact.
+You can also customize the generated JSON object by [configuring serialization options](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save#configure-json-serialization-options) and passing them as arguments to the [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to control how the workbook is exported as JSON.
 
-This approach is faster and produces a lightweight JSON that's easy to store or transfer. When reloaded, the workbook is restored exactly as before.
+Reference: Guide to Creating the JSON Structure:
+https://help.syncfusion.com/document-processing/excel/spreadsheet/react/how-to/create-a-object-structure
 
-Please find below the code to retrieve JSON data from the Spreadsheet control below.
+Overall, this JSON‑based approach offers a faster and more efficient way to save large or complex Excel files, producing lightweight JSON that is easy to store, process, or transmit.
+
+Please find below the code to retrieve JSON data from the Spreadsheet component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

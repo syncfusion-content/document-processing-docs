@@ -160,13 +160,15 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-from-blobdata-cs1" %}
 
-### Open from JSON
+### Load Workbook as JSON
 
-The [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method allows you to load a complete workbook into the Spreadsheet using a JSON object. This JSON is typically generated on the server when an Excel file is converted, but it can also be created manually. When the method loads the JSON, it restores all workbook details, including sheets, cell values, styles, formulas, and formatting.
+The Spreadsheet component allows you to load an entire workbook by using JSON object. This JSON object is given directly as a data source or typically generated on the server when an Excel file is converted, but also suitable for manual creation or editing—contains all workbook details such as sheets, cell values, formulas, styles, and formatting.
 
-This method is useful when you need to load Excel data in the browser without working with the actual Excel file. Because the Excel processing is handled on the server, the client works only with lightweight JSON, resulting in faster loading and accurate restoration of the workbook’s structure and formatting. Developers can also modify the workbook in JSON form before loading it into the component.
+You can also create JSON object by [configuring deserialization options](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save#configure-json-deserialization-options) and passing them as arguments to the [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method to restore the workbook's structure and appearance. When the method loads the JSON, it restores all workbook details, including sheets, cell values, styles, formulas, and formatting.
 
-This approach provides a quicker and more consistent loading experience. Large or complex Excel files can be displayed smoothly in the browser, which helps maintain a stable and efficient workflow.
+Reference: Guide to Creating the JSON Structure: https://help.syncfusion.com/document-processing/excel/spreadsheet/react/how-to/create-a-object-structure.
+
+Overall, this JSON‑based approach offers a faster and more consistent experience when loading large or complex Excel files, ensuring smooth rendering within the Spreadsheet component.
 
 Please find the code to fetch the JSON data and load it into the Spreadsheet component below.
 
