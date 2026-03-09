@@ -14,7 +14,7 @@ This article shows a concise, task-oriented workflow to set and verify print qua
 
 **Goal:** Set a suitable [`printScaleFactor`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#printscalefactor) to improve printed output sharpness while balancing performance and memory use.
 
-## Steps to set `printScaleFactor`
+## Steps
 
 ### 1. Choose a target print quality.
 

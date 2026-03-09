@@ -18,11 +18,11 @@ This guide shows how to set the PDF Viewer [`printMode`](https://ej2.syncfusion.
 
 ## Steps to set print mode
 
-1. Decide which [`printMode`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#printmode) you need:
+**Step 1:** Decide which [`printMode`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#printmode) you need:
    - `Default` — print from the same browser window.
    - `NewWindow` — print from a new window or tab (may be blocked by pop-up blockers).
 
-2. Set [`printMode`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#printmode) during viewer initialization (recommended):
+**Step 2:** Set [`printMode`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#printmode) during viewer initialization (recommended):
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -58,7 +58,7 @@ export default function App() {
 
 ![Print in New Window](../../javascript-es6/images/print-newwindow.gif)
 
-3. Or change it at runtime after the viewer is created:
+**Step 3:** Print mode can also be changed at runtime after the viewer is created:
 
 ```ts
 // switch to NewWindow at runtime
