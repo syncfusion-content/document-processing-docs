@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-import type { SerializationOptions } from '@syncfusion/ej2-react-spreadsheet';
 
 function App(): React.ReactElement {
   const spreadsheetRef = React.useRef<SpreadsheetComponent | null>(null);
@@ -10,10 +9,8 @@ function App(): React.ReactElement {
 
   const handleSaveAsJson = React.useCallback(async () => {
     if (!spreadsheetRef.current) return;
-    const options: SerializationOptions = {};
-    const result: any = await spreadsheetRef.current.saveAsJson(options);
-    const jsonObject: any = result && (result as any).jsonObject ? (result as any).jsonObject : result;
-    const content: string = typeof jsonObject === 'string' ? jsonObject : JSON.stringify(jsonObject, null, 2);
+    const result: any = await spreadsheetRef.current.saveAsJson();
+    const content: string = JSON.stringify(result, null, 2);
     setSavedJson(content);
   }, []);
 

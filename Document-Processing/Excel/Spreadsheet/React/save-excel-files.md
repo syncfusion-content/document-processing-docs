@@ -136,16 +136,11 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
 
 ### Save Workbook as JSON
 
-The Spreadsheet component allows you to save an entire workbook as a JSON object. This JSON object, which contains all workbook details such as sheets, cell values, formulas, styles, formatting, and other settings—can be stored, transferred, or used later to recreate the workbook.
+The Spreadsheet component allows you to save an entire workbook as a JSON object. This JSON typically contains workbook details such as sheets, cell values, formulas, styles, and formatting.
 
-You can also customize the generated JSON object by [configuring serialization options](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/open-save#configure-json-serialization-options) and passing them as arguments to the [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to control how the workbook is exported as JSON.
+You can optionally pass serialization options to the [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to selectively ignore certain features when exporting the workbook as JSON — for example, styles, formulas, number formats, images, or conditional formats. These serialization options are optional; if they are not provided, the method exports the full workbook by default.
 
-Reference: Guide to Creating the JSON Structure:
-https://help.syncfusion.com/document-processing/excel/spreadsheet/react/how-to/create-a-object-structure
-
-Overall, this JSON‑based approach offers a faster and more efficient way to save large or complex Excel files, producing lightweight JSON that is easy to store, process, or transmit.
-
-Please find below the code to retrieve JSON data from the Spreadsheet component.
+The following code example shows how to save workbook as JSON data from the Spreadsheet component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

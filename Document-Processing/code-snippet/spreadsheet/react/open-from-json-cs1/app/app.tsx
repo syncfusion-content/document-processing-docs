@@ -16,7 +16,7 @@ function App(): React.ReactElement {
       <div className="control-section spreadsheet-control">
         <div style={{ padding: '8px 0' }}>
           <button className="e-btn e-primary" onClick={handleOpenFromJson}>
-            Open from JSON
+            Load workbook JSON
           </button>
         </div>
         <div>

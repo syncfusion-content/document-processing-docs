@@ -7,12 +7,9 @@ function App(): React.ReactElement {
   const spreadsheetRef = React.useRef<SpreadsheetComponent | null>(null);
 
   const actionBegin = (args: any): void => {
-    const action: string = args.action;
-    const eventArgs: any = args.args.eventArgs;
-
     // If the user is pasting, force paste to values only.
-    if (action === "clipboard") {
-      eventArgs.type = 'Values';
+    if (args.action === "clipboard") {
+      args.args.eventArgs.type = 'Values';
     }
   };
 

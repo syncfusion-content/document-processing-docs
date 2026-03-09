@@ -9,10 +9,8 @@ function App() {
 
   const handleSaveAsJson = React.useCallback(async () => {
     if (!spreadsheetRef.current) return;
-    const options = {};
-    const result = await spreadsheetRef.current.saveAsJson(options);
-    const jsonObject = result && (result).jsonObject ? (result).jsonObject : result;
-    const content = typeof jsonObject === 'string' ? jsonObject : JSON.stringify(jsonObject, null, 2);
+    const result = await spreadsheetRef.current.saveAsJson();
+    const content = JSON.stringify(jsonObject, null, 2);
     setSavedJson(content);
   }, []);
 
