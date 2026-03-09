@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Flatten Annotations in the Syncfusion React PDF Viewer
+# Flatten Annotations in React PDF Viewer
 
 Flattening takes the visual appearance of annotations and embeds them into each page's content stream. The visual result remains visible, but the annotation objects and interactive form field structures are removed or converted so they can no longer be selected, edited, or filled.
 
