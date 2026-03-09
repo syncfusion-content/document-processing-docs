@@ -5,11 +5,12 @@ description: Explore scrolling features in .NET MAUI PDF Viewer, including how t
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Scrolling in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The .NET MAUI PDF Viewer provides built-in scrolling capabilities that allow users to navigate through PDF content smoothly. This guide covers how to control scroll positions programmatically, detect scroll changes, and manage scroll-related UI elements.
+Keep document navigation smooth and predictable by using the PDF Viewer's built-in scrolling features. This guide shows how to programmatically control scroll position, respond to scroll events, and implement performance-friendly patterns (for example, avoid nesting the viewer inside other scrollable containers).
 
 W> Since the PDF Viewer includes built-in scrolling, avoid placing it inside other scrollable containers like [ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0), as this may lead to unexpected behavior.
 
@@ -165,3 +166,8 @@ PdfViewer.LoadDocument("sample.pdf");
 
 N> - Use a reasonable OverscanCount value. Large values can cause memory spikes and app freezes.
 N> - Pages with very high resolution may still render slowly due to native rendering limitations.
+
+## See Also
+- [Page Navigation](../page-navigation)
+- [Magnification](../magnification)
+- [Gesture Events](../gesture-events)
