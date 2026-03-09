@@ -1,9 +1,10 @@
 ---
-title: Extract structured data from PDF and image documents in .NET | Syncfusion
-description: Syncfusion® Smart Data Extractor is a .NET library that extracts tables, form fields, text blocks, and images from PDF and image documents, producing PDFs and structured JSON for verification, automation and processing.
+title: Extract structured data from PDF & image Files in .NET | Syncfusion
+description: Syncfusion® Smart Data Extractor is a .NET library that extracts tables, forms, text, and images from documents, producing PDFs and JSON.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
+keywords: Assemblies
 ---
 # NuGet Packages Required for SmartDataExtractor
 
@@ -24,7 +25,7 @@ Windows Forms<br/>
 Console Application (Targeting .NET Framework)
 </td>
 <td>
-{{'[Syncfusion.SmartDataExtractor.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.WinForms/)'| markdownify }}
+{{'[Syncfusion.SmartDataExtractor.WinForms.nupkg]'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -32,7 +33,7 @@ Console Application (Targeting .NET Framework)
 WPF
 </td>
 <td>
-{{'[Syncfusion.SmartDataExtractor.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.Wpf/)'| markdownify }}
+{{'[Syncfusion.SmartDataExtractor.Wpf.nupkg]'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -40,7 +41,7 @@ WPF
 ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.SmartDataExtractor.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.AspNet.Mvc5/)'| markdownify }}
+{{'[Syncfusion.SmartDataExtractor.AspNet.Mvc5.nupkg]'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -50,7 +51,7 @@ Console Application (Targeting .NET Core) <br/>
 Blazor
 </td>
 <td>
-{{'[Syncfusion.SmartDataExtractor.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.Net.Core/)'| markdownify }}
+{{'[Syncfusion.SmartDataExtractor.Net.Core.nupkg]'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -59,7 +60,7 @@ Windows UI (WinUI) <br/>
 .NET Multi-platform App UI (.NET MAUI)
 </td>
 <td>
-{{'[Syncfusion.SmartDataExtractor.NET.nupkg](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.NET/)'| markdownify }}
+{{'[Syncfusion.SmartDataExtractor.NET.nupkg]'| markdownify }}
 </td>
 </tr>
 </table>

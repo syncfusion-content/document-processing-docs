@@ -1,13 +1,14 @@
 ---
-title: Extract structured data from PDF and image documents in .NET | Syncfusion
-description: Syncfusion® Smart Data Extractor is a .NET library that extracts tables, form fields, text blocks, and images from PDF and image documents, producing PDFs and structured JSON for verification, automation and processing.
+title: Extract tables from PDF and image documents in .NET | Syncfusion
+description: Syncfusion® Smart Table Extractor detects tables in PDFs, including headers, columns, and merged cells, outputting JSON.
 platform: document-processing
-control: SmartDataExtractor
+control: PDF
 documentation: UG
+keywords: Assemblies
 ---
 
-# Frequently Asked Questions in Blazor SfPdfViewer Component
+# Frequently Asked Questions in Smart Table Extractor
 
-Common questions and answers for using the Syncfusion Data Extraction Library.
+Common questions and answers for using the Syncfusion Table Extraction.
 
 * [How to Resolve the ONNX File Missing Error in Smart Table Extractor?](./FAQ/how-to-resolve-the-onnx-file-missing-error-in-smart-table-extractor)
