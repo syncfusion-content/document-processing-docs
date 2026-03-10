@@ -1,6 +1,6 @@
 ---
 title: FAQ for smart data extractor | Syncfusion
-description: Link page for the FAQ for smart data extractor
+description: This page provides a link to the FAQ section for Syncfusion Smart Data Extractor, guiding users to answers for common questions.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG

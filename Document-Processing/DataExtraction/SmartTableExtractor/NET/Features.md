@@ -1,6 +1,6 @@
 ---
 title: Features of Smart table Extractor | Syncfusion
-description: Explore key features of Syncfusion Smart table Extractor for .NET.
+description: Discover the key features of Syncfusion Smart Table Extractor, a .NET library designed to extract tables, forms, text, and images from documents.
 platform: document-processing
 control: PDF
 documentation: UG

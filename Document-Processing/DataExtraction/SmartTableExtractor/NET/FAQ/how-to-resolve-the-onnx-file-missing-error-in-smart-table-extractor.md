@@ -1,6 +1,6 @@
 ---
 title: Resolve onnx file missing in smart table extractor | Syncfusion
-description: Learn how to resolve the onnx file missing in smart table extractor
+description: Learn how to resolve the missing ONNX file issue in Syncfusion Smart Table Extractor to ensure smooth setup and usage in .NET projects.
 platform: document-processing
 control: PDF
 documentation: UG

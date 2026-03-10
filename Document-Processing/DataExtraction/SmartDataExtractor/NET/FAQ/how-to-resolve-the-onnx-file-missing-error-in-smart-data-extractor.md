@@ -1,6 +1,6 @@
 ---
 title: FAQ for SmartDataExtractor | Syncfusion
-description: Syncfusion® Smart Data Extractor Frequently asked question
+description: This section provides answers to frequently asked questions about Syncfusion Smart Data Extractor, helping users resolve common issues.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG

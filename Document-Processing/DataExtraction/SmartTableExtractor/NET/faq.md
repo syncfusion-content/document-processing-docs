@@ -1,6 +1,6 @@
 ---
 title: FAQ for smart Table extractor| Syncfusion
-description: Link page for the FAQ for smart Table extractor
+description: This page serves as the link to the FAQ section for Syncfusion Smart Table Extractor, directing users to answers for common queries and issues.
 platform: document-processing
 control: PDF
 documentation: UG

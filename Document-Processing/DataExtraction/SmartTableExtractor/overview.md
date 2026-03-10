@@ -1,6 +1,6 @@
 ---
 title: Intro for smart Table extractor | Syncfusion
-description: Learn about the smart Table extractor
+description: This page introduces Syncfusion Smart Table Extractor, explaining its purpose, features, and usage details for .NET applications.
 platform: document-processing
 control: PDF
 documentation: UG

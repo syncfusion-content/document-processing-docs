@@ -1,6 +1,6 @@
 ---
 title: Assemblies required for SmartTableExtractor | Syncfusion
-description: This section explains about the Syncfusion assemblies required to work with  Smart Table Extractor.
+description: This section details the Syncfusion assemblies required to configure and run Smart Table Extractor seamlessly in .NET projects.  
 platform: document-processing
 control: PDF
 documentation: UG
