@@ -7,7 +7,7 @@ documentation: UG
 keywords: Assemblies
 --- 
 
-# SmartDataExtractor Features 
+# Smart Data Extractor Features 
 
 ## Extract data from a PDF document
 

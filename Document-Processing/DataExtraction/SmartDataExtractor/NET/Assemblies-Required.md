@@ -6,7 +6,7 @@ control: SmartDataExtractor
 documentation: UG
 keywords: Assemblies
 ---
-# Assemblies Required to work with SmartDataExtractor
+# Assemblies Required to work with Smart Data Extractor
 
 The following assemblies need to be referenced in your application based on the platform.
 <table>

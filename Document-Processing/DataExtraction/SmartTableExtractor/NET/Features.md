@@ -7,7 +7,7 @@ documentation: UG
 keywords: Assemblies
 --- 
 
-# SmartTableExtractor Features 
+# Smart Table Extractor Features 
 
 ## Extract Tables from a PDF Documents
 

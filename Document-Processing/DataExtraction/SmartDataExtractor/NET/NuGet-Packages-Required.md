@@ -6,9 +6,9 @@ control: SmartDataExtractor
 documentation: UG
 keywords: Assemblies
 ---
-# NuGet Packages Required for SmartDataExtractor
+# NuGet Packages Required for Smart Data Extractor
 
-## Create and modify SmartDataExtractor documents
+## Create and modify Smart Data Extractor documents
 
 To work with SmartDataExtractor, the following NuGet packages need to be installed in your application.
 

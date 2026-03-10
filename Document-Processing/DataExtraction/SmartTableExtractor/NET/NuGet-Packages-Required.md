@@ -6,9 +6,9 @@ control: PDF
 documentation: UG
 keywords: Assemblies
 ---
-# NuGet Packages Required for SmartTableExtractor
+# NuGet Packages Required for Smart Table Extractor
 
-## Create and modify SmartTableExtractor documents
+## Create and modify Smart Table Extractor documents
 
 To work with SmartTableExtractor, the following NuGet packages need to be installed in your application.
 
