@@ -14,18 +14,18 @@ The React PDF Viewer allows users to download the currently loaded PDF, includin
 
 ## Download the PDF Using the Toolbar
 
-The viewer's toolbar can include a download button when the `Toolbar` service is injected. When enabled, users can click the toolbar download icon to save the currently loaded PDF.
+The viewer's toolbar can include a download button when the [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar) service is injected. When enabled, users can click the toolbar download icon to save the currently loaded PDF.
 
 **Notes:**
 
-- Ensure `Toolbar` is included in the `Inject` services for `PdfViewerComponent` and `DownloadOption` is included in `toolbarItems`.
+- Ensure [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar) is included in the `Inject` services for [`PdfViewerComponent`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer) and `DownloadOption` is included in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettingsmodel#toolbaritems).
 - See the [toolbar items documentation](./toolbar-customization/primary-toolbar#3-show-or-hide-primary-toolbar-items) for customizing or hiding the default download icon.
 
 ![Download button in PDF Viewer](./images/download.png)
 
 ## Download an Edited PDF Programmatically
 
-You can invoke the viewer's `download()` method to trigger a download programmatically. The examples below show a standalone setup and a server-backed setup to trigger download action.
+You can invoke the viewer's [`download()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#download) method to trigger a download programmatically. The examples below show a standalone setup and a server-backed setup to trigger download action.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -106,7 +106,7 @@ root.render(<App />);
 
 ## Download a PDF with Flattened Annotations
 
-You can intercept the viewer's `downloadStart` event, cancel the default download, obtain the document as a `Blob` via `saveAsBlob()`, and flatten annotations before saving the resulting PDF.
+You can intercept the viewer's [`downloadStart`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#downloadstart) event, cancel the default download, obtain the document as a `Blob` via [`saveAsBlob()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#saveasblob), and flatten annotations before saving the resulting PDF.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}

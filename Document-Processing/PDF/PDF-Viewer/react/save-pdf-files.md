@@ -253,17 +253,17 @@ Each link below goes to a provider page with simple, step-by-step instructions a
 - [Box](./save-pdf-file/to-box-cloud-file-storage)
 - [Azure AD (auth notes)](./save-pdf-file/to-azure-active-directory)
 
-## Export PDF with or without annotations
+## Save PDF with or without annotations
 
 The React PDF Viewer allows exporting the current PDF along with annotations, or exporting a clean version without annotations. This gives flexibility depending on workflow review mode, sharing, or securing final documents.
 
-### Export PDF with annotations
+### Save PDF with annotations
 
-The PDF is exported with annotations and form fields by default. You can download a PDF using the download button in the built‑in toolbar or through the `download` API. See the [download guide](./download) for further explanation.
+The PDF is exported with annotations and form fields by default. You can download a PDF using the download button in the built‑in toolbar or through the [`download`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#download) API. See the [download guide](./download) for further explanation.
 
-### Export PDF without annotations
+### Save PDF without annotations
 
-The PDF can be exported without annotations by setting the `skipDownload` API to true in `annotationSettings`.
+The PDF can be exported without annotations by setting the [`skipDownload`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationsettingsmodel#skipdownload) API to true in [`annotationSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationsettings).
 
 {% highlight ts %}
 {% raw %}
@@ -281,9 +281,9 @@ The PDF can be exported without annotations by setting the `skipDownload` API to
 {% endraw %}
 {% endhighlight %}
 
-### Export after restoring annotations
+### Save after restoring annotations
 
-PDFs can also be exported after importing annotations. The following code example uses the `downloadStart` event to cancel the download action and import the annotations from a JSON file before downloading the PDF document.
+PDFs can also be exported after importing annotations. The following code example uses the [`downloadStart`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#downloadstart) event to cancel the download action and import the annotations from a JSON file before downloading the PDF document.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
