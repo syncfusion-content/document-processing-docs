@@ -1203,6 +1203,7 @@ Yes<br/><br/></td></tr>
     <tr><td>UserAddress field</td><td>No</td></tr>
     <tr><td>UserInitials field</td><td>No</td></tr>
     <tr><td>UserName field</td><td>No</td></tr>
+    <tr><td>CreateDate field</td><td>Yes</td></tr>
 </table>
 
 
