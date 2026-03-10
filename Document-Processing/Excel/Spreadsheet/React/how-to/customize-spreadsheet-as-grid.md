@@ -49,11 +49,11 @@ The following code example demonstrates how to customize the Spreadsheet to beha
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/spreadsheet/react/spreadsheet-as-grid-cs1/app/app.tsx %}
 {% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/spreadsheet-as-grid-cs1/app/datasource.jsx %}
+{% highlight js tabtitle="data.jsx" %}
+{% include code-snippet/spreadsheet/react/spreadsheet-as-grid-cs1/app/data.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/spreadsheet-as-grid-cs1/app/datasource.tsx %}
+{% highlight ts tabtitle="data.tsx" %}
+{% include code-snippet/spreadsheet/react/spreadsheet-as-grid-cs1/app/data.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
