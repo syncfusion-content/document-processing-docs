@@ -164,7 +164,7 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 
 The Spreadsheet component allows you to load an entire workbook by using a JSON object. This JSON is usually created on the server after converting an Excel file, but it can also be generated manually. The method reads the JSON and restores all sheets, cells, styles, formulas, formatting, and other workbook details inside the component.
 
-You can also pass optional deserialization options to the [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method to selectively ignore certain features when loading the JSON (for example, styles, formulas, number formats, images, or conditional formats). These deserialization options are optional; if they are not provided, the method restores the full workbook details by default.
+You can also pass optional deserialization options to the [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method to ignore certain features when loading the JSON (for example, styles, formulas, number formats, images, or conditional formats). These deserialization options are optional; if omitted, the method restores the workbook's full details by default.
 
 Reference: Guide to Creating the JSON Structure: https://help.syncfusion.com/document-processing/excel/spreadsheet/react/how-to/create-a-object-structure.
 
