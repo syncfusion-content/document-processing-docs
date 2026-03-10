@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-import { getDefaultData } from './data';
+import { getDefaultData } from './datasource';
 
 function App() {
   const spreadsheetRef = React.useRef(null);
@@ -16,7 +16,7 @@ function App() {
       if (!spreadsheet) return;
 
       // Get the active sheet's selected range.
-      const selectedRange = spreadsheet.getActiveSheet()?.selectedRange;
+      const selectedRange = spreadsheet.getActiveSheet().selectedRange;
       if (!selectedRange) return;
 
       // Convert the selected range into cell collection.
@@ -54,7 +54,7 @@ function App() {
     endCell = endCell || startCell;
     
     // Get the name of the active sheet.
-    const activeSheetName = spreadsheet.getActiveSheet()?.name || 'Sheet1';
+    const activeSheetName = spreadsheet.getActiveSheet().name;
 
     // Extract column and row numbers from start and end cell references.
     const [startCol, startRow] = startCell.match(/[A-Z]+|\d+/g) || [];
