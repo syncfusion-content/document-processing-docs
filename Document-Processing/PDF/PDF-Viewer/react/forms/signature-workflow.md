@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Add Digital Signature to PDF Forms in React PDF Viewer | Syncfusion
-description: Learn how to add signature fields and apply digital (PKI) signatures in the Syncfusion React PDF Viewer. Includes step‑by‑step guide, multi‑user signing notes, flattening, and workflow best practices.
-platform: React
+description: Learn how to add signature fields and apply digital (PKI) signatures in the Syncfusion React PDF Viewer.
+platform: document-processing
 control: PdfViewer
 documentation: ug
 ---
@@ -136,7 +136,7 @@ viewerRef.current?.formDesignerModule.addFormField('SignatureField', {
 
 ### Capture handwritten/typed signature in the browser
 
-When users click a signature field at runtime, the Viewer’s dialog lets them **draw**, **type**, or **upload** a handwritten signature image—no plugins required—making it ideal for quick approvals.
+When users click a signature field at runtime, the Viewer’s dialog lets them **draw**, **type**, or **upload** a handwritten signature image—no plugin required—making it ideal for quick approvals.
 
   ![Signature Image](../images/handwritten-sign.png)
 
@@ -186,7 +186,7 @@ To prevent rework, validate the PDF before enabling signatures:
   ![Reviewer using highlights and comments](../images/highlight-comments.png)
 - **Approver** – Ensures feedback is addressed and signs when finalized.  
   ![Signature Image](../images/handwritten-sign.png)
-- **Final Approver** – Verifies requirements, then [flattens](../document-handling/preprocess-pdf#flatten-form-fields--annotations) or [Lock Signautre](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature) to make signatures permanent and may restrict further edits.
+- **Final Approver** – Verifies requirements, then [flattens](../document-handling/preprocess-pdf#flatten-form-fields--annotations) or [Lock Signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature) to make signatures permanent and may restrict further edits.
 
 N> **Implementation tip:** Use the PDF Library’s `flatten` when saving to make annotations and form fields permanent after the last signature. 
 
