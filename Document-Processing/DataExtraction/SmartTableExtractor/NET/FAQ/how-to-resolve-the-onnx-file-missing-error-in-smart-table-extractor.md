@@ -1,6 +1,6 @@
 ---
-title: Extract tables from PDF and image documents in .NET | Syncfusion
-description: Syncfusion® Smart Table Extractor detects tables in PDFs, including headers, columns, and merged cells, outputting JSON.
+title: Resolve onnx file missing in smart table extractor | Syncfusion
+description: Learn how to resolve the missing ONNX file issue in Syncfusion Smart Table Extractor to ensure smooth setup and usage in .NET projects.
 platform: document-processing
 control: PDF
 documentation: UG

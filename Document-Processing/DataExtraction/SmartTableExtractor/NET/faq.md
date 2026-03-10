@@ -1,6 +1,6 @@
 ---
-title: Extract tables from PDF and image documents in .NET | Syncfusion
-description: Syncfusion® Smart Table Extractor detects tables in PDFs, including headers, columns, and merged cells, outputting JSON.
+title: FAQ for smart Table extractor| Syncfusion
+description: This page serves as the link to the FAQ section for Syncfusion Smart Table Extractor, directing users to answers for common queries and issues.
 platform: document-processing
 control: PDF
 documentation: UG
