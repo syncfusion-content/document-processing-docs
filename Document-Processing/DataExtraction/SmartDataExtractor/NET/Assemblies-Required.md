@@ -1,6 +1,6 @@
 ---
-title: Extract structured data from PDF & image Files in .NET | Syncfusion
-description: Syncfusion® Smart Data Extractor is a .NET library that extracts tables, forms, text, and images from documents, producing PDFs and JSON.
+title: Assemblies required for SmartDataExtractor | Syncfusion
+description: This section explains about the Syncfusion assemblies required to work with SmartDataExtractor.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
