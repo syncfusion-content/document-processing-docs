@@ -1,14 +1,14 @@
 ---
-title: Extract tables from PDF and image documents in .NET | Syncfusion
-description: Syncfusion® Smart Table Extractor detects tables in PDFs, including headers, columns, and merged cells, outputting JSON.
+title: NuGet Packages for Smart Table Extractor| Syncfusion
+description: Learn the NuGet packages required to use Syncfusion&reg; Smart Table Extractor in various platforms and frameworks.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 ---
-# NuGet Packages Required for SmartTableExtractor
+# NuGet Packages Required for Smart Table Extractor
 
-## Create and modify SmartTableExtractor documents
+## Create and modify Smart Table Extractor documents
 
 To work with SmartTableExtractor, the following NuGet packages need to be installed in your application.
 
