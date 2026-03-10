@@ -9,60 +9,68 @@ documentation: ug
 
 # Feature list in React Spreadsheet component
 
-The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
+The following table shows the features available in our Syncfusion EJ2 Spreadsheet.
 
-| **Features** | **Available in EJ1 Spreadsheet** | **Available in EJ2 Spreadsheet** | **Comments** |
-| --- | --- | --- | --- |
-| Ribbon | Yes | Yes | - |
-| Formula bar | Yes | Yes | - |
-| Sheet tab | Yes | Yes | - |
-| Show / Hide gridlines and header | Yes | Yes | - |
-| Scrolling | Partially | Yes | - |
-| Selection | Yes | Yes | - |
-| Editing | Yes | Yes | - |
-| Formulae | Yes | Partially | EJ2 supports limited number of [`most used formulas`](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/formulas#supported-formulas)  |
-| Named range | Yes | Partially | EJ2 Spreadsheet Named range supports only in workbook scope |
-| Data Binding | Yes | Yes | - |
-| Formatting | Yes | Yes | - |
-| Context menu | Yes | Yes | - |
-| Keyboard navigation | Yes | Yes | - |
-| Keyboard shortcuts | Yes | Yes | - |
-| Sorting | Yes | Yes | - |
-| Filtering | Yes | Yes | - |
-| Hyperlink | Yes | Yes | - |
-| Undo & redo | Yes | Yes | - |
-| Open and Save | Yes | Yes | - |
-| Resize / Autofit | Yes | Yes | - |
-| Clipboard | Yes | Yes | - |
-| Collaborative editing | No | Yes | - |
-| Wrap text | Yes | Yes | - |
-| Template | No | Yes | - |
-| Merge cells | Yes | Yes | - |
-| Show / Hide rows and columns | Yes | Yes | - |
-| Sheet customizations | Yes | Partially | Move or copy sheet is not supported in EJ2 spreadsheet. |
-| Data Validation | Yes | Yes | - |
-| Table | Yes | No | - |
-| Chart | Yes | Yes | - |
-| Image | Yes | Yes | - |
-| Conditional formatting | Yes | Yes | - |
-| Freeze Pane | Yes | Yes | - |
-| Scaling | No | No | - |
-| Print | Yes | No | - |
-| Grouping | No | No | - |
-| Autofill | Yes | No | - |
-| Auto Sum | Yes | Yes | - |
-| Format painter | Yes | No | - |
-| Cell Style | Yes | Partially | We can only customize the cell style in EJ2 Spreadsheet through API. |
-| Protection | Yes | Partially | Custom encryption is not supported in EJ2 Spreadsheet's protect workbook. |
-| Find and replace | Yes | Yes | - |
-| Drag and Drop | Yes | No | - |
-| Notes | Yes | No | - |
-| Comments | No | No | - |
-| Pivot table | Yes | No | - |
-| Sparklines | Yes | No | - |
-| Form controls | Yes | No | - |
-| Shapes | No | No | - |
-| Clear | Yes | Yes | - |
+| **Features** | **Available in EJ2 Spreadsheet** | **Comments** |
+| --- | --- | --- |
+| Ribbon | Yes | - |
+| Formula bar | Yes | - |
+| Sheet tab | Yes | - |
+| Show / Hide gridlines and header | Yes | - |
+| Scrolling | Yes | - |
+| Selection | Yes | - |
+| Editing | Yes | - |
+| Formulae | Partially | EJ2 supports limited number of [`most used formulas`](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/formulas#supported-formulas)  |
+| Named range | Yes | - |
+| Data Binding | Yes | - |
+| Cell Formatting | Yes | - |
+| Number Formatting | Yes | - |
+| Context menu | Yes | - |
+| Keyboard navigation | Yes | - |
+| Keyboard shortcuts | Yes | - |
+| Sorting | Yes | - |
+| Filtering | Yes | - |
+| Hyperlink | Yes | - |
+| Undo & redo | Yes | - |
+| Import | Yes | - |
+| Export | Yes | - |
+| Resize / Autofit | Yes | - |
+| Clipboard | Yes | - |
+| Collaborative editing | No | - |
+| Wrap text | Yes | - |
+| Template | Yes | - |
+| Merge cells | Yes | - |
+| Show / Hide rows and columns | Yes | - |
+| Sheet customizations | Yes | - |
+| Data Validation | Yes | - |
+| Table | No | - |
+| Chart | Yes | - |
+| Image | Yes | - |
+| Conditional formatting | Yes | - |
+| Freeze Pane | Yes | - |
+| Scaling | No | - |
+| Print | Yes | - |
+| Grouping | No | - |
+| Autofill | Yes | - |
+| Auto Sum | Yes | - |
+| Format painter | No | - |
+| Cell Style | Yes | - |
+| Protection | Yes | - |
+| Find and replace | Yes | - |
+| Drag and Drop | Partially | EJ2 spreadsheet supports drag and drop of images and charts |
+| Notes | Yes | - |
+| Comments | Yes | - |
+| Pivot table | No | - |
+| Sparklines | No | - |
+| Form controls | No | - |
+| Shapes | No | - |
+| Clear | Yes | - |
+| Insert / Delete rows, columns and sheets | Yes | - |
+| Sheet Visibility | Yes | - |
+| Ribbon Customization | Yes | - |
+| Theme and style options | Yes | - |
+| Accessibility | Yes | - |
+| Touch-Friendly Interactions | Yes | - |
 
 ## See Also
 
