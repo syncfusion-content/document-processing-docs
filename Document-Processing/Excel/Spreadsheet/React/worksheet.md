@@ -9,15 +9,23 @@ documentation: ug
 
 # Worksheet in React Spreadsheet component
 
-Worksheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data.
+A **Worksheet** is a collection of cells organized in rows and columns. It allows you to store, format, and manipulate data efficiently within the Spreadsheet. Each worksheet provides a structured grid where you can enter values, apply formulas, and customize formatting to manage your data.  
 
-## Add sheet
+Worksheets are part of the **Spreadsheet component**, and you can configure them using the [`sheets`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sheets) property. This property lets you define multiple worksheets, each with its own settings such as rows, columns, data, and formatting options.  
+
+By using worksheets, you can:  
+* Organize data into separate tabs for better clarity.  
+* Apply different formatting styles to each sheet.  
+* Manage formulas and calculations independently across sheets.  
+* Import or export data while maintaining sheet-level configurations.
+
+## Add a Worksheet
 
 You can dynamically add or insert a sheet by one of the following ways,
 
 * Click the `Add Sheet` button in the sheet tab. This will add a new empty sheet next to current active sheet.
 * Right-click on the sheet tab, and then select `Insert` option from the context menu to insert a new empty sheet before the current active sheet.
-* Using [`insertSheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at your desired index.
+* Using [`insertSheet()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at your desired index.
 
 The following code example shows the insert sheet operation in spreadsheet.
 
@@ -38,9 +46,9 @@ The following code example shows the insert sheet operation in spreadsheet.
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/insert-sheet-cs1" %}
 
-### Insert a sheet programmatically and make it active sheet 
+### Insert a sheet programmatically and make it active sheet
 
-A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#goto) method.
+A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#goto) method.
 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
@@ -55,12 +63,13 @@ The following code example shows how to insert a sheet programmatically and make
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/insert-sheet-change-active-sheet-cs1" %}
 
-## Delete sheet
+## Delete a Worksheet
 
-The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet by the following way,
+The Spreadsheet supports removing an existing worksheet. You can delete a sheet in the following ways:
 
-* Right-click on the sheet tab, and then select `Delete` option from context menu.
-* Using [`delete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#delete ) method to delete the sheets.
+* Right-click on the sheet tab, and then select the **Delete** option from the context menu.
+* Use the [`delete()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete) method to remove sheets programmatically.  
+* Note: You cannot delete a worksheet if only one sheet exists in the workbook.
 
 ## Rename sheet
 
@@ -80,7 +89,7 @@ By default, the row and column headers are visible in worksheets. You can dynami
 Gridlines act as a border like appearance of cells. They are used to distinguish cells on the worksheet. You can dynamically show or hide gridlines by using one of the following ways,
 
 * Switch to `View` tab, and then select `Hide Gridlines` option to hide the gridlines in worksheet.
-* Set `showGridLines` property in `sheets` as `true` or `false` to show or hide the gridlines at initial load. By default, the `showGridLines` property is enabled in each worksheet.
+* Set `showGridLines` property in `sheets` as `true` or `false` to show or hide the gridlines at initial load. By default, the [showGridLines](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sheet#showgridlines) property is enabled in each worksheet.
 
 The following code example shows the headers and gridlines operation in spreadsheet.
 

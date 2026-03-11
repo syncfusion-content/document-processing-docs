@@ -9,13 +9,29 @@ documentation: ug
 
 # Save Excel Files in Syncfusion React Spreadsheet
 
-When exporting an Excel file from the React Spreadsheet component, the process is handled through a streamlined server‑side workflow. The Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
+Exporting Excel files from the React Spreadsheet component is handled through a `server-side workflow` to ensure accuracy and performance.
 
-Once generated, this JSON workbook is sent to the server, where the [`Syncfusion.EJ2.Spreadsheet library`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) uses [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview) to convert the JSON data into a fully formatted Excel file. During this process, the JSON workbook is parsed and its contents are mapped to an XlsIO Workbook instance, ensuring that all data, styles, formulas, and other Spreadsheet features are accurately preserved.
+**Client Side**
+* The Spreadsheet content in the browser is serialized into a **JSON workbook**.  
+* This JSON includes data, formulas, formatting, styles, and sheet configuration.  
 
-Since the server is responsible for generating the final Excel file, the total export time can vary depending on the workbook’s complexity. Factors such as the level of formatting, styles and the use of advanced features like formulas or conditional formatting can influence processing time. After the file is successfully generated, it is sent back to the client for download.
+**Server Side**
+* The JSON workbook is sent to the server.  
+* The [`Syncfusion.EJ2.Spreadsheet.AspNet.Core`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library, built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), converts the JSON into a fully formatted Excel file.  
+* The JSON is parsed and mapped to an **XlsIO Workbook instance**, preserving all features.  
 
-To enable saving Excel files, set the [`allowSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowsave) property to **true** and specify the service URL using the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property. When a save action is triggered, the control sends the spreadsheet model to this endpoint, where it is processed and returned as a downloadable Excel file.
+**Download**
+* The server generates the final Excel file.  
+* The file is returned to the client for download.  
+
+### Performance Notes
+* Export time depends on workbook complexity.  
+* Heavy formatting, advanced formulas, or conditional formatting may increase processing time.  
+
+### Enabling Save Functionality
+* Set the [`allowSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowsave) property to `true`.  
+* Specify the service endpoint using the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property.  
+* When a save action is triggered, the Spreadsheet sends the JSON model to this endpoint, where it is processed and returned as a downloadable Excel file.
 
 For a quick walkthrough on how the save functionality works, refer to the following video:
 {% youtube "https://www.youtube.com/watch?v=MpwiXmL1Z_o" %}
@@ -196,13 +212,29 @@ fetch('https://localhost:{port number}/Home/Save')
 
 ### Save Excel files with AWS Lambda
 
-Before proceeding with the save process, you should deploy the spreadsheet open/save web API service in AWS Lambda. To host the open/save web service in the AWS Lambda environment, please refer to the following KB documentation.
-
+To save Excel files using AWS Lambda, you first need to deploy the **spreadsheet open/save web API service** in AWS Lambda.  
+For detailed steps, refer to this KB article:  
 [How to deploy a spreadsheet open and save web API service to AWS Lambda](https://support.syncfusion.com/kb/article/17184/how-to-deploy-a-spreadsheet-open-and-save-web-api-service-to-aws-lambda)
 
-After deployment, you will get the AWS service URL for the open and save actions. Before saving the Excel file with this hosted save URL, you need to prevent the default save action to avoid getting a corrupted excel file on the client end. The save service returns the file stream as a result to the client, which can cause the file to become corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event. After that, convert the spreadsheet data into JSON format using the [saveAsJson](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveasjson) method in the `beforeSave` event and send it to the save service endpoint URL using a fetch request.
+**Deploy the service**  
+After deployment, you’ll receive an AWS service URL for both open and save actions.
 
-On the server side, the save service will take the received JSON data, pass it to the workbook `Save` method, and return the result as a base64 string. The fetch success callback will receive the Excel file in base64 string format on the client side. Finally, you can then convert the base64 string back to a file on the client end to obtain a non-corrupted Excel file.
+**Prevent default save action**  
+By default, the save service returns the file stream directly to the client, which can cause corruption.  
+To avoid this, set `args.cancel = true` in the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event.
+
+**Handle the file on client side**  
+* In the `beforeSave` event, convert the spreadsheet data into **JSON format** using the [`saveAsJson`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveasjson) method.  
+* Send this JSON data to the AWS save service endpoint using a `fetch` request.
+
+**Process the file on server side**  
+* The save service receives the JSON data.  
+* It passes the data to the workbook `Save` method.  
+* The service returns the result as a **base64 string**.
+
+**Render on client side**  
+* The fetch success callback receives the Excel file in base64 string format.  
+* Convert the base64 string back into a file on the client side to obtain a non-corrupted Excel file.
 
 The following code example shows how to save an Excel file using a hosted web service in AWS Lambda, as mentioned above.
 

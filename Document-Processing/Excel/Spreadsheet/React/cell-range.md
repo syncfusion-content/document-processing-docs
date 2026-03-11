@@ -9,9 +9,9 @@ documentation: ug
 
 # Cell range in React Spreadsheet component
 
-A group of cells in a sheet is known as cell range.
+A **cell range** is a group of cells in a sheet. It allows you to work with multiple cells together for operations such as formatting, formulas, and data manipulation.  
 
-To get start quickly with Cell Range, you can check on this video:
+To get started quickly with `Cell Range`, you can check out this video:
 
 {% youtube "https://www.youtube.com/watch?v=izgXkfzUMBQ" %}
 
@@ -185,7 +185,7 @@ The following features have some limitations in Autofill:
 
 ## Clear
 
-Clear feature helps you to clear the cell contents (formulas and data), formats (including number formats, conditional formats, and borders) in a spreadsheet. When you apply clear all, both the contents and the formats will be cleared simultaneously.
+The **Clear** feature allows you to remove cell contents (formulas and data) and formats (including number formats, conditional formats, and borders) in a spreadsheet. When you apply **Clear All**, both the contents and the formats are removed simultaneously.
 
 ### Apply Clear Feature
 
@@ -205,7 +205,11 @@ Clear has the following types in the spreadsheet,
 
 ### Methods
 
-Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method. The [clear](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
+You can clear cell contents and formats in the Spreadsheet by using the [`clear()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method. The `clear()` method accepts two parameters:  
+* `type` – specifies the type of clear operation (`Clear All`, `Clear Formats`, `Clear Contents`, or `Clear Hyperlinks`).  
+* `range` – specifies the cell or range of cells to clear.  
+
+The following code example demonstrates how to clear cell contents and formats in a button click event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
