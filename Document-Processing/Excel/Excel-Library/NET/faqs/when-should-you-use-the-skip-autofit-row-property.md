@@ -1,12 +1,12 @@
 ---
-title: FAQ: When Should You Use the SkipAutoFitRow Property?
-description: Explains when to use the SkipAutoFitRow property in XlsIO and shows sample usage.
+title: When should you use the SkipAutoFitRow property?
+description: This page explains when to use the SkipAutoFitRow property in yncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# When Should You Use the SkipAutoFitRow Property?
+# When should you use the SkipAutoFitRow property?
 
 XlsIO invokes `IWorksheet.AutofitRow` when row height appears incorrect while accessing row height. The row height calculated by XlsIO's autofit is not guaranteed to match Microsoft Excel's autofit results for most fonts; it does match Excel's results only for `Calibri` and `Tahoma`.
 
