@@ -136,11 +136,11 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
 
 ### Save Workbook as JSON
 
-The Spreadsheet component allows you to save an entire workbook as a JSON object. This JSON typically contains workbook details such as sheets, cell values, formulas, styles, and formatting.
+Our Spreadsheet component allows you to export an entire workbook as a JSON object. This JSON output includes all workbook details such as sheets, cell values, formulas, styles, and formatting.
 
-You can optionally pass serialization options to the [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to ignore certain features when exporting the workbook as JSON — for example, styles, formulas, number formats, images, or conditional formats. These serialization options are optional; if omitted, the method restores the workbook's full details by default.
+You can optionally pass serialization options to the [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to exclude specific features from the exported JSON. For example, you can choose to ignore styles, formulas, number formats, images, or conditional formatting. These options are fully optional—if they are not provided, the method exports the workbook with all details preserved by default.
 
-The following code example shows how to save workbook as JSON data from the Spreadsheet component.
+The following example demonstrates how to save a workbook as JSON from the Spreadsheet component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
