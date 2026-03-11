@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Custom Bookmarks in .NET MAUI PDF Viewer Control | Syncfusion
-description: Discover how to navigate using custom bookmark navigation in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+title: Custom Bookmarks in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to add, remove, and navigate using custom bookmarks in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Custom Bookmarks in .NET MAUI PDF Viewer
@@ -284,3 +285,8 @@ if (customBookmark != null)
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Document Outline](../document-outline)
+- [Page Navigation](../page-navigation)
+- [Hyperlink Navigation](../hyperlink-navigation)

@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Migrate from Xamarin SfPdfViewer to .NET MAUI SfPdfViewer | Syncfusion
-description: Learn here all about migrating from Syncfusion<sup>®</sup> Xamarin SfPdfViewer to Syncfusion<sup>®</sup> .NET MAUI SfPdfViewer control and more.
+description: Learn how to migrate from the Syncfusion<sup>®</sup> Xamarin SfPdfViewer to the Syncfusion<sup>®</sup> .NET MAUI SfPdfViewer control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Migrate from Xamarin.Forms SfPdfViewer to .NET MAUI SfPdfViewer
 
-To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) to [.NET MAUI SfPdfViewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) easier, we kept most of the APIs from Xamarin SfPdfViewer in MAUI SfPdfViewer. However, to maintain the consistency of API naming in MAUI SfPdfViewer, we renamed some of the APIs. The APIs that have been changed in MAUI SfPdfViewer from Xamarin SfPdfViewer are detailed as follows.
+To simplify migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) to [.NET MAUI SfPdfViewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer), most APIs from Xamarin SfPdfViewer are retained in the MAUI SfPdfViewer. However, some APIs have been renamed to maintain consistency with MAUI API naming conventions. The APIs that have changed are listed below.
 
 ## Namespaces 
 
@@ -587,3 +587,7 @@ For detailed implementation guidance, please refer to the following API document
 <td>Provides data for the {{'[AnnotationAdded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationAdded)'| markdownify}}, {{'[AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected)'| markdownify}}, {{'[AnnotationDeselected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationDeselected)'| markdownify}}, {{'[AnnotationEdited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationEdited)'| markdownify}}, {{'[AnnotationRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationRemoved)'| markdownify}} events.</td>
 </tr>
 </table>
+
+## See Also
+- [Getting Started](../getting-started)
+- [Overview](../overview)
