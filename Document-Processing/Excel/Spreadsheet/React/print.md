@@ -57,8 +57,28 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/print-cs3" %}
 
+## Print by Selected Range
+
+The spreadsheet allows printing of a specific range of cells from the active worksheet by using the [`print()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#print) method. By setting the [`type`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#type) property to `PrintRange`, only the currently selected cell range will be included in the print output.
+
+It is important to ensure that a cell range is selected in the worksheet before calling the `print()` method.
+
+The `PrintRange` option uses the active selection in the worksheet to determine the exact area to be printed.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/print-cs4/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/print-cs4/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/print-cs4" %}
+
 ## Limitations
 
 * When printing the document, changing the page orientation to landscape is not supported in both the `print` method and print preview dialog of the web browser.
 * The styles provided for the data validation functionality will not be available in the printed copy of the document.
 * The content added to the cell templates, such as HTML elements, Syncfusion<sup style="font-size:70%">&reg;</sup> controls, and others, will not be available in the printed copy of the document.
+* When selecting multiple ranges for printing, only the first selected range will be printed, not all ranges.
