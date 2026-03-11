@@ -122,11 +122,9 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().																																	 
-
 ## Create Ink with Multiple Traces 
 
-The following code example illustrating how to create an Ink with Multiple Traces (strokes) in a Word document. 
+The following code example illustrating how to create an Ink with Multiple Traces (strokes) in a Word document. 
 
 {% tabs %}
 
@@ -360,8 +358,6 @@ End Function
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().	
-
 ## Modify Ink
 
 You can modify the appearance of Ink by changing the trace ink effects, color, size, points.  
@@ -431,8 +427,6 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().	
-
 ### Modify Ink Color
 
 The following code example demonstrates how to customize the Ink Color. 
@@ -499,8 +493,6 @@ document.Close()
 {% endhighlight %}
 
 {% endtabs %}
-
-You can download a complete working sample from [GitHub]().
 
 ### Modify Ink Thickness
 
@@ -569,8 +561,6 @@ document.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub]().
-
 ### Modify Ink Points 
 
 The following code example demonstrates how to customize the Ink Points. 
@@ -637,9 +627,6 @@ document.Close()
 {% endhighlight %}
 
 {% endtabs %}
-
-You can download a complete working sample from [GitHub]().
-
 
 ## Remove Ink
 
@@ -719,8 +706,7 @@ document.Close()
 {% endhighlight %}
 
 {% endtabs %}
-
-You can download a complete working sample from [GitHub]().																																	 																																			  
+																																						  
 ## Limitations
 
 The .NET Word Library (DocIO) has the following limitations when creating Ink programmatically or processing Ink from an existing Word document.
@@ -741,7 +727,10 @@ During Word-to-PDF and Word-to-Image conversions, Syncfusion Word Library uses f
 
 **To resolve this**, save the document using DocIO first. Then, open the saved document in Microsoft Word and save it again. Finally, convert it to PDF or Image using DocIO. This process regenerates the required Ink fallback images, ensuring accurate visual output.
 
-## Online Demo
+## Frequently Asked Questions
 
-* Explore how to create a Word document with Ink using the .NET Word Library (DocIO) in a live demo [here]().
-* Explore how to edit a Word document with Ink using the .NET Word Library (DocIO) in a live demo [here]().
+* [What is Ink Trace?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#what-is-ink-trace)
+* [How Ink Width and Height Work](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-ink-width-and-height-work)
+* [How Trace Points Are Calculated?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-trace-points-are-calculated)
+* [Example: Triangle Ink Trace Points](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#example:-triangle-ink-trace-points)
+* [How to Set Stroke Thickness?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-to-set-stroke-thickness)

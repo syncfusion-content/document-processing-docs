@@ -449,6 +449,15 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
+<tr>
+<td>
+Ink elements<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
+DOCX format only.<br/><br/></td><td>
+DOCX format only.<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 </tbody>
 </table>
 
