@@ -1,15 +1,15 @@
 ---
-title: How Syncfusion manages fonts during Office to PDF and image conversions | Syncfusion
+title: Syncfusion font handling in Office-to-PDF and image conversions
 description: Learn how Syncfusion Document Processing handles font management during Office to PDF/Image conversions and PDF processing workflows.
 platform: document-processing
 documentation: UG
 ---
 
-# How does Syncfusion Document Processing manage fonts during Office to PDF/Image conversions and PDF processing workflows?
+# How Syncfusion manages fonts in Office-to-PDF and image conversions?
 
 ## Overview 
 
-Font creation is a primary cause of excessive memory consumption and performance degradation during Office to PDF/Image conversions and PDF processing workflows. This problem is particularly pronounced in multithreaded web applications where multiple users perform concurrent operations across different threads or browser tabs. 
+Font creation is a primary cause of excessive memory consumption and performance degradation during Office to PDF/Image conversions and PDF processing workflows. This problem is particularly pronounced in multi-threaded web applications where multiple users perform concurrent operations across different threads or browser tabs. 
 
 To address this challenge, Syncfusion Document Processing libraries introduce the **FontManager** class, which provides centralized font management shared across all threads and conversion libraries. This approach eliminates duplicate font objects and significantly reduces memory overhead. 
 
@@ -55,7 +55,7 @@ FontManager optimizes memory usage across the following Office to PDF/Image conv
 * PDF/A conformance 
 * OCR text extraction 
 
-N> FontManager automatically manages fonts across all these conversion types, whether you're processing a single document or handling thousands of concurrent conversions in a multithreaded environment.
+N> FontManager automatically manages fonts across all these conversion types, whether you're processing a single document or handling thousands of concurrent conversions in a multi-threaded environment.
 
 ## Configuring Automatic Font Cleanup
 
@@ -181,7 +181,7 @@ A: Call it during application shutdown, after batch processing, or when you need
 
 **Q: Is FontManager thread-safe?**   
 
-A: Yes, FontManager is designed for multithreaded environments and allows safe font reuse across multiple threads. 
+A: Yes, FontManager is designed for multi-threaded environments and allows safe font reuse across multiple threads. 
 
 **Q: Will FontManager affect my existing document processing code?**   
 
