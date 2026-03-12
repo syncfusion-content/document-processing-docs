@@ -78,10 +78,7 @@ The following code example shows the options for inserting columns in the spread
 Delete support provides an option for deleting the rows and columns in the spreadsheet. Use [`allowDelete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowdelete) property to enable or disable the delete option in Spreadsheet.
 
 The rows and columns can be deleted dynamically in the following ways,
-<<<<<<< HEAD
-=======
 
->>>>>>> ac8d8f652a4421048926ebcba14ea685d674a684
 * Using [`delete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete) method, you can delete the loaded rows and columns.
 * Using context menu, you can delete the selected rows and columns.
 
