@@ -33,7 +33,7 @@ It allows you to keep a certain number of rows visible while scrolling verticall
 In the active spreadsheet, select the cell where you want to create frozen rows. Frozen rows can be done in any one of the following ways:
 
 * Select the View tab in the Ribbon toolbar and choose the `Freeze Rows` item.
-* You can specify the number of frozen rows using the [frozenRows](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sheet#frozenrows) property inside the `Sheet` property.
+* You can specify the number of frozen rows using the [frozenRows](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sheet#frozenrows) property inside the [Sheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sheet) property.
 
 ## FrozenColumns
 
@@ -44,7 +44,7 @@ It allows you to keep a certain number of columns visible while scrolling horizo
 In the active spreadsheet, select the cell where you want to create frozen columns. Frozen columns can be done in any one of the following ways:
 
 * Select the View tab in the Ribbon toolbar and choose the `Freeze Columns` item.
-* You can specify the number of frozen columns using the [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sheet#frozencolumns) property inside the `Sheet` property.
+* You can specify the number of frozen columns using the [frozenColumns](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sheet#frozencolumns) property inside the [Sheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sheet) property.
 
 In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as ‘2’. Hence, the two columns on the left and the top two rows are frozen.
 

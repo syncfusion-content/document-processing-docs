@@ -28,7 +28,7 @@ Previously, although you could import culture-based Excel files into the Spreads
 
 When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [listSeparator](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#listseparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#listseparator) property will be updated based on the culture of the launched import/export service.
 
-In the example below, the Spreadsheet component is rendered with the **German culture (`de`)**. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
+In the example below, the Spreadsheet component is rendered with the **German culture**. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
@@ -77,7 +77,7 @@ The following code example shows an unsupported formula in the spreadsheet.
 
 Second, if you want to directly compute any formula or expression, you can use the [computeExpression()](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
 
-The following code example shows how to use `computeExpression` method in the spreadsheet.
+The following code example shows how to use `computeExpression()` method in the spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

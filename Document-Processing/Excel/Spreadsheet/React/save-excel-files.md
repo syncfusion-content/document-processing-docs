@@ -41,13 +41,17 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/do
 
 | **Parameter** | **Type** | **Description** |
 | ----- | ----- | ----- |
-| url | string |  Specifies the save url.  |
-| fileName | string | Specifies the file name. |
-| saveType | SaveType | Specifies the saveType like Xlsx, Xls, Csv and Pdf. |
-| customParams | object | Passing the custom parameters from client to server while performing save operation. |
-| isFullPost | boolean | It sends the form data from client to server, when set to true. It fetches the data from client to server and returns the data from server to client, when set to false. |
-| needBlobData | boolean | You can get the blob data if set to true. |
-| cancel | boolean | To prevent the save operations. |
+| [url](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#url) | string |  Specifies the save url.  |
+| [fileName](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#filename) | string | Specifies the file name. |
+| [saveType](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#savetype) | SaveType | Specifies the saveType like Xlsx, Xls, Csv and Pdf. |
+| [customParams](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#customparams) | object | Passing the custom parameters from client to server while performing save operation. |
+| [isFullPost](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#isfullpost) | boolean | It sends the form data from client to server, when set to true. It fetches the data from client to server and returns the data from server to client, when set to false. |
+| [needBlobData](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#needblobdata) | boolean | You can get the blob data if set to true. |
+| [cancel](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#cancel) | boolean | To prevent the save operations. |
+| [autoDetectFormat](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#autodetectformat) | boolean | Automatically detects the number format for cells, if enabled. |
+| [jsonConfig](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#jsonconfig) | SerializationOptions | Defines the serialization options applied when saving as an Excel file. |
+| [pdfLayoutSettings](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#pdflayoutsettings) | pdfLayoutSettings | Specifies the layout settings used when saving as a PDF. |
+
 
 > * Use `Ctrl + S` keyboard shortcut to save the Spreadsheet data as Excel file.
 
@@ -315,17 +319,17 @@ spreadsheet.saveAsJson({ onlyValues: true });
 
 | Options | Description |
 | ----- | ----- |
-| onlyValues |  If **true**, includes only the cell values in the JSON output. |
-| ignoreStyle | If **true**, excludes styles from the JSON output. |
-| ignoreFormula | If **true**, excludes formulas from the JSON output. |
-| ignoreFormat | If **true**, excludes number formats from the JSON output. |
-| ignoreConditionalFormat | If **true**, excludes conditional formatting from the JSON output. |
-| ignoreValidation | If **true**, excludes data validation rules from the JSON output. |
-| ignoreFreezePane | If **true**, excludes freeze panes from the JSON output. |
-| ignoreWrap | If **true**, excludes text wrapping settings from the JSON output. |
-| ignoreChart | If **true**, excludes charts from the JSON output. |
-| ignoreImage | If **true**, excludes images from the JSON output. |
-| ignoreNote | If **true**, excludes notes from the JSON output. |
+| [onlyValues](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#onlyvalues) |  If **true**, includes only the cell values in the JSON output. |
+| [ignoreStyle](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorestyle) | If **true**, excludes styles from the JSON output. |
+| [ignoreFormula](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignoreformula) | If **true**, excludes formulas from the JSON output. |
+| [ignoreFormat](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignoreformat) | If **true**, excludes number formats from the JSON output. |
+| [ignoreConditionalFormat](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignoreconditionalformat) | If **true**, excludes conditional formatting from the JSON output. |
+| [ignoreValidation](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorevalidation) | If **true**, excludes data validation rules from the JSON output. |
+| [ignoreFreezePane](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorefreezepane) | If **true**, excludes freeze panes from the JSON output. |
+| [ignoreWrap](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorewrap) | If **true**, excludes text wrapping settings from the JSON output. |
+| [ignoreChart](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorechart) | If **true**, excludes charts from the JSON output. |
+| [ignoreImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignoreimage) | If **true**, excludes images from the JSON output. |
+| [ignoreNote](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorenote) | If **true**, excludes notes from the JSON output. |
 
 The following code snippet demonstrates how to configure the serialization options and pass them as arguments to the `saveAsJson` method:
 

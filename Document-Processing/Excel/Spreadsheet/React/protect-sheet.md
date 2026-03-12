@@ -197,7 +197,7 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/local-data-binding-cs3" %}
 
-The following example shows `Protect Workbook` by using the [`password`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#password) property in the Spreadsheet control. To unprotect the workbook, click the unprotect workbook button in the data tab and provide the password as syncfusion<sup style="font-size:70%">&reg;</sup> in the dialog box.
+The following example shows `Protect Workbook` by using the [`password`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#password) property in the Spreadsheet control. To unprotect the workbook, click the unprotect workbook button in the data tab and provide the password as syncfusion<sup style="font-size:70%">&reg;</sup> in the dialog box.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

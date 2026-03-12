@@ -130,7 +130,7 @@ You can use `WebApiAdaptor` to bind the spreadsheet with a Web API created using
 
 ## Cell data binding
 
-The Spreadsheet control can bind the data to individual cell in a sheet using the `value` property.
+The Spreadsheet control can bind the data to individual cell in a sheet using the [value](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#value) property.
 
 Refer to the following code example for cell data binding.
 
@@ -161,10 +161,10 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 | Property | Type | Description |
 |-----|-----|-------|
-| action | string | Indicates the type of action such as `edit`, `add`, and `delete` performed in the datasource range. |
-| data | object[] | Modified data for `edit` action; New data for `add` action; Deleted data for `delete` action. |
-| rangeIndex | number | Specifies the range index of the datasource. |
-| sheetIndex | number | Specifies the sheet index of the datasource. |
+| [action](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/datasourcechangedeventargs#action) | string | Indicates the type of action such as `edit`, `add`, and `delete` performed in the datasource range. |
+| [data](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/datasourcechangedeventargs#data) | object[] | Modified data for `edit` action; New data for `add` action; Deleted data for `delete` action. |
+| [rangeIndex](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/datasourcechangedeventargs#rangeindex) | number | Specifies the range index of the datasource. |
+| [sheetIndex](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/datasourcechangedeventargs#sheetindex) | number | Specifies the sheet index of the datasource. |
 
 > For `add` action, the value for all the fields will be `null` in the data. In the case that you do not want the primary key field to be null which needs to be updated in the backend service, you can use `edit` action after updating the primary key field to update in the backend service. <br><br>
 > For inserting a row at the end of the datasource range, you should insert a row below at the end of the range to trigger the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#datasourcechanged) event with action `add`.

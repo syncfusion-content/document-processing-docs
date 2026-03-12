@@ -23,7 +23,7 @@ You can start editing by one of the following ways,
 * Press `F2` key to edit the active cell.
 * Use formula bar to perform editing.
 * Use `BACKSPACE` or `SPACE` key to clear the cell content and start the edit mode.
-* Using the [`startEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#startedit) method.
+* Using the [`startEdit()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#startedit) method.
 
 ## Save Cell changes
 
@@ -31,7 +31,7 @@ If the cell is in editable state, you can save the edited cell by one of the fol
 
 * Perform mouse click on any other cell rather than the current editing cell.
 * Press `Enter` or `Tab` keys to save the edited cell content.
-* Using the [`endEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#endedit) method.
+* Using the [`endEdit()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#endedit) method.
 
 ## Cancel Cell changes
 

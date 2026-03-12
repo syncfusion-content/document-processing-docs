@@ -68,5 +68,5 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 
 ## Quick Lookup
 
-- `allowPrint` - enables or disables Spreadsheet printing (default: true).
+- `allowPrint` - enables or disables Spreadsheet printing (default as `true`).
 - `print(printOptions?)` - prints the active sheet or the entire workbook with customizable options.

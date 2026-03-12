@@ -350,17 +350,17 @@ spreadsheet.openFromJson({ file: file }, { ignoreStyle: true });
 
 | Options | Description |
 | ----- | ----- |
-| onlyValues |  If **true**, only the cell values will be loaded. |
-| ignoreStyle | If **true**, styles will be excluded when loading the JSON data. |
-| ignoreFormula | If **true**, formulas will be excluded when loading the JSON data. |
-| ignoreFormat | If **true**, number formats will be excluded when loading the JSON data. |
-| ignoreConditionalFormat | If **true**, conditional formatting will be excluded when loading the JSON data. |
-| ignoreValidation | If **true**, data validation rules will be excluded when loading the JSON data. |
-| ignoreFreezePane | If **true**, freeze panes will be excluded when loading the JSON data. |
-| ignoreWrap | If **true**, text wrapping settings will be excluded when loading the JSON data. |
-| ignoreChart | If **true**, charts will be excluded when loading the JSON data. |
-| ignoreImage | If **true**, images will be excluded when loading the JSON data. |
-| ignoreNote | If **true**, notes will be excluded when loading the JSON data. |
+| [onlyValues](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#onlyvalues) |  If **true**, only the cell values will be loaded. |
+| [ignoreStyle](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorestyle) | If **true**, styles will be excluded when loading the JSON data. |
+| [ignoreFormula](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignoreformula) | If **true**, formulas will be excluded when loading the JSON data. |
+| [ignoreFormat](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignoreformat) | If **true**, number formats will be excluded when loading the JSON data. |
+| [ignoreConditionalFormat](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignoreconditionalformat) | If **true**, conditional formatting will be excluded when loading the JSON data. |
+| [ignoreValidation](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorevalidation) | If **true**, data validation rules will be excluded when loading the JSON data. |
+| [ignoreFreezePane](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorefreezepane) | If **true**, freeze panes will be excluded when loading the JSON data. |
+| [ignoreWrap](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorewrap) | If **true**, text wrapping settings will be excluded when loading the JSON data. |
+| [ignoreChart](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorechart) | If **true**, charts will be excluded when loading the JSON data. |
+| [ignoreImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignoreimage) | If **true**, images will be excluded when loading the JSON data. |
+| [ignoreNote](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorenote) | If **true**, notes will be excluded when loading the JSON data. |
 
 The following code snippet demonstrates how to configure the deserialization options and pass them as arguments to the openFromJson method:
 

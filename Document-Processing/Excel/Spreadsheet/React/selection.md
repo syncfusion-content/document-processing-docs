@@ -44,7 +44,7 @@ You can perform row selection in any of the following ways,
 * To select non-adjacent rows, hold `Ctrl` and select the row header.
 * You can also use the [selectRange()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method for row selection.
 
-The following sample shows the row selection in the spreadsheet, here selecting the 5th row using the `selectRange` method.
+The following sample shows the row selection in the spreadsheet, here selecting the 5th row using the `selectRange()` method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -76,7 +76,7 @@ You can perform column selection in any of the following ways,
 * To select non-adjacent columns, hold `Ctrl` and select the column header.
 * You can also use the [selectRange()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method for column selection.
 
-The following sample shows the column selection in the spreadsheet, here selecting the 3rd column using  the `selectRange` method.
+The following sample shows the column selection in the spreadsheet, here selecting the 3rd column using  the `selectRange()` method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
