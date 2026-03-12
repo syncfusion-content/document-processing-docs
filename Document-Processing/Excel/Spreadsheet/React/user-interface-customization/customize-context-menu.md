@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to customize the right‑click context menu with custom actions in the React Spreadsheet component | Syncfusion
+title: Customize the context menu with custom actions in the React Spreadsheet component | Syncfusion
 description: Learn here how to customize the context menu by adding or hiding items in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing

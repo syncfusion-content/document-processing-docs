@@ -12,7 +12,7 @@ function App() {
   const hideInsertTab = () => {
     const spreadsheet = spreadsheetRef.current;
     if (!spreadsheet) return;
-    spreadsheet.hideRibbonTabs(['Insert']); // Hide "Insert" tab
+    spreadsheet.hideRibbonTabs(['Insert']);
   };
 
   const showInsertTab = () => {

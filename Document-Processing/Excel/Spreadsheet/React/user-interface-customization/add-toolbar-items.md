@@ -9,11 +9,13 @@ documentation: ug
 
 # Add Toolbar Items
 
-The Syncfusion React Spreadsheet component supports adding your own toolbar items to the ribbon.
+Our Syncfusion React Spreadsheet component allows you to extend the Ribbon by adding your own toolbar items. These items can perform custom actions or run your own functions helping you build a flexible toolbar.
 
-These items can perform custom actions or run your own functions helping you build a flexible toolbar.
+To add these items, the component provides the [addToolbarItems](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#addtoolbaritems) method, which lets you insert new tools into a chosen tab. This makes it simple to include your own actions.
 
-The following code sample shows how to add or remove toolbar items.
+You can add items to an existing tab or you can include them as part of a new Ribbon tab.
+
+The following code sample shows how to add toolbar items.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
