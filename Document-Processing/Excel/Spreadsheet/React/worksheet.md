@@ -19,7 +19,7 @@ By using worksheets, you can:
 * Manage formulas and calculations independently across sheets.  
 * Import or export data while maintaining sheet-level configurations.
 
-## Add a Worksheet
+## Add sheet
 
 You can dynamically add or insert a sheet by one of the following ways,
 
@@ -63,7 +63,7 @@ The following code example shows how to insert a sheet programmatically and make
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/insert-sheet-change-active-sheet-cs1" %}
 
-## Delete a Worksheet
+## Delete sheet
 
 The Spreadsheet supports removing an existing worksheet. You can delete a sheet in the following ways:
 

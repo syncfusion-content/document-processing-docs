@@ -24,7 +24,7 @@ You can insert an image by using one of the following ways:
 * Select the **Insert** tab in the Ribbon toolbar, and then choose the **Image** option.  
 * Use the `insertImage()` method programmatically.
 
-The available parameters in the `insertImage()` method are:
+The available parameters in the `insertImage()` method are,
 
 | Parameter | Type | Description |
 |-----|------|----|

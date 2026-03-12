@@ -11,14 +11,14 @@ documentation: ug
 
 Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
 
-## How to Apply Formulas
+## Usage
 
 You can set formula for a cell in the following ways,
 
-* Using the [formula](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#formula) property from `cell`, you can set the formula or expression to each cell at initial load.
+* Using the `formula` property from `cell`, you can set the formula or expression to each cell at initial load.
 * Set the formula or expression through data binding.
 * You can set formula for a cell by [`editing`](./editing).
-* Using the [`updateCell()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updatecell) method, you can set or update the cell formula.
+* Using the [`updateCell`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updatecell) method, you can set or update the cell formula.
 
 ## Culture-Specific Formula Separators
 
@@ -26,7 +26,7 @@ In earlier versions, even though culture-based Excel files could be imported int
 
 > Before importing culture-based Excel files, make sure the Spreadsheet component is rendered with the matching culture. Also, start the import/export services with the same culture to ensure compatibility.
 
-When loading spreadsheet data that uses culture-based formula argument separators (via cell data binding, local/remote data, or JSON), set the [listSeparator](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#listseparator) property to the culture-specific list separator. Note that when importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#listseparator) property will automatically update based on the culture of the import/export service.
+When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [listSeparator](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#listseparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#listseparator) property will be updated based on the culture of the launched import/export service.
 
 In the example below, the Spreadsheet component is rendered with the **German culture**. The example also shows how to set the culture-based argument separator and use culture-based formatted numeric values as arguments in formulas.
 
@@ -54,7 +54,7 @@ In the example below, the Spreadsheet component is rendered with the **German cu
 
 The Spreadsheet includes a set of built-in formulas. For convenience, you can find the list of supported formulas [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/formulas#supported-formulas).
 
-You can also define and use formulas that are not supported by default, known as **user defined/custom formulas**, by using the [addCustomFunction()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#addcustomfunction) function. Keep in mind that a user defined/custom formula should return only a single value. If the formula returns an array, updating adjacent cell values will take more time and may affect performance.
+You can also define and use formulas that are not supported by default, known as **user defined/custom formulas**, by using the [addCustomFunction](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#addcustomfunction) function. Keep in mind that a user defined/custom formula should return only a single value. If the formula returns an array, updating adjacent cell values will take more time and may affect performance.
 
 The following code example shows how to use an unsupported formula in the Spreadsheet.
 
@@ -75,7 +75,7 @@ The following code example shows how to use an unsupported formula in the Spread
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/formula-cs1" %}
 
-Second, if you want to directly compute any formula or expression, you can use the [computeExpression()](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
+Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
 
 The following code example shows how to use `computeExpression` method in the spreadsheet.
 
@@ -96,17 +96,17 @@ The following code example shows how to use `computeExpression` method in the sp
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/formula-cs2" %}
 
-## Using the Formula Bar
+## Formula Bar
 
 Formula bar is used to edit or enter cell data in much easier way. By default, the formula bar is enabled in the spreadsheet. Use the [`showFormulaBar`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#showformulabar) property to enable or disable the formula bar.
 
-## Using Named Ranges in Formulas
+## Named Ranges
 
 You can assign a meaningful name to a cell range and then use that name in formulas for calculation. This makes formulas easier to read, understand, and maintain. Named ranges can be added to the Spreadsheet in several ways:
 
 * Use the [`definedNames`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#definednames) collection to add multiple named ranges during the initial load.  
-* Use the [`addDefinedName()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#adddefinedname) method to add a named range dynamically at runtime.  
-* Remove a named range dynamically using the [`removeDefinedName()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#removedefinedname) method.  
+* Use the [`addDefinedName`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#adddefinedname) method to add a named range dynamically at runtime.  
+* Remove a named range dynamically using the [`removeDefinedName`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#removedefinedname) method.  
 * Select a range of cells and enter a name for the selected range directly in the **Name Box**.  
 
 The following code example demonstrates how named ranges can be defined and used in formulas within the Spreadsheet.

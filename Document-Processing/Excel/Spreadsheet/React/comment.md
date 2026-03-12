@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Comment in React Spreadsheet control
-The **Comment** feature makes it possible to add feedback to cells without changing their values, allowing threaded discussions to take place. Unlike [Notes](./notes), comments include advanced review options such as `resolve` and `reopen` for tracking status, and an optional **Comments Review Pane** for managing threads across the workbook.
+The **Comment** feature allows you to add feedback to cells without changing their values, enabling contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comment include advanced review tools such as `resolve` and `reopen` to track status, plus an optional **Comments Review Pane** for browsing and managing threads.
 
 Cells that contain a comment show a small indicator. Hovering over the cell opens a preview of the comment editor. This helps maintain a clear workflow for collaboration while keeping the original data unchanged.
 
@@ -45,10 +45,10 @@ A **comment** can be added to a cell in different ways:
 * **Ribbon**: Go to **Review > Comment > New Comment**.  
 * **Keyboard shortcut**: Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F2</kbd> to open the comment editor for the active cell.  
 * **Programmatically**:  
-  * Use the `updateCell` method with the comment model to add a comment to a specific cell.  
+  * Use the [updateCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method with the comment model to add a comment to a specific cell.  
   * Bind comments during initial load by linking the comment model with the cell model.  
 
-After a comment is posted, the cell shows a small indicator. Hovering over the cell displays a preview of the comment editor.
+The image below shows that once a comment is posted, the cell displays an indicator, and the comment can be previewed on hover.
 
 ![Adding a comment in Spreadsheet](./images/spreadsheet_adding_a_comment.gif)
 
@@ -76,7 +76,7 @@ You can edit the content of a comment or its replies directly within the comment
 ## Resolve and Reopen
 The **Resolve thread** option is used to mark a comment thread as completed once the issue or discussion has been addressed. When a thread is resolved, its background color changes to show the resolved state, and the reply input box along with reply menu actions are hidden.  
 
-If more discussion is needed later, the **Reopen** option can be used. Reopening a thread restores it to active state, brings back the reply input box, and re-enables the reply menu actions so the conversation can continue.
+If more discussion is needed later, the **Reopen** option can be used. Reopening a thread restores it to active state, brings back the reply input box, and re-enables the reply menu actions so the conversation can be continued.
 
 ### Resolve a comment
 * In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Resolve Thread**. 
@@ -105,12 +105,12 @@ You can also use the `isResolved` property in the comment model when initializin
 ```
 
 ## Deleting a comment or reply
-You can remove either a single reply or an entire comment thread (including all replies) using the following options:
+You can delete either a specific reply or an entire comment thread (including all replies) using the following options:
 
 ### Deleting a comment thread
 * **Context menu**: Right-click the cell that contains the comment and select **Comment > Delete Comment**.  
 * **Ribbon**: Go to **Review > Comment > Delete Comment** on a cell that contains the comment.  
-* **Comment editor**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Delete Thread** for an active comment, or use the **Delete Thread** button in the header for a resolved comment.  
+* **Comment editor**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Delete Thread** for an active comment, or use the **Delete Thread** button in the header for a resolved comment.
 
 Deleting a thread removes the comment and all of its replies from the cell.
 
@@ -137,7 +137,7 @@ The **Comments review pane** gives a clear, central view of all comments in the 
 
 You can show or hide the Comments review pane in two ways:
 
-* **Ribbon**: Go to **Review > Comment > Show Comments**.  
+* **Ribbon**: Go to **Review > Comment > Show Comments**.
 * **Property**: Set the `showCommentsPane` property to **true** when initializing the Spreadsheet. By default, this property is set to **false**.
 
 ![Show comments in Spreadsheet](./images/spreadsheet_show_comments.gif)
@@ -151,12 +151,12 @@ The "Comments" review pane supports the following actions:
 * Filter comments by **All**, **Active**, or **Resolved** to show specific threads.
 * Move between comments and link the selection with the related cells.
 * Perform actions such as:
-  * **Reply** – Add a reply directly in the pane.
+  * **Reply** – Add a reply directly in the review pane.
   * **Edit** – Change the text of a comment or reply.
   * **Delete** – Remove a reply or the whole thread.
   * **Resolve/Reopen** – Update the status of a comment.
 
-When the review pane is open, any action done in the pane or in the cell’s comment editor stays in sync.
+When the review pane is open, any action done in the review pane or in the cell’s comment editor stays in synchronized.
 
 
 * Selecting a comment in the review pane highlights the matching cell in the worksheet.
@@ -176,7 +176,7 @@ You can save spreadsheet data along with **comments** using **File > Save As > M
 The **.xls** format is built on the older Excel binary structure (BIFF8). This structure does not support newer features such as **threaded comments**.
 Threaded comments require the **Open XML** structure that is used in `.xlsx` files.  
 
-> To keep threaded comments, always save the workbook in **.xlsx** format.
+> To retain threaded comments, always save the workbook in **.xlsx** format.
 
 ## Bind Comments via code-behind
 

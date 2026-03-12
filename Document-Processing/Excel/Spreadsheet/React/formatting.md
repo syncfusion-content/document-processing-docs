@@ -111,8 +111,6 @@ The following code example shows the number formatting in cell data.
 
 ## Configure Culture-specific Custom format
 
-## Configure Culture-specific Custom Format
-
 Earlier, the custom format dialog always showed formats using English settings (group separator, decimal separator, and currency symbol were not updated based on the applied culture). Starting from version **27.1.\***, the dialog now displays formats according to the applied culture. You can select a culture-based number format or enter your own format using the culture-specific decimal separator, group separator, and currency symbol. After that, click **Apply** to apply the culture-specific custom format to the selected cells.
 
 The Spreadsheet supports customizing formats in the dialog using the `configureLocalizedFormat()` method. In this method, you pass a collection of default number format IDs along with their corresponding format codes. The dialog will then display the customized formats. You can refer to the [default number format IDs](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.numberingformat?view=openxml-2.8.1) from the Excel built-in number format reference.
@@ -320,7 +318,7 @@ The following options can be given for the icon sets as type,
 
 >* 'ThreeArrows', 'ThreeArrowsGray', 'FourArrowsGray', 'FourArrows', 'FiveArrowsGray', 'FiveArrows', 'ThreeTrafficLights1', 'ThreeTrafficLights2', 'ThreeSigns', 'FourTrafficLights', 'FourRedToBlack', 'ThreeSymbols', 'ThreeSymbols2', 'ThreeFlags', 'FourRating', 'FiveQuarters', 'FiveRating', 'ThreeTriangles', 'ThreeStars', 'FiveBoxes'.
 
-### Customize Conditional Formatting
+### Custom Format
 
 Using the custom format for conditional formatting you can set cell styles like color, background color, font style, font weight, and underline.
 
@@ -328,7 +326,7 @@ In the MAY and JUN columns, we have applied conditional formatting custom format
 
 >* In the Conditional format, custom format supported for Highlight cell rules and Top bottom rules.
 
-### Clear Conditional Rules
+### Clear Rules
 
 You can clear the defined rules by using one of the following ways,
 

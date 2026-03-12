@@ -15,7 +15,7 @@ Sorting helps arranging the data to a specific order in a selected range of cell
 
 By default, the `sort` module is injected internally into Spreadsheet to perform sorting.
 
-## Sort by Cell Value
+## Sort by Cell value
 
 In the active Spreadsheet, you can sort a selected range of cells by their values. Sorting can be done in several ways:
 
@@ -68,7 +68,7 @@ You can also enable or disable this property using `beforeSort` event arguments,
 
 In the custom sort dialog, the `Data contains header` checkbox is checked on load. Thus, the default value for `containsHeader` is `true` in custom sort dialog.
 
-## Case Sensitive Sort
+## Case Sensitive sort
 
 By default, sorting in the Spreadsheet is **case insensitive**.  
 To perform sorting with case sensitivity, set the [`caseSensitive`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#casesensitive) property to `true` and pass it as part of the `sortOption` arguments in the `sort()` method.  
