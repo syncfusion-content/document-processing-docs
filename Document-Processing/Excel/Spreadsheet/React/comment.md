@@ -205,7 +205,7 @@ In the example below, comments are added to a specific cell using cell data bind
 
 ## Limitations
 
-* **Unposted comments are not saved**: Text typed in the comment editor is lost if the editor is closed without clicking **Post**. Only posted comments are stored and shown again when the editor is reopened.  
+* **Draft comments are not saved**: Text typed in the comment editor is lost if the editor is closed without clicking **Post**. Only posted comments are stored and shown again when the editor is reopened.  
 * **Comments and Notes cannot be used together**: A cell can have either a comment or a note, but not both. If a cell already has a comment, a note cannot be added, and if it has a note, a comment cannot be added.  
 * **Comments in print output**: Comments are not included when printing the worksheet or workbook.  
 * **No real-time collaboration**: Multiple people cannot edit comments at the same time. However, when a workbook is exported and then imported again, the author details for each comment and reply remain available.

@@ -131,7 +131,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 ## Cell data binding
 
-The Spreadsheet control can bind the data to individual cell in a sheet . To achive this you can use the `value` property.
+The Spreadsheet control can bind the data to individual cell in a sheet . To achieve this you can use the `value` property.
 
 Refer to the following code example for cell data binding.
 
@@ -214,7 +214,7 @@ The following code example demonstrates how to dynamically update data using the
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react#/tailwind3/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

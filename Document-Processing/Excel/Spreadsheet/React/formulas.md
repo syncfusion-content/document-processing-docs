@@ -28,7 +28,7 @@ In earlier versions, even though culture-based Excel files could be imported int
 
 When loading spreadsheet data that uses culture-based formula argument separators (via cell data binding, local/remote data, or JSON), set the [listSeparator](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#listseparator) property to the culture-specific list separator. Note that when importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#listseparator) property will automatically update based on the culture of the import/export service.
 
-In the example below, the Spreadsheet component is rendered with the **German culture (de)**. The example also shows how to set the culture-based argument separator and use culture-based formatted numeric values as arguments in formulas.
+In the example below, the Spreadsheet component is rendered with the **German culture**. The example also shows how to set the culture-based argument separator and use culture-based formatted numeric values as arguments in formulas.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
