@@ -5,7 +5,7 @@ platform: document-processing
 documentation: UG
 ---
 
-# How Syncfusion manages fonts in Office-to-PDF/image conversions and PDF processing workflows?
+# How Syncfusion manages fonts in Office-to-PDF/image and PDF processing?
 
 ## Overview 
 
