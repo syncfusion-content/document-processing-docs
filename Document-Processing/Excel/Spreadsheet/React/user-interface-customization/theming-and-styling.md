@@ -19,34 +19,13 @@ https://ej2.syncfusion.com/themestudio/?theme=material
 Theme Studio documentation:
 https://ej2.syncfusion.com/react/documentation/appearance/theme-studio
 
-
 ## Supported Themes
-Syncfusion React components provide a wide range of themes. Below is the list of all currently supported themes and their CSS file names:
 
-Theme Style | CSS file
---- | ---
-Tailwind 3.4 | tailwind3.css
-Tailwind 3.4 Dark | tailwind3-dark.css
-Bootstrap 5.3 | bootstrap5.3.css
-Bootstrap 5.3 Dark | bootstrap5.3-dark.css
-Fluent 2 | fluent2.css
-Fluent 2 Dark | fluent2-dark.css
-Material 3 | material3.css
-Material 3 Dark | material3-dark.css
-Bootstrap 5 | bootstrap5.css
-Bootstrap 5 Dark | bootstrap5-dark.css
-Bootstrap 4 | bootstrap4.css
-Bootstrap 3 | bootstrap.css
-Bootstrap 3 Dark | bootstrap-dark.css
-Material | material.css
-Material Dark | material-dark.css
-Tailwind CSS | tailwind.css
-Tailwind CSS Dark | tailwind-dark.css
-Fluent | fluent.css
-Fluent Dark | fluent-dark.css
-Microsoft Office Fabric | fabric.css
-Microsoft Office Fabric Dark | fabric-dark.css
-High Contrast | highcontrast.css
+The Syncfusion React Spreadsheet component supports many built‑in themes and also allows you to apply your own custom styles. Applying a theme loads the corresponding CSS file and changes the component's appearance consistently across the UI.
+
+Below is the reference link for the list of supported themes and their CSS filenames.
+
+Theme documentation: https://ej2.syncfusion.com/react/documentation/appearance/theme
 
 # CSS Customization
 
@@ -54,7 +33,6 @@ To modify the Spreadsheet appearance, you need to override the default CSS of th
 
 You can refer to the CSS styling documentation here:
 https://ej2.syncfusion.com/react/documentation/spreadsheet/styles
-
 
 Please find the CSS structure that can be used to modify the Spreadsheet appearance.
 

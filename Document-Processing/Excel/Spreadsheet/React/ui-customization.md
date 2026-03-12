@@ -9,26 +9,69 @@ documentation: ug
 
 # User Interface Customization
 
-The Syncfusion React Spreadsheet component provides many options to customize the user interface so it fits the needs of your application.
+The Syncfusion React Spreadsheet component provides options to customize the user interface and control the behavior of its UI components.
 
-You can control how the ribbon, toolbar items, tabs, context menu, and overall appearance behave. These options help you build a clean, simple, and user‑friendly spreadsheet experience.
+You can control the ribbon, toolbar items, tabs, context menu, and overall appearance. Use these options to show, hide, or modify UI elements, attach custom behavior, and surface application actions.
 
-## Ribbon Tabs and Items
+## Ribbon Tabs
 
-The Spreadsheet Ribbon contains tabs such as Home, Insert, and Data, and each tab includes multiple items like buttons and dropdowns. You can add new tabs, create custom groups, add your own buttons, or hide and show built‑in tabs and items. This helps you design a Ribbon that matches the workflow and needs of your application.
+The Spreadsheet Ribbon contains tabs such as Home, Insert, and Data, and each tab includes multiple items like buttons and dropdowns. You can add new tabs, create custom groups, add buttons or controls, and hide or show built‑in tabs and items. Use these to organize commands, expose actions, or integrate custom functionality into the Ribbon.
 
-## Ribbon Customization Methods
+## Add Toolbar Items
 
-You can customize the ribbon using the following methods:
+The Syncfusion React Spreadsheet component allows you to extend the Ribbon by adding custom toolbar items. You can make Toolbar items to execute custom actions.
 
-| Method | Action |
-|-------|---------|
-| [`hideRibbonTabs`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hideribbontabs) | Used to show or hide the existing ribbon tabs. |
-| [`enableRibbonTabs`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#enableribbontabs) | Used to enable or disable the existing ribbon tabs. |
-| [`addRibbonTabs`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#addribbontabs) | Used to add custom ribbon tabs. |
-| [`hideToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hidetoolbaritems) | Used to show or hide the existing ribbon toolbar items. |
-| [`enableToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#enabletoolbaritems) | Used to enable or disable the specified toolbar items. |
-| [`addToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#addtoolbaritems) | Used to add the custom items in ribbon toolbar. |
-| [`hideFileMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hidefilemenuitems) | Used to show or hide the ribbon file menu items. |
-| [`enableFileMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#enablefilemenuitems) | Used to enable or disable file menu items. |
-| [`addFileMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#addfilemenuitems) | Used to add custom file menu items. |
+To add these items, the component provides the [addToolbarItems](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#addtoolbaritems) method, which lets you insert new tools into a chosen tab. This makes it simple to include your own actions.
+
+You can add items to an existing tab or you can include them as part of a new Ribbon tab.
+
+The following code sample shows how to add toolbar items.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/add-toolbar-items-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/add-toolbar-items-cs1/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/add-toolbar-items-cs1" %}
+
+## Create Custom Ribbon Tabs and Items
+
+The Syncfusion React Spreadsheet component lets you create your own ribbon tabs and add custom items inside them.
+
+You can create a new tab using the [addRibbonTabs](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#addribbontabs) method. With this, you can create a separate tab where you place the actions and features that you want. You can also add custom items inside these tabs. Each item can run your own functionality, allowing you to perform any action you need.
+
+The following code sample shows how to create custom ribbon tabs and groups.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/custom-tab-and-item-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/custom-tab-and-item-cs1/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/custom-tab-and-item-cs1" %}
+
+## Hide or Show Ribbon Items
+
+The Syncfusion React Spreadsheet component allows you to hide or show ribbon tabs and toolbar items. This helps you create a simple and clean user interface by showing only the tools that are needed.
+
+You can hide any ribbon tab by using the [hideRibbonTabs](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#hideribbontabs) method. You can hide toolbar items using the [hideToolbarItems](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#hidetoolbaritems) method, where the items are hidden based on their index in the tab.
+
+The following code sample shows how to hide or show ribbon items.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/show-or-hide-ribbon-items-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/show-or-hide-ribbon-items-cs1/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/show-or-hide-ribbon-items-cs1" %}
