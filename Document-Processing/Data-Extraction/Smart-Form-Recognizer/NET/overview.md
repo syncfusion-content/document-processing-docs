@@ -7,28 +7,27 @@ documentation: UG
 keywords: Assemblies
 ---
 
-# Smart Form Recognizer
+# Welcome to Syncfusion Smart Form Recognizer Library
 
 Smart Form Recognizer is a deterministic, on premise C# library for .NET designed to reliably detect form data from PDFs and scanned images. Unlike AI‑based approaches, this library uses visual layout heuristics including lines, boxes, and circular markers to identify form structures with high consistency and predictability.It supports to identify the common form controls such as text fields, checkboxes, radio buttons, and signature regions, producing clean, structured JSON that can be fed directly into review and workflow systems.
 
 
-Core Capabilities
+## Core Capabilities
 
-*Form layout detection: Locate form regions using graphical heuristics (lines, boxes, circles) for consistent field discovery. 
+* **Form layout detection**: Locate form regions using graphical heuristics (lines, boxes, circles) for consistent field discovery. 
 
-*Fillable PDF export: Create a PDF with detected form fields added so documents are immediately usable in form workflows. 
+* **Fillable PDF export**: Create a PDF with detected form fields added so documents are immediately usable in form workflows. 
 
-*Page-level control: Process specific pages or page ranges for targeted extraction. 
+* **Page-level control**: Process specific pages or page ranges for targeted extraction. 
 
-*Multi-format support: Works with PDF, JPEG, PNG and other common image formats. 
+* **Multi-format support**: Works with PDF, JPEG, PNG and other common image formats. 
 
-*Confidence filtering: Per-field confidence scores with configurable thresholds to control output quality and drive review logic. 
+* **Confidence filtering**: Per-field confidence scores with configurable thresholds to control output quality and drive review logic. 
 
-*Ready for .NET integration: Deterministic, on premise library that outputs JSON and integrates into existing .NET pipelines and review UIs. 
+* **Ready for .NET integration**: Deterministic, on premise library that outputs JSON and integrates into existing .NET pipelines and review UIs. 
 
 
 <b>NuGet</b>
-
 <table>
 <tr>
 <thead>
