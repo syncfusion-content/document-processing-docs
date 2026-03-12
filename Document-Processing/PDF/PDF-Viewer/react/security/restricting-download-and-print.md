@@ -29,7 +29,7 @@ The viewer toolbar items are controlled by [`toolbarSettings.toolbarItems`](http
 
 The viewer raises the [`downloadStart`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#downloadstart) event whenever a download is initiated. Add an event handler and set `args.cancel = true` to block the operation regardless of how it was triggered (toolbar, API, or custom UI).
 
-### 3. Block download with the `printStart` event
+### 3. Block print with the `printStart` event
 
 The viewer triggers the [`printStart`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#printstart) event whenever a print action is initiated. Attach an event handler to the event and set `args.cancel = true` to block the operation regardless of how it was triggered.
 

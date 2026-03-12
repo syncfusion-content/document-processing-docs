@@ -86,10 +86,10 @@ recognizer.FormRecognizeOptions.ConfidenceThreshold = 0.9;
 
 FormRecognizer recognizer = new FormRecognizer();
 // Set a single page range – detects only the specified page
-recognizer.FormRecognizeOptions.PageRange = new int[,]{{ 3 }{ 8 }};
+recognizer.FormRecognizeOptions.PageRange = new int[,] { { 3 }, { 8 } };
 
 // Set a page range – detects content between the specified start and end page
-recognizer.FormRecognizeOptions.PageRange = new int[,]{{ 3, 8 }};
+recognizer.FormRecognizeOptions.PageRange = new int[,] { { 3, 8 } };
 
 {% endhighlight %}
 {% endtabs %}
