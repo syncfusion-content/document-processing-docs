@@ -9,7 +9,7 @@ documentation: ug
 
 # Print in React Spreadsheet component
 
-The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet or entire workbook or selected range in the Spreadsheet. You can enable or disable print functionality by using the `allowPrint` property, which defaults to **true**.
+The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet, entire workbook or selected range in the Spreadsheet. You can enable or disable print functionality by using the `allowPrint` property, which defaults to **true**.
 
 ## Default printing
 
@@ -21,30 +21,23 @@ The active worksheet in the Spreadsheet can be printed by selecting the **File >
 
 The active worksheet, entire workbook or selected range can be printed with customized options using the `print` method. The `print` method takes one parameter, that is, `printOptions`, which can be used for customization.
 
-The `printOptions` object supports the following properties:
+The `printOptions` contain three properties, as described below.
 
-The `type` property defines the scope of content to be printed. It accepts three values:
+* `type`- It defines the scope of content to be printed. It accepts three values:
 
-- `ActiveSheet` – Prints only the currently active worksheet.  
-  This is the default behavior and is useful when you want to print just the current sheet without including other worksheets.
-
-- `Workbook` – Prints all worksheets in the workbook.  
-  Each sheet is printed sequentially with consistent formatting. This option is ideal for printing complete workbooks or reports that span multiple sheets.
-
-- `PrintRange` – Prints only a specific range of cells from the active worksheet.  
-  Before using this option, select the desired range with the `selectRange()` method. The selected range will be printed with its formatting and data.  
+| Value        | Description |
+|--------------|-------------|
+| `ActiveSheet` | Prints only the active worksheet. This is the default option, useful when you need just the current sheet. |
+| `Workbook`    | Prints all worksheets in the workbook sequentially, keeping their layout and formatting consistent across each sheet. |
+| `PrintRange`  | Prints only the selected range of cells in the active worksheet. |
 
   > Note: If multiple ranges are selected, only the first range will be printed.
 
-### `allowGridLines`
-
-Controls whether grid lines appear in the printed copy.  
+* `allowGridLines` - Controls whether grid lines appear in the printed copy.  
 - Default: `false` (grid lines are not included).  
 - Set to `true` to include grid lines, which helps distinguish cell boundaries in the printed document.
 
-### `allowRowColumnHeader`
-
-Controls whether row numbers and column letters (headers) appear in the printed copy.  
+* `allowRowColumnHeader` - Controls whether row numbers and column letters (headers) appear in the printed copy.  
 - Default: `false` (headers are not included).  
 - Set to `true` to include row and column identifiers, which is useful for reference and navigation in printed documents.
 
