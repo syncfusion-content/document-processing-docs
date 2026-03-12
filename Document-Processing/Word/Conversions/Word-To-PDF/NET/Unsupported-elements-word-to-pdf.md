@@ -124,6 +124,14 @@ Textbox
 Linked text boxes are not supported.
 </td>
 </tr>
+<tr>
+<td>
+Ink elements
+</td>
+<td>
+Supported only in DOCX format document to PDF.
+</td>
+</tr>
 </table>
 
 <table>
