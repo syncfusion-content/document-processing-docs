@@ -9,7 +9,7 @@ documentation: ug
 
 # Creating a Spreadsheet Application with Agentic UI Builder
 
-This guide shows you how to create a Syncfusion® React Spreadsheet component simply by typing what you want using natural language commands — with the [**Syncfusion® React Agentic UI Builder**](https://www.syncfusion.com/explore/mcp-servers/) (powered by Syncfusion's MCP Server). Just describe it, and the tool builds the complete UI implementation of the spreadsheet component for you.
+This guide shows you how to create a Syncfusion® React Spreadsheet component simply by typing what you want using natural language commands — with the [**Syncfusion® React Agentic UI Builder**](https://www.syncfusion.com/explore/mcp-servers/) (powered by Syncfusion's MCP Server). Just describe it, and the tool builds the complete implementation of the spreadsheet component for you.
 
 ### Prerequisite
 - Make sure the **React Agentic UI Builder** is installed in your IDE. Refer to the official [Getting Started](https://ej2.syncfusion.com/react/documentation/mcp-server/agentic-ui-builder/getting-started) and [installation guide](https://ej2.syncfusion.com/react/documentation/mcp-server/installation).
@@ -22,7 +22,7 @@ Once installed, open your React project in your preferred IDE, launch the AI ass
 **Example:**
 
 ```
-#sf_react_ui_builder Create an empty Syncfusion React Spreadsheet using the Syncfusion Bootstrap 5 theme. Install the required Syncfusion packages, import the packages and theme CSS in the correct order, and initialize an empty spreadsheet.
+#sf_react_ui_builder Create an empty React Spreadsheet using the Bootstrap 5 theme. Install the required packages, import the theme CSS in the correct order, and initialize the spreadsheet.
 ```
 
 The UI Builder delivers full implementations, covering layout, components, and styling. The following illustration shows the generated output:
