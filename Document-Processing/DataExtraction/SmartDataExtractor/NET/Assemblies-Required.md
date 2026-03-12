@@ -1,0 +1,72 @@
+---
+title: Extract structured data from PDF & image Files in .NET | Syncfusion
+description: Syncfusion® Smart Data Extractor is a .NET library that extracts tables, forms, text, and images from documents, producing PDFs and JSON.
+platform: document-processing
+control: SmartDataExtractor
+documentation: UG
+keywords: Assemblies
+---
+# Assemblies Required to work with SmartDataExtractor
+
+The following assemblies need to be referenced in your application based on the platform.
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>Assembly</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{'[WPF]'| markdownify }},
+        {{'[Windows Forms]'| markdownify }} and {{'[ASP.NET MVC]'| markdownify }}      
+      </td>
+      <td>
+        Syncfusion.Compression.Base<br/>
+        Syncfusion.ImagePreProcessor.Base<br/>
+        Syncfusion.OCRProcessor.Base<br/>
+        Syncfusion.Pdf.Imaging.Base<br/>
+        Syncfusion.Pdf.Base<br/>
+        Syncfusion.PdfToImageConverter.Base<br/>
+        Syncfusion.SmartFormRecognizer.Base<br/>
+        Syncfusion.SmartTableExtractor.Base<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      {{'[Blazor]'| markdownify }},
+      {{'[.NET Core]'| markdownify }}
+      and {{'[.NET Platforms]'| markdownify }}
+      </td>
+      <td>
+        Syncfusion.Compression.Portable<br/>
+        Syncfusion.ImagePreProcessor.Portable<br/>
+        Syncfusion.OCRProcessor.Portable<br/>
+        Syncfusion.Pdf.Imaging.Portable<br/>
+        Syncfusion.Pdf.Portable<br/>
+        Syncfusion.PdfToImageConverter.Portable<br/>
+        Syncfusion.SmartFormRecognizer.Portable<br/>
+        Syncfusion.SmartTableExtractor.Portable<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      {{'[.NET Multi-platform App UI (.NET MAUI)]'| markdownify }}
+      </td>
+      <td>
+        Syncfusion.Compression.NET<br/>
+        Syncfusion.ImagePreProcessor.NET<br/>
+        Syncfusion.OCRProcessor.NET<br/>
+        Syncfusion.Pdf.Imaging.NET<br/>
+        Syncfusion.Pdf.NET<br/>
+        Syncfusion.PdfToImageConverter.NET<br/>
+        Syncfusion.SmartFormRecognizer.NET<br/>
+        Syncfusion.SmartTableExtractor.NET<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
