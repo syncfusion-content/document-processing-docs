@@ -7,7 +7,7 @@ TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer);
 
 let pdfviewer: PdfViewer = new PdfViewer({ 
     documentPath:'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
-    resourceUrl:'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib'  
+    resourceUrl:'https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib'  
 });
 pdfviewer.appendTo('#PdfViewer');
 
