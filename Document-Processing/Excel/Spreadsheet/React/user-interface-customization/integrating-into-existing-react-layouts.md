@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to integrate the Spreadsheet into dashboards, layouts, modals, and panels in the React Spreadsheet component | Syncfusion
+title: Integrating the React Spreadsheet component | Syncfusion
 description: Learn here how to place the Spreadsheet inside any React layout in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing

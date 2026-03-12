@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hide or show ribbon tabs and toolbar items in the React Spreadsheet component | Syncfusion
+title: Hide or show tabs in React Spreadsheet component | Syncfusion
 description: Learn here how to hide or show ribbon tabs and items to simplify the interface in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing

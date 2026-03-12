@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create custom cell templates and display icons or elements in the React Spreadsheet component | Syncfusion
+title: Custom templates in react spreadsheet component | syncfusion
 description: Learn here how to add custom templates to show icons or controls in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing

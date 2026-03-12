@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to add new toolbar items in the React Spreadsheet component | Syncfusion
+title: Add toolbar items in React Spreadsheet component | Syncfusion
 description: Learn here how to add custom toolbar items in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create custom ribbon tabs and items in the React Spreadsheet component | Syncfusion
+title: Create ribbon tabs in react spreadsheet component | syncfusion
 description: Learn here how to create new ribbon tabs and items to organize custom tools in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
 ---
 
-# Create Custom Ribbon Tabs and Custom Items
+# Create Custom Ribbon Tabs and Items
 
 The Syncfusion React Spreadsheet component lets you create your own ribbon tabs and add custom items inside them.
 
