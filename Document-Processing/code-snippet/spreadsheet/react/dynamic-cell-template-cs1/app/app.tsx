@@ -1,11 +1,11 @@
-import React, { useRef } from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, getCellIndexes, getCell, setCell } from '@syncfusion/ej2-react-spreadsheet';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 
 function App(): React.ReactElement {
-  let spreadsheet: SpreadsheetComponent | null = null;
-  const spreadsheetRef = useRef<SpreadsheetComponent | null>(null);
+  let spreadsheet: SpreadsheetComponent = null;
+  const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
 
   const dropDownOptions: number[] = [10, 20, 30, 40, 50, 60];
 
@@ -48,14 +48,14 @@ function App(): React.ReactElement {
   // To render the dropdown list.
   const addDropDownlist = (element: HTMLElement, legendOptions: number[]): void => {
     element.innerHTML = '';
-    const inputEle: HTMLInputElement = document.createElement('input');
+    const inputEle: HTMLInputElement = document.createElement("input");
     element.appendChild(inputEle);
     new DropDownList({
       placeholder: 'Select a value',
       dataSource: legendOptions,
       cssClass: 'e-dropdown-list',
       change: (event: any)=>{
-        spreadsheetRef.current?.updateCell({value: event.value.toString()}, ( spreadsheet?.getActiveSheet() as any).activeCell);
+        spreadsheetRef.current.updateCell({value: event.value.toString()}, ( spreadsheet.getActiveSheet() as any).activeCell);
       }
     }, inputEle);
   };
