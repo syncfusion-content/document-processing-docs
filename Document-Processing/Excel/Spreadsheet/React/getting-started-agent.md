@@ -9,53 +9,62 @@ documentation: ug
 
 # Creating a Spreadsheet Application with Agentic UI Builder
 
-This guide shows how to use **Agentic UI Builder** (powered by MCP Server in Syncfusion Code Studio) to generate the exact Syncfusion React Spreadsheet component — the spreadsheet matching the official getting-started documentation.
+This guide shows how to generate the exact Syncfusion React Spreadsheet component by use the **React Agentic UI Builder** (powered by the MCP Server) — the generated spreadsheet matches the official getting-started documentation.
 
-**Prerequisite**  
-Make sure Agentic UI Builder is installed and running in Code Studio. Refer to the official installation guide:  
-[Agentic UI Builder Getting Started](https://ej2.syncfusion.com/react/documentation/mcp-server/agentic-ui-builder/getting-started)
+### Prerequisite  
+- Make sure **React Agentic UI Builder** is installed in your IDE. Refer to the official [getting Started](https://ej2.syncfusion.com/react/documentation/mcp-server/agentic-ui-builder/getting-started) and [installation guide](https://ej2.syncfusion.com/react/documentation/mcp-server/installation):
+- Ensure you have a React project set up (JavaScript or TypeScript, any supported version) before using the Agentic UI Builder.
 
-### Step 1: Primary Prompt
+### Usage
 
-Paste the following prompt into the Code Studio AI chat panel in Agent mode:
+Once installed, open your AI assistant in the IDE and describe what you want to build with the ```#sf_react_ui_builder``` command:
 
-```
-#sf_react_ui_builder Create a minimal React application that renders the Syncfusion Spreadsheet Component exactly like the official getting-started example.
-
-Include in your response or as comments:
-- The project creation command: npm create vite@latest my-app -- --template react-ts
-- The install command: npm install @syncfusion/ej2-react-spreadsheet --save
-- The full list of required Material theme CSS imports for Spreadsheet to add src/App.css (use node_modules relative paths like @import '@syncfusion/ej2-base/styles/material.css'; etc.)
-- The exact minimal code for App.tsx: import SpreadsheetComponent, render it functional component, default export, no extra props or data
-
-Do not add any sample data, events, created handlers, or customizations — keep it 100% default and minimal like the docs.
-```
-
-### Step 2: Follow-up Prompt  
-After the first response appears, send this follow-up prompt in the same chat:
+**Example:**
 
 ```
-Execute the listed steps and run
+#sf_react_ui_builder Create empty Syncfusion React Spreadsheet using the Syncfusion Bootstrap 5 theme. After scaffolding the app, install the required Syncfusion packages, import the theme and component CSS in the correct order, and initialize an empty spreadsheet.
 ```
 
+The UI Builder delivers full implementations, covering layout, components, and styling.
 
-### Expected Outcome
+### Individual Tools
 
-When both prompts are executed in sequence, the Agentic UI Builder should:
+You can directly invoke individual tools by name for targeted assistance, which is especially useful when specialized support is needed.
 
-- Created the Vite project creation command  
-- Excuted the Syncfusion package installation  
-- Modified the full list of Material theme CSS `@import` statements  
-- Edited the minimal `src/App.tsx` code with `<SpreadsheetComponent />`  
-- Suggested accept/skip buttons for key actions (npm installation, npm run dev)
+**Layout Tool (```#sf_react_layout```)**
 
-The final running application will display an interactive spreadsheet UI identical to the result shown in the official documentation:  
-[Syncfusion React Spreadsheet Getting Started](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started)
+Provides a set of pre‑designed, responsive UI layouts and section blocks tailored to standard page structures and design practices.
+
+**Example:**
+
+```
+#sf_react_layout Create a responsive two‑column dashboard layout with a header and footer, optimized for Syncfusion React components.
+```
+
+**Component Tool (```#sf_react_component```)**
+
+Provides quick‑access documentation for Syncfusion React components, including their properties, event handlers, methods, and sample usage.
+
+**Example:**
+
+```
+#sf_react_component Integrate a Syncfusion React DataGrid with sorting, filtering, and pagination enabled, styled with Bootstrap 5.3.
+```
+
+**Style  Tool (```#sf_react_style```)**
+
+Provides configuration for themes, styling setup, and icon integration across Syncfusion React components, with support for multiple themes (Tailwind 3, Bootstrap 5.3, Material 3, Fluent 2), light/dark modes, and consistent icon patterns.
+
+**Example:**
+
+```
+#sf_react_style Apply the Syncfusion Tailwind 3 theme.
+```
 
 ### Tips & Best Practices
 
-- Always use **Agent mode** in Code Studio for better multi-step execution and confirmation prompts.
-- Recommended model: **Claude Sonnet** or a comparable high-capability model for maximum code accuracy.
+- Enable **Agent mode** in your IDE to ensure smooth multi‑step execution with confirmation prompts.
+- For better results use advanced AI models
 - If any step times out or hangs, then stop and retry the current step.
 - Always review the generated code and commands before accepting or applying them in production.
 
