@@ -1,12 +1,12 @@
 ---
-title: How to count decimal places in an Excel numeric cell value | Syncfusion
+title: How to count decimal places in an Excel cell value | Syncfusion
 description: Code examples to count decimal places in a numeric cell value using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to count decimal places in an Excel numeric cell value?
+# How to count decimal places in an Excel cell value?
 
 The following code examples demonstrate counting the number of decimal places in a numeric cell value using C# (Cross-platform and Windows-specific) and VB.NET.
 
