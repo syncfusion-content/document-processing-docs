@@ -1,5 +1,5 @@
 ---
-title: Detect Form Fields| Syncfusion&reg;
+title: Smart Form Recognizer | Syncfusion&reg;
 description: Learn how to detects form data from PDFs and scanned images using Syncfusion&reg; Essential Studio&reg; SmartFormRecognizer.
 platform: document-processing
 control: SmartFormRecognizer
@@ -7,9 +7,9 @@ documentation: UG
 keywords: Assemblies
 ---
 
-# Smart Form Recognizer
+# Welcome to Syncfusion Smart Form Recognizer Library
 
-Smart Form Recognizer is a deterministic, on premise C# library for .NET designed to reliably detect form data from PDFs and scanned images. Unlike AI‑based approaches, this library uses visual layout heuristics including lines, boxes, and circular markers to identify form structures with high consistency and predictability. It supports It supports to identify the common form controls such as text fields, checkboxes, radio buttons, and signature regions, producing clean, structured JSON that can be fed directly into review and workflow systems.
+Smart Form Recognizer is a deterministic, on premise C# library for .NET designed to reliably detect form data from PDFs and scanned images. Unlike AI‑based approaches, this library uses visual layout heuristics including lines, boxes, and circular markers to identify form structures with high consistency and predictability.It supports to identify the common form controls such as text fields, checkboxes, radio buttons, and signature regions, producing clean, structured JSON that can be fed directly into review and workflow systems.
 
 
 ## Core Capabilities
@@ -25,6 +25,54 @@ Smart Form Recognizer is a deterministic, on premise C# library for .NET designe
 * **Confidence filtering**: Per-field confidence scores with configurable thresholds to control output quality and drive review logic. 
 
 * **Ready for .NET integration**: Deterministic, on premise library that outputs JSON and integrates into existing .NET pipelines and review UIs. 
+
+
+<b>NuGet</b>
+<table>
+<tr>
+<thead>
+<th><b>Platform(s)</b></th>
+<th><b>NuGet Package</b></th>
+</thead>
+</tr>
+<tr>
+<td>
+Windows Forms
+</td>
+<td>
+{{'[Syncfusion.SmartFormRecognizer.WinForms.nupkg]'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+WPF
+</td>
+<td>
+{{'[Syncfusion.SmartFormRecognizer.WPF.nupkg]'| markdownify }}
+</td>
+</tr>
+<tr>
+<td rowspan="2">Blazor, .NET Core and .NET Platforms</td>
+<td>
+{{'[Syncfusion.SmartFormRecognizer.NET.nupkg]'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+{{'[Syncfusion.SmartFormRecognizer.Net.Core.nupkg]'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+ASP.NET MVC5
+</td>
+<td>
+{{'[Syncfusion.SmartFormRecognizer.AspNet.MVC5.nupkg]'| markdownify }}
+</td>
+</tr>
+</table>
+
+N> The above mentioned NuGet packages are available in [nuget.org](https://www.nuget.org/).
 
 The following code snippet illustrates how to detects form data from PDFs using FormRecognizer method in SmartFormRecognizer.
 
@@ -42,4 +90,3 @@ pdfLoadedDocument.Save(Output.pdf);
 
 {% endhighlight %}
 {% endtabs %}
-
