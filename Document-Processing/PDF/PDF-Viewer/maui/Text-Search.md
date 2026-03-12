@@ -1,19 +1,24 @@
 ---
 layout: post
-title: Text Search in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about searching a text in the PDF documents using Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer).
+title: Text Search in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to search for text in PDF documents using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Text Search in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to search for text in a PDF document and navigate to all its occurrences.
+Quickly locate any word or phrase in a PDF document and jump between every occurrence — forward, backward, or directly to a specific match. The PDF Viewer's built-in text search highlights all results in real time as it scans the document, and exposes a result object so you can display match counts or build a custom search UI.
+
+You can also watch the video tutorial below to learn about text search.
+
+<style>#MAUISfPdfViewerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUISfPdfViewerVideoTutorial' src='https://www.youtube.com/embed/7t1yHUQaHU4'></iframe>
 
 ## Initiate a text search
 
-The [SearchTextAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SearchTextAsync_System_String_TextSearchOptions_System_Threading_CancellationTokenSource_) method asynchronously searches the specified text throughout the PDF document and highlights each occurrence (match). To start the search, you need to call the method in a button click by passing the text to be searched as a parameter, as shown in the following example:
+The [SearchTextAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SearchTextAsync_System_String_TextSearchOptions_System_Threading_CancellationTokenSource_) method asynchronously searches the specified text throughout the PDF document and highlights each occurrence (match). To start the search, call the method from a button click handler and pass the text to search as a parameter.
 
 {% tabs %}
 {% highlight C# hl_lines="8" %}
@@ -25,7 +30,7 @@ private void SearchButtonClicked(object sender, EventArgs e)
 
 async void SearchText(string text)
 {
-	await PdfViewer.SearchTextAsync(text);
+    await PdfViewer.SearchTextAsync(text);
 }
 
 {% endhighlight %}
@@ -231,3 +236,8 @@ PdfViewer.TextSearchSettings.OtherMatchesHighlightColor= Color.FromRgba("#00FF00
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Text Selection](../text-selection)
+- [Page Navigation](../page-navigation)
+- [Scrolling](../scrolling)
