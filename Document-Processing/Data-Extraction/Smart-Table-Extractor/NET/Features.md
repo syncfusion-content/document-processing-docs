@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Smart Table Extractor Features 
 
-## Extract Tables from a PDF Documents
+## Extract Tables from a PDF Document
 
 To extract structured table data from a PDF document using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code 
 
@@ -71,7 +71,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %} 
 
-## Extract Tables with detect border less tables
+## Extract Tables with Border-less Table Detection
 
 To extract structured table data from a PDF document that contains tables without visible borders using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code examples. 
 
@@ -144,7 +144,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     // Initialize the Smart Table Extractor
     TableExtractor extractor = new TableExtractor();
 
-    // Set only PageRange
+    // Set the PageRange
     TableExtractionOptions options = new TableExtractionOptions();
     options.PageRange = new int[,] { { 2, 4 } };
 
@@ -183,7 +183,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}   
 
-## Apply confidence threshold to extract the Table
+## Apply a Confidence Threshold to Extract Table Data
 
 To apply confidence thresholding when extracting table data from a PDF document using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code example:
 
@@ -239,7 +239,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract table data asynchronously from a PDF document
+## Extract Table Data Asynchronously from a PDF Document
 
 To extract table data asynchronously with cancellation support using the **ExtractTableAsJsonAsync** method of the **TableExtractor** class, refer to the following code example:
  

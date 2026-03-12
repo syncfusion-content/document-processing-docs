@@ -9,9 +9,9 @@ keywords: Assemblies
 
 # Smart Data Extractor Features 
 
-## Extract data from a PDF document
+## Extract Data from a PDF Document
 
-To extract structured data such as text, form fields, tables and images from an entire PDF document using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code
+To extract structured data such as text, form fields, tables and images from an entire PDF document using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
 
 {% tabs %}   
 
@@ -129,7 +129,7 @@ using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract form data as JSON
+## Extract Form Data as JSON
 
 To extract form fields across a PDF document using the **ExtractDataAsJson** method of the **DataExtractor** class with form recognition options, refer to the following code example:
 
@@ -217,7 +217,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
-## Extract form data as PDF
+## Extract Form Data as PDF
 
 To extract form fields across a PDF document and save them as a PDF output using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class with form recognition options, refer to the following code example:
 
@@ -319,7 +319,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract table data as PDF
+## Extract Table Data as PDF
 
 To extract tables across a PDF document and save them as a PDF output using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class with table extraction options, refer to the following code example:
 
@@ -406,7 +406,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Apply confidence threshold to extract the data
+## Apply Confidence Threshold to Extract the Data
 
 To apply confidence thresholding when extracting data from a PDF document using the ExtractDataAsPdfDocument method of the DataExtractor class, refer to the following code example:
 
