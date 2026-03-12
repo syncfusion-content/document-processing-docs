@@ -38,7 +38,7 @@ Provides a set of pre‑designed, responsive UI layouts and section blocks tailo
 **Example:**
 
 ```
-#sf_react_layout Create a responsive two‑column dashboard layout with a header and footer, optimized for Syncfusion React components.
+#sf_react_layout Create a responsive layout with a full‑width Syncfusion React Spreadsheet component and a collapsible sidebar for navigation.
 ```
 
 **Component Tool (```#sf_react_component```)**
