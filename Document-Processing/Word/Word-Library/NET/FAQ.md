@@ -65,6 +65,11 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Why is some text not found in a Word document when using the Find functionality in DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#why-is-some-text-not-found-in-a-word-document-when-using-the-find-functionality-in-docio)
 * [Why is a bookmark name with a hyphen `(-)` converted to an underscore `(_)` in DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#why-is-a-bookmark-name-with-a-hyphen---converted-to-an-underscore-_-in-docio)
 * [Why is formatting not preserved after calling GetAsOneRange()?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#why-is-formatting-not-preserved-after-calling-getasonerange)
+* [What is Ink Trace?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#what-is-ink-trace)
+* [How Ink Width and Height Work](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-ink-width-and-height-work)
+* [How Trace Points Are Calculated?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-trace-points-are-calculated)
+* [Example: Triangle Ink Trace Points](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#example:-triangle-ink-trace-points)
+* [How to Set Stroke Thickness?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-to-set-stroke-thickness)
 
 ## Mail merge
 
