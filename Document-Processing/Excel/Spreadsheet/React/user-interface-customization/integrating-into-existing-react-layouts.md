@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrating Into Existing React Layouts
 
-The Syncfusion React Spreadsheet component can fit into any React layout, such as dashboards, sidebars, split panels, modals, or tabs.
+The Syncfusion React Spreadsheet component can fit into any React layout, such as dashboards, sidebars, split panels, models, or tabs.
 
 It automatically adjusts to its container, making it easy to build responsive and flexible page layouts.
 
