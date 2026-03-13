@@ -21,7 +21,7 @@ A **digital signature** provides:
 - **Non‑repudiation** – signer cannot deny signing.
 
 Syncfusion supports a hybrid workflow:
-- Viewer → **[Design signature fields](../manage-form-fields/create-form-fields#signature-field)**, capture Draw/Type/Upload electronic signature.
+- Viewer → **[Design signature fields](../forms/manage-form-fields/create-form-fields#signature-field)**, capture Draw/Type/Upload electronic signature.
 - PDF Library → **[Apply PKCS#7/CMS digital signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature)** using a certificate (PFX/P12).
 
 ## Add a Signature Field (How-to)
@@ -32,10 +32,12 @@ Syncfusion supports a hybrid workflow:
 3. Click on the document to place the field.
 4. Configure Name, Tooltip, Required, etc.
 
-![Signature annotation toolbar](../../../javascript-es6/images/add_sign.png)
+![Signature annotation toolbar](../../javascript-es6/images/add_sign.png)
 
 ### Using the API
-```tsx
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 viewerRef.current?.formDesignerModule.addFormField('SignatureField', {
   name: 'ApproverSignature',
   pageNumber: 1,
@@ -43,7 +45,9 @@ viewerRef.current?.formDesignerModule.addFormField('SignatureField', {
   isRequired: true,
   tooltip: 'Sign here'
 });
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Capture Electronic Signature (Draw / Type / Upload)
 Users click the field → dialog appears → they can **Draw**, **Type**, or **Upload** a handwritten signature.
@@ -82,6 +86,8 @@ const signedBytes = await document.save();
 document.destroy();
 ```
 
+N> See the PDF Library [Digital signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature) to know more about Digital Signature in PDF Documents.
+
 ## Important Notes
 - **Do all form edits first. Sign last.** Any PDF modification *after signing* invalidates the signature.
 - Self‑signed PFX will show **Unknown / Untrusted** until added to Trusted Certificates.
@@ -90,9 +96,9 @@ document.destroy();
 - Place signature fields via Viewer for accurate layout.
 - Apply PKI signature using PDF Library only.
 - Use CMS + SHA‑256 for compatibility.
-- Avoid flattening **after** signing.
+- Avoid flattening after signing.
 
 ## See Also
-- Add Handwritten or Electronic Signature
-- Validate Digital Signatures
-- Customize Signature Appearance
+- [Validate Digital Signatures](./validate-digital-signatures)
+- [Custom fonts for Signature fields](../../how-to/custom-font-signature-field)
+- [Signature workflows](./signature-workflow)

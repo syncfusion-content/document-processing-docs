@@ -22,7 +22,7 @@ A **digital signature** is a cryptographic proof embedded in the PDF that allows
 - **Timestamp validity** – (If present) the signature was time‑stamped by a trusted TSA at signing time.
 - **Revocation status** – Whether the signer’s certificate was revoked at or after signing (OCSP/CRL).
 
-In Syncfusion, you typically **[design the signature field in the Viewer](../../forms/manage-form-fields/create-form-fields#signature-field)** and then **[apply and validate the digital signature using the PDF Library]()**.
+ In Syncfusion, you typically **[design the signature field in the Viewer](../../forms/manage-form-fields/create-form-fields#signature-field)** and then use the Syncfusion PDF Library to perform cryptographic validation. See the PDF Library documentation for API references and examples: [Digital signature validation (PDF Library)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature#digital-signature-validation).
 
 ## How validation fits in the Viewer flow (Concept)
 
@@ -32,84 +32,17 @@ In Syncfusion, you typically **[design the signature field in the Viewer](../../
 
 ![Validation status badge in toolbar](../forms/images/signature-validation-badge.png)
 
-## How‑to: Validate a digital signature (Client‑side)
+ ## How‑to: Validate a digital signature (Client‑side)
 
-The example below shows how to load the PDF bytes yourself, open with the **PDF Library**, and validate each signature field. You can call this when the document is loaded or on demand (e.g., a **Validate** button).
+ Cryptographic signature validation is performed by the Syncfusion PDF Library. Please refer to the PDF Library documentation for detailed guidance and sample code. The following pages cover validation concepts, APIs, and full examples:
 
-```ts
-// Assumes you already have the PDF bytes (e.g., fetched via fetch(...).arrayBuffer())
-import {
-  PdfDocument,
-  // The validation API is available on the signature/field instance
-} from '@syncfusion/ej2-pdf';
+- [Digital signature validation overview](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature#digital-signature-validation)
 
-async function validateSignatures(pdfBytes: ArrayBuffer) {
-  const doc = new PdfDocument(pdfBytes);
+- [Validate all signatures in a PDF document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature#validate-all-signatures-in-pdf-document)
 
-  const results: Array<{
-    fieldName: string;
-    isIntact: boolean;      // document integrity
-    isTrusted: boolean;     // certificate trust (based on local trust)
-    isTimestampValid?: boolean;
-    message: string;
-  }> = [];
+- [Validate and classify digital signatures in a PDF document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature#validate-and-classify-digital-signatures-in-a-pdf-document)
 
-  // Iterate form fields and locate signature fields
-  if (doc.form && doc.form.fields && doc.form.fields.length) {
-    for (const f of doc.form.fields as any[]) {
-      if (f && f.type === 'SignatureField') {
-        const sigField = f; // PdfSignatureField
-
-        // Validate the signature on this field. Depending on your build, this may
-        // expose a method like validate() or properties describing status flags.
-        // Pseudocode below: adapt to your actual API surface.
-        const vr = await sigField.validate();
-        // vr may include: isDocumentIntact, isCertificateTrusted, isTimestampValid, messages, etc.
-
-        results.push({
-          fieldName: sigField.name,
-          isIntact: !!vr?.isDocumentIntact,
-          isTrusted: !!vr?.isCertificateTrusted,
-          isTimestampValid: vr?.isTimestampValid,
-          message: vr?.message || ''
-        });
-      }
-    }
-  }
-
-  doc.destroy();
-  return results;
-}
-```
-
-N> If your current build doesn’t expose a promise‑based `validate()` on the field, consult the PDF Library’s digital signature API in your version and map the available properties/methods to the same **intact / trusted / timestamp** status for display.
-
-### Displaying results in React (example snippet)
-
-```tsx
-const [validation, setValidation] = useState(null);
-
-async function onValidateClick() {
-  const bytes = await fetch('/path/to/signed.pdf').then(r => r.arrayBuffer());
-  const r = await validateSignatures(bytes);
-  setValidation(r);
-}
-```
-
-Render a simple table or badge:
-
-```tsx
-{validation && (
-  <div className="sig-validation">
-    {validation.map(v => (
-      <div key={v.fieldName} className="chip">
-        <strong>{v.fieldName}:</strong>
-        {v.isIntact && v.isTrusted ? ' Valid' : ' Invalid/Unknown'}
-      </div>
-    ))}
-  </div>
-)}
-```
+After using the PDF Library to obtain validation results (integrity, trust, timestamp), surface those results in your React UI (for example: badge, table, or details panel) to communicate status to users.
 
 ## Interpreting validation outcomes (Reference)
 
@@ -133,5 +66,5 @@ Render a simple table or badge:
 
 ## See also
 - [Add Digital Signature](/document-processing/pdf/pdf-viewer/react/forms/signature/add-digital-signature)
-- [Add Handwritten or Electronic Signature](/document-processing/pdf/pdf-viewer/react/forms/signature/add-electronic-signature)
 - [Customize Signature Appearance](./customize-signature-appearance)
+- [Signature workflows](./signature-workflow)
