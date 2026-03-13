@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to deploy spreadsheet server to AWS EKS in React Spreadsheet Editor
+# How to deploy spreadsheet server to AWS EKS Cluster
 
 ## Prerequisites
 
