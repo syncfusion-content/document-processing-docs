@@ -383,8 +383,7 @@ N> troubleshooting <br />
 
 ![Published blazor server sample](../images/azure_container_published_blazor_webapps.png)
 
-N> [View the Blazor Webapps Server Sample](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer2/NET10/PDFViewer2_WebAppServerMode).<br />
-[View the Blazor Webapps Wasm Sample](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer2/NET10/PDFViewer2_WebAppServerMode).
+N> [View the Blazor Webapps Sample](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/ES-1015670-DockerPublish/Azure%20Container).
 
 ## See also
 
