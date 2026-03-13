@@ -18,12 +18,24 @@ domainurl: ##DomainURL##
 * Docker installed if you plan to build and push a custom image.
 
 **Step 1:** Configure your environment
-Ensure `kubectl` is pointing to the EKS cluster and nodes are Ready. Run the following command to authenticate and configure kubectl for your cluster.
+* Open a terminal and authenticate to AWS
 
 ```bash
 
 aws configure # enter your Access Key, Secret Key, region, and output format (e.g., json)
+
+```
+* Update your kubectl context to point to the EKS cluster:
+
+```bash
+
 aws eks update-kubeconfig --region <region> --name <cluster-name>
+
+```
+* After updating the [`kubeconfig`](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) with the EKS cluster, you can verify the node’s state.
+
+```bash
+
 kubectl get nodes # verify that your cluster nodes are ready
 
 ```
@@ -83,7 +95,7 @@ spec:
 ```
 
 **Step 4:** Deploy to EKS
-1. Apply the manifests:
+* Apply the manifests:
 
 ```bash
 
@@ -92,7 +104,7 @@ kubectl apply -f spreadsheet-service.yaml
 
 ```
 
-2. Use the kubectl get pods command to monitor pod status. To retrieve the external address, run:
+* Use the kubectl get pods command to monitor pod status. To retrieve the external address, run:
 
 ```bash
 
@@ -100,7 +112,7 @@ kubectl get svc spreadsheet-server-service
 
 ```
 
-3. Retrieve the external address from the Service output. Use `https://` only if the Load Balancer is configured with TLS (use ACM for certificates).
+* Retrieve the external address from the Service output. Use `https://` only if the Load Balancer is configured with TLS (use ACM for certificates).
 
 **Step 5:** Configure the React client
 
@@ -122,4 +134,4 @@ N> Use `https://` if your Load Balancer has TLS configured.
 - `Resource limits:` Define `resources.requests`, and `resources.limits` in the container spec to allocate CPU and memory appropriately.
 - `Environment variables:` In addition to SYNCFUSION_LICENSE_KEY, you can set other configuration keys (e.g., culture) using the env: section in the deployment manifest without modifying the docker image.
 
-For more information on deploying Spreadsheet docker image kindly refer to this [`Blog`](https://www.syncfusion.com/blogs/post/spreadsheet-docker-image-deployment)
+For more information on deploying Spreadsheet docker image in Amazon EKS kindly refer to this [`Blog`](https://www.syncfusion.com/blogs/post/spreadsheet-server-eks-deployment)
