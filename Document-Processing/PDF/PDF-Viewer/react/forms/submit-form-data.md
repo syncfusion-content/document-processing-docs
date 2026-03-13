@@ -25,11 +25,11 @@ The React PDF Viewer allows submitting filled form data like text fields, checkb
 
 1. Enable form designer in the viewer
 
-   - Inject `FormFields` and `FormDesigner` services into the viewer so form APIs are available.
+   - Inject `FormFields` and [`FormDesigner`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner) services into the viewer so form APIs are available.
 
 2. Export form data from the viewer
 
-   - Use `viewer.exportFormFieldsAsObject()` to obtain the filled values as JSON.
+   - Use [`viewer.exportFormFieldsAsObject()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#exportformfieldsasobject) to obtain the filled values as JSON.
 
 3. POST the exported JSON to your back end
 
@@ -103,10 +103,10 @@ export default function SubmitFormExample() {
 
 ## Troubleshooting
 
-- **No form values returned**: Ensure the PDF has interactive fields and the viewer has finished loading before calling `exportFormFieldsAsObject()`.
+- **No form values returned**: Ensure the PDF has interactive fields and the viewer has finished loading before calling [`exportFormFieldsAsObject()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#exportformfieldsasobject).
 - **CORS errors**: Enable CORS on the server or serve both frontend and back end from the same origin during testing.
 - **Server rejects payload**: Confirm the server expects `application/json` and validates shape of the object.
-- **WASM or resource errors**: Ensure `resourceUrl` points to the correct Syncfusion PDF Viewer library files.
+- **WASM or resource errors**: Ensure [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) points to the correct Syncfusion PDF Viewer library files.
 
 ## Use cases
 

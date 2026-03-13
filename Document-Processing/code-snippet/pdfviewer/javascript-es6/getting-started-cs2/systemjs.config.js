@@ -10,7 +10,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/25.1.35/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/32.2.3/"
     },
     map: {
         main: "index.ts",
@@ -38,7 +38,10 @@ System.config({
         "@syncfusion/ej2-excel-export": "syncfusion:ej2-excel-export/dist/ej2-excel-export.umd.min.js",
         "@syncfusion/ej2-pdf-export": "syncfusion:ej2-pdf-export/dist/ej2-pdf-export.umd.min.js",
         "@syncfusion/ej2-compression": "syncfusion:ej2-compression/dist/ej2-compression.umd.min.js",
-        "@syncfusion/ej2-file-utils": "syncfusion:ej2-file-utils/dist/ej2-file-utils.umd.min.js"
+        "@syncfusion/ej2-file-utils": "syncfusion:ej2-file-utils/dist/ej2-file-utils.umd.min.js",
+        "@syncfusion/ej2-pdf-data-extract": "syncfusion:ej2-pdf-data-extract/dist/ej2-pdf-data-extract.umd.min.js",
+        "@syncfusion/ej2-markdown-converter":"syncfusion:ej2-markdown-converter/dist/ej2-markdown-converter.umd.min.js",
+        "@syncfusion/ej2-interactive-chat":"syncfusion:ej2-interactive-chat/dist/ej2-interactive-chat.umd.min.js"
     },
      meta: { 
        '*.json': { loader: 'plugin-json' }
