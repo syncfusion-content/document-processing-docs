@@ -107,7 +107,7 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 Hiding a worksheet can help prevent unauthorized or accidental changes to your file.
 
-There are three visibility state as like Microsoft Excel,
+There are three visibility [SheetState](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sheetstate) as like Microsoft Excel,
 
 | State | Description |
 |-------|---------|
