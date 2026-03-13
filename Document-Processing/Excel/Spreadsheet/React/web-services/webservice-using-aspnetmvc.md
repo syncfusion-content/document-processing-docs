@@ -1,4 +1,13 @@
-# Connecting Local Web Services for Spreadsheet Open and Save in ASP.NET MVC
+---
+layout: post
+title: Web Services using ASP.NET MVC in React Spreadsheet | Syncfusion
+description: Learn here all about web services using ASP.NET MVC in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+control: Web Services 
+platform: document-processing
+documentation: ug
+---
+
+# Connecting Web Services for Spreadsheet Open and Save in ASP.NET MVC
 
 This guide demonstrates how to prepare and connect local web services for spreadsheet open and save operations using **ASP.NET MVC**.
 

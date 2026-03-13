@@ -1,8 +1,17 @@
-# Connecting Local Web Services for Spreadsheet Open and Save in WCF
+---
+layout: post
+title: Web Services using WCF in React Spreadsheet | Syncfusion
+description: Learn here all about web services using WCF in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+control: Web Services 
+platform: document-processing
+documentation: ug
+---
+
+# Connecting Web Services for Spreadsheet Open and Save in WCF
 
 This guide demonstrates how to prepare and connect local web services for spreadsheet open and save operations using **WCF (Windows Communication Foundation)**.
 
-By default, the Syncfusion Spreadsheet component uses Syncfusion®-hosted endpoints for file operations:
+By default, the Syncfusion Spreadsheet component uses Syncfusion-hosted endpoints for file operations:
 
 ```ts
 openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
