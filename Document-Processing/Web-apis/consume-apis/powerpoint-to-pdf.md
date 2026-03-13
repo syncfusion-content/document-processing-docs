@@ -1,6 +1,6 @@
 ---
 title: Convert PowerPoint to PDF Using Syncfusion Web API
-description: Convert PowerPoint files to highquality PDFs using Syncfusion Web API. Preserve slide layouts, images, graphics, and design accuracy with reliable conversion.
+description: Convert PowerPoint files to highquality PDFs using Syncfusion Web API. Preserve slide layouts, images, graphics, and design accuracy with reliable conversion. 
 platform: document-processing
 control: general
 documentation: UG
