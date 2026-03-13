@@ -103,7 +103,7 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 - If you copy =SUM(A2,B2) and paste, the formula reference will change depending on the pasted cell address but we don't have support for nested formula(formula reference will be same).
 - Clipboard is not supported with conditional formatting (values only pasting).
 - We have limitation while copying the whole sheet data and pasting it into another sheet.
-- Paste options are not enabled when copying from an external sheet; external clipboard paste works only through keyboard shortcuts (Ctrl + V).
+- Paste options in Ribbon UI and context menu are not enabled when copy and paste from an external content. The external clipboard paste works only through keyboard shortcuts (Ctrl + V).
 
 ## Note
 

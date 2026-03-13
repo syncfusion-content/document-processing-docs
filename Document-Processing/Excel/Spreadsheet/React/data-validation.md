@@ -97,7 +97,6 @@ The following features have some limitations in Data Validation:
 * Insert row between the data validation.
 * Copy/paste with data validation.
 * Delete cells between data validation applied range.
-* Custom error message in data validation.
 
 ## See Also
 

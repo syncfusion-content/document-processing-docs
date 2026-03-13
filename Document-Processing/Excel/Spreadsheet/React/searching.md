@@ -82,7 +82,7 @@ In the following sample, searching can be done by following ways:
 ## Limitations
 
 * Undo/redo for Replace All is not supported in this feature.
-* Replace All is not supported for selected range.
+* Replace All functionality is not restricted to selected range of cells.
 * Find and Replace in Formulas, Notes not supported.
 
 ## Note

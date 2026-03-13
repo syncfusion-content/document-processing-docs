@@ -114,7 +114,7 @@ The following features have some limitations in Filter:
 * Insert/delete row/column between the filter applied cells.
 * Merge cells with filter.
 * Copy/cut paste the filter applied cells.
-* Filter by color.
+* Filter by color is not supported.
 
 ## Note
 
