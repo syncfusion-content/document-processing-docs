@@ -25,7 +25,7 @@ You can dynamically add or insert a sheet by one of the following ways,
 
 * Click the `Add Sheet` button in the sheet tab. This will add a new empty sheet next to current active sheet.
 * Right-click on the sheet tab, and then select `Insert` option from the context menu to insert a new empty sheet before the current active sheet.
-* Using [`insertSheet()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at your desired index.
+* Using [`insertSheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at your desired index.
 
 The following code example shows the insert sheet operation in spreadsheet.
 
@@ -68,7 +68,7 @@ The following code example shows how to insert a sheet programmatically and make
 The Spreadsheet supports removing an existing worksheet. You can delete a sheet in the following ways:
 
 * Right-click on the sheet tab, and then select the **Delete** option from the context menu.
-* Use the [`delete()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete) method to remove sheets programmatically.  
+* Use the [`delete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete) method to remove sheets programmatically.  
 * Note: You cannot delete a worksheet if only one sheet exists in the workbook.
 
 ## Rename sheet

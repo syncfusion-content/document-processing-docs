@@ -22,9 +22,9 @@ Adding images to a spreadsheet can enhance the visual appeal and help to convey 
 You can insert an image by using one of the following ways:
 
 * Select the **Insert** tab in the Ribbon toolbar, and then choose the **Image** option.  
-* Use the `insertImage()` method programmatically.
+* Use the `insertImage` method programmatically.
 
-The available parameters in the `insertImage()` method are,
+The available parameters in the `insertImage` method are,
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -45,9 +45,9 @@ The available arguments in `ImageModel` are:
 ### Delete Image
 
 * To delete an image, select the image and press the **Delete** key.  
-* You can also use the `deleteImage()` method programmatically.  
+* You can also use the `deleteImage` method programmatically.  
 
-The available parameters in the `deleteImage()` method are:
+The available parameters in the `deleteImage` method are:
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -61,12 +61,12 @@ The image feature allows you to view and insert an image in a spreadsheet. You c
 #### Height and Width
 
 * You can change the height and width of the image by resizing.
-* Use the `height` and `width` property in the `insertImage()` method programmatically.
+* Use the `height` and `width` property in the `insertImage` method programmatically.
 
 #### Top and Left
 
 * You can change the position of the image by drag and drop.
-* Use the `top` and `left` property in the `insertImage()` method programmatically.
+* Use the `top` and `left` property in the `insertImage` method programmatically.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -114,9 +114,9 @@ The following types of charts are available in the Spreadsheet.
 You can insert a chart by using one of the following ways,
 
 * Select the chart icon in the Ribbon toolbar under the **Insert** tab.
-* Use the [`insertChart()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertchart) method programmatically.
+* Use the [`insertChart`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertchart) method programmatically.
 
-The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertchart) method is,
+The available parameter in the [`insertChart`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertchart) method is,
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -151,9 +151,9 @@ The available arguments in the `ChartModel` are:
 ### Delete Chart
 
 * To delete a chart, simply select the chart and press the **Delete** key.
-* You can also use the [`deleteChart()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#deletechart) method programmatically.
+* You can also use the [`deleteChart`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#deletechart) method programmatically.
 
-The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#deletechart) method is,
+The available parameter in the [`deleteChart`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#deletechart) method is,
 
 | Parameter | Type | Description |
 |-----|------|----|

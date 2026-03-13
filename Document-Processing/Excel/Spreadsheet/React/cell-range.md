@@ -103,9 +103,9 @@ Auto Fill is used to fill the cells with data based on adjacent cells. It also f
 You can do this by one of the following ways,
 
 * Using “AutoFillOptions” menu which is open, while drag and drop the cell using fill handle element.
-* Use the autoFill() method programmatically.
+* Use the autoFill method programmatically.
 
-The available parameters in `autoFill()` method are,
+The available parameters in `autoFill` method are,
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -192,7 +192,7 @@ The **Clear** feature allows you to remove cell contents (formulas and data) and
 You can apply clear feature by using one of the following ways,
 
 * Select the clear icon in the Ribbon toolbar under the `Home` Tab.
-* Using the [`clear()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method to clear the values.
+* Using the [`clear`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method to clear the values.
 
 Clear has the following types in the spreadsheet,
 
@@ -205,7 +205,7 @@ Clear has the following types in the spreadsheet,
 
 ### Methods
 
-You can clear cell contents and formats in the Spreadsheet by using the [`clear()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method. The `clear()` method accepts two parameters:  
+You can clear cell contents and formats in the Spreadsheet by using the [`clear`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method. The `clear` method accepts two parameters:  
 * `type` – specifies the type of clear operation (`Clear All`, `Clear Formats`, `Clear Contents`, or `Clear Hyperlinks`).  
 * `range` – specifies the cell or range of cells to clear.  
 
