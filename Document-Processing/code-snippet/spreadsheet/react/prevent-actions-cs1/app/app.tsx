@@ -20,7 +20,7 @@ function App() {
 
     // Triggers whenever any action begins in spreadsheet. 
     const actionBegin = (args: any) =>{
-        const address: any;
+        const address: string;
         if (args.action == "clipboard") {
             address = args.args.eventArgs.pastedRange;
         }
