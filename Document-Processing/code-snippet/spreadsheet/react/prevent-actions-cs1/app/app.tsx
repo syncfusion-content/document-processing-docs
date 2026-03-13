@@ -7,11 +7,11 @@ import { data } from './datasource';
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     // Columns to be prevented editing.
-    const readOnlyColumns = [0,2];
+    const readOnlyColumns: number[] = [0,2];
 
     // Triggers when cell editing starts in the spreadsheet.
     const cellEdit = (args: any) =>{
-        var addressRange = getCellIndexes(args.address.split('!')[1]);
+        const addressRange: number[] = getCellIndexes(args.address.split('!')[1]);
         // preventing cellEditing from the readOnly columns
         if (readOnlyColumns.includes(addressRange[1])) {
             args.cancel = true;
@@ -20,7 +20,7 @@ function App() {
 
     // Triggers whenever any action begins in spreadsheet. 
     const actionBegin = (args: any) =>{
-        var address: any;
+        const address: any;
         if (args.action == "clipboard") {
             address = args.args.eventArgs.pastedRange;
         }
@@ -34,11 +34,11 @@ function App() {
             address = args.args.copiedRange
         }
         if (address) {
-            var addressRange = getRangeIndexes(address);
-            var colStart = addressRange[1];
-            var colEnd = addressRange[3];
+            const addressRange: number[] = getRangeIndexes(address);
+            const colStart: number = addressRange[1];
+            const colEnd: number = addressRange[3];
             // preventing other actions from the readOnly columns
-            for (var col = colStart; col <= colEnd; col++) {
+            for (var col: number = colStart; col <= colEnd; col++) {
                 if (readOnlyColumns.includes(col)) {
                     if (args.args.action == "cut") {
                         args.args.cancel = true;
