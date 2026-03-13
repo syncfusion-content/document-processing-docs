@@ -200,28 +200,28 @@ You can add borders around a cell or range of cells to define a section of works
 
 | Types | Actions |
 |-------|---------|
-| Top Border | Specifies the top border of a cell or range of cells.|
-| Left Border | Specifies the left border of a cell or range of cells.|
-| Right Border | Specifies the right border of a cell or range of cells.|
-| Bottom Border | Specifies the bottom border of a cell or range of cells.|
-| No Border | Used to clear the border from a cell or range of cells.|
-| All Border | Specifies all border of a cell or range of cells.|
-| Horizontal Border | Specifies the top and bottom border of a cell or range of cells.|
-| Vertical Border | Specifies the left and right border of a cell or range of cells.|
-| Outside Border | Specifies the outside border of a range of cells.|
-| Inside Border | Specifies the inside border of a range of cells.|
+| **Top Border** | Specifies the top border of a cell or range of cells.|
+| **Left Border** | Specifies the left border of a cell or range of cells.|
+| **Right Border** | Specifies the right border of a cell or range of cells.|
+| **Bottom Border** | Specifies the bottom border of a cell or range of cells.|
+| **No Border** | Used to clear the border from a cell or range of cells.|
+| **All Border** | Specifies all border of a cell or range of cells.|
+| **Horizontal Border** | Specifies the top and bottom border of a cell or range of cells.|
+| **Vertical Border** | Specifies the left and right border of a cell or range of cells.|
+| **Outside Border** | Specifies the outside border of a range of cells.|
+| **Inside Border** | Specifies the inside border of a range of cells.|
 
 You can also change the color, size, and style of the border. The size and style supported in the spreadsheet are,
 
 | Types | Actions |
 |-------|---------|
-| Thin | Specifies the `1px` border size (default).|
-| Medium | Specifies the `2px` border size.|
-| Thick | Specifies the `3px` border size.|
-| Solid | Used to create the `solid` border (default).|
-| Dashed | Used to create the `dashed` border.|
-| Dotted | Used to create the `dotted` border.|
-| Double | Used to create the `double` border.|
+| **Thin** | Specifies the `1px` border size (default).|
+| **Medium** | Specifies the `2px` border size.|
+| **Thick** | Specifies the `3px` border size.|
+| **Solid** | Used to create the `solid` border (default).|
+| **Dashed** | Used to create the `dashed` border.|
+| **Dotted** | Used to create the `dotted` border.|
+| **Double** | Used to create the `double` border.|
 
 Borders can be applied in the following ways,
 * Using the  `border`, `borderLeft`, `borderRight`, `borderBottom` properties, you can set the desired border to each cell at initial load.
@@ -276,7 +276,7 @@ Highlight cells rules option in the conditional formatting enables you to highli
 
 The following options can be given for the highlight cells rules as type,
 
->* 'GreaterThan', 'LessThan', 'Between', 'EqualTo', 'ContainsText', 'DateOccur', 'Duplicate', 'Unique'.
+>* `GreaterThan`, `LessThan`, `Between`, `EqualTo`, `ContainsText`, `DateOccur`, `Duplicate`, `Unique`.
 
 The following preset colors can be used for formatting styles,
 
@@ -292,7 +292,7 @@ Top bottom rules option in the conditional formatting allows you to apply format
 
 The following options can be given for the top bottom rules as type,
 
->* 'Top10Items', 'Bottom10Items', 'Top10Percentage', 'Bottom10Percentage', 'BelowAverage', 'AboveAverage'.
+>* `Top10Items`, `Bottom10Items`, `Top10Percentage`, `Bottom10Percentage`, `BelowAverage`, `AboveAverage`.
 
 ### Data Bars
 
@@ -300,7 +300,7 @@ You can apply data bars to represent the data graphically inside a cell. The lon
 
 The following options can be given for the data bars as type,
 
->* 'BlueDataBar', 'GreenDataBar', 'RedDataBar', 'OrangeDataBar', 'LightBlueDataBar', 'PurpleDataBar'.
+>* `BlueDataBar`, `GreenDataBar`, `RedDataBar`, `OrangeDataBar`, `LightBlueDataBar`, `PurpleDataBar`.
 
 ### Color Scales
 
@@ -308,7 +308,7 @@ Using color scales, you can format your cells with two or three colors, where di
 
 The following options can be given for the color scales as type,
 
->* 'GYRColorScale', 'RYGColorScale', 'GWRColorScale', 'RWGColorScale', 'BWRColorScale', 'RWBColorScale', 'WRColorScale', 'RWColorScale', 'GWColorScale', 'WGColorScale', 'GYColorScale', 'YGColorScale'.
+>* `GYRColorScale`, `RYGColorScale`, `GWRColorScale`, `RWGColorScale`, `BWRColorScale`, `RWBColorScale`, `WRColorScale`, `RWColorScale`, `GWColorScale`, `WGColorScale`, `GYColorScale`, `YGColorScale`.
 
 ### Icon Sets
 
@@ -316,7 +316,7 @@ Icon sets will help you to visually represent your data with icons. Every icon r
 
 The following options can be given for the icon sets as type,
 
->* 'ThreeArrows', 'ThreeArrowsGray', 'FourArrowsGray', 'FourArrows', 'FiveArrowsGray', 'FiveArrows', 'ThreeTrafficLights1', 'ThreeTrafficLights2', 'ThreeSigns', 'FourTrafficLights', 'FourRedToBlack', 'ThreeSymbols', 'ThreeSymbols2', 'ThreeFlags', 'FourRating', 'FiveQuarters', 'FiveRating', 'ThreeTriangles', 'ThreeStars', 'FiveBoxes'.
+>* `ThreeArrows`, `ThreeArrowsGray`, `FourArrowsGray`, `FourArrows`, `FiveArrowsGray`, `FiveArrows`, `ThreeTrafficLights1`, `ThreeTrafficLights2`, `ThreeSigns`, `FourTrafficLights`, `FourRedToBlack`, `ThreeSymbols`, `ThreeSymbols2`, `ThreeFlags`, `FourRating`, `FiveQuarters`, `FiveRating`, `ThreeTriangles`, `ThreeStars`, `FiveBoxes`.
 
 ### Custom Format
 
@@ -324,7 +324,7 @@ Using the custom format for conditional formatting you can set cell styles like 
 
 In the MAY and JUN columns, we have applied conditional formatting custom format.
 
->* In the Conditional format, custom format supported for Highlight cell rules and Top bottom rules.
+>* In the Conditional format, custom format supported for **Highlight cell rules** and **Top bottom rules**.
 
 ### Clear Rules
 

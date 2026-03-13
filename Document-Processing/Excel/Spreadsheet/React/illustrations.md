@@ -33,13 +33,14 @@ The available parameters in the `insertImage` method are,
 
 The available arguments in `ImageModel` are:
 
-* `src`: Specifies the image source.
-* `id`: Specifies the image element ID.
-* `height`: Specifies the height of the image.
-* `width`: Specifies the width of the image.
-* `top`: Specifies the top position of the image.
-* `left`: Specifies the left position of the image.
-
+| Property | Description |
+|----------|-------------|
+| [src](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/imagemodel#src) | Specifies the image source. |
+| [id](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/imagemodel#id) | Specifies the image element id. |
+| [height](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/imagemodel#height) | Specifies the height of the image. |
+| [width](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/imagemodel#width) | Specifies the width of the image. |
+| [top](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/imagemodel#top) | Specifies the top position of the image. |
+| [left](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/imagemodel#left) | Specifies the left side of the image. |
 >* In a spreadsheet, you can add many types of image files, including IMAGE, JPG, PNG, GIF, and JPEG formats.
 
 ### Delete Image
@@ -124,12 +125,21 @@ The available parameter in the [`insertChart`](https://ej2.syncfusion.com/react/
 
 The available arguments in the `ChartModel` are:
 
-* `type`: Specifies the type of chart.
-* `theme`: Specifies the theme of the chart.
-* `isSeriesInRows`: Specifies whether to switch the row or column.  
-* `range`: Specifies the selected or specified range.
-* `id`: Specifies the chart element ID.
-* `markerSettings`: Specifies the marker settings. The marker provides information about data points in the series and is currently applicable only to line charts.
+| Property | Type | Description |
+|----------|------|-------------|
+| [id](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#id) | `string` | Specifies the chart element id. |
+| [type](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#type) | `ChartType` | Specifies the type of chart. |
+| [theme](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#theme) | `ChartTheme` | Specifies the theme of the chart. |
+| [range](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#range) | `string` | Specifies the selected or specified data range for the chart. |
+| [isSeriesInRows](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#isseriesinrows) | `boolean` | Specifies whether series are organized in rows (true) or columns (false). |
+| [title](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#title) | `string` | Specifies the title of the chart. |
+| [width](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#width) | `number` | Specifies the width of the chart. |
+| [height](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#height) | `number` | Specifies the height of the chart. |
+| [dataLabelSettings](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#datalabelsettings) | `DataLabelSettingsModel` | Specifies the data label settings for the series. |
+| [markerSettings](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#markersettings) | `MarkerSettingsModel` | Specifies the marker settings for the series (applicable to line charts). |
+| [legendSettings](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#legendsettings) | `LegendSettingsModel` | Specifies options for customizing the chart legend. |
+| [primaryXAxis](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#primaryxaxis) | `AxisModel` | Specifies options to configure the horizontal axis. |
+| [primaryYAxis](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/chartmodel#primaryyaxis) | `AxisModel` | Specifies options to configure the vertical axis. |
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
