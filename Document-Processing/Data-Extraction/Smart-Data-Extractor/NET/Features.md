@@ -9,9 +9,9 @@ keywords: Assemblies
 
 # Smart Data Extractor Features 
 
-## Extract data from a PDF document
+## Extract Data from a PDF Document
 
-To extract structured data such as text, form fields, tables and images from an entire PDF document using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code
+To extract structured data such as text, form fields, tables and images from an entire PDF document using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
 
 {% tabs %}   
 
@@ -129,7 +129,67 @@ using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract form data as JSON
+## Extract Data as Stream
+
+To extract structured data from a PDF document and return the output as a stream using the **ExtractDataAsPdfStream** method of the **DataExtractor** class, refer to the following example.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+{
+    //Initialize the Smart Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    extractor.EnableFormDetection = true;
+    extractor.EnableTableDetection = true;
+    extractor.ConfidenceThreshold = 0.6;
+
+    //Extract data and return as a PDF stream.
+    Stream pdfStream = extractor.ExtractDataAsPdfStream(inputStream);
+
+    //Save the extracted PDF stream into an output file.
+    using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+    {
+        pdfStream.CopyTo(outputStream);
+    }
+}
+ 
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+{
+    //Initialize the Smart Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    extractor.EnableFormDetection = true;
+    extractor.EnableTableDetection = true;
+    extractor.ConfidenceThreshold = 0.6;
+
+    //Extract data and return as a PDF stream.
+    Stream pdfStream = extractor.ExtractDataAsPdfStream(inputStream);
+
+    //Save the extracted PDF stream into an output file.
+    using (FileStream outputStream = new FileStream("Output.pdf", FileMode.Create, FileAccess.Write))
+    {
+        pdfStream.CopyTo(outputStream);
+    }
+}
+ 			
+{% endhighlight %}
+
+{% endtabs %}
+
+## Extract Data as JSON
 
 To extract form fields across a PDF document using the **ExtractDataAsJson** method of the **DataExtractor** class with form recognition options, refer to the following code example:
 
@@ -150,7 +210,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
     //Enable form detection in the document.
     extractor.EnableFormDetection = true;
-    extractor.EnableTableDetection = false;
+    extractor.EnableTableDetection = true;
     //Set confidence threshold for extraction.
     extractor.ConfidenceThreshold = 0.6
     //Configure form recognition options.
@@ -217,7 +277,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
-## Extract form data as PDF
+## Enable Form Detection
 
 To extract form fields across a PDF document and save them as a PDF output using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class with form recognition options, refer to the following code example:
 
@@ -319,7 +379,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract table data as PDF
+## Enable Table Detection
 
 To extract tables across a PDF document and save them as a PDF output using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class with table extraction options, refer to the following code example:
 
@@ -406,7 +466,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Apply confidence threshold to extract the data
+## Apply Confidence Threshold to Extract the Data
 
 To apply confidence thresholding when extracting data from a PDF document using the ExtractDataAsPdfDocument method of the DataExtractor class, refer to the following code example:
 
