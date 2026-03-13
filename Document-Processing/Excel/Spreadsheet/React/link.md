@@ -9,7 +9,7 @@ documentation: ug
 
 # Link in React Spreadsheet component
 
-Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowhyperlink) property to enable or disable hyperlink functionality.
+Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowhyperlink) property to enable or disable hyperlink functionality.
 
 > * The default value for `allowHyperlink` property is `true`.
 
@@ -22,7 +22,7 @@ You can insert a hyperlink in a worksheet cell for quick access to related infor
 In the active spreadsheet, click the cell where you want to create a hyperlink. Insert hyperlink can be done by any of the following ways:
 * Select the INSERT tab in the Ribbon toolbar and choose the `Link` item.
 * Right-click the cell and then click Hyperlink item in the context menu, or you can press Ctrl+K.
-* Use the [`addHyperlink()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#addhyperlink) method programmatically.
+* Use the [`addHyperlink`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#addhyperlink) method programmatically.
 
 ## Edit Hyperlink
 
@@ -45,11 +45,11 @@ Performing this operation remove a single hyperlink without losing the display t
 
 In the active spreadsheet, click the cell where you want to remove a hyperlink. remove hyperlink can be done by any of the following ways:
 * Right-click the cell and then click Remove Hyperlink item in the context menu.
-* Use the [`removeHyperlink()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#removehyperlink) method programmatically.
+* Use the [`removeHyperlink`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#removehyperlink) method programmatically.
 
 ## How to change target attribute
 
-There is an event named `beforeHyperlinkClick` which triggers only on clicking hyperlink. You can customize where to open the hyperlink by using the `target` property in the arguments of that event.
+There is an event named [beforeHyperlinkClick](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforehyperlinkclick) which triggers only on clicking hyperlink. You can customize where to open the hyperlink by using the [target](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforehyperlinkargs#target) property in the arguments of that event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -62,13 +62,21 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/link-cs1" %}
 
-## Limitations
+## Limitations in HyperLink
 
 * Inserting hyperlink not supported for multiple ranges.
 
+## Quick Lookup
+
+- `allowHyperlink` — property that enables or disables hyperlink support in the spreadsheet.
+- `addHyperlink(link, address)` — method that inserts a hyperlink into the specified cell using the given options.
+- `removeHyperlink(address)` — method that removes a hyperlink from a cell while keeping the display text unchanged.
+- `beforeHyperlinkClick` — event fired before a hyperlink opens, allowing customization of the target location.
+- `hyperlink` — cell property used to assign a URL or a sheet‑range reference directly to a cell.
+
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to know how to present and manipulate data.
 
 ## See Also
 

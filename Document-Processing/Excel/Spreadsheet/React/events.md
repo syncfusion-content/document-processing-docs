@@ -15,9 +15,9 @@ The Spreadsheet component triggers events for creation, data binding, selection,
 
 The `actionBegin` and `actionComplete` events are the primary action events in the Spreadsheet.
 
-The `actionBegin` event triggers when any action begins in the Spreadsheet and fires for all user-initiated actions, enabling you to identify the action type, prevent specific actions from executing, and apply custom logic at the initiation of an action.
+The [actionBegin](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actionbegin) event triggers when any action begins in the Spreadsheet and fires for all user-initiated actions, enabling you to identify the action type, prevent specific actions from executing, and apply custom logic at the initiation of an action.
 
-The `actionComplete` event triggers when any action completes in the Spreadsheet and fires for all user-initiated actions, enabling you to identify the action type and apply custom logic after an action has successfully completed.
+The [actionComplete](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actioncomplete) event triggers when any action completes in the Spreadsheet and fires for all user-initiated actions, enabling you to identify the action type and apply custom logic after an action has successfully completed.
 
 You can identify the type of action being triggered by using the `args.action` property during both the action events.
 

@@ -21,7 +21,7 @@ You can apply data validation to restrict the type of data or the values that us
 You can apply data validation by using one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Data Validation item.
-* Use the [`addDataValidation()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#adddatavalidation) method programmatically.
+* Use the [`addDataValidation`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#adddatavalidation) method programmatically.
 
 ## Clear Validation
 
@@ -30,7 +30,7 @@ Clear validation feature is used to remove data validations from the specified r
 You can clear data validation rule by one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Validation item.
-* Use the [`removeDataValidation()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#removedatavalidation) method programmatically.
+* Use the [`removeDataValidation`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#removedatavalidation) method programmatically.
 
 ## Highlight Invalid Data
 
@@ -39,7 +39,7 @@ Highlight invalid data feature is used to highlight the previously entered inval
 You can highlight an invalid data by using one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Highlight Invalid Data item.
-* Use the [`addInvalidHighlight()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#addinvalidhighlight) method programmatically.
+* Use the [`addInvalidHighlight`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#addinvalidhighlight) method programmatically.
 
 ## Clear Highlighted Invalid Data
 
@@ -48,7 +48,7 @@ Clear highlight feature is used to remove the highlight from invalid cells.
 You can clear the highlighted invalid data by using the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
-* Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#removeinvalidhighlight) method programmatically.
+* Use the [`removeInvalidHighlight`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#removeinvalidhighlight) method programmatically.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -74,7 +74,7 @@ When this rule is applied, the Spreadsheet evaluates the entered value against t
 You can apply custom data validation using two methods.
 
 * The first is through the Data Validation dialog in the Ribbon toolbar. Navigate to the Data tab, select the Data Validation option, and choose the Custom type from the Allow dropdown menu.
-* The second method is programmatically, using the [`addDataValidation()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#adddatavalidation) method, which allows developers to set custom rules dynamically via code.
+* The second method is programmatically, using the [`addDataValidation`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#adddatavalidation) method, which allows developers to set custom rules dynamically via code.
 
 The following code example demonstrates how to add custom data validation with a formula in a Spreadsheet.
 

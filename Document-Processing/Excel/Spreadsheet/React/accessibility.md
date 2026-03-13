@@ -61,7 +61,7 @@ The Spreadsheet component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/ap
 
 ## Keyboard interaction
 
-The Spreadsheet component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet component.
+The Spreadsheet component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet component.
 
 | Press | To do this |
 |----------|-------------|

@@ -15,11 +15,11 @@ Spreadsheet is a tabular format consisting of rows and columns. The intersection
 * Delete
 * Show and Hide
 
-## Insert
+## Insert Rows and Columns
 
 You can insert rows or columns anywhere in a spreadsheet. Use the [`allowInsert`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowinsert) property to enable or disable the insert option in Spreadsheet.
 
-### Row
+### Insert a Row
 
 The rows can be inserted in the following ways,
 
@@ -45,7 +45,7 @@ The following code example shows the options for inserting rows in the spreadshe
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/insert-row-cs1" %}
 
-### Column
+### Insert a Column
 
 The columns can be inserted in the following ways,
 
@@ -71,7 +71,7 @@ The following code example shows the options for inserting columns in the spread
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/insert-column-cs1" %}
 
-## Delete
+## Delete Rows and Columns
 
 Delete support provides an option for deleting the rows and columns in the spreadsheet. Use [`allowDelete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowdelete) property to enable or disable the delete option in Spreadsheet.
 
@@ -108,24 +108,24 @@ The following features have some limitations in Insert/Delete:
 * Insert row/column between the conditional formatting applied cells.
 * Insert/delete row/column between the filter applied cells.
 
-## Hide and show
+## Hide or show Spreadsheet Rows and Columns
 
 You can show or hide the rows and columns in the spreadsheet through property binding, method, and context menu.
 
-### Row
+### Show or Hide Rows
 
 The rows can be hidden or shown through the following ways,
 
-* Using `hidden` property in row, you can hide/show the rows at initial load.
-* Using `hideRow` method, you can hide the rows by specifying the start and end row index, set the last argument `hide` as `false` to unhide the hidden rows.
+* Using [hidden](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/row#hidden) property in row, you can hide/show the rows at initial load.
+* Using [hideRow](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#hiderow) method, you can hide the rows by specifying the start and end row index, set the last argument `hide` as `false` to unhide the hidden rows.
 * Right-click on the row header and select the desired option from context menu
 
-### Column
+### Show or Hide Columns
 
 The columns can be hidden or shown through following ways,
 
-* Using `hidden` property in columns, you can hide/show the columns at initial load.
-* Using `hideColumn` method, you can hide the columns by specifying the start and end column index, set the last argument `hide` as `false` to unhide the hidden columns.
+* Using [hidden](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/column#hidden) property in columns, you can hide/show the columns at initial load.
+* Using [hideColumn](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#hidecolumn) method, you can hide the columns by specifying the start and end column index, set the last argument `hide` as `false` to unhide the hidden columns.
 * Right-click on the column header and select the desired option from context menu
 
 The following code example shows the hide/show rows and columns operation in the spreadsheet.
@@ -147,11 +147,11 @@ The following code example shows the hide/show rows and columns operation in the
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/show-hide-cs1" %}
 
-## Size
+## Resize Rows and Columns
 
 You can change the size of rows and columns in the spreadsheet by using [setRowsHeight](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#setrowsheight) and [setColumnsWidth](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#setcolumnswidth) methods.
 
-### Row
+### Adjust Row Height 
 
 You can change the height of single or multiple rows by using the [setRowsHeight](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#setrowsheight) method.
 
@@ -183,7 +183,7 @@ The following code example shows how to change the height for single/multiple ro
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/row-height-cs1" %}
 
-### Column
+### Adjust Column width
 
 You can change the width of single or multiple columns by using the [setColumnsWidth](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#setcolumnswidth) method.
 
@@ -232,9 +232,24 @@ The following code example shows how to change the text in the column headers.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/column-header-change-cs1" %}
 
+## Quick Lookup
+
+- `insertRow(index)` - insert a new row at the specified index; optional parameters let you add multiple rows or row models.
+- `insertColumn(index)` - insert a new column at the specified index; optional parameters let you add multiple columns or column models.
+- `delete(startIndex, endIndex)` - remove a continuous range of rows or columns; you can specify the model type when needed.
+- `allowInsert` - property to enable or disable inserting rows or columns in the sheet.
+- `allowDelete` - property to enable or disable deleting rows or columns in the sheet.
+- `hideRow(startIndex, endIndex, hide)` - hide or show a range of rows by using the hide flag.
+- `hideColumn(startIndex, endIndex, hide)` - hide or show a range of columns by using the hide flag.
+- `RowModel.hidden` - defines whether a row should start hidden when the sheet loads.
+- `ColumnModel.hidden` - defines whether a column should start hidden when the sheet loads.
+- `setRowsHeight(height, ranges)` - apply a specific height to one or more row ranges.
+- `setColumnsWidth(width, ranges)` - apply a specific width to one or more column ranges.
+- `beforeCellRender(args)` - event used to change or customize cell or header content during rendering.
+
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to know how to present and manipulate data.
 
 ## See Also
 

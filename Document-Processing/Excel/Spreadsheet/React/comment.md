@@ -15,7 +15,7 @@ Cells with comment display a small comment indicator; hover to preview the comme
 ![Spreadsheet showing a comment](./images/spreadsheet_comment.png)
 
 ## Author identity
-The Syncfusion Spreadsheet does not automatically track user identity. To tag new comments and replies with an author name, set the `author` property when initializing the Spreadsheet.
+The Syncfusion Spreadsheet does not automatically track user identity. To tag new comments and replies with an author name, set the [author](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#author) property when initializing the Spreadsheet.
 
 ```ts
     import * as React from 'react';
@@ -32,7 +32,7 @@ The Syncfusion Spreadsheet does not automatically track user identity. To tag ne
     const root = createRoot(document.getElementById('root')!);
     root.render(<App />);
 ```
->If the author property is not set, "Guest User" will be displayed as the author for comment and replies by default.
+>If the `author` property is not set, "Guest User" will be displayed as the author for comment and replies by default.
 
 ## Adding a comment
 You can add a **comment** to a cell in several ways:
@@ -40,7 +40,7 @@ You can add a **comment** to a cell in several ways:
 * **Ribbon**: Go to **Review > Comment > New Comment**.
 * **Keyboard shortcut**: Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F2</kbd> to open the comment editor for the active cell.
 * **Programmatically**: 
-    * Use the `updateCell` method with the comment model to add a comment to a specific cell.
+    * Use the [updateCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method with the comment model to add a comment to a specific cell.
     * Bind comments via code-behind during initial load by associating the comment model with the cell model.
 
 The image below shows that once a comment is posted, the cell displays an indicator, and the comment can be previewed on hover.
@@ -128,7 +128,7 @@ The **"Comments" review pane** provides a centralized view of all comments in th
 You can show or hide the "Comments" review pane using:
 
 * **Ribbon**: Go to **Review > Comment > Show Comments**.
-* **Property**: Set the `showCommentsPane` property to true when initializing the Spreadsheet. By default, this property is **false**.
+* **Property**: Set the [showCommentsPane](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#showcommentspane) property to true when initializing the Spreadsheet. By default, this property is **false**.
 
 ![Show comments in Spreadsheet](./images/spreadsheet_show_comments.gif)
 
@@ -170,7 +170,7 @@ You can bind **comment thread** to cells at initial load by providing a `comment
 - **Comment**: `author`, `text`, `createdTime`, `isResolved`
 - **Replies**: A collection of replies. Each reply is an object containing its `author`, `text`, and `createdTime` (no nested replies-of-replies).
 
-In the below sample, comments are added to a specific cell using cell data binding. The "Comments" review pane is shown initially by enabling the `showCommentsPane` property, and comments are added using `updateCell` method in the `created` event.
+In the below sample, comments are added to a specific cell using cell data binding. The "Comments" review pane is shown initially by enabling the [showCommentsPane](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#showcommentspane) property, and comments are added using [updateCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method in the `created` event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
