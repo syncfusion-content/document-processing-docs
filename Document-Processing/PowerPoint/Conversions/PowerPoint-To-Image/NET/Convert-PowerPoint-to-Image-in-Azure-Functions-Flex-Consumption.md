@@ -1,6 +1,6 @@
 ---
 title: Convert PPTX to Image in Azure Functions Flex Consumption | Syncfusion
-description: Convert PPTX to Image in Azure Functions Flex Consumption using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
+description: Convert PPTX to Image in Azure Functions Flex Consumption using .NET Core PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
 documentation: UG
