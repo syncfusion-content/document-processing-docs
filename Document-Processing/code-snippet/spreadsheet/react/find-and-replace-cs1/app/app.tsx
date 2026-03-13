@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-import { getDefaultData } from './data';
+import { getDefaultData } from './datasource';
 
 function App(): React.ReactElement {
   const spreadsheetRef = React.useRef<SpreadsheetComponent | null>(null);
@@ -16,7 +16,7 @@ function App(): React.ReactElement {
       if (!spreadsheet) return;
 
       // Get the active sheet's selected range.
-      const selectedRange: string | undefined = spreadsheet.getActiveSheet()?.selectedRange;
+      const selectedRange: string | undefined = spreadsheet.getActiveSheet().selectedRange;
       if (!selectedRange) return;
 
       // Convert the selected range into cell collection.
