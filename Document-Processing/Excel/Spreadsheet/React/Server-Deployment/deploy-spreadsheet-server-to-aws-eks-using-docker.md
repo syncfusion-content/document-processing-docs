@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to deploy spreadsheet server to AWS EKS using Docker in React Spreadsheet component
+# How to deploy spreadsheet server to AWS EKS in React Spreadsheet Editor
 
 ## Prerequisites
 
@@ -116,7 +116,7 @@ kubectl get svc spreadsheet-server-service
 
 **Step 5:** Configure the React client
 
-Start by following the steps provided in this [link](../getting-started.md) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component. Once the Service reports an external address (e.g., a1b2c3d4e5f6-1234567890.us-east-1.elb.amazonaws.com), update the [`openUrl`](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#openurl) and [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#saveurl) properties of your React Spreadsheet component:
+Start by following the steps provided in this [link](../getting-started.md) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component. Once the Service reports an external address (e.g., a1b2c3d4e5f6-1234567890.us-east-1.elb.amazonaws.com), update the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) properties of your React Spreadsheet component:
 
 ```jsx
 
