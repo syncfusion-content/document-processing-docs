@@ -17,179 +17,19 @@ This article shows how to containerize and deploy a Blazor PDF Viewer applicatio
 
 * An Azure subscription and permission to create resource groups, ACR instances, and App Services.
 
-## Create a new Blazor App in Visual Studio
+## Create a simple SfPdfViewer sample
 
-Create a new Blazor Server app and name it **PDFViewerGettingStarted**.
+Follow the steps in the Blazor Server [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide for PDF Viewer to create a basic sample. This provides the required project setup and SfPdfViewer configuration.
 
-N> The PDF Viewer component is supported on .NET 8.0 and later.
+## Dockerizing the Web app (recommended for Server and Web assembly)
 
-## Install Blazor PDF Viewer NuGet package in Blazor Server App
+Right‑click the project to add Docker support to the Windows application, and then apply the required configuration changes provided to ensure it functions correctly across environments.
 
-Add the following NuGet packages to the Blazor Server app.
-
-* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
-
-If using the WebAssembly or Auto interactive render mode, install the NuGet packages in the client project to add the component to the Web App.
-
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
-
-![SkiaSharp Views Blazor](../getting-started/gettingstarted-images/skia-sharp-image.png)
-
-{% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
-
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-* If using an interactive render mode such as WebAssembly or Auto, ensure the required .NET workloads are installed for SkiaSharp usage in a Blazor Web App. Run the following command:
-    * dotnet workload install wasm-tools
-
-N> The above code will only install the latest available workload on the machine, such as .NET 10. If you need to install a specific .NET version like .NET 9 or .NET 8, please use a command such as `dotnet workload install wasm-tools-net8`.
-
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
-
-* In the **~/_Imports.razor** file, add the following namespaces:
+Example `Dockerfile` for an Blazor Web Apps Server and Web assembly app:
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight c# tabtitle=".NET 10 & .NET 9 & .NET 8 (~/Program.cs) Server" %}
 
-@using Syncfusion.Blazor;
-@using Syncfusion.Blazor.SfPdfViewer;
-
-{% endhighlight %}
-{% endtabs %}
-
-* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs) Server" hl_lines="2 9 11 13" %}
-
-using BlazorWebAppServer.Components;
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddRazorComponents() 
-        .AddInteractiveServerComponents();
-
-builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
-
-builder.Services.AddMemoryCache();
-//Add Syncfusion Blazor service to the container.
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseAntiforgery();
-
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
-
-app.Run();
-
-{% endhighlight %}
-
-{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs) WebAssembly" hl_lines="3 9 11" %}
-
-using BlazorWebApp.Client.Pages;
-using BlazorWebApp.Components;
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddRazorComponents()
-.AddInteractiveWebAssemblyComponents();
-
-builder.Services.AddMemoryCache();
-//Add Syncfusion Blazor service to the container
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-if (app.Environment.IsDevelopment())
-{
-app.UseWebAssemblyDebugging();
-}
-else
-{
-app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseAntiforgery();
-
-app.MapRazorComponents<App>()
-    .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(Counter).Assembly);
-
-app.Run();
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding stylesheet and script
-
-Add the following stylesheet and script to the head section of the **~/Pages/_Host.cshtml** file.
-
-{% tabs %}
-{% highlight cshtml hl_lines="3 7" %}
-
-<head>
-    <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-<body>
-    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
-    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
-</body>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding Blazor PDF Viewer Component
-
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) component in the **~/Pages/Index.razor** file.
-
-{% tabs %}
-{% highlight razor %}
-
-@page "/"
-
-<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-              Height="100%"
-              Width="100%">
-</SfPdfViewer2>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> If the `DocumentPath` property is not set, the PDF Viewer renders without loading a PDF document. Users can use the **Open** option in the toolbar to browse and open a PDF as needed.
-
-## Run the application
-
-Run the application to display the PDF file in the Syncfusion&reg; Blazor PDF Viewer component in the browser.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Server SfPdfViewer rendering in browser](aws-benstalk-deployment-images/blazor-pdfviewer.png)" %}
-
-## Dockerizing the Server app (recommended for Server and hosted WASM)
-
-Use a multi-stage Dockerfile to build and publish the app with the .NET 10 SDK, then run the published output on the ASP.NET runtime image.
-
-Example `Dockerfile` for an Blazor Server (or hosted) app:
-
-```dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 
 RUN ln -s /lib/x86_64-linux-gnu/libdl-2.24.so /lib/x86_64-linux-gnu/libdl.so
@@ -223,29 +63,10 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "YourServerApp.dll"]
-```
+{% endhighlight %}
 
-N>
-- Replace `YourServerApp.dll` with your actual assembly name.
+{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs) WebAssembly" hl_lines="3 9 11" %}
 
-### Local build and run
-
-Build and run the container locally to verify behavior:
-
-```bash
-docker build -t pdfviewerwebservice:latest .
-docker run -d -p 6002:80 pdfviewerwebservice:latest
-```
-
-If you see script errors or documents fail to load, verify the container image contains the `libdl.so` symlink and `libgdiplus` installed (see Dockerfile notes).
-
-## Dockerizing a standalone WebAssembly app (nginx)
-
-If you built a standalone WebAssembly client (no hosting server project), publish the client and serve the static output from nginx.
-
-Example `Dockerfile` for static WASM (nginx):
-
-```dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 
 RUN ln -s /lib/x86_64-linux-gnu/libdl-2.24.so /lib/x86_64-linux-gnu/libdl.so
@@ -257,7 +78,6 @@ USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
-
 
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
@@ -288,15 +108,84 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "YourServerApp.dll"]
-```
+{% endhighlight %}
 
 N>
-* Replace `YourServerApp.dll` and `YourServerApp.csproj` with your actual assembly name.
+* Replace `YourServerApp.dll` and `YourServerApp.csproj` with your actual assembly name. Also in the Web assembly make sure to add the docker code for to install the wasm-tools using the code `RUN dotnet workload install wasm-tools`
+
+### Local build and run
+
+Build and run the container locally to verify behavior:
+
+```bash
+docker build -t pdfviewerwebservice:latest .
+docker run -d -p 6002:80 pdfviewerwebservice:latest
+```
+
+If you see script errors or documents fail to load, verify the container image contains the `libdl.so` symlink and `libgdiplus` installed [see Dockerfile notes](https://github.com/dotnet/dotnet-docker/discussions/4938).
+
+## Dockerizing a standalone WebAssembly app
+
+If you have built a standalone WebAssembly sample, please add the Dockerfile and the necessary Nginx configuration files to the project, and update the project’s .csproj entry inside the Dockerfile to match the correct assembly name.
+
+![Formate to add files](../images/file_formate_need_to_add.png)
+
+Example `Dockerfile` for standalone WebAssembly:
+
+```dockerfile
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
+RUN ln -s /lib/x86_64-linux-gnu/libdl-2.24.so /lib/x86_64-linux-gnu/libdl.so
+
+# install System.Drawing native dependencies
+
+RUN apt-get update && apt-get install -y --allow-unauthenticated libgdiplus libc6-dev libx11-dev
+
+RUN ln -s libgdiplus.so gdiplus.dll
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+## Install Python required for WASM tools
+RUN apt-get update && apt-get install -y \
+        #python3 \
+        #python3-pip \
+        #python3-venv \
+    #&& ln -s /usr/bin/python3 /usr/bin/python || true
+## Install WASM tools
+RUN dotnet workload install wasm-tools
+WORKDIR /src
+COPY ["NuGet.Config","/src/"]
+COPY ["package", "/src/package"]
+
+RUN dotnet nuget add source package
+COPY ["WasmStandalone.csproj", "."]
+RUN apt-get update && apt-get install -y emscripten
+RUN dotnet restore "WasmStandalone.csproj" --configfile "NuGet.Config"
+COPY . .
+RUN dotnet build "WasmStandalone.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "WasmStandalone.csproj" -c Release -o /app/publish 
+
+FROM nginx:alpine AS final
+WORKDIR /usr/share/nginx/html
+COPY --from=publish /app/publish/wwwroot .
+COPY nginx.conf /etc/nginx/nginx.conf
+```
+
+Once the docker file was properly added into the Web assembly sample add the `Nuget` and the `nginx.conf` files with a empty folder named `package` into the mainproject folder of the Web assembly. [Get the files](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Azure%20Container/Web%20Assembly/WasmStandalone)
+
+N>
+* Replace `YourServerApp.csproj` with your actual assembly name. Also make sure to add the docker code for to install the wasm-tools using the code `RUN dotnet workload install wasm-tools`
 
 Then run locally:
 
 ```bash
-docker build -t pdfviewer-wasm:latest .
+docker build -t webassembly .
+docker image ls
 docker run -d -p 6003:80 pdfviewer-wasm:latest
 # Open http://localhost:6003
 ```
@@ -383,7 +272,7 @@ N> troubleshooting <br />
 
 ![Published blazor server sample](../images/azure_container_published_blazor_webapps.png)
 
-N> [View the Blazor Webapps Sample](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/ES-1015670-DockerPublish/Azure%20Container).
+N> [View the Blazor Webapps Sample](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Azure%20Container).
 
 ## See also
 
