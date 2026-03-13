@@ -16,7 +16,7 @@ Step 1: Create a new Azure Functions project.
 ![Create a Azure Functions project](Azure-Images/Functions-Flex-Consumption/Azure_Open_and_Save_PowerPoint_Presentation.png)
 
 Step 2: Create a project name and select the location.
-![Create a project name](Azure-Images/Functions-Flex-Consumption/Configuration-Open-and-Save-PowerPoint.png)
+![Create a project name](Azure-Images/Functions-Flex-Consumption/Configuration-Create-PowerPoint.png)
 
 Step 3: Select function worker as **.NET 8.0 (Long Term Support)** (isolated worker) and target Flex/Consumption hosting suitable for isolated worker.
 ![Select function worker](Azure-Images/Functions-Flex-Consumption/Additional_Information_Open_and_Save_PowerPoint_Presentation.png)
@@ -36,7 +36,7 @@ using Syncfusion.Presentation;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the following code snippet in **Run** method of **Function1** class to perform **open the existing Presentation in Azure Functions** and return the resultant **PowerPoint Presentation** to client end.
+Step 6: Add the following code snippet in **Run** method of **Function1** class to perform **create a PowerPoint document** in Azure Functions and return the resultant **PowerPoint document** to client end.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -107,7 +107,7 @@ public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "
 {% endtabs %}
 
 Step 7: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
-![Create a new profile in the Publish Window](Azure-Images/Functions-v1/Publish-Open-and-Save-PowerPoint.png)
+![Create a new profile in the Publish Window](Azure-Images/Functions-Flex-Consumption/Publish-Create-PowerPoint.png)
 
 Step 8: Select the target as **Azure** and click **Next** button.
 ![Select the target as Azure](Azure-Images/Functions-Flex-Consumption/Target_Open_and_Save_PowerPoint_Presentation.png)
