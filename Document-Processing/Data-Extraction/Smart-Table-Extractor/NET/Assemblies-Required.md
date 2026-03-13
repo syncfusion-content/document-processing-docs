@@ -1,12 +1,12 @@
 ---
-title: Assemblies required for SmartDataExtractor | Syncfusion
-description: This section details the Syncfusion assemblies required to configure and run Smart Data Extractor seamlessly in .NET projects.
+title: Assemblies required for SmartTableExtractor | Syncfusion
+description: This section details the Syncfusion assemblies required to configure and run Smart Table Extractor seamlessly in .NET projects.  
 platform: document-processing
-control: SmartDataExtractor
+control: PDF
 documentation: UG
 keywords: Assemblies
 ---
-# Assemblies Required to work with Smart Data Extractor
+# Assemblies Required to work with Smart Table Extractor 
 
 The following assemblies need to be referenced in your application based on the platform.
 <table>
@@ -19,25 +19,21 @@ The following assemblies need to be referenced in your application based on the 
   <tbody>
     <tr>
       <td>
-        {{'[WPF]'| markdownify }},
-        {{'[Windows Forms]'| markdownify }} and {{'[ASP.NET MVC]'| markdownify }}      
+        {{'WPF'| markdownify }},
+        {{'Windows Forms'| markdownify }} and {{'ASP.NET MVC'| markdownify }}      
       </td>
       <td>
         Syncfusion.Compression.Base<br/>
         Syncfusion.ImagePreProcessor.Base<br/>
         Syncfusion.OCRProcessor.Base<br/>
-        Syncfusion.Pdf.Imaging.Base<br/>
         Syncfusion.Pdf.Base<br/>
         Syncfusion.PdfToImageConverter.Base<br/>
-        Syncfusion.SmartFormRecognizer.Base<br/>
-        Syncfusion.SmartTableExtractor.Base<br/>
       </td>
     </tr>
     <tr>
       <td>
-      {{'[Blazor]'| markdownify }},
-      {{'[.NET Core]'| markdownify }}
-      and {{'[.NET Platforms]'| markdownify }}
+      {{'.NET Core'| markdownify }}
+      and {{'.NET Platforms'| markdownify }}
       </td>
       <td>
         Syncfusion.Compression.Portable<br/>
@@ -46,13 +42,11 @@ The following assemblies need to be referenced in your application based on the 
         Syncfusion.Pdf.Imaging.Portable<br/>
         Syncfusion.Pdf.Portable<br/>
         Syncfusion.PdfToImageConverter.Portable<br/>
-        Syncfusion.SmartFormRecognizer.Portable<br/>
-        Syncfusion.SmartTableExtractor.Portable<br/>
       </td>
     </tr>
     <tr>
       <td>
-      {{'[.NET Multi-platform App UI (.NET MAUI)]'| markdownify }}
+      {{'.NET Multi-platform App UI (.NET MAUI)'| markdownify }}
       </td>
       <td>
         Syncfusion.Compression.NET<br/>
@@ -61,8 +55,6 @@ The following assemblies need to be referenced in your application based on the 
         Syncfusion.Pdf.Imaging.NET<br/>
         Syncfusion.Pdf.NET<br/>
         Syncfusion.PdfToImageConverter.NET<br/>
-        Syncfusion.SmartFormRecognizer.NET<br/>
-        Syncfusion.SmartTableExtractor.NET<br/>
       </td>
     </tr>
   </tbody>
