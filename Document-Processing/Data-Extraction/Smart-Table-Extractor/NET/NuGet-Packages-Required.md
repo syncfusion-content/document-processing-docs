@@ -8,7 +8,7 @@ keywords: Assemblies
 ---
 # NuGet Packages Required for Smart Table Extractor
 
-## Extract data from PDF and image documents
+## Extract Structured data from PDF
 
 To work with Smart Table Extractor, the following NuGet packages need to be installed in your application.
 

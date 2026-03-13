@@ -189,7 +189,7 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 
 {% endtabs %}
 
-## Extract Form Data as JSON
+## Extract Data as JSON
 
 To extract form fields across a PDF document using the **ExtractDataAsJson** method of the **DataExtractor** class with form recognition options, refer to the following code example:
 
@@ -210,7 +210,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
     //Enable form detection in the document.
     extractor.EnableFormDetection = true;
-    extractor.EnableTableDetection = false;
+    extractor.EnableTableDetection = true;
     //Set confidence threshold for extraction.
     extractor.ConfidenceThreshold = 0.6
     //Configure form recognition options.
@@ -277,7 +277,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
-## Extract Form Data as PDF
+## Enable Form Detection
 
 To extract form fields across a PDF document and save them as a PDF output using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class with form recognition options, refer to the following code example:
 
@@ -379,7 +379,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract Table Data as PDF
+## Enable Table Detection
 
 To extract tables across a PDF document and save them as a PDF output using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class with table extraction options, refer to the following code example:
 

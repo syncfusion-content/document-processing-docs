@@ -8,7 +8,7 @@ keywords: Assemblies
 ---
 # NuGet Packages Required for Smart Data Extractor
 
-## Extract data from PDF and image documents
+## Extract Structured data from PDF
 
 To work with Smart Data Extractor, the following NuGet packages need to be installed in your application.
 
