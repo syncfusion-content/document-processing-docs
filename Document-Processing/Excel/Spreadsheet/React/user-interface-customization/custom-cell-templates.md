@@ -17,6 +17,8 @@ You can add templates to cells by dynamically assigning a custom template proper
 
 The following sample demonstrates how to insert a [Syncfusion Dropdown component](https://www.npmjs.com/package/@syncfusion/ej2-dropdowns) into Spreadsheet cells using this custom template property. Additionally, a custom ribbon item named "DropDown List" is included under a new "Template" ribbon tab. When this ribbon item is selected, the Spreadsheet dynamically inserts a dropdown into the currently active cell.
 
+The following code sample shows how to create custom cell templates.
+
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/spreadsheet/react/dynamic-cell-template-cs1/app/app.jsx %}

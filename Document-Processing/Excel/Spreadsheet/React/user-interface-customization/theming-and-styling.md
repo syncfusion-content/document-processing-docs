@@ -7,7 +7,15 @@ platform: document-processing
 documentation: ug
 ---
 
-# Theming and Styling
+# Built-in Themes
+
+Our Syncfusion React Spreadsheet component provides a comprehensive set of built-in themes to deliver a consistent, modern, and visually appealing appearance across applications. Applying a theme loads the corresponding CSS file and updates the component’s appearance throughout the UI. For more information about the built-in themes in Syncfusion, please refer to the [documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+Below is the reference link for the list of supported themes and their CSS filenames.
+
+Theme documentation: https://ej2.syncfusion.com/react/documentation/appearance/theme
+
+## Customizing Theme color
 
 The Syncfusion React Spreadsheet component supports many themes and also allows you to apply your own custom styles. 
 
@@ -19,20 +27,9 @@ https://ej2.syncfusion.com/themestudio/?theme=material
 Theme Studio documentation:
 https://ej2.syncfusion.com/react/documentation/appearance/theme-studio
 
-## Supported Themes
-
-The Syncfusion React Spreadsheet component supports many built‑in themes and also allows you to apply your own custom styles. Applying a theme loads the corresponding CSS file and changes the component's appearance consistently across the UI.
-
-Below is the reference link for the list of supported themes and their CSS filenames.
-
-Theme documentation: https://ej2.syncfusion.com/react/documentation/appearance/theme
-
 # CSS Customization
 
-To modify the Spreadsheet appearance, you need to override the default CSS of the spreadsheet.You can change colors, borders, fonts, and layout using your custom CSS.
-
-You can refer to the CSS styling documentation here:
-https://ej2.syncfusion.com/react/documentation/spreadsheet/styles
+To modify the Spreadsheet appearance, you need to override the default CSS of the spreadsheet. Please find the CSS structure that can be used to modify the Spreadsheet appearance.
 
 Please find the CSS structure that can be used to modify the Spreadsheet appearance.
 
