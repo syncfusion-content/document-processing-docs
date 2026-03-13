@@ -21,7 +21,7 @@ This article shows how to containerize and deploy a Blazor PDF Viewer applicatio
 
 Follow the steps in the Blazor Server [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app) guide for PDF Viewer to create a basic sample. This provides the required project setup and SfPdfViewer configuration.
 
-## Dockerizing the Web app (recommended for Server and Web assembly)
+## Docker Web app (recommended for Server and Web assembly)
 
 Right‑click the project to add Docker support to the Windows application, and then apply the required configuration changes provided to ensure it functions correctly across environments.
 
@@ -32,7 +32,7 @@ Example `Dockerfile` for an Blazor Web Apps Server and Web assembly app:
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 
-RUN ln -s /lib/x86_64-linux-gnu/libdl-2.24.so /lib/x86_64-linux-gnu/libdl.so
+RUN ln -s /lib/x86_64-linux-gnu/lib dl-2.24.so /lib/x86_64-linux-gnu/lib dl.so
 # install System.Drawing native dependencies
 RUN apt-get update && apt-get install -y --allow-unauthenticated libgdiplus libc6-dev libx11-dev
 RUN ln -s libgdiplus.so gdiplus.dll
@@ -69,7 +69,7 @@ ENTRYPOINT ["dotnet", "YourServerApp.dll"]
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 
-RUN ln -s /lib/x86_64-linux-gnu/libdl-2.24.so /lib/x86_64-linux-gnu/libdl.so
+RUN ln -s /lib/x86_64-linux-gnu/lib dl-2.24.so /lib/x86_64-linux-gnu/lib dl.so
 # install System.Drawing native dependencies
 RUN apt-get update && apt-get install -y --allow-unauthenticated libgdiplus libc6-dev libx11-dev
 RUN ln -s libgdiplus.so gdiplus.dll
@@ -109,6 +109,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "YourServerApp.dll"]
 {% endhighlight %}
+{% endtabs %}
 
 N>
 * Replace `YourServerApp.dll` and `YourServerApp.csproj` with your actual assembly name. Also in the Web assembly make sure to add the docker code for to install the wasm-tools using the code `RUN dotnet workload install wasm-tools`
@@ -122,9 +123,9 @@ docker build -t pdfviewerwebservice:latest .
 docker run -d -p 6002:80 pdfviewerwebservice:latest
 ```
 
-If you see script errors or documents fail to load, verify the container image contains the `libdl.so` symlink and `libgdiplus` installed [see Dockerfile notes](https://github.com/dotnet/dotnet-docker/discussions/4938).
+If you see script errors or documents fail to load, verify the container image contains the `lib dl.so` sym link and `libgdiplus` installed [see Dockerfile notes](https://github.com/dotnet/dotnet-docker/discussions/4938).
 
-## Dockerizing a standalone WebAssembly app
+## Docker standalone WebAssembly app
 
 If you have built a standalone WebAssembly sample, please add the Dockerfile and the necessary Nginx configuration files to the project, and update the project’s .csproj entry inside the Dockerfile to match the correct assembly name.
 
@@ -136,7 +137,7 @@ Example `Dockerfile` for standalone WebAssembly:
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
-RUN ln -s /lib/x86_64-linux-gnu/libdl-2.24.so /lib/x86_64-linux-gnu/libdl.so
+RUN ln -s /lib/x86_64-linux-gnu/lib dl-2.24.so /lib/x86_64-linux-gnu/lib dl.so
 
 # install System.Drawing native dependencies
 
@@ -176,7 +177,7 @@ COPY --from=publish /app/publish/wwwroot .
 COPY nginx.conf /etc/nginx/nginx.conf
 ```
 
-Once the docker file was properly added into the Web assembly sample add the `Nuget` and the `nginx.conf` files with a empty folder named `package` into the mainproject folder of the Web assembly. [Get the files](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Azure%20Container/Web%20Assembly/WasmStandalone)
+Once the docker file was properly added into the Web assembly sample add the `Nuget` and the `nginx.conf` files with a empty folder named `package` into the main project folder of the Web assembly. [Get the files](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Azure%20Container/Web%20Assembly/WasmStandalone)
 
 N>
 * Replace `YourServerApp.csproj` with your actual assembly name. Also make sure to add the docker code for to install the wasm-tools using the code `RUN dotnet workload install wasm-tools`
@@ -249,19 +250,19 @@ Follow these UI-focused steps in the Azure portal to create an App Service (Linu
     * Open the App Service you created, then go to **Deployment** → **Container settings** (or **Settings** → **Container settings** in some portal views).
     * For **Image source** select **Azure Container Registry**.
     * Select your **Subscription** and the **Registry** you created earlier.
-    * Under **Image and tag**, select the repository (for example `pdfviewerwebservice`) and the tag (for example `latest`).
+    * Under **Image and tag**, select the repository (for example `pdf_viewer_web_service`) and the tag (for example `latest`).
 
     ![udpate container configuration](../images/udpate_container_configuration.png)
 
 N> troubleshooting <br />
 * Check container logs and the image locally if the app fails to start. <br />
 * Ensure the container listens on port 80 (or configure the App Service container port setting to match your container). <br />
-* Ensure native dependencies (SkiaSharp, `libgdiplus`, `libdl` symlinks) are present in the image; missing native libs commonly cause rendering/script errors. <br />
+* Ensure native dependencies (SkiaSharp, `libgdiplus`, `lib dl` sym links) are present in the image; missing native libs commonly cause rendering/script errors. <br />
 * For static WASM images served by nginx, confirm wasm MIME types and caching are working.
 
 ## Using Rancher Desktop / Docker on Windows
 
-* Rancher Desktop (with dockerd/Moby) can be used in place of Docker Desktop. If using Rancher Desktop, select the `dockerd (moby)` runtime so standard `docker` commands behave as expected.
+* Rancher Desktop (with docker) can be used in place of Docker Desktop. If using Rancher Desktop, select the `docker` runtime so standard `docker` commands behave as expected.
 * If you encounter WSL or Rancher errors during installation, consult Rancher Desktop docs and community threads; a common issue and workaround is documented in the internal notes.
 
 ## Additional guidance
@@ -272,7 +273,7 @@ N> troubleshooting <br />
 
 ![Published blazor server sample](../images/azure_container_published_blazor_webapps.png)
 
-N> [View the Blazor Webapps Sample](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Azure%20Container).
+N> [View the Blazor Web apps Sample](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Azure%20Container).
 
 ## See also
 
