@@ -14,9 +14,9 @@ The PDF Viewer provides options to add, edit, and delete Underline annotations o
 
 ![Underline overview](../../images/underline_button.png)
 
-## Add underline annotation
+## Add underline annotations
 
-### Add underline annotation via UI
+### Add underline annotations via UI
 
 You can add underlines in two ways:
 
@@ -28,10 +28,10 @@ You can add underlines in two ways:
 
 <!-- markdownlint-disable MD029 -->
 2. Using the annotation toolbar
-* Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
-* Select **Underline** to enable underline mode.
-* Select text to add the underline annotation.
-* Alternatively, select text first and then click **Underline**.
+- Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+- Select **Underline** to enable underline mode.
+- Select text to add an underline annotation.
+- Alternatively, select text first and then click **Underline**.
 
 ![Underline toolbar](../../../javascript-es6/annotations/annotation-images/underline-tool.gif)
 
@@ -169,9 +169,9 @@ Add the below `serviceUrl` in the `index.js` file
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/underline-normal-mode-cs1" %}
 
-### Add underline annotation programmatically
+### Add underline annotations programmatically
 
-Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
+Programmatically add underline annotations using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -248,9 +248,11 @@ if (underline) {
 
 ## Edit underline annotation
 
-### Edit underline annotation in UI
+## Edit underline annotations
 
-The color and opacity of the underline annotation can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
+### Edit underline annotations in UI
+
+The color and opacity of underline annotations can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
 
 #### Edit color
 Use the color palette in the Edit Color tool to change the annotation color.
@@ -269,7 +271,9 @@ Use the range slider in the Edit Opacity tool to change annotation opacity.
 
 ![Delete button](../../images/delete_button.png)
 
-### Edit an existing underline annotation programmatically
+### Edit existing underline annotations programmatically
+
+To modify existing underline annotations programmatically, use the `editAnnotation()` method. Example:
 
 To modify an existing underline annotation programmatically, use the editAnnotation() method. Example:
 
@@ -357,7 +361,7 @@ if (editUnderlineAnnotation) {
 
 Set default properties before creating the control using `underlineSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default underline settings.
 
@@ -404,9 +408,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `underlineSettings`.
+Set properties for individual annotations before creating the control using `underlineSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default highlight settings.
 

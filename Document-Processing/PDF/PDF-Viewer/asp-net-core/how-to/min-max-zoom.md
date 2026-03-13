@@ -9,15 +9,19 @@ documentation: ug
 
 # Minimum and maximum zoom properties
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer lets developers control zoom limits for every document view. Configure the `minZoom` and `maxZoom` properties to prevent users from zooming beyond the range that keeps content legible and maintains predictable performance.
+Limit the zoom range in the PDF Viewer to ensure documents remain readable while maintaining consistent performance. Use the `minZoom` and `maxZoom` properties to define acceptable zoom boundaries for the application.
 
-### minZoom
+## Minimum zoom level
 
-Use the [`minZoom`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_MinZoom) property to define the lowest zoom percentage that the viewer allows. Setting an appropriate minimum avoids unreadable pages when users zoom out. Assign the value that matches the smallest acceptable scale for the application, and keep it lower than or equal to `maxZoom`.
+The [`minZoom`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_MinZoom) property sets the lowest zoom percentage allowed. Prevent users from zooming out too far by setting an appropriate minimum value. Ensure this value is less than or equal to the `maxZoom` value.
 
-### maxZoom
+## Maximum zoom level
 
-Use the [`maxZoom`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_MaxZoom) property to cap the highest zoom percentage. Limiting the upper bound prevents excessive magnification that can slow rendering or introduce scrolling issues. Choose a value that balances detail visibility with responsiveness.
+The [`maxZoom`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_MaxZoom) property restricts the highest zoom percentage. This prevents excessive magnification that can degrade performance or create excessive scrolling. Choose values that balance readability with responsive rendering.
+
+## Set zoom limits at initialization
+
+Configure zoom boundaries when the PDF Viewer is created. The following example sets minimum and maximum zoom levels:
 
 ```html
 
@@ -34,9 +38,9 @@ Use the [`maxZoom`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2
 </div>
 ```
 
-#### Restrict zoom percentage on mobile devices
+## Adjust zoom limits for mobile devices
 
-You can restrict zoom percentages on mobile devices by updating the `minZoom` and `maxZoom` properties when the document load event fires. This ensures smoother scrolling performance and consistent page rendering on smaller screens. Attach the handler by wiring the `documentLoad` event to the `documentLoad` function in the PDF Viewer markup or initialization script.
+Optimize zoom settings for mobile devices by updating the `minZoom` and `maxZoom` properties in the `documentLoad` event handler. This improves scrolling performance and rendering consistency on smaller screens:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -88,4 +92,12 @@ You can restrict zoom percentages on mobile devices by updating the `minZoom` an
 {% endhighlight %}
 {% endtabs %}
 
-When configuring zoom limits, keep `minZoom` less than or equal to `maxZoom`, and adjust the values to meet accessibility expectations across desktop and mobile experiences. Review the [`zoomMode`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ZoomMode) property if you need additional control over how the viewer interprets zoom operations.
+## Best practices
+
+When configuring zoom boundaries, keep these guidelines in mind:
+
+- Ensure `minZoom` ≤ `maxZoom` to prevent conflicts
+- Set appropriate values that balance readability and performance
+- Adjust zoom limits based on device type
+- Consider accessibility requirements for all users
+- Use the [`zoomMode`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ZoomMode) property for additional zoom behavior control

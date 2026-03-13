@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction annotation in Typescript PDF Viewer | Syncfusion
-description: Learn how to hide sensitive information with interactive and programmatic redaction using the Syncfusion JavaScript PDF Viewer.
+description: Learn how to hide sensitive information with interactive and programmatic redaction using the Syncfusion TypeScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Redaction in JavaScript (ES6) PdfViewer
 
-Redaction annotations are used to hide confidential or sensitive information in a PDF. The Syncfusion JavaScript PDF Viewer (EJ2) lets you mark areas or entire pages for redaction, customize their appearance, and permanently apply them with a single action.
+Redaction annotations are used to hide confidential or sensitive information in a PDF. The Syncfusion JavaScript PDF Viewer (EJ2) enables marking regions or entire pages for redaction, customizing appearance, and permanently applying redaction them with a single action.
 
 ## Enable the redaction toolbar
 
@@ -49,49 +49,47 @@ let viewer: PdfViewer = new PdfViewer({
 viewer.appendTo('#pdfViewer');
 ```
 
-N> Prerequisites: Add the PdfViewer control to your JavaScript application and ensure the redaction feature is available in the version you are using. Once applied, redaction permanently removes the selected content.
+N> Add the PdfViewer control to the JavaScript application and ensure the redaction feature is included in the installed package version. Once applied, redaction permanently removes the selected content.
 
 ![Toolbar with the Redaction tool highlighted](redaction-annotations-images/redaction-icon-toolbar.png)
 
 ## Add Redaction Annotations
 
-You can mark specific content for redaction using the toolbar or through code.  
+Mark specific content for redaction using the toolbar or programmatically.    
 
-Select the **Redaction tool** and draw over the text or graphics you want to hide. You can also add overlay text (such as “Confidential”) and adjust the style — fill color, border color, and opacity.
+Select the **Redaction tool** and draw over text or graphics to hide. Optionally add overlay text (for example, “Confidential”) and adjust style properties: fill color, border color, and opacity.
 
 ![Drawing a redaction region over page content](redaction-annotations-images/adding-redaction-annotation.png)
 
 ## Delete Redaction Annotations
 
-Redaction annotations can be removed easily:
+Remove redaction annotations using the toolbar or keyboard shortcuts:
 
-- Click the **Delete** button on the toolbar, or  
+- Click the **Delete** button on the toolbar, or
 - Select the annotation and press the **Delete** key.
 
 ![Toolbar showing the Delete command for redaction](redaction-annotations-images/redaction-delete-icon.png)
 
 ## Redact Entire Pages
 
-The viewer allows you to redact whole pages that contain sensitive information. You can choose specific pages, page ranges, or redact all pages using the built‑in dialog, or perform the same action programmatically.
+The viewer supports redacting entire pages that contain sensitive information. Use the built-in dialog to select specific pages, page ranges, or all pages, or invoke the same behavior programmatically.
 
 ![Toolbar showing the Redact Page option](redaction-annotations-images/redact-page-icon.png)
 
 ## Apply Redaction
 
-Once annotations are added, you can permanently apply them to the document. This action cannot be undone.  
+After adding redaction annotations, permanently apply them to the document using the **Apply Redaction** toolbar button or the corresponding API method. 
 
-Use the **Apply Redaction** button on the toolbar or call the API method:
-
-- The button is disabled until at least one redaction annotation exists.  
-- It becomes active when redaction annotations are present.
+- The **Apply Redaction** button remains disabled until at least one redaction annotation exists.
+- The button becomes enabled when redaction annotations are present.
 
 ![Toolbar showing the Apply Redaction button](redaction-annotations-images/redact-button-icon.png)
 
-A confirmation dialog appears before applying redaction to ensure you acknowledge the irreversible nature of the process.
+A confirmation dialog appears before applying redaction to ensure acknowledgment of the irreversible action.
 
 ![Confirmation dialog for applying redaction](redaction-annotations-images/apply-redaction-dialog.png)
 
-N> After redaction is applied, the original content cannot be recovered.
+N> Applying redaction is irreversible. Once applied, the original content cannot be recovered.
 
 ## Comment Support
 

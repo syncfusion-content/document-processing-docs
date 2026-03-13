@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Displaying Custom Items in Custom Stamp Dropdown
+# Displaying custom items in custom stamp dropdown in Vue PDF Viewer
 
 ### Overview
 
-Add and display custom items in the Custom Stamp dropdown using Vue. This enables users to quickly apply personalized stamps in the PDF Viewer.
+This guide shows how to add custom images to the custom stamp dropdown in the Vue PDF Viewer so users can apply personalized stamps to documents.
 
-### How to Retrieve Base64 Value
+### Steps to show custom items in the custom stamp dropdown
 
-**Step 1:** Follow the steps provided in the [Vue PDF Viewer Getting Started documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Create a basic Vue PDF Viewer sample using the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started)
 
 **Step 2:** Configure custom stamp settings
 
-Use `customStampSettings` to specify the custom stamps that should appear in the dropdown menu.
+Use `customStampSettings` to define stamps that appear in the dropdown. The `customStampImageSource` value accepts a Base64 data URI or an absolute URL pointing to an image.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}

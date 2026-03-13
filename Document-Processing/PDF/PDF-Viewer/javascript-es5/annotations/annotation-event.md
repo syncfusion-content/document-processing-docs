@@ -7,9 +7,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations Events in JavaScript Pdf viewer control
+# Annotation events in JavaScript PDF Viewer
 
-The PDF Viewer component triggers various events based on user interactions and changes in the component's state. These events can be used to perform actions when a specific event occurs. This section describes the events available in the PDF Viewer component.
+This page documents annotation-related events for the JavaScript PDF Viewer and when to use them. The PDF Viewer triggers events for user interactions and component state changes; use these events to run handlers that respond to specific occurrences. The sections below list each event, the associated event-args type, and an example handler.
 
 | Event                                                              | Description                                                                        |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open PDF file from Azure Blob Storage
 
-The Vue PDF Viewer component supports loading PDF files from Azure Blob Storage using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
+The Vue PDF Viewer supports loading PDF files from Azure Blob Storage using either the standalone or server-backed viewer. The following steps demonstrate both approaches.
 
 ## Using the standalone PDF Viewer
 
@@ -18,7 +18,7 @@ Follow these steps to load a PDF from Azure Blob Storage in the standalone PDF V
 
 **Step 1:** Create a Simple PDF Viewer Sample in Vue
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will give you a basic setup of the PDF Viewer component.
+Follow the getting-started guide in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a basic PDF Viewer sample in Vue.
 
 **Step 2:** Modify the `src/App.vue` file in the Vue project
 
@@ -36,7 +36,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 2. Use the `SASUrl` to fetch the PDF file, convert the response to an `ArrayBuffer`, and then transform it into a `Uint8Array`. Convert the `Uint8Array` into a Base64 string and load it into the PDF Viewer.
 
-N> Replace **Your SAS Url in Azure** with the actual SAS URL for your Azure Blob Storage account.
+N> Replace **Your SAS Url in Azure** with the actual SAS URL for the Azure Blob Storage account.
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
@@ -64,7 +64,7 @@ N> Replace **Your SAS Url in Azure** with the actual SAS URL for your Azure Blob
 {% endhighlight %}
 {% endtabs %}
 
-N> The **npm install @azure/storage-blob** package must be installed in your application to use the previous code example.
+N> The **npm install @azure/storage-blob** package must be installed in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
@@ -74,13 +74,13 @@ Follow these steps to load a PDF from Azure Blob Storage using the server-backed
 
 **Step 1:** Create a Simple PDF Viewer Sample in Vue
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue. This will give you a basic setup of the PDF Viewer component.
+Follow the getting-started guide in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a basic PDF Viewer sample in Vue.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. Refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
 3. Import the required namespaces at the top of the file:
 
@@ -141,7 +141,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project and add the following lines below the existing `"AllowedHosts"` configuration:
+6. Open the `appsettings.json` file in the web service project and add the following lines below the existing `"AllowedHosts"` configuration:
 
 ```json
 {
@@ -157,11 +157,11 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace the placeholders with your actual values: Azure storage connection string and container name.
+N> Do not store secrets in source control. Use secure configuration options such as Azure Key Vault, environment variables, or a secrets manager to hold connection strings.
 
 **Step 3:** Configure the PDF Viewer component
 
-Set the `serviceUrl` property of the PDF Viewer component to your web service endpoint (replace `https://localhost:44396/pdfviewer` with the actual URL of your server). Set the `documentPath` property to the PDF file name to load from Azure Blob Storage. Ensure the document name exists in your Azure container.
+Set the `serviceUrl` property of the PDF Viewer component to the web service endpoint (replace `https://localhost:44396/pdfviewer` with the actual URL of the server). Set the `documentPath` property to the PDF file name to load from Azure Blob Storage. Ensure the document name exists in the Azure container.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Server-Backed)" %}
@@ -181,7 +181,7 @@ import {
   ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-// Replace the "localhost:44396" with the actual URL of your server
+// Replace the "localhost:44396" with the actual URL of the server
 const serviceUrl = "https://localhost:44396/pdfviewer";
 const documentPath = "PDF_Succinctly.pdf";
 
@@ -213,7 +213,7 @@ export default {
   },
   data() {
     return {
-      // Replace the "localhost:44396" with the actual URL of your server
+      // Replace the "localhost:44396" with the actual URL of the server
       serviceUrl: "https://localhost:44396/pdfviewer",
       documentPath: "PDF_Succinctly.pdf"
     };
@@ -228,6 +228,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
+N> The `Azure.Storage.Blobs` NuGet package must be installed in the application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Server-Backend).

@@ -14,11 +14,11 @@ Control zoom levels in the PDF Viewer using the [minZoom](https://ej2.syncfusion
 
 ### minZoom
 
-Specifies the minimum zoom percentage allowed. Prevents zooming out beyond a set limit to maintain readability and performance.
+Specifies the minimum zoom percentage allowed. Set this value to prevent zooming out beyond a threshold that could reduce readability or impact performance.
 
 ### maxZoom
 
-Defines the maximum zoom percentage allowed. Prevents excessive zooming that could affect performance and usability.
+Defines the maximum zoom percentage allowed. Set this value to prevent excessive zooming that could affect performance or usability.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

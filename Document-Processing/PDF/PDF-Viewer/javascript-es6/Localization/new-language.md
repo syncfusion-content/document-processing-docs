@@ -8,15 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set a new language (localization)
+# Set a new language in the TypeScript PDF Viewer
 
-You can localize the PDF Viewer UI by:
-- Registering localized strings for each culture using `L10n.load` at the application level
-- Setting the [`locale`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#locale) property of the `PdfViewer` instance to the desired culture
+Localize the PDF Viewer UI by:
+- Registering culture-specific strings with `L10n.load` at the application level
+- Setting the [`locale`]((https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#locale)) property on the `PdfViewer` instance to the desired culture
 
 ![German Locale](../images/locale-de.gif)
 
-## Example Code-snippet to change language using Locale
+## Example: change language using `locale` and `L10n.load`
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -299,7 +299,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-N> You can find a comprehensive list of localization files/strings here: [GitHub Locale](https://github.com/syncfusion/ej2-locale). Provide only the keys you want to override, missing keys fall back to defaults.
+N> A comprehensive list of localization files and default strings is available on GitHub: [GitHub Locale](https://github.com/syncfusion/ej2-locale). Provide only the keys that require overrides; missing keys fall back to the default `en-US` values.
 
 ## See Also
 

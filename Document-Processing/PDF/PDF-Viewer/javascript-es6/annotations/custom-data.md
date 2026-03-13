@@ -10,11 +10,12 @@ domainurl: ##DomainURL##
 
 # Custom data in annotations
 
-You can attach any custom key–value data to annotations using the customData property. This works at two levels:
-- Default level with annotationSettings: Applies to all annotations created via the UI.
-- Per-annotation-type level: Supply customData in each annotation type settings (highlightSettings, rectangleSettings, etc.).
+Annotations can include custom key–value data via the `customData` property. This is supported at two levels:
 
-The customData value can be any serializable object. It is preserved when exporting or importing annotations and is available at runtime on the annotation object.
+- Default level via `annotationSettings`: applies to all annotations created through the UI.
+- Per-annotation-type level: provide `customData` inside specific annotation-type settings (for example, `highlightSettings`, `rectangleSettings`).
+
+The `customData` value can be any JSON-serializable object. It is preserved during annotation export/import and is available at runtime on the annotation object.
 
 ## Default custom data (annotationSettings)
 
@@ -121,9 +122,9 @@ document.getElementById('CustomData')?.addEventListener('click', () => {
 });
 ```
 
-### Notes
-- customData can be any JSON-serializable object and is stored with the annotation.
-- Use default annotationSettings.customData for global defaults and override with per-tool settings as needed.
+### Note
+- `customData` can be any JSON-serializable object and is stored with the annotation.
+- Use `annotationSettings.customData` for global defaults and override with per-tool settings as needed.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master)
 

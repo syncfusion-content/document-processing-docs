@@ -14,18 +14,28 @@ Use the `enableLocalStorage` property to control whether session-specific data i
 
 ### Use enableLocalStorage
 
-Set `enableLocalStorage` to manage storage behavior. When `true`, data is kept in memory; otherwise, session storage is used.
+Set `enableLocalStorage` to manage storage behavior. When `true`, session-specific data is kept in memory; when `false` (default), session storage is used.
 
 ```js
 var pdfviewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
 });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-  ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-  //To enable Local Storage
-  pdfviewer.enableLocalStorage=true;
-  pdfviewer.appendTo('#PdfViewer');
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.Print,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormDesigner,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.PageOrganizer
+);
+// To enable in-memory session storage
+pdfviewer.enableLocalStorage = true;
+pdfviewer.appendTo('#PdfViewer');
 ```
 
 ### Considerations

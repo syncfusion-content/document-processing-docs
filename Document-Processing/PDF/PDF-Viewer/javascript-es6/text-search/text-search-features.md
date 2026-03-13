@@ -51,7 +51,7 @@ Enable Match Any Word to split the query into separate words. The popup proposes
 
 ### Enable or Disable Text Search 
 
-Use the following code snippet to enable or disable Text Search Features
+Use the following snippet to enable or disable text search features
 
 ```html
 <!DOCTYPE html>
@@ -178,7 +178,7 @@ pdfviewer.textSearch.searchText('pdf', false, true);
 
 ![Alt text](../images/search.png)
 
-Use the following code snippet to implement text search using SearchText API's
+Use the following code snippet to implement text search using SearchText API
 
 ```html
   <!-- Search UI -->

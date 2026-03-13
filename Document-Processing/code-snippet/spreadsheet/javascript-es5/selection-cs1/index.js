@@ -15,7 +15,7 @@ var columns = [
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
     sheets: [{ name: 'Budget', ranges: [{ dataSource: budgetData }], columns: columns }],
     selectionSettings: { mode: 'Multiple' },
-    created: () => {
+    created: function () {
         var colCount = spreadsheet.getActiveSheet().colCount;
         spreadsheet.selectRange(ej.spreadsheet.getRangeAddress([4, 0, 4, colCount]));
     }

@@ -18,13 +18,13 @@ The PDF Viewer allows you to export form field data in multiple formats for easy
 
 ## Available methods
 
-- [exportFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfields)(destination?, format) — Exports data to a file in the specified format.
-- [exportFormFieldsAsObject](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfieldsasobject)(format) — Exports data as a JavaScript object for custom handling.
-- [importFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format) — Import data back into the PDF.
+- [`exportFormFields(destination?, format)`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfields) — Exports form field data to a file in the specified format; when `destination` is omitted the browser prompts for download.
+- [`exportFormFieldsAsObject(format)`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfieldsasobject) — Returns a Promise that resolves to a JavaScript object containing the exported form data for custom handling.
+- [`importFormFields(sourceOrObject, format)`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importformfields) — Imports form data back into the PDF Viewer.
 
 ## How to export
 
-Use [exportFormFields()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfields) with an optional destination path and the format type.
+Use [`exportFormFields()`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfields) with an optional `destination` path and the format type. If `destination` is omitted the browser prompts the user to download the exported file; when providing a server path, ensure the server is configured to accept and store uploaded files.
 
 ### Export as FDF
 The following example exports form field data as FDF.

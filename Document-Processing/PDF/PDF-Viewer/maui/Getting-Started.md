@@ -1,15 +1,16 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here about getting started with Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control, its elements, and more.
+title: Getting Started with .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to set up and configure the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control in your application.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Getting Started with .NET MAUI PDF Viewer
 
-This section guides you through setting up and configuring PDF Viewer in your .NET MAUI application. Follow the steps below to add the PDF viewer to your project and load a PDF document.
+This section guides you through setting up and configuring the PDF Viewer in your .NET MAUI application. Follow the steps below to add the PDF Viewer to your project and load a PDF document.
 
 To get started quickly, you can also check out our video tutorial below. 
 
@@ -22,7 +23,7 @@ To get started quickly, you can also check out our video tutorial below.
 
 Before proceeding, ensure the following are in place:
 
-1.	Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+1.	Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2.	Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
 
 ## Step 1: Create a New MAUI Project
@@ -197,7 +198,7 @@ N> 2. And, if you are using multiple pages in your application, then make sure t
 
 Before proceeding, ensure the following are in place:
 
-1.	Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+1.	Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2.	Set up a .NET MAUI environment with Visual Studio Code. 
 3.  Ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
@@ -387,7 +388,7 @@ N> 2. And, if you are using multiple pages in your application, then make sure t
 Before proceeding, ensure the following are set up:
 
 1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
@@ -457,10 +458,136 @@ Open the `MainPage.xaml` file and follow the steps below.
 
 {% endhighlight %} 
 {% endtabs %}
+
+## Step 5: Load a PDF Document
+
+1.  From the solution explorer of the project, add a new folder to the project named `Assets` and add the PDF document you need to load into the PDF viewer. Here, a PDF document named `PDF_Succinctly.pdf` is used.
+2.  Open the `.csproj` file and add the following code snippet to embed the PDF document as a resource.
+
+{% tabs %}
+{% highlight xml tabtitle="PdfViewerExample.csproj" %}
+
+<ItemGroup>
+	<EmbeddedResource Include="Assets\PDF_Succinctly.pdf" />
+</ItemGroup>
+
+{% endhighlight %} 
+{% endtabs %}
+
+3.  In this example, we will load the PDF document through MVVM binding. Create a new C# file named `PdfViewerViewModel.cs` and add the following code snippet.
+
+{% tabs %}
+{% highlight c# tabtitle="PdfViewerViewModel.cs" %}
+
+using System.Reflection;
+using System.ComponentModel;
+
+namespace PdfViewerExample
+{
+    class PdfViewerViewModel : INotifyPropertyChanged
+    {
+        private Stream pdfDocumentStream;
+
+        /// <summary>
+        /// Occurs when a property value changes.
+        /// </summary>
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        /// <summary>
+        /// Gets or sets the stream of the currently loaded PDF document.
+        /// </summary>
+        public Stream PdfDocumentStream
+        {
+            get
+            {
+                return pdfDocumentStream;
+            }
+            set
+            {
+                pdfDocumentStream = value;
+                OnPropertyChanged(nameof(PdfDocumentStream));
+            }
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
+        /// </summary>
+        public PdfViewerViewModel()
+        {
+            // Load the embedded PDF document stream.
+            pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
+        }
+
+        /// <summary>
+        /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
+        /// </summary>
+        /// <param name="name">The name of the property that changed.</param>
+        public void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        } 
+    }
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+4.  Open the `MainPage.xaml` file again and add the default namespace of the created .NET MAUI project and name it as `local`. Here the default namespace of the demo sample `PdfViewerExample` is used.
+5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext` of the `ContentPage`.
+6.  Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
+             x:Class="PdfViewerExample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:PdfViewerViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}">
+        </syncfusion:SfPdfViewer>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %} 
+{% endtabs %}
+
+N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
+N> 2. And, if you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
+
+## Step 6: Running the Application
+
+1.  Select the target framework, device or emulator.
+2.  Press **Run** or use the toolbar run button to build and launch the application.
+3.  The PDF document will be loaded in the PDF viewer control as shown in the following screenshot.
+
 {% endtabcontent %}
 {% endtabcontents %}
 ![Getting started with .NET MAUI PDF Viewer](Images\Getting-Started\maui-pdf-viewer-getting-started.png)
 
 The **Getting Started** example project for the .NET MAUI PDF Viewer can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
 
-N> You can refer to our [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI PDF Viewer Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/PdfViewer) that shows you how to render the PDF Viewer in .NET MAUI.
+N> You can refer to our [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI PDF Viewer Example](https://github.com/syncfusion/pdf-viewer-sdk-net-maui-demos/tree/master/PdfViewer) that shows you how to render the PDF Viewer in .NET MAUI.
+
+## What to Do Next
+
+Now that the PDF Viewer is running, here is a suggested learning path to explore its capabilities:
+
+| Step | Goal | Topic |
+|---|---|---|
+| 1 | **Open documents from different sources** | Load a PDF from a URL, the device's file system, a Base64 string, or a password-protected file. → [Open a Document](../open-a-document) |
+| 2 | **Navigate and read** | Jump to specific pages, control zoom levels, and search for text. → [Page Navigation](../page-navigation) · [Magnification](../magnification) · [Text Search](../text-search) |
+| 3 | **Add annotations** | Highlight text, draw shapes, add sticky notes, or use freehand ink. → [Annotations Overview](../annotations-overview) |
+| 4 | **Fill form fields** | Read, edit, validate, import, and export PDF form data. → [Form Filling Overview](../form-filling-overview) |
+| 5 | **Save and print** | Persist changes back to a file stream, optionally flattening annotations. → [Save a Document](../save-a-document) · [Print a Document](../print-a-document) |
+| 6 | **Customize the toolbar** | Show, hide, add, or remove toolbar items to match your app's workflow. → [Toolbar Customization](../toolbar-customization) |
+| 7 | **Redact sensitive content** | Permanently remove confidential text or images before sharing. → [Redaction](../redaction) |
+
+* [Annotations Overview](../annotations-overview)
+* [Migration Guide](../migration)
