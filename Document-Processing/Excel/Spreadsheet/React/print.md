@@ -19,11 +19,11 @@ The active worksheet in the Spreadsheet can be printed by selecting the **File >
 
 ## Custom printing
 
-The active worksheet, entire workbook or selected range can be printed with customized options using the `print` method. The `print` method takes one parameter, that is, `printOptions`, which can be used for customization.
+The active worksheet, entire workbook or selected range can be printed with customized options using the [print](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#print) method. The `print` method takes one parameter, that is, [printOptions](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions), which can be used for customization.
 
 The `printOptions` contain three properties, as described below.
 
-* `type`- It defines the scope of content to be printed. It accepts three values:
+* [type](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#type) - It defines the scope of content to be printed. It accepts three values:
 
 | Value        | Description |
 |--------------|-------------|
@@ -33,11 +33,11 @@ The `printOptions` contain three properties, as described below.
 
   > Note: If multiple ranges are selected, only the first range will be printed.
 
-* `allowGridLines` - Controls whether grid lines appear in the printed copy.  
+* [allowGridLines](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#allowgridlines) - Controls whether grid lines appear in the printed copy.  
 - Default: `false` (grid lines are not included).  
 - Set to `true` to include grid lines, which helps distinguish cell boundaries in the printed document.
 
-* `allowRowColumnHeader` - Controls whether row numbers and column letters (headers) appear in the printed copy.  
+* [allowRowColumnHeader](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#allowrowcolumnheader) - Controls whether row numbers and column letters (headers) appear in the printed copy.  
 - Default: `false` (headers are not included).  
 - Set to `true` to include row and column identifiers, which is useful for reference and navigation in printed documents.
 
