@@ -31,7 +31,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     TableExtractionOptions options = new TableExtractionOptions();
     options.DetectBorderlessTables = true;
     options.PageRange = new int[,] { { 1, 5 } };
-    options.ConfidenceThreshold = 0.75;
+    options.ConfidenceThreshold = 0.6;
 
     //Assign the configured options to the extractor.
     extractor.TableExtractionOptions = options;
@@ -61,7 +61,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     TableExtractionOptions options = new TableExtractionOptions();
     options.DetectBorderlessTables = true;
     options.PageRange = new int[,] { { 1, 5 } };
-    options.ConfidenceThreshold = 0.75;
+    options.ConfidenceThreshold = 0.6;
 
     //Assign the configured options to the extractor.
     extractor.TableExtractionOptions = options;
