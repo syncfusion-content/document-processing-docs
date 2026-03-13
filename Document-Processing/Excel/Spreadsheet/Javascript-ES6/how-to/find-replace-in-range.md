@@ -14,11 +14,11 @@ In Syncfusion Spreadsheet, the "Replace All" action by default searches and repl
 The following sample demonstrates how to limit the "Replace All" operation to the currently selected range.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/javascript-es6/find-and-replace-cs1/app/app.jsx %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es6/find-and-replace-cs1/app/index.js %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/javascript-es6/find-and-replace-cs1/app/app.tsx %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es6/find-and-replace-cs1/app/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -9,16 +9,16 @@ documentation: ug
 
 # Add Custom Icons to Cells in EJ2 TypeScript Spreadsheet
 
-In the Syncfusion Spreadsheet, you can render custom icons inside specific cells by defining a custom template property within the cell model. During the [beforeCellRender](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforecellrender) event, the icon element can be appended to the corresponding table cell (td) by checking whether the cell contains this template property.
+In the Syncfusion Spreadsheet, you can render custom icons inside specific cells by defining a custom template property within the cell model. During the [beforeCellRender](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforecellrender) event, the icon element can be appended to the corresponding table cell (td) by checking whether the cell contains this template property.
 
 The following sample demonstrates how to add icons to cells by assigning the template property in the cell definition. Additionally, a custom ribbon item named "Add Icon" is included under a new "Template" ribbon tab. When this ribbon item is selected, the Spreadsheet dynamically inserts an icon into the currently active cell.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/javascript-es6/add-icon-in-cell-cs1/app/app.jsx %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es6/add-icon-in-cell-cs1/app/index.js %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/javascript-es6/add-icon-in-cell-cs1/app/app.tsx %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es6/add-icon-in-cell-cs1/app/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

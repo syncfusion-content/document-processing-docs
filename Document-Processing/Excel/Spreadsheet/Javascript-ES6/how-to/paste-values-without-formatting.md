@@ -14,17 +14,11 @@ In the Syncfusion EJ2 TypeScript Spreadsheet, you can make the paste action inse
 The following example shows how to paste values without formatting.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/javascript-es6/paste-values-cs1/app/app.jsx %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es6/paste-values-cs1/app/index.js %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/javascript-es6/paste-values-cs1/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/javascript-es6/paste-values-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/javascript-es6/paste-values-cs1/app/datasource.tsx %}
+{% highlight ts tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es6/paste-values-cs1/app/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
