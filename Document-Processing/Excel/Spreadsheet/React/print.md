@@ -23,23 +23,23 @@ The active worksheet, entire workbook or selected range can be printed with cust
 
 The `printOptions` contain three properties, as described below.
 
-* [type](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#type) - It defines the scope of content to be printed. It accepts three values:
+* [type](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#type) - It defines the scope of content to be printed. It accepts three types of values:
 
 | Value        | Description |
 |--------------|-------------|
-| `ActiveSheet` | Prints only the active worksheet. This is the default option, useful when you need just the current sheet. |
-| `Workbook`    | Prints all worksheets in the workbook sequentially, keeping their layout and formatting consistent across each sheet. |
+| `ActiveSheet` | Prints only the active worksheet. This is the **default** option, useful when you need just the current sheet. |
+| `Workbook`    | Prints all worksheets in the workbook sequentially. |
 | `PrintRange`  | Prints only the selected range of cells in the active worksheet. |
 
-  > Note: If multiple ranges are selected, only the first range will be printed.
+  > Note: If multiple ranges are selected, only the first selected range will be printed.
 
 * [allowGridLines](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#allowgridlines) - Controls whether grid lines appear in the printed copy.  
 - Default: `false` (grid lines are not included).  
-- Set to `true` to include grid lines, which helps distinguish cell boundaries in the printed document.
+- Set `true` to include grid lines, which helps distinguish cell boundaries in the printed document.
 
-* [allowRowColumnHeader](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#allowrowcolumnheader) - Controls whether row numbers and column letters (headers) appear in the printed copy.  
+* [allowRowColumnHeader](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#allowrowcolumnheader) - Controls whether row numbers and column headers appear in the printed copy.  
 - Default: `false` (headers are not included).  
-- Set to `true` to include row and column identifiers, which is useful for reference and navigation in printed documents.
+- Set `true` to include row and column headers, which is useful for reference and navigation in printed documents.
 
 
 > When the `print` method is called without any parameters, the default printing will be performed.
@@ -78,4 +78,4 @@ The printing functionality in the Spreadsheet can be disabled by setting the [`a
 * When printing the document, changing the page orientation to landscape is not supported in both the `print` method and print preview dialog of the web browser.
 * The styles provided for the data validation functionality will not be available in the printed copy of the document.
 * The content added to the cell templates, such as HTML elements, Syncfusion<sup style="font-size:70%">&reg;</sup> controls, and others, will not be available in the printed copy of the document.
-* When selecting multiple ranges for printing, only the first selected range will be printed, not all ranges.
+* When multiple ranges are selected for printing, only the first selected range will be printed and the other selected ranges are not printed.
