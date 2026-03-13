@@ -12,10 +12,12 @@ import { select } from '@syncfusion/ej2-base';
  */
 function Default() {
   let spreadsheet;
+  const spreadsheetRef = React.useRef(null);
   const cellStyle = { verticalAlign: 'middle' };
   const scrollSettings = { isFinite: true };
 
   const onCreated = () => {
+    spreadsheet = spreadsheetRef.current;
     const usedRange = spreadsheet.getActiveSheet().usedRange;
     const lastCell = getCellAddress(0, usedRange.colIndex);
     spreadsheet.cellFormat({ fontWeight: 'bold' }, `A1:${lastCell}`);
@@ -128,28 +130,28 @@ function Default() {
     tdEle.appendChild(checkbox);
     // Added click event to handle the select all actions.
     checkbox.addEventListener('click', () => {
-        const sheet = spreadsheet.getActiveSheet();
-        const checked = !inputEle.classList.contains('e-check');
-        const rowCallback = (rowIdx) => {
-            // Updating the current selection state to the custom selected property in the row model for internal purpose.
-            setRow(sheet, rowIdx, { selected: checked });
-            // Updating the content checkboxes state based on the selectall checkbox state.
-            const cell = spreadsheet.getCell(rowIdx, 0);
-            const checkboxInput = cell && select('.e-frame', cell);
-            if (checkboxInput) {
-                if (checked) {
-                    // The class 'e-check' will add the checked state in the UI.
-                    checkboxInput.classList.add('e-check');
-                } else {
-                    checkboxInput.classList.remove('e-check');
-                }
-            }
-        };
-        updateSelectedState(inputEle, rowCallback, true);
-        // If unchecking, also clear the spreadsheet selection highlight
-        if (!checked) {
-            spreadsheet.selectRange('A1');
+      const sheet = spreadsheet.getActiveSheet();
+      const checked = !inputEle.classList.contains('e-check');
+      const rowCallback = (rowIdx) => {
+        // Updating the current selection state to the custom selected property in the row model for internal purpose.
+        setRow(sheet, rowIdx, { selected: checked });
+        // Updating the content checkboxes state based on the selectall checkbox state.
+        const cell = spreadsheet.getCell(rowIdx, 0);
+        const checkboxInput = cell && select('.e-frame', cell);
+        if (checkboxInput) {
+          if (checked) {
+            // The class 'e-check' will add the checked state in the UI.
+            checkboxInput.classList.add('e-check');
+          } else {
+            checkboxInput.classList.remove('e-check');
+          }
         }
+      };
+      updateSelectedState(inputEle, rowCallback, true);
+      // If unchecking, also clear the spreadsheet selection highlight
+      if (!checked) {
+        spreadsheet.selectRange('A1');
+      }
     });
   };
 
@@ -157,11 +159,14 @@ function Default() {
   const beforeCellRender = (args) => {
     // Checking first column to add checkbox only to the first column.
     if (args.colIndex === 0 && args.rowIndex !== undefined) {
-      const sheet = spreadsheet.getActiveSheet();
-      if (args.rowIndex === 0) { // Rendering select all checkbox in the A1 cell.
-        renderSelectAllCheckbox(args.element);
-      } else if (args.rowIndex < sheet.rowCount) { // Rendering checkboxs in the content cell.
-        renderCheckbox(args);
+      spreadsheet = spreadsheetRef.current;
+      if (spreadsheet) {
+        const sheet = spreadsheet.getActiveSheet();
+        if (args.rowIndex === 0) { // Rendering select all checkbox in the A1 cell.
+          renderSelectAllCheckbox(args.element);
+        } else if (args.rowIndex < sheet.rowCount) { // Rendering checkboxs in the content cell.
+          renderCheckbox(args);
+        }
       }
     }
   };
@@ -196,34 +201,59 @@ function Default() {
     args.cancel = true;
   };
 
-  return (<div className='control-pane'>
-    <div className='control-section spreadsheet-control'>
-      <SpreadsheetComponent ref={(ssObj) => { spreadsheet = ssObj; }} cellStyle={cellStyle} scrollSettings={scrollSettings} showRibbon={false} allowAutoFill={false} allowOpen={false} allowSave={false} showSheetTabs={false} showFormulaBar={false} showAggregate={false} created={onCreated} beforeCellRender={beforeCellRender} cellEdit={beforeEditHandler} beforeSelect={beforeSelect}>
-        <SheetsDirective>
-          <SheetDirective name="Car Sales Report" showHeaders={false} standardHeight={36} rowCount={100} colCount={100} frozenRows={1} frozenColumns={1} >
-            <RangesDirective>
-              <RangeDirective dataSource={defaultData} startCell='B1'></RangeDirective>
-            </RangesDirective>
-            <ColumnsDirective>
-              <ColumnDirective width={40}></ColumnDirective>
-              <ColumnDirective width={100}></ColumnDirective>
-              <ColumnDirective width={150}></ColumnDirective>
-              <ColumnDirective width={150}></ColumnDirective>
-              <ColumnDirective width={150}></ColumnDirective>
-              <ColumnDirective width={150}></ColumnDirective>
-              <ColumnDirective width={150}></ColumnDirective>
-              <ColumnDirective width={100}></ColumnDirective>
-              <ColumnDirective width={100}></ColumnDirective>
-              <ColumnDirective width={100}></ColumnDirective>
-              <ColumnDirective width={100}></ColumnDirective>
-              <ColumnDirective width={180}></ColumnDirective>
-              <ColumnDirective width={180}></ColumnDirective>
-            </ColumnsDirective>
-          </SheetDirective>
-        </SheetsDirective>
-      </SpreadsheetComponent>
+  return (
+    <div className='control-pane'>
+      <div className='control-section spreadsheet-control'>
+        <SpreadsheetComponent
+          ref={spreadsheetRef}
+          cellStyle={cellStyle}
+          scrollSettings={scrollSettings}
+          showRibbon={false}
+          allowAutoFill={false}
+          allowOpen={false}
+          allowSave={false}
+          showSheetTabs={false}
+          showFormulaBar={false}
+          showAggregate={false}
+          created={onCreated}
+          beforeCellRender={beforeCellRender}
+          cellEdit={beforeEditHandler}
+          beforeSelect={beforeSelect}
+        >
+          <SheetsDirective>
+            <SheetDirective
+              name="Car Sales Report"
+              showHeaders={false}
+              standardHeight={36}
+              rowCount={100}
+              colCount={100}
+              frozenRows={1}
+              frozenColumns={1}
+            >
+              <RangesDirective>
+                <RangeDirective dataSource={defaultData} startCell='B1' />
+              </RangesDirective>
+              <ColumnsDirective>
+                <ColumnDirective width={40} />
+                <ColumnDirective width={100} />
+                <ColumnDirective width={150} />
+                <ColumnDirective width={150} />
+                <ColumnDirective width={150} />
+                <ColumnDirective width={150} />
+                <ColumnDirective width={150} />
+                <ColumnDirective width={100} />
+                <ColumnDirective width={100} />
+                <ColumnDirective width={100} />
+                <ColumnDirective width={100} />
+                <ColumnDirective width={180} />
+                <ColumnDirective width={180} />
+              </ColumnsDirective>
+            </SheetDirective>
+          </SheetsDirective>
+        </SpreadsheetComponent>
+      </div>
     </div>
-  </div>);
+  );
 }
 export default Default;
 
