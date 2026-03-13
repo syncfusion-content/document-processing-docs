@@ -19,7 +19,7 @@ To achieve this requirement, the following events can be used:
 *   [`cellEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#celledit) → To prevent editing for specific cells.
 *   [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actionbegin)→ To prevent spreadsheet actions such as cut, paste, autofill, formatting, etc.
 
-## Step 1: Prevent editing for specific cells ##
+## Step 1: Prevent editing for specific cells
 
 To prevent editing for specific cells, use the [`cellEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#celledit) event, which triggers whenever a cell enters edit mode. By checking the column index and setting `args.cancel = true`, you can prevent editing for those columns. This ensures that users cannot modify the cell content in those columns.
 
@@ -36,7 +36,7 @@ To prevent editing for specific cells, use the [`cellEdit`](https://ej2.syncfusi
     <SpreadsheetComponent ref={spreadsheetRef} cellEdit={cellEdit}>
 ```
 
-## Step 2: Prevent specific spreadsheet actions ##
+## Step 2: Prevent specific spreadsheet actions
 
 To prevent specific action after preventing the cell editing, you need to use the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actionbegin) event. This event triggers before any action starts (such as cut, paste, autofill, formatting, etc.). In this event:
 
