@@ -22,7 +22,7 @@ The active worksheet in the Spreadsheet can be printed by selecting the **File >
 
 ## Custom printing
 
-The active worksheet or entire workbook can be printed with customized options using the [print()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#print) method. The `print` method takes one parameter, that is, [printOptions](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions), which can be used for customization.
+The active worksheet or entire workbook can be printed with customized options using the [print](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#print) method. The `print` method takes one parameter, that is, [printOptions](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions), which can be used for customization.
 
 The `printOptions` contain three properties, as described below.
 
@@ -30,7 +30,7 @@ The `printOptions` contain three properties, as described below.
 * [allowGridLines](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#allowgridlines) - This property specifies whether grid lines should be included in the printing or not. The grid lines will be included in the printed copy when set to `true`. When set to `false`, it will not be available.
 * [allowRowColumnHeader](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/printoptions#allowrowcolumnheader) - This property specifies whether row and column headers should be included in the printing or not. The headers will be included in the printed copy when set to `true`. When set to `false`, it will not be available.
 
-> When the [print()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#print) method is called without any parameters, the default printing will be performed.
+> When the [print](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#print) method is called without any parameters, the default printing will be performed.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -21,7 +21,7 @@ You have the following options in Selection,
 
 ## Cell & Range Selection
 
-Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method.
+Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method.
 
 **User Interface**:
 
@@ -42,9 +42,9 @@ You can perform row selection in any of the following ways,
 * By clicking the row header.
 * To select multiple rows, select a row header with the left mouse button and drag over to other row headers (or) use the `Shift + arrow` keys to select multiple rows.
 * To select non-adjacent rows, hold `Ctrl` and select the row header.
-* You can also use the [selectRange()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method for row selection.
+* You can also use the [selectRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method for row selection.
 
-The following sample shows the row selection in the spreadsheet, here selecting the 5th row using the `selectRange()` method.
+The following sample shows the row selection in the spreadsheet, here selecting the 5th row using the `selectRange` method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -74,9 +74,9 @@ You can perform column selection in any of the following ways,
 * By clicking the column header.
 * To select multiple columns, select a column header with the left mouse button and drag over to other column headers (or) use the `Shift + arrow` keys to select the multiple columns.
 * To select non-adjacent columns, hold `Ctrl` and select the column header.
-* You can also use the [selectRange()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method for column selection.
+* You can also use the [selectRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method for column selection.
 
-The following sample shows the column selection in the spreadsheet, here selecting the 3rd column using  the `selectRange()` method.
+The following sample shows the column selection in the spreadsheet, here selecting the 3rd column using  the `selectRange` method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -97,7 +97,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 ## Get selected cell values
 
-You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. Additionally, you can also programmatically perform selection using the [selectRange()](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method. This selection behavior is controlled based on the [selectionSettings](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#selectionsettings) property. Now, retrieving the selected cell values as a collection is achievable using the [getData()](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#getdata) method.
+You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. Additionally, you can also programmatically perform selection using the [selectRange](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method. This selection behavior is controlled based on the [selectionSettings](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#selectionsettings) property. Now, retrieving the selected cell values as a collection is achievable using the [getData](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#getdata) method.
 
 Below is a code example demonstrating how to retrieve the selected cell values as a collection programmatically:
 

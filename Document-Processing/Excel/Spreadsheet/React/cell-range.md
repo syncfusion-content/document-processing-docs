@@ -23,7 +23,7 @@ Wrap text can be applied or removed to a cell or range of cells in the following
 
 * Using the [wrap](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#wrap) property in `cell`, you can enable or disable wrap text to a cell at initial load.
 * Select or deselect wrap button from ribbon toolbar to apply or remove the wrap text to the selected range.
-* Using the [`wrap()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#wrap) method, you can apply or remove the wrap text once the component is loaded.
+* Using the [`wrap`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#wrap) method, you can apply or remove the wrap text once the component is loaded.
 
 The following code example shows the wrap text functionality in spreadsheet.
 
@@ -59,7 +59,7 @@ You can merge the range of cells in the following ways,
 
 * Set the [rowSpan](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#rowspan) and [colSpan](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#colspan) property in `cell` to merge the number of cells at initial load.
 * Select the range of cells and apply merge by selecting the desired option from ribbon toolbar.
-* Use [`merge()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#merge) method to merge the range of cells, once the component is loaded.
+* Use [`merge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#merge) method to merge the range of cells, once the component is loaded.
 
 The available merge options in spreadsheet are,
 
@@ -103,7 +103,7 @@ Auto Fill is used to fill the cells with data based on adjacent cells. It also f
 You can do this by one of the following ways,
 
 * Using “AutoFillOptions” menu which is open, while drag and drop the cell using fill handle element.
-* Use the [autoFill()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method programmatically.
+* Use the [autoFill](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method programmatically.
 
 The available parameters in `autoFill()` method are,
 
@@ -128,7 +128,7 @@ In Auto Fill we have following options,
 To copy the selected cell content to the adjacent cells. You can do this by one of the following ways,
 
 * Using fill handle to select the adjacent cell range and “Copy Cells” option in “AutoFillOptions” menu to fill the adjacent cells.
-* Using “CopyCells” as fill type in [autoFill()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method to fill the adjacent cells.
+* Using “CopyCells” as fill type in [autoFill](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method to fill the adjacent cells.
 
 ### Fill Series
 
@@ -137,7 +137,7 @@ To fill the series of numbers, characters, or dates based on selected cell conte
 You can do this by one of the following ways,
 
 * Using fill handle to select the adjacent cell range and “Fill Series” option in “AutoFillOptions” menu to fill the adjacent cells.
-* Using “FillSeries” as fill type in [autoFill()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method to fill the adjacent cells.
+* Using “FillSeries” as fill type in [autoFill](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method to fill the adjacent cells.
 
 ### Fill Formatting Only
 
@@ -146,7 +146,7 @@ To fill the cell style and number formatting based on the selected cell content 
 You can do this by one of the following ways,
 
 * Using fill handle to select the adjacent cell range and “Fill Formatting Only” option in “AutoFillOptions” menu to fill the adjacent cells.
-* Using “FillFormattingOnly” as fill type in [autoFill()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method to fill the adjacent cells.
+* Using “FillFormattingOnly” as fill type in [autoFill](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method to fill the adjacent cells.
 
 ### Fill Without Formatting
 
@@ -155,7 +155,7 @@ To fill series of numbers, characters, or dates based on the selected cells to t
 You can do this by one of the following ways,
 
 * Using fill handle to select the adjacent cell range and “Fill Without Formatting” option in “AutoFillOptions” menu to fill the adjacent cells.
-* Using “FillWithoutFormatting” as fill type in [autoFill()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method to fill the adjacent cells.
+* Using “FillWithoutFormatting” as fill type in [autoFill](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method to fill the adjacent cells.
 
 In the following sample, you can enable/disable the fill option on the button click event by using the [showFillOptions](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/autofillsettings#showfilloptions) property in [autoFillSettings](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofillsettings).
 
@@ -192,7 +192,7 @@ Clear feature helps you to clear the cell contents (formulas and data), formats 
 You can apply clear feature by using one of the following ways,
 
 * Select the clear icon in the Ribbon toolbar under the Home Tab.
-* Using the [`clear()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method to clear the values.
+* Using the [`clear`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method to clear the values.
 
 Clear has the following types in the spreadsheet,
 
@@ -205,7 +205,7 @@ Clear has the following types in the spreadsheet,
 
 ### Methods
 
-Clear the cell contents and formats in the Spreadsheet document by using the [clear()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method. The [clear()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
+Clear the cell contents and formats in the Spreadsheet document by using the [clear](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method. The [clear](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method has `type` and `range` as parameters. The following code example shows how to clear the cell contents and formats in the button click event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

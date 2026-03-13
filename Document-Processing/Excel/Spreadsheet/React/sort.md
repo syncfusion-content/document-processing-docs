@@ -20,7 +20,7 @@ By default, the `sort` module is injected internally into Spreadsheet to perform
 In the active Spreadsheet, select a range of cells to sort by cell value. The range sort can be done by any of the following ways:
 * Select the sort item in the Ribbon toolbar and choose the ascending or descending item.
 * Right-click the sheet, select the sort item in the context menu and choose the ascending/descending item.
-* Use the [`sort()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method programmatically.
+* Use the [`sort`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method programmatically.
 
 The cell values can be sorted in the following orders:
 * Ascending
@@ -28,7 +28,7 @@ The cell values can be sorted in the following orders:
 
 > * The default order of sorting is `Ascending`
 
-The [sort()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method with empty arguments will sort the selected range by active cell’s column as sort column in ascending order.
+The [sort](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method with empty arguments will sort the selected range by active cell’s column as sort column in ascending order.
 
 > * The [`beforeSort`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#beforesort) event will be triggered before sorting the specified range.
 > * The [`sortComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sortcomplete) event will be triggered after the sort action is completed successfully.
@@ -54,7 +54,7 @@ The following code example shows `sort` functionality in the Spreadsheet control
 
 ## Data contains header
 
-You can specify whether the selected range of cells contains header. To specify, you need to set the [`containsHeader`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#containsheader) property to `true` and pass it as [sortOption](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sortoptions) arguments of the [sort()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method.
+You can specify whether the selected range of cells contains header. To specify, you need to set the [`containsHeader`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#containsheader) property to `true` and pass it as [sortOption](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sortoptions) arguments of the [sort](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method.
 
 > * If the `containsHeader` property is not set and active cell column’s first cell value type is differed from the second cell value type, the first row data in the range are marked as column headers.
 
@@ -72,7 +72,7 @@ In the custom sort dialog, the `Data contains header` checkbox is checked on loa
 
 ## Case sensitive sorting
 
-The default sort functionality of Spreadsheet is a case insensitive sorting. When you want to perform sorting with case sensitive, you need to set the [`caseSensitive`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#casesensitive) property to `true` and pass it as [sortOption](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sortoptions) arguments of the [sort()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method.
+The default sort functionality of Spreadsheet is a case insensitive sorting. When you want to perform sorting with case sensitive, you need to set the [`caseSensitive`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#casesensitive) property to `true` and pass it as [sortOption](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sortoptions) arguments of the [sort](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method.
 
 Case sensitive sorting is applicable only for cells with alphabets. In ascending order sorting with case sensitive enabled, the cells with lower case text will be placed above the cells with upper case text.
 
@@ -93,7 +93,7 @@ In the custom sort dialog, the [caseSensitive](https://ej2.syncfusion.com/react/
 
 When you want to perform sorting on multiple columns, it can be done by any of the following ways:
 * Select the `Custom sort…` menu item from the Ribbon toolbar item or context menu item.
-* Use the [sort()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method programmatically by providing sort criteria.
+* Use the [sort](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method programmatically by providing sort criteria.
 
 > * The current sorting functionality supports sorting based on cell values only.
 
@@ -107,7 +107,7 @@ You can refer to the [`Data contains header`](./sort#data-contains-header) topic
 
 ### Passing sort criteria manually
 
-The multi-column sorting can also be performed manually by passing sort options to the [sort()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method programmatically. The [sortOption](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sortoptions) have the following arguments:
+The multi-column sorting can also be performed manually by passing sort options to the [sort](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) method programmatically. The [sortOption](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sortoptions) have the following arguments:
 * [`sortDescriptors`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sortdescriptors) – Sort criteria collection that holds the collection of field name, sort order, and [`sortComparer`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sortcomparer).
 * `containsHeader` – Boolean argument that specifies whether the range has headers in it.
 * `caseSensitive` – Boolean argument that specifies whether the range needs to consider case.

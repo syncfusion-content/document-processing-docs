@@ -39,7 +39,7 @@ In the active worksheet, you can add a note in the following ways:
 * **Ribbon**: Select the cell, navigate to the **Review** tab, click the **Notes** dropdown, and select **Add Note**.
 * **Keyboard Shortcut**: Select the cell and press <kbd>Shift</kbd> + <kbd>F2</kbd>.
 * **Programmatically**: 
-    * Use the [updateCell()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updatecell) method with the note model to add a note to a specific cell.
+    * Use the [updateCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updatecell) method with the note model to add a note to a specific cell.
     * Bind notes via code-behind during initial load by associating the note model with the cell model.
 
 A dialog box will open where you can enter the note content. After entering the content, you can either click on other cells or press the <kbd>Esc</kbd> button to automatically save the note and close the dialog box.
@@ -152,7 +152,7 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
 The notes can be added initially when the Spreadsheet loads using cell data binding. You need to use the `notes` property in the cell settings to add notes to the Spreadsheet.
 
-In the below example, you can navigate between notes using **Previous Note** and **Next Note** options, toggle individual note visibility with **Show/Hide Note**, display all notes at once using **Show All Notes** and see how notes are added using the [updateCell()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method in the [created](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#created) event.
+In the below example, you can navigate between notes using **Previous Note** and **Next Note** options, toggle individual note visibility with **Show/Hide Note**, display all notes at once using **Show All Notes** and see how notes are added using the [updateCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method in the [created](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#created) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

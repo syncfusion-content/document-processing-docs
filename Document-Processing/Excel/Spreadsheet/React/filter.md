@@ -21,14 +21,14 @@ In the active sheet, select a range of cells to filter by value of the cell. The
 
 * Select the filter item in the Ribbon toolbar.
 * Right-click the sheet, select the filter item in the context menu.
-* Use the [`applyFilter()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#applyfilter) method programmatically.
+* Use the [`applyFilter`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#applyfilter) method programmatically.
 * Use `Ctrl + Shift + L` keyboard shortcut to apply the filter.
 
 > * Use `Alt + Up/Down` keyboard shortcut to open the filter dialog.
 
 ## Filter by criteria
 
-The [`applyFilter()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#applyfilter) method will apply the filter UI, based on the predicate and range given in the arguments.
+The [`applyFilter`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#applyfilter) method will apply the filter UI, based on the predicate and range given in the arguments.
 
 > * The [`beforeFilter`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#beforefilter) event will be triggered before filtering the specified range.
 > * The [`filterComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#filtercomplete) event will be triggered after the filter action is completed successfully.
@@ -62,7 +62,7 @@ After applying filter to a certain column, you may want to clear it to make all 
 
 * Choose `Clear` option in ribbon toolbar under `Filter and Sort`. It clears the filters applied in the spreadsheet for all fields.
 
-* Use the [`clearFilter()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#clearfilter) method programmatically, to clear the applied filters in spreadsheet for all fields.
+* Use the [`clearFilter`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#clearfilter) method programmatically, to clear the applied filters in spreadsheet for all fields.
 
 ## Clear filter on a field
 
@@ -118,8 +118,8 @@ The following features have some limitations in Filter:
 ## Quick Lookups
 
 - `allowFiltering` - property that enables or disables filtering support in the spreadsheet.
-- `applyFilter()` - method that applies a filter to a selected range or based on specified criteria.
-- `clearFilter()` - method that clears all applied filters or clears the filter for a specific column.
+- `applyFilter` - method that applies a filter to a selected range or based on specified criteria.
+- `clearFilter` - method that clears all applied filters or clears the filter for a specific column.
 - `beforeFilter` - event fired before filtering begins, allowing you to modify filter options.
 - `filterComplete` - event fired after filtering finishes, useful for post‑filter actions.
 - `Ctrl + Shift + L` - quickly apply or remove filters on the selected range.

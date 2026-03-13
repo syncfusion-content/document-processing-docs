@@ -21,7 +21,7 @@ It reverses the last action you performed with Spreadsheet. Undo can be done by 
 
 * Select the undo item from HOME tab in Ribbon toolbar.
 * Use `Ctrl + Z` keyboard shortcut to perform the undo.
-* Use the [`undo()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#undo) method programmatically.
+* Use the [`undo`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#undo) method programmatically.
 
 ## Redo Action
 
@@ -29,11 +29,11 @@ It reverses the last undo action you performed with Spreadsheet. Redo can be don
 
 * Select the redo item from Home tab in Ribbon toolbar.
 * Use `Ctrl + Y` keyboard shortcut to perform the redo.
-* Use the [`redo()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#redo) method programmatically.
+* Use the [`redo`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#redo) method programmatically.
 
 ## Update custom actions in UndoRedo collection
 
-You can update your own custom actions in UndoRedo collection, by using the [`updateUndoRedoCollection()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updateundoredocollection) method. And also customize the undo redo operations of your custom action by using [actionComplete](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#actioncomplete) event.
+You can update your own custom actions in UndoRedo collection, by using the [`updateUndoRedoCollection`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updateundoredocollection) method. And also customize the undo redo operations of your custom action by using [actionComplete](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#actioncomplete) event.
 
 The following code example shows `How to update and customize your own actions for undo redo` functionality in the Spreadsheet control.
 
@@ -57,8 +57,8 @@ The following code example shows `How to update and customize your own actions f
 ## Quick Lookup
 
 - `allowUndoRedo` - enables or disables undo/redo functionality, default is true.
-- `undo()` - used to reverses the last action performed.
-- `redo()` - used to reapply the last undone action.
+- `undo` - used to reverses the last action performed.
+- `redo` - used to reapply the last undone action.
 - `updateUndoRedoCollection(args)` - adds a custom action to the undo/redo history.
 - `actionComplete` - event used to handle custom undo/redo behavior.
 

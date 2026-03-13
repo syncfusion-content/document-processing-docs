@@ -22,7 +22,7 @@ To get start quickly with Freeze Panes in React Spreadsheet, you can check on th
 In the active spreadsheet, click the cell where you want to create freeze panes. Freeze panes can be done in any of the following ways:
 
 * Select the View tab in the Ribbon toolbar and choose the `Freeze Panes` item.
-* Use the [`freezePanes()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#freezepanes) method programmatically.
+* Use the [`freezePanes`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#freezepanes) method programmatically.
 
 ## FrozenRows
 
@@ -74,7 +74,7 @@ Unfreeze Panes allows you to remove previously frozen rows and columns so the wo
 In the active Spreadsheet, unfreezing can be done in any of the following ways:
 
 * Select the **View** tab in the Ribbon toolbar and choose the **Unfreeze Panes** item.
-* Use the [unfreezePanes()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#unfreezepanes) method to remove freeze panes on the active sheet, or pass a sheet identifier to target another sheet. 
+* Use the [unfreezePanes](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#unfreezepanes) method to remove freeze panes on the active sheet, or pass a sheet identifier to target another sheet. 
 
 
 ## Limitations

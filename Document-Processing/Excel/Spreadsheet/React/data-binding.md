@@ -188,11 +188,11 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 ## Dynamic data binding using updateRange method
 
-The [updateRange()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updaterange) method allows you to dynamically update the [dataSource](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel#datasource) in a spreadsheet without manually iterating through each cell. This method is especially useful for efficiently applying bulk updates to a specific range within the spreadsheet.
+The [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updaterange) method allows you to dynamically update the [dataSource](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel#datasource) in a spreadsheet without manually iterating through each cell. This method is especially useful for efficiently applying bulk updates to a specific range within the spreadsheet.
 
-To use the [updateRange()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updaterange) method, provide the new [dataSource](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel#datasource) and specify the starting cell for the update using the [startCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel#startcell) property of the `RangeDirective`. Additionally, set the `sheetIndex` to target the appropriate sheet for the update.
+To use the [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updaterange) method, provide the new [dataSource](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel#datasource) and specify the starting cell for the update using the [startCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel#startcell) property of the `RangeDirective`. Additionally, set the `sheetIndex` to target the appropriate sheet for the update.
 
-The following code example demonstrates how to dynamically update data using the [updateRange()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updaterange) method.
+The following code example demonstrates how to dynamically update data using the [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updaterange) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

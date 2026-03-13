@@ -41,7 +41,7 @@ In the active Spreadsheet, the sheet protection can be done by any of the follow
 
 * Select the Protect Sheet item in the Ribbon toolbar under the Data Tab, and then select your desired options.
 * Right-click the sheet tab, select the Protect Sheet item in the context menu, and then select your desired options.
-* Use the [`protectSheet()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#protectsheet) method programmatically.
+* Use the [`protectSheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#protectsheet) method programmatically.
 
 The following example shows `Protect Sheet` functionality in the Spreadsheet control.
 
@@ -76,11 +76,11 @@ In the active Spreadsheet, the sheet Unprotection can be done by any of the foll
 
 * Select the `Unprotect Sheet` item in the Ribbon toolbar under the Data Tab.
 * Right-click the sheet tab, select the `Unprotect Sheet` item in the context menu.
-* Use the [`unprotectSheet()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#unprotectsheet) method programmatically.
+* Use the [`unprotectSheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#unprotectsheet) method programmatically.
 
 ## Unlock the particular cells in the protected sheet
 
-In protected spreadsheet, to make some particular cell or range of cells is editable, you can use [`lockCells()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#lockcells) method, with the parameter `range` and [isLocked](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#islocked) property as false.
+In protected spreadsheet, to make some particular cell or range of cells is editable, you can use [`lockCells`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#lockcells) method, with the parameter `range` and [isLocked](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#islocked) property as false.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -101,9 +101,9 @@ In protected spreadsheet, to make some particular cell or range of cells is edit
 
 ## Make cells read-only without protecting worksheet
 
-Previously, you could make cells read-only by protecting the entire sheet using the [protectSheet()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#protectsheet) method or through the UI option. Meanwhile, to make a specific range of cells editable within a protected sheet, you needed to use the [lockCells()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#lockcells) method, passing the `range` parameter and setting the [isLocked](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#islocked) property to `false`. 
+Previously, you could make cells read-only by protecting the entire sheet using the [protectSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#protectsheet) method or through the UI option. Meanwhile, to make a specific range of cells editable within a protected sheet, you needed to use the [lockCells](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#lockcells) method, passing the `range` parameter and setting the [isLocked](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#islocked) property to `false`. 
 
-Now, you can make an entire row, an entire column, or a specific range of cells read-only using the [setRangeReadOnly()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#setrangereadonly) method without protecting the entire sheet. This method accepts three parameters, as detailed in the following table:
+Now, you can make an entire row, an entire column, or a specific range of cells read-only using the [setRangeReadOnly](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#setrangereadonly) method without protecting the entire sheet. This method accepts three parameters, as detailed in the following table:
 
 | Parameter | Description |
 |-----|------|

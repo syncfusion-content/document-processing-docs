@@ -40,7 +40,7 @@ You can add a **comment** to a cell in several ways:
 * **Ribbon**: Go to **Review > Comment > New Comment**.
 * **Keyboard shortcut**: Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F2</kbd> to open the comment editor for the active cell.
 * **Programmatically**: 
-    * Use the [updateCell()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method with the comment model to add a comment to a specific cell.
+    * Use the [updateCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method with the comment model to add a comment to a specific cell.
     * Bind comments via code-behind during initial load by associating the comment model with the cell model.
 
 The image below shows that once a comment is posted, the cell displays an indicator, and the comment can be previewed on hover.
@@ -170,7 +170,7 @@ You can bind **comment thread** to cells at initial load by providing a `comment
 - **Comment**: `author`, `text`, `createdTime`, `isResolved`
 - **Replies**: A collection of replies. Each reply is an object containing its `author`, `text`, and `createdTime` (no nested replies-of-replies).
 
-In the below sample, comments are added to a specific cell using cell data binding. The "Comments" review pane is shown initially by enabling the [showCommentsPane](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#showcommentspane) property, and comments are added using [updateCell()](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method in the `created` event.
+In the below sample, comments are added to a specific cell using cell data binding. The "Comments" review pane is shown initially by enabling the [showCommentsPane](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#showcommentspane) property, and comments are added using [updateCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method in the `created` event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
