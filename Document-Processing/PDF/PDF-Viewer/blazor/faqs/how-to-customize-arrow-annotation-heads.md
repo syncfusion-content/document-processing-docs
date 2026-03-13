@@ -14,9 +14,9 @@ Use the [ArrowSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 The following example shows how to remove the start and end arrow heads for arrow annotations.
 
 ```cshtml
-@using Syncfusion.Blazor.SfPdfviewer
+@using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 @ref="Viewer"
+<SfPdfViewer2 @ref="@Viewer"
               DocumentPath="@DocumentPath"
               ArrowSettings="@ArrowSettings"
               Height="100%"
@@ -28,7 +28,7 @@ The following example shows how to remove the start and end arrow heads for arro
 {
     public SfPdfViewer2 Viewer { get; set; }
 
-    private string DocumentPath { get; set; } = "wwwroot/data/PDF Succinctly.pdf";
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
     PdfViewerArrowSettings ArrowSettings = new PdfViewerArrowSettings 
     { 
@@ -47,7 +47,7 @@ The following example shows how to remove the start and end arrow heads for arro
 }
 ```
 
-N> ArrowSettings controls the default arrow head styles for annotations created using the toolbar or programmatically. Set LineHeadStartStyle and LineHeadEndStyle to LineHeadStyle.None to remove heads. Other common values include LineHeadStyle.Closed, LineHeadStyle.Round, LineHeadStyle.Square, LineHeadStyle.ClosedArrow, LineHeadStyle.Diamond and LineHeadStyle.Open.
+N> ArrowSettings controls the default arrow head styles for annotations created using the toolbar or programmatically. Set `LineHeadStartStyle` and `LineHeadEndStyle` to `LineHeadStyle.None` to remove heads. Other common values include `LineHeadStyle.Closed`, `LineHeadStyle.Round`, `LineHeadStyle.Square`, `LineHeadStyle.ClosedArrow`, `LineHeadStyle.Diamond`, and `LineHeadStyle.Open`.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Shapes/Remove%20arrow%20annotation%20heads).
 

@@ -8,18 +8,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Search text and redact in Vue PdfViewer
+# Search text and redact in Vue PDF Viewer
 
-You can search for a keyword in the loaded PDF and automatically add redaction annotations over each match. The example below wires the extractTextCompleted event, triggers text extraction, performs a search, and places redaction annotations for every result.
+You can search for a keyword in the loaded PDF and automatically add redaction annotations over each match. The example below wires the `extractTextCompleted` event, triggers text extraction, performs a search, and places redaction annotations for every result.
 
-N> Prerequisites: Add the PdfViewer control to your Vue application and ensure a document is loaded. Make sure the redaction feature is available in the version you are using. Once applied, redaction permanently removes the selected content.
+N> Prerequisites: Add the PDF Viewer control to your Vue application and ensure a document is loaded. Confirm the redaction feature is available in the viewer version in use and that text extraction is enabled (`isExtractText: true`). Redaction is permanent once applied.
 
-## Steps to add Redaction annotations on search Text Bounds
+## Steps to add redaction annotations on search text bounds
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/Vue/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in [PDF Viewer - Getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 
-
-**Step 2:** Use the following code-snippets to Add Redaction annotation on Search Text Bounds.
+**Step 2:** Use the following code snippets to add redaction annotations to search text bounds.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}

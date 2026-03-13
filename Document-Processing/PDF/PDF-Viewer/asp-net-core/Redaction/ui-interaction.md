@@ -11,7 +11,7 @@ documentation: ug
 
 ## Add redaction annotations from the toolbar
 
-Use the redaction tool in the toolbar to draw over content that should be hidden. After marking, an annotation can display overlay text (for example, “Confidential”) and can be styled using fill color and other properties.
+Use the redaction tool to draw over content to be hidden. After marking, an annotation can display overlay text (for example, “Confidential”) and can be styled using fill color and other properties.
 
 ![Drawing a redaction annotation on the page](redaction-annotations-images/adding-redaction-annotation.png)
 
@@ -37,7 +37,7 @@ After adding a redaction annotation, you can update its properties through the p
 
 ### Update using the property panel
 
-When a redaction annotation is selected, a two‑tab property panel (General and Appearance) lets you customize text and styling. Changes are reflected instantly on the redaction mark.
+When a redaction annotation is selected, a two‑tab property panel (General and Appearance) lets the user customize text and styling. Changes are reflected instantly on the redaction mark.
 
 The property panel can be opened in two ways:
 
@@ -62,7 +62,7 @@ Use the General tab to define how the content will look after redaction. These s
 
 ![Fill Color in General Tab](redaction-annotations-images/after-redaction-fill-color.png)
 
-Note: Hovering the mouse over a redaction annotation shows a preview of this final look. After you click Apply Redaction, these settings are flattened into the page and can’t be edited. Tip: Click Save in the dialog to keep your changes.
+N> Hovering the mouse over a redaction annotation previews the final look. After clicking Apply Redaction, these settings are flattened into the page and cannot be edited. Tip: Click Save in the dialog to keep changes.
 
 #### Appearance tab
 
@@ -72,7 +72,7 @@ Use the Appearance tab to style the redaction annotation itself (before applying
 * Outline Color – Optional border for the annotation.
 * Fill Opacity – Controls how transparent the annotation appears during review.
 
-Note: The Appearance tab affects only the temporary annotation. The final look after applying redaction comes from the General tab settings.
+N> The Appearance tab affects only the temporary annotation. The final look after applying redaction uses the General tab settings.
 
 ![Appearance Tab Settings](redaction-annotations-images/redaction-annotation-appearance.png)
 

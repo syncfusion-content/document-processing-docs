@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize the selection border
 
-Use the [annotationSelectorSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettingsModel/#annotationselectorsettingsmodel) property to configure selection border appearance and behavior for annotations (for example, border color, resizer handle shape, and dash pattern). The property controls the visual feedback users see when editing or selecting annotations.
+The PDF Viewer library allows you to customize the annotations selection borders using the [**annotationSelectorSettings**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettingsModel#annotationselectorsettingsmodel) Property.
 
 Recommended steps
 

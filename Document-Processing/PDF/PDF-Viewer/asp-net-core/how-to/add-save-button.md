@@ -7,15 +7,15 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Add Save Button in Built-In toolbar in ASP.NET Core
+# Add a save button to the toolbar in ASP.NET Core
 
-PDF Viewer supports customizing toolbar items, including adding, showing, hiding, enabling, and disabling items.
+The PDF Viewer enables customization of toolbar items, including adding, showing, hiding, enabling, and disabling items. Create a custom save button that triggers the download functionality with a few configuration steps. The following approaches can be used to customize the toolbar:
 
-- Save button: Define the `Save` button using **CustomToolbarItemModel** and include it alongside existing items via [**ToolbarSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html). Handle clicks in the toolbarClick event.
+- **Add a save button:** Define a custom `Save` button using **CustomToolbarItemModel** and include it with existing toolbar items via [**ToolbarSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html). Handle the button click using the `toolbarClick` event.
 
-- Show or hide: Show or hide the `Save` button using [**ToolbarSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html). Predefined toolbar items are listed under [`ToolbarItem`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_ToolbarItems).
+- **Show or hide items:** Control visibility of toolbar items using [**ToolbarSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html). See the list of predefined toolbar items under [`ToolbarItem`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_ToolbarItems).
 
-- Enable or disable: Enable or disable the `Save` button using `enableToolbarItem`.
+- **Enable or disable items:** Toggle the state of toolbar items using the `enableToolbarItem()` method.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -106,6 +106,10 @@ PDF Viewer supports customizing toolbar items, including adding, showing, hiding
 
 N> Default toolbar items: ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
 
+## CustomToolbarItemModel properties
+
+The following properties can be configured when creating a custom toolbar item:
+
 ### Align property
 
 Specifies the alignment of the `Save` button within the toolbar.
@@ -131,6 +135,6 @@ The id property within a CustomToolbarItemModel is required and uniquely identif
 
 When defining or customizing toolbar items, assign a specific, descriptive id to each item. These properties are commonly used when defining custom toolbar items with `CustomToolbarItemModel` in the context of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize appearance and behavior.
 
-N> When customizing the Save button, icons or text can be used based on design preference.
+N> You can use either text, icons, or both when customizing the save button based on your design requirements.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

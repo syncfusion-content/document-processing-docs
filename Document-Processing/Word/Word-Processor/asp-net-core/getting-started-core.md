@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Syncfusion Document Editor Control
-description: Checkout and learn about getting started with Document Editor control of Syncfusion Essential JS 2 and more details.
+description: Check out and learn about getting started with Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting Started Core
 documentation: ug
@@ -18,8 +18,10 @@ This section briefly explains about how to include [ASP.NET Core DocumentEditor]
 
 ## Create ASP.NET Core web application with Razor pages
 
+Create a new ASP.NET Core web application using one of the following methods:
+
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio#create-a-razor-pages-web-app)
-* [Create a Project using Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Extension](https://ej2.syncfusion.com/aspnetcore/documentation/getting-started/project-template)
+* [Create a Project using Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Extension](https://ej2.syncfusion.com/aspnetcore/documentation/getting-started/razor-pages)
 
 ## Install ASP.NET Core package in the application
 
@@ -36,6 +38,7 @@ Install-Package Syncfusion.EJ2.AspNet.Core -Version {{ site.releaseversion }}
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core controls are available in [nuget.org.](https://www.nuget.org/packages?q=syncfusion.EJ2) Refer to [NuGet packages topic](https://ej2.syncfusion.com/aspnetcore/documentation/nuget-packages) to learn more about installing NuGet packages in various OS environments. The Syncfusion.EJ2.AspNet.Core NuGet package has dependencies, [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for validating Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Tag Helper
+
 Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelper.
 
 {% tabs %}
@@ -84,9 +87,16 @@ Also, register the script manager `<ejs-script>` at the end of `<body>` in the A
 {% endhighlight %}
 {% endtabs %}
 
+## Understanding component options
+
+* **DocumentEditor**: A customizable component where you build the UI according to your specific requirements
+* **DocumentEditorContainer**: A complete solution with a predefined toolbar, properties pane, and status bar for comprehensive document editing
+
+This guide demonstrates both options.
+
 ## Add ASP.NET Core DocumentEditor control
 
-Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core DocumentEditor tag helper in `~/Pages/Index.cshtml` page.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core DocumentEditor tag helper in `~/Pages/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}

@@ -8,21 +8,21 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filling PDF Forms in JavaScript PDF Viewer
+# Filling PDF forms in JavaScript PDF Viewer
 
-The Syncfusion PDF Viewer supports three types of form-filling:
+The Syncfusion PDF Viewer supports filling form fields programmatically, via the user interface, or by importing form data from external sources.
 
-1.	[Filling Form Fields Programmatically](#fill-pdf-forms-programmatically)
+1. [Filling form fields programmatically](#fill-pdf-forms-programmatically)
 
-    You can fill or update PDF form fields programmatically using the [updateFormFieldsValue](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#updateformfieldsvalue) APIs. This approach is useful when form data needs to be set dynamically based on application logic.
+  Use the [updateFormFieldsValue](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#updateformfieldsvalue) API to set or update field values dynamically based on application logic.
 
-2.	[Form Filling Through User Interface](#fill-pdf-forms-through-the-user-interface)
+2. [Form filling through the user interface](#fill-pdf-forms-through-the-user-interface)
 
-    Users can fill in PDF form fields directly through the PDF Viewer user interface by typing text, selecting options, or interacting with supported form elements.
+  Users can enter or select values directly in the PDF Viewer using supported form elements.
 
-3.	[Importing Form Field Data](#fill-pdf-forms-through-import-data)
+3. [Importing form field data](#fill-pdf-forms-through-import-data)
 
-    The PDF Viewer allows you to import form field data into an existing PDF document. This enables pre filled forms using external data sources.
+  Import form data to prefill fields from a JSON/FDF/XFDF source so forms are ready for review or signing.
 
 ## Fill PDF forms programmatically 
 
@@ -52,13 +52,13 @@ document.getElementById('updateBtn').onclick = function () {
 };
 ```
 
-## Fill PDF forms through the User Interface
+## Fill PDF forms through the user interface
 
-The Syncfusion PDF Viewer allows users to fill PDF form fields directly through the user interface without using code. Users can click on form fields and enter or select values based on the field type.
+The Syncfusion PDF Viewer lets users fill form fields directly in the viewer. Clicking a field allows users to enter text, select options, or sign where supported.
 
-![Form Filling](../../javascript-es6/images/FormFields.gif)
+![Fill text and signature fields in PDF Viewer](../../javascript-es6/images/FormFields.gif)
 
-The PDF Viewer supports common form fields such as text boxes, check boxes, radio buttons, drop-down lists, list boxes, and signature fields. Filled values can be edited at any time, and the entered data is retained during the viewing session.
+The PDF Viewer supports text boxes, check boxes, radio buttons, drop-down lists, list boxes, and signature fields. Filled values remain editable during the viewing session.
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
 

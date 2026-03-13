@@ -18,10 +18,10 @@ Rectangle is a shape annotation used to highlight regions, group content, or dra
 
 ### Add rectangle annotation via UI
 
-Use the annotation toolbar:
-- Click the Edit Annotation button in the PDF Viewer toolbar.
-- Open the Shape Annotation dropdown.
-- Choose Rectangle, then draw on the page.
+Use the annotation toolbar to:
+- Click the **Edit Annotation** button in the PDF Viewer toolbar.
+- Open the **Shape Annotation** dropdown.
+- Choose **Rectangle**, then draw on the page
 
 N> When pan mode is active and a shape tool is selected, the viewer switches to text select mode automatically.
 
@@ -29,7 +29,7 @@ N> When pan mode is active and a shape tool is selected, the viewer switches to 
 
 ### Enable rectangle mode
 
-The PDF Viewer library allows drawing shape annotations programmatically after enabling rectangle mode in button clicks.
+The PDF Viewer library allows drawing rectangle annotations programmatically after enabling rectangle mode via button clicks.
 
 ```html
 <button id="rectangleMode">Rectangle</button>
@@ -82,7 +82,7 @@ document.getElementById('setNone')?.addEventListener('click', () => {
 
 ### Add a rectangle annotation programmatically
 
-Use the addAnnotation method with Rectangle settings to add a rectangle annotation programmatically.
+Use the `addAnnotation` method to add rectangle annotations programmatically.
 
 ```html
 <button id="addRectangleAnnotation">Add Rectangle annotation programmatically</button>
@@ -133,16 +133,16 @@ document.getElementById('addRectangleAnnotation')?.addEventListener('click', () 
 
 ### Edit Rectangle Annotation in UI
 
-You can select, move, and resize Rectangle annotations directly in the viewer:
+Use the viewer to select, move, and resize Rectangle annotations:
 - Select a Rectangle to show its resize handles.
 - Move: drag inside the shape to reposition it on the page.
 - Resize: drag any corner or side handle to adjust size.
 - Delete or access more options from the context menu.
 
 Use the toolbar to change appearance:
-- Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools.
+- Use the  Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools.
 
-#### Edit the properties of area annotations
+#### Edit the properties of rectangle annotations
 
 The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -256,9 +256,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `RectangleSettings`.
+Set properties for individual annotations before creating the control using `RectangleSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default rectangle settings.
 

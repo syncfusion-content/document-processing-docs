@@ -8,20 +8,18 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# RTL Language Support in Typescript PDF Viewer
+# RTL language support in TypeScript PDF Viewer
 
-RTL support in TypeScript PDF Viewer:
-
-- PDF Viewer component supports right-to-left layouts.
-- For RTL languages (Arabic, Hebrew, Persian), enable the [`enableRtl`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enablertl) property.
-- Load culture-specific strings globally using `L10n.load`.
-- Set the PdfViewer [`locale`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#locale) property to the target culture.
+Use RTL support to render the viewer interface for right-to-left languages.
+- Enable `enableRtl` to apply right-to-left layout.
+- Load culture-specific strings globally with `L10n.load`.
+- Set the `locale` property on the `PdfViewer` instance to the target culture.
 
 ![Arabic Localization](../images/locale-ar.gif)
 
-## Example Code-snippet to Enable RTL with Arabic Localization
+## Example: enable RTL and provide Arabic localization
 
-Use the below code-snippet to enable RTL for RTL Languages(Arabic, Hebrew, Persian)
+Use the example below to enable RTL for languages such as Arabic, Hebrew, and Persian.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -298,7 +296,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-N> You can find a comprehensive list of localization files/strings here: [GitHub Locale](https://github.com/syncfusion/ej2-locale). Provide only the keys you want to override, missing keys fall back to defaults.
+N> A comprehensive list of localization files and default strings is available on GitHub: [GitHub Locale](https://github.com/syncfusion/ej2-locale). Provide only keys that require overrides; missing keys fall back to the default `en-US` values.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 

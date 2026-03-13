@@ -63,3 +63,4 @@ The following how-to articles and frequently asked questions for the Syncfusion 
 * [How to get the signature selected and unselected event?](./how-to/signatureselect-signatureunselect-ts)
 * [How to unload the PDF document from the viewer?](./how-to/unload-document)
 * [Load Document after resources Loaded](./how-to/load-document-after-resources-loaded)
+* [Integrate PDF Viewer into existing react layouts](./how-to/existing-react-layout)

@@ -1,7 +1,6 @@
 ---
-title: Syncfusion PDF Unlocking Service Guide
-description: Unlock PDF documents seamlessly using Syncfusion's API. Ensure document integrity and security by unlocking.
-platform: document-processing
+title: Unlock Secured PDFs Using Syncfusion Web API 
+description: Remove password protection from authorized PDFs securely using Syncfusion unlock Web API for automated workflows.
 control: general
 documentation: UG
 ---
@@ -18,11 +17,11 @@ To unlock a PDF document, send a request to the /v1/edit-pdf/unlock-pdf endpoint
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/unlock-pdf' \
---form 'file=@"invoice.pdf"' \
---form 'settings="{
-  \"File\": \"file\",
-  \"Password\": \"null\"
-}"'
+--form 'file=@Image1.pdf' \
+--form 'settings={
+  "File": "file",
+  "Password": "12345678"
+}'
 
 {% endhighlight %}
 
@@ -30,15 +29,20 @@ curl --location 'http://localhost:8003/v1/edit-pdf/unlock-pdf' \
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "invoice.pdf");
-formdata.append("settings", "{\n  \"File\": \"file\",\n    \"Password\": \"null\"\n}");
-
+formdata.append(
+  "settings",
+  JSON.stringify({
+    File: "file",
+    Password: "12345678"
+  })
+);
 const requestOptions = {
   method: "POST",
   body: formdata,
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/unlock-pdf", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/unlock-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -50,12 +54,19 @@ fetch("http://localhost:4000/v1/edit-pdf/unlock-pdf", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/unlock-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("invoice.pdf")), "file", "invoice.pdf");
-content.Add(new StringContent("{
-  \"File\": \"file\",
-  \"Password\": \"null\"
-}"), "settings");
+content.Add(new StreamContent(File.OpenRead("Image1.pdf")), "file", "Image1.pdf");
+
+var settings = new
+{
+  File = "file",
+  Password = "12345678"
+};
+
+var json = JsonSerializer.Serialize(settings);
+var settingsContent = new StringContent(json, Encoding.UTF8, "application/json");
+content.Add(settingsContent, "settings");
 request.Content = content;
+
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
@@ -82,7 +93,9 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+curl --location 'http://localhost:8003/v1/conversion/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
+  --output Output.pdf
+  
 --header 'Authorization: Bearer {{Placeholder for token}}'
 
 {% endhighlight %}
@@ -94,7 +107,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

@@ -59,9 +59,11 @@ Alternatively, run the container directly with the license key:
 docker run -d -p 6001:80 –e SYNCFUSION_LICENSE_KEY= YOUR_LICENSE_KEY syncfusion/pdfviewer-server:latest
 ```
 
-When the container starts, the server is available at http://localhost:6001. Open the API endpoint at http://localhost:6001/api/pdfviewer to verify the default GET response.
+In production, avoid embedding license keys in files or image tags. Use environment variable management (for example, an `.env` file loaded by Compose), Docker secrets, or a platform-managed secret store.
 
-**Step 4:** Set the PDF Viewer client’s serviceUrl to the server endpoint (for example, http://localhost:6001/api/pdfviewer). For details on creating a client application, see the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/).
+When the container starts, the server is available at `http://localhost:6001`. Open the API endpoint at `http://localhost:6001/api/pdfviewer` to verify the default GET response. For production deployments, use `https://` and a secure environment for license storage.
+
+**Step 4:** Set the PDF Viewer client's `serviceUrl` to the server endpoint (for example, `http://localhost:6001/api/pdfviewer`). For details on creating a client application, see the PDF Viewer getting-started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/
 
 ```html
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>

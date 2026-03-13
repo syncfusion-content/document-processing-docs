@@ -12,27 +12,26 @@ domainurl: ##DomainURL##
 
 The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
 
-## Add Signature Annotation 
+## Add signature annotation
 
 ### Adding a handwritten signature in UI
 
 The handwritten signature can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **HandWritten Signature** button in the annotation toolbar. The signature panel appears.
+- Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
+- Select the **Handwritten signature** button in the annotation toolbar. The signature panel appears.
 
 ![Open the handwritten signature panel](../images/select_sign.png)
 
-* Draw the signature in the panel.
+- Draw the signature in the panel.
 
 ![Draw the handwritten signature](../images/add_sign.png)
 
-* Click **Create**, move the signature, and place it at the desired location.
+- Click **Create**, move the signature, and place it at the desired location.
 
 ![Place the handwritten signature on the page](../images/create_sign.png)
 
 Refer to the following code sample to switch to the handwritten signature mode programmatically.
-
 ```html
 <button id="handWrittenSignature">HandWritten Signature mode</button>
 ```
@@ -80,8 +79,7 @@ if (handWrittenSignature) {
 
 With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
 
-Here is an example of adding a handwritten signature programmatically using addAnnotation():
-
+Here is an example of adding a handwritten signature programmatically using the `addAnnotation()` method:
 ```html
 <button id="addHandwrittenSignature "> Add HandWritten signature Programmatically</button>
 ```
@@ -203,9 +201,9 @@ if(addHandwrittenSignature){
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
 
-## Edit Signature Annotation
+## Edit signature annotation
 
-### Edit Signature Annotation in UI
+### Edit signature annotation in UI
 
 Stroke color, border thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -227,12 +225,11 @@ Edit opacity using the range slider in the Edit Opacity tool.
 
 ![Change signature opacity](../images/change_opacity.png)
 
-### Edit Signature Annotation Programmatically
+### Edit signature annotation programmatically
 
-With the PDF Viewer library, you can programmatically edit a handwritten signature to the PDF Viewer control using the **editSignature()** method.
+With the PDF Viewer library, you can programmatically edit a handwritten signature in the PDF Viewer control using the `editSignature()` method.
 
-Here is an example of adding a handwritten signature programmatically using editSiganture():
-
+Here is an example of editing a handwritten signature programmatically using the `editSignature()` method:
 ```html
 <button id="Signature">Add Signature Annotation</button>
 <button id="editSignatureAnnotation">Edit Signature Annotation</button>
@@ -316,10 +313,9 @@ document.getElementById('editSignatureAnnotation')?.addEventListener('click', ()
 {% endhighlight %}
 {% endtabs %}
 
-## Enable/Disable handwritten signature
+## Enable or disable handwritten signature
 
 The following example enables or disables the handwritten signature in the PDF Viewer. Setting the value to `false` disables the feature.
-
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 
@@ -344,6 +340,8 @@ pdfviewer.enableHandwrittenSignature  = false;
 
 {% endhighlight %}
 {% endtabs %}
+
+N> When `enableHandwrittenSignature` is set to `false`, the handwritten signature toolbar and related UI are disabled; existing handwritten signature annotations remain in the document unless removed. The `canSave` option in annotation examples controls whether a signature can be saved for reuse; when `canSave` is `false`, signatures are not persisted in the signature collection for later reuse.
 
 ## See also
 

@@ -8,17 +8,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer Form Field Events in TypeScript
+# Form field events in TypeScript PDF Viewer
 
-The Syncfusion **TypeScript PDF Viewer** provides a comprehensive set of **form field events** that allow developers to track user interactions, respond to form changes, and implement custom business logic. These events can be used for scenarios such as [validation](./form-validation), **UI updates**, **logging**, and **workflow automation**. 
+The Syncfusion **TypeScript PDF Viewer** exposes form field events that let developers react to user interactions, respond to form changes, and implement custom business logic. Use these events for validation, UI updates, logging, and workflow automation.
 
-Form field events are triggered during actions such as adding, selecting, modifying, moving, resizing, and removing form fields.
+Form field events are triggered when a field is added, selected, modified, moved, resized, or removed.
 
-## Supported PDF Form Field Events
+## Supported PDF form field events
 
-The following table lists all supported form field events and their descriptions:
+The following table lists the supported form field events and their descriptions:
 
-| Form Field events | Description |
+| Form field events | Description |
 |---|---|
 | [formFieldAdd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldAddArgs) | Triggered when a new form field is added, either through the Form Designer UI or programmatically. |
 | [formFieldClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldClickArgs) | Fired when a form field is clicked in the viewer. |
@@ -34,7 +34,7 @@ The following table lists all supported form field events and their descriptions
 | [formFieldUnselect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldUnselectArgs) | Fired when a previously selected form field is unselected. |
 | [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/validateFormFieldsArgs) | Fired when form field validation fails during print or download actions. |
 
-**Common Use Cases**
+**Common use cases**
 
 Form field events can be used to:
 - Validate form data before printing or downloading

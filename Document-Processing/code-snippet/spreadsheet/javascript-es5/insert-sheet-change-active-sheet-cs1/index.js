@@ -18,7 +18,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
 // Render initialized Spreadsheet.
 spreadsheet.appendTo('#spreadsheet');
 
-document.getElementById("insertSheet").onclick = () => {
+document.getElementById("insertSheet").onclick = function () {
     spreadsheet.insertSheet(
         [
             {
@@ -35,9 +35,8 @@ document.getElementById("insertSheet").onclick = () => {
         ]
     );
     // Use the timeout function to wait until the sheet is inserted.
-    setTimeout(() => {
+    setTimeout(function () {
         // Method for switching to a new sheet.
         spreadsheet.goTo('new_sheet!A1');
     })
 };
-

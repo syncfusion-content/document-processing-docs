@@ -35,37 +35,36 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 The following example illustrates how to add requestNavigate event for DocumentEditorContainer component.
 
-```ts
-import { DocumentEditor, SfdtExport, Selection, RequestNavigateEventArgs } from '@syncfusion/ej2-documenteditor';
+```js
 
-let hostUrl: string =
-  'https://document.syncfusion.com/web-services/word-editor/';
+var hostUrl = 'https://document.syncfusion.com/web-services/word-editor/';
 
-let container: DocumentEditorContainer = new DocumentEditorContainer({
-  enableToolbar: true,
-  height: '590px',
+var container = new ej.documenteditor.DocumentEditorContainer({
+    enableToolbar: true,
+    height: '590px'
 });
-DocumentEditorContainer.Inject(Toolbar);
+
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+
 container.serviceUrl = hostUrl + 'api/documenteditor/';
 container.appendTo('#container');
 
-// Add event listener for requestNavigate event to customize hyperlink navigation functionality
-container.documentEditor.requestNavigate = (args: RequestNavigateEventArgs) => {
-  if (args.linkType !== 'Bookmark') {
-    let link: string = args.navigationLink;
-    if (args.localReference.length > 0) {
-      link += '#' + args.localReference;
+container.documentEditor.requestNavigate = function (args) {
+    if (args.linkType !== 'Bookmark') {
+        var link = args.navigationLink;
+        if (args.localReference.length > 0) {
+            link += '#' + args.localReference;
+        }
+        window.open(link);
+        args.isHandled = true;
     }
-    //Navigate to the selected URL.
-    window.open(link);
-    args.isHandled = true;
-  }
 };
+
 ```
 
 If the selection is in hyperlink, trigger this event by calling ‘navigateHyperlink’ method of ‘Selection’ instance. Refer to the following example.
 
-```ts
+```js
 documenteditor.selection.navigateHyperlink();
 ```
 
@@ -73,7 +72,7 @@ documenteditor.selection.navigateHyperlink();
 
 Document Editor copies link text of a hyperlink field to the clipboard if the selection is in hyperlink. Refer to the following example.
 
-```ts
+```js
 documenteditor.selection.copyHyperlink();
 ```
 
@@ -100,11 +99,11 @@ Refer to the following example.
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/hyperlink-cs2" %}
 
-Also Document Editor expose API [`insertHyperlink()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#inserthyperlink)to insert hyperlink.
+Also Document Editor expose API [`insertHyperlink()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#inserthyperlink)to insert hyperlink.
 
 Refer to the following sample code.
 
-```ts
+```js
 documenteditor.editor.insertHyperlink('https://www.google.com', 'Google');
 ```
 
@@ -112,7 +111,7 @@ documenteditor.editor.insertHyperlink('https://www.google.com', 'Google');
 
 You can customize the screen tip text for the hyperlink by using below sample code.
 
-```ts
+```js
 documenteditor.editor.insertHyperlink('https://www.google.com', 'Google', '<<Screen tip text>>');
 ```
 
@@ -124,7 +123,7 @@ Screen tip text can be modified through UI by using the [Hyperlink dialog](./dia
 
 To remove link from hyperlink in the document, press Backspace key at the end of a hyperlink. By removing the link, it will be converted as plain text. You can use ‘removeHyperlink’ method of ‘Editor’ instance if the selection is in hyperlink. Refer to the following example.
 
-```ts
+```js
 documenteditor.editor.removeHyperlink();
 ```
 

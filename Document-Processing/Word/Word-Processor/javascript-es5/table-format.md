@@ -16,7 +16,7 @@ Document Editor customizes the formatting of table, or table cells such as table
 
 You can customize the cell margins by using the following sample code.
 
-```ts
+```js
 //To change the left margin
 documenteditor.selection.cellFormat.leftMargin = 5.4;
 //To change the right margin
@@ -29,7 +29,7 @@ documenteditor.selection.cellFormat.bottomMargin = 5.4;
 
 You can also define the default cell margins for a table. If the specific cell margin value is not defined explicitly in the cell formatting, the corresponding value will be retrieved from default cells margin of the table. Refer to the following sample code.
 
-```ts
+```js
 //To change the left margin
 documenteditor.selection.tableFormat.leftMargin = 5.4;
 //To change the right margin
@@ -44,13 +44,13 @@ documenteditor.selection.tableFormat.bottomMargin = 5.4;
 
 You can explicitly set the background color of selected cells using the following sample code.
 
-```ts
+```js
 documenteditor.selection.cellFormat.background = '#E0E0E0';
 ```
 
 Refer to the following sample code to customize the background color of the table.
 
-```ts
+```js
 documenteditor.selection.tableFormat.background = '#E0E0E0';
 ```
 
@@ -58,7 +58,7 @@ documenteditor.selection.tableFormat.background = '#E0E0E0';
 
 Refer to the following sample code to customize the spacing between each cell in a table.
 
-```ts
+```js
 documenteditor.selection.tableFormat.cellSpacing = 2;
 ```
 
@@ -66,7 +66,7 @@ documenteditor.selection.tableFormat.cellSpacing = 2;
 
 The content is aligned within a table cell to ‘Top’, ‘Center’, or ‘Bottom’. You can customize this property of selected cells. Refer to the following sample code.
 
-```ts
+```js
 documenteditor.selection.cellFormat.verticalAlignment = 'Bottom';
 ```
 
@@ -74,7 +74,7 @@ documenteditor.selection.cellFormat.verticalAlignment = 'Bottom';
 
 The tables are aligned in Document Editor to ‘Left’, ‘Right’, or ‘Center’. Refer to the following sample code.
 
-```ts
+```js
 documenteditor.selection.tableFormat.tableAlignment = 'Center';
 ```
 
@@ -82,37 +82,35 @@ documenteditor.selection.tableFormat.tableAlignment = 'Center';
 
 Set the desired width of table cells that will be considered when the table is layouted. Refer to the following sample code.
 
-```ts
-import { DocumentEditor, Editor, Selection, SfdtExport } from '@syncfusion/ej2-documenteditor';
-//Inject the required module
-DocumentEditor.Inject(Editor, Selection, SfdtExport);
-let documenteditor: DocumentEditor = new DocumentEditor({
+```js
+
+var documenteditor = new ej.documenteditor.DocumentEditor({
     isReadOnly: false,
     enableSelection: true,
     enableEditor: true,
     enableSfdtExport: true
 });
+
 documenteditor.appendTo('#DocumentEditor');
 documenteditor.editor.insertTable(2, 2);
 //To change the width of a cell
 documenteditor.selection.cellFormat.preferredWidthType = 'Point';
 documenteditor.selection.cellFormat.preferredWidth = 100;
+
 ```
 
 ## Table width
 
 You can set the desired width of a table in ‘Point ‘or ‘Percent’ type. Refer to the following sample code.
 
-```ts
-import { DocumentEditor, Editor, Selection, SfdtExport } from '@syncfusion/ej2-documenteditor';
-//Inject the required module
-DocumentEditor.Inject(Editor, Selection, SfdtExport);
-let documenteditor: DocumentEditor = new DocumentEditor({
+```js
+var documenteditor = new ej.documenteditor.DocumentEditor({
     isReadOnly: false,
     enableSelection: true,
     enableEditor: true,
     enableSfdtExport: true
 });
+
 documenteditor.appendTo('#DocumentEditor');
 documenteditor.editor.insertTable(2, 2);
 //To change the width of a table
@@ -124,24 +122,24 @@ documenteditor.selection.tableFormat.preferredWidth = 300;
 
 Document Editor exposes API to customize the borders for table cells by specifying the settings. Refer to the following sample code.
 
-```ts
-import { DocumentEditor, Editor, Selection, SfdtExport, BorderSettings } from '@syncfusion/ej2-documenteditor';
-//Inject the required module
-DocumentEditor.Inject(Editor, Selection, SfdtExport);
-let documenteditor: DocumentEditor = new DocumentEditor({
+```js
+
+var documenteditor = new ej.documenteditor.DocumentEditor({
     isReadOnly: false,
     enableSelection: true,
     enableEditor: true,
     enableSfdtExport: true
 });
+
 documenteditor.appendTo('#DocumentEditor');
 documenteditor.editor.insertTable(2, 2);
 //To apply border
-let borderSettings: BorderSettings = {
+var borderSettings = {
     type: 'AllBorders',
     lineWidth: 12
 };
 documenteditor.editor.applyBorders(borderSettings);
+
 ```
 
 Please check below gif which illustrates how to apply border for selected cells through properties pane options - border color, line size and no border:
@@ -156,28 +154,28 @@ Document Editor allows various row formatting such as height and repeat header.
 
 You can customize the height of a table row as ‘Auto’, ‘AtLeast’, or ‘Exactly’. Refer to the following sample code.
 
-```ts
-import { DocumentEditor, Editor, Selection, SfdtExport } from '@syncfusion/ej2-documenteditor';
-//Inject the required module
-DocumentEditor.Inject(Editor, Selection, SfdtExport);
-let documenteditor: DocumentEditor = new DocumentEditor({
+```js
+
+var documenteditor = new ej.documenteditor.DocumentEditor({
     isReadOnly: false,
     enableSelection: true,
     enableEditor: true,
     enableSfdtExport: true
 });
+
 documenteditor.appendTo('#DocumentEditor');
 documenteditor.editor.insertTable(2, 2);
 //To change row height of first row
 documenteditor.selection.rowFormat.heightType = 'Exactly';
 documenteditor.selection.rowFormat.height = 20;
+
 ```
 
 ### Header row
 
 The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at first row of the table, then you can define whether it as header row or not, using the following sample code.
 
-```ts
+```js
 documenteditor.selection.rowFormat.isHeader = true;
 ```
 
@@ -185,7 +183,7 @@ documenteditor.selection.rowFormat.isHeader = true;
 
 This property is valid if a table row does not fit in the current page during table layout. It defines whether a table row can be allowed to break. If the value is false, the entire row will be moved to the start of next page. You can modify this property for selected rows using the following sample code.
 
-```ts
+```js
 documenteditor.selection.rowFormat.allowRowBreakAcrossPages = false;
 ```
 
@@ -193,7 +191,7 @@ documenteditor.selection.rowFormat.allowRowBreakAcrossPages = false;
 
 Document Editor expose API to get or set the table title of the selected table. Refer to the following sample code to set title.
 
-```ts
+```js
 documenteditor.selection.tableFormat.title = 'Shipping Details';
 ```
 
@@ -201,7 +199,7 @@ documenteditor.selection.tableFormat.title = 'Shipping Details';
 
 Document Editor expose API to get or set the table description of the selected image. Refer to the following sample code to set description.
 
-```ts
+```js
 documenteditor.selection.tableFormat.description = 'Freight cost and shipping details';
 ```
 

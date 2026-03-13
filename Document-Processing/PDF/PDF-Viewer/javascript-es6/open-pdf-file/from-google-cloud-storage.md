@@ -17,7 +17,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 **Step 2:** Modify the PdfViewerController.cs file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above (NET 6 LTS or later recommended). You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -107,9 +107,9 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace the placeholder with the actual Google Cloud Storage bucket name.
+N> Replace the placeholder with the actual Google Cloud Storage bucket name. Store any configuration values and credentials securely (for example, using environment variables or a secrets manager).
 
-N> Replace path/to/service-account-key.json with the actual file path to your service account key JSON file.
+N> Replace `path/to/service-account-key.json` with the actual file path to your service account key JSON file when testing locally. For production, prefer Application Default Credentials or secure key management rather than embedding file paths in source code.
 
 **Step 3:** Configure the PDF Viewer component
 
@@ -131,6 +131,6 @@ viewer.load('PDF_Succinctly.pdf', null);
 
 ```
 
-N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your application to use the previous code example.
+N> Install the `Google.Cloud.Storage.V1` NuGet package in the server project to use the Google Cloud Storage client APIs shown above.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-cloud-storage)

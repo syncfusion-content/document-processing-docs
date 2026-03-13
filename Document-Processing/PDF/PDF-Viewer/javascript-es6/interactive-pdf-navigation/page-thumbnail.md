@@ -8,10 +8,10 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page Thumbnail navigation in TypeScript PDF Viewer control
+# Page thumbnail navigation in TypeScript PDF Viewer
 
-Thumbnails is the miniature representation of actual pages in PDF files. This feature displays thumbnails of the pages and allows navigation.
-You can enable/disable thumbnail navigation by using the following code snippet.,
+Thumbnails are miniature representations of pages in a PDF file. The viewer displays page thumbnails to provide quick visual navigation.
+Use the following code snippet to enable or disable the thumbnail pane.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -38,7 +38,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/thumbnail.png)
+![Page thumbnails pane in PDF Viewer](../images/thumbnail.png)
 
 
 ## See also

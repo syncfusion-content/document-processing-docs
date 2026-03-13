@@ -6,7 +6,7 @@ import { shipmentData } from './datasource';
 
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
-    
+
     function onCreated() {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
@@ -35,6 +35,45 @@ function App() {
         }
     }
 
+    // prepare comments as an array and bind by index in the JSX below
+    const cellComments = [
+        {
+            author: 'Julius Gorner', text: 'Confirm delivery status for Order 10248.', createdTime: 'November 18, 2025 at 3:00 PM',
+            isResolved: true, replies: [{ author: 'Cristi Espinos', text: 'Status verified as delivered.', createdTime: 'November 18, 2025 at 3:30 PM' },
+            { author: 'Julius Gorner', text: 'Acknowledged, thank you.', createdTime: 'November 18, 2025 at 3:45 PM' }]
+        },
+        {
+            author: 'Julius Gorner', text: 'Order 10250 is marked as Shipped, any update on current status?', createdTime: 'November 16, 2025 at 9:00 PM',
+            isResolved: false, replies: [{ author: 'Cristi Espinos', text: 'Shipment is in transit.', createdTime: 'November 17, 2025 at 3:30 PM' },
+            { author: 'Julius Gorner', text: 'Thanks for the update.', createdTime: 'November 17, 2025 at 3:45 PM' }]
+        },
+        {
+            author: 'Julius Gorner', text: 'Reason for cancellation of Order 10253?', createdTime: 'November 18, 2025 at 1:00 PM',
+            isResolved: false, replies: [{ author: 'Cristi Espinos', text: 'Customer requested cancellation.', createdTime: 'November 18, 2025 at 1:30 PM' },
+            { author: 'Julius Gorner', text: 'Understood, thanks.', createdTime: 'November 18, 2025 at 3:15 PM' }]
+        },
+        {
+            author: 'Julius Gorner', text: 'Pending status for Order 10254 - any progress?', createdTime: 'November 19, 2025 at 3:00 PM',
+            isResolved: false, replies: [{ author: 'Cristi Espinos', text: 'Awaiting customs clearance.', createdTime: 'November 19, 2025 at 3:30 PM' },
+            { author: 'Julius Gorner', text: 'Please keep me posted,', createdTime: 'November 19, 2025 at 3:45 PM' }]
+        },
+        {
+            author: 'Julius Gorner', text: 'Order 10256 shipped, tracking details shared?', createdTime: 'November 18, 2025 at 3:00 AM',
+            isResolved: false, replies: [{ author: 'Cristi Espinos', text: 'Tracking sent via email,', createdTime: 'November 18, 2025 at 3:30 AM' },
+            { author: 'Julius Gorner', text: 'Received, thank you,', createdTime: 'November 18, 2025 at 3:45 AM' }]
+        },
+        {
+            author: 'Julius Gorner', text: 'Delivered order 10257, confirm recipient name.', createdTime: 'November 18, 2025 at 2:00 PM',
+            isResolved: true, replies: [{ author: 'Cristi Espinos', text: 'Recipient verified as Michael Holz.', createdTime: 'November 18, 2025 at 2:30 PM' },
+            { author: 'Julius Gorner', text: 'Great, noted.', createdTime: 'November 18, 2025 at 2:45 PM' }]
+        },
+        {
+            author: 'Julius Gorner', text: 'Order 10258 cancelled, reason documented?', createdTime: 'November 18, 2025 at 12:00 PM',
+            isResolved: false, replies: [{ author: 'Cristi Espinos', text: 'Customer changed requirements', createdTime: 'November 18, 2025 at 12:30 PM' },
+            { author: 'Julius Gorner', text: 'Understood, thanks.', createdTime: 'November 18, 2025 at 12:45 PM' }]
+        }
+    ];
+
     return (
         <div>
             <SpreadsheetComponent ref={spreadsheetRef} showCommentsPane={true} openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' created={onCreated.bind(this)}>
@@ -46,65 +85,37 @@ function App() {
                         <RowsDirective>
                             <RowDirective index={1}>
                                 <CellsDirective>
-                                    <CellDirective index={4} comment={{
-                                        author: 'Julius Gorner', text: 'Confirm delivery status for Order 10248.', createdTime: 'November 18, 2025 at 3:00 PM',
-                                        isResolved: true, replies: [{ author: 'Cristi Espinos', text: 'Status verified as delivered.', createdTime: 'November 18, 2025 at 3:30 PM' },
-                                        { author: 'Julius Gorner', text: 'Acknowledged, thank you.', createdTime: 'November 18, 2025 at 3:45 PM' }]
-                                    }}></CellDirective>
+                                    <CellDirective index={4} comment={cellComments[0]}></CellDirective>
                                 </CellsDirective>
                             </RowDirective>
                             <RowDirective index={3}>
                                 <CellsDirective>
-                                    <CellDirective index={4} comment={{
-                                        author: 'Julius Gorner', text: 'Order 10250 is marked as Shipped, any update on current status?', createdTime: 'November 16, 2025 at 9:00 PM',
-                                        isResolved: false, replies: [{ author: 'Cristi Espinos', text: 'Shipment is in transit.', createdTime: 'November 17, 2025 at 3:30 PM' },
-                                        { author: 'Julius Gorner', text: 'Thanks for the update.', createdTime: 'November 17, 2025 at 3:45 PM' }]
-                                    }}></CellDirective>
+                                    <CellDirective index={4} comment={cellComments[1]}></CellDirective>
                                 </CellsDirective>
                             </RowDirective>
                             <RowDirective index={6}>
                                 <CellsDirective>
-                                    <CellDirective index={4} comment={{
-                                        author: 'Julius Gorner', text: 'Reason for cancellation of Order 10253?', createdTime: 'November 18, 2025 at 1:00 PM',
-                                        isResolved: false, replies: [{ author: 'Cristi Espinos', text: 'Customer requested cancellation.', createdTime: 'November 18, 2025 at 1:30 PM' },
-                                        { author: 'Julius Gorner', text: 'Understood, thanks.', createdTime: 'November 18, 2025 at 3:15 PM' }]
-                                    }}></CellDirective>
+                                    <CellDirective index={4} comment={cellComments[2]}></CellDirective>
                                 </CellsDirective>
                             </RowDirective>
                             <RowDirective index={7}>
                                 <CellsDirective>
-                                    <CellDirective index={4} comment={{
-                                        author: 'Julius Gorner', text: 'Pending status for Order 10254 - any progress?', createdTime: 'November 19, 2025 at 3:00 PM',
-                                        isResolved: false, replies: [{ author: 'Cristi Espinos', text: 'Awaiting customs clearance.', createdTime: 'November 19, 2025 at 3:30 PM' },
-                                        { author: 'Julius Gorner', text: 'Please keep me posted,', createdTime: 'November 19, 2025 at 3:45 PM' }]
-                                    }}></CellDirective>
+                                    <CellDirective index={4} comment={cellComments[3]}></CellDirective>
                                 </CellsDirective>
                             </RowDirective>
                             <RowDirective index={9}>
                                 <CellsDirective>
-                                    <CellDirective index={4} comment={{
-                                        author: 'Julius Gorner', text: 'Order 10256 shipped, tracking details shared?', createdTime: 'November 18, 2025 at 3:00 AM',
-                                        isResolved: false, replies: [{ author: 'Cristi Espinos', text: 'Tracking sent via email,', createdTime: 'November 18, 2025 at 3:30 AM' },
-                                        { author: 'Julius Gorner', text: 'Received, thank you,', createdTime: 'November 18, 2025 at 3:45 AM' }]
-                                    }}></CellDirective>
+                                    <CellDirective index={4} comment={cellComments[4]}></CellDirective>
                                 </CellsDirective>
                             </RowDirective>
                             <RowDirective index={10}>
                                 <CellsDirective>
-                                    <CellDirective index={4} comment={{
-                                        author: 'Julius Gorner', text: 'Delivered order 10257, confirm recipient name.', createdTime: 'November 18, 2025 at 2:00 PM',
-                                        isResolved: true, replies: [{ author: 'Cristi Espinos', text: 'Recipient verified as Michael Holz.', createdTime: 'November 18, 2025 at 2:30 PM' },
-                                        { author: 'Julius Gorner', text: 'Great, noted.', createdTime: 'November 18, 2025 at 2:45 PM' }]
-                                    }}></CellDirective>
+                                    <CellDirective index={4} comment={cellComments[5]}></CellDirective>
                                 </CellsDirective>
                             </RowDirective>
                             <RowDirective index={11}>
                                 <CellsDirective>
-                                    <CellDirective index={4} comment={{
-                                        author: 'Julius Gorner', text: 'Order 10258 cancelled, reason documented?', createdTime: 'November 18, 2025 at 12:00 PM',
-                                        isResolved: false, replies: [{ author: 'Cristi Espinos', text: 'Customer changed requirements', createdTime: 'November 18, 2025 at 12:30 PM' },
-                                        { author: 'Julius Gorner', text: 'Understood, thanks.', createdTime: 'November 18, 2025 at 12:45 PM' }]
-                                    }}></CellDirective>
+                                    <CellDirective index={4} comment={cellComments[6]}></CellDirective>
                                 </CellsDirective>
                             </RowDirective>
                         </RowsDirective>

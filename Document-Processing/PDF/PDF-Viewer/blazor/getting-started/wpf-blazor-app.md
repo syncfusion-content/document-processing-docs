@@ -9,7 +9,7 @@ documentation: ug
 
 # View PDF files using the PDF Viewer in a WPF Blazor Hybrid App
 
-This article explains how to add the Syncfusion&reg; Blazor PDF Viewer component to a WPF Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop application (WPF) that hosts Blazor UI inside a BlazorWebView control.
+This article shows how to add the Syncfusion&reg; Blazor PDF Viewer to a WPF Blazor Hybrid app using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop (WPF) application that hosts Blazor UI inside a BlazorWebView control.
 
 {% tabcontents %}
 
@@ -21,17 +21,18 @@ This article explains how to add the Syncfusion&reg; Blazor PDF Viewer component
 
 ## Create a new WPF app in Visual Studio
 
-Create a WPF application using Visual Studio 2022 with the WPF project template. The app will later host Blazor components via BlazorWebView. For reference, see [Microsoft Blazor tooling](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a WPF app using Visual Studio 2022 with the WPF project template. The app hosts Blazor components via BlazorWebView. For reference, see [Microsoft Blazor tooling](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Blazor PDF Viewer NuGet package in WPF App
 
-To add **Blazor PDF Viewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install
+## Install Blazor PDF Viewer NuGet packages
 
-* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
+To add the Blazor PDF Viewer component, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then install:
+
+* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 * [Microsoft.AspNetCore.Components.WebView.Wpf](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.WebView.Wpf)
 
-N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` updated to version `8.0.16`.
+N> Ensure the package `Microsoft.AspNetCore.Components.WebView.Wpf` is updated to version `8.0.16`.
 
 ![WPF Blazor App SfPdfViewer NuGet package reference](../images/wpf-sfpdfviewer-package.png)
 
@@ -45,7 +46,7 @@ N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` updated
 
 ## Create a new WPF app in Visual Studio Code
 
-Create a WPF desktop project (not a WPF Blazor HybridApp) using the .NET CLI in Visual Studio Code. This WPF project will host Blazor UI through BlazorWebView. For guidance, see [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a WPF desktop project (not a WPF Blazor HybridApp) using the .NET CLI in Visual Studio Code. This WPF project hosts Blazor UI through BlazorWebView. For guidance, see [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% tabs %}
 {% highlight c# tabtitle="WPF Blazor HybridApp" %}
@@ -61,7 +62,7 @@ Install the required NuGet packages in the WPF project that will host the Blazor
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure the current directory contains the WPF project `.csproj` file.
-* Run the following commands to install [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer), [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and [Microsoft.AspNetCore.Components.WebView.Wpf](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.WebView.Wpf). This adds the PDF Viewer, theme, and the BlazorWebView host control.
+* Run the following commands to install the required packages. This adds the PDF Viewer, theme, and the BlazorWebView host control.
 
 {% tabs %}
 
@@ -76,15 +77,15 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for the list of available packages and component details.
+N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for package details.
 
-N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` updated to version `8.0.16`.
+N> Ensure the package `Microsoft.AspNetCore.Components.WebView.Wpf` is updated to version `8.0.16`.
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Syncfusion Blazor service
 
 The WPF project must target Windows and enable WPF. A typical project file looks like the following.
 
@@ -134,9 +135,9 @@ using Syncfusion.Blazor;
 
 ## Create wwwroot folder and index.html file 
 
-* Create a new folder named wwwroot in the WPF project root.
+* Create a new folder named `wwwroot` in the WPF project root.
 
-* Inside wwwroot, create an index.html host page for the Blazor UI. This host page is required by BlazorWebView to initialize the Blazor runtime and load static assets (themes and scripts). A basic index.html might look like the following:
+* Inside `wwwroot`, create an `index.html` host page for the Blazor UI. This host page initializes the Blazor runtime and loads static assets (themes and scripts). A basic `index.html` might look like the following:
 
 
 {% tabs %} 
@@ -165,7 +166,7 @@ N> Ensure that the PDF Viewer static assets (themes and scripts) are loaded prop
 
 ## Adding Blazor PDF Viewer component
 
-Create a Razor component (for example, Main.razor) in the project and add the Syncfusion&reg; PDF Viewer component to it.
+Create a Razor component (for example, Main.razor) in the project and add the Syncfusion® PDF Viewer component to it.
 
 {% tabs %}
 {% highlight razor %}
@@ -209,13 +210,13 @@ N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %} 
 {% endtabs %}
 
-## Run the application
+## Run the app
 
-Run the WPF application. The Syncfusion&reg; Blazor PDF Viewer renders inside the WPF window.
+Run the WPF app. The Syncfusion® Blazor PDF Viewer renders inside the WPF window.
 
 ![WPF Blazor HybridApp SfPdfViewer rendering in browser](../images/blazor-hybrid-wpf-sfpdfviewer.png)
 
->[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Hybrid%20-%20WPF).
+N> [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Hybrid%20-%20WPF).
 
 ## See also
 

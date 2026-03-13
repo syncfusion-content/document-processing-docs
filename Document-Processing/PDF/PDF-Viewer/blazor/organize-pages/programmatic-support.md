@@ -7,11 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Programmatic Support for Organize Pages in Blazor PDF Viewer control
+# Programmatic support for Organize Pages
 
-The PDF Viewer provides comprehensive programmatic support for organizing pages, allowing you to integrate and manage PDF functionalities directly within your application. This section details the available APIs to enable, control, and interact with the page organization features.
+The PDF Viewer exposes APIs to programmatically rotate, move, insert, delete, duplicate, export, and import pages. The examples below show common calls; each operation updates the client-side view and is persisted when you save the document.
 
-## Rotate Pages
+## Rotate pages
 
 This method allows programmatic rotation of individual or multiple pages within the PDF document. The rotation is applied to the client-side representation and will be persisted upon saving the document. Provide the indexes of the page to rotate and rotation direction.
 
@@ -37,10 +37,9 @@ This method allows programmatic rotation of individual or multiple pages within 
 {% endhighlight %}
 {% endtabs %}
 
-`RotationDirection` represent the rotation direction of the page. It has two types
+`RotationDirection` values: `RotationDirection.Clockwise` and `RotationDirection.CounterClockwise`.
 
-- `RotationDirection.Clockwise` - It rotates the page in the clock wise direction.
-- `RotationDirection.CounterClockwise` - It rotates the page in the anti clock wise direction.
+### Rotate to a specific angle
 
 ### Rotate Pages with angle
 
@@ -68,14 +67,9 @@ This method allows programmatic rotation of individual or multiple pages within 
 {% endhighlight %}
 {% endtabs %}
 
-`PageRotation` represent the rotation angle of the page. It has four types
+`PageRotation` options: `RotateAngle0`, `RotateAngle90`, `RotateAngle180`, `RotateAngle270`.
 
-- `PageRotation.RotateAngle0` - It rotates the page in the 0 degree direction.
-- `PageRotation.RotateAngle90` - It rotates the page in the 90 degree direction.
-- `PageRotation.RotateAngle180` - It rotates the page in the 180 degree direction.
-- `PageRotation.RotateAngle270` - It rotates the page in the 270 degree direction.
-
-## Move Pages
+## Move pages
 
 This method allows asynchronously arranges the specified pages at the given target position. It rearrange the pages in the document based in the targeted index. Provide the indexes of the page to move and targeted index to move.
 
@@ -101,7 +95,7 @@ This method allows asynchronously arranges the specified pages at the given targ
 {% endhighlight %}
 {% endtabs %}
 
-## Insert Pages
+## Insert blank pages
 
 This method allows asynchronously inserts one or more blank pages at the specified index. It insert the blank pages in the document based in the targeted index. Provide the indexes to add blank pages and count of the pages need to be added.
 
@@ -127,7 +121,7 @@ This method allows asynchronously inserts one or more blank pages at the specifi
 {% endhighlight %}
 {% endtabs %}
 
-## Delete Pages
+## Delete pages
 
 This method allows asynchronously deletes the pages at the specified indices from the document. It delete the pages in the document based in the targeted index. Provide the indexes to delete pages of the document.
 
@@ -153,7 +147,7 @@ This method allows asynchronously deletes the pages at the specified indices fro
 {% endhighlight %}
 {% endtabs %}
 
-## Duplicate Pages
+## Duplicate pages
 
 This method allows asynchronously duplicates the pages at the specified indices from the document. It duplicates the pages in the document based in the targeted index. Provide the indexes to duplicates pages of the document.
 
@@ -179,7 +173,7 @@ This method allows asynchronously duplicates the pages at the specified indices 
 {% endhighlight %}
 {% endtabs %}
 
-## Export Pages
+## Export pages
 
 This method allows extracts the specified pages and downloads them as a separate PDF document. It extract the pages in the document based in the targeted index. Provide the indexes to extract pages of the document.
 
@@ -205,7 +199,7 @@ This method allows extracts the specified pages and downloads them as a separate
 {% endhighlight %}
 {% endtabs %}
 
-### Export Pages as Stream
+### Export pages as stream
 
 This method allows extracts the specified pages and returns the extracted PDF as a stream. It extract the pages in the document as index based in the targeted index. Provide the indexes to extract pages of the document as stream.
 
@@ -232,7 +226,7 @@ This method allows extracts the specified pages and returns the extracted PDF as
 {% endhighlight %}
 {% endtabs %}
 
-## Import Pages
+## Import pages
 
 This method allows inserts pages from another PDF document at the specified index. It insert the pages of the another document based in the targeted index. Provide the indexes to import pages of the another document, byte array of the imported document and password.
 
@@ -259,7 +253,7 @@ This method allows inserts pages from another PDF document at the specified inde
 {% endhighlight %}
 {% endtabs %}
 
-### Import Pages as Stream
+### Import pages as stream
 
 This method allows inserts pages from another PDF document as stream at the specified index. It insert the pages of the another document as stream based in the targeted index. Provide the indexes to import pages of the another document, stream of the imported document and password.
 

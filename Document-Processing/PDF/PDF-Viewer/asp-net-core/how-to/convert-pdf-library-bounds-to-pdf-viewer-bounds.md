@@ -9,21 +9,15 @@ documentation: ug
 
 # Convert PDF Library bounds to PDF Viewer bounds in ASP.NET Core
 
-When exporting annotations from the PDF Library, convert the bounds values into the PDF Viewer format to ensure accurate placement.
+Coordinate systems vary between the PDF Library and the PDF Viewer. When importing or exporting annotations, converting these bounds ensures that elements are rendered in the correct position relative to the document page.
 
 ## Steps to convert bounds values
 
-**Step 1:** Initialize the PdfViewer instance.
+**Step 1:** Initialize the PDF Viewer instance and configure the required services.
 
-Create an instance of the PdfViewer and configure it with the required services.
+**Step 2:** Listen for the `exportSuccess` event to intercept the exported annotation data.
 
-**Step 2:** Handle export success.
-
-Convert the exported blob URL to an object and then extract and convert the annotation bounds.
-
-**Step 3:** Convert the Blob URL to an object.
-
-Fetch the blob data and convert it into a JSON object that can be processed for annotation bounds.
+**Step 3:** Convert the blob URL into a JSON object and calculate the new bounds using the page height and resolution scaling:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Server-Backed" %}
@@ -108,8 +102,8 @@ Fetch the blob data and convert it into a JSON object that can be processed for 
 {% endhighlight %}
 {% endtabs %}
 
-## Conclusion
+## Performance considerations
 
-These steps convert PDF Library bounds values into PDF Viewer bounds values when exporting annotations as JSON, maintaining accurate annotation placement.
-  
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)
+These steps automatically transform PDF Library values into JSON-compatible PDF Viewer coordinates, maintaining layout integrity across different rendering environments. Ensure the `pageHeight` is retrieved dynamically for each page to account for varying document dimensions.
+
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

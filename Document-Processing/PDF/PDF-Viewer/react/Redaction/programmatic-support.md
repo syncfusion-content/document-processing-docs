@@ -9,714 +9,189 @@ documentation: ug
 
 # Programmatic support for redaction in React PDF Viewer
 
-The Syncfusion React PDF Viewer provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
+## Overview
 
-## Enable the redaction toolbar
+This guide shows how to add, edit, delete, mark full pages, and apply redaction annotations programmatically in the Syncfusion React PDF Viewer. 
 
-To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
+**Outcome**: You will have working code to control redactions from UI buttons and to set default redaction properties.
 
-The example below shows a PdfViewer with the redaction toolbar enabled:
+## Prerequisites
+
+- EJ2 React PDF Viewer installed and configured in your project. See [getting started guide](../getting-started).
+- A [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) or service endpoint if using remote viewer assets (examples below use Syncfusion CDN). Ensure browser access to the CDN.
+
+## Steps
+
+1. Enable the Redaction toolbar entry so the UI exposes redaction controls.
+2. Add redaction annotations programmatically with [`addAnnotation('Redaction', ...)`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addannotation).
+3. Delete annotations by id via `deleteAnnotationById(id)` or by selecting and deleting in the UI.
+4. Update existing redaction properties with [`editAnnotation(annotationObject)`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#editannotation).
+5. Mark entire pages using [`addPageRedactions([pageNumbers])`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#addpageredactions).
+6. Permanently apply redactions with [`redact()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#redact) (irreversible — back up originals).
+7. Configure [`redactionSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/redactionsettings) on the viewer for defaults used when creating redactions.
+
+## Quick example (individual operations)
+
+- To enable the Redaction toolbar item, add `RedactionEditTool` to [`toolbarSettings.toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems).
+
+- Add a redaction:
+
+```ts
+viewerRef.current.annotation.addAnnotation('Redaction', {
+  bound: { x: 200, y: 480, width: 150, height: 75 },
+  pageNumber: 1,
+  overlayText: 'Confidential',
+  fillColor: '#000000'
+} as RedactionSettings);
+```
+
+- Delete a redaction by id:
+
+```js
+const id = viewerRef.current.annotationCollection?.[0]?.annotationId;
+viewerRef.current.annotationModule.deleteAnnotationById(id);
+```
+
+- Edit a redaction (modify object then call edit):
+
+```ts
+const annot: any = viewerRef.current.annotationCollection.find(a => a.subject === 'Redaction');
+annot.overlayText = 'Edited';
+viewerRef.current.annotation.editAnnotation(annot);
+```
+
+- Mark full pages:
+
+```ts
+viewerRef.current.annotation.addPageRedactions([1,3]);
+```
+
+- Apply redactions (permanent):
+
+```ts
+viewerRef.current.annotation.redact();
+```
+
+## Complete example
+
+The following example shows a PdfViewer and buttons for Add / Delete / Edit / Page Redact / Apply Redaction and sets default redaction properties.
 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
-
-import * as ReactDOM from 'react-dom/client';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
-export function App() {
-  // includes RedactionEditTool
-  const toolbarSettings = {
-    toolbarItems: [
-      'OpenOption',
-      'UndoRedoTool',
-      'PageNavigationTool',
-      'MagnificationTool',
-      'PanTool',
-      'SelectionTool',
-      'CommentTool',
-      'SubmitForm',
-      'AnnotationEditTool',
-      'RedactionEditTool', // Redaction entry in the primary toolbar
-      'FormDesignerEditTool',
-      'SearchOption',
-      'PrintOption',
-      'DownloadOption'
-    ]
-  };
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent 
-        id="container" 
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl= "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        toolbarSettings={toolbarSettings}
-        style={{ 'height': '640px' }}>
-
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
-          Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-  
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add redaction annotations programmatically
-
-You can add redaction annotations to a PDF document using the `addAnnotation` method of the `annotation` module. You can listen to the `annotationAdd` event to track when annotations are added.
-
-The example below adds a redaction annotation at a fixed location on the first page.
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import './index.css';
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import { useRef, useEffect, RefObject } from 'react';
 import {
-  PdfViewerComponent,
-  LinkAnnotation,
-  BookmarkView,
-  Magnification,
-  ThumbnailView,
-  Toolbar,
-  Navigation,
-  Annotation,
-  TextSearch,
-  TextSelection,
-  Print,
-  FormFields,
-  FormDesigner,
-  Inject
+    PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+    BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields,
+    FormDesigner, Inject, ToolbarItem, RedactionSettings, ToolbarSettingsModel
 } from '@syncfusion/ej2-react-pdfviewer';
 
-function App() {
-  const viewerRef = React.useRef(null);
-
-  const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-
-  const toolbarSettings = {
-    toolbarItems: [
-      'OpenOption',
-      'UndoRedoTool',
-      'PageNavigationTool',
-      'MagnificationTool',
-      'PanTool',
-      'SelectionTool',
-      'CommentTool',
-      'SubmitForm',
-      'AnnotationEditTool',
-      'RedactionEditTool',
-      'FormDesignerEditTool',
-      'SearchOption',
-      'PrintOption',
-      'DownloadOption'
-    ]
-  };
-
-  const addRedaction = () => {
-    if (!viewerRef.current) return;
-    const viewer = viewerRef.current;
-    viewer.annotation.addAnnotation('Redaction', {
-      bound: { x: 200, y: 480, width: 150, height: 75 },
-      pageNumber: 1,
-      markerFillColor: '#0000FF',
-      markerBorderColor: 'white',
-      fillColor: 'red',
-      overlayText: 'Confidential',
-      fontColor: 'yellow',
-      fontFamily: 'Times New Roman',
-      fontSize: 8,
-      beforeRedactionsApplied: false
-    });
-  };
-
-  const onAnnotationAdd = (args) => {
-    console.log('Annotation added:', args);
-  };
-
-  return (
-    <div className="content-wrapper">
-      <div style={{ marginBottom: '8px', display: 'flex', gap: '8px', alignItems: 'center' }}>
-        <button id="addRedactAnnot" type="button" onClick={addRedaction}>
-          Add Redaction Annotation
-        </button>
-      </div>
-      <PdfViewerComponent
-        ref={viewerRef}
-        id="container"
-        documentPath={documentPath}
-        resourceUrl={resourceUrl}
-        toolbarSettings={toolbarSettings}
-        style={{ height: '640px', display: 'block' }}
-        annotationAdd={onAnnotationAdd}
-      >
-        <Inject
-          services={[
-            Toolbar,
-            Magnification,
-            Navigation,
-            Annotation,
-            LinkAnnotation,
-            BookmarkView,
-            ThumbnailView,
-            Print,
-            TextSelection,
-            TextSearch,
-            FormFields,
-            FormDesigner
-          ]}
-        />
-      </PdfViewerComponent>
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endhighlight %}
-{% endtabs %}
-
-## Delete redaction annotations programmatically
-
-Redaction annotations can be removed using the `deleteAnnotationById` event or by selecting and deleting them through code.
-
-This example removes a redaction annotation by id.
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import './index.css';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  BookmarkView,
-  ThumbnailView,
-  Print,
-  TextSelection,
-  Annotation,
-  TextSearch,
-  FormFields,
-  FormDesigner,
-  Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const viewerRef = React.useRef(null);
-
-  const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-
-  const toolbarSettings = {
-    toolbarItems: [
-      'OpenOption',
-      'UndoRedoTool',
-      'PageNavigationTool',
-      'MagnificationTool',
-      'PanTool',
-      'SelectionTool',
-      'CommentTool',
-      'SubmitForm',
-      'AnnotationEditTool',
-      'RedactionEditTool',
-      'FormDesignerEditTool',
-      'SearchOption',
-      'PrintOption',
-      'DownloadOption'
-    ]
-  };
-
-  const deleteAnnotationById = () => {
-    if (!viewerRef.current) return;
-    const id = (viewerRef.current).annotationCollection?.[0]?.annotationId;
-    if (id) {
-      viewerRef.current.annotationModule.deleteAnnotationById(id);
-    }
-  };
-
-  return (
-    <div>
-      <div style={{ marginBottom: '8px' }}>
-        <button onClick={deleteAnnotationById}>Delete Annotation By Id</button>
-      </div>
-      <PdfViewerComponent
-        ref={viewerRef}
-        id="container"
-        documentPath={documentPath}
-        resourceUrl={resourceUrl}
-        toolbarSettings={toolbarSettings}
-        style={{ height: '640px', display: 'block' }}
-      >
-        <Inject services={[
-          Toolbar,
-          Magnification,
-          Navigation,
-          Annotation,
-          LinkAnnotation,
-          BookmarkView,
-          ThumbnailView,
-          Print,
-          TextSelection,
-          TextSearch,
-          FormFields,
-          FormDesigner
-        ]} />
-      </PdfViewerComponent>
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endhighlight %}
-{% endtabs %}
-
-
-Annotations can also be removed by selecting them in the UI and pressing the **Delete** key.
-
-## Update redaction annotation properties programmatically
-
-You can update properties of an existing redaction annotation using the `editAnnotation` API. For example, to change overlay text or fill color:
-
-The example below updates properties of existing redaction annotations.
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import './index.css';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  BookmarkView,
-  ThumbnailView,
-  Print,
-  TextSelection,
-  Annotation,
-  TextSearch,
-  FormFields,
-  FormDesigner,
-  Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const viewerRef = React.useRef(null);
-
-  const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-
-  const toolbarSettings = {
-    toolbarItems: [
-      'OpenOption',
-      'UndoRedoTool',
-      'PageNavigationTool',
-      'MagnificationTool',
-      'PanTool',
-      'SelectionTool',
-      'CommentTool',
-      'SubmitForm',
-      'AnnotationEditTool',
-      'RedactionEditTool',
-      'FormDesignerEditTool',
-      'SearchOption',
-      'PrintOption',
-      'DownloadOption'
-    ]
-  };
-
-  const editRedactAnnotation = () => {
-    if (!viewerRef.current) return;
-    const collection = viewerRef.current.annotationCollection || [];
-    for (let i = 0; i < collection.length; i++) {
-      if (collection[i].subject === 'Redaction') {
-        collection[i].overlayText = 'EditedAnnotation';
-        collection[i].markerFillColor = '#22FF00';
-        collection[i].markerBorderColor = '#000000';
-        collection[i].isRepeat = true;
-        collection[i].fillColor = '#F8F8F8';
-        collection[i].fontColor = '#333333';
-        collection[i].fontSize = 14;
-        collection[i].fontFamily = 'Symbol';
-        collection[i].textAlign = 'Right';
-        collection[i].beforeRedactionsApplied = false;
-        viewerRef.current.annotation.editAnnotation(collection[i]);
-      }
-    }
-  };
-
-  return (
-    <div>
-      <div style={{ marginBottom: '8px', display: 'flex', gap: '8px' }}>
-        <button id="editRedactAnnotation" onClick={editRedactAnnotation}>
-          Edit Redact Annotation
-        </button>
-      </div>
-      <PdfViewerComponent
-        ref={viewerRef}
-        id="container"
-        documentPath={documentPath}
-        resourceUrl={resourceUrl}
-        toolbarSettings={toolbarSettings}
-        style={{ height: '640px', display: 'block' }}
-      >
-        <Inject services={[
-          Toolbar,
-          Magnification,
-          Navigation,
-          Annotation,
-          LinkAnnotation,
-          BookmarkView,
-          ThumbnailView,
-          Print,
-          TextSelection,
-          TextSearch,
-          FormFields,
-          FormDesigner
-        ]} />
-      </PdfViewerComponent>
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add page redactions programmatically
-
-Entire pages can be marked for redaction using the `addPageRedactions` method:
-
-This example marks full pages for redaction.
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import './index.css';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  BookmarkView,
-  ThumbnailView,
-  Print,
-  TextSelection,
-  Annotation,
-  TextSearch,
-  FormFields,
-  FormDesigner,
-  Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const viewerRef = React.useRef(null);
-
-  const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-
-  const toolbarSettings = {
-    toolbarItems: [
-      'OpenOption',
-      'UndoRedoTool',
-      'PageNavigationTool',
-      'MagnificationTool',
-      'PanTool',
-      'SelectionTool',
-      'CommentTool',
-      'SubmitForm',
-      'AnnotationEditTool',
-      'RedactionEditTool',
-      'FormDesignerEditTool',
-      'SearchOption',
-      'PrintOption',
-      'DownloadOption'
-    ]
-  };
-
-  const addPageRedactions = () => {
-    if (!viewerRef.current) return;
-    viewerRef.current.annotation.addPageRedactions([1, 3, 5, 7]);
-  };
-
-  return (
-    <div>
-      <div style={{ marginBottom: '8px', display: 'flex', gap: '8px', alignItems: 'center' }}>
-        <button id="addPageRedactions" type="button" onClick={addPageRedactions}>
-          Add Page Redaction
-        </button>
-      </div>
-      <PdfViewerComponent
-        ref={viewerRef}
-        id="container"
-        documentPath={documentPath}
-        resourceUrl={resourceUrl}
-        toolbarSettings={toolbarSettings}
-        style={{ height: '640px', display: 'block' }}
-      >
-        <Inject services={[
-          Toolbar,
-          Magnification,
-          Navigation,
-          Annotation,
-          LinkAnnotation,
-          BookmarkView,
-          ThumbnailView,
-          Print,
-          TextSelection,
-          TextSearch,
-          FormFields,
-          FormDesigner
-        ]} />
-      </PdfViewerComponent>
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endhighlight %}
-{% endtabs %}
-
-## Apply redaction programmatically
-
-Once annotations are added, you can permanently apply them to the document using the `redact` method:
-
-This example applies all pending redactions, permanently modifying the document.
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import './index.css';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  BookmarkView,
-  ThumbnailView,
-  Print,
-  TextSelection,
-  Annotation,
-  TextSearch,
-  FormFields,
-  FormDesigner,
-  Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const viewerRef = React.useRef(null);
-
-  const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-
-  const toolbarSettings = {
-    toolbarItems: [
-      'OpenOption',
-      'UndoRedoTool',
-      'PageNavigationTool',
-      'MagnificationTool',
-      'PanTool',
-      'SelectionTool',
-      'CommentTool',
-      'SubmitForm',
-      'AnnotationEditTool',
-      'RedactionEditTool',
-      'FormDesignerEditTool',
-      'SearchOption',
-      'PrintOption',
-      'DownloadOption'
-    ]
-  };
-
-  const applyRedaction = () => {
-    if (!viewerRef.current) return;
-    viewerRef.current.annotation.redact();
-  };
-
-  return (
-    <div>
-      <div style={{ marginBottom: '8px', display: 'flex', gap: '8px', alignItems: 'center' }}>
-        <button id="redact" type="button" onClick={applyRedaction}>
-          Apply Redaction
-        </button>
-      </div>
-      <PdfViewerComponent
-        ref={viewerRef}
-        id="container"
-        documentPath={documentPath}
-        resourceUrl={resourceUrl}
-        toolbarSettings={toolbarSettings}
-        style={{ height: '640px', display: 'block' }}
-      >
-        <Inject services={[
-          Toolbar,
-          Magnification,
-          Navigation,
-          Annotation,
-          LinkAnnotation,
-          BookmarkView,
-          ThumbnailView,
-          Print,
-          TextSelection,
-          TextSearch,
-          FormFields,
-          FormDesigner
-        ]} />
-      </PdfViewerComponent>
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Applying redaction is irreversible. Create a backup of the original document before applying redactions; once applied, the original content cannot be recovered.
-
-## Configure default redaction annotation properties
-
-You can configure default properties for redaction annotations (such as fill color, overlay text, and font) when adding them programmatically:
-
-The example below sets default redaction properties during viewer initialization.
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import './index.css';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  BookmarkView,
-  ThumbnailView,
-  Print,
-  TextSelection,
-  Annotation,
-  TextSearch,
-  FormFields,
-  FormDesigner,
-  Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const viewerRef = React.useRef(null);
-
-  const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-
-  const toolbarSettings = {
-    toolbarItems: [
-      'OpenOption',
-      'UndoRedoTool',
-      'PageNavigationTool',
-      'MagnificationTool',
-      'PanTool',
-      'SelectionTool',
-      'CommentTool',
-      'SubmitForm',
-      'AnnotationEditTool',
-      'RedactionEditTool',
-      'FormDesignerEditTool',
-      'SearchOption',
-      'PrintOption',
-      'DownloadOption'
-    ]
-  };
-
-  React.useEffect(() => {
-    if (!viewerRef.current) return;
-    viewerRef.current.redactionSettings = {
-      overlayText: 'Confidential',
-      markerFillColor: '#FF0000',
-      markerBorderColor: '#000000',
-      isRepeat: false,
-      fillColor: '#F8F8F8',
-      fontColor: '#333333',
-      fontSize: 14,
-      fontFamily: 'Symbol',
-      textAlign: 'Right'
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent> = useRef(null);
+    const documentPath: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+    const resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+    const toolbarSettings: ToolbarSettingsModel = {
+        toolbarItems: [
+            'OpenOption', 'UndoRedoTool', 'PageNavigationTool', 'MagnificationTool', 'PanTool',
+            'SelectionTool', 'CommentTool', 'AnnotationEditTool', 'RedactionEditTool', 'SearchOption',
+            'PrintOption', 'DownloadOption'
+        ] as ToolbarItem[]
     };
-  }, []);
 
-  return (
-    <div>
-      <PdfViewerComponent
-        ref={viewerRef}
-        id="container"
-        documentPath={documentPath}
-        resourceUrl={resourceUrl}
-        toolbarSettings={toolbarSettings}
-        style={{ height: '640px', display: 'block' }}
-      >
-        <Inject services={[
-          Toolbar,
-          Magnification,
-          Navigation,
-          Annotation,
-          LinkAnnotation,
-          BookmarkView,
-          ThumbnailView,
-          Print,
-          TextSelection,
-          TextSearch,
-          FormFields,
-          FormDesigner
-        ]} />
-      </PdfViewerComponent>
-    </div>
-  );
+    useEffect(() => {
+        if (!viewerRef.current) return;
+        // Set default redaction properties
+        viewerRef.current.redactionSettings = {
+            overlayText: 'Confidential',
+            markerFillColor: '#FF0000',
+            markerBorderColor: '#000000',
+            isRepeat: false,
+            fillColor: '#000000',
+            fontColor: '#FFFFFF',
+            fontSize: 12,
+            fontFamily: 'Helvetica',
+            textAlignment: 'Center'
+        };
+    }, []);
+
+    const addRedaction = (): void => {
+        const viewer = viewerRef.current as PdfViewerComponent;
+        if (!viewer) return;
+        viewer.annotation.addAnnotation('Redaction', {
+            bound: { x: 150, y: 400, width: 200, height: 40 },
+            pageNumber: 1,
+            overlayText: 'Confidential',
+            fillColor: '#000000',
+            fontColor: '#FFFFFF'
+        } as RedactionSettings);
+    };
+
+    const deleteFirstAnnotation = (): void => {
+        const viewer = viewerRef.current;
+        const id = viewer?.annotationCollection?.[0]?.annotationId;
+        if (id) viewer.annotationModule.deleteAnnotationById(id);
+    };
+
+    const editRedaction = (): void => {
+        const viewer = viewerRef.current;
+        const collection = viewer?.annotationCollection || [];
+        const annot = collection.find(a => a.subject === 'Redaction');
+        if (annot) {
+            annot.overlayText = 'Edited';
+            annot.fillColor = '#333333';
+            annot.fontSize = 14;
+            viewer.annotation.editAnnotation(annot);
+        }
+    };
+
+    const addPageRedactions = (): void => {
+        viewerRef.current.annotation.addPageRedactions([1]);
+    };
+
+    const applyRedactions = (): void => {
+        // WARNING: irreversible
+        viewerRef.current.annotation.redact();
+    };
+
+    return (
+        <div>
+            <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
+                <button onClick={addRedaction}>Add Redaction</button>
+                <button onClick={deleteFirstAnnotation}>Delete First Annotation</button>
+                <button onClick={editRedaction}>Edit Redaction</button>
+                <button onClick={addPageRedactions}>Mark Page Redaction</button>
+                <button onClick={applyRedactions}>Apply Redactions (Permanent)</button>
+            </div>
+
+            <PdfViewerComponent
+                id="container"
+                ref={viewerRef}
+                documentPath={documentPath}
+                resourceUrl={resourceUrl}
+                toolbarSettings={toolbarSettings}
+                style={{ height: '640px' }}>
+                <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+            </PdfViewerComponent>
+        </div>
+    );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
+**Expected result**: The viewer loads the sample PDF. Clicking the buttons will add, delete, edit, mark pages for redaction, or permanently apply redactions.
 
-## Redaction property panel
+## Troubleshooting
 
-The redaction property panel allows users to update annotation properties through the UI. Programmatically, you can invoke the property panel by selecting an annotation and calling the relevant APIs. Properties such as overlay text, font style, and fill color can be updated directly in the panel.
+- No viewer assets / missing icons: confirm [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) is reachable from the browser and points to a compatible ej2-pdfviewer-lib version.
+- `viewerRef.current` is undefined: ensure the `PdfViewerComponent` renders before calling APIs (wrap API calls in event handlers or use `useEffect` after mount).
+- Applying redactions fails: ensure the viewer has finished loading the document and that any server-side redaction workflows (if used) are available. Always backup originals before applying.
 
-![Redaction Property Panel](../redaction/redaction-annotations-images/redaction-property-panel-icon.png)
+## Related topics
 
-## See also
-
-* [Overview of Redaction](./overview)
-* [Redaction UI interactions](./ui-interactions)
-* [Redaction Toolbar](./toolbar)
-* [Redaction in Mobile view](./mobile-view)
-* [Search Text and Redact](./search-redact)
+- [Overview of Redaction](./overview)
+- [Redaction UI interactions](./ui-interactions)
+- [Redaction Toolbar](./toolbar)
+- [Redaction in Mobile view](./mobile-view)
+- [Search Text and Redact](./search-redact)

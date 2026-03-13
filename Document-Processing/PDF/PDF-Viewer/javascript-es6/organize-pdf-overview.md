@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Organize pages in TypeScript PDF Viewer
 
-The TypeScript PDF Viewer component provides an Organize Pages panel that helps you prepare documents before sharing them. Use it to tidy scanned files, move pages into the right order, and duplicate important content without leaving the viewer.
+The TypeScript PDF Viewer component provides an Organize Pages panel for preparing documents before sharing. Use it to tidy scanned files, move pages into the correct order, and duplicate content without leaving the viewer.
 
 To open the Organize Pages panel, load a document, ensure that the Organize Pages toolbar item is enabled, and choose **Organize Pages** from the left vertical toolbar. The document must allow page-level edits; otherwise, the toolbar item is hidden.
 
