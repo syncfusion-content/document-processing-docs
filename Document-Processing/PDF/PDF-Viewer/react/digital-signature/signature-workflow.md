@@ -109,18 +109,6 @@ const signedBytes = await document.save('signed.pdf');
 document.destroy();
 ```
 
-4. **Finalize by flattening**
-Set `PdfDocument.flatten = true` to make annotations and form fields permanent. (The Viewer UI itself does not flatten; use the PDF Library in your pipeline.) 
-
-```ts
-import { PdfDocument } from '@syncfusion/ej2-pdf';
-
-const doc = new PdfDocument(signedBytes);
-doc.flatten = true; // flattens annotations and form fields
-const finalBytes = await doc.save('final.pdf');
-doc.destroy();
-```
-
 N> For sequential or multi‑user flows and digital signature appearances, see these live demos: [eSigning PDF Form](https://document.syncfusion.com/demos/pdf-viewer/react/#/bootstrap5/pdfviewer/esigning-pdf-forms), [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/react/#/bootstrap5/pdfviewer/invisible-digital-signature) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/react/#/bootstrap5/pdfviewer/visible-digital-signature) in the React Sample Browser.
 
 ## How‑to guides
@@ -161,9 +149,9 @@ Use the **JavaScript PDF Library** to apply a cryptographic signature on a field
 
 N> To preview visual differences, check the [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/react/#/bootstrap5/pdfviewer/invisible-digital-signature) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/react/#/bootstrap5/pdfviewer/visible-digital-signature) in our Sample Browser. Digital Signature samples in the React sample browser.
 
-### Finalize a signed document (flatten/lock)
+### Finalize a signed document (lock)
 
-After collecting all signatures and passing validations, **flatten** the PDF (and optionally restrict permissions) to prevent further edits. Use `PdfDocument.flatten` when saving the file. 
+After collecting all signatures and passing validations, **[Lock](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature)** the PDF (and optionally restrict permissions) to prevent further edits.
 
 ## Signature Workflow Best Practices (Explanation)
 
@@ -199,15 +187,15 @@ To prevent rework, validate the PDF before enabling signatures:
   ![Reviewer using highlights and comments](../images/highlight-comments.png)
 - **Approver** – Ensures feedback is addressed and signs when finalized.  
   ![Signature Image](../images/handwritten-sign.png)
-- **Final Approver** – Verifies requirements, then [flattens](../document-handling/preprocess-pdf#flatten-form-fields--annotations) or [Lock Signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature) to make signatures permanent and may restrict further edits.
+- **Final Approver** – Verifies requirements, then [Lock Signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature) to make signatures permanent and may restrict further edits.
 
-N> **Implementation tip:** Use the PDF Library’s `flatten` when saving to make annotations and form fields permanent after the last signature. 
+N> **Implementation tip:** Use the PDF Library’s `flatten` when saving to make annotations and form fields permanent before the last signature. 
 
 ### Multi‑signer patterns and iterative approvals
 - Route the document through a defined **sequence of signers**.  
 - Use [comments and replies](../annotation/comments#add-comments-and-replies) for feedback without altering document content.  
 - For external participants, share only annotation data (XFDF/JSON) when appropriate instead of the full PDF.  
-- After all signatures, **flatten** to lock the file. 
+- After all signatures, **[Lock](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature)** to lock the file. 
 
 N> Refer to [eSigning PDF Forms](https://document.syncfusion.com/demos/pdf-viewer/react/#/bootstrap5/pdfviewer/esigning-pdf-forms) sample that shows two signers filling only their designated fields and finalizing the document.
 
@@ -217,7 +205,7 @@ N> Refer to [eSigning PDF Forms](https://document.syncfusion.com/demos/pdf-viewe
 - **Secure endpoints:** Protect PDF endpoints with token‑based access and authorization checks.  
 - **Audit and traceability:** Log signature placements, edits, and finalization events for compliance and audits.  
 - **Data protection:** Avoid storing sensitive PDFs on client devices; prefer secure server storage and transmission.  
-- **Finalize:** After collecting all signatures, flatten or lock to prevent edits. 
+- **Finalize:** After collecting all signatures, lock to prevent edits.
 
 ## See also
 - [Create and Modify Annotation](../annotation/create-modify-annotation)
