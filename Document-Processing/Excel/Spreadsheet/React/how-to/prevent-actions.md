@@ -19,17 +19,30 @@ To achieve this requirement, the following events can be used:
 *   [`cellEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#celledit) → To prevent editing for specific cells.
 *   [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actionbegin)→ To prevent spreadsheet actions such as cut, paste, autofill, formatting, etc.
 
-**Step 1: Prevent editing for specific cells**
+##Step 1: Prevent editing for specific cells##
 
 To prevent editing for specific cells, use the [`cellEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#celledit) event, which triggers whenever a cell enters edit mode. By checking the column index and setting `args.cancel = true`, you can prevent editing for those columns. This ensures that users cannot modify the cell content in those columns.
 
-**Step 2: Prevent specific spreadsheet actions**
+```jsx
+// Triggers when cell editing starts in the spreadsheet.
+    const cellEdit = (args: any) =>{
+        var addressRange = getCellIndexes(args.address.split('!')[1]);
+        // preventing cellEditing from the readOnly columns
+        if (readOnlyColumns.includes(addressRange[1])) {
+            args.cancel = true;
+        }
+    }
+
+    <SpreadsheetComponent ref={spreadsheetRef} cellEdit={cellEdit}>
+```
+
+##Step 2: Prevent specific spreadsheet actions##
 
 To prevent specific action after preventing the cell editing, you need to use the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actionbegin) event. This event triggers before any action starts (such as cut, paste, autofill, formatting, etc.). In this event:
 
 *   Fetch the target address based on the type of action being performed using `args.action` property.
 *   Verify if the target range includes the restricted columns.
-*   If the column is in the restricted list, cancel the action by setting `args.cancel = true`.
+*   If the column is in the restricted list, cancel the action by setting `cancel` property to `true`.
 
 This approach ensures that spreadsheet actions such as cut, paste, autofill, formatting, validation, and conditional formatting are prevented for specific cells without protecting the sheet or making the cells read-only.
 
@@ -51,4 +64,5 @@ The following example demonstrates how to prevent actions such as cut, paste, au
 
 ## See Also
 
-* [Protection](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/protect-sheet)
+* [Protection](../protect-sheet) 
+* [Events](../events)
