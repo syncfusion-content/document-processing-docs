@@ -19,8 +19,8 @@ You can insert a hyperlink in a worksheet cell for quick access to related infor
 **User Interface**:
 
 In the active spreadsheet, click the cell where you want to create a hyperlink. Insert hyperlink can be done by any of the following ways:
-* Select the INSERT tab in the Ribbon toolbar and choose the `Link` item.
-* Right-click the cell and then click Hyperlink item in the context menu, or you can press Ctrl+K.
+* Select the **INSERT** tab in the Ribbon toolbar and choose the `Link` item.
+* Right-click the cell and then click Hyperlink item in the context menu, or you can press `Ctrl + K`.
 * Use the [`addHyperlink()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#addhyperlink) method programmatically.
 
 ## Edit Hyperlink
@@ -35,7 +35,7 @@ You can update an existing hyperlink in your workbook by changing either:
 
 In the active spreadsheet, Select the cell that contains the hyperlink that you want to change. Editing the hyperlink while opening the dialog can be done by any one of the following ways:
 
-* Select the INSERT tab in the Ribbon toolbar and choose the `Link` item.
+* Select the **INSERT** tab in the Ribbon toolbar and choose the `Link` item.
 * Right-click the cell and then click Edit Hyperlink item in the context menu, or you can press Ctrl+K.
 
 In the Edit Link dialog box, make the changes that you want, and click UPDATE.

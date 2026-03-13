@@ -191,7 +191,7 @@ The **Clear** feature allows you to remove cell contents (formulas and data) and
 
 You can apply clear feature by using one of the following ways,
 
-* Select the clear icon in the Ribbon toolbar under the Home Tab.
+* Select the clear icon in the Ribbon toolbar under the `Home` Tab.
 * Using the [`clear()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method to clear the values.
 
 Clear has the following types in the spreadsheet,
