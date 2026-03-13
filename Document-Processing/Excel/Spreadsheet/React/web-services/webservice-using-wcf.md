@@ -168,7 +168,7 @@ When working with large Excel files, configure file size limits to prevent serve
 </configuration>
 ```
 
-# Configure CORS (Cross-Origin Resource Sharing)
+## Configure CORS (Cross-Origin Resource Sharing)
 
 If your client and WCF service are hosted on different domains or ports, you must enable CORS to allow cross-origin requests from browsers. In WCF, this can be achieved by adding custom headers using a message inspector and endpoint behavior.
 
