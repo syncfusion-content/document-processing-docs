@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to deploy spreadsheet server to AWS EKS using Docker in React Spreadsheet component | Syncfusion
+title: Deploy spreadsheet server to AWS EKS using Docker in React Spreadsheet component | Syncfusion
 description: Learn how to deploy the Syncfusion Spreadsheet server Docker image to AWS EKS and connect it to the React Spreadsheet component.
 control: How to deploy spreadsheet server to AWS EKS using Docker
 platform: document-processing
@@ -75,7 +75,7 @@ spec:
 N> If you build a custom image, push it to Docker Hub or AWS ECR and update `image:` field accordingly.
 
 **Step 3:** Expose the Service
-Create a s`preadsheet-service.yaml` to define a Service of type `LoadBalancer` that forwards traffic to the container. Customize the external port (5000) as needed; the internal `targetPort` should remain 8080 because the container listens on that port.
+Create a `spreadsheet-service.yaml` to define a Service of type `LoadBalancer` that forwards traffic to the container. Customize the external port (5000) as needed; the internal `targetPort` should remain 8080 because the container listens on that port.
 
 ```yaml
 
@@ -116,7 +116,7 @@ kubectl get svc spreadsheet-server-service
 
 **Step 5:** Configure the React client
 
-Start by following the steps provided in this [link](../getting-started.md) to create a simple Document Editor sample in React. This will give you a basic setup of the Document Editor component. Once the Service reports an external address (e.g., a1b2c3d4e5f6-1234567890.us-east-1.elb.amazonaws.com), update the [`openUrl`](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#openurl) and [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#saveurl) properties of your React Spreadsheet component:
+Start by following the steps provided in this [link](../getting-started.md) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component. Once the Service reports an external address (e.g., a1b2c3d4e5f6-1234567890.us-east-1.elb.amazonaws.com), update the [`openUrl`](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#openurl) and [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#saveurl) properties of your React Spreadsheet component:
 
 ```jsx
 
