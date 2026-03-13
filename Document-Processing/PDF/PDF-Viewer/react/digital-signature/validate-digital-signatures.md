@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Validate Digital Signatures in React PDF Viewer | Syncfusion
-description: Learn how to validate digital signatures applied to PDF forms using the Syncfusion JavaScript PDF Library with the React PDF Viewer. Covers integrity, certificate trust, timestamp, and revocation checks.
+description: Learn how to validate digital signatures applied to PDF forms using the Syncfusion JavaScript PDF Library with the React PDF Viewer.
 platform: document-processing
 control: PdfViewer
 documentation: ug
@@ -30,8 +30,6 @@ A **digital signature** is a cryptographic proof embedded in the PDF that allows
 2. Use **JavaScript PDF Library** to **open the PDF bytes** and **validate the signature**.
 3. Display the validation outcome (valid/invalid/unknown) in your React UI (badge, toast, side panel).
 
-![Validation status badge in toolbar](../forms/images/signature-validation-badge.png)
-
  ## How‑to: Validate a digital signature (Client‑side)
 
  Cryptographic signature validation is performed by the Syncfusion PDF Library. Please refer to the PDF Library documentation for detailed guidance and sample code. The following pages cover validation concepts, APIs, and full examples:
@@ -54,7 +52,7 @@ After using the PDF Library to obtain validation results (integrity, trust, time
 
 - **Single‑save rule:** Do **all edits first**, then **sign**, and **do not modify** the PDF after signing; modifying bytes after signing will invalidate the signature.
 - **Establish trust:** For demos, a self‑signed PFX will appear *Unknown*. For production, use a certificate that chains to a trusted CA or import the signer/issuer to the verifier’s trust store.
-- **Prefer timestamping (TSA):** A trusted timestamp improves long‑term validation even if the signer’s cert later expires or is revoked.
+- **Prefer timestamp (TSA):** A trusted timestamp improves long‑term validation even if the signer’s cert later expires or is revoked.
 - **Surface status in UI:** Show a clear badge (Valid/Invalid/Unknown) near the signature field or toolbar, and offer a *View details* panel with integrity, trust, and timestamp info. 
 
 ## Troubleshooting
@@ -65,6 +63,6 @@ After using the PDF Library to obtain validation results (integrity, trust, time
 - **No revocation info** – Ensure OCSP/CRL endpoints are reachable by the validator or embed revocation data if supported.
 
 ## See also
-- [Add Digital Signature](/document-processing/pdf/pdf-viewer/react/forms/signature/add-digital-signature)
+- [Add Digital Signature](./add-digital-signature-react)
 - [Customize Signature Appearance](./customize-signature-appearance)
 - [Signature workflows](./signature-workflow)
