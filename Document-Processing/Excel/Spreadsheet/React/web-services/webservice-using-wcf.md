@@ -32,7 +32,7 @@ However, these demo services are intended only for **demonstration purposes** an
 
 To create a new WCF Service Library project, follow the steps in the link below:
 
-[Tutorial: Get started with WCF application | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/framework/wcf/how-to-create-a-wcf-service)
+[Tutorial: Host and run a basic Windows Communication Foundation service - WCF | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/framework/wcf/how-to-host-and-run-a-basic-wcf-service)
 
 ## Dependencies
 
@@ -168,10 +168,76 @@ When working with large Excel files, configure file size limits to prevent serve
 </configuration>
 ```
 
-## Configure CORS (Cross-Origin Resource Sharing)
+# Configure CORS (Cross-Origin Resource Sharing)
 
-If your client and WCF service are hosted on different domains or ports, enable CORS. For WCF, you may need to add custom headers in the response or use a message inspector. See:
+If your client and WCF service are hosted on different domains or ports, you must enable CORS to allow cross-origin requests from browsers. In WCF, this can be achieved by adding custom headers using a message inspector and endpoint behavior.
 
-[Enable CORS in WCF](https://learn.microsoft.com/en-us/answers/questions/116964/how-to-enable-cors-in-wcf-service)
+### Steps to Enable CORS in WCF
 
-This guide helps you set up a WCF web service for spreadsheet open and save operations, similar to the ASP.NET Core approach, but using WCF for legacy or enterprise scenarios.
+**1. Create a CORS Message Inspector:**
+```csharp
+using System.ServiceModel.Dispatcher;
+using System.ServiceModel.Channels;
+using System.ServiceModel.Description;
+using System.ServiceModel;
+
+public class CorsEnabledMessageInspector : IDispatchMessageInspector
+{
+	public object AfterReceiveRequest(ref Message request, IClientChannel channel, InstanceContext instanceContext)
+	{
+		return null;
+	}
+
+	public void BeforeSendReply(ref Message reply, object correlationState)
+	{
+		var httpHeader = reply.Properties[HttpResponseMessageProperty.Name] as HttpResponseMessageProperty;
+		if (httpHeader == null)
+		{
+			httpHeader = new HttpResponseMessageProperty();
+			reply.Properties.Add(HttpResponseMessageProperty.Name, httpHeader);
+		}
+		httpHeader.Headers.Add("Access-Control-Allow-Origin", "*");
+		httpHeader.Headers.Add("Access-Control-Allow-Methods", "POST, OPTIONS");
+		httpHeader.Headers.Add("Access-Control-Allow-Headers", "Content-Type, Accept");
+	}
+}
+```
+
+**2. Create a CORS Endpoint Behavior:**
+```csharp
+public class CorsEnabledBehavior : Attribute, IEndpointBehavior
+{
+	public void AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) { }
+	public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime) { }
+	public void ApplyDispatchBehavior(ServiceEndpoint endpoint, EndpointDispatcher endpointDispatcher)
+	{
+		endpointDispatcher.DispatchRuntime.MessageInspectors.Add(new CorsEnabledMessageInspector());
+	}
+	public void Validate(ServiceEndpoint endpoint) { }
+}
+```
+
+**3. Apply the Behavior to Your Service:**
+Add the `[CorsEnabledBehavior]` attribute to your service class:
+```csharp
+[CorsEnabledBehavior]
+public class SpreadsheetService : ISpreadsheetService
+{
+	// ...existing code...
+}
+```
+
+**4. (Optional) Handle Preflight (OPTIONS) Requests:**
+If your client sends OPTIONS requests, add a handler in your service contract and implementation:
+```csharp
+[OperationContract]
+[WebInvoke(Method = "OPTIONS", UriTemplate = "*")]
+void Options();
+
+public void Options()
+{
+	// No implementation needed; CORS headers are added by the inspector.
+}
+```
+
+With these additions, your WCF service will support CORS for cross-origin requests, allowing your React Spreadsheet client to communicate with the service without CORS errors.
