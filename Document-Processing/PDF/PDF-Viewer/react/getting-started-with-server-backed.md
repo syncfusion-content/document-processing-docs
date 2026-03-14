@@ -173,10 +173,10 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 Output will be appears as follows.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+{% highlight js tabtitle="index.jsx" %}
 {% include code-snippet/pdfviewer/react/base-cs1/app/index.jsx %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="index.tsx" %}
 {% include code-snippet/pdfviewer/react/base-cs1/app/index.tsx %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
