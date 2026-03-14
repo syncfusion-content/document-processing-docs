@@ -1,6 +1,6 @@
 ---
 title: Convert PPTX to Image in Azure Functions Flex Consumption | Syncfusion
-description: Convert PPTX to PNG in Azure Functions Flex Consumption using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
+description: Convert PPTX to Image in Azure Functions Flex Consumption using .NET Core PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
 documentation: UG
@@ -94,7 +94,7 @@ public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "
         }
     }
     /// <summary>
-    /// Event handler for font substitution during PDF conversion
+    /// Event handler for font substitution during Image conversion
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="args"></param>
@@ -143,7 +143,7 @@ Step 14: Publish has been succeed.
 
 Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **PowerPoint Presentation to image conversion** using the template PowerPoint document). You will get the output **image** as follows.
 
-![PowerPoint to Image in Azure Functions v4](Azure-Images/Functions-v1/Output_PowerPoint_Presentation_to-Image.png)
+![PowerPoint to Image in Azure Functions v4](Azure-Images/Functions-Flex-Consumption/Output_PowerPoint_Presentation_to-Image.png)
 
 ## Steps to post the request to Azure Functions
 
