@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open PDF Files in Angular PDF Viewer Component
 
-You might need to open and view the PDF files from various location. In this section, you can find the information about how to open PDF files from URL, database, local file system, and as base64 string.
+This article explains how to open and display PDF files in the Syncfusion Angular PDF Viewer from various sources. In this section, you can find the information about how to open PDF files from URL, database, local file system, and as base64 string.
 
 ## Opening a PDF from URL
 

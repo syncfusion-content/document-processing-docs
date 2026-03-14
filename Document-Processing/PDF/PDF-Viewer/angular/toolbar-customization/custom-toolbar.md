@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Custom Toolbar in Angular PDF Viewer
 
-The PDF Viewer provides APIs for user interaction options available in its built-in toolbar. Using these, you can create your own custom user interface for toolbar actions at the application level by hiding the default toolbar.
+The PDF Viewer provides APIs for the user interaction options available in its built-in toolbar. Using these APIs, a custom application-level toolbar can be created by hiding the default toolbar and adding Syncfusion EJ2 toolbar components.
 
 Follow these steps to create a custom toolbar for the PDF Viewer:
 
 **Step 1: Create a simple PDF Viewer sample.**
 
-Follow the steps provided in the [getting started](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started) guide to create a basic PDF Viewer sample.
+Create a simple PDF Viewer sample by following the [getting started](https://ej2.syncfusion.com/angular/documentation/pdfviewer/getting-started) guide.
 
 **Step 2: Add HTML elements for the custom toolbar.**
 
@@ -79,7 +79,7 @@ Hide the default toolbar using `enableToolbar` and `enableThumbnail` properties:
 {% highlight ts tabtitle="Standalone" %}
 {% raw %}
 
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="container"
   [enableToolbar]="false"
@@ -94,7 +94,7 @@ Hide the default toolbar using `enableToolbar` and `enableThumbnail` properties:
 {% highlight ts tabtitle="Server-Backed" %}
 {% raw %}
 
-<!-- app.component.html -->
+<!-- app.html -->
 <ejs-pdfviewer
   id="container"
   [enableToolbar]="false"
@@ -295,7 +295,7 @@ Add Syncfusion EJ2 Toolbar components to perform magnification actions in the PD
 
 >The icons are embedded in the font file used in the previous code snippet.
 
-**Step 7:** Add the following code snippet in `app.component.ts` file for performing a user interaction in PDF Viewer in code behind.
+**Step 7:** Add the following code snippet in `app.ts` file for performing a user interaction in PDF Viewer in code behind.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

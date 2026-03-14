@@ -116,7 +116,7 @@ Below is an example demonstrating how to add an ink annotation to a PDF document
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type of Ink
         annotation.Type = AnnotationType.Ink;
-        // Set the PageNumber starts from 0. So, if set 0 it repersent the page 1.
+        // Page numbers start from 0. So, if set to 0 it represents page 1.
         annotation.PageNumber = 0;
 
         // Bound of the Ink annotation

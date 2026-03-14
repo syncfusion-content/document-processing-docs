@@ -1,11 +1,11 @@
 ﻿---
 layout: post
-title: Localization in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about to localize the static text used in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control to other languages .
+title: Localization in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to localize the static text in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control to other languages.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Localization in .NET MAUI PDF Viewer (SfPdfViewer)

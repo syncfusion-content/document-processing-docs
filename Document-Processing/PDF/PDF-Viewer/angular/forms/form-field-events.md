@@ -46,7 +46,7 @@ Form field events can be used to:
 
 ## Handle PDF Form Field Events
 
-You can wire up form field events on the PDF Viewer instance to execute custom logic when specific actions occur.
+Form field events can be wired on the PDF Viewer instance to execute custom logic when specific actions occur.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

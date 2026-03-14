@@ -9,17 +9,17 @@ documentation: ug
 
 # Overview of Forms in Angular PDF Viewer
 
-The Syncfusion PDF Viewer delivers a complete, easy-to-use PDF forms experience. You can read, fill, add, edit, and delete form fields directly within your PDF documents. These actions are supported through both the intuitive user interface and powerful programmatic APIs.
+The Syncfusion PDF Viewer provides a full-featured PDF forms experience for Angular applications. Users can read, fill, add, edit, and remove form fields in PDF documents using the viewer's UI or programmatic APIs.
 
-The viewer also includes smooth import and export support for form data, making integration effortless. Developers benefit from extensive API control, while end users enjoy a clean and simple interface designed for a seamless and stress-free form-filling experience.
+Flexible import and export of form data simplifies integration in automated workflows or user-driven scenarios. APIs offer developers control over form behavior while the viewer presents a concise, accessible interface for end users.
 
 ## Filling PDF Forms
 
-Experience effortless PDF form filling through a clean, intuitive UI or automated workflows using powerful APIs. Flexible form data import and export support ensures smooth and efficient operations when working with PDF forms.
+Use the viewer UI or APIs to fill PDF forms, import/export form data, or integrate automated form workflows.
 
 See the [Filling PDF Forms](./form-filling) page for full details.
 
-Use the following code-snippet to enable form-filling by injecting `FormFields` Module.
+Use the following code-snippet to enable form-filling by injecting the `FormFields` module.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -78,7 +78,7 @@ export class AppComponent implements OnInit {
 
 ## Form Designer
 
-A built in Form Designer lets you quickly add, edit, move, and delete form fields in the PDF documents. This viewer allows you to design fillable PDF forms interactively either using the built-in form designer tools or building your own customized form designer tools.
+A built-in Form Designer enables creating, positioning, and editing form fields directly on the PDF page. Use the built-in designer tools for common tasks or extend them to build a customized form-design workflow.
 
 See the [Form Designer](./form-designer) page for full details.
 
@@ -145,11 +145,11 @@ Create and customize interactive fields directly on the PDF page.
 
 ## Supported form field types
 
-- [Textbox](../forms/manage-form-fields/create-form-fields#add-textbox)
-- [Password](../forms/manage-form-fields/create-form-fields#add-password)
-- [CheckBox](../forms/manage-form-fields/create-form-fields#add-checkbox)
-- [RadioButton](../forms/manage-form-fields/create-form-fields#add-radiobutton)
-- [ListBox](../forms/manage-form-fields/create-form-fields#add-listbox)
-- [DropDown](../forms/manage-form-fields/create-form-fields#add-dropdown)
-- [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
-- [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
+- [Textbox](./manage-form-fields/create-form-fields#add-textbox)
+- [Password](./manage-form-fields/create-form-fields#add-password)
+- [CheckBox](./manage-form-fields/create-form-fields#add-checkbox)
+- [RadioButton](./manage-form-fields/create-form-fields#add-radiobutton)
+- [ListBox](./manage-form-fields/create-form-fields#add-listbox)
+- [DropDown](./manage-form-fields/create-form-fields#add-dropdown)
+- [Signature field](./manage-form-fields/create-form-fields#add-signature-field)
+- [Initial field](./manage-form-fields/create-form-fields#add-initial-field)

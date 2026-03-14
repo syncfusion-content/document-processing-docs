@@ -11,7 +11,7 @@ documentation: ug
 
 Content Security Policy (CSP) is a browser security mechanism that mitigates attacks such as cross-site scripting (XSS) and data injection by restricting the allowed sources for loaded content.
 
-When enforcing a strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html), some features are blocked by default. To use the Blazor SfPdfViewer under strict CSP, include the following directives in the CSP meta tag.
+When enforcing a strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html), some browser features are blocked by default. To use the Blazor `SfPdfViewer` with a strict CSP, add the directives below to your CSP meta tag.
 
 * The SfPdfViewer renders calculated inline styles and Base64 font icons, which are blocked by strict CSP. Allow these by adding the [`style-src 'self' 'unsafe-inline' blob:`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src 'self' data:`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives.
 

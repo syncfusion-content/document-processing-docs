@@ -1,6 +1,6 @@
 ---
-title: Convert Excel to PDF Using Syncfusion Web API
-description: Convert Excel files to highquality PDFs using Syncfusion Web API. Preserve formulas, charts, formatting, and layout with fast, reliable serverside conversion. 
+title: Convert Excel to PDF Using Syncfusion Web API 
+description: Convert Excel files to highquality PDFs using Syncfusion Web API. Preserve formulas, charts, formatting, and layout with fast, reliable serverside conversion.
 platform: document-processing
 control: general
 documentation: UG

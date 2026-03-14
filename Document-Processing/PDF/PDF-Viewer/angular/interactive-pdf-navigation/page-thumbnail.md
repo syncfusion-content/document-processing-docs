@@ -8,10 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page Thumbnail navigation in Angular PDF Viewer control
+# Page thumbnail navigation in Angular PDF Viewer
 
-Thumbnails is the miniature representation of actual pages in PDF files. This feature displays thumbnails of the pages and allows navigation.
-You can enable/disable thumbnail navigation by using the following code snippet.,
+Thumbnails are miniature representations of PDF pages that let users navigate visually. This feature displays page thumbnails and supports quick navigation between pages.
+
+Enable or disable thumbnail navigation using the examples below.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -79,7 +80,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/thumbnail.png)
+![Page thumbnails panel in PDF Viewer showing page previews](../images/thumbnail.png)
 
 
 ## See also

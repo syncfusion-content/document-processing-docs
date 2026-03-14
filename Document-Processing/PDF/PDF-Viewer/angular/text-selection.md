@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Text selection in Angular PDF Viewer control
 
-The TextSelection module lets users highlight and copy text from the loaded PDF. Selection is enabled by default and can be configured or monitored programmatically to match application workflows.
+The TextSelection module enables users to highlight and copy text from a loaded PDF. Selection is enabled by default and can be configured or monitored programmatically to match application workflows. Use text selection to support copy workflows, contextual actions, or accessibility scenarios.
 
 ## Enable or disable text selection
 
@@ -107,13 +107,13 @@ export class AppComponent {
 
 ## Text selection events
 
-Monitor user interaction with selection events to coordinate downstream actions such as showing tooltips, enabling context menus, or storing analytics.
+Monitor user interactions with selection events to coordinate downstream actions such as showing tooltips, enabling context menus, or recording analytics.
 
 ### textSelectionStart
 
-The [textSelectionStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textselectionstartevent) event fires when a user begins selecting text. Use it to reset temporary UI, pause conflicting shortcuts, or capture the starting context.
+The [textSelectionStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textselectionstartevent) event fires when a user begins selecting text. Use it to reset temporary UI state, pause conflicting shortcuts, or capture the starting context.
 
-- Event arguments: `TextSelectionStartEventArgs` supplies details such as `pageNumber`, `bounds`, and `selectionBehavior`.
+- Event arguments: `TextSelectionStartEventArgs` provides details such as `pageNumber`, `bounds`, and `selectionBehavior`.
 
 ```ts
 import { Component, OnInit } from '@angular/core';
@@ -144,7 +144,7 @@ export class AppComponent {
 
 ### textSelectionEnd
 
-The [textSelectionEnd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textselectionendevent) event triggers after the selection is finalized. Use it to access the selected text, toggle contextual commands, or store telemetry.
+The [textSelectionEnd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#textselectionendevent) event triggers after the selection is finalized. Use it to access the selected text, toggle contextual commands, or record telemetry.
 
 - Event arguments: `TextSelectionEndEventArgs` includes `pageNumber`, `bounds`, `selectedText`, and `isSelectionCopied`.
 
@@ -182,7 +182,6 @@ export class AppComponent {
   }
 }
 ```
-
 
 ## See also
 

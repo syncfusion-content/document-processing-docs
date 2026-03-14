@@ -7,9 +7,9 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Open PDF files in SfPdfViewer for Blazor from various storage location
+# Open PDF files in SfPdfViewer for Blazor from various storage locations
 
-This article explains how to open and display PDF files in the SfPdfViewer component from multiple sources, including URL, cloud storage, database, local file system, Base64 string, and stream. The DocumentPath parameter accepts either a direct URL to the PDF file or a data URL that contains Base64-encoded PDF content.
+This article explains how to open and display PDF files in the SfPdfViewer component from multiple sources, including URL, cloud storage, database, local file system, Base64 string, and stream. The `DocumentPath` parameter accepts either a direct URL to the PDF file or a data URL that contains Base64-encoded PDF content.
 
 ## Opening a PDF from remote URL
 
@@ -30,9 +30,9 @@ If a PDF file is hosted on the web, it can be opened in the viewer by providing 
 
 ```
 
-## Opening a PDF from Cloud
+## Opening a PDF from cloud storage
 
-Open PDF files stored in cloud storage by converting the file to a Base64 string and assigning it to DocumentPath.
+Open PDF files stored in cloud storage by converting the file to a Base64 string and assigning it to `DocumentPath`.
 
 The following code example shows how to open and load a PDF file stored in Azure Blob Storage.
 

@@ -8,32 +8,23 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract Text Method in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Control
+## Extract text method in the PDF Viewer
 
-The `extractText` method of the Syncfusion PDF Viewer control enables text extraction from one or more pages in a PDF document. This method is useful for retrieving the text content along with its associated data, such as the bounds of each text element.
+The `extractText` method retrieves text content and, optionally, positional data for elements on one or more pages. It returns a Promise that resolves to an object containing extracted `textData` (detailed items with bounds) and `pageText` (concatenated plain text).
 
-### extractText Method
-The extractText method retrieves text data from the specified page(s) of a PDF document. It can extract text from one page, a range of pages, or even provide detailed text data, depending on the options specified.
+**Parameters overview:**
 
-#### Parameters:
-**startIndex:** The starting page index for text extraction (0-based index).
+- `startIndex` — Starting page index (0-based).
+- `endIndex` or options — Either the ending page index for a range extraction, or an options object specifying extraction criteria for a single page.
+- `options` (optional) — Extraction options such as `TextOnly` or `TextAndBounds` to control whether bounds are included.
 
-**endIndex Or isOptions:** This can either be the ending page index for the text extraction (for extracting from multiple pages) or an option specifying text extraction criteria for a single page.
+**Returned object shape (example):**
 
-**options (optional):** Specifies additional options, such as extracting plain text `TextOnly` or more detailed text data `TextAndBounds`. You can specify various options for text extraction. These options determine whether you want to extract plain text, text with bounds, or detailed text data.
-
-***TextOnly:*** Extracts only the plain text content without bounds or additional information.
-
-***TextAndBounds:*** Extracts text content along with its bounds (coordinates) within the PDF.
-
-#### Returns:
-The method returns a Promise that resolves to an object containing two properties:
-
-**textData:** An array of TextDataSettingsModel objects, each representing the details of the extracted text (including bounds, page text, etc.).
-
-**pageText:** A concatenated string of plain text extracted from the specified page(s).
+- `textData` — Array of objects describing extracted text items, including bounds and page-level text.
+- `pageText` — Concatenated plain text for the specified page(s).
 
 ### Usage of extractText in Syncfusion PDF Viewer Control
+
 Here is an example that demonstrates how to use the extractText method:
 
 ```ts

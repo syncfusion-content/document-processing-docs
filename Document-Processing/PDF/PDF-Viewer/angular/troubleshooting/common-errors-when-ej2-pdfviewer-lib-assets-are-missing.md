@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Uncaught DOMException: Failed to execute 'importScripts' on 'WorkerGlobalScope'
 
-Another error that can occur when setting up the `ej2-pdfviewer-library` without the necessary assets is the **Uncaught DOMException: Failed to execute 'importScripts' on 'WorkerGlobalScope'**. This error typically arises when a web worker attempts to load a script (e.g., `pdfium.js` or `pdfium.wasm`) and fails to do so.
+An error that can occur when the `ej2-pdfviewer-lib` assets are missing is the **Uncaught DOMException: Failed to execute 'importScripts' on 'WorkerGlobalScope'**. This occurs when the PDF viewer's web worker cannot load required files such as `pdfium.js` or `pdfium.wasm`.
 
-To troubleshoot and resolve this error, consider the following steps:
+To troubleshoot and resolve this error, follow these steps:
 
-1. **Check Asset Availability:** Ensure that the required assets, specifically `pdfium.js` and `pdfium.wasm`, are present in the correct locations within your project. Confirm that they are accessible and have been copied correctly.
+1. **Check asset availability:** Verify that the required files (for example, `pdfium.js` and `pdfium.wasm`) exist in a public assets folder that the application serves (commonly `src/assets/ej2-pdfviewer-lib`). Confirm the files are present in the build output and that the request paths used by the viewer match their deployed locations.
 
-2. **Network and CORS:** Verify that there are no network-related issues preventing the web worker from fetching the assets. Also, address any CORS-related problems, especially if the assets are hosted on a different origin.
+2. **Network and CORS:** Use the browser developer tools to confirm the asset requests return HTTP 200. If the assets are hosted on a different origin, configure appropriate CORS response headers (for example, `Access-Control-Allow-Origin`) or host the assets on the same origin to avoid cross-origin worker load failures.
 
-N>  If ej2-pdfviewer-lib folder is not available in the 'src/assets', copy the contents of the ej2-pdfviewer-lib folder from ./node_modules/@syncfusion/ej2-pdfviewer/dist to the src/assets directory using the command:
+N> If the `ej2-pdfviewer-lib` folder is not available in `src/assets`, copy the contents from `./node_modules/@syncfusion/ej2-pdfviewer/dist` into `src/assets/ej2-pdfviewer-lib` using the command:
 ```bash
 cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib  src/assets/ej2-pdfviewer-lib
 ```

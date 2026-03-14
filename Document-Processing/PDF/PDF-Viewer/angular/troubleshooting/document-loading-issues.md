@@ -9,9 +9,9 @@ documentation: ug
 
 # Document Loading Issues in Version 23.1 or Newer
 
-If you're experiencing problems with your document not rendering in the viewer, especially when using version 23.1 or a newer version, follow these troubleshooting steps to resolve the issue:
+If a document does not render in the viewer when using version 23.1 or later, use the following troubleshooting checklist to identify and resolve the issue.
 
-* **Check for `viewer.dataBind()` Requirement**: Ensure that you have called `viewer.dataBind()` as required in version 23.1 or newer. This explicit call is Essential<sup style="font-size:70%">&reg;</sup> for initializing data binding and document rendering correctly. It is must to call the dataBind() method before load.
+* **Check `viewer.dataBind()` requirement:** Versions 23.1 and later require an explicit call to `viewer.dataBind()` after setting viewer properties and before calling `load()` so data binding and rendering initialize correctly.
 
 ```typescript
 <button (click)="documentLoad()">Load</button>
@@ -26,18 +26,18 @@ function documentLoad () {
     }
 ```
 
-* **Verify Document Source**: Confirm that the document source or URL you're trying to display is valid and accessible. Incorrect URLs or document paths can lead to loading issues.
+* **Verify document source:** Confirm the document URL or local path is correct and reachable. Open the document URL directly in a browser to validate accessibility.
 
-* **Network Connectivity**: Ensure that your application has a stable network connection. Document rendering may fail if the viewer can't fetch the document due to network issues.
+* **Network connectivity:** Ensure the application can access remote resources. Intermittent or blocked network requests will prevent the viewer from fetching the document.
 
-* **Console Errors**: Use your browser's developer tools to check for any error messages or warnings in the console. These messages can provide insights into what's causing the document not to load.
+* **Inspect console and network logs:** Use browser developer tools to check for errors, failed network requests (including worker script loads), and HTTP status codes that indicate resource or permission problems.
 
-* **Loading Sequence**: Make sure that you're calling `viewer.dataBind()` and initiating document loading in the correct sequence. The viewer should be properly initialized before attempting to load a document.
+* **Loading sequence and Angular lifecycle:** Ensure `viewer.dataBind()` is called after the viewer instance is ready. For Angular applications, prefer the idiomatic approach using `@ViewChild` to access the component instance and invoke methods in appropriate lifecycle hooks (for example, `ngAfterViewInit`) rather than relying on direct DOM access.
 
-* **Update Viewer**: Ensure that you're using the latest version of the viewer library or framework. Sometimes, issues related to document loading are resolved in newer releases.
+* **Update the viewer:** Verify the project uses a compatible and up-to-date viewer package. Review release notes for version-specific changes that affect initialization or API behavior.
 
-* **Cross-Origin Resource Sharing (CORS)**: If you're loading documents from a different domain, ensure that CORS headers are correctly configured to allow cross-origin requests.
+* **Cross-Origin Resource Sharing (CORS):** If documents or worker assets are hosted on a different origin, configure server CORS headers (for example, `Access-Control-Allow-Origin`) or host assets on the same origin to allow worker scripts and document requests.
 
-* **Content Security Policies (CSP)**: Check if your application's Content Security Policy allows the loading of external resources, as this can affect document loading. Refer [here](https://ej2.syncfusion.com/javascript/documentation/common/troubleshoot/content-security-policy) to troubleshoot.
+* **Content Security Policy (CSP):** Confirm the application's CSP permits loading external resources the viewer requires. See the troubleshooting guide for [CSP](https://ej2.syncfusion.com/javascript/documentation/common/troubleshoot/content-security-policy)
 
 By following these troubleshooting steps, you should be able to address issues related to document loading in version 23.1 or newer, ensuring that your documents render correctly in the viewer.

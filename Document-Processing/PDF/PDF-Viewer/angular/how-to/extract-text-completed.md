@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract Text using extractTextCompleted Event in the Syncfusion PDF Viewer
+## Extract text using the extractTextCompleted event in the PDF Viewer
 
-The PDF Viewer library allows you to extract the text from a page along with the bounds. Text extraction can be done using the [**isExtractText**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#isextracttext) property and [**extractTextCompleted**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#extracttextcompleted) event.
+The PDF Viewer can extract page text along with bounding information. Enable text extraction using the `isExtractText` property and handle the `extractTextCompleted` event to receive extracted text and bounds for the document.
 
 The following steps are used to extract the text from the page.
 
@@ -20,25 +20,26 @@ The following steps are used to extract the text from the page.
 
 ```html
 <ejs-pdfviewer #pdfViewer id="pdfViewer"
-               [serviceUrl]='service'
-               [documentPath]='document'
-               (extractTextCompleted)='extractTextCompleted($event)'
-               [isExtractText]=true
-               style="height:640px;display:block">
+                             [serviceUrl]='service'
+                             [documentPath]='document'
+                             (extractTextCompleted)='extractTextCompleted($event)'
+                             [isExtractText]=true
+                             style="height:640px;display:block">
 </ejs-pdfviewer>
 ```
 
 ```typescript
 public extractTextCompleted(e: ExtractTextCompletedEventArgs): void {
-// Extract the Complete text of load document
-console.log(e);
-console.log(e.documentTextCollection[1]);
-// Extract the Text data.
-console.log(e.documentTextCollection[1][1].TextData);
-// Extract Text in the Page.
-console.log(e.documentTextCollection[1][1].PageText);
-// Extract Text along with Bounds
-console.log(e.documentTextCollection[1][1].TextData[0].Bounds);
+    // The event argument contains a documentTextCollection structure with extracted text and bounds
+    console.log(e);
+    // Inspect the documentTextCollection to find page-level and element-level text data
+    console.log(e.documentTextCollection[1]);
+    // Example: access TextData for an element
+    console.log(e.documentTextCollection[1][1].TextData);
+    // Example: access the page-level text
+    console.log(e.documentTextCollection[1][1].PageText);
+    // Example: access bounds for the first extracted text item
+    console.log(e.documentTextCollection[1][1].TextData[0].Bounds);
 }
 ```
 

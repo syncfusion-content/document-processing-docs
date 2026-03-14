@@ -9,7 +9,7 @@ documentation: ug
 
 # Group form fields in Angular PDF Viewer
 
-The Syncfusion **Angular PDF Viewer** allows you to **group multiple form fields into a single logical field** by assigning the **same Name** to them. Grouped form fields share their values and states automatically based on the field type. You can group form fields using the **Form Designer UI** or **programmatically using APIs**, making it easy to keep related fields synchronized across the PDF document.
+The Syncfusion **Angular PDF Viewer** allows you to **group multiple form fields into a single logical field** by assigning the **same Name** to them. Grouped form fields share their values and states automatically based on the field type. Group form fields using the **Form Designer UI** or programmatically via APIs to keep related fields synchronized across a PDF document.
 
 This page covers:
 - [How form field grouping works](#how-grouping-works)
@@ -21,7 +21,7 @@ This page covers:
 
 ## How grouping works
 
-In a PDF form, multiple PDF Form Fields can represent the same logical form field. When PDF Form Fields share the same **Name**, they are treated as a group and stay synchronized.
+In a PDF form, multiple PDF form fields can represent the same logical field. When PDF form fields share the same **Name**, they are treated as a group and stay synchronized.
 
 ## Field behavior by type
 
@@ -31,7 +31,7 @@ In a PDF form, multiple PDF Form Fields can represent the same logical form fiel
 - **ListBox and DropDown** — The selected value is shared across widgets with the same Name.  
 - **Signature and Initial fields** — Applied signature/initial is mirrored across grouped widgets.
 
-N>Form field grouping is controlled by the **Name** property. The position of each widget is determined only by its bounds; grouping is not affected by location.
+N> Form field grouping is controlled by the **Name** property. The position of each widget is determined only by its bounds; grouping is not affected by location.
 
 ## Group using the Form Designer UI
 
@@ -39,7 +39,7 @@ N>Form field grouping is controlled by the **Name** property. The position of ea
 1. Enable the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar).
 2. Add the form fields you want to group.
 3. Select a form field, open **Properties**, and set the **Name** value.
-4. Assign the same **Name** to all PDF Form Field that belong to the group.
+4. Assign the same **Name** to all PDF form fields that belong to the group.
 5. Apply the changes and verify that updates in one widget reflect in the others.
 
 ![Grouping textboxes with the same name](../../javascript-es6/images/groupTextFileds.png)
