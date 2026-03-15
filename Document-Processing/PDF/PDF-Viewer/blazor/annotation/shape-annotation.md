@@ -28,7 +28,7 @@ Shape annotations can be added from the annotation toolbar.
 * Choose a shape type to enable the corresponding drawing mode.
 * Draw the selected shape on the PDF page.
 
-When the viewer is in pan mode and a shape drawing mode is activated, the control switches to text selection mode to enable drawing.
+When the viewer is in Pan mode and a shape drawing mode is activated, the viewer switches to Text Select mode.
 
 ![Adding shape annotations in Blazor SfPdfViewer](../images/blazor-pdfviewer-add-shape-in-toolbar.png)
 
@@ -161,7 +161,7 @@ The appearance of an annotation’s selector can be customized using [Annotation
 
 <SfPdfViewer2 @ref="viewer"
               DocumentPath="@DocumentPath"
-              Height="100" Width="100%"
+              Height="100%" Width="100%"
               RectangleSettings=@rectangleSettings>
 </SfPdfViewer2>
 
@@ -188,7 +188,7 @@ The appearance of an annotation’s selector can be customized using [Annotation
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Selector/Customize%20Annotation%20%20Selector).
 
-## Add shape annotation Programmatically
+## Add shape annotation programmatically
 
 The Blazor SfPdfViewer supports programmatic creation of shape annotations Rectangle, Line, Arrow, Circle, and Polygon using [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_). Ensure the document is loaded and the component reference is available before invoking API calls.
 
@@ -211,7 +211,7 @@ Below is an example demonstrating how to use this method to add a shape annotati
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the Shape annotation type like Rectangle, Line, Arrow, Circle, Polygon.
         annotation.Type = AnnotationType.Rectangle;
-        // Set the page number starts from 0. So, if set 0 it represents the page 1.
+        // Page numbers start from 0. So, if set to 0 it represents page 1.
         annotation.PageNumber = 0;
 
         // Bound of the rectangle annotation

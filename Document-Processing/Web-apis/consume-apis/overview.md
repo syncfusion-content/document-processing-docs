@@ -1,6 +1,6 @@
 ---
 title: Document Processing Web API Overview - Syncfusion 
-description: Convert Word, Excel, PowerPoint, HTML and images to PDF and merge, split, compress, protect and organize PDFs with Syncfusion Document Processing Web APIs. 
+description: Convert Word, Excel, PowerPoint, HTML and images to PDF and merge, split, compress, protect and organize PDFs with Syncfusion Document Processing Web APIs.
 platform: document-processing
 control: general
 documentation: UG

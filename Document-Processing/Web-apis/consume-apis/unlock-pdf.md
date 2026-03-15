@@ -1,7 +1,6 @@
 ---
-title: Unlock Secured PDFs Using Syncfusion Web API
+title: Unlock Secured PDFs Using Syncfusion Web API 
 description: Remove password protection from authorized PDFs securely using Syncfusion unlock Web API for automated workflows.
-platform: document-processing
 control: general
 documentation: UG
 ---

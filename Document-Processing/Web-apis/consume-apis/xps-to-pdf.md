@@ -41,7 +41,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:8003/v1/conversion/xps-to-pdf", requestOptions)
+fetch("http://localhost:4000/v1/conversion/xps-to-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -56,8 +56,7 @@ var content = new MultipartFormDataContent();
 content.Add(new StreamContent(File.OpenRead("Input.xps")), "file", "Input.xps");
 var settings = new
 {
-  File = "file",
-  Password = "12345678",    
+  File = "file"
 };
 
 var json = JsonSerializer.Serialize(settings);
@@ -102,7 +101,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:8003/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

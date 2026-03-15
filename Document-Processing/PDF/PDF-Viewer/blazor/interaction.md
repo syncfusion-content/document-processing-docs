@@ -9,7 +9,7 @@ documentation: ug
 
 # Interaction mode in Blazor SfPdfViewer Component
 
-SfPdfViewer provides two user interaction options to control how the document responds to pointer input. By default, text selection is enabled and the interaction mode is Selection.
+SfPdfViewer provides two user interaction options to control how the document responds to pointer input. By default, text selection is enabled and the interaction mode is `Selection`.
 
 The built-in toolbar of SfPdfViewer contains the following two interaction options:
 
@@ -20,7 +20,7 @@ The built-in toolbar of SfPdfViewer contains the following two interaction optio
 
 In this mode, users can select and copy text from the PDF document loaded in SfPdfViewer. This is useful for extracting and sharing textual content.
 
-N> In Selection mode, page panning by touch/drag is disabled. Scrolling is still available through the mouse wheel scrollbars, or keyboard shortcuts.
+N> In Selection mode, page panning by touch/drag is disabled. Users can still scroll using the mouse wheel, scrollbars, or keyboard shortcuts.
 
 You can enable or disable text selection by setting the [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) property.
 
@@ -41,7 +41,7 @@ You can enable or disable text selection by setting the [EnableTextSelection](ht
 
 ## Panning mode
 
-In this mode, users can pan and scroll pages in the loaded PDF document in the SfPdfViewer, but the text selection cannot be performed.
+In this mode, users can pan and scroll pages in the loaded PDF document, but text selection is disabled.
 
 The interaction mode of the SfPdfViewer component can be modified using the [InteractionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_InteractionMode) property. This property supports runtime updates, and any changes are applied immediately to the viewer.
 
@@ -59,11 +59,11 @@ The interaction mode of the SfPdfViewer component can be modified using the [Int
 }
 
 ```
-## Disable interaction with Annotations
+## Disable annotation interaction
 
-Annotation interactions such as dragging, resizing, and deleting can be disabled by setting the [IsLock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_IsLock) property in the [AnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AnnotationSettings) configuration.
+Annotation interactions, such as dragging, resizing, and deleting, can be disabled by setting the [IsLock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_IsLock) property in the [AnnotationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AnnotationSettings) configuration.
 
-The following code illustrates how to disable the annotation interaction.
+The following code illustrates how to lock annotation interactions.
 
 ```cshtml
 

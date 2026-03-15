@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in Angular PDF Viewer control
+# Page Navigation in Angular PDF Viewer
 
-The Angular PDF Viewer supports different internal and external navigations.
+The Angular PDF Viewer supports internal and external navigation methods.
 
-## Toolbar page navigation option
+## Toolbar page navigation options
 
-The default toolbar of PDF Viewer contains the following navigation options
+The PDF Viewer default toolbar includes the following page navigation options:
 
-* [**Go to page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
-* [**Show next page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
-* [**Show previous page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page of a PDF document.
-* [**Show first page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
-* [**Show last page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
+* [**Go to page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to a specified page in the PDF document.
+* [**Show next page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page in the PDF document.
+* [**Show previous page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page in the PDF document.
+* [**Show first page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotofirstpage):- Navigates to the first page of the PDF document.
+* [**Show last page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of the PDF document.
 
 ```html
 <!DOCTYPE html>
@@ -51,7 +51,7 @@ The default toolbar of PDF Viewer contains the following navigation options
 </html>
 ```
 
-You can enable/disable page navigation option in PDF Viewer using the following code snippet.,
+Enable or disable the page navigation option in the PDF Viewer using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -116,9 +116,9 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/navigation.png)
+![PDF Viewer toolbar showing page navigation controls](../images/navigation.png)
 
-Also, you can programmatically perform page navigation options as follows.
+The following examples show how to perform page navigation programmatically.
 
 ```html
 <!DOCTYPE html>
@@ -253,7 +253,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, Magnifi
 {% endhighlight %}
 {% endtabs %}
 
-Find the [here](https://stackblitz.com/edit/angular-pfdpfdzq-aowymqw8?file=src%2Fapp.component.ts,src%2Fapp.component.html) to perform the page navigation options programmatically.
+Try the sample on StackBlitz to run the programmatic page navigation example: [StackBlitz sample](https://stackblitz.com/edit/angular-pfdpfdzq-aowymqw8?file=src%2Fapp.component.ts,src%2Fapp.component.html).
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Locking and Unlocking annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here all about locking and unlocking annotations using Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to lock and unlock annotations using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -91,3 +91,8 @@ void LockSelectedAnnotation(Annotation selectedAnnotation)
 {% endtabs %}
 
 * Similarly, to unlock the selected annotation, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property value to `false`.
+
+## See Also
+- [Annotations Overview](../annotations-overview)
+- [Select and Deselect Annotations](../select-deselect-annotations)
+- [Show and Hide Annotations](../show-hide)

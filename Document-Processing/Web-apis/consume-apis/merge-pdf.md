@@ -1,6 +1,6 @@
 ---
-title: Merge PDF Files Using Syncfusion Web API 
-description: Merge multiple PDF files into a single structured document with preserved bookmarks, metadata, and ordering using Syncfusion PDF merge Web API. 
+title: Merge PDF Files Using Syncfusion Web API
+description: Merge multiple PDF files into a single structured document with preserved bookmarks, metadata, and ordering using Syncfusion PDF merge Web API.
 platform: document-processing
 control: general
 documentation: UG

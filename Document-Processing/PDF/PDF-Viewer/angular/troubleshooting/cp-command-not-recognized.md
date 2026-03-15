@@ -22,4 +22,4 @@ Here, `/s` indicates that you want to copy directories and subdirectories recurs
 
 Make sure to run this command in the appropriate directory where you want to perform the copy operation.
 
-**Note:** If you encounter other issues or error messages while working with the Windows Command Prompt, make sure to double-check your command syntax and file paths for accuracy. Additionally, ensure that you have the necessary permissions to perform the copy operation in the specified directories.
+N>: If you encounter other issues or error messages while working with the Windows Command Prompt, make sure to double-check your command syntax and file paths for accuracy. Additionally, ensure that you have the necessary permissions to perform the copy operation in the specified directories.

@@ -8,31 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure Redis Cache
+# Configure Redis cache
 
-Redis is an open-source, in-memory data structure store that is often used as a cache, message broker, and database. `Redis cache` is a key-value data store that stores data in memory, which makes it very fast and efficient. The data can be stored and retrieved quickly without the need for disk access, which makes Redis cache ideal for applications that require fast access to data.
+Redis is an in-memory key-value store commonly used as a distributed cache. Caching frequently requested PDF bytes in Redis reduces repeated conversion or I/O, lowers server load, and improves response times for the PDF Viewer web service. Keep in mind Redis is volatile storage: entries may be evicted or lost on restart, so the cache should be considered an optimization, not the primary data source.
 
-Redis can be used to improve the performance of the PDF Viewer by caching frequently accessed PDF documents and reducing the number of requests to the server. Redis is an in-memory cache, so data stored in Redis should be considered temporary. In case of cache eviction or server restart, the data will be lost, and you would need to fetch it again from the primary data source.
+## Configure Redis for the PDF Viewer web service
 
-## To configure Redis, you will need to follow these steps
+1. Provision a Redis instance (for example, Azure Cache for Redis or a self-hosted cluster). See Azure documentation for deployment guidance: https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache
 
-**Step 1**:Create Redis cache refer to this [link](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)
+2. Create or adapt a PDF Viewer web service. See the Syncfusion web-service guide for a reference implementation: https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above or use the sample web service: https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices
 
-**Step 2:**  Create a PDFViewer web service application for that use the below link for reference.
+3. Install Redis client and cache packages. Preferred packages for modern .NET applications are `StackExchange.Redis` and `Microsoft.Extensions.Caching.StackExchangeRedis`. As an alternative to `AddDistributedRedisCache()`, consider `AddStackExchangeRedisCache()` where available.
 
-[Refer to this link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above)
-
-or you can get the sample web service from GitHub [link](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices).
-
-**Step 3:**  Install Redis Cache package
-
-You need to install the `StackExchange.Redis package` and `Microsoft.Extensions.Caching.Redis`using the NuGet Package Manager
-
-**Step 4:**  Configure Redis Cache
-
-In the ConfigureServices method of the `Startup class`, you need to add the Redis Cache service using the `AddDistributedRedisCache()`
-
-method. You also need to provide the Redis Cache connection string.
+4. Register the distributed cache in `Startup.ConfigureServices` (or the equivalent in .NET 6+ minimal hosting). Supply the Redis connection string and optional instance name.
 
 ```cs
 

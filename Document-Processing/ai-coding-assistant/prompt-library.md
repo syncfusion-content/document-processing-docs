@@ -238,34 +238,34 @@ The Syncfusion Spreadsheet Editor SDK component enables developers to create, vi
 #SyncfusionSpreadsheetEditorSDKAssistant Show me how to bind local JSON data to the Spreadsheet in React?
 {% endpromptcard %}
 {% promptcard Remote Data Binding %}
-#SyncfusionSpreadsheetEditorSDKAssistant Provide an example of binding remote data in Vue Spreadsheet?
+#SyncfusionSpreadsheetEditorSDKAssistant Provide an example of binding remote data in a Vue Spreadsheet?
 {% endpromptcard %}
 {% promptcard Formulas and Calculation %}
-#SyncfusionSpreadsheetEditorSDKAssistant How can I enable formula support and use named ranges in the Typescript Spreadsheet?
+#SyncfusionSpreadsheetEditorSDKAssistant How can I enable formula support and use named ranges in the TypeScript Spreadsheet?
 {% endpromptcard %}
 {% promptcard Charts %}
 #SyncfusionSpreadsheetEditorSDKAssistant How do I insert and customize a column chart in the Blazor Spreadsheet?
 {% endpromptcard %}
 {% promptcard Data Validation %}
-#SyncfusionSpreadsheetEditorSDKAssistant Provide an example of adding list validation in cells in Typescript?
+#SyncfusionSpreadsheetEditorSDKAssistant Provide an example of adding list validation to cells in TypeScript?
 {% endpromptcard %}
 {% promptcard Import and Export %}
-#SyncfusionSpreadsheetEditorSDKAssistant How to import an Excel file and export the Spreadsheet as XLSX in ASP.NET Core?
+#SyncfusionSpreadsheetEditorSDKAssistant How do I import an Excel file and export the Spreadsheet as XLSX in ASP.NET Core?
 {% endpromptcard %}
 {% promptcard Ribbon and Toolbar %}
 #SyncfusionSpreadsheetEditorSDKAssistant Show how to customize the ribbon toolbar and add custom buttons in the ASP.NET MVC Spreadsheet?
 {% endpromptcard %}
 {% promptcard Grid Lines and Headers %}
-#SyncfusionSpreadsheetEditorSDKAssistant How do I show or hide grid lines and row/column headers in Windows Forms Spreadsheet?
+#SyncfusionSpreadsheetEditorSDKAssistant How do I show or hide grid lines and row/column headers in the Windows Forms Spreadsheet?
 {% endpromptcard %}
 {% promptcard Sheet Protection %}
 #SyncfusionSpreadsheetEditorSDKAssistant How can I protect a sheet with a password in the WPF Spreadsheet control?
 {% endpromptcard %}
 {% promptcard Conditional Formatting %}
-#SyncfusionSpreadsheetEditorSDKAssistant How to apply conditional formatting such as color scales or data bars in UWP Spreadsheet?
+#SyncfusionSpreadsheetEditorSDKAssistant How do I apply conditional formatting such as color scales or data bars in the UWP Spreadsheet?
 {% endpromptcard %}
 {% promptcard Cell Formatting %}
-#SyncfusionSpreadsheetEditorSDKAssistant How to apply cell styles, number formatting, and wrap text in the Typescript Spreadsheet?
+#SyncfusionSpreadsheetEditorSDKAssistant How do I apply cell styles, number formatting, and wrap text in the TypeScript Spreadsheet?
 {% endpromptcard %}
 {% promptcard Sorting and Filtering %}
 #SyncfusionSpreadsheetEditorSDKAssistant Show me how to enable sorting and filtering features in the React Spreadsheet?

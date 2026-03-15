@@ -9,7 +9,7 @@ documentation: ug
 
 # View PDF files using the PDF Viewer in a Blazor Web App
 
-This article describes how to add the Syncfusion&reg; Blazor PDF Viewer component to a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code.
+This article shows how to add the Syncfusion&reg; Blazor PDF Viewer to a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code.
 
 {% tabcontents %}
 
@@ -28,11 +28,11 @@ You can create a Blazor Web App using Visual Studio 2022 via [Microsoft Template
 
 Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) when creating a Blazor Web App.
 
-## Install Blazor PDF Viewer NuGet package in Blazor Web App
+## Install Blazor PDF Viewer NuGet packages
 
-To add **Blazor PDF Viewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install
+To add the Blazor PDF Viewer component, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install:
 
-* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
+* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
 If using the WebAssembly or Auto interactive render mode, install the NuGet packages in the client project to add the component to the Web App.
@@ -104,7 +104,7 @@ N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Syncfusion Blazor service
 
 | Interactive Render Mode | Description |
 | -- | -- |
@@ -122,7 +122,7 @@ N> Syncfusion&reg; uses [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/
 {% endhighlight %}
 {% endtabs %}
 
-* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
+* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of your Blazor Web App.
 
 If the interactive render mode is set to WebAssembly or Auto, register the Syncfusion&reg; Blazor service in both **~/Program.cs** files of the Blazor Web App.
 
@@ -239,9 +239,9 @@ app.MapRazorComponents<App>()
 
 N> [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../faqs/how-to-processing-large-files-without-increasing-maximum-message-size)
 
-## Adding stylesheet and script
+## Add stylesheet and script
 
-Add the following stylesheet and script to the head section of the **~/Components/App.razor** file.
+Add the following stylesheet and script to the head section of **~/Components/App.razor**.
 
 {% tabs %}
 {% highlight html hl_lines="3 7" %}
@@ -258,9 +258,9 @@ Add the following stylesheet and script to the head section of the **~/Component
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Blazor PDF Viewer Component
+## Add Blazor PDF Viewer component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) component in the **~Pages/.razor** file. If the interactivity location is set to Per page/component, define a render mode at the top of the **~Pages/.razor** component as follows:
+Add the Syncfusion® PDF Viewer (Next-Gen) component in the **~/Pages/*.razor** file. If interactivity location is Per page/component, define a render mode at the top of the page as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -283,7 +283,7 @@ N> If the interactivity location is set to Global and the render mode is set to 
 N> If the interactivity location is set to Global, a render mode does not need to be specified per page. The interactivity mode applies to the entire app.
 <br />Enable interactivity only via client-side rendering (CSR) by using the WebAssembly or Auto option
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component in **~/Pages/Index.razor**.
 
 {% tabs %}
 {% highlight razor %}
@@ -297,11 +297,11 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component in
 {% endhighlight %}
 {% endtabs %}
 
-N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property is not set, the PDF Viewer renders without loading a PDF document. Users can use the **Open** option in the toolbar to browse and open a PDF as needed.
+N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property is not set, the PDF Viewer renders without loading a PDF. Use the **Open** toolbar option to browse and open a PDF.
 
-## Run the application
+## Run the app
 
-Run the application to display the PDF file in the Syncfusion&reg; Blazor PDF Viewer component in the browser.
+Run the app to display the PDF in the Syncfusion&reg; Blazor PDF Viewer in the browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Web App SfPdfViewer rendering in browser](gettingstarted-images/blazor-pdfviewer.png)" %}
 

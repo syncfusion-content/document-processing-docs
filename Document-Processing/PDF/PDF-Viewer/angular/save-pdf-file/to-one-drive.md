@@ -10,21 +10,21 @@ domainurl: ##DomainURL##
 
 # Save PDF files to OneDrive
 
-To save a PDF file to OneDrive, follow these steps:
+This article describes how to save a PDF file to OneDrive from the Syncfusion Angular PDF Viewer using a server-side web service. Follow the steps below.
 
 **Step 1:** Create a Microsoft Graph API application
 
-Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow this guide: [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive)
+Create a Microsoft Graph API application, and obtain the application (client) ID and tenant ID. For details, see the [Microsoft Graph guide](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) for accessing files in OneDrive.
 
 **Step 2:** Create a PDF Viewer sample in Angular
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will set up the basic structure of your PDF Viewer application.
+Create a simple PDF Viewer sample in Angular by following the Syncfusion PDF Viewer for Angular [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) guide. This establishes the application structure required for the integration.
 
-**Step 3:** Modify the PdfViewerController.cs file in the web service project
+**Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project targeting .NET Core 3.0 or later. For guidance, see the Syncfusion knowledge base article on creating a PDF Viewer web service in .NET Core.
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
 3. Import the required namespaces at the top of the file:
 
@@ -35,7 +35,7 @@ using Microsoft.Identity.Client;
 using Helpers;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign configuration values to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -54,7 +54,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the Download() method to save the downloaded PDF file to the OneDrive folder.
+5. Modify the `Download()` method to save the downloaded PDF file to the configured OneDrive folder.
 
 ```csharp
 [HttpPost("Download")]
@@ -101,7 +101,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open appsettings.json in the web service project and add the following keys below the existing AllowedHosts configuration
+6. Open `appsettings.json` in the web service project and add the following keys below the existing `AllowedHosts` configuration
 
 ```json
 {
@@ -119,11 +119,11 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 ```
 
-N> Replace the placeholders with your actual values: Tenant ID, Application ID, and OneDrive folder name.
+N> Replace the placeholders with actual values for the Tenant ID, Application ID, and OneDrive folder name.
 
 **Step 4:** Set the PDF Viewer properties in the Angular component
 
-Modify the serviceUrl with your web service endpoint and set documentPath to the PDF file name to load from OneDrive. Ensure the document exists in your OneDrive folder.
+Update the `serviceUrl` property with the web service endpoint and set `documentPath` to the PDF file name stored in OneDrive. Ensure the document exists in the target OneDrive folder.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -153,13 +153,11 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 ```
 
-N> Install the following NuGet packages in the web service application:
-- Microsoft.Identity.Client
-- Microsoft.Graph
-- Microsoft.Extensions.Configuration
-- Microsoft.Extensions.Configuration.FileExtensions
-- Microsoft.Extensions.Configuration.Json
-
-You can install these packages using the NuGet Package Manager.
+N> Install the following NuGet packages in the web service application when required:
+- `Microsoft.Identity.Client`
+- `Microsoft.Graph`
+- `Microsoft.Extensions.Configuration`
+- `Microsoft.Extensions.Configuration.FileExtensions`
+- `Microsoft.Extensions.Configuration.Json`
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-one-drive)

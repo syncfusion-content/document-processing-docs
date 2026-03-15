@@ -9,15 +9,13 @@ documentation: ug
 
 # Form designer toolbar customization
 
-The form designer toolbar can be customized by showing or hiding default items and by controlling the order in which the items appear.
+Customize which tools appear in the form designer toolbar, control their order, and toggle visibility programmatically.
 
 ## Show or hide the form designer toolbar
 
-Show or hide the form designer toolbar programmatically.
+Toggle the form designer toolbar using the [EnableFormDesigner](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableFormDesigner) property.
 
-Use the [EnableFormDesigner](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableFormDesigner) property to toggle visibility.
-
-The following code snippet explains how to show or hide the toolbar using the EnableFormDesigner property.
+Example: disable the form designer toolbar.
 
 ```cshtml
 
@@ -28,13 +26,11 @@ The following code snippet explains how to show or hide the toolbar using the En
 
 ```
 
-## How to customize the form designer toolbar
+## Customize form designer toolbar items
 
-Choose which tools appear and control their order in the form designer toolbar.
+Use [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html) to specify which form-design tools are shown and their order. The property accepts a list of [FormDesignerToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) values; only listed items are rendered, and the displayed order follows the list sequence.
 
-The [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html) component in [SfPdfViewer2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) customizes which form design tools are available. The [FormDesignerToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) property accepts a list of [FormDesignerToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormDesignerToolbarItem.html) values. The items you include are both displayed and rendered in the order listed; any items you omit are hidden. This provides a streamlined, user-friendly form design experience across devices.
-
-The following example demonstrates how to customize the form designer toolbar by configuring specific tools using `FormDesignerToolbarItem`.
+Example: configure a custom set of form designer tools.
 
 ```cshtml
 
