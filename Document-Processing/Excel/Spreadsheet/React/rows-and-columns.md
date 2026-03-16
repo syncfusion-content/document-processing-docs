@@ -107,7 +107,6 @@ The following features have some limitations in Insert/Delete:
 * Insert row/column between the data validation.
 * Insert row/column between the conditional formatting applied cells.
 * Insert/delete row/column between the filter applied cells.
-* Insert/delete cells are not supported.
 
 ## Hide and show
 
