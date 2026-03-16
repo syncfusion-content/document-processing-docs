@@ -7,11 +7,11 @@ documentation: UG
 keywords: Assemblies
 ---
 
-# Welcome to syncfusion Data Extraction Library
+# Welcome to Syncfusion Data Extraction Library
 
-Syncfusion® is a high performance, deterministic C# library that extracts complete document structures from PDFs and images.
+Syncfusion® *Smart Data Extractor* is a high performance, deterministic C# library that extracts complete document structures from PDFs and images.
 
-## List of DataExtraction:
+## List of Data Extraction Libraries
 
 * SmartDataExtractor -  analyzes visual layout lines, boxes, labels, and alignment to locate and extract elements such as table structure, text elements, images, headers, footers, and form fields with per-field confidence scores for immediate review, export, or integration.
 * SmartTableExtractor - detects table regions, header rows, columns, and cell spans (merged cells) and provides per-cell confidence scores and structured exports ready for downstream processing.
