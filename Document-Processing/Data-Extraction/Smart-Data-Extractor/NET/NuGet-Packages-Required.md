@@ -8,9 +8,9 @@ keywords: Assemblies
 ---
 # NuGet Packages Required for Smart Data Extractor
 
-## Create and modify Smart Data Extractor documents
+## Extract Structured data from PDF
 
-To work with SmartDataExtractor, the following NuGet packages need to be installed in your application.
+To work with Smart Data Extractor, the following NuGet packages need to be installed in your application.
 
 <table>
 <tr>
@@ -25,7 +25,7 @@ Windows Forms<br/>
 Console Application (Targeting .NET Framework)
 </td>
 <td>
-{{'[Syncfusion.SmartDataExtractor.WinForms.nupkg]'| markdownify }}
+{{'Syncfusion.SmartDataExtractor.WinForms.nupkg'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -33,7 +33,7 @@ Console Application (Targeting .NET Framework)
 WPF
 </td>
 <td>
-{{'[Syncfusion.SmartDataExtractor.Wpf.nupkg]'| markdownify }}
+{{'Syncfusion.SmartDataExtractor.Wpf.nupkg'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -41,17 +41,16 @@ WPF
 ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.SmartDataExtractor.AspNet.Mvc5.nupkg]'| markdownify }}
+{{'Syncfusion.SmartDataExtractor.AspNet.Mvc5.nupkg'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
 ASP.NET Core (Targeting NET Core) <br/>
 Console Application (Targeting .NET Core) <br/> 
-Blazor
 </td>
 <td>
-{{'[Syncfusion.SmartDataExtractor.Net.Core.nupkg]'| markdownify }}
+{{'Syncfusion.SmartDataExtractor.Net.Core.nupkg'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -60,7 +59,7 @@ Windows UI (WinUI) <br/>
 .NET Multi-platform App UI (.NET MAUI)
 </td>
 <td>
-{{'[Syncfusion.SmartDataExtractor.NET.nupkg]'| markdownify }}
+{{'Syncfusion.SmartDataExtractor.NET.nupkg'| markdownify }}
 </td>
 </tr>
 </table>
