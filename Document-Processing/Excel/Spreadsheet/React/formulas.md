@@ -9,13 +9,13 @@ documentation: ug
 
 # Formulas in React Spreadsheet component
 
-Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
+Formulas are used to perform calculations on data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
 
 ## Usage
 
-You can set formula for a cell in the following ways,
+You can set a formula for a cell in the following ways,
 
-* Using the `formula` property from `cell`, you can set the formula or expression to each cell at initial load.
+* Using the [formula](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#formula) property from `cell`, you can set the formula or expression to each cell at initial load.
 * Set the formula or expression through data binding.
 * You can set formula for a cell by [`editing`](./editing).
 * Using the [`updateCell`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updatecell) method, you can set or update the cell formula.
@@ -75,7 +75,7 @@ The following code example shows how to use an unsupported formula in the Spread
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/formula-cs1" %}
 
-Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
+To directly compute a formula or expression, use the [computeExpression](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
 
 The following code example shows how to use `computeExpression` method in the spreadsheet.
 
@@ -98,7 +98,7 @@ The following code example shows how to use `computeExpression` method in the sp
 
 ## Formula Bar
 
-Formula bar is used to edit or enter cell data in much easier way. By default, the formula bar is enabled in the spreadsheet. Use the [`showFormulaBar`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#showformulabar) property to enable or disable the formula bar.
+The formula bar is used to enter or edit cell data more easily. By default, the formula bar is enabled in the spreadsheet. Use the [`showFormulaBar`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#showformulabar) property to enable or disable the formula bar.
 
 ## Named Ranges
 
@@ -111,7 +111,6 @@ You can assign a meaningful name to a cell range and then use that name in formu
 
 The following code example demonstrates how named ranges can be defined and used in formulas within the Spreadsheet.
 
-The following code example shows the usage of named ranges support.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

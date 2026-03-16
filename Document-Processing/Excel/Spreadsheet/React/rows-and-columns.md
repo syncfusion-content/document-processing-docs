@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Rows and Columns in React Spreadsheet component
+# Rows and columns
 
 A spreadsheet is organized in a tabular format consisting of **rows** and **columns**. The intersection of a row and a column is called a **cell**.
 

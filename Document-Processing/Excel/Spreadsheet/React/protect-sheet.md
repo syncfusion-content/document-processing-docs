@@ -222,7 +222,7 @@ The following example shows `Protect Workbook` by using the [`password`](https:/
 
 ## Unprotect Workbook
 
-The **Unprotect Workbook** feature restores full access to workbook-level operations that were restricted when the workbook was protected.
+The **Unprotect Workbook** feature restores full access to workbook-level operations such as inserting, deleting, renaming, moving, copying, hiding and unhiding sheets that were restricted when the workbook was protected.
 
 **User Interface**:
 
