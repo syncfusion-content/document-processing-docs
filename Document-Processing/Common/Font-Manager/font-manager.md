@@ -163,6 +163,8 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Unified-font-manager/.NET/).
+
 ## Best Practices
 
 1. Set FontManager.Delay early: Configure the delay property in your application's startup code before any document processing begins (Optional). 
