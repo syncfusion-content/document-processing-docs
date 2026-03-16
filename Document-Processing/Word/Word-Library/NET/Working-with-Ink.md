@@ -11,6 +11,9 @@ An Ink annotation is a freehand drawing or handwritten input composed of stroke 
 
 N> DocIO supports Ink only in DOCX format documents.
 
+You can insert Ink elements in the document by using the drawing tools available under the **Draw** tab in Word.
+![Process](Ink_images/Ink-tab.png)
+
 ## Create Ink
 
 The following code example illustrating how to create an Ink in a Word document. 
@@ -121,6 +124,9 @@ document.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+By running the above code, you will generate a a document with **Ink elements** as shown below.
+![Process](Ink_images/Create-Ink.png)
 
 ## Create Ink with Multiple Traces 
 
@@ -240,6 +246,9 @@ document.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+By running the above code, you will generate an **Ink with multiple trace points** as shown below.
+![Process](Ink_images/Ink-multipletraces.png)
 
 The following code example shows GetPoints method which is used to get trace points.
 
@@ -427,6 +436,9 @@ document.Close()
 
 {% endtabs %}
 
+By running the above code, you will generate a **Modified ink effect** as shown below.
+![Process](Ink_images/Modify-ink-effect.png)
+
 ### Modify Ink Color
 
 The following code example demonstrates how to customize the Ink Color. 
@@ -493,6 +505,9 @@ document.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+By running the above code, you will generate a **Modified ink color** as shown below.
+![Process](Ink_images/Modify-ink-color.png)
 
 ### Modify Ink Thickness
 
@@ -561,6 +576,9 @@ document.Close()
 
 {% endtabs %}
 
+By running the above code, you will generate a **Modified ink thickness** as shown below.
+![Process](Ink_images/Modify-ink-thickness.png)
+
 ### Modify Ink Points 
 
 The following code example demonstrates how to customize the Ink Points. 
@@ -627,6 +645,9 @@ document.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+By running the above code,  you will generate **modified ink points** as shown below.
+![Process](Ink_images/Modify-ink-points.png)
 
 ## Remove Ink
 
@@ -706,6 +727,9 @@ document.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+By running the above code, you will generate a **Remove Ink** as shown below.
+![Process](Ink_images/Remove-ink.png)
 																																						  
 ## Limitations
 
@@ -725,7 +749,7 @@ DocIO supports Ink elements only in DOCX format. However, documents created in W
 
 During Word-to-PDF and Word-to-Image conversions, Syncfusion Word Library uses fallback images embedded in the document to preserve the Ink visual appearance. However, when Ink is created or modified using the Syncfusion Word Library, some Ink effects cannot be rendered accurately due to rendering engine limitations. Although the Ink stroke geometry is preserved, visual brush effects are lost.
 
-**To resolve this**, save the document using DocIO first. Then, open the saved document in Microsoft Word and save it again. Finally, convert it to PDF or Image using DocIO. This process regenerates the required Ink fallback images, ensuring accurate visual output.
+**To resolve this**, save the created or modified document using DocIO first in DOCX format. Then, open the saved document in Microsoft Word and save it again. Finally, convert it to PDF or Image using DocIO. This process regenerates the required Ink fallback images, ensuring accurate visual output.
 
 ## Frequently Asked Questions
 
