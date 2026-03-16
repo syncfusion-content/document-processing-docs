@@ -267,8 +267,8 @@ This will search for the terms "pdf" and "the" in a case-insensitive manner only
 
 ## See Also
 
+- [Text Search Features](./text-search-features)
 - [Text Search Events](./text-search-events)
-- [Programmatic text search](./text-search-api)
 - [Extract Text](../how-to/extract-text)
 - [Extract Text Options](../how-to/extract-text-option)
 - [Extract Text Completed](../how-to/extract-text-completed)

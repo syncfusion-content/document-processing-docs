@@ -115,8 +115,8 @@ The [textSearchComplete](https://ej2.syncfusion.com/react/documentation/api/pdfv
 
 ## See Also
 
+- [Text Search Features](./text-search-features)
 - [Find Text](./find-text)
-- [Programmatic text search](./text-search-api)
 - [Extract Text](../how-to/extract-text)
 - [Extract Text Options](../how-to/extract-text-option)
 - [Extract Text Completed](../how-to/extract-text-completed)
