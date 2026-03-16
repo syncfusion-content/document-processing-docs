@@ -56,7 +56,7 @@ Enable Match Any Word to split the query into separate words. The popup proposes
 
 ## Programmatic text Search
 
-The React PDF Viewer provides options to toggle text search feature and APIs to customise the text search behavior programmatically.
+The React PDF Viewer provides options to toggle text search feature and APIs to customize the text search behavior programmatically.
 
 ### Enable or Disable Text Search 
 
