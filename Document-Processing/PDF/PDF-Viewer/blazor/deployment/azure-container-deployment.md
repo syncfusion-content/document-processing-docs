@@ -32,7 +32,6 @@ Example `Dockerfile` for an Blazor Web Apps Server and Web assembly app:
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 
-RUN ln -s /lib/x86_64-linux-gnu/lib dl-2.24.so /lib/x86_64-linux-gnu/lib dl.so
 # install System.Drawing native dependencies
 RUN apt-get update && apt-get install -y --allow-unauthenticated libgdiplus libc6-dev libx11-dev
 RUN ln -s libgdiplus.so gdiplus.dll
@@ -69,7 +68,6 @@ ENTRYPOINT ["dotnet", "YourServerApp.dll"]
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 
-RUN ln -s /lib/x86_64-linux-gnu/lib dl-2.24.so /lib/x86_64-linux-gnu/lib dl.so
 # install System.Drawing native dependencies
 RUN apt-get update && apt-get install -y --allow-unauthenticated libgdiplus libc6-dev libx11-dev
 RUN ln -s libgdiplus.so gdiplus.dll
@@ -123,11 +121,11 @@ docker build -t pdfviewerwebservice:latest .
 docker run -d -p 6002:80 pdfviewerwebservice:latest
 ```
 
-If you see script errors or documents fail to load, verify the container image contains the `lib dl.so` sym link and `libgdiplus` installed [see Dockerfile notes](https://github.com/dotnet/dotnet-docker/discussions/4938).
+If you see script errors or documents fail to load, verify the container image contains the `libgdiplus` installed [see Dockerfile notes](https://github.com/dotnet/dotnet-docker/discussions/4938).
 
 ## Docker standalone WebAssembly app
 
-If you have built a standalone WebAssembly sample, please add the Dockerfile and the necessary Nginx configuration files to the project, and update the project’s .csproj entry inside the Dockerfile to match the correct assembly name.
+If you have built a standalone WebAssembly sample, please add the Dockerfile and the necessary nginx configuration files to the project, and update the project’s .csproj entry inside the Dockerfile to match the correct assembly name.
 
 ![Formate to add files](../images/file_formate_need_to_add.png)
 
@@ -137,7 +135,6 @@ Example `Dockerfile` for standalone WebAssembly:
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
-RUN ln -s /lib/x86_64-linux-gnu/lib dl-2.24.so /lib/x86_64-linux-gnu/lib dl.so
 
 # install System.Drawing native dependencies
 
@@ -203,7 +200,7 @@ Follow these UI-driven steps in the Azure portal (or use the CLI steps below):
 2. Enable credentials
     * Open the newly created Container Registry resource.
     * Under **Settings**, select **Access keys**.
-    * Toggle **Admin user** to **Enabled** and note the **Login server** (e.g., myacr.azurecr.io), **Username**, and **Password** shown.
+    * Toggle **Admin user** to **Enabled** and note the **Login server**, **Username**, and **Password** shown.
 
 3. Tag and push your image from your build machine
     * Open PowerShell or a terminal on the machine where you built the Docker image.
@@ -234,7 +231,7 @@ Follow these UI-focused steps in the Azure portal to create an App Service (Linu
 
     ![Create Azure Container](../images/create_azure_container.png)
 
-    * Under **Basics**, set the **Subscription**, **Resource group** (use **Create new** if needed), and **Name** (this will form the app URL `https://<name>.azurewebsites.net`).
+    * Under **Basics**, set the **Subscription**, **Resource group** (use **Create new** if needed), and **Name** (this will form the app URL).
 
     ![Update bascis details](../images/update_bascis_details.png)
 
@@ -257,7 +254,7 @@ Follow these UI-focused steps in the Azure portal to create an App Service (Linu
 N> troubleshooting <br />
 * Check container logs and the image locally if the app fails to start. <br />
 * Ensure the container listens on port 80 (or configure the App Service container port setting to match your container). <br />
-* Ensure native dependencies (SkiaSharp, `libgdiplus`, `lib dl` sym links) are present in the image; missing native libs commonly cause rendering/script errors. <br />
+* Ensure native dependencies (SkiaSharp, `libgdiplus`) are present in the image; missing native libs commonly cause rendering/script errors. <br />
 * For static WASM images served by nginx, confirm wasm MIME types and caching are working.
 
 ## Using Rancher Desktop / Docker on Windows
