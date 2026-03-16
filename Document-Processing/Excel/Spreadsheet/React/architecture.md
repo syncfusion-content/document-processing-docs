@@ -68,13 +68,13 @@ To deliver a smooth and responsive experience, the spreadsheet uses virtual scro
 
 The formula engine operates in three main steps: parsing, evaluation, and dependency tracking. When a formula is entered, it is first parsed and validated, then evaluated by retrieving referenced cell values and executing functions. The engine maintains a dependency graph to track which formulas depend on which cells. When a cell changes, only the affected formulas are recalculated, ensuring efficient updates. The engine supports a wide range of Excel-compatible functions and provides clear error codes for issues like invalid references or division by zero.
 
-For more information, you can refer to the formula documentation section.
+For more information, you can refer to the [formula](./formulas) documentation section.
 
 ## Data Binding Architecture (Local vs Remote)
 
 The spreadsheet supports both local and remote data binding. With local data binding, all data is loaded into browser memory as a JavaScript array, enabling instant access and offline support for small to medium datasets. Remote data binding is designed for large datasets, where data is fetched from a server in small batches as needed. The browser requests only the visible rows and a buffer, minimizing memory usage and network traffic. Sorting and filtering operations are handled on the server, allowing the spreadsheet to efficiently manage millions of rows.
 
-For more information, you can refer to the data-binding documentation section.
+For more information, you can refer to the [data-binding](./data-binding) documentation section.
 
 ## Server-Side vs Client-Side Processing
 
