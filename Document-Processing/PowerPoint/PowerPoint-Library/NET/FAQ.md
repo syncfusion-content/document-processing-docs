@@ -149,3 +149,12 @@ Install the SkiaSharp.Linux NuGet package for the .NET Core application in Linux
 ## Multithreading
 
 * [Does the PowerPoint library support multithreading and thread-safety?](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faqs/multithreading-powerpoint-reading-faqs#does-the-powerpoint-library-support-multithreading-and-thread-safety)  
+
+## Does PPTX file support sensitivity labels?
+No, Presentation library processes the file-level information of PowerPoint. Sensitivity labels are organization-level settings and are not stored within the PPTX file itself. As a result, the Presentation library does not support set or get or preserve sensitivity labels.
+
+## Can Presentation library Open a PPTX file with Sensitivity Labels Applied?
+If a PPTX file is encrypted due to its sensitivity label configuration, Presentation library cannot open it because the content is stored in an encrypted format and requires an authorized Microsoft account for access.
+
+## Does the PowerPoint library support asynchronous methods to open or save a presentation?
+No, the Syncfusion PowerPoint library does not provide asynchronous APIs for opening or saving presentations. However, the library is highly optimized for performance and is thread‑safe, allowing you to perform presentation processing operations.
