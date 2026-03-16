@@ -189,7 +189,8 @@ Pie
 * Pie_Exploded<br/>
 * Pie_3D<br/>
 * Pie_Exploded_3D<br/>
-* PieOfPie
+* PieOfPie<br/>
+* BarOfPie
 </td>
 </tr>
 <tr>
@@ -245,7 +246,7 @@ N> From the above supported chart types table, Line_3D charts are not supported 
 
 N> Only embedded charts are supported in chart to image conversion. The Chart sheets are not supported.
 
-N> Pie of Pie, Sunburst, Box and Whisker, and Treemap charts are supported only in .NET Core platforms for chart to image conversion.
+N> Pie of Pie, Bar of Pie, Sunburst, Box and Whisker, and Treemap charts are supported only in .NET Core platforms for chart to image conversion.
 
 ## Supported chart elements
 XlsIO supports the following chart elements in image conversion:
