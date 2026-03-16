@@ -19,8 +19,8 @@ The following assemblies need to be referenced in your application based on the 
   <tbody>
     <tr>
       <td>
-        {{'[WPF]'| markdownify }},
-        {{'[Windows Forms]'| markdownify }} and {{'[ASP.NET MVC]'| markdownify }}      
+        {{'WPF'| markdownify }},
+        {{'Windows Forms'| markdownify }} and {{'ASP.NET MVC'| markdownify }}      
       </td>
       <td>
         Syncfusion.Compression.Base<br/>
@@ -32,9 +32,8 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-      {{'[Blazor]'| markdownify }},
-      {{'[.NET Core]'| markdownify }}
-      and {{'[.NET Platforms]'| markdownify }}
+      {{'.NET Core'| markdownify }}
+      and {{'.NET Platforms'| markdownify }}
       </td>
       <td>
         Syncfusion.Compression.Portable<br/>
@@ -47,7 +46,7 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-      {{'[.NET Multi-platform App UI (.NET MAUI)]'| markdownify }}
+      {{'.NET Multi-platform App UI (.NET MAUI)'| markdownify }}
       </td>
       <td>
         Syncfusion.Compression.NET<br/>
