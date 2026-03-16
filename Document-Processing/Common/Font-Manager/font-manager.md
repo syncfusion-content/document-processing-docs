@@ -55,14 +55,12 @@ FontManager optimizes memory usage across the following Office to PDF/Image conv
     <td>
       <b>PDF Library Operations</b>
       <ul>
-        <li>PDF creation and manipulation</li>
-        <li>PDF merging and splitting</li>
-        <li>PDF form filling and flattening</li>
-        <li>PDF page extraction and insertion</li>
-        <li>Adding text, images, and annotations to PDF</li>
-        <li>PDF redaction and security</li>
-        <li>PDF/A conformance</li>
-        <li>OCR text extraction</li>
+        <li>PDF/A Creation and Conversion</li>
+        <li>Annotations and Forms: Fill and Flatten</li>
+        <li>XPS to PDF Conversion</li>
+        <li>EMF to PDF Conversion</li>
+        <li>Insert Text in PDF</li>
+        <li>Tables and Light Tables (Data Grids in PDF)</li>
       </ul>
     </td>
   </tr>
