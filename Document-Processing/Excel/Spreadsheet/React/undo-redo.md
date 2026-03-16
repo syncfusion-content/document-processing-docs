@@ -42,7 +42,7 @@ It reverses the last action you performed with Spreadsheet. Undo can be done by 
 
 * Select the undo item from **HOME** tab in Ribbon toolbar.
 * Use `Ctrl + Z` keyboard shortcut to perform the undo.
-* Use the [`undo`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#undo) method programmatically.
+* Use the [`undo`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#undo) method programmatically.
 
 ## Redo
 
@@ -50,11 +50,11 @@ It reverses the last undo action you performed with Spreadsheet. Redo can be don
 
 * Select the redo item from **HOME** tab in Ribbon toolbar.
 * Use `Ctrl + Y` keyboard shortcut to perform the redo.
-* Use the [`redo`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#redo) method programmatically.
+* Use the [`redo`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#redo) method programmatically.
 
 ## Update custom actions in UndoRedo collection
 
-You can update your own custom actions in UndoRedo collection, by using the [`updateUndoRedoCollection`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#updateundoredocollection) method. And also customize the undo redo operations of your custom action by using `actionComplete` event.
+You can update your own custom actions in UndoRedo collection, by using the [`updateUndoRedoCollection`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updateundoredocollection) method. And also customize the undo redo operations of your custom action by using `actionComplete` event.
 
 The following code example shows `How to update and customize your own actions for undo redo` functionality in the Spreadsheet control.
 
