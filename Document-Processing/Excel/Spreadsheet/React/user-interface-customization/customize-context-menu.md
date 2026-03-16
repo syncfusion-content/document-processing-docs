@@ -9,9 +9,7 @@ documentation: ug
 
 # Customize Context Menu
 
-The Syncfusion React Spreadsheet component provides an easy way to customize the context menu.
-
-You can add custom menu items, hide default items, or change what happens when a user selects a menu option. This giving access to useful actions.
+The Syncfusion React Spreadsheet component provides an easy way to customize the context menu. You can add custom menu items, hide default items, or change what happens when a user selects a menu option. This giving access to useful actions.
 
 You can perform the following context menu customization options in the spreadsheet
 
@@ -21,20 +19,22 @@ You can perform the following context menu customization options in the spreadsh
 
 ### Add Context Menu Items
 
-You can add the custom items in context menu using the [`addContextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#addcontextmenuitems) in `contextmenuBeforeOpen` event
+You can add the custom items in context menu using the [`addContextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#addcontextmenuitems) in `contextmenuBeforeOpen` event.
 
-In this demo, Custom Item is added after the Paste item in the context menu.
+You can use the [contextmenuItemSelect](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#contextmenuitemselect) event to handle when a context menu item is chosen. This event is triggered when the user selects a menu item and provides the selected item's details and the target element in its event arguments; handle it to prevent default function or adding custom functions to the context menu item.
+
+In this demo, custom action is handled in the [contextmenuItemSelect](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#contextmenuitemselect) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/context-menu-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/customize-context-menu-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/context-menu-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/customize-context-menu-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/context-menu-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/customize-context-menu-cs1" %}
 
 ### Remove Context Menu Items
 
