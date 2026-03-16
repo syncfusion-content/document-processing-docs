@@ -255,7 +255,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-[View sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/blob/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
+[View sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
 
 ## Edit signature annotation
 
