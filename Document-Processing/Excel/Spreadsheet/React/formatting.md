@@ -316,7 +316,7 @@ The following options can be given for the icon sets as type,
 
 >* 'ThreeArrows', 'ThreeArrowsGray', 'FourArrowsGray', 'FourArrows', 'FiveArrowsGray', 'FiveArrows', 'ThreeTrafficLights1', 'ThreeTrafficLights2', 'ThreeSigns', 'FourTrafficLights', 'FourRedToBlack', 'ThreeSymbols', 'ThreeSymbols2', 'ThreeFlags', 'FourRating', 'FiveQuarters', 'FiveRating', 'ThreeTriangles', 'ThreeStars', 'FiveBoxes'.
 
-### Customize Conditional Formatting
+### Custom Formatting Styles
 
 Using the custom format for conditional formatting you can set cell styles like color, background color, font style, font weight, and underline.
 

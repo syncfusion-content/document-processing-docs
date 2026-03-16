@@ -15,7 +15,7 @@ Filtering helps you to view specific rows in the spreadsheet by hiding the other
 
 By default, the `Filter` module is injected internally into Spreadsheet to perform filtering.
 
-## Apply Filters from the UI
+## Apply Filters through UI
 
 In the active sheet, select a range of cells to filter by value of the cell. The filtering can be done by any of the following ways:
 

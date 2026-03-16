@@ -11,10 +11,6 @@ documentation: ug
 
 Cell Template is used for adding HTML elements into Spreadsheet. You can add the cell template in spreadsheet by using the [template](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangemodel#template) property and specify the address using the [address](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangemodel#address) property inside the `ranges` property.
 
-## Template Customization
-
-You can customize the Html elements similar to Syncfusion<sup style="font-size:70%">&reg;</sup> components (TextBox, DropDownList, RadioButton, MultiSelect, DatePicker etc) by using the [beforeCellRender](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#beforecellrender) event. In this demo, Cell template is applied to `C2:C9` and instantiated with Html input components like TextBox, RadioButton, TextArea.
-
 ## Events & data flow
 
  You can bind the events to perform any operations through HTML elements or Syncfusion<sup style="font-size:70%">&reg;</sup> components. Here, we have added `change` event in to the MultiSelect control, and we have updated the selected data into the spreadsheet cell through that change event.
@@ -33,6 +29,10 @@ Sample link: [`Cell template`](https://document.syncfusion.com/demos/spreadsheet
 {% endtabs %}
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/template-cs1" %} 
+
+## Template Customization
+
+You can customize the Html elements similar to Syncfusion<sup style="font-size:70%">&reg;</sup> components (TextBox, DropDownList, RadioButton, MultiSelect, DatePicker etc) by using the [beforeCellRender](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#beforecellrender) event. In this demo, Cell template is applied to `C2:C9` and instantiated with Html input components like TextBox, RadioButton, TextArea.
 
 ## Note
 

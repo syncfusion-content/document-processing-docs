@@ -108,7 +108,7 @@ The following features have some limitations in Insert/Delete:
 * Insert row/column between the conditional formatting applied cells.
 * Insert/delete row/column between the filter applied cells.
 
-## Hide or show Spreadsheet Rows and Columns
+## Hide or show Rows and Columns
 
 You can show or hide the rows and columns in the spreadsheet through property binding, method, and context menu.
 

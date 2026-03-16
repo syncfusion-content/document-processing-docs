@@ -67,7 +67,7 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 
 ## Unfreeze Panes
 
-Unfreeze Panes allows you to remove previously frozen rows and columns so the worksheet scrolls normally again. You can unfreeze the `active sheet` or a specific `sheet` by index or name. [1](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#unfreezepanes)
+Unfreeze Panes allows you to remove previously frozen rows and columns so the worksheet scrolls normally again. You can unfreeze the `active sheet` or a specific `sheet` by index or name.
 
 **User Interface**:
 

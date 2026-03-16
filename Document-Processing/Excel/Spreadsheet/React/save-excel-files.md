@@ -166,7 +166,7 @@ By default, the Spreadsheet control saves the Excel file and downloads it to the
 ```js
 
     // Convert the spreadsheet workbook to JSON data.
-    spreadsheet.saveAsJson.then((json) => {
+    spreadsheet.saveAsJson().then((json) => {
         const formData = new FormData();
         formData.append('FileName', "Sample");
         formData.append('saveType', 'Xlsx');
@@ -335,20 +335,21 @@ Now, you have the option to selectively ignore some features while saving the Sp
 ```ts
 spreadsheet.saveAsJson({ onlyValues: true });
 ```
+Refer to the [SerializationOptions](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions) for detailed information on all available options.
 
 | Options | Description |
 | ----- | ----- |
-| [onlyValues](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#onlyvalues) |  If **true**, includes only the cell values in the JSON output. |
-| [ignoreStyle](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorestyle) | If **true**, excludes styles from the JSON output. |
-| [ignoreFormula](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignoreformula) | If **true**, excludes formulas from the JSON output. |
-| [ignoreFormat](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignoreformat) | If **true**, excludes number formats from the JSON output. |
-| [ignoreConditionalFormat](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignoreconditionalformat) | If **true**, excludes conditional formatting from the JSON output. |
-| [ignoreValidation](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorevalidation) | If **true**, excludes data validation rules from the JSON output. |
-| [ignoreFreezePane](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorefreezepane) | If **true**, excludes freeze panes from the JSON output. |
-| [ignoreWrap](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorewrap) | If **true**, excludes text wrapping settings from the JSON output. |
-| [ignoreChart](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorechart) | If **true**, excludes charts from the JSON output. |
-| [ignoreImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignoreimage) | If **true**, excludes images from the JSON output. |
-| [ignoreNote](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions#ignorenote) | If **true**, excludes notes from the JSON output. |
+| onlyValues |  If **true**, includes only the cell values in the JSON output. |
+| ignoreStyle | If **true**, excludes styles from the JSON output. |
+| ignoreFormula | If **true**, excludes formulas from the JSON output. |
+| ignoreFormat | If **true**, excludes number formats from the JSON output. |
+| ignoreConditionalFormat | If **true**, excludes conditional formatting from the JSON output. |
+| ignoreValidation | If **true**, excludes data validation rules from the JSON output. |
+| ignoreFreezePane | If **true**, excludes freeze panes from the JSON output. |
+| ignoreWrap | If **true**, excludes text wrapping settings from the JSON output. |
+| ignoreChart | If **true**, excludes charts from the JSON output. |
+| ignoreImage | If **true**, excludes images from the JSON output. |
+| ignoreNote | If **true**, excludes notes from the JSON output. |
 
 The following code snippet demonstrates how to configure the serialization options and pass them as arguments to the `saveAsJson` method:
 

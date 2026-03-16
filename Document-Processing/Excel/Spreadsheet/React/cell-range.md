@@ -51,7 +51,7 @@ The following features have some limitations in wrap text:
 * Sorting with wrap text applied data.
 * Merge with wrap text
 
-## Cell Merge and Span
+## Merge and Span Cells
 
 Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowmerge) property to enable or disable the merge cells option in spreadsheet.
 

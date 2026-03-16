@@ -33,14 +33,14 @@ If the cell is in editable state, you can save the edited cell by one of the fol
 * Press `Enter` or `Tab` keys to save the edited cell content.
 * Using the [`endEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#endedit) method.
 
-## Cancel Cell changes
+## Cancel editing
 
 To cancel the editing without saving the changes, you can use one of the following ways,
 
 * Press `ESCAPE` key, this will remove the editable state and update the unchanged cell content.
 * Using the [`closeEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#closeedit) method.
 
-The following sample shows how to prevent the editing and cell save. Here `E` column prevent the editing by using cancel argument as true in [`cellEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#celledit) event. In `D` column, prevent saving the edited changes by using cancel argument as true in [`beforeCellSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#beforecellsave) and use [`closeEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#closeedit) method in spreadsheet.
+The following sample shows how to prevent cell editing. The `E` column prevents editing by using the cancel argument as true in the [`cellEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#celledit) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

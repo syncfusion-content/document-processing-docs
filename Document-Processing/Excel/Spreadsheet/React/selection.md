@@ -31,7 +31,7 @@ Cell selection is used to select a single or multiple cells. It can be performed
 
 You can quickly locate and select specific cells or ranges by entering their names or cell references in the Name box, which is located to the left of the formula bar, and also select named or unnamed cells or ranges by using the Go To (`Ctrl+G`) command.
 
-## Selecting Rows
+## Row selection
 
 Row selection is used to select a single or multiple rows.
 
@@ -63,7 +63,7 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/selection-cs1" %}
 
-## Selecting Columns
+## Column selection
 
 Column selection is used to select a single or multiple columns.
 
