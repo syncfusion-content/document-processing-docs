@@ -110,7 +110,7 @@ Linked text boxes are not supported.
 Ink elements
 </td>
 <td>
-Supported only in DOCX format document to image.
+Supported only in DOCX format document to image. Additional behavior explained {{ '[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#ink)' | markdownify }}.
 </td>
 </tr>
 </table>
