@@ -27,15 +27,21 @@ In user interface, you can save Spreadsheet data as Excel document by clicking `
 The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave) event to customize or cancel the save action which gets triggered before saving the Spreadsheet as an Excel file.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/open-save-cs5/index.ts %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/open-save-cs5/app/app.jsx %}
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/open-save-cs5/index.html %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/open-save-cs5/app/app.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/spreadsheet/react/open-save-cs5/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/spreadsheet/react/open-save-cs5/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/open-save-cs5" %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs5" %}
 
 Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforesave)  event arguments.
 
@@ -105,7 +111,6 @@ const root = createRoot(document.getElementById('spreadsheet'));
 root.render(<App />);
 ```
 
-
 ## Supported Excel file formats for Save
 
 The following file formats are supported when saving the Spreadsheet component:
@@ -124,15 +129,15 @@ By default, the Spreadsheet control saves the Excel file and downloads it to the
 Please find below the code to retrieve blob data from the Spreadsheet control below.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/save-as-blobdata-cs1/index.ts %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/save-as-blobdata-cs1/app/app.jsx %}
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/save-as-blobdata-cs1/index.html %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/save-as-blobdata-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/save-as-blobdata-cs1" %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/save-as-blobdata-cs1" %}
 
 ### Save Workbook as JSON
 
@@ -225,72 +230,71 @@ On the server side, the save service will take the received JSON data, pass it t
 
 The following code example shows how to save an Excel file using a hosted web service in AWS Lambda, as mentioned above.
 
-```ts
-import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
-
-let saveInitiated: boolean;
-//Initialize Spreadsheet component
-let spreadsheet: Spreadsheet = new Spreadsheet({
-    sheets: [
-    ],
-    saveUrl:'https://xxxxxxxxxxxxxxxxxxxxxxxxx.amazonaws.com/Prod/api/spreadsheet/save',
-    beforeSave: (eventArgs) => {
+```js
+function Default() {
+    let spreadsheet;
+    let saveInitiated;
+    const beforeSaveHandler = (eventArgs) => {
         if (!saveInitiated) {
             eventArgs.cancel = true; // Preventing default save action.
             saveInitiated = true; // The "beforeSave" event will trigger for "saveAsJson" action also, so we are preventing for the "saveAsJson".
             saveAsExcel(eventArgs);
         }
-    }
-});
-const saveAsExcel = (eventArgs) => {
-    // Convert the spreadsheet workbook to JSON data.
-    spreadsheet.saveAsJson().then(Json => {
-        saveInitiated = false;
-        const formData = new FormData();
-        // Passing the JSON data to server to perform save operation.
-        formData.append('JSONData', JSON.stringify(Json.jsonObject.Workbook));
-        formData.append('saveType', 'Xlsx');
-        formData.append('fileName', 'Worksheet');
-        formData.append('pdfLayoutSettings', '{"fitSheetOnOnePage":false,"orientation":"Portrait"}');
-        // Using fetch API to invoke the server for save processing.
-        fetch('https://xxxxxxxxxxxxxxxxxxxxxxxxx.amazonaws.com/Prod/api/spreadsheet/save', {
-            method: 'POST', body: formData
-        }).then(response => {
-            if (response.ok) {
-                return response.blob();
-            }
-        }).then(data => {
-            const reader = new FileReader();
-            reader.onload = function () {
-                //Converts the result of the file reading operation into a base64 string.
-                const textBase64Str = reader.result.toString();
-                //Converts the base64 string into a Excel base64 string.
-                const excelBase64Str = atob(textBase64Str.replace('data:text/plain;base64,', ''));
-                //Converts the Excel base64 string into byte characters.
-                const byteCharacters = atob(excelBase64Str.replace('data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,', ''));
-                const byteArrays = [];
-                for (let i = 0; i < byteCharacters.length; i++) {
-                    byteArrays.push(byteCharacters.charCodeAt(i));
+    };
+    const saveAsExcel = (eventArgs) => {
+        // Convert the spreadsheet workbook to JSON data.
+        spreadsheet.saveAsJson().then(Json => {
+            saveInitiated = false;
+            const formData = new FormData();
+            // Passing the JSON data to server to perform save operation.
+            formData.append('JSONData', JSON.stringify(Json.jsonObject.Workbook));
+            formData.append('saveType', 'Xlsx');
+            formData.append('fileName', 'Worksheet');
+            formData.append('pdfLayoutSettings', '{"fitSheetOnOnePage":false,"orientation":"Portrait"}');
+            // Using fetch API to invoke the server for save processing.
+            fetch('https://xxxxxxxxxxxxxxxxxxxxxxxxx.amazonaws.com/Prod/api/spreadsheet/save', {
+                method: 'POST', body: formData
+            }).then(response => {
+                if (response.ok) {
+                    return response.blob();
                 }
-                const byteArray = new Uint8Array(byteArrays);
-                //creates a blob data from the byte array with xlsx content type.
-                const blobData = new Blob([byteArray], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-                const blobUrl = URL.createObjectURL(blobData);
-                const anchor = document.createElement('a');
-                anchor.download = 'Sample.xlsx';
-                anchor.href = blobUrl;
-                document.body.appendChild(anchor);
-                anchor.click();
-                URL.revokeObjectURL(blobUrl);
-                document.body.removeChild(anchor);
-            }
-            reader.readAsDataURL(data);
-        });
-    });        
-};
-
-//Render initialized Spreadsheet component
-spreadsheet.appendTo('#spreadsheet');
+            }).then(data => {
+                const reader = new FileReader();
+                reader.onload = function () {
+                    //Converts the result of the file reading operation into a base64 string.
+                    const textBase64Str = reader.result.toString();
+                    //Converts the base64 string into a Excel base64 string.
+                    const excelBase64Str = atob(textBase64Str.replace('data:text/plain;base64,', ''));
+                    //Converts the Excel base64 string into byte characters.
+                    const byteCharacters = atob(excelBase64Str.replace('data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,', ''));
+                    const byteArrays = [];
+                    for (let i = 0; i < byteCharacters.length; i++) {
+                        byteArrays.push(byteCharacters.charCodeAt(i));
+                    }
+                    const byteArray = new Uint8Array(byteArrays);
+                    //creates a blob data from the byte array with xlsx content type.
+                    const blobData = new Blob([byteArray], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+                    const blobUrl = URL.createObjectURL(blobData);
+                    const anchor = document.createElement('a');
+                    anchor.download = 'Sample.xlsx';
+                    anchor.href = blobUrl;
+                    document.body.appendChild(anchor);
+                    anchor.click();
+                    URL.revokeObjectURL(blobUrl);
+                    document.body.removeChild(anchor);
+                }
+                reader.readAsDataURL(data);
+            });
+        });        
+    };
+    return (<div className='control-pane'>
+            <div className='control-section spreadsheet-control'>
+                <SpreadsheetComponent saveUrl='https://xxxxxxxxxxxxxxxxxxxxxxxxx.amazonaws.com/Prod/api/spreadsheet/save' ref={(ssObj) => { spreadsheet = ssObj; }} beforeSave={beforeSaveHandler}>
+                </SpreadsheetComponent>
+            </div>
+        </div>);
+}
+export default Default;
 ```
 
 ```csharp
@@ -310,15 +314,15 @@ In the Spreadsheet component, there is currently no direct option to save data a
 The following code example shows how to save the spreadsheet data as base64 string.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/base-64-string/index.ts %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/base-64-string/app/app.jsx %}
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/base-64-string/index.html %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/base-64-string/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/base-64-string" %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/base-64-string" %}
 
 ## Advanced Save options
 
