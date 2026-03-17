@@ -1,328 +1,131 @@
 ---
 layout: post
-title: Navigation in React Pdfviewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion React Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Page Navigation in React PDF Viewer | Syncfusion
+description: Learn about page navigation and its programmatic APIs in the Syncfusion React PDF Viewer control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page navigation in React PDF Viewer
+# Page Navigation in React PDF Viewer
 
-The React PDF Viewer supports multiple internal and external navigation options.
+This guide explains how to implement page navigation in the Syncfusion React PDF Viewer. You will learn how to enable toolbar navigation and programmatically navigate to specific pages using the PDF Viewer's navigation methods.
 
-## Toolbar page navigation option
+## Enable Page Navigation
 
-The default toolbar of the PDF Viewer contains the following navigation options
-
-* [**Go to page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
-* [**Show next page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
-* [**Show previous page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page of a PDF document.
-* [**Show first page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
-* [**Show last page**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Essential JS 2</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Essential JS 2" />
-    <meta name="author" content="Syncfusion" />
-    <link rel="shortcut icon" href="resources/favicon.ico" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!--style reference from app-->
-    <link href="/styles/styles.css" rel="stylesheet" />
-
-    <!--system js reference and configuration-->
-    <script src="node_modules/systemjs/dist/system.src.js" type="text/javascript"></script>
-    <script src="system.config.js" type="text/javascript"></script>
-</head>
-
-<body>
-    <!--Element which will render as PdfViewer -->
-    <div id="PdfViewer"></div>
-</body>
-
-</html>
-```
-
-To enable or disable page navigation, set `enableNavigation` on the `PdfViewerComponent`. Example:
+To enable or disable page navigation in the PDF Viewer, set the [`enableNavigation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablenavigation) property on the [`PdfViewerComponent`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer).
 
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
 import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  ThumbnailView,
-  BookmarkView,
-  TextSelection,
-  Inject
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject
 } from '@syncfusion/ej2-react-pdfviewer';
+import { useRef, RefObject } from 'react';
 
-function App() {
-  let pdfviewer;
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      enableNavigation={true}
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      style={{ height: '500px', width: '100%' }}
-    >
-      <Inject services={[
-        Toolbar,
-        Magnification,
-        Navigation,
-        LinkAnnotation,
-        ThumbnailView,
-        BookmarkView,
-        TextSelection
-      ]} />
-    </PdfViewerComponent>
-  );
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent | null> = useRef<PdfViewerComponent>(null);
+    return (
+        <div style={{ height: '100vh' }}>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={viewerRef}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+                style={{ height: '100%' }}
+                enableNavigation={true}
+            >
+                <Inject
+                    services={[
+                        Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                        ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
+    );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  ThumbnailView,
-  BookmarkView,
-  TextSelection,
-  Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  let pdfviewer;
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      enableNavigation={true}
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
-      style={{ height: '500px', width: '100%' }}
-    >
-      <Inject services={[
-        Toolbar,
-        Magnification,
-        Navigation,
-        LinkAnnotation,
-        ThumbnailView,
-        BookmarkView,
-        TextSelection
-      ]} />
-    </PdfViewerComponent>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
 ![Page navigation toolbar in the PDF Viewer](../images/navigation.png)
 
-Also, you can programmatically perform page navigation options as follows.
+## Toolbar Navigation Options
 
-```html
-<!DOCTYPE html>
-<html lang="en">
+The default toolbar of the PDF Viewer provides the following navigation options:
 
-<head>
-    <title>Essential JS 2</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Essential JS 2" />
-    <meta name="author" content="Syncfusion" />
-    <link rel="shortcut icon" href="resources/favicon.ico" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+- **Go to page**: Navigates to a specific page of a PDF document.
+- **Show next page**: Navigates to the next page of a PDF document.
+- **Show previous page**: Navigates to the previous page of a PDF document.
+- **Show first page**: Navigates to the first page of a PDF document.
+- **Show last page**: Navigates to the last page of a PDF document.
 
-    <!--style reference from app-->
-    <link href="/styles/styles.css" rel="stylesheet" />
+## Programmatic Navigation
 
-    <!--system js reference and configuration-->
-    <script src="node_modules/systemjs/dist/system.src.js" type="text/javascript"></script>
-    <script src="system.config.js" type="text/javascript"></script>
-</head>
-
-<body>
-    <!--Element which will render as PdfViewer -->
-    <button id="goToFirstPage">Go To First Page</button>
-    <button id="goToLastPage">Go To last Page</button>
-    <button id="goToNextPage">Go To Next Page</button>
-    <button id="goToPage">Go To Page</button>
-    <button id="goToPreviousPage">Go To Previous Page</button>
-    <div id="PdfViewer"></div>
-</body>
-
-</html>
-```
+You can programmatically perform page navigation using the navigation methods available on the navigation module of PDF Viewer instance.
 
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
 import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  BookmarkView,
-  ThumbnailView,
-  Print,
-  TextSelection,
-  TextSearch,
-  Annotation,
-  FormFields,
-  Inject
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject
 } from '@syncfusion/ej2-react-pdfviewer';
+import { useRef, RefObject } from 'react';
 
-let pdfviewer;
-
-function App() {
-  const onGoToFirstPage = () => pdfviewer && pdfviewer.navigation.goToFirstPage();
-  const onGoToLastPage = () => pdfviewer && pdfviewer.navigation.goToLastPage();
-  const onGoToNextPage = () => pdfviewer && pdfviewer.navigation.goToNextPage();
-  const onGoToPage = () => pdfviewer && pdfviewer.navigation.goToPage(4);
-  const onGoToPreviousPage = () => pdfviewer && pdfviewer.navigation.goToPreviousPage();
-
-  React.useEffect(() => {
-    // Load document after mount if needed
-    // pdfviewer && pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
-  }, []);
-
-  return (
-    <div>
-      <button id="goToFirstPage" onClick={onGoToFirstPage}>Go To First Page</button>
-      <button id="goToLastPage" onClick={onGoToLastPage}>Go To last Page</button>
-      <button id="goToNextPage" onClick={onGoToNextPage}>Go To Next Page</button>
-      <button id="goToPage" onClick={onGoToPage}>Go To Page</button>
-      <button id="goToPreviousPage" onClick={onGoToPreviousPage}>Go To Previous Page</button>
-      <PdfViewerComponent
-        id="pdfViewer"
-        ref={(scope) => { pdfviewer = scope; }}
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        style={{ height: '500px', width: '100%' }}
-      >
-        <Inject services={[
-          Toolbar,
-          Magnification,
-          Navigation,
-          LinkAnnotation,
-          ThumbnailView,
-          BookmarkView,
-          Print,
-          TextSelection,
-          TextSearch,
-          Annotation,
-          FormFields
-        ]} />
-      </PdfViewerComponent>
-    </div>
-  );
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent | null> = useRef<PdfViewerComponent>(null);
+    const onGoToFirstPage = () => viewerRef.current && viewerRef.current.navigation.goToFirstPage();
+    const onGoToLastPage = () => viewerRef.current && viewerRef.current.navigation.goToLastPage();
+    const onGoToNextPage = () => viewerRef.current && viewerRef.current.navigation.goToNextPage();
+    const onGoToPage = () => viewerRef.current && viewerRef.current.navigation.goToPage(4);
+    const onGoToPreviousPage = () => viewerRef.current && viewerRef.current.navigation.goToPreviousPage();
+    return (
+        <div style={{ height: '100vh' }}>
+            <button onClick={onGoToFirstPage}>Go To First Page</button>
+            <button onClick={onGoToLastPage}>Go To Last Page</button>
+            <button onClick={onGoToNextPage}>Go To Next Page</button>
+            <button onClick={onGoToPage}>Go To Page 4</button>
+            <button onClick={onGoToPreviousPage}>Go To Previous Page</button>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={viewerRef}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+                style={{ height: '100%' }}
+            >
+                <Inject
+                    services={[
+                        Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                        ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
+    );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  BookmarkView,
-  ThumbnailView,
-  Print,
-  TextSelection,
-  TextSearch,
-  Annotation,
-  FormFields,
-  Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-
-let pdfviewer;
-
-function App() {
-  const onGoToFirstPage = () => pdfviewer && pdfviewer.navigation.goToFirstPage();
-  const onGoToLastPage = () => pdfviewer && pdfviewer.navigation.goToLastPage();
-  const onGoToNextPage = () => pdfviewer && pdfviewer.navigation.goToNextPage();
-  const onGoToPage = () => pdfviewer && pdfviewer.navigation.goToPage(4);
-  const onGoToPreviousPage = () => pdfviewer && pdfviewer.navigation.goToPreviousPage();
-
-  return (
-    <div>
-      <button id="goToFirstPage" onClick={onGoToFirstPage}>Go To First Page</button>
-      <button id="goToLastPage" onClick={onGoToLastPage}>Go To last Page</button>
-      <button id="goToNextPage" onClick={onGoToNextPage}>Go To Next Page</button>
-      <button id="goToPage" onClick={onGoToPage}>Go To Page</button>
-      <button id="goToPreviousPage" onClick={onGoToPreviousPage}>Go To Previous Page</button>
-      <PdfViewerComponent
-        id="pdfViewer"
-        ref={(scope) => { pdfviewer = scope; }}
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        style={{ height: '500px', width: '100%' }}
-      >
-        <Inject services={[
-          Toolbar,
-          Magnification,
-          Navigation,
-          LinkAnnotation,
-          ThumbnailView,
-          BookmarkView,
-          Print,
-          TextSelection,
-          TextSearch,
-          Annotation,
-          FormFields
-        ]} />
-      </PdfViewerComponent>
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
 See the [StackBlitz sample](https://stackblitz.com/edit/5dqbkd?file=index.ts) for an interactive demonstration.
 
+## Troubleshooting
+
+**Navigation buttons not working**
+
+Ensure that the [`Navigation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation) service is included in the `Inject` services array. Without this service, navigation functionality will not be available.
+
+**Page number out of range**
+
+When using [`goToPage()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation#gotopage), ensure the page number is within the valid range (1 to total pages). Passing an invalid page number will result in no navigation.
+
 ## See also
 
-* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar/)
-* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/feature-module/)
+- [Toolbar items](../toolbar-customization/toolbar)
+- [Feature Modules](../feature-module)
