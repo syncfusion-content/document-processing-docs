@@ -66,7 +66,9 @@ public class SpreadsheetController : Controller
     [HttpPost]
     public void Save(SaveSettings saveSettings)
     {
-        Workbook.Save(saveSettings);
+        if(saveSettings && saveSettings.JSONData) {
+            Workbook.Save(saveSettings);
+        }
     }
 }
 ```
@@ -120,13 +122,13 @@ protected void Application_BeginRequest()
 
 ### Run the MVC Project
 
-After adding the controller code, build and run the MVC project (F5 or Ctrl+F5 in Visual Studio).
+After adding the controller codes and above mentioned configurations, build and run the MVC project (F5 or Ctrl+F5 in Visual Studio).
 
 ---
 
 ### Configuring the Client-Side URLs
 
-Once your local service is running, configure your client application to use the local endpoints:
+Once your local service is launched, configure the openUrl and saveUrl properties in client application to use the local endpoints.
 
 ```js
 <SpreadsheetComponent
@@ -136,3 +138,9 @@ Once your local service is running, configure your client application to use the
 ```
 
 For more information, refer to the following [blog post](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
+
+## See Also
+
+* [Docker Image Overview](../server-deployment/spreadsheet-server-docker-image-overview)
+* [Open Excel Files](../open-excel-files)
+* [Save Excel Files](../save-excel-files)

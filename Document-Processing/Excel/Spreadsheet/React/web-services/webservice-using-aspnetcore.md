@@ -51,7 +51,7 @@ Add the following controller actions to enable open and save functionality:
 public IActionResult Open([FromForm] IFormCollection openRequest)
 {
     OpenRequest open = new OpenRequest();
-    if (openRequest.Files.Count > 0) {
+    if (openRequest.Files && openRequest.Files.Count > 0) {
         open.File = openRequest.Files[0];
         return Content(Workbook.Open(open));
     }
@@ -63,7 +63,9 @@ public IActionResult Open([FromForm] IFormCollection openRequest)
 [Route("Save")]
 public IActionResult Save([FromForm] SaveSettings saveSettings)
 {
-    return Workbook.Save(saveSettings);
+    if(saveSettings && saveSettings.JSONData) {
+        return Workbook.Save(saveSettings);
+    }
 }
 ```
 
@@ -130,7 +132,7 @@ Build and run your Web API project. For detailed instructions, refer to:
 
 ### Configuring the Client-Side URLs
 
-After your local service is running, configure your client application to use the local endpoints:
+Once your local service is launched, configure the openUrl and saveUrl properties in client application to use the local endpoints.
 
 ```js
 <SpreadsheetComponent
@@ -140,3 +142,9 @@ After your local service is running, configure your client application to use th
 ```
 
 For more information, refer to the following [blog post](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
+
+## See Also
+
+* [Docker Image Overview](../server-deployment/spreadsheet-server-docker-image-overview)
+* [Open Excel Files](../open-excel-files)
+* [Save Excel Files](../save-excel-files)
