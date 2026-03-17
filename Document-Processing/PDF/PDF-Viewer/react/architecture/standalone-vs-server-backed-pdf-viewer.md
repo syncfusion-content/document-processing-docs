@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Standalone vs Server-Backed PDF Viewer
+title: Standalone vs Server-Backed PDF Viewer  | Syncfusion
 description: Compare standalone and server-backed PDF viewer modes to choose the best architecture for performance, scalability, and security.
 platform: document-processing
 control: PDF Viewer
@@ -29,7 +29,7 @@ This model minimizes network latency, reduces server dependency, and provides fa
 
 ### Server-backed viewer
 
-In server-backed mode, the browser acts primarily as a presentation layer. PDF processing operations—such as parsing, rendering, import/export, and sometimes annotations—are performed on a backend service, with the client receiving processed data or rendered output.
+In server-backed mode, the browser acts primarily as a presentation layer. PDF processing operations—such as parsing, rendering, import/export, and sometimes annotations—are performed on a back-end service, with the client receiving processed data or rendered output.
 
 This model is typically used when documents must remain on the server due to compliance, centralized control, or heavy server-side workflows.
 
@@ -44,7 +44,7 @@ The following table summarizes the key differences between standalone and server
 | **Scalability** | Scales with client devices | Scales with server resources |
 | **Server load** | Minimal or none | High (CPU, memory, I/O intensive) |
 | **Offline support** | Possible (cached/local PDFs) | Not supported |
-| **Deployment complexity** | Simple (static hosting) | Requires backend infrastructure |
+| **Deployment complexity** | Simple (static hosting) | Requires back-end infrastructure |
 | **Cost** | Lower operational cost | Higher infrastructure cost |
 | **Customization** | High (client-side events and hooks) | Limited by server APIs |
 | **Typical use cases** | Viewing, annotations, forms, fast navigation | Compliance-heavy, controlled environments |
@@ -53,7 +53,7 @@ The following table summarizes the key differences between standalone and server
 
 For most web applications, a standalone client-side viewer offers significant advantages. Rendering directly in the browser eliminates round-trip delays to the server, resulting in faster page load times, smoother scrolling, and instant annotation feedback.
 
-Standalone viewers also simplify deployment by removing dependency on backend services. This makes them ideal for cloud-native applications, SPAs, and scenarios where responsiveness and user experience are critical.
+Standalone viewers also simplify deployment by removing dependency on back-end services. This makes them ideal for cloud-native applications, SPAs, and scenarios where responsiveness and user experience are critical.
 
 ## When to choose a server-backed viewer
 

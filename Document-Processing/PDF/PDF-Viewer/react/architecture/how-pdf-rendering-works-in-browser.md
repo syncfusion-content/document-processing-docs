@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How PDF Rendering Works in the Browser
+title: How PDF Rendering Works in the Browser  | Syncfusion
 description: Understand how PDF files are parsed, processed, and rendered as pixels in the browser, and the performance and security considerations involved.
 platform: document-processing
 control: PDF Viewer
@@ -58,12 +58,12 @@ After parsing, the viewer resolves and fetches resources needed for rendering.
 
 **Image resolution:**
 
-- **Decoding**: Encoded image streams (JPEG, PNG, TIFF, flate-compressed) are identified and decoded **on-demand** during rendering, not during resource resolution. This lazy approach saves memory for documents with many images.
-- **Format handling**: Common formats are supported natively by canvas/WebGL; unsupported formats are transcoded server-side via `serviceUrl`.
+- **Decoding**: Encoded image streams (JPEG, PNG, TIFF, Flate-compressed) are identified and decoded **on-demand** during rendering, not during resource resolution. This lazy approach saves memory for documents with many images.
+- **Format handling**: Common formats are supported natively by canvas/WebGL; unsupported formats are trans-coded server-side via `serviceUrl`.
 
 **Cross-origin resource sharing (CORS):**
 
-If fonts or images reference external URLs (uncommon but possible), CORS headers must permit browser access. Missing or misconfigured CORS headers cause resource load failures. Configure your server:
+If fonts or images reference external URLs (uncommon but possible), CORS headers must permit browser access. Missing or mis-configured CORS headers cause resource load failures. Configure your server:
 
 ```
 Access-Control-Allow-Origin: https://your-app-domain
@@ -77,7 +77,7 @@ Effective resource caching dramatically improves performance for multi-page docu
 - **Cache eviction**: For large PDFs on memory-constrained devices, implement cache eviction policies to free resources for unseen pages.
 - **HTTP caching**: Serve PDFs and resources with appropriate `Cache-Control` headers to enable browser caching.
 
-**Performance tip:** For documents with large or many images, consider **server-side image optimization** (compression, transcoding) before serving to clients.
+**Performance tip:** For documents with large or many images, consider **server-side image optimization** (compression, trans-coding) before serving to clients.
 
 ## 3. Convert PDF drawing instructions into an internal display list
 
@@ -103,7 +103,7 @@ Rather than re-interpreting PDF operators on each render, PDFium converts them i
 
 **Why a display list improves performance:**
 
-1. **Efficient re-rendering**: Zooming, panning, or rotating requires only re-rasterizing, not re-parsing PDF operators.
+1. **Efficient re-rendering**: Zooming, panning, or rotating requires only re-rasterize, not re-parsing PDF operators.
 2. **Partial updates**: Only invalidated regions (e.g., annotation overlays) are re-rendered; unchanged content reuses cached results.
 3. **Memory efficiency**: The parsed display list is often smaller than the original PDF content stream.
 4. **Robustness**: Malformed PDF operators are caught during conversion; rendering is more reliable.
@@ -117,12 +117,12 @@ Rather than re-interpreting PDF operators on each render, PDFium converts them i
 
 The display list is converted to visual output on screen through a rendering process that handles multiple rendering targets, scaling, anti-aliasing, and layer composition.
 
-**Rendering backends:**
+**Rendering back-ends:**
 
-The viewer can use different rendering backends depending on platform and performance requirements:
+The viewer can use different rendering back-ends depending on platform and performance requirements:
 
-- **Canvas 2D**: Most common; rasterizes display list to a bitmap on an HTML5 `<canvas>` element. Hardware-accelerated on most devices.
-- **SVG**: Vector rendering for specific use cases (e.g., accessibility, searchability). Slower for complex pages but produces sharp text and graphics.
+- **Canvas 2D**: Most common; rasterize display list to a bitmap on an HTML5 `<canvas>` element. Hardware-accelerated on most devices.
+- **SVG**: Vector rendering for specific use cases (e.g., accessibility, search ability). Slower for complex pages but produces sharp text and graphics.
 - **WebGL**: High-performance GPU-accelerated rasterization for large documents or repeated re-renders (zooming, panning).
 
 **Device pixel ratio (DPR) scaling:**
@@ -146,7 +146,7 @@ PDFium applies sub-pixel anti-aliasing to smooth edges of text and graphics. Qua
 
 Multiple layers are composited to create the final output:
 
-1. **Base layer (PDF content)**: Rasterized once and cached.
+1. **Base layer (PDF content)**: Rasterize once and cached.
 2. **Annotation layer**: Overlaid above PDF content; updated when annotations change.
 3. **Text layer**: Positioned HTML elements for selection/search (see section 5); rendered with `pointer-events: none` to allow clicks through to underlying layers.
 4. **UI layer**: Toolbar, dialogs, form highlights.
@@ -310,8 +310,6 @@ If workers are unavailable (disabled by user, unsupported browser, or restricted
 - **Worker count**: Adjust `workerCount` in viewer config to balance parallelism and memory usage.
 - **Worker path**: Ensure worker scripts are served from the correct location and accessible.
 - **Security**: Workers must be served from the same origin (same domain and protocol) due to browser security policies.
-
-See [Configuring Web Workers](../) and [Performance Optimization](#) for detailed tuning guidance.
 
 **Performance impact:**
 
@@ -479,7 +477,7 @@ See [Section 5: HTML text layer](#5-html-text-layer-selectable-and-searchable-te
 
 2. Check for decoding errors. Enable debug logging to see which images fail.
 
-3. For unsupported image formats (e.g., JPEG2000), use server-side transcoding:
+3. For unsupported image formats (e.g., JPEG2000), use server-side trans-coding:
    ```js
    const viewer = new PdfViewer({
      serviceUrl: 'https://your-server.com/api/pdf/transcode'

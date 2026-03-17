@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Architecture of Syncfusion React PDF Viewer
+title: Architecture of Syncfusion React PDF Viewer | Syncfusion
 description: High-level design, rendering pipeline, data flow, and performance considerations of the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -16,7 +16,7 @@ This guide provides a deep dive into the technical design and internal workings 
 The Syncfusion React PDF Viewer operates on a **hybrid client-server architecture** designed for scalability, performance, and rich interactivity:
 
 - **Client-side layer**: A responsive React component that handles user interaction, rendering, annotations, and form filling directly in the browser using the PDFium-based rendering engine. The client provides a smooth, zero-latency user experience for common operations like navigation, zooming, and markup.
-- **Server-side layer**: Optional backend services (via `serviceUrl`) that enable advanced features such as document preprocessing, OCR, form field recognition, digital signatures, secure document streaming, and import/export operations using the Syncfusion PDF Library.
+- **Server-side layer**: Optional back-end services (via `serviceUrl`) that enable advanced features such as document preprocessing, OCR, form field recognition, digital signatures, secure document streaming, and import/export operations using the Syncfusion PDF Library.
 
 This architecture allows you to use the viewer in a **client-only mode** (perfect for lightweight applications) or with **full server integration** (for enterprise scenarios requiring advanced document processing, security, and compliance).
 
@@ -34,7 +34,7 @@ The React PDF Viewer is built as a set of modular components, each responsible f
 
 - **UI Shell** – Provides the container layout, dialogs, panels, and responsive structure. Manages the overall layout and ensures the viewer adapts responsively across different screen sizes and devices.
 
-- **Viewer Core** – Coordinates viewer state, document lifecycle, and event routing. Acts as the central orchestrator that manages document loading, page navigation, state synchronization, and event propagation across all modules.
+- **Viewer Core** – Coordinates viewer state, document life-cycle, and event routing. Acts as the central orchestrator that manages document loading, page navigation, state synchronization, and event propagation across all modules.
 
 - **Rendering Engine** – Powered by PDFium, converts parsed PDF page data into visual output using canvas and SVG layers. Handles rasterization, text extraction, and visual rendering of PDF content with high fidelity.
 
@@ -67,7 +67,7 @@ When a PDF document is loaded, the PDFium rendering engine parses it into a stru
 - **Annotation and form field tracking**: Interactive elements are indexed and maintained separately for efficient manipulation and serialization.
 - **Resource caching**: Parsed page resources are cached to minimize repeated processing during page navigation and zoom operations, improving responsiveness.
 
-For very large or complex documents, memory usage can increase significantly. In such cases, consider implementing **partial loading strategies** or streaming approaches via the server backend. See [Performance Optimization](../getting-started-overview) for best practices.
+For very large or complex documents, memory usage can increase significantly. In such cases, consider implementing **partial loading strategies** or streaming approaches via the server back-end. See [Performance Optimization](../getting-started-overview) for best practices.
 
 ## Worker model / Off-main-thread processing
 
@@ -125,12 +125,12 @@ Annotations and form fields are core interactive elements of the PDF viewing exp
 
 **Annotation rendering and management:**
 
-Annotations (highlights, underlines, strikethroughs, freehand drawings, shapes, stamps, ink, and text markup) are rendered as dedicated interactive layers that sit above the base PDF content. This layering approach ensures:
+Annotations (highlights, underlines, strikethrough, freehand drawings, shapes, stamps, ink, and text markup) are rendered as dedicated interactive layers that sit above the base PDF content. This layering approach ensures:
 
 - **Non-destructive markup**: Annotations overlay the original PDF without modifying the underlying document.
 - **Efficient rendering**: Only annotation layers update when user marks up the document; PDF content remains static.
 - **Event propagation**: User interactions with annotations generate events that flow through the Viewer Core.
-- **Persistence and serialization**: Annotation data can be exported to XFDF, JSON, or other formats for storage and reimport across sessions.
+- **Persistence and serialization**: Annotation data can be exported to XFDF, JSON, or other formats for storage and reimporting across sessions.
 
 See [Annotations in React PDF Viewer](../annotation/overview) for comprehensive annotation types, styling, and API usage.
 
@@ -145,7 +145,7 @@ Form fields (text inputs, checkboxes, radio buttons, dropdowns, signature fields
 
 Advanced form features include:
 
-- **Digital signatures**: Sign form fields with certificates; signature validation and timestamping via server integration.
+- **Digital signatures**: Sign form fields with certificates; signature validation and time-stamping via server integration.
 - **Form validation**: Custom validation rules and required field enforcement.
 - **Form submission**: Export form data as FDF, XFDF, or JSON formats.
 - **Form locking**: Prevent field editing after submission for read-only workflows.
