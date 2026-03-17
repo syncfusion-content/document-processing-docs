@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation in React PDF Viewer | Syncfusion
-description: Learn about the various navigation options available in the Syncfusion React PDF Viewer control.
+description: Learn about the various navigation options available in the Syncfusion React PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

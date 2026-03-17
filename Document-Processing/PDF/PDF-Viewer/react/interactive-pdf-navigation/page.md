@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Page Navigation in React PDF Viewer | Syncfusion
-description: Learn about page navigation and its programmatic APIs in the Syncfusion React PDF Viewer control.
+description: Learn about the page navigation and its programmatic APIs in the Syncfusion React PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
