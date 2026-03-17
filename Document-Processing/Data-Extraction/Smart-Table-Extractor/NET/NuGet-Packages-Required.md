@@ -10,7 +10,7 @@ keywords: Assemblies
 
 ## Extract Structured data from PDF
 
-To work with Smart Table Extractor, the following NuGet packages need to be installed in your application.
+To work with Smart Table Extractor, the following NuGet packages need to be installed in your application from [nuget.org](https://www.nuget.org/).
 
 <table>
 <tr>
@@ -25,7 +25,7 @@ Windows Forms<br/>
 Console Application (Targeting .NET Framework)
 </td>
 <td>
-{{'Syncfusion.SmartTableExtractor.WinForms.nupkg'| markdownify }}
+{{'[Syncfusion.SmartTableExtractor.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.WinForms/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -33,15 +33,7 @@ Console Application (Targeting .NET Framework)
 WPF
 </td>
 <td>
-{{'Syncfusion.SmartTableExtractor.Wpf.nupkg'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET MVC5
-</td>
-<td>
-{{'Syncfusion.SmartTableExtractor.AspNet.Mvc5.nupkg'| markdownify }}
+{{'[Syncfusion.SmartTableExtractor.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.Wpf)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -50,7 +42,7 @@ ASP.NET Core (Targeting NET Core) <br/>
 Console Application (Targeting .NET Core) <br/> 
 </td>
 <td>
-{{'Syncfusion.SmartTableExtractor.Net.Core.nupkg'| markdownify }}
+{{'[Syncfusion.SmartTableExtractor.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.Net.Core)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -59,7 +51,7 @@ Windows UI (WinUI) <br/>
 .NET Multi-platform App UI (.NET MAUI)
 </td>
 <td>
-{{'Syncfusion.SmartTableExtractor.NET.nupkg'| markdownify }}
+{{'[Syncfusion.SmartTableExtractor.NET.nupkg](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.NET)'| markdownify }}
 </td>
 </tr>
 </table>
