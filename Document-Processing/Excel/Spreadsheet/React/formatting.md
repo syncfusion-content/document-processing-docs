@@ -194,39 +194,7 @@ To highlight cell or range of cells from whole workbook you can apply background
 
 ### Borders
 
-You can add borders around a cell or range of cells to define a section of worksheet or a table. The different types of border options available in the spreadsheet are,
-
-| Types | Actions |
-|-------|---------|
-| Top Border | Specifies the top border of a cell or range of cells.|
-| Left Border | Specifies the left border of a cell or range of cells.|
-| Right Border | Specifies the right border of a cell or range of cells.|
-| Bottom Border | Specifies the bottom border of a cell or range of cells.|
-| No Border | Used to clear the border from a cell or range of cells.|
-| All Border | Specifies all border of a cell or range of cells.|
-| Horizontal Border | Specifies the top and bottom border of a cell or range of cells.|
-| Vertical Border | Specifies the left and right border of a cell or range of cells.|
-| Outside Border | Specifies the outside border of a range of cells.|
-| Inside Border | Specifies the inside border of a range of cells.|
-
-You can also change the color, size, and style of the border. The size and style supported in the spreadsheet are,
-
-| Types | Actions |
-|-------|---------|
-| Thin | Specifies the `1px` border size (default).|
-| Medium | Specifies the `2px` border size.|
-| Thick | Specifies the `3px` border size.|
-| Solid | Used to create the `solid` border (default).|
-| Dashed | Used to create the `dashed` border.|
-| Dotted | Used to create the `dotted` border.|
-| Double | Used to create the `double` border.|
-
-Borders can be applied in the following ways,
-* Using the  `border`, `borderLeft`, `borderRight`, `borderBottom` properties, you can set the desired border to each cell at initial load.
-* Using the `setBorder` method, you can set various border options to a cell or range of cells.
-* Selecting the border options from ribbon toolbar.
-
-The following code example shows the style formatting in text and cells of the spreadsheet.
+You can add borders around a cell or range of cells to define a section of worksheet or a table. To know more about borders, see [Borders](./border).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

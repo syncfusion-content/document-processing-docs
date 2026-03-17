@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion React Spreadsheet component provides options to customize the user interface and control the behavior of its UI components.
 
-You can control the ribbon, toolbar items, tabs, context menu, and overall appearance. Use these options to show, hide, or modify UI elements, attach custom behavior, and surface application actions.
+You can control the ribbon tabs, toolbar items, context menu, and overall appearance. Use these options to show, hide, or modify UI elements and attach custom behavior.
 
 ## Create Custom Ribbon Tabs and Items
 
@@ -36,9 +36,7 @@ The following code sample shows how to create custom ribbon tabs and groups.
 
 The Syncfusion React Spreadsheet component allows you to extend the Ribbon by adding custom toolbar items. You can make Toolbar items to execute custom actions.
 
-To add these items, the component provides the [addToolbarItems](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#addtoolbaritems) method, which lets you insert new tools into a chosen tab. This makes it simple to include your own actions.
-
-You can add items to an existing tab or you can include them as part of a new Ribbon tab.
+To add these items, the component provides the [addToolbarItems](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#addtoolbaritems) method, which lets you insert new tools into a chosen tab. This makes it simple to include your own actions. You can add items to an existing tab or you can include them as part of a new Ribbon tab.
 
 The following code sample shows how to add toolbar items.
 
@@ -53,7 +51,7 @@ The following code sample shows how to add toolbar items.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/add-toolbar-items-cs1" %}
 
-## Hide or Show Ribbon Items
+## Hide or Show Ribbon Tabs and Items
 
 The Syncfusion React Spreadsheet component allows you to hide or show ribbon tabs and toolbar items. This helps you create a simple and clean user interface by showing only the tools that are needed.
 

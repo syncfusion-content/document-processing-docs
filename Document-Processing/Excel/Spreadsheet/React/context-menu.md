@@ -54,70 +54,12 @@ Please find the table below for default context menu items and their actions.
 | [`Protect Sheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#protectsheet) | Prevent unwanted changes from others by limiting their ability to edit. |
 | [`Hide`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#hide) |Hide the selected worksheet. |
 
-## Context Menu Customization
-
-You can perform the following context menu customization options in the spreadsheet
-
-* Add Context Menu Items
-* Remove Context Menu Items
-* Enable/Disable Context Menu Items
-
-### Add Context Menu Items
-
-You can add the custom items in context menu using the [`addContextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#addcontextmenuitems) in `contextmenuBeforeOpen` event
-
-In this demo, Custom Item is added after the Paste item in the context menu.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/context-menu-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/context-menu-cs1/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/context-menu-cs1" %}
-
-### Remove Context Menu Items
-
-You can remove the items in context menu using the [`removeContextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#removecontextmenuitems) in `contextmenuBeforeOpen` event
-
-In this demo, Insert Column item has been removed from the row/column header context menu.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/context-menu-cs2/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/context-menu-cs2/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/context-menu-cs2" %}
-
-### Enable/Disable Context Menu Items
-
-You can enable/disable the items in context menu using the [`enableContextMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#enablecontextmenuitems) in `contextmenuBeforeOpen` event
-
-In this demo, Rename item is disabled in the pager context menu.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/context-menu-cs3/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/context-menu-cs3/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/context-menu-cs3" %}
-
 ## Note
 
 You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 
+* [Customize context menu](./user-interface-customization/customize-context-menu)
 * [Worksheet](./worksheet)
 * [Rows and columns](./rows-and-columns)

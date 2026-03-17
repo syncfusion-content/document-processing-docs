@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Border
+# Apply Borders to Cells
 
 The Syncfusion React Spreadsheet component allows you to apply borders to a cell or a range of cells. Borders help you separate sections, highlight data, or format tables clearly in your worksheet. You can apply borders in different styles, sizes, and colors based on your needs.
 
@@ -28,7 +28,7 @@ The Spreadsheet supports many types of borders. Each type adds a border to a spe
 | Outside Border | Specifies the outside border of a range of cells.|
 | Inside Border | Specifies the inside border of a range of cells.|
 
-## Border Size and Styles
+## Customize Border Colors and Styles
 
 You can also change how the border looks by adjusting its size and style. The Spreadsheet supports the following options:
 
@@ -48,54 +48,27 @@ Borders can be applied in the following ways,
 - Using the [setBorder](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#setborder) method, you can set various border options to a cell or range of cells.
 - Selecting the border options from the ribbon toolbar.
 
-## Programmatic Borders
-
-You can apply borders programmatically at initial load or at runtime. Borders may be set on individual cell styles in the sheet model or applied via the Spreadsheet API methods.
-
-### Set border in the sheet model
-
-Assign a `border` style on a cell in the `sheets` configuration to apply borders when the Spreadsheet renders:
-
-```js
-const sheets = [{
-	rows: [{
-		cells: [
-			{ index: 0, value: 'Header', style: { border: '2px solid #333333' } },
-			{ index: 1, value: 'Value', style: { border: '1px dashed #0078d7' } }
-		]
-	}]
-}];
-
-<SpreadsheetComponent sheets={sheets} />
-```
-
-### Apply borders at runtime
-
-The Spreadsheet exposes methods to change formatting at runtime. Use the setBorder method to apply or update borders for a range from your code:
-
-```js
-spreadsheet.setBorder({ border: '1px solid #e0e0e0' }, 'A3:E12', 'Outer');
-```
-
-### Remove borders
-
-To remove the border style on the target cells, use the UI "No Border" option in the ribbon.
-
-The following code example shows the style formatting in text and cells of the spreadsheet.
+The following code sample shows how to apply borders in the Spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/cellformat-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/border-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/cellformat-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/border-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/cellformat-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/border-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/cellformat-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/border-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/cellformat-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/border-cs1" %}
+
+ ## Remove Borders
+
+To remove the border style on the target cells, use the UI "No Border" option in the ribbon.
+
+![Remove borders in spreadsheet](./images/spreadsheet_remove_borders.png)

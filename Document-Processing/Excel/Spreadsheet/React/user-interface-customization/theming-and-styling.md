@@ -15,11 +15,9 @@ Below is the reference link for the list of supported themes and their CSS filen
 
 Theme documentation: https://ej2.syncfusion.com/react/documentation/appearance/theme
 
-## Customizing Theme color
+# Customizing Theme color
 
-The Syncfusion React Spreadsheet component supports many themes and also allows you to apply your own custom styles. 
-
-By default, the Spreadsheet uses the Material theme. If you want to change the colors, spacing, or style, you can customize the theme using the Theme Studio. Theme Studio lets you pick a theme, modify colors, and download a ready‑to‑use CSS file for your project.
+The Syncfusion React Spreadsheet component supports many themes and lets you apply custom styles. You can customize theme colors using Theme Studio. Theme Studio lets you pick a theme, modify colors, and download a ready‑to‑use CSS file for your project.
 
 You can open Theme Studio here:
 https://ej2.syncfusion.com/themestudio/?theme=material
