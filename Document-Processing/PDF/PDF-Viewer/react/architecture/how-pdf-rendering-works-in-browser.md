@@ -9,7 +9,7 @@ documentation: ug
 
 # How PDF Rendering Works in the Browser
 
-**Explanation** – A detailed walkthrough of the end-to-end PDF rendering pipeline in the browser. Learn how PDFium and the Syncfusion React PDF Viewer parse PDF documents, resolve resources, convert drawing instructions into pixels, and handle the practical trade-offs that affect performance, accuracy, and security.
+A detailed walkthrough of the end-to-end PDF rendering pipeline in the browser. Learn how PDFium and the Syncfusion React PDF Viewer parse PDF documents, resolve resources, convert drawing instructions into pixels, and handle the practical trade-offs that affect performance, accuracy, and security.
 
 ## Overview
 
@@ -21,8 +21,6 @@ Rendering a PDF in the browser is a multi-stage process that transforms a binary
 - **Ensure security and compliance** – Understand cross-origin resource sharing (CORS), font handling, and memory constraints.
 
 This page explains the conceptual rendering pipeline used by the Syncfusion React PDF Viewer (powered by the PDFium rendering engine). While the specific implementation details may vary, the core concepts apply to most browser-based PDF viewers.
-
-**Key takeaway:** Each stage in the pipeline has performance implications and trade-offs. By understanding how they interconnect, you can make better decisions about viewer configuration, document preprocessing, and user experience optimization.
 
 ## 1. Parsing and decoding
 
@@ -54,7 +52,7 @@ After parsing, the viewer resolves and fetches resources needed for rendering.
 
 - **Embedded fonts**: Full or subset fonts stored in the PDF are extracted and made available to the rendering engine.
 - **System fonts**: If a PDF references standard fonts (e.g., Helvetica, Times New Roman) not embedded, the viewer uses system fonts.
-- **Font subsetting trade-off**: Subset fonts reduce PDF file size but require careful glyph-to-character mapping during text layer creation (see [section 5](#5-html-text-layer-selectable-and-searchable-text)). If mapping fails, text selection becomes misaligned.
+- **Font subsetting trade-off**: Subset fonts reduce PDF file size but require careful glyph-to-character mapping during text layer creation (see [HTML Text Layer](#5-html-text-layer-selectable-and-searchable-text)). If mapping fails, text selection becomes misaligned.
 
 **Image resolution:**
 
@@ -81,37 +79,27 @@ Effective resource caching dramatically improves performance for multi-page docu
 
 ## 3. Convert PDF drawing instructions into an internal display list
 
-PDF content streams contain drawing instructions—operators that define how to render page content. These instructions are converted into an internal **display list** (also called a **scene graph**), which serves as an intermediate representation optimized for rendering.
+PDF content streams contain drawing instructions that define how to render page content. The viewer converts these instructions into an internal **display list** (also called a **scene graph**), which serves as an optimized intermediate representation for efficient rendering.
 
-**PDF drawing operators:**
+**How it works:**
 
-PDF content streams consist of operators such as:
+PDFium processes the raw PDF drawing commands and converts them into an optimized internal format that includes:
 
-- **Path operators**: `m` (moveto), `l` (lineto), `c` (curveto), `re` (rectangle), `f` (fill), `S` (stroke)
-- **Text operators**: `Tj` (show text), `TJ` (show text with adjustments), `Tf` (set font)
-- **Graphics state**: `cm` (transform matrix), `w` (line width), `ca` (fill alpha)
-- **Image operators**: `BI/EI` (begin/end inline image), `Do` (show XObject)
-- **Other**: Clipping paths, blend modes, patterns
+- Resolved graphics operations (paths, fills, images, text) with final coordinates and properties
+- Transformed graphics state changes (color, scaling, transparency)
+- Bounding boxes for efficient region management
 
-**Display list representation:**
+**Performance benefits:**
 
-Rather than re-interpreting PDF operators on each render, PDFium converts them into an optimized internal format:
-
-- **Graphics operations**: Recorded as `draw line`, `fill path`, `show image`, etc., with resolved coordinates and properties.
-- **State stack**: Graphics state changes (color, transform, alpha) are encoded inline.
-- **Bounding boxes**: Recorded to enable efficient culling and region updates.
-
-**Why a display list improves performance:**
-
-1. **Efficient re-rendering**: Zooming, panning, or rotating requires only re-rasterize, not re-parsing PDF operators.
-2. **Partial updates**: Only invalidated regions (e.g., annotation overlays) are re-rendered; unchanged content reuses cached results.
-3. **Memory efficiency**: The parsed display list is often smaller than the original PDF content stream.
-4. **Robustness**: Malformed PDF operators are caught during conversion; rendering is more reliable.
+1. **Efficient re-rendering**: Zooming, panning, or rotating reuses the display list; no need to re-parse the original instructions
+2. **Partial updates**: Only changed regions (e.g., annotation overlays) are re-rendered; unchanged content is cached
+3. **Memory efficiency**: The optimized display list is typically smaller than the original PDF content stream
+4. **Reliability**: Rendering errors are caught early, ensuring consistent results
 
 **Trade-offs:**
 
-- **Memory usage**: The display list consumes memory proportional to page complexity. Very large or complex pages may require streaming or tiling strategies.
-- **Conversion latency**: Converting to a display list adds latency before rendering begins; this is typically hidden by off-thread processing (see section 7).
+- **Memory usage**: Complex pages consume more memory for the display list; very large pages may require tiling strategies
+- **Conversion time**: Initial display list creation adds latency, though this is typically handled off-thread (see [Off-main-thread processing](#7-off-main-thread-processing-workers--wasm))
 
 ## 4. Rendering (Rasterization / Vector rendering / Compositing)
 
@@ -194,7 +182,7 @@ If text layer elements don't align with rendered text, the root cause is usually
 
 See [Common issues & quick troubleshooting](../troubleshooting/troubleshooting) for diagnosis and fixes.
 
-**Performance tip:** Text layer creation is typically offloaded to a worker thread to avoid UI blocking. For documents with very large text volumes, consider lazy text layer creation (only for visible pages).
+N> **Performance tip:** Text layer creation is typically offloaded to a worker thread to avoid UI blocking. For documents with very large text volumes, consider lazy text layer creation (only for visible pages).
 
 ## 6. Fonts: embedding, subsetting, and fallback
 
@@ -428,7 +416,7 @@ Rendering issues often trace to one of the stages in the pipeline. By understand
 3. Disable CSS zoom/transforms that conflict with canvas scaling.
 4. For high-resolution devices, consider reducing rendering quality to balance sharpness and performance.
 
-See [Section 4: Rendering](#4-rendering-rasterization--vector-rendering--compositing) and [DPR troubleshooting](#).
+See [Rendering, Rasterization](#4-rendering-rasterization--vector-rendering--compositing) to know more about DPR conversion.
 
 ### Text selection misalignment
 
