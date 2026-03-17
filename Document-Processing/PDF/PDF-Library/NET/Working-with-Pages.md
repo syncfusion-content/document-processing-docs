@@ -1609,11 +1609,10 @@ using (PdfDocument document = new PdfDocument())
 {
     // Add a page to the document.
     PdfPage page1 = document.Pages.Add();
-    document.Actions.AfterOpen = 
     // Create and add new JavaScript action to execute when the first page opens
-    Page1.Actions.OnOpen = new PdfJavaScriptAction("app.alert(\"Welcome! This page has just been opened.\");");
+    page1.Actions.OnOpen = new PdfJavaScriptAction("app.alert(\"Welcome! This page has just been opened.\");");
     // Create and add new URI action to execute when the first page closes
-    Page1.Actions.OnClose = new PdfUriAction("http://www.google.com");
+    page1.Actions.OnClose = new PdfUriAction("http://www.google.com");
     // Add second page to the document.
     PdfPage page2 = document.Pages.Add();
     // Create a sound action 
@@ -1623,13 +1622,16 @@ using (PdfDocument document = new PdfDocument())
     soundAction.Sound.Encoding = PdfSoundEncoding.Signed;
     soundAction.Volume = 0.9f;
     // Set the sound action to execute when the second page opens
-    Page2.Actions.OnOpen = soundAction;
+    page2.Actions.OnOpen = soundAction;
     // Create and add new Launch action to execute when the second page closes
-    Page2.Actions.OnClose = new PdfLaunchAction("logo.png");
-    // Removing the close action on first page
-    Page1.Actions.OnClose = null;
-    // Removing both open and close actions on second page
-    Page2.Actions.Clear(true);
+    page2.Actions.OnClose = new PdfLaunchAction("logo.png");
+    // Add third page to the document
+    PdfPage page3 = document.Pages.Add();
+    // Create and add new JavaScript action to execute when the third page opens
+    PdfAction jsAction = new PdfJavaScriptAction("app.alert(\"Welcome! Third page has just been opened.\");");
+    jsAction.Next = new PdfJavaScriptAction("app.alert(\"This is the second action.\");");
+    jsAction.Next.Next = new PdfJavaScriptAction("app.alert(\"This is the third action.\");");
+    page3.Actions.OnOpen = jsAction;
     //Save the document
     document.Save("Output.pdf");
 }
@@ -1646,11 +1648,10 @@ using (PdfDocument document = new PdfDocument())
 {
     // Add a page to the document.
     PdfPage page1 = document.Pages.Add();
-    document.Actions.AfterOpen = 
     // Create and add new JavaScript action to execute when the first page opens
-    Page1.Actions.OnOpen = new PdfJavaScriptAction("app.alert(\"Welcome! This page has just been opened.\");");
+    page1.Actions.OnOpen = new PdfJavaScriptAction("app.alert(\"Welcome! This page has just been opened.\");");
     // Create and add new URI action to execute when the first page closes
-    Page1.Actions.OnClose = new PdfUriAction("http://www.google.com");
+    page1.Actions.OnClose = new PdfUriAction("http://www.google.com");
     // Add second page to the document.
     PdfPage page2 = document.Pages.Add();
     // Create a sound action 
@@ -1660,13 +1661,16 @@ using (PdfDocument document = new PdfDocument())
     soundAction.Sound.Encoding = PdfSoundEncoding.Signed;
     soundAction.Volume = 0.9f;
     // Set the sound action to execute when the second page opens
-    Page2.Actions.OnOpen = soundAction;
+    page2.Actions.OnOpen = soundAction;
     // Create and add new Launch action to execute when the second page closes
-    Page2.Actions.OnClose = new PdfLaunchAction("logo.png");
-    // Removing the close action on first page
-    Page1.Actions.OnClose = null;
-    // Removing both open and close actions on second page
-    Page2.Actions.Clear(true);
+    page2.Actions.OnClose = new PdfLaunchAction("logo.png");
+    // Add third page to the document
+    PdfPage page3 = document.Pages.Add();
+    // Create and add new JavaScript action to execute when the third page opens
+    PdfAction jsAction = new PdfJavaScriptAction("app.alert(\"Welcome! Third page has just been opened.\");");
+    jsAction.Next = new PdfJavaScriptAction("app.alert(\"This is the second action.\");");
+    jsAction.Next.Next = new PdfJavaScriptAction("app.alert(\"This is the third action.\");");
+    page3.Actions.OnOpen = jsAction;
     //Save the document
     document.Save("Output.pdf");
 }
@@ -1680,15 +1684,18 @@ Imports Syncfusion.Pdf.Interactive
 
 ' Create a new PDF document.
 Using document As New PdfDocument()
+
     ' Add a page to the document.
     Dim page1 As PdfPage = document.Pages.Add()
     ' Create and add new JavaScript action to execute when the first page opens
-    page1.Actions.OnOpen = New PdfJavaScriptAction("app.alert(""Welcome! This page has just been opened."");")
+    page1.Actions.OnOpen = New PdfJavaScriptAction(
+        "app.alert(""Welcome! This page has just been opened."");"
+    )
     ' Create and add new URI action to execute when the first page closes
     page1.Actions.OnClose = New PdfUriAction("http://www.google.com")
     ' Add second page to the document.
     Dim page2 As PdfPage = document.Pages.Add()
-    ' Create a sound action 
+    ' Create a sound action
     Dim soundAction As New PdfSoundAction("Startup.wav")
     soundAction.Sound.Bits = 16
     soundAction.Sound.Channels = PdfSoundChannels.Stereo
@@ -1698,10 +1705,172 @@ Using document As New PdfDocument()
     page2.Actions.OnOpen = soundAction
     ' Create and add new Launch action to execute when the second page closes
     page2.Actions.OnClose = New PdfLaunchAction("logo.png")
-    ' Removing the close action on first page
-    page1.Actions.OnClose = Nothing
-    ' Removing both open and close actions on second page
-    page2.Actions.Clear(True)
+    ' Add third page to the document
+    Dim page3 As PdfPage = document.Pages.Add()
+    ' Create and add new JavaScript action to execute when the third page opens
+    Dim jsAction As PdfAction = New PdfJavaScriptAction(
+        "app.alert(""Welcome! Third page has just been opened."");"
+    )
+    jsAction.Next = New PdfJavaScriptAction(
+        "app.alert(""This is the second action."");"
+    )
+    jsAction.Next.Next = New PdfJavaScriptAction(
+        "app.alert(""This is the third action."");"
+    )
+    page3.Actions.OnOpen = jsAction
+    ' Save the document
+    document.Save("Output.pdf")
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Removing page-level actions from PDF
+
+Removes page‑level actions from PDF documents by disabling actions triggered on page open and page close events, ensuring that pages no longer execute automatic behaviors while preserving existing annotation actions where required.
+
+Refer to the following code example for removing PDF page‑level actions.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+// Create a new PDF document.
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page to the document.
+    PdfPage page1 = document.Pages.Add();
+    // Create and add new JavaScript action to execute when the first page opens
+    page1.Actions.OnOpen = new PdfJavaScriptAction("app.alert(\"Welcome! This page has just been opened.\");");
+    // Create and add new URI action to execute when the first page closes
+    page1.Actions.OnClose = new PdfUriAction("http://www.google.com");
+    // Add second page to the document.
+    PdfPage page2 = document.Pages.Add();
+    // Create a sound action 
+    PdfSoundAction soundAction = new PdfSoundAction("Startup.wav");
+    soundAction.Sound.Bits = 16;
+    soundAction.Sound.Channels = PdfSoundChannels.Stereo;
+    soundAction.Sound.Encoding = PdfSoundEncoding.Signed;
+    soundAction.Volume = 0.9f;
+    // Set the sound action to execute when the second page opens
+    page2.Actions.OnOpen = soundAction;
+    // Create and add new Launch action to execute when the second page closes
+    page2.Actions.OnClose = new PdfLaunchAction("logo.png");
+    // Add third page to the document
+    PdfPage page3 = document.Pages.Add();
+    // Create and add new JavaScript action to execute when the third page opens
+    PdfAction jsAction = new PdfJavaScriptAction("app.alert(\"Welcome! Third page has just been opened.\");");
+    jsAction.Next = new PdfJavaScriptAction("app.alert(\"This is the second action.\");");
+    jsAction.Next.Next = new PdfJavaScriptAction("app.alert(\"This is the third action.\");");
+    page3.Actions.OnOpen = jsAction;
+    // Removing the open action on first page
+    page1.Actions.OnOpen = null;
+    // Removing the close action on second page
+    page2.Actions.OnClose = null;
+    // Removing both actions on third page 
+    page3.Actions.Clear(false);
+    //Save the document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+// Create a new PDF document.
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page to the document.
+    PdfPage page1 = document.Pages.Add();
+    // Create and add new JavaScript action to execute when the first page opens
+    page1.Actions.OnOpen = new PdfJavaScriptAction("app.alert(\"Welcome! This page has just been opened.\");");
+    // Create and add new URI action to execute when the first page closes
+    page1.Actions.OnClose = new PdfUriAction("http://www.google.com");
+    // Add second page to the document.
+    PdfPage page2 = document.Pages.Add();
+    // Create a sound action 
+    PdfSoundAction soundAction = new PdfSoundAction("Startup.wav");
+    soundAction.Sound.Bits = 16;
+    soundAction.Sound.Channels = PdfSoundChannels.Stereo;
+    soundAction.Sound.Encoding = PdfSoundEncoding.Signed;
+    soundAction.Volume = 0.9f;
+    // Set the sound action to execute when the second page opens
+    page2.Actions.OnOpen = soundAction;
+    // Create and add new Launch action to execute when the second page closes
+    page2.Actions.OnClose = new PdfLaunchAction("logo.png");
+    // Add third page to the document
+    PdfPage page3 = document.Pages.Add();
+    // Create and add new JavaScript action to execute when the third page opens
+    PdfAction jsAction = new PdfJavaScriptAction("app.alert(\"Welcome! Third page has just been opened.\");");
+    jsAction.Next = new PdfJavaScriptAction("app.alert(\"This is the second action.\");");
+    jsAction.Next.Next = new PdfJavaScriptAction("app.alert(\"This is the third action.\");");
+    page3.Actions.OnOpen = jsAction;
+    // Removing the open action on first page
+    page1.Actions.OnOpen = null;
+    // Removing the close action on second page
+    page2.Actions.OnClose = null;
+    // Removing both actions on third page 
+    page3.Actions.Clear(false);
+    //Save the document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+' Create a new PDF document.
+Using document As New PdfDocument()
+
+    ' Add a page to the document.
+    Dim page1 As PdfPage = document.Pages.Add()
+    ' Create and add new JavaScript action to execute when the first page opens
+    page1.Actions.OnOpen = New PdfJavaScriptAction(
+        "app.alert(""Welcome! This page has just been opened."");"
+    )
+    ' Create and add new URI action to execute when the first page closes
+    page1.Actions.OnClose = New PdfUriAction("http://www.google.com")
+    ' Add second page to the document.
+    Dim page2 As PdfPage = document.Pages.Add()
+    ' Create a sound action
+    Dim soundAction As New PdfSoundAction("Startup.wav")
+    soundAction.Sound.Bits = 16
+    soundAction.Sound.Channels = PdfSoundChannels.Stereo
+    soundAction.Sound.Encoding = PdfSoundEncoding.Signed
+    soundAction.Volume = 0.9F
+    ' Set the sound action to execute when the second page opens
+    page2.Actions.OnOpen = soundAction
+    ' Create and add new Launch action to execute when the second page closes
+    page2.Actions.OnClose = New PdfLaunchAction("logo.png")
+    ' Add third page to the document
+    Dim page3 As PdfPage = document.Pages.Add()
+    ' Create and add new JavaScript action to execute when the third page opens
+    Dim jsAction As PdfAction = New PdfJavaScriptAction(
+        "app.alert(""Welcome! Third page has just been opened."");"
+    )
+    jsAction.Next = New PdfJavaScriptAction(
+        "app.alert(""This is the second action."");"
+    )
+    jsAction.Next.Next = New PdfJavaScriptAction(
+        "app.alert(""This is the third action."");"
+    )
+    page3.Actions.OnOpen = jsAction
+    ' Removing the open action on first page
+    page1.Actions.OnOpen = Nothing
+    ' Removing the close action on second page
+    page2.Actions.OnClose = Nothing
+    ' Removing both actions on third page
+    page3.Actions.Clear(False)
     ' Save the document
     document.Save("Output.pdf")
 End Using
