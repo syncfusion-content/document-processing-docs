@@ -581,21 +581,21 @@ See [Section 8: Device & performance considerations](#8-device--performance-cons
 - [Standalone vs Server-Backed Viewer](../architecture/standalone-vs-server-backed) – Client-only vs. hybrid architectures
 
 **Performance and optimization:**
-- [Performance Optimization](../performance/performance-optimization) – Detailed tuning strategies, worker configuration, caching, and profiling
-- [Performance Profiling](../performance/performance-profiling) – Using browser DevTools to measure and diagnose rendering bottlenecks
-- [Memory Management](../performance/memory-management) – Cache policies, eviction strategies, and handling large documents
+- **Performance Optimization** – Detailed tuning strategies, worker configuration, caching, and profiling
+- **Performance Profiling** – Using browser DevTools to measure and diagnose rendering bottlenecks
+- **Memory Management** – Cache policies, eviction strategies, and handling large documents
 
 **Rendering and styling:**
-- [Theming & Styling](../appearance/themes-overview) – Theme customization and CSS class reference
-- [Rendering Options](../rendering/rendering-options) – Quality levels, rendering backends (Canvas, SVG, WebGL)
+- [Theming & Styling](../theming-and-styling) – Theme customization and CSS class reference
+- **Rendering Options** – Quality levels, rendering backends (Canvas, SVG, WebGL)
 
 **Resource handling:**
-- [Font Management](../resources/font-management) – Font subsetting, fallback strategies, and troubleshooting
-- [Image Optimization](../resources/image-optimization) – Server-side image preprocessing and CORS configuration
+- [Font Management](../how-to/custom-fonts) – Font subsetting, fallback strategies, and troubleshooting
+- **Image Optimization** – Server-side image preprocessing and CORS configuration
 - [Loading PDF Documents](../getting-started/loading-documents) – Document sources, streaming, and authentication
 
 **Advanced topics:**
-- [Web Worker Configuration](../performance/web-worker-configuration) – Worker pool tuning, debugging, and fallback modes
+- **eb Worker Configuration** – Worker pool tuning, debugging, and fallback modes
 - [Server Integration](../server-integration/getting-started) – Using `serviceUrl` for preprocessing, OCR, and advanced features
 - [Troubleshooting Guide](../troubleshooting/troubleshooting) – Comprehensive issue resolution and FAQs
 - [Syncfusion PDF Library Documentation](../pdf-library/overview) – Server-side PDF processing and manipulation
