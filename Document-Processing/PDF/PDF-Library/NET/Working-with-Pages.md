@@ -1609,7 +1609,6 @@ using (PdfDocument document = new PdfDocument())
 {
     // Add a page to the document.
     PdfPage page1 = document.Pages.Add();
-    document.Actions.AfterOpen = 
     // Create and add new JavaScript action to execute when the first page opens
     Page1.Actions.OnOpen = new PdfJavaScriptAction("app.alert(\"Welcome! This page has just been opened.\");");
     // Create and add new URI action to execute when the first page closes
@@ -1645,8 +1644,7 @@ using Syncfusion.Pdf.Interactive;
 using (PdfDocument document = new PdfDocument())
 {
     // Add a page to the document.
-    PdfPage page1 = document.Pages.Add();
-    document.Actions.AfterOpen = 
+    PdfPage page1 = document.Pages.Add(); 
     // Create and add new JavaScript action to execute when the first page opens
     Page1.Actions.OnOpen = new PdfJavaScriptAction("app.alert(\"Welcome! This page has just been opened.\");");
     // Create and add new URI action to execute when the first page closes
