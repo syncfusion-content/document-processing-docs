@@ -9,25 +9,43 @@ documentation: ug
 
 # Ribbon in React Spreadsheet component
 
-It helps to organize a spreadsheet’s features into a series of tabs. By clicking the expand or collapse icon, you can expand or collapse the ribbon toolbar dynamically.
+The Ribbon in the Spreadsheet component, helps to organize the features into a series of tabs, making it easier for users to find and access functionality. You can dynamically expand or collapse the ribbon toolbar to optimize screen space.
+
+- **Tabs** → Groups related operations across feature areas like File, Home, Insert, Data, Review, and View
+
+- **Toolbar Items** → Individual operations within each tab such as Bold, Italic, Font size, Alignment, and Fill color
+
+- **File Menu** → File-related operations including New, Open, Save, Save As, and Print
 
 ## Ribbon Customization
 
-You can customize the ribbon using the following methods,
+You can customize the ribbon appearance and functionality using the following ways:
 
-| Method | Action |
-|-------|---------|
-| [`hideRibbonTabs`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#hideribbontabs) | Used to show or hide the existing ribbon tabs. |
-| [`enableRibbonTabs`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#enableribbontabs) | Used to enable or disable the existing ribbon tabs. |
-| [`addRibbonTabs`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#addribbontabs) | Used to add custom ribbon tabs. |
-| [`hideToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#hidetoolbaritems) | Used to show or hide the existing ribbon toolbar items. |
-| [`enableToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#enabletoolbaritems) | Used to enable or disable the specified toolbar items. |
-| [`addToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#addtoolbaritems) | Used to add the custom items in ribbon toolbar. |
-| [`hideFileMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#hidefilemenuitems) | Used to show or hide the ribbon file menu items. |
-| [`enableFileMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#enablefilemenuitems) | Used to enable or disable file menu items. |
-| [`addFileMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#addfilemenuitems) | Used to add custom file menu items. |
+### Manage Ribbon Items
 
-The following code example shows the usage of ribbon customization.
+Control which ribbon tabs are visible and accessible to users. Use these methods to streamline the interface for specific workflows or user roles.
+
+- [`hideRibbonTabs`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hideribbontabs) - Used to show or hide the existing ribbon tabs.
+- [`enableRibbonTabs`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#enableribbontabs) - Used to enable or disable the existing ribbon tabs.
+- [`addRibbonTabs`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#addribbontabs) - Used to add custom ribbon tabs.
+
+### Manage Toolbar Items
+
+Manage individual toolbar items within each tab. Use these methods to control feature availability and simplify the user interface.
+
+- [`hideToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hidetoolbaritems) - Used to show or hide the existing ribbon toolbar items.
+- [`enableToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#enabletoolbaritems) - Used to enable or disable the specified toolbar items
+- [`addToolbarItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#addtoolbaritems) - Used to add the custom items in ribbon toolbar.
+
+### Manage File Menu Items
+
+Control file-related operations accessible through the File menu. Use these methods to restrict or extend file operations based on your requirements.
+
+- [`hideFileMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hidefilemenuitems) - Used to show or hide the ribbon file menu items.
+- [`enableFileMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#enablefilemenuitems) - Used to enable or disable file menu items.
+- [`addFileMenuItems`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#addfilemenuitems) - Used to add custom file menu items.
+
+The following code example demonstrates how to customize the ribbon by hiding tabs, adding custom tabs, and managing toolbar visibility:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
