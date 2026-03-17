@@ -1,6 +1,16 @@
+---
+layout: post
+title: Document Loading Issue with 404 Error in Docx Editor | Syncfusion
+description: Troubleshooting guide for 404 errors when loading documents due to old Document Editor service endpoints..
+control: document loading issue with 404 error 
+platform: document-processing
+documentation: ug
+domainurl: ##DomainURL##
+---
+
 # Document Loading Issue with 404 Error
 
-If document loading fails and you see a 404 error in the browser console, the application is likely pointing to an old or retired Document Editor web service URL. Starting with v31.x.x the Document Editor Web Service was split into a separate hosted service and older public service endpoints were discontinued. Applications that continue to use the previous `serviceUrl` will be unable to load documents or perform [`operations which require server side interaction`](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es5/web-services-overview#which-operations-require-server-side-interaction).
+If document loading fails and you see a 404 error in the browser console, the application is likely pointing to an old Document Editor web service URL. Starting with v31.x.x the Document Editor Web Service was split into a separate hosted service and older public service endpoints were discontinued. Applications that continue to use the previous `serviceUrl` will be unable to load documents or perform [`operations which require server side interaction`](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es5/web-services-overview#which-operations-require-server-side-interaction).
 
 This issue occurs if you:
 
