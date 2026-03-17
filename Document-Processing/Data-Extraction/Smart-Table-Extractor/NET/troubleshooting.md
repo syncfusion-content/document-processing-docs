@@ -1,12 +1,12 @@
 ---
-title: Troubleshoot SmartTableExtractor in DataExtraction Library | Syncfusion
-description: This section provides troubleshooting steps and answers to frequently asked questions about Syncfusion Smart table Extractor, helping users resolve common issues.
+title: Troubleshoot SmartTableExtractor in DataExtraction | Syncfusion
+description: Troubleshooting steps and FAQs for Syncfusion SmartTableExtractor to help users resolve common issues in WPF and WinForms projects.
 platform: document-processing
 control: SmartTableExtractor
 documentation: UG
 ---
 
-# Troubleshooting and FAQ
+# Troubleshooting and FAQ for Smart Table Extractor
 
 ## ONNX file missing
 

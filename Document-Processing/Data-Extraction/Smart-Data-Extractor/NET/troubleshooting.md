@@ -1,12 +1,12 @@
 ---
-title: Troubleshoot HTML to PDF conversion in .NET PDF Library | Syncfusion
+title: Troubleshoot SmartDataExtractor in DataExtractor | Syncfusion
 description: Learn how to convert HTML to PDF using the Blink rendering engine with various features like TOC, partial web page to PDF, and more.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Troubleshooting and FAQ
+# Troubleshooting and FAQ for Smart Data Extractor
 
 ## ONNX file missing
 
