@@ -32,7 +32,7 @@ Copying is available through several user interaction methods.
 
 ### Using the context menu
 
-When text is selected, the built‑in context menu shows a Copy option. Selecting this option copies the highlighted text to the clipboard. See the [context menu](../context-menu/builtin-context-menu#text-menu-items) documentation for futher explanation.
+When text is selected, the built‑in context menu shows a Copy option. Selecting this option copies the highlighted text to the clipboard. See the [context menu](../context-menu/builtin-context-menu#text-menu-items) documentation for further explanation.
 
 ### Using keyboard shortcuts
 

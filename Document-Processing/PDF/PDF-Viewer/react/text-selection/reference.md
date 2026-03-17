@@ -18,8 +18,10 @@ This document provides the reference details for text selection APIs and events 
 
 Programmatically selects text within a specified page and bounds.
 
+**Method signature:**
+
 ```ts
-pdfviewer.textSelection.selectTextRegion(pageNumber, bounds);
+selectTextRegion(pageNumber: number, bounds: IRectangle[]): void
 ```
 
 **Parameters:**
@@ -27,9 +29,31 @@ pdfviewer.textSelection.selectTextRegion(pageNumber, bounds);
 - pageNumber: number indicating the target page (1 based indexing)
 - bounds: `IRectangle` array defining the selection region
 
+**Example:**
+
+```ts
+pdfviewer.textSelection.selectTextRegion(3, [{
+        "left": 121.07501220703125,
+        "right": 146.43399047851562,
+        "top": 414.9624938964844,
+        "bottom": 430.1625061035156,
+        "width": 25.358978271484375,
+        "height": 15.20001220703125
+    }
+])
+```
+
 ### copyText
 
 Copies the currently selected text to the clipboard.
+
+**Method signature:**
+
+```ts
+copyText(): void
+```
+
+**Example:**
 
 ```ts
 pdfviewer.textSelection.copyText();
@@ -44,46 +68,40 @@ Triggered when the user begins selecting text.
 {% highlight ts %}
 {% raw %}
 <PdfViewerComponent
-    id="PdfViewer"
-    ref={viewerRef}
-    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
-    style={{ height: '100%' }}
     textSelectionStart={(args: TextSelectionStartEventArgs) => {
-        console.log(args);
+        // custom logic
     }}
 >
-    <Inject
-        services={[
-            Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
-            ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-        ]}
-    />
 </PdfViewerComponent>
 {% endraw %}
 {% endhighlight %}
 
 **Arguments include:**
 
-- pageNumber (1 based indexing)
-- name
+- pageNumber - The page where the selection started (1‑based indexing).
+- name - The event name identifier.
 
 ### textSelectionEnd
 
 Triggered when the selection operation completes.
 
-```ts
-<PdfViewerComponent textSelectionEnd={onSelectionEnd} />
-```
+{% highlight ts %}
+{% raw %}
+<PdfViewerComponent
+    textSelectionEnd={(args: TextSelectionEndEventArgs) => {
+        // custom logic
+    }}
+>
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
 
 **Arguments include:**
 
-- pageNumber (1 based indexing)
-- name
-- textContent
-- textBounds
-
-These APIs allow applications to monitor user actions, customize interaction behavior, and extend selection workflows.
+- pageNumber - Page where the selection ended (1‑based indexing).
+- name - Event name identifier.
+- textContent - The full text extracted from the selection range.
+- textBounds - Array of bounding rectangles that define the geometric region of the selected text. Useful for custom UI overlays or programmatic re-selection.
 
 ## See also
 
