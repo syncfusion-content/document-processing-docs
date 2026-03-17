@@ -11,7 +11,7 @@ documentation: UG
 
 Font creation is a primary cause of excessive memory consumption and performance degradation during Office to PDF/Image conversions and PDF processing workflows. This problem is particularly pronounced in multi-threaded web applications where multiple users perform concurrent operations across different threads or browser tabs. 
 
-To address this challenge, Syncfusion Document Processing libraries introduce the **FontManager** class, which provides centralized font management shared across all threads and conversion libraries. This approach eliminates duplicate font objects and significantly reduces memory overhead. 
+To address this challenge, Syncfusion Document Processing libraries introduce the [FontManager](https://help.syncfusion.com/cr/document-processing/Syncfusion.Drawing.Fonts.FontManager.html) class, which provides centralized font management shared across all threads and conversion libraries. This approach eliminates duplicate font objects and significantly reduces memory overhead. 
 
 ## Key Features
 
@@ -70,7 +70,7 @@ N> FontManager automatically manages fonts across all these conversion types, wh
 
 ## Configuring Automatic Font Cleanup
 
-The `FontManager.Delay` property defines the duration (in milliseconds) after which unused font objects are automatically disposed and removed from the cache. When fonts are no longer referenced, an internal `System.Timers.Timer` triggers disposal based on this value. 
+The [FontManager.Delay](https://help.syncfusion.com/cr/document-processing/Syncfusion.Drawing.Fonts.FontManager.html#Syncfusion_Drawing_Fonts_FontManager_Delay) property defines the duration (in milliseconds) after which unused font objects are automatically disposed and removed from the cache. When fonts are no longer referenced, an internal `System.Timers.Timer` triggers disposal based on this value. 
 
 **Default value:** 30,000 milliseconds (30 seconds),
 **Valid range:** 1 to 2,147,483,647 milliseconds.
@@ -118,7 +118,7 @@ app.Run();
 
 ## Immediate Font Cache Cleanup 
 
-The `FontManager.ClearCache()` method immediately clears all font caches managed by the FontManager. This method forcefully removes and disposes all font instances maintained in shared caches, allowing you to reclaim memory deterministically without waiting for the automatic cleanup delay.
+The [FontManager.ClearCache()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Drawing.Fonts.FontManager.html#Syncfusion_Drawing_Fonts_FontManager_ClearCache) method immediately clears all font caches managed by the FontManager. This method forcefully removes and disposes all font instances maintained in shared caches, allowing you to reclaim memory deterministically without waiting for the automatic cleanup delay.
 
 **Use cases:**
 
