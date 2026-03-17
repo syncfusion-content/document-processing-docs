@@ -5,7 +5,7 @@ platform: document-processing
 documentation: UG
 ---
 
-# How Syncfusion manage fonts in Office-to-PDF/image and PDF processing?
+# Font Manager for Office-to-PDF/Image and PDF Processing
 
 ## Overview 
 
@@ -15,45 +15,56 @@ To address this challenge, Syncfusion Document Processing libraries introduce th
 
 ## Key Features
 
-* Shared font caching: Stores fonts in a unified cache to prevent repeated loading across operations. 
-* Memory reduction: Eliminates duplicate font objects, reducing memory usage during large-scale or parallel document conversions. 
-* Performance optimization: Enables multiple threads to safely reuse the same font instances, improving processing speed. 
-* Automatic cleanup: Automatically disposes unused fonts after a configurable delay (FontManager.Delay) to maintain efficiency in long-running applications. 
-* Manual cache management: Provides FontManager.ClearCache() to immediately clear all cached fonts when needed (e.g., during server shutdown). 
+* **Shared font caching:** Stores fonts in a unified cache to prevent repeated loading across operations. 
+* **Memory reduction:** Eliminates duplicate font objects, reducing memory usage during large-scale or parallel document conversions. 
+* **Performance optimization:** Enables multiple threads to safely reuse the same font instances, improving processing speed. 
+* **Automatic cleanup:** Automatically disposes unused fonts after a configurable delay (FontManager.Delay) to maintain efficiency in long-running applications. 
+* **Manual cache management:** Provides FontManager.ClearCache() to immediately clear all cached fonts when needed (e.g., during server shutdown). 
 
 ## Supported Conversions and Workflows 
 
 FontManager optimizes memory usage across the following Office to PDF/Image conversions and PDF processing scenarios: 
 
-### Office Document Conversions 
-
-**Word Library (DocIO)**
-
-* Word to PDF conversion. 
-* Word to Image conversion.
-
-**Excel Library (XlsIO)**
-
-* Excel to PDF conversion.
-* Excel to Image conversion. 
-
-**PowerPoint Library (Presentation)**
-
-* PowerPoint to PDF conversion.
-* PowerPoint to Image conversion.
-
-### PDF Processing Workflows
-
-**PDF Library Operations**
-
-* PDF creation and manipulation 
-* PDF merging and splitting 
-* PDF form filling and flattening 
-* PDF page extraction and insertion 
-* Adding text, images, and annotations to PDF 
-* PDF redaction and security 
-* PDF/A conformance 
-* OCR text extraction 
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Details</th>
+  </tr>
+  <tr>
+    <td><b>Office Document Conversions</b></td>
+    <td>
+      <b>Word Library (DocIO)</b>
+      <ul>
+        <li>Word to PDF conversion.</li>
+        <li>Word to Image conversion.</li>
+      </ul>
+      <b>Excel Library (XlsIO)</b>
+      <ul>
+        <li>Excel to PDF conversion.</li>
+        <li>Excel to Image conversion.</li>
+      </ul>
+      <b>PowerPoint Library (Presentation)</b>
+      <ul>
+        <li>PowerPoint to PDF conversion.</li>
+        <li>PowerPoint to Image conversion.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><b>PDF Processing Workflows</b></td>
+    <td>
+      <b>PDF Library Operations</b>
+      <ul>
+        <li>PDF/A Creation and Conversion</li>
+        <li>Annotations and Forms: Fill and Flatten</li>
+        <li>XPS to PDF Conversion</li>
+        <li>EMF to PDF Conversion</li>
+        <li>Insert Text in PDF</li>
+        <li>Tables and Light Tables (Data Grids in PDF)</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 N> FontManager automatically manages fonts across all these conversion types, whether you're processing a single document or handling thousands of concurrent conversions in a multi-threaded environment.
 
@@ -66,7 +77,7 @@ The `FontManager.Delay` property defines the duration (in milliseconds) after wh
 
 N> This configuration is optional. By default, unused fonts are automatically cleaned up 30 seconds after their references are released. To customize the delay, set this property at the application startup (e.g., in `Startup.cs` or `Program.cs`).
 
-### Example: Basic Configuration 
+The following example demonstrates how to configure `FontManager.Delay` to automatically release cached fonts after the specified delay during document conversions.
 
 {% tabs %}
 {% highlight C# %}
@@ -79,9 +90,7 @@ FontManager.Delay = 50000;
 {% endhighlight %}
 {% endtabs %}
 
-### Example: ASP.NET Core Application 
-
-The following example demonstrates how to configure `FontManager.Delay` in an ASP.NET Core application to ensure cached fonts are automatically released after the specified delay during document conversions. 
+The following example demonstrates how to configure `FontManager.Delay` in an **ASP.NET Core application** to ensure cached fonts are automatically released after the specified delay during document conversions.
 
 {% tabs %}
 
@@ -118,7 +127,7 @@ The `FontManager.ClearCache()` method immediately clears all font caches managed
 * Before maintenance operations.
 * When immediate memory reclamation is required.
 
-### Example: Basic Usage
+The following example demonstrates how to immediately clear all cached fonts using `FontManager.ClearCache()`.
 
 {% tabs %}
 {% highlight C# %}
@@ -131,7 +140,7 @@ FontManager.ClearCache();
 {% endhighlight %}
 {% endtabs %}
 
-### Example: ASP.NET Core Application Shutdown
+The following example demonstrates how to configure `FontManager.ClearCache()` in an **ASP.NET Core application** to clear cached fonts during application shutdown.
 
 {% tabs %}
 {% highlight C# %}
@@ -145,7 +154,6 @@ var lifetime = app.Services.GetRequiredService<IHostApplicationLifetime>();
 // Register a callback to clear font cache during application shutdown 
 lifetime.ApplicationStopping.Register(() => 
 { 
-
     Syncfusion.Drawing.Fonts.FontManager.ClearCache(); 
 }); 
 
@@ -154,6 +162,8 @@ app.Run();
   
 {% endhighlight %}
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Unified-font-manager/.NET/).
 
 ## Best Practices
 
