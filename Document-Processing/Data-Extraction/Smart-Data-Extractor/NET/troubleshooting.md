@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot SmartDataExtractor in DataExtractor | Syncfusion
-description: Learn how to convert HTML to PDF using the Blink rendering engine with various features like TOC, partial web page to PDF, and more.
+description: Troubleshooting steps and FAQs for Syncfusion SmartDataExtractor to resolve common errors in WPF and WinForms projects.
 platform: document-processing
-control: PDF
+control: SmartDataExtractor
 documentation: UG
 ---
 
@@ -62,7 +62,7 @@ If the problem persists after adding the model files, verify file permissions an
 <tr>
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>Install the NuGet package **Microsoft.ML.OnnxRuntime (Version 1.18.0)** manually in your sample/project. <br/>
+<td>Install the NuGet package [Microsoft.ML.ONNXRuntime (Version 1.18.0)](https://www.nuget.org/packages/Microsoft.ML.ONNXRuntime/1.18.0) manually in your sample/project. <br/>
 This package is required for **SmartDataExtractor** across **WPF** and **WinForms**. 
 
 <br/><br/>
@@ -74,26 +74,26 @@ Please refer to the below screenshot,
 </tr>
 </table>
 
-## FileNotFoundException (Microsoft.ML.OnnxRuntime)
+## FileNotFoundException (Microsoft.ML.ONNXRuntime)
 
 <table>
 
 <th style="font-size:14px" width="100px">Exception
 </th>
-<th style="font-size:14px">FileNotFoundException (Microsoft.ML.OnnxRuntime)
+<th style="font-size:14px">FileNotFoundException (Microsoft.ML.ONNXRuntime)
 </th>
 
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
-<td>The application cannot load the *Microsoft.ML.OnnxRuntime* assembly or one of its dependencies. 
+<td>The application cannot load the *Microsoft.ML.ONNXRuntime* assembly or one of its dependencies. 
 </td>
 </tr>
 
 <tr>
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>Install the NuGet package **Microsoft.ML.OnnxRuntime (Version 1.18.0)** manually in your sample/project. <br/>
+<td>Install the NuGet package [Microsoft.ML.ONNXRuntime (Version 1.18.0)](https://www.nuget.org/packages/Microsoft.ML.ONNXRuntime/1.18.0) manually in your sample/project. <br/>
 This package is required for **SmartDataExtractor** across **WPF** and **WinForms**.
 <br/><br/>
 Please refer to the below screenshot,
