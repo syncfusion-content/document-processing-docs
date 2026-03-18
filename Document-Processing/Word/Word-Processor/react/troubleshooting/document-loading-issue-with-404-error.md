@@ -1,37 +1,34 @@
 ---
 layout: post
-title: Document Loading Issue with 404 Error in Docx Editor | Syncfusion
-description: Troubleshooting guide for 404 errors when loading documents due to old Document Editor service endpoints..
-control: document loading issue with 404 error 
+title: Document loading issue in React DOCX editor component | Syncfusion
+description: Document loading may fail with a 404 error if the Document Editor cannot reach a valid service URL, which may be due to the below reasons.
+control: document loading issue with 404 error
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Document Loading Issue with 404 Error
+# Document loading issue with 404 error in React DOCX editor component
 
-If document loading fails and you see a 404 error in the browser console, the application is likely pointing to an old Document Editor web service URL. Starting with v31.x.x the Document Editor Web Service was split into a separate hosted service and older public service endpoints were discontinued. Applications that continue to use the previous `serviceUrl` will be unable to load documents or perform [`operations which require server side interaction`](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es5/web-services-overview#which-operations-require-server-side-interaction).
+If document loading fails and you see a 404 error in the browser console, the Document Editor is unable to reach a valid Web Service endpoint.
 
-This issue occurs if you:
+## Reasons
 
-1. Configuring the Document Editor `serviceUrl` to a old endpoint, for example:
+The 404 error may occur due to the following reasons:
 
-	`https://ej2services.syncfusion.com/production/web-services/api/documenteditor/`
-
-2. Attempting to open a document and observing a 404 (Not Found) in the browser console.
-3. Noticing failed network calls to Document Editor Web API endpoints such as `/Import`, `/SystemClipboard`, or `/SpellCheck`.
-
-## Root cause
-
-The issue occurs because the application is using an old Document Editor service URL which no longer valid
+- **The Web Service is not running or inactive** – When hosting your own ASP.NET Core Web API, the server may be stopped or not deployed correctly, causing required endpoints such as `/Import` or `/SpellCheck` to return 404.
+- **The configured `serviceUrl` is invalid** – Issues like a missing trailing slash (`/`), wrong port number, incorrect API route, or typos will cause the editor to call incorrect endpoints.
+- **The application is using an old or discontinued Document Editor service URL** – When using an old Document Editor service URL which no longer valid (`https://ej2services.syncfusion.com/production/web-services/api/documenteditor/`).
 
 ## Solution
 
-Update the application to use the new hosted Document Editor Web Service URL introduced in v31.x.x. For example:
+1. Update the application to use the new hosted Document Editor Web Service URL introduced in v31.x.x. For example:
 
-```javascript
-container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
-```
+    ```javascript
+    container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+    ```
+
+2. If you are using your own hosted Web API, ensure that the Web Service is running, active, and the configured service URL is valid.
 
 > Note: The hosted Web API link is provided for demonstration and evaluation only. For production use, host your own web service with the required server configuration. See the GitHub Web Service example or use the Docker image for deployment guidance.
 
