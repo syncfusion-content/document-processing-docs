@@ -99,7 +99,7 @@ export default function App() {
 ## Key capabilities
 
 - Enable or disable printing with the [`enablePrint`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enableprint) property
-- Start printing from UI (toolbar Print) or programmatically using `print.print()`(https://ej2.syncfusion.com/react/documentation/api/pdfviewer/print#print-1).
+- Start printing from UI (toolbar Print) or programmatically using [`print.print()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/print#print-1).
 - Control output quality with the [`printScaleFactor`](./print-quality) property (0.5–5)
 - Auto‑rotate pages during print using [`enablePrintRotation`](./enable-print-rotation)
 - Choose where printing happens with [`printMode`](./print-modes) (Default or NewWindow)
