@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Built-in Themes
+# Built in Themes
 
 Our Syncfusion React Spreadsheet component provides a comprehensive set of built-in themes to deliver a consistent, modern, and visually appealing appearance across applications. Applying a theme loads the corresponding CSS file and updates the component’s appearance throughout the UI. For more information about the built-in themes in Syncfusion, please refer to the [documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
@@ -15,7 +15,7 @@ Below is the reference link for the list of supported themes and their CSS filen
 
 Theme documentation: https://ej2.syncfusion.com/react/documentation/appearance/theme
 
-# Customizing Theme color
+# Customizing Theme Color
 
 The Syncfusion React Spreadsheet component supports many themes and lets you apply custom styles. You can customize theme colors using Theme Studio. Theme Studio lets you pick a theme, modify colors, and download a ready‑to‑use CSS file for your project.
 
@@ -169,7 +169,7 @@ Using this CSS, you can customize the Spreadsheet cell element.
 
 ### Customizing the Spreadsheet sorting icon
 
-Use the below CSS to customize the Spreadsheet sorting icon in the Spreadsheet ribbon. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/documentation/appearance/icons/#material) based on your theme.
+Use the below CSS to customize the Spreadsheet sorting icon in the Spreadsheet ribbon. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/documentation/appearance/icons#material) based on your theme.
 
 ```
 
