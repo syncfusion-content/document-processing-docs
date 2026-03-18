@@ -1,25 +1,25 @@
 ---
 layout: post
-title: When backend PDF services are required | Syncfusion
-description: Learn here all about when and why backend (server-side) PDF services are required in Syncfusion React PDF Viewer.
+title: When back-end PDF services are required | Syncfusion
+description: Learn here all about when and why back-end (server-side) PDF services are required in Syncfusion React PDF Viewer.
 platform: document-processing
 documentation: ug
 control: PDF Viewer
 ---
 
-# When backend PDF services are required
+# When back-end PDF services are required
 
-This section explains **when and why backend (server-side) PDF services are required** for the React PDF Viewer and helps you decide whether a server-backed architecture is necessary for your application.
+This section explains **when and why back-end (server-side) PDF services are required** for the React PDF Viewer and helps you decide whether a server-backed architecture is necessary for your application.
 
 ## Overview
 
-The React PDF Viewer can operate entirely in the browser using a [standalone](../getting-started) (client-side) architecture. However, certain functional, security, and performance requirements make it necessary to process PDF operations on a backend server.
+The React PDF Viewer can operate entirely in the browser using a [standalone](../getting-started) (client-side) architecture. However, certain functional, security, and performance requirements make it necessary to process PDF operations on a back-end server.
 
 This page outlines the key decision factors for selecting a [server-backed PDF viewer](../getting-started-with-server-backed).
 
 ## Security & Compliance Requirements
 
-Backend PDF services are required when PDF documents or operations must adhere to strict security and compliance standards.
+back-end PDF services are required when PDF documents or operations must adhere to strict security and compliance standards.
 
 Use server-side processing when:
 - PDF files must not be directly exposed to end users
@@ -32,7 +32,7 @@ In these scenarios, all sensitive PDF operations are executed within a controlle
 
 ## Large-scale or resource-intensive processing
 
-Browser-based PDF processing is limited by device memory and CPU constraints. Backend services are recommended for:
+Browser-based PDF processing is limited by device memory and CPU constraints. back-end services are recommended for:
 
 - Large PDF documents with high page counts
 - Complex PDFs containing heavy graphics or embedded assets
@@ -56,16 +56,16 @@ A server-backed PDF viewer is commonly used in:
 
 - Enterprise document management systems
 - Internal applications with restricted document access
-- Banking, healthcare, and government solutions
+- Banking, health-care, and government solutions
 - High-volume or compliance-driven PDF workflows
 
 ## Getting started with a server-backed PDF viewer
 
-If your application requires backend PDF services, refer to the following guide to configure and integrate a server-backed PDF viewer:
+If your application requires back-end PDF services, refer to the following guide to configure and integrate a server-backed PDF viewer:
 
 [Getting started with server-backed React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-with-server-backed)
 
-This guide covers backend service setup, required endpoints, and client-server configuration details.
+This guide covers back-end service setup, required endpoints, and client-server configuration details.
 
 Use a **server-backed PDF viewer** when security, compliance, scalability, or performance consistency is critical. For lightweight viewing and basic interactions, a standalone client-side viewer may be sufficient.
 
@@ -75,5 +75,5 @@ Use a **server-backed PDF viewer** when security, compliance, scalability, or pe
 - [How PDF Rendering Works in the Browser](./how-pdf-rendering-works-in-browser)
 - [Getting Started standalone PDF Viewer](../getting-started)
 - [Getting Started Server Backed PDF Viewer](../getting-started-with-server-backed)
-- [Standlone vs Server Backed PDF Viewer](./standalone-vs-server-backed-pdf-viewer)
+- [Standalone vs Server Backed PDF Viewer](./standalone-vs-server-backed-pdf-viewer)
 

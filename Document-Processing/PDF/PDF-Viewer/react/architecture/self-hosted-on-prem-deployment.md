@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Self-hosted / On-prem deployment in React PDF Viewer
+title: Self-hosted / On-prem deployment in React PDF Viewer | Syncfusion
+description: Learn here all about Self-hosted / On-prem deployment in Syncfusion React PDF Viewer and component.
 platform: document-processing
 documentation: ug
 control: PDF Viewer
@@ -21,7 +22,7 @@ Both **standalone (client-side)** and **server-backed** deployments can be hoste
 The React PDF Viewer does **not require any third‑party or Syncfusion‑managed cloud services** for production use:
 
 - PDF rendering and interaction can run fully in the browser (standalone mode)
-- Backend PDF services, if used, are hosted and controlled by your organization
+- Back-end PDF services, if used, are hosted and controlled by your organization
 - No document data is sent to Syncfusion servers
 - Licensing is not tied to runtime cloud usage
 
@@ -32,12 +33,12 @@ This makes the viewer suitable for **air‑gapped**, **intranet‑only**, and **
 In standalone mode, all PDF rendering and interactions are handled directly in the browser using local resources.
 
 Key characteristics:
-- No backend PDF service is required
+- No back-end PDF service is required
 - PDFs are processed entirely on the client device
 - Ideal for read‑only viewing and interactive use cases
 - Recommended for most applications
 
-N> We strongly recommend using the **standalone mode** whenever backend processing is not explicitly required.
+N> We strongly recommend using the **standalone mode** whenever back-end processing is not explicitly required.
 
 ## Server-backed deployment (self-hosted)
 
@@ -77,7 +78,7 @@ Self-hosted or on‑prem deployments are commonly used when:
 
 ## Summary
 
-The React PDF Viewer fully supports **self-hosted and on‑prem deployment models**. Whether used in standalone browser mode or with a self-hosted backend service, the viewer operates independently of any cloud services once licensed.
+The React PDF Viewer fully supports **self-hosted and on‑prem deployment models**. Whether used in standalone browser mode or with a self-hosted back-end service, the viewer operates independently of any cloud services once licensed.
 
 For most use cases, the standalone mode is sufficient and recommended. Server-backed deployment should be used only when specific server-side processing requirements exist.
 
@@ -87,5 +88,5 @@ For most use cases, the standalone mode is sufficient and recommended. Server-ba
 - [How PDF Rendering Works in the Browser](./how-pdf-rendering-works-in-browser)
 - [Getting Started standalone PDF Viewer](../getting-started)
 - [Getting Started Server Backed PDF Viewer](../getting-started-with-server-backed)
-- [Standlone vs Server Backed PDF Viewer](./standalone-vs-server-backed-pdf-viewer)
-- [When Backend PDF Viewer are required](./when-backend-pdf-services-are-required)
+- [Standalone vs Server Backed PDF Viewer](./standalone-vs-server-backed-pdf-viewer)
+- [When Back-end PDF Viewer are required](./when-backend-pdf-services-are-required)

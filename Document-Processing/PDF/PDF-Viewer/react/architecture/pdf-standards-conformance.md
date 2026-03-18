@@ -54,7 +54,7 @@ The React PDF Viewer's standards-based rendering capabilities are optimized for:
 - **Archival document access systems** – supporting long-term document preservation initiatives
 - **Compliance-driven environments** – enabling reliable viewing of standards-generated PDFs
 - **Interactive document review workflows** – facilitating annotation, collaboration, and feedback
-- **Healthcare and financial systems** – meeting industry standards for document handling
+- **Health-care and financial systems** – meeting industry standards for document handling
 - **Legal and regulatory platforms** – supporting document management with confidence
 
 ## Complementary solutions
@@ -89,6 +89,6 @@ By leveraging both components, you can build comprehensive document management s
 
 - [Architecture of Syncfusion React PDF Viewer](./architecture-pdfviewer)
 - [How PDF Rendering Works in the Browser](./how-pdf-rendering-works-in-browser)
-- [Standlone vs Server Backed PDF Viewer](./standalone-vs-server-backed-pdf-viewer)
-- [When backend PDF services are required](./when-backend-pdf-services-are-required)
+- [Standalone vs Server Backed PDF Viewer](./standalone-vs-server-backed-pdf-viewer)
+- [When backed PDF services are required](./when-backend-pdf-services-are-required)
 - [Self Hosted on](./self-hosted-on-prem-deployment)

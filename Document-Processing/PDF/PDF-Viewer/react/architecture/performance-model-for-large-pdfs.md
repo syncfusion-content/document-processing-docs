@@ -17,7 +17,7 @@ It also provides guidance on where performance optimizations are already covered
 
 Rendering and interacting with large PDF documents requires careful handling of memory, CPU usage, and rendering pipelines. The React PDF Viewer follows a layered performance model that adapts based on the deployment mode and document complexity.
 
-With **version 31 and above**, significant performance improvements have been introduced—especially in **standalone (client-side) mode**—making the viewer capable of handling large PDFs efficiently without requiring backend services in many scenarios.
+With **version 31 and above**, significant performance improvements have been introduced—especially in **standalone (client-side) mode**—making the viewer capable of handling large PDFs efficiently without requiring back-end services in many scenarios.
 
 This page gives a high-level architectural view of these performance considerations.
 
@@ -54,7 +54,7 @@ For best practices including:
 - Local storage optimization
 - Annotation and form-field handling
 
-See [Load Large PDF Files in React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/load-large-pdf) to know more about Large PDF Handling.
+See [Load Large PDF Files in React PDF Viewer](../document-handling/load-large-pdf) to know more about Large PDF Handling.
 
 This performance model page complements that guide by describing *why* those optimizations work from an architectural perspective.
 
@@ -85,6 +85,6 @@ For implementation details and tuning, refer to the [Load Large PDF Files](../do
 
 - [Architecture of Syncfusion React PDF Viewer](./architecture-pdfviewer)
 - [How PDF Rendering Works in the Browser](./how-pdf-rendering-works-in-browser)
-- [Standlone vs Server Backed PDF Viewer](./standalone-vs-server-backed-pdf-viewer)
-- [When backend PDF services are required](./when-backend-pdf-services-are-required)
+- [Standalone vs Server Backed PDF Viewer](./standalone-vs-server-backed-pdf-viewer)
+- [When back-end PDF services are required](./when-backend-pdf-services-are-required)
 - [Self hosted on-prem Deployment](./self-hosted-on-prem-deployment)
