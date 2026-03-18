@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text selection API and events | Syncfusion
+title: Text selection API and events in React PDF Viewer | Syncfusion
 description: Reference documentation for text selection properties, methods, and events in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: Text selection
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text selection API and events
+# Text selection API and events in React PDF Viewer
 
 This document provides the reference details for text selection APIs and events in the Syncfusion React PDF Viewer. It includes the available configuration property, programmatic methods, and event callbacks that allow applications to react to selection behavior.
 
