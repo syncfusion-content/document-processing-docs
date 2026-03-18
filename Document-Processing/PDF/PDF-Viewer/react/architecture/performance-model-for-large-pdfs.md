@@ -87,4 +87,4 @@ For implementation details and tuning, refer to the [Load Large PDF Files](../do
 - [How PDF Rendering Works in the Browser](./how-pdf-rendering-works-in-browser)
 - [Standalone vs Server Backed PDF Viewer](./standalone-vs-server-backed-pdf-viewer)
 - [When back-end PDF services are required](./when-backend-pdf-services-are-required)
-- [Self hosted on-prem Deployment](./self-hosted-on-prem-deployment)
+- [Self hosted on-premises Deployment](./self-hosted-on-prem-deployment)

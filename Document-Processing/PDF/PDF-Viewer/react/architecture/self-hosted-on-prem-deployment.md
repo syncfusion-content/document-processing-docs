@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Self-hosted / On-prem deployment in React PDF Viewer | Syncfusion
-description: Learn here all about Self-hosted / On-prem deployment in Syncfusion React PDF Viewer and component.
+title: Self-hosted / On-premises deployment in React PDF Viewer | Syncfusion
+description: Learn here all about Self-hosted / On-premises deployment in Syncfusion React PDF Viewer and component.
 platform: document-processing
 documentation: ug
 control: PDF Viewer
 ---
 
-# Self-hosted / On-prem deployment in React PDF Viewer
+# Self-hosted / On-premises deployment in React PDF Viewer
 
 This section explains how the Syncfusion React PDF Viewer supports **self-hosted (on‑premises) deployment** and clarifies how the component operates without any dependency on cloud services.
 
@@ -66,7 +66,7 @@ This gives you full control over:
 - Infrastructure
 - Security policies
 - Data access and storage
-- Deployment lifecycle
+- Deployment life-cycle
 
 ## Typical self-hosted deployment scenarios
 
