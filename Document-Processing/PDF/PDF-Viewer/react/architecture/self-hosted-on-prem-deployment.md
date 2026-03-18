@@ -70,7 +70,7 @@ This gives you full control over:
 
 ## Typical self-hosted deployment scenarios
 
-Self-hosted or on‑prem deployments are commonly used when:
+Self-hosted or on‑premises deployments are commonly used when:
 - Documents must remain within internal networks
 - Regulatory or compliance requirements restrict cloud usage
 - Applications are deployed on private servers or data centers
@@ -78,7 +78,7 @@ Self-hosted or on‑prem deployments are commonly used when:
 
 ## Summary
 
-The React PDF Viewer fully supports **self-hosted and on‑prem deployment models**. Whether used in standalone browser mode or with a self-hosted back-end service, the viewer operates independently of any cloud services once licensed.
+The React PDF Viewer fully supports **self-hosted and on‑premises deployment models**. Whether used in standalone browser mode or with a self-hosted back-end service, the viewer operates independently of any cloud services once licensed.
 
 For most use cases, the standalone mode is sufficient and recommended. Server-backed deployment should be used only when specific server-side processing requirements exist.
 
