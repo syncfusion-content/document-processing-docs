@@ -39,7 +39,7 @@ The following sample shows the `Open` option by using the [`openUrl`](https://ej
 
 Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event arguments.
 
-## BeforeOpenEventArgs – Properties
+**BeforeOpenEventArgs – Properties**
 
 | **Property**          | **Type**                          | **Description** |
 |-------------------|-------------------------------|-------------|
