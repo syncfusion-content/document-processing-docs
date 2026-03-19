@@ -36,7 +36,7 @@ FormRecognizer smartFormRecognizer = new FormRecognizer();
 //Read the input PDF file as stream
 FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite);
 //Recognize the form and get the output as PDF stream
-PdfLoadedDocument pdfLoadedDocument =recognizer.RecognizeFormAsPdfDocument(inputStream);
+PdfLoadedDocument pdfLoadedDocument = smartFormRecognizer.RecognizeFormAsPdfDocument(inputStream);
 //Save the loadeddocument
 pdfLoadedDocument.Save(Output.pdf);
 
