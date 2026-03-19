@@ -15,10 +15,10 @@ The following sample demonstrates how to add icons to cells by assigning the tem
 
 {% tabs %}
 {% highlight js tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/add-icon-in-cell-cs1/app/app.ts %}
+{% include code-snippet/spreadsheet/angular/add-icon-in-cell-cs1/src/app.ts %}
 {% endhighlight %}
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/angular/add-icon-in-cell-cs1/app/main.ts %}
+{% include code-snippet/spreadsheet/angular/add-icon-in-cell-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 

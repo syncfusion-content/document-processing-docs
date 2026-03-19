@@ -15,16 +15,10 @@ The following example shows how to paste values without formatting.
 
 {% tabs %}
 {% highlight js tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/paste-values-cs1/app/app.ts %}
+{% include code-snippet/spreadsheet/angular/paste-values-cs1/src/app.ts %}
 {% endhighlight %}
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/angular/paste-values-cs1/app/main.ts %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/angular/paste-values-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/angular/paste-values-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/angular/paste-values-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 

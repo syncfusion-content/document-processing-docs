@@ -15,10 +15,10 @@ The following sample demonstrates how to insert a [Syncfusion Dropdown component
 
 {% tabs %}
 {% highlight js tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/dynamic-cell-template-cs1/app/app.ts %}
+{% include code-snippet/spreadsheet/angular/dynamic-cell-template-cs1/src/app.ts %}
 {% endhighlight %}
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/angular/dynamic-cell-template-cs1/app/main.ts %}
+{% include code-snippet/spreadsheet/angular/dynamic-cell-template-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 

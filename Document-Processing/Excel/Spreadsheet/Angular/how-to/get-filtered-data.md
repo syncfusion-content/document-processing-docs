@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrieve filtered row data in Angular Spreadsheet component | Syncfusion
+title: Filtered row data in Angular Spreadsheet component | Syncfusion
 description: Learn here all about getting filtered row data in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
@@ -15,10 +15,10 @@ The following example shows how to get the filtered rows from the Spreadsheet:
 
 {% tabs %}
 {% highlight js tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/filter-cs2/app/app.ts %}
+{% include code-snippet/spreadsheet/angular/filter-cs2/src/app.ts %}
 {% endhighlight %}
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/angular/filter-cs2/app/main.ts %}
+{% include code-snippet/spreadsheet/angular/filter-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
