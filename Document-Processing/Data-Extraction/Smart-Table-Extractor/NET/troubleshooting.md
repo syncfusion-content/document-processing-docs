@@ -94,7 +94,7 @@ This package is required for **SmartTableExtractor** across **WPF** and **WinFor
 <br/><br/>
 Please refer to the below screenshot,
 <br/><br/>
-System.IO.FileNotFoundException: Could not load file or assembly *Microsoft.ML.OnnxRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=f27f157f0a5b7bb6* or one of its dependencies. The system cannot find the file specified.
+System.IO.FileNotFoundException: Could not load file or assembly *Microsoft.ML.ONNXRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=f27f157f0a5b7bb6* or one of its dependencies. The system cannot find the file specified.
 Source=Syncfusion.SmartTableExtractor.Base
 <br/><br/> 
 </td>
@@ -113,7 +113,7 @@ Source=Syncfusion.SmartTableExtractor.Base
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
-<td>In a **.NET Framework MVC app**, NuGet sometimes doesn’t automatically copy native runtime dependencies (like *onnxruntime.dll*) into the *bin* folder during publish. 
+<td>In a **.NET Framework MVC app**, NuGet sometimes doesn’t automatically copy native runtime dependencies (like *ONNXruntime.dll*) into the *bin* folder during publish. 
 </td>
 </tr>
 <tr>
