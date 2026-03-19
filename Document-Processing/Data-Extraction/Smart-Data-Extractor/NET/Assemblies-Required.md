@@ -20,7 +20,8 @@ The following assemblies need to be referenced in your application based on the 
     <tr>
       <td>
         {{'WPF'| markdownify }},
-        {{'Windows Forms'| markdownify }}      
+        {{'Windows Forms'| markdownify }} and 
+        {{'ASP.NET MVC'| markdownify }}      
       </td>
       <td>
         Syncfusion.Compression.Base<br/>
