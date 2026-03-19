@@ -31,7 +31,6 @@ Example `Dockerfile` for an Blazor Web Apps Server and Web assembly app:
 {% highlight c# tabtitle=".NET 10 & .NET 9 & .NET 8 (~/Program.cs) Server" %}
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
-
 # install System.Drawing native dependencies
 RUN apt-get update && apt-get install -y --allow-unauthenticated libgdiplus libc6-dev libx11-dev
 RUN ln -s libgdiplus.so gdiplus.dll
@@ -40,7 +39,6 @@ USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
-
 
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
@@ -62,12 +60,12 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "YourServerApp.dll"]
+
 {% endhighlight %}
 
 {% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs) WebAssembly" hl_lines="3 9 11" %}
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
-
 # install System.Drawing native dependencies
 RUN apt-get update && apt-get install -y --allow-unauthenticated libgdiplus libc6-dev libx11-dev
 RUN ln -s libgdiplus.so gdiplus.dll
@@ -106,6 +104,7 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "YourServerApp.dll"]
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -135,7 +134,6 @@ Example `Dockerfile` for standalone WebAssembly:
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
-
 # install System.Drawing native dependencies
 
 RUN apt-get update && apt-get install -y --allow-unauthenticated libgdiplus libc6-dev libx11-dev
@@ -148,10 +146,10 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ## Install Python required for WASM tools
 RUN apt-get update && apt-get install -y \
-        #python3 \
-        #python3-pip \
-        #python3-venv \
-    #&& ln -s /usr/bin/python3 /usr/bin/python || true
+        python3 \
+        python3-pip \
+        python3-venv \
+    && ln -s /usr/bin/python3 /usr/bin/python || true
 ## Install WASM tools
 RUN dotnet workload install wasm-tools
 WORKDIR /src
