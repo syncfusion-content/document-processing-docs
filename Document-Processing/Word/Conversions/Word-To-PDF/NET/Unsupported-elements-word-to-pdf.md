@@ -129,7 +129,7 @@ Linked text boxes are not supported.
 Ink elements
 </td>
 <td>
-Supported only in DOCX format document to PDF.
+Supported only in DOCX format document to PDF. Additional behavior explained {{ '[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#ink)' | markdownify }}.
 </td>
 </tr>
 </table>
@@ -244,6 +244,12 @@ SmartArt typically contains graphic properties, including bounds information for
 ### Drawing Canvas
 
 Creating, editing, or cloning Drawing Canvas elements programmatically is not supported. These elements are not included in Find and Replace functionality or document comparison. Additionally, when opening Word 2003 or 2007 DOCX documents, the Drawing Canvas is treated as a group shape.
+
+### Ink
+
+During Word-to-PDF and Word-to-Image conversions, Syncfusion Word Library uses fallback images embedded in the document to preserve the Ink visual appearance. However, when Ink is created or modified using the Syncfusion Word Library, some Ink effects cannot be rendered accurately due to rendering engine limitations. Although the Ink stroke geometry is preserved, visual brush effects are lost.
+
+**To resolve this**, save the created or modified document using DocIO first in DOCX format. Then, open the saved document in Microsoft Word and save it again. Finally, convert it to PDF or Image using DocIO. This process regenerates the required Ink fallback images, ensuring accurate visual output.
 
 ## Show Warning for Unsupported Elements
 
