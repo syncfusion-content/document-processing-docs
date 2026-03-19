@@ -10,323 +10,148 @@ domainurl: ##DomainURL##
 
 # Table of contents navigation in PDF Viewer
 
-The PDF Viewer provides a built-in table of contents (TOC) experience to help users jump to sections defined by the document’s bookmarks or outline.
+## Overview:
 
-## Table of contents navigation
+This guide shows how to configure hyperlink behavior in the React PDF Viewer: enable/disable links, control how links open, and handle hyperlink events.
 
-Use the table of contents to quickly navigate to headings and sections defined in the PDF. When the document contains a bookmarks/outline structure, the viewer exposes those entries in the table of contents (Bookmarks) pane. Selecting an entry navigates directly to the mapped destination. If the PDF does not include a table of contents, the pane will not list any entries.
+## Steps
 
-![Table of contents pane in PDF Viewer](../images/toc.png)
+### 1. Enable or disable hyperlink interaction
 
-## Hyperlink Navigation
-
-The PDF Viewer provides robust support for hyperlink navigation within PDF documents. This allows users to interact with embedded links, which can point to external websites or other locations within the same document. This section covers how to configure hyperlink behavior, including enabling or disabling links, controlling how they open, and responding to hyperlink-related events.
-
-![Hyperlink Navigation in PDF Viewer](../images/link.png)
-
-### Enabling and Disabling Hyperlinks
-
-By default, the PDF Viewer automatically detects and enables all hyperlinks present in a loaded document. This behavior can be controlled using the `enableHyperlink` property.
-
-- **Property**: `enableHyperlink`
-- **Type**: `boolean`
-- **Default**: `true`
-
-When `enableHyperlink` is set to `false`, all hyperlinks in the document become non-interactive. This means that users cannot click them, and no hyperlink-related events will be triggered.
-
-The following example demonstrates how to disable hyperlink navigation:
+By default hyperlinks are enabled. Set the [`enableHyperlink`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablehyperlink) property to `false` to make links non-interactive.
 
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
 import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  Annotation,
-  LinkAnnotation,
-  ThumbnailView,
-  BookmarkView,
-  TextSelection,
-  Inject
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject
 } from '@syncfusion/ej2-react-pdfviewer';
+import { useRef, RefObject } from 'react';
 
-let pdfviewer;
-
-function App() {
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      enableHyperlink={false}
-      style={{ height: '500px', width: '100%' }}
-    >
-      <Inject services={[
-        Toolbar,
-        Magnification,
-        Navigation,
-        Annotation,
-        LinkAnnotation,
-        ThumbnailView,
-        BookmarkView,
-        TextSelection
-      ]} />
-    </PdfViewerComponent>
-  );
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent | null> = useRef<PdfViewerComponent>(null);
+    return (
+        <div style={{ height: '100vh' }}>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={viewerRef}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+                style={{ height: '100%' }}
+                enableHyperlink={false}
+            >
+                <Inject
+                    services={[
+                        Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                        ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
+    );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  Annotation,
-  LinkAnnotation,
-  ThumbnailView,
-  BookmarkView,
-  TextSelection,
-  Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-
-let pdfviewer;
-
-function App() {
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
-      enableHyperlink={false}
-      style={{ height: '500px', width: '100%' }}
-    >
-      <Inject services={[
-        Toolbar,
-        Magnification,
-        Navigation,
-        Annotation,
-        LinkAnnotation,
-        ThumbnailView,
-        BookmarkView,
-        TextSelection
-      ]} />
-    </PdfViewerComponent>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-> Note: Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
-### Controlling Link Behavior
+### 2. Control how links open
 
-The `hyperlinkOpenState` property determines how external URLs are opened when a hyperlink is clicked.
-
-- **Property**: `hyperlinkOpenState`
-- **Type**: `'CurrentTab' | 'NewTab'`
-- **Default**: `'CurrentTab'`
-
-By default, links open in the same browser tab (`CurrentTab`). To open links in a new tab, set this property to `'NewTab'`. This is useful for preserving the user's current viewing session.
-
-The following example configures hyperlinks to open in a new tab:
+Use the [`hyperlinkOpenState`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkopenstate) property to choose whether external links open in the current tab or a new tab or in a whole new window.
 
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
 import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  Annotation,
-  LinkAnnotation,
-  ThumbnailView,
-  BookmarkView,
-  TextSelection,
-  Inject
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject
 } from '@syncfusion/ej2-react-pdfviewer';
+import { useRef, RefObject } from 'react';
 
-let pdfviewer;
-
-function App() {
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      hyperlinkOpenState="NewTab"
-      style={{ height: '500px', width: '100%' }}
-    >
-      <Inject services={[
-        Toolbar,
-        Magnification,
-        Navigation,
-        Annotation,
-        LinkAnnotation,
-        ThumbnailView,
-        BookmarkView,
-        TextSelection
-      ]} />
-    </PdfViewerComponent>
-  );
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent | null> = useRef<PdfViewerComponent>(null);
+    return (
+        <div style={{ height: '100vh' }}>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={viewerRef}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+                style={{ height: '100%' }}
+                hyperlinkOpenState='NewTab'
+            >
+                <Inject
+                    services={[
+                        Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                        ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
+    );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  Annotation,
-  LinkAnnotation,
-  ThumbnailView,
-  BookmarkView,
-  TextSelection,
-  Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-
-let pdfviewer;
-
-function App() {
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
-      hyperlinkOpenState="NewTab"
-      style={{ height: '500px', width: '100%' }}
-    >
-      <Inject services={[
-        Toolbar,
-        Magnification,
-        Navigation,
-        Annotation,
-        LinkAnnotation,
-        ThumbnailView,
-        BookmarkView,
-        TextSelection
-      ]} />
-    </PdfViewerComponent>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-### Handling Hyperlink Events
+### 3. Handle hyperlink events
 
-The PDF Viewer exposes events that allow for monitoring and customizing hyperlink interactions.
-
-#### hyperlinkClick
-
-The `hyperlinkClick` event is triggered when a user clicks a hyperlink. This event can be used to implement custom logic, such as validating a URL or preventing the default navigation behavior.
-
-The event arguments provide the following information:
-- `hyperlink`: The URL of the clicked hyperlink.
-- `cancel`: A boolean that, when set to `true`, prevents the default navigation action.
-
-#### hyperlinkMouseOver
-
-The `hyperlinkMouseOver` event is triggered when the mouse pointer hovers over a hyperlink. This can be used to display custom tooltips or other visual feedback.
-
-The event arguments include:
-- `hyperlinkElement`: The HTML anchor element (`<a>`) corresponding to the hyperlink.
-
-The following example demonstrates how to use these events:
+Use the [`hyperlinkClick`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkclick) and [`hyperlinkMouseOver`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#hyperlinkmouseover) events to intercept clicks or show custom tooltips. The examples below show how to log the hyperlink and optionally cancel navigation.
 
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { PdfViewerComponent, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Magnification, Navigation, Toolbar, Inject } from '@syncfusion/ej2-react-pdfviewer';
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject, HyperlinkMouseOverArgs, HyperlinkClickEventArgs
+} from '@syncfusion/ej2-react-pdfviewer';
+import { useRef, RefObject } from 'react';
 
-function App() {
-  const hyperlinkClick = (args) => {
-    console.log('Hyperlink Clicked:', args.hyperlink);
-    // To prevent the default navigation behavior, set args.cancel = true;
-    // args.cancel = true;
-  };
-
-  const hyperlinkMouseOver = (args) => {
-    console.log('Mouse is over hyperlink:', args.hyperlinkElement.href);
-  };
-
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      hyperlinkClick={hyperlinkClick}
-      hyperlinkMouseOver={hyperlinkMouseOver}
-      style={{ height: '500px', width: '100%' }}
-    >
-      <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection]} />
-    </PdfViewerComponent>
-  );
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent | null> = useRef<PdfViewerComponent>(null);
+    const hyperlinkClick = (args: HyperlinkClickEventArgs) => {
+        console.log('Hyperlink Clicked:', args.hyperlink);
+        // To prevent the default navigation behavior, set args.cancel = true;
+        // args.cancel = true;
+    };
+    const hyperlinkMouseOver = (args: HyperlinkMouseOverArgs) => {
+        console.log('Mouse is over hyperlink:', args.hyperlinkElement.href);
+    };
+    return (
+        <div style={{ height: '100vh' }}>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={viewerRef}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+                style={{ height: '100%' }}
+                hyperlinkClick={hyperlinkClick}
+                hyperlinkMouseOver={hyperlinkMouseOver}
+            >
+                <Inject
+                    services={[
+                        Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                        ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
+    );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { PdfViewerComponent, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Magnification, Navigation, Toolbar, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  const hyperlinkClick = (args) => {
-    console.log('Hyperlink Clicked:', args.hyperlink);
-    // To prevent the default navigation behavior, set args.cancel = true;
-    // args.cancel = true;
-  };
-
-  const hyperlinkMouseOver = (args) => {
-    console.log('Mouse is over hyperlink:', args.hyperlinkElement.href);
-  };
-
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
-      hyperlinkClick={hyperlinkClick}
-      hyperlinkMouseOver={hyperlinkMouseOver}
-      style={{ height: '500px', width: '100%' }}
-    >
-      <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection]} />
-    </PdfViewerComponent>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
+
+## Troubleshooting
+
+- If links still open when [`enableHyperlink={false}`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablehyperlink), ensure the page uses the correct [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl)/[`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) and that `LinkAnnotation` is not being re-enabled elsewhere.
+- If events do not fire, verify that `Inject` includes `LinkAnnotation` and any other services shown in the examples.
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/bookmark)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page-thumbnail)
+- [Bookmark navigation](./bookmark)
+- [Page navigation](./page)
+- [Page thumbnail navigation](./page-thumbnail)
