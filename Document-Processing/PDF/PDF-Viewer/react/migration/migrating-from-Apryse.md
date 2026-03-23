@@ -9,7 +9,7 @@ control: PDF Viewer
 
 # Migrating from Apryse WebViewer to Syncfusion React PDF Viewer
 
-This guide assists developers in migrating applications built with [Apryse WebViewer](https://docs.apryse.com/web/guides/get-started/react)(formerly PDFTron WebViewer) to the [Syncfusion React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). It focuses on architectural differences, feature mapping, and required changes in a React environment.
+This guide assists developers in migrating applications built with [Apryse WebViewer](https://docs.apryse.com/web/guides/get-started/react) to the [Syncfusion React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). It focuses on architectural differences, feature mapping, and required changes in a React environment.
 
 ## Overview
 
@@ -19,7 +19,7 @@ Syncfusion React PDF Viewer provides a **native React component-based PDF viewin
 
 ## Architecture notes
 
-This guide focuses on replacing an Apryse WebViewer integration with a Syncfusion React PDF Viewer component. Key considerations when migrating include the integration pattern (imperative SDK mounts vs. a declarative React component), how UI/tooling is provided (hosted JS modules vs. injected services), and feature enablement and persistence for annotations and form fields. The instructions below are framed to help migrate code, event handlers, and persistence workflows to the `PdfViewerComponent`.
+This guide focuses on replacing an Apryse WebViewer integration with a Syncfusion React PDF Viewer component. Key considerations when migrating include the integration pattern (imperative SDK mounts vs. a declarative React component), how UI/tooling is provided (hosted JS modules vs. injected services), and enable feature  and persistence for annotations and form fields. The instructions below are framed to help migrate code, event handlers, and persistence workflows to the `PdfViewerComponent`.
 
 ## Installation
 
