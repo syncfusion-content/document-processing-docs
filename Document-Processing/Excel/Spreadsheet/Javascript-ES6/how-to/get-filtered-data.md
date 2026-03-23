@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrieve filtered row data in EJ2 TypeScript Spreadsheet component | Syncfusion
+title: Filtered row data in EJ2 TypeScript Spreadsheet component | Syncfusion
 description: Learn here all about getting filtered row data in Syncfusion EJ2 TypeScript Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
@@ -15,10 +15,10 @@ The following example shows how to get the filtered rows from the Spreadsheet:
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/javascript-es6/filter-cs2/app/index.js %}
+{% include code-snippet/spreadsheet/javascript-es6/filter-cs2/index.js %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/filter-cs2/app/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/filter-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

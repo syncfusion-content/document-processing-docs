@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find and replace in range in EJ2 TypeScript Spreadsheet component | Syncfusion
+title: Find and replace in EJ2 TypeScript Spreadsheet component | Syncfusion
 description: Learn here all about performing find and replace limited to the range in Syncfusion EJ2 TypeScript Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
@@ -15,10 +15,10 @@ The following sample demonstrates how to limit the "Replace All" operation to th
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/javascript-es6/find-and-replace-cs1/app/index.js %}
+{% include code-snippet/spreadsheet/javascript-es6/find-and-replace-cs1/index.js %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/find-and-replace-cs1/app/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/find-and-replace-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

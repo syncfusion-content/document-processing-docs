@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dynamic cell template in EJ2 TypeScript Spreadsheet component | Syncfusion
+title: Add cell template in EJ2 TypeScript Spreadsheet component | Syncfusion
 description: Render dropdown templates inside cells in Syncfusion EJ2 TypeScript Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
 ---
 
-# Create Dynamic Cell Templates with Dropdowns in EJ2 TypeScript Spreadsheet
+# Create Dynamic Cell Templates in EJ2 TypeScript Spreadsheet
 
 You can add templates to cells in the Syncfusion Spreadsheet component by dynamically assigning a custom template property directly to individual cells. When a cell has this custom template property, you can use the [beforeCellRender](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#beforecellrender) event to append the desired template element to the cell.
 
@@ -15,10 +15,10 @@ The following sample demonstrates how to insert a [Syncfusion Dropdown component
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/javascript-es6/dynamic-cell-template-cs1/app/index.js %}
+{% include code-snippet/spreadsheet/javascript-es6/dynamic-cell-template-cs1/index.js %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/dynamic-cell-template-cs1/app/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/dynamic-cell-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
