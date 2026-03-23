@@ -1,6 +1,6 @@
 ---
 title: Syncfusion Spreadsheet Editor SDK Agent Skills for AI Assistants | Syncfusion
-description: Learn how to install and use Syncfusion Spreadsheet Editor SDK Agent Skills to enable AI assistants to generate accurate spreadsheet editor code using Syncfusion Spreadsheet Editor SDK libraries.
+description: Learn how to install and use Syncfusion Spreadsheet Editor SDK Agent Skills to enable AI assistants to generate accurate spreadsheet editor code using Syncfusion Spreadsheet UI Components.
 platform: spreadsheet-editor
 control: Spreadsheet Editor SDK
 documentation: ug
@@ -9,7 +9,7 @@ keywords: Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skills
 
 # Syncfusion Spreadsheet Editor SDK Agent Skills for AI Assistants
 
-This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a knowledge package that enables AI assistants (GitHub Copilot, Code Studio, Cursor, Claude, etc.) to understand and generate accurate spreadsheet editor code using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK libraries. It also supports executing spreadsheet operations directly via platform-specific scripts.
+This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a knowledge package that enables AI assistants (GitHub Copilot, Code Studio, Cursor, Claude, etc.) to understand and generate accurate spreadsheet editor code using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK UI Components. It also supports executing spreadsheet operations directly via platform-specific scripts.
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK library APIs, spreadsheet editor patterns, and platform-specific configuration for the following platforms:
 
@@ -50,7 +50,7 @@ To learn more, refer to the [Skills CLI documentation](https://skills.sh/docs).
 
 ## What's Included
 
-1. **Spreadsheet Editor SDK API Knowledge** — Curated, skill-based guidance for creating, editing, and managing spreadsheets using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK libraries across multiple platforms. Covers key APIs, component integration, cell operations, formatting, data binding, and import/export features.
+1. **Spreadsheet Editor SDK API Knowledge** — Curated, skill-based guidance for creating, editing, and managing spreadsheets using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK UI Components across multiple platforms. Covers key APIs, component integration, cell operations, formatting, data binding, and import/export features.
 2. **Platform-Specific Code Generation** — Generates production-ready code tailored to your platform (React, Angular, Blazor, ASP.NET Core, TypeScript, or Vue) without executing scripts or modifying your project structure.
 3. **Patterns & Best Practices** — Practical recommendations for API usage, platform-specific package selection, component configuration, and spreadsheet editor workflows (for example, cell styling, conditional formatting, data validation, chart creation, formula calculation, and protection settings). All guidance is authored directly within the skill file rather than being fetched from external documentation.
 
