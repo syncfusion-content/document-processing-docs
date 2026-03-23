@@ -185,7 +185,7 @@ The event uses the [CellSavedEventArgs](https://help.syncfusion.com/cr/blazor/Sy
 
 ## Cell editing in protected sheet
 
-In a protected sheet, only unlocked ranges can be edited based on the sheet's protection settings. Attempting to modify a locked range triggers an error message, as shown below:
+In a protected sheet, only `unlocked ranges` can be edited based on the sheet's protection settings. Try to modify a locked range, an error message appears, as shown below:
 
 ![Error dialog indicating that a cell is protected and cannot be modified in the Blazor Spreadsheet.](./images/protection-error-dialog.png)
 

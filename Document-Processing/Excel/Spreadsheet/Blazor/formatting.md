@@ -215,5 +215,5 @@ Borders can be applied programmatically to a specific cell or range of cells usi
 
 ### Limitations
 
-*   Conditional formatting is currently not supported in the Blazor Spreadsheet component.
+*   `Conditional formatting` is currently not supported in the Blazor Spreadsheet component.
 *   A custom number format UI dialog is not available, custom formats must be applied using the API.

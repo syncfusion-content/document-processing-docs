@@ -19,7 +19,7 @@ The context menu options are dynamically adjusted based on the specific element 
 
 ### Cell context menu options
 
-When a cell or range of cells is right-clicked, the context menu displays the following options:
+When a cell or range of cells is right-clicked, the context menu displays with the following options:
 
 | Options | Action |
 | -- | -- |
@@ -58,7 +58,7 @@ When a sheet is protected, **Insert Rows Above** and **Insert Rows Below** optio
 
 ### Column header context menu options
 
-When right-clicking a single column header or a range of selected column headers, the context menu displays options specific to column-level operations.
+When you right-click a single column header or  a range of selected column headers, the `context menu` shows options for column-level operations.
 
 | Options | Action |
 | -- | -- |
@@ -76,7 +76,7 @@ When a sheet is protected, **Insert column to the left** and **Insert column to 
 
 ### Sheet tab context menu options
 
-When right-clicking on a sheet tab located at the bottom of the Spreadsheet, the context menu displays options specific to sheet-level operations.
+When right-clicking on a sheet tab located at the bottom of the Spreadsheet, the `context menu` displays options specific to sheet-level operations.
 
 | Options | Action |
 | -- | -- |
