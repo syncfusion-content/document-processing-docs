@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dynamic cell template in EJ2 Javascript Spreadsheet component | Syncfusion
+title: Add cell template in EJ2 Javascript Spreadsheet component | Syncfusion
 description: Render dropdown templates inside cells in Syncfusion EJ2 Javascript Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
