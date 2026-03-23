@@ -1,22 +1,36 @@
 ---
-layout: post
 title: Syncfusion Document SDK Agent Skills for AI Assistants | Syncfusion
-description: Learn how to install and use Syncfusion Document SDK Agent Skills to enable AI assistants to generate accurate document processing code using Syncfusion libraries.
+description: Learn how to install and use Syncfusion Document SDK Agent Skills to enable AI assistants to generate accurate document processing code using Syncfusion Document SDK libraries.
+platform: document-processing
 control: Document SDK
-platform: file-formats
 documentation: ug
-domainurl: ##DomainURL##
+keywords: Skills, AI Assistants, Document SDK, Agent Skills
 ---
 
 # Syncfusion Document SDK Agent Skills for AI Assistants
 
-This guide introduces **Syncfusion Document SDK Skills**, a knowledge package that enables AI assistants (GitHub Copilot, Code Studio, Cursor, Claude, etc.) to understand and generate accurate document processing code using Syncfusion<sup style="font-size:70%">&reg;</sup> .NET and Java libraries, and also execute document operations efficiently using a CSX script.
+This guide introduces **Syncfusion Document SDK Skills**, a knowledge package that enables AI assistants (GitHub Copilot, Code Studio, Cursor, Claude, etc.) to understand and generate accurate document processing code using Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK libraries. It also supports executing document operations directly via CSX scripts.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> library APIs, document processing patterns, and platform-specific configuration for **[Word (DocIO)](https://help.syncfusion.com/document-processing/word/overview)**, **[PDF](https://help.syncfusion.com/document-processing/pdf/overview)**, **[Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/overview)**, **[PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/overview)**, **[Markdown](https://help.syncfusion.com/file-formats/markdown/overview)**, and **[Smart Data Extraction](https://help.syncfusion.com/document-processing/smart-data-extraction/overview)**.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK library APIs, document processing patterns, and platform-specific configuration for the following libraries:
+
+- **[Word (DocIO)](https://help.syncfusion.com/document-processing/word/overview)**
+- **[PDF](https://help.syncfusion.com/document-processing/pdf/overview)**
+- **[Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/overview)**
+- **[PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/overview)**
+- **[Markdown](https://help.syncfusion.com/file-formats/markdown/overview)**
+- **[Smart Data Extraction](https://help.syncfusion.com/document-processing/smart-data-extraction/overview)**
+
+## Prerequisites
+
+Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills, ensure the following tools are available on your machine:
+
+- **[Node.js](https://nodejs.org/)** (v16 or later) — Required to run `npx` commands for installing skills.
+- **[.NET SDK](https://dotnet.microsoft.com/download)** (6.0 or later) — Required for CSX script execution (Mode 2).
+- **[dotnet-script](https://github.com/dotnet-script/dotnet-script)** — Required for CSX script execution (Mode 2). Install it globally by running: `dotnet tool install -g dotnet-script`.
 
 ## Installation
 
-Choose one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills](https://github.com/syncfusion/document-sdk-skills) based on your preference. Users can also explore Syncfusion<sup style="font-size:70%">&reg;</sup> skills from the [marketplace](https://skills.sh/syncfusion/).
+Choose one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills](https://github.com/syncfusion/document-sdk-skills) based on your preference. You can also explore Syncfusion<sup style="font-size:70%">&reg;</sup> skills from the [marketplace](https://skills.sh/syncfusion/).
 
 ```bash
 # Install all document SDK skills at once
@@ -28,40 +42,50 @@ npx skills add syncfusion/document-sdk-skills
 
 This registers the Syncfusion<sup style="font-size:70%">&reg;</sup> skill pack so your AI assistant can automatically load it in supported IDEs such as [Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), [Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), and [Cursor](https://cursor.com/docs/skills).
 
-To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
+To learn more, refer to the [Skills CLI documentation](https://skills.sh/docs).
 
 ## What's Included
 
-1. **Document Processing & API Knowledge** — Curated, skill-based guidance that captures how to create, edit, and convert Word, PDF, Excel, PowerPoint, and Markdown documents using Syncfusion<sup style="font-size:70%">&reg;</sup> .NET and Java libraries, including key APIs, supported formats, and common usage patterns.
-2. **Dual-Mode Execution** — Each .NET skill supports generating production-ready C# code for your project (Mode 1), or executing a document task immediately via a temporary CSX script without modifying your project (Mode 2). The Java Word skill supports Mode 1 only.2.
-3. **Patterns & Best Practices** — Practical recommendations for API usage, platform-specific NuGet package selection, and document processing workflows (for example, mail merge, PDF digital signatures, Excel pivot tables, and PowerPoint chart creation). All guidance is authored directly within the Skill file rather than being fetched from documentation.
-3.
+1. **Document SDK API Knowledge** — Curated, skill-based guidance for creating, editing, and converting PDF, Word, Excel, PowerPoint, and Markdown documents using Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK libraries. Covers key APIs, supported formats, and conversions.
+2. **Dual-Mode Execution (.NET)** — Supports two operating modes:
+   - **Mode 1** — Generate production-ready code for your project.
+   - **Mode 2** — Execute a document task immediately via a CSX script without modifying your project.
+3. **Patterns & Best Practices** — Practical recommendations for API usage, platform-specific NuGet package selection, and document processing workflows (for example, mail merge, PDF digital signatures, Excel pivot tables, and PowerPoint chart creation). All guidance is authored directly within the skill file rather than being fetched from external documentation.
 
 ## How Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Agent Skills Work
 
-1. **Reads the relevant Skill files based on the user's query**, with the assistant retrieving library APIs, code patterns, and best-practice guidance from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills, and automatically chooses the appropriate operating mode based on the provided prompt.
+1. **Reads the relevant skill files based on the user's query.** The assistant retrieves library APIs, and code patterns from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills. It automatically chooses the appropriate operating mode based on the provided prompt.
 2. **Enforces Syncfusion<sup style="font-size:70%">&reg;</sup> best practices**, including:
    - Suggesting the correct NuGet packages or JAR files based on the detected application type.
    - Using only APIs and code patterns explicitly present in the skill reference files.
    - Configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> license key from `SyncfusionLicense.txt` or the `SYNCFUSION_LICENSE_KEY` environment variable.
 3. **Operates in two modes** based on the user's intent:
-   - **Mode 1 — Generate C# / Java Code** *(default)*: Produces production-ready C# or Java code and inserts it into the user's project files (e.g., `Program.cs`). No scripts are created or executed. Triggered by keywords such as `"code"`, `"snippet"`, `"how to"`, `"show me"`, `"sample"`, or `"example"`.
-   - **Mode 2 — Execute via CSX Script** *(.NET only)*: Creates a temporary `.csx` script, runs it with `dotnet script`, produces the output document file, then cleans up — without modifying the user's project. Triggered by keywords such as `"create"`, `"generate"`, `"make"`, `"open"`, `"edit"`, `"modify"`, or a file path (e.g., `output/report.docx`). The Java Word skill supports Mode 1 only.
+   - **Mode 1 — Generate Code**: Produces production-ready code. No scripts are created or executed. Triggered by keywords such as `"code"`, `"snippet"`, `"how to"`, `"show me"`, `"sample"`, or `"example"`.
+   - **Mode 2 — Execute via CSX Script**: Creates a temporary `.csx` script, runs it with `dotnet script`, produces the output document file, then cleans up — without modifying the user's project. Triggered by keywords such as `"create"`, `"generate"`, `"make"`, `"open"`, `"edit"`, `"modify"`, or a file path (e.g., `output/report.docx`).
 
-### Using the AI Assistant
+## Using the AI Assistant
 
-Once skills are installed, the assistant can be used to generate and update Syncfusion<sup style="font-size:70%">&reg;</sup> document processing code for tasks such as:
+Once skills are installed, the assistant can generate Syncfusion<sup style="font-size:70%">&reg;</sup> document processing code or execute document generation tasks. Below are example prompts for each mode.
+
+**Generate Code (Mode 1):**
+
+- "Show me C# code to perform a mail merge in a Word document using Syncfusion DocIO."
+- "How to add a digital signature to a PDF using Syncfusion PDF library?"
+- "Give me a code snippet to create an Excel workbook with a pivot table using XlsIO."
+- "Show me how to create a 5-slide PowerPoint presentation with Syncfusion Presentation."
+- "Example of creating a Markdown document with a table and task list using Syncfusion."
+
+**Execute Task (Mode 2):**
 
 - "Create a Word document with a mail merge table and save to output/report.docx."
-- "Add a digital signature to the PDF at output/invoice.pdf."
-- "Show me XlsIO code to create an Excel workbook with a pivot table."
+- "Generate a PDF invoice with a table layout and save it to output/invoice.pdf."
+- "Make an Excel workbook with sales data and a chart, save to output/sales.xlsx."
 - "Create a 5-slide meeting agenda presentation and save it to output/agenda.pptx."
-- "Show me how to create a Markdown document with a table and task list using Syncfusion."
-
+- "Edit the document at Input/template.docx and add a header, save to output/result.docx."
 
 ## See also
 
 - [Syncfusion Document SDK Documentation](https://help.syncfusion.com/document-processing/introduction)
 - [Agent Skills Standards](https://agentskills.io/home)
-- [SKills CLI](https://skills.sh/docs)
+- [Skills CLI](https://skills.sh/docs)
 
