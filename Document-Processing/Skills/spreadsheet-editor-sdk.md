@@ -11,7 +11,7 @@ keywords: Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skills
 
 This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a knowledge package that enables AI assistants (GitHub Copilot, Code Studio, Cursor, Claude, etc.) to understand and generate accurate spreadsheet editor code using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK UI Components. It also supports executing spreadsheet operations directly via platform-specific scripts.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK library APIs, spreadsheet editor patterns, and platform-specific configuration for the following platforms:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Component APIs, spreadsheet editor patterns, and platform-specific configuration for the following platforms:
 
 - **[React Spreadsheet Editor](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/overview)**
 - **[Angular Spreadsheet Editor](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/overview)**
@@ -19,6 +19,8 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills e
 - **[ASP.NET Core Spreadsheet Editor](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/overview)**
 - **[TypeScript Spreadsheet Editor](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/overview)**
 - **[Vue Spreadsheet Editor](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/overview)**
+- **[Markdown](https://help.syncfusion.com/file-formats/markdown/overview)**
+- **[Smart Data Extraction](https://help.syncfusion.com/document-processing/smart-data-extraction/overview)**
 
 ## Prerequisites
 
