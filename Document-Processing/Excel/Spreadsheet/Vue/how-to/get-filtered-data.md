@@ -15,10 +15,10 @@ The following example shows how to get the filtered rows from the Spreadsheet:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/filter-cs2/app/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/filter-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/filter-cs2/app/app.vue %}
+{% include code-snippet/spreadsheet/vue/filter-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 

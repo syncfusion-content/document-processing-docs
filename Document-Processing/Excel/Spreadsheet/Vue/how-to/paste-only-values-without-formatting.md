@@ -15,10 +15,10 @@ The following example shows how to paste values without formatting.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/paste-values-cs1/app/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/paste-values-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/paste-values-cs1/app/app.vue %}
+{% include code-snippet/spreadsheet/vue/paste-values-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 

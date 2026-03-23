@@ -15,10 +15,10 @@ The following sample demonstrates how to insert a [Syncfusion Dropdown component
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/dynamic-cell-template-cs1/app/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/dynamic-cell-template-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/dynamic-cell-template-cs1/app/app.vue %}
+{% include code-snippet/spreadsheet/vue/dynamic-cell-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 

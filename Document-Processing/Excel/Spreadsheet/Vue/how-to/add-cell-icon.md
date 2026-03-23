@@ -15,10 +15,10 @@ The following sample demonstrates how to add icons to cells by assigning the tem
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/add-icon-in-cell-cs1/app/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/add-icon-in-cell-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/add-icon-in-cell-cs1/app/app.vue %}
+{% include code-snippet/spreadsheet/vue/add-icon-in-cell-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
