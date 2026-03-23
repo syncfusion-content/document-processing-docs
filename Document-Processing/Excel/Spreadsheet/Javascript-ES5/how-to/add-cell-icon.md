@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add icons inside cells in EJ2 Javascript Spreadsheet component | Syncfusion
+title: Add icons in cells in EJ2 Javascript Spreadsheet component | Syncfusion
 description: Learn here all about adding icon inside cells using a custom template in Syncfusion EJ2 Javascript Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
 ---
 
-# Add Custom Icons to Cells in EJ2 Javascript Spreadsheet
+# Add Custom Icons to Cells in EJ2 JavaScript Spreadsheet
 
 In the Syncfusion Spreadsheet, you can render custom icons inside specific cells by defining a custom template property within the cell model. During the [beforeCellRender](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#beforecellrender) event, the icon element can be appended to the corresponding table cell (td) by checking whether the cell contains this template property.
 
@@ -15,10 +15,10 @@ The following sample demonstrates how to add icons to cells by assigning the tem
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/javascript-es5/add-icon-in-cell-cs1/app/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/add-icon-in-cell-cs1/index.js %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es5/add-icon-in-cell-cs1/app/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/add-icon-in-cell-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
