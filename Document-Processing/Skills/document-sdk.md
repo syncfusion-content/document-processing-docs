@@ -13,36 +13,38 @@ This guide introduces **Syncfusion Document SDK Skills**, a knowledge package th
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK library APIs, document processing patterns, and platform-specific configuration for the following libraries:
 
-- **[Word (DocIO)](https://help.syncfusion.com/document-processing/word/overview)**
-- **[PDF](https://help.syncfusion.com/document-processing/pdf/overview)**
-- **[Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/overview)**
-- **[PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/overview)**
-- **[Markdown](https://help.syncfusion.com/file-formats/markdown/overview)**
-- **[Smart Data Extraction](https://help.syncfusion.com/document-processing/smart-data-extraction/overview)**
+| Document Processing Libraries | Skills |
+|---|---|
+| [Word (DocIO)](https://help.syncfusion.com/document-processing/word/overview) | [syncfusion-dotnet-word](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-word) <br> [syncfusion-java-word](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-java-word) |
+| [PDF](https://help.syncfusion.com/document-processing/pdf/overview) | [syncfusion-dotnet-pdf](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-pdf) <br> [syncfusion-dotnet-pdf-to-image](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-pdf-to-image) <br> [syncfusion-flutter-pdf](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-flutter-pdf) <br> [syncfusion-javascript-pdf](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-javascript-pdf) |
+| [Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/overview) | [syncfusion-dotnet-excel](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-excel) <br> [syncfusion-flutter-excel](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-flutter-excel) |
+| [PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/overview) | [syncfusion-dotnet-powerpoint](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-powerpoint) |
+| [Markdown](https://help.syncfusion.com/file-formats/markdown/overview) | [syncfusion-dotnet-markdown](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-markdown) |
+| [Smart Data Extraction](https://help.syncfusion.com/document-processing/smart-data-extraction/overview) | [syncfusion-dotnet-smart-data-extraction](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-smart-data-extraction) |
 
 ## Prerequisites
 
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills, ensure the following tools are available on your machine:
 
-- **[Node.js](https://nodejs.org/)** (v16 or later) — Required to run `npx` commands for installing skills.
-- **[.NET SDK](https://dotnet.microsoft.com/download)** (6.0 or later) — Required for CSX script execution (Mode 2).
+- **[Node.js](https://nodejs.org/)** (v18 or later) — Required to run `npx` commands for installing skills.
+- **[.NET SDK](https://dotnet.microsoft.com/download)** (8.0 or later) — Required for CSX script execution (Mode 2).
 - **[dotnet-script](https://github.com/dotnet-script/dotnet-script)** — Required for CSX script execution (Mode 2). Install it globally by running: `dotnet tool install -g dotnet-script`.
 
 ## Installation
 
 Choose one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills](https://github.com/syncfusion/document-sdk-skills) based on your preference. You can also explore Syncfusion<sup style="font-size:70%">&reg;</sup> skills from the [marketplace](https://skills.sh/syncfusion/).
 
-```bash
-# Install all document SDK skills at once
-npx skills add syncfusion/document-sdk-skills -y
+To install all document SDK skills at once, use the following command:
 
-# Choose and install skills interactively from the terminal
-npx skills add syncfusion/document-sdk-skills
+```bash
+npx skills add syncfusion/document-sdk-skills --all -y
 ```
 
-This registers the Syncfusion<sup style="font-size:70%">&reg;</sup> skill pack so your AI assistant can automatically load it in supported IDEs such as [Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), [Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), and [Cursor](https://cursor.com/docs/skills).
+To install a specific skill, use the following command (for example, to install PDF .Net skills):
 
-To learn more, refer to the [Skills CLI documentation](https://skills.sh/docs).
+```bash
+npx skills add syncfusion/document-sdk-skills --skill syncfusion-dotnet-pdf
+```
 
 ## What's Included
 
@@ -52,9 +54,10 @@ To learn more, refer to the [Skills CLI documentation](https://skills.sh/docs).
    - **Mode 2** — Execute a document task immediately via a CSX script without modifying your project.
 3. **Patterns & Best Practices** — Practical recommendations for API usage, platform-specific NuGet package selection, and document processing workflows (for example, mail merge, PDF digital signatures, Excel pivot tables, and PowerPoint chart creation). All guidance is authored directly within the skill file rather than being fetched from external documentation.
 
+
 ## How Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Agent Skills Work
 
-1. **Reads the relevant skill files based on the user's query.** The assistant retrieves library APIs, and code patterns from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills. It automatically chooses the appropriate operating mode based on the provided prompt.
+1. **Read the relevant skill files and choose modes based on the user's query** The assistant retrieves library APIs, and code patterns from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills. It automatically chooses the appropriate operating mode based on the provided prompt.
 2. **Enforces Syncfusion<sup style="font-size:70%">&reg;</sup> best practices**, including:
    - Suggesting the correct NuGet packages or JAR files based on the detected application type.
    - Using only APIs and code patterns explicitly present in the skill reference files.
@@ -69,19 +72,19 @@ Once skills are installed, the assistant can generate Syncfusion<sup style="font
 
 **Generate Code (Mode 1):**
 
-- "Show me C# code to perform a mail merge in a Word document using Syncfusion DocIO."
-- "How to add a digital signature to a PDF using Syncfusion PDF library?"
+- "Show me DocIO code to create a Word document with a title and a paragraph."
+- "How do I add a digital signature to a PDF?"
 - "Give me a code snippet to create an Excel workbook with a pivot table using XlsIO."
-- "Show me how to create a 5-slide PowerPoint presentation with Syncfusion Presentation."
-- "Example of creating a Markdown document with a table and task list using Syncfusion."
+- "Generate a C# snippet to add a table to a PowerPoint slide."
+- "Show me code to extract all fields and tables from a PDF as JSON using Smart Data Extraction."
 
 **Execute Task (Mode 2):**
 
-- "Create a Word document with a mail merge table and save to output/report.docx."
-- "Generate a PDF invoice with a table layout and save it to output/invoice.pdf."
-- "Make an Excel workbook with sales data and a chart, save to output/sales.xlsx."
+- "Create a Word document about the top 5 programming languages in 2025."
+- "Create a PDF report with a title page and inventory table, save to output/report.pdf."
+- "Create a sales summary workbook and save it to output/sales.xlsx."
 - "Create a 5-slide meeting agenda presentation and save it to output/agenda.pptx."
-- "Edit the document at Input/template.docx and add a header, save to output/result.docx."
+- "Extract data from the PDF at Input/invoice.pdf using Smart Data Extraction and save to output/data.json."
 
 ## See also
 
