@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Migrating from Nutrient.io (PSPDFKit) to Syncfusion React PDF Viewer | Syncfusion
+title: Migrating from Nutrient.io (PSPDFKit) to React PDF Viewer | Syncfusion
 description: Learn here all about how to migrate from Nutrient.io (PSPDFKit) to Syncfusion React PDF Viewer and Component
 platform: document-processing
 documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from Nutrient.io (PSPDFKit) to Syncfusion React PDF Viewer
+# Migrating from Nutrient Web SDK (PSPDFKit) to Syncfusion React PDF Viewer
 
-This guide helps you migrate applications built using **Nutrient.io (formerly PSPDFKit Web SDK)** to the **Syncfusion React PDF Viewer**. It outlines architectural differences, feature mapping, and required changes in a React-based application.
+This guide helps you migrate applications built using **Nutrient Web SDK (formerly PSPDFKit Web SDK)** to the **Syncfusion React PDF Viewer**. It outlines architectural differences, feature mapping, and required changes in a React-based application.
 
 ## Overview
 
-Nutrient.io (PSPDFKit) provides a powerful Web SDK for PDF viewing and editing, typically integrated via an SDK initialization model backed by WebAssembly-based rendering.
+Nutrient Web SDK (PSPDFKit) provides a powerful Web SDK for PDF viewing and editing, typically integrated via an SDK initialization model backed by WebAssembly-based rendering.
 
 Syncfusion React PDF Viewer offers a **declarative React component** with built-in UI, annotations, form handling, and optimized performance, without requiring WebAssembly or external cloud services.
 
 ## Architectural Comparison
 
-| Aspect | Nutrient.io (PSPDFKit) | Syncfusion React PDF Viewer |
+| Aspect | Nutrient Web SDK (PSPDFKit) | Syncfusion React PDF Viewer |
 |------|------------------------|-----------------------------|
 | Integration Model | SDK initialization | Declarative React component |
 | Rendering Engine | WebAssembly | Internal optimized engine |
@@ -125,7 +125,7 @@ root.render(<App />);
 
 ## Feature Mapping
 
-| Feature | Nutrient.io (PSPDFKit) | Syncfusion Viewer |
+| Feature | Nutrient Web SDK (PSPDFKit) | Syncfusion Viewer |
 |------|------------------------|------------------|
 | Page Navigation | Supported | Supported |
 | Zoom & Fit | Supported | Supported |
@@ -136,7 +136,7 @@ root.render(<App />);
 
 ## Event Handling
 
-### Nutrient.io
+### Nutrient Web SDK
 
 ```js
 instance.addEventListener('documentLoaded', () => {
@@ -175,7 +175,7 @@ Follow these concise steps to migrate a Nutrient integration to `PdfViewerCompon
 - Ensure the Nutrient container has explicit dimensions before replacing it.
 - Replace the `NutrientViewer.load()` mount with a React `PdfViewerComponent` as shown below.
 
-Minimal file diff (before → after)
+Minimal file difference (before → after)
 
 Before (e.g., `src/viewers/NutrientViewer.js`):
 
@@ -195,7 +195,7 @@ function OldViewer() {
 }
 ```
 
-After (e.g., `src/components/PdfViewer.jsx`):
+After (e.g., `src/components/PdfViewer.js`):
 
 ```jsx
 import React from 'react';

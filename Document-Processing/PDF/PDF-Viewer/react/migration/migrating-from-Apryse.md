@@ -7,7 +7,7 @@ documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from Apryse WebViewer (PDFTron) to Syncfusion React PDF Viewer
+# Migrating from Apryse WebViewer to Syncfusion React PDF Viewer
 
 This guide assists developers in migrating applications built with [Apryse WebViewer](https://docs.apryse.com/web/guides/get-started/react)(formerly PDFTron WebViewer) to the [Syncfusion React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). It focuses on architectural differences, feature mapping, and required changes in a React environment.
 
@@ -137,7 +137,7 @@ documentViewer.addEventListener('documentLoaded', () => {
 - Remove WebViewer initialization and DOM-based mounting
 - Replace Apryse APIs with PdfViewerComponent configuration
 - Map annotation and form workflows to built-in services
-- Revalidate licensing and feature availability
+- Re-validate licensing and feature availability
 
 ## Tutorial: quick migration recipe
 
@@ -178,11 +178,11 @@ cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib public/ej2
 4) Migrate features incrementally
 
 - Start with basic viewing (document load, page navigation), then add search, annotations, and forms.
-- For each feature, map the Apryse API usage to the Syncfusion method/event (see API mapping below), update backend persistence for annotations if needed, and run the smoke checks.
+- For each feature, map the Apryse API usage to the Syncfusion method/event (see API mapping below), update back-end persistence for annotations if needed, and run the smoke checks.
 
-Minimal file diff (before → after)
+Minimal file difference (before → after)
 
-This small, copy-paste diff shows a single-file replacement pattern: remove the WebViewer DOM mount and replace with a React component that uses `PdfViewerComponent`.
+This small, copy-paste difference shows a single-file replacement pattern: remove the WebViewer DOM mount and replace with a React component that uses `PdfViewerComponent`.
 
 Before (e.g., `src/viewers/OldWebViewer.js`):
 
