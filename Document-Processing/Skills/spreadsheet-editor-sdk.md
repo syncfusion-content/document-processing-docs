@@ -1,7 +1,7 @@
 ---
-title: Syncfusion Spreadsheet Editor SDK Agent Skills for AI Assistants | Syncfusion
-description: Learn how to install and use Syncfusion Spreadsheet Editor SDK Agent Skills to enable AI assistants to generate accurate spreadsheet editor code using Syncfusion Spreadsheet UI Components.
-platform: spreadsheet-editor
+title: Spreadsheet Editor SDK Agent Skills for AI Assistants | Syncfusion
+description: Learn how to install and use Syncfusion Spreadsheet Editor SDK Agent Skills to help AI assistants generate accurate code using Syncfusion Spreadsheet components
+platform: document-processing
 control: Spreadsheet Editor SDK
 documentation: ug
 keywords: Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skills
@@ -9,7 +9,7 @@ keywords: Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skills
 
 # Syncfusion Spreadsheet Editor SDK Agent Skills for AI Assistants
 
-This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a knowledge package that enables AI assistants (GitHub Copilot, Code Studio, Cursor, Claude, etc.) to understand and generate accurate spreadsheet editor code using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK UI Components. It also supports executing spreadsheet operations directly via platform-specific scripts.
+This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a knowledge package that enables AI assistants (GitHub Copilot, Code Studio, Cursor, Claude, etc.) to understand and generate accurate spreadsheet editor code using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK components across supported platforms. 
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Component APIs, spreadsheet editor patterns, and platform-specific configuration for the following platforms:
 
@@ -19,8 +19,6 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills e
 - **[ASP.NET Core Spreadsheet Editor](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/overview)**
 - **[TypeScript Spreadsheet Editor](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/overview)**
 - **[Vue Spreadsheet Editor](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/overview)**
-- **[Markdown](https://help.syncfusion.com/file-formats/markdown/overview)**
-- **[Smart Data Extraction](https://help.syncfusion.com/document-processing/smart-data-extraction/overview)**
 
 ## Prerequisites
 
@@ -52,7 +50,7 @@ To learn more, refer to the [Skills CLI documentation](https://skills.sh/docs).
 
 ## What's Included
 
-1. **Spreadsheet Editor SDK API Knowledge** — Curated, skill-based guidance for creating, editing, and managing spreadsheets using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK UI Components across multiple platforms. Covers key APIs, component integration, cell operations, formatting, data binding, and import/export features.
+1. **Spreadsheet Editor SDK API Knowledge** — Curated, skill-based guidance for creating, editing, and managing spreadsheets using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK UI Components across supported platforms. Covers key APIs, component integration, cell operations, formatting, data binding, and import/export features.
 2. **Platform-Specific Code Generation** — Generates production-ready code tailored to your platform (React, Angular, Blazor, ASP.NET Core, TypeScript, or Vue) without executing scripts or modifying your project structure.
 3. **Patterns & Best Practices** — Practical recommendations for API usage, platform-specific package selection, component configuration, and spreadsheet editor workflows (for example, cell styling, conditional formatting, data validation, chart creation, formula calculation, and protection settings). All guidance is authored directly within the skill file rather than being fetched from external documentation.
 
@@ -63,14 +61,13 @@ To learn more, refer to the [Skills CLI documentation](https://skills.sh/docs).
    - Suggesting the correct npm packages or NuGet packages based on the detected platform.
    - Using only APIs and code patterns explicitly present in the skill reference files.
    - Configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> license key from `SyncfusionLicense.txt` or the `SYNCFUSION_LICENSE_KEY` environment variable.
-   - Following platform-specific component initialization and lifecycle patterns.
-3. **Generates code only** — Unlike Document SDK skills with dual-mode execution, Spreadsheet Editor skills focus exclusively on generating production-ready code that can be integrated directly into your application files (for example, `App.tsx`, `Home.razor`, `app.component.ts`, or `Program.cs`).
+3. **Generates code only** — Spreadsheet Editor skills focus exclusively on generating production-ready code that can be integrated directly into your application files (for example, `Home.razor`, `app.component.ts`, or `Program.cs`).
 
 ## Using the AI Assistant
 
-Once skills are installed, the assistant can generate Syncfusion<sup style="font-size:70%">&reg;</sup> spreadsheet editor code. Below are example prompts for code generation.
+Once skills are installed, the assistant can generate Syncfusion<sup style="font-size:70%">&reg;</sup> spreadsheet editor code. Below are some example prompts.
 
-**Generate Code Examples:**
+**Example Prompts:**
 
 - "Show me React code to create a Spreadsheet component with basic formatting options."
 - "How to apply conditional formatting to highlight cells greater than $15,000 in Angular Spreadsheet Editor?"
@@ -81,24 +78,8 @@ Once skills are installed, the assistant can generate Syncfusion<sup style="font
 - "Show me code to apply number formatting to currency columns in React Spreadsheet Editor."
 - "How do I enable cell editing and data validation in Angular Spreadsheet Editor?"
 
-**Feature-Specific Examples:**
-
-- "Wrap text in the Customer Name column using Blazor Spreadsheet Editor."
-- "Insert a new row at position 5 and hide column C in React Spreadsheet Editor."
-- "Apply bold and center alignment to header row using TypeScript Spreadsheet Editor."
-- "Create a pivot table from sales data using ASP.NET Core Spreadsheet Editor."
-- "Enable freeze panes for the first row and first column in Vue Spreadsheet Editor."
-- "Show me how to implement custom context menu items in Angular Spreadsheet Editor."
-
 ## See also
 
-- [Syncfusion Spreadsheet Editor SDK Documentation](https://www.syncfusion.com/spreadsheet-editor-sdk)
-- [React Spreadsheet Editor Documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/overview)
-- [Angular Spreadsheet Editor Documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/overview)
-- [Blazor Spreadsheet Editor Documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/overview)
-- [ASP.NET Core Spreadsheet Editor Documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/overview)
-- [TypeScript Spreadsheet Editor Documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/overview)
-- [Vue Spreadsheet Editor Documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/overview)
+- [Syncfusion Spreadsheet Editor Documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/overview)
 - [Agent Skills Standards](https://agentskills.io/home)
 - [Skills CLI](https://skills.sh/docs)
-- [Syncfusion Community License](https://www.syncfusion.com/products/communitylicense)
