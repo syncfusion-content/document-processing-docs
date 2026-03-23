@@ -17,16 +17,14 @@ PDF.js is a low-level JavaScript library that focuses on rendering PDF pages usi
 
 Syncfusion React PDF Viewer is a **fully featured, high-level React component** that provides built-in rendering, UI, interaction tools, and performance optimizations out of the box.
 
-## Key Differences
+## Architecture notes
 
-| Aspect | PDF.js | Syncfusion React PDF Viewer |
-|------|-------|-----------------------------|
-| Rendering | Manual canvas rendering | Automatic rendering |
-| UI Controls | Custom implementation | Built-in toolbar |
-| Text Selection | Manual text layer | Built-in |
-| Annotations | Custom logic | Built-in |
-| Forms | Limited | Built-in |
-| Performance | Manual tuning | Optimized pipeline |
+This guide shows a migration path from a low-level canvas-based renderer (PDF.js) to the `PdfViewerComponent` used by Syncfusion. Key migration considerations:
+
+- Rendering model: PDF.js exposes page and canvas rendering APIs requiring manual drawing and layout, while `PdfViewerComponent` manages rendering, paging, and UI internally.
+- UI and tooling: PDF.js implementations typically implement custom toolbars and controls; Syncfusion exposes a configurable toolbar and injectable services for features like annotations, search, and forms.
+- Event model: PDF.js uses promises and page/render callbacks; use `PdfViewerComponent` events such as `documentLoad`, `pageRenderComplete`, and `pageChange` to mirror lifecycle hooks.
+- Persistence and integration: Rework custom annotation/form persistence to the Syncfusion export/import APIs when migrating.
 
 ## Installation
 
@@ -63,80 +61,56 @@ pdfjsLib.getDocument('sample.pdf').promise.then(pdf => {
 
 ### Syncfusion React PDF Viewer
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="Syncfusion" %}
+{% raw %}
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-    PdfViewerComponent,
-    Toolbar,
-    Magnification,
-    Navigation,
-    LinkAnnotation,
-    BookmarkView,
-    ThumbnailView,
-    Print,
-    TextSelection,
-    Annotation,
-    TextSearch,
-    FormFields,
-    FormDesigner,
-    Inject
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSearch,
+  FormFields,
+  Inject,
 } from '@syncfusion/ej2-react-pdfviewer';
 
 export function App() {
-    return (
-        <div className="control-section">
-            <PdfViewerComponent
-                id="container"
-                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-                style={{ height: '640px' }}
-            >
-                <Inject services={[
-                    Toolbar,
-                    Magnification,
-                    Navigation,
-                    Annotation,
-                    LinkAnnotation,
-                    BookmarkView,
-                    ThumbnailView,
-                    Print,
-                    TextSelection,
-                    TextSearch,
-                    FormFields,
-                    FormDesigner
-                ]} />
-            </PdfViewerComponent>
-        </div>
-    );
+  return (
+    <PdfViewerComponent
+      id="container"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      style={{ height: '640px' }}
+    >
+      <Inject
+        services={[
+          Toolbar,
+          Magnification,
+          Navigation,
+          Annotation,
+          TextSearch,
+          FormFields,
+        ]}
+      />
+    </PdfViewerComponent>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
-## Toolbar and Navigation
+## Feature checklist (Syncfusion)
 
-- PDF.js requires manual toolbar and navigation logic
-- Syncfusion provides a configurable toolbar with navigation, zoom, print, and download
-
-## Text Search and Selection
-
-- PDF.js: text layers and search logic must be implemented manually
-- Syncfusion: built-in text selection and search UI
-
-```jsx
-<PdfViewerComponent enableTextSearch={true} />
-```
-
-## Annotations and Forms
-
-| Feature | PDF.js | Syncfusion Viewer |
-|------|------|------|
-| Text Markup | Custom | Built-in |
-| Shapes | Custom | Built-in |
-| Form Fields | Limited | Built-in |
-| Persistence | Manual | Supported |
+- [Page Navigation](../interactive-pdf-navigation/overview)
+- [Text Search](../text-search/overview)
+- [Annotations](../annotation/overview)
+- [Form Fields](../forms/overview)
 
 ## Event Handling
 
@@ -148,18 +122,14 @@ page.render().promise.then(() => console.log('Rendered'));
 
 ### Syncfusion Viewer
 
-```jsx
+Check [Syncfusion Events Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events#documentload) to know more about event handling in Syncfusion React PDF Viewer.
+
+```js
 <PdfViewerComponent
   documentLoad={() => console.log('Document loaded')}
   pageChange={(args) => console.log(args.currentPage)}
 />
 ```
-
-## Performance Considerations
-
-- Syncfusion PDF Viewer uses internal worker communication
-- Handles large and complex PDFs efficiently
-- No external cloud dependency required
   
 ## Tutorial: Step-by-step migration
 
@@ -211,40 +181,71 @@ export default function PdfCanvas() {
 
 - After (file: `src/components/PdfViewer.jsx`):
 
-```jsx
-import React from 'react';
+{% tabs %}
+{% highlight js tabtitle="Syncfusion" %}
+{% raw %}
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
 import {
-    PdfViewerComponent,
-    Toolbar,
-    Navigation,
-    Magnification,
-    Inject
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSearch,
+  FormFields,
+  Inject,
 } from '@syncfusion/ej2-react-pdfviewer';
 
-export default function PdfViewer() {
-    return (
-        <PdfViewerComponent
-            id="pdfViewer"
-            documentPath="/assets/sample.pdf"
-            style={{ height: '700px' }}
-        >
-            <Inject services={[Toolbar, Navigation, Magnification]} />
-        </PdfViewerComponent>
-    );
+export function App() {
+  return (
+    <PdfViewerComponent
+      id="container"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      style={{ height: '640px' }}
+    >
+      <Inject
+        services={[
+          Toolbar,
+          Magnification,
+          Navigation,
+          Annotation,
+          TextSearch,
+          FormFields,
+        ]}
+      />
+    </PdfViewerComponent>
+  );
 }
-```
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 3) Wire resources and service URLs
 
 - If you previously used worker files for PDF.js, decide whether to use Syncfusion's CDN `resourceUrl` or host the Syncfusion library files yourself. Example:
 
-```jsx
+```js
 <PdfViewerComponent
-    documentPath="/assets/sample.pdf"
-    resourceUrl="https://cdn.syncfusion.com/ej2/latest/dist/ej2-pdfviewer-lib"
-    style={{ height: '700px' }}
->
-    <Inject services={[Toolbar, Navigation]} />
+      id="container"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      style={{ height: '640px' }}
+    >
+<Inject
+        services={[
+          Toolbar,
+          Magnification,
+          Navigation,
+          Annotation,
+          TextSearch,
+          FormFields,
+        ]}
+      />
 </PdfViewerComponent>
 ```
 
@@ -287,11 +288,13 @@ N> To know more about available Features in Syncfusion React PDF Viewer. Check [
 
 ## Reference: key Syncfusion `PdfViewerComponent` methods & events
 
-- `load(document: string | Uint8Array, password?: string)` — programmatically load a PDF.
-- `download()` — trigger download of current document.
-- `addAnnotation(annotation: any)` — add an annotation programmatically.
-- `extractText(pageIndex: number, options?: any): Promise` — extract page text and optionally coordinates.
-- Events: `documentLoad`, `pageRenderComplete`, `pageChange`, `annotationAdd`, `toolbarClick` — use to mirror app behaviors previously tied to PDF.js render promises.
+- [PdfViewerComponent API index](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default)
+- [load(document: string | Uint8Array, password?: string)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) — programmatically load a PDF.
+- [download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) — trigger download of current document.
+- [addAnnotation(annotation: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) — add an annotation programmatically.
+- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string):   — export annotations for persistence.
+- [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#extracttext): — extract text and coordinates.
+- Events: documentLoad, pageRenderComplete, pageChange, annotationAdd, annotationRemove, toolbarClick — see event anchors on the API index above (for example: https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload).
 
 ## See Also
 

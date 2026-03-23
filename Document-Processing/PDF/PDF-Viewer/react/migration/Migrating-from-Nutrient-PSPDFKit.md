@@ -9,23 +9,17 @@ control: PDF Viewer
 
 # Migrating from Nutrient Web SDK (PSPDFKit) to Syncfusion React PDF Viewer
 
-This guide helps you migrate applications built using **Nutrient Web SDK (formerly PSPDFKit Web SDK)** to the **Syncfusion React PDF Viewer**. It outlines architectural differences, feature mapping, and required changes in a React-based application.
+This guide helps you migrate applications built using [Nutrient Web SDK](https://www.nutrient.io/sdk/web/getting-started/react-vite/) (formerly PSPDFKit Web SDK) to the [Syncfusion React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). It outlines architectural differences, feature mapping, and required changes in a React-based application.
 
 ## Overview
 
-Nutrient Web SDK (PSPDFKit) provides a powerful Web SDK for PDF viewing and editing, typically integrated via an SDK initialization model backed by WebAssembly-based rendering.
+Nutrient Web SDK (PSPDFKit) provides a powerful Web SDK for PDF viewing and editing, typically integrated via an SDK initialization model.
 
-Syncfusion React PDF Viewer offers a **declarative React component** with built-in UI, annotations, form handling, and optimized performance, without requiring WebAssembly or external cloud services.
+Syncfusion React PDF Viewer offers a **declarative React component** with built-in UI, annotations, form handling, and optimized performance, without requiring external runtime dependencies or cloud services.
 
-## Architectural Comparison
+## Architecture notes
 
-| Aspect | Nutrient Web SDK (PSPDFKit) | Syncfusion React PDF Viewer |
-|------|------------------------|-----------------------------|
-| Integration Model | SDK initialization | Declarative React component |
-| Rendering Engine | WebAssembly | Internal optimized engine |
-| UI Composition | SDK-provided UI | Built-in toolbar with services |
-| Feature Enablement | Configuration & APIs | Service injection |
-| Deployment | Self-hosted / cloud | Fully self-hosted |
+This guide focuses on replacing a Nutrient/PSPDFKit SDK integration with a Syncfusion React PDF Viewer component. Important migration considerations include the integration pattern (imperative SDK mounts vs. declarative React component), how UI/tooling is provided (SDK-provided UI vs. injected services), and how annotations and form workflows are persisted and handled. The step-by-step instructions below are designed to help migrate code, event handlers, and persistence workflows to the `PdfViewerComponent`.
 
 ## Installation
 
@@ -51,7 +45,9 @@ npm install @syncfusion/ej2-react-pdfviewer
 
 ### Nutrient Web SDK (CDN example)
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="Nutrient" %}
+{% raw %}
 import { useEffect, useRef } from 'react';
 
 function App() {
@@ -80,11 +76,16 @@ function App() {
 }
 
 export default App;
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 
 ### Syncfusion React PDF Viewer
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="Syncfusion" %}
+{% raw %}
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
@@ -102,7 +103,8 @@ export function App() {
   return (
     <PdfViewerComponent
       id="container"
-      documentPath="sample.pdf"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       style={{ height: '640px' }}
     >
       <Inject
@@ -121,22 +123,22 @@ export function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
-## Feature Mapping
+## Feature checklist (Syncfusion)
 
-| Feature | Nutrient Web SDK (PSPDFKit) | Syncfusion Viewer |
-|------|------------------------|------------------|
-| Page Navigation | Supported | Supported |
-| Zoom & Fit | Supported | Supported |
-| Text Selection & Search | Supported | Supported |
-| Annotations | Supported | Supported |
-| Form Filling | Supported | Supported |
-| Advanced Editing / Redaction | Supported | Not supported |
+- [Page Navigation](../interactive-pdf-navigation/overview)
+- [Text Search](../text-search/overview)
+- [Annotations](../annotation/overview)
+- [Form Fields](../forms/overview)
 
 ## Event Handling
 
 ### Nutrient Web SDK
+
+Check [Events Guide](https://www.nutrient.io/guides/web/events/) to know more about event handling in Apryse.
 
 ```js
 instance.addEventListener('documentLoaded', () => {
@@ -146,20 +148,14 @@ instance.addEventListener('documentLoaded', () => {
 
 ### Syncfusion Viewer
 
-```jsx
+Check [Syncfusion Events Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events#documentload) to know more about event handling in Syncfusion React PDF Viewer.
+
+```js
 <PdfViewerComponent
   documentLoad={() => console.log('Document loaded')}
   pageChange={(args) => console.log(args.currentPage)}
 />
 ```
-
-## Performance & Deployment
-
-- Runs entirely in the browser
-- No WebAssembly or proprietary runtime required
-- Optimized for large PDFs in standalone mode
-- Well-suited for self-hosted and on‑premises deployments
-
 
 ## Migration Checklist
 
@@ -197,18 +193,49 @@ function OldViewer() {
 
 After (e.g., `src/components/PdfViewer.js`):
 
-```jsx
-import React from 'react';
-import { PdfViewerComponent, Toolbar, Inject } from '@syncfusion/ej2-react-pdfviewer';
+{% tabs %}
+{% highlight js tabtitle="Syncfusion" %}
+{% raw %}
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSearch,
+  FormFields,
+  Inject,
+} from '@syncfusion/ej2-react-pdfviewer';
 
-export default function PdfViewer() {
+export function App() {
   return (
-    <PdfViewerComponent id="pdfViewer" documentPath="/sample.pdf" style={{ height: 600 }}>
-      <Inject services={[Toolbar]} />
+    <PdfViewerComponent
+      id="container"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      style={{ height: '640px' }}
+    >
+      <Inject
+        services={[
+          Toolbar,
+          Magnification,
+          Navigation,
+          Annotation,
+          TextSearch,
+          FormFields,
+        ]}
+      />
     </PdfViewerComponent>
   );
 }
-```
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## API mapping: Nutrient → Syncfusion
 
@@ -220,7 +247,17 @@ export default function PdfViewer() {
 | Annotations API (add/serialize) | `addAnnotation()`, `importAnnotation()`, `exportAnnotation()`, `exportAnnotationsAsBase64String()`. |
 | Search API | Enable `enableTextSearch` or use `extractText()` for programmatic extraction. |
 
+## Reference: key Syncfusion `PdfViewerComponent` methods & events
+
+- [PdfViewerComponent API index](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default)
+- [load(document: string | Uint8Array, password?: string)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) — programmatically load a PDF.
+- [download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) — trigger download of current document.
+- [addAnnotation(annotation: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) — add an annotation programmatically.
+- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string):   — export annotations for persistence.
+- [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#extracttext): — extract text and coordinates.
+- Events: documentLoad, pageRenderComplete, pageChange, annotationAdd, annotationRemove, toolbarClick — see event anchors on the API index above (for example: https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload).
+
 ## See Also
 
-- [Apryse WebViewer Getting Started](https://www.nutrient.io/sdk/web/getting-started/react-vite/)
-- [Syncfusion React PDF Viewer Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
+- [Nutrient Web SDK (PSPDFKit) getting started](https://www.nutrient.io/sdk/web/getting-started/react-vite)
+- [Syncfusion React PDF Viewer overview & getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-overview)

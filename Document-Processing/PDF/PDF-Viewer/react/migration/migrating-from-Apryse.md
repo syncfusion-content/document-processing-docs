@@ -13,19 +13,13 @@ This guide assists developers in migrating applications built with [Apryse WebVi
 
 ## Overview
 
-Apryse WebViewer is a feature-rich PDF SDK that relies on a modular JavaScript API and WebAssembly-based rendering engine.
+Apryse WebViewer is a feature-rich PDF SDK that relies on a modular JavaScript API.
 
-Syncfusion React PDF Viewer provides a **native React component-based PDF viewing experience** with built-in UI, annotations, forms, and performance optimizations—without requiring WebAssembly or external cloud services.
+Syncfusion React PDF Viewer provides a **native React component-based PDF viewing experience** with built-in UI, annotations, forms, and performance optimizations, using an optimized JavaScript rendering engine and without external runtime dependencies.
 
-## Key Architectural Differences
+## Architecture notes
 
-| Aspect | Apryse WebViewer | Syncfusion React PDF Viewer |
-|------|-----------------|-----------------------------|
-| Integration Model | JS SDK initialization | Declarative React component |
-| Rendering Engine | WebAssembly | Internal optimized engine |
-| UI | Configurable UI modules | Built-in toolbar via services |
-| Feature Enablement | API-based | Service injection | 
-| Deployment | Self-hosted / cloud | Fully self-hosted |
+This guide focuses on replacing an Apryse WebViewer integration with a Syncfusion React PDF Viewer component. Key considerations when migrating include the integration pattern (imperative SDK mounts vs. a declarative React component), how UI/tooling is provided (hosted JS modules vs. injected services), and feature enablement and persistence for annotations and form fields. The instructions below are framed to help migrate code, event handlers, and persistence workflows to the `PdfViewerComponent`.
 
 ## Installation
 
@@ -46,70 +40,82 @@ npm install @syncfusion/ej2-react-pdfviewer
 ### Apryse WebViewer
 
 ```js
+import { useRef, useEffect } from 'react';
 import WebViewer from '@pdftron/webviewer';
 
-WebViewer({
-  path: '/lib',
-  initialDoc: 'sample.pdf'
-}, document.getElementById('viewer'))
-.then(instance => {
-  const { documentViewer, annotationManager } = instance.Core;
-});
+import './App.css';
+
+function App() {
+  const viewer = useRef(null);
+
+  useEffect(() => {
+    WebViewer(
+      {
+        path: 'lib/webviewer',
+        licenseKey: 'YOUR_LICENSE_KEY',
+        initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/demo-annotated.pdf',
+      },
+      viewer.current
+    ).then((instance) => {
+      // You can access the WebViewer instance here if needed
+    });
+  }, []);
+
+  return (
+    <div className="webviewer" ref={viewer}></div>
+  );
+}
+
+export default App;
 ```
 
 ### Syncfusion React PDF Viewer
 
-```jsx
-import * as ReactDOM from 'react-dom';
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
-import {
-    PdfViewerComponent,
-    Toolbar,
-    Magnification,
-    Navigation,
-    Annotation,
-    TextSearch,
-    FormFields,
-    Inject
-} from '@syncfusion/ej2-react-pdfviewer';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
 
-export function App() {
-    return (
-        <PdfViewerComponent
-            id="container"
-            documentPath="sample.pdf"
-            style={{ height: '640px' }}
-        >
-            <Inject services={[
-                Toolbar,
-                Magnification,
-                Navigation,
-                Annotation,
-                TextSearch,
-                FormFields
-            ]} />
-        </PdfViewerComponent>
-    );
+function App() {
+    return (<div>
+    <div className='control-section'>
+    {/* Render the PDF Viewer */}
+      <PdfViewerComponent
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ 'height': '640px' }}>
+
+         <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                             ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
+
+      </PdfViewerComponent>
+    </div>
+  </div>);
 }
-
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
-## Feature Mapping
 
-| Feature | Apryse WebViewer | Syncfusion Viewer |
-|------|-----------------|------------------|
-| Page Navigation | Built-in | Built-in |
-| Zoom & Fit | Built-in | Built-in |
-| Text Search | Built-in | Built-in |
-| Annotations | Built-in | Built-in |
-| Form Fields | Built-in | Built-in |
-| Redaction / Advanced Editing | Available (licensed) | Not supported |
+## Feature checklist (Syncfusion)
+
+- [Page Navigation](../interactive-pdf-navigation/overview)
+- [Text Search](../text-search/overview)
+- [Annotations](../annotation/overview)
+- [Form Fields](../forms/overview)
 
 ## Event Handling
 
 ### Apryse
+
+Check [Events Guide](https://docs.apryse.com/web/guides/realtime-collaboration-client) to know more about event handling in Apryse.
 
 ```js
 documentViewer.addEventListener('documentLoaded', () => {
@@ -119,18 +125,13 @@ documentViewer.addEventListener('documentLoaded', () => {
 
 ### Syncfusion
 
-```jsx
+Check [Syncfusion Events Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events#documentload) to know more about event handling in Syncfusion React PDF Viewer.
+
+```js
 <PdfViewerComponent
   documentLoad={() => console.log('Document loaded')}
 />
 ```
-
-## Performance & Deployment
-
-- Syncfusion PDF Viewer works entirely in the browser
-- No WebAssembly or external runtime dependencies
-- Optimized for large PDFs in standalone mode
-- Suitable for self-hosted and on-premises deployments
 
 ## Migration Checklist
 
@@ -177,7 +178,7 @@ cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib public/ej2
 
 4) Migrate features incrementally
 
-- Start with basic viewing (document load, page navigation), then add search, annotations, and forms.
+- Start with basic viewing ([document load](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload), [page navigation](../interactive-pdf-navigation/overview)), then add search, [annotations](../annotation/overview), and [forms](../forms/overview).
 - For each feature, map the Apryse API usage to the Syncfusion method/event (see API mapping below), update back-end persistence for annotations if needed, and run the smoke checks.
 
 Minimal file difference (before → after)
@@ -201,7 +202,9 @@ WebViewer({
 
 After (e.g., `src/components/PdfViewer.jsx`):
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 import React from 'react';
 import { PdfViewerComponent, Toolbar, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -217,20 +220,23 @@ export default function PdfViewer() {
     </PdfViewerComponent>
   );
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 
 ## API mapping: Apryse WebViewer → Syncfusion equivalents
 
 | Apryse WebViewer | Syncfusion React PDF Viewer |
 |---|---|
-| `WebViewer({ path, initialDoc }, element)` | Use `<PdfViewerComponent documentPath="..." resourceUrl="..." />` and `load()` for programmatic loads. |
-| `instance.Core.documentViewer` (page events) | `pageRenderInitiate`, `pageRenderComplete`, `pageChange`, `documentLoad` events. |
-| `annotationManager` (add/serialize annotations) | `addAnnotation()`, `importAnnotation()`, `exportAnnotation()`, `exportAnnotationsAsBase64String()` methods and `annotationAdd` event. |
-| `documentViewer.getAnnotationManager()` | Use `PdfViewerComponent` methods for annotations and `annotation*` events. |
-| Custom UI modules | Use the `Toolbar` service or `ToolbarComponent` for custom toolbar items and handle `toolbarClick`. |
-| Text search APIs | Enable `enableTextSearch` or call `extractText()` for programmatic text extraction. |
-| Form field APIs | Use `formField*` events: `formFieldClick`, `validateFormFields`, `retrieveFormFields`, `exportFormFieldsAsObject`. |
-| Print / Export modules | `download()` and Print service. |
+| `WebViewer({ path, initialDoc }, element)` | Use `<PdfViewerComponent documentPath="..." resourceUrl="..." />` and [load()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) for programmatic loads. |
+| `instance.Core.documentViewer` (page events) | [pageRenderInitiate](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagerenderinitiate), [pageRenderComplete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagerendercomplete), [pageChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagechange), [documentLoad](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload) events. |
+| `annotationManager` (add/serialize annotations) | [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation), [importAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#importannotation), [exportAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation), [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string) methods and [annotationAdd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationadd) event. |
+| `documentViewer.getAnnotationManager()` | Use `PdfViewerComponent` methods for annotations and [annotation](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation) events. |
+| Custom UI modules | Use the [Toolbar](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbar) service or `ToolbarComponent` for custom toolbar items and handle `toolbarClick`. |
+| Text search APIs | Enable [enableTextSearch](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enabletextsearch) or call `extractText()` for programmatic text extraction. |
+| Form field APIs | Use `formField*` events: `formFieldClick`, [validateFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#validateformfields), [retrieveFormFields](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#retrieveformfields), [exportFormFieldsAsObject](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportformfieldsasobject). |
+| Print / Export modules | [download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) and Print service. |
 
 ## Expanded Migration Checklist (concrete actions)
 
@@ -252,12 +258,13 @@ export default function PdfViewer() {
 
 ## Reference: key Syncfusion `PdfViewerComponent` methods & events
 
-- `load(document: string | Uint8Array, password?: string)` — programmatically load a PDF.
-- `download()` — trigger download of current document.
-- `addAnnotation(annotation: any)` — add an annotation programmatically.
-- `exportAnnotation(annotationDataFormat)` / `exportAnnotationsAsBase64String()` — export annotations for persistence.
-- `extractText(pageIndex: number, options?: any): Promise` — extract text and coordinates.
-- Events: `documentLoad`, `pageRenderComplete`, `pageChange`, `annotationAdd`, `annotationRemove`, `toolbarClick`.
+- [PdfViewerComponent API index](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default)
+- [load(document: string | Uint8Array, password?: string)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) — programmatically load a PDF.
+- [download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) — trigger download of current document.
+- [addAnnotation(annotation: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) — add an annotation programmatically.
+- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string):   — export annotations for persistence.
+- [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#extracttext): — extract text and coordinates.
+- Events: documentLoad, pageRenderComplete, pageChange, annotationAdd, annotationRemove, toolbarClick — see event anchors on the API index above (for example: https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload).
 
 ## See Also
 
