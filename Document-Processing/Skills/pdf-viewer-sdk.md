@@ -32,7 +32,7 @@ Each platform’s skill file includes component initialization, property configu
 
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer SDK Skills, ensure the following: 
 
-- **[Node.js](https://nodejs.org/)** (v18 or later) — Required to run `npx` commands for installing skills.
+- **[Node.js]("https://nodejs.org/")** (v18 or later) — Required to run `npx` commands for installing skills.
 
 ## Installation
 
