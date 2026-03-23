@@ -1,6 +1,6 @@
 ---
 title: Syncfusion PDF Viewer SDK Agent Skills for AI Assistants | Syncfusion
-description: Learn how to install and use Syncfusion PDF Viewer SDK Agent Skills to enable AI assistants to generate accurate pdf viewer code using Syncfusion PDF Viewer SDK libraries.
+description: Learn how to install and use Syncfusion PDF Viewer SDK Agent Skills to help AI assistants generate accurate PDF Viewer code using PDF Viewer SDK libraries
 platform: document-processing
 control: PDF Viewer SDK
 documentation: ug
@@ -9,20 +9,22 @@ keywords: Skills, AI Assistants, PdfViewer SDK, Agent Skills
 
 # Syncfusion PDF Viewer SDK Agent Skills for AI Assistants
 
-This guide introduces **Syncfusion PDF Viewer SDK Skills**, a curated skill package that enables AI assistants (GitHub Copilot, Code Studio, Cursor, Claude, etc.) to generate accurate, productionready PDF Viewer integration code using the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer components across supported platforms. 
+This guide introduces **Syncfusion PDF Viewer SDK Skills**, a curated skill package that enables AI assistants (GitHub Copilot, Code Studio, Cursor, Claude, etc.) to generate accurate, production ready PDF Viewer integration code using the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer components across supported platforms. 
 
-Unlike generic AI suggestions, these skills ground the assistant in official Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer APIs, configuration patterns, and platformspecific setup details—ensuring correct usage, faster onboarding, and fewer integration issues.
+Unlike generic AI suggestions, these skills ground the assistant in official Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer APIs, configuration patterns, and platform specific setup details—ensuring correct usage, faster Onboarding, and fewer integration issues.
 
-# Supported Platforms 
+## Supported Platforms 
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer SDK Agent Skills provide guidance for the following platforms: 
 
-- **[Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview)**
-- **[React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-overview)**
-- **[Flutter](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/overview)**
-- **[.NET MAUI](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/overview)**
-- **[WinForms](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/overview)**
-- **[WPF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview)**
+| PDF Viewer Libraries | Skills |
+|---|---|
+| [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview) | [syncfusion-blazor-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/main/skills/syncfusion-blazor-pdf-viewer) |
+| [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-overview) | [syncfusion-react-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/main/skills/syncfusion-react-pdf-viewer) |
+| [Flutter](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/overview) | [syncfusion-flutter-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/main/skills/syncfusion-flutter-pdf-viewer) |
+| [.NET MAUI](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/overview) | [syncfusion-maui-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/main/skills/syncfusion-maui-pdf-viewer) |
+| [WinForms](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/overview) | [syncfusion-winforms-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/main/skills/syncfusion-winforms-pdf-viewer) |
+| [WPF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) | [syncfusion-wpf-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/main/skills/syncfusion-wpf-pdf-viewer) |
 
 Each platform’s skill file includes component initialization, property configuration, event handling, and common usage patterns specific to that framework. 
 
@@ -30,27 +32,21 @@ Each platform’s skill file includes component initialization, property configu
 
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer SDK Skills, ensure the following: 
 
-**[Node.js](https://nodejs.org/)** (v16 or later) - Required to run npx commands for installing skills.
+- **[Node.js](https://nodejs.org/)** (v18 or later) — Required to run `npx` commands for installing skills.
 
 ## Installation
 
 Choose one of the following commands to install the Syncfusion PDF Viewer SDK Agent Skills.
 
 ```bash
-# Install all PDF Viewer SDK skills at once 
-npx skills add syncfusion/pdf-viewer-sdk-skills -y 
-
-# Choose and install skills interactively from the terminal 
-npx skills add syncfusion/pdf-viewer-sdk-skills
+npx skills add syncfusion/pdf-viewer-sdk-skills --all -y
 ```
 
-Once installed, the skills are automatically registered and available to supported IDEs and AI assistants such as:
+To install a specific skill, use the following command (for example, to install PDF .Net skills):
 
-- **[Visual Studio Code (Copilot / Agent Mode)](https://code.visualstudio.com/docs/copilot/customization/agent-skills)**
-- **[Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills)**
-- **[Cursor](https://cursor.com/docs/skills)**
-
-To learn more about managing skills, see the [Skills CLI documentation](https://skills.sh/docs).
+```bash
+npx skills add syncfusion/pdf-viewer-sdk-skills
+```
 
 ## What's Included
 
@@ -65,11 +61,11 @@ To learn more about managing skills, see the [Skills CLI documentation](https://
 2. **Platform-Specific Code Generation** — Generates production-ready code tailored to your platform without executing scripts or modifying your project structure. No files are generated on disk.
 3. **Best Practices & Configuration Patterns** - The skills enforce Syncfusion<sup style="font-size:70%">&reg;</sup> recommended practices, including: 
     - Correct package / NuGet / npm selection per platform 
-    - Proper component initialization and lifecycle usage
+    - Proper component initialization and life cycle usage
     - Platform-appropriate configuration for performance and UX 
     - Syncfusion license setup using:
-        - SyncfusionLicense.txt, or
-        - SYNCFUSION_LICENSE_KEY environment variable
+        - `SyncfusionLicense.txt`, or
+        - `SYNCFUSION_LICENSE_KEY` environment variable
 Only APIs and patterns explicitly defined in the skill reference files are used.
 
 ## How Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer SDK Agent Skills Work 
@@ -91,7 +87,7 @@ Once installed, the assistant can help generate PDF Viewer integration code. Bel
 - “How do I add annotation support in WPF Syncfusion PDF Viewer?” 
 - “Provide sample code to customize the toolbar in MAUI PDF Viewer.” 
 - “Show how to load a PDF from a URL in Flutter PDF Viewer.” 
-- “Example of handling page change events in WinForms PDF Viewer.” 
+- “How to navigate to a specific page in Winforms PdfViewer?” 
 
 ## Documentation Reference 
 
