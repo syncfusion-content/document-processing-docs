@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Converting Word to PDF Using Syncfusion Web API 
 
-The Syncfusion Word to PDF Web API allows you to transform Word documents into high‑quality PDF files while preserving the original layout, formatting, and content accurary. It supports .doc, .docx, and .rtf formats and ensures accurate rendering of text, images, tables, and styles. The conversion process can be customized with options such as accessibility tagging and PDF/A archival compliance, making the output suitable for inclusive access and long‑term preservation.  
+The Syncfusion Word to PDF Web API allows you to transform Word documents into high‑quality PDF files while preserving the original layout, formatting, and content accuracy. It supports .doc, .docx, and .rtf formats and ensures accurate rendering of text, images, tables, and styles. The conversion process can be customized with options such as accessibility tagging and PDF/A archival compliance, making the output suitable for inclusive access and long‑term preservation.  
 
 ## Convert Word to PDF
 

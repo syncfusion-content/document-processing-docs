@@ -6,9 +6,9 @@ control: general
 documentation: UG
 ---
 
-# Organizing PDFs Using Syncfusion WEB API
+# Organize PDF Using Syncfusion Web API
 
-The Syncfusion Organize PDF WEB API allows you to efficiently manage and modify the structure of PDF documents through a single, flexible service. By sending your PDF files along with the required settings to the Organize PDF service, you can rearrange page order, rotate pages, delete unwanted pages, or insert blank pages as needed. These operations preserve the original content quality and layout while enabling you to tailor PDFs for specific workflows, making it easy to restructure documents for review, presentation, or distribution. 
+The Syncfusion Organize PDF Web API enables you to restructure PDF documents by rearranging pages, rotating pages, deleting content, or inserting blank pages. These operations preserve content quality while allowing flexible document customization for review, presentation, or distribution.
 
 ## Organize PDF Document
 
@@ -182,7 +182,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 **Files** 
 
-Specifies the list of PDF files to be organized. Each file can include its content, optional password, and page deletion instructions. At least one file is required. 
+Specifies one or more PDF files, including optional passwords and page operations. 
 
 **SortedPageNumbers** 
 
@@ -194,15 +194,15 @@ Specifies page‑level operations such as rotation and blank page insertion for 
 
 **Rotation** 
 
-Specifies the rotation angle applied to the selected page. 
+Defines the rotation angle applied to the selected page. 
 
 **HasEmptyPageBefore** 
 
-Indicates whether a blank page should be inserted before the specified page. 
+Inserts a blank page before the specified page. 
 
 **HasEmptyPageAfter** 
 
-Indicates whether a blank page should be inserted after the specified page. 
+Inserts a blank page after the specified page. 
 
 **PageNumber** 
 

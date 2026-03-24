@@ -5,9 +5,9 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Converting Image to PDF Using Syncfusion WEB API
+# Convert Image to PDF Using Syncfusion Web API
 
-The Syncfusion Image to PDF WEB API allows you to easily convert image files into a single or multiple PDF documents through a flexible and configurable process. By providing image files as input, you can customize conversion settings such as accessibility support and archiving options to meet specific requirements. The conversion preserves image quality and layout while packaging the content into a standardized PDF format, making it suitable for document sharing, storage, compliance, and long‑term archiving workflows.
+The Syncfusion Image to PDF Web API converts one or more images into a single or separate PDF documents. It preserves image quality and layout while supporting accessibility and archival options, making it suitable for sharing, storage, and compliance workflows. 
 
 ## Convert Image to PDF
 
@@ -109,7 +109,7 @@ Specifies the list of image files to be converted into a PDF document. Each imag
 
 **Orientation** 
 
-Defines the page orientation of the output PDF, such as Portrait or Landscape. 
+Sets the page orientation of the output PDF, such as Portrait or Landscape. 
 
 **Margin** 
 

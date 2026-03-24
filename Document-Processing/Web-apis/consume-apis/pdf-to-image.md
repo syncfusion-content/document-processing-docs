@@ -5,9 +5,9 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Converting PDF to Image Using Syncfusion WEB API
+# Convert PDF to Image Using Syncfusion Web API
 
-The Syncfusion PDF to Image WEB API enables you to easily convert PDF documents into high‑quality image files using a customizable and efficient process. By providing a PDF document as input, you can tailor conversion settings such as accessibility support, archiving options, and output image formats, with support for PNG, JPEG, and WebP. The conversion accurately renders each page of the PDF as an image while preserving visual clarity and layout, making it ideal for previews, web display, content extraction, and image‑based document workflows.
+The Syncfusion PDF to Image Web API converts PDF pages into high‑quality image formats such as PNG, JPEG, and WebP. It accurately renders each page while preserving layout and clarity, making it ideal for previews, web display, and image‑based workflows.
 
 ## Convert PDF to Image
 

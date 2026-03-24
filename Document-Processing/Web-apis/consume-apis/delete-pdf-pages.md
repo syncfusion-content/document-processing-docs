@@ -5,9 +5,9 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Delete Pages from PDF Using Syncfusion WEB API
+# Delete Pages from PDF Using Syncfusion Web API 
 
-The Syncfusion Delete PDF Pages WEB API allows you to easily remove unwanted or unnecessary pages from a PDF document using a simple API‑based workflow. By supplying a PDF file as input to the Delete Pages API, you can specify individual pages or page ranges to be deleted while keeping the remaining content intact. This operation preserves the original formatting, layout, and quality of the document, making it useful for refining documents, removing confidential sections, or preparing customized PDFs for specific use cases.
+The Syncfusion Delete PDF Pages Web API allows you to remove unwanted pages from a PDF document using a simple, API‑driven workflow. You can delete specific pages or page ranges while preserving the original layout, formatting, and quality of the remaining content. This feature is ideal for refining documents, removing sensitive information, or creating customized PDFs for specific use cases.
 
 ## Delete PDF Pages
 
@@ -96,17 +96,17 @@ Specifies the password required to open and process a protected PDF file.
 
 **PageRanges** 
 
-Specifies the page ranges within the PDF that should be deleted. 
+Defines the page ranges to be deleted from the PDF. 
 
 **Start** 
 
-Specifies the starting page number of the range to be deleted. 
+Specifies the starting page number of the deletion range. 
 
 **End** 
 
-Specifies the ending page number of the range to be deleted.
+Specifies the ending page number of the deletion range. 
 
-## Delete PDF pages Job Response 
+## Delete Pages Job Response 
 
 Once the request is sent, it will create a job to delete PDF pages and return the job details as follows:
 
@@ -118,7 +118,7 @@ Once the request is sent, it will create a job to delete PDF pages and return th
 }
 ```
 
-## Check Delete PDF pages Job Status 
+## Check Delete Pages Job Status 
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 

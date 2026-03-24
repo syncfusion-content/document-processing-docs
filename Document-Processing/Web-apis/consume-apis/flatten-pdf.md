@@ -5,9 +5,9 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Flattening PDFs Using Syncfusion WEB API
+# Flatten PDF Using Syncfusion Web API 
 
-The Syncfusion Flatten PDF WEB API allows you to permanently embed annotations and form field data into the content of a PDF document. By providing a PDF file as input to the Flatten PDF API, all interactive elements—such as comments, highlights, and form fields—are converted into static, non‑editable content while retaining the original appearance and layout. This ensures that the displayed information remains consistent across devices and viewers, making the document suitable for final distribution, archiving, or compliance‑related workflows.
+The Syncfusion Flatten PDF Web API enables you to permanently embed annotations and form field data into the PDF content. All interactive elements—such as form fields, comments, and highlights—are converted into static, non‑editable content while preserving the document’s appearance. This ensures consistent viewing across devices and makes the PDF suitable for final distribution, archiving, and compliance with workflows.
 
 ## Flatten PDF Documents
 
@@ -98,7 +98,7 @@ Converts interactive form fields into static content, making them non‑editable
 
 Converts annotations (such as comments, highlights, and stamps) into permanent, non‑editable content in the PDF. 
 
-## Flatten PDFs Job Response
+## Flatten PDF Job Response
 
 Once the request is sent, it will create a flatten job to flatten the PDF and return the job details as follows:
 
@@ -110,7 +110,7 @@ Once the request is sent, it will create a flatten job to flatten the PDF and re
 }
 ```
 
-## Check Flatten PDFs Job Status
+## Check Flatten PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 

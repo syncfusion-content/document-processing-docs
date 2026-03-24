@@ -5,9 +5,9 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Protecting PDFs Using Syncfusion WEB API
+# Protect PDF Using Syncfusion Web API
 
-The Syncfusion Protect PDF WEB API allows you to secure PDF documents by applying protection settings through a simple API‑based workflow. By providing a PDF document along with a password as input to the Protect PDF API, you can restrict unauthorized access and control document usage by setting permissions such as preventing editing, copying, or printing. This ensures that sensitive information remains protected while preserving the original content, layout, and quality of the PDF for secure sharing.
+The Syncfusion Protect PDF Web API secures PDF documents by applying password protection and usage restrictions. You can control permissions such as editing, copying, and printing while preserving the original document quality. This ensures sensitive information remains protected during secure sharing.
 
 ## Protecting PDF Document
 
@@ -84,7 +84,7 @@ Specifies the unique identifier of the uploaded PDF document that needs to be pr
 
 **Password** 
 
-Specifies the user password used to protect the PDF document and restrict unauthorized access.
+Defines the user password used to protect the PDF document and restrict unauthorized access.
 
 ## Protect PDF Job Response
 

@@ -4,9 +4,9 @@ description: Reduce PDF file size with image optimization and structural compres
 control: general
 documentation: UG
 ---
-# Compressing PDF Files Using Syncfusion WEB API
+# Compress PDF Files Using Syncfusion Web API
 
-The Syncfusion Compress PDF WEB API enables you to reduce the file size of PDF documents efficiently while maintaining acceptable visual quality. It securely processes password‑protected PDFs while reducing file size through image quality adjustment, font optimization, and metadata removal. By providing a PDF document as input, the API processes and outputs a smaller, optimized PDF that is easier to store, upload, and distribute, making it especially useful for web delivery, email sharing, and document archiving. 
+The Syncfusion Compress PDF Web API reduces the file size of PDF documents while maintaining acceptable visual quality. It optimizes images, fonts, metadata, and internal structures, producing smaller PDFs that are easier to store, share, and distribute. This is especially useful for email sharing, web delivery, and document archiving.
 
 ## Compress PDF Document
 
@@ -102,7 +102,7 @@ Specifies the password required to open and process a protected PDF file.
 
 **ImageQuality** 
 
-Defines the quality level of images in the PDF. Lower values reduce file size by increasing image compression. 
+Controls image compression quality. Lower values reduce file size.  
 
 **OptimizeFont** 
 
