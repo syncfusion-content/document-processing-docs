@@ -1,14 +1,14 @@
 ---
-title: Compress PDF Files Using Syncfusion Web API 
+title: Compress PDF Files Using Syncfusion Web API.
 description: Reduce PDF file size with image optimization and structural compression while maintaining visual quality using Syncfusion compression Web API. 
 control: general
 documentation: UG
 ---
-# Guide to Compressing PDF Files with Syncfusion API 
+# Compressing PDF Files Using Syncfusion Web API
 
-The Compress PDF API allows you to reduce the size of a PDF document with various compression options.
+The Syncfusion Compress PDF Web API reduces the file size of PDF documents while maintaining acceptable visual quality. It optimizes images, fonts, metadata, and internal structures, producing smaller PDFs that are easier to store, share, and distribute. This is especially useful for email sharing, web delivery, and document archiving.
 
-## Flatten PDF Document
+## Compress PDF Document
 
 To compress a PDF document, send a request to the /v1/edit-pdf/compress endpoint with the input PDF file and compression options as shown below.
 
@@ -94,6 +94,38 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## Compress PDF settings
+
+**Password** 
+
+Specifies the password required to open and process a protected PDF file. 
+
+**ImageQuality** 
+
+Controls image compression quality. Lower values reduce file size.  
+
+**OptimizeFont** 
+
+Optimizes and subsets embedded fonts to reduce overall PDF size without affecting text appearance. 
+
+**RemoveMetadata** 
+
+Removes document metadata such as author, title, and creation details to reduce file size and improve privacy. 
+
+**OptimizePageContents** 
+
+Optimizes page content by removing unnecessary objects and streamlining internal PDF structures. 
+
+**FlattenFormFields** 
+
+Converts interactive form fields into static content to further reduce file size. 
+
+**FlattenAnnotations** 
+
+Converts annotations (such as comments and highlights) into static content to minimize PDF size. 
+
+## Compress PDF Job Response
+
 Once the request is sent, it will create a compression job to compress the PDF and return the job details as follows:
 
 ```
@@ -104,7 +136,7 @@ Once the request is sent, it will create a compression job to compress the PDF a
 }
 ```
 
-## Poll the status of the Compress PDF Job
+## Check Compress PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
@@ -112,7 +144,7 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/9b131bfe-d4eb-4f1d-b946-46443a363eb5' \
+curl --location 'http://localhost:8003/v1/edit-pdf/status/9b131bfe-d4eb-4f1d-b946-46443a363eb5' \
   --output Output.pdf
 
 {% endhighlight %}
@@ -133,7 +165,7 @@ fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
@@ -143,8 +175,6 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
-
-**Job Statuses:**
 
 - Queued:
 

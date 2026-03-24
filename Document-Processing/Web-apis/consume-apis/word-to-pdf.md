@@ -5,9 +5,9 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Converting Word to PDF Using Syncfusion API
+# Converting Word to PDF Using Syncfusion Web API 
 
-Converting a Word document to PDF is simple with support for .doc, .docx, and .rtf formats. Customize conversion settings, like accessibility and archiving options, to suit your needs.
+The Syncfusion Word to PDF Web API allows you to transform Word documents into high‑quality PDF files while preserving the original layout, formatting, and content accuracy. It supports .doc, .docx, and .rtf formats and ensures accurate rendering of text, images, tables, and styles. The conversion process can be customized with options such as accessibility tagging and PDF/A archival compliance, making the output suitable for inclusive access and long‑term preservation.  
 
 ## Convert Word to PDF
 
@@ -83,6 +83,25 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endhighlight %} 
 
 {% endtabs %}
+## Word to PDF settings
+
+**Password** 
+
+Specifies the password required to open a protected Word document before conversion. 
+
+**PreserveFormFields** 
+
+Retains form fields—such as text boxes, checkboxes, and dropdowns—so they remain interactive in the converted PDF. 
+
+**PdfCompliance**
+
+Defines the PDF/A compliance level for archival and standards adherence. Supported levels include PDF/A‑1B, PDF/A‑2B, PDF/A‑3B, and PDF/A‑4. 
+
+**EnableAccessibility**
+
+Applies accessibility tags to the PDF to improve compatibility with screen readers and assistive technologies. 
+
+## Word to PDF Job Response  
 
 Once the request is sent, it will create a conversion job to convert the Word document to PDF and return the job details as follows:
 
@@ -94,7 +113,7 @@ Once the request is sent, it will create a conversion job to convert the Word do
 }
 ```
 
-## Poll the status of the Conversion Job
+## Check Word to PDF Job Status 
 
 Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
 
@@ -135,7 +154,6 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
 
-**Job Statuses:**
 
 - Queued:
 

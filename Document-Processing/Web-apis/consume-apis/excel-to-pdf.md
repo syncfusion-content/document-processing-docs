@@ -5,9 +5,9 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Excel to PDF Conversion Using Syncfusion API
+# Converting Excel to PDF Using Syncfusion Web API 
 
-Converting an Excel document to PDF is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
+The Syncfusion Excel to PDF Web API allows you to convert Excel workbooks into well‑formatted, high‑quality PDF files while preserving the structure and readability of worksheets. It supports accurate rendering of data such as tables, formulas (as values), charts, images, and multi‑sheet layouts in the resulting PDF. The conversion can be customized with options like accessibility tagging for assistive technologies and PDF/A compliance for long‑term archiving.  
 
 ## Convert Excel to PDF
 
@@ -73,6 +73,16 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## Excel to PDF settings
+**Password** 
+
+Specifies the password required to open a protected Word document before converting it to PDF. 
+
+**PdfCompliance** 
+
+Defines the PDF/A compliance level for archival and standards adherence. Supported levels include PDF/A‑1B, PDF/A‑2B, PDF/A‑3B, and PDF/A‑4. 
+
+## Excel to PDF Job Response 
 Once the request is sent, it will create a conversion job to convert the Excel document to PDF and return the job details as follows:
 
 ```
@@ -82,7 +92,7 @@ Once the request is sent, it will create a conversion job to convert the Excel d
     "createdAt": "2024-05-06T09:39:13.9505828Z"
 }
 ```
-## Poll the status of the Conversion Job
+## Check Excel to PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
 
@@ -122,8 +132,6 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
-
-**Job Statuses:**
 
 - Queued:
 

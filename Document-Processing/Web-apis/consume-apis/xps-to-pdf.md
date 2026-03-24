@@ -1,13 +1,13 @@
 ---
-title: Convert XPS to PDF Using Syncfusion Web API 
+title: Convert XPS to PDF Using Syncfusion Web API. 
 description: Convert XPS documents into searchable, printed PDF files with accurate rendering using Syncfusion XPS conversion Web API. 
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to XPS to PDF Conversion Using Syncfusion API
+# Converting XPS to PDF Using Syncfusion Web API 
 
-Converting an XPS document to PDF is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
+The Syncfusion XPS to PDF Web API converts XPS documents into standard PDF files using a simple and customizable process. It supports accessibility and archival options for compliance and long‑term storage.
 
 ## Convert XPS to PDF
 
@@ -72,6 +72,14 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## XPS to PDF settings
+
+**File** 
+
+Specifies the input XPS document that will be converted into a PDF file.
+
+## XPS to PDF Job Response
+
 Once the request is sent, it will create a conversion job to convert the XPS document to PDF and return the job details as follows:
 
 ```
@@ -81,7 +89,7 @@ Once the request is sent, it will create a conversion job to convert the XPS doc
     "createdAt": "2024-05-06T09:39:13.9505828Z"
 }
 ```
-## Poll the status of the Conversion Job
+## Check XPS to PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
 
@@ -121,8 +129,6 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
-
-**Job Statuses:**
 
 - Queued:
 

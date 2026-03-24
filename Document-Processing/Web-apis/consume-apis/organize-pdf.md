@@ -6,9 +6,9 @@ control: general
 documentation: UG
 ---
 
-# Guide to Organizing PDFs Using Syncfusion API
+# Organize PDF Using Syncfusion Web API
 
-You can manipulate the structure and content of PDF documents by rearranging, rotating, deleting, or inserting blank pages. To perform these operations, send your PDF files along with the appropriate settings to the Organize PDF service.
+The Syncfusion Organize PDF Web API enables you to restructure PDF documents by rearranging pages, rotating pages, deleting content, or inserting blank pages. These operations preserve content quality while allowing flexible document customization for review, presentation, or distribution.
 
 ## Organize PDF Document
 
@@ -178,6 +178,38 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## Organize PDF settings 
+
+**Files** 
+
+Specifies one or more PDF files, including optional passwords and page operations. 
+
+**SortedPageNumbers** 
+
+Defines the new order of pages after organizing by specifying the sequence of page numbers. 
+
+**PageDetails** 
+
+Specifies page‑level operations such as rotation and blank page insertion for individual pages. 
+
+**Rotation** 
+
+Defines the rotation angle applied to the selected page. 
+
+**HasEmptyPageBefore** 
+
+Inserts a blank page before the specified page. 
+
+**HasEmptyPageAfter** 
+
+Inserts a blank page after the specified page. 
+
+**PageNumber** 
+
+Specifies the 1‑based page number to which the page operations apply.
+
+## Organize PDF Job Response
+
 After submitting the request, a job is created to organize the PDF and the following job details are returned:
 
 ```
@@ -188,7 +220,7 @@ After submitting the request, a job is created to organize the PDF and the follo
 }
 ```
 
-## Poll the status of the Organize Job
+## Check Organize PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
@@ -196,7 +228,7 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
+curl --location 'http://localhost:8003/v1/edit-pdf/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
   --output Output.pdf
 
 {% endhighlight %}
@@ -218,7 +250,7 @@ fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
@@ -228,8 +260,6 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
-
-**Job Statuses:**
 
 - Queued:
 
