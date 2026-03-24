@@ -1,7 +1,7 @@
 ---
 title: Syncfusion DOCX Editor SDK Agent Skills for AI Assistants | Syncfusion
-description: Learn how to install and use Syncfusion DOCX Editor SDK Agent Skills to enable AI assistants to generate accurate DOCX editor code using Syncfusion DOCX Editor SDK libraries.
-platform: docx-editor
+description: Learn how to install and use Syncfusion DOCX Editor Agent Skills to help AI assistants generate accurate DOCX Editor code with DOCX Editor SDK libraries
+platform: document-processing
 control: DOCX Editor SDK
 documentation: ug
 keywords: Skills, AI Assistants, DOCX Editor SDK, Agent Skills
@@ -26,7 +26,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK Skills eliminat
 
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK Skills, ensure the following tools are available on your machine:
 
-- **[Node.js](https://nodejs.org/)** (v16 or later) — Required to run `npx` commands for installing skills.
+- **[Node.js](https://nodejs.org/en)** (v16 or later) — Required to run `npx` commands for installing skills.
 - **Platform-specific SDKs** — Required based on your target platform:
   - **.NET SDK** (6.0 or later) for Blazor ASP.NET MVC and ASP.NET Core
   - **React development environment** for React DOCX Editor
@@ -36,7 +36,7 @@ Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor S
 
 ## Installation
 
-Choose one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup>  DOCX Editor SDK Skills](https://github.com/syncfusion/docx-editor-sdk-skills) based on your preference. Users can also explore Syncfusion<sup style="font-size:70%">&reg;</sup> skills from the [marketplace](https://skills.sh/syncfusion/).
+Choose one of the following commands to install Syncfusion<sup style="font-size:70%">&reg;</sup>  DOCX Editor SDK Skills based on your preference. Users can also explore Syncfusion<sup style="font-size:70%">&reg;</sup> skills from the [marketplace](https://skills.sh/syncfusion/).
 
 ```bash
 # Install all DOCX Editor SDK skills at once

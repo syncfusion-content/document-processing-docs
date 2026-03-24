@@ -1,6 +1,6 @@
 ---
 title: Spreadsheet Editor SDK Agent Skills for AI Assistants | Syncfusion
-description: Discover how to enable AI assistants to generate accurate, production-ready code for Syncfusion Spreadsheet components using Spreadsheet Editor SDK Agent Skills.
+description: Learn how to install and use Syncfusion Spreadsheet Editor SDK Agent Skills to help AI assistants generate accurate code with Syncfusion Spreadsheet components
 platform: document-processing
 control: Spreadsheet Editor SDK
 documentation: ug
@@ -24,11 +24,11 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills a
 
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills, ensure the following tools are available on your machine:
 
-- **[Node.js](https://nodejs.org/)** (v16 or later) — Required to run `npx` commands for installing skills.
+- **[Node.js](https://nodejs.org/en)** (v16 or later) — Required to run `npx` commands for installing skills.
 
 ## Installation
 
-Use one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills](https://github.com/syncfusion/spreadsheet-editor-sdk-skills). You can also browse Syncfusion<sup style="font-size:70%">&reg;</sup> skills in the [marketplace](https://skills.sh/syncfusion/).
+Use one of the following commands to install Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills. You can also browse Syncfusion<sup style="font-size:70%">&reg;</sup> skills in the [marketplace](https://skills.sh/syncfusion/).
 
 ```bash
 # Install all spreadsheet editor SDK skills at once

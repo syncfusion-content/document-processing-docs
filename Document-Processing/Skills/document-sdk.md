@@ -1,6 +1,6 @@
 ---
 title: Syncfusion Document SDK Agent Skills for AI Assistants | Syncfusion
-description: Learn how to install and use Syncfusion Document SDK Agent Skills to enable AI assistants to generate accurate document processing code using Syncfusion Document SDK libraries.
+description: Learn how to install and use Syncfusion Document SDK Agent Skills to help AI assistants generate accurate document processing code with Document SDK libraries
 platform: document-processing
 control: Document SDK
 documentation: ug
@@ -15,24 +15,24 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate c
 
 | Document Processing Libraries | Skills |
 |---|---|
-| [Word (DocIO)](https://help.syncfusion.com/document-processing/word/overview) | [syncfusion-dotnet-word](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-word) <br> [syncfusion-java-word](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-java-word) |
-| [PDF](https://help.syncfusion.com/document-processing/pdf/overview) | [syncfusion-dotnet-pdf](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-pdf) <br> [syncfusion-dotnet-pdf-to-image](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-pdf-to-image) <br> [syncfusion-flutter-pdf](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-flutter-pdf) <br> [syncfusion-javascript-pdf](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-javascript-pdf) |
-| [Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/overview) | [syncfusion-dotnet-excel](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-excel) <br> [syncfusion-flutter-excel](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-flutter-excel) |
-| [PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/overview) | [syncfusion-dotnet-powerpoint](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-powerpoint) |
-| [Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp) | [syncfusion-dotnet-markdown](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-markdown) |
-| [Smart Data Extraction](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/overview) | [syncfusion-dotnet-smart-data-extraction](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-smart-data-extraction) |
+| [Word (DocIO)](https://help.syncfusion.com/document-processing/word/overview) | syncfusion-dotnet-word <br> syncfusion-java-word |
+| [PDF](https://help.syncfusion.com/document-processing/pdf/overview) | syncfusion-dotnet-pdf <br> syncfusion-dotnet-pdf-to-image <br> syncfusion-flutter-pdf <br> syncfusion-javascript-pdf |
+| [Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/overview) | syncfusion-dotnet-excel <br> syncfusion-flutter-excel |
+| [PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/overview) | syncfusion-dotnet-powerpoint |
+| [Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp) | syncfusion-dotnet-markdown |
+| Smart Data Extraction | syncfusion-dotnet-smart-data-extraction |
 
 ## Prerequisites
 
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills, ensure the following tools are available on your machine:
 
-- **[Node.js](https://nodejs.org/)** (v18 or later) — Required to run `npx` commands for installing skills.
-- **[.NET SDK](https://dotnet.microsoft.com/download)** (8.0 or later) — Required for CSX script execution (Mode 2).
+- **[Node.js](https://nodejs.org/en)** (v18 or later) — Required to run `npx` commands for installing skills.
+- **[.NET SDK](https://dotnet.microsoft.com/en-us/download)** (8.0 or later) — Required for CSX script execution (Mode 2).
 - **[dotnet-script](https://github.com/dotnet-script/dotnet-script)** — Required for CSX script execution (Mode 2). Install it globally by running: `dotnet tool install -g dotnet-script`.
 
 ## Installation
 
-Choose one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills](https://github.com/syncfusion/document-sdk-skills) based on your preference. You can also explore Syncfusion<sup style="font-size:70%">&reg;</sup> skills from the [marketplace](https://skills.sh/syncfusion/).
+Choose one of the following commands to install Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills based on your preference. You can also explore Syncfusion<sup style="font-size:70%">&reg;</sup> skills from the [marketplace](https://skills.sh/syncfusion/).
 
 To install all document SDK skills at once, use the following command:
 

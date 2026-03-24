@@ -19,12 +19,12 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer SDK Agent Skills pro
 
 | PDF Viewer Libraries | Skills |
 |---|---|
-| [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview) | [syncfusion-blazor-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/main/skills/syncfusion-blazor-pdf-viewer) |
-| [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-overview) | [syncfusion-react-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/main/skills/syncfusion-react-pdf-viewer) |
-| [Flutter](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/overview) | [syncfusion-flutter-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/main/skills/syncfusion-flutter-pdf-viewer) |
-| [.NET MAUI](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/overview) | [syncfusion-maui-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/main/skills/syncfusion-maui-pdf-viewer) |
-| [WinForms](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/overview) | [syncfusion-winforms-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/main/skills/syncfusion-winforms-pdf-viewer) |
-| [WPF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) | [syncfusion-wpf-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/main/skills/syncfusion-wpf-pdf-viewer) |
+| [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview) | syncfusion-blazor-pdf-viewer |
+| [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-overview) | syncfusion-react-pdf-viewer |
+| [Flutter](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/overview) | syncfusion-flutter-pdf-viewer |
+| [.NET MAUI](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/overview) | syncfusion-maui-pdf-viewer |
+| [WinForms](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/overview) | syncfusion-winforms-pdf-viewer |
+| [WPF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) | syncfusion-wpf-pdf-viewer |
 
 Each platform’s skill file includes component initialization, property configuration, event handling, and common usage patterns specific to that framework. 
 
