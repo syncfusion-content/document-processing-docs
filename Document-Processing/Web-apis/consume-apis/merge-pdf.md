@@ -9,7 +9,7 @@ documentation: UG
 
 The Syncfusion Merge PDF Web API allows you to seamlessly combine multiple PDF documents into a single, unified PDF file using a simple and efficient process. By providing the required PDF files as input to the merge PDF document service, the engine preserves the original content, layout, and formatting of each document while arranging them in the specified order. 
 
-## Merge PDF Document
+## Merge PDF Documents
 
 To merge PDF documents, send a request to the /v1/edit-pdf/merge endpoint, including both the PDF files as input and the settings as follows:
 
@@ -162,6 +162,8 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
+
+**Job Statuses:**
 
 - Queued:
 
