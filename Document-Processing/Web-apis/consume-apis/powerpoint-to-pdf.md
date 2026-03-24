@@ -5,9 +5,9 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Converting PowerPoint to PDF Using Syncfusion API
+# Converting PowerPoint to PDF Using Syncfusion Web API 
 
-Converting a PowerPoint document to PDF is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
+The syncfusion PowerPoint to PDF Web API enables you to convert presentation files into polished, high‑quality PDF documents while preserving slide layouts, fonts, images, charts, and visual effects. Each slide is accurately rendered as a PDF page, ensuring consistent appearance across devices and platforms. The conversion supports customization options such as accessibility tagging for screen readers and PDF/A compliance for long‑term archiving.
 
 ## Convert PowerPoint to PDF
 
@@ -82,6 +82,20 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## PowerPoint to PDF settings
+**Password** 
+
+Specifies the password required to open a protected Word document before converting it to PDF. 
+
+**PdfCompliance** 
+
+Defines the PDF/A compliance level for archival and standards adherence. Supported levels include PDF/A‑1B, PDF/A‑2B, PDF/A‑3B, and PDF/A‑4. 
+
+**EnableAccessibility** 
+
+Applies accessibility tags to the PDF to improve compatibility with screen readers and assistive technologies.
+
+## Presentation to PDF Job Response 
 Once the request is sent, it will create a conversion job to convert the PowerPoint to PDF and return the job details as follows:
 
 ```
@@ -92,7 +106,7 @@ Once the request is sent, it will create a conversion job to convert the PowerPo
 }
 ```
 
-## Poll the status of the Conversion Job
+## Check Presentation to PDF Job Status 
 
 Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
 
@@ -132,8 +146,6 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
-
-**Job Statuses:**
 
 - Queued:
 

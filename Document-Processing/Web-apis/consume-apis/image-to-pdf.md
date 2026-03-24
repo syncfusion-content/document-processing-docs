@@ -5,9 +5,9 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Image to PDF Conversion Using Syncfusion API
+# Converting Image to PDF Using Syncfusion WEB API
 
-Converting Image files to PDF is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
+The Syncfusion Image to PDF WEB API allows you to easily convert image files into a single or multiple PDF documents through a flexible and configurable process. By providing image files as input, you can customize conversion settings such as accessibility support and archiving options to meet specific requirements. The conversion preserves image quality and layout while packaging the content into a standardized PDF format, making it suitable for document sharing, storage, compliance, and long‑term archiving workflows.
 
 ## Convert Image to PDF
 
@@ -101,6 +101,30 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## Image to PDF settings
+
+**Files** 
+
+Specifies the list of image files to be converted into a PDF document. Each image can include its own file name and rotation settings. 
+
+**Orientation** 
+
+Defines the page orientation of the output PDF, such as Portrait or Landscape. 
+
+**Margin** 
+
+Specifies the margin size applied around the content on each PDF page. 
+
+**EnableSaveAsSeperateFile** 
+
+Indicates whether each image should be converted into a separate PDF file instead of combining all images into a single PDF. 
+
+**PageSize** 
+
+Defines the page size of the output PDF document for image conversion. 
+
+## Image to PDF Job Response
+
 Once the request is sent, it will create a job to merge PDF documents and return the job details as follows:
 
 ```
@@ -111,7 +135,7 @@ Once the request is sent, it will create a job to merge PDF documents and return
 }
 ```
 
-## Poll the status of the Conversion Job
+## Check Image to PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
 
@@ -151,8 +175,6 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
-
-**Job Statuses:**
 
 - Queued:
 

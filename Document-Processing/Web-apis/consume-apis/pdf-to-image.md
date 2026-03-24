@@ -5,9 +5,9 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to PDF to Image Conversion Using Syncfusion API
+# Converting PDF to Image Using Syncfusion WEB API
 
-Converting an PDF document to Images is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
+The Syncfusion PDF to Image WEB API enables you to easily convert PDF documents into high‑quality image files using a customizable and efficient process. By providing a PDF document as input, you can tailor conversion settings such as accessibility support, archiving options, and output image formats, with support for PNG, JPEG, and WebP. The conversion accurately renders each page of the PDF as an image while preserving visual clarity and layout, making it ideal for previews, web display, content extraction, and image‑based document workflows.
 
 ## Convert PDF to Image
 
@@ -81,6 +81,18 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## PDF to Image settings
+
+**Password** 
+
+Specifies the password required to open and process a protected PDF document. 
+
+**ImageFormat** 
+
+Defines the output image format for the converted pages, such as JPG, PNG, or WEBP.
+
+## PDF to Image Job Response  
+
 Once the request is sent, it will create a conversion job to convert the PDF to Images and return the job details as follows:
 
 ```
@@ -90,7 +102,7 @@ Once the request is sent, it will create a conversion job to convert the PDF to 
     "createdAt": "2024-05-06T09:39:13.9505828Z"
 }
 ```
-## Poll the status of the Conversion Job
+## Check PDF to Image Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
 
@@ -130,8 +142,6 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
-
-**Job Statuses:**
 
 - Queued:
 
