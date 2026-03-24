@@ -23,7 +23,7 @@ This guide shows a migration path from a low-level canvas-based renderer (PDF.js
 
 - Rendering model: PDF.js exposes page and canvas rendering APIs requiring manual drawing and layout, while `PdfViewerComponent` manages rendering, paging, and UI internally.
 - UI and tooling: PDF.js implementations typically implement custom toolbars and controls; Syncfusion exposes a configurable toolbar and injectable services for features like annotations, search, and forms.
-- Event model: PDF.js uses promises and page/render callbacks; use `PdfViewerComponent` events such as `documentLoad`, `pageRenderComplete`, and `pageChange` to mirror lifecycle hooks.
+- Event model: PDF.js uses promises and page/render callbacks; use `PdfViewerComponent` events such as `documentLoad`, `pageRenderComplete`, and `pageChange` to mirror life cycle hooks.
 - Persistence and integration: Rework custom annotation/form persistence to the Syncfusion export/import APIs when migrating.
 
 ## Installation
