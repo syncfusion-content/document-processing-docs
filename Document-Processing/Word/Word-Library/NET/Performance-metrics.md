@@ -18,7 +18,7 @@ The following system configurations were used for benchmarking:
 * **Processor:** AMD Ryzen 5 7520U with Radeon Graphics  
 * **RAM:** 16GB  
 * **.NET Version:** .NET 8.0  
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIO.Net.Core v33.1.44](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/33.1.44)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIO.Net.Core v32.2.3](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/32.2.3)
 
 ## Benchmark Results
 
@@ -34,25 +34,25 @@ The table below shows the performance results of various Word document operation
 <tr>
     <td>{{'[DOCX to DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/loading-and-saving-document)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>1.5</td>
+    <td>1.68</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Open-and-save/.NET/Open-and-Save-Word-document)'| markdownify }}</td>    
 </tr>
 <tr>
     <td>{{'[RTF to RTF](https://help.syncfusion.com/document-processing/word/word-library/net/rtf)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>4.3</td>
+    <td>5.53</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Open-and-save/.NET/Open-and-Save-RTF-document)'| markdownify }}</td>
 </tr>
 <tr>
     <td>{{'[HTML to HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>6.5</td>
+    <td>7.7</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Open-and-save/.NET/Open-and-Save-HTML-document)'| markdownify }}</td>
 </tr>
 <tr>
     <td>{{'[Clone and merge](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-word-document#cloning-a-word-document)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>0.8</td>
+    <td>3.85</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Clone-and-merge/)'| markdownify }}</td>
 </tr>
 <tr>
@@ -64,13 +64,13 @@ The table below shows the performance results of various Word document operation
 <tr>
     <td>{{'[Mail merge](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge)'| markdownify }}</td>
     <td>1000 records</td>
-    <td>1.5</td>
+    <td>1.72</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Mail-Merge/)'| markdownify }}</td>
 </tr>
 <tr>
     <td>{{'[Word Compare](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/compare-word-documents)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>3.8</td>
+    <td>3.52</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Word-Compare/)'| markdownify }}</td>
 </tr>
 <tr>
@@ -82,19 +82,19 @@ The table below shows the performance results of various Word document operation
 <tr>
     <td>{{'[Reject All](https://help.syncfusion.com/document-processing/word/word-library/net/accepting-or-rejecting-track-changes#reject-all-changes)'| markdownify }}</td>
     <td>100 revisions</td>
-    <td>0.008</td>
+    <td>0.009</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Reject-All/)'| markdownify }}</td>
 </tr>
 <tr>
     <td>{{'[Update TOC](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-table-of-contents)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>4.3</td>
+    <td>4.53</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Update-TOC/)'| markdownify }}</td>
 </tr>
 <tr>
     <td>{{'[Update Document Fields](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-fields)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>0.14</td>
+    <td>0.18</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/UpdateDocumentFields/)'| markdownify }}</td>
 </tr>
 </table>
