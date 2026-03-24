@@ -1,5 +1,5 @@
 ---
-title: Compress PDF Files Using Syncfusion Web API.
+title: Compress PDF Files Using Syncfusion Web API
 description: Reduce PDF file size with image optimization and structural compression while maintaining visual quality using Syncfusion compression Web API. 
 control: general
 documentation: UG
@@ -175,6 +175,8 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
+
+**Job Statuses:**
 
 - Queued:
 

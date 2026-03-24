@@ -176,6 +176,8 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
 
+**Job Statuses:**
+
 - Queued:
 
 ```

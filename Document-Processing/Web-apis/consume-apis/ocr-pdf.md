@@ -1,11 +1,11 @@
 ---
-title: OCR PDF Using Syncfusion Web API.
+title: OCR PDF Using Syncfusion Web API
 description: Convert scanned or image-based PDFs into searchable, selectable text PDFs using Syncfusion OCR Web API with image-enhancement options.
 control: general
 documentation: UG
 ---
 
-# OCR PDF Using Syncfusion Web API
+# OCR PDFs Using Syncfusion Web API
 
 The Syncfusion OCR Web API converts scanned or image-based PDF documents into fully searchable and selectable text PDFs. It allows you to submit one or multiple PDF files, configure OCR processing options, and retrieve the output through a job-based processing system. The OCR Web API supports multiple languages and includes image-processing enhancements such as grayscale optimization, contrast adjustment, deskewing, denoising, and binarization—to improve text-recognition accuracy through the OCR settings.
 
@@ -238,6 +238,8 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
+
+**Job Statuses:**
 
 - Queued:
 
