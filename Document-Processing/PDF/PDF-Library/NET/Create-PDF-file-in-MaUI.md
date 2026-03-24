@@ -113,7 +113,7 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
     PreviewControllerDS.cs<br/>QLPreviewItemFileSystem.cs
   </td>
   <td>
-    Helper classes for viewing the <b>Pdf document</b> in iOS device
+    Helper classes for viewing the <b>PDF document</b> in iOS device
   </td>
   </tr>
 </table>
