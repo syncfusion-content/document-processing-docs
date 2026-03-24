@@ -20,6 +20,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK Skills eliminat
 - **[ASP.NET MVC DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-mvc/overview)**
 - **[TypeScript DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/overview)**
 - **[Vue DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/vue/overview)**
+- **[WPF DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/wpf/overview)**
 
 ## Prerequisites
 
