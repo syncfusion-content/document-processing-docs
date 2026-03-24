@@ -1740,6 +1740,7 @@ Refer to the following code example for removing PDF page‑level actions.
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 // Load the existing PDF document
 using (PdfLoadedDocument document = new PdfLoadedDocument(Path.GetFullPath(@"Data/Input.pdf")))
@@ -1767,6 +1768,7 @@ using (PdfLoadedDocument document = new PdfLoadedDocument(Path.GetFullPath(@"Dat
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 // Load the existing PDF document
 using (PdfLoadedDocument document = new PdfLoadedDocument(Path.GetFullPath(@"Data/Input.pdf")))
@@ -1793,6 +1795,7 @@ using (PdfLoadedDocument document = new PdfLoadedDocument(Path.GetFullPath(@"Dat
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 ' Load the existing PDF document
 Using document As New PdfLoadedDocument(
