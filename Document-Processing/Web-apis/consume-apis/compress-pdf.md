@@ -1,10 +1,10 @@
 ---
-title: Compress PDF Files Using Syncfusion Web API 
+title: Compress PDF Files Using Syncfusion Web API.
 description: Reduce PDF file size with image optimization and structural compression while maintaining visual quality using Syncfusion compression Web API. 
 control: general
 documentation: UG
 ---
-# Compress PDF Files Using Syncfusion Web API
+# Compressing PDF Files Using Syncfusion Web API
 
 The Syncfusion Compress PDF Web API reduces the file size of PDF documents while maintaining acceptable visual quality. It optimizes images, fonts, metadata, and internal structures, producing smaller PDFs that are easier to store, share, and distribute. This is especially useful for email sharing, web delivery, and document archiving.
 

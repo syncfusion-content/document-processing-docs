@@ -1,11 +1,11 @@
 ---
-title: Convert XPS to PDF Using Syncfusion Web API 
+title: Convert XPS to PDF Using Syncfusion Web API. 
 description: Convert XPS documents into searchable, printed PDF files with accurate rendering using Syncfusion XPS conversion Web API. 
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Convert XPS to PDF Using Syncfusion Web API 
+# Converting XPS to PDF Using Syncfusion Web API 
 
 The Syncfusion XPS to PDF Web API converts XPS documents into standard PDF files using a simple and customizable process. It supports accessibility and archival options for compliance and long‑term storage.
 
