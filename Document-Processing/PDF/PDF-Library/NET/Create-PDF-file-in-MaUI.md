@@ -28,9 +28,7 @@ N> Our PDF library is currently supported in .NET MAUI applications on the Andro
 {% endtabcontent %}
 {% endtabcontents %}
 
-A complete working example of creating a PDF document in the .NET MAUI Desktop app can be downloaded from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfSampleMaUI-1356433164887362210.zip).
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/MAUI/CreatePdfDemoSample).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/MAUI/CreateMAUIPDFSample).
 
 By executing the program in windows, you will get the PDF document as follows.
 ![.NET MAUI output image](MAUI_images/invoice.png)  
