@@ -11,7 +11,7 @@ keywords: Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skills
 
 This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a curated knowledge package that empowers AI assistants (such as GitHub Copilot, Code Studio, Cursor, Claude, and others) to generate accurate code for Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK components across supported platforms. 
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills address common issues with generic AI code suggestions by grounding the assistant in precise Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Component APIs, spreadsheet editor patterns, and platform-specific configuration for the following platforms:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills address common issues with generic AI code suggestions by grounding the assistant in precise Spreadsheet Editor SDK Component APIs, spreadsheet editor patterns, and platform-specific configuration for the following platforms:
 
 - **[React Spreadsheet Editor](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/overview)**
 - **[Angular Spreadsheet Editor](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/overview)**
@@ -25,12 +25,6 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills a
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills, ensure the following tools are available on your machine:
 
 - **[Node.js](https://nodejs.org/)** (v16 or later) — Required to run `npx` commands for installing skills.
-- **Platform-specific SDKs** — Required based on your target platform:
-  - **.NET SDK** (6.0 or later) for Blazor and ASP.NET Core
-  - **React development environment** for React Spreadsheet Editor
-  - **Angular CLI** for Angular Spreadsheet Editor
-  - **TypeScript** for TypeScript Spreadsheet Editor
-  - **Vue CLI** for Vue Spreadsheet Editor
 
 ## Installation
 
@@ -64,7 +58,7 @@ For more details, see the [Skills CLI documentation](https://skills.sh/docs).
 
 ## Using the AI Assistant
 
-Once skills are installed, the assistant can generate Syncfusion<sup style="font-size:70%">&reg;</sup> spreadsheet editor code. Below are some example prompts.
+Once skills are installed, the assistant can generate spreadsheet editor code. Below are some example prompts.
 
 **Example Prompts:**
 
