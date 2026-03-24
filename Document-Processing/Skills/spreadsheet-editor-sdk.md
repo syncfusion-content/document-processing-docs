@@ -1,6 +1,6 @@
 ---
 title: Spreadsheet Editor SDK Agent Skills for AI Assistants | Syncfusion
-description: Learn how to install and use Syncfusion Spreadsheet Editor SDK Agent Skills to help AI assistants generate accurate code using Syncfusion Spreadsheet components
+description: Discover how to enable AI assistants to generate accurate, production-ready code for Syncfusion Spreadsheet components using Spreadsheet Editor SDK Agent Skills.
 platform: document-processing
 control: Spreadsheet Editor SDK
 documentation: ug
@@ -9,9 +9,9 @@ keywords: Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skills
 
 # Syncfusion Spreadsheet Editor SDK Agent Skills for AI Assistants
 
-This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a knowledge package that enables AI assistants (GitHub Copilot, Code Studio, Cursor, Claude, etc.) to understand and generate accurate spreadsheet editor code using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK components across supported platforms. 
+This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a curated knowledge package that empowers AI assistants (such as GitHub Copilot, Code Studio, Cursor, Claude, and others) to generate accurate code for Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK components across supported platforms. 
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Component APIs, spreadsheet editor patterns, and platform-specific configuration for the following platforms:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills address common issues with generic AI code suggestions by grounding the assistant in precise Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Component APIs, spreadsheet editor patterns, and platform-specific configuration for the following platforms:
 
 - **[React Spreadsheet Editor](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/overview)**
 - **[Angular Spreadsheet Editor](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/overview)**
@@ -34,7 +34,7 @@ Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet E
 
 ## Installation
 
-Choose one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills](https://github.com/syncfusion/spreadsheet-editor-sdk-skills) based on your preference. You can also explore Syncfusion<sup style="font-size:70%">&reg;</sup> skills from the [marketplace](https://skills.sh/syncfusion/).
+Use one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills](https://github.com/syncfusion/spreadsheet-editor-sdk-skills). You can also browse Syncfusion<sup style="font-size:70%">&reg;</sup> skills in the [marketplace](https://skills.sh/syncfusion/).
 
 ```bash
 # Install all spreadsheet editor SDK skills at once
@@ -44,23 +44,22 @@ npx skills add syncfusion/spreadsheet-editor-sdk-skills -y
 npx skills add syncfusion/spreadsheet-editor-sdk-skills
 ```
 
-This registers the Syncfusion<sup style="font-size:70%">&reg;</sup> skill pack so your AI assistant can automatically load it in supported IDEs such as [Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), [Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), and [Cursor](https://cursor.com/docs/skills).
+This registers the Syncfusion<sup style="font-size:70%">&reg;</sup> skill pack, enabling your AI assistant to load it automatically in supported IDEs such as [Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), [Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), and [Cursor](https://cursor.com/docs/skills).
 
-To learn more, refer to the [Skills CLI documentation](https://skills.sh/docs).
+For more details, see the [Skills CLI documentation](https://skills.sh/docs).
 
 ## What's Included
 
-1. **Spreadsheet Editor SDK API Knowledge** — Curated, skill-based guidance for creating, editing, and managing spreadsheets using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK UI Components across supported platforms. Covers key APIs, component integration, cell operations, formatting, data binding, and import/export features.
-2. **Platform-Specific Code Generation** — Generates production-ready code tailored to your platform (React, Angular, Blazor, ASP.NET Core, TypeScript, or Vue) without executing scripts or modifying your project structure.
-3. **Patterns & Best Practices** — Practical recommendations for API usage, platform-specific package selection, component configuration, and spreadsheet editor workflows (for example, cell styling, conditional formatting, data validation, chart creation, formula calculation, and protection settings). All guidance is authored directly within the skill file rather than being fetched from external documentation.
+1. **Spreadsheet Editor SDK API Knowledge** — Skill-based, curated guidance for creating, editing, and managing spreadsheets using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK UI Components across supported platforms. Covers key APIs, component integration, cell operations, formatting, data binding, and import/export features.
+2. **Platform-Specific Code Generation** — Produces production-ready code tailored to your platform (React, Angular, Blazor, ASP.NET Core, TypeScript, or Vue) without executing scripts or altering your project structure.
+3. **Patterns & Best Practices** — Practical recommendations for API usage, platform-specific package selection, component configuration, and spreadsheet editor workflows (such as cell styling, conditional formatting, data validation, chart creation, formula calculation, and protection settings). All guidance is authored directly within the skill files, not fetched from external documentation.
 
 ## How Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Agent Skills Work
 
-1. **Reads the relevant skill files based on the user's query.** The assistant retrieves library APIs and code patterns from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills. It automatically chooses the appropriate platform based on the detected workspace or user prompt.
+1. **Reads relevant skill files based on your query.** The assistant retrieves component APIs and code patterns from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills, automatically selecting the appropriate platform based on your workspace or prompt.
 2. **Enforces Syncfusion<sup style="font-size:70%">&reg;</sup> best practices**, including:
-   - Suggesting the correct npm packages or NuGet packages based on the detected platform.
+   - Recommending the correct npm or NuGet packages for your platform.
    - Using only APIs and code patterns explicitly present in the skill reference files.
-   - Configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> license key from `SyncfusionLicense.txt` or the `SYNCFUSION_LICENSE_KEY` environment variable.
 3. **Generates code only** — Spreadsheet Editor skills focus exclusively on generating production-ready code that can be integrated directly into your application files (for example, `Home.razor`, `app.component.ts`, or `Program.cs`).
 
 ## Using the AI Assistant
