@@ -28,7 +28,7 @@ Each platform's skill file includes component initialization, property configura
 
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills, ensure the following tools are available on your machine:
 
-- **[Node.js](https://nodejs.org/en)** (v16 or later) — Required to run `npx` commands for installing skills.
+- **[Node.js](https://nodejs.org/en)** (v18 or later) — Required to run `npx` commands for installing skills.
 
 ## Installation
 
@@ -70,7 +70,6 @@ Once skills are installed, the assistant can generate spreadsheet editor code. B
 - "How to apply conditional formatting to highlight cells greater than $15,000 in Angular Spreadsheet Editor?"
 - "Give me a code snippet to protect a worksheet and allow editing only specific cells using Blazor Spreadsheet Editor."
 - "Show me how to insert a chart into the Spreadsheet Editor using ASP.NET Core."
-- "Example of importing CSV data into TypeScript Spreadsheet Editor."
 - "How to export the spreadsheet as PDF using Vue Spreadsheet Editor?"
 - "Show me code to apply number formatting to currency columns in React Spreadsheet Editor."
 - "How do I enable cell editing and data validation in Angular Spreadsheet Editor?"
