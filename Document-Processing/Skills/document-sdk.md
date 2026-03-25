@@ -20,7 +20,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate c
 | [Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/overview) | syncfusion-dotnet-excel <br> syncfusion-flutter-excel |
 | [PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/overview) | syncfusion-dotnet-powerpoint |
 | [Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp) | syncfusion-dotnet-markdown |
-| Smart Data Extraction | syncfusion-dotnet-smart-data-extraction |
+| [Smart Data Extraction](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/overview) | syncfusion-dotnet-smart-data-extraction |
 
 ## Prerequisites
 
@@ -40,11 +40,15 @@ To install all document SDK skills at once, use the following command:
 npx skills add syncfusion/document-sdk-skills --all -y
 ```
 
-To install a specific skill, use the following command (for example, to install PDF .Net skills):
+To install a specific skill, use the following command (for example, to install PDF .NET skills):
 
 ```bash
 npx skills add syncfusion/document-sdk-skills --skill syncfusion-dotnet-pdf
 ```
+
+This registers the Syncfusion<sup style="font-size:70%">&reg;</sup> skill pack so your AI assistant can automatically load it in supported IDEs such as [Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), [Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), and [Cursor](https://cursor.com/docs/skills).
+
+To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
 
 ## What's Included
 
