@@ -103,7 +103,7 @@ The toolbar provides built-in buttons to switch between Pan and Text Selection m
 ![Selection Mode](./images/selection.png)
 
 ### Programmatically
-Use the `interactionMode` property to switch modes programmatically:
+Use the [InteractionMode](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/interactionmode) property to switch modes programmatically:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -382,6 +382,6 @@ root.render(<App />);
 
 ## See also
 
-* [Magnification](./magnification) — Control zoom and fit modes
-* [Toolbar items](./toolbar) — Customize toolbar controls
-* [Feature Modules](./feature-module) — Enable/disable features
+- [Magnification](./magnification/magnification) — Control zoom and fit modes
+- [Toolbar items](./toolbar-customization/overview) — Customize toolbar controls
+- [Feature Modules](./feature-module) — Enable/disable features
