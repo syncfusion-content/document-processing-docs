@@ -37,7 +37,6 @@ The React PDF Viewer excels at displaying documents generated for widely used PD
 
 - **Archival PDFs (PDF/A)** – long-term preservation documents with enhanced reliability
 - **Print-optimized PDFs (PDF/X)** – professionally prepared documents for printing workflows
-- **Tagged PDFs** – structurally enriched documents optimized for accessibility
 
 The viewer delivers **faithful layout rendering and intuitive user interaction**, empowering users to read, navigate, search, annotate, and review documents within web applications with confidence.
 
@@ -45,7 +44,9 @@ The viewer delivers **faithful layout rendering and intuitive user interaction**
 
 The Syncfusion React PDF Viewer is optimized for **standards-based rendering and interaction**. The viewer leverages PDF documents that have been authored or processed in accordance with required PDF standards, ensuring optimal display quality and user experience.
 
-For enhanced control over PDF standard compliance and conformance requirements, the Syncfusion PDF Library provides comprehensive tooling for **document creation, conversion, and standards validation** as part of the document preparation pipeline.
+For enhanced control over PDF standard compliance and conformance requirements, the Syncfusion PDF Library provides comprehensive tooling for **document creation and conversion** in server side as part of the document preparation pipeline.
+
+N> Check on [PDF Library Conformance Guide](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pdf-conformance) to know more about conformance and standards handling.
 
 ## Ideal use cases and applications
 
@@ -53,13 +54,13 @@ The React PDF Viewer's standards-based rendering capabilities are optimized for:
 - **Enterprise document viewing portals** – delivering high-quality viewing across organizations
 - **Archival document access systems** – supporting long-term document preservation initiatives
 - **Compliance-driven environments** – enabling reliable viewing of standards-generated PDFs
-- **Interactive document review workflows** – facilitating annotation, collaboration, and feedback
+- **Interactive document review workflows** – facilitating annotation.
 - **Health-care and financial systems** – meeting industry standards for document handling
 - **Legal and regulatory platforms** – supporting document management with confidence
 
 ## Complementary solutions
 
-The Syncfusion React PDF Viewer excels at rendering and displaying PDF documents created according to standard PDF specifications, including archival, print-optimized, and tagged PDFs.
+The Syncfusion React PDF Viewer excels at rendering and displaying PDF documents created according to standard PDF specifications, including print-optimized PDFs.
 
 By focusing on accurate display and responsive user interaction, the viewer ensures consistent, standards-aware document viewing with a rich user experience.
 
@@ -70,14 +71,16 @@ The Syncfusion ecosystem provides complementary tools for comprehensive PDF work
 **React PDF Viewer** – Expert rendering and interaction
 - Display standards-based PDFs
 - Intuitive navigation and search
-- Annotation and collaboration features
+- Annotation features
 - Form field interaction
 
 **Syncfusion PDF Library** – Advanced PDF processing
 - Create and generate PDF documents
-- Convert documents to PDF/A or PDF/X standards
+- Convert documents to PDF/A standards in server side.
 - Add digital signatures and security
 - Validate PDF compliance
+
+N> Check the [PDF Library UG Guide](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pdf-conformance#pdf-to-pdfa-conversion) to know more about PDF/A conversion.
 
 For scenarios that require PDF creation, conversion, or advanced standards processing, refer to:
 
