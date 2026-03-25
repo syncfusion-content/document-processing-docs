@@ -9,7 +9,7 @@ documentation: ug
 
 # How PDF Rendering Works in the Browser
 
-Rendering a PDF in the browser involves converting a structured PDF document into visual and interactive content that users can view and work with. The Syncfusion React PDF Viewer uses a combination of **PDFium**, [Syncfusion PDF Library](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview), and viewer-side logic to achieve accurate rendering, smooth interactions, and scalable performance.
+Rendering a PDF in the browser involves converting a structured PDF document into visual and interactive content that users can view and work with. The Syncfusion React PDF Viewer uses a combination of **PDFium**, [Syncfusion PDF Library](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview), and viewer-side logic to achieve accurate rendering, smooth interactions, and scalable performance.
 
 This page explains the **conceptual rendering flow** used by the viewer, focusing on responsibilities and data flow rather than low-level engine internals.
 
@@ -27,7 +27,7 @@ When a PDF document is opened in the viewer:
 
 - The PDF file is loaded from a URL, local file, or streamed source.
 - The document structure (pages, objects, and resources) is parsed.
-- Parsing and document-level processing are handled using the [Syncfusion PDF Library](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview).
+- Parsing and document-level processing are handled using the [Syncfusion PDF Library](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview).
 
 Large documents are processed incrementally so that initial pages can be displayed without waiting for the entire document to be parsed.
 
@@ -62,7 +62,7 @@ N> PDFium is used only for **page-to-image rendering**. It is not responsible fo
 Once a page image is generated, the viewer composes the final output using multiple viewer-managed layers:
 
 - **Page Image Layer**  
-  The rasterized page image produced by PDFium. This serves as the visual base of the page.
+  The page image produced by PDFium after rasterization. This serves as the visual base of the page.
 
 - **Text Layer**  
   Generated using data from the **Syncfusion PDF Library** and viewer logic. This invisible layer enables text selection, search, and copy‑paste while aligning precisely with the page image.
@@ -88,7 +88,7 @@ PDF rendering and processing involve CPU-intensive operations. To maintain UI re
 
 To efficiently handle large PDF documents:
 
-- Only pages visible in the viewport are rasterized and displayed initially.
+- Only pages that are visible in the viewport undergo rasterization and are displayed initially.
 - Additional pages are rendered on demand as the user scrolls or navigates.
 - Previously rendered page images may be reused when possible.
 
