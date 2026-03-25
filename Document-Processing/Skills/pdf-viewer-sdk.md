@@ -17,9 +17,11 @@ Unlike generic AI suggestions, these skills ground the assistant in official Syn
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer SDK Agent Skills provide guidance for the following platforms: 
 
-| PDF Viewer Libraries | Skills |
+| Framework | Skills |
 |---|---|
 | [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview) | syncfusion-blazor-pdf-viewer |
+| [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/overview) | syncfusion-aspnetcore-pdf-viewer |
+| [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/overview) | syncfusion-angular-pdfviewer |
 | [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-overview) | syncfusion-react-pdf-viewer |
 | [Flutter](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/overview) | syncfusion-flutter-pdf-viewer |
 | [.NET MAUI](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/overview) | syncfusion-maui-pdf-viewer |
@@ -42,10 +44,10 @@ Choose one of the following commands to install the Syncfusion PDF Viewer SDK Ag
 npx skills add syncfusion/pdf-viewer-sdk-skills --all -y
 ```
 
-To install a specific skill, use the following command (for example, to install PDF .Net skills):
+To install a specific skill, use the following command (for example, to install React PDF Viewer skills):
 
 ```bash
-npx skills add syncfusion/pdf-viewer-sdk-skills
+npx skills add syncfusion/pdf-viewer-sdk-skills --skill syncfusion-react-pdf-viewer
 ```
 
 ## What's Included
@@ -88,14 +90,6 @@ Once installed, the assistant can help generate PDF Viewer integration code. Bel
 - “Provide sample code to customize the toolbar in MAUI PDF Viewer.” 
 - “Show how to load a PDF from a URL in Flutter PDF Viewer.” 
 - “How to navigate to a specific page in Winforms PdfViewer?” 
-
-## Documentation Reference 
-
-For detailed API documentation and feature explanations, refer to the official Syncfusion PDF Viewer documentation: 
-
-- **[React PDF Viewer Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview)**
-
-(Equivalent documentation is available for Blazor, Flutter, MAUI, WinForms, and WPF.)
 
 ## See Also 
 
