@@ -124,7 +124,7 @@ To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
 
 ## How Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Agent Skills Work
 
-1. **Reads relevant skill files based on your query.** The assistant retrieves component APIs and code patterns from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills, automatically selecting the appropriate platform based on your workspace or prompt.
+1. **Read the relevant skill files and choose modes based on the user's query** The assistant retrieves component APIs and code patterns from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills, automatically selecting the appropriate platform based on your workspace or prompt.
 2. **Enforces Syncfusion<sup style="font-size:70%">&reg;</sup> best practices**, including:
    - Recommending the correct npm or NuGet packages for your platform.
    - Using only APIs and code patterns explicitly present in the skill reference files.
