@@ -9,7 +9,7 @@ documentation: UG
 
 # Word File Formats in Essential<sup>&reg;</sup> DocIO
 
-The [Microsoft Word's](https://en.wikipedia.org/wiki/Microsoft_Word#) native file formats are DOC, DOCX, RTF, DOT, DOTX, DOCM, and DOTM. The Essential<sup>&reg;</sup> DocIO supports the following major native file formats.
+The [Microsoft Word's](https://en.wikipedia.org/wiki/Microsoft_Word#) native file formats are {{'[DOC](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#word-binary-97-2003-format)'| markdownify }}, {{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#doc-to-docx-and-docx-to-doc)'| markdownify }}, {{'[RTF](https://help.syncfusion.com/document-processing/word/word-library/net/rtf)'| markdownify }}, {{'[DOT](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}, {{'[DOTX](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#templates)'| markdownify }}, {{'[DOCM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}, and {{'[DOTM](https://help.syncfusion.com/document-processing/word/word-library/net/word-file-formats#macros)'| markdownify }}. The Essential<sup>&reg;</sup> DocIO supports the following major native file formats.
 
 1. Word Open XML formats (2007 & later)
 2. Word Processing XML (.xml)
