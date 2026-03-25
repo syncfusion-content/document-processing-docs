@@ -35,12 +35,16 @@ Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet E
 
 Use one of the following commands to install Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills. You can also browse Syncfusion<sup style="font-size:70%">&reg;</sup> skills in the [marketplace](https://skills.sh/syncfusion/).
 
-```bash
-# Install all spreadsheet editor SDK skills at once
-npx skills add syncfusion/spreadsheet-editor-sdk-skills -y
+To install all Spreadsheet Editor SDK skills at once, use the following command:
 
-# Choose and install skills interactively from the terminal
-npx skills add syncfusion/spreadsheet-editor-sdk-skills
+```bash
+npx skills add syncfusion/spreadsheet-editor-sdk-skills --all -y
+```
+
+To install a specific platform skill, use the following command (for example, to install Spreadsheet Blazor skills):
+
+```bash
+npx skills add syncfusion/spreadsheet-editor-sdk-skills --skill syncfusion-blazor-spreadsheet-editor
 ```
 
 This registers the Syncfusion<sup style="font-size:70%">&reg;</sup> skill pack, enabling your AI assistant to load it automatically in supported IDEs such as [Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), [Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), and [Cursor](https://cursor.com/docs/skills).

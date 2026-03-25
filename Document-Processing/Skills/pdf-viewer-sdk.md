@@ -17,7 +17,7 @@ Unlike generic AI suggestions, these skills ground the assistant in official Syn
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer SDK Agent Skills provide guidance for the following platforms: 
 
-| PDF Viewer SDK Component | Skills |
+| Framework | Skills |
 |---|---|
 | [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview) | syncfusion-blazor-pdf-viewer |
 | [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-overview) | syncfusion-react-pdf-viewer |
