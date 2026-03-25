@@ -15,7 +15,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate c
 
 | Document Processing Libraries | Skills |
 |---|---|
-| [Word (DocIO)](https://help.syncfusion.com/document-processing/word/word-library/overview) | [syncfusion-dotnet-word <br> syncfusion-java-word](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-java-word) |
+| [Word (DocIO)](https://help.syncfusion.com/document-processing/word/word-library/overview) | [syncfusion-dotnet-word](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-word) <br> [syncfusion-java-word](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-java-word) |
 | [PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/overview) | [syncfusion-dotnet-pdf](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-pdf) <br> [syncfusion-dotnet-pdf-to-image](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-pdf-to-image) <br> [syncfusion-flutter-pdf](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-flutter-pdf) <br> [syncfusion-javascript-pdf](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-javascript-pdf) |
 | [Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/excel-library/overview) | [syncfusion-dotnet-excel](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-excel) <br> [syncfusion-flutter-excel](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-flutter-excel) |
 | [PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/overview) | [syncfusion-dotnet-powerpoint](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-powerpoint) |
@@ -130,17 +130,17 @@ To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
 1. **Read the relevant skill files and choose modes based on the user's query** The assistant retrieves library APIs, and code patterns from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills. It automatically chooses the appropriate operating mode based on the provided prompt.
  
 2. **Operates in two modes** based on the user's intent:
-
    - **Mode 1 — Generate Code**:
 
-      - Triggered when the prompt includes keywords such as "code", "snippet", "how to", "show me", "sample", or "example".
-      - Detects the application type and recommends the required NuGet packages.
-      - Generates production-ready code by referencing the appropriate `references/*.md` files for the requested feature.
-
+       - Triggered when the prompt includes keywords such as `"code"`, `"snippet"`, `"how to"`, `"show me"`, `"sample"`, or `"example"`.
+       - Detects the application type and recommends the required NuGet packages.
+       - Generates production-ready code by referencing the appropriate `references/*.md` files for the requested functionalities.
    - **Mode 2 — Execute via CSX Script**:
-      - Triggered by keywords such as "create", "generate", "make", "open", "edit", "modify", or when a file path is provided (e.g., `output/report.docx`).
-      - Creates a temporary .csx script by inserting the appropriate code snippet from the relevant references/*.md files.
-      - Executes the script using dotnet script, generates the output document, and then performs cleanup — all without modifying the user's project.
+   
+       - Triggered when the prompt includes keywords such as `"create"`, `"generate"`, `"make"`, `"open"`, `"edit"`, `"modify"`, or when a file path is provided (e.g., `output/report.docx`).
+       - Creates a temporary `.csx` script by inserting the appropriate code snippet from the relevant `references/*.md` files.
+       - Executes the script using dotnet script and generates the output document.
+       - Performs cleanup by deleting the temporary `.csx` script.
  
 3. **Register licensing key** Configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> license key from `SyncfusionLicense.txt` or the `SYNCFUSION_LICENSE_KEY` environment variable.
 
