@@ -29,6 +29,7 @@ Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK 
 - **[Node.js](https://nodejs.org/en)** (v18 or later) — Required to run `npx` commands for installing skills.
 - **[.NET SDK](https://dotnet.microsoft.com/en-us/download)** (8.0 or later) — Required for CSX script execution (Mode 2).
 - **[dotnet-script](https://github.com/dotnet-script/dotnet-script)** — Required for CSX script execution (Mode 2). Install it globally by running: `dotnet tool install -g dotnet-script`.
+- A supported AI agent or IDE that integrates with the Skills CLI (VS Code, Syncfusion® Code Studio, Cursor, etc.)
 
 ## Installation
 
@@ -39,7 +40,7 @@ To install all document SDK skills at once, use the following command:
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npx skills add syncfusion/document-sdk-skills --all -y
+npx skills add syncfusion/document-sdk-skills -y
 
 {% endhighlight %}
 {% endtabs %}
@@ -124,25 +125,26 @@ This registers the Syncfusion<sup style="font-size:70%">&reg;</sup> skill pack s
 
 To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
 
-## Capabilities and How It Works
+## How Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Agent Skills Work
  
-Each installed skill pack provides the following capabilities:
+1. **Read the relevant skill files and choose modes based on the user's query** The assistant retrieves library APIs, and code patterns from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills. It automatically chooses the appropriate operating mode based on the provided prompt.
  
-- **Document SDK API Knowledge** — Curated guidance covering key APIs, supported file formats, and conversion workflows for PDF, Word, Excel, PowerPoint, and Markdown. The assistant reads the skill files to retrieve relevant APIs and code patterns, then automatically selects the appropriate mode based on the prompt.
- 
-- **Patterns and Best Practices** — Guidance on API usage, NuGet package selection, and common workflows (mail merge, PDF digital signatures, Excel pivot tables, and PowerPoint chart creation). The assistant enforces these standards in every response:
-  - Recommends the correct NuGet packages or JAR files based on the application type.
-  - Uses only APIs and code patterns defined in the skill reference files.
-  - Configures the Syncfusion<sup style="font-size:70%">&reg;</sup> license key from `SyncfusionLicense.txt` or the `SYNCFUSION_LICENSE_KEY` environment variable.
- 
-- **Dual-Mode Execution (.NET)** — The assistant automatically selects a mode based on keywords in the prompt:
- 
-| Mode | Description | Trigger Keywords |
-|---|---|---|
-| **Mode 1 — Generate Code** | Produces production-ready code for your project. No scripts are created or executed. | `"code"`, `"snippet"`, `"how to"`, `"show me"`, `"sample"`, `"example"` |
-| **Mode 2 — Execute via CSX Script** | Creates and runs a temporary `.csx` script using `dotnet script`, produces the output document, then removes the script — without modifying your project. | `"create"`, `"generate"`, `"make"`, `"open"`, `"edit"`, `"modify"`, or a file path |
+2. **Operates in two modes** based on the user's intent:
 
-## Using the AI Assistant
+   - **Mode 1 — Generate Code**:
+
+      - Triggered when the prompt includes keywords such as "code", "snippet", "how to", "show me", "sample", or "example".
+      - Detects the application type and recommends the required NuGet packages.
+      - Generates production-ready code by referencing the appropriate `references/*.md` files for the requested feature.
+
+   - **Mode 2 — Execute via CSX Script**:
+      - Triggered by keywords such as "create", "generate", "make", "open", "edit", "modify", or when a file path is provided (e.g., `output/report.docx`).
+      - Creates a temporary .csx script by inserting the appropriate code snippet from the relevant references/*.md files.
+      - Executes the script using dotnet script, generates the output document, and then performs cleanup — all without modifying the user's project.
+ 
+3. **Register licensing key** Configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> license key from `SyncfusionLicense.txt` or the `SYNCFUSION_LICENSE_KEY` environment variable.
+
+### Using the AI Assistant
 
 Once skills are installed, the assistant can generate Syncfusion<sup style="font-size:70%">&reg;</sup> document processing code or execute document generation tasks. Below are example prompts for each mode.
 
