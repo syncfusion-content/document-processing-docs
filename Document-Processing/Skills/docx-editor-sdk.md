@@ -50,7 +50,7 @@ To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
 
 1. **Docx Editor & API Knowledge** — Curated, skill-based guidance that captures how to create, edit, and manage Document Editing operations using Syncfusion<sup style="font-size:70%">&reg;</sup> platform-specific libraries (React, Angular, Blazor, ASP.NET Core, TypeScript, Vue), including key APIs, supported features, and common usage patterns.
 2. **Platform-Specific Code Generation** — Each skill supports generating production-ready platform-specific code for your project. The assistant automatically detects the project type and provides code snippets that can be inserted directly into your application files (e.g., `Program.cs`, `Home.razor`, `app.ts`).
-3. **Patterns & Best Practices** — Practical recommendations for API usage, platform-specific package selection, and spreadsheet editor workflows (for example, cell formatting, data binding, formula calculation, chart creation, and worksheet protection). All guidance is authored directly within the Skill file rather than being fetched from documentation.
+3. **Patterns & Best Practices** — Practical recommendations for API usage, platform-specific package selection, and docx editor workflows(such as document opening, formatting, track changes, add comments and document protection). All guidance is authored directly within the Skill file rather than being fetched from documentation.
 
 ## How Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK Agent Skills Work
 
