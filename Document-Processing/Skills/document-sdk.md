@@ -146,6 +146,74 @@ Each installed skill pack provides the following capabilities:
 
 Once skills are installed, the assistant can generate Syncfusion<sup style="font-size:70%">&reg;</sup> document processing code or execute document generation tasks. Below are example prompts for each mode.
 
+## Skills CLI Commands
+
+After installation, manage Syncfusion<sup style="font-size:70%">&reg;</sup> Agent Skills using the following commands:
+
+### List Skills
+
+View all installed skills in your current project or global environment:
+
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
+npx skills list
+
+{% endhighlight %}
+{% endtabs %}
+
+### Remove a Skill
+
+Uninstall a specific skill from your environment:
+
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
+npx skills remove <skill-name>
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `<skill-name>` with the name of the skill you want to remove (for example, `syncfusion-dotnet-pdf`).
+
+### Check for Updates
+
+Check if updates are available for your installed skills:
+
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
+npx skills check
+
+{% endhighlight %}
+{% endtabs %}
+
+### Update All Skills
+
+Update all installed skills to their latest versions:
+
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
+npx skills update
+
+{% endhighlight %}
+{% endtabs %} 
+
+## FAQ
+
+**Which agents and IDEs are supported?**
+
+Any Skills compatible agent or IDE that loads local skill files (Visual Studio Code, Cursor, CodeStudio, etc.).
+
+**Are skills loaded automatically?**
+
+Yes. Once installed, supported agents automatically detect and load relevant skills for Syncfusion‑related queries without requiring additional configuration.
+
+**Skills are not being loaded**
+
+Verify that skills are installed in the correct agent directory, restart the IDE, and confirm that the agent supports external skill files.
+
 **Generate Code (Mode 1):**
 
 - "How do I add a digital signature to a PDF?"
