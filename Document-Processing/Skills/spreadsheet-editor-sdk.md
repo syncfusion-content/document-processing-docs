@@ -50,7 +50,7 @@ For more details, see the [Skills CLI documentation](https://skills.sh/docs).
 ## What's Included
 
 1. **Spreadsheet Editor SDK API Knowledge** — Skill-based, curated guidance for creating, editing, and managing spreadsheets using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK UI Components across supported platforms. Covers key APIs, component integration, cell operations, formatting, data binding, and import/export features.
-2. **Platform-Specific Code Generation** — Produces production-ready code tailored to your platform (React, Angular, Blazor, ASP.NET Core, TypeScript, or Vue) without executing scripts or altering your project structure.
+2. **Platform-Specific Code Generation** — Produces production-ready code tailored to your platform (React, Angular, Blazor, ASP.NET Core, ASP.NET MVC, TypeScript, or Vue) without executing scripts or altering your project structure.
 3. **Patterns & Best Practices** — Practical recommendations for API usage, platform-specific package selection, component configuration, and spreadsheet editor workflows (such as cell styling, conditional formatting, data validation, chart creation, formula calculation, and protection settings). All guidance is authored directly within the skill files, not fetched from external documentation.
 
 ## How Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Agent Skills Work
