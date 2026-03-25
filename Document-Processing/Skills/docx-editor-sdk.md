@@ -17,7 +17,9 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK Skills eliminat
 | DOCX Editor SDK Component | Skills |
 |---|---|
 | [React](https://help.syncfusion.com/document-processing/word/word-processor/react/overview) | syncfusion-react-docx-editor |
+| [Angular](https://help.syncfusion.com/document-processing/word/word-processor/angular/overview) | syncfusion-angular-docx-editor |
 | [Blazor](https://help.syncfusion.com/document-processing/word/word-processor/blazor/overview) | syncfusion-blazor-docx-editor |
+| [ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/overview) | syncfusion-aspnetcore-docx-editor |
 | [WPF](https://help.syncfusion.com/document-processing/word/word-processor/wpf/overview) | syncfusion-wpf-docx-editor |
 
 Each platform's skill file includes component initialization, property configuration, event handling and common usage patterns specific to that framework.
