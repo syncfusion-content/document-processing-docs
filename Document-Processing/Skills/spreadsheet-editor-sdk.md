@@ -13,12 +13,13 @@ This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a curated kn
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills address common issues with generic AI code suggestions by grounding the assistant in precise Spreadsheet Editor SDK Component APIs, spreadsheet editor patterns, and platform-specific configuration for the following platforms:
 
-| Spreadsheet Editor SDK Component | Skills |
+| Framework | Skills |
 |---|---|
 | [React](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/overview) | syncfusion-react-spreadsheet-editor |
 | [Angular](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/overview) | syncfusion-angular-spreadsheet-editor |
 | [Blazor](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/overview) | syncfusion-blazor-spreadsheet-editor |
 | [ASP.NET Core](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/overview) | syncfusion-aspnetcore-spreadsheet-editor |
+| [ASP.NET MVC](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/overview) | syncfusion-aspnetmvc-spreadsheet-editor |
 | [TypeScript](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/overview) | syncfusion-javascript-spreadsheet-editor |
 | [Vue](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/overview) | syncfusion-vue-spreadsheet-editor |
 
@@ -34,12 +35,16 @@ Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet E
 
 Use one of the following commands to install Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills. You can also browse Syncfusion<sup style="font-size:70%">&reg;</sup> skills in the [marketplace](https://skills.sh/syncfusion/).
 
-```bash
-# Install all spreadsheet editor SDK skills at once
-npx skills add syncfusion/spreadsheet-editor-sdk-skills -y
+To install all Spreadsheet Editor SDK skills at once, use the following command:
 
-# Choose and install skills interactively from the terminal
-npx skills add syncfusion/spreadsheet-editor-sdk-skills
+```bash
+npx skills add syncfusion/spreadsheet-editor-sdk-skills --all -y
+```
+
+To install a specific platform skill, use the following command (for example, to install Spreadsheet Blazor skills):
+
+```bash
+npx skills add syncfusion/spreadsheet-editor-sdk-skills --skill syncfusion-blazor-spreadsheet-editor
 ```
 
 This registers the Syncfusion<sup style="font-size:70%">&reg;</sup> skill pack, enabling your AI assistant to load it automatically in supported IDEs such as [Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), [Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), and [Cursor](https://cursor.com/docs/skills).
@@ -49,7 +54,7 @@ For more details, see the [Skills CLI documentation](https://skills.sh/docs).
 ## What's Included
 
 1. **Spreadsheet Editor SDK API Knowledge** — Skill-based, curated guidance for creating, editing, and managing spreadsheets using Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK UI Components across supported platforms. Covers key APIs, component integration, cell operations, formatting, data binding, and import/export features.
-2. **Platform-Specific Code Generation** — Produces production-ready code tailored to your platform (React, Angular, Blazor, ASP.NET Core, TypeScript, or Vue) without executing scripts or altering your project structure.
+2. **Platform-Specific Code Generation** — Produces production-ready code tailored to your platform (React, Angular, Blazor, ASP.NET Core, ASP.NET MVC, TypeScript, or Vue) without executing scripts or altering your project structure.
 3. **Patterns & Best Practices** — Practical recommendations for API usage, platform-specific package selection, component configuration, and spreadsheet editor workflows (such as cell styling, conditional formatting, data validation, chart creation, formula calculation, and protection settings). All guidance is authored directly within the skill files, not fetched from external documentation.
 
 ## How Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Agent Skills Work
