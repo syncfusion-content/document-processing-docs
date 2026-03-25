@@ -17,7 +17,7 @@ Unlike generic AI suggestions, these skills ground the assistant in official Syn
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer SDK Agent Skills provide guidance for the following platforms: 
 
-| PDF Viewer Libraries | Skills |
+| PDF Viewer SDK Component | Skills |
 |---|---|
 | [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview) | syncfusion-blazor-pdf-viewer |
 | [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-overview) | syncfusion-react-pdf-viewer |
@@ -88,14 +88,6 @@ Once installed, the assistant can help generate PDF Viewer integration code. Bel
 - “Provide sample code to customize the toolbar in MAUI PDF Viewer.” 
 - “Show how to load a PDF from a URL in Flutter PDF Viewer.” 
 - “How to navigate to a specific page in Winforms PdfViewer?” 
-
-## Documentation Reference 
-
-For detailed API documentation and feature explanations, refer to the official Syncfusion PDF Viewer documentation: 
-
-- **[React PDF Viewer Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview)**
-
-(Equivalent documentation is available for Blazor, Flutter, MAUI, WinForms, and WPF.)
 
 ## See Also 
 
