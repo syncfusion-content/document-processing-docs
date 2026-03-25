@@ -654,9 +654,83 @@ root.render(<App />);
 
 ## Zoom range and limits
 
-The PDF Viewer supports zoom values from 10% to 400%. The [zoomTo()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification#zoomto) method automatically clamps values outside this range to the nearest valid limit.
+The PDF Viewer supports zoom values from 10% to 400% by default. You can override these limits using the [minZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#minzoom) and [maxZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#minzoom) properties on the `PdfViewerComponent`.
 
-N> Zoom values are automatically clamped between 10% and 400%. Attempting to zoom beyond these limits will set the zoom to the nearest boundary value.
+- [minZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#minzoom) (number): Specifies the minimum acceptable zoom level for the control. Default: `10`.
+- [maxZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#minzoom) (number): Specifies the maximum allowable zoom level for the control. Default: `400`.
+
+Below are full example snippets that show how to set custom `minZoom` and `maxZoom` values (Standalone and Server-Backed):
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  return (
+    <div>
+      <div className='control-section'>
+        <PdfViewerComponent
+          id="container"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+          enableMagnification={true}
+          minZoom={50}
+          maxZoom={300}
+          style={{ height: '640px' }}>
+
+            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                ThumbnailView, Print, TextSelection, TextSearch]} />
+        </PdfViewerComponent>
+      </div>
+    </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+{% raw %}
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  return (
+    <div>
+      <div className='control-section'>
+        <PdfViewerComponent
+          id="container"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          enableMagnification={true}
+          serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
+          minZoom={50}
+          maxZoom={300}
+          style={{ height: '640px' }}>
+
+            <Inject services={[ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                                ThumbnailView, Print, TextSelection, TextSearch]} />
+        </PdfViewerComponent>
+      </div>
+    </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+The [zoomTo()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification#zoomto) method will clamp values outside the configured `minZoom`/`maxZoom` range to the nearest valid limit.
+
+N> Zoom values are clamped between the configured `minZoom` and `maxZoom`. Attempting to zoom beyond these limits will set the zoom to the nearest boundary value.
 
 ## See also
 

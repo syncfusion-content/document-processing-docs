@@ -128,10 +128,14 @@ Learn more: [Fit Modes How-to Guide](./fitmode)
 
 ## Zoom Range and Limits
 
-The PDF Viewer supports zoom values from **10% to 400%**. All zoom operations are automatically clamped to this range:
+The PDF Viewer supports zoom values from **10% to 400%** by default. All zoom operations are automatically clamped to this range:
 - Values below 10% are adjusted to 10%
 - Values above 400% are adjusted to 400%
 - Both UI and programmatic zoom changes respect these limits
+
+You can override the defaults using the [minZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#minzoom) and [maxZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#maxzoom) properties on the `PdfViewerComponent` (defaults: `minZoom = 10`, `maxZoom = 400`).
+
+Learn more: [Zoom Range and Limits Guide](./zoom#zoom-range-and-limits)
 
 ## Common Use Cases
 
