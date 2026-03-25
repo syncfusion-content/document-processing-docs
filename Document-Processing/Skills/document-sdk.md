@@ -15,12 +15,12 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate c
 
 | Document Processing Libraries | Skills |
 |---|---|
-| [Word (DocIO)](https://help.syncfusion.com/document-processing/word/overview) | syncfusion-dotnet-word <br> syncfusion-java-word |
-| [PDF](https://help.syncfusion.com/document-processing/pdf/overview) | syncfusion-dotnet-pdf <br> syncfusion-dotnet-pdf-to-image <br> syncfusion-flutter-pdf <br> syncfusion-javascript-pdf |
-| [Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/overview) | syncfusion-dotnet-excel <br> syncfusion-flutter-excel |
-| [PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/overview) | syncfusion-dotnet-powerpoint |
-| [Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp) | syncfusion-dotnet-markdown |
-| [Smart Data Extraction](https://help.syncfusion.com/document-processing/data-extraction/overview) | syncfusion-dotnet-smart-data-extraction |
+| [Word (DocIO)](https://help.syncfusion.com/document-processing/word/word-library/overview) | [syncfusion-dotnet-word <br> syncfusion-java-word](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-java-word) |
+| [PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/overview) | [syncfusion-dotnet-pdf](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-pdf) <br> [syncfusion-dotnet-pdf-to-image](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-pdf-to-image) <br> [syncfusion-flutter-pdf](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-flutter-pdf) <br> [syncfusion-javascript-pdf](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-javascript-pdf) |
+| [Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/excel-library/overview) | [syncfusion-dotnet-excel](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-excel) <br> [syncfusion-flutter-excel](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-flutter-excel) |
+| [PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/overview) | [syncfusion-dotnet-powerpoint](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-powerpoint) |
+| [Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp) | [syncfusion-dotnet-markdown](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-markdown) |
+| [Smart Data Extraction](https://help.syncfusion.com/document-processing/data-extraction/overview) | [syncfusion-dotnet-smart-data-extraction](https://github.com/syncfusion/document-sdk-skills/tree/main/skills/syncfusion-dotnet-smart-data-extraction) |
 
 ## Prerequisites
 
@@ -32,43 +32,115 @@ Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK 
 
 ## Installation
 
-Choose one of the following commands to install Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills based on your preference. You can also explore Syncfusion<sup style="font-size:70%">&reg;</sup> skills from the [marketplace](https://skills.sh/syncfusion/).
+Choose one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills](https://github.com/syncfusion/document-sdk-skills) based on your preference. You can also explore Syncfusion<sup style="font-size:70%">&reg;</sup> skills from the [marketplace](https://skills.sh/syncfusion/).
 
 To install all document SDK skills at once, use the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npx skills add syncfusion/document-sdk-skills --all -y
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 To install a specific skill, use the following command (for example, to install PDF .NET skills):
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npx skills add syncfusion/document-sdk-skills --skill syncfusion-dotnet-pdf
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+Choose and install skills interactively from the terminal:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npx skills add syncfusion/document-sdk-skills
+
+{% endhighlight %}
+{% endtabs %}
+
+The terminal will show a list of available skills. Use the arrow keys to navigate, space bar to select the skills you want, and Enter to confirm.
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+Select skills to install (space to toggle)
+│  ◻ syncfusion-dotnet-pdf
+│  ◻ syncfusion-dotnet-word
+│  ◻ syncfusion-dotnet-excel
+│  ◻ syncfusion-dotnet-powerpoint
+│  ◻ syncfusion-dotnet-markdown
+│  ◻ syncfusion-dotnet-smart-data-extraction
+│  ◻ syncfusion-java-word
+│  ◻ syncfusion-flutter-pdf
+│  ◻ syncfusion-javascript-pdf
+│  .....
+
+{% endhighlight %}
+{% endtabs %}
+
+Next, select which AI agent you're using and where to store the skills.
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+│  ── Additional agents ─────────────────────────────
+│  Search:  
+│  ↑↓ move, space select, enter confirm
+│
+│ ❯ ○ Augment (.augment/skills)
+│   ○ Claude Code (.claude/skills)
+│   ○ OpenClaw (skills)
+│   ○ CodeBuddy (.codebuddy/skills)
+│   ○ Command Code (.commandcode/skills)
+│   ○ Continue (.continue/skills)
+│   ○ Cortex Code (.cortex/skills)
+│   ○ Crush (.crush/skills)
+|   ....
+
+{% endhighlight %}
+{% endtabs %}
+
+Choose your installation scope (project-level or global), then confirm to complete the installation.
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+◆  Installation scope
+│  ● Project (Install in current directory (committed with your project))
+│  ○ Global
+
+◆  Proceed with installation?
+│  ● Yes / ○ No
+
+{% endhighlight %}
+{% endtabs %}
 
 This registers the Syncfusion<sup style="font-size:70%">&reg;</sup> skill pack so your AI assistant can automatically load it in supported IDEs such as [Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), [Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), and [Cursor](https://cursor.com/docs/skills).
 
 To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
 
-## What's Included
-
-1. **Document SDK API Knowledge** — Curated, skill-based guidance for creating, editing, and converting PDF, Word, Excel, PowerPoint, and Markdown documents using Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK libraries. Covers key APIs, supported formats, and conversions.
-2. **Dual-Mode Execution (.NET)** — Supports two operating modes:
-   - **Mode 1** — Generate production-ready code for your project.
-   - **Mode 2** — Execute a document task immediately via a CSX script without modifying your project.
-3. **Patterns & Best Practices** — Practical recommendations for API usage, platform-specific NuGet package selection, and document processing workflows (for example, mail merge, PDF digital signatures, Excel pivot tables, and PowerPoint chart creation). All guidance is authored directly within the skill file rather than being fetched from external documentation.
-
-
-## How Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Agent Skills Work
-
-1. **Read the relevant skill files and choose modes based on the user's query** The assistant retrieves library APIs, and code patterns from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Skills. It automatically chooses the appropriate operating mode based on the provided prompt.
-2. **Enforces Syncfusion<sup style="font-size:70%">&reg;</sup> best practices**, including:
-   - Suggesting the correct NuGet packages or JAR files based on the detected application type.
-   - Using only APIs and code patterns explicitly present in the skill reference files.
-   - Configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> license key from `SyncfusionLicense.txt` or the `SYNCFUSION_LICENSE_KEY` environment variable.
-3. **Operates in two modes** based on the user's intent:
-   - **Mode 1 — Generate Code**: Produces production-ready code. No scripts are created or executed. Triggered by keywords such as `"code"`, `"snippet"`, `"how to"`, `"show me"`, `"sample"`, or `"example"`.
-   - **Mode 2 — Execute via CSX Script**: Creates a temporary `.csx` script, runs it with `dotnet script`, produces the output document file, then cleans up — without modifying the user's project. Triggered by keywords such as `"create"`, `"generate"`, `"make"`, `"open"`, `"edit"`, `"modify"`, or a file path (e.g., `output/report.docx`).
+## Capabilities and How It Works
+ 
+Each installed skill pack provides the following capabilities:
+ 
+- **Document SDK API Knowledge** — Curated guidance covering key APIs, supported file formats, and conversion workflows for PDF, Word, Excel, PowerPoint, and Markdown. The assistant reads the skill files to retrieve relevant APIs and code patterns, then automatically selects the appropriate mode based on the prompt.
+ 
+- **Patterns and Best Practices** — Guidance on API usage, NuGet package selection, and common workflows (mail merge, PDF digital signatures, Excel pivot tables, and PowerPoint chart creation). The assistant enforces these standards in every response:
+  - Recommends the correct NuGet packages or JAR files based on the application type.
+  - Uses only APIs and code patterns defined in the skill reference files.
+  - Configures the Syncfusion<sup style="font-size:70%">&reg;</sup> license key from `SyncfusionLicense.txt` or the `SYNCFUSION_LICENSE_KEY` environment variable.
+ 
+- **Dual-Mode Execution (.NET)** — The assistant automatically selects a mode based on keywords in the prompt:
+ 
+| Mode | Description | Trigger Keywords |
+|---|---|---|
+| **Mode 1 — Generate Code** | Produces production-ready code for your project. No scripts are created or executed. | `"code"`, `"snippet"`, `"how to"`, `"show me"`, `"sample"`, `"example"` |
+| **Mode 2 — Execute via CSX Script** | Creates and runs a temporary `.csx` script using `dotnet script`, produces the output document, then removes the script — without modifying your project. | `"create"`, `"generate"`, `"make"`, `"open"`, `"edit"`, `"modify"`, or a file path |
 
 ## Using the AI Assistant
 
