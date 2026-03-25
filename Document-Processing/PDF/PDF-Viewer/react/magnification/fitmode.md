@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fit Modes in React PDF Viewer | How-to Guide | Syncfusion
-description: Learn how to implement fit modes (Fit Page and Fit Width) in the Syncfusion React PDF Viewer component. Control initial view, toggle fit modes, and handle container resize.
+description: Learn how to implement fit modes (Fit Page and Fit Width) in the Syncfusion React PDF Viewer component. Control initial view and toggle fit modes.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
