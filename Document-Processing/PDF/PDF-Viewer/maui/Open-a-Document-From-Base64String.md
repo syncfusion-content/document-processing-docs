@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Open a Document from a Base64 String in .NET MAUI PDF Viewer (SfPdfViewer)
+# Open a Document from a Base64 String in .NET MAUI PDF Viewer
 
 A PDF document can be opened in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) from a given Base64 string by converting it to a byte[] and assigning it to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property.
 
