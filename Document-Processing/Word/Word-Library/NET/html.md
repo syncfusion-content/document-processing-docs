@@ -1364,3 +1364,4 @@ Underline types and colors are ignored.
 * [How to add numbers on pages in HTML to PDF in ASP.NET DocIO?](https://support.syncfusion.com/kb/article/19446/how-to-add-numbers-on-pages-in-html-to-pdf-in-aspnet-docio?isInternalRefresh=False)
 * [How to restart numbering when replacing multiple texts with the same HTML list in Word document?](https://support.syncfusion.com/kb/article/19665/how-to-restart-numbering-when-replacing-multiple-texts-with-the-same-html-list-in-word-document)
 * [How to export content between two bookmarks as HTML in a Word document?](https://support.syncfusion.com/kb/article/20097/how-to-export-content-between-two-bookmarks-as-html-in-a-word-document)
+* [How to convert EMF Images to PNG in Word Documents and Export to HTML in .NET?](https://support.syncfusion.com/kb/article/22464/how-to-convert-emf-images-to-png-in-word-documents-and-export-to-html-in-net)
