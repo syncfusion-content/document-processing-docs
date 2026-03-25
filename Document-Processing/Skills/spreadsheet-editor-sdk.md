@@ -13,12 +13,13 @@ This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a curated kn
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills address common issues with generic AI code suggestions by grounding the assistant in precise Spreadsheet Editor SDK Component APIs, spreadsheet editor patterns, and platform-specific configuration for the following platforms:
 
-| Spreadsheet Editor SDK Component | Skills |
+| Framework | Skills |
 |---|---|
 | [React](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/overview) | syncfusion-react-spreadsheet-editor |
 | [Angular](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/overview) | syncfusion-angular-spreadsheet-editor |
 | [Blazor](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/overview) | syncfusion-blazor-spreadsheet-editor |
 | [ASP.NET Core](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/overview) | syncfusion-aspnetcore-spreadsheet-editor |
+| [ASP.NET MVC](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/overview) | syncfusion-aspnetmvc-spreadsheet-editor |
 | [TypeScript](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/overview) | syncfusion-javascript-spreadsheet-editor |
 | [Vue](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/overview) | syncfusion-vue-spreadsheet-editor |
 
