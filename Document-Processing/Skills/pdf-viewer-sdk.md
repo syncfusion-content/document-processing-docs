@@ -25,6 +25,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer SDK Agent Skills pro
 | [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-overview) | syncfusion-react-pdf-viewer |
 | [Flutter](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/overview) | syncfusion-flutter-pdf-viewer |
 | [.NET MAUI](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/overview) | syncfusion-maui-pdf-viewer |
+| [UWP](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/overview) | syncfusion-uwp-pdf-viewer |
 | [WinForms](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/overview) | syncfusion-winforms-pdf-viewer |
 | [WPF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) | syncfusion-wpf-pdf-viewer |
 
