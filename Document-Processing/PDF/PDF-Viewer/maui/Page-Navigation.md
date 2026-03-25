@@ -55,7 +55,7 @@ void EnableSinglePageLayoutMode()
 {% endhighlight %}
 {% endtabs %}
 
-N> You can download the **Custom Toolbar** sample project for the .NET MAUI PDF Viewer [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples) , which demonstrates fuctionality related to the [PageLayoutMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PageLayoutMode.html) feature.
+N> You can download the **Custom Toolbar** sample project for the .NET MAUI PDF Viewer [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples) , which demonstrates functionality related to the [PageLayoutMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PageLayoutMode.html) feature.
 
 ## Obtain the total page count and the current page number
 
