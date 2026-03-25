@@ -13,26 +13,20 @@ This guide introduces **Syncfusion DOCX Editor SDK Skills**, a knowledge package
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK library APIs, supported features, and platform-specific configuration for the following platforms:
 
-- **[React DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/react/overview)**
-- **[Angular DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/angular/overview)**
-- **[Blazor DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/blazor/overview)**
-- **[ASP.NET Core DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/overview)**
-- **[ASP.NET MVC DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-mvc/overview)**
-- **[TypeScript DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/overview)**
-- **[Vue DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/vue/overview)**
-- **[WPF DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/wpf/overview)**
+
+| DOCX Editor SDK Component | Skills |
+|---|---|
+| [React](https://help.syncfusion.com/document-processing/word/word-processor/react/overview) | syncfusion-react-docx-editor |
+| [Blazor](https://help.syncfusion.com/document-processing/word/word-processor/blazor/overview) | syncfusion-blazor-docx-editor |
+| [WPF](https://help.syncfusion.com/document-processing/word/word-processor/wpf/overview) | syncfusion-wpf-docx-editor |
+
+Each platform's skill file includes component initialization, property configuration, event handling and common usage patterns specific to that framework.
 
 ## Prerequisites
 
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK Skills, ensure the following tools are available on your machine:
 
 - **[Node.js](https://nodejs.org/en)** (v16 or later) — Required to run `npx` commands for installing skills.
-- **Platform-specific SDKs** — Required based on your target platform:
-  - **.NET SDK** (6.0 or later) for Blazor ASP.NET MVC and ASP.NET Core
-  - **React development environment** for React DOCX Editor
-  - **Angular CLI** for Angular DOCX Editor
-  - **TypeScript** for TypeScript DOCX Editor
-  - **Vue CLI** for Vue DOCX Editor
 
 ## Installation
 
