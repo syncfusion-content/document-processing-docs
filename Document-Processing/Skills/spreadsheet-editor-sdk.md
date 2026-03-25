@@ -28,6 +28,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills a
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills, ensure the following tools are available on your machine:
 
 - **[Node.js](https://nodejs.org/en)** (v18 or later) — Required to run `npx` commands for installing skills.
+- A supported AI agent or IDE that integrates with the Skills CLI (VS Code, Syncfusion® Code Studio, Cursor, etc.)
 
 ## Installation
 
@@ -38,7 +39,7 @@ To install all Spreadsheet Editor SDK skills at once, use the following command:
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npx skills add syncfusion/spreadsheet-editor-sdk-skills --all -y
+npx skills add syncfusion/spreadsheet-editor-sdk-skills -y
 
 {% endhighlight %}
 {% endtabs %}
