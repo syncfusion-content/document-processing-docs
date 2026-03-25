@@ -26,7 +26,7 @@ Each platform's skill file includes component initialization, property configura
 
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK Skills, ensure the following tools are available on your machine:
 
-- **[Node.js](https://nodejs.org/en)** (v16 or later) — Required to run `npx` commands for installing skills.
+- **[Node.js](https://nodejs.org/en)** (v18 or later) — Required to run `npx` commands for installing skills.
 
 ## Installation
 
