@@ -20,7 +20,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate c
 | [Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/overview) | syncfusion-dotnet-excel <br> syncfusion-flutter-excel |
 | [PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/overview) | syncfusion-dotnet-powerpoint |
 | [Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp) | syncfusion-dotnet-markdown |
-| [Smart Data Extraction](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/overview) | syncfusion-dotnet-smart-data-extraction |
+| [Smart Data Extraction](https://help.syncfusion.com/document-processing/data-extraction/overview) | syncfusion-dotnet-smart-data-extraction |
 
 ## Prerequisites
 
