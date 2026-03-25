@@ -20,9 +20,12 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer SDK Agent Skills pro
 | Framework | Skills |
 |---|---|
 | [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview) | syncfusion-blazor-pdf-viewer |
+| [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/overview) | syncfusion-aspnetcore-pdf-viewer |
+| [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/overview) | syncfusion-angular-pdfviewer |
 | [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started-overview) | syncfusion-react-pdf-viewer |
 | [Flutter](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/overview) | syncfusion-flutter-pdf-viewer |
 | [.NET MAUI](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/overview) | syncfusion-maui-pdf-viewer |
+| [UWP](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/overview) | syncfusion-uwp-pdf-viewer |
 | [WinForms](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/overview) | syncfusion-winforms-pdf-viewer |
 | [WPF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) | syncfusion-wpf-pdf-viewer |
 
@@ -42,10 +45,10 @@ Choose one of the following commands to install the Syncfusion PDF Viewer SDK Ag
 npx skills add syncfusion/pdf-viewer-sdk-skills --all -y
 ```
 
-To install a specific skill, use the following command (for example, to install PDF .Net skills):
+To install a specific skill, use the following command (for example, to install React PDF Viewer skills):
 
 ```bash
-npx skills add syncfusion/pdf-viewer-sdk-skills
+npx skills add syncfusion/pdf-viewer-sdk-skills --skill syncfusion-react-pdf-viewer
 ```
 
 ## What's Included
