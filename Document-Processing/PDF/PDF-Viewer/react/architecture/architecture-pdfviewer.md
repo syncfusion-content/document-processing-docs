@@ -20,8 +20,8 @@ The Syncfusion React PDF Viewer operates on a **hybrid client-server architectur
 - **Server-side layer**: Optional back-end services (via `serviceUrl`) that enable advanced or heavy-weight features such as OCR, document conversions (DOCX/Excel/PowerPoint to PDF), digital signature validation, encryption/decryption and extensive document preprocessing using the Syncfusion PDF Library.
 
 **Key Technology Stack:**
-- **PDFium**: Google's open-source PDF rendering and manipulation engine used for fast, reliable PDF parsing and rasterization on the client. We use PDFium for PDF to image conversion and text extraction alone
-- **Syncfusion PDF Library**: Server-side library for advanced document processing, preprocessing, Embedded Text extraction, Metadata, Annotation, Form fields data, export operations Parsing and Rastering, 
+- **PDFium**: Google's open-source PDF rendering and manipulation engine used for fast, reliable PDF parsing and rasterization on the client. We use PDFium for PDF to image conversion and text extraction alone.
+- **Syncfusion PDF Library**: Server-side library for advanced document processing, preprocessing, Embedded Text extraction, Metadata, Annotation, Form fields data, export operations Parsing and Rasterization. 
 
 ## High-level components
 
@@ -244,4 +244,4 @@ For comprehensive theme customization options, CSS variable reference, and avail
 - [Accessibility Guidelines](../accessibility) – Keyboard shortcuts, screen reader support, and best practices.
 - [Server Integration](../getting-started-with-server-backed) – Using `serviceUrl` for advanced preprocessing and export operations.
 - [Troubleshooting Common Issues](../troubleshooting/troubleshooting) – CORS, authentication, rendering, and worker problems.
-- [Syncfusion PDF Library Documentation]() – Server-side PDF processing and manipulation reference.
+- [Syncfusion PDF Library Documentation](https://helpstaging.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview) – Server-side PDF processing and manipulation reference.
