@@ -146,6 +146,22 @@ Each installed skill pack provides the following capabilities:
 
 Once skills are installed, the assistant can generate Syncfusion<sup style="font-size:70%">&reg;</sup> document processing code or execute document generation tasks. Below are example prompts for each mode.
 
+**Generate Code (Mode 1):**
+
+- "How do I add a digital signature to a PDF?"
+- "Give me a code snippet to create an Excel workbook with a pivot table using XlsIO."
+- "Show me DocIO code to create a Word document with a title and a paragraph."
+- "Generate a C# snippet to add a table to a PowerPoint slide."
+- "Show me code to extract all fields and tables from a PDF as JSON using Smart Data Extraction."
+
+**Execute Task (Mode 2):**
+
+- "Create a PDF report with a title page and inventory table, save to output/report.pdf."
+- "Create a sales summary workbook and save it to output/sales.xlsx."
+- "Create a Word document about the top 5 programming languages in 2025."
+- "Create a 5-slide meeting agenda presentation and save it to output/agenda.pptx."
+- "Extract data from the PDF at Input/invoice.pdf using Smart Data Extraction and save to output/data.json."
+
 ## Skills CLI Commands
 
 After installation, manage Syncfusion<sup style="font-size:70%">&reg;</sup> Agent Skills using the following commands:
@@ -213,22 +229,6 @@ Yes. Once installed, supported agents automatically detect and load relevant ski
 **Skills are not being loaded**
 
 Verify that skills are installed in the correct agent directory, restart the IDE, and confirm that the agent supports external skill files.
-
-**Generate Code (Mode 1):**
-
-- "How do I add a digital signature to a PDF?"
-- "Give me a code snippet to create an Excel workbook with a pivot table using XlsIO."
-- "Show me DocIO code to create a Word document with a title and a paragraph."
-- "Generate a C# snippet to add a table to a PowerPoint slide."
-- "Show me code to extract all fields and tables from a PDF as JSON using Smart Data Extraction."
-
-**Execute Task (Mode 2):**
-
-- "Create a PDF report with a title page and inventory table, save to output/report.pdf."
-- "Create a sales summary workbook and save it to output/sales.xlsx."
-- "Create a Word document about the top 5 programming languages in 2025."
-- "Create a 5-slide meeting agenda presentation and save it to output/agenda.pptx."
-- "Extract data from the PDF at Input/invoice.pdf using Smart Data Extraction and save to output/data.json."
 
 ## See also
 
