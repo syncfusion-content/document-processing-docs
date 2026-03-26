@@ -16,9 +16,9 @@ If document loading fails and you see a 404 error in the browser console, the Do
 
 The 404 error may occur due to the following reasons:
 
-- **The Web Service is not running or inactive** – When hosting your own ASP.NET Core Web API, the server may be stopped or not deployed correctly, causing required endpoints such as `/Import` or `/SpellCheck` to return 404.
+- **The Web Service is not running or inactive** – When hosting your own Web API, the server may be stopped or not deployed correctly, causing required endpoints such as `/Import` or `/SpellCheck` to return 404.
 - **The configured `serviceUrl` is invalid** – Issues like a missing trailing slash (`/`), wrong port number, incorrect API route, or typos will cause the editor to call incorrect endpoints.
-- **The application is using an old or discontinued Document Editor service URL** – When using an old Document Editor service URL which no longer valid (`https://ej2services.syncfusion.com/production/web-services/api/documenteditor/`).
+- **The application is using an old or discontinued Document Editor service URL** – When using an old Document Editor service URL which no longer valid.
 
 ## Solution
 
@@ -28,8 +28,8 @@ The 404 error may occur due to the following reasons:
     container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
     ```
 
-2. If you are using your own hosted Web API, ensure that the Web Service is running, active, and the configured service URL is valid.
+> Note: The hosted Web API link is provided for demonstration and evaluation only. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-> Note: The hosted Web API link is provided for demonstration and evaluation only. For production use, host your own web service with the required server configuration. See the GitHub Web Service example or use the Docker image for deployment guidance.
+2. If you are using your own hosted Web API, ensure that the Web Service is running, active, and the configured service URL is valid.
 
 ---
