@@ -15,13 +15,13 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills a
 
 | Framework | Skills |
 |---|---|
-| [React](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/overview) | [syncfusion-react-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/main/skills/syncfusion-react-spreadsheet-editor) |
-| [Angular](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/overview) | [syncfusion-angular-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/main/skills/syncfusion-angular-spreadsheet-editor) |
-| [Blazor](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/overview) | [syncfusion-blazor-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/main/skills/syncfusion-blazor-spreadsheet-editor) |
-| [ASP.NET Core](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/overview) | [syncfusion-aspnetcore-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/main/skills/syncfusion-aspnetcore-spreadsheet-editor) |
-| [ASP.NET MVC](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/overview) | [syncfusion-aspnetmvc-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/main/skills/syncfusion-aspnetmvc-spreadsheet-editor) |
-| [TypeScript](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/overview) | [syncfusion-javascript-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/main/skills/syncfusion-javascript-spreadsheet-editor) |
-| [Vue](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/overview) | [syncfusion-vue-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/main/skills/syncfusion-vue-spreadsheet-editor) |
+| [React](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/overview) | [syncfusion-react-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-react-spreadsheet-editor) |
+| [Angular](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/overview) | [syncfusion-angular-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-angular-spreadsheet-editor) |
+| [Blazor](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/overview) | [syncfusion-blazor-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-blazor-spreadsheet-editor) |
+| [ASP.NET Core](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/overview) | [syncfusion-aspnetcore-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-aspnetcore-spreadsheet-editor) |
+| [ASP.NET MVC](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/overview) | [syncfusion-aspnetmvc-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-aspnetmvc-spreadsheet-editor) |
+| [TypeScript](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/overview) | [syncfusion-javascript-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-javascript-spreadsheet-editor) |
+| [Vue](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/overview) | [syncfusion-vue-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-vue-spreadsheet-editor) |
 
 ## Prerequisites
 
