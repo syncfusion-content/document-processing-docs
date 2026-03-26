@@ -15,13 +15,11 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK Skills eliminat
 
 
 | Framework  | Skills |
-|---|---|
-| [React](https://help.syncfusion.com/document-processing/word/word-processor/react/overview) | [syncfusion-react-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-react-docx-editor) |
-| [Angular](https://help.syncfusion.com/document-processing/word/word-processor/angular/overview) | [syncfusion-angular-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-angular-docx-editor) |
-| [Blazor](https://help.syncfusion.com/document-processing/word/word-processor/blazor/overview) | [syncfusion-blazor-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-blazor-docx-editor) |
-| [ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/overview) | [syncfusion-aspnetcore-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-aspnetcore-docx-editor) |
-| [UWP](https://help.syncfusion.com/document-processing/word/word-processor/uwp/overview) | [syncfusion-uwp-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-uwp-docx-editor) |
-| [WPF](https://help.syncfusion.com/document-processing/word/word-processor/wpf/overview) | [syncfusion-wpf-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-wpf-docx-editor) |
+| [React](https://help.syncfusion.com/document-processing/word/word-processor/react/overview) | syncfusion-react-docx-editor |
+| [Blazor](https://help.syncfusion.com/document-processing/word/word-processor/blazor/overview) | syncfusion-blazor-docx-editor |
+| [WPF](https://help.syncfusion.com/document-processing/word/word-processor/wpf/overview) | syncfusion-wpf-docx-editor |
+
+Each platform's skill file includes component initialization, property configuration, event handling and common usage patterns specific to that framework.
 
 ## Prerequisites
 
