@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Document loading issue in React DOCX editor component | Syncfusion
+title: Document loading issue in Vue DOCX editor | Syncfusion
 description: Document loading may fail with a 404 error if the Document Editor cannot reach a valid service URL, which may be due to the below reasons.
 control: document loading issue with 404 error
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Document loading issue with 404 error in React DOCX editor component
+# Document loading issue with 404 error in Vue DOCX editor
 
 If document loading fails and you see a 404 error in the browser console, the Document Editor is unable to reach a valid Web Service endpoint.
 
