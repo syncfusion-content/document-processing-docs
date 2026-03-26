@@ -21,8 +21,8 @@ The following configuration was used for the performance evaluations:
 * **Hardware**: 12th Gen Intel(R) Core(TM) i5-1235U
 * **RAM**: 16 GB or higher
 * **Spreadsheet Version**:
-  * [NPM Version](https://www.npmjs.com/package/@syncfusion/ej2-spreadsheet/v/32.2.5)  
-  * [NuGet Version](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core/32.2.5)  
+  * [NPM Version](https://www.npmjs.com/package/@syncfusion/ej2-spreadsheet/v/33.1.45)  
+  * [NuGet Version](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core/33.1.45)  
 
 ## Evaluated Features
 
