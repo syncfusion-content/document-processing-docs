@@ -148,7 +148,6 @@ Once skills are installed, the assistant can generate spreadsheet editor code. B
 
 After installation, manage Syncfusion<sup style="font-size:70%">&reg;</sup> Agent Skills using the following commands:
 
-> **Note:** If you installed Syncfusion skills globally, add the `--global` flag at the end of the command (for example, `npx skills list --global`, `npx skills remove <skill-name>` --global ).
 
 ### List Skills
 
@@ -161,6 +160,8 @@ npx skills list
 
 {% endhighlight %}
 {% endtabs %}
+
+> **Note:** If you installed Syncfusion skills globally, add the `--global` flag at the end of the command (for example, `npx skills list --global`, `npx skills remove <skill-name>` --global ).
 
 ### Remove a Skill
 
