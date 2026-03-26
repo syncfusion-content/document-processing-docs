@@ -113,8 +113,7 @@ Specifies one or more OCR recognition languages for accurate text extraction. Th
 
 Multiple languages can be provided by combining their codes using the `+` (plus) separator.
 
-Supported languages:
-
+**Supported languages:**
 | Code | Language |
 |---|---|
 | ara | Arabic |
