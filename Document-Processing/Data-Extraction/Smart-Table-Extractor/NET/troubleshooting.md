@@ -113,7 +113,7 @@ Source=Syncfusion.SmartTableExtractor.Base
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
-<td>In a **.NET Framework MVC app**, NuGet sometimes doesn’t automatically copy native runtime dependencies (like *ONNXruntime.dll*) into the *bin* folder during publish. 
+<td>In a **.NET Framework MVC app**, NuGet sometimes doesn’t automatically copy native runtime dependencies (like `onnxruntime.dll`) into the *bin* folder during publish. 
 </td>
 </tr>
 <tr>
