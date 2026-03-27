@@ -94,6 +94,32 @@ This paste option appear as follows.
 
 ![Image](images/paste.PNG)
 
+## Events
+
+DocumentEditor provides the [`beforePaste`](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#beforepaste) event, which is triggered before content is pasted into the document. This event gives an opportunity to [`cancel`](https://ej2.syncfusion.com/documentation/api/document-editor/beforepasteeventargs#cancel) the paste operation, modify the content to be pasted using [`pasteContent`](https://ej2.syncfusion.com/documentation/api/document-editor/beforepasteeventargs#pastecontent), and determining its format with [`pasteType`](https://ej2.syncfusion.com/documentation/api/document-editor/beforepasteeventargs#pastetype). The event handler receives a [`BeforePasteEventArgs`](https://ej2.syncfusion.com/documentation/api/document-editor/beforepasteeventargs) object that contains all the necessary details about the paste operation.
+
+The following code snippet illustrates how to achieve this:
+
+```ts
+import { DocumentEditorContainer, Toolbar, BeforePasteEventArgs } from '@syncfusion/ej2-documenteditor';
+DocumentEditorContainer.Inject(Toolbar);
+let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true,height: '590px', beforePaste:handleBeforePaste
+});
+DocumentEditorContainer.Inject(Toolbar);
+container.serviceUrl = 'hostUrl';
+container.appendTo('#container');
+function handleBeforePaste (args : BeforePasteEventArgs){
+    // Block HTML pasteType  and Modify the content
+    if (args.pasteType === "Html") {
+        args.pasteContent = `{"sections":[{"blocks":[{"inlines":[{"characterFormat":{"bold":true,"italic":true},"text":"HTML Content"}]}],"headersFooters":{}}]}`;
+    }
+    // Cancel paste if content matches 'Software'
+    if(args.pasteContent == 'Software'){
+      args.cancel = true;
+    }
+}
+```
+
 ## See Also
 
 * [Feature modules](./feature-module)

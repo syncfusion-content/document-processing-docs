@@ -124,6 +124,51 @@ This paste option appears as follows.
 
 ![Image](images/paste.png)
 
+## Events
+
+DocumentEditor provides the [`beforePaste`](https://ej2.syncfusion.com/react/documentation/api/document-editor/index-default#beforepaste) event, which is triggered before content is pasted into the document. This event gives an opportunity to [`cancel`](https://ej2.syncfusion.com/react/documentation/api/document-editor/beforepasteeventargs#cancel) the paste operation, modify the content to be pasted using [`pasteContent`](https://ej2.syncfusion.com/react/documentation/api/document-editor/beforepasteeventargs#pastecontent), and determining its format with [`pasteType`](https://ej2.syncfusion.com/react/documentation/api/document-editor/beforepasteeventargs#pastetype). The event handler receives a [`BeforePasteEventArgs`](https://ej2.syncfusion.com/react/documentation/api/document-editor/beforepasteeventargs) object that contains all the necessary details about the paste operation.
+
+The following code snippet illustrates how to achieve this:
+
+```typescript
+import { createRoot } from 'react-dom/client';
+import * as React from 'react';
+import {
+  DocumentEditorContainerComponent,
+  Toolbar,
+} from '@syncfusion/ej2-react-documenteditor';
+DocumentEditorContainerComponent.Inject(Toolbar);
+function App() {
+  let container = DocumentEditorContainerComponent;
+  const handleBeforePaste = (args) => {
+    // Block HTML pasteType  and Modify the content
+    if (args.pasteType === "Html") {
+       args.pasteContent = `{"sections":[{"blocks":[{"inlines":[{"characterFormat":{"bold":true,"italic":true},"text":"HTML Content"}]}],"headersFooters":{}}]}`;
+    }     
+    // Cancel paste if content matches 'Software'
+    if(args.pasteContent == 'Software'){
+      args.cancel = true;
+    }
+  };
+  return (
+    <div>
+      <DocumentEditorContainerComponent
+        id="container"
+        ref={(scope) => {
+          container = scope;
+        }}
+        height={'590px'}
+        serviceUrl="hostUrl"
+        enableToolbar={true}
+        beforePaste={handleBeforePaste}
+      />
+    </div>
+  );
+}
+export default App;
+createRoot(document.getElementById('sample')).render(<App />);
+```
+
 ## See Also
 
 * [Feature modules](./feature-module)
