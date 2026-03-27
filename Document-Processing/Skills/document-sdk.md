@@ -13,14 +13,51 @@ This guide introduces **Syncfusion Document SDK Skills**, a knowledge package th
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK library APIs, document processing patterns, and platform-specific configuration for the following libraries:
 
-| Document Processing Libraries | Skills |
-|---|---|
-| [Word (DocIO)](https://help.syncfusion.com/document-processing/word/word-library/overview) | [syncfusion-dotnet-word](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-word) <br> [syncfusion-java-word](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-java-word) |
-| [PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/overview) | [syncfusion-dotnet-pdf](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-pdf) <br> [syncfusion-dotnet-pdf-to-image](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-pdf-to-image) <br> [syncfusion-flutter-pdf](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-flutter-pdf) <br> [syncfusion-javascript-pdf](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-javascript-pdf) |
-| [Excel (XlsIO)](https://help.syncfusion.com/document-processing/excel/excel-library/overview) | [syncfusion-dotnet-excel](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-excel) <br> [syncfusion-flutter-excel](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-flutter-excel) |
-| [PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/overview) | [syncfusion-dotnet-powerpoint](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-powerpoint) |
-| [Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp) | [syncfusion-dotnet-markdown](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-markdown) |
-| [Smart Data Extraction](https://help.syncfusion.com/document-processing/data-extraction/overview) | [syncfusion-dotnet-smart-data-extraction](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-smart-data-extraction) |
+<table>
+  <thead>
+    <tr>
+      <th>Document Processing Libraries</th>
+      <th>Skills</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://help.syncfusion.com/document-processing/word/word-library/overview">Word (DocIO)</a></td>
+      <td>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-word">syncfusion-dotnet-word</a><br>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-java-word">syncfusion-java-word</a>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://help.syncfusion.com/document-processing/pdf/pdf-library/overview">PDF</a></td>
+      <td>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-pdf">syncfusion-dotnet-pdf</a><br>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-pdf-to-image">syncfusion-dotnet-pdf-to-image</a><br>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-flutter-pdf">syncfusion-flutter-pdf</a><br>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-javascript-pdf">syncfusion-javascript-pdf</a>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://help.syncfusion.com/document-processing/excel/excel-library/overview">Excel (XlsIO)</a></td>
+      <td>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-excel">syncfusion-dotnet-excel</a><br>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-flutter-excel">syncfusion-flutter-excel</a>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/overview">PowerPoint (Presentation)</a></td>
+      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-powerpoint">syncfusion-dotnet-powerpoint</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp">Markdown</a></td>
+      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-markdown">syncfusion-dotnet-markdown</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://help.syncfusion.com/document-processing/data-extraction/overview">Smart Data Extraction</a></td>
+      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-smart-data-extraction">syncfusion-dotnet-smart-data-extraction</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Prerequisites
 
