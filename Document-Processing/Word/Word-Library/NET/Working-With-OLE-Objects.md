@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with OLE Objects
+# Working with OLE Objects in Word Library
 
 OLE (Object Linking and Embedding) objects allow embedding and linking to documents and other objects. It allows the content of one program to be used in a Word document. The Objects can be inserted in the following two ways:
 
