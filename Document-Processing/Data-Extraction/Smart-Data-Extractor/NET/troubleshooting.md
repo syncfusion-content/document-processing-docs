@@ -51,8 +51,7 @@ Notes:
 <th style="font-size:14px" width="100px">Reason
 </th>
 <td>
-The application cannot load *System.Runtime.CompilerServices.Unsafe* or one of its dependencies. </br>
-**Inner Exception**: *FileNotFoundException* — Could not load file or assembly 'System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies.
+The required **Microsoft.ML.ONNXRuntime** NuGet package is not installed in your project. SmartDataExtractor depends on this package and its required assemblies to function properly.
 <br/><br/>
 </td>
 </tr>
@@ -78,7 +77,7 @@ This package is required for **SmartDataExtractor** across .Net Framework projec
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
-<td>In .NET Framework MVC applications, NuGet may not always copy native runtime dependencies (such as ONNXRuntime.dll) to the bin folder during publishing.
+<td>The required native runtime library (ONNXRuntime.dll) is missing from your application's bin folder.
 </td>
 </tr>
 <tr>
