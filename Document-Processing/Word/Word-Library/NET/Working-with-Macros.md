@@ -30,7 +30,6 @@ using (FileStream fileStream = new FileStream("Template.dotm", FileMode.Open, Fi
         {
             //Saves the Word document to stream.
             document.Save(stream, FormatType.Word2013Docm);
-            }
         }
     }
 }
