@@ -27,7 +27,6 @@ The following assemblies need to be referenced in your application based on the 
         Syncfusion.Compression.Base<br/>
         Syncfusion.ImagePreProcessor.Base<br/>
         Syncfusion.OCRProcessor.Base<br/>
-        Syncfusion.Pdf.Imaging.Base<br/>
         Syncfusion.Pdf.Base<br/>
         Syncfusion.PdfToImageConverter.Base<br/>
         Syncfusion.SmartFormRecognizer.Base<br/>

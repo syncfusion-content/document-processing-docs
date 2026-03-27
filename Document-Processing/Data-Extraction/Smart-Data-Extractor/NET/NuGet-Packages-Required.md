@@ -41,7 +41,7 @@ WPF
 ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.SmartTableExtractor.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.AspNet.Mvc5)'| markdownify }}
+{{'[Syncfusion.SmartDataExtractor.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.AspNet.Mvc5)'| markdownify }}
 </td>
 </tr>
 <tr>
