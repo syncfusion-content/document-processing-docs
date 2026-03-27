@@ -11,6 +11,9 @@ documentation: ug
 
 The SfPdfViewer component provides an Organize Pages panel that helps prepare documents before sharing. Use it to tidy scanned files, move pages into the correct order, and duplicate content without leaving the viewer.
 
+Check out the following video to learn how to organize pages in a PDF document using the Blazor PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=CQwfp5arshQ" %}
+
 To open the Organize Pages panel, load a document, ensure that the Organize Pages toolbar item is enabled, and choose **Organize Pages** from the left vertical toolbar. The document must allow page-level edits for the toolbar item to be available.
 
 The Organize Pages panel supports the following actions:
