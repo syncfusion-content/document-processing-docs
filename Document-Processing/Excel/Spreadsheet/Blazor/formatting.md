@@ -15,13 +15,13 @@ Formatting options improve data readability and presentation. The Blazor Spreads
 * Text Formatting
 * Cell Formatting
 
-The entire formatting functionality can be globally enabled or disabled using the [AllowCellFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowCellFormatting) property. By default, `AllowCellFormatting` is set to **true**.
+The entire formatting functionality can be globally enabled or disabled using the [AllowCellFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowCellFormatting) property. By default, [AllowCellFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowCellFormatting) is set to **true**.
 
 ## Number Formatting
 
 Number formatting in the Blazor Spreadsheet component controls how numeric, date, and time values are displayed without altering their underlying data. The component offers Excel-like number formats that are culture-aware, integrate with undo/redo operations, and respect worksheet protection settings. These formats can be applied through the Ribbon toolbar or programmatically.
 
-The number formatting functionality can be globally enabled or disabled using the [AllowNumberFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowNumberFormatting) property. By default, `AllowNumberFormatting` is set to **true**.
+The number formatting functionality can be globally enabled or disabled using the [AllowNumberFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowNumberFormatting) property. By default, [AllowNumberFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowNumberFormatting) is set to **true**.
 
 ### Supported Categories
 
@@ -90,7 +90,7 @@ Number formats can be applied programmatically to the current selection or a spe
 {% endhighlight %}
 {% endtabs %}
 
-N> If the built-in formats do not meet specific requirements, custom patterns can be applied programmatically using the `NumberFormatAsync` method. Patterns must be compatible with Excel-style format strings.
+N> If the built-in formats do not meet specific requirements, custom patterns can be applied programmatically using the [NumberFormatAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_NumberFormatAsync_System_String_System_String_) method. Patterns must be compatible with Excel-style format strings.
 
 ## Text and Cell Formatting
 
@@ -178,7 +178,7 @@ Borders can be applied through the UI using the following method:
 
 ### Applying Borders Programmatically
 
-Borders can be applied programmatically to a specific cell or range of cells using the [SetBordersAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String_) method. The available parameters in the `SetBordersAsync` method are:
+Borders can be applied programmatically to a specific cell or range of cells using the [SetBordersAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String_) method. The available parameters in the [SetBordersAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_SetBordersAsync_Syncfusion_Blazor_Spreadsheet_BorderType_Syncfusion_XlsIO_ExcelLineStyle_System_String_System_String_)  method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -215,5 +215,5 @@ Borders can be applied programmatically to a specific cell or range of cells usi
 
 ### Limitations
 
-*   Conditional formatting is currently not supported in the Blazor Spreadsheet component.
+*   `Conditional formatting` is currently not supported in the Blazor Spreadsheet component.
 *   A custom number format UI dialog is not available, custom formats must be applied using the API.
