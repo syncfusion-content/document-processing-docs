@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot SmartTableExtractor in DataExtraction | Syncfusion
-description: Troubleshooting steps and FAQs for Syncfusion SmartTableExtractor to help users resolve common issues in .Net Framework projects.
+description: Troubleshooting steps and FAQs for Syncfusion SmartTableExtractor to help users resolve common issues in .NET Framework projects.
 platform: document-processing
 control: SmartTableExtractor
 documentation: UG
@@ -59,7 +59,7 @@ The required **Microsoft.ML.ONNXRuntime** NuGet package is not installed in your
 <th style="font-size:14px" width="100px">Solution
 </th>
 <td>Install the NuGet package [Microsoft.ML.ONNXRuntime (Version 1.18.0)](https://www.nuget.org/packages/Microsoft.ML.ONNXRuntime/1.18.0) manually in your sample/project. <br/>
-This package is required for **SmartTableExtractor** across .Net Framework projects.
+This package is required for **SmartTableExtractor** across .NET Framework projects.
 <br/><br/>
 </td>
 </tr>
