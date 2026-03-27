@@ -66,7 +66,8 @@ public class SpreadsheetController : Controller
     [HttpPost]
     public void Save(SaveSettings saveSettings)
     {
-        if(saveSettings && saveSettings.JSONData) {
+        if (saveSettings != null && saveSettings.JSONData != null)
+        {
             Workbook.Save(saveSettings);
         }
     }
@@ -75,7 +76,8 @@ public class SpreadsheetController : Controller
 
 ### Configure File Size Limits
 
-To support large Excel files, configure file size limits in your server settings.
+By default, ASP.NET MVC and web servers impose size limits on incoming HTTP requests to prevent abuse and protect server resources. When uploading large Excel files, these requests can exceed the default limits, causing upload failures. To support large Excel files, you need to configure file size limits in your server settings to allow receiving large payloads over HTTP requests.
+
 
 **web.config**
 ```xml
@@ -97,7 +99,7 @@ To support large Excel files, configure file size limits in your server settings
 
 ### Enable CORS (Cross-Origin Resource Sharing)
 
-Cross-Origin Resource Sharing (CORS) allows your ASP.NET MVC application to accept requests from other domains (such as when your client app and server are running on different ports or hosts).
+CORS (Cross-Origin Resource Sharing) is a security feature that allows web applications from different origins (domains, protocols, or ports) to communicate with your API. By default, browsers block cross-origin requests for security reasons. Since the React Spreadsheet component runs in the client browser and needs to communicate with your ASP.NET MVC web service for open and save operations, you must configure CORS to allow these requests. The following configuration enables cross-origin requests from any origin, which is suitable for development environme
 
 **How to Enable CORS in ASP.NET MVC**
 
@@ -105,6 +107,8 @@ Cross-Origin Resource Sharing (CORS) allows your ASP.NET MVC application to acce
 2. Add the following code to the `Application_BeginRequest` method:
 
 ```csharp
+// Configure CORS to allow the React Spreadsheet component to communicate with the API from any origin
+// This is necessary for the browser to permit cross-origin requests for file open and save operations
 protected void Application_BeginRequest()
 {
     // Allow all origins. For production, specify allowed origins instead of '*'.
@@ -128,7 +132,7 @@ After adding the controller codes and above mentioned configurations, build and 
 
 ### Configuring the Client-Side URLs
 
-Once your local service is launched, configure the openUrl and saveUrl properties in client application to use the local endpoints.
+Once your local service is launched, configure the openUrl and saveUrl properties in client application to use the local endpoints to perform import and export operation.
 
 ```js
 <SpreadsheetComponent

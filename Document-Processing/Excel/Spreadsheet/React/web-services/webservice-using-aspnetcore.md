@@ -36,7 +36,7 @@ For spreadsheet open and save operations, install the following NuGet packages:
 
 | Platform      | Assembly                                 | NuGet Package |
 |---------------|------------------------------------------|---------------|
-| ASP.NET Core  | Syncfusion.EJ2.AspNet.Core <br/> Syncfusion.XlsIORenderer.Net.Core | [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) <br/> [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) |
+| ASP.NET Core  | Syncfusion.EJ2.Spreadsheet.AspNet.Core <br> Syncfusion.EJ2.AspNet.Core <br/> Syncfusion.XlsIORenderer.Net.Core | [Syncfusion.EJ2.Spreadsheet.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) <br>[Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) <br/> [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) |
 
 For more details, see the [dependencies section on nuget.org](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core#dependencies-body-tab).
 
@@ -71,7 +71,7 @@ public IActionResult Save([FromForm] SaveSettings saveSettings)
 
 ### Configure File Size Limits
 
-To support large Excel files, configure file size limits in your server settings.
+By default, ASP.NET Core and web servers impose size limits on incoming HTTP requests to prevent abuse and protect server resources. When uploading large Excel files, these requests can exceed the default limits, causing upload failures. To support large Excel files, you need to configure file size limits in your server settings to allow receiving large payloads over HTTP requests.
 
 **web.config**
 ```xml
@@ -90,12 +90,16 @@ To support large Excel files, configure file size limits in your server settings
 
 **Program.cs**
 ```csharp
+// Configure FormOptions to allow large file uploads by setting multipart body and value length limits
+// This enables the server to accept large Excel files in form submissions without rejecting them
 builder.Services.Configure<FormOptions>(options =>
 {
     options.MultipartBodyLengthLimit = int.MaxValue;
     options.ValueLengthLimit = int.MaxValue;
 });
 
+// Configure Kestrel web server to allow large request bodies for handling large Excel file uploads
+// This removes the default size restriction at the server level, enabling it to process large files
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.Limits.MaxRequestBodySize = int.MaxValue;
@@ -104,9 +108,13 @@ builder.WebHost.ConfigureKestrel(options =>
 
 ### Enable CORS (Cross-Origin Resource Sharing)
 
+CORS (Cross-Origin Resource Sharing) is a security feature that allows web applications from different origins (domains, protocols, or ports) to communicate with your API. By default, browsers block cross-origin requests for security reasons. Since the React Spreadsheet component runs in the client browser and needs to communicate with your ASP.NET Core API for open and save operations, you must configure CORS to allow these requests. The following configuration enables cross-origin requests from any origin, which is suitable for development environments.
+
 Edit `Program.cs` to allow cross-origin requests:
 
 ```csharp
+// Configure CORS to allow the React Spreadsheet component to communicate with the API from any origin
+// This is necessary for the browser to permit cross-origin requests for file open and save operations
 var MyAllowSpecificOrigins = "AllowAllOrigins";
 builder.Services.AddCors(options =>
 {
@@ -132,7 +140,7 @@ Build and run your Web API project. For detailed instructions, refer to:
 
 ### Configuring the Client-Side URLs
 
-Once your local service is launched, configure the openUrl and saveUrl properties in client application to use the local endpoints.
+Once your local service is launched, configure the openUrl and saveUrl properties in client application to use the local endpoints to perform import and export operation.
 
 ```js
 <SpreadsheetComponent
