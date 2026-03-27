@@ -6,7 +6,7 @@ control: Presentation
 documentation: UG
 keywords: 
 ---
-# Working with Find and Replace
+# Working with Find and Replace in PowerPoint Library
 
 .NET PowerPoint library allows you to search for a particular text that you want to change and replace it with another text in the PowerPoint presentation.
 
@@ -37,11 +37,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
         //Replaces the text
         textPart.Text = "Service";
     }
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
@@ -109,11 +106,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
         //Replaces the text
         textPart.Text = "Service";
     }
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
@@ -185,11 +179,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
         //Replaces the text
         textPart.Text = "Service";
     }
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
@@ -256,11 +247,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
     ITextPart textPart = textSelection.GetAsOneTextPart();
     //Replaces the text
     textPart.Text = "Service";
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
@@ -325,10 +313,7 @@ using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open, Fil
             textPart.Text = "Service";
         }
         //Saves the Presentation.
-        using (FileStream outputStream = new FileStream("Output.pptx", FileMode.Create, FileAccess.ReadWrite))
-        {
-            pptxDoc.Save(outputStream);
-        }      
+        pptxDoc.Save("Output.pptx");     
     }
 }
 {% endhighlight %}
@@ -399,11 +384,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
         //Replaces the text
         textPart.Text = "Service";
     }
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
@@ -473,11 +455,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
             textPart.Font.HighlightColor = ColorObject.Yellow;
         }
     }
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
@@ -552,10 +531,7 @@ using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open, Fil
             }
         }
         //Saves the Presentation.
-        using (FileStream outputStream = new FileStream("Output.pptx", FileMode.Create, FileAccess.ReadWrite))
-        {
-            pptxDoc.Save(outputStream);
-        }    
+        pptxDoc.Save("Output.pptx");   
     }
 }
 
@@ -630,11 +606,8 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
             textPart.Font.HighlightColor = ColorObject.Yellow;
         }
     }
-    //Saves the PowerPoint Presentation as a stream
-    FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
-    //Releases all resources of the stream
-    outputStream.Dispose();
+    //Saves the PowerPoint Presentation
+    pptxDoc.Save("Output.pptx");
     //Closes the Presentation instance
     pptxDoc.Close();
 }
