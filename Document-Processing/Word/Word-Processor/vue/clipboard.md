@@ -74,6 +74,81 @@ This paste option appears as follows.
 
 ![Image](images/paste.png)
 
+## Events
+
+DocumentEditor provides the [`beforePaste`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/index-default#beforepaste) event, which is triggered before content is pasted into the document. This event gives an opportunity to [`cancel`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/beforepasteeventargs#cancel) the paste operation, modify the content to be pasted using [`pasteContent`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/beforepasteeventargs#pastecontent), and determining its format with [`pasteType`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/beforepasteeventargs#pastetype). The event handler receives a [`BeforePasteEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/beforepasteeventargs) object that contains all the necessary details about the paste operation.
+
+The following code snippet illustrates how to achieve this:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div>
+    <div>
+      <div>
+        <ejs-documenteditorcontainer ref="container" style="display: block;" :height="'590px'"
+          @beforePaste="handleBeforePaste" :enableToolbar="true" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer } from '@syncfusion/ej2-vue-documenteditor';
+
+
+const handleBeforePaste = function (args) {
+  // Block HTML pasteType  and Modify the content
+    if (args.pasteType === "Html") {
+        args.pasteContent = `{"sections":[{"blocks":[{"inlines":[{"characterFormat":{"bold":true,"italic":true},"text":"HTML Content"}]}],"headersFooters":{}}]}`;
+    }
+  // Cancel paste if content matches 'Software'
+   if(args.pasteContent == 'Software'){
+      args.cancel = true;
+    }}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div>
+    <div>
+      <div>
+        <ejs-documenteditorcontainer ref="container" style="display: block;" :height="'590px'"
+          @beforePaste="handleBeforePaste":enableToolbar="true" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  methods: {
+    handleBeforePaste (args) {
+        // Block HTML pasteType  and Modify the content
+        if (args.pasteType === "Html") {
+            args.pasteContent = `{"sections":[{"blocks":[{"inlines":[{"characterFormat":{"bold":true,"italic":true},"text":"HTML Content"}]}],"headersFooters":{}}]}`;
+        }
+        // Cancel paste if content matches 'Software'
+        if(args.pasteContent == 'Software'){
+        args.cancel = true;
+        }
+    }
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ## See Also
 
 * [Feature modules](./feature-module)
