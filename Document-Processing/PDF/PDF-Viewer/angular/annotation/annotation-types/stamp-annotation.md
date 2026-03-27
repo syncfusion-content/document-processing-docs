@@ -1,6 +1,5 @@
 ---
 layout: post
-title: Stamp Annotation in React PDF Viewer | Syncfusion
 title: Stamp Annotation in Angular PDF Viewer | Syncfusion
 description: Learn how to enable, apply, customize, and manage Stamp annotations (Dynamic, Sign Here, Standard Business, Custom) in the Syncfusion Angular PDF Viewer.
 platform: document-processing
