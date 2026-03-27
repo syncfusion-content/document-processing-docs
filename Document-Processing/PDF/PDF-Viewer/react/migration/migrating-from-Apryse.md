@@ -259,12 +259,12 @@ export default function PdfViewer() {
 ## Reference: key Syncfusion `PdfViewerComponent` methods & events
 
 - [PdfViewerComponent API index](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default)
-- [load(document: string | Uint8Array, password?: string)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) — programmatically load a PDF.
+- [load()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) — programmatically load a PDF.
 - [download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) — trigger download of current document.
 - [addAnnotation(annotation: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) — add an annotation programmatically.
 - [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string):   — export annotations for persistence.
 - [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#extracttext): — extract text and coordinates.
-- Events: documentLoad, pageRenderComplete, pageChange, annotationAdd, annotationRemove, toolbarClick — see event anchors on the API index above (for example: https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload).
+- [Events](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#events): [documentLoad](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload), [pageRenderComplete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagerendercomplete), [pageChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagechange), [annotationAdd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationadd), [annotationRemove](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationremove), [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbarclick).
 
 ## See Also
 
