@@ -21,6 +21,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate c
 | [PowerPoint (Presentation)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/overview) | [syncfusion-dotnet-powerpoint](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-powerpoint) |
 | [Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp) | [syncfusion-dotnet-markdown](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-markdown) |
 | [Smart Data Extraction](https://help.syncfusion.com/document-processing/data-extraction/overview) | [syncfusion-dotnet-smart-data-extraction](https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-smart-data-extraction) |
+
 ## Prerequisites
 
 Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills, ensure the following tools are available on your machine:
@@ -32,7 +33,7 @@ Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK 
 
 ## Installation
 
-Choose one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills](https://github.com/syncfusion/document-sdk-skills) based on your preference. You can also explore Syncfusion<sup style="font-size:70%">&reg;</sup> skills from the [marketplace](https://skills.sh/syncfusion/).
+Use one of the following commands to install [Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills](https://github.com/syncfusion/document-sdk-skills) based on your preference. You can also explore Syncfusion<sup style="font-size:70%">&reg;</sup> skills from the [marketplace](https://skills.sh/syncfusion/).
 
 To install all document SDK skills at once, use the following command:
 
@@ -141,7 +142,7 @@ To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
        - Executes the script using dotnet script and generates the output document.
        - Performs cleanup by deleting the temporary `.csx` script.
  
-3. **Register licensing key** Configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> license key from `SyncfusionLicense.txt` or the `SYNCFUSION_LICENSE_KEY` environment variable.
+3. **Register licensing key** Configuring the Syncfusion<sup style="font-size:70%">&reg;</sup> license key from `SyncfusionLicense.txt` file at workspace root folder or the `SYNCFUSION_LICENSE_KEY` environment variable.
 
 ### Using the AI Assistant
 
@@ -178,6 +179,8 @@ npx skills list
 
 {% endhighlight %}
 {% endtabs %}
+
+> **Note:** If you installed Syncfusion skills globally, add the `--global` flag at the end of the command (for example, `npx skills list --global`, `npx skills remove <skill-name> --global` ).
 
 ### Remove a Skill
 
