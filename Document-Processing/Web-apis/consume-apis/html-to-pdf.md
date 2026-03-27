@@ -9,7 +9,7 @@ documentation: UG
 
 The Syncfusion HTML to PDF Web API allows you to convert web content into high‑quality PDF documents. It supports converting both static HTML templates and live web pages via URLs, ensuring accurate rendering of layouts, styles, images, and fonts. When converting an HTML template, you need to provide the main HTML file along with its dependent assets such as CSS files, images, fonts, and scripts, so the engine can fully render the content as it appears in a browser.
 
-## Convert HTML to PDF
+## Convert HTML URL to PDF
 
 To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoint, including the webpage URL as input as follows:
 
@@ -121,80 +121,8 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-## HTML to PDF settings
-**PaperSize** 
+## Convert HTML File to PDF
 
-Defines the page size for the generated PDF (e.g., A4, Letter). 
-
-**Assets** 
-
-Specifies additional resources—such as CSS files, images, and fonts—required for converting HTML templates. 
-
-**IndexFile** 
-
-Indicates the main HTML file that serves as the entry point for the conversion. 
-
-**Settings** 
-
-Provides rendering and conversion options for the Blink engine used during HTML to PDF processing. 
-
-**RenderingEngine** 
-
-Specifies the browser engine used to render HTML content before generating the PDF. 
-
-**Url** 
-
-Defines the source URL or HTML location to be converted into a PDF. 
-
-**Orientation** 
-
-Defines the page orientation of the PDF, such as Portrait or Landscape. 
-
-**Rotation** 
-
-Specifies the rotation angle applied to the pages in the generated PDF. 
-
-**Margins** 
-
-Configures the margin size for all sides of each PDF page. 
-
-**AdditionalDelay** 
-
-Adds a wait time (in milliseconds) before conversion to ensure dynamic content fully loads. 
-
-**EnableLinks** 
-
-Preserves active, clickable hyperlinks within the generated PDF. 
-
-**EnableScripts** 
-
-Allows JavaScript execution during HTML rendering for dynamic content support. 
-
-**EnableForms** 
-
-Enables interactive form fields in the generated PDF document. 
-
-**EnableToc** 
-
-Generates a table of contents based on the HTML document structure. 
-
-**EnableBookmarks** 
-
-Creates PDF bookmarks for easier navigation within the document. 
-
-**SinglePagePdf** 
-
-Renders the entire HTML content into one continuous PDF page. 
-
-**ShowHeader** 
-
-Displays header content on each page of the generated PDF. 
-
-**ShowFooter** 
-
-Displays footer content on each page of the generated PDF.
-
-## HTML to PDF Job Response 
 To convert HTML to PDF, send a request to the /v1/conversion/html-to-pdf endpoint, including both the HTML file as input and its assets as follows:
 
 {% tabs %}
@@ -317,6 +245,81 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endhighlight %} 
 
 {% endtabs %}
+
+## HTML to PDF settings
+**PaperSize** 
+
+Defines the page size for the generated PDF (e.g., A4, Letter). 
+
+**Assets** 
+
+Specifies additional resources—such as CSS files, images, and fonts—required for converting HTML templates. 
+
+**IndexFile** 
+
+Indicates the main HTML file that serves as the entry point for the conversion. 
+
+**Settings** 
+
+Provides rendering and conversion options for the Blink engine used during HTML to PDF processing. 
+
+**RenderingEngine** 
+
+Specifies the browser engine used to render HTML content before generating the PDF. 
+
+**Url** 
+
+Defines the source URL or HTML location to be converted into a PDF. 
+
+**Orientation** 
+
+Defines the page orientation of the PDF, such as Portrait or Landscape. 
+
+**Rotation** 
+
+Specifies the rotation angle applied to the pages in the generated PDF. 
+
+**Margins** 
+
+Configures the margin size for all sides of each PDF page. 
+
+**AdditionalDelay** 
+
+Adds a wait time (in milliseconds) before conversion to ensure dynamic content fully loads. 
+
+**EnableLinks** 
+
+Preserves active, clickable hyperlinks within the generated PDF. 
+
+**EnableScripts** 
+
+Allows JavaScript execution during HTML rendering for dynamic content support. 
+
+**EnableForms** 
+
+Enables interactive form fields in the generated PDF document. 
+
+**EnableToc** 
+
+Generates a table of contents based on the HTML document structure. 
+
+**EnableBookmarks** 
+
+Creates PDF bookmarks for easier navigation within the document. 
+
+**SinglePagePdf** 
+
+Renders the entire HTML content into one continuous PDF page. 
+
+**ShowHeader** 
+
+Displays header content on each page of the generated PDF. 
+
+**ShowFooter** 
+
+Displays footer content on each page of the generated PDF.
+
+## HTML to PDF Job Response 
 
 Once the request is sent, it will create a conversion job to convert HTML to PDF and return the job details as follows:
 
