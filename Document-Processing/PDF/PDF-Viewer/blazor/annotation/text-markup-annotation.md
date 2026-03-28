@@ -396,6 +396,24 @@ N> Alternatively, the annotation can be deleted using its annotation ID with the
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Delete%20Annotation).
 
+## Enable resize highlighted text
+
+To enable the resizer for text markup annotations (such as highlight, underline, strikethrough and squiggly) in the Syncfusion Blazor PDF Viewer, use the [EnableTextMarkupResizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerTextMarkupSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerTextMarkupSettings_EnableTextMarkupResizer) property. The default value is false.
+
+The following example shows how to enable the resizer for text markup annotations in the Blazor PDF Viewer:
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 Height="640px" Width="100%" DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
+    <PdfViewerHighlightSettings EnableTextMarkupResizer="true"></PdfViewerHighlightSettings>
+</SfPdfViewer2> 
+
+```
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Text%20Markup/Enable%20Text%20Markup%20Resizer).
+
 ## See also
 
 * [How to change the highlight color of the text](../faqs/how-to-change-the-highlighted-color-of-the-text)
