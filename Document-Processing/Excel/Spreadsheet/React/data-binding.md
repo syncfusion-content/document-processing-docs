@@ -17,7 +17,7 @@ To get start quickly with Data Binding, you can check on this video:
 
 > To bind data to a cell, use `cell data binding` support.
 
-## Local data
+## Bind local data in Spreadsheet
 
 To bind local data to the Spreadsheet, you can assign a JavaScript object array to the `dataSource` property.
 
@@ -44,7 +44,7 @@ Refer to the following code example for local data binding.
 
 ### Customizing column data mapping
 
-By default, when a data source is bound to a sheet, columns are auto-assigned from the data source fields sequentially. This means that the first field in the data source is assigned to Column A, the second to Column B, and so on, sequentially. However, now you can customize the column assignments by specifying the appropriate field names in the desired order using the [fieldsOrder](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel/#fieldsorder) property.
+By default, when a data source is bound to a sheet, columns are auto-assigned from the data source fields sequentially. This means that the first field in the data source is assigned to Column A, the second to Column B, and so on, sequentially. However, now you can customize the column assignments by specifying the appropriate field names in the desired order using the [fieldsOrder](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel#fieldsorder) property.
 
 > You can customize the mapping of column data only in the local data binding support.
 
@@ -61,7 +61,7 @@ The following code example demonstrates how to customize the mapping of column d
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/field-mapping-cs1" %}
 
-## Remote data
+## Remote data Binding
 
 To bind remote data to the Spreadsheet control, assign service data as an instance of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
 
@@ -107,9 +107,9 @@ Refer to the following code example for remote data binding.
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/remote-data-binding-cs2" %}
 
-### Web API
+### Bind with Web API
 
-You can use WebApiAdaptor to bind spreadsheet with Web API created using OData endpoint.
+You can use `WebApiAdaptor` to bind the spreadsheet with a Web API created using an OData endpoint.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -130,7 +130,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 ## Cell data binding
 
-The Spreadsheet control can bind the data to individual cell in a sheet . To achive this you can use the `value` property.
+The Spreadsheet control can bind the data to individual cell in a sheet using the [value](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#value) property.
 
 Refer to the following code example for cell data binding.
 
@@ -155,19 +155,19 @@ Refer to the following code example for cell data binding.
 
 ## Dynamic data binding and Datasource change event
 
-You can dynamically change the datasource of the spreadsheet by changing the `dataSource` property of the `range` object of the `sheet`. The `dataSourceChanged` event handler will be triggered when editing, inserting, and deleting a row in the datasource range. This event will be triggered with a parameter named `action` which indicates the `edit`, `add` and `delete` actions for the respective ones.
+You can dynamically change the datasource of the spreadsheet by changing the `dataSource` property of the `range` object of the `sheet`. The [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#datasourcechanged) event handler will be triggered when editing, inserting, and deleting a row in the datasource range. This event will be triggered with a parameter named `action` which indicates the `edit`, `add` and `delete` actions for the respective ones.
 
 The following table defines the arguments of the `dataSourceChanged` event.
 
 | Property | Type | Description |
 |-----|-----|-------|
-| action | string | Indicates the type of action such as `edit`, `add`, and `delete` performed in the datasource range. |
-| data | object[] | Modified data for `edit` action; New data for `add` action; Deleted data for `delete` action. |
-| rangeIndex | number | Specifies the range index of the datasource. |
-| sheetIndex | number | Specifies the sheet index of the datasource. |
+| [action](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/datasourcechangedeventargs#action) | string | Indicates the type of action such as `edit`, `add`, and `delete` performed in the datasource range. |
+| [data](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/datasourcechangedeventargs#data) | object[] | Modified data for `edit` action; New data for `add` action; Deleted data for `delete` action. |
+| [rangeIndex](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/datasourcechangedeventargs#rangeindex) | number | Specifies the range index of the datasource. |
+| [sheetIndex](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/datasourcechangedeventargs#sheetindex) | number | Specifies the sheet index of the datasource. |
 
 > For `add` action, the value for all the fields will be `null` in the data. In the case that you do not want the primary key field to be null which needs to be updated in the backend service, you can use `edit` action after updating the primary key field to update in the backend service. <br><br>
-> For inserting a row at the end of the datasource range, you should insert a row below at the end of the range to trigger the `dataSourceChanged` event with action `add`.
+> For inserting a row at the end of the datasource range, you should insert a row below at the end of the range to trigger the [dataSourceChanged](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#datasourcechanged) event with action `add`.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -188,11 +188,11 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 ## Dynamic data binding using updateRange method
 
-The [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#updaterange) method allows you to dynamically update the [dataSource](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel/#datasource) in a spreadsheet without manually iterating through each cell. This method is especially useful for efficiently applying bulk updates to a specific range within the spreadsheet.
+The [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updaterange) method allows you to dynamically update the [dataSource](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel#datasource) in a spreadsheet without manually iterating through each cell. This method is especially useful for efficiently applying bulk updates to a specific range within the spreadsheet.
 
-To use the [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#updaterange) method, provide the new [dataSource](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel/#datasource) and specify the starting cell for the update using the [startCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel/#startcell) property of the `RangeDirective`. Additionally, set the `sheetIndex` to target the appropriate sheet for the update.
+To use the [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updaterange) method, provide the new [dataSource](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel#datasource) and specify the starting cell for the update using the [startCell](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rangeModel#startcell) property of the `RangeDirective`. Additionally, set the `sheetIndex` to target the appropriate sheet for the update.
 
-The following code example demonstrates how to dynamically update data using the [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#updaterange) method.
+The following code example demonstrates how to dynamically update data using the [updateRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updaterange) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -210,10 +210,17 @@ The following code example demonstrates how to dynamically update data using the
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/dynamic-data-binding-cs2" %}
+## Quick Lookup
+- dataSource` — bind local array, DataManager, OData, or WebAPI data to a sheet range.
+- `fieldsOrder` — customize column-to-field mapping (local data only).
+-  `dataSource={}` — primary way to bind data into a sheet range.
+- `dataSourceChanged` event — fires on edit/add/delete inside data‑bound ranges.
+- `updateRange(newData)` — dynamically update bulk data in a specific range.
+
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) to know how to present and manipulate data.
 
 ## See Also
 

@@ -130,7 +130,7 @@ The following code example shows how to import an Excel document using file uplo
 
 ### Open Excel files from URL
 
-You can achieve to access the remote Excel file by using the [`created`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#created) event. In this event you can fetch the Excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) this file by using Spreadsheet component open method.
+You can achieve to access the remote Excel file by using the [`created`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#created) event. In this event you can fetch the Excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#open) this file by using Spreadsheet component open method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -244,7 +244,7 @@ Before proceeding with the opening process, you should deploy the spreadsheet op
 
 After deployment, you will get the AWS service URL for the open and save actions. Before opening the Excel file with this hosted open URL, you need to prevent the default file opening process to avoid getting a corrupted file on the open service end. The spreadsheet component appends the file to the `formData` and sends it to the open service, which causes the file to get corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event. After that, you will get the selected file in the `beforeOpen` event argument. Then, convert this file into a base64 string and send it to the open service URL using a fetch request.
 
-On the open service end, convert the base64 string back to a file and pass it as an argument to the workbook `Open` method. The open service will process the file and return the spreadsheet data in JSON format. You will then receive this JSON data in the fetch success callback. Finally, use the [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method to load this JSON data into the spreadsheet component.
+On the open service end, convert the base64 string back to a file and pass it as an argument to the  [Workbook Open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/workbookopen#open) method. The open service will process the file and return the spreadsheet data in JSON format. You will then receive this JSON data in the fetch success callback. Finally, use the [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#openfromjson) method to load this JSON data into the spreadsheet component.
 
 The following code example shows how to open an Excel file using a hosted web service in AWS Lambda, as mentioned above.
 
@@ -325,7 +325,7 @@ public class OpenOptions
 
 ### Open Base64-encoded Excel data
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet component, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method in the spreadsheet.
+In the Syncfusion® Spreadsheet component, there is no direct option to open data as a Base64 string. To achieve this, we need to fetch the Base64 string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method in the spreadsheet.
 
 The following code example shows how to open the spreadsheet data as base64 string.
 
@@ -368,6 +368,8 @@ Now, you have the option to selectively ignore some features during the opening 
 ```ts
 spreadsheet.openFromJson({ file: file }, { ignoreStyle: true });
 ```
+
+Refer to the [SerializationOptions](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions) for detailed information on all available options.
 
 | Options | Description |
 | ----- | ----- |
@@ -518,7 +520,7 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 
 ### Handle external workbook reference confirmation
 
-When you open an Excel file that contains external workbook references, you will see a confirmation dialog. This dialog allows you to either continue with the file opening or cancel the operation. This confirmation dialog will appear only if you set the `AllowExternalWorkbook` property value to **false** during the open request, as shown below. This prevents the spreadsheet from displaying inconsistent data.
+When you open an Excel file that contains external workbook references, you will see a confirmation dialog. This dialog allows you to either continue with the file opening or cancel the operation. This confirmation dialog will appear only if you set the `AllowExternalWorkbook` property value to `false` during the open request, as shown below. This prevents the spreadsheet from displaying inconsistent data.
 
 ```csharp
 public IActionResult Open(IFormCollection openRequest)

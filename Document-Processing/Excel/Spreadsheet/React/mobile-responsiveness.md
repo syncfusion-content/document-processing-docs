@@ -9,8 +9,15 @@ documentation: ug
 
 # Mobile responsiveness in React Spreadsheet component
 
-The Spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
+The Spreadsheet control rendered in desktop mode becomes adaptive on mobile devices where the layout adjusts according to the parent element’s dimensions to accommodate different screen resolutions.
 
-You can see the overflowed items of ribbon header, ribbon content, and sheet tab using touch and swipe action. The right navigation arrow is added at the end of the ribbon content through which the user can navigate towards overflowed items. Once you reached the rightmost end of the ribbon content, the right navigation arrow will change to left navigation arrow through which you can navigate to the left of the ribbon content.
+## Adaptive Behavior
+
+- Ribbon header, ribbon content, and sheet tab overflow are accessible using touch and swipe action.
+- A navigation arrow appears at the end of the ribbon content to move to overflowed items. When the rightmost end is reached, the arrow converts to a left navigation arrow to move back.
+
+## Touch gestures
+- Use horizontal swipe gestures to reveal overflowed ribbon items.
+- Tap the navigation arrows to jump to the next/previous segment of the ribbon content.
 
 ![Spreadsheet Adaptive Mode](./images/spreadsheet_adaptive_mode.gif)

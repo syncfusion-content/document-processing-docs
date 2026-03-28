@@ -47,13 +47,17 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/re
 
 | **Parameter** | **Type** | **Description** |
 | ----- | ----- | ----- |
-| url | string |  Specifies the save url.  |
-| fileName | string | Specifies the file name. |
-| saveType | SaveType | Specifies the saveType like Xlsx, Xls, Csv and Pdf. |
-| customParams | object | Passing the custom parameters from client to server while performing save operation. |
-| isFullPost | boolean | It sends the form data from client to server, when set to true. It fetches the data from client to server and returns the data from server to client, when set to false. |
-| needBlobData | boolean | You can get the blob data if set to true. |
-| cancel | boolean | To prevent the save operations. |
+| [url](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#url) | string |  Specifies the save url.  |
+| [fileName](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#filename) | string | Specifies the file name. |
+| [saveType](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#savetype) | SaveType | Specifies the saveType like Xlsx, Xls, Csv and Pdf. |
+| [customParams](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#customparams) | object | Passing the custom parameters from client to server while performing save operation. |
+| [isFullPost](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#isfullpost) | boolean | It sends the form data from client to server, when set to true. It fetches the data from client to server and returns the data from server to client, when set to false. |
+| [needBlobData](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#needblobdata) | boolean | You can get the blob data if set to true. |
+| [cancel](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#cancel) | boolean | To prevent the save operations. |
+| [autoDetectFormat](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#autodetectformat) | boolean | Automatically detects the number format for cells, if enabled. |
+| [jsonConfig](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#jsonconfig) | SerializationOptions | Defines the serialization options applied when saving as an Excel file. |
+| [pdfLayoutSettings](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/beforesaveeventargs#pdflayoutsettings) | pdfLayoutSettings | Specifies the layout settings used when saving as a PDF. |
+
 
 > * Use `Ctrl + S` keyboard shortcut to save the Spreadsheet data as Excel file.
 
@@ -62,7 +66,7 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/re
 
 ## Save Excel files programmatically
 
-To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property is properly configured, as it is required for processing and generating the file on the server.
+To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#saveurl) property is properly configured, as it is required for processing and generating the file on the server.
 
 Please find the below table for the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method arguments.
 
@@ -335,6 +339,7 @@ Now, you have the option to selectively ignore some features while saving the Sp
 ```ts
 spreadsheet.saveAsJson({ onlyValues: true });
 ```
+Refer to the [SerializationOptions](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationoptions) for detailed information on all available options.
 
 | Options | Description |
 | ----- | ----- |
@@ -350,7 +355,7 @@ spreadsheet.saveAsJson({ onlyValues: true });
 | ignoreImage | If **true**, excludes images from the JSON output. |
 | ignoreNote | If **true**, excludes notes from the JSON output. |
 
-The following code snippet demonstrates how to configure the serialization options and pass them as arguments to the saveAsJson method:
+The following code snippet demonstrates how to configure the serialization options and pass them as arguments to the `saveAsJson` method:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

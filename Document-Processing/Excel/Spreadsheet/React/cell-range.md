@@ -15,13 +15,13 @@ To get start quickly with Cell Range, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=izgXkfzUMBQ" %}
 
-## Wrap text
+## Wrap Text in Cells 
 
 Wrap text allows you to display large content as multiple lines in a single cell. By default, the wrap text support is enabled. Use the [`allowWrap`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowwrap) property to enable or disable the wrap text support in spreadsheet.
 
 Wrap text can be applied or removed to a cell or range of cells in the following ways,
 
-* Using the `wrap` property in `cell`, you can enable or disable wrap text to a cell at initial load.
+* Using the [wrap](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#wrap) property in `cell`, you can enable or disable wrap text to a cell at initial load.
 * Select or deselect wrap button from ribbon toolbar to apply or remove the wrap text to the selected range.
 * Using the [`wrap`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#wrap) method, you can apply or remove the wrap text once the component is loaded.
 
@@ -51,13 +51,13 @@ The following features have some limitations in wrap text:
 * Sorting with wrap text applied data.
 * Merge with wrap text
 
-## Merge cells
+## Merge and Span Cells
 
 Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowmerge) property to enable or disable the merge cells option in spreadsheet.
 
 You can merge the range of cells in the following ways,
 
-* Set the `rowSpan` and `colSpan` property in `cell` to merge the number of cells at initial load.
+* Set the [rowSpan](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#rowspan) and [colSpan](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#colspan) property in `cell` to merge the number of cells at initial load.
 * Select the range of cells and apply merge by selecting the desired option from ribbon toolbar.
 * Use [`merge`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#merge) method to merge the range of cells, once the component is loaded.
 
@@ -98,12 +98,12 @@ The following features have some limitations in Merge:
 
 ## Auto Fill
 
-Auto Fill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. You can use `allowAutoFill` property to enable/disable the auto fill support. You can also use `showFillOptions` property to enable/disable the fill option and `fillType` property to change the default auto fill option which is available in `autoFillSettings`.
+Auto Fill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. You can use [allowAutoFill](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowautofill) property to enable/disable the auto fill support. You can also use [showFillOptions](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/autofillsettings#showfilloptions) property to enable/disable the fill option and [fillType](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/autofillsettings#filltype) property to change the default auto fill option which is available in [autoFillSettings](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofillsettings).
 
 You can do this by one of the following ways,
 
 * Using “AutoFillOptions” menu which is open, while drag and drop the cell using fill handle element.
-* Use the autoFill() method programmatically.
+* Use the [autoFill](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method programmatically.
 
 The available parameters in `autoFill()` method are,
 
@@ -121,14 +121,14 @@ In Auto Fill we have following options,
 * Fill Formatting Only
 * Fill Without Formatting
 
->* The default auto fill option is “FillSeries” which can be referred from `fillType` property.
+>* The default auto fill option is “FillSeries” which can be referred from [fillType](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/autofillsettings#filltype) property.
 
 ### Copy Cells
 
 To copy the selected cell content to the adjacent cells. You can do this by one of the following ways,
 
 * Using fill handle to select the adjacent cell range and “Copy Cells” option in “AutoFillOptions” menu to fill the adjacent cells.
-* Using “CopyCells” as fill type in `autoFill` method to fill the adjacent cells.
+* Using “CopyCells” as fill type in [autoFill](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method to fill the adjacent cells.
 
 ### Fill Series
 
@@ -137,7 +137,7 @@ To fill the series of numbers, characters, or dates based on selected cell conte
 You can do this by one of the following ways,
 
 * Using fill handle to select the adjacent cell range and “Fill Series” option in “AutoFillOptions” menu to fill the adjacent cells.
-* Using “FillSeries” as fill type in `autoFill` method to fill the adjacent cells.
+* Using “FillSeries” as fill type in [autoFill](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method to fill the adjacent cells.
 
 ### Fill Formatting Only
 
@@ -146,7 +146,7 @@ To fill the cell style and number formatting based on the selected cell content 
 You can do this by one of the following ways,
 
 * Using fill handle to select the adjacent cell range and “Fill Formatting Only” option in “AutoFillOptions” menu to fill the adjacent cells.
-* Using “FillFormattingOnly” as fill type in `autoFill` method to fill the adjacent cells.
+* Using “FillFormattingOnly” as fill type in [autoFill](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method to fill the adjacent cells.
 
 ### Fill Without Formatting
 
@@ -155,9 +155,9 @@ To fill series of numbers, characters, or dates based on the selected cells to t
 You can do this by one of the following ways,
 
 * Using fill handle to select the adjacent cell range and “Fill Without Formatting” option in “AutoFillOptions” menu to fill the adjacent cells.
-* Using “FillWithoutFormatting” as fill type in `autoFill` method to fill the adjacent cells.
+* Using “FillWithoutFormatting” as fill type in [autoFill](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofill) method to fill the adjacent cells.
 
-In the following sample, you can enable/disable the fill option on the button click event by using the `showFillOptions` property in `autoFillSettings`.
+In the following sample, you can enable/disable the fill option on the button click event by using the [showFillOptions](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/autofillsettings#showfilloptions) property in [autoFillSettings](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#autofillsettings).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -183,16 +183,16 @@ The following features have some limitations in Autofill:
 * Flash Fill option in Autofill feature.
 * Fill with Conditional Formatting applied cells.
 
-## Clear
+## Clearing Cell Data and Formatting
 
 Clear feature helps you to clear the cell contents (formulas and data), formats (including number formats, conditional formats, and borders) in a spreadsheet. When you apply clear all, both the contents and the formats will be cleared simultaneously.
 
-### Apply Clear Feature
+### Apply Cell Clear Feature
 
 You can apply clear feature by using one of the following ways,
 
 * Select the clear icon in the Ribbon toolbar under the Home Tab.
-* Using the [`clear()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method to clear the values.
+* Using the [`clear`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#clear) method to clear the values.
 
 Clear has the following types in the spreadsheet,
 
@@ -224,9 +224,21 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/clear-cs1" %}
 
+## Quick Lookup
+
+- `allowWrap` - enables or disables wrap‑text support globally for the spreadsheet.
+- `wrap(range, isWrap)` - applies or removes wrap text for the specified cell or range after the sheet is loaded.
+- `allowDataValidation` - turns data‑validation features on or off for the spreadsheet.
+- `addDataValidation(rule, range)` - applies a data‑validation rule to the given range (list, number, text length, date, etc.).
+- `removeDataValidation(range)` - removes validation rules from the selected cell but keeps existing values.
+- `addInvalidHighlight(range)` - highlights all cells that contain values violating their validation rules.
+- `removeInvalidHighlight(range)` - clears the highlight applied to invalid cells without removing the rules.
+- `allowAutoFill` - enables or disables the Auto Fill feature and fill‑handle interaction.
+- `autoFill(fillRange, dataRange, direction, fillType)` - fills a target range by copying, generating series, or applying styles based on the source range.
+
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to know how to present and manipulate data.
 
 ## See Also
 
