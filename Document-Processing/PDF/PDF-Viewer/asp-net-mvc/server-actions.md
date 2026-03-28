@@ -4,11 +4,10 @@ title: Server actions for Syncfusion ASP.NET MVC PDF Viewer
 description: Review the ASP.NET MVC server actions used by the Syncfusion PDF Viewer to manage loading, caching, annotations, and document interactions.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Server Actions
+# Server Actions in ASP.NET MVC PDF Viewer
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer is a client-server control that processes PDF documents on the server and sends incremental responses to the client for rendering and interaction. Ensure the ASP.NET MVC controller routes are registered, dependency injection supplies `IHostingEnvironment` and `IMemoryCache`, and caching is configured to persist page data between requests. Validate file paths and restrict inputs to trusted locations to avoid exposing sensitive files.
 
@@ -382,7 +381,7 @@ The `jsonObjects` parameter represents the request payload sent by the PDF Viewe
         public string freeTextAnnotation { get; set; }
         public string signatureData { get; set; }
         public string fieldsData { get; set; }
-        public string FormDesigner { get; set; }
+        public string formDesigner { get; set; }
         public string inkSignatureData { get; set; }
         public string tileXCount { get; set; }
         public string tileYCount { get; set; }
