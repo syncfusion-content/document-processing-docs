@@ -9,7 +9,20 @@ documentation: ug
 
 # Template in React Spreadsheet component
 
-Cell Template is used for adding HTML elements into Spreadsheet. You can add the cell template in spreadsheet by using the `template` property and specify the address using the `address` property inside the `ranges` property. You can customize the Html elements similar to Syncfusion<sup style="font-size:70%">&reg;</sup> components (TextBox, DropDownList, RadioButton, MultiSelect, DatePicker etc) by using the `beforeCellRender` event. In this demo, Cell template is applied to `C2:C9` and instantiated with Html input components like TextBox, RadioButton, TextArea. You need to bind the events to perform any operations through HTML elements or Syncfusion<sup style="font-size:70%">&reg;</sup> components. Here, we have added `change` event in to the MultiSelect control, and we have updated the selected data into the spreadsheet cell through that change event.
+Cell templates allow you to embed HTML elements and Syncfusion<sup style="font-size:70%">&reg;</sup> components directly into spreadsheet cells. This enables rich, interactive data entry experiences beyond standard cell values.
+
+## Key Features
+
+- **HTML Elements** – You can add TextBox, RadioButton, TextArea, and other HTML controls to cells for enhanced user input options
+- **Syncfusion Components** – You can integrate DropDownList, MultiSelect, DatePicker, and other Syncfusion controls for advanced data entry
+- **Event Binding** – You can attach event handlers to perform operations on user interaction and update spreadsheet data
+- **Custom Rendering** – You can use the `beforeCellRender` event for advanced customization and dynamic template modifications
+
+## Cell Templates
+
+Define a cell template using the `template` property and specify the target range with the `address` property within the `ranges` configuration. This associates your template with specific cells in the spreadsheet.
+
+The `beforeCellRender` event fires before template rendering, allowing you to customize HTML elements and Syncfusion components dynamically based on cell address, data, or application state.
 
 The following sample describes the above behavior.
 
