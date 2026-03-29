@@ -559,6 +559,214 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/RTL-paragraph).
 
+### Hanging Indent
+
+A hanging indent is a paragraph formatting where the first line of the paragraph starts at the left margin, and all subsequent lines are indented to the right.
+
+The following code example shows how to set hanging indent a paragraph in Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Create a new instance of WordDocument.
+WordDocument document = new WordDocument();
+//Ensure there is at least one section with a paragraph in the document.
+document.EnsureMinimal();
+//Append text "Hello" to the last paragraph in the document.
+document.LastParagraph.AppendText("Hello");
+//Add a new paragraph to the last section and cast it as WParagraph.
+WParagraph nextPara = document.LastSection.AddParagraph() as WParagraph;
+//Append text "World" to the newly added paragraph.
+nextPara.AppendText("World");
+//Set the hanging indent
+document.LastParagraph.ParagraphFormat.FirstLineIndent = -18f;
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Close the Word document to release resources.
+document.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Create a new instance of WordDocument.
+WordDocument document = new WordDocument();
+//Ensure there is at least one section with a paragraph in the document.
+document.EnsureMinimal();
+//Append text "Hello" to the last paragraph in the document.
+document.LastParagraph.AppendText("Hello");
+//Add a new paragraph to the last section and cast it as WParagraph.
+WParagraph nextPara = document.LastSection.AddParagraph() as WParagraph;
+//Append text "World" to the newly added paragraph.
+nextPara.AppendText("World");
+//Set the hanging indent
+document.LastParagraph.ParagraphFormat.FirstLineIndent = -18f;
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Close the Word document to release resources.
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Create a new instance of WordDocument.
+Dim document As New WordDocument()
+' Ensure there is at least one section with a paragraph in the document.
+document.EnsureMinimal()
+' Append text "Hello" to the last paragraph in the document.
+document.LastParagraph.AppendText("Hello")
+' Add a new paragraph to the last section and cast it as WParagraph.
+Dim nextPara As WParagraph = TryCast(document.LastSection.AddParagraph(), WParagraph)
+' Append text "World" to the newly added paragraph.
+nextPara.AppendText("World")
+' Set the hanging indent.
+document.LastParagraph.ParagraphFormat.FirstLineIndent = -18.0F
+' Saves the Word document to MemoryStream.
+Dim stream As New MemoryStream()
+document.Save(stream, FormatType.Docx)
+' Close the Word document to release resources
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+### Setting Hanging Indent Without Altering Left Indent
+
+When working with DocIO Library, you might encounter a scenario where setting a hanging indent (negative FirstLineIndent) also modifies the LeftIndent value. This behavior is due to the interrelated nature of these properties at the file level. As per behavior of the DocIO Library, if we set the hanging indent, we write the hanging indent and left indent as they are in the Word document at the file level. 
+
+This guide provides a solution to maintain the LeftIndent value while applying a hanging indent.
+
+* Left Indent: The distance between the left margin and the start of the paragraph.
+* First Line Indent: The distance between the left margin and the start of the first line. A negative value creates a hanging indent.
+
+The following code example shows how to setting hanging indent without altering left indent of a paragraph in Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Create a new instance of WordDocument.
+WordDocument document = new WordDocument();
+//Ensure there is at least one section with a paragraph in the document.
+document.EnsureMinimal();
+//Append text "Hello" to the last paragraph in the document.
+document.LastParagraph.AppendText("Hello");
+//Add a new paragraph to the last section and cast it as WParagraph.
+WParagraph nextPara = document.LastSection.AddParagraph() as WParagraph;
+//Append text "World" to the newly added paragraph.
+nextPara.AppendText("World");
+//Set the hanging and left indent for the paragraph.
+//Set the hanging indent (-10f in this case) and left indent (0f).
+//If left indent is not needed, set it to 0f.
+SetHangingAndLeftindent(nextPara.ParagraphFormat, -10f, 0f);
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Close the Word document to release resources.
+document.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Create a new instance of WordDocument.
+WordDocument document = new WordDocument();
+//Ensure there is at least one section with a paragraph in the document.
+document.EnsureMinimal();
+//Append text "Hello" to the last paragraph in the document.
+document.LastParagraph.AppendText("Hello");
+//Add a new paragraph to the last section and cast it as WParagraph.
+WParagraph nextPara = document.LastSection.AddParagraph() as WParagraph;
+//Append text "World" to the newly added paragraph.
+nextPara.AppendText("World");
+//Set the hanging and left indent for the paragraph.
+//Set the hanging indent (-10f in this case) and left indent (0f).
+//If left indent is not needed, set it to 0f.
+SetHangingAndLeftindent(nextPara.ParagraphFormat, -10f, 0f);
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Close the Word document to release resources.
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+ 'Create a new instance of WordDocument.
+ Dim document As New WordDocument()
+ 'Ensure there is at least one section with a paragraph in the document.
+ document.EnsureMinimal()
+ 'Append text "Hello" to the last paragraph in the document.
+ document.LastParagraph.AppendText("Hello")
+ 'Add a new paragraph to the last section and cast it as WParagraph.
+ Dim nextPara As WParagraph = TryCast(document.LastSection.AddParagraph(), WParagraph)
+ 'Append text "World" to the newly added paragraph.
+ nextPara.AppendText("World")
+ 'Set the hanging and left indent for the paragraph.
+ 'Set the hanging indent (-10f in this case) and left indent (0f).
+ 'If left indent is not needed, set it to 0f.
+ SetHangingAndLeftindent(nextPara.ParagraphFormat, -10.0F, 0.0F)
+ 'Saves the Word document to MemoryStream.
+ Dim stream As New MemoryStream()
+ document.Save(stream, FormatType.Docx)
+ 'Close the Word document to release resources.
+ document.Close()
+{% endhighlight %}
+
+The following code example provides supporting method for the above code.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Custom method to set the hanging indentation without altering LeftIndent
+private static void SetHangingAndLeftindent(WParagraphFormat paragraphFormat, float hangingIndent, float leftIndent)
+{
+    // Set the FirstLineIndent to the specified hangingIndent value.
+    paragraphFormat.FirstLineIndent = hangingIndent;
+    // If the FirstLineIndent is negative (indicating a hanging indent),
+    // adjust the LeftIndent by adding the absolute value of the FirstLineIndent to the leftIndent.
+    if (paragraphFormat.FirstLineIndent < 0)
+    {
+        paragraphFormat.LeftIndent = leftIndent + (-1 * paragraphFormat.FirstLineIndent);
+    }
+    // If the FirstLineIndent is not negative, just set LeftIndent to the provided leftIndent.
+    else
+    {
+        paragraphFormat.LeftIndent = leftIndent;
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Custom method to set the hanging indentation without altering LeftIndent
+private static void SetHangingAndLeftindent(WParagraphFormat paragraphFormat, float hangingIndent, float leftIndent)
+{
+    // Set the FirstLineIndent to the specified hangingIndent value.
+    paragraphFormat.FirstLineIndent = hangingIndent;
+    // If the FirstLineIndent is negative (indicating a hanging indent),
+    // adjust the LeftIndent by adding the absolute value of the FirstLineIndent to the leftIndent.
+    if (paragraphFormat.FirstLineIndent < 0)
+    {
+        paragraphFormat.LeftIndent = leftIndent + (-1 * paragraphFormat.FirstLineIndent);
+    }
+    // If the FirstLineIndent is not negative, just set LeftIndent to the provided leftIndent.
+    else
+    {
+        paragraphFormat.LeftIndent = leftIndent;
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Private Sub SetHangingAndLeftindent(paragraphFormat As WParagraphFormat, hangingIndent As Single, leftIndent As Single)
+    ' Set the FirstLineIndent to the specified hangingIndent value.
+    paragraphFormat.FirstLineIndent = hangingIndent
+    ' If FirstLineIndent is negative (hanging indent), add its absolute value to LeftIndent; otherwise, set LeftIndent directly.
+    If paragraphFormat.FirstLineIndent < 0 Then
+        paragraphFormat.LeftIndent = leftIndent + (-1 * paragraphFormat.FirstLineIndent)
+    Else
+        paragraphFormat.LeftIndent = leftIndent
+    End If
+End Sub
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Working with Styles
 
 A style is a predefined set of table, numbering, paragraph, and character properties that can be applied to regions within a document. DocIO provides the following functionalities related with styles.
