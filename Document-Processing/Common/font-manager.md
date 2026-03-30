@@ -196,3 +196,8 @@ A: Yes, FontManager is designed for multi-threaded environments and allows safe 
 **Q: Will FontManager affect my existing document processing code?**   
 
 A: No, FontManager works transparently in the background. Your existing code will automatically benefit from improved memory management without modifications. 
+
+**Q: Does FontManager retain or cache fonts embedded in input documents or substituted fonts?**
+
+A: No, Syncfusion Document Processing libraries intentionally do **not** retain or cache private fonts — including fonts embedded within input documents or font streams added through font substitution events. This ensures that sensitive or proprietary font data from one document is never persisted in the shared font cache or made accessible to other operations or threads.
+Only fonts loaded from the system's font directories are managed by the `FontManager` cache.
