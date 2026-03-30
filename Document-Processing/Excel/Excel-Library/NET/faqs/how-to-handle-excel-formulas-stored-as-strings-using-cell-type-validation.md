@@ -1,12 +1,12 @@
 ---
-title: Handle Excel formulas stored as strings using cell type validation | Syncfusion
+title: Handle Excel formulas stored as strings | Syncfusion
 description: Code example to handle Excel formulas stored as strings using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to handle Excel formulas stored as strings using cell type validation?
+# How to handle Excel formulas stored as strings?
 
 The following code examples demonstrate how to handle Excel formulas stored as strings using cell type validation using C# (Cross-platform and Windows-specific) and VB.NET.
 
