@@ -13,7 +13,7 @@ The Syncfusion React Spreadsheet component lets you customize the File menu. You
 
 * Add File Menu Items
 * Hide/Show File Menu Items
-* Enable/Disable Context Menu Items
+* Enable/Disable File Menu Items
 
 ## Add Custom File Menu Items
 

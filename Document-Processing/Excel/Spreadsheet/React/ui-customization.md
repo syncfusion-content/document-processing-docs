@@ -38,6 +38,8 @@ The Syncfusion React Spreadsheet component allows you to extend the Ribbon by ad
 
 To add these items, the component provides the [addToolbarItems](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#addtoolbaritems) method, which lets you insert new tools into a chosen tab. This makes it simple to include your own actions. You can add items to an existing tab or you can include them as part of a new Ribbon tab.
 
+Additionally, you can enhance the visual appearance of ribbon items by adding icons to the custom toolbar items using prefixIcon and suffixIcon properties of [RibbonItemModel](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/ribbonitemmodel). This helps users quickly identify and access the features they need.
+
 The following code sample shows how to add toolbar items.
 
 {% tabs %}
@@ -69,3 +71,23 @@ The following code sample shows how to hide or show ribbon items.
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/show-or-hide-ribbon-items-cs1" %}
+
+## Enable or Disable Ribbon Tabs and Items
+
+The Syncfusion React Spreadsheet component lets you enable or disable ribbon tabs and toolbar items when needed.
+
+You can enable or disable ribbon tabs by using the [enableRibbonTabs](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enableribbontabs) method. To enable or disable specific toolbar items inside a ribbon tab, use the [enableToolbarItems](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enabletoolbaritems) method.
+These methods accept an array of ribbon tab names or toolbar item IDs along with a boolean value. Set the value to true to enable or false to disable the items.
+
+The following code sample shows how to enable or disable a ribbon tab and toolbar items.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/enable-or-disable-ribbon-items-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/enable-or-disable-ribbon-items-cs1/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/enable-or-disable-ribbon-items-cs1" %}
