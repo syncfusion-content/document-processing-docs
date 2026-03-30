@@ -688,36 +688,36 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-    using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Parsing;
 
-    // Load the PDF document
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
-    // Check if the document contains a form with fields
-    if (loadedDocument.Form == null || loadedDocument.Form.Fields.Count == 0)
+// Check if the document contains a form with fields
+if (loadedDocument.Form == null || loadedDocument.Form.Fields.Count == 0)
+{
+    Console.WriteLine("No signature fields found in the document.");
+}
+else
+{
+    // Iterate through all fields in the form
+    foreach (PdfLoadedField field in loadedDocument.Form.Fields)
     {
-        Console.WriteLine("No signature fields found in the document.");
-    }
-    else
-    {
-        // Iterate through all fields in the form
-        foreach (PdfLoadedField field in loadedDocument.Form.Fields)
+        // Check if the field is a signature field
+        PdfLoadedSignatureField signatureField = field as PdfLoadedSignatureField;
+        if (signatureField != null)
         {
-            // Check if the field is a signature field
-            PdfLoadedSignatureField signatureField = field as PdfLoadedSignatureField;
-            if (signatureField != null)
-            {
-                // Determine whether the signature field is signed or not
-                string status = signatureField.IsSigned ? "Signed" : "UnSigned";
+            // Determine whether the signature field is signed or not
+            string status = signatureField.IsSigned ? "Signed" : "UnSigned";
 
-                // Output the result for each signature field
-                Console.WriteLine("Signature Field " + signatureField.Name + " is: " + status);
-            }
+            // Output the result for each signature field
+            Console.WriteLine("Signature Field " + signatureField.Name + " is: " + status);
         }
     }
+}   
 
-    // Close the document
-    loadedDocument.Close(true);
+// Close the document
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
