@@ -19,10 +19,13 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer SDK Agent Skills pro
 
 | Framework | Skills |
 |---|---|
-| [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview) | [syncfusion-blazor-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-blazor-pdf-viewer) |
+| [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview) | [syncfusion-blazor-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-blazor-pdf-viewer)<br/>[syncfusion-blazor-smart-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-blazor-smart-pdf-viewer) |
 | [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/overview) | [syncfusion-aspnetcore-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-aspnetcore-pdf-viewer) |
-| [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/overview) | [syncfusion-angular-pdfviewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-angular-pdfviewer) |
+| [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/overview) | [syncfusion-aspnetmvc-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-aspnetmvc-pdf-viewer) |
+| [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/overview) | [syncfusion-angular-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-angular-pdf-viewer) |
 | [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview) | [syncfusion-react-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-react-pdf-viewer) |
+| [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/overview) | [syncfusion-vue-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-vue-pdf-viewer) |
+| [JavaScript (ES6)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview) | [syncfusion-javascript-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-javascript-pdf-viewer) |
 | [.NET MAUI](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/overview) | [syncfusion-maui-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-maui-pdf-viewer) |
 | [UWP](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/overview) | [syncfusion-uwp-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-uwp-pdf-viewer) |
 | [WinForms](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/overview) | [syncfusion-winforms-pdf-viewer](https://github.com/syncfusion/pdf-viewer-sdk-skills/tree/master/skills/syncfusion-winforms-pdf-viewer) |
