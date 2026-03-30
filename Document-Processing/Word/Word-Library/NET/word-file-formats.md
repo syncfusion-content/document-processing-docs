@@ -8,7 +8,7 @@ documentation: UG
 
 # Word File Formats in Essential<sup>&reg;</sup> DocIO
 
-[Microsoft Word](https://learn.microsoft.com/en-us/office/compatibility/office-file-format-reference#file-formats-that-are-supported-in-word) supports multiple file formats that differ in structure, capabilities, and intended usage. Essential<sup>&reg;</sup> DocIO provides read and write support for modern XML-based formats (DOCX, DOTX, DOCM, DOTM), Word Processing XML formats (WordML), and binary Word documents (DOC, DOT).
+[Microsoft Word](https://learn.microsoft.com/en-us/office/compatibility/office-file-format-reference#file-formats-that-are-supported-in-word) supports multiple file formats that differ in structure, capabilities, and intended usage. Essential<sup>&reg;</sup> DocIO provides read and write support for modern XML-based formats (DOCX, DOTX, DOCM, DOTM), Word Processing XML formats (WordML), and binary Word documents (DOC, DOT), as well as [HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html), [RTF](https://help.syncfusion.com/document-processing/word/word-library/net/rtf), and [Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-word-document-to-markdown-in-csharp) formats.
 
 This documentation categorizes the major Word file formats into:
 
@@ -32,7 +32,7 @@ Essential<sup>&reg;</sup> DocIO supports Word Open XML documents compatible with
 
 DOCX is the default XML-based file format introduced in Microsoft Word 2007 and is commonly used for general document processing scenarios.
 
-Click {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/getting-started#creating-a-new-word-document-with-few-lines-of-code)'| markdownify }} to learn how to create a new Word document with a few lines of code.
+Click [here](https://help.syncfusion.com/document-processing/word/word-library/net/getting-started#creating-a-new-word-document-with-few-lines-of-code) to learn how to create a new Word document with a few lines of code.
 
 ### Word Template (DOTX)
 
@@ -92,8 +92,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 DOCM and DOTM are macro-enabled Word Open XML formats. DOCM represents a macro-enabled Word document, while DOTM represents a macro-enabled Word template. These formats are structurally similar to DOCX and DOTX, but additionally contain embedded VBA macro code.
 
-Essential<sup>&reg;</sup> DocIO allows macro-enabled Word documents to be loaded and saved with macros preserved. In addition, macros can be removed explicitly by using the
-[RemoveMacros](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_RemoveMacros) method when required.
+Essential<sup>&reg;</sup> DocIO allows macro-enabled Word documents to be loaded and saved with macros preserved. In addition, macros can be removed explicitly by using the [RemoveMacros](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_RemoveMacros) method when required.
 
 For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-macros).
 
