@@ -1,69 +1,60 @@
 import * as React from 'react';
+import { useCallback } from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+import { AccordionComponent, AccordionItemsDirective, AccordionItemDirective } from '@syncfusion/ej2-react-navigations';
 
 function App() {
 
-return (
-        <div style={styles.page}>
-            <header style={styles.header}>
-                <h3 style={{ margin: 0 }}>Dashboard</h3>
-            </header>
+    const onExpanded = useCallback((args) => {
+      setTimeout(() => {
+          window.dispatchEvent(new Event('resize'));
+      }, 0);
+    }, []);
 
-            <main style={styles.grid}>
-                <aside style={styles.sidebar}>
-                    <div style={{ padding: 12 }}>
-                        <h4 style={{ marginTop: 0 }}>Filters</h4>
-                        <p>Put other controls here</p>
-                    </div>
-                </aside>
-
-                <section style={styles.viewerArea}>
-                    <SpreadsheetComponent height="100%" width="100%" />
-                </section>
-            </main>
-        </div>
-    );
-};
-
-const styles = {
-    page: {
-        height: '100vh',
-        display: 'grid',
-        gridTemplateRows: '56px 1fr',
-        background: '#fafafa'
-    },
-    header: {
-        display: 'flex',
-        alignItems: 'center',
-        padding: '0 16px',
-        background: '#fff',
-        borderBottom: '1px solid #e5e5e5'
-    },
-    grid: {
-        display: 'grid',
-        gridTemplateColumns: '280px 1fr',
-        gap: 16,
-        padding: 16,
-        minHeight: 0 // lets children use available height
-    },
-    sidebar: {
-        background: '#fff',
-        border: '1px solid #e5e5e5',
-        borderRadius: 8,
-        overflow: 'auto'
-    },
-    viewerArea: {
-        background: '#fff',
-        border: '1px solid #e5e5e5',
-        borderRadius: 8,
-        padding: 8,
-        display: 'grid',
-        gridTemplateRows: '1fr',
-        minHeight: 0 // critical so the viewer can grow/shrink
-    }
-};
-
+  return (
+      <div className="page">
+          <header className="header">
+              <h3 style={{ margin: 0 }}>Spreadsheet inside an Accordion</h3>
+          </header>
+          <main className="content">
+              <AccordionComponent
+                  expandMode="Single"
+                  expanding={onExpanded}
+                  expanded={onExpanded}
+              >
+                  <AccordionItemsDirective>
+                      <AccordionItemDirective
+                          header="Overview"
+                          content={() => (
+                              <div className="panel">
+                                  <h4>Overview</h4>
+                                  <p>Place any introductory content here.</p>
+                              </div>
+                          )}
+                      />
+                      <AccordionItemDirective
+                          header="Spreadsheet"
+                          expanded={true}
+                          content={() => (
+                              <SpreadsheetComponent height="100%" width="100%" /> 
+                          )}
+                      />
+                      <AccordionItemDirective
+                          header="Settings"
+                          content={() => (
+                              <div className="panel">
+                                  <h4>Settings</h4>
+                                  <p>Your forms and other controls here.</p>
+                              </div>
+                          )}
+                      />
+                  </AccordionItemsDirective>
+              </AccordionComponent>
+          </main>
+      </div>
+  );
+}
 
 export default App;
 

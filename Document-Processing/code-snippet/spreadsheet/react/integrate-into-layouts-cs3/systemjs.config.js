@@ -14,7 +14,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/32.1.19/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/33.1.44/"
     },
     map: {
         app: 'app',
@@ -41,6 +41,7 @@ System.config({
         "@syncfusion/ej2-spreadsheet": "syncfusion:ej2-spreadsheet/dist/ej2-spreadsheet.umd.min.js",
         "@syncfusion/ej2-react-base": "syncfusion:ej2-react-base/dist/ej2-react-base.umd.min.js",
         "@syncfusion/ej2-react-spreadsheet": "syncfusion:ej2-react-spreadsheet/dist/ej2-react-spreadsheet.umd.min.js",
+        "@syncfusion/ej2-react-navigations": "syncfusion:ej2-react-navigations/dist/ej2-react-navigations.umd.min.js",
         "react-dom/client": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
         "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
         "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
