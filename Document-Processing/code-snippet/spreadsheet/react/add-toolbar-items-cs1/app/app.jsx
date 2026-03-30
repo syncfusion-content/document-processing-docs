@@ -22,7 +22,7 @@ function App() {
     if (!spreadsheet) return;
     const sheet = spreadsheet.getActiveSheet();
     const range = sheet.selectedRange || sheet.activeCell || 'A1';
-    spreadsheet.updateCell({ value: 'Note' }, range);
+    spreadsheet.updateCell({ notes: { text: 'Note' } }, range);
   };
 
   const onHighlight = () => {

@@ -22,7 +22,7 @@ function App(): React.ReactElement {
     if (!spreadsheet) return;
     const sheet: any = spreadsheet.getActiveSheet();
     const range = sheet.selectedRange || sheet.activeCell || 'A1';
-    spreadsheet.updateCell({ value: 'Note' } as any, range);
+    spreadsheet.updateCell({ notes: { text: 'Note' } } as any, range);
   };
 
   const onHighlight = (): void => {
