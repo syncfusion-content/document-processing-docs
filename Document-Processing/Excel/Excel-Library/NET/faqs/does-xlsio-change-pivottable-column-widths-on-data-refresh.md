@@ -1,6 +1,6 @@
 ---
 title: PivotTable column width changes on refresh | Syncfusion
-description: This page explains whether Syncfusion XlsIO automatically changes the column widths in PivotTables when the data source is refreshed using Syncfusion .NET Excel library (XlsIO).
+description: This page explains whether Syncfusion XlsIO changes the PivotTable column widths on data refresh using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
