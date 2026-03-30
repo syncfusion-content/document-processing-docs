@@ -1303,7 +1303,7 @@ End Using
 
 ## Black List
 
-The [BlackList](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRSettings.html#Syncfusion_OCRProcessor_OCRSettings_BlackList) property specifies the characters that exclude from the character set used for recognition and the OCR will not return any of the characters you are specified in the list. For more information, refer to the following code sample.
+The BlackList property specifies the characters that exclude from the character set used for recognition and the OCR will not return any of the characters you are specified in the list. For more information, refer to the following code sample.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
