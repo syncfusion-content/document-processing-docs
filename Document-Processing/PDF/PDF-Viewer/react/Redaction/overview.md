@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 Redaction annotations hide confidential or sensitive information in a PDF. The Syncfusion React PDF Viewer (EJ2) enables marking areas or entire pages for redaction, customizing appearance, and applying changes permanently.
 
+Check out the following video to learn how to Redact PDF Content in the React PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=ZW9DswdpA7Q" %}
+
 ## Enable the redaction toolbar
 
 To enable the redaction toolbar, configure the [`toolbarSettings.toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) property of the PdfViewer instance to include the **RedactionEditTool**. See this [guide](./toolbar#enable-redaction-toolbar) to enable redaction toolbar.

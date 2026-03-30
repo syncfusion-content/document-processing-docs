@@ -13,6 +13,9 @@ The [Rich Text Format (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) is 
 
 Most of the Word processors (including Microsoft Word) uses the XML-based file formats, Microsoft has discontinued enhancements to the RTF and still supporting it. The last version was 1.9.1 released in 2008.
 
+To quickly start converting a Word document to RTF and vice versa, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=U5JRWJ42U3s" %}
+
 ## Assemblies and NuGet packages required
 
 Refer to the following links for assemblies and NuGet packages required based on platforms to convert the RTF document into Word document and vice versa using the .NET Word Library (DocIO).
@@ -112,3 +115,4 @@ The supported and unsupported features of DocIO based on file formats can be ref
 
 * [How to copy the format of the text from an RTF string and apply it to text in DOCX format document?](https://support.syncfusion.com/kb/article/17903/how-to-copy-the-format-of-the-text-from-an-rtf-string-and-apply-it-to-text-in-docx-format-document)
 * [How to Convert RTF to HTML and Vice Versa using .NET Core DocIO?](https://support.syncfusion.com/kb/article/19608/how-to-convert-rtf-to-html-and-vice-versa-using-net-core-docio?)
+* [How to convert RTF string to HTML string in .NET Word Library?](https://support.syncfusion.com/kb/article/22471/how-to-convert-rtf-string-to-html-string-in-net-word-library)

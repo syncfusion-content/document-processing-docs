@@ -292,3 +292,4 @@ When converting a Word document to a PDF, the presence of unsupported elements i
 * [How to create a Word document with form fields from JSON and convert it to PDF?](https://support.syncfusion.com/kb/article/19823/how-to-create-a-word-document-with-form-fields-from-json-and-convert-it-to-pdf)
 * [How to Rename PDF Bookmark in Word to PDF in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19808/how-to-rename-pdf-bookmark-in-word-to-pdf-in-net-core-word-document)
 * [How to check if a font contains the required glyphs for Word to PDF and image conversion?](https://support.syncfusion.com/kb/article/19671/how-to-check-if-a-font-contains-the-required-glyphs-for-word-to-pdf-and-image-conversion)
+* [How to Set Different Top Margins in a Word Document and Convert to PDF using C# .NET Core?](https://support.syncfusion.com/kb/article/22673/how-to-set-different-top-margins-in-a-word-document-and-convert-to-pdf-using-c-net-core)
