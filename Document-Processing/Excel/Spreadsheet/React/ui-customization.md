@@ -74,9 +74,7 @@ The following code sample shows how to hide or show ribbon items.
 
 ## Enable or Disable Ribbon Tabs and Items
 
-The Syncfusion React Spreadsheet component lets you enable or disable ribbon tabs and toolbar items when needed.
-
-You can enable or disable ribbon tabs by using the [enableRibbonTabs](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enableribbontabs) method. To enable or disable specific toolbar items inside a ribbon tab, use the [enableToolbarItems](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enabletoolbaritems) method.
+The Syncfusion React Spreadsheet component lets you enable or disable ribbon tabs and toolbar items when needed. You can enable or disable ribbon tabs by using the [enableRibbonTabs](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enableribbontabs) method. To enable or disable specific toolbar items inside a ribbon tab, use the [enableToolbarItems](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enabletoolbaritems) method.
 These methods accept an array of ribbon tab names or toolbar item IDs along with a boolean value. Set the value to true to enable or false to disable the items.
 
 The following code sample shows how to enable or disable a ribbon tab and toolbar items.

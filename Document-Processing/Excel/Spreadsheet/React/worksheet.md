@@ -17,7 +17,7 @@ You can dynamically add or insert a sheet by one of the following ways,
 
 * Click the `Add Sheet` button in the sheet tab. This will add a new empty sheet next to current active sheet.
 * Right-click on the sheet tab, and then select `Insert` option from the context menu to insert a new empty sheet before the current active sheet.
-* Using [`insertSheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at your desired index.
+* Using [`insertSheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at your desired index.
 
 The following code example shows the insert sheet operation in spreadsheet.
 
@@ -40,7 +40,7 @@ The following code example shows the insert sheet operation in spreadsheet.
 
 ### Insert a sheet programmatically and make it active sheet 
 
-A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#goto) method.
+A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#goto) method.
 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
@@ -60,7 +60,7 @@ The following code example shows how to insert a sheet programmatically and make
 The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet by the following way,
 
 * Right-click on the sheet tab, and then select `Delete` option from context menu.
-* Using [`delete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete ) method to delete the sheets.
+* Using [`delete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#delete ) method to delete the sheets.
 
 ## Rename sheet
 
@@ -131,35 +131,6 @@ The following code example shows the three types of sheet visibility state.
 {% endtabs %}
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/sheet-visiblity-cs1" %}
-
-## Duplicate sheet
-
-The Spreadsheet component allows you to create a copy of an existing worksheet along with its data, formatting, and configurations. Duplicating a sheet is useful when you want to reuse the same structure or data without manually recreating it.
-
-You can duplicate a worksheet in the following way,
-
-Right-click on the sheet tab, and then select the `Duplicate` option from the context menu.
-
-When the `Duplicate` option is selected, a new worksheet is created as an exact copy of the selected sheet and is placed next to it. The duplicated sheet will automatically be assigned a unique name to avoid conflicts with existing sheet names.
-
-![Duplicate sheet](./images/spreadsheet-duplicate.png)
-
-## Move sheet
-
-The Spreadsheet component provides options to rearrange worksheets by moving them to the left or right within the sheet tab panel. This helps you organize worksheets in the required order.
-
-You can move a worksheet using the following way,
-
-Right-click on the sheet tab, and then select either `Move Left` or `Move Right` option from the context menu.
-
-Move sheet options
-
-`Move Left` – Moves the selected worksheet one position to the left.
-`Move Right` – Moves the selected worksheet one position to the right.
-
-The Move Left and Move Right options are enabled only when there are two or more worksheets available in the Spreadsheet. These options are automatically disabled when the selected sheet is already at the first or last position.
-
-![Move sheet tabs](./images/spreadsheet-move-tab.png)
 
 ## Note
 
