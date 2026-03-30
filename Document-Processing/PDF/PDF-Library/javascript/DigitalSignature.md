@@ -32,12 +32,12 @@ let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', {
 });
 // Create a new signature using PFX data and private key
 let sign: PdfSignature = PdfSignature.create(
+    certData,
+    password,
     {
         cryptographicStandard: CryptographicStandard.cms,
         digestAlgorithm: DigestAlgorithm.sha256
-    },
-    certData,
-    password
+    }
 );
 // Set the signature to the field
 field.setSignature(sign);
@@ -60,7 +60,7 @@ var form = document.form;
 // Create a new signature field
 var field = new ej.pdf.PdfSignatureField(page, 'Signature', {x: 10, y: 10, width: 100, height: 50});
 // Create a new signature using PFX data and private key
-var sign = ej.pdf.PdfSignature.create({cryptographicStandard: ej.pdf.CryptographicStandard.cms, digestAlgorithm: ej.pdf.DigestAlgorithm.sha256}, certData, password);
+var sign = ej.pdf.PdfSignature.create(certData, password, {cryptographicStandard: ej.pdf.CryptographicStandard.cms, digestAlgorithm: ej.pdf.DigestAlgorithm.sha256});
 // Set the signature to the field
 field.setSignature(sign);
 // Add the field into PDF form
@@ -94,12 +94,12 @@ let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', {
 });
 // Create a new signature using PFX data and private key
 let sign: PdfSignature = PdfSignature.create(
+    certData,
+    password,
     {
         cryptographicStandard: CryptographicStandard.cms,
         digestAlgorithm: DigestAlgorithm.sha256
-    },
-    certData,
-    password
+    }
 );
 // Set the signature to the field
 field.setSignature(sign);
@@ -128,12 +128,12 @@ var field = new ej.pdf.PdfSignatureField(page, 'Signature', {
 });
 // Create a new signature using PFX data and private key
 var sign = ej.pdf.PdfSignature.create(
+    certData,
+    password,
     {
         cryptographicStandard: ej.pdf.CryptographicStandard.cms,
         digestAlgorithm: ej.pdf.DigestAlgorithm.sha256
-    },
-    certData,
-    password
+    }
 );
 // Set the signature to the field
 field.setSignature(sign);
@@ -875,12 +875,12 @@ let externalSignatureCallback = (
 };
 // Create a new signature using external signing with public certificate collection
 let signature: PdfSignature = PdfSignature.create(
+    externalSignatureCallback,
+    publicCertificates,
     {
         cryptographicStandard: CryptographicStandard.cms,
         algorithm: DigestAlgorithm.sha256
-    },
-    externalSignatureCallback,
-    publicCertificates
+    }
 );
 // Set the signature to the field
 field.setSignature(signature);
@@ -921,12 +921,12 @@ var externalSignatureCallback = function (data, options) {
 };
 // Create a new signature using external signing with public certificate collection
 var signature = ej.pdf.PdfSignature.create(
+    externalSignatureCallback,
+    publicCertificates,
     {
         cryptographicStandard: ej.pdf.CryptographicStandard.cms,
         algorithm: ej.pdf.DigestAlgorithm.sha256
-    },
-    externalSignatureCallback,
-    publicCertificates
+    }
 );
 // Set the signature to the field
 field.setSignature(signature);
