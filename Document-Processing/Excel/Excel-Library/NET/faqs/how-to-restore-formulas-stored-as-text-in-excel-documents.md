@@ -1,12 +1,12 @@
 ---
-title: Handle Excel formulas stored as strings | Syncfusion
-description: Code example to handle Excel formulas stored as strings using Syncfusion .NET Excel library (XlsIO).
+title: Restore Excel formulas stored as text | Syncfusion
+description: Code example to restore Excel formulas stored as text using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to handle Excel formulas stored as strings?
+# How to restore formulas stored as text in Excel documents?
 
 The following code examples demonstrate how to handle Excel formulas stored as strings using cell type validation using C# (Cross-platform and Windows-specific) and VB.NET.
 
