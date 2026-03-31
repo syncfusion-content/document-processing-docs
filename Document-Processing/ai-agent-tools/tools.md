@@ -7,7 +7,7 @@ control: AI Agent Tools
 documentation: ug
 ---
 
-# Agent Tools
+# Syncfusion Document SDK Agent Tools
 
 Agent Tools are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate repository.
 
@@ -15,7 +15,7 @@ Tools are organized into the following categories:
 
 | Category | Tool Classes | Description |
 |---|---|---|
-| **PDF** | `PdfDocumentAgentTools`, `PdfOperationsAgentTools`, `PdfSecurityAgentTools`, `PdfContentExtractionAgentTools`, `PdfAnnotationAgentTools` | Create, manipulate, secure, extract content from, and annotate PDF documents. |
+| **PDF** | `PdfDocumentAgentTools`, `PdfOperationsAgentTools`, `PdfSecurityAgentTools`, `PdfContentExtractionAgentTools`, `PdfAnnotationAgentTools`,`PdfConverterAgentTools`,`PdfOcrAgentTools` | Create, manipulate, secure, extract content from, annotate, convert, and perform OCR on PDF documents. |
 | **Word** | `WordDocumentAgentTools`, `WordOperationsAgentTools`, `WordSecurityAgentTools`, `WordMailMergeAgentTools`, `WordFindAndReplaceAgentTools`, `WordRevisionAgentTools`, `WordImportExportAgentTools`, `WordFormFieldAgentTools`, `WordBookmarkAgentTools` | Create, edit, protect, mail-merge, find/replace, track changes, import/export, and manage form fields and bookmarks in Word documents. |
 | **Excel** | `ExcelWorkbookAgentTools`, `ExcelWorksheetAgentTools`, `ExcelSecurityAgentTools`, `ExcelFormulaAgentTools`, `ExcelChartAgentTools`, `ExcelConditionalFormattingAgentTools`, `ExcelConversionAgentTools`, `ExcelDataValidationAgentTools`, `ExcelPivotTableAgentTools` | Create and manage workbooks and worksheets, set cell values, formulas, and number formats, apply security, create and configure charts and sparklines, add conditional formatting, convert to image/HTML/ODS/JSON, manage data validation, and create and manipulate pivot tables. |
 | **PowerPoint** | `PresentationDocumentAgentTools`, `PresentationOperationsAgentTools`, `PresentationSecurityAgentTools`, `PresentationContentAgentTools`, `PresentationFindAndReplaceAgentTools` | Load, merge, split, secure, and extract content from PowerPoint presentations. |
@@ -28,7 +28,7 @@ Tools are organized into the following categories:
 
 Repositories are in-memory containers that manage document life cycles during AI agent operations. Each repository extends `DocumentRepositoryBase<TDocument>`, which provides common functionality including document creation, import/export, active document tracking, and automatic expiration-based cleanup.
 
-### Available Repositories
+**Available Repositories**
 
 | Repository | Description |
 |---|---|
@@ -37,7 +37,7 @@ Repositories are in-memory containers that manage document life cycles during AI
 | `PdfDocumentRepository` | Manages PDF documents in memory. Supports both new `PdfDocument` instances and loaded `PdfLoadedDocument` instances, including password-protected files. |
 | `PresentationRepository` | Manages PowerPoint presentations in memory. Supports creating new empty presentations and loading existing `.pptx` files, including password-protected ones. |
 
-### DocumentRepositoryCollection
+**DocumentRepositoryCollection**
 
 `DocumentRepositoryCollection` is a centralized registry that holds one repository for each `DocumentType`. It is designed for tool classes that need to work across multiple document types within a single operation — specifically when the source and output documents belong to different repositories.
 
@@ -47,7 +47,7 @@ Repositories are in-memory containers that manage document life cycles during AI
 
 ## PDF Tools
 
-### PdfDocumentAgentTools
+**PdfDocumentAgentTools**
 
 Provides core lifecycle operations for PDF documents — creating, loading, exporting, and managing PDF documents in memory.
 
@@ -59,9 +59,7 @@ Provides core lifecycle operations for PDF documents — creating, loading, expo
 | `RemovePdfDocument` | `RemovePdfDocument(string documentId)` | Removes a specific PDF document from memory by its ID. |
 | `SetActivePdfDocument` | `SetActivePdfDocument(string documentId)` | Changes the active PDF document context to the specified document ID. |
 
----
-
-### PdfOperationsAgentTools
+**PdfOperationsAgentTools**
 
 Provides merge, split, and compression operations for PDF documents.
 
@@ -71,9 +69,8 @@ Provides merge, split, and compression operations for PDF documents.
 | `SplitPdfs` | `SplitPdfs(string filePath, int[,]? pageRanges = null, bool splitTags = false)` | Splits a single PDF into multiple PDFs by page ranges. Returns the output folder path. |
 | `CompressPdf` | `CompressPdf(string documentId, bool compressImage = true, bool optimizePageContent = true, bool optimizeFont = true, bool removeMetadata = true, int imageQuality = 50)` | Optimizes a PDF by compressing images, reducing content stream size, and optionally removing metadata. |
 
----
 
-### PdfSecurityAgentTools
+**PdfSecurityAgentTools**
 
 Provides encryption, decryption, and permissions management for PDF documents.
 
@@ -84,9 +81,8 @@ Provides encryption, decryption, and permissions management for PDF documents.
 | `SetPermissions` | `SetPermissions(string documentId, string permissions)` | Sets document permissions (e.g., `Print`, `CopyContent`, `EditContent`). |
 | `RemovePermissions` | `RemovePermissions(string documentId)` | Removes all document-level permissions from a PDF. |
 
----
 
-### PdfContentExtractionAgentTools
+**PdfContentExtractionAgentTools**
 
 Provides tools for extracting text, images, and tables from PDF documents.
 
@@ -96,9 +92,8 @@ Provides tools for extracting text, images, and tables from PDF documents.
 | `ExtractImages` | `ExtractImages(string documentId, int startPageIndex = -1, int endPageIndex = -1)` | Extracts embedded images from a PDF document across a specified page range. |
 | `ExtractTables` | `ExtractTables(string documentId, int startPageIndex = -1, int endPageIndex = -1)` | Extracts tables from a PDF document across a specified page range and returns the result as JSON. |
 
----
 
-### PdfAnnotationAgentTools
+**PdfAnnotationAgentTools**
 
 Provides tools for watermarking, digitally signing, and adding or removing annotations in PDF documents.
 
@@ -109,11 +104,25 @@ Provides tools for watermarking, digitally signing, and adding or removing annot
 | `AddAnnotation` | `AddAnnotation(string documentId, int pageIndex, string annotationType, float boundsX, float boundsY, float boundsWidth, float boundsHeight, string text)` | Adds a `Text`, `Rectangle`, or `Circle` annotation to a PDF page at the specified position. |
 | `RemoveAnnotation` | `RemoveAnnotation(string documentId, int pageIndex, int annotationIndex)` | Removes an annotation from a PDF page by its 0-based index. |
 
+**PdfConverterAgentTools**
+
+| Tool | Syntax | Description |
+|---|---|---|
+| ConvertPdfToPdfA | `ConvertPdfToPdfA(string documentId, PdfConformanceLevel conformanceLevel)` | Converts a loaded PDF document to a PDF/A-compliant format. Supported conformance levels: `PdfA1B`, `PdfA2B`, `PdfA3B`, `Pdf_A4`, `Pdf_A4F`, `Pdf_A4E`. |
+| ConvertHtmlToPdf | `ConvertHtmlToPdf(string urlOrFilePath, int pageWidth = 825, int pageHeight = 1100)` | Converts a webpage URL or a local HTML file to a PDF document with the specified page dimensions. Returns the new document ID. |
+| ImageToPdf | `ImageToPdf(string[] imageFiles, string imagePosition = "FitToPage", int pageWidth = 612, int pageHeight = 792)` | Creates a PDF document from one or more image files. `imagePosition` values: `Stretch`, `Center`, `FitToPage`. Returns the new document ID. |
+
+**PdfOcrAgentTools**
+
+| Tool | Syntax | Description |
+|---|---|---|
+| OcrPdf | `OcrPdf(string documentId, string language = "eng")` | Performs Optical Character Recognition (OCR) on a scanned or image-based PDF document to make its content text-searchable. Supported language codes: `eng` (English), `fra` (French). |
+
 ---
 
 ## Word Tools
 
-### WordDocumentAgentTools
+**WordDocumentAgentTools**
 
 Provides core lifecycle operations for Word documents — creating, loading, exporting, and managing Word documents in memory.
 
@@ -126,9 +135,9 @@ Provides core lifecycle operations for Word documents — creating, loading, exp
 | `SetActiveDocument` | `SetActiveDocument(string documentId)` | Changes the active Word document context to the specified document ID. |
 | `ExportAsImage` | `ExportAsImage(string documentId, string? imageFormat = "Png", int? startPageIndex = null, int? endPageIndex = null)` | Exports Word document pages as PNG or JPEG images to the output directory. |
 
----
 
-### WordOperationsAgentTools
+
+**WordOperationsAgentTools**
 
 Provides merge, split, and compare operations for Word documents.
 
@@ -138,9 +147,9 @@ Provides merge, split, and compare operations for Word documents.
 | `SplitDocument` | `SplitDocument(string documentId, string splitRules)` | Splits a Word document into multiple documents based on split rules (e.g., sections, headings, bookmarks). |
 | `CompareDocuments` | `CompareDocuments(string originalDocumentId, string revisedDocumentId, string author, DateTime dateTime)` | Compares two Word documents and marks differences as tracked changes in the original document. |
 
----
 
-### WordSecurityAgentTools
+
+**WordSecurityAgentTools**
 
 Provides password protection, encryption, and decryption for Word documents.
 
@@ -151,9 +160,9 @@ Provides password protection, encryption, and decryption for Word documents.
 | `UnprotectDocument` | `UnprotectDocument(string documentId, string password)` | Removes protection from a Word document using the provided password. |
 | `DecryptDocument` | `DecryptDocument(string documentId)` | Removes encryption from a Word document. |
 
----
 
-### WordMailMergeAgentTools
+
+**WordMailMergeAgentTools**
 
 Provides mail merge operations for populating Word document templates with structured data.
 
@@ -162,9 +171,9 @@ Provides mail merge operations for populating Word document templates with struc
 | `MailMerge` | `MailMerge(string documentId, string dataTableJson, bool removeEmptyFields = true, bool removeEmptyGroup = true)` | Executes a mail merge on a Word document using a JSON-represented DataTable. |
 | `ExecuteMailMerge` | `ExecuteMailMerge(string documentId, string dataSourceJson, bool generateSeparateDocuments = false, bool removeEmptyFields = true)` | Extended mail merge with an option to generate one output document per data record. Returns document IDs. |
 
----
 
-### WordFindAndReplaceAgentTools
+
+**WordFindAndReplaceAgentTools**
 
 Provides text search and replacement operations within Word documents.
 
@@ -175,9 +184,8 @@ Provides text search and replacement operations within Word documents.
 | `Replace` | `Replace(string documentId, string findWhat, string replaceText, bool matchCase = false, bool wholeWord = false)` | Replaces the first occurrence of the specified text in a Word document. |
 | `ReplaceAll` | `ReplaceAll(string documentId, string findWhat, string replaceText, bool matchCase = false, bool wholeWord = false)` | Replaces all occurrences of the specified text in a Word document. Returns the count of replacements made. |
 
----
 
-### WordRevisionAgentTools
+**WordRevisionAgentTools**
 
 Provides tools to inspect and manage tracked changes (revisions) in Word documents.
 
@@ -189,9 +197,9 @@ Provides tools to inspect and manage tracked changes (revisions) in Word documen
 | `AcceptAllRevisions` | `AcceptAllRevisions(string documentId)` | Accepts all tracked changes in the document and returns the count accepted. |
 | `RejectAllRevisions` | `RejectAllRevisions(string documentId)` | Rejects all tracked changes in the document and returns the count rejected. |
 
----
 
-### WordImportExportAgentTools
+
+**WordImportExportAgentTools**
 
 Provides tools to import from and export Word documents to HTML and Markdown formats.
 
@@ -203,9 +211,9 @@ Provides tools to import from and export Word documents to HTML and Markdown for
 | `GetMarkdown` | `GetMarkdown(string documentIdOrFilePath)` | Returns the Word document content as a Markdown string. |
 | `GetText` | `GetText(string documentIdOrFilePath)` | Returns the Word document content as plain text. |
 
----
 
-### WordFormFieldAgentTools
+
+**WordFormFieldAgentTools**
 
 Provides tools to read and write form field values in Word documents.
 
@@ -216,9 +224,9 @@ Provides tools to read and write form field values in Word documents.
 | `GetFormField` | `GetFormField(string documentId, string fieldName)` | Gets the value of a specific form field by name. |
 | `SetFormField` | `SetFormField(string documentId, string fieldName, object fieldValue)` | Sets the value of a specific form field by name. |
 
----
 
-### WordBookmarkAgentTools
+
+**WordBookmarkAgentTools**
 
 Provides tools to manage bookmarks and bookmark content within Word documents.
 
@@ -234,7 +242,7 @@ Provides tools to manage bookmarks and bookmark content within Word documents.
 
 ## Excel Tools
 
-### ExcelWorkbookAgentTools
+**ExcelWorkbookAgentTools**
 
 Provides core lifecycle operations for Excel workbooks — creating, loading, exporting, and managing workbooks in memory.
 
@@ -246,9 +254,8 @@ Provides core lifecycle operations for Excel workbooks — creating, loading, ex
 | `RemoveWorkbook` | `RemoveWorkbook(string workbookId)` | Removes a specific workbook from memory by its ID. |
 | `SetActiveWorkbook` | `SetActiveWorkbook(string workbookId)` | Changes the active workbook context to the specified workbook ID. |
 
----
 
-### ExcelWorksheetAgentTools
+**ExcelWorksheetAgentTools**
 
 Provides tools to create, manage, and populate worksheets within Excel workbooks.
 
@@ -260,9 +267,9 @@ Provides tools to create, manage, and populate worksheets within Excel workbooks
 | `DeleteWorksheet` | `DeleteWorksheet(string workbookId, string worksheetName)` | Deletes a worksheet from the workbook. |
 | `SetValue` | `SetValue(string workbookId, string worksheetName, string cellAddress, string data)` | Assigns a data value to a cell (supports text, numbers, dates, and booleans). |
 
----
 
-### ExcelSecurityAgentTools
+
+**ExcelSecurityAgentTools**
 
 Provides encryption, decryption, and protection management for Excel workbooks and worksheets.
 
@@ -275,9 +282,9 @@ Provides encryption, decryption, and protection management for Excel workbooks a
 | `ProtectWorksheet` | `ProtectWorksheet(string workbookId, string worksheetName, string password)` | Protects a specific worksheet from editing using a password. |
 | `UnprotectWorksheet` | `UnprotectWorksheet(string workbookId, string worksheetName, string password)` | Removes protection from a specific worksheet. |
 
----
 
-### ExcelFormulaAgentTools
+
+**ExcelFormulaAgentTools**
 
 Provides tools to set, retrieve, calculate and validate cell formulas in Excel workbooks.
 
@@ -288,9 +295,9 @@ Provides tools to set, retrieve, calculate and validate cell formulas in Excel w
 | `CalculateFormulas` | `CalculateFormulas(string workbookId)` | Forces recalculation of all formulas in the workbook. |
 | `ValidateFormulas` | `ValidateFormulas(string workbookId)` | Validates all formulas in the workbook and returns any errors as JSON. |
 
----
 
-### ExcelChartAgentTools
+
+**ExcelChartAgentTools**
 
 Provides tools to create modify and remove charts in excel workbooks
 
@@ -307,9 +314,9 @@ Provides tools to create modify and remove charts in excel workbooks
 | RemoveChart | `RemoveChart(string workbookId, string worksheetName, int chartIndex)` | Removes a chart from the worksheet by its 0-based index. |
 | GetChartCount | `GetChartCount(string workbookId, string worksheetName)` | Returns the number of charts in a worksheet. |
 | CreateSparkline | `CreateSparkline(string workbookId, string worksheetName, string sparklineType, string dataRange, string referenceRange)` | Creates sparkline charts in worksheet cells. Types: `Line`, `Column`, `WinLoss`. |
----
 
-### ExcelConditionalFormattingAgentTools
+
+**ExcelConditionalFormattingAgentTools**
 
 Provides toolsto add or remove conditional formatting in workbook
 
@@ -318,9 +325,9 @@ Provides toolsto add or remove conditional formatting in workbook
 | AddConditionalFormat | `AddConditionalFormat(string workbookId, string worksheetName, string rangeAddress, string formatType, string? operatorType = null, string? firstFormula = null, string? secondFormula = null, string? backColor = null, bool? isBold = null, bool? isItalic = null)` | Adds conditional formatting to a cell or range. `formatType` values: `CellValue`, `Formula`, `DataBar`, `ColorScale`, `IconSet`. |
 | RemoveConditionalFormat | `RemoveConditionalFormat(string workbookId, string worksheetName, string rangeAddress)` | Removes all conditional formatting from a specified cell or range. |
 | RemoveConditionalFormatAtIndex | `RemoveConditionalFormatAtIndex(string workbookId, string worksheetName, string rangeAddress, int index)` | Removes the conditional format at a specific 0-based index from a range. |
----
 
-### ExcelConversionAgentTools
+
+**ExcelConversionAgentTools**
 
 Provides tools to convert worksheet to image, HTML, ODS, JSON file formats
 
@@ -343,9 +350,9 @@ Provides tools to convert worksheet to image, HTML, ODS, JSON file formats
 | ConvertWorksheetToJsonStream | `ConvertWorksheetToJsonStream(string workbookId, string worksheetName, string outputPath, bool includeSchema = true)` | Converts a specific worksheet to JSON format using stream-based output. |
 | ConvertRangeToJson | `ConvertRangeToJson(string workbookId, string worksheetName, string rangeAddress, string outputPath, bool includeSchema = true)` | Converts a specific cell range to JSON format. |
 | ConvertRangeToJsonStream | `ConvertRangeToJsonStream(string workbookId, string worksheetName, string rangeAddress, string outputPath, bool includeSchema = true)` | Converts a specific cell range to JSON format using stream-based output. |
----
 
-### ExcelDataValidationAgentTools
+
+**ExcelDataValidationAgentTools**
 
 Provides tools to add data validation to workbook
 
@@ -360,9 +367,9 @@ Provides tools to add data validation to workbook
 | AddCustomValidation | `AddCustomValidation(string workbookId, string worksheetName, string rangeAddress, string formula, ...)` | Adds custom formula-based validation (e.g., `=A1>10`). |
 | RemoveValidation | `RemoveValidation(string workbookId, string worksheetName, string rangeAddress)` | Removes data validation from a cell or range. |
 | RemoveAllValidations | `RemoveAllValidations(string workbookId, string worksheetName)` | Removes all data validations from a worksheet. |
----
 
-### ExcelPivotTableAgentTools
+
+**ExcelPivotTableAgentTools**
 
 Provides tools to create, edit pivot table in workbook
 
@@ -383,11 +390,11 @@ Provides tools to create, edit pivot table in workbook
 | ApplyPivotLabelFilter | `ApplyPivotLabelFilter(string workbookId, string worksheetName, int pivotTableIndex, int fieldIndex, string filterType, string filterValue)` | Applies a caption/label filter to a pivot field (e.g., `CaptionEqual`, `CaptionBeginsWith`, `CaptionContains`). |
 | ApplyPivotValueFilter | `ApplyPivotValueFilter(string workbookId, string worksheetName, int pivotTableIndex, int fieldIndex, string filterType, string filterValue)` | Applies a value-based filter to a pivot field (e.g., `ValueGreaterThan`, `ValueLessThan`, `ValueBetween`). |
 | HidePivotFieldItems | `HidePivotFieldItems(string workbookId, string worksheetName, int pivotTableIndex, int fieldIndex, string hiddenItemIndices)` | Hides specified items within a pivot table row or column field by comma-separated 0-based indices. |
----
+
 
 ## PowerPoint Tools
 
-### PresentationDocumentAgentTools
+**PresentationDocumentAgentTools**
 
 Provides core lifecycle operations for PowerPoint presentations — creating, loading, exporting, and managing presentations in memory.
 
@@ -400,9 +407,9 @@ Provides core lifecycle operations for PowerPoint presentations — creating, lo
 | `RemovePresentation` | `RemovePresentation(string documentId)` | Removes a specific presentation from memory by its ID. |
 | `SetActivePresentation` | `SetActivePresentation(string documentId)` | Changes the active presentation context to the specified document ID. |
 
----
 
-### PresentationOperationsAgentTools
+
+**PresentationOperationsAgentTools**
 
 Provides merge and split operations for PowerPoint presentations.
 
@@ -411,9 +418,8 @@ Provides merge and split operations for PowerPoint presentations.
 | `MergePresentations` | `MergePresentations(string destinationDocumentId, string sourceDocumentIds, string pasteOption = "SourceFormatting")` | Merges multiple presentations into a destination presentation. Accepts comma-separated source document IDs or file paths. |
 | `SplitPresentation` | `SplitPresentation(string documentId, string splitRules, string pasteOption = "SourceFormatting")` | Splits a presentation by sections, layout type, or slide numbers (e.g., `"1,3,5"`). Returns the resulting document IDs. |
 
----
 
-### PresentationSecurityAgentTools
+**PresentationSecurityAgentTools**
 
 Provides password protection and encryption management for PowerPoint presentations.
 
@@ -424,9 +430,8 @@ Provides password protection and encryption management for PowerPoint presentati
 | `UnprotectPresentation` | `UnprotectPresentation(string documentId)` | Removes write protection from a presentation. |
 | `DecryptPresentation` | `DecryptPresentation(string documentId)` | Removes encryption from a presentation. |
 
----
 
-### PresentationContentAgentTools
+**PresentationContentAgentTools**
 
 Provides tools for reading content and metadata from PowerPoint presentations.
 
@@ -435,9 +440,8 @@ Provides tools for reading content and metadata from PowerPoint presentations.
 | `GetText` | `GetText(string? documentId = null, string? filePath = null)` | Extracts all text content from a presentation by document ID or file path. |
 | `GetSlideCount` | `GetSlideCount(string documentId)` | Returns the number of slides in the presentation. |
 
----
 
-### PresentationFindAndReplaceAgentTools
+**PresentationFindAndReplaceAgentTools**
 
 Provides text search and replacement across all slides in a PowerPoint presentation.
 
@@ -446,11 +450,10 @@ Provides text search and replacement across all slides in a PowerPoint presentat
 | `FindAndReplace` | `FindAndReplace(string documentId, string findWhat, string replaceText, bool matchCase = false, bool wholeWord = false)` | Finds and replaces all occurrences of the specified text across all slides in the presentation. |
 | `FindAndReplaceByPattern` | `FindAndReplaceByPattern(string documentId, string regexPattern, string replaceText)` | Finds and replaces text that matches a regex pattern across all slides (e.g., `{[A-Za-z]+}`). |
 
----
 
 ## PDF Conversion Tools
 
-### OfficeToPdfAgentTools
+**OfficeToPdfAgentTools**
 
 Provides conversion of Word, Excel, and PowerPoint documents to PDF format.
 
@@ -468,7 +471,7 @@ Provides conversion of Word, Excel, and PowerPoint documents to PDF format.
 
 ## Data Extraction Tools
 
-### DataExtractionAgentTools
+**DataExtractionAgentTools**
 
 Provides AI-powered structured data extraction from PDF documents and images, returning results as JSON.
 
@@ -477,7 +480,7 @@ Provides AI-powered structured data extraction from PDF documents and images, re
 | `ExtractDataAsJSON` | `ExtractDataAsJSON(string inputFilePath, bool enableFormDetection = true, bool enableTableDetection = true, double confidenceThreshold = 0.6, int startPage = -1, int endPage = -1, bool detectSignatures = true, bool detectTextboxes = true, bool detectCheckboxes = true, bool detectRadioButtons = true, bool detectBorderlessTables = true, string? outputFilePath = null)` | Extracts structured data (text, forms, tables, checkboxes, signatures) from a PDF or image file and returns the result as JSON. |
 | `ExtractTableAsJSON` | `ExtractTableAsJSON(string inputFilePath, bool detectBorderlessTables = true, double confidenceThreshold = 0.6, int startPage = -1, int endPage = -1, string? outputFilePath = null)` | Extracts only table data from a PDF document and returns the result as JSON. Optimized for table-focused extraction. |
 
-### ExtractDataAsJSON — Parameter Details
+**ExtractDataAsJSON** — Parameter Details
 
 | Parameter | Type | Default | Description |
 |---|---|---|---|

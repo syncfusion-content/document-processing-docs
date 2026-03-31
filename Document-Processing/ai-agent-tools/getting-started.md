@@ -18,7 +18,7 @@ The Syncfusion Document SDK Agent Tool library exposes Word, Excel, PDF, and Pow
 | Requirement | Details |
 |---|---|
 | **.NET SDK** | .NET 8.0 or .NET 10.0 |
-| **OpenAI API Key** | Obtain one from [platform.openai.com](https://platform.openai.com/login). |
+| **OpenAI API Key** | Obtain one from [platform.openai.com](https://platform.openai.com/api-keys). |
 | **Syncfusion License** | Community or commercial license. See [syncfusion.com/products/community-license](https://www.syncfusion.com/products/communitylicense). |
 | **NuGet Packages** | `Microsoft.Agents.AI.OpenAI` (v1.0.0-rc4) and Syncfusion AgentLibrary packages. |
 
@@ -67,7 +67,7 @@ var presentationRepository = new PresentationRepository(timeout);
 
 The `timeout` parameter controls how long an unused document is kept in memory before it is automatically cleaned up.
 
-### DocumentRepositoryCollection
+**Step-3 - Add repositories to DocumentRepositoryCollection**
 
 Some tool classes need to read from one repository and write results into another. For example, `OfficeToPdfAgentTools` reads a source document from the Word, Excel, or PowerPoint repository and saves the converted output into the PDF repository. A `DocumentRepositoryCollection` is passed to such tools so they can resolve the correct repository at runtime:
 
@@ -83,7 +83,7 @@ repoCollection.AddRepository(DocumentType.PowerPoint,  presentationRepository);
 
 ---
 
-**Step 3 — Instantiate Agent Tool Classes and Collect Tools**
+**Step 4 — Instantiate Agent Tool Classes and Collect Tools**
 
 Each tool class is initialized with the relevant repository (and an optional output directory). Call `GetTools()` on each to get a list of `AITool` objects:
 
@@ -126,7 +126,7 @@ allTools.AddRange(new DataExtractionAgentTools(outputDir).GetTools());
 
 ---
 
-**Step 4 — Convert Syncfusion AITools to Microsoft.Extensions.AI Functions**
+**Step 5 — Convert Syncfusion AITools to Microsoft.Extensions.AI Functions**
 
 The Syncfusion `AITool` objects expose a `MethodInfo` and a target instance. Use `AIFunctionFactory.Create` from `Microsoft.Extensions.AI` to wrap them into framework-compatible function objects:
 
@@ -150,9 +150,7 @@ Each converted function carries the tool name, description, and parameter metada
 
 ---
 
-**Step 5 — Build the AIAgent and Run the Chat Loop**
-
-### Create the Agent
+**Step 6 — Build the AIAgent and Run the Chat Loop**
 
 Use `AsAIAgent()` from `Microsoft.Agents.AI` to build an agent from an OpenAI chat client, passing the converted tools and a system prompt:
 
@@ -177,8 +175,6 @@ AIAgent agent = new OpenAIClient(apiKey)
         instructions: systemPrompt,
         tools:        aiTools);
 ```
-
-### Run the Interactive Chat Loop
 
 The agent handles multi-turn tool calling automatically. Pass the growing conversation history to `RunAsync()` on each turn:
 

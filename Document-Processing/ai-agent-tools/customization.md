@@ -100,9 +100,7 @@ public class WordWatermarkAgentTools : AgentToolBase
         [ToolParameter(Description = "The document ID of the Word document.")]
         string documentId,
         [ToolParameter(Description = "The watermark text to display (e.g., 'DRAFT', 'CONFIDENTIAL').")]
-        string watermarkText,
-        [ToolParameter(Description = "Optional: the font size of the watermark. Defaults to 72.")]
-        float fontSize = 72f)
+        string watermarkText)
     {
         try
         {
@@ -111,7 +109,6 @@ public class WordWatermarkAgentTools : AgentToolBase
                 return CallToolResult.Fail($"Document not found: {documentId}");
 
             TextWatermark watermark = new TextWatermark(watermarkText, "", 250, 100);
-            watermark.FontSize = fontSize;
             watermark.Color = Syncfusion.Drawing.Color.LightGray;
             watermark.Layout = WatermarkLayout.Diagonal;
             doc.Watermark = watermark;

@@ -7,11 +7,11 @@ control: AI Agent Tools
 documentation: ug
 ---
 
-# Syncfusion<sup>&reg;</sup> Document SDK Agent tool Overview
+# Overview
 
 ## What is Syncfusion Document SDK Agent Tool?
 
-**Syncfusion Document SDK Agent Tool** is a comprehensive AI toolkit that enables AI models and assistants to autonomously create, manipulate, convert, and extract data from documents using [Syncfusion Document SDK](https://www.syncfusion.com/document-sdk) libraries.
+**Syncfusion Document SDK Agent Tool** is a comprehensive AI toolkit that enables AI models and assistants to autonomously create, manipulate, convert, and extract data from documents using Syncfusion Document SDK libraries.
 
 It exposes a rich set of well-defined tools and functions that an AI agent can invoke to perform document operations across Word, Excel, PDF, and PowerPoint formats — without requiring the host application to implement document-processing logic directly.
 
