@@ -53,7 +53,7 @@ Below is the root structure of the JSON result:
 
 #### Page Object
 
-The Page Object represents the metadata of a page along with all the detected elements it contains.
+The Page Object represents the metadata of a page along with the table elements it contains.
 
 <table>
 <thead>
@@ -89,7 +89,7 @@ The Page Object represents the metadata of a page along with all the detected el
 
 #### PageObjects
 
-PageObjects represent detected elements on a page such as text, headers, footers, tables, images, and numbers.
+PageObjects represent detected table elements on a page.
 
 <table>
 <thead>
