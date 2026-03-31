@@ -20,7 +20,27 @@ openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/sp
 saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
 ```
 
-These demo services are intended solely for demonstration purposes and are not recommended for production or development environments.
+For better control and performance, we recommend that you configure and run your own Open and Save services locally or on your preferred hosting environment.
+
+### What is a Local Service?
+
+A local service is a web API running on your local machine (or internal network) that handles file operations for the Spreadsheet component. Instead of relying on external hosted endpoints, you control the service directly, giving you greater security, reliability, and customization options.
+
+### Why Use a Local Service Instead of Demo Services?
+
+**Limitations of demo/hosted services:**
+- Intended solely for demonstration purposes
+- Not recommended for production or development environments
+- Limited by external service availability and performance
+- Potential security concerns with uploading files to third-party servers
+- No direct control over the processing logic or file handling
+
+**Benefits of a local service:**
+- **Security**: Files are processed on your own infrastructure
+- **Performance**: Reduced latency with local processing
+- **Customization**: Implement custom business logic for file operations
+- **Reliability**: Direct control over service availability and uptime
+- **Compliance**: Meet regulatory requirements by keeping data on-premises
 
 ## How-To Guide: Create a Local ASP.NET Core Web API
 
@@ -130,17 +150,15 @@ var app = builder.Build();
 app.UseCors(MyAllowSpecificOrigins);
 ```
 
-###  Run the Web API Project
+### Run the Web API Project
 
 Build and run your Web API project. For detailed instructions, refer to:
 
 [Run the ASP.NET Core Web API project](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-10.0&source=recommendations&tabs=visual-studio#run-the-project)
 
----
-
 ### Configuring the Client-Side URLs
 
-Once your local service is launched, configure the openUrl and saveUrl properties in client application to use the local endpoints to perform import and export operation.
+Once your local service is launched, configure the openUrl and saveUrl properties in your client application to use the local endpoints for import and export operations
 
 ```js
 <SpreadsheetComponent
