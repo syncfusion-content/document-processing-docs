@@ -16,13 +16,13 @@ Step 1: Create a new Azure Functions project.
 ![Create a Azure Functions project](Azure-Images/Functions-Flex-Consumption/Azure_Word_Document.png)
 
 Step 2: Create a project name and select the location.
-![Create a project name](Azure-Images/Functions-Flex-Consumption/Configuration-Create-Word-Document.png)
+![Create a project name](Azure-Images/Functions-Flex-Consumption/Configuration-Open-and-Save-Word-Document.png)
 
 Step 3: Select function worker as **.NET 8.0 (Long Term Support)** (isolated worker) and target Flex/Consumption hosting suitable for isolated worker.
 ![Select function worker](Azure-Images/Functions-Flex-Consumption/Additional_Information_Word_Document.png)
 
 Step 4: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
-![Install Syncfusion.DocIO.Net.Core NuGet package](Azure-Images/Functions-Flex-Consumption/Nuget-Package-Create-Word-Document.png)
+![Install Syncfusion.DocIO.Net.Core NuGet package](Azure-Images/Functions-Flex-Consumption/Nuget-Package-Open-and-Save-Word-Document.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -91,7 +91,7 @@ public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "
 {% endtabs %}
 
 Step 7: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
-![Create a new profile in the Publish Window](Azure-Images/Functions-Flex-Consumption/Publish-Create-Word-Document.png)
+![Create a new profile in the Publish Window](Azure-Images/Functions-Flex-Consumption/Publish-Open-and-Save-Word-Document.png)
 
 Step 8: Select the target as **Azure** and click **Next** button.
 ![Select the target as Azure](Azure-Images/Functions-Flex-Consumption/Target_Word_Document.png)
