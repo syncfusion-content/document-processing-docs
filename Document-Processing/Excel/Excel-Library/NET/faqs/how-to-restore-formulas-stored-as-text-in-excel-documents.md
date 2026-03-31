@@ -1,6 +1,6 @@
 ---
 title: Restore Excel formulas stored as text | Syncfusion
-description: Code example to restore Excel formulas stored as text using Syncfusion .NET Excel library (XlsIO).
+description: Code example to restore Excel formulas stored as text in Excel documents using Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
