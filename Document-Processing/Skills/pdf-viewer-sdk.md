@@ -81,13 +81,17 @@ The terminal will show a list of available skills. Use the arrow keys to navigat
 Select skills to install (space to toggle)
 │  ◻ syncfusion-blazor-pdf-viewer
 │  ◻ syncfusion-aspnetcore-pdf-viewer
-│  ◻ syncfusion-angular-pdfviewer
+│  ◻ syncfusion-aspnetmvc-pdf-viewer
+│  ◻ syncfusion-angular-pdf-viewer
 │  ◻ syncfusion-react-pdf-viewer
+│  ◻ syncfusion-vue-pdf-viewer
+│  ◻ syncfusion-javascript-pdf-viewer
 │  ◻ syncfusion-maui-pdf-viewer
 │  ◻ syncfusion-uwp-pdf-viewer
 │  ◻ syncfusion-winforms-pdf-viewer
 │  ◻ syncfusion-wpf-pdf-viewer
 │  ◻ syncfusion-flutter-pdf-viewer
+│  ◻ syncfusion-blazor-smart-pdf-viewer
 │  .....
 
 {% endhighlight %}
