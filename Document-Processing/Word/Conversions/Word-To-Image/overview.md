@@ -390,3 +390,4 @@ During Word to Image conversions, if a glyph of the input text is unavailable in
 * [How to convert Word to Image in Blazor WebAssembly (WASM)?](https://support.syncfusion.com/kb/article/12123/how-to-convert-word-to-image-in-blazor-webassembly-wasm)
 * [How to resolve font problems during Word to Image conversion?](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion)
 * [How to convert a chart to an image and replace it in a Word document?](https://support.syncfusion.com/kb/article/19752/how-to-convert-a-chart-to-an-image-and-replace-it-in-a-word-document)
+* [How to create thumbnail image for Word document in .NET?](https://support.syncfusion.com/kb/article/22462/how-to-create-thumbnail-image-for-word-document-in-net)

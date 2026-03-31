@@ -665,7 +665,7 @@ The following table contains the default name and value details used in the SfPd
 </tr>
 <tr>
 <td>StickyNoteEditorPlaceholder</td>
-<td>Write Your Note...</td>
+<td>Write Your Notehttps://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui.</td>
 </tr>
 <tr>
 <td>StickyNoteIcons</td>
@@ -747,5 +747,5 @@ The following table contains the default name and value details used in the SfPd
 
 
 ## See Also
-- [Right To Left](../right-to-left)
-- [Getting Started](../getting-started)
+- [Right To Left](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/right-to-left)
+- [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/getting-started)
