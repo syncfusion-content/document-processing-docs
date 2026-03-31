@@ -116,7 +116,7 @@ Provides tools for watermarking, digitally signing, and adding or removing annot
 
 | Tool | Syntax | Description |
 |---|---|---|
-| OcrPdf | `OcrPdf(string documentId, string language = "eng")` | Performs Optical Character Recognition (OCR) on a scanned or image-based PDF document to make its content text-searchable. Supported language codes: `eng` (English), `fra` (French). |
+| OcrPdf | `OcrPdf(string documentId, string language = "eng")` | Performs Optical Character Recognition (OCR) on a scanned or image-based PDF document to make its content text-searchable. Supported language codes: `eng` (English), etc.|
 
 ---
 
@@ -318,7 +318,7 @@ Provides tools to create modify and remove charts in excel workbooks
 
 **ExcelConditionalFormattingAgentTools**
 
-Provides toolsto add or remove conditional formatting in workbook
+Provides tools to add or remove conditional formatting in workbook
 
 | Tool | Syntax | Description |
 |---|---|---|
@@ -342,8 +342,6 @@ Provides tools to convert worksheet to image, HTML, ODS, JSON file formats
 | ConvertWorksheetToHtml | `ConvertWorksheetToHtml(string workbookId, string worksheetName, string outputPath, string textMode = "DisplayText")` | Converts a specific worksheet to an HTML file. |
 | ConvertUsedRangeToHtml | `ConvertUsedRangeToHtml(string workbookId, string worksheetName, string outputPath, string textMode = "DisplayText", bool autofitColumns = true)` | Converts the used range of a worksheet to an HTML file with optional column auto-fitting. |
 | ConvertAllWorksheetsToHtml | `ConvertAllWorksheetsToHtml(string workbookId, string outputDirectory, string textMode = "DisplayText", string fileNamePrefix = "Sheet")` | Converts all worksheets in a workbook to separate HTML files. |
-| ConvertWorkbookToOds | `ConvertWorkbookToOds(string workbookId, string outputPath)` | Converts an entire workbook to OpenDocument Spreadsheet (ODS) format. |
-| ConvertWorkbookToOdsStream | `ConvertWorkbookToOdsStream(string workbookId, string outputPath)` | Converts an entire workbook to ODS format using stream-based output. |
 | ConvertWorkbookToJson | `ConvertWorkbookToJson(string workbookId, string outputPath, bool includeSchema = true)` | Converts an entire workbook to JSON format with optional schema. |
 | ConvertWorkbookToJsonStream | `ConvertWorkbookToJsonStream(string workbookId, string outputPath, bool includeSchema = true)` | Converts an entire workbook to JSON format using stream-based output. |
 | ConvertWorksheetToJson | `ConvertWorksheetToJson(string workbookId, string worksheetName, string outputPath, bool includeSchema = true)` | Converts a specific worksheet to JSON format. |
@@ -396,7 +394,7 @@ Provides tools to create, edit pivot table in workbook
 
 **PresentationDocumentAgentTools**
 
-Provides core lifecycle operations for PowerPoint presentations — creating, loading, exporting, and managing presentations in memory.
+Provides core life cycle operations for PowerPoint presentations — creating, loading, exporting, and managing presentations in memory.
 
 | Tool | Syntax | Description |
 |---|---|---|
@@ -477,8 +475,8 @@ Provides AI-powered structured data extraction from PDF documents and images, re
 
 | Tool | Syntax | Description |
 |---|---|---|
-| `ExtractDataAsJSON` | `ExtractDataAsJSON(string inputFilePath, bool enableFormDetection = true, bool enableTableDetection = true, double confidenceThreshold = 0.6, int startPage = -1, int endPage = -1, bool detectSignatures = true, bool detectTextboxes = true, bool detectCheckboxes = true, bool detectRadioButtons = true, bool detectBorderlessTables = true, string? outputFilePath = null)` | Extracts structured data (text, forms, tables, checkboxes, signatures) from a PDF or image file and returns the result as JSON. |
-| `ExtractTableAsJSON` | `ExtractTableAsJSON(string inputFilePath, bool detectBorderlessTables = true, double confidenceThreshold = 0.6, int startPage = -1, int endPage = -1, string? outputFilePath = null)` | Extracts only table data from a PDF document and returns the result as JSON. Optimized for table-focused extraction. |
+| `ExtractDataAsJSON` | `ExtractDataAsJSON(string inputFilePath, bool enableFormDetection = true, bool enableTableDetection = true, double confidenceThreshold = 0.6, int startPage = -1, int endPage = -1, bool detectSignatures = true, bool detectTextboxes = true, bool detectCheckboxes = true, bool detectRadioButtons = true, bool detect_Border_less_Tables = true, string? outputFilePath = null)` | Extracts structured data (text, forms, tables, checkboxes, signatures) from a PDF or image file and returns the result as JSON. |
+| `ExtractTableAsJSON` | `ExtractTableAsJSON(string inputFilePath, bool detect_Border_less_Tables = true, double confidenceThreshold = 0.6, int startPage = -1, int endPage = -1, string? outputFilePath = null)` | Extracts only table data from a PDF document and returns the result as JSON. Optimized for table-focused extraction. |
 
 **ExtractDataAsJSON** — Parameter Details
 
@@ -494,7 +492,7 @@ Provides AI-powered structured data extraction from PDF documents and images, re
 | `detectTextboxes` | `bool` | `true` | Enables detection of text box fields. |
 | `detectCheckboxes` | `bool` | `true` | Enables detection of checkbox fields. |
 | `detectRadioButtons` | `bool` | `true` | Enables detection of radio button fields. |
-| `detectBorderlessTables` | `bool` | `true` | Enables detection of tables without visible borders. |
+| `detect_Border_less_Tables` | `bool` | `true` | Enables detection of tables without visible borders. |
 | `outputFilePath` | `string?` | `null` | Optional file path to save the JSON output. |
 
 **Example usage prompts:**
