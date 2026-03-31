@@ -1,6 +1,6 @@
 ---
 title: Assemblies Required for OCR | Syncfusion
-description: This section explains about the Syncfusion assemblies required to work with OCR processor
+description: This section describes the required Syncfusion assemblies needed to integrate and use the OCR Processor effectively in your applications
 platform: document-processing
 control: PDF
 documentation: UG
