@@ -23,6 +23,28 @@ saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/sp
 
 These demo services are intended solely for demonstration purposes and are not recommended for production or development environments.
 
+For better control and performance, we recommend that you configure and run your own Open and Save services locally or on your preferred hosting environment.
+
+### What is a Local Service?
+
+A local service is a web API running on your local machine (or internal network) that handles file operations for the Spreadsheet component. Instead of relying on external hosted endpoints, you control the service directly, giving you greater security, reliability, and customization options.
+
+### Why Use a Local Service Instead of Demo Services?
+
+**Limitations of demo/hosted services:**
+- Intended solely for demonstration purposes
+- Not recommended for production or development environments
+- Limited by external service availability and performance
+- Potential security concerns with uploading files to third-party servers
+- No direct control over the processing logic or file handling
+
+**Benefits of a local service:**
+- **Security**: Files are processed on your own infrastructure
+- **Performance**: Reduced latency with local processing
+- **Customization**: Implement custom business logic for file operations
+- **Reliability**: Direct control over service availability and uptime
+- **Compliance**: Meet regulatory requirements by keeping data on-premises
+
 ## How-To Guide: Create a Local ASP.NET MVC Web Service
 
 ### Create a New ASP.NET MVC Project
