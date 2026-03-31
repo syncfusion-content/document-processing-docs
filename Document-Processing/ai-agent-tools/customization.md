@@ -17,7 +17,7 @@ The Syncfusion Document SDK Agent Tool library is designed to be extensible. Thi
 
 Follow these steps to expose new document operations to the AI agent.
 
-### Step 1: Subclass AgentToolBase
+**Step 1: Create a Custom Agent Tool by Inheriting AgentToolBase**
 
 Create a new class that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document repository through its constructor:
 
@@ -37,7 +37,7 @@ public class WordWatermarkAgentTools : AgentToolBase
 }
 ```
 
-### Step 2: Add Tool Methods with [Tool]
+**Step 2: Add Tool Methods with [Tool]**
 
 Add `public` instance methods and decorate each one with `[Tool]`, providing a name and a description that the AI agent will use to understand when to call it:
 
@@ -51,7 +51,7 @@ public CallToolResult AddTextWatermark(...)
 }
 ```
 
-### Step 3: Annotate Parameters with [ToolParameter]
+**Step 3: Annotate Parameters with [ToolParameter]**
 
 Decorate each method parameter with `[ToolParameter]` to give the AI a natural-language description of what value to pass:
 
@@ -65,7 +65,7 @@ public CallToolResult AddTextWatermark(
     float fontSize = 72f)
 ```
 
-### Step 4: Return CallToolResult
+**Step 4: Return CallToolResult**
 
 All tool methods must return `CallToolResult`. Use the static factory methods to signal success or failure:
 
@@ -77,7 +77,7 @@ return CallToolResult.Ok("Operation completed successfully.");
 return CallToolResult.Fail("Reason the operation failed.");
 ```
 
-### Complete Example
+### Example
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -155,7 +155,7 @@ public class WordWatermarkAgentTools : AgentToolBase
 
 Once your custom tool class is created, register it alongside the built-in tools in your host application.
 
-### Step 1: Instantiate the Custom Tool Class
+**Step 1: Instantiate the Custom Tool Class**
 
 ```csharp
 var wordRepo = new WordDocumentRepository(TimeSpan.FromMinutes(5));
@@ -167,7 +167,7 @@ var wordDocTools = new WordDocumentAgentTools(wordRepo, outputDirectory);
 var wordWatermarkTools = new WordWatermarkAgentTools(wordRepo);
 ```
 
-### Step 2: Collect All Tools
+**Step 2: Collect All Tools**
 
 ```csharp
 var allSyncfusionTools = new List<Syncfusion.AI.AgentTools.Core.AITool>();
@@ -175,7 +175,7 @@ allSyncfusionTools.AddRange(wordDocTools.GetTools());
 allSyncfusionTools.AddRange(wordWatermarkTools.GetTools()); // <-- custom tools
 ```
 
-### Step 3: Convert to Microsoft.Extensions.AI Tools
+**Step 3: Convert to Microsoft.Extensions.AI Tools**
 
 ```csharp
 using Microsoft.Extensions.AI;
@@ -190,7 +190,7 @@ var msAiTools = allSyncfusionTools
     .ToList();
 ```
 
-### Step 4: Build the Agent
+**Step 4: Build the Agent**
 
 ```csharp
 var agent = openAIClient.AsAIAgent(

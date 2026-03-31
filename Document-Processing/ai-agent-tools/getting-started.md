@@ -19,18 +19,18 @@ The Syncfusion Document SDK Agent Tool library exposes Word, Excel, PDF, and Pow
 |---|---|
 | **.NET SDK** | .NET 8.0 or .NET 10.0 |
 | **OpenAI API Key** | Obtain one from [platform.openai.com](https://platform.openai.com). |
-| **Syncfusion License** | Community or commercial license. See [syncfusion.com/products/communitylicense](https://www.syncfusion.com/products/communitylicense). |
+| **Syncfusion License** | Community or commercial license. See [syncfusion.com/products/community-license](https://www.syncfusion.com/products/communitylicense). |
 | **NuGet Packages** | `Microsoft.Agents.AI.OpenAI` (v1.0.0-rc4) and Syncfusion AgentLibrary packages. |
 
 ---
 
-## Integration Overview
+## Integration
 
 Integrating the Agent Tool library into an agent framework involves following steps:
 
 ---
 
-## Step 1 — Register the Syncfusion License
+**Step 1 — Register the Syncfusion License**
 
 Register your Syncfusion license key at application startup before any document operations are performed:
 
@@ -46,7 +46,7 @@ if (!string.IsNullOrEmpty(licenseKey))
 
 ---
 
-## Step 2 — Create Document Repositories
+**Step 2 — Create Document Repositories**
 
 Repositories are in-memory containers that hold document instances across tool calls. Create one repository per document type:
 
@@ -83,7 +83,7 @@ repoCollection.AddRepository(DocumentType.PowerPoint,  presentationRepository);
 
 ---
 
-## Step 3 — Instantiate Agent Tool Classes and Collect Tools
+**Step 3 — Instantiate Agent Tool Classes and Collect Tools**
 
 Each tool class is initialized with the relevant repository (and an optional output directory). Call `GetTools()` on each to get a list of `AITool` objects:
 
@@ -126,7 +126,7 @@ allTools.AddRange(new DataExtractionAgentTools(outputDir).GetTools());
 
 ---
 
-## Step 4 — Convert Syncfusion AITools to Microsoft.Extensions.AI Functions
+**Step 4 — Convert Syncfusion AITools to Microsoft.Extensions.AI Functions**
 
 The Syncfusion `AITool` objects expose a `MethodInfo` and a target instance. Use `AIFunctionFactory.Create` from `Microsoft.Extensions.AI` to wrap them into framework-compatible function objects:
 
@@ -150,7 +150,7 @@ Each converted function carries the tool name, description, and parameter metada
 
 ---
 
-## Step 5 — Build the AIAgent and Run the Chat Loop
+**Step 5 — Build the AIAgent and Run the Chat Loop**
 
 ### Create the Agent
 
@@ -262,7 +262,7 @@ Any other provider that exposes an `IChatClient` (Ollama, Anthropic via adapters
 
 ---
 
-## Example Prompts to Try
+## Example Prompts
 
 | Category | Example Prompt |
 |---|---|
@@ -270,7 +270,6 @@ Any other provider that exposes an `IChatClient` (Ollama, Anthropic via adapters
 | **Word** | *"Merge three Word documents and apply password protection"* |
 | **Word** | *"Perform a mail merge using customer data and save individual documents"* |
 | **Excel** | *"Create a spreadsheet with sales data and SUM formulas, then export to CSV"* |
-| **PDF** | *"Merge multiple PDFs and add a diagonal watermark to each page"* |
 | **PDF** | *"Compress report.pdf and encrypt it with a password"* |
 | **PowerPoint** | *"Open Sample.pptx and replace all occurrences of `{product}` with `Cycle`"* |
 | **Conversion** | *"Convert Simple.docx to PDF"* |
