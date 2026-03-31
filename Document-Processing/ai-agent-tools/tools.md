@@ -7,7 +7,7 @@ control: AI Agent Tools
 documentation: ug
 ---
 
-## Agent Tools
+# Agent Tools
 
 Agent Tools are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate repository.
 

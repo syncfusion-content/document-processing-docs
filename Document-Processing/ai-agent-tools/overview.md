@@ -7,7 +7,7 @@ control: AI Agent Tools
 documentation: ug
 ---
 
-# Overview
+# Syncfusion<sup>&reg;</sup> Document SDK Agent tool Overview
 
 ## What is Syncfusion Document SDK Agent Tool?
 

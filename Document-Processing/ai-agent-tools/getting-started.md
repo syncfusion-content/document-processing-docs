@@ -18,7 +18,7 @@ The Syncfusion Document SDK Agent Tool library exposes Word, Excel, PDF, and Pow
 | Requirement | Details |
 |---|---|
 | **.NET SDK** | .NET 8.0 or .NET 10.0 |
-| **OpenAI API Key** | Obtain one from [platform.openai.com](https://platform.openai.com). |
+| **OpenAI API Key** | Obtain one from [platform.openai.com](https://platform.openai.com/login). |
 | **Syncfusion License** | Community or commercial license. See [syncfusion.com/products/community-license](https://www.syncfusion.com/products/communitylicense). |
 | **NuGet Packages** | `Microsoft.Agents.AI.OpenAI` (v1.0.0-rc4) and Syncfusion AgentLibrary packages. |
 
@@ -232,7 +232,7 @@ The agent automatically:
 
 For a complete, runnable example that combines all five steps, refer to the example application in the GitHub repository:
 
-**[Examples/SyncfusionAgentTools/Program.cs](https://github.com/syncfusion/Document-SDK-Agent-Tool/blob/main/Examples/SyncfusionAgentTools/Program.cs)**
+**Examples/SyncfusionAgentTools/Program.cs**
 
 You can clone and run it directly:
 
