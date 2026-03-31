@@ -8,8 +8,7 @@ documentation: UG
 
 # How to avoid exception when adding worksheets with same name?
 
-Microsoft Excel throws exception when adding worksheet with existing worksheet name in a workbook and XlsIO does the same. But in some case, if you want to add worksheets with the same name using XlsIO then you can avoid the exception in XlsIO by setting [IgnoreSheetNameException](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication
-html#Syncfusion_XlsIO_IApplication_IgnoreSheetNameException) property of [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html) as true.
+Microsoft Excel throws exception when adding worksheet with existing worksheet name in a workbook and XlsIO does the same. But in some case, if you want to add worksheets with the same name using XlsIO then you can avoid the exception in XlsIO by setting [IgnoreSheetNameException](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_IgnoreSheetNameException) property of [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html) as true.
 
 The following code snippet shows how to add two worksheets with same name in a workbook.
 
