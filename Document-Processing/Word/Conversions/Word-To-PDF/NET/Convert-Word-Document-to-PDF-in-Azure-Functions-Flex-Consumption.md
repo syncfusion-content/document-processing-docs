@@ -16,7 +16,7 @@ Step 1: Create a new Azure Functions project.
 ![Create a Azure Functions project](Azure-Images/Functions-Flex-Consumption/Azure_Word_to_PDF.png)
 
 Step 2: Create a project name and select the location.
-![Create a project name](Azure-Images/Functions-Flex-Consumption/Configure_Word_to_PDF.png)
+![Create a project name](Azure-Images/Functions-Flex-Consumption/Configuration_Word_to_PDF.png)
 
 Step 3: Select function worker as **.NET 8.0 (Long Term Support)** (isolated worker) and target Flex/Consumption hosting suitable for isolated worker.
 ![Select function worker](Azure-Images/Functions-Flex-Consumption/Additional_Information_Word_to_PDF.png)
@@ -120,7 +120,7 @@ public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "
 {% endtabs %}
 
 Step 7: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
-![Create a new profile in the Publish Window](Azure-Images/Functions-Flex-Consumption/Publish_Word_to_PDF.png)
+![Create a new profile in the Publish Window](Azure-Images/Functions-Flex-Consumption/Publish_WordtoPDF.png)
 
 Step 8: Select the target as **Azure** and click **Next** button.
 ![Select the target as Azure](Azure-Images/Functions-Flex-Consumption/Target_Word_to_PDF.png)

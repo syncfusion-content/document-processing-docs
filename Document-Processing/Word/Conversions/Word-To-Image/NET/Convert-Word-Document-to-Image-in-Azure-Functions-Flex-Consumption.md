@@ -118,7 +118,7 @@ public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "
 {% endtabs %}
 
 Step 7: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
-![Create a new profile in the Publish Window](Azure-Images/Functions-Flex-Consumption/Publish_Word_to_Image.png)
+![Create a new profile in the Publish Window](Azure-Images/Functions-Flex-Consumption/Publish_Wordto_Image.png)
 
 Step 8: Select the target as **Azure** and click **Next** button.
 ![Select the target as Azure](Azure-Images/Functions-Flex-Consumption/Target_Word_to_Image.png)
@@ -143,7 +143,7 @@ Step 14: Publish has been succeed.
 
 Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **Word document to image conversion** using the template Word document). You will get the output **image** as follows.
 
-![Word to Image in Azure Functions v4](WordToPDF_images/Output-WordtoImage.png)
+![Word to Image in Azure Functions Flex Consumption](WordToPDF_images/Output-WordtoImage.png)
 
 ## Steps to post the request to Azure Functions
 
