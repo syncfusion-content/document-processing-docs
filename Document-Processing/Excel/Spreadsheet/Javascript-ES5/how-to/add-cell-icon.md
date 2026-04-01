@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add icons in cells in EJ2 Javascript Spreadsheet component | Syncfusion
+title: Add icons in EJ2 Javascript Spreadsheet component | Syncfusion
 description: Learn here all about adding icon inside cells using a custom template in Syncfusion EJ2 Javascript Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing

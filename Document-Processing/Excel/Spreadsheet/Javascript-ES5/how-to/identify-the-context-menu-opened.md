@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Identify the context menu opened in EJ2 Javascript Spreadsheet control | Syncfusion
+title: Context menu opened in EJ2 Javascript Spreadsheet control | Syncfusion
 description: Learn here all about how to identify the context menu opened in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Spreadsheet 

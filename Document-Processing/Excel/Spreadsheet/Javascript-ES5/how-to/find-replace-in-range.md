@@ -15,10 +15,10 @@ The following sample demonstrates how to limit the "Replace All" operation to th
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/javascript-es5/find-and-replace-cs1/app/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/find-and-replace-cs1/index.js %}
 {% endhighlight %}
 {% highlight ts tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es5/find-and-replace-cs1/app/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/find-and-replace-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
