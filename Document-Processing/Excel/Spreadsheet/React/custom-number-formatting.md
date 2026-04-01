@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom & Culture Number Formats | Syncfusion React Spreadsheet
-description: Custom number formats and culture-aware formats in Syncfusion React Spreadsheet.
+title: Custom and Culture Number Formats | Syncfusion React Spreadsheet
+description: Custom number formats and culture-based formats in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Formatting
 platform: document-processing
 documentation: ug
 ---
 
-## Custom Number Formatting
+# Custom Number Formatting
 
 Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the pre-defined number formats do not meet your needs, you can set your own custom formats using custom number formats dialog or `numberFormat` method.
 
@@ -53,7 +53,7 @@ The different types of custom number format populated in the custom number forma
 | Accounting | `_(* #,##0.00_);_(* (#,##0.00);_(* "-"??_);_(@_)` | 43 |
 
 Custom Number formatting can be applied in following ways,
-* Using the [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#numberformat) method, you can set your own custom number format to a cell or range of cells.
+* Using the [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method, you can set your own custom number format to a cell or range of cells.
 * Selecting the custom number format option from custom number formats dialog or type your own format in dialog input and then click apply button. It will apply the custom format for selected cells.
 
 The following code example shows the number formatting in cell data.

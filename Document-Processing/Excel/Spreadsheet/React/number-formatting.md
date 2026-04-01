@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Number Formatting in React Spreadsheet component | Syncfusion
-description: Number formatting options in the Syncfusion React Spreadsheet component.
+description: Learn here all about Number formatting in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Formatting
 platform: document-processing
 documentation: ug
 ---
 
-## Number Formatting
+# Number Formatting
 
-Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet.
+Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet.
 
 The different types of number formatting supported in Spreadsheet are:
 
@@ -30,7 +30,7 @@ The different types of number formatting supported in Spreadsheet are:
 Number formatting can be applied in the following ways:
 
 - Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
-- Using the [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#numberformat) method, you can set the number format to a cell or range of cells.
+- Using the [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method, you can set the number format to a cell or range of cells.
 - Selecting the number format option from the ribbon toolbar.
 
 The following code example shows number formatting usage.
