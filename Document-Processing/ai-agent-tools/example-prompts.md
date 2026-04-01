@@ -11,13 +11,6 @@ documentation: ug
 
 Speed up your document automation using these example prompts for Syncfusion Document SDK AI Agent Tools. Each prompt demonstrates real-world scenarios—like document creation, data extraction, conversion, and manipulation.
 
-## How to Use
-
-* Choose a prompt that fits your document processing need.
-* Adapt the prompt for your specific use case and data format.
-* Execute via your AI agent framework.
-* Always validate the generated documents before using them in production.
-
 ## Document Processing Prompts
 
 ### PDF
