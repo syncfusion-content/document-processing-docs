@@ -27,22 +27,24 @@ It exposes a rich set of well-defined tools and functions that an AI agent can i
 | **Security** | Encrypt, decrypt, protect, and manage permissions on all document types. |
 | **Office to PDF Conversion** | Convert Word, Excel, and PowerPoint documents to PDF. |
 | **Data Extraction** | Extract structured data (text, tables, forms, checkboxes) from PDFs and images as JSON. |
+| **PDF OCR Processor** |Convert PDFs and images (TIFF, JPEG, PNG, BMP) to searchable, text-extractable format.|
+|**HTML to PDF Conversion**|Convert URL, HTML string, SVG, MHTML to PDF|
 
 
 ## Supported Document Formats
 
 | Format | Supported File Types |
 |---|---|
-| **Word** | `.docx`, `.doc`, `.rtf`, `.html`, `.txt` |
+| **Word** | `.docx`, `.doc`, `.rtf`, `.html`, `.txt`, `.md` |
 | **Excel** | `.xlsx`, `.xls`, `.xlsm`, `.csv` |
 | **PDF** | `.pdf` (including password-protected files) |
 | **PowerPoint** | `.pptx` (including password-protected files) |
 | **Image (extraction input)** | `.png`, `.jpg`, `.jpeg` |
 
 
-## NuGet Package Dependencies
+## Dependent NuGet Packages
 
-### Agent Library
+The following NuGet packages are required dependencies for the agent tool library.
 
 | Package | Purpose |
 |---|---|
@@ -58,7 +60,8 @@ It exposes a rich set of well-defined tools and functions that an AI agent can i
 | [Syncfusion.SmartFormRecognizer.Net.Core](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.Net.Core) | Form field recognition |
 |[Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core)|OCR Processor|
 |[Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows)| HTML to PDF conversion|
-### Example Application
+
+The following NuGet packages are used in the application.
 
 | Package | Purpose |
 |---|---|

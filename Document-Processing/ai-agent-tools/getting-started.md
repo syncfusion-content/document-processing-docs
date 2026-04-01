@@ -39,7 +39,6 @@ if (!string.IsNullOrEmpty(licenseKey))
 }
 ```
 
-> **Note:** For community license users, the key can be obtained from [syncfusion.com](https://www.syncfusion.com/products/communitylicense) free of charge.
 
 
 **Step 2 — Create Document Repositories**
@@ -133,7 +132,7 @@ var aiTools = allTools
         t.Instance,
         new AIFunctionFactoryOptions
         {
-            Name        = t.Name,
+            Name = t.Name,
             Description = t.Description
         }))
     .Cast<Microsoft.Extensions.AI.AITool>()
@@ -151,8 +150,8 @@ Use `AsAIAgent()` from `Microsoft.Agents.AI` to build an agent from an OpenAI ch
 using Microsoft.Agents.AI;
 using OpenAI;
 
-string apiKey       = Environment.GetEnvironmentVariable("OPENAI_API_KEY")!;
-string model        = Environment.GetEnvironmentVariable("OPENAI_MODEL") ?? "gpt-4o";
+string apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY")!;
+string model = Environment.GetEnvironmentVariable("OPENAI_MODEL") ?? "gpt-4o";
 string systemPrompt = "
     You are a professional document management assistant using Syncfusion Document SDKs.
     You can work with Word documents, Excel spreadsheets, PDF files, and PowerPoint presentations.

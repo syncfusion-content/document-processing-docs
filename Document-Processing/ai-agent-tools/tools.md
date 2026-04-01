@@ -12,7 +12,6 @@ documentation: ug
 Agent Tools are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate repository.
 
 Tools are organized into the following categories:
-
 | Category | Tool Classes | Description |
 |---|---|---|
 | **PDF** | PdfDocumentAgentTools,<br/>PdfOperationsAgentTools,<br/>PdfSecurityAgentTools,<br/>PdfContentExtractionAgentTools,<br/>PdfAnnotationAgentTools,<br/>PdfConverterAgentTools,<br/>PdfOcrAgentTools | Create, manipulate, secure, extract content from, annotate, convert, and perform OCR on PDF documents. |
@@ -25,13 +24,13 @@ Tools are organized into the following categories:
 
 ## Repositories
 
-Repositories are in-memory containers that manage document life cycles during AI agent operations. Each repository extends `DocumentRepositoryBase<TDocument>`, which provides common functionality including document creation, import/export, active document tracking, and automatic expiration-based cleanup.
+Repositories are in-memory containers that manage document life cycles during AI agent operations. They provide common functionality including document creation, import/export, active document tracking, and automatic expiration-based cleanup.
 
 **Available Repositories**
 
 | Repository | Description |
 |---|---|
-| WordDocumentRepository | Manages Word documents in memory. Supports `.docx`, `.doc`, `.rtf`, `.html`, and `.txt` formats with auto-detection on import. |
+| WordDocumentRepository | Manages Word documents in memory. Supports `.docx`, `.doc`, `.rtf`, `.html`, `.md`,  and `.txt` formats with auto-detection on import. |
 | ExcelWorkbookRepository | Manages Excel workbooks in memory. Owns an `ExcelEngine` instance and implements `IDisposable` for proper resource cleanup. Supports `.xlsx`, `.xls`, `.xlsm`, and `.csv` on export. |
 | PdfDocumentRepository | Manages PDF documents in memory. Supports both new `PdfDocument` instances and loaded `PdfLoadedDocument` instances, including password-protected files. |
 | PresentationRepository | Manages PowerPoint presentations in memory. Supports creating new empty presentations and loading existing `.pptx` files, including password-protected ones. |
@@ -40,7 +39,7 @@ Repositories are in-memory containers that manage document life cycles during AI
 
 `DocumentRepositoryCollection` is a centralized registry that holds one repository for each `DocumentType`. It is designed for tool classes that need to work across multiple document types within a single operation — specifically when the source and output documents belong to different repositories.
 
-**Why it is needed:** Consider a Word-to-PDF conversion. The source Word document lives in `WordDocumentRepository`, but the resulting PDF must be stored in `PdfDocumentRepository`. Rather than hardcoding both repositories into the tool class, `OfficeToPdfAgentTools` accepts a `DocumentRepositoryCollection` and resolves the correct repository dynamically at runtime based on the `sourceType` argument.
+**Why it is needed:** Consider a Word-to-PDF conversion. The source Word document lives in `WordDocumentRepository`, but the resulting PDF must be stored in `PdfDocumentRepository`. Rather than hard coding both repositories into the tool class, `OfficeToPdfAgentTools` accepts a `DocumentRepositoryCollection` and detects the correct repository dynamically at runtime based on the `sourceType` argument.
 
 > **Note:** Tools that operate on a single document type (e.g., `WordDocumentAgentTools`, `PdfAnnotationAgentTools`) are initialized directly with their own repository. Only cross-format tools such as `OfficeToPdfAgentTools` require a `DocumentRepositoryCollection`.
 
@@ -105,6 +104,7 @@ Provides tools for watermarking, digitally signing, and adding or removing annot
 
 **PdfConverterAgentTools**
 
+Provides tools to convert image, HTML to Pdf
 | Tool | Syntax | Description |
 |---|---|---|
 | ConvertPdfToPdfA | ConvertPdfToPdfA(<br/>string documentId,<br/>PdfConformanceLevel conformanceLevel) | Converts a loaded PDF document to a PDF/A-compliant format. Supported conformance levels: `PdfA1B`, `PdfA2B`, `PdfA3B`, `Pdf_A4`, `Pdf_A4F`, `Pdf_A4E`. |
@@ -113,6 +113,7 @@ Provides tools for watermarking, digitally signing, and adding or removing annot
 
 **PdfOcrAgentTools**
 
+Provides tools to perform OCR on PDF
 | Tool | Syntax | Description |
 |---|---|---|
 | OcrPdf | OcrPdf(<br/>string documentId,<br/>string language = "eng") | Performs Optical Character Recognition (OCR) on a scanned or image-based PDF document to make its content text-searchable. Supported language codes: `eng` (English), etc.|
@@ -122,7 +123,7 @@ Provides tools for watermarking, digitally signing, and adding or removing annot
 
 **WordDocumentAgentTools**
 
-Provides core lifecycle operations for Word documents — creating, loading, exporting, and managing Word documents in memory.
+Provides core life cycle operations for Word documents — creating, loading, exporting, and managing Word documents in memory.
 
 | Tool | Syntax | Description |
 |---|---|---|
@@ -241,7 +242,7 @@ Provides tools to manage bookmarks and bookmark content within Word documents.
 
 **ExcelWorkbookAgentTools**
 
-Provides core lifecycle operations for Excel workbooks — creating, loading, exporting, and managing workbooks in memory.
+Provides core life cycle operations for Excel workbooks — creating, loading, exporting, and managing workbooks in memory.
 
 | Tool | Syntax | Description |
 |---|---|---|
