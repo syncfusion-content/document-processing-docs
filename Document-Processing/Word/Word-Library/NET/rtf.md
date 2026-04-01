@@ -115,3 +115,4 @@ The supported and unsupported features of DocIO based on file formats can be ref
 
 * [How to copy the format of the text from an RTF string and apply it to text in DOCX format document?](https://support.syncfusion.com/kb/article/17903/how-to-copy-the-format-of-the-text-from-an-rtf-string-and-apply-it-to-text-in-docx-format-document)
 * [How to Convert RTF to HTML and Vice Versa using .NET Core DocIO?](https://support.syncfusion.com/kb/article/19608/how-to-convert-rtf-to-html-and-vice-versa-using-net-core-docio?)
+* [How to convert RTF string to HTML string in .NET Word Library?](https://support.syncfusion.com/kb/article/22471/how-to-convert-rtf-string-to-html-string-in-net-word-library)
