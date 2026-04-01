@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Frequently Asked Questions Section  
+# Frequently Asked Questions Section In Excel  
 
 The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed below.
 
@@ -98,7 +98,7 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to delete blank rows and blank columns in an Excel worksheet using C#?](faqs/how-to-delete-blank-rows-and-columns-in-a-worksheet)
 * [How to retain cell values after removing formulas in Excel?](faqs/how-to-retain-cell-values-after-removing-formulas-in-excel)
 * [How to remove data validation from the specified range?](faqs/how-to-remove-data-validation-from-the-specified-range)
-* [How to remove autofilter from an Excel worksheet?](faqs/how-to-remove-autofilter-in-an-Excel)
+* [How to remove auto filter from an Excel worksheet?](faqs/how-to-remove-autofilter-in-an-Excel)
 * [How to convert an Excel worksheet to a high-resolution image?](faqs/how-to-convert-an-excel-worksheet-to-a-high-resolution-image)
 * [How to add and remove page breaks in a worksheet?](faqs/how-to-add-and-remove-page-breaks-in-Excel)
 * [How to decrypt individual items with specific passwords?](faqs/how-to-decrypt-individual-items-with-specific-passwords-in-a-protected-zip-file)
