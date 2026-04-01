@@ -56,6 +56,10 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate c
       <td><a href="https://help.syncfusion.com/document-processing/data-extraction/overview">Smart Data Extraction</a></td>
       <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-smart-data-extraction">syncfusion-dotnet-smart-data-extraction</a></td>
     </tr>
+    <tr>
+      <td><a href="https://help.syncfusion.com/windowsforms/calculation-engine/overview">Calculate</a></td>
+      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-calculate">syncfusion-dotnet-calculate</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -114,6 +118,7 @@ Select skills to install (space to toggle)
 │  ◻ syncfusion-dotnet-powerpoint
 │  ◻ syncfusion-dotnet-markdown
 │  ◻ syncfusion-dotnet-smart-data-extraction
+│  ◻ syncfusion-dotnet-calculate
 │  ◻ syncfusion-java-word
 │  ◻ syncfusion-flutter-pdf
 │  ◻ syncfusion-javascript-pdf
@@ -192,6 +197,7 @@ Once skills are installed, the assistant can generate Syncfusion<sup style="font
 - "Show me DocIO code to create a Word document with a title and a paragraph."
 - "Generate a C# snippet to add a table to a PowerPoint slide."
 - "Show me code to extract all fields and tables from a PDF as JSON using Smart Data Extraction."
+- "Create a calculation engine and evaluate arithmetic and Excel-style formulas."
 
 **Execute Task (Mode 2):**
 
