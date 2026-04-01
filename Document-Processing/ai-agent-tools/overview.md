@@ -16,19 +16,17 @@ It exposes a rich set of well-defined tools and functions that an AI agent can i
 
 ## Key Capabilities
 
-| Capability | Description |
-|---|---|
-| **Document Creation** | Create new Word, Excel, PDF, and PowerPoint documents programmatically. |
-| **Document Manipulation** | Edit, merge, split, compare, and secure documents across all supported formats. |
-| **Content Extraction** | Extract text, tables, images, form fields, and bookmarks from documents. |
-| **Mail Merge** | Execute mail merge operations on Word documents using structured JSON data. |
-| **Find and Replace** | Locate and replace text or regex patterns in Word and PowerPoint documents. |
-| **Revision Tracking** | Accept or reject tracked changes in Word documents. |
-| **Security** | Encrypt, decrypt, protect, and manage permissions on all document types. |
-| **Office to PDF Conversion** | Convert Word, Excel, and PowerPoint documents to PDF. |
-| **Data Extraction** | Extract structured data (text, tables, forms, checkboxes) from PDFs and images as JSON. |
-| **PDF OCR Processor** |Convert PDFs and images (TIFF, JPEG, PNG, BMP) to searchable, text-extractable format.|
-|**HTML to PDF Conversion**|Convert URL, HTML string, SVG, MHTML to PDF|
+- Create new Word, Excel, PDF documents programmatically.
+- Edit, merge, split, compare, and secure documents across all supported formats.
+- Extract text, tables, images, form fields, and bookmarks from documents.
+- Execute mail merge operations on Word documents using structured JSON data.
+- Locate and replace text or regex patterns in Word and PowerPoint documents.
+- Accept or reject tracked changes in Word documents.
+- Encrypt, decrypt, protect, and manage permissions on all document types.
+- Convert Word, Excel, and PowerPoint documents to PDF.
+- Extract structured data (text, tables, forms, checkboxes) from PDFs and images as JSON.
+- Convert PDFs and images (TIFF, JPEG, PNG, BMP) to searchable, text-extractable format.
+- Convert URL, HTML string, SVG, MHTML to PDF.
 
 
 ## Supported Document Formats
