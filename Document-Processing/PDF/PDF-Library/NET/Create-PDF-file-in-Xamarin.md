@@ -166,7 +166,7 @@ android:resource="@xml/provider_paths" />
 
 ### Please include the changes if you deploy the application in Android 11:
 
-* Enabled the androidLegacyExtranalStorage in the AndroidManifest.xml file.
+* Enabled the androidLegacyExternalStorage in the AndroidManifest.xml file.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -438,7 +438,7 @@ PdfLoadedForm form = loadedDocument.Form;
 (form.Fields[0] as PdfLoadedTextBoxField).Text = "John";
 //Fills the textbox fields by using field name.
 (form.Fields["LastName"] as PdfLoadedTextBoxField).Text = "Doe";
-(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Anytown, USA";
+(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Any town, USA";
 //Loads the radio button group.
 PdfLoadedRadioButtonItemCollection radioButtonCollection = (form.Fields["Gender"] as PdfLoadedRadioButtonListField).Items;
 //Checks the 'Male' option.
@@ -472,7 +472,7 @@ You can merge the PDF document streams by using the following code example.
 
 //Creates a PDF document.
 PdfDocument finalDoc = new PdfDocument();
-//Loads the Pdf as a stream.
+//Loads the PDF as a stream.
 Stream stream1 = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.file1.pdf");
 Stream stream2 = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.file2.pdf");
 // Creates a PDF stream for merging.

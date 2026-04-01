@@ -15,10 +15,10 @@ To include the Syncfusion<sup>&reg;</sup> UWP PDF library into your UWP applicat
 ## Steps to create PDF document in UWP
 
 Step 1: Create a new UWP application project. 
-![UWP sample creation](UWP_images/UWP_sample_creation.jpg)
+![UWP sample creation](GettingStarted_images/UWP_sample_creation.png)
 
 Step 2: Install the [Syncfusion.Pdf.UWP](https://www.nuget.org/packages/Syncfusion.Pdf.UWP/) NuGet package as reference to your UWP applications from [NuGet.org](https://www.nuget.org/).
-![PDF UWP Nuget package](UWP_images/NuGet-pakcage.jpeg)
+![PDF UWP Nuget package](GettingStarted_images/NuGet-package-UWP.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -373,7 +373,7 @@ PdfLoadedForm form = loadedDocument.Form;
 (form.Fields[0] as PdfLoadedTextBoxField).Text = "John";
 //Fills the textbox fields by using field name.
 (form.Fields["LastName"] as PdfLoadedTextBoxField).Text = "Doe";
-(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Anytown, USA";
+(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Any town, USA";
 //Loads the radio button group.
 PdfLoadedRadioButtonItemCollection radioButtonCollection = (form.Fields["Gender"] as PdfLoadedRadioButtonListField).Items;
 //Checks the 'Male' option.
