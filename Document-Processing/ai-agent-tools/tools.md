@@ -342,6 +342,8 @@ Provides tools to convert worksheet to image, HTML, ODS, JSON file formats
 | ConvertWorksheetToHtml | `ConvertWorksheetToHtml(string workbookId, string worksheetName, string outputPath, string textMode = "DisplayText")` | Converts a specific worksheet to an HTML file. |
 | ConvertUsedRangeToHtml | `ConvertUsedRangeToHtml(string workbookId, string worksheetName, string outputPath, string textMode = "DisplayText", bool autofitColumns = true)` | Converts the used range of a worksheet to an HTML file with optional column auto-fitting. |
 | ConvertAllWorksheetsToHtml | `ConvertAllWorksheetsToHtml(string workbookId, string outputDirectory, string textMode = "DisplayText", string fileNamePrefix = "Sheet")` | Converts all worksheets in a workbook to separate HTML files. |
+| ConvertWorkbookToOds | `ConvertWorkbookToOds(string workbookId, string outputPath)` | Converts an entire workbook to OpenDocument Spreadsheet (ODS) format. |
+| ConvertWorkbookToOdsStream | `ConvertWorkbookToOdsStream(string workbookId, string outputPath)` | Converts an entire workbook to ODS format using stream-based output. |
 | ConvertWorkbookToJson | `ConvertWorkbookToJson(string workbookId, string outputPath, bool includeSchema = true)` | Converts an entire workbook to JSON format with optional schema. |
 | ConvertWorkbookToJsonStream | `ConvertWorkbookToJsonStream(string workbookId, string outputPath, bool includeSchema = true)` | Converts an entire workbook to JSON format using stream-based output. |
 | ConvertWorksheetToJson | `ConvertWorksheetToJson(string workbookId, string worksheetName, string outputPath, bool includeSchema = true)` | Converts a specific worksheet to JSON format. |
