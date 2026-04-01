@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Number Formatting
+# Number Formatting in React Spreadsheet component
 
 Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet.
 
