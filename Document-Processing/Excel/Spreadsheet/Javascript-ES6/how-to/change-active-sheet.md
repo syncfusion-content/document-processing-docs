@@ -9,7 +9,7 @@ documentation: ug
 
 # Changing the active sheet in EJ2 TypeScript Spreadsheet control
 
-You can change the active sheet of imported file by updating [`activeSheetIndex`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#activesheetindex) property on the [`openComplete`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#opencomplete) event.
+You can change the active sheet of imported file by updating [`activeSheetIndex`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#activesheetindex) property on the [`openComplete`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#opencomplete) event.
 
 The following code example shows how to set the active sheet when importing an Excel file.
 

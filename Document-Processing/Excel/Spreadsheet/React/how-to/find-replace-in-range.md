@@ -9,7 +9,7 @@ documentation: ug
 
 # Find and replace the text within the selected range of cells
 
-In Syncfusion Spreadsheet, the "Replace All" action by default searches and replaces a text throughout the entire sheet, regardless of the selected range. To limit "Replace All" to only the selected range, you can customize the addressCollection based on the selectedRange in the [actionBegin](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#actionbegin) event when the action is `beforeReplaceAll`.
+In Syncfusion Spreadsheet, the "Replace All" action by default searches and replaces a text throughout the entire sheet, regardless of the selected range. To limit "Replace All" to only the selected range, you can customize the addressCollection based on the selectedRange in the [actionBegin](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#actionbegin) event when the action is `beforeReplaceAll`.
 
 The following sample demonstrates how to limit the "Replace All" operation to the currently selected range.
 
