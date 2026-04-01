@@ -26,7 +26,7 @@ document.splitEvent = documentSplitEvent;
 document.split();
 // Event to invoke while splitting PDF document data
 function documentSplitEvent(sender: PdfDocument, args: PdfDocumentSplitEventArgs): void {
-  Save.save('output_' + args.splitIndex + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
+  Save.save('output_' + args.index + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
 }
 // Destroy the document
 document.destroy();
@@ -41,7 +41,7 @@ document.splitEvent = documentSplitEvent;
 document.split();
 // Event to invoke while splitting PDF document data
 function documentSplitEvent(sender, args): void {
-  Save.save('output_' + args.splitIndex + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
+  Save.save('output_' + args.index + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
 }
 // Destroy the document
 document.destroy();
@@ -65,7 +65,7 @@ document.splitEvent = documentSplitEvent;
 document.splitByPageRanges([[0, 4], [5, 9]]);
 // Event to invoke while splitting PDF document data
 function documentSplitEvent(sender: PdfDocument, args: PdfDocumentSplitEventArgs): void {
-  Save.save('output_' + args.splitIndex + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
+  Save.save('output_' + args.index + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
 }
 // Destroy the document
 document.destroy();
@@ -80,7 +80,7 @@ document.splitEvent = documentSplitEvent;
 document.splitByPageRanges([[0, 4], [5, 9]]);
 // Event to invoke while splitting PDF document data
 function documentSplitEvent(sender, args): void {
-  Save.save('output_' + args.splitIndex + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
+  Save.save('output_' + args.index + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
 }
 // Destroy the document
 document.destroy();
@@ -104,7 +104,7 @@ document.splitEvent = documentSplitEvent;
 document.splitByFixedNumber(1);
 // Event to invoke while splitting PDF document data
 function documentSplitEvent(sender: PdfDocument, args: PdfDocumentSplitEventArgs): void {
-  Save.save('output_' + args.splitIndex + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
+  Save.save('output_' + args.index + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
 }
 // Destroy the document
 document.destroy();
@@ -119,7 +119,7 @@ document.splitEvent = documentSplitEvent;
 document.splitByFixedNumber(1);
 // Event to invoke while splitting PDF document data
 function documentSplitEvent(sender, args): void {
-  Save.save('output_' + args.splitIndex + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
+  Save.save('output_' + args.index + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
 }
 // Destroy the document
 document.destroy();

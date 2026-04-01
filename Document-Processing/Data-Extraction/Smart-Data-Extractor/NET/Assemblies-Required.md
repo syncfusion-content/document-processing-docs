@@ -20,13 +20,13 @@ The following assemblies need to be referenced in your application based on the 
     <tr>
       <td>
         {{'WPF'| markdownify }},
-        {{'Windows Forms'| markdownify }} and {{'ASP.NET MVC'| markdownify }}      
+        {{'Windows Forms'| markdownify }} and {{'ASP.NET MVC'| 
+		markdownify }}      
       </td>
       <td>
         Syncfusion.Compression.Base<br/>
         Syncfusion.ImagePreProcessor.Base<br/>
         Syncfusion.OCRProcessor.Base<br/>
-        Syncfusion.Pdf.Imaging.Base<br/>
         Syncfusion.Pdf.Base<br/>
         Syncfusion.PdfToImageConverter.Base<br/>
         Syncfusion.SmartFormRecognizer.Base<br/>
