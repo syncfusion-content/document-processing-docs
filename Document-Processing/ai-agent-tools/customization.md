@@ -11,7 +11,6 @@ documentation: ug
 
 The Syncfusion Document SDK Agent Tool library is designed to be extensible. This guide walks you through creating a custom agent tool class and registering the tools with an AI agent so they are callable alongside the built-in tools.
 
----
 
 ## Creating a Custom Agent Tool Class
 
@@ -146,7 +145,6 @@ public class WordWatermarkAgentTools : AgentToolBase
 }
 ```
 
----
 
 ## Registering Custom Tools with the AI Agent
 
@@ -198,32 +196,19 @@ var agent = openAIClient.AsAIAgent(
 
 Your custom tool methods are now callable by the AI agent the same way as all built-in tools.
 
----
-
-## Example Prompts
-
-Once the custom watermark tools are registered, you can interact with the AI agent using natural language. The following examples show typical prompts and the tool calls the agent will make in response.
-
-**Add a watermark:**
-
-> *"Open the file at C:\Documents\report.docx and add a 'CONFIDENTIAL' watermark to it, then save it."*
-
-The agent will call `Word_CreateDocument` to load the file, then `Word_AddTextWatermark` with `watermarkText = "CONFIDENTIAL"`, and finally `Word_ExportDocument` to save the result.
-
----
 
 ## Customizing the System Prompt
 
 The system prompt shapes how the AI agent uses the tools. Tailor it to your use case:
 
 ```csharp
-string systemPrompt = """
+string systemPrompt = "
     You are an expert document-processing assistant with access to tools for Word operations.
-    """;
+    ";
 ```
 
 ## See Also
 
-- [Overview](./overview.md)
-- [Tools Reference](./tools.md)
-- [Getting Started](./getting-started.md)
+- [Overview](https://help.syncfusion.com/document-processing/ai-agent-tools/overview)
+- [Tools](https://help.syncfusion.com/document-processing/ai-agent-tools/tools)
+- [Getting Started](https://help.syncfusion.com/document-processing/ai-agent-tools/getting-started)
