@@ -475,6 +475,6 @@ Provides AI-powered structured data extraction from PDF documents and images, re
 
 ## See Also
 
-- [Overview](https://help.syncfusion.com/document-processing/ai-agent-tools/overview)
-- [Getting Started](https://help.syncfusion.com/document-processing/ai-agent-tools/getting-started)
-- [Customization](https://help.syncfusion.com/document-processing/ai-agent-tools/customization)
+- [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
+- [Getting Started](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started)
+- [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)

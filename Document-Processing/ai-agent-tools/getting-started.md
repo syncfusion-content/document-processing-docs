@@ -248,6 +248,6 @@ Any other provider that exposes an `IChatClient` (Ollama, Anthropic via adapters
 
 ## See Also
 
-- [Overview](https://help.syncfusion.com/document-processing/ai-agent-tools/overview)
-- [Tools](https://help.syncfusion.com/document-processing/ai-agent-tools/tools)
-- [Customization](https://help.syncfusion.com/document-processing/ai-agent-tools/customization)
+- [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
+- [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
+- [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)

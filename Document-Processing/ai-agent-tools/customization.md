@@ -217,6 +217,6 @@ string systemPrompt = "You are an expert document-processing assistant with acce
 
 ## See Also
 
-- [Overview](https://help.syncfusion.com/document-processing/ai-agent-tools/overview)
-- [Tools](https://help.syncfusion.com/document-processing/ai-agent-tools/tools)
-- [Getting Started](https://help.syncfusion.com/document-processing/ai-agent-tools/getting-started)
+- [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
+- [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
+- [Getting Started](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started)

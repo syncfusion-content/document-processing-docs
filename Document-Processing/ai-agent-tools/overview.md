@@ -76,9 +76,9 @@ The following NuGet packages are used in the application.
 
 ## Related Resources
 
-- [Tools](https://help.syncfusion.com/document-processing/ai-agent-tools/tools)
-- [Getting Started](https://help.syncfusion.com/document-processing/ai-agent-tools//getting-started)
-- [Customization](https://help.syncfusion.com/document-processing/ai-agent-tools//customization)
+- [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
+- [Getting Started](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started)
+- [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
 - [Syncfusion PDF Library](https://help.syncfusion.com/document-processing/pdf/pdf-library/overview)
 - [Syncfusion Word Library](https://help.syncfusion.com/document-processing/word/word-library/overview)
 - [Syncfusion Excel Library](https://help.syncfusion.com/document-processing/excel/excel-library/overview)
