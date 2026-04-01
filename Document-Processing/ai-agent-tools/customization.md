@@ -18,7 +18,7 @@ Follow these steps to expose new document operations to the AI agent.
 
 **Step 1: Create a Custom Agent Tool by Inheriting AgentToolBase**
 
-Create a new class that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document repository through its constructor:
+Create a new class that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document Manager through its constructor:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -26,12 +26,12 @@ using Syncfusion.DocIO.DLS;
 
 public class WordWatermarkAgentTools : AgentToolBase
 {
-    private readonly WordDocumentRepository _repository;
+    private readonly WordDocumentManager _Manager;
 
-    public WordWatermarkAgentTools(WordDocumentRepository repository)
+    public WordWatermarkAgentTools(WordDocumentManager Manager)
     {
-        ArgumentNullException.ThrowIfNull(repository);
-        _repository = repository;
+        ArgumentNullException.ThrowIfNull(Manager);
+        _Manager = Manager;
     }
 }
 ```
@@ -44,7 +44,7 @@ Add `public` instance methods and decorate each one with `[Tool]`, providing a n
 [Tool(
     Name = "AddTextWatermark",
     Description = "Adds a text watermark to the specified Word document.")]
-public CallToolResult AddTextWatermark(...)
+public AgentToolResult AddTextWatermark(...)
 {
     // implementation
 }
@@ -55,7 +55,7 @@ public CallToolResult AddTextWatermark(...)
 Decorate each method parameter with `[ToolParameter]` to give the AI a natural-language description of what value to pass:
 
 ```csharp
-public CallToolResult AddTextWatermark(
+public AgentToolResult AddTextWatermark(
     [ToolParameter(Description = "The document ID of the Word document.")]
     string documentId,
     [ToolParameter(Description = "The watermark text to display (e.g., 'DRAFT', 'CONFIDENTIAL').")]
@@ -64,16 +64,16 @@ public CallToolResult AddTextWatermark(
     float fontSize = 72f)
 ```
 
-**Step 4: Return CallToolResult**
+**Step 4: Return AgentToolResult**
 
-All tool methods must return `CallToolResult`. Use the static factory methods to signal success or failure:
+All tool methods must return `AgentToolResult`. Use the static factory methods to signal success or failure:
 
 ```csharp
 // Success
-return CallToolResult.Ok("Operation completed successfully.");
+return AgentToolResult.Ok("Operation completed successfully.");
 
 // Failure
-return CallToolResult.Fail("Reason the operation failed.");
+return AgentToolResult.Fail("Reason the operation failed.");
 ```
 
 **Example**
@@ -84,18 +84,18 @@ using Syncfusion.DocIO.DLS;
 
 public class WordWatermarkAgentTools : AgentToolBase
 {
-    private readonly WordDocumentRepository _repository;
+    private readonly WordDocumentManager _Manager;
 
-    public WordWatermarkAgentTools(WordDocumentRepository repository)
+    public WordWatermarkAgentTools(WordDocumentManager Manager)
     {
-        ArgumentNullException.ThrowIfNull(repository);
-        _repository = repository;
+        ArgumentNullException.ThrowIfNull(Manager);
+        _Manager = Manager;
     }
 
     [Tool(
         Name = "AddTextWatermark",
         Description = "Adds a text watermark to the specified Word document.")]
-    public CallToolResult AddTextWatermark(
+    public AgentToolResult AddTextWatermark(
         [ToolParameter(Description = "The document ID of the Word document.")]
         string documentId,
         [ToolParameter(Description = "The watermark text to display (e.g., 'DRAFT', 'CONFIDENTIAL').")]
@@ -103,43 +103,43 @@ public class WordWatermarkAgentTools : AgentToolBase
     {
         try
         {
-            WordDocument? doc = _repository.GetDocument(documentId);
+            WordDocument? doc = _Manager.GetDocument(documentId);
             if (doc == null)
-                return CallToolResult.Fail($"Document not found: {documentId}");
+                return AgentToolResult.Fail($"Document not found: {documentId}");
 
             TextWatermark watermark = new TextWatermark(watermarkText, "", 250, 100);
             watermark.Color = Syncfusion.Drawing.Color.LightGray;
             watermark.Layout = WatermarkLayout.Diagonal;
             doc.Watermark = watermark;
 
-            return CallToolResult.Ok(
+            return AgentToolResult.Ok(
                 $"Watermark '{watermarkText}' applied to document '{documentId}'.");
         }
         catch (Exception ex)
         {
-            return CallToolResult.Fail(ex.Message);
+            return AgentToolResult.Fail(ex.Message);
         }
     }
 
     [Tool(
         Name = "RemoveWatermark",
         Description = "Removes the watermark from the specified Word document.")]
-    public CallToolResult RemoveWatermark(
+    public AgentToolResult RemoveWatermark(
         [ToolParameter(Description = "The document ID of the Word document.")]
         string documentId)
     {
         try
         {
-            WordDocument? doc = _repository.GetDocument(documentId);
+            WordDocument? doc = _Manager.GetDocument(documentId);
             if (doc == null)
-                return CallToolResult.Fail($"Document not found: {documentId}");
+                return AgentToolResult.Fail($"Document not found: {documentId}");
 
             doc.Watermark = null;
-            return CallToolResult.Ok($"Watermark removed from document '{documentId}'.");
+            return AgentToolResult.Ok($"Watermark removed from document '{documentId}'.");
         }
         catch (Exception ex)
         {
-            return CallToolResult.Fail(ex.Message);
+            return AgentToolResult.Fail(ex.Message);
         }
     }
 }
@@ -153,7 +153,7 @@ Once your custom tool class is created, register it alongside the built-in tools
 **Step 1: Instantiate the Custom Tool Class**
 
 ```csharp
-var wordRepo = new WordDocumentRepository(TimeSpan.FromMinutes(5));
+var wordRepo = new WordDocumentManager(TimeSpan.FromMinutes(5));
 
 // Built-in tools
 var wordDocTools = new WordDocumentAgentTools(wordRepo, outputDirectory);

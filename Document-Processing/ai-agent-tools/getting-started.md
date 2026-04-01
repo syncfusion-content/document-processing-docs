@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Syncfusion Document SDK Agent Tool Library
 
-The Syncfusion Document SDK Agent Tool library exposes Word, Excel, PDF, and PowerPoint operations as AI-callable tools. This guide walks through each integration step — from registering a Syncfusion license and creating document repositories, to converting tools into `Microsoft.Extensions.AI` functions and building a fully interactive agent. The example uses the **Microsoft Agents Framework** with **OpenAI**, but the same steps apply to any provider that implements `IChatClient`.
+The Syncfusion Document SDK Agent Tool library exposes Word, Excel, PDF, and PowerPoint operations as AI-callable tools. This guide walks through each integration step — from registering a Syncfusion license and creating document Managers, to converting tools into `Microsoft.Extensions.AI` functions and building a fully interactive agent. The example uses the **Microsoft Agents Framework** with **OpenAI**, but the same steps apply to any provider that implements `IChatClient`.
 
 
 ## Prerequisites
@@ -17,7 +17,7 @@ The Syncfusion Document SDK Agent Tool library exposes Word, Excel, PDF, and Pow
 | Requirement | Details |
 |---|---|
 | **.NET SDK** | .NET 8.0 or .NET 10.0 |
-| **OpenAI API Key** | Obtain one from [platform.openai.com](https://platform.openai.com/api-keys). |
+| **OpenAI API Key** | Obtain one from platform.openai.com. |
 | **Syncfusion License** | Community or commercial license. See [syncfusion.com/products/community-license](https://www.syncfusion.com/products/communitylicense). |
 | **NuGet Packages** | `Microsoft.Agents.AI.OpenAI` (v1.0.0-rc4) and Syncfusion AgentLibrary packages. |
 
@@ -41,9 +41,9 @@ if (!string.IsNullOrEmpty(licenseKey))
 
 
 
-**Step 2 — Create Document Repositories**
+**Step 2 — Create Document Managers**
 
-Repositories are in-memory containers that hold document instances across tool calls. Create one repository per document type:
+Managers are in-memory containers that hold document instances across tool calls. Create one Manager per document type:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -54,32 +54,32 @@ using Syncfusion.AI.AgentTools.PowerPoint;
 
 var timeout = TimeSpan.FromMinutes(5);
 
-var wordRepository         = new WordDocumentRepository(timeout);
-var excelRepository        = new ExcelWorkbookRepository(timeout);
-var pdfRepository          = new PdfDocumentRepository(timeout);
-var presentationRepository = new PresentationRepository(timeout);
+var wordManager         = new WordDocumentManager(timeout);
+var excelManager        = new ExcelWorkbookManager(timeout);
+var pdfManager          = new PdfDocumentManager(timeout);
+var presentationManager = new PresentationManager(timeout);
 ```
 
 The `timeout` parameter controls how long an unused document is kept in memory before it is automatically cleaned up.
 
-**Step-3 - Create DocumentRepositoryCollection for cross-format tools**
+**Step-3 - Create DocumentManagerCollection for cross-format tools**
 
-Some tool classes need to read from one repository and write results into another. For example, `OfficeToPdfAgentTools` reads a source document from the Word, Excel, or PowerPoint repository and saves the converted output into the PDF repository. A `DocumentRepositoryCollection` is passed to such tools so they can resolve the correct repository at runtime:
+Some tool classes need to read from one Manager and write results into another. For example, `OfficeToPdfAgentTools` reads a source document from the Word, Excel, or PowerPoint Manager and saves the converted output into the PDF Manager. A `DocumentManagerCollection` is passed to such tools so they can resolve the correct Manager at runtime:
 
 ```csharp
-var repoCollection = new DocumentRepositoryCollection();
-repoCollection.AddRepository(DocumentType.Word,        wordRepository);
-repoCollection.AddRepository(DocumentType.Excel,       excelRepository);
-repoCollection.AddRepository(DocumentType.PDF,         pdfRepository);
-repoCollection.AddRepository(DocumentType.PowerPoint,  presentationRepository);
+var repoCollection = new DocumentManagerCollection();
+repoCollection.AddManager(DocumentType.Word, wordManager);
+repoCollection.AddManager(DocumentType.Excel, excelManager);
+repoCollection.AddManager(DocumentType.PDF, pdfManager);
+repoCollection.AddManager(DocumentType.PowerPoint,  presentationManager);
 ```
 
-> **Note:** Tools that work with only a single document type (e.g., `WordDocumentAgentTools`, `PdfAnnotationAgentTools`) are initialized directly with their specific repository. Only cross-format tools such as `OfficeToPdfAgentTools` require the `DocumentRepositoryCollection`.
+> **Note:** Tools that work with only a single document type (e.g., `WordDocumentAgentTools`, `PdfAnnotationAgentTools`) are initialized directly with their specific Manager. Only cross-format tools such as `OfficeToPdfAgentTools` require the `DocumentManagerCollection`.
 
 
 **Step 4 — Instantiate Agent Tool Classes and Collect Tools**
 
-Each tool class is initialized with the relevant repository (and an optional output directory). Call `GetTools()` on each to get a list of `AITool` objects:
+Each tool class is initialized with the relevant Manager (and an optional output directory). Call `GetTools()` on each to get a list of `AITool` objects:
 
 ```csharp
 using Syncfusion.AI.AgentTools.DataExtraction;
@@ -92,23 +92,23 @@ Directory.CreateDirectory(outputDir);
 var allTools = new List<AITool>();
 
 // Word tools
-allTools.AddRange(new WordDocumentAgentTools(wordRepository, outputDir).GetTools());
-allTools.AddRange(new WordOperationsAgentTools(wordRepository).GetTools());
+allTools.AddRange(new WordDocumentAgentTools(wordManager, outputDir).GetTools());
+allTools.AddRange(new WordOperationsAgentTools(wordManager).GetTools());
 // etc. (WordSecurityAgentTools, WordMailMergeAgentTools, WordFindAndReplaceAgentTools, ...)
 
 // Excel tools
-allTools.AddRange(new ExcelWorkbookAgentTools(excelRepository, outputDir).GetTools());
-allTools.AddRange(new ExcelWorksheetAgentTools(excelRepository).GetTools());
+allTools.AddRange(new ExcelWorkbookAgentTools(excelManager, outputDir).GetTools());
+allTools.AddRange(new ExcelWorksheetAgentTools(excelManager).GetTools());
 // etc. (ExcelSecurityAgentTools, ExcelFormulaAgentTools, ...)
 
 // PDF tools
-allTools.AddRange(new PdfDocumentAgentTools(pdfRepository, outputDir).GetTools());
-allTools.AddRange(new PdfOperationsAgentTools(pdfRepository).GetTools());
+allTools.AddRange(new PdfDocumentAgentTools(pdfManager, outputDir).GetTools());
+allTools.AddRange(new PdfOperationsAgentTools(pdfManager).GetTools());
 // etc. (PdfSecurityAgentTools, PdfContentExtractionAgentTools, PdfAnnotationAgentTools, ...)
 
 // PowerPoint tools
-allTools.AddRange(new PresentationDocumentAgentTools(presentationRepository, outputDir).GetTools());
-allTools.AddRange(new PresentationOperationsAgentTools(presentationRepository).GetTools());
+allTools.AddRange(new PresentationDocumentAgentTools(presentationManager, outputDir).GetTools());
+allTools.AddRange(new PresentationOperationsAgentTools(presentationManager).GetTools());
 // etc. (PresentationSecurityAgentTools, PresentationContentAgentTools, PresentationFindAndReplaceAgentTools, ...)
 
 // Conversion and data extraction
@@ -116,7 +116,7 @@ allTools.AddRange(new OfficeToPdfAgentTools(repoCollection, outputDir).GetTools(
 allTools.AddRange(new DataExtractionAgentTools(outputDir).GetTools());
 ```
 
-> **Note:** Pass the **same repository instance** to all tool classes that operate on the same document type. This ensures documents created by one tool class are visible to all others during the same session.
+> **Note:** Pass the **same Manager instance** to all tool classes that operate on the same document type. This ensures documents created by one tool class are visible to all others during the same session.
 
 
 **Step 5 — Convert Syncfusion AITools to Microsoft.Extensions.AI Functions**
@@ -140,6 +140,8 @@ var aiTools = allTools
 ```
 
 Each converted function carries the tool name, description, and parameter metadata that the AI model uses to decide when and how to call each tool.
+
+> **Note:** The AI Agent supports a maximum of 128 tools. Register only the tools relevant to your scenario to stay within this limit.
 
 
 **Step 6 — Build the AIAgent and Run the Chat Loop**

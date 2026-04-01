@@ -22,13 +22,13 @@ Create, manipulate, secure, extract content from, and perform OCR on PDF documen
 Load the insurance policy document 'policy_document.pdf' from {InputDir}. Extract all text content from the document. Then search for all occurrences of the term 'exclusion' and return their exact page locations and bounding rectangle positions so our legal team can quickly audit every exclusion clause in the policy.
 {% endpromptcard %}
 {% promptcard  CreatePdfDocument, FindTextInPdf, RedactPdf, ExportPDFDocument %}
-Load the court filing document 'case_filing.pdf' from {InputDir}. Permanently redact all personally identifiable information: on page 1, redact the name 'John M. Hargrove' and the address '4821 Elmwood Drive, Austin, TX 78701'; on page 3, redact the social security number '472-90-1835'. Use black highlight color for all redactions. Export the redacted document as 'case_filing_redacted.pdf' to {OutputDir}.
+Load the court filing document 'case_filing.pdf' from {InputDir}. Permanently redact all personally identifiable information: on page 1, redact the name 'John Michael' and the address '4821 Ellwood Drive, Austin, TX 78701'; on page 3, redact the social security number '472-90-1835'. Use black highlight color for all redactions. Export the redacted document as 'case_filing_redacted.pdf' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard CreatePdfDocument, SignPdf, ExportPDFDocument %}
 Load the vendor contract 'vendor_agreement_draft.pdf' from {InputDir} and apply a digital signature using the company certificate 'company_cert.pfx' (located at {InputDir}) with the password 'CertPass@2025'. Place the signature in the bottom-right corner of the last page and use the company logo 'signature_logo.png' from {InputDir} as the signature appearance image. Export the signed contract as 'vendor_agreement_signed.pdf' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard MergePdfs, ReorderPdfPages, ExportPDFDocument %}
-Merge the following monthly financial reports into a single consolidated annual report: 'jan_report.pdf', 'feb_report.pdf', 'mar_report.pdf', 'apr_report.pdf', 'may_report.pdf', 'jun_report.pdf' — all located at {InputDir}. After merging, reorder the pages so the executive summary (currently the last page) appears first, followed by the monthly reports in chronological order. Export the final document as 'annual_report_2025.pdf' to {OutputDir}.
+Merge the following monthly financial reports into a single consolidated annual report: 'Jan_report.pdf', 'Feb_report.pdf', 'Mar_report.pdf', 'Apr_report.pdf', 'May_report.pdf', 'Jun_report.pdf' — all located at {InputDir}. After merging, reorder the pages so the executive summary (currently the last page) appears first, followed by the monthly reports in chronological order. Export the final document as 'annual_report_2025.pdf' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard CreatePdfDocument, EncryptPdf, SetPermissions, ExportPDFDocument %}
 Load the sensitive HR performance review document 'performance_review_Q4.pdf' from {InputDir}. Encrypt it using AES-256 encryption with the password 'HR@Secure2025'. Restrict permissions so that only reading and accessibility copy operations are allowed — disable printing, editing, and annotation. Export the secured document as 'performance_review_Q4_secured.pdf' to {OutputDir}.
@@ -38,21 +38,22 @@ Load the sensitive HR performance review document 'performance_review_Q4.pdf' fr
 ### Word
 
 Create, edit, protect, mail-merge, track changes, and manage form fields in Word documents.
+
 {% promptcards %}
 {% promptcard CreateDocument, MergeDocuments, ExportDocument %}
 Assemble the annual company report by merging the following department Word documents from {InputDir} in order: 'cover_page.docx', 'executive_summary.docx', 'finance_report.docx', 'hr_report.docx', 'operations_report.docx', and 'appendix.docx'. Merge them all into 'cover_page.docx' using destination styles to maintain a consistent look. Export the final assembled report as 'annual_report_2025.docx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard CreateDocument, ExecuteMailMerge, ExportDocument %}
-Load the employee onboarding letter template 'onboarding_template.docx' from {InputDir} and execute a mail merge using the new hire data from the file 'new_hire_data.json' located at {InputDir}. Export the merged letters as 'onboarding_letters_april2026.docx' to {OutputDir}.
+Load the employee Onboarding letter template 'Onboarding_template.docx' from {InputDir} and execute a mail merge using the new hire data from the file 'new_hire_data.json' located at {InputDir}. Export the merged letters as 'Onboarding_letters_april2026.docx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard CreateDocument, FindAndReplace, FindAndReplaceWithRegex, ExportDocument %}
 Load the legal service agreement template 'service_agreement_template.docx' from {InputDir}. Replace the placeholder '[CLIENT_NAME]' with 'Apex Innovations Ltd.', '[SERVICE_FEE]' with '$18,500', and '[CONTRACT_DATE]' with 'April 1, 2026'. Additionally, use a regex pattern to find all date placeholders matching the pattern '\[DATE_[A-Z]+\]' and replace them with 'TBD'. Return the total count of all replacements made. Export the finalized agreement as 'service_agreement_apex.docx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard CreateDocument, ImportMarkdown, ExportDocument %}
-Our developer wrote the API release notes in Markdown format — load the file 'release_notes_v3.2.md' from {InputDir}, import it into a new Word document to convert it into a properly formatted .docx file suitable for distribution to non-technical stakeholders. Export the document as 'release_notes_v3.2.docx' to {OutputDir}.
+Our developer wrote the API release notes in Markdown format — load the file 'release_notes_v3.2.mdx' from {InputDir}, import it into a new Word document to convert it into a properly formatted .docx file suitable for distribution to non-technical stakeholders. Export the document as 'release_notes_v3.2.docx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard CreateDocument, GetFormData, SetFormFields, ExportDocument %}
-Load the patient intake form 'patient_intake_form.docx' from {InputDir}. First, read all current form field values to see what fields are available. Then populate the form with the following patient information: PatientName='Robert Hayes', DateOfBirth='03/12/1978', InsuranceID='INS-4892-XY', PrimaryPhysician='Dr. Amanda Foster', EmergencyContact='Laura Hayes', Allergies='Penicillin'. Export the completed form as 'intake_form_robert_hayes.docx' to {OutputDir}.
+Load the patient intake form 'patient_intake_form.docx' from {InputDir}. First, read all current form field values to see what fields are available. Then populate the form with the following patient information: PatientName='Robert Hayes', DateOfBirth='03/12/1978', InsuranceID='INS-4892-XY', PrimaryPhysician='Dr. Amanda Foster', EmergencyContact='Laura Hayes', Allergies='Penicillin'. Export the completed form as 'Intake_Form_Robert_Hayes.docx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard CreateDocument, GetBookmarks, SplitDocument, ExportDocument %}
 Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {InputDir}. List all bookmarks in the document to identify the section boundaries. Split the document by bookmarks so that each bookmarked region — such as 'VendorAgreement', 'NDASection', and 'SLATerms' — becomes a standalone contract file. Export each split document to {OutputDir}.
@@ -90,7 +91,7 @@ Load, merge, split, secure, and extract content from PowerPoint presentations.
 Load the product launch presentation 'product_launch_template.pptx' from {InputDir}. The presentation is a reusable template — replace all occurrences of '[PRODUCT_NAME]' with 'Orion Pro X1', '[LAUNCH_DATE]' with 'May 15, 2026', '[PRICE]' with '$299', and '[TARGET_MARKET]' with 'Enterprise Customers'. Export the customized presentation as 'product_launch_orion_pro_x1.pptx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard LoadPresentation, MergePresentations, ExportPresentation %}
-Assemble the annual all-hands meeting presentation by merging the following department slide decks from {InputDir} into the master deck 'all_hands_master.pptx', preserving each department's source formatting: 'ceo_intro.pptx', 'finance_update.pptx', 'product_roadmap.pptx', 'hr_highlights.pptx', 'engineering_wins.pptx'. Export the complete merged presentation as 'all_hands_annual_2026.pptx' to {OutputDir}.
+Assemble the annual all-hands meeting presentation by merging the following department slide decks from {InputDir} into the master deck 'all_hands_master.pptx', preserving each department's source formatting: 'chief_executive_officer_intro.pptx', 'finance_update.pptx', 'product_road_map.pptx', 'hr_highlights.pptx', 'engineering_wins.pptx'. Export the complete merged presentation as 'all_hands_annual_2026.pptx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard LoadPresentation, EncryptPresentation, ExportPresentation %}
 Load the confidential M&A strategy presentation 'ma_strategy_2026.pptx' from {InputDir}. Encrypt it with the password 'MAStrategy@Conf2026' to ensure only authorized executives can open it. Export the encrypted file as 'ma_strategy_2026_encrypted.pptx' to {OutputDir}.
@@ -128,13 +129,13 @@ Extract structured data including text, tables, forms, and checkboxes from PDFs 
 Extract all structured data from the vendor invoice 'invoice_APR2026_00142.pdf' located at {InputDir}. Enable both form and table detection to capture invoice header fields (vendor name, invoice number, date, due date) and the line-item table (description, quantity, unit price, total). Use a confidence threshold of 0.7 for reliable results. Save the extracted JSON to 'invoice_APR2026_00142_data.json' in {OutputDir}.
 {% endpromptcard %}
 {% promptcard ExtractTableAsJSON %}
-Extract only the table data from the quarterly financial report 'financial_report_Q1_2026.pdf' located at {InputDir}. The report contains multiple financial tables across 15 pages — enable borderless table detection to ensure all tables are captured even if they lack visible borders. Use a confidence threshold of 0.65. Save the extracted table data as 'financial_tables_Q1_2026.json' in {OutputDir}.
+Extract only the table data from the quarterly financial report 'financial_report_Q1_2026.pdf' located at {InputDir}. The report contains multiple financial tables across 15 pages — enable border less table detection to ensure all tables are captured even if they lack visible borders. Use a confidence threshold of 0.65. Save the extracted table data as 'financial_tables_Q1_2026.json' in {OutputDir}.
 {% endpromptcard %}
 {% endpromptcards %}
 
 ## See also
 
-* [Tools Reference](https://help.syncfusion.com/document-processing/ai-agent-tools/tools)
-* [Getting Started](https://help.syncfusion.com/document-processing/ai-agent-tools/getting-started)
-* [Customization](https://help.syncfusion.com/document-processing/ai-agent-tools/customization)
-* [Overview](https://help.syncfusion.com/document-processing/ai-agent-tools/overview)
+* [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
+* [Getting Started](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started)
+* [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
+* [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
