@@ -5,7 +5,6 @@ description: Learn how to deploy the Syncfusion Spreadsheet server Docker image 
 control: How to deploy spreadsheet server to AWS EKS using Docker
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # How to deploy spreadsheet server to AWS EKS Cluster
@@ -72,7 +71,7 @@ spec:
 
 ```
 
-N> If you build a custom image, push it to Docker Hub or AWS ECR and update `image:` field accordingly.
+> If you build a custom image, push it to Docker Hub or AWS ECR and update `image:` field accordingly.
 
 **Step 3:** Expose the Service
 Create a `spreadsheet-service.yaml` to define a Service of type `LoadBalancer` that forwards traffic to the container. Customize the external port (5000) as needed; the internal `targetPort` should remain 8080 because the container listens on that port.
@@ -118,7 +117,7 @@ kubectl get svc spreadsheet-server-service
 
 Start by following the steps provided in this [link](../getting-started.md) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component. Once the Service reports an external address (e.g., a1b2c3d4e5f6-1234567890.us-east-1.elb.amazonaws.com), update the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) properties of your React Spreadsheet component:
 
-```jsx
+```js
 
 <SpreadsheetComponent
 	openUrl={`http://${serviceDNS}:5000/api/spreadsheet/open`}
@@ -127,7 +126,7 @@ Start by following the steps provided in this [link](../getting-started.md) to c
 
 ```
 
-N> Use `https://` if your Load Balancer has TLS configured.
+> Use `https://` if your Load Balancer has TLS configured.
 
 **Step 6:** Scaling and customization
 - `Scale replicas:` To handle a higher workload, you can scale your deployment by increasing the replicas count in your `spreadsheet-deployment.yaml` file and then run `kubectl apply -f spreadsheet-deployment.yaml` to apply the changes. Kubernetes will automatically manage the distribution of traffic across the pods.
@@ -135,3 +134,8 @@ N> Use `https://` if your Load Balancer has TLS configured.
 - `Environment variables:` In addition to SYNCFUSION_LICENSE_KEY, you can set other configuration keys (e.g., culture) using the env: section in the deployment manifest without modifying the docker image.
 
 For more information on deploying Spreadsheet docker image in Amazon EKS kindly refer to this [`Blog`](https://www.syncfusion.com/blogs/post/spreadsheet-server-eks-deployment)
+
+## See Also
+* [Docker Image Overview in React Spreadsheet](./spreadsheet-server-docker-image-overview)
+* [Publish Spreadsheet Server to Azure App Service using Visual Studio](./publish-spreadsheet-server-to-azure-using-visual-studio)
+* [Deploy Spreadsheet Docker to Azure App Service using Azure CLI](./deploy-spreadsheet-docker-to-azure-using-azure-cli)
