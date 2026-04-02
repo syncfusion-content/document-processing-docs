@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with OLE Objects
+# Working with OLE Objects in Word Library
 
 OLE (Object Linking and Embedding) objects allow embedding and linking to documents and other objects. It allows the content of one program to be used in a Word document. The Objects can be inserted in the following two ways:
 
@@ -479,6 +479,64 @@ End Sub
 {% endtabs %}
   
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Remove-ole-object).
+
+### Preserve embedded Ole image as normal image
+
+Essential<sup>&reg;</sup> DocIO keeps the entire document contents (paragraphs, images, tables and all other supported items along with the formatting) in main memory. So, there is a chance for "Out of memory exception" when the memory utilization exceeds the maximum level. For further information, please refer [here](https://support.syncfusion.com/kb/article/3998/why-does-out-of-memory-exception-arise-on-processing-large-size-documents-in-essential).
+
+You can reduce the memory usage in DocIO DOM when the Word document has embedded Ole image of large file size. You can preserve these embedded Ole images as normal images by setting [PreserveOleImageAsImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Settings.html#Syncfusion_DocIO_DLS_Settings_PreserveOleImageAsImage) property of Settings class as true, before opening the Word document.
+
+If [PreserveOleImageAsImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Settings.html#Syncfusion_DocIO_DLS_Settings_PreserveOleImageAsImage) flag is enabled, DocIO internally skips to read the embedded Ole image of large file size (.bin), instead DocIO reuses the Ole image from Word document as normal image for the same visual appearance. This will reduce the memory usage in DocIO DOM and resolves “Out of memory exception” at some cases.
+
+The following code example shows how to preserve embedded Ole image as normal image in a Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Ole-image-as-normal-image/.NET/Ole-image-as-normal-image/Program.cs" %}
+//Creates a new instance of WordDocument (Empty Word Document)
+using (WordDocument document = new WordDocument())
+{
+    //Loads or opens an existing Word document from stream
+    FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+    // Sets flag to preserve embedded Ole image as normal image while opening document
+    document.Settings.PreserveOleImageAsImage = true;
+    //Loads or opens an existing Word document through Open method of WordDocument class 
+    document.Open(fileStreamPath, FormatType.Automatic);
+	//Saves the Word document to MemoryStream.
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
+	//Closes the Word document.
+    document.Close();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Creates an empty Word document instance
+WordDocument document = new WordDocument();
+//Sets flag to preserve embedded Ole image as normal image while opening document
+document.Settings.PreserveOleImageAsImage = true;
+//Loads or opens an existing Word document
+document.Open("Template.docx");
+//Saves and closes the Word document 
+document.Save("Sample.docx", FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Creates an empty Word document instance
+Dim document As New WordDocument()
+'Sets flag to preserve embedded Ole image as normal image while opening document
+document.Settings.PreserveOleImageAsImage = True
+'Loads or opens an existing Word document
+document.Open("Template.docx")
+'Saves and closes the Word Document
+document.Save("Sample.docx", FormatType.Docx)
+document.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Ole-image-as-normal-image).
 
 ## Online Demo
 
