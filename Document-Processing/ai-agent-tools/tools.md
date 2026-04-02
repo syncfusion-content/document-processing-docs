@@ -30,7 +30,7 @@ Document Managers are in-memory containers that manage document life cycles duri
 
 | Document Manager | Description |
 |---|---|
-| WordDocumentManager | Manages Word documents in memory. Supports `.docx`, `.doc`, `.rtf`, `.html`, `.md` and `.txt` formats with auto-detection on import. |
+| WordDocumentManager | Manages Word documents in memory. Supports `.docx`, `.doc`, `.rtf`, `.html`,  and `.txt` formats with auto-detection on import. |
 | ExcelWorkbookManager | Manages Excel workbooks in memory. Owns an `ExcelEngine` instance and implements `IDisposable` for proper resource cleanup. Supports `.xlsx`, `.xls`, `.xlsm`, and `.csv` on export. |
 | PdfDocumentManager | Manages PDF documents in memory. Supports both new `PdfDocument` instances and loaded `PdfLoadedDocument` instances, including password-protected files. |
 | PresentationManager | Manages PowerPoint presentations in memory. Supports creating new empty presentations and loading existing `.pptx` files, including password-protected ones. |
