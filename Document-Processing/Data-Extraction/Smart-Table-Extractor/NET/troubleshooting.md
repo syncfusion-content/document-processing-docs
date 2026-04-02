@@ -79,7 +79,7 @@ documentation: UG
       <pre>
 <Target Name="CopyOnnxRuntimeDll" AfterTargets="Build">
   <Copy 
-    SourceFiles="$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.1.18.0\runtimes\win-x64\native\onnxruntime.dll" 
+    SourceFiles="$(SolutionDir)packages\Microsoft.ML.ONNXRuntime.1.18.0\runtimes\win-x64\native\ONNXRuntime.dll" 
     DestinationFolder="$(OutDir)" 
     SkipUnchangedFiles="true" />
 </Target>
