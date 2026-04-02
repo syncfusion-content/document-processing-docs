@@ -31,7 +31,7 @@ When a cell is in an editable state, the updated content can be saved using one 
 
 ### Update cell programmatically
 
-Cell updates can be performed programmatically using the `UpdateCellAsync` method, which supports values such as strings, numbers, booleans, and formulas. This method modifies the content of a designated cell and is suitable for tasks requiring precise changes, such as updating statuses or values in specific locations. The cell address must include the sheet name—for example, **Sheet1!A1**—to enable updates across different sheets within the same workbook.
+Cell updates can be performed programmatically using the [UpdateCellAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UpdateCellAsync_System_String_System_Object_) method, which supports values such as strings, numbers, booleans, and formulas. This method modifies the content of a designated cell and is suitable for tasks requiring precise changes, such as updating statuses or values in specific locations. The cell address must include the sheet name—for example, **Sheet1!A1**—to enable updates across different sheets within the same workbook.
 
 If a cell address is incorrectly formatted, refers to a non-existent sheet, or lies outside the valid range, the update is skipped without triggering an error. When a range is specified, such as **A1:B5**, the method automatically assigns the provided value to each cell within that range, allowing efficient batch updates.
 
@@ -90,7 +90,7 @@ The Blazor Spreadsheet component provides events that are triggered during editi
 
 ### CellEditing
 
-The `CellEditing` event is triggered before a cell enters edit mode. It provides an opportunity to validate or cancel the edit operation.
+The [CellEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellEditingEventArgs.html) event is triggered before a cell enters edit mode. It provides an opportunity to validate or cancel the edit operation.
 
 **Purpose**
 
@@ -140,7 +140,7 @@ The event uses the [CellEditingEventArgs](https://help.syncfusion.com/cr/blazor/
 
 ### CellSaved
 
-The `CellSaved` event is triggered after a cell’s value has been successfully saved, providing details about the updated value and the action that caused the change (such as Edit, Cut, Paste, or Autofill).
+The [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CellSavedEventArgs.html) event is triggered after a cell’s value has been successfully saved, providing details about the updated value and the action that caused the change (such as Edit, Cut, Paste, or Autofill).
 
 **Purpose**
 
@@ -185,7 +185,7 @@ The event uses the [CellSavedEventArgs](https://help.syncfusion.com/cr/blazor/Sy
 
 ## Cell editing in protected sheet
 
-In a protected sheet, only unlocked ranges can be edited based on the sheet's protection settings. Attempting to modify a locked range triggers an error message, as shown below:
+In a protected sheet, only `unlocked ranges` can be edited based on the sheet's protection settings. Try to modify a locked range, an error message appears, as shown below:
 
 ![Error dialog indicating that a cell is protected and cannot be modified in the Blazor Spreadsheet.](./images/protection-error-dialog.png)
 
