@@ -11,7 +11,6 @@ documentation: ug
 
 The Syncfusion Document SDK Agent Tool library is designed to be extensible. This guide walks you through creating a custom agent tool class and registering the tools with an AI agent so they are callable alongside the built-in tools.
 
----
 
 ## Creating a Custom Agent Tool Class
 
@@ -19,7 +18,7 @@ Follow these steps to expose new document operations to the AI agent.
 
 **Step 1: Create a Custom Agent Tool by Inheriting AgentToolBase**
 
-Create a new class that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document repository through its constructor:
+Create a new class that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document manager through its constructor:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -27,12 +26,12 @@ using Syncfusion.DocIO.DLS;
 
 public class WordWatermarkAgentTools : AgentToolBase
 {
-    private readonly WordDocumentRepository _repository;
+    private readonly WordDocumentManager _manager;
 
-    public WordWatermarkAgentTools(WordDocumentRepository repository)
+    public WordWatermarkAgentTools(WordDocumentManager manager)
     {
-        ArgumentNullException.ThrowIfNull(repository);
-        _repository = repository;
+        ArgumentNullException.ThrowIfNull(manager);
+        _manager = manager;
     }
 }
 ```
@@ -45,7 +44,7 @@ Add `public` instance methods and decorate each one with `[Tool]`, providing a n
 [Tool(
     Name = "AddTextWatermark",
     Description = "Adds a text watermark to the specified Word document.")]
-public CallToolResult AddTextWatermark(...)
+public AgentToolResult AddTextWatermark(...)
 {
     // implementation
 }
@@ -56,7 +55,7 @@ public CallToolResult AddTextWatermark(...)
 Decorate each method parameter with `[ToolParameter]` to give the AI a natural-language description of what value to pass:
 
 ```csharp
-public CallToolResult AddTextWatermark(
+public AgentToolResult AddTextWatermark(
     [ToolParameter(Description = "The document ID of the Word document.")]
     string documentId,
     [ToolParameter(Description = "The watermark text to display (e.g., 'DRAFT', 'CONFIDENTIAL').")]
@@ -65,19 +64,19 @@ public CallToolResult AddTextWatermark(
     float fontSize = 72f)
 ```
 
-**Step 4: Return CallToolResult**
+**Step 4: Return AgentToolResult**
 
-All tool methods must return `CallToolResult`. Use the static factory methods to signal success or failure:
+All tool methods must return `AgentToolResult`. Use the static factory methods to signal success or failure:
 
 ```csharp
 // Success
-return CallToolResult.Ok("Operation completed successfully.");
+return AgentToolResult.Ok("Operation completed successfully.");
 
 // Failure
-return CallToolResult.Fail("Reason the operation failed.");
+return AgentToolResult.Fail("Reason the operation failed.");
 ```
 
-### Example
+**Example**
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -85,18 +84,18 @@ using Syncfusion.DocIO.DLS;
 
 public class WordWatermarkAgentTools : AgentToolBase
 {
-    private readonly WordDocumentRepository _repository;
+    private readonly WordDocumentManager _manager;
 
-    public WordWatermarkAgentTools(WordDocumentRepository repository)
+    public WordWatermarkAgentTools(WordDocumentManager manager)
     {
-        ArgumentNullException.ThrowIfNull(repository);
-        _repository = repository;
+        ArgumentNullException.ThrowIfNull(manager);
+        _manager = manager;
     }
 
     [Tool(
         Name = "AddTextWatermark",
         Description = "Adds a text watermark to the specified Word document.")]
-    public CallToolResult AddTextWatermark(
+    public AgentToolResult AddTextWatermark(
         [ToolParameter(Description = "The document ID of the Word document.")]
         string documentId,
         [ToolParameter(Description = "The watermark text to display (e.g., 'DRAFT', 'CONFIDENTIAL').")]
@@ -104,49 +103,48 @@ public class WordWatermarkAgentTools : AgentToolBase
     {
         try
         {
-            WordDocument? doc = _repository.GetDocument(documentId);
+            WordDocument? doc = _manager.GetDocument(documentId);
             if (doc == null)
-                return CallToolResult.Fail($"Document not found: {documentId}");
+                return AgentToolResult.Fail($"Document not found: {documentId}");
 
             TextWatermark watermark = new TextWatermark(watermarkText, "", 250, 100);
             watermark.Color = Syncfusion.Drawing.Color.LightGray;
             watermark.Layout = WatermarkLayout.Diagonal;
             doc.Watermark = watermark;
 
-            return CallToolResult.Ok(
+            return AgentToolResult.Ok(
                 $"Watermark '{watermarkText}' applied to document '{documentId}'.");
         }
         catch (Exception ex)
         {
-            return CallToolResult.Fail(ex.Message);
+            return AgentToolResult.Fail(ex.Message);
         }
     }
 
     [Tool(
         Name = "RemoveWatermark",
         Description = "Removes the watermark from the specified Word document.")]
-    public CallToolResult RemoveWatermark(
+    public AgentToolResult RemoveWatermark(
         [ToolParameter(Description = "The document ID of the Word document.")]
         string documentId)
     {
         try
         {
-            WordDocument? doc = _repository.GetDocument(documentId);
+            WordDocument? doc = _manager.GetDocument(documentId);
             if (doc == null)
-                return CallToolResult.Fail($"Document not found: {documentId}");
+                return AgentToolResult.Fail($"Document not found: {documentId}");
 
             doc.Watermark = null;
-            return CallToolResult.Ok($"Watermark removed from document '{documentId}'.");
+            return AgentToolResult.Ok($"Watermark removed from document '{documentId}'.");
         }
         catch (Exception ex)
         {
-            return CallToolResult.Fail(ex.Message);
+            return AgentToolResult.Fail(ex.Message);
         }
     }
 }
 ```
 
----
 
 ## Registering Custom Tools with the AI Agent
 
@@ -155,7 +153,7 @@ Once your custom tool class is created, register it alongside the built-in tools
 **Step 1: Instantiate the Custom Tool Class**
 
 ```csharp
-var wordRepo = new WordDocumentRepository(TimeSpan.FromMinutes(5));
+var wordRepo = new WordDocumentManager(TimeSpan.FromMinutes(5));
 
 // Built-in tools
 var wordDocTools = new WordDocumentAgentTools(wordRepo, outputDirectory);
@@ -180,7 +178,7 @@ using Microsoft.Extensions.AI;
 var msAiTools = allSyncfusionTools
     .Select(t => AIFunctionFactory.Create(t.Method, t.Instance, new AIFunctionFactoryOptions
     {
-        Name        = t.Name,
+        Name = t.Name,
         Description = t.Description
     }))
     .Cast<AITool>()
@@ -191,14 +189,12 @@ var msAiTools = allSyncfusionTools
 
 ```csharp
 var agent = openAIClient.AsAIAgent(
-    model:        openAIModel,
-    tools:        msAiTools,
+    model: openAIModel,
+    tools: msAiTools,
     systemPrompt: "You are a helpful document-processing assistant.");
 ```
 
 Your custom tool methods are now callable by the AI agent the same way as all built-in tools.
-
----
 
 ## Example Prompts
 
@@ -210,20 +206,17 @@ Once the custom watermark tools are registered, you can interact with the AI age
 
 The agent will call `Word_CreateDocument` to load the file, then `Word_AddTextWatermark` with `watermarkText = "CONFIDENTIAL"`, and finally `Word_ExportDocument` to save the result.
 
----
 
 ## Customizing the System Prompt
 
 The system prompt shapes how the AI agent uses the tools. Tailor it to your use case:
 
 ```csharp
-string systemPrompt = """
-    You are an expert document-processing assistant with access to tools for Word operations.
-    """;
+string systemPrompt = "You are an expert document-processing assistant with access to tools for Word operations.";
 ```
 
 ## See Also
 
-- [Overview](./overview.md)
-- [Tools Reference](./tools.md)
-- [Getting Started](./getting-started.md)
+- [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
+- [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
+- [Getting Started](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started)
