@@ -13,7 +13,7 @@ documentation: UG
 <table>
   <tr>
     <th style="font-size:14px" width="100px">Exception</th>
-    <td style="font-size:14px">ONNX files are missing</td>
+    <th style="font-size:14px">ONNX files are missing</th>
   </tr>
   <tr>
     <th style="font-size:14px" width="100px">Reason</th>
@@ -39,10 +39,10 @@ documentation: UG
 <table>
   <tr>
     <th style="font-size:14px" width="100px">Exception</th>
-    <td style="font-size:14px">
+    <th style="font-size:14px">
       1. System.TypeInitializationException <br/>
       2. FileNotFoundException (Microsoft.ML.ONNXRuntime)
-    </td>
+    </th>
   </tr>
   <tr>
     <th style="font-size:14px" width="100px">Reason</th>
@@ -68,7 +68,7 @@ documentation: UG
 <table>
   <tr>
     <th style="font-size:14px" width="100px">Exception</th>
-    <td style="font-size:14px">Microsoft.ML.ONNXRuntime.ONNXRuntimeException</td>
+    <th style="font-size:14px">Microsoft.ML.ONNXRuntime.ONNXRuntimeException</th>
   </tr>
   <tr>
     <th style="font-size:14px" width="100px">Reason</th>
