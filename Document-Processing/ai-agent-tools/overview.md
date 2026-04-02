@@ -81,3 +81,4 @@ The following NuGet packages are used in the application.
 - [Syncfusion Excel Library](https://help.syncfusion.com/document-processing/excel/excel-library/overview)
 - [Syncfusion PowerPoint Library](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/overview)
 - [Data Extraction](https://help.syncfusion.com/document-processing/data-extraction/overview)
+- [Example Prompts](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/example-prompts)
