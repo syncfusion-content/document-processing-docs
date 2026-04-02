@@ -381,8 +381,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endhighlight %}
 
-{% tabs %} 
-
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.IO;
