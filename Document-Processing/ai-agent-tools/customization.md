@@ -18,7 +18,7 @@ Follow these steps to expose new document operations to the AI agent.
 
 **Step 1: Create a Custom Agent Tool by Inheriting AgentToolBase**
 
-Create a new class that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document Manager through its constructor:
+Create a new class that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document manager through its constructor:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -26,12 +26,12 @@ using Syncfusion.DocIO.DLS;
 
 public class WordWatermarkAgentTools : AgentToolBase
 {
-    private readonly WordDocumentManager _Manager;
+    private readonly WordDocumentManager _manager;
 
-    public WordWatermarkAgentTools(WordDocumentManager Manager)
+    public WordWatermarkAgentTools(WordDocumentManager manager)
     {
-        ArgumentNullException.ThrowIfNull(Manager);
-        _Manager = Manager;
+        ArgumentNullException.ThrowIfNull(manager);
+        _manager = manager;
     }
 }
 ```
@@ -84,12 +84,12 @@ using Syncfusion.DocIO.DLS;
 
 public class WordWatermarkAgentTools : AgentToolBase
 {
-    private readonly WordDocumentManager _Manager;
+    private readonly WordDocumentManager _manager;
 
-    public WordWatermarkAgentTools(WordDocumentManager Manager)
+    public WordWatermarkAgentTools(WordDocumentManager manager)
     {
-        ArgumentNullException.ThrowIfNull(Manager);
-        _Manager = Manager;
+        ArgumentNullException.ThrowIfNull(manager);
+        _manager = manager;
     }
 
     [Tool(
@@ -103,7 +103,7 @@ public class WordWatermarkAgentTools : AgentToolBase
     {
         try
         {
-            WordDocument? doc = _Manager.GetDocument(documentId);
+            WordDocument? doc = _manager.GetDocument(documentId);
             if (doc == null)
                 return AgentToolResult.Fail($"Document not found: {documentId}");
 
@@ -130,7 +130,7 @@ public class WordWatermarkAgentTools : AgentToolBase
     {
         try
         {
-            WordDocument? doc = _Manager.GetDocument(documentId);
+            WordDocument? doc = _manager.GetDocument(documentId);
             if (doc == null)
                 return AgentToolResult.Fail($"Document not found: {documentId}");
 
@@ -189,8 +189,8 @@ var msAiTools = allSyncfusionTools
 
 ```csharp
 var agent = openAIClient.AsAIAgent(
-    model:        openAIModel,
-    tools:        msAiTools,
+    model: openAIModel,
+    tools: msAiTools,
     systemPrompt: "You are a helpful document-processing assistant.");
 ```
 

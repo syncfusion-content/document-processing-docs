@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion Document SDK Agent Tools
 
-Agent Tools are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate Manager.
+Agent Tools are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager.
 
 Tools are organized into the following categories:
 | Category | Tool Classes | Description |
@@ -22,24 +22,24 @@ Tools are organized into the following categories:
 | **Data Extraction** | DataExtractionAgentTools | Extract structured data (text, tables, forms) from PDF and image files as JSON. |
 
 
-## Managers
+## Document Managers
 
-Managers are in-memory containers that manage document life cycles during AI agent operations. They provide common functionality including document creation, import/export, active document tracking, and automatic expiration-based cleanup.
+Document Managers are in-memory containers that manage document life cycles during AI agent operations. They provide common functionality including document creation, import/export, active document tracking, and automatic expiration-based cleanup.
 
-**Available Managers**
+**Available Document Managers**
 
-| Manager | Description |
+| Document Manager | Description |
 |---|---|
-| WordDocumentManager | Manages Word documents in memory. Supports `.docx`, `.doc`, `.rtf`, `.html`  and `.txt` formats with auto-detection on import. |
+| WordDocumentManager | Manages Word documents in memory. Supports `.docx`, `.doc`, `.rtf`, `.html`, `.md` and `.txt` formats with auto-detection on import. |
 | ExcelWorkbookManager | Manages Excel workbooks in memory. Owns an `ExcelEngine` instance and implements `IDisposable` for proper resource cleanup. Supports `.xlsx`, `.xls`, `.xlsm`, and `.csv` on export. |
 | PdfDocumentManager | Manages PDF documents in memory. Supports both new `PdfDocument` instances and loaded `PdfLoadedDocument` instances, including password-protected files. |
 | PresentationManager | Manages PowerPoint presentations in memory. Supports creating new empty presentations and loading existing `.pptx` files, including password-protected ones. |
 
 **DocumentManagerCollection**
 
-`DocumentManagerCollection` is a centralized registry that holds one manager for each `DocumentType`. It is designed for tool classes that need to work across multiple document types within a single operation — specifically when the source and output documents belong to different Managers.
+`DocumentManagerCollection` is a centralized registry that holds one document manager for each `DocumentType`. It is designed for tool classes that need to work across multiple document types within a single operation — specifically when the source and output documents belong to different document managers.
 
-**Why it is needed:** Consider a Word-to-PDF conversion. The source Word document lives in `WordDocumentManager`, but the resulting PDF must be stored in `PdfDocumentManager`. Rather than hard coding both Managers into the tool class, `OfficeToPdfAgentTools` accepts a `DocumentManagerCollection` and detects the correct manager dynamically at runtime based on the `sourceType` argument.
+**Why it is needed:** Consider a Word-to-PDF conversion. The source Word document lives in `WordDocumentManager`, but the resulting PDF must be stored in `PdfDocumentManager`. Rather than hard coding both document managers into the tool class, `OfficeToPdfAgentTools` accepts a `DocumentManagerCollection` and detects the correct manager dynamically at runtime based on the `sourceType` argument.
 
 > **Note:** Tools that operate on a single document type (e.g., `WordDocumentAgentTools`, `PdfAnnotationAgentTools`) are initialized directly with their own manager. Only cross-format tools such as `OfficeToPdfAgentTools` require a `DocumentManagerCollection`.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Syncfusion Document SDK Agent Tool Library
 
-The Syncfusion Document SDK Agent Tool library exposes Word, Excel, PDF, and PowerPoint operations as AI-callable tools. This guide walks through each integration step — from registering a Syncfusion license and creating document Managers, to converting tools into `Microsoft.Extensions.AI` functions and building a fully interactive agent. The example uses the **Microsoft Agents Framework** with **OpenAI**, but the same steps apply to any provider that implements `IChatClient`.
+The Syncfusion Document SDK Agent Tool library exposes Word, Excel, PDF, and PowerPoint operations as AI-callable tools. This guide walks through each integration step — from registering a Syncfusion license and creating document managers, to converting tools into `Microsoft.Extensions.AI` functions and building a fully interactive agent. The example uses the **Microsoft Agents Framework** with **OpenAI**, but the same steps apply to any provider that implements `IChatClient`.
 
 
 ## Prerequisites
@@ -43,7 +43,7 @@ if (!string.IsNullOrEmpty(licenseKey))
 
 **Step 2 — Create Document Managers**
 
-Managers are in-memory containers that hold document instances across tool calls. Create one Manager per document type:
+Document Managers are in-memory containers that hold document instances across tool calls. Create one manager per document type:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -64,7 +64,7 @@ The `timeout` parameter controls how long an unused document is kept in memory b
 
 **Step-3 - Create DocumentManagerCollection for cross-format tools**
 
-Some tool classes need to read from one Manager and write results into another. For example, `OfficeToPdfAgentTools` reads a source document from the Word, Excel, or PowerPoint Manager and saves the converted output into the PDF Manager. A `DocumentManagerCollection` is passed to such tools so they can resolve the correct Manager at runtime:
+Some tool classes need to read from one manager and write results into another. For example, `OfficeToPdfAgentTools` reads a source document from the Word, Excel, or PowerPoint manager and saves the converted output into the PDF manager. A `DocumentManagerCollection` is passed to such tools so they can resolve the correct manager at runtime:
 
 ```csharp
 var repoCollection = new DocumentManagerCollection();
@@ -74,12 +74,12 @@ repoCollection.AddManager(DocumentType.PDF, pdfManager);
 repoCollection.AddManager(DocumentType.PowerPoint,  presentationManager);
 ```
 
-> **Note:** Tools that work with only a single document type (e.g., `WordDocumentAgentTools`, `PdfAnnotationAgentTools`) are initialized directly with their specific Manager. Only cross-format tools such as `OfficeToPdfAgentTools` require the `DocumentManagerCollection`.
+> **Note:** Tools that work with only a single document type (e.g., `WordDocumentAgentTools`, `PdfAnnotationAgentTools`) are initialized directly with their specific manager. Only cross-format tools such as `OfficeToPdfAgentTools` require the `DocumentManagerCollection`.
 
 
 **Step 4 — Instantiate Agent Tool Classes and Collect Tools**
 
-Each tool class is initialized with the relevant Manager (and an optional output directory). Call `GetTools()` on each to get a list of `AITool` objects:
+Each tool class is initialized with the relevant manager (and an optional output directory). Call `GetTools()` on each to get a list of `AITool` objects:
 
 ```csharp
 using Syncfusion.AI.AgentTools.DataExtraction;
@@ -116,7 +116,7 @@ allTools.AddRange(new OfficeToPdfAgentTools(repoCollection, outputDir).GetTools(
 allTools.AddRange(new DataExtractionAgentTools(outputDir).GetTools());
 ```
 
-> **Note:** Pass the **same Manager instance** to all tool classes that operate on the same document type. This ensures documents created by one tool class are visible to all others during the same session.
+> **Note:** Pass the **same manager instance** to all tool classes that operate on the same document type. This ensures documents created by one tool class are visible to all others during the same session.
 
 
 **Step 5 — Convert Syncfusion AITools to Microsoft.Extensions.AI Functions**

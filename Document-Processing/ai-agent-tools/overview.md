@@ -11,13 +11,12 @@ documentation: ug
 
 **Syncfusion Document SDK Agent Tool** is a comprehensive AI toolkit that enables AI models and assistants to autonomously create, manipulate, convert, and extract data from documents using Syncfusion Document SDK libraries.
 
-It exposes a rich set of well-defined tools and functions that an AI agent can invoke to perform document operations across Word, Excel, PDF, and PowerPoint formats — without requiring the host application to implement document-processing logic directly.
+It exposes a rich set of well-defined tools and functions that an AI agent can invoke to perform document operations across Word, Excel, PDF, PowerPoint, HTML and Markdown formats — without requiring the host application to implement document-processing logic directly.
 
 
 ## Key Capabilities
 
-- Create new Word, Excel, PDF documents programmatically.
-- Edit, merge, split, compare, and secure documents across all supported formats.
+- Merge, split, compare, and secure documents across all supported formats.
 - Extract text, tables, images, form fields, and bookmarks from documents.
 - Execute mail merge operations on Word documents using structured JSON data.
 - Locate and replace text or regex patterns in Word and PowerPoint documents.
@@ -35,8 +34,8 @@ It exposes a rich set of well-defined tools and functions that an AI agent can i
 |---|---|
 | **Word** | `.docx`, `.doc`, `.rtf`, `.html`, `.txt`, `.md` |
 | **Excel** | `.xlsx`, `.xls`, `.xlsm`, `.csv` |
-| **PDF** | `.pdf` (including password-protected files) |
-| **PowerPoint** | `.pptx` (including password-protected files) |
+| **PDF** | `.pdf` |
+| **PowerPoint** | `.pptx` |
 | **Image (extraction input)** | `.png`, `.jpg`, `.jpeg` |
 
 
