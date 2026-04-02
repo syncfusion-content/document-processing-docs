@@ -480,7 +480,7 @@ End Sub
   
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Remove-ole-object).
 
-### Preserve embedded Ole image as normal image
+## Preserve embedded Ole image as normal image
 
 Essential<sup>&reg;</sup> DocIO keeps the entire document contents (paragraphs, images, tables and all other supported items along with the formatting) in main memory. So, there is a chance for "Out of memory exception" when the memory utilization exceeds the maximum level. For further information, please refer [here](https://support.syncfusion.com/kb/article/3998/why-does-out-of-memory-exception-arise-on-processing-large-size-documents-in-essential).
 
