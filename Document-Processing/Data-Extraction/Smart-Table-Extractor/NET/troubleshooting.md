@@ -28,13 +28,10 @@ Please refer to the below screenshot,
 <br/><br/>
 <img alt="Runtime folder" src="data-extraction-images/onnx-table.png">
 <br/><br/>
-Notes:
-
-- If you publish your application, ensure the `runtimes\models` folder and ONNX files are included in the publish output (you may need to mark files as content in the project file or use a <Content> entry).
-
+<b>Note:</b> If you publish your application, ensure the <b>runtimes\models</b> folder and ONNX files are included in the publish output.
+<br/>
 </td>
 </tr>
-
 </table>
 
 ## System.TypeInitializationException / FileNotFoundException – Microsoft.ML.ONNXRuntime
@@ -46,29 +43,27 @@ Notes:
 1. System.TypeInitializationException <br/>
 2. FileNotFoundException (Microsoft.ML.ONNXRuntime)
 </th>
-
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
 <td>
-The required **Microsoft.ML.ONNXRuntime** NuGet package is not installed in your project. SmartTableExtractor depends on this package and its required assemblies to function properly.
+The required <strong>Microsoft.ML.ONNXRuntime</strong> NuGet package is not installed in your project. SmartTableExtractor depends on this package and its required assemblies to function properly.
 <br/><br/>
 </td>
 </tr>
 <tr>
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>Install the NuGet package [Microsoft.ML.ONNXRuntime (Version 1.18.0)](https://www.nuget.org/packages/Microsoft.ML.ONNXRuntime/1.18.0) manually in your sample/project. <br/>
-This package is required for **SmartTableExtractor** across .NET Framework projects.
+<td>Install the NuGet package <a href="https://www.nuget.org/packages/Microsoft.ML.ONNXRuntime/1.18.0">Microsoft.ML.ONNXRuntime</a> (Version 1.18.0) manually in your sample/project. <br/>
+This package is required for <strong>SmartTableExtractor</strong> across .NET Framework projects.
 <br/><br/>
 </td>
 </tr>
 </table>
 
-## ONNXRuntimeException – Model File Not Found
+## ONNXRuntimeException – Model File Not Found in MVC Project
 
 <table>
-
 <th style="font-size:14px" width="100px">Exception
 </th>
 <th style="font-size:14px">Microsoft.ML.ONNXRuntime.ONNXRuntimeException
@@ -101,7 +96,7 @@ This package is required for **SmartTableExtractor** across .NET Framework proje
 </td>
 </tr>
 </table>
-<br/><br/> 
+<br/>
 </td>
 </tr>
 </table>
