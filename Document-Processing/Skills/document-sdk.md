@@ -197,7 +197,7 @@ Once skills are installed, the assistant can generate Syncfusion<sup style="font
 - "Show me DocIO code to create a Word document with a title and a paragraph."
 - "Generate a C# snippet to add a table to a PowerPoint slide."
 - "Show me code to extract all fields and tables from a PDF as JSON using Smart Data Extraction."
-- "Create a calculation engine and evaluate arithmetic and Excel-style formulas."
+- "Show me how to parse and compute formulas using CalcQuickBase"
 
 **Execute Task (Mode 2):**
 
