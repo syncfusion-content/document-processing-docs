@@ -331,7 +331,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract data with different Form Recognizer options
+## Extract Data with different Form Recognizer options
 
 To extract structured data from a PDF document using different Form Recognizer options with the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
 
@@ -427,7 +427,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endhighlight %}
 
-## Extract data with different Table Extraction options
+## Extract Data with different Table Extraction options
 
 To extract structured table data from a PDF document using advanced Table Extraction options with the ExtractDataAsPdfDocument method of the DataExtractor class, refer to the following code example:
 
@@ -507,6 +507,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {% endhighlight %}
 
 {% endtabs %}  
+
 ## Apply Confidence Threshold to Extract the Data
 
 To apply confidence thresholding when extracting data from a PDF document using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
