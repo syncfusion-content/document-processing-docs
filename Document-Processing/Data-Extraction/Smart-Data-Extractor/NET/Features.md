@@ -427,6 +427,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endhighlight %}
 
+{% endtabs %}  
+
 ## Extract Data with different Table Extraction options
 
 To extract structured table data from a PDF document using advanced Table Extraction options with the ExtractDataAsPdfDocument method of the DataExtractor class, refer to the following code example:
