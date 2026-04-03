@@ -680,3 +680,30 @@ If a document is encrypted due to its sensitivity label configuration, DocIO can
 
 ## Does the DocIO library support asynchronous methods for opening or saving Word documents?
 No, the Syncfusion DocIO library does not currently provide asynchronous APIs for opening or saving Word documents. However, the library is highly optimized for performance and is thread‑safe, allowing you to safely execute document processing operations.
+
+## Is font substitution supported for DOCX-to-DOCX operations in DocIO?
+No, DocIO does not support font substitution during DOCX‑to‑DOCX processing. Font substitution is available only when converting Word documents to PDF or images, where DocIO triggers the SubstituteFont event if a required font is missing.
+
+## How can I retrieve all merge fields in a Word document using DocIO library?
+The following code illustrates how to retrieve the all merge fields in a Word document.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+//Open the Word document file stream.
+using (FileStream inputStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
+{
+    //Loads an existing Word document.
+    using (WordDocument wordDocument = new WordDocument(inputStream, FormatType.Automatic))
+    {
+        // Get list of merge fields
+        List<Entity> entity = wordDocument.FindAllItemsByProperty(EntityType.MergeField, null, null);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Why is memory not cleared after completing the conversion process in ASP NET Core Web Application using DocIO?
+After the Word conversion operation is completed, the objects are freed, but .NET retains the reserved memory regions for future allocations. This behavior is expected and is part of the .NET runtime and GC design, not an issue with your code or DocIO library.
+
+## Why "This file format is not supported" exception thrown while trying to opening a .doc file using DocIO library?
+DocIO support the input file format from MSWord97 doc file format only not before MSWord97 doc file format. The input file format NFib value is 101. Here the NFib value specifies the version number of file format used and NFib value from 101 to 105 is not supported in our DocIO. To resolve the issue, use latest file format documents with DocIO library.
