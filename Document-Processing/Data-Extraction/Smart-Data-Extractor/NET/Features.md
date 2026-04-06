@@ -161,7 +161,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 ## Extract Data as JSON from an Image
 
-To extract structured data from an image document using the **ExtractDataAsJson** and **ExtractDataAsPdfDocument** methods of the **DataExtractor** class, refer to the following code examples. 
+To extract structured data from an image document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code examples. 
 
 {% tabs %} 
 
@@ -205,7 +205,7 @@ using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Enable Form Detection
+## Form Detection
 
 To extract form fields across a PDF document and save them as a PDF output using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class with form recognition options, refer to the following code example:
 
@@ -268,7 +268,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Enable Table Detection
+## Table Detection
 
 To extract tables across a PDF document and save them as a PDF output using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class with table extraction options, refer to the following code example:
 
@@ -429,7 +429,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 ## Extract Data with different Table Extraction options
 
-To extract structured table data from a PDF document using advanced Table Extraction options with the ExtractDataAsPdfDocument method of the DataExtractor class, refer to the following code example:
+To extract structured table data from a PDF document using advanced Table Extraction options with the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
 
 {% tabs %} 
 
