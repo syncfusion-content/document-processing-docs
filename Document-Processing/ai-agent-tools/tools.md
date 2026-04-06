@@ -338,7 +338,7 @@ Provides tools to create, edit pivot table in workbook
 
 | Tool | Syntax | Description |
 |---|---|---|
-| CreatePivotTable | CreatePivotTable(<br/>string workbookId,<br/>string dataWorksheetName,<br/>string dataRange,<br/>string pivotWorksheetName,<br/>string pivotTableName,<br/>string pivotLocation,<br/>string rowFieldIndices,<br/>string columnFieldIndices,<br/>int dataFieldIndex,<br/>string dataFieldCaption,<br/>string builtInStyle = "None",<br/>string subtotalType = "Sum") | Creates a pivot table in the specified worksheet using a data range from a source worksheet. Supports row, column, and data (values) fields with a chosen aggregation function. `builtInStyle` options: `PivotStyleLight1-28`, `PivotStyleMedium1-28`, `PivotStyleDark1-28`, or `None`. `subtotalType` options: `Sum`, `Count`, `Average`, `Max`, `Min`, `Product`, `CountNums`, `StdDev`, `StdDevP`, `Var`, `VarP`. Only supported in XLSX format. |
+| CreatePivotTable | CreatePivotTable(<br/>string workbookId,<br/>string dataWorksheetName,<br/>string dataRange,<br/>string pivotWorksheetName,<br/>string pivotTableName,<br/>string pivotLocation,<br/>string rowFieldIndices,<br/>string columnFieldIndices,<br/>int dataFieldIndex,<br/>string dataFieldCaption,<br/>string builtInStyle = "None",<br/>string subtotalType = "Sum") | Creates a pivot table in the specified worksheet using a data range from a source worksheet. Supports row, column, and data (values) fields with a chosen aggregation function. `builtInStyle` options: `PivotStyleLight1-28`, `PivotStyleMedium1-28`, `PivotStyleDark1-28`, or `None`. `subtotalType` options: `Sum`, `Count`, `Average`, `Max`, `Min`, `Product`, `CountNumbs`, `StdDev`, `StdDevP`, `Var`, `VarP`. Only supported in XLSX format. |
 
 
 ## PowerPoint Tools
