@@ -12,6 +12,7 @@ documentation: ug
 Agent Tools are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager.
 
 Tools are organized into the following categories:
+
 <table>
 <tr>
 <th>Category</th>
@@ -50,7 +51,6 @@ Tools are organized into the following categories:
 </tr>
 </table>
 
-
 ## Document Managers
 
 Document Managers are in-memory containers that manage document life cycles during AI agent operations. They provide common functionality including document creation, import/export, active document tracking, and automatic expiration-based cleanup.
@@ -64,7 +64,8 @@ Document Managers are in-memory containers that manage document life cycles duri
 </tr>
 <tr>
 <td>WordDocumentManager</td>
-<td>Manages Word documents in memory. Supports <code>.docx</code>, <code>.doc</code>, <code>.rtf</code>, <code>.html</code>,  and <code>.txt</code> formats with auto-detection on import.</td>
+<td>Manages Word documents in memory. Supports: <code>.docx</code>, <code>.doc</code>, <code>.rtf</code>, <code>.html</code>,  and <code>.txt</code> formats with auto-detection on import.
+</td>
 </tr>
 <tr>
 <td>ExcelWorkbookManager</td>
@@ -802,7 +803,7 @@ Provides tools to add or remove conditional formatting in workbook
 <tr>
 <td>AddConditionalFormat</td>
 <td>AddConditionalFormat(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string formatType,<br/>string? operatorType = null,<br/>string? firstFormula = null,<br/>string? secondFormula = null,<br/>string? backColor = null,<br/>bool? isBold = null,<br/>bool? isItalic = null)</td>
-<td>Adds conditional formatting to a cell or range. <code>formatType values: <code>CellValue</code>, <code>Formula</code>, <code>DataBar</code>, <code>ColorScale</code>, <code>IconSet</code>.</td>
+<td>Adds conditional formatting to a cell or range. <code>formatType</code> values: <code>CellValue</code>, <code>Formula</code>, <code>DataBar</code>, <code>ColorScale</code>, <code>IconSet</code>.</td>
 </tr>
 </table>
 
@@ -1093,12 +1094,12 @@ Provides AI-powered structured data extraction from PDF documents and images, re
 </tr>
 <tr>
 <td>ExtractDataAsJSON</td>
-<td>ExtractDataAsJSON(<br/>string inputFilePath,<br/>bool enableFormDetection = true,<br/>bool enableTableDetection = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>bool detectSignatures = true,<br/>bool detectTextboxes = true,<br/>bool detectCheckboxes = true,<br/>bool detectRadioButtons = true,<br/>bool detect_Border_less_Tables = true,<br/>string? outputFilePath = null)</td>
+<td>ExtractDataAsJSON(<br/>string inputFilePath,<br/>bool enableFormDetection = true,<br/>bool enableTableDetection = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>bool detectSignatures = true,<br/>bool detectTextboxes = true,<br/>bool detectCheckboxes = true,<br/>bool detectRadioButtons = true,<br/>bool <code>detect_Border_less_Tables</code> = true,<br/>string? outputFilePath = null)</td>
 <td>Extracts structured data (text, forms, tables, checkboxes, signatures) from a PDF or image file and returns the result as JSON.</td>
 </tr>
 <tr>
 <td>ExtractTableAsJSON</td>
-<td>ExtractTableAsJSON(<br/>string inputFilePath,<br/>bool detect_Border_less_Tables = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>string? outputFilePath = null)</td>
+<td>ExtractTableAsJSON(<br/>string inputFilePath,<br/>bool <code>detect_Border_less_Tables</code> = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>string? outputFilePath = null)</td>
 <td>Extracts only table data from a PDF document and returns the result as JSON. Optimized for table-focused extraction.</td>
 </tr>
 <tr>
