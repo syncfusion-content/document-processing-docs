@@ -72,3 +72,12 @@ The following code sample shows how to apply borders in the Spreadsheet.
 To remove the border style on the target cells, use the UI "No Border" option in the ribbon.
 
 ![Remove borders in spreadsheet](./images/spreadsheet_remove_borders.png)
+
+## Note
+
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+
+## See Also
+
+* [Rows and columns](./rows-and-columns)
+* [Text and cell formatting](./text-cell-formatting)

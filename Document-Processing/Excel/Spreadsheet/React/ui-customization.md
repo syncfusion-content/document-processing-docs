@@ -17,6 +17,8 @@ You can control the ribbon tabs, toolbar items, context menu, and overall appear
 
 The Syncfusion React Spreadsheet component lets you create your own ribbon tabs and add custom items inside them.
 
+The Ribbon organizes the spreadsheet’s features into tabs; use the expand or collapse icon to toggle the ribbon toolbar.
+
 You can create a new tab using the [addRibbonTabs](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#addribbontabs) method. With this, you can create a separate tab where you place the actions and features that you want. You can also add custom items inside these tabs. Each item can run your own functionality, allowing you to perform any action you need.
 
 The following code sample shows how to create custom ribbon tabs and groups.
@@ -89,3 +91,16 @@ The following code sample shows how to enable or disable a ribbon tab and toolba
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/enable-or-disable-ribbon-items-cs1" %}
+
+## Note
+
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+
+## See Also
+
+* [Worksheet](./worksheet)
+* [Rows and columns](./rows-and-columns)
+* [Custom cell templates](./user-interface-customization/custom-cell-templates)
+* [Customize context menu](./user-interface-customization/customize-context-menu)
+* [Customize file menu](./user-interface-customization/customize-filemenu)
+* [theming-and-styling](./user-interface-customization/theming-and-styling)

@@ -19,23 +19,23 @@ You can set formats in the following ways:
 
 ## Fonts
 
-Supported font options: font-family, font-size, bold, italic, strike-through, underline and font color.
+Supported font options include `fontFamily`, `fontSize`, bold, italic, strike-through, underline, and `fontColor`. You can set fonts for a single cell or a range via data binding or at runtime using formatting methods such as `cellFormat`. `fontFamily` accepts common font names, `fontSize` accepts numeric values, and text decorations (bold/italic/underline/strike) can be combined to emphasize content.
 
 ## Text Alignment
 
-Align text in a cell either vertically or horizontally using the `textAlign` and `verticalAlign` properties.
+Align text horizontally (`left`, `center`, `right`) and vertically (`top`, `middle`, `bottom`) using the `textAlign` and `verticalAlign` properties. These alignment settings are available through the ribbon and can be applied programmatically via the `style` property or `cellFormat` method.
 
 ## Indents
 
-Change the indentation of cell content using the `textIndent` property.
+Adjust indentation with the `textIndent` property to visually offset cell content. Indentation can be applied incrementally from the ribbon (Increase/Decrease Indent) or set directly in a cell's `style` object.
 
 ## Fill color
 
-Apply background color to highlight a cell or range using the `backgroundColor` property.
+Apply a background fill using the `backgroundColor` property to highlight cells or ranges. The fill can be applied via the ribbon's fill color picker or programmatically through the `style` property.
 
 ## Borders
 
-You can add borders around a cell or range of cells to define a section of worksheet or a table. To know more about borders, see [Borders](./border).
+Add borders to a cell or range to define tables, emphasize regions, or separate data. Borders support different sides, styles, widths, and colors. Use the ribbon border tools for common presets or apply fine-grained border settings programmatically via the `border` property. To know more about border, see [Borders](./cell-border).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
