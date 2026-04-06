@@ -64,8 +64,7 @@ Document Managers are in-memory containers that manage document life cycles duri
 </tr>
 <tr>
 <td>WordDocumentManager</td>
-<td>Manages Word documents in memory. Supports: <code>.docx</code>, <code>.doc</code>, <code>.rtf</code>, <code>.html</code>,  and <code>.txt</code> formats with auto-detection on import.
-</td>
+<td>Manages Word documents in memory. Supports: <code>.docx</code>, <code>.doc</code>, <code>.rtf</code>, <code>.html</code>, and <code>.txt</code> formats with auto-detection on import.</td>
 </tr>
 <tr>
 <td>ExcelWorkbookManager</td>

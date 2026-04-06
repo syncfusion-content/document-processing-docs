@@ -18,11 +18,11 @@ Speed up your document automation using these example prompts for Syncfusion Doc
 Create, manipulate, secure, extract content from, and perform OCR on PDF documents using AI Agent Tools.
 
 {% promptcards columns=1 %}
-{% promptcard CreatePdfDocument, ExtractText, FindTextInPdf, ExportPDFDocument %}
-Load the insurance policy document 'policy_document.pdf' from {InputDir}. Extract all text content from the document. Then search for all occurrences of the term 'exclusion' and return their exact page locations and bounding rectangle positions so our legal team can quickly audit every exclusion clause in the policy.
+{% promptcard CreatePdfDocument, FindTextInPdf, ExportPDFDocument %}
+Load the insurance policy document ‘policy_document.pdf’ from {InputDir}. Then search for all occurrences of the term ‘exclusion’ and return their exact page locations and bounding rectangle positions so our legal team can quickly audit every exclusion clause in the policy.
 {% endpromptcard %}
 {% promptcard  CreatePdfDocument, FindTextInPdf, RedactPdf, ExportPDFDocument %}
-Load the court filing document 'case_filing.pdf' from {InputDir}. Permanently redact all personally identifiable information: on page 1, redact the name 'John Michael' and the address '4821 Ellwood Drive, Austin, TX 78701'; on page 3, redact the social security number '472-90-1835'. Use black highlight color for all redactions. Export the redacted document as 'case_filing_redacted.pdf' to {OutputDir}.
+Load the court filing document ‘case_filing.pdf’ from {InputDir} and Find the Text ‘John Michael’ and ‘Ellwood Drive, Austin, TX 78701’ and ‘472-90-1835’.  Permanently redact all identifiable information. Use black highlight color for all redactions. Export the redacted document as ‘case_filing_redacted.pdf’ to {OutputDir}.
 {% endpromptcard %}
 {% promptcard CreatePdfDocument, SignPdf, ExportPDFDocument %}
 Load the vendor contract 'vendor_agreement_draft.pdf' from {InputDir} and apply a digital signature using the company certificate 'certificate.pfx' (located at {InputDir}) with the password 'password123'. Place the signature in the bottom-right corner of the last page and use the company logo 'signature_logo.png' from {InputDir} as the signature appearance image. Export the signed contract as 'vendor_agreement_signed.pdf' to {OutputDir}.
@@ -50,10 +50,10 @@ Load the employee Onboarding letter template 'Onboarding_template.docx' from {In
 Load the legal service agreement template 'service_agreement_template.docx' from {InputDir}. Replace the placeholder '[CLIENT_NAME]' with 'Apex Innovations Ltd.', '[SERVICE_FEE]' with '$18,500', and '[CONTRACT_DATE]' with 'April 1, 2026'. Additionally, use a regex pattern to find all date placeholders matching the pattern '\[DATE_[A-Z]+\]' and replace them with 'TBD'. Return the total count of all replacements made. Export the finalized agreement as 'service_agreement_apex.docx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard CreateDocument, ImportMarkdown, ExportDocument %}
-Our developer wrote the API release notes in Markdown format — load the file 'release_notes_v3.2.mdx' from {InputDir}, import it into a new Word document to convert it into a properly formatted .docx file suitable for distribution to non-technical stakeholders. Export the document as 'release_notes_v3.2.docx' to {OutputDir}.
+Our developer wrote the API release notes in Markdown format — load the file 'release_notes_v3.2.md' from {InputDir}, import it into a new Word document to convert it into a properly formatted .docx file suitable for distribution to non-technical stakeholders. Export the document as 'release_notes_v3.2.docx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard CreateDocument, GetFormData, SetFormFields, ExportDocument %}
-Load the patient intake form 'patient_intake_form.docx' from {InputDir}. First, read all current form field values to see what fields are available. Then populate the form with the following patient information: PatientName='Robert Hayes', DateOfBirth='03/12/1978', InsuranceID='INS-4892-XY', PrimaryPhysician='Dr. Amanda Foster', EmergencyContact='Laura Hayes', Allergies='Penicillin'. Export the completed form as 'Intake_Form_Robert_Hayes.docx' to {OutputDir}.
+Load the patient intake form 'patient_intake_form.docx' from {InputDir}. First, read all current form field values to see what fields are available. Then set the form with the following patient information: PatientName='Robert Hayes', DateOfBirth='03/12/1978', Gender='Male', ContactNumber='+1 (214) 555-7834', EmailAddress='robert.hayes@example.com', Address='4567 Elm Street, Apt 210, Dallas, TX 75201, United States', InsuranceProvider='Blue Cross Blue Shield', InsuranceID='INS-4892-XY', InsuranceGroupNumber='GRP-10293', Diabetes = "true", EmergencyContact='Laura Hayes', EmergencyRelation='Spouse', EmergencyPhone='+1 (214) 555-4466', Declaration = 'true', PatientSignature='Robert Hayes', FormDate='04/02/2026'. Export the completed form as 'Intake_Form_Robert_Hayes.docx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard CreateDocument, GetBookmarks, SplitDocument, ExportDocument %}
 Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {InputDir}. List all bookmarks in the document to identify the section boundaries. Split the document by bookmarks so that each bookmarked region — such as 'VendorAgreement', 'NDASection', and 'SLATerms' — becomes a standalone contract file. Export each split document to {OutputDir}.
