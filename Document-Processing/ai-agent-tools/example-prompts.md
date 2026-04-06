@@ -17,7 +17,7 @@ Speed up your document automation using these example prompts for Syncfusion Doc
 
 Create, manipulate, secure, extract content from, and perform OCR on PDF documents using AI Agent Tools.
 
-{% promptcards %}
+{% promptcards columns=1 %}
 {% promptcard CreatePdfDocument, ExtractText, FindTextInPdf, ExportPDFDocument %}
 Load the insurance policy document 'policy_document.pdf' from {InputDir}. Extract all text content from the document. Then search for all occurrences of the term 'exclusion' and return their exact page locations and bounding rectangle positions so our legal team can quickly audit every exclusion clause in the policy.
 {% endpromptcard %}
@@ -39,7 +39,7 @@ Load the sensitive HR performance review document 'performance_review_Q4.pdf' fr
 
 Create, edit, protect, mail-merge, track changes, and manage form fields in Word documents.
 
-{% promptcards %}
+{% promptcards columns=1 %}
 {% promptcard CreateDocument, MergeDocuments, ExportDocument %}
 Assemble the annual company report by merging the following department Word documents from {InputDir} in order: 'cover_page.docx', 'executive_summary.docx', 'finance_report.docx', 'hr_report.docx', 'operations_report.docx', and 'appendix.docx'. Merge them all into 'cover_page.docx' using destination styles to maintain a consistent look. Export the final assembled report as 'annual_report_2025.docx' to {OutputDir}.
 {% endpromptcard %}
@@ -64,8 +64,8 @@ Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {
 
 Create and manage workbooks, worksheets, apply formulas, charts, conditional formatting, and data validation.
 
-{% promptcards %}
-{% promptcard CreateWorkbook, CreateWorksheet, SetValue, SetFormula, CreateChart, SetChartTitle, SetAxisTitles, ExportWorkbook %}
+{% promptcards columns=1 %}
+{% promptcard CreateWorkbook, CreateWorksheet, SetValue, SetFormula, CreateChart, SetChartElements, ExportWorkbook %}
 Create a sales performance dashboard workbook 'sales_dashboard_Q1_2026.xlsx'. Add a worksheet named 'Sales_Data' and populate it with the following Q1 data — headers: (Region, January, February, March, Q1_Total); rows: North (42000, 45000, 51000), South (38000, 40000, 44000), East (55000, 58000, 63000), West (29000, 31000, 35000) — and add Q1_Total formulas summing January through March for each region. Then create a clustered bar chart from the data range A1:D5, positioning it in rows 8–23 and columns 1–8. Set the chart title to 'Q1 2026 Regional Sales Performance', set the category axis title to 'Region', and the value axis title to 'Revenue (USD)'. Enable the chart legend at the bottom. Export the workbook to {OutputDir}.
 {% endpromptcard %}
 {% promptcard CreateWorkbook, CreateWorksheet, SetValue, AddConditionalFormat, SetFormula, ExportWorkbook %}
@@ -77,8 +77,8 @@ Create a confidential board-level financial model workbook 'board_financial_mode
 {% promptcard CreateWorkbook, CreateWorksheet, SetValue, SetFormula, CalculateFormulas, ExportWorkbook %}
 Create a new Excel workbook 'budget_tracker_2026.xlsx' with two worksheets named 'Revenue' and 'Expenses'. In the Revenue sheet, add headers (Month, Product_A, Product_B, Product_C, Total) and populate data for January through June with realistic monthly revenue figures. Add a SUM formula in the Total column for each row. In the Expenses sheet, add headers (Month, Salaries, Marketing, Operations, Total) and populate similar monthly data with SUM formulas in the Total column. Force a full formula recalculation to verify all totals. Export the workbook to {OutputDir}.
 {% endpromptcard %}
-{% promptcard CreateWorkbook, CreateWorksheet, SetValue, SetFormula, CreatePivotTable, ApplyPivotTableStyle, LayoutPivotTable, ExportWorkbook %}
-Create a sales analysis workbook 'sales_pivot_analysis.xlsx'. In a worksheet named 'Raw_Data', add the following headers: (SaleDate, Region, Salesperson, Product, Units, Revenue) and populate it with at least 12 rows of realistic Q1 2026 sales transactions spanning 3 regions, 4 salespersons, and 3 products. Then create a pivot table in a new worksheet named 'Pivot_Summary' at cell A3 named 'RegionalSummary' — use Region as the row field (index 1), Product as the column field (index 3), and Revenue as the data field (index 5) with a Sum subtotal. Apply the built-in style 'PivotStyleMedium2' to the pivot table and layout the pivot to materialize the values. Export the workbook to {OutputDir}.
+{% promptcard CreateWorkbook, CreateWorksheet, SetValue, SetFormula, CreatePivotTable, ExportWorkbook %}
+Create a sales analysis workbook 'sales_pivot_analysis.xlsx'. In a worksheet named 'Raw_Data', add the following headers: (SaleDate, Region, Salesperson, Product, Units, Revenue) and populate it with at least 12 rows of realistic Q1 2026 sales transactions spanning 3 regions, 4 salespersons, and 3 products. Then create a pivot table in a new worksheet named 'Pivot_Summary' at cell A3 named 'RegionalSummary' — use Region as the row field (index 1), Product as the column field (index 3), and Revenue as the data field (index 5) with a Sum subtotal. Export the workbook to {OutputDir}.
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -86,7 +86,7 @@ Create a sales analysis workbook 'sales_pivot_analysis.xlsx'. In a worksheet nam
 
 Load, merge, split, secure, and extract content from PowerPoint presentations.
 
-{% promptcards %}
+{% promptcards columns=1 %}
 {% promptcard LoadPresentation, FindAndReplace, ExportPresentation %}
 Load the product launch presentation 'product_launch_template.pptx' from {InputDir}. The presentation is a reusable template — replace all occurrences of '[PRODUCT_NAME]' with 'Orion Pro X1', '[LAUNCH_DATE]' with 'May 15, 2026', '[PRICE]' with '$299', and '[TARGET_MARKET]' with 'Enterprise Customers'. Export the customized presentation as 'product_launch_orion_pro_x1.pptx' to {OutputDir}.
 {% endpromptcard %}
@@ -108,7 +108,7 @@ Load the investor pitch deck 'investor_pitch_Q1_2026.pptx' from {InputDir}. Get 
 
 Convert documents between different formats including Word, Excel, and PowerPoint to PDF.
 
-{% promptcards %}
+{% promptcards columns=1 %}
 {% promptcard CreateDocument (Word), ConvertToPDF, WatermarkPdf, ExportPDFDocument %}
 Load the signed vendor contract 'vendor_contract_final.docx' from {InputDir}, convert it to PDF for archiving purposes, and then apply a 'ARCHIVED' watermark with 30% opacity across all pages of the resulting PDF. Export the archived PDF as 'vendor_contract_final_archived.pdf' to {OutputDir}.
 {% endpromptcard %}
@@ -124,7 +124,7 @@ Convert the sales conference presentation 'sales_conference_2026.pptx' from {Inp
 
 Extract structured data including text, tables, forms, and checkboxes from PDFs and images as JSON.
 
-{% promptcards %}
+{% promptcards columns=1 %}
 {% promptcard ExtractDataAsJSON %}
 Extract all structured data from the vendor invoice 'invoice_APR2026_00142.pdf' located at {InputDir}. Enable both form and table detection to capture invoice header fields (vendor name, invoice number, date, due date) and the line-item table (description, quantity, unit price, total). Use a confidence threshold of 0.7 for reliable results. Save the extracted JSON to 'invoice_APR2026_00142_data.json' in {OutputDir}.
 {% endpromptcard %}
