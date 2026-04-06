@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Angular Standalone PDF Viewer component
+# Getting started with Angular Standalone PDF Viewer
 
 This section explains the steps required to create a simple Standalone Angular PDF Viewer and demonstrates the basic usage of the PDF Viewer control in an Angular 21.
 
@@ -235,7 +235,7 @@ bootstrapApplication(App, appConfig)
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/samples/pdfviewer/angular/getting-started-cs1-standalone" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/angular/getting-started-cs1-standalone" %}
 
 ## Module injection
 
