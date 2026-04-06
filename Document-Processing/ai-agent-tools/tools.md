@@ -1094,12 +1094,12 @@ Provides AI-powered structured data extraction from PDF documents and images, re
 </tr>
 <tr>
 <td>ExtractDataAsJSON</td>
-<td>ExtractDataAsJSON(<br/>string inputFilePath,<br/>bool enableFormDetection = true,<br/>bool enableTableDetection = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>bool detectSignatures = true,<br/>bool detectTextboxes = true,<br/>bool detectCheckboxes = true,<br/>bool detectRadioButtons = true,<br/>bool <code>detect_Border_less_Tables</code> = true,<br/>string? outputFilePath = null)</td>
+<td>ExtractDataAsJSON(<br/>string inputFilePath,<br/>bool enableFormDetection = true,<br/>bool enableTableDetection = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>bool detectSignatures = true,<br/>bool detectTextboxes = true,<br/>bool detectCheckboxes = true,<br/>bool detectRadioButtons = true,<br/>bool detect_Border_less_Tables = true,<br/>string? outputFilePath = null)</td>
 <td>Extracts structured data (text, forms, tables, checkboxes, signatures) from a PDF or image file and returns the result as JSON.</td>
 </tr>
 <tr>
 <td>ExtractTableAsJSON</td>
-<td>ExtractTableAsJSON(<br/>string inputFilePath,<br/>bool <code>detect_Border_less_Tables</code> = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>string? outputFilePath = null)</td>
+<td>ExtractTableAsJSON(<br/>string inputFilePath,<br/>bool detect_Border_less_Tables = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>string? outputFilePath = null)</td>
 <td>Extracts only table data from a PDF document and returns the result as JSON. Optimized for table-focused extraction.</td>
 </tr>
 <tr>
