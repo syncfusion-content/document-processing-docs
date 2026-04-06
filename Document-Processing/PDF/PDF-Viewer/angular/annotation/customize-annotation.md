@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize annotations in React PDF Viewer | Syncfusion
-description: Learn how to customize PDF annotations in Syncfusion React PDF Viewer using UI tools and programmatic settings (defaults and runtime edits).
+title: Customize annotations in Angular PDF Viewer | Syncfusion
+description: Learn how to customize PDF annotations in Syncfusion Angular PDF Viewer using UI tools and programmatic settings (defaults and runtime edits).
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize annotations in React
+# Customize annotations in Angular
 
 Annotation appearance and behavior (for example color, stroke color, thickness, and opacity) can be customized using the built‑in UI or programmatically. This page summarizes common customization patterns and shows how to set defaults per annotation type.
 
@@ -64,56 +64,72 @@ Other Annotations:
 Set defaults for specific annotation types when creating the `PdfViewerComponent`. Below are examples using settings already used in the annotation type pages.
 
 {% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import {
-  PdfViewerComponent, Inject,
-  Toolbar, Annotation, TextSelection
-} from '@syncfusion/ej2-react-pdfviewer';
+{% highlight ts tabtitle="Standalone" %}
+import { Component } from '@angular/core';
+import { PdfViewerModule, ToolbarService, AnnotationService, TextSelectionService } from '@syncfusion/ej2-angular-pdfviewer';
 
-function App() {
-  return (
-    <PdfViewerComponent
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  template: `
+    <ejs-pdfviewer
       id="container"
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      style={{ height: '650px' }}
+      [documentPath]="documentPath"
+      [resourceUrl]="resourceUrl"
+      style="height:650px;display:block"
+      [highlightSettings]="highlightSettings"
+      [strikethroughSettings]="strikethroughSettings"
+      [underlineSettings]="underlineSettings"
+      [squigglySettings]="squigglySettings"
+      [lineSettings]="lineSettings"
+      [arrowSettings]="arrowSettings"
+      [rectangleSettings]="rectangleSettings"
+      [circleSettings]="circleSettings"
+      [polygonSettings]="polygonSettings"
+      [distanceSettings]="distanceSettings"
+      [perimeterSettings]="perimeterSettings"
+      [areaSettings]="areaSettings"
+      [radiusSettings]="radiusSettings"
+      [volumeSettings]="volumeSettings"
+      [freeTextSettings]="freeTextSettings"
+      [inkAnnotationSettings]="inkAnnotationSettings"
+      [stampSettings]="stampSettings"
+      [stickyNotesSettings]="stickyNotesSettings">
+    </ejs-pdfviewer>
+  `,
+  imports: [PdfViewerModule],
+  providers: [ToolbarService, AnnotationService, TextSelectionService]
+})
+export class AppComponent {
+  public documentPath: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
-      // Text markup defaults
-      highlightSettings={{ author: 'QA', subject: 'Review', color: '#ffff00', opacity: 0.6 }}
-      strikethroughSettings={{ author: 'QA', subject: 'Remove', color: '#ff0000', opacity: 0.6 }}
-      underlineSettings={{ author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9 }}
-      squigglySettings={{ author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9 }}
+  // Text markup defaults
+  public highlightSettings = { author: 'QA', subject: 'Review', color: '#ffff00', opacity: 0.6 };
+  public strikethroughSettings = { author: 'QA', subject: 'Remove', color: '#ff0000', opacity: 0.6 };
+  public underlineSettings = { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9 };
+  public squigglySettings = { author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9 };
 
-      // Shapes
-      lineSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8 }}
-      arrowSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8 }}
-      rectangleSettings={{ fillColor: '#ffffff00', strokeColor: '#222222', thickness: 1, opacity: 1 }}
-      circleSettings={{ fillColor: '#ffffff00', strokeColor: '#222222', thickness: 1, opacity: 1 }}
-      polygonSettings={{ fillColor: '#ffffff00', strokeColor: '#222222', thickness: 1, opacity: 1 }}
+  // Shapes
+  public lineSettings = { strokeColor: '#0066ff', thickness: 2, opacity: 0.8 };
+  public arrowSettings = { strokeColor: '#0066ff', thickness: 2, opacity: 0.8 };
+  public rectangleSettings = { fillColor: '#ffffff00', strokeColor: '#222222', thickness: 1, opacity: 1 };
+  public circleSettings = { fillColor: '#ffffff00', strokeColor: '#222222', thickness: 1, opacity: 1 };
+  public polygonSettings = { fillColor: '#ffffff00', strokeColor: '#222222', thickness: 1, opacity: 1 };
 
-      // Measurements
-      distanceSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8 }}
-      perimeterSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8 }}
-      areaSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8, fillColor: '#ffffff00' }}
-      radiusSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8, fillColor: '#ffffff00' }}
-      volumeSettings={{ strokeColor: '#0066ff', thickness: 2, opacity: 0.8, fillColor: '#ffffff00' }}
+  // Measurements
+  public distanceSettings = { strokeColor: '#0066ff', thickness: 2, opacity: 0.8 };
+  public perimeterSettings = { strokeColor: '#0066ff', thickness: 2, opacity: 0.8 };
+  public areaSettings = { strokeColor: '#0066ff', thickness: 2, opacity: 0.8, fillColor: '#ffffff00' };
+  public radiusSettings = { strokeColor: '#0066ff', thickness: 2, opacity: 0.8, fillColor: '#ffffff00' };
+  public volumeSettings = { strokeColor: '#0066ff', thickness: 2, opacity: 0.8, fillColor: '#ffffff00' };
 
-      // Others
-      freeTextSettings={{ borderColor: '#222222', thickness: 1, opacity: 1 }}
-      inkAnnotationSettings={{ color: '#0000ff', thickness: 3, opacity: 0.8 }}
-      stampSettings={{ opacity: 0.9 }}
-      stickyNotesSettings={{ author: 'QA', subject: 'Review', color: '#ffcc00', opacity: 1 }}
-    >
-      <Inject services={[Toolbar, Annotation, TextSelection]} />
-    </PdfViewerComponent>
-  );
+  // Others
+  public freeTextSettings = { borderColor: '#222222', thickness: 1, opacity: 1 };
+  public inkAnnotationSettings = { color: '#0000ff', thickness: 3, opacity: 0.8 };
+  public stampSettings = { opacity: 0.9 };
+  public stickyNotesSettings = { author: 'QA', subject: 'Review', color: '#ffcc00', opacity: 1 };
 }
-
-ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -126,138 +142,135 @@ To update an existing annotation from code, modify its properties and call editA
 Example: bulk‑update matching annotations.
 
 {% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { PdfViewerComponent, Inject, Toolbar, Annotation, TextSelection } from '@syncfusion/ej2-react-pdfviewer';
+{% highlight ts tabtitle="Standalone" %}
+import { Component } from '@angular/core';
+import { PdfViewerModule, ToolbarService, AnnotationService, TextSelectionService } from '@syncfusion/ej2-angular-pdfviewer';
 
-function getViewer() { return document.getElementById('container').ej2_instances[0]; }
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  template: `
+    <button (click)="bulkUpdateAnnotations()">Bulk Update Annotations</button>
+    <ejs-pdfviewer
+      id="container"
+      [documentPath]="documentPath"
+      [resourceUrl]="resourceUrl"
+      style="height:650px;display:block">
+    </ejs-pdfviewer>
+  `,
+  imports: [PdfViewerModule],
+  providers: [ToolbarService, AnnotationService, TextSelectionService]
+})
+export class AppComponent {
+  public documentPath: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
-function bulkUpdateAnnotations() {
-  const viewer = getViewer();
-  for (const ann of viewer.annotationCollection) {
-    // Example criteria; customize as needed
-    if (ann.author === 'Guest' || ann.subject === 'Rectangle') {
-      ann.color = '#ff0000';
-      ann.opacity = 0.8;
-      // For shapes/lines you can also change strokeColor/thickness when applicable
-      // ann.strokeColor = '#222222';
-      // ann.thickness = 2;
-      viewer.annotation.editAnnotation(ann);
+  getViewer() {
+    return (document.getElementById('container') as any).ej2_instances[0];
+  }
+
+  bulkUpdateAnnotations() {
+    const viewer = this.getViewer();
+    for (const ann of viewer.annotationCollection) {
+      // Example criteria; customize as needed
+      if (ann.author === 'Guest' || ann.subject === 'Rectangle') {
+        ann.color = '#ff0000';
+        ann.opacity = 0.8;
+        // For shapes/lines you can also change strokeColor/thickness when applicable
+        // ann.strokeColor = '#222222';
+        // ann.thickness = 2;
+        viewer.annotation.editAnnotation(ann);
+      }
     }
   }
 }
-
-function App() {
-  return (
-    <>
-      <button onClick={bulkUpdateAnnotations}>Bulk Update Annotations</button>
-      <PdfViewerComponent
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        style={{ height: '650px' }}
-      >
-        <Inject services={[Toolbar, Annotation, TextSelection]} />
-      </PdfViewerComponent>
-    </>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
 ## Customize Annotation Settings
 
-Defines the settings of the annotations. You can change annotation settings like author name, height, width etc., using the [`annotationSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationsettings) prop.
+Defines the settings of the annotations. You can change annotation settings like author name, height, width etc., using the [`annotationSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotationsettings) property.
 
 {% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import {
-  PdfViewerComponent, Inject,
-  Toolbar, Annotation, TextSelection,
-  AllowedInteraction
-} from '@syncfusion/ej2-react-pdfviewer';
+{% highlight ts tabtitle="Standalone" %}
+import { Component } from '@angular/core';
+import { PdfViewerModule, ToolbarService, AnnotationService, TextSelectionService, AllowedInteraction } from '@syncfusion/ej2-angular-pdfviewer';
 
-function App() {
-  return (
-    <PdfViewerComponent
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  template: `
+    <ejs-pdfviewer
       id="container"
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      style={{ height: '650px' }}
-      annotationSettings={{
-        author: 'XYZ',
-        minHeight: 10,
-        minWidth: 10,
-        maxWidth: 100,
-        maxHeight: 100,
-        isLock: false,
-        skipPrint: false,
-        skipDownload: false,
-        allowedInteractions: [AllowedInteraction.Select, AllowedInteraction.Move]
-      }}
-    >
-      <Inject services={[Toolbar, Annotation, TextSelection]} />
-    </PdfViewerComponent>
-  );
+      [documentPath]="documentPath"
+      [resourceUrl]="resourceUrl"
+      style="height:650px;display:block"
+      [annotationSettings]="annotationSettings">
+    </ejs-pdfviewer>
+  `,
+  imports: [PdfViewerModule],
+  providers: [ToolbarService, AnnotationService, TextSelectionService]
+})
+export class AppComponent {
+  public documentPath: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+  
+  public annotationSettings = {
+    author: 'XYZ',
+    minHeight: 10,
+    minWidth: 10,
+    maxWidth: 100,
+    maxHeight: 100,
+    isLock: false,
+    skipPrint: false,
+    skipDownload: false,
+    allowedInteractions: [AllowedInteraction.Select, AllowedInteraction.Move]
+  };
 }
-
-ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 ## Customize Annotation SelectorSettings
 
-Defines the settings of annotation selector. You can customize the annotation selector using the [`annotationSelectorSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationselectorsettings) prop.
+Defines the settings of annotation selector. You can customize the annotation selector using the [`annotationSelectorSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotationselectorsettings) property.
 
 {% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import {
-  PdfViewerComponent, Inject,
-  Toolbar, Annotation, TextSelection,
-  AnnotationResizerLocation, CursorType
-} from '@syncfusion/ej2-react-pdfviewer';
+{% highlight ts tabtitle="Standalone" %}
+import { Component } from '@angular/core';
+import { PdfViewerModule, ToolbarService, AnnotationService, TextSelectionService, AnnotationResizerLocation, CursorType } from '@syncfusion/ej2-angular-pdfviewer';
 
-function App() {
-  return (
-    <PdfViewerComponent
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  template: `
+    <ejs-pdfviewer
       id="container"
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      style={{ height: '650px' }}
-      annotationSelectorSettings={{
-        selectionBorderColor: 'blue',
-        resizerBorderColor: 'red',
-        resizerFillColor: '#4070ff',
-        resizerSize: 8,
-        selectionBorderThickness: 1,
-        resizerShape: 'Circle',
-        selectorLineDashArray: [5, 6],
-        resizerLocation: AnnotationResizerLocation.Corners | AnnotationResizerLocation.Edges,
-        resizerCursorType: CursorType.grab
-      }}
-    >
-      <Inject services={[Toolbar, Annotation, TextSelection]} />
-    </PdfViewerComponent>
-  );
+      [documentPath]="documentPath"
+      [resourceUrl]="resourceUrl"
+      style="height:650px;display:block"
+      [annotationSelectorSettings]="annotationSelectorSettings">
+    </ejs-pdfviewer>
+  `,
+  imports: [PdfViewerModule],
+  providers: [ToolbarService, AnnotationService, TextSelectionService]
+})
+export class AppComponent {
+  public documentPath: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+  
+  public annotationSelectorSettings = {
+    selectionBorderColor: 'blue',
+    resizerBorderColor: 'red',
+    resizerFillColor: '#4070ff',
+    resizerSize: 8,
+    selectionBorderThickness: 1,
+    resizerShape: 'Circle',
+    selectorLineDashArray: [5, 6],
+    resizerLocation: AnnotationResizerLocation.Corners | AnnotationResizerLocation.Edges,
+    resizerCursorType: CursorType.grab
+  };
 }
-
-ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
-[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
 
 ## See also
 
