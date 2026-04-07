@@ -58,6 +58,12 @@ The following NuGet packages are required dependencies for the agent tool librar
 |[Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core)|OCR Processor|
 |[Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows)| HTML to PDF conversion|
 
+The following functionalities required additional NuGet packages in non-Windows platforms. 
+ 
+- [Office to PDF in Linux platform](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#additional-nuget-packages-required-for-linux)
+
+- [HTML to PDF in Cross-Platform](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/nuget-packages-required)
+
 The following NuGet packages are used in the application.
 
 | Package | Purpose |
@@ -81,3 +87,4 @@ The following NuGet packages are used in the application.
 - [Syncfusion Excel Library](https://help.syncfusion.com/document-processing/excel/excel-library/overview)
 - [Syncfusion PowerPoint Library](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/overview)
 - [Data Extraction](https://help.syncfusion.com/document-processing/data-extraction/overview)
+- [Example Prompts](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/example-prompts)
