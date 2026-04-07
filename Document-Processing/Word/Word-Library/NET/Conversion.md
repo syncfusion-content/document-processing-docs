@@ -79,7 +79,7 @@ You can customize the HTML to Word conversion with the following options:
 * Insert the HTML string at the specified position of the document body contents
 * Append HTML string to the specified paragraph
 
-For further information, kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/html-conversions#customization-settings).
+For further information, kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/html-conversions#customizing-the-html-to-word-conversion).
 
 ### Customizing the Word to HTML conversion
 
@@ -93,7 +93,7 @@ You can customize the Word to HTML conversion with the following options:
 N> 
 While exporting the header and footer, DocIO exports the first section's header content at the top of the HTML file and first section's footer content at the end of the HTML file.
 
-For further information, kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/html-conversions#customization-settings).
+For further information, kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/html-conversions#customizing-the-word-to-html-conversion).
 
 ### Supported Document elements
 

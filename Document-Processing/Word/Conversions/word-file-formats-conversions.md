@@ -98,7 +98,7 @@ For further information, click [here](https://help.syncfusion.com/document-proce
 
 ## Word Processing XML (.xml)
 
-Word Processing XML (WordML) is a single-file XML format introduced in Microsoft Word 2003 to represent Word document content in XML.
+Word Processing XML (WordML) is a singleâ€‘file XML format introduced in Microsoft Word 2003 to represent Word document content in XML.
 
 The Essential<sup>&reg;</sup> DocIO supports converting the Word document into Word Processing XML document and vice versa.
 
@@ -257,7 +257,7 @@ Word Processing XML conversion supports all common Word document elements such a
 
 ## Word Binary (97-2003) format
 
-DOC is the binary file format used in Word 97–Word 2003 and is one of the classic file formats for Word processing documents. It is a proprietary binary format developed by Microsoft that is supported across Microsoft Word versions and maintained mainly for backward compatibility.
+DOC is the binary file format used in Word 97â€“Word 2003 and is one of the classic file formats for Word processing documents. It is a proprietary binary format developed by Microsoft that is supported across Microsoft Word versions and maintained mainly for backward compatibility.
 
 The Essential<sup>&reg;</sup> DocIO library supports importing and exporting DOC format documents.
 
@@ -392,7 +392,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Word 97-2003 Template (DOT)
 
-DOT is the binary template file format used in Word 97–Word 2003 and is used to create new documents from an existing template.
+DOT is the binary template file format used in Word 97â€“Word 2003 and is used to create new documents from an existing template.
 
 The following code example illustrates how to create a binary format document template with a few lines of code.
 
