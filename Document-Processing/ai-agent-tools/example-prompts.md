@@ -17,7 +17,7 @@ Speed up your document automation using these example prompts for Syncfusion Doc
 
 Create, manipulate, secure, extract content from, and perform OCR on PDF documents using AI Agent Tools.
 
-{% promptcards columns=1 %}
+{% promptcards %}
 {% promptcard CreatePdfDocument, FindTextInPdf, ExportPDFDocument %}
 Load the insurance policy document ‘policy_document.pdf’ from {InputDir}. Then search for all occurrences of the term ‘exclusion’ and return their exact page locations and bounding rectangle positions so our legal team can quickly audit every exclusion clause in the policy.
 {% endpromptcard %}
@@ -39,7 +39,7 @@ Load the sensitive HR performance review document 'performance_review_Q4.pdf' fr
 
 Create, edit, protect, mail-merge, track changes, and manage form fields in Word documents.
 
-{% promptcards columns=1 %}
+{% promptcards %}
 {% promptcard CreateDocument, MergeDocuments, ExportDocument %}
 Assemble the annual company report by merging the following department Word documents from {InputDir} in order: 'cover_page.docx', 'executive_summary.docx', 'finance_report.docx', 'hr_report.docx', 'operations_report.docx', and 'appendix.docx'. Merge them all into 'cover_page.docx' using destination styles to maintain a consistent look. Export the final assembled report as 'annual_report_2025.docx' to {OutputDir}.
 {% endpromptcard %}
@@ -64,7 +64,7 @@ Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {
 
 Create and manage workbooks, worksheets, charts, conditional formatting, and data validation.
 
-{% promptcards columns=1 %}
+{% promptcards %}
 {% promptcard CreateWorkbook, CreateWorksheet, AddDropdownListValidation, CreateChart, SetChartElement, ExportWorkbook %}
 Load a sales performance dashboard workbook ‘sales_dashboard_Q1_2026.xlsx’ from {InputDir}. Add a worksheet named ‘DataValidation’ and create the List validation in the A1:B3 range and the list names "Excel", "Presentation", "Word", "PDF". Then create a clustered bar chart from the `Sales data’ sheet data range A1:D5, positioning it in rows 8–23 and columns 1–8. Set the chart title to ‘Q1 2026 Regional Sales Performance’, set the category axis title to ‘Region’, and the value axis title to ‘Revenue (USD)’. Enable the chart legend at the bottom. Export the workbook to {OutputDir}.
 {% endpromptcard %}
@@ -86,7 +86,7 @@ Load a sales performance dashboard workbook ‘car_brands.xlsx’ from {InputDir
 
 Load, merge, split, secure, and extract content from PowerPoint presentations.
 
-{% promptcards columns=1 %}
+{% promptcards %}
 {% promptcard LoadPresentation, FindAndReplace, ExportPresentation %}
 Load the product launch presentation 'product_launch_template.pptx' from {InputDir}. The presentation is a reusable template — replace all occurrences of '[PRODUCT_NAME]' with 'Orion Pro X1', '[LAUNCH_DATE]' with 'May 15, 2026', '[PRICE]' with '$299', and '[TARGET_MARKET]' with 'Enterprise Customers'. Export the customized presentation as 'product_launch_orion_pro_x1.pptx' to {OutputDir}.
 {% endpromptcard %}
@@ -108,7 +108,7 @@ Load the investor pitch deck 'investor_pitch_Q1_2026.pptx' from {InputDir}. Get 
 
 Convert documents between different formats including Word, Excel, and PowerPoint to PDF.
 
-{% promptcards columns=1 %}
+{% promptcards %}
 {% promptcard CreateDocument (Word), ConvertToPDF, WatermarkPdf, ExportPDFDocument %}
 Load the signed vendor contract 'vendor_contract_final.docx' from {InputDir}, convert it to PDF for archiving purposes, and then apply a 'ARCHIVED' watermark with 30% opacity across all pages of the resulting PDF. Export the archived PDF as 'vendor_contract_final_archived.pdf' to {OutputDir}.
 {% endpromptcard %}
@@ -124,7 +124,7 @@ Convert the sales conference presentation 'sales_conference_2026.pptx' from {Inp
 
 Extract structured data including text, tables, forms, and checkboxes from PDFs and images as JSON.
 
-{% promptcards columns=1 %}
+{% promptcards %}
 {% promptcard ExtractDataAsJSON %}
 Extract all structured data from the vendor invoice 'invoice_APR2026_00142.pdf' located at {InputDir}. Enable both form and table detection to capture invoice header fields (vendor name, invoice number, date, due date) and the line-item table (description, quantity, unit price, total). Use a confidence threshold of 0.7 for reliable results. Save the extracted JSON to 'invoice_APR2026_00142_data.json' in {OutputDir}.
 {% endpromptcard %}
