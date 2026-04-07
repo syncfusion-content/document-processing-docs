@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF Viewer control provides comprehensive stamp annotation features for adding, editing, deleting, and rotating various stamp types. This guide covers adding stamps through the UI, programmatic APIs, and customization options.
 
-### Stamp types
+## Stamp types
 
 The PDF Viewer supports four primary stamp annotation types:
 

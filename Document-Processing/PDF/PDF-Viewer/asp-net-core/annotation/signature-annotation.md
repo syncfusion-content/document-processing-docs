@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF Viewer provides comprehensive handwritten signature capabilities for adding digital signatures to PDF documents. Capture handwritten signatures for authentication, approval workflows, and document verification with customizable appearance and default properties.
 
-### Signature features
+## Signature features
 
 - **Freehand drawing** - Natural signature capture through drawing interface
 - **Multiple formats** - Support for drawn, typed text, and uploaded image signatures
@@ -68,7 +68,6 @@ Handwritten signatures can be added directly using the annotation toolbar interf
 5. **Place on document** - Move the cursor to desired location and click to place the signature on the PDF page
 
 ![Handwritten signature placed on the PDF page](../images/signature_added.png)
-![SignatureAdded](./images/signature_added.png)
 
 ## Add a handwritten signature programmatically
 
