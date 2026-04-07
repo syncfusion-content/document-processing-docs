@@ -62,23 +62,23 @@ Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {
 
 ### Excel
 
-Create and manage workbooks, worksheets, apply formulas, charts, conditional formatting, and data validation.
+Create and manage workbooks, worksheets, charts, conditional formatting, and data validation.
 
 {% promptcards columns=1 %}
-{% CreateWorkbook, CreateWorksheet, AddDropdownListValidation, CreateChart, SetChartElement, ExportWorkbook %}
+{% promptcard CreateWorkbook, CreateWorksheet, AddDropdownListValidation, CreateChart, SetChartElement, ExportWorkbook %}
 Load a sales performance dashboard workbook ‘sales_dashboard_Q1_2026.xlsx’ from {InputDir}. Add a worksheet named ‘DataValidation’ and create the List validation in the A1:B3 range and the list names "Excel", "Presentation", "Word", "PDF". Then create a clustered bar chart from the `Sales data’ sheet data range A1:D5, positioning it in rows 8–23 and columns 1–8. Set the chart title to ‘Q1 2026 Regional Sales Performance’, set the category axis title to ‘Region’, and the value axis title to ‘Revenue (USD)’. Enable the chart legend at the bottom. Export the workbook to {OutputDir}.
 {% endpromptcard %}
-{% promptcard CreateWorkbook, CreateWorksheet, SetValue, AddConditionalFormat, SetFormula, ExportWorkbook %}
-Create an inventory management workbook 'inventory_status.xlsx' with a worksheet named 'Stock_Levels'. Add headers (SKU, Product_Name, Category, In_Stock, Reorder_Point, Status) and populate it with 10 product rows across Electronics, Furniture, and Stationery categories with realistic stock and reorder data. Add a formula in the Status column that returns 'Reorder' when In_Stock is less than Reorder_Point and 'OK' otherwise. Apply conditional formatting to the In_Stock column (D2:D11): highlight cells in red where the value is less than the reorder threshold (use 10 as the formula threshold for the conditional format). Export the workbook to {OutputDir}.
+{% promptcard CreateWorkbook, SetActiveWorkbook, AddConditionalFormat, ExportWorkbook %}
+Load an inventory management workbook ‘inventory_status.xlsx’ from {InputDir}. Get the "Stock_Levels" sheet and apply conditional formatting to the In_Stock column (D2:D11): highlight cells in red where the value is less than the reorder threshold (use 10 as the formula threshold for the conditional format). Export the workbook to {OutputDir}.
 {% endpromptcard %}
-{% promptcard CreateWorkbook, CreateWorksheet, SetValue, SetFormula, ProtectWorksheet, ProtectWorkbook, ExportWorkbook %}
-Create a confidential board-level financial model workbook 'board_financial_model_2026.xlsx' with three worksheets: 'Assumptions', 'Projections', and 'Summary'. In the Assumptions sheet, add key input values (growth rate, cost ratio, tax rate, discount rate). In Projections, add a 5-year revenue model with formulas referencing the Assumptions sheet. In the Summary sheet, add KPIs calculated from the Projections sheet. Protect the Assumptions and Projections worksheets with the password 'ModelLock@2026' to prevent unauthorized edits to the model logic. Protect the overall workbook structure with the password 'Board@2026' to prevent adding or deleting sheets. Export the workbook to {OutputDir}.
+{% promptcard CreateWorkbook, SetActiveWorkbook, GetAllWorkbooks, ProtectWorksheet, ProtectWorkbook, ExportWorkbook %}
+Load a confidential board-level financial model workbook ‘board_financial_model_2026.xlsx’ from {InputDir}. Protect the Assumptions and Projections worksheets with the password ‘ModelLock@2026’ to prevent unauthorized edits to the model logic. Protect the overall workbook structure with the password ‘Board@2026’ to prevent adding or deleting sheets. Export the workbook to {OutputDir}.
 {% endpromptcard %}
-{% promptcard CreateWorkbook, CreateWorksheet, SetValue, SetFormula, CalculateFormulas, ExportWorkbook %}
-Create a new Excel workbook 'budget_tracker_2026.xlsx' with two worksheets named 'Revenue' and 'Expenses'. In the Revenue sheet, add headers (Month, Product_A, Product_B, Product_C, Total) and populate data for January through June with realistic monthly revenue figures. Add a SUM formula in the Total column for each row. In the Expenses sheet, add headers (Month, Salaries, Marketing, Operations, Total) and populate similar monthly data with SUM formulas in the Total column. Force a full formula recalculation to verify all totals. Export the workbook to {OutputDir}.
+{% promptcard CreateWorkbook, CreateWorksheet, CreatePivotTable, ExportWorkbook %}
+Load a sales analysis workbook ‘sales_pivot_analysis.xlsx’ from {InputDir}. Create new worksheet named as "Pivot_table" and create a pivot table at cell A3 and use the data from 'Raw_Data' sheet and the range A1:F13. use Region as the row field (index 1), Product as the column field (index 3), and Revenue as the data field (index 5) with a Sum subtotal. Apply the built-in style ‘PivotStyleMedium2’ to the pivot table and layout the pivot to materialize the values. Export the workbook to {OutputDir}.
 {% endpromptcard %}
-{% promptcard CreateWorkbook, CreateWorksheet, SetValue, SetFormula, CreatePivotTable, ExportWorkbook %}
-Create a sales analysis workbook 'sales_pivot_analysis.xlsx'. In a worksheet named 'Raw_Data', add the following headers: (SaleDate, Region, Salesperson, Product, Units, Revenue) and populate it with at least 12 rows of realistic Q1 2026 sales transactions spanning 3 regions, 4 salespersons, and 3 products. Then create a pivot table in a new worksheet named 'Pivot_Summary' at cell A3 named 'RegionalSummary' — use Region as the row field (index 1), Product as the column field (index 3), and Revenue as the data field (index 5) with a Sum subtotal. Export the workbook to {OutputDir}.
+{% promptcard CreateWorkbook, CreateChart, SetChartElement, ConvertToPDF %}
+Load a sales performance dashboard workbook ‘car_brands.xlsx’ from {InputDir}. Create a clustered column chart from the `Car_Brands’ sheet data range A1:C10, positioning it in rows 12–35 and columns 1–10. Set the chart title to ‘Premium car sales’, set the category axis title to ‘Brands’, and the value axis title to ‘Price (USD)’. Enable the chart legend at the bottom. Convert the workbook into a PDF to {OutputDir}.
 {% endpromptcard %}
 {% endpromptcards %}
 
