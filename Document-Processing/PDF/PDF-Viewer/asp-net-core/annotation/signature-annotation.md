@@ -59,7 +59,7 @@ Handwritten signatures can be added directly using the annotation toolbar interf
 
 ![PDF Viewer toolbar showing Handwritten Signature button](../images/handwritten_sign.png)
 
-3. **Draw signature** - Use your mouse, touchpad, or stylus to draw your signature in the signature panel
+3. **Draw signature** - Use your mouse, touch pad, or stylus to draw your signature in the signature panel
 
 ![Handwritten signature panel](../images/signature_panel.png)
 
