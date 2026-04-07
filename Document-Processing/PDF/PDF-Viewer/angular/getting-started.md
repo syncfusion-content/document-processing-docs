@@ -235,7 +235,7 @@ bootstrapApplication(App, appConfig)
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/angular/getting-started-cs1-standalone" %}
+{% previewsample "/document-processing/samples/pdfviewer/angular/getting-started-cs1-standalone" %}
 
 ## Module injection
 

@@ -486,7 +486,7 @@ Essential<sup>&reg;</sup> DocIO keeps the entire document contents (paragraphs, 
 
 You can reduce the memory usage in DocIO DOM when the Word document has embedded Ole image of large file size. You can preserve these embedded Ole images as normal images by setting [PreserveOleImageAsImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Settings.html#Syncfusion_DocIO_DLS_Settings_PreserveOleImageAsImage) property of Settings class as true, before opening the Word document.
 
-If [PreserveOleImageAsImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Settings.html#Syncfusion_DocIO_DLS_Settings_PreserveOleImageAsImage) flag is enabled, DocIO internally skips to read the embedded Ole image of large file size (.bin), instead DocIO reuses the Ole image from Word document as normal image for the same visual appearance. This will reduce the memory usage in DocIO DOM and resolves ìOut of memory exceptionî at some cases.
+If [PreserveOleImageAsImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Settings.html#Syncfusion_DocIO_DLS_Settings_PreserveOleImageAsImage) flag is enabled, DocIO internally skips to read the embedded Ole image of large file size (.bin), instead DocIO reuses the Ole image from Word document as normal image for the same visual appearance. This will reduce the memory usage in DocIO DOM and resolves ‚ÄúOut of memory exception‚Äù at some cases.
 
 The following code example shows how to preserve embedded Ole image as normal image in a Word document.
 
