@@ -175,8 +175,8 @@ The following table illustrates the supported Markdown elements in Word to Markd
 
 The Essential<sup>&reg;</sup> DocIO supports two types of code blocks in Word to Markdown conversion. 
 
-* Indented code block: Set the paragraph style as â€œIndentedCode.â€
-* Fenced code block: Set the paragraph style as â€œFencedCode.â€
+* Indented code block: Set the paragraph style as “IndentedCode.”
+* Fenced code block: Set the paragraph style as “FencedCode.”
 
 The following code example shows how to create code blocks in a Word document using DocIO.
 
@@ -291,7 +291,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Block quotes
 
-Create block quotes in a Word document by applying the â€œQuoteâ€ paragraph style to the paragraphs.
+Create block quotes in a Word document by applying the “Quote” paragraph style to the paragraphs.
 
 The following code example shows how to create block quotes in a Word document.
 
@@ -355,7 +355,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Block-quote-in-Markdown).
 
-N> Nested block quotes are not supported in a Word to the Markdown conversion. To preserve nested block quotes, add the number of â€œ>â€ characters at the beginning of the paragraph in a Word document as equivalent to the nth nested level of the block quote. For example, to insert the 2nd nested level block quote, add two â€œ>â€ characters at the start of the sentence, and no need to apply the â€œQuoteâ€ style to the paragraph.
+N> Nested block quotes are not supported in a Word to the Markdown conversion. To preserve nested block quotes, add the number of “>” characters at the beginning of the paragraph in a Word document as equivalent to the nth nested level of the block quote. For example, to insert the 2nd nested level block quote, add two “>” characters at the start of the sentence, and no need to apply the “Quote” style to the paragraph.
 
 ## Customize image saving
 
@@ -411,11 +411,11 @@ End Using
 {% endhighlight %}
 
 {% highlight c# tabtitle="Xamarin" %}
-//DocIO doesnâ€™t support the MarkdownExportImagesFolder API in UWP and Xamarin platforms.
+//DocIO doesn’t support the MarkdownExportImagesFolder API in UWP and Xamarin platforms.
 {% endhighlight %}
 
 {% highlight c# tabtitle="UWP" %}
-//DocIO doesnâ€™t support the MarkdownExportImagesFolder API in UWP and Xamarin platforms.
+//DocIO doesn’t support the MarkdownExportImagesFolder API in UWP and Xamarin platforms.
 {% endhighlight %}
 
 {% endtabs %}
@@ -494,7 +494,7 @@ using (Stream docStream = typeof(App).GetTypeInfo().Assembly.GetManifestResource
 {% endhighlight %}
 
 {% highlight c# tabtitle="UWP" %}
-//DocIO doesnâ€™t support the ImageNodeVisitedEventArgs in UWP platform.
+//DocIO doesn’t support the ImageNodeVisitedEventArgs in UWP platform.
 {% endhighlight %}
 
 {% endtabs %}
@@ -540,7 +540,7 @@ End Sub
 {% endhighlight %}
 
 {% highlight c# tabtitle="UWP" %}
-//DocIO doesnâ€™t support the ImageNodeVisitedEventArgs in UWP platform.
+//DocIO doesn’t support the ImageNodeVisitedEventArgs in UWP platform.
 {% endhighlight %}
 
 {% endtabs %}
