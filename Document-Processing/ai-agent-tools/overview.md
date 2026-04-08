@@ -60,9 +60,9 @@ The following NuGet packages are required dependencies for the agent tool librar
 
 The following functionalities required additional NuGet packages in non-Windows platforms. 
  
-- [Office to PDF in Linux platform](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#additional-nuget-packages-required-for-linux)
+- [Office to PDF Conversion](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#additional-nuget-packages-required-for-linux) in Linux platform
 
-- [HTML to PDF in Cross-Platform](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/nuget-packages-required)
+- [HTML to PDF Conversion](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/nuget-packages-required) in Cross-Platform
 
 The following NuGet packages are used in the application.
 
