@@ -454,8 +454,8 @@ Yes<br/><br/></td></tr>
 Ink elements<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td><td>
-DOCX format only.<br/><br/></td><td>
-DOCX format only.<br/><br/></td><td>
+DOCX format only. Additional behavior explained {{'[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#ink)'| markdownify }}<br/><br/></td><td>
+DOCX format only. Additional behavior explained {{'[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#ink)'| markdownify }}<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 </tbody>
@@ -1139,7 +1139,7 @@ Yes<br/><br/></td></tr>
     <tr><td>AutoTextList field</td><td>No</td></tr>
     <tr><td>Comments field</td><td>Yes</td></tr>
     <tr><td>Compare field</td><td>Yes</td></tr>
-    <tr><td>CreateDate field</td><td>No</td></tr>
+    <tr><td>CreateDate field</td><td>Yes</td></tr>
     <tr><td>Date field</td><td>Yes</td></tr>
     <tr><td>DocProperty field</td><td>Yes</td></tr>
     <tr><td>DocVariable field</td><td>Yes</td></tr>
@@ -1212,7 +1212,6 @@ Yes<br/><br/></td></tr>
     <tr><td>UserAddress field</td><td>No</td></tr>
     <tr><td>UserInitials field</td><td>No</td></tr>
     <tr><td>UserName field</td><td>No</td></tr>
-    <tr><td>CreateDate field</td><td>Yes</td></tr>
 </table>
 
 

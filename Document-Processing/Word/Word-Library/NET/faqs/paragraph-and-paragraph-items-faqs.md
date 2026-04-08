@@ -882,11 +882,11 @@ For more details, refer [Working with styles](https://help.syncfusion.com/docume
 
 ## Example: Triangle Ink Trace Points
 
-### Ink size used:
+**Ink size used:**
 * Width = 400
 * Height = 300
 
-### Triangle points:
+**Triangle points:**
 * Bottom-left + (0, 300)
 * Top-middle + (200, 0)
 * Bottom-right + (400, 300)
