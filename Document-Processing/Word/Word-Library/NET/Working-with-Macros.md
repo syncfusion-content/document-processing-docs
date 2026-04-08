@@ -26,7 +26,7 @@ using (FileStream fileStream = new FileStream("Template.dotm", FileMode.Open, Fi
     using (WordDocument document = new WordDocument(fileStream, FormatType.Dotm))
     {
         //Creates file stream.
-        using (MemoryStream stream = new MemoryStream();)
+        using (MemoryStream stream = new MemoryStream())
         {
             //Saves the Word document to stream.
             document.Save(stream, FormatType.Word2013Docm);
