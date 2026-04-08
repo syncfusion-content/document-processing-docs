@@ -45,19 +45,25 @@ This full example shows an Angular component with the PDF viewer and a Submit bu
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {
-    PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-    ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner,
-    PageOrganizer, Print
+  PdfViewerModule,
+  ToolbarService,
+  MagnificationService,
+  NavigationService,
+  AnnotationService,
+  TextSelectionService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PdfViewerComponent,
 } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
-    selector: 'app-submit-form',
-    standalone: true,
-    imports: [PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-        ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Print],
-    template: `
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
         <div style="height: 640px">
             <div style="margin-bottom: 8px">
                 <button (click)="handleSubmit()">Submit form data</button>
@@ -70,37 +76,47 @@ import {
             >
             </ejs-pdfviewer>
         </div>
-    `
+    `,
+  providers: [
+    ToolbarService,
+    MagnificationService,
+    NavigationService,
+    AnnotationService,
+    TextSelectionService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
 })
-export class SubmitFormComponent {
-    @ViewChild('pdfViewer')
-    public pdfViewer!: PdfViewerComponent;
+export class AppComponent implements OnInit {
+  @ViewChild('pdfViewer') public pdfviewer: PdfViewerComponent;
+  ngOnInit(): void {}
+  sendToServer(formData: any): Promise<void> {
+    // Adjust URL to your server endpoint
+    return fetch('/api/submit-form', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    }).then((res) => {
+      if (!res.ok) {
+        throw new Error(`Server error ${res.status}`);
+      }
+    });
+  }
 
-    sendToServer(formData: any): Promise<void> {
-        // Adjust URL to your server endpoint
-        return fetch('/api/submit-form', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
-        }).then(res => {
-            if (!res.ok) {
-                throw new Error(`Server error ${res.status}`);
-            }
-        });
+  async handleSubmit(): Promise<void> {
+    try {
+      // exportFormFieldsAsObject returns a Promise resolving to form data object
+      const formData = await this.pdfviewer.exportFormFieldsAsObject();
+      await this.sendToServer(formData);
+      console.log('Form data submitted successfully.');
+    } catch (err) {
+      console.error(err);
+      console.log('Submission failed: ' + (err as Error).message);
     }
-
-    async handleSubmit(): Promise<void> {
-        try {
-            // exportFormFieldsAsObject returns a Promise resolving to form data object
-            const formData = await this.pdfViewer.exportFormFieldsAsObject();
-            await this.sendToServer(formData);
-            console.log('Form data submitted successfully.');
-        } catch (err) {
-            console.error(err);
-            console.log('Submission failed: ' + (err as Error).message);
-        }
-    }
+  }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
