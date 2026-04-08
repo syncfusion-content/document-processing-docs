@@ -63,4 +63,4 @@ The following code example demonstrates how to customize the Spreadsheet to beha
 ## See Also
 
 * [Syncfusion React Grid Component](https://ej2.syncfusion.com/react/documentation/grid/getting-started)
-* [Syncufsion React Checkbox Component](https://ej2.syncfusion.com/react/documentation/check-box/getting-started)
+* [Syncfusion React Checkbox Component](https://ej2.syncfusion.com/react/documentation/check-box/getting-started)
