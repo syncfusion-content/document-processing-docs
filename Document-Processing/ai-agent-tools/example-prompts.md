@@ -115,8 +115,8 @@ Load the signed vendor contract 'vendor_contract_final.docx' from {InputDir}, co
 {% promptcard CreateWorkbook (Excel), ConvertToPDF, EncryptPdf, ExportPDFDocument %}
 Load the annual financial summary workbook 'financial_summary_2025.xlsx' from {InputDir}, convert it to PDF for board distribution, then encrypt the resulting PDF with the password 'Board@Secure2025' and restrict permissions to read-only (no printing or editing). Export the secured financial report as 'financial_summary_2025_board.pdf' to {OutputDir}.
 {% endpromptcard %}
-{% promptcard LoadPresentation (PowerPoint), ConvertToPDF, MergePdfs, ExportPDFDocument %}
-Convert the sales conference presentation 'sales_conference_2026.pptx' from {InputDir} to PDF. Then merge the converted PDF with the existing supplementary materials PDF 'conference_appendix.pdf' (also at {InputDir}) into a single unified conference package. Export the combined document as 'sales_conference_package_2026.pdf' to {OutputDir}.
+{% promptcard LoadPresentation (PowerPoint), ConvertToPDF, ExportPDFDocument, MergePdfs, ExportPDFDocument %}
+Convert the sales conference presentation 'sales_conference_2026.pptx' from {InputDir} to PDF format. Save the converted PDF as 'sales_conference_2026.pdf' in {InputDir}. Then merge the converted presentation PDF with the existing supplementary materials PDF 'conference_appendix.pdf' (also located in {InputDir}) into a single unified conference package. Finally, export the combined merged document as 'sales_conference_package_2026.pdf' to {OutputDir}.
 {% endpromptcard %}
 {% endpromptcards %}
 
