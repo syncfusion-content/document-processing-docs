@@ -16,7 +16,7 @@ This guide shows common patterns with concise code snippets you can copy into yo
 
 ## Access the Form Field Collection
 
-Get all available form field data by reading the viewer's `formFieldCollections`. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formfieldsapi#formfieldcollections).
+Get all available form field data by reading the viewer's `formFieldCollections`. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formfieldcollections).
 
 ```ts
 const formFields = this.pdfViewer.formFieldCollections;
@@ -24,7 +24,7 @@ const formFields = this.pdfViewer.formFieldCollections;
 
 ## Read Text Field Values
 
-Find the text field by name and read its value property. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formfieldsapi#formfieldcollections).
+Find the text field by name and read its value property. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formfieldcollections).
 
 ```ts
 const formFields = this.pdfViewer.formFieldCollections;
@@ -33,7 +33,7 @@ const name = (formFields.find(field => field.type === 'Textbox' && field.name ==
 
 ## Read Checkbox / Radio Button Values
 
-Check whether a checkbox or radio button is selected by reading its `isChecked` value. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formfieldsapi#formfieldcollections).
+Check whether a checkbox or radio button is selected by reading its `isChecked` value. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formfieldcollections).
 
 ```ts
 const formFields = this.pdfViewer.formFieldCollections;
@@ -43,7 +43,7 @@ const checkedField = (radioButtons.find(field => field.isChecked)).name;
 
 ## Read Dropdown values
 
-Read the dropdown's selected option by accessing `value` property. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formfieldsapi#formfieldcollections).
+Read the dropdown's selected option by accessing `value` property. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formfieldcollections).
 
 ```ts
 const formFields = this.pdfViewer.formFieldCollections;
@@ -52,7 +52,7 @@ const state = (formFields.find(field => field.type === 'DropdownList' && field.n
 
 ## Read Signature Field Data
 
-This reads the signature path data stored in a signature field so it can be later converted to an image. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formfieldsapi#formfieldcollections).
+This reads the signature path data stored in a signature field so it can be later converted to an image. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formfieldcollections).
 
 ```ts
 const formFields = this.pdfViewer.formFieldCollections;
@@ -61,7 +61,7 @@ const signData = (formFields.find(field => field.type === 'SignatureField' && fi
 
 ## Extract All Form Field Values
 
-This iterates every field in the collection and logs each field's name and value, useful for exporting or validating all form data. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formfieldsapi#formfieldcollections).
+This iterates every field in the collection and logs each field's name and value, useful for exporting or validating all form data. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formfieldcollections).
 
 ```ts
 const formFields = this.pdfViewer.formFieldCollections;
@@ -77,7 +77,7 @@ formFields.forEach(field => {
 
 ## Extract Form Data After Document Loaded
 
-Place your form-reading logic inside `documentLoad` event handler, so values are read after the PDF is loaded in the viewer. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formfieldsapi#formfieldcollections) and [`documentLoad`](../events#documentload).
+Place your form-reading logic inside `documentLoad` event handler, so values are read after the PDF is loaded in the viewer. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formfieldcollections) and [`documentLoad`](../events#documentload).
 
 ```ts
 // If you need to access form data right after the PDF loads
@@ -102,5 +102,5 @@ onDocumentLoad(): void {
 
 ## See also
 
-- [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formfieldsapi#formfieldcollections)
+- [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formfieldcollections)
 - [`documentLoad`](../events#documentload)
