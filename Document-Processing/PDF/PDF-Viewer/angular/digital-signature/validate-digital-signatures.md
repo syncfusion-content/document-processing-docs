@@ -7,7 +7,7 @@ control: PdfViewer
 documentation: ug
 ---
 
-# Validate Digital Signatures
+# Validate Digital Signatures in Angular
 
 This guide explains **how to validate digital signatures** on PDFs when using the **Syncfusion Angular PDF Viewer** together with the **JavaScript PDF Library**. It clarifies what the Viewer does (display fields and signature appearances) and what the **PDF Library** does (perform **cryptographic validation** and produce validation results).
 
