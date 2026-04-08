@@ -12,6 +12,7 @@ documentation: ug
 Agent Tools are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager.
 
 Tools are organized into the following categories:
+
 | Category | Tool Classes | Description |
 |---|---|---|
 | **PDF** | PdfDocumentAgentTools,<br/>PdfOperationsAgentTools,<br/>PdfSecurityAgentTools,<br/>PdfContentExtractionAgentTools,<br/>PdfAnnotationAgentTools,<br/>PdfConverterAgentTools,<br/>PdfOcrAgentTools | Create, manipulate, secure, extract content from, annotate, convert, and perform OCR on PDF documents. |
@@ -105,6 +106,7 @@ Provides tools for watermarking, digitally signing, and adding or removing annot
 **PdfConverterAgentTools**
 
 Provides tools to convert image, HTML to Pdf
+
 | Tool | Syntax | Description |
 |---|---|---|
 | ConvertPdfToPdfA | ConvertPdfToPdfA(<br/>string documentId,<br/>PdfConformanceLevel conformanceLevel) | Converts a loaded PDF document to a PDF/A-compliant format. Supported conformance levels: `PdfA1B`, `PdfA2B`, `PdfA3B`, `Pdf_A4`, `Pdf_A4F`, `Pdf_A4E`. |
@@ -114,6 +116,7 @@ Provides tools to convert image, HTML to Pdf
 **PdfOcrAgentTools**
 
 Provides tools to perform OCR on PDF
+
 | Tool | Syntax | Description |
 |---|---|---|
 | OcrPdf | OcrPdf(<br/>string documentId,<br/>string language = "eng") | Performs Optical Character Recognition (OCR) on a scanned or image-based PDF document to make its content text-searchable. Supported language codes: `eng` (English), etc.|
@@ -260,10 +263,7 @@ Provides tools to create, manage, and populate worksheets within Excel workbooks
 | Tool | Syntax | Description |
 |---|---|---|
 | CreateWorksheet | CreateWorksheet(<br/>string workbookId,<br/>string? sheetName = null) | Creates a new worksheet inside the specified workbook. |
-| GetWorksheets | GetWorksheets(<br/>string workbookId) | Returns all worksheet names in a workbook. |
-| RenameWorksheet | RenameWorksheet(<br/>string workbookId,<br/>string oldName,<br/>string newName) | Renames a worksheet in the workbook. |
 | DeleteWorksheet | DeleteWorksheet(<br/>string workbookId,<br/>string worksheetName) | Deletes a worksheet from the workbook. |
-| SetValue | SetValue(<br/>string workbookId,<br/>string worksheetName,<br/>string cellAddress,<br/>string data) | Assigns a data value to a cell (supports text, numbers, dates, and booleans). |
 
 
 
@@ -282,19 +282,6 @@ Provides encryption, decryption, and protection management for Excel workbooks a
 
 
 
-**ExcelFormulaAgentTools**
-
-Provides tools to set, retrieve, calculate and validate cell formulas in Excel workbooks.
-
-| Tool | Syntax | Description |
-|---|---|---|
-| SetFormula | SetFormula(<br/>string workbookId,<br/>string worksheetName,<br/>string cellAddress,<br/>string formula) | Assigns a formula to a cell in the worksheet (e.g., `=SUM(A1:A10)`). |
-| GetFormula | GetFormula(<br/>string workbookId,<br/>int worksheetIndex,<br/>string cellAddress) | Retrieves the formula string from a specific cell. |
-| CalculateFormulas | CalculateFormulas(<br/>string workbookId) | Forces recalculation of all formulas in the workbook. |
-| ValidateFormulas | ValidateFormulas(<br/>string workbookId) | Validates all formulas in the workbook and returns any errors as JSON. |
-
-
-
 **ExcelChartAgentTools**
 
 Provides tools to create modify and remove charts in excel workbooks
@@ -304,14 +291,7 @@ Provides tools to create modify and remove charts in excel workbooks
 | CreateChart | CreateChart(<br/>string workbookId,<br/>string worksheetName,<br/>string chartType,<br/>string dataRange,<br/>bool isSeriesInRows = false,<br/>int topRow = 8,<br/>int leftColumn = 1,<br/>int bottomRow = 23,<br/>int rightColumn = 8) | Creates a chart from a data range in the worksheet. Supports many chart types (e.g., `Column_Clustered`, `Line`, `Pie`, `Bar_Clustered`). Returns the chart index. |
 | CreateChartWithSeries | CreateChartWithSeries(<br/>string workbookId,<br/>string worksheetName,<br/>string chartType,<br/>string seriesName,<br/>string valuesRange,<br/>string categoryLabelsRange,<br/>int topRow = 8,<br/>int leftColumn = 1,<br/>int bottomRow = 23,<br/>int rightColumn = 8) | Creates a chart and adds a named series with values and category labels. Returns the chart index. |
 | AddSeriesToChart | AddSeriesToChart(<br/>string workbookId,<br/>string worksheetName,<br/>int chartIndex,<br/>string seriesName,<br/>string valuesRange,<br/>string categoryLabelsRange) | Adds a new series to an existing chart. |
-| SetChartTitle | SetChartTitle(<br/>string workbookId,<br/>string worksheetName,<br/>int chartIndex,<br/>string title) | Sets the title text of a chart. |
-| SetChartLegend | SetChartLegend(<br/>string workbookId,<br/>string worksheetName,<br/>int chartIndex,<br/>bool hasLegend,<br/>string position = "Bottom") | Configures the chart legend visibility and position (`Bottom`, `Top`, `Left`, `Right`, `Corner`). |
-| SetDataLabels | SetDataLabels(<br/>string workbookId,<br/>string worksheetName,<br/>int chartIndex,<br/>int seriesIndex,<br/>bool showValue = true,<br/>bool showCategoryName = false,<br/>bool showSeriesName = false,<br/>string position = "Outside") | Configures data labels for a chart series. |
-| SetChartPosition | SetChartPosition(<br/>string workbookId,<br/>string worksheetName,<br/>int chartIndex,<br/>int topRow,<br/>int leftColumn,<br/>int bottomRow,<br/>int rightColumn) | Sets the position and size of a chart in the worksheet. |
-| SetAxisTitles | SetAxisTitles(<br/>string workbookId,<br/>string worksheetName,<br/>int chartIndex,<br/>string? categoryAxisTitle = null,<br/>string? valueAxisTitle = null) | Sets titles for the category (horizontal) and value (vertical) axes. |
-| RemoveChart | RemoveChart(<br/>string workbookId,<br/>string worksheetName,<br/>int chartIndex) | Removes a chart from the worksheet by its 0-based index. |
-| GetChartCount | GetChartCount(<br/>string workbookId,<br/>string worksheetName) | Returns the number of charts in a worksheet. |
-| CreateSparkline | CreateSparkline(<br/>string workbookId,<br/>string worksheetName,<br/>string sparklineType,<br/>string dataRange,<br/>string referenceRange) | Creates sparkline charts in worksheet cells. Types: `Line`, `Column`, `WinLoss`. |
+| SetChartElement | SetChartElement(<br/>string workbookId,<br/>string worksheetName,<br/>int chartIndex,<br/>int seriesIndex,<br/>string title,<br/>bool hasLegend,<br/>string position = "Bottom",<br/>bool showValue = true,<br/>bool showCategoryName = false,<br/>bool showSeriesName = false,<br/>string dataLabelPosition = "Outside",<br/>string? categoryAxisTitle = null,<br/>string? valueAxisTitle = null) | Sets chart elements including title, legend, data labels, and axis titles. `position` (legend): `Bottom`, `Top`, `Left`, `Right`, `Corner`. `dataLabelPosition`: `Outside`, `Inside`, `Center`, etc. |
 
 
 **ExcelConditionalFormattingAgentTools**
@@ -321,8 +301,6 @@ Provides tools to add or remove conditional formatting in workbook
 | Tool | Syntax | Description |
 |---|---|---|
 | AddConditionalFormat | AddConditionalFormat(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string formatType,<br/>string? operatorType = null,<br/>string? firstFormula = null,<br/>string? secondFormula = null,<br/>string? backColor = null,<br/>bool? isBold = null,<br/>bool? isItalic = null) | Adds conditional formatting to a cell or range. `formatType` values: `CellValue`, `Formula`, `DataBar`, `ColorScale`, `IconSet`. |
-| RemoveConditionalFormat | RemoveConditionalFormat(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress) | Removes all conditional formatting from a specified cell or range. |
-| RemoveConditionalFormatAtIndex | RemoveConditionalFormatAtIndex(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>int index) | Removes the conditional format at a specific 0-based index from a range. |
 
 
 **ExcelConversionAgentTools**
@@ -331,23 +309,13 @@ Provides tools to convert worksheet to image, HTML, ODS, JSON file formats
 
 | Tool | Syntax | Description |
 |---|---|---|
-| ConvertWorksheetToImage | ConvertWorksheetToImage(<br/>string workbookId,<br/>string worksheetName,<br/>string outputPath,<br/>string imageFormat = "PNG",<br/>string scalingMode = "Best") | Converts an entire worksheet to an image file (PNG, JPEG, BMP, GIF, TIFF). |
-| ConvertRangeToImage | ConvertRangeToImage(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string outputPath,<br/>string imageFormat = "PNG",<br/>string scalingMode = "Best") | Converts a specific cell range to an image file. |
-| ConvertRowColumnRangeToImage | ConvertRowColumnRangeToImage(<br/>string workbookId,<br/>string worksheetName,<br/>int startRow,<br/>int startColumn,<br/>int endRow,<br/>int endColumn,<br/>string outputPath,<br/>string imageFormat = "PNG",<br/>string scalingMode = "Best") | Converts a row/column range to an image using 1-based row and column numbers. |
-| ConvertChartToImage | ConvertChartToImage(<br/>string workbookId,<br/>string worksheetName,<br/>int chartIndex,<br/>string outputPath,<br/>string imageFormat = "PNG",<br/>string scalingMode = "Best") | Converts a chart to an image file (PNG or JPEG). |
-| ConvertAllChartsToImages | ConvertAllChartsToImages(<br/>string workbookId,<br/>string worksheetName,<br/>string outputDirectory,<br/>string imageFormat = "PNG",<br/>string scalingMode = "Best",<br/>string fileNamePrefix = "Chart") | Converts all charts in a worksheet to separate image files. |
-| ConvertWorkbookToHtml | ConvertWorkbookToHtml(<br/>string workbookId,<br/>string outputPath,<br/>string textMode = "DisplayText") | Converts an entire workbook to an HTML file preserving styles, hyperlinks, images, and charts. |
-| ConvertWorksheetToHtml | ConvertWorksheetToHtml(<br/>string workbookId,<br/>string worksheetName,<br/>string outputPath,<br/>string textMode = "DisplayText") | Converts a specific worksheet to an HTML file. |
-| ConvertUsedRangeToHtml | ConvertUsedRangeToHtml(<br/>string workbookId,<br/>string worksheetName,<br/>string outputPath,<br/>string textMode = "DisplayText",<br/>bool autofitColumns = true) | Converts the used range of a worksheet to an HTML file with optional column auto-fitting. |
-| ConvertAllWorksheetsToHtml | ConvertAllWorksheetsToHtml(<br/>string workbookId,<br/>string outputDirectory,<br/>string textMode = "DisplayText",<br/>string fileNamePrefix = "Sheet") | Converts all worksheets in a workbook to separate HTML files. |
-| ConvertWorkbookToOds | ConvertWorkbookToOds(<br/>string workbookId,<br/>string outputPath) | Converts an entire workbook to OpenDocument Spreadsheet (ODS) format. |
-| ConvertWorkbookToOdsStream | ConvertWorkbookToOdsStream(<br/>string workbookId,<br/>string outputPath) | Converts an entire workbook to ODS format using stream-based output. |
+| ConvertWorksheetToImage | ConvertWorksheetToImage(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string outputPath,<br/>string imageFormat = "PNG",<br/>string scalingMode = "Best") | Converts an entire worksheet to an image file. Supports PNG, JPEG, BMP, GIF, and TIFF formats. |
+| ConvertChartToImage | ConvertChartToImage(<br/>string workbookId,<br/>string worksheetName,<br/>int chartIndex,<br/>string outputPath,<br/>string imageFormat = "PNG",<br/>string scalingMode = "Best") | Converts an Excel chart to an image file. Supports PNG and JPEG formats. |
+| ConvertWorkbookToHtml | ConvertWorkbookToHtml(<br/>string workbookId,<br/>string outputPath,<br/>string textMode = "DisplayText") | Converts an entire Excel workbook to an HTML file with styles, hyperlinks, images, and charts preserved. |
+| ConvertWorksheetToHtml | ConvertWorksheetToHtml(<br/>string workbookId,<br/>string worksheetName,<br/>string outputPath,<br/>string textMode = "DisplayText") | Converts a specific Excel worksheet to an HTML file with styles, hyperlinks, images, and charts preserved. |
 | ConvertWorkbookToJson | ConvertWorkbookToJson(<br/>string workbookId,<br/>string outputPath,<br/>bool includeSchema = true) | Converts an entire workbook to JSON format with optional schema. |
-| ConvertWorkbookToJsonStream | ConvertWorkbookToJsonStream(<br/>string workbookId,<br/>string outputPath,<br/>bool includeSchema = true) | Converts an entire workbook to JSON format using stream-based output. |
-| ConvertWorksheetToJson | ConvertWorksheetToJson(<br/>string workbookId,<br/>string worksheetName,<br/>string outputPath,<br/>bool includeSchema = true) | Converts a specific worksheet to JSON format. |
-| ConvertWorksheetToJsonStream | ConvertWorksheetToJsonStream(<br/>string workbookId,<br/>string worksheetName,<br/>string outputPath,<br/>bool includeSchema = true) | Converts a specific worksheet to JSON format using stream-based output. |
+| ConvertWorksheetToJson | ConvertWorksheetToJson(<br/>string workbookId,<br/>string worksheetName,<br/>string outputPath,<br/>bool includeSchema = true) | Converts a specific worksheet to JSON format with optional schema. |
 | ConvertRangeToJson | ConvertRangeToJson(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string outputPath,<br/>bool includeSchema = true) | Converts a specific cell range to JSON format. |
-| ConvertRangeToJsonStream | ConvertRangeToJsonStream(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string outputPath,<br/>bool includeSchema = true) | Converts a specific cell range to JSON format using stream-based output. |
 
 
 **ExcelDataValidationAgentTools**
@@ -356,15 +324,12 @@ Provides tools to add data validation to workbook
 
 | Tool | Syntax | Description |
 |---|---|---|
-| AddDropdownListValidation | AddDropdownListValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string listValues,<br/>bool showErrorBox = true,<br/>string? errorTitle = null,<br/>string? errorMessage = null,<br/>bool showPromptBox = false,<br/>string? promptMessage = null) | Adds a dropdown list data validation to a cell or range. `listValues` is comma-separated (max 255 chars). |
-| AddDropdownFromRange | AddDropdownFromRange(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string sourceRange,<br/>bool showErrorBox = true,<br/>string? errorTitle = null,<br/>string? errorMessage = null,<br/>bool showPromptBox = false,<br/>string? promptMessage = null) | Adds a dropdown list validation using a reference range as the data source (e.g., `=Sheet1!$A$1:$A$10`). |
-| AddNumberValidation | AddNumberValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string numberType,<br/>string comparisonOperator,<br/>string firstValue,<br/>string? secondValue = null,<br/>...) | Adds number validation (`Integer` or `Decimal`) with a comparison operator and value(s). |
-| AddDateValidation | AddDateValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string comparisonOperator,<br/>string firstDate,<br/>string? secondDate = null,<br/>...) | Adds date validation using dates in `yyyy-MM-dd` format. |
-| AddTimeValidation | AddTimeValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string comparisonOperator,<br/>string firstTime,<br/>string? secondTime = null,<br/>...) | Adds time validation using 24-hour `HH:mm` format. |
-| AddTextLengthValidation | AddTextLengthValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string comparisonOperator,<br/>string firstLength,<br/>string? secondLength = null,<br/>...) | Adds text length validation with a comparison operator and length value(s). |
-| AddCustomValidation | AddCustomValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string formula,<br/>...) | Adds custom formula-based validation (e.g., `=A1>10`). |
-| RemoveValidation | RemoveValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress) | Removes data validation from a cell or range. |
-| RemoveAllValidations | RemoveAllValidations(<br/>string workbookId,<br/>string worksheetName) | Removes all data validations from a worksheet. |
+| AddDropdownValidation | AddDropdownValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string sourceRange,<br/>string listValues,<br/>bool showErrorBox = true,<br/>string? errorTitle = null,<br/>string? errorMessage = null,<br/>bool showPromptBox = false,<br/>string? promptMessage = null) | Adds a dropdown list data validation to a cell or range. List values are limited to 255 characters including separators. |
+| AddNumberValidation | AddNumberValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string numberType,<br/>string comparisonOperator,<br/>string firstValue,<br/>string? secondValue = null,<br/>bool showErrorBox = true,<br/>string? errorTitle = null, <br/>string? errorMessage = null, <br/>bool showPromptBox = false) | Adds number validation to a cell or range with specified comparison operator and values. |
+| AddDateValidation | AddDateValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string comparisonOperator,<br/>string firstDate,<br/>string? secondDate = null,<br/>bool showErrorBox = true,<br/>string? errorTitle = null, <br/>string? errorMessage = null, <br/>bool showPromptBox = false) | Adds date validation to a cell or range with specified comparison operator and dates. |
+| AddTimeValidation | AddTimeValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string comparisonOperator,<br/>string firstTime,<br/>string? secondTime = null,<br/>bool showErrorBox = true,<br/>string? errorTitle = null, <br/>string? errorMessage = null, <br/>bool showPromptBox = false) | Adds time validation to a cell or range with specified comparison operator and time values. Use 24-hour format like 10:00 or 18:30. |
+| AddTextLengthValidation | AddTextLengthValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string comparisonOperator,<br/>string firstLength,<br/>string? secondLength = null,<br/>bool showErrorBox = true,<br/>string? errorTitle = null, <br/>string? errorMessage = null, <br/>bool showPromptBox = false) | Adds text length validation to a cell or range with specified comparison operator and length values. |
+| AddCustomValidation | AddCustomValidation(<br/>string workbookId,<br/>string worksheetName,<br/>string rangeAddress,<br/>string formula,<br/>bool showErrorBox = true,<br/>string? errorTitle = null, <br/>string? errorMessage = null, <br/>bool showPromptBox = false) | Adds custom formula-based validation to a cell or range. |
 
 
 **ExcelPivotTableAgentTools**
@@ -373,21 +338,7 @@ Provides tools to create, edit pivot table in workbook
 
 | Tool | Syntax | Description |
 |---|---|---|
-| CreatePivotTable | CreatePivotTable(<br/>string workbookId,<br/>string dataWorksheetName,<br/>string dataRange,<br/>string pivotWorksheetName,<br/>string pivotTableName,<br/>string pivotLocation,<br/>string rowFieldIndices,<br/>string columnFieldIndices,<br/>int dataFieldIndex,<br/>string dataFieldCaption,<br/>string subtotalType = "Sum") | Creates a pivot table from a data range. Row/column field indices are comma-separated 0-based values. `subtotalType`: `Sum`, `Count`, `Average`, `Max`, `Min`, etc. XLSX only. |
-| EditPivotTableCell | EditPivotTableCell(<br/>string workbookId,<br/>string worksheetName,<br/>int pivotTableIndex,<br/>string cellAddress,<br/>string newValue) | Lays out a pivot table and edits a specific cell value within the pivot area. |
-| RemovePivotTable | RemovePivotTable(<br/>string workbookId,<br/>string worksheetName,<br/>string pivotTableName) | Removes a pivot table from a worksheet by name. |
-| RemovePivotTableByIndex | RemovePivotTableByIndex(<br/>string workbookId,<br/>string worksheetName,<br/>int pivotTableIndex) | Removes a pivot table from a worksheet by its 0-based index. |
-| GetPivotTables | GetPivotTables(<br/>string workbookId,<br/>string worksheetName) | Returns all pivot table names and their indices in the specified worksheet. |
-| LayoutPivotTable | LayoutPivotTable(<br/>string workbookId,<br/>string worksheetName,<br/>int pivotTableIndex,<br/>bool setRefreshOnLoad = true) | Materializes pivot table values into worksheet cells, enabling reading and editing of pivot data. |
-| RefreshPivotTable | RefreshPivotTable(<br/>string workbookId,<br/>string worksheetName,<br/>int pivotTableIndex) | Marks the pivot table cache to refresh when the file is opened in Excel. |
-| ApplyPivotTableStyle | ApplyPivotTableStyle(<br/>string workbookId,<br/>string worksheetName,<br/>int pivotTableIndex,<br/>string builtInStyle) | Applies a built-in Excel style to a pivot table (e.g., `PivotStyleLight1`, `PivotStyleMedium2`, `PivotStyleDark12`, `None`). |
-| FormatPivotTableCells | FormatPivotTableCells(<br/>string workbookId,<br/>string worksheetName,<br/>int pivotTableIndex,<br/>string rangeAddress,<br/>string backColor) | Applies a background color to a cell range within a pivot table area. |
-| SortPivotTableTopToBottom | SortPivotTableTopToBottom(<br/>string workbookId,<br/>string worksheetName,<br/>int pivotTableIndex,<br/>int rowFieldIndex,<br/>string sortType,<br/>int dataFieldIndex = 1) | Sorts a pivot table row field top-to-bottom (`Ascending` or `Descending`) by data field values. |
-| SortPivotTableLeftToRight | SortPivotTableLeftToRight(<br/>string workbookId,<br/>string worksheetName,<br/>int pivotTableIndex,<br/>int columnFieldIndex,<br/>string sortType,<br/>int dataFieldIndex = 1) | Sorts a pivot table column field left-to-right (`Ascending` or `Descending`) by data field values. |
-| ApplyPivotPageFilter | ApplyPivotPageFilter(<br/>string workbookId,<br/>string worksheetName,<br/>int pivotTableIndex,<br/>int pageFieldIndex,<br/>string hiddenItemIndices) | Sets a pivot field as a page/report filter and hides specified items (comma-separated 0-based indices). |
-| ApplyPivotLabelFilter | ApplyPivotLabelFilter(<br/>string workbookId,<br/>string worksheetName,<br/>int pivotTableIndex,<br/>int fieldIndex,<br/>string filterType,<br/>string filterValue) | Applies a caption/label filter to a pivot field (e.g., `CaptionEqual`, `CaptionBeginsWith`, `CaptionContains`). |
-| ApplyPivotValueFilter | ApplyPivotValueFilter(<br/>string workbookId,<br/>string worksheetName,<br/>int pivotTableIndex,<br/>int fieldIndex,<br/>string filterType,<br/>string filterValue) | Applies a value-based filter to a pivot field (e.g., `ValueGreaterThan`, `ValueLessThan`, `ValueBetween`). |
-| HidePivotFieldItems | HidePivotFieldItems(<br/>string workbookId,<br/>string worksheetName,<br/>int pivotTableIndex,<br/>int fieldIndex,<br/>string hiddenItemIndices) | Hides specified items within a pivot table row or column field by comma-separated 0-based indices. |
+| CreatePivotTable | CreatePivotTable(<br/>string workbookId,<br/>string dataWorksheetName,<br/>string dataRange,<br/>string pivotWorksheetName,<br/>string pivotTableName,<br/>string pivotLocation,<br/>string rowFieldIndices,<br/>string columnFieldIndices,<br/>int dataFieldIndex,<br/>string dataFieldCaption,<br/>string builtInStyle = "None",<br/>string subtotalType = "Sum") | Creates a pivot table in the specified worksheet using a data range from a source worksheet. Supports row, column, and data (values) fields with a chosen aggregation function. `builtInStyle` options: `PivotStyleLight1-28`, `PivotStyleMedium1-28`, `PivotStyleDark1-28`, or `None`. `subtotalType` options: `Sum`, `Count`, `Average`, `Max`, `Min`, `Product`, `CountNumbs`, `StdDev`, `StdDevP`, `Var`, `VarP`. Only supported in XLSX format. |
 
 
 ## PowerPoint Tools
@@ -470,6 +421,7 @@ Provides AI-powered structured data extraction from PDF documents and images, re
 |---|---|---|
 | ExtractDataAsJSON | ExtractDataAsJSON(<br/>string inputFilePath,<br/>bool enableFormDetection = true,<br/>bool enableTableDetection = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>bool detectSignatures = true,<br/>bool detectTextboxes = true,<br/>bool detectCheckboxes = true,<br/>bool detectRadioButtons = true,<br/>bool detect_Border_less_Tables = true,<br/>string? outputFilePath = null) | Extracts structured data (text, forms, tables, checkboxes, signatures) from a PDF or image file and returns the result as JSON. |
 | ExtractTableAsJSON | ExtractTableAsJSON(<br/>string inputFilePath,<br/>bool detect_Border_less_Tables = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>string? outputFilePath = null) | Extracts only table data from a PDF document and returns the result as JSON. Optimized for table-focused extraction. |
+| RecognizeFormAsJson | RecognizeFormAsJson(<br/>string inputFilePath,<br/>bool detectSignatures = true,<br/>bool detectTextboxes = true,<br/>bool detectCheckboxes = true,<br/>bool detectRadioButtons = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>string? outputFilePath = null) | Extracts only form field data from a PDF document and returns as JSON. Optimized for form-focused recognition. |
 
 
 
@@ -478,3 +430,4 @@ Provides AI-powered structured data extraction from PDF documents and images, re
 - [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
 - [Getting Started](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started)
 - [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
+- [Example Prompts](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/example-prompts)
