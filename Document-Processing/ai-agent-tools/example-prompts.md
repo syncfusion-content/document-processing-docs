@@ -129,7 +129,7 @@ Extract structured data including text, tables, forms, and checkboxes from PDFs 
 Extract all structured data from the vendor invoice 'invoice_APR2026_00142.pdf' located at {InputDir}. Enable both form and table detection to capture invoice header fields (vendor name, invoice number, date, due date) and the line-item table (description, quantity, unit price, total). Use a confidence threshold of 0.7 for reliable results. Save the extracted JSON to 'invoice_APR2026_00142_data.json' in {OutputDir}.
 {% endpromptcard %}
 {% promptcard ExtractTableAsJSON %}
-Extract only the table data from the quarterly financial report 'financial_report_Q1_2026.pdf' located at {InputDir}. The report contains multiple financial tables across 15 pages — enable border less table detection to ensure all tables are captured even if they lack visible borders. Use a confidence threshold of 0.65. Save the extracted table data as 'financial_tables_Q1_2026.json' in {OutputDir}.
+Extract only the table data from the quarterly financial report 'financial_report_Q1_2026.pdf' located at {InputDir}. The report contains multiple financial tables across 15 pages — enable border less table detection to ensure all tables are captured even if they lack visible borders. Use a confidence threshold of 0.3. Save the extracted table data as 'financial_tables_Q1_2026.json' in {OutputDir}.
 {% endpromptcard %}
 {% endpromptcards %}
 
