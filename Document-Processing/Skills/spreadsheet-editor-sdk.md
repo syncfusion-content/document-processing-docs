@@ -22,6 +22,9 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills a
 | [ASP.NET MVC](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/overview) | [syncfusion-aspnetmvc-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-aspnetmvc-spreadsheet-editor) |
 | [TypeScript](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/overview) | [syncfusion-javascript-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-javascript-spreadsheet-editor) |
 | [Vue](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/overview) | [syncfusion-vue-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-vue-spreadsheet-editor) |
+| [UWP](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/overview) | [syncfusion-uwp-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-uwp-spreadsheet-editor) |
+| [WPF](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/overview) | [syncfusion-wpf-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-wpf-spreadsheet-editor) |
+| [WinForms](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/overview) | [syncfusion-winforms-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-winforms-spreadsheet-editor) |
 
 ## Prerequisites
 
@@ -77,6 +80,9 @@ Select skills to install (space to toggle)
 │  ◻ ssyncfusion-aspnetmvc-spreadsheet-editor
 │  ◻ syncfusion-javascript-spreadsheet-editor
 │  ◻ syncfusion-vue-spreadsheet-editor
+│  ◻ syncfusion-uwp-spreadsheet-editor
+│  ◻ syncfusion-wpf-spreadsheet-editor
+│  ◻ syncfusion-winforms-spreadsheet-editor
 │  .....
 
 {% endhighlight %}
@@ -143,6 +149,7 @@ Once skills are installed, the assistant can generate spreadsheet editor code. B
 - "How to export the spreadsheet as PDF using Vue Spreadsheet Editor?"
 - "Show me code to apply number formatting to currency columns in React Spreadsheet Editor."
 - "How do I enable cell editing and data validation in Angular Spreadsheet Editor?"
+- "Generate code to add hyperlinks that navigate to other sheets in the workbook in WPF Spreadsheet."
 
 ## Skills CLI Commands
 
