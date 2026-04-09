@@ -7,28 +7,28 @@ documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from Apryse WebViewer to Syncfusion Angular PDF Viewer
+# Migrating from Apryse Web Viewer to Syncfusion Angular PDF Viewer
 
-This guide helps Angular developers migrate applications built using **Apryse WebViewer (PDFTron)** to the **Syncfusion Angular PDF Viewer**. It explains architectural differences, setup changes, feature mapping, and common API replacements specific to an Angular environment.
+This guide helps Angular developers migrate applications built using **Apryse Web Viewer** to the **Syncfusion Angular PDF Viewer**. It explains architectural differences, setup changes, feature mapping, and common API replacements specific to an Angular environment.
 
 ## Overview
 
-**Apryse WebViewer** is an SDK-style viewer that is mounted imperatively into a DOM element and exposes a rich JavaScript API surface.
+**Apryse Web Viewer** is an SDK-style viewer that is mounted imperatively into a DOM element and exposes a rich JavaScript API surface.
 
 **Syncfusion Angular PDF Viewer** provides a **fully declarative Angular component-based experience**, offering built-in UI, annotations, form fields, text search, and navigation through Angular modules and services—without requiring external runtime SDK initialization.
 
 Key migration benefits:
 - Native Angular component integration
-- Simplified lifecycle management
+- Simplified life cycle management
 - Modular feature injection (smaller bundles)
 - Built-in toolbar and UI consistency
 
 ## Architecture Differences
 
-| Concept | Apryse WebViewer | Syncfusion Angular PDF Viewer |
+| Concept | Apryse Web Viewer | Syncfusion Angular PDF Viewer |
 |--------|-----------------|-------------------------------|
 | Integration style | Imperative DOM-based SDK mount | Declarative Angular component |
-| Initialization | WebViewer({...}, element) | `<ejs-pdfviewer>` component |
+| Initialization | Web Viewer({...}, element) | `<ejs-pdfviewer>` component |
 | UI | SDK-provided toolbar | Angular services & toolbar module |
 | Events | documentViewer.addEventListener | Angular event bindings |
 | Annotations | AnnotationManager | Built-in annotation module |
@@ -37,7 +37,7 @@ Migration generally involves **removing the Apryse SDK mount** and **replacing i
 
 ## Installation
 
-### Apryse WebViewer
+### Apryse Web Viewer
 ```bash
 npm install @pdftron/webviewer
 ```
@@ -76,7 +76,7 @@ Add the required Syncfusion styles in `angular.json` or `styles.css`:
 
 ## Viewer Initialization Comparison
 
-### Apryse WebViewer (Angular)
+### Apryse Web Viewer (Angular)
 
 ```ts
 import WebViewer from '@pdftron/webviewer';
@@ -165,7 +165,7 @@ this.pdfViewer.importAnnotation(annotationData);
 
 ## Migration Checklist
 
-- Remove `@pdftron/webviewer` initialization and DOM mounting code
+- Remove `Apryse web viewer` initialization and DOM mounting code
 - Install `@syncfusion/ej2-angular-pdfviewer`
 - Import `PdfViewerModule` into Angular modules
 - Replace SDK initialization with `<ejs-pdfviewer>`
@@ -196,6 +196,6 @@ this.pdfViewer.importAnnotation(annotationData);
 
 ## See Also
 
-- [Apryse Angular WebViewer Getting Started](https://docs.apryse.com/web/guides/get-started/angular)
+- [Apryse Angular Web Viewer Getting Started](https://docs.apryse.com/web/guides/get-started/angular)
 - [Syncfusion Angular PDF Viewer Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
 - [Syncfusion Angular PDF Viewer API](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer)

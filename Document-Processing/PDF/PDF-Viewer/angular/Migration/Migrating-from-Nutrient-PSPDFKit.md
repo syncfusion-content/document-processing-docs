@@ -7,9 +7,9 @@ documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from Nutrient.io (PSPDFKit) Web SDK to Syncfusion Angular PDF Viewer
+# Migrating from Nutrient (PSPDFKit) Web SDK to Syncfusion Angular PDF Viewer
 
-This guide helps you migrate an Angular application built using **Nutrient.io Web SDK (formerly PSPDFKit Web SDK)** to the **Syncfusion Angular PDF Viewer**. It mirrors the React migration guide but is tailored specifically for **Angular architecture, modules, and component lifecycle**.
+This guide helps you migrate an Angular application built using **Nutrient Web SDK (formerly PSPDFKit Web SDK)** to the **Syncfusion Angular PDF Viewer**. It mirrors the React migration guide but is tailored specifically for **Angular architecture, modules, and component life cycle**.
 
 The objective is to replace the **imperative SDK-based initialization** used by Nutrient with the **declarative Angular component model** provided by Syncfusion.
 
@@ -27,12 +27,12 @@ The objective is to replace the **imperative SDK-based initialization** used by 
 
 ### Nutrient Web SDK (PSPDFKit)
 - Viewer mounted imperatively into a DOM element
-- Manual lifecycle handling (`load`, `unload`)
+- Manual life cycle handling (`load`, `unload`)
 - SDK-managed UI and events
 
 ### Syncfusion Angular PDF Viewer
 - Viewer rendered using `<ejs-pdfviewer>` component
-- Lifecycle managed by Angular
+- Life cycle managed by Angular
 - Features enabled via service injection
 - Events bound using Angular outputs
 

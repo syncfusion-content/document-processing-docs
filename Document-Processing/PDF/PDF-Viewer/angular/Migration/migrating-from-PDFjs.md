@@ -23,7 +23,7 @@ Key migration considerations:
 
 - **Rendering model**: PDF.js exposes page and canvas APIs; Syncfusion manages rendering internally.
 - **UI and tooling**: PDF.js requires custom toolbars; Syncfusion provides a configurable built-in toolbar.
-- **Event model**: PDF.js uses promise-based lifecycle; Syncfusion exposes Angular events such as `documentLoad` and `pageRenderComplete`.
+- **Event model**: PDF.js uses promise-based life cycle; Syncfusion exposes Angular events such as `documentLoad` and `pageRenderComplete`.
 - **Persistence**: Annotation and form persistence should be migrated to Syncfusion export/import APIs.
 
 ## Installation
@@ -151,20 +151,20 @@ onPageChange(args: any) {
 
 - Create a feature branch
 - Add smoke tests for existing PDF.js behavior
-- Identify components using `pdfjs-dist`
+- Identify components using `pdf js-dist`
 
 ### 2. Remove PDF.js Rendering Logic
 
 **Before**
 
 ```ts
-import * as pdfjsLib from 'pdfjs-dist';
+import * as pdfjsLib from 'pdf js-dist';
 ```
 
 **After**
 
 - Remove canvas elements
-- Remove `pdfjs-dist` dependency
+- Remove `pdf js` dependency
 
 ### 3. Add Syncfusion Viewer
 
@@ -208,20 +208,20 @@ Use Syncfusion CDN or host locally:
 | PDF.js | Reason / Syncfusion equivalent |
 |---|---|
 | `pdfjsLib.getDocument(url).promise` | Document loading handled by `PdfViewerComponent` via `documentPath` or `load()` method. |
-| `pdf.getPage(n)` | Viewer exposes page events and `getPageInfo(pageIndex)`; page lifecycle is surfaced via `pageRenderInitiate` / `pageRenderComplete` events. |
+| `pdf.getPage(n)` | Viewer exposes page events and `getPageInfo(pageIndex)`; page life cycle is surfaced via `pageRenderInitiate` / `pageRenderComplete` events. |
 | `page.render({ canvasContext, viewport })` | Rendering is internal — replace with `PdfViewerComponent` rendering; no manual canvas drawing required. |
 | `page.getTextContent()` | Use `extractText(pageIndex, options)` or enable `enableTextSearch`/`enableTextSelection` for built-in search/selection. |
 | Custom toolbar buttons controlling canvas | Use `Toolbar` service, or add custom toolbar items and handle `toolbarClick` events. |
 | Custom annotation storage | Use `addAnnotation`, `exportAnnotation`, `importAnnotation`, and `exportAnnotationsAsBase64String` methods. |
 | Manual print/download flows | Use `download()` and built-in Print service. |
-| Page render promise | Listen to `pageRenderComplete` / `documentLoad` events for lifecycle hooks. |
+| Page render promise | Listen to `pageRenderComplete` / `documentLoad` events for life cycle hooks. |
 
 ## Common Migration Checklist
 
 - Remove all PDF.js imports
 - Replace canvas rendering with `<ejs-pdfviewer>`
 - Inject only required services
-- Migrate lifecycle events
+- Migrate life cycle events
 - Verify annotations, forms, and search
 - Remove obsolete tests and utilities
 
