@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating from Nutrient.io (PSPDFKit) to Angular PDF Viewer | Syncfusion
+title: Migrating from Nutrient (PSPDFKit) to Angular PDF Viewer | Syncfusion
 description: Learn here all about how to migrate from Nutrient.io (PSPDFKit) Web SDK to Syncfusion Angular PDF Viewer.
 platform: document-processing
 documentation: ug
