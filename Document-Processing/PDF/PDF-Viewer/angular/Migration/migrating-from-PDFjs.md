@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating from PDF.js to Syncfusion Angular PDF Viewer
+title: Migrating from PDF.js to Syncfusion Angular PDF Viewer | Syncfusion
 description: Learn how to migrate from PDF.js to Syncfusion Angular PDF Viewer, covering architecture, features, and code changes.
 platform: document-processing
 documentation: ug
