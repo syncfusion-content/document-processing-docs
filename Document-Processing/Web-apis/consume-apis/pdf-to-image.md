@@ -1,13 +1,13 @@
 ---
-title: Syncfusion PDF to Image Converter API Guide
-description: Convert PDF to Images seamlessly using Syncfusion's API. Customize settings, monitor job status, and integrate effortlessly into your applications.
+title: Convert PDF to Images Using Syncfusion Web API 
+description: Export PDF pages to high‑quality JPEG, PNG, or TIFF formats for previews, archiving, and processing using Syncfusion conversion Web API.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to PDF to Image Conversion Using Syncfusion API
+# Convert PDF to Image Using Syncfusion Web API
 
-Converting an PDF document to Images is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
+The Syncfusion PDF to Image Web API converts PDF pages into high‑quality image formats such as PNG, JPEG, and WebP. It accurately renders each page while preserving layout and clarity, making it ideal for previews, web display, and image‑based workflows.
 
 ## Convert PDF to Image
 
@@ -81,6 +81,18 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## PDF to Image settings
+
+**Password** 
+
+Specifies the password required to open and process a protected PDF document. 
+
+**ImageFormat** 
+
+Defines the output image format for the converted pages, such as JPG, PNG, or WEBP.
+
+## PDF to Image Job Response  
+
 Once the request is sent, it will create a conversion job to convert the PDF to Images and return the job details as follows:
 
 ```
@@ -90,7 +102,7 @@ Once the request is sent, it will create a conversion job to convert the PDF to 
     "createdAt": "2024-05-06T09:39:13.9505828Z"
 }
 ```
-## Poll the status of the Conversion Job
+## Check PDF to Image Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
 

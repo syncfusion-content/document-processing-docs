@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Text Markup Annotations in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about Text Markup Annotations in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its types.
+title: Text Markup Annotations in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to add and manage text markup annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Text Markup Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -157,3 +157,8 @@ void EditSelectedHighlightAnnotation(Annotation selectedAnnotation)
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Annotations Overview](../annotations-overview)
+- [Text Selection](../text-selection)
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)

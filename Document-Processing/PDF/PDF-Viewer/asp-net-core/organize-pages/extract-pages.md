@@ -23,7 +23,7 @@ When selected, a secondary toolbar dedicated to extraction is displayed.
 
 ![Extract Pages secondary toolbar](../images/extract-page-secondary-toolbar.png)
 
-## Extract pages using the UI
+## Extracting pages using the UI
 
 You can extract by typing page numbers/ranges or by selecting thumbnails.
 
@@ -74,9 +74,9 @@ Use the following code snippet to enable or disable the Extract Pages option:
 {% endhighlight %}
 {% endtabs %}
 
-Use the `showExtractPagesOption` API to show or hide the Extract Pages option. When set to `false`, the Extract Pages tool is removed from the toolbar. The default value is `true`.
+Set `showExtractPagesOption` to `false` to hide the Extract Pages tool from the toolbar. The default is `true`.
 
-Use the following code snippet to remove the Extract Pages option:
+To hide Extract Pages:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -91,10 +91,9 @@ Use the following code snippet to remove the Extract Pages option:
 {% endhighlight %}
 {% endtabs %}
 
-### Extract pages and load the result programmatically
+### Extracting pages and loading results programmatically
 
-You can extract pages programmatically using the `extractPages` method.
-The following example extracts pages 1 and 2, then immediately loads the extracted pages back into the viewer. The returned value is a byte array (e.g., Uint8Array) representing the PDF file contents.
+The `extractPages` method enables programmatic extraction. This example extracts pages 1 and 2, loading them into the viewer. The method returns a byte array (Uint8Array) representing PDF contents.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

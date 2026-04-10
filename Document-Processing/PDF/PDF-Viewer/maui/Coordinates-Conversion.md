@@ -1,7 +1,7 @@
----
+﻿---
 layout: post
-title: Working with PDF coordinates systems in MAUI PDF Viewer | Syncfusion
-description: Learn here all about coordinates conversion in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control. 
+title: Coordinate Conversion in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to convert between PDF page coordinates and viewer coordinates in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -138,3 +138,9 @@ if (annotation is SquareAnnotation squareAnnotation)
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Annotations Overview](../annotations-overview)
+- [Page Navigation](../page-navigation)
+- [Scrolling](../scrolling)
+

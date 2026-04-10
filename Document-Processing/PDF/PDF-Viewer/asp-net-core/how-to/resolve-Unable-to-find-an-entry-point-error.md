@@ -9,19 +9,24 @@ documentation: ug
 
 # Resolve "Unable to find an entry point named FPDFText_GetCharAngle" error
 
-Starting with Essential Studio<sup style="font-size:70%">&reg;</sup> 21.1.0.35 (2023 Volume 1), the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer ships an updated PDFium package to improve text search, text selection, and rendering performance. If an application still references the older native PDFium binaries after upgrading the NuGet packages, the viewer may throw the exception **"Unable to find an entry point named FPDFText_GetCharAngle"** and the client can display the **"Web-Service is not listening"** status. Inspect the Network tab to confirm that the service response fails due to missing or outdated Pdfium assemblies.
+Effective with Essential Studio<sup style="font-size:70%">&reg;</sup> version 21.1.0.35 (2023 Volume 1), the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer includes an updated PDFium engine to enhance text search, selection, and overall rendering performance. If an application continues to reference legacy native PDFium binaries after upgrading NuGet packages, it may trigger the exception: **"Unable to find an entry point named FPDFText_GetCharAngle"**.
 
-Ensure that the deployed application references the correct native library for the host operating system:
+This error typically results in the client displaying a **"Web-Service is not listening"** status. This can be confirmed by inspecting the **Network** tab in the browser developer tools, where the service response will indicate a failure due to missing or mismatched PDFium assemblies.
 
-* Windows – pdfium.dll
-* Linux – libpdfium.so
-* macOS – libpdfium.dylib
+## Troubleshooting steps
 
-![Error information in the Network tab](../images/ErrorinformationuintheNetworkTab.png)
+To resolve this issue, ensure the deployed environment contains the correct native libraries for the host operating system:
 
-## Follow these steps to resolve the issue:
+* **Windows:** `pdfium.dll`
+* **Linux:** `libpdfium.so`
+* **macOS:** `libpdfium.dylib`
 
-1. Clear the `bin`, `obj`, and published output folders of the web service so that stale Pdfium binaries are removed, then rebuild the project to restore the assemblies that match the upgraded Syncfusion packages.
-2. Republish the web service and verify that the deployment contains the latest Pdfium binaries alongside the updated Syncfusion.EJ2.PdfViewer assemblies.
+![Network tab error information](../images/ErrorinformationuintheNetworkTab.png)
 
-N> **Note:** If the application is hosted in Azure, AWS, Linux, or another remote environment, delete the previous deployment before publishing again and confirm that the new PDFium binaries are copied to the server.
+### Resolution procedure:
+
+1. **Clear Build Artifacts:** Remove the `bin`, `obj`, and published output folders of the web service. This ensures that stale PDFium binaries are deleted.
+2. **Rebuild Project:** Rebuild the solution to restore the native assemblies that correspond accurately with the upgraded Syncfusion NuGet packages.
+3. **Republish Service:** Deploy the updated web service and verify that the latest PDFium binaries are present alongside the updated `Syncfusion.EJ2.PdfViewer` assemblies.
+
+N> If hosting the application in cloud environments like Azure or AWS, or on Linux servers, manually delete the existing deployment files before publishing to ensure no legacy binaries remain. Confirm that the new PDFium binaries are correctly copied to the server's root or designated assembly folder.

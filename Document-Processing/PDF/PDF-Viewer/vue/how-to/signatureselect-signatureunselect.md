@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handle signatureSelect and signatureUnselect events
+# Signature select and unselect events in Vue PDF Viewer
 
-Use the [signatureSelect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#signatureselect) and [signatureUnselect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#signatureunselect) events to manage the selection state of handwritten signatures in the PDF Viewer.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer exposes events for monitoring the selection state of handwritten signature annotations: [signatureSelect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signatureSelectEventArgs/) and [signatureUnselect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signatureUnselectEventArgs/). These events enable applications to respond when a signature annotation is selected or cleared—for example, updating the UI, enabling contextual actions, or recording metadata.
 
 **signatureSelect**
 
-Triggered when a handwritten signature annotation is selected. Use this event to capture selection and update the UI or store state.
+The `signatureSelect` event fires when a handwritten signature annotation is selected. Event arguments include details about the selected annotation and its page. Use this event to perform actions such as showing a properties panel or enabling signature-specific controls.
 
 **signatureUnselect**
 
-Triggered when a handwritten signature annotation is unselected. Use this event to handle cleanup or update application state.
+The `signatureUnselect` event fires when a handwritten signature annotation is unselected. Handle this event to perform cleanup tasks, hide contextual UI, or update application state.
 
-The following code demonstrates how to subscribe to these events:
+The following snippet shows how to subscribe to `signatureSelect` and `signatureUnselect` events in the PDF Viewer component:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -187,4 +187,4 @@ export default {
 
 These events enable robust management of handwritten signature state, supporting interactive and dynamic user experiences.
 
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)

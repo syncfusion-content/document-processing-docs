@@ -1,13 +1,13 @@
 ---
-title: Syncfusion PDF Page Rotation Service Guide
-description: Rotate pages in a PDF document with precision using Syncfusion's Rotate Pages API. Specify rotation options and the PDF file for seamless adjustments.
+title: Rotate PDF Pages Using Syncfusion Web API 
+description: Rotate PDF pages by 90, 180, or 270 degrees and regenerate updated files instantly using Syncfusion rotation Web API.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Rotating PDF Pages Using Syncfusion API
+# Rotate PDF Pages Using Syncfusion WEB API
 
-This feature allows you to rotate pages in a PDF document. To perform this operation, you need to supply a PDF document as input to the Rotate Pages API.
+The Syncfusion Rotate PDF Web API lets you change the orientation of pages within a PDF quickly and accurately. By submitting a PDF to the API, you can rotate selected pages or the entire document to any desired angle while preserving the original content, layout, and quality. This feature is especially helpful for fixing incorrectly scanned pages or improving the readability and presentation of PDF documents.
 
 ## Rotate PDF Pages
 
@@ -98,6 +98,31 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## Rotate PDF pages settings
+
+**RotationAngle** 
+
+Specifies the angle (in degrees) by which the selected pages in the PDF should be rotated. 
+Supported values are 0, 90, 180, and 270. 
+
+**Password** 
+
+Specifies the password required to open and process a protected PDF file. 
+
+**PageRanges** 
+
+Specifies the page ranges within the PDF that should be rotated. 
+
+**Start** 
+
+Specifies the starting page number of the range to be rotated. 
+
+**End** 
+
+Specifies the ending page number of the range to be rotated. 
+
+## Rotate PDF Job Response
+
 Once the request is sent, it will create a job to rotate PDF pages and return the job details as follows:
 
 ```
@@ -108,7 +133,7 @@ Once the request is sent, it will create a job to rotate PDF pages and return th
 }
 ```
 
-## Poll the status of the Rotate Pages Job
+## Check Rotate PDF Job Status 
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
@@ -116,7 +141,7 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
+curl --location 'http://localhost:8003/v1/edit-pdf/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
   --output Output.pdf
 
 {% endhighlight %}
@@ -138,7 +163,7 @@ fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
