@@ -1,16 +1,28 @@
 import * as React from 'react';
-import { useCallback } from 'react';
+import { useCallback, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-import { AccordionComponent, AccordionItemsDirective, AccordionItemDirective } from '@syncfusion/ej2-react-navigations';
+import { AccordionComponent, AccordionItemsDirective, AccordionItemDirective, ExpandEventArgs } from '@syncfusion/ej2-react-navigations';
 
 function App(): React.ReactElement {
+        const spreadsheetRef = useRef<SpreadsheetComponent | null>(null);
+        const onExpanded = useCallback((args: ExpandEventArgs) => {
+              setTimeout(() => {
+                  window.dispatchEvent(new Event('resize'));
+                  (spreadsheetRef.current as any).refresh();
+              }, 0);
+        }, []);
 
-    const onExpanded = useCallback((args: any) => {
-      setTimeout(() => {
-          window.dispatchEvent(new Event('resize'));
-      }, 0);
-    }, []);
+        const spreadsheetContent = () => (
+            <div className="sheet-pane">
+                <SpreadsheetComponent
+                    ref={(spreadsheet: any) => (spreadsheetRef.current = spreadsheet)}
+                    id="spreadsheetInAccordion"
+                    height="100%"
+                    width="100%"
+                />
+            </div>
+        );
 
   return (
       <div className="page">
@@ -36,9 +48,7 @@ function App(): React.ReactElement {
                       <AccordionItemDirective
                           header="Spreadsheet"
                           expanded={true}
-                          content={() => (
-                              <SpreadsheetComponent height="100%" width="100%" /> 
-                          )}
+                          content={spreadsheetContent}
                       />
                       <AccordionItemDirective
                           header="Settings"
