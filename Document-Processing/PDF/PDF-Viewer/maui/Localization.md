@@ -157,7 +157,7 @@ The following table contains the default name and value details used in the SfPd
 </tr>
 <tr> 
 <td>AddYourComment</td>
-<td>Add comment</td>
+<td>Add a comment...</td>
 </tr>
 <tr>
 <td>Annotations</td>
@@ -321,7 +321,7 @@ The following table contains the default name and value details used in the SfPd
 </tr>
 <tr> 
 <td>EditYourComment</td> 
-<td>Edit comment</td> 
+<td>Edit a comment...</td> 
 </tr>
 <tr>
 <td>Enter</td>
@@ -742,6 +742,62 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>ZoomMode</td>
 <td>Zoom mode</td>
+</tr>
+<tr>
+<td>Reply</td>
+<td>Reply</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>Warning</td>
+</tr>
+<tr>
+<td>Redaction</td>
+<td>Redaction</td>
+</tr>
+<tr>
+<td>PageCountSeparator</td>
+<td>Page Count Separator</td>
+</tr>
+<tr>
+<td>ZoomIconSeparator</td>
+<td>Zoom Icon Separator</td>
+</tr>
+<tr>
+<td>AnnotationSeparator</td>
+<td>Annotation Separator</td>
+</tr>
+<tr>
+<td>RedactionSeparator</td>
+<td>Redaction Separator</td>
+</tr>
+<tr>
+<td>PrintSeparator</td>
+<td>Print Separator</td>
+</tr>
+<tr>
+<td>MoreOptionSeparator</td>
+<td>More Option Separator</td>
+</tr>
+<tr>
+<td>ColorPickerSeparator</td>
+<td>Color Picker Separator</td>
+</tr>
+<tr>
+<td>BackIconSeparator</td>
+<td>Back Icon Separator</td>
+</tr>
+<tr>
+<td>TextPropertySeparator</td>
+<td>Text Property Separator</td>
+</tr>
+<tr>
+<td>DeleteSeparator</td>
+<td>Delete Separator</td>
+</tr>
+<tr>
+<td>BorderStyle</td>
+<td>Border Style</td>
 </tr>
 </table>
 
