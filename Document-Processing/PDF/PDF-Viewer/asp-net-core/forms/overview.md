@@ -9,13 +9,11 @@ documentation: ug
 
 # Overview of Forms in ASP.NET Core PDF Viewer
 
-The Syncfusion PDF Viewer delivers a complete, easy-to-use PDF forms experience. You can read, fill, add, edit, and delete form fields directly within your PDF documents. These actions are supported through both the intuitive user interface and powerful programmatic APIs.
-
-The viewer also includes smooth import and export support for form data, making integration effortless. Developers benefit from extensive API control, while end users enjoy a clean and simple interface designed for a seamless and stress-free form-filling experience.
+The Syncfusion PDF Viewer provides a complete, easy-to-use PDF forms experience. Form fields can be read, filled, added, edited, and deleted directly within PDF documents through the intuitive UI and powerful programmatic APIs. The viewer includes smooth import and export support for form data, enabling effortless integration. Developers gain extensive API control while end users enjoy a clean interface for seamless form-filling.
 
 ## Filling PDF Forms
 
-Experience effortless PDF form filling through a clean, intuitive UI or automated workflows using powerful APIs. Flexible form data import and export support ensures smooth and efficient operations when working with PDF forms.
+PDF forms can be filled effortlessly through a clean, intuitive UI or automated workflows via powerful APIs. Flexible form data import and export support ensures smooth operations.
 
 See the [Filling PDF Forms](./form-filling) page for full details.
 
@@ -38,7 +36,7 @@ Use the following code-snippet to enable form-filling by using the ASP.NET Core 
 
 ## Form Designer
 
-A built in Form Designer lets you quickly add, edit, move, and delete form fields in the PDF documents. This viewer allows you to design fillable PDF forms interactively either using the built-in form designer tools or building your own customized form designer tools.
+A built-in Form Designer enables quick addition, editing, moving, and deletion of form fields. PDF forms can be designed interactively using built-in tools or customized form designer solutions.
 
 See the [Form Designer](./form-designer) page for full details.
 
@@ -55,12 +53,12 @@ Use the following Code-snippet to enable Form Designer using the ASP.NET Core `e
 
 ![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 
-Create and customize interactive fields directly on the PDF page.
+Interactive fields can be created and customized directly on the PDF page.
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), or [remove](./manage-form-fields/remove-form-fields) forms
-- [Add a Signature Field](./manage-form-fields/create-form-fields#add-signature-field) 
-- [Edit Form Field](./manage-form-fields/modify-form-fields)
-- [Remove Form Field](./manage-form-fields/remove-form-fields) 
-- [Form Field Constraints](./form-constrain) 
+- [Add signature fields](./manage-form-fields/create-form-fields#add-signature-field)
+- [Edit form fields](./manage-form-fields/modify-form-fields)
+- [Remove form fields](./manage-form-fields/remove-form-fields)
+- [Form field constraints](./form-constrain) 
 
 ## Supported form field types
 

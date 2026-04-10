@@ -1,13 +1,12 @@
 ---
-title: Syncfusion PDF Unlocking Service Guide
-description: Unlock PDF documents seamlessly using Syncfusion's API. Ensure document integrity and security by unlocking.
-platform: document-processing
+title: Unlock Secured PDFs Using Syncfusion Web API 
+description: Remove password protection from authorized PDFs securely using Syncfusion unlock Web API for automated workflows.
 control: general
 documentation: UG
 ---
-# Guide to Unlocking PDFs Using Syncfusion API
+# Unlock PDF Using Syncfusion Web API
 
-This feature enables you to unlock a PDF document. To use this functionality, you need to provide a PDF document as input to the Unlock PDF API.
+The Syncfusion Unlock PDF Web API removes password protection from secured PDF documents through a straightforward process. By providing the correct password, you can restore full access to the document, including editing, copying, and printing. 
 
 ## Unlocking PDF Document
 
@@ -76,6 +75,18 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## Unlock PDF settings
+
+**File** 
+
+Specifies the input PDF file that needs to be unlocked or unprotected. 
+
+**Password** 
+
+Specifies the password required to open and unlock the protected PDF file. 
+
+## Unlock PDF Job Response
+
 Once the request is sent, it will create a unlock job to unlock the PDF and return the job details as follows:
 
 ```
@@ -86,7 +97,7 @@ Once the request is sent, it will create a unlock job to unlock the PDF and retu
 }
 ```
 
-## Poll the status of the Unlock Job
+## Check Unlock PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
@@ -94,7 +105,7 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
+curl --location 'http://localhost:8003/v1/edit-pdf/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
   --output Output.pdf
   
 --header 'Authorization: Bearer {{Placeholder for token}}'
@@ -118,7 +129,7 @@ fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df");
 request.Headers.Add("Authorization", "Bearer {{Placeholder for token}}");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();

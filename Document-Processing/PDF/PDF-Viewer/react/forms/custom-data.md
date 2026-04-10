@@ -95,6 +95,14 @@ import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 export function App() {
+  const defaultTextFieldSettings = {
+    name: 'Textbox',
+    customData: { group: 'contact', createdBy: 'designer', requiredRole: 'user' }
+  };
+  const defaultCheckBoxFieldSettings = {
+    name: 'Checkbox',
+    customData: { consentType: 'marketing', defaultChecked: false }
+  };
   return (
     <div>
       <div className='control-section'>
@@ -104,14 +112,8 @@ export function App() {
           resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
           style={{ height: '680px' }}
           // Example: default custom data for all new Textbox fields added from the toolbar
-          textFieldSettings={{
-            name: 'Textbox',
-            customData: { group: 'contact', createdBy: 'designer', requiredRole: 'user' }
-          }}
-          checkBoxFieldSettings ={{
-            name: 'Checkbox',
-            customData: { consentType: 'marketing', defaultChecked: false }
-          }}
+          textFieldSettings={defaultTextFieldSettings}
+          checkBoxFieldSettings={defaultCheckBoxFieldSettings}
         >
           <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
             Print, TextSelection, TextSearch, FormFields, FormDesigner]} />

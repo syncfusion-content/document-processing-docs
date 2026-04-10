@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Document Load Events in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about events that notifies whether the document has been opened or not opened in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer).
+title: Document Load Events in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to handle document load events in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) to detect when a document is opened or fails to open.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Document Load Events in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -107,3 +108,8 @@ private void PdfDocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
 	
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Open a Document](../open-a-document)
+- [Getting Started](../getting-started)
+- [Save a Document](../save-a-document)

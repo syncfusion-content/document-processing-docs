@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Page thumbnail navigation in PDF Viewer
 
-The thumbnail pane displays miniature previews of every page in the loaded PDF document. Use it to give readers a quick way to browse and jump to specific pages. Enable the pane by setting the `enableThumbnail` property to `true`.
+Thumbnails are miniature representations of PDF pages that let users navigate visually. This feature displays page thumbnails and supports quick navigation between pages.
+
+Enable or disable thumbnail navigation using the examples below.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -191,7 +193,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-![PDF Viewer thumbnail pane](../images/thumbnail.png)
+![Page thumbnails panel in PDF Viewer showing page previews](../images/thumbnail.png)
 
 ## See also
 

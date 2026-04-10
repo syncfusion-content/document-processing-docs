@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 After editing a PDF with annotation tools, you can save the updated file to a server, a database, or download it locally. The following sections show common approaches.
 
-### Save and Download the Edited PDF
+**Save and Download the Edited PDF**
 
 After editing the PDF document, follow this short, linear flow to persist and retrieve the updated file:
 
@@ -38,8 +38,8 @@ Follow the [getting-started](https://help.syncfusion.com/document-processing/pdf
 2. Open the `PdfViewerController.cs` file in your web service project.
 
 3. Modify the `Download()` method so it returns the modified document for the viewer to download or store.
-```csharp
 
+```csharp
 public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 {
   //Initialize the PDF Viewer object with memory cache object
@@ -64,14 +64,15 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
   }
   return Content(documentBase);
 }
-
 ```
 
 **Step 3:** Set the PDF Viewer properties in your React app
 
 Set the `serviceUrl` to point to your web service (for example, replace `https://localhost:44396/pdfviewer` with your server URL). Also set `documentPath` to the document URL you want to load.
 
-```tsx
+{% tabs %}
+{% highlight js tabtitle="JSX" %}
+{% raw %}
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -97,7 +98,9 @@ function App() {
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Save%20and%20Load/Save%20PDF%20file%20to%20server)
 
@@ -105,7 +108,9 @@ root.render(<App />);
 
 The built-in toolbar includes a download option that saves the updated PDF to the user's local file system. You can also trigger the same behavior programmatically by calling the viewer's [`download()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) API.
 
-```tsx
+{% tabs %}
+{% highlight js tabtitle="JSX" %}
+{% raw %}
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css';
@@ -139,7 +144,9 @@ return (<div>
 }
 const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Save modified PDF to a database
 
@@ -229,7 +236,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 N> Replace `Your connection string for SQL Server` with your actual connection string.
 
-N>: Ensure the `System.Data.SqlClient` package (or `Microsoft.Data.SqlClient`) is installed in your project. Use parameterized queries (as shown) and validate inputs to avoid SQL injection risks.
+N> Ensure the `System.Data.SqlClient` package (or `Microsoft.Data.SqlClient`) is installed in your project. Use parameterized queries (as shown) and validate inputs to avoid SQL injection risks.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-database)
 
@@ -245,9 +252,119 @@ Each link below goes to a provider page with simple, step-by-step instructions a
 - [Dropbox](./save-pdf-file/to-dropbox-cloud-file-storage)
 - [Box](./save-pdf-file/to-box-cloud-file-storage)
 - [Azure AD (auth notes)](./save-pdf-file/to-azure-active-directory)
+
+## Save PDF with or without annotations
+
+The React PDF Viewer allows exporting the current PDF along with annotations, or exporting a clean version without annotations. This gives flexibility depending on workflow review mode, sharing, or securing final documents.
+
+### Save PDF with annotations
+
+The PDF is exported with annotations and form fields by default. You can download a PDF using the download button in the built‑in toolbar or through the [`download`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#download) API. See the [download guide](./download) for further explanation.
+
+### Save PDF without annotations
+
+The PDF can be exported without annotations by setting the [`skipDownload`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationsettingsmodel#skipdownload) API to true in [`annotationSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationsettings).
+
+{% highlight ts %}
+{% raw %}
+<PdfViewerComponent
+    id="pdfViewer"
+    documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+    resourceUrl="https://cdn.syncfusion.com/ej2/32.2.5/dist/ej2-pdfviewer-lib"
+    annotationSettings={{
+        skipDownload: true
+    }}
+>
+    <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+        BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Print]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+
+### Save after restoring annotations
+
+PDFs can also be exported after importing annotations. The following code example uses the [`downloadStart`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#downloadstart) event to cancel the download action and import the annotations from a JSON file before downloading the PDF document.
+
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+    ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject, Print, DownloadStartEventArgs
+} from '@syncfusion/ej2-react-pdfviewer';
+import { DataFormat, PdfDocument } from '@syncfusion/ej2-pdf';
+import { RefObject, useRef } from 'react';
+
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent> = useRef(null);
+
+    const blobToBase64 = async (blob: Blob): Promise<string> => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onerror = () => reject(reader.error);
+            reader.onload = () => {
+                const dataUrl: string = reader.result as string;
+                const data: string = dataUrl.split(',')[1];
+                resolve(data);
+            };
+            reader.readAsDataURL(blob);
+        });
+    }
+
+    const restoreAnnotations = async (data: string) => {
+        try {            
+            const fetchResponse: Response = await fetch("/pdf-succinctly.json", { headers: { Accept: "application/json" } });
+            if (fetchResponse.ok) {
+                let document: PdfDocument = new PdfDocument(data);
+                let jsonData = await fetchResponse.json();
+                document.importAnnotations(btoa(JSON.stringify(jsonData)), DataFormat.json);
+                document.save(`${viewerRef.current.fileName}.pdf`);
+                document.destroy();
+            }
+            else {
+                throw new Error(`HTTP ${fetchResponse.status}`);
+            }            
+        }
+        catch (error) {
+            console.error(error);
+        }
+    }
+
+    const handleImports = async () => {
+        const blob: Blob = await viewerRef.current.saveAsBlob();
+        const data: string = await blobToBase64(blob);
+        await restoreAnnotations(data);
+    }
+
+    const onDownloadStart = async (args: DownloadStartEventArgs) => {
+        args.cancel = true;
+        await handleImports();
+    };
+
+    return (
+        <div style={{ height: '640px' }}>
+            <PdfViewerComponent
+                id="pdf-viewer"
+                ref={viewerRef}
+                documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.5/dist/ej2-pdfviewer-lib"
+                downloadStart={onDownloadStart}
+            >
+                <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+                    BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, Print]} />
+            </PdfViewerComponent>
+        </div>
+    );
+}
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 ---
 
-See also:
+**See also**
 
 - [Get Base64 value from a loaded PDF using saveAsBlob API](./how-to/get-base64)
 - [Open PDF files overview](./open-pdf-files)
+- [Download a PDF](./download)

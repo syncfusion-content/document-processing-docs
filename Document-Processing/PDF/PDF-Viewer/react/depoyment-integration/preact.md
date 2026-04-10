@@ -50,7 +50,9 @@ How‑to: Render a minimal `PdfViewerComponent` in `src/index.js`.
 
 Prefer a single `Add component` example using the CDN `resourceUrl` (no server required). Replace the CDN version as needed.
 
-```js
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
 import { render } from 'preact';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
 import './style.css';
@@ -68,9 +70,11 @@ function App() {
 }
 
 render(<App />, document.getElementById('app'));
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 **See also**
 
-- [Getting started with the Syncfusion React PDF Viewer](./getting-started-overview)
-- [System requirements for Syncfusion React PDF Viewer](https://help.syncfusion.com/document-processing/system-requirements)
+- [Getting started with the Syncfusion React PDF Viewer](../getting-started-overview)
+- [System requirements for Syncfusion React PDF Viewer](../../../../System-Requirements)

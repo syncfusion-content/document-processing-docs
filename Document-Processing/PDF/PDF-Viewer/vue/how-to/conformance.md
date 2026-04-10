@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Know the supported conformance PDF documents in Vue PDF Viewer component
 
-The PDF Viewer supports the following conformance levels:
+The Vue PDF Viewer supports the following PDF/A and PDF/X conformance levels:
 
 * PDF/A-1a
 * PDF/A-1b

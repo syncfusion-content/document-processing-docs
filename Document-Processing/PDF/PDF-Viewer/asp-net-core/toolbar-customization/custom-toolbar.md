@@ -9,11 +9,11 @@ documentation: ug
 
 # Custom toolbar in ASP.NET Core PDF Viewer
 
-The PDF Viewer exposes APIs for the interactions available in the built-in toolbar. Using these, you can build your own UI for toolbar actions at the application level by hiding the built-in toolbar. Follow these steps to create a custom toolbar for the PDF Viewer:
+The PDF Viewer exposes APIs for the built-in toolbar interactions. Use these APIs to implement a custom toolbar by hiding the built-in toolbar. To create a custom toolbar:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create simple PDF Viewer sample.
+**Step 1:** Create a simple PDF Viewer sample by following the [getting-started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started)
 
-**Step 2:** Add an EJ2 Toolbar to perform primary actions like Open, Previous page, Next page, Go to page, Print, and Download using the following code snippet:
+**Step 2:** Add an EJ2 Toolbar for primary actions such as Open, Previous page, Next page, Go to page, Print, and Download. Use the following code snippet:
 
 ```html
 @{
@@ -52,7 +52,7 @@ The PDF Viewer exposes APIs for the interactions available in the built-in toolb
 
 ```
 
-**Step 4:** Add the following styles to achieve the custom toolbar styling:
+**Step 4:** Add the following styles to achieve the custom toolbar appearance:
 
 ```html
 <style>
@@ -160,7 +160,7 @@ The PDF Viewer exposes APIs for the interactions available in the built-in toolb
 
 N> The icons are embedded in the font file used in the previous code snippet.
 
-**Step 5:** Add the following scripts to perform user interactions in the PDF Viewer:
+**Step 5:** Add the following scripts to handle user interactions in the PDF Viewer:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

@@ -6,13 +6,13 @@ platform: document-processing
 control: Text selection
 documentation: ug
 ---
-# Text selection in ASP.NET Core PDF Viewer control
+# Text Selection in ASP.NET Core PDF Viewer
 
-The TextSelection module enables users to select and copy text from the loaded PDF document. Text selection is enabled by default and can be configured, controlled programmatically, and monitored through events.
+The TextSelection module enables selecting and copying text from loaded PDF documents. Text selection is enabled by default and can be configured, controlled programmatically, and monitored through events.
 
-## Enable or disable text selection
+## Enable or Disable Text Selection
 
-Use the enableTextSelection property to enable or disable selecting text in the PDF Viewer.
+The **enableTextSelection** property enables or disables selecting text in the PDF Viewer.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -37,13 +37,13 @@ Use the enableTextSelection property to enable or disable selecting text in the 
 {% endhighlight %}
 {% endtabs %}
 
-## Text selection events
+## Text Selection Events
 
-Monitor user interaction with text using events.
+User interaction with text can be monitored using events.
 
 ### textSelectionStart
 
-The textSelectionStart event triggers when selection is initiated. Typical use cases include disabling conflicting UI, logging, or customizing selection behavior.
+The **textSelectionStart** event triggers when selection is initiated. Typical use cases include disabling conflicting UI, logging, or customizing selection behavior.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -84,7 +84,7 @@ The textSelectionStart event triggers when selection is initiated. Typical use c
 
 ### textSelectionEnd
 
-The textSelectionEnd event triggers when selection is completed. It is useful to read the selected content, enable context actions, or persist analytics.
+The **textSelectionEnd** event triggers when selection is completed. It is useful for reading selected content, enabling context actions, or persisting analytics.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
