@@ -9,21 +9,22 @@ documentation: ug
 
 # Import PDF Form Data into Angular PDF Viewer
 
-The **PDF Viewer** lets you import values into interactive form fields in the currently loaded PDF. You can import data from these formats:
+This guide shows how to import form field values into an already loaded PDF in the EJ2 Angular PDF Viewer. **Supported import formats**: FDF, XFDF, JSON, and importing from a JavaScript object.
 
-- [FDF](#import-as-fdf)
-- [XFDF](#import-xfdf)
-- [JSON](#import-json)
+## Steps to import data
 
-## API to use
-- [importFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format)
+1. Import the viewer, inject `FormFieldsService` / `FormDesignerService`, and create a `@ViewChild` to call `importFormFields`.
 
-N>If you’re using a **server-backed viewer**, set serviceUrl before importing.
+2. Call [`importFormFields(data, format)`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#importformfields) where `format` is one of `FormFieldDataFormat.Fdf`, `FormFieldDataFormat.Xfdf`, or `FormFieldDataFormat.Json`. `data` may be a file path (for server/file-based imports) / base64 string or a JavaScript object mapping field names to values.
 
-### Import FDF
+3. Verify the form fields are populated after the import completes. For server-backed imports, ensure [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) is configured and the import file is accessible by the server.
+
+## Example
+
+The example below provides a minimal Angular app with four buttons to import FDF, XFDF, JSON, or an object. Replace the import file identifiers (`'File'`) with your file path or implement a file upload to pass a Blob/stream.
 
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight ts %}
 import { Component, ViewChild } from '@angular/core';
 import {
   ToolbarService,
@@ -44,12 +45,17 @@ import {
   standalone: true,
   imports: [PdfViewerModule],
   template: `
-    <div class="content-wrapper">
-      <button (click)="importFdf()">Import FDF</button>
-      <ejs-pdfviewer #pdfViewer id="pdfViewer"
+    <div class="control-section">
+      <div style="margin-bottom: 12px">
+        <button (click)="importFdf()" style="margin-right: 8px">Import FDF</button>
+        <button (click)="importXfdf()" style="margin-right: 8px">Import XFDF</button>
+        <button (click)="importJson()" style="margin-right: 8px">Import JSON</button>
+        <button (click)="importFromObject()">Import from Object</button>
+      </div>
+      <ejs-pdfviewer #pdfViewer id="container"
         [resourceUrl]="resourceUrl"
         [documentPath]="document"
-        style="height: 640px; width: 100%"></ejs-pdfviewer>
+        style="height: 680px; width: 100%"></ejs-pdfviewer>
     </div>
   `,
   providers: [
@@ -65,138 +71,44 @@ import {
 })
 export class AppComponent {
   public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
-  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
 
+  // The file for importing should be accessible at the given path or as a base 64 string depending on your integration
   importFdf(): void {
-    // The file for importing should be accessible at the given path or as a file stream depending on your integration
     this.pdfviewer.importFormFields('File', FormFieldDataFormat.Fdf as any);
   }
-}
-{% endhighlight %}
-{% endtabs %}
-
-### Import XFDF
-
-{% tabs %}
-{% highlight ts tabtitle="Standalone" %}
-import { Component, ViewChild } from '@angular/core';
-import {
-  ToolbarService,
-  MagnificationService,
-  NavigationService,
-  AnnotationService,
-  TextSelectionService,
-  TextSearchService,
-  FormFieldsService,
-  FormDesignerService,
-  PdfViewerModule,
-  PdfViewerComponent,
-  FormFieldDataFormat,
-} from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [PdfViewerModule],
-  template: `
-    <div class="content-wrapper">
-      <button (click)="importXfdf()">Import XFDF</button>
-      <ejs-pdfviewer #pdfViewer id="pdfViewer"
-        [resourceUrl]="resourceUrl"
-        [documentPath]="document"
-        style="height: 640px; width: 100%"></ejs-pdfviewer>
-    </div>
-  `,
-  providers: [
-    ToolbarService,
-    MagnificationService,
-    NavigationService,
-    AnnotationService,
-    TextSelectionService,
-    TextSearchService,
-    FormFieldsService,
-    FormDesignerService,
-  ],
-})
-export class AppComponent {
-  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
-  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-
-  @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
 
   importXfdf(): void {
-    // The file for importing should be accessible at the given path or as a file stream depending on your integration
     this.pdfviewer.importFormFields('File', FormFieldDataFormat.Xfdf as any);
   }
-}
-{% endhighlight %}
-{% endtabs %}
-
-### Import JSON
-
-{% tabs %}
-{% highlight ts tabtitle="Standalone" %}
-import { Component, ViewChild } from '@angular/core';
-import {
-  ToolbarService,
-  MagnificationService,
-  NavigationService,
-  AnnotationService,
-  TextSelectionService,
-  TextSearchService,
-  FormFieldsService,
-  FormDesignerService,
-  PdfViewerModule,
-  PdfViewerComponent,
-  FormFieldDataFormat,
-} from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [PdfViewerModule],
-  template: `
-    <div class="content-wrapper">
-      <button (click)="importJson()">Import JSON</button>
-      <ejs-pdfviewer #pdfViewer id="pdfViewer"
-        [resourceUrl]="resourceUrl"
-        [documentPath]="document"
-        style="height: 640px; width: 100%"></ejs-pdfviewer>
-    </div>
-  `,
-  providers: [
-    ToolbarService,
-    MagnificationService,
-    NavigationService,
-    AnnotationService,
-    TextSelectionService,
-    TextSearchService,
-    FormFieldsService,
-    FormDesignerService,
-  ],
-})
-export class AppComponent {
-  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
-  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-
-  @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
 
   importJson(): void {
-    // The file for importing should be accessible at the given path or as a file stream depending on your integration
     this.pdfviewer.importFormFields('File', FormFieldDataFormat.Json as any);
+  }
+
+  // Import from a JavaScript object (fieldName: value)
+  importFromObject(): void {
+    const formDataObject = {
+      'fullname': 'Jane Doe',
+      'email': 'jane.doe@example.com',
+      'agreeTerms': 'yes'
+    };
+    this.pdfviewer.importFormFields(JSON.stringify(formDataObject), FormFieldDataFormat.Json as any);
   }
 }
 {% endhighlight %}
 {% endtabs %}
 
-## Common Use Cases
+**Expected result**: The loaded PDF's interactive form fields are populated with the values from the imported file/object. For object imports, fields matching the object keys receive the provided values.
 
-- Pre-fill application forms from a database using JSON.
-- Migrate data from other PDF tools using FDF/XFDF.
-- Restore user progress saved locally or on the server.
-- Combine with validation to block print/download until required fields are completed.
+## Troubleshooting
+
+- If imports do not populate fields, confirm the field names in the source match the PDF form field names.
+- For file-based imports, ensure you use server mode and that the import file is accessible to the viewer.
+- If using a Blob, pass the encoded base64 string of Blob/stream instead of the string `'File'`.
+- Check browser console for network errors when the viewer attempts to fetch import files.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
 
