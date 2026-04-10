@@ -1,3 +1,4 @@
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
@@ -61,14 +62,13 @@ DocumentEditorComponent.Inject(
 );
 
 function App() {
-  const documentEditorRef = React.useRef<DocumentEditorComponent | null>(null);
-  const pageCountRef = React.useRef<HTMLLabelElement | null>(null);
-  const editablePageNumberRef = React.useRef<HTMLDivElement | null>(null);
-  const pageNumberLabelRef = React.useRef<HTMLLabelElement | null>(null);
-  const zoomRef = React.useRef<DropDownButtonComponent | null>(null);
-
+  const documentEditorRef: DocumentEditorComponent = React.useRef(null);
+  const pageCountRef:any = React.useRef(null);
+  const editablePageNumberRef: any = React.useRef(null);
+  const pageNumberLabelRef: any = React.useRef(null);
+  const zoomRef: any = React.useRef(null);
   let startPage = 1;
-  let editorPageCount: number;
+  let editorPageCount: any;
 
   const items: ItemModel[] = [
     { text: '200%' },
@@ -88,7 +88,7 @@ function App() {
     const documenteditor = documentEditorRef.current;
 
     if (documenteditor) {
-      documenteditor.viewChange = (e: any) => updatePageNumberOnViewChange(e);
+      documenteditor.viewChange = (e) => updatePageNumberOnViewChange(e);
       documenteditor.contentChange = () => updatePageCount();
 
       if (editablePageNumberRef.current) {
@@ -120,7 +120,7 @@ function App() {
     const editablePageNumber = editablePageNumberRef.current;
     if (
       editablePageNumber?.textContent === '' ||
-      parseInt(editablePageNumber.textContent, 10) > editorPageCount
+      parseInt(editablePageNumber.textContent, 0) > editorPageCount
     ) {
       updatePageNumber();
     }
@@ -130,10 +130,9 @@ function App() {
   function onKeyDown(e: any) {
     const documenteditor = documentEditorRef.current;
     const editablePageNumber = editablePageNumberRef.current;
-
     if (e.which === 13) {
       e.preventDefault();
-      const pageNumber = parseInt(editablePageNumber?.textContent || '0', 10);
+      const pageNumber = parseInt(editablePageNumber?.textContent || '0', 0);
       if (pageNumber > editorPageCount) {
         updatePageNumber();
       } else {
@@ -148,7 +147,6 @@ function App() {
         updatePageNumber();
       }
     }
-
     if (e.which > 64) {
       e.preventDefault();
     }
@@ -165,15 +163,14 @@ function App() {
       documenteditor?.fitPage('FitOnePage');
     } else if (text.match('Fit page width')) {
       documenteditor?.fitPage('FitPageWidth');
-    } else if (documenteditor) {
-      documenteditor.zoomFactor = parseInt(text, 10) / 100;
+    } else {
+      documenteditor.zoomFactor = parseInt(text, 0) / 100;
     }
   }
 
   function updateZoomContent() {
-    if (zoomRef.current && documentEditorRef.current) {
-      zoomRef.current.content =
-        Math.round(documentEditorRef.current.zoomFactor * 100) + '%';
+    if (zoomRef.current) {
+      zoomRef.current.content = Math.round(documentEditorRef.current?.zoomFactor * 100) + '%';
     }
   }
 
@@ -204,35 +201,35 @@ function App() {
     <div>
       <DocumentEditorComponent
         id="container"
-        height="330px"
+        height={'330px'}
         ref={documentEditorRef}
         isReadOnly={false}
-        enablePrint
-        enableSelection
-        enableEditor
-        enableEditorHistory
-        enableContextMenu
-        enableSearch
-        enableOptionsPane
-        enableBookmarkDialog
-        enableBordersAndShadingDialog
-        enableFontDialog
-        enableTableDialog
-        enableParagraphDialog
-        enableHyperlinkDialog
-        enableImageResizer
-        enableListDialog
-        enablePageSetupDialog
-        enableSfdtExport
-        enableStyleDialog
-        enableTableOfContentsDialog
-        enableTableOptionsDialog
-        enableTablePropertiesDialog
-        enableTextExport
-        enableWordExport
+        enablePrint={true}
+        enableSelection={true}
+        enableEditor={true}
+        enableEditorHistory={true}
+        enableContextMenu={true}
+        enableSearch={true}
+        enableOptionsPane={true}
+        enableBookmarkDialog={true}
+        enableBordersAndShadingDialog={true}
+        enableFontDialog={true}
+        enableTableDialog={true}
+        enableParagraphDialog={true}
+        enableHyperlinkDialog={true}
+        enableImageResizer={true}
+        enableListDialog={true}
+        enablePageSetupDialog={true}
+        enableSfdtExport={true}
+        enableStyleDialog={true}
+        enableTableOfContentsDialog={true}
+        enableTableOptionsDialog={true}
+        enableTablePropertiesDialog={true}
+        enableTextExport={true}
+        enableWordExport={true}
       />
       <div id="page-fit-type-div">
-        <label id="page">Page </label>
+        <label id="page"> Page </label>
         <div id="editablePageNumber" ref={editablePageNumberRef}>
           <label id="documenteditor_page_no" ref={pageNumberLabelRef} />
         </div>
@@ -254,3 +251,5 @@ function App() {
 export default App;
 
 ReactDOM.render(<App />, document.getElementById('sample'));
+
+
