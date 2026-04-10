@@ -9,7 +9,7 @@ documentation: ug
 
 # Add, Modify and Remove Form Fields in WPF PDF Viewer
 
-The [WPF PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) provides controlled form‑editing capabilities that enable developers to manage PDF form fields efficiently within their applications. The viewer supports three main operations—adding, modifying, and removing form fields—with modification supported through both the UI and programmatically, while adding and removing form fields are supported only programmatically
+The [WPF PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) provides controlled form‑editing capabilities that enable developers to manage PDF form fields efficiently within their applications. The viewer supports three main operations adding, modifying, and removing form fields with modification supported through both the UI and programmatically, while adding and removing form fields are supported only programmatically.
 
 This section explains how to:
 - [Add PDF form fields](./manage-form-fields/add-form-fields)

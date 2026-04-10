@@ -9,9 +9,9 @@ documentation: ug
 
 
 # Remove PDF Form Fields from a PDF in WPF
-
+Remove PDF Form Fields from a PDF in WPF pdfviewer supports deleting existing form fields from a PDF document exclusively through programmatic APIs. This capability is useful for restructuring forms, removing unwanted fields, and managing PDF documents dynamically within WPF applications without relying on the user interface.
 ## Remove Form Fields Programmatically
-The PDF Viewer allows users to programmatically remove form fields without user interaction at runtime.
+The PDF Viewer enables form fields to be removed programmatically at runtime without requiring any user interaction.
 
 The following code sample explains how to remove the form field during runtime.
 

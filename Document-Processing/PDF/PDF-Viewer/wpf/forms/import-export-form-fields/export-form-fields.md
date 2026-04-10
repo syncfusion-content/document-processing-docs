@@ -9,7 +9,7 @@ documentation: ug
 
 # Export PDF Form Data from WPF PDF Viewer
 
-The PDF Viewer allows you to export form field data in multiple formats for easy storage or integration. Supported formats:
+The WPF PDF Viewer supports exporting form field data in multiple formats, enabling easy storage and seamless integration with other systems. Supported formats:
 
 - [FDF](#export-as-fdf)
 - [XFDF](#export-as-xfdf)
@@ -23,9 +23,9 @@ Follow the below steps to export data from PDF document in UI
 
 N> If the PDF document is loaded as a stream, the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) will request for the form name when exporting.
 
-##How to export Programmatically
+## How to export Programmatically
 
-[ExportFormData](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ExportFormData_System_String_Syncfusion_Pdf_Parsing_DataFormat_System_String_) API is used to import the form fields data in code behind.
+[ExportFormData](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ExportFormData_System_String_Syncfusion_Pdf_Parsing_DataFormat_System_String_) API is used to import the form fields data in code behind.This API allows the values filled in form fields to be extracted and saved in the required format, making it useful for storing form data, sharing it with external systems, or reusing it at a later stage without manual intervention.
 
 ### Export as FDF
 The following example exports form field data as FDF.

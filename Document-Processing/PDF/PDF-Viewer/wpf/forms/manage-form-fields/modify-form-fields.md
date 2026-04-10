@@ -8,27 +8,26 @@ documentation: ug
 ---
 
 # Modify PDF Form Field values in WPF
-
-You can modify form fields values using the **UI** or **API**.
+WPF PDF Viewer allows PDF form field values to be updated through the user interface for manual changes or through programmatic APIs for automated and dynamic updates.
 
 ## Modify PDF Form Field values using the UI
-The Syncfusion WPF PDF Viewer allows users to modify PDF form fields values directly through the user interface without using code. Users can click on form fields and enter or select values based on the field type.
+The Syncfusion WPF PDF Viewer allows to modify PDF form fields values directly through the user interface without using code. Users can click on form fields and enter or select values based on the field type.
 
-![Modify Form fields](./images/FormFillingUI.gif)
+![Modify Form fields](../images/FormFillingUI.gif)
 
-The WPF PDF Viewer supports common form fields such as text boxes, check boxes, radio buttons,list boxes, and signature fields. Filled values can be edited at any time, and the entered data is retained during the viewing session.
+The WPF PDF Viewer supports common form fields such as text boxes, check boxes, radio buttons,list boxes, and signature fields.Filled values can be edited at any time, and the entered data is retained during the viewing session.
 
 ## Modify PDF Form Field values programmatically
-You can Modify PDF form fields values programmatically by acessing the existing Form fields. This approach is useful when form data needs to be set dynamically based on application logic.
+WPF PDF Viewer allows PDF form field values to be modified programmatically by accessing existing form fields through APIs. This approach is useful for dynamically setting form data based on application logic.
 
 ## Modify PDF Form Field values 
 
 ### Textbox
-Update TextBox Field Through the UI
-You can modify text box fields at runtime from UI.
-![TextboxField](./images/TextBoxField.png)
+**Update TextBox Field Through the UI**
+Text box fields can be updated at runtime directly through the user interface. This allows text values to be entered or modified interactively within the PDF document without relying on programmatic APIs.
+![TextboxField](../images/TextBoxField.png)
 
-Update TextBox Field Programmatically (Code‑Behind)
+**Update TextBox Field Programmatically (Code‑Behind)**
 
 {% tabs %}
 {% highlight C# %}
@@ -65,11 +64,11 @@ End Sub
 {% endtabs %}
 
 ### CheckBox
-Update CheckBox Field Through the UI
-You can set checkbox fields at runtime from UI.
-![CheckboxField](./images/CheckBoxField.png)
+**Update CheckBox Field Through the UI**
+Check box fields can be set or updated at runtime directly through the user interface, allowing interactive selection or deselection within the PDF document.
+![CheckboxField](../images/CheckBoxField.png)
 
-Update CheckBox Field Programmatically (Code‑Behind)
+**Update CheckBox Field Programmatically (Code‑Behind)**
 
 {% tabs %}
 {% highlight C# %}
@@ -100,11 +99,11 @@ End Sub
 {% endtabs %}
 
 ### RadioButton
-Update Radio Button Field Through the UI
-You can change radio button selections at runtime from UI.
-![RadioButtonField](./images/Radiobutton.gif)
+**Update Radio Button Field Through the UI**
+Radio button selections can be changed at runtime directly through the user interface, allowing a different option within a radio button group to be selected interactively in the PDF document.
+![RadioButtonField](../images/Radiobutton.gif)
 
-Update Radio Button Field Programmatically (Code‑Behind)
+**Update Radio Button Field Programmatically (Code‑Behind)**
 
 {% tabs %}
 {% highlight C# %}
@@ -136,11 +135,11 @@ End Sub
 {% endtabs %}
 
 ### ListBox
-Update ListBox Field Through the UI
-You can set list box selections at runtime from UI.
-![ListBoxField](./images/ListBoxField.gif)
+**Update ListBox Field Through the UI**
+List box selections can be set or updated at runtime directly through the user interface, allowing items to be selected or changed interactively within the PDF document.
+![ListBoxField](../images/ListBoxField.gif)
 
-Update ListBox Field Programmatically (Code‑Behind)
+**Update ListBox Field Programmatically (Code‑Behind)**
 
 {% tabs %}
 {% highlight C# %}
@@ -172,11 +171,11 @@ End Sub
 {% endtabs %}
 
 ### ComboBox
-Update ComboBox Field Through the UI
-You can set combo box selections at runtime from UI.
-![ComboBoxField](./images/ComboboxField.png)
+**Update ComboBox Field Through the UI**
+Combo box selections can be set or updated at runtime directly through the user interface, allowing available options to be selected or changed interactively within the PDF document.
+![ComboBoxField](../images/ComboboxField.png)
 
-Update ComboBox Field Programmatically (Code‑Behind)
+**Update ComboBox Field Programmatically (Code‑Behind)**
 
 {% tabs %}
 {% highlight C# %}
@@ -208,18 +207,18 @@ End Sub
 {% endtabs %}
 
 ### Signature Field
-You can apply or update signature fields at runtime from UI.
+Signature fields can be applied or updated at runtime directly through the user interface, allowing signatures to be added or modified interactively within the PDF document.
 #### Add a signature from signature field in UI
 
 Clicking the signature box will open the signature pad, requesting the user to draw the signature. clicking on the apply button will add the drawn signature to the signature field.
 
-![WPF PDF Viewer Delete a Signature from Signature field](../form-filling-images/wpf-pdf-viewer-signature-form-field-add.png)
+![WPF PDF Viewer Delete a Signature from Signature field](.../form-filling-images/wpf-pdf-viewer-signature-form-field-add.png)
 
 #### Deleting a signature from signature field in UI
 
 Selecting the delete option from the context menu, which is displayed when right-clicking on the selected signature, would delete the respective signature from the signature field.
 
-![WPF PDF Viewer Delete a Signature from Signature field](../form-filling-images/wpf-pdf-viewer-signature-form-field-delete.png)
+![WPF PDF Viewer Delete a Signature from Signature field](.../form-filling-images/wpf-pdf-viewer-signature-form-field-delete.png)
 
 Update Signature Field Programmatically (Code‑Behind)
 

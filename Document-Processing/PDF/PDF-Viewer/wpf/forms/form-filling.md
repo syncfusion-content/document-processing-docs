@@ -8,26 +8,24 @@ documentation: ug
 ---
 
 # Filling PDF Forms in WPF PDF Viewer
+Filling PDF Forms in WPF PDF Viewer enables efficient entry and updating of form data in existing PDF documents. This functionality is supported through three distinct approaches:
 
-The Syncfusion WPF PDF Viewer supports three types of form-filling:
+1. [Form Filling Through User Interface](#fill-pdf-forms-through-the-user-interface)
+2. [Filling Form Fields Programmatically](#fill-pdf-forms-programmatically)
+3. [Importing Form Field Data](#fill-pdf-forms-through-import-data)
 
-1.	[Filling Form Fields Programmatically](#fill-pdf-forms-programmatically)
+## Fill PDF forms through the User Interface
 
-    You can fill or update PDF form fields programmatically by acessing the existing Form fields and fill the form fields values. This approach is useful when form data needs to be set dynamically based on application logic.
+The Syncfusion WPF PDF Viewer enables PDF form fields to be filled directly through the built‑in user interface without requiring any code. Form fields can be selected and populated by entering text or choosing values based on the field type, providing a smooth and interactive form‑filling experience.
 
-2.	[Form Filling Through User Interface](#fill-pdf-forms-through-the-user-interface)
+![Form Filling](../form-filling-images/wpf-pdf-viewer-form-filling.png)
 
-    Users can fill in PDF form fields directly through the PDF Viewer user interface by typing text, selecting options, or interacting with supported form elements.
-
-3.	[Importing Form Field Data](#fill-pdf-forms-through-import-data)
-
-    The PDF Viewer allows you to import form field data into an existing PDF document. This enables pre filled forms using external data sources.
 
 ## Fill PDF forms programmatically 
 
- You can fill or update PDF form fields programmatically by acessing the existing Form fields and fill the form fields values. This approach is useful when form data needs to be set dynamically based on application logic.
+WPF PDF Viewer allows PDF form fields to be filled or updated programmatically by accessing existing form fields and assigning values through APIs. This approach is useful when form data needs to be populated dynamically based on application logic or automated workflows.
 
-The following example demonstrates how to update PDF form field values programmatically:
+The following example demonstrates how to update PDF form field values programmatically in the WPF PDF Viewer, including TextBox, CheckBox, ComboBox, ListBox, Signature field, and RadioButton form fields using the available APIs:
 
 {% tabs %}
 {% highlight C# %}
@@ -162,20 +160,14 @@ End Sub
 
 N > For the signature to appear in the document, ensure that the loaded PDF document is saved after modification.
 
-## Fill PDF forms through the User Interface
-
-The Syncfusion PDF Viewer allows users to fill PDF form fields directly through the user interface without using code. Users can click on form fields and enter or select values based on the field type.
-
-![Form Filling](form-filling-images/wpf-pdf-viewer-form-filling.png)
-
-The PDF Viewer supports common form fields such as text boxes, check boxes, radio buttons, drop-down lists, list boxes, and signature fields. Filled values can be edited at any time, and the entered data is retained during the viewing session.
 
 
-## Fill PDF forms through Import Data 
+## Fill PDF forms through Export and Import Data 
 
-The Syncfusion WPF PDF Viewer allows you to import form field data into an existing PDF document using the [ImportFormData](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html#Syncfusion_Windows_PdfViewer_PdfDocumentView_ImportFormData_System_String_Syncfusion_Pdf_Parsing_DataFormat_) API. This feature enables you to pre-fill form fields using data from an external source without requiring manual user input.
+In WPF PDF Viewer, exporting and importing form data simplifies working with PDF forms through both programmatic APIs and the built‑in user interface. Filled form data can be exported programmatically or through UI actions and stored in a database or file storage, preserving all entered values for later use. This capability helps save progress, share data between applications, and restore form states when needed.
 
-Imported form field data is automatically mapped to the corresponding form fields in the PDF document based on the field names. Once the data is imported, the populated values are displayed in the PDF Viewer and can be edited through the user interface if required.
+The same exported data can be imported back into an existing PDF document using the [ImportFormData](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfDocumentView.html#Syncfusion_Windows_PdfViewer_PdfDocumentView_ImportFormData_System_String_Syncfusion_Pdf_Parsing_DataFormat_) API or supported UI options, allowing form fields to be pre-filled using external data sources without manual entry. During the import process, form data is automatically mapped to the corresponding form fields based on field names. Once imported, the populated values are displayed in the PDF Viewer and remain editable through the user interface if required.
+
 
 {% tabs %}
 {% highlight c# %}
@@ -198,11 +190,6 @@ End Sub
 {% endtabs %}
 
 For more details, see [Import Form Data](./import-export-form-fields/import-form-fields).
-
-## How to get the filled data and store it to a database
-
-You can export the filled form field data from the PDF Viewer and store it in a backing system such as a database or file storage. The exported data can later be imported to restore the form state.
-
 For more details, see [Export Form Data](./import-export-form-fields/export-form-fields).
 
 
