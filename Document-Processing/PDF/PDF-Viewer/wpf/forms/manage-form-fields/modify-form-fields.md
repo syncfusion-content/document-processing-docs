@@ -220,7 +220,7 @@ Selecting the delete option from the context menu, which is displayed when right
 
 ![WPF PDF Viewer Delete a Signature from Signature field](../images/wpf-pdf-viewer-signature-form-field-delete.png)
 
-Update Signature Field Programmatically (Code‑Behind)
+**Update Signature Field Programmatically (Code‑Behind)**
 
 {% tabs %}
 {% highlight C# %}
