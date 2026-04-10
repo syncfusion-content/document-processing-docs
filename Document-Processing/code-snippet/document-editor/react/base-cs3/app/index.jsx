@@ -1,5 +1,5 @@
-import { createRoot } from 'react-dom/client';
 import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar);
 function Default() {

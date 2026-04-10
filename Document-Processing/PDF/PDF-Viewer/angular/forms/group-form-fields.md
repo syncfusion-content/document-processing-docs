@@ -18,7 +18,6 @@ This page covers:
 - [How to group form fields programmatically](#group-pdf-form-fields-programmatically)
 - [Related references and samples](#example-scenarios)
 
-
 ## How grouping works
 
 In a PDF form, multiple PDF form fields can represent the same logical field. When PDF form fields share the same **Name**, they are treated as a group and stay synchronized.
