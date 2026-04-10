@@ -7,7 +7,7 @@ documentation: UG
 keywords: Assemblies
 --- 
 
-# Perform OCR in Mac 
+# Perform OCR on macOS
 
 The [Syncfusion<sup>&reg;</sup> .NET OCR library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) used to extract text from scanned PDFs and images in the Mac application.
 
