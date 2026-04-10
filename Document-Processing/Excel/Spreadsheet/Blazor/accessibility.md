@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Spreadsheet
 
-The Syncfusion Blazor Spreadsheet follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA](https://www.w3.org/TR/wai-aria/#roles) roles that are commonly used to evaluate accessibility.
+The Syncfusion Blazor Spreadsheet follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WAI-ARIA](https://www.w3.org/TR/wai-aria#roles) roles that are commonly used to evaluate accessibility.
 <style>
     .post .post-content img {
         display: inline-block;
@@ -33,7 +33,7 @@ The accessibility compliance for the Spreadsheet component is outlined below.
 | [Axe-core Accessibility Validation](https://blazor.syncfusion.com/documentation/common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 
 ## WAI-ARIA attributes
-The Syncfusion Blazor Spreadsheet follows WAI-ARIA patterns to meet accessibility standards. The following ARIA attributes are used in the Spreadsheet component:
+The Syncfusion Blazor Spreadsheet follows [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet accessibility standards. The following ARIA attributes are used in the Spreadsheet component:
 
 | Attributes | Purpose |
 |---------------|-------------|
@@ -50,9 +50,9 @@ The Syncfusion Blazor Spreadsheet follows WAI-ARIA patterns to meet accessibilit
 | `aria-multiline` | Indicates whether a textbox accepts multiple lines of input or only a single line. |
 
 
-## Keyboard shortcuts
+## Keyboard interaction
 
-The Syncfusion Blazor Spreadsheet follows keyboard interaction guidelines, making it accessible for people who use assistive technologies (AT) and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet.
+The Syncfusion Blazor Spreadsheet follows [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert#keyboardinteraction) guidelines, making it accessible for people who use assistive technologies (AT) and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet.
 
 <b>Clipboard</b>
 
