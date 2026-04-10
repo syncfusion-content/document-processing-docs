@@ -112,8 +112,6 @@ Use browser Print Preview or produce a printed/PDF copy to confirm sharpness and
 - Values outside the supported range **0.5 – 5** will be ignored and fall back to the default (`1`).
 - Increasing [`printScaleFactor`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#printscalefactor) raises CPU, memory, and rendering time requirements. Test on target machines and documents before setting a higher factor.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to/Customization%20of%20print%20Quality)
-
 ## See Also
 
 - [Overview](./overview)
