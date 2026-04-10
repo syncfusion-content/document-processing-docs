@@ -13,7 +13,7 @@ The Syncfusion WPF PDF Viewer delivers a complete,easy‑to‑use PDF forms expe
 
 The PDF Viewer also includes smooth import and export support for form data, making integration effortless. Developers benefit from extensive API control, while end users enjoy a clean and simple interface designed for a seamless and stress-free form-filling experience.
 
-![WPF PDF Viewer Form Filling](../form-filling-images/wpf-pdf-viewer-form-filling.png)
+![WPF PDF Viewer Form Filling](./images/wpf-pdf-viewer-form-filling.png)
 
 ## Filling PDF Forms
 
