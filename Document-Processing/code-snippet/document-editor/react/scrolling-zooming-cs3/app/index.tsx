@@ -1,3 +1,4 @@
+
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
@@ -30,7 +31,6 @@ import {
   StylesDialog,
 } from '@syncfusion/ej2-react-documenteditor';
 import { DropDownButtonComponent, ItemModel } from '@syncfusion/ej2-react-splitbuttons';
-
 DocumentEditorComponent.Inject(
   Print,
   SfdtExport,
@@ -59,17 +59,14 @@ DocumentEditorComponent.Inject(
   CellOptionsDialog,
   StylesDialog
 );
-
 function App() {
   const documentEditorRef = React.useRef<DocumentEditorComponent | null>(null);
   const pageCountRef = React.useRef<HTMLLabelElement | null>(null);
   const editablePageNumberRef = React.useRef<HTMLDivElement | null>(null);
   const pageNumberLabelRef = React.useRef<HTMLLabelElement | null>(null);
   const zoomRef = React.useRef<DropDownButtonComponent | null>(null);
-
   let startPage = 1;
   let editorPageCount: number;
-
   const items: ItemModel[] = [
     { text: '200%' },
     { text: '175%' },
@@ -83,29 +80,24 @@ function App() {
     { text: 'Fit one page' },
     { text: 'Fit page width' },
   ];
-
   React.useEffect(() => {
     const documenteditor = documentEditorRef.current;
-
     if (documenteditor) {
       documenteditor.viewChange = (e: any) => updatePageNumberOnViewChange(e);
       documenteditor.contentChange = () => updatePageCount();
-
       if (editablePageNumberRef.current) {
         editablePageNumberRef.current.onclick = () => updateDocumentEditorPageNumber();
         editablePageNumberRef.current.onkeydown = (e: any) => onKeyDown(e);
         editablePageNumberRef.current.onblur = () => onBlur();
       }
-
       updatePageCount();
       updatePageNumber();
     }
   }, []);
-
   function updatePageNumberOnViewChange(args: any) {
     const documenteditor = documentEditorRef.current;
     if (
-      documenteditor?.selection &&
+      documenteditor && documenteditor.selection &&
       documenteditor.selection.startPage >= args.startPage &&
       documenteditor.selection.startPage <= args.endPage
     ) {
@@ -115,100 +107,88 @@ function App() {
     }
     updatePageNumber();
   }
-
   
   function onBlur() {
     const editablePageNumber = editablePageNumberRef.current;
-
     if (
       editablePageNumber &&
       (
         editablePageNumber.textContent === '' ||
-        parseInt(editablePageNumber.textContent ?? '0', 10) > editorPageCount
+        parseInt(editablePageNumber.textContent || '0', 10) > editorPageCount
       )
     ) {
       updatePageNumber();
     }
-
     if (editablePageNumber) {
       editablePageNumber.contentEditable = 'false';
     }
   }
 
-
   function onKeyDown(e: any) {
     const documenteditor = documentEditorRef.current;
     const editablePageNumber = editablePageNumberRef.current;
-
     if (e.which === 13) {
       e.preventDefault();
-      const pageNumber = parseInt(editablePageNumber?.textContent || '0', 0);
+      const pageNumber = parseInt(editablePageNumber ? (editablePageNumber.textContent || '0') : '0', 0);
       if (pageNumber > editorPageCount) {
         updatePageNumber();
       } else {
-        if (documenteditor?.selection) {
+        if (documenteditor && documenteditor.selection) {
           documenteditor.selection.goToPage(pageNumber);
         } else {
-          documenteditor?.scrollToPage(pageNumber);
+          if (documenteditor) { documenteditor.scrollToPage(pageNumber); }
         }
       }
       if (editablePageNumber) editablePageNumber.contentEditable = 'false';
-      if (editablePageNumber?.textContent === '') {
+      if (editablePageNumber && editablePageNumber.textContent === '') {
         updatePageNumber();
       }
     }
-
     if (e.which > 64) {
       e.preventDefault();
     }
   }
-
   function onZoom(args: any) {
     setZoomValue(args.item.text);
     updateZoomContent();
   }
-
   function setZoomValue(text: string) {
     const documenteditor = documentEditorRef.current;
     if (text.match('Fit one page')) {
-      documenteditor?.fitPage('FitOnePage');
+      if (documenteditor) { documenteditor.fitPage('FitOnePage'); }
     } else if (text.match('Fit page width')) {
-      documenteditor?.fitPage('FitPageWidth');
+      if (documenteditor) { documenteditor.fitPage('FitPageWidth'); }
     } else if (documenteditor) {
       documenteditor.zoomFactor = parseInt(text, 0) / 100;
     }
   }
-
   function updateZoomContent() {
     if (zoomRef.current && documentEditorRef.current) {
       zoomRef.current.content =
         Math.round(documentEditorRef.current.zoomFactor * 100) + '%';
     }
   }
-
   function updatePageNumber() {
     if (pageNumberLabelRef.current) {
       pageNumberLabelRef.current.textContent = startPage.toString();
     }
   }
-
   function updatePageCount() {
     const documenteditor = documentEditorRef.current;
-    editorPageCount = documenteditor?.pageCount || 0;
+    editorPageCount = documenteditor ? documenteditor.pageCount : 0;
     if (pageCountRef.current) {
       pageCountRef.current.textContent = editorPageCount.toString();
     }
   }
-
   function updateDocumentEditorPageNumber() {
     const editPageNumber = editablePageNumberRef.current;
     if (editPageNumber) {
       editPageNumber.contentEditable = 'true';
       editPageNumber.focus();
-      window.getSelection()?.selectAllChildren(editPageNumber);
+      const selection = window.getSelection();
+      if (selection) { selection.selectAllChildren(editPageNumber); }
     }
   }
-
   return (
     <div>
       <DocumentEditorComponent
@@ -259,7 +239,5 @@ function App() {
     </div>
   );
 }
-
 export default App;
-
 ReactDOM.render(<App />, document.getElementById('sample'));
