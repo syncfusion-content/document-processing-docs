@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remove pages using the Organize Pages tool
+# Remove pages using the Organize Pages tool in Angular
 
 ## Overview
 
