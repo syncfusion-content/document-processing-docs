@@ -11,9 +11,6 @@ An Ink annotation is a freehand drawing or handwritten input composed of stroke 
 
 N> DocIO supports Ink only in DOCX format documents.
 
-You can insert Ink elements in the document by using the drawing tools available under the **Draw** tab in Word.
-![Process](Ink_images/Ink-tab.png)
-
 ## Create Ink
 
 The following code example illustrating how to create an Ink in a Word document. 
@@ -772,3 +769,8 @@ During Word-to-PDF and Word-to-Image conversions, Syncfusion Word Library uses f
 * [How Trace Points Are Calculated?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-trace-points-are-calculated)
 * [Example: Triangle Ink Trace Points](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#example:-triangle-ink-trace-points)
 * [How to Set Stroke Thickness?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-to-set-stroke-thickness)
+
+## Online Demo
+
+* Explore how to create a Word document with Ink using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createink#/tailwind). 
+* Explore how to edit a Word document with Ink using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editink#/tailwind).

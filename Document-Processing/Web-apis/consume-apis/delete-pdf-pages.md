@@ -5,9 +5,9 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# How to Delete Pages from a PDF Using Syncfusion API
+# Delete Pages from PDF Using Syncfusion Web API 
 
-This feature allows you to delete pages in a PDF document. To perform this operation, you need to supply a PDF document as input to the Delete Pages API.
+The Syncfusion Delete PDF Pages Web API allows you to remove unwanted pages from a PDF document using a simple, API‑driven workflow. You can delete specific pages or page ranges while preserving the original layout, formatting, and quality of the remaining content. This feature is ideal for refining documents, removing sensitive information, or creating customized PDFs for specific use cases.
 
 ## Delete PDF Pages
 
@@ -88,6 +88,26 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## Delete PDF pages settings
+
+**Password** 
+
+Specifies the password required to open and process a protected PDF file. 
+
+**PageRanges** 
+
+Defines the page ranges to be deleted from the PDF. 
+
+**Start** 
+
+Specifies the starting page number of the deletion range. 
+
+**End** 
+
+Specifies the ending page number of the deletion range. 
+
+## Delete Pages Job Response 
+
 Once the request is sent, it will create a job to delete PDF pages and return the job details as follows:
 
 ```
@@ -98,7 +118,7 @@ Once the request is sent, it will create a job to delete PDF pages and return th
 }
 ```
 
-## Poll the status of the Delete Pages Job
+## Check Delete Pages Job Status 
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
@@ -106,7 +126,7 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/9b131bfe-d4eb-4f1d-b946-46443a363eb5' \
+curl --location 'http://localhost:8003/v1/edit-pdf/status/9b131bfe-d4eb-4f1d-b946-46443a363eb5' \
   --output Output.pdf
 
 {% endhighlight %}
@@ -128,7 +148,7 @@ fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
