@@ -11,36 +11,16 @@ documentation: ug
 
 This guide explains how to set up and connect local web services for open and save operations in the Syncfusion Spreadsheet component using ASP.NET Core.
 
-## Overview
+## Purpose
 
-By default, the Syncfusion Spreadsheet component uses Syncfusion-hosted endpoints for file operations:
+This platform guide contains platform-specific setup, configuration, and code examples to implement Open and Save endpoints in an ASP.NET Core Web API. High-level rationale and benefits are covered in the central overview page; this guide focuses on actionable steps and configuration details.
 
-```ts
-openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
-saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
-```
+## Quick Start
 
-For better control and performance, we recommend that you configure and run your own Open and Save services locally or on your preferred hosting environment.
-
-### What is a Local Service?
-
-A local service is a web API running on your local machine (or internal network) that handles file operations for the Spreadsheet component. Instead of relying on external hosted endpoints, you control the service directly, giving you greater security, reliability, and customization options.
-
-### Why Use a Local Service Instead of Demo Services?
-
-**Limitations of demo/hosted services:**
-- Intended solely for demonstration purposes
-- Not recommended for production or development environments
-- Limited by external service availability and performance
-- Potential security concerns with uploading files to third-party servers
-- No direct control over the processing logic or file handling
-
-**Benefits of a local service:**
-- **Security**: Files are processed on your own infrastructure
-- **Performance**: Reduced latency with local processing
-- **Customization**: Implement custom business logic for file operations
-- **Reliability**: Direct control over service availability and uptime
-- **Compliance**: Meet regulatory requirements by keeping data on-premises
+1. Create an ASP.NET Core Web API project.
+2. Install required Syncfusion NuGet packages for server-side Spreadsheet support.
+3. Add `Open` and `Save` controller actions (see below).
+4. Configure `Program.cs` for CORS and file-size limits; run and test.
 
 ## How-To Guide: Create a Local ASP.NET Core Web API
 
