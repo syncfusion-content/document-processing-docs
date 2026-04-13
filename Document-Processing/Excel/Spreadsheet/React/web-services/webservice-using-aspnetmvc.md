@@ -7,23 +7,11 @@ platform: document-processing
 documentation: ug
 ---
 
-
 # Connecting Web Services for Spreadsheet Open and Save in ASP.NET MVC
 
 This guide explains how to set up and connect local web services for open and save operations in the Syncfusion Spreadsheet component using **ASP.NET MVC**.
 
-## Purpose
-
-This platform-specific guide provides step-by-step configuration and code examples for implementing Open and Save endpoints using ASP.NET MVC. High-level explanations and benefits live in the shared overview; this document focuses on concrete implementation, configuration, and troubleshooting for ASP.NET MVC apps.
-
-## Quick Start
-
-1. Create or open your ASP.NET MVC 5 project.
-2. Install the Syncfusion MVC server packages listed below.
-3. Add `Open` and `Save` controller actions (see sample code).
-4. Configure `web.config` and `Global.asax` for CORS and request limits; run and test.
-
-## How-To Guide: Create a Local ASP.NET MVC Web Service
+## Create a Local ASP.NET MVC Web Service
 
 ### Create a New ASP.NET MVC Project
 

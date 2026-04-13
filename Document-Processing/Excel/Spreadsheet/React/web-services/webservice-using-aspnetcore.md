@@ -11,18 +11,7 @@ documentation: ug
 
 This guide explains how to set up and connect local web services for open and save operations in the Syncfusion Spreadsheet component using ASP.NET Core.
 
-## Purpose
-
-This platform guide contains platform-specific setup, configuration, and code examples to implement Open and Save endpoints in an ASP.NET Core Web API. High-level rationale and benefits are covered in the central overview page; this guide focuses on actionable steps and configuration details.
-
-## Quick Start
-
-1. Create an ASP.NET Core Web API project.
-2. Install required Syncfusion NuGet packages for server-side Spreadsheet support.
-3. Add `Open` and `Save` controller actions (see below).
-4. Configure `Program.cs` for CORS and file-size limits; run and test.
-
-## How-To Guide: Create a Local ASP.NET Core Web API
+## Create a Local ASP.NET Core Web API
 
 ### Create a New ASP.NET Core Web API Project
 
