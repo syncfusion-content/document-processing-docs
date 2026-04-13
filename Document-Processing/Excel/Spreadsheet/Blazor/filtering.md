@@ -11,7 +11,7 @@ documentation: ug
 
 Filtering in the Blazor Spreadsheet component enables focused data analysis by displaying only the rows that meet specific criteria. This functionality helps create interactive views by hiding rows that do not match the filtering conditions. Filtering behavior is controlled using the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFiltering) property, which is set to **true** by default.
 
-N> When `AllowFiltering` is set to **false**, filtering options are disabled in the ribbon and removed from the context menu. API methods related to filtering will also be inactive. Additionally, if the worksheet is protected, the filtering feature is disabled. For more information, refer to the [Worksheet Protection](./protection#protect-sheet) documentation.
+N> When [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFiltering) is set to **false**, filtering options are disabled in the ribbon and removed from the context menu. API methods related to filtering will also be inactive. Additionally, if the worksheet is protected, the filtering feature is disabled. For more information, refer to the [Worksheet Protection](./protection#protect-sheet) documentation.
 
 Filtering can be accessed through the user interface using the following method:
 
@@ -206,7 +206,7 @@ This action filters the column to display only the rows that match the selected 
 
 ### Filter by cell value programmatically
 
-The [FilterByCellValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_FilterByCellValueAsync_System_String_System_Object_) method allows filtering based on a specified value and cell address without using the UI. The available parameters in the `FilterByCellValueAsync` method are:
+The [FilterByCellValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_FilterByCellValueAsync_System_String_System_Object_) method allows filtering based on a specified value and cell address without using the UI. The available parameters in the [FilterByCellValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_FilterByCellValueAsync_System_String_System_Object_) method are:
 
 | Parameter     | Type   | Description |
 |---------------|--------|-------------|
@@ -280,7 +280,7 @@ Filters can be cleared through the user interface using the following methods:
 
 ### Clear filter programmatically
 
-The [ClearFilterAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ClearFilterAsync_System_Int32_) method removes filtering from a specific column in the active sheet. The available parameters in the `ClearFilterAsync` method are:
+The [ClearFilterAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ClearFilterAsync_System_Int32_) method removes filtering from a specific column in the active sheet. The available parameters in the  [ClearFilterAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ClearFilterAsync_System_Int32_) method are:
 
 | Parameter     | Type | Description |
 |---------------|------|-------------|
