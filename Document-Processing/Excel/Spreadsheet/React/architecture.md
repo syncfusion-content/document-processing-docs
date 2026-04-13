@@ -241,14 +241,6 @@ The server parses Excel/CSV files and converts them into a format the Spreadshee
 - Flexible import from multiple file types
 - Server endpoint required
 
-### Hybrid Data Binding (Local + Remote)
-
-The Spreadsheet supports flexible combinations of local and remote data, enabling you to design workflows that match your application's unique needs. You can start by loading initial data locally from your application, then later import updated datasets from the server when users need refreshed information. This allows you to control timing and minimize network requests while maintaining up-to-date data.
-
-Alternatively, you can start with a file imported from the server, allow users to edit it entirely on the client with full spreadsheet functionality, and then export the modified version back to the server for persistence or sharing. Another common pattern is binding specific cells or ranges to remote data sources (such as database queries) while keeping other cells as static local data entered by users. This hybrid approach gives you the flexibility to combine real-time data, user edits, and server operations in a single workflow. For example, a financial dashboard might load budget data from a database while allowing users to add their own projections and notes locally.
-
----
-
 ## Part 5: Client-Side and Server-Side Processing
 
 ### Client-Side Processing
