@@ -9,17 +9,13 @@ documentation: ug
 
 # Images and Illustrations
 
-Our Syncfusion React Spreadsheet component allows you to insert images directly into worksheet cells to enhance visual presentation and provide additional context alongside data. Images such as logos, screenshots, diagrams, or illustrations can be placed within a sheet, positioned as needed, resized, selected, or removed.
-
-Image support in the Spreadsheet can be controlled using the [allowImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowimage) property. This property is enabled by default.
+Syncfusion react spreadsheet component allows inserting images into worksheet cells to improve presentation and add context. Use images for logos, screenshots, diagrams, or illustrations. Images can be positioned, resized, selected, or removed. Control image support with the [allowImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowimage) property (enabled by default).
 
 ## Insert and Position Images
 
-In the Syncfusion React Spreadsheet component, images can be inserted into a worksheet and placed in a specific cell. The target cell determines where the image initially appears, and the image is rendered as an overlay on top of the grid.
+Insert an image into a worksheet and place it in a specific cell. The cell determines the image's initial position; the image is rendered as an overlay on the grid. Insert images programmatically using the [insertImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#insertimage) method. Provide the image source, initial width and height, and the target cell address.
 
-Images are inserted programmatically using the [insertImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#insertimage) method. This method allows you to define the image source along with its initial width and height, and specify the cell address where the image should be placed.
-
-Once an image is inserted, it can be repositioned by selecting and dragging it to another location within the worksheet. The image remains independent of cell values and does not interfere with data editing, sorting, or filtering operations. You can also insert multiple images at once by passing multiple image configurations to the method.
+After insertion, select and drag an image to reposition it. Images do not affect cell values and do not block editing, sorting, or filtering. You can insert multiple images at once by passing multiple configurations to the method.
 
 The following code example shows how to insert an image in spreadsheet.
 
@@ -40,11 +36,9 @@ After inserting an image into the spreadsheet, you can resize it to fit the layo
 
 ## Delete Images
 
-Images added to a worksheet can be removed either through user interaction or programmatically. In the UI, an image can be deleted by selecting it and pressing the Delete, Backspace key or you can also choose Clear All from the ribbon to clear the current selection. This immediately removes the image from the worksheet.
+Images added to a worksheet can be removed either through user interaction or programmatically. In the UI, an image can be deleted by selecting it and pressing the Delete, Backspace key or you can also choose Clear All from the ribbon to clear the current selection. This immediately removes the image from the worksheet. You can use the [deleteImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#deleteimage) method to remove an image by id and cell address.
 
-Our Spreadsheet component also provides the [deleteImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#deleteimage) method. This method removes an image based on its unique identifier and the cell address where it is placed.
-
-The Spreadsheet also provides methods to manage image selection. The [selectImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#selectimage) method allows you to programmatically select an image in the active sheet, while the [deselectImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#deselectimage) method removes the current image selection.
+The component also provides selection helpers: use [selectImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#selectimage) to programmatically select an image and [deselectImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#deselectimage) to clear selection.
 
 The following code example shows how to delete an image by id in spreadsheet.
 
