@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to set invert if negative option for a chart using XLsIO?
+# How to set invert if negative option for a chart using XlsIO?
 
 This following code samples demonstrate how to set invert if negative option for a chart using C# (Cross-platform and Windows-specific) and VB.NET.
 
