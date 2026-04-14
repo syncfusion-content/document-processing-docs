@@ -1,6 +1,6 @@
 ---
-title: Setting Invert If negative option in Chart properties using Syncfusion XLsIO | Syncfusion
-description: This page tells how to set invert if negative option for a chart.
+title: Setting Invert If negative option in Chart properties | Syncfusion
+description: This page tells how to set invert if negative option for a chart using Syncfusion XlsIO in C# (Cross-platform and Windows-specific) and VB.NET.
 platform: document-processing
 control: XlsIO
 documentation: UG
