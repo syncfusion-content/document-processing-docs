@@ -1,6 +1,6 @@
 ---
 title: Soritng using Syncfusion XLsIO | Syncfusion
-description: This page tells how to sort a column by including first row.
+description: This page tells how to sort a column by including first row using XLsIO in C# (Cross-platform and Windows-specific) and VB.NET.
 platform: document-processing
 control: XlsIO
 documentation: UG
