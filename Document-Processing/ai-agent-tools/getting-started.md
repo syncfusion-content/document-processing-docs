@@ -253,3 +253,4 @@ Any other provider that exposes an `IChatClient` (Ollama, Anthropic via adapters
 - [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
 - [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
 - [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
+- [Example Prompts](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/example-prompts)
