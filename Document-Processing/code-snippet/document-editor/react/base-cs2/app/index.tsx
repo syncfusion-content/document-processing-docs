@@ -1,6 +1,5 @@
-import { createRoot } from 'react-dom/client';
 import * as React from 'react';
-
+import * as ReactDOM from 'react-dom/client';
 import {
     DocumentEditorComponent, DocumentEditor, RequestNavigateEventArgs, ViewChangeEventArgs,
     Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory,

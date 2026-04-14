@@ -9,11 +9,11 @@ documentation: ug
 
 # Hyperlinks in the Blazor Spreadsheet component
 
-Hyperlinks in the Blazor Spreadsheet enable interactive navigation both within and outside of spreadsheets. This feature creates clickable links that connect to external web URLs, specific cells within the current worksheet, or cells in other worksheets. To control this functionality, use the [AllowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowHyperlink) property, which enables or disables hyperlink support in the Spreadsheet. The default value of the `AllowHyperlink` property is **true**.
+Hyperlinks in the Blazor Spreadsheet enable interactive navigation both within and outside of spreadsheets. This feature creates clickable links that connect to external web URLs, specific cells within the current worksheet, or cells in other worksheets. To control this functionality, use the [AllowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowHyperlink) property, which enables or disables hyperlink support in the Spreadsheet. The default value of the [AllowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowHyperlink) property is **true**.
 
 The keyboard shortcut `Ctrl + K` can be used to quickly open the **Insert** or **Edit** hyperlink dialog for the active cell, without using the UI elements. This shortcut works regardless of whether the hyperlink functionality is accessed through the Ribbon or the Context Menu.
 
-N> When `AllowHyperlink` is set to **false**, the hyperlink options are removed from the interface (Ribbon and Context Menu), although existing hyperlinks will still function. Additionally, shortcut keys (**Ctrl + K**) and API methods related to this feature will no longer work.
+N> When [AllowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowHyperlink) is set to **false**, the hyperlink options are removed from the interface (Ribbon and Context Menu), although existing hyperlinks will still function. Additionally, shortcut keys (**Ctrl + K**) and API methods related to this feature will no longer work.
 
 ## Insert Hyperlink
 
@@ -49,7 +49,7 @@ Hyperlinks can be inserted through the user interface (UI) using any of the foll
 
 ### Insert Hyperlink Programmatically
 
-Hyperlinks can be added programmatically using the [AddHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method. This method allows hyperlinks to be added to a cell or range of cells without using the UI. The available parameters in the `AddHyperlinkAsync` method are:
+Hyperlinks can be added programmatically using the [AddHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method. This method allows hyperlinks to be added to a cell or range of cells without using the UI. The available parameters in the [AddHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_)  method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -87,7 +87,7 @@ Hyperlinks can be added programmatically using the [AddHyperlinkAsync](https://h
 {% endhighlight %}
 {% endtabs %}
 
-The `AddHyperlinkAsync` method is flexible and supports various scenarios beyond basic usage. The following are some special cases and behaviors to be aware of:
+The [AddHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_)  method is flexible and supports various scenarios beyond basic usage. The following are some special cases and behaviors to be aware of:
 
 {% tabs %}
 {% highlight razor%}
@@ -167,7 +167,7 @@ When dealing with multiple hyperlinks, selecting a range of cells-such as `A1` t
 
 ### Remove Hyperlink Programmatically
 
-Hyperlinks can be removed programmatically by using the  [RemoveHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method. This method eliminates hyperlink functionality from the specified cell or range of cells within a spreadsheet, allowing for efficient bulk removal through code. The available parameters in the `RemoveHyperlinkAsync` method are:
+Hyperlinks can be removed programmatically by using the  [RemoveHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method. This method eliminates hyperlink functionality from the specified cell or range of cells within a spreadsheet, allowing for efficient bulk removal through code. The available parameters in the [RemoveHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -203,7 +203,7 @@ Hyperlinks can be removed programmatically by using the  [RemoveHyperlinkAsync](
 {% endhighlight %}
 {% endtabs %}
 
-The `RemoveHyperlinkAsync` method is flexible and supports various scenarios beyond basic usage. Below are some special cases and behaviors to be aware of:
+The [RemoveHyperlinkAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method is flexible and supports various scenarios beyond basic usage. Below are some special cases and behaviors to be aware of:
 
 {% tabs %}
 {% highlight razor%}
@@ -227,15 +227,15 @@ await spreadsheetInstance.RemoveHyperlinkAsync("Sheet3!A1:A20");
 
 The Blazor Spreadsheet provides events that are triggered during hyperlink operations, such as [HyperlinkCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatingEventArgs.html), [HyperlinkCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatedEventArgs.html), and [HyperlinkClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkClickEventArgs.html). These events enable the execution of custom actions before and after a hyperlink is created or interacted with, allowing for validation, customization, and response handling.
 
-* **HyperlinkCreating** - The `HyperlinkCreating` event is triggered prior to the creation of a hyperlink. It offers an opportunity to modify or validate the hyperlink details before the link is added to the sheet, enabling custom logic or restrictions to be applied during the hyperlink creation process.
+* **HyperlinkCreating** - The [HyperlinkCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatingEventArgs.html) event is triggered prior to the creation of a hyperlink. It offers an opportunity to modify or validate the hyperlink details before the link is added to the sheet, enabling custom logic or restrictions to be applied during the hyperlink creation process.
 
-* **HyperlinkCreated** - The `HyperlinkCreated` event is triggered after a hyperlink has been successfully added to the sheet. It provides detailed information about the newly created hyperlink, enabling further processing or logging if required.
+* **HyperlinkCreated** - The [HyperlinkCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatedEventArgs.html) event is triggered after a hyperlink has been successfully added to the sheet. It provides detailed information about the newly created hyperlink, enabling further processing or logging if required.
 
-* **HyperlinkClick** - The `HyperlinkClick` event is triggered when a hyperlink in the sheet is clicked.
+* **HyperlinkClick** - The [HyperlinkClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkClickEventArgs.html) event is triggered when a hyperlink in the sheet is clicked.
 
 ### HyperlinkCreating
 
-The `HyperlinkCreating` event is triggered before a hyperlink is added to a cell. This event provides an opportunity to inspect, modify, or cancel the hyperlink creation process based on custom logic or validation requirements.
+The [HyperlinkCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatingEventArgs.html) event is triggered before a hyperlink is added to a cell. This event provides an opportunity to inspect, modify, or cancel the hyperlink creation process based on custom logic or validation requirements.
 
 **Purpose**
 
@@ -297,7 +297,7 @@ The event uses the [HyperlinkCreatingEventArgs](https://help.syncfusion.com/cr/b
 
 ### HyperlinkCreated
 
-The `HyperlinkCreated` event is triggered after a hyperlink has been successfully added to a cell. This event provides read-only access to the details of the newly created hyperlink, allowing for post-processing actions such as logging, auditing, or UI updates.
+The [HyperlinkCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkCreatedEventArgs.html) event is triggered after a hyperlink has been successfully added to a cell. This event provides read-only access to the details of the newly created hyperlink, allowing for post-processing actions such as logging, auditing, or UI updates.
 
 **Purpose**
 
@@ -344,7 +344,7 @@ The [HyperlinkCreatedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ### HyperlinkClick
 
-The `HyperlinkClick` event is triggered when a hyperlink within the spreadsheet is clicked. This event provides contextual information about the clicked hyperlink, enabling custom responses such as logging, conditional navigation, or user notifications.
+The [HyperlinkClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkClickEventArgs.html) event is triggered when a hyperlink within the spreadsheet is clicked. This event provides contextual information about the clicked hyperlink, enabling custom responses such as logging, conditional navigation, or user notifications.
 
 **Purpose**
 
