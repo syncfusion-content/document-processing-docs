@@ -55,6 +55,7 @@ public IActionResult Save([FromForm] SaveSettings saveSettings)
     if(saveSettings && saveSettings.JSONData) {
         return Workbook.Save(saveSettings);
     }
+    return BadRequest("Missing save settings or JSON data.");
 }
 ```
 
