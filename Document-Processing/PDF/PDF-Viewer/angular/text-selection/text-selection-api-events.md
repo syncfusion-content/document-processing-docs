@@ -67,20 +67,39 @@ Triggered when the user begins selecting text.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
-{% raw %}
 import { Component, ViewChild } from '@angular/core';
 import {
   PdfViewerComponent,
   PdfViewerModule,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
   TextSelectionService,
-  type TextSelectionStartEventArgs,
+  PrintService,
+  MagnificationService,
+  AnnotationService,
+  FormDesignerService,
+  FormFieldsService,
+  PageOrganizerService,
+  TextSelectionStartEventArgs,
 } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [PdfViewerModule],
-  providers: [TextSelectionService],
+  providers: [
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    MagnificationService,
+    AnnotationService,
+    FormDesignerService,
+    FormFieldsService,
+    PageOrganizerService,
+  ],
   template: `
     <ejs-pdfviewer
       #pdfviewer
@@ -105,9 +124,10 @@ export class AppComponent {
 
   onTextSelectionStart(args: TextSelectionStartEventArgs): void {
     // custom logic
+    console.log(args);
   }
 }
-{% endraw %}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -122,20 +142,39 @@ Triggered when the selection operation completes.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
-{% raw %}
 import { Component, ViewChild } from '@angular/core';
 import {
   PdfViewerComponent,
   PdfViewerModule,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
   TextSelectionService,
-  type TextSelectionEndEventArgs,
+  PrintService,
+  MagnificationService,
+  AnnotationService,
+  FormDesignerService,
+  FormFieldsService,
+  PageOrganizerService,
+  TextSelectionEndEventArgs,
 } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [PdfViewerModule],
-  providers: [TextSelectionService],
+  providers: [
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    MagnificationService,
+    AnnotationService,
+    FormDesignerService,
+    FormFieldsService,
+    PageOrganizerService,
+  ],
   template: `
     <ejs-pdfviewer
       #pdfviewer
@@ -160,9 +199,9 @@ export class AppComponent {
 
   onTextSelectionEnd(args: TextSelectionEndEventArgs): void {
     // custom logic
+     console.log(args);
   }
 }
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
