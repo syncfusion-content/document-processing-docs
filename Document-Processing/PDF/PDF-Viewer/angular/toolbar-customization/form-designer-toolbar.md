@@ -19,13 +19,13 @@ This guide shows how to show or hide the form designer toolbar, and how to confi
 ## Prerequisites
 
 - EJ2 Angular PDF Viewer installed and added in project. See [getting started guide](../getting-started)
-- If using standalone WASM mode, provide [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#resourceurl) or a [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#serviceurl) for server mode.
+- If using standalone WASM mode, provide [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#resourceurl) or a [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#serviceurl) for server mode.
 
 ## Steps
 
 ### 1. Show or hide Form Designer toolbar at initialization
 
-Set the [`enableFormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#enableformdesigner) property on PDF Viewer instance to `true` or `false` to control initial visibility.
+Set the [`enableFormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableformdesigner) property on PDF Viewer instance to `true` or `false` to control initial visibility.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -132,14 +132,15 @@ export class AppComponent {
 
 ## Expected result
 
-- The form designer toolbar appears (or is hidden) according to [`enableFormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#enableformdesigner).
+- The form designer toolbar appears (or is hidden) according to [`enableFormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableformdesigner).
 - Only the listed tools appear.
 
 ## Troubleshooting
 
 - Toolbar or form designer tools do not appear.
-    - **Cause**: [`FormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#formdesigner) or [`Toolbar`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#toolbar) service not injected.
-    - **Solution**: ensure [`FormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#formdesigner) and [`Toolbar`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#toolbar) services are injected in the PDF Viewer component's providers array.
+
+    - **Cause**: [`FormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formdesigner) or [`Toolbar`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#toolbar) service not injected.
+    - **Solution**: ensure [`FormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formdesigner) and [`Toolbar`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#toolbar) services are injected in the PDF Viewer component's providers array.
 
 ## Related topics
 

@@ -24,7 +24,7 @@ This guide explains how to show or hide the primary toolbar, remove default item
 
 ### 1. Show or hide primary toolbar at initialization
 
-Set [`enableToolbar`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#enabletoolbar) to `false` to hide the built-in toolbar.
+Set [`enableToolbar`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enabletoolbar) to `false` to hide the built-in toolbar.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -56,7 +56,7 @@ export class AppComponent {
 
 ### 2. Show or hide primary toolbar at runtime
 
-Use the viewer's [`showToolbar()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide dynamically.
+Use the viewer's [`showToolbar()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar#showtoolbar) method to show or hide dynamically.
 
 ```ts
 // with a ViewChild reference named pdfViewerObj
@@ -65,7 +65,7 @@ this.pdfViewerObj.toolbar.showToolbar(false);
 
 ### 3. Show or hide primary toolbar items
 
-Provide the [`toolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarsettings/#toolbaritems) array with the exact set and order of items you want to show. Any item omitted is hidden.
+Provide the [`toolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarsettings#toolbaritems) array with the exact set and order of items you want to show. Any item omitted is hidden.
 
 {% highlight ts %}
 <ejs-pdfviewer
@@ -75,7 +75,7 @@ Provide the [`toolbarItems`](https://ej2.syncfusion.com/angular/documentation/ap
 
 ### 4. Add a custom primary toolbar item
 
-Add a custom item by including an object in [`toolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarsettings/#toolbaritems) and handling its action via [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#toolbarclick). The following example shows adding a simple custom button at initialization.
+Add a custom item by including an object in [`toolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarsettings#toolbaritems) and handling its action via [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#toolbarclick). The following example shows adding a simple custom button at initialization.
 
 {% highlight ts %}
 const customItems = [
