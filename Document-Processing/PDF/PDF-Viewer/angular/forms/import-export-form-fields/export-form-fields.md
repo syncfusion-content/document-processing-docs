@@ -9,193 +9,73 @@ documentation: ug
 
 # Export PDF Form Data from Angular PDF Viewer
 
-The PDF Viewer allows you to export form field data in multiple formats for easy storage or integration. Supported formats:
+This guide shows concise, actionable steps to export PDF form field data for storage or integration. It covers:
 
-- [FDF](#export-as-fdf)
-- [XFDF](#export-as-xfdf)
-- [JSON](#export-as-json)
-- [JavaScript Object](#export-as-object) (for custom persistence)
+- Exporting as [FDF](#3-export-as-fdf), [XFDF](#4-export-as-xfdf), and [JSON](#5-export-as-json) using [`exportFormFields()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#exportformfields).
+- Exporting as a [JavaScript object](#6-export-as-a-javascript-object) using [`exportFormFieldsAsObject()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#exportformfieldsasobject).
 
-## Available methods
+## Steps
 
-- [exportFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportformfields)(destination?, format) — Exports data to a file in the specified format.
-- [exportFormFieldsAsObject](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportformfieldsasobject)(format) — Exports data as a JavaScript object for custom handling.
-- [importFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format) — Import data back into the PDF.
+### 1. Configure the PDF Viewer 
 
-## How to export
+Install and import the viewer with required services.
 
-Use [exportFormFields()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportformfields) with an optional destination path and the format type.
-
-### Export as FDF
-The following example exports form field data as FDF.
-
-{% highlight ts tabtitle="Standalone" %}
-import { Component, ViewChild } from '@angular/core';
+{% highlight ts %}
 import {
-  ToolbarService,
-  MagnificationService,
-  NavigationService,
-  AnnotationService,
-  TextSelectionService,
-  TextSearchService,
-  FormFieldsService,
-  FormDesignerService,
-  PdfViewerModule,
-  PdfViewerComponent,
+    PdfViewerComponent, ToolbarService, MagnificationService, NavigationService,
+    AnnotationService, TextSelectionService, TextSearchService, FormFieldsService,
+    FormDesignerService, PdfViewerModule, FormFieldDataFormat
 } from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [PdfViewerModule],
-  template: `
-    <div class="content-wrapper">
-      <button (click)="exportFdf()">Export FDF</button>
-      <ejs-pdfviewer #pdfViewer id="pdfViewer"
-        [resourceUrl]="resourceUrl"
-        [documentPath]="document"
-        style="height: 640px; width: 100%"></ejs-pdfviewer>
-    </div>
-  `,
-  providers: [
-    ToolbarService,
-    MagnificationService,
-    NavigationService,
-    AnnotationService,
-    TextSelectionService,
-    TextSearchService,
-    FormFieldsService,
-    FormDesignerService,
-  ],
-})
-export class AppComponent {
-  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
-  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-
-  @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
-
-  exportFdf(): void {
-    // Destination is optional; if omitted the browser will prompt.
-    this.pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Fdf);
-  }
-}
+import { Component, ViewChild } from '@angular/core';
 {% endhighlight %}
 
-### Export as XFDF
-The following example exports form field data as XFDF.
+### 2. Initialize reference 
 
-{% highlight ts tabtitle="Standalone" %}
-import { Component, ViewChild } from '@angular/core';
-import {
-  ToolbarService,
-  MagnificationService,
-  NavigationService,
-  AnnotationService,
-  TextSelectionService,
-  TextSearchService,
-  FormFieldsService,
-  FormDesignerService,
-  PdfViewerModule,
-  PdfViewerComponent,
-} from '@syncfusion/ej2-angular-pdfviewer';
+Initialize the viewer with a `@ViewChild` so you can call export methods.
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [PdfViewerModule],
-  template: `
-    <div class="content-wrapper">
-      <button (click)="exportXfdf()">Export XFDF</button>
-      <ejs-pdfviewer #pdfViewer id="pdfViewer"
-        [resourceUrl]="resourceUrl"
-        [documentPath]="document"
-        style="height: 640px; width: 100%"></ejs-pdfviewer>
-    </div>
-  `,
-  providers: [
-    ToolbarService,
-    MagnificationService,
-    NavigationService,
-    AnnotationService,
-    TextSelectionService,
-    TextSearchService,
-    FormFieldsService,
-    FormDesignerService,
-  ],
-})
-export class AppComponent {
-  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
-  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+{% highlight ts %}
+@ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
+{% endhighlight %}
 
-  @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
+### 3. Export as FDF
 
-  exportXfdf(): void {
-    this.pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Xfdf);
-  }
-}
+Use [`exportFormFields(destination?, FormFieldDataFormat.Fdf)`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#exportformfields) to download an FDF file.
+
+{% highlight ts %}
+this.pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Fdf);
+{% endhighlight %}
+
+### 4. Export as XFDF
+
+Use [`FormFieldDataFormat.Xfdf`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formfielddataformat) to export XFDF.
+
+{% highlight ts %}
+this.pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Xfdf);
 {% endhighlight %}
 
 
-### Export as JSON
-The following example exports form field data as JSON.
+### 5. Export as JSON
 
-{% highlight ts tabtitle="Standalone" %}
-import { Component, ViewChild } from '@angular/core';
-import {
-  ToolbarService,
-  MagnificationService,
-  NavigationService,
-  AnnotationService,
-  TextSelectionService,
-  TextSearchService,
-  FormFieldsService,
-  FormDesignerService,
-  PdfViewerModule,
-  PdfViewerComponent,
-} from '@syncfusion/ej2-angular-pdfviewer';
+Use [`FormFieldDataFormat.Json`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formfielddataformat) to export form data as a JSON file.
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [PdfViewerModule],
-  template: `
-    <div class="content-wrapper">
-      <button (click)="exportJson()">Export JSON</button>
-      <ejs-pdfviewer #pdfViewer id="pdfViewer"
-        [resourceUrl]="resourceUrl"
-        [documentPath]="document"
-        style="height: 640px; width: 100%"></ejs-pdfviewer>
-    </div>
-  `,
-  providers: [
-    ToolbarService,
-    MagnificationService,
-    NavigationService,
-    AnnotationService,
-    TextSelectionService,
-    TextSearchService,
-    FormFieldsService,
-    FormDesignerService,
-  ],
-})
-export class AppComponent {
-  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
-  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-
-  @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
-
-  exportJson(): void {
-    this.pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Json);
-  }
-}
+{% highlight ts %}
+this.pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Json);
 {% endhighlight %}
 
-### Export as Object
+### 6. Export as a JavaScript object
 
-Use [exportFormFieldsAsObject()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportformfieldsasobject) to obtain form data as a JavaScript object for database or API integration.
+Use [`exportFormFieldsAsObject(format)`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#exportformfieldsasobject) to get data for API calls or storing in a database.
+
+{% highlight ts %}
+const data = await this.pdfviewer.exportFormFieldsAsObject();
+{% endhighlight %}
+
+## Complete example
+
+The example below provides a single page with buttons to export in all supported formats. It uses the same imports shown above and is ready to run in a typical Angular app.
 
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight ts %}
 import { Component, ViewChild } from '@angular/core';
 import {
   ToolbarService,
@@ -208,6 +88,7 @@ import {
   FormDesignerService,
   PdfViewerModule,
   PdfViewerComponent,
+  FormFieldDataFormat,
 } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
@@ -215,12 +96,17 @@ import {
   standalone: true,
   imports: [PdfViewerModule],
   template: `
-    <div class="content-wrapper">
-      <button (click)="exportObj()">Export Object</button>
-      <ejs-pdfviewer #pdfViewer id="pdfViewer"
+    <div class="control-section">
+      <div style="margin-bottom: 12px">
+        <button (click)="exportFdf()" id="exportFdf">Export FDF</button>
+        <button (click)="exportXfdf()" id="exportXfdf">Export XFDF</button>
+        <button (click)="exportJson()" id="exportJson">Export JSON</button>
+        <button (click)="exportObj()" id="exportObj">Export Object</button>
+      </div>
+      <ejs-pdfviewer #pdfViewer id="container"
         [resourceUrl]="resourceUrl"
         [documentPath]="document"
-        style="height: 640px; width: 100%"></ejs-pdfviewer>
+        style="height: 680px; width: 100%"></ejs-pdfviewer>
     </div>
   `,
   providers: [
@@ -235,33 +121,41 @@ import {
   ],
 })
 export class AppComponent {
-  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
-  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
 
   exportedData: object | undefined;
 
+  exportFdf(): void {
+    this.pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Fdf);
+  }
+
+  exportXfdf(): void {
+    this.pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Xfdf);
+  }
+
+  exportJson(): void {
+    this.pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Json);
+  }
+
   exportObj(): void {
     this.pdfviewer.exportFormFieldsAsObject(FormFieldDataFormat.Fdf).then(data => {
-      this.exportedData = data; // Persist or send to server
+      this.exportedData = data;
       console.log('Exported object:', this.exportedData);
     });
-    // Alternatives:
-    // this.pdfviewer.exportFormFieldsAsObject(FormFieldDataFormat.Xfdf).then(...)
-    // this.pdfviewer.exportFormFieldsAsObject(FormFieldDataFormat.Json).then(...)
   }
 }
 {% endhighlight %}
 {% endtabs %}
 
-## Common Use Cases
+## Troubleshooting
 
-- Save user-entered data to your server without altering the original PDF.
-- Export as JSON for REST API integration.
-- Export as FDF/XFDF for compatibility with other PDF tools.
-- Export as Object to merge with app state or store securely.
-- Automate exports after [validation](../form-validation) using [validateFormFields()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#validateformfields)
+- Ensure `FormFieldsService` and [`FormDesignerService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formdesigner) are injected when using form APIs.
+- Confirm [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) points to the matching `ej2-pdfviewer-lib` version.
+- If exports fail in restrictive browsers, check popup/download settings and CORS for hosted endpoints.
+- For server-side persistence, use [`exportFormFieldsAsObject()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#exportformfieldsasobject) and send the result to your API.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
 

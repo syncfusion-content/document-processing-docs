@@ -26,7 +26,7 @@ using (FileStream fileStream = new FileStream("Template.dotm", FileMode.Open, Fi
     using (WordDocument document = new WordDocument(fileStream, FormatType.Dotm))
     {
         //Creates file stream.
-        using (MemoryStream stream = new MemoryStream();)
+        using (MemoryStream stream = new MemoryStream())
         {
             //Saves the Word document to stream.
             document.Save(stream, FormatType.Word2013Docm);
@@ -71,9 +71,6 @@ MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 //Closes the document
 document.Close();
-stream.Position = 0;
-//Download Word document in the browser
-return File(stream, "application/msword", "Sample.docx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
