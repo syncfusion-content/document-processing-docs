@@ -68,22 +68,15 @@ Initialize or refresh the Spreadsheet when its host becomes visible (tab active,
 
 ## Resize & visibility tips
 
-Dispatch a global resize right after the container becomes visible:
+After the host becomes visible, call the Spreadsheet instance's [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method so it can recompute layout:
 
 ```js
-setTimeout(() => window.dispatchEvent(new Event('resize')), 0);
+setTimeout(() => {
+	spreadsheetRef.current.resize();
+}, 0);
 ```
 
-Use a `ResizeObserver` when the host size may change frequently — this forwards size changes into the global resize event so the Spreadsheet can re-measure:
-
-```js
-const observer = new ResizeObserver(() => {
-	window.dispatchEvent(new Event('resize'));
-});
-observer.observe(document.querySelector('#spreadsheet')!);
-```
-
-Lazy-render inside tabs/dialogs/accordions: only mount the Spreadsheet when the pane is visible. If you must mount while hidden, call a refresh after showing (for example, call `window.dispatchEvent(new Event('resize'))` or the component's refresh method) so the Spreadsheet recomputes layout.
+Lazy-render inside tabs/dialogs/accordions: only mount the Spreadsheet when the pane is visible. If you must mount while hidden, call `spreadsheetRef.current.resize()` after showing so the Spreadsheet recomputes layout.
 
 ## When to use these patterns
 

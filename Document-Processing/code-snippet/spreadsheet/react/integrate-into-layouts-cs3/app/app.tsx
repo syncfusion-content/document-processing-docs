@@ -8,8 +8,7 @@ function App(): React.ReactElement {
         const spreadsheetRef = useRef<SpreadsheetComponent | null>(null);
         const onExpanded = useCallback((args: ExpandEventArgs) => {
               setTimeout(() => {
-                  window.dispatchEvent(new Event('resize'));
-                  (spreadsheetRef.current as any).refresh();
+                  spreadsheetRef.current.resize();
               }, 0);
         }, []);
 

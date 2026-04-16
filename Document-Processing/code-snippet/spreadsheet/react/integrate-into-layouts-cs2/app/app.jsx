@@ -7,6 +7,7 @@ import { DialogComponent } from '@syncfusion/ej2-react-popups';
 function App() {
 
 const dialogRef = useRef(null);
+const spreadsheetRef = useRef(null);
 const openDialog = () => {
     dialogRef.current.show();
 };
@@ -15,7 +16,7 @@ const closeDialog = () => {
 };
 const onDialogOpen = useCallback(() => {
     setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
+        spreadsheetRef.current.resize();
     }, 0);
 }, []);
 

@@ -8,10 +8,7 @@ function App() {
         const spreadsheetRef = useRef(null);
         const onExpanded = useCallback((args) => {
               setTimeout(() => {
-                  window.dispatchEvent(new Event('resize'));
-                  if (spreadsheetRef.current && typeof spreadsheetRef.current.refresh === 'function') {
-                      spreadsheetRef.current.refresh();
-                  }
+                  spreadsheetRef.current.resize();
               }, 0);
         }, []);
 
