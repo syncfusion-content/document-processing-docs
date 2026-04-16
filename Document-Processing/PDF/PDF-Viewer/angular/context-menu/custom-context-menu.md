@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize the context menu in Angular PDF Viewer | Syncfusion
-description: Learn how to add and customize custom context menu options in the Angular PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
+title: Customize context menu in Angular PDF Viewer | Syncfusion
+description: Learn here all about how to add and customize custom context menu options in the Angular PDF Viewer using addCustomMenu, and related events.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
