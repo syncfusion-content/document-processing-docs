@@ -1,162 +1,231 @@
 ---
 layout: post
-title: Annotation Toolbar in Angular PDF Viewer control | Syncfusion
-description: Learn here all about annotation toolbar customization in Syncfusion Angular PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Customize the Annotation Toolbar in Angular PDF Viewer | Syncfusion
+description: Show or hide and customize the annotation toolbar in the Angular PDF Viewer with runnable examples.
 platform: document-processing
-control: Annotation Toolbar Customization
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation Toolbar Customization in Angular PDF Viewer
+# Customize the Annotation Toolbar in Angular PDF Viewer
 
-The annotation toolbar can be customized by showing or hiding default items and by controlling the order in which they appear.
+## Overview
 
-## Show or hide the annotation toolbar
+This guide shows how to show or hide the annotation toolbar and how to choose which tools appear and their order.
 
-Show or hide the annotation toolbar programmatically during initialization or at runtime.
+**Outcome:** A working Angular example that toggles the annotation toolbar and uses [`annotationToolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarsettings#annotationtoolbaritems) to customize the toolbar.
 
-Use the [EnableAnnotationToolbar](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pdfViewerModel/#enableannotationtoolbar) property or the [showAnnotationToolbar](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar/#showannotationtoolbar) method to toggle visibility.
+## Prerequisites
 
-The following example shows how to show or hide the annotation toolbar using the `showAnnotationToolbar` method.
+- EJ2 Angular PDF Viewer installed and added in your project. See [getting started guide](../getting-started)
+- A valid [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) or [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) for viewer assets when running locally
+
+## Steps
+
+### 1. Show or hide the annotation toolbar
+
+Use the [`showAnnotationToolbar`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar#showannotationtoolbar) method on the viewer toolbar to control visibility.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
-         MagnificationService, ThumbnailViewService, ToolbarService,
-         NavigationService, TextSearchService, TextSelectionService,
-         PrintService, FormDesignerService, FormFieldsService,
-         AnnotationService } from '@syncfusion/ej2-angular-pdfviewer';
+{% highlight ts tabtitle="Standalone" %}
+import { Component, ViewChild } from '@angular/core';
+import {
+  PdfViewerComponent, PdfViewerModule, LinkAnnotationService,
+  BookmarkViewService, MagnificationService,ThumbnailViewService,
+  ToolbarService, NavigationService, TextSearchService, 
+  TextSelectionService, PrintService, FormDesignerService,
+  FormFieldsService, AnnotationService,
+} from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
   template: `
-  <div class="content-wrapper">
-    <button id="change" (click)="onChangeVisibility()">Change Annotation Toolbar Visibility</button>
-    <ejs-pdfviewer
-      #pdfViewer
-      id="pdfViewer"
-      [documentPath]="document"
-      [resourceUrl]="resource"
-      style="height:500px;display:block">
-    </ejs-pdfviewer>
-  </div>` ,
+    <div class="content-wrapper">
+      <button (click)="hideToolbar()" style="margin-bottom: 10px;">
+        {{ show ? 'Hide' : 'Show' }} Annotation Toolbar
+      </button>
+      <ejs-pdfviewer
+        #pdfViewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        style="height:calc(100vh - 50px); display:block"
+      >
+      </ejs-pdfviewer>
+    </div>
+  `,
   providers: [
     LinkAnnotationService, BookmarkViewService, MagnificationService,
     ThumbnailViewService, ToolbarService, NavigationService,
     TextSearchService, TextSelectionService, PrintService,
-    AnnotationService, FormDesignerService, FormFieldsService
-  ]
+    AnnotationService, FormDesignerService, FormFieldsService,
+  ],
 })
 export class AppComponent {
-  @ViewChild('pdfViewer', { static: false }) pdfViewer?: PdfViewerComponent;
+  @ViewChild('pdfViewer')
+  public pdfViewer?: PdfViewerComponent;
 
-  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib';
+  public show: boolean = true;
 
-  ngOnInit(): void {}
-
-  onChangeVisibility(): void {
-    // Hide the annotation toolbar
+  hideToolbar(): void {
     if (this.pdfViewer && this.pdfViewer.toolbar) {
-      this.pdfViewer.toolbar.showAnnotationToolbar(false);
+      this.pdfViewer.toolbar.showAnnotationToolbar(this.show);
+      this.show = !this.show;
     }
   }
 }
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-<div class="content-wrapper">
-  <button id="change" (click)="onChangeVisibility()">Change Annotation Toolbar Visibility</button>
-  <ejs-pdfviewer
-    #pdfViewer
-    id="pdfViewer"
-    [documentPath]="document"
-    [resourceUrl]="resource"
-    style="height:500px;display:block">
-  </ejs-pdfviewer>
-</div>
-{% endhighlight %}
 {% endtabs %}
 
-## How to customize the annotation toolbar
+### 2. Show or hide annotation toolbar items
 
-Choose which tools appear and control their order in the annotation toolbar.
-
-Use [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) with the [`AnnotationToolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/#annotationtoolbaritems) property to choose which tools are displayed in the annotation toolbar. The property accepts a list of [`AnnotationToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationToolbarItem/) values. Only the items included in this list are shown; any item not listed is hidden. The rendered order follows the sequence of items in the list.
-
-The annotation toolbar is presented when entering annotation mode in PDF Viewer and adapts responsively based on the available width. Include the Close tool to allow users to exit the annotation toolbar when needed.
-
-The following example demonstrates how to customize the annotation toolbar by specifying a selected set of tools using `AnnotationToolbarItem`.
+Use [`annotationToolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarsettings#annotationtoolbaritems) with a list of [`AnnotationToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationtoolbaritem) values. The toolbar shows only items in this list.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService,
-         MagnificationService, ThumbnailViewService, ToolbarService,
-         NavigationService, TextSearchService, TextSelectionService,
-         PrintService, FormDesignerService, FormFieldsService,
-         AnnotationService } from '@syncfusion/ej2-angular-pdfviewer';
+{% highlight ts tabtitle="Standalone" %}
+import { Component } from '@angular/core';
+import {
+  PdfViewerComponent, PdfViewerModule, LinkAnnotationService,
+  BookmarkViewService, MagnificationService, ThumbnailViewService,
+  ToolbarService, NavigationService, TextSearchService,
+  TextSelectionService, PrintService, FormDesignerService,
+  FormFieldsService, AnnotationService,
+  AnnotationToolbarItem,
+} from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
   template: `
-  <div class="content-wrapper">
-    <ejs-pdfviewer
-      id="pdfViewer"
-      [documentPath]="document"
-      [resourceUrl]="resource"
-      [toolbarSettings]="toolbarSettings"
-      style="height:500px;display:block">
-    </ejs-pdfviewer>
-  </div>` ,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService]
+    <div class="content-wrapper">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        [toolbarSettings]="toolbarSettings"
+        style="height:calc(100vh); display:block"
+      >
+      </ejs-pdfviewer>
+    </div>
+  `,
+  providers: [
+    LinkAnnotationService, BookmarkViewService, MagnificationService,
+    ThumbnailViewService, ToolbarService, NavigationService,
+    TextSearchService, TextSelectionService, PrintService,
+    AnnotationService, FormDesignerService,
+    FormFieldsService,
+  ],
 })
 export class AppComponent {
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib';
+
+  public annotationToolbarItems: AnnotationToolbarItem[] = [
+    'HighlightTool',
+    'UnderlineTool',
+    'StrikethroughTool',
+    'ColorEditTool',
+    'OpacityEditTool',
+    'AnnotationDeleteTool',
+    'CommentPanelTool',
+  ];
 
   public toolbarSettings = {
-    annotationToolbarItems: [
-      'HighlightTool',
-      'UnderlineTool',
-      'StrikethroughTool',
-      'ColorEditTool',
-      'OpacityEditTool',
-      'AnnotationDeleteTool',
-      'StampAnnotationTool',
-      'HandWrittenSignatureTool',
-      'InkAnnotationTool',
-      'ShapeTool',
-      'CalibrateTool',
-      'StrokeColorEditTool',
-      'ThicknessEditTool',
-      'FreeTextAnnotationTool',
-      'FontFamilyAnnotationTool',
-      'FontSizeAnnotationTool',
-      'FontStylesAnnotationTool',
-      'FontAlignAnnotationTool',
-      'FontColorAnnotationTool',
-      'CommentPanelTool'
-    ]
+    annotationToolbarItems: this.annotationToolbarItems,
   };
-
-  ngOnInit(): void {}
 }
-
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-<div class="content-wrapper">
-  <ejs-pdfviewer
-    id="pdfViewer"
-    [documentPath]="document"
-    [resourceUrl]="resource"
-    [toolbarSettings]="toolbarSettings"
-    style="height:500px;display:block">
-  </ejs-pdfviewer>
-</div>
 {% endhighlight %}
 {% endtabs %}
+
+**Complete example**
+
+The following is a complete, runnable example. It wires a toggle button and a viewer with a custom annotation toolbar list.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { Component, ViewChild } from '@angular/core';
+import {
+  PdfViewerComponent, PdfViewerModule, LinkAnnotationService,
+  BookmarkViewService, MagnificationService, ThumbnailViewService,
+  ToolbarService, NavigationService, TextSearchService,
+  TextSelectionService, PrintService, FormDesignerService,
+  FormFieldsService, AnnotationService, 
+  AnnotationToolbarItem,
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
+    <div class="content-wrapper">
+      <button (click)="hideToolbar()" style="margin-bottom: 10px;">
+        {{ show ? 'Hide' : 'Show' }} Annotation Toolbar
+      </button>
+      <ejs-pdfviewer
+        #pdfViewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        [toolbarSettings]="toolbarSettings"
+        style="height:calc(100vh - 50px); display:block"
+      >
+      </ejs-pdfviewer>
+    </div>
+  `,
+  providers: [
+    LinkAnnotationService, BookmarkViewService, MagnificationService,
+    ThumbnailViewService, ToolbarService, NavigationService,
+    TextSearchService, TextSelectionService, PrintService,
+    AnnotationService, FormDesignerService,
+    FormFieldsService,
+  ],
+})
+export class AppComponent {
+  @ViewChild('pdfViewer')
+  public pdfViewer?: PdfViewerComponent;
+
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib';
+  public show: boolean = true;
+
+  public annotationToolbarItems: AnnotationToolbarItem[] = [
+    'HighlightTool',
+    'UnderlineTool',
+    'StrikethroughTool',
+    'ColorEditTool',
+    'OpacityEditTool',
+    'AnnotationDeleteTool',
+    'CommentPanelTool',
+  ];
+
+  public toolbarSettings = {
+    annotationToolbarItems: this.annotationToolbarItems,
+  };
+
+  hideToolbar(): void {
+    if (this.pdfViewer && this.pdfViewer.toolbar) {
+      this.pdfViewer.toolbar.showAnnotationToolbar(this.show);
+      this.show = !this.show;
+    }
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Troubleshooting
+
+- Annotation toolbar tools do not appear.
+    - **Cause**: The items are not valid [`AnnotationToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationtoolbaritem) strings or the viewer is not injected with [`AnnotationService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation) / [`ToolbarService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar) modules.
+    - **Solution**: Confirm services in providers includes [`ToolbarService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar) and [`AnnotationService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation) and use valid item names.
+
+## Related topics
+
+- [Customize form designer toolbar](./form-designer-toolbar)
+- [Customize primary toolbar](./primary-toolbar)

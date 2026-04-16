@@ -8,95 +8,140 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer Toolbar Customization in Angular
+# Customize the Form Designer Toolbar in Angular PDF Viewer
 
-Customize the form designer toolbar by showing or hiding default items and controlling the order in which items appear.
+## Overview
 
-## Show or hide the form designer toolbar
+This guide shows how to show or hide the form designer toolbar, and how to configure which tools appear and their order.
 
-The form designer toolbar can be shown or hidden programmatically during initialization or at runtime.
+**Outcome**: a working Angular example customizing the form designer toolbar.
 
-Use the [enableFormDesigner](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pdfViewerModel/#enableformdesigner) property to set initial visibility or call the [showFormDesignerToolbar](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar/#showformdesignertoolbar) method at runtime to toggle visibility. The links below reference the corresponding API documentation.
+## Prerequisites
 
-The following code snippet shows how to set the `enableFormDesigner` property during initialization.
+- EJ2 Angular PDF Viewer installed and added in project. See [getting started guide](../getting-started)
+- If using standalone WASM mode, provide [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#resourceurl) or a [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#serviceurl) for server mode.
+
+## Steps
+
+### 1. Show or hide Form Designer toolbar at initialization
+
+Set the [`enableFormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#enableformdesigner) property on PDF Viewer instance to `true` or `false` to control initial visibility.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
+{% highlight ts tabtitle="Standalone" %}
 import { Component } from '@angular/core';
-import { ToolbarService, MagnificationService, NavigationService, AnnotationService, LinkAnnotationService,
+import { PdfViewerModule, ToolbarService, MagnificationService, NavigationService, AnnotationService, LinkAnnotationService,
   ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, FormFieldsService, FormDesignerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'index.html',
+  standalone: true,
+  imports: [PdfViewerModule],
   providers: [
     ToolbarService, MagnificationService, NavigationService, AnnotationService, LinkAnnotationService,
     ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, FormFieldsService, FormDesignerService
-  ]
+  ],
+  template: `<ejs-pdfviewer id="PdfViewer"
+               style="height:500px;width:100%;"
+               [documentPath]="documentPath"
+               [resourceUrl]="resourceUrl"
+               [enableFormDesigner]="true">
+  </ejs-pdfviewer>`
 })
 export class AppComponent {
   public documentPath: string = 'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf';
   public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-  public enableFormDesigner: boolean = false; // show/hide using EnableFormDesigner
 }
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-<ejs-pdfviewer id="PdfViewer"
-               style="height:500px;width:100%;"
-               [documentPath]="documentPath"
-               [resourceUrl]="resourceUrl"
-               [enableFormDesigner]="enableFormDesigner">
+{% endtabs %}
+
+### 2. Show or hide form designer toolbar at runtime
+
+Use the [`enableFormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableformdesigner) API on the viewer's instance on a custom method to toggle form designer visibility at runtime.
+
+{% highlight ts %}
+this.pdfViewerObj.enableFormDesigner = true;
+{% endhighlight %}
+
+### 3. Show or hide form designer toolbar items
+
+Use [`formDesignerToolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarsettings#formdesignertoolbaritems) and supply an ordered array of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formdesignertoolbaritem) names.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+<ejs-pdfviewer
+  [toolbarSettings]="toolbarSettings">
 </ejs-pdfviewer>
 {% endhighlight %}
 {% endtabs %}
 
-## How to customize the form designer toolbar
+**Complete example:**
 
-Select which tools appear and control their order in the form designer toolbar.
-
-Configure [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) and set the [`FormDesignerToolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/#formdesignertoolbaritems) property to specify available form-design tools. This property accepts a list of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formDesignerToolbarItem/) values; included items are displayed in the listed order and omitted items are hidden. This produces a consistent, streamlined form-design experience across devices.
-
-The following example demonstrates how to customize the form designer toolbar by configuring specific tools using `FormDesignerToolbarItem`.
+## Complete example with runtime toggle
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-
-import { Component } from '@angular/core';
-import { ToolbarService, MagnificationService, NavigationService, AnnotationService, LinkAnnotationService,
-  ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, FormFieldsService, FormDesignerService } from '@syncfusion/ej2-angular-pdfviewer';
+{% highlight ts tabtitle="Standalone" %}
+import { Component, ViewChild } from '@angular/core';
+import { PdfViewerModule, ToolbarService, MagnificationService, NavigationService, AnnotationService, LinkAnnotationService,
+  ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, FormFieldsService, FormDesignerService,
+  PdfViewerComponent } from '@syncfusion/ej2-angular-pdfviewer';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'index.html',
+  standalone: true,
+  imports: [PdfViewerModule, CommonModule],
   providers: [
     ToolbarService, MagnificationService, NavigationService, AnnotationService, LinkAnnotationService,
     ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, FormFieldsService, FormDesignerService
-  ]
+  ],
+  template: `<div>
+    <button (click)="hideFormDesignerToolbar()">{{ show ? 'Hide' : 'Show' }} Form Designer Toolbar</button>
+    <ejs-pdfviewer #pdfviewer
+                   id="PdfViewer"
+                   style="height:500px;width:100%;"
+                   [documentPath]="documentPath"
+                   [resourceUrl]="resourceUrl"
+                   [toolbarSettings]="toolbarSettings"
+                   [enableFormDesigner]="show">
+    </ejs-pdfviewer>
+  </div>`
 })
 export class AppComponent {
-  public documentPath: string = 'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf';
+  @ViewChild('pdfviewer')
+  public pdfViewerObj!: PdfViewerComponent;
+  
+  public show: boolean = true;
+  public documentPath: string = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
   public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+  
   public toolbarSettings: any = {
     formDesignerToolbarItems: [
-      'TextboxTool',
-      'PasswordTool',
-      'CheckBoxTool',
-      'RadioButtonTool',
-      'DropdownTool',
-      'ListboxTool',
-      'DrawSignatureTool',
-      'DeleteTool'
+      'TextboxTool', 'RadioButtonTool', 'CheckBoxTool',
+      'DropdownTool', 'ListboxTool', 'DrawSignatureTool', 'DeleteTool'
     ]
   };
+  
+  hideFormDesignerToolbar(): void {
+    this.show = !this.show;
+    this.pdfViewerObj.enableFormDesigner = this.show;
+  }
 }
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-<ejs-pdfviewer id="PdfViewer"
-               style="height:500px;width:100%;"
-               [documentPath]="documentPath"
-               [resourceUrl]="resourceUrl"
-               [toolbarSettings]="toolbarSettings">
-</ejs-pdfviewer>
-{% endhighlight %}
 {% endtabs %}
+
+## Expected result
+
+- The form designer toolbar appears (or is hidden) according to [`enableFormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#enableformdesigner).
+- Only the listed tools appear.
+
+## Troubleshooting
+
+- Toolbar or form designer tools do not appear.
+    - **Cause**: [`FormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#formdesigner) or [`Toolbar`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#toolbar) service not injected.
+    - **Solution**: ensure [`FormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#formdesigner) and [`Toolbar`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#toolbar) services are injected in the PDF Viewer component's providers array.
+
+## Related topics
+
+- [Primary toolbar customization](./primary-toolbar)
+- [Annotation toolbar customization](./annotation-toolbar)
