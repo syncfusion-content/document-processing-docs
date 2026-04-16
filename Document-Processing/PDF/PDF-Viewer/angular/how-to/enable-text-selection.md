@@ -1,26 +1,96 @@
 ---
 layout: post
-title: Enable Text Selection in Angular PDF Viewer component | Syncfusion
-description: Learn how to enable text selection in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
-platform: document-processing
+title: Enable or disable text selection in Angular PDF Viewer | Syncfusion
+description: Learn how to enable or disable text selection in the Angular PDF Viewer using the enableTextSelection property.
 control: PDF Viewer
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable or Disable Text Selection in Syncfusion PDF Viewer
+# Enable or disable text selection in Angular PDF Viewer
 
-The Syncfusion PDF Viewer exposes the `enableTextSelection` property to control whether users can select text within the displayed PDF document. This setting can be configured at initialization and toggled programmatically at runtime.
+This guide explains how to enable or disable text selection in the Syncfusion Angular PDF Viewer using both initialization-time settings and runtime toggling.
 
-## Configure text selection on initialization
+**Outcome:** By the end of this guide, you will be able to control whether users can select text in the PDF Viewer.
 
-Set the initial text-selection behavior by configuring the `enableTextSelection` property in the component template or on the `PdfViewerComponent` instance. The example below shows a complete component (TypeScript and template) that initializes the viewer with text selection disabled.
+## Steps to toggle text selection
+
+### 1. Disable text selection at initialization
+
+Follow one of these steps to disable text selection when the viewer first loads:
+
+**Remove the text selection module**
+
+Remove the [`TextSelectionService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textselection) from the providers array to disable text selection during initialization.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
-
-import { Component, OnInit, ViewChild } from '@angular/core';
+{% highlight ts tabtitle="Standalone" %}
+import { Component, ViewChild } from '@angular/core';
 import {
+  PdfViewerComponent,
+  PdfViewerModule,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  AnnotationService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PrintService,
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
+    <ejs-pdfviewer
+      #pdfViewer
+      id="pdfViewer"
+      [resourceUrl]="resourceUrl"
+      [documentPath]="document"
+      style="height: 640px; display: block;"
+    >
+    </ejs-pdfviewer>
+  `,
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    AnnotationService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+    PrintService
+  ]
+})
+export class AppComponent {
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib';
+
+  @ViewChild('pdfViewer')
+  public pdfViewerObj!: PdfViewerComponent;
+}
+{% endhighlight %}
+{% endtabs %}
+
+**Set `enableTextSelection` to false**
+
+Use the [`enableTextSelection`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enabletextselection) property during initialization to disable or enable text selection. The following example disables the text selection during initialization.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { Component, ViewChild } from '@angular/core';
+import {
+  PdfViewerComponent,
+  PdfViewerModule,
   LinkAnnotationService,
   BookmarkViewService,
   MagnificationService,
@@ -33,24 +103,93 @@ import {
   FormFieldsService,
   FormDesignerService,
   PrintService,
-  PdfViewerComponent
 } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
+    <ejs-pdfviewer
+      #pdfViewer
+      id="pdfViewer"
+      [resourceUrl]="resourceUrl"
+      [documentPath]="document"
+      [enableTextSelection]="false"
+      style="height: 640px; display: block;"
+    >
+    </ejs-pdfviewer>
+  `,
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    AnnotationService,
+    TextSearchService,
+    TextSelectionService,
+    FormFieldsService,
+    FormDesignerService,
+    PrintService
+  ]
+})
+export class AppComponent {
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib';
+
+  @ViewChild('pdfViewer')
+  public pdfViewerObj!: PdfViewerComponent;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### 2. Toggle text selection at runtime
+
+The [`enableTextSelection`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enabletextselection) property can also be used to toggle the text selection at runtime.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { Component, ViewChild } from '@angular/core';
+import {
+  PdfViewerComponent,
+  PdfViewerModule,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  AnnotationService,
+  TextSearchService,
+  TextSelectionService,
+  FormFieldsService,
+  FormDesignerService,
+  PrintService,
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
   template: `
     <div class="content-wrapper">
       <div class="button-container" style="margin-bottom: 10px;">
-        <button (click)="enableTextSelection()" style="margin-right: 10px;">Enable Text Selection</button>
-        <button (click)="disableTextSelection()">Disable Text Selection</button>
+        <button (click)="enableTextSelection()" style="margin-right: 10px;">
+          Enable Text Selection
+        </button>
+        <button (click)="disableTextSelection()">
+          Disable Text Selection
+        </button>
       </div>
       <ejs-pdfviewer
         #pdfViewer
         id="pdfViewer"
         [resourceUrl]="resourceUrl"
         [documentPath]="document"
-        [enableTextSelection]="false"
-        style="height: 640px; display: block;">
+        style="height: calc(100vh - 50px); width: 100%; display: block;"
+      >
       </ejs-pdfviewer>
     </div>
   `,
@@ -69,56 +208,45 @@ import {
     PrintService
   ]
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib';
 
   @ViewChild('pdfViewer')
   public pdfViewerObj!: PdfViewerComponent;
 
-  ngOnInit(): void { }
-}
+  enableTextSelection(): void {
+    if (this.pdfViewerObj) {
+      this.pdfViewerObj.enableTextSelection = true;
+    }
+  }
 
+  disableTextSelection(): void {
+    if (this.pdfViewerObj) {
+      this.pdfViewerObj.enableTextSelection = false;
+    }
+  }
+}
 {% endhighlight %}
 {% endtabs %}
 
-## Toggle Text Selection Dynamically
-
-To toggle text selection at runtime:
-
-1. Get a reference to the `PdfViewerComponent` using the `@ViewChild` decorator.
-2. Implement methods on the same component class to enable and disable text selection.
-3. Bind those methods to UI controls such as buttons.
-
-```html
-<button (click)="enableTextSelection()" style="margin-right: 10px;">Enable Text Selection</button>
-<button (click)="disableTextSelection()">Disable Text Selection</button>
-```
-```typescript
-// Enable text selection
-enableTextSelection(): void {
-  if (this.pdfViewerObj) {
-    this.pdfViewerObj.enableTextSelection = true;
-  }
-}
-
-// Disable text selection
-disableTextSelection(): void {
-  if (this.pdfViewerObj) {
-    this.pdfViewerObj.enableTextSelection = false;
-  }
-}
-```
-
-## Use Cases and Considerations
-
-- **Document Protection**: Disabling text selection helps prevent unauthorized copying of sensitive content.
-- **Read-only Documents**: In scenarios where documents are meant for viewing only, disabling text selection can provide a cleaner user experience.
-- **Interactive Applications**: Toggle text selection based on user roles or document states in complex applications.
-- **Accessibility**: Consider enabling text selection for accessibility purposes in public-facing applications.
-
-## Default Behavior
-
-By default, text selection is enabled in the PDF Viewer. Set the `enableTextSelection` property to `false` explicitly if you want to disable this functionality.
+N> When text selection is disabled, the viewer automatically switches to pan mode.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)
+
+## Use cases and considerations
+
+- Document protection: Disable text selection to help prevent copying sensitive content.
+- Read-only documents: Provide a cleaner viewing experience by preventing selection.
+- Interactive apps: Toggle selection based on user roles or document states.
+
+N> Text selection is enabled by default. Set `enableTextSelection` to `false` to disable it.
+
+## Troubleshooting
+
+If text selection remains active, ensure that the [`TextSelectionService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textselection) is removed from the providers array or [`enableTextSelection`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enabletextselection) is set to `false`.
+
+## See also
+
+- [Text Selection API reference](../text-selection/reference)
+- [Angular PDF Viewer events](../events)
