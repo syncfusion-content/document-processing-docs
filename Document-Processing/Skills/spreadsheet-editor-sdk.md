@@ -155,7 +155,6 @@ Once skills are installed, the assistant can generate spreadsheet editor code. B
 
 After installation, manage Syncfusion<sup style="font-size:70%">&reg;</sup> Agent Skills using the following commands:
 
-
 ### List Skills
 
 View all installed skills in your current project or global environment:
@@ -201,10 +200,10 @@ The terminal will display a list of installed skills. Use the arrow keys to navi
 
 ◆  Select skills to remove (space to toggle)
 │  ◻ syncfusion-react-spreadsheet-editor
-│  ◻ ssyncfusion-angular-spreadsheet-editor
+│  ◻ syncfusion-angular-spreadsheet-editor
 │  ◻ syncfusion-blazor-spreadsheet-editor
 │  ◻ syncfusion-aspnetcore-spreadsheet-editor
-│  ◻ ssyncfusion-aspnetmvc-spreadsheet-editor
+│  ◻ syncfusion-aspnetmvc-spreadsheet-editor
 │  ◻ syncfusion-javascript-spreadsheet-editor
 │  ◻ syncfusion-vue-spreadsheet-editor
 │  .....
