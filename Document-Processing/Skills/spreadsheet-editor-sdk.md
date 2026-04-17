@@ -155,6 +155,7 @@ Once skills are installed, the assistant can generate spreadsheet editor code. B
 
 After installation, manage Syncfusion<sup style="font-size:70%">&reg;</sup> Agent Skills using the following commands:
 
+
 ### List Skills
 
 View all installed skills in your current project or global environment:
@@ -176,7 +177,7 @@ Uninstall a specific skill from your environment:
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
-npx skills remove <skill-name>
+npx skills remove `<skill-name>`
 
 {% endhighlight %}
 {% endtabs %}
