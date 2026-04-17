@@ -128,10 +128,10 @@ const myData = [
 
 ### Remote Data Binding
 
-Your data comes from an external source (Excel file, CSV, database). The server processes the file and sends it to the Spreadsheet:
+Your data comes from an external source (Excel file, CSV, database). The Spreadsheet receives and displays the processed data:
 
 ```
-Upload File → Server Converts → Spreadsheet Receives Data → Display
+Upload File → Spreadsheet Receives Data → Display
 ```
 
 **Use Remote when:**
