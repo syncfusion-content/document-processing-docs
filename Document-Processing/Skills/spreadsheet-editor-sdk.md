@@ -176,7 +176,7 @@ Uninstall a specific skill from your environment:
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
-npx skills remove `<skill-name>`
+npx skills remove <skill-name>
 
 {% endhighlight %}
 {% endtabs %}
