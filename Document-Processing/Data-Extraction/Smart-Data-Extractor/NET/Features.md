@@ -159,6 +159,54 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
+## Extract Data as Markdown from PDF Document
+
+To extract form fields across a PDF document using the **ExtractDataAsMarkdown** method of the **DataExtractor** class with form recognition options, refer to the following code example:
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.SmartFormRecognizer;
+using System.Text;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Extract form data as Markdown.
+    string data = extractor.ExtractDataAsMarkdown(stream);
+    //Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.SmartFormRecognizer;
+using System.Text;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Extract form data as Markdown.
+    string data = extractor.ExtractDataAsMarkdown(stream);
+    //Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+			
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Extract Data as JSON from an Image
 
 To extract structured data from an image document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code examples. 
