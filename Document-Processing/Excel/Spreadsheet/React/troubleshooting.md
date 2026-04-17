@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Troubleshooting Syncfusion React Spreadsheet | Syncfusion
-description: Step-by-step solutions for common issues in the Syncfusion React Spreadsheet component, including installation, rendering, import/export, formulas, file size, security, licensing, and data binding.
+description: Solutions for common issues in  Spreadsheet including installation, rendering, import/export, formulas, file size, security, licensing, and data binding.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -113,7 +113,7 @@ This page provides practical, step-by-step guides to resolve common issues you m
 2. Bind your data to the correct property, such as `dataSource` or the appropriate sheet’s `ranges`.
 3. Check for typos or mismatches in field/property names between your data and column definitions.
 4. Make sure the Spreadsheet component is rendered after the data is loaded (especially if data is fetched asynchronously).
-5. If using state management (like React state or Redux), verify that the data is available and updated before rendering the Spreadsheet.
+5. If using state management (like React state), verify that the data is available and updated before rendering the Spreadsheet.
 6. Call the Spreadsheet’s refresh or data binding methods after updating the data source, if necessary.
 7. Inspect the browser console for errors or warnings related to data binding.
 
@@ -121,4 +121,4 @@ This page provides practical, step-by-step guides to resolve common issues you m
 
 ## See Also 
 
-- [Syncfusion React Spreadsheet documentation](https://ej2.syncfusion.com/react/documentation/spreadsheet/).
+- [Syncfusion React Spreadsheet documentation](https://ej2.syncfusion.com/react/documentation/spreadsheet).
