@@ -201,10 +201,10 @@ The terminal will display a list of installed skills. Use the arrow keys to navi
 
 ◆  Select skills to remove (space to toggle)
 │  ◻ syncfusion-react-spreadsheet-editor
-│  ◻ syncfusion-angular-spreadsheet-editor
+│  ◻ ssyncfusion-angular-spreadsheet-editor
 │  ◻ syncfusion-blazor-spreadsheet-editor
 │  ◻ syncfusion-aspnetcore-spreadsheet-editor
-│  ◻ syncfusion-aspnetmvc-spreadsheet-editor
+│  ◻ ssyncfusion-aspnetmvc-spreadsheet-editor
 │  ◻ syncfusion-javascript-spreadsheet-editor
 │  ◻ syncfusion-vue-spreadsheet-editor
 │  .....
