@@ -11,21 +11,19 @@ documentation: ug
 
 **Syncfusion Document SDK Agent Tool** is a comprehensive AI toolkit that enables AI models and assistants to autonomously create, manipulate, convert, and extract data from documents using Syncfusion Document SDK libraries.
 
-It exposes a rich set of well-defined tools and functions that an AI agent can invoke to perform document operations across Word, Excel, PDF, PowerPoint, HTML and Markdown formats — without requiring the host application to implement document-processing logic directly.
+It exposes a rich set of well-defined tools and functions that an [AI agent](https://learn.microsoft.com/en-us/agent-framework/get-started/your-first-agent?pivots=programming-language-csharp) can invoke to perform document operations across Word, Excel, PDF, PowerPoint, HTML and Markdown formats — without requiring the host application to implement document-processing logic directly.
 
 
 ## Key Capabilities
 
-- Merge, split, compare, and secure documents across all supported formats.
-- Extract text, tables, images, form fields, and bookmarks from documents.
-- Execute mail merge operations on Word documents using structured JSON data.
-- Locate and replace text or regex patterns in Word and PowerPoint documents.
-- Accept or reject tracked changes in Word documents.
-- Encrypt, decrypt, protect, and manage permissions on all document types.
-- Convert Word, Excel, and PowerPoint documents to PDF.
-- Extract structured data (text, tables, forms, checkboxes) from PDFs and images as JSON.
-- Convert PDFs and images (TIFF, JPEG, PNG, BMP) to searchable, text-extractable format.
-- Convert URL, HTML string, SVG, MHTML to PDF.
+| Product | Supported Functionalities |
+|---|---|
+| **PDF** | PDF processing with support for signing PDFs, finding text, applying redactions, and splitting documents as needed. |
+| **Word** | Word document operations with support for bookmarks, form fields, mail merge, find and replace, document merging and splitting, document comparison, import and export operations, security features such as encryption and protection, track changes, and document conversion to formats like PDF, image, RTF, and HTML. |
+| **Excel** | Excel document operations with support for charts, conditional formatting, data validation, pivot tables, document deletion, security features such as encryption and protection, and conversions to image, HTML, and JSON formats. |
+| **PowerPoint**| PowerPoint presentation operations with support for extracting text, retrieving slide counts, find and replace operations, merging and splitting presentations, and applying security features such as encryption, decryption, and protection. |
+| **Office To PDF** | Convert Office documents seamlessly by transforming Excel, Word, and PowerPoint files into PDF format. |
+| **Smart Data Extraction** | Extract structured information efficiently by retrieving data as JSON, extracting tables as JSON, and recognizing forms with output in JSON format. |
 
 
 ## Supported Document Formats
