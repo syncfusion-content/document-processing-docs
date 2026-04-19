@@ -18,12 +18,12 @@ It exposes a rich set of well-defined tools and functions that an [AI agent](htt
 
 | Product | Supported Functionalities |
 |---|---|
-| **PDF** | PDF processing with support for signing PDFs, finding text, applying redactions, and splitting documents as needed. |
-| **Word** | Word document operations with support for bookmarks, form fields, mail merge, find and replace, document merging and splitting, document comparison, import and export operations, security features such as encryption and protection, track changes, and document conversion to formats like PDF, image, RTF, and HTML. |
-| **Excel** | Excel document operations with support for charts, conditional formatting, data validation, pivot tables, document deletion, security features such as encryption and protection, and conversions to image, HTML, and JSON formats. |
-| **PowerPoint**| PowerPoint presentation operations with support for extracting text, retrieving slide counts, find and replace operations, merging and splitting presentations, and applying security features such as encryption, decryption, and protection. |
+| **PDF** | PDF processing with support for digital signing, find text, redactions, watermarking, OCR, and security features  encryption, decryption and permission management. It also supports splitting, merging, compressing, reordering pages, converting documents, extracting text and images, and importing and exporting annotations. |
+| **Word** | Word document operations with support for bookmarks, form fields, mail merge, find and replace, document merging and splitting, document comparison, import and export operations, security features encryption and protection, track changes, and document conversion to formats like PDF, image, RTF, and HTML. |
+| **Excel** | Excel document operations with support for charts, conditional formatting, data validation, pivot tables, document deletion, security features encryption and protection, and conversions to image, HTML, and JSON formats. |
+| **PowerPoint**| PowerPoint presentation operations with support for extracting text, retrieving slid find and replace operations, merging and splitting presentations, and applying security features encryption, decryption, and protection. |
 | **Office To PDF** | Convert Office documents seamlessly by transforming Excel, Word, and PowerPoint files into PDF format. |
-| **Smart Data Extraction** | Extract structured information efficiently by retrieving data as JSON, extracting tables as JSON, and recognizing forms with output in JSON format. |
+| **Smart Data Extraction** | Extract structured information efficiently by retrieving data, converting tables into JSON, and recognizing forms with JSON-based output. |
 
 
 ## Supported Document Formats

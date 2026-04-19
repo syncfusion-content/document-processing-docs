@@ -13,7 +13,7 @@ Speed up your document automation using these example prompts for Syncfusion Doc
 
 ## Document Processing Prompts
 
-> **Note:** For Storage Mode, add the following rule to your system prompt to ensure correct execution.<br/> **Rule**: Perform each step sequentially, using the latest output as input for the next tool. Also, use the given output file name for all tools outputs.
+> **Note:** For Storage Mode, additionally, apply this rule to the prompt to improve execution quality, consistency, and overall results.<br/> **Rule**: Perform each step sequentially, using the latest output as input for the next tool. Also, use the given output file name for all tools outputs.
 
 ### PDF
 
@@ -68,7 +68,7 @@ Create and manage workbooks, worksheets, charts, conditional formatting, and dat
 
 {% promptcards %}
 {% promptcard AddDropdownListValidation, CreateChart, SetChartElement %}
-Load a sales performance dashboard workbook ‘sales_dashboard_Q1_2026.xlsx’ from {InputDir}. Add a worksheet named ‘DataValidation’ and create the List validation in the A1:B3 range and the list names "Excel", "Presentation", "Word", "PDF". Then create a clustered bar chart from the `Sales data’ sheet data range A1:D5, positioning it in rows 8–23 and columns 1–8. Set the chart title to ‘Q1 2026 Regional Sales Performance’, set the category axis title to ‘Region’, and the value axis title to ‘Revenue (USD)’. Enable the chart legend at the bottom. Export the workbook to {OutputDir}.
+Load a sales performance dashboard workbook ‘sales_dashboard_Q1_2026.xlsx’ from {InputDir}. Add a worksheet named ‘DataValidation’ and create the List validation in the A1:B3 range and the list names "Excel", "Presentation", "Word", "PDF". Then create a clustered bar chart from the ‘Sales data’ sheet data range A1:D5, positioning it in rows 8–23 and columns 1–8. Set the chart title to ‘Q1 2026 Regional Sales Performance’, set the category axis title to ‘Region’, and the value axis title to ‘Revenue (USD)’. Enable the chart legend at the bottom. Export the workbook to {OutputDir}.
 {% endpromptcard %}
 {% promptcard AddConditionalFormat %}
 Load an inventory management workbook ‘inventory_status.xlsx’ from {InputDir}. Get the "Stock_Levels" sheet and apply conditional formatting to the In_Stock column (D2:D11): highlight cells in red where the value is less than the reorder threshold (use 10 as the formula threshold for the conditional format). Export the workbook to {OutputDir}.

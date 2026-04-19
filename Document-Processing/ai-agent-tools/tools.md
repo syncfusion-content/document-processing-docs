@@ -11,8 +11,7 @@ documentation: ug
 
 Agent Tools are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager.
 
-Agent tools support two operational modes that determine how documents are handled during AI agent execution.
-In‑Memory mode enables fast, transient document processing, while Document Storage mode supports persistent, storage‑backed document handling.
+Agent tools support two operational modes that determine how documents are handled during AI agent execution. In‑Memory mode enables live, in‑memory document processing, while Document Storage mode supports persistent, storage‑backed document handling.
 The operational mode is determined by the manager used when initializing the tool.
 
 - [Document Managers](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools#document-managers) (In‑Memory Mode)
@@ -51,7 +50,7 @@ Document Managers are in-memory containers that manage document life cycles duri
 
 > **Note:** Tools that operate on a single document type (e.g., `WordDocumentAgentTools`, `PdfAnnotationAgentTools`) are initialized directly with their own manager. Only cross-format tools such as `OfficeToPdfAgentTools` require a `DocumentManagerCollection`.
 
-## Document Storage Managers
+## Document Storage Manager
 
 Document Storage Managers reads documents from and writes them back to storage (such as Azure Blob Storage, S3, or local disk) on each tool invocation; no in‑memory objects are maintained, so every tool call opens and saves document instances, making this mode well suited for web APIs and applications that require horizontal scaling, support large documents, or need state persistence across sessions.
 
@@ -75,9 +74,9 @@ Provides merge, split, and compression operations for PDF documents.
 
 | Tool | Syntax | Description |
 |---|---|---|
-| MergePdfs | MergePdfs(<br/>`List<PdfFileInput>` pdfFiles,<br/>bool mergeAccessibilityTags = false,<br/>string? outputFilePath = null) | Merges multiple PDF files into a single PDF document. Each input is an object with `FilePath` and optional `Password`. Returns the merged document ID and metadata. |
-| SplitPdf | SplitPdf(<br/>string documentIdOrFilePath,<br/>int[][]? pageRanges = null,<br/>string outputFilePattern = "Output{0}.pdf",<br/>string? outputFolderPath = null) | Splits a PDF document into individual pages or by specified page ranges. `documentIdOrFilePath` accepts an in-memory document ID or a file path. Returns the resulting document ID(s) or output folder path. |
-| CompressPdf | CompressPdf(<br/>string documentIdOrFilePath,<br/>bool compressImages = true,<br/>int imageQuality = 50,<br/>bool optimizeFont = true,<br/>bool optimizePageContents = true,<br/>bool removeMetadata = true,<br/>string? outputFilePath = null) | Compresses a PDF by optimizing images, fonts, page contents, and optionally removing metadata. Returns the compressed document ID or file path. |
+| MergePdfs | MergePdfs(<br/>`List<PdfFileInput>` pdfFiles,<br/>bool mergeAccessibilityTags = false,<br/>string? outputFilePath = null) | Merges multiple PDF files into a single PDF document. |
+| SplitPdf | SplitPdf(<br/>string documentIdOrFilePath,<br/>int[][]? pageRanges = null,<br/>string outputFilePattern = "Output{0}.pdf",<br/>string? outputFolderPath = null) | Splits a PDF document into individual pages or by specified page ranges. |
+| CompressPdf | CompressPdf(<br/>string documentIdOrFilePath,<br/>bool compressImages = true,<br/>int imageQuality = 50,<br/>bool optimizeFont = true,<br/>bool optimizePageContents = true,<br/>bool removeMetadata = true,<br/>string? outputFilePath = null) | Compresses a PDF by optimizing images, fonts, page contents, and optionally removing metadata. |
 | ReorderPdfPages | ReorderPdfPages(<br/> string documentIdOrFilePath,<br/>int[] orderIndexes,<br/>string? outputFilePath = null) | Rearranges PDF pages using a zero-based page index sequence. Get the PDF page count first and ensure the index array length matches it. |
 
 
@@ -87,7 +86,7 @@ Provides encryption, decryption, permissions management, digital signing, and re
 
 | Tool | Syntax | Description |
 |---|---|---|
-| EncryptPdf | EncryptPdf(<br/>string documentIdOrFilePath,<br/>string password,<br/>string encryptionAlgorithm = "AES",<br/>string keySize = "256",<br/>string? outputFilePath = null) | Protects a PDF document with a user password and applies the specified encryption algorithm and key size. Accepts an in-memory document ID or input file path; `outputFilePath` is used in DocumentStorage mode. |
+| EncryptPdf | EncryptPdf(<br/>string documentIdOrFilePath,<br/>string password,<br/>string encryptionAlgorithm = "AES",<br/>string keySize = "256",<br/>string? outputFilePath = null) | Protects a PDF document with a user password and applies the specified encryption algorithm and key size. |
 | DecryptPdf | DecryptPdf(<br/>string documentIdOrFilePath,<br/>string password,<br/>string? outputFilePath = null) | Removes encryption from a password-protected PDF document by clearing its security passwords and permissions. `password` is required for protected files. |
 | SetPermissions | SetPermissions(<br/>string documentIdOrFilePath,<br/>string permissions,<br/>string? password = null,<br/>string? outputFilePath = null) | Sets document permissions on a PDF such as print, copy, edit content, and more. Permissions are specified as a comma-separated string of flag names. |
 | RemovePermissions | RemovePermissions(<br/>string documentIdOrFilePath,<br/>string? password = null,<br/>string? outputFilePath = null) | Removes all document permissions from a PDF by resetting them to the default (unrestricted) state. |
@@ -125,7 +124,7 @@ Provides tools to convert PDF, HTML, and image files to PDF.
 
 | Tool | Syntax | Description |
 |---|---|---|
-| ConvertPdfToPdfA | ConvertPdfToPdfA(<br/>string documentIdOrFilePath,<br/>PdfConformanceLevel conformanceLevel,<br/>string? outputFilePath = null) | Converts an existing PDF document to a PDF/A-compliant format. Supported conformance levels: `PdfA1B`, `PdfA2B`, `PdfA3B`, `Pdf_A4`, `Pdf_A4F`, `Pdf_A4E`. Returns the document ID and applied conformance level. |
+| ConvertPdfToPdfA | ConvertPdfToPdfA(<br/>string documentIdOrFilePath,<br/>PdfConformanceLevel conformanceLevel,<br/>string? outputFilePath = null) | Converts an existing PDF document to a PDF/A-compliant format. Supported conformance levels: `PdfA1B`, `PdfA2B`, `PdfA3B`, `Pdf_A4`, `Pdf_A4F`, `Pdf_A4E`. |
 | ConvertHtmlToPdf | ConvertHtmlToPdf(<br/>string urlOrFilePath,<br/>int pageWidth,<br/>int pageHeight,<br/>string? outputFilePath = null) | Converts a webpage URL or a local HTML file to a PDF document using explicit page width and height (in pixels). |
 | ImageToPdf | ImageToPdf(<br/>string[] imageFiles,<br/>PdfImagePosition imagePosition = PdfImagePosition.FitToPage,<br/>int pageWidth = 612,<br/>int pageHeight = 792,<br/>string? outputFilePath = null) | Creates a PDF document from one or more image files with control over image placement and page size. `imagePosition` values: `Stretch`, `Center`, `FitToPage`. |
 
@@ -252,7 +251,7 @@ Provides tools to manage bookmarks and bookmark content within Word documents.
 | Tool | Syntax | Description |
 |---|---|---|
 | GetBookmarks | GetBookmarks(<br/>string documentIdOrFilePath) | Gets all bookmark names from the document. |
-| GetContent | GetContent(<br/>string documentIdOrFilePath,<br/>string bookmarkName) | Gets content from the bookmark and creates a new document. Returns the new document ID. |
+| GetContent | GetContent(<br/>string documentIdOrFilePath,<br/>string bookmarkName) | Gets content from the bookmark and creates a new document. |
 | ReplaceContent | ReplaceContent(<br/>string documentIdOrFilePath,<br/>string bookmarkName,<br/>string replaceDocumentIdOrFilePath,<br/>string? outputFilePath = null) | Replaces the existing bookmark content with content from another document. |
 | RemoveContent | RemoveContent(<br/>string documentIdOrFilePath,<br/>string bookmarkName,<br/>string? outputFilePath = null) | Removes the content of the specified bookmark. |
 | RemoveBookmark | RemoveBookmark(<br/>string documentIdOrFilePath,<br/>string bookmarkName,<br/>string? outputFilePath = null) | Removes the specified bookmark from the document. |
@@ -380,8 +379,8 @@ Provides merge and split and export as image operations for PowerPoint presentat
 
 | Tool | Syntax | Description |
 |---|---|---|
-| MergePresentations | MergePresentations(<br/>string documentIdOrFilePath ,<br/>string sourceDocumentIds,<br/>string pasteOption = "SourceFormatting",<br/>string? outputFilePath = null) | Merges multiple presentations into a destination presentation. Accepts comma-separated source document IDs or file paths. |
-| SplitPresentation | SplitPresentation(<br/>string documentIdOrFilePath,<br/>string splitRules,<br/>string pasteOption = "SourceFormatting",<br/>string? outputFilePath = null) | Splits a presentation by sections, layout type, or slide numbers (e.g., `"1,3,5"`). Returns the resulting document IDs. |
+| MergePresentations | MergePresentations(<br/>string documentIdOrFilePath ,<br/>string sourceDocumentIds,<br/>string pasteOption = "SourceFormatting",<br/>string? outputFilePath = null) | Merges multiple presentations into a destination presentation. |
+| SplitPresentation | SplitPresentation(<br/>string documentIdOrFilePath,<br/>string splitRules,<br/>string pasteOption = "SourceFormatting",<br/>string? outputFilePath = null) | Splits a presentation by sections, layout type, or slide numbers (e.g., `"1,3,5"`). |
 | ExportAsImage | ExportAsImage(<br/>string documentIdOrFilePath,<br/>string outputDirectory,<br/>string? imageFormat = "Png",<br/>int? startSlideIndex = null,<br/>int? endSlideIndex = null) | Exports presentation slides as PNG or JPEG images to the output directory. |
 | ConvertPresentation | ConvertPresentation(<br/> string documentIdOrFilePath,<br/>string filePath,<br/> string? formatType = "Pptx") | Converts the presentation to the file system in the specified format. Works only in DocumentStorage mode. documentIdOrFilePath: The input file path from storage. Supported formats: PPTX, PPTM, POTX, POTM. |
 
@@ -404,7 +403,7 @@ Provides tools for reading content and metadata from PowerPoint presentations.
 
 | Tool | Syntax | Description |
 |---|---|---|
-| GetText | GetText(<br/>string? documentIdOrFilePath) | Extracts all text content from a presentation by document ID or file path. |
+| GetText | GetText(<br/>string? documentIdOrFilePath) | Extracts all text content from a presentation. |
 | GetSlideCount | GetSlideCount(<br/>string documentIdOrFilePath) | Returns the number of slides in the presentation. |
 
 
@@ -426,7 +425,7 @@ Provides conversion of Word, Excel, and PowerPoint documents to PDF format.
 
 | Tool | Syntax | Description |
 |---|---|---|
-| ConvertToPDF | ConvertToPDF(<br/>string sourceDocumentIdOrFilePath,<br/>string sourceType,<br/>string? outputFilePath = null) | Converts a Word, Excel, or PowerPoint document to PDF. `sourceType` must be `Word`, `Excel`, or `PowerPoint`. Returns the PDF document ID. |
+| ConvertToPDF | ConvertToPDF(<br/>string sourceDocumentIdOrFilePath,<br/>string sourceType,<br/>string? outputFilePath = null) | Converts a Word, Excel, or PowerPoint document to PDF. `sourceType` must be `Word`, `Excel`, or `PowerPoint`. |
 
 
 ## Data Extraction Tools
