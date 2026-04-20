@@ -10,7 +10,7 @@ documentation: ug
 
 The context menu enhances interaction with the Syncfusion Blazor Spreadsheet component by displaying a popup with relevant operations when a right-click is performed on elements such as **cells**, **column headers**, **row headers**, or **sheet tabs**. Its visibility can be controlled via the [`EnableContextMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) property, which is set to **true** by default, enabling the context menu automatically.
 
-N> When the [`EnableContextMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) property is set to **false**, the context menu does not appear upon right-clicking any element in the component.
+N> When the `EnableContextMenu` property is set to **false**, the context menu does not appear upon right-clicking any element in the component.
 
 
 ## Context Menu Options Based on Spreadsheet Element Type
@@ -19,7 +19,7 @@ The context menu options are dynamically adjusted based on the specific element 
 
 ### Cell context menu options
 
-When a cell or range of cells is right-clicked, the context menu displays with the following options:
+When a cell or range of cells is right-clicked, the context menu displays the following options:
 
 | Options | Action |
 | -- | -- |
@@ -58,7 +58,7 @@ When a sheet is protected, **Insert Rows Above** and **Insert Rows Below** optio
 
 ### Column header context menu options
 
-When you right-click a single column header or  a range of selected column headers, the `context menu` shows options for column-level operations.
+When right-clicking a single column header or a range of selected column headers, the context menu displays options specific to column-level operations.
 
 | Options | Action |
 | -- | -- |
@@ -76,7 +76,7 @@ When a sheet is protected, **Insert column to the left** and **Insert column to 
 
 ### Sheet tab context menu options
 
-When right-clicking on a sheet tab located at the bottom of the Spreadsheet, the `context menu` displays options specific to sheet-level operations.
+When right-clicking on a sheet tab located at the bottom of the Spreadsheet, the context menu displays options specific to sheet-level operations.
 
 | Options | Action |
 | -- | -- |

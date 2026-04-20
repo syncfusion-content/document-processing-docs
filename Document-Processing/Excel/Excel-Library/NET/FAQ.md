@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Frequently Asked Questions Section
+# Frequently Asked Questions Section  
 
 The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed below.
 
