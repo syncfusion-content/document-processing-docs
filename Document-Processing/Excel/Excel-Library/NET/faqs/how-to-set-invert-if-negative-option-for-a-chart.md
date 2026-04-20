@@ -76,7 +76,7 @@ End Using
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1007137-ChartInvert/FAQ/Chart/.NET/ChartInvertIfNegative">this GitHub page</a>.
 
-# How to set invert if negative option for a chart in XLS (binary) file format?
+## How to set invert if negative option for a chart in XLS (binary) file format?
 
 In case of binary file format (XLS), kindly use the following code snippet.
 
