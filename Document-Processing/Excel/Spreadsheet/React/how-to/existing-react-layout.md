@@ -62,13 +62,13 @@ For accordions or collapsible containers, you can render the Spreadsheet inside 
 
 ## Why visibility and height matter
 
-The Spreadsheet measures its host container to calculate column widths, row heights and layout. If the host element has no height (collapsed, `display:none`, or not yet mounted) measurements will be zero and the Spreadsheet may render incorrectly, be clipped, or not display at all.
+The Spreadsheet measures its parent container to calculate column widths, row heights and layout. If the parent container has no height (collapsed, `display:none`, or not yet mounted) measurements will be zero and the Spreadsheet may render incorrectly, be clipped, or not display at all.
 
-Initialize or refresh the Spreadsheet when its host becomes visible (tab active, modal opened, accordion expanded) so internal layout code can compute sizes.
+Initialize or refresh the Spreadsheet when its parent container becomes visible (tab active, modal opened, accordion expanded) so internal layout code can compute sizes.
 
 ## Resize & visibility tips
 
-After the parent element becomes visible, call the Spreadsheet instance's [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method so it can recompute layout:
+After the parent container becomes visible, call the Spreadsheet instance's [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method so it can recompute layout:
 
 ```js
 setTimeout(() => {
@@ -78,7 +78,7 @@ setTimeout(() => {
 
 ## Note
 
-Mount the Spreadsheet component only when the corresponding pane becomes visible. If the Spreadsheet must be mounted while hidden, call its [resize] (https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method after the pane is shown so that the layout is recalculated correctly.
+Mount the Spreadsheet component only when the corresponding pane becomes visible. If the Spreadsheet must be mounted while hidden, call its [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method after the pane is shown so that the layout is recalculated correctly.
 
 ## When to use these patterns
 
