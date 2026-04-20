@@ -147,7 +147,7 @@ Once skills are installed, the assistant can generate docx editor code. Below ar
 - "Create a DOCX Editor and enable track changes"
 - "How to protect documents with comments only restriction in ASP.NET Core DOCX editor?"
 - "How to enable spell checking in DOCX editor?"
-- "How to search for text and replace it in Blazor DOCX editor?"
+- "How to search for text and replace it in React DOCX editor?"
 
 ## Skills CLI Commands
 
