@@ -295,7 +295,7 @@ Add Syncfusion EJ2 Toolbar components to perform magnification actions in the PD
 
 >The icons are embedded in the font file used in the previous code snippet.
 
-**Step 7:** Add the following code snippet in `app.ts` file for performing a user interaction in PDF Viewer in code behind.
+**Step 8: Add scripts for PDF Viewer user interaction.**
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

@@ -78,18 +78,21 @@ documentation: UG
     <th style="font-size:14px" width="100px">Solution</th>
     <td>
       In your MVC project file (.csproj), add the following build target to copy the native DLL from the NuGet package folder to the bin folder:
-      <br/><br/>
-      <pre>
-<Target Name="CopyOnnxRuntimeDll" AfterTargets="Build">
-  <Copy 
-    SourceFiles="$(SolutionDir)packages\Microsoft.ML.ONNXRuntime.1.18.0\runtimes\win-x64\native\ONNXRuntime.dll" 
-    DestinationFolder="$(OutDir)" 
-    SkipUnchangedFiles="true" />
-</Target>
-      </pre>
       <br/>
-    </td>
-  </tr>
+{% tabs %}
+{% highlight C# %}
+ 
+    <Target Name="CopyonnxRuntimeDll" AfterTargets="Build">
+      <Copy
+          SourceFiles="$(SolutionDir)packages\Microsoft.ML.ONNXRuntime.1.18.0\runtimes\win-x64\native\ONNXRuntime.dll"
+          DestinationFolder="$(OutDir)"
+          SkipUnchangedFiles="true" />
+    </Target>
+ 
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
 </table>
 
 
