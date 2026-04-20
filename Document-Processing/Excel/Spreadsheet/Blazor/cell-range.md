@@ -18,7 +18,7 @@ To know more about cell formatting, refer [here](./formatting#text-and-cell-form
 
 Autofill is used to fill cells with data that follows a pattern or is based on data in other cells. It helps avoid entering repetitive data manually. The [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofill) property can be used to enable or disable this feature.
 
-* The default value of the [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofill) property is **true**.
+* The default value of the `AllowAutofill` property is **true**.
 
 Autofill can be performed in one of the following ways:
 
@@ -54,7 +54,7 @@ The following illustration demonstrates the use of autofill in the Spreadsheet c
 
 ![Autofill Illustration](images/autofill.gif)
 
-The [AutofillAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutofillAsync_System_String_System_String_) method accepts string parameters in A1 notation for `fillRange` and `dataRange`. The available parameters are:
+The `AutofillAsync()` method accepts string parameters in A1 notation for `fillRange` and `dataRange`. The available parameters are:
 
 | Parameter | Type | Description |
 | -- | -- | -- |
@@ -100,7 +100,7 @@ The Blazor Spreadsheet provides events that are triggered during autofill operat
 
 ### AutofillActionBegin
 
-The [AutofillActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionBeginEventArgs.html) event is triggered before an autofill operation is performed. This event provides an opportunity to validate the autofill operation and apply restrictions based on custom logic, such as preventing the operation under specific conditions.
+The `AutofillActionBegin` event is triggered before an autofill operation is performed. This event provides an opportunity to validate the autofill operation and apply restrictions based on custom logic, such as preventing the operation under specific conditions.
 
 **Purpose**
 
@@ -156,11 +156,11 @@ The event uses the [AutofillActionBeginEventArgs](https://help.syncfusion.com/cr
 
 ### AutofillActionEnd
 
-The [AutofillActionEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.AutofillActionEndEventArgs.html) event is triggered after an autofill operation has been successfully completed. This event provides detailed information about the completed autofill action, enabling further processing or logging if required.
+The `AutofillActionEnd` event is triggered after an autofill operation has been successfully completed. This event provides detailed information about the completed autofill action, enabling further processing or logging if required.
 
 **Purpose**
 
-This event is useful for scenarios where `post-autofill` actions are needed, such as logging the autofill operation, updating related data, or triggering additional UI updates.
+This event is useful for scenarios where post-autofill actions are needed, such as logging the autofill operation, updating related data, or triggering additional UI updates.
 
 **Event Arguments**
 

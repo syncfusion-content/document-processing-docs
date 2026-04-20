@@ -10,9 +10,6 @@ documentation: UG
 
 The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure App Service on Windows**.
 
-Check the following video to learn how to create a PDF document and publish it as an Azure App Service on Windows using the .NET PDF Library.
-{% youtube "https://www.youtube.com/watch?v=PU8pVAHV_88" %}
-
 ## Steps to create PDF document in Azure App Service on Windows
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
@@ -181,4 +178,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
 
-An online sample link to [create PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HelloWorld#/material3) in ASP.NET Core. 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core. 

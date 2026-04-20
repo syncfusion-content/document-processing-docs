@@ -9,7 +9,7 @@ documentation: ug
 
 # Searching in React Spreadsheet component
 
-Find and Replace helps you to search for target text and replace the founded text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowfindandreplace) property to enable or disable Find and Replace functionality.
+Find and Replace helps you to search for target text and replace the founded text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowfindandreplace) property to enable or disable Find and Replace functionality.
 
 > * The default value for `allowFindAndReplace` property is `true`.
 
@@ -30,7 +30,7 @@ Find can be done by any of the following ways:
 > * `Match case`: To find the matched value with case sensitive.
 > * `Match exact cell contents`: To find the exact matched cell value with entire match cases.
 
-* Using [`find()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#find) method to perform find operation.
+* Using [`find()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#find) method to perform find operation.
 
 ## Replace
 
@@ -43,8 +43,8 @@ Replace can be done by any of the following ways:
 * Using `Ctrl + H` key to open the Find and Replace dialog.
 * Using Replace button to change the found value in sheet or workbook.
 * Using ReplaceAll button to change all the found value's in sheet or workbook.
-* Using [`replace()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#replace) method to perform replace operation by passing the argument `args.replaceby` as `replace`.
-* Using [`replace()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#replace) method to perform replace all operation by passing the argument `args.replaceby` as `replaceall`.
+* Using [`replace()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#replace) method to perform replace operation by passing the argument `args.replaceby` as `replace`.
+* Using [`replace()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#replace) method to perform replace all operation by passing the argument `args.replaceby` as `replaceall`.
 
 ## Go to
 
@@ -53,7 +53,7 @@ Go to is used to navigate to a specific cell address in the sheet or workbook.
 **User Interface**:
 
 * Using `Ctrl + G` key to open the Go To dialog.
-* Using [`goTo()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#goto) method to perform Go To operation.
+* Using [`goTo()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#goto) method to perform Go To operation.
 
 In the following sample, searching can be done by following ways:
 
@@ -82,8 +82,6 @@ In the following sample, searching can be done by following ways:
 ## Limitations
 
 * Undo/redo for Replace All is not supported in this feature.
-* Replace All functionality is not restricted to selected range of cells.
-* Find and Replace in Formulas, Notes not supported.
 
 ## Note
 

@@ -20,8 +20,7 @@ The following assemblies need to be referenced in your application based on the 
     <tr>
       <td>
         {{'WPF'| markdownify }},
-        {{'Windows Forms'| markdownify }} and {{'ASP.NET MVC'| 
-		markdownify }}     
+        {{'Windows Forms'| markdownify }} and {{'ASP.NET MVC'| markdownify }}      
       </td>
       <td>
         Syncfusion.Compression.Base<br/>
@@ -29,7 +28,6 @@ The following assemblies need to be referenced in your application based on the 
         Syncfusion.OCRProcessor.Base<br/>
         Syncfusion.Pdf.Base<br/>
         Syncfusion.PdfToImageConverter.Base<br/>
-        Syncfusion.Markdown<br/>
       </td>
     </tr>
     <tr>
@@ -44,7 +42,6 @@ The following assemblies need to be referenced in your application based on the 
         Syncfusion.Pdf.Imaging.Portable<br/>
         Syncfusion.Pdf.Portable<br/>
         Syncfusion.PdfToImageConverter.Portable<br/>
-        Syncfusion.Markdown<br/>
       </td>
     </tr>
     <tr>
@@ -58,7 +55,6 @@ The following assemblies need to be referenced in your application based on the 
         Syncfusion.Pdf.Imaging.NET<br/>
         Syncfusion.Pdf.NET<br/>
         Syncfusion.PdfToImageConverter.NET<br/>
-        Syncfusion.Markdown<br/>
       </td>
     </tr>
   </tbody>
