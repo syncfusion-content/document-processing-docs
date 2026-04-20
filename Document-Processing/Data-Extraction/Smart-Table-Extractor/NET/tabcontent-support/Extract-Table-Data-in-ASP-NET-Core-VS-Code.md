@@ -45,7 +45,7 @@ Step 6: A default action method named Index will be present in HomeController.cs
 
 {% endhighlight %}
 
-Step 7: Add a new action method named ``ExportToJson`` in HomeController.cs and include the below code example to extract data as JSON using the DataExtractor (help.syncfusion.com in Bing) class. Then use the Extract (help.syncfusion.com in Bing) method of the DataExtractor object to process the input and export the results in JSON format.
+Step 7: Add a new action method named ``ExportToJson`` in HomeController.cs and include the below code example to extract data as JSON using the DataExtractor class. Then use the Extract method (ExtractTableAsJson) of the DataExtractor object to process the input and export the results in JSON format.
 
 {% highlight c# tabtitle="C#" %}
 
