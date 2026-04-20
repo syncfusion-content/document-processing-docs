@@ -8,7 +8,7 @@ documentation: UG
 
 # Pivot Table Layout in Excel
 
-The [PivotTableRowLayout](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.PivotTableRowLayout.html) enumeration can be used to set the pivot table row layout to Compact, Tabular, or Outline.
+The [PivotTableRowLayout](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.PivotTableRowLayout.html) enumeration can be used to set the pivot table row layout to Compact, Tabular, or Outline.
 
 ## Compact Layout
 
@@ -225,7 +225,7 @@ By executing the program, you will get the Excel file as below
 
 ## Classic Layout
 
-For classic layout, you can set the [ShowGridDropZone](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.PivotTables.PivotTableOptions.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotTableOptions_ShowGridDropZone) property to true as below.
+For classic layout, you can set the [ShowGridDropZone](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotTableOptions.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotTableOptions_ShowGridDropZone) property to true as below.
 
 The following code example illustrates how to apply a classic layout to a pivot table.
 
