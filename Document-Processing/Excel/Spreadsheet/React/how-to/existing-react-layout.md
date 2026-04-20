@@ -76,9 +76,7 @@ setTimeout(() => {
 }, 0);
 ```
 
-## Note
-
-Mount the Spreadsheet component only when the corresponding pane becomes visible. If the Spreadsheet must be mounted while hidden, call its [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method after the pane is shown so that the layout is recalculated correctly.
+> **Note**: Mount the Spreadsheet component only when the corresponding pane becomes visible. If the Spreadsheet must be mounted while hidden, call its [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method after the pane is shown so that the layout is recalculated correctly.
 
 ## When to use these patterns
 
