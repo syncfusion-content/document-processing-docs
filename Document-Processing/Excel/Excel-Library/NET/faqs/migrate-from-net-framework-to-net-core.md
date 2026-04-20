@@ -70,7 +70,7 @@ Not needed. Same functionalities are moved to {{'[Syncfusion.XlsIORenderer](http
 </tr>
 <tr>
 <td>
-{{'[Syncfusion.ExcelToPdfConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelToPdfConverter.html)'| markdownify}}
+{{'[Syncfusion.ExcelToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.html)'| markdownify}}
 </td>
 <td>
 {{'[Syncfusion.XlsIORenderer](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.html)'| markdownify}}
@@ -78,7 +78,7 @@ Not needed. Same functionalities are moved to {{'[Syncfusion.XlsIORenderer](http
 </tr>
 <tr>
 <td>
-{{'[Syncfusion.ExcelChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelChartToImageConverter.html)'| markdownify}}
+{{'[Syncfusion.ExcelChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelChartToImageConverter.html)'| markdownify}}
 </td>
 <td>
 {{'[Syncfusion.XlsIORenderer](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.html)'| markdownify}}
@@ -98,7 +98,7 @@ Not needed. Same functionalities are moved to {{'[Syncfusion.XlsIORenderer](http
 </tr>
 <tr>
 <td>
-{{'[ExcelToPDFConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html)'| markdownify}}
+{{'[ExcelToPDFConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html)'| markdownify}}
 </td>
 <td>
 {{'[XlsIORenderer](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.html)'| markdownify}}
@@ -106,7 +106,7 @@ Not needed. Same functionalities are moved to {{'[Syncfusion.XlsIORenderer](http
 </tr>
 <tr>
 <td>
-{{'[ExcelChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelChartToImageConverter.ChartToImageConverter.html)'| markdownify}}
+{{'[ExcelChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelChartToImageConverter.ChartToImageConverter.html)'| markdownify}}
 </td>
 <td>
 {{'[XlsIORenderer ](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.html)'| markdownify}}
@@ -114,7 +114,7 @@ Not needed. Same functionalities are moved to {{'[Syncfusion.XlsIORenderer](http
 </tr>
 <tr>
 <td>
-{{'[ExcelToPdfConverterSettings](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html)'| markdownify}}
+{{'[ExcelToPdfConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverterSettings.html)'| markdownify}}
 </td>
 <td>
 {{'[XlsIORendererSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.XlsIORendererSettings.html)'| markdownify}}
@@ -134,7 +134,7 @@ Not needed. Same functionalities are moved to {{'[Syncfusion.XlsIORenderer](http
 </tr>
 <tr>
 <td>
-{{'[IApplication ChartToImageConverter](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_ChartToImageConverter)'| markdownify}}
+{{'[IApplication ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_ChartToImageConverter)'| markdownify}}
 </td>
 <td>
 {{'[IApplication XlsIORenderer](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.XlsIORenderer.html)'| markdownify}} 
@@ -154,7 +154,7 @@ Not needed. Same functionalities are moved to {{'[Syncfusion.XlsIORenderer](http
 </tr>
 <tr>
 <td>
-{{'[IWorkbooks Open(string filename)](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_String_)'| markdownify}}
+{{'[IWorkbooks Open(string filename)](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_String_)'| markdownify}}
 </td>
 <td>
 The document can be opened as a file stream from the file system using IWorkbooks Open(Stream stream)                   
@@ -162,7 +162,7 @@ The document can be opened as a file stream from the file system using IWorkbook
 </tr>
 <tr>
 <td>
-{{'[IWorkbook SaveAs(string filename, HttpResponse Response, ExcelDownloadType type)](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAs_System_String_Syncfusion_XlsIO_ExcelSaveType_System_Web_HttpResponse_)'| markdownify}}
+{{'[IWorkbook SaveAs(string filename, HttpResponse Response, ExcelDownloadType type)](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAs_System_String_Syncfusion_XlsIO_ExcelSaveType_System_Web_HttpResponse_)'| markdownify}}
 </td>
 <td>
 The document can be saved as a file stream to the file system using IWorkbook SaveAs(Stream stream) 
@@ -170,7 +170,7 @@ The document can be saved as a file stream to the file system using IWorkbook Sa
 </tr>
 <tr>
 <td>
-{{'[IWorkbook SaveAsJson(string filename)](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAsJson_System_String_)'| markdownify}}
+{{'[IWorkbook SaveAsJson(string filename)](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAsJson_System_String_)'| markdownify}}
 </td>
 <td>
 The document can be saved as a file stream to the file system using IWorkbook SaveAsJson(Stream stream) 
@@ -178,7 +178,7 @@ The document can be saved as a file stream to the file system using IWorkbook Sa
 </tr>
 <tr>
 <td>
-{{'[IWorksheet ImportHtmlTable(string filename, int row, int column)](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportHtmlTable_System_String_System_Int32_System_Int32_)'| markdownify}}
+{{'[IWorksheet ImportHtmlTable(string filename, int row, int column)](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportHtmlTable_System_String_System_Int32_System_Int32_)'| markdownify}}
 </td>
 <td>
 The HTML table can be imported as a file stream from the file system using IWorksheet ImportHtmlTable(Stream stream, int row, int column) 
@@ -186,7 +186,7 @@ The HTML table can be imported as a file stream from the file system using IWork
 </tr>
 <tr>
 <td>
-{{'[IPictures Add(int row, int column, string filename)](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPictures.html#Syncfusion_XlsIO_IPictures_AddPicture_System_Int32_System_Int32_System_Int32_System_Int32_System_String_)'| markdownify}}
+{{'[IPictures Add(int row, int column, string filename)](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPictures.html#Syncfusion_XlsIO_IPictures_AddPicture_System_Int32_System_Int32_System_Int32_System_Int32_System_String_)'| markdownify}}
 </td>
 <td>
 A picture can be added as a stream from the file system using IPictures Add(int row, int column, Stream stream) 
@@ -194,7 +194,7 @@ A picture can be added as a stream from the file system using IPictures Add(int 
 </tr>
 <tr>
 <td>
-{{'[IListObject Refresh()](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IListObject.html#Syncfusion_XlsIO_IListObject_Refresh)'| markdownify}}
+{{'[IListObject Refresh()](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObject.html#Syncfusion_XlsIO_IListObject_Refresh)'| markdownify}}
 </td>
 <td>
 Not supported due to .NET Framework limitation. 
@@ -202,7 +202,7 @@ Not supported due to .NET Framework limitation.
 </tr>
 <tr>
 <td>
-{{'[ExcelToPdfConverter ExcelToPdfConverter(IWorkbook workbook)](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter__ctor_Syncfusion_XlsIO_IWorkbook_)'| markdownify}}
+{{'[ExcelToPdfConverter ExcelToPdfConverter(IWorkbook workbook)](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter__ctor_Syncfusion_XlsIO_IWorkbook_)'| markdownify}}
 </td>
 <td>
 {{'[XlsIORenderer XlsIORenderer()](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.XlsIORenderer.html#Syncfusion_XlsIORenderer_XlsIORenderer__ctor)'| markdownify}}
@@ -210,7 +210,7 @@ Not supported due to .NET Framework limitation.
 </tr>
 <tr>
 <td>
-{{'[ExcelToPdfConverter Convert()](https://help.syncfusion.com/cr/file-formats/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter_Convert)'| markdownify}}
+{{'[ExcelToPdfConverter Convert()](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter_Convert)'| markdownify}}
 </td>
 <td>
 {{'[XlsIORenderer ConvertToPDF(IWorkbook workbook)](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.XlsIORenderer.html#Syncfusion_XlsIORenderer_XlsIORenderer_ConvertToPDF_Syncfusion_XlsIO_IWorkbook_)'| markdownify}}
