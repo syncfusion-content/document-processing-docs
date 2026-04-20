@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load a Password-Protected PDF
+# Load a Password-Protected PDF in ASP.NET CORE
 
 This article explains how to open password-protected PDF files in the Syncfusion ASP.NET Core PDF Viewer. The viewer supports both user‑interactive loading (Open File dialog) and programmatic loading using APIs.
 
@@ -18,11 +18,11 @@ When the user selects a password-protected PDF using the built‑in **Open File*
 
 - The viewer detects that the document is encrypted
 
-![Open PDF Document](../images/open-pdf.png)
+![Open PDF Document](../../react/images/open-pdf.png)
 
 - A **password input popup** is automatically displayed
 
-![Password Protected Pop-up](../images/password-popup.png)
+![Password Protected Pop-up](../../react/images/password-popup.png)
 
 - The user enters the password
 
@@ -38,7 +38,7 @@ If you load a password-protected PDF from a URL or through custom logic, the vie
 
 ### 2.1 Load the Document Using `viewer.load(url, password)`
 
-You can directly pass the password in the [`load`](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/index-default#load) method:
+You can directly pass the password in the [`load`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#load) method:
 
 ```js
 viewer.load(
@@ -55,7 +55,7 @@ This is useful when the password is known beforehand.
 
 ### 2.2 Loading a Password-Protected Document's URL Using `documentPath`
 
-If the [`documentPath`](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/index-default#documentpath) points to a password-protected PDF:
+If the [`documentPath`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_DocumentPath) points to a password-protected PDF:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -77,6 +77,6 @@ The viewer will:
 - Allow the user to enter the correct password
 - Then load the PDF
 
-![Password Protected Pop-up](../images/password-popup.png)
+![Password Protected Pop-up](../../react/images/password-popup.png)
 
 N> No password should be passed inside `documentPath`.
