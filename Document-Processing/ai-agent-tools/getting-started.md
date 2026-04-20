@@ -24,14 +24,14 @@ This guide helps you choose the right configuration for your application.
 
 The library supports two modes for managing document state during agent tool invocations. Both modes expose the same AI tools—the difference is in how and where documents are stored between tool calls.
 
-### InMemory Mode
+### In-Memory Mode
 
 **How it works:** Documents are held as live objects in an in-memory dictionary. Each tool accesses and modifies the object directly rather than opening and saving files on each call. Objects are automatically cleaned up after 10 minutes (default) of inactivity. This expiration time is customizable.
 
 **When to use:**  
-Choose InMemory Mode for single-instance applications (desktop apps, console tools, or non-scalable environments) where in-memory state won't be lost. It provides the simplest and fastest experience.
+Choose in-memory Mode for single-instance applications (desktop apps, console tools, or non-scalable environments) where in-memory state won't be lost. It provides the simplest and fastest experience.
 
-➡️ **[InMemory Mode](./GETTING-STARTED-INMEMORY.md)**
+➡️ **[In-Memory Mode](./GETTING-STARTED-IN-MEMORY.md)**
 
 ---
 
@@ -67,8 +67,8 @@ For more details, see the [Microsoft Agent Framework Providers documentation](ht
 
 ## See Also
 
-- [InMemory Mode Guide](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started/in-memory-mode)
-- [Storage Mode Guide](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started/storage-mode)
+- In-Memory Mode
+- Storage Mode
 - [Syncfusion AI Agent Tools Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
 - [Available Tools Reference](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
 - [Customization Guide](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)

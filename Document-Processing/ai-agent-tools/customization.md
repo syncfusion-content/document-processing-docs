@@ -195,7 +195,7 @@ namespace Syncfusion.AI.AgentTools.Word
 
 Once your custom tool class is created, register it alongside the built-in tools in your host application.
 
-Documents can be handled using either In‑Memory Mode or Storage Mode during AI agent execution. In In‑Memory Mode, documents are loaded into memory and shared across tool calls. In Storage Mode, documents are loaded per tool call from external storage and must be explicitly saved to persist changes.
+Documents can be handled using either In‑memory Mode or Storage Mode during AI agent execution. In In‑memory Mode, documents are loaded into memory and shared across tool calls. In Storage Mode, documents are loaded per tool call from external storage and must be explicitly saved to persist changes.
 
 **Step 1: Registering a Custom Tool with the Syncfusion Agent Tools**
 

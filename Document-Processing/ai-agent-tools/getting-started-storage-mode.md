@@ -11,19 +11,19 @@ documentation: ug
 
 This guide covers each integration step—from registering a Syncfusion license and implementing document storage to converting tools into Microsoft.Extensions.AI functions and building a fully interactive agent. The example uses the Microsoft Agents Framework with OpenAI, but the same steps apply to any provider that implements `IChatClient`.
 
-In this guide, we demonstrate how to configure **Azure Blob Storage** as the document storage provider, but the same pattern works with any storage backend (AWS S3, local disk, etc.) by implementing the `IDocumentStorage` interface.
+In this guide, we demonstrate how to configure **Azure Blob Storage** as the document storage provider, but the same pattern works with any storage back end (AWS S3, local disk, etc.) by implementing the `IDocumentStorage` interface.
 
 ## Storage Mode Overview
 
-Documents are read from and written to storage (Azure Blob, S3, local disk, etc.) on each tool invocation. No in-memory objects are maintained between tool calls—each operation opens the document from storage, processes it, and saves it back. This mode is ideal for distributed systems, serverless architectures, and scenarios where document persistence is required.
+Documents are read from and written to storage (Azure Blob, S3, local disk, etc.) on each tool invocation. No in-memory objects are maintained between tool calls—each operation opens the document from storage, processes it, and saves it back. This mode is ideal for distributed systems, server less architectures, and scenarios where document persistence is required.
 
 ## Prerequisites
 
 | Requirement | Details |
 |---|---|
 | **.NET SDK** | .NET 8.0 or .NET 10.0 |
-| **OpenAI API Key** | Obtain from [platform.openai.com](https://platform.openai.com/login) |
-| **Syncfusion License** | Community or commercial license—see [syncfusion.com/products/community-license](https://www.syncfusion.com/products/community-license) |
+| **OpenAI API Key** | Obtain from platform.openai.com |
+| **Syncfusion License** | Community or commercial license—see [syncfusion.com/products/community-license](https://www.syncfusion.com/products/communitylicense) |
 | **Azure Storage Account** | Create from [Azure Portal](https://portal.azure.com) with a blob container |
 | **NuGet Packages** | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI), and [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs) |
 
@@ -118,7 +118,7 @@ Organize your blob container with the following prefixes:
 
 ## Step 4: Create DocumentStorageManager
 
-Unlike InMemory mode which uses separate managers per document type, Storage mode uses a single `DocumentStorageManager` that handles all document types:
+Unlike in-memory mode which uses separate managers per document type, Storage mode uses a single `DocumentStorageManager` that handles all document types:
 
 ```csharp
 using Syncfusion.AI.AgentTools.DocumentManagers;
@@ -172,13 +172,13 @@ allTools.AddRange(new OfficeToPdfAgentTools(storageManager).GetTools());
 allTools.AddRange(new DataExtractionAgentTools().GetTools());
 ```
 
-> **Important:** The following tool classes are NOT supported in Storage mode as they are only used to create,load, and export the document instance from InMemory document managers:
+> **Important:** The following tool classes are NOT supported in Storage mode as they are only used to create,load, and export the document instance from in-memory document managers:
 > - `WordDocumentAgentTools`
 > - `ExcelWorkbookAgentTools`
 > - `PdfDocumentAgentTools`
 > - `PresentationDocumentAgentTools`
 >
-> All other tool classes work identically in both InMemory and Storage modes.
+> All other tool classes work identically in both in-memory and Storage modes.
 
 > **Note:** All tool classes use the same `storageManager` instance, ensuring documents are read from and written to the same storage backend.
 
@@ -304,7 +304,7 @@ Examples/ASP.NET-Core/AgentChatWeb/
 
 ## See Also
 
-- [Getting Started — InMemory Mode](GETTING-STARTED-INMEMORY.md)
+- [Getting Started — In-Memory Mode](GETTING-STARTED-IN-MEMORY.md)
 - [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
 - [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
 - [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)

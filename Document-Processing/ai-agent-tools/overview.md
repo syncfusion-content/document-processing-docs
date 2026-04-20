@@ -30,7 +30,7 @@ It exposes a rich set of well-defined tools and functions that an [AI agent](htt
 
 | Format | Supported File Types |
 |---|---|
-| **Word** | `.docx`, `.doc`, `.rtf`, `.html`, `.txt`, `.md` |
+| **Word** | `.docx`, `.doc`, `.rtf`, `.html`, `.txt` |
 | **Excel** | `.xlsx`, `.xls`, `.xlsm`, `.csv` |
 | **PDF** | `.pdf` |
 | **PowerPoint** | `.pptx` |
