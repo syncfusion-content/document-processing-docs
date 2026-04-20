@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Convert HTML to PDF file in Mac using C#
 
-The Syncfusion<sup>&reg;</sup> [HTML to PDF converter](https://www.syncfusion.com/pdf-framework/net/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML to PDF using C#. It is reliable and accurate. Using this library, you can convert HTML to PDF document in Mac.
+The Syncfusion<sup>&reg;</sup> [HTML to PDF converter](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML to PDF using C#. It is reliable and accurate. Using this library, you can convert HTML to PDF document in Mac.
 
 ## Steps to convert HTML to PDF in ASP.NET Core MVC
 
