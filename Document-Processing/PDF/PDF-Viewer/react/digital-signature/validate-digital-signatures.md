@@ -30,9 +30,9 @@ A **digital signature** is a cryptographic proof embedded in the PDF that allows
 2. Use **JavaScript PDF Library** to **open the PDF bytes** and **validate the signature**.
 3. Display the validation outcome (valid/invalid/unknown) in your React UI (badge, toast, side panel).
 
- ## How‑to: Validate a digital signature (Client‑side)
+## How‑to: Validate a digital signature (Client‑side)
 
- Cryptographic signature validation is performed by the Syncfusion PDF Library. Please refer to the PDF Library documentation for detailed guidance and sample code. The following pages cover validation concepts, APIs, and full examples:
+Cryptographic signature validation is performed by the Syncfusion PDF Library. Please refer to the PDF Library documentation for detailed guidance and sample code. The following pages cover validation concepts, APIs, and full examples:
 
 - [Digital signature validation overview](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature#digital-signature-validation)
 
