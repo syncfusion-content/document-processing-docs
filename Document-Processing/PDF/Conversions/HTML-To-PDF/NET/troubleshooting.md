@@ -1573,7 +1573,7 @@ Refer to the following package reference:
 {% highlight C# %}
 
 <ItemGroup>
-    <PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Windows" Version="32.1.21">
+ 	<PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Windows" Version="32.1.21">
         <IncludeAssets>compile;runtime</IncludeAssets>
     </PackageReference>
 </ItemGroup>
