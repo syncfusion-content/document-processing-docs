@@ -27,6 +27,4 @@ Explore practical solutions and tips for working with the Syncfusion React Sprea
 ## See Also
 
 - [Getting Started with React Spreadsheet](../getting-started)
-- [Open Excel Files](../open-excel-files)
-- [Save Excel Files](../save-excel-files)
-- [Server Deployment](../server-deployment/spreadsheet-server-docker-image-overview)
+- [React Spreadsheet Overview](./overview)
