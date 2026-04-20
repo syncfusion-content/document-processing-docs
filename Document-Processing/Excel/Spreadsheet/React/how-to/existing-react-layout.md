@@ -76,7 +76,7 @@ setTimeout(() => {
 }, 0);
 ```
 
-Lazy-render inside tabs/dialogs/accordions: only mount the Spreadsheet when the pane is visible. If you must mount while hidden, call `spreadsheetRef.current.resize()` after showing so the Spreadsheet recomputes layout.
+Mount the Spreadsheet component only when the corresponding pane becomes visible. If the Spreadsheet must be mounted while hidden, call its [resize] (API link) method after the pane is shown so that the layout is recalculated correctly.
 
 ## When to use these patterns
 
