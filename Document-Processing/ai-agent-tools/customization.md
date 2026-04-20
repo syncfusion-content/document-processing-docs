@@ -262,14 +262,6 @@ Once the custom watermark tools are registered, you can interact with the AI age
 The agent will call `Word_CreateDocument` to load the file, then `Word_AddTextWatermark` with `watermarkText = "CONFIDENTIAL"`, and finally `Word_ExportDocument` to save the result.
 
 
-## Customizing the System Prompt
-
-The system prompt shapes how the AI agent uses the tools. Tailor it to your use case:
-
-```csharp
-string systemPrompt = "You are an expert document-processing assistant with access to tools for Word operations.";
-```
-
 ## See Also
 
 - [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)

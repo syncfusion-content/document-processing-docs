@@ -382,7 +382,6 @@ Provides merge and split and export as image operations for PowerPoint presentat
 | MergePresentations | MergePresentations(<br/>string documentIdOrFilePath ,<br/>string sourceDocumentIds,<br/>string pasteOption = "SourceFormatting",<br/>string? outputFilePath = null) | Merges multiple presentations into a destination presentation. |
 | SplitPresentation | SplitPresentation(<br/>string documentIdOrFilePath,<br/>string splitRules,<br/>string pasteOption = "SourceFormatting",<br/>string? outputFilePath = null) | Splits a presentation by sections, layout type, or slide numbers (e.g., `"1,3,5"`). |
 | ExportAsImage | ExportAsImage(<br/>string documentIdOrFilePath,<br/>string outputDirectory,<br/>string? imageFormat = "Png",<br/>int? startSlideIndex = null,<br/>int? endSlideIndex = null) | Exports presentation slides as PNG or JPEG images to the output directory. |
-| ConvertPresentation | ConvertPresentation(<br/> string documentIdOrFilePath,<br/>string filePath,<br/> string? formatType = "Pptx") | Converts the presentation to the file system in the specified format. Works only in DocumentStorage mode. documentIdOrFilePath: The input file path from storage. Supported formats: PPTX, PPTM, POTX, POTM. |
 
 
 **PresentationSecurityAgentTools**

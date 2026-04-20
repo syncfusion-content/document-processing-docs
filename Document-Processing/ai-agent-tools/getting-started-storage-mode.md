@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started | Storage Mode | AI Agent Tools | Syncfusion
-description: Learn how to get started with Syncfusion AI Agent Tools using Storage Mode to persist documents and enable repeated, stateful AI interactions.
+description: Learn how to get started with Syncfusion AI Agent Tools in Storage Mode for consistent, storage‑based document operations.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
@@ -77,13 +77,6 @@ public class AzureBlobStorage : IDocumentStorage
         var blobClient = _containerClient.GetBlobClient(filePath);
         blobClient.Upload(documentStream, overwrite: true);
         return true;
-    }
-
-    public bool Delete(string filePath)
-    {
-        ArgumentException.ThrowIfNullOrEmpty(filePath);
-        var blobClient = _containerClient.GetBlobClient(filePath);
-        return blobClient.DeleteIfExists();
     }
 
     public bool Exists(string filePath)

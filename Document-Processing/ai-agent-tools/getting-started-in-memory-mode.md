@@ -243,14 +243,6 @@ For a complete, runnable example combining all steps, refer to the example conso
 Examples/Console/AgentChatConsole/Program.cs
 ```
 
-You can clone and run it directly:
-
-```bash
-git clone https://github.com/syncfusion/Document-SDK-Agent-Tool.git
-cd Document-SDK-Agent-Tool/Examples/SyncfusionAgentTools
-dotnet run
-```
-
 ## See Also
 
 - [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)

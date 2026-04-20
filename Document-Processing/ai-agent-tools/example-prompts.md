@@ -13,8 +13,6 @@ Speed up your document automation using these example prompts for Syncfusion Doc
 
 ## Document Processing Prompts
 
-> **Note:** For Storage Mode, additionally, apply this rule to the prompt to improve execution quality, consistency, and overall results.<br/> **Rule**: Perform each step sequentially, using the latest output as input for the next tool. Also, use the given output file name for all tools outputs.
-
 ### PDF
 
 Create, manipulate, secure, extract content from, and perform OCR on PDF documents using AI Agent Tools.
@@ -99,7 +97,7 @@ Assemble the annual all-hands meeting presentation by merging the following depa
 Load the confidential M&A strategy presentation 'ma_strategy_2026.pptx' from {InputDir}. Encrypt it with the password 'MAStrategy@Conf2026' to ensure only authorized executives can open it. Export the encrypted file as 'ma_strategy_2026_encrypted.pptx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard ExportAsImage %}
-Load the product demo presentation 'product_demo_v3.pptx' from {InputDir}. Export all slides as individual PNG images to {OutputDir} so the marketing team can use them as standalone visual assets for social media and documentation. Also export the original presentation to {OutputDir} as a backup.
+Load the product demo presentation 'product_demo_v3.pptx' from {InputDir}. Export all slides as individual PNG images to {OutputDir} so the marketing team can use them as standalone visual assets for social media and documentation.
 {% endpromptcard %}
 {% promptcard GetSlideCount, GetText %}
 Load the investor pitch deck 'investor_pitch_Q1_2026.pptx' from {InputDir}. Get the total slide count to confirm it's complete. Extract all text content from the presentation so we can review the messaging before the meeting. Return the slide count and full text content.

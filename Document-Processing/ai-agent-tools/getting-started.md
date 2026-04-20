@@ -31,7 +31,7 @@ The library supports two modes for managing document state during agent tool inv
 **When to use:**  
 Choose in-memory Mode for single-instance applications (desktop apps, console tools, or non-scalable environments) where in-memory state won't be lost. It provides the simplest and fastest experience.
 
-➡️ **[In-Memory Mode](./GETTING-STARTED-IN-MEMORY.md)**
+**In-Memory Mode**
 
 ---
 
@@ -42,7 +42,7 @@ Choose in-memory Mode for single-instance applications (desktop apps, console to
 **When to use:**  
 Choose Storage Mode for web APIs or applications that need horizontal scaling, work with large documents, or require state persistence across sessions.
 
-➡️ **[Storage Mode](./GETTING-STARTED-STORAGE-MODE.md)**
+**Storage Mode**
 
 ---
 
