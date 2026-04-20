@@ -93,6 +93,6 @@ void LockSelectedAnnotation(Annotation selectedAnnotation)
 * Similarly, to unlock the selected annotation, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property value to `false`.
 
 ## See Also
-- [Annotations Overview](../annotations-overview)
-- [Select and Deselect Annotations](../select-deselect-annotations)
-- [Show and Hide Annotations](../show-hide)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Select and Deselect Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/select-deselect-annotations)
+- [Show and Hide Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/show-hide)

@@ -23,7 +23,7 @@ To achieve this requirement, the following events can be used:
 
 To prevent editing for specific cells, use the [`cellEdit`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#celledit) event, which triggers whenever a cell enters edit mode. By checking the column index and setting `args.cancel = true`, you can prevent editing for those columns. This ensures that users cannot modify the cell content in those columns.
 
-```jsx
+```js
 // Triggers when cell editing starts in the spreadsheet.
     const cellEdit = (args: any) =>{
         var addressRange = getCellIndexes(args.address.split('!')[1]);
