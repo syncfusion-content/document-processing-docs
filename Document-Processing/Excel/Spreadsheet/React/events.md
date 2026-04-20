@@ -9,80 +9,71 @@ documentation: ug
 
 # Events in React Spreadsheet Component
 
-The Spreadsheet component triggers events for user actions including data binding, selection, editing, clipboard operations, sorting, filtering, formatting, row/column operations, context menu, ribbon interactions, and import/export. These events allow you to integrate custom logic into your application workflow.
+The Spreadsheet component triggers events for creation, data binding, selection, editing, clipboard actions, sorting, filtering, formatting, row and column insertion or deletion, context menu and ribbon interactions, and import/export operations—enabling integration of custom logic into application workflows.
 
 ## Action Events
 
 The `actionBegin` and `actionComplete` events are the primary action events in the Spreadsheet.
 
-### actionBegin event
+The `actionBegin` event triggers when any action begins in the Spreadsheet and fires for all user-initiated actions, enabling you to identify the action type, prevent specific actions from executing, and apply custom logic at the initiation of an action.
 
-Triggers when any action begins in the Spreadsheet. Use this event to:
-* Identify the action type using `args.action`
-* Prevent specific actions from executing
-* Apply custom logic at action initiation
+The `actionComplete` event triggers when any action completes in the Spreadsheet and fires for all user-initiated actions, enabling you to identify the action type and apply custom logic after an action has successfully completed.
 
-### actionComplete event
+You can identify the type of action being triggered by using the `args.action` property during both the action events.
 
-Triggers when any action completes successfully in the Spreadsheet. Use this event to:
-* Identify the action type using `args.action`
-* Apply custom logic after an action completes
+The following table represents the action names for which the `actionBegin` and `actionComplete` events are triggered in the Spreadsheet:
 
-### Supported actions
-
-The following table shows action names triggered by `actionBegin` and `actionComplete` events:
-
-| **Action** | **actionBegin** | **actionComplete** |
-|--------|:---:|:---:|
-| Add Data Validation | ✓ | ✓ |
-| Add Defined Name | - | ✓ |
-| Autofill | ✓ | ✓ |
-| Autofit | ✓ | ✓ |
-| Cell Delete | ✓ | ✓ |
-| Cell Save (Edit) | ✓ | ✓ |
-| Chart Design | ✓ | ✓ |
-| Chart Deletion | ✓ | ✓ |
-| Chart Insertion | ✓ | ✓ |
-| Chart Refresh (Resize/Drag) | - | ✓ |
-| Clear | ✓ | ✓ |
-| Clear Conditional Formatting | - | ✓ |
-| Clear Validation | ✓ | ✓ |
-| Clear Highlight | ✓ | ✓ |
-| Copy | ✓ | - |
-| Cut | ✓ | - |
-| Paste | ✓ | ✓ |
-| Comment | ✓ | ✓ |
-| Conditional Formatting | ✓ | ✓ |
-| Delete | ✓ | ✓ |
-| Delete Comment | ✓ | ✓ |
-| Delete Rows/Columns | ✓ | ✓ |
-| Filter | ✓ | ✓ |
-| Formatting (Cell/Number) | ✓ | ✓ |
-| Freeze Panes | ✓ | ✓ |
-| Gridlines | ✓ | ✓ |
-| Headers | ✓ | ✓ |
-| Hide Row/Column | ✓ | ✓ |
-| Highlight Invalid Data | ✓ | ✓ |
-| Hyperlink | ✓ | ✓ |
-| Delete Image | ✓ | ✓ |
-| Insert Image | ✓ | ✓ |
-| Image Refresh (Resize/Drag) | - | ✓ |
-| Insert Row/Column/Sheet | ✓ | ✓ |
-| Merge | ✓ | ✓ |
-| Open | ✓ | ✓ |
-| Protect Sheet | ✓ | ✓ |
-| Read-Only | ✓ | ✓ |
-| Remove Defined Name | - | ✓ |
-| Replace | ✓ | ✓ |
-| Replace All | ✓ | ✓ |
-| Resize Row/Column | - | ✓ |
-| Save | ✓ | - |
-| Sort | ✓ | ✓ |
-| Sheet Duplicate | ✓ | ✓ |
-| Sheet Hide | ✓ | ✓ |
-| Sheet Move | ✓ | ✓ |
-| Sheet Rename | ✓ | ✓ |
-| Wrap | ✓ | ✓ |
+| **Action** | **ActionBegin** | **ActionComplete** |
+|--------|-------------|----------------|
+| Add Data Validation | validation | validation |
+| Add Defined Name | - | addDefinedName |
+| Autofill | autofill | autofill |
+| Autofit | resizeToFit | resizeToFit |
+| Cell Delete | cellDelete | cellDelete |
+| Cell Save (Edit) | cellSave | cellSave |
+| Chart Design | chartDesign | chartDesign |
+| Chart Deletion | deleteChart | deleteChart |
+| Chart Insertion | beforeInsertChart | insertChart |
+| Chart (Resize/Drag and Drop) | - | chartRefresh |
+| Clear | beforeClear | clear |
+| Clear Conditional Formatting | - | clearCF |
+| Clear Validation | removeValidation | removeValidation |
+| Clear Highlight | removeHighlight | removeHighlight |
+| Clipboard (Copy) | copy | - |
+| Clipboard (Cut) | cut | - |
+| Clipboard (Paste) | clipboard | clipboard |
+| Comment | addComment | addComment |
+| Conditional Formatting | conditionalFormat | conditionalFormat |
+| Delete | delete | delete |
+| Delete Comment | deleteComment | deleteComment |
+| Delete (Rows/Columns) | delete | delete |
+| Filter | filter | filter |
+| Formatting (Cell/Number) | format | format |
+| Freeze Panes | freezePanes | freezePanes |
+| Gridlines | gridlines | gridlines |
+| Headers | headers | headers |
+| Hide (Row/Column) | hideShow | hideShow |
+| Highlight Invalid Data | addHighlight | addHighlight |
+| Hyperlink | hyperlink | hyperlink |
+| Image Deletion | deleteImage | deleteImage |
+| Image Insertion | beforeInsertImage | insertImage |
+| Image (Resize/Drag and Drop) | - | imageRefresh |
+| Insert (Row/Column/Sheet) | insert | insert |
+| Merge | merge | merge |
+| Open | beforeOpen | import |
+| Protect Sheet | protectSheet | protectSheet |
+| Read-Only | readonly | readonly |
+| Remove Defined Name | - | removeDefinedName |
+| Replace | beforeReplace | replace |
+| Replace All | beforeReplaceAll | replaceAll |
+| Resize (Row/Column) | - | resize |
+| Save | beforeSave | - |
+| Sort | beforeSort | sorting |
+| Sheet Duplicate | duplicateSheet | duplicateSheet |
+| Sheet Hide | hideSheet | hideSheet |
+| Sheet Move | moveSheet | moveSheet |
+| Sheet Rename | renameSheet | renameSheet |
+| Wrap | beforeWrap | wrap |
 
 
 The following code example demonstrates how to bind the `actionBegin` and `actionComplete` events in the Spreadsheet.
