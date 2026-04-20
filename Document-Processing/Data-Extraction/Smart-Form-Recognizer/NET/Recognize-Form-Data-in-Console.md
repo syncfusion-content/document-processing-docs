@@ -8,7 +8,7 @@ documentation: UG
 
 # Recognize Form Data from PDF in Console Application
 
-The Syncfusion<sup>&reg;</sup> **Smart Form Recognizer** is a deterministic, on‑premise C# library for .NET that extracts form data from PDFs and scanned images. It uses visual layout heuristics like lines, boxes, and markers to consistently identify form structures. The library supports text fields, checkboxes, radio buttons, and signature regions, producing structured JSON for workflow integration.
+The Syncfusion<sup>&reg;</sup> Smart Form Recognizer is a deterministic, on‑premise C# library for .NET that extracts form data from PDFs and scanned images. It uses visual layout heuristics like lines, boxes, and markers to consistently identify form structures. The library supports text fields, checkboxes, radio buttons, and signature regions, producing structured JSON for workflow integration.
 
 ## Steps to Recognize Form Data from PDF in Console App
 

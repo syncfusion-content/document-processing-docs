@@ -8,7 +8,7 @@ documentation: UG
 
 # Recognize Form Data in ASP.NET Core
 
-The Syncfusion<sup>&reg;</sup> **Smart Form Recognizer** is a deterministic, on‑premise C# library for .NET that extracts form data from PDFs and scanned images. It uses visual layout heuristics like lines, boxes, and markers to consistently identify form structures. The library supports text fields, checkboxes, radio buttons, and signature regions, producing structured JSON for workflow integration.
+The Syncfusion<sup>&reg;</sup> Smart Form Recognizer is a deterministic, on‑premise C# library for .NET that extracts form data from PDFs and scanned images. It uses visual layout heuristics like lines, boxes, and markers to consistently identify form structures. The library supports text fields, checkboxes, radio buttons, and signature regions, producing structured JSON for workflow integration.
 
 To include the .NET Core Smart Form Recognizer library into your ASP.NET Core application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/data-extraction/smart-form-recognizer/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/data-extraction/smart-form-recognizer/net/assemblies-required) documentation.
 
