@@ -68,7 +68,7 @@ Initialize or refresh the Spreadsheet when its host becomes visible (tab active,
 
 ## Resize & visibility tips
 
-After the host becomes visible, call the Spreadsheet instance's [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method so it can recompute layout:
+After the parent element becomes visible, call the Spreadsheet instance's [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method so it can recompute layout:
 
 ```js
 setTimeout(() => {
@@ -76,7 +76,9 @@ setTimeout(() => {
 }, 0);
 ```
 
-Mount the Spreadsheet component only when the corresponding pane becomes visible. If the Spreadsheet must be mounted while hidden, call its [resize] (API link) method after the pane is shown so that the layout is recalculated correctly.
+## Note
+
+Mount the Spreadsheet component only when the corresponding pane becomes visible. If the Spreadsheet must be mounted while hidden, call its [resize] (https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method after the pane is shown so that the layout is recalculated correctly.
 
 ## When to use these patterns
 
