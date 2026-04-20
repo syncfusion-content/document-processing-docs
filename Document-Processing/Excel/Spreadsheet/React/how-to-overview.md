@@ -1,6 +1,6 @@
 ---
 layout: post
-title: FAQ Section in React Spreadsheet | Syncfusion
+title: Overview Section for How‑to Guides in React Spreadsheet | Syncfusion
 description: In this section, you can find answers to frequently asked questions and solutions for common scenarios in the Spreadsheet control.
 platform: document-processing
 control: Spreadsheet
