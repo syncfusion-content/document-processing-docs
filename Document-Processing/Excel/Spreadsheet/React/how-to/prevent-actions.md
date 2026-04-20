@@ -46,7 +46,7 @@ To prevent specific action after preventing the cell editing, you need to use th
 
 This approach ensures that spreadsheet actions such as cut, paste, autofill, formatting, validation, and conditional formatting are prevented for specific cells without protecting the sheet or making the cells read-only.
 
-> **Note:** In this example, we use column indexes to restrict actions. You can also use row indexes or cell addresses for the same purpose. This is a pure component-level customization it will not be retained in the exported Excel file, unlike sheet protection.
+> **Note:** In this example, column indexes are used to restrict actions. You can also apply the same restrictions using row indexes or specific cell addresses. This is a purely component-level customization and, unlike sheet protection, it will not be preserved when the Excel file is exported.
 
 The following example demonstrates how to prevent actions such as cut, paste, autofill, formatting, validation, and conditional formatting for specific cells(in the first and third columns) in the spreadsheet without protecting the sheet or making the cells read-only. You can also restrict additional actions by following the same approach.
 
