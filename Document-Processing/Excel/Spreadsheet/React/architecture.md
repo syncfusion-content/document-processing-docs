@@ -37,7 +37,7 @@ This is the visible part of the Spreadsheet. It handles user interactions—like
 This layer stores all your spreadsheet data: cell values, formatting (colors, fonts, borders), sheet structure, validation rules, and undo/redo history. Think of it as the database that keeps everything organized and persistent.
 
 ### Calculation Layer (Calculate Engine)
-This engine automatically computes formulas and manages dependencies between cells. If you enter `=A1+B1`, this layer recalculates the result whenever A1 or B1 changes. It supports 150+ Excel-compatible functions and advanced features like cross-sheet references and named ranges.
+This engine automatically computes formulas and manages dependencies between cells. If you enter `=A1+B1`, this layer recalculates the result whenever A1 or B1 changes. It supports 80+ Excel-compatible functions and advanced features like cross-sheet references and named ranges.
 
 ### How Data Flows (User Action to Update)
 
@@ -128,26 +128,24 @@ const myData = [
 
 ### Remote Data Binding
 
-Your data comes from an external source (Excel file, CSV, database). The Spreadsheet receives and displays the processed data:
+Remote data binding enables the Spreadsheet to retrieve and display data from external sources, such as API endpoints or databases, rather than from within the application itself.
 
 ```
-Upload File → Spreadsheet Receives Data → Display
+External Source (API/DB) → Spreadsheet → Display
 ```
 
-**Use Remote when:**
-- Importing Excel/CSV files
-- Loading data from a database
-- Data is very large or needs secure processing
-- You want to preserve Excel formatting and formulas
+**Recommended for:**
+- Loading data from remote databases or APIs
+- Handling large or frequently updated datasets
+- Ensuring data security by keeping sensitive data on the server
 
-### Hybrid Data Binding
+**How it works:**
+- The Spreadsheet requests data from your backend or a remote service (e.g., via REST API, GraphQL, or file upload endpoint).
+- The backend processes, filters, or transforms the data as needed (e.g., converting a database query or Excel file into a JSON structure).
+- The processed data is sent to the Spreadsheet, which then displays it to the user.
+- Any edits or changes made in the Spreadsheet can be sent back to the backend for saving or further processing, if needed.
 
-Combine local and remote data for flexible workflows:
-- **Load + Edit:** Import initial data from server, allow full client-side editing, export modified version back
-- **Mixed Data:** Bind some cells/ranges to remote sources, others to local data
-- **Progressive Loads:** Start with local data, import updated datasets from server as needed
-
----
+**Note:** Remote data binding is about connecting to and displaying data from external sources. It does not cover the import or export of files (such as uploading or downloading Excel/CSV files), which are handled by separate import/export features.
 
 ## Client-Side vs Server-Side Processing
 
