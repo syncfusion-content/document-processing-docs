@@ -297,7 +297,7 @@ Examples/ASP.NET-Core/AgentChatWeb/
 
 ## See Also
 
-- [Getting Started — In-Memory Mode](GETTING-STARTED-IN-MEMORY.md)
+- Getting Started — In-Memory Mode
 - [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
 - [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
 - [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
