@@ -46,7 +46,7 @@ void CustomizeSelectorAppearance()
     // Customize the selector color for unlocked annotations using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) property of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     PdfViewer.AnnotationSettings.Selector.Color = Colors.Blue;
 
-    // Customize the selector color for locked annotations using the `AnnotationSettings` property of `SfPdfViewer` instancehttps://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui
+    // Customize the selector color for locked annotations using the `AnnotationSettings` property of `SfPdfViewer` instance..
     PdfViewer.AnnotationSettings.Selector.LockedColor = Colors.LightGray;
 }	
 {% endhighlight %}
@@ -177,6 +177,6 @@ private void OnAnnotationDeselected(object sender, AnnotationEventArgs e)
 {% endtabs %}
 
 ## See Also
-- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
-- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
-- [Lock and Unlock Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/lock-unlock)
+- [Annotations Overview](../annotations-overview)
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
+- [Lock and Unlock Annotations](../lock-unlock)

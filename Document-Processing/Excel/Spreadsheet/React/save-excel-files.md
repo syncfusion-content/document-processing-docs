@@ -3,7 +3,7 @@ layout: post
 title: Save Excel Files in React Spreadsheet component | Syncfusion
 description: Learn here all about Saving Excel files in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Save 
+control: Open 
 documentation: ug
 ---
 

@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Open a Document from a Base64 String in .NET MAUI PDF Viewer
+# Open a Document from a Base64 String in .NET MAUI PDF Viewer (SfPdfViewer)
 
 A PDF document can be opened in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) from a given Base64 string by converting it to a byte[] and assigning it to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property.
 
@@ -86,6 +86,6 @@ namespace PdfViewerExample
 The example project to open a PDF document from a Base64 string can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Open%20PDF%20From%20Base-64%20String). 
 
 ## See Also
-- [Open a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document)
-- [Open from URL](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-url)
-- [Open from Local Storage](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-local-storage)
+- [Open a Document](../open-a-document)
+- [Open from URL](../open-a-document-from-url)
+- [Open from Local Storage](../open-a-document-from-local-storage)

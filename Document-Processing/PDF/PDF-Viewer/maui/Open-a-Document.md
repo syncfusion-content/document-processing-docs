@@ -18,12 +18,12 @@ This section walks you through loading and unloading documents in the [SfPdfView
 
 | Topic | Description |
 |---|---|
-| [Open a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document) | Load from a stream or byte array, unload documents, and handle loading events. |
-| [Open from a URL](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-url) | Download and display a PDF directly from a remote URL. |
-| [Open from Local Storage](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-local-storage) | Open a PDF from the device's file system using the file picker. |
-| [Open from Base64](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-base64string) | Load a PDF encoded as a Base64 string. |
-| [Open a Password-Protected Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-password-protected-document) | Display a password dialog and open encrypted PDF documents. |
-| [Document Load Notifications](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/documentloadnotifications) | Subscribe to document and page load/unload events for custom logic. |
+| [Open a Document](https://help.syncfusion.com/maui/pdf-viewer/open-a-document) | Load from a stream or byte array, unload documents, and handle loading events. |
+| [Open from a URL](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-url) | Download and display a PDF directly from a remote URL. |
+| [Open from Local Storage](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-local-storage) | Open a PDF from the device's file system using the file picker. |
+| [Open from Base64](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-base64string) | Load a PDF encoded as a Base64 string. |
+| [Open a Password-Protected Document](https://help.syncfusion.com/maui/pdf-viewer/open-a-password-protected-document) | Display a password dialog and open encrypted PDF documents. |
+| [Document Load Notifications](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications) | Subscribe to document and page load/unload events for custom logic. |
 
 ## Document and page loading indications
 
@@ -32,7 +32,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 1.	`At the document` – To indicate that the document is loading.
 2.	`At the pages` – To indicate that the page content is loading.
 
-To customize the appearance of the loading indicators, please refer to this [section](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ui-customization#customize-the-loading-indicator).
+To customize the appearance of the loading indicators, please refer to this [section](https://help.syncfusion.com/maui/pdf-viewer/ui-customization#customize-the-loading-indicator).
 
 ## Document source types
 
@@ -89,7 +89,7 @@ The .NET MAUI PDF Viewer does not currently support annotations comparable to Xa
 {% endtabs %}
 
 N> * All the [LoadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_LoadDocument_System_IO_Stream_System_String_System_Nullable_Syncfusion_Maui_PdfViewer_FlattenOptions__) methods accept the flatten options parameter.
-N> * Refer to this [section](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/migration#upcoming-features) for the upcoming annotation features in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+N> * Refer to this [section](https://help.syncfusion.com/maui/pdf-viewer/migration#upcoming-features) for the upcoming annotation features in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 ## Optimizing document loading on Android
 
@@ -101,20 +101,20 @@ When your application handles large images, complex graphics, or memory-intensiv
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" 
         android:largeHeap="true" ></application>
-	https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui.
+	...
 </manifest>
 {% endhighlight %}
 {% endtabs %}
 
 ## Check other PDF opening options
 
-* [Open a document from local storage](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-local-storage)
-* [Open a document from a URL](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-url)
-* [Open a password-protected document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-password-protected-document)
+* [Open a document from local storage](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-local-storage)
+* [Open a document from a URL](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-url)
+* [Open a password-protected document](https://help.syncfusion.com/maui/pdf-viewer/open-a-password-protected-document)
 
 ## See Also
-- [Open from URL](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-url)
-- [Open from Base64](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-base64string)
-- [Open from Local Storage](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-local-storage)
-- [Open a Password-Protected Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-password-protected-document)
-- [Document Load Notifications](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/documentloadnotifications)
+- [Open from URL](../open-a-document-from-url)
+- [Open from Base64](../open-a-document-from-base64string)
+- [Open from Local Storage](../open-a-document-from-local-storage)
+- [Open a Password-Protected Document](../open-a-password-protected-document)
+- [Document Load Notifications](../documentloadnotifications)

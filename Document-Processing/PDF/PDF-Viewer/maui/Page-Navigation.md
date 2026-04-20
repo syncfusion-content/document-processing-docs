@@ -55,7 +55,7 @@ void EnableSinglePageLayoutMode()
 {% endhighlight %}
 {% endtabs %}
 
-N> You can download the **Custom Toolbar** sample project for the .NET MAUI PDF Viewer [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples) , which demonstrates functionality related to the [PageLayoutMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PageLayoutMode.html) feature.
+N> You can download the **Custom Toolbar** sample project for the .NET MAUI PDF Viewer [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples) , which demonstrates fuctionality related to the [PageLayoutMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PageLayoutMode.html) feature.
 
 ## Obtain the total page count and the current page number
 
@@ -124,7 +124,7 @@ private void LastPageButton_Clicked(object sender, EventArgs e)
 The example project with the page navigation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples).
 
 ## See Also
-- [Scrolling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/scrolling)
-- [Document Link Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/document-link-annotations)
-- [Document Outline](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/document-outline)
-- [Hyperlink Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/hyperlink-navigation)
+- [Scrolling](../scrolling)
+- [Document Link Annotations](../document-link-annotations)
+- [Document Outline](../document-outline)
+- [Hyperlink Navigation](../hyperlink-navigation)

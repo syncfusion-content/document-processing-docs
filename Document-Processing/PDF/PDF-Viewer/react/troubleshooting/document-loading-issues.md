@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Document loading issues in version 23.1 or newer
+## Document loading issues in version 23.1 or newer
 
 If a PDF does not render in the viewer after upgrading to v23.1 or newer, use the checklist below to identify and resolve common causes. The most frequent fix is calling `dataBind()` before `load()` so data binding is initialized correctly in the newer lifecycle.
 

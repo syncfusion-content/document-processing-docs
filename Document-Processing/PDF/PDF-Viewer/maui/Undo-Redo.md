@@ -78,6 +78,6 @@ The undo and redo history covers annotation changes only. The following operatio
 N> The undo/redo stack is also cleared when a new document is loaded.
 
 ## See Also
-- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
-- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
-- [Keyboard Shortcuts](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/keyboard-shortcuts)
+- [Annotations Overview](../annotations-overview)
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
+- [Keyboard Shortcuts](../keyboard-shortcuts)
