@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spreadsheet architecture overview | Syncfusion
-description: Comprehensive overview of the Syncfusion React Spreadsheet architecture, including rendering, calculations, and data binding. Suitable for beginners and advanced users.
+description: Overview of Syncfusion React Spreadsheet architecture, covering rendering, calculations, and data binding for beginners and advanced users.
 control: Architecture
 platform: document-processing
 documentation: ug
