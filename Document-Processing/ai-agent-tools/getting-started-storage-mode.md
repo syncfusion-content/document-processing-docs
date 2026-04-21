@@ -298,7 +298,7 @@ while (true)
 
 For a complete web application example with ASP.NET Core, refer to:
 
-[Examples/ASP.NET-Core/AgentChatWeb/](https://gitea.syncfusion.com/essential-studio/Document-SDK-Agent-Library/src/branch/development/Examples/ASP.NET-Core)
+Examples/ASP.NET-Core/AgentChatWeb/
 
 ## See Also
 

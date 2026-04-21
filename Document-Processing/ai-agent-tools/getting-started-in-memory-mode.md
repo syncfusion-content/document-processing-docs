@@ -248,7 +248,7 @@ while (true)
 
 For a complete, runnable example combining all steps, refer to the example console application in the GitHub repository:
 
-[Examples/Console/AgentChatConsole/Program.cs](https://gitea.syncfusion.com/essential-studio/Document-SDK-Agent-Library/src/branch/development/Examples/Console/AgentChatConsole/Program.cs)
+Examples/Console/AgentChatConsole/Program.cs
 
 ## See Also
 

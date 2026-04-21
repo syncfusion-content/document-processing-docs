@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion Document SDK Agent Tools Overview
 
-**[Syncfusion Document SDK Agent Tool](https://gitea.syncfusion.com/essential-studio/Document-SDK-Agent-Library)** is a comprehensive AI toolkit that enables AI models and assistants to autonomously create, manipulate, convert, and extract data from documents using Syncfusion Document SDK libraries.
+**Syncfusion Document SDK Agent Tool** is a comprehensive AI toolkit that enables AI models and assistants to autonomously create, manipulate, convert, and extract data from documents using Syncfusion Document SDK libraries.
 
 It exposes a rich set of well-defined tools and functions that an [AI agent](https://learn.microsoft.com/en-us/agent-framework/get-started/your-first-agent?pivots=programming-language-csharp) can invoke to perform document operations across Word, Excel, PDF, PowerPoint, HTML and Markdown formats - without requiring the host application to implement document-processing logic directly.
 

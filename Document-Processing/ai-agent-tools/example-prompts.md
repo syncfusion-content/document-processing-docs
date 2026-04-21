@@ -103,7 +103,7 @@ Load the investor pitch deck 'investor_pitch_Q1_2026.pptx' from {InputDir}. Get 
 Load the signed vendor contract 'vendor_contract_final.docx' from {InputDir}, convert it to PDF for archiving purposes, and then apply a 'ARCHIVED' watermark with 30% opacity across all pages of the resulting PDF. Export the archived PDF as 'vendor_contract_final_archived.pdf' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard ConvertToPDF, EncryptPdf %}
-Load the annual financial summary workbook 'financial_summary_2025.xlsx' from {InputDir}, convert it to PDF for board distribution, then encrypt the resulting PDF with the password 'Board@Secure2025' and restrict permissions to read-only (no printing or editing). Export the secured financial report as 'financial_summary_2025_board.pdf' to {OutputDir}.
+Load the annual financial summary workbook 'financial_summary_2025.xlsx' from {InputDir}, convert it to PDF for board distribution, then restrict permissions to read-only (no printing or editing) and encrypt the resulting PDF with the password ‘Board@Secure2025’. Export the secured financial report as 'financial_summary_2025_board.pdf' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard ConvertToPDF, MergePdfs %}
 Convert the sales conference presentation 'sales_conference_2026.pptx' from {InputDir} to PDF format. Save the converted PDF as 'sales_conference_2026.pdf' in {InputDir}. Then merge the converted presentation PDF with the existing supplementary materials PDF 'conference_appendix.pdf' (also located in {InputDir}) into a single unified conference package. Finally, export the combined merged document as 'sales_conference_package_2026.pdf' to {OutputDir}.
