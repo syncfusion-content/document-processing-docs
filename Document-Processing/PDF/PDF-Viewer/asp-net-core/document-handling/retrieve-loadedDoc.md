@@ -58,7 +58,7 @@ Below is a focused snippet showing:
         viewer = document.getElementById('container').ej2_instances[0];
     };
 
-    // ✅ ASP.NET Core: onDocumentLoad
+    // ASP.NET Core: onDocumentLoad
     window.onDocumentLoad = function (args) {
 
         if (!viewer) return;
@@ -150,7 +150,7 @@ This example demonstrates a complete flow:
         viewer = document.getElementById('pdfViewer').ej2_instances[0];
     };
 
-    // ✅ ASP.NET Core: handleDocumentLoad
+    // ASP.NET Core: handleDocumentLoad
     window.onDocumentLoad = function (args) {
         if (!viewer) return;
         docInfo.name = args && args.documentName;

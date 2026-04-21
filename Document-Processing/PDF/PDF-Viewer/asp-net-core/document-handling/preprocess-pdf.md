@@ -159,16 +159,16 @@ Use the following ASP.NET Core `cshtml` snippet when you want uploaded PDFs to b
         using MemoryStream inputStream = new MemoryStream();
         file.CopyTo(inputStream);
         inputStream.Position = 0;
-        // ✅ Load PDF
+        // Load PDF
         PdfLoadedDocument document = new PdfLoadedDocument(inputStream);
-        // ✅ Flatten form fields
+        // Flatten form fields
         if (document.Form != null)
         {
             document.Form.Flatten = true;
         }
-        // ✅ Flatten annotations
+        // Flatten annotations
         document.FlattenAnnotations();
-        // ✅ Save flattened PDF
+        // Save flattened PDF
         using MemoryStream outputStream = new MemoryStream();
         document.Save(outputStream);
         document.Close(true);
@@ -184,7 +184,7 @@ The PDF Viewer toolbar allows users to:
 - Add [standard stamps](../annotation/stamp-annotation#add-stamp-annotations-to-the-pdf-document) (Approved, Draft, etc.)
 - Insert [custom image stamps](../annotation/stamp-annotation#add-a-custom-stamp)
 
-![Custom Stamp](../images/customStamp.png)
+![Custom Stamp](../../react/images/customStamp.png)
 
 ### Programmatically Add a Watermark
 ```js
