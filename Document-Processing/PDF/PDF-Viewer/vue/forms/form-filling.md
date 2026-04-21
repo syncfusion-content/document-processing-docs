@@ -92,7 +92,7 @@ The PDF Viewer enables end users to complete form fields directly in the interfa
 
 The PDF Viewer supports common form fields such as text boxes, check boxes, radio buttons, drop-down lists, list boxes, and signature fields. Entered values remain editable during the viewing session.
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/vue/prefilledforms-cs1" %}
 
 ## Fill PDF forms through Import Data 
 
