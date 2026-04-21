@@ -176,7 +176,7 @@ void EditSelectedStampAnnotation(Annotation selectedAnnotation)
 {% endhighlight %}
 {% endtabs %}
 
-N> Changing the color of a stamp annotation after it has been added to a PDF is not supported due to the predefined nature of standard stamps. These stamps use fixed colors to ensure consistency and convey distinct meanings. As a work around, you can create a [Custom stamp](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/stamps#add-custom-stamps-using-the-toolbar) which allows users to design stamps with user-defined colors and text.
+N> Changing the color of a stamp annotation after it has been added to a PDF is not supported due to the predefined nature of standard stamps. These stamps use fixed colors to ensure consistency and convey distinct meanings. As a work around, you can create a [Custom stamp](https://help.syncfusion.com/maui/pdf-viewer/stamps#add-custom-stamps-using-the-toolbar) which allows users to design stamps with user-defined colors and text.
 
 ## Access Custom Stamp Annotation Views
 
@@ -310,6 +310,6 @@ private void PdfViewer_Tapped(object sender, GestureEventArgs e)
 {% endtabs %}
 
 ## See Also
-- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
-- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
-- [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/undo-redo)
+- [Annotations Overview](../annotations-overview)
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
+- [Undo and Redo](../undo-redo)

@@ -384,11 +384,11 @@ private void PdfViewer_DocumentLoadFailed(object sender, Syncfusion.Maui.PdfView
 {% endtabs %}
 
 ### Handling the correct password
-If the entered password is correct, the document will be loaded into the PDF Viewer. At this moment, the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event will be triggered. You can handle this event to show a message indicating that the password is correct or to close the custom dialog. Refer to this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/documentloadnotifications#document-loaded-event) for more details.
+If the entered password is correct, the document will be loaded into the PDF Viewer. At this moment, the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event will be triggered. You can handle this event to show a message indicating that the password is correct or to close the custom dialog. Refer to this [link](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications#document-loaded-event) for more details.
 
 ## GitHub example
 The example project to open a password-protected document with a customized password request view can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples).
 
 ## See Also
-- [Open a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document)
-- [Document Load Notifications](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/documentloadnotifications)
+- [Open a Document](../open-a-document)
+- [Document Load Notifications](../documentloadnotifications)

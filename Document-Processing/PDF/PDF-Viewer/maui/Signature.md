@@ -225,7 +225,7 @@ private void PdfViewer_SignatureCreated(object? sender, SignatureCreatedEventArg
 {% endtabs %}
 
 ## See Also
-- [Electronic Signature (Form Field)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview)
-- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
-- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
-- [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document)
+- [Electronic Signature (Form Field)](../form-filling-overview)
+- [Annotations Overview](../annotations-overview)
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
+- [Save a Document](../save-a-document)

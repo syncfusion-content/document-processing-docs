@@ -28,8 +28,8 @@ PdfViewer.FlowDirection = FlowDirection.RightToLeft;
 {% endhighlight %}
 {% endtabs %}
 
-N> Right-to-Left language users can also refer to this [section](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/migration#upcoming-features) for information on how to localize the static text used in the PDF reader to other languages.
+N> Right-to-Left language users can also refer to this [section](https://help.syncfusion.com/maui/pdf-viewer/migration#upcoming-features) for information on how to localize the static text used in the PDF reader to other languages.
 
 ## See Also
-- [Localization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/localization)
-- [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/getting-started)
+- [Localization](../localization)
+- [Getting Started](../getting-started)

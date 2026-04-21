@@ -171,6 +171,6 @@ namespace OpenLocalFile
 The example project to open a PDF document from local storage using `File Picker` can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
 
 ## See Also
-- [Open a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document)
-- [Open from URL](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-url)
-- [Document Load Notifications](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/documentloadnotifications)
+- [Open a Document](../open-a-document)
+- [Open from URL](../open-a-document-from-url)
+- [Document Load Notifications](../documentloadnotifications)

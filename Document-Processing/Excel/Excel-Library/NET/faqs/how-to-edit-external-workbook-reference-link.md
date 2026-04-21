@@ -8,7 +8,7 @@ documentation: UG
 
 # How to edit external workbook reference link?
 
-Existing external workbook reference link can be modified through [URL](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.ExternWorkbookImpl.html#Syncfusion_XlsIO_Implementation_ExternWorkbookImpl_URL) property of [ExternWorkbookImpl](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.ExternWorkbookImpl.html) class. Please find the code snippet below.
+Existing external workbook reference link can be modified through [URL](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.ExternWorkbookImpl.html#Syncfusion_XlsIO_Implementation_ExternWorkbookImpl_URL) property of [ExternWorkbookImpl](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.ExternWorkbookImpl.html) class. Please find the code snippet below.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}

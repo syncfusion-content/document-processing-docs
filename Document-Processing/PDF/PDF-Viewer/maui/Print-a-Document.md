@@ -62,6 +62,6 @@ N> The [PrintQuality](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfVie
 Currently, when printing a document that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the printed document.
 
 ## See Also
-- [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document)
-- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
-- [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview)
+- [Save a Document](../save-a-document)
+- [Annotations Overview](../annotations-overview)
+- [Form Filling Overview](../form-filling-overview)

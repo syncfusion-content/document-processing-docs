@@ -198,7 +198,9 @@ using (PdfDocument pdfDocument = new PdfDocument())
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Saving-and-Restoring-the-PdfGraphics/.NET/Saving-and-Restoring-the-PdfGraphics). 
+You can download a complete working sample from [GitHub](PDF-Examples/Text/Saving-and-Restoring-the-PdfGraphics/.NET/Saving-and-Restoring-the-PdfGraphics/Saving-and-Restoring-the-PdfGraphics/Program.cs). 
+
+
 
 ## Drawing text in an existing document
 

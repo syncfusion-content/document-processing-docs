@@ -190,7 +190,7 @@ The names of these toolbars and their description are listed in the following se
 
 ### Toolbar customization
 
-For details on showing, hiding, adding, removing, and reordering toolbars and toolbar items, see [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization).
+For details on showing, hiding, adding, removing, and reordering toolbars and toolbar items, see [Toolbar Customization](https://help.syncfusion.com/maui/pdf-viewer/toolbar-customization).
 
 ## Toolbar items
 
@@ -735,6 +735,6 @@ The names of these toolbar items, along with their descriptions and availability
 
 
 ## See Also
-- [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization)
-- [UI Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ui-customization)
-- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Toolbar Customization](../toolbar-customization)
+- [UI Customization](../ui-customization)
+- [Annotations Overview](../annotations-overview)

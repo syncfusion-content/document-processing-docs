@@ -185,10 +185,10 @@ Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 Button form fields will be rendered in the PDF viewer. But the PDF viewer supports only the `GoTo` actions that navigates to a particular location in the PDF document alone. Other types of button actions are not supported.
 
 ## See Also
-- [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview)
-- [Form Fields Collection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-collection)
-- [Show and Hide Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-show-hide)
-- [Customize Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-customization)
-- [Form Field Events](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-events)
-- [Import and Export Form Data](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-import-export)
-- [Electronic Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/signature)
+- [Form Filling Overview](../form-filling-overview)
+- [Form Fields Collection](../form-filling-collection)
+- [Show and Hide Form Fields](../form-filling-show-hide)
+- [Customize Form Fields](../form-filling-customization)
+- [Form Field Events](../form-filling-events)
+- [Import and Export Form Data](../form-filling-import-export)
+- [Electronic Signature](../signature)

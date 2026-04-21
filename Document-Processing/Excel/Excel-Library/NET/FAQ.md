@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# Frequently Asked Questions Section In Excel  
+# Frequently Asked Questions Section
 
 The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed below.
 
@@ -98,7 +98,7 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to delete blank rows and blank columns in an Excel worksheet using C#?](faqs/how-to-delete-blank-rows-and-columns-in-a-worksheet)
 * [How to retain cell values after removing formulas in Excel?](faqs/how-to-retain-cell-values-after-removing-formulas-in-excel)
 * [How to remove data validation from the specified range?](faqs/how-to-remove-data-validation-from-the-specified-range)
-* [How to remove auto filter from an Excel worksheet?](faqs/how-to-remove-autofilter-in-an-Excel)
+* [How to remove autofilter from an Excel worksheet?](faqs/how-to-remove-autofilter-in-an-Excel)
 * [How to convert an Excel worksheet to a high-resolution image?](faqs/how-to-convert-an-excel-worksheet-to-a-high-resolution-image)
 * [How to add and remove page breaks in a worksheet?](faqs/how-to-add-and-remove-page-breaks-in-Excel)
 * [How to decrypt individual items with specific passwords?](faqs/how-to-decrypt-individual-items-with-specific-passwords-in-a-protected-zip-file)
@@ -114,14 +114,14 @@ The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed bel
 * [How to compute the size of the Excel file?](faqs/how-to-compute-the-size-of-the-Excel-file)
 * [How to set and format time values in Excel using TimeSpan?](faqs/how-to-set-and-format-time-values-in-excel-using-timespan)
 * [How to set the default font and font size in an Excel Workbook?](faqs/how-to-set-the-default-font-and-font-size-in-an-Excel-workbook)
-* [How to set traffic lights icon in Excel conditional formatting using C#?](faqs/how-to-set-traffic-lights-icon-in-Excel-conditional-formatting)
+* [How to set traffic lights icon in Excel conditional formatting using C#?](faqs/how-to-set-traffic-lights-icon-in-Excel-conditional-formatting-using-C#)
 * [How to apply TimePeriod conditional formatting in Excel using C#?](faqs/how-to-apply-TimePeriod-conditional-formatting-in-Excel)
 * [How to get the list of worksheet names in an Excel workbook?](faqs/how-to-get-the-list-of-worksheet-names-in-an-Excel-workbook)
 * [How to switch chart series data interpretation from horizontal (rows) to vertical (columns) in Excel?](faqs/how-to-switch-chart-series-data-interpretation-from-horizontal-(rows)-to-vertical-(columns)-in-excel)
 * [How to add Oval shape to Excel chart using XlsIO?](faqs/how-to-add-oval-shape-to-excel-chart)
 * [How to show the leader line on Excel chart?](faqs/how-to-show-the-leader-line-on-excel-chart)
-* [How to set the background color for Excel Chart in C#?](faqs/how-to-set-the-background-color-for-Excel-chart)
-* [How to override an Excel document using C#?](faqs/how-to-override-an-Excel-document)
+* [How to set the background color for Excel Chart in C#?](faqs/how-to-set-the-background-color-for-Excel-chart-in-C#)
+* [How to override an Excel document using C#?](faqs/how-to-override-an-Excel-document-using-C#)
 * [Does XlsIO support converting an empty Excel document to PDF?](faqs/does-xlsio-support-converting-an-empty-Excel-document-to-PDF)
 * [What is the maximum supported text length for data validation in Excel?](faqs/what-is-the-maximum-supported-text-length-for-data-validation-in-excel)
 * [How to set column width for a pivot table range in an Excel Document?](faqs/how-to-set-column-width-for-a-pivot-table-range-in-an-Excel-Document)
