@@ -1,5 +1,5 @@
 ---
-title: Open and save Word document in Azure Flex Consumption
+title: Open and save Word document in Azure Functions | Syncfusion
 description: Open and save Word document in Azure Functions Flex Consumption using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
