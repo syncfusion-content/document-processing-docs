@@ -29,7 +29,7 @@ The library supports two modes for managing document state during agent tool inv
 **When to use:**  
 Choose in-memory Mode for single-instance applications (desktop apps, console tools, or non-scalable environments) where in-memory state won't be lost. It provides the simplest and fastest experience.
 
-For further details, please refer to this [documentation](https://help.syncfusion.com/document-processing/ai-agent-tools/getting-started-in-memory-mode).
+For further details, please refer to this documentation.
 
 ### Storage Mode
 
@@ -38,7 +38,7 @@ For further details, please refer to this [documentation](https://help.syncfusio
 **When to use:**  
 Choose Storage Mode for web APIs or applications that need horizontal scaling, work with large documents, or require state persistence across sessions.
 
-For further details, please refer to this [documentation](https://help.syncfusion.com/document-processing/ai-agent-tools/getting-started-storage-mode).
+For further details, please refer to this documentation.
 
 ## AI Providers
 
@@ -59,8 +59,8 @@ For more details, see the [Microsoft Agent Framework Providers documentation](ht
 
 ## See Also
 
-- [In-Memory Mode](https://help.syncfusion.com/document-processing/ai-agent-tools/getting-started-in-memory-mode)
-- [Storage Mode](https://help.syncfusion.com/document-processing/ai-agent-tools/getting-started-storage-mode)
+- In-Memory Mode
+- Storage Mode
 - [Syncfusion AI Agent Tools Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
 - [Available Tools Reference](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
 - [Customization Guide](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)

@@ -302,7 +302,7 @@ Examples/ASP.NET-Core/AgentChatWeb/
 
 ## See Also
 
-- [Getting Started - In-Memory Mode](https://help.syncfusion.com/document-processing/ai-agent-tools/getting-started-in-memory-mode)
+- Getting Started - In-Memory Mode
 - [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
 - [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
 - [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
