@@ -22,7 +22,7 @@ The Syncfusion PDF Viewer supports filling form fields programmatically, via the
 
 3. [Importing form field data](#fill-pdf-forms-through-import-data)
 
-  Import form data to prefill fields from a JSON/FDF/XFDF source so forms are ready for review or signing.
+  Import form data to pre-fill fields from a JSON/FDF/XFDF source so forms are ready for review or signing.
 
 ## Fill PDF forms programmatically 
 
