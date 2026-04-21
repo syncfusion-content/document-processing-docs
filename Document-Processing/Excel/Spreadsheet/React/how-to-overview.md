@@ -27,4 +27,3 @@ Explore practical solutions and tips for working with the Syncfusion React Sprea
 ## See Also
 
 - [Getting Started with React Spreadsheet](../getting-started)
-- [React Spreadsheet Overview](./overview)
