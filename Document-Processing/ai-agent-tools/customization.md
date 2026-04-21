@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the Agent Tool Library
 
-The Syncfusion Document SDK Agent Tool library is designed to be extensible. This guide walks you through creating a custom agent tool class and registering the tools with an AI agent so they are callable alongside the built-in tools.
+The [Syncfusion Document SDK Agent Tool library](https://gitea.syncfusion.com/essential-studio/Document-SDK-Agent-Library/src/branch/development/AgentLibrary) is designed to be extensible. This guide walks you through creating a custom agent tool class and registering the tools with an AI agent so they are callable alongside the built-in tools.
 
 
 ## Creating a Custom Agent Tool Class

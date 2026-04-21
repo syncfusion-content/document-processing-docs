@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview | AI Agent Tools | Syncfusion
-description: Learn about the Syncfusion Document SDK AI Agent Tools — an AI-ready toolkit for working with Word, Excel, PDF, and PowerPoint documents.
+description: Learn about the Syncfusion Document SDK AI Agent Tools - an AI-ready toolkit for working with Word, Excel, PDF, and PowerPoint documents.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Syncfusion Document SDK Agent Tools Overview
 
-**Syncfusion Document SDK Agent Tool** is a comprehensive AI toolkit that enables AI models and assistants to autonomously create, manipulate, convert, and extract data from documents using Syncfusion Document SDK libraries.
+**[Syncfusion Document SDK Agent Tool](https://gitea.syncfusion.com/essential-studio/Document-SDK-Agent-Library)** is a comprehensive AI toolkit that enables AI models and assistants to autonomously create, manipulate, convert, and extract data from documents using Syncfusion Document SDK libraries.
 
-It exposes a rich set of well-defined tools and functions that an [AI agent](https://learn.microsoft.com/en-us/agent-framework/get-started/your-first-agent?pivots=programming-language-csharp) can invoke to perform document operations across Word, Excel, PDF, PowerPoint, HTML and Markdown formats — without requiring the host application to implement document-processing logic directly.
+It exposes a rich set of well-defined tools and functions that an [AI agent](https://learn.microsoft.com/en-us/agent-framework/get-started/your-first-agent?pivots=programming-language-csharp) can invoke to perform document operations across Word, Excel, PDF, PowerPoint, HTML and Markdown formats - without requiring the host application to implement document-processing logic directly.
 
 
 ## Key Capabilities
@@ -61,13 +61,6 @@ The following functionalities required additional NuGet packages in non-Windows 
 - [Office to PDF Conversion](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#additional-nuget-packages-required-for-linux) in Linux platform
 
 - [HTML to PDF Conversion](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/nuget-packages-required) in Cross-Platform
-
-The following NuGet packages are used in the application.
-
-| Package | Purpose |
-|---|---|
-| [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) | Microsoft Agent Framework with OpenAI integration |
-
 
 ## Supported .NET Versions
 
