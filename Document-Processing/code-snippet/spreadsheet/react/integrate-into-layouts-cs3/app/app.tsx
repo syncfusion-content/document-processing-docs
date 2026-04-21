@@ -8,6 +8,7 @@ function App(): React.ReactElement {
         const spreadsheetRef = useRef<SpreadsheetComponent | null>(null);
         const onExpanded = useCallback((args: ExpandEventArgs) => {
               setTimeout(() => {
+                // Use resize method to recompute layout after panel becomes visible
                   spreadsheetRef.current.resize();
               }, 0);
         }, []);

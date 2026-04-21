@@ -8,6 +8,7 @@ function App() {
         const spreadsheetRef = useRef(null);
         const onExpanded = useCallback((args) => {
               setTimeout(() => {
+                // Use resize method to recompute layout after panel becomes visible
                   spreadsheetRef.current.resize();
               }, 0);
         }, []);

@@ -17,7 +17,9 @@ The React Spreadsheet component can be embedded into dashboards, admin panels, s
 
 ### Use Spreadsheet inside Tab components
 
-The React Spreadsheet component is supported inside Syncfusion Tab components.
+The React Spreadsheet component is fully supported within [Syncfusion Tab component](https://ej2.syncfusion.com/react/documentation/api/tab/index-default). You can safely place and render the Spreadsheet inside a Tab item.
+
+The following sample shows how to render the Spreadsheet inside the Tab component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -32,7 +34,11 @@ The React Spreadsheet component is supported inside Syncfusion Tab components.
 
 ### Use spreadsheet inside Dialog
 
-If the spreadsheet sits inside a dialog, for example Syncfusion Dialog, render or initialize the spreadsheet after the dialog open events. The DOM must be visible for the spreadsheet to measure layout.
+If the Spreadsheet is placed inside a dialog (for example, a Syncfusion Dialog), render or initialize the Spreadsheet only within the dialog’s open event. The parent container must be visible in the DOM for the Spreadsheet to correctly measure and compute its layout.
+
+And if the Spreadsheet is rendered while the dialog container is hidden and the container is made visible later, the Spreadsheet may not render correctly. In such cases, invoke the [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method in the dialog's open event to re-render the Spreadsheet layout based on the currently visible parent container.
+
+The following sample shows how to render Spreadsheet inside the Dialog component.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -47,7 +53,14 @@ If the spreadsheet sits inside a dialog, for example Syncfusion Dialog, render o
 
 ### Use Spreadsheet inside collapsible sections
 
-For accordions or collapsible containers, you can render the Spreadsheet inside an `AccordionItem`. If the item is rendered while hidden, trigger a resize event when the section becomes active so the component can recalculate its layout.
+When placing the Spreadsheet inside an accordion or any collapsible container (for example, within an AccordionItem), it is important to ensure that the Spreadsheet is rendered only when the corresponding section is visible. The Spreadsheet relies on the visibility of its parent container in the DOM to accurately measure dimensions and compute its layout.
+
+If the accordion item is initialized while it is in a collapsed (hidden) state, the Spreadsheet will not be able to calculate its layout correctly, which may result in improper rendering. To avoid this, you can either:
+
+- Render or initialize the Spreadsheet only when the accordion item becomes active (expanded), or
+- If the Spreadsheet must be rendered while the accordion item is hidden, explicitly trigger a Spreadsheet's [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method in the accordion's expanded event to re-render the Spreadsheet layout based on the current parent container.
+
+The following sample shows how to render the Spreadsheet inside the Accordion.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

@@ -16,6 +16,7 @@ const closeDialog = () => {
 };
 const onDialogOpen = useCallback(() => {
     setTimeout(() => {
+        // Use resize method to recompute layout after panel becomes visible
         spreadsheetRef.current.resize();
     }, 0);
 }, []);
