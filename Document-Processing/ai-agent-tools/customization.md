@@ -14,7 +14,7 @@ The [Syncfusion Document SDK Agent Tool library](https://gitea.syncfusion.com/es
 
 ## Creating a Custom Agent Tool Class
 
-Follow these steps to expose new document operations to the AI agent.
+Follow these steps to enable new document operations to the [AI agent tool library](https://gitea.syncfusion.com/essential-studio/Document-SDK-Agent-Library/src/branch/development/AgentLibrary).
 
 **Step 1: Create a Custom Agent Tool by Inheriting AgentToolBase**
 
