@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Squiggly Annotation (Text Markup) in ASP.NET Core PDF Viewer
-| Syncfusion
+title: Add Squiggly Annotation in Core PDF Viewer | Syncfusion
 description: Learn how to enable, apply, customize, and manage Squiggly annotations in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer

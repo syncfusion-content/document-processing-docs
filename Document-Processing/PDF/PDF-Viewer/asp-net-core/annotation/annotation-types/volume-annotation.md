@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Add Volume Measurement Annotations in ASP.NET Core PDF Viewer
-| Syncfusion
+title: Add Volume Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to enable, draw, customize, and manage Volume measurement annotations in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer

@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Line Annotation (Shape) in ASP.NET Core PDF Viewer
-| Syncfusion
+title: Add Line Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to enable, apply, customize, and manage Line annotations in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
