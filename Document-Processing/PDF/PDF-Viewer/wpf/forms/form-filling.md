@@ -12,7 +12,7 @@ Filling PDF Forms in WPF PDF Viewer enables efficient entry and updating of form
 
 1. [Form Filling Through User Interface](#fill-pdf-forms-through-the-user-interface)
 2. [Filling Form Fields Programmatically](#fill-pdf-forms-programmatically)
-3. [Importing Form Field Data](#fill-pdf-forms-through-import-data)
+3. [Importing Form Field Data](#fill-pdf-forms-through-export-and-import-data)
 
 ## Fill PDF forms through the User Interface
 
@@ -25,7 +25,7 @@ The Syncfusion WPF PDF Viewer enables PDF form fields to be filled directly thro
 
 WPF PDF Viewer allows PDF form fields to be filled or updated programmatically by accessing existing form fields and assigning values through APIs. This approach is useful when form data needs to be populated dynamically based on application logic or automated workflows.
 
-The following example demonstrates how to update PDF form field values programmatically in the WPF PDF Viewer, including TextBox, CheckBox, ComboBox, ListBox, Signature field, and RadioButton form fields using the available APIs:
+The following example demonstrates how to update PDF form field values programmatically in the WPF PDF Viewer, including TextBox, CheckBox, ComboBox, ListBox and RadioButton form fields using the available APIs:
 
 {% tabs %}
 {% highlight C# %}
@@ -49,27 +49,6 @@ private void UpdateTextbox_Click(object sender, RoutedEventArgs e)
      if(pdfViewer.LoadedDocument.Form.Fields[3] is PdfLoadedListBoxField)
      {
          (pdfViewer.LoadedDocument.Form.Fields[3] as PdfLoadedListBoxField).SelectedIndex = new int[2] { 1, 2 };
-     }
-     if (pdfViewer.LoadedDocument.Form.Fields[4] is PdfLoadedSignatureField)
-     {
-         PdfLoadedPage page = pdfViewer.LoadedDocument.Pages[0] as PdfLoadedPage;
-         FileStream certificateStream = new FileStream(@"PDF.pfx", FileMode.Open, FileAccess.Read);
-         PdfCertificate certificate = new PdfCertificate(certificateStream, "syncfusion");
-
-         //Load the signature field from field collection and fill this with certificate.
-         PdfLoadedSignatureField loadedSignatureField = pdfViewer.LoadedDocument.Form.Fields[4] as PdfLoadedSignatureField;
-         loadedSignatureField.Signature = new PdfSignature(pdfViewer.LoadedDocument, page, certificate, "Signature", loadedSignatureField);
-         loadedSignatureField.Signature.Certificate = certificate;
-         loadedSignatureField.Signature.Reason = "Reason";
-         FileStream imageStream = new FileStream(System.IO.Path.GetFullPath(@"signature.jpg"), FileMode.Open, FileAccess.Read);
-
-         //Load the image.
-         PdfBitmap image = new PdfBitmap(imageStream);
-
-         //Draw image in the signature appearance. 
-         loadedSignatureField.Signature.Appearance.Normal.Graphics.DrawImage(image, new PointF(0, 0), new SizeF(loadedSignatureField.Bounds.Width, loadedSignatureField.Bounds.Height));
-		 //To view the added signature in the output document
-         pdfViewer.LoadedDocument.Save(System.IO.Path.GetFullPath(@"Output/Output.pdf"));
      }
      if (pdfViewer.LoadedDocument.Form.Fields[5] is PdfLoadedRadioButtonListField)
      {
@@ -112,41 +91,6 @@ Private Sub UpdateTextbox_Click(sender As Object, e As RoutedEventArgs)
         listBox.SelectedIndex = New Integer() {1, 2}
     End If
 
-    ' Signature Field (Field 4)
-    Dim sigField = TryCast(form.Fields(4), PdfLoadedSignatureField)
-    If sigField IsNot Nothing Then
-
-        Dim page = TryCast(pdfViewer.LoadedDocument.Pages(0), PdfLoadedPage)
-
-        ' Load certificate
-        Using certificateStream As New FileStream("PDF.pfx", FileMode.Open, FileAccess.Read)
-
-            Dim certificate As New PdfCertificate(certificateStream, "syncfusion")
-
-            ' Create signature object
-            Dim signature As New PdfSignature(pdfViewer.LoadedDocument, page, certificate, "Signature", sigField)
-            signature.Certificate = certificate
-            signature.Reason = "Reason"
-
-            ' Load signature appearance image
-            Using imageStream As New FileStream(Path.GetFullPath("signature.jpg"), FileMode.Open, FileAccess.Read)
-                Dim image As New PdfBitmap(imageStream)
-
-                signature.Appearance.Normal.Graphics.DrawImage(
-                    image,
-                    New PointF(0, 0),
-                    New SizeF(sigField.Bounds.Width, sigField.Bounds.Height)
-                )
-            End Using
-
-            ' Assign signature to field
-            sigField.Signature = signature
-        End Using
-
-        ' To view the added signature in the output document
-        pdfViewer.LoadedDocument.Save(Path.GetFullPath("Output/Output.pdf"))
-    End If
-
     ' RadioButtonList (Field 5)
     Dim radioList = TryCast(form.Fields(5), PdfLoadedRadioButtonListField)
     If radioList IsNot Nothing Then
@@ -157,10 +101,6 @@ End Sub
 
 {% endhighlight %}
 {% endtabs %}
-
-N > For the signature to appear in the document, ensure that the loaded PDF document is saved after modification.
-
-
 
 ## Fill PDF forms through Export and Import Data 
 

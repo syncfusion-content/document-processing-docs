@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Import PDF Form Data into WPF PDF Viewer
+# Import PDF Form Data 
 
 The WPF PDF Viewer supports importing values into interactive form fields of the currently loaded PDF document. Form data can be imported from the following supported formats:
 

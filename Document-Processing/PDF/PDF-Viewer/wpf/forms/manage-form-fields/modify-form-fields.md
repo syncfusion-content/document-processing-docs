@@ -7,27 +7,21 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Modify PDF Form Field values in WPF
+# Modify Form Field values 
 WPF PDF Viewer allows PDF form field values to be updated through the user interface for manual changes or through programmatic APIs for automated and dynamic updates.
 
-## Modify PDF Form Field values using the UI
-The Syncfusion WPF PDF Viewer allows to modify PDF form fields values directly through the user interface without using code. Users can click on form fields and enter or select values based on the field type.
+## Modify Form Field values using UI
+The Syncfusion WPF PDF Viewer allows to modify PDF form fields values directly through the user interface without using code. Users can click on form fields and enter or select values based on the field type and It supports common form fields such as text boxes, check boxes, radio buttons and list boxes.Filled values can be edited at any time, and the entered data is retained during the viewing session.
 
 ![Modify Form fields](../images/FormFillingUI.gif)
 
-The WPF PDF Viewer supports common form fields such as text boxes, check boxes, radio buttons,list boxes, and signature fields.Filled values can be edited at any time, and the entered data is retained during the viewing session.
+N > PDF signature fields modification through programmatic APIs is not supported. However, users can add, modify, or delete signatures directly through the UI alone.
 
-## Modify PDF Form Field values programmatically
-WPF PDF Viewer allows PDF form field values to be modified programmatically by accessing existing form fields through APIs. This approach is useful for dynamically setting form data based on application logic.
-
-## Modify PDF Form Field values 
+## Modify Form Field values programmatically
+WPF PDF Viewer allows PDF form field values to be modified programmatically by accessing existing form fields through APIs. Developers can retrieve form fields from the loaded PDF document’s form collection and update their values using code. This approach is useful for dynamically setting form data based on application logic.
 
 ### Textbox
-**Update TextBox Field Through the UI**
-Text box fields can be updated at runtime directly through the user interface. This allows text values to be entered or modified interactively within the PDF document without relying on programmatic APIs.
-![TextboxField](../images/TextBoxField.png)
-
-**Update TextBox Field Programmatically (Code‑Behind)**
+A text box form field can be updated using code by accessing it from the loaded PDF document. Developers can retrieve the `PdfLoadedTextBoxField` from the document’s form fields collection and change its text value programmatically to automatically fill or update data.
 
 {% tabs %}
 {% highlight C# %}
@@ -64,11 +58,7 @@ End Sub
 {% endtabs %}
 
 ### CheckBox
-**Update CheckBox Field Through the UI**
-Check box fields can be set or updated at runtime directly through the user interface, allowing interactive selection or deselection within the PDF document.
-![CheckboxField](../images/CheckBoxField.png)
-
-**Update CheckBox Field Programmatically (Code‑Behind)**
+A CheckBox form field value can be updated programmatically by accessing it from the loaded PDF document. Developers can retrieve the `PdfLoadedCheckBoxField` from the document’s form fields collection and set its Checked property to true or false using code. 
 
 {% tabs %}
 {% highlight C# %}
@@ -99,11 +89,7 @@ End Sub
 {% endtabs %}
 
 ### RadioButton
-**Update Radio Button Field Through the UI**
-Radio button selections can be changed at runtime directly through the user interface, allowing a different option within a radio button group to be selected interactively in the PDF document.
-![RadioButtonField](../images/Radiobutton.gif)
-
-**Update Radio Button Field Programmatically (Code‑Behind)**
+A Radio Button form field value can be updated programmatically by accessing it from the loaded PDF document. Developers can retrieve the `PdfLoadedRadioButtonListField` from the document’s form fields collection and change its selected option by setting the `SelectedIndex` property.
 
 {% tabs %}
 {% highlight C# %}
@@ -135,11 +121,7 @@ End Sub
 {% endtabs %}
 
 ### ListBox
-**Update ListBox Field Through the UI**
-List box selections can be set or updated at runtime directly through the user interface, allowing items to be selected or changed interactively within the PDF document.
-![ListBoxField](../images/ListBoxField.gif)
-
-**Update ListBox Field Programmatically (Code‑Behind)**
+A ListBox form field value can be updated programmatically by accessing it from the loaded PDF document. Developers can retrieve the `PdfLoadedListBoxField` from the document’s form fields collection and set its selected items using the `SelectedIndex` property.
 
 {% tabs %}
 {% highlight C# %}
@@ -171,11 +153,7 @@ End Sub
 {% endtabs %}
 
 ### ComboBox
-**Update ComboBox Field Through the UI**
-Combo box selections can be set or updated at runtime directly through the user interface, allowing available options to be selected or changed interactively within the PDF document.
-![ComboBoxField](../images/ComboboxField.png)
-
-**Update ComboBox Field Programmatically (Code‑Behind)**
+A ComboBox form field value can be updated programmatically by accessing it from the loaded PDF document. Developers can retrieve the `PdfLoadedComboBoxField` from the document’s form fields collection and set the selected option using the `SelectedIndex` property. 
 
 {% tabs %}
 {% highlight C# %}
@@ -206,90 +184,6 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-### Signature Field
-Signature fields can be applied or updated at runtime directly through the user interface, allowing signatures to be added or modified interactively within the PDF document.
-#### Add a signature from signature field in UI
-
-Clicking the signature box will open the signature pad, requesting the user to draw the signature. clicking on the apply button will add the drawn signature to the signature field.
-
-![WPF PDF Viewer Delete a Signature from Signature field](../images/wpf-pdf-viewer-signature-form-field-add.png)
-
-#### Deleting a signature from signature field in UI
-
-Selecting the delete option from the context menu, which is displayed when right-clicking on the selected signature, would delete the respective signature from the signature field.
-
-![WPF PDF Viewer Delete a Signature from Signature field](../images/wpf-pdf-viewer-signature-form-field-delete.png)
-
-**Update Signature Field Programmatically (Code‑Behind)**
-
-{% tabs %}
-{% highlight C# %}
-
-private void UpdateSignature_Click(object sender, RoutedEventArgs e)
-{
-    if (pdfViewer.LoadedDocument == null || pdfViewer.LoadedDocument.Form == null) return;
-
-    var sigField = pdfViewer.LoadedDocument.Form.Fields[6] as PdfLoadedSignatureField; // replace index
-    if (sigField != null)
-    {
-        PdfLoadedPage page = pdfViewer.LoadedDocument.Pages[0] as PdfLoadedPage;
-
-        using (FileStream certificateStream = new FileStream("PDF.pfx", FileMode.Open, FileAccess.Read))
-        {
-            PdfCertificate certificate = new PdfCertificate(certificateStream, "certPassword");
-
-            PdfSignature signature = new PdfSignature(pdfViewer.LoadedDocument, page, certificate, "Signature", sigField);
-            signature.Certificate = certificate;
-            signature.Reason = "Approved";
-            sigField.Signature = signature;
-
-            using (FileStream imageStream = new FileStream(Path.GetFullPath("signature.jpg"), FileMode.Open, FileAccess.Read))
-            {
-                PdfBitmap image = new PdfBitmap(imageStream);
-                signature.Appearance.Normal.Graphics.DrawImage(
-                    image,
-                    new PointF(0, 0),
-                    new SizeF(sigField.Bounds.Width, sigField.Bounds.Height)
-                );
-            }
-
-            pdfViewer.LoadedDocument.Save(Path.GetFullPath("Output/Output.pdf"));
-        }
-    }
-}
-
-{% endhighlight %}
-{% highlight VB %}
-
-Private Sub UpdateSignature_Click(sender As Object, e As RoutedEventArgs)
-    If pdfViewer.LoadedDocument Is Nothing OrElse pdfViewer.LoadedDocument.Form Is Nothing Then Return
-
-    Dim sigField = TryCast(pdfViewer.LoadedDocument.Form.Fields(6), PdfLoadedSignatureField)
-    If sigField IsNot Nothing Then
-        Dim page = TryCast(pdfViewer.LoadedDocument.Pages(0), PdfLoadedPage)
-
-        Using certificateStream As New FileStream("PDF.pfx", FileMode.Open, FileAccess.Read)
-            Dim certificate As New PdfCertificate(certificateStream, "certPassword")
-
-            Dim signature As New PdfSignature(pdfViewer.LoadedDocument, page, certificate, "Signature", sigField)
-            signature.Certificate = certificate
-            signature.Reason = "Approved"
-            sigField.Signature = signature
-
-            Using imageStream As New FileStream(Path.GetFullPath("signature.jpg"), FileMode.Open, FileAccess.Read)
-                Dim image As New PdfBitmap(imageStream)
-                signature.Appearance.Normal.Graphics.DrawImage(image, New PointF(0, 0), New SizeF(sigField.Bounds.Width, sigField.Bounds.Height))
-            End Using
-
-            pdfViewer.LoadedDocument.Save(Path.GetFullPath("Output/Output.pdf"))
-        End Using
-    End If
-End Sub
-
-{% endhighlight %}
-{% endtabs %}
-
-N > To ensure the signature appears in the document, save the loaded PDF after applying the signature.
 
 ## See also
 

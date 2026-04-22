@@ -6,17 +6,13 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
-# Add PDF Form Field in WPF PDF Viewer
+# Add Form Field in WPF PDF Viewer
 
-## Add Form Fields Programmatically (API)
-
-The PDF Viewer allows to programmatically add form fields without user interaction at runtime.
+## Add Form Fields Programmatically 
+The WPF PDF Viewer allows developers to add form fields using code. By accessing the loaded PDF document through the viewer’s API, developers can create and insert form fields directly into the document.
 
 ### Textbox
-
-**Add Programmatically (API)**
-
-[PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) class is used to create a text box field in PDF forms. 
+[PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) Instance is used to create a text box field in PDF forms. 
 
 The below code snippet illustrates how to add a textbox field to a LoadedDocument
 {% tabs %}
@@ -54,8 +50,7 @@ End Sub
 
 
 ### Password
-
-**Add Programmatically (API)**
+[PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) Instance is used to create a text box field in PDF forms. This field allows users to enter text input into the document. It also supports password functionality by setting the Password property to true.
 
 {% tabs %}
 {% highlight C# %}
@@ -92,7 +87,7 @@ End Sub
 ### CheckBox
 
 **Add Programmatically (API)**
-A check box field in PDF forms can be created using the https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCheckBoxField.html class.
+A check box field in PDF forms can be created using the [PdfCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCheckBoxField.html) Instance.
 
 Please refer the below code snippet for adding the check box field in LoadedDocument.
 
@@ -134,10 +129,7 @@ End Sub
 {% endtabs %}
 
 ### RadioButton
-
-**Add Programmatically (API)**
-
-Radio buttons in PDF forms can be created using the https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListField.html class. Individual radio button items within the group can be created using the https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListItem.html class.
+Radio buttons in PDF forms can be created using the [PdfRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListField.html) Instance. Individual radio button items within the group can be created using the [PdfRadioButtonListItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListItem.html) Instance.
 
 Please refer the below code snippet for adding the radio button in LoadedDocument.
 
@@ -188,9 +180,7 @@ End Sub
 {% endtabs %}
 
 ### ListBox
-
-**Add Programmatically (API)**
-A list box form field in PDF documents can be created using the https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListBoxField.html class.
+A list box form field in PDF documents can be created using the [PdfListBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListBoxField.html) Instance. Individual listBox item added by using [PdfListFieldItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListFieldItem.html) Instance.
 
 Please refer the below code snippet for adding the list box field in LoadedDocument.
 
@@ -246,9 +236,7 @@ End Sub
 {% endtabs %}
 
 ### ComboBox
-
-**Add Programmatically (API)**
-The https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfComboBoxField.html class is used to create a combo box field in PDF forms. A list of selectable items can be added to the combo box by using the https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListFieldItem.html class.
+The [PdfComboBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfComboBoxField.html) Instance is used to create a combo box field in PDF forms. A list of selectable items can be added to the combo box by using the [PdfListFieldItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListFieldItem.html) class.
 
 Please refer the below code snippet for adding the combo box in LoadedDocument.
 
@@ -298,55 +286,6 @@ End Sub
 
 {% endhighlight %}
 {% endtabs %}
-
-### Signature Field
-
-**Add Programmatically (API)**
-A signature field in PDF forms can be added using the https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSignatureField.html class.
-
-Please refer the below code snippet for adding the signature field in LoadedDocument.
-
-{% tabs %}
-{% highlight C# %}
-
-private void AddSignatureField_Click(object sender, RoutedEventArgs e)
-{
-    if (pdfViewer.LoadedDocument.Form != null)
-    {
-	    PdfLoadedPage page = pdfViewer.LoadedDocument.Pages[0] as PdfLoadedPage;
-		//Create PDF Signature field.
-		PdfSignatureField signatureField = new PdfSignatureField(page, "Signature");
-		//Set properties to the signature field.
-		signatureField.Bounds = new RectangleF(0, 100, 90, 20);
-		signatureField.ToolTip = "Signature";
-		//Add the form field to the document.
-		pdfViewer.LoadedDocument.Form.Fields.Add(signatureField);
-		//To view the added signature in the output document
-        pdfViewer.LoadedDocument.Save(System.IO.Path.GetFullPath(@"Output/Output.pdf"));
-    }
-}
-
-{% endhighlight %}
-{% highlight VB %}
-
-Private Sub AddSignatureField_Click(sender As Object, e As RoutedEventArgs)
-    If pdfViewer.LoadedDocument.Form IsNot Nothing Then
-        Dim page As PdfLoadedPage = TryCast(pdfViewer.LoadedDocument.Pages(0), PdfLoadedPage)
-		Dim signatureField As New PdfSignatureField(page, "Signature")
-		' Set properties of the signature field.
-		signatureField.Bounds = New RectangleF(0F, 100F, 90F, 20F)
-		signatureField.ToolTip = "Signature"
-		' Add the form field to the document.
-		pdfViewer.LoadedDocument.Form.Fields.Add(signatureField)
-		' To view the added signature in the output document
-        pdfViewer.LoadedDocument.Save(Path.GetFullPath("Output/Output.pdf"))
-    End If
-End Sub
-
-{% endhighlight %}
-{% endtabs %}
-
-N > To ensure the signature appears in the document, save the loaded PDF after applying the signature.
 
 ## See Also
 -  [Overview](../overview)
