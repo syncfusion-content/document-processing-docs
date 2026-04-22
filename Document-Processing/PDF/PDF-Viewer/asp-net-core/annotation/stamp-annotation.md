@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Stamp annotation in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Stamp annotation in Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): add, enable/disable, and edit properties.
+title: "Sticky notes annotation in ASP.NET Core PDF Viewer control"
+description: "Learn about sticky note annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): add, edit, delete, and default settings."
 control: PDF Viewer
 platform: document-processing
 documentation: ug
