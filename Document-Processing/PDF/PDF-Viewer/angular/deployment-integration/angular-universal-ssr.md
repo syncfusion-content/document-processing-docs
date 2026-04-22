@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Syncfusion Angular PDF Viewer in Angular Universal (SSR)
+# Syncfusion Angular PDF Viewer in Angular Universal (SSR)
 
 This guide shows how to create an Angular Universal SSR application and integrate the Syncfusion Angular PDF Viewer component.
 

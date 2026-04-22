@@ -221,7 +221,7 @@ Navigate to `http://localhost:4200` in your browser. You should see:
 - Nx uses `project.json` instead of `angular.json`
 - Standalone components reduce NgModule complexity
 - Syncfusion PDF Viewer works entirely on the client side (CSR)
-- This setup scales for enterprise mono-repos
+- This setup scales for enterprise mono-repo
 
 ---
 
@@ -231,7 +231,7 @@ Navigate to `http://localhost:4200` in your browser. You should see:
 - **Standalone components** reduce NgModule complexity and improve tree-shaking
 - **Syncfusion PDF Viewer works on client-side (CSR)** and doesn't require SSR
 - **Dependencies are shared** across the entire workspace, reducing bundle size
-- **Scalable for enterprise mono-repos** with multiple applications
+- **Scalable for enterprise mono-repo** with multiple applications
 
 ---
 

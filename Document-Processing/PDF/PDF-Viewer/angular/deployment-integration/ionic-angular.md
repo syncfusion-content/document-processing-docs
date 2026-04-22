@@ -576,7 +576,7 @@ Create file: `src/app/components/pdf-viewer/pdf-viewer.component.scss`
 {% endtabs %}
 
 **Styling Features:**
-- Flexbox layout for proper container sizing
+- Flex box layout for proper container sizing
 - Responsive height calculation: `calc(100vh - 120px)`
 - Deep styling with `::ng-deep` for Syncfusion internal components
 - Material Design color scheme
