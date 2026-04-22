@@ -129,7 +129,7 @@ The following events/notifications are relevant when documenting image behavior 
 - `setImage` (workbook event) — applies property updates into the model when images are changed programmatically or via UI.
 - `deleteImage` — internal action that removes the image model and DOM overlay.
 - `importModelUpdate` — used during open/import to migrate sheet-level image collections into cell-level arrays (relevant when explaining import behavior).
-- Component `actionBegin` / `actionComplete` — documentation should note these can intercept or cancel image operations (for example, cancelling a delete in `actionBegin`).
+- Component `actionBegin` / `actionComplete` — documentation should note these can intercept or cancel image operations.
 
 ### Cell storage format
 
@@ -148,7 +148,7 @@ These fields are persisted in workbook JSON and are used for rendering, printing
 
 #### insertImage()
 
-Inserts an image into the worksheet. In the current implementation the method accepts an image `File` (from a file input or drag/drop), computes an appropriate size and position, then creates the overlay element.
+Inserts an image into the worksheet. In the current implementation the method accepts an image `File`, computes an appropriate size and position, then creates the overlay element.
 
 **Syntax:**
 ```typescript

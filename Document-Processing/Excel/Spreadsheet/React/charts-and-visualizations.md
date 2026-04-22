@@ -44,7 +44,7 @@ You can insert a chart by selecting the chart icon in the Ribbon toolbar under t
 
 Use the [insertChart](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#insertchart) method to insert the chart programmatically.
 
-The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#insertchart) method is,
+The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertchart) method is,
 
 | Parameter | Type | Description |
 |-----|------|----|
