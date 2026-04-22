@@ -7,9 +7,9 @@ control: AI Agent Tools
 documentation: ug
 ---
 
-# Syncfusion Document SDK Agent Tools Overview
+# Syncfusion Document SDK AI Agent Tools Overview
 
-**Syncfusion Document SDK Agent Tool** is a comprehensive AI toolkit that enables AI models and assistants to autonomously create, manipulate, convert, and extract data from documents using Syncfusion Document SDK libraries.
+**[Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core)** is a comprehensive AI toolkit that enables AI models and assistants to autonomously create, manipulate, convert, and extract data from documents using Syncfusion Document SDK libraries.
 
 It exposes a rich set of well-defined tools and functions that an [AI agent](https://learn.microsoft.com/en-us/agent-framework/get-started/your-first-agent?pivots=programming-language-csharp) can invoke to perform document operations across Word, Excel, PDF, PowerPoint, HTML and Markdown formats - without requiring the host application to implement document-processing logic directly.
 
@@ -43,28 +43,26 @@ The following NuGet packages are required dependencies for the agent tool librar
 
 | Package | Purpose |
 |---|---|
-| [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) | Word document processing |
-| [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core)| PDF document processing |
-| [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) | Excel workbook processing |
-| [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) | PowerPoint presentation processing |
-| [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) | Word to PDF and Image conversions |
-| [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) | PowerPoint to PDF and Image conversions |
-| [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) | Excel to PDF and Image conversions |
-| [Syncfusion.SmartDataExtractor.Net.Core](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.Net.Core) | Structured data extraction from PDF/images |
-| [Syncfusion.SmartTableExtractor.Net.Core](https://www.nuget.org/packages/Syncfusion.SmartTableExtractor.Net.Core) | Table extraction from PDF |
-| [Syncfusion.SmartFormRecognizer.Net.Core](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.Net.Core) | Form field recognition |
-|[Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core)|OCR Processor|
-|[Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows)| HTML to PDF conversion|
+| [Syncfusion.DocIO.NET](https://www.nuget.org/packages/Syncfusion.DocIO.NET) | Word document processing |
+| [Syncfusion.Pdf.NET](https://www.nuget.org/packages/Syncfusion.Pdf.NET)| PDF document processing |
+| [Syncfusion.XlsIO.NET](https://www.nuget.org/packages/Syncfusion.XlsIO.NET) | Excel workbook processing |
+| [Syncfusion.Presentation.NET](https://www.nuget.org/packages/Syncfusion.Presentation.NET) | PowerPoint presentation processing |
+| [Syncfusion.DocIORenderer.NET](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET) | Word to PDF and Image conversions |
+| [Syncfusion.PresentationRenderer.NET](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET) | PowerPoint to PDF and Image conversions |
+| [Syncfusion.XlsIORenderer.NET](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET) | Excel to PDF and Image conversions |
+| [Syncfusion.SmartDataExtractor.NET](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.NET) | Structured data extraction from PDF/images |
+| [Syncfusion.SmartTableExtractor.NET](https://www.nuget.org/packages/Syncfusion.SmartTableExtractor.NET) | Table extraction from PDF |
+| [Syncfusion.SmartFormRecognizer.Net](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.Net) | Form field recognition |
+|[Syncfusion.PDF.OCR.NET](https://www.nuget.org/packages/Syncfusion.PDF.OCR.NET)|OCR Processor|
 
-The following functionalities required additional NuGet packages in non-Windows platforms. 
+The following functionality required additional NuGet packages in non-Windows platforms. 
  
 - [Office to PDF Conversion](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#additional-nuget-packages-required-for-linux) in Linux platform
-
-- [HTML to PDF Conversion](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/nuget-packages-required) in Cross-Platform
 
 ## Supported .NET Versions
 
 - .NET 8.0
+- .NET 9.0
 - .NET 10.0
 
 
