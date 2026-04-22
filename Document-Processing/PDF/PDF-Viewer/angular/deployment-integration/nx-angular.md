@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Angular PDF Viewer in an Nx Workspace
+title: Syncfusion Angular PDF Viewer in Nx Workspace | Syncfusion
 description: A quick guide to integrate Syncfusion Angular PDF Viewer with Angular applications in an Nx monorepo workspace.
 control: PDF Viewer
 platform: document-processing
@@ -221,7 +221,7 @@ Navigate to `http://localhost:4200` in your browser. You should see:
 - Nx uses `project.json` instead of `angular.json`
 - Standalone components reduce NgModule complexity
 - Syncfusion PDF Viewer works entirely on the client side (CSR)
-- This setup scales for enterprise monorepos
+- This setup scales for enterprise mono-repos
 
 ---
 
@@ -231,7 +231,7 @@ Navigate to `http://localhost:4200` in your browser. You should see:
 - **Standalone components** reduce NgModule complexity and improve tree-shaking
 - **Syncfusion PDF Viewer works on client-side (CSR)** and doesn't require SSR
 - **Dependencies are shared** across the entire workspace, reducing bundle size
-- **Scalable for enterprise monorepos** with multiple applications
+- **Scalable for enterprise mono-repos** with multiple applications
 
 ---
 
@@ -289,5 +289,5 @@ npx nx test pdf-viewer-app
 
 - [Syncfusion Angular PDF Viewer Documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/overview)
 - [Nx Documentation](https://nx.dev/docs)
-- [Angular Standalone Components Guide](https://angular.io/guide/standalone-components)
+- [Angular Standalone Components Guide](https://v17.angular.io/docs)
 - [Nx Angular Plugin](https://nx.dev/nx-api/angular)

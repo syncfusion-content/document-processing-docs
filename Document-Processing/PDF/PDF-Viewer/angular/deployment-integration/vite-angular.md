@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Angular PDF Viewer using Vite
+title: Syncfusion Angular PDF Viewer using Vite | Syncfusion
 description: Step-by-step guide to integrate the Syncfusion Angular PDF Viewer in an Angular application that uses the Vite-based Angular CLI build system.
 control: PDF Viewer
 platform: document-processing
@@ -71,7 +71,6 @@ You should see the default Angular welcome page. This confirms the Vite-powered 
 
 ### Step 3: Install Package
 Install the Syncfusion Angular PDF Viewer package:
-Shellnpm install @syncfusion/ej2-angular-pdfviewer
 
 ```bash
 npm install @syncfusion/ej2-angular-pdfviewer

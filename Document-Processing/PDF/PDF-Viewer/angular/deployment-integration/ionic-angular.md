@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Angular PDF Viewer with Ionic
+title: Syncfusion Angular PDF Viewer with Ionic | Syncfusion
 description: Short quickstart for integrating the Syncfusion Angular PDF Viewer into an Ionic Angular application for mobile and web deployment documentation.
 control: PDF Viewer
 platform: document-processing
@@ -763,8 +763,8 @@ N> Ensure all assets (including `ej2-pdfviewer-lib`) are included in the build b
 - **First Load:** ~500ms (WASM initialization)
 - **Subsequent Loads:** <100ms (cached WASM)
 - **PDF Rendering:** Instant (<50ms)
-- **Bundle Size:** Initial 2.96 MB → 387 KB (gzip)
-- **Tab Chunk:** 9.36 MB → 2.38 MB (gzip) after lazy-loading
+- **Bundle Size:** Initial 2.96 MB → 387 KB
+- **Tab Chunk:** 9.36 MB → 2.38 MB after lazy-loading
 
 ## Best Practices
 
@@ -791,5 +791,5 @@ N> Ensure all assets (including `ej2-pdfviewer-lib`) are included in the build b
 
 - [Syncfusion Angular PDF Viewer Documentation](https://www.syncfusion.com/angular-components/angular-pdf-viewer)
 - [Ionic Angular Documentation](https://ionicframework.com/docs/angular/overview)
-- [Angular Standalone Components](https://angular.io/guide/standalone-components)
+- [Angular Standalone Components](https://v17.angular.io/guide/standalone-components)
 - [Capacitor Documentation](https://capacitorjs.com/docs)
