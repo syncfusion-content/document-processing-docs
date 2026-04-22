@@ -21,7 +21,7 @@ Documents are read from and written to storage (Azure Blob, S3, local disk, etc.
 
 | Requirement | Details |
 |---|---|
-| **.NET SDK** | .NET 8.0 or .NET 10.0 |
+| **.NET SDK** | .NET 8.0 or .NET 9.0 or .NET 10.0 |
 | **OpenAI API Key** | Obtain from platform.openai.com |
 | **Azure Storage Account** | Create from [Azure Portal](https://portal.azure.com) with a blob container |
 | **NuGet Packages** | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI), and [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs) |
@@ -30,7 +30,11 @@ Documents are read from and written to storage (Azure Blob, S3, local disk, etc.
 
 Integrating the Agent Tool library into your application involves the following steps:
 
-**Step 1: Register the Syncfusion License**
+**Step 1: Install the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+
+![Install DocIO .NET Core NuGet package](Install_Nuget.png)
+
+**Step 2: Register the Syncfusion License**
 
 Register your Syncfusion license key at application startup before performing any document operations:
 
@@ -42,7 +46,7 @@ if (!string.IsNullOrEmpty(licenseKey))
 }
 ```
 
-**Step 2: Implement IDocumentStorage for Azure Blob Storage**
+**Step 3: Implement IDocumentStorage for Azure Blob Storage**
 
 The `IDocumentStorage` interface defines the contract for storage operations. Create an implementation for Azure Blob Storage:
 
@@ -92,7 +96,7 @@ public class AzureBlobStorage : IDocumentStorage
 
 > **Note:** For other storage providers (AWS S3, local disk, etc.), implement the `IDocumentStorage` interface with the appropriate SDK or file system operations.
 
-**Step 3: Initialize Azure Blob Storage**
+**Step 4: Initialize Azure Blob Storage**
 
 Configure Azure Blob Storage with your connection string and container name:
 
@@ -114,7 +118,7 @@ You can create a folder structure based on your requirements. For example, we ha
 - `Input/` - source documents and templates
 - `Output/` - processed and generated output documents
 
-**Step 4: Create DocumentStorageManager**
+**Step 5: Create DocumentStorageManager**
 
 Unlike in-memory mode which uses separate managers per document type, Storage mode uses a single `DocumentStorageManager` that handles all document types:
 
@@ -126,7 +130,7 @@ var storageManager = new DocumentStorageManager(storage);
 
 The `DocumentStorageManager` automatically detects document types based on file extensions and loads/saves documents from the configured storage backend.
 
-**Step 5: Instantiate Agent Tool Classes and Collect Tools**
+**Step 6: Instantiate AI Agent Tool Classes and Collect Tools**
 
 Each tool class is initialized with the storage manager. Call `GetTools()` on each to retrieve a list of `AITool` objects:
 
@@ -180,7 +184,7 @@ allTools.AddRange(new DataExtractionAgentTools().GetTools());
 
 > **Note:** All tool classes use the same `storageManager` instance, ensuring documents are read from and written to the same storage backend.
 
-**Step 6: Convert Syncfusion AITools to Microsoft.Extensions.AI Functions**
+**Step 7: Convert Syncfusion AITools to Microsoft.Extensions.AI Functions**
 
 Syncfusion `AITool` objects expose a `MethodInfo` and target instance. Use `AIFunctionFactory.Create` from `Microsoft.Extensions.AI` to wrap them into framework-compatible function objects:
 
@@ -204,7 +208,7 @@ Each converted function includes the tool name, description, and parameter metad
 
 > **Note:** AI agents support a maximum of 128 tools. Register only the tools relevant to your scenario to stay within this limit.
 
-**Step 7: Define the System Prompt**
+**Step 8: Define the System Prompt**
 
 The system prompt instructs the agent on document lifecycle management in Storage Mode. This prompt emphasizes the stateless nature of document operations and the requirement for explicit saves:
 
@@ -233,7 +237,7 @@ private static string BuildSystemMessage(string inputDir, string outputDir) => $
     """;
 ```
 
-**Step 8: Build and Register the AI Agent**
+**Step 9: Build and Register the AI Agent**
 
 Create the agent by combining the chat client, system prompt, and converted tools. The agent orchestrates tool invocations based on user requests:
 
@@ -252,7 +256,7 @@ AIAgent agent = new OpenAIClient(apiKey)
         tools: aiTools);
 ```
 
-**Step 9: Run the Chat Loop**
+**Step 10: Run the Chat Loop**
 
 Implement the conversational loop that accepts user input, passes it to the agent, and streams responses:
 
