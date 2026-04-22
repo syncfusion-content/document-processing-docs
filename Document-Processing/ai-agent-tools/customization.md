@@ -14,7 +14,7 @@ The Syncfusion Document SDK Agent Tool library is designed to be extensible. Thi
 
 ## Creating a Custom Agent Tool Class
 
-Follow these steps to expose new document operations to the AI agent.
+Follow these steps to enable new document operations to the AI agent tool library.
 
 **Step 1: Create a Custom Agent Tool by Inheriting AgentToolBase**
 
@@ -195,7 +195,7 @@ namespace Syncfusion.AI.AgentTools.Word
 
 Once your custom tool class is created, register it alongside the built-in tools in your host application.
 
-Documents can be handled using either In‑memory Mode or Storage Mode during AI agent execution. In In‑memory Mode, documents are loaded into memory and shared across tool calls. In Storage Mode, documents are loaded per tool call from external storage and must be explicitly saved to persist changes.
+Documents can be handled using either in‑memory Mode or Storage Mode during AI agent execution. In in‑memory Mode, documents are loaded into memory and shared across tool calls. In Storage Mode, documents are loaded per tool call from external storage and must be explicitly saved to persist changes.
 
 **Step 1: Registering a Custom Tool with the Syncfusion Agent Tools**
 
