@@ -9,7 +9,7 @@ documentation: ug
 # Add Form Field in WPF PDF Viewer
 
 ## Add Form Fields Programmatically 
-The WPF PDF Viewer allows developers to add form fields using code. By accessing the loaded PDF document through the viewer’s API, developers can create and insert form fields directly into the document.
+The [WPF PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) allows developers to add form fields using code. By accessing the loaded PDF document through the viewer’s API, developers can create and insert form fields directly into the document.
 
 ### Textbox
 [PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) Instance is used to create a text box field in PDF forms. 
@@ -85,8 +85,6 @@ End Sub
 {% endtabs %}
 
 ### CheckBox
-
-**Add Programmatically (API)**
 A check box field in PDF forms can be created using the [PdfCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCheckBoxField.html) Instance.
 
 Please refer the below code snippet for adding the check box field in LoadedDocument.
