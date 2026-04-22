@@ -22,7 +22,7 @@ The Syncfusion PDF Viewer supports filling form fields programmatically, via the
 
 3. [Importing form field data](#fill-pdf-forms-through-import-data)
 
-  Import form data to prefill fields from a JSON/FDF/XFDF source so forms are ready for review or signing.
+  Import form data to pre-fill fields from a JSON/FDF/XFDF source so forms are ready for review or signing.
 
 ## Fill PDF forms programmatically 
 
@@ -60,7 +60,7 @@ The Syncfusion PDF Viewer lets users fill form fields directly in the viewer. Cl
 
 The PDF Viewer supports text boxes, check boxes, radio buttons, drop-down lists, list boxes, and signature fields. Filled values remain editable during the viewing session.
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/prefilledforms-cs1" %}
 
 ## Fill PDF forms through Import Data 
 
