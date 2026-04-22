@@ -95,7 +95,7 @@ Users can click form controls and enter/select values. Supported field types inc
 
 ![Form Filling](../../javascript-es6/images/FormFields.gif)
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/react/prefilledforms-cs1" %}
 
 ### 3. Fill form fields through imported data
 
