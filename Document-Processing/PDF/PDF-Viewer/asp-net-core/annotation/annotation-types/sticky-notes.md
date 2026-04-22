@@ -8,7 +8,8 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Add Sticky Notes Annotations in ASP.NET Core PDF Viewer
+# Add Sticky Notes Annotations in ASP.NET Core PDF Viewer
+
 Sticky Notes allow users to place comment markers on the PDF. When clicked, the note opens a popup containing comments, replies, and discussions. Use them to capture review feedback without altering the original content.
 
 ![Sticky Notes overview](../../images/stickynotes_annotation.png)

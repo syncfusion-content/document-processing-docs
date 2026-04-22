@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Line Annotation (Shape) in ASP.NET Core PDF Viewer | Syncfusion
+title: Line Annotation (Shape) in ASP.NET Core PDF Viewer
+| Syncfusion
 description: Learn how to enable, apply, customize, and manage Line annotations in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -216,7 +217,7 @@ function addMultipleLines() {
 
 ## Disable Line Annotation
 
-Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/index-default#enableshapeannotation) property.
+Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableShapeAnnotation) property.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

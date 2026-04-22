@@ -15,7 +15,7 @@ The PDF Viewer provides APIs to read the loaded annotations and to configure glo
 | API | Description |
 |---|---|
 | [annotationCollection](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#annotationcollection) | Gets the loaded document annotation collection. |
-| [annotationDrawingOptions](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/index-default#annotationdrawingoptions) | Options to configure line-type annotation drawing behavior. |
+| [annotationDrawingOptions](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationDrawingOptions) | Options to configure line-type annotation drawing behavior. |
 | [annotationSelectorSettings](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationSelectorSettings) | Configures the annotation selector (selection UI). |
 | [annotationSettings](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationSettings) | Global defaults for all annotations. |
 | [areaSettings](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AreaSettings) | Defaults for Area annotations. |

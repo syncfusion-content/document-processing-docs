@@ -17,6 +17,7 @@ Rectangle annotations let users highlight regions, group content, or draw callou
 
 In the ASP.NET Core PDF Viewer, annotation modules such as Rectangle annotation are enabled by default.
 
+{% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div style="width:100%;height:650px">
     <ejs-pdfviewer id="pdfviewer"

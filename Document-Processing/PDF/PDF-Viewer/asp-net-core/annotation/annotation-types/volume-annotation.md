@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Add Volume Measurement Annotations in ASP.NET Core PDF Viewer | Syncfusion
+title: Add Volume Measurement Annotations in ASP.NET Core PDF Viewer
+| Syncfusion
 description: Learn how to enable, draw, customize, and manage Volume measurement annotations in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -205,7 +206,7 @@ function addStyledVolume() {
   ![Scale dialog](../../images/calibrate_scaledialog.png)
 
 ### Set Default Scale Ratio During Initialization
-Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/index-default#mesaurementsettings).
+Configure scale defaults using [`measurementSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_MeasurementSettings).
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -222,6 +223,8 @@ window.onload = function () {
   viewer.measurementSettings = { scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm' };
 }
 </script>
+{% endhighlight %}
+{% endtabs %}
 
 ## Handle Volume Events
 Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).

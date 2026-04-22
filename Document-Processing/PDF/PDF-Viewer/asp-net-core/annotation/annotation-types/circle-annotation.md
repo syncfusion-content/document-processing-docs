@@ -90,7 +90,7 @@ function addCircle() {
 {% endtabs %}
 
 ## Customize Circle Appearance
-Configure default circle appearance (fill color, stroke color, thickness, opacity) using the [`circleSettings`](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/index-default#circlesettings) property.
+Configure default circle appearance (fill color, stroke color, thickness, opacity) using the [`circleSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_CircleSettings) property.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

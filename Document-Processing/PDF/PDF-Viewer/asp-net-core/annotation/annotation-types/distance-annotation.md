@@ -88,7 +88,7 @@ function addDistance() {
 {% endtabs %}
 
 ## Customize Distance Appearance
-Configure default properties using the [`Distance Settings`](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/index-default#distancesettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Configure default properties using the [`Distance Settings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_DistanceSettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -205,7 +205,7 @@ function addStyledDistance() {
   ![Scale dialog](../../images/calibrate_scaledialog.png)
 
 ### Set Default Scale Ratio During Initialization
-Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/index-default#mesaurementsettings).
+Configure scale defaults using [`measurementSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_MeasurementSettings).
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
