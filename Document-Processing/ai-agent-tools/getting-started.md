@@ -13,16 +13,14 @@ The Syncfusion Document SDK Agent Tool library exposes Word, Excel, PDF, PowerPo
 
 Before you begin, make two key decisions:
 
-1. **Document Manager Mode** — How documents are stored and managed between tool calls
-2. **AI Provider** — Which inference service powers your agent
+1. **Document Manager Mode** - How documents are stored and managed between tool calls
+2. **AI Provider** - Which inference service powers your agent
 
 This guide helps you choose the right configuration for your application.
 
----
-
 ## Document Manager Modes
 
-The library supports two modes for managing document state during agent tool invocations. Both modes expose the same AI tools—the difference is in how and where documents are stored between tool calls.
+The library supports two modes for managing document state during agent tool invocations. Both modes expose the same AI tools-the difference is in how and where documents are stored between tool calls.
 
 ### In-Memory Mode
 
@@ -31,9 +29,7 @@ The library supports two modes for managing document state during agent tool inv
 **When to use:**  
 Choose in-memory Mode for single-instance applications (desktop apps, console tools, or non-scalable environments) where in-memory state won't be lost. It provides the simplest and fastest experience.
 
-**In-Memory Mode**
-
----
+For further details, please refer to this documentation.
 
 ### Storage Mode
 
@@ -42,13 +38,11 @@ Choose in-memory Mode for single-instance applications (desktop apps, console to
 **When to use:**  
 Choose Storage Mode for web APIs or applications that need horizontal scaling, work with large documents, or require state persistence across sessions.
 
-**Storage Mode**
-
----
+For further details, please refer to this documentation.
 
 ## AI Providers
 
-The library works with Microsoft Agent Framework which supports multiple AI inference providers through the `Microsoft.Extensions.AI` abstraction layer. You can use any supported provider without changing Syncfusion tool code—only the client initialization changes.
+The library works with Microsoft Agent Framework which supports multiple AI inference providers through the `Microsoft.Extensions.AI` abstraction layer. You can use any supported provider without changing Syncfusion tool code-only the client initialization changes.
 
 ### Supported Providers
 
@@ -60,8 +54,6 @@ The Microsoft Agent Framework supports the following providers for .NET:
 - **[Microsoft Foundry](https://learn.microsoft.com/en-us/agent-framework/agents/providers/microsoft-foundry)**
 
 For more details, see the [Microsoft Agent Framework Providers documentation](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp).
-
----
 
 > **Note:** Microsoft AI agents understand prompts in any natural language and invoke Agent library tools accordingly. Agent responses are returned in the same language as the prompt.
 
