@@ -68,5 +68,5 @@ End Module
 * [How to zip files using the Syncfusion.Compression.Zip namespace?](how-to-zip-files-using-the-syncfusion-compression-zip-namespace)
 * [How to zip all the files in subfolders using Syncfusion&reg; Compression?](how-to-zip-all-the-files-in-subfolders-using-syncfusion-compression)
 * [How to protect certain cells in a worksheet?](how-to-protect-certain-cells-in-a-worksheet)
-* [How to protect Excel workbook?](https://help.syncfusion.com/file-formats/xlsio/migrate-from-office-automation-to-syncfusion-xlsio/protect-excel-workbook)
-* [How to protect worksheet?](https://help.syncfusion.com/file-formats/xlsio/security#protect-worksheet)
+* [How to protect Excel workbook?](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/protect-excel-workbook)
+* [How to protect worksheet?](https://help.syncfusion.com/document-processing/excel/excel-library/net/security#protect-worksheet)
