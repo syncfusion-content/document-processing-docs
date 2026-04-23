@@ -20,11 +20,11 @@ To get started quickly with React Spreadsheet, you can check this video:
 Use `Vite` to create a new React application.
 
 {% tabs %}
-{% highlight ts tabtitle="TS" %}
-{% include code-snippet/spreadsheet/react/getting-started-cs1/app/vite.ts %}
-{% endhighlight %}
 {% highlight js tabtitle="JS" %}
 {% include code-snippet/spreadsheet/react/getting-started-cs1/app/vite.js %}
+{% endhighlight %}
+{% highlight ts tabtitle="TS" %}
+{% include code-snippet/spreadsheet/react/getting-started-cs1/app/vite.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -58,11 +58,11 @@ Add the following style references to the `src/App.css` file.
 Now, import the `SpreadsheetComponent` into your `src/App.tsx` file and render it.
 
 {% tabs %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/getting-started-cs1/app/app.tsx %}
-{% endhighlight %}
 {% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/spreadsheet/react/getting-started-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/getting-started-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
