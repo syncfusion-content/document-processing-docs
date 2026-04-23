@@ -16,20 +16,20 @@ Build powerful PDF experiences into your .NET MAUI app with the [SfPdfViewer](ht
 
 | Topic | Description |
 |---|---|
-| [Getting Started](https://help.syncfusion.com/maui/pdf-viewer/getting-started) | Install the package, configure the handler, and load your first PDF document. |
-| [Open a Document](https://help.syncfusion.com/maui/pdf-viewer/open-a-document) | Load documents from streams, local storage, URLs, Base64 strings, or password-protected files. |
-| [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview) | Add, edit, import, and export highlights, shapes, ink, stamps, sticky notes, and more. |
-| [Form Filling Overview](https://help.syncfusion.com/maui/pdf-viewer/form-filling-overview) | Fill, edit, import, and export PDF form fields including text boxes, checkboxes, and signatures. |
-| [Text Search](https://help.syncfusion.com/maui/pdf-viewer/text-search) | Search for text and navigate all occurrences in a document. |
-| [Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document) | Save modified documents to a file stream, with optional annotation flattening. |
-| [Toolbar](https://help.syncfusion.com/maui/pdf-viewer/toolbar) | Reference guide to all built-in toolbar names and toolbar item names. |
-| [Toolbar Customization](https://help.syncfusion.com/maui/pdf-viewer/toolbar-customization) | Show, hide, add, remove, and reorder toolbar items. |
-| [UI Customization](https://help.syncfusion.com/maui/pdf-viewer/ui-customization) | Customize the appearance of the PDF Viewer control. |
-| [Redaction](https://help.syncfusion.com/maui/pdf-viewer/redaction) | Permanently remove sensitive content from PDF documents. |
-| [Electronic Signature](https://help.syncfusion.com/maui/pdf-viewer/signature) | Add handwritten, typed, or image-based signatures. |
-| [Keyboard Shortcuts](https://help.syncfusion.com/maui/pdf-viewer/keyboard-shortcuts) | Keyboard shortcuts available on desktop platforms. |
-| [Localization](https://help.syncfusion.com/maui/pdf-viewer/localization) | Translate all built-in strings into any supported language. |
-| [Migration Guide](https://help.syncfusion.com/maui/pdf-viewer/migration) | Migrate from Xamarin.Forms SfPdfViewer to .NET MAUI SfPdfViewer. |
+| [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/getting-started) | Install the package, configure the handler, and load your first PDF document. |
+| [Open a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document) | Load documents from streams, local storage, URLs, Base64 strings, or password-protected files. |
+| [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview) | Add, edit, import, and export highlights, shapes, ink, stamps, sticky notes, and more. |
+| [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview) | Fill, edit, import, and export PDF form fields including text boxes, checkboxes, and signatures. |
+| [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-search) | Search for text and navigate all occurrences in a document. |
+| [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document) | Save modified documents to a file stream, with optional annotation flattening. |
+| [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar) | Reference guide to all built-in toolbar names and toolbar item names. |
+| [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization) | Show, hide, add, remove, and reorder toolbar items. |
+| [UI Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ui-customization) | Customize the appearance of the PDF Viewer control. |
+| [Redaction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/redaction) | Permanently remove sensitive content from PDF documents. |
+| [Electronic Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/signature) | Add handwritten, typed, or image-based signatures. |
+| [Keyboard Shortcuts](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/keyboard-shortcuts) | Keyboard shortcuts available on desktop platforms. |
+| [Localization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/localization) | Translate all built-in strings into any supported language. |
+| [Migration Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/migration) | Migrate from Xamarin.Forms SfPdfViewer to .NET MAUI SfPdfViewer. |
 
 ## Key Features
 
