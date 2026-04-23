@@ -98,6 +98,26 @@ internal static FormatType GetFormatType(string format)
     }
 }
 ```
+## Load documents asynchronously
+
+Document Editor provides an option to load a document asynchronously using the [`openAsyncSettings`] property.
+
+* [`enable`] - Enables or disables async loading.
+* [`initialPageLoadCount`] - Defines the number of pages rendered immediately when the document opens.
+* [`incrementalPageLoadCount`] - Specifies how many pages load in each background batch after the initial set.
+
+The following code shows the how to enable the asynchronous loading in Document Editor.
+
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/import-async/tagHelper %}
+{% endhighlight %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-core/import-async/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+>Note: Users can view the pages already loaded, but all other interactions remain restricted until all pages finish loading.
 
 ## See Also
 
