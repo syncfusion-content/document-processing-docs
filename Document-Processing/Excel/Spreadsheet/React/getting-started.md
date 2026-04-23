@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with React Spreadsheet component
 
-This section explains how to create a simple React application and add the Syncfusion React Spreadsheet Editor component with the minimum required setup.
+This section explains how to create a simple React application and add the [Syncfusion React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component with the minimum required setup.
 
 To get started quickly with React Spreadsheet, you can check this video:
 
@@ -17,7 +17,7 @@ To get started quickly with React Spreadsheet, you can check this video:
 
 ## Create a React application
 
-Use Vite to create a new React application.
+Use `Vite` to create a new React application.
 
 {% tabs %}
 {% highlight js tabtitle="JS" %}
@@ -55,7 +55,7 @@ Add the following style references to the `src/App.css` file.
 
 ## Add the Spreadsheet component
 
-Now, import the `SpreadsheetComponent` into your `src/App.jsx` file and configure the basic **Open** and **Save** service URLs.
+Now, import the `SpreadsheetComponent` into your `src/App.jsx` file and render it.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
