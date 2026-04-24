@@ -186,5 +186,3 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * [Blazor Spreadsheet Overview](overview)
 * [Open and Save](open-and-save)
-
-N> You can also explore our [Blazor Spreadsheet Example](https://document.syncfusion.com/demos/spreadsheet-editor/blazor-server/spreadsheet/overview) that shows you how to render and configure the Spreadsheet.

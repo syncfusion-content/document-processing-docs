@@ -127,7 +127,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
 </head>
 ```
-
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Spreadsheet component
@@ -164,4 +163,3 @@ Note: Due to WebAssembly (WASM) browser restrictions, File.ReadAllBytes is not s
 * [Blazor Spreadsheet Overview](overview.md)
 * [Open and Save](open-and-save.md)
 
-N> You can also explore our [Blazor Spreadsheet Example](https://document.syncfusion.com/demos/spreadsheet-editor/blazor-wasm/spreadsheet/overview) that shows you how to render and configure the Spreadsheet.
