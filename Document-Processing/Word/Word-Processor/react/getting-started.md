@@ -170,7 +170,7 @@ Add the Document editor component and its dependent component styles available i
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
-Add the DocumentEditorContainer component to your application. In the `src/App.tsx` file, add the following code to initialize the component:
+Add the DocumentEditorContainer component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
 
 {% raw %}
 
