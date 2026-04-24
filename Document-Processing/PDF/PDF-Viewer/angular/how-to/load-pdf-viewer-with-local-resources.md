@@ -32,7 +32,7 @@ xcopy /E /I xcopy /E /I node_modules\@syncfusion\ej2-pdfviewer\dist\ej2-pdfviewe
 {% endhighlight %}
 {% highlight bash tabtitle="Mac/Linux" %}
 
-cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib src/assets/ej2-pdfviewer-lib
+cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib public/assets/ej2-pdfviewer-lib
 
 {% endhighlight %}
 {% endtabs %}
@@ -58,12 +58,20 @@ Configure the Angular PDF Viewer to use local paths.
 
 ```ts
 import { Component } from '@angular/core';
-import { PdfViewerModule } from '@syncfusion/ej2-angular-pdfviewer';
+import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
+         MagnificationService, ThumbnailViewService, ToolbarService,
+         NavigationService, TextSearchService, TextSelectionService,
+         PrintService, FormDesignerService, FormFieldsService,
+         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [PdfViewerModule],
+  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
+               ThumbnailViewService, ToolbarService, NavigationService,
+               TextSearchService, TextSelectionService, PrintService,
+               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
   template: `
     <ejs-pdfviewer
       id="pdfViewer"
