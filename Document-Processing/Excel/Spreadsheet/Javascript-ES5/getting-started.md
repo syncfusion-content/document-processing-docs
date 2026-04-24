@@ -7,7 +7,7 @@ control: Getting started
 documentation: ug
 ---
 
-# Getting Started with EJ2 Javascript Spreadsheet component
+# Getting Started with Javascript Spreadsheet component
 
 This section explains the steps to create a simple Essential<sup style="font-size:70%">&reg;</sup> JS 2 Spreadsheet control in a JavaScript application.
 
@@ -15,12 +15,13 @@ This section explains the steps to create a simple Essential<sup style="font-siz
 
 To get started, ensure the following software is installed on your machine:
 
+- [Spreadsheet Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Essential Studio® JavaScript (Essential® JS 2)](https://www.syncfusion.com/downloads/essential-js2)
 
 > **Note:** If you are using Syncfusion® CDN resources to build your web application, you can skip the Essential Studio® JavaScript prerequisite.
 
-## Create the JavaScript application
+## Create the JavaScript Project
 
 Create a simple JavaScript application to render the Spreadsheet control.
 
@@ -37,7 +38,7 @@ Add the required Syncfusion Essential<sup style="font-size:70%">&reg;</sup> JS 2
 
 You can access Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet control resources using either of the following methods:
 
-- **Using local scripts and styles** – Copy the required scripts and styles from the [Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript (Essential<sup style="font-size:70%">&reg;</sup> JS 2)](https://www.syncfusion.com/downloads/essential-js2) build to the `resources` folder in your application.
+- **Using local scripts and styles** – Copy the required script and style files from the [Essential Studio® JavaScript (Essential® JS 2)](https://www.syncfusion.com/downloads/essential-js2) build into the `resources` folder of your application.
 
   Your application structure should look like this:
 
@@ -131,11 +132,9 @@ You can access Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet cont
 {% endhighlight %}
 {% endtabs %}
 
-## Add the Syncfusion® Spreadsheet component to the application
+## Add the Syncfusion® Spreadsheet component to the project
 
 After adding the required style references, add a container element for the Spreadsheet control in the `index.html` file and then initialize the control in the `index.js` file.
-
-Add the following markup inside the `<body>` element of the `index.html` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -188,5 +187,4 @@ Output will be displayed as follows.
 ## See Also
 
 * [Data Binding](./data-binding)
-* [Open Excel files](./open)
-* [Save Excel files](./save)
+* [Open and Save](./open-save)
