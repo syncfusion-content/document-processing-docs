@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Server-Backed EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to integrate the server-backed PDF Viewer control in an ASP.NET Core application. View, annotate, and fill PDF forms with server-side rendering and processing.
+title: Getting Started with Server-Backed ASP.NET Core PDF Viewer
+description: Learn how to integrate the server-backed PDF Viewer control in an ASP.NET Core application. View and annotate with server-side rendering.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -22,7 +22,7 @@ This article shows how to add the [Syncfusion® Server-backed ASP.NET Core PDF V
 
 ## Create a new ASP.NET Core Web App in Visual Studio
 
-You can create a ASP.NET Core Web App using Visual Studio 2022 by the following the instructions [here](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=visualstudio).
+Create an ASP.NET Core Web App using Visual Studio 2022 by the following the instructions [here](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=visualstudio).
 
 ## ASP.NET Core PDF Viewer NuGet package installation
 
@@ -36,7 +36,7 @@ To add the ASP.NET Core PDF Viewer component, open the NuGet package manager in 
 
 ## Create a new ASP.NET Core Web App in Visual Studio Code
 
-You can create a **ASP.NET Core Web App** in Visual Studio Code using the following commands:
+Create an **ASP.NET Core Web App** in Visual Studio Code using the following commands:
 
 {% tabs %}
 {% highlight c# tabtitle="ASP.NET Core" %}
@@ -120,7 +120,7 @@ To use locally availabe script and style resources, follow these [instructions](
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
 
-Open `~/Pages/Shared/_Layout.cshtml` and register the script manager at the end of the `<body>` tag. The script manager initializes Syncfusion components and manages their lifecycle.
+Open `~/Pages/Shared/_Layout.cshtml` and register the script manager at the end of the `<body>` tag. The script manager initializes Syncfusion components and manages their life cycle.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Layout.cshtml" %}

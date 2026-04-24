@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Standalone ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to integrate the standalone ASP.NET Core PDF Viewer control in your web application. View, print, search, annotate, and fill PDF forms with client-side rendering.
+description: Learn how to integrate the standalone ASP.NET Core PDF Viewer control in your web application. View and annotate with client-side rendering.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -22,7 +22,7 @@ This article shows how to add the [Syncfusion® Standalone ASP.NET Core PDF View
 
 ## Create a new ASP.NET Core Web App in Visual Studio
 
-You can create a ASP.NET Core Web App using Visual Studio 2022 by following the instructions [here](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=visualstudio).
+Create an ASP.NET Core Web App using Visual Studio 2022 by following the instructions [here](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=visualstudio).
 
 ## ASP.NET Core PDF Viewer NuGet package installation
 
@@ -36,7 +36,7 @@ To add the ASP.NET Core PDF Viewer component, open the NuGet package manager in 
 
 ## Create a new ASP.NET Core Web App in Visual Studio Code
 
-You can create a **ASP.NET Core Web App** in Visual Studio Code using the following commands:
+Create an **ASP.NET Core Web App** in Visual Studio Code using the following commands:
 
 {% tabs %}
 {% highlight c# tabtitle="ASP.NET Core" %}
@@ -116,11 +116,11 @@ Add the Syncfusion JavaScript library using the CDN inside the `<head>` of `~/Pa
 {% endhighlight %}
 {% endtabs %}
 
-To use locally availabe script and style resources, follow these [instructions](./how-to/local-resources#configuring-pdf-viewer-with-local-styles-and-scripts)
+To use locally available script and style resources, follow these [instructions](./how-to/local-resources#configuring-pdf-viewer-with-local-styles-and-scripts)
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
 
-Open the `~/Pages/Shared/_Layout.cshtml` page and register the script manager at the end of the `<body>` tag. The script manager initializes Syncfusion components and manages their lifecycle.
+Open the `~/Pages/Shared/_Layout.cshtml` page and register the script manager at the end of the `<body>` tag. The script manager initializes Syncfusion components and manages their life cycle.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Layout.cshtml" %}
