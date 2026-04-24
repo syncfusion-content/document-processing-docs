@@ -10,17 +10,17 @@ documentation: ug
 
 # Getting Started with ASP.NET Core Spreadsheet Control
 
-This section briefly explains about how to include [ASP.NET Core Spreadsheet](https://www.syncfusion.com/aspnet-core-ui-controls/spreadsheet) control in your ASP.NET Core application using Visual Studio.
+This section briefly explains about how to include [Syncfusion® ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) control in your ASP.NET Core application using Visual Studio.
 
 ## Prerequisites
 
-[System requirements for ASP.NET Core controls](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements)
+[System requirements for Syncfusion® ASP.NET Core controls](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements)
 
 ## Create ASP.NET Core web application with Razor pages
 
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio#create-a-razor-pages-web-app)
 
-## Install ASP.NET Core package in the application
+## Install Syncfusion® ASP.NET Core package in the application
 
 Open the NuGet package manager UI in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) and then install it.  Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -32,7 +32,7 @@ Install-Package Syncfusion.EJ2.AspNet.Core -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core controls are available in [nuget.org.](https://www.nuget.org/packages?q=syncfusion.EJ2) Refer to [NuGet packages topic](https://ej2.syncfusion.com/aspnetcore/documentation/nuget-packages) to learn more about installing NuGet packages in various OS environments. The Syncfusion.EJ2.AspNet.Core NuGet package has dependencies, [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for validating Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core controls are available in [nuget.org.](https://www.nuget.org/packages?q=syncfusion.EJ2) Refer to [NuGet packages topic](https://ej2.syncfusion.com/aspnetcore/documentation/nuget-packages) to learn more about installing NuGet packages in various OS environments.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Tag Helper
 Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelper.
@@ -47,7 +47,7 @@ Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 
 ## Add stylesheet and script resources
 
-Here, the theme and script is referred using CDN inside the `<head>` of `~/Pages/Shared/_Layout.cshtml` file as follows,
+Here, the theme and script is referred using [CDN](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#cdn-reference) inside the `<head>` of `~/Pages/Shared/_Layout.cshtml` file as follows,
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -63,9 +63,7 @@ Here, the theme and script is referred using CDN inside the `<head>` of `~/Pages
 {% endhighlight %}
 {% endtabs %}
 
-N> Checkout the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/appearance/theme) to learn different ways ([CDN](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#cdn-reference), [NPM package](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm), and [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)) to refer styles in ASP.NET Core application, and to have the expected appearance for Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core controls.
-
-N> Checkout the [Adding Script Reference](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your ASP.NET Core application.
+N> To learn other ways to load themes or scripts (such as [NPM packages](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm) or [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)), see the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/appearance/theme) and [Adding Script Reference](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references) documentation.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
 
@@ -83,7 +81,7 @@ Also, register the script manager `<ejs-script>` at the end of `<body>` in the A
 {% endhighlight %}
 {% endtabs %}
 
-## Add ASP.NET Core Spreadsheet control
+## Add Syncfusion® ASP.NET Core Spreadsheet control
 
 Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Spreadsheet tag helper in `~/Pages/Index.cshtml` page.
 
@@ -108,5 +106,3 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Ge
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core MVC using Tag Helper](https://ej2.syncfusion.com/aspnetcore/documentation/getting-started/aspnet-core-mvc-taghelper)
 * [Data Binding](./data-binding)
 * [Open and Save](./open-save)
-
-N> You can refer to our [ASP.NET Core Spreadsheet](https://www.syncfusion.com/aspnet-core-ui-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/asp-net-core/spreadsheet/defaultfunctionalities) that shows you how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
