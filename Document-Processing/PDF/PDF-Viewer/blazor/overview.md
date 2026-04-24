@@ -87,3 +87,5 @@ N> Enable desktop mode on mobile devices using the [EnableDesktopMode](https://h
 N> The `SfPdfViewer` component is available for both Blazor Server and Blazor WebAssembly applications. Use the `SfPdfViewer` component from the `Syncfusion.Blazor.SfPdfViewer` NuGet package; server-side processing through a web service is not required to render PDF files in client scenarios. For platform-specific server packages, see the NuGet listings for Windows, Linux, and macOS.
 
 N> See the [Blazor SfPdfViewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) for a concise overview of capabilities and the [Blazor SfPdfViewer demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities?theme=fluent) to explore core features interactively.
+
+N> The PDF Viewer supports .NET 8.0 and later versions.

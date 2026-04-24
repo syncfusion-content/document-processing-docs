@@ -19,15 +19,13 @@ This article shows how to add the Syncfusion&reg; Blazor PDF Viewer to a Blazor 
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-* To use the PDF Viewer with SkiaSharp in a Blazor WebAssembly app, ensure the required .NET workloads are installed by running:
-    * dotnet workload install wasm-tools
-    * dotnet workload install wasm-tools-net8 (For .NET 8.0) or dotnet workload install wasm-tools-net9 (For .NET 9.0) or dotnet workload install wasm-tools-net10 (For .NET 10.0)
+N> To use the PDF Viewer with SkiaSharp in a Blazor WebAssembly app, ensure the required .NET workloads are installed by running:
+* dotnet workload install wasm-tools
+* dotnet workload install wasm-tools-net8 (For .NET 8.0) or dotnet workload install wasm-tools-net9 (For .NET 9.0) or dotnet workload install wasm-tools-net10 (For .NET 10.0)
 
 ## Create a new Blazor App in Visual Studio    
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
-
-N> The PDF Viewer supports .NET 8.0 and later.
+You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install NuGet packages
 
@@ -47,13 +45,13 @@ N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this vers
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-* To use the PDF Viewer with SkiaSharp in a Blazor WebAssembly app, ensure the required .NET workloads are installed by running:
-    * dotnet workload install wasm-tools
-    * dotnet workload install wasm-tools-net8 (For .NET 8.0) or dotnet workload install wasm-tools-net9 (For .NET 9.0) or dotnet workload install wasm-tools-net10 (For .NET 10.0)
+N> To use the PDF Viewer with SkiaSharp in a Blazor WebAssembly app, ensure the required .NET workloads are installed by running:
+* dotnet workload install wasm-tools
+* dotnet workload install wasm-tools-net8 (For .NET 8.0) or dotnet workload install wasm-tools-net9 (For .NET 9.0) or dotnet workload install wasm-tools-net10 (For .NET 10.0)
 
 ## Create a new Blazor App in Visual Studio Code
 
-You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 Alternatively, create a WebAssembly application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
@@ -68,7 +66,6 @@ cd BlazorApp
 
 {% endtabs %}
 
-N> The PDF Viewer supports .NET 8.0 and later.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the app
 
@@ -97,7 +94,7 @@ N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nu
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Add import namespaces
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -110,7 +107,9 @@ N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nu
 {% endhighlight %}
 {% endtabs %}
 
-* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file.
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 9 13" %}
