@@ -235,6 +235,6 @@ root.render(<App />);
 
 **See also**
 
-- [Annotations in PDF Viewer](./annotation/overview)
-- [Form Designer in PDF Viewer](./forms/overview#form-designer)
+- [PDF Viewer Annotations](./annotation/overview)
+- [PDF Viewer Form Designer](./forms/overview#form-designer)
 - [Organize PDF pages](./organize-pages/overview)
