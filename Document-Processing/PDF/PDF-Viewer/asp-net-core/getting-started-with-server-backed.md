@@ -185,7 +185,7 @@ Run the app to display the PDF in the Syncfusion&reg; ASP.NET Core PDF Viewer in
   | **Amazon Web Services (AWS)** |**NuGet package name** |
   | --- | --- |
   | AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
-  | AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
+  | AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
 
 - The `serviceUrl` can be updated dynamically at runtime. After updating the value, invoke `pdfViewer.dataBind()` to apply the change and then load the document. This feature is supported in version 23.1.36 or later.
 
