@@ -222,8 +222,6 @@ After the application starts, open the local URL shown in the terminal to view t
 
 > You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) that shows you how to present and manipulate data.
 
-For Migrating from Vue 2 to Vue 3 refer the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial#migration-from-vue-2-to-vue-3) documentation
-
 ## See also
 
 * [Data Binding](./data-binding)
