@@ -2,6 +2,7 @@
 layout: post
 title: Getting started with Vue Spreadsheet component | Syncfusion
 description:  Checkout and learn about Getting started with Vue Spreadsheet component of Syncfusion Essential JS 2 and more details.
+control: Getting started
 platform: document-processing
 documentation: ug
 ---
