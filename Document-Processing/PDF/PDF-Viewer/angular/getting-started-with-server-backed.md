@@ -144,28 +144,6 @@ The application will start and connect to the configured PDF Viewer web service.
 
 ---
 
-## Module injection (Optional features)
-
-The following services can be injected **only if required** to enable additional features such as annotations, thumbnails, search, or form field support:
-
-* `LinkAnnotationService`: Enables hyperlink navigation.
-* `BookmarkViewService`: Displays and navigates document bookmarks.
-* `MagnificationService`: Provides zoom in/out operations.
-* `NavigationService`: Enables page navigation.
-* `TextSelectionService`: Enables text selection.
-* `ThumbnailViewService`: Displays page thumbnails for navigation.
-* `ToolbarService`: Enables the built-in toolbar UI.
-* `PrintService`: Enables printing.
-* `AnnotationService`: Enables annotation features.
-* `TextSearchService`: Enables text search.
-* `FormFieldsService`: Enables form field support.
-* `FormDesignerService`: Enables designing and editing of form fields.
-* `PageOrganizerService`: Enables page organization features.
-
-Inject only the services required for your use case to optimize application performance.
-
----
-
 ## Run the PDF Viewer web service
 
 To host your own PDF Viewer service:

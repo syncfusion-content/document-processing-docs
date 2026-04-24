@@ -145,28 +145,6 @@ The PDF document will be rendered in the browser.
 
 ---
 
-## Module injection (Optional features)
-
-The following services can be injected **only if required** to enable additional capabilities such as annotations, thumbnails, search, or form fields:
-
-* `LinkAnnotationService`: Enables hyperlink navigation.
-* `BookmarkViewService`: Displays and navigates document bookmarks.
-* `MagnificationService`: Provides zoom in/out operations.
-* `NavigationService`: Enables page navigation.
-* `TextSelectionService`: Enables text selection.
-* `ThumbnailViewService`: Displays page thumbnails for navigation.
-* `ToolbarService`: Enables the built-in toolbar UI.
-* `PrintService`: Enables printing.
-* `AnnotationService`: Enables annotation features.
-* `TextSearchService`: Enables text search.
-* `FormFieldsService`: Enables form field support.
-* `FormDesignerService`: Enables designing and editing of form fields.
-* `PageOrganizerService`: Enables page organization features.
-
-Inject only the services needed for your use case to optimize application performance.
-
----
-
 ## Angular version compatibility and older versions
 
 For detailed compatibility information, refer to the [Angular version support matrix](https://ej2.syncfusion.com/angular/documentation/system-requirement#angular-version-compatibility).
