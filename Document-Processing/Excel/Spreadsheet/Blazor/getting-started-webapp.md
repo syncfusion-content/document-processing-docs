@@ -153,7 +153,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveAuto
+@rendermode InteractiveServer
 
 {% endhighlight %}
 {% endtabs %}
