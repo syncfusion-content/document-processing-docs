@@ -9,26 +9,34 @@ documentation: ug
 
 # Getting Started with React Spreadsheet component
 
-This section explains how to create a simple React application and add the [Syncfusion React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component with the minimum required setup.
+This section explains how to create a simple React application and add the [Syncfusion® React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component with the minimum required setup.
 
-To get started quickly with React Spreadsheet, you can check this video:
+## Prerequisites
 
-{% youtube "https://www.youtube.com/watch?v=3Cx9AnKAHdY" %}
+[System requirements for Syncfusion® React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ## Create a React application
 
-Use `Vite` to create a new React application.
+Use [`Vite`](https://vite.dev/guide/) to create a new React application, as it provides a faster development environment, smaller bundle sizes, and optimized builds.
+
+To create a new React application, run one of the following commands based on your preferred environment.
 
 {% tabs %}
-{% highlight js tabtitle="JS" %}
-{% include code-snippet/spreadsheet/react/getting-started-cs1/app/vite.js %}
+{% highlight js tabtitle="JavaScript" %}
+
+npm create vite@latest spreadsheet-app -- --template react
+cd spreadsheet-app
+
 {% endhighlight %}
-{% highlight ts tabtitle="TS" %}
-{% include code-snippet/spreadsheet/react/getting-started-cs1/app/vite.ts %}
+{% highlight ts tabtitle="TypeScript" %}
+
+npm create vite@latest spreadsheet-app -- --template react-ts
+cd spreadsheet-app
+
 {% endhighlight %}
 {% endtabs %}
 
-## Install the Syncfusion Spreadsheet package
+## Install the Syncfusion® React Spreadsheet package
 
 Install the [React Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-react-spreadsheet) package from npm using the following command:
 
@@ -36,7 +44,7 @@ Install the [React Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-re
 npm install @syncfusion/ej2-react-spreadsheet --save
 ```
 
-## Add the required CSS references
+## Add CSS references
 
 Add the following style references to the `src/App.css` file.
 
@@ -53,9 +61,9 @@ Add the following style references to the `src/App.css` file.
 @import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/material.css';
 ```
 
-## Add the Spreadsheet component
+## Add the Syncfusion® React Spreadsheet component to the application
 
-Now, import the `SpreadsheetComponent` into your `src/App.tsx` file and render it.
+Now, import the `SpreadsheetComponent` into your `src/App.jsx` or `src/App.tsx` file and render it.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -84,7 +92,13 @@ The following example shows a basic spreadsheet component.
 
 > You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) that shows you how to present and manipulate data.
 
-## See Also
+## Video tutorial
+
+To get started quickly with React Spreadsheet, you can watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=3Cx9AnKAHdY" %}
+
+## See also
 
 * [Data Binding](./data-binding)
 * [Open Excel files](./open-excel-files)
