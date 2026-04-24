@@ -16,28 +16,23 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Create a Vue application
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Use the [Vue CLI](https://cli.vuejs.org/#getting-started) to set up a Vue application.
 
-{% tabs %}
-{% highlight js tabtitle="npm" %}
+Install Vue CLI using the following command:
 
+```
 npm install -g @vue/cli
+```
+
+Create a new Vue application using the following commands:
+
+```
 vue create quickstart
 cd quickstart
 npm run serve
+```
 
-{% endhighlight %}
-{% highlight ts tabtitle="yarn" %}
-
-yarn global add @vue/cli
-vue create quickstart
-cd quickstart
-yarn run serve
-
-{% endhighlight %}
-{% endtabs %}
-
-## Install the Syncfusion® Vue Spreadsheet package
+## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet package
 
 Install the [Vue Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet) package from npm using the following command:
 
@@ -47,7 +42,7 @@ npm install @syncfusion/ej2-vue-spreadsheet --save
 
 ## Add CSS references
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio).
+Add the following style references.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -67,15 +62,11 @@ You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> V
 {% endhighlight %}
 {% endtabs %}
 
-## Note
+> **Note:** Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component to the application
 
-## Add the Syncfusion® Vue Spreadsheet component to the application
-
-Import and register the Spreadsheet component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. In the `template` section define the Spreadsheet component
-
-Here is the code for the above steps in the **src/App.vue** file:
+Import and register the Spreadsheet component in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -87,31 +78,23 @@ Here is the code for the above steps in the **src/App.vue** file:
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, please refer to our [`blog`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) post.
+> **Note:** The [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
 
 ## Run the application
 
 Run the following command to start the application:
 
-{% tabs %}
-{% highlight js tabtitle="npm" %}
-
+```
 npm run serve
-
-{% endhighlight %}
-{% highlight ts tabtitle="yarn" %}
-
-yarn run serve
-
-{% endhighlight %}
-{% endtabs %}
+```
 
 After the application starts, open the local URL shown in the terminal to view the Vue Spreadsheet Editor in the browser.
 
-> You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) that shows you how to present and manipulate data.
+The following example shows a basic spreadsheet component.
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/getting-started-cs1" %}
 
 ## See also
 
 * [Data Binding](./data-binding)
-* [Open Excel files](./open-excel-files)
-* [Save Excel files](./save-excel-files)
+* [Open and Save](./open-save)

@@ -1,5 +1,5 @@
 <template>
-  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
+  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
 </template>
 
 <script>
