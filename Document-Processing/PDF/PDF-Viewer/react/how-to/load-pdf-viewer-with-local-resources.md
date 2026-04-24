@@ -36,7 +36,7 @@ cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib public/ass
 
 ### Step 2: Add Your PDF Document
 
-Place your PDF file in the `public/assets/` folder (e.g., `pdfsuccinctly.pdf`).
+Place your PDF file in the `public/assets/` folder.
 
 **Your folder structure:**
 
@@ -120,7 +120,5 @@ root.render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
-N> Replace `pdfsuccinctly.pdf` with your actual PDF filename.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
