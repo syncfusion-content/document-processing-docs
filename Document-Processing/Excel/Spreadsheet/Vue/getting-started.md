@@ -71,6 +71,7 @@ Import and register the Spreadsheet component directives in the `script` section
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
+
 <template>
   <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
 </template>
@@ -81,10 +82,12 @@ import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spre
 const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
 const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
 </script>
+
 {% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% raw %}
+
 <template>
   <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
 </template>
@@ -105,6 +108,7 @@ export default {
   }
 }
 </script>
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}

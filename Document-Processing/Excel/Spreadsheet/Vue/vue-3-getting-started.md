@@ -102,6 +102,7 @@ const data = [
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% raw %}
+
 <template>
   <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl">
     <e-sheets>
