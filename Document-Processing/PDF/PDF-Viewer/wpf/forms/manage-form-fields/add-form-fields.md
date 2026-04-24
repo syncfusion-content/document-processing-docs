@@ -1,0 +1,292 @@
+---
+layout: post
+title: Add form fields in the WPF PDF Viewer | Syncfusion
+description: Learn how to add various PDF form fields programmatically using the Syncfusion WPF PDF Viewer API to create interactive form fields and build dynamic PDF forms.
+platform: document-processing
+control: PDF Viewer
+documentation: ug
+---
+# Add Form Field in WPF PDF Viewer
+
+## Add Form Fields Programmatically 
+The [WPF PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) allows developers to add form fields using code. By accessing the loaded PDF document through the viewer’s API, developers can create and insert form fields directly into the document.
+
+### Textbox
+[PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) Instance is used to create a text box field in PDF forms. 
+
+The below code snippet illustrates how to add a textbox field to a LoadedDocument
+{% tabs %}
+{% highlight C# %}
+
+private void AddTextbox_Click(object sender, RoutedEventArgs e)
+{
+    if (pdfViewer.LoadedDocument.Form != null)
+    {
+        PdfLoadedPage page = pdfViewer.LoadedDocument.Pages[0] as PdfLoadedPage;
+        //Create a textbox field and add the properties.
+        PdfTextBoxField textBoxField = new PdfTextBoxField(page, "FirstName");
+        textBoxField.Bounds = new RectangleF(0, 0, 100, 20);
+        //Add the form field to the document.
+        pdfViewer.LoadedDocument.Form.Fields.Add(textBoxField);
+    }
+}
+
+{% endhighlight %}
+{% highlight VB %}
+
+Private Sub AddTextbox_Click(sender As Object, e As RoutedEventArgs)
+    If pdfViewer.LoadedDocument.Form IsNot Nothing Then
+        Dim page As PdfLoadedPage = TryCast(pdfViewer.LoadedDocument.Pages(0), PdfLoadedPage)
+        `Create a textbox field and add the properties.
+        Dim textBoxField As PdfTextBoxField = New PdfTextBoxField(page, "FirstName")
+        textBoxField.Bounds = New RectangleF(0, 0, 100, 20)
+        `Add the form field to the document.
+        pdfViewer.LoadedDocument.Form.Fields.Add(textBoxField)
+    End If
+End Sub
+
+{% endhighlight %}
+{% endtabs %}
+
+
+### Password
+[PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) Instance is used to create a text box field in PDF forms. This field allows users to enter text input into the document. It also supports password functionality by setting the Password property to true.
+
+{% tabs %}
+{% highlight C# %}
+
+private void AddPasswordbox_Click(object sender, RoutedEventArgs e)
+{
+    if (pdfViewer.LoadedDocument.Form != null)
+    {
+	    PdfLoadedPage page = pdfViewer.LoadedDocument.Pages[0] as PdfLoadedPage;
+        PdfTextBoxField passwordField = new PdfTextBoxField(page, "UserPassword");
+		passwordField.Bounds = new RectangleF(0, 30, 150, 22);
+		passwordField.Password = true;
+		pdfViewer.LoadedDocument.Form.Fields.Add(passwordField);
+    }
+}
+
+{% endhighlight %}
+{% highlight VB %}
+
+Private Sub AddPasswordbox_Click(sender As Object, e As RoutedEventArgs)
+    If pdfViewer.LoadedDocument.Form IsNot Nothing Then
+        Dim page As PdfLoadedPage = TryCast(pdfViewer.LoadedDocument.Pages(0), PdfLoadedPage)
+        Dim passwordField As New PdfTextBoxField(page, "UserPassword")
+		passwordField.Bounds = New RectangleF(0, 30, 150, 22)
+		passwordField.Password = True
+		' Add the field to the PDF form
+		pdfViewer.LoadedDocument.Form.Fields.Add(passwordField)
+    End If
+End Sub
+
+{% endhighlight %}
+{% endtabs %}
+
+### CheckBox
+A check box field in PDF forms can be created using the [PdfCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCheckBoxField.html) Instance.
+
+Please refer the below code snippet for adding the check box field in LoadedDocument.
+
+{% tabs %}
+{% highlight C# %}
+
+private void AddCheckbox_Click(object sender, RoutedEventArgs e)
+{
+    if (pdfViewer.LoadedDocument.Form != null)
+    {
+	    PdfLoadedPage page = pdfViewer.LoadedDocument.Pages[0] as PdfLoadedPage;
+		//Create Check Box field.
+        PdfCheckBoxField checkBoxField = new PdfCheckBoxField(page, "CheckBox");
+        //Set check box properties.
+        checkBoxField.ToolTip = "Check Box";
+        checkBoxField.Bounds = new RectangleF(0, 20, 10, 10);
+        //Add the form field to the document.
+        pdfViewer.LoadedDocument.Form.Fields.Add(checkBoxField);
+    }
+}
+
+{% endhighlight %}
+{% highlight VB %}
+
+Private Sub AddCheckbox_Click(sender As Object, e As RoutedEventArgs)
+    If pdfViewer.LoadedDocument.Form IsNot Nothing Then
+        Dim page As PdfLoadedPage = TryCast(pdfViewer.LoadedDocument.Pages(0), PdfLoadedPage)
+        'Create Check Box field.
+		Dim checkBoxField As New PdfCheckBoxField(page, "CheckBox")
+		'Set check box properties.
+		checkBoxField.ToolTip = "Check Box"
+		checkBoxField.Bounds = New RectangleF(0, 20, 10, 10)
+		'Add the form field to the document.
+		pdfViewer.LoadedDocument.Form.Fields.Add(checkBoxField)
+    End If
+End Sub
+
+{% endhighlight %}
+{% endtabs %}
+
+### RadioButton
+Radio buttons in PDF forms can be created using the [PdfRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListField.html) Instance. Individual radio button items within the group can be created using the [PdfRadioButtonListItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListItem.html) Instance.
+
+Please refer the below code snippet for adding the radio button in LoadedDocument.
+
+{% tabs %}
+{% highlight C# %}
+
+private void AddRadioButton_Click(object sender, RoutedEventArgs e)
+{
+    if (pdfViewer.LoadedDocument.Form != null)
+    {
+	    PdfLoadedPage page = pdfViewer.LoadedDocument.Pages[0] as PdfLoadedPage;
+		PdfRadioButtonListField employeesRadioList = new PdfRadioButtonListField(page, "employeesRadioList");
+		//Create radio button items.
+		PdfRadioButtonListItem radioButtonItem1 = new PdfRadioButtonListItem("1-9");
+		radioButtonItem1.Bounds = new RectangleF(100, 140, 20, 20);
+		PdfRadioButtonListItem radioButtonItem2 = new PdfRadioButtonListItem("10-49");
+		radioButtonItem2.Bounds = new RectangleF(100, 170, 20, 20);
+		//Add the items to radio button group.
+		employeesRadioList.Items.Add(radioButtonItem1);
+		employeesRadioList.Items.Add(radioButtonItem2);
+		//Add the radio button into form.
+		pdfViewer.LoadedDocument.Form.Fields.Add(employeesRadioList);
+    }
+}
+
+{% endhighlight %}
+{% highlight VB %}
+
+Private Sub AddRadioButton_Click(sender As Object, e As RoutedEventArgs)
+    If pdfViewer.LoadedDocument.Form IsNot Nothing Then
+        Dim page As PdfLoadedPage = TryCast(pdfViewer.LoadedDocument.Pages(0), PdfLoadedPage)
+        'Create radio button list field.
+		Dim employeesRadioList As New PdfRadioButtonListField(page, "employeesRadioList")
+		'Create radio button items.
+		Dim radioButtonItem1 As New PdfRadioButtonListItem("1-9")
+		radioButtonItem1.Bounds = New RectangleF(100, 140, 20, 20)
+		Dim radioButtonItem2 As New PdfRadioButtonListItem("10-49")
+		radioButtonItem2.Bounds = New RectangleF(100, 170, 20, 20)
+		'Add the items to the radio button group.
+		employeesRadioList.Items.Add(radioButtonItem1)
+		employeesRadioList.Items.Add(radioButtonItem2)
+		'Add the radio button group into the form.
+		pdfViewer.LoadedDocument.Form.Fields.Add(employeesRadioList)
+    End If
+End Sub
+
+{% endhighlight %}
+{% endtabs %}
+
+### ListBox
+A list box form field in PDF documents can be created using the [PdfListBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListBoxField.html) Instance. Individual listBox item added by using [PdfListFieldItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListFieldItem.html) Instance.
+
+Please refer the below code snippet for adding the list box field in LoadedDocument.
+
+{% tabs %}
+{% highlight C# %}
+
+private void AddListbox_Click(object sender, RoutedEventArgs e)
+{
+    if (pdfViewer.LoadedDocument.Form != null)
+    {
+	    PdfLoadedPage page = pdfViewer.LoadedDocument.Pages[0] as PdfLoadedPage;
+		//Create list box.
+		PdfListBoxField listBoxField = new PdfListBoxField(page, "list1");
+		//Set the properties.
+		listBoxField.Bounds = new RectangleF(100, 60, 100, 50);
+		//Add the items to the list box.
+		listBoxField.Items.Add(new PdfListFieldItem("English", "English"));
+		listBoxField.Items.Add(new PdfListFieldItem("French", "French"));
+		listBoxField.Items.Add(new PdfListFieldItem("German", "German"));
+		//Select the item.
+		listBoxField.SelectedIndex = 0;
+		//Set the multi select option.
+		listBoxField.MultiSelect = true;
+		//Add the list box into PDF document.
+		pdfViewer.LoadedDocument.Form.Fields.Add(listBoxField);
+    }
+}
+
+{% endhighlight %}
+{% highlight VB %}
+
+Private Sub AddListbox_Click(sender As Object, e As RoutedEventArgs)
+    If pdfViewer.LoadedDocument.Form IsNot Nothing Then
+        Dim page As PdfLoadedPage = TryCast(pdfViewer.LoadedDocument.Pages(0), PdfLoadedPage)
+        'Create list box.
+		Dim listBoxField As New PdfListBoxField(page, "list1")
+		'Set the properties.
+		listBoxField.Bounds = New RectangleF(100, 60, 100, 50)
+		'Add the items to the list box.
+		listBoxField.Items.Add(New PdfListFieldItem("English", "English"))
+		listBoxField.Items.Add(New PdfListFieldItem("French", "French"))
+		listBoxField.Items.Add(New PdfListFieldItem("German", "German"))
+		'Select the item.
+		listBoxField.SelectedIndex = 0
+		'Enable multi-select option.
+		listBoxField.MultiSelect = True
+		'Add the list box into the PDF document.
+		pdfViewer.LoadedDocument.Form.Fields.Add(listBoxField)
+    End If
+End Sub
+
+{% endhighlight %}
+{% endtabs %}
+
+### ComboBox
+The [PdfComboBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfComboBoxField.html) Instance is used to create a combo box field in PDF forms. A list of selectable items can be added to the combo box by using the [PdfListFieldItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListFieldItem.html) class.
+
+Please refer the below code snippet for adding the combo box in LoadedDocument.
+
+{% tabs %}
+{% highlight C# %}
+
+private void AddCombobox_Click(object sender, RoutedEventArgs e)
+{
+    if (pdfViewer.LoadedDocument.Form != null)
+    {
+	     PdfLoadedPage page = pdfViewer.LoadedDocument.Pages[0] as PdfLoadedPage;
+		//Create a combo box for the first page.
+		PdfComboBoxField comboBoxField = new PdfComboBoxField(page, "JobTitle");
+		//Set the combo box properties.
+		comboBoxField.Bounds = new RectangleF(0, 60, 100, 20);
+		//Set tooltip.
+		comboBoxField.ToolTip = "Job Title";
+		//Add list items.
+		comboBoxField.Items.Add(new PdfListFieldItem("Development", "accounts"));
+		comboBoxField.Items.Add(new PdfListFieldItem("Support", "advertise"));
+		comboBoxField.Items.Add(new PdfListFieldItem("Documentation", "content"));
+		//Add combo box to the form.
+		pdfViewer.LoadedDocument.Form.Fields.Add(comboBoxField);
+    }
+}
+
+{% endhighlight %}
+{% highlight VB %}
+
+Private Sub AddCombobox_Click(sender As Object, e As RoutedEventArgs)
+    If pdfViewer.LoadedDocument.Form IsNot Nothing Then
+        Dim page As PdfLoadedPage = TryCast(pdfViewer.LoadedDocument.Pages(0), PdfLoadedPage)
+       'Create a combo box for the first page.
+		Dim comboBoxField As New PdfComboBoxField(page, "JobTitle")
+		'Set the combo box properties.
+		comboBoxField.Bounds = New RectangleF(0, 60, 100, 20)
+		'Set tooltip.
+		comboBoxField.ToolTip = "Job Title"
+		'Add list items.
+		comboBoxField.Items.Add(New PdfListFieldItem("Development", "accounts"))
+		comboBoxField.Items.Add(New PdfListFieldItem("Support", "advertise"))
+		comboBoxField.Items.Add(New PdfListFieldItem("Documentation", "content"))
+		'Add combo box to the form.
+		pdfViewer.LoadedDocument.Form.Fields.Add(comboBoxField)
+    End If
+End Sub
+
+{% endhighlight %}
+{% endtabs %}
+
+## See Also
+-  [Overview](../overview)
+- [Modify form fields](./modify-form-fields)
+- [Remove form fields](./remove-form-fields)
+- [Form Fields API](../form-fields-api)
