@@ -7,7 +7,7 @@ control: Getting started
 documentation: ug
 ---
 
-# Getting Started with Javascript Spreadsheet control
+# Getting Started with JavaScript Spreadsheet control
 
 This section explains the steps to create a simple Essential<sup style="font-size:70%">&reg;</sup> JS 2 Spreadsheet control in a JavaScript application.
 
@@ -24,9 +24,9 @@ To get started, ensure the following software is installed on your machine:
 
 Create a simple JavaScript application to render the Spreadsheet control.
 
-**Step 1:** Create a root folder named `myapp`.
+**Step 1:** Create a root folder named `spreadsheet-app`.
 
-**Step 2:** Inside the `myapp` folder, create the following files:
+**Step 2:** Inside the `spreadsheet-app` folder, create the following files:
 
 - `index.html`
 - `index.js`
