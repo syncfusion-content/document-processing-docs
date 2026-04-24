@@ -24,7 +24,6 @@ To create a new Vue application, run one of the following commands.
 ```
 npm create vite@latest
 cd my-project
-npm install
 ```
 
 ## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet package
@@ -43,14 +42,14 @@ Add the following style references.
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
 </style>
 
@@ -61,16 +60,11 @@ Add the following style references.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component to the application
 
-Follow the below steps to add the Vue Spreadsheet component using `Composition API` or `Options API`:
-
-1.Import and register the Spreadsheet component in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section.
-
-2.In the `template` section, define the Spreadsheet component with sheets directives. Sheet directives are used to define the sheet definition for the Spreadsheet component.
-
-3.Declare the values for the `dataSource` property in the `script` section.
+Import and register the Spreadsheet component directives in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section with sheets directives.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl">
@@ -104,21 +98,10 @@ const data = [
         ];
 </script>
 
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
-</style>
-
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
+{% raw %}
 <template>
   <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl">
     <e-sheets>
@@ -166,18 +149,7 @@ const data = [
   };
 </script>
 
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
-</style>
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

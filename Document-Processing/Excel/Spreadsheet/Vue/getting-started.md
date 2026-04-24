@@ -30,7 +30,6 @@ Create a new Vue application using the following commands:
 ```
 vue create quickstart
 cd quickstart
-npm run serve
 ```
 
 ## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet package
@@ -49,14 +48,14 @@ Add the following style references.
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
 </style>
 
@@ -67,15 +66,46 @@ Add the following style references.
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component to the application
 
-Import and register the Spreadsheet component in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section.
+Import and register the Spreadsheet component directives in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section with sheets directives.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/getting-started-cs1/app-composition.vue %}
-{% endhighlight %}
+{% raw %}
+<template>
+  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
+</template>
 
+<script setup>
+import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spreadsheet";
+
+const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
+</script>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/getting-started-cs1/app.vue %}
+{% raw %}
+<template>
+  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
+</template>
+
+<script>
+import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
+
+export default {
+  name: "App",
+  components: {
+    "ejs-spreadsheet": SpreadsheetComponent
+  },
+  data: () => {
+    return {
+      openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+      saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
+    }
+  }
+}
+</script>
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
