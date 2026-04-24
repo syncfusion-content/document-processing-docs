@@ -90,6 +90,9 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spread
 {% highlight razor tabtitle="CSHTML" %}
 {% include code-snippet/spreadsheet/asp-net-mvc/getting-started-mvc/razor %}
 {% endhighlight %}
+{% highlight c# tabtitle="OpenController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-mvc/getting-started-core/spreadsheet.cs %}
+{% endhighlight %}
 {% endtabs %}
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet control will be rendered in the default web browser.

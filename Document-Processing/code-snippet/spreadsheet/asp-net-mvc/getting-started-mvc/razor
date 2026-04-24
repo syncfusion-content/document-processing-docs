@@ -1,1 +1,1 @@
-@Html.EJS().Spreadsheet("spreadsheet").Render()
+@Html.EJS().Spreadsheet("spreadsheet").OpenUrl("Home/Open").SaveUrl("Home/Save").Render()
