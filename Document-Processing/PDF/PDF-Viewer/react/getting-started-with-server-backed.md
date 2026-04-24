@@ -113,7 +113,7 @@ function App() {
         // Specifies the backend service URL that processes and streams PDF data
         serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
-
+         // Specifies the modules required for the PDF Viewer
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation,
                         LinkAnnotation, BookmarkView, ThumbnailView, Print,
                         TextSelection, TextSearch, FormFields, FormDesigner ]}/>
@@ -145,6 +145,7 @@ return (<div>
       // Specifies the backend service URL that processes and streams PDF data
       serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
       style={{ 'height': '640px' }}>
+          // Specifies the modules required for the PDF Viewer
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation,
           LinkAnnotation, BookmarkView,ThumbnailView, Print, TextSelection,
           TextSearch, FormFields,FormDesigner ]}/>

@@ -27,16 +27,16 @@ N> To create a React application using `create-react-app`, refer to this [docume
 To create a new React application, run the following command.
 
 {% tabs %}
-{% highlight bash tabtitle="TypeScript" %}
+{% highlight bash tabtitle="JavaScript" %}
 
-npm create vite@latest my-app -- --template react-ts
+npm create vite@latest my-app -- --template react
 cd my-app
 npm run dev
 
 {% endhighlight %}
-{% highlight bash tabtitle="JavaScript" %}
+{% highlight bash tabtitle="TypeScript" %}
 
-npm create vite@latest my-app -- --template react
+npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
 
@@ -54,21 +54,6 @@ npm install @syncfusion/ej2-react-pdfviewer --save
 
 ## Adding PDF Viewer component and the CSS reference
 
-* Add an HTML div element to act as the PDF Viewer element `index.html` using the following code.
-
-```
-   <!DOCTYPE html>
-   <html lang="en">
-   <!-- ... -->
-   <body>
-      <div id='sample'>
-         <div id='loader'>Loading....</div>
-         <script type="module" src="/src/main.tsx"></script>
-      </div>
-   </body>
-   </html>
-```
-
 * Add the React PDF Viewer component’s CSS reference as given below in `src/index.css` file.
 
 ```css
@@ -82,16 +67,13 @@ npm install @syncfusion/ej2-react-pdfviewer --save
    @import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
 ```
 
-* Add the React PDF Viewer as shown below in `src/index.js` when using JavaScript (JSX). If you're using TypeScript (TSX), add it in `src/app.tsx` to render the PDF Viewer component.
+* Add the following import statements for the PDF Viewer along with the default imports in the file (src/index.js when using JavaScript/JSX, or src/app.tsx when using TypeScript/TSX), and include the PDF Viewer initialization code inside the function to render the PDF Viewer component.
 
 
 {% tabs %}
 {% highlight js tabtitle="JSX" %}
 {% raw %}
 
-import * as ReactDOM from 'react-dom/client';
-import * as React from 'react';
-import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
         BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
         FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
@@ -116,8 +98,6 @@ function App() {
     </div>
   </div>);
 }
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
@@ -141,6 +121,7 @@ return (<div>
       // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
       resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       style={{ 'height': '640px' }}>
+         // Specifies the modules required for the PDF Viewer
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
                              ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
      </PdfViewerComponent>
@@ -186,7 +167,7 @@ return (<div>
             // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
             resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}>
-               {/* Inject the required services */}
+               // Specifies the modules required for the PDF Viewer
                <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
         </PdfViewerComponent>
@@ -212,7 +193,7 @@ return (<div>
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
             resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}>
-               {/* Inject the required services */}
+               // Specifies the modules required for the PDF Viewer
                <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
         </PdfViewerComponent>
