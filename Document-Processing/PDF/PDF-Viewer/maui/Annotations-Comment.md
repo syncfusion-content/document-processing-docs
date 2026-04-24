@@ -94,5 +94,5 @@ Comments and replies can be deleted through the context menu available under the
 **Note :** Deleting the root comment from the comment panel also deletes the associated annotation.
 
 ## See Also
-- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
-- [Annotations Overview](../annotations-overview)
+- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
