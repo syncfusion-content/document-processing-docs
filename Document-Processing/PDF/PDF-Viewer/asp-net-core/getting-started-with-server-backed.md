@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Server-Backed ASP.NET Core PDF Viewer
+title: Server-Backed ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to integrate the server-backed PDF Viewer control in an ASP.NET Core application. View and annotate with server-side rendering.
 platform: document-processing
 control: PDF Viewer
@@ -29,6 +29,7 @@ Create an ASP.NET Core Web App using Visual Studio 2022 by the following the ins
 To add the ASP.NET Core PDF Viewer component, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install:
 
 * [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/)
+* [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core/)
 
 {% endtabcontent %}
 
@@ -53,13 +54,14 @@ Install the Syncfusion&reg; ASP.NET Core component NuGet packages within the pro
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) NuGet package.
+* Run the following commands to install the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) and [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core/) NuGet packages.
 
 {% tabs %}
 
 {% highlight c# tabtitle="Package Manager" %}
 
 dotnet add package Syncfusion.EJ2.AspNet.Core -v {{ site.releaseversion }}
+dotnet add package Syncfusion.EJ2.PdfViewer.AspNet.Core -v {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
@@ -144,7 +146,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer
 {% tabs %}
 {% highlight c# tabtitle="~/Index.cshtml" %}
 
-@page
+@page "{handler?}"
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
