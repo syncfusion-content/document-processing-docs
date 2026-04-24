@@ -7,16 +7,16 @@ control: AI Agent Tools
 documentation: ug
 ---
 
-# Customize the Agent Tool Library
+# Customize the AI Agent Tool Library
 
-The Syncfusion Document SDK Agent Tool library is designed to be extensible. This guide walks you through creating a custom agent tool class and registering the tools with an AI agent so they are callable alongside the built-in tools.
+The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) is designed to be extensible. This guide walks you through creating a custom agent tool class and registering the tools with an AI agent so they are callable alongside the built-in tools.
 
 
-## Creating a Custom Agent Tool Class
+## Creating a Custom AI Agent Tool Class
 
-Follow these steps to expose new document operations to the AI agent.
+Follow these steps to enable new document operations to the AI agent tool library.
 
-**Step 1: Create a Custom Agent Tool by Inheriting AgentToolBase**
+**Step 1: Create a Custom AI Agent Tool by Inheriting AgentToolBase**
 
 Create a new class that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document manager through its constructor:
 
@@ -195,9 +195,9 @@ namespace Syncfusion.AI.AgentTools.Word
 
 Once your custom tool class is created, register it alongside the built-in tools in your host application.
 
-Documents can be handled using either In‑memory Mode or Storage Mode during AI agent execution. In In‑memory Mode, documents are loaded into memory and shared across tool calls. In Storage Mode, documents are loaded per tool call from external storage and must be explicitly saved to persist changes.
+Documents can be handled using either in‑memory Mode or Storage Mode during AI agent execution. In in‑memory Mode, documents are loaded into memory and shared across tool calls. In Storage Mode, documents are loaded per tool call from external storage and must be explicitly saved to persist changes.
 
-**Step 1: Registering a Custom Tool with the Syncfusion Agent Tools**
+**Step 1: Registering a Custom Tool with the Syncfusion AI Agent Tools**
 
 #### In-Memory Mode
 
@@ -240,7 +240,7 @@ var msAiTools = allSyncfusionTools
     .ToList();
 ```
 
-**Step 3: Build the Agent**
+**Step 3: Build the AI Agent**
 
 ```csharp
 var agent = openAIClient.AsAIAgent(
