@@ -24,7 +24,7 @@ To make the Spreadsheet look and behave like a simple data grid, you can hide de
 
 **Example:**
 
-```jsx
+```js
 <SpreadsheetComponent
   showRibbon={false}
   showSheetTabs={false}

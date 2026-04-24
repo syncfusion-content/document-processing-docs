@@ -2769,3 +2769,24 @@ document.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
+
+## Troubleshooting and FAQ's
+
+### Is it possible to flatten a PDF while preserving its accessibility/compatibility tags?
+
+<table>
+<tr>
+<th style="font-size:14px" width="100px">Query
+</th>
+<td>
+Is it possible to flatten a PDF while preserving its accessibility/compatibility tags?
+</td>
+</tr>
+<tr>
+<th style="font-size:14px" width="100px">Solution</th>
+<td>
+When a PDF document is flattened, accessibility tags that are part of the page’s static content are retained. However, tags linked to interactive elements—such as annotations, form fields, and their related layers—are removed. This occurs because the flattening process eliminates these interactive objects and merges their visual representation into the page content, which results in the loss of their associated tags.
+Currently, our libraries do not provide support for adding new accessibility tags or preserving existing ones when flattening already tagged PDF documents during processing.
+</td>
+</tr>
+</table>

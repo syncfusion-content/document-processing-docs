@@ -49,6 +49,8 @@ When [Form Designer mode](https://ej2.syncfusion.com/react/documentation/api/pdf
 
 ![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 
+{% previewsample "/document-processing/code-snippet/pdfviewer/react/prefilledforms-cs1" %}
+
 For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation](./manage-form-fields/create-form-fields) in React PDF Viewer documentation.
 
 ### Enable Form Designer
