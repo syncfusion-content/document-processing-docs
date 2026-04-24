@@ -43,7 +43,7 @@ Syncfusion provides unlimited access to the MCP server with no restrictions on:
 * Query caps
 * Usage duration
 
-This unlimited access empowers you to experiment freely, iterate rapidly, and fully leverage the tool's capabilities throughout your development lifecycle.
+This unlimited access empowers you to experiment freely, iterate rapidly, and fully leverage the tool's capabilities throughout your development life cycle.
 
 ## Best Practices
 
