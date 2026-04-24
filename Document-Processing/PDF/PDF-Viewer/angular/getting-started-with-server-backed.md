@@ -1,5 +1,5 @@
 ---
-title: Setup for Local Development – Angular PDF Viewer (Server-Backed) | Syncfusion
+title: Setup for Server-Backed Angular PDF Viewer | Syncfusion
 description: Learn how to set up and run the Syncfusion Angular PDF Viewer in server-backed mode using Essential JS 2.
 platform: document-processing
 control: PDF Viewer
@@ -7,7 +7,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Getting started with Angular PDF Viewer (Server-Backed)
+# Getting started with Angular PDF Viewer (Server-Backed)
 
 This guide explains how to create and run the **Angular PDF Viewer in server-backed mode**. In this mode, PDF rendering is handled by a server-side web service, while the Angular application acts as the client.
 
@@ -133,8 +133,6 @@ The application will start and connect to the configured PDF Viewer web service.
 ---
 
 {% previewsample "/document-processing/samples/pdfviewer/angular/getting-started-cs1" %}
-
-[Open in StackBlitz](https://stackblitz.com/fork/angular)
 
 ---
 

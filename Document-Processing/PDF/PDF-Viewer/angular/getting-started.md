@@ -133,8 +133,6 @@ The PDF document will be rendered in the browser.
 
 {% previewsample "/document-processing/samples/pdfviewer/angular/getting-started-cs1-standalone" %}
 
-[Open in StackBlitz](https://stackblitz.com/fork/angular)
-
 ---
 
 ## Module injection (Optional features)
