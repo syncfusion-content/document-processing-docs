@@ -161,10 +161,11 @@ return (<div>
     <div className='control-section'>
         <PdfViewerComponent
             id="container"
-            // Specifies the path or Base64 string of the PDF document to be loaded in the PDF Viewer.
-            // You can provide a URL (for example, a file from the public folder) or a Base64-encoded PDF.
+            // Defines the source of the PDF to load in the PDF Viewer.
+            // Accepts either a public URL or a Base64-encoded PDF string.
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
+            // Specifies the location of the PDFium dependency files required
+            // for rendering and processing PDFs in the PDF Viewer.
             resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}>
                // Specifies the modules required for the PDF Viewer
@@ -232,4 +233,8 @@ root.render(<App />);
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/react/base-cs1-standalone" %}
 
-> You can refer to our [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) feature tour page for its groundbreaking feature representations. You can also explore our [React PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/default) to understand how to explains core features of PDF Viewer.
+**See also**
+
+- [Annotations in PDF Viewer](./annotation/overview)
+- [Form Designer in PDF Viewer](./forms/overview#form-designer)
+- [Organize PDF pages](./organize-pages/overview)
