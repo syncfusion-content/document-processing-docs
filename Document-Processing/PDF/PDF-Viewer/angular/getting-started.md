@@ -60,6 +60,8 @@ Install the Syncfusion Angular PDF Viewer package from npm:
 npm install @syncfusion/ej2-angular-pdfviewer --save
 ```
 
+* Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type. Additional information can be found in the [Troubleshooting](./troubleshooting/troubleshooting) section.
+
 ---
 
 ## Adding CSS references
