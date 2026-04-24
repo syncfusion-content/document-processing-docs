@@ -61,7 +61,6 @@ Add the Document editor component and its dependent component styles available i
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-ribbon/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
 ```
 
