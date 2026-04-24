@@ -1,22 +1,17 @@
-### layout: post
+---
 title: Setup for Local Development – TypeScript PDF Viewer | Syncfusion
 description: Learn how to set up and run the Syncfusion TypeScript PDF Viewer in standalone mode using Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+---
 
-## Getting started with the TypeScript PDF Viewer
+# Getting started with the TypeScript PDF Viewer
 
 This guide explains how to create and run a **TypeScript PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
 
 > **Note:** Standalone mode renders PDF files directly in the browser without requiring a server-side web service.
-
----
-
-## Prerequisites
-
-Ensure that your system meets the [Syncfusion system requirements](https://ej2.syncfusion.com/javascript/documentation/system-requirement). Node.js v14.15.0 or later is required.
 
 ---
 
@@ -108,8 +103,4 @@ The PDF document will be rendered in the browser.
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/getting-started-cs2" %}
 
-[Open in StackBlitz](https://stackblitz.com/fork/javascript)
-
 ---
-
-For a complete feature overview, refer to the [JavaScript PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/javascript).

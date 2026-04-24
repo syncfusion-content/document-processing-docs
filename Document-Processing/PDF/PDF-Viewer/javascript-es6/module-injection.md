@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Module Injection for TypeScript PDF Viewer | Syncfusion
-description: Learn how to inject required modules to enable features in the Syncfusion TypeScript PDF Viewer.
-platform: document-processing
+description: Syncfusion Typescript PDF Viewer to enable optional features like toolbar, navigation, annotations, search.
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##

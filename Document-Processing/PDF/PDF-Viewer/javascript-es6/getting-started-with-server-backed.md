@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Getting started with TypeScript PDF Viewer (Server-Backed)
+# Getting started with TypeScript PDF Viewer (Server-Backed)
 
 This guide explains how to create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
 
@@ -16,17 +16,10 @@ This guide explains how to create and run the **TypeScript PDF Viewer in server-
 
 ---
 
-## Prerequisites
-
-Ensure that your development environment meets the [Syncfusion system requirements](https://ej2.syncfusion.com/javascript/documentation/system-requirement).
-
-You also need:
-- Node.js v14.15.0 or later
-- A running PDF Viewer web service endpoint
-
----
-
 ## Setup the development environment
+
+
+Open a command prompt in the target directory and run the following command to clone the Syncfusion JavaScript (Essential JS 2) quickstart project from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack).
 
 This example uses the Syncfusion Essential JS 2 **quickstart webpack project**.
 
@@ -143,4 +136,9 @@ Configure this URL in the `serviceUrl` property of the PDF Viewer.
 
 ---
 
-For a full feature overview, refer to the [JavaScript PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/javascript).
+N> For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1). For AWS environments, use the following packages:
+
+| **Amazon Web Services (AWS)** |**NuGet package name** |
+| --- | --- |
+| AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
+| AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
