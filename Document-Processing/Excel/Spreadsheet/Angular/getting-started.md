@@ -16,7 +16,7 @@ This section explains how to create a simple Angular application and add the [Sy
 [System requirements for Syncfusion® Angular components](https://ej2.syncfusion.com/angular/documentation/system-requirement)
 
 ## Create an Angular Application
-Use the [`Angular CLI`](https://angular.dev/installation) to create a new Angular application. It is the official and easiest way to get started with Angular.
+Use the [`Angular CLI`](https://angular.dev/installation) to create a new Angular application.
 
 To create a new Angular application, run the following commands.
 
@@ -71,7 +71,7 @@ Now, import the required Spreadsheet module into your application file and rende
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The [`openUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`Blog`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) post.
+> **Note:** The [`openUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
 
 ## Run the application
 
@@ -86,8 +86,6 @@ After the application starts, open the local URL shown in the terminal to view t
 The following example shows a basic Spreadsheet component.
  
 {% previewsample "/document-processing/samples/spreadsheet/angular/spreadsheet-cs1" %}
-
-> You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/bootstrap5/spreadsheet/default) that shows you how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
 
 ## Video tutorial
 
