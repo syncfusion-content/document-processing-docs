@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Angular Spreadsheet component
 
-This section explains how to create a simple Angular application and add the [Syncfusion Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component with the minimum required setup.
+This section explains how to create a simple Angular application and add the [Syncfusion® Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component with the minimum required setup.
 
 ## Prerequisites
 
@@ -28,32 +28,19 @@ cd spreadsheet-app
 
 ## Install the Syncfusion® Angular Spreadsheet package
 
-Currently, Syncfusion® provides two types of package structures for Angular components,
-1. Ivy library distribution package [format](https://v17.angular.io/guide/angular-package-format#angular-package-format):
-
-Install the [Angular](https://www.npmjs.com/package/@syncfusion/ej2-angular-spreadsheet) package from npm using the following command:
+Syncfusion® Angular packages are distributed in npm as [@syncfusion](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-angular-) scoped packages. The [Angular Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-angular-spreadsheet) package uses the [Ivy](https://docs.angular.lat/guide/ivy) library distribution [format](https://angular.dev/tools/libraries/angular-package-format) and is compatible with `Angular 12` and above. Use the following command to install the package:
 
 ```
 npm install @syncfusion/ej2-angular-spreadsheet --save
 ```
 
-2. Angular compatibility compiler(Angular’s legacy compilation and rendering pipeline) package.
+For `Angular versions below 12`, use the legacy `ngcc` package instead:
 
-For Angular version below 12, you can use the legacy (ngcc) package of the Syncfusion® [Angular Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-angular-spreadsheet/v/33.2.3-ngcc). To download the `ngcc` package use the below.
-
-```bash
+```
 npm install @syncfusion/ej2-angular-spreadsheet@ngcc --save
 ```
 
-To mention the ngcc package in the `package.json` file, add the suffix `-ngcc` with the package version as below.
-
-```bash
-@syncfusion/ej2-angular-spreadsheet:"33.2.3-ngcc"
-```
-
->Note: If the ngcc tag is not specified while installing the package, the Ivy Library Package will be installed and this package will throw a warning.
-
-## Add CSS reference
+## Add CSS references
 
 Add the following style references to the `[src/styles.css]` file.
 
@@ -72,7 +59,7 @@ Add the following style references to the `[src/styles.css]` file.
 
 ## Add the Syncfusion® Angular Spreadsheet component to the application
 
-Modify the template in [src/app/app.ts] file to render the spreadsheet component. Add the Angular Spreadsheet by using `<ejs-spreadsheet>` selector in template section of the `app.ts` file.
+Now, import the required Spreadsheet module into your application file and render the component.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -84,17 +71,19 @@ Modify the template in [src/app/app.ts] file to render the spreadsheet component
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The [`openUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`Blog Post`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
+> **Note:** The [`openUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`Blog`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) post.
 
 ## Run the application
 
-Use the following command to run the application in the web browser
+Run the following command to start the development server:
 
 ```
 ng serve
 ```
 
-The following example shows a basic Spreadsheet component
+After the application starts, open the local URL shown in the terminal to view the Angular Spreadsheet component in the browser.
+
+The following example shows a basic Spreadsheet component.
  
 {% previewsample "/document-processing/samples/spreadsheet/angular/spreadsheet-cs1" %}
 
@@ -102,7 +91,7 @@ The following example shows a basic Spreadsheet component
 
 ## Video tutorial
 
-To get start quickly with Angular Spreadsheet using CLI, you can check on this video:
+To get started quickly with Angular Spreadsheet, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=2Ozwe37X-7Q" %}
 
@@ -110,5 +99,3 @@ To get start quickly with Angular Spreadsheet using CLI, you can check on this v
 
 * [Data Binding](./data-binding)
 * [Open and Save](./open-save)
-* [Save Excel files](./save-excel-files)
-* [Web Services](./web-services/webservice-overview)
