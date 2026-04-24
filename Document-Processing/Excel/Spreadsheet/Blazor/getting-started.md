@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Spreadsheet Component
 
-This section briefly explains about how to include [Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in your Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
+This section briefly explains how to include [Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in your Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
 {% tabcontents %}
 
@@ -87,12 +87,12 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Add import namespaces
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Spreadsheet` namespace.
+After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Spreadsheet` namespaces.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight C# tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Spreadsheet
@@ -100,23 +100,17 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+Register the Syncfusion Blazor service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
 
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+....
 using Syncfusion.Blazor;
-
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
-
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
+....
 builder.Services.AddSyncfusionBlazor();
-await builder.Build().RunAsync();
 ....
 
 {% endhighlight %}
@@ -133,7 +127,8 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
 </head>
 ```
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Spreadsheet component
 
@@ -142,7 +137,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet comp
 {% tabs %}
 {% highlight razor %}
 
-Note: Due to browser-level restrictions in WebAssembly (WASM), the method File.ReadAllBytes is not supported. As a result, the sample implementations provided use a Base64-encoded Excel file to import data. This approach ensures compatibility with WASM environments, where direct file system access is limited. Instead of reading the file from disk, the Excel content is embedded or passed as a Base64 string, which is then decoded within the application to simulate file input. This method allows seamless data import while adhering to the constraints of the WebAssembly runtime.
+Note: Due to WebAssembly (WASM) browser restrictions, File.ReadAllBytes is not supported. Therefore, the samples use a Base64‑encoded Excel file, which is decoded at runtime to load data without direct file system access.
 
 <SfSpreadsheet DataSource="DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
@@ -163,3 +158,10 @@ Note: Due to browser-level restrictions in WebAssembly (WASM), the method File.R
 {% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spreadsheet in your default web browser.
+
+## See Also
+
+* [Blazor Spreadsheet Overview](overview.md)
+* [Open and Save](open-and-save.md)
+
+N> You can also explore our [Blazor Spreadsheet Example](https://document.syncfusion.com/demos/spreadsheet-editor/blazor-wasm/spreadsheet/overview) that shows you how to render and configure the Spreadsheet.
