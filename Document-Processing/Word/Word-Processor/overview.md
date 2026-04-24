@@ -1,5 +1,5 @@
 ---
-title: Microsoft Word-like Word Processor Component | Syncfusion
+title: Microsoft Word-like DOCX Editor Component | Syncfusion
 description: View, edit and print Word documents in WPF, JavaScript, Angular, React, Vue, ASP.NET MVC, ASP.NET Core, and Blazor applications without Microsoft Office.
 platform: document-processing
 control: general

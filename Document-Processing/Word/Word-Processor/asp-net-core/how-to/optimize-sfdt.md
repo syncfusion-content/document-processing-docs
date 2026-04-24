@@ -9,7 +9,7 @@ documentation: ug
 
 # How to optimize the SFDT file
 
-Starting from version v21.1.x, the SFDT file generated in Word Processor component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits,
+Starting from version v21.1.x, the SFDT file generated in DOCX Editor component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits,
 * File transfer between client and server through the internet gets faster.
 * The new optimized SFDT files require less storage space than the old SFDT files.
 Hence, the optimized SFDT file can't be directly manipulated as JSON string.
