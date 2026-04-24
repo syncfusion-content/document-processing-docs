@@ -15,13 +15,19 @@ This section explains how to create a simple Angular application and add the [Sy
 
 [System requirements for Syncfusion® Angular components](https://ej2.syncfusion.com/angular/documentation/system-requirement)
 
-## Create an Angular Application
-Use the [`Angular CLI`](https://angular.dev/installation) to create a new Angular application.
+## Create an Angular application
 
-To create a new Angular application, run the following commands.
+Use the [`Angular CLI`](https://angular.dev/installation) to set up an Angular application.
+
+Install Angular CLI using the following command:
 
 ```
 npm install -g @angular/cli
+```
+
+Create a new Angular application using the following commands:
+
+```
 ng new spreadsheet-app
 cd spreadsheet-app
 ```
