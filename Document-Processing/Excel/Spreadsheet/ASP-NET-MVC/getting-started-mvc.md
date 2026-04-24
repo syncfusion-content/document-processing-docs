@@ -89,7 +89,7 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spread
 {% include code-snippet/spreadsheet/asp-net-mvc/getting-started-mvc/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Controller" %}
-{% include code-snippet/spreadsheet/asp-net-mvc/getting-started-core/spreadsheet.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/getting-started-mvc/spreadsheet.cs %}
 {% endhighlight %}
 {% endtabs %}
 
