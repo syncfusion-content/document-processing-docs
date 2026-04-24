@@ -17,14 +17,22 @@ To get started quickly with React Spreadsheet, you can check this video:
 
 ## Create a React application
 
-Use `Vite` to create a new React application.
+Use [`Vite`](https://vitejs.dev/guide/) to create a new React application, as it provides a faster development environment, smaller bundle sizes, and optimized builds.
+
+To create a new React application, run one of the following commands based on your preferred environment.
 
 {% tabs %}
-{% highlight js tabtitle="JS" %}
-{% include code-snippet/spreadsheet/react/getting-started-cs1/app/vite.js %}
+{% highlight js tabtitle="JavaScript" %}
+
+npm create vite@latest spreadsheet-app -- --template react
+cd spreadsheet-app
+
 {% endhighlight %}
-{% highlight ts tabtitle="TS" %}
-{% include code-snippet/spreadsheet/react/getting-started-cs1/app/vite.ts %}
+{% highlight ts tabtitle="TypeScript" %}
+
+npm create vite@latest spreadsheet-app -- --template react-ts
+cd spreadsheet-app
+
 {% endhighlight %}
 {% endtabs %}
 
