@@ -232,6 +232,8 @@ Add the Syncfusion® PDF Viewer (Next-Gen) component in the **~/Pages/*.razor** 
 
 N> If the interactivity location is set to Global and the render mode is set to Auto, WebAssembly, or Server, the render mode is configured in the App.razor file by default.
 
+<br />Enable interactivity only via client-side rendering (CSR) by using the WebAssembly or Auto option
+
 {% tabs %}
 {% highlight razor %}
 
@@ -241,12 +243,11 @@ N> If the interactivity location is set to Global and the render mode is set to 
 {% endhighlight %}
 {% endtabs %}
 
-<br />Enable interactivity only via client-side rendering (CSR) by using the WebAssembly or Auto option
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component in **~/Pages/Index.razor**.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"

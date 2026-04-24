@@ -154,7 +154,7 @@ Add the following stylesheet and script to the head section of **wwwroot/index.h
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) component to **~/Pages/Index.razor**.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 
