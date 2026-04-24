@@ -64,3 +64,4 @@ The following frequently asked questions address common ASP.NET Core PDF Viewer 
 * [How to get the annotation when it is overlapped with another annotation on its selection?](./how-to/overlapped-annotation)
 * [How to print the PDF document silently?](./how-to/print-document)
 * [Load Document after resources Loaded](./how-to/load-document-after-resources-loaded)
+* [How to use local resources to configure PDF Viewer](./how-to/local-resources)
