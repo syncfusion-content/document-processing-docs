@@ -18,7 +18,7 @@ To get started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI co
 * React supported version >= `15.5.4+`.
 * Required node version >= `14.0.0+`(NPM Package Manager).
 
-## Setup for Local Development
+## Create a React app
 
 To set up a React application, use Vite (for example, `npm create vite@latest`), which provides a fast development environment, smaller bundle sizes, and optimized production builds compared to tools such as `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/).
 
@@ -26,46 +26,31 @@ N> To create a React application using `create-react-app`, refer to this [docume
 
 To create a new React application, run the following command.
 
-```bash
-npm create vite@latest my-app
-```
-To set-up a React application in TypeScript environment, run the following command.
+{% tabs %}
+{% highlight bash tabtitle="TypeScript" %}
 
-```bash
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm run dev
-```
-To set-up a React application in JavaScript environment, run the following command.
 
-```bash
+{% endhighlight %}
+{% highlight bash tabtitle="JavaScript" %}
+
 npm create vite@latest my-app -- --template react
 cd my-app
 npm run dev
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer packages
 
 All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-
-* To install PDF Viewer component, use the following command
 
 ```
 npm install @syncfusion/ej2-react-pdfviewer --save
 ```
-
-* Copy the contents of the ej2-pdfviewer-lib folder from ./node_modules/@syncfusion/ej2-pdfviewer/dist to the public directory using the command:
-
-```bash
-cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib public/ej2-pdfviewer-lib
-```
-
-* Confirm that there is an 'ej2-pdfviewer-lib' directory within your public directory.
-
-* Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type. Additional information can be found in the [Troubleshooting](./troubleshooting/troubleshooting) section.
-
-N> The following changes apply to React version 18 and above.
 
 ## Adding PDF Viewer component and the CSS reference
 
@@ -122,7 +107,10 @@ function App() {
     {/* Render the PDF Viewer */}
       <PdfViewerComponent
         id="container"
+        // Specifies the path or Base64 string of the PDF document to be loaded in the PDF Viewer.
+        // You can provide a URL (for example, a file from the public folder) or a Base64-encoded PDF.
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
         resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
@@ -151,7 +139,10 @@ return (<div>
  <div className='control-section'>
      <PdfViewerComponent
       id="container"
+      // Specifies the path or Base64 string of the PDF document to be loaded in the PDF Viewer.
+      // You can provide a URL (for example, a file from the public folder) or a Base64-encoded PDF.
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
       resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
       style={{ 'height': '640px' }}>
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
@@ -168,32 +159,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-### Steps to Load PDF Viewer with Local Resources
-
-To configure the PDF Viewer to use local files for `documentPath` and `resourceUrl` instead of files hosted on a CDN, follow these steps:
-
-**Step 1:** Ensure that your application includes the `ej2-pdfviewer-lib` folder. This folder must contain the `pdfium.js`, `pdfium.wasm` files, and the PDF file that you intend to display. These should be located in the `assets` directory within your project's `public` folder.
-
-**Step 2:** Assign local file paths to the `documentPath` and `resourceUrl` properties within the PDF Viewer setup. The `documentPath` should refer to your PDF file, while the `resourceUrl` should point to the directory containing the supporting resources.
-
-By following these steps, you will configure your PDF Viewer to load the required resources locally. See the code snippet below for reference.
-
-{% tabs %}
-{% highlight js tabtitle="JSX" %}
-{% raw %}
-
-<PdfViewerComponent
-    id="container"
-    documentPath= {window.location.origin + "/assets/pdfsuccinctly.pdf"}
-    resourceUrl = {window.location.origin + "/assets/ej2-pdfviewer-lib"}
-    style={{ 'height': '640px' }}>
-</PdfViewerComponent>
-
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
-View the sample in GitHub to [load PDF Viewer with local resources](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
+N> To load PDF documents and resources from your local application instead of a CDN, refer to [Load PDF Viewer with Local Resources](how-to/load-pdf-viewer-with-local-resources).
 
 ## Run the application
 
@@ -201,28 +167,6 @@ Now run the `npm run dev` command in the console to start the development server
 
 ```
 npm run dev
-```
-
-## Adding Next.js Configuration
-
-When deploying the Syncfusion PDF Viewer component in a Next.js application, you may need to add the following configuration to ensure smooth deployment:
-
-Create a next.config.js file in the root of your project, and add the following code to the file:
-
-```
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: false,  // Disable React Strict Mode for compatibility
-  swcMinify: false,        // Disable SWC minification for better compatibility
-};
-
-module.exports = nextConfig;
-```
-
-N> When running the sample, if you encounter the **ERR_OSSL_EVP_UNSUPPORTED error** error, you need to run the following command in your terminal to resolve this issue. This error is related to OpenSSL, which is a cryptographic library used by Node.js for secure communication and encryption tasks. This specific error typically occurs when Node.js is trying to use cryptographic algorithms or routines that are not supported by the current version of OpenSSL being used.
-
-```
-$env:NODE_OPTIONS = "--openssl-legacy-provider"
 ```
 
 Output appears as follows.
@@ -239,7 +183,10 @@ return (<div>
     <div className='control-section'>
         <PdfViewerComponent
             id="container"
+            // Specifies the path or Base64 string of the PDF document to be loaded in the PDF Viewer.
+            // You can provide a URL (for example, a file from the public folder) or a Base64-encoded PDF.
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+            // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
             resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}>
                {/* Inject the required services */}
