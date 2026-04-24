@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with EJ2 Javascript Spreadsheet control | Syncfusion
+title: Getting started with Javascript Spreadsheet control | Syncfusion
 description:  Checkout and learn about Getting started with EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Getting started 
 documentation: ug
 ---
 
-# Getting Started with Javascript Spreadsheet component
+# Getting Started with Javascript Spreadsheet control
 
 This section explains the steps to create a simple Essential<sup style="font-size:70%">&reg;</sup> JS 2 Spreadsheet control in a JavaScript application.
 
@@ -17,11 +17,10 @@ To get started, ensure the following software is installed on your machine:
 
 - [Spreadsheet Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Essential Studio® JavaScript (Essential® JS 2)](https://www.syncfusion.com/downloads/essential-js2)
 
-> **Note:** If you are using Syncfusion® CDN resources to build your web application, you can skip the Essential Studio® JavaScript prerequisite.
+> **Note:** If you are using Syncfusion® CDN resources to build your web application, you can skip the Spreadsheet Editor SDK prerequisite.
 
-## Create the JavaScript Project
+## Setup for local development
 
 Create a simple JavaScript application to render the Spreadsheet control.
 
@@ -32,7 +31,7 @@ Create a simple JavaScript application to render the Spreadsheet control.
 - `index.html`
 - `index.js`
 
-## Add Syncfusion Spreadsheet resources
+## Add Syncfusion® Spreadsheet resources
 
 Add the required Syncfusion Essential<sup style="font-size:70%">&reg;</sup> JS 2 Spreadsheet theme style and script references to the `index.html` file before rendering the Spreadsheet control.
 
@@ -56,7 +55,7 @@ You can access Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet cont
 
 ...
 <head>
-<!-- Essential JS 2 Spreadsheet's dependents material theme -->
+<!-- Essential JS 2 Spreadsheet's dependents styles -->
 <link href="resources/base/styles/material.css" rel="stylesheet" type="text/css" />
 <link href="resources/inputs/styles/material.css" rel="stylesheet" type="text/css" />
 <link href="resources/buttons/styles/material.css" rel="stylesheet" type="text/css" />
@@ -66,7 +65,7 @@ You can access Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet cont
 <link href="resources/popups/styles/material.css" rel="stylesheet" type="text/css" />
 <link href="resources/dropdowns/styles/material.css" rel="stylesheet" type="text/css" />
 <link href="resources/grids/styles/material.css" rel="stylesheet" type="text/css" />
-<!-- Essential JS 2 Spreadsheet's material theme -->
+<!-- Essential JS 2 Spreadsheet's styles -->
 <link href="resources/spreadsheet/styles/material.css" rel="stylesheet" type="text/css" />
 <!-- Essential JS 2 Spreadsheet's dependents script -->
 <script src="resources/scripts/ej2-base.min.js" type="text/javascript"></script>
@@ -96,7 +95,7 @@ You can access Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet cont
 
 ...
 <head>
-<!-- Essential JS 2 Spreadsheet's dependents material theme -->
+<!-- Essential JS 2 Spreadsheet's dependents styles -->
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/material.css" rel="stylesheet" type="text/css" />
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css" />
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" />
@@ -106,7 +105,7 @@ You can access Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet cont
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/material.css" rel="stylesheet" type="text/css" />
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css" />
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-grids/styles/material.css" rel="stylesheet" type="text/css" />
-<!-- Essential JS 2 Spreadsheet material theme -->
+<!-- Essential JS 2 Spreadsheet styles -->
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-spreadsheet/styles/material.css" rel="stylesheet" type="text/css" />
 <!-- Essential JS 2 Spreadsheet's dependents script -->
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
@@ -132,9 +131,9 @@ You can access Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet cont
 {% endhighlight %}
 {% endtabs %}
 
-## Add the Syncfusion® Spreadsheet component to the project
+## Add the Syncfusion® Spreadsheet control
 
-After adding the required style references, add a container element for the Spreadsheet control in the `index.html` file and then initialize the control in the `index.js` file.
+Add a container element for the Spreadsheet control in the `index.html` file and then initialize the control in the `index.js` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -156,7 +155,10 @@ After adding the required style references, add a container element for the Spre
 {% highlight js tabtitle="index.js" %}
 
 // Initialize the Spreadsheet control
-var spreadsheet = new ej.spreadsheet.Spreadsheet();
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+    saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
+});
 
 // Render the initialized Spreadsheet
 spreadsheet.appendTo('#element');
@@ -170,19 +172,7 @@ spreadsheet.appendTo('#element');
 
 Now, run the `index.html` in web browser, it will render the Essential<sup style="font-size:70%">&reg;</sup> JS 2 Spreadsheet control.
 
-Output will be displayed as follows.
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1" %}
-
 
 ## See Also
 
