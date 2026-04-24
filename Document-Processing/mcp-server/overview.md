@@ -28,7 +28,7 @@ Syncfusion MCP Servers are delivered as .NET-based Model Context Protocol (MCP) 
 
 **AI Coding Assistant** - Implement document processing features with focused API guidance. Ideal for adding document automation to existing projects and troubleshooting integration issues.
 
-### Available MCP Servers
+**Available MCP Servers**
 
 * SyncfusionDocumentSDKAssistant
 * SyncfusionSpreadsheetEditorSDKAssistant
