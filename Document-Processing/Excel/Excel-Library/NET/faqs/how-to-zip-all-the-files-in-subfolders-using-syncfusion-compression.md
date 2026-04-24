@@ -363,7 +363,7 @@ End Module
 
 ## See Also
 
-* [How to zip files using the Syncfusion.Compression.Zip namespace?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-zip-files-using-the-syncfusion-compression-zip-namespace)
-* [How to protect the zip files using Syncfusion.Compression.Base?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-protect-the-zip-files-using-syncfusion-compression-base)
-* [How to un-protect the zip files using Syncfusion.Compression.Base?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-un-protect-the-zip-files-using-syncfusion-compression-base)
-* [How to merge excel files from more than one workbook to a single file?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-merge-excel-files-from-more-than-one-workbook-to-a-single-file)
+* [How to zip files using the Syncfusion.Compression.Zip namespace?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-zip-files-using-the-syncfusion-compression-zip-namespace)
+* [How to protect the zip files using Syncfusion.Compression.Base?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-protect-the-zip-files-using-syncfusion-compression-base)
+* [How to un-protect the zip files using Syncfusion.Compression.Base?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-un-protect-the-zip-files-using-syncfusion-compression-base)
+* [How to merge excel files from more than one workbook to a single file?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-merge-excel-files-from-more-than-one-workbook-to-a-single-file)
