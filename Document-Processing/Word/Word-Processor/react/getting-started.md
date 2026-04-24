@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with React DOCX editor component
 
-This section explains the steps to create a Word document editor within your application and demonstrates the basic usage of the Document editor component.
+This section explains the steps to create a DOCX Editor within your application and demonstrates the basic usage of the Document editor component.
 
 To get started quickly with Document Editor component, you can check the video below.
 
@@ -39,8 +39,8 @@ npm run dev
 
 ## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
 
-All available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-You can choose the component that you want to install.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/~syncfusionorg).
+
 
 To install the Document editor component, use the following command:
 
@@ -82,6 +82,7 @@ function App() {
         <DocumentEditorContainerComponent 
             id="container" 
             height={'590px'} 
+            //Use the following service URL only for demo purposes
             serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
             enableToolbar={true}
         />
@@ -93,7 +94,7 @@ export default App;
 
 {% endraw %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
+> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 #### Run the  application
 
@@ -107,14 +108,8 @@ Open http://localhost:3000 in your browser to see the DocumentEditorContainer ou
 The DocumentEditorContainer output will be displayed as follows:
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/document-editor/react/base-cs3/app/index.jsx %}
-{% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
 {% include code-snippet/document-editor/react/base-cs3/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="app.html" %}
-{% include code-snippet/document-editor/react/base-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
