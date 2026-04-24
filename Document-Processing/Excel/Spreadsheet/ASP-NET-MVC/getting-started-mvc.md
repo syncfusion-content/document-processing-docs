@@ -20,11 +20,9 @@ This section briefly explains about how to include [ASP.NET MVC Spreadsheet](htt
 
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/overview/getting-started/introduction/getting-started#create-your-first-app)
 
-* [Create a Project using Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Extension](https://ej2.syncfusion.com/aspnetmvc/documentation/getting-started/project-template)
-
 ## Install ASP.NET MVC package in the application
 
-To add `ASP.NET MVC` controls in the application, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5) and then install it.
+Open the NuGet package manager UI in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5) and then install it. Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -106,4 +104,4 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-Get
 * [Data Binding](./data-binding)
 * [Open and Save](./open-save)
 
-N> You can refer to our [ASP.NET MVC Spreadsheet](https://www.syncfusion.com/aspnet-mvc-ui-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET MVC Spreadsheet example](https://ej2.syncfusion.com/aspnetmvc/Spreadsheet/DefaultFunctionalities#/material) that shows you how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
+N> You can refer to our [ASP.NET MVC Spreadsheet](https://www.syncfusion.com/aspnet-mvc-ui-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET MVC Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/asp-net-mvc/spreadsheet/defaultfunctionalities) that shows you how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
