@@ -47,7 +47,7 @@ Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 
 ## Add stylesheet and script resources
 
-Here, the theme and script is referred using [CDN](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#cdn-reference) inside the `<head>` of `~/Pages/Shared/_Layout.cshtml` file as follows,
+Here, the theme and script is referred using CDN inside the `<head>` of `~/Pages/Shared/_Layout.cshtml` file as follows,
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -63,7 +63,7 @@ Here, the theme and script is referred using [CDN](https://ej2.syncfusion.com/as
 {% endhighlight %}
 {% endtabs %}
 
-N> To learn other ways to load themes or scripts (such as [NPM packages](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm) or [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)), see the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/appearance/theme) and [Adding Script Reference](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references) documentation.
+N> To learn other ways to load themes or scripts (such as NPM packages or [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)), see the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/appearance/theme) and [Adding Script Reference](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references) documentation.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
 
@@ -89,10 +89,9 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Sprea
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/spreadsheet/asp-net-core/getting-started-core/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Controller" %}
-{% include code-snippet/spreadsheet/asp-net-core/getting-started-core/spreadsheet.cs %}
-{% endhighlight %}
 {% endtabs %}
+
+> **Note:** The [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`Open and Save`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/open-save) section.
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Spreadsheet control will be rendered in the default web browser.
 
