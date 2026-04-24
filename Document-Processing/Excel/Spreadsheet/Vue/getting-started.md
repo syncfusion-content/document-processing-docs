@@ -18,8 +18,6 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
-To create a new Vue application, run the following command:
-
 {% tabs %}
 {% highlight js tabtitle="npm" %}
 
@@ -75,13 +73,9 @@ Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/
 
 ## Add the Syncfusion® Vue Spreadsheet component to the application
 
-Follow the below steps to add the Vue Spreadsheet component using `Composition API` or `Options API`:
+Import and register the Spreadsheet component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. In the `template` section define the Spreadsheet component
 
-1.First, import and register the Spreadsheet component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
-
-2.In the `template` section define the Spreadsheet component
-
-Now, import the `SpreadsheetComponent` into your `src/App.vue` file and render it.
+Here is the code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
