@@ -59,13 +59,7 @@ npm install @syncfusion/ej2-react-pdfviewer --save
 ```
    <!DOCTYPE html>
    <html lang="en">
-   <head>
-   <title>Syncfusion React PDF Viewer</title>
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <meta name="description" content="Essential JS 2 for React Components" />
-   <meta name="author" content="Syncfusion" />
-   </head>
+   <!-- ... -->
    <body>
       <div id='sample'>
          <div id='loader'>Loading....</div>
@@ -98,8 +92,9 @@ npm install @syncfusion/ej2-react-pdfviewer --save
 import * as ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+        BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
+        FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
     return (<div>
@@ -132,8 +127,9 @@ root.render(<App />);
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-          ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+         BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
+         FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
 export function App() {
 return (<div>
  <div className='control-section'>
@@ -176,8 +172,9 @@ Output appears as follows.
 {% raw %}
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+         BookmarkView,ThumbnailView, Print, TextSelection, Annotation, TextSearch, 
+         FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
 export function App() {
 return (<div>
     <div className='control-section'>
@@ -190,8 +187,8 @@ return (<div>
             resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}>
                {/* Inject the required services */}
-               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                   Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+               BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
         </PdfViewerComponent>
     </div>
 </div>);
@@ -204,8 +201,9 @@ root.render(<App />);
 {% raw %}
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+         BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
+         FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
 export function App() {
 return (<div>
     <div className='control-section'>
@@ -215,8 +213,8 @@ return (<div>
             resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
             style={{ 'height': '640px' }}>
                {/* Inject the required services */}
-               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
-                                   Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+               BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
         </PdfViewerComponent>
     </div>
 </div>);

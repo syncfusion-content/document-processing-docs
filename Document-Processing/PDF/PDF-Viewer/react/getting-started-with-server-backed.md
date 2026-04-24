@@ -114,8 +114,9 @@ function App() {
         serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
         style={{ 'height': '640px' }}>
 
-         <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
-                             ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
+         <Inject services={[ Toolbar, Magnification, Navigation, Annotation,
+                        LinkAnnotation, BookmarkView, ThumbnailView, Print,
+                        TextSelection, TextSearch, FormFields, FormDesigner ]}/>
       </PdfViewerComponent>
     </div>
   </div>);
@@ -191,8 +192,6 @@ Output will be appears as follows.
 N> When configuring the server-backed PDF viewer, it's Essential<sup style="font-size:70%">&reg;</sup> to understand that there is no need to include the pdfium.js and pdfium.wasm files. Unlike the standalone PDF viewer, which relies on these files for local rendering, the server-backed PDF viewer fetches and renders PDFs directly from the server. Consequently, you can exclude the copy command for deployment process, as they are not required to load and display PDFs in this context.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Getting%20Started).
-
-> You can refer to our [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) feature tour page for its groundbreaking feature representations. You can also explore our [React PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/default) to understand how to explains core features of PDF Viewer.
 
 N> For hosting the web service on the Linux platform, ensure to include the [SkiaSharp.NativeAssets.Linux v3.119.1](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1). Additionally, for AWS environments, utilize the following packages:
 
