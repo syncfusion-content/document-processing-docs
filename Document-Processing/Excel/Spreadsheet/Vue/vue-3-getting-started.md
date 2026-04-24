@@ -63,7 +63,7 @@ Add the following style references.
 
 Follow the below steps to add the Vue Spreadsheet component using `Composition API` or `Options API`:
 
-1.First, import and register the Spreadsheet component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1.Import and register the Spreadsheet component in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section.
 
 2.In the `template` section, define the Spreadsheet component with sheets directives. Sheet directives are used to define the sheet definition for the Spreadsheet component.
 
