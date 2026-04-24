@@ -10,17 +10,17 @@ documentation: ug
 
 # Getting Started with ASP.NET MVC Spreadsheet Control
 
-This section briefly explains about how to include [Syncfusion® ASP.NET MVC Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-mvc-spreadsheet-editor) control in your ASP.NET MVC application using Visual Studio.
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-mvc-spreadsheet-editor) control in your ASP.NET MVC application using Visual Studio.
 
 ## Prerequisites
 
-[System requirements for Syncfusion® ASP.NET MVC controls](https://ej2.syncfusion.com/aspnetmvc/documentation/system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls](https://ej2.syncfusion.com/aspnetmvc/documentation/system-requirements)
 
 ## Create ASP.NET MVC application with HTML helper
 
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/overview/getting-started/introduction/getting-started#create-your-first-app)
 
-## Install Syncfusion® ASP.NET MVC package in the application
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC package in the application
 
 Open the NuGet package manager UI in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5) and then install it. Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -80,7 +80,7 @@ Also, register the script manager `EJS().ScriptManager()` at the end of `<body>`
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion® ASP.NET MVC Spreadsheet control
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet control
 
 Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet control in `~/Views/Home/Index.cshtml` page.
 

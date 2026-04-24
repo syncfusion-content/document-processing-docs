@@ -10,17 +10,17 @@ documentation: ug
 
 # Getting Started with ASP.NET Core Spreadsheet Control
 
-This section briefly explains about how to include [Syncfusion® ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) control in your ASP.NET Core application using Visual Studio.
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) control in your ASP.NET Core application using Visual Studio.
 
 ## Prerequisites
 
-[System requirements for Syncfusion® ASP.NET Core controls](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core controls](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements)
 
 ## Create ASP.NET Core web application with Razor pages
 
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio#create-a-razor-pages-web-app)
 
-## Install Syncfusion® ASP.NET Core package in the application
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core package in the application
 
 Open the NuGet package manager UI in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) and then install it.  Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -81,7 +81,7 @@ Also, register the script manager `<ejs-script>` at the end of `<body>` in the A
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion® ASP.NET Core Spreadsheet control
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Spreadsheet control
 
 Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Spreadsheet tag helper in `~/Pages/Index.cshtml` page.
 
