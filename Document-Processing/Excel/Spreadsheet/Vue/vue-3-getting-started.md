@@ -13,7 +13,7 @@ This article provides a step-by-step guide for setting up a [Vite](https://vitej
 
 ## Prerequisites
 
-[System requirements for Syncfusion® Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion® Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -46,7 +46,7 @@ npm install @syncfusion/ej2-vue-spreadsheet --save
 
 ## Add CSS references
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/).
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio).
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -68,7 +68,7 @@ You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> V
 
 ## Note
 
-Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
@@ -222,7 +222,7 @@ After the application starts, open the local URL shown in the terminal to view t
 
 > You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) that shows you how to present and manipulate data.
 
-For Migrating from Vue 2 to Vue 3 refer the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation
+For Migrating from Vue 2 to Vue 3 refer the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial#migration-from-vue-2-to-vue-3) documentation
 
 ## See also
 

@@ -12,7 +12,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Prerequisites
 
-[System requirements for Syncfusion® Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion® Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Create a Vue application
 
@@ -49,7 +49,7 @@ npm install @syncfusion/ej2-vue-spreadsheet --save
 
 ## Add CSS references
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/).
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio).
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -71,7 +71,7 @@ You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> V
 
 ## Note
 
-Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 ## Add the Syncfusion® Vue Spreadsheet component to the application
 
@@ -86,10 +86,11 @@ Now, import the `SpreadsheetComponent` into your `src/App.vue` file and render i
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/vue/getting-started-cs1/app-composition.vue %}
-{% highlight %}
+{% endhighlight %}
+
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/vue/getting-started-cs1/app.vue %}
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 > **Note:** The [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, please refer to our [`blog`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) post.
