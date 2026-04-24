@@ -2,7 +2,6 @@
 layout: post
 title: Getting started with Vue Spreadsheet component | Syncfusion
 description:  Checkout and learn about Getting started with Vue Spreadsheet component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
 platform: document-processing
 documentation: ug
 ---
@@ -13,67 +12,44 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion® Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Dependencies
-
-The following list of dependencies are required to use the Spreadsheet component in your application:
-
-```js
-|-- @syncfusion/ej2-vue-spreadsheet
-    |-- @syncfusion/ej2-vue-base
-        |-- @syncfusion/ej2-base
-        |-- @syncfusion/ej2-dropdowns
-        |-- @syncfusion/ej2-navigations
-        |-- @syncfusion/ej2-grids
-```
-
-## Setting up the Vue 2 project
+## Create a Vue application
 
 To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
-```bash
+To create a new Vue application, run the following command:
+
+{% tabs %}
+{% highlight js tabtitle="npm" %}
+
 npm install -g @vue/cli
 vue create quickstart
 cd quickstart
 npm run serve
-```
 
-or
+{% endhighlight %}
+{% highlight ts tabtitle="yarn" %}
 
-```bash
 yarn global add @vue/cli
 vue create quickstart
 cd quickstart
 yarn run serve
+
+{% endhighlight %}
+{% endtabs %}
+
+## Install the Syncfusion® Vue Spreadsheet package
+
+Install the [Vue Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet) package from npm using the following command:
+
 ```
-
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
-
-![Vue 2 project](./images/vue2-terminal.png)
-
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
-
-This article uses the [Vue Spreadsheet component](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) as an example. Install the `@syncfusion/ej2-vue-spreadsheet` package by running the following command:
-
-```bash
 npm install @syncfusion/ej2-vue-spreadsheet --save
 ```
-or
 
-```bash
-yarn add @syncfusion/ej2-vue-spreadsheet
-```
+## Add CSS references
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
-
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
-
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Spreadsheet component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/).
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -93,80 +69,54 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
+## Note
+
+Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+
+## Add the Syncfusion® Vue Spreadsheet component to the application
 
 Follow the below steps to add the Vue Spreadsheet component using `Composition API` or `Options API`:
 
-1\. First, import and register the Spreadsheet component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1.First, import and register the Spreadsheet component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
+2.In the `template` section define the Spreadsheet component
 
-<script setup>
-import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spreadsheet";
-</script>
-
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
-
-export default {
-   name: "App",
-   components: {
-      'ejs-spreadsheet': SpreadsheetComponent
-   }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2\. In the `template` section define the Spreadsheet component
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-   <ejs-spreadsheet></ejs-spreadsheet>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Now, import the `SpreadsheetComponent` into your `src/App.vue` file and render it.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/vue/getting-started-cs1/app-composition.vue %}
-{% endhighlight %}
+{% highlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/vue/getting-started-cs1/app.vue %}
+{% highlight %}
+{% endtabs %}
+
+> **Note:** The [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, please refer to our [`blog`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) post.
+
+## Run the application
+
+Run the following command to start the application:
+
+{% tabs %}
+{% highlight js tabtitle="npm" %}
+
+npm run serve
+
+{% endhighlight %}
+{% highlight ts tabtitle="yarn" %}
+
+yarn run serve
+
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
-
-To run the project, use the following command:
-
-```bash
-npm run serve
-```
-
-or
-
-```bash
-yarn run serve
-```
-        
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/getting-started-cs1" %}
+After the application starts, open the local URL shown in the terminal to view the Vue Spreadsheet Editor in the browser.
 
 > You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) that shows you how to present and manipulate data.
 
-## See Also
+## See also
 
 * [Data Binding](./data-binding)
-* [Open and Save](./open-save)
+* [Open Excel files](./open-excel-files)
+* [Save Excel files](./save-excel-files)
