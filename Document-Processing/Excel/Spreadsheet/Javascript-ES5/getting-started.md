@@ -42,7 +42,7 @@ You can access Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet cont
   Your application structure should look like this:
 
   ```text
-  myapp/
+  spreadsheet-app/
   ├── index.html
   ├── index.js
   └── resources/
