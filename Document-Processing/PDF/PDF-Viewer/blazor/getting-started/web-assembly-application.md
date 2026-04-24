@@ -33,7 +33,7 @@ To add the Blazor PDF Viewer, open the NuGet Package Manager in Visual Studio (T
 
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
+* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
 
@@ -88,8 +88,6 @@ dotnet restore
 
 N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
 
-N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for the list of available packages and component details.
-
 {% endtabcontent %}
 
 {% endtabcontents %}
@@ -137,7 +135,7 @@ await builder.Build().RunAsync();
 Add the following stylesheet and script to the head section of **wwwroot/index.html**.
 
 {% tabs %}
-{% highlight html hl_lines="3 7" %}
+{% highlight razor tabtitle="index.html" hl_lines="3 7" %}
 
 <head>
     <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
