@@ -1,6 +1,6 @@
 ---
 title: How to detect if a column is hidden using XlsIO | Syncfusion
-description: Shows how to detect whether a column is hidden in an Excel worksheet using Syncfusion XlsIO.
+description: Shows how to detect whether a column is hidden in an Excel and also shows how to check the ColumnInformation IsHidden property in a worksheet using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
