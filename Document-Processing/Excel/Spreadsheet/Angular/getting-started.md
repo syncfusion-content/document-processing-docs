@@ -101,7 +101,7 @@ To get started quickly with Angular Spreadsheet, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=2Ozwe37X-7Q" %}
 
-## See Also
+## See also
 
 * [Data Binding](./data-binding)
 * [Open and Save](./open-save)

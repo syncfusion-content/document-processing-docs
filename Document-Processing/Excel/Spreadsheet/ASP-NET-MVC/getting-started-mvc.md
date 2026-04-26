@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with EJ2 ASP.NET MVC Spreadsheet Control |Syncfusion
-description: Checkout and learn about getting started with EJ2 ASP.NET MVC Spreadsheet control of Syncfusion Essential JS 2 and more details.
+title: Getting Started with ASP.NET MVC Spreadsheet Control |Syncfusion
+description: Checkout and learn about getting started with ASP.NET MVC Spreadsheet control of Syncfusion Spreadsheet Editor SDK and more details.
 platform: document-processing
 control: Getting Started Mvc
 documentation: ug

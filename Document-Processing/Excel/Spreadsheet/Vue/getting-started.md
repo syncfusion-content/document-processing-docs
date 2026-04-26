@@ -32,8 +32,6 @@ vue create quickstart
 cd quickstart
 ```
 
-> When prompted during project creation, select **Default ([Vue 2] babel, eslint)**.
-
 ## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet package
 
 Install the [Vue Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet) package from npm using the following command:
@@ -64,7 +62,7 @@ Add the following style references.
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+> **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component to the application
 

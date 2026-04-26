@@ -131,7 +131,7 @@ Add a container element for the Spreadsheet control in the `index.html` file and
     <!-- Add your style references here -->
 </head>
 <body>
-    <!-- Add the HTML <div> element for Spreadsheet -->
+    <!-- Element which will render as Spreadsheet -->
     <div id="element"></div>
     <script src="index.js" type="text/javascript"></script>
 </body>
@@ -162,7 +162,7 @@ Use the following live preview to explore the Spreadsheet control.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1" %}
 
-## See Also
+## See also
 
 * [Data Binding](./data-binding)
 * [Open and Save](./open-save)

@@ -56,7 +56,7 @@ Add the following style references.
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+> **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component to the application
 
