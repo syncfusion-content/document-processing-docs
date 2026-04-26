@@ -73,10 +73,3 @@ End Using
 {% endtabs %}
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999438-Remove-ListObjects/FAQ/Remove%20ListObjects/.NET/Remove%20ListObjects">this GitHub page</a>.
-
-## See Also
-
-* [Working with Excel Tables](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-tables)
-* [Working with Excel Worksheet](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet)
-
-N> Important: Always iterate through the ListObjects collection in reverse order (from the highest index to the lowest) when removing items. This prevents index shifting issues that can occur when removing items from a collection while iterating forward.
