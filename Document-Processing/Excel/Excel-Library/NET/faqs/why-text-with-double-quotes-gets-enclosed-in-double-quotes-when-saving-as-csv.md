@@ -6,6 +6,6 @@ control: XlsIO
 documentation: UG
 ---
 
-# Why does text with double quotes get enclosed in double quotes when saving as CSV?
+# Why does text with double quotes enclosed with it when saving as CSV?
 
 This is expected and correct behavior in Microsoft Excel. When a cell’s text contains a double quote ("), Excel automatically encloses the entire text value within double quotes while saving the file in CSV (Comma-Separated Values) format.
