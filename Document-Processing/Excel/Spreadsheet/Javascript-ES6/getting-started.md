@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with TypeScript Spreadsheet control | Syncfusion
-description:  Checkout and learn about Getting started with TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more details.
+description:  Checkout and learn about getting started with the Syncfusion TypeScript Spreadsheet control in the Spreadsheet Editor SDK and more details.
 platform: document-processing
 control: Getting started 
 documentation: ug
@@ -11,20 +11,19 @@ documentation: ug
 
 This section explains how to create a simple TypeScript application and add the [Syncfusion® TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control with the minimum required setup.
 
-> This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
-
 ## Prerequisites
 
 To get started, ensure the following software is installed on your machine:
 
 - [Git](https://git-scm.com/downloads)
-- [Node.js](https://nodejs.org/en/)
+- [Node.js (`v14.15.0` or later)](https://nodejs.org/en/)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- Node `v14.15.0` or higher
 
 ## Create the TypeScript application
 
 Create a simple TypeScript application using the Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
+
+> This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
 
 **Step 1:** Open the command prompt from the required directory and clone the quickstart project from GitHub.
 
@@ -51,22 +50,21 @@ Add the following style references to the file.
 {% tabs %}
 {% highlight css tabtitle="~/src/styles/styles.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-spreadsheet/material.css';
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-spreadsheet/styles/tailwind3.css';
 
 {% endhighlight %}
 {% endtabs %}
 
-> Refer to [themes topic](https://ej2.syncfusion.com/documentation/appearance/theme) to know more about built-in themes and different ways to refer the themes in a typescript project.
+> Refer to the [Themes topic](https://ej2.syncfusion.com/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a TypeScript project.
 
 ## Add the Syncfusion® Spreadsheet control to the application
 
@@ -78,10 +76,10 @@ Add a container element for the Spreadsheet control in the `index.html` file and
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Essential JS 2</title>
+    <title>Syncfusion TypeScript Spreadsheet</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Essential JS 2" />
+    <meta name="description" content="Syncfusion TypeScript Spreadsheet" />
     <meta name="author" content="Syncfusion" />
     <link rel="shortcut icon" href="resources/favicon.ico" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
@@ -123,7 +121,7 @@ npm start
 {% endhighlight %}
 {% endtabs %}
 
-The following example shows a basic Spreadsheet control.
+Use the following live preview to explore the Spreadsheet control.
           
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1" %}
 

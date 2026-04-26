@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue 3 getting started with the Spreadsheet component | Syncfusion
-description:  Check out and learn about Vue 3 getting started with the Vue Spreadsheet component of Syncfusion Essential JS 2 and more details.
+description:  Check out and learn about Vue 3 getting started with the Vue Spreadsheet component of Syncfusion Spreadsheet Editor SDK and more details.
 control: Vue 3 getting started
 platform: document-processing
 documentation: ug
@@ -22,8 +22,8 @@ Use [Vite](https://vitejs.dev/) to create a new Vue application, as it provides 
 To create a new Vue application, run one of the following commands.
 
 ```
-npm create vite@latest
-cd my-project
+npm create vite@latest spreadsheet-app -- --template vue
+cd spreadsheet-app
 ```
 
 ## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet package
@@ -42,25 +42,25 @@ Add the following style references.
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
+  @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+> **Note:** Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component to the application
 
-Import and register the Spreadsheet component directives in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section with sheets directives.
+Import and register the Spreadsheet component directives in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -131,7 +131,7 @@ const data = [
     // Bound properties declarations
     data() {
        return {
-    data:[
+        data:[
           {
             OrderID: 10248,
             Name: "VINET",
@@ -143,8 +143,8 @@ const data = [
             Country: "Germany",
           }
         ],
-    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
-    saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
+      openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+      saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
     };
     },
   };
