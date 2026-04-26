@@ -1,6 +1,6 @@
 ---
-title: How to assign cell value without changing the format type in XlsIO | Syncfusion
-description: Demonstrates assigning values to cells in Syncfusion XlsIO without altering their format. Use `Text` to preserve formatting or set `NumberFormat` before `Value`.
+title: How to Assign Cell Value Without Changing Format in XlsIO
+description: Demonstrates assigning values to cells in Syncfusion XlsIO without changing formats, using Text or setting NumberFormat before Value.
 platform: document-processing
 control: XlsIO
 documentation: UG
