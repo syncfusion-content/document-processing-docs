@@ -21,7 +21,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
     // Converts inches to points
     double inches = 4.5;
-    var points = application.InchesToPoints(inches);
+    double points = application.InchesToPoints(inches);
+    Console.WriteLine($"{inches} inches is equal to {points} points.");
 }
 {% endhighlight %}
 
@@ -33,7 +34,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
     // Converts inches to points
     double inches = 4.5;
-    var points = application.InchesToPoints(inches);
+    double points = application.InchesToPoints(inches);
+    Console.WriteLine($"{inches} inches is equal to {points} points.");
 }
 {% endhighlight %}
 
@@ -44,7 +46,9 @@ Using excelEngine As New ExcelEngine()
     ' Converts inches to points
     Dim inches As Double = 4.5
     Dim points = application.InchesToPoints(inches)
+    Console.WriteLine($"{inches} inches is equal to {points} points.")
 End Using
 {% endhighlight %}
 {% endtabs %}
 
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/996021-Inches-To-Points/FAQ/Inches%20To%20Points/.NET/Inches%20To%20Points">this GitHub page</a>.
