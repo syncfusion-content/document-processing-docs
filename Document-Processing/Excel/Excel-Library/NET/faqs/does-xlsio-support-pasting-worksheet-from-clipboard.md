@@ -1,5 +1,5 @@
 ---
-title: Does XlsIO support pasting a worksheet from the clipboard?
+title: pasting a worksheet from the clipboard | Syncfusion
 description: Explains whether Syncfusion XlsIO provides support for pasting an entire worksheet directly from the system clipboard into a workbook.
 platform: document-processing
 control: XlsIO
