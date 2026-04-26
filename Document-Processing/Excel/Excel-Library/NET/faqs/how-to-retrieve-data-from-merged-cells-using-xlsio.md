@@ -43,7 +43,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     excelEngine.Excel.DefaultVersion = ExcelVersion.Excel2016;
-    IWorkbook workbook = excelEngine.Excel.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
+    IWorkbook workbook = excelEngine.Excel.Workbooks.Open("InputTemplate.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
     int row = 2, col = 5;
@@ -51,7 +51,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     string data = range.IsMerged ? worksheet[range.MergeArea.Row, range.MergeArea.Column].Value : range.Value;
 
     Console.WriteLine(data);
-    workbook.SaveAs(Path.GetFullPath(@"Output/Output.xlsx"));
+    workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -80,4 +80,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999438-Remove-ListObjects/FAQ/Remove%20ListObjects/.NET/Remove%20ListObjects">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999887-Merge-Cell/FAQ/Merge%20Cell%20Data/.NET/Merge%20Area%20Data">this GitHub page</a>.
