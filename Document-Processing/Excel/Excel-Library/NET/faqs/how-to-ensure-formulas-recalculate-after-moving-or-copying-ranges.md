@@ -1,6 +1,6 @@
 ---
 title: Formulas recalculate after moving or copying ranges | Syncfusion
-description: Explains why formulas may not recalculate after a move or copy operation in XlsIO and shows how to clear the CalcEngine formula info table to force recalculation.
+description: Explains why formulas may not recalculate after moving or copying in XlsIO and how clearing the CalcEngine formula info table forces recalculation.
 platform: document-processing
 control: XlsIO
 documentation: UG
