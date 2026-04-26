@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to merge cells so only the top-left cell value and formatting are preserved in XlsIO?
+# How to Merge Cells Preserving TopLeft Value and Format in XlsIO?
 
 When you need Excel-style merging that keeps only the top-left cell's value and applies the top-left cell style to the whole merged area, call `Range.Merge(true)`. This clears the other cells in the region and preserves the top-left value and formatting.
 
