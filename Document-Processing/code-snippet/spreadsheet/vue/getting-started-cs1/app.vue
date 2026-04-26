@@ -1,15 +1,21 @@
 <template>
-   <ejs-spreadsheet></ejs-spreadsheet>
+  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
 </template>
 
 <script>
 import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
 
 export default {
-   name: "App",
-   components: {
-      "ejs-spreadsheet": SpreadsheetComponent
-   }
+  name: "App",
+  components: {
+    "ejs-spreadsheet": SpreadsheetComponent
+  },
+  data: () => {
+    return {
+      openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+      saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
+    }
+  }
 }
 </script>
 
