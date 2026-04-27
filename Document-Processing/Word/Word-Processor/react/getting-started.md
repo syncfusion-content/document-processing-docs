@@ -1,24 +1,22 @@
 ---
 layout: post
-title: Getting started with React DOCX editor component | Syncfusion
-description: Checkout and learn about Getting started with React Document editor component of Syncfusion Essential JS 2 and more details.
+title: Getting started with React DOCX Editor component | Syncfusion
+description: Learn how to create a DOCX Editor in a React application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
 control: Getting started 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React DOCX editor component
+# Getting started with React DOCX Editor
 
-This section explains the steps to create a DOCX Editor within your application and demonstrates the basic usage of the Document editor component.
+Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a React application. 
 
-To get started quickly with Document Editor component, you can check the video below.
+## Steps to create React DOCX Editor
 
-{% youtube "https://www.youtube.com/watch?v=tgJgvbnxdBA" %}
+### Prerequisites
 
-## Prerequisites
-
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ### Create a new React application
 
@@ -36,21 +34,20 @@ cd my-app
 npm run dev
 ```
 
-
-## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
+### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/~syncfusionorg).
 
 
-To install the Document editor component, use the following command:
+To install the Document Editor component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-react-documenteditor --save
 ```
 
-## Adding CSS reference
+### Add CSS reference
 
-Add the Document editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/App.css` file:
+Add the Document Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/App.css` file:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -64,7 +61,7 @@ Add the Document editor component and its dependent component styles available i
 @import "../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
 ```
 
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
+### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
 Add the DocumentEditorContainer component to your application. In the `src/App.tsx` file, add the following code to initialize the component:
 
@@ -95,7 +92,7 @@ export default App;
 
 > The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
-#### Run the  application
+### Run the  application
 
 Run the application using the following command:
 
@@ -114,4 +111,22 @@ The DocumentEditorContainer output will be displayed as follows:
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs3" %}
 
+## Video tutorial
 
+To get started quickly with Document Editor component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=tgJgvbnxdBA" %}
+
+## Server-side dependencies
+
+The Document Editor component requires server-side interactions for the following operations:
+
+* Open file formats other than SFDT
+* Paste with formatting
+* Restrict editing
+* Spell check
+* Save as file formats other than SFDT and DOCX
+
+>Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+
+For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
