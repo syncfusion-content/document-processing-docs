@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a JavaScript application using the Syncfusion® Document Editor control to create and edit Word documents.
+description: Learn how to create a DOCX Editor in a JavaScript application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
 platform: document-processing
 control: Getting started 
 documentation: ug
@@ -9,19 +9,9 @@ domainurl: ##DomainURL##
 ---
 
 # Getting Started with JavaScript (ES5) Document Editor
-Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a JavaScript application.
 
-## Server-side dependencies
+Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a JavaScript (ES5) application.
 
-The Document editor component requires server-side interactions for the following operations:
-
-* Open file formats other than SFDT
-* Paste with formatting
-* Restrict editing
-* Spell check
-* Save as file formats other than SFDT and DOCX
-
->Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 ## Component Initialization
 
@@ -236,3 +226,17 @@ This approach uses Content Delivery Network (CDN) links to reference the require
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/es5-getting-started-cs2" %}
 
 Now, run the `index.html` in web browser, it will render the **Essential<sup style="font-size:70%">&reg;</sup> JS 2 DocumentEditorContainer** component.
+
+## Server-side dependencies
+
+The Document editor component requires server-side interactions for the following operations:
+
+* Open file formats other than SFDT
+* Paste with formatting
+* Restrict editing
+* Spell check
+* Save as file formats other than SFDT and DOCX
+
+>Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+
+For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
