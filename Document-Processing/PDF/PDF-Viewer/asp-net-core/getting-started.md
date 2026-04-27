@@ -159,7 +159,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer
 {% endhighlight %}
 {% endtabs %}
 
-To use the `resourceUrl` and `documentPath` locally with the PDF Viewer, follow these [instructions](./how-to/local-resources.md#configuring-pdf-viewer-for-locally-available-pdf-documents-and-local-resources).
+To use the `resourceUrl` and `documentPath` locally with the PDF Viewer, follow these [instructions](./how-to/local-resources#configuring-pdf-viewer-for-locally-available-pdf-documents-and-local-resources).
 
 ## Run the application
 

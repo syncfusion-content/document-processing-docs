@@ -69,11 +69,15 @@ To load and display a PDF in server-backed mode, configure the PDF Viewer with t
 Update `src/app.ts` as shown below:
 
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-         ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, 
+         Navigation, Annotation, LinkAnnotation,
+         ThumbnailView, BookmarkView, TextSelection, 
+         TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
-                BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation,
+               Annotation, LinkAnnotation, ThumbnailView,
+               BookmarkView, TextSelection, TextSearch,
+               FormFields, FormDesigner);
 
 const pdfviewer: PdfViewer = new PdfViewer({
   // Specifies the URL of the server-side PDF Viewer web service
@@ -113,10 +117,10 @@ The application will connect to the configured PDF Viewer web service and render
 To host your own PDF Viewer web service:
 
 1. Download the web service sample from GitHub:
-   https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices
+   [GitHub Web service sample](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices)
 2. Navigate to the appropriate folder based on your .NET version:
-   - .NET 6.0 → PdfViewerWebService_6.0
-   - .NET 8.0 → PdfViewerWebService_8.0
+   - .NET 6.0 → [PdfViewerWebService_6.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_6.0)
+   - .NET 8.0 → [PdfViewerWebService_8.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_8.0)
 3. Restore and run the service:
 
 ```bash
