@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
 
+Check out the following video to learn how to Add Signatures to PDF Documents Using the ASP.NET Core PDF Viewer
+{% youtube "https://www.youtube.com/watch?v=4AHagpyePnA" %}
+
 ## Add signature annotation
 
 ### Adding a handwritten signature in UI
@@ -21,15 +24,15 @@ The handwritten signature can be added to the PDF document using the annotation 
 - Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
 - Select the **Handwritten signature** button in the annotation toolbar. The signature panel appears.
 
-![Open the handwritten signature panel](../images/select_sign.png)
+![Open the handwritten signature panel](../../javascript-es6/images/select_sign.png)
 
 - Draw the signature in the panel.
 
-![Draw the handwritten signature](../images/add_sign.png)
+![Draw the handwritten signature](../../javascript-es6/images/add_sign.png)
 
 - Click **Create**, move the signature, and place it at the desired location.
 
-![Place the handwritten signature on the page](../images/create_sign.png)
+![Place the handwritten signature on the page](../../javascript-es6/images/create_sign.png)
 
 Refer to the following code sample to switch to the handwritten signature mode programmatically.
 
