@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor WASM DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a Blazor WebAssembly (WASM) application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
+description: Learn how to create a DOCX Editor in a Blazor WASM application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
