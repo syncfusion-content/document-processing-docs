@@ -46,7 +46,7 @@ Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 
 ## Add stylesheet and script resources
 
-Add the theme stylesheet and script references to the `<head>` section of `~/Views/Shared/_Layout.cshtml` file, as shown in the following example.
+Add the stylesheet and script references to the `<head>` section of `~/Views/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}

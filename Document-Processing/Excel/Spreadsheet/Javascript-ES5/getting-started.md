@@ -27,12 +27,6 @@ spreadsheet-app/
 
 Add the required Syncfusion® Spreadsheet style and script references to the `index.html` file using one of the following methods:
 
-You can add the required resources using either of the following methods:
-
-## Add Syncfusion® Spreadsheet resources
-
-Add the required Syncfusion® Spreadsheet style and script references to the `index.html` file using one of the following methods:
-
 {% tabcontents %}
 
 {% tabcontent Using Local Resources %}

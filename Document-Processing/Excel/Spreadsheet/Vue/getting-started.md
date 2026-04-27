@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Vue Spreadsheet Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component using the Composition API / Options API.
+This article provides a step-by-step guide for setting up a Vue 2 project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component using the Composition API or Options API.
 
 ## Prerequisites
 

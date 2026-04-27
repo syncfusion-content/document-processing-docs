@@ -47,7 +47,7 @@ Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 
 ## Add stylesheet and script resources
 
-Add the theme stylesheet and script references to the `<head>` section of the `~/Pages/Shared/_Layout.cshtml` file, as shown in the following example.
+Add the stylesheet and script references to the `<head>` section of the `~/Pages/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
