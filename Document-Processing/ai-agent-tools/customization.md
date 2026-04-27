@@ -20,14 +20,14 @@ Follow these steps to enable new document operations to the AI agent tool librar
 
 ```bash
 git clone https://github.com/syncfusion/document-sdk-ai-agent-tools.git
-cd Document-SDK-AI-Agent-Tool
+cd Document-SDK-AI-Agent-Tools
 ```
 
-**Step 2: Open the Agent tool library**
+**Step 2: Create a Custom AI Agent Tool by Inheriting AgentToolBase**
 
-Syncfusion.DocumentSDK.AI.AgentTools\Syncfusion.DocumentSDK.AI.AgentTools.csproj
+Open the Syncfusion.DocumentSDK.AI.AgentTools library project 
 
-**Step 3: Create a Custom AI Agent Tool by Inheriting AgentToolBase**
+Syncfusion.DocumentSDK.AI.AgentTools\Syncfusion.DocumentSDK.AI.AgentTools.csproj Then,
 
 Create a new class inside the Tools that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document manager through its constructor:
 
@@ -57,7 +57,7 @@ namespace Syncfusion.AI.AgentTools.Word
 }
 ```
 
-**Step 4: Add Tool Methods with [Tool]**
+**Step 3: Add Tool Methods with [Tool]**
 
 Add `public` instance methods and decorate each one with `[Tool]`, providing a name and a description that the AI agent will use to understand when to call it:
 
@@ -71,7 +71,7 @@ public AgentToolResult AddTextWatermark(...)
 }
 ```
 
-**Step 5: Annotate Parameters with [ToolParameter]**
+**Step 4: Annotate Parameters with [ToolParameter]**
 
 Decorate each method parameter with `[ToolParameter]` to give the AI a natural-language description of what value to pass:
 
@@ -85,7 +85,7 @@ public AgentToolResult AddTextWatermark(
         string? outputFilePath = null)
 ```
 
-**Step 6: Return AgentToolResult**
+**Step 5: Return AgentToolResult**
 
 All tool methods must return `AgentToolResult`. Use the static factory methods to signal success or failure:
 
