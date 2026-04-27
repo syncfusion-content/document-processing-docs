@@ -138,8 +138,8 @@ npx serve .
 2. Navigate to the `ASP.NET Core` folder and open it in the command prompt.
 3. Navigate to the appropriate subfolder based on your .NET version:
 
-   - .NET 6.0 → `PdfViewerWebService_6.0`
-   - .NET 8.0 → `PdfViewerWebService_8.0`
+   - .NET 6.0 → [`PdfViewerWebService_6.0`](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_6.0)
+   - .NET 8.0 → [`PdfViewerWebService_8.0`](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_8.0)
 
 4. Use the following command to restore the required packages.
 
