@@ -46,7 +46,7 @@ Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 
 ## Add stylesheet and script resources
 
-Here, the theme and script is referred using CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` file as follows,
+Add the theme stylesheet and script references to the `<head>` section of `~/Views/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -66,7 +66,7 @@ N> To learn other ways to load themes or scripts (such as NPM packages or [CRG](
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> script manager
 
-Also, register the script manager `EJS().ScriptManager()` at the end of `<body>` in the `~/Views/Shared/_Layout.cshtml` file as follows.
+Register the script manager `EJS().ScriptManager()` at the end of the `<body>` element in the `~/Views/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -82,7 +82,7 @@ Also, register the script manager `EJS().ScriptManager()` at the end of `<body>`
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet control
 
-Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet control in `~/Views/Home/Index.cshtml` page.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet control in `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}

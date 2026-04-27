@@ -17,9 +17,9 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Create a Vue application
 
-Use the [Vue CLI](https://cli.vuejs.org/#getting-started) to set up a Vue application.
+Use [Vue CLI](https://cli.vuejs.org/#getting-started) to set up a Vue application, as it provides a modular project architecture, flexible configuration, and an integrated plugin system.
 
-Install Vue CLI using the following command:
+Install Vue CLI globally, using the following command:
 
 ```
 npm install -g @vue/cli
