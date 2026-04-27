@@ -17,8 +17,6 @@ This article provides a step-by-step guide for setting up a [Vite](https://vitej
 
 ## Create a Vue application
 
-Use [Vite](https://vitejs.dev/) to create a new Vue application, as it provides a faster development environment, smaller bundle sizes, and optimized builds.
-
 To create a new Vue application, run one of the following commands.
 
 ```

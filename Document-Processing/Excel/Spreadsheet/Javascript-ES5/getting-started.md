@@ -11,30 +11,30 @@ documentation: ug
 
 This section explains the steps to create a simple [Syncfusion® JavaScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control in a JavaScript application.
 
-## Create a JavaScript application and add Syncfusion® Spreadsheet resources
+## Create a JavaScript application
 
-Create a folder named `spreadsheet-app` with `index.html` and `index.js` files. Then, add the required Syncfusion Spreadsheet style and script references to the `index.html` file.
+Create a folder named `spreadsheet-app` with `index.html` and `index.js` files.
 
-You can add the required resources using either of the following methods:
+Your application structure should look like this:
 
-- **Local scripts and styles** – Create a `resources` folder under `spreadsheet-app`, and then copy the required script and style files from the [Spreadsheet Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials) build into it.
+```text
+spreadsheet-app/
+├── index.html
+├── index.js
+```
 
-  Your application structure should look like this:
-  ```text
-  spreadsheet-app/
-  ├── index.html
-  ├── index.js
-  └── resources/
-  ```
+## Add Syncfusion® Spreadsheet resources
 
-- **Using CDN links** – Reference the scripts and styles directly from the CDN.
-  ```text
-  Script: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js
-  Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAME}.css
-  ```
+Add the required Syncfusion® Spreadsheet style and script references to the `index.html` file using one of the following methods:
+
+{% tabcontents %}
+
+{% tabcontent Using Local Resources %}
+
+Create a `resources` folder under `spreadsheet-app`, and then copy the required script and style files from the [Spreadsheet Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials) build into it.
 
 {% tabs %}
-{% highlight html tabtitle="Local script and style" %}
+{% highlight html tabtitle="index.html" %}
 
 ...
 <head>
@@ -74,7 +74,21 @@ You can add the required resources using either of the following methods:
 ...
 
 {% endhighlight %}
-{% highlight html tabtitle="CDN link for script and style" %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Using CDN Links %}
+
+Reference the scripts and styles directly from the CDN.
+
+```text
+Script: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js
+Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAME}.css
+```
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
 
 ...
 <head>
@@ -114,6 +128,10 @@ You can add the required resources using either of the following methods:
 ...
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 > **Note:** To learn more about other ways to load themes or scripts, see the [Themes topic](https://ej2.syncfusion.com/javascript/documentation/appearance/theme) and [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) documentation.
 
