@@ -26,7 +26,7 @@ This section briefly explains about how to include [ASP.NET MVC Document Editor]
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Nuget packages
 
-To add **ASP.NET MVC Document Editor** component in the appplication, follow the steps below.
+To add **ASP.NET MVC Document Editor** component in the application, follow the steps below.
 - open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
 - search and install the following package
     - [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5)
@@ -39,7 +39,7 @@ Install-Package Syncfusion.EJ2.MVC5 -Version {{ site.ej2version }}
 {% endhighlight %}
 {% endtabs %}
 
-N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/)for license validation.”
+N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for license validation.”
 
 ### Add namespace
 

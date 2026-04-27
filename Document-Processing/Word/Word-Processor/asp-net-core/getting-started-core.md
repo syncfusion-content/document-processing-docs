@@ -28,7 +28,7 @@ Create a new ASP.NET Core web application using one of the following methods:
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Nuget packages
 
-To add **ASP.NET Core Document Editor** component in the appplication, follow the steps below.
+To add **ASP.NET Core Document Editor** component in the application, follow the steps below.
  - open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
  - search and install the following package
     - [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/)
@@ -43,7 +43,7 @@ Install-Package Syncfusion.EJ2.AspNet.Core -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/)for license validation.”
+N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for license validation.”
 
 ### Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Tag Helper
 
