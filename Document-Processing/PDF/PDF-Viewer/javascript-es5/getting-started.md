@@ -92,7 +92,7 @@ Add the `Div` element and initiate the **PDF Viewer** component in the index.htm
 {% endhighlight %}
 {% endtabs %}
 
-To configure PDF Viewer with local resources for script and style referernces, and the `documentPath` and `resourceUrl` properties, refer to the [instructions](./how-to/use-local-script-and-style-references) here.
+To configure PDF Viewer with local resources for script and style references, and the `documentPath` and `resourceUrl` properties, refer to the [instructions](./how-to/use-local-script-and-style-references) here.
 
 ## Run the application
 

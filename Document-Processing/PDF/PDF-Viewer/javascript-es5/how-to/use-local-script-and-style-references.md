@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Use local script and style references in JavaScript PDF Viewer control | Syncfusion
+title: Use local resources in JavaScript PDF Viewer | Syncfusion
 description: Learn how to configure local script and style references for the Syncfusion JavaScript PDF Viewer control and reference them within your application.
 platform: document-processing
 control: PDF Viewer
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Use local script and style references in JavaScript PDF Viewer
 
-**Step 1:** Create an application folder named `myapp` for Essential JS 2 JavaScript components.
+**Step 1:** Create an application folder named `my-app` for Essential JS 2 JavaScript components.
 
 **Step 2:** Download the global scripts and styles from the [Essential Studio JavaScript (Essential JS 2) build](https://www.syncfusion.com/downloads/essential-js2/) installed on your machine.
 
@@ -44,7 +44,7 @@ npm install
 >
 > `pdfium.wasm`: [`https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib/pdfium.wasm`](https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib/pdfium.wasm)
 
-**Step 4:** Create a folder named `myapp/resources` and copy the EJ2 scripts and styles from the installed location into the `myapp/resources` directory. Include the `ej2-pdfviewer-lib` folder and PDF documents in the same location. The `ej2-pdfviewer-lib` folder should contain `pdfium.js` and `pdfium.wasm` files.
+**Step 4:** Create a folder named `my-app/resources` and copy the EJ2 scripts and styles from the installed location into the `my-app/resources` directory. Include the `ej2-pdfviewer-lib` folder and PDF documents in the same location. The `ej2-pdfviewer-lib` folder should contain `pdfium.js` and `pdfium.wasm` files.
 
 **Step 5:** Add the `div` element and initialize the Essential JS 2 PDF Viewer component in `index.html` with the local script and style references. Assign local file paths to the `documentPath` and `resourceUrl` properties within the PDF Viewer setup. The `documentPath` should refer to your PDF file, while the `resourceUrl` should point to the directory containing the supporting resources.
 
