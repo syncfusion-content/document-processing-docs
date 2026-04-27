@@ -149,10 +149,10 @@ The application will start and connect to the configured PDF Viewer web service.
 To host your own PDF Viewer service:
 
 1. Download the web service sample from GitHub:
-   https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices
+   [GitHub Web Service Sample](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices)
 2. Navigate to the appropriate folder based on your .NET version:
-   - .NET 6.0 → PdfViewerWebService_6.0
-   - .NET 8.0 → PdfViewerWebService_8.0
+   - .NET 6.0 → [PdfViewerWebService_6.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_6.0)
+   - .NET 8.0 → [PdfViewerWebService_8.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_8.0)
 3. Restore dependencies and run the service:
 
 ```bash
