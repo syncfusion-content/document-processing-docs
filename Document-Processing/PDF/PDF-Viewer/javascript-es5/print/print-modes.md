@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print modes in the JavaScript PDF Viewer
+# Print Modes in the JavaScript PDF Viewer
 
-Use the `printMode` property to choose how the document is printed.
+The `printMode` property specifies how the PDF Viewer prints documents.
 
-The supported values are:
-*   `Default`: Prints the document from the same window.
-*   `NewWindow`: Prints the document from a new window or tab, which can help with browser pop-up policies.
+The `printMode` property accepts the following string values:
+-   `Default`: Prints the document from the same browser window. Use this when printing should remain in the current browsing context.
+-   `NewWindow`: Prints the document from a new window or tab. Use this to avoid interference with the current page; note that some browsers may block pop-ups.
 
 ![Print in New Window](../../javascript-es6/images/print-newwindow.gif)
 
-N> Browser pop-up blockers must allow new windows or tabs when you use `pdfviewer.printMode ="NewWindow";`.
+N> Browser pop-up blockers must allow new windows or tabs when using `pdfviewer.printMode = "NewWindow"`.
 
-The following example shows how to set the print mode.
+The following examples show how to set the `printMode` property. It can be specified in the viewer options during initialization or assigned to the `pdfviewer.printMode` property after instantiation.
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 

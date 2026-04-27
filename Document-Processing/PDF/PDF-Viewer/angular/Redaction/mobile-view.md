@@ -9,11 +9,11 @@ documentation: ug
 
 # Redaction in Mobile View in Angular PdfViewer Component
 
-The Redaction Tool enables users to permanently mark and remove sensitive content from PDF documents in mobile view using the Angular PdfViewer component. This feature is optimized for touch interactions and provides a streamlined redaction workflow specifically designed for mobile devices.
+The Redaction Tool enables permanent marking and removal of sensitive content from PDF documents in mobile view using the Angular PdfViewer component. This feature is optimized for touch interactions and provides a streamlined redaction workflow specifically designed for mobile devices.
 
 ![Redaction in Mobile View](./redaction-annotations-images/redaction-mobile-view.png)
 
-N> In mobile view, the redaction toolbar appears at the bottom of the viewer for easy thumb access. Mobile layout activates automatically on small screens.
+N> In mobile view, the redaction toolbar appears at the bottom of the viewer for easy thumb access. The mobile layout activates automatically on small screens.
 
 ## Adding Redaction in Mobile View
 
@@ -108,11 +108,10 @@ When you enter redaction mode in mobile view, a specialized redaction toolbar ap
 
 ### Redaction Annotation Tool
 
-The Redaction Annotation tool is the primary redaction feature that allows you to draw redaction rectangles on specific content:
+The Redaction Annotation tool is the primary redaction feature that allows drawing redaction rectangles on specific content.
 
-Function: Creates visual redaction annotations that mark content for permanent removal
-Usage:
-Touch and drag to draw rectangular redaction overlays on any content area.
+Function: Creates visual redaction annotations that mark content for permanent removal.
+Usage: Touch and drag to draw rectangular redaction overlays on any content area.
 
 Process:
 - Selected content appears with a customizable overlay (default black)
@@ -127,8 +126,8 @@ The Page Redaction tool enables batch redaction of entire pages based on specifi
 
 ![Page Redaction Tool](./redaction-annotations-images/page-redaction-annot.png)
 
-Function: Redacts complete pages or page ranges with a single action
-Options Available:
+Function: Redacts complete pages or page ranges with a single action.
+Options available:
 - Odd Pages: Redacts only odd-numbered pages (1, 3, 5, etc.)
 - Even Pages: Redacts only even-numbered pages (2, 4, 6, etc.)
 - Specific Page: Specify single pages, ranges (e.g., 1-5, 10-15), or comma-separated lists (e.g., 1,3,5-7)
@@ -145,8 +144,8 @@ The Redaction Properties tool allows customization of redaction appearance befor
 
 ![Redaction Properties Mobile View](./redaction-annotations-images/redaction-properties-annot.png)
 
-Function: Customize the visual appearance of redaction overlays and text replacement
-Customizable Properties:
+Function: Customize the visual appearance of redaction overlays and text replacement.
+Customizable properties:
 - Fill Color: Change the redaction overlay color (default: black)
 - Outline Color: Set outline color for redaction boxes (optional)
 - Overlay Text: Add custom text to appear on redacted areas (e.g., "REDACTED", "CONFIDENTIAL")

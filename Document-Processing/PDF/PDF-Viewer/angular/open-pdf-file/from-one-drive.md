@@ -14,15 +14,15 @@ Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewe
 
 **Step 1:** Create a Microsoft Graph API application
 
-Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow this guide: [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive)
+Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow this [guide](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive)
 
-**Step 2:** Create a Simple PDF Viewer Sample in Angular
+**Step 2:** Create a simple PDF Viewer sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Start by following the steps in this guide to create a simple [PDF Viewer sample](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) in Angular. This establishes a basic PDF Viewer component and its dependencies.
 
 **Step 3:** Modify the PdfViewerController.cs file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. For background on the PDF Viewer [web service pattern](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above)
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 

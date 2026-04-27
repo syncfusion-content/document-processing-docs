@@ -18,7 +18,7 @@ Circle is a shape annotation used to highlight circular regions or draw emphasis
 
 ### Add circle annotation via UI
 
-Use the annotation toolbar:
+Use the annotation toolbar to:
 - Click the **Edit Annotation** button in the PDF Viewer toolbar.
 - Open the **Shape Annotation** dropdown.
 - Choose **Circle**, then draw on the page.
@@ -29,7 +29,7 @@ N> When in pan mode, selecting a shape annotation switches the viewer to text se
 
 ### Enable circle mode
 
-The PDF Viewer library allows drawing Circle annotations programmatically after enabling Circle mode in button clicks.
+The PDF Viewer library allows drawing circle annotations programmatically after enabling circle mode via button clicks.
 
 ```html
 <button id="circleMode">Circle</button>
@@ -350,9 +350,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `CircleSettings`.
+Set properties for individual annotations before creating the control using `CircleSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default Circle settings.
 

@@ -3182,7 +3182,3 @@ PdfTrueTypeFont ttf = new PdfTrueTypeFont("Arial.ttf", 20);
 
 {% endhighlight %}
 {% endtabs %}
-
-</td>
-</tr>
-</table>

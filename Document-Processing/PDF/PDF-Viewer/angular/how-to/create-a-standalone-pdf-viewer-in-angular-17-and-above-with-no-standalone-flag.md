@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Create a PDF Viewer in Angular 17 and above with --no-standalone flag
 
-This section explains the steps required to create a simple Standalone Angular PDF Viewer in Angular 17 and above with --no-standalone flag.
+This article describes the steps required to create a standalone Angular PDF Viewer for Angular 17 and later using the `--no-standalone` option.
 
 ## Setup Angular Environment
 
@@ -46,13 +46,13 @@ npm install @syncfusion/ej2-angular-pdfviewer --save
 cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib  src/assets/ej2-pdfviewer-lib
 ```
 
-* Confirm that there is an 'ej2-pdfviewer-lib' directory within your public directory, housing the assets of the PDF Viewer library.
+* Confirm that an `ej2-pdfviewer-lib` directory exists under `src/assets` (or the application's static public assets directory).
 
-* Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type. Additional information can be found in the [Troubleshooting](./troubleshooting/troubleshooting) section.
+* Ensure the application server is configured to serve WebAssembly files with the `Content-Type: application/wasm` MIME type. See the [Troubleshooting](./troubleshooting/troubleshooting) section for server configuration guidance.
 
 ## Registering PDF Viewer Module
 
-Import PDF Viewer module into Angular application(app.module.ts) from the package `@syncfusion/ej2-angular-pdfviewer` [src/app/app.module.ts].
+Import the PDF Viewer module into the Angular application (`app.module.ts`) from the package `@syncfusion/ej2-angular-pdfviewer` ([src/app/app.module.ts]).
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -66,14 +66,14 @@ import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
 import { AppComponent } from './app.component';
 
 @NgModule({
-  //declaration of ej2-angular-pdfviewer module into NgModule
+  // declaration of ej2-angular-pdfviewer module into NgModule
   imports: [BrowserModule, PdfViewerModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-   providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
+  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
+              ThumbnailViewService, ToolbarService, NavigationService,
+              TextSearchService, TextSelectionService, PrintService,
+              AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
 })
 export class AppModule { }
 ```
@@ -96,7 +96,7 @@ Add the Angular PDF Viewer component’s styles as given below in `src/styles.cs
 
 ## Adding PDF Viewer component
 
-Add the Angular PDF Viewer by using `<ejs-pdfviewer>` selector in `template` section of the `src/app/app.component.ts` file to render the PDF Viewer component.
+Add the Angular PDF Viewer by using the `<ejs-pdfviewer>` selector in the `template` section of `src/app/app.component.ts` to render the component.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -131,7 +131,7 @@ export class AppComponent implements OnInit {
 
 ## Run the application
 
-Use the following command to run the application in browser.
+Use the following command to run the application in the browser.
 
 ```javascript
 ng serve --open

@@ -9,7 +9,7 @@ documentation: ug
 
 # Save PDF files to Box cloud storage
 
-To save a PDF file to Box cloud file storage, you can follow the steps below:
+The JavaScript PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
 
 **Step 1:** Set up a Box developer account and create a Box application
 
@@ -94,7 +94,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open the `appsettings.json` file in the web service project and add the following lines below the existing `"AllowedHosts"` configuration.
+6. Open the `appsettings.json` file in your web service project, add the required settings below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -112,7 +112,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-N> Replace the placeholders with the actual Box access token, folder ID, client ID, and client secret.
+N> Replace the placeholders with the appropriate Box access token, folder ID, client ID, and client secret. For production, avoid storing secrets in configuration files; use environment variables or a secure secret manager and follow Box best practices for OAuth or JWT authentication.
 
 **Step 4:** Set the PDF Viewer properties in the TypeScript PDF Viewer component
 
@@ -134,8 +134,8 @@ viewer.load('PDF_Succinctly.pdf', null);
 
 ```
 
-N> Install the Box.V2.Core NuGet package in the web service application to use the previous code example.
+N> Install the Box .NET SDK in the web service project: `dotnet add package Box.V2`.
 
-N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the PDF Viewer component.
+N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the `JavaScript PDF Viewer` component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-box-cloud-file-storage)

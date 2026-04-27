@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 PDF Viewer supports customizing toolbar items, including adding, showing, hiding, enabling, and disabling items.
 
-- Save button: The Save button can be defined using [CustomToolbarItemModel](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/customToolbarItemModel/) and included alongside existing items via [ToolbarSettings](https://ej2.syncfusion.com//react/documentation/api/file-manager/toolbarSettings/). Handle the click action using [`toolbarclick`](https://ej2.syncfusion.com/react/documentation/api/file-manager/toolbarClickEventArgs/).
+* Save button: The Save button can be defined using [CustomToolbarItemModel](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/customToolbarItemModel/) and included alongside existing items via [ToolbarSettings](https://ej2.syncfusion.com//react/documentation/api/file-manager/toolbarSettings/). Handle the click action using [`toolbarclick`](https://ej2.syncfusion.com/react/documentation/api/file-manager/toolbarClickEventArgs/).
 
-- Show or hide: The Save button can be shown or hidden using [ToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/toolbarSettings/). Predefined items are listed under [`ToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/chart/toolbarItems/).
+* Show or hide: The Save button can be shown or hidden using [ToolbarSettings](https://ej2.syncfusion.com/react/documentation/api/file-manager/toolbarSettings/). Predefined items are listed under [`ToolbarItem`](https://ej2.syncfusion.com/react/documentation/api/chart/toolbarItems/).
 
-- Enable or disable: The Save button can be enabled or disabled using [`enabletoolbaritem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar/).
+* Enable or disable: The Save button can be enabled or disabled using [`enabletoolbaritem`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar/).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -32,7 +32,8 @@ import { TextBox } from "@syncfusion/ej2-inputs";
 
 export function App() {
 
-// Add OnCreateSearch outside the App function
+// Helper: Add OnCreateSearch outside the App function
+// The sample below uses an OnCreateSearch helper to add an icon; place it in module scope.
 function OnCreateSearch() {
   this.addIcon('prepend', 'e-icons e-search');
 }
@@ -126,18 +127,18 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> Default toolbar items: ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
+N> Default toolbar items include: ['OpenOption', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
 
 ### Align property
 
-Specifies the alignment of the Save button within the toolbar.
+Specifies the alignment of the Save button within the toolbar:
 
-- Left: Aligns the item to the left side of the toolbar.
-- Right: Aligns the item to the right side of the toolbar.
+* Left: aligns the item to the left side of the toolbar.
+* Right: aligns the item to the right side of the toolbar.
 
 ### Tooltip property
 
-Sets the tooltip text for the Save button. The tooltip provides additional information on hover.
+Sets the tooltip text for the Save button; the tooltip appears on hover.
 
 ### CssClass property
 
@@ -145,7 +146,7 @@ Applies custom CSS classes to the Save button for styling.
 
 ### Prefix property
 
-Sets the CSS class or icon to add as a prefix to the Save button content.
+Sets the CSS class or icon to display before the Save button text.
 
 ### ID property
 

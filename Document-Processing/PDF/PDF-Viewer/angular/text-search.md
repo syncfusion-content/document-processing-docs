@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Text Search in Angular PDF Viewer component
 
-The Text Search option in PDF Viewer is used to find and highlight the text content from the document. You can enable/disable the text search using the following code snippet.
+The Text Search option in the PDF Viewer finds and highlights matching text within a document. Enable or disable text search using the example code snippets below.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -76,41 +76,41 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 ## Text search Features
 
 ### Real time search suggestion while typing
-Entering text into the search input dynamically displays search suggestions based on the provided input. The suggestions are updated in real-time as text is typed, offering relevant matches from the available content. This feature enhances the search experience by allowing quick access to potential results while typing.
+Typing into the search input displays real-time suggestions that update as characters are entered, helping users discover matches quickly.
 
-![Alt text](./images/SingleSearchPopup.png)
+![Search suggestion popup while typing](./images/SingleSearchPopup.png)
 
 ### Selecting Search Suggestions from the Popup
-Entering text into the search input triggers a popup displaying relevant suggestions based on the input. Selecting a suggestion from the popup enables direct navigation to its occurrences in the document.
+Selecting a suggestion from the popup navigates directly to its occurrences in the document.
 
-![Alt text](./images/SearchResultFromPopup.png)
+![Selecting a suggestion from the search popup](./images/SearchResultFromPopup.png)
 
 ### Search Text with enabling 'Match Case' checkbox
-By enabling the 'Match Case' option and entering text into the search input, only the exact case-sensitive matches in the document are highlighted. This feature allows navigation through each occurrence of the exact text match within the document.
+With the 'Match Case' option enabled, only exact case-sensitive matches are highlighted and navigable.
 
-![Alt text](./images/SearchNavigationMatchCase.png)
+![Match Case enabled highlights exact-case matches](./images/SearchNavigationMatchCase.png)
 
 ### Search Text without enabling 'Match Case' checkbox
-When text is entered into the search input without enabling the 'Match Case' option, all instances of the text, regardless of case, are highlighted in the document. This allows easy navigation through every occurrence of the search term.
+When 'Match Case' is disabled, matches are found regardless of letter case, highlighting all occurrences of the search term.
 
-![Alt text](./images/SearchNavigationNoMatchCase.png)
+![Case-insensitive search highlighting](./images/SearchNavigationNoMatchCase.png)
 
 ### Search list of text by enabling 'Match Any Word' checkbox
-When the 'Match Any Word' option is enabled, the entered text in the search input is split into individual words based on spaces. As the text is typed, the popup dynamically displays search suggestions for each word in real time, highlighting potential matches within the document.
+When 'Match Any Word' is enabled, the input is split into words and suggestions are shown for each word, enabling matches for any individual term.
 
-![Alt text](./images/MultiSearchPopup.png)
+![Search suggestions for multiple words](./images/MultiSearchPopup.png)
 
-The following text search methods are available in the PDF Viewer,
+The following text search methods are available in the PDF Viewer:
 
-* [**Search text**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchtext):- Searches the target text in the PDF document and highlights the occurrences in the pages.
-* [**Search next**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchnext):- Searches the next occurrence of the searched text from the current occurrence of the PdfViewer.
-* [**Search previous**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchprevious):- Searches the previous occurrence of the searched text from the current occurrence of the PdfViewer.
-* [**Cancel text search**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#canceltextsearch):- The text search can be canceled and the highlighted occurrences from the PDF Viewer can be removed .
+* [**Search text**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchtext):- Searches the target text in the PDF document and highlights occurrences in the pages.
+* [**Search next**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchnext):- Navigates to the next occurrence of the searched text.
+* [**Search previous**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchprevious):- Navigates to the previous occurrence of the searched text.
+* [**Cancel text search**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#canceltextsearch):- Cancels the ongoing search and removes highlighted occurrences.
 
-![Alt text](images/search.png)
+![Search navigation controls](images/search.png)
 
 ## Find text method
-Searches for the specified text or an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. If a specific page index is provided, it returns the bounding rectangles for these search strings on that page; otherwise, it returns the bounding rectangles for all pages in the document where the strings were found.
+The `findText` method searches for a string or an array of strings and returns the bounding rectangles for each match. Searches can be case-sensitive and may be restricted to a single page when a `pageIndex` is provided; otherwise, results span all pages where matches occur.
 
 ### Find and get the bounds of a text
 Searches for the specified text within the document and returns the bounding rectangles of the matched text. The search can be case-sensitive based on the provided parameter. It returns the bounding rectangles for all pages in the document where the text was found. The below code snippet shows how to get the bounds of the given text:

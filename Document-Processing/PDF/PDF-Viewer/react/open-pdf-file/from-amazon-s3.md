@@ -29,7 +29,7 @@ import AWS from 'aws-sdk';
 
 2. Configure the AWS SDK with the region, access key, and secret access key so the application can interact with S3.
 
-N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
+N> Replace the placeholders with values for the target AWS account (region, access key, and secret access key). Do not commit credentials to source control.
 
 ```typescript
 AWS.config.update({
@@ -69,7 +69,7 @@ loadDocument() {
 }
 ```
 
-N> The **npm install aws-sdk** package must be installed in your application to use the previous code example.
+N> Install the `aws-sdk` package in your application to use the previous code example. Do not embed AWS credentials in client-side code for production—use a server-backed approach or secure token service instead.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Standalone).
 
@@ -179,7 +179,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> Replace the placeholders with your actual AWS credentials and bucket name: Access Key, Secret Key, and Bucket Name.
+N> Replace the placeholders with the actual AWS credentials and bucket name. When storing secrets in `appsettings.json`, follow secure secrets-management practices (for example, environment variables or a secrets store) in production.
 
 **Step 3:** Configure the PDF Viewer component
 
@@ -218,6 +218,6 @@ root.render(<App />);
 ```
 {% endraw %}
 
-N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
+N> Install the `AWSSDK.S3` NuGet package in your web service project to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Server-Backend)

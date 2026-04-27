@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Interaction Mode in Angular PDF Viewer component
 
-The PDF Viewer provides interaction mode for easy interaction with the loaded PDF document.  Selection mode and panning mode are the two interactions modes.
+The PDF Viewer provides two interaction modes for working with a loaded PDF document: Selection mode and Panning mode.
 
 ## Selection mode
 
-In this mode, the text selection can be performed in the PDF document loaded in PDF Viewer. The panning and scrolling of the pages by touch cannot be performed in this mode. It allows users to select and copy text from the PDF files. This is helpful for copying and sharing text content. You can enable/disable the text selection using the following code snippet.
+Selection mode allows users to select and copy text from the loaded PDF. Touch-based panning and page scrolling are disabled in this mode. Enable or disable text selection using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -77,15 +77,17 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](images/selection.png)
+![PDF Viewer selection mode](images/selection.png)
 
 ## Panning Mode
 
-In this mode, the panning and scrolling of the pages by touch can be performed in the PDF document loaded in the PDF Viewer, but the text selection cannot be performed.
+Panning mode enables touch-based panning and page scrolling of the loaded PDF; text selection is disabled in this mode.
 
-![Alt text](images/pan.png)
+![PDF Viewer panning mode](images/pan.png)
 
-You can switch the interaction mode of PDF Viewer by using the following code snippet.,
+N> When `interactionMode` is set to 'Pan', touch panning is enabled and text selection is not available even if `enableTextSelection` is set to true.
+
+You can switch the interaction mode of the PDF Viewer using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

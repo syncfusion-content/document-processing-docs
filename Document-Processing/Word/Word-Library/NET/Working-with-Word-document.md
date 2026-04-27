@@ -1096,9 +1096,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [Why it is not possible to access the Word document contents page by page?](https://support.syncfusion.com/kb/article/18815/why-it-is-not-possible-to-access-the-word-document-contents-page-by-page)
 * [How to generate and insert a QR code in a Word Document?](https://support.syncfusion.com/kb/article/19794/how-to-generate-and-insert-a-qr-code-in-a-word-document)
 * [How to Remove Empty Tables from .NET Core Word Document?](https://support.syncfusion.com/kb/article/20090/how-to-remove-empty-tables-from-net-core-word-document)
+* [How to Insert Page Breaks Before Heading in Word using C# .NET Core?](https://support.syncfusion.com/kb/article/22217/how-to-insert-page-breaks-before-heading-in-word-using-c-net-core)
+* [How to extract content from multiple Excel and insert it into a Word document?](https://support.syncfusion.com/kb/article/22266/how-to-extract-content-from-multiple-excel-and-insert-it-into-a-word-document)
 
 ## Frequently Asked Questions
 
 * [How to attach a Template to a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-attach-a-template-to-a-word-document)
 * [How to check the compatibility mode of the Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-check-the-compatibility-mode-of-the-word-document)
 * [Which units does Essential<sup>&reg;</sup> DocIO uses for measurement properties such as size, margins, etc, in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#which-units-does-essential-docio-uses-for-measurement-properties-such-as-size-margins-etc-in-a-word-document)
+* [How to Get the Font Name List Used in Word Document in C# .NET Core?](https://support.syncfusion.com/kb/article/22134/how-to-get-the-font-name-list-used-in-word-document-in-c-net-core)

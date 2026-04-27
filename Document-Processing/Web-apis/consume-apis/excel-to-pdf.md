@@ -1,13 +1,13 @@
 ---
-title: Syncfusion Excel to PDF Converter API Guide
-description: Convert Excel to PDF seamlessly using Syncfusion's API. Customize settings, monitor job status, and integrate effortlessly into your applications.
+title: Convert Excel to PDF Using Syncfusion Web API 
+description: Convert Excel files to highquality PDFs using Syncfusion Web API. Preserve formulas, charts, formatting, and layout with fast, reliable serverside conversion.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Excel to PDF Conversion Using Syncfusion API
+# Converting Excel to PDF Using Syncfusion Web API 
 
-Converting an Excel document to PDF is simple. Customize conversion settings, like accessibility and archiving options, to suit your needs.
+The Syncfusion Excel to PDF Web API allows you to convert Excel workbooks into well‑formatted, high‑quality PDF files while preserving the structure and readability of worksheets. It supports accurate rendering of data such as tables, formulas (as values), charts, images, and multi‑sheet layouts in the resulting PDF. The conversion can be customized with options like accessibility tagging for assistive technologies and PDF/A compliance for long‑term archiving.  
 
 ## Convert Excel to PDF
 
@@ -18,20 +18,27 @@ To convert an Excel document to PDF, send a request to the /v1/conversion/excel-
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/conversion/excel-to-pdf' \
---form 'file=@"ExpenseReport.xlsx"' \
---form 'settings="{
-  \"File\": \"file\",
-  \"Password\": null,
-  \"PdfComplaince\": \"PDF/A-1B\"
-}"'
+--form 'file=@"Sample.xlsx"' \
+--form 'settings={
+  "File": "file",
+  "Password": null,
+  "PdfCompliance": "PDF/A-1B"
+}'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "ExpenseReport.xlsx");
-formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"PdfComplaince\": \"PDF/A-1B\"\n}");
+formdata.append("file", fileInput.files[0], "Input.xlsx");
+formdata.append(
+    "settings",
+    JSON.stringify({
+      File: "file",
+      Password: null,
+      PdfCompliance: "PDF/A-1B", 
+    })
+  );
 
 const requestOptions = {
   method: "POST",
@@ -39,7 +46,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/conversion/excel-to-pdf", requestOptions)
+fetch("http://localhost:8003/v1/conversion/excel-to-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -66,6 +73,16 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## Excel to PDF settings
+**Password** 
+
+Specifies the password required to open a protected Word document before converting it to PDF. 
+
+**PdfCompliance** 
+
+Defines the PDF/A compliance level for archival and standards adherence. Supported levels include PDF/A‑1B, PDF/A‑2B, PDF/A‑3B, and PDF/A‑4. 
+
+## Excel to PDF Job Response 
 Once the request is sent, it will create a conversion job to convert the Excel document to PDF and return the job details as follows:
 
 ```
@@ -75,7 +92,7 @@ Once the request is sent, it will create a conversion job to convert the Excel d
     "createdAt": "2024-05-06T09:39:13.9505828Z"
 }
 ```
-## Poll the status of the Conversion Job
+## Check Excel to PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
 
@@ -83,7 +100,8 @@ Next, you can retrieve the job status by sending a request to the /v1/conversion
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+curl --location 'http://localhost:8003/v1/conversion/status/7d0b62cd-c5a1-4035-9728-50c4efd1f0e1' \
+  --output Output.pdf
 
 {% endhighlight %}
 
@@ -94,7 +112,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/conversion/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));

@@ -7,196 +7,106 @@ control: PdfViewer
 documentation: ug
 ---
 
-# Redaction in Mobile View in React PdfViewer Component
+# Redaction in mobile view in React PDF Viewer
 
-The Redaction Tool enables users to permanently mark and remove sensitive content from PDF documents in mobile view using the React PdfViewer component. This feature is optimized for touch interactions and provides a streamlined redaction workflow specifically designed for mobile devices.
+## Overview
 
-![Redaction in Mobile View](./redaction-annotations-images/redaction-mobile-view.png)
+This tutorial teaches you how to enable and use the Redaction tools in the Syncfusion React PDF Viewer optimized for mobile (phone/tablet) screens. You will add a redaction button to the viewer toolbar, open the viewer on a small-screen layout, create selective and page-wide redactions, customize appearance, and apply redactions permanently.
 
-N> In mobile view, the redaction toolbar appears at the bottom of the viewer for easy thumb access. Mobile layout activates automatically on small screens.
+**Outcome**: a working React sample where users can mark content for redaction using touch, configure appearance, and apply redactions.
 
-## Adding Redaction in Mobile View
+![Redaction toolbar displayed at bottom of mobile PDF viewer](./redaction-annotations-images/redaction-mobile-view.png)
 
-To enable redaction functionality in your React application, configure the PDF Viewer with the following setup:
+N> In mobile view the redaction toolbar appears at the bottom of the viewer for easy thumb access. Mobile layout activates automatically on small screens.
 
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
+## Prerequisites
 
-import * as ReactDOM from 'react-dom/client';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
-export function App() {
-  // includes RedactionEditTool
-  const toolbarSettings = {
-    toolbarItems: [
-      'OpenOption',
-      'UndoRedoTool',
-      'PageNavigationTool',
-      'MagnificationTool',
-      'PanTool',
-      'SelectionTool',
-      'CommentTool',
-      'SubmitForm',
-      'AnnotationEditTool',
-      'RedactionEditTool', // Redaction entry in the primary toolbar
-      'FormDesignerEditTool',
-      'SearchOption',
-      'PrintOption',
-      'DownloadOption'
-    ]
-  };
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent 
-        id="container" 
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl= "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        toolbarSettings={toolbarSettings}
-        
-        style={{ 'height': '680px' }} 
-      >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
-          Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-  
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
+- A React project with PDF Viewer added to project. See [getting started guide](../getting-started)
 
-{% endhighlight %}
-{% endtabs %}
+## Steps
 
-## Understanding Mobile Redaction Toolbar Tools
+1. Add the PdfViewer to your React app and include the redaction toolbar item.
 
-When you enter redaction mode in mobile view, a specialized redaction toolbar appears with multiple tools optimized for touch interaction. Each tool serves a specific purpose in the redaction workflow.
+    - Enable the redaction tool with the code example in this [guide](./toolbar#enable-redaction-toolbar). The example includes a toolbar entry for [`RedactionEditTool`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbaritem) which enables redaction controls in the viewer.
 
-### Redaction Annotation Tool
+2. Start the app and open it on a narrow viewport (phone width) to trigger mobile layout.
 
-The Redaction Annotation tool is the primary redaction feature that allows you to draw redaction rectangles on specific content:
+3. Use the mobile redaction toolbar (bottom of the screen) to:
+   - Draw redaction boxes with the Redaction Annotation tool (touch & drag)
+   - Use Page Redaction to redact odd/even/specified pages
+   - Open Redaction Properties to change overlay color, overlay text, and font
 
-Function: Creates visual redaction annotations that mark content for permanent removal
-Usage:
-Touch and drag to draw rectangular redaction overlays on any content area.
+4. Review annotations, then tap Apply Redactions to permanently remove content.
 
-Process:
-- Selected content appears with a customizable overlay (default black)
-- Annotations remain editable until explicitly applied
-- Can be repositioned or deleted before final application
+## Understanding mobile redaction toolbar tools
 
-![Redaction Annotation Tool](./redaction-annotations-images/redaction-annotation-annot.png)
+When entering redaction mode in mobile view, a specialized redaction toolbar appears with tools optimized for touch. Each tool supports a specific step in the redaction workflow.
 
-### Page Redaction Tool
+### Redaction annotation tool
 
-The Page Redaction tool enables batch redaction of entire pages based on specific patterns.
+The Redaction Annotation tool creates rectangular overlays that mark content for removal. Touch and drag to draw boxes; overlays remain editable until applied.
 
-![Page Redaction Tool](./redaction-annotations-images/page-redaction-annot.png)
+![Redaction annotation tool overlay preview](./redaction-annotations-images/redaction-annotation-annot.png)
 
-Function: Redacts complete pages or page ranges with a single action
-Options Available:
-- Odd Pages: Redacts only odd-numbered pages (1, 3, 5, etc.)
-- Even Pages: Redacts only even-numbered pages (2, 4, 6, etc.)
-- Specific Page: Specify single pages, ranges (e.g., 1-5, 10-15), or comma-separated lists (e.g., 1,3,5-7)
-- Current Page: Redacts only the currently displayed page
+### Page redaction tool
 
-Usage:
-Select desired pattern → Review affected pages in the viewer → Confirm redaction scope
+Use Page Redaction to redact whole pages or page ranges (odd, even, specific ranges). This helps remove patterns of sensitive pages quickly.
 
-![Page Redaction Tool Dialog](./redaction-annotations-images/page-redaction-dialog-annot.png)
+![Page redaction tool options and dialog](./redaction-annotations-images/page-redaction-annot.png)
 
-### Redaction Properties Tool
+![Page redaction dialog preview](./redaction-annotations-images/page-redaction-dialog-annot.png)
 
-The Redaction Properties tool allows customization of redaction appearance before application.
+### Redaction properties tool
 
-![Redaction Properties Mobile View](./redaction-annotations-images/redaction-properties-annot.png)
+Open Redaction Properties to change overlay fill color, outline color, overlay text, text color, font and alignment before applying.
 
-Function: Customize the visual appearance of redaction overlays and text replacement
-Customizable Properties:
-- Fill Color: Change the redaction overlay color (default: black)
-- Outline Color: Set outline color for redaction boxes (optional)
-- Overlay Text: Add custom text to appear on redacted areas (e.g., "REDACTED", "CONFIDENTIAL")
-- Text Color: Change overlay text color for better visibility
-- Text Font: Select font family for overlay text
-- Text Alignment: Position overlay text within redaction boxes
-- Text Size: Adjust overlay text size relative to redaction area
+![Redaction properties options preview](./redaction-annotations-images/redaction-properties-annot.png)
 
-![Redaction Properties Dialog Mobile View](./redaction-annotations-images/redaction-properties-dialog-annot.png)
+![Redaction properties dialog preview](./redaction-annotations-images/redaction-properties-dialog-annot.png)
 
-## Enabling Redaction Mode in Mobile View
+## Applying redactions in mobile view
 
-Step 1: Tap the Redaction button in the mobile toolbar to activate redaction mode. The redaction toolbar will appear at the bottom of the viewer.
+Applying redactions is permanent. Back up the original document before applying.
 
-![Redaction toolbar displayed at bottom of mobile PDF viewer with three distinct tools](./redaction-annotations-images/redaction-mobile-view.png)
+1. Review all redaction marks and configurations.
 
-Step 2: From the redaction toolbar, select your desired redaction tool:
-- First Tool (Redaction Annotation): For selective content redaction
-- Second Tool (Page Redaction): For page-wide or pattern-based redaction
-- Third Tool (Redaction Properties): For appearance customization
+    ![Review redaction annotations before applying](./redaction-annotations-images/review-redaction-annotation-mv-annot.png)
 
-Step 3: Configure your redaction parameters using the selected tool interface.
+2. Tap the **Apply Redactions** button in the redaction toolbar.
 
-## Applying Different Redaction Types in Mobile View
+    ![Apply redaction button in mobile view](./redaction-annotations-images/apply-redaction-button-mv.png)
 
-### Selective Content Redaction
-1. Select Redaction Annotation tool (first button)
-2. Choose Content: Tap and drag over text or draw rectangular areas
-3. Preview: Check redaction overlays for accuracy
-4. Apply: Tap "Apply Redactions" button
+3. Confirm the action when prompted — this operation is irreversible.
 
-### Page-Wide Redaction
-1. Select Page Redaction tool (second button)
-2. Choose Pattern: Select odd pages, even pages, or custom range
-3. Review: Verify affected pages in the viewer
-4. Apply: Confirm page redaction scope and apply
+    ![Apply redaction confirmation dialog](./redaction-annotations-images/apply-redaction-dialog-mv-annot.png)
 
-### Custom Appearance Redaction
-1. Select Redaction Properties tool (third button)
-2. Customize: Adjust colors, overlay text, and formatting
-3. Preview: See changes applied to existing annotations
-4. Apply: Use customized appearance for final redaction
+4. After applying, the selected content is permanently removed and replaced according to redaction properties.
 
-## Applying Redactions in Mobile View
+    ![Result of applied redaction](./redaction-annotations-images/applied-redaction-annot.png)
 
-N> Applying redactions is permanent. After applying, the underlying content and text are removed from the document and cannot be recovered.
+### Removing redaction annotations
 
-Once you have configured redactions using any combination of tools.
+To remove a redaction annotation prior to applying it: enter Redaction Edit mode, tap the annotation to select it and choose Delete.
 
-Step 1: Review all redaction marks and configurations.
+![Delete a redaction annotation before applying](./redaction-annotations-images/delete-redaction-annotation-annot.png)
 
-![Review Redaction Annotation](./redaction-annotations-images/review-redaction-annotation-mv-annot.png)
+## Mobile redaction workflow
 
-Step 2: Tap the Apply Redactions button in the redaction toolbar
+1. Tap the Redaction button in the main toolbar to open the mobile redaction toolbar at the bottom.
+2. Choose Redaction Annotation to draw boxes by touch-and-drag.
+3. Use Redaction Properties to set fill color and overlay text.
+4. Tap Apply Redactions to make changes permanent (this is irreversible).
 
-![Apply Redaction Button](./redaction-annotations-images/apply-redaction-button-mv.png)
+## Troubleshooting
 
-Step 3: Confirm the action when prompted - this operation is permanent and cannot be undone
+- If toolbar or redaction controls don't appear: ensure your [`toolbarSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#toolbarsettings) includes [`RedactionEditTool`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbaritem) and that the `Inject` list contains [`Annotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation).
+- If the viewer is blank: confirm [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) points to the correct Syncfusion PDF Viewer resource package version.
+- For production builds, ensure your app serves the WASM and resource files from [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) or a hosted CDN.
 
-![Apply Redaction Dialog](./redaction-annotations-images/apply-redaction-dialog-mv-annot.png)
+## Related topics
 
-The selected content will be permanently removed and replaced according to your redaction properties (solid color blocks or custom overlay text).
-
-![Applied Redaction](./redaction-annotations-images/applied-redaction-annot.png)
-
-## Removing Redaction Annotations
-
-To remove existing redaction annotations before they are applied:
-
-- Step 1: Tap the Redaction Edit button in the mobile toolbar to enter annotation editing mode
-- Step 2: Tap on any existing redaction annotation you wish to remove
-- Step 3: Select Delete from the context menu that appears
-
-Alternative: Tap redaction annotation → Use delete button in annotation properties panel
-
-![Delete Redaction Annotation](./redaction-annotations-images/delete-redaction-annotation-annot.png)
-
-N> Once redactions have been applied to the document, they become part of the PDF content and cannot be removed or modified.
-
-## See Also
-
-* [Redaction Overview](./overview)
-* [UI Interaction](./ui-interaction)
-* [Programmatic Support in Redaction](./programmatic-support)
-* [Toolbar](./toolbar)
-* [Search Text and Redact](./search-redact)
+- [Redaction Overview](./overview)
+- [UI Interaction](./ui-interaction)
+- [Programmatic Support in Redaction](./programmatic-support)
+- [Toolbar](./toolbar)
+- [Search Text and Redact](./search-redact)

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form Designer in Vue PDF Viewer
 
-When **Form Designer mode** is enabled in the Syncfusion [TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
+When **Form Designer mode** is enabled in the Syncfusion [Vue PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/form-designer.html) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
 
 Using the Form Designer UI, users can place form fields on the PDF, move and resize them, configure field and widget properties, preview the designed form, and remove fields when required. The Form Designer toolbar can also be shown or hidden and customized to control the available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
@@ -45,7 +45,7 @@ Designed form fields can be saved into the PDF document and printed with their a
 
 ## Enable Form Designer
 
-To enable form design features, inject the [FormDesigner](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner) module into the PDF Viewer. After injecting the module, use the [enableFormDesigner](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enableformdesigner) API to show or hide the Form Designer option in the main toolbar.
+To enable form design features, inject the [FormDesigner](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner) module into the PDF Viewer. After injecting the module, use the `enableFormDesigner` property or API to enable or disable the Form Designer option in the main toolbar (set to `true` to enable). The standalone examples below show `enableFormDesigner` set to `false`; change this to `true` to enable form design in those samples.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -91,7 +91,7 @@ export default {
 
 ## Form Designer UI
 
-When [Form Designer mode](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner) is enabled in the PDF Viewer, a default Form Designer user interface (UI) is displayed. This UI provides a built-in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
+When [Form Designer mode](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner) is enabled in the Syncfusion [Vue PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/form-designer.html) is displayed. This UI provides a built-in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
 
 ![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 
@@ -116,17 +116,17 @@ Each toolbar item allows users to place the corresponding form field by selectin
 
 ![Adding Text Box](../../javascript-es6/images/AddTextBox.gif)
 
-Use the Vue example above to enable the Form Designer (see the Composition API sample).
+Use the above code snippet to show or hide the Form Designer by injecting the Form Designer module. (see the Composition API sample).
 
 For more information about creating and editing form fields in the PDF Viewer, refer to [Create form fields](./manage-form-fields/create-form-fields).
 
 ## Show or Hide the Built-in Form Designer Toolbar
 
-You can control the visibility of the Form Designer toolbar using the [isFormDesignerToolbarVisible()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) method. This allows you to display or hide the Form Designer tools in the PDF Viewer based on your application requirements.
+You can control the visibility of the Form Designer toolbar using the [isFormDesignerToolbarVisible()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) property. This allows the application to display or hide the Form Designer tools in the PDF Viewer based on user or workflow requirements.
 
-**Use this method to:**
+**Use this property to:**
 - Show the Form Designer toolbar when form design is required
-- Hide the toolbar to provide cleaner viewing experience
+- Hide the toolbar to provide a cleaner viewing experience
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -244,10 +244,10 @@ You can move, resize, and edit an existing form field directly in the PDF Viewer
 
 - Resize a field using the handles displayed on the field boundary.
 
-![Moveing and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
+![Moving and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
 
-- Edit a field by selecting it to open the Form Field Properties popover. The popover allows you to modify the form field and widget annotation properties. Changes are reflected immediately in the viewer and are saved when the properties popover is closed.
-For more information, see Editing Form Fields
+- Edit a field by selecting it to open the Form Field Properties popover. The popover allows modification of the form field and widget annotation properties. Changes are reflected immediately in the viewer and are saved when the properties popover is closed.
+For more information, see Editing Form Fields.
 
 ## Deleting Form Fields
 
@@ -263,7 +263,7 @@ For more information, see  [Deleting Form Fields](./manage-form-fields/remove-fo
 - [Filling PDF Forms](./form-filling)
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/style-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
 - [Grouping form fields](./group-form-fields)
-- [Form Constrains](./form-constrain)
+- [Form Constraints](./form-constrain)
 - [Form Validation](./form-validation)
 - [Custom Data](./custom-data)
 - [Import](./import-export-form-fields/import-form-fields)/[Export Form Data](./import-export-form-fields/export-form-fields)

@@ -7,13 +7,13 @@ control: Text selection
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text selection in TypeScript PDF Viewer control
+# Text selection in TypeScript PDF Viewer
 
-The TextSelection module lets users highlight and copy text from the loaded PDF. Selection is enabled by default and can be configured or monitored programmatically to match application workflows.
+The TextSelection module allows users to highlight and copy text from the loaded PDF. Text selection is enabled by default and can be configured or monitored programmatically to match application workflows.
 
 ## Enable or disable text selection
 
-Use the `enableTextSelection` property to enable or disable choosing text in the PDF Viewer.
+Use the `enableTextSelection` property to enable or disable text selection in the PDF Viewer.
 
 ```html
 <!DOCTYPE html>

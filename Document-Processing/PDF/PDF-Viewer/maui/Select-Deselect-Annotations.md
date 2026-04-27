@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Select and Deselect Annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here all about select and deselect annotations in PDF documents using the .NET MAUI PDF Viewer (SfPdfViewer) control and its settings customization.
+description: Learn how to select and deselect annotations in PDF documents using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -46,7 +46,7 @@ void CustomizeSelectorAppearance()
     // Customize the selector color for unlocked annotations using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSettings) property of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     PdfViewer.AnnotationSettings.Selector.Color = Colors.Blue;
 
-    // Customize the selector color for locked annotations using the `AnnotationSettings` property of `SfPdfViewer` instance..
+    // Customize the selector color for locked annotations using the `AnnotationSettings` property of `SfPdfViewer` instancehttps://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui
     PdfViewer.AnnotationSettings.Selector.LockedColor = Colors.LightGray;
 }	
 {% endhighlight %}
@@ -175,3 +175,8 @@ private void OnAnnotationDeselected(object sender, AnnotationEventArgs e)
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
+- [Lock and Unlock Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/lock-unlock)

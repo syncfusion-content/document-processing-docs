@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Redaction annotation in React PDF Viewer | Syncfusion
+title: Redact sensitive content in React PDF Viewer | Syncfusion
 description: Learn how to hide sensitive information with interactive and programmatic redaction using the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -8,64 +8,16 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Redaction in React PdfViewer
+# Redact sensitive content in React PDF Viewer
 
-Redaction annotations are used to hide confidential or sensitive information in a PDF. The Syncfusion React PDF Viewer (EJ2) lets you mark areas or entire pages for redaction, customize their appearance, and permanently apply them with a single action.
+Redaction annotations hide confidential or sensitive information in a PDF. The Syncfusion React PDF Viewer (EJ2) enables marking areas or entire pages for redaction, customizing appearance, and applying changes permanently.
+
+Check out the following video to learn how to Redact PDF Content in the React PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=ZW9DswdpA7Q" %}
 
 ## Enable the redaction toolbar
 
-To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
-
-The following example shows how to enable the redaction toolbar:
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-
-import * as ReactDOM from 'react-dom/client';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
-export function App() {
-  // includes RedactionEditTool
-  const toolbarSettings = {
-    toolbarItems: [
-      'OpenOption',
-      'UndoRedoTool',
-      'PageNavigationTool',
-      'MagnificationTool',
-      'PanTool',
-      'SelectionTool',
-      'CommentTool',
-      'SubmitForm',
-      'AnnotationEditTool',
-      'RedactionEditTool', // Redaction entry in the primary toolbar
-      'FormDesignerEditTool',
-      'SearchOption',
-      'PrintOption',
-      'DownloadOption'
-    ]
-  };
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent 
-        id="container" 
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl= "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        toolbarSettings={toolbarSettings}
-        style={{ 'height': '680px' }}
-      >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
-          Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-  
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
-{% endhighlight %}
-{% endtabs %}
+To enable the redaction toolbar, configure the [`toolbarSettings.toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) property of the PdfViewer instance to include the **RedactionEditTool**. See this [guide](./toolbar#enable-redaction-toolbar) to enable redaction toolbar.
 
 N> Prerequisites: Add the PdfViewer control to your React application and ensure the redaction feature is available in the version you are using. Once applied, redaction permanently removes the selected content.
 
@@ -109,7 +61,7 @@ A confirmation dialog appears before applying redaction to ensure you acknowledg
 
 ![Confirmation dialog for applying redaction](redaction-annotations-images/apply-redaction-dialog.png)
 
-N> After redaction is applied, the original content cannot be recovered.
+N> After redaction is applied the original content cannot be recovered.
 
 ## Comment Support
 

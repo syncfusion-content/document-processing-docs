@@ -7,10 +7,9 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Create, Edit, Style, and Remove Form Fields in React PDF Viewer
+# Create, edit, style, and remove form fields in React PDF Viewer
 
-The [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview) allows you to create interactive PDF form fields, update their behavior and appearance, and remove them when they are no longer needed.
-All form field operations can be performed using either the [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/form-designer) or [React APIs.](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/overview)
+The [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview) enables creation of interactive PDF form fields, modification of their behavior and appearance, and removal when no longer required. All form-field operations can be performed using either the [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/form-designer) or the React APIs.
 
 This section explains how to:
 

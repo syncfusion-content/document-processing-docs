@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Use the Frequently Asked Questions Section in the PDF Viewer
+# How-to overview for PDF Viewer
 
-The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
+The following how-to articles and frequently asked questions for the Syncfusion PDF Viewer are listed below.
 
 * [How to add annotation in text search in react?](./how-to/add-annotation-in-text-search-ts)
 * [How to add custom header to the PDF Viewer ajax request?](./how-to/add-header-value)
@@ -63,3 +63,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [How to get the signature selected and unselected event?](./how-to/signatureselect-signatureunselect-ts)
 * [How to unload the PDF document from the viewer?](./how-to/unload-document)
 * [Load Document after resources Loaded](./how-to/load-document-after-resources-loaded)
+* [Integrate PDF Viewer into existing react layouts](./how-to/existing-react-layout)

@@ -11,9 +11,9 @@ documentation: ug
 
 The **Syncfusion React PDF Viewer** allows you to attach **custom application-specific data** to form fields by using the customData property. This enables you to associate business identifiers, tags, validation hints, or workflow metadata with form fields.
 
-The custom data remains linked to the form field throughout the viewer session and can be accessed or updated whenever the field is queried or modified.
+Custom data remains associated with the form field for the duration of the viewer session and can be accessed or updated whenever the field is queried or modified.
 
-This page explains how to:
+This article explains how to:
 - [Add custom data when creating form fields](#add-custom-data-while-creating-pdf-form-fields)
 - [Define default custom data for fields created using the UI](#set-default-custom-data-for-pdf-form-fields-added-using-ui)
 - [Update or replace custom data for existing fields](#update-or-replace-pdf-form-field-custom-data)
@@ -27,7 +27,7 @@ This page explains how to:
 
 ## Add Custom Data While Creating PDF Form Fields
 
-You can attach custom data at the time of field creation by passing a **customData** object in the settings parameter of **addFormField()**.
+Attach custom data at field creation by passing a `customData` object in the settings parameter of `addFormField()`.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -76,7 +76,7 @@ root.render(<App />);
 
 ## Set Default Custom Data for PDF Form Fields Added Using UI
 
-When users add form fields using the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar), you can define default customData so that newly created fields automatically inherit it. Default custom data can be configured using per-field settings objects such as:
+When form fields are added via the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar), define default `customData` so newly created fields inherit it. Default custom data is configured using per-field settings objects such as:
 
 - [textFieldSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#textfieldsettings)
 - [passwordFieldSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#passwordfieldsettings)
@@ -95,6 +95,14 @@ import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 export function App() {
+  const defaultTextFieldSettings = {
+    name: 'Textbox',
+    customData: { group: 'contact', createdBy: 'designer', requiredRole: 'user' }
+  };
+  const defaultCheckBoxFieldSettings = {
+    name: 'Checkbox',
+    customData: { consentType: 'marketing', defaultChecked: false }
+  };
   return (
     <div>
       <div className='control-section'>
@@ -104,14 +112,8 @@ export function App() {
           resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
           style={{ height: '680px' }}
           // Example: default custom data for all new Textbox fields added from the toolbar
-          textFieldSettings={{
-            name: 'Textbox',
-            customData: { group: 'contact', createdBy: 'designer', requiredRole: 'user' }
-          }}
-          checkBoxFieldSettings ={{
-            name: 'Checkbox',
-            customData: { consentType: 'marketing', defaultChecked: false }
-          }}
+          textFieldSettings={defaultTextFieldSettings}
+          checkBoxFieldSettings={defaultCheckBoxFieldSettings}
         >
           <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
             Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
@@ -128,7 +130,7 @@ root.render(<App />);
 
 ## Update or Replace PDF Form Field Custom Data
 
-You can modify the customData of an existing form field by using the [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) method. The field can be identified using either its object reference or field ID.
+Modify an existing field's `customData` by using the [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) method. The field may be identified by its object reference or field ID.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -174,14 +176,14 @@ root.render(<App />);
 {% endtabs %}
 
 **Tip:**
-Merge new values with the existing customData object before calling [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) to avoid overwriting previously stored data.
+Merge new values into the existing `customData` object before calling [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) to avoid unintentionally overwriting existing metadata.
 
 ## Read Custom Data from PDF Form Fields
 
-You can access the customData property from any form field at any point in your application flow, such as:
-- After the document is loaded
-- During save or submit operations
-- While performing validation or conditional routing
+Access the `customData` property from any form field at any point in the application flow, for example:
+- after the document is loaded
+- during save or submit operations
+- while performing validation or conditional routing
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

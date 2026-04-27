@@ -8,10 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark navigation in TypeScript PDF Viewer control
+# Bookmark navigation in TypeScript PDF Viewer
 
-The Bookmarks saved in PDF files are loaded and made ready for easy navigation.
-You can enable/disable bookmark navigation by using the following code snippet.,
+Bookmarks embedded in PDF files are loaded and exposed for quick navigation. Use the following code snippet to enable or disable bookmark navigation.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -38,11 +37,11 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/bookmark.png)
+![Bookmarks panel and navigation](../images/bookmark.png)
 
-To perform bookmark navigation, you can use the **goToBookmark** method. It's important to note that the **goToBookmark** method will throw an error if the specified bookmark does not exist in the PDF document.
+To navigate to a bookmark programmatically, use the **goToBookmark** method. The method throws an error if the specified bookmark does not exist in the document.
 
-Here is an example of how to use the **goToBookmark** method:
+Example usage is shown below; ensure the viewer instance variable used in these snippets is the same across your integration (for example `pdfviewer`).
 
 ```
   <button id="gotobookmark">Specfic Page</button>
@@ -54,13 +53,12 @@ document.getElementById('gotobookmark').addEventListener('click', () => {
 });
 ```
 
-x - Specifies the pageIndex for Navigate.
+- `x` — The page index to navigate to (zero-based).
+- `y` — The vertical coordinate (Y offset) on the page to position the viewport.
 
-y - Specifies the Y coordinates value of the Page.
+Use the **getBookmarks** method to retrieve all bookmarks in a document. It returns a list of bookmark objects containing properties such as `title`, `pageIndex`, and `destination`. A typical integration maps the returned list into a clickable navigation menu that calls `goToBookmark` with the selected bookmark's `pageIndex` and `destination` values.
 
-Also, you can use the **getBookmarks** method to retrieve a list of all the bookmarks in a PDF document. This method returns a List of Bookmark objects, which contain information about each bookmark.
-
-Here is an example of how to use the getBookmarks method:
+Example usage is shown below.
 
 ```
   <button id="getBookmarks">retrieve bookmark</button>

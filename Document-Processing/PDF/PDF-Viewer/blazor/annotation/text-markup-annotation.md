@@ -9,7 +9,7 @@ documentation: ug
 
 # Text markup annotations in Blazor SfPdfViewer Component
 
-The SfPdfViewer control supports adding, editing, and deleting text markup annotations, including highlight, underline, strikethrough, and squiggly, in a PDF document.
+The SfPdfViewer component supports adding, editing, and deleting text markup annotations, including highlight, underline, strikethrough, and squiggly, in a PDF document.
 
 ![Blazor SfPdfViewer showing text markup annotations](../images/blazor-pdfviewer-text-markup-annotation.png)
 
@@ -37,7 +37,7 @@ There are two ways to highlight text in a PDF document.
 
 ![Highlighted text in Blazor SfPdfViewer](../images/blazor-pdfviewer-highlight-text.png)
 
-In pan mode, entering highlight mode switches the viewer to text select mode to enable text selection for highlighting.
+When entering highlight mode while in Pan mode, the viewer switches to Text Select mode to enable text selection for highlighting.
 
 ```cshtml
 
@@ -83,7 +83,7 @@ There are two ways to underline text in a PDF document.
 
 ![Underlined text in Blazor SfPdfViewer](../images/blazor-pdfviewer-underline-text.png)
 
-In pan mode, entering underline mode switches the viewer to text select mode to enable text selection for underlining.
+When entering underline mode while in Pan mode, the viewer switches to Text Select mode to enable text selection for underlining.
 
 ```cshtml
 
@@ -129,7 +129,7 @@ Using the context menu.
 
 ![Strikethrough text in Blazor SfPdfViewer](../images/blazor-pdfviewer-strike-through-text.png)
 
-In pan mode, entering strikethrough mode switches the viewer to text select mode to enable text selection for striking through.
+When entering strikethrough mode while in Pan mode, the viewer switches to Text Select mode to enable text selection for striking through.
 
 ```cshtml
 
@@ -174,7 +174,7 @@ Using the context menu.
 
 ![Squiggly annotation in Blazor SfPdfViewer](../images/blazor-pdfviewer-squiggly-text.png)
 
-In pan mode, entering squiggly mode switches the viewer to text select mode to enable text selection for applying the squiggly annotation.
+When entering squiggly mode while in Pan mode, the viewer switches to Text Select mode to enable text selection for applying the squiggly annotation.
 
 ```cshtml
 
@@ -287,9 +287,9 @@ Below is an example demonstrating how to add a text markup annotation to a PDF d
     public async void AddTextMarkupAnnotation(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
-        // Set the Text markup annotation type like highlight, underline, strikethrough, Squiggly.
+        // Set the Text markup annotation type like highlight, underline, strikethrough, squiggly.
         annotation.Type = AnnotationType.Highlight;
-        // Set the PageNumber starts from 0. So, if set to 2 it represents the page 3. 
+        // Page numbers start from 0. So, if set to 2 it represents page 3.
         annotation.PageNumber = 2;
         List<Bound> bounds = new List<Bound>();
         Bound bound = new Bound();

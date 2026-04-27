@@ -31,7 +31,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
              spreadsheet.numberFormat(ej.spreadsheet.getFormatFromType('Currency'), 'B4:F8');
              spreadsheet.merge('A1:F1');
     },
-    actionBegin: (args) => {
+    actionBegin: function (args) {
         if (args.action === 'beforeInsertChart' && args.args.eventArgs.type.includes('Line')) {
             args.args.eventArgs.markerSettings.shape = 'Triangle';
             args.args.eventArgs.markerSettings.isFilled = false;

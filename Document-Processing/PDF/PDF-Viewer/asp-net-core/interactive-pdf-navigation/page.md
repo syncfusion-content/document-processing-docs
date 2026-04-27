@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Navigation in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Page Navigation in ASP.NET Core PDF Viewer
+description: Overview of page navigation in Syncfusion ASP.NET Core PDF Viewer. Learn about  toolbar controls and programmatic navigation.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Navigation in ASP.NET Core PDF Viewer control
+# Page navigation in ASP.NET Core PDF Viewer
 
-The ASP.NET Core PDF Viewer supports different internal and external navigations.
+The ASP.NET Core PDF Viewer supports internal page navigation via toolbar controls, thumbnails, bookmarks, and programmatic APIs.
 
 ## Toolbar page navigation option
 
@@ -21,7 +21,9 @@ The default toolbar of PDF Viewer contains the following navigation options
 * **Show first page** :-  Navigates to the first page of a PDF document.
 * **Show last page** :- Navigates to the last page of a PDF document.
 
-You can enable/disable page navigation option in PDF Viewer using the following code snippet.,
+Page navigation can be enabled or disabled in PDF Viewer using the following code snippet.
+
+**Example: Enable navigation:**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -49,7 +51,11 @@ You can enable/disable page navigation option in PDF Viewer using the following 
 
 ![Alt text](../images/navigation.png)
 
-Also, you can programmatically perform page navigation options as follows.
+## Programmatic page navigation
+
+The following examples show how to navigate pages programmatically using the PDF Viewer `navigation` APIs.
+
+**Example: Programmatic page navigation**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

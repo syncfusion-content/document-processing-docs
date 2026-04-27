@@ -10,18 +10,17 @@ domainurl: ##DomainURL##
 
 # Control annotations visibility in PDF Viewer
 
-Overview
+## Overview
 
-This guide explains how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion PDF Viewer in Angular, so annotations are visible only in the viewer when required.
+This guide shows how to display annotations in the Angular PDF Viewer while preventing them from appearing in the saved/downloaded PDF.
 
-Steps to control annotation visibility
+## Steps to control annotation visibility
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the getting-started guide (https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a basic PDF Viewer sample.
 
+**Step 2:** Add controls for annotation modification and downloading
 
-**Step 2:** Add buttons for annotation modification and downloading
-
-Include buttons in the HTML for modifying annotations and downloading the PDF.
+Add buttons in the component template to modify annotations and to trigger a download of the PDF.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -183,6 +182,7 @@ save() {
 {% endhighlight %}
 {% endtabs %}
 
-Following these steps ensures annotations are visible in the Syncfusion PDF Viewer while controlling their visibility in the downloaded PDF.
+
+After performing these steps, annotations remain visible in the viewer but are hidden in the downloaded PDF.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

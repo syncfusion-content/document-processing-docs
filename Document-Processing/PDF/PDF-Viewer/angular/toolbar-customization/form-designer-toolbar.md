@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Form Designer Toolbar Customization in Angular
 
-The form designer toolbar can be customized by showing or hiding default items and by controlling the order in which the items appear.
+Customize the form designer toolbar by showing or hiding default items and controlling the order in which items appear.
 
 ## Show or hide the form designer toolbar
 
-Show or hide the form designer toolbar programmatically during initialization or at runtime.
+The form designer toolbar can be shown or hidden programmatically during initialization or at runtime.
 
-Use the [EnableFormDesigner](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pdfViewerModel/#enableformdesigner) property or the [showFormDesignerToolbar](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar/#showformdesignertoolbar) method to toggle visibility.
+Use the [enableFormDesigner](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pdfViewerModel/#enableformdesigner) property to set initial visibility or call the [showFormDesignerToolbar](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar/#showformdesignertoolbar) method at runtime to toggle visibility. The links below reference the corresponding API documentation.
 
-The following code snippet explains how to show or hide the toolbar using the `EnableFormDesigner` property.
+The following code snippet shows how to set the `enableFormDesigner` property during initialization.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -53,9 +53,9 @@ export class AppComponent {
 
 ## How to customize the form designer toolbar
 
-Choose which tools appear and control their order in the form designer toolbar.
+Select which tools appear and control their order in the form designer toolbar.
 
-Use [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) with the [`FormDesignerToolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/#formdesignertoolbaritems) property to choose which form design tools are available. The property accepts a list of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formDesignerToolbarItem/) values. The items you include are both displayed and rendered in the order listed; any items you omit are hidden. This provides a streamlined, user-friendly form design experience across devices.
+Configure [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/) and set the [`FormDesignerToolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings/#formdesignertoolbaritems) property to specify available form-design tools. This property accepts a list of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formDesignerToolbarItem/) values; included items are displayed in the listed order and omitted items are hidden. This produces a consistent, streamlined form-design experience across devices.
 
 The following example demonstrates how to customize the form designer toolbar by configuring specific tools using `FormDesignerToolbarItem`.
 

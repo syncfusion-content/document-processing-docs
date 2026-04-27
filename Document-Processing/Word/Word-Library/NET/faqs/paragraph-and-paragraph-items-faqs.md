@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about paragraph and paragraph items in Word document
+# Frequently asked questions on paragraphs and items in Word document
 
 The frequently asked questions about working with paragraph and paragraph items in Word documents using DocIO are listed below.
 
@@ -854,3 +854,68 @@ In DocIO, the [FindByName](https://help.syncfusion.com/cr/document-processing/Sy
 When using `FindByName` to get a style in DocIO, it does not automatically indicate whether it's a paragraph or character style. To avoid errors, always check the style's [StyleType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.StyleType.html) before casting it to [WParagraphStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraphStyle.html) or [WCharacterStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WCharacterStyle.html). This ensures the style is applied correctly without runtime issues.
  
 For more details, refer [Working with styles](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-paragraph#working-with-styles)
+
+## What is Ink Trace?
+
+* An Ink Trace is a **single stroke** drawn on the ink canvas.
+* Each trace consists of **ordered (X, Y) points**.
+* Multiple traces = multiple strokes (like multi-stroke drawings).
+* Each trace has a **brush** for styling:
+  * Ink effects
+  * Color (if supported)
+  * Stroke thickness
+
+## How Ink Width and Height Work
+
+* Ink is created using "paragraph.AppendInk(width, height)" API
+* This defines a **coordinate space**:
+  * (0,0) = top-left of ink area
+  * (width, height) = bottom-right
+* All trace points must lie **within this boundary**.
+
+## How Trace Points Are Calculated
+
+* Trace points are simply **(X,Y) coordinates** defining the path of the stroke.
+* You can:
+  * Define points manually (for shapes like triangle).
+  * Convert from mouse/touch input. Refer "Create Ink" Demo.
+
+## Example: Triangle Ink Trace Points
+
+**Ink size used:**
+* Width = 400
+* Height = 300
+
+**Triangle points:**
+* Bottom-left + (0, 300)
+* Top-middle + (200, 0)
+* Bottom-right + (400, 300)
+* Close the shape + (0, 300)
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+PointF[] triangle = {
+    new PointF(0f, 300f),
+    new PointF(200f, 0f),
+    new PointF(400f, 300f),
+    new PointF(0f, 300f)
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## How to Set Stroke Thickness?
+
+* Every Ink Trace has a **Brush** object that controls how the stroke is drawn.
+* The **brush size** defines the **thickness** (width + height) of the ink stroke.
+* Brush size is set using a SizeF value:
+  * Width = horizontal stroke thickness
+  * Height = vertical stroke thickness
+* Larger values produce **thicker** strokes; smaller values produce **thinner** strokes.
+* Example values: (Use equal values (e.g., 5+5) for a uniform circular pen)
+  * Thin stroke = `SizeF(2f, 2f)`
+  * Medium stroke = `SizeF(5f, 5f)`
+  * Thick stroke = `SizeF(10f, 10f)`

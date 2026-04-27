@@ -24,11 +24,11 @@ The SfPdfViewer provides options to add and work with measurement annotations. U
 Measurement annotations can be added using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-* Click the **measurement Annotation** dropdown button. A dropdown pop-up appears with the available measurement annotation types.
+* Click the **measurement Annotation** dropdown button. A dropdown appears with the available measurement annotation types.
 * Select a measurement type to enable that annotation mode.
 * Click on the page to add and measure using the selected annotation.
 
-When a measurement mode is enabled while in Pan mode, the SfPdfViewer switches to Text Select mode.
+When a measurement mode is enabled while in Pan mode, the viewer automatically switches to Text Select mode.
 
 ![Adding Calibrate in Blazor SfPdfViewer Toolbar](../images/blazor-pdfviewer-add-calibrate-in-toolbar.png)
 
@@ -219,7 +219,7 @@ The following example demonstrates adding a measurement annotation to a PDF docu
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type of measurement annotation like radius, distance, perimeter, area, volume
         annotation.Type = AnnotationType.Radius;
-        // Set the PageNumber starts from 0. So, if set 0 it represents the page 1.
+        // Page numbers start from 0. So, if set to 0 it represents page 1.
         annotation.PageNumber = 0;
 
         // Bound of the radius annotation

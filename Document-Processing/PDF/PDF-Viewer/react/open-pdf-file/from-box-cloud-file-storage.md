@@ -9,19 +9,19 @@ documentation: ug
 
 # Open PDF from Box cloud storage in React
 
-Follow these steps to load a PDF from Box cloud storage using the server-backed PDF Viewer.
+These steps describe how to load a PDF stored in Box cloud storage into the Syncfusion React PDF Viewer using a server-backed web service.
 
 **Step 1:** Set up a Box developer account and create a Box application
 
-Create a developer account and Box application in the [Box Developer Console](https://developer.box.com/). Note the Client ID and Client Secret. Use OAuth 2.0 to authenticate the application.
+Create a developer account and Box application in the [Box Developer Console](https://developer.box.com/). Note the Client ID and Client Secret. Configure OAuth 2.0 for the application (including a suitable redirect URI) and ensure the application has the scopes required to read files from the target folder.
 
 **Step 2:** Create a PDF Viewer sample in React
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
+Start by following the Syncfusion React PDF Viewer 'Getting started' guide to create a basic PDF viewer sample. This establishes the client-side component that requests document data from the server-backed service.
 
 **Step 3:** Modify the PdfViewerController.cs file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. Ensure the project runs over HTTPS in production and configure CORS to allow requests from the client origin. You can refer to this [guide](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on creating the web service project. Install the Box SDK NuGet package (for example: `Install-Package Box.V2`).
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -126,11 +126,11 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-N> Replace the placeholders with your actual Box values: Access Token, Folder ID, Client ID, and Client Secret.
+N> Replace the placeholders with actual Box values (Access Token, Folder ID, Client ID, and Client Secret).
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Box cloud storage. Ensure the document name exists in your Box folder.
+Set the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set `documentPath` to the PDF file name to load from Box cloud storage. Ensure the document name exists in your Box folder. Confirm that the server's CORS policy allows requests from the client origin and that `serviceUrl` uses HTTPS in production.
 
 {% raw %}
 
@@ -165,8 +165,8 @@ root.render(<App />);
 ```
 {% endraw %}
 
-N> The **Box.V2.Core** NuGet package must be installed in your application to use the previous code example.
+N> Install the Box SDK NuGet package (for example `Box.V2`) in the web service project to use the Box API client shown above.
 
-N> Replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the `documentPath` property of the PDF viewer component
+N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Ensure the server validates that the file exists and handle cases where the file is not found or access is denied.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-box-cloud-file-storage)

@@ -7,11 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Organize Page Toolbar Customization in Blazor PDF Viewer control
+# Organize page toolbar
 
-The PDF Viewer allows you to customize the toolbar for the organize pages feature, enabling you to show or hide specific tools based on your application's requirements. The `PageOrganizerSettings` API provides properties to control the visibility of each tool in the organize pages dialog.
+Customize which tools appear in the Organize Pages toolbar using `PageOrganizerSettings`. Toggle features to match your application's needs.
 
-## Show or hide the insert option
+## Hide insert
 
 The `CanInsert` property controls the visibility of the insert tool. When set to `false`, the insert tool will be hidden from the toolbar.
 
@@ -28,9 +28,9 @@ The `CanInsert` property controls the visibility of the insert tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Insert Disable](./images/organize-insert-disable.png)
+![Insert disabled](./images/organize-insert-disable.png)
 
-## Show or hide the delete option
+## Hide delete
 
 The `CanDelete` property controls the visibility of the delete tool. When set to `false`, the delete tool will be hidden.
 
@@ -47,9 +47,9 @@ The `CanDelete` property controls the visibility of the delete tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Delete Disable](./images/organize-delete-disable.png)
+![Delete disabled](./images/organize-delete-disable.png)
 
-## Show or hide the rotate option
+## Hide rotate
 
 The `CanRotate` property controls the visibility of the rotate tool. When set to `false`, the rotate tool will be hidden.
 
@@ -66,9 +66,9 @@ The `CanRotate` property controls the visibility of the rotate tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Rotate Disable](./images/organize-rotate-disable.png)
+![Rotate disabled](./images/organize-rotate-disable.png)
 
-## Show or hide the duplicate option
+## Hide duplicate
 
 The `CanDuplicate` property controls the visibility of the copy tool. When set to `false`, the copy tool will be hidden.
 
@@ -85,9 +85,9 @@ The `CanDuplicate` property controls the visibility of the copy tool. When set t
 {% endhighlight %}
 {% endtabs %}
 
-![Duplicate Disable](./images/organize-copy-disable.png)
+![Duplicate disabled](./images/organize-copy-disable.png)
 
-## Show or hide the import option
+## Hide import
 
 The `CanImport` property controls the visibility of the import tool. When set to `false`, the import tool will be hidden.
 
@@ -104,9 +104,9 @@ The `CanImport` property controls the visibility of the import tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Import Disable](./images/organize-import-disable.png)
+![Import disabled](./images/organize-import-disable.png)
 
-## Show or hide the extract option
+## Hide extract
 
 The `CanExtractPages` property controls the visibility of the extract tool. When set to `false`, the extract tool will be hidden.
 
@@ -123,9 +123,9 @@ The `CanExtractPages` property controls the visibility of the extract tool. When
 {% endhighlight %}
 {% endtabs %}
 
-![Extract Disable](./images/organize-extract-disable.png)
+![Extract disabled](./images/organize-extract-disable.png)
 
-## Show or hide the rearrange option
+## Disable rearrange
 
 The `CanRearrange` property controls the ability to rearrange pages. When set to `false`, pages cannot be rearranged.
 

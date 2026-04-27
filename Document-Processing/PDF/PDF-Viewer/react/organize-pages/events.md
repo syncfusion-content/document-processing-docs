@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Organize Pages Events in PDF Viewer
 
-The PDF Viewer provides events to track and respond to actions within the page organizer, allowing for the customization of page manipulation features.
+The PDF Viewer exposes events for the page organizer to track and respond to page manipulation actions (for example: rotate, rearrange, insert, delete, and copy).
 
 ## pageOrganizerSaveAs
 
 The `pageOrganizerSaveAs` event is triggered when a save action is performed in the page organizer.
 
--  Occurs when the **Save as** button in the page organizer toolbar is clicked after modifying the document structure.
+ - Fires when the **Save as** button in the page organizer toolbar is clicked after modifying the document structure.
 
 The event arguments provide the necessary information about the save event:
 
-- `fileName`: The name of the currently loaded PDF document.
-- `downloadDocument`: A base64 string of the modified PDF document data.
-- `cancel`: A boolean that, when set to `true`, prevents the default save action from proceeding.
+ - `fileName`: The name of the currently loaded PDF document.
+ - `downloadDocument`: A base64-encoded string containing the modified PDF document.
+ - `cancel`: Boolean; set to `true` to prevent the default save action.
 
 ```typescript
 import * as React from 'react';
@@ -82,15 +82,14 @@ root.render(<App />);
 
 ## pageOrganizerZoomChanged
 
-The `pageOrganizerZoomChanged` event is triggered when the zoom level of the page organizer is changed.
+The `pageOrganizerZoomChanged` event fires when the page organizer zoom level changes.
 
--  This event is fired when the user interacts with the zoom slider in the page organizer. The `showImageZoomingSlider` property in `pageOrganizerSettings` must be set to `true` for the slider to be visible.
-
+- This event occurs when the user interacts with the zoom slider in the page organizer. The `showImageZoomingSlider` property in `pageOrganizerSettings` must be set to `true` for the slider to appear.
 
 Event arguments:
 
-- `previousZoomValue`: The previous zoom value.
-- `currentZoomValue`: The current zoom value.
+- `previousZoom`: The previous zoom value.
+- `currentZoom`: The current zoom value.
 
 ```typescript
 import * as React from 'react';

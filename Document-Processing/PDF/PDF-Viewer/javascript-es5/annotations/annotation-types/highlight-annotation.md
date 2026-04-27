@@ -18,7 +18,7 @@ The PDF Viewer provides options to add, edit, and delete Highlight annotations o
 
 ### Add highlight annotation via UI
 
-You can add highlights in two ways:
+Add highlights in two ways:
 
 1. Using the context menu
 - Select text in the PDF document and right-click it.
@@ -27,9 +27,10 @@ You can add highlights in two ways:
 ![Alt text](../../../javascript-es6/annotations/annotation-images/highlight-context.gif)
 
 2. Using the annotation toolbar
+Use the annotation toolbar to:
 - Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
 - Select **Highlight** to enable highlight mode.
-- Select text to add the highlight annotation. Alternatively, select text first and then click **Highlight**.
+- Select text to add the highlight annotation, or select text first and then click **Highlight**.
 
 ![Alt text](../../../javascript-es6/annotations/annotation-images/highlight-tool.gif)
 
@@ -37,7 +38,7 @@ N> When pan mode is active and a text markup mode is entered, the PDF Viewer swi
 
 ### Switch to Highlight Mode
 
-The PDF Viewer component allows add highlight annotations programmatically after enabling Highlight mode in button clicks.
+The PDF Viewer component allows adding highlight annotations programmatically after enabling Highlight mode via button clicks.
 
 ```html
     <!--Element to set text markup annotation mode-->
@@ -187,7 +188,7 @@ document.getElementById('highlight').addEventListener('click', function () {
 
 ### Edit highlight annotation in UI
 
-You can select a highlight to change its appearance or remove it:
+Select a highlight to change its appearance or remove it:
 - Change appearance using the annotation toolbar: Edit Color and Edit Opacity.
 - Delete using Delete/Backspace keys or the Delete Annotation button in the annotation toolbar.
 
@@ -288,7 +289,7 @@ document.getElementById('editHighlight').addEventListener('click', function () {
 
 Set default properties before creating the control using `highlightSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default highlight settings.
 
@@ -335,9 +336,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `highlightSettings`.
+Set properties for individual annotations before creating the control using `highlightSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default highlight settings.
 

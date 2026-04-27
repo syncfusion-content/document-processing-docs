@@ -26,11 +26,10 @@ The primary toolbar includes the following options:
 
 Reorder the [MobileToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_MobileToolbarItems) list to control the display order. The toolbar renders items in the order they appear in the collection.
 
-Use the following code snippet to add the redaction toolbar to the PDF Viewer.
+Example: add the redaction toolbar to the viewer.
 
 ```cshtml
-
-@page "/";
+@page "/"
 
 <SfPdfViewer2 @ref="SfPdfViewer2" Height="640px" Width="100%" DocumentPath="@DocumentPath">
     <PdfViewerToolbarSettings MobileToolbarItems="MobileToolbarItems"></PdfViewerToolbarSettings>

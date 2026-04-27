@@ -1,6 +1,6 @@
 ej.base.enableRipple(true);
 
-let spreadsheet = new ej.spreadsheet.Spreadsheet({
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
   contextMenuBeforeOpen: function (args) {
     if (ejs.base.closest(args.event.target, '.e-sheet-content')) {
       console.log('Cell Context Menu');

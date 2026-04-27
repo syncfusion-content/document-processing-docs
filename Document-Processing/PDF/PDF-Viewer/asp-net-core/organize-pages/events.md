@@ -14,11 +14,11 @@ The PDF Viewer provides events to track and respond to actions within the page o
 
 ## pageOrganizerSaveAs
 
-The `pageOrganizerSaveAs` event is triggered when a save action is performed in the page organizer.
+The `pageOrganizerSaveAs` event fires when a save action occurs in the page organizer.
 
 -  Occurs when the **Save as** button in the page organizer toolbar is clicked after modifying the document structure.
 
-The event arguments provide the necessary information about the save event:
+Event arguments provide the save event information:
 
 - `fileName`: The name of the currently loaded PDF document.
 - `downloadDocument`: A base64 string of the modified PDF document data.

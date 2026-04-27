@@ -8,15 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Locking Form Fields in a PDF document
+# Locking form fields in a PDF document
 
-The PDF Viewer component offers the ability to enable or disable the locking option for form fields within a PDF document. When a form field is locked, it's prevented from being moved, resized, or removed.
+The PDF Viewer supports making form fields read-only to prevent users from modifying, moving, or removing them. Locking can be applied through default form-field settings or programmatically during document events.
 
-## Locking Form Fields Programmatically
+## Locking form fields programmatically
 
-Form fields can be locked either by default settings or by utilizing an event and the [isReadOnly](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formField/) API.
-
-The provided code snippet exemplifies how to lock form fields in a PDF document during the document loading process. It utilizes the `documentLoad` event to add form fields and subsequently sets them as read-only using the [isReadOnly](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formField/) API. This ensures that users cannot modify the form fields, thereby preserving data integrity.
+Use the `isReadOnly` property on form-field metadata to mark fields as locked. The sample below demonstrates adding form fields during the `documentLoad` event and then setting each field to read-only using the `isReadOnly` API.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

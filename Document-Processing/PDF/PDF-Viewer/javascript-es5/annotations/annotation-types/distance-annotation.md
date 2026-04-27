@@ -18,7 +18,7 @@ Distance is a measurement annotation used to measure the length between two poin
 
 ### Add distance annotation via UI
 
-Use the annotation toolbar:
+Use the annotation toolbar to:
 - Click the **Edit Annotation** button in the PDF Viewer toolbar.
 - Open the **Measurement Annotation** dropdown.
 - Choose **Distance**, then draw on the page.
@@ -29,7 +29,7 @@ N> When in pan mode, selecting a measurement annotation switches the viewer to t
 
 ### Enable distance mode
 
-The PDF Viewer component allows drawing Distance annotations programmatically after enabling Distance mode in button clicks.
+The PDF Viewer component allows drawing distance annotations programmatically after enabling distance mode via button clicks.
 
 ```html
 <button id="distanceMode">Distance</button>
@@ -181,7 +181,7 @@ You can select, move, and resize Distance annotations directly in the viewer:
 - Resize: drag the end handles to adjust its length.
 - Delete or access more options from the context menu.
 
-#### Edit the properties of area annotations
+#### Edit the properties of distance annotations
 
 The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
@@ -337,9 +337,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `DistanceSettings`.
+Set properties for individual annotations before creating the control using `DistanceSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default Distance settings.
 

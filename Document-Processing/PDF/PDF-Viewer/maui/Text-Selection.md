@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Select text from a PDF document using .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about selecting text from PDF documents and copying it to the clipboard using Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer).
+title: Text Selection in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to select text from a PDF document and copy it to the clipboard using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Selecting text from a PDF document in .NET MAUI PDF Viewer (SfPdfViewer)
+# Text Selection in .NET MAUI PDF Viewer (SfPdfViewer)
 
 Using [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), you can select text from a PDF document and copy it to the clipboard. This process allows you to easily extract text from the PDF and paste it into other applications.
 
@@ -118,3 +119,8 @@ private void PdfViewer_TextSelectionChanged(object sender, TextSelectionChangedE
 ## Limitations
 
 The text from the images cannot be selected and, the multiple-page text selection is not supported for now.
+
+## See Also
+- [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-search)
+- [Text Markups](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-markups)
+- [Copy and Annotations from Selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)

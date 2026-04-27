@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print a Document in .NET MAUI PDF Viewer Control | Syncfusion
-description: Learn here all about printing feature in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and more.
+title: Print a Document in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to print a PDF document using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -10,16 +10,19 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Print a Document in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The print feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to effortlessly print PDF documents directly from your application code.
+Print PDFs directly from your app using the viewer's built-in print integration. This page shows how to trigger printing, provide optional print settings, and handle platform print dialogs so your users see familiar system UI.
 
-Moreover, when performing a print operation, the default device print dialog opens, providing users with familiar options and settings to customize their printing experience.
+N> Note: On some platforms the system print dialog controls options such as paper size and print quality — collect any user-specific print options in your UI and pass them to the print API where supported.
 
-To print a PDF programmatically, you can use the [PrintDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PrintDocument) method provided by [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).Refer to the following code example.
+To print a PDF programmatically, use the [PrintDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PrintDocument) method. For example, call it from a toolbar or a Print button's click handler.
 
 {% tabs %}
-{% highlight c# %}
-// Prints the PDF document.
-PdfViewer.PrintDocument();
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+// Call from a Print button's Clicked handler.
+private void PrintButton_Clicked(object sender, EventArgs e)
+{
+    PdfViewer.PrintDocument();
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -57,3 +60,8 @@ N> The [PrintQuality](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfVie
 ## Limitations
 
 Currently, when printing a document that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the printed document.
+
+## See Also
+- [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview)

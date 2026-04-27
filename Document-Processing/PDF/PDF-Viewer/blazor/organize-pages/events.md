@@ -7,27 +7,23 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Organize Pages Events in Blazor PDF Viewer
+# Organize pages events
 
-The PDF Viewer provides events to track and respond to actions within the page organizer, allowing for the customization of page manipulation features.
+Use the page organizer events to react to rotations, rearranges, inserts, deletes, and other page-manipulation actions performed in the page organizer.
 
-|Name|Description|
+| Name | Description |
 |---|---|
-|PageOrganizerSaveRequested|Triggers when a save action is performed in the page organizer.|
-|PageOrganizerZoomChanged|Triggers when the zoom level of the page organizer is changed.|
-|PageOrganizerVisibilityChanged|Triggers when the page organizer dialog visibility is changed.|
+| PageOrganizerSaveRequested | Triggers when the page organizer requests a save of the modified document. |
+| PageOrganizerZoomChanged | Triggers when the page organizer zoom level changes. |
+| PageOrganizerVisibilityChanged | Triggers when the page organizer dialog visibility changes. |
 
-## PageOrganizerSaveRequested Event
+## PageOrganizerSaveRequested
 
-The `PageOrganizerSaveRequested` event is triggered when a save action is performed in the page organizer.
+Raised when the user saves changes from the page organizer (for example, after clicking the **Save as** button). The event args include:
 
--  Occurs when the **Save as** button in the page organizer toolbar is clicked after modifying the document structure.
-
-The event arguments provide the necessary information about the save event:
-
-- `FileName`: The name of the currently loaded PDF document.
-- `DownloadDocument`: A base64 string of the modified PDF document data.
-- `Cancel`: A boolean that, when set to `true`, prevents the default save action from proceeding.
+- `FileName`: the current PDF file name.
+- `DownloadDocument`: a base64 string containing the modified PDF bytes.
+- `Cancel`: set to `true` to prevent the built-in save behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -40,24 +36,23 @@ The event arguments provide the necessary information about the save event:
 </SfPdfViewer2>
 
 @code {
-    private void SavePages(PageOrganizerSaveEventArgs args) {
-        Console.WriteLine("Saved File Name : " + args.FileName.ToString());
+    private void SavePages(PageOrganizerSaveEventArgs args)
+    {
+        Console.WriteLine($"Saved File Name: {args.FileName}");
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-## PageOrganizerZoomChanged Event
+## PageOrganizerZoomChanged
 
-The `PageOrganizerZoomChanged` event is triggered when the zoom level of the page organizer is changed.
+Raised when the zoom slider in the page organizer changes value. Enable the slider by setting `PageOrganizerSettings.ShowImageZoomingSlider` to `true`.
 
--  This event is fired when the user interacts with the zoom slider in the page organizer. The `ShowImageZoomingSlider` property in `PageOrganizerSettings` must be set to `true` for the slider to be visible.
+Event args:
 
-Event arguments:
-
-- `PreviousZoom`: The previous zoom value.
-- `CurrentZoom`: The current zoom value.
+- `PreviousZoom`: previous zoom value.
+- `CurrentZoom`: current zoom value.
 
 {% tabs %}
 {% highlight razor %}
@@ -70,17 +65,18 @@ Event arguments:
 </SfPdfViewer2>
 
 @code {
-    private void ZoomChange(PageOrganizerZoomChangedEventArgs args) {
-        Console.WriteLine("Current Zoom : " + args.CurrentZoom);
+    private void ZoomChange(PageOrganizerZoomChangedEventArgs args)
+    {
+        Console.WriteLine($"Current Zoom: {args.CurrentZoom}");
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-## PageOrganizerVisibilityChanged Event
+## PageOrganizerVisibilityChanged
 
-The `PageOrganizerVisibilityChanged` event is triggered when the page organizer dialog visibility is changed.
+Raised when the page organizer dialog is opened or closed.
 
 {% tabs %}
 {% highlight razor %}
@@ -92,8 +88,9 @@ The `PageOrganizerVisibilityChanged` event is triggered when the page organizer 
 </SfPdfViewer2>
 
 @code {
-    private void VisibleChanged(bool isVisible) {
-        Console.WriteLine("Organize Dialog Visibility : " + isVisible.ToString());
+    private void VisibleChanged(bool isVisible)
+    {
+        Console.WriteLine($"Organize dialog visibility: {isVisible}");
     }
 }
 
@@ -104,6 +101,6 @@ The `PageOrganizerVisibilityChanged` event is triggered when the page organizer 
 
 ## See also
 
-- Overall Viewer events: [Event](../events)
+- Overall viewer events: [Event](../events)
 - Annotation events: [Annotation events](../annotation/events)
 - Form designer events: [Form field events](../form-designer/events)

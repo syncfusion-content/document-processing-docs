@@ -8,15 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize print quality using the printScaleFactor API
+# Customize Print Quality Using the `printScaleFactor` Property
 
-The PDF Viewer allows you to adjust the print rendering quality by setting the [printScaleFactor](https://ej2.syncfusion.com/documentation/api/pdfviewer#printScaleFactor) property. Valid values range from 0.5 to 5. Higher values produce sharper output but also increase rendering time.
+The PDF Viewer adjusts print rendering quality using the `printScaleFactor` property. This numeric property accepts values from 0.5 to 5. Higher values improve printed image sharpness but increase rendering time and memory usage.
 
-By default, `printScaleFactor` is set to 1.
+By default, `printScaleFactor` is `1`.
 
-N> Values outside the 0.5–5 range revert to the standard print quality (value 1).
+N> Values outside the supported range (0.5–5) revert to the default print quality (`1`).
 
-The following example demonstrates how to update the scale factor before printing.
+The following examples demonstrate how to set `printScaleFactor`. It can be provided in the viewer options during initialization or assigned to `pdfviewer.printScaleFactor` after instantiation.
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 

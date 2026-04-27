@@ -6,9 +6,9 @@ control: PDF Viewer
 documentation: UG
 ---
 
-# Overview of React PDF Viewer Component
+# Overview of React PDF Viewer component
 
-The [`React PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight and modular component for viewing and printing PDF files. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. The thumbnail, bookmark, hyperlink and table of contents support provides easy navigation within and outside the PDF files.
+The [`React PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight, modular control for viewing and printing PDF files. It supports core interactions such as zooming, scrolling, text searching, text selection, and text copying. Thumbnails, bookmarks, hyperlinks, and table-of-contents support enable easy navigation inside and outside PDF files.
 
 ## Setup
 
@@ -78,24 +78,24 @@ root.render(<App />);
 
 ## Key Features 
 
-*[`View PDF Document`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
-*[`Annotations`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/text-markup-annotation) - Annotate with text markup, shapes, stamps, ink, and sticky notes.Form filling and form designing can be done.
-*[`Form Fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/form-designer/create-fillable-pdf-forms/create-programmatically) - Form filling and form designing can be done.
-*[`Signature`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/signature-annotation) - Hand-written and digital signatures are allowed.
-*[`Toolbar`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar) - Built-in-toolbar and custom toolbars to perform user interaction of PDF Viewer functionalities.
-*[`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page-navigation) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
-*[`Magnification`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/magnification) - Fit to page, fit to width, and automatic (fits to the visible area).
-*[`Search`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/text-search) - Search a text easily across the PDF document.
-*[`Core Interactions`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interaction-mode) - Allows scrolling, zooming, panning, selection, and page navigation.
-*[`Print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/print) - Print the entire document or a specific page directly from the browser.
-*[`Globalization`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/globalization) - Provides inherent support to localize the UI.
+[View PDF Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
+[Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/text-markup-annotation) - Annotate with text markup, shapes, stamps, ink, and sticky notes.Form filling and form designing can be done.
+[Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/forms/manage-form-fields/create-form-fields) - Form filling and form designing can be done.
+[Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/signature-annotation) - Hand-written and digital signatures are allowed.
+[Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar) - Built-in-toolbar and custom toolbars to perform user interaction of PDF Viewer functionalities.
+[Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
+[Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/magnification) - Fit to page, fit to width, and automatic (fits to the visible area).
+[Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/text-search) - Search a text easily across the PDF document.
+[Core Interactions](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interaction-mode) - Allows scrolling, zooming, panning, selection, and page navigation.
+[Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/print) - Print the entire document or a specific page directly from the browser.
+[Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/globalization) - Provides inherent support to localize the UI.
 
-## Supported Web platforms
+## Supported web platforms
 
-* [Javascript(ES5)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
-* [Javascript](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started)
-* [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
-* [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started)
-* [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started)
-* [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started)
-* [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview)
+- [JavaScript (ES5)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
+- [JavaScript (ES6)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started)
+- [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
+- [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started)
+- [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started)
+- [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started)
+- [Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview)

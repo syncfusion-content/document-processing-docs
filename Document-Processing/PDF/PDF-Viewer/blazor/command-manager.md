@@ -9,25 +9,27 @@ documentation: ug
 
 # Command Manager in Blazor SfPdfViewer Component
 
-The PDF viewer provides support to map or bind command execution with a desired combination of key gestures.
+The PDF Viewer supports mapping keyboard gestures to named commands so that pressing a defined key combination triggers a viewer action.
 
-The [PdfViewerCommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommandManager.html) provides support to define custom commands. These custom commands are executed when the specified key gesture is recognized.
+The [PdfViewerCommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommandManager.html) enables defining custom commands that execute when the specified key gesture is recognized.
 
-## Command Execution
-To execute custom commands, simply provide a list of keyboard shortcuts along with the corresponding actions. These actions will be triggered when the specified keyboard shortcuts are pressed.
+## Command execution
+Provide a list of keyboard shortcuts and corresponding action names; the viewer raises `CommandExecuted` when a registered shortcut is detected.
 
-* [Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyboardCommand.html): Defines the collection of custom keyboard shortcuts and the action names to execute in the PDF Viewer.
+- [Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyboardCommand.html): Defines the collection of custom keyboard shortcuts and their action names.
+- [CommandExecuted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CommandExecutedEventArgs.html): Raised when a registered keyboard shortcut is detected; handle this event to perform the action.
 
-* [CommandExecuted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CommandExecutedEventArgs.html): Raised when a registered keyboard shortcut is detected; handle this event to perform the action.
-
-## How to create custom command: 
+## How to create a custom command
 Create custom keyboard commands by specifying an action name and the corresponding key gesture for the PDF Viewer.
 
-* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CommandExecutedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_CommandExecutedEventArgs_ActionName): Specifies the name of the action to execute when the keyboard shortcut is pressed (for example, FitToWidth, FitToPage). The action name must correspond to a recognized PDF Viewer action.
+- [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CommandExecutedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_CommandExecutedEventArgs_ActionName): The name of the action to execute when the keyboard shortcut is pressed (for example, `FitToWidth`, `FitToPage`). The action name must match a recognized viewer action.
 
-* [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyGesture.html): Specifies the combination of [keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyGesture.html#Syncfusion_Blazor_SfPdfViewer_KeyGesture_Key) and [modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyGesture.html#Syncfusion_Blazor_SfPdfViewer_KeyGesture_Modifiers), including Control, Shift, Alt or Meta key that are utilized within the PDF viewer. On macOS, Meta maps to the Command key.
+- [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyGesture.html): The combination of [keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyGesture.html#Syncfusion_Blazor_SfPdfViewer_KeyGesture_Key) and [modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.KeyGesture.html#Syncfusion_Blazor_SfPdfViewer_KeyGesture_Modifiers) (Control, Shift, Alt, Meta). On macOS, Meta maps to the Command key.
 
-The following example registers two custom keyboard commands (FitToWidth and FitToPage) and handles them in CommandExecuted. The example uses SfPdfViewer2; use the component that matches the project version.
+### Usage
+Register commands with `PdfViewerCommandManager` and handle `CommandExecuted` to invoke viewer methods (for example, `FitToWidthAsync` or `FitToPageAsync`). See the `CommandExecuted` API documentation for recognized action names and expected behavior.
+
+The following example registers two custom keyboard commands (`FitToWidth` and `FitToPage`) and handles them in `CommandExecuted`. The example uses `SfPdfViewer2`; use the component that matches the project version.
 
 ```cshtml
 

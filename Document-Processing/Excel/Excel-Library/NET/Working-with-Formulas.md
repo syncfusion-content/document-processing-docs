@@ -1120,6 +1120,10 @@ DOLLARFR<br/><br/></td><td>
 Converts a dollar price, expressed as a decimal number, into a dollar price, expressed as a fraction<br/><br/></td></tr>
 <tr>
 <td>
+DROP<br/><br/></td><td>
+Excludes a specific number of rows or columns from the start or end of an array<br/><br/></td></tr>
+<tr>
+<td>
 DURATION<br/><br/></td><td>
 Returns the annual duration of a security with periodic interest payments<br/><br/></td></tr>
 <tr>
@@ -1160,6 +1164,10 @@ EXP<br/><br/></td><td>
 Returns {{'__e__ '| markdownify }}raised to the power of a given number<br/><br/></td></tr>
 <tr>
 <td>
+EXPAND<br/><br/></td><td>
+Expands or pads an array to specified row and column dimensions<br/><br/></td></tr>
+<tr>
+<td>
 EXPONDIST<br/><br/></td><td>
 Returns the exponential distribution<br/><br/></td></tr>
 <tr>
@@ -1188,7 +1196,7 @@ FISHER<br/><br/></td><td>
 Returns the Fisher transformation<br/><br/></td></tr>
 <tr>
 <td>
-FISHER<br/><br/></td><td>
+FISHERINV<br/><br/></td><td>
 Returns the inverse of the Fisher transformation<br/><br/></td></tr>
 <tr>
 <td>
@@ -1262,6 +1270,10 @@ Looks in the top row of an array and returns the value of the indicated cell<br/
 <td>
 HOUR<br/><br/></td><td>
 Converts a serial number to an hour<br/><br/></td></tr>
+<tr>
+<td>
+HSTACK<br/><br/></td><td>
+Appends arrays horizontally and in sequence to return a larger array<br/><br/></td></tr>
 <tr>
 <td>
 HYPERLINK<br/><br/></td><td>
@@ -1420,6 +1432,10 @@ ISODD<br/><br/></td><td>
 Returns TRUE if the number is odd<br/><br/></td></tr>
 <tr>
 <td>
+ISOMITTED<br/><br/></td><td>
+Checks whether the value in a LAMBDA is missing and returns TRUE or FALSE<br/><br/></td></tr>
+<tr>
+<td>
 ISMPT<br/><br/></td><td>
 Calculates the interest paid during a specific period of an investment<br/><br/></td></tr>
 <tr>
@@ -1490,6 +1506,10 @@ Looks up values in a vector or array<br/><br/></td></tr>
 <td>
 LOWER<br/><br/></td><td>
 Converts text to lowercase<br/><br/></td></tr>
+<tr>
+<td>
+MAKEARRAY<br/><br/></td><td>
+Returns a calculated array of a specified row and column size, by applying a LAMBDA<br/><br/></td></tr>
 <tr>
 <td>
 MATCH<br/><br/></td><td>
@@ -1590,6 +1610,10 @@ Returns the normal cumulative distribution<br/><br/></td></tr>
 <td>
 NORMINV<br/><br/></td><td>
 Returns the inverse of the normal cumulative distribution<br/><br/></td></tr>
+<tr>
+<td>
+NORM_S_INV<br/><br/></td><td>
+Returns the inverse of the standard normal cumulative distribution<br/><br/></td></tr>
 <tr>
 <td>
 NORMSDIST<br/><br/></td><td>
@@ -1712,6 +1736,10 @@ RANDBETWEEN<br/><br/></td><td>
 Returns a random number between the numbers you specify<br/><br/></td></tr>
 <tr>
 <td>
+RANDARRAY<br/><br/></td><td>
+Returns an array of random numbers between 0 and 1. However, you can specify the number of rows and columns to fill, minimum and maximum values, and whether to return whole numbers or decimal values<br/><br/></td></tr>
+<tr>
+<td>
 RANK<br/><br/></td><td>
 Returns the rank of a number in a list of numbers<br/><br/></td></tr>
 <tr>
@@ -1722,6 +1750,10 @@ Returns the interest rate per period of an annuity<br/><br/></td></tr>
 <td>
 RECEIVED<br/><br/></td><td>
 Returns the amount received at maturity for a fully invested security<br/><br/></td></tr>
+<tr>
+<td>
+REDUCE<br/><br/></td><td>
+Reduces an array to an accumulated value by applying a LAMBDA to each value and returning the total value in the accumulator<br/><br/></td></tr>
 <tr>
 <td>
 REPLACE, REPLACEB<br/><br/></td><td>
@@ -1764,12 +1796,20 @@ RSQ<br/><br/></td><td>
 Returns the square of the Pearson product moment correlation coefficient<br/><br/></td></tr>
 <tr>
 <td>
+SCAN<br/><br/></td><td>
+Scans an array by applying a LAMBDA to each value and returns an array that has each intermediate value<br/><br/></td></tr>
+<tr>
+<td>
 SEARCH, SEARCHB<br/><br/></td><td>
 Finds one text value within another (not case-sensitive)<br/><br/></td></tr>
 <tr>
 <td>
 SECOND<br/><br/></td><td>
 Converts a serial number to a second<br/><br/></td></tr>
+<tr>
+<td>
+SEQUENCE<br/><br/></td><td>
+Generates a list of sequential numbers in an array, such as 1, 2, 3, 4<br/><br/></td></tr>
 <tr>
 <td>
 SERIESSUM<br/><br/></td><td>
@@ -1888,6 +1928,10 @@ T<br/><br/></td><td>
 Converts its arguments to text<br/><br/></td></tr>
 <tr>
 <td>
+TAKE<br/><br/></td><td>
+Returns a specified number of contiguous rows or columns from the start or end of an array<br/><br/></td></tr>
+<tr>
+<td>
 TAN<br/><br/></td><td>
 Returns the tangent of a number<br/><br/></td></tr>
 <tr>
@@ -1992,6 +2036,10 @@ VLOOKUP<br/><br/></td><td>
 Looks in the first column of an array and moves across the row to return the value of a cell<br/><br/></td></tr>
 <tr>
 <td>
+VSTACK<br/><br/></td><td>
+Appends arrays vertically and in sequence to return a larger array<br/><br/></td></tr>
+<tr>
+<td>
 WEEKDAY<br/><br/></td><td>
 Converts a serial number to a day of the week<br/><br/></td></tr>
 <tr>
@@ -2006,6 +2054,14 @@ Returns the Weibull distribution<br/><br/></td></tr>
 <td>
 WORKDAY<br/><br/></td><td>
 Returns the serial number of the date before or after a specified number of workdays<br/><br/></td></tr>
+<tr>
+<td>
+WRAPCOLS<br/><br/></td><td>
+Wraps the provided row or column of values by columns after a specified number of elements<br/><br/></td></tr>
+<tr>
+<td>
+WRAPROWS<br/><br/></td><td>
+Wraps the provided row or column of values by rows after a specified number of elements<br/><br/></td></tr>
 <tr>
 <td>
 XIRR<br/><br/></td><td>

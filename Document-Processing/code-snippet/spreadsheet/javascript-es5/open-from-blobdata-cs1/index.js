@@ -7,11 +7,11 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
   sheets: [{
   }],
 
-  created: () => {
+  created: function () {
     fetch(base64String)
-    // To obtain blob data from base64 string.
-      .then((response) => response.blob())
-      .then((fileBlob) => {
+      // To obtain blob data from base64 string.
+      .then(function (response) { return response.blob(); })
+      .then(function (fileBlob) {
         // To convert obtained blob data as a file.
         var file = new File([fileBlob], 'Sample.xlsx');
         spreadsheet.open({ file: file });

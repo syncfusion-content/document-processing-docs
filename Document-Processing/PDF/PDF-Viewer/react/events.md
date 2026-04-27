@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Events in React PDF Viewer
 
-The PDF Viewer component triggers events for creation, page navigation, document life cycle, context menu interactions, comments, bookmarks, download and export, hyperlinks, annotation import/export, custom keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into application workflows.
+The PDF Viewer component triggers events for component creation, page navigation, document lifecycle, context menu interactions, comments, bookmarks, download/export, hyperlinks, annotation import/export, custom keyboard commands, printing, signatures, text search, and text selection. These events enable integration of custom logic into application workflows.
 
 The following table lists commonly used events supported by the PDF Viewer component:
 
@@ -1163,7 +1163,7 @@ The [keyboardCustomCommands](https://ej2.syncfusion.com/react/documentation/api/
   - keyboardCommand: The command metadata raised by Command Manager
   
 When it triggers
-- After registering gestures in commandManager.keyboardCommand. For example, pressing Shift + Alt + G or Shift + Alt + H triggers the event. Use this to handle custom keyboard shortcuts.
+- After registering gestures in the `commandManager` (for example, via `commandManager.keyboardCommand`). For example, pressing Shift + Alt + G or Shift + Alt + H triggers the event. Use this event to handle custom keyboard shortcuts.
 
 Refer to [Keyboard interaction](./accessibility#keyboard-interaction) for details about adding and handling custom shortcut keys.
 Example:

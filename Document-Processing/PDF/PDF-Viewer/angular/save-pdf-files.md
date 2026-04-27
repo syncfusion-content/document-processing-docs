@@ -10,21 +10,21 @@ domainurl: ##DomainURL##
 
 # Saving PDF file in Angular PDF Viewer component
 
-After editing the PDF file with various annotation tools, you will need to save the updated PDF to the server, database, or local file system.
+After annotating a PDF with the viewer's annotation tools, save the updated file to a server, database, or local file system so changes persist.
 
 ## Save PDF file to Server
 
-Need to save the modified PDF back to a server. To achieve this, proceed with the following steps
+To save a modified PDF to a server, follow these steps.
 
 **Step 1:** Create a Simple PDF Viewer Sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
+Follow the getting-started guide at [Link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a basic Angular PDF viewer sample. This provides the client-side setup for annotation and saving.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. [See this](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for a reference implementation.
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+2. Open the `PdfViewerController.cs` file in the web service project.
 
 3. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/downloadStartEventArgs/) method to open it in the viewer using URL
 

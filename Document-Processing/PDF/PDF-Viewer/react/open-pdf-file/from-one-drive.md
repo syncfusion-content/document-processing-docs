@@ -9,19 +9,19 @@ documentation: ug
 
 # Open PDF from OneDrive
 
-Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewer.
+These steps describe how to load a PDF stored in OneDrive into the Syncfusion React PDF Viewer using a server-backed web service.
 
-**Step 1:** Create a Microsoft Graph API application
+**Step 1:** Register a Microsoft Graph application
 
 Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow this guide: https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive
 
-**Step 2:** Create a Simple PDF Viewer Sample in React
+**Step 2:** Create a PDF Viewer sample in React
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
+Start by following the Syncfusion React PDF Viewer 'Getting started' guide to create a basic PDF viewer sample. This establishes the client-side component that requests document data from the server-backed service.
 
 **Step 3:** Modify the PdfViewerController.cs file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. Ensure the project runs over HTTPS in production and configure CORS to allow requests from the client origin. You can refer to this [guide](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on creating the web service project. Install the required NuGet packages (for example `Microsoft.Graph` and `Microsoft.Identity.Client`).
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -121,7 +121,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open appsettings.json in the web service project and add the following keys below the existing AllowedHosts configuration
+6. Open `appsettings.json` in the web service project and add the following keys below the existing `AllowedHosts` configuration
 
 ```json
 {
@@ -178,13 +178,13 @@ root.render(<App />);
 ```
 {% endraw %}
 
-N> The following NuGet packages are required to use the previous code example
+N> The following NuGet packages are commonly required by the example and can be installed with the CLI:
 * **Microsoft.Identity.Client**
 * **Microsoft.Graph**
 * **Microsoft.Extensions.Configuration**
 * **Microsoft.Extensions.Configuration.FileExtensions**
 * **Microsoft.Extensions.Configuration.Json**
 
-You can install these packages using the NuGet Package Manager in Visual Studio or Visual Studio Code.
+N> Install packages using the NuGet Package Manager or `dotnet` CLI and confirm package versions match target framework compatibility.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-one-drive)

@@ -7,13 +7,13 @@ control: Text selection
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text selection in React PDF Viewer control
+# Text selection in React PDF Viewer component
 
-The TextSelection module lets users highlight and copy text from the loaded PDF. Selection is enabled by default and can be configured or monitored programmatically to match application workflows.
+The Text Selection module lets users highlight and copy text from the loaded PDF. Text selection is enabled by default and can be configured or monitored programmatically to match application workflows.
 
 ## Enable or disable text selection
 
-Use the `enableTextSelection` property to enable or disable choosing text in the PDF Viewer.
+Use the `enableTextSelection` property to enable or disable text selection in the PDF Viewer.
 
 ```html
 <!DOCTYPE html>
@@ -154,7 +154,7 @@ root.render(<App />);
 
 ## Text selection events
 
-Monitor user interaction with selection events to coordinate downstream actions such as showing tooltips, enabling context menus, or storing analytics.
+Monitor selection events to coordinate downstream actions such as showing tooltips, enabling context menus, or capturing analytics.
 
 ### textSelectionStart
 

@@ -10,8 +10,9 @@ domainurl: ##DomainURL##
 
 # Add Custom Fonts to PDF Forms in JavaScript PDF Viewer
 
-The Syncfusion **JavaScript PDF Viewer** supports loading, editing, and saving **custom fonts** in form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown) fields using the customFonts property. This ensures consistent text rendering even when the required fonts are not installed on the user’s system.  
-Custom fonts are embedded and preserved when form fields are modified or saved, making the PDF display correctly across environments.
+The Syncfusion **JavaScript PDF Viewer** supports loading, editing, and saving **custom fonts** in form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown) fields using the `customFonts` property. This ensures consistent text rendering when required fonts are not installed on the user’s system.
+
+Custom fonts are embedded and preserved when form fields are modified or saved, ensuring the PDF renders correctly across environments.
 
 ## When dynamic fonts are used
 Dynamic fonts are currently used in the following scenarios:
