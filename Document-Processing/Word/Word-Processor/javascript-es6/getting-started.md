@@ -52,14 +52,20 @@ npm install
 
 ### Add CSS reference
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript controls come with [built-in themes](https://ej2.syncfusion.com/documentation/appearance/theme), which are available in the installed packages. It's easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript controls to match the style of your application by referring to one of the built-in themes.
-
-The quickstart application is preconfigured to use the `Material` theme in the `~/src/styles/styles.css` file, as shown below: 
+Add the required Syncfusion CSS files to `~/src/styles/styles.css`:
 
 {% tabs %}
 {% highlight css tabtitle="style.css" %}
 
-@import "../../node_modules/@syncfusion/ej2/material.css";
+@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import "../../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -99,7 +105,6 @@ Add an HTML div element to act as the Document Editor element in the `index.html
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Essential JS 2 Document editor</title>
     <meta charset="utf-8" />
@@ -109,12 +114,10 @@ Add an HTML div element to act as the Document Editor element in the `index.html
     <link rel="shortcut icon" href="resources/favicon.ico" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 </head>
-
 <body>
     <!-- Element which will render as DocumentEditorContainer -->
     <div id="DocumentEditor"></div>
 </body>
-
 </html>
 
 {% endhighlight %}
