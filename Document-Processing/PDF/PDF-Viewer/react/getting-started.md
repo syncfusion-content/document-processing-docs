@@ -54,7 +54,7 @@ npm install @syncfusion/ej2-react-pdfviewer --save
 
 ## Adding PDF Viewer component and the CSS reference
 
-* Add the React PDF Viewer component’s CSS reference as given below in `src/index.css` file.
+Add the React PDF Viewer component’s CSS reference as given below in `src/index.css` file.
 
 ```css
    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -67,7 +67,7 @@ npm install @syncfusion/ej2-react-pdfviewer --save
    @import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
 ```
 
-* Add the following import statements for the PDF Viewer along with the default imports in the file (src/index.js when using JavaScript/JSX, or src/app.tsx when using TypeScript/TSX), and include the PDF Viewer initialization code inside the function to render the PDF Viewer component.
+Add the following import statements for the PDF Viewer along with the default imports in the file (src/index.js when using JavaScript/JSX, or src/app.tsx when using TypeScript/TSX), and include the PDF Viewer initialization code inside the function to render the PDF Viewer component.
 
 
 {% tabs %}
@@ -104,9 +104,6 @@ function App() {
 {% highlight js tabtitle="TSX" %}
 {% raw %}
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
 import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
          FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
@@ -128,9 +125,6 @@ return (<div>
  </div>
 </div>);
 }
-const rootElement = document.getElementById('sample')!;
-const root = ReactDOM.createRoot(rootElement);
-root.render(<App />);
 
 {% endraw %}
 {% endhighlight %}
