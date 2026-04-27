@@ -16,9 +16,20 @@ The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packag
 
 Follow these steps to enable new document operations to the AI agent tool library.
 
-**Step 1: Create a Custom AI Agent Tool by Inheriting AgentToolBase**
+**Step 1: Clone the repository**
 
-Create a new class that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document manager through its constructor:
+```bash
+git clone https://github.com/syncfusion/document-sdk-ai-agent-tools.git
+cd Document-SDK-AI-Agent-Tools
+```
+
+**Step 2: Create a Custom AI Agent Tool by Inheriting AgentToolBase**
+
+Open the Syncfusion.DocumentSDK.AI.AgentTools library project 
+
+Syncfusion.DocumentSDK.AI.AgentTools\Syncfusion.DocumentSDK.AI.AgentTools.csproj Then,
+
+Create a new class inside the Tools that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document manager through its constructor:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -46,7 +57,7 @@ namespace Syncfusion.AI.AgentTools.Word
 }
 ```
 
-**Step 2: Add Tool Methods with [Tool]**
+**Step 3: Add Tool Methods with [Tool]**
 
 Add `public` instance methods and decorate each one with `[Tool]`, providing a name and a description that the AI agent will use to understand when to call it:
 
@@ -60,7 +71,7 @@ public AgentToolResult AddTextWatermark(...)
 }
 ```
 
-**Step 3: Annotate Parameters with [ToolParameter]**
+**Step 4: Annotate Parameters with [ToolParameter]**
 
 Decorate each method parameter with `[ToolParameter]` to give the AI a natural-language description of what value to pass:
 
@@ -74,7 +85,7 @@ public AgentToolResult AddTextWatermark(
         string? outputFilePath = null)
 ```
 
-**Step 4: Return AgentToolResult**
+**Step 5: Return AgentToolResult**
 
 All tool methods must return `AgentToolResult`. Use the static factory methods to signal success or failure:
 
@@ -193,7 +204,7 @@ namespace Syncfusion.AI.AgentTools.Word
 
 ## Registering Custom Tools with the AI Agent
 
-Once your custom tool class is created, register it alongside the built-in tools in your host application.
+Once your custom tool class is created, build the agent tool library, add the required DLL or project dependency to your host application, and then register it alongside the built-in tools.
 
 Documents can be handled using either in‑memory Mode or Storage Mode during AI agent execution. In in‑memory Mode, documents are loaded into memory and shared across tool calls. In Storage Mode, documents are loaded per tool call from external storage and must be explicitly saved to persist changes.
 
