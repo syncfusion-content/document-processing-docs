@@ -1,29 +1,35 @@
 ---
 layout: post
-title: Getting Started with ASP.NET MVC DocumentEditor | Syncfusion
-description: Check out and learn about getting started with ASP.NET MVC DocumentEditor control of Syncfusion Essential JS 2 and more details.
+title: Getting Started with ASP.NET MVC DOCX Editor | Syncfusion
+description: Learn how to create a DOCX Editor in an ASP.NET MVC application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
 platform: document-processing
 control: Getting Started
 documentation: ug
 ---
 
+# Getting Started with ASP.NET MVC DOCX Editor
 
-# Getting Started with ASP.NET MVC DocumentEditor Control
+Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET MVC application. 
 
-This section briefly explains about how to include [ASP.NET MVC DocumentEditor](https://www.syncfusion.com/aspnet-mvc-ui-controls/word-processor) control in your ASP.NET MVC application using Visual Studio.
+## Steps to create an ASP.NET MVC DOCX Editor
 
-## Prerequisites
+This section briefly explains about how to include [ASP.NET MVC Document Editor](https://www.syncfusion.com/aspnet-mvc-ui-controls/word-processor) control in your ASP.NET MVC application using Visual Studio.
+
+### Prerequisites
 
 [System requirements for ASP.NET MVC controls](https://ej2.syncfusion.com/aspnetmvc/documentation/system-requirements)
 
-## Create ASP.NET MVC application with HTML helper
+### Create ASP.NET MVC application with HTML helper
 
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started#create-your-first-app)
 * [Create a Project using Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Extension](https://ej2.syncfusion.com/aspnetmvc/documentation/getting-started/project-template)
 
-## Install ASP.NET MVC package in the application
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Nuget packages
 
-To add `ASP.NET MVC` controls in the application, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5) and then install it.
+To add **ASP.NET MVC Document Editor** component in the appplication, follow the steps below.
+- open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
+- search and install the following package
+    - [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5)
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -33,9 +39,9 @@ Install-Package Syncfusion.EJ2.MVC5 -Version {{ site.ej2version }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls are available in [nuget.org.](https://www.nuget.org/packages?q=syncfusion.EJ2) Refer to [NuGet packages topic](https://ej2.syncfusion.com/aspnetmvc/documentation/nuget-packages) to learn more about installing NuGet packages in various OS environments. The Syncfusion.EJ2.MVC5 NuGet package has dependencies, [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for validating Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
+N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/)for license validation.”
 
-## Add namespace
+### Add namespace
 
 Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 
@@ -45,9 +51,9 @@ Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 </namespaces>
 ```
 
-## Add stylesheet and script resources
+### Add Themes and Script References
 
-Here, the theme and script is referred using CDN inside the `<head>` of `~/Pages/Shared/_Layout.cshtml` file as follows,
+Here, the theme and script is referred using CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` file as follows,
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -63,11 +69,11 @@ Here, the theme and script is referred using CDN inside the `<head>` of `~/Pages
 {% endhighlight %}
 {% endtabs %}
 
-N> Checkout the [Themes topic](https://ej2.syncfusion.com/aspnetmvc/documentation/appearance/theme) to learn different ways (CDN, NPM package, and [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)) to refer styles in ASP.NET MVC application, and to have the expected appearance for Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls. Checkout the [Adding Script Reference](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your ASP.NET MVC application.
+N> Refer the [Themes topic](https://ej2.syncfusion.com/aspnetmvc/documentation/appearance/theme) to learn the different ways to include Syncfusion styles (using [CDN](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#cdn-reference), [NPM package](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#node-package-manager-npm), or [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)) and ensure the expected appearance of Syncfusion® ASP.NET Core controls, and check the [Adding Script Reference](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references) documentation to understand the various approaches for adding required script references in your ASP.NET Core application.
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> script manager
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> script manager
 
-Also, register the script manager `EJS().ScriptManager()` at the end of `<body>` in the `~/Pages/Shared/_Layout.cshtml` file as follows.
+Also, register the script manager `EJS().ScriptManager()` at the end of `<body>` in the `~/Views/Shared/_Layout.cshtml` file as follows.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -81,33 +87,19 @@ Also, register the script manager `EJS().ScriptManager()` at the end of `<body>`
 {% endhighlight %}
 {% endtabs %}
 
-## Understanding component options
+### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
-* **DocumentEditor** — a customizable control for building a tailored UI.
-* **DocumentEditorContainer** — a complete container that includes a predefined toolbar, properties pane, and status bar for quick integration.
-
-Choose the control that matches the required level of customization.
-
-## Add ASP.NET MVC DocumentEditor control
-
-Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC DocumentEditor control in `~/Views/Home/Index.cshtml` page.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Document Editor control in `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/getting-started/razor %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/getting-started/razor %}
 {% endhighlight %}
 {% endtabs %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC DocumentEditor control will be rendered in the default web browser.
 
-N> Starting from `v19.3.0.x`, we have optimized the accuracy of text size measurements such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [to disable it and retain the document pagination behavior of older versions](./how-to/disable-optimized-text-measuring).
+### Run the application
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Document Editor control will be rendered in the default web browser.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/tree/main/DocumentEditor/ASP.NET%20MVC%20Razor%20Examples).
-
-## See also
-
-* [How to localize the Document editor container](./global-local).
-* [How to load the document by default](./how-to/open-default-document).
-* [How to customize tool bar](./how-to/customize-tool-bar).
-* [How to resize Document editor component](./how-to/resize-document-editor).
-* [How to add a save button to the DocumentEditorContainer component toolbar](./how-to/add-save-button-in-toolbar)
