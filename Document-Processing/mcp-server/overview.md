@@ -64,7 +64,7 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See Also
 
-* [AI Coding Assistant - Getting Started](./ai-coding-assistant/getting-started)
+* [AI Coding Assistant Overview](./ai-coding-assistant/overview)
 * [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
 
 
