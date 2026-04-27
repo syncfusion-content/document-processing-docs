@@ -32,9 +32,21 @@ cd quickstart
 npm install
 ```
 
-**Step 3:** Create a folder named `myapp/resources` and copy the EJ2 scripts and styles from the installed location into the `myapp/resources` directory.
+**Step 3:** Download the `pdfium.js` and `pdfium.wasm` files from the following links:
 
-**Step 4:** Add the `div` element and initialize the Essential JS 2 PDF Viewer component in `index.html` with the local script and style references.
+**Syntax:**
+> `pdfium.js`: `https://cdn.syncfusion.com/ej2/{Version}/dist/ej2-pdfviewer-lib/pdfium.js`
+>
+> `pdfium.wasm`: `https://cdn.syncfusion.com/ej2/{Version}/dist/ej2-pdfviewer-lib/pdfium.wasm`
+
+**Example:**
+> `pdfium.js`: [`https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib/pdfium.js`](https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib/pdfium.js)
+>
+> `pdfium.wasm`: [`https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib/pdfium.wasm`](https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib/pdfium.wasm)
+
+**Step 4:** Create a folder named `myapp/resources` and copy the EJ2 scripts and styles from the installed location into the `myapp/resources` directory. Include the `ej2-pdfviewer-lib` folder and PDF documents in the same location. The `ej2-pdfviewer-lib` folder should contain `pdfium.js` and `pdfium.wasm` files.
+
+**Step 5:** Add the `div` element and initialize the Essential JS 2 PDF Viewer component in `index.html` with the local script and style references. Assign local file paths to the `documentPath` and `resourceUrl` properties within the PDF Viewer setup. The `documentPath` should refer to your PDF file, while the `resourceUrl` should point to the directory containing the supporting resources.
 
 ```html
 <!DOCTYPE html>
@@ -56,8 +68,8 @@ npm install
           <script>
                //Initialize PDF Viewer component
                var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+                    documentPath: window.location.origin + '/resources/pdfsuccinctly.pdf',
+                    resourceUrl: window.location.origin + '/resources/ej2-pdfviewer-lib'
                });
                //PDF Viewer control rendering starts
                pdfviewer.appendTo('#PdfViewer');
@@ -66,6 +78,8 @@ npm install
   </html>
 ```
 
-**Step 5:** Run the `index.html` file in a web browser to render the **Essential JS 2 PDF Viewer** component as shown below.
+**Step 6:** Run the `index.html` file in a web browser to render the **Essential JS 2 PDF Viewer** component as shown below.
 
 ![JavaScript Output](../images/javascript_output.png)
+
+View the sample in GitHub to [load PDF Viewer with local resources](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally).

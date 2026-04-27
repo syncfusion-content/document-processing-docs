@@ -10,14 +10,21 @@ domainurl: ##DomainURL##
 
 # Getting started with JavaScript PDF Viewer (server-backed)
 
-This guide explains how to create the PDF Viewer component and configure its features in JavaScript (global script) using CDN-hosted resources in server-backed mode.
+This guide explains how to create the PDF Viewer component and configure its features in JavaScript (global script) using CDN-hosted resources in **server-backed mode**.
 
 > Ensure that the same version is used for all script and style references to avoid compatibility issues.
 
-## Set up the application
+## Setup the development environment
 
-1. Create an app folder `my_app` for the Essential JS 2 JavaScript components.
-2. The Essential JS 2 component's global scripts and styles are already hosted in the following CDN link formats.
+This example uses a simple HTML-based setup with CDN links for Syncfusion components.
+
+### Create application folder
+
+Create an app folder `my-app` for the Essential JS 2 JavaScript components.
+
+### Add style and script references
+
+The Essential JS 2 component's global scripts and styles are hosted at the following CDN link formats.
 
 **Syntax:**
 > Script: `https://cdn.syncfusion.com/ej2/{Version}/dist/{PACKAGE_NAME}.min.js`
@@ -25,54 +32,107 @@ This guide explains how to create the PDF Viewer component and configure its fea
 > Styles: `https://cdn.syncfusion.com/ej2/{Version}/{PACKAGE_NAME}/styles/material.css`
 
 **Example:**
-> Script: [`https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2.min.js`](https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2.min.js)
+> Script: [`https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2.min.js`](https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2.min.js)
 >
-> Styles: [`https://cdn.syncfusion.com/ej2/26.2.11/ej2-base/styles/material.css`](https://cdn.syncfusion.com/ej2/26.2.11/ej2-base/styles/material.css)
+> Styles: [`https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/material.css`](https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/material.css)
 
-3. Create an HTML page (`index.html`) in the `my_app` location, add the CDN link references, add the `div` element, and initialize the Essential JS 2 PDF Viewer component by using the following code.
+Create an HTML page (index.html) in `my-app` location and add the CDN link references.
 
 {% tabs %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs1/index.html %}
+{% highlight html tabtitle="index.html" hl_lines="8 9 10 11 12 13 14 15 16 17 19" %}
+
+<head>
+    <title>EJ2 PDF Viewer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Typescript PDF Viewer Control">
+    <meta name="author" content="Syncfusion">
+    <link href="index.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/material.css" rel="stylesheet">    
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-buttons/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-popups/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-navigations/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-dropdowns/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-lists/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-inputs/styles/material.css" rel="stylesheet">    
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-splitbuttons/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-notifications/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-pdfviewer/styles/material.css" rel="stylesheet">
+    <!-- Essential JS 2 PDF Viewer's script --> 
+    <script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2.min.js" type="text/javascript"></script>
+</head>
+
 {% endhighlight %}
 {% endtabs %}
 
-N> The PDF Viewer supports dynamically changing the [serviceURL](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl). After changing `serviceUrl` at runtime, call `pdfViewer.dataBind()` to apply the new value. This behavior applies to versions after 23.1.36.
-document.getElementById('load').addEventListener('click', function () {
-   pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-   pdfViewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-   pdfViewer.dataBind();
-   pdfViewer.load(pdfViewer.documentPath, null);
-});
+## Adding the PDF Viewer component
 
-N> The demo Web API hosted at https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer is provided for evaluation only. For production, host a web service with appropriate server configuration. See the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for reference. Standalone mode is recommended for client-side rendering.
+Add the `Div` element and initiate the **PDF Viewer** component in the index.html by using the following code.
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs1" %}
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
+<body>
+    
+    <div id="container">
+        <div id="PdfViewer" style="height:500px;width:100%;"></div>        
+    </div>
+
+    <script>
+        // Initialize PDF Viewer component
+        var pdfviewer = new ej.pdfviewer.PdfViewer({
+            documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+            serviceUrl:'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+        });
+        // PDF Viewer control rendering starts
+        pdfviewer.appendTo('#PdfViewer');
+    </script>
+</body>
+
+{% endhighlight %}
+{% endtabs %}
+
+To configure PDF Viewer with local resources for script and style referernces, and the `documentPath` property, refer to the instructions [here](./how-to/use-local-script-and-style-references).
+
+For creating a new PDF Viewer serviceUrl, follow the steps provided in the [link](./how-to/create-pdfviewer-service) or to locally host an already available web service, follow these [instructions](#run-a-locally-hosted-pdf-viewer-web-service).
 
 ## Run the application
 
-Open the `index.html` file in a web browser to render the Essential JS 2 PDF Viewer component.
+Run the `index.html` in a web browser using a local web server. The PDF document will be rendered in the browser.
 
-> For PDF Viewer serviceUrl creation, follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/how-to/create-pdfviewer-service).
+```bash
+npx serve .
+```
 
-## Module injection
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs1" %}
 
-To enable additional features, inject the required modules. The following modules extend the PDF Viewer's functionality:
+## Deployment notes
 
-* `LinkAnnotation`: Enables hyperlink navigation.
-* `BookmarkView`: Displays and navigates document bookmarks.
-* `Magnification`: Provides zoom in/out operations.
-* `Navigation`: Enables page navigation.
-* `TextSelection`: Enables text selection.
-* `ThumbnailView`: Displays page thumbnails for navigation.
-* `Toolbar`: Enables the built-in toolbar UI.
-* `Print`: Enables printing.
-* `Annotation`: Enables annotation features.
-* `TextSearch`: Enables text search.
-* `FormFields`: Enables form field support.
-* `FormDesigner`: Enables designing and editing of form fields.
+- The PDF Viewer supports dynamically changing the [serviceURL](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl). After changing `serviceUrl` at runtime, call `pdfViewer.dataBind()` to apply the new value. This behavior applies to versions after 23.1.36.
 
-## Run the PDF Viewer web service
+   ```js
+   document.getElementById('load').addEventListener('click', function () {
+      pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
+      pdfViewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+      pdfViewer.dataBind();
+      pdfViewer.load(pdfViewer.documentPath, null);
+   });
+   ```
+
+- The demo Web API hosted at https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer is provided for evaluation only. For production, host a web service with appropriate server configuration. See the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for reference. Standalone mode is recommended for client-side rendering.
+
+- The server-backed PDF Viewer does not require `pdfium.js` and `pdfium.wasm` files. Those files are used by the standalone viewer for client-side rendering; server-backed setups render PDFs on the server and therefore do not need to include them in deployment.
+
+- For hosting the web service on the Linux platform, ensure to include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1).
+
+- For AWS environments, utilize the following packages:
+
+  | **Amazon Web Services (AWS)** |**NuGet package name** |
+  | --- | --- |
+  | AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
+  | AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
+
+## Run a locally hosted PDF Viewer web service
 
 1. Download the sample from the [Web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices).
 2. Navigate to the `ASP.NET Core` folder and open it in the command prompt.
@@ -95,20 +155,14 @@ To enable additional features, inject the required modules. The following module
 
 6. The PDF Viewer server instance runs at `https://localhost:7255`. Navigate to `https://localhost:7255/pdfviewer`, which returns the default GET response method. Bind this link to the `serviceUrl` property of the PDF Viewer as shown below.
 
-```javascript
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    serviceUrl: 'https://localhost:7255/pdfviewer'
-});
-```
+   ```javascript
+   var pdfviewer = new ej.pdfviewer.PdfViewer({
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl: 'https://localhost:7255/pdfviewer'
+   });
+   ```
 
-N> The server-backed PDF Viewer does not require `pdfium.js` and `pdfium.wasm` files. Those files are used by the standalone viewer for client-side rendering; server-backed setups render PDFs on the server and therefore do not need to include them in deployment.
+## See also
 
-> Refer to the [JavaScript PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk) for an overview of capabilities. Explore the [JavaScript PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/default.html) to see core features in action.
-
-N> For hosting the web service on the Linux platform, ensure to include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1). Additionally, for AWS environments, utilize the following packages:
-
-| **Amazon Web Services (AWS)** |**NuGet package name** |
-| --- | --- |
-| AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)|
-| AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.116.1)|
+- [Getting started with Standalone JavaScript PDF Viewer](./getting-started)
+- [Feature modules](./feature-module)
