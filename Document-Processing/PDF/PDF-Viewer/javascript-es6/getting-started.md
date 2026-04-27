@@ -63,9 +63,15 @@ Add the required Syncfusion styles to `src/styles/styles.css`:
 Import the PDF Viewer and inject only the required modules. Update `src/app.ts` as shown below:
 
 ```ts
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, Toolbar, Magnification, Navigation, 
+         Annotation, LinkAnnotation, ThumbnailView,
+         BookmarkView, TextSelection, TextSearch,
+         FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
 
-   PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+   PdfViewer.Inject(Toolbar, Magnification, Navigation,
+                  Annotation, LinkAnnotation, ThumbnailView,
+                  BookmarkView, TextSelection, TextSearch,
+                  FormFields, FormDesigner);
 
     let pdfviewer: PdfViewer = new PdfViewer();
     // Specifies the URL or path of the PDF document to be loaded.
