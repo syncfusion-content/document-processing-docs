@@ -19,13 +19,13 @@ Follow these steps to enable new document operations to the AI agent tool librar
 **Step 1: Clone the repository**
 
 ```bash
-git clone https://github.com/syncfusion/Document-SDK-Agent-Tool.git
-cd Document-SDK-Agent-Tool
+git clone https://github.com/syncfusion/document-sdk-ai-agent-tools.git
+cd Document-SDK-AI-Agent-Tool
 ```
 
-**Step 2: Open the library**
+**Step 2: Open the Agent tool library**
 
-AgentLibrary/Syncfusion.AgentLibrary_NET80.csproj
+Syncfusion.DocumentSDK.AI.AgentTools\Syncfusion.DocumentSDK.AI.AgentTools.csproj
 
 **Step 3: Create a Custom AI Agent Tool by Inheriting AgentToolBase**
 
@@ -204,7 +204,7 @@ namespace Syncfusion.AI.AgentTools.Word
 
 ## Registering Custom Tools with the AI Agent
 
-Once your custom tool class is created, add the required DLL or project dependency to your host application, and then register it alongside the built-in tools.
+Once your custom tool class is created, build the agent tool library, add the required DLL or project dependency to your host application, and then register it alongside the built-in tools.
 
 Documents can be handled using either in‑memory Mode or Storage Mode during AI agent execution. In in‑memory Mode, documents are loaded into memory and shared across tool calls. In Storage Mode, documents are loaded per tool call from external storage and must be explicitly saved to persist changes.
 
