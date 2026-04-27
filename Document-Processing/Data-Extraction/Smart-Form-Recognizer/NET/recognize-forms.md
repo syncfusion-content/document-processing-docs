@@ -33,6 +33,7 @@ public  void Button_Click(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-Pdf/.NET).
 
 Example (asynchronous):
 
@@ -53,6 +54,7 @@ public  async void Button_Click(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-Pdf-async/.NET).
 
 ## Recognize forms using Stream 
 Using `Stream`this operation processes the form content provided through the inputStream whether it contains a PDF or an image and returns the fully recognized PDF as a Stream.This functionality is available through both the synchronous `RecognizeFormAsPdfStream` method for immediate, blocking execution and the asynchronous `RecognizeFormAsPdfStreamAsync` method for non‑blocking, await processing suitable for responsive UI applications, background services, and scalable server‑side workflows.
@@ -79,6 +81,7 @@ public  void Button_Click(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-Stream/.NET).
 
 Example (asynchronous):
 
@@ -103,6 +106,8 @@ public  async void Button_Click(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-Stream-async/.NET).
+
 ## Recognize forms using JSON
 
 Using `JSON`this operation recognizes the form contained in the inputStream whether the source document is a PDF or an image and returns the complete recognition output serialized as a JSON string. This functionality is accessible through both the synchronous `RecognizeFormAsJson` method, which performs immediate, blocking processing, and the asynchronous `RecognizeFormAsJsonAsync` method, which provides non‑blocking, await execution suitable for UI applications, background workers, and scalable cloud or server‑side workflows.
@@ -126,6 +131,7 @@ public  void Button_Click(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-JSON/.NET).
 
 Example (asynchronous):
 
@@ -147,6 +153,8 @@ public  async void Button_Click(object sender, RoutedEventArgs e)
 
 {% endhighlight %}
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-JSON-async/.NET).
 
 ## Async variants with CancellationToken
 
@@ -174,3 +182,5 @@ public async Task RecognizeWithCancellationAsync()
 
 {% endhighlight %}
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Asyncvariants-with-CancellationToken/.NET).
