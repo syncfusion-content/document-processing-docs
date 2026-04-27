@@ -9,13 +9,13 @@ domainurl: ##DomainURL##
 ---
 # Word processor server docker image overview in React Document editor component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> **Word Processor (also known as Document Editor)** is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> **DOCX Editor (also known as Document Editor)** is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
 
-This Docker image is the predefined Docker container of Syncfusion’s Word Processor backend. You can deploy it quickly to your infrastructure.
+This Docker image is the predefined Docker container of Syncfusion’s DOCX Editor backend. You can deploy it quickly to your infrastructure.
 
-Word Processor is a commercial product, and it requires a valid license to use it in a production environment [`(request license or trial key).`](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key)
+DOCX Editor is a commercial product, and it requires a valid license to use it in a production environment [`(request license or trial key).`](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key)
 
-The Word Processor is supported in the JavaScript, Angular, React, Vue, ASP.NET Core, ASP.NET MVC, and Blazor platforms.
+The DOCX Editor is supported in the JavaScript, Angular, React, Vue, ASP.NET Core, ASP.NET MVC, and Blazor platforms.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Have [`Docker`](https://www.docker.com/products/container-runtime#/download) ins
 * On Windows, install [`Docker for Windows`](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
 * On macOS, install [`Docker for Mac`](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
 
-## How to deploy Word Processor Docker image
+## How to deploy DOCX Editor Docker image
 
 **Step 1:** Pull the word-processor-server image from Docker Hub.
 
@@ -53,9 +53,9 @@ Have [`Docker`](https://www.docker.com/products/container-runtime#/download) ins
    docker-compose up
    ```
 
-   Now the Word Processor server Docker instance runs in the localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Word Processor Web API control `http://localhost:6002/api/documenteditor`. It returns the default get method response.
+   Now the Word Processor server Docker instance runs in the localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the DOCX Editor Web API control `http://localhost:6002/api/documenteditor`. It returns the default get method response.
 
-**Step 4:** Append the Docker instance running the URL `(http://localhost:6002/api/documenteditor)` to the service URL in the client-side Word Processor control. For more information about how to get started with the Word Processor control, refer to this [`getting started page.`](../getting-started).
+**Step 4:** Append the Docker instance running the URL `(http://localhost:6002/api/documenteditor)` to the service URL in the client-side DOCX Editor control. For more information about how to get started with the DOCX Editor control, refer to this [`getting started page.`](../getting-started).
 
 ## How to configure spell checker dictionaries path in Docker compose file
 
@@ -178,4 +178,4 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-Refer to these getting started pages to create a Word Processor in [`Typescript`](../../javascript-es6/getting-started), [`Angular`](../../angular/getting-started), [`Vue`](../../vue/getting-started), [`ASP.NET MVC`](../../asp-net-mvc/getting-started), [`ASP.NET Core`](../../asp-net-core/getting-started-core), and [`Blazor`](../../blazor/getting-started/server-side-application).
+Refer to these getting started pages to create a DOCX Editor in [`Typescript`](../../javascript-es6/getting-started), [`Angular`](../../angular/getting-started), [`Vue`](../../vue/getting-started), [`ASP.NET MVC`](../../asp-net-mvc/getting-started), [`ASP.NET Core`](../../asp-net-core/getting-started-core), and [`Blazor`](../../blazor/getting-started/server-side-application).

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Java in JavaScript (ES5) Document editor control
 
-This page illustrates how to create web service in Java for the server-side dependent functionalities of Word Processor component a.k.a. Document Editor. Document Editor depends on server side interaction for below listed operations and it can be written in Java using `syncfusion-ej2-wordprocessor.jar` file.
+This page illustrates how to create web service in Java for the server-side dependent functionalities of DOCX Editor component a.k.a. Document Editor. Document Editor depends on server side interaction for below listed operations and it can be written in Java using `syncfusion-ej2-wordprocessor.jar` file.
 
 * Import Word Document
 * Paste with formatting
