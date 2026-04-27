@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Handwritten signature in ASP.NET Core PDF Viewer control"
+title: Handwritten signature ASP.NET Core PDF Viewer | Syncfusion
 description: "Learn about handwritten signatures in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): add, enable or disable, and edit properties."
 control: PDF Viewer
 platform: document-processing
@@ -83,7 +83,7 @@ function handWrittenSignature() {
 
 ### Add a handwritten signature programmatically
 
-With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/annotation#addannotation) method.
+With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#addannotation) method.
 
 Here is an example of adding a handwritten signature programmatically using the `addAnnotation()` method:
 
@@ -155,6 +155,7 @@ function addAnnotation() {
 {% endhighlight %}
 {% endtabs %}
 
+{% tabs %}
 {% highlight js tabtitle="Server-Backed" %}
 <div>
     <button onclick="addAnnotation()">Add Handwritten Signature programatically</button>
@@ -231,19 +232,19 @@ Stroke color, border thickness, and opacity can be edited using the Edit Stroke 
 
 Edit the stroke color using the color palette in the Edit Stroke Color tool.
 
-![Change signature stroke color](../images/change_stroke.png)
+![Change signature stroke color](../../javascript-es6/images/change_stroke.png)
 
 #### Edit thickness
 
 Edit border thickness using the range slider in the Edit Thickness tool.
 
-![Change signature border thickness](../images/change_thickness.png)
+![Change signature border thickness](../../javascript-es6/images/change_thickness.png)
 
 #### Edit opacity
 
 Edit opacity using the range slider in the Edit Opacity tool.
 
-![Change signature opacity](../images/change_opacity.png)
+![Change signature opacity](../../javascript-es6/images/change_opacity.png)
 
 ### Edit Signature Annotation Programmatically
 
