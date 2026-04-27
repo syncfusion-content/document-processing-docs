@@ -32,51 +32,16 @@ To use the AI Coding Assistant, you need:
   *	An active [API KEY](https://syncfusion.com/account/api-key)
   *	Any project setup that includes Syncfusion Document Processing<sup>&reg;</sup> components
 
-## Unlimited Access
-
-Syncfusion<sup>&reg;</sup> offers unlimited access to the AI Coding Assistant, with no limitations on:
-
-  * Number of requests
-  *	Components usage
-  *	Query types
-  *	Usage duration
-  
-This ensures users can fully leverage Syncfusion<sup>&reg;</sup> components to enhance their development experience without limitations.
-
-## Best Practices
-
-  *	Initial Setup: Use the tools to quickly add and configure Syncfusion® components in your applications.
-  *	Feature Tuning: Enable or disable component features through prompt-based configuration for tailored functionality.
-  *	Data Binding: Generate sample data for testing and prototyping. Avoid using sensitive or production data to ensure security.
-  *	Step-by-step explanations: Use annotated code to understand component behavior. Note that the level of detail may vary depending on the tool, mode, and AI model used. Refer to the [Syncfusion<sup>&reg;</sup> Document Processing Documentation](https://help.syncfusion.com/document-processing/introduction) for in-depth information.
-  * Troubleshooting: Resolve common issues with AI-generated suggestions. For complex problems, refer to [documentation](https://help.syncfusion.com/document-processing/introduction) or [support](https://support.syncfusion.com/support/tickets/create).
-  
-  >Always check AI-generated content and code for accuracy before using it.
-
 ## Recommendations
 
   * Session Management: Start new sessions when switching tasks to ensure prompt relevance and maintain content focus.
   * Model Compatibility: For optimal performance, use the tools with advanced AI models such as GPT-5 or Claude Sonnet 4.
 
-## Privacy & Data Handling
-
-The Syncfusion<sup>&reg;</sup> AI Coding Assistant is designed with privacy in mind:
-
-  *	The tools do not access your project files or workspace directly.
-  *	User prompts are not stored by any of the tools or used for any other purpose.
-  *	Prompts are not used to train Syncfusion<sup>&reg;</sup> models.
-  *	The assistant generates context, while the final output is handled by your selected AI model.
-
 ## See also
 
-  * Add the <a href="https://help.syncfusion.com/document-processing/ai-coding-assistant/mcp-server/documentsdk">SyncfusionDocumentSDKAssistant MCP Server</a>  to an MCP-enabled client
-  * Add the <a href="https://help.syncfusion.com/document-processing/ai-coding-assistant/mcp-server/spreadsheeteditorsdk">SyncfusionSpreadsheetEditorSDKAssistant MCP Server</a>  to an MCP-enabled client
-  * Add the <a href="https://help.syncfusion.com/document-processing/ai-coding-assistant/mcp-server/pdfviewersdk">The SyncfusionPDFViewerSDKAssistant MCP Server</a>  to an MCP-enabled client
+  * Add the <a href="./getting-started/documentsdk">SyncfusionDocumentSDKAssistant MCP Server</a>  to an MCP-enabled client
+  * Add the <a href="./getting-started/spreadsheeteditorsdk">SyncfusionSpreadsheetEditorSDKAssistant MCP Server</a>  to an MCP-enabled client
+  * Add the <a href="./getting-started/pdfviewersdk">The SyncfusionPDFViewerSDKAssistant MCP Server</a>  to an MCP-enabled client
   *	[Syncfusion<sup>&reg;</sup> Document SDK Documentation](https://help.syncfusion.com/document-processing/introduction)
   *	[Syncfusion<sup>&reg;</sup> SpreadsheetEditor SDK Documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/overview)
-  *	[Syncfusion<sup>&reg;</sup> PDFViewer SDK Documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview)
-
-
-
-
-
+  *	[Syncfusion<sup>&reg;</sup> PDFViewer SDK Documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview)  
