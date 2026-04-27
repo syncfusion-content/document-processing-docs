@@ -274,6 +274,7 @@ The Syncfusion Spreadsheet Editor SDK component enables developers to create, vi
 
 ## See also
 
-* [MCP Server Overview](https://helpstaging.syncfusion.com/document-processing/mcp-server/overview)
+* [MCP Server Overview](../overview.md)
+* [AI Coding Assistant Overview](./overview)
 * [SyncfusionDocumentSDKAssistant MCP Server](https://www.npmjs.com/package/@syncfusion/documentsdk-assistant)
 * [SyncfusionSpreadsheetEditorSDKAssistant MCP Server](https://www.npmjs.com/package/@syncfusion/spreadsheeteditorsdk-assistant)
