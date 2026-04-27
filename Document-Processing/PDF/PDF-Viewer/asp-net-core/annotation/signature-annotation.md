@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Handwritten signature in ASP.NET Core PDF Viewer control"
+title: Handwritten signature ASP.NET Core PDF Viewer | Syncfusion
 description: "Learn about handwritten signatures in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): add, enable or disable, and edit properties."
 control: PDF Viewer
 platform: document-processing
@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
 
+Check out the following video to learn how to Add Signatures to PDF Documents Using the ASP.NET Core PDF Viewer
+{% youtube "https://www.youtube.com/watch?v=4AHagpyePnA" %}
+
 ## Add signature annotation
 
 ### Adding a handwritten signature in UI
@@ -21,15 +24,15 @@ The handwritten signature can be added to the PDF document using the annotation 
 - Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
 - Select the **Handwritten signature** button in the annotation toolbar. The signature panel appears.
 
-![Open the handwritten signature panel](../images/select_sign.png)
+![Open the handwritten signature panel](../../javascript-es6/images/select_sign.png)
 
 - Draw the signature in the panel.
 
-![Draw the handwritten signature](../images/add_sign.png)
+![Draw the handwritten signature](../../javascript-es6/images/add_sign.png)
 
 - Click **Create**, move the signature, and place it at the desired location.
 
-![Place the handwritten signature on the page](../images/create_sign.png)
+![Place the handwritten signature on the page](../../javascript-es6/images/create_sign.png)
 
 Refer to the following code sample to switch to the handwritten signature mode programmatically.
 
@@ -80,7 +83,7 @@ function handWrittenSignature() {
 
 ### Add a handwritten signature programmatically
 
-With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/annotation#addannotation) method.
+With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#addannotation) method.
 
 Here is an example of adding a handwritten signature programmatically using the `addAnnotation()` method:
 
@@ -152,6 +155,7 @@ function addAnnotation() {
 {% endhighlight %}
 {% endtabs %}
 
+{% tabs %}
 {% highlight js tabtitle="Server-Backed" %}
 <div>
     <button onclick="addAnnotation()">Add Handwritten Signature programatically</button>
@@ -228,19 +232,19 @@ Stroke color, border thickness, and opacity can be edited using the Edit Stroke 
 
 Edit the stroke color using the color palette in the Edit Stroke Color tool.
 
-![Change signature stroke color](../images/change_stroke.png)
+![Change signature stroke color](../../javascript-es6/images/change_stroke.png)
 
 #### Edit thickness
 
 Edit border thickness using the range slider in the Edit Thickness tool.
 
-![Change signature border thickness](../images/change_thickness.png)
+![Change signature border thickness](../../javascript-es6/images/change_thickness.png)
 
 #### Edit opacity
 
 Edit opacity using the range slider in the Edit Opacity tool.
 
-![Change signature opacity](../images/change_opacity.png)
+![Change signature opacity](../../javascript-es6/images/change_opacity.png)
 
 ### Edit Signature Annotation Programmatically
 
