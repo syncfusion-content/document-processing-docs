@@ -65,5 +65,5 @@ For more details, see the [Microsoft Agent Framework Providers documentation](ht
 - [Available Tools Reference](./tools)
 - [Customization Guide](./customization)
 - [Example Prompts](./example-prompts)
-- [Syncfusion Document Processing](https://help.syncfusion.com/document-processing/)
+- [Syncfusion Document Processing](https://help.syncfusion.com/document-processing)
 - [Microsoft Agents Framework](https://github.com/microsoft/agents)
