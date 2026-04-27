@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Spreadsheet Component | Syncfusion
+title: Getting Started with Blazor Spreadsheet Component in WASM| Syncfusion
 description: Checkout and learn about getting started with Blazor Spreadsheet component in Blazor WebAssembly Application.
 platform: document-processing
 control: Spreadsheet
