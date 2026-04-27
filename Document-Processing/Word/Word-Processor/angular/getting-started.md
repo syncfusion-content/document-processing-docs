@@ -12,11 +12,6 @@ domainurl: ##DomainURL##
 
 Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in an Angular application. 
 
-## Quick video walkthrough
-To get started quickly with the Document Editor component using CLI, you can check the video below.
-
-{% youtube "https://www.youtube.com/watch?v=UHdjjR_BbQY" %}
-
 ## Steps to create an Angular DOCX Editor
 ### Prerequisites
 
@@ -42,7 +37,7 @@ This command will prompt you to configure settings like enabling Angular routing
 
 ![Initial_setup](images/Initial-setup.png)
 
-By default, it creates a CSS-based application.
+In this guide, CSS is selected as the stylesheet format.
 
 During project setup, when prompted for the Server-side rendering (SSR) option, choose the appropriate configuration.
 
@@ -68,7 +63,7 @@ To install the Document Editor component, use the following command:
 npm install @syncfusion/ej2-angular-documenteditor --save
 ```
 
-### Adding CSS reference
+### Add CSS reference
 
 The following CSS files are available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/styles.css` file using the following code:
 
@@ -137,6 +132,11 @@ The DocumentEditorContainer output will be displayed as follows:
 {% endtabs %}
   
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
+
+## Video tutorial
+To get started quickly with the Document Editor component using CLI, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=UHdjjR_BbQY" %}
 
 ## Server-side dependencies
 
