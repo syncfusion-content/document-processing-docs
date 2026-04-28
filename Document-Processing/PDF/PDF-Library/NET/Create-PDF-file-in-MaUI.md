@@ -28,9 +28,7 @@ N> Our PDF library is currently supported in .NET MAUI applications on the Andro
 {% endtabcontent %}
 {% endtabcontents %}
 
-A complete working example of creating a PDF document in the .NET MAUI Desktop app can be downloaded from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfSampleMaUI-1356433164887362210.zip).
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/MAUI/CreatePdfDemoSample).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/MAUI/CreateMAUIPDFSample).
 
 By executing the program in windows, you will get the PDF document as follows.
 ![.NET MAUI output image](MAUI_images/invoice.png)  
@@ -115,11 +113,11 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
     PreviewControllerDS.cs<br/>QLPreviewItemFileSystem.cs
   </td>
   <td>
-    Helper classes for viewing the <b>Pdf document</b> in iOS device
+    Helper classes for viewing the <b>PDF document</b> in iOS device
   </td>
   </tr>
 </table>
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HelloWorld#/bootstrap5) in ASP.NET Core. 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core. 

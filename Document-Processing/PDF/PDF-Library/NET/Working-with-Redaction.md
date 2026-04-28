@@ -1007,11 +1007,11 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 PdfRedaction redaction = new PdfRedaction(new RectangleF(150, 150, 60, 24), Color.Transparent);
 //Only the text within the redaction bounds should be redacted.
 redaction.TextOnly = true;
-foreach (PdfLoadedPage loadedPage in document.Pages)
+foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
 {
     loadedPage.AddRedaction(redaction);
 }
-document.Redact();
+loadedDocument.Redact();
 //Save and close the PDF document
 loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
@@ -1029,11 +1029,11 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
 PdfRedaction redaction = new PdfRedaction(new RectangleF(150, 150, 60, 24), Color.Transparent);
 //Only the text within the redaction bounds should be redacted.
 redaction.TextOnly = true;
-foreach (PdfLoadedPage loadedPage in document.Pages)
+foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
 {
     loadedPage.AddRedaction(redaction);
 }
-document.Redact();
+loadedDocument.Redact();
 //Save the document
 loadedDocument.Save("Output.pdf");
 //Close the document
@@ -1053,10 +1053,10 @@ Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("input.pdf")
 'Create PDF redaction for the page
 Dim redaction As PdfRedaction = New PdfRedaction(New RectangleF(150, 150, 60, 24), Color.Transparent)
 redaction.TextOnly = true;
-For Each loadedPage As PdfLoadedPage In document.Pages
+For Each loadedPage As PdfLoadedPage In loadedDocument.Pages
 	loadedPage.AddRedaction(redaction)
 Next
-document.Redact()
+loadedDocument.Redact()
 'Save the document
 loadedDocument.Save("Output.pdf") 
 'Close the document
@@ -1079,141 +1079,142 @@ The following code snippet explains how to find text by regular expression patte
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Redaction/Find-text-by-regular-expression-pattern-and-redact-it-from-PDF-document/.NET/Find_text_by_regular_expression/Program.cs" %}
 
-    using Syncfusion.Pdf.Parsing;
-    using Syncfusion.Pdf.Redaction;
-    using Syncfusion.Pdf;
-    using System.Text.RegularExpressions;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
+using Syncfusion.Pdf;
+using System.Text.RegularExpressions;
 
-    //Load the existing PDF document.
-    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+//Load the existing PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
-    //Get the first page from the document.
-    PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
+//Get the first page from the document.
+PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
 
-    TextLineCollection collection = new TextLineCollection();
-    //Extract text from first page.
-    string extractedText = page.ExtractText(out collection);
+TextLineCollection collection = new TextLineCollection();
+//Extract text from first page.
+string extractedText = page.ExtractText(out collection);
 
-    foreach (TextLine line in collection.TextLine)
+foreach (TextLine line in collection.TextLine)
+{
+    foreach (TextWord word in line.WordCollection)
     {
-        foreach (TextWord word in line.WordCollection)
+        //Define regular expression pattern to search for dates in the format MM/DD/YYYY
+        string datePattern = @"\b\d{1,2}\/\d{1,2}\/\d{4}\b";
+        //Search for dates
+        MatchCollection dateMatches = Regex.Matches(word.Text, datePattern);
+        //Add redaction if the match found
+        foreach (Match dateMatch in dateMatches)
         {
-            //Define regular expression pattern to search for dates in the format MM/DD/YYYY
-            string datePattern = @"\b\d{1,2}\/\d{1,2}\/\d{4}\b";
-            //Search for dates
-            MatchCollection dateMatches = Regex.Matches(word.Text, datePattern);
-            //Add redaction if the match found
-            foreach (Match dateMatch in dateMatches)
+            string textToFindAndRedact = dateMatch.Value;
+            if (textToFindAndRedact == word.Text)
             {
-                string textToFindAndRedact = dateMatch.Value;
-                if (textToFindAndRedact == word.Text)
-                {
-                    //Create a redaction object.
-                    PdfRedaction redaction = new PdfRedaction(word.Bounds, Syncfusion.Drawing.Color.Black);
-                    //Add a redaction object into the redaction collection of loaded page.
-                    page.AddRedaction(redaction);
-                }
+                //Create a redaction object.
+                PdfRedaction redaction = new PdfRedaction(word.Bounds, Syncfusion.Drawing.Color.Black);
+                //Add a redaction object into the redaction collection of loaded page.
+                page.AddRedaction(redaction);
             }
         }
     }
+}    
 
-    //Redact the contents from the PDF document.
-    document.Redact();
+//Redact the contents from the PDF document.
+document.Redact();
 
-    //Save and close the PDF document
-    document.Save("Output.pdf");
-    document.Close(true);
+//Save and close the PDF document
+document.Save("Output.pdf");
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-    using Syncfusion.Pdf.Parsing;
-    using Syncfusion.Pdf.Redaction;
-    using Syncfusion.Pdf;
-    using System.Text.RegularExpressions;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Redaction;
+using Syncfusion.Pdf;
+using System.Text.RegularExpressions;
 
-    //Load a PDF document
-    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+//Load a PDF document
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
-    //Get the first page from the document.
-    PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
+//Get the first page from the document.
+PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
 
-    TextLineCollection collection = new TextLineCollection();
-    //Extract text from first page.
-    string extractedText = page.ExtractText(out collection);
+TextLineCollection collection = new TextLineCollection();
+//Extract text from first page.
+string extractedText = page.ExtractText(out collection);
 
-    foreach (TextLine line in collection.TextLine)
+foreach (TextLine line in collection.TextLine)
+{
+    foreach (TextWord word in line.WordCollection)
     {
-        foreach (TextWord word in line.WordCollection)
+        //Define regular expression pattern to search for dates in the format MM/DD/YYYY
+        string datePattern = @"\b\d{1,2}\/\d{1,2}\/\d{4}\b";
+        //Search for dates
+        MatchCollection dateMatches = Regex.Matches(word.Text, datePattern);
+        //Add redaction if the match found
+        foreach (Match dateMatch in dateMatches)
         {
-            //Define regular expression pattern to search for dates in the format MM/DD/YYYY
-            string datePattern = @"\b\d{1,2}\/\d{1,2}\/\d{4}\b";
-            //Search for dates
-            MatchCollection dateMatches = Regex.Matches(word.Text, datePattern);
-            //Add redaction if the match found
-            foreach (Match dateMatch in dateMatches)
+            string textToFindAndRedact = dateMatch.Value;
+            if (textToFindAndRedact == word.Text)
             {
-                string textToFindAndRedact = dateMatch.Value;
-                if (textToFindAndRedact == word.Text)
-                {
-                    //Create a redaction object.
-                    PdfRedaction redaction = new PdfRedaction(word.Bounds, Syncfusion.Drawing.Color.Black);
-                    //Add a redaction object into the redaction collection of loaded page.
-                    page.Redactions.Add(redaction);
-                }
+                //Create a redaction object.
+                PdfRedaction redaction = new PdfRedaction(word.Bounds, Syncfusion.Drawing.Color.Black);
+                //Add a redaction object into the redaction collection of loaded page.
+                page.Redactions.Add(redaction);
             }
         }
     }
-    //Save and close the PDF document
-    document.Save("Output.pdf");
-    document.Close(true);
+}
+    
+//Save and close the PDF document
+document.Save("Output.pdf");
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    Imports Syncfusion.Pdf.Parsing
-    Imports Syncfusion.Pdf.Redaction
-    Imports Syncfusion.Pdf
-    Imports System.Text.RegularExpressions
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Redaction
+Imports Syncfusion.Pdf
+Imports System.Text.RegularExpressions
 
-        'Load the existing PDF document.
-        Dim document As New PdfLoadedDocument("Input.pdf")
+'Load the existing PDF document.
+Dim document As New PdfLoadedDocument("Input.pdf")
 
-        'Get the first page from the document.
-        Dim page As PdfLoadedPage = TryCast(document.Pages(0), PdfLoadedPage)
+'Get the first page from the document.
+Dim page As PdfLoadedPage = TryCast(document.Pages(0), PdfLoadedPage)
 
-        Dim collection As New TextLineCollection()
-        'Extract text from first page.
-        Dim extractedText As String = page.ExtractText(collection)
+Dim collection As New TextLineCollection()
+'Extract text from first page.
+Dim extractedText As String = page.ExtractText(collection)
 
-        For Each line As TextLine In collection.TextLine
-            For Each word As TextWord In line.WordCollection
-                'Define regular expression pattern to search for dates in the format MM/DD/YYYY
-                Dim datePattern As String = "\b\d{1,2}\/\d{1,2}\/\d{4}\b"
-                'Search for dates
-                Dim dateMatches As MatchCollection = Regex.Matches(word.Text, datePattern)
-                'Add redaction if the match found
-                For Each dateMatch As Match In dateMatches
-                    Dim textToFindAndRedact As String = dateMatch.Value
-                    If textToFindAndRedact = word.Text Then
-                        'Create a redaction object.
-                        Dim redaction As New PdfRedaction(word.Bounds, Syncfusion.Drawing.Color.Black)
-                        'Add a redaction object into the redaction collection of loaded page.
-                        page.AddRedaction(redaction)
-                    End If
-                Next
-            Next
+For Each line As TextLine In Collection.TextLine
+    For Each word As TextWord In line.WordCollection
+        'Define regular expression pattern to search for dates in the format MM/DD/YYYY
+        Dim datePattern As String = "\b\d{1,2}\/\d{1,2}\/\d{4}\b"
+        'Search for dates
+        Dim dateMatches As MatchCollection = Regex.Matches(word.Text, datePattern)
+        'Add redaction if the match found
+        For Each dateMatch As Match In dateMatches
+            Dim textToFindAndRedact As String = dateMatch.Value
+            If textToFindAndRedact = word.Text Then
+                'Create a redaction object.
+                Dim redaction As New PdfRedaction(word.Bounds, Syncfusion.Drawing.Color.Black)
+                'Add a redaction object into the redaction collection of loaded page.
+                Page.AddRedaction(redaction)
+            End If
         Next
+    Next
+Next        
 
-        'Redact the contents from the PDF document.
-        document.Redact()
+'Redact the contents from the PDF document.
+document.Redact()
 
-        'Save the document
-        document.Save("Output.pdf")
-        'Close the document
-        document.Close(True)
+'Save the document
+document.Save("Output.pdf")
+'Close the document
+document.Close(True)
 
 {% endhighlight %}
 

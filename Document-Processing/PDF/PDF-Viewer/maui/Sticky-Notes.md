@@ -223,6 +223,6 @@ Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 N> For WinUI and MacCatalyst platforms, there is no separate modal view to receive text input from the users. As a result, the `StickyNoteModalViewAppearing` and `StickyNoteModalViewDisappearing` events are not applicable to these platforms. 
 
 ## See Also
-- [Annotations Overview](../annotations-overview)
-- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
-- [Annotation Comments](../annotations-comment)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
+- [Annotation Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-comment)
