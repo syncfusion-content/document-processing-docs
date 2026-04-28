@@ -21,7 +21,7 @@ In project configuration window, name your project and select Create.
 ![WPF configuration window](GettingStarted_images/WPF_Data_ProjectName.png)
 
 Step 2: Install the [Syncfusion.SmartDataExtractor.WPF](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.WPF) NuGet package as a reference to your WPF application [NuGet.org](https://www.nuget.org/).
-![NuGet package installation](GettingStarted_images/WPF_Nuget_DataExtractor.png)
+![NuGet package installation](GettingStarted_images/WPF_DataExtractor_Nuget.png)
 
 
 Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
