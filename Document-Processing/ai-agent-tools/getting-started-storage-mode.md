@@ -30,7 +30,7 @@ Documents are read from and written to storage (Azure Blob, S3, local disk, etc.
 
 Integrating the Agent Tool library into your application involves the following steps:
 
-**Step 1: Install the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+**Step 1: Install the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).**
 
 ![Install DocIO .NET Core NuGet package](Install_Nuget.png)
 
