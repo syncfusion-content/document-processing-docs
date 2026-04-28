@@ -11,7 +11,7 @@ The PDF provides support to add watermark or stamp with text and images in the P
 
 ## Adding text watermark in PDF document
 
-This example demonstrates how to add a text watermark using standard fonts in a PDF document by utilizing the [drawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class along with predefined font types from the `PdfStandardFont` class. The transparency can be applied to the text using `setTransparency` method and rotation can be applied using `rotateTransform` method.
+This example demonstrates how to add a text watermark using standard fonts in a PDF document by utilizing the [drawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class along with predefined font types from the [PdfStandardFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStandardFont.html) class. The transparency can be applied to the text using `setTransparency` method and rotation can be applied using `rotateTransform` method.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
