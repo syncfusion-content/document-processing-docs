@@ -12,7 +12,7 @@ The PDF library supports splitting PDF file into single-page or multiple-page PD
 
 ## Splitting a PDF file into individual 
 
-The PDF library allows splitting the pages of an existing PDF document into multiple individual PDF documents using [split](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_System_Int32_Syncfusion_Pdf_PdfSplitOptions_) method of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+The PDF library allows splitting the pages of an existing PDF document into multiple individual PDF documents using `split` method of the `PdfDocument` class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -51,7 +51,7 @@ document.destroy();
 
 ## Split a range of pages into a separate PDF document
 
-The PDF library allows splitting a certain range of pages into a separate PDF document using the [splitByPageRanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_SplitByRanges_System_String_System_Int32_0__0___Syncfusion_Pdf_PdfSplitOptions_) method of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+The PDF library allows splitting a certain range of pages into a separate PDF document using the `splitByPageRanges` method of the `PdfDocument` class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -90,7 +90,7 @@ document.destroy();
 
 ## Split by a fixed number of pages into a PDF document
 
-The PDF library allows splitting by fixed number of pages of an existing PDF document using the [splitByFixedNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_SplitByFixedNumber_System_String_System_Int32_Syncfusion_Pdf_PdfSplitOptions_) method of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+The PDF library allows splitting by fixed number of pages of an existing PDF document using the `splitByFixedNumber` method of the `PdfDocument` class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

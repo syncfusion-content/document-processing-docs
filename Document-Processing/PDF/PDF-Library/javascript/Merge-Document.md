@@ -11,7 +11,7 @@ The PDF provides support to merge multiple PDF documents into a single file and 
 
 ## Importing pages
 
-This section explains how to import a range of pages from a source PDF into a destination document using the [importPageRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_ImportPageRange_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_Int32_System_Int32_) method.
+This section explains how to import a range of pages from a source PDF into a destination document using the `importPageRange` method.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -47,7 +47,7 @@ destination.destroy();
 
 ## Importing pages from multiple documents
 
-This section demonstrates how to import multiple pages from a source PDF into a destination document at a specified position using the [importPageRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_ImportPageRange_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_Int32_System_Int32_) method and `PdfPageImportOptions`. This is useful for merging selected page ranges from different PDFs into one document.
+This section demonstrates how to import multiple pages from a source PDF into a destination document at a specified position using the `importPageRange` method and `PdfPageImportOptions`. This is useful for merging selected page ranges from different PDFs into one document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

@@ -11,7 +11,7 @@ The PDF library provides support to create, read, and manipulate PDF documents, 
 
 ## Adding the document settings
 
-This example shows how to configure custom page settings before adding a page to a PDF document. It creates a [PdfPageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html) instance, applies margins, page size and sets the orientation.
+This example shows how to configure custom page settings before adding a page to a PDF document. It creates a `PdfPageSettings` instance, applies margins, page size and sets the orientation.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -70,7 +70,7 @@ N> The PDF page is created using the default settings, which include A4 page siz
 
 ## Working with document properties
 
-This example demonstrates how to create a PDF document, get and set its metadata properties such as title, author, subject, keywords, creator, producer, language, and dates, and then retrieve these properties using the [PdfDocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentInformation.html) class.
+This example demonstrates how to create a PDF document, get and set its metadata properties such as title, author, subject, keywords, creator, producer, language, and dates, and then retrieve these properties using the `PdfDocumentInformation` class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -210,7 +210,7 @@ document.destroy();
 
 ## Flatten annotations and form fields
 
-The [flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotation.html#Syncfusion_Pdf_Interactive_PdfAnnotation_Flatten) property allows you to convert all annotations and form fields in a PDF into static page content, removing interactivity while preserving their visual appearance.
+The `flatten` property allows you to convert all annotations and form fields in a PDF into static page content, removing interactivity while preserving their visual appearance.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

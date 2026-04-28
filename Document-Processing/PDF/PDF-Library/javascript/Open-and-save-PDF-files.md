@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Opening an existing PDF document
 
-Open an existing PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class with the specified PDF data.
+Open an existing PDF document using the `PdfDocument` class with the specified PDF data.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -31,7 +31,7 @@ The PdfDocument constructor can accept PDF data in either Base64 string or Uint8
 
 ### Using Base64 String
 
-Open an existing PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class with the specified PDF data as Base64 string.
+Open an existing PDF document using the `PdfDocument` class with the specified PDF data as Base64 string.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -50,7 +50,7 @@ var document = new ej.pdf.PdfDocumentPdfDocument(data);
 
 ### Using Uint8Array
 
-Open an existing PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class with the specified PDF data as Uint8Array.
+Open an existing PDF document using the `PdfDocument` class with the specified PDF data as Uint8Array.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -67,7 +67,7 @@ let document= new ej.pdf.PdfDocument(binaryData);
 
 ## Opening an encrypted PDF document with password
 
-Open an encrypted PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class by providing the correct password.
+Open an encrypted PDF document using the `PdfDocument` class by providing the correct password.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -82,7 +82,7 @@ var document = new ej.pdf.PdfDocument(data, 'password');
 
 ## Save and download a PDF document in browser environment
 
-Save and download the PDF document using the [save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_Save_System_IO_Stream_) method of [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class with the specified file name.
+Save and download the PDF document using the `save` method of `PdfDocument` class with the specified file name.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -103,7 +103,7 @@ document.save('output.pdf');
 
 ## Saving a PDF document to byte array
 
-Save the modified PDF document to the specified byte array using the [save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_Save_System_IO_Stream_) method available in [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class.
+Save the modified PDF document to the specified byte array using the `save` method available in `PdfDocument` class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -124,7 +124,7 @@ var data = document.save();
 
 ## Closing a document
 
-After the document manipulation and save operation are completed, you should close the instance of [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html), in order to release all the memory consumed by PDF DOM. The following code example illustrates how to destroy a [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) instance.
+After the document manipulation and save operation are completed, you should close the instance of `PdfDocument`, in order to release all the memory consumed by PDF DOM. The following code example illustrates how to destroy a `PdfDocument` instance.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

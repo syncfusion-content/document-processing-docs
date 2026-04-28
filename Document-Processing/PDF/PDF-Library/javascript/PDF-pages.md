@@ -13,7 +13,7 @@ N> The PDF page is created using the default settings, which include A4 page siz
 
 ## Adding a new page to the document
 
-The following code sample demonstrates how to add a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) to a PDF document. When multiple pages are added, each new page is appended to the end of the document.
+The following code sample demonstrates how to add a `PdfPage` to a PDF document. When multiple pages are added, each new page is appended to the end of the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -45,7 +45,7 @@ document.destroy();
 
 ## Adding margin to the PDF pages
 
-The [PdfPageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html) class is used to define properties such as margins, orientation, rotation, and page size. In this example, margins are set using the [PdfMargins](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMargins.html) class to ensure consistent spacing around the page content. These settings can be applied when creating sections or pages in the PDF for precise layout control.
+The `PdfPageSettings` class is used to define properties such as margins, orientation, rotation, and page size. In this example, margins are set using the `PdfMargins` class to ensure consistent spacing around the page content. These settings can be applied when creating sections or pages in the PDF for precise layout control.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -80,7 +80,7 @@ N> The creation default margin is set to 40 points, ensuring uniform spacing bet
 
 ## Adding sections with different page settings
 
-This example demonstrates how to add sections with different page settings in a PDF document. It shows how to configure rotation, orientation, margins, and page size using [PdfPageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html). The [PdfSection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfSection.html) class is used to apply unique page customizations within a single PDF document.
+This example demonstrates how to add sections with different page settings in a PDF document. It shows how to configure rotation, orientation, margins, and page size using `PdfPageSettings`. The `PdfSection` class is used to apply unique page customizations within a single PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -208,7 +208,7 @@ document.destroy();
 
 ## Get number of pages from a PDF document
 
-This example demonstrates how to retrieve the total number of pages in a PDF document using the `pageCount` property of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The page count returns an integer value representing the number of pages currently in the document.
+This example demonstrates how to retrieve the total number of pages in a PDF document using the `pageCount` property of the `PdfDocument` class. The page count returns an integer value representing the number of pages currently in the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -235,7 +235,7 @@ document.destroy();
 
 ## Rearranging pages in an existing document
 
-This example demonstrates how to rearrange the pages in an existing PDF document using the `reorderPages` method of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The method accepts an array of page indices that defines the new order of pages within the document.
+This example demonstrates how to rearrange the pages in an existing PDF document using the `reorderPages` method of the `PdfDocument` class. The method accepts an array of page indices that defines the new order of pages within the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -267,7 +267,7 @@ document.destroy();
 
 ## Removing pages from a document
 
-This example demonstrates how to remove a page from a PDF document using the `removePage` method of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The method takes the zero-based index of the page to be removed, effectively deleting that page from the document.
+This example demonstrates how to remove a page from a PDF document using the `removePage` method of the `PdfDocument` class. The method takes the zero-based index of the page to be removed, effectively deleting that page from the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -305,7 +305,7 @@ document.destroy();
 
 ## Add rotated PDF pages
 
-This example demonstrates how to rotate a PDF page using the `rotation` property of the [PdfPageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html) class. The property accepts a value from the [PdfRotationAngle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageRotateAngle.html) enumeration, such as angle180, to specify the rotation angle applied to the page.
+This example demonstrates how to rotate a PDF page using the `rotation` property of the `PdfPageSettings` class. The property accepts a value from the `PdfRotationAngle` enumeration, such as angle180, to specify the rotation angle applied to the page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -353,7 +353,7 @@ document.destroy();
 
 ## Rotating an existing PDF page
 
-This example demonstrates how to rotate an existing PDF page using the `rotation` property of the [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) class. The property accepts a value from the [PdfRotationAngle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageRotateAngle.html) enumeration, such as angle180, to specify the rotation angle applied to the selected page.
+This example demonstrates how to rotate an existing PDF page using the `rotation` property of the `PdfPage` class. The property accepts a value from the `PdfRotationAngle` enumeration, such as angle180, to specify the rotation angle applied to the selected page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

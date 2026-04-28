@@ -14,7 +14,7 @@ JavaScript PDF provides support to create, add and merge the layers into PDF doc
 
 ## Adding layers in a PDF document
 
-This example demonstrates how to add layers to a PDF document using the [PdfLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html) class. Layers allow you to organize content into separate, optional sections that can be shown or hidden by the user.
+This example demonstrates how to add layers to a PDF document using the `PdfLayer` class. Layers allow you to organize content into separate, optional sections that can be shown or hidden by the user.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -70,7 +70,7 @@ document.save('Output.pdf');
 
 ## Adding annotation to layer
 
-This example demonstrates how to add an annotation to a specific layer in a PDF document using the [PdfLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html) class. Associating annotations with layers allows you to control their visibility dynamically.
+This example demonstrates how to add an annotation to a specific layer in a PDF document using the `PdfLayer` class. Associating annotations with layers allows you to control their visibility dynamically.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -115,7 +115,7 @@ document.destroy();
 
 ## Nested layers
 
-This example demonstrates how to create nested layers in a PDF document using the [PdfLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html) class. Nested layers enable hierarchical organization of content for better control and user experience.
+This example demonstrates how to create nested layers in a PDF document using the `PdfLayer` class. Nested layers enable hierarchical organization of content for better control and user experience.
 
 {% tabs %}
 {% highlight c# tabtitle="TypeScript" %}
@@ -175,7 +175,7 @@ document.destroy();
 
 ## Removing layers from an existing PDF document
 
-This example demonstrates how to remove layers from an existing PDF document using the [PdfLayerCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLayerCollection.html) class. Removing unnecessary layers helps simplify the document structure.
+This example demonstrates how to remove layers from an existing PDF document using the `PdfLayerCollection` class. Removing unnecessary layers helps simplify the document structure.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -219,7 +219,7 @@ document.destroy();
 
 ## Lock or unlock layers
 
-This example demonstrates how to lock or unlock layers in a PDF document using the [PdfLayer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLayer.html) class. Locking layers prevents users from toggling their visibility, ensuring that critical content remains displayed.
+This example demonstrates how to lock or unlock layers in a PDF document using the `PdfLayer` class. Locking layers prevents users from toggling their visibility, ensuring that critical content remains displayed.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

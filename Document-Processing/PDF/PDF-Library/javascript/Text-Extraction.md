@@ -128,7 +128,7 @@ N> Layout based text extraction may take additional processing time when compare
 
 ### Working with lines
 
-This example demonstrates how to extract text from a PDF page based on individual lines using the [extractTextLines](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLines.html#Syncfusion_Pdf_TextLines__ctor) method. This approach provides a collection of [TextLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html) objects, allowing precise access to text content line by line.
+This example demonstrates how to extract text from a PDF page based on individual lines using the `extractTextLines` method. This approach provides a collection of `TextLine` objects, allowing precise access to text content line by line.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -139,7 +139,7 @@ import { PdfDataExtractor, TextLine } from '@syncfusion/ej2-pdf-data-extract';
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract [TextLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html) from the PDF document.
+// Extract `TextLine` from the PDF document.
 let textLines: Array<TextLine> = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 // Iterate through each text line in the collection
 textLines.forEach((textLine: TextLine) => {
@@ -170,7 +170,7 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract [TextLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html) from the PDF document.
+// Extract `TextLine` from the PDF document.
 var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 // Iterate through each text line in the collection
 textLines.forEach((textLine) => {
@@ -199,7 +199,7 @@ document.destroy();
 
 ### Working with words
 
-This example demonstrates how to extract words from a PDF document using the [extractTextLines](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLines.html#Syncfusion_Pdf_TextLines__ctor) method. Each line contains a collection of [TextWord](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextWord.html) objects. 
+This example demonstrates how to extract words from a PDF document using the `extractTextLines` method. Each line contains a collection of `TextWord` objects. 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -210,7 +210,7 @@ import { PdfDataExtractor, TextLine, TextWord, PdfFontStyle } from '@syncfusion/
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract [TextLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html) from the PDF document.
+// Extract `TextLine` from the PDF document.
 let textLines: Array<TextLine> = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 textLines.forEach((textLine: TextLine) => {
     textLine.words.forEach((textWord: TextWord) => {
@@ -240,7 +240,7 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract [TextLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html) from the PDF document.
+// Extract `TextLine` from the PDF document.
 var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 textLines.forEach((textLine) => {
     textLine.words.forEach((textWord) => {
@@ -268,7 +268,7 @@ document.destroy();
 
 ### Working with characters
 
-You can retrieve a single character and its properties, including bounds, font name, font size, and text color, using the [extractTextLines](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLines.html#Syncfusion_Pdf_TextLines__ctor) method. Refer to the code sample below.
+You can retrieve a single character and its properties, including bounds, font name, font size, and text color, using the `extractTextLines` method. Refer to the code sample below.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -279,7 +279,7 @@ import { PdfDataExtractor, TextLine, TextWord, PdfFontStyle } from '@syncfusion/
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract [TextLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html) from the PDF document.
+// Extract `TextLine` from the PDF document.
 let textLines: Array<TextLine> = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 textLines.forEach((textLine: TextLine) => {
     textLine.words.forEach((textWord: TextWord) => {
@@ -313,7 +313,7 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract [TextLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html) from the PDF document.
+// Extract `TextLine` from the PDF document.
 var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 textLines.forEach((textLine) => {
     textLine.words.forEach((textWord) => {
