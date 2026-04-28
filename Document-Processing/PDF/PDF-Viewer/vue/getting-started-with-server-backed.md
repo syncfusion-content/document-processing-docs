@@ -12,8 +12,6 @@ domainurl: ##DomainURL##
 
 This section explains how to create the **PDF Viewer** component and configure its functionalities in a Vue 2 application using Vue CLI with a server-backed architecture. In this mode, PDF rendering and processing are handled by a web service.
 
----
-
 ## Prerequisites
 
 Before getting started, ensure the following are installed:
@@ -21,8 +19,6 @@ Before getting started, ensure the following are installed:
 - [System requirements for Syncfusion Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 - Node.js v14.15.0 or later
 - Vue CLI
-
----
 
 ## Create a Vue 2 app
 
@@ -44,10 +40,7 @@ cd quickstart
 
 When prompted, select **Default ([Vue 2] babel, eslint)**.
 
-> For Vue 3 application setup, see  
-> https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started-application
-
----
+> For Vue 3 application setup, see [Create a Vue 3 app](./getting-started-application).
 
 ## Install the Syncfusion PDF Viewer packages
 
@@ -62,8 +55,6 @@ npm install @syncfusion/ej2-vue-pdfviewer --save
 yarn add @syncfusion/ej2-vue-pdfviewer
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
@@ -89,14 +80,11 @@ In this example, the `Material` theme is applied using CSS styles available in t
 {% endhighlight %}
 {% endtabs %}
 
-
-> PDF Viewer has different themes; refer to [Supported themes](../appearance/theme) section.
-
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
 Follow these steps to add the Vue PDF Viewer component:
 
-1. Import and register the PDF Viewer component in the `script` section of the **src/App.vue** file
+Import and register the PDF Viewer component in the `script` section of the **src/App.vue** file
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -121,7 +109,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 {% endhighlight %}
 {% endtabs %}
 
-2. In the `template` section, define the PDF Viewer component and bind the [documentPath](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#documentpath) and [serviceUrl](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) properties.
+In the `template` section, define the PDF Viewer component and bind the [documentPath](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#documentpath) and [serviceUrl](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) properties.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -139,7 +127,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 {% endhighlight %}
 {% endtabs %}
 
-3. Declare the bound properties `serviceUrl` and `documentPath` in the `script` section.
+Declare the bound properties `serviceUrl` and `documentPath` in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -12,15 +12,11 @@ domainurl: ##DomainURL##
 
 This guide explains how to create and run your own **PDF Viewer web service** and connect it to the **server-backed Vue PDF Viewer** component. Hosting your own web service is recommended for production environments.
 
----
-
 ## Prerequisites
 
 - .NET SDK 6.0 or 8.0
 - Basic knowledge of ASP.NET Core
 - Server-backed Vue PDF Viewer application
-
----
 
 ## Steps to run the PDF Viewer web service
 
@@ -28,24 +24,18 @@ This guide explains how to create and run your own **PDF Viewer web service** an
 
 Download the sample from the GitHub repository:
 
-https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices
-
----
+[GitHub Web Service Sample](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices)
 
 ### Step 2: Open the ASP.NET Core project
 
 Extract the downloaded sample and navigate to the **ASP.NET Core** folder using a command prompt or terminal.
 
----
-
 ### Step 3: Choose the .NET version
 
 Navigate to the appropriate folder based on your installed .NET version:
 
-- .NET 6.0 → `PdfViewerWebService_6.0`
-- .NET 8.0 → `PdfViewerWebService_8.0`
-
----
+- .NET 6.0 → [PdfViewerWebService_6.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_6.0)
+- .NET 8.0 → [PdfViewerWebService_8.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_8.0)
 
 ### Step 4: Restore required packages
 
@@ -53,6 +43,7 @@ Run the following command to restore the NuGet packages:
 
 ```bash
 dotnet restore
+```
 
 ### Step 5: Run the Web Service
 
