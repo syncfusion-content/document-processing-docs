@@ -2,14 +2,14 @@
 title: Features of Smart table Extractor | Syncfusion
 description: Discover the key features of Syncfusion Smart Table Extractor, a .NET library designed to extract tables, forms, text, and images from documents.
 platform: document-processing
-control: PDF
+control: SmartTableExtractor
 documentation: UG
 keywords: Assemblies
 --- 
 
 # Smart Table Extractor Features 
 
-## Extract Tables from a PDF Document
+## Extract Tables from PDF Document
 
 To extract structured table data from a PDF document using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code 
 
@@ -54,6 +54,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {% endhighlight %}
 
 {% endtabs %} 
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-tables-from-pdf-document/.NET).
 
 ## Extract Tables with Border-less Table Detection
 
@@ -112,7 +114,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract Tables within a Specific Page Range
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-border-less-table-detection/.NET).
+
+## Extract Tables within Specific Page Range
 
 To extract structured table data from a specific range of pages in a PDF document using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code example: 
 
@@ -168,7 +172,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}   
 
-## Apply a Confidence Threshold to Extract Table Data
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-tables-by-page-range/.NET).
+
+## Apply Confidence Threshold for Table Data Extraction
 
 To apply confidence thresholding when extracting table data from a PDF document using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code example:
 
@@ -224,7 +230,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract Table Data Asynchronously from a PDF Document
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Apply-confidence-threshold/.NET).
+
+## Extract Table Data Asynchronously from PDF Document
 
 To extract table data asynchronously with cancellation support using the **ExtractTableAsJsonAsync** method of the **TableExtractor** class, refer to the following code example:
  
@@ -276,7 +284,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract Table data as Markdown from a PDF Document
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-table-data-async/.NET).
+
+## Extract Table data as Markdown from PDF Document
 
 To extract structured table data from a PDF document using the **ExtractTableAsMarkdown** method of the **TableExtractor** class, refer to the following code 
 
@@ -322,3 +332,28 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %} 
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-table-data-as-MD-from-PDF/.NET).
+
+
+## PDF to Markdown Preservation Mapping
+
+This section illustrates how table elements in PDF documents are converted and preserved in Markdown format, ensuring that document structure and formatting remain consistent during the PDF‑to‑Markdown conversion process.
+
+<table>
+  <thead>
+    <tr>
+      <th><b>PDF Elements</b></th>
+      <th><b>Preservation in Markdown</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table</td>
+      <td>Table</td>
+    </tr>
+    <tr>
+      <td>Text Inline Styles</td>
+      <td>Bold and Italic</td>
+    </tr>
+  </tbody>
+</table>
