@@ -122,7 +122,7 @@ The Document Editor is displayed as shown below.
 
 ### Create a new React application
 
-To set up a React application in a Javascript environment, run the following commands:
+To set up a React application in a JavaScript environment, run the following commands:
 
 ```bash
 npm create vite@latest my-app -- --template react
