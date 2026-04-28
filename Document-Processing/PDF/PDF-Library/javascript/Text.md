@@ -11,7 +11,7 @@ The PDF provides support to add and format text in PDF documents using various f
 
 ## Drawing text in a new document
 
-This example demonstrates how to draw text in a new PDF document using the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Gra[drawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_)phics.PdfGraphics.html) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The method allows you to specify the text content, font, brush, and position to render the text on a page within the document.
+This example demonstrates how to draw text in a new PDF document using the https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_ method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The method allows you to specify the text content, font, brush, and position to render the text on a page within the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -107,7 +107,7 @@ document.destroy();
 
 ## Drawing text in an existing document
 
-This example demonstrates how to draw text in an existing PDF document using the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Gra[drawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_)phics.PdfGraphics.html) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The method allows you to specify the text content, font, brush, and position to render the text on a selected page within the document.
+This example demonstrates how to draw text in an existing PDF document using the https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_ method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The method allows you to specify the text content, font, brush, and position to render the text on a selected page within the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -152,7 +152,7 @@ JavaScript PDF allows you to add text to the PDF document using the following ty
 
 ### Draw text using standard fonts
 
-This example demonstrates how to draw text using standard fonts in a PDF document by utilizing the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Gra[drawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_)phics.PdfGraphics.html) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class along with predefined font types from the [PdfStandardFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStandardFont.html) class. Standard fonts such as Helvetica, TimesRoman, or Courier can be specified to render text with consistent and widely supported typography.
+This example demonstrates how to draw text using standard fonts in a PDF document by utilizing the https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_ method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class along with predefined font types from the [PdfStandardFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStandardFont.html) class. Standard fonts such as Helvetica, TimesRoman, or Courier can be specified to render text with consistent and widely supported typography.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -189,7 +189,7 @@ document.destroy();
 
 ### Draw text using TrueType fonts
 
-This example demonstrates how to draw text using TrueType fonts in a PDF document by utilizing the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Gra[drawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_)phics.PdfGraphics.html) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class along with a [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html) instance. The TrueType font provides enhanced text rendering with support for custom font styles.
+This example demonstrates how to draw text using TrueType fonts in a PDF document by utilizing the https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_ method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class along with a [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html) instance. The TrueType font provides enhanced text rendering with support for custom font styles.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
