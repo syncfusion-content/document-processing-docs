@@ -1,5 +1,5 @@
 ---
-title: Extract Table data in ASP.NET Core | Syncfusion
+title: Extract Table Data in ASP.NET Core | Syncfusion
 description: Learn how to extract table data from pdf in ASP.NET Core with easy steps using Syncfusion .NET Core Data extraction library.
 platform: document-processing
 control: SmartTableExtractor

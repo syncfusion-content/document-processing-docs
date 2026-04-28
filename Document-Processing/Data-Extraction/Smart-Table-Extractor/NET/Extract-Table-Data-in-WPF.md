@@ -1,5 +1,5 @@
 ---
-title: Extract table Data in WPF Application | Syncfusion
+title: Extract Table Data in WPF Application | Syncfusion
 description: Learn how to extract table data in a WPF application with easy steps using the Syncfusion Smart Table Extractor library.
 platform: document-processing
 control: SmartTableExtractor
