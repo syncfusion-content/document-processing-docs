@@ -26,7 +26,7 @@ The Syncfusion<sup>&reg;</sup> Smart Form Recognizer is a deterministic, on‑pr
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/Console/.NET/Recognize_Forms).
 
 By executing the program, you will get the PDF document as follows.
-![Console output PDF document](GettingStarted_images/ASPCore_Output.png)
+![Console output PDF document](GettingStarted_images/JSON_Output.png)
 
 ## Recognize Form Data from PDF using .NET Framework
 
@@ -85,6 +85,6 @@ Click the Start button (green arrow) or press F5 to run the app.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/Console/.NETFramework/Recognize_Forms).
 
 By executing the program, you will get the PDF document as follows.
-![Console output PDF document](GettingStarted_images/ASPCore_Output.png)
+![Console output PDF document](GettingStarted_images/JSON_Output.png)
 
 

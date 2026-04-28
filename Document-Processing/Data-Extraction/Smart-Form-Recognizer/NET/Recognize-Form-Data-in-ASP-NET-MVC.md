@@ -72,7 +72,7 @@ using (FileStream inputStream = new FileStream(inputPath, FileMode.Open, FileAcc
 {% endhighlight %}
 
 By executing the program, you will get the PDF document as follows.
-![HTML to PDF output document](GettingStarted_images/ASPCore_Output.png)  
+![HTML to PDF output document](GettingStarted_images/JSON_Output.png)  
 
 A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/ASP.NETMVC/Recognize_Forms).
 

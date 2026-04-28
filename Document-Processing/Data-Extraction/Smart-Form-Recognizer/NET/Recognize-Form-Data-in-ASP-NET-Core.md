@@ -29,5 +29,5 @@ To include the .NET Core Smart Form Recognizer library into your ASP.NET Core ap
 You can download a complete working sample from [GitHub]().
 
 By executing the program, you will get the PDF document as follows.
-![ASP.Net Core output JSON document](GettingStarted_images/ASPCore_Output.png)
+![ASP.Net Core output JSON document](GettingStarted_images/JSON_Output.png)
 

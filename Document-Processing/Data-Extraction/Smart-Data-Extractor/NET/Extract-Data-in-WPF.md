@@ -68,7 +68,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {% endhighlight %}
 
 By executing the program, you will get the PDF document as follows.
-![Convert HTMLToPDF WPF output](GettingStarted_images/ASPCore_Output.png) 
+![Convert HTMLToPDF WPF output](GettingStarted_images/JSON_Output.png) 
 
 A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/WPF/Extract_Data).
    
