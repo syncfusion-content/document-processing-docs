@@ -11,7 +11,7 @@ Syncfusion<sup>&reg;</sup> PDF provides support to insert, remove, and modify th
 
 ## Adding bookmarks to a PDF
 
-This example demonstrates how to add bookmarks to a PDF document using the `PdfBookmark` class. Bookmarks provide an easy way to navigate through different sections of a PDF file.
+This example demonstrates how to add bookmarks to a PDF document using the [PdfBookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBookmarkBase.html) class. Bookmarks provide an easy way to navigate through different sections of a PDF file.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -59,7 +59,7 @@ document.destroy();
 
 ## Inserting bookmarks into an existing PDF
 
-This example demonstrates how to insert bookmarks at a specific position in an existing PDF document using the `PdfBookmark` class. This feature allows precise control over bookmark order.
+This example demonstrates how to insert bookmarks at a specific position in an existing PDF document using the [PdfBookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBookmarkBase.html) class. This feature allows precise control over bookmark order.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -103,7 +103,7 @@ document.destroy();
 
 ## Nested Bookmark
 
-This example demonstrates how to create hierarchical (parent-child) bookmarks in a PDF using the PdfBookmark class. This feature allows organizing content with nested bookmark structures for easier navigation.
+This example demonstrates how to create hierarchical (parent-child) bookmarks in a PDF using the [PdfBookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBookmarkBase.html) class. This feature allows organizing content with nested bookmark structures for easier navigation.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -163,7 +163,7 @@ document.destroy();
 
 ## Removing bookmarks from an existing PDF 
 
-This example demonstrates how to remove bookmarks from an existing PDF document using the `PdfBookmark` class.
+This example demonstrates how to remove bookmarks from an existing PDF document using the [PdfBookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBookmarkBase.html) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -203,7 +203,7 @@ document.destroy();
 
 ##  Removing a bookmark from the document at a specified index
 
-This example demonstrates how to remove bookmarks from the document at the specific index using the `PdfBookmark` class.
+This example demonstrates how to remove bookmarks from the document at the specific index using the [PdfBookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBookmarkBase.html) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -239,7 +239,7 @@ document.destroy();
 
 ## Removing all bookmarks from the collection
 
-This example demonstrates how to removes all bookmarks from the collection using the `PdfBookmark` class.
+This example demonstrates how to removes all bookmarks from the collection using the [PdfBookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBookmarkBase.html) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -279,7 +279,7 @@ document.destroy();
 
 ## Getting a bookmark's page index in an existing PDF document
 
-This example demonstrates how to retrieve the page index associated with a bookmark in an existing PDF document using the `PdfBookmark` class. This helps identify the exact location of the bookmark.
+This example demonstrates how to retrieve the page index associated with a bookmark in an existing PDF document using the [PdfBookmark](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBookmarkBase.html) class. This helps identify the exact location of the bookmark.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
