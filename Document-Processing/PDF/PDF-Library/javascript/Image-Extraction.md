@@ -13,7 +13,7 @@ N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-ext
 
 ## Extract images from a PDF
 
-This code demonstrates how to extract embedded images and their metadata from a PDF using  [PdfDataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentExtractor.html). It loads a PDF, retrieves all  `PdfEmbeddedImage` entries across pages, accesses the first image's raw byte data, and reads its properties format, page index, occurrence index, bounds, interpolation status, and masking flags before saving/disposing resources by destroying the document.
+This code demonstrates how to extract embedded images and their metadata from a PDF using  [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor). It loads a PDF, retrieves all  [PdfEmbeddedImage](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfembeddedimage) entries across pages, accesses the first image's raw byte data, and reads its properties format, page index, occurrence index, bounds, interpolation status, and masking flags before saving/disposing resources by destroying the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -22,9 +22,9 @@ import { PdfDataExtractor, PdfEmbeddedImage} from '@syncfusion/ej2-pdf-data-extr
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Initialize a new instance of the [PdfDataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentExtractor.html) class
+// Initialize a new instance of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract collection of `PdfEmbeddedImage` from the PDF document
+// Extract collection of [PdfEmbeddedImage](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfembeddedimage) from the PDF document
 let imageInfoCollection: PdfEmbeddedImage[] = extractor.extractImages({
   startPageIndex: 0,
   endPageIndex: document.pageCount - 1
@@ -59,9 +59,9 @@ document.destroy();
 
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Initialize a new instance of the [PdfDataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentExtractor.html) class
+// Initialize a new instance of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class
 var extractor= new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract collection of `PdfEmbeddedImage` from the PDF document
+// Extract collection of [PdfEmbeddedImage](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfembeddedimage) from the PDF document
 var imageInfoCollection = extractor.extractImages({
   startPageIndex: 0,
   endPageIndex: document.pageCount - 1
