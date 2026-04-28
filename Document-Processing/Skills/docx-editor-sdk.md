@@ -20,6 +20,9 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK Skills eliminat
 | [Angular](https://help.syncfusion.com/document-processing/word/word-processor/angular/overview) | [syncfusion-angular-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-angular-docx-editor) |
 | [Blazor](https://help.syncfusion.com/document-processing/word/word-processor/blazor/overview) | [syncfusion-blazor-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-blazor-docx-editor) |
 | [ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/overview) | [syncfusion-aspnetcore-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-aspnetcore-docx-editor) |
+| [ASP.NET MVC](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-mvc/overview) | [syncfusion-aspnetmvc-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-aspnetmvc-docx-editor) |
+| [TypeScript](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/overview) | [syncfusion-javascript-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-javascript-docx-editor) |
+| [Vue](https://help.syncfusion.com/document-processing/word/word-processor/vue/overview) | [syncfusion-vue-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-vue-docx-editor) |
 | [UWP](https://help.syncfusion.com/document-processing/word/word-processor/uwp/overview) | [syncfusion-uwp-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-uwp-docx-editor) |
 | [WPF](https://help.syncfusion.com/document-processing/word/word-processor/wpf/overview) | [syncfusion-wpf-docx-editor](https://github.com/syncfusion/docx-editor-sdk-skills/tree/master/skills/syncfusion-wpf-docx-editor) |
 
@@ -74,6 +77,9 @@ Select skills to install (space to toggle)
 │  ◻ syncfusion-angular-docx-editor
 │  ◻ syncfusion-blazor-docx-editor
 │  ◻ syncfusion-aspnetcore-docx-editor
+│  ◻ syncfusion-aspnetmvc-docx-editor
+│  ◻ syncfusion-javascript-docx-editor
+│  ◻ syncfusion-vue-docx-editor
 │  ◻ syncfusion-uwp-docx-editor
 │  ◻ syncfusion-wpf-docx-editor
 │  .....

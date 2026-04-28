@@ -1,168 +1,602 @@
 ---
 layout: post
-title: Comments in Angular PDF Viewer component | Syncfusion
-description: Learn about comments, replies, and status in the Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2.
+title: Comments in Angular PDF Viewer | Syncfusion
+description: Learn how to add, reply to, edit, set status for, delete, and read comments for annotations in the Syncfusion Angular PDF Viewer.
 platform: document-processing
-control: Comments
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in Angular PDF Viewer control
+# Comments in Angular PDF Viewer
 
-The PDF Viewer control provides options to add, edit, and delete comments for the following annotations in PDF documents:
+The PDF Viewer lets you add, edit, reply to, set status for, and delete comments on the following annotation types:
 
-* Shape annotation
-* Stamp annotation
-* Sticky note annotation
-* Measurement annotation
-* Text markup annotation
-* Free text annotation
-* Ink annotation
+* Shape annotation  
+* Stamp annotation  
+* Sticky note annotation  
+* Measurement annotation  
+* Text markup annotation  
+* Free text annotation  
+* Ink annotation  
 
-![Comment panel overview](../images/commentannot.png)
+![Comments panel overview](../images/commentannot.png)
 
-## Adding a comment to the annotation
+## Add a comment to an annotation (UI)
 
-Annotation comments, replies, and status can be managed in the PDF document using the comment panel.
+Use the **Comments panel** to manage annotation comments, replies, and status.
 
-### Comment panel
+### Open the Comments panel
+Open the panel in any of these ways:
 
-Annotation comments can be added to the PDF using the comment panel. The comment panel can be opened in the following ways:
+1. **Annotation toolbar**  
+   * Click **Edit Annotation** in the toolbar to show the secondary toolbar.  
+   * Click **Comment Panel** to open the panel.  
+2. **Context menu**  
+   * Select an annotation and **right‑click** it.  
+   * Choose **Comment** from the context menu.  
+3. **Double‑click**  
+   * Select the annotation and **double‑click** it to open the panel.  
 
-1. Using the annotation menu
+If the panel is already open, selecting an annotation highlights its thread so you can view or add comments.
 
-    * Click the Edit Annotation button in the PDF Viewer toolbar. A toolbar appears below it.
-    * Click the Comment Panel button. The comment panel opens.
+### Add comments and replies
+- Select the annotation in the PDF.  
+- The corresponding thread is highlighted in the Comments panel.  
+- Add comments and any number of replies in the panel.  
 
-2. Using Context menu
+![Add comment to sticky note](../images/stickycomment.png)
 
-    * Select the annotation in the PDF document and right-click it.
-    * Select Comment from the context menu..
-
-3. Using the Mouse click
-
-    * Select the annotation in the PDF document and double-click it. The comment panel opens.
-
-If the comment panel is already open, select the annotation and add comments using the panel.
-
-### Adding comments
-
-* Select the annotation in the PDF document.
-* The corresponding comment thread is highlighted in the comment panel.
-* Add comments and replies using the comment panel.
-
-![Adding comments to a sticky note annotation](../images/stickycomment.png)
-
-### Adding Comment Replies
-
-* Multiple replies can be added to a comment.
-* After adding a comment, add replies as needed.
-
-### Adding Comment or Reply Status
-
-* Select the annotation comment in the comment panel.
-* Click More options in the comment or reply container.
-* Select Set Status from the context menu.
-* Choose a status for the comment.
+### Set comment or reply status
+- Select a comment in the panel.  
+- Click **More options** on the comment or reply container.  
+- Choose **Set Status**, then pick a status.  
 
 ![Set status for a comment](../images/commentstatus.png)
 
-### Editing the comments and comments replies of the annotations
+### Edit comments and replies
+You can edit comments in two ways:
 
-Comments, replies, and status can be edited using the comment panel.
-
-### Editing the Comment or Comment Replies
-
-Edit comments and replies in the following ways:
-
-1. Using the Context menu
-
-    * Select the annotation comment in the comment panel.
-    * Click More options in the comment or reply container.
-    * Select Edit from the context menu.
-    * An editable text box appears. Change the content of the comment or reply.
-
-2. Using the Mouse Click
-
-    * Select the annotation comment in the comment panel.
-    * Double-click the comment or reply content.
-    * An editable text box appears. Change the content of the comment or reply.
-
-### Editing Comment or Reply Status
-
-* Select the annotation comment in the comment panel.
-* Click More options in the comment or reply container.
-* Select Set Status from the context menu.
-* Choose a status for the comment.
-* None is the default state. Selecting None clears the status indicator; the comment or reply remains visible.
+1. **Context menu**  
+   * Select the comment in the panel and click **More options**.  
+   * Choose **Edit** to switch to an editable text box.  
+2. **Mouse double‑click**  
+   * Double‑click the comment or reply to edit its content.  
 
 ![Edit comments and replies](../images/commentsedit.png)
 
-### Delete Comment or Comment Replies
-
-* Select the annotation comment in the comment panel.
-* Click More options in the comment or reply container.
-* Select Delete from the context menu.
+### Delete comments or replies
+- Select the comment in the panel.  
+- Click **More options** → **Delete**.  
 
 ![Delete comments or replies](../images/commentsdelete.png)
 
-N> Deleting the root comment from the comment panel also deletes the associated annotation.
+> Deleting the **root** comment from the Comments panel also deletes the associated annotation.
 
-## How to check the comments added by the user
+---
+
+## Add Comments to the annotation Programmatically
+
+### Add comments and replies programmatically
+
+Comments can be added to the PDF document programmatically using the `editAnnotation` property.
+
+The following example Shows how to add comments and reply in response to a button click.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { Component, ViewChild } from '@angular/core';
+import {
+  PdfViewerComponent,
+  PdfViewerModule,
+  ToolbarService,
+  MagnificationService,
+  NavigationService,
+  AnnotationService,
+  LinkAnnotationService,
+  ThumbnailViewService,
+  BookmarkViewService,
+  TextSelectionService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div class="content-wrapper">
+      <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <button (click)="addComment()">Add Comments</button>
+        <button (click)="addReply()">Add Reply</button>
+      </div>
+      <ejs-pdfviewer
+        #pdfViewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        style="height:650px;display:block">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  imports: [PdfViewerModule],
+  providers: [
+    ToolbarService,
+    MagnificationService,
+    NavigationService,
+    AnnotationService,
+    LinkAnnotationService,
+    ThumbnailViewService,
+    BookmarkViewService,
+    TextSelectionService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService
+  ]
+})
+export class AppComponent {
+
+  @ViewChild('pdfViewer')
+  public pdfViewer!: PdfViewerComponent;
+
+  public document: string =
+    'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+
+  public resource: string =
+    'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+  public addComment(): void {
+    const viewer = this.pdfViewer;
+    if (!viewer) return;
+    const annot = viewer.annotationCollection?.[0];
+    if (annot) {
+      annot.commentType = 'add';
+      annot.note = 'New Comment';
+      viewer.annotation.editAnnotation(annot);
+      console.log(viewer.annotationCollection?.[0]);
+    }
+  }
+
+  public addReply(): void {
+    const viewer = this.pdfViewer;
+    if (!viewer) return;
+    const annot = viewer.annotationCollection?.[0];
+    if (annot) {
+      annot.commentType = 'add';
+      annot.replyComment = ['Reply Comment'];
+      viewer.annotation.editAnnotation(annot);
+      console.log(viewer.annotationCollection?.[0]);
+    }
+  }
+}
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+import { Component, ViewChild } from '@angular/core';
+import {
+  PdfViewerComponent,
+  PdfViewerModule,
+  ToolbarService,
+  MagnificationService,
+  NavigationService,
+  AnnotationService,
+  LinkAnnotationService,
+  ThumbnailViewService,
+  BookmarkViewService,
+  TextSelectionService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div class="content-wrapper">
+      <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <button (click)="addComment()">Add Comments</button>
+        <button (click)="addReply()">Add Reply</button>
+      </div>
+      <ejs-pdfviewer
+        #pdfViewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [serviceUrl]="serviceUrl"
+        style="height:650px;display:block">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  imports: [PdfViewerModule],
+  providers: [
+    ToolbarService,
+    MagnificationService,
+    NavigationService,
+    AnnotationService,
+    LinkAnnotationService,
+    ThumbnailViewService,
+    BookmarkViewService,
+    TextSelectionService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService
+  ]
+})
+export class AppComponent {
+
+  @ViewChild('pdfViewer')
+  public pdfViewer!: PdfViewerComponent;
+
+  public document: string =
+    'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+
+  public serviceUrl: string = 'YOUR_SERVICE_URL';
+
+  public addComment(): void {
+    const viewer = this.pdfViewer;
+    if (!viewer) return;
+    const annot = viewer.annotationCollection?.[0];
+    if (annot) {
+      annot.commentType = 'add';
+      annot.note = 'New Comment';
+      viewer.annotation.editAnnotation(annot);
+      console.log(viewer.annotationCollection?.[0]);
+    }
+  }
+
+  public addReply(): void {
+    const viewer = this.pdfViewer;
+    if (!viewer) return;
+    const annot = viewer.annotationCollection?.[0];
+    if (annot) {
+      annot.commentType = 'add';
+      annot.replyComment = ['Reply Comment'];
+      viewer.annotation.editAnnotation(annot);
+      console.log(viewer.annotationCollection?.[0]);
+    }
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Edit comments and replies programmatically
+
+Comments can be edited in the PDF document programmatically using the `editAnnotation` property.
+
+The following example Shows how to edit comments and reply in response to a button click.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { Component, ViewChild } from '@angular/core';
+import {
+  PdfViewerComponent,
+  PdfViewerModule,
+  ToolbarService,
+  MagnificationService,
+  NavigationService,
+  AnnotationService,
+  LinkAnnotationService,
+  ThumbnailViewService,
+  BookmarkViewService,
+  TextSelectionService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div class="content-wrapper">
+      <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <button (click)="editComment()">Edit Comments</button>
+        <button (click)="editReply()">Edit Reply</button>
+      </div>
+      <ejs-pdfviewer
+        #pdfViewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        style="height:650px;display:block">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  imports: [PdfViewerModule],
+  providers: [
+    ToolbarService,
+    MagnificationService,
+    NavigationService,
+    AnnotationService,
+    LinkAnnotationService,
+    ThumbnailViewService,
+    BookmarkViewService,
+    TextSelectionService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService
+  ]
+})
+export class AppComponent {
+
+  @ViewChild('pdfViewer')
+  public pdfViewer!: PdfViewerComponent;
+
+  public document: string =
+    'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+
+  public resource: string =
+    'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+  public editComment(): void {
+    const viewer = this.pdfViewer;
+    if (!viewer) return;
+    const annot = viewer.annotationCollection?.[0];
+    if (annot) {
+      annot.commentType = 'edit';
+      annot.note = 'Edited Comment';
+      viewer.annotation.editAnnotation(annot);
+      console.log(viewer.annotationCollection?.[0]);
+    }
+  }
+
+  public editReply(): void {
+    const viewer = this.pdfViewer;
+    if (!viewer) return;
+    const annot = viewer.annotationCollection?.[0];
+    if (annot) {
+      annot.commentType = 'edit';
+      annot.replyComment = ['Edited Reply Comment'];
+      viewer.annotation.editAnnotation(annot);
+      console.log(viewer.annotationCollection?.[0]);
+    }
+  }
+}
+
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+
+import { Component, ViewChild } from '@angular/core';
+import {
+  PdfViewerComponent,
+  PdfViewerModule,
+  ToolbarService,
+  MagnificationService,
+  NavigationService,
+  AnnotationService,
+  LinkAnnotationService,
+  ThumbnailViewService,
+  BookmarkViewService,
+  TextSelectionService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div class="content-wrapper">
+      <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <button (click)="editComment()">Edit Comments</button>
+        <button (click)="editReply()">Edit Reply</button>
+      </div>
+      <ejs-pdfviewer
+        #pdfViewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [serviceUrl]="serviceUrl"
+        style="height:650px;display:block">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  imports: [PdfViewerModule],
+  providers: [
+    ToolbarService,
+    MagnificationService,
+    NavigationService,
+    AnnotationService,
+    LinkAnnotationService,
+    ThumbnailViewService,
+    BookmarkViewService,
+    TextSelectionService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService
+  ]
+})
+export class AppComponent {
+
+  @ViewChild('pdfViewer')
+  public pdfViewer!: PdfViewerComponent;
+
+  public document: string =
+    'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+
+  public serviceUrl: string = 'YOUR_SERVICE_URL';
+
+  public editComment(): void {
+    const viewer = this.pdfViewer;
+    if (!viewer) return;
+    const annot = viewer.annotationCollection?.[0];
+    if (annot) {
+      annot.commentType = 'edit';
+      annot.note = 'Edited Comment';
+      viewer.annotation.editAnnotation(annot);
+      console.log(viewer.annotationCollection?.[0]);
+    }
+  }
+
+  public editReply(): void {
+    const viewer = this.pdfViewer;
+    if (!viewer) return;
+    const annot = viewer.annotationCollection?.[0];
+    if (annot) {
+      annot.commentType = 'edit';
+      annot.replyComment = ['Edited Reply Comment'];
+      viewer.annotation.editAnnotation(annot);
+      console.log(viewer.annotationCollection?.[0]);
+    }
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Read comments added by users
 
 Comments added to the PDF document can be read using the annotation's `comments` property.
 
 The following example logs comments in response to a button click.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight ts tabtitle="Standalone" %}
 
-```html
-<button (click)="checkComments()">Check the Comments</button>
-<!--Render PDF Viewer component-->
-<ejs-pdfviewer id="pdfViewer"
-               [documentPath]='document'
-               style="height:640px;display:block">
-</ejs-pdfviewer>
+import { Component, ViewChild } from '@angular/core';
+import {
+  PdfViewerComponent,
+  PdfViewerModule,
+  ToolbarService,
+  MagnificationService,
+  NavigationService,
+  AnnotationService,
+  LinkAnnotationService,
+  ThumbnailViewService,
+  BookmarkViewService,
+  TextSelectionService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService
+} from '@syncfusion/ej2-angular-pdfviewer';
 
-```
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+@Component({
+  selector: 'app-root',
+  template: `
+    <div class="content-wrapper">
+      <div style="margin-bottom: 12px;">
+        <button (click)="checkComments()">Check the Comments</button>
+      </div>
+      <ejs-pdfviewer
+        #pdfViewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        style="height:650px;display:block">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  imports: [PdfViewerModule],
+  providers: [
+    ToolbarService,
+    MagnificationService,
+    NavigationService,
+    AnnotationService,
+    LinkAnnotationService,
+    ThumbnailViewService,
+    BookmarkViewService,
+    TextSelectionService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService
+  ]
+})
+export class AppComponent {
 
-```html
-<button (click)="checkComments()">Check the Comments</button>
-<!--Render PDF Viewer component-->
-<ejs-pdfviewer id="pdfViewer"
-               [serviceUrl]='service'
-               [documentPath]='document'
-               style="height:640px;display:block">
-</ejs-pdfviewer>
+  @ViewChild('pdfViewer')
+  public pdfViewer!: PdfViewerComponent;
 
-```
-{% endhighlight %}
-{% endtabs %}
+  public document: string =
+    'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 
+  public resource: string =
+    'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
-```typescript
-//Method to check the comments added in the PDF document.
-checkComments(){
-  var pdfviewer = (<any>document.getElementById("pdfViewer")).ej2_instances[0];
-  var annotationCollections = pdfviewer.annotationCollection;
-  for (var x = 0; x < annotationCollections.length; x++) {
-    //Prints the annotation id in the console window.
-    console.log(annotationCollections[x].annotationId);
-    var comments = annotationCollections[x].comments;
-    for (var y = 0; y < comments.length; y++) {
-      var comment = comments[y];
-      //Prints the PDF document's comments in the console window.
-      console.log("comment" + "[" + y + "] :" + comment.note);
+  public checkComments(): void {
+    const viewer = this.pdfViewer;
+    if (!viewer) return;
+
+    const annotationCollections = viewer.annotationCollection || [];
+    for (let x = 0; x < annotationCollections.length; x++) {
+      console.log('annotation Id : ' + annotationCollections[x].annotationId);
+      const comments = annotationCollections[x].comments || [];
+      for (let y = 0; y < comments.length; y++) {
+        const comment = comments[y];
+        console.log('comment[' + y + '] : ' + comment.note);
+      }
+      const note = annotationCollections[x].note;
+      console.log('note : ' + note);
     }
-    var note = annotationCollections[x].note;
-    console.log("note : " + note);
   }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Annotations/How%20to%20check%20the%20comments)
+## Annotation and Review Workflow Patterns
+
+The PDF Viewer supports review workflows by combining [annotations](../annotation/overview), [comments](../annotation/comments), and threaded [replies](../annotation/comments#add-comments-and-replies). These capabilities help reviewers mark content, discuss changes, and navigate feedback efficiently during document review cycles.
+
+### Understanding Review Workflows
+
+Annotations act as visual markers during review—such as [highlights](../annotation/annotation-types/highlight-annotation), [shapes](../annotation/annotation-types/area-annotation), [stamps](../annotation/annotation-types/stamp-annotation), or [sticky notes](../annotation/annotation-types/sticky-notes) while [comments](../annotation/comments) provide a communication space attached to each annotation. Multiple reviewers can participate in these annotation threads, making the review process more organized and traceable.
+
+During a review cycle, users typically:
+
+- Add annotations to indicate a change, highlight text, or mark an issue.
+![Add Annotations](../images/text_markup_annotation.png)
+- Use comments to explain the purpose of the annotation.
+![Comments](../images/commentsedit.png)
+- Reply to comments to maintain a review discussion thread.
+- Navigate between comments and related annotations for clarity.
+- Finalize review by addressing or resolving each thread.
+
+### Using Comments in Review Workflows
+
+Comments are a key part of review workflows. They allow reviewers to communicate directly on annotations without altering the underlying PDF content.
+
+Key behaviors in review workflows:
+
+- Comments allow multiple reviewers to discuss changes directly on annotations.
+ - Replies help maintain a threaded discussion during review.
+- Selecting a comment highlights the related annotation, improving navigation.
+- Comments can be combined with Sticky Notes, Highlights, Shapes, Stamps, and other annotation types.
+
+![Comments panel during review workflow](../images/commentsedit.png)
+
+### Why Review Workflow Patterns Matter
+
+Review workflows help teams:
+
+- Centralize feedback inside the PDF document itself.
+- Maintain a clear discussion history on each annotation.
+- Avoid duplicated or conflicting feedback.
+- Navigate long documents quickly using comment threads.
+ - Improve clarity when multiple reviewers participate.
+
+These review patterns are especially useful in content editing, design review, legal documentation, product validation, and quality control workflows.
+
+## See also
+- [Annotation Overview](../overview)  
+- [Annotation Types](../annotation/annotation-types/area-annotation)  
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)  
+- [Create and Modify Annotation](../annotation/create-modify-annotation)  
+- [Customize Annotation](../annotation/customize-annotation)  
+- [Remove Annotation](../annotation/delete-annotation)  
+- [Handwritten Signature](../annotation/signature-annotation)  
+- [Export and Import Annotation](../annotation/export-import/export-annotation)  
+- [Annotation Permission](../annotationsannotation-permission)  
+- [Annotation in Mobile View](../annotation/annotations-in-mobile-view)  
+- [Annotation Events](../annotation/annotation-event)  
+- [Annotation API](../annotation/annotations-api)

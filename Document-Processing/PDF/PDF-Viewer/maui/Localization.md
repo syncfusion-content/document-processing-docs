@@ -157,11 +157,15 @@ The following table contains the default name and value details used in the SfPd
 </tr>
 <tr> 
 <td>AddYourComment</td>
-<td>Add comment</td>
+<td>Add a comment...</td>
 </tr>
 <tr>
 <td>Annotations</td>
 <td>Annotations</td>
+</tr>
+<tr>
+<td>AnnotationSeparator</td>
+<td>Annotation Separator</td>
 </tr>
 <tr>
 <td>Apply</td>
@@ -180,12 +184,20 @@ The following table contains the default name and value details used in the SfPd
 <td>Back</td>
 </tr>
 <tr>
+<td>BackIconSeparator</td>
+<td>Back Icon Separator</td>
+</tr>
+<tr>
 <td>Bookmarks</td>
 <td>Bookmarks</td>
 </tr>
 <tr>
 <td>Border</td>
 <td>Border</td>
+</tr>
+<tr>
+<td>BorderStyle</td>
+<td>Border Style</td>
 </tr>
 <tr>
 <td>Cancel</td>
@@ -218,6 +230,10 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>ColorPicker</td>
 <td>Color picker</td>
+</tr>
+<tr>
+<td>ColorPickerSeparator</td>
+<td>Color Picker Separator</td>
 </tr>
 <tr>
 <td>Comment</td>
@@ -262,6 +278,10 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>Delete</td>
 <td>Delete</td>
+</tr>
+<tr>
+<td>DeleteSeparator</td>
+<td>Delete Separator</td>
 </tr>
 <tr>
 <td>DocumentLoadFailed</td>
@@ -321,7 +341,7 @@ The following table contains the default name and value details used in the SfPd
 </tr>
 <tr> 
 <td>EditYourComment</td> 
-<td>Edit comment</td> 
+<td>Edit a comment...</td> 
 </tr>
 <tr>
 <td>Enter</td>
@@ -444,6 +464,10 @@ The following table contains the default name and value details used in the SfPd
 <td>More items</td>
 </tr>
 <tr>
+<td>MoreOptionSeparator</td>
+<td>More Option Separator</td>
+</tr>
+<tr>
 <td>NewParagraph</td>
 <td>New Paragraph</td>
 </tr>
@@ -528,6 +552,10 @@ The following table contains the default name and value details used in the SfPd
 <td>Page count</td>
 </tr>
 <tr>
+<td>PageCountSeparator</td>
+<td>Page Count Separator</td>
+</tr>
+<tr>
 <td>PageLayoutMode</td>
 <td>Page layout mode</td>
 </tr>
@@ -568,6 +596,10 @@ The following table contains the default name and value details used in the SfPd
 <td>Print</td>
 </tr>
 <tr>
+<td>PrintSeparator</td>
+<td>Print Separator</td>
+</tr>
+<tr>
 <td>Properties</td>
 <td>Properties</td>
 </tr>
@@ -580,12 +612,20 @@ The following table contains the default name and value details used in the SfPd
 <td>Redacted area fill color</td> 
 </tr>
 <tr> 
-<td>RedactionMarkAppearance</td> 
-<td>Redaction mark appearance</td> 
+<td>Redaction</td>
+<td>Redaction</td>
 </tr>
-<tr> 
+<tr>
+<td>RedactionMarkAppearance</td>
+<td>Redaction mark appearance</td>
+</tr>
+<tr>
 <td>RedactionProperties</td>
 <td>Redaction properties</td> 
+</tr>
+<tr>
+<td>RedactionSeparator</td>
+<td>Redaction Separator</td>
 </tr>
 <tr>
 <td>RedactPages</td>
@@ -610,6 +650,10 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>Replies</td>
 <td>Replies</td>
+</tr>
+<tr>
+<td>Reply</td>
+<td>Reply</td>
 </tr>
 <tr>
 <td>RequestPassword</td>
@@ -696,6 +740,10 @@ The following table contains the default name and value details used in the SfPd
 <td>Text markups</td>
 </tr>
 <tr>
+<td>TextPropertySeparator</td>
+<td>Text Property Separator</td>
+</tr>
+<tr>
 <td>Thickness</td>
 <td>Thickness</td>
 </tr>
@@ -731,13 +779,21 @@ The following table contains the default name and value details used in the SfPd
 <td>UploadImage</td>
 <td>Upload an image</td>
 </tr>
-<tr> 
-<td>UseOverlayText</td> 
-<td>Use overlay text</td> 
+<tr>
+<td>UseOverlayText</td>
+<td>Use overlay text</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>Warning</td>
 </tr>
 <tr>
 <td>XFAFormNotSupportedMessage</td>
 <td>This PDF cannot be loaded because it contains an XFA form.</td>
+</tr>
+<tr>
+<td>ZoomIconSeparator</td>
+<td>Zoom Icon Separator</td>
 </tr>
 <tr>
 <td>ZoomMode</td>

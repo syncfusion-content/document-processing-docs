@@ -12,6 +12,9 @@ Essential<sup>&reg;</sup> PDF provides support to add barcodes to the PDF docume
 * One-dimensional barcodes, including Code 39 and Code 32.
 * Two-dimensional barcodes, such as QR Code, Data Matrix, and PDF417.
 
+To quickly get started, working with QR codes in PDF Documents using the .NET PDF Library. Watch this video:
+{% youtube "https://www.youtube.com/watch?v=hSkFuJEbPXw" %}
+
 ## Adding a one dimensional barcode to the PDF document
 
 The below code example shows how to add Code39 barcode using the [PdfCode39Barcode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfCode39Barcode.html) class to a PDF document.
