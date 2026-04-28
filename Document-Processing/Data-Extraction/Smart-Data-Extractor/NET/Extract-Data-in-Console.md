@@ -40,13 +40,13 @@ The following steps illustrates Extracting Data from PDF document in console app
 **Steps to Extract Data from PDF using .NET Framework**
 
 Step 1: Create a new C# Console Application (.NET Framework) project.
-![Console Application creation](GettingStarted_images/ConsoleFramework.png)
+![Console Application creation](GettingStarted_images/ConsoleFramework_ProjectCreation.png)
 
 Step 2: Name the project.
-![Name the application](GettingStarted_images/ConsoleFrameworkName.png)
+![Name the application](GettingStarted_images/ConsoleFramework_ProjectName.png)
 
 Step 3: Install the [Syncfusion.SmartDataExtractor.WinForms](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.WinForms/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
-![NET Framework NuGet package](GettingStarted_images/ConsoleNuget.png)
+![NET Framework NuGet package](GettingStarted_images/ConsoleNuget_DataExtractor.png)
 
 Step 4: Include the following namespaces in the *Program.cs*.
 

@@ -15,14 +15,14 @@ The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to ex
 ## Steps to Extract data from PDF document in ASP.NET MVC
 
 Step 1: Create a new C# ASP.NET Web Application (.NET Framework) project.
-![Create ASP.NET MVC application](GettingStarted_images/MVC_Creation.png)   
+![Create ASP.NET MVC application](GettingStarted_images/MVC_ProjectCreation.png)   
 
 Step 2: In the project configuration windows, name your project and select Create.
-![Configuration window1](GettingStarted_images/MVC_Data1.png)   
-![Configuration window2](GettingStarted_images/MVC2.png)   
+![Configuration window1](GettingStarted_images/MVC_Data_ProjectCreation.png)   
+![Configuration window2](GettingStarted_images/CreateASPNetMVCProject_DataExtractor.png)   
 
 Step 3: Install [Syncfusion.SmartDataExtractor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.AspNet.Mvc5)  NuGet package as reference to your .NET applications from [NuGet.org](https://www.nuget.org/).
-![NuGet package installation](GettingStarted_images/MVC_Data3.png)  
+![NuGet package installation](GettingStarted_images/MVC_DataExtractorNuget.png)  
 
 Step 4: Include the following namespaces in the HomeController.cs file.
 

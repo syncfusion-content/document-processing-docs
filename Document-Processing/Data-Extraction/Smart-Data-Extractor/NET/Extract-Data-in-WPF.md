@@ -15,13 +15,13 @@ The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to ex
 ## Steps to Extract Data from PDF document in WPF
 
 Step 1: Create a new WPF application project.
-![Create WPF sample](GettingStarted_images/CreationWPF.png)  
+![Create WPF sample](GettingStarted_images/WPF_ProjectCreation.png)  
 
 In project configuration window, name your project and select Create.
-![WPF configuration window](GettingStarted_images/WPFDataName.png)
+![WPF configuration window](GettingStarted_images/WPF_Data_ProjectName.png)
 
 Step 2: Install the [Syncfusion.SmartDataExtractor.WPF](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.WPF) NuGet package as a reference to your WPF application [NuGet.org](https://www.nuget.org/).
-![NuGet package installation](GettingStarted_images/WPFDataNuget.png)
+![NuGet package installation](GettingStarted_images/WPF_Nuget_DataExtractor.png)
 
 
 Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
