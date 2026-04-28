@@ -33,7 +33,7 @@ cd my-app
 
 ### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/~syncfusionorg).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
 
 
 To install the Document Editor component, use the following command:
@@ -227,3 +227,5 @@ The Document Editor component requires server-side interactions for the followin
 >Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
+
+N> You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-document-editor-component).

@@ -272,5 +272,5 @@ To load an existing document during control initialization, use the following co
 {% endhighlight %}
 {% endtabs %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
+N> You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
 
