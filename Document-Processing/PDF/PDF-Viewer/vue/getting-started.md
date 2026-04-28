@@ -83,7 +83,7 @@ In this example, the `Material` theme is applied using CSS styles available in t
 
 Add the PDF Viewer component to the **src/App.vue** file as shown below.
 
-1\. Import and register the PDF Viewer component in the `script` section of the **src/App.vue** file.
+Import and register the PDF Viewer component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -98,7 +98,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 {% endhighlight %}
 {% endtabs %}
 
-2. In the `template` section, define the PDF Viewer component with the `documentPath` and `resourceUrl` properties.
+In the `template` section, define the PDF Viewer component with the `documentPath` and `resourceUrl` properties.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -116,7 +116,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 {% endhighlight %}
 {% endtabs %}
 
-3\. Declare the bound `resourceUrl` and `documentPath` properties in the `script` section.
+Declare the bound `resourceUrl` and `documentPath` properties in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
