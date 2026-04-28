@@ -13,7 +13,7 @@ Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, an
 
 ## Steps to create an ASP.NET Core DOCX Editor
 
-This section briefly explains about how to include [ASP.NET Core Document Editor](https://www.syncfusion.com/aspnet-core-ui-controls/word-processor) control in your ASP.NET Core application using Visual Studio.
+This section briefly explains about how to include [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) control in your ASP.NET Core application using Visual Studio.
 
 ### Prerequisites
 
@@ -109,4 +109,4 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![ASP.NET Core DocumentEditor Control](images/documenteditor-control.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/DocumentEditor/ASP.NET%20Core%20Tag%20Helper%20Examples).
+N> You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/DocumentEditor/ASP.NET%20Core%20Tag%20Helper%20Examples).
