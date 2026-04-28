@@ -11,11 +11,11 @@ An interactive form, sometimes referred to as an AcroForm, is a collection of fi
 
 ## Creating a new PDF form
 
-Syncfusion<sup>&reg;</sup> PDF allows you to create and manage form in PDF document by using [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) class. The [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) class represents the entire field collection of the form.
+Syncfusion<sup>&reg;</sup> PDF allows you to create and manage form in PDF document by using [PdfForm](https://ej2.syncfusion.com/documentation/api/pdf/pdfform) class. The [PdfForm](https://ej2.syncfusion.com/documentation/api/pdf/pdfform) class represents the entire field collection of the form.
 
 ### Adding the text box field 
 
-This example demonstrates how to add a text box field to a PDF document using the [PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) class. A text box field allows users to enter text data in interactive PDF forms.
+This example demonstrates how to add a text box field to a PDF document using the [PdfTextBoxField](https://ej2.syncfusion.com/documentation/api/pdf/pdftextboxfield) class. A text box field allows users to enter text data in interactive PDF forms.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -81,7 +81,7 @@ document.destroy();
 
 ### Adding the combo box field
 
-This example demonstrates how to add a combo box field to a PDF document using the [PdfComboBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfComboBoxField.html) class. A combo box field provides a drop-down list for users to select predefined options.
+This example demonstrates how to add a combo box field to a PDF document using the [PdfComboBoxField](https://ej2.syncfusion.com/documentation/api/pdf/pdfcomboboxfield) class. A combo box field provides a drop-down list for users to select predefined options.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -157,7 +157,7 @@ document.destroy();
 
 ### Adding the radio button field
 
-This example demonstrates how to add a radio button field to a PDF document using the [PdfRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListField.html) class. Radio buttons allow users to select one option from a group of choices.
+This example demonstrates how to add a radio button field to a PDF document using the [PdfRadioButtonListField](https://ej2.syncfusion.com/documentation/api/pdf/pdfradiobuttonlistfield) class. Radio buttons allow users to select one option from a group of choices.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -223,7 +223,7 @@ document.destroy();
 
 ### Adding the list box field
 
-This example demonstrates how to add a list box field to a PDF document using the [PdfListBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfListBoxField.html) class. A list box field displays multiple options, allowing users to select one or more items.
+This example demonstrates how to add a list box field to a PDF document using the [PdfListBoxField](https://ej2.syncfusion.com/documentation/api/pdf/pdflistboxfield) class. A list box field displays multiple options, allowing users to select one or more items.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -301,7 +301,7 @@ document.destroy();
 
 ### Adding the check box field
 
-This example demonstrates how to add a check box field to a PDF document using the [PdfCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCheckBoxField.html) class. Check boxes allow users to select or deselect options in a form.
+This example demonstrates how to add a check box field to a PDF document using the [PdfCheckBoxField](https://ej2.syncfusion.com/documentation/api/pdf/pdfcheckboxfield) class. Check boxes allow users to select or deselect options in a form.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -363,7 +363,7 @@ document.destroy();
 
 ### Adding the signature field
 
-This example demonstrates how to add a signature field to a PDF document using the [PdfSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSignatureField.html) class. A signature field enables users to digitally sign the PDF document.
+This example demonstrates how to add a signature field to a PDF document using the [PdfSignatureField](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield) class. A signature field enables users to digitally sign the PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -431,7 +431,7 @@ document.destroy();
 
 ### Adding the button field 
 
-This example demonstrates how to add a button field to a PDF document using the [PdfButtonField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfButtonField.html) class. Buttons can be configured to perform actions such as submitting a form or triggering JavaScript.
+This example demonstrates how to add a button field to a PDF document using the [PdfButtonField](https://ej2.syncfusion.com/documentation/api/pdf/pdfbuttonfield) class. Buttons can be configured to perform actions such as submitting a form or triggering JavaScript.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -507,7 +507,7 @@ Syncfusion<sup>&reg;</sup> PDF allows you to fill the form fields using PdfField
 
 ### Filling the text box field
 
-This example demonstrates how to fill a text box field in a PDF document using the [text](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html#Syncfusion_Pdf_Interactive_PdfTextBoxField_Text) property of the [PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) class. The following code snippet illustrates how to set the text value for the field.
+This example demonstrates how to fill a text box field in a PDF document using the [text](https://ej2.syncfusion.com/documentation/api/pdf/pdftextboxfield#get-text-string) property of the [PdfTextBoxField](https://ej2.syncfusion.com/documentation/api/pdf/pdftextboxfield) class. The following code snippet illustrates how to set the text value for the field.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -551,7 +551,7 @@ document.destroy();
 
 ### Filling the combo box field
 
-This example demonstrates how to fill a combo box field in a PDF document using the `selectedIndex` property of the [PdfComboBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfComboBoxField.html) class. The following code snippet shows how to change the selected index in a combo box.
+This example demonstrates how to fill a combo box field in a PDF document using the [selectedIndex](https://ej2.syncfusion.com/documentation/api/pdf/pdfcomboboxfield#get-selectedindex-number---number) property of the [PdfComboBoxField](https://ej2.syncfusion.com/documentation/api/pdf/pdfcomboboxfield) class. The following code snippet shows how to change the selected index in a combo box.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -595,7 +595,7 @@ document.destroy();
 
 ### Filling the radio button field
 
-This example demonstrates how to fill a radio button field in a PDF document using the [selectedIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListField.html#Syncfusion_Pdf_Interactive_PdfRadioButtonListField_SelectedIndex) property of the [PdfRadioButtonListField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRadioButtonListField.html) class. The following code snippet illustrates how to change the selected index in a radio button.
+This example demonstrates how to fill a radio button field in a PDF document using the [selectedIndex](https://ej2.syncfusion.com/documentation/api/pdf/pdfcomboboxfield#get-selectedindex-number---number) property of the [PdfRadioButtonListField](https://ej2.syncfusion.com/documentation/api/pdf/pdfradiobuttonlistfield) class. The following code snippet illustrates how to change the selected index in a radio button.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -639,7 +639,7 @@ document.destroy();
 
 ### Filling the list box field
 
-This example demonstrates how to fill a list box field in a PDF document using the `selectedIndex` property of the [PdfLoadedListBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedListBoxField.html) class. The following code snippet shows how to change the selected index in a list box.
+This example demonstrates how to fill a list box field in a PDF document using the [selectedIndex](https://ej2.syncfusion.com/documentation/api/pdf/pdflistboxfield#get-selectedindex-number---number) property of the [PdfListBoxField](https://ej2.syncfusion.com/documentation/api/pdf/pdflistboxfield) class. The following code snippet shows how to change the selected index in a list box.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -683,7 +683,7 @@ document.destroy();
 
 ### Filling the check Box field
 
-This example demonstrates how to fill a check box field in a PDF document using the [Checked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCheckBoxField.html#Syncfusion_Pdf_Interactive_PdfCheckBoxField_Checked) property of the [PdfCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfCheckBoxField.html) class. The following code snippet illustrates how to mark a checkbox as selected.
+This example demonstrates how to fill a check box field in a PDF document using the [Checked](https://ej2.syncfusion.com/documentation/api/pdf/pdfcheckboxfield#get-checked-boolean) property of the [PdfCheckBoxField](https://ej2.syncfusion.com/documentation/api/pdf/pdfcheckboxfield) class. The following code snippet illustrates how to mark a checkbox as selected.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -727,7 +727,7 @@ document.destroy();
 
 ### Filling the signature field
 
-This example demonstrates how to fill a signature field in a PDF document using the [PdfSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSignatureField.html) class. The following code snippet illustrates how to create a signature using PFX data and assign it to the signature field.
+This example demonstrates how to fill a signature field in a PDF document using the [PdfSignatureField](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield) class. The following code snippet illustrates how to create a signature using PFX data and assign it to the signature field.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -773,7 +773,7 @@ document.destroy();
 
 ### Modifying the existing form field in PDF document
 
-This example demonstrates how to modify an existing form field in a PDF document using the [PdfTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html) class. The following code snippet illustrates how to update the text value, alignment, and default value of a text box field.
+This example demonstrates how to modify an existing form field in a PDF document using the [PdfTextBoxField](https://ej2.syncfusion.com/documentation/api/pdf/pdftextboxfield) class. The following code snippet illustrates how to update the text value, alignment, and default value of a text box field.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -821,7 +821,7 @@ document.destroy();
 
 ## Ordering form fields
 
-This example demonstrates how to organize form fields in an existing PDF document using the [PdfFormFieldsTabOrder](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfFormFieldsTabOrder.html). This sample ensures that fields follow a specific tab order, improving navigation and user experience.
+This example demonstrates how to organize form fields in an existing PDF document using the [PdfFormFieldsTabOrder](https://ej2.syncfusion.com/documentation/api/pdf/pdfformfieldstaborder). This sample ensures that fields follow a specific tab order, improving navigation and user experience.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -917,7 +917,7 @@ document. Destroy();
 
 ## Field Auto Naming
 
-To prevent grouping when adding fields with the same name, you can enable the [fieldAutoNaming](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html#Syncfusion_Pdf_Interactive_PdfForm_FieldAutoNaming) property of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) class. Setting fieldAutoNaming to true ensures that each field gets a unique name internally, even if you specify the same name during creation.
+To prevent grouping when adding fields with the same name, you can enable the [fieldAutoNaming](https://ej2.syncfusion.com/documentation/api/pdf/pdfform#get-fieldautonaming-boolean) property of [PdfForm](https://ej2.syncfusion.com/documentation/api/pdf/pdfform) class. Setting fieldAutoNaming to true ensures that each field gets a unique name internally, even if you specify the same name during creation.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1021,7 +1021,7 @@ document.destroy();
 
 ## Removing the form fields from existing PDF document
 
-This example demonstrates how to remove items from an existing form field in a PDF document using the `remove()` method of the [PdfField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfField.html) class. The following code snippet illustrates how to access a form field and remove its first item.
+This example demonstrates how to remove items from an existing form field in a PDF document using the [removeItem()](https://ej2.syncfusion.com/documentation/api/pdf/pdffield#removeitem) method of the [PdfField](https://ej2.syncfusion.com/documentation/api/pdf/pdffield) class. The following code snippet illustrates how to access a form field and remove its first item.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1031,8 +1031,8 @@ import {PdfDocument, PdfField} from '@syncfusion/ej2-pdf';
 let document: PdfDocument = new PdfDocument(data);
 // Access the form field at index 0
 let field: PdfField = document.form.fieldAt(0);
-// Remove the form field
-document.form.removeField(field);
+// Remove the first item of the form field
+field.removeItem(field.itemAt(0));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -1045,8 +1045,8 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Access the form field at index 0
 var field = document.form.fieldAt(0);
-// Remove the form field
-document.form.removeField(field);
+// Remove the first item of the form field
+field.removeItem(field.itemAt(0));
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -1131,7 +1131,7 @@ document.destroy();
 
 ## Importing form fields data
 
-This example demonstrates how to import form data from an FDF file into a PDF document using the [importFormData](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportData_System_IO_Stream_Syncfusion_Pdf_Parsing_ImportFormSettings_) method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
+This example demonstrates how to import form data from an FDF file into a PDF document using the `importFormData` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1163,7 +1163,7 @@ document.destroy();
 
 ## Exporting form fields data
 
-This example demonstrates how to export form data from a PDF document to an FDF file using the [exportFormData](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ExportData_System_IO_Stream_Syncfusion_Pdf_Parsing_ExportFormSettings_) method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
+This example demonstrates how to export form data from a PDF document to an FDF file using the `exportFormData` method. The DataFormat enum specifies the format of the annotation data being imported, such as FDF, XFDF, JSON, or XML.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

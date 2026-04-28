@@ -11,7 +11,7 @@ The PDF provides support to add and format text in PDF documents using various f
 
 ## Drawing text in a new document
 
-This example demonstrates how to draw text in a new PDF document using the [drawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The method allows you to specify the text content, font, brush, and position to render the text on a page within the document.
+This example demonstrates how to draw text in a new PDF document using the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. The method allows you to specify the text content, font, brush, and position to render the text on a page within the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -54,7 +54,7 @@ N>  Due to the inherent limitations of the PDF specification and the rendering c
 
 ## The importance of saving and restoring graphics state in PDF content rendering
 
-This example demonstrates the importance of saving and restoring the graphics state when rendering PDF content using the [save](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Save) and [restore](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_Restore_Syncfusion_Pdf_Graphics_PdfGraphicsState_) methods of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. These methods ensure that any transformations, such as scaling, rotation, or color changes, applied to the graphics context do not affect subsequent drawing operations, maintaining consistent layout and design.
+This example demonstrates the importance of saving and restoring the graphics state when rendering PDF content using the [save](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_Save) and [restore](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_Restore_Syncfusion_Pdf_Graphics_PdfGraphicsState_) methods of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. These methods ensure that any transformations, such as scaling, rotation, or color changes, applied to the graphics context do not affect subsequent drawing operations, maintaining consistent layout and design.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -107,7 +107,7 @@ document.destroy();
 
 ## Drawing text in an existing document
 
-This example demonstrates how to draw text in an existing PDF document using the [drawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The method allows you to specify the text content, font, brush, and position to render the text on a selected page within the document.
+This example demonstrates how to draw text in an existing PDF document using the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. The method allows you to specify the text content, font, brush, and position to render the text on a selected page within the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -152,7 +152,7 @@ JavaScript PDF allows you to add text to the PDF document using the following ty
 
 ### Draw text using standard fonts
 
-This example demonstrates how to draw text using standard fonts in a PDF document by utilizing the [drawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class along with predefined font types from the [PdfStandardFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStandardFont.html) class. Standard fonts such as Helvetica, TimesRoman, or Courier can be specified to render text with consistent and widely supported typography.
+This example demonstrates how to draw text using standard fonts in a PDF document by utilizing the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class along with predefined font types from the [PdfStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfstandardfont) class. Standard fonts such as Helvetica, TimesRoman, or Courier can be specified to render text with consistent and widely supported typography.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -189,7 +189,7 @@ document.destroy();
 
 ### Draw text using TrueType fonts
 
-This example demonstrates how to draw text using TrueType fonts in a PDF document by utilizing the [drawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class along with a [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html) instance. The TrueType font provides enhanced text rendering with support for custom font styles.
+This example demonstrates how to draw text using TrueType fonts in a PDF document by utilizing the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class along with a [PdfTrueTypeFont](https://ej2.syncfusion.com/documentation/api/pdf/pdftruetypefont) instance. The TrueType font provides enhanced text rendering with support for custom font styles.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -226,7 +226,7 @@ document.destroy();
 
 ### Draw text using CJK fonts
 
-This example demonstrates how to draw text using fonts in a PDF document by utilizing the [drawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfStringFormat_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The fonts provide support for Chinese, Japanese, and Korean characters, ensuring accurate rendering of multilingual text in the document.
+This example demonstrates how to draw text using fonts in a PDF document by utilizing the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. The fonts provide support for Chinese, Japanese, and Korean characters, ensuring accurate rendering of multilingual text in the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -263,7 +263,7 @@ document.destroy();
 
 ## Drawing text using different text alignment
 
-This example demonstrates how to draw text in a PDF document using different text alignment options by utilizing the [PdfStringFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html) class. The alignment can be set through the alignment property, which supports values such as Left, Center, and Right, allowing precise control over the positioning of text within the page or a defined rectangle.
+This example demonstrates how to draw text in a PDF document using different text alignment options by utilizing the [PdfStringFormat](https://ej2.syncfusion.com/documentation/api/pdf/pdfstringformat) class. The alignment can be set through the alignment property, which supports values such as Left, Center, and Right, allowing precise control over the positioning of text within the page or a defined rectangle.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -411,7 +411,7 @@ document.destroy();
 
 ## Embedded font
 
-This example shows how to embed fonts using [embedFont()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_EmbedFonts) method of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) to ensure consistent text rendering across all platforms. The library supports embedding [PdfStandardFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStandardFont.html), [PdfCjkStandardFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfCjkStandardFont.html), and [PdfTrueTypeFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html) for reliable Unicode text display. After embedding, the font can be applied through `PdfFont.getFont()` method of the [PdfFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfFont.html), allowing precise control over size and style. Additionally, using embedded fonts helps reduce overall PDF size, since the font dictionary is not duplicated for each usage—ensuring cleaner and more efficient output.
+This example shows how to embed fonts using [embedFont()](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#embedfont) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) to ensure consistent text rendering across all platforms. The library supports embedding [PdfStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfstandardfont), [PdfCjkStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfcjkstandardfont), and [PdfTrueTypeFont](https://ej2.syncfusion.com/documentation/api/pdf/pdftruetypefont) for reliable Unicode text display. Additionally, using embedded fonts helps reduce overall PDF size, since the font dictionary is not duplicated for each usage—ensuring cleaner and more efficient output.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
