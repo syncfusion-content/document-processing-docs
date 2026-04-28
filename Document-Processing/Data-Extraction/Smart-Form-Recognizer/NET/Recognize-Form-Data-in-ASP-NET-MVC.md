@@ -15,14 +15,14 @@ The Syncfusion<sup>&reg;</sup> Smart Form Recognizer is a deterministic, on‑pr
 ## Steps to Recognize Form Data PDF document in ASP.NET MVC
 
 Step 1: Create a new C# ASP.NET Web Application (.NET Framework) project.
-![Create ASP.NET MVC application](GettingStarted_images/MVC_Creation.png)   
+![Create ASP.NET MVC application](GettingStarted_images/MVC_ProjectCreation_Form.png)   
 
 Step 2: In the project configuration windows, name your project and select Create.
-![Configuration window1](GettingStarted_images/MVC_Form1.png)   
-![Configuration window2](GettingStarted_images/MVC2.png)   
+![Configuration window1](GettingStarted_images/MVC_ProjectName_Form.png)   
+![Configuration window2](GettingStarted_images/CreateASPNetMVCProject_FormRecognizer.png)   
 
 Step 3: Install [Syncfusion.SmartFormRecognizer.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.AspNet.Mvc5)  NuGet package as reference to your .NET applications from [NuGet.org](https://www.nuget.org/).
-![NuGet package installation](GettingStarted_images/MVC_Form3.png)  
+![NuGet package installation](GettingStarted_images/MVC_FormRecognizer_Nuget.png)  
 
 Step 4: Include the following namespaces in the HomeController.cs file.
 

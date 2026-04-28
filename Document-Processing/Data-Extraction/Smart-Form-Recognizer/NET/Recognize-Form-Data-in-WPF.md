@@ -15,13 +15,13 @@ The Syncfusion<sup>&reg;</sup> Smart Form Recognizer is a deterministic, on‑pr
 ## Steps to Recognize Form Data from PDF document in WPF
 
 Step 1: Create a new WPF application project.
-![Create WPF sample](GettingStarted_images/CreationWPF.png)  
+![Create WPF sample](GettingStarted_images/WPF_ProjectCreation_Form.png)  
 
 In project configuration window, name your project and select Create.
-![WPF configuration window](GettingStarted_images/WPFFormName.png)
+![WPF configuration window](GettingStarted_images/WPF_ProjectName_Form.png)
 
 Step 2: Install the [Syncfusion.SmartFormRecognizer.WPF](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.WPF) NuGet package as a reference to your WPF application [NuGet.org](https://www.nuget.org/).
-![NuGet package installation](GettingStarted_images/WPFFormNuget.png)
+![NuGet package installation](GettingStarted_images/WPF_FormRecognizer_Nuget.png)
 
 
 Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
