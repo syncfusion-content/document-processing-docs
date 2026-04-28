@@ -15,13 +15,13 @@ The Syncfusion<sup>&reg;</sup> Smart Table Extractor is a .NET library used to d
 ## Steps to Extract Data from PDF document in WPF
 
 Step 1: Create a new WPF application project.
-![Create WPF sample](GettingStarted_images/CreationWPF.png)  
+![Create WPF sample](GettingStarted_images/WPF_ProjectCreation_TableExtractor.png)  
 
 In project configuration window, name your project and select Create.
-![WPF configuration window](GettingStarted_images/WPFTableName.png)
+![WPF configuration window](GettingStarted_images/WPF_ProjectName_TableExtractor.png)
 
 Step 2: Install the [Syncfusion.SmartTableExtractor.WPF](https://www.nuget.org/packages/Syncfusion.SmartTableExtractor.WPF) NuGet package as a reference to your WPF application [NuGet.org](https://www.nuget.org/).
-![NuGet package installation](GettingStarted_images/WPFTableNuget.png)
+![NuGet package installation](GettingStarted_images/WPF_TableExtractor_Nuget.png)
 
 
 Step 3: Include the following namespaces in the MainWindow.xaml.cs file.

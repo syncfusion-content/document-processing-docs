@@ -40,13 +40,13 @@ The following steps illustrates Extracting Table Data from PDF document in conso
 **Steps to Extract Table Data from PDF using .NET Framework**
 
 Step 1: Create a new C# Console Application (.NET Framework) project.
-![Console Application creation](GettingStarted_images/ConsoleFramework.png)
+![Console Application creation](GettingStarted_images/ConsoleFramework_ProjectCreation_TableExtractor.png)
 
 Step 2: Name the project.
-![Name the application](GettingStarted_images/ConsoleFrameworkCreation.png)
+![Name the application](GettingStarted_images/ConsoleFramework_ProjectName_TableExtractor.png)
 
 Step 3: Install the [Syncfusion.SmartTableExtractor.WinForms](https://www.nuget.org/packages/Syncfusion.SmartTableExtractor.WinForms/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
-![NET Framework NuGet package](GettingStarted_images/ConsoleNuget.png)
+![NET Framework NuGet package](GettingStarted_images/Console_TableExtractor_Nuget.png)
 
 Step 4: Include the following namespaces in the *Program.cs*.
 

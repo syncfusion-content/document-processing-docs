@@ -15,14 +15,14 @@ The Syncfusion<sup>&reg;</sup> Smart Table Extractor is a .NET library used to d
 ## Steps to Extract Table data from PDF document in ASP.NET MVC
 
 Step 1: Create a new C# ASP.NET Web Application (.NET Framework) project.
-![Create ASP.NET MVC application](GettingStarted_images/MVC_Creation.png)   
+![Create ASP.NET MVC application](GettingStarted_images/MVC_ProjectCreation_TableExtractor.png)   
 
 Step 2: In the project configuration windows, name your project and select Create.
-![Configuration window1](GettingStarted_images/MVC_Table1.png)   
-![Configuration window2](GettingStarted_images/MVC2.png)   
+![Configuration window1](GettingStarted_images/MVC_ProjectName_TableExtractor.png)   
+![Configuration window2](GettingStarted_images/CreateASPNetMVCProject_TableExtractor.png)   
 
 Step 3: Install [Syncfusion.SmartTableExtractor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.SmartTableExtractor.AspNet.Mvc5)  NuGet package as reference to your .NET applications from [NuGet.org](https://www.nuget.org/).
-![NuGet package installation](GettingStarted_images/MVC_Table3.png)  
+![NuGet package installation](GettingStarted_images/MVC_TableExtractor_Nuget.png)  
 
 Step 4: Include the following namespaces in the HomeController.cs file.
 
