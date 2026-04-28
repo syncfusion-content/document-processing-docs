@@ -11,7 +11,7 @@ The PDF provides support to create, validate, and manage digital signatures in P
 
 ## Adding a digital signature 
 
-This example demonstrates how to add a digital signature to a PDF document using the `PdfSignature` class. Digital signatures ensure document authenticity and integrity by applying cryptographic standards.
+This example demonstrates how to add a digital signature to a PDF document using the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. Digital signatures ensure document authenticity and integrity by applying cryptographic standards.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -226,7 +226,7 @@ document.destroy();
 
 ## Create Signature with Public Certificates for External Signing
 
-This example demonstrates how to create a new PDF signature using the `PdfSignature` class with public certificates for external signing. External signing allows you to implement custom signing logic outside the PDF library while maintaining compliance with cryptographic standards.
+This example demonstrates how to create a new PDF signature using the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class with public certificates for external signing. External signing allows you to implement custom signing logic outside the PDF library while maintaining compliance with cryptographic standards.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -666,7 +666,7 @@ document.destroy();
 
 ## Retrieve the signed date of a PDF signature
 
-This example demonstrates how to retrieve the signed date of a PDF signature using the `getSignedDate()` method of the `PdfSignature` class. This property helps identify when the document was digitally signed.
+This example demonstrates how to retrieve the signed date of a PDF signature using the `getSignedDate()` method of the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. This property helps identify when the document was digitally signed.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -710,7 +710,7 @@ document.destroy();
 
 ## Get Certificate Information from a PDF Signature
 
-This example demonstrates how to retrieve the certificate information of a PDF signature using the `getCertificateInformation()` method of the `PdfSignature` class. This information includes details about the signer's certificate used for digital signing.
+This example demonstrates how to retrieve the certificate information of a PDF signature using the `getCertificateInformation()` method of the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. This information includes details about the signer's certificate used for digital signing.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -766,7 +766,7 @@ document.destroy();
 
 ## Get Digital Signature Configuration Options
 
-This example demonstrates how to retrieve the configuration options of a digital signature in a PDF document using the `getSignatureOptions()` method of the `PdfSignature` class. These options include details such as the cryptographic standard and digest algorithm used for signing.
+This example demonstrates how to retrieve the configuration options of a digital signature in a PDF document using the `getSignatureOptions()` method of the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. These options include details such as the cryptographic standard and digest algorithm used for signing.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -846,7 +846,7 @@ document.destroy();
 
 ## Replace Empty Signature with Externally Signed Data
 
-This example demonstrates how to replace an empty signature field in a PDF document with externally signed data using the `replaceEmptySignature()` method of the `PdfSignature` class. This method allows embedding externally signed content, certificates, and optional timestamp data into the PDF.
+This example demonstrates how to replace an empty signature field in a PDF document with externally signed data using the `replaceEmptySignature()` method of the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. This method allows embedding externally signed content, certificates, and optional timestamp data into the PDF.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -952,7 +952,7 @@ document.destroy();
 
 ## Sign existing signature field
 
-This section explains how to sign an existing unsigned signature field in a PDF using the JavaScript PDF library. You can locate predefined signature fields and apply a digital signature directly by calling `PdfSignatureField.setSignature()` method, without altering the document layout. This is ideal for templates where signature placeholders already exist, allowing you to add digital signatures to the field using a certificate and signature settings.
+This section explains how to sign an existing unsigned signature field in a PDF using the JavaScript PDF library. You can locate predefined signature fields and apply a digital signature directly by calling `setSignature()` method of the [PdfSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSignatureField.html) class, without altering the document layout. This is ideal for templates where signature placeholders already exist, allowing you to add digital signatures to the field using a certificate and signature settings.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1002,7 +1002,7 @@ document.destroy();
 
 ## Remove existing digital signature
 
-This section explains how to remove an existing digital signature from a PDF by using `PdfForm.removeField()` method to delete the signature field entirely. Removing the field clears the signature dictionary, allowing the document to be edited, corrected, or re‑signed as needed. This is useful when preparing a PDF for updates or resolving signature‑related issues.
+This section explains how to remove an existing digital signature from a PDF by using `removeField()` method of [PdfForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfForm.html) class to delete the signature field entirely. Removing the field clears the signature dictionary, allowing the document to be edited, corrected, or re‑signed as needed. This is useful when preparing a PDF for updates or resolving signature‑related issues.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
