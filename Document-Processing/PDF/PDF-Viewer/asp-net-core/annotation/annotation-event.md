@@ -41,7 +41,7 @@ The PDF Viewer component triggers the following annotation and signature events:
 
 The [annotationAdd](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationAdd) event is triggered when an annotation is added to a PDF document's page.
 
-**Event Arguments:** [AnnotationAddEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationAddEventArgs)
+**Event Arguments:** [AnnotationAddEventArgs](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/annotationAddEventArgs)
 
 **Example: Handle annotation add event**
 
@@ -50,28 +50,11 @@ The [annotationAdd](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 annotationAdd="annotationAdded">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function annotationAdded(args) {
-        console.log('Annotation added with ID: ' + args.annotationId);
-        console.log('Annotation type: ' + args.annotationType);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                annotationAdd="annotationAdded">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function annotationAdded(args) {
         console.log('Annotation added with ID: ' + args.annotationId);
@@ -95,27 +78,11 @@ The [annotationDoubleClick](https://help.syncfusion.com/cr/aspnetcore-js2/syncfu
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 annotationDoubleClick="annotationDoubleClicked">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function annotationDoubleClicked(args) {
-        console.log('Annotation double-clicked on page: ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                annotationDoubleClick="annotationDoubleClicked">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function annotationDoubleClicked(args) {
         console.log('Annotation double-clicked on page: ' + args.pageIndex);
@@ -140,27 +107,11 @@ The [annotationMouseLeave](https://help.syncfusion.com/cr/aspnetcore-js2/syncfus
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 annotationMouseLeave="annotationMouseLeaved">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function annotationMouseLeaved(args) {
-        console.log('Annotation mouse leave event is triggered for annotation with ID: ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                annotationMouseLeave="annotationMouseLeaved">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function annotationMouseLeaved(args) {
         console.log('Annotation mouse leave event is triggered for annotation with ID: ' + args.pageIndex);
@@ -183,27 +134,11 @@ The [annotationMouseover](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusi
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 annotationMouseover="annotationMouseovered">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function annotationMouseovered(args) {
-        console.log('Annotation mouse over event is triggered for annotation with ID: ' + args.annotationId);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                annotationMouseover="annotationMouseovered">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function annotationMouseovered(args) {
         console.log('Annotation mouse over event is triggered for annotation with ID: ' + args.annotationId);
@@ -226,27 +161,11 @@ The [annotationMove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 annotationMove="annotationMoved">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function annotationMoved(args) {
-        console.log('Annotation moved. ID: ' + args.annotationId + ' on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                annotationMove="annotationMoved">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function annotationMoved(args) {
         console.log('Annotation moved. ID: ' + args.annotationId + ' on page ' + args.pageIndex);
@@ -269,27 +188,11 @@ The [annotationMoving](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 annotationMoving="annotationMoving">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function annotationMoving(args) {
-        console.log('Annotation is being moved. Current Action: ' + args.currentPosition);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                annotationMoving="annotationMoving">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function annotationMoving(args) {
         console.log('Annotation is being moved. Current Action: ' + args.currentPosition);
@@ -312,28 +215,11 @@ The [annotationPropertiesChange](https://help.syncfusion.com/cr/aspnetcore-js2/s
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 annotationPropertiesChange="annotationPropertiesChanged">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function annotationPropertiesChanged(args) {
-        console.log('Annotation properties changed for ID: ' + args.annotationId);
-        console.log('isThicknessChanged: ' + args.isThicknessChanged);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                annotationPropertiesChange="annotationPropertiesChanged">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function annotationPropertiesChanged(args) {
         console.log('Annotation properties changed for ID: ' + args.annotationId);
@@ -357,27 +243,11 @@ The [annotationRemove](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 annotationRemove="annotationRemoved">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function annotationRemoved(args) {
-        console.log('Annotation removed with ID: ' + args.annotationId);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                annotationRemove="annotationRemoved">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function annotationRemoved(args) {
         console.log('Annotation removed with ID: ' + args.annotationId);
@@ -400,27 +270,11 @@ The [annotationResize](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 annotationResize="annotationResized">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function annotationResized(args) {
-        console.log('Annotation resized. ID: ' + args.annotationId);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                annotationResize="annotationResized">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function annotationResized(args) {
         console.log('Annotation resized. ID: ' + args.annotationId);
@@ -443,27 +297,11 @@ The [annotationSelect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 annotationSelect="annotationSelected">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function annotationSelected(args) {
-        console.log('Annotation selected with ID: ' + args.annotationId);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                annotationSelect="annotationSelected">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function annotationSelected(args) {
         console.log('Annotation selected with ID: ' + args.annotationId);
@@ -486,27 +324,11 @@ The [annotationUnselect](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusio
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 annotationUnselect="annotationUnselected">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function annotationUnselected(args) {
-        console.log('Annotation unselected with ID: ' + args.annotationId);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                                   annotationUnselect="annotationUnselected">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function annotationUnselected(args) {
         console.log('Annotation unselected with ID: ' + args.annotationId);
@@ -529,29 +351,11 @@ The [beforeAddFreeText](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 beforeAddFreeText="beforeAddedFreeText">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function beforeAddedFreeText(args) {
-        console.log('Before adding free text on page: ' + args.pageIndex);
-        // Set args.cancel to true to prevent adding the free text annotation
-        // args.cancel = true;
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                beforeAddFreeText="beforeAddedFreeText">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function beforeAddedFreeText(args) {
         console.log('Before adding free text on page: ' + args.pageIndex);
@@ -578,27 +382,11 @@ The [addSignature](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 addSignature="addSignature">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function addSignature(args) {
-        console.log('Signature added to page: ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                addSignature="addSignature">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function addSignature(args) {
         console.log('Signature added to page: ' + args.pageIndex);
@@ -621,27 +409,11 @@ The [removeSignature](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.e
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 removeSignature="removeSignature">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function removeSignature(args) {
-        console.log('Signature removed from page: ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                removeSignature="removeSignature">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function removeSignature(args) {
         console.log('Signature removed from page: ' + args.pageIndex);
@@ -664,27 +436,11 @@ The [resizeSignature](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.e
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 resizeSignature="resizeSignature">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function resizeSignature(args) {
-        console.log('Signature resized on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                resizeSignature="resizeSignature">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function resizeSignature(args) {
         console.log('Signature resized on page ' + args.pageIndex);
@@ -707,27 +463,11 @@ The [signaturePropertiesChange](https://help.syncfusion.com/cr/aspnetcore-js2/sy
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 signaturePropertiesChange="signaturePropertiesChanged">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function signaturePropertiesChanged(args) {
-        console.log('Signature properties changed on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                signaturePropertiesChange="signaturePropertiesChanged">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function signaturePropertiesChanged(args) {
         console.log('Signature properties changed on page ' + args.pageIndex);
@@ -752,27 +492,11 @@ The following example illustrates how to handle the `signatureSelect` event.
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 signatureSelect="signatureSelected">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function signatureSelected(args) {
-        console.log('Signature selected on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                signatureSelect="signatureSelected">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function signatureSelected(args) {
         console.log('Signature selected on page ' + args.pageIndex);
@@ -797,27 +521,11 @@ The following example illustrates how to handle the `signatureUnselect` event.
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
                 signatureUnselect="signatureUnselected">
     </ejs-pdfviewer>
 </div>
-
-<script>
-    function signatureUnselected(args) {
-        console.log('Signature unselected on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                signatureUnselect="signatureUnselected">
-    </ejs-pdfviewer>
-</div>
-
 <script>
     function signatureUnselected(args) {
         console.log('Signature unselected on page ' + args.pageIndex);

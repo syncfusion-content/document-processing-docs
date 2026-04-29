@@ -1,38 +1,40 @@
 ---
 layout: post
-title: Getting Stared with Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn about getting started with Blazor DocumentEditor component in a Blazor Server app using Visual Studio and more.
+title: Getting Stared with Blazor Server DOCX Editor | Syncfusion
+description: Learn how to create a DOCX Editor in a Blazor Server application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---
 
-# Getting Started with Blazor DocumentEditor Component in Blazor Server
+# Getting Started with Blazor DOCX Editor in Blazor Server
 
-This section explains how to include the [Blazor DocumentEditor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in a Blazor Server app using Visual Studio and Visual Studio Code.
+Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor Server application. 
 
-To get started quickly with the Blazor DocumentEditor component, watch the following video.
+## Steps to create a Blazor Server DOCX Editor
 
-{% youtube "https://www.youtube.com/watch?v=85rMT46LLgY" %}
+This section explains how to include the [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in a Blazor Server app using Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-## Prerequisites
+### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor App in Visual Studio
+### Create a new Blazor Server App in Visual Studio
 
-You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WordProcessor and Themes NuGet in the App
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Nuget packages
 
-To add the **Blazor DocumentEditor** component, open NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then install [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, use the following Package Manager commands.
-
-W> <br/> * The Document Editor is not part of the common package. If you wish to use the Document Editor with other components, install the required individual packages.
-<br/> * Do not use both `Syncfusion.Blazor` and individual NuGet packages ([Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor/)) in the same application. It will throw ambiguous errors while compiling the project.
+To add **Blazor Document Editor** component in the application, follow the steps below.
+ - open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
+ - search and install the following packages
+    - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
+    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+Alternatively, use the following Package Manager commands.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -43,19 +45,19 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages and component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DOCX Editor are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages and component details.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-## Prerequisites
+### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor App in Visual Studio Code
+### Create a new Blazor Server App in Visual Studio Code
 
-You can create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+You can create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc).
 
 Alternatively, you can create a Server application using the following commands in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
@@ -69,11 +71,13 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WordProcessor and Themes NuGet in the App
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Nuget packages
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure the terminal is at the project root directory where the `.csproj` file is located.
-* Run the following commands to install [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+* Run the following command to install 
+    - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
+    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 {% tabs %}
 
@@ -86,13 +90,13 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DOCX Editor are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Services
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DocumentEditor` namespaces.
 
@@ -128,7 +132,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+### Add Themes and Script References
 
 Add the following stylesheet and script to the head section. The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
@@ -145,9 +149,9 @@ Add the following stylesheet and script to the head section. The theme styleshee
 ```
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor DocumentEditor Component
+### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DocumentEditor component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -157,13 +161,13 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DocumentEditor c
 {% endhighlight %}
 {% endtabs %}
 
-Note: By default, the SfDocumentEditorContainer component initializes a SfDocumentEditor instance internally. If you like to use the [`events`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorEvents.html) of SfDocumentEditor component, then you can set [`UseDefaultEditor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_UseDefaultEditor) property as false and define your own SfDocumentEditor instance with event hooks in the application (Razor file).
+### Run the application
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DocumentEditor component in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DocumentEditor component in your default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBpDiLugARSruZb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DocumentEditor](../images/blazor-document-editor.png)" %}
 
-## Load existing document
+### Load an Existing Document
 
 To load an existing document during control initialization, use the following code example, which opens a Word document. Convert it to SFDT and load it in the editor.
 
@@ -201,6 +205,10 @@ To load an existing document during control initialization, use the following co
 {% endhighlight %}
 {% endtabs %}
 
-N> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
 
-![Blazor DocumentEditor](../images/blazor-document-editor-component.png)
+## Video tutorial
+
+To get started quickly with the Blazor Document Editor component, watch the following video.
+
+{% youtube "https://www.youtube.com/watch?v=85rMT46LLgY" %}
