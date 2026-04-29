@@ -205,10 +205,10 @@ To load an existing document during control initialization, use the following co
 {% endhighlight %}
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
+
 ## Video tutorial
 
 To get started quickly with the Blazor Document Editor component, watch the following video.
 
 {% youtube "https://www.youtube.com/watch?v=85rMT46LLgY" %}
-
-N> You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
