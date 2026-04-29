@@ -38,8 +38,6 @@ cd ej2-quickstart
 
 ### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/~syncfusionorg).
-
 The quickstart application is preconfigured with the dependent [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in the `~/package.json` file. Use the following command to install the dependent npm packages:
 
 {% tabs %}
@@ -145,7 +143,9 @@ The Document Editor is displayed as shown below.
 {% include code-snippet/document-editor/javascript-es6/getting-started-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
-          
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-).
+
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/getting-started-cs2" %}
 
 ## Server-side dependencies
