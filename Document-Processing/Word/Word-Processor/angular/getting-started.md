@@ -56,7 +56,7 @@ cd my-app
 
 ### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/~syncfusionorg).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
 
 To install the Document Editor component, use the following command:
 
@@ -131,7 +131,9 @@ The Document Editor is displayed as shown below.
 {% include code-snippet/document-editor/angular/document-editor-container-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
-  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-angular-word-processor).
+
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
 
 ## Video tutorial
