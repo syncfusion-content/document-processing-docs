@@ -7,7 +7,7 @@ control: AI Agent Tools
 documentation: ug
 ---
 
-# Syncfusion Document SDK Agent Tools
+# Syncfusion Document SDK AI Agent Tools
 
 [Agent Tools](https://learn.microsoft.com/en-us/agent-framework/get-started/add-tools?pivots=programming-language-csharp) are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager.
 
@@ -121,12 +121,11 @@ Provides tools for watermarking, managing annotations, and importing/exporting f
 
 **PdfConverterAgentTools**
 
-Provides tools to convert PDF, HTML, and image files to PDF.
+Provides tools to convert PDF and image files to PDF.
 
 | Tool | Syntax | Description |
 |---|---|---|
 | ConvertPdfToPdfA | ConvertPdfToPdfA(<br/>string documentIdOrFilePath,<br/>PdfConformanceLevel conformanceLevel,<br/>string? outputFilePath = null) | Converts an existing PDF document to a PDF/A-compliant format. Supported conformance levels: `PdfA1B`, `PdfA2B`, `PdfA3B`, `Pdf_A4`, `Pdf_A4F`, `Pdf_A4E`. |
-| ConvertHtmlToPdf | ConvertHtmlToPdf(<br/>string urlOrFilePath,<br/>int pageWidth,<br/>int pageHeight,<br/>string? outputFilePath = null) | Converts a webpage URL or a local HTML file to a PDF document using explicit page width and height (in pixels). |
 | ImageToPdf | ImageToPdf(<br/>string[] imageFiles,<br/>PdfImagePosition imagePosition = PdfImagePosition.FitToPage,<br/>int pageWidth = 612,<br/>int pageHeight = 792,<br/>string? outputFilePath = null) | Creates a PDF document from one or more image files with control over image placement and page size. `imagePosition` values: `Stretch`, `Center`, `FitToPage`. |
 
 **PdfOcrAgentTools**

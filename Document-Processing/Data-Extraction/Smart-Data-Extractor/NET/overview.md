@@ -119,8 +119,8 @@ PageObjects represent detected elements on a page such as text, headers, footers
 </tr>
 <tr>
 <td>Content</td>
-<td>String</td>
-<td>Extracted text or value associated with the object (if applicable).</td>
+<td>Object</td>
+<td>Holds the extracted textual content along with its style attributes (FontName, FontStyle, FontSize) that describe the appearance of the text.</td>
 </tr>
 <tr>
 <td>Confidence</td>
@@ -248,3 +248,33 @@ FormObjects represent interactive form fields detected on the page, such as text
 </tbody>
 </table>
 
+### Text Attribute 
+
+Represents the text formatting attributes (font family, font style, font size) applied to the extracted text.
+<table>
+<thead>
+<tr>
+<th><b>Attribute</b></th>
+<th><b>Type</b></th>
+<th><b>Description</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FontName</td>
+<td>String</td>
+<td>Specifies the font family name used for the text (for example, "Arial").</td>
+</tr>
+<tr>
+<td>FontStyle</td>
+<td>Integer</td>
+<td>Specifies the numeric identifier for the font style (for example, 0 = Regular, 1 = Bold, 2 = Italic).
+</td>
+</tr>
+<tr>
+<td>FontSize</td>
+<td>Float</td>
+<td>Specifies the font size used for the text.</td>
+</tr>
+</tbody>
+</table>
