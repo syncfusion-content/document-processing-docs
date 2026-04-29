@@ -50,7 +50,7 @@ The Blog Generator turns a single topic into a complete, ebook‑quality documen
 Integrating the Blog Generator agent into a console application involves the
 following steps.
 
-**Step 1: Install the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).**
+**Step 1: Install all the required NuGet packages as a reference to your project from [NuGet.org](https://www.nuget.org/).**
 
 ![Install DocIO .NET Core NuGet package](Install_Nuget.png)
 
@@ -173,7 +173,7 @@ AIAgent aiAgent = chatClient.AsIChatClient().AsAIAgent(
 
 **Step 9: Content Generation Wrapper**
 
-`BlogGenerationAgent` is a simple wrapper that handles all four content‑generation phases in one place.
+`BlogGenerationAgent` is a simple wrapper that handles all four(Title & Outline, Layout Planning and  HTML Content, Image Prompt) content‑generation phases in one place.
 
 ```csharp
 var blogAgent      = new BlogGenerationAgent(aiAgent);
@@ -256,7 +256,7 @@ At runtime, the console application performs the following actions:
 1. **Ask blog topic.** Prompt the user to enter a blog topic from the console.
 2. **Provide the blog title and outline for confirmation.** The agent drafts a title and 6–10 section outline which is displayed for the user to approve, regenerate, or cancel (`[Y/n/r]`).
 3. **Draft blog content as HTML.** For each approved section, the agent generates structured HTML content with consistent styling.
-4. **Generate images for this blog using the `gpt-image-1.5` model.**  For sections marked `needsImage`, the AI returns PNG images and embedded as Base64.
+4. **Generate images for this blog using the `gpt-image-1.5` model.**  For required sections, the AI returns PNG images and embedded as Base64.
 5. **Convert the HTML to Word by using the Syncfusion AI Agent Tools library.** The AI agent autonomously chains `CreateDocument` → `ImportHtml` → `ExportDocument` from `WordDocumentAgentTools` and `WordImportExportAgentTools`.
 6. **Save both HTML and DOCX files.** The assembled self-contained HTML and the converted Word document are written to the output folder.
 
