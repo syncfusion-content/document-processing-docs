@@ -11,7 +11,7 @@ The PDF provides support to merge multiple PDF documents into a single file and 
 
 ## Importing pages
 
-This section explains how to import a range of pages from a source PDF into a destination document using the `importPageRange` method.
+This section explains how to import a range of pages from a source PDF into a destination document using the [importPageRange](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#importpagerange) method.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -47,7 +47,7 @@ destination.destroy();
 
 ## Importing pages from multiple documents
 
-This section demonstrates how to import multiple pages from a source PDF into a destination document at a specified position using the `importPageRange` method and `PdfPageImportOptions`. This is useful for merging selected page ranges from different PDFs into one document.
+This section demonstrates how to import multiple pages from a source PDF into a destination document at a specified position using the [importPageRange](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#importpagerange) method and [PdfPageImportOptions](https://ej2.syncfusion.com/documentation/api/pdf/pdfpageimportoptions). This is useful for merging selected page ranges from different PDFs into one document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -111,7 +111,7 @@ sourceDocument2.destroy();
 
 ## Optimizing PDF resources when merging PDF documents
 
-Imports a page from a source PDF into a destination document at a specific index with group form fields, rotation and resource optimization using `PdfPageImportOptions` class.
+Imports a page from a source PDF into a destination document at a specific index with group form fields, rotation and resource optimization using [PdfPageImportOptions](https://ej2.syncfusion.com/documentation/api/pdf/pdfpageimportoptions) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
