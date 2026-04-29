@@ -17,5 +17,3 @@ The only way to preserve the exact appearance and in-cell formatting (including 
 ## See Also
 
 * [Working with Excel Worksheet](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet)
-
-N> Important: CSV is a plain-text representation and is not designed to retain Excel-specific cell formatting; prefer XLSX/XLS to retain line breaks and other formatting.
