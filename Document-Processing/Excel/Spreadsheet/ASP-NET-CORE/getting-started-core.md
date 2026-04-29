@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with ASP.NET CORE Spreadsheet Control | syncfusion
-description: Checkout and learn about getting started with EJ2 ASP.NET CORE Spreadsheet control of Syncfusion Essential JS 2 and more details.
+description: Checkout and learn about getting started with ASP.NET CORE Spreadsheet control of Syncfusion Spreadsheet Editor SDK and more details.
 platform: document-processing
 control: Getting Started Core
 documentation: ug
@@ -47,7 +47,7 @@ Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 
 ## Add stylesheet and script resources
 
-Here, the theme and script is referred using CDN inside the `<head>` of `~/Pages/Shared/_Layout.cshtml` file as follows,
+Add the stylesheet and script references to the `<head>` section of the `~/Pages/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -66,8 +66,7 @@ Here, the theme and script is referred using CDN inside the `<head>` of `~/Pages
 N> To learn other ways to load themes or scripts (such as NPM packages or [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)), see the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/appearance/theme) and [Adding Script Reference](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references) documentation.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
-
-Also, register the script manager `<ejs-script>` at the end of `<body>` in the ASP.NET Core application as follows.
+Register the script manager `<ejs-script>` at the end of the `<body>` element in the ASP.NET Core application, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -83,7 +82,7 @@ Also, register the script manager `<ejs-script>` at the end of `<body>` in the A
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Spreadsheet control
 
-Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Spreadsheet tag helper in `~/Pages/Index.cshtml` page.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Spreadsheet tag helper in `~/Pages/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}

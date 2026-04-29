@@ -19,62 +19,19 @@ This article shows how to add the Syncfusion&reg; Blazor PDF Viewer to a Blazor 
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-* To use the PDF Viewer with SkiaSharp in a Blazor WebAssembly app, ensure the required .NET workloads are installed by running:
-    * dotnet workload install wasm-tools
-    * dotnet workload install wasm-tools-net8 (For .NET 8.0) or dotnet workload install wasm-tools-net9 (For .NET 9.0) or dotnet workload install wasm-tools-net10 (For .NET 10.0)
+N> To use the PDF Viewer with SkiaSharp in a Blazor WebAssembly app, ensure the required .NET workloads are installed by running:
+* dotnet workload install wasm-tools
+* dotnet workload install wasm-tools-net8 (For .NET 8.0) or dotnet workload install wasm-tools-net9 (For .NET 9.0) or dotnet workload install wasm-tools-net10 (For .NET 10.0)
 
 ## Create a new Blazor App in Visual Studio    
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
-
-N> The PDF Viewer supports .NET 8.0 and later.
+You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install NuGet packages
 
-To add the Blazor PDF Viewer, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then install:
+To add the Blazor PDF Viewer component, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (dotnet add package).
 
-* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
-
-N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
-
-{% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
-
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-* To use the PDF Viewer with SkiaSharp in a Blazor WebAssembly app, ensure the required .NET workloads are installed by running:
-    * dotnet workload install wasm-tools
-    * dotnet workload install wasm-tools-net8 (For .NET 8.0) or dotnet workload install wasm-tools-net9 (For .NET 9.0) or dotnet workload install wasm-tools-net10 (For .NET 10.0)
-
-## Create a new Blazor App in Visual Studio Code
-
-You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
-
-Alternatively, create a WebAssembly application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
-
-{% tabs %}
-
-{% highlight c# tabtitle="Blazor WASM App" %}
-
-dotnet new blazorwasm -o BlazorApp
-cd BlazorApp
-
-{% endhighlight %}
-
-{% endtabs %}
-
-N> The PDF Viewer supports .NET 8.0 and later.
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the app
-
-* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following commands to install the required NuGet packages and their dependencies.
+Alternatively, run the following command in the Package Manager Console to achieve the same.
 
 {% tabs %}
 
@@ -91,13 +48,62 @@ dotnet restore
 
 N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
 
-N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for the list of available packages and component details.
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+N> To use the PDF Viewer with SkiaSharp in a Blazor WebAssembly app, ensure the required .NET workloads are installed by running:
+* dotnet workload install wasm-tools
+* dotnet workload install wasm-tools-net8 (For .NET 8.0) or dotnet workload install wasm-tools-net9 (For .NET 9.0) or dotnet workload install wasm-tools-net10 (For .NET 10.0)
+
+## Create a new Blazor App in Visual Studio Code
+
+Create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+
+Alternatively, create a WebAssembly application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+{% tabs %}
+
+{% highlight c# tabtitle="Blazor WASM App" %}
+
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the app
+
+To add the Blazor PDF Viewer component, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (dotnet add package).
+
+Alternatively, run the following command in the Package Manager Console to achieve the same.
+
+{% tabs %}
+
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Syncfusion.Blazor.SfPdfViewer -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package SkiaSharp.Views.Blazor -v 3.119.1
+dotnet restore
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Add import namespaces
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -110,10 +116,12 @@ N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nu
 {% endhighlight %}
 {% endtabs %}
 
-* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file.
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 9 13" %}
+{% highlight C# tabtitle="(~/Program.cs)" hl_lines="3 9 13" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -138,7 +146,7 @@ await builder.Build().RunAsync();
 Add the following stylesheet and script to the head section of **wwwroot/index.html**.
 
 {% tabs %}
-{% highlight html hl_lines="3 7" %}
+{% highlight razor tabtitle="index.html" hl_lines="3 7" %}
 
 <head>
     <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
@@ -157,7 +165,7 @@ Add the following stylesheet and script to the head section of **wwwroot/index.h
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) component to **~/Pages/Index.razor**.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 
