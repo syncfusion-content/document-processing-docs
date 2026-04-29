@@ -60,7 +60,19 @@ Add the required packages to your project:
 </ItemGroup>
 ```
 
-**Step 2: Configure OpenAI Credentials**
+**Step 2: Register the Syncfusion License**
+
+Register your Syncfusion license key at application startup before performing any document operations:
+
+```csharp
+string? licenseKey = Environment.GetEnvironmentVariable("SYNCFUSION_LICENSE_KEY");
+if (!string.IsNullOrEmpty(licenseKey))
+{
+    Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(licenseKey);
+}
+```
+
+**Step 3: Configure OpenAI Credentials**
 
 The application reads the OpenAI API key and model names from environment variables.
 If the API key is not found, the user is prompted to enter it, while default models are used automatically.
@@ -73,7 +85,7 @@ var textModel  = Environment.GetEnvironmentVariable("OPENAI_TEXT_MODEL")  ?? "gp
 var imageModel = Environment.GetEnvironmentVariable("OPENAI_IMAGE_MODEL") ?? "gpt-image-1.5";
 ```
 
-**Step 3: Create the OpenAI Chat Client**
+**Step 4: Create the OpenAI Chat Client**
 
 The same `OpenAIClient` instance is reused for both the chat agent and the image
 generator:
@@ -83,7 +95,7 @@ var openAiClient = new OpenAIClient(new System.ClientModel.ApiKeyCredential(apiK
 var chatClient   = openAiClient.GetChatClient(textModel);
 ```
 
-**Step 4: Create the Word Document Manager**
+**Step 5: Create the Word Document Manager**
 
 The `WordDocumentManager` keeps live Word document instances in memory across
 tool calls. A 10-minute idle timeout automatically cleans up unused documents:
@@ -95,7 +107,7 @@ using Syncfusion.AI.AgentTools.Word;
 var wordManager = new WordDocumentManager(TimeSpan.FromMinutes(10));
 ```
 
-**Step 5: Instantiate the Word Agent Tool Classes and Collect Tools**
+**Step 6: Instantiate the Word Agent Tool Classes and Collect Tools**
 
 The Blog Generator uses **two** Syncfusion Word tool classes:
 
@@ -108,15 +120,14 @@ created by `CreateDocument` is visible to `ImportHtml` and `ExportDocument`:
 ```csharp
 using AITool = Syncfusion.AI.AgentTools.Core.AITool;
 
-var outputDir = Path.Combine(
-    Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "BlogGenerator");
+var outputDir = Path.GetFullPath(Environment.CurrentDirectory + @"..\..\..\..\Data\Output\");
 
 var allSyncfusionTools = new List<AITool>();
 allSyncfusionTools.AddRange(new WordDocumentAgentTools(wordManager, outputDirectory: outputDir).GetTools());
 allSyncfusionTools.AddRange(new WordImportExportAgentTools(wordManager).GetTools());
 ```
 
-**Step 6: Convert Syncfusion Tools to `Microsoft.Extensions.AI` Functions**
+**Step 7: Convert Syncfusion Tools to `Microsoft.Extensions.AI` Functions**
 
 Syncfusion `AITool` objects expose a `MethodInfo` and target instance. Wrap
 them with `AIFunctionFactory.Create` so they are recognized by the Microsoft
@@ -138,7 +149,7 @@ var aiTools = allSyncfusionTools
     .ToList();
 ```
 
-**Step 7: Build the `AIAgent`**
+**Step 8: Build the `AIAgent`**
 
 Create the agent with a system prompt that defines **two responsibilities**:
 
@@ -166,7 +177,7 @@ AIAgent aiAgent = chatClient.AsIChatClient().AsAIAgent(
     tools: aiTools);
 ```
 
-**Step 8: Wrap the Agent for the Four Content-Generation Phases**
+**Step 9: Wrap the Agent for the Four Content-Generation Phases**
 
 `BlogGenerationAgent` is a thin wrapper that exposes one method per phase and
 centralizes prompt templates, JSON schema contracts, and retry/parse logic:
@@ -185,7 +196,7 @@ The four phase methods are:
 | `GenerateSectionHtmlAsync(title, plan, idx, total)` | 3. HTML Content | `string` (HTML fragment) |
 | `GenerateImagePromptAsync(title, plan)` | 4. Image Prompt | `string` |
 
-**Step 9: Generate Blog Sections and Assemble HTML**
+**Step 10: Generate Blog Sections and Assemble HTML**
 
 After generating the outline, the user reviews and approves it using an interactive [Y/n/r] prompt (Yes / No / Regenerate).
 Once approved, the app generates content for each section, creates images when required, and combines everything into a single HTML blog file saved locally.
@@ -221,7 +232,7 @@ var filePath = Path.Combine(outputDir, filename);
 HtmlAssembler.SaveToFile(filePath, html);
 ```
 
-**Step 10: Convert the HTML Blog to a Word Document via the AI Agent (Phase 5)**
+**Step 11: Convert the HTML Blog to a Word Document via the AI Agent (Phase 5)**
 
 This is where the Syncfusion Word Agent Tools handle the document workflow. A single natural‑language prompt allows the agent to automatically invoke the required tools in the correct sequence.
 
@@ -268,7 +279,7 @@ At runtime, the console application performs the following actions:
 The shared `WordDocumentManager` guarantees that the in-memory document
 created in step 1 of Phase 5 survives across the subsequent `ImportHtml` and
 `ExportDocument` tool invocations, which is exactly the
-[in-memory mode](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started-in-memory-mode) contract.
+[in-memory mode](./getting-started-in-memory-mode) contract.
 
 ## Complete Startup Code
 
@@ -279,9 +290,9 @@ Examples/Console/BlogGenerator/Program.cs
 
 ## See Also
 
-* [Getting Started - In-Memory Mode](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started-in-memory-mode)
-* [AI Agent Tools Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
-* [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
-* [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
-* [Example Prompts](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/example-prompts)
+* [Getting Started - In-Memory Mode](./getting-started-in-memory-mode)
+* [AI Agent Tools Overview](./overview)
+* [Tools](./tools)
+* [Customization](./customization)
+* [Example Prompts](./example-prompts)
 * [Microsoft Agent Framework – C# Providers](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp)
