@@ -8,13 +8,12 @@ documentation: ug
 ---
 
 # Images and Illustrations
-Syncfusion React Spreadsheet component allows inserting images into worksheet cells to improve presentation and add context. Use images for logos, screenshots, diagrams, or illustrations. Images can be positioned, resized, selected, or removed. Control image support with the [allowImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowimage) property (enabled by default).
 
 ## Overview
 
-The React Spreadsheet component allows you to insert images directly into worksheet cells to enhance visual presentation and provide additional context alongside data. Images such as logos, screenshots, diagrams, or illustrations can be placed within a sheet, positioned as needed, resized, selected, or removed.
+Syncfusion React Spreadsheet component allows you to insert images directly into worksheet cells to enhance visual presentation and provide additional context alongside data. Images such as logos, screenshots, diagrams, or illustrations can be placed within a sheet, positioned as needed, resized, selected, or removed.
 
-Images are supported in the Spreadsheet and can be controlled using the [allowImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowimage) property, which is enabled by default.
+Images can be controlled using the [allowImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowimage) property, which is enabled by default.
 
 ---
 
@@ -27,8 +26,6 @@ In the Syncfusion React Spreadsheet component, images can be inserted into a wor
 Images are inserted programmatically using the [insertImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#insertimage) method. This method allows you to define the image source along with its initial width and height, and specify the cell address where the image should be placed.
 
 Once an image is inserted, it can be repositioned by selecting and dragging it to another location within the worksheet. The image remains independent of cell values and does not interfere with data editing, sorting, or filtering operations. You can also insert multiple images at once by passing multiple image configurations to the method.
-
-Inserted images are rendered as overlay DIVs above the grid. Initial placement is computed from the target cell and stored as pixel offsets (`top`/`left`). Overlays are assigned unique ids (used by selection and API calls).
 
 The following code example shows how to insert an image in spreadsheet:
 
@@ -50,16 +47,12 @@ After inserting an image into the spreadsheet, you can resize it to fit the layo
 **Resize via UI:**
 
 1. **Click the image** to select it (selection handles appear around it)
-2. **Drag any corner handle** to resize proportionally, or **drag an edge handle** to resize in one direction
-3. **Release** to apply the new size
-
-When an image is selected, eight resize handles appear around its border—four at the corners and four at the edges. Dragging a corner handle resizes both dimensions proportionally, while dragging an edge handle resizes only that dimension.
+2. **Drag a middle edge handle** to resize horizontally or vertically. Click the image itself to move.
+3. **Release** to apply the new size or position
 
 **Resize programmatically:**
 
 The Spreadsheet provides the [setImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#setimage) method to update image properties, including width and height. Pass the image ID and the new dimensions to resize an image programmatically.
-
-When an image is resized via the UI or `setImage`, the overlay's width/height values are stored in the runtime model so subsequent actions (save, print, export) use the updated properties.
 
 ### Select and deselect images
 
@@ -93,8 +86,7 @@ To remove an image from the worksheet:
 
 **Alternative UI method:**
 
-- **Right-click the image** and select **Delete** from the context menu, or
-- **Select the image** and choose **Clear All** from the ribbon to clear the selection and all embedded objects including the image
+- **Select the image** and choose **Clear All** or **Clear Contents** from the ribbon to clear the selection and all embedded objects including the image
 
 **Delete programmatically:**
 
@@ -102,7 +94,7 @@ The Spreadsheet component provides the [deleteImage](https://ej2.syncfusion.com/
 
 Pass the image ID to remove a specific image. This approach is useful when you track image IDs at insertion time and want to remove them later without relying on user selection.
 
-Calling `deleteImage()` removes the image from the runtime model and the DOM overlay. Image deletes can also be intercepted or cancelled by `actionBegin` handlers.
+Calling `deleteImage()` removes the image from the runtime model and the DOM overlay.
 
 The following code example shows how to delete an image by ID in spreadsheet:
 
@@ -129,7 +121,6 @@ The following events/notifications are relevant when documenting image behavior 
 - `setImage` (workbook event) — applies property updates into the model when images are changed programmatically or via UI.
 - `deleteImage` — internal action that removes the image model and DOM overlay.
 - `importModelUpdate` — used during open/import to migrate sheet-level image collections into cell-level arrays (relevant when explaining import behavior).
-- Component `actionBegin` / `actionComplete` — documentation should note these can intercept or cancel image operations.
 
 ### Cell storage format
 
@@ -151,8 +142,8 @@ These fields are persisted in workbook JSON and are used for rendering, printing
 Inserts an image into the worksheet. In the current implementation the method accepts an image `File`, computes an appropriate size and position, then creates the overlay element.
 
 **Syntax:**
-```typescript
-insertImage(args: { file: File; isAction?: boolean }, range?: string): Promise<void>
+```javascript
+insertImage(args, range)
 ```
 
 **Parameters:**
@@ -166,8 +157,8 @@ insertImage(args: { file: File; isAction?: boolean }, range?: string): Promise<v
 Updates one or more image entries in the runtime model and applies changes to overlays.
 
 **Syntax:**
-```typescript
-setImage(args: { options: ImageModel[]; range: string; isPositionChanged?: boolean; isElementRemoved?: boolean }): boolean
+```javascript
+setImage(args)
 ```
 
 **Parameters:**
