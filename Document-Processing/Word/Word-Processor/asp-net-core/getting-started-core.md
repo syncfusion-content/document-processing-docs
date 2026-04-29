@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with ASP.NET Core DOCX Editor
 
-Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET Core application. 
+Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications.
 
 ## Steps to create an ASP.NET Core DOCX Editor
 
@@ -109,4 +109,4 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![ASP.NET Core DocumentEditor Control](images/documenteditor-control.png)
 
-N> You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/DocumentEditor/ASP.NET%20Core%20Tag%20Helper%20Examples).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/DocumentEditor/ASP.NET%20Core%20Tag%20Helper%20Examples).

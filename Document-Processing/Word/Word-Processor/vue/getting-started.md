@@ -65,9 +65,9 @@ yarn add @syncfusion/ej2-vue-documenteditor
 
 ### Add CSS reference
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Add the Document Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Document Editor component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+Import the `Material` theme into the **src/App.vue** file and removed the existing styles in that file, as shown below:
 
 ```css
 @import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -80,6 +80,8 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 @import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
 ```
+
+> Note: Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 ### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
@@ -134,7 +136,7 @@ The Document Editor is displayed as shown below.
 
 To get started quickly with the Document Editor component using CLI, you can check the video below.
 
-{% youtube "https://www.syncfusion.com/tutorial-videos/vue/word-processor?title=getting-started-with-the-vue-word-processor" %}
+{% youtube "https://www.youtube.com/watch?v=UbmGFUXtzYg&t=1s" %}
 
 ## Server side dependencies
 

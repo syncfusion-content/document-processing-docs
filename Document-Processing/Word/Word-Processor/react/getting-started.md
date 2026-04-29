@@ -104,7 +104,7 @@ Open http://localhost:3000 in your browser to run the application.
 The Document Editor is displayed as shown below.
 
 {% tabs %}
-{% highlight ts tabtitle="app.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% include code-snippet/document-editor/react/base-cs3/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
@@ -198,10 +198,10 @@ npm run dev
 ```
 Open http://localhost:3000 in your browser to run the application.
 
-The Document Editor is displayed as shown below.
+Output appears as follows.
 
 {% tabs %}
-{% highlight ts tabtitle="app.jsx" %}
+{% highlight ts tabtitle="App.jsx" %}
 {% include code-snippet/document-editor/react/base-cs3/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}

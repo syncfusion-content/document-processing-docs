@@ -7,7 +7,14 @@ import {
 DocumentEditorContainerComponent.Inject(Toolbar);
 function Default() {
     return (
-    <DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar={true} />);
+        <DocumentEditorContainerComponent 
+            id="container" 
+            height={'590px'} 
+            //Use the following service URL only for demo purposes
+            serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
+            enableToolbar={true}
+        />
+    );
 }
 export default Default
 const root = createRoot(document.getElementById('sample'));
