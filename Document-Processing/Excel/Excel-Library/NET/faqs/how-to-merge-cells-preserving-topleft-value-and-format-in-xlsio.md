@@ -10,7 +10,7 @@ documentation: UG
 
 To merge cells in Excel while preserving only the top-left cell’s value and extending its formatting across the entire merged range, you can use the Range.Merge(true) method. This approach ensures that all other cells within the selected region are cleared, while the content and style of the top-left cell are retained and applied uniformly to the merged area.
 
-The following examples show a minimal, copy-paste-ready pattern for C# (cross-platform and Windows-specific) and VB.NET.
+The following code examples shows how to merge cells preserving cell value and formatting using C# (cross-platform and Windows-specific) and VB.NET.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
