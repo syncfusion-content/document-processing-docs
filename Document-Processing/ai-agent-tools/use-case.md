@@ -16,9 +16,7 @@ single topic entered by the user.
 
 ## Overview
 
-The Blog Generator agent runs a five‑phase workflow that turns a single topic into a polished, ebook‑quality document. It begins by creating a clear title and a well‑structured outline with six to ten sections. Each section is then planned and classified (such as `cover`, `chapter`, or `appendix`) and marked based on whether it requires visual support, including tags like `needsImage`.
-Next, the agent generates rich HTML content for every section using a consistent CSS structure. For sections that require visuals, it prepares editorial‑style image prompts and generates the images. All content is then assembled into a single HTML document.
-In the final step, the AI agent converts the HTML into a Word file using Syncfusion `WordDocumentAgentTools` and `WordImportExportAgentTools`, producing a clean, final `.docx` document.
+The Blog Generator turns a single topic into a complete, ebook‑quality document through five simple steps. It starts by creating a clear title and structured outline, then plans each section and decides where visuals are helpful. Next, it writes detailed, well‑formatted content and adds suitable images where needed. Finally, everything is combined and delivered as a clean Word document ready for use.
 
 ## Prerequisites
 
@@ -266,17 +264,6 @@ At runtime, the console application performs the following actions:
 4. **Generate images for this blog using the `gpt-image-1.5` model.** For sections flagged `needsImage`, the agent writes an editorial-style image prompt and the OpenAI image model returns a PNG, embedded as Base64.
 5. **Convert the HTML to Word by using the Syncfusion AI Agent Tools library.** The AI agent autonomously chains `CreateDocument` → `ImportHtml` → `ExportDocument` from `WordDocumentAgentTools` and `WordImportExportAgentTools`.
 6. **Save both HTML and DOCX files.** The assembled self-contained HTML and the converted Word document are written to the output folder (`%USERPROFILE%\Desktop\BlogGenerator` by default).
-
-**Why two layers of agent usage?**
-
-* Phases 1–4 treat the LLM as a pure text generator. `BlogGenerationAgent`
-  enforces structured JSON output via prompt + schema + retry so downstream
-  code can work with strongly-typed models (`BlogOutline`, `SectionPlan`,
-  `SectionHtml`).
-* Phase 5 treats the LLM as a tool-calling orchestrator. The user prompt is
-  declarative ("create… import… export…") and the registered Syncfusion tool
-  descriptions guide the agent to call each function in the right order with
-  the right `documentId`.
 
 The shared `WordDocumentManager` guarantees that the in-memory document
 created in step 1 of Phase 5 survives across the subsequent `ImportHtml` and
