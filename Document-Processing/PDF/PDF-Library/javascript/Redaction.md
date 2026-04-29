@@ -80,9 +80,9 @@ import { PdfRedactor, PdfRedactionRegion, ApplicationPlatform } from '@syncfusio
 let document: PdfDocument = new PdfDocument(data);
 // Add redactions to the collection
 let redactions: PdfRedactionRegion[] = [];
-// Initialize a new instance of the [PdfRedactor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactor) class
+// Initialize a new instance of the `PdfRedactor` class
 let redactor: PdfRedactor = new PdfRedactor(document);
-// Initialize a new instance of the [PdfRedactionRegion](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactionregion) class.
+// Initialize a new instance of the `PdfRedactionRegion]` class.
 let redaction: PdfRedactionRegion = new PdfRedactionRegion(0, {x: 40, y: 41, width: 80, height: 90});
 // Sets the fill color used to fill the redacted area.
 redaction.fillColor = {r: 255, g: 0, b: 0};
@@ -108,9 +108,9 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Add redactions to the collection
 var redactions = [];
-// Initialize a new instance of the [PdfRedactor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactor) class
+// Initialize a new instance of the `PdfRedactor` class
 var redactor = new ej.pdfdataextract.PdfRedactor(document);
-// Initialize a new instance of the [PdfRedactionRegion](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactionregion) class.
+// Initialize a new instance of the `PdfRedactionRegion]` class.
 var redaction = new ej.pdfdataextract.PdfRedactionRegion(0, {x: 40, y: 41, width: 80, height: 90});
 // Sets the fill color used to fill the redacted area.
 redaction.fillColor = {r: 255, g: 0, b: 0};

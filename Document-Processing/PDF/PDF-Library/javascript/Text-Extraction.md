@@ -22,7 +22,7 @@ import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Initialize a new instance of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class
+// Initialize a new instance of the `PdfDataExtractor]` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
 // Extract text content from the PDF document.
 let text: string = extractor.extractText();
@@ -59,7 +59,7 @@ import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Initialize a new instance of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class
+// Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
 // Extract text content from the PDF document.
 let text: string = extractor.extractText({ startPageIndex: 0, endPageIndex: document.pageCount - 1 });
@@ -96,7 +96,7 @@ import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Initialize a new instance of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class
+// Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
 // Extracts text from the PDF Page based on its layout
 let text: string = extractor.extractText({isLayout: true});
@@ -137,9 +137,9 @@ import { PdfDataExtractor, TextLine } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Initialize a new instance of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class
+// Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline) from the PDF document.
+// Extract `TextLine` from the PDF document.
 let textLines: Array<TextLine> = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 // Iterate through each text line in the collection
 textLines.forEach((textLine: TextLine) => {
@@ -168,9 +168,9 @@ document.destroy();
 
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Initialize a new instance of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class
+// Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline) from the PDF document.
+// Extract `TextLine` from the PDF document.
 var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 // Iterate through each text line in the collection
 textLines.forEach((textLine) => {
@@ -208,9 +208,9 @@ import { PdfDataExtractor, TextLine, TextWord, PdfFontStyle } from '@syncfusion/
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Initialize a new instance of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class
+// Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline) from the PDF document.
+// Extract `TextLine` from the PDF document.
 let textLines: Array<TextLine> = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 textLines.forEach((textLine: TextLine) => {
     textLine.words.forEach((textWord: TextWord) => {
@@ -238,9 +238,9 @@ document.destroy();
 
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Initialize a new instance of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class
+// Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline) from the PDF document.
+// Extract `TextLine` from the PDF document.
 var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 textLines.forEach((textLine) => {
     textLine.words.forEach((textWord) => {
@@ -277,9 +277,9 @@ import { PdfDataExtractor, TextLine, TextWord, PdfFontStyle } from '@syncfusion/
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Initialize a new instance of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class
+// Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline) from the PDF document.
+// Extract `TextLine` from the PDF document.
 let textLines: Array<TextLine> = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 textLines.forEach((textLine: TextLine) => {
     textLine.words.forEach((textWord: TextWord) => {
@@ -311,9 +311,9 @@ document.destroy();
 
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Initialize a new instance of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class
+// Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline) from the PDF document.
+// Extract `TextLine` from the PDF document.
 var textLines = extractor.extractTextLines({ startPageIndex: 0, endPageIndex: document.pageCount-1});
 textLines.forEach((textLine) => {
     textLine.words.forEach((textWord) => {
