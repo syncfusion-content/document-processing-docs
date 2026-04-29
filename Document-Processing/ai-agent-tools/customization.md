@@ -25,9 +25,7 @@ cd Document-SDK-AI-Agent-Tools
 
 **Step 2: Create a Custom AI Agent Tool by Inheriting AgentToolBase**
 
-Open the Syncfusion.DocumentSDK.AI.AgentTools library project 
-
-Syncfusion.DocumentSDK.AI.AgentTools\Syncfusion.DocumentSDK.AI.AgentTools.csproj Then,
+Open the Syncfusion.DocumentSDK.AI.AgentTools library project Then,
 
 Create a new class inside the Tools that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document manager through its constructor:
 
