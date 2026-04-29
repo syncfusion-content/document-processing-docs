@@ -17,9 +17,9 @@ This section explains how to create a simple Angular application and add the [Sy
 
 ## Create an Angular application
 
-Use the [`Angular CLI`](https://angular.dev/installation) to set up an Angular application.
+Use [Angular CLI](https://angular.dev/installation) to create a new Angular application, as it provides a standardized project structure, built-in testing tools, and simplified deployment.
 
-Install Angular CLI using the following command:
+Install Angular CLI globally, using the following command:
 
 ```
 npm install -g @angular/cli
@@ -34,7 +34,7 @@ cd spreadsheet-app
 
 ## Install the Syncfusion® Angular Spreadsheet package
 
-Syncfusion® Angular packages are distributed in npm as [@syncfusion](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-angular-) scoped packages. The [Angular Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-angular-spreadsheet) package uses the [Ivy](https://docs.angular.lat/guide/ivy) library distribution [format](https://angular.dev/tools/libraries/angular-package-format) and is compatible with `Angular 12` and above. Use the following command to install the package:
+The [Angular Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-angular-spreadsheet) package uses the [Ivy](https://docs.angular.lat/guide/ivy) library distribution [format](https://angular.dev/tools/libraries/angular-package-format) and is compatible with `Angular 12` and above. Use the following command to install the package:
 
 ```
 npm install @syncfusion/ej2-angular-spreadsheet --save

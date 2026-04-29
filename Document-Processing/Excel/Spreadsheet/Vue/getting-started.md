@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Vue Spreadsheet Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component using the Composition API / Options API.
+This article provides a step-by-step guide for setting up a Vue 2 project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component using the Composition API or Options API.
 
 ## Prerequisites
 
@@ -17,9 +17,9 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Create a Vue application
 
-Use the [Vue CLI](https://cli.vuejs.org/#getting-started) to set up a Vue application.
+Use [Vue CLI](https://cli.vuejs.org/#getting-started) to set up a Vue application, as it provides a modular project architecture, flexible configuration, and an integrated plugin system.
 
-Install Vue CLI using the following command:
+Install Vue CLI globally, using the following command:
 
 ```
 npm install -g @vue/cli
@@ -31,6 +31,8 @@ Create a new Vue application using the following commands:
 vue create quickstart
 cd quickstart
 ```
+
+> When prompted during project creation, select **Default ([Vue 2] babel, eslint)**.
 
 ## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet package
 

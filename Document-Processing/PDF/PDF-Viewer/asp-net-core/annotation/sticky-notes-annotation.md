@@ -1,57 +1,43 @@
 ---
 layout: post
-title: Sticky Notes in ASP.NET Core PDF Viewer | Syncfusion
-description: Add and manage sticky note annotations in ASP.NET Core PDF Viewer. Create quick notes, comments, and threaded discussions and default settings.
-platform: document-processing
+title: "Stamp annotation in ASP.NET Core PDF Viewer control"
+description: "Learn about stamp annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps."
 control: PDF Viewer
+platform: document-processing
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Sticky Notes in ASP.NET Core PDF Viewer
+# Sticky notes annotation in ASP.NET Core PDF Viewer
 
-The PDF Viewer control provides comprehensive sticky note annotation capabilities for adding quick notes and comments to PDF documents. Create, edit, and delete sticky notes with full comment support for discussions and document review workflows.
+The PDF Viewer provides options to add, edit, and delete sticky note annotations.
 
-![Sticky notes overview](../images/stickynotes_annotation.png)
+![StickyNotesAnnotation](../images/stickynotes_annotation.png)
 
-## Add a sticky note annotation to the PDF document
+## Add a sticky note annotation
 
-Sticky notes can be added directly using the toolbar or context menu. They serve as markers for attaching comments and discussions to specific page locations.
+Annotation comments are added using the comment panel.
 
-### Adding sticky notes using toolbar
+* Right-click a sticky note annotation and choose **Comment** from the context menu.
+* Use the comment panel to add comments, reply, and change status.
 
-1. **Click the Comments button** in the PDF Viewer toolbar to enable annotation mode
-2. **Click on the page** at the desired location where you want to place the note
-3. **Sticky note is created** - A small marker appears at the clicked position
+![StickyNotesTool](../images/stickynotes_tool.png)
 
-![Sticky notes tool](../images/stickynotes_tool.png)
-
-### Adding comments to sticky notes
-
-Comments provide detailed information and discussions for sticky notes:
-
-1. **Select a sticky note** - Click on any sticky note annotation on the page
-2. **Right-click the note** - Context menu appears with available actions
-3. **Select Comment** - Opens the comment panel for the selected note
-4. **Add comment text** - Type your comment in the text field
-5. **Save comment** - Comment is saved to the note on clicking post.
-
-![Sticky notes comment panel](../images/stickynotes_comment.png)
+![StickyNotesComment](../images/stickynotes_comment.png)
 
 ## Add a sticky note annotation to the PDF document programmatically
 
-The **addAnnotation()** method enables programmatic sticky note creation with precise positioning and configuration. This allows dynamic note placement without user interaction.
+Use the `addAnnotation()` method to add a sticky note annotation programmatically.
 
-**Example: Add sticky note annotations programmatically**
+The following example demonstrates using `addAnnotation()` to create a sticky note annotation.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-
-<button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"></ejs-pdfviewer>
+</div>
+<div style="margin-top:8px">
+  <button onclick="addAnnotation()">Add Annotation</button>
 </div>
 <script>
   function addAnnotation() {
@@ -63,17 +49,14 @@ The **addAnnotation()** method enables programmatic sticky note creation with pr
     });
   }
 </script>
-
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
 
-<button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+{% highlight cshtml tabtitle="Server-Backed" %}
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"></ejs-pdfviewer>
+</div>
+<div style="margin-top:8px">
+  <button onclick="addAnnotation()">Add Annotation</button>
 </div>
 <script>
   function addAnnotation() {
@@ -85,165 +68,130 @@ The **addAnnotation()** method enables programmatic sticky note creation with pr
     });
   }
 </script>
-
 {% endhighlight %}
 {% endtabs %}
 
 ## Edit an existing sticky note annotation programmatically
 
-To modify an existing sticky note annotation programmatically, use the **editAnnotation()** method.
+Use the `editAnnotation()` method to modify existing sticky note annotations programmatically.
 
-Here is an example of using editAnnotation():
+The following example demonstrates `editAnnotation()`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-
-<button id="set" onclick="editAnnotation()">Edit annotation programmatically</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"></ejs-pdfviewer>
+</div>
+<div style="margin-top:8px">
+  <button onclick="editAnnotation()">Edit Annotation</button>
 </div>
 <script>
   function editAnnotation() {
     var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-    for (let i = 0; i < viewer.annotationCollection.length; i++)
-    {
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
       if (viewer.annotationCollection[i].shapeAnnotationType === "sticky") {
         var width = viewer.annotationCollection[i].bounds.width;
         var height = viewer.annotationCollection[i].bounds.height;
-        viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height };
+        viewer.annotationCollection[i].bounds = { x: 100, y: 100, width: width, height: height };
         viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
       }
     }
   }
 </script>
-
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
 
-<button id="set" onclick="editAnnotation()">Edit annotation programmatically</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+{% highlight cshtml tabtitle="Server-Backed" %}
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"></ejs-pdfviewer>
+</div>
+<div style="margin-top:8px">
+  <button onclick="editAnnotation()">Edit Annotation</button>
 </div>
 <script>
   function editAnnotation() {
     var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-    for (let i = 0; i < viewer.annotationCollection.length; i++)
-    {
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
       if (viewer.annotationCollection[i].shapeAnnotationType === "sticky") {
         var width = viewer.annotationCollection[i].bounds.width;
         var height = viewer.annotationCollection[i].bounds.height;
-        viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height };
+        viewer.annotationCollection[i].bounds = { x: 100, y: 100, width: width, height: height };
         viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
       }
     }
   }
 </script>
-
 {% endhighlight %}
 {% endtabs %}
 
 ## Edit the properties of sticky note annotations
 
-Sticky note annotations support multiple property editing workflows. Properties can be modified through the UI toolbar, comment panel interface, or programmatically.
-
 ### Editing opacity
 
-The **opacity property** controls note transparency, allowing visual customization for emphasis or reduced prominence.
+Edit opacity using the range slider in the Edit Opacity tool.
 
-![Sticky note opacity editor](../images/sticky_opacity.png)
+![StickyNotesOpacity](../images/sticky_opacity.png)
 
 ### Editing comments
 
-Comments provide detailed annotations to sticky notes. Comment text, threaded replies, and status states are fully editable through the comment panel interface.
+Comment text, replies, and status can be edited using the comment panel.
 
-**Using the comment panel:**
-1. **Open comment panel** - Click Comment Panel button in toolbar
-2. **Select sticky note** - Choose note to edit comments for
-3. **Modify or delete** - Edit existing comment text or remove comments
-4. **Add replies** - Create threaded discussion under comments
-5. **Change status** - Update comment status
+* Open the comment panel using the Comment Panel button in the annotation toolbar.
 
-![Sticky notes comment panel](../images/commentPanel.png)
+  ![StickyNotesComment](../images/commentPanel.png)
 
-**Comment editing options:**
-- **Edit text** - Modify comment content inline
-- **Delete comment** - Remove selected comment permanently
-- **Add reply** - Create threaded response to existing comment
-- **Mark status** - Change comment state (Review/Done/Cancelled)
+Modify or delete comments or replies, and change status using the menu options in the comment panel.
 
-![Comment editing menu](../images/sticky_editbtn.png)
+  ![StickyNotesEdit](../images/sticky_editbtn.png)
 
 ## Set default properties during control initialization
 
-The **StickyNotesSettings** object enables configuration of default sticky note behavior at PDF Viewer initialization. These properties apply to all subsequently created sticky notes unless explicitly overridden.
+Set default properties for sticky note annotations before creating the control by specifying `stickyNotesSettings`.
 
-The following example sets default sticky note annotation settings during control initialization:
+After changing the default opacity using the Edit Opacity tool, the selected value is applied. The example below shows how to set default sticky note annotation settings.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   stickyNotesSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerStickyNotesSettings
-            {Author="Syncfusion"})">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"></ejs-pdfviewer>
 </div>
-
+<script>
+  window.onload = function() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    if (viewer) {
+      viewer.stickyNotesSettings = { author: 'Syncfusion' };
+    }
+  };
+</script>
 {% endhighlight %}
+
 {% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   stickyNotesSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerStickyNotesSettings
-            {Author="Syncfusion"})">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"></ejs-pdfviewer>
 </div>
-
+<script>
+  window.onload = function() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    if (viewer) {
+      viewer.stickyNotesSettings = { author: 'Syncfusion' };
+    }
+  };
+</script>
 {% endhighlight %}
 {% endtabs %}
 
 ## Disable sticky note annotations
 
-The **enableStickyNotesAnnotation** property controls sticky note feature availability. When disabled, sticky note creation is prevented while existing annotations remain visible.
-
-### Disabling sticky note annotations programmatically
-
-The following example demonstrates disabling sticky note annotations during control initialization:
+The PDF Viewer control provides an option to disable sticky note annotations. The following example disables the feature.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   enableStickyNotesAnnotation=false
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"enableStickyNotesAnnotation="false"></ejs-pdfviewer>
 </div>
-
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   enableStickyNotesAnnotation=false
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer" enableStickyNotesAnnotation="false"></ejs-pdfviewer>
 </div>
-
 {% endhighlight %}
 {% endtabs %}
