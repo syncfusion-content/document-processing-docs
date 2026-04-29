@@ -1021,7 +1021,7 @@ document.destroy();
 
 ## Removing the form fields from existing PDF document
 
-This example demonstrates how to remove items from an existing form field in a PDF document using the [removeItem()](https://ej2.syncfusion.com/documentation/api/pdf/pdffield#removeitem) method of the [PdfField](https://ej2.syncfusion.com/documentation/api/pdf/pdffield) class. The following code snippet illustrates how to access a form field and remove its first item.
+This example demonstrates how to remove items from an existing form field in a PDF document using the [removeField()](https://ej2.syncfusion.com/documentation/api/pdf/pdfform#removefield) method of the [PdfForm](https://ej2.syncfusion.com/documentation/api/pdf/pdfform) class. The following code snippet illustrates how to access a form field and remove its first item.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1031,8 +1031,8 @@ import {PdfDocument, PdfField} from '@syncfusion/ej2-pdf';
 let document: PdfDocument = new PdfDocument(data);
 // Access the form field at index 0
 let field: PdfField = document.form.fieldAt(0);
-// Remove the first item of the form field
-field.removeItem(field.itemAt(0));
+// Remove the form field
+document.form.removeField(field);
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -1045,8 +1045,8 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Access the form field at index 0
 var field = document.form.fieldAt(0);
-// Remove the first item of the form field
-field.removeItem(field.itemAt(0));
+// Remove the form field
+document.form.removeField(field);
 // Save the document
 document.save('Output.pdf');
 // Close the document
