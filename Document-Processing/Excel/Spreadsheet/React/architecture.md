@@ -103,93 +103,109 @@ If a referenced cell changes, the engine automatically recalculates and updates 
 
 Data binding is how you get data into the Spreadsheet. There are three main approaches:
 
-### Local Data Binding
+## Local Data Binding
 
-Your data is already in your application (e.g., a React component). You pass it directly to the Spreadsheet:
+Local data binding allows you to bind in-memory application data directly to the Spreadsheet component. The data, typically structured as an array of objects, is assigned to the `dataSource` property of the `RangeDirective`, enabling immediate rendering in the Spreadsheet.
 
 ```
-Your App Data → Spreadsheet → Display
+Application Data → Spreadsheet → Display
 ```
 
-**Example:**
+### Example
 ```js
 const myData = [
   { name: 'Alice', sales: 100 },
   { name: 'Bob', sales: 200 }
 ];
 
-<Spreadsheet dataSource={myData} />
+<SpreadsheetComponent>
+  <SheetsDirective>
+    <SheetDirective>
+      <RangesDirective>
+        <RangeDirective dataSource={myData}></RangeDirective>
+      </RangesDirective>
+    </SheetDirective>
+  </SheetsDirective>
+</SpreadsheetComponent>
 ```
 
-**Use Local when:**
-- Data is small to medium (< 100K rows)
-- Data is already loaded in your app
-- You want instant response (no server delay)
+### Use Local Data Binding When:
+- The dataset size is small to medium (typically less than 100,000 rows).
+- The data is already available in the client application.
+- Immediate responsiveness is required without any server round trips.
 
-### Remote Data Binding
+---
 
-Remote data binding enables the Spreadsheet to retrieve and display data from external sources, such as API endpoints or databases, rather than from within the application itself.
+## Remote Data Binding
+
+Remote data binding enables the Spreadsheet to retrieve and display data from external sources, such as APIs or databases, instead of relying solely on in-memory application data.
 
 ```
-External Source (API/DB) → Spreadsheet → Display
+External Source (API / Database) → Spreadsheet → Display
 ```
 
-**Recommended for:**
-- Loading data from remote databases or APIs
-- Handling large or frequently updated datasets
-- Ensuring data security by keeping sensitive data on the server
+### Recommended Use Cases:
+- Loading data from remote databases or web services
+- Working with large, dynamic, or frequently updated datasets
+- Maintaining security by keeping sensitive data on the server
 
-**How it works:**
-- The Spreadsheet requests data from your backend or a remote service (e.g., via REST API, GraphQL, or file upload endpoint).
-- The backend processes, filters, or transforms the data as needed (e.g., converting a database query or Excel file into a JSON structure).
-- The processed data is sent to the Spreadsheet, which then displays it to the user.
-- Any edits or changes made in the Spreadsheet can be sent back to the backend for saving or further processing, if needed.
+### How It Works:
+- The Spreadsheet requests data from a backend service or remote endpoint (for example, a REST API, GraphQL endpoint, or custom service).
+- The backend fetches, processes, or transforms the data as required (such as converting database results or file contents into a JSON format).
+- The processed data is sent to the client and rendered in the Spreadsheet.
+- Any edits or changes made in the Spreadsheet can optionally be sent back to the backend for persistence or further processing.
 
-**Note:** Remote data binding is about connecting to and displaying data from external sources. It does not cover the import or export of files (such as uploading or downloading Excel/CSV files), which are handled by separate import/export features.
+**Note:** Remote data binding focuses on connecting to and displaying data from external sources. File-based operations such as importing or exporting Excel or CSV files are handled separately through dedicated import/export features.
 
-## Client-Side vs Server-Side Processing
+---
 
-Some operations happen instantly in your browser (client-side), while others require a server (server-side).
+## Client-Side vs. Server-Side Processing
+
+Spreadsheet operations can be executed either in the browser (client-side) or on a backend system (server-side), depending on the nature and complexity of the task.
 
 ### Client-Side Processing
 
-**Operations:**
-- Typing/editing cells
-- Formatting (bold, colors, alignment)
-- Sorting/filtering small datasets
-- Formula calculations
-- Undo/redo
+Client-side processing handles operations directly within the user's browser.
+
+**Common Operations:**
+- Cell editing and data entry
+- Formatting (font styles, colors, alignment)
+- Sorting and filtering smaller datasets
+- Formula evaluation
+- Undo and redo actions
 - Data validation
 
 **Advantages:**
-- Instant feedback
-- Works offline
-- No server needed
-- Lower server load
+- Immediate visual feedback
+- Works offline once data is loaded
+- No backend dependency for basic operations
+- Reduced server load
 
 **Limitations:**
-- Limited by browser memory
-- Large datasets may slow down
-- Data/formulas visible in browser (not secure for sensitive info)
+- Constrained by browser memory and performance
+- Reduced performance with very large datasets
+- Data and formulas remain visible in the browser, which may not be suitable for sensitive information
+
+---
 
 ### Server-Side Processing
 
-**Operations:**
-- Import/export Excel/CSV files
-- Report generation
+Server-side processing offloads data handling and computation to a backend system.
+
+**Common Operations**:
 - Loading data from databases
-- Secure or complex calculations
+- Generating reports
+- Performing secure or computationally intensive calculations
 
 **Advantages:**
-- Handles huge files
-- Protects sensitive data
-- Consistent behavior across browsers
-- Can access external databases
+- Efficient handling of large datasets
+- Enhanced data security
+- Consistent behavior across different browsers
+- Direct access to databases and enterprise systems
 
 **Limitations:**
-- Network delay
-- Requires backend infrastructure
-- Higher server resource usage
+- Network latency may occur, especially under high traffic or single-endpoint load
+- Requires backend infrastructure and ongoing maintenance
 
 ### Quick Decision Table
 
