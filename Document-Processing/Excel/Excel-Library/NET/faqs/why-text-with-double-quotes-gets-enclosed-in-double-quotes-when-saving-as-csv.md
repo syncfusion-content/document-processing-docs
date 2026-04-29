@@ -8,4 +8,6 @@ documentation: UG
 
 # Why does text with double quotes enclosed with it when saving as CSV?
 
-This is expected and correct behavior in Microsoft Excel. When a cell’s text contains a double quote ("), Excel automatically encloses the entire text value within double quotes while saving the file in CSV (Comma-Separated Values) format.
+When saving data as a CSV file, Excel automatically adds double quotes around text that contains special characters such as commas, line breaks, or quotation marks. This is done to ensure the content is correctly understood as a single field when the CSV file is read by other applications. 
+
+For example, without quotes, a comma inside the text could be mistaken for a column separator, or a line break could be seen as a new row. Therefore, the quotes help preserve the structure and accuracy of the data in the CSV format.
