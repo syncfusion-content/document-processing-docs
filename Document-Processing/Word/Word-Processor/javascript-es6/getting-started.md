@@ -145,7 +145,9 @@ The Document Editor is displayed as shown below.
 {% include code-snippet/document-editor/javascript-es6/getting-started-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
-          
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-).
+
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/getting-started-cs2" %}
 
 ## Server-side dependencies
@@ -161,5 +163,3 @@ The Document Editor component requires server-side interactions for the followin
 >Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
-
-N> You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-).
