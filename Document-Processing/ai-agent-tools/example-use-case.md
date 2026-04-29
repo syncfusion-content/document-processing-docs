@@ -8,7 +8,7 @@ documentation: ug
 
 # Create Custom Blog Generator Agent
 
-This use case walks through building a **console-based Blog Generator** that
+This use case walks through building a **Blog Generator** that
 combines the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview?pivots=programming-language-csharp),
 OpenAI (text + image), and Syncfusion Word Agent Tools to produce a
 fully-formatted blog ebook in both **HTML** and **Word (.docx)** formats from a
@@ -16,7 +16,7 @@ single topic entered by the user.
 
 ## Overview
 
-The Blog Generator turns a single topic into a complete, ebook‑quality document through five simple steps. It starts by creating a clear title and structured outline, then plans each section and decides where visuals are helpful. Next, it writes detailed, well‑formatted content and adds suitable images where needed. Finally, everything is combined and delivered as a clean Word document ready for use.
+The Blog Generator turns a single topic into a complete, ebook‑quality document through five simple steps. It starts by creating a clear title and structured outline, then plans each section and decides where visuals are helpful. Next, it writes detailed, well‑formatted content and adds suitable images where needed. Finally, everything is combined and delivered as a clean Word document ready for use. This sample application uses an [in‑memory mode](./getting-started-in-memory-mode.md).
 
 ## Prerequisites
 
@@ -43,22 +43,16 @@ The Blog Generator turns a single topic into a complete, ebook‑quality documen
 </tr>
 </table>
 
+>**Note:** The OpenAI API key is mandatory for this sample because the guide demonstrates the integration using the **Microsoft Agents Framework with OpenAI**. The same integration steps work with any other [provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) (Azure OpenAI, Anthropic, Google Gemini, Ollama, etc.) — just swap in that provider’s API key or endpoint credentials.
+
 ## Integration
 
 Integrating the Blog Generator agent into a console application involves the
 following steps.
 
-**Step 1: Install NuGet Packages**
+**Step 1: Install the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).**
 
-Add the required packages to your project:
-
-```xml
-<ItemGroup>
-    <PackageReference Include="Syncfusion.DocumentSDK.AI.AgentTools" Version="*" />
-    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="*-*" />
-    <PackageReference Include="OpenAI" Version="2.*" />
-</ItemGroup>
-```
+![Install DocIO .NET Core NuGet package](Install_Nuget.png)
 
 **Step 2: Register the Syncfusion License**
 
@@ -153,7 +147,7 @@ var aiTools = allSyncfusionTools
 
 Create the agent with a system prompt that defines **two responsibilities**:
 
-1. Always return **valid JSON** when asked (used by phases 1–4).
+1. Always return **valid JSON** when asked.
 2. When asked to build a Word document, strictly follow the
    `CreateDocument` → `ImportHtml` → `ExportDocument` tool sequence.
 
@@ -177,24 +171,14 @@ AIAgent aiAgent = chatClient.AsIChatClient().AsAIAgent(
     tools: aiTools);
 ```
 
-**Step 9: Wrap the Agent for the Four Content-Generation Phases**
+**Step 9: Content Generation Wrapper**
 
-`BlogGenerationAgent` is a thin wrapper that exposes one method per phase and
-centralizes prompt templates, JSON schema contracts, and retry/parse logic:
+`BlogGenerationAgent` is a simple wrapper that handles all four content‑generation phases in one place.
 
 ```csharp
 var blogAgent      = new BlogGenerationAgent(aiAgent);
 var imageGenerator = new ImageGenerator(openAiClient, imageModel);
 ```
-
-The four phase methods are:
-
-| Method | Phase | Returns |
-|---|---|---|
-| `GenerateOutlineAsync(topic)` | 1. Title & Outline | `BlogOutline` |
-| `PlanSectionsAsync(outline)` | 2. Layout Planning | `SectionPlanList` |
-| `GenerateSectionHtmlAsync(title, plan, idx, total)` | 3. HTML Content | `string` (HTML fragment) |
-| `GenerateImagePromptAsync(title, plan)` | 4. Image Prompt | `string` |
 
 **Step 10: Generate Blog Sections and Assemble HTML**
 
@@ -271,15 +255,10 @@ At runtime, the console application performs the following actions:
 
 1. **Ask blog topic.** Prompt the user to enter a blog topic from the console.
 2. **Provide the blog title and outline for confirmation.** The agent drafts a title and 6–10 section outline which is displayed for the user to approve, regenerate, or cancel (`[Y/n/r]`).
-3. **Draft blog content as HTML.** For each approved section, the agent produces a rich HTML fragment using a fixed CSS class vocabulary.
-4. **Generate images for this blog using the `gpt-image-1.5` model.** For sections flagged `needsImage`, the agent writes an editorial-style image prompt and the OpenAI image model returns a PNG, embedded as Base64.
+3. **Draft blog content as HTML.** For each approved section, the agent generates structured HTML content with consistent styling.
+4. **Generate images for this blog using the `gpt-image-1.5` model.**  For sections marked `needsImage`, the AI returns PNG images and embedded as Base64.
 5. **Convert the HTML to Word by using the Syncfusion AI Agent Tools library.** The AI agent autonomously chains `CreateDocument` → `ImportHtml` → `ExportDocument` from `WordDocumentAgentTools` and `WordImportExportAgentTools`.
-6. **Save both HTML and DOCX files.** The assembled self-contained HTML and the converted Word document are written to the output folder (`%USERPROFILE%\Desktop\BlogGenerator` by default).
-
-The shared `WordDocumentManager` guarantees that the in-memory document
-created in step 1 of Phase 5 survives across the subsequent `ImportHtml` and
-`ExportDocument` tool invocations, which is exactly the
-[in-memory mode](./getting-started-in-memory-mode) contract.
+6. **Save both HTML and DOCX files.** The assembled self-contained HTML and the converted Word document are written to the output folder.
 
 ## Complete Startup Code
 

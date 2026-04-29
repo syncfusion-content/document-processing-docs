@@ -26,6 +26,8 @@ Documents are read from and written to storage (Azure Blob, S3, local disk, etc.
 | **Azure Storage Account** | Create from [Azure Portal](https://portal.azure.com) with a blob container |
 | **NuGet Packages** | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI), and [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs) |
 
+>**Note:** The OpenAI API key is mandatory for this sample because the guide demonstrates the integration using the **Microsoft Agents Framework with OpenAI**. The same integration steps work with any other [provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) (Azure OpenAI, Anthropic, Google Gemini, Ollama, etc.) — just swap in that provider’s API key or endpoint credentials.
+
 ## Integration
 
 Integrating the Agent Tool library into your application involves the following steps:
