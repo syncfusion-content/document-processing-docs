@@ -19,7 +19,7 @@ To get started, ensure the following software is installed on your machine:
 - [Node.js (`v14.15.0` or later)](https://nodejs.org/en/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
-## Create the TypeScript application
+## Create a TypeScript application
 
 Create a simple TypeScript application using the Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
 
