@@ -1,5 +1,5 @@
 ---
-title: Features of Smart data Extractor | Syncfusion
+title: Features of Smart Data Extractor | Syncfusion
 description: Discover the key features of Syncfusion Smart Data Extractor, a .NET library for extracting tables, forms, text, and images.
 platform: document-processing
 control: SmartDataExtractor
@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Smart Data Extractor Features 
 
-## Extract Data from a PDF Document
+## Extract Data from PDF Document
 
 To extract structured data such as text, form fields, tables and images from an entire PDF document using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
 
@@ -58,6 +58,8 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 {% endhighlight %}
 
 {% endtabs %} 
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-from-PDF-document/.NET).
 
 ## Extract Data as Stream
 
@@ -111,6 +113,8 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-stream/.NET).
+
 ## Extract Data as JSON from PDF Document
 
 To extract form fields across a PDF document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code example:
@@ -158,6 +162,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-PDF/.NET).
 
 ## Extract Data as Markdown from PDF Document
 
@@ -207,6 +213,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-MD-from-PDF/.NET).
+
 ## Extract Data as JSON from an Image
 
 To extract structured data from an image document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code examples. 
@@ -252,6 +260,8 @@ using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess
 {% endhighlight %}
 
 {% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-an-Image/.NET).
 
 ## Form Detection
 
@@ -316,6 +326,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Disable-Form-detection/.NET).
+
 ## Table Detection
 
 To extract tables across a PDF document and save them as a PDF output using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class with table extraction options, refer to the following code example:
@@ -379,7 +391,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract Data with different Form Recognizer options
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Disable-Table-detection/.NET).
+
+## Extract Data with Form Recognizer options
 
 To extract structured data from a PDF document using different Form Recognizer options with the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
 
@@ -475,7 +489,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract Data with different Table Extraction options
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Different-form-recognizer-options/.NET).
+
+## Extract Data with Table Extraction options
 
 To extract structured table data from a PDF document using advanced Table Extraction options with the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
 
@@ -556,7 +572,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Apply Confidence Threshold to Extract the Data
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Different-table-extraction-options/.NET).
+
+## Apply Confidence Threshold for Data Extraction
 
 To apply confidence thresholding when extracting data from a PDF document using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
 
@@ -618,7 +636,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}  
 
-## Extract Data Within a Specific Page Range
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Apply-Confidence-threshold/.NET).
+
+## Extract Data within a Specific Page Range
 
 To extract data from a specific range of pages in a PDF document using the ExtractDataAsPdfDocument method of the DataExtractor class, refer to the following code example:
  
@@ -675,4 +695,50 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {% endhighlight %}
 
 {% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-within-specific-range/.NET).
+
+
+## PDF to Markdown Preservation Mapping
+
+This section explains how common PDF elements are converted and preserved in Markdown format, ensuring that document structure and formatting remain consistent during the PDF to Markdown conversion process.
+
+<table>
+  <thead>
+    <tr>
+      <th><b>PDF Elements</b></th>
+      <th><b>Preservation in Markdown</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Header, Paragraph Title, Document Title</td>
+      <td>Headings (H2)</td>
+    </tr>
+    <tr>
+      <td>Paragraph</td>
+      <td>Paragraph</td>
+    </tr>
+    <tr>
+      <td>Image</td>
+      <td>Image (base64 string)</td>
+    </tr>
+    <tr>
+      <td>Table</td>
+      <td>Table</td>
+    </tr>
+    <tr>
+      <td>Text Inline Styles</td>
+      <td>Bold and Italic</td>
+    </tr>
+    <tr>
+      <td>Link text without title text</td>
+      <td>Links</td>
+    </tr>
+    <tr>
+      <td>Code blocks, Footer, Page Number, List, Block quotes, Subscript, Superscript</td>
+      <td>Text</td>
+    </tr>
+  </tbody>
+</table>
 

@@ -1,21 +1,22 @@
 ---
 layout: post
 title: Tools | AI Agent Tools | Syncfusion
-description: Complete reference for all Syncfusion Document SDK Agent Tool classes — Managers, PDF, Word, Excel, PowerPoint, Conversion, and Data Extraction tools.
+description: Complete reference for all Syncfusion Document SDK Agent Tool classes - Managers, PDF, Word, Excel, PowerPoint, Conversion, and Data Extraction tools.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
 ---
 
-# Syncfusion Document SDK Agent Tools
+# Syncfusion Document SDK AI Agent Tools
 
-Agent Tools are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager.
+[Agent Tools](https://learn.microsoft.com/en-us/agent-framework/get-started/add-tools?pivots=programming-language-csharp) are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager.
 
-Agent tools support two operational modes that determine how documents are handled during AI agent execution. In‑Memory mode enables live, in‑memory document processing, while Document Storage mode supports persistent, storage‑backed document handling.
+Agent tools support two operational modes that determine how documents are handled during AI agent execution. In‑memory mode enables live, in‑memory document processing, while Document Storage mode supports persistent, storage‑backed document handling.
+
 The operational mode is determined by the manager used when initializing the tool.
 
 - [Document Managers](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools#document-managers) (In‑Memory Mode)
-- [Document Storage Managers](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools#document-storage-managers) (Storage Mode)
+- [Document Storage Manager](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools#document-storage-manager) (Storage Mode)
 
 Tools are organized into the following categories:
 
@@ -44,7 +45,7 @@ Document Managers are in-memory containers that manage document life cycles duri
 
 **DocumentManagerCollection**
 
-`DocumentManagerCollection` is a centralized registry that holds one document manager for each `DocumentType`. It is designed for tool classes that need to work across multiple document types within a single operation — specifically when the source and output documents belong to different document managers.
+`DocumentManagerCollection` is a centralized registry that holds one document manager for each `DocumentType`. It is designed for tool classes that need to work across multiple document types within a single operation - specifically when the source and output documents belong to different document managers.
 
 **Why it is needed:** Consider a Word-to-PDF conversion. The source Word document lives in `WordDocumentManager`, but the resulting PDF must be stored in `PdfDocumentManager`. Rather than hard coding both document managers into the tool class, `OfficeToPdfAgentTools` accepts a `DocumentManagerCollection` and detects the correct manager dynamically at runtime based on the `sourceType` argument.
 
@@ -52,13 +53,13 @@ Document Managers are in-memory containers that manage document life cycles duri
 
 ## Document Storage Manager
 
-Document Storage Managers reads documents from and writes them back to storage (such as Azure Blob Storage, S3, or local disk) on each tool invocation; no in‑memory objects are maintained, so every tool call opens and saves document instances, making this mode well suited for web APIs and applications that require horizontal scaling, support large documents, or need state persistence across sessions.
+Document Storage Manager reads documents from and writes them back to storage (such as Azure Blob Storage, S3, or local disk) on each tool invocation; no in‑memory objects are maintained, so every tool call opens and saves document instances, making this mode well suited for web APIs and applications that require horizontal scaling, support large documents, or need state persistence across sessions.
 
 ## PDF Tools
 
 **PdfDocumentAgentTools**
 
-Provides core life cycle operations for PDF documents — creating, loading, exporting, and managing PDF documents in memory.
+Provides core life cycle operations for PDF documents - creating, loading, exporting, and managing PDF documents in memory.
 
 | Tool | Syntax | Description |
 |---|---|---|
@@ -120,12 +121,11 @@ Provides tools for watermarking, managing annotations, and importing/exporting f
 
 **PdfConverterAgentTools**
 
-Provides tools to convert PDF, HTML, and image files to PDF.
+Provides tools to convert PDF and image files to PDF.
 
 | Tool | Syntax | Description |
 |---|---|---|
 | ConvertPdfToPdfA | ConvertPdfToPdfA(<br/>string documentIdOrFilePath,<br/>PdfConformanceLevel conformanceLevel,<br/>string? outputFilePath = null) | Converts an existing PDF document to a PDF/A-compliant format. Supported conformance levels: `PdfA1B`, `PdfA2B`, `PdfA3B`, `Pdf_A4`, `Pdf_A4F`, `Pdf_A4E`. |
-| ConvertHtmlToPdf | ConvertHtmlToPdf(<br/>string urlOrFilePath,<br/>int pageWidth,<br/>int pageHeight,<br/>string? outputFilePath = null) | Converts a webpage URL or a local HTML file to a PDF document using explicit page width and height (in pixels). |
 | ImageToPdf | ImageToPdf(<br/>string[] imageFiles,<br/>PdfImagePosition imagePosition = PdfImagePosition.FitToPage,<br/>int pageWidth = 612,<br/>int pageHeight = 792,<br/>string? outputFilePath = null) | Creates a PDF document from one or more image files with control over image placement and page size. `imagePosition` values: `Stretch`, `Center`, `FitToPage`. |
 
 **PdfOcrAgentTools**
@@ -141,7 +141,7 @@ Provides tools to perform Optical Character Recognition (OCR) on PDF documents.
 
 **WordDocumentAgentTools**
 
-Provides core life cycle operations for Word documents — creating, loading, exporting, and managing Word documents in memory.
+Provides core life cycle operations for Word documents - creating, loading, exporting, and managing Word documents in memory.
 
 | Tool | Syntax | Description |
 |---|---|---|
@@ -261,7 +261,7 @@ Provides tools to manage bookmarks and bookmark content within Word documents.
 
 **ExcelWorkbookAgentTools**
 
-Provides core life cycle operations for Excel workbooks — creating, loading, exporting, and managing workbooks in memory.
+Provides core life cycle operations for Excel workbooks - creating, loading, exporting, and managing workbooks in memory.
 
 | Tool | Syntax | Description |
 |---|---|---|
@@ -361,7 +361,7 @@ Provides tools to create, edit pivot table in workbook
 
 **PresentationDocumentAgentTools**
 
-Provides core life cycle operations for PowerPoint presentations — creating, loading, exporting, and managing presentations in memory.
+Provides core life cycle operations for PowerPoint presentations - creating, loading, exporting, and managing presentations in memory.
 
 | Tool | Syntax | Description |
 |---|---|---|

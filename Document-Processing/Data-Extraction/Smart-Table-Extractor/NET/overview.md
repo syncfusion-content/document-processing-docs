@@ -2,7 +2,7 @@
 title: Overview for SmartTableExtractor | Syncfusion
 description: Learn how to detects form data from PDFs and scanned images using Syncfusion&reg; Essential Studio&reg; SmartTableExtractor.
 platform: document-processing
-control: PDF
+control: SmartTableExtractor
 documentation: UG
 keywords: Assemblies
 ---
@@ -112,8 +112,8 @@ PageObjects represent detected table elements on a page.
 </tr>
 <tr>
 <td>Content</td>
-<td>String</td>
-<td>Extracted text or value associated with the object (if applicable).</td>
+<td>Object</td>
+<td>Holds the extracted textual content along with its style attributes (FontName, FontStyle, FontSize) that describe the appearance of the text.</td>
 </tr>
 <tr>
 <td>Confidence</td>
@@ -201,6 +201,37 @@ The Cell Object represents an individual table entry, containing text values, sp
 <td>Content.Value</td>
 <td>String</td>
 <td>Text content inside the cell.</td>
+</tr>
+</tbody>
+</table>
+
+### Text Attribute 
+
+Represents the text formatting attributes (font family, font style, font size) applied to the extracted text.
+<table>
+<thead>
+<tr>
+<th><b>Attribute</b></th>
+<th><b>Type</b></th>
+<th><b>Description</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FontName</td>
+<td>String</td>
+<td>Specifies the font family name used for the text (for example, "Arial").</td>
+</tr>
+<tr>
+<td>FontStyle</td>
+<td>Integer</td>
+<td>Specifies the numeric identifier for the font style (for example, 0 = Regular, 1 = Bold, 2 = Italic).
+</td>
+</tr>
+<tr>
+<td>FontSize</td>
+<td>Float</td>
+<td>Specifies the font size used for the text.</td>
 </tr>
 </tbody>
 </table>
