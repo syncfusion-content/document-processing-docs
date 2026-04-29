@@ -10,11 +10,11 @@ documentation: UG
 
 The JavaScript PDF supports JPEG and PNG images.
 
-Images are supported through the `PdfImage` class, which is an abstract base class that provides the common functionality for `PdfBitmap` class.
+Images are supported through the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class, which is an abstract base class that provides the common functionality for [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class.
 
 ## Adding image in PDF document
 
-This example demonstrates how to add an image to a PDF document using the `PdfBitmap` class and the `draw` method of the `PdfImage` class. The image is loaded from a file and drawn at the specified coordinates on the page.
+This example demonstrates how to add an image to a PDF document using the [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class and the [draw](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage#draw) method of the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class. The image is loaded from a file and drawn at the specified coordinates on the page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -58,7 +58,7 @@ document.destroy();
 
 ## Inserting an image in an existing document
 
-This example demonstrates how to insert an image into an existing PDF document using the `PdfBitmap` class and the `draw` method of the `PdfImage` class. The image is loaded from a file and rendered at the specified position on the selected page.
+This example demonstrates how to insert an image into an existing PDF document using the [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class and the [draw](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage#draw) method of the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class. The image is loaded from a file and rendered at the specified position on the selected page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -102,7 +102,7 @@ document.destroy();
 
 ## Clipping and graphics state
 
-This example demonstrates how to apply clipping and manage graphics state in a PDF document using the `PdfGraphics` class. The `save` and `restore` methods preserve the current graphics state, while the `setClip` method defines a clipping region to restrict drawing operations, ensuring precise control over rendering.
+This example demonstrates how to apply clipping and manage graphics state in a PDF document using the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. The [save](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#save) and [restore](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#restore) methods preserve the current graphics state, while the [setClip](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#setclip) method defines a clipping region to restrict drawing operations, ensuring precise control over rendering.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -156,7 +156,7 @@ document.destroy();
 
 ## Applying transparency and rotation to the image
 
-This example demonstrates how to apply transparency and rotation to an image in a PDF document using the `PdfGraphics` class. Transparency can be controlled through the graphics state, while rotation is applied by transforming the graphics context before drawing the image, enabling advanced visual effects in the document.
+This example demonstrates how to apply transparency and rotation to an image in a PDF document using the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. Transparency can be controlled through the graphics state, while rotation is applied by transforming the graphics context before drawing the image, enabling advanced visual effects in the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
