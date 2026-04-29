@@ -212,6 +212,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 {% endtabcontent %}
 
+{% endtabcontents %}
+
 ## Video tutorial
 
 To get started quickly with Document Editor component, you can check the video below.
