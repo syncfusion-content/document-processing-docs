@@ -95,7 +95,7 @@ When [Form Designer mode](https://ej2.syncfusion.com/vue/documentation/api/pdfvi
 
 ![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/vue/prefilledforms-cs1" %}
 
 For more information about creating and editing form fields in the PDF Viewer, refer to [Create form fields](./manage-form-fields/create-form-fields).
 
