@@ -9,25 +9,17 @@ documentation: ug
 
 # Getting started with the ASP.NET MVC PDF Viewer control
 
-The [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) enables viewing and printing PDF files in web applications. It offers core interactions such as zooming, scrolling, text search, text selection, and copy. Thumbnails, bookmarks, hyperlinks, and a table of contents simplify navigation within and across PDF files.
-
-This guide shows how to integrate the ASP.NET MVC PDF Viewer into an ASP.NET MVC application using Visual Studio.
+This guide shows how to integrate the [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) into an ASP.NET MVC application using Visual Studio. A fully functional example project is available in the [GitHub repository](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20MVC%20Razor%20Examples).
 
 ## Prerequisites
 
-[System requirements for ASP.NET MVC controls](https://help.syncfusion.com/document-processing/system-requirements)
+- [System requirements for ASP.NET MVC controls](https://help.syncfusion.com/document-processing/system-requirements)
 
-Before running the application, register a Syncfusion license key as described in the licensing documentation: https://help.syncfusion.com/common/essential-studio/licensing/license-key
+- [Licensing](https://help.syncfusion.com/common/essential-studio/licensing/license-key)
 
-## Integrate the PDF Viewer into an ASP.NET MVC application
+## Create a new ASP.NET MVC App in Visual Studio
 
-1. Start Visual Studio and select **Create a new project**.
-2. Create a new ASP.NET MVC Web Application project.
-![Create an ASP.NET MVC project in Visual Studio](AspNetMVC_Images/create-aspnet-mvc-project.png)
-3. Choose the target framework and project name.
-![Set the project name and framework](AspNetMVC_Images/set-project-name.png)
-4. Select the Web Application (MVC) pattern and choose **Create**.
-![Select the MVC web application template](AspNetMVC_Images/select-web-application-project.png)
+- [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started)
 
 ## Install NuGet packages
 
@@ -111,6 +103,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer 
 
 <div>
     <div style="height:500px;width:100%;">
+        <!-- DocumentPath specifies the PDF document to load -->
+        <!-- ServiceUrl specifies the controller endpoint that the viewer uses to communicate with the server -->
         @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/Home/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
 </div>
@@ -118,322 +112,51 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer 
 {% endhighlight %}
 {% endtabs %}
 
-Add the below code in the `HomeController.cs` file which is placed inside `Controllers` folder.
+## Implement server-side handlers
 
-{% tabs %}
-{% highlight c# tabtitle="~/HomeController.cs" %}
+Add the server side code to `HomeController.cs` in the `Controllers` folder. The class should contain handler methods that process all PDF operations on the server, such as loading documents, rendering pages, handling annotations, and managing downloads.
 
-using Newtonsoft.Json;
-using Syncfusion.EJ2.PdfViewer;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Reflection;
-using System.Web;
-using System.Web.Mvc;
+An implementation example can be found in [Github](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/blob/main/PDFViewer/ASP.NET%20MVC%20Razor%20Examples/Controllers/HomeController.cs).
 
-namespace GettingStartedMVC.Controllers
-{
-    public class HomeController : Controller
-    {
-        [System.Web.Mvc.HttpPost]
-        public ActionResult Load(jsonObjects jsonObject)
-        {
-            PdfRenderer pdfviewer = new PdfRenderer();
-            MemoryStream stream = new MemoryStream();
-            var jsonData = JsonConverter(jsonObject);
-            object jsonResult = new object();
-            if (jsonObject != null && jsonData.ContainsKey("document"))
-            {
-                if (bool.Parse(jsonData["isFileName"]))
-                {
-                    string documentPath = GetDocumentPath(jsonData["document"]);
-
-                    if (!string.IsNullOrEmpty(documentPath))
-                    {
-                        byte[] bytes = System.IO.File.ReadAllBytes(documentPath);
-                        stream = new MemoryStream(bytes);
-                    }
-                    else
-                    {
-                        string fileName = jsonData["document"].Split(new string[] { "://" }, StringSplitOptions.None)[0];
-                        if (fileName == "http" || fileName == "https")
-                        {
-                            var WebClient = new WebClient();
-                            byte[] pdfDoc = WebClient.DownloadData(jsonData["document"]);
-                            stream = new MemoryStream(pdfDoc);
-                        }
-                        else
-                        {
-                            return this.Content(jsonData["document"] + " is not found");
-                        }
-                    }
-                }
-                else
-                {
-                    byte[] bytes = Convert.FromBase64String(jsonData["document"]);
-                    stream = new MemoryStream(bytes);
-
-                }
-            }
-            jsonResult = pdfviewer.Load(stream, jsonData);
-            return Content(JsonConvert.SerializeObject(jsonResult));
-        }
-
-        public Dictionary<string, string> JsonConverter(jsonObjects results)
-        {
-            Dictionary<string, object> resultObjects = new Dictionary<string, object>();
-            resultObjects = results.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                .ToDictionary(prop => prop.Name, prop => prop.GetValue(results, null));
-            var emptyObjects = (from kv in resultObjects
-                                where kv.Value != null
-                                select kv).ToDictionary(kv => kv.Key, kv => kv.Value);
-            Dictionary<string, string> jsonResult = emptyObjects.ToDictionary(k => k.Key, k => k.Value.ToString());
-            return jsonResult;
-        }
-
-        [System.Web.Mvc.HttpPost]
-        public ActionResult ExportAnnotations(jsonObjects jsonObject)
-        {
-            PdfRenderer pdfviewer = new PdfRenderer();
-            var jsonData = JsonConverter(jsonObject);
-            string jsonResult = pdfviewer.ExportAnnotation(jsonData);
-            return Content((jsonResult));
-        }
-
-        [System.Web.Mvc.HttpPost]
-        public ActionResult ImportAnnotations(jsonObjects jsonObject)
-        {
-            PdfRenderer pdfviewer = new PdfRenderer();
-            string jsonResult = string.Empty;
-            var jsonData = JsonConverter(jsonObject);
-            if (jsonObject != null && jsonData.ContainsKey("fileName"))
-            {
-                string documentPath = GetDocumentPath(jsonData["fileName"]);
-                if (!string.IsNullOrEmpty(documentPath))
-                {
-                    jsonResult = System.IO.File.ReadAllText(documentPath);
-                }
-                else
-                {
-                    return this.Content(jsonData["document"] + " is not found");
-                }
-            }
-            return Content(JsonConvert.SerializeObject(jsonResult));
-        }
-
-        [System.Web.Mvc.HttpPost]
-        public ActionResult ImportFormFields(jsonObjects jsonObject)
-        {
-            PdfRenderer pdfviewer = new PdfRenderer();
-            var jsonData = JsonConverter(jsonObject);
-            object jsonResult = pdfviewer.ImportFormFields(jsonData);
-            return Content(JsonConvert.SerializeObject(jsonResult));
-        }
-
-        [System.Web.Mvc.HttpPost]
-        public ActionResult ExportFormFields(jsonObjects jsonObject)
-        {
-            PdfRenderer pdfviewer = new PdfRenderer();
-            var jsonData = JsonConverter(jsonObject);
-            string jsonResult = pdfviewer.ExportFormFields(jsonData);
-            return Content(jsonResult);
-        }
-
-        [System.Web.Mvc.HttpPost]
-        public ActionResult RenderPdfPages(jsonObjects jsonObject)
-        {
-            PdfRenderer pdfviewer = new PdfRenderer();
-            var jsonData = JsonConverter(jsonObject);
-            object jsonResult = pdfviewer.GetPage(jsonData);
-            return Content(JsonConvert.SerializeObject(jsonResult));
-        }
-
-        [System.Web.Mvc.HttpPost]
-        public ActionResult Unload(jsonObjects jsonObject)
-        {
-            PdfRenderer pdfviewer = new PdfRenderer();
-            var jsonData = JsonConverter(jsonObject);
-            pdfviewer.ClearCache(jsonData);
-            return this.Content("Document cache is cleared");
-        }
-
-        [System.Web.Mvc.HttpPost]
-        public ActionResult RenderThumbnailImages(jsonObjects jsonObject)
-        {
-            PdfRenderer pdfviewer = new PdfRenderer();
-            var jsonData = JsonConverter(jsonObject);
-            object result = pdfviewer.GetThumbnailImages(jsonData);
-            return Content(JsonConvert.SerializeObject(result));
-        }
-
-        [System.Web.Mvc.HttpPost]
-        public ActionResult Bookmarks(jsonObjects jsonObject)
-        {
-            PdfRenderer pdfviewer = new PdfRenderer();
-            var jsonData = JsonConverter(jsonObject);
-            object jsonResult = pdfviewer.GetBookmarks(jsonData);
-            return Content(JsonConvert.SerializeObject(jsonResult));
-        }
-
-        [System.Web.Mvc.HttpPost]
-        public ActionResult RenderAnnotationComments(jsonObjects jsonObject)
-        {
-            PdfRenderer pdfviewer = new PdfRenderer();
-            var jsonData = JsonConverter(jsonObject);
-            object jsonResult = pdfviewer.GetAnnotationComments(jsonData);
-            return Content(JsonConvert.SerializeObject(jsonResult));
-        }
-
-        [System.Web.Mvc.HttpPost]
-        public ActionResult Download(jsonObjects jsonObject)
-        {
-            PdfRenderer pdfviewer = new PdfRenderer();
-            var jsonData = JsonConverter(jsonObject);
-            string documentBase = pdfviewer.GetDocumentAsBase64(jsonData);
-            return Content(documentBase);
-        }
-
-        [System.Web.Mvc.HttpPost]
-        public ActionResult PrintImages(jsonObjects jsonObject)
-        {
-            PdfRenderer pdfviewer = new PdfRenderer();
-            var jsonData = JsonConverter(jsonObject);
-            object pageImage = pdfviewer.GetPrintImage(jsonData);
-            return Content(JsonConvert.SerializeObject(pageImage));
-        }
-
-        private HttpResponseMessage GetPlainText(string pageImage)
-        {
-            var responseText = new HttpResponseMessage(HttpStatusCode.OK);
-            responseText.Content = new StringContent(pageImage, System.Text.Encoding.UTF8, "text/plain");
-            return responseText;
-        }
-
-        private string GetDocumentPath(string document)
-        {
-            string documentPath = string.Empty;
-            if (!System.IO.File.Exists(document))
-            {
-                var path = HttpContext.Request.PhysicalApplicationPath;
-                if (System.IO.File.Exists(path + "App_Data\\" + document))
-                    documentPath = path + "App_Data\\" + document;
-            }
-            else
-            {
-                documentPath = document;
-            }
-            return documentPath;
-        }
-
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-            return View();
-        }
-    }
-
-    public class jsonObjects
-    {
-        public string document { get; set; }
-        public string password { get; set; }
-        public bool isClientsideLoading { get; set; }
-        public string organizePages { get; set; }
-        public string zoomFactor { get; set; }
-        public string isFileName { get; set; }
-        public string xCoordinate { get; set; }
-        public string yCoordinate { get; set; }
-        public string pageNumber { get; set; }
-        public string documentId { get; set; }
-        public string hashId { get; set; }
-        public string sizeX { get; set; }
-        public string sizeY { get; set; }
-        public string startPage { get; set; }
-        public string endPage { get; set; }
-        public string stampAnnotations { get; set; }
-        public string textMarkupAnnotations { get; set; }
-        public string stickyNotesAnnotation { get; set; }
-        public string shapeAnnotations { get; set; }
-        public string measureShapeAnnotations { get; set; }
-        public string action { get; set; }
-        public string pageStartIndex { get; set; }
-        public string pageEndIndex { get; set; }
-        public string fileName { get; set; }
-        public string elementId { get; set; }
-        public string pdfAnnotation { get; set; }
-        public string importPageList { get; set; }
-        public string uniqueId { get; set; }
-        public string data { get; set; }
-        public string viewPortWidth { get; set; }
-        public string viewportHeight { get; set; }
-        public string tilecount { get; set; }
-        public bool isCompletePageSizeNotReceived { get; set; }
-        public string freeTextAnnotation { get; set; }
-        public string signatureData { get; set; }
-        public string fieldsData { get; set; }
-        public string formDesigner { get; set; }
-        public bool isSignatureEdited { get; set; }
-        public string inkSignatureData { get; set; }
-        public bool hideEmptyDigitalSignatureFields { get; set; }
-        public bool showDigitalSignatureAppearance { get; set; }
-        public bool digitalSignaturePresent { get; set; }
-        public string tileXCount { get; set; }
-        public string tileYCount { get; set; }
-        public string digitalSignaturePageList { get; set; }
-        public string annotationCollection { get; set; }
-        public string annotationsPageList { get; set; }
-        public string formFieldsPageList { get; set; }
-        public bool isAnnotationsExist { get; set; }
-        public bool isFormFieldAnnotationsExist { get; set; }
-        public string documentLiveCount { get; set; }
-        public string annotationDataFormat { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-[ServiceUrl](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ServiceUrl) specifies the controller endpoint that the viewer uses to communicate with the server. In this example, `PdfViewer` is the controller name.
-
-[DocumentPath](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_DocumentPath) specifies the PDF file to load in the viewer (a local file name or an external URL).
+## Run the application
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer will render in the default web browser.
 
 ![ASP.NET MVC PDF Viewer Control](AspNetMVC_Images/pdfviewer-control.png)
 
-N> The viewer supports changing the `serviceURL` at runtime. After updating `serviceURL`, call `pdfViewer.dataBind()` to apply the change immediately (available from version 23.1.36).
+## Deployment notes
+
+- Unlike the standalone PDF Viewer which performs client-side rendering, the server-backed PDF Viewer processes and renders PDFs entirely on the server. As a result, the following files are **not required** and should be omitted during deployment:
+  - `pdfium.js`
+  - `pdfium.wasm`
+
+- For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
+
+- For AWS environments, use the following packages:
+
+  | **Amazon Web Services (AWS)** |**NuGet package name** |
+  | --- | --- |
+  | AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
+  | AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
+
+- The `serviceUrl` can be updated dynamically at runtime. After updating the value, invoke `pdfViewer.dataBind()` to apply the change and then load the document. This feature is supported in version 23.1.36 or later.
+
+```html
+@{
     string serviceUrl = VirtualPathUtility.ToAbsolute("~/Home/");
+}
+<script>
     function load() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.serviceUrl = '@serviceUrl'
+        pdfViewer.serviceUrl = "@serviceUrl";
         pdfViewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
         pdfViewer.dataBind();
-        pdfViewer.load(pdfViewer.documentPath, null);
     }
+</script>
+```
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20MVC%20Razor%20Examples).
+## See also
 
-N> Refer to the [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) feature tour and explore the [ASP.NET MVC PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/pdfviewer/default#/tailwind3) to learn more about core features.
-
-N> When configuring the server-backed PDF viewer, it's essential to understand that there is no need to include the pdfium.js and pdfium.wasm files. Unlike the standalone PDF viewer, which relies on these files for local rendering, the server-backed PDF viewer fetches and renders PDFs directly from the server. Consequently, you can exclude the copy command for deployment process, as they are not required to load and display PDFs in this context.
-
-N> For hosting the web service on the Linux platform, ensure to include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1). Additionally, for AWS environments, utilize the following packages:
-
-| **Amazon Web Services (AWS)** |**NuGet package name** |
-| --- | --- |
-| AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)|
-| AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.116.1)|
+- [Getting started with Syncfusion ASP.NET MVC Standalone PDF Viewer](./getting-started)
+- [PDF Viewer Form Designer](./forms/overview#form-designer)
+- [Organize PDF pages](./organize-pages/overview)
