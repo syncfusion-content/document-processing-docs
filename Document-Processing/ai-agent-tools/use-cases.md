@@ -1,6 +1,6 @@
 ---
 title: Create Custom Blog Generator Agent | Syncfusion AI Agent Tools
-description: Learn how to build a custom Blog Generator agent that combines Syncfusion Word Agent Tools with the Microsoft Agent Framework and OpenAI to produce richly formatted blog ebooks in HTML and Word.
+description: Learn how to build a custom Blog Generator agent using Syncfusion Word tools, Microsoft Agent Framework, and OpenAI to create rich blog ebooks.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
@@ -121,7 +121,7 @@ allSyncfusionTools.AddRange(new WordImportExportAgentTools(wordManager).GetTools
 **Step 6: Convert Syncfusion Tools to `Microsoft.Extensions.AI` Functions**
 
 Syncfusion `AITool` objects expose a `MethodInfo` and target instance. Wrap
-them with `AIFunctionFactory.Create` so they are recognised by the Microsoft
+them with `AIFunctionFactory.Create` so they are recognized by the Microsoft
 Agent Framework:
 
 ```csharp
@@ -171,7 +171,7 @@ AIAgent aiAgent = chatClient.AsIChatClient().AsAIAgent(
 **Step 8: Wrap the Agent for the Four Content-Generation Phases**
 
 `BlogGenerationAgent` is a thin wrapper that exposes one method per phase and
-centralises prompt templates, JSON schema contracts, and retry/parse logic:
+centralizes prompt templates, JSON schema contracts, and retry/parse logic:
 
 ```csharp
 var blogAgent      = new BlogGenerationAgent(aiAgent);
