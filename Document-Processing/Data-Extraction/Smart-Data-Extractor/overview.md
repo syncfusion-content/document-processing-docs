@@ -1,5 +1,5 @@
 ---
-title: Intro to Smart data extractor| Syncfusion
+title: Smart Data Extractor| | Syncfusion&reg;
 description: This page introduces Syncfusion Smart Data Extractor, outlining its purpose, core details, and usage in .NET applications.
 platform: document-processing
 control: SmartDataExtractor

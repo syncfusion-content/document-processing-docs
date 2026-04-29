@@ -11,7 +11,7 @@ The PDF provides support to add watermark or stamp with text and images in the P
 
 ## Adding text watermark in PDF document
 
-This example demonstrates how to add a text watermark using standard fonts in a PDF document by utilizing the `drawString` method of the `PdfGraphics` class along with predefined font types from the `PdfStandardFont` class. The transparency can be applied to the text using `setTransparency` method and rotation can be applied using `rotateTransform` method.
+This example demonstrates how to add a text watermark using standard fonts in a PDF document by utilizing the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class along with predefined font types from the [PdfStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfstandardfont) class. The transparency can be applied to the text using [setTransparency](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#settransparency) method and rotation can be applied using [rotateTransform](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#rotatetransform) method.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -71,7 +71,7 @@ document.destroy();
 
 ## Adding image watermark in PDF document
 
-This example demonstrates how to add a image watermark using standard fonts in a PDF document by utilizing the `drawImage` method of the `PdfGraphics` class. The transparency can be applied to the images using `setTransparency` method.
+This example demonstrates how to add a image watermark using standard fonts in a PDF document by utilizing the [drawImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawimage) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. The transparency can be applied to the images using [setTransparency](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#settransparency) method.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -126,7 +126,7 @@ document.destroy();
 
 ## Adding watermark annotation
 
-This example demonstrates how to add a text watermark to an existing PDF document using the `PdfWatermarkAnnotation` class. The annotation allows you to specify the watermark text, color, opacity, and position to visually mark the document as confidential or draft.
+This example demonstrates how to add a text watermark to an existing PDF document using the [PdfWatermarkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfwatermarkannotation) class. The annotation allows you to specify the watermark text, color, opacity, and position to visually mark the document as confidential or draft.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -174,7 +174,7 @@ document.destroy();
 
 ## Removing watermark annotation
 
-Remove a watermark annotation from the page's annotation collection using the `PdfAnnotationCollection` of the loaded page. The following example demonstrates how to achieve this.
+Remove a watermark annotation from the page's annotation collection using the [PdfAnnotationCollection](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotationcollection) of the loaded page. The following example demonstrates how to achieve this.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

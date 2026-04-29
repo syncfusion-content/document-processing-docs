@@ -178,6 +178,22 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
+## Adding Next.js Configuration
+
+When deploying the Syncfusion PDF Viewer component in a Next.js application, you may need to add the following configuration to ensure smooth deployment:
+
+Create a next.config.js file in the root of your project, and add the following code to the file:
+
+```
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: false,  // Disable React Strict Mode for compatibility
+  swcMinify: false,        // Disable SWC minification for better compatibility
+};
+
+module.exports = nextConfig;
+```
+
 To learn more about the PDF Viewer component, see the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started#module-injection).
 
 N> [View the Next.js PDF Viewer sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pdfviewer-component-in-nextjs)
