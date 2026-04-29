@@ -11,7 +11,7 @@ A PDF template is a drawing surface, where contents can be added. All the elemen
 
 ## Creating a new PDF template
 
-This example demonstrates how to create a new PDF template using the `PdfTemplate` class. A PDF template allows you to define reusable graphics or content that can be drawn on multiple pages or annotations within a PDF document.
+This example demonstrates how to create a new PDF template using the [PdfTemplate](https://ej2.syncfusion.com/documentation/api/pdf/pdftemplate) class. A PDF template allows you to define reusable graphics or content that can be drawn on multiple pages or annotations within a PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

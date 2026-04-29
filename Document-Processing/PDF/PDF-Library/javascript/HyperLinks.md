@@ -11,7 +11,7 @@ In PDF, hyperlinks can be added to allow the users to navigate to another part o
 
 ## Working with web navigation
 
-This example demonstrates how to create a web link annotation in a PDF document using the `PdfTextWebLinkAnnotation` class. A web link annotation allows users to navigate to a specified URL directly from the PDF by clicking the annotated text.
+This example demonstrates how to create a web link annotation in a PDF document using the [PdfTextWebLinkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdftextweblinkannotation) class. A web link annotation allows users to navigate to a specified URL directly from the PDF by clicking the annotated text.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -85,7 +85,7 @@ let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfF
 let size: Size = font.measureString('Syncfusion');
 // Create a new text web link annotation
 let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0}, { r: 165, g: 42, b: 42 }, 1);
-// Initializes a new instance of the `PdfDestination` class.
+// Initializes a new instance of the [PdfDestination](https://ej2.syncfusion.com/documentation/api/pdf/pdfdestination) class.
 let destination: PdfDestination = new PdfDestination(
     page,
     { x: 20, y: 20, width: 100, height: 50 },
@@ -113,7 +113,7 @@ var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf
 var size = font.measureString('Syncfusion');
 // Create a new text web link annotation
 var annotation = new ej.pdf.PdfDocumentLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0 }, { r: 165, g: 42, b: 42 }, 1);
-// Initializes a new instance of the `PdfDestination` class.
+// Initializes a new instance of the [PdfDestination](https://ej2.syncfusion.com/documentation/api/pdf/pdfdestination) class.
 var destination = new ej.pdf.PdfDestination(
     page,
     { x: 20, y: 20, width: 100, height: 50 },
@@ -131,7 +131,7 @@ document.destroy();
 
 ## Working with external document navigation
 
-This example demonstrates how to create external navigation in a PDF document using `PdfFileLinkAnnotation` annotations. External navigation allows users to open and navigate to another PDF or an external file from within the current document.
+This example demonstrates how to create external navigation in a PDF document using [PdfFileLinkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdffilelinkannotation) annotations. External navigation allows users to open and navigate to another PDF or an external file from within the current document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -215,7 +215,7 @@ document.destroy();
 
 ## Removing hyperlinks
 
-This example demonstrates how to remove hyperlink annotations from a PDF using Syncfusion’s JavaScript PDF Library. By reviewing each annotation and checking whether it represents a hyperlink, you can remove it using either `remove()` or `removeAt()` methods. This helps clean up outdated or unwanted links while keeping the rest of the document content intact.
+This example demonstrates how to remove hyperlink annotations from a PDF using Syncfusion’s JavaScript PDF Library. By reviewing each annotation and checking whether it represents a hyperlink, you can remove it using either [remove()](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotationcollection#remove) or [removeAt()](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotationcollection#removeat) methods. This helps clean up outdated or unwanted links while keeping the rest of the document content intact.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
