@@ -49,7 +49,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 ### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/~syncfusionorg).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor).
 
 To install the Document Editor component, use the following command:
 
