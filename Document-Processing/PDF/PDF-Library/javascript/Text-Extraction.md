@@ -22,7 +22,7 @@ import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
-// Initialize a new instance of the `PdfDataExtractor]` class
+// Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
 // Extract text content from the PDF document.
 let text: string = extractor.extractText();

@@ -82,7 +82,7 @@ let document: PdfDocument = new PdfDocument(data);
 let redactions: PdfRedactionRegion[] = [];
 // Initialize a new instance of the `PdfRedactor` class
 let redactor: PdfRedactor = new PdfRedactor(document);
-// Initialize a new instance of the `PdfRedactionRegion]` class.
+// Initialize a new instance of the `PdfRedactionRegion` class.
 let redaction: PdfRedactionRegion = new PdfRedactionRegion(0, {x: 40, y: 41, width: 80, height: 90});
 // Sets the fill color used to fill the redacted area.
 redaction.fillColor = {r: 255, g: 0, b: 0};
@@ -110,7 +110,7 @@ var document = new ej.pdf.PdfDocument(data);
 var redactions = [];
 // Initialize a new instance of the `PdfRedactor` class
 var redactor = new ej.pdfdataextract.PdfRedactor(document);
-// Initialize a new instance of the `PdfRedactionRegion]` class.
+// Initialize a new instance of the `PdfRedactionRegion` class.
 var redaction = new ej.pdfdataextract.PdfRedactionRegion(0, {x: 40, y: 41, width: 80, height: 90});
 // Sets the fill color used to fill the redacted area.
 redaction.fillColor = {r: 255, g: 0, b: 0};
