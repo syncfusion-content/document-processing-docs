@@ -8,11 +8,11 @@ documentation: UG
 
 # How to preserve line breaks when saving Excel as CSV?
 
-As per Microsoft Excel behavior, text that contains line breaks inside a cell is not preserved in the same visual format when the file is saved as CSV. CSV is a plain-text format intended to represent tabular data, it cannot reliably retain Excel-specific formatting or certain in-cell features the way the native Excel formats do.
+When an Excel worksheet is saved as a CSV file, any text containing line breaks within a cell is not preserved in the same visual form. This is because CSV is a plain-text format designed to store tabular data, and it does not support Excel-specific formatting or display features such as in-cell line wrapping.
 
-In practice, when you save an Excel workbook as CSV the cell content will be written into the text file, but line breaks may be interpreted or rendered differently by CSV consumers (including Excel on re-open), resulting in the loss of the original visual layout.
+Although the underlying text data is written to the CSV file, the way line breaks are interpreted can vary across different applications, including Excel itself when reopening the file. As a result, the original visual layout—especially multiline content within a single cell—may not be maintained.
 
-The only way to preserve the exact appearance and in-cell formatting (including line breaks shown inside cells) is to save the document in an Excel file format such as XLSX or XLS. These formats preserve cell formatting, rich text, and embedded line breaks.
+To reliably preserve the exact appearance, including in-cell line breaks and formatting, the file must be saved in a native Excel format such as XLSX or XLS, which fully supports cell formatting, rich text, and embedded line breaks.
 
 ## See Also
 
