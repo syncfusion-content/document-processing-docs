@@ -13,7 +13,7 @@ N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-ext
 
 ## Extract images from a PDF
 
-This code demonstrates how to extract embedded images and their metadata from a PDF using  `PdfDataExtractor`. It loads a PDF, retrieves all  `PdfEmbeddedImage` entries across pages, accesses the first image's raw byte data, and reads its properties format, page index, occurrence index, bounds, interpolation status, and masking flags before saving/disposing resources by destroying the document.
+This code demonstrates how to extract embedded images and their metadata from a PDF using  [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor). It loads a PDF, retrieves all  [PdfEmbeddedImage](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfembeddedimage) entries across pages, accesses the first image's raw byte data, and reads its properties format, page index, occurrence index, bounds, interpolation status, and masking flags before saving/disposing resources by destroying the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
