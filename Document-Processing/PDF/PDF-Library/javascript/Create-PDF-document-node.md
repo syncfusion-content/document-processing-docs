@@ -25,8 +25,7 @@ npm install @syncfusion/ej2-pdf --save
 ```
 
 N> For image and data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
-Ensure that your application includes an `ej2-pdf-lib` folder within a publicly accessible static directory (such as wwwroot, public, or dist). This folder must contain the required `.js` and `.wasm` files needed for image and data extraction.
-This setup is not required for basic PDF creation. Image extraction and image‑based redaction features are optimized for browser environments where visual rendering is available. These features rely on browser technologies such as DOM APIs, Canvas, and client‑side rendering, and therefore are not supported in pure Node.js server environments.
+Image extraction and image‑based redaction features are optimized for browser environments where visual rendering is available. These features rely on browser technologies such as DOM APIs, Canvas, and client‑side rendering, and therefore are not supported in pure Node.js server environments.
 
 ## Dependencies
 
