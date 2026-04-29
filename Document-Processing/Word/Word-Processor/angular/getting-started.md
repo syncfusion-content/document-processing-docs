@@ -131,7 +131,9 @@ The Document Editor is displayed as shown below.
 {% include code-snippet/document-editor/angular/document-editor-container-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
-  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-angular-word-processor).
+
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
 
 ## Video tutorial
@@ -153,5 +155,3 @@ The Document Editor component requires server-side interactions for the followin
 >Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
-
-N> You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-angular-word-processor).
