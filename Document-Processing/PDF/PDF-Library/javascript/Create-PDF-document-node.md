@@ -89,7 +89,7 @@ import { PdfDocument, PdfGraphics, PdfPage, PdfFont, PdfFontFamily, PdfFontStyle
 * Include the following code example in the Node.js environment to generate a PDF document 
 
 {% tabs %}
-{% highlight typescript tabtitle="index.ts" %}
+{% highlight typescript tabtitle="server.js" %}
 
 const express = require('express');
 const {
