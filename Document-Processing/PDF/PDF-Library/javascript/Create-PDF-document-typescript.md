@@ -23,7 +23,7 @@ All Syncfusion JS 2 packages are published in `npmjs.com` registry.
 ```bash
 npm install @syncfusion/ej2-pdf --save
 ```
-N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+N> For image and data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 Ensure that your application includes an `ej2-pdf-lib` folder within a publicly accessible static directory (such as wwwroot, public, or dist). This folder must contain the required `.js` and `.wasm` files needed for image and data extraction. This setup is not required for **basic PDF creation**.
 
 ## Dependencies

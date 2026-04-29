@@ -24,7 +24,7 @@ All Syncfusion JS 2 packages are published in `npmjs.com` registry.
 npm install @syncfusion/ej2-pdf --save
 ```
 
-N> For image and data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 Image extraction and image‑based redaction features are optimized for browser environments where visual rendering is available. These features rely on browser technologies such as DOM APIs, Canvas, and client‑side rendering, and therefore are not supported in pure Node.js server environments.
 
 ## Dependencies
