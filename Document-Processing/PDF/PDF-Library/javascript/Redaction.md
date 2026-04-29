@@ -13,7 +13,7 @@ N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-ext
 
 ## Removing sensitive content from the PDF document
 
-Redaction permanently removes confidential or sensitive information from a PDF. The `PdfRedactor` and `PdfRedactionRegion` classes allow you to mark specific areas and apply irreversible redaction to the document.
+Redaction permanently removes confidential or sensitive information from a PDF. The [PdfRedactor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactor) and [PdfRedactionRegion](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactionregion) classes allow you to mark specific areas and apply irreversible redaction to the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -80,9 +80,9 @@ import { PdfRedactor, PdfRedactionRegion, ApplicationPlatform } from '@syncfusio
 let document: PdfDocument = new PdfDocument(data);
 // Add redactions to the collection
 let redactions: PdfRedactionRegion[] = [];
-// Initialize a new instance of the `PdfRedactor` class
+// Initialize a new instance of the [PdfRedactor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactor) class
 let redactor: PdfRedactor = new PdfRedactor(document);
-// Initialize a new instance of the `PdfRedactionRegion` class.
+// Initialize a new instance of the [PdfRedactionRegion](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactionregion) class.
 let redaction: PdfRedactionRegion = new PdfRedactionRegion(0, {x: 40, y: 41, width: 80, height: 90});
 // Sets the fill color used to fill the redacted area.
 redaction.fillColor = {r: 255, g: 0, b: 0};
@@ -108,9 +108,9 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Add redactions to the collection
 var redactions = [];
-// Initialize a new instance of the `PdfRedactor` class
+// Initialize a new instance of the [PdfRedactor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactor) class
 var redactor = new ej.pdfdataextract.PdfRedactor(document);
-// Initialize a new instance of the `PdfRedactionRegion` class.
+// Initialize a new instance of the [PdfRedactionRegion](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactionregion) class.
 var redaction = new ej.pdfdataextract.PdfRedactionRegion(0, {x: 40, y: 41, width: 80, height: 90});
 // Sets the fill color used to fill the redacted area.
 redaction.fillColor = {r: 255, g: 0, b: 0};
@@ -133,7 +133,7 @@ document.destroy();
 
 ## Text appearance on the redacted area
 
-Customize the redacted region by drawing text or graphics over it, using `PdfRedactionRegion` and `PdfRedactor` to define the area and apply a custom visual appearance to the redaction.
+Customize the redacted region by drawing text or graphics over it, using [PdfRedactionRegion](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactionregion) and [PdfRedactor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactor) to define the area and apply a custom visual appearance to the redaction.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
