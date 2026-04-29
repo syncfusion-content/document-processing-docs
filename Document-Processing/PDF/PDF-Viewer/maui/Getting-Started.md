@@ -581,13 +581,13 @@ Now that the PDF Viewer is running, here is a suggested learning path to explore
 
 | Step | Goal | Topic |
 |---|---|---|
-| 1 | **Open documents from different sources** | Load a PDF from a URL, the device's file system, a Base64 string, or a password-protected file. → [Open a Document](../open-a-document) |
-| 2 | **Navigate and read** | Jump to specific pages, control zoom levels, and search for text. → [Page Navigation](../page-navigation) · [Magnification](../magnification) · [Text Search](../text-search) |
-| 3 | **Add annotations** | Highlight text, draw shapes, add sticky notes, or use freehand ink. → [Annotations Overview](../annotations-overview) |
-| 4 | **Fill form fields** | Read, edit, validate, import, and export PDF form data. → [Form Filling Overview](../form-filling-overview) |
-| 5 | **Save and print** | Persist changes back to a file stream, optionally flattening annotations. → [Save a Document](../save-a-document) · [Print a Document](../print-a-document) |
-| 6 | **Customize the toolbar** | Show, hide, add, or remove toolbar items to match your app's workflow. → [Toolbar Customization](../toolbar-customization) |
-| 7 | **Redact sensitive content** | Permanently remove confidential text or images before sharing. → [Redaction](../redaction) |
+| 1 | **Open documents from different sources** | Load a PDF from a URL, the device's file system, a Base64 string, or a password-protected file. → [Open a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document) |
+| 2 | **Navigate and read** | Jump to specific pages, control zoom levels, and search for text. → [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/page-navigation) · [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/magnification) · [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-search) |
+| 3 | **Add annotations** | Highlight text, draw shapes, add sticky notes, or use freehand ink. → [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview) |
+| 4 | **Fill form fields** | Read, edit, validate, import, and export PDF form data. → [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview) |
+| 5 | **Save and print** | Persist changes back to a file stream, optionally flattening annotations. → [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document) · [Print a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/print-a-document) |
+| 6 | **Customize the toolbar** | Show, hide, add, or remove toolbar items to match your app's workflow. → [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization) |
+| 7 | **Redact sensitive content** | Permanently remove confidential text or images before sharing. → [Redaction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/redaction) |
 
-* [Annotations Overview](../annotations-overview)
-* [Migration Guide](../migration)
+* [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+* [Migration Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/migration)

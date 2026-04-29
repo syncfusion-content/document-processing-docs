@@ -35,14 +35,6 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET
-</td>
-<td>
-{{'[Syncfusion.Pdf.OCR.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.AspNet)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC5
 </td>
 <td>

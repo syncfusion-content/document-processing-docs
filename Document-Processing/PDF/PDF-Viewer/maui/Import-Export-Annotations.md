@@ -101,7 +101,7 @@ void ExportSpecificAnnotations()
 {% endtabs %}
 
 ## See Also
-- [Annotations Overview](../annotations-overview)
-- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
-- [Form Filling – Import and Export](../form-filling-import-export)
-- [Save a Document](../save-a-document)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
+- [Form Filling – Import and Export](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-import-export)
+- [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document)

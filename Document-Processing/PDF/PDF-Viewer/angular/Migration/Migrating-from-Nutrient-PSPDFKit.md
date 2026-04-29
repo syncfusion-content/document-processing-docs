@@ -106,7 +106,7 @@ export class OldViewerComponent implements AfterViewInit {
 ```html
 <ejs-pdfviewer id="pdfViewer"
     [documentPath]='https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
-    [resourceUrl]='https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
+    [resourceUrl]='https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib'
     style="height:640px;display:block">
 </ejs-pdfviewer>
 ```

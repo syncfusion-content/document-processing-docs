@@ -10,7 +10,7 @@ documentation: UG
 
 **Printing** **Title** **Rows**
 
-XlsIO allows to designate row header to repeat on all pages of a printed workbook using [PrintTitleRows](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleRows) property. The following code snippet illustrates this.
+XlsIO allows to designate row header to repeat on all pages of a printed workbook using [PrintTitleRows](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintTitleRows) property. The following code snippet illustrates this.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -107,12 +107,12 @@ excelEngine.Dispose()
 {% endhighlight %}
 {% endtabs %}  
 
-For information on Print settings, refer to section [Page Setup Settings](/file-formats/xlsio/working-with-excel-worksheet#page-setup-settings).
+For information on Print settings, refer to section [Page Setup Settings](/document-processing/excel/excel-library/net/working-with-excel-worksheet#page-setup-settings).
 
 ## See Also
 
-* [How to ignore print areas set in a worksheet?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-ignore-print-areas-set-in-a-worksheet)
-* [How to set a line break inside a cell?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-set-a-line-break-inside-a-cell)
-* [How to set or format a Header/Footer?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-set-or-format-a-header-footer)
-* [How to print Excel document?](https://help.syncfusion.com/file-formats/xlsio/excel-to-pdf-conversion#print-excel-document)
-* [What are page setup settings?](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#page-setup-settings)
+* [How to ignore print areas set in a worksheet?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-ignore-print-areas-set-in-a-worksheet)
+* [How to set a line break inside a cell?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-set-a-line-break-inside-a-cell)
+* [How to set or format a Header/Footer?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-set-or-format-a-header-footer)
+* [How to print Excel document?](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-conversion#print-excel-document)
+* [What are page setup settings?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet#page-setup-settings)
