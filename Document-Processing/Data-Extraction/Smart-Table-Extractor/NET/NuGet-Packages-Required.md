@@ -2,7 +2,7 @@
 title: NuGet Packages for Smart Table Extractor| Syncfusion
 description: Learn the NuGet packages required to use Syncfusion&reg; Smart Table Extractor in various platforms and frameworks.
 platform: document-processing
-control: PDF
+control: SmartTableExtractor
 documentation: UG
 keywords: Assemblies
 ---
