@@ -11,7 +11,7 @@ The PDF library provides support for interactive annotations. You can add, delet
 
 ## Adding annotations to a PDF document
 
-This example demonstrates how to add annotations to a PDF document using the `PdfAnnotation` class. Adding annotations allows users to include comments, highlights, shapes, and other interactive elements within a PDF, enhancing collaboration and document review.
+This example demonstrates how to add annotations to a PDF document using the [PdfPopupAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfpopupannotation) class. Adding annotations allows users to include comments, highlights, shapes, and other interactive elements within a PDF, enhancing collaboration and document review.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -70,7 +70,7 @@ document.destroy();
 
 ### File Link Annotation 
 
-This example demonstrates how to add a file link annotation to a PDF page using the `PdfFileLinkAnnotation` class. A file link annotation allows linking to an external file from within a PDF document, enabling users to access related resources directly.
+This example demonstrates how to add a file link annotation to a PDF page using the [PdfFileLinkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdffilelinkannotation) class. A file link annotation allows linking to an external file from within a PDF document, enabling users to access related resources directly.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -125,7 +125,7 @@ document.destroy();
 
 ### Free Text Annotation
 
-This example demonstrates how to add a free text annotation to a PDF page using the `PdfFreeTextAnnotation` class. A free text annotation allows placing text directly on a PDF page, enabling users to add comments or notes that remain visible without requiring interaction.
+This example demonstrates how to add a free text annotation to a PDF page using the [PdfFreeTextAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdffreetextannotation) class. A free text annotation allows placing text directly on a PDF page, enabling users to add comments or notes that remain visible without requiring interaction.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -190,7 +190,7 @@ document.destroy();
 
 ### Line Annotation 
 
-This example demonstrates how to add a line annotation to a PDF page using the `PdfLineAnnotation` class. A line annotation allows drawing straight lines between two points on a PDF page, often used to highlight connections or indicate measurements.
+This example demonstrates how to add a line annotation to a PDF page using the [PdfLineAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdflineannotation) class. A line annotation allows drawing straight lines between two points on a PDF page, often used to highlight connections or indicate measurements.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -254,7 +254,7 @@ document.destroy();
 
 ### Rubber stamp Annotation
 
-This example demonstrates how to add a rubber stamp annotation to a PDF page using the `PdfRubberStampAnnotation` class. A rubber stamp annotation allows applying predefined or custom stamp to visually indicate the status or purpose of a document.
+This example demonstrates how to add a rubber stamp annotation to a PDF page using the [PdfRubberStampAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfrubberstampannotation) class. A rubber stamp annotation allows applying predefined or custom stamp to visually indicate the status or purpose of a document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -300,7 +300,7 @@ document.destroy();
 
 ### Ink Annotation
 
-This example demonstrates how to add an ink annotation to a PDF page using the `PdfInkAnnotation` class. An ink annotation allows drawing freehand marks or sketches directly on a PDF page.
+This example demonstrates how to add an ink annotation to a PDF page using the [PdfInkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfinkannotation) class. An ink annotation allows drawing freehand marks or sketches directly on a PDF page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -381,7 +381,7 @@ document.destroy();
 
 ### Pop-up Annotation
 
-This example demonstrates how to add a popup annotation to a PDF document using the `PdfPopupAnnotation` class. A popup annotation allows you to display additional information or comments within the PDF at a specified position and size.
+This example demonstrates how to add a popup annotation to a PDF document using the [PdfPopupAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfpopupannotation) class. A popup annotation allows you to display additional information or comments within the PDF at a specified position and size.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -440,7 +440,7 @@ document.destroy();
 
 ### File Attachment Annotation
 
-This example demonstrates how to add a file attachment annotation to a PDF page using the `PdfAttachmentAnnotation` class. A file attachment annotation allows embedding external files within a PDF document, enabling users to include supporting documents or resources for easy access.
+This example demonstrates how to add a file attachment annotation to a PDF page using the [PdfAttachmentAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfattachmentannotation) class. A file attachment annotation allows embedding external files within a PDF document, enabling users to include supporting documents or resources for easy access.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -497,7 +497,7 @@ document.destroy();
 
 ### URI Annotation
 
-This example demonstrates how to add a URI annotation to a PDF page using the `PdfUriAnnotation` class. A URI annotation allows linking to a web address or online resource from within a PDF document.
+This example demonstrates how to add a URI annotation to a PDF page using the [PdfUriAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfuriannotation) class. A URI annotation allows linking to a web address or online resource from within a PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -537,7 +537,7 @@ document.destroy();
 
 ### Document Link Annotation
 
-This example demonstrates how to add a document link annotation to a PDF page using the `PdfDocumentLinkAnnotation` class. A document link annotation allows creating clickable links that navigate to a specific page or location within the same PDF document.
+This example demonstrates how to add a document link annotation to a PDF page using the [PdfDocumentLinkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocumentlinkannotation) class. A document link annotation allows creating clickable links that navigate to a specific page or location within the same PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -587,7 +587,7 @@ document.destroy();
 
 ### Redaction Annotation
 
-This example demonstrates how to add a redaction annotation to a PDF page using the `PdfRedactionAnnotation` class. A redaction annotation allows marking areas of a PDF for permanent removal of sensitive content, ensuring confidentiality and compliance with privacy requirements.
+This example demonstrates how to add a redaction annotation to a PDF page using the [PdfRedactionAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfredactionannotation) class. A redaction annotation allows marking areas of a PDF for permanent removal of sensitive content, ensuring confidentiality and compliance with privacy requirements.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -643,7 +643,7 @@ document.destroy();
 
 ### Watermark Annotation
 
-This example demonstrates how to add a watermark annotation to a PDF page using the `PdfWatermarkAnnotation` class. A watermark annotation allows overlaying text or images on a PDF page, typically used for branding, confidentiality notices, or document status indicators.
+This example demonstrates how to add a watermark annotation to a PDF page using the [PdfWatermarkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfwatermarkannotation) class. A watermark annotation allows overlaying text or images on a PDF page, typically used for branding, confidentiality notices, or document status indicators.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -687,7 +687,7 @@ document.destroy();
 
 ### Text Markup Annotation
 
-This example demonstrates how to add a text markup annotation to a PDF page using the `PdfTextMarkupAnnotation` class. A text markup annotation allows highlighting, underlining, or striking out text within a PDF document.
+This example demonstrates how to add a text markup annotation to a PDF page using the [PdfTextMarkupAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdftextmarkupannotation) class. A text markup annotation allows highlighting, underlining, or striking out text within a PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -754,7 +754,7 @@ document.destroy();
 
 ## Rectangle Annotation
 
-This example demonstrates how to add a rectangle annotation to a PDF page using the `PdfRectangleAnnotation` class. A rectangle annotation allows drawing rectangular shapes on a PDF document.
+This example demonstrates how to add a rectangle annotation to a PDF page using the [PdfRectangleAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfrectangleannotation) class. A rectangle annotation allows drawing rectangular shapes on a PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -816,7 +816,7 @@ document.destroy();
 
 ## Polygon Annotation
 
-This example demonstrates how to add a polygon annotation to a PDF page using the `PdfPolygonAnnotation` class. A polygon annotation allows drawing multi-sided shapes on a PDF document.
+This example demonstrates how to add a polygon annotation to a PDF page using the [PdfPolygonAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfpolygonannotation) class. A polygon annotation allows drawing multi-sided shapes on a PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -887,7 +887,7 @@ document.destroy();
 
 ## Circle Annotation
 
-This example demonstrates how to add a circle annotation to a PDF page using the `PdfCircleAnnotation` class. A circle annotation allows drawing circular or oval shapes on a PDF document.
+This example demonstrates how to add a circle annotation to a PDF page using the [PdfCircleAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfcircleannotation) class. A circle annotation allows drawing circular or oval shapes on a PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -951,7 +951,7 @@ document.save('output.pdf');
 
 ## Ellipse Annotation
 
-This example demonstrates how to add an ellipse annotation to a PDF page using the `PdfEllipseAnnotation` class. An ellipse annotation allows drawing elliptical shapes on a PDF document.
+This example demonstrates how to add an ellipse annotation to a PDF page using the [PdfEllipseAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfellipseannotation) class. An ellipse annotation allows drawing elliptical shapes on a PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1013,7 +1013,7 @@ document.destroy();
 
 ## Custom appearance in stamp annotation
 
-This example demonstrates how to add a rubber stamp annotation to an existing PDF using the `PdfRubberStampAnnotation` class. This feature allows embedding custom images as stamp appearances within a specific location on the page.
+This example demonstrates how to add a rubber stamp annotation to an existing PDF using the [PdfRubberStampAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfrubberstampannotation) class. This feature allows embedding custom images as stamp appearances within a specific location on the page.
 
 
 {% tabs %}
@@ -1063,7 +1063,7 @@ document.destroy();
 
 ## Measurement Annotations
 
-This example demonstrates how to access a measurement annotation from a PDF page using the `PdfLineAnnotation` class. A measurement annotation allows defining and displaying dimensions such as distances or lengths within a PDF document.
+This example demonstrates how to access a measurement annotation from a PDF page using the [PdfLineAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdflineannotation) class. A measurement annotation allows defining and displaying dimensions such as distances or lengths within a PDF document.
 
 Common types of measurement annotations include:
 
@@ -1173,7 +1173,7 @@ document.destroy();
 
 ## Modifying the annotations
 
-This example demonstrates how to modify an existing annotation in a PDF page using the PdfAnnotation class. Modifying annotations allows updating properties such as position, color, content, or appearance, enabling customization and refinement of the document's interactive elements.
+This example demonstrates how to modify an existing annotation in a PDF page using the [PdfAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotation) class. Modifying annotations allows updating properties such as position, color, content, or appearance, enabling customization and refinement of the document's interactive elements.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1219,7 +1219,7 @@ document.destroy();
 
 ## Removing annotations from an existing PDF 
 
-This example demonstrates how to remove an annotation from a PDF page using the PdfAnnotationCollection class. Removing annotations allows deleting comments, shapes, or other interactive elements from a PDF document.
+This example demonstrates how to remove an annotation from a PDF page using the [PdfAnnotationCollection](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotationcollection) class. Removing annotations allows deleting comments, shapes, or other interactive elements from a PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1262,7 +1262,7 @@ document.destroy();
 
 ## Flatten annotation
 
-This example demonstrates how to flatten annotations in a PDF document using the PdfAnnotation class. Flattening annotations converts interactive elements such as comments, highlights, and shapes into static content.
+This example demonstrates how to flatten annotations in a PDF document using the [PdfAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfannotation) class. Flattening annotations converts interactive elements such as comments, highlights, and shapes into static content.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

@@ -25,7 +25,7 @@ The JavaScript PDF library supports shape rendering exclusively with PDF solid b
 
 ### Line
 
-This example demonstrates how to draw a straight line in a PDF document using the `drawLine` method of the `PdfGraphics` class.
+This example demonstrates how to draw a straight line in a PDF document using the [drawLine](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawLine_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_System_Single_System_Single_) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -66,7 +66,7 @@ document.destroy();
 
 ### Rectangle
 
-This example demonstrates how to draw a rectangle in a PDF document using the `drawRectangle` method of the `PdfGraphics` class.
+This example demonstrates how to draw a rectangle in a PDF document using the [drawRectangle](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawRectangle_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_System_Single_System_Single_) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -107,7 +107,7 @@ document.destroy();
 
 ### Rounded rectangle
 
-This example demonstrates how to draw a rounded rectangle in a PDF document using the `drawRoundedRectangle` method of the `PdfGraphics` class.
+This example demonstrates how to draw a rounded rectangle in a PDF document using the `drawRoundedRectangle` method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -165,7 +165,7 @@ document.destroy();
 
 ### Ellipse
 
-This example demonstrates how to draw a ellipse in a PDF document using the `drawEllipse` method of the `PdfGraphics` class.
+This example demonstrates how to draw a ellipse in a PDF document using the [drawEllipse](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawEllipse_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_System_Single_System_Single_) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -206,7 +206,7 @@ document.destroy();
 
 ### Polygon
 
-This example demonstrates how to draw a polygon shape in a PDF document using the `drawPolygon` method of the `PdfGraphics` class.
+This example demonstrates how to draw a polygon shape in a PDF document using the [drawPolygon](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawPolygon_Syncfusion_Pdf_Graphics_PdfPen_System_Drawing_PointF___) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -251,7 +251,7 @@ document.destroy();
 
 ### Pie
 
-This example demonstrates how to draw a pie in a PDF document using the `drawPie` method of the `PdfGraphics` class.
+This example demonstrates how to draw a pie in a PDF document using the [drawPie](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawPie_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -292,7 +292,7 @@ document.destroy();
 
 ### Arc
 
-This example demonstrates how to draw a arc in a PDF document using the `drawArc` method of the `PdfGraphics` class.
+This example demonstrates how to draw a arc in a PDF document using the [drawArc](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawArc_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -333,7 +333,7 @@ document.destroy();
 
 ### Bezier
 
-This example demonstrates how to draw a bezier in a PDF document using the `drawBezier` method of the `PdfGraphics` class.
+This example demonstrates how to draw a bezier in a PDF document using the [drawBezier](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawBezier_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -374,7 +374,7 @@ document.destroy();
 
 ### Path
 
-This example demonstrates how to draw a path in a PDF document using the `drawPath` method of the `PdfGraphics` class.
+This example demonstrates how to draw a path in a PDF document using the [drawPath](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawpath) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
