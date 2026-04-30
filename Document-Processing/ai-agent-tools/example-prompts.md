@@ -123,7 +123,8 @@ Extract only the table data from the quarterly financial report 'financial_repor
 
 ## See also
 
-* [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
-* [Getting Started](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started)
-* [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
-* [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
+* [Tools](./tools)
+* [Getting Started](./getting-started)
+* [Customization](./customization)
+* [Overview](./overview)
+* [Example Use Cases](./example-use-cases)

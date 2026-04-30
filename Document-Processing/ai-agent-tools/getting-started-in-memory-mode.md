@@ -20,7 +20,7 @@ Documents are held as live objects in an in-memory dictionary. Each tool accesse
 | Requirement | Details |
 |---|---|
 | **.NET SDK** | .NET 8.0 or NET 9.0 or .NET 10.0 |
-| **OpenAI API Key** | Obtain from platform.openai.com |
+| **OpenAI API Key** | Obtain from [platform.openai.com](https://platform.openai.com) |
 | **NuGet Packages** | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
 >**Note:** The OpenAI API key is mandatory for this sample because the guide demonstrates the integration using the **Microsoft Agents Framework with OpenAI**. The same integration steps work with any other [provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) (Azure OpenAI, Anthropic, Google Gemini, Ollama, etc.) — just swap in that provider’s API key or endpoint credentials.
@@ -253,11 +253,12 @@ while (true)
 
 For a complete, runnable example combining all steps, refer to the example console application in the GitHub repository:
 
-Examples/Console/AgentChatConsole/Program.cs
+[Examples/Console/AgentChatConsole/Program.cs](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main)
 
 ## See Also
 
-- [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
-- [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
-- [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
-- [Example Prompts](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/example-prompts)
+- [Overview](./overview)
+- [Tools](./tools)
+- [Customization](./customization)
+- [Example Prompts](./example-prompts)
+- [Example Use Cases](./example-use-cases)
