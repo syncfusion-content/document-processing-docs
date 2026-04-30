@@ -12,7 +12,7 @@ keywords: .net maui pdf viewer, customize toolbar, show hide toolbar, add toolba
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to fully customize its built-in toolbars — including showing or hiding entire toolbars, and adding, removing, or reordering individual toolbar items. This flexibility lets you tailor the viewer's interface to match your application's workflow.
 
-For the list of toolbar names and toolbar item names, see [Toolbar](https://help.syncfusion.com/maui/pdf-viewer/toolbar).
+For the list of toolbar names and toolbar item names, see [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar).
 
 ## Show and hide all toolbars
 
@@ -83,7 +83,7 @@ if (toolbar != null)
 {% endhighlight %}
 {% endtabs %}
 
-N> For the full list of toolbar names, see [Mobile toolbar names](https://help.syncfusion.com/maui/pdf-viewer/toolbar#mobile-toolbar-names) and [Desktop toolbar names](https://help.syncfusion.com/maui/pdf-viewer/toolbar#desktop-toolbar-names).
+N> For the full list of toolbar names, see [Mobile toolbar names](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar#mobile-toolbar-names) and [Desktop toolbar names](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar#desktop-toolbar-names).
 
 ## Manage toolbar items
 
@@ -258,10 +258,10 @@ for (int i = 0; i < pdfViewer?.Toolbars?.Count; i++)
 {% endhighlight %}
 {% endtabs %}
 
-N> You can identify items that appear in multiple toolbars by checking the availability column in [Mobile toolbar item names](https://help.syncfusion.com/maui/pdf-viewer/toolbar#mobile-toolbar-item-names) and [Desktop toolbar item names](https://help.syncfusion.com/maui/pdf-viewer/toolbar#desktop-toolbar-item-names).
+N> You can identify items that appear in multiple toolbars by checking the availability column in [Mobile toolbar item names](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar#mobile-toolbar-item-names) and [Desktop toolbar item names](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar#desktop-toolbar-item-names).
 
 ## See Also
-- [Toolbar](../toolbar)
-- [UI Customization](../ui-customization)
-- [Annotations Overview](../annotations-overview)
-- [Show or Hide Annotations](../show-hide)
+- [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar)
+- [UI Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ui-customization)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Show or Hide Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/show-hide)

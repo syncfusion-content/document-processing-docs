@@ -167,6 +167,8 @@ npx skills list
 {% endhighlight %}
 {% endtabs %}
 
+> **Note:** If you installed Syncfusion skills globally, add the `--global` flag at the end of the command (for example, `npx skills list --global`, `npx skills remove <skill-name>` --global ).
+
 ### Remove a Skill
 
 Uninstall a specific skill from your environment:
@@ -181,6 +183,37 @@ npx skills remove <skill-name>
 
 Replace `<skill-name>` with the name of the skill you want to remove (for example, `syncfusion-blazor-spreadsheet-editor`).
 
+Choose and Uninstall a specific skills interactively from the terminal:
+
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
+npx skills remove
+
+{% endhighlight %}
+{% endtabs %}
+
+The terminal will display a list of installed skills. Use the arrow keys to navigate, space bar to select the skills you want to remove, and Enter to confirm.
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+◆  Select skills to remove (space to toggle)
+│  ◻ syncfusion-react-spreadsheet-editor
+│  ◻ syncfusion-angular-spreadsheet-editor
+│  ◻ syncfusion-blazor-spreadsheet-editor
+│  ◻ syncfusion-aspnetcore-spreadsheet-editor
+│  ◻ syncfusion-aspnetmvc-spreadsheet-editor
+│  ◻ syncfusion-javascript-spreadsheet-editor
+│  ◻ syncfusion-vue-spreadsheet-editor
+│  .....
+
+{% endhighlight %}
+{% endtabs %}
+
+◆  Are you sure you want to uninstall 1 skill(s)?
+│  ● Yes / ○ No
+└
 ### Check for Updates
 
 Check if updates are available for your installed skills:

@@ -150,6 +150,6 @@ The [.NET MAUI PDF viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 N> Use the `Command` key instead of the `Ctrl` key in macOS.
 
 ## See Also
-- [Toolbar Customization](../toolbar-customization)
-- [Text Search](../text-search)
-- [Annotations Overview](../annotations-overview)
+- [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization)
+- [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-search)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)

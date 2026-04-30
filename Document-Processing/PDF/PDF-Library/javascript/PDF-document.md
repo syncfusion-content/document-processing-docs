@@ -11,7 +11,7 @@ The PDF library provides support to create, read, and manipulate PDF documents, 
 
 ## Adding the document settings
 
-This example shows how to configure custom page settings before adding a page to a PDF document. It creates a `PdfPageSettings` instance, applies margins, page size and sets the orientation.
+This example shows how to configure custom page settings before adding a page to a PDF document. It creates a [PdfPageSettings](https://ej2.syncfusion.com/documentation/api/pdf/pdfpagesettings) instance, applies margins, page size and sets the orientation.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -162,7 +162,7 @@ document.destroy();
 
 ## Performing incremental update for PDF document
 
-The `isIncrementalUpdate` property allows you to check if the PDF document supports incremental updates, which can improve performance during modifications by appending changes rather than rewriting the entire document.
+The [isIncrementalUpdate](https://ej2.syncfusion.com/documentation/api/pdf/pdffilestructure#get-isincrementalupdate-boolean) property allows you to check if the PDF document supports incremental updates, which can improve performance during modifications by appending changes rather than rewriting the entire document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -210,7 +210,7 @@ document.destroy();
 
 ## Flatten annotations and form fields
 
-The `flatten` property allows you to convert all annotations and form fields in a PDF into static page content, removing interactivity while preserving their visual appearance.
+The [flatten](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#get-flatten-boolean) property allows you to convert all annotations and form fields in a PDF into static page content, removing interactivity while preserving their visual appearance.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

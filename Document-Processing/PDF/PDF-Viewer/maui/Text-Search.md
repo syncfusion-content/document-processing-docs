@@ -238,6 +238,6 @@ PdfViewer.TextSearchSettings.OtherMatchesHighlightColor= Color.FromRgba("#00FF00
 {% endtabs %}
 
 ## See Also
-- [Text Selection](../text-selection)
-- [Page Navigation](../page-navigation)
-- [Scrolling](../scrolling)
+- [Text Selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-selection)
+- [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/page-navigation)
+- [Scrolling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/scrolling)

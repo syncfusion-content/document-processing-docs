@@ -272,6 +272,6 @@ void AddCloudAnnotation()
 
 
 ## See Also
-- [Annotations Overview](../annotations-overview)
-- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
-- [Undo and Redo](../undo-redo)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
+- [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/undo-redo)

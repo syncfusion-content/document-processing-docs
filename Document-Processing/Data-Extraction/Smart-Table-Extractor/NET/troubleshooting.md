@@ -26,7 +26,7 @@ documentation: UG
       <br/><br/>
       Please refer to the below screenshot,
       <br/><br/>
-      <img alt="Runtime folder" src="data-extraction-images/onnx-table.png">
+      <img alt="Runtime folder" src="table-extraction-images/onnx-table.png">
       <br/><br/>
       <b>Note:</b> If you publish your application, ensure the <b>runtimes/models</b> folder and ONNX files are included in the publish output.
     </td>
@@ -64,29 +64,36 @@ documentation: UG
 
 <table>
   <tr>
-    <th style="font-size:14px" width="100px">Exception</th>
-    <th style="font-size:14px">Microsoft.ML.ONNXRuntime.ONNXRuntimeException</th>
-  </tr>
-  <tr>
-    <th style="font-size:14px" width="100px">Reason</th>
-    <td>The required native runtime library (ONNXRuntime.dll) is missing from your application's bin folder.</td>
-  </tr>
-  <tr>
-    <th style="font-size:14px" width="100px">Solution</th>
-    <td>
-      In your MVC project file (.csproj), add the following build target to copy the native DLL from the NuGet package folder to the bin folder:
-      <br/><br/>
-      <pre>
-<Target Name="CopyOnnxRuntimeDll" AfterTargets="Build">
-  <Copy 
-    SourceFiles="$(SolutionDir)packages\Microsoft.ML.ONNXRuntime.1.18.0\runtimes\win-x64\native\ONNXRuntime.dll" 
-    DestinationFolder="$(OutDir)" 
-    SkipUnchangedFiles="true" />
-</Target>
-      </pre>
-      <br/>
-    </td>
-  </tr>
+<th style="font-size:14px" width="100px">Exception
+</th>
+<th style="font-size:14px">Microsoft.ML.ONNXRuntime.ONNXRuntimeException
+</th>
+   </tr>
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td>The required native runtime library (ONNXRuntime.dll) is missing from your application's bin folder.
+</td>
+</tr>
+ 
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td> In your MVC project file (.csproj), add the following build target to copy the native DLL from the NuGet package folder to the bin folder:<br>
+{% tabs %}
+{% highlight C# %}
+ 
+    <Target Name="CopyonnxRuntimeDll" AfterTargets="Build">
+      <Copy
+          SourceFiles="$(SolutionDir)packages\Microsoft.ML.ONNXRuntime.1.18.0\runtimes\win-x64\native\ONNXRuntime.dll"
+          DestinationFolder="$(OutDir)"
+          SkipUnchangedFiles="true" />
+    </Target>
+ 
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
 </table>
 
 
