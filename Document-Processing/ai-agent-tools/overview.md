@@ -89,7 +89,7 @@ The Office to PDF tool bridges Word, Excel, and PowerPoint with the PDF format. 
 The data extraction tools used to pull structured information from PDFs and images. They can identify text, tables, form fields, checkboxes, signatures, and radio buttons, returning results as clean JSON for downstream processing.
 
 - **Structured Data Extraction** - Extract structured data including text, forms, tables, checkboxes, signatures, and radio buttons from PDF or image files and return the result as JSON.
-- **Table Extraction** - Extract only table data from PDF documents as JSON, optimized for table-focused extraction with support for borderless tables.
+- **Table Extraction** - Extract only table data from PDF documents as JSON, optimized for table-focused extraction with support for border less tables.
 - **Form Recognition** - Extract only form field data from PDF documents as JSON, optimized for form-focused recognition with support for signatures, textboxes, checkboxes, and radio buttons.
 
 ## Supported Document Formats

@@ -47,6 +47,10 @@ Integrating the Blog Generator agent into a console application involves the fol
 using Syncfusion.AI.AgentTools.Core;
 using Syncfusion.AI.AgentTools.Word;
 using Microsoft.Extensions.AI;
+using Microsoft.Agents.AI;
+using AITool = Syncfusion.AI.AgentTools.Core.AITool;
+using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
+using ChatRole    = Microsoft.Extensions.AI.ChatRole;
 
 // Register Syncfusion license
 string? licenseKey = Environment.GetEnvironmentVariable("SYNCFUSION_LICENSE_KEY");
@@ -68,10 +72,6 @@ var chatClient   = openAiClient.GetChatClient(textModel);
 
 // Create Word Document Manager (in-memory with timeout)
 var wordManager = new WordDocumentManager(TimeSpan.FromMinutes(10));
-
-// Instantiate Syncfusion Word AI Agent tools
-using AITool = Syncfusion.AI.AgentTools.Core.AITool;
-
 var outputDir = Path.GetFullPath(Environment.CurrentDirectory + @"..\..\..\..\Data\Output\");
 
 var allSyncfusionTools = new List<AITool>();
@@ -97,10 +97,6 @@ var aiTools = allSyncfusionTools
 This step builds the custom Blog Generator AI agent, generates blog content and images from a single topic, assembles the content into HTML, and finally converts the HTML into a Word document using Syncfusion Word AI Agent tools-all through a single agent‑driven workflow.
 
 ```csharp
-// Build the Blog Generator AI agent, generate blog content & images,
-// assemble HTML, and convert the HTML blog into a Word document via AI tools.
-using Microsoft.Agents.AI;
-
 // Build the AI agent with strict JSON output and Word tool execution rules
 AIAgent aiAgent = chatClient.AsIChatClient().AsAIAgent(
     instructions: """
@@ -152,10 +148,6 @@ var html     = HtmlAssembler.Assemble(outline.Title, blogSections);
 var filename = HtmlAssembler.DeriveFilename(outline.Title) + ".html";
 var filePath = Path.Combine(outputDir, filename);
 HtmlAssembler.SaveToFile(filePath, html);
-
-//Convert the HTML blog into a Word document using the AI agent
-using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
-using ChatRole    = Microsoft.Extensions.AI.ChatRole;
 
 var wordFilePath = Path.Combine(outputDir,
     HtmlAssembler.DeriveFilename(outline.Title) + ".docx");

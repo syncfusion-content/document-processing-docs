@@ -22,7 +22,7 @@ Documents are read from and written to storage (Azure Blob, S3, local disk, etc.
 | Requirement | Details |
 |---|---|
 | **.NET SDK** | .NET 8.0 or .NET 9.0 or .NET 10.0 |
-| **OpenAI API Key** | Obtain from [platform.openai.com](https://platform.openai.com) |
+| **OpenAI API Key** | Obtain from <a href="https://platform.openai.com">platform.openai.com</a> |
 | **Azure Storage Account** | Create from [Azure Portal](https://portal.azure.com) with a blob container |
 | **NuGet Packages** | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI), and [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs) |
 

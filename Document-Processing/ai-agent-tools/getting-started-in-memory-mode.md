@@ -20,7 +20,7 @@ Documents are held as live objects in an in-memory dictionary. Each tool accesse
 | Requirement | Details |
 |---|---|
 | **.NET SDK** | .NET 8.0 or NET 9.0 or .NET 10.0 |
-| **OpenAI API Key** | Obtain from [platform.openai.com](https://platform.openai.com) |
+| **OpenAI API Key** | Obtain from <a href="https://platform.openai.com">platform.openai.com</a> |
 | **NuGet Packages** | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
 >**Note:** The OpenAI API key is mandatory for this sample because the guide demonstrates the integration using the **Microsoft Agents Framework with OpenAI**. The same integration steps work with any other [provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) (Azure OpenAI, Anthropic, Google Gemini, Ollama, etc.) — just swap in that provider’s API key or endpoint credentials.
