@@ -1,6 +1,6 @@
 ---
-title: Which characters should be avoided when naming worksheets? | Syncfusion
-description: Worksheet names containing characters like '/' or ':' can corrupt a workbook. This FAQ shows how to validate and replace invalid characters in worksheet names using XlsIO.
+title: Invalid characters to avoid in worksheet names | Syncfusion
+description: Worksheet names containing '/' or ':' may corrupt workbooks. This FAQ explains the invalid characters to avoid.
 platform: document-processing
 control: XlsIO
 documentation: UG
