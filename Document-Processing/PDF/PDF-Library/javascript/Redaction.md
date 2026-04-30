@@ -13,7 +13,7 @@ N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-ext
 
 ## Removing sensitive content from the PDF document
 
-Redaction permanently removes confidential or sensitive information from a PDF. The `PdfRedactor` and `PdfRedactionRegion` classes allow you to mark specific areas and apply irreversible redaction to the document.
+Redaction permanently removes confidential or sensitive information from a PDF. The [PdfRedactor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactor) and [PdfRedactionRegion](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactionregion) classes allow you to mark specific areas and apply irreversible redaction to the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -133,7 +133,7 @@ document.destroy();
 
 ## Text appearance on the redacted area
 
-Customize the redacted region by drawing text or graphics over it, using `PdfRedactionRegion` and `PdfRedactor` to define the area and apply a custom visual appearance to the redaction.
+Customize the redacted region by drawing text or graphics over it, using [PdfRedactionRegion](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactionregion) and [PdfRedactor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactor) to define the area and apply a custom visual appearance to the redaction.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
