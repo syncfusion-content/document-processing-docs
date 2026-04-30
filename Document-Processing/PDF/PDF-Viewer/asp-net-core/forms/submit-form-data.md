@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Submit PDF Form Data to a Server using ASP.NET Core PDF Viewer
-Syncfusion
-description: Submit filled PDF form data from the Syncfusion ASP.NET Core PDF Viewer to a backend server.
+title: Submit PDF Form Data to a Server using ASP.NET Core PDF Viewer | Syncfusion
+description: Submit filled PDF form data from the Syncfusion in EJ2 ASP.NET Core PDF Viewer to a backend server.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-## Submit PDF Form Data to a Server in ASP.NET Core
+# Submit PDF Form Data to a Server in ASP.NET Core
 
 ## Overview
 
@@ -44,7 +43,8 @@ The React PDF Viewer allows submitting filled form data like text fields, checkb
 
 The following example shows an ASP.NET Core PDF Viewer with a **Submit** button that sends form data to `/api/submit-form`.
 
-Liquid{% tabs %}{% highlight cshtml tabtitle="Standalone" %}
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
 <div style="height:680px">
     <ejs-pdfviewer id="pdfviewer"
                     documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
@@ -75,7 +75,8 @@ function submitFormData() {
     });
 }
 </script>
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Troubleshooting
 

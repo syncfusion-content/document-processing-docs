@@ -12,7 +12,7 @@ documentation: ug
 This guide shows concise, actionable steps to export PDF form field data for storage or integration. It covers:
 
 - Exporting as [FDF](#3-export-as-fdf), [XFDF](#4-export-as-xfdf), and [JSON](#5-export-as-json) using [`exportFormFields()`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfields).
-- Exporting as a [JavaScript object](#6-export-as-a-javascript-object) using [`exportFormFieldsAsObject()`](https://ej2.xsyncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfieldsasobject).
+- Exporting as a [JavaScript object](#6-export-as-a-javascript-object) using [`exportFormFieldsAsObject()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfieldsasobject).
 
 ## Steps
 

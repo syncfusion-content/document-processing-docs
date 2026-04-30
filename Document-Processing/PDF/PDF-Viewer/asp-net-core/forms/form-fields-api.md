@@ -404,7 +404,6 @@ and get the form designer Toolbar Visible status.
 </script>
 {% endhighlight %}
 {% endtabs %}
-{% endtabs %}
 
 ## formFieldCollections
 

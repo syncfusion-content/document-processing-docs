@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PDF Form Handling Best Practices in ASP .Net Core PDF Viewer | Syncfusion
+title: Form Handling Best Practices in ASP.Net Core | Syncfusion
 description: Learn the recommended best practices for naming, validating, grouping, importing, and designing form fields in the Syncfusion ASP .Net Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer

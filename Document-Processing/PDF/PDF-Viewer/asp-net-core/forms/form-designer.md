@@ -105,7 +105,7 @@ The visibility of the Form Designer toolbar is controlled by the [isFormDesigner
 
 #### Customize the Built-in Form Designer Toolbar
 
-The Form Designer toolbar can be customized by specifying the tools to display and arranging them in the required order using the [FormDesignerToolbarItems](https://ej2.syncfusion.com/ASP .Net Core/documentation/api/pdfviewer/formdesignertoolbaritem) property.
+The Form Designer toolbar can be customized by specifying the tools to display and arranging them in the required order using the `FormDesignerToolbarItems` property.
 
 This customization helps limit the available tools and simplify the user interface. A code example is available [here](../toolbar-customization/form-designer-toolbar#3-show-or-hide-form-designer-toolbar-items).
 

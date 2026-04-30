@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Read and Extract PDF Form Field Values in ASP .Net Core | Syncfusion
-description: Learn how to read and extract values from PDF form fields in the EJ2 ASP .Net Core PDF Viewer, including text, checkboxes, radio buttons, dropdowns, and signatures.
+description: Learn how to read and extract values from PDF form fields in the ASP.Net Core, including text, checkboxes, radio buttons, dropdowns, and signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

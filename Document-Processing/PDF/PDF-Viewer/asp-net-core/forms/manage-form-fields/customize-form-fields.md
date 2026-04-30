@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style form fields in the ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to configure typography, colors, borders, alignment, and other style settings for form fields using the UI and Programmatically.
+description: Learn how to configure typography, colors, borders, alignment, and other style settings for form fields using the UI and Programmatically in the ASP.NET Core.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
