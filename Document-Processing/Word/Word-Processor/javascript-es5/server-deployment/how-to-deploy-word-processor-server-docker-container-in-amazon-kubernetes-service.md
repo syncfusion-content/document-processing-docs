@@ -26,7 +26,7 @@ Lets us discuss briefly about the each process
 
 ## Push the Docker image to the Amazon Elastic Registry 
 
-**Step 1:** Dockerize the Word Processor Server Application with the image name [syncfusion/word-processor-server](https://hub.docker.com/r/syncfusion/word-processor-server)
+**Step 1:** Create the Word Processor Server Application with the image name [syncfusion/word-processor-server](https://hub.docker.com/r/syncfusion/word-processor-server)
 
 ```
 docker build -t <your-image-name>

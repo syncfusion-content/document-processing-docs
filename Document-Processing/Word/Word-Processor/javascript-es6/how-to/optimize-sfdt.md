@@ -27,14 +27,14 @@ As a backward compatibility to create older format SFDT files, refer the followi
 <td>Client-side</td>
 <td>
 {% tabs %} 
-{% highlight ts tabtitle="Component Declaration"%}
+{% highlight ts tabtitle="Component Declaration" %}
 let container: DocumentEditorContainer = new DocumentEditorContainer();
 {% endhighlight %}
 {% endtabs %}
 </td>
 <td>
 {% tabs %} 
-{% highlight ts tabtitle="Component Declaration"%}
+{% highlight ts tabtitle="Component Declaration" %}
 let container: DocumentEditorContainer = new DocumentEditorContainer({ documentEditorSettings: { optimizeSfdt: false } });
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +44,7 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({ documentE
 <td>Server-side C#</td>
 <td>
 {% tabs %} 
-{% highlight c# tabtitle="Import"%}
+{% highlight c# tabtitle="Import" %}
 WordDocument sfdtDocument = WordDocument.Load(stream, formatType);
 string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 {% endhighlight %}
@@ -52,7 +52,7 @@ string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 </td>
 <td>
 {% tabs %} 
-{% highlight c# tabtitle="Import"%}
+{% highlight c# tabtitle="Import" %}
 WordDocument sfdtDocument = WordDocument.Load(stream, formatType);
 sfdtDocument.OptimizeSfdt = false;
 string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
@@ -64,14 +64,14 @@ string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 <td>Server-side Java</td>
 <td>
 {% tabs %} 
-{% highlight c# tabtitle="Import"%}
+{% highlight c# tabtitle="Import" %}
 String sfdtDocument = WordProcessorHelper.load(stream, formatType);
 {% endhighlight %}
 {% endtabs %}
 </td>
 <td>
 {% tabs %} 
-{% highlight java tabtitle="Import"%}
+{% highlight java tabtitle="Import" %}
 String sfdtDocument = WordProcessorHelper.load(stream, formatType, false);
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +89,7 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 <td>Client-side</td>
 <td>
 {% tabs %} 
-{% highlight ts tabtitle="Component Declaration"%}
+{% highlight ts tabtitle="Component Declaration" %}
 let container: DocumentEditorContainer = new DocumentEditorContainer({ documentEditorSettings: { optimizeSfdt: false } });
 {% endhighlight %}
 {% endtabs %}
@@ -99,7 +99,7 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({ documentE
 <td>Server-side C#</td>
 <td>
 {% tabs %} 
-{% highlight c# tabtitle="Import"%}
+{% highlight c# tabtitle="Import" %}
 using(Syncfusion.DocIO.DLS.WordDocument docIODocument = WordDocument.Save(optimizedSfdt)) {
    sfdtDocument = WordDocument.Load(docIODocument);
    sfdtDocument.OptimizeSfdt = false;
@@ -113,7 +113,7 @@ using(Syncfusion.DocIO.DLS.WordDocument docIODocument = WordDocument.Save(optimi
 <td>Server-side Java</td>
 <td>
 {% tabs %} 
-{% highlight java tabtitle="Import"%}
+{% highlight java tabtitle="Import" %}
 WordDocument docIODocument = WordProcessorHelper.save(optimizedSfdt);
 String oldSfdt = WordProcessorHelper.load(docIODocument, false);
 {% endhighlight %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimize the SFDT file in Angular Document editor component | Syncfusion
+title: Optimize the SFDT file in Angular DOCX editor component | Syncfusion
 description: Learn here all about optimize the SFDT file in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
 control: Optimize the SFDT file
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to optimize the SFDT file
+# Optimize the SFDT file in Angular Document editor component
 
 Starting from version v21.1.x, the SFDT file generated in Document Editor component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits,
 * File transfer between client and server through the internet gets faster.
@@ -53,7 +53,7 @@ export class AppComponent {
 <td>Server-side C#</td>
 <td>
 {% tabs %} 
-{% highlight c# tabtitle="Import"%}
+{% highlight c# tabtitle="Import" %}
 WordDocument sfdtDocument = WordDocument.Load(stream, formatType);
 string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 {% endhighlight %}
