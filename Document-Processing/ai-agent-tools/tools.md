@@ -101,8 +101,8 @@ Provides tools for extracting text, images, and searching for text content in PD
 
 | Tool | Syntax | Description |
 |---|---|---|
-| ExtractText | ExtractText(<br/>string documentIdOrFilePath,<br/>int startPageIndex = null,<br/>int endPageIndex = null) | Extracts text content from a PDF document across a specified page range, or from all pages if no range is given. |
-| ExtractImages | ExtractImages(<br/>string documentIdOrFilePath,<br/>int startPageIndex = null,<br/>int endPageIndex = null,<br/>string? outputPath = null) | Extracts  images from a PDF document across a specified page range or the entire document and saves them to the specified output folder. |
+| ExtractText | ExtractText(<br/>string documentIdOrFilePath,<br/>int startPageIndex = -1,<br/>int endPageIndex = -1) | Extracts text content from a PDF document across a specified page range, or from all pages if no range is given. |
+| ExtractImages | ExtractImages(<br/>string documentIdOrFilePath,<br/>int startPageIndex = -1,<br/>int endPageIndex = -1,<br/>string? outputPath = null) | Extracts  images from a PDF document across a specified page range or the entire document and saves them to the specified output folder. |
 | FindTextInPdf | FindTextInPdf(<br/>string documentIdOrFilePath,<br/>string[] text) | Searches a PDF document for matching array of text and returns all occurrences grouped by page with their bounding rectangle positions. |
 | GetPdfDocumentPageCount | GetPdfDocumentPageCount(<br/>string documentIdOrFilePath) | Returns the number of pages in the specified PDF document. |
 | GetPdfDocumentPageSize | GetPdfDocumentPageSize(<br/>string documentIdOrFilePath,<br/>int pageNumber) | Gets the width and height of a specific page in a PDF document. |
@@ -114,7 +114,7 @@ Provides tools for watermarking, managing annotations, and importing/exporting f
 
 | Tool | Syntax | Description |
 |---|---|---|
-| WatermarkPdf | WatermarkPdf(<br/>string documentIdOrFilePath,<br/>string watermarkText,<br/>int? rotation = null,<br/>float locationX = null,<br/>float locationY = null,<br/>byte[]? watermarkColor = null,<br/>float opacity = 50f,<br/>string? outputFilePath = null) | Applies a configurable text watermark to all pages of a PDF document. Supports opacity, rotation, color, and custom positioning. |
+| WatermarkPdf | WatermarkPdf(<br/>string documentIdOrFilePath,<br/>string watermarkText,<br/>int? rotation = null,<br/>float locationX = -1,<br/>float locationY = -1,<br/>byte[]? watermarkColor = null,<br/>float opacity = 50f,<br/>string? outputFilePath = null) | Applies a configurable text watermark to all pages of a PDF document. Supports opacity, rotation, color, and custom positioning. |
 | ExportAnnotations | ExportAnnotations(<br/>string documentIdOrFilePath,<br/>AnnotationDataFormat format,<br/>string? exportFilePath = null) | Exports annotations from a PDF document into XFDF, FDF, or JSON format. Returns annotation data or export file path. |
 | ImportAnnotations | ImportAnnotations(<br/>string documentIdOrFilePath,<br/>AnnotationDataFormat format,<br/>string importFilePath,<br/>string? outputFilePath = null) | Imports annotations into a PDF document from XFDF, FDF, or JSON format. |
 | ExportFormFields | ExportFormFields(<br/>string documentIdOrFilePath,<br/>DataFormat format,<br/>string? exportPath = null) | Exports form field data from a PDF document into FDF, XFDF, or XML format. Returns form field data or export file path. |
@@ -327,7 +327,7 @@ Provides tools to convert worksheet to image, HTML, ODS, JSON file formats
 |---|---|---|
 | ConvertWorksheetToImage | ConvertWorksheetToImage(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string rangeAddress,<br/>string outputPath,<br/>string imageFormat = "PNG",<br/>string scalingMode = "Best") | Converts an entire worksheet to an image file. Supports PNG, JPEG, BMP, GIF, and TIFF formats. |
 | ConvertChartToImage | ConvertChartToImage(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>int chartIndex,<br/>string outputPath,<br/>string imageFormat = "PNG",<br/>string scalingMode = "Best") | Converts an Excel chart to an image file. Supports PNG and JPEG formats. |
-| ConvertWorkbook | ConvertWorkbook(<br/>string workbookIdOrFilePath,<br/>string outputPath,<br/>string? formatType = null) | Converts the workbook to the file system in the specified format. Works only in DocumentStorage mode. workbookIdOrFilePath: The input file path from storage. Supported formats: xls, xlsx, xlsm |
+| ConvertWorkbook | ConvertWorkbook(<br/>string workbookIdOrFilePath,<br/>string outputPath,<br/>string? formatType = "xlsx) | Converts the workbook to the file system in the specified format. Works only in DocumentStorage mode. workbookIdOrFilePath: The input file path from storage. Supported formats: xls, xlsx, xlsm |
 | ConvertWorkbookToHtml | ConvertWorkbookToHtml(<br/>string workbookIdOrFilePath,<br/>string outputPath,<br/>string textMode = "DisplayText") | Converts an entire Excel workbook to an HTML file with styles, hyperlinks, images, and charts preserved. |
 | ConvertWorksheetToHtml | ConvertWorksheetToHtml(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string outputPath,<br/>string textMode = "DisplayText") | Converts a specific Excel worksheet to an HTML file with styles, hyperlinks, images, and charts preserved. |
 | ConvertWorkbookToJson | ConvertWorkbookToJson(<br/>string workbookIdOrFilePath,<br/>string outputPath,<br/>bool includeSchema = true) | Converts an entire workbook to JSON format with optional schema. |
