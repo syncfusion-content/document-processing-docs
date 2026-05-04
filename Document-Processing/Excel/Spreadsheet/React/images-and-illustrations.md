@@ -46,9 +46,9 @@ After inserting an image into the spreadsheet, you can resize it to fit the layo
 
 **Resize via UI:**
 
-1. **Click the image** to select it (selection handles appear around it)
+1. **Click the image** to select it (selection handles appear around it).
 2. **Drag a middle edge handle** to resize horizontally or vertically. Click the image itself to move.
-3. **Release** to apply the new size or position
+3. **Release** to apply the new size or position.
 
 **Resize programmatically:**
 
@@ -111,70 +111,38 @@ The following code example shows how to delete an image by ID in spreadsheet:
 
 ---
 
+### Image Customization
+
+Image feature allows you to view and insert an image in a spreadsheet, and you can change the height and width of the image by resizing and moving it to another position.
+
+#### Height and Width
+
+* You can change the height and width of the image by resizing.
+* Use the `height` and `width` property in the `insertImage()` method programmatically.
+
+#### Top and Left
+
+* You can change the position of the image by drag and drop.
+* Use the `top` and `left` property in the `insertImage()` method programmatically.
+
 ## API Reference
- 
-## Events
-
-The following events/notifications are relevant when documenting image behavior and examples:
-
-- `createImageElement` — internal notification that creates the DOM overlay and registers the model (useful to mention when explaining overlays).
-- `setImage` (workbook event) — applies property updates into the model when images are changed programmatically or via UI.
-- `deleteImage` — internal action that removes the image model and DOM overlay.
-- `importModelUpdate` — used during open/import to migrate sheet-level image collections into cell-level arrays (relevant when explaining import behavior).
-
-### Cell storage format
-
-Images inserted into a cell are stored on the cell object under the property name `image` as an array of image objects. Common fields you will see in each image entry:
-
-- `src` — Image source URL or data-URI.
-- `id` — Overlay identifier used by APIs and selection.
-- `width` — Width in pixels.
-- `height` — Height in pixels.
-- `top` — Top offset in pixels (overlay position).
-- `left` — Left offset in pixels (overlay position).
-
-These fields are persisted in workbook JSON and are used for rendering, printing, and export.
 
 ### Methods
 
 #### insertImage()
 
-Inserts an image into the worksheet. In the current implementation the method accepts an image `File`, computes an appropriate size and position, then creates the overlay element.
+Inserts one or more images into the specified cell or range.
 
 **Syntax:**
 ```javascript
-insertImage(args, range)
+insertImage(images, range)
 ```
 
 **Parameters:**
-- `args.file` — The `File` object containing the image to insert.
-- `args.isAction` — Optional boolean indicating the call is part of an action (undo/redo) stack.
-- `range` — Optional target cell address (for example, `'D3'`) used to compute the initial placement.
+- `images` — Array of image objects. Each image object contains: `src`, `id`, `width`, `height`, `top`, `left`.
+- `range` — Optional target cell address or range (for example, `'D3'`). If omitted, the active selection is used.
 
 **See:** [insertImage API Documentation](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#insertimage)
-
-#### setImage()
-Updates one or more image entries in the runtime model and applies changes to overlays.
-
-**Syntax:**
-```javascript
-setImage(args)
-```
-
-**Parameters:**
-- `args.options` — Array of `ImageModel` objects with updated properties (e.g., `id`, `src`, `width`, `height`, `top`, `left`).
-- `args.range` — The cell address or range related to the images (used for anchoring or migration).
-- `args.isPositionChanged` — Optional boolean indicating the call updates position values and may require overlay reflow.
-- `args.isElementRemoved` — Optional boolean indicating the overlay element was removed and the model should be cleaned up.
-
-**Returns:**
-- `boolean` — `true` when the update was applied successfully; `false` otherwise.
-
-Behavior notes:
-- Applies property updates into the image model and updates the corresponding DOM overlays when present.
-- Handles bulk updates (multiple `ImageModel` entries) and position changes; when `isElementRemoved` is true the implementation removes model entries for deleted overlays.
-
-**See:** [setImage API Documentation](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#setimage)
 
 #### selectImage()
 Selects an image in the active worksheet.
@@ -222,3 +190,10 @@ Enables or disables image functionality in the Spreadsheet.
 **Default:** `true`
 
 **See:** [allowImage API Documentation](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowimage)
+
+### Limitations of Image
+
+The following features have some limitations in Image:
+
+* Corner resizing option in the image element.
+* Copy and paste the external image.

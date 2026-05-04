@@ -88,17 +88,17 @@ Once a chart is inserted into the worksheet, you can customize its appearance an
 
 To reposition a chart within the worksheet:
 
-1. **Click the chart** to select it (selection handles appear around it)
-2. **Click and drag** the chart to your desired location
-3. **Release** to place the chart in the new position
+1. **Click the chart** to select it (selection handles appear around it).
+2. **Click and drag** the chart to your desired location.
+3. **Release** to place the chart in the new position.
 
 ### Resize a Chart
 
 To adjust the chart size:
 
-1. **Click the chart** to select it (resize handles appear on the edges and corners)
-2. **Drag any corner handle** to resize proportionally, or **drag an edge handle** to resize in one direction
-3. **Release** to apply the new size
+1. **Click the chart** to select it.
+2. **Drag a middle edge handle** to resize along a single axis — horizontally or vertically.
+3. **Release** to apply the new size.
 
 ### Access Chart Design Options
 
@@ -155,6 +155,14 @@ To switch between chart types after creation:
 2. **Go to Chart Design tab** in the ribbon
 3. **Click Chart Type** option
 4. **Select a new type** (Column, Bar, Line, Area, Pie, etc.)
+
+### Chart Customization
+
+Chart feature allows you to view and insert a chart in a spreadsheet, and you can change the height and width of the chart by resizing and moving it to another position.
+
+* You can change the height and width of the chart by resizing.
+
+* You can change the position of the chart by drag and drop.
 
 ---
 
@@ -242,3 +250,11 @@ Enables or disables chart functionality in the Spreadsheet.
 **Default:** `true`
 
 **See:** [allowChart API Documentation](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowchart)
+
+### Limitations of Chart
+
+The following features have some limitations in the Chart:
+
+* Insert row/delete row between the chart data source will not reflect the chart.
+* Copy/paste into the chart data source will not reflect the chart.
+* Corner resizing option in chart element.
