@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimize the SFDT file in ASP.NET MVC DOCX Editor Component | Syncfusion
+title: Optimize SFDT file in ASP.NET MVC DOCX Editor Component | Syncfusion
 description: Learn here all about optimize the SFDT file in Document Editor in Syncfusion ASP.NET MVC Document Editor component of syncfusion and more.
 platform: document-processing
 control: Optimize the SFDT file

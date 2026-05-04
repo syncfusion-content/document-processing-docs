@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview in JavaScript (ES6) Document editor control | Syncfusion
+title: Image overview in Javascript (ES6) DOCX editor component | Syncfusion
 description: Learn here all about Word processor server docker image overview in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Word processor server docker image overview 
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Word processor server docker image overview in JavaScript (ES6) Document editor control
+# Word processor server docker image overview in JavaScript (ES6) DOCX editor
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> **Document Editor** is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
 

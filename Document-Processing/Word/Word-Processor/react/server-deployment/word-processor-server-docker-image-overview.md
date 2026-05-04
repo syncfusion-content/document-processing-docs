@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Image overview in React Document editor component | Syncfusion
+title: Docker Image overview in React DOCX editor component | Syncfusion
 description: Learn here all about Word processor server docker image overview in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
 control: Word processor server docker image overview 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Word processor server docker image overview in React Document editor component
+# Word processor server docker image overview in React DOCX editor
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> **Document Editor** is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
 

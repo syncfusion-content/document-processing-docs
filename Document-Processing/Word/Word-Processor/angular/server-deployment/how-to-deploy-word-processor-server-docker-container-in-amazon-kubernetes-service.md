@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Deploy Syncfusion Document Editor in Amazon Kubernetes Service
+title: Deploy Angular DOCX Editor in Amazon Kubernetes Service
 description: Learn here all about How to deploy word processor server docker container in amazon kubernetes service in Syncfusion Angular Document editor.
 control: How to deploy word processor server docker container in amazon kubernetes service 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# How to deploy Word Processor server in Amazon Kubernetes Service
+# Deploy Angular DOCX Editor in Amazon Kubernetes Service
 
 ## Prerequisites
 
