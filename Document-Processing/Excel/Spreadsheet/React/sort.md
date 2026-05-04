@@ -17,7 +17,7 @@ By default, the `sort` module is injected internally into Spreadsheet to perform
 
 ## Sort by Cell value
 
-In the active Spreadsheet, you can sort a selected range of cells by their values. Sorting can be done in several ways:
+In the active Spreadsheet, you can sort a selected range of cells by their values. Sorting can be done in following ways:
 
 * **Ribbon Toolbar** – Select the sort option under the Ribbon toolbar and choose ascending or descending.  
 * **Context Menu** – Right-click the sheet, select the sort option, and choose ascending or descending.  
@@ -70,8 +70,7 @@ In the custom sort dialog, the `Data contains header` checkbox is checked on loa
 
 ## Case Sensitive sort
 
-By default, sorting in the Spreadsheet is **case insensitive**.  
-To perform sorting with case sensitivity, set the [`caseSensitive`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#casesensitive) property to `true` and pass it as part of the `sortOption` arguments in the `sort` method.  
+By default, sorting in the Spreadsheet is **case insensitive**. To perform sorting with case sensitivity, set the [`caseSensitive`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#casesensitive) property to `true` and pass it as part of the `sortOption` arguments in the `sort` method.  
 
 * Case sensitive sorting applies only to cells containing alphabets.
 * In ascending order with case sensitivity enabled, cells with lowercase text appear above cells with uppercase text.  
@@ -98,8 +97,8 @@ When you want to perform sorting on multiple columns, it can be done by any of t
 
 ### Custom Sort Dialog
 
-The custom sort dialog allows sorting multiple columns in a selected range using a rich UI.  
-This dialog appears when you choose `Custom sort…` from the Ribbon or context menu.  
+The custom sort dialog allows sorting multiple columns in a selected range using a rich UI. This dialog appears when you choose `Custom sort…` from the Ribbon or context menu.
+ 
 * By default, the dialog shows sort criteria with the first column name from the selected range. This initial criterion cannot be removed.  
 * You can add more criteria using the `Add Column` button at the bottom of the dialog. Each criterion can have its own sort order.  
 * Newly added criteria can be removed using the `delete` icon next to each item.  

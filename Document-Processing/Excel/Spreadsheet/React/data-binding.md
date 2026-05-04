@@ -64,7 +64,7 @@ The following code example demonstrates how to customize the mapping of column d
 
 ## Remote data
 
-To Bind remote data to the Spreadsheet by assigning a [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) instance to the `dataSource` property. Provide the service endpoint URL to interact with the remote data source.
+To bind remote data to the Spreadsheet control, assign service data as an instance of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
 
 Refer to the following code example for remote data binding.
 
@@ -110,7 +110,7 @@ Refer to the following code example for remote data binding.
 
 ### Web API
 
-To Bind the Spreadsheet with a Web API created using an OData endpoint by using the **WebApiAdaptor**.
+You can use `WebApiAdaptor` to bind spreadsheet with Web API created using OData endpoint.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

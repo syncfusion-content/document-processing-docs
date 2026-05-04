@@ -61,6 +61,8 @@ Clear highlight feature is used to remove the highlight from invalid cells.
 
 The Spreadsheet supports custom data validation, allowing users to define their own validation rules for specific cells or ranges. This feature enables you to set conditions that the entered data must meet, making it particularly useful when predefined validation options, such as numbers, dates, or lists, are insufficient.
 
+With custom validation, you can enforce rules using logical expressions or formulas, ensuring that only valid data is entered into the Spreadsheet.
+
 **Example:** Validate a number between 10 and 100 using the formula `=AND(A1>10, A1<100)`, where A1 is the cell being validated. The Spreadsheet evaluates entered values against the formula and displays an alert if validation fails.
 
 You can apply custom data validation using two methods.

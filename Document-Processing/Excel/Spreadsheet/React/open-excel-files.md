@@ -9,27 +9,13 @@ documentation: ug
 
 # Open Excel Files in Syncfusion React Spreadsheet
 
-The React Spreadsheet component uses a **server-assisted workflow** to import Excel files accurately and efficiently.  
-When a user uploads an Excel file, the component sends the file to the server for parsing, ensuring smooth performance since the heavy processing is handled server-side.
+The React Spreadsheet component uses a server‑assisted workflow to import Excel files accurately and efficiently. When a user uploads an Excel file, the component sends the file to the server for parsing, ensuring smooth performance because the heavy processing workload is handled on the server side.
 
-### Server Processing
-On the server:
-* The [`Syncfusion.EJ2.Spreadsheet.AspNet.Core`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library, built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), reads the Excel file.  
-* It extracts data, styles, formulas, formatting, and sheet structure.  
-* The server converts this information into a **Spreadsheet-compatible JSON workbook**.
+On the server, the [`Syncfusion.EJ2.Spreadsheet library`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), reads the Excel file and extracts all relevant details, including data, styles, formulas, formatting, and sheet structure. The server then converts this information into a Spreadsheet‑compatible JSON workbook.
 
-### Client Rendering
-Once processing is complete:
-* The JSON workbook is returned to the client.  
-* The React Spreadsheet component renders it in the browser.  
-* This workflow preserves the original Excel layout and ensures full fidelity of imported content.
+Once processing is complete, the JSON workbook is returned to the client, where the React Spreadsheet component renders it in the browser. This workflow preserves the original Excel layout and ensures the imported content appears with full fidelity.
 
-### Enabling Open Functionality
-
-To enable opening Excel files:
-* Set the [`allowOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowopen) property to `true`.  
-* Specify the service endpoint using the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property.  
-* The control sends the uploaded file to this endpoint, where it is processed and returned as JSON for rendering.
+To enable opening Excel files, set the [`allowOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowopen) property to **true** and specify the service url using the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property. The control will send the uploaded file to this endpoint, where it is processed and returned as JSON for the Spreadsheet to render.
 
 For a quick walkthrough on how the open functionality works, refer to the following video:
 {% youtube "https://www.youtube.com/watch?v=MpwiXmL1Z_o" %}
@@ -252,30 +238,13 @@ fetch('https://localhost:{{port_number}}/Home/Open')
 
 ### Open Excel files with AWS Lambda
 
-To open Excel files using AWS Lambda, you first need to deploy the **spreadsheet open/save web API service** in AWS Lambda.  
-For detailed steps, refer to this KB article:  
+Before proceeding with the opening process, you should deploy the spreadsheet open/save web API service in AWS Lambda. To host the open/save web service in the AWS Lambda environment, please refer to the following KB documentation.
+
 [How to deploy a spreadsheet open and save web API service to AWS Lambda](https://support.syncfusion.com/kb/article/17184/how-to-deploy-a-spreadsheet-open-and-save-web-api-service-to-aws-lambda)
 
-**Deploy the service**  
-   After deployment, you’ll receive an AWS service URL for both open and save actions.
+After deployment, you will get the AWS service URL for the open and save actions. Before opening the Excel file with this hosted open URL, you need to prevent the default file opening process to avoid getting a corrupted file on the open service end. The spreadsheet component appends the file to the `formData` and sends it to the open service, which causes the file to get corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event. After that, you will get the selected file in the `beforeOpen` event argument. Then, convert this file into a base64 string and send it to the open service URL using a fetch request.
 
-**Prevent default opening**  
-   By default, the Spreadsheet component appends the file to `formData` and sends it to the open service, which can corrupt the file.  
-   To avoid this, set `args.cancel = true` in the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event.
-
-**Handle the file on client side**  
-   * Capture the selected file in the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event argument.  
-   * Convert the file into a **base64 string**.  
-   * Send this base64 string to the AWS open service URL using a `fetch` request.
-
-**Process the file on server side**  
-   * Convert the base64 string back into a file.  
-   * Pass it to the workbook `Open` method.  
-   * The service processes the file and returns the spreadsheet data in **JSON format**.
-
-**Render on client side**  
-   * Receive the JSON data in the fetch success callback.  
-   * Use the [`openFromJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method to load the JSON data into the Spreadsheet component.
+On the open service end, convert the base64 string back to a file and pass it as an argument to the workbook `Open` method. The open service will process the file and return the spreadsheet data in JSON format. You will then receive this JSON data in the fetch success callback. Finally, use the [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method to load this JSON data into the spreadsheet component.
 
 The following code example shows how to open an Excel file using a hosted web service in AWS Lambda, as mentioned above.
 
@@ -461,31 +430,11 @@ public IActionResult Open(IFormCollection openRequest)
 
 ### Open Large Excel Files with Chunk Response Processing
 
-When opening very large Excel files, the server response can become huge, leading to memory issues or connection problems.  
-The `Chunk Response Processing` feature solves this by splitting the server response into smaller parts (chunks) and sending them to the client in parallel.  
-The client then combines these chunks to load the Excel data smoothly.
+When opening large Excel files with many features and data, the server response can become very large. This might cause memory issues or connection problems during data transmission. The `Chunk Response Processing` feature solves this by dividing the server response into smaller parts, called chunks, and sending them to the client in parallel. The client receives these chunks and combines them to load the Excel data smoothly into the spreadsheet.
 
-#### How It Works
-1. **Server Side**  
-   * Breaks the response into smaller chunks.  
-   * Sends chunks in parallel to the client.  
+You can enable this feature by setting the [`chunkSize`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/opensettings#chunksize) property in the [`openSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#opensettings) object. Set the [`chunkSize`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/opensettings#chunksize) to a value greater than 0 (in bytes). The [`chunkSize`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/opensettings#chunksize) defines how large each chunk will be. Make sure your server supports chunked responses to use this feature effectively.
 
-2. **Client Side**  
-   * Receives chunks one by one.  
-   * Combines them to reconstruct the full Excel workbook.  
-   * Loads the data into the Spreadsheet without performance issues.  
-
-#### Enabling Chunk Response
-* Configure the [`openSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#opensettings) object.  
-* Set the [`chunkSize`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/opensettings#chunksize) property to a value greater than `0` (in bytes).  
-* The `chunkSize` defines how large each chunk will be.  
-* Ensure your server supports chunked responses for this feature to work properly.  
-
-#### Benefits
-* Reduces memory usage on both server and client.  
-* Prevents connection issues caused by large payloads.  
-* Makes transmission more reliable.  
-* Allows large Excel files to load smoothly, ensuring a seamless user experience.
+> This feature reduces memory usage on both the server and client, ensuring that resources are managed efficiently during data transmission. By sending smaller parts of data, it prevents connection issues that could occur with large payloads, making the transmission process more reliable. Additionally, it allows large Excel files to be loaded smoothly into the spreadsheet, providing a seamless user experience even with extensive data.
 
 The following code example demonstrates the client-side and server-side configuration required for handling chunk-based responses when opening an Excel file.
 
@@ -496,26 +445,26 @@ import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 const App = () => {
 
-  const spreadsheetRef = React.useRef(null);
-  const openSettings = {
-    // Specifies the size (in bytes) of each chunk for the server response when opening a document.
-    chunkSize: 1000000,
-    // Specifies the number of retry attempts for a failed server request when returning the opened file responses in chunks.
-    // This ensures reliable handling of temporary network or server disruptions during the chunked response process.
-    retryCount: 3,
-    // Specifies the delay (in milliseconds) before retrying a failed server request when returning the opened file responses in chunks.
-    // This ensures controlled retries in case of temporary network or server disruptions during the chunked response process.
-    retryAfterDelay: 500
-  }
+    const spreadsheetRef = React.useRef(null);
+    const openSettings = {
+        // Specifies the size (in bytes) of each chunk for the server response when opening a document.
+        chunkSize: 1000000,
+        // Specifies the number of retry attempts for a failed server request when returning the opened file responses in chunks.
+        // This ensures reliable handling of temporary network or server disruptions during the chunked response process.
+        retryCount: 3,
+        // Specifies the delay (in milliseconds) before retrying a failed server request when returning the opened file responses in chunks.
+        // This ensures controlled retries in case of temporary network or server disruptions during the chunked response process.
+        retryAfterDelay: 500
+    }
 
-  const openUrl = 'https://localhost:{{port_number}}/Home/Open';
+    const openUrl = 'https://localhost:{{port_number}}/Home/Open';
 
-  return (
-    <div className='control-section spreadsheet-control'>
-      <SpreadsheetComponent openUrl={openUrl} openSettings={openSettings} ref={spreadsheetRef}>
-      </SpreadsheetComponent>
-    </div>
-  );
+    return (
+        <div className='control-section spreadsheet-control'>
+            <SpreadsheetComponent openUrl={openUrl} openSettings={openSettings} ref={spreadsheetRef}>
+            </SpreadsheetComponent>
+        </div>
+    );
 }
 
 export default App;
