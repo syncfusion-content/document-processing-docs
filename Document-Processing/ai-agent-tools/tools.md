@@ -20,14 +20,14 @@ The operational mode is determined by the manager used when initializing the too
 
 Tools are organized into the following categories:
 
-| Category | Tool Classes | Description |
-|---|---|---|
-| **PDF** | PdfDocumentAgentTools,<br/>PdfOperationsAgentTools,<br/>PdfSecurityAgentTools,<br/>PdfContentExtractionAgentTools,<br/>PdfAnnotationAgentTools,<br/>PdfConverterAgentTools,<br/>PdfOcrAgentTools | Create, manipulate, secure, extract content from, annotate, convert, and perform OCR on PDF documents. |
-| **Word** | WordDocumentAgentTools,<br/>WordOperationsAgentTools,<br/>WordSecurityAgentTools,<br/>WordMailMergeAgentTools,<br/>WordFindAndReplaceAgentTools,<br/>WordRevisionAgentTools,<br/>WordImportExportAgentTools,<br/>WordFormFieldAgentTools,<br/>WordBookmarkAgentTools | Create, edit, protect, mail-merge, find/replace, track changes, import/export, and manage form fields and bookmarks in Word documents. |
-| **Excel** | ExcelWorkbookAgentTools,<br/>ExcelWorksheetAgentTools,<br/>ExcelSecurityAgentTools,<br/>ExcelFormulaAgentTools,<br/>ExcelChartAgentTools,<br/>ExcelConditionalFormattingAgentTools,<br/>ExcelConversionAgentTools,<br/>ExcelDataValidationAgentTools,<br/>ExcelPivotTableAgentTools | Create and manage workbooks and worksheets, set cell values, formulas, and number formats, apply security, create and configure charts and sparklines, add conditional formatting, convert to image/HTML/ODS/JSON, manage data validation, and create and manipulate pivot tables. |
-| **PowerPoint** | PresentationDocumentAgentTools,<br/>PresentationOperationsAgentTools,<br/>PresentationSecurityAgentTools,<br/>PresentationContentAgentTools,<br/>PresentationFindAndReplaceAgentTools | Load, merge, split, secure, and extract content from PowerPoint presentations. |
+| Category | Tool Classes | 
+|---|---|
+| **PDF** | PdfDocumentAgentTools,<br/>PdfOperationsAgentTools,<br/>PdfSecurityAgentTools,<br/>PdfContentExtractionAgentTools,<br/>PdfAnnotationAgentTools,<br/>PdfConverterAgentTools,<br/>PdfOcrAgentTools |
+| **Word** | WordDocumentAgentTools,<br/>WordOperationsAgentTools,<br/>WordSecurityAgentTools,<br/>WordMailMergeAgentTools,<br/>WordFindAndReplaceAgentTools,<br/>WordRevisionAgentTools,<br/>WordImportExportAgentTools,<br/>WordFormFieldAgentTools,<br/>WordBookmarkAgentTools |
+| **Excel** | ExcelWorkbookAgentTools,<br/>ExcelWorksheetAgentTools,<br/>ExcelSecurityAgentTools,<br/>ExcelFormulaAgentTools,<br/>ExcelChartAgentTools,<br/>ExcelConditionalFormattingAgentTools,<br/>ExcelConversionAgentTools,<br/>ExcelDataValidationAgentTools,<br/>ExcelPivotTableAgentTools |
+| **PowerPoint** | PresentationDocumentAgentTools,<br/>PresentationOperationsAgentTools,<br/>PresentationSecurityAgentTools,<br/>PresentationContentAgentTools,<br/>PresentationFindAndReplaceAgentTools |
 | **Conversion** | OfficeToPdfAgentTools | Convert Word, Excel, and PowerPoint documents to PDF. |
-| **Data Extraction** | DataExtractionAgentTools | Extract structured data (text, tables, forms) from PDF and image files as JSON. |
+| **Data Extraction** | DataExtractionAgentTools |
 
 
 ## Document Managers
@@ -443,7 +443,8 @@ Provides AI-powered structured data extraction from PDF documents and images, re
 
 ## See Also
 
-- [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
-- [Getting Started](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started)
-- [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
-- [Example Prompts](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/example-prompts)
+- [Overview](./overview)
+- [Getting Started](./getting-started)
+- [Customization](./customization)
+- [Example Prompts](./example-prompts)
+- [Example Use Cases](example-use-cases)
