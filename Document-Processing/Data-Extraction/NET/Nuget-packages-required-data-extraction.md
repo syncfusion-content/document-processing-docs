@@ -65,56 +65,6 @@ Windows UI (WinUI) <br/>
 </tr>
 </table>
 
-## NuGet Packages Required for SmartFormRecognizer
-
-To work with SmartFormRecognizer, the following NuGet packages need to be installed in your application.
-
-<table>
-<tr>
-<thead>
-<th><b>Platform(s)</b></th>
-<th><b>NuGet Package</b></th>
-</thead>
-</tr>
-<tr>
-<td>
-Windows Forms
-</td>
-<td>
-{{'[Syncfusion.SmartFormRecognizer.WinForms.nupkg]'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-WPF
-</td>
-<td>
-{{'[Syncfusion.SmartFormRecognizer.WPF.nupkg]'| markdownify }}
-</td>
-</tr>
-<tr>
-<td rowspan="2">Blazor, .NET Core and .NET Platforms</td>
-<td>
-{{'[Syncfusion.SmartFormRecognizer.NET.nupkg]'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-{{'[Syncfusion.SmartFormRecognizer.Net.Core.nupkg]'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET MVC5
-</td>
-<td>
-{{'[Syncfusion.SmartFormRecognizer.AspNet.MVC5.nupkg]'| markdownify }}
-</td>
-</tr>
-</table>
-
-N> The above mentioned NuGet packages are available in [nuget.org](https://www.nuget.org/).
-
 ## NuGet Packages Required for Smart Table Extractor
 
 To work with Smart Table Extractor, the following NuGet packages need to be installed in your application from [nuget.org](https://www.nuget.org/).
@@ -171,9 +121,10 @@ Windows UI (WinUI) <br/>
 </tr>
 </table>
 
-## NuGet Packages Required for OCR processor
 
-Directly install the NuGet package to your application from [nuget.org](https://www.nuget.org/).
+## NuGet Packages Required for SmartFormRecognizer
+
+To work with SmartFormRecognizer, the following NuGet packages need to be installed in your application.
 
 <table>
 <tr>
@@ -184,11 +135,10 @@ Directly install the NuGet package to your application from [nuget.org](https://
 </tr>
 <tr>
 <td>
-Windows Forms<br/>
-Console Application (Targeting .NET Framework)
+Windows Forms
 </td>
 <td>
-{{'[Syncfusion.Pdf.OCR.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.WinForms)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.WinForms)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -196,7 +146,18 @@ Console Application (Targeting .NET Framework)
 WPF
 </td>
 <td>
-{{'[Syncfusion.Pdf.OCR.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.Wpf)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.WPF.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.wpf)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td rowspan="2">Blazor, .NET Core and .NET Platforms</td>
+<td>
+{{'[Syncfusion.SmartFormRecognizer.NET.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.NET)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+{{'[Syncfusion.SmartFormRecognizer.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.Net.Core)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -204,17 +165,9 @@ WPF
 ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.Pdf.OCR.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.AspNet.Mvc5)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET Core (Targeting NET Core) <br/>
-Console Application (Targeting .NET Core) <br/> 
-Blazor
-</td>
-<td>
-{{'[Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.AspNet.MVC5.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.AspNet.MVC5)'| markdownify }}
 </td>
 </tr>
 </table>
+
+N> The above mentioned NuGet packages are available in [nuget.org](https://www.nuget.org/).

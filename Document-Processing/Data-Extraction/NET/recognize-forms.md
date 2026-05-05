@@ -1,19 +1,15 @@
 ---
-title: Working with Recognize methods in SmartFormRecognizer| Syncfusion&reg;
-description: Learn how to effectively use the Recognize methods in the Syncfusion&reg; SmartFormRecognizer library to process and detects from forms with ease.
+title: Recognize Forms and Configure Options in SmartFormRecognizer | Syncfusion&reg;
+description: Learn how to recognize forms and configure FormRecognizeOptions in the Syncfusion&reg; SmartFormRecognizer library to process and detect form elements with ease.
 platform: document-processing
 control: SmartFormRecognizer
 documentation: UG
 ---
 
-# Recognize Forms Using SmartFormRecognizer
-
-The `FormRecognizer` exposes several convenience methods to recognize forms from a `Stream` input. Each method accepts an input `Stream` (PDF or image) and returns recognized output either as a `PdfLoadedDocument`, a `Stream` containing PDF data, or as a JSON string.
-
-Below each method signature you'll find a explanation and corrected example usage (both synchronous and asynchronous where applicable).
+# Recognize Form Fields from PDF or Image
 
 ## Recognize forms using PdfLoadedDocument
-Using `PdfLoadedDocument` this operation analyzes the form content supplied through the inputStream whether it contains a PDF or an image and produces a fully enriched PdfLoadedDocument that includes recognized form elements such as checkboxes, radio buttons, textboxes, and signatures, according to the options defined in `FormRecognizeOptions`. This recognition process supports both execution patterns: the synchronous `RecognizeFormAsPdfDocument` method for immediate, blocking processing, and the asynchronous `RecognizeFormAsPdfDocumentAsync` method for non‑blocking, await processing ideal for responsive UI applications or scalable server side workflows.
+To recognize form data from a PDF or image and get the output as a `PdfLoadedDocument` using the **RecognizeFormAsPdfDocument** (synchronous) and **RecognizeFormAsPdfDocumentAsync** (asynchronous) methods of the **FormRecognizer** class, refer to the following code examples.
 
 Example (synchronous):
 
@@ -56,8 +52,8 @@ public  async void Button_Click(object sender, RoutedEventArgs e)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-Pdf-async/.NET).
 
-## Recognize forms using Stream 
-Using `Stream`this operation processes the form content provided through the inputStream whether it contains a PDF or an image and returns the fully recognized PDF as a Stream.This functionality is available through both the synchronous `RecognizeFormAsPdfStream` method for immediate, blocking execution and the asynchronous `RecognizeFormAsPdfStreamAsync` method for non‑blocking, await processing suitable for responsive UI applications, background services, and scalable server‑side workflows.
+## Recognize forms using Stream
+To recognize form data from a PDF or image and get the output as a `Stream` using the **RecognizeFormAsPdfStream** (synchronous) and **RecognizeFormAsPdfStreamAsync** (asynchronous) methods of the **FormRecognizer** class, refer to the following code examples.
 
 Example (synchronous):
 
@@ -109,8 +105,7 @@ public  async void Button_Click(object sender, RoutedEventArgs e)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-Stream-async/.NET).
 
 ## Recognize forms using JSON
-
-Using `JSON`this operation recognizes the form contained in the inputStream whether the source document is a PDF or an image and returns the complete recognition output serialized as a JSON string. This functionality is accessible through both the synchronous `RecognizeFormAsJson` method, which performs immediate, blocking processing, and the asynchronous `RecognizeFormAsJsonAsync` method, which provides non‑blocking, await execution suitable for UI applications, background workers, and scalable cloud or server‑side workflows.
+To recognize form data from a PDF or image and get the output as a JSON string using the **RecognizeFormAsJson** (synchronous) and **RecognizeFormAsJsonAsync** (asynchronous) methods of the **FormRecognizer** class, refer to the following code examples.
 
 Example (synchronous):
 
@@ -122,7 +117,7 @@ public  void Button_Click(object sender, RoutedEventArgs e)
     FormRecognizer smartFormRecognizer = new FormRecognizer();
     //Read the input PDF file as stream
     FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite);
-    //Recognize the form and get the output as PDF stream
+    //Recognize the form and get the output as JSON string
     String outputJson = smartFormRecognizer.RecognizeFormAsJson(inputStream);
     //Save the outputJson
     File.Create("D:\\result.json").Close();
@@ -143,7 +138,7 @@ public  async void Button_Click(object sender, RoutedEventArgs e)
     FormRecognizer smartFormRecognizer = new FormRecognizer();
     //Read the input PDF file as stream
     FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite);
-    //Recognize the form and get the output as PDF stream
+    //Recognize the form and get the output as JSON string
     String outputJson = await smartFormRecognizer.RecognizeFormAsJsonAsync(inputStream);
     //Save the outputJson
     File.Create("D:\\result.json").Close();
@@ -157,9 +152,7 @@ public  async void Button_Click(object sender, RoutedEventArgs e)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-JSON-async/.NET).
 
 ## Async variants with CancellationToken
-
-The async overloads accept an optional `CancellationToken` to cancel long running operations. Initially, the cancellationToken uses its default value, and based on our requirements, we can optimize or supply a custom token as needed. This behavior is supported across all async methods, including PDF, JSON, and PdfLoadedDocument asynchronous operations
-
+To recognize form data asynchronously with cancellation support using the **RecognizeFormAsPdfStreamAsync** method of the **FormRecognizer** class, refer to the following code example.
 
 Example with cancellation token (PDF stream):
 
@@ -184,3 +177,92 @@ public async Task RecognizeWithCancellationAsync()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Asyncvariants-with-CancellationToken/.NET).
+
+# Working with FormRecognizeOptions
+
+`FormRecognizeOptions` provides configurable settings that control how the SmartFormRecognizer detects elements from a document. It allows you to enable or disable the detection of specific form controls such as checkboxes, radio buttons, textboxes, and signatures—while also letting you fine-tune the recognition results using a confidence threshold.
+
+Additionally, it supports restricting processing to specific pages through an optional 1‑based inclusive PageRange. By adjusting these options, developers can optimize performance, reduce noise in results, and tailor form extraction precisely to the needs of their application.
+
+## Properties
+
+### DetectTextboxes
+To disable textbox field detection in the **FormRecognizeOptions** of the **FormRecognizer** class, refer to the following code example.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+FormRecognizer recognizer = new FormRecognizer();
+// Disable textbox detection
+recognizer.FormRecognizeOptions.DetectTextboxes = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+### DetectCheckboxes
+To disable checkbox detection in the **FormRecognizeOptions** of the **FormRecognizer** class, refer to the following code example.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+FormRecognizer recognizer = new FormRecognizer();
+// Disable checkbox detection
+recognizer.FormRecognizeOptions.DetectCheckboxes = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+### DetectRadioButtons
+To disable radio button detection in the **FormRecognizeOptions** of the **FormRecognizer** class, refer to the following code example.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+FormRecognizer recognizer = new FormRecognizer();
+// Disable radio button detection
+recognizer.FormRecognizeOptions.DetectRadioButtons = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+### DetectSignatures
+To disable signature field detection in the **FormRecognizeOptions** of the **FormRecognizer** class, refer to the following code example.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+FormRecognizer recognizer = new FormRecognizer();
+// Disable signature detection
+recognizer.FormRecognizeOptions.DetectSignatures = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+### ConfidenceThreshold
+To set a minimum confidence score for detected form elements using the **ConfidenceThreshold** in the **FormRecognizeOptions** of the **FormRecognizer** class, refer to the following code example.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+FormRecognizer recognizer = new FormRecognizer();
+// Set a ConfidenceThreshold
+recognizer.FormRecognizeOptions.ConfidenceThreshold = 0.9;
+
+{% endhighlight %}
+{% endtabs %}
+
+### PageRange
+To specify which pages to process using the **PageRange** in the **FormRecognizeOptions** of the **FormRecognizer** class, refer to the following code example.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+FormRecognizer recognizer = new FormRecognizer();
+// Set a single page range – detects only the specified page
+recognizer.FormRecognizeOptions.PageRange = new int[,] { { 3 }, { 8 } };
+
+// Set a page range – detects content between the specified start and end page
+recognizer.FormRecognizeOptions.PageRange = new int[,] { { 3, 8 } };
+
+{% endhighlight %}
+{% endtabs %}
