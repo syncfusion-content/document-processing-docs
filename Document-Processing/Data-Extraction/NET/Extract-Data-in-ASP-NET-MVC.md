@@ -1,6 +1,6 @@
 ---
 title: Extract Data in ASP.NET MVC Application | Syncfusion
-description: Learn how to extract data in an ASP.NET MVC application with easy steps using the Syncfusion Smart Data Extractor library.
+description: Learn how to extract data in an ASP.NET MVC application with easy steps using the Syncfusion Data Extraction library.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG

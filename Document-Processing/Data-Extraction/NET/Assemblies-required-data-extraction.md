@@ -131,7 +131,7 @@ The following assemblies need to be referenced in your application based on the 
 </table>
 
 
-# Assemblies for Smart Form Recognizer
+## Assemblies for Smart Form Recognizer
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -183,7 +183,7 @@ The following assemblies need to be referenced in your application based on the 
   </tr>
 </table>
 
-# Assemblies Required for OCR processor
+## Assemblies Required for OCR processor
 
 Get the following required assemblies by downloading the OCR library installer. Download and install the OCR library for Windows, Linux, and Mac respectively. Please refer to the advanced installation steps for more details.
 

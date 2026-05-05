@@ -1,6 +1,6 @@
 ---
 title: Extract PDF to JSON in C# | Smart Data Extractor | Syncfusion
-description: Extract PDF documents as JSON in C# using Syncfusion<sup>&reg;</sup> Smart Data Extractor library
+description: Learn how to extract structured data from PDF documents as JSON in C# using the Syncfusion® Smart Data Extractor library for .NET applications.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG

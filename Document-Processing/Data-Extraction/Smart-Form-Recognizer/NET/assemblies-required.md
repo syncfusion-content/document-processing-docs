@@ -7,6 +7,7 @@ documentation: UG
 ---
 
 # Assemblies Required to work with SmartFormRecognizer
+
 The following assemblies need to be referenced in your application based on the platform.
 
 <table>

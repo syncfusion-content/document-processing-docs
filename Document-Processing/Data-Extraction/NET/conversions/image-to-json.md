@@ -1,10 +1,10 @@
 ---
 title: Extract Image to JSON in C# | Smart Data Extractor | Syncfusion
-description: Extract Image as JSON in C# using Syncfusion<sup>&reg;</sup> Smart Data Extractor library
+description: Learn how to extract structured data from images as JSON in C# using the Syncfusion® Smart Data Extractor library for .NET applications.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
-keywords: Assemblies
+keywords: Data Extraction, Image to JSON, Smart Data Extractor, Assemblies, NuGet Packages
 ---
 
 # Image to JSON Extraction

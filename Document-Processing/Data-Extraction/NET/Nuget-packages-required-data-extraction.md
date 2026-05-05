@@ -171,7 +171,7 @@ Windows UI (WinUI) <br/>
 </tr>
 </table>
 
-# NuGet Packages Required for OCR processor
+## NuGet Packages Required for OCR processor
 
 Directly install the NuGet package to your application from [nuget.org](https://www.nuget.org/).
 
