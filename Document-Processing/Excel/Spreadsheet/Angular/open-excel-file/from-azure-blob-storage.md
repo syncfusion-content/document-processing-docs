@@ -11,9 +11,9 @@ documentation: ug
 
 To load a file from Azure Blob Storage in a Spreadsheet Component, you can follow the steps below
 
-**Step 1:** Create a Simple Spreadsheet Sample in React
+**Step 1:** Create a Simple Spreadsheet Sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/getting-started) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/getting-started) to create a simple Spreadsheet sample in Angular. This will give you a basic setup of the Spreadsheet component.
 
 **Step 2:** Modify the `SpreadsheetController.cs` File in the Web Service Project
 

@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with React Spreadsheet component
+# Getting Started with Angular Spreadsheet component
 
 This section explains how to create a simple Angular application and add the [Syncfusion® Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component with the minimum required setup.
 
@@ -115,7 +115,7 @@ Add the following style references to the `src/App.css` file.
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-spreadsheet/styles/material.css';
 ```
 
 ## Add Spreadsheet component

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save excel to Google Drive in Angular Spreadsheet control | Syncfusion
-description: Learn about how to Save an Excel file to Google Drive from React Spreadsheet control of Syncfusion Essential JS 2.
+description: Learn about how to Save an Excel file to Google Drive from Angular Spreadsheet control of Syncfusion Essential JS 2.
 platform: document-processing
 control: Save file to Google Drive
 documentation: ug

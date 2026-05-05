@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Save excel to Google Cloud in React Spreadsheet control | Syncfusion
-description: Learn about how to Save an Excel file from Google Cloud Storage in React Spreadsheet control of Syncfusion Essential JS 2.
+title: Save excel to Google Cloud in Angular Spreadsheet control | Syncfusion
+description: Learn about how to Save an Excel file from Google Cloud Storage in Angular Spreadsheet control of Syncfusion Essential JS 2.
 platform: document-processing
 control: Save file to Google Cloud Storage
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 To save a file to Google Cloud Storage in a Spreadsheet Component, you can follow the steps below
 
-**Step 1:** Create a Simple Spreadsheet Sample in React
+**Step 1:** Create a Simple Spreadsheet Sample in Angular
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/getting-started) to create a simple Spreadsheet sample in Angular. This will give you a basic setup of the Spreadsheet component.
 
 **Step 2:** Modify the `SpreadsheetController.cs` File in the Web Service Project
 
@@ -79,7 +79,7 @@ public async Task<IActionResult> SaveToGoogleCloud([FromForm] SaveSettings saveS
 }
 ```
 
-**Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
+**Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
 
 ```ts
 
