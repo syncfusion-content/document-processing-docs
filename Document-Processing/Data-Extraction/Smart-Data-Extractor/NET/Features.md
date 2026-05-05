@@ -699,46 +699,5 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-within-specific-range/.NET).
 
 
-## PDF to Markdown Preservation Mapping
 
-This section explains how common PDF elements are converted and preserved in Markdown format, ensuring that document structure and formatting remain consistent during the PDF to Markdown conversion process.
-
-<table>
-  <thead>
-    <tr>
-      <th><b>PDF Elements</b></th>
-      <th><b>Preservation in Markdown</b></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Header, Paragraph Title, Document Title</td>
-      <td>Headings (H2)</td>
-    </tr>
-    <tr>
-      <td>Paragraph</td>
-      <td>Paragraph</td>
-    </tr>
-    <tr>
-      <td>Image</td>
-      <td>Image (base64 string)</td>
-    </tr>
-    <tr>
-      <td>Table</td>
-      <td>Table</td>
-    </tr>
-    <tr>
-      <td>Text Inline Styles</td>
-      <td>Bold and Italic</td>
-    </tr>
-    <tr>
-      <td>Link text without title text</td>
-      <td>Links</td>
-    </tr>
-    <tr>
-      <td>Code blocks, Footer, Page Number, List, Block quotes, Subscript, Superscript</td>
-      <td>Text</td>
-    </tr>
-  </tbody>
-</table>
 
