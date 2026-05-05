@@ -1,6 +1,6 @@
 ---
 title: Explain the behavior of the WrapText property in XlsIO | Syncfusion
-description: Describes how the WrapText property affects cell layout in Excel and XlsIO: text wraps to the column width and increases row height; XlsIO follows Excel's default behavior.
+description: Explains how the WrapText property affects Excel cell layout, text wraps to column width and increases row height, following Excel’s default behavior in XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
