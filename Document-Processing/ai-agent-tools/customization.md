@@ -14,7 +14,7 @@ The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packag
 
 ## Creating a Custom AI Agent Tool Class
 
-Follow these steps to enable new document operations to the AI agent tool library.
+Follow these steps to enable new document operations to the [AI agent tool library](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main).
 
 **Step 1: Clone the repository**
 
@@ -25,11 +25,7 @@ cd Document-SDK-AI-Agent-Tools
 
 **Step 2: Create a Custom AI Agent Tool by Inheriting AgentToolBase**
 
-Open the Syncfusion.DocumentSDK.AI.AgentTools library project 
-
-Syncfusion.DocumentSDK.AI.AgentTools\Syncfusion.DocumentSDK.AI.AgentTools.csproj Then,
-
-Create a new class inside the Tools that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document manager through its constructor:
+Open the Syncfusion.DocumentSDK.AI.AgentTools library project. Then, create a new class inside the Tools that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document manager through its constructor:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -275,7 +271,8 @@ The agent will call `Word_CreateDocument` to load the file, then `Word_AddTextWa
 
 ## See Also
 
-- [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
-- [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
-- [Getting Started](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started)
-- [Example Prompts](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/example-prompts)
+- [Overview](./overview)
+- [Tools](./tools)
+- [Getting Started](./getting-started)
+- [Example Prompts](./example-prompts)
+- [Example Use Cases](./example-use-cases)
