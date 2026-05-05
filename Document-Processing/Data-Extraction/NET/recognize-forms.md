@@ -1,12 +1,12 @@
 ---
-title: Recognize Forms and Configure Options in SmartFormRecognizer | Syncfusion&reg;
+title: Working with Form Recognition | Syncfusion&reg;
 description: Learn how to recognize forms and configure FormRecognizeOptions in the Syncfusion&reg; SmartFormRecognizer library to process and detect form elements with ease.
 platform: document-processing
 control: SmartFormRecognizer
 documentation: UG
 ---
 
-# Recognize Form Fields from PDF or Image
+# Working with Form Recognition
 
 ## Recognize forms using PdfLoadedDocument
 To recognize form data from a PDF or image and get the output as a `PdfLoadedDocument` using the **RecognizeFormAsPdfDocument** (synchronous) and **RecognizeFormAsPdfDocumentAsync** (asynchronous) methods of the **FormRecognizer** class, refer to the following code examples.
