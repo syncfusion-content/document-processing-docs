@@ -1,5 +1,5 @@
 ---
-title: How to open Excel file as ReadOnly in MS Excel using XlsIO? | Syncfusion
+title: How to Open an Excel File as Read‑Only Using XlsIO | Syncfusion
 description: Shows how to set the 'Read-only recommended' flag when saving an Excel workbook with Syncfusion XlsIO so Excel prompts to open it as read-only.
 platform: document-processing
 control: XlsIO
