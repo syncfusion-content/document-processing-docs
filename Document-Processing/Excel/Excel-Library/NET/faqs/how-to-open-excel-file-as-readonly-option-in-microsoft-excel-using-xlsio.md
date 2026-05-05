@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to open Excel file as ReadOnly in MS Excel using XlsIO?
+# How to open Excel file as ReadOnly in Microsoft Excel using XlsIO?
 
 You can make Excel prompt users to open a workbook as read-only by setting the Read-only recommended flag on the workbook before saving. The example below shows how to set this flag with Syncfusion XlsIO and save the file so Microsoft Excel offers the "Read-only recommended" option when the file is opened.
 
