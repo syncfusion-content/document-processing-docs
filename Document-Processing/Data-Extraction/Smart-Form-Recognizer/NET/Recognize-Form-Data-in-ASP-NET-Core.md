@@ -17,7 +17,7 @@ To include the .NET Core Smart Form Recognizer library into your ASP.NET Core ap
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
-{% include_relative tabcontent-support/ERecognize-Form-Data-in-ASP-NET-Core-Visual-Studio.md %}
+{% include_relative tabcontent-support/Recognize-Form-Data-in-ASP-NET-Core-Visual-Studio.md %}
 {% endtabcontent %}
  
 {% tabcontent Visual Studio Code %}
