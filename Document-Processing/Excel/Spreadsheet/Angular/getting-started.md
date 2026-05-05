@@ -1,37 +1,19 @@
 ---
 layout: post
 title: Getting started with Angular Spreadsheet component | Syncfusion
-description: Checkout and learn here all about getting started with Syncfusion Essential Angular Spreadsheet component, it's elements, and more details.
+description:  Checkout and learn about Getting started with Angular Spreadsheet component of Syncfusion Essential JS 2 and more details.
+control: Getting started
 platform: document-processing
-control: Getting started 
 documentation: ug
 ---
 
-# Getting started with Angular Spreadsheet component
+# Getting Started with React Spreadsheet component
 
-This section explains the steps to create a simple Spreadsheet component with basic features in an Angular environment.
-
-To get start quickly with Angular Spreadsheet using CLI, you can check on this video:
-
-{% youtube "https://www.youtube.com/watch?v=2Ozwe37X-7Q" %}
+This section explains how to create a simple Angular application and add the [Syncfusion® Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component with the minimum required setup.
 
 ## Prerequisites
 
 Ensure your development environment meets the [`System Requirements for Syncfusion® Angular Spreadsheet component`](https://help.syncfusion.com/document-processing/system-requirements).
-
-## Dependencies
-
-The following list of dependencies are required to use the Spreadsheet component in your application.
-
-```js
-  |-- @syncfusion/ej2-angular-spreadsheet
-      |-- @syncfusion/ej2-angular-base
-      |-- @syncfusion/ej2-spreadsheet
-          |-- @syncfusion/ej2-base
-          |-- @syncfusion/ej2-dropdowns
-          |-- @syncfusion/ej2-navigations
-          |-- @syncfusion/ej2-grids
-```
 
 ## Setup Angular Environment
 
@@ -119,10 +101,9 @@ The above command does the following configuration to your Angular app,
 
 >Note: If the ngcc tag is not specified while installing the package, the Ivy Library Package will be installed and this package will throw a warning.
 
-## Adding CSS reference
+## Add CSS references
 
-The following CSS files are available in `../node_modules/@syncfusion` package folder.
-This can be referenced in `[src/styles.css]` using following code.
+Add the following style references to the `src/App.css` file.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -133,8 +114,8 @@ This can be referenced in `[src/styles.css]` using following code.
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/material.css';
 ```
 
 ## Add Spreadsheet component
@@ -180,6 +161,12 @@ The following example shows a basic Spreadsheet component
 {% previewsample "/document-processing/samples/spreadsheet/angular/spreadsheet-cs1" %}
 
 > You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/bootstrap5/spreadsheet/default) that shows you how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
+
+## Video tutorial
+
+To get started quickly with Angular Spreadsheet, you can watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=3Cx9AnKAHdY" %}
 
 ## See Also
 
