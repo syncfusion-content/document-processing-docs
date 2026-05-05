@@ -1,5 +1,5 @@
 ---
-title: How to check if a formula in a cell contains an error value? | Syncfusion
+title: How to Check Formula Error Values in a Cell | Syncfusion
 description: Explains how to detect whether a formula returns an error using HasFormulaErrorValue and read the FormulaErrorValue via IRange in XlsIO.
 platform: document-processing
 control: XlsIO
