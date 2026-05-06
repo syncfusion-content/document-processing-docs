@@ -156,15 +156,9 @@ To switch between chart types after creation:
 3. **Click Chart Type** option
 4. **Select a new type** (Column, Bar, Line, Area, Pie, etc.)
 
-### Chart Customization
+### Customization of line chart markers
 
-Chart feature allows you to view and insert a chart in a spreadsheet, and you can change the height and width of the chart by resizing and moving it to another position.
-
-* You can change the height and width of the chart by resizing.
-
-* You can change the position of the chart by drag and drop.
-
----
+Using the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker while creating the line chart with UI interaction.
 
 ## How To: Remove Charts
 
