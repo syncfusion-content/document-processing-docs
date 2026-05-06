@@ -54,7 +54,7 @@ The rasterization process works as follows:
 
 Rendering is **DPI-aware**, ensuring sharp output across standard and high‑resolution displays. Page images may be cached and reused during scrolling or zooming to improve performance.
 
-N> PDFium is used only for **page-to-image rendering**. It is not responsible for text extraction, annotations, form logic, or UI behavior.
+N> PDFium is used only for **Text-extraction and page-to-image rendering**. It is not responsible for annotations, form logic, or UI behavior.
 
 
 ## 4. Rendering and Interaction Layers
@@ -65,7 +65,7 @@ Once a page image is generated, the viewer composes the final output using multi
   The page image produced by PDFium after rasterization. This serves as the visual base of the page.
 
 - **Text Layer**  
-  Generated using data from the **Syncfusion PDF Library** and viewer logic. This invisible layer enables text selection, search, and copy‑paste while aligning precisely with the page image.
+  Text details are retrieved from **PDFium** and processed by the viewer logic. This invisible layer enables text selection, search, and copy‑paste while aligning precisely with the page image.
 
 - **Annotation and Form Layer**  
   Managed entirely by the **PDF Library and viewer**. This layer supports annotations, highlights, comments, and interactive form fields.
@@ -79,9 +79,8 @@ This layered approach allows interactive elements to update independently withou
 
 PDF rendering and processing involve CPU-intensive operations. To maintain UI responsiveness:
 
-- **PDFium rasterization** is typically executed in **Web Workers**.
-- **PDF Library processing** (text, annotations, form data) is coordinated by viewer logic.
-- The main thread is responsible for DOM updates and handling user interactions.
+- **PDFium** is used for page rasterization and text extraction, typically executed in **Web Workers**.
+- **Syncfusion PDF Library** processes annotations, form data, and other document‑level operations, coordinated by viewer logic.
 
 
 ## 6. Lazy Rendering and Performance Optimization
