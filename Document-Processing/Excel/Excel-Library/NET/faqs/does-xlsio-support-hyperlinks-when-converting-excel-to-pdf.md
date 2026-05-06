@@ -1,5 +1,5 @@
 ---
-title: Does XlsIO support hyperlinks when converting Excel to PDF? | Syncfusion
+title: Does XlsIO support hyperlinks converting Excel to PDF? | Syncfusion
 description: This FAQ explains why hyperlinks in Excel become inactive when converted to PDF using XlsIO, as workbook-level hyperlinks cannot be exported during conversion.
 platform: document-processing
 control: XlsIO
