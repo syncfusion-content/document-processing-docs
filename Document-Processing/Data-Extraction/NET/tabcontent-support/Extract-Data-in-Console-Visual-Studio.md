@@ -4,13 +4,13 @@
 * Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 
 Step 1: Create a new C# Console Application project.
-![Console sample creation](Console_images/ConsoleCreation.png)
+![Console sample creation](images/ConsoleCreation.png)
 
 Step 2: Name the project.
-![Name the application](Console_images/ConsoleName.png)
+![Name the application](images/ConsoleName.png)
 
 Step 3: Install the [Syncfusion.SmartDataExtractor.Net.Core](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
-![NET Core NuGet package](Console_images/ConsoleCoreNuget.png)
+![NET Core NuGet package](images/ConsoleCoreNuget.png)
 
 Step 4: Include the following namespaces in the *Program.cs* file.
 
