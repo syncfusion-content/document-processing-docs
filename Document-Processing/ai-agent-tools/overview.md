@@ -18,7 +18,7 @@ It exposes a rich set of well-defined tools and functions that an [AI agent](htt
 
 ### PDF
 
-The PDF tools cover the full document life cycle - from creating and loading PDFs to securing, extracting content, and converting formats. Whether you need to merge invoices, redact sensitive data, add digital signatures, or run OCR on scanned pages, these tools handle it autonomously.
+The PDF tools cover the full document lifecycle - from creating and loading PDFs to securing, extracting content, and converting formats. Whether you need to merge invoices, redact sensitive data, add digital signatures, or run OCR on scanned pages, these tools handle it autonomously.
 
 - **Digital Signing** - Digitally sign PDF documents using a PFX certificate with configurable signature bounds and an optional visible appearance image.
 - **Redaction** - Permanently redact rectangular regions from PDF pages to remove sensitive content, with configurable fill color.
@@ -96,7 +96,7 @@ The data extraction tools used to pull structured information from PDFs and imag
 
 | Format | Supported File Types |
 |---|---|
-| **Word** | `.docx`, `.doc`, `.rtf`, `.html`, `.txt` |
+| **Word** | `.docx`, `.doc`, `.rtf`, `.html`, `.txt`, `.md` |
 | **Excel** | `.xlsx`, `.xls`, `.xlsm`, `.csv` |
 | **PDF** | `.pdf` |
 | **PowerPoint** | `.pptx` |
