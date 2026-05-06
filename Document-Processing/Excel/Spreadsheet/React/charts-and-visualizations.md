@@ -158,7 +158,24 @@ To switch between chart types after creation:
 
 ### Customization of line chart markers
 
-Using the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker while creating the line chart with UI interaction.
+Using the [`actionBegin`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/chart-cs3/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/chart-cs3/app/app.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/spreadsheet/react/chart-cs3/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/spreadsheet/react/chart-cs3/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/chart-cs3" %}
 
 ## How To: Remove Charts
 
