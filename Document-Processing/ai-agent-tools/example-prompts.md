@@ -23,7 +23,7 @@ Load the insurance policy document ‘policy_document.pdf’ from {InputDir}. Th
 Load the court filing document ‘case_filing.pdf’ from {InputDir} and Find the Text ‘John Michael’ and ‘Ellwood Drive, Austin, TX 78701’ and ‘472-90-1835’.  Permanently redact all identifiable information. Use black highlight color for all redactions. Export the redacted document as ‘case_filing_redacted.pdf’ to {OutputDir}.
 {% endpromptcard %}
 {% promptcard SignPdf %}
-Load the vendor contract 'vendor_agreement_draft.pdf' from {InputDir} and apply a digital signature using the company certificate 'certificate.pfx' (located at {InputDir}) with the password 'password123'. Place the signature in the bottom-right corner of the last page and use the company logo 'signature_logo.png' from {InputDir} as the signature appearance image. Export the signed contract as 'vendor_agreement_signed.pdf' to {OutputDir}.
+Load the vendor contract ‘vendor_agreement_draft.pdf’ from {InputDir} and apply a digital signature using the company certificate ‘certificate.pfx’ (located at {InputDir}) with the password ‘password123’. Place the signature in the bottom-right corner of the last page and use the company logo ‘signature_logo.png’ from {InputDir} as the signature appearance image. Export the signed contract as ‘vendor_agreement_signed.pdf’ to {OutputDir}.
 {% endpromptcard %}
 {% promptcard MergePdfs, ReorderPdfPages %}
 Merge the following monthly financial reports into a single consolidated annual report: ‘Jan_report.pdf’, ‘Feb_report.pdf’, ‘Mar_report.pdf’, ‘Apr_report.pdf’, ‘May_report.pdf’, ‘Jun_report.pdf’ - all located at {InputDir}. Each PDF has 3 pages, with the last page being the executive summary. After merging, reorder pages so each month’s summary page appears first, followed by the other two pages, while keeping January–June chronological order. Save the final file as annual_report_2025.pdf in {OutputDir}.
@@ -123,7 +123,8 @@ Extract only the table data from the quarterly financial report 'financial_repor
 
 ## See also
 
-* [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
-* [Getting Started](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started)
-* [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
-* [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
+* [Tools](./tools)
+* [Getting Started](./getting-started)
+* [Customization](./customization)
+* [Overview](./overview)
+* [Example Use Cases](./example-use-cases)
