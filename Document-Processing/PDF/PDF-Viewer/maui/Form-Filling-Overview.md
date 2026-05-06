@@ -42,21 +42,21 @@ private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEvent
 {% endhighlight %}
 {% endtabs %}
 
-Refer to [Handling document load failures](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications#handling-document-load-failures) for more details.
+Refer to [Handling document load failures](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/documentloadnotifications#handling-document-load-failures) for more details.
 
 ## In this section
 
 | Topic | Description |
 |---|---|
-| [Form Fields Collection](../form-filling-collection) | Access the FormFields collection, restrict editing, clear form data, and attach custom data to fields. |
-| [Edit Form Fields](../form-filling-edit) | Programmatically set values for text, checkbox, combo box, list box, radio button, and signature fields. |
-| [Show and Hide Form Fields](../form-filling-show-hide) | Control form field visibility using the `IsHidden` property. |
-| [Customize Form Fields](../form-filling-customization) | Modify background color, text color, border color, and border width of form field widgets. |
-| [Form Field Events](../form-filling-events) | Track value changes and focus changes on form fields using events. |
-| [Import and Export Form Data](../form-filling-import-export) | Import and export form data in XFDF, FDF, JSON, and XML formats. |
-| [Form Data Validation](../form-filling-validation) | Validate form field values before saving the document. |
+| [Form Fields Collection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-collection) | Access the FormFields collection, restrict editing, clear form data, and attach custom data to fields. |
+| [Edit Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-edit) | Programmatically set values for text, checkbox, combo box, list box, radio button, and signature fields. |
+| [Show and Hide Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-show-hide) | Control form field visibility using the `IsHidden` property. |
+| [Customize Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-customization) | Modify background color, text color, border color, and border width of form field widgets. |
+| [Form Field Events](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-events) | Track value changes and focus changes on form fields using events. |
+| [Import and Export Form Data](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-import-export) | Import and export form data in XFDF, FDF, JSON, and XML formats. |
+| [Form Data Validation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-validation) | Validate form field values before saving the document. |
 
 ## See Also
-- [Save a Document](../save-a-document)
-- [Electronic Signature](../signature)
-- [Document Load Notifications](../documentloadnotifications)
+- [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document)
+- [Electronic Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/signature)
+- [Document Load Notifications](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/documentloadnotifications)

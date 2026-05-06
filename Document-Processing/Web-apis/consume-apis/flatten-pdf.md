@@ -1,15 +1,15 @@
 ---
-title: Flatten PDF Using Syncfusion Web API
+title: Flatten PDFs Using Syncfusion Web API
 description: Flatten annotations, form fields, and signatures to secure PDF content from editing using Syncfusion high‑security flattening Web API.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Flattening PDFs Using Syncfusion API
+# Flattening PDFs Using Syncfusion Web API 
 
-This feature enables you to flatten annotations and form fields in a PDF document. To use this functionality, you need to provide a PDF document as input to the Flatten PDF API.
+The Syncfusion Flatten PDF Web API enables you to permanently embed annotations and form field data into the PDF content. All interactive elements—such as form fields, comments, and highlights—are converted into static, non‑editable content while preserving the document’s appearance. This ensures consistent viewing across devices and makes the PDF suitable for final distribution, archiving, and compliance with workflows.
 
-## Flatten PDF Document
+## Flatten PDF Documents
 
 To flatten a PDF document, send a request to the /v1/edit-pdf/flatten endpoint with the input PDF and its options as shown below.
 
@@ -84,6 +84,22 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## Flatten PDFs settings
+
+**Password** 
+
+Specifies the password required to open and process a protected PDF file. 
+
+**FlattenFormFields** 
+
+Converts interactive form fields into static content, making them non‑editable in the output PDF. 
+
+**FlattenAnnotations** 
+
+Converts annotations (such as comments, highlights, and stamps) into permanent, non‑editable content in the PDF. 
+
+## Flatten PDF Job Response
+
 Once the request is sent, it will create a flatten job to flatten the PDF and return the job details as follows:
 
 ```
@@ -94,7 +110,7 @@ Once the request is sent, it will create a flatten job to flatten the PDF and re
 }
 ```
 
-## Poll the status of the Flatten Pages Job
+## Check Flatten PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
@@ -102,7 +118,7 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
+curl --location 'http://localhost:8003/v1/edit-pdf/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
   --output Output.pdf
 --header 'Authorization: Bearer {{Placeholder for token}}'
 
@@ -125,7 +141,7 @@ fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df");
 request.Headers.Add("Authorization", "Bearer {{Placeholder for token}}");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();

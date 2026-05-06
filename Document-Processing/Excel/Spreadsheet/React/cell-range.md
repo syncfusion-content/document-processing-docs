@@ -11,7 +11,7 @@ documentation: ug
 
 A group of cells in a sheet is known as cell range.
 
-To get start quickly with Cell Range, you can check on this video:
+To get started quickly with Cell Range, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=izgXkfzUMBQ" %}
 
@@ -44,12 +44,12 @@ The following code example shows the wrap text functionality in spreadsheet.
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/wrap-cs1" %}
 
-### Limitations of Wrap text
+### Limitations
 
-The following features have some limitations in wrap text:
+The following features have some limitations when using wrap text:
 
-* Sorting with wrap text applied data.
-* Merge with wrap text
+- Sorting with wrap text applied data.
+- Merge with wrap text
 
 ## Merge cells
 
@@ -89,12 +89,13 @@ The following code example shows the merge cells operation in spreadsheet.
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/merge-cs1" %}
 
-### Limitations of Merge
+### Limitations
 
-The following features have some limitations in Merge:
+The following features have some limitations when using merged cells:
 
-* Merge with filter.
-* Merge with wrap text.
+- Merge with filter.
+- Merge with wrap text.
+- Merge with border style.
 
 ## Auto Fill
 
@@ -176,12 +177,10 @@ In the following sample, you can enable/disable the fill option on the button cl
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/autofill-cs1" %}
 
-### Limitations of Autofill
+### Limitations
 
-The following features have some limitations in Autofill:
-
-* Flash Fill option in Autofill feature.
-* Fill with Conditional Formatting applied cells.
+- The Flash Fill feature is not supported in the Auto Fill workflow.
+- There is limitation for autofill with conditional formatting applied cells.
 
 ## Clear
 

@@ -10,41 +10,32 @@ domainurl: ##DomainURL##
 
 # PDF Viewer Form Field Events in Angular
 
-The Syncfusion **Angular PDF Viewer** provides a comprehensive set of **form field events** that allow developers to track user interactions, respond to form changes, and implement custom business logic. These events can be used for scenarios such as [validation](./form-validation), **UI updates**, **logging**, and **workflow automation**. 
+The Syncfusion Angular PDF Viewer provides a set of form field events that report changes associated with creating, selecting, modifying, moving, resizing, or removing form fields. These events supply metadata related to the affected field and are raised during user interaction or programmatic updates.
 
-Form field events are triggered during actions such as adding, selecting, modifying, moving, resizing, and removing form fields.
+Validation‑related events are emitted when the viewer performs operations that require confirmation of field completion, such as print or download actions.
 
 ## Supported PDF Form Field Events
 
 The following table lists all supported form field events and their descriptions:
 
-| Form Field events | Description |
-|---|---|
-| [formFieldAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldAddArgs) | Triggered when a new form field is added, either through the Form Designer UI or programmatically. |
-| [formFieldClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldClickArgs) | Fired when a form field is clicked in the viewer. |
-| [formFieldDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldDoubleClickArgs) | Fired when a form field is double clicked. |
-| [formFieldFocusOut](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldFocusOutEventArgs) | Triggered when a form field loses focus after editing. |
-| [formFieldMouseLeave](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldMouseLeaveArgs) | Fired when the mouse pointer leaves a form field. |
-| [formFieldMouseOver](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldMouseoverArgs) | Fired when the mouse pointer moves over a form field. |
-| [formFieldMove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldMoveArgs) | Triggered when a form field is moved to a new position. |
-| [formFieldPropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldPropertiesChangeArgs) | Fired when any form field property changes, such as font, color, or constraint values. |
-| [formFieldRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldRemoveArgs) | Triggered when a form field is deleted from the document. |
-| [formFieldResize](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldResizeArgs) | Fired when a form field is resized. |
-| [formFieldSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldSelectArgs) | Fired when a form field is selected in the Form Designer. |
-| [formFieldUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldUnselectArgs) | Fired when a previously selected form field is unselected. |
-| [validateFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/validateFormFieldsArgs) | Fired when form field validation fails during print or download actions. |
+| Form Field events | Description | Arguments |
+|---|---|---|
+| [`formFieldAdd`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfieldadd) | Triggered when a new form field is added, either through the Form Designer UI or programmatically. | [`formFieldAddArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldAddArgs) |
+| [`formFieldClick`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfieldclick) | Fired when a form field is clicked in the viewer. | [`formFieldClickArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldClickArgs) |
+| [`formFieldDoubleClick`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfielddoubleclick) | Fired when a form field is double clicked. | [`formFieldDoubleClickArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldDoubleClickArgs) |
+| [`formFieldFocusOut`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfieldfocusout) | Triggered when a form field loses focus after editing. | [`formFieldFocusOutEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldFocusOutEventArgs) |
+| [`formFieldMouseLeave`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfieldmouseleave) | Fired when the mouse pointer leaves a form field. | [`formFieldMouseLeaveArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldMouseLeaveArgs) |
+| [`formFieldMouseOver`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfieldmouseover) | Fired when the mouse pointer moves over a form field. | [`formFieldMouseOverArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldMouseoverArgs) |
+| [`formFieldMove`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfieldmove) | Triggered when a form field is moved to a new position. | [`formFieldMoveArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfieldmove) |
+| [`formFieldPropertiesChange`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfieldpropertieschange) | Fired when any form field property changes, such as font, color, or constraint values. | [`formFieldPropertiesChangeArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldPropertiesChangeArgs) |
+| [`formFieldRemove`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfieldremove) | Triggered when a form field is deleted from the document. | [`formFieldRemoveArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldRemoveArgs) |
+| [`formFieldResize`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfieldresize) | Fired when a form field is resized. | [`formFieldResizeArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldResizeArgs) |
+| [`formFieldSelect`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfieldselect) | Fired when a form field is selected in the Form Designer. | [`formFieldSelectArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldSelectArgs) |
+| [`formFieldUnselect`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#formfieldunselect) | Fired when a previously selected form field is unselected. | [`formFieldUnselectArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formFieldUnselectArgs) |
+| [`validateFormFields`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#validateformfields) | Fired when form field validation fails during print or download actions. | [`validateFormFieldsArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/validateFormFieldsArgs) |
 
-**Common Use Cases**
 
-Form field events can be used to:
-- Validate form data before printing or downloading
-- Track user interaction with form fields
-- Update UI elements dynamically
-- Log form changes for auditing
-- Trigger workflow actions based on field changes
-- Enforce business rules during form editing
-
-## Handle PDF Form Field Events
+## Example
 
 Form field events can be wired on the PDF Viewer instance to execute custom logic when specific actions occur.
 

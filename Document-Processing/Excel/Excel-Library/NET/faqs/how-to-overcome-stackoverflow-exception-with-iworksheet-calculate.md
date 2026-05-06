@@ -8,7 +8,7 @@ documentation: UG
 
 # How to overcome StackOverflow exception with IWorksheet's Calculate()?
 
-StackOverflow exception occurs when the number of **IterationMaxCount**, **MaximumRecursiveCalls** and **MaxStackDepth** exceeds in the [CalcEngine](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_CalcEngine). To avoid this StackOverflow exception while computing the formulas iteratively exceeding the maximum capacity, you need to set the values for these properties before calling the [Calculate](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Calculate) method of [IWorksheet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html) interface.
+StackOverflow exception occurs when the number of **IterationMaxCount**, **MaximumRecursiveCalls** and **MaxStackDepth** exceeds in the [CalcEngine](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_CalcEngine). To avoid this StackOverflow exception while computing the formulas iteratively exceeding the maximum capacity, you need to set the values for these properties before calling the [Calculate](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Calculate) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface.
 
 The following code snippet explains this.
 
@@ -40,8 +40,8 @@ CalcEngine.MaxStackDepth = 10000
 
 ## See Also
 
-* [How to overcome UnauthorizedAccessException?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-overcome-unauthorizedaccessexception)
-* [How to avoid exception when adding worksheets with same name?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-avoid-exception-when-adding-worksheets-with-same-name)
-* [What are the known exceptions of XlsIO?](https://help.syncfusion.com/file-formats/xlsio/known-exceptions)
-* [What is Calculation Engine?](https://help.syncfusion.com/file-formats/xlsio/working-with-formulas#calculation-engine)
-* [What are Calculate Options?](https://help.syncfusion.com/file-formats/xlsio/working-with-formulas#calculate-options)
+* [How to overcome UnauthorizedAccessException?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-overcome-unauthorizedaccessexception)
+* [How to avoid exception when adding worksheets with same name?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-avoid-exception-when-adding-worksheets-with-same-name)
+* [What are the known exceptions of XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/known-exceptions)
+* [What is Calculation Engine?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#calculation-engine)
+* [What are Calculate Options?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas#calculate-options)

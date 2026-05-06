@@ -18,7 +18,7 @@ The following system configurations were used for benchmarking:
 * **Processor:** AMD Ryzen 5 7520U with Radeon Graphics  
 * **RAM:** 16GB  
 * **.NET Version:** .NET 8.0  
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v32.2.3](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/32.2.3)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v33.1.44](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/33.1.44)
 
 ## Benchmark Results
 
@@ -34,7 +34,7 @@ The table below shows the performance results of various Word document operation
 <tr>
     <td>{{'[Word to Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image)'| markdownify }}</td>
     <td>100 pages</td>
-    <td>7.77</td>
+    <td>7.35</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Word-to-Image/)'| markdownify }}</td>    
 </tr>
 <tr>
@@ -46,7 +46,7 @@ The table below shows the performance results of various Word document operation
 <tr>
     <td>{{'[Font-Substitution](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/font-substituion-word-to-image)'| markdownify }}</td>
     <td>2 pages</td>
-    <td>0.79</td>
+    <td>0.86</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Font-Substitution-Image/)'| markdownify }}</td>
 </tr>
 <tr>

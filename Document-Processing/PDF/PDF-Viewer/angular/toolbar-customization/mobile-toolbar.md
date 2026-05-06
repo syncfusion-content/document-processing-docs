@@ -7,213 +7,98 @@ control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Mobile Toolbar Interface in Angular PDF Viewer control
+# Customize mobile toolbar in Angular PDF Viewer
 
-The Mobile PDF Viewer provides features for viewing, searching, annotating, and managing PDF documents on mobile devices. It exposes core tools such as search, download, bookmarking, annotation, and page organization. The desktop toolbar can also be enabled in mobile mode to expose additional actions when required.
+## Overview
 
-## Mobile Mode Toolbar Configuration
+This how-to explains how to enable the desktop toolbar on mobile devices running the Syncfusion Angular PDF Viewer, and how to preserve touch scrolling when the desktop toolbar is used.
 
-In mobile mode, the toolbar is optimized for small screens and presents the most common actions for interacting with a PDF document. The following key features are available in mobile mode:
+## Prerequisites
 
-![Mobile toolbar with primary PDF interaction options](../images/mobileToolbar.png)
+- EJ2 Angular PDF Viewer installed and added in your Angular project.
+- For standalone mode: a valid [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#resourceurl) hosting the PDF Viewer assets.
+- For server-backed mode: a working [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#serviceurl) endpoint.
 
-### Main Toolbar Options:
+## Steps
 
-**OpenOption:** Tap to load a PDF document.
+**Step 1:** Enable desktop toolbar on mobile: set [`enableDesktopMode`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enabledesktopmode) to `true` on PDF Viewer.
 
-**SearchOption:** Access the search bar to find text within the document.
+**Step 2:** (Optional, recommended) Disable text-selection to preserve smooth touch scrolling: set [`enableTextSelection`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enabletextselection) to `false`.
 
-![Search bar displayed for finding text within a PDF](../images/searchOption.png)
+**Step 3:** Inject the [`ToolbarService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar) and other services required by your toolbar features via providers array.
 
-**UndoRedoTool:** Quickly undo or redo any annotations made.
-
-**OrganizePagesTool:** Enable or disable page organization features to modify document pages.
-
-![Page organization interface for modifying PDF pages](../images/organizePages.png)
-
-**AnnotationEditTool:** Activate or deactivate annotation editing to add or modify annotations.
-
-![Annotation editing toolbar allowing users to add, edit, or delete annotations on a PDF](../images/editAnnotation.png)
-
-N> In mobile mode, the annotation toolbar is displayed at the bottom of the viewer.
-
-### More Options Menu:
-When you open the "more options" menu, you will see additional actions such as:
-
-**DownloadOption:** Tap to download the currently opened PDF document.
-
-**BookmarkOption:** Allows you to view bookmarks within the document.
-
-![More options menu showing additional actions like download and bookmark](../images/more-options.png)
-
-## Enabling Desktop Mode in Mobile
-
-The desktop toolbar can be enabled on mobile devices by setting the `enableDesktopMode` option. Enabling this option exposes desktop-style toolbar actions in the mobile PDF Viewer.
-
-### Steps to Enable Desktop Mode:
-
-**Step 1:** Set `enableDesktopMode` to true in the component configuration.
-
-**Step 2:** The viewer will use the desktop toolbar layout, granting access to additional actions and controls.
+**Example:**
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
-
-import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService,
-         MagnificationService, ThumbnailViewService, ToolbarService,
-         NavigationService, TextSearchService, TextSelectionService,
-         PrintService, FormDesignerService, FormFieldsService,
-         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
+import { Component } from '@angular/core';
+import { PdfViewerModule, ToolbarService, MagnificationService, NavigationService, AnnotationService, LinkAnnotationService,
+  ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, FormFieldsService, FormDesignerService,
+  PrintService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-
-  <ejs-pdfviewer
-    id="pdfViewer"
-    [documentPath]="document"
-    [resourceUrl]="resource"
-    [enableDesktopMode]="true"
-    style="height:640px;display:block">
-  </ejs-pdfviewer>
-</div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
-})
-export class AppComponent implements OnInit {
-    public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-
-    ngOnInit(): void {
-    }
-}
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService,
-         MagnificationService, ThumbnailViewService, ToolbarService,
-         NavigationService, TextSearchService, TextSelectionService,
-         PrintService, FormDesignerService, FormFieldsService,
-         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-root',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-
-  <ejs-pdfviewer
-    id="pdfViewer"
-    [documentPath]="document"
-    [serviceUrl]="service"
-    [enableDesktopMode]="true"
-    style="height:640px;display:block">
-  </ejs-pdfviewer>
-</div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
-})
-export class AppComponent implements OnInit {
-    public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-    ngOnInit(): void {
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-## Enable Scrolling in Desktop Mode with Touch Gestures
-
-To ensure smooth touch scrolling of documents on mobile devices when the desktop toolbar is enabled, set the `enableTextSelection` option to **false**. This disables text-selection interactions that can interfere with touch-based scrolling.
-
-{% tabs %}
-{% highlight ts tabtitle="Standalone" %}
-
-import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService,
-         MagnificationService, ThumbnailViewService, ToolbarService,
-         NavigationService, TextSearchService, TextSelectionService,
-         PrintService, FormDesignerService, FormFieldsService,
-         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-root',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-
-  <ejs-pdfviewer
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [
+    ToolbarService, MagnificationService, NavigationService, AnnotationService, LinkAnnotationService,
+    ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, FormFieldsService, FormDesignerService,
+    PrintService, PageOrganizerService
+  ],
+  template: `<ejs-pdfviewer
     id="pdfViewer"
     [documentPath]="document"
     [resourceUrl]="resource"
     [enableDesktopMode]="true"
     [enableTextSelection]="false"
-    style="height:640px;display:block">
-  </ejs-pdfviewer>
-</div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
+    style="height:640px;width:100%;display:block">
+  </ejs-pdfviewer>`
 })
-export class AppComponent implements OnInit {
-    public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-
-    ngOnInit(): void {
-    }
+export class AppComponent {
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 }
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService,
-         MagnificationService, ThumbnailViewService, ToolbarService,
-         NavigationService, TextSearchService, TextSelectionService,
-         PrintService, FormDesignerService, FormFieldsService,
-         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
+import { Component } from '@angular/core';
+import { PdfViewerModule, ToolbarService, MagnificationService, NavigationService, AnnotationService, LinkAnnotationService,
+  ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, FormFieldsService, FormDesignerService,
+  PrintService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-
-  <ejs-pdfviewer
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [
+    ToolbarService, MagnificationService, NavigationService, AnnotationService, LinkAnnotationService,
+    ThumbnailViewService, BookmarkViewService, TextSelectionService, TextSearchService, FormFieldsService, FormDesignerService,
+    PrintService, PageOrganizerService
+  ],
+  template: `<ejs-pdfviewer
     id="pdfViewer"
     [documentPath]="document"
     [serviceUrl]="service"
     [enableDesktopMode]="true"
     [enableTextSelection]="false"
-    style="height:640px;display:block">
-  </ejs-pdfviewer>
-</div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
+    style="height:640px;width:100%;display:block">
+  </ejs-pdfviewer>`
 })
-export class AppComponent implements OnInit {
-    public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-    ngOnInit(): void {
-    }
+export class AppComponent {
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 }
 {% endhighlight %}
 {% endtabs %}
 
-## Print Option Not Available
+## Troubleshooting
 
-The Print option is not available in mobile mode by default. Enabling the desktop toolbar on mobile via `enableDesktopMode` makes the Print option available.
+- Print option not visible on mobile: set [`enableDesktopMode`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enabledesktopmode) to `true`; otherwise the mobile toolbar omits Print.
+- Touch scrolling is jerky after enabling desktop toolbar: set [`enableTextSelection`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enabletextselection) to `false` to avoid text-selection capturing touch events.
+- Missing assets or broken UI: confirm [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#resourceurl) points to the correct version of the `ej2-pdfviewer-lib` and is reachable from the device.
+- Server errors in server-backed mode: verify [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#serviceurl) CORS configuration and that the back end is running.
 
-### How to use Print on mobile:
+## Related topics
 
-- Set `enableDesktopMode` to true to load the desktop toolbar on mobile.
-- After enabling desktop mode, the Print option appears in the toolbar and can be used to print the document from the mobile device.
-
-N> Print functionality remains unavailable in the default mobile toolbar unless desktop mode is enabled.
+- [Customize form designer toolbar](./form-designer-toolbar)
+- [Customize annotation toolbar](./annotation-toolbar)
+- [Create a custom toolbar](./custom-toolbar)

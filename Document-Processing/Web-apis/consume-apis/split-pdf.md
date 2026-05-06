@@ -5,11 +5,11 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Splitting PDFs Using Syncfusion API
+# Splitting PDFs Using Syncfusion WEB API
 
-You can effortlessly split PDF documents into multiple PDF files. To perform this operation, you need to supply a PDF document as input to the Split PDF API.
+The Syncfusion Split PDF Web API makes it easy to split a PDF into multiple smaller files. You can extract single pages or specific page ranges while preserving the document’s original layout and quality. This feature is ideal for separating important sections, sharing only the needed pages, or organizing large PDFs into more manageable files. It helps simplify document handling and improves distribution efficiency.
 
-## Merge PDF Document
+## Split PDF Document
 
 To split a PDF file, send a request to the /v1/edit-pdf/split endpoint with a PDF document and split options as shown below.
 
@@ -84,6 +84,54 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## Split PDFs settings
+
+**File** 
+
+Specifies the input PDF file that will be split into multiple documents. 
+
+**Password** 
+
+Specifies the password required to open and process a protected PDF file. 
+
+**SplitOption** 
+
+Defines the method and rules used to split the input PDF file. 
+
+**FileCount** 
+
+Specifies the number of output PDF files to create by evenly splitting the input document. 
+
+**PageCount** 
+
+Specifies the number of pages per output PDF file during the split process. 
+
+**PageRanges** 
+
+Specifies custom page ranges to split the input PDF into multiple documents. 
+
+**ExtractRanges** 
+
+Specifies specific pages or page groups to extract from the input PDF. 
+
+**Start** 
+
+Specifies the starting page number of the range to be split. 
+
+**End** 
+
+Specifies the ending page number of the range to be split. 
+
+**ExtractPages** 
+
+Specifies the pages to extract using page numbers or ranges (for example, 1,3,5‑7). 
+
+**DownloadAsSinglePdf**  
+
+Indicates whether the extracted pages should be combined into a single PDF file or saved as separate files. 
+
+## Split PDF Job Response 
+
 Once the request is sent, it will create a job to split the PDF document and return the job details as follows:
 
 ```
@@ -94,7 +142,7 @@ Once the request is sent, it will create a job to split the PDF document and ret
 }
 ```
 
-## Poll the status of the Split Job
+## Check Split PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
@@ -102,7 +150,7 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
+curl --location 'http://localhost:8003/v1/edit-pdf/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
   --output Output.pdf
   
 {% endhighlight %}
@@ -124,7 +172,7 @@ fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());

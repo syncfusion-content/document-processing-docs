@@ -198,9 +198,7 @@ using (PdfDocument pdfDocument = new PdfDocument())
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](PDF-Examples/Text/Saving-and-Restoring-the-PdfGraphics/.NET/Saving-and-Restoring-the-PdfGraphics/Saving-and-Restoring-the-PdfGraphics/Program.cs). 
-
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Saving-and-Restoring-the-PdfGraphics/.NET/Saving-and-Restoring-the-PdfGraphics). 
 
 ## Drawing text in an existing document
 
@@ -3152,3 +3150,33 @@ Create fonts, brushes, and pens once and reuse them throughout the document to r
 </td>
 </tr>
 </table>
+
+### Why does `PdfTrueTypeFont` fail to load system fonts automatically?
+
+<table>
+<th style="font-size:14px" width="100px">Issue
+</th>
+<th style="font-size:14px">When you create a PdfTrueTypeFont using only a font family name (e.g., "Arial") in .NET Core or cross‑platform apps, the font can fail to load causing missing text, wrong rendering, or "font not found".
+</th>
+
+<tr>
+<th style="font-size:14px" width="100px">Reason
+</th>
+<td><b>In .NET Framework</b>: the PDF library can resolve installed fonts by name <i>(e.g., new Font("Arial", 20) → new PdfTrueTypeFont(font, true) works)</i>.
+<br>
+<b>In .NET Core and cross‑platform environments</b>: system font APIs aren't exposed the same way, so PdfTrueTypeFont cannot locate fonts by name you must provide the actual <i>.ttf</i> file (path or stream) to load the font reliably.
+</td>
+</tr>
+
+<tr>
+<th style="font-size:14px" width="100px">Solution
+</th>
+<td>
+Load the font directly from a <i>.ttf</i> file using a path or stream, then pass it to <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html">PdfTrueTypeFont</a>. This ensures consistent font embedding across all platforms.
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
+
+PdfTrueTypeFont ttf = new PdfTrueTypeFont("Arial.ttf", 20);
+
+{% endhighlight %}
+{% endtabs %}

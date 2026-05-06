@@ -10,7 +10,7 @@ documentation: UG
 
 Here, the values in each of the selected cells are compared, and a data bar is drawn in each cell representing the value of that cell relative to the other cells in the selected range. This bar provides a clear visual cue for users, making it easier to pick out larger and smaller values in a range.
 
-The following code example illustrates how to apply data bars using [IDataBar](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IDataBar.html) interface in XlsIO.
+The following code example illustrates how to apply data bars using [IDataBar](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataBar.html) interface in XlsIO.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Data%20Bars/.NET/Data%20Bars/Data%20Bars/Program.cs,180" %}
