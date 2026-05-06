@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Overview of the JavaScript PDF library control 
 
-The JavaScript PDF Library is a powerful, high-performance, non-UI class library. It provides seamless integration of advanced PDF functionalities into applications developed with TypeScript, JavaScript, Angular, React, Vue, ASP.NET Core, and ASP.NET MVC. With this library, you can easily read, create, and manipulate PDF documents programmatically without the need of Adobe Acrobat.
+The Essential JavaScript PDF library is a powerful, high-performance, non-UI solution for generating PDF documents in both Node.js and browser environments. It enables seamless integration of advanced PDF functionality into applications built with JavaScript, TypeScript, Angular, React, Vue, ASP.NET Core, and ASP.NET MVC, allowing developers to programmatically read, create, and manipulate PDF documents without the need for Adobe Acrobat.
 
 ## Key features
 
