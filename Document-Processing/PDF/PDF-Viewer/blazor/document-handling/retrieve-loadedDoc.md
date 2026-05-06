@@ -167,6 +167,5 @@ This example demonstrates how to use text input with buttons to interact with th
 ```
 
 ## See also
-- Blazor PDF Viewer – [API Reference](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/api-pdfviewer)
-- Events: [`DocumentLoad`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/api-loadingeventargs) – LoadEventArgs documentation
-- [Features and Features Module](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/feature-module) (e.g., Magnification, Navigation, Print) — ensure the features you need are available
+- [Blazor PDF Viewer –API Reference](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.sfpdfviewer.sfpdfviewer2.html)
+- [Blazor FAQ](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/faq) (e.g., Magnification, Navigation, Print) — ensure the features you need are available
