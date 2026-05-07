@@ -1,6 +1,6 @@
 ---
 title: Extract Data in .NET MAUI | Syncfusion
-description: Extract structured data such as tables, forms, text, and images from PDF documents and scanned images in .NET MAUI using the Syncfusion® Smart Data Extractor library.
+description: Extract tables, forms, text, and images from PDF documents and scanned files in .NET MAUI using the Syncfusion® Smart Data Extractor.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG

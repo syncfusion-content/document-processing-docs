@@ -1,6 +1,6 @@
 ---
 title: Extract Data from PDF in Windows Forms | Syncfusion
-description: Extract tables, text, and form fields from PDF documents in Windows Forms using the Syncfusion Smart Data Extractor library without Microsoft Office or Adobe dependencies.
+description: Extract tables, text, and form fields from PDF documents in Windows Forms using the Syncfusion Smart Data Extractor library.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
