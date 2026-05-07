@@ -36,9 +36,9 @@ git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quic
 ```bash
 cd ej2-quickstart
 ```
-**Step 3:** By default, the `ej2‑quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This installs all Syncfusion Essential JS 2 packages, including the Spreadsheet and all other EJ2 components.
-
-To install only the Spreadsheet package, replace the dependency with the [@syncfusion/ej2-spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-spreadsheet) package as shown below:
+**Step 3:** By default, the `ej2‑quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 components packages, including the Spreadsheet and other EJ2 controls.
+ 
+To install only the Spreadsheet component, replace the dependency with [@syncfusion/ej2-spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-spreadsheet), as shown below:
 
 ```bash
 "dependencies": {
