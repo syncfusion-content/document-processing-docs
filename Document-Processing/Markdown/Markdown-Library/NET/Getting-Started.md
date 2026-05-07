@@ -9,7 +9,7 @@ documentation: UG
 
 ## Creating a simple Markdown document from scratch
 
-In this page, you can learn how to create a simple Markdown (.md) document programmatically using the Syncfusion Markdown API.
+In this page, you can learn how to create a simple Markdown document programmatically using the Syncfusion Markdown API.
 
 <table>
 <thead>
