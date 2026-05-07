@@ -63,6 +63,6 @@ private void OnAnnotationsLoaded(object? sender, EventArgs e)
 {% endtabs %}
 
 ## See Also
-- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
-- [Annotations Overview](../annotations-overview)
-- [Select and Deselect Annotations](../select-deselect-annotations)
+- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Select and Deselect Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/select-deselect-annotations)
