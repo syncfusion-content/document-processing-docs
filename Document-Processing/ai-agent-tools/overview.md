@@ -84,13 +84,14 @@ The Office to PDF tool bridges Word, Excel, and PowerPoint with the PDF format. 
 
 - **Office to PDF Conversion** - Convert Word, Excel, or PowerPoint documents to PDF in a single tool call by specifying the source document and its type.
 
-### Smart Data Extraction
+### Data Extraction
 
 The data extraction tools used to pull structured information from PDFs and images. They can identify text, tables, form fields, checkboxes, signatures, and radio buttons, returning results as clean JSON for downstream processing.
 
 - **Structured Data Extraction** - Extract structured data including text, forms, tables, checkboxes, signatures, and radio buttons from PDF or image files and return the result as JSON.
 - **Table Extraction** - Extract only table data from PDF documents as JSON, optimized for table-focused extraction with support for border less tables.
 - **Form Recognition** - Extract only form field data from PDF documents as JSON, optimized for form-focused recognition with support for signatures, textboxes, checkboxes, and radio buttons.
+- **PDF to Markdown Conversion** - Convert PDF documents and scanned images into structured Markdown (MD) by extracting text, tables, headers, and form fields, with configurable detection and layout preservation.
 
 ## Supported Document Formats
 
