@@ -1,0 +1,17 @@
+---
+title: Markdown Document Processing Framework | Syncfusion
+description: Syncfusion<sup>®</sup> Markdown Document Processing Framework is a collection of Markdown document processing library that works without any external dependencies.
+platform: document-processing
+control: general
+documentation: UG
+keywords: markdown, SDK, Automation, API, create, read
+---
+
+# Welcome to Syncfusion<sup>&reg;</sup> Markdown Document Processing Framework
+
+Syncfusion<sup>&reg;</sup> Markdown Document Processing Framework is a collection of Markdown document processing library that works without any external dependencies. It eases the developers, as they can just integrate and achieve the required Markdown document processing functionalities and concentrate on core logics of their application.
+
+## List of Markdown Document Processing Products:
+
+* Markdown Library - is a class library used to create, read, and edit Markdown (.md) documents through code in .NET [Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, .NET MAUI] applications.
+
