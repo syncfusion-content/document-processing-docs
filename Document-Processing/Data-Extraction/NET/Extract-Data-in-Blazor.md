@@ -241,7 +241,7 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the applicati
 
 Upon executing the program, the output will be generated as follows.
 
-![Data Extraction in Blazor Web App Server](GettingStarted_images/Blazor_WebApp_Output.png)
+![Data Extraction in Blazor Web App Server](GettingStarted_images/JSON_Output.png)
 
 {% endtabcontent %}
  
@@ -485,7 +485,7 @@ dotnet run
 
 Upon executing the program, the **JSON document** will be generated as follows.
 
-![Data Extraction in Blazor Web App Server](GettingStarted_images/Blazor_WebApp_Output.png)
+![Data Extraction in Blazor Web App Server](GettingStarted_images/JSON_Output.png)
 
 {% endtabcontent %}
 
