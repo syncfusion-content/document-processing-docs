@@ -9,11 +9,11 @@ documentation: ug
 
 # Syncfusion Document SDK AI Agent Tools Overview
 
-**[Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools)** is a .NET library offering comprehensive AI toolkit that enables AI models and assistants to autonomously create, manipulate, convert, and extract data from Word, Excel, PDF, PowerPoint, Markdown, HTML, and RTF documents using [Syncfusion Document SDK](https://www.syncfusion.com/document-sdk) libraries.
+**[Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core)** is a .NET library offering comprehensive AI toolkit that enables AI models and assistants to autonomously create, manipulate, convert, and extract data from Word, Excel, PDF, PowerPoint, Markdown, HTML, and RTF documents using [Syncfusion Document SDK](https://www.syncfusion.com/document-sdk) libraries.
 
 It exposes a rich set of pre-defined tools and functions that an [AI agent](https://learn.microsoft.com/en-us/agent-framework/get-started/your-first-agent?pivots=programming-language-csharp) can invoke to perform document operations across various file formats - without requiring the host application to implement document-processing logic directly.
 
-You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). If you want to add new functionality or customize any existing functionalities, then you can use our source code available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/Syncfusion.DocumentSDK.AI.AgentTools).
+You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core). If you want to add new functionality or customize any existing functionalities, then you can use our source code available on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main).
 
 
 ## Key Capabilities
