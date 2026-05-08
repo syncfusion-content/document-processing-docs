@@ -26,7 +26,7 @@ Tools are organized into the following categories:
 | **Word** | WordDocumentAgentTools,<br/>WordOperationsAgentTools,<br/>WordSecurityAgentTools,<br/>WordMailMergeAgentTools,<br/>WordFindAndReplaceAgentTools,<br/>WordRevisionAgentTools,<br/>WordImportExportAgentTools,<br/>WordFormFieldAgentTools,<br/>WordBookmarkAgentTools |
 | **Excel** | ExcelWorkbookAgentTools,<br/>ExcelWorksheetAgentTools,<br/>ExcelSecurityAgentTools,<br/>ExcelFormulaAgentTools,<br/>ExcelChartAgentTools,<br/>ExcelConditionalFormattingAgentTools,<br/>ExcelConversionAgentTools,<br/>ExcelDataValidationAgentTools,<br/>ExcelPivotTableAgentTools |
 | **PowerPoint** | PresentationDocumentAgentTools,<br/>PresentationOperationsAgentTools,<br/>PresentationSecurityAgentTools,<br/>PresentationContentAgentTools,<br/>PresentationFindAndReplaceAgentTools |
-| **Conversion** | OfficeToPdfAgentTools | Convert Word, Excel, and PowerPoint documents to PDF. |
+| **Conversion** | OfficeToPdfAgentTools |
 | **Data Extraction** | DataExtractionAgentTools |
 
 
@@ -440,6 +440,7 @@ Provides AI-powered structured data extraction from PDF documents and images, re
 | ExtractTableAsJSON | ExtractTableAsJSON(<br/>string inputFilePath,<br/>bool detect_Border_less_Tables = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>string? outputFilePath = null) | Extracts only table data from a PDF document and returns the result as JSON. Optimized for table-focused extraction. |
 | RecognizeFormAsJson | RecognizeFormAsJson(<br/>string inputFilePath,<br/>bool detectSignatures = true,<br/>bool detectTextboxes = true,<br/>bool detectCheckboxes = true,<br/>bool detectRadioButtons = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>string? outputFilePath = null) | Extracts only form field data from a PDF document and returns as JSON. Optimized for form-focused recognition. |
 | ConvertPDFtoMarkdown | ConvertPDFtoMarkdown(<br/>string inputFilePath,<br/>bool enableFormDetection = true,<br/>bool enableTableDetection = true,<br/>double confidenceThreshold = 0.6,<br/> int startPage = -1,<br/>int endPage = -1,<br/>bool detectSignatures = true,<br/>bool detectTextboxes = true,<br/>bool detectCheckboxes = true,<br/>bool detectRadioButtons = true,<br/>bool detectBorderlessTables = true,<br/>string? outputFilePath = null) | Convert PDF documents and scanned images into structured Markdown (MD) by extracting text, tables, headers, and form fields, with configurable detection and layout preservation. |
+| ConvertPDFTableToMarkdown | ConvertPDFTableToMarkdown(<br/>string inputFilePath,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/> bool detectBorderlessTables = true,<br/>string? outputFilePath = null) | Convert tables from PDF documents and scanned images into clean and well‑structured Markdown (MD) format by analyzing visual table structures, including bordered and border‑less tables, for accurate programmatic table extraction. |
 
 
 
