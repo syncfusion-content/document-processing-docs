@@ -114,11 +114,9 @@ Step 8: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
-You can download a complete working sample from [GitHub]().
-
 By executing the program, you will get the **JSON** as follows.
 
-![Word to PDF in Windows Forms](GettingStarted_images/Winforms_Output.png)
+![Word to PDF in Windows Forms](GettingStarted_images/JSON_Output.png)
 
 {% endtabcontent %}
 

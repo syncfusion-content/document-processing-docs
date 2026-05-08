@@ -36,7 +36,7 @@ Step 3: Install the [Syncfusion.SmartDataExtractor.NET](https://www.nuget.org/pa
 
 ![Install Syncfusion.SmartDataExtractor.NET NuGet package](GettingStarted_images/MAUI_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> If you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Add a new button to the **MainPage.xaml** as shown below.
 
@@ -77,8 +77,10 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-using Syncfusion.Pdf.Parsing;
+
+using System.Text;
 using Syncfusion.SmartDataExtractor;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -89,20 +91,18 @@ Step 5: Add a new action method **OnExtractDataClicked** in MainPage.xaml.cs and
 
 {% highlight c# tabtitle="C#" %}
 
-			// Open Input.pdf from the app package (include it in the project as a MauiAsset)
-			using Stream inputStream = await FileSystem.OpenAppPackageFileAsync(Path.Combine("Data", "Input.pdf"));
-			// Initialize Smart Data Extractor
-			DataExtractor extractor = new DataExtractor();
-			// Extract data and return as a loaded PDF document
-			PdfLoadedDocument document = extractor.ExtractDataAsPdfDocument(inputStream);
-			// Prepare Output path inside AppDataDirectory
-			string outputDir = Path.Combine(FileSystem.AppDataDirectory, "Output");
-			Directory.CreateDirectory(outputDir);
-			string outputPath = Path.Combine(outputDir, "Output.pdf");
-			using FileStream outputStream = new FileStream(outputPath, FileMode.Create, FileAccess.Write);
-			document.Save(outputStream);
-			document.Close(true);
-			await DisplayAlert("Success", $"Extracted data saved to {outputPath}", "OK");
+// Load the input PDF from the app package (include it in the project as a MauiAsset)
+using Stream inputStream = await FileSystem.OpenAppPackageFileAsync(Path.Combine("Data", "Input.pdf"));
+// Initialize Smart Data Extractor
+DataExtractor extractor = new DataExtractor();
+// Extract data as JSON string
+string data = extractor.ExtractDataAsJson(inputStream);
+// Save the extracted JSON data into an output file inside the application directory
+string outputPath = Path.Combine(Environment.CurrentDirectory, "Output", "Output.json");
+Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
+File.WriteAllText(outputPath, data, Encoding.UTF8);
+// Show success message
+await DisplayAlert("Success", $"Extracted data saved to {outputPath}", "OK");
 
 {% endhighlight %}
 
@@ -113,11 +113,9 @@ Step 6: Run the Application.
 1. Select the target framework, device or emulator.
 2. Press <kbd>F5</kbd> to run the application.
 
-You can download a complete working sample from [GitHub]().
+By executing the program, you will get the **JSON File** as follows.
 
-By executing the program, you will get the **PDF document** as follows.
-
-![Extract Data in .NET MAUI](GettingStarted_images/MAUI_output.png)
+![Extract Data in .NET MAUI](GettingStarted_images/JSON_Output.png)
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-data-extraction) to explore the rich set of Syncfusion<sup>&reg;</sup> Data Extraction library features. 
 
@@ -190,7 +188,7 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.Pdf.Parsing;
+using System.Text;
 using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
@@ -203,20 +201,19 @@ Step 5: Add a new action method **OnExtractDataClicked** in MainPage.xaml.cs and
 
 {% highlight c# tabtitle="C#" %}
 
-			// Open Input.pdf from the app package (include it in the project as a MauiAsset)
-			using Stream inputStream = await FileSystem.OpenAppPackageFileAsync(Path.Combine("Data", "Input.pdf"));
-			// Initialize Smart Data Extractor
-			DataExtractor extractor = new DataExtractor();
-			// Extract data and return as a loaded PDF document
-			PdfLoadedDocument document = extractor.ExtractDataAsPdfDocument(inputStream);
-			// Prepare Output path inside AppDataDirectory
-			string outputDir = Path.Combine(FileSystem.AppDataDirectory, "Output");
-			Directory.CreateDirectory(outputDir);
-			string outputPath = Path.Combine(outputDir, "Output.pdf");
-			using FileStream outputStream = new FileStream(outputPath, FileMode.Create, FileAccess.Write);
-			document.Save(outputStream);
-			document.Close(true);
-			await DisplayAlert("Success", $"Extracted data saved to {outputPath}", "OK");
+// Load the input PDF from the app package (include it in the project as a MauiAsset)
+using Stream inputStream = await FileSystem.OpenAppPackageFileAsync(Path.Combine("Data", "Input.pdf"));
+// Initialize Smart Data Extractor
+DataExtractor extractor = new DataExtractor();
+// Extract data as JSON string
+string data = extractor.ExtractDataAsJson(inputStream);
+// Save the extracted JSON data into an output file inside the application directory
+string outputPath = Path.Combine(Environment.CurrentDirectory, "Output", "Output.json");
+Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
+File.WriteAllText(outputPath, data, Encoding.UTF8);
+// Show success message
+await DisplayAlert("Success", $"Extracted data saved to {outputPath}", "OK");
+
 
 {% endhighlight %}
 
@@ -227,11 +224,9 @@ Step 6: Run the Application.
 1. Select the target framework, device or emulator.
 2. Press <kbd>F5</kbd> to run the application.
 
-You can download a complete working sample from [GitHub]().
+By executing the program, you will get the **JSON File** as follows.
 
-By executing the program, you will get the **PDF document** as follows.
-
-![Extract Data in .NET MAUI](GettingStarted_images/MAUI_output.png)
+![Extract Data in .NET MAUI](GettingStarted_images/JSON_Output.png)
 
 {% endtabcontent %}
 

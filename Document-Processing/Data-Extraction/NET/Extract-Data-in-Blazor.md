@@ -52,8 +52,10 @@ Include the following namespaces in the file:
 
 @page "/"
 @rendermode InteractiveServer
-@using BlazorApp1.Services
+@using  Extract_Data_Blazor.Services
 @inject ExtractionService extractor
+@inject IJSRuntime JS
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -116,13 +118,13 @@ Create a new method in the ExtractionService class, and add the following code s
 
 {% highlight c# tabtitle="C#" %}
 
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+using (FileStream stream = new FileStream(@"wwwroot/Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
 {
 	// Initialize the Smart Data Extractor
 	DataExtractor extractor = new DataExtractor();
 
 	// Extract data as JSON string
-	string data = extractor.ExtractDataAsJson(sourceStreamPath);
+	string data = extractor.ExtractDataAsJson(stream);
 
 	// Return the JSON string
 	return data;
@@ -132,9 +134,20 @@ using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pdf", FileMo
 
 {% endtabs %}
 
-Step 8: Add the service in `Program.cs`. 
+Step 8: Add the service in Program.cs.
 
-Add the following line to the `Program.cs` file to register `ExtractionService` as a scoped service in the Blazor application. 
+Include the following namespaces in the Program.cs file:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Extract_Data_Blazor.Components;
+using Extract_Data_Blazor.Services;
+
+{% endhighlight %}
+{% endtabs %}
+
+Add the following line to the `Program.cs` file to register `ExtractionService` as a scoped service in the Blazor application.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -226,8 +239,6 @@ Step 13: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
-A complete working sample is available on [GitHub]().
-
 Upon executing the program, the output will be generated as follows.
 
 ![Data Extraction in Blazor Web App Server](GettingStarted_images/Blazor_WebApp_Output.png)
@@ -271,8 +282,10 @@ Include the following namespaces in the file:
 
 @page "/"
 @rendermode InteractiveServer
-@using BlazorApp1.Services
+@using  Extract_Data_Blazor.Services
 @inject ExtractionService extractor
+@inject IJSRuntime JS
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -302,13 +315,16 @@ Add the following code snippet to extract data from a PDF and download the file 
 {% highlight c# tabtitle="C#" %}
 @code {
     string message = "Waiting...";
-
     async Task RunExtraction()
     {
-        message = "Processing...";
+        message = "Processing... ";
         StateHasChanged(); // force UI update immediately
-
-        message = await extractor.RunExtraction();
+        // Run extractor to get JSON string
+        var json = await extractor.RunExtraction();
+        // Convert JSON to UTF8 bytes and trigger browser download via JS interop
+        var bytes = System.Text.Encoding.UTF8.GetBytes(json ?? string.Empty);
+        await JS.SaveAs("extracted.json", bytes);
+        message = "Download started";
     }
 }
 {% endhighlight %}
@@ -321,8 +337,10 @@ Include the following namespaces in the file:
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -335,13 +353,13 @@ Create a new method in the ExtractionService class, and add the following code s
 
 {% highlight c# tabtitle="C#" %}
 
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+using (FileStream stream = new FileStream(@"wwwroot/Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
 {
 	// Initialize the Smart Data Extractor
 	DataExtractor extractor = new DataExtractor();
 
 	// Extract data as JSON string
-	string data = extractor.ExtractDataAsJson(sourceStreamPath);
+	string data = extractor.ExtractDataAsJson(stream);
 
 	// Return the JSON string
 	return data;
@@ -351,9 +369,20 @@ using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pdf", FileMo
 
 {% endtabs %}
 
-Step 8: Add the service in `Program.cs`. 
+Step 8: Add the service in Program.cs.
 
-Add the following line to the `Program.cs` file to register `ExtractionService` as a scoped service in the Blazor application. 
+Include the following namespaces in the Program.cs file:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Extract_Data_Blazor.Components;
+using Extract_Data_Blazor.Services;
+
+{% endhighlight %}
+{% endtabs %}
+
+Add the following line to the `Program.cs` file to register `ExtractionService` as a scoped service in the Blazor application.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -453,8 +482,6 @@ Run the following command in terminal to run the project.
 ```
 dotnet run
 ```
-
-A complete working sample is available on [GitHub].
 
 Upon executing the program, the **JSON document** will be generated as follows.
 
