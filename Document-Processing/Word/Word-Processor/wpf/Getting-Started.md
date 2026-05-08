@@ -32,10 +32,17 @@ The following assembly references are required to deploy SfRichTextBoxAdv contro
 
 N> Starting with v16.2.0.41 (2018 Vol 2), if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your WPF application to use our components.
 
-## Adding SfRichTextBoxAdv to an application
+## Create a simple application with SfRichTextBoxAdv
 
-After adding the aforementioned assembly references to your application, you can add SfRichTextBoxAdv as any normal control.
-You can either drag the SfRichTextBoxAdv control from the toolbox window to the Design view or directly define the control in XAML view.
+This section explains how to create a simple application using SfRichTextBoxAdv. It covers the basic steps to add and configure the control for rich text editing.
+
+### Add SfRichTextBoxAdv to your application
+
+After adding the required assembly references to your application, you can include SfRichTextBoxAdv like any standard control.
+
+You can add the control in one of the following ways:
+- Drag the **SfRichTextBoxAdv** control from the Toolbox to the Design view.
+- Define the control directly in the XAML view.
 
 ![WPF RichTextBox Control](Getting-Started_images/wpf-richtextbox-control.jpeg)
 
@@ -51,6 +58,85 @@ SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
 {% endhighlight %}
 
 {% endtabs %}
+
+
+## Creating Document editor with Ribbon
+
+This section discusses about how to create document editor with ribbon similar to Microsoft Word. The SfRichTextRibbon is a Ribbon control customized to work with SfRichTextBoxAdv control, which gives you the look and feel of Microsoft Word.
+
+You can find the SfRichTextRibbon control from the following assembly under the namespace Syncfusion.Windows.Controls.RichTextBoxAdv
+
+* Syncfusion.SfRichTextRibbon.WPF
+
+The following assembly reference are additionally required to deploy SfRichTextRibbon control along with aforementioned assemblies.
+
+* Syncfusion.Tools.WPF
+
+
+### Adding the Control via Designer
+
+1. Create new WPF application in Visual Studio
+
+2. Use the Syncfusion&reg; RibbonWindow instead of Window
+
+![WPF RibbonWindow](Getting-Started_images/wpf-ribbonwindow.jpeg)
+
+3. Drag the SfRichTextRibbon control from the Toolbox window to the Design View. An instance of the SfRichTextRibbon control is created in the Design view
+
+![Dragging RichTextBox Control from Toolbox](Getting-Started_images/wpf-richtextbox-toolbox.jpeg)
+
+4. Drag the SfRichTextBoxAdv control from the Toolbox window to the Design View. An instance of the SfRichTextBoxAdv control is created in the Design view
+
+![Draggin RichTextRibbon Control from Toolbox](Getting-Started_images/wpf-richtextribbon-toolbox.jpeg)
+
+5. To make an interaction between SfRichTextRibbon and SfRichTextBoxAdv, bind the SfRichTextBoxAdv as DataContext to the SfRichTextRibbon
+
+{% capture codesnippet1 %}
+{% tabs %}
+{% highlight xaml %}
+<Syncfusion:SfRichTextRibbon x:Name="richTextRibbon SnapsToDevicePixels="True" DataContext="{Binding ElementName=richTextBoxAdv}" /> 
+
+{% endhighlight %}
+
+{% endtabs %}
+{% endcapture %}
+{{ codesnippet1 | OrderList_Indent_Level_1 }}
+
+
+### Adding Control via code.
+
+You can also add the SfRichTextRibbon and SfRichTextBoxAdv programmatically by using XAML
+
+{% tabs %}
+{% highlight xaml %}
+<Syncfusion:RibbonWindow x:Class="DocumentEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DocumentEditor"
+        mc:Ignorable="d"
+        xmlns:Syncfusion="http://schemas.syncfusion.com/wpf"
+        Title="MainWindow" Height="350" Width="525" Syncfusion:SfSkinManager.Theme="{Syncfusion:SkinManagerExtension ThemeName=FluentLight}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"/>
+        <Syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1"></Syncfusion:SfRichTextBoxAdv>
+    </Grid>
+</Syncfusion:RibbonWindow>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Prefer using `SfRichTextRibbon` within `RibbonWindow` in your application, since the backstage of Ribbon will be opened only when the ribbon is loaded under the `RibbonWindow`
+
+Finally, you can get the following output similar to Microsoft Word on executing the application
+
+![WPF RichTextBox](Getting-Started_images/wpf-richtextbox.jpeg)
 
 ## Using SfRichTextBoxAdv as a standard RichTextBox
 
@@ -152,83 +238,6 @@ This section discusses about how to use the SfRichTextBoxAdv control as a standa
 {% endtabs %}
 
 N> [View Standard RichTextBox example in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox)
-
-## Creating Document editor with Ribbon
-
-This section discusses about how to create document editor with ribbon similar to Microsoft Word. The SfRichTextRibbon is a Ribbon control customized to work with SfRichTextBoxAdv control, which gives you the look and feel of Microsoft Word.
-You can find the SfRichTextRibbon control from the following assembly under the namespace Syncfusion.Windows.Controls.RichTextBoxAdv
-
-* Syncfusion.SfRichTextRibbon.WPF
-
-The following assembly reference are additionally required to deploy SfRichTextRibbon control along with aforementioned assemblies.
-
-* Syncfusion.Tools.WPF
-
-
-### Adding the Control via Designer
-
-1. Create new WPF application in Visual Studio
-
-2. Use the Syncfusion&reg; RibbonWindow instead of Window
-
-![WPF RibbonWindow](Getting-Started_images/wpf-ribbonwindow.jpeg)
-
-3. Drag the SfRichTextRibbon control from the Toolbox window to the Design View. An instance of the SfRichTextRibbon control is created in the Design view
-
-![Dragging RichTextBox Control from Toolbox](Getting-Started_images/wpf-richtextbox-toolbox.jpeg)
-
-4. Drag the SfRichTextBoxAdv control from the Toolbox window to the Design View. An instance of the SfRichTextBoxAdv control is created in the Design view
-
-![Draggin RichTextRibbon Control from Toolbox](Getting-Started_images/wpf-richtextribbon-toolbox.jpeg)
-
-5. To make an interaction between SfRichTextRibbon and SfRichTextBoxAdv, bind the SfRichTextBoxAdv as DataContext to the SfRichTextRibbon
-
-{% capture codesnippet1 %}
-{% tabs %}
-{% highlight xaml %}
-<Syncfusion:SfRichTextRibbon x:Name="richTextRibbon SnapsToDevicePixels="True" DataContext="{Binding ElementName=richTextBoxAdv}" /> 
-
-{% endhighlight %}
-
-{% endtabs %}
-{% endcapture %}
-{{ codesnippet1 | OrderList_Indent_Level_1 }}
-
-
-### Adding Control via code.
-
-You can also add the SfRichTextRibbon and SfRichTextBoxAdv programmatically by using XAML
-
-{% tabs %}
-{% highlight xaml %}
-<Syncfusion:RibbonWindow x:Class="DocumentEditor.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DocumentEditor"
-        mc:Ignorable="d"
-        xmlns:Syncfusion="http://schemas.syncfusion.com/wpf"
-        Title="MainWindow" Height="350" Width="525" Syncfusion:SfSkinManager.Theme="{Syncfusion:SkinManagerExtension ThemeName=FluentLight}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"/>
-        <Syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1"></Syncfusion:SfRichTextBoxAdv>
-    </Grid>
-</Syncfusion:RibbonWindow>
-
-{% endhighlight %}
-
-{% endtabs %}
-
-N> Prefer using `SfRichTextRibbon` within `RibbonWindow` in your application, since the backstage of Ribbon will be opened only when the ribbon is loaded under the `RibbonWindow`
-
-Finally, you can get the following output similar to Microsoft Word on executing the application
-
-![WPF RichTextBox](Getting-Started_images/wpf-richtextbox.jpeg)
 
 ## Theme
 
