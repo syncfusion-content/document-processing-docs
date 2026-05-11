@@ -225,6 +225,7 @@ private static string BuildSystemMessage(string inputDir, string outputDir) => $
     2. **WAIT FOR RESULTS**: After each tool call, WAIT for the result before the next action.
     3. **CHAIN OUTPUTS**: Use the output file path from the previous tool as input for the next tool.
        Break down multi-step operations: Call tool → wait → use result as input → call next tool → repeat.
+    4. **CONSISTENT OUTPUT NAMING**: Use one identical output file name for all tool calls.   
 
     **CROSS-FORMAT CONVERSION:**
     For Office-to-PDF: Use ConvertToPDF with sourceFilePath and sourceType (""Word"", ""Excel"", ""PowerPoint"").
