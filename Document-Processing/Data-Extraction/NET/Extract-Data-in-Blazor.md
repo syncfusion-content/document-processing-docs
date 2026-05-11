@@ -239,12 +239,12 @@ Step 13: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
-Upon executing the program, the output will be generated as follows.
+Upon executing the program, the **JSON document** will be generated as follows.
 
 ![Data Extraction in Blazor Web App Server](GettingStarted_images/JSON_Output.png)
 
 {% endtabcontent %}
- 
+
 {% tabcontent Visual Studio Code %}
 
 **Prerequisites:**
@@ -466,7 +466,6 @@ Add the following code snippet to the Navigation menu's Razor file in the `Layou
 
 {% endtabs %}
 
-
 Step 12: Build the project.
 
 Run the following command in terminal to build the project.
@@ -488,4 +487,6 @@ Upon executing the program, the **JSON document** will be generated as follows.
 ![Data Extraction in Blazor Web App Server](GettingStarted_images/JSON_Output.png)
 
 {% endtabcontent %}
+
+{% endtabcontents %}
 
