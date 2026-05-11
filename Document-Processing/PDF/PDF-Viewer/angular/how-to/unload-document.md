@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Unload the PDF document programmatically
+# Unload the PDF document in Angular PDF Viewer component
 
 The PDF Viewer provides the [unload()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#unload) method to remove the currently loaded PDF from the viewer instance. Use this API to free memory or reset the viewer when navigating between documents or closing the viewer.
 
