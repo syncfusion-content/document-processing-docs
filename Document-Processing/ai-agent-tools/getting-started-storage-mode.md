@@ -11,11 +11,11 @@ documentation: ug
 
 This guide covers each integration step-from registering a Syncfusion license and implementing document storage to converting tools into Microsoft.Extensions.AI functions and building a fully interactive agent. The example uses the Microsoft Agents Framework with OpenAI, but the same steps apply to any [provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) that implements `IChatClient`.
 
-In this guide, we demonstrate how to configure **Azure Blob Storage** as the document storage provider, but the same pattern works with any storage back end (AWS S3, local disk, etc.) by implementing the `IDocumentStorage` interface.
+In this guide, we demonstrate how to configure **Azure Blob Storage** as the document storage provider, but the same pattern works with any storage backend (AWS S3, local disk, etc.) by implementing the `IDocumentStorage` interface.
 
 ## Overview
 
-Documents are read from and written to storage (Azure Blob, S3, local disk, etc.) on each tool invocation. No in-memory objects are maintained between tool calls-each operation opens the document from storage, processes it, and saves it back. This mode is ideal for distributed systems, server less architectures, and scenarios where document persistence is required.
+Documents are read from and written to storage (Azure Blob, S3, local disk, etc.) on each tool invocation. No in-memory objects are maintained between tool calls-each operation opens the document from storage, processes it, and saves it back. This mode is ideal for distributed systems, serverless architectures, and scenarios where document persistence is required.
 
 ## Prerequisites
 
@@ -225,6 +225,7 @@ private static string BuildSystemMessage(string inputDir, string outputDir) => $
     2. **WAIT FOR RESULTS**: After each tool call, WAIT for the result before the next action.
     3. **CHAIN OUTPUTS**: Use the output file path from the previous tool as input for the next tool.
        Break down multi-step operations: Call tool → wait → use result as input → call next tool → repeat.
+    4. **CONSISTENT OUTPUT NAMING**: Use one identical output file name for all tool calls.   
 
     **CROSS-FORMAT CONVERSION:**
     For Office-to-PDF: Use ConvertToPDF with sourceFilePath and sourceType (""Word"", ""Excel"", ""PowerPoint"").
