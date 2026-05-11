@@ -26,8 +26,9 @@ To include the .NET Core Smart Data Extractor library into your ASP.NET Core app
 
 {% endtabcontents %}
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/ASP.NETCore/Extract_Data_as_JSON).
 
 By executing the program, you will get the PDF document as follows.
 ![ASP.Net Core output JSON document](GettingStarted_images/JSON_Output.png)
 
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-data-extraction) to explore the rich set of Syncfusion<sup>&reg;</sup> Data Extraction library features.
