@@ -6,15 +6,15 @@
 
 
 Step 1: Create a new C# ASP.NET Core Web Application project.
-   ![Create ASP.NET Core Web application in Visual Studio](images/ASPNETCoreProjectCreation.png)
+   ![Create ASP.NET Core Web application in Visual Studio](Images/ASPNETCoreProjectCreation.png)
 
 Step 2: In configuration windows, name your project and click Next.
-   ![Select Web Application pattern](images/ASPNETCoreConfiguration.png)
-   ![Select version](images/ASPNETCoreAdditionalInfo.png)
+   ![Select Web Application pattern](Images/ASPNETCoreConfiguration.png)
+   ![Select version](Images/ASPNETCoreAdditionalInfo.png)
 
 
 Step 3: Install the [Syncfusion.SmartDataExtractor.Net.Core](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.Net.Core/) package as reference to your ASP.NET Core applications from [NuGet.org](https://www.nuget.org/).
-   ![Install SmartDataExtractor .NET Core NuGet package](images/ASPNETCore_Nuget.png)
+   ![Install SmartDataExtractor .NET Core NuGet package](Images/ASPNETCore_Nuget.png)
 
 Step 4: A default controller with name HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
 
