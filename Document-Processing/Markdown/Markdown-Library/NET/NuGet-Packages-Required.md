@@ -6,7 +6,7 @@ control: Markdown
 documentation: UG
 ---
 
-# NuGet Packages Required
+# NuGet Packages Required for Markdown Library
 
 ## Installing Syncfusion<sup>&reg;</sup> Markdown through NuGet Packages
 

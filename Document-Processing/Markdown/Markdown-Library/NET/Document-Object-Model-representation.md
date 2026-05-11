@@ -1,6 +1,6 @@
 ---
 title: Document Object Model of .NET Markdown library | Syncfusion
-description: Learn here all about the Document Object Model (DOM) representation of Markdown documents and their elements in the Syncfusion<sup>&reg;</sup> .NET Markdown library.
+description: Learn here all about the Document Object Model (DOM) representation of Markdown documents and their elements in the Syncfusion .NET Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG
