@@ -10,7 +10,7 @@ imports: [
 
 standalone: true,
     selector: 'app-root',
-    template: '<ejs-spreadsheet > </ejs-spreadsheet>'
+    template: '<ejs-spreadsheet (beforeOpen)='beforeOpen($event)' openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' allowOpen='true' (beforeSave)='beforeSave($event)' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' allowSave='true'> </ejs-spreadsheet>'
 })
 export class AppComponent { }
 
