@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Remove form fields in the ASP.NET Core PDF Viewer component | Syncfusion
+title: Remove form fields in ASP.NET Core | Syncfusion
 Syncfusion description: Learn how to remove PDF form fields using the UI and programmatically in the Syncfusion ASP.NET Core PDF Viewer component.
 platform: document-processing
 control: PDF Viewer

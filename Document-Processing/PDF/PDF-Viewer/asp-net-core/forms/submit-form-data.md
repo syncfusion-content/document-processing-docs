@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Submit PDF Form Data to a Server using ASP.NET Core PDF Viewer | Syncfusion
-description: Submit filled PDF form data from the Syncfusion in EJ2 ASP.NET Core PDF Viewer to a backend server.
+title: Submitting PDF form data in ASP.NET Core | Syncfusion
+description: Submit filled PDF form data from the Syncfusion EJ2 ASP.NET Core PDF Viewer to a backend server securely using supported APIs and workflows.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
