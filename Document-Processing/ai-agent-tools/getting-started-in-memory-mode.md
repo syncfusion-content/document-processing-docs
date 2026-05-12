@@ -29,7 +29,7 @@ Documents are held as live objects in an in-memory dictionary. Each tool accesse
 
 Integrating the Agent Tool library into your application involves the following steps:
 
-**Step 1: Install the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).**
+**Step 1: Install the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).**
 
 ![Install DocIO .NET Core NuGet package](Install_Nuget.png)
 
@@ -253,7 +253,7 @@ while (true)
 
 For a complete, runnable example combining all steps, refer to the example console application in the GitHub repository:
 
-[Examples/Console/AgentChatConsole/Program.cs](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main)
+[Examples/Console/AgentChatConsole/Program.cs](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AgentChatConsole/Program.cs)
 
 ## See Also
 
