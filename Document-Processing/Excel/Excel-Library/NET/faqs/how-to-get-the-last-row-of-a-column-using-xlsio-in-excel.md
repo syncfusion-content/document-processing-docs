@@ -161,4 +161,4 @@ End Function
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1005966-Last-Row/FAQ/Last%20Row">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1005966-Last-Row/FAQ/Last%20Row/.NET/Last%20Row">this GitHub page</a>.
