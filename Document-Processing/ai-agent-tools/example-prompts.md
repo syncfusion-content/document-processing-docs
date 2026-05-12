@@ -23,7 +23,7 @@ Load the insurance policy document ‘policy_document.pdf’ from {InputDir}. Th
 Load the court filing document ‘case_filing.pdf’ from {InputDir} and Find the Text ‘John Michael’ and ‘Ellwood Drive, Austin, TX 78701’ and ‘472-90-1835’.  Permanently redact all identifiable information. Use black highlight color for all redactions. Export the redacted document as ‘case_filing_redacted.pdf’ to {OutputDir}.
 {% endpromptcard %}
 {% promptcard SignPdf %}
-Load the vendor contract 'vendor_agreement_draft.pdf' from {InputDir} and apply a digital signature using the company certificate 'certificate.pfx' (located at {InputDir}) with the password 'password123'. Place the signature in the bottom-right corner of the last page and use the company logo 'signature_logo.png' from {InputDir} as the signature appearance image. Export the signed contract as 'vendor_agreement_signed.pdf' to {OutputDir}.
+Load the vendor contract ‘vendor_agreement_draft.pdf’ from {InputDir} and apply a digital signature using the company certificate ‘certificate.pfx’ (located at {InputDir}) with the password ‘password123’. Place the signature in the bottom-right corner of the last page and use the company logo ‘signature_logo.png’ from {InputDir} as the signature appearance image. Export the signed contract as ‘vendor_agreement_signed.pdf’ to {OutputDir}.
 {% endpromptcard %}
 {% promptcard MergePdfs, ReorderPdfPages %}
 Merge the following monthly financial reports into a single consolidated annual report: ‘Jan_report.pdf’, ‘Feb_report.pdf’, ‘Mar_report.pdf’, ‘Apr_report.pdf’, ‘May_report.pdf’, ‘Jun_report.pdf’ - all located at {InputDir}. Each PDF has 3 pages, with the last page being the executive summary. After merging, reorder pages so each month’s summary page appears first, followed by the other two pages, while keeping January–June chronological order. Save the final file as annual_report_2025.pdf in {OutputDir}.
@@ -46,10 +46,10 @@ Load the employee Onboarding letter template 'Onboarding_template.docx' from {In
 Load the legal service agreement template 'service_agreement_template.docx' from {InputDir}. Replace the placeholder '[CLIENT_NAME]' with 'Apex Innovations Ltd.', '[SERVICE_FEE]' with '$18,500', and '[CONTRACT_DATE]' with 'April 1, 2026'. Additionally, use a regex pattern to find all date placeholders matching the pattern '\[DATE_[A-Z]+\]' and replace them with 'TBD'. Return the total count of all replacements made. Export the finalized agreement as 'service_agreement_apex.docx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard ImportMarkdown %}
-Our developer wrote the API release notes in Markdown format - load the file 'release_notes_v3.2.mdx' from {InputDir}, import it into a new Word document to convert it into a properly formatted .docx file suitable for distribution to non-technical stakeholders. Export the document as 'release_notes_v3.2.docx' to {OutputDir}.
+Our developer wrote the API release notes in Markdown format - load the file 'release_notes_v3.2.md' from {InputDir}, import it into a new Word document to convert it into a properly formatted .docx file suitable for distribution to non-technical stakeholders. Export the document as 'release_notes_v3.2.docx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard GetFormData, SetFormFields %}
-Load the patient intake form 'patient_intake_form.docx' from {InputDir}. First, read all current form field values to see what fields are available. Then set the form with the following patient information: PatientName='Robert Hayes', DateOfBirth='03/12/1978', Gender='Male', ContactNumber='+1 (214) 555-7834', EmailAddress='Robert.Hayes@example.com', Address='4567 Elm Street, Apt 210, Dallas, TX 75201, United States', InsuranceProvider='Blue Cross Blue Shield', InsuranceID='INS-4892-XY', InsuranceGroupNumber='GRP-10293', Diabetes = "true", EmergencyContact='Laura Hayes', EmergencyRelation='Spouse', EmergencyPhone='+1 (214) 555-4466', Declaration = 'true', PatientSignature='Robert Hayes', FormDate='04/02/2026'. Export the completed form as 'Intake_Form_Robert_Hayes.docx' to {OutputDir}.
+Load the patient intake form 'patient_intake_form.docx' from {InputDir}. First, read all current form field values to see what fields are available. Then set the form with the following patient information: PatientName='Robert Hayes', DateOfBirth='03/12/1978', Gender='Male', ContactNumber='+1 (214) 555-7834', EmailAddress='robert.hayes@example.com', Address='4567 Elm Street, Apt 210, Dallas, TX 75201, United States', InsuranceProvider='Blue Cross Blue Shield', InsuranceID='INS-4892-XY', InsuranceGroupNumber='GRP-10293', Diabetes = "true", EmergencyContact='Laura Hayes', EmergencyRelation='Spouse', EmergencyPhone='+1 (214) 555-4466', Declaration = 'true', PatientSignature='Robert Hayes', FormDate='04/02/2026'. Export the completed form as 'Intake_Form_Robert_Hayes.docx' to {OutputDir}.
 {% endpromptcard %}
 {% promptcard GetBookmarks, SplitDocument %}
 Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {InputDir}. List all bookmarks in the document to identify the section boundaries. Split the document by bookmarks so that each bookmarked region - such as 'VendorAgreement', 'NDASection', and 'SLATerms' - becomes a standalone contract file. Export each split document to {OutputDir}.
@@ -63,7 +63,7 @@ Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {
 Load a sales performance dashboard workbook ‘sales_dashboard_Q1_2026.xlsx’ from {InputDir}. Add a worksheet named ‘DataValidation’ and create the List validation in the A1:B3 range and the list names "Excel", "Presentation", "Word", "PDF". Then create a clustered bar chart from the ‘Sales data’ sheet data range A1:D5, positioning it in rows 8–23 and columns 1–8. Set the chart title to ‘Q1 2026 Regional Sales Performance’, set the category axis title to ‘Region’, and the value axis title to ‘Revenue (USD)’. Enable the chart legend at the bottom. Export the workbook to {OutputDir}.
 {% endpromptcard %}
 {% promptcard AddConditionalFormat %}
-Load an inventory management workbook ‘inventory_status.xlsx’ from {InputDir}. Get the "Stock_Levels" sheet and apply conditional formatting to the In_Stock column (D2:D11): highlight cells in red where the value is less than the reorder threshold (use 10 as the formula threshold for the conditional format). Export the workbook to {OutputDir}.
+Load an inventory management workbook ‘inventory_status.xlsx’ from {InputDir}. Get the "Stock_Levels" sheet and apply conditional formatting to the Reorder_point column (D2:D11): highlight cells in red where the value is less than the reorder threshold (use 10 as the formula threshold for the conditional format). Export the workbook to {OutputDir}.
 {% endpromptcard %}
 {% promptcard ProtectWorksheet, ProtectWorkbook %}
 Load a confidential board-level financial model workbook ‘board_financial_model_2026.xlsx’ from {InputDir}. Protect the Assumptions and Projections worksheets with the password ‘ModelLock@2026’ to prevent unauthorized edits to the model logic. Protect the overall workbook structure with the password ‘Board@2026’ to prevent adding or deleting sheets. Export the workbook to {OutputDir}.
@@ -114,16 +114,17 @@ Convert the sales conference presentation 'sales_conference_2026.pptx' from {Inp
 
 {% promptcards %}
 {% promptcard ExtractDataAsJSON %}
-Extract all structured data from the vendor invoice 'invoice_APR2026_00142.pdf' located at {InputDir}. Enable both form and table detection to capture invoice header fields (vendor name, invoice number, date, due date) and the line-item table (description, quantity, unit price, total). Use a confidence threshold of 0.7 for reliable results. Save the extracted JSON to 'invoice_APR2026_00142_data.json' in {OutputDir}.
+Extract all structured data from the PDF document ‘conversion_demo.pdf’ located at {InputDir}. Enable both form and table detection . Use a confidence threshold of 0.6 for reliable results. Save the extracted JSON to ‘conversion_demo_data.json’ in {OutputDir}.
 {% endpromptcard %}
 {% promptcard ExtractTableAsJSON %}
-Extract only the table data from the quarterly financial report 'financial_report_Q1_2026.pdf' located at {InputDir}. The report contains multiple financial tables across 15 pages - enable border less table detection to ensure all tables are captured even if they lack visible borders. Use a confidence threshold of 0.3. Save the extracted table data as 'financial_tables_Q1_2026.json' in {OutputDir}.
+Extract only the table data from the quarterly financial report ‘table_conversion_demo.pdf’ located at {InputDir}. Enable border less table detection to ensure all tables are captured even if they lack visible borders. Use a confidence threshold of 0.3. Save the extracted table data as ‘table_conversion_demo.json’ in {OutputDir}.
 {% endpromptcard %}
 {% endpromptcards %}
 
 ## See also
 
-* [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
-* [Getting Started](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started)
-* [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
-* [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
+* [Tools](./tools)
+* [Getting Started](./getting-started)
+* [Customization](./customization)
+* [Overview](./overview)
+* [Example Use Cases](./example-use-cases)
