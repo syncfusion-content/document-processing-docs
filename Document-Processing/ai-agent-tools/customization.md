@@ -14,7 +14,7 @@ The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packag
 
 ## Creating a Custom AI Agent Tool Class
 
-Follow these steps to enable new document operations to the [AI agent tool library](https://github.com/syncfusion/document-sdk-ai-agent-tools).
+Follow these steps to enable new document operations to the [AI agent tool library](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools).
 
 **Step 1: Clone the repository**
 
