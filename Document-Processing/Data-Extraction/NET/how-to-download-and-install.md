@@ -99,7 +99,7 @@ The steps below show how to install the Syncfusion<sup>&reg;</sup> Smart Data Ex
 
 4. Run the following command in your machine to deploy the ASP.NET Core samples:
 
-   **dotnet restore projectname -s \nuget** in order to restore.
+   **dotnet restore project name -s \nuget** in order to restore.
 
 
 ## License key registration in samples

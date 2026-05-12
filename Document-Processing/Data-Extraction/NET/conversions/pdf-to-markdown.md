@@ -126,7 +126,7 @@ The following code demonstrates how to use the **ExtractDataAsMarkdown** method 
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]"%}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;

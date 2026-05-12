@@ -1,6 +1,6 @@
 ---
 title: Working with Form Recognition | Syncfusion&reg;
-description: Learn how to recognize forms and configure FormRecognizeOptions in the Syncfusion&reg; SmartFormRecognizer library to process and detect form elements with ease.
+description: Learn how to recognize forms and configure FormRecognizeOptions in Syncfusion® SmartFormRecognizer to detect and process form elements easily.
 platform: document-processing
 control: SmartFormRecognizer
 documentation: UG
@@ -179,7 +179,7 @@ public async Task RecognizeWithCancellationAsync()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Form-Recognizer/Asyncvariants-with-CancellationToken/.NET).
 
-# Working with FormRecognizeOptions
+## Working with FormRecognizeOptions
 
 `FormRecognizeOptions` provides configurable settings that control how the SmartFormRecognizer detects elements from a document. It allows you to enable or disable the detection of specific form controls such as checkboxes, radio buttons, textboxes, and signatures—while also letting you fine-tune the recognition results using a confidence threshold.
 

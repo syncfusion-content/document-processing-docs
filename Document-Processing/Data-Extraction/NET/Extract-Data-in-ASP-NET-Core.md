@@ -191,5 +191,3 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, you will get the PDF document as follows.
 ![ASP.Net Core output JSON document](GettingStarted_images/JSON_Output.png)
-
-Click [here](https://www.syncfusion.com/document-sdk/net-pdf-data-extraction) to explore the rich set of Syncfusion<sup>&reg;</sup> Data Extraction library features.
