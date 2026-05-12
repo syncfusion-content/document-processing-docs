@@ -33,7 +33,7 @@ With proper configuration, the Blazor PDF Viewer can:
 - Improve page navigation and scrolling responsiveness
 - Reduce memory pressure on the browser
 
-N> Large PDF support depends on enabling chunk-based processing and proper server configuration. The actual supported size may vary based on browser memory limits, server settings, and system resources.
+N> Large PDF support depends on enabling chunk-based processing (refer [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableChunkMessages)) and proper server configuration. The actual supported size may vary based on browser memory limits, server settings, and system resources.
 
 ---
 

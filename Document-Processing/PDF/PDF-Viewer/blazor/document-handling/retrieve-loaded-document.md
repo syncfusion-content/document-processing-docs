@@ -1,20 +1,21 @@
 ---
 layout: post
-title: Retrieve the Loaded Document in Blazor PDF Viewer | syncfusion
+title: Retrieve Loaded Document Instance Blazor PDF Viewer | syncfusion
 description: Learn how to access the loaded PDF document instance in the Blazor PDF Viewer using component references and the DocumentLoad event.
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve the Blazor PDF Viewer Instance
+# Retrieve the Loaded Document Instance
 
-This page explains how to access the Blazor PDF Viewer instance using Blazor component references, listen for the `Created` event, and retrieve document information, page details, and metadata—so you can safely invoke viewer APIs after the PDF is loaded.
+This page explains how to access the loaded document instance in the Blazor PDF Viewer using Blazor component references, listen for the [DocumentLoaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_DocumentLoaded) event, and retrieve document information, page details, and metadata—so you can safely invoke viewer APIs after the PDF document is loaded.
 
 ## Explanation: Why access the loaded document instance?
 
 - The viewer instance (via **Blazor component reference**) gives you a stable handle to call APIs such as [`Zoom`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/magnification), [`Print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/print), [`Download`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/saving-pdf-file#download), and [`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/navigation).
-- The **Created event** (fires after the PDF is parsed and pages are ready) is the correct moment to read **document information** (title, author, page count, etc.) and **page metrics**, and to trigger post‑load UI logic.
+- The **Created event** fires when the PDF Viewer component is rendered and initialized in the DOM.
+- The **DocumentLoaded event** (fires after the PDF document is fully loaded and parsed) is the correct moment to read **document information** (Document Name, page count) and **page metrics**, and to trigger post‑load UI logic. Use [DocumentLoaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_DocumentLoaded) event to access document details after successful load, and [DocumentLoadFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_DocumentLoadFailed) to handle load failures.
 - Accessing the instance too early (before load completes) may cause null/undefined errors or incomplete information.
 
 ## Reference: What you can access/call after load
@@ -29,14 +30,14 @@ After the PDF is loaded you can:
   - **Interactions**: enable/disable features
   - **Export**: `Download()`, `Print()`
 
-> Always invoke these after the `Created` event fires, or from user actions that occur after load. Guard calls with null checks or readiness flags.
+N> The **Created event** triggers when the PDF Viewer component is rendered in the DOM. The **DocumentLoaded event** triggers when the document is successfully loaded and parsed. Always invoke viewer APIs after the `DocumentLoaded` event fires to ensure document information is available, or from user actions that occur after load. Guard calls with null checks or readiness flags.
 
 ## How‑to: Get the instance with a ref and read details on load
 
 Below is a focused snippet showing:
 1) Creating a **component reference** for the viewer,
-2) Wiring the **`Created`** event, and
-3) Reading basic **document info** and **page count**, then calling **viewer APIs** safely.
+2) Wiring the **`Created`** event for viewer initialization and the **`DocumentLoaded`** event for document details, and
+3) Reading basic **document info** (name and page count) from the **DocumentLoaded** event, then calling **viewer APIs** safely.
 
 ```cs
 @page "/"
@@ -48,15 +49,15 @@ Below is a focused snippet showing:
 
 <div style="margin-bottom:10px;">
     <strong>Document Info</strong><br />
-    Name: @Info.Name <br />
-    Pages: @Info.PageCount <br />
-    Title: @Info.Title <br />
-    Author: @Info.Author
+    Name: @Info2.Name <br />
+    Pages: @Info2.PageCount <br />
+    Title: @Info1.Title <br />
+    Author: @Info1.Author
 </div>
 
 <div style="height:80vh;">
     <SfPdfViewer2 @ref="Viewer" Height="100%" Width="100%">
-        <PdfViewerEvents Created="OnCreated"></PdfViewerEvents>
+        <PdfViewerEvents Created="OnCreated" DocumentLoaded="OnDocumentLoaded"></PdfViewerEvents>
     </SfPdfViewer2>
 </div>
 
@@ -64,20 +65,20 @@ Below is a focused snippet showing:
 
     private SfPdfViewer2? Viewer;
 
-    private DocumentInfo Info = new();
+    private DocumentInfo1 Info1 = new();
+    private DocumentInfo2 Info2 = new();
 
     private async Task OnCreated()
     {
+        // Created event: Fires when the PDF Viewer component is rendered
         string filePath = "wwwroot/pdf-succinctly.pdf";
 
         //Load using Syncfusion.Pdf
         PdfLoadedDocument doc = new PdfLoadedDocument(filePath);
 
         //Read document info
-        Info = new DocumentInfo
+        Info1 = new DocumentInfo1
         {
-            Name = Path.GetFileName(filePath),
-            PageCount = doc.Pages.Count,
             Title = doc.DocumentInformation.Title,
             Author = doc.DocumentInformation.Author
         };
@@ -92,18 +93,34 @@ Below is a focused snippet showing:
         await Viewer!.LoadAsync(bytes);
     }
 
-    class DocumentInfo
+    private async Task OnDocumentLoaded(LoadEventArgs args)
+    {
+        // DocumentLoaded event: Fires when the document is successfully loaded
+        Info2 = new DocumentInfo2
+        {
+            Name = args.DocumentName,
+            PageCount = args.PageData.PageCount,
+        };
+    }
+
+    class DocumentInfo1
+    {
+        public string Title { get; set; } = "";
+        public string Author { get; set; } = "";
+    }
+
+    class DocumentInfo2
     {
         public string Name { get; set; } = "";
         public int PageCount { get; set; }
-        public string Title { get; set; } = "";
-        public string Author { get; set; } = "";
     }
 }
 ```
 
 **Notes**
 - Use `SfPdfViewer2` component with `@ref` to get direct access to the viewer instance.
+- **Created event** triggers when the PDF Viewer component is rendered.
+- **DocumentLoaded event** triggers when the document is successfully loaded. Use this event to access document name, page count, and other document-specific details.
 - Call methods directly on the viewer reference like `Viewer.ZoomAsync()`, `Viewer.GoToPageAsync()`, etc.
 
 ## Tutorial: End‑to‑End — Call Viewer APIs with TextBox Input
