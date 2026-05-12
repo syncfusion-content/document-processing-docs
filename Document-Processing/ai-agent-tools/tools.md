@@ -1,32 +1,33 @@
 ---
 layout: post
 title: Tools | AI Agent Tools | Syncfusion
-description: Complete reference for all Syncfusion Document SDK Agent Tool classes — Managers, PDF, Word, Excel, PowerPoint, Conversion, and Data Extraction tools.
+description: Complete reference for all Syncfusion Document SDK Agent Tool classes - Managers, PDF, Word, Excel, PowerPoint, Conversion, and Data Extraction tools.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
 ---
 
-# Syncfusion Document SDK Agent Tools
+# Syncfusion Document SDK AI Agent Tools
 
-Agent Tools are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager.
+[Agent Tools](https://learn.microsoft.com/en-us/agent-framework/get-started/add-tools?pivots=programming-language-csharp) are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager.
 
-Agent tools support two operational modes that determine how documents are handled during AI agent execution. In‑Memory mode enables live, in‑memory document processing, while Document Storage mode supports persistent, storage‑backed document handling.
+Agent tools support two operational modes that determine how documents are handled during AI agent execution. In‑memory mode enables live, in‑memory document processing, while Document Storage mode supports persistent, storage‑backed document handling.
+
 The operational mode is determined by the manager used when initializing the tool.
 
 - [Document Managers](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools#document-managers) (In‑Memory Mode)
-- [Document Storage Managers](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools#document-storage-managers) (Storage Mode)
+- [Document Storage Manager](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools#document-storage-manager) (Storage Mode)
 
 Tools are organized into the following categories:
 
-| Category | Tool Classes | Description |
-|---|---|---|
-| **PDF** | PdfDocumentAgentTools,<br/>PdfOperationsAgentTools,<br/>PdfSecurityAgentTools,<br/>PdfContentExtractionAgentTools,<br/>PdfAnnotationAgentTools,<br/>PdfConverterAgentTools,<br/>PdfOcrAgentTools | Create, manipulate, secure, extract content from, annotate, convert, and perform OCR on PDF documents. |
-| **Word** | WordDocumentAgentTools,<br/>WordOperationsAgentTools,<br/>WordSecurityAgentTools,<br/>WordMailMergeAgentTools,<br/>WordFindAndReplaceAgentTools,<br/>WordRevisionAgentTools,<br/>WordImportExportAgentTools,<br/>WordFormFieldAgentTools,<br/>WordBookmarkAgentTools | Create, edit, protect, mail-merge, find/replace, track changes, import/export, and manage form fields and bookmarks in Word documents. |
-| **Excel** | ExcelWorkbookAgentTools,<br/>ExcelWorksheetAgentTools,<br/>ExcelSecurityAgentTools,<br/>ExcelFormulaAgentTools,<br/>ExcelChartAgentTools,<br/>ExcelConditionalFormattingAgentTools,<br/>ExcelConversionAgentTools,<br/>ExcelDataValidationAgentTools,<br/>ExcelPivotTableAgentTools | Create and manage workbooks and worksheets, set cell values, formulas, and number formats, apply security, create and configure charts and sparklines, add conditional formatting, convert to image/HTML/ODS/JSON, manage data validation, and create and manipulate pivot tables. |
-| **PowerPoint** | PresentationDocumentAgentTools,<br/>PresentationOperationsAgentTools,<br/>PresentationSecurityAgentTools,<br/>PresentationContentAgentTools,<br/>PresentationFindAndReplaceAgentTools | Load, merge, split, secure, and extract content from PowerPoint presentations. |
-| **Conversion** | OfficeToPdfAgentTools | Convert Word, Excel, and PowerPoint documents to PDF. |
-| **Data Extraction** | DataExtractionAgentTools | Extract structured data (text, tables, forms) from PDF and image files as JSON. |
+| Category | Tool Classes | 
+|---|---|
+| **PDF** | PdfDocumentAgentTools,<br/>PdfOperationsAgentTools,<br/>PdfSecurityAgentTools,<br/>PdfContentExtractionAgentTools,<br/>PdfAnnotationAgentTools,<br/>PdfConverterAgentTools,<br/>PdfOcrAgentTools |
+| **Word** | WordDocumentAgentTools,<br/>WordOperationsAgentTools,<br/>WordSecurityAgentTools,<br/>WordMailMergeAgentTools,<br/>WordFindAndReplaceAgentTools,<br/>WordRevisionAgentTools,<br/>WordImportExportAgentTools,<br/>WordFormFieldAgentTools,<br/>WordBookmarkAgentTools |
+| **Excel** | ExcelWorkbookAgentTools,<br/>ExcelWorksheetAgentTools,<br/>ExcelSecurityAgentTools,<br/>ExcelFormulaAgentTools,<br/>ExcelChartAgentTools,<br/>ExcelConditionalFormattingAgentTools,<br/>ExcelConversionAgentTools,<br/>ExcelDataValidationAgentTools,<br/>ExcelPivotTableAgentTools |
+| **PowerPoint** | PresentationDocumentAgentTools,<br/>PresentationOperationsAgentTools,<br/>PresentationSecurityAgentTools,<br/>PresentationContentAgentTools,<br/>PresentationFindAndReplaceAgentTools |
+| **Conversion** | OfficeToPdfAgentTools |
+| **Data Extraction** | DataExtractionAgentTools |
 
 
 ## Document Managers
@@ -44,7 +45,7 @@ Document Managers are in-memory containers that manage document life cycles duri
 
 **DocumentManagerCollection**
 
-`DocumentManagerCollection` is a centralized registry that holds one document manager for each `DocumentType`. It is designed for tool classes that need to work across multiple document types within a single operation — specifically when the source and output documents belong to different document managers.
+`DocumentManagerCollection` is a centralized registry that holds one document manager for each `DocumentType`. It is designed for tool classes that need to work across multiple document types within a single operation - specifically when the source and output documents belong to different document managers.
 
 **Why it is needed:** Consider a Word-to-PDF conversion. The source Word document lives in `WordDocumentManager`, but the resulting PDF must be stored in `PdfDocumentManager`. Rather than hard coding both document managers into the tool class, `OfficeToPdfAgentTools` accepts a `DocumentManagerCollection` and detects the correct manager dynamically at runtime based on the `sourceType` argument.
 
@@ -52,13 +53,13 @@ Document Managers are in-memory containers that manage document life cycles duri
 
 ## Document Storage Manager
 
-Document Storage Managers reads documents from and writes them back to storage (such as Azure Blob Storage, S3, or local disk) on each tool invocation; no in‑memory objects are maintained, so every tool call opens and saves document instances, making this mode well suited for web APIs and applications that require horizontal scaling, support large documents, or need state persistence across sessions.
+Document Storage Manager reads documents from and writes them back to storage (such as Azure Blob Storage, S3, or local disk) on each tool invocation; no in‑memory objects are maintained, so every tool call opens and saves document instances, making this mode well suited for web APIs and applications that require horizontal scaling, support large documents, or need state persistence across sessions.
 
 ## PDF Tools
 
 **PdfDocumentAgentTools**
 
-Provides core life cycle operations for PDF documents — creating, loading, exporting, and managing PDF documents in memory.
+Provides core life cycle operations for PDF documents - creating, loading, exporting, and managing PDF documents in memory.
 
 | Tool | Syntax | Description |
 |---|---|---|
@@ -88,9 +89,9 @@ Provides encryption, decryption, permissions management, digital signing, and re
 |---|---|---|
 | EncryptPdf | EncryptPdf(<br/>string documentIdOrFilePath,<br/>string password,<br/>string encryptionAlgorithm = "AES",<br/>string keySize = "256",<br/>string? outputFilePath = null) | Protects a PDF document with a user password and applies the specified encryption algorithm and key size. |
 | DecryptPdf | DecryptPdf(<br/>string documentIdOrFilePath,<br/>string password,<br/>string? outputFilePath = null) | Removes encryption from a password-protected PDF document by clearing its security passwords and permissions. `password` is required for protected files. |
-| SetPermissions | SetPermissions(<br/>string documentIdOrFilePath,<br/>string permissions,<br/>string? password = null,<br/>string? outputFilePath = null) | Sets document permissions on a PDF such as print, copy, edit content, and more. Permissions are specified as a comma-separated string of flag names. |
+| SetPermissions | SetPermissions(<br/>string documentIdOrFilePath,<br/>PermissionsRequest permissions,<br/>string? password = null,<br/>string? outputFilePath = null) | Sets document permissions on a PDF such as print, copy, edit content, and more. Permissions are specified as a comma-separated string of flag names. |
 | RemovePermissions | RemovePermissions(<br/>string documentIdOrFilePath,<br/>string? password = null,<br/>string? outputFilePath = null) | Removes all document permissions from a PDF by resetting them to the default (unrestricted) state. |
-| SignPdf | SignPdf(<br/>string documentIdOrFilePath,<br/>string certificateFilePath,<br/>string certificatePassword,<br/>RectangleF bounds,<br/>string? appearanceImagePath = null,<br/>string? outputFilePath = null) | Digitally signs a PDF document using a PFX certificate and places the signature within the specified bounds. An optional appearance image can be provided for the visible signature. |
+| SignPdf | SignPdf(<br/>string documentIdOrFilePath,<br/>string certificateFilePath,<br/>string certificatePassword,<br/>RectangleF bounds,<br/>int pageIndex = 0,<br/>string? appearanceImagePath = null,<br/>string? outputFilePath = null) | Digitally signs a PDF document using a PFX certificate and places the signature within the specified bounds. An optional appearance image can be provided for the visible signature. |
 | RedactPdf | RedactPdf(<br/>string documentIdOrFilePath,<br/>RedactionRequest redaction,<br/>string? outputFilePath = null) | Redacts rectangular regions from an existing PDF document by permanently removing sensitive content and filling the areas with the specified color. `redaction` contains redaction items (page index, bounds, optional color). |
 
 
@@ -104,6 +105,7 @@ Provides tools for extracting text, images, and searching for text content in PD
 | ExtractImages | ExtractImages(<br/>string documentIdOrFilePath,<br/>int startPageIndex = -1,<br/>int endPageIndex = -1,<br/>string? outputPath = null) | Extracts  images from a PDF document across a specified page range or the entire document and saves them to the specified output folder. |
 | FindTextInPdf | FindTextInPdf(<br/>string documentIdOrFilePath,<br/>string[] text) | Searches a PDF document for matching array of text and returns all occurrences grouped by page with their bounding rectangle positions. |
 | GetPdfDocumentPageCount | GetPdfDocumentPageCount(<br/>string documentIdOrFilePath) | Returns the number of pages in the specified PDF document. |
+| GetPdfDocumentPageSize | GetPdfDocumentPageSize(<br/>string documentIdOrFilePath,<br/>int pageNumber) | Gets the width and height of a specific page in a PDF document. |
 
 
 **PdfAnnotationAgentTools**
@@ -120,13 +122,12 @@ Provides tools for watermarking, managing annotations, and importing/exporting f
 
 **PdfConverterAgentTools**
 
-Provides tools to convert PDF, HTML, and image files to PDF.
+Provides tools to convert PDF and image files to PDF.
 
 | Tool | Syntax | Description |
 |---|---|---|
 | ConvertPdfToPdfA | ConvertPdfToPdfA(<br/>string documentIdOrFilePath,<br/>PdfConformanceLevel conformanceLevel,<br/>string? outputFilePath = null) | Converts an existing PDF document to a PDF/A-compliant format. Supported conformance levels: `PdfA1B`, `PdfA2B`, `PdfA3B`, `Pdf_A4`, `Pdf_A4F`, `Pdf_A4E`. |
-| ConvertHtmlToPdf | ConvertHtmlToPdf(<br/>string urlOrFilePath,<br/>int pageWidth,<br/>int pageHeight,<br/>string? outputFilePath = null) | Converts a webpage URL or a local HTML file to a PDF document using explicit page width and height (in pixels). |
-| ImageToPdf | ImageToPdf(<br/>string[] imageFiles,<br/>PdfImagePosition imagePosition = PdfImagePosition.FitToPage,<br/>int pageWidth = 612,<br/>int pageHeight = 792,<br/>string? outputFilePath = null) | Creates a PDF document from one or more image files with control over image placement and page size. `imagePosition` values: `Stretch`, `Center`, `FitToPage`. |
+| ImageToPdf | ImageToPdf(<br/>string[] imageFiles,<br/>PdfImagePosition imagePosition = null,<br/>int pageWidth = 612,<br/>int pageHeight = 792,<br/>string? outputFilePath = null) | Creates a PDF document from one or more image files with control over image placement and page size. `imagePosition` values: `Stretch`, `Center`, `FitToPage`. |
 
 **PdfOcrAgentTools**
 
@@ -141,7 +142,7 @@ Provides tools to perform Optical Character Recognition (OCR) on PDF documents.
 
 **WordDocumentAgentTools**
 
-Provides core life cycle operations for Word documents — creating, loading, exporting, and managing Word documents in memory.
+Provides core life cycle operations for Word documents - creating, loading, exporting, and managing Word documents in memory.
 
 | Tool | Syntax | Description |
 |---|---|---|
@@ -261,7 +262,7 @@ Provides tools to manage bookmarks and bookmark content within Word documents.
 
 **ExcelWorkbookAgentTools**
 
-Provides core life cycle operations for Excel workbooks — creating, loading, exporting, and managing workbooks in memory.
+Provides core life cycle operations for Excel workbooks - creating, loading, exporting, and managing workbooks in memory.
 
 | Tool | Syntax | Description |
 |---|---|---|
@@ -305,7 +306,7 @@ Provides tools to create modify and remove charts in excel workbooks
 |---|---|---|
 | CreateChart | CreateChart(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string chartType,<br/>string dataRange,<br/>bool isSeriesInRows = false,<br/>int topRow = 8,<br/>int leftColumn = 1,<br/>int bottomRow = 23,<br/>int rightColumn = 8,<br/>string? outputFilePath = null) | Creates a chart from a data range in the worksheet. Supports many chart types (e.g., `Column_Clustered`, `Line`, `Pie`, `Bar_Clustered`). Returns the chart index. |
 | CreateChartWithSeries | CreateChartWithSeries(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string chartType,<br/>string seriesName,<br/>string valuesRange,<br/>string categoryLabelsRange,<br/>int topRow = 8,<br/>int leftColumn = 1,<br/>int bottomRow = 23,<br/>int rightColumn = 8,<br/>string? outputFilePath = null) | Creates a chart and adds a named series with values and category labels. Returns the chart index. |
-| AddSeriesToChart | AddSeriesToChart(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>int chartIndex,<br/>string seriesName,<br/>string valuesRange,<br/>string categoryLabelsRange,<br/>string? outputFilePath = null) | Adds a new series to an existing chart. |
+| AddSeriesToChart | AddSeriesToChart(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>int chartIndex,<br/>string seriesName,<br/>string valuesRange,<br/>string categoryLabelsRange = "",<br/>string? outputFilePath = null) | Adds a new series to an existing chart. |
 | SetChartElement | SetChartElement(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>int chartIndex,<br/>int seriesIndex,<br/>string title,<br/>bool hasLegend,<br/>string position = "Bottom",<br/>bool showValue = true,<br/>bool showCategoryName = false,<br/>bool showSeriesName = false,<br/>string dataLabelPosition = "Outside",<br/>string? categoryAxisTitle = null,<br/>string? valueAxisTitle = null,<br/>string? outputFilePath = null) | Sets chart elements including title, legend, data labels, and axis titles. `position` (legend): `Bottom`, `Top`, `Left`, `Right`, `Corner`. `dataLabelPosition`: `Outside`, `Inside`, `Center`, etc. |
 
 
@@ -340,12 +341,12 @@ Provides tools to add data validation to workbook
 
 | Tool | Syntax | Description |
 |---|---|---|
-| AddDropdownValidation | AddDropdownValidation(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string rangeAddress,<br/>string sourceRange,<br/>string listValues,<br/>bool showErrorBox = true,<br/>string? errorTitle = null,<br/>string? errorMessage = null,<br/>bool showPromptBox = false,<br/>string? promptMessage = null,<br/>string? outputFilePath = null) | Adds a dropdown list data validation to a cell or range. List values are limited to 255 characters including separators. |
-| AddNumberValidation | AddNumberValidation(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string rangeAddress,<br/>string numberType,<br/>string comparisonOperator,<br/>string firstValue,<br/>string? secondValue = null,<br/>bool showErrorBox = true,<br/>string? errorTitle = null, <br/>string? errorMessage = null, <br/>bool showPromptBox = false,<br/>string? promptMessage = null,<br/>string? outputFilePath = null) | Adds number validation to a cell or range with specified comparison operator and values. |
+| AddDropdownValidation | AddDropdownValidation(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string rangeAddress,<br/>string sourceRange = null,<br/>string listValues = "",<br/>bool showErrorBox = true,<br/>string? errorTitle = null,<br/>string? errorMessage = null,<br/>bool showPromptBox = false,<br/>string? promptMessage = null,<br/>string? outputFilePath = null) | Adds a dropdown list data validation to a cell or range. List values are limited to 255 characters including separators. |
+| AddNumberValidation | AddNumberValidation(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string rangeAddress,<br/>string numberType = "decimal",<br/>string comparisonOperator = "",<br/>string firstValue = "",<br/>string? secondValue = null,<br/>bool showErrorBox = true,<br/>string? errorTitle = null, <br/>string? errorMessage = null, <br/>bool showPromptBox = false,<br/>string? promptMessage = null,<br/>string? outputFilePath = null) | Adds number validation to a cell or range with specified comparison operator and values. |
 | AddDateValidation | AddDateValidation(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string rangeAddress,<br/>string comparisonOperator,<br/>string firstDate,<br/>string? secondDate = null,<br/>bool showErrorBox = true,<br/>string? errorTitle = null, <br/>string? errorMessage = null, <br/>bool showPromptBox = false,<br/>string? promptMessage = null,<br/>string? outputFilePath = null) | Adds date validation to a cell or range with specified comparison operator and dates. |
 | AddTimeValidation | AddTimeValidation(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string rangeAddress,<br/>string comparisonOperator,<br/>string firstTime,<br/>string? secondTime = null,<br/>bool showErrorBox = true,<br/>string? errorTitle = null, <br/>string? errorMessage = null, <br/>bool showPromptBox = false,<br/>string? promptMessage = null,<br/>string? outputFilePath = null) | Adds time validation to a cell or range with specified comparison operator and time values. Use 24-hour format like 10:00 or 18:30. |
 | AddTextLengthValidation | AddTextLengthValidation(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string rangeAddress,<br/>string comparisonOperator,<br/>string firstLength,<br/>string? secondLength = null,<br/>bool showErrorBox = true,<br/>string? errorTitle = null, <br/>string? errorMessage = null, <br/>bool showPromptBox = false,<br/>string? promptMessage = null,<br/>string? outputFilePath = null) | Adds text length validation to a cell or range with specified comparison operator and length values. |
-| AddCustomValidation | AddCustomValidation(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string rangeAddress,<br/>string formula,<br/>bool showErrorBox = true,<br/>string? errorTitle = null, <br/>string? errorMessage = null, <br/>bool showPromptBox = false,<br/>string? outputFilePath = null) | Adds custom formula-based validation to a cell or range. |
+| AddCustomValidation | AddCustomValidation(<br/>string workbookIdOrFilePath,<br/>string worksheetName,<br/>string rangeAddress,<br/>string formula,<br/>bool showErrorBox = true,<br/>string? errorTitle = null, <br/>string? errorMessage = null, <br/>bool showPromptBox = false,<br/>string? promptMessage = null,<br/>string? outputFilePath = null) | Adds custom formula-based validation to a cell or range. |
 
 
 **ExcelPivotTableAgentTools**
@@ -354,14 +355,14 @@ Provides tools to create, edit pivot table in workbook
 
 | Tool | Syntax | Description |
 |---|---|---|
-| CreatePivotTable | CreatePivotTable(<br/>string workbookIdOrFilePath,<br/>string dataWorksheetName,<br/>string dataRange,<br/>string pivotWorksheetName,<br/>string pivotTableName,<br/>string pivotLocation,<br/>string rowFieldIndices,<br/>string columnFieldIndices,<br/>int dataFieldIndex,<br/>string dataFieldCaption,<br/>string builtInStyle = "None",<br/>string subtotalType = "Sum",<br/>string? outputFilePath = null) | Creates a pivot table in the specified worksheet using a data range from a source worksheet. Supports row, column, and data (values) fields with a chosen aggregation function. `builtInStyle` options: `PivotStyleLight1-28`, `PivotStyleMedium1-28`, `PivotStyleDark1-28`, or `None`. `subtotalType` options: `Sum`, `Count`, `Average`, `Max`, `Min`, `Product`, `CountNumbs`, `StdDev`, `StdDevP`, `Var`, `VarP`. Only supported in XLSX format. |
+| CreatePivotTable | CreatePivotTable(<br/>string workbookIdOrFilePath,<br/>string dataWorksheetName,<br/>string dataRange,<br/>string pivotWorksheetName,<br/>string pivotTableName,<br/>string pivotLocation,<br/>string rowFieldIndices,<br/>string columnFieldIndices,<br/>int dataFieldIndex,<br/>string dataFieldCaption,<br/>string builtInStyle = "None",<br/>string subtotalType = "Sum",<br/>string? outputFilePath = null) | Creates a pivot table in the specified worksheet using a data range from a source worksheet. Supports row, column, and data (values) fields with a chosen aggregation function. `builtInStyle` options: `PivotStyleLight1-28`, `PivotStyleMedium1-28`, `PivotStyleDark1-28`, or `None`. `subtotalType` options: `Sum`, `Count`, `Average`, `Max`, `Min`, `Product`, `CountNums`, `StdDev`, `StdDevP`, `Var`, `VarP`. Only supported in XLSX format. |
 
 
 ## PowerPoint Tools
 
 **PresentationDocumentAgentTools**
 
-Provides core life cycle operations for PowerPoint presentations — creating, loading, exporting, and managing presentations in memory.
+Provides core life cycle operations for PowerPoint presentations - creating, loading, exporting, and managing presentations in memory.
 
 | Tool | Syntax | Description |
 |---|---|---|
@@ -438,12 +439,15 @@ Provides AI-powered structured data extraction from PDF documents and images, re
 | ExtractDataAsJSON | ExtractDataAsJSON(<br/>string inputFilePath,<br/>bool enableFormDetection = true,<br/>bool enableTableDetection = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>bool detectSignatures = true,<br/>bool detectTextboxes = true,<br/>bool detectCheckboxes = true,<br/>bool detectRadioButtons = true,<br/>bool detect_Border_less_Tables = true,<br/>string? outputFilePath = null) | Extracts structured data (text, forms, tables, checkboxes, signatures) from a PDF or image file and returns the result as JSON. |
 | ExtractTableAsJSON | ExtractTableAsJSON(<br/>string inputFilePath,<br/>bool detect_Border_less_Tables = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>string? outputFilePath = null) | Extracts only table data from a PDF document and returns the result as JSON. Optimized for table-focused extraction. |
 | RecognizeFormAsJson | RecognizeFormAsJson(<br/>string inputFilePath,<br/>bool detectSignatures = true,<br/>bool detectTextboxes = true,<br/>bool detectCheckboxes = true,<br/>bool detectRadioButtons = true,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/>string? outputFilePath = null) | Extracts only form field data from a PDF document and returns as JSON. Optimized for form-focused recognition. |
+| ConvertPDFtoMarkdown | ConvertPDFtoMarkdown(<br/>string inputFilePath,<br/>bool enableFormDetection = true,<br/>bool enableTableDetection = true,<br/>double confidenceThreshold = 0.6,<br/> int startPage = -1,<br/>int endPage = -1,<br/>bool detectSignatures = true,<br/>bool detectTextboxes = true,<br/>bool detectCheckboxes = true,<br/>bool detectRadioButtons = true,<br/>bool detectBorderlessTables = true,<br/>string? outputFilePath = null) | Convert PDF documents and scanned images into structured Markdown (MD) by extracting text, tables, headers, and form fields, with configurable detection and layout preservation. |
+| ConvertPDFTableToMarkdown | ConvertPDFTableToMarkdown(<br/>string inputFilePath,<br/>double confidenceThreshold = 0.6,<br/>int startPage = -1,<br/>int endPage = -1,<br/> bool detectBorderlessTables = true,<br/>string? outputFilePath = null) | Convert tables from PDF documents and scanned images into clean and well‑structured Markdown (MD) format by analyzing visual table structures, including bordered and border‑less tables, for accurate programmatic table extraction. |
 
 
 
 ## See Also
 
-- [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
-- [Getting Started](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/getting-started)
-- [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
-- [Example Prompts](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/example-prompts)
+- [Overview](./overview)
+- [Getting Started](./getting-started)
+- [Customization](./customization)
+- [Example Prompts](./example-prompts)
+- [Example Use Cases](example-use-cases)
