@@ -1,5 +1,5 @@
 ---
-title: How to handle circular references when retrieving calculated values? | Syncfusion
+title: Handle circular references when get calculated values | Syncfusion
 description: This FAQ explains how to handle circular references in Excel formulas when retrieving calculated values using Syncfusion XlsIO's calculation engine properties.
 platform: document-processing
 control: XlsIO
