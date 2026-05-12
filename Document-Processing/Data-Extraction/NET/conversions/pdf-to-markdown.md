@@ -68,6 +68,110 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-MD-from-PDF/.NET).
 
+## Extract a specific page to Markdown
+
+The following code demonstrates how to use the **ExtractDataAsMarkdown** method of the **DataExtractor** class to extract content from a selected page in a PDF and save it as a Markdown file by specifying its page index.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using System.Text;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Set the page index for extraction (example: page 2).
+    extractor.PageRange = new int[,] { { 2, 2 } };
+    //Extract data as Markdown using the API.
+    string data = extractor.ExtractDataAsMarkdown(stream);
+    //Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using System.Text;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Set the page index for extraction (example: page 2).
+    extractor.PageRange = new int[,] { { 2, 2 } };
+    //Extract data as Markdown using the API.
+    string data = extractor.ExtractDataAsMarkdown(stream);
+    //Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+
+			
+{% endhighlight %}
+
+{% endtabs %}
+
+
+## Extract a range of pages to Markdown
+
+The following code demonstrates how to use the **ExtractDataAsMarkdown** method of the **DataExtractor** class to extract content from a range of pages in a PDF and save it as a Markdown file by specifying the page range.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using System.Text;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+
+    //Set the page range for extraction (pages 1 to 3).
+    extractor.PageRange = new int[,] { { 1, 3 } };
+
+    //Extract data as Markdown using the API.
+    string data = extractor.ExtractDataAsMarkdown(stream);
+
+    //Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using System.Text;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Set the page range for extraction (pages 1 to 3).
+    extractor.PageRange = new int[,] { { 1, 3 } };
+    //Extract data as Markdown using the API.
+    string data = extractor.ExtractDataAsMarkdown(stream);
+    //Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## PDF to Markdown Preservation Mapping
 

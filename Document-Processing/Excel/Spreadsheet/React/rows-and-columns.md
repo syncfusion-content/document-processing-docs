@@ -9,11 +9,13 @@ documentation: ug
 
 # Rows and columns in React Spreadsheet component
 
-Spreadsheet is a tabular format consisting of rows and columns. The intersection point of rows and columns are called as cells. The list of operations that you can perform in rows and columns are,
+A spreadsheet is organized in a tabular format consisting of **rows** and **columns**. The intersection of a row and a column is called a **cell**.
 
-* Insert
-* Delete
-* Show and Hide
+The list of operations that you can perform on rows and columns includes:
+
+* **Insert** – Add new rows or columns to the worksheet.
+* **Delete** – Remove existing rows or columns from the worksheet.
+* **Show and Hide** – Control the visibility of rows and columns by hiding or unhiding them.
 
 ## Insert
 

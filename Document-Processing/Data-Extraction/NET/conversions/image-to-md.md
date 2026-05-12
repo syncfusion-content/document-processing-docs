@@ -1,5 +1,5 @@
 ---
-title: Extract Image to MD in C# | Smart Data Extractor | Syncfusion
+title: Extract Image to Markdown in C# | Smart Data Extractor | Syncfusion
 description: Learn how to extract structured content from images as Markdown in C# using the Syncfusion® Smart Data Extractor library for .NET applications.
 platform: document-processing
 control: SmartDataExtractor
