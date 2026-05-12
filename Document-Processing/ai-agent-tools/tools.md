@@ -15,8 +15,8 @@ Agent tools support two operational modes that determine how documents are handl
 
 The operational mode is determined by the manager used when initializing the tool.
 
-- [Document Managers](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools#document-managers) (In‑Memory Mode)
-- [Document Storage Manager](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools#document-storage-manager) (Storage Mode)
+- [Document Managers](#document-managers) (In‑Memory Mode)
+- [Document Storage Manager](#document-storage-manager) (Storage Mode)
 
 Tools are organized into the following categories:
 
