@@ -122,7 +122,7 @@ To extract form fields across a PDF document using the **ExtractDataAsJson** met
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-PDF/.NET/Extract-data-as-JSON-from-PDF-document/Program.cs" %}
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;
@@ -142,7 +142,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight c# tabtitle="C# [Windows-specific]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-PDF/.NET/Extract-data-as-JSON-from-PDF-document/Program.cs" %}
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;

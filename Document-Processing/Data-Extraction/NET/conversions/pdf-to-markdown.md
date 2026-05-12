@@ -24,7 +24,7 @@ To extract form fields across a PDF document using the **ExtractDataAsMarkdown**
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-MD-from-PDF/.NET/Extract-data-as-MD-from-PDF/Program.cs" %}
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;
@@ -44,7 +44,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight c# tabtitle="C# [Windows-specific]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-MD-from-PDF/.NET/Extract-data-as-MD-from-PDF/Program.cs" %}
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;
@@ -126,7 +126,7 @@ The following code demonstrates how to use the **ExtractDataAsMarkdown** method 
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]"%}
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;
