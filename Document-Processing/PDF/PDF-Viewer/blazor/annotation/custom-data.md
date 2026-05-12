@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Data in Annotations in Blazor SfPdfViewer Component | Syncfusion
+title: Custom Data in Annotation Blazor SfPdfViewer Component | Syncfusion
 description: Learn how to use custom data in annotations in the Syncfusion Blazor SfPdfViewer to attach metadata to annotations.
 platform: document-processing
 control: SfPdfViewer

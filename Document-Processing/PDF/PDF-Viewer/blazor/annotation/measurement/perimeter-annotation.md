@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Perimeter Measurement Annotations in Blazor SfPdfViewer Component | Syncfusion
+title: Add Perimeter Annotation in Blazor SfPdfViewer Component | Syncfusion
 description: Learn how to enable, draw, customize, and manage Perimeter measurement annotations in the Syncfusion Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
@@ -229,7 +229,7 @@ Update properties and call `EditAnnotationAsync()`.
 
 ### Delete Perimeter Annotation
 
-Delete Perimeter Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Perimeter Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
 Apply defaults for Perimeter using the [`PerimeterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PerimeterSettings) property.
@@ -302,9 +302,9 @@ Pass per‑annotation values directly when calling [`AddAnnotationAsync`](https:
 ## Scale Ratio and Units
 
 - Use **Scale Ratio** from the context menu to set the actual‑to‑page scale.  
-  ![Scale ratio](../images/blazor-pdfviewer-calibrate-scaleratio.png)
+  ![Scale ratio](../../images/blazor-pdfviewer-calibrate-scaleratio.png)
 - Supported units include **Inch, Millimeter, Centimeter, Point, Pica, Feet**.  
-  ![Scale dialog](../images/blazor-pdfviewer-calibrate-scaledialog.png)
+  ![Scale dialog](../../images/blazor-pdfviewer-calibrate-scale-dialog.png)
 
 ### Set Default Scale Ratio During Initialization
 Configure scale defaults using [`MeasurementSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerMeasurementSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerMeasurementSettings_ScaleRatio).
