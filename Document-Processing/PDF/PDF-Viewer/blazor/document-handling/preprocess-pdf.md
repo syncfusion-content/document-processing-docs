@@ -67,17 +67,11 @@ Use the following code-snippet when you want uploaded PDFs to be flattened befor
 @using Syncfusion.Pdf
 @using Syncfusion.Pdf.Parsing
 
-
-
 <SfPdfViewer2 Height="600px" Width="100%" @ref="Viewer"><PdfViewerEvents Created="OnCreated"></PdfViewerEvents></SfPdfViewer2>
 @code{
-
     private SfPdfViewer2? Viewer;
-
     async Task OnCreated()
-
     {
-
         if (Viewer is null) return;
         PdfLoadedDocument loadedDocument = new PdfLoadedDocument("wwwroot/Annotations.pdf");
 
@@ -103,9 +97,7 @@ Use the following code-snippet when you want uploaded PDFs to be flattened befor
         loadedDocument.Close(true);
         // Reload flattened document into viewer        
         await Viewer.LoadAsync(flattenedBytes);
-
     }
-
 }
 ```
 

@@ -12,8 +12,6 @@ domainurl: ##DomainURL##
 
 This section explains how to load and render **large PDF files (up to approximately 1 GB)** efficiently using the Syncfusion Blazor PDF Viewer. It also covers the recommended configurations required to achieve stable and responsive performance while working with large documents.
 
-Large PDF rendering in the Blazor PDF Viewer is supported through **chunk-based processing**, which allows the document to be processed incrementally instead of downloading and rendering the entire file in a single request.
-
 ## Why Large PDFs Require Special Handling
 
 Large PDF files may contain:

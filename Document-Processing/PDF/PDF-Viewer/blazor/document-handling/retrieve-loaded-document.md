@@ -7,14 +7,14 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve the Loaded Document Instance in Blazor PDF Viewer
+# Retrieve the Blazor PDF Viewer Instance
 
-This page explains how to access the Blazor PDF Viewer instance using Blazor component references, listen for the `OnCreated` event, and retrieve document information, page details, and metadata—so you can safely invoke viewer APIs after the PDF is loaded.
+This page explains how to access the Blazor PDF Viewer instance using Blazor component references, listen for the `Created` event, and retrieve document information, page details, and metadata—so you can safely invoke viewer APIs after the PDF is loaded.
 
 ## Explanation: Why access the loaded document instance?
 
 - The viewer instance (via **Blazor component reference**) gives you a stable handle to call APIs such as [`Zoom`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/magnification), [`Print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/print), [`Download`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/saving-pdf-file#download), and [`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/navigation).
-- The **OnCreated event** (fires after the PDF is parsed and pages are ready) is the correct moment to read **document information** (title, author, page count, etc.) and **page metrics**, and to trigger post‑load UI logic.
+- The **Created event** (fires after the PDF is parsed and pages are ready) is the correct moment to read **document information** (title, author, page count, etc.) and **page metrics**, and to trigger post‑load UI logic.
 - Accessing the instance too early (before load completes) may cause null/undefined errors or incomplete information.
 
 ## Reference: What you can access/call after load
@@ -29,13 +29,13 @@ After the PDF is loaded you can:
   - **Interactions**: enable/disable features
   - **Export**: `Download()`, `Print()`
 
-> Always invoke these after the `OnCreated` event fires, or from user actions that occur after load. Guard calls with null checks or readiness flags.
+> Always invoke these after the `Created` event fires, or from user actions that occur after load. Guard calls with null checks or readiness flags.
 
 ## How‑to: Get the instance with a ref and read details on load
 
 Below is a focused snippet showing:
 1) Creating a **component reference** for the viewer,
-2) Wiring the **`OnCreated`** event, and
+2) Wiring the **`Created`** event, and
 3) Reading basic **document info** and **page count**, then calling **viewer APIs** safely.
 
 ```cs
