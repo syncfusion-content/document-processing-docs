@@ -30,7 +30,7 @@ This example use case demonstrates building a **Blog Generator** that uses the [
 <tr>
 <td>NuGet Packages</td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core">Syncfusion.DocumentSDK.AI.AgentTools</a><br/>
+<a href="https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools">Syncfusion.DocumentSDK.AI.AgentTools</a><br/>
 <a href="https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI">Microsoft.Agents.AI.OpenAI</a><br/>
 <a href="https://www.nuget.org/packages/OpenAI">OpenAI</a>
 </td>
@@ -190,7 +190,7 @@ At runtime, the console application performs the following actions:
 For a complete, runnable example combining all steps, refer to the console
 application in this repository:
 
-[Examples/Console/BlogGenerator/Program.cs](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main)
+[Examples/Console/BlogGenerator/Program.cs](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs)
 
 ## See Also
 
