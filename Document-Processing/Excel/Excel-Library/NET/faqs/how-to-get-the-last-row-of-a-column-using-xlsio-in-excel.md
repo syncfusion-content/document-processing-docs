@@ -1,12 +1,12 @@
 ---
-title: Last row of a particular column in an Excel file using XlsIO | Syncfusion
+title: Last row of a column in Excel file using XlsIO | Syncfusion
 description: This FAQ explains how to find the last row with data in a specific column of an Excel worksheet using Syncfusion XlsIO and retrieve used range boundaries.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to find the last row of a particular column in an Excel file using XlsIO?
+# How to get the last row of a column using XlsIO in Excel?
 
 Finding the last row of a specific column helps you determine the exact extent of data in that column. XlsIO provides access to the worksheet's used range through the [IWorksheet.UsedRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) property, which you can use to iterate backward through rows and identify cells with data in a particular column.
 
@@ -61,7 +61,7 @@ private static int GetLastRow(int column, WorksheetImpl worksheet)
     }
     return -1;
 }
-{% highlight %}
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -111,7 +111,7 @@ private static int GetLastRow(int column, WorksheetImpl worksheet)
     }
     return -1;
 }
-{% highlight %}
+{% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Sub Main(args As String())
@@ -158,7 +158,7 @@ Private Function GetLastRow(column As Integer, worksheet As WorksheetImpl) As In
     Next
     Return -1
 End Function
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1005966-Last-Row/FAQ/Last%20Row">this GitHub page</a>.
