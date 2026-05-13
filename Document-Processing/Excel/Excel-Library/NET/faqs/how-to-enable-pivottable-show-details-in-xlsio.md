@@ -1,6 +1,6 @@
 ---
 title: How to enable PivotTable Show Details in XlsIO? | Syncfusion
-description: Shows how to enable the PivotTable "Show Details" (drilldown) feature in Syncfusion XlsIO so double-clicking a value opens the underlying rows.
+description: This page explains how to enable pivot table show details option using XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # How to enable PivotTable Show Details in XlsIO?
 
-You can enable the PivotTable "Show Details" (drilldown) behavior by setting the implementation property `EnableDrilldown` to `true`. This causes Excel to open a new sheet with the underlying rows when a user double-clicks a summarized value.
+The PivotTable "Show Details" (drilldown) behavior can be enabled by setting the `EnableDrilldown` implementation property to `true` using syncfusion XlsIO.
 
 The following code examples show how to enable drilldown in XlsIO.
 
