@@ -1,6 +1,6 @@
 ---
 title: Can pivot table cell values be edited? | Syncfusion
-description: This page explains whether the cell values of pivot table can be edited using XlsIO
+description: This page explains in detail whether the cell values of a pivot table can be edited using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
