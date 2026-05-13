@@ -20,6 +20,8 @@ AI Coding Assistant:
 
   * **The SyncfusionPDFViewerSDKAssistant MCP Server** is engineered to interpret advanced natural‑language prompts and deliver intelligent, context‑aware code suggestions through [MCP-compatible clients](https://modelcontextprotocol.io/clients). Its primary goal is to simplify and accelerate development by bringing a rich suite of **[PDF Viewer features](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview)** directly into application workflows. It is compatible with a wide range of platforms, such as Windows Forms, WPF, JavaScript, Angular, React, Vue, ASP.NET MVC, ASP.NET Core, Blazor, MAUI, and Flutter.
 
+  * **The SyncfusionDocxEditorSDKAssistant MCP Server** is designed to process advanced prompts and deliver intelligent, context-aware code suggestions through [MCP-compatible clients](https://modelcontextprotocol.io/clients). It specifically enhances developer productivity with **[Docx Editor](https://help.syncfusion.com/document-processing/word/word-processor/overview)** capabilities across multiple platforms, including ASP.NET Core, ASP.NET MVC, Angular, React, Vue, JavaScript (ES5/ES6), UWP, WPF, and Blazor.
+
 ## Getting Started
 
 To use the AI Coding Assistant, you need:
@@ -42,6 +44,8 @@ To use the AI Coding Assistant, you need:
   * Add the <a href="./getting-started/documentsdk">SyncfusionDocumentSDKAssistant MCP Server</a>  to an MCP-enabled client
   * Add the <a href="./getting-started/spreadsheeteditorsdk">SyncfusionSpreadsheetEditorSDKAssistant MCP Server</a>  to an MCP-enabled client
   * Add the <a href="./getting-started/pdfviewersdk">The SyncfusionPDFViewerSDKAssistant MCP Server</a>  to an MCP-enabled client
+  * Add the <a href="./getting-started/docxeditorsdk">The SyncfusionDocxEditorSDKAssistant MCP Server</a>  to an MCP-enabled client
   *	[Syncfusion<sup>&reg;</sup> Document SDK Documentation](https://help.syncfusion.com/document-processing/introduction)
   *	[Syncfusion<sup>&reg;</sup> SpreadsheetEditor SDK Documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/overview)
-  *	[Syncfusion<sup>&reg;</sup> PDFViewer SDK Documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview)  
+  *	[Syncfusion<sup>&reg;</sup> PDFViewer SDK Documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview)
+  *	[Syncfusion<sup>&reg;</sup> DocxEditor SDK Documentation](https://help.syncfusion.com/document-processing/word/word-processor/overview)

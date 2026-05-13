@@ -33,6 +33,7 @@ Syncfusion MCP Servers are delivered as .NET-based Model Context Protocol (MCP) 
 * SyncfusionDocumentSDKAssistant
 * SyncfusionSpreadsheetEditorSDKAssistant
 * SyncfusionPDFViewerSDKAssistant
+* SyncfusionDocxEditorSDKAssistant
 
 ## Unlimited Access
 
