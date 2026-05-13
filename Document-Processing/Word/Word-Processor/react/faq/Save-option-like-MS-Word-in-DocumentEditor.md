@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why no direct file saving like in Microsoft Word? | Syncfusion
-description: Learn here about why no direct file saving like Microsoft Word in Document Editor
+description: Learn here about Why the Document Editor does not support saving files directly like Microsoft Word
 control: Unsupported file 
 platform: document-processing
 documentation: ug
