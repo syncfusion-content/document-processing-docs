@@ -1,5 +1,5 @@
 ---
-title: How to remove both horizontal and vertical axis in a chart? | Syncfusion
+title: Remove horizontal and vertical axes in a chart | Syncfusion
 description: This page explains how to remove the horizontal and vertical axis in a chart.
 platform: document-processing
 control: XlsIO
