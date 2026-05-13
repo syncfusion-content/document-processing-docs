@@ -9,37 +9,35 @@ documentation: ug
 
 # Group Form Fields in ASP.NET Core PDF Viewer
 
-The Syncfusion ASP.NET Core PDF Viewer allows grouping multiple form fields into a single logical field by assigning the same Name. Grouped fields share values and states automatically based on field type. Form field grouping can be done using the Form Designer UI or programmatically via APIs.
-
-This page covers:
+The **Syncfusion ASP .Net Core PDF Viewer** allows grouping multiple form fields into a single logical field by assigning the same `Name` to them. Grouped form fields share their values and states automatically based on the field type. Use the Form Designer UI for manual grouping or the Form Designer APIs for programmatic grouping to keep related fields synchronized across the document.
 - [How form field grouping works](#how-grouping-works)
 - [Field behavior based on type](#field-behavior-by-type)
 - [How to group form fields using the UI](#group-using-the-form-designer-ui)
 - [How to group form fields programmatically](#group-pdf-form-fields-programmatically)
-- [Example scenarios](#example-scenarios)
+- [Related references and samples](#example-scenarios)
 
-## How Grouping Works
+## How grouping works
 
-In a PDF form, multiple PDF Form Fields can represent the same logical form field. When fields share the same Name, they are treated as a group and remain synchronized.
+In a PDF form, multiple widgets can represent the same logical form field. When widgets share the same `Name`, they are treated as a group and remain synchronized.
 
-## Field Behavior by Type
+## Field behavior by type
 
-- **Textbox and Password** — Text entered in one widget appears in all widgets with the same Name.
-- **CheckBox** — Checking one widget sets the checked state for all checkboxes with the same Name.
-- **RadioButton** — Widgets with the same Name form a radio group; only one option can be selected.
-- **ListBox and DropDown** — The selected value is shared across widgets with the same Name.
-- **Signature and Initial fields** — Applied signatures or initials are mirrored across grouped widgets.
+- **Textbox and Password** — Text entered in one widget appears in all widgets with the same name.  
+- **CheckBox** — Checking one widget sets the checked state for all checkboxes with the same name.  
+- **RadioButton** — Widgets with the same name form a radio group; only one option can be selected.  
+- **ListBox and DropDown** — The selected value is shared across widgets with the same name.  
+- **Signature and Initial fields** — Applied signature/initial is mirrored across grouped widgets.
 
-N> Form field grouping is controlled by the Name property. Widget position is determined only by bounds; grouping is unaffected by location.
+N> form field grouping is controlled by the `Name` property. The position of each widget is determined by its bounds; grouping is independent of location.
 
-## Group Using the Form Designer UI
+## Group using the Form Designer UI
 
 **Steps**
 1. Enable the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar).
-2. Add the form fields to group.
-3. Select a form field, open Properties, and set the Name value.
-4. Assign the same Name to all PDF Form Fields in the group.
-5. Apply changes and verify that updates in one widget reflect in others.
+2. Add the form fields you want to group.
+3. Select a form field, open **Properties**, and set the **Name** value.
+4. Assign the same **Name** to all PDF Form Field that belong to the group.
+5. Apply the changes and verify that updates in one widget reflect in the others.
 
 ![Grouping textboxes with the same name](../../javascript-es6/images/groupTextFileds.png)
 
@@ -47,17 +45,17 @@ N> Form field grouping is controlled by the Name property. Widget position is de
 
 ## Group PDF Form Fields Programmatically
 
-Form fields can be grouped during creation by assigning the same Name through code.
+You can also group form fields during creation by assigning the same **Name** through code.
 
 ### Example Scenarios
-- Two textboxes named EmployeeId share the same value.
-- A radio button group named Gender allows single selection.
-- Two checkboxes named Subscribe share the checked state.
+- Two textboxes named **EmployeeId** share the same value.
+- A radio button group named **Gender** allows single selection.
+- Two checkboxes named **Subscribe** share the checked state.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf">
     </ejs-pdfviewer>
 </div>
 

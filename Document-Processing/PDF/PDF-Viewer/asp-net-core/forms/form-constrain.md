@@ -1,15 +1,15 @@
 ---
 layout: post
-title: PDF form field flags in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the Syncfusion ASP.NET Core PDF Viewer.
+title: Form constraints in the ASP.NET Core PDF Viewer component | Syncfusion
+description: Learn how to configure form field constraints such as isReadOnly, isRequired, and isPrint in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# PDF Form Field Flags in ASP.NET Core PDF Viewer
+# PDF form field flags in ASP.NET Core PDF Viewer
 
-The Syncfusion ASP.NET Core PDF Viewer allows controlling how users interact with form fields and how those fields behave during validation and printing by applying form field flags. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
+The **Syncfusion ASP.NET Core PDF Viewer** allows you to control how users interact with form fields and how those fields behave during validation and printing by applying **form field flags**. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
 
 This topic explains:
 - [Supported form field flags](#supported-pdf-form-field-flags)
@@ -34,117 +34,152 @@ The following flags are supported in the PDF Viewer:
 ## Key Actions
 
 ### Make Fields Read Only
-
-The **isReadOnly** property prevents users from modifying a form field through the UI. This is useful for displaying prefilled or calculated values that should not be changed.
+Use the **isReadOnly** property to prevent users from modifying a form field through the UI. This is useful for displaying pre-filled or calculated values that should not be changed by the user.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-  pdfviewer.documentLoad = function () {
-    // Read-only Textbox
-    pdfviewer.formDesignerModule.addFormField('Textbox', {
-      name: 'EmployeeId',
-      bounds: { X: 146, Y: 229, Width: 150, Height: 24 },
-      isReadOnly: true,
-      value: 'EMP-0001'
-    });
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+                   documentLoad="onDocumentLoad">
+    </ejs-pdfviewer>
+</div>
 
-    // Read-only Signature field
-    pdfviewer.formDesignerModule.addFormField('SignatureField', {
-      name: 'ApplicantSign',
-      bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
-      isReadOnly: true,
-      tooltip: 'Sign to accept the terms'
-    });
-  };
-});
+<script>
+    function onDocumentLoad() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+
+        // Read-only Textbox
+        viewer.formDesignerModule.addFormField('Textbox', {
+            name: 'EmployeeId',
+            bounds: { X: 146, Y: 229, Width: 150, Height: 24 },
+            isReadOnly: true,
+            value: 'EMP-0001'
+        });
+
+        // Read-only Signature field
+        viewer.formDesignerModule.addFormField('SignatureField', {
+            name: 'ApplicantSign',
+            bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
+            isReadOnly: true,
+            tooltip: 'Sign to accept the terms'
+        });
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
-### Mark Fields as Required
 
-The **isRequired** property marks form fields as mandatory. To enforce this constraint, enable form field validation and validate fields before allowing actions such as printing or downloading.
+### Mark Fields as Required
+Use the **isRequired** property to mark form fields as mandatory. To enforce this constraint, enable form field validation and validate fields before allowing actions such as printing or downloading.
 
 - Enable validation using [enableFormFieldsValidation](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormFieldsValidation)
 - [Validate fields](./form-validation) using [validateFormFields()](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields)
 
-When required fields are empty, validation can prevent further actions.
+If required fields are empty, validation can prevent further actions.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-  // 1) Default for new Textbox fields
-  pdfviewer.textFieldSettings = { isRequired: true };
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+                   documentLoad="onDocumentLoad"
+                   enableFormFieldsValidation="true"
+                   validateFormFields="onValidateFormFields">
+    </ejs-pdfviewer>
+</div>
 
-  // 2) Validation wiring
-  pdfviewer.enableFormFieldsValidation = true;
-  pdfviewer.validateFormFields = function (args) {
-    // Triggers when required fields are empty on submit/validate
-    if (args && args.formField && args.formField.length > 0) {
-      alert('Please fill all required fields. Missing: ' + args.formField[0].name);
+<script>
+    function onDocumentLoad() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+
+        // Apply default settings for new Textbox fields (isRequired: true)
+        viewer.textFieldSettings = { isRequired: true };
+
+        // Add a required Textbox
+        viewer.formDesignerModule.addFormField('Textbox', {
+            name: 'Email',
+            bounds: { X: 146, Y: 260, Width: 220, Height: 24 },
+            isRequired: true,
+            tooltip: 'Email is required'
+        });
     }
-  };
 
-  // 3) Creation (add a Textbox form field once the document is loaded)
-  pdfviewer.documentLoad = function () {
-    pdfviewer.formDesignerModule.addFormField('Textbox', {
-      name: 'Email',
-      bounds: { X: 146, Y: 260, Width: 220, Height: 24 },
-      isRequired: true,
-      tooltip: 'Email is required'
-    });
-  };
-});
+    function onValidateFormFields(args) {
+        // Check for missing required fields
+        if (args && args.formField && args.formField.length > 0) {
+            alert('Please fill all required fields. Missing: ' + args.formField[0].name);
+        }
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ### Control Print Behavior
-
-The **isPrint** property controls whether a form field appears in the printed output of the PDF document.
+Use the **isPrint** property to control whether a form field appears in the printed output of the PDF document.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-  // 1) Default for new signature fields
-  pdfviewer.signatureFieldSettings = { isPrint: false };
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+                   documentLoad="onDocumentLoad">
+    </ejs-pdfviewer>
+</div>
 
-  // 2) Creation (do not print a signature field)
-  pdfviewer.documentLoad = function () {
-    pdfviewer.formDesignerModule.addFormField('SignatureField', {
-      name: 'ApplicantSign',
-      bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
-      isPrint: false
-    });
+<script>
+    var viewer;
 
-    // 3) Update existing field (toggle to print)
-    var sign = pdfviewer.formFieldCollections.find(function (f) { return f.name === 'ApplicantSign'; });
-    if (sign) {
-      pdfviewer.formDesignerModule.updateFormField(sign, { isPrint: true });
+    function onDocumentLoad() {
+        viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+
+        // Default for new signature fields (isPrint: false)
+        viewer.signatureFieldSettings = { isPrint: false };
+
+        // Add a signature field with isPrint: false
+        viewer.formDesignerModule.addFormField('SignatureField', {
+            name: 'ApplicantSign',
+            bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
+            isPrint: false
+        });
+
+        // Update existing field (toggle to print = true)
+        // A small timeout ensures the field is available in collections
+        setTimeout(function() {
+            var fields = viewer.formFieldCollections || 
+                        (viewer.retrieveFormFields ? viewer.retrieveFormFields() : []) ||
+                        [];
+
+            var sign = fields.find(function(f) { return f && f.name === 'ApplicantSign'; });
+            if (sign) {
+                viewer.formDesignerModule.updateFormField(sign, { isPrint: true });
+            }
+        }, 0);
     }
-  };
-});
 </script>
 {% endhighlight %}
 {% endtabs %}
 
-N> Printing can be triggered programmatically using **pdfviewer.print()**. Form fields with **isPrint: false** are excluded from the printed output.
+
+N> Printing can be triggered programmatically using `pdfviewer.print()`. Form fields with `isPrint: false` are excluded from printed output.
 
 ## Apply PDF Form Field Flags Using the UI
 
 **Steps**
-1. Enable Form Designer mode in the PDF Viewer.
-2. Select an existing form field on the PDF page.
-3. Right-click to open the context menu and select Properties.
-4. Configure the required constraint options.
-5. Click OK to close the properties popover and apply changes.
+1. Enable **Form Designer** mode in the PDF Viewer.  
+2. Select an existing form field on the PDF page.  
+3. Right-click the field, open the context menu, and select Properties.  
+4. Configure the required constraint options.  
+5. Click OK to apply changes and close the properties popover.  
 
 Changes are reflected immediately in the viewer.
 
@@ -152,115 +187,133 @@ Changes are reflected immediately in the viewer.
 
 ## Apply PDF Form Field Flags Programmatically
 
-Form field flags can be applied or modified in the following ways.
+You can apply or modify form field flags in the following ways.
 
-### Apply Flags When Creating Fields
-
-Flags properties can be passed in the settings object when creating form fields using **addFormField()**.
-
-{% tabs %}
-{% highlight cshtml tabtitle="Standalone" %}
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-  pdfviewer.documentLoad = function () {
-    // Read-only Textbox that is printed but not required
-    pdfviewer.formDesignerModule.addFormField('Textbox', {
-      name: 'EmployeeId',
-      bounds: { X: 146, Y: 229, Width: 150, Height: 24 },
-      isReadOnly: true,
-      isRequired: false,
-      isPrint: true,
-      value: 'EMP-0001'
-    });
-
-    // Required Signature field that is not included in print
-    pdfviewer.formDesignerModule.addFormField('SignatureField', {
-      name: 'ApplicantSign',
-      bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
-      isReadOnly: false,
-      isRequired: true,
-      isPrint: false,
-      tooltip: 'Sign to accept the terms'
-    });
-  };
-});
-</script>
-{% endhighlight %}
-{% endtabs %}
-
-### Update Flags on Existing Fields Programmatically
-
-The [updateFormField()](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html) method modifies constraint values on existing form fields.
+### Apply flags when creating fields
+Pass the flags properties in the settings object when creating form fields using **addFormField()**.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+                   documentLoad="onDocumentLoad">
     </ejs-pdfviewer>
 </div>
 
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-  pdfviewer.documentLoad = function () {
-    // Add a sample textbox
-    pdfviewer.formDesignerModule.addFormField('Textbox', {
-      name: 'Email',
-      bounds: { X: 146, Y: 260, Width: 220, Height: 24 }
-    });
+<script>
+    function onDocumentLoad() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
 
-    // Retrieve it and update constraint flags
-    var field = pdfviewer.formFieldCollections.find(function (f) { return f.name === 'Email'; });
-    if (field) {
-      pdfviewer.formDesignerModule.updateFormField(field, {
-        isReadOnly: false,
-        isRequired: true,
-        isPrint: true,
-        tooltip: 'Enter a valid email'
-      });
+        // Read-only Textbox that is printed but not required
+        viewer.formDesignerModule.addFormField('Textbox', {
+            name: 'EmployeeId',
+            bounds: { X: 146, Y: 229, Width: 150, Height: 24 },
+            isReadOnly: true,
+            isRequired: false,
+            isPrint: true,
+            value: 'EMP-0001'
+        });
+
+        // Required Signature field that is not included in print
+        viewer.formDesignerModule.addFormField('SignatureField', {
+            name: 'ApplicantSign',
+            bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
+            isReadOnly: false,
+            isRequired: true,
+            isPrint: false,
+            tooltip: 'Sign to accept the terms'
+        });
     }
-  };
-});
 </script>
 {% endhighlight %}
 {% endtabs %}
 
-### Set Default Flags for New PDF Form Fields
-
-Default flag values can be configured so that form fields added using the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar) automatically inherit them. This ensures consistent behavior for all newly created fields.
+### Update flags on existing fields programmatically
+Use the `updateFormField()` method to modify constraint values on existing form fields.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+                   documentLoad="onDocumentLoad">
     </ejs-pdfviewer>
 </div>
 
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-  // Textbox fields will be editable, required, and included in print by default
-  pdfviewer.textFieldSettings = {
-    isReadOnly: false,
-    isRequired: true,
-    isPrint: true,
-    tooltip: 'Required field'
-  };
+<script>
+    function onDocumentLoad() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
 
-  // Signature fields will be optional and hidden when printing
-  pdfviewer.signatureFieldSettings = {
-    isReadOnly: false,
-    isRequired: false,
-    isPrint: false,
-    tooltip: 'Sign if applicable'
-  };
-});
+        // 1) Add a sample textbox
+        viewer.formDesignerModule.addFormField('Textbox', {
+            name: 'Email',
+            bounds: { X: 146, Y: 260, Width: 220, Height: 24 }
+        });
+
+        // 2) Retrieve it and update constraint flags
+        // A small delay ensures the field is available in collections
+        setTimeout(function() {
+            var fields = viewer.formFieldCollections && Array.from(viewer.formFieldCollections) ||
+                        (viewer.retrieveFormFields ? viewer.retrieveFormFields() : []) ||
+                        [];
+
+            var field = fields.find(function(f) { return f && f.name === 'Email'; });
+            if (field) {
+                viewer.formDesignerModule.updateFormField(field, {
+                    isReadOnly: false,
+                    isRequired: true,
+                    isPrint: true,
+                    tooltip: 'Enter a valid email'
+                });
+            }
+        }, 0);
+    }
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+### Set default flags for new PDF form fields
+You can configure default flag values so that form fields added using the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar) automatically inherit them. This helps ensure consistent behavior for all newly created fields.
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+                   documentLoad="onDocumentLoad">
+    </ejs-pdfviewer>
+</div>
+
+<script>
+    function onDocumentLoad() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+
+        // Textbox fields will be editable, required, and included in print by default
+        viewer.textFieldSettings = {
+            isReadOnly: false,
+            isRequired: true,
+            isPrint: true,
+            tooltip: 'Required field'
+        };
+
+        // Signature fields will be optional and hidden when printing
+        viewer.signatureFieldSettings = {
+            isReadOnly: false,
+            isRequired: false,
+            isPrint: false,
+            tooltip: 'Sign if applicable'
+        };
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}

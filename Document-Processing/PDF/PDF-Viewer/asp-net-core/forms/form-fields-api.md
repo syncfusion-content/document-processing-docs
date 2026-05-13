@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Fields API in ASP.NET Core PDF Viewer | Syncfusion
-description:  Learn how to use Form Fields API to enable, update, retrieve and clear in the Syncfusion ASP.NET Core PDF Viewer.
+description:  Learn How to use Form Fields API to enable, update, retrieve and clear in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # Form Fields API in ASP.NET Core PDF Viewer
 
-The PDF Viewer provides comprehensive APIs to create, edit, validate, navigate, and manage form fields programmatically. The table below lists the available APIs:
+The PDF Viewer exposes a set of programmatic APIs to create, edit, validate, navigate, and manage form fields. These APIs enable automation of common tasks such as updating values, exporting/importing form data, resetting fields, and toggling designer or validation features. The examples below demonstrate usage patterns; code samples remain unchanged and are runnable when the viewer is initialized.
+
+Each sample demonstrates a single API call or small workflow (for example, updating a field value or exporting form data). Use the provided APIs in application logic or UI handlers to automate form workflows.
 
 | API | Description |
 |---|---|
@@ -32,405 +34,468 @@ The PDF Viewer provides comprehensive APIs to create, edit, validate, navigate, 
 
 ## updateFormFieldsValue
 
-Form field values can be updated programmatically using this API.
+Updates the value of one or more form fields programmatically.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<button id="updateFormFieldsValue">updateFormFieldsValue</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  var btn = document.getElementById('updateFormFieldsValue');
-  if (btn) {
-    btn.onclick = function () {
-      var fields = pdfviewer && pdfviewer.retrieveFormFields && pdfviewer.retrieveFormFields();
-      var field = (fields && fields.find(function (f) { return f && f.name === 'First Name'; })) || (fields && fields[0]);
-      if (field) {
-        field.value = 'John Doe';
-        field.tooltip = 'First';
-        pdfviewer.updateFormFieldsValue(field);
-      }
-    };
-  }
-});
+
+<button onclick="updateFormFieldsValue()">updateFormFieldsValue</button>
+
+<script>
+    function updateFormFieldsValue() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+
+        // Retrieve all form fields
+        var fields = viewer.retrieveFormFields ? viewer.retrieveFormFields() : viewer.formFieldCollection || [];
+
+        // Find the textbox named "First Name" (fallback to the first field)
+        var field = fields.find(function(f) { return f && f.name === 'First Name'; }) || fields[0];
+
+        if (field) {
+            // Update value and tooltip, then apply via API
+            field.value = 'John Doe';
+            field.tooltip = 'First';
+            viewer.updateFormFieldsValue(field);
+        } else {
+            console.warn('No form fields available to update.');
+        }
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## updateFormFields
 
-Form field properties such as bounds, color, font, isReadOnly, required, and more can be updated using this API.
+Updates form field properties such as bounds, color, font, isReadOnly, required, and more.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<button id="updateFormFields">updateFormFields</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  var btn = document.getElementById('updateFormFields');
-  if (btn) {
-    btn.onclick = function () {
-      var fields = pdfviewer && pdfviewer.retrieveFormFields && pdfviewer.retrieveFormFields();
-      var field = (fields && fields.find(function (f) { return f && f.name === 'First Name'; })) || (fields && fields[0]);
-      if (field) {
-        pdfviewer.formDesignerModule.updateFormField(field, {
-          value: 'John',
-          fontFamily: 'Courier',
-          fontSize: 12,
-          color: 'black',
-          backgroundColor: 'white',
-          borderColor: 'black',
-          thickness: 2,
-          alignment: 'Left',
-          maxLength: 50
-        });
-      }
-    };
-  }
-});
+
+<button onclick="updateFormFields()">updateFormFields</button>
+
+<script>
+    function updateFormFields() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+
+        var fields = viewer.retrieveFormFields ? viewer.retrieveFormFields() : viewer.formFieldCollection || [];
+        var field = fields.find(function(f) { return f && f.name === 'First Name'; }) || fields[0];
+
+        if (field) {
+            // Use FormDesigner API to update properties
+            viewer.formDesignerModule.updateFormField(field, {
+                value: 'John',
+                fontFamily: 'Courier',
+                fontSize: 12,
+                color: 'black',
+                backgroundColor: 'white',
+                borderColor: 'black',
+                thickness: 2,
+                alignment: 'Left',
+                maxLength: 50
+            });
+        } else {
+            console.warn('No form fields available to update.');
+        }
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## retrieveFormFields
 
-All form fields and their properties can be retrieved, or results can be filtered by type or name.
+Retrieves all form fields and their properties or filters by type/name.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<button id="retrieveFormFields">retrieveFormFields</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  var btn = document.getElementById('retrieveFormFields');
-  if (btn) {
-    btn.onclick = function () {
-      var fields = pdfviewer && pdfviewer.retrieveFormFields && pdfviewer.retrieveFormFields();
-      console.log(fields);
-    };
-  }
-});
+
+<button onclick="retrieveFormFields()">retrieveFormFields</button>
+
+<script>
+    function retrieveFormFields() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+
+        // Either call the API or read the collection directly
+        var fields = viewer.retrieveFormFields ? viewer.retrieveFormFields() : viewer.formFieldCollection || [];
+
+        console.log('Form fields:', fields);
+
+        var byName = fields.filter(function(f) { return f && f.name === 'First Name'; });
+        var onlyTextboxes = fields.filter(function(f) { return f && f.type === 'Textbox'; });
+        console.log('By name:', byName);
+        console.log('Textboxes:', onlyTextboxes);
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## resetFormFields
 
-Specified form fields or all fields can be reset to their default values.
+Resets specified form fields or all fields to their default values.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<button id="resetFormFields">resetFormFields</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  var btn = document.getElementById('resetFormFields');
-  if (btn) {
-    btn.onclick = function () {
-      pdfviewer.resetFormFields();
-    };
-  }
-});
+
+<button onclick="resetAll()">resetFormFields</button>
+<button onclick="resetSpecific()" style="margin-left: 8px;">reset specific fields</button>
+
+<script>
+    function resetAll() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+        // Reset all form fields
+        viewer.resetFormFields();
+    }
+
+    function resetSpecific() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+        var fields = viewer.retrieveFormFields ? viewer.retrieveFormFields() : viewer.formFieldCollection || [];
+        if (fields.length) {
+            viewer.resetFormFields([fields[0]]);
+        }
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## importFormFields
 
-Form field data can be imported from an object or file into the current document.
+Imports form field data from an object or file into the current document.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<button id="importFormFields">importFormFields</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  var btn = document.getElementById('importFormFields');
-  if (btn) {
-    btn.onclick = function () {
-      // The file for importing should be accessible at the given path or as a file stream depending on your integration
-      pdfviewer.importFormFields('File', 'Json');
-    };
-  }
-});
+
+<button onclick="importFromSource()">importFormFields</button>
+<input type="file" accept=".json,.xfdf,.fdf" onchange="onFilePicked(event)" style="margin-left: 8px;" />
+
+<script>
+    // Import from a known source (path/stream depends on your integration)
+    function importFromSource() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+        // Example: specify a key that your backend/hosted env resolves, or use your own logic
+        viewer.importFormFields('File', 'Json');
+    }
+
+    // Optional: Import from a local file chosen by user
+    function onFilePicked(e) {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+
+        var file = e.target.files ? e.target.files[0] : null;
+        if (!file) return;
+
+        // Pass the File object directly if your integration supports it
+        viewer.importFormFields(file, 'Json');
+        // Reset the input so picking same file again still triggers change
+        e.target.value = '';
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## focusFormField
 
-Focus can be moved to a form field by name or ID.
+Moves focus to a form field by name or ID.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<button id="focusFormField">focusFormField</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  var btn = document.getElementById('focusFormField');
-  if (btn) {
-    btn.onclick = function () {
-      pdfviewer.focusFormField('FirstName');
-    };
-  }
-});
+
+<button onclick="focusFirstName()">focusFormField</button>
+
+<script>
+    function focusFirstName() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+        viewer.focusFormField('FirstName'); // use the exact field name/ID
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## exportFormFieldsAsObject
 
-Current form field values and states can be exported as a JSON object.
+Exports current form field values and states as a JSON object.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<button id="exportFormFieldsAsObject">exportFormFieldsAsObject</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  var btn = document.getElementById('exportFormFieldsAsObject');
-  if (btn) {
-    var exportedData;
-    btn.onclick = function () {
-      pdfviewer.exportFormFieldsAsObject('Fdf').then(function (data) {
-        exportedData = data; // Save or send to server
-        console.log('Exported object:', exportedData);
-      });
-    };
-  }
-});
+
+<button onclick="exportAsObject()">exportFormFieldsAsObject</button>
+
+<script>
+    function exportAsObject() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+
+        try {
+            var data = viewer.exportFormFieldsAsObject('Fdf');
+            // Save, send to server, or inspect in console
+            console.log('Exported object:', data);
+        } catch (e) {
+            console.error('Export failed:', e);
+        }
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## exportFormFields
 
-Form field data can be exported to a file for download.
+Exports form field data to a file for download.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<button id="exportFormFields">exportFormFields</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  var btn = document.getElementById('exportFormFields');
-  if (btn) {
-    btn.onclick = function () {
-      pdfviewer.exportFormFields('FormData', 'Json');
-    };
-  }
-});
+
+<button onclick="exportFormFields()">exportFormFields</button>
+
+<script>
+    function exportFormFields() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+        // Triggers download based on given file token/name and format
+        viewer.exportFormFields('FormData', 'Json');
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## clearFormFields
 
-Values of specified or all fields can be cleared without removing the fields.
+Clears values of specified or all fields without removing the fields themselves.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<button id="clearformfield">clearformfield</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  var btn = document.getElementById('clearformfield');
-  if (btn) {
-    btn.onclick = function () {
-      var field = pdfviewer.retrieveFormFields();
-      pdfviewer.clearFormFields(field[0]);
-    };
-  }
-});
+
+<button onclick="clearFirstField()">clearformfield</button>
+
+<script>
+    function clearFirstField() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+
+        var fields = viewer.retrieveFormFields ? viewer.retrieveFormFields() : [];
+        if (fields.length) {
+            viewer.clearFormFields(fields[0]);
+        } else {
+            console.warn('No form fields to clear.');
+        }
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## isFormFieldDocument
 
-Returns true if the loaded document contains form fields.
+Returns true if the loaded document contains one or more form fields.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<button id="checkFormFieldDocument">checkFormFieldDocument</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  var element = document.getElementById('checkFormFieldDocument');
-  if (element) {
-    element.onclick = function () {
-      console.log(pdfviewer.isFormFieldDocument);
-    };
-  }
-});
+
+<button onclick="checkFormFieldDocument()">checkFormFieldDocument</button>
+
+<script>
+    function checkFormFieldDocument() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) return;
+        console.log(viewer.isFormFieldDocument);
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## isFormDesignerToolbarVisible
 
-Gets the visibility status of the Form Designer toolbar.
+Opens the form designer toolbar when the PDF document is loaded in the PDF Viewer control initially
+and get the form designer Toolbar Visible status.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+                   documentLoad="onDocumentLoad"
+                   isFormDesignerToolbarVisible="true">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  if (!pdfviewer) return;
-  // Open the Form Designer toolbar and read its visibility state
-  pdfviewer.enableFormDesignerToolbar(true);
-  console.log(pdfviewer.isFormDesignerToolbarVisible);
-});
+
+<script>
+    function onDocumentLoad() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        viewer.formDesignerModule.addFormField("Textbox", { 
+            name: "Textbox", 
+            bounds: { X: 146, Y: 229, Width: 150, Height: 24 }
+        });
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## formFieldCollections
 
-The current collection of form fields with their properties can be retrieved from the viewer instance.
+Gets the current collection of form fields with their properties from the viewer instance.
 
-```html
-<button id="formfieldcollection">formfieldcollection</button>
-```
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<button id="formfieldcollection">formfieldcollection</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  var element = document.getElementById('formfieldcollection');
-  if (element) {
-    element.onclick = function () {
-      console.log(pdfviewer.formFieldCollections);
-    };
-  }
-});
+
+<button onclick="logFormFieldCollections()" style="margin-bottom: 12px;">Form Field Collections</button>
+
+<script>
+    function logFormFieldCollections() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        if (!viewer) {
+            console.warn('Viewer instance not ready yet.');
+            return;
+        }
+        // Gets the form field collections
+        var collections = viewer.formFieldCollections || viewer.formFieldCollection || [];
+        console.log('Form Field Collections:', collections);
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## enableFormFieldsValidation
 
-Built-in validation for required and constrained fields can be enabled or disabled.
+Enables or disables built-in validation for required and constrained fields.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+                   documentLoad="onDocumentLoad"
+                   enableFormFieldsValidation="true">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  if (!pdfviewer) return;
-  pdfviewer.enableFormFieldsValidation = true; // enable form fields validation
-});
+
+<script>
+    function onDocumentLoad() {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        viewer.formDesignerModule.addFormField("Textbox", { 
+            name: "Textbox", 
+            bounds: { X: 146, Y: 229, Width: 150, Height: 24 }
+        });
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
 
 ## enableFormFields
 
-User interaction with form fields can be enabled or disabled globally.
+Enables or disables user interaction with form fields globally.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+                   enableFormFields="false">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  if (!pdfviewer) return;
-  pdfviewer.enableFormFields = false;  // Disable interaction with all fields
-});
-</script>
 {% endhighlight %}
 {% endtabs %}
 
+
 ## enableFormDesignerToolbar
 
-The Form Designer toolbar can be shown or hidden at runtime.
+Shows or hides the Form Designer toolbar at runtime.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+                   enableFormDesignerToolbar="false">
     </ejs-pdfviewer>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var viewerElement = document.getElementById('pdfviewer');
-  var pdfviewer = viewerElement && viewerElement.ej2_instances && viewerElement.ej2_instances[0];
-  if (!pdfviewer) return;
-  // Show or hide the Form Designer toolbar at runtime
-  pdfviewer.enableFormDesignerToolbar(true); // show
-  // pdfviewer.enableFormDesignerToolbar(false); // hide
-});
-</script>
 {% endhighlight %}
 {% endtabs %}
 
@@ -438,9 +503,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
-- [Create form fields](./manage-form-fields/create-form-fields)
-- [Edit form fields](./manage-form-fields/modify-form-fields)
-- [Group form fields](./group-form-fields)
+- [Create form fields](./Create-edit-Style-del-formFields/create-formfields)
+- [Edit form fields](./Create-edit-Style-del-formFields/edit-formfields)
+- [Group form fields](./group-formfields)
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)
 - [Form fields Validation](./form-validation)

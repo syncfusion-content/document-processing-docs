@@ -9,31 +9,44 @@ documentation: ug
 
 # Export PDF Form Data from ASP.NET Core PDF Viewer
 
-The PDF Viewer allows you to export form field data in multiple formats for easy storage or integration. Supported formats:
+This guide shows concise, actionable steps to export PDF form field data for storage or integration. It covers:
 
-- [FDF](#export-as-fdf)
-- [XFDF](#export-as-xfdf)
-- [JSON](#export-as-json)
-- [JavaScript Object](#export-as-object) (for custom persistence)
+- Exporting as [FDF](#3-export-as-fdf), [XFDF](#4-export-as-xfdf), and [JSON](#5-export-as-json) using [`exportFormFields()`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfields).
+- Exporting as a [JavaScript object](#6-export-as-a-javascript-object) using [`exportFormFieldsAsObject()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfieldsasobject).
 
-## Available methods
+## Steps
 
-- [exportFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfields)(destination?, format) — Exports data to a file in the specified format.
-- [exportFormFieldsAsObject](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfieldsasobject)(format) — Exports data as a JavaScript object for custom handling.
-- [importFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format) — Import data back into the PDF.
+### 1. Configure the PDF Viewer 
 
-## How to export
+Set up the ASP.NET Core PDF Viewer in your Razor page.
 
-Use [exportFormFields()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfields) with an optional destination path and the format type.
+{% tabs %}{% highlight cshtml tabtitle="Standalone" %}
+<ejs-pdfviewer id="pdfviewer"
+                documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+                style="height:680px">
+</ejs-pdfviewer>
+{% endhighlight %}{% endtabs %}
 
-### Export as FDF
-The following example exports form field data as FDF.
+### 2. Initialize the Viewer instance
+
+Access the PDF Viewer instance using JavaScript to call export methods.
+
+{% tabs %}{% highlight cshtml tabtitle="Standalone" %}
+<script>
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+</script>
+{% endhighlight %}{% endtabs %}
+
+### 3. Export as FDF
+
+Use [`exportFormFields(destination?, FormFieldDataFormat.Fdf)`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfields) to download an FDF file.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <button id="exportFdf">Export FDF</button>
 <div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:640px; width:100%" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:640px; width:100%" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
     </ejs-pdfviewer>
 </div>
 
@@ -50,13 +63,14 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endhighlight %}
 {% endtabs %}
 
-### Export as XFDF
-The following example exports form field data as XFDF.
+### 4. Export as XFDF
+
+Use [`FormFieldDataFormat.Xfdf`](https://ej2.syncfusion.com/documentation/api/pdfviewer/formfielddataformat) to export XFDF.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:640px; width:100%" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:640px; width:100%" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
     </ejs-pdfviewer>
 </div>
 
@@ -74,13 +88,14 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endhighlight %}
 {% endtabs %}
 
-### Export as JSON
-The following example exports form field data as JSON.
+### 5. Export as JSON
+
+Use [`FormFieldDataFormat.Json`](https://ej2.syncfusion.com/documentation/api/pdfviewer/formfielddataformat) to export form data as a JSON file.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:640px; width:100%" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:640px; width:100%" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
     </ejs-pdfviewer>
 </div>
 
@@ -98,14 +113,14 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endhighlight %}
 {% endtabs %}
 
-### Export as Object
+### 6. Export as a JavaScript object
 
-Use [exportFormFieldsAsObject()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfieldsasobject) to obtain form data as a JavaScript object for database or API integration.
+Use [`exportFormFieldsAsObject(format)`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfieldsasobject) to get data for API calls or storing in a database.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:640px; width:100%" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:640px; width:100%" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf">
     </ejs-pdfviewer>
 </div>
 
@@ -130,15 +145,58 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endhighlight %}
 {% endtabs %}
 
-## Common Use Cases
+## Complete example
 
-- Save user-entered data to your server without altering the original PDF.
-- Export as JSON for REST API integration.
-- Export as FDF/XFDF for compatibility with other PDF tools.
-- Export as Object to merge with app state or store securely.
-- Automate exports after [validation](../form-validation) using [validateFormFields()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields)
+The example below demonstrates form field export functionality with buttons for all supported formats in an ASP.NET Core Razor view.
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:650px">
+<button id="exportFdf">Export FDF</button>
+<button id="exportXfdf">Export XFDF</button>
+<button id="exportJson">Export JSON</button>
+<button id="exportObj">Export Object</button>
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:650px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
+    </ejs-pdfviewer>
+</div>
+<script>
+window.onload = function () {
+  var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+  
+  document.getElementById('exportFdf').addEventListener('click', function() {
+    viewer.exportFormFields('FormData', ej2.pdfviewer.FormFieldDataFormat.Fdf);
+  });
+  
+  document.getElementById('exportXfdf').addEventListener('click', function() {
+    viewer.exportFormFields('FormData', ej2.pdfviewer.FormFieldDataFormat.Xfdf);
+  });
+  
+  document.getElementById('exportJson').addEventListener('click', function() {
+    viewer.exportFormFields('FormData', ej2.pdfviewer.FormFieldDataFormat.Json);
+  });
+  
+  document.getElementById('exportObj').addEventListener('click', function() {
+    viewer.exportFormFieldsAsObject().then(function(data) {
+      console.log('Exported object:', data);
+    });
+  });
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples)
+
+## Troubleshooting
+
+- Ensure the PDF Viewer is properly initialized with the form field services enabled in your ASP.NET Core application.
+- Confirm the viewer instance is accessible via `document.getElementById('pdfviewer').ej2_instances[0]` before calling export methods.
+- If exports fail in restrictive browsers, check popup/download settings and CORS for hosted endpoints.
+- For server-side persistence, use [`exportFormFieldsAsObject()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfieldsasobject) and send the result to your API endpoint.
+- Verify that the document path points to a valid PDF with form fields.
 
 ## See also
 
