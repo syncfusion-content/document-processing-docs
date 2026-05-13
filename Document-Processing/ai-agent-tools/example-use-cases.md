@@ -10,7 +10,7 @@ documentation: ug
 
 ## Overview
 
-This example use case demonstrates building a **Blog Generator** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview?pivots=programming-language-csharp), OpenAI (text and image generation), and Syncfusion Word Agent Tools to convert a single user‑provided topic into a fully formatted blog ebook. The agent generates a title and structured outline, creates detailed content with relevant images, and outputs the final result in **HTML** and **Word (.docx)** formats. This sample application runs using [in‑memory mode](./getting-started-in-memory-mode.md) for document processing.
+This example use case demonstrates building a **Blog Generator** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview?pivots=programming-language-csharp), OpenAI (text and image generation), and Syncfusion Word Agent Tools to convert a single user‑provided topic into a fully formatted blog ebook. The agent generates a title and structured outline, creates detailed content with relevant images, and outputs the final result in **HTML** and **Word (.docx)** formats. This sample application runs using [in‑memory mode](./getting-started-in-memory-mode) for document processing.
 
 ## Prerequisites
 
