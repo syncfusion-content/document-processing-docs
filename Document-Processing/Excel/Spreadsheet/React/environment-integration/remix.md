@@ -7,13 +7,13 @@ platform: document-processing
 documentation: ug
 ---
 
-# Getting started with Syncfusion® React Spreadsheet in Remix
+# Getting started with Syncfusion React Spreadsheet in Remix
 
-This guide provides a step-by-step workflow for integrating Syncfusion® React Spreadsheet into a new Remix application.
+This guide provides a step-by-step workflow for integrating Syncfusion React Spreadsheet into a new Remix application.
 
 ## Prerequisites
 Ensure the following requirements are met before starting:
-[System requirements for Syncfusion® React Spreadsheet](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for Syncfusion React Spreadsheet](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ## Benefits of using Remix
 
@@ -61,7 +61,7 @@ Navigate into the project directory with the below command and install the `reac
 cd my-react-router-app
 ```
 
-## Adding Syncfusion® Spreadsheet package
+## Adding Syncfusion Spreadsheet package
 
 To include the React Spreadsheet component in your project, use the following command:
 
@@ -88,7 +88,7 @@ Import the Syncfusion® component themes in the `app.css` file as shown below:
 
 ## Configure Server-Side Rendering (SSR)
 
-For Syncfusion® React Spreadsheet to function with Remix server-side rendering (via Vite), update your `vite.config.ts` file as shown:
+For Syncfusion React Spreadsheet to function with Remix server-side rendering (via Vite), update your `vite.config.ts` file as shown:
 
 ```js
 import { defineConfig } from "vite";
@@ -102,7 +102,7 @@ export default defineConfig({
 });
 ```
 
-This configuration ensures Syncfusion® modules are properly compiled for SSR compatibility.
+This configuration ensures Syncfusion modules are properly compiled for SSR compatibility.
 
 ## Adding Spreadsheet component
 
@@ -145,4 +145,4 @@ npm run start
 
 ## See Also
 
-* [Getting Started with Syncfusion® React Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started)
+* [Getting Started with Syncfusion React Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started)
