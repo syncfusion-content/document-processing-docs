@@ -1,6 +1,6 @@
 ---
 title: Can pivot table cell values be edited? | Syncfusion
-description: Pivot table cells are read-only. To change values update the pivot's source data (the underlying range or table). XlsIO follows Excel.
+description: This page explains whether the cell values of pivot table can be edited using XlsIO
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,6 +8,6 @@ documentation: UG
 
 # Can pivot table cell values be edited?
 
-Pivot table cells are read-only in Microsoft Excel. To change the values shown in a pivot table you must update the pivot's source data (for example, the underlying range or data table) and then refresh the pivot table.
+Pivot table cells in Microsoft Excel are inherently read-only. Any changes to the values displayed in a pivot table must be made by updating its underlying source data, such as the original range or data table, followed by refreshing the pivot table to reflect the modifications.
 
-XlsIO follows the same behavior as Excel and does not support editing pivot table cell values directly. Modify the source data and refresh the pivot table to see updated values.
+XlsIO adheres to the same behavior as Microsoft Excel and does not allow direct editing of pivot table cell values. To update the displayed data, the source data must be modified and the pivot table refreshed accordingly.
