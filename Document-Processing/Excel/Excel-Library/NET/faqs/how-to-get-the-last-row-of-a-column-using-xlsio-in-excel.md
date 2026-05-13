@@ -8,7 +8,7 @@ documentation: UG
 
 # How to get the last row of a column using XlsIO in Excel?
 
-Finding the last row of a specific column helps you determine the exact extent of data in that column. XlsIO provides access to the worksheet's used range through the [IWorksheet.UsedRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) property, which you can use to iterate backward through rows and identify cells with data in a particular column.
+Finding the last row of a specific column helps you determine the exact extent of data in that column. XlsIO provides access to the worksheet's used range through the [IWorksheet.UsedRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) property. By leveraging this property, it is possible to iterate backward through rows and identify cells with data in a particular column.
 
 The following code example illustrates how to find the last row containing data in a specific column.
 
