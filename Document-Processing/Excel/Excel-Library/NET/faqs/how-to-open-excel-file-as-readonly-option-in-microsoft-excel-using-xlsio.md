@@ -1,12 +1,11 @@
 ---
-title: How to open Excel file as ReadOnly in MS Excel using XlsIO? | Syncfusion
+title: How to Open Excel as Read‑Only using XlsIO | Syncfusion
 description: This page explains how to to open Excel file as ReadOnly in MS Excel using XlsIO
 platform: document-processing
 control: XlsIO
 documentation: UG
----
 
-# How to open Excel file as ReadOnly in MS Excel using XlsIO?
+# How to open Excel file as ReadOnly in Microsoft Excel using XlsIO?
 
 The example below shows how to set this flag with Syncfusion XlsIO and save the file so Microsoft Excel offers the "Read-only recommended" option when the file is opened.
 
@@ -56,7 +55,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
     // Adding text to a cell
     worksheet.Range["A1"].Text = "Hello World";
-
     // Set the workbook to be read-only recommended
     workbook.ReadOnlyRecommended = true;
 
@@ -89,6 +87,5 @@ Using excelEngine As New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
-
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/992377-ReadOnly-Excel/FAQ/ReadOnly%20Excel/.NET/Readonly%20Excel">this GitHub page</a>.
