@@ -91,7 +91,7 @@ Load the confidential M&A strategy presentation 'ma_strategy_2026.pptx' from {In
 {% promptcard Export Slides as Images %}
 Load the product demo presentation 'product_demo_v3.pptx' from {InputDir}. Export all slides as individual PNG images to {OutputDir} so the marketing team can use them as standalone visual assets for social media and documentation.
 {% endpromptcard %}
-{% promptcard Extract All Text and Get Total Slide Count %}
+{% promptcard Extract All Text with Slide Count %}
 Load the investor pitch deck 'investor_pitch_Q1_2026.pptx' from {InputDir}. Get the total slide count to confirm it's complete. Extract all text content from the presentation so we can review the messaging before the meeting. Return the slide count and full text content.
 {% endpromptcard %}
 {% endpromptcards %}
