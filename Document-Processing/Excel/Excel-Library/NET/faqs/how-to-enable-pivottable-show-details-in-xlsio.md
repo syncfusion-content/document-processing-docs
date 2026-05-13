@@ -1,6 +1,6 @@
 ---
 title: How to enable PivotTable Show Details in XlsIO? | Syncfusion
-description: This page explains how to enable pivot table show details option using XlsIO.
+description: This page explains how to enable the pivot table show details option using Syncfusion XlsIO with EnableDrilldowm Property.
 platform: document-processing
 control: XlsIO
 documentation: UG
