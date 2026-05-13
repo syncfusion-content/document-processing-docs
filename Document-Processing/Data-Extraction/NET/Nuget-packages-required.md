@@ -1,5 +1,5 @@
 ---
-title: NuGet Packages for Data Extraction | Syncfusion&reg;
+title: NuGet Packages for Data Extraction and OCR | Syncfusion&reg;
 description: Learn the NuGet packages required to use Syncfusion&reg; Data Extraction in various platforms and frameworks.
 platform: document-processing
 control: DataExtraction
@@ -7,7 +7,7 @@ documentation: UG
 keywords: Assemblies
 ---
 
-# NuGet Packages Required for Data Extraction
+# NuGet Packages Required for Data Extraction ans OCR
 
 ## NuGet Packages Required for Smart Data Extractor
 
@@ -122,7 +122,7 @@ Windows UI (WinUI) <br/>
 </table>
 
 
-## NuGet Packages Required for SmartFormRecognizer
+## NuGet Packages Required for Smart Form Recognizer
 
 To work with SmartFormRecognizer, the following NuGet packages need to be installed in your application.
 
@@ -171,3 +171,52 @@ ASP.NET MVC5
 </table>
 
 N> The above mentioned NuGet packages are available in [nuget.org](https://www.nuget.org/).
+
+
+## NuGet Packages Required for OCR processor
+
+Directly install the NuGet package to your application from [nuget.org](https://www.nuget.org/).
+
+<table>
+<tr>
+<thead>
+<th><b>Platform(s)</b></th>
+<th><b>NuGet Package</b></th>
+</thead>
+</tr>
+<tr>
+<td>
+Windows Forms<br/>
+Console Application (Targeting .NET Framework)
+</td>
+<td>
+{{'[Syncfusion.Pdf.OCR.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.WinForms)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+WPF
+</td>
+<td>
+{{'[Syncfusion.Pdf.OCR.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.Wpf)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+ASP.NET MVC5
+</td>
+<td>
+{{'[Syncfusion.Pdf.OCR.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.AspNet.Mvc5)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+ASP.NET Core (Targeting NET Core) <br/>
+Console Application (Targeting .NET Core) <br/> 
+Blazor
+</td>
+<td>
+{{'[Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core)'| markdownify }}
+</td>
+</tr>
+</table>

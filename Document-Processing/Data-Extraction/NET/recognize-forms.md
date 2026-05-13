@@ -1,6 +1,6 @@
 ---
 title: Working with Form Recognition | Syncfusion&reg;
-description: Learn how to recognize forms and configure FormRecognizeOptions in the Syncfusion&reg; SmartFormRecognizer library to process and detect form elements with ease.
+description:  Learn how to recognize forms and configure FormRecognizeOptions in Syncfusion® SmartFormRecognizer to detect and process form elements easily.
 platform: document-processing
 control: SmartFormRecognizer
 documentation: UG
@@ -110,7 +110,7 @@ To recognize form data from a PDF or image and get the output as a JSON string u
 Example (synchronous):
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C#" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-JSON/.NET/Recognize-forms-using-JSON/Program.cs %}
 public  void Button_Click(object sender, RoutedEventArgs e)
 {
     //Initialize the Form Recognizer

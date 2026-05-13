@@ -15,7 +15,7 @@ To extract structured table data from a PDF document using the **ExtractTableAsJ
 
 {% tabs %}   
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Table-Extractor/Extract-tables-from-pdf-document/.NET/Extract-tables-from-pdf-document/Program.cs" %}
 
 using System.IO;
 using System.Text;

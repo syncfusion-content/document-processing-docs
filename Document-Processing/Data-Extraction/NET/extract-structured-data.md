@@ -10,6 +10,163 @@ keywords: Assemblies
 
 # Working with Data Extraction
 
+Refer to the following links for the assemblies and NuGet packages required on different platforms to perform data extraction with the Smart Data Extractor library.
+
+* [Assemblies required to perform data extraction]()
+* [NuGet packages required to perform data extraction]()
+
+## Extract Data as JSON from PDF or Image
+
+### Extract Data as JSON from PDF
+
+To extract form fields across a PDF document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code example:
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-PDF/.NET/Extract-data-as-JSON-from-PDF-document/Program.cs" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.SmartFormRecognizer;
+using System.Text;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Extract data as JSON.
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.SmartFormRecognizer;
+using System.Text;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Data Extractor.
+    DataExtractor extractor = new DataExtractor();    
+    //Extract data as JSON.
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+			
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-PDF/.NET).
+
+### Extract Data as JSON from an Image
+
+To extract structured data from an image document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code examples. 
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using System.Text;
+
+//Open the input image file as a stream.
+using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Extract data as JSON from the image stream.
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using System.Text;
+
+//Open the input image file as a stream.
+using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Extract data as JSON from the image stream.
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-an-Image/.NET).
+
+## Extract Data as Markdown from PDF or Image
+
+To extract form fields across a PDF document using the **ExtractDataAsMarkdown** method of the **DataExtractor** class, refer to the following code example:
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.SmartFormRecognizer;
+using System.Text;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Extract data as Markdown.
+    string data = extractor.ExtractDataAsMarkdown(stream);
+    //Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.SmartFormRecognizer;
+using System.Text;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Extract data as Markdown.
+    string data = extractor.ExtractDataAsMarkdown(stream);
+    //Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+			
+{% endhighlight %}
+
+{% endtabs %}
+
+N>If you want to convert an image instead of a PDF, just replace the input stream with the image file (for example, Input.jpg, Input.png). The rest of the code remains the same.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-MD-from-PDF/.NET).
+
 ## Extract Data from PDF Document
 
 To extract structured data such as text, form fields, tables and images from an entire PDF document using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
@@ -116,157 +273,12 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-stream/.NET).
 
-## Extract Data as JSON from PDF Document
 
-To extract form fields across a PDF document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code example:
 
-{% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+## Disable Form Detection during Data Extraction
 
-using System.IO;
-using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
-using System.Text;
-
-//Open the input PDF file as a stream.
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    //Initialize the Smart Data Extractor.
-    DataExtractor extractor = new DataExtractor();
-    //Extract data as JSON.
-    string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.IO;
-using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
-using System.Text;
-
-//Open the input PDF file as a stream.
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    //Initialize the Smart Data Extractor.
-    DataExtractor extractor = new DataExtractor();    
-    //Extract data as JSON.
-    string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
-}
-			
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-PDF/.NET).
-
-## Extract Data as Markdown from PDF Document
-
-To extract form fields across a PDF document using the **ExtractDataAsMarkdown** method of the **DataExtractor** class, refer to the following code example:
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-using System.IO;
-using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
-using System.Text;
-
-//Open the input PDF file as a stream.
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    //Initialize the Smart Data Extractor.
-    DataExtractor extractor = new DataExtractor();
-    //Extract data as Markdown.
-    string data = extractor.ExtractDataAsMarkdown(stream);
-    //Save the extracted Markdown data into an output file.
-    File.WriteAllText("Output.md", data, Encoding.UTF8);
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.IO;
-using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
-using System.Text;
-
-//Open the input PDF file as a stream.
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    //Initialize the Smart Data Extractor.
-    DataExtractor extractor = new DataExtractor();
-    //Extract data as Markdown.
-    string data = extractor.ExtractDataAsMarkdown(stream);
-    //Save the extracted Markdown data into an output file.
-    File.WriteAllText("Output.md", data, Encoding.UTF8);
-}
-			
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-MD-from-PDF/.NET).
-
-## Extract Data as JSON from an Image
-
-To extract structured data from an image document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code examples. 
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-using System.IO;
-using Syncfusion.SmartDataExtractor;
-using System.Text;
-
-//Open the input image file as a stream.
-using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess.Read))
-{
-    //Initialize the Data Extractor.
-    DataExtractor extractor = new DataExtractor();
-    //Extract data as JSON from the image stream.
-    string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.IO;
-using Syncfusion.SmartDataExtractor;
-using System.Text;
-
-//Open the input image file as a stream.
-using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess.Read))
-{
-    //Initialize the Data Extractor.
-    DataExtractor extractor = new DataExtractor();
-    //Extract data as JSON from the image stream.
-    string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
-}
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-an-Image/.NET).
-
-## Form Detection
-
-To extract form fields across a PDF document and save them as a PDF output using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class with form recognition options, refer to the following code example:
+To disable form field detection while extracting structured data from a PDF document using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
 
 {% tabs %} 
 
@@ -283,7 +295,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
 
-    //Enable form detection in the document to identify form fields.
+    //Disable form detection in the document to identify form fields.
     //By default - true
     extractor.EnableFormDetection = false;
     //Extract form data and return as a loaded PDF document.
@@ -311,7 +323,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
 
-    //Enable form detection in the document to identify form fields.
+    //Disable form detection in the document to identify form fields.
     //By default - true
     extractor.EnableFormDetection = false;
     //Extract form data and return as a loaded PDF document.
@@ -329,9 +341,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Disable-Form-detection/.NET).
 
-## Table Detection
+## Disable Table detection during Data Extraction
 
-To extract tables across a PDF document and save them as a PDF output using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class with table extraction options, refer to the following code example:
+To disable table detection while extracting structured data from a PDF document using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
 
 {% tabs %} 
 
@@ -348,7 +360,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     // Initialize the Smart Data Extractor.
 	DataExtractor extractor = new DataExtractor();
 
-	// Enable table detection and set confidence threshold.
+	// Disable table detection.
 	//By default - true
 	extractor.EnableTableDetection = false;
 	// Extract data and return as a loaded PDF document.
@@ -376,7 +388,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     // Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
 
-    // Enable table detection and set confidence threshold.
+    // Disable table detection.
     //By default - true
     extractor.EnableTableDetection = false;
     // Extract data and return as a loaded PDF document.
