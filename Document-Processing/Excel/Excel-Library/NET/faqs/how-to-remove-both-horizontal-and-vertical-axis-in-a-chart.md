@@ -1,6 +1,6 @@
 ---
 title: How to remove both horizontal and vertical axis in a chart? | Syncfusion
-description: Shows how to remove both the category (horizontal) and value (vertical) axes from a chart in Syncfusion XlsIO by setting their Visible properties to false.
+description: This page explains how to remove the horizontal and vertical axis in a chart.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # How to remove both horizontal and vertical axis in a chart?
 
-You can remove both the category (horizontal) and value (vertical) axes from a chart by setting the `PrimaryCategoryAxis.Visible` and `PrimaryValueAxis.Visible` properties to `false`.
+Both the category (horizontal) and value (vertical) axes can be removed from a chart by setting the `PrimaryCategoryAxis.Visible` and `PrimaryValueAxis.Visible` properties to `false`.
 
 The following examples show the cross-platform C#, Windows-specific C#, and VB.NET variants.
 
