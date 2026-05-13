@@ -181,5 +181,3 @@ openFromGoogleDrive() {
 ```
 
 N> The Google.Apis.Drive.v3 NuGet package must be installed in your application to use the previous code example.
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/syncfusion-react-spreadsheet-google-drive-integration)
