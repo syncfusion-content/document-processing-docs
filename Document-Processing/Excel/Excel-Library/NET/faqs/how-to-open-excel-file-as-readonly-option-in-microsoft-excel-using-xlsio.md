@@ -1,6 +1,6 @@
 ---
 title: How to open Excel file as ReadOnly in MS Excel using XlsIO? | Syncfusion
-description: Shows how to set the 'Read-only recommended' flag when saving an Excel workbook with Syncfusion XlsIO so Excel prompts to open it as read-only.
+description: This page explains how to to open Excel file as ReadOnly in MS Excel using XlsIO
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # How to open Excel file as ReadOnly in MS Excel using XlsIO?
 
-You can make Excel prompt users to open a workbook as read-only by setting the Read-only recommended flag on the workbook before saving. The example below shows how to set this flag with Syncfusion XlsIO and save the file so Microsoft Excel offers the "Read-only recommended" option when the file is opened.
+The example below shows how to set this flag with Syncfusion XlsIO and save the file so Microsoft Excel offers the "Read-only recommended" option when the file is opened.
 
 The following code examples illustrate this.
 
@@ -31,8 +31,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     // Adding text to a cell
     worksheet.Range["A1"].Text = "Hello World";
 
-    // Protect the worksheet
-    worksheet.Protect("syncfusion", ExcelSheetProtection.All);
+    // Set the workbook to be read-only recommended
+    workbook.ReadOnlyRecommended = true;
 
     // Save the workbook to disk in XLSX format
     workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
@@ -57,8 +57,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     // Adding text to a cell
     worksheet.Range["A1"].Text = "Hello World";
 
-    // Protect the worksheet
-    worksheet.Protect("syncfusion", ExcelSheetProtection.All);
+    // Set the workbook to be read-only recommended
+    workbook.ReadOnlyRecommended = true;
 
     // Save the workbook to disk in XLSX format
     workbook.SaveAs("Output.xlsx");
@@ -81,8 +81,8 @@ Using excelEngine As New ExcelEngine()
     ' Adding text to a cell
     worksheet("A1").Text = "Hello World"
 
-    ' Protect the worksheet
-    worksheet.Protect("syncfusion", ExcelSheetProtection.All)
+    ' Set the workbook to be read-only recommended
+    workbook.ReadOnlyRecommended = true
 
     ' Save the workbook to disk in XLSX format
     workbook.SaveAs("Sample.xlsx")
