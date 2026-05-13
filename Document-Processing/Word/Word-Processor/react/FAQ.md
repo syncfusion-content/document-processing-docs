@@ -6,7 +6,7 @@ control: Document Editor
 documentation: UG
 ---
 
-# Frequently Asked Questions Section  
+# Frequently Asked Questions in Document Editor
 
 The frequently asked questions in Syncfusion<sup>&reg;</sup> DOCX Editor component are listed below.
 
