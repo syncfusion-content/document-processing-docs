@@ -11,6 +11,28 @@ documentation: UG
 The following code example illustrates how to insert a picture into a cell in an Excel document.
 
 {% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+	IApplication application = excelEngine.Excel;
+	application.DefaultVersion = ExcelVersion.Xlsx;
+	IWorkbook workbook = application.Workbooks.Create(1);
+	IWorksheet worksheet = workbook.Worksheets[0];
+
+	//Adding a picture
+	FileStream imageStream = new FileStream(Path.GetFullPath(@"Data/Image.png"), FileMode.Open, FileAccess.Read);
+	IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream);
+
+	#region Save
+	//Saving the workbook
+	workbook.SaveAs(Path.GetFullPath("Output/AddPicture.xlsx"));
+	#endregion
+
+	//Dispose streams
+	imageStream.Dispose();
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
