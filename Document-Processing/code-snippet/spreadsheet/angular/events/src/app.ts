@@ -16,21 +16,40 @@ imports: [
     ],
 
 
-standalone: true,
+    standalone: true,
     selector: 'app-container',
-    template: `<ejs-spreadsheet (actionBegin)='beforeOpen($event)' openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' allowOpen='true'> </ejs-spreadsheet>
-            <div>
-                <h4><b>Event Trace</b></h4>
-                <div id="evt">
-                    <div>
-                        <span id="EventLog"></span>
-                    </div>
-                    <button id="clearBtn" className='e-btn' onClick={clearBtnClick}>Clear</button>
-                </div>
-            </div>`
+    template: `<div><ejs-spreadsheet (actionBegin)='actionBegin($event)' openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' allowOpen='true'> </ejs-spreadsheet><div>
+    <h4><b>Event Trace</b></h4>
+    <div id="evt">
+        <div>
+            <span id="EventLog"></span>
+        </div>
+        <button id="clearBtn" class="e-btn" (click)="clearBtnClick()">Clear</button>
+    </div>
+</div>
+</div>`
 })
 export class AppComponent {
-     beforeOpen (args: BeforeOpenEventArgs) {
-        // your code snippets here
+    actionBegin (args: any) {
+        this.appendElement(`actionBegin triggered for <b>&nbsp;${args.action}</b> action<hr>`);
+        console.log(args);
     }
+    actionComplete(args: any){
+        this.appendElement(`actionComplete triggered for <b>&nbsp;${args.action}</b> action<hr>`);
+        console.log(args);
+    }
+    appendElement(html: any){
+        const span = document.createElement("span");
+        span.innerHTML = html;
+        const log = document.getElementById('EventLog');
+        if (log) {
+            log.insertBefore(span, log.firstChild);
+        }
+    };
+    clearBtnClick(){
+        const eventLog = document.getElementById('EventLog');
+        if (eventLog) {
+            eventLog.innerHTML = "";
+        }
+    };
 }
