@@ -7,22 +7,20 @@ control: AI Agent Tools
 documentation: ug
 ---
 
-# Getting Started with Syncfusion Document SDK Agent Tool Library
+# Getting Started with Syncfusion Document SDK AI Agent Tool Library
 
-The Syncfusion Document SDK Agent Tool library exposes Word, Excel, PDF, PowerPoint, and Smart Data Extraction operations as AI-callable tools. These tools integrate seamlessly with the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp), enabling [AI agents](https://learn.microsoft.com/en-us/agent-framework/agents/?pivots=programming-language-csharp) to perform document operations autonomously.
+The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) exposes Word, Excel, PDF, PowerPoint, and Smart Data Extraction operations as AI-callable tools. These tools integrate seamlessly with the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp), enabling [AI agents](https://learn.microsoft.com/en-us/agent-framework/agents/?pivots=programming-language-csharp) to perform document operations autonomously.
 
 Before you begin, make two key decisions:
 
-1. **Document Manager Mode** — How documents are stored and managed between tool calls
-2. **AI Provider** — Which inference service powers your agent
+1. **Document Manager Mode** - How documents are stored and managed between tool calls
+2. **AI Provider** - Which inference service powers your agent
 
 This guide helps you choose the right configuration for your application.
 
----
-
 ## Document Manager Modes
 
-The library supports two modes for managing document state during agent tool invocations. Both modes expose the same AI tools—the difference is in how and where documents are stored between tool calls.
+The library supports two modes for managing document state during agent tool invocations. Both modes expose the same AI tools-the difference is in how and where documents are stored between tool calls.
 
 ### In-Memory Mode
 
@@ -31,9 +29,7 @@ The library supports two modes for managing document state during agent tool inv
 **When to use:**  
 Choose in-memory Mode for single-instance applications (desktop apps, console tools, or non-scalable environments) where in-memory state won't be lost. It provides the simplest and fastest experience.
 
-**In-Memory Mode**
-
----
+For further details, please refer to the [Getting Started In-Memory Mode documentation](./getting-started-in-memory-mode).
 
 ### Storage Mode
 
@@ -42,13 +38,11 @@ Choose in-memory Mode for single-instance applications (desktop apps, console to
 **When to use:**  
 Choose Storage Mode for web APIs or applications that need horizontal scaling, work with large documents, or require state persistence across sessions.
 
-**Storage Mode**
-
----
+For further details, please refer to the [Getting Started Storage Mode documentation](./getting-started-storage-mode).
 
 ## AI Providers
 
-The library works with Microsoft Agent Framework which supports multiple AI inference providers through the `Microsoft.Extensions.AI` abstraction layer. You can use any supported provider without changing Syncfusion tool code—only the client initialization changes.
+The library works with Microsoft Agent Framework which supports multiple AI inference providers through the `Microsoft.Extensions.AI` abstraction layer. You can use any supported provider without changing Syncfusion tool code-only the client initialization changes.
 
 ### Supported Providers
 
@@ -56,22 +50,19 @@ The Microsoft Agent Framework supports the following providers for .NET:
 
 - **[Azure OpenAI](https://learn.microsoft.com/en-us/agent-framework/agents/providers/azure-openai)**
 - **[OpenAI](https://learn.microsoft.com/en-us/agent-framework/agents/providers/openai)**
-- **[Anthropic](https://learn.microsoft.com/en-us/agent-framework/agents/providers/anthropic)**
-- **[Microsoft Foundry](https://learn.microsoft.com/en-us/agent-framework/agents/providers/microsoft-foundry)**
 
 For more details, see the [Microsoft Agent Framework Providers documentation](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp).
-
----
 
 > **Note:** Microsoft AI agents understand prompts in any natural language and invoke Agent library tools accordingly. Agent responses are returned in the same language as the prompt.
 
 ## See Also
 
-- In-Memory Mode
-- Storage Mode
-- [Syncfusion AI Agent Tools Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
-- [Available Tools Reference](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
-- [Customization Guide](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
-- [Example Prompts](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/example-prompts)
-- [Syncfusion Document Processing](https://helpstaging.syncfusion.com/document-processing/)
+- [In-Memory Mode](./getting-started-in-memory-mode)
+- [Storage Mode](./getting-started-storage-mode)
+- [Syncfusion AI Agent Tools Overview](./overview)
+- [Available Tools Reference](./tools)
+- [Customization Guide](./customization)
+- [Example Prompts](./example-prompts)
+- [Example Use Cases](./example-use-cases)
+- [Syncfusion Document Processing](https://help.syncfusion.com/document-processing)
 - [Microsoft Agents Framework](https://github.com/microsoft/agents)
