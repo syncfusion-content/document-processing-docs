@@ -19,7 +19,7 @@ Speed up your document automation using these example prompts for Syncfusion Doc
 {% promptcard Find Text and Its Coordinates %}
 Load the insurance policy document ‘policy_document.pdf’ from {InputDir}. Then search for all occurrences of the term ‘exclusion’ and return their exact page locations and bounding rectangle positions so our legal team can quickly audit every exclusion clause in the policy.
 {% endpromptcard %}
-{% promptcard Redact Text in PDF %}
+{% promptcard Redact Specific Text in PDF %}
 Load the court filing document ‘case_filing.pdf’ from {InputDir} and Find the Text ‘John Michael’ and ‘Ellwood Drive, Austin, TX 78701’ and ‘472-90-1835’.  Permanently redact all identifiable information. Use black highlight color for all redactions. Export the redacted document as ‘case_filing_redacted.pdf’ to {OutputDir}.
 {% endpromptcard %}
 {% promptcard Sign PDF with Digital Signature %}
@@ -59,10 +59,10 @@ Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {
 ### Excel
 
 {% promptcards %}
-{% promptcard Add Dropdown List %}
+{% promptcard Add Dropdown List for a Specific Range  %}
 Load a sales performance dashboard workbook ‘sales_dashboard_Q1_2026.xlsx’ from {InputDir}. Add a worksheet named ‘DataValidation’ and create the List validation in the A1:B3 range and the list names "Excel", "Presentation", "Word", "PDF". Export the workbook to {OutputDir}.
 {% endpromptcard %}
-{% promptcard Apply Conditional Formatting Highlights %}
+{% promptcard Apply Conditional Formatting to Highlight %}
 Load an inventory management workbook ‘inventory_status.xlsx’ from {InputDir}. Get the "Stock_Levels" sheet and apply conditional formatting to the Reorder_point column (D2:D11): highlight cells in red where the value is less than the reorder threshold (use 10 as the formula threshold for the conditional format). Export the workbook to {OutputDir}.
 {% endpromptcard %}
 {% promptcard Protect Worksheet and Workbook %}
@@ -113,10 +113,10 @@ Convert the sales conference presentation 'sales_conference_2026.pptx' from {Inp
 ### Data Extraction
 
 {% promptcards %}
-{% promptcard Extract PDF Data as JSON %}
+{% promptcard Extract All Data from PDF as JSON %}
 Extract all structured data from the PDF document ‘conversion_demo.pdf’ located at {InputDir}. Enable both form and table detection . Use a confidence threshold of 0.6 for reliable results. Save the extracted JSON to ‘conversion_demo_data.json’ in {OutputDir}.
 {% endpromptcard %}
-{% promptcard Extract PDF Tables as JSON %}
+{% promptcard Extract Tables from PDF as JSON %}
 Extract only the table data from the quarterly financial report ‘table_conversion_demo.pdf’ located at {InputDir}. Enable border less table detection to ensure all tables are captured even if they lack visible borders. Use a confidence threshold of 0.3. Save the extracted table data as ‘table_conversion_demo.json’ in {OutputDir}.
 {% endpromptcard %}
 {% endpromptcards %}
