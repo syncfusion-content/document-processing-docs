@@ -1,5 +1,5 @@
 ---
-title: How to check if a formula in a cell contains an error value? | Syncfusion
+title: How to Check Formula Error Values in a Cell | Syncfusion
 description: This page describes how to check if a formula returns an error and how to access the corresponding error value using XlsIO.
 platform: document-processing
 control: XlsIO
