@@ -56,12 +56,3 @@ This section describes the unsupported elements in Syncfusion® Angular DOCX Edi
 | Special Characters, Symbols, Equations | No |
 | Built-in and custom document properties | No |
 | Comment reactions | No |
-
-
-
-
-
-
-
-
-
