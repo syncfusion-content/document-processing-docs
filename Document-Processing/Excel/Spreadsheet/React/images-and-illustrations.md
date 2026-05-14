@@ -193,7 +193,10 @@ Enables or disables image functionality in the Spreadsheet.
 
 ### Limitations of Image
 
-The following features have some limitations in Image:
-
 * Corner resizing option in the image element.
-* Copy and paste the external image.
+
+## See Also
+* [Overview](./overview.md)
+* [Illustrations](./illustrations.md)
+* [Formatting](./formatting)
+* [Rows and columns](./rows-and-columns)

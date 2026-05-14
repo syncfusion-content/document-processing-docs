@@ -269,3 +269,9 @@ The following features have some limitations in the Chart:
 * Insert row/delete row between the chart data source will not reflect the chart.
 * Copy/paste into the chart data source will not reflect the chart.
 * Corner resizing option in chart element.
+
+## See Also
+* [Overview](./overview.md)
+* [Illustrations](./illustrations.md)
+* [Formatting](./formatting)
+* [Rows and columns](./rows-and-columns)
