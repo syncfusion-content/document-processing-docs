@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unsupported Features in DOCX Editor
+# Unsupported Features in React DOCX Editor
 
-This section describes the unsupported elements in Syncfusion® DOCX Editor (Document Editor) 
+This section describes the unsupported elements in Syncfusion® React DOCX Editor (Document Editor) 
 
-## Formatting features
+## Document formatting
 
 | Feature | Details | Supported |
 |--------|--------|-----------|
@@ -20,38 +20,99 @@ This section describes the unsupported elements in Syncfusion® DOCX Editor (Doc
 |  | Mirror indent | No |
 |  | Suppress line numbers | No |
 |  | Don’t hyphenate | No |
-| Text Properties | Shading, Position, Font kerning, Ligatures, Number spacing, Number forms, Stylistic sets, Contextual alternates | No |
+| Text Properties | Shading  | No |
+|  |  Position | No |
+|  |  Font kerning | No |
+|  |  Ligatures | No |
+|  |  Number space | No |
+|  |  Number forms | No |
+|  |  Stylistic sets | No |
+|  |  Contextual alternates| No |
 |  | Text Direction (Top to Bottom, Bottom to Top) | No |
-| Section Formatting | Mirror margins, Gutter, Line numbers, Bi-direction | No |
-| Page Background | Page background image | No |
-| WaterMark | Watermark / Theme / Page color | No |
+| Section Formatting | Mirror margins | No |
+| | Gutter | No |
+| | Line numbers | No |
+| | Bi-direction | No |
+| Page background image |  | No |
+| Watermark/Theme/Page Color  |  | No |
 | Table Format | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
+| Designer | | No |
+| Gridlines | | No |
 
+## Reviewing your Document
 
-## Word Document Elements
+| Feature | Supported |
+|--------|----------------|
+| Editor | No |
+|Transcribe | No |
+|Translate | No |
+|Word count | No |
 
-| Feature | Document Editor |
+## Inserting Objects in your Document
+
+| Feature | Supported |
 |--------|----------------|
 | ActiveX Controls | No |
+| Cover Page | No |
 | Embedded Objects | No |
+| Gif, Emoji | No |
 | Images | Bitmap images only |
-| InkML | No |
+| Ink/Draw | No |
 | Video or audio files | No |
 | Macros | No |
+| Screenshots/screen clipping | No |
 | Models, Smart-Art, and Charts | [Supported Charts](https://help.syncfusion.com/document-processing/word/word-processor/react/chart) |
 | Shapes, Textboxes, and WordArt | [Supported shapes](https://help.syncfusion.com/document-processing/word/word-processor/react/shapes#supported-shapes) *(Shape Properties: Fill types, borders, rotation – No) |
 | Signature line | No |
 | Special Characters, Symbols, Equations | No |
-| Comments | Text and mentions supported; images and other items not supported |
 | Built-in and custom document properties | No |
 
+## References
 
-## Security
-
-| Feature | Document Editor |
+| Feature | Supported |
 |--------|----------------|
-| Password Protection | Supported through server-side implementation |
-| Restricted Editing | Yes |
+| Bibliography | No |
+| Captions | No |
+| Citations | No |
+
+## Sharing, Collaboration
+
+| Feature | Supported |
+|--------|----------------|
+| Compare and Merge revisions | No |
+| Export as PDF | No |
+| Link to Heading | No |
+| Offline Viewing and Authoring | No |
+| Share as Link or Email | No |
+
+## Comments
+
+| Feature | Supported |
+|--------|----------------|
+| Comment Reactions | No |
+| Insert Image in Comments | No |
+| Link to Comment | No |
+
+## Accessibility
+
+| Feature | Supported |
+|--------|----------------|
+| Braille Support  | No |
+| Co-Authoring Announcements | No |
+| Dark Mode | No |
+| Dictation/Voice Typing | No |
+| Immersive Reader | No |
+
+## Mailing
+
+| Feature | Supported |
+|--------|----------------|
+| Creating Envelopes & Labels  | No |
+
+
+
+
+
 
 
 
