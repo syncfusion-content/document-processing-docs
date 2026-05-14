@@ -1,15 +1,15 @@
 ---
-title: How to Open Excel as Read‑Only using XlsIO | Syncfusion
-description: This page explains how to to open Excel file as ReadOnly in MS Excel using XlsIO
+title: How to set read only mode in Excel document | Syncfusion
+description: This page explains how to to set read only mode in Excel document using XlsIO
 platform: document-processing
 control: XlsIO
 documentation: UG
 
-# How to open Excel file as ReadOnly in Microsoft Excel using XlsIO?
+# How to set read only mode in Excel document using XlsIO?
 
-The example below shows how to set this flag with Syncfusion XlsIO and save the file so Microsoft Excel offers the "Read-only recommended" option when the file is opened.
+To enable, read only mode in Excel document, ReadOnlyRecommended property needs to be set as 'True' before saving the Excel document using XlsIO.
 
-The following code examples illustrate this.
+The following code examples illustrate how to set read only mode in Excel.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
