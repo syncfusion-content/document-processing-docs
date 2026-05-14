@@ -13,7 +13,7 @@ Essential<sup>&reg;</sup> PDF provides support to add barcodes to the PDF docume
 * Two-dimensional barcodes, such as QR Code, Data Matrix, and PDF417.
 
 To quickly get started, working with QR codes in PDF Documents using the .NET PDF Library. Watch this video:
-{% youtube "https://www.youtube.com/watch?v=hSkFuJEbPXw" %}
+{% youtube "https://www.youtube.com/watch?v=2XEp4MXdnpE&t=1s" %}
 
 ## Adding a one dimensional barcode to the PDF document
 
