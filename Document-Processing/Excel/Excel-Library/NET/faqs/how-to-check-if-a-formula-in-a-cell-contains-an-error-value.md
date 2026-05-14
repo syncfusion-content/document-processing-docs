@@ -1,6 +1,6 @@
 ---
 title: How to check if a formula in a cell contains an error value? | Syncfusion
-description: Explains how to detect whether a formula returns an error using HasFormulaErrorValue and read the FormulaErrorValue via IRange in XlsIO.
+description: This page describes how to check if a formula returns an error and how to access the corresponding error value using XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,10 +8,7 @@ documentation: UG
 
 # How to check if a formula in a cell contains an error value?
 
-In XlsIO there is no direct property that predicts whether a formula will evaluate to an error at design time, but the `IRange` interface exposes two useful members:
-
-- `HasFormulaErrorValue` (Read-Only): returns true when the formula in the cell evaluates to an error value.
-- `FormulaErrorValue` (Read-Only): returns the error value as a string (for example `#DIV/0!`, `#N/A`, etc.).
+Formulas are calculated during execution. Once calculated, you can check if the result has an error and retrieve the corresponding error value, such as #DIV/0! or #N/A, using built-in error-checking support.
 
 The example below shows how to iterate the used range of a worksheet, check each cell for `HasFormulaErrorValue`, and print the `FormulaErrorValue` and the cell address.
 
