@@ -77,11 +77,7 @@ The following sample shows how to render the Spreadsheet inside the Accordion.
 
 The Spreadsheet measures its parent container to calculate column widths, row heights and layout. If the parent container has no height (collapsed, `display:none`, or not yet mounted) measurements will be zero and the Spreadsheet may render incorrectly, be clipped, or not display at all.
 
-Initialize or refresh the Spreadsheet when its parent container becomes visible (tab active, modal opened, accordion expanded) so internal layout code can compute sizes.
-
-## Resize & visibility tips
-
-After the parent container becomes visible, call the Spreadsheet instance's [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method so it can recompute layout:
+Initialize the Spreadsheet when its parent container becomes visible (tab active, modal opened, accordion expanded) or invoke the [resize](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#resize) method of Spreadsheet once the parent container is visible to re-render the Spreadsheet based on the visible parent container's height and width.
 
 ```js
 setTimeout(() => {
