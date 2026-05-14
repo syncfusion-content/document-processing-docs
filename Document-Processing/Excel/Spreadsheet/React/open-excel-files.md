@@ -428,7 +428,7 @@ public IActionResult Open(IFormCollection openRequest)
 } 
 ```
 
-### Open large Excel files with chunk response processing
+### Open Large Excel Files with Chunk Response Processing
 
 When opening large Excel files with many features and data, the server response can become very large. This might cause memory issues or connection problems during data transmission. The `Chunk Response Processing` feature solves this by dividing the server response into smaller parts, called chunks, and sending them to the client in parallel. The client receives these chunks and combines them to load the Excel data smoothly into the spreadsheet.
 
@@ -445,26 +445,26 @@ import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 const App = () => {
 
-  const spreadsheetRef = React.useRef(null);
-  const openSettings = {
-    // Specifies the size (in bytes) of each chunk for the server response when opening a document.
-    chunkSize: 1000000,
-    // Specifies the number of retry attempts for a failed server request when returning the opened file responses in chunks.
-    // This ensures reliable handling of temporary network or server disruptions during the chunked response process.
-    retryCount: 3,
-    // Specifies the delay (in milliseconds) before retrying a failed server request when returning the opened file responses in chunks.
-    // This ensures controlled retries in case of temporary network or server disruptions during the chunked response process.
-    retryAfterDelay: 500
-  }
+    const spreadsheetRef = React.useRef(null);
+    const openSettings = {
+        // Specifies the size (in bytes) of each chunk for the server response when opening a document.
+        chunkSize: 1000000,
+        // Specifies the number of retry attempts for a failed server request when returning the opened file responses in chunks.
+        // This ensures reliable handling of temporary network or server disruptions during the chunked response process.
+        retryCount: 3,
+        // Specifies the delay (in milliseconds) before retrying a failed server request when returning the opened file responses in chunks.
+        // This ensures controlled retries in case of temporary network or server disruptions during the chunked response process.
+        retryAfterDelay: 500
+    }
 
-  const openUrl = 'https://localhost:{{port_number}}/Home/Open';
+    const openUrl = 'https://localhost:{{port_number}}/Home/Open';
 
-  return (
-    <div className='control-section spreadsheet-control'>
-      <SpreadsheetComponent openUrl={openUrl} openSettings={openSettings} ref={spreadsheetRef}>
-      </SpreadsheetComponent>
-    </div>
-  );
+    return (
+        <div className='control-section spreadsheet-control'>
+            <SpreadsheetComponent openUrl={openUrl} openSettings={openSettings} ref={spreadsheetRef}>
+            </SpreadsheetComponent>
+        </div>
+    );
 }
 
 export default App;
