@@ -9,11 +9,37 @@ documentation: ug
 
 # Save Excel Files in Syncfusion React Spreadsheet
 
-When exporting an Excel file from the React Spreadsheet component, the process is handled through a streamlined server‑side workflow. The Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
+The Syncfusion React Spreadsheet component uses a server-assisted workflow to save Excel files efficiently and accurately. When a user saves an Excel file, the Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
 
-Once generated, this JSON workbook is sent to the server, where the [`Syncfusion.EJ2.Spreadsheet library`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) uses [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview) to convert the JSON data into a fully formatted Excel file. During this process, the JSON workbook is parsed and its contents are mapped to an XlsIO Workbook instance, ensuring that all data, styles, formulas, and other Spreadsheet features are accurately preserved.
+The JSON workbook is then sent to a server endpoint for processing. On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library (built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview) and **ASP.NET**) converts the JSON data into a fully formatted Excel file. The server parses the JSON, maps its contents to an XlsIO Workbook instance, and ensures that all data, styles, formulas, and other Spreadsheet features are accurately preserved.
 
-Since the server is responsible for generating the final Excel file, the total export time can vary depending on the workbook’s complexity. Factors such as the level of formatting, styles and the use of advanced features like formulas or conditional formatting can influence processing time. After the file is successfully generated, it is sent back to the client for download.
+Since the server is responsible for generating the final Excel file, the total export time can vary depending on the workbook’s complexity. Factors such as the level of formatting, styles, and the use of advanced features like formulas or conditional formatting can influence processing time. After the file is successfully generated, it is sent back to the client for download.
+
+In the code samples and demos, you may see **Syncfusion-hosted service URLs** used for the `saveUrl` property. These URLs point to Syncfusion’s own WebAPI services (built with **ASP.NET Core**) that handle saving Excel files. These hosted URLs are provided for demonstration and evaluation purposes only.
+
+For your own development and production, you should always set up your own web service for save operations. This ensures your data remains private, secure, and fully under your control.
+
+**Server Configuration**
+
+Below is an example of a server-side `Save` endpoint using ASP.NET Core WebAPI, which is the same approach used for building the hosted Syncfusion URLs. This endpoint receives the Spreadsheet data as JSON, processes it with the Syncfusion Spreadsheet library, and returns the generated Excel file to the client:
+
+```csharp
+[Route("api/[controller]")]
+public class SpreadsheetController : Controller
+{
+    // To save as Excel file
+    [AcceptVerbs("Post")]
+    [HttpPost]
+    [EnableCors("AllowAllOrigins")]
+    [Route("Save")]
+    public IActionResult Save([FromForm] SaveSettings saveSettings)
+    {
+        return Workbook.Save(saveSettings);
+    }
+}
+```
+
+> **Note:** For details on how to set up your own web service for open/save operations, refer to the [web service](./web-services/webservice-overview) section of this documentation.
 
 To enable saving Excel files, set the [`allowSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowsave) property to **true** and specify the service URL using the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property. When a save action is triggered, the control sends the spreadsheet model to this endpoint, where it is processed and returned as a downloadable Excel file.
 
@@ -442,33 +468,6 @@ The possible values are:
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs8" %}
-
-
-## Server configuration
-
-In the Spreadsheet component, Excel export processing is handled on the `server‑side`. Therefore, to enable exporting in your application, you need to configure a server using any of the following web service technologies:
-
-* WebAPI
-* WCF Service
-* ASP.NET MVC Controller Action
-
-The following code snippet shows how to configure the server using a `WebAPI` service:
-
-```csharp
-[Route("api/[controller]")]
-public class SpreadsheetController : Controller
-{
-    // To save as Excel file
-    [AcceptVerbs("Post")]
-    [HttpPost]
-    [EnableCors("AllowAllOrigins")]
-    [Route("Save")]
-    public IActionResult Save([FromForm] SaveSettings saveSettings)
-    {
-        return Workbook.Save(saveSettings);
-    }
-}
-```
 
 ## Server dependencies
 
