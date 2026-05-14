@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create or Generate PDF file in Node | Syncfusion
+title: Create or Generate PDF file in Node.js | Syncfusion
 description: Learn how to create a PDF file in Node.js server with easy steps using Syncfusion TypeScript PDF library without depending on Adobe
 platform: document-processing
 control: PDF

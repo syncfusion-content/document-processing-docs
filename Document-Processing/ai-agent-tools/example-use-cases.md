@@ -10,7 +10,7 @@ documentation: ug
 
 ## Overview
 
-This example use case demonstrates building a **Blog Generator** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview?pivots=programming-language-csharp), OpenAI (text and image generation), and Syncfusion Word Agent Tools to convert a single user‑provided topic into a fully formatted blog ebook. The agent generates a title and structured outline, creates detailed content with relevant images, and outputs the final result in **HTML** and **Word (.docx)** formats. This sample application runs using [in‑memory mode](./getting-started-in-memory-mode.md) for document processing.
+This example use case demonstrates building a **Blog Generator** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview?pivots=programming-language-csharp), OpenAI (text and image generation), and Syncfusion Word Agent Tools to convert a single user‑provided topic into a fully formatted blog ebook. The agent generates a title and structured outline, creates detailed content with relevant images, and outputs the final result in **HTML** and **Word (.docx)** formats. This sample application runs using [in‑memory mode](./getting-started-in-memory-mode) for document processing.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ This example use case demonstrates building a **Blog Generator** that uses the [
 <tr>
 <td>NuGet Packages</td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core">Syncfusion.DocumentSDK.AI.AgentTools</a><br/>
+<a href="https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools">Syncfusion.DocumentSDK.AI.AgentTools</a><br/>
 <a href="https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI">Microsoft.Agents.AI.OpenAI</a><br/>
 <a href="https://www.nuget.org/packages/OpenAI">OpenAI</a>
 </td>
@@ -190,7 +190,7 @@ At runtime, the console application performs the following actions:
 For a complete, runnable example combining all steps, refer to the console
 application in this repository:
 
-[Examples/Console/BlogGenerator/Program.cs](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main)
+[Examples/Console/BlogGenerator/Program.cs](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs)
 
 ## See Also
 
