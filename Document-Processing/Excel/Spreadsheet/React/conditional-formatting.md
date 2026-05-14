@@ -29,7 +29,7 @@ Highlight cells rules option in the conditional formatting enables you to highli
 
 The following options can be given for the highlight cells rules as type,
 
->* 'GreaterThan', 'LessThan', 'Between', 'EqualTo', 'ContainsText', 'DateOccur', 'Duplicate', 'Unique'.
+>* `GreaterThan`, `LessThan`, `Between`, `EqualTo`, `ContainsText`, `DateOccur`, `Duplicate`, `Unique`.
 
 The following preset colors can be used for formatting styles,
 
@@ -45,7 +45,7 @@ Top bottom rules option in the conditional formatting allows you to apply format
 
 The following options can be given for the top bottom rules as type,
 
->* 'Top10Items', 'Bottom10Items', 'Top10Percentage', 'Bottom10Percentage', 'BelowAverage', 'AboveAverage'.
+>* `Top10Items`, `Bottom10Items`, `Top10Percentage`, `Bottom10Percentage`, `BelowAverage`, `AboveAverage`.
 
 ## Data Bars
 
@@ -53,7 +53,7 @@ You can apply data bars to represent the data graphically inside a cell. The lon
 
 The following options can be given for the data bars as type,
 
->* 'BlueDataBar', 'GreenDataBar', 'RedDataBar', 'OrangeDataBar', 'LightBlueDataBar', 'PurpleDataBar'.
+>* `BlueDataBar`, `GreenDataBar`, `RedDataBar`, `OrangeDataBar`, `LightBlueDataBar`, `PurpleDataBar`.
 
 ## Color Scales
 
@@ -61,7 +61,7 @@ Using color scales, you can format your cells with two or three colors, where di
 
 The following options can be given for the color scales as type,
 
->* 'GYRColorScale', 'RYGColorScale', 'GWRColorScale', 'RWGColorScale', 'BWRColorScale', 'RWBColorScale', 'WRColorScale', 'RWColorScale', 'GWColorScale', 'WGColorScale', 'GYColorScale', 'YGColorScale'.
+>* `GYRColorScale`, `RYGColorScale`, `GWRColorScale`, `RWGColorScale`, `BWRColorScale`, `RWBColorScale`, `WRColorScale`, `RWColorScale`, `GWColorScale`, `WGColorScale`, `GYColorScale`, `YGColorScale`.
 
 ## Icon Sets
 
@@ -69,7 +69,7 @@ Icon sets will help you to visually represent your data with icons. Every icon r
 
 The following options can be given for the icon sets as type,
 
->* 'ThreeArrows', 'ThreeArrowsGray', 'FourArrowsGray', 'FourArrows', 'FiveArrowsGray', 'FiveArrows', 'ThreeTrafficLights1', 'ThreeTrafficLights2', 'ThreeSigns', 'FourTrafficLights', 'FourRedToBlack', 'ThreeSymbols', 'ThreeSymbols2', 'ThreeFlags', 'FourRating', 'FiveQuarters', 'FiveRating', 'ThreeTriangles', 'ThreeStars', 'FiveBoxes'.
+>* `ThreeArrows`, `ThreeArrowsGray`, `FourArrowsGray`, `FourArrows`, `FiveArrowsGray`, `FiveArrows`, `ThreeTrafficLights1`, `ThreeTrafficLights2`, `ThreeSigns`, `FourTrafficLights`, `FourRedToBlack`, `ThreeSymbols`, `ThreeSymbols2`, `ThreeFlags`, `FourRating`, `FiveQuarters`, `FiveRating`, `ThreeTriangles`, `ThreeStars`, `FiveBoxes`.
 
 ## Custom Format
 
@@ -77,14 +77,14 @@ Using the custom format for conditional formatting you can set cell styles like 
 
 In the MAY and JUN columns, we have applied conditional formatting custom format.
 
->* In the Conditional format, custom format supported for Highlight cell rules and Top bottom rules.
+>* In the Conditional format, custom format supported for **Highlight cell rules** and **Top bottom rules**.
 
 ## Clear Rules
 
 You can clear the defined rules by using one of the following ways,
 
-* Using the “Clear Rules” option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
-* Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
+* Using the `Clear Rules` option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
+* Using the [`clearConditionalFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

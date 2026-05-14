@@ -7,35 +7,66 @@ platform: document-processing
 documentation: ug
 ---
 
-# Text and cell formatting
+## Cell Styling and Text Formatting
 
-Text and cell formatting enhances the look and feel of your cell. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowcellformatting) property to enable or disable the text and cell formatting option in Spreadsheet.
+Text and cell formatting improves the appearance of your spreadsheet and helps highlight specific cells or ranges. You can apply formats such as font size, font family, font color, text alignment, borders, and more. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowcellformatting) property to enable or disable text and cell formatting in the Spreadsheet.  
 
-You can set formats in the following ways:
+You can set formats in the following ways:  
+* Use the [style](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#style) property to apply formats to each cell during the initial load.
+* Use the [`cellFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#cellformat) method to apply formats to a cell or range of cells dynamically.  
+* Apply formatting directly by clicking the desired format option from the ribbon toolbar.
 
-- Using the `style` property to set formats at initial load.
-- Using the [`cellFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#cellformat) method to set formats to a cell or range.
-- Using formatting options from the ribbon toolbar.
+### Fonts
 
-## Fonts
+Various font formats supported in the spreadsheet are font-family, font-size, bold, italic, strike-through, underline and font color.
 
-Supported font options include `fontFamily`, `fontSize`, bold, italic, strike-through, underline, and `fontColor`. You can set fonts for a single cell or a range via data binding or at runtime using formatting methods such as `cellFormat`. `fontFamily` accepts common font names, `fontSize` accepts numeric values, and text decorations (bold/italic/underline/strike) can be combined to emphasize content.
+### Text Alignment
 
-## Text Alignment
+You can align text in a cell either vertically or horizontally using the  [`textAlign`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/textalign) and [verticalAlign](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/verticalalign) property.
 
-Align text horizontally (`left`, `center`, `right`) and vertically (`top`, `middle`, `bottom`) using the `textAlign` and `verticalAlign` properties. These alignment settings are available through the ribbon and can be applied programmatically via the `style` property or `cellFormat` method.
+### Indents
 
-## Indents
+To enhance the appearance of text in a cell, you can change the indentation of a cell content using [textIndent](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textindent) property.
 
-Adjust indentation with the `textIndent` property to visually offset cell content. Indentation can be applied incrementally from the ribbon (Increase/Decrease Indent) or set directly in a cell's `style` object.
+### Fill color
 
-## Fill color
+To highlight cell or range of cells from whole workbook you can apply background color for a cell using [backgroundColor](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#backgroundcolor) property.
 
-Apply a background fill using the `backgroundColor` property to highlight cells or ranges. The fill can be applied via the ribbon's fill color picker or programmatically through the `style` property.
+### Borders
 
-## Borders
+You can add borders around a cell or range of cells to define a section of worksheet or a table. The different types of border options available in the spreadsheet are,
 
-Add borders to a cell or range to define tables, emphasize regions, or separate data. Borders support different sides, styles, widths, and colors. Use the ribbon border tools for common presets or apply fine-grained border settings programmatically via the `border` property. To know more about border, see [Borders](./cell-border).
+| Types | Actions |
+|-------|---------|
+| **Top Border** | Specifies the top border of a cell or range of cells.|
+| **Left Border** | Specifies the left border of a cell or range of cells.|
+| **Right Border** | Specifies the right border of a cell or range of cells.|
+| **Bottom Border** | Specifies the bottom border of a cell or range of cells.|
+| **No Border** | Used to clear the border from a cell or range of cells.|
+| **All Border** | Specifies all border of a cell or range of cells.|
+| **Horizontal Border** | Specifies the top and bottom border of a cell or range of cells.|
+| **Vertical Border** | Specifies the left and right border of a cell or range of cells.|
+| **Outside Border** | Specifies the outside border of a range of cells.|
+| **Inside Border** | Specifies the inside border of a range of cells.|
+
+You can also change the color, size, and style of the border. The size and style supported in the spreadsheet are,
+
+| Types | Actions |
+|-------|---------|
+| **Thin** | Specifies the `1px` border size (default).|
+| **Medium** | Specifies the `2px` border size.|
+| **Thick** | Specifies the `3px` border size.|
+| **Solid** | Used to create the `solid` border (default).|
+| **Dashed** | Used to create the `dashed` border.|
+| **Dotted** | Used to create the `dotted` border.|
+| **Double** | Used to create the `double` border.|
+
+Borders can be applied in the following ways,
+* Using the  `border`, `borderLeft`, `borderRight`, `borderBottom` properties, you can set the desired border to each cell at initial load.
+* Using the [setBorder](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#setborder) method, you can set various border options to a cell or range of cells.
+* Selecting the border options from ribbon toolbar.
+
+The following code example shows the style formatting in text and cells of the spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -54,7 +85,9 @@ Add borders to a cell or range to define tables, emphasize regions, or separate 
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/cellformat-cs1" %}
 
-## Limitations of Formatting
+### Limitations of Formatting
 
-- Insert row/column between the formatting applied cells is not supported.
-- Formatting support for row/column is limited.
+The following features are not supported in Formatting:
+
+* Insert row/column between the formatting applied cells.
+* Formatting support for row/column.
