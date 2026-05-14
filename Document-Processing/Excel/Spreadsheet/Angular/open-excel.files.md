@@ -360,7 +360,7 @@ public IActionResult Open(IFormCollection openRequest)
 } 
 ```
 
-### Chunk response processing
+### Open Large Excel Files with Chunk Response Processing
 
 When opening large Excel files with many features and data, the server response can become very large. This might cause memory issues or connection problems during data transmission. The `Chunk Response Processing` feature solves this by dividing the server response into smaller parts, called chunks, and sending them to the client in parallel. The client receives these chunks and combines them to load the Excel data smoothly into the spreadsheet.
 
