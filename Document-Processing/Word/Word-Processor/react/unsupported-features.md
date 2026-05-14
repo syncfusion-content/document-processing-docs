@@ -20,52 +20,43 @@ This section describes the unsupported elements in Syncfusion® React DOCX Edito
 |  | Mirror indent | No |
 |  | Suppress line numbers | No |
 |  | Don’t hyphenate | No |
+|  | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
 | Text Properties | Shading  | No |
 |  |  Position | No |
 |  |  Font kerning | No |
 |  |  Ligatures | No |
-|  |  Number space | No |
+|  |  Number spacing | No |
 |  |  Number forms | No |
 |  |  Stylistic sets | No |
 |  |  Contextual alternates| No |
 |  | Text Direction (Top to Bottom, Bottom to Top) | No |
+|  | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
 | Section Formatting | Mirror margins | No |
 | | Gutter | No |
 | | Line numbers | No |
 | | Bi-direction | No |
-| Page background image |  | No |
-| Watermark/Theme/Page Color  |  | No |
+| Page background | Page background color or image | No |
+| Watermark  |  Text and Picture watermark| No |
 | Table Format | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
-| Designer | | No |
-| Gridlines | | No |
 
-## Reviewing your Document
-
-| Feature | Supported |
-|--------|----------------|
-| Editor | No |
-|Transcribe | No |
-|Translate | No |
-|Word count | No |
-
-## Inserting Objects in your Document
+## Word Document Elements
 
 | Feature | Supported |
 |--------|----------------|
 | ActiveX Controls | No |
 | Cover Page | No |
 | Embedded Objects | No |
-| Gif, Emoji | No |
 | Images | Bitmap images only |
 | Ink/Draw | No |
 | Video or audio files | No |
 | Macros | No |
-| Screenshots/screen clipping | No |
 | Models, Smart-Art, and Charts | [Supported Charts](https://help.syncfusion.com/document-processing/word/word-processor/react/chart) |
-| Shapes, Textboxes, and WordArt | [Supported shapes](https://help.syncfusion.com/document-processing/word/word-processor/react/shapes#supported-shapes) *(Shape Properties: Fill types, borders, rotation – No) |
+| Shapes, Textboxes, and WordArt | [Supported shapes](https://help.syncfusion.com/document-processing/word/word-processor/react/shapes#supported-shapes) *(Shape Properties: Fill types, borders, rotation and effects are not supported) |
 | Signature line | No |
 | Special Characters, Symbols, Equations | No |
 | Built-in and custom document properties | No |
+| Comment reactions | No |
+
 
 ## References
 
