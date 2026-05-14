@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with React Spreadsheet component | Syncfusion
-description:  Checkout and learn about getting started with the Syncfusion React Spreadsheet component in the Spreadsheet Editor SDK and more details.
+description:  Checkout and learn about Getting started with React Spreadsheet component of Syncfusion Essential JS 2 and more details.
 control: Getting started
 platform: document-processing
 documentation: ug
@@ -58,10 +58,8 @@ Add the following style references to the `src/App.css` file.
 @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';';
 ```
-
-> **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a React project.
 
 ## Add the Syncfusion® React Spreadsheet component to the application
 
@@ -88,9 +86,11 @@ npm run dev
 
 After the application starts, open the local URL shown in the terminal to view the React Spreadsheet Editor in the browser.
 
-Use the following live preview to explore the Spreadsheet component.
+The following example shows a basic spreadsheet component.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/getting-started-cs1" %}
+
+> You can refer to our [React Spreadsheet](https://www.syncfusion.com/react-components/react-spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) that shows you how to present and manipulate data.
 
 ## Video tutorial
 
