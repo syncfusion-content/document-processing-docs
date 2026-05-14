@@ -20,15 +20,16 @@ Documents are held as live objects in an in-memory dictionary. Each tool accesse
 | Requirement | Details |
 |---|---|
 | **.NET SDK** | .NET 8.0 or NET 9.0 or .NET 10.0 |
-| **OpenAI API Key** | Obtain from platform.openai.com |
+| **OpenAI API Key** | Obtain from <a href="https://platform.openai.com">platform.openai.com</a> |
 | **NuGet Packages** | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
+>**Note:** The OpenAI API key is mandatory for this sample because the guide demonstrates the integration using the **Microsoft Agents Framework with OpenAI**. The same integration steps work with any other [provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) (Azure OpenAI, Anthropic, Google Gemini, Ollama, etc.) — just swap in that provider’s API key or endpoint credentials.
 
 ## Integration
 
 Integrating the Agent Tool library into your application involves the following steps:
 
-**Step 1: Install the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).**
+**Step 1: Install the [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).**
 
 ![Install DocIO .NET Core NuGet package](Install_Nuget.png)
 
@@ -252,11 +253,12 @@ while (true)
 
 For a complete, runnable example combining all steps, refer to the example console application in the GitHub repository:
 
-Examples/Console/AgentChatConsole/Program.cs
+[Examples/Console/AgentChatConsole/Program.cs](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AgentChatConsole/Program.cs)
 
 ## See Also
 
-- [Overview](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/overview)
-- [Tools](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/tools)
-- [Customization](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/customization)
-- [Example Prompts](https://helpstaging.syncfusion.com/document-processing/ai-agent-tools/example-prompts)
+- [Overview](./overview)
+- [Tools](./tools)
+- [Customization](./customization)
+- [Example Prompts](./example-prompts)
+- [Example Use Cases](./example-use-cases)

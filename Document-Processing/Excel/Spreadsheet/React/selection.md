@@ -9,19 +9,23 @@ documentation: ug
 
 # Selection in React Spreadsheet component
 
-Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` / `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
+Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction.
 
-> * The default value for `mode` in  `selectionSettings` is `Multiple`.
+To configure selection, use the [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectionsettings) property:
+* `mode = "Single"` → allows selecting only one cell, row, or column at a time.  
+* `mode = "Multiple"` → allows selecting multiple cells, rows, or columns at once.  
+* `mode = "None"` → disables UI selection completely.
 
-You have the following options in Selection,
+> The default value for `mode` is `Multiple`.
 
-* Cell selection
-* Row selection
-* Column selection
+You can perform:
+* Cell selection – highlight individual cells.  
+* Row selection – highlight entire rows.  
+* Column selection – highlight entire columns.  
 
 ## Cell selection
 
-Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#selectrange) method.
+Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method.
 
 **User Interface**:
 
@@ -97,7 +101,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 ## Get selected cell values
 
-You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. Additionally, you can also programmatically perform selection using the [selectRange](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#selectrange) method. This selection behavior is controlled based on the [selectionSettings](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#selectionsettings) property. Now, retrieving the selected cell values as a collection is achievable using the [getData](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet/#getdata) method.
+You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. Additionally, you can also programmatically perform selection using the [selectRange](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method. This selection behavior is controlled based on the [selectionSettings](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#selectionsettings) property. Now, retrieving the selected cell values as a collection is achievable using the [getData](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#getdata) method.
 
 Below is a code example demonstrating how to retrieve the selected cell values as a collection programmatically:
 
@@ -120,7 +124,7 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 
 ## Remove selection
 
-The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#selectionsettings) to disable's the UI selection.
+The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectionsettings) to disable's the UI selection.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
