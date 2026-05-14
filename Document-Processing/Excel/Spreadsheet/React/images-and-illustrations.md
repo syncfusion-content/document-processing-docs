@@ -193,10 +193,9 @@ Enables or disables image functionality in the Spreadsheet.
 
 ### Limitations of Image
 
-* Corner resizing option in the image element.
+* Corner resizing option is not available in the image element.
 
 ## See Also
-* [Overview](./overview.md)
-* [Illustrations](./illustrations.md)
+* [Illustrations](./charts-and-visualizations.md)
 * [Formatting](./formatting)
 * [Rows and columns](./rows-and-columns)
