@@ -149,7 +149,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet comp
 {% endhighlight %}
 {% endtabs %}
 
-N> Note: the sample is UI-only and has no data binding. See [Open and Save](open-and-save.md) to open, bind, or save workbooks.
+N> To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save.md).
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spreadsheet in your default web browser.
 
