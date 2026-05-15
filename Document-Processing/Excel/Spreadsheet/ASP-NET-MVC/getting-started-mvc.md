@@ -18,11 +18,13 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 ## Create ASP.NET MVC application with HTML helper
 
-* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-8.0&tabs=visual-studio)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started#create-your-first-app)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC package in the application
 
 Open the NuGet package manager UI in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5) and then install it. Alternatively, you can utilize the following package manager command to achieve the same.
+
+> Make sure that the `Microsoft.AspNet.Mvc` package and its dependency packages are updated to the latest version.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -36,10 +38,12 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls are ava
 
 ## Add namespace
 
-Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
+Add **Syncfusion.EJ2** namespace reference in `~/Views/Web.config` file, as shown in the following example.
 
 ```
+...
 <namespaces>
+    ...
     <add namespace="Syncfusion.EJ2"/>
 </namespaces>
 ```

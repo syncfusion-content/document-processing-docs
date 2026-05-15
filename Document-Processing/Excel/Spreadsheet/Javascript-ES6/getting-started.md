@@ -54,7 +54,7 @@ npm install
 
 ## Add CSS references
 
-Add the following style references to the file.
+Add the following Spreadsheet and dependent component style references.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/styles/styles.css" %}
@@ -137,6 +137,8 @@ The image below shows how the spreadsheet is rendered in the browser:
 Use the following live preview to explore the Spreadsheet control.
           
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1" %}
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-javascript-spreadsheet-control).
 
 ## See also
 

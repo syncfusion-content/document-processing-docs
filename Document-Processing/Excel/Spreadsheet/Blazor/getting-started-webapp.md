@@ -32,7 +32,7 @@ If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to 
 To add **Syncfusion Blazor Spreadsheet** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
 * [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet)
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -120,7 +120,9 @@ Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor
 ....
 using Syncfusion.Blazor;
 ....
+
 builder.Services.AddSyncfusionBlazor();
+
 ....
 
 {% endhighlight %}
@@ -130,13 +132,17 @@ N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, registe
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/Components/App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the <head> section and the script reference at the end of the <body> in the **~/Components/App.razor** file as shown below.
 
 ```html
-
-<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-....
-<script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
+</body>
 
 ```
 
@@ -160,28 +166,25 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet DataSource="DataSourceBytes">
+<SfSpreadsheet>
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
-
-@code {
-    public byte[] DataSourceBytes { get; set; }
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
 
+N> To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save.md).
+
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spreadsheet in your default web browser.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLHDSMIxNVhqnlu?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" backgroundimage "[Blazor Spreadsheet](images/getting-started.png)" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-spreadsheet-examples/tree/master/Getting%20Started).
 
 ## See Also
 
-* [Blazor Spreadsheet Overview](overview)
-* [Open and Save](open-and-save)
+- [Getting started with the Blazor Spreadsheet in a Blazor WebAssembly App](./getting-started.md)
+- [Getting Started with .NET MAUI Blazor Hybrid App](./blazor-hybrid-maui-app.md)
