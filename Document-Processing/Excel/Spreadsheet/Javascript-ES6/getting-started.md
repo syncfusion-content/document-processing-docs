@@ -54,7 +54,7 @@ npm install
 
 ## Add CSS references
 
-Add the following style references to the file.
+Add the following Spreadsheet and dependent component style references.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/styles/styles.css" %}
@@ -77,7 +77,7 @@ Add the following style references to the file.
 
 ## Add the Syncfusion® Spreadsheet control to the application
 
-Add a container element for the Spreadsheet control in the `index.html` file and then initialize the control in the `index.ts` file.
+Add a container element for the Spreadsheet control in the `index.html` file and then initialize the control in the `app.ts` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -100,7 +100,7 @@ Add a container element for the Spreadsheet control in the `index.html` file and
 </html>
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 
@@ -130,9 +130,15 @@ npm start
 {% endhighlight %}
 {% endtabs %}
 
+The image below shows how the spreadsheet is rendered in the browser:
+
+![Rendered spreadsheet in browser](./images/spreadsheet.png)
+
 Use the following live preview to explore the Spreadsheet control.
           
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1" %}
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-javascript-spreadsheet-control).
 
 ## See also
 
