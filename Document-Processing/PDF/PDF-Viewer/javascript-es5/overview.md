@@ -1,6 +1,6 @@
 ---
 title: Overview of JavaScript (ES5) PDF Viewer | Syncfusion
-description: Learn about the Syncfusion JavaScript PDF Viewer, its capabilities, and supported platforms.
+description: Learn here all about the Syncfusion JavaScript PDF Viewer, its capabilities, and supported platforms.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
@@ -14,26 +14,26 @@ The [`JavaScript PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) compone
 
 * Accurate, reliable rendering of PDF pages.
 * Easy page navigation with:
-    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/navigation)
-    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/navigation)
-    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/navigation)
-    * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/navigation)
+    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/page-thumbnail)
+    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/bookmark)
+    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/hyperlink)
+    * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/hyperlink#table-of-contents-navigation)
 * Core interactions:
     * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/magnification) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interaction-mode)
-    * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/text-search)
+    * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/text-search/text-search-features)
     * Text selection and copy
-* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/print) PDF files.
+* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/print/overview) PDF files.
 * Annotate PDFs with:
-    * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotation/text-markup-annotation): highlight, underline, and strikethrough
-    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotation/shape-annotation): rectangle, circle, polygon, line, and arrow
-    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotation/stamp-annotation)
-    * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotation/free-text-annotation)
-    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotation/sticky-notes-annotation)
-* [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/form-designer/create-fillable-pdf-forms/create-programmatically)
-* [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/form-designer/create-fillable-pdf-forms/create-programmatically)
-* [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/handwritten-signature)
+    * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotations/annotation-types/highlight-annotation): highlight, underline, and strikethrough
+    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotations/annotation-types/rectangle-annotation): rectangle, circle, polygon, line, and arrow
+    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotations/annotation-types/stamp-annotation)
+    * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotations/annotation-types/free-text-annotation)
+    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotations/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotations/annotation-types/sticky-notes-annotation)
+* [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/forms/form-filling)
+* [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/forms/form-designer)
+* [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/annotations/signature-annotation)
 * [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/toolbar) - Built-in toolbar and custom toolbars for common viewer actions.
-* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/globalization) - Localize the UI.
+* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/localization/default-language) - Localize the UI.
 * Open and display [normal and protected PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) with AES and RC4 encryption.
 
 ## Supported Web platforms

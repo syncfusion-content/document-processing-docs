@@ -1,6 +1,6 @@
 ---
 title: Overview of ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn about the Syncfusion ASP.NET MVC PDF Viewer, its capabilities, and supported platforms.
+description: Learn here all about the Syncfusion ASP.NET MVC PDF Viewer, its capabilities, and supported platforms.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
@@ -14,10 +14,10 @@ The [`ASP.NET MVC`](https://www.syncfusion.com/pdf-viewer-sdk) PDF Viewer is a l
 
 * Accurate, reliable rendering of PDF pages.
 * Easy page navigation with:
-    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/navigation)
-    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/navigation)
-    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/navigation)
-    * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/navigation)
+    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/interactive-pdf-navigation/page-thumbnail)
+    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/interactive-pdf-navigation/bookmark)
+    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/interactive-pdf-navigation/hyperlink)
+    * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/interactive-pdf-navigation/hyperlink#table-of-contents-navigation)
 * Core interactions:
     * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/magnification) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/interaction-mode)
     * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/text-search)
@@ -29,9 +29,9 @@ The [`ASP.NET MVC`](https://www.syncfusion.com/pdf-viewer-sdk) PDF Viewer is a l
     * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/stamp-annotation)
     * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/free-text-annotation)
     * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/sticky-notes-annotation)
-* [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/form-designer/create-programmatically)
-* [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/form-designer/create-programmatically)
-* [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/hand-written-signature)
+* [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/form-filling)
+* [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/form-designer)
+* [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/signature-annotation)
 * [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/toolbar) - Built-in toolbar and custom toolbars for common viewer actions.
 * [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/globalization) - Localize the UI.
 * Open and display [normal and protected PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started)
