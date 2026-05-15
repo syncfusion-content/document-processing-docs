@@ -213,10 +213,10 @@ Syncfusion® MCP Servers provide full access to all AI interaction modes — Ask
 Here are some effective ways to use <a href ="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDOCXEditorSDKAssistant</a>:
 
  * "How to search for text and replace it in React DOCX Editor?"
- * "How to insert bookmarks in Angular DOCX Editor?"
+ * "Show me code to insert bookmarks in Angular DOCX Editor?"
  * "How to protect documents with comments only restriction in ASP.NET Core DOCX Editor?"
- * "How can I add custom context menu items in a Blazor DOCX Editor?"
- * "How can I identify the current editing context (text, image, or table) in Syncfusion SfRichTextBoxAdv for WPF?"
+ * "Provide an example of adding custom context menu items in a Blazor DOCX Editor?"
+ * "Generate a minimal WPF example demonstrating how to change the document background color in the Syncfusion WPF DOCX Editor using SfRichTextBoxAdv"
 
 ## Troubleshooting
 
