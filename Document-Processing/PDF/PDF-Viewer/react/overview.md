@@ -1,6 +1,6 @@
 ---
 title: Overview of React PDF Viewer Component | Syncfusion
-description: Learn about the Syncfusion React PDF Viewer, its capabilities, and supported platforms.
+description: Learn here all about the Syncfusion React PDF Viewer, features, its capabilities, and supported platforms.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
@@ -17,23 +17,23 @@ The [`React PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is
     * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/page-thumbnail)
     * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/bookmark)
     * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/hyperlink)
-    * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/table-of-contents)
+    * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/overview)
 * Core interactions:
-    * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/magnification) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interaction-mode)
-    * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/text-search)
+    * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/magnification/magnification) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interaction-mode)
+    * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/text-search/text-search-features)
     * Text selection and copy
-* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/print) PDF files.
+* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/print/overview) PDF files.
 * Annotate PDFs with:
-    * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/text-markup-annotation): highlight, underline, and strikethrough
-    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/shape-annotation): rectangle, circle, polygon, line, and arrow
-    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/stamp-annotation)
-    * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/free-text-annotation)
-    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/sticky-notes-annotation)
-* [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/forms/manage-form-fields/create-form-fields)
-* [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/form-designer)
+    * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/annotation-types/highlight-annotation): highlight, underline, and strikethrough
+    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/annotation-types/rectangle-annotation): rectangle, circle, polygon, line, and arrow
+    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/annotation-types/stamp-annotation)
+    * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/annotation-types/free-text-annotation)
+    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/annotation-types/sticky-notes)
+* [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/forms/form-filling)
+* [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/forms/form-designer)
 * [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/signature-annotation)
-* [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar) - Built-in toolbar and custom toolbars for common viewer actions.
-* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/globalization) - Localize the UI.
+* [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar-customization/overview) - Built-in toolbar and custom toolbars for common viewer actions.
+* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/localization/default-language) - Localize the UI.
 * Open and display [normal and protected PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
 
 ## Supported Web platforms
