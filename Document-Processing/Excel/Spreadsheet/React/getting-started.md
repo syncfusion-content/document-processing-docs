@@ -46,7 +46,7 @@ npm install @syncfusion/ej2-react-spreadsheet --save
 
 ## Add CSS references
 
-Add the following style references to the `src/index.css` file.
+Add the following Spreadsheet and dependent component style references to the `src/index.css` file.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -102,7 +102,7 @@ Run the following command to start the development server:
 npm run dev
 ```
 
-After the application starts, open the local URL shown in the terminal to view the React Spreadsheet Editor in the browser. The output will appear as follows:
+After the application starts, open the localhost URL shown in the terminal to view the React Spreadsheet Editor in the browser. The output will appear as follows:
 
 ![React Spreadsheet control](images/spreadsheet.PNG)
 

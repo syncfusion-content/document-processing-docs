@@ -50,7 +50,7 @@ npm install @syncfusion/ej2-angular-spreadsheet@ngcc --save
 
 ## Add CSS references
 
-Add the following style references to the `[src/styles.css]` file.
+Add the following Spreadsheet and dependent component style references to the `[src/styles.css]` file.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -96,7 +96,7 @@ Run the following command to start the development server:
 ng serve
 ```
 
-After the application starts, open the local URL shown in the terminal to view the Angular Spreadsheet component in the browser. The output will appear as follows:
+After the application starts, open the localhost URL shown in the terminal to view the Angular Spreadsheet component in the browser. The output will appear as follows:
 ![Angular Spreadsheet component](./images/spreadsheet.png)
 
 Use the following live preview to explore the Spreadsheet component.

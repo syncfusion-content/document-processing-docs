@@ -34,7 +34,7 @@ npm install @syncfusion/ej2-vue-spreadsheet --save
 
 ## Add CSS references
 
-Add the following style references.
+Add the following Spreadsheet and dependent component style references.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/style.css" %}
@@ -65,9 +65,7 @@ Import and register the Spreadsheet component directives in the `script` section
 {% raw %}
 
 <template>
-  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl">
-    
-  </ejs-spreadsheet>
+  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
 </template>
 
 <script setup>
@@ -84,13 +82,11 @@ const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor
 {% raw %}
 
 <template>
-  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl">
-
-  </ejs-spreadsheet>
+  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
 </template>
 
 <script>
-  import { SpreadsheetComponent, RangesDirective, RangeDirective, SheetsDirective, SheetDirective } from "@syncfusion/ej2-vue-spreadsheet";
+  import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
 
   export default {
     name: "App",
@@ -122,7 +118,7 @@ To run the project, use the following command:
 npm run dev
 ```
 
-After the application starts, open the local URL shown in the terminal to view the Vue Spreadsheet Editor in the browser. The output will appear as follows:
+After the application starts, open the localhost URL shown in the terminal to view the Vue Spreadsheet Editor in the browser. The output will appear as follows:
 
 ![Output](images/Vue3-spreadsheet-demo.png)
 
