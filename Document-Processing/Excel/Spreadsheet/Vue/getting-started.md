@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Vue Spreadsheet Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component using the Composition API or Options API.
+This article provides a step-by-step guide for setting up a Vue 2 project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ npm install @syncfusion/ej2-vue-spreadsheet --save
 
 ## Add CSS references
 
-Add the following style references.
+Add the following Spreadsheet and dependent component style references.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -68,27 +68,10 @@ Add the following style references.
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component to the application
 
-Import and register the Spreadsheet component directives in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section.
+Import and register the Spreadsheet component directives in the `script` section of **src/App.vue**. Then, define the component in the `template` section.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-
-<template>
-  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
-</template>
-
-<script setup>
-import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spreadsheet";
-
-const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
-const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
-</script>
-
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% raw %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
@@ -111,7 +94,6 @@ export default {
 }
 </script>
 
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
