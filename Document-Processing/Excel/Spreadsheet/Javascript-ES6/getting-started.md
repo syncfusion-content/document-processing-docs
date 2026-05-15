@@ -132,7 +132,7 @@ npm start
 
 The image below shows the rendered spreadsheet in the browser.
 
-![Rendered spreadsheet in browser](./images/spreadsheet-rendered-in-browser.png)
+![Rendered spreadsheet in browser](./images/spreadsheet.png)
 
 Use the following live preview to explore the Spreadsheet control.
           
