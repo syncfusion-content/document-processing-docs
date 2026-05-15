@@ -77,7 +77,7 @@ Add the following style references to the file.
 
 ## Add the Syncfusion® Spreadsheet control to the application
 
-Add a container element for the Spreadsheet control in the `index.html` file and then initialize the control in the `index.ts` file.
+Add a container element for the Spreadsheet control in the `index.html` file and then initialize the control in the `app.ts` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -100,7 +100,7 @@ Add a container element for the Spreadsheet control in the `index.html` file and
 </html>
 
 {% endhighlight %}
-{% highlight ts tabtitle="index.ts" %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 
@@ -129,6 +129,10 @@ npm start
 
 {% endhighlight %}
 {% endtabs %}
+
+The image below shows the rendered spreadsheet in the browser.
+
+![Rendered spreadsheet in browser](./images/spreadsheet-rendered-in-browser.png)
 
 Use the following live preview to explore the Spreadsheet control.
           
