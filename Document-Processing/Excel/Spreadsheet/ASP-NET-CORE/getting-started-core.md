@@ -18,7 +18,7 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 ## Create ASP.NET Core web application with Razor pages
 
-* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio#create-a-razor-pages-web-app).
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio#create-a-razor-pages-web-app)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core package in the application
 
@@ -94,7 +94,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Spreadshee
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Spreadsheet control will be rendered in the default web browser.
 
-![ASP.NET Core Spreadsheet control](images/spreadsheet.PNG)
+![ASP.NET Core Spreadsheet control](images/spreadsheet.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/Spreadsheet/ASP.NET%20Core%20Tag%20Helper%20Examples).
 
