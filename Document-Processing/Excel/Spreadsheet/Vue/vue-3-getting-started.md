@@ -66,18 +66,12 @@ Import and register the Spreadsheet component directives in the `script` section
 
 <template>
   <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl">
-    <e-sheets>
-      <e-sheet>
-        <e-ranges>
-          <e-range></e-range>
-        </e-ranges>
-      </e-sheet>
-    </e-sheets>
+    
   </ejs-spreadsheet>
 </template>
 
 <script setup>
-import { SpreadsheetComponent as EjsSpreadsheet, RangesDirective as ERanges, RangeDirective as ERange, SheetsDirective as ESheets, SheetDirective as ESheet} from "@syncfusion/ej2-vue-spreadsheet";
+import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spreadsheet";
 
 const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
 const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
@@ -91,13 +85,7 @@ const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor
 
 <template>
   <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl">
-    <e-sheets>
-      <e-sheet>
-        <e-ranges>
-          <e-range></e-range>
-        </e-ranges>
-      </e-sheet>
-    </e-sheets>
+
   </ejs-spreadsheet>
 </template>
 
@@ -108,11 +96,7 @@ const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor
     name: "App",
     // Declaring component and its directives
     components: {
-      "ejs-spreadsheet": SpreadsheetComponent,
-      "e-sheets": SheetsDirective,
-      "e-sheet": SheetDirective,
-      "e-ranges": RangesDirective,
-      "e-range": RangeDirective,
+      "ejs-spreadsheet": SpreadsheetComponent
     },
     // Bound properties declarations
     data() {
