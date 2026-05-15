@@ -63,14 +63,6 @@ Blazor
 </tr>
 <tr>
 <td>
-Xamarin
-</td>
-<td>
-{{'[Syncfusion.Xamarin.Pdf.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Pdf/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 Windows UI (WinUI) <br/>
 .NET Multi-platform App UI (.NET MAUI)
 </td>
@@ -96,6 +88,14 @@ Windows UI (WinUI) <br/>
       </td>
       <td>
         {{'[Syncfusion.Pdf.AspNet.nupkg]( https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/)'| markdownify }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        {{'[Syncfusion.Xamarin.Pdf.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Pdf/)'| markdownify }}
       </td>
     </tr>
   </tbody>
@@ -125,14 +125,6 @@ For advanced PDF features like compression, redaction, PDF/A conversion, image e
       </td>
       <td>
         {{'[Syncfusion.Pdf.Imaging.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core)'| markdownify }}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Xamarin
-      </td>
-      <td>
-        {{'[Syncfusion.Xamarin.Pdf.Imaging.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Pdf.Imaging)'| markdownify }}
       </td>
     </tr>
     <tr>
@@ -483,14 +475,6 @@ Console Application (Targeting .NET Core)
 </tr>
 <tr>
 <td>
-Xamarin
-</td>
-<td>
-{{'[Syncfusion.Xamarin.XlsIORenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.XlsIORenderer/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 Blazor (Server-App)
 </td>
 <td>
@@ -515,6 +499,14 @@ Blazor (Server-App)
       </td>
       <td>
         {{'[Syncfusion.ExcelToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.ExcelToPdfConverter.AspNet/)'| markdownify }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        {{'[Syncfusion.Xamarin.XlsIORenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.XlsIORenderer/)'| markdownify }}
       </td>
     </tr>
   </tbody>
@@ -566,14 +558,6 @@ Blazor
 {{'[Syncfusion.PresentationRenderer.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/)'| markdownify }}
 </td>
 </tr>
-<tr>
-<td>
-Xamarin
-</td>
-<td>
-{{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
-</td>
-</tr>
 </table>
 
 ### RETIRED PRODUCTS
@@ -592,6 +576,14 @@ Xamarin
       </td>
       <td>
         {{'[Syncfusion.PresentationToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet/)'| markdownify }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        {{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
       </td>
     </tr>
   </tbody>
@@ -666,17 +658,6 @@ Install-package Syncfusion.Pdf.Net.Core
 </td>
 <td>
 Uninstall-package Syncfusion.Pdf.Net.Core –RemoveDependencies
-</td>
-</tr>
-<tr>
-<td>
-Xamarin
-</td>
-<td>
-Install-package Syncfusion.Xamarin.Pdf 
-</td>
-<td>
-Uninstall-package Syncfusion.Xamarin.Pdf -RemoveDependencies 
 </td>
 </tr>
 </table>

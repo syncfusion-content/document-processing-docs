@@ -273,7 +273,7 @@ Please refer to the below code snippet to use the DisableIEWarning API to remove
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Initialize the HTML to PDF converter 
  HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter(HtmlRenderingEngine.IE);
@@ -291,7 +291,8 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
 'Initialize the HTML to PDF converter 
 Dim htmlConverter As New HtmlToPdfConverter(HtmlRenderingEngine.IE)
 Dim settings As New IEConverterSettings()
@@ -306,10 +307,6 @@ Dim document As PdfDocument = htmlConverter.Convert("https://www.google.com")
 document.Save("Output.pdf")
 document.Close(True)
 
-{% endhighlight %}
-
-{% highlight c# tabtitle="ASP.NET Core" %}
-//Currently, IE rendering engine does not support conversion in .NET Core platform
 {% endhighlight %}
 
 {% endtabs %}

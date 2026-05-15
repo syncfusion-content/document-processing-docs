@@ -392,38 +392,6 @@ You can also resave the manipulated PDF document to the same file using overload
 
 {% tabs %}
 
-{% highlight c# tabtitle="ASP.NET Core" %}
-
-//PDF doesn't supports saving a PDF document into the same file on the C#/.NET Cross platforms. 
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C#" %}
-
-//Load an existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//To-Do some manipulation
-//To-Do some manipulation
-//Resave the document to the same file.
-loadedDocument.Save() ;
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-'Load an existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-'To-Do some manipulation
-'To-Do some manipulation
-'Resave the document to the same file.
-loadedDocument.Save()
-
-{% endhighlight %}
-
-{% endtabs %}
-
-{% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}	
 
 //PDF doesn't supports saving a PDF document into the same file on the C#/.NET Cross platforms. 
