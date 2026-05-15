@@ -31,21 +31,19 @@ Add the required Syncfusion® Spreadsheet style and script references to the `in
 
 {% tabcontent Using Local Resources %}
 
-To use local scripts and styles for Syncfusion® Spreadsheet, you can follow these steps:
+To use local scripts and styles for the Syncfusion® Spreadsheet, follow these steps:
 
-1. Download [Spreadsheet Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials) from the link and install it on your machine.
+1. Download and install the [Spreadsheet Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials).
 
-2. Create a `resources` folder under `spreadsheet-app`, and then copy the packages from the folder `JavaScript` where [Spreadsheet Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials) build is installed.
+2. Create a `resources` folder in your application (for example, `spreadsheet-app/resources`).
 
-3. Locate the installed SDK path on your system.
+3. From the installed SDK location, copy the required packages from the following folder into the `resources` folder:
 
 ```
-C:/Program Files (x86)/Syncfusion/Essential Studio/Spreadsheet Editor SDK/33.*.*/Web (Essential JS 2)/JavaScript/
+<Install path>/Syncfusion/Essential Studio/Spreadsheet Editor SDK/{VERSION}/Web (Essential JS 2)/JavaScript
 ```
 
-Copy all the required packages from the `JavaScript` folder and paste them into the `resources` folder you created in your project.
-
-4. After copying the required files, include the necessary styles and scripts references inside the `<head>` section of your `index.html` file, as shown below.
+4. After copying the files, add the Spreadsheet and its dependent control style and script references inside the `<head>` section of your `index.html` file, as shown below.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
