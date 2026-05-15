@@ -1,12 +1,12 @@
 ---
-title: Assemblies required for Data Extraction and OCR | Syncfusion
+title: Assemblies required for Data Extraction | Syncfusion
 description: This section details the Syncfusion assemblies required to configure and run Data Extraction seamlessly in .NET projects.
 platform: document-processing
 control: DataExtraction
 documentation: UG
 keywords: Assemblies
 ---
-# Assemblies required for Data Extraction and OCR
+# Assemblies required for Data Extraction
 
 ## Assemblies for Smart Data Extractor
 
@@ -23,8 +23,7 @@ The following assemblies need to be referenced in your application based on the 
     <tr>
       <td>
         {{'WPF'| markdownify }},
-        {{'Windows Forms'| markdownify }} and {{'ASP.NET MVC'| 
-		markdownify }}      
+        {{'Windows Forms'| markdownify }} and {{'ASP.NET MVC'| markdownify }}      
       </td>
       <td>
         Syncfusion.SmartDataExtractor.Base<br/>
@@ -188,56 +187,3 @@ The following assemblies need to be referenced in your application based on the 
   </tbody>
 </table>
 
-## Assemblies Required for OCR processor
-
-The following assemblies need to be referenced in your application based on the platform.
-
-<table>
-  <thead>
-    <tr>
-      <th>Platform(s)</th>
-      <th>Assemblies</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{'WPF'| markdownify }},
-        {{'Windows Forms'| markdownify }},
-        {{'ASP.NET'| markdownify }} and {{'ASP.NET MVC'| markdownify }}
-      </td>
-      <td>
-        Syncfusion.OCRProcessor.Base.dll<br/>
-        Syncfusion.Pdf.Base.dll<br/>
-        Syncfusion.Compression.Base.dll<br/>
-        Syncfusion.ImagePreProcessor.Base.dll<br/>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{'.NET Standard 2.0'| markdownify }}
-      </td>
-      <td>
-        Syncfusion.OCRProcessor.Portable.dll<br/>
-        Syncfusion.PdfImaging.Portable.dll<br/>
-        Syncfusion.Pdf.Portable.dll<br/>
-        Syncfusion.Compression.Portable.dll<br/>
-        {{'[SkiaSharp](https://www.nuget.org/packages/SkiaSharp/3.119.1)'| markdownify }} package<br/>
-        Syncfusion.ImagePreProcessor.Portable.dll<br/>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{'.NET 8/.NET 9/.NET 10'| markdownify }}
-      </td>
-      <td>
-        Syncfusion.OCRProcessor.NET.dll<br/>
-        Syncfusion.PdfImaging.NET.dll<br/>
-        Syncfusion.Pdf.NET.dll<br/>
-        Syncfusion.Compression.NET.dll<br/>
-        {{'[SkiaSharp](https://www.nuget.org/packages/SkiaSharp/3.119.1)'| markdownify }} package<br/>
-        Syncfusion.ImagePreProcessor.NET.dll<br/>
-      </td>
-    </tr>
-  </tbody>
-</table>

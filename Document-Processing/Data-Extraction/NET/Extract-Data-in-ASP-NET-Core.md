@@ -10,6 +10,9 @@ documentation: UG
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in ASP.NET Core applications.
 
+To quickly get started with extracting structured data from PDF and image files in ASP.NET Core using the Syncfusion<sup>&reg;</sup> Smart Data Extractor library, refer to this video tutorial:
+{% youtube "https://www.youtube.com/watch?v=fxijc3BgDTY" %}
+
 To include the .NET Core Smart Data Extractor library into your ASP.NET Core application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/assemblies-required) documentation.
 
 

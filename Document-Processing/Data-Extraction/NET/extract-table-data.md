@@ -57,7 +57,61 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-tables-from-pdf-document/.NET).
 
-## Extract Table Data as JSON within Specific Page Range
+
+
+
+
+## Extract Table Data as Markdown from PDF or Image
+
+To extract structured table data from a PDF document using the **ExtractTableAsMarkdown** method of the **TableExtractor** class, refer to the following code 
+
+{% tabs %}   
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.Text;
+using Syncfusion.SmartTableExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Smart Table Extractor
+    TableExtractor extractor = new TableExtractor();
+    //Extract table data from the PDF document as markdown.
+    string data = extractor.ExtractTableAsMarkdown(stream);
+    //Save the extracted markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Text;
+using Syncfusion.SmartTableExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Smart Table Extractor
+    TableExtractor extractor = new TableExtractor();
+    //Extract table data from the PDF document as markdown.
+    string data = extractor.ExtractTableAsMarkdown(stream);
+    //Save the extracted markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-table-data-as-MD-from-PDF/.NET).
+
+**Note:** To convert an image instead of a PDF, replace the input stream with the image file (for example, *Input.jpg* or *Input.png*). The rest of the code remains unchanged.
+
+## Extract Table Data within a Specific Page Range
+
+### Extract as JSON 
 
 To extract structured table data from a specific range of pages in a PDF document using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code example: 
 
@@ -113,11 +167,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-tables-by-page-range/.NET).
 
-## Extract Table Data as Markdown from PDF or Image
+### Extract as Markdown 
 
-To extract structured table data from a PDF document using the **ExtractTableAsMarkdown** method of the **TableExtractor** class, refer to the following code 
+To extract structured table data from a specific range of pages in a PDF document or Image using the **ExtractTableAsMarkdown** method of the **TableExtractor** class, refer to the following code example:
 
-{% tabs %}   
+{% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
@@ -127,14 +181,21 @@ using Syncfusion.SmartTableExtractor;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Table Extractor
-    TableExtractor extractor = new TableExtractor();
-    //Extract table data from the PDF document as markdown.
-    string data = extractor.ExtractTableAsMarkdown(stream);
-    //Save the extracted markdown data into an output file.
-    File.WriteAllText("Output.md", data, Encoding.UTF8);
-}
+	//Initialize the Smart Table Extractor.
+	TableExtractor extractor = new TableExtractor();
 
+	//Set the page range for extraction (pages 1 to 3).
+	TableExtractionOptions options = new TableExtractionOptions();
+	options.PageRange = new int[,] { { 1, 3 } };
+	extractor.TableExtractionOptions = options;
+
+	//Extract table data from the specified page range as a Markdown string.
+	string data = extractor.ExtractTableAsMarkdown(stream);
+
+	//Save the extracted output as a new Markdown file.
+	File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+		
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -145,21 +206,24 @@ using Syncfusion.SmartTableExtractor;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Table Extractor
-    TableExtractor extractor = new TableExtractor();
-    //Extract table data from the PDF document as markdown.
-    string data = extractor.ExtractTableAsMarkdown(stream);
-    //Save the extracted markdown data into an output file.
-    File.WriteAllText("Output.md", data, Encoding.UTF8);
+	//Initialize the Smart Table Extractor.
+	TableExtractor extractor = new TableExtractor();
+
+	//Set the page range for extraction (pages 1 to 3).
+	TableExtractionOptions options = new TableExtractionOptions();
+	options.PageRange = new int[,] { { 1, 3 } };
+	extractor.TableExtractionOptions = options;
+
+	//Extract table data from the specified page range as a Markdown string.
+	string data = extractor.ExtractTableAsMarkdown(stream);
+
+	//Save the extracted output as a new Markdown file.
+	File.WriteAllText("Output.md", data, Encoding.UTF8);
 }
 
 {% endhighlight %}
 
-{% endtabs %} 
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-table-data-as-MD-from-PDF/.NET).
-
-**Note:** To convert an image instead of a PDF, replace the input stream with the image file (for example, *Input.jpg* or *Input.png*). The rest of the code remains unchanged.
+{% endtabs %}
 
 ## Extract Table Data Asynchronously from PDF or Image
 

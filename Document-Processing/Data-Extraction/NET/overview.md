@@ -1,5 +1,5 @@
 ---
-title: Extract Structured Data and Perform OCR in .NET | Syncfusion
+title: Extract Structured Data in .NET | Syncfusion
 description: Syncfusion Data Extraction is a .NET library that extracts tables, forms, text, and images from documents, and recognizes form data to produce outputs such as PDFs and JSON.
 platform: document-processing
 control: DataExtraction
@@ -7,12 +7,12 @@ documentation: UG
 keywords: Assemblies
 ---
 
-## Overview of Smart Data Extractor
+# Overview of Smart Data Extractor
 
 Syncfusion® Smart Data Extractor is a high performance, deterministic C# library that extracts complete document structures from PDFs and images. Designed for .NET workflows, it analyzes visual layout lines, boxes, labels, and alignment to locate and extract elements such as table structure, text elements, images, headers, footers, and form fields with per field confidence scores for immediate review, export, or integration.
 
 
-### Key Features of Essential<sup>&reg;</sup> Smart Data Extractor
+## Key Features of Essential<sup>&reg;</sup> Smart Data Extractor
 
 The following list shows the key features available in the Essential<sup>&reg;</sup> SmartDataExtractor.
 
@@ -24,7 +24,7 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * **Confidence thresholding:** Results are filtered based on a configurable confidence score (0.0–1.0).
 * **Deterministic performance:** Designed for predictable, repeatable extraction across environments (Windows, Linux, Azure, Docker).
 
-### JSON Output Structure and Attributes
+## JSON Output Structure and Attributes
 
 The Syncfusion® Data Extraction libraries process PDFs and scanned images to extract structured document data—including tables, form fields, text elements, images, headers, and footers—by analyzing layout patterns, table regions, borders, alignment patterns, and cell structures. The extracted output is returned as structured JSON with per‑field and per‑cell confidence scores, along with complete document and table hierarchies, making it ready for immediate review, export, or integration into downstream workflows.
 
@@ -92,7 +92,7 @@ The Page Object represents the metadata of a page along with all the detected el
 <tr>
 <td>FormObjects</td>
 <td>Array</td>
-<td>List of detected form fields (checkboxes, text boxes, radio button, signature etc..)</td>
+<td>List of detected form fields (checkboxes, text boxes, radio buttons, signature etc.)</td>
 </tr>
 </tbody>
 </table>
@@ -285,42 +285,3 @@ Represents the text formatting attributes (font family, font style, font size) a
 </tr>
 </tbody>
 </table>
-
-## Overview of Optical Character Recognition (OCR)
-
-Optical character recognition (OCR) is a technology used to convert scanned paper documents in the form of PDF files or images into searchable and editable data.  
-
-The [Syncfusion<sup>&reg;</sup> OCR processor library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) has extended support to process OCR on scanned PDF documents and images with the help of Google’s [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
-
-An inbuilt `image preprocessor` has been added to the OCR to prepare images for optimal recognition. This step ensures cleaner input and reduces OCR errors. The preprocessor supports the following enhancements:
-
-* **Convert to Grayscale** – Simplifies image data by removing color information, making text easier to detect.
-* **Deskew** – Corrects tilted or rotated text for proper alignment.
-* **Denoise** – Removes speckles and artifacts that can interfere with character recognition.
-* **Apply Contrast Adjustment** – Enhances text visibility against the background.
-* **Apply Binarize** – Converts images to black-and-white for sharper text edges, using advanced thresholding methods
-
-The Syncfusion<sup>&reg;</sup> OCR processor library works seamlessly in various platforms: Azure App Services, Azure Functions, AWS Textract, Docker, WinForms, WPF, Blazor, ASP.NET MVC, ASP.NET Core with Windows, MacOS and Linux. 
-
-N> Starting with v20.1.0.x, if you reference Syncfusion<sup>&reg;</sup> OCR processor assemblies from the trial setup or the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn more about registering the Syncfusion<sup>&reg;</sup> license key in your application to use its components.
-
-### Key features 
-
-* Create a searchable PDF from scanned PDF.
-* Zonal text extraction from the scanned PDF.
-* Preserve Unicode characters.
-* Extract text from the image.
-* Create a searchable PDF from large scanned PDF documents. 
-* Create a searchable PDF from rotated scanned PDF.
-* Get OCRed text and its bounds from a scanned PDF document. 
-* Native call.
-* Customizing the temp folder.
-* Performing OCR with different Page Segmentation Mode.
-* Performing OCR with different OCR Engine Mode.
-* White List.
-* Black List.
-* Image into searchable PDF or PDF/A.
-* Improved accessibility.
-* Post-processing.
-* Compatible with .NET Framework 4.5 and above.
-* Compatible with .NET Core 2.0 and above.

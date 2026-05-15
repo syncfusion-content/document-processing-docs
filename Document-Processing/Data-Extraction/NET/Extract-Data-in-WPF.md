@@ -2,7 +2,7 @@
 title: Extract Data in WPF Application | Syncfusion
 description: Learn how to extract data in a WPF application with easy steps using the Syncfusion Smart Data Extractor library.
 platform: document-processing
-control: Smart Data Extractor
+control: SmartDataExtractor
 documentation: UG
 keywords: Assemblies
 
