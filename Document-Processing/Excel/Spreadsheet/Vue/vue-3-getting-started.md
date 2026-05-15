@@ -120,7 +120,7 @@ npm run dev
 
 After the application starts, open the localhost URL shown in the terminal to view the Vue Spreadsheet Editor in the browser. The output will appear as follows:
 
-![Output](images/Vue3-spreadsheet-demo.png)
+![Output](images/vue3-spreadsheet.png)
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component).
 
