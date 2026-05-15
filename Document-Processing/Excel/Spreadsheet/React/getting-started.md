@@ -67,10 +67,28 @@ Now, import the `SpreadsheetComponent` into your `src/App.jsx` or `src/App.tsx` 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/getting-started-cs1/app1/app.jsx %}
+{% raw %}
+
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+
+export default function App() {
+    return (<SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' 
+                saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' />);
+}
+
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/getting-started-cs1/app1/app.tsx %}
+{% raw %}
+
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+
+export default function App() {
+  return (<SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' 
+            saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' />);
+}
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
