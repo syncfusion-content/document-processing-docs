@@ -29,7 +29,7 @@ npm install @syncfusion/ej2-pdfviewer
 * [`Magnification`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/magnification) – Adjust zoom with fit-to-page, fit-to-width, or automatic options.
 * [`Search`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/text-search) – Find text anywhere in the PDF document.
 * [`Core interactions`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interaction-mode) – Scroll, zoom, pan, select, and navigate between pages.
-* [`Print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/print) – Print the entire PDF or selected pages from the browser.
+* [`Print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/print/overview) – Print the entire PDF or selected pages from the browser.
 * [`Globalization`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/globalization) – Localize the user interface for different languages and cultures.
 
 ## Supported web platforms
