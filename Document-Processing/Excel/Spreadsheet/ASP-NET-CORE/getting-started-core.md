@@ -18,7 +18,7 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 ## Create ASP.NET Core web application with Razor pages
 
-You can create a **ASP.NET Core Application** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio#create-a-razor-pages-web-app) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Extension](https://ej2.syncfusion.com/aspnetcore/documentation/visual-studio-integration/create-project).
+* Create a project using [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio#create-a-razor-pages-web-app).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core package in the application
 
@@ -66,7 +66,7 @@ Add the stylesheet and script references to the `<head>` section of the `~/Pages
 N> To learn other ways to load themes or scripts (such as NPM packages or [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)), see the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/appearance/theme) and [Adding Script Reference](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references) documentation.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
-Register the script manager `<ejs-script>` at the end of the `<body>` element in the ASP.NET Core application, as shown in the following example.
+Register the script manager `<ejs-scripts>` at the end of the `<body>` element in the ASP.NET Core application, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -101,5 +101,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Ge
 ## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core MVC using Tag Helper](https://ej2.syncfusion.com/aspnetcore/documentation/getting-started/aspnet-core-mvc-taghelper)
+* [Create a Project using Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Extension](https://ej2.syncfusion.com/aspnetcore/documentation/visual-studio-integration/create-project)
 * [Data Binding](./data-binding)
 * [Open and Save](./open-save)
