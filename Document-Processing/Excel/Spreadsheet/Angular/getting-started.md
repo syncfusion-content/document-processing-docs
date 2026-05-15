@@ -89,7 +89,8 @@ Run the following command to start the development server:
 ng serve
 ```
 
-After the application starts, open the local URL shown in the terminal to view the Angular Spreadsheet component in the browser.
+After the application starts, open the local URL shown in the terminal to view the Angular Spreadsheet component in the browser. The output will appear as follows
+![Angular Spreadsheet component rendered in browser](./images/angular_getting_started.png)
 
 Use the following live preview to explore the Spreadsheet component.
  
