@@ -18,36 +18,6 @@ N> 2. Unlike System.Drawing APIs all the units are measured in point instead of 
 To quickly get started with creating a PDF document in .NET, watch this video:
 {% youtube "https://www.youtube.com/watch?v=PvUdu1hpRLQ" %}
 
-Include the following namespaces in your .cs or .vb file as shown below.
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Parsing;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf.Graphics
-Imports Syncfusion.Pdf.Grid
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Creating a PDF document with simple text
 
 The following code example shows how to create a PDF document with simple text using the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object to draw the text on the PDF page.
@@ -55,6 +25,10 @@ The following code example shows how to create a PDF document with simple text u
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -74,6 +48,10 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
 //Add a page to the document.
@@ -92,6 +70,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -121,14 +103,18 @@ The following code example shows how to generate a PDF document with an image us
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
 //Add a page to the document.
 PdfPage page = doc.Pages.Add();
 //Create PDF graphics for the page
 PdfGraphics graphics = page.Graphics;
-//Load the image from the disk.
-PdfBitmap image = new PdfBitmap("Autumn Leaves.jpg");
+//Load the image as stream.
+FileStream imageStream = new FileStream("Autumn Leaves.jpg", FileMode.Open, FileAccess.Read);
+PdfBitmap image = new PdfBitmap(imageStream);
 //Draw the image
 graphics.DrawImage(image, 0, 0);
 //Save the document.
@@ -138,6 +124,9 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -156,6 +145,9 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -183,6 +175,12 @@ The following code example shows how to generate a PDF document with a simple ta
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Grid;
+using System.Data;
+
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page
@@ -214,6 +212,12 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Grid;
+using System.Data;
+
 //Create a new PDF document
 PdfDocument doc = new PdfDocument();
 //Add a page
@@ -245,6 +249,11 @@ doc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Grid
+Imports System.Data
 
 'Create a new PDF document.
 Dim doc As New PdfDocument()
@@ -629,6 +638,8 @@ The following guide shows how to fill a sample PDF form programmatically.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Pdf.Parsing;
+
 //Loads the PDF form.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(@"JobApplication.pdf");
 //Loads the form
@@ -637,7 +648,7 @@ PdfLoadedForm form = loadedDocument.Form;
 (form.Fields[0] as PdfLoadedTextBoxField).Text = "John";
 //Fills the textbox fields by using field name
 (form.Fields["LastName"] as PdfLoadedTextBoxField).Text = "Doe";
-(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Anytown, USA";
+(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Any town, USA";
 //Loads the radio button group
 PdfLoadedRadioButtonItemCollection radioButtonCollection = (form.Fields["Gender"] as PdfLoadedRadioButtonListField).Items;
 //Checks the 'Male' option
@@ -654,6 +665,8 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf.Parsing;
+
 //Loads the PDF form.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(@"JobApplication.pdf");
 //Loads the form
@@ -662,7 +675,7 @@ PdfLoadedForm form = loadedDocument.Form;
 (form.Fields[0] as PdfLoadedTextBoxField).Text = "John";
 //Fills the textbox fields by using field name
 (form.Fields["LastName"] as PdfLoadedTextBoxField).Text = "Doe";
-(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Anytown, USA";
+(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Any town, USA";
 //Loads the radio button group
 PdfLoadedRadioButtonItemCollection radioButtonCollection = (form.Fields["Gender"] as PdfLoadedRadioButtonListField).Items;
 //Checks the 'Male' option
@@ -679,6 +692,8 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf.Parsing
+
 'Loads the PDF form.
 Dim loadedDocument As New PdfLoadedDocument("JobApplication.pdf")
 'Load the form
@@ -687,7 +702,7 @@ Dim form As PdfLoadedForm = loadedDocument.Form
 TryCast(form.Fields(0), PdfLoadedTextBoxField).Text = "John"
 'Fills the textbox fields by using field name
 TryCast(form.Fields("LastName"), PdfLoadedTextBoxField).Text = "Doe"
-TryCast(form.Fields("Address"), PdfLoadedTextBoxField).Text = " John Doe " & vbLf & " 123 Main St " & vbLf & " Anytown, USA"
+TryCast(form.Fields("Address"), PdfLoadedTextBoxField).Text = " John Doe " & vbLf & " 123 Main St " & vbLf & " Any town, USA"
 'Load the radio button group
 Dim radioButtonCollection As PdfLoadedRadioButtonItemCollection = TryCast(form.Fields("Gender"), PdfLoadedRadioButtonListField).Items
 'Checks the 'Male' option
@@ -727,17 +742,8 @@ To convert website URL or local HTML file to PDF document using [Convert](https:
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Initialize HTML to PDF converter.
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//Convert URL to PDF document. 
-PdfDocument document = htmlConverter.Convert("https://www.google.com");
-//Save and close the PDF document.
-document.Save("Output.pdf");
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
 
 //Initialize HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -750,6 +756,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.HtmlConverter
+Imports Syncfusion.Pdf
 
 'Initialize HTML to PDF converter.
 Dim htmlConverter As HtmlToPdfConverter = New HtmlToPdfConverter()
@@ -780,21 +789,8 @@ To convert the HTML string to PDF using [Convert](https://help.syncfusion.com/cr
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Initialize HTML to PDF converter.
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//HTML string and Base URL.
-string htmlText = "<html><body><img src=\"syncfusion_logo.gif\" alt=\"Syncfusion_logo\" width=\"200\" height=\"70\"><p> Hello World</p></body></html>";
-string baseUrl = @"C:/Temp/HTMLFiles/";
-//Convert URL to PDF.
-PdfDocument document = htmlConverter.Convert(htmlText, baseUrl);
-FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
-//Save and close the PDF document.
-document.Save(fileStream);
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.Drawing;
+using Syncfusion.HtmlConverter;
 
 //Initialize HTML to PDF converter.
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -811,6 +807,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.HtmlConverter
 
 'Initialize HTML to PDF converter.
 Dim htmlConverter As HtmlToPdfConverter = New HtmlToPdfConverter()
@@ -837,7 +836,9 @@ Refer to the following code example to merge multiple documents from disk.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Generate the new PDF document
+using Syncfusion.Pdf;
+
+// Create the new PDF document
 PdfDocument finalDoc = new PdfDocument();
 // Creates a string array of source files to be merged.
 string[] source = { "file1.pdf, file2.pdf" };
@@ -852,7 +853,9 @@ finalDoc.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Generate the new PDF document
+using Syncfusion.Pdf;
+
+// Create the new PDF document
 PdfDocument finalDoc = new PdfDocument();
 // Creates a string array of source files to be merged.
 string[] source = { "file1.pdf, file2.pdf" };
@@ -867,7 +870,9 @@ finalDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Generate the new PDF document
+Imports Syncfusion.Pdf
+
+'Create the new PDF document
 Dim finalDoc As New PdfDocument()
 'Creates a string array of source files to be merged.
 Dim source As String() = {"file1.pdf, file2.pdf"}
@@ -886,6 +891,8 @@ You can merge the [PDF document](https://help.syncfusion.com/cr/document-process
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using Syncfusion.Pdf;
+
 //Creates the destination document
 PdfDocument finalDoc = new PdfDocument();
 Stream stream1 = File.OpenRead("file1.pdf");
@@ -903,6 +910,8 @@ finalDoc.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+
 //Creates the destination document
 PdfDocument finalDoc = new PdfDocument();
 Stream stream1 = File.OpenRead("file1.pdf");
@@ -919,6 +928,8 @@ finalDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
 
 'Creates the destination document
 Dim finalDoc As New PdfDocument()
