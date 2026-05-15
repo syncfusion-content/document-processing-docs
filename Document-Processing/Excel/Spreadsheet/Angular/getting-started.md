@@ -103,6 +103,8 @@ Use the following live preview to explore the Spreadsheet component.
  
 {% previewsample "/document-processing/samples/spreadsheet/angular/spreadsheet-cs1" %}
 
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-angular-spreadsheet-component).
+
 ## Video tutorial
 
 To get started quickly with Angular Spreadsheet, you can watch this video:
