@@ -18,7 +18,7 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 ## Create ASP.NET Core web application with Razor pages
 
-* Create a project using [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio#create-a-razor-pages-web-app).
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio#create-a-razor-pages-web-app).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core package in the application
 
