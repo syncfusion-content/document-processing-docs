@@ -46,7 +46,7 @@ npm install @syncfusion/ej2-react-spreadsheet --save
 
 ## Add CSS references
 
-Add the following style references to the `src/App.css` file.
+Add the following style references to the `src/index.css` file.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -58,7 +58,7 @@ Add the following style references to the `src/App.css` file.
 @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';';
+@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
 
 ## Add the Syncfusion® React Spreadsheet component to the application
@@ -84,7 +84,9 @@ Run the following command to start the development server:
 npm run dev
 ```
 
-After the application starts, open the local URL shown in the terminal to view the React Spreadsheet Editor in the browser.
+After the application starts, open the local URL shown in the terminal to view the React Spreadsheet Editor in the browser. The below image show Spreadsheet rendered in the default web browser.
+
+![React Spreadsheet control](images/spreadsheet.PNG)
 
 The following example shows a basic spreadsheet component.
 
