@@ -137,6 +137,7 @@ To run the project, use the following command:
 ```
 npm run dev
 ```
+
 After the application starts, open the local URL shown in the terminal to view the Vue Spreadsheet Editor in the browser. The output will appear as follows:
 
 ![Output](images/Vue3-spreadsheet-demo.png)
