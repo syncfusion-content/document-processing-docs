@@ -28,12 +28,12 @@ Our 30-day trial can be downloaded in two ways.
 ### Download Free Trial Setup
 
 1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the product
-2. After completing the required form or logging in with your registered Syncfusion<sup>&reg;</sup> account, you can download the trial installer from the confirmation page. (as shown in below screenshot.)
+2. After completing the required form or logging in with your registered Syncfusion<sup>&reg;</sup> account, you can download the trial installer from the confirmation page. (as shown in the screenshot below.)
 ![Trial and downloads of Syncfusion SmartDataExtractor](images/trial-confirmation.png)
    
 3. With a trial license, only the latest version’s trial installer can be downloaded.
 4. Unlock key is not required to install the Syncfusion<sup>&reg;</sup> Data Extraction trial installer.
-5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
+5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in the screenshot below.)
  
    ![Trial and downloads of Syncfusion SmartDataExtractor](images/trial-download.png)
 
@@ -72,7 +72,7 @@ You should initiate an evaluation if you have already obtained our components th
    ![License and downloads of Syncfusion SmartDataExtractor](images/license-download.png)
    
 4. Unlock key is not required to install the Syncfusion<sup>&reg;</sup> SmartDataExtractor trial installer.   
-5. For OS, ZIP formats is available for download.
+5. For each OS, ZIP format is available for download.
    
    ![License and downloads of Syncfusion SmartDataExtractor](images/start-trial-download-offline-installer.png)
 
@@ -104,7 +104,7 @@ The steps below show how to install the Syncfusion<sup>&reg;</sup> Smart Data Ex
 
 ## License key registration in samples
 
-After the installation, the license key is required to register the demo source that is included in the Linux installer. To learn about the steps for license registration for the ASP.NET Core - EJ2 samples in the Essential Studio<sup>&reg;</sup> SmartDataExtractor linux installer, please refer to this.
+After the installation, the license key is required to register the demo source that is included in the Linux installer. To learn about the steps for license registration for the ASP.NET Core - EJ2 samples in the Essential Studio<sup>&reg;</sup> Smart Data Extractor Linux installer, please refer to this.
 
 * Register the license key in the [Program.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-60) file if you created the ASP.NET Core web application with Visual Studio 2022 and .NET 6.0.
 * Register the license key in Configure method of [Startup.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-50-or-net-31)

@@ -12,9 +12,9 @@ keywords: Assemblies
 Syncfusion® Smart Data Extractor is a high performance, deterministic C# library that extracts complete document structures from PDFs and images. Designed for .NET workflows, it analyzes visual layout lines, boxes, labels, and alignment to locate and extract elements such as table structure, text elements, images, headers, footers, and form fields with per field confidence scores for immediate review, export, or integration.
 
 
-## Key Features of Essential<sup>&reg;</sup> Smart Data Extractor
+## Key Features of Syncfusion<sup>&reg;</sup> Smart Data Extractor
 
-The following list shows the key features available in the Essential<sup>&reg;</sup> SmartDataExtractor.
+The following list shows the key features available in the Syncfusion<sup>&reg;</sup> Smart Data Extractor.
 
 * **Document structure extraction:** Detects text elements, images, headers/footers, and complete table structure (regions, header rows, columns, cell boundaries, merged cells).
 * **File format support:** Works with PDF and common image formats (JPEG, PNG).
@@ -92,7 +92,7 @@ The Page Object represents the metadata of a page along with all the detected el
 <tr>
 <td>FormObjects</td>
 <td>Array</td>
-<td>List of detected form fields (checkboxes, text boxes, radio buttons, signature etc.)</td>
+<td>List of detected form fields (checkboxes, text boxes, radio buttons, signatures etc.)</td>
 </tr>
 </tbody>
 </table>

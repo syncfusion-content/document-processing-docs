@@ -1,6 +1,6 @@
 ---
 title: Extract data in ASP.NET Core | Syncfusion
-description: Learn how to extract data from pdf in ASP.NET Core with easy steps using Syncfusion .NET Core Data extraction library.
+description: Learn how to extract data from PDF in ASP.NET Core with step‑by‑step guidance using Syncfusion .NET Core Data extraction library.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
@@ -13,7 +13,7 @@ The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to ex
 To quickly get started with extracting structured data from PDF and image files in ASP.NET Core using the Syncfusion<sup>&reg;</sup> Smart Data Extractor library, refer to this video tutorial:
 {% youtube "https://www.youtube.com/watch?v=fxijc3BgDTY" %}
 
-To include the .NET Core Smart Data Extractor library into your ASP.NET Core application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/assemblies-required) documentation.
+To include the .NET Core Smart Data Extractor library into your ASP.NET Core application, please refer to the [NuGet Packages Required](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/assemblies-required) documentation.
 
 
 ## Steps to Extract Data from PDF in ASP.NET Core application
@@ -31,7 +31,7 @@ To include the .NET Core Smart Data Extractor library into your ASP.NET Core app
 Step 1: Create a new C# ASP.NET Core Web Application project.
    ![Create ASP.NET Core Web application in Visual Studio](GettingStarted_images/ASPNETCoreProjectCreation.png)
 
-Step 2: In configuration windows, name your project and click Next.
+Step 2: In configuration window, name your project and click Next.
    ![Select Web Application pattern](GettingStarted_images/ASPNETCoreConfiguration.png)
    ![Select version](GettingStarted_images/ASPNETCoreAdditionalInfo.png)
 
@@ -39,7 +39,7 @@ Step 2: In configuration windows, name your project and click Next.
 Step 3: Install the [Syncfusion.SmartDataExtractor.Net.Core](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.Net.Core/) package as reference to your ASP.NET Core applications from [NuGet.org](https://www.nuget.org/).
    ![Install SmartDataExtractor .NET Core NuGet package](GettingStarted_images/ASPNETCore_Nuget.png)
 
-Step 4: A default controller with name HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
+Step 4: A default controller named HomeController.cs is added on creation of ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -64,7 +64,7 @@ Step 5: A default action method named Index will be present in HomeController.cs
 
 {% endhighlight %}
 
-Step 6: Add a new action method named ``ExportToJson`` in HomeController.cs and include the below code example to extract data as JSON using the DataExtractor (help.syncfusion.com in Bing) class. Then use the Extract (help.syncfusion.com in Bing) method of the DataExtractor object to process the input and export the results in JSON format.
+Step 6: Add a new action method named `ExportToJson` in HomeController.cs and include the following code example to extract data as JSON using the DataExtractor (help.syncfusion.com in Bing) class. Then use the **ExtractDataAsJson** method of the DataExtractor object to process the input and export the results in JSON format.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -121,7 +121,7 @@ Step 4: Use the following command in the terminal to add the [Syncfusion.SmartDa
 dotnet add package Syncfusion.SmartDataExtractor.Net.Core
 ```
 
-Step 5: A default controller with name HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
+Step 5: A default controller named HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -131,7 +131,7 @@ Step 5: A default controller with name HomeController.cs gets added on creation 
 
 {% endhighlight %}
 
-Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
+Step 6: A default action method named Index will be present in HomeController.cs. Right-click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -147,7 +147,7 @@ Step 6: A default action method named Index will be present in HomeController.cs
 
 {% endhighlight %}
 
-Step 7: Add a new action method named ``ExportToJson`` in HomeController.cs and include the below code example to extract data as JSON using the DataExtractor (help.syncfusion.com in Bing) class. Then use the Extract (help.syncfusion.com in Bing) method of the DataExtractor object to process the input and export the results in JSON format.
+Step 7: Add a new action method named `ExportToJson` in HomeController.cs and include the following code example to extract data as JSON using the DataExtractor (help.syncfusion.com in Bing) class. Then use the **ExtractDataAsJson** method of the DataExtractor object to process the input and export the results in JSON format.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -180,7 +180,7 @@ dotnet build
 
 Step 9: Run the project.
 
-Run the following command in terminal to build the project.
+Run the following command in terminal to run the project.
 
 ```
 dotnet run

@@ -18,7 +18,7 @@ The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to ex
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio from the [official website](https://code.visualstudio.com/download).
 
 Step 1: Create a new C# Console Application project.
 ![Console sample creation](GettingStarted_images/ConsoleCreation.png)
@@ -39,7 +39,7 @@ using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
 
-Step 5: Include the below code snippet in *Program.cs* to Extract data from an PDF file.
+Step 5: Include the following code snippet in *Program.cs* to Extract data from an PDF file.
 
 {% tabs %}
 
@@ -107,7 +107,7 @@ using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
 
-Step 6: Include the below code snippet in *Program.cs* to Extract data from an PDF file.
+Step 6: Include the following code snippet in *Program.cs* to Extract data from an PDF file.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
  
@@ -134,7 +134,7 @@ dotnet build
 
 Step 8: Run the project.
 
-Run the following command in terminal to build the project.
+Run the following command in terminal to run the project.
 
 ```
 dotnet run
@@ -156,7 +156,7 @@ The following steps illustrates Extracting Data from PDF document in console app
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio from the [official website](https://code.visualstudio.com/download).
 
 **Steps to Extract Data from PDF using .NET Framework**
 
@@ -207,6 +207,6 @@ Click the Start button (green arrow) or press F5 to run the app.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/Console/.NETFramework/Extract_Data).
 
 By executing the program, you will get the PDF document as follows.
-![Console output PDF document](GettingStarted_images/JSON_Output.png)
+![Console output JSON document](GettingStarted_images/JSON_Output.png)
 
 
