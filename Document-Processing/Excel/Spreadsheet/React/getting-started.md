@@ -46,7 +46,7 @@ npm install @syncfusion/ej2-react-spreadsheet --save
 
 ## Add CSS references
 
-Add the following style references to the `src/App.css` file.
+Add the following style references to the `src/index.css` file.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -58,7 +58,7 @@ Add the following style references to the `src/App.css` file.
 @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';';
+@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
 ```
 
 ## Add the Syncfusion® React Spreadsheet component to the application
@@ -67,10 +67,28 @@ Now, import the `SpreadsheetComponent` into your `src/App.jsx` or `src/App.tsx` 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/getting-started-cs1/app/app.jsx %}
+{% raw %}
+
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+
+export default function App() {
+    return (<SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' 
+                saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' />);
+}
+
+{% endraw %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/getting-started-cs1/app/app.tsx %}
+{% raw %}
+
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+
+export default function App() {
+  return (<SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' 
+            saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' />);
+}
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -84,7 +102,9 @@ Run the following command to start the development server:
 npm run dev
 ```
 
-After the application starts, open the local URL shown in the terminal to view the React Spreadsheet Editor in the browser.
+After the application starts, open the local URL shown in the terminal to view the React Spreadsheet Editor in the browser. The output will appear as follows:
+
+![React Spreadsheet control](images/spreadsheet.PNG)
 
 The following example shows a basic spreadsheet component.
 

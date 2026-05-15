@@ -125,7 +125,9 @@ Run the following command to start the application:
 npm run serve
 ```
 
-After the application starts, open the local URL shown in the terminal to view the Vue Spreadsheet Editor in the browser.
+After the application starts, open the local URL shown in the terminal to view the Vue Spreadsheet Editor in the browser. The output will appear as follows:
+
+![Vue Spreadsheet control](images/spreadsheet.PNG)
 
 Use the following live preview to explore the Spreadsheet component.
 
