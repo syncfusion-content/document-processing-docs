@@ -59,7 +59,7 @@ Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {
 ### Excel
 
 {% promptcards %}
-{% promptcard Add Dropdown List for a Specific Range  %}
+{% promptcard Add Dropdown List for a Specific Range %}
 Load a sales performance dashboard workbook ‘sales_dashboard_Q1_2026.xlsx’ from {InputDir}. Add a worksheet named ‘DataValidation’ and create the List validation in the A1:B3 range and the list names "Excel", "Presentation", "Word", "PDF". Export the workbook to {OutputDir}.
 {% endpromptcard %}
 {% promptcard Apply Conditional Formatting to Highlight %}
