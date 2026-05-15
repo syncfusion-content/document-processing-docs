@@ -216,7 +216,6 @@ Here are some effective ways to use <a href ="https://www.npmjs.com/package/@syn
  * "Show me code to insert bookmarks in Angular DOCX Editor?"
  * "How to protect documents with comments only restriction in ASP.NET Core DOCX Editor?"
  * "Provide an example of adding custom context menu items in a Blazor DOCX Editor?"
- * "Generate a minimal WPF example demonstrating how to change the document background color in the Syncfusion WPF DOCX Editor using SfRichTextBoxAdv"
 
 ## Troubleshooting
 
