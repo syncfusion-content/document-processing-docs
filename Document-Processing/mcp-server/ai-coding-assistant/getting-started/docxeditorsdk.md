@@ -1,29 +1,29 @@
 ---
 layout: post
-title: SyncfusionDocxEditorSDKAssistant MCP Server Setup – Syncfusion
+title: SyncfusionDOCXEditorSDKAssistant MCP Server Setup – Syncfusion
 description: Explore the MCP server’s benefits, setup needs, and integration guidance for Syncfusion DocxEdiorSDK.
 platform: document-processing
 control: AI coding assistant
 documentation: ug
 ---
 
-# SyncfusionDocxEditorSDKAssistant MCP Server
+# SyncfusionDOCXEditorSDKAssistant MCP Server
 
 
 ## Overview  
 
-The <a href ="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDocxEditorSDKAssistant</a> is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server that provides intelligent, context-aware coding assistance for Syncfusion **DocxEditorSDK** across all supported platforms are JavaScript, Angular, React, Vue, ASP.NET MVC, ASP.NET Core, UWP, WPF and Blazor.
+The <a href ="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDOCXEditorSDKAssistant</a> is a specialized [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server that provides intelligent, context-aware coding assistance for Syncfusion **DOCXEditorSDK** across all supported platforms are Angular, React, Vue, JavaScript, ASP.NET MVC, ASP.NET Core, Blazor, UWP and WPF.
 It integrates seamlessly with [MCP clients](https://modelcontextprotocol.io/clients) to provide intelligent assistance for building applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 ### Key Benefits
 
-  * Intelligent code generation for Syncfusion<sup>&reg;</sup> DocumentSDK components.
+  * Intelligent code generation for Syncfusion<sup>&reg;</sup> DOCXEditorSDK components.
   *	Detailed component documentation and usage examples.
   *	Troubleshooting assistance for common integration challenges.
 
 ## Prerequisites
 
-Before using <a href="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDocxEditorSDKAssistant</a>, ensure you have:
+Before using <a href="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDOCXEditorSDKAssistant</a>, ensure you have:
 
   * Required [node](https://nodejs.org/en/) version >= 18
   *	A [compatible MCP client](https://modelcontextprotocol.io/clients) (VS Code with GitHub Copilot, [Syncfusion<sup>&reg;</sup> CodeStudio](https://www.syncfusion.com/code-studio/), etc.)
@@ -46,7 +46,7 @@ This ensures users can fully leverage Syncfusion<sup>&reg;</sup> components to e
 
 ## Installation and setup
 
-Before you can invoke the ```SyncfusionDocxEditorSDKAssistant``` MCP server, you need to configure your MCP client with these core settings. The **Generic MCP Server Settings** shown below are identical across all clients:
+Before you can invoke the ```SyncfusionDOCXEditorSDKAssistant``` MCP server, you need to configure your MCP client with these core settings. The **Generic MCP Server Settings** shown below are identical across all clients:
 
 ### Generic MCP Server Settings
 
@@ -54,7 +54,7 @@ Before you can invoke the ```SyncfusionDocxEditorSDKAssistant``` MCP server, you
   *	**Type**: stdio (standard input/output transport)
   *	**Command**: npx
   *	**Arguments**: -y
-  *	**Server name**: syncfusionDocxEditorSDKAssistant
+  *	**Server name**: syncfusionDOCXEditorSDKAssistant
 
 #### API Key Configuration		
 
@@ -83,7 +83,7 @@ There are two options:
   }
 ~~~
 
-<a href="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDocxEditorSDKAssistant</a> can be configured in various MCP clients. Below are setup instructions for popular environments:
+<a href="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDOCXEditorSDKAssistant</a> can be configured in various MCP clients. Below are setup instructions for popular environments:
 
 ### Syncfusion<sup>&reg;</sup> Code Studio
 
@@ -118,11 +118,11 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
   }
 ~~~ 
 
-  * After updating the configuration in mcp.json, you’ll notice a “Start” option at the top of the config. This allows you to easily start the <a href ="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDocxEditorSDKAssistant</a> server directly from the settings interface without additional commands.
+  * After updating the configuration in mcp.json, you’ll notice a “Start” option at the top of the config. This allows you to easily start the <a href ="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDOCXEditorSDKAssistant</a> server directly from the settings interface without additional commands.
 
-  * Confirm that <a href ="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDocxEditorSDKAssistant</a> is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
+  * Confirm that <a href ="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDOCXEditorSDKAssistant</a> is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
 
-      * ```SyncfusionDocxEditorSDKAssistant is running...``` (in VS Code)
+      * ```SyncfusionDOCXEditorSDKAssistant is running...``` (in VS Code)
   * For more details, refer to the official <a href = "https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022"> Visual Studio documentation</a>.
 
 ### Cursor
@@ -183,18 +183,18 @@ For further assistance, see the <a href ="https://www.jetbrains.com/help/ai-assi
 
 ## Usage
 
-To activate the SyncfusionDocxEditorSDKAssistant MCP server:
+To activate the SyncfusionDOCXEditorSDKAssistant MCP server:
 
   1. Start your prompt with one of the following:
-      * SyncfusionDocxEditorSDKAssistant
+      * SyncfusionDOCXEditorSDKAssistant
       * ‘/syncfusion-docxeditor-assistant’
       *	‘/syncfusion-docxeditorsdk’
       *	‘@syncfusion-docxeditorsdk’
       *	‘@ask_syncfusion_docxeditorsdk’
 
-     In VS Code, you can also use #SyncfusionDocxEditorSDKAssistant to explicitly invoke the MCP server.
+     In VS Code, you can also use #SyncfusionDOCXEditorSDKAssistant to explicitly invoke the MCP server.
      
-  2. Grant the SyncfusionDocxEditorSDKAssistant MCP server a permission to run for this session, workspace, or always.
+  2. Grant the SyncfusionDOCXEditorSDKAssistant MCP server a permission to run for this session, workspace, or always.
   3. For best results, start a new chat for each new topic to maintain clean context.
 
 ### Mode availability
@@ -203,19 +203,20 @@ Syncfusion® MCP Servers provide full access to all AI interaction modes — Ask
 
 ### Best Practices for Effective Usage
 
-  1. ```Be specific```: Mention both platform and component (e.g., "How do I apply character formatting to text in a React Syncfusion DocxEditor?").
+  1. ```Be specific```: Mention both platform and component (e.g., "How can I apply font size character formatting to text in a React Syncfusion DOCX Editor?").
   2. ```Provide context:``` Include details about your use case for more targeted solutions.
   3. ```Use descriptive queries```: Avoid vague questions that lack necessary context.
   4. ```Start fresh for new topics```: Begin a new chat session when switching components or topics
 
 ### Example Queries
 
-Here are some effective ways to use <a href ="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDocxEditorSDKAssistant</a>:
+Here are some effective ways to use <a href ="https://www.npmjs.com/package/@syncfusion/docxeditorsdk-assistant">SyncfusionDOCXEditorSDKAssistant</a>:
 
- * "Create a DOCX Editor and enable track changes"
- * "How to protect documents with comments only restriction in ASP.NET Core DOCX editor?"
- * "How to enable spell checking in DOCX editor?"
- * "How to search for text and replace it in React DOCX editor?"
+ * "How to search for text and replace it in React DOCX Editor?"
+ * "How to insert bookmarks in Angular DOCX Editor?"
+ * "How to protect documents with comments only restriction in ASP.NET Core DOCX Editor?"
+ * "How can I add custom context menu items in a Blazor DOCX Editor?"
+ * "How can I identify the current editing context (text, image, or table) in Syncfusion SfRichTextBoxAdv for WPF?"
 
 ## Troubleshooting
 
@@ -237,7 +238,7 @@ Product support is available through the following mediums.
 
 ## See also
   
-  * [Syncfusion  DocxEditorSDK Documentation](https://help.syncfusion.com/document-processing/word/word-processor/overview)
+  * [Syncfusion  DOCXEditorSDK Documentation](https://help.syncfusion.com/document-processing/word/word-processor/overview)
 
 
 
