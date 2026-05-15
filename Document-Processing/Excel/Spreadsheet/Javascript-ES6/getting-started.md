@@ -54,7 +54,7 @@ npm install
 
 ## Add CSS references
 
-Add the following style references to the file.
+Add the following Spreadsheet and dependent component style references.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/styles/styles.css" %}
