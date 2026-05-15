@@ -122,6 +122,8 @@ After the application starts, open the localhost URL shown in the terminal to vi
 
 ![Output](images/Vue3-spreadsheet-demo.png)
 
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component).
+
 ## See also
 
 * [Data Binding](./data-binding)

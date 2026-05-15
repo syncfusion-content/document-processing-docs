@@ -134,6 +134,8 @@ Use the following live preview to explore the Spreadsheet control.
           
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1" %}
 
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-javascript-spreadsheet-control).
+
 ## See also
 
 * [Data Binding](./data-binding)
