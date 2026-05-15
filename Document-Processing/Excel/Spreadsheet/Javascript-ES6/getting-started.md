@@ -130,7 +130,7 @@ npm start
 {% endhighlight %}
 {% endtabs %}
 
-The image below shows the rendered spreadsheet in the browser.
+The image below shows how the spreadsheet is rendered in the browser:
 
 ![Rendered spreadsheet in browser](./images/spreadsheet.png)
 

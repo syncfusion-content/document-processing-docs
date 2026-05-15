@@ -33,17 +33,19 @@ Add the required Syncfusion® Spreadsheet style and script references to the `in
 
 To use local scripts and styles for Syncfusion® Spreadsheet, you can follow these steps:
 
-1. Download [Spreadsheet Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials) and install it.
+1. Download [Spreadsheet Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials) from the link and install it on your machine.
 
-2. Create a `resources` folder under `spreadsheet-app`, and then copy the packages from the folder `JavaScript` where [Spreadsheet Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials) build installed.
+2. Create a `resources` folder under `spreadsheet-app`, and then copy the packages from the folder `JavaScript` where [Spreadsheet Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials) build is installed.
 
-Below is the reference for `JavaScript` folder path:
-```
-C:/Program Files (x86)/Syncfusion/Essential Studio/Spreadsheet Editor SDK/33.2.3/Web (Essential JS 2)/JavaScript/
+3. Locate the installed SDK path on your system.
 
 ```
+C:/Program Files (x86)/Syncfusion/Essential Studio/Spreadsheet Editor SDK/33.*.*/Web (Essential JS 2)/JavaScript/
+```
 
-3. After copying the packages into the `resources` folder, add the styles and script references inside the `<head>` of your `index.html`.
+Copy all the required packages from the `JavaScript` folder and paste them into the `resources` folder you created in your project.
+
+4. After copying the required files, include the necessary styles and scripts references inside the `<head>` section of your `index.html` file, as shown below.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -51,7 +53,7 @@ C:/Program Files (x86)/Syncfusion/Essential Studio/Spreadsheet Editor SDK/33.2.3
 ...
 <head>
 ...
-    <title>Syncfusion JavaScript Spreadsheet</title>
+    <!-- Spreadsheet dependency styles -->
     <link href="resources/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" />
     <link href="resources/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" />
     <link href="resources/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
@@ -83,7 +85,6 @@ C:/Program Files (x86)/Syncfusion/Essential Studio/Spreadsheet Editor SDK/33.2.3
     <script src="resources/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
     <!-- Spreadsheet scripts -->
     <script src="resources/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js" type="text/javascript"></script>
-...
 </head>
 ...
 
@@ -139,9 +140,9 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
     <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
     <!-- Spreadsheet scripts -->
     <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js" type="text/javascript"></script>
-...
 </head>
 ...
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -190,7 +191,7 @@ spreadsheet.appendTo('#element');
 
 ## Run the application
 
-Now, open the `index.html` file in a web browser to render the JavaScript Spreadsheet editor. The image below shows the rendered spreadsheet in the browser.
+Open the `index.html` file in a web browser to launch the JavaScript Spreadsheet editor. The image below shows how the spreadsheet is rendered in the browser:
 
 ![Rendered spreadsheet in browser](./images/spreadsheet.png)
 
