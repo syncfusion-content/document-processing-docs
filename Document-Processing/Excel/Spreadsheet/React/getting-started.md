@@ -67,10 +67,10 @@ Now, import the `SpreadsheetComponent` into your `src/App.jsx` or `src/App.tsx` 
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/getting-started-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/getting-started-cs1/app1/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/getting-started-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/getting-started-cs1/app1/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -84,7 +84,7 @@ Run the following command to start the development server:
 npm run dev
 ```
 
-After the application starts, open the local URL shown in the terminal to view the React Spreadsheet Editor in the browser. The below image show Spreadsheet rendered in the default web browser.
+After the application starts, open the local URL shown in the terminal to view the React Spreadsheet Editor in the browser. The output will appear as follows:
 
 ![React Spreadsheet control](images/spreadsheet.PNG)
 
