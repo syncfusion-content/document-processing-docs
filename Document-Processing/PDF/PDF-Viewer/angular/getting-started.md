@@ -103,7 +103,7 @@ import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
    providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
                ThumbnailViewService, ToolbarService, NavigationService,
                TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
+               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService],
   template: `
     <ejs-pdfviewer
       id="pdfViewer"
