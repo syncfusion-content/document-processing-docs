@@ -7,7 +7,7 @@ documentation: UG
 keywords: Assemblies
 ---
 
-# NuGet Packages Required for Data Extraction ans OCR
+# NuGet Packages Required for Data Extraction and OCR
 
 ## NuGet Packages Required for Smart Data Extractor
 
@@ -124,7 +124,7 @@ Windows UI (WinUI) <br/>
 
 ## NuGet Packages Required for Smart Form Recognizer
 
-To work with SmartFormRecognizer, the following NuGet packages need to be installed in your application.
+To work with Smart Form Recognizer, the following NuGet packages need to be installed in your application from [nuget.org](https://www.nuget.org/).
 
 <table>
 <tr>
@@ -170,12 +170,9 @@ ASP.NET MVC5
 </tr>
 </table>
 
-N> The above mentioned NuGet packages are available in [nuget.org](https://www.nuget.org/).
+## NuGet Packages Required for OCR Processor
 
-
-## NuGet Packages Required for OCR processor
-
-Directly install the NuGet package to your application from [nuget.org](https://www.nuget.org/).
+To work with the OCR Processor, the following NuGet packages need to be installed in your application from [nuget.org](https://www.nuget.org/).
 
 <table>
 <tr>

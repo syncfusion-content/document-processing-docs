@@ -1,5 +1,5 @@
 ---
-title: Extract Structured Data from PDF and Image Files in .NET | Syncfusion
+title: Extract Structured Data and Perform OCR in .NET | Syncfusion
 description: Syncfusion Data Extraction is a .NET library that extracts tables, forms, text, and images from documents, and recognizes form data to produce outputs such as PDFs and JSON.
 platform: document-processing
 control: DataExtraction
@@ -7,11 +7,12 @@ documentation: UG
 keywords: Assemblies
 ---
 
-# Overview of Smart Data Extractor
+## Overview of Smart Data Extractor
 
 Syncfusion® Smart Data Extractor is a high performance, deterministic C# library that extracts complete document structures from PDFs and images. Designed for .NET workflows, it analyzes visual layout lines, boxes, labels, and alignment to locate and extract elements such as table structure, text elements, images, headers, footers, and form fields with per field confidence scores for immediate review, export, or integration.
 
-## Key Features of Essential<sup>&reg;</sup> Smart Data Extractor
+
+### Key Features of Essential<sup>&reg;</sup> Smart Data Extractor
 
 The following list shows the key features available in the Essential<sup>&reg;</sup> SmartDataExtractor.
 
@@ -23,45 +24,9 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * **Confidence thresholding:** Results are filtered based on a configurable confidence score (0.0–1.0).
 * **Deterministic performance:** Designed for predictable, repeatable extraction across environments (Windows, Linux, Azure, Docker).
 
-# Overview of Smart Table Extractor
-
-Syncfusion® Smart Table Extractor is a high accuracy, deterministic C# library that detects and extracts tabular data from PDFs and scanned images for .NET workflows, It detects table regions, header rows, columns, and cell spans (merged cells) and provides per-cell confidence scores and structured exports ready for downstream processing.
-
-## Key Features of Essential<sup>&reg;</sup> Smart Table Extractor
-
-The following list shows the key features available in the Essential<sup>&reg;</sup> SmartTableExtractor.
-
-* **Table structure extraction:** Identifies table regions, header rows, columns, row and column spans, and cell boundaries.
-* **File format support:** Works with PDF and common image formats (JPEG, PNG).
-* **Border type handling:** Extract both bordered and border-less tables.
-* **Page-level control:** Extract tables from specific pages or defined page ranges.
-* **Confidence thresholding:** Results are filtered based on a configurable confidence score (0.0–1.0).
-* **Deterministic performance:** Designed for predictable, repeatable extraction across environments (Windows, Linux, Azure, Docker).
-
-# Overview of Smart Form Recognizer Library
-
-Smart Form Recognizer is a deterministic, on premise C# library for .NET designed to reliably detect form data from PDFs and scanned images. Unlike AI‑based approaches, this library uses visual layout heuristics including lines, boxes, and circular markers to identify form structures with high consistency and predictability.It supports to identify the common form controls such as text fields, checkboxes, radio buttons, and signature regions, producing clean, structured JSON that can be fed directly into review and workflow systems.
-
-
-## Core Capabilities
-
-* **Form layout detection**: Locate form regions using graphical heuristics (lines, boxes, circles) for consistent field discovery. 
-
-* **Fillable PDF export**: Create a PDF with detected form fields added so documents are immediately usable in form workflows. 
-
-* **Page-level control**: Process specific pages or page ranges for targeted extraction. 
-
-* **Multi-format support**: Works with PDF, JPEG, PNG and other common image formats. 
-
-* **Confidence filtering**: Per-field confidence scores with configurable thresholds to control output quality and drive review logic. 
-
-* **Ready for .NET integration**: Deterministic, on premise library that outputs JSON and integrates into existing .NET pipelines and review UIs. 
-
-
-## JSON Output Structure and Attributes
+### JSON Output Structure and Attributes
 
 The Syncfusion® Data Extraction libraries process PDFs and scanned images to extract structured document data—including tables, form fields, text elements, images, headers, and footers—by analyzing layout patterns, table regions, borders, alignment patterns, and cell structures. The extracted output is returned as structured JSON with per‑field and per‑cell confidence scores, along with complete document and table hierarchies, making it ready for immediate review, export, or integration into downstream workflows.
-
 
 ### Root Structure
 
@@ -88,7 +53,6 @@ Below is the root structure of the JSON result:
 {% endtabs %}
 
 N> In the Smart Table Extractor root structure, the **form** object will not be present.
-
 
 ### JSON Attributes
 
@@ -134,7 +98,6 @@ The Page Object represents the metadata of a page along with all the detected el
 </table>
 
 N> The **FormObjects** array is not included in the Smart Table Extractor output structure, as it is specific to Smart Data Extractor and Smart Form Recognizer.
-
 
 #### PageObjects
 
@@ -322,3 +285,42 @@ Represents the text formatting attributes (font family, font style, font size) a
 </tr>
 </tbody>
 </table>
+
+## Overview of Optical Character Recognition (OCR)
+
+Optical character recognition (OCR) is a technology used to convert scanned paper documents in the form of PDF files or images into searchable and editable data.  
+
+The [Syncfusion<sup>&reg;</sup> OCR processor library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) has extended support to process OCR on scanned PDF documents and images with the help of Google’s [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
+
+An inbuilt `image preprocessor` has been added to the OCR to prepare images for optimal recognition. This step ensures cleaner input and reduces OCR errors. The preprocessor supports the following enhancements:
+
+* **Convert to Grayscale** – Simplifies image data by removing color information, making text easier to detect.
+* **Deskew** – Corrects tilted or rotated text for proper alignment.
+* **Denoise** – Removes speckles and artifacts that can interfere with character recognition.
+* **Apply Contrast Adjustment** – Enhances text visibility against the background.
+* **Apply Binarize** – Converts images to black-and-white for sharper text edges, using advanced thresholding methods
+
+The Syncfusion<sup>&reg;</sup> OCR processor library works seamlessly in various platforms: Azure App Services, Azure Functions, AWS Textract, Docker, WinForms, WPF, Blazor, ASP.NET MVC, ASP.NET Core with Windows, MacOS and Linux. 
+
+N> Starting with v20.1.0.x, if you reference Syncfusion<sup>&reg;</sup> OCR processor assemblies from the trial setup or the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn more about registering the Syncfusion<sup>&reg;</sup> license key in your application to use its components.
+
+### Key features 
+
+* Create a searchable PDF from scanned PDF.
+* Zonal text extraction from the scanned PDF.
+* Preserve Unicode characters.
+* Extract text from the image.
+* Create a searchable PDF from large scanned PDF documents. 
+* Create a searchable PDF from rotated scanned PDF.
+* Get OCRed text and its bounds from a scanned PDF document. 
+* Native call.
+* Customizing the temp folder.
+* Performing OCR with different Page Segmentation Mode.
+* Performing OCR with different OCR Engine Mode.
+* White List.
+* Black List.
+* Image into searchable PDF or PDF/A.
+* Improved accessibility.
+* Post-processing.
+* Compatible with .NET Framework 4.5 and above.
+* Compatible with .NET Core 2.0 and above.

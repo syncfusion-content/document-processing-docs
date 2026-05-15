@@ -9,7 +9,7 @@ keywords: Table Extraction, PDF, Image, Smart Table Extractor, Assemblies, NuGet
 
 # Working with Table Extraction
 
-## Extract Tables from PDF Document
+## Extract Table Data as JSON from PDF or Image
 
 To extract structured table data from a PDF document using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code 
 
@@ -17,7 +17,6 @@ To extract structured table data from a PDF document using the **ExtractTableAsJ
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Table-Extractor/Extract-tables-from-pdf-document/.NET/Extract-tables-from-pdf-document/Program.cs" %}
 
-using System.IO;
 using System.Text;
 using Syncfusion.SmartTableExtractor;
 
@@ -36,7 +35,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using System.Text;
 using Syncfusion.SmartTableExtractor;
 
@@ -55,68 +53,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %} 
 
+**Note:** To convert an image instead of a PDF, replace the input stream with the image file (for example, *Input.jpg* or *Input.png*). The rest of the code remains unchanged.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-tables-from-pdf-document/.NET).
 
-## Extract Tables with Border-less Table Detection
-
-To extract structured table data from a PDF document that contains tables without visible borders using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code examples. 
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-using System.IO;
-using System.Text;
-using Syncfusion.SmartTableExtractor;
-
-//Open the input PDF file as a stream.
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    //Initialize the Smart Table Extractor.
-    TableExtractor extractor = new TableExtractor();
-    //Configure the table extraction option to detect border-less tables in the document.
-    TableExtractionOptions options = new TableExtractionOptions();
-    options.DetectBorderlessTables = true;
-
-    //Assign the configured options to the extractor.
-    extractor.TableExtractionOptions = options;
-    //Extract table data from the PDF document as a JSON string.
-    string data = extractor.ExtractTableAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.IO;
-using System.Text;
-using Syncfusion.SmartTableExtractor;
-
-//Open the input PDF file as a stream.
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    //Initialize the Smart Table Extractor.
-    TableExtractor extractor = new TableExtractor();
-    //Configure the table extraction option to detect border-less tables in the document.
-    TableExtractionOptions options = new TableExtractionOptions();
-    options.DetectBorderlessTables = true;
-    //Assign the configured options to the extractor.
-    extractor.TableExtractionOptions = options;
-    //Extract table data from the PDF document as a JSON string.
-    string data = extractor.ExtractTableAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
-}
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-border-less-table-detection/.NET).
-
-## Extract Tables within Specific Page Range
+## Extract Table Data as JSON within Specific Page Range
 
 To extract structured table data from a specific range of pages in a PDF document using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code example: 
 
@@ -124,7 +65,6 @@ To extract structured table data from a specific range of pages in a PDF documen
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using System.IO;
 using System.Text;
 using Syncfusion.SmartTableExtractor;
 
@@ -148,7 +88,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using System.Text;
 using Syncfusion.SmartTableExtractor;
 
@@ -174,7 +113,166 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-tables-by-page-range/.NET).
 
-## Apply Confidence Threshold for Table Data Extraction
+## Extract Table Data as Markdown from PDF or Image
+
+To extract structured table data from a PDF document using the **ExtractTableAsMarkdown** method of the **TableExtractor** class, refer to the following code 
+
+{% tabs %}   
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.Text;
+using Syncfusion.SmartTableExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Smart Table Extractor
+    TableExtractor extractor = new TableExtractor();
+    //Extract table data from the PDF document as markdown.
+    string data = extractor.ExtractTableAsMarkdown(stream);
+    //Save the extracted markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Text;
+using Syncfusion.SmartTableExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Smart Table Extractor
+    TableExtractor extractor = new TableExtractor();
+    //Extract table data from the PDF document as markdown.
+    string data = extractor.ExtractTableAsMarkdown(stream);
+    //Save the extracted markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-table-data-as-MD-from-PDF/.NET).
+
+**Note:** To convert an image instead of a PDF, replace the input stream with the image file (for example, *Input.jpg* or *Input.png*). The rest of the code remains unchanged.
+
+## Extract Table Data Asynchronously from PDF or Image
+
+To extract table data asynchronously with cancellation support using the **ExtractTableAsJsonAsync** method of the **TableExtractor** class, refer to the following code example:
+ 
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.Text;
+using Syncfusion.SmartTableExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Table Extractor and assign the configured options.
+    TableExtractor tableExtractor = new TableExtractor();
+    //Create a cancellation token with a timeout of 30 seconds to control the async operation.
+    CancellationTokenSource cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
+    //Call the asynchronous extraction API to extract table data as a JSON string.
+    string data = await tableExtractor.ExtractTableAsJsonAsync(stream, cts.Token);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Text;
+using Syncfusion.SmartTableExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Table Extractor and assign the configured options.
+    TableExtractor tableExtractor = new TableExtractor();
+    //Create a cancellation token with a timeout of 30 seconds to control the async operation.
+    CancellationTokenSource cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
+    //Call the asynchronous extraction API to extract table data as a JSON string.
+    string data = await tableExtractor.ExtractTableAsJsonAsync(stream, cts.Token);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-table-data-async/.NET).
+
+
+## Table Extraction Options
+
+### Disable Border-less Table Detection
+
+To disable detection of tables without visible borders in a PDF document or Image using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code examples.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.Text;
+using Syncfusion.SmartTableExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Table Extractor.
+    TableExtractor extractor = new TableExtractor();
+    //Configure the table extraction option to disable border-less tables in the document.
+    TableExtractionOptions options = new TableExtractionOptions();
+    //By default *DetectBorderlessTables is true*
+    options.DetectBorderlessTables = false;
+
+    //Assign the configured options to the extractor.
+    extractor.TableExtractionOptions = options;
+    //Extract table data from the PDF document as a JSON string.
+    string data = extractor.ExtractTableAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Text;
+using Syncfusion.SmartTableExtractor;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Smart Table Extractor.
+    TableExtractor extractor = new TableExtractor();
+    //Configure the table extraction option to detect border-less tables in the document.
+    TableExtractionOptions options = new TableExtractionOptions();
+    options.DetectBorderlessTables = true;
+    //Assign the configured options to the extractor.
+    extractor.TableExtractionOptions = options;
+    //Extract table data from the PDF document as a JSON string.
+    string data = extractor.ExtractTableAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-border-less-table-detection/.NET).
+
+### Apply Confidence Threshold for Table Data Extraction
 
 To apply confidence thresholding when extracting table data from a PDF document using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code example:
 
@@ -182,7 +280,6 @@ To apply confidence thresholding when extracting table data from a PDF document 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using System.IO;
 using System.Text;
 using Syncfusion.SmartTableExtractor;
 
@@ -206,7 +303,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using System.Text;
 using Syncfusion.SmartTableExtractor;
 
@@ -232,107 +328,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Apply-confidence-threshold/.NET).
 
-## Extract Table Data Asynchronously from PDF Document
 
-To extract table data asynchronously with cancellation support using the **ExtractTableAsJsonAsync** method of the **TableExtractor** class, refer to the following code example:
- 
-{% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-using System.IO;
-using System.Text;
-using System.Threading;
-using Syncfusion.SmartTableExtractor;
-
-//Open the input PDF file as a stream.
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    //Initialize the Smart Table Extractor and assign the configured options.
-    TableExtractor tableExtractor = new TableExtractor();
-    //Create a cancellation token with a timeout of 30 seconds to control the async operation.
-    CancellationTokenSource cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
-    //Call the asynchronous extraction API to extract table data as a JSON string.
-    string data = await tableExtractor.ExtractTableAsJsonAsync(stream, cts.Token);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.IO;
-using System.Text;
-using System.Threading;
-using Syncfusion.SmartTableExtractor;
-
-//Open the input PDF file as a stream.
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    //Initialize the Smart Table Extractor and assign the configured options.
-    TableExtractor tableExtractor = new TableExtractor();
-    //Create a cancellation token with a timeout of 30 seconds to control the async operation.
-    CancellationTokenSource cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
-    //Call the asynchronous extraction API to extract table data as a JSON string.
-    string data = await tableExtractor.ExtractTableAsJsonAsync(stream, cts.Token);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
-}
-
-{% endhighlight %}
-
-{% endtabs %}  
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-table-data-async/.NET).
-
-## Extract Table data as Markdown from PDF Document
-
-To extract structured table data from a PDF document using the **ExtractTableAsMarkdown** method of the **TableExtractor** class, refer to the following code 
-
-{% tabs %}   
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-using System.IO;
-using System.Text;
-using Syncfusion.SmartTableExtractor;
-
-//Open the input PDF file as a stream.
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    // Initialize the Smart Table Extractor
-    TableExtractor extractor = new TableExtractor();
-    //Extract table data from the PDF document as markdown.
-    string data = extractor.ExtractTableAsMarkdown(stream);
-    //Save the extracted markdown data into an output file.
-    File.WriteAllText("Output.md", data, Encoding.UTF8);
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.IO;
-using System.Text;
-using Syncfusion.SmartTableExtractor;
-
-//Open the input PDF file as a stream.
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    // Initialize the Smart Table Extractor
-    TableExtractor extractor = new TableExtractor();
-    //Extract table data from the PDF document as markdown.
-    string data = extractor.ExtractTableAsMarkdown(stream);
-    //Save the extracted markdown data into an output file.
-    File.WriteAllText("Output.md", data, Encoding.UTF8);
-}
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-table-data-as-MD-from-PDF/.NET).
 
 
 ## PDF to Markdown Preservation Mapping

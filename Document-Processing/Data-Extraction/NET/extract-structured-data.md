@@ -17,6 +17,11 @@ Refer to the following links for the assemblies and NuGet packages required on d
 
 ## Extract Data as JSON from PDF or Image
 
+The **Smart Data Extractor** enables you to process PDF documents or scanned images and export the structured content as JSON.  
+This section covers two scenarios:
+- Extracting data as JSON from a **PDF document**.
+- Extracting data as JSON from an **image**.
+
 ### Extract Data as JSON from PDF
 
 To extract form fields across a PDF document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code example:
@@ -25,9 +30,7 @@ To extract form fields across a PDF document using the **ExtractDataAsJson** met
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-PDF/.NET/Extract-data-as-JSON-from-PDF-document/Program.cs" %}
 
-using System.IO;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
 //Open the input PDF file as a stream.
@@ -45,9 +48,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
 //Open the input PDF file as a stream.
@@ -75,7 +76,6 @@ To extract structured data from an image document using the **ExtractDataAsJson*
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using System.IO;
 using Syncfusion.SmartDataExtractor;
 using System.Text;
 
@@ -94,7 +94,6 @@ using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using Syncfusion.SmartDataExtractor;
 using System.Text;
 
@@ -123,9 +122,7 @@ To extract form fields across a PDF document using the **ExtractDataAsMarkdown**
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using System.IO;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
 //Open the input PDF file as a stream.
@@ -143,9 +140,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
 //Open the input PDF file as a stream.
@@ -163,11 +158,22 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
-N>If you want to convert an image instead of a PDF, just replace the input stream with the image file (for example, Input.jpg, Input.png). The rest of the code remains the same.
+N>> **Note:** To convert an image instead of a PDF, replace the input stream with the image file (for example, *Input.jpg* or *Input.png*). The rest of the code remains unchanged.
+
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-MD-from-PDF/.NET).
 
-## Extract Data from PDF Document
+
+## Extract Data from PDF or Image and Save as Digital PDF
+
+The **Smart Data Extractor** allows you to process PDF documents or scanned images and generate a digital PDF output. 
+
+In this section, you will learn how to:
+- Extract structured content and save it directly as a **PDF document**.
+- Work with the extracted content as a **PDF stream** for flexible storage or further processing.
+
+
+### Extract Data from PDF Document
 
 To extract structured data such as text, form fields, tables and images from an entire PDF document using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
 
@@ -175,7 +181,6 @@ To extract structured data such as text, form fields, tables and images from an 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
@@ -196,7 +201,6 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
@@ -219,7 +223,7 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-from-PDF-document/.NET).
 
-## Extract Data as Stream
+### Extract Data as Stream
 
 To extract structured data from a PDF document and return the output as a stream using the **ExtractDataAsPdfStream** method of the **DataExtractor** class, refer to the following example.
 
@@ -227,7 +231,6 @@ To extract structured data from a PDF document and return the output as a stream
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using System.IO;
 using Syncfusion.SmartDataExtractor;
 
 //Open the input PDF file as a stream.
@@ -249,7 +252,6 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using Syncfusion.SmartDataExtractor;
 
 //Open the input PDF file as a stream.
@@ -274,8 +276,6 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-stream/.NET).
 
 
-
-
 ## Disable Form Detection during Data Extraction
 
 To disable form field detection while extracting structured data from a PDF document using the **ExtractDataAsPdfDocument** method of the **DataExtractor** class, refer to the following code example:
@@ -284,10 +284,8 @@ To disable form field detection while extracting structured data from a PDF docu
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
@@ -312,10 +310,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
@@ -349,10 +345,8 @@ To disable table detection while extracting structured data from a PDF document 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartTableExtractor;
 
 // Load the input PDF file.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
@@ -377,10 +371,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartTableExtractor;
 
 // Load the input PDF file.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
@@ -414,7 +406,6 @@ To extract structured data from a PDF document using different Form Recognizer o
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 using Syncfusion.SmartFormRecognizer;
@@ -458,7 +449,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 using Syncfusion.SmartFormRecognizer;
@@ -511,7 +501,7 @@ To extract structured table data from a PDF document using advanced Table Extrac
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-using System.IO;
+
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 using Syncfusion.SmartTableExtractor;
@@ -548,7 +538,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 using Syncfusion.SmartTableExtractor;
@@ -595,7 +584,6 @@ To apply confidence thresholding when extracting data from a PDF document using 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
@@ -622,7 +610,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
@@ -659,7 +646,6 @@ To extract data from a specific range of pages in a PDF document using the Extra
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
@@ -684,7 +670,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using System.IO;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.SmartDataExtractor;
 
