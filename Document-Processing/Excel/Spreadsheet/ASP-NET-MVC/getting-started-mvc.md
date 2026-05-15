@@ -18,7 +18,7 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 ## Create ASP.NET MVC application with HTML helper
 
-You can create a **ASP.NET Web Application** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started#create-your-first-app) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Extension](https://ej2.syncfusion.com/aspnetmvc/documentation/getting-started/project-template).
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started#create-your-first-app)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC package in the application
 
@@ -104,5 +104,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-Get
 
 ## See also
 
+* [Create a Project using Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Extension](https://ej2.syncfusion.com/aspnetmvc/documentation/getting-started/project-template)
 * [Data Binding](./data-binding)
 * [Open and Save](./open-save)
