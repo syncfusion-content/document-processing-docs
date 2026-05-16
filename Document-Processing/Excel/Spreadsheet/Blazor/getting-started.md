@@ -151,7 +151,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet comp
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spreadsheet in your default web browser. The output will appear as follows:
 
-[Blazor Spreadsheet](images/getting-started.png)
+![Blazor Spreadsheet](images/getting-started.png)
 
 You can also experiment directly using the interactive playground below for a quick demo:
 
