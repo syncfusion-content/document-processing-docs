@@ -176,13 +176,15 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-N> To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save.md).
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spreadsheet in your default web browser. The output will appear as follows:
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spreadsheet in your default web browser.
+[Blazor Spreadsheet](images/getting-started.png)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLHDSMIxNVhqnlu?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" backgroundimage "[Blazor Spreadsheet](images/getting-started.png)" %}
+You can also experiment directly using the interactive playground below for a quick demo:
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-spreadsheet-examples/tree/master/Getting%20Started).
+{% playground "https://blazorplayground.syncfusion.com/embed/BtLHDSMIxNVhqnlu?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
+
+N> To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save.md). For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet).
 
 ## See Also
 
