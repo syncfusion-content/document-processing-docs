@@ -111,7 +111,7 @@ After the application starts, open the localhost URL shown in the terminal to vi
 
 ![Vue Spreadsheet control](images/spreadsheet.PNG)
 
-Use the following live preview to explore the Spreadsheet component.
+You can also explore the Spreadsheet interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/getting-started-cs1" %}
 
