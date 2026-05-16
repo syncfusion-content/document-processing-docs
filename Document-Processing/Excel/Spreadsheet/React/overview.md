@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Overview of the React Spreadsheet component | Syncfusion
+title: Overview of the React Spreadsheet Component | Syncfusion
 description: Learn here all about overview of the Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Index
 documentation: ug
 ---
 
-# Overview of the React Spreadsheet component
+# Overview of the React Spreadsheet Component
 
-The React Spreadsheet is an user interactive component to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with xlsx, xls, CSV and PDF formats.
+The [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) is an user interactive component to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with xlsx, xls, CSV and PDF formats.
 
 ## Key features
 

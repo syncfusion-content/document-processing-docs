@@ -193,7 +193,7 @@ Open the `index.html` file in a web browser to launch the JavaScript Spreadsheet
 
 ![Rendered spreadsheet in browser](./images/spreadsheet.png)
 
-Use the following live preview to explore the Spreadsheet control.
+You can also explore the Spreadsheet interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1" %}
 

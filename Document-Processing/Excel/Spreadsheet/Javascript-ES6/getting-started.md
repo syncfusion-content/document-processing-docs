@@ -134,7 +134,7 @@ The image below shows how the spreadsheet is rendered in the browser:
 
 ![Rendered spreadsheet in browser](./images/spreadsheet.png)
 
-Use the following live preview to explore the Spreadsheet control.
+You can also explore the Spreadsheet interactively using the live sample below.
           
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/spreadsheet/getting-started-cs1" %}
 
