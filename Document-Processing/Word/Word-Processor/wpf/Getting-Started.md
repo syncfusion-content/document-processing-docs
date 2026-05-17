@@ -131,7 +131,7 @@ You can download a complete working sample from GitHub <<Create sample and add l
 
 Upon execution, the SfRichTextBoxAdv control renders the Word document as illustrated below.
 
-![WPF SfRichTextBoxAdv Control](wpf-sfrichtextboxadv-control.png)
+![WPF SfRichTextBoxAdv Control](Getting-Started_images/wpf-sfrichtextboxadv-control.png)
 
 
 ## Add ribbon UI in SfRichTextBoxAdv
@@ -279,7 +279,7 @@ You can download a complete working sample from GitHub <<Create sample and add l
 
 Upon execution, the SfRichTextBoxAdv control along with the SfRichTextRibbon is displayed as illustrated below.
 
-![WPF SfRichTextBoxAdv Control along with its SfRichTextRibbon](wpf-sfrichtextboxadv-with-sfrichtextribbon.png)
+![WPF SfRichTextBoxAdv Control along with its SfRichTextRibbon](Getting-Started_images/wpf-sfrichtextboxadv-with-sfrichtextribbon.png)
 
 
 ## Use SfRichTextBoxAdv as a standard RichTextBox
@@ -384,7 +384,7 @@ This section discusses about how to use the SfRichTextBoxAdv control as a standa
 You can download a standard RichTextBox example from [GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
 
 When the application is executed, the standard RichTextBox control is displayed as illustrated below.
-![WPF Standard RichTextBox](wpf-standard-sfrichtextboxadv.png)
+![WPF Standard RichTextBox](Getting-Started_images/wpf-standard-sfrichtextboxadv.png)
 
 ## Theme
 
