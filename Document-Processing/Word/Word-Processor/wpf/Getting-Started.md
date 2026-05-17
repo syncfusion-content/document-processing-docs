@@ -32,6 +32,9 @@ The steps below cover the essential topics required to add and use the SfRichTex
 |----------------|------------|
 | **Using NuGet Package Manager (UI):** <br><br> 1. In Solution Explorer, right-click the project and choose **Manage NuGet Packages**. <br> 2. Search for **Syncfusion.SfRichTextBoxAdv.WPF** and install the latest version. <br> 3. Ensure the necessary dependencies are installed correctly, and the project is restored. <br><br> **Using Package Manager Console:** <br><code>Install-Package Syncfusion.SfRichTextBoxAdv.WPF </code> | • Syncfusion.SfRichTextBoxAdv.WPF <br> • Syncfusion.Compression.Base <br> • Syncfusion.OfficeChart.Base <br> • Syncfusion.Shared.WPF <br> • Syncfusion.DocIO.Base |
 
+N> Starting with v16.2.0.41 (2018 Vol 2), if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your WPF application to use our components.
+
+
 ### Add SfRichTextBoxAdv control
 
 {% tabcontents %}
@@ -274,6 +277,8 @@ public partial class MainWindow : RibbonWindow
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+N> Prefer using `SfRichTextRibbon` within `RibbonWindow` in your application, since the backstage of Ribbon will be opened only when the ribbon is loaded under the `RibbonWindow`
 
 You can download a complete working sample from GitHub <<Create sample and add link>>.
 
