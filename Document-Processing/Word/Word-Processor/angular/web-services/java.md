@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Java in Angular Document editor component
 
-This page illustrates how to create web service in Java for the server-side dependent functionalities of Word Processor component a.k.a. Document Editor. Document Editor depends on server side interaction for below listed operations and it can be written in Java using `syncfusion-ej2-wordprocessor.jar` file.
+This page illustrates how to create web service in Java for the server-side dependent functionalities of the Document Editor. Document Editor depends on server side interaction for below listed operations and it can be written in Java using `syncfusion-ej2-wordprocessor.jar` file.
 
 * Import Word Document
 * Paste with formatting
@@ -130,7 +130,7 @@ The following example code illustrates how to write a Web API for importing Word
 
 The web browsers do not support to display metafile images like EMF and WMF and also TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
 
->Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `getMetafileStream()` property and you can get the `getIsMetafile()` boolean value to determine whether the image  is meta file images(WMF,EMF) or Tiff format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using TwelveMonkeys ImageIO TIFF library.
+>Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `getMetafileStream()` property and you can get the `getIsMetafile()` boolean value to determine whether the image  is meta file images(WMF,EMF) or TIFF format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using TwelveMonkeys ImageIO TIFF library.
 
 The following example code illustrates how to use `MetafileImageParsed` event for creating fallback raster image for metafile present in a Word document.
 

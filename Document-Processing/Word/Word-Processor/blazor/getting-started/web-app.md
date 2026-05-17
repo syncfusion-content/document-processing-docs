@@ -10,8 +10,8 @@ documentation: ug
 
 Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application.
 
-## Steps to create a Blazor Web App DOCX Editor
-This section explains about how to include the [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
+## Steps to create a Blazor DOCX Editor in Web App
+This section explains about how to include the [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -27,11 +27,11 @@ You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Temp
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) while creating the Blazor Web App.
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Nuget packages
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor packages
 
 To add **Blazor Document Editor** component in the application, follow the steps below.
- - open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
- - search and install the following packages
+ - Open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
+ - Search and install the following packages
     - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
     
@@ -45,8 +45,6 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DOCX Editor are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -74,11 +72,10 @@ cd BlazorWebApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-N> For more information on creating a **Blazor Web App** with various interactive modes and locations, refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Nuget packages
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor packages
 
-If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DOCX Editor NuGet packages within the client project.
+If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor NuGet packages within the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure the terminal is in the project root directory where the `.csproj` file is located.

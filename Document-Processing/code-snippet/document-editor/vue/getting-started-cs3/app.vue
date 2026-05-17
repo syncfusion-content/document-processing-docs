@@ -13,6 +13,7 @@ export default {
     "ejs-documenteditorcontainer": DocumentEditorContainerComponent
   },
   data() {
+    // Use the following service URL only for demo purposes
     return { serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/' };
   },
   provide: {

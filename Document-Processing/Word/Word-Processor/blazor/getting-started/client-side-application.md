@@ -12,9 +12,9 @@ documentation: ug
 Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application. 
 
 
-## Steps to create a Blazor WASM DOCX Editor
+## Steps to create a Blazor DOCX Editor in WASM 
 
-This section explains how to include the [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in a Blazor WebAssembly (WASM) application using Visual Studio and Visual Studio Code.
+This section explains how to include the [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component in a Blazor WebAssembly (WASM) application using Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -28,7 +28,7 @@ This section explains how to include the [Blazor Document Editor](https://www.sy
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs).
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Nuget packages
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor packages
 
 To add **Blazor Document Editor** component in the application, follow the steps below.
  - open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
@@ -74,7 +74,7 @@ cd BlazorApp
 
 {% endtabs %}
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Nuget packages
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor packages
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.

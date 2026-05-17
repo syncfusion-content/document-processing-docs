@@ -11,9 +11,9 @@ documentation: ug
 
 Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor Server application. 
 
-## Steps to create a Blazor Server DOCX Editor
+## Steps to create a Blazor DOCX Editor in Server
 
-This section explains how to include the [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in a Blazor Server app using Visual Studio and Visual Studio Code.
+This section explains how to include the [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component in a Blazor Server app using Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -27,13 +27,14 @@ This section explains how to include the [Blazor Document Editor](https://www.sy
 
 You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs).
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Nuget packages
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor packages
 
 To add **Blazor Document Editor** component in the application, follow the steps below.
  - open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
  - search and install the following packages
     - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
 Alternatively, use the following Package Manager commands.
 
 {% tabs %}
@@ -71,7 +72,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Nuget packages
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor packages
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure the terminal is at the project root directory where the `.csproj` file is located.
@@ -139,6 +140,8 @@ Add the following stylesheet and script to the head section. The theme styleshee
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
 * For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
+
+* For **.NET 8** Blazor Server app, include it in the **/App.razor** file.
 
 ```html
 <head>
