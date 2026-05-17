@@ -8,118 +8,84 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with JavaScript (ES5) Document Editor
+# Getting Started with JavaScript (ES5) DOCX Editor
 
-Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a JavaScript (ES5) application.
+Syncfusion® JavaScript DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a JavaScript (ES5) application.
 
-## Steps to create a JavaScript (ES5) DOCX Editor
+## Steps to create a DOCX Editor using JavaScript (ES5)
 
-Create a folder named `documenteditor-app` with `index.html` file. Then, add the required Syncfusion Document Editor style and script references to the `index.html` file.
+Create a folder named `documenteditor-app` with `index.html` and `index.js` files. Your application structure should look like this:
 
-You can add the required resources using either of the following methods:
-
-### Using local script and style references
-
-Create a `resources` folder under `documenteditor-app`, and then copy the required script and style files from the [DOCX Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials) build into it.
-
-  Your application structure should look like this:
-  ```text
+ ```text
   documenteditor-app/
   ├── index.html
-  └── resources/
+  └── index.js
   ```
-### Using CDN link for script and style reference
 
-Reference the scripts and styles directly from the CDN.
+### Add style and script references
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential JS 2 components' global scripts and styles are available at the following CDN link formats.
+
+**Syntax:**
+
   ```text
   Script: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js
   Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAME}.css
   ```
 
+  **Example:**
+
+  ```text
+  Script: https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js 
+  Style: https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/material.css
+  ```
+
+Add the following CDN references inside the `<head>` section of your `index.html` file, as shown below.
+
 {% tabs %}
-{% highlight html tabtitle="Local script and style" %}
+{% highlight html tabtitle="index.html" %}
 
 ...
 <head>
-    <!-- EJ2 Document editor dependent material theme -->
-    <link href="resources/base/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="resources/buttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="resources/inputs/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="resources/popups/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="resources/lists/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="resources/navigations/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="resources/splitbuttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="resources/dropdowns/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <!-- EJ2 DocumentEditor material theme -->
-    <link href="resources/documenteditor/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <!-- EJ2 Document editor dependent scripts -->
-    <script src="resources/scripts/ej2-base.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-data.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-svg-base.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-file-utils.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-compression.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-pdf-export.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-buttons.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-popups.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-splitbuttons.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-inputs.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-lists.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-navigations.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-dropdowns.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-calendars.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-charts.min.js" type="text/javascript"></script>
-    <script src="resources/scripts/ej2-office-chart.min.js" type="text/javascript"></script>
-    <!-- EJ2 Document editor script -->
-    <script src="resources/scripts/ej2-documenteditor.min.js" type="text/javascript"></script>
-</head>
-...
-
-{% endhighlight %}
-{% highlight html tabtitle="CDN link for script and style" %}
-
-...
-<head>
-    <!-- EJ2 Document editor dependent theme -->
-    <link href="https://cdn.syncfusion.com/ej2/ej2-base/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/ej2-popups/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/ej2-lists/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <!-- EJ2 Document editor theme -->
-    <link href="https://cdn.syncfusion.com/ej2/ej2-documenteditor/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <!-- EJ2 Document editor dependent scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-file-utils/dist/global/ej2-file-utils.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-compression/dist/global/ej2-compression.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-pdf-export/dist/global/ej2-pdf-export.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/ej2/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
-    <!-- EJ2 Document editor script -->
-    <script src="https://cdn.syncfusion.com/ej2/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
+    <title>Syncfusion JavaScript Document Editor</title>
+	<!-- EJ2 Document Editor dependent theme -->
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <!-- EJ2 Document Editor theme -->
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-documenteditor/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <!-- EJ2 Document Editor dependent scripts -->
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-file-utils/dist/global/ej2-file-utils.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-compression/dist/global/ej2-compression.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-pdf-export/dist/global/ej2-pdf-export.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
+    <!-- EJ2 Document Editor script -->
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
 </head>
 ...
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** To learn more about other ways to load themes or scripts, see the [Themes topic](https://ej2.syncfusion.com/javascript/documentation/appearance/theme) and [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) documentation.
-
-
 ### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
-Add a container element for the Document Editor in the `index.html` file and then initialize the control in script tag.
+Add a container element for the Document Editor in the `index.html` file and then initialize the control in the `<script>` tag.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -131,22 +97,29 @@ Add a container element for the Document Editor in the `index.html` file and the
     <!-- Add your style references here -->
 </head>
 <body>
-    <!-- Element which is going to render as Document editor -->
-    <div id='DocumentEditor' style='height:620px'></div>
-    <script>
-        // Initialize Document Editor Container component
-        var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ 
-            enableToolbar: true, 
-            height: '590px' 
-        });
-        ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
-        // Use the following service URL only for demo purposes
-        documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
-        // DocumentEditorContainer control rendering
-        documenteditorContainer.appendTo('#DocumentEditor');
-    </script>
+    <!-- Element that renders the Document Editor -->
+    <div id='DocumentEditor'></div>
+    <script src="index.js" type="text/javascript"></script>
 </body>
 </html>
+
+{% endhighlight %}
+{% highlight js tabtitle="index.js" %}
+
+// Inject toolbar
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+
+// Initialize Document Editor Container component
+var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ 
+    enableToolbar: true, 
+    height: '590px'
+
+});
+
+// Use the following service URL only for demo purposes
+documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+// Render the DocumentEditorContainer control
+documenteditorContainer.appendTo('#DocumentEditor');
 
 {% endhighlight %}
 {% endtabs %}
@@ -155,9 +128,78 @@ Add a container element for the Document Editor in the `index.html` file and the
 
 ### Run the application
 
-Now, open the `index.html` file in a web browser to render the JavaScript Document Editor.
+Now, the complete code for `index.html` and `index.js` is shown below.
 
-Use the following live preview to explore the Document Editor control.
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Syncfusion JavaScript Document Editor</title>
+	<!-- EJ2 Document Editor dependent theme -->
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <!-- EJ2 Document Editor theme -->
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-documenteditor/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <!-- EJ2 Document Editor dependent scripts -->
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-file-utils/dist/global/ej2-file-utils.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-compression/dist/global/ej2-compression.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-pdf-export/dist/global/ej2-pdf-export.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
+    <!-- EJ2 Document Editor script -->
+    <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- Element that renders the Document Editor -->
+    <div id='DocumentEditor'></div>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
+
+{% endhighlight %}
+{% highlight js tabtitle="index.js" %}
+
+// Inject toolbar
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+
+// Initialize Document Editor Container component
+var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ 
+    enableToolbar: true, 
+    height: '590px'
+
+});
+
+// Use the following service URL only for demo purposes
+documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+// Render the DocumentEditorContainer control
+documenteditorContainer.appendTo('#DocumentEditor');
+
+{% endhighlight %}
+{% endtabs %}
+
+Open the `index.html` file in a web browser. The JavaScript (ES5) Document Editor is rendered with a toolbar and an editable document area, as shown below.
+
+![Output of JavaScript ES5 Document Editor](./images/javascript_es5_getting_started.png)
+
+You can also explore the Document Editor interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/es5-getting-started-cs2" %}
 
@@ -171,6 +213,6 @@ The Document Editor component requires server-side interactions for the followin
 * Spell check
 * Save as file formats other than SFDT and DOCX
 
->Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+> Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.

@@ -92,6 +92,68 @@ Import and register the Document Editor component in the `<script>` section of `
   provide('DocumentEditorContainer', [Toolbar]);
 </script>
 
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <ejs-documenteditorcontainer 
+    height="590px"
+    :serviceUrl="serviceUrl" 
+    :enableToolbar="true"> 
+  </ejs-documenteditorcontainer>
+</template>
+
+<script>
+  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+  export default {
+    name: 'App',
+    components: {
+       'ejs-documenteditorcontainer' : DocumentEditorContainerComponent
+    },
+    data () {
+      return {
+        // Use the following service URL only for demo purposes
+        serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
+      };
+    },
+    provide: {
+      DocumentEditorContainer: [Toolbar]
+    }
+  }
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Note: The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
+
+### Run the application
+
+The complete code for `src/App.vue` is shown below.
+
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <ejs-documenteditorcontainer 
+   height="590px"
+   :serviceUrl="serviceUrl" 
+   :enableToolbar="true"> 
+  </ejs-documenteditorcontainer>
+</template>
+
+<script setup>
+  import { provide } from 'vue';
+  import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+  
+  // Use the following service URL only for demo purposes
+  const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+
+  provide('DocumentEditorContainer', [Toolbar]);
+</script>
+
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -134,32 +196,28 @@ Import and register the Document Editor component in the `<script>` section of `
     }
   }
 </script>
-
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css';
 </style>
 
 {% endhighlight %}
 {% endtabs %}
-
-> Note: The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
-
-### Run the application
 
 Run the application using the following command:
 
 ```bash
 npm run dev
 ```
-After the application starts, open the localhost URL shown in the terminal to view the Vue Document Editor in the browser. The output will appear as follows:
+
+After the application starts, open the localhost URL shown in the terminal. The Vue Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
 ![Output of Vue 3 Document Editor](./images/vue_3_getting_started.png)
 
