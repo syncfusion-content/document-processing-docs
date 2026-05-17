@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue DOCX Editor in Vue 2
+# Getting Started with Vue DOCX Editor (Vue 2)
 
 Syncfusion® Vue DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Vue application.
 
-## Steps to create a Vue DOCX Editor
+## Steps to create a DOCX Editor in Vue 2
 
 ### Prerequisites
 
@@ -67,7 +67,7 @@ Add the following Document Editor and dependent component style references to th
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-documenteditor/styles/material.css';
 
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +76,7 @@ Add the following Document Editor and dependent component style references to th
 
 ### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Document Editor component
 
-Modify the template in the `src/App.vue` file to render the Document Editor component. Add the Vue Document Editor using the `<ejs-documenteditorcontainer>` selector in the `<template>` section of the `src/App.vue` file.
+Modify the `src/App.vue` file to render the Document Editor. Add the Vue Document Editor in the `<template>` section using the `<ejs-documenteditorcontainer>` selector and configure it in the `<script>` section.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
