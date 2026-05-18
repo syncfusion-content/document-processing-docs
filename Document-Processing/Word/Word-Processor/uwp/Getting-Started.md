@@ -41,7 +41,7 @@ The steps below cover the essential topics required to add and use the SfRichTex
 **Using Package Manager Console:**
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.SfRichTextBoxAdv.UWP
 
@@ -147,7 +147,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Use SfRichTextBoxAdv as a standard RichTextBox
 
-This section discusses about how to use the SfRichTextBoxAdv control as a standard RichTextBox control with rich text formatting options.
+Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 
 {% tabs %}
 {% highlight xaml %}
@@ -243,7 +243,6 @@ This section discusses about how to use the SfRichTextBoxAdv control as a standa
         </Grid>
     </Page>    
 </Page>
-
 
 
 {% endhighlight %}
