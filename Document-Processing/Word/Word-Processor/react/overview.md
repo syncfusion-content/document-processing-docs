@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview in React Document editor component | Syncfusion
-description: Learn here all about Index in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Overview of React DOCX Editor | Syncfusion
+description: Learn about the React DOCX Editor control, which enables you to create, edit, view, and print Word documents.
 control: Index 
 platform: document-processing
 documentation: ug
