@@ -18,7 +18,7 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 ## Create ASP.NET MVC application with HTML helper
 
-* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started#create-your-first-app)
+* [Create an ASP.NET Web Application (.NET Framework) using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started#create-your-first-app)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC package in the application
 
