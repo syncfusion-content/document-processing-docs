@@ -1,7 +1,6 @@
 ---
 title: Microsoft Excel-like Spreadsheet Component | Syncfusion
-description: View, edit & print Excel files in Windows Forms, WPF, JavaScript, Angular, React, Vue, Blazor, ASP.NET MVC, & ASP.NET Core applications without Microsoft Office dependencies.
-platform: document-processing
+description: View, edit, and print Excel files in Windows Forms, WPF, JavaScript, Angular, React, Vue, Blazor, ASP.NET MVC and ASP.NET Core apps without Microsoft Office.
 control: general
 documentation: UG
 keywords: Excel, SDK, view, edit, read, Spreadsheet
