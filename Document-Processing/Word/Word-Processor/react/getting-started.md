@@ -66,8 +66,6 @@ Add the Document Editor component and its dependent component styles available i
 
 Add the Document Editor component to your application. In the `src/App.tsx` file, add the following code to initialize the component:
 
-{% raw %}
-
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
 
@@ -226,3 +224,10 @@ The Document Editor component requires server-side interactions for the followin
 > Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
+
+
+## See also
+
+- [Open a document](./import)
+- [Save a document](./export)
+- [Collaborative Editing](./collaborative-editing/overview)
