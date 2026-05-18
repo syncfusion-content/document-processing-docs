@@ -12,11 +12,11 @@ Syncfusion® UWP RichTextBox (SfRichTextBoxAdv) enables you to create, edit, vie
 
 ## Create a RichTextBox in UWP using SfRichTextBoxAdv
 
-In this walk-through, you will create a UWP application that uses the Syncfusion® UWP SfRichTextBoxAdv control.
+In this walkthrough, you will create a UWP application that uses the Syncfusion® UWP SfRichTextBoxAdv control.
 
-The steps below cover the essential topics required to add and use the SfRichTextBoxAdv control in a UWP project. 
+The steps below cover the essential tasks required to add and use the SfRichTextBoxAdv control in a UWP project. 
 
-### Creating a New UWP Project
+### Create a New UWP Project
 
 1. Open **Visual Studio**.
 2. Click **Create a new project**.
@@ -25,7 +25,7 @@ The steps below cover the essential topics required to add and use the SfRichTex
 5. Enter the **project name**, location, and other required details.
 6. Click **Create**.
 
-### Add the SfRichTextBoxAdv dependencies
+### Add SfRichTextBoxAdv dependencies
 
 {% tabcontents %}
 
@@ -33,7 +33,7 @@ The steps below cover the essential topics required to add and use the SfRichTex
 
  **Using NuGet Package Manager (UI):** 
 
-1.	In Solution Explorer, right-click the project and **Manage NuGet Packages**.
+1.	In Solution Explorer, right-click the project and select **Manage NuGet Packages**.
 2.	Search for [Syncfusion.SfRichTextBoxAdv.UWP](https://www.nuget.org/packages/Syncfusion.SfRichTextBoxAdv.UWP) and install the latest version.
 3.	Verify that all required dependencies are installed and the project is successfully restored.
 
@@ -41,7 +41,7 @@ The steps below cover the essential topics required to add and use the SfRichTex
 **Using Package Manager Console:**
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.SfRichTextBoxAdv.UWP
 
@@ -63,7 +63,7 @@ The following assembly references are required to use the **SfRichTextBoxAdv** c
 
 {% endtabcontents %}
 
-N> 1. Starting with v16.2.0.41 (2018 Vol 2), if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license&reg; key in your UWP application to use our components.
+N> 1. Starting with v16.2.0.41 (2018 Vol 2), if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your UWP application to use our components.
 
 ### Add SfRichTextBoxAdv control
 
@@ -78,11 +78,11 @@ Open the Toolbox window and drag the **SfRichTextBoxAdv** control onto the Desig
 
 {% tabcontent Via XAML %}
 
-To add the control manually in XAML, follow the following steps:
+To add the control manually in XAML, follow these steps:
 
-1.	Import Syncfusion® UWP SfRichTextBoxAdv control namespace Syncfusion.UI.Xaml.RichTextBoxAdv in XAML page.
+1.	Import Syncfusion® UWP SfRichTextBoxAdv control namespace Syncfusion.UI.Xaml.RichTextBoxAdv in the XAML page.
 
-2.	Declare SfRichTextBoxAdv control in XAML page.
+2.	Declare SfRichTextBoxAdv control in the XAML page.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -109,7 +109,7 @@ To add the control manually in XAML, follow the following steps:
 
 {% tabcontent Via C# %}
 
-To add the control manually in C#, add the below code in *.xaml.cs
+To add the control manually in C#, add the following code in *.xaml.cs
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -135,19 +135,19 @@ public sealed partial class MainPage : Page
 {% endtabcontents %}
 
 
-### Running the Application
+### Run the Application
 
 1. Press **F5** or click **Start Debugging** in Visual Studio.
-2. The UWP application will be deployed and launched on the selected target device, displaying the **SfRichTextBoxAdv** control.
-3. Press Ctrl + O to open an existing document. The selected document will be displayed within the SfRichTextBoxAdv control, as shown below.
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
+2. The UWP application is deployed and launched on the selected target device and displays the SfRichTextBoxAdv control
+3. Press Ctrl+O to open an existing document. The selected document will be displayed within the SfRichTextBoxAdv control, as shown below.
 
 ![UWP SfRichTextBoxAdv Control](Getting-Started_images/uwp-sfrichtextboxadv-control.png)
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
+
 ## Use SfRichTextBoxAdv as a standard RichTextBox
 
-This section discusses about how to use the SfRichTextBoxAdv control as a standard RichTextBox control with rich text formatting options.
+Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 
 {% tabs %}
 {% highlight xaml %}
@@ -243,7 +243,6 @@ This section discusses about how to use the SfRichTextBoxAdv control as a standa
         </Grid>
     </Page>    
 </Page>
-
 
 
 {% endhighlight %}
