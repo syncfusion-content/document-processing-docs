@@ -93,7 +93,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Document Ed
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/getting-started/razor %}
+@Html.EJS().DocumentEditorContainer("container").Height("590px").Render()
 {% endhighlight %}
 {% endtabs %}
 

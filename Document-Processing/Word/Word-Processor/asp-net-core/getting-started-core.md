@@ -47,7 +47,7 @@ N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nug
 
 ### Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Tag Helper
 
-Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelper.
+Open `~/Views/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelper.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_ViewImports.cshtml" %}
@@ -59,7 +59,7 @@ Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 
 ### Add Themes and Script References
 
-Here, the theme and script is referred using CDN inside the `<head>` of `~/Pages/Shared/_Layout.cshtml` file as follows,
+Here, the theme and script is referred using CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` file as follows,
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -95,11 +95,13 @@ Also, register the script manager `<ejs-script>` at the end of `<body>` in the A
 
 ### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document Editor tag helper in `~/Pages/Index.cshtml` page.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document Editor tag helper in `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/getting-started/tagHelper %}
+
+<ejs-documenteditorcontainer id="container" height="590px"></ejs-documenteditorcontainer>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -107,6 +109,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document E
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document Editor control will be rendered in the default web browser.
 
-![ASP.NET Core DocumentEditor Control](images/documenteditor-control.png)
+![Output of ASP.NET Core DocumentEditor Control](images/documenteditor-control.png)
 
 N> You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/DocumentEditor/ASP.NET%20Core%20Tag%20Helper%20Examples).
