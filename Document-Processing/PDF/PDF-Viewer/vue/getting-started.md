@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Vue Standalone PDF Viewer component | Syncfusion
-description: Checkout and learn about Getting started with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
+description: Learn about Getting started with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
