@@ -38,7 +38,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core controls are av
 Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelper.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_ViewImports.cshtml" %}
+{% highlight C# tabtitle="_ViewImports.cshtml" %}
 
 @addTagHelper *, Syncfusion.EJ2
 
@@ -50,7 +50,7 @@ Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 Add the stylesheet and script references to the `<head>` section of the `~/Pages/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
+{% highlight cshtml tabtitle="_Layout.cshtml" %}
 
 <head>
     ...
@@ -69,7 +69,7 @@ N> To learn other ways to load themes or scripts (such as NPM packages or [CRG](
 Register the script manager `<ejs-scripts>` at the end of the `<body>` element in the ASP.NET Core application, as shown in the following example.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
+{% highlight cshtml tabtitle="_Layout.cshtml" %}
 
 <body>
     ...
@@ -90,7 +90,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Spreadshee
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The [`openUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenUrl) and [`saveUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SaveUrl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`Open and Save`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/open-save) section.
+N> The [`openUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenUrl) and [`saveUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SaveUrl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`Open and Save`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/open-save) section.
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Spreadsheet control will be rendered in the default web browser.
 

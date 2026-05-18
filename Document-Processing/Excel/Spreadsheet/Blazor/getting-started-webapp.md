@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Blazor Spreadsheet in Web App
 
-This section briefly explains how to include the [Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This section briefly explains how to include the [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
 {% tabcontents %}
 
@@ -102,7 +102,7 @@ dotnet restore
 After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Spreadsheet` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight C# tabtitle="_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Spreadsheet
@@ -134,7 +134,9 @@ N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, registe
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the <head> section and the script reference at the end of the <body> in the **~/Components/App.razor** file as shown below.
 
-```html
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
+
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
@@ -144,7 +146,8 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
 </body>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
