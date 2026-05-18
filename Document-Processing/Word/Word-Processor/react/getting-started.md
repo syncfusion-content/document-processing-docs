@@ -44,7 +44,7 @@ npm install @syncfusion/ej2-react-documenteditor --save
 
 ### Add CSS reference
 
-Add the Document Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/index.css` file:
+Add the Document Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/index.css` file.
 
 {% tabs %}
 {% highlight css tabtitle="index.css" %}

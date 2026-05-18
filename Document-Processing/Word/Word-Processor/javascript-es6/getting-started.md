@@ -157,6 +157,6 @@ The Document Editor component requires server-side interactions for the followin
 * Spell check
 * Save as file formats other than SFDT and DOCX
 
->Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+> Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
