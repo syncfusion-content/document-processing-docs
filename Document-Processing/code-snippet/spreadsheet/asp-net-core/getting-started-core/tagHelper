@@ -1,9 +1,3 @@
 @page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
 
-<ejs-spreadsheet id="spreadsheet" openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open" saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save">
-
-</ejs-spreadsheet>
+<ejs-spreadsheet id="spreadsheet" openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open" saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save"></ejs-spreadsheet>

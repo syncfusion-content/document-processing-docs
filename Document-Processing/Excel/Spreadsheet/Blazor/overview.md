@@ -9,7 +9,9 @@ documentation: ug
 
 # Overview of the Blazor Spreadsheet Control
 
-The Syncfusion Blazor Spreadsheet is a user-interactive component designed to organize and analyze data in a tabular format with configuration options for customization. It will load data by importing an Excel file or from local file paths and Base64 string data. The populated data can be exported as Excel files in `.xlsx` format.
+The [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) is a user-interactive component designed to organize and analyze data in a tabular format with configuration options for customization. It will load data by importing an Excel file or from local file paths and Base64 string data. The populated data can be exported as Excel files in XLSX format.
+
+![Blazor Spreadsheet](images/blazor-overview.png)
 
 ## Key features
 

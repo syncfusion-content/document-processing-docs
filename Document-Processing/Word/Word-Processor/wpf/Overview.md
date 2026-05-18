@@ -8,29 +8,19 @@ keywords: overview, richtextboxadv, sfrichtextboxadv
 ---
 # WPF RichTextBox (SfRichTextBoxAdv) Overview
 
-The SfRichTextBoxAdv control allows you to view, edit and print rich text content including text, images, hyperlink etc. arranged in sections, tables, paragraphs, headers, footers and comments. You can perform all editing operations using keyboard, mouse and touch.
-![WPF RichTextBox](Overview_images/wpf-richtextbox.jpeg)
+The Syncfusion <sup style="font-size:70%">&reg;</sup> [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich text content with advanced formatting and layout capabilities, supporting elements such as text, images, tables, paragraphs, and comments. 
+
+![Output of WPF RichTextBox](./Overview_images/wpf-richtextbox.png)
 
 ## Features
 
-The SfRichTextBoxAdv control supports basic features for editing rich text contents such as
+* View and edit rich text content, including text, [images](./Image.md), [tables](./Table.md), and [comments](./Comment.md). 
+* [Import and export](./Import-and-Export.md) document formats such as Word (.doc, .docx), Rich Text Format (.rtf), HTML (.htm, .html), XAML (.xaml), and plain text (.txt). 
+* [Print](./Printing-Contents.md) document content with page-by-page rendering. 
+* Supports a wide range of image formats (except Metafile images). 
+* Provides [undo and redo](./Undo-Redo.md) support for all editing and formatting operations, including text, tables, images, hyperlinks, and styling (bold, italic, etc.). 
+* Supports different header and footer configurations, including first page and odd/even pages. 
+* Enables [cut](./Clipboard.md), [copy](./Clipboard.md), and [paste](./Clipboard.md) operations, including rich text content via the clipboard. 
+* Supports loading encrypted Word documents with valid password. 
 
-* Viewing and editing rich text, images, tables and comments.
-
-* Importing and exporting word documents (.doc, .docx), rich text format documents (.rtf), HTML documents (.htm, .html), XAML documents (.xaml) and text documents (.txt).
-
-* Printing rendered contents as page by page.
-
-* Supports all image types except Metafile images.
-
-* Supports undo and redo all editing operation such as inserting text, table, images, hyperlink, comments and all formatting operations such as bold, italic etc.
-
-* Supports first page header and footer as well as odd and even page headers and footers.
-
-* Moving or copying portion of the document to clipboard and also pasting rich text contents from clipboard into the document.
-
-* Supports loading encrypted word documents with valid password.
-
-
-N> Currently, the SfRichTextBoxAdv cannot edit rich text in headers and footers.
- You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/wpf-demos/tree/master/richtextbox) to knows how to render and configure the editing tools.
+>Note: Currently, the SfRichTextBoxAdv cannot edit rich text in headers and footers. 

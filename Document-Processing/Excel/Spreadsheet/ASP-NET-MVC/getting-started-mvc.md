@@ -18,13 +18,13 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 ## Create ASP.NET MVC application with HTML helper
 
-* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started#create-your-first-app)
+* [Create an ASP.NET Web Application (.NET Framework) using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started#create-your-first-app)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC package in the application
 
 Open the NuGet package manager UI in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5) and then install it. Alternatively, you can utilize the following package manager command to achieve the same.
 
-> Make sure that the `Microsoft.AspNet.Mvc` package and its dependency packages are updated to the latest version.
+N> Make sure that the `Microsoft.AspNet.Mvc` package and its dependency packages are updated to the latest version.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -40,20 +40,24 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls are ava
 
 Add **Syncfusion.EJ2** namespace reference in `~/Views/Web.config` file, as shown in the following example.
 
-```
+{% tabs %}
+{% highlight cshtml tabtitle="Web.config" %}
+
 ...
 <namespaces>
     ...
     <add namespace="Syncfusion.EJ2"/>
 </namespaces>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add stylesheet and script resources
 
 Add the stylesheet and script references to the `<head>` section of `~/Views/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
+{% highlight cshtml tabtitle="_Layout.cshtml" %}
 
 <head>
     ...
@@ -73,7 +77,7 @@ N> To learn other ways to load themes or scripts (such as NPM packages or [CRG](
 Register the script manager `EJS().ScriptManager()` at the end of the `<body>` element in the `~/Views/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
+{% highlight cshtml tabtitle="_Layout.cshtml" %}
 
 <body>
 ...
@@ -94,7 +98,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The [`openUrl`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/open-save#open) and [`saveUrl`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/open-save#save) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`Open and Save`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/open-save) section.
+N> The [`openUrl`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/open-save#open) and [`saveUrl`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/open-save#save) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`Open and Save`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/open-save) section.
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet control will be rendered in the default web browser.
 
