@@ -9,33 +9,36 @@ documentation: ug
 
 # Open Excel Files in Syncfusion React Spreadsheet
 
-The Syncfusion React Spreadsheet component uses a server-assisted workflow to open Excel files efficiently and accurately. When a user uploads an Excel file, the component sends the file to a server endpoint for processing. This approach keeps the browser fast and responsive, as all heavy parsing and conversion are handled on the server.
+The Syncfusion React Spreadsheet component uses a server-assisted workflow to open Excel files efficiently and accurately. When a user uploads an Excel file, the file is sent to a server endpoint for processing. This keeps the browser fast and responsive, as all heavy parsing and conversion are handled on the server.
 
-On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library (built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview) and **ASP.NET**) reads the Excel file. The server extracts all data, styles, formulas, formatting, and sheet structure, then converts everything into a Spreadsheet-compatible JSON format. This JSON is sent back to the client, where the React Spreadsheet component renders the workbook in the browser, preserving the original Excel layout and content.
+On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to process the uploaded Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET Frameworks**. The server extracts all data, styles, formulas, formatting, and sheet structure, then converts everything into a Spreadsheet-compatible JSON format. This JSON is sent back to the client, where the React Spreadsheet component renders the workbook in the browser, preserving the original Excel layout and content.
 
-In the code samples and demos, you may see **Syncfusion-hosted service URLs** used for the `openUrl` and `saveUrl` properties. These URLs point to Syncfusion’s own WebAPI services (built with **ASP.NET Core**) that handle opening and saving Excel files. These hosted URLs are provided for demonstration and evaluation purposes only.
+In the code samples and demos, you may see **Syncfusion-hosted service URLs** used for the `openUrl` and `saveUrl` properties. These URLs point to Syncfusion’s own WebAPI services (built with **ASP.NET Core**) that handle opening and saving Excel files. These hosted URLs are provided only for demonstration and evaluation purposes:
 
-For your own development and production, you should always set up your own web service for open/save operations. This ensures your data remains private, secure, and fully under your control.
+**Hosted Syncfusion Service URLs**
+```
+openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
+saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
+```
+
+For your own development and production, you must set up your own web service for open/save operations. This ensures your data remains private, secure, and fully under your control. Using your own service also allows you to customize processing, apply business logic, and comply with your organization’s security requirements.
 
 **Server Configuration**
 
 Below is an example of a server-side `Open` endpoint using ASP.NET Core WebAPI, which is the same approach used for building the hosted Syncfusion URLs. This endpoint receives the uploaded Excel file, processes it with the Syncfusion Spreadsheet library, and returns the workbook JSON to the client:
 
 ```csharp
-[Route("api/[controller]")]
-public class SpreadsheetController : Controller
+// Open action
+[HttpPost]
+[Route("Open")]
+public IActionResult Open([FromForm] IFormCollection openRequest)
 {
-    // To open Excel file
-    [AcceptVerbs("Post")]
-    [HttpPost]
-    [EnableCors("AllowAllOrigins")]
-    [Route("Open")]
-    public IActionResult Open(IFormCollection openRequest)
-    {
-        OpenRequest open = new OpenRequest();
+    OpenRequest open = new OpenRequest();
+    if (openRequest.Files && openRequest.Files.Count > 0) {
         open.File = openRequest.Files[0];
         return Content(Workbook.Open(open));
     }
+    return BadRequest("No file uploaded.");
 }
 ```
 

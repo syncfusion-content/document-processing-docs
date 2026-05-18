@@ -11,31 +11,34 @@ documentation: ug
 
 The Syncfusion React Spreadsheet component uses a server-assisted workflow to save Excel files efficiently and accurately. When a user saves an Excel file, the Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
 
-The JSON workbook is then sent to a server endpoint for processing. On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library (built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview) and **ASP.NET**) converts the JSON data into a fully formatted Excel file. The server parses the JSON, maps its contents to an XlsIO Workbook instance, and ensures that all data, styles, formulas, and other Spreadsheet features are accurately preserved.
+The JSON workbook is then sent to a server endpoint for processing. On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to convert the JSON data into a fully formatted Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET Frameworks**. The server parses the JSON, maps its contents to an XlsIO Workbook instance, and ensures that all data, styles, formulas, and other Spreadsheet features are accurately preserved.
 
 Since the server is responsible for generating the final Excel file, the total export time can vary depending on the workbook’s complexity. Factors such as the level of formatting, styles, and the use of advanced features like formulas or conditional formatting can influence processing time. After the file is successfully generated, it is sent back to the client for download.
 
-In the code samples and demos, you may see **Syncfusion-hosted service URLs** used for the `saveUrl` property. These URLs point to Syncfusion’s own WebAPI services (built with **ASP.NET Core**) that handle saving Excel files. These hosted URLs are provided for demonstration and evaluation purposes only.
+In the code samples and demos, you may see **Syncfusion-hosted service URLs** used for the `saveUrl` property. These URLs point to Syncfusion’s own WebAPI services (built with **ASP.NET Core**) that handle saving Excel files. These hosted URLs are provided only for demonstration and evaluation purposes:
 
-For your own development and production, you should always set up your own web service for save operations. This ensures your data remains private, secure, and fully under your control.
+**Hosted Syncfusion Service URLs:**
+```
+openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
+saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
+```
+
+For your own development and production, you must set up your own web service for save operations. This ensures your data remains private, secure, and fully under your control. Using your own service also allows you to customize processing, apply business logic, and comply with your organization’s security requirements.
 
 **Server Configuration**
 
 Below is an example of a server-side `Save` endpoint using ASP.NET Core WebAPI, which is the same approach used for building the hosted Syncfusion URLs. This endpoint receives the Spreadsheet data as JSON, processes it with the Syncfusion Spreadsheet library, and returns the generated Excel file to the client:
 
 ```csharp
-[Route("api/[controller]")]
-public class SpreadsheetController : Controller
+// Save action
+[HttpPost]
+[Route("Save")]
+public IActionResult Save([FromForm] SaveSettings saveSettings)
 {
-    // To save as Excel file
-    [AcceptVerbs("Post")]
-    [HttpPost]
-    [EnableCors("AllowAllOrigins")]
-    [Route("Save")]
-    public IActionResult Save([FromForm] SaveSettings saveSettings)
-    {
+    if(saveSettings && saveSettings.JSONData) {
         return Workbook.Save(saveSettings);
     }
+    return BadRequest("saveSettings or JSONData was not available.");
 }
 ```
 
