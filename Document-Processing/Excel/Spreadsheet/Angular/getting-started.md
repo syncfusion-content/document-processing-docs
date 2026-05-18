@@ -32,7 +32,7 @@ ng new spreadsheet-app
 cd spreadsheet-app
 ```
 
-> When prompted during project creation, select **Default (Stylesheet(CSS), SSR and SSG(No), AITools(None))**.
+> **Note:** When prompted during project creation, select the default options: **CSS** for stylesheet, **No** for SSR/SSG, and **None** for AI tools.
 
 ## Install the Syncfusion® Angular Spreadsheet package
 
@@ -99,7 +99,7 @@ ng serve
 After the application starts, open the localhost URL shown in the terminal to view the Angular Spreadsheet component in the browser. The output will appear as follows:
 ![Angular Spreadsheet component](./images/spreadsheet.png)
 
-Use the following live preview to explore the Spreadsheet component.
+You can also explore the Spreadsheet interactively using the live sample below.
  
 {% previewsample "/document-processing/samples/spreadsheet/angular/spreadsheet-cs1" %}
 

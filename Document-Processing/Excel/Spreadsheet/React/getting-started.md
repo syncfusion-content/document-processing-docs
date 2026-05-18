@@ -106,7 +106,7 @@ After the application starts, open the localhost URL shown in the terminal to vi
 
 ![React Spreadsheet control](images/spreadsheet.PNG)
 
-The following example shows a basic spreadsheet component.
+You can also explore the Spreadsheet interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/getting-started-cs1" %}
 
