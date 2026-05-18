@@ -109,7 +109,7 @@ To add the control manually in XAML, follow the following steps:
 
 {% tabcontent Via C# %}
 
-To add the control manually in C#, add the below code
+To add the control manually in C#, add the below code in *.xaml.cs
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -141,7 +141,7 @@ public sealed partial class MainPage : Page
 2. The UWP application will be deployed and launched on the selected target device, displaying the **SfRichTextBoxAdv** control.
 3. Press Ctrl + O to open an existing document. The selected document will be displayed within the SfRichTextBoxAdv control, as shown below.
 
-You can download a complete working sample from GitHub <<Create sample and add link>>.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
 
 ![UWP SfRichTextBoxAdv Control](Getting-Started_images/uwp-sfrichtextboxadv-control.png)
 

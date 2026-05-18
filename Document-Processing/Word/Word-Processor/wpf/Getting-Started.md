@@ -97,7 +97,7 @@ To add the control manually in XAML, follow the following steps:
         x:Class="DocumentEditor.MainWindow"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv"/>
+        <syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv"/>
     </Grid>
 </Window>
 
@@ -108,7 +108,7 @@ To add the control manually in XAML, follow the following steps:
 
 {% tabcontent Via C# %}
 
-To add the control manually in C#, add the below code
+To add the control manually in C#, add the below code in *.xaml.cs
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -138,7 +138,7 @@ public partial class MainWindow : Window
 2. The application will launch, displaying the **SfRichTextBoxAdv** control.
 3. Press Ctrl + O to open an existing document. The selected document will be displayed within the SfRichTextBoxAdv control, as shown below.
 
-You can download a complete working sample from GitHub <<Create sample and add link>>.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
 
 ![WPF SfRichTextBoxAdv Control](Getting-Started_images/wpf-sfrichtextboxadv-control.png)
 
@@ -220,7 +220,7 @@ To add the control manually in XAML, follow the following steps:
                          x:Class="DocumentEditor.MainWindow"
                          Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Syncfusion:SfRichTextRibbon x:Name="richTextRibbon"/>
+        <syncfusion:SfRichTextRibbon x:Name="richTextRibbon"/>
     </Grid>
 </ Syncfusion:RibbonWindow>
 
@@ -242,8 +242,8 @@ To add the control manually in XAML, follow the following steps:
          <RowDefinition Height="Auto"/>
          <RowDefinition Height="*"/>
      </Grid.RowDefinitions>
-     <Syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"  DataContext="{Binding ElementName=richTextBoxAdv}"/>
-     <Syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1"/>
+     <syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"  DataContext="{Binding ElementName=richTextBoxAdv}"/>
+     <syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1"/>
  </Grid>
 </ Syncfusion:RibbonWindow>
 
@@ -254,7 +254,7 @@ To add the control manually in XAML, follow the following steps:
 {% endtabcontent %}
 
 {% tabcontent Via C# %}
-To add the control manually in C#, add the below code
+To add the control manually in C#, add the below code in *.xaml.cs
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -326,7 +326,7 @@ N> Prefer using `SfRichTextRibbon` within `RibbonWindow` in your application, si
 2. The application will launch with the **SfRichTextRibbon** and **SfRichTextBoxAdv** controls.  
 3. Press **Ctrl + O** or use the **Open** option in the **SfRichTextRibbon** to open a document, which will be displayed in the **SfRichTextBoxAdv** control, with ribbon options available for editing and formatting, as shown below
 
-You can download a complete working sample from GitHub <<Create sample and add link>>.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv%20with%20SfRichTextRibbon).
 
 ![WPF SfRichTextBoxAdv Control along with its SfRichTextRibbon](Getting-Started_images/wpf-sfrichtextboxadv-with-sfrichtextribbon.png)
 
