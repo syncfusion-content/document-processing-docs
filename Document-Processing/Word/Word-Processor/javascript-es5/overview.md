@@ -36,7 +36,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Javascript DOCX Editor (Doc
 * Allows to create a lightweight Word viewer using module injection to view and [prints](./print) Word documents.
 * Provides a [server-side helper library](./web-services-overview) to open the Word documents like DOCX, DOC, WordML, RTF, and Text, by converting it to SFDT file format.
 
-### Supported platforms for server-side dependencies
+## Supported platforms for server-side dependencies
 The Document Editor component requires server-side interactions for the following operations: 
 
 •	Open file formats other than SFDT 
