@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Overview
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Javascript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Javascript DOCX Editor (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats. 
 
 ![Output of JavaScript DOCX Editor](./images/docx-editor.png)
 

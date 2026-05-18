@@ -34,4 +34,4 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET MVC DOCX Editor](h
 * Provides a [ribbon interface](./ribbon.md) similar to Microsoft Word, with tab-based commands for quick and intuitive access to features. 
 * [Localizes](./global-local) all the static text to any desired language.
 * Allows to create a lightweight Word viewer using module injection to view and [prints](./print) Word documents.
-* Provides a server-side helper library to open the Word documents like DOCX, DOC, WordML, RTF, and Text, by converting it to SFDT file format.
+
