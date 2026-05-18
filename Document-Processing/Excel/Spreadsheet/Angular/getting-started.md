@@ -32,7 +32,7 @@ ng new spreadsheet-app
 cd spreadsheet-app
 ```
 
-N> **Note:** When prompted during project creation, select the default options: **CSS** for stylesheet, **No** for SSR/SSG, and **None** for AI tools.
+N> When prompted during project creation, select the default options: **CSS** for stylesheet, **No** for SSR/SSG, and **None** for AI tools.
 
 ## Install the Syncfusion® Angular Spreadsheet package
 
