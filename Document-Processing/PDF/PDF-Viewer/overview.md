@@ -27,6 +27,14 @@ keywords: PDF, SDK, view, edit, read
 
 {% doccard text="JavaScript(ES6)" link="/document-processing/pdf/pdf-viewer/javascript-es6/getting-started"  icon="/document-processing/pdf/pdf-viewer/javascript-es6/images/JavaScript(ES6).svg" %}
 
+{% doccard text=".NET MAUI" link="/document-processing/pdf/pdf-viewer/maui/getting-started" icon="/document-processing/pdf/pdf-viewer/maui/Images/.NET MAUI.svg" %}
+
+{% doccard text="Xamarin.Forms" link="/document-processing/pdf/pdf-viewer/xamarin/getting-started" icon="/document-processing/pdf/pdf-viewer/xamarin/pdfviewer_images/Xamarin.Forms.svg" %}
+
+{% doccard text="Xamarin.Android" link="/document-processing/pdf/pdf-viewer/xamarin-android/getting-started" icon="/document-processing/pdf/pdf-viewer/xamarin.android/pdfviewer_images/Xamarin.Android.svg" %}
+
+{% doccard text="Xamarin.iOS" link="/document-processing/pdf/pdf-viewer/xamarin-ios/getting-started" icon="/document-processing/pdf/pdf-viewer/xamarin.ios/pdfviewer_images/Xamarin.iOS.svg" %}
+
 {% doccard text="Flutter" link="/document-processing/pdf/pdf-viewer/flutter/getting-started" icon="/document-processing/pdf/pdf-viewer/flutter/images/Flutter.svg" %}
 
 {% doccard text="UWP" link="/document-processing/pdf/pdf-viewer/uwp/getting-started" icon="/document-processing/pdf/pdf-viewer/uwp/Getting-Started_images/UWP.svg" %}
@@ -34,6 +42,8 @@ keywords: PDF, SDK, view, edit, read
 {% doccard text="Windows Forms" link="/document-processing/pdf/pdf-viewer/winforms/getting-started" icon="/document-processing/pdf/pdf-viewer/winforms/images/Windows Forms.svg" %}
 
 {% doccard text="WPF" link="/document-processing/pdf/pdf-viewer/wpf/getting-started" icon="/document-processing/pdf/pdf-viewer/wpf/images/WPF.svg" %}
+
+{% doccard text="Blazor (Classic)" link="/document-processing/pdf/pdf-viewer/blazor-classic/server-side-application" icon="/document-processing/pdf/pdf-viewer/blazor-classic/getting-started/gettingstarted-images/Blazor (Classic).svg" %}
 
 {% enddoccards %}
 
