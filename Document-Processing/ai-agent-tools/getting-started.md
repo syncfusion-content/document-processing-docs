@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Syncfusion Document SDK AI Agent Tool Library
 
-The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) exposes Word, Excel, PDF, PowerPoint, and Smart Data Extraction operations as AI-callable tools. These tools integrate seamlessly with the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp), enabling [AI agents](https://learn.microsoft.com/en-us/agent-framework/agents/?pivots=programming-language-csharp) to perform document operations autonomously.
+The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) exposes Word, Excel, PDF, PowerPoint, and Smart Data Extraction operations as AI-callable tools. These tools integrate seamlessly with the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp), enabling [AI agents](https://learn.microsoft.com/en-us/agent-framework/agents/?pivots=programming-language-csharp) to perform document operations autonomously.
 
 Before you begin, make two key decisions:
 
@@ -50,8 +50,6 @@ The Microsoft Agent Framework supports the following providers for .NET:
 
 - **[Azure OpenAI](https://learn.microsoft.com/en-us/agent-framework/agents/providers/azure-openai)**
 - **[OpenAI](https://learn.microsoft.com/en-us/agent-framework/agents/providers/openai)**
-- **[Anthropic](https://learn.microsoft.com/en-us/agent-framework/agents/providers/anthropic)**
-- **[Microsoft Foundry](https://learn.microsoft.com/en-us/agent-framework/agents/providers/microsoft-foundry)**
 
 For more details, see the [Microsoft Agent Framework Providers documentation](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp).
 

@@ -9,12 +9,12 @@ documentation: ug
 
 # Customize the AI Agent Tool Library
 
-The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) is designed to be extensible. This guide walks you through creating a custom agent tool class and registering the tools with an AI agent so they are callable alongside the built-in tools.
+The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) is designed to be extensible. This guide walks you through creating a custom agent tool class and registering the tools with an AI agent so they are callable alongside the built-in tools.
 
 
 ## Creating a Custom AI Agent Tool Class
 
-Follow these steps to enable new document operations to the [AI agent tool library](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main).
+Follow these steps to enable new document operations to the [AI agent tool library](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools).
 
 **Step 1: Clone the repository**
 

@@ -12,7 +12,8 @@ documentation: ug
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
 
-When opening the Excel document with notes in the Spreadsheet, they will be displayed in the control. The cells containing notes will be indicated with a red colored triangle at the top-right corner. Hovering the mouse over these cells will display the content of the notes.
+* When opening an Excel document with notes, they are displayed in the Spreadsheet control.
+* Cells containing notes are marked with a small red triangle in the top-right corner. Hovering over these cells shows the note content.
 
 ![Adding, editing, and deleting a note in Spreadsheet](./images/spreadsheet_add_edit_delete_note.gif)
 
@@ -64,31 +65,28 @@ You can remove notes from cells using the following ways:
 The note will be removed from the cell, and the red triangle indicator will be removed.
 
 
-## Navigating between notes
+## Navigating Between Notes
 
 The Syncfusion Spreadsheet provides intuitive navigation to quickly move between cells containing notes in your worksheet. These options are accessible through the **Notes** dropdown in the **Review** tab.
 
 ![Navigating between notes in Spreadsheet](./images/spreadsheet_next_previous_note.gif)
 
 ### Previous Note
-
 To navigate to the previous note:
-
-* In the **Review** tab, open the **Notes** dropdown and select **Previous Note**.
-* The Spreadsheet will automatically select the previous note in the current worksheet, searching leftward and then upward.
-* If no prior note exists in the sheet, the search continues to the previous worksheet in order.
-* If the workbook contains no notes, the selection remains on the current cell.
+* Go to the **Review** tab, open the **Notes** dropdown, and select **Previous Note**.
+* The Spreadsheet will highlight the previous note in the current worksheet, searching leftward and then upward.
+* If no earlier note exists in the sheet, the search continues in the previous worksheet.
+* If the workbook has no notes, the selection stays on the current cell.
 
 ### Next Note
-
 To navigate to the next note:
+* Go to the **Review** tab, open the **Notes** dropdown, and select **Next Note**.
+* The Spreadsheet will highlight the next note in the current worksheet, searching rightward and then downward.
+* If no later note exists in the sheet, the search continues in the next worksheet.
+* If the workbook has no notes, the selection stays on the current cell.
 
-*  In the **Review** tab, open the **Notes** dropdown and select **Next Note**.
-* The Spreadsheet will automatically select the next note in the current worksheet, searching rightward and then downward.
-* If no subsequent note exists in the sheet, the search continues to the next worksheet in order.
-* If the workbook contains no notes, the selection remains on the current cell.
-
-This functionality streamlines the process of reviewing notes across worksheets, ensuring efficient traversal and discovery.
+This navigation feature streamlines reviewing by letting you jump directly between notes across worksheets.  
+It ensures efficient traversal, so you don’t miss any feedback or comments while working through your document.
 
 ## Show/Hide Note
 
@@ -122,15 +120,28 @@ This functionality enhances workflow efficiency by providing flexible control ov
 
 ![Show/Hide notes in Spreadsheet](./images/spreadsheet_show_hide_note.gif)
 
-## Saving the document with notes
+## Saving the Document with Notes
 
-The Spreadsheet data, including notes, can be saved and exported as an Excel document by selecting **File > Save As** in the ribbon menu. Exporting worksheets with notes is supported in Excel file formats such as Microsoft Excel (.xlsx) and Microsoft Excel 97-2003 (.xls).
+You can save and export Spreadsheet data along with notes into an Excel document.  
+To do this, go to **File > Save As** in the ribbon menu.  
 
-> When exporting the Spreadsheet to file formats such as Comma Separated Values (.csv), Excel Macro-Enabled Workbook (.xlsm), Excel Binary Workbook (.xlsb), and PDF Document (.pdf), the notes will not be available.
+Notes are preserved when exporting to:
+* **Microsoft Excel (.xlsx)**  
+* **Microsoft Excel 97–2003 (.xls)**  
+
+Notes are **not** included when exporting to:
+* **Comma Separated Values (.csv)**  
+* **Excel Macro-Enabled Workbook (.xlsm)**  
+* **Excel Binary Workbook (.xlsb)**  
+* **PDF Document (.pdf)**  
 
 ## Disabling notes
 
-To disable the note functionality, you need to set the [enableNotes](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enablenotes) property to **false**. After disabling, the notes in the document will not be shown when opened in the Spreadsheet. The **"Add Note"** option will not be shown in the context menu. The keyboard shortcuts for the note functionality will not work.
+To disable the note functionality, you need to set the [enableNotes](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enablenotes) property to **false**. 
+
+* Notes in the document will not be displayed when opened in the Spreadsheet when `enableNotes` set to `false`.  
+* The **Add Note** option will be removed from the context menu. 
+* Keyboard shortcuts related to notes will no longer work. 
 
 ![Spreadsheet with notes feature disabled](./images/spreadsheet_notes_disable.png)
 
@@ -147,9 +158,14 @@ In the below example, the note functionality is disabled in the Spreadsheet.
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/note-cs2" %}
 
-## Integrating notes during initial loading and using cell data binding
+## Integrating Notes During Initial Loading and Using Cell Data Binding
 
-The notes can be added initially when the Spreadsheet loads using cell data binding. You need to use the `notes` property in the cell settings to add notes to the Spreadsheet.
+You can add notes to cells initially when the Spreadsheet loads by using **cell data binding**.  
+This is done through the `notes` property in the cell settings.
+
+* Define the `notes` property inside the cell configuration.  
+* When the Spreadsheet initializes, the notes will automatically appear in the specified cells.  
+* Each cell can have its own note content bound through the model.
 
 In the below example, you can navigate between notes using **Previous Note** and **Next Note** options, toggle individual note visibility with **Show/Hide Note**, display all notes at once using **Show All Notes** and see how notes are added using the `updateCell` method in the `created` event.
 
