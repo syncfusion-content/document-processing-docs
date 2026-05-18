@@ -74,7 +74,7 @@ cd documenteditor-app
 
 ### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
 
 To install the Document Editor component, use the following command:
 
@@ -142,6 +142,7 @@ Run the application using the following command:
 ```bash
 ng serve --open
 ```
+
 After the application starts, open the localhost URL shown in the terminal. The Angular Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
 ![Output of Angular Document Editor](./images/angular_getting_started.png)
