@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Vue Spreadsheet Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component.
+This article provides a step-by-step guide for setting up a Vue 2 project and integrating the [Syncfusion® Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor).
 
 ## Prerequisites
 
@@ -32,11 +32,11 @@ vue create quickstart
 cd quickstart
 ```
 
-> When prompted during project creation, select **Default ([Vue 2] babel, eslint)**.
+N> When prompted during project creation, select **Default ([Vue 2] babel, eslint)**.
 
 ## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet package
 
-Install the [Vue Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet) package from npm using the following command:
+Install the [Syncfusion® Vue Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet) package from npm using the following command:
 
 ```
 npm install @syncfusion/ej2-vue-spreadsheet --save
@@ -64,7 +64,7 @@ Add the following Spreadsheet and dependent component style references.
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+N> Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component to the application
 
@@ -97,7 +97,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
+N> The [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
 
 ## Run the application
 
