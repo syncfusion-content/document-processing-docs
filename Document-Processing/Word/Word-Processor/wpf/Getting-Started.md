@@ -145,9 +145,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add ribbon UI in SfRichTextBoxAdv
 
-If you need a ribbon-based user interface for the **SfRichTextBoxAdv**, you can use the **SfRichTextRibbon** control. It provides quick access to commonly used editing and formatting features. 
-
-It enhances the user experience by organizing commands into tabs and groups, similar to Microsoft Word.
+If you need a ribbon-based user interface , you can add **SfRichTextRibbon** with **SfRichTextBoxAdv** control. It enhances the user experience by organizing commands into tabs and groups, similar to Microsoft Word.
 
 ### Add SfRichTextRibbon Dependencies
 
@@ -198,7 +196,7 @@ The following assembly references are required to use the **SfRichTextRibbon** c
 
 {% tabcontent Via Designer %}
 
-Open the Toolbox window and drag the **SfRichTextRibbon** control onto the Design view of the WPF application to add it to the user interface.
+Open the Toolbox window and drag the **SfRichTextRibbon** and **SfRichTextBoxAdv** onto the Design view. Bind the SfRichTextBoxAdv as DataContext to the SfRichTextRibbon in XAML.
 
 ![Dragging SfRichTextRibbon Control from Toolbox](Getting-Started_images/wpf-sfrichtextribbon-dragfrom-toolbox.png)
 
@@ -209,25 +207,8 @@ To add the control manually in XAML, follow the following steps:
 
 1.	Import Syncfusion® WPF schema http://schemas.syncfusion.com/wpf or SfRichTextRibbon control namespace Syncfusion.Windows.Controls.RichTextBoxAdv in XAML page.
 2.	To use the SfRichTextRibbon use the Syncfusion® RibbonWindow instead of Window.
-3.	Declare SfRichTextRibbon control in XAML page.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" %}
-
-<Syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
-                         x:Class="DocumentEditor.MainWindow"
-                         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <syncfusion:SfRichTextRibbon x:Name="richTextRibbon"/>
-    </Grid>
-</ Syncfusion:RibbonWindow>
-
-{% endhighlight %}
-{% endtabs %}
-
-4.	To make an interaction between SfRichTextRibbon and SfRichTextBoxAdv, bind the SfRichTextBoxAdv as DataContext to the SfRichTextRibbon.
+3.	Declare SfRichTextRibbon and SfRichTextBoxAdv control in XAML page.
+4.  To make an interaction between SfRichTextRibbon and SfRichTextBoxAdv, bind the SfRichTextBoxAdv as DataContext to the SfRichTextRibbon.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -245,7 +226,7 @@ To add the control manually in XAML, follow the following steps:
      <syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"  DataContext="{Binding ElementName=richTextBoxAdv}"/>
      <syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1"/>
  </Grid>
-</ Syncfusion:RibbonWindow>
+</Syncfusion:RibbonWindow>
 
 
 {% endhighlight %}
@@ -337,12 +318,16 @@ This section discusses about how to use the SfRichTextBoxAdv control as a standa
 
 {% tabs %}
 {% highlight xaml %}
-<Window x:Class="Sample.MainWindow"
+<Window x:Class="Standard_RichTextBox.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-       xmlns:RichTextBoxAdv="clr-namespace:Syncfusion.Windows.Controls.RichTextBoxAdv;assembly=Syncfusion.SfRichTextBoxAdv.Wpf">
-    
-    
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Standard_RichTextBox"
+        mc:Ignorable="d"
+        xmlns:RichTextBoxAdv="clr-namespace:Syncfusion.Windows.Controls.RichTextBoxAdv;assembly=Syncfusion.SfRichTextBoxAdv.Wpf"
+        Title="SfRichTextBoxAdv" Height="450" Width="800">
+   
     <Window.Resources>
         <RichTextBoxAdv:UnderlineToggleConverter x:Key="UnderlineToggleConverter"/>
         <RichTextBoxAdv:LeftAlignmentToggleConverter x:Key="LeftAlignmentToggleConverter"/>
@@ -371,59 +356,58 @@ This section discusses about how to use the SfRichTextBoxAdv control as a standa
                 <!-- UI option to perform Undo/Redo using command binding -->
                 <StackPanel Orientation="Horizontal">
                     <Button Command="RichTextBoxAdv:SfRichTextBoxAdv.UndoCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" Focusable="False">
-                        <Image Source="/Images/Undo.png" Height="40" Width="40" />
+                        <Image Source="\Images\Undo.png" Height="40" Width="40" />
                     </Button>
                     <Button Command="RichTextBoxAdv:SfRichTextBoxAdv.RedoCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" Focusable="False">
-                        <Image Source="/Images/Redo.png" Height="40" Width="40" />
+                        <Image Source="\Images\Redo.png" Height="40" Width="40" />
                     </Button>
                 </StackPanel>
                 <!-- UI option to perform Clipboard operations using command binding -->
                 <Border Width="2" Height="46" Background="#1F1F1F"/>
                 <StackPanel Orientation="Horizontal">
                     <Button Command="RichTextBoxAdv:SfRichTextBoxAdv.CutCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" Focusable="False">
-                        <Image Source="/Images/Cut.png" Height="40" Width="40" />
+                        <Image Source="\Images\Cut.png" Height="40" Width="40" />
                     </Button>
                     <Button Command="RichTextBoxAdv:SfRichTextBoxAdv.CopyCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" Focusable="False">
-                        <Image Source="/Images/Copy.png" Height="40" Width="40" />
+                        <Image Source="\Images\Copy.png" Height="40" Width="40" />
                     </Button>
                     <Button Command="RichTextBoxAdv:SfRichTextBoxAdv.PasteCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" Focusable="False">
-                        <Image Source="/Images/Paste.png" Height="40" Width="40" />
+                        <Image Source="\Images\Paste.png" Height="40" Width="40" />
                     </Button>
                 </StackPanel>
                 <!-- UI option to apply character formatting using property binding -->
                 <Border Width="2" Height="46" Background="#1F1F1F"/>
                 <StackPanel Orientation="Horizontal">
                     <ToggleButton IsChecked="{Binding Selection.CharacterFormat.Bold}" Focusable="False">
-                        <Image Source="/Images/Bold.png" Height="40" Width="40" />
+                        <Image Source="\Images\Bold.png" Height="40" Width="40" />
                     </ToggleButton>
                     <ToggleButton IsChecked="{Binding Selection.CharacterFormat.Italic}" Focusable="False">
-                        <Image Source="/Images/Italic.png" Height="40" Width="40" />
+                        <Image Source="\Images\Italic.png" Height="40" Width="40" />
                     </ToggleButton>
                     <ToggleButton IsChecked="{Binding Selection.CharacterFormat.Underline, Converter={StaticResource UnderlineToggleConverter}}" Focusable="False">
-                        <Image Source="/Images/Underline.png" Height="40" Width="40" />
+                        <Image Source="\Images\Underline.png" Height="40" Width="40" />
                     </ToggleButton>
                 </StackPanel>
                 <Border Width="2" Height="46" Background="#1F1F1F"/>
                 <!-- UI option to apply paragraph formatting using property binding -->
                 <StackPanel Orientation="Horizontal">
                     <ToggleButton IsChecked="{Binding Selection.ParagraphFormat.TextAlignment, Converter={StaticResource LeftAlignmentToggleConverter}}" Focusable="False">
-                        <Image Source="/Images/Left.png" Height="40" Width="40" />
+                        <Image Source="\Images\Left.png" Height="40" Width="40" />
                     </ToggleButton>
                     <ToggleButton IsChecked="{Binding Selection.ParagraphFormat.TextAlignment, Converter={StaticResource CenterAlignmentToggleConverter}}" Focusable="False">
-                        <Image Source="/Images/Center.png" Height="40" Width="40" />
+                        <Image Source="\Images\Center.png" Height="40" Width="40" />
                     </ToggleButton>
                     <ToggleButton IsChecked="{Binding Selection.ParagraphFormat.TextAlignment, Converter={StaticResource RightAlignmentToggleConverter}}" Focusable="False">
-                        <Image Source="/Images/Right.png" Height="40" Width="40" />
+                        <Image Source="\Images\Right.png" Height="40" Width="40" />
                     </ToggleButton>
                     <ToggleButton IsChecked="{Binding Selection.ParagraphFormat.TextAlignment, Converter={StaticResource JustifyAlignmentToggleConverter}}" Focusable="False">
-                        <Image Source="/Images/Justify.png" Height="40" Width="40" />
+                        <Image Source="\Images\Justify.png" Height="40" Width="40" />
                     </ToggleButton>
                 </StackPanel>
             </StackPanel>
         </Grid>
-        <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" Grid.Row="1"  />
+        <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" Grid.Row="1" LayoutType="Continuous"  />
     </Grid>
-
 </Window>
 
 {% endhighlight %}
