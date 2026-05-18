@@ -27,63 +27,52 @@ The steps below cover the essential topics required to add and use the SfRichTex
 
 ### Add the SfRichTextBoxAdv dependencies
 
-| NuGet Packages | Assemblies |
-|----------------|------------|
-| **Using NuGet Package Manager (UI):** <br><br> 1. In Solution Explorer, right-click the project and choose **Manage NuGet Packages**. <br> 2. Search for **Syncfusion.SfRichTextBoxAdv.UWP** and install the latest version. <br> 3. Verify that all required dependencies are installed and the project is successfully restored. <br><br> **Using Package Manager Console:** <br><code>Install-Package Syncfusion.SfRichTextBoxAdv.UWP </code> | • Syncfusion.SfRichTextBoxAdv.UWP <br> • Syncfusion.DocIO.UWP <br> • Syncfusion.SfRadialMenu.UWP <br> • Syncfusion.SfShared.UWP |
+{% tabcontents %}
+
+{% tabcontent NuGet packages %}
+
+ **Using NuGet Package Manager (UI):** 
+
+1.	In Solution Explorer, right-click the project and **Manage NuGet Packages**.
+2.	Search for [Syncfusion.SfRichTextBoxAdv.UWP](https://www.nuget.org/packages/Syncfusion.SfRichTextBoxAdv.UWP) and install the latest version.
+3.	Verify that all required dependencies are installed and the project is successfully restored.
+
+
+**Using Package Manager Console:**
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+Install-Package Syncfusion.SfRichTextBoxAdv.UWP
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Assemblies %}
+
+The following assembly references are required to use the **SfRichTextBoxAdv** control in your application.
+
+- Syncfusion.SfRichTextBoxAdv.UWP
+- Syncfusion.DocIO.UWP
+- Syncfusion.SfRadialMenu.UWP
+- Syncfusion.SfShared.UWP
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 N> 1. Starting with v16.2.0.41 (2018 Vol 2), if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license&reg; key in your UWP application to use our components.
-N> 2. Starting from version v20.3.0.52, we internally disposed all the resources used by SfRichTextBoxAdv instance inside Unloaded event. This change is added to automatically release the memory utilized by SfRichTextBoxAdv instance when it is unloaded. 
-      
-      This behavior change may introduce a break if you remove the SfRichTextBoxAdv instance from its parent container and add it to the same or another parent container in your application. In case you used such logic in your application, then kindly add below code before removing the SfRichTextBoxAdv instance from its parent container.
-
-<table>
-  <thead>
-    <tr>
-      <th>Old code</th>
-      <th>New code</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <pre><code>
-//Remove the control from the parent Grid
-grid.Children.Remove(richTextBoxAdv);
-
-//Add the SfRichTextBoxAdv control to the Grid
-grid.Children.Add(richTextBoxAdv);
-      </code></pre>
-    </td>
-    <td>
-      <pre><code>
-//Create a file stream
-MemoryStream memoryStream = new MemoryStream();
-
-//Save the document to the stream 
-richTextBoxAdv.Save(memoryStream, FormatType.Docx);
-
-//Remove the control from the parent Grid
-grid.Children.Remove(richTextBoxAdv);
-
-//Create new instance of SfRichTextBoxAdv
-richTextBoxAdv = new SfRichTextBoxAdv();
-
-//Add the SfRichTextBoxAdv control to the Grid
-grid.Children.Add(richTextBoxAdv);
-
-//Load the saved stream into SfRichTextBoxAdv
-richTextBoxAdv.Load(memoryStream, FormatType.Docx);
-      </code></pre>
-    </td>
-  </tr>
-  </tbody>
-</table>
 
 ### Add SfRichTextBoxAdv control
 
 {% tabcontents %}
 
 {% tabcontent Via Designer %}
+
+Open the Toolbox window and drag the **SfRichTextBoxAdv** control onto the Design view of the UWP application to add it to the user interface.
+
 ![Dragging SfRichTextBoxAdv Control from Toolbox](Getting-Started_images/uwp-richtextbox-dragfrom-toolbox.png)
 {% endtabcontent %}
 
@@ -91,15 +80,9 @@ richTextBoxAdv.Load(memoryStream, FormatType.Docx);
 
 To add the control manually in XAML, follow the following steps:
 
-1.	Add the following required assembly references to the project:
-    - Syncfusion.SfRichTextBoxAdv.UWP
-    - Syncfusion.DocIO.UWP
-    - Syncfusion.SfRadialMenu.UWP
-    - Syncfusion.SfShared.UWP
+1.	Import Syncfusion® UWP SfRichTextBoxAdv control namespace Syncfusion.UI.Xaml.RichTextBoxAdv in XAML page.
 
-2.	Import Syncfusion® UWP SfRichTextBoxAdv control namespace Syncfusion.UI.Xaml.RichTextBoxAdv in XAML page.
-
-3.	Declare SfRichTextBoxAdv control in XAML page.
+2.	Declare SfRichTextBoxAdv control in XAML page.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -140,27 +123,6 @@ public sealed partial class MainPage : Page
         // Create an instance of SfRichTextBoxAdv control
         SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
 
-        // Get the document associated with the SfRichTextBoxAdv control
-        DocumentAdv documentAdv = richTextBoxAdv.Document;
-
-        // Access the first section in the document
-        SectionAdv sectionAdv = documentAdv.Sections.First();
-
-        // Create a new paragraph
-        ParagraphAdv paragraphAdv = new ParagraphAdv();
-
-        // Create a span element to hold text
-        SpanAdv spanAdv = new SpanAdv();
-
-        // Set the text content
-        spanAdv.Text = "Hello World";
-
-        // Add the text span to the paragraph
-        paragraphAdv.Inlines.Add(spanAdv);
-
-        // Add the paragraph to the section
-        sectionAdv.Blocks.Add(paragraphAdv);
-
         // Add the SfRichTextBoxAdv control to the container (Grid)
         Root_Grid.Children.Add(richTextBoxAdv);
     }
@@ -177,11 +139,9 @@ public sealed partial class MainPage : Page
 
 1. Press **F5** or click **Start Debugging** in Visual Studio.
 2. The UWP application will be deployed and launched on the selected target device, displaying the **SfRichTextBoxAdv** control.
-3. You can now create, view, and edit Word documents within the application.
+3. Press Ctrl + O to open an existing document. The selected document will be displayed within the SfRichTextBoxAdv control, as shown below.
 
 You can download a complete working sample from GitHub <<Create sample and add link>>.
-
-Upon execution, the SfRichTextBoxAdv control renders the Word document as illustrated below.
 
 ![UWP SfRichTextBoxAdv Control](Getting-Started_images/uwp-sfrichtextboxadv-control.png)
 
