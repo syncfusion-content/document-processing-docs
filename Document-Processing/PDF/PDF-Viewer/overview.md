@@ -11,29 +11,29 @@ keywords: PDF, SDK, view, edit, read
 
 {% doccards %}
 
-{% doccard text="ASP.NET Core" link="document-processing/pdf/pdf-viewer/asp-net-core/getting-started" icon="icon="document-processing/pdf/pdf-viewer/asp-net-core/images/ASP.NET-Core.svg" %}
+{% doccard text="ASP.NET Core" link="/document-processing/pdf/pdf-viewer/asp-net-core/getting-started" icon="/document-processing/pdf/pdf-viewer/asp-net-core/images/ASP.NET-Core.svg" %}
 
-{% doccard text="ASP.NET MVC" link="document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started" icon="document-processing/pdf/pdf-viewer/asp-net-mvc/images/ASP.NET-MVC.svg" %}
+{% doccard text="ASP.NET MVC" link="/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started" icon="/document-processing/pdf/pdf-viewer/asp-net-mvc/images/ASP.NET-MVC.svg" %}
 
-{% doccard text="Angular" link="document-processing/pdf/pdf-viewer/angular/getting-started" icon="document-processing/pdf/pdf-viewer/angular/images/Angular.svg" %}
+{% doccard text="Angular" link="/document-processing/pdf/pdf-viewer/angular/getting-started" icon="/document-processing/pdf/pdf-viewer/angular/images/Angular.svg" %}
 
-{% doccard text="Blazor" link="document-processing/pdf/pdf-viewer/blazor/getting-started/web-app" icon="document-processing/pdf/pdf-viewer/blazor/images/Blazor.svg" %}
+{% doccard text="Blazor" link="/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app" icon="/document-processing/pdf/pdf-viewer/blazor/images/Blazor.svg" %}
 
-{% doccard text="React" link="document-processing/pdf/pdf-viewer/react/getting-started" icon="document-processing/pdf/pdf-viewer/react/images/React.svg" %}
+{% doccard text="React" link="/document-processing/pdf/pdf-viewer/react/getting-started" icon="/document-processing/pdf/pdf-viewer/react/images/React.svg" %}
 
-{% doccard text="Vue" link="document-processing/pdf/pdf-viewer/vue/getting-started" icon="document-processing/pdf/pdf-viewer/vue/images/Vue.svg" %}
+{% doccard text="Vue" link="/document-processing/pdf/pdf-viewer/vue/getting-started" icon="/document-processing/pdf/pdf-viewer/vue/images/Vue.svg" %}
 
-{% doccard text="JavaScript(ES5)" link="document-processing/pdf/pdf-viewer/javascript-es5/getting-started"  icon="document-processing/pdf/pdf-viewer/javascript-es5/images/JavaScript(ES5).svg" %}
+{% doccard text="JavaScript(ES5)" link="/document-processing/pdf/pdf-viewer/javascript-es5/getting-started"  icon="/document-processing/pdf/pdf-viewer/javascript-es5/images/JavaScript(ES5).svg" %}
 
-{% doccard text="JavaScript(ES6)" link="document-processing/pdf/pdf-viewer/javascript-es6/getting-started"  icon="document-processing/pdf/pdf-viewer/javascript-es6/images/JavaScript(ES6).svg" %}
+{% doccard text="JavaScript(ES6)" link="/document-processing/pdf/pdf-viewer/javascript-es6/getting-started"  icon="/document-processing/pdf/pdf-viewer/javascript-es6/images/JavaScript(ES6).svg" %}
 
-{% doccard text="Flutter" link="document-processing/pdf/pdf-viewer/flutter/getting-started" icon="document-processing/pdf/pdf-viewer/flutter/images/Flutter.svg" %}
+{% doccard text="Flutter" link="/document-processing/pdf/pdf-viewer/flutter/getting-started" icon="/document-processing/pdf/pdf-viewer/flutter/images/Flutter.svg" %}
 
-{% doccard text="UWP" link="document-processing/pdf/pdf-viewer/uwp/getting-started" icon="document-processing/pdf/pdf-viewer/uwp/Getting-Started_images/UWP.svg" %}
+{% doccard text="UWP" link="/document-processing/pdf/pdf-viewer/uwp/getting-started" icon="/document-processing/pdf/pdf-viewer/uwp/Getting-Started_images/UWP.svg" %}
 
-{% doccard text="Windows Forms" link="document-processing/pdf/pdf-viewer/winforms/getting-started" icon="document-processing/pdf/pdf-viewer/winforms/images/Windows Forms.svg" %}
+{% doccard text="Windows Forms" link="/document-processing/pdf/pdf-viewer/winforms/getting-started" icon="/document-processing/pdf/pdf-viewer/winforms/images/Windows Forms.svg" %}
 
-{% doccard text="WPF" link="document-processing/pdf/pdf-viewer/wpf/getting-started" icon="document-processing/pdf/pdf-viewer/wpf/images/WPF.svg" %}
+{% doccard text="WPF" link="/document-processing/pdf/pdf-viewer/wpf/getting-started" icon="/document-processing/pdf/pdf-viewer/wpf/images/WPF.svg" %}
 
 {% enddoccards %}
 
