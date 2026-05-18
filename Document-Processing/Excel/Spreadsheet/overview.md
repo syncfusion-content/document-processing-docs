@@ -11,9 +11,9 @@ keywords: Excel, SDK, view, edit, read, Spreadsheet
 
 {% doccards %}
 
-{% doccard text="ASP.NET Core" link="/document-processing/excel/spreadsheet/asp-net-core/getting-started-core" icon="/document-processing/excel/spreadsheet/asp-net-core/images/ASP.NET-Core.svg" %}
+{% doccard text="ASP.NET Core" link="/document-processing/excel/spreadsheet/asp-net-core/getting-started-core" icon="/document-processing/excel/spreadsheet/asp-net-core/images/ASP.NET-Core.png" %}
 
-{% doccard text="ASP.NET MVC" link="/document-processing/excel/spreadsheet/asp-net-mvc/getting-started-mvc" icon="/document-processing/excel/spreadsheet/asp-net-mvc/images/ASP.NET-MVC.svg" %}
+{% doccard text="ASP.NET MVC" link="/document-processing/excel/spreadsheet/asp-net-mvc/getting-started-mvc" icon="/document-processing/excel/spreadsheet/asp-net-mvc/images/ASP.NET-MVC.png" %}
 
 {% doccard text="Angular" link="/document-processing/excel/spreadsheet/angular/getting-started" icon="/document-processing/excel/spreadsheet/angular/images/Angular.svg" %}
 
