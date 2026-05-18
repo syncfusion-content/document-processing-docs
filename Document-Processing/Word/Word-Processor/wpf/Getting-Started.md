@@ -13,11 +13,11 @@ Syncfusion® [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextb
 
 ## Create a RichTextBox in WPF using SfRichTextBoxAdv
 
-In this walk-through, you will create a WPF application that uses the Syncfusion® WPF SfRichTextBoxAdv control.
+In this walkthrough, you will create a WPF application that uses the Syncfusion® WPF SfRichTextBoxAdv control.
 
-The steps below cover the essential topics required to add and use the SfRichTextBoxAdv control in a WPF project.
+The steps below cover the essential tasks required to add and use the SfRichTextBoxAdv control in a WPF project.
 
-### Creating a New WPF Project
+### Create a New WPF Project
 
 1. Open **Visual Studio**.
 2. Click **Create a new project**.
@@ -26,7 +26,7 @@ The steps below cover the essential topics required to add and use the SfRichTex
 5. Enter the **project name** and other required details.
 6. Click **Create**.
 
-### Add the SfRichTextBoxAdv dependencies
+### Add SfRichTextBoxAdv dependencies
 
 {% tabcontents %}
 
@@ -41,7 +41,7 @@ The steps below cover the essential topics required to add and use the SfRichTex
 **Using Package Manager Console:** 
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.SfRichTextBoxAdv.WPF
 
@@ -64,7 +64,7 @@ The following assembly references are required to use the **SfRichTextBoxAdv** c
 
 {% endtabcontents %}
 
-N> Starting with v16.2.0.41 (2018 Vol 2), if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your WPF application to use our components.
+N> Starting with v16.2.0.41 (2018 Vol 2), if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your project. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your WPF application to use our components.
 
 
 ### Add SfRichTextBoxAdv control
@@ -81,11 +81,11 @@ Open the Toolbox window and drag the **SfRichTextBoxAdv** control onto the Desig
 
 {% tabcontent Via XAML %}
 
-To add the control manually in XAML, follow the following steps:
+To add the control manually in XAML, follow these steps:
 
-1.	Import Syncfusion® WPF schema http://schemas.syncfusion.com/wpf or SfRichTextBoxAdv control namespace Syncfusion.Windows.Controls.RichTextBoxAdv in XAML page.
+1.	Import Syncfusion® WPF schema http://schemas.syncfusion.com/wpf or SfRichTextBoxAdv control namespace Syncfusion.Windows.Controls.RichTextBoxAdv in the XAML page.
 
-2.	Declare SfRichTextBoxAdv control in XAML page.
+2.	Declare SfRichTextBoxAdv control in the XAML page.
 
 
 {% tabs %}
@@ -108,7 +108,7 @@ To add the control manually in XAML, follow the following steps:
 
 {% tabcontent Via C# %}
 
-To add the control manually in C#, add the below code in *.xaml.cs
+To add the control manually in C#, add the following code in *.xaml.cs
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -132,20 +132,19 @@ public partial class MainWindow : Window
 
 {% endtabcontents %}
 
-### Running the Application
+### Run the Application
 
 1. Press **F5** or click **Start** in Visual Studio.
-2. The application will launch, displaying the **SfRichTextBoxAdv** control.
-3. Press Ctrl + O to open an existing document. The selected document will be displayed within the SfRichTextBoxAdv control, as shown below.
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
+2. The application launches and displays the **SfRichTextBoxAdv** control.
+3. Press Ctrl+O to open an existing document. The selected document will be displayed within the SfRichTextBoxAdv control, as shown below.
 
 ![WPF SfRichTextBoxAdv Control](Getting-Started_images/wpf-sfrichtextboxadv-control.png)
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
 
-## Add ribbon UI in SfRichTextBoxAdv
+## Add ribbon UI to SfRichTextBoxAdv
 
-If you need a ribbon-based user interface , you can add **SfRichTextRibbon** with **SfRichTextBoxAdv** control. It enhances the user experience by organizing commands into tabs and groups, similar to Microsoft Word.
+If you need a ribbon-based user interface, you can add **SfRichTextRibbon** with **SfRichTextBoxAdv** control. It enhances the user experience by organizing commands into tabs and groups, similar to Microsoft Word.
 
 ### Add SfRichTextRibbon Dependencies
 
@@ -203,11 +202,11 @@ Open the Toolbox window and drag the **SfRichTextRibbon** and **SfRichTextBoxAdv
 {% endtabcontent %}
 
 {% tabcontent Via XAML %}
-To add the control manually in XAML, follow the following steps:
+To add the control manually in XAML, follow these steps:
 
-1.	Import Syncfusion® WPF schema http://schemas.syncfusion.com/wpf or SfRichTextRibbon control namespace Syncfusion.Windows.Controls.RichTextBoxAdv in XAML page.
+1.	Import the Syncfusion® WPF schema http://schemas.syncfusion.com/wpf or SfRichTextRibbon control namespace Syncfusion.Windows.Controls.RichTextBoxAdv in XAML page.
 2.	To use the SfRichTextRibbon use the Syncfusion® RibbonWindow instead of Window.
-3.	Declare SfRichTextRibbon and SfRichTextBoxAdv control in XAML page.
+3.	Declare the SfRichTextRibbon and SfRichTextBoxAdv controls in XAML page.
 4.  To make an interaction between SfRichTextRibbon and SfRichTextBoxAdv, bind the SfRichTextBoxAdv as DataContext to the SfRichTextRibbon.
 
 {% tabs %}
@@ -301,7 +300,7 @@ public partial class MainWindow : RibbonWindow
 
 N> Prefer using `SfRichTextRibbon` within `RibbonWindow` in your application, since the backstage of Ribbon will be opened only when the ribbon is loaded under the `RibbonWindow`
 
-### Running the Application
+### Run the Application with Ribbon UI
 
 1. Press **F5** or click **Start** in Visual Studio.  
 2. The application will launch with the **SfRichTextRibbon** and **SfRichTextBoxAdv** controls.  
@@ -314,7 +313,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Use SfRichTextBoxAdv as a standard RichTextBox
 
-This section discusses about how to use the SfRichTextBoxAdv control as a standard RichTextBox control with rich text formatting options.
+Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 
 {% tabs %}
 {% highlight xaml %}
@@ -421,7 +420,7 @@ When the application is executed, the standard RichTextBox control is displayed 
 
 ## Theme
 
-SfRichTextBoxAdv supports various built-in themes. Refer to the below links to apply themes for the SfRichTextBoxAdv,
+SfRichTextBoxAdv supports various built-in themes. Refer to the following links to apply themes for the SfRichTextBoxAdv,
 
   * [Apply theme using SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager)
 	
@@ -429,4 +428,4 @@ SfRichTextBoxAdv supports various built-in themes. Refer to the below links to a
 
 ![Applying Theme to WPF RichTextBox](Getting-Started_images/wpf-richtextbox-theme.png)
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+N> You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
