@@ -9,7 +9,9 @@ documentation: ug
 
 # Overview of the React Spreadsheet Component
 
-The [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) is an user interactive component to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with xlsx, xls, CSV and PDF formats.
+The [Syncfusion® React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) is an user interactive component to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with XLSX, XLS, CSV and PDF formats.
+
+![React Spreadsheet Component](images/overview-banner.PNG)
 
 ## Key features
 
@@ -21,15 +23,15 @@ The [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-
 * [Clipboard](clipboard): Provides the option to perform clipboard operations.
 * [Cell formatting](formatting#text-and-cell-formatting): Provides the option to customize the appearance of cells.
 * [Number formatting](formatting#number-formatting): Provides the option to format the cell value.
-* [Open](open-save#open): Provides the option to open Excel and CSV files in Spreadsheet.
-* [Save](open-save#save): Provides the option to save Spreadsheet data as Excel, CSV, and PDF documents.
+* [Open](open-excel-files): Provides the option to open Excel and CSV files in Spreadsheet.
+* [Save](save-excel-files): Provides the option to save Spreadsheet data as Excel, CSV, and PDF documents.
 * [Sorting](sort): Helps you to arrange the data to particular order in a selected range of cells.
 * [Filtering](filter): Helps you to view specific rows in the Spreadsheet by hiding the other rows.
 * [Undo Redo](undo-redo): Provides the option to perform undo redo operations in Spreadsheet.
 * [Hyperlink](link): Provides the option to navigate to web link or cell reference within the sheet or to other sheet in Spreadsheet.
 * [Resize](mobile-responsiveness): Allows you to change the row height and column width. Auto fit the rows and columns based on its content.
 * [Wrap text](cell-range#wrap-text): Provides the option to display the large content as multiple lines in a single cell.
-* [Data validation](cell-range#data-validation): Provides the option to validate edited values based on data validation rules defined for a cell or range of cells.
+* [Data validation](data-validation): Provides the option to validate edited values based on data validation rules defined for a cell or range of cells.
 * [Find and replace](searching): Provides the option to find the data and replace it across all sheets in Spreadsheet.
 * [Protect sheet](protect-sheet): Provides the option to restrict user actions like cell editing, row and column insertion, deletion, and resizing.
 * [Borders](formatting#borders): Provides the option to customize cell gridlines such as color and its style for enhanced UI.
