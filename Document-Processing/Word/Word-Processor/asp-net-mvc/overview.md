@@ -35,14 +35,3 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET MVC DOCX Editor](h
 * [Localizes](./global-local) all the static text to any desired language.
 * Allows to create a lightweight Word viewer using module injection to view and [prints](./print) Word documents.
 * Provides a server-side helper library to open the Word documents like DOCX, DOC, WordML, RTF, and Text, by converting it to SFDT file format.
-
-## Supported Web platforms
- 
-* [Javascript(ES5)](../javascript-es5/getting-started)
-* [Javascript(ES6)](../javascript-es6/getting-started)
-* [Angular](../angular/getting-started)
-* [React](../react/getting-started)
-* [Vue](../vue/getting-started)
-* [ASP.NET Core](../asp-net-core/getting-started-core)
-* [ASP.NET MVC](../asp-net-mvc/getting-started)
-* [Blazor](../blazor/getting-started/server-side-application)

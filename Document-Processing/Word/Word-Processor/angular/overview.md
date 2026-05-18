@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats. 
 
-![Output of React DOCX Editor](./images/docx-editor.png)
+![Output of Angular DOCX Editor](./images/docx-editor.png)
 
 ## Key Features
 

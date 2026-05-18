@@ -38,10 +38,15 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [Javascript DOCX Editor](ht
 
 ### Supported platforms for server-side dependencies
 The Document Editor component requires server-side interactions for the following operations: 
+
 •	Open file formats other than SFDT 
+
 •	Paste with formatting 
+
 •	Restrict editing 
+
 •	Spell check 
+
 •	Save as file formats other than SFDT and DOCX 
 
 You can deploy web APIs for server-side dependencies of Document Editor component in the following platforms.

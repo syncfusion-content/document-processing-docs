@@ -39,10 +39,15 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [React DOCX Editor](https:/
 ### Supported platforms for server-side dependencies
 
 The Document Editor component requires server-side interactions for the following operations: 
+
 •	Open file formats other than SFDT 
+
 •	Paste with formatting 
+
 •	Restrict editing 
+
 •	Spell check 
+
 •	Save as file formats other than SFDT and DOCX 
 
 
