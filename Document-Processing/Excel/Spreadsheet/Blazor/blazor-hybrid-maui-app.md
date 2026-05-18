@@ -73,7 +73,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Spreadsheet` namespaces.
+In the **~/_Imports.razor** file, add the following namespaces:
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -84,14 +84,16 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Next, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the MauiProgram.cs file of the MAUI Blazor App.
+Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight C# tabtitle="~/MauiProgram.cs" %}
 
 using Syncfusion.Blazor;
     ....
+
     builder.Services.AddSyncfusionBlazor();
+
     ....
 
 {% endhighlight %}
@@ -99,16 +101,20 @@ using Syncfusion.Blazor;
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` of the **~wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet in the `<head>` and the script at the end of the `<body>` in the **~wwwroot/index.html** file as shown below:
 
 ```html
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
 </head>
+
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
 ```
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Spreadsheet component
 
@@ -117,19 +123,23 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet comp
 {% tabs %}
 {% highlight razor %}
 
-<SfSpreadsheet DataSource="@DataSourceBytes">
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet>
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
-@code {
-    public byte[] DataSourceBytes { get; set; }
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-     }
-}
-
 {% endhighlight %}
 {% endtabs %}
+
+N> To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save.md).
+
+![Blazor Spreadsheet](images/getting-started.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/syncfusion-maui-blazor-spreadsheet-integration).
+
+## See Also
+
+- [Getting started with the Blazor Spreadsheet in a Blazor WebAssembly App](./getting-started.md)
+- [Getting started with the Blazor Spreadsheet in a Blazor Web app Server app](./getting-started-webapp.md)
