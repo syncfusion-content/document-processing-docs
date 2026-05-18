@@ -15,28 +15,20 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DOCX Editor](https:
 
 ## Key Features
 
-* Composes a document from scratch.
-* [`Opens`](./opening-a-document) and edits the Word (DOC, DOCX), RTF, and SFDT (Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text) format files.
-* [`Saves`](./saving-document) and exports the documents as DOCX and SDFT at the client-side.
-* Saves and [`exports the documents as PDF`](./how-to/export-document-as-pdf) files with Syncfusion<sup style="font-size:70%">&reg;</sup> DocIO library.
-* Prints the document.
-* [`Finds and replaces`](./find-and-replace) the text.
-* Allows spell checking.
-* Contains a rich set of document elements like text, table, lists, inline image, fields, bookmark, hyperlink, page number, header, and footer.
-* Contains a rich set of [text](./text-format), [paragraph](./paragraph-format), and [table formatting](./table-format) options.
-* Creates or updates the [table of contents](./table-of-contents).
-* Provides support to insert, and edit [form fields](./form-fields).
-* Provides support to insert, and edit [comments](./comments).
-* Provides support to track the [inserted and deleted content](./track-changes).
-* Contains [tables](./table).
-* Allows [Undo and Redo](./history).
-* Creates, edits, and applies [paragraph and character styles](./styles).
-* Contains clipboard operations such as [Cut](./clipboard#cut), [Copy](./clipboard#copy), and [Paste](./clipboard#paste) (with formatting).
-* Preserves the chart present in the opened Word document.
-* Restricts editing for certain regions.
-* Views the documents in read only mode.
-* Allows user interactions through mouse, touch, and keyboard.
-* Contains Intuitive UI options through context menu, dialogs, and navigation pane.
+* [Opens](./opening-a-document.md) the native `Syncfusion Document Text (*.sfdt)` format documents in the client-side.
+* [Saves the documents](./saving-document.md) in the client-side as `Syncfusion Document Text (*.sfdt)` and `Word document (*.docx)`.
+* Supports document elements like text, [image](./image.md), [table](./table.md), fields, [bookmark](./bookmark.md), [shapes](./shapes.md), [section](./section-format.md), [header and footer](./header-footer.md).
+* Supports the commonly used fields like [hyperlink](./link.md), page number, page count, and table of contents.
+* Supports formats like [text](./text-format.md), [paragraph](./paragraph-format.md), [bullets and numbering](./list-format.md), [table](./table-format.md) and [page settings](./section-format.md).
+* Provides support to create, edit, and apply [paragraph and character styles](./styles.md).
+* Provides support to [find and replace](./find-and-replace.md) text within the document.
+* Supports all the common editing and formatting operations along with [undo and redo](./history.md).
+* Provides support to [cut](./clipboard#cut), [copy](./clipboard#copy), and [paste](./clipboard.md#paste) rich text contents within the component. Also allows pasting simple text to and from other applications.
+* Provides support to insert, and edit [form fields](./form-fields.md).
+* Provides support to insert, and edit [comments](./comments.md).
+* Provides support to track the [inserted and deleted content](./track-changes.md).
+* Provides support to perform spell checking for any input text
+* Allows user interactions like zoom, scroll select contents through touch, mouse, and keyboard.
+* Provides intuitive UI options like context menu, dialogs, and [navigation pane](./find-and-replace.md#show-or-hide-navigation-pane).
 * Localizes all the static text to any desired language.
-
-You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.
+* Allows to create a lightweight Word viewer using module injection to view and [prints](./print.md) Word documents.
