@@ -87,7 +87,7 @@ In the **~/_Imports.razor** file, add the following namespaces:
 Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
-{% highlight C# tabtitle="~/MauiProgram.cs" hl_lines="3 26"%}
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 26" %}
 
 using Microsoft.Extensions.Logging;
 using MauiBlazorWindow.Data;
