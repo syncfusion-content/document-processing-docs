@@ -100,7 +100,7 @@ You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-
 
 * [Worksheet](./worksheet)
 * [Rows and columns](./rows-and-columns)
-* [Custom cell templates](./user-interface-customization/custom-cell-templates)
-* [Customize context menu](./user-interface-customization/customize-context-menu)
-* [Customize file menu](./user-interface-customization/customize-filemenu)
-* [theming-and-styling](./user-interface-customization/theming-and-styling)
+* [Cell templates](./user-interface-customization/custom-cell-templates)
+* [Context menu customization](./user-interface-customization/customize-context-menu)
+* [File menu customization](./user-interface-customization/customize-filemenu)
+* [Theming-and-styling](./user-interface-customization/theming-and-styling)

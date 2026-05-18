@@ -11,19 +11,13 @@ documentation: ug
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are:
 
-- Number Formatting
-- Text Formatting
-- Cell Formatting
+* [Number Formatting](./number-formatting)
+* [Text & Cell Formatting](./text-cell-formatting)
+* [Conditional Formatting](./conditional-formatting)
 
 To get started quickly with Formatting, you can check this video:
 
 {% youtube "https://www.youtube.com/watch?v=AyHLgzNq6_w" %}
-
-Below are the topic pages for Formatting. Select a topic to view details and examples:
-
-- [Number Formatting](./number-formatting)
-- [Text & Cell Formatting](./text-cell-formatting)
-- [Conditional Formatting](./conditional-formatting)
 
 ## Note
 

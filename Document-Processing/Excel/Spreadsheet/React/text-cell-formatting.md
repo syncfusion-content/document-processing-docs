@@ -34,7 +34,11 @@ To highlight cell or range of cells from whole workbook you can apply background
 
 ### Borders
 
-You can add borders around a cell or range of cells to define a section of worksheet or a table. The different types of border options available in the spreadsheet are,
+The Syncfusion React Spreadsheet component allows you to apply borders to a cell or a range of cells. Borders help you separate sections, highlight data, or format tables clearly in your worksheet. You can apply borders in different styles, sizes, and colors based on your needs.
+
+#### Border Types
+
+The Spreadsheet supports many types of borders. Each type adds a border to a specific side or area of the selected cells:
 
 | Types | Actions |
 |-------|---------|
@@ -49,7 +53,9 @@ You can add borders around a cell or range of cells to define a section of works
 | **Outside Border** | Specifies the outside border of a range of cells.|
 | **Inside Border** | Specifies the inside border of a range of cells.|
 
-You can also change the color, size, and style of the border. The size and style supported in the spreadsheet are,
+#### Customize Border Colors and Styles
+
+You can also change how the border looks by adjusting its size and style. The Spreadsheet supports the following options:
 
 | Types | Actions |
 |-------|---------|
@@ -62,28 +68,35 @@ You can also change the color, size, and style of the border. The size and style
 | **Double** | Used to create the `double` border.|
 
 Borders can be applied in the following ways,
-* Using the  `border`, `borderLeft`, `borderRight`, `borderBottom` properties, you can set the desired border to each cell at initial load.
-* Using the [setBorder](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#setborder) method, you can set various border options to a cell or range of cells.
-* Selecting the border options from ribbon toolbar.
 
-The following code example shows the style formatting in text and cells of the spreadsheet.
+- Using the `border`, `borderLeft`, `borderRight`, `borderBottom` properties, you can set the desired border to each cell at initial load. The [border](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#border) property is part of  [CellStyleModel](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel) and is applied via the cell's `style` object.
+- Using the [setBorder](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#setborder) method, you can set various border options to a cell or range of cells.
+- Selecting the border options from the ribbon toolbar.
+
+The following code sample shows how to apply borders in the Spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/cellformat-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/border-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/cellformat-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/border-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/cellformat-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/border-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/cellformat-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/border-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/cellformat-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/border-cs1" %}
+
+#### Remove Borders
+
+To remove the border style on the target cells, use the UI "No Border" option in the ribbon.
+
+![Remove borders in spreadsheet](./images/spreadsheet_remove_borders.png) 
 
 ### Limitations of Formatting
 
