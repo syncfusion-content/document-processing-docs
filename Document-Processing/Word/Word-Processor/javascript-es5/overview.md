@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Overview of the JavaScript (ES5) DOCX Editor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Javascript DOCX Editor (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript DOCX Editor (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats. 
 
 ![Output of JavaScript DOCX Editor](./images/docx-editor.png)
 
