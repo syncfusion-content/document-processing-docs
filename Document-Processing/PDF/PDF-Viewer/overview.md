@@ -1,6 +1,6 @@
 ---
 title: PDF Viewer Component | Syncfusion
-description:  View, edit and print PDF files in Windows Forms, WPF, JavaScript, Angular, React, Vue, ASP.NET MVC, ASP.NET Core, Blazor, MAUI and Flutter applications without Adobe dependencies.
+description:  View, edit, and print PDF files across Windows, web, and mobile frameworks without Adobe dependencies, delivering fast, flexible integration.
 platform: document-processing
 control: general
 documentation: UG
