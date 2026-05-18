@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Blazor DOCX Editor | Syncfusion
-description: Learn about the ASP.NET Core DOCX Editor control, which enables you to create, edit, view, and print Word documents.
+description: Learn about the Blazor DOCX Editor control, which enables you to create, edit, view, and print Word documents.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
