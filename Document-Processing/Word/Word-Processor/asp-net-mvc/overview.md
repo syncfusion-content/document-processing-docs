@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview in ASP.NET MVC Document Editor Component
-description: Learn here all about overview in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Overview of ASP.NET MVC DOCX Editor | Syncfusion
+description: Learn about the ASP.NET MVC DOCX Editor control, which enables you to create, edit, view, and print Word documents.
 platform: document-processing
 control: Index
 documentation: ug
