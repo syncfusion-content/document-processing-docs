@@ -8,7 +8,7 @@ documentation: ug
 
 # Getting Started with Blazor DOCX Editor in Web App
 
-Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application.
+Syncfusion® Blazor DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application.
 
 ## Steps to create a Blazor Web App DOCX Editor
 This section explains about how to include the [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
@@ -30,8 +30,8 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Nuget packages
 
 To add **Blazor Document Editor** component in the application, follow the steps below.
- - open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
- - search and install the following packages
+ - Open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
+ - Search and install the following packages
     - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
     
@@ -45,8 +45,6 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DOCX Editor are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -97,8 +95,6 @@ dotnet restore
 {% endhighlight %}
 
 {% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DOCX Editor are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the complete list of packages and component details.
 
 {% endtabcontent %}
 
@@ -190,46 +186,11 @@ N> Supported render modes are `@rendermode InteractiveAuto`, `@rendermode Intera
 
 ### Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DocumentEditor component in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DocumentEditor component in your default web browser. The output will appear as follows:
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBpDiLugARSruZb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DocumentEditor](../images/blazor-document-editor.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBpDiLugARSruZb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Load an Existing document
+![Blazor DOCX Editor in Web app](../images/blazor-docx-editor.png)
 
-To load an existing document during control initialization, use the following code example, which opens a Word document. Convert it to SFDT and load in the editor.
-
-{% tabs %}
-{% highlight razor %}
-
-@using System.IO;
-@using Syncfusion.Blazor.DocumentEditor;
-
-<SfDocumentEditorContainer @ref="container" EnableToolbar=true Height="590px">
-    <DocumentEditorContainerEvents Created="OnCreated"></DocumentEditorContainerEvents>
-</SfDocumentEditorContainer>
-
-@code {
-    SfDocumentEditorContainer container;
-
-    public void OnCreated(object args)
-    {
-        string filePath = "wwwroot/data/GettingStarted.docx";
-        using (FileStream fileStream = new FileStream(filePath, System.IO.FileMode.Open, System.IO.FileAccess.Read))
-        {
-            WordDocument document = WordDocument.Load(fileStream, ImportFormatType.Docx);
-            string json = JsonSerializer.Serialize(document);
-            document.Dispose();
-            //To observe the memory go down, null out the reference of document variable.
-            document = null;
-            SfDocumentEditor editor = container.DocumentEditor;
-            editor.OpenAsync(json);
-            //To observe the memory go down, null out the reference of json variable.
-            json = null;
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
