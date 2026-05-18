@@ -89,12 +89,36 @@ Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the 
 {% tabs %}
 {% highlight C# tabtitle="~/MauiProgram.cs" %}
 
+using Microsoft.Extensions.Logging;
+using MauiBlazorWindow.Data;
 using Syncfusion.Blazor;
-    ....
 
-    builder.Services.AddSyncfusionBlazor();
+namespace MauiBlazorWindow;
 
-    ....
+public static class MauiProgram
+{
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+        builder.Services.AddMauiBlazorWebView();
+
+#if DEBUG
+        builder.Services.AddBlazorWebViewDeveloperTools();
+        builder.Logging.AddDebug();
+#endif
+
+        builder.Services.AddSingleton<WeatherForecastService>();
+        builder.Services.AddSyncfusionBlazor();
+        return builder.Build();
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,7 +157,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet comp
 {% endhighlight %}
 {% endtabs %}
 
-In the Visual Studio toolbar, click the Windows Machine to build and run the app. Ensure the run profile is set to Windows Machine before starting the app.
+In the Visual Studio toolbar, click the **Windows Machine** to build and run the app. Ensure the run profile is set to `Windows Machine` before starting the app.
 
 ![Maui Tool](images/maui-build.png)
 
