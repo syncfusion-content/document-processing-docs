@@ -31,7 +31,7 @@ keywords: Excel, SDK, view, edit, read, Spreadsheet
 
 {% doccard text="Windows Forms" link="/document-processing/excel/spreadsheet/winforms/getting-started" icon="/document-processing/excel/spreadsheet/winforms/images/WindowsForms.svg" %}
 
-{% doccard text="WPF" link="/document-processing/excel/spreadsheet/wpf/getting-started" icon="" %}
+{% doccard text="WPF" link="/document-processing/excel/spreadsheet/wpf/getting-started" icon="/document-processing/excel/spreadsheet/winforms/images/WPF.svg" %}
 
 {% enddoccards %}
 
