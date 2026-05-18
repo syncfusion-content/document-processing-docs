@@ -192,5 +192,14 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![Blazor DOCX Editor in Web app](../images/blazor-docx-editor.png)
 
-
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
+
+## See also
+
+- [Getting started in Blazor WASM app](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/server-side-application)
+- [Open a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/opening-a-document)
+- [Save a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/saving-document)
+
+
+
+
