@@ -1,5 +1,5 @@
 ---
-title: Why XlsIO Creates custom format for Negative number formats? | Syncfusion
+title: XlsIO Creates custom format for Negative number formats? | Syncfusion
 description: Thid FAQ explains why XlsIO creates custom formats instead of built-in number formats for negative numbers.
 platform: document-processing
 control: XlsIO
