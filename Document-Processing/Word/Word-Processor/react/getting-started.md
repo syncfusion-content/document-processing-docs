@@ -159,7 +159,6 @@ Add the Document Editor component and its dependent component styles available i
 
 Add the Document Editor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
 
-{% raw %}
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

@@ -131,7 +131,9 @@ import {
   `
 })
 export class App {}
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > Note: The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
