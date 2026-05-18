@@ -104,7 +104,8 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DOCX Editor are avail
 
 {% endtabcontents %}
 
-### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Services
+
+### Add import namespaces
 
 | Interactive Render Mode | Description |
 | -- | -- |
@@ -122,62 +123,25 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DocumentEditor` namespaces
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of your Blazor Web App.
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Services
 
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of the Blazor Web App.
+Register the Syncfusion® Blazor service in the **Program.cs** file of your Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
+{% highlight c# tabtitle="Program.cs" %}
 
-...
-...
+....
 using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents()
-    .AddInteractiveWebAssemblyComponents();
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
 ....
 
-{% endhighlight %}
-{% highlight c# tabtitle="Client(~/_Program.cs)" hl_lines="2 5" %}
-
-...
-using Syncfusion.Blazor;
-
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.Services.AddSyncfusionBlazor();
 
-await builder.Build().RunAsync();
-
-{% endhighlight %}
-{% endtabs %}
-
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
-
-{% tabs %}
-{% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
-
-...
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
 ....
 
 {% endhighlight %}
 {% endtabs %}
+
+N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 ### Add Themes and Script References
 
@@ -199,7 +163,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor component in the `~/Components/Pages/*.razor` file. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -208,21 +172,17 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor 
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
 
+N> Supported render modes are `@rendermode InteractiveAuto`, `@rendermode InteractiveServer`, `@rendermode InteractiveWebAssembly`. If an interactivity location as Global no need to mention render mode. Set the interactivity mode for whole sample. Check out the [Blazor Render Modes](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0) for other Render Modes.
+
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @* desired render mode define here *@
 @rendermode InteractiveAuto
 
-{% endhighlight %}
-{% endtabs %}
+@using Syncfusion.Blazor.DocumentEditor
 
-N> Supported render modes are `@rendermode InteractiveAuto`, `@rendermode InteractiveServer`, `@rendermode InteractiveWebAssembly`. If an interactivity location as Global no need to mention render mode. Set the interactivity mode for whole sample. Check out the [Blazor Render Modes](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0) for other Render Modes.
-
-{% tabs %}
-{% highlight razor %}
-
-<SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
+<SfDocumentEditorContainer EnableToolbar=true Height="590px"></SfDocumentEditorContainer>
 
 {% endhighlight %}
 {% endtabs %}
@@ -244,7 +204,7 @@ To load an existing document during control initialization, use the following co
 @using System.IO;
 @using Syncfusion.Blazor.DocumentEditor;
 
-<SfDocumentEditorContainer @ref="container" EnableToolbar=true>
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true Height="590px">
     <DocumentEditorContainerEvents Created="OnCreated"></DocumentEditorContainerEvents>
 </SfDocumentEditorContainer>
 

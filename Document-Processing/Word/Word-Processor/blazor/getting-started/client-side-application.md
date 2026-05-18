@@ -149,12 +149,12 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
+<SfDocumentEditorContainer EnableToolbar=true Height="590px"></SfDocumentEditorContainer>
 
 {% endhighlight %}
 {% endtabs %}
