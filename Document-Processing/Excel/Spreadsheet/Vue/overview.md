@@ -11,7 +11,7 @@ documentation: ug
 
 The [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) is an user interactive component to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with xlsx, xls, CSV and PDF formats.
 
-![Vue Spreadsheet Control](images/overview-banner.PNG)
+![Vue Spreadsheet Component](images/overview-banner.PNG)
 
 ## Key features
 
