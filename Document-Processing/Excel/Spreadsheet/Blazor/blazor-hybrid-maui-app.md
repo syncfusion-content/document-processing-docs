@@ -76,7 +76,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 In the **~/_Imports.razor** file, add the following namespaces:
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Spreadsheet
@@ -87,7 +87,7 @@ In the **~/_Imports.razor** file, add the following namespaces:
 Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 26" %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="3 26" %}
 
 using Microsoft.Extensions.Logging;
 using MauiBlazorWindow.Data;
@@ -127,25 +127,26 @@ public static class MauiProgram
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet in the `<head>` and the script at the end of the `<body>` in the **~wwwroot/index.html** file as shown below:
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
 </head>
 
-<body>
-    ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
-```
+{% endhighlight %}
+{% endtabs %}
+
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Spreadsheet component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet component in any Razor file. In this example, the Spreadsheet component is added to the ~/Home.razor page under the **~/Components/Pages** folder.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet component in any Razor file. In this example, the Spreadsheet component is added to the **~/Home.razor** page under the **~/Components/Pages** folder.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
