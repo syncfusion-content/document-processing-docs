@@ -148,7 +148,7 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 
 {% endtabcontents %}
 
-> **Note:** To learn more about other ways to load themes or scripts, see the [Themes topic](https://ej2.syncfusion.com/javascript/documentation/appearance/theme) and [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) documentation.
+N> To learn more about other ways to load themes or scripts, see the [Themes topic](https://ej2.syncfusion.com/javascript/documentation/appearance/theme) and [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) documentation.
 
 ## Add the Syncfusion® Spreadsheet control
 
@@ -185,7 +185,7 @@ spreadsheet.appendTo('#element');
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The [openUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#openurl) and [saveUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) properties are used to connect the Spreadsheet control to a server-side service for Excel import and export operations. For development and production use, we recommend configuring your own local or hosted service instead of relying on demo endpoints. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
+N> The [openUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#openurl) and [saveUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) properties are used to connect the Spreadsheet control to a server-side service for Excel import and export operations. For development and production use, we recommend configuring your own local or hosted service instead of relying on demo endpoints. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
 
 ## Run the application
 
