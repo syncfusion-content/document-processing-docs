@@ -9,15 +9,15 @@ documentation: ug
 
 # Getting Started with .NET MAUI Blazor Hybrid App
 
-This section explains how to create and run a .NET Multi-platform Blazor App UI (.NET MAUI with Blazor Hybrid App) using [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component.
+This section explains how to create and run a .NET MAUI Blazor Hybrid application using the [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component.
 
 ## Prerequisites
 
 To use the .NET MAUI project templates, install the Mobile development with .NET workload for Visual Studio. For installation details, see the Microsoft documentation: [Install .NET MAUI](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin).
 
-## Create a new Blazor .NET MAUI App in Visual Studio
+## Create a new Blazor MAUI App in Visual Studio
 
-Create a **.NET MAUI Blazor Hybrid App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0).
+Create a **Blazor MAUI App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet NuGet Packages
 
@@ -55,35 +55,20 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="3 26" %}
+{% highlight c# tabtitle="MauiProgram.cs" %}
 
-using Microsoft.Extensions.Logging;
-using MauiBlazorWindow.Data;
+....
 using Syncfusion.Blazor;
 
-namespace MauiBlazorWindow;
+....
 
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
     {
-        var builder = MauiApp.CreateBuilder();
-        builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-        builder.Services.AddMauiBlazorWebView();
-
-#if DEBUG
-        builder.Services.AddBlazorWebViewDeveloperTools();
-        builder.Logging.AddDebug();
-#endif
-        builder.Services.AddSingleton<WeatherForecastService>();
+        ....
         builder.Services.AddSyncfusionBlazor();
-        return builder.Build();
+        ....
     }
 }
 
@@ -128,8 +113,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet comp
 {% endhighlight %}
 {% endtabs %}
 
-N> To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save.md). For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/syncfusion-maui-blazor-spreadsheet-integration).
-
 ## Run on Windows
 
 In the Visual Studio toolbar, click the **Windows Machine** to build and run the app. Ensure the run profile is set to `Windows Machine` before starting the app.
@@ -144,11 +127,13 @@ After the application launches, the Spreadsheet renders the workbook.
 
 To run the Spreadsheet on Android using the Android emulator, follow these steps:
 
-For setup and usage, see [Android Emulator setup for .NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows).
+Refer [here]((https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows)) to install and launch Android emulator.
 
 N> If any errors occur while using the Android Emulator, see [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
 ![Blazor Spreadsheet running in the Android emulator](images/android-emulator.png)
+
+N> To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save.md). For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/syncfusion-maui-blazor-spreadsheet-integration).
 
 ## See Also
 
