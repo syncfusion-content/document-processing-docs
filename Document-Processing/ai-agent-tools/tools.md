@@ -16,8 +16,6 @@ The operational mode is determined by the manager used when initializing the too
 - [Document Managers](#document-managers) (In‑Memory Mode)
 - [Document Storage Manager](#document-storage-manager) (Storage Mode)
 
-![Syncfusion AI Agent Tools Categories](tools-categories.png)
-
 
 ## Document Managers
 
@@ -46,40 +44,153 @@ Document Storage Manager reads documents from and writes them back to storage (s
 
 ## Available Tools
 
-| Category | Tool Class | Description |
-|---|---|---|
-| **PDF** | PdfDocumentAgentTools | Core life cycle operations for PDF documents — creating, loading, exporting, and managing PDF documents in memory. |
-| | PdfOperationsAgentTools | Merge, split, reorder, and compress PDF documents. |
-| | PdfSecurityAgentTools | Encryption, decryption, permissions management, digital signing, and redaction for PDF documents. |
-| | PdfContentExtractionAgentTools | Extract text and images, search for text, and retrieve page information from PDF documents. |
-| | PdfAnnotationAgentTools | Watermarking, managing annotations, and importing/exporting form field data in PDF documents. |
-| | PdfConverterAgentTools | Convert PDF documents to PDF/A format and image files to PDF. |
-| | PdfOcrAgentTools | Perform Optical Character Recognition (OCR) on scanned or image-based PDF documents. |
-| **Word** | WordDocumentAgentTools | Core life cycle operations for Word documents — creating, loading, exporting, and managing Word documents in memory. |
-| | WordOperationsAgentTools | Merge, split, compare, clone, manage fields, and update table of contents in Word documents. |
-| | WordSecurityAgentTools | Password protection, encryption, and decryption for Word documents. |
-| | WordMailMergeAgentTools | Mail merge operations for populating Word document templates with structured data. |
-| | WordFindAndReplaceAgentTools | Text search and replacement operations within Word documents. |
-| | WordRevisionAgentTools | Inspect and manage tracked changes (revisions) in Word documents. |
-| | WordImportExportAgentTools | Import from and export Word documents to HTML, Markdown, and image formats. |
-| | WordFormFieldAgentTools | Read and write form field values in Word documents. |
-| | WordBookmarkAgentTools | Manage bookmarks and bookmark content within Word documents. |
-| **Excel** | ExcelWorkbookAgentTools | Core life cycle operations for Excel workbooks — creating, loading, exporting, and managing workbooks in memory. |
-| | ExcelWorksheetAgentTools | Create, manage, and populate worksheets within Excel workbooks. |
-| | ExcelSecurityAgentTools | Encryption, decryption, and protection management for Excel workbooks and worksheets. |
-| | ExcelFormulaAgentTools | Apply and manage formulas within Excel workbooks. |
-| | ExcelChartAgentTools | Create, modify, and remove charts in Excel workbooks. |
-| | ExcelConditionalFormattingAgentTools | Add or remove conditional formatting rules in Excel workbooks. |
-| | ExcelConversionAgentTools | Convert worksheets and charts to image, HTML, JSON, and other file formats. |
-| | ExcelDataValidationAgentTools | Add dropdown, number, date, time, text length, and custom validation rules to Excel workbooks. |
-| | ExcelPivotTableAgentTools | Create and edit pivot tables in Excel workbooks. |
-| **PowerPoint** | PresentationDocumentAgentTools | Core life cycle operations for PowerPoint presentations — creating, loading, exporting, and managing presentations in memory. |
-| | PresentationOperationsAgentTools | Merge, split, and export slides as images from PowerPoint presentations. |
-| | PresentationSecurityAgentTools | Password protection and encryption management for PowerPoint presentations. |
-| | PresentationContentAgentTools | Read text content and metadata from PowerPoint presentations. |
-| | PresentationFindAndReplaceAgentTools | Text search and replacement across all slides in a PowerPoint presentation. |
-| **Conversion** | OfficeToPdfAgentTools | Convert Word, Excel, and PowerPoint documents to PDF format. |
-| **Data Extraction** | DataExtractionAgentTools | AI-powered structured data extraction from PDF documents and images, returning results as JSON. |
+![Syncfusion AI Agent Tools Categories](tools-categories.png)
+
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Tool Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="7"><strong>PDF</strong></td>
+<td>PdfDocumentAgentTools</td>
+<td>Core life cycle operations for PDF documents — creating, loading, exporting, and managing PDF documents in memory.</td>
+</tr>
+<tr>
+<td>PdfOperationsAgentTools</td>
+<td>Merge, split, reorder, and compress PDF documents.</td>
+</tr>
+<tr>
+<td>PdfSecurityAgentTools</td>
+<td>Encryption, decryption, permissions management, digital signing, and redaction for PDF documents.</td>
+</tr>
+<tr>
+<td>PdfContentExtractionAgentTools</td>
+<td>Extract text and images, search for text, and retrieve page information from PDF documents.</td>
+</tr>
+<tr>
+<td>PdfAnnotationAgentTools</td>
+<td>Watermarking, managing annotations, and importing/exporting form field data in PDF documents.</td>
+</tr>
+<tr>
+<td>PdfConverterAgentTools</td>
+<td>Convert PDF documents to PDF/A format and image files to PDF.</td>
+</tr>
+<tr>
+<td>PdfOcrAgentTools</td>
+<td>Perform Optical Character Recognition (OCR) on scanned or image-based PDF documents.</td>
+</tr>
+<tr>
+<td rowspan="9"><strong>Word</strong></td>
+<td>WordDocumentAgentTools</td>
+<td>Core life cycle operations for Word documents — creating, loading, exporting, and managing Word documents in memory.</td>
+</tr>
+<tr>
+<td>WordOperationsAgentTools</td>
+<td>Merge, split, compare, clone, manage fields, and update table of contents in Word documents.</td>
+</tr>
+<tr>
+<td>WordSecurityAgentTools</td>
+<td>Password protection, encryption, and decryption for Word documents.</td>
+</tr>
+<tr>
+<td>WordMailMergeAgentTools</td>
+<td>Mail merge operations for populating Word document templates with structured data.</td>
+</tr>
+<tr>
+<td>WordFindAndReplaceAgentTools</td>
+<td>Text search and replacement operations within Word documents.</td>
+</tr>
+<tr>
+<td>WordRevisionAgentTools</td>
+<td>Inspect and manage tracked changes (revisions) in Word documents.</td>
+</tr>
+<tr>
+<td>WordImportExportAgentTools</td>
+<td>Import from and export Word documents to HTML, Markdown, and image formats.</td>
+</tr>
+<tr>
+<td>WordFormFieldAgentTools</td>
+<td>Read and write form field values in Word documents.</td>
+</tr>
+<tr>
+<td>WordBookmarkAgentTools</td>
+<td>Manage bookmarks and bookmark content within Word documents.</td>
+</tr>
+<tr>
+<td rowspan="9"><strong>Excel</strong></td>
+<td>ExcelWorkbookAgentTools</td>
+<td>Core life cycle operations for Excel workbooks — creating, loading, exporting, and managing workbooks in memory.</td>
+</tr>
+<tr>
+<td>ExcelWorksheetAgentTools</td>
+<td>Create, manage, and populate worksheets within Excel workbooks.</td>
+</tr>
+<tr>
+<td>ExcelSecurityAgentTools</td>
+<td>Encryption, decryption, and protection management for Excel workbooks and worksheets.</td>
+</tr>
+<tr>
+<td>ExcelFormulaAgentTools</td>
+<td>Apply and manage formulas within Excel workbooks.</td>
+</tr>
+<tr>
+<td>ExcelChartAgentTools</td>
+<td>Create, modify, and remove charts in Excel workbooks.</td>
+</tr>
+<tr>
+<td>ExcelConditionalFormattingAgentTools</td>
+<td>Add or remove conditional formatting rules in Excel workbooks.</td>
+</tr>
+<tr>
+<td>ExcelConversionAgentTools</td>
+<td>Convert worksheets and charts to image, HTML, JSON, and other file formats.</td>
+</tr>
+<tr>
+<td>ExcelDataValidationAgentTools</td>
+<td>Add dropdown, number, date, time, text length, and custom validation rules to Excel workbooks.</td>
+</tr>
+<tr>
+<td>ExcelPivotTableAgentTools</td>
+<td>Create and edit pivot tables in Excel workbooks.</td>
+</tr>
+<tr>
+<td rowspan="5"><strong>PowerPoint</strong></td>
+<td>PresentationDocumentAgentTools</td>
+<td>Core life cycle operations for PowerPoint presentations — creating, loading, exporting, and managing presentations in memory.</td>
+</tr>
+<tr>
+<td>PresentationOperationsAgentTools</td>
+<td>Merge, split, and export slides as images from PowerPoint presentations.</td>
+</tr>
+<tr>
+<td>PresentationSecurityAgentTools</td>
+<td>Password protection and encryption management for PowerPoint presentations.</td>
+</tr>
+<tr>
+<td>PresentationContentAgentTools</td>
+<td>Read text content and metadata from PowerPoint presentations.</td>
+</tr>
+<tr>
+<td>PresentationFindAndReplaceAgentTools</td>
+<td>Text search and replacement across all slides in a PowerPoint presentation.</td>
+</tr>
+<tr>
+<td><strong>Conversion</strong></td>
+<td>OfficeToPdfAgentTools</td>
+<td>Convert Word, Excel, and PowerPoint documents to PDF format.</td>
+</tr>
+<tr>
+<td><strong>Data Extraction</strong></td>
+<td>DataExtractionAgentTools</td>
+<td>AI-powered structured data extraction from PDF documents and images, returning results as JSON.</td>
+</tr>
+</tbody>
+</table>
 
 
 ## See Also
