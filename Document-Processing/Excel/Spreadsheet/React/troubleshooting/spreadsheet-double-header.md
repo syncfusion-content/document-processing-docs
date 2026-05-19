@@ -9,38 +9,31 @@ documentation: ug
 
 # Issue
 
-In some scenarios, the Spreadsheet header appears twice or is rendered below the data instead of at the top.
-
-## Cause
-
-The double header issue in the Spreadsheet component can occur when multiple refresh actions are triggered, such as calling `refresh()` method before a previous render or sheet refresh has completed. The below image show double header rendered issue in spreadsheet:
-## Example image
+In some scenarios, the Spreadsheet header appears twice or is rendered below the data instead of at the top. The issue in the Spreadsheet component can occur when multiple refresh actions are triggered, such as calling `refresh()` action before a previous render or sheet refresh has completed. The below image show double header rendered issue in spreadsheet:
 
 ![Double header example](../images/image.png)
 
+Cause: The double header can appear when a `refresh()` or `resize()` is triggered before a previous render or sheet refresh completes (for example, overlapping programmatic refreshes or visibility changes), causing the header to be rendered again in the wrong position.
 
 ## Troubleshooting checklist (in order)
 
+Follow these steps in order to diagnose and fix the double-header issue:
 
-1. **Check for multiple refresh or resize actions**: Have you triggered multiple `refresh()` or `resize()` actions? If so, kindly check details regarding where you have used them along with relevant code snippets.
+1. **Ensure only one refresh/resize at a time:** Ensure only one `refresh()` or `resize()` action is triggered at a tim before the previous render completes.
 
-2. **Check the complete Spreadsheet rendering code**: Provide the complete Spreadsheet rendering code snippet along with any customization code so we can inspect render timing and event usage.
+2. **Avoid refresh in rapid UI updates:** Do not call `refresh()` inside rapid UI updates, tight loops, or multiple event handlers—debounce or throttle these calls where appropriate.
 
-3. **Verify Excel import customizations**: If this occurs during Excel import, check any import customization code and share a sample Excel file (dummy data) that reproduces the issue.
+3. **Use lifecycle events carefully:** Use lifecycle events (`created`, `dataBound`, etc.) without redundant `refresh()` or `resize()` calls.
 
-4. **Check DOM rendering during tab switching**: We suspect the reported issue may occur when the Spreadsheet DOM content is not fully rendered while switching tabs or visibility changes. Provide rendering code and package version details.
-
-5. **Test with the latest version**: We fixed many refresh-related bugs in recent releases. Confirm whether the issue persists on latest version or newer.
-
-6. **Check custom event handlers**: Verify custom handlers (`sheetChanged`, `dataBound`, `created`, `beforeSave`, etc.) that may trigger extra refreshes.
+4. **Confirm package version:** Confirm the Spreadsheet package version you are using latest version.
 
 
-## Example scenario
+5. **Initialization & mounts:** Ensure the Spreadsheet component is initialized only once and that no duplicate mounts occur in your application.
 
-If you have customized refresh behavior or are switching between tabs/sheets frequently, ensure that:
+6. **Frozen panes / merged cells:** Verify frozen panes, hidden rows, or merged cells that could affect header rendering or position.
 
-- Each refresh action is completed before triggering another one
-- The DOM is fully rendered before performing subsequent operations
+7. **CSS/layout inspection:** Inspect CSS/layout (positioning, `z-index`, transforms) that may visually duplicate or misplace the header.
+
 
 ## See Also
 
