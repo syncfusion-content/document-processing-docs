@@ -13,7 +13,7 @@ Sometimes, when exporting the Spreadsheet with a large dataset, an `Entity too l
 
 ## Solutions
 
-To resolve this, configure your local Web API backend to accept larger request bodies. Add the following settings to increase the allowed request size.
+To resolve this, configure your local Web API backend to accept larger request bodies. Add the following settings to increase the allowed request size:
 
 ### Step 1: Update web.config (Server-side)
 
@@ -45,12 +45,11 @@ builder.Services.Configure<FormOptions>(options =>
 });
 ```
 
-Additionally, we recommend setting the `isFullPost` property to `false` in the `beforeSave` event when exporting large Excel files. When `isFullPost` is `false`, the Spreadsheet sends the file data in multiple smaller requests instead of a single large POST; this reduces the chance of timeouts and lowers server memory usage during export. For more details about [isFullPost](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/performance-best-practices#handling-large-file-saves-with-isfullpost-option) documentation link.
+Additionally, we recommend setting the `isFullPost` property to `false` in the `beforeSave` event when exporting large Excel files. When `isFullPost` is `false`, to mitigate Spreadsheet can lead to performance issues such as timeouts or delays, particularly due to the size and complexity during export. See the `isFullPost` [documentation]((https://help.syncfusion.com/document-processing/excel/spreadsheet/react/performance-best-practices#handling-large-file-saves-with-isfullpost-option) ) for details.
 
 ## See Also
 
-- **Performance best practices**: For additional guidance on performance best practices when working with large datasets in the Spreadsheet component, refer to the [Performance Best Practices](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/performance-best-practices) documentation.
-- **Client-side sample**: [StackBlitz Example (HTTP 413 Fix)](https://stackblitz.com/edit/ej2-react-spreadsheet-http-413)
-- **Server-side sample**: Refer to the [GitHub WebService Example](https://github.com/SyncfusionExamples/EJ2-Spreadsheet-Server) for a complete server-side implementation.
-
-> **Testing verification**: The configuration described above has been tested with large Excel files and successfully resolves the HTTP 413 error without data loss or corruption.
+* [Performance Best Practices](../performance-best-practices)
+* [Open excel files](../open-excel-files.md)
+* [Save Excel files](../save-excel-files.md)
+* [Web Service](../web-services/webservice-overview.md)
