@@ -6,8 +6,6 @@ control: AI Agent Tools
 documentation: ug
 ---
 
-# Example Use Cases
-
 ## Automated PDF Redaction Agent
 
 ### Overview
@@ -19,7 +17,7 @@ This example demonstrates an **Automated PDF Redaction Agent** that uses the [Mi
 | Requirement | Details |
 |---|---|
 | .NET SDK | .NET 8.0, 9.0, or 10.0 |
-| AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI — generate a key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys). |
+| AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI — generate a key at [platform.openai.com/api-keys](https://platform.openai.com/login)|
 | NuGet Packages | [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
 ### How it works
