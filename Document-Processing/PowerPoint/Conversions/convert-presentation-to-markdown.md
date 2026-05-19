@@ -116,4 +116,3 @@ async void Save(MemoryStream streams, string filename)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Presentation-Examples/tree/main/Presentation-to-Markdown-conversion/Convert-Presentation-to-Markdown).

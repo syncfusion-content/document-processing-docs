@@ -1,6 +1,6 @@
 ---
-title: Convert Markdown to PowerPoint Presentation document in C# | Presentation | Syncfusion
-description: Convert Markdown to PowerPoint Presentation document in C# using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft PowerPoint or interop dependencies
+title: Convert Markdown to Presentation in C# | Presentation | Syncfusion
+description: Convert Markdown to Presentation document in C# using Syncfusion<sup>&reg;</sup> .NET PowerPoint library without Microsoft PowerPoint or interop dependencies
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -62,8 +62,6 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Presentation-Examples/tree/main/Markdown-to-Presentation-conversion/Convert-Markdown-to-Presentation).
 
 T> You can also save the markdown file as [HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html), [PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf), [Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image), and [Word](https://help.syncfusion.com/document-processing/word/conversions/markdown-to-word-conversion)
 
