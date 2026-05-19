@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overview in Angular Document editor component | Syncfusion
-description: Learn here all about Index in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Overview of Angular DOCX Editor | Syncfusion
+description: Learn about the Angular DOCX Editor control, which enables you to create, edit, view, and print Word documents.
 platform: document-processing
 control: Index 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview
+# Overview of the Angular DOCX Editor
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats. 
 

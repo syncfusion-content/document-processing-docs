@@ -1,18 +1,19 @@
 ---
 layout: post
-title: Overview of JavaScript (ES6) Document editor control | Syncfusion
-description: Document editor for JavaScript (ES6) is used to create, edit, view and print word documents.
+title: Overview of JavaScript (ES6) DOCX Editor | Syncfusion
+description: Learn about the JavaScript (ES6) DOCX Editor control, which enables you to create, edit, view, and print Word documents.
 platform: document-processing
 control: Index 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview
+# Overview of the JavaScript (ES6) DOCX Editor
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats. 
 
 ![Overview image of TypeScript Document Editor](./images/Typescript-docx-editor-overview-image.png)
+
 
 ## Key Features
 
