@@ -13,8 +13,6 @@ In some scenarios, the Spreadsheet header appears twice or is rendered below the
 
 ![Double header example](../images/image.png)
 
-Cause: The double header can appear when a `refresh()` or `resize()` is triggered before a previous render or sheet refresh completes (for example, overlapping programmatic refreshes or visibility changes), causing the header to be rendered again in the wrong position.
-
 ## Troubleshooting checklist (in order)
 
 Follow these steps in order to diagnose and fix the double-header issue:
