@@ -15,21 +15,36 @@ The PDF Viewer control supports viewing, reviewing, and printing PDF files in th
 
 ## Key features
 
-* **Open PDF files**: Opens PDF files, both normal and protected, with AES and RC4 encryption algorithms (password-protected). Open PDF files from the stream, file path, and PdfLoadedDocument objects.
-* **Instant loading**: Loads the PDF files with thousands of pages instantly.
-* **Less runtime memory**: On-demand loading, and virtualization mean the control holds only the minimum required pages at runtime to reduce the memory consumption.
-* **Virtualized pages**: Renders pages on demand to help reduce the initial load time when working with large documents.
-* **Printing**: Supports both the silent printing as well as printing using the print dialog.
-* **Select and copy text**: Allows you to select and copy text from the PDF files.
-* **Search text**: Allows you to locate a word or phrase easily in a PDF file.
-* **Annotations**: Allows you to review and annotate the PDF files using a rich set of annotating tools.
-* **Navigations**: Supports many types of internal and external navigations such as bookmarks, thumbnails, hyperlinks, and table of contents navigations.
-* **Form Filling**: Provides the ability to fill, edit, flatten, and save AcroForms fields in the PDF files.
-* **Organize pages**: Allows you to rotate, rearrange, and delete pages in a PDF file using a miniature preview of the PDF pages.
-* **Redaction**: Allows you to remove the sensitive text and graphics from a PDF file.
-* **PDF Layers**: Supports displaying the layer contents (adding, modifying, or deleting annotations) over the layers and adding, modifying, or deleting layers in a PDF file.
-* **Exporting**: Supports exporting the PDF pages to image and exporting form data.
-* **Right to left (RTL)**: Supports RTL direction rendering for users working in right-to-left languages.
+* Accurate, reliable rendering of PDF pages.
+* [Open PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/viewing-pdf-files)
+* [Saving PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/saving-the-pdf-document)
+* [Export pdf pages](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/exporting-pdf) and [Pdf coordinates](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-pdf-coordinates)
+* Easy page navigation with:
+    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-thumbnail-navigation)
+    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/bookmark-navigation)
+	* [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/navigating-through-the-pages)
+    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-hyperlinks)
+    * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/toc-navigation)
+* Core interactions:
+    * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/magnifying-pdf-documents) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/interaction-modes#panning-mode)
+    * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/searching-text)
+    * [Text selection and copy](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/select-and-copy-text)
+	* [Text extraction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/extract-text-from-pdf)
+* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/printing-pdf-files) PDF files.
+* Annotate PDFs with:
+    * [Highlight](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-annotations/highlight-annotation), [underline](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-annotations/underline-annotation), [strikethrough](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-annotations/strikethrough-annotation), [squiggly](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-annotations/squiggly-annotation),[text annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-annotations/text-annotation) and [text callout](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-annotations/text-callout-annotation)
+    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-annotations/shape-annotations): rectangle, circle, polygon, polyline, line, and arrow
+    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-annotations/stamp-annotation): built-in and custom stamps
+    * [Redaction annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/redaction)
+    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-annotations/working-with-annotation-comments) 
+	* [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-annotations/sticky-note-annotation) and [Export import annotation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-annotations/export-and-import-annotations)
+* [Organize pages](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/organize-pages)
+* [Pdf layers](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-pdf-layers)
+* [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/forms/overview)
+* [Customize contextmenu](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/customizing-context-menu)
+* [Localization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/localization)
+* [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/handwritten-signature)
+* Right to left (RTL)
 
 
 N> You can refer to our [WPF PDF Viewer](https://www.syncfusion.com/wpf-controls/pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [WPF PDF Viewer example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the pdfviewer.
