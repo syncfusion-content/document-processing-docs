@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-## Cell Styling and Text Formatting
+# Cell Styling and Text Formatting
 
 Text and cell formatting improves the appearance of your spreadsheet and helps highlight specific cells or ranges. You can apply formats such as font size, font family, font color, text alignment, borders, and more. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowcellformatting) property to enable or disable text and cell formatting in the Spreadsheet.  
 
