@@ -56,7 +56,6 @@ Using one of the above commands will prompt you to configure additional settings
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-
 ? Would you like to use the recommended Next.js defaults?
 >   Yes, use recommended defaults - TypeScript, ESLint, Tailwind CSS, App Router
     No, reuse previous settings
