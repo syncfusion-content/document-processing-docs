@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Vue Standalone PDF Viewer component | Syncfusion
-description: Checkout and learn about Getting started with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
+description: Learn about Getting started with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -136,16 +136,12 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
   },
 
     data () {
-      return {
-        <!--
-          Specifies the location of the PDFium dependency files required
-          for rendering and processing PDFs in the PDF Viewer.
-         -->
+       return {
+        // Specifies the location of the PDFium dependency files required
+        // for rendering and processing PDFs in the PDF Viewer.
         resourceUrl:'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
-        <!--
-          Defines the source of the PDF to load in the PDF Viewer.
-          Accepts either a public URL or a Base64-encoded PDF string.
-        -->  
+        // Defines the source of the PDF to load in the PDF Viewer.
+        // Accepts either a public URL or a Base64-encoded PDF string.
         documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       };
     },
