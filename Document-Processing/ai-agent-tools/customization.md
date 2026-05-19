@@ -14,8 +14,6 @@ The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packag
 
 ## Creating a Custom AI Agent Tool Class
 
-Follow these steps to enable new document operations to the [AI agent tool library](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools).
-
 **Step 1: Clone the repository**
 
 ```bash
@@ -23,114 +21,38 @@ git clone https://github.com/syncfusion/document-sdk-ai-agent-tools.git
 cd Document-SDK-AI-Agent-Tools
 ```
 
-**Step 2: Create a Custom AI Agent Tool by Inheriting AgentToolBase**
+**Step 2: Create the tool class**
 
-Open the Syncfusion.DocumentSDK.AI.AgentTools library project. Then, create a new class inside the Tools that inherits from `AgentToolBase` (in the `Syncfusion.AI.AgentTools.Core` namespace) and accepts a document manager through its constructor:
-
-```csharp
-using Syncfusion.AI.AgentTools.Core;
-using Syncfusion.DocIO.DLS;
-
-
-namespace Syncfusion.AI.AgentTools.Word
-{
-    public class WordWatermarkAgentTools : AgentToolBase<WordDocument>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WordWatermarkAgentTools"/> class (Mode 1 — InMemory).
-        /// </summary>
-        /// <param name="manager">The document manager for managing Word documents.</param>
-        public WordWatermarkAgentTools(WordDocumentManager manager)
-            : base(manager, DocumentType.Word) { }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WordWatermarkAgentTools"/> class (Mode 2 — DocumentStorage).
-        /// </summary>
-        /// <param name="manager">The document storage manager.</param>
-        public WordWatermarkAgentTools(DocumentStorageManager manager)
-            : base(manager, DocumentType.Word) { }
-    }
-}
-```
-
-**Step 3: Add Tool Methods with [Tool]**
-
-Add `public` instance methods and decorate each one with `[Tool]`, providing a name and a description that the AI agent will use to understand when to call it:
-
-```csharp
-[Tool(
-    Name = "AddTextWatermark",
-    Description = "Adds a text watermark to the specified Word document.")]
-public AgentToolResult AddTextWatermark(...)
-{
-    // implementation
-}
-```
-
-**Step 4: Annotate Parameters with [ToolParameter]**
-
-Decorate each method parameter with `[ToolParameter]` to give the AI a natural-language description of what value to pass:
-
-```csharp
-public AgentToolResult AddTextWatermark(
-        [ToolParameter(Description = "The document ID (InMemory mode) or input file path (DocumentStorage mode)")]
-        string documentIdOrFilePath,
-        [ToolParameter(Description = "The watermark text to display (e.g., 'DRAFT', 'CONFIDENTIAL').")]
-        string watermarkText,
-        [ToolParameter(Description = "Output file path for saving the result (DocumentStorage mode only).")]
-        string? outputFilePath = null)
-```
-
-**Step 5: Return AgentToolResult**
-
-All tool methods must return `AgentToolResult`. Use the static factory methods to signal success or failure:
-
-```csharp
-// Success
-return AgentToolResult.Ok("Operation completed successfully.");
-
-// Failure
-return AgentToolResult.Fail("Reason the operation failed.");
-```
-
-**Example**
+Open the `Syncfusion.DocumentSDK.AI.AgentTools` library project. Create a new class inside the `Tools` folder. The example below adds a watermark tool for Word documents:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
 using Syncfusion.DocIO.DLS;
 
-
 namespace Syncfusion.AI.AgentTools.Word
 {
-    /// <summary>
-    /// Provides agent tools for managing watermarks in Word documents.
-    /// Supports both InMemory and DocumentStorage modes.
-    /// </summary>
+    // Step: Inherit AgentToolBase<TDocument> and accept a manager in each constructor
     public class WordWatermarkAgentTools : AgentToolBase<WordDocument>
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WordWatermarkAgentTools"/> class (Mode 1 — InMemory).
-        /// </summary>
-        /// <param name="manager">The document manager for managing Word documents.</param>
+        // In-Memory mode constructor
         public WordWatermarkAgentTools(WordDocumentManager manager)
             : base(manager, DocumentType.Word) { }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WordWatermarkAgentTools"/> class (Mode 2 — DocumentStorage).
-        /// </summary>
-        /// <param name="manager">The document storage manager.</param>
+        // Storage mode constructor
         public WordWatermarkAgentTools(DocumentStorageManager manager)
             : base(manager, DocumentType.Word) { }
 
+        // Step: Decorate each method with [Tool] — name and description guide the AI
         [Tool(
             Name = "AddTextWatermark",
-            Description = "Adds a text watermark to the specified Word document. documentIdOrFilePath: The document ID (InMemory mode) or input file path (DocumentStorage mode).")]
+            Description = "Adds a text watermark to the specified Word document.")]
         public AgentToolResult AddTextWatermark(
-            [ToolParameter(Description = "The document ID (InMemory mode) or input file path (DocumentStorage mode)")]
+            // Step: Decorate each parameter with [ToolParameter] for natural-language hints
+            [ToolParameter(Description = "The document ID (InMemory mode) or input file path (Storage mode)")]
             string documentIdOrFilePath,
             [ToolParameter(Description = "The watermark text to display (e.g., 'DRAFT', 'CONFIDENTIAL').")]
             string watermarkText,
-            [ToolParameter(Description = "Output file path for saving the result (DocumentStorage mode only).")]
+            [ToolParameter(Description = "Output file path for saving the result (Storage mode only).")]
             string? outputFilePath = null)
         {
             try
@@ -140,116 +62,69 @@ namespace Syncfusion.AI.AgentTools.Word
                     return AgentToolResult.Fail($"Document not found: {documentIdOrFilePath}");
 
                 TextWatermark watermark = new TextWatermark(watermarkText, "", 250, 100);
-                watermark.Color = Syncfusion.Drawing.Color.LightGray;
+                watermark.Color  = Syncfusion.Drawing.Color.LightGray;
                 watermark.Layout = WatermarkLayout.Diagonal;
                 document.Watermark = watermark;
 
-                // ── Save ────────────────────────────────────────────────────────
                 if (outputFilePath == null && Mode == DocumentManagerMode.DocumentStorage)
                     outputFilePath = "output_watermark_added.docx";
+
                 string outputKey = outputFilePath;
                 SaveDocument(outputKey, document);
-                if (Mode == DocumentManagerMode.InMemory)
-                    outputKey = documentIdOrFilePath; // InMemory mode always updates the same document ID
 
-                return AgentToolResult.Ok(
-                    $"Watermark '{watermarkText}' applied to document '{outputKey}'.");
+                if (Mode == DocumentManagerMode.InMemory)
+                    outputKey = documentIdOrFilePath;
+
+                // Step: Return AgentToolResult.Ok() on success, AgentToolResult.Fail() on error
+                return AgentToolResult.Ok($"Watermark '{watermarkText}' applied to document '{outputKey}'.");
             }
             catch (Exception ex)
             {
                 return AgentToolResult.Fail($"Failed to add watermark: {ex.Message}");
             }
         }
-
-        [Tool(
-            Name = "RemoveWatermark",
-            Description = "Removes the watermark from the specified Word document. documentIdOrFilePath: The document ID (InMemory mode) or input file path (DocumentStorage mode).")]
-        public AgentToolResult RemoveWatermark(
-            [ToolParameter(Description = "The document ID (InMemory mode) or input file path (DocumentStorage mode)")]
-            string documentIdOrFilePath,
-            [ToolParameter(Description = "Output file path for saving the result (DocumentStorage mode only).")]
-            string? outputFilePath = null)
-        {
-            try
-            {
-                var document = OpenDocument(documentIdOrFilePath);
-                if (document == null)
-                    return AgentToolResult.Fail($"Document not found: {documentIdOrFilePath}");
-
-                document.Watermark = null;
-
-                // ── Save ────────────────────────────────────────────────────────
-                if (outputFilePath == null && Mode == DocumentManagerMode.DocumentStorage)
-                    outputFilePath = "output_watermark_removed.docx";
-                string outputKey = outputFilePath;
-                SaveDocument(outputKey, document);
-                if (Mode == DocumentManagerMode.InMemory)
-                    outputKey = documentIdOrFilePath; // InMemory mode always updates the same document ID
-
-                return AgentToolResult.Ok($"Watermark removed from document '{outputKey}'.");
-            }
-            catch (Exception ex)
-            {
-                return AgentToolResult.Fail($"Failed to remove watermark: {ex.Message}");
-            }
-        }
     }
 }
 ```
 
-
 ## Registering Custom Tools with the AI Agent
 
-Once your custom tool class is created, build the agent tool library, add the required DLL or project dependency to your host application, and then register it alongside the built-in tools.
+Build the agent tool library, add the DLL or project reference to your host application, then register your custom tool alongside the built-in tools.
 
-Documents can be handled using either in‑memory Mode or Storage Mode during AI agent execution. In in‑memory Mode, documents are loaded into memory and shared across tool calls. In Storage Mode, documents are loaded per tool call from external storage and must be explicitly saved to persist changes.
-
-**Step 1: Registering a Custom Tool with the Syncfusion AI Agent Tools**
+**Step 1: Instantiate and collect tools**
 
 #### In-Memory Mode
 
 ```csharp
-//Instantiate the Custom Tool Class
-var wordRepo = new WordDocumentManager(TimeSpan.FromMinutes(5));
+var wordManager = new WordDocumentManager(TimeSpan.FromMinutes(5));
 
-// Built-in tools
-var wordDocTools = new WordDocumentAgentTools(wordRepo, outputDirectory);
-
-// Your custom tool class
-var wordWatermarkTools = new WordWatermarkAgentTools(wordRepo);
-
-// Collect All Tools
-var allSyncfusionTools = new List<Syncfusion.AI.AgentTools.Core.AITool>();
-allSyncfusionTools.AddRange(wordDocTools.GetTools());
-allSyncfusionTools.AddRange(wordWatermarkTools.GetTools()); // <-- custom tools
+var allTools = new List<Syncfusion.AI.AgentTools.Core.AITool>();
+allTools.AddRange(new WordDocumentAgentTools(wordManager, outputDirectory).GetTools());
+allTools.AddRange(new WordWatermarkAgentTools(wordManager).GetTools()); // custom tools
 ```
 
 #### Storage Mode
 
 ```csharp
-var storageManager = new DocumentStorageManager(BlobStorage);
+var storageManager = new DocumentStorageManager(storage);
 
-// Add Custom tool
-syncfusionTools.AddRange(new WordWatermarkAgentTools(storageManager).GetTools());
+allTools.AddRange(new WordWatermarkAgentTools(storageManager).GetTools());
 ```
-**Step 2: Convert to Microsoft.Extensions.AI Tools**
+
+**Step 2: Convert to Microsoft.Extensions.AI tools and build the agent**
 
 ```csharp
 using Microsoft.Extensions.AI;
 
-var msAiTools = allSyncfusionTools
+var msAiTools = allTools
     .Select(t => AIFunctionFactory.Create(t.Method, t.Instance, new AIFunctionFactoryOptions
     {
-        Name = t.Name,
+        Name        = t.Name,
         Description = t.Description
     }))
     .Cast<AITool>()
     .ToList();
-```
 
-**Step 3: Build the AI Agent**
-
-```csharp
 var agent = openAIClient.AsAIAgent(
     model: openAIModel,
     tools: msAiTools,
@@ -260,14 +135,11 @@ Your custom tool methods are now callable by the AI agent the same way as all bu
 
 ## Example Prompts
 
-Once the custom watermark tools are registered, you can interact with the AI agent using natural language. The following examples show typical prompts and the tool calls the agent will make in response.
+Once the custom watermark tools are registered, you can interact with the agent using natural language:
 
-**Add a watermark:**
-
-> *"Open the file at C:\Documents\report.docx and add a 'CONFIDENTIAL' watermark to it, then save it."*
+> *"Open the file at C:\report.docx and add a 'CONFIDENTIAL' watermark to it, then save it."*
 
 The agent will call `Word_CreateDocument` to load the file, then `Word_AddTextWatermark` with `watermarkText = "CONFIDENTIAL"`, and finally `Word_ExportDocument` to save the result.
-
 
 ## See Also
 
