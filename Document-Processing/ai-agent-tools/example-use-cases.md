@@ -107,7 +107,7 @@ This example demonstrates a **Blog Generator** that uses the [Microsoft Agent Fr
 
 ### How it works
 
-![Blog Generator pipeline](blog-generator-pipeline.png)
+
 
 At runtime the application performs the following steps:
 
@@ -150,18 +150,7 @@ var aiTools = allSyncfusionTools
 
 // Build agent with Word document rules
 AIAgent aiAgent = chatClient.AsIChatClient().AsAIAgent(
-    instructions: """
-        You are an expert technical blogger and document designer.
-        You always return only valid JSON when asked, with no markdown fences,
-        no extra commentary, and no trailing text outside the JSON object.
-
-        You also have access to Syncfusion Word document tools.
-        When asked to create a Word document:
-        1. Call CreateDocument to create a new Word document (filePath=null).
-        2. Call ImportHtml with the HTML content or file path and the documentId.
-        3. Call ExportDocument with the documentId and the output file path (format "Docx").
-        Always follow this sequence and wait for each result before proceeding.
-        """,
+    instructions: BuildSystemMessage(),
     name: "BlogGenerationAgent",
     tools: aiTools);
 ```
