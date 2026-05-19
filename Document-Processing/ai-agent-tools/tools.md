@@ -64,8 +64,8 @@ Provides core life cycle operations for PDF documents - creating, loading, expor
 | Tool | Syntax | Description |
 |---|---|---|
 | CreatePdfDocument | CreatePdfDocument(<br/>string? filePath = null,<br/>string? password = null) | Creates a new PDF document in memory or loads an existing one from a file path. Returns the documentId. |
-| GetAllPDFDocuments | GetAllPDFDocuments() | Returns all PDF document IDs currently available in memory. |
-| ExportPDFDocument | ExportPDFDocument(<br/>string documentId,<br/>string filePath) | Exports a PDF document from memory to the specified file path on the file system. |
+| GetPdfDocuments | GetPdfDocuments() | Returns all PDF document IDs currently available in memory. |
+| ExportPdfDocument | ExportPdfDocument(<br/>string documentId,<br/>string filePath) | Exports a PDF document from memory to the specified file path on the file system. |
 | RemovePdfDocument | RemovePdfDocument(<br/>string documentId) | Removes a specific PDF document from memory by its ID. |
 | SetActivePdfDocument | SetActivePdfDocument(<br/>string documentId) | Changes the active PDF document context to the specified document ID. |
 

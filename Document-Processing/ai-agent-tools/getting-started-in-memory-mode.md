@@ -168,12 +168,12 @@ private static string BuildSystemMessage(string inputDir, string outputDir) => $
     4. **Operate** — Pass the returned document ID to all subsequent tool calls.
        Never guess or hard-code IDs; always use the value from step 1.
     5. **Export/Save** — Call the matching export tool with the document ID:
-       • Word: ExportDocument | Excel: ExportWorkbook | PDF: ExportPDFDocument | PowerPoint: ExportPresentation
+       • Word: ExportDocument | Excel: ExportWorkbook | PDF: ExportPdfDocument | PowerPoint: ExportPresentation
        Always export as the final step unless explicitly told not to save.
 
     **CROSS-FORMAT CONVERSION:**
     For Office-to-PDF: Load source → call ConvertToPDF with document ID and sourceType 
-    ("Word", "Excel", "PowerPoint") → export the returned PDF document ID with ExportPDFDocument.
+    ("Word", "Excel", "PowerPoint") → export the returned PDF document ID with ExportPdfDocument.
     For Office-to-Office: Load source → export with desired format/extension (tools handle mapping).
 
     **DATA EXTRACTION:**
