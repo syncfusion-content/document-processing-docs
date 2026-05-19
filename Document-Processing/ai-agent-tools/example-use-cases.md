@@ -99,7 +99,7 @@ This example demonstrates a **Blog Generator** that uses the [Microsoft Agent Fr
 | Requirement | Details |
 |---|---|
 | .NET SDK | .NET 8.0, 9.0, or 10.0 |
-| AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI — generate a key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys). |
+| AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI — generate a key at <a href="https://platform.openai.com">platform.openai.com</a>. |
 | OpenAI Models | A text model (default `gpt-4o`) and an image model (default `gpt-image-1.5`) |
 | NuGet Packages | [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI), [OpenAI](https://www.nuget.org/packages/OpenAI) |
 
