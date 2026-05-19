@@ -9,20 +9,11 @@ documentation: ug
 
 # Troubleshoot HTTP 413 "Entity too large" error
 
-When exporting a Spreadsheet with large datasets, you may encounter the **HTTP 413 "Content too large" or "Entity too large"** error. This error occurs when an HTTP request attempts to send or receive a data payload that exceeds the server's configured size limits.
-
-## Reasons
-
-The HTTP 413 error may occur due to the following reasons:
-
-- **Server request size limit is too small** – The web server or application has a default maximum request body size that is too restrictive for large data exports.
-- **Large dataset export** – Exporting Spreadsheets with thousands of rows or complex data structures generates large HTTP payloads that exceed the default limits.
-- **Web API configuration not optimized** – The backend service (Program.cs and web.config) is not configured to handle large form submissions and multi-part data uploads.
-- **No isFullPost optimization** – The client-side export is not optimized, sending the entire dataset in a single request instead of chunked or incremental submissions.
+Sometimes, when exporting the Spreadsheet with a large dataset, an `Entity too large` issue may occur. This is related to an HTTP request attempting to receive a large amount of data. To resolve this, configure your server to handle larger data transfers.
 
 ## Solutions
 
-To resolve this issue, configure your server to handle larger data transfers and optimize the client-side export behavior.
+To resolve this, configure your local Web API backend to accept larger request bodies. Add the following settings to your local Web API `web.config` and `Program.cs` to increase the allowed request size.
 
 ### Step 1: Update web.config (Server-side)
 
@@ -41,8 +32,6 @@ Add or update the `requestLimits` configuration in your WebAPI's `web.config` fi
 </configuration>
 ```
 
-> **Note:** `maxAllowedContentLength="2147483647"` sets the limit to approximately 2 GB. Adjust this value based on your specific requirements and server resources.
-
 ### Step 2: Update Program.cs (Server-side)
 
 Configure the Form Options in your `Program.cs` to handle larger form submissions:
@@ -56,19 +45,9 @@ builder.Services.Configure<FormOptions>(options =>
 });
 ```
 
-## Additional Recommendations
+Additionally, we recommend setting the `isFullPost` property to `false` in the `beforeSave` event when exporting large Excel files. When `isFullPost` is `false`, the Spreadsheet sends the file data in multiple smaller requests instead of a single large POST; this reduces the chance of timeouts and lowers server memory usage during export. For more details about [isFullPost](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/performance-best-practices#handling-large-file-saves-with-isfullpost-option) documentation link.
 
-For optimal performance when exporting larger Excel files, we recommend setting the `isFullPost` property to `false` in the `beforeSave` event. This approach reduces memory overhead during the export process:
-
-```javascript
-beforeSave: function(args) {
-    args.isFullPost = false;
-}
-```
-
-By setting `isFullPost` to `false`, the Spreadsheet sends data in multiple chunks rather than as a single request, which helps prevent timeout issues and reduces memory consumption for large exports.
-
-## For more information
+## See Also
 
 - **Performance best practices**: For additional guidance on performance best practices when working with large datasets in the Spreadsheet component, refer to the [Performance Best Practices](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/performance-best-practices) documentation.
 - **Client-side sample**: [StackBlitz Example (HTTP 413 Fix)](https://stackblitz.com/edit/ej2-react-spreadsheet-http-413)
