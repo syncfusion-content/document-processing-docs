@@ -15,7 +15,7 @@ Speed up your document automation using these example prompts for Syncfusion Doc
 
 ### PDF
 
-These prompts cover security, extraction, and manipulation of PDF documents.
+The following prompts demonstrate PDF security, text extraction, and manipulation.
 
 {% promptcards %}
 {% promptcard Find Text and Its Coordinates %}
@@ -37,7 +37,7 @@ Load the sensitive HR performance review document 'performance_review_Q4.pdf' fr
 
 ### Word
 
-These prompts automate template operations, merging, and format conversion.
+The following prompts demonstrate Word document merging, form filling, and template management.
 
 {% promptcards %}
 {% promptcard Merge Word Documents %}
@@ -62,7 +62,7 @@ Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {
 
 ### Excel
 
-These prompts handle data visualization, validation, and workbook security.
+The following prompts demonstrate Excel pivot tables, formatting, and worksheet security.
 
 {% promptcards %}
 {% promptcard Add Dropdown List for a Specific Range %}
@@ -84,7 +84,7 @@ Load a sales performance dashboard workbook ‘car_brands.xlsx’ from {InputDir
 
 ### PowerPoint
 
-These prompts automate slide assembly, encryption, and export.
+The following prompts demonstrate PowerPoint merging, text replacement, and slide security.
 
 {% promptcards %}
 {% promptcard Find and Replace Text %}
@@ -106,7 +106,7 @@ Load the investor pitch deck 'investor_pitch_Q1_2026.pptx' from {InputDir}. Get 
 
 ### Conversions
 
-These prompts convert documents between formats and apply post-conversion operations such as encryption or merging.
+The following prompts demonstrate document conversion with encryption, watermarking, and merging.
 
 {% promptcards %}
 {% promptcard Convert Word to PDF and Add Watermark %}
@@ -122,7 +122,7 @@ Convert the sales conference presentation 'sales_conference_2026.pptx' from {Inp
 
 ### Data Extraction
 
-These prompts extract structured data, tables, and form fields from documents as JSON.
+The following prompts demonstrate table, form, and JSON data extraction.
 
 {% promptcards %}
 {% promptcard Extract All Data from PDF as JSON %}

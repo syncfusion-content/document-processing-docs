@@ -6,8 +6,6 @@ control: AI Agent Tools
 documentation: ug
 ---
 
-# Example Use Cases
-
 ## Automated PDF Redaction Agent
 
 ### Overview
@@ -19,7 +17,7 @@ This example demonstrates an **Automated PDF Redaction Agent** that uses the [Mi
 | Requirement | Details |
 |---|---|
 | .NET SDK | .NET 8.0, 9.0, or 10.0 |
-| AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI — generate a key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys). |
+| AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI — generate a key at [platform.openai.com/api-keys](https://platform.openai.com/login)|
 | NuGet Packages | [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
 ### How it works
@@ -107,7 +105,7 @@ This example demonstrates a **Blog Generator** that uses the [Microsoft Agent Fr
 
 ### How it works
 
-![Blog Generator pipeline](blog-generator-pipeline.png)
+
 
 At runtime the application performs the following steps:
 
@@ -150,18 +148,7 @@ var aiTools = allSyncfusionTools
 
 // Build agent with Word document rules
 AIAgent aiAgent = chatClient.AsIChatClient().AsAIAgent(
-    instructions: """
-        You are an expert technical blogger and document designer.
-        You always return only valid JSON when asked, with no markdown fences,
-        no extra commentary, and no trailing text outside the JSON object.
-
-        You also have access to Syncfusion Word document tools.
-        When asked to create a Word document:
-        1. Call CreateDocument to create a new Word document (filePath=null).
-        2. Call ImportHtml with the HTML content or file path and the documentId.
-        3. Call ExportDocument with the documentId and the output file path (format "Docx").
-        Always follow this sequence and wait for each result before proceeding.
-        """,
+    instructions: BuildSystemMessage(),
     name: "BlogGenerationAgent",
     tools: aiTools);
 ```
