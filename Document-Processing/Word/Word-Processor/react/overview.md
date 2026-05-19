@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overview in React Document editor component | Syncfusion
-description: Learn here all about Index in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Overview of React DOCX Editor | Syncfusion
+description: Learn about the React DOCX Editor control, which enables you to create, edit, view, and print Word documents.
 control: Index 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-
+# Overview of the React DOCX Editor
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats. 
 
