@@ -47,7 +47,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [JavaScript DOCX Editor](ht
 
 * Provides intuitive UI options like context menu, [dialogs](./dialog), and [navigation pane](./find-and-replace#options-pane).
 
-* Provides a ribbon interface similar to Microsoft Word, with tab-based commands for quick and intuitive access to features. 
+* Provides a  [ribbon interface](./ribbon) similar to Microsoft Word, with tab-based commands for quick and intuitive access to features. 
 
 * [Localizes](./global-local) all the static text to any desired language.
 

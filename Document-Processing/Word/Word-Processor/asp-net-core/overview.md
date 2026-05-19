@@ -31,6 +31,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET Core DOCX Editor](
 * Provides support to perform [spell checking](../asp-net-core/spell-check) for any input text.
 * Allows user interactions like [zoom](../asp-net-core/scrolling-zooming#zooming), [scroll](../asp-net-core/scrolling-zooming), select contents through touch, mouse, and keyboard.
 * Provides intuitive UI options like context menu, [dialogs](../asp-net-core/dialog), and [navigation pane](../asp-net-core/find-and-replace#options-pane).
-* Provides a [ribbon interface](../asp-net-core/ribbon.md) similar to Microsoft Word, with tab-based commands for quick and intuitive access to features. 
+* Provides a [ribbon interface](../asp-net-core/ribbon) similar to Microsoft Word, with tab-based commands for quick and intuitive access to features. 
 * [Localizes](../asp-net-core/global-local) all the static text to any desired language.
 * Allows to create a lightweight Word viewer using module injection to view and [prints](../asp-net-core/print) Word documents.
