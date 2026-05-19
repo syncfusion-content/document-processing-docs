@@ -11,9 +11,9 @@ keywords: PDF, SDK, view, edit, read
 
 {% doccards %}
 
-{% doccard text="ASP.NET Core" link="/document-processing/pdf/pdf-viewer/asp-net-core/getting-started" icon="/document-processing/pdf/pdf-viewer/asp-net-core/images/ASP.NET-Core.svg" %}
+{% doccard text="ASP.NET Core" link="/document-processing/pdf/pdf-viewer/asp-net-core/getting-started" icon="/document-processing/pdf/pdf-viewer/asp-net-core/images/ASP.NET Core.png" %}
 
-{% doccard text="ASP.NET MVC" link="/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started" icon="/document-processing/pdf/pdf-viewer/asp-net-mvc/images/ASP.NET-MVC.svg" %}
+{% doccard text="ASP.NET MVC" link="/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started" icon="/document-processing/pdf/pdf-viewer/asp-net-mvc/images/ASP.NET MVC.png" %}
 
 {% doccard text="Angular" link="/document-processing/pdf/pdf-viewer/angular/getting-started" icon="/document-processing/pdf/pdf-viewer/angular/images/Angular.svg" %}
 
