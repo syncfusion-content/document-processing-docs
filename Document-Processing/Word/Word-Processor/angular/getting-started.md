@@ -66,7 +66,7 @@ In this guide, CSS is selected as the stylesheet format.
   JetBrains AI   [ https://www.jetbrains.com/help/junie/customize-guidelines.html   ]
 ```
 
-**Step 5:** Next, navigate to the created project folder:
+**Step 5:** Next, navigate to the created project folder
 
 ```bash
 cd documenteditor-app
