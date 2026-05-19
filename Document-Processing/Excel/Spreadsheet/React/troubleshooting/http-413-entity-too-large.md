@@ -13,7 +13,7 @@ Sometimes, when exporting the Spreadsheet with a large dataset, an `Entity too l
 
 ## Solutions
 
-To resolve this, configure your local Web API backend to accept larger request bodies. Add the following settings to your local Web API `web.config` and `Program.cs` to increase the allowed request size.
+To resolve this, configure your local Web API backend to accept larger request bodies. Add the following settings to increase the allowed request size.
 
 ### Step 1: Update web.config (Server-side)
 
