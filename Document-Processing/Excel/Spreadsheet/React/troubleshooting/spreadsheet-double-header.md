@@ -9,7 +9,7 @@ documentation: ug
 
 # Issue
 
-In some scenarios, the Spreadsheet header appears twice or is rendered below the data instead of at the top. The issue in the Spreadsheet component can occur when multiple refresh actions are triggered, such as calling `refresh()` action before a previous render or sheet refresh has completed. The below image show double header rendered issue in spreadsheet:
+In some scenarios, the Spreadsheet header appears twice or is rendered below the data instead of at the top. This issue can occur when multiple refresh actions are triggered, such as calling `refresh()` action before a previous render or sheet refresh has completed. The below image show double header rendered issue in spreadsheet:
 
 ![Double header example](../images/image.png)
 ---
