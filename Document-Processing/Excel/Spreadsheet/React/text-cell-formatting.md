@@ -32,6 +32,25 @@ To enhance the appearance of text in a cell, you can change the indentation of a
 
 To highlight cell or range of cells from whole workbook you can apply background color for a cell using [backgroundColor](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#backgroundcolor) property.
 
+The following code example shows the style formatting in text and cells of the spreadsheet.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/cellformat-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/cellformat-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/spreadsheet/react/cellformat-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/spreadsheet/react/cellformat-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/cellformat-cs1" %}
+
 ### Borders
 
 The Syncfusion React Spreadsheet component allows you to apply borders to a cell or a range of cells. Borders help you separate sections, highlight data, or format tables clearly in your worksheet. You can apply borders in different styles, sizes, and colors based on your needs.
@@ -73,7 +92,7 @@ Borders can be applied in the following ways,
 - Using the [setBorder](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#setborder) method, you can set various border options to a cell or range of cells.
 - Selecting the border options from the ribbon toolbar.
 
-The following code sample shows how to apply borders in the Spreadsheet.
+The following code sample shows how to apply different typed border, colors and styles in the Spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -98,24 +117,6 @@ To remove the border style on the target cells, use the UI "No Border" option in
 
 ![Remove borders in spreadsheet](./images/spreadsheet_remove_borders.png) 
 
-The following code example shows the style formatting in text and cells of the spreadsheet.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/cellformat-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/cellformat-cs1/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/cellformat-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/cellformat-cs1/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/cellformat-cs1" %}
 
 ### Limitations of Formatting
 

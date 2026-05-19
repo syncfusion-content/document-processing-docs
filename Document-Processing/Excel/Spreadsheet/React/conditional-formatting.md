@@ -23,7 +23,7 @@ You can apply conditional formatting by using one of the following ways,
 
 Conditional formatting has the following types in the spreadsheet,
 
-## Highlight cells rules
+## Highlight Cells Rules
 
 Highlight cells rules option in the conditional formatting enables you to highlight cells with a preset color depending on the cell's value.
 
@@ -39,7 +39,7 @@ The following preset colors can be used for formatting styles,
 >* `"RedF"` - Red Fill,
 >* `"RedT"` - Red Text.
 
-## Top bottom rules
+## Top Bottom Rules
 
 Top bottom rules option in the conditional formatting allows you to apply formatting to the cells that satisfy a statistical condition with other cells in the range.
 
