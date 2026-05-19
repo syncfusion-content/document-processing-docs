@@ -15,6 +15,8 @@ Speed up your document automation using these example prompts for Syncfusion Doc
 
 ### PDF
 
+These prompts cover security, extraction, and manipulation of PDF documents.
+
 {% promptcards %}
 {% promptcard Find Text and Its Coordinates %}
 Load the insurance policy document ‘policy_document.pdf’ from {InputDir}. Then search for all occurrences of the term ‘exclusion’ and return their exact page locations and bounding rectangle positions so our legal team can quickly audit every exclusion clause in the policy.
@@ -34,6 +36,8 @@ Load the sensitive HR performance review document 'performance_review_Q4.pdf' fr
 {% endpromptcards %}
 
 ### Word
+
+These prompts automate template operations, merging, and format conversion.
 
 {% promptcards %}
 {% promptcard Merge Word Documents %}
@@ -58,6 +62,8 @@ Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {
 
 ### Excel
 
+These prompts handle data visualization, validation, and workbook security.
+
 {% promptcards %}
 {% promptcard Add Dropdown List for a Specific Range %}
 Load a sales performance dashboard workbook ‘sales_dashboard_Q1_2026.xlsx’ from {InputDir}. Add a worksheet named ‘DataValidation’ and create the List validation in the A1:B3 range and the list names "Excel", "Presentation", "Word", "PDF". Export the workbook to {OutputDir}.
@@ -77,6 +83,8 @@ Load a sales performance dashboard workbook ‘car_brands.xlsx’ from {InputDir
 {% endpromptcards %}
 
 ### PowerPoint
+
+These prompts automate slide assembly, encryption, and export.
 
 {% promptcards %}
 {% promptcard Find and Replace Text %}
@@ -98,6 +106,8 @@ Load the investor pitch deck 'investor_pitch_Q1_2026.pptx' from {InputDir}. Get 
 
 ### Conversions
 
+These prompts convert documents between formats and apply post-conversion operations such as encryption or merging.
+
 {% promptcards %}
 {% promptcard Convert Word to PDF and Add Watermark %}
 Load the signed vendor contract 'vendor_contract_final.docx' from {InputDir}, convert it to PDF for archiving purposes, and then apply a 'ARCHIVED' watermark with 30% opacity across all pages of the resulting PDF. Export the archived PDF as 'vendor_contract_final_archived.pdf' to {OutputDir}.
@@ -111,6 +121,8 @@ Convert the sales conference presentation 'sales_conference_2026.pptx' from {Inp
 {% endpromptcards %}
 
 ### Data Extraction
+
+These prompts extract structured data, tables, and form fields from documents as JSON.
 
 {% promptcards %}
 {% promptcard Extract All Data from PDF as JSON %}
