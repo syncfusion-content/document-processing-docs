@@ -111,3 +111,13 @@ The following features have some limitations in Conditional Formatting:
 * Conditional formatting with formula support.
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
+
+## Note
+
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to learn how to present and manipulate data.
+
+## See Also
+* [Formatting Cells](./formatting)
+* [Number Formatting](./number-formatting)
+* [Text & Cell Formatting](./text-cell-formatting)
+* [Cell Range](./cell-range)

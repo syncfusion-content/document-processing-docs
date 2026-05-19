@@ -157,3 +157,14 @@ The following code example demonstrates how to configure culture-based formats f
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/globalization-cs1" %}
+
+## Note
+
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to learn how to present and manipulate data.
+
+## See Also
+
+* [Formatting Cells](./formatting)
+* [Text & Cell Formatting](./text-cell-formatting)
+* [Conditional Formatting](./conditional-formatting)
+* [Cell Range](./cell-range)

@@ -98,9 +98,38 @@ To remove the border style on the target cells, use the UI "No Border" option in
 
 ![Remove borders in spreadsheet](./images/spreadsheet_remove_borders.png) 
 
+The following code example shows the style formatting in text and cells of the spreadsheet.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/cellformat-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/cellformat-cs1/app/app.tsx %}
+{% endhighlight %}
+{% highlight js tabtitle="datasource.jsx" %}
+{% include code-snippet/spreadsheet/react/cellformat-cs1/app/datasource.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="datasource.tsx" %}
+{% include code-snippet/spreadsheet/react/cellformat-cs1/app/datasource.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/cellformat-cs1" %}
+
 ### Limitations of Formatting
 
 The following features are not supported in Formatting:
 
 * Insert row/column between the formatting applied cells.
 * Formatting support for row/column.
+
+## Note
+
+You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to learn how to present and manipulate data.
+
+## See Also
+* [Formatting Cells](./formatting)
+* [Number Formatting](./number-formatting)
+* [Conditional Formatting](./conditional-formatting)
+* [Cell Range](./cell-range)
