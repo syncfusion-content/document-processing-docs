@@ -119,7 +119,7 @@ In the Visual Studio toolbar, click the **Windows Machine** to build and run the
 
 ![Maui Tool](images/maui-build.png)
 
-After the application launches, the Spreadsheet renders the workbook.
+After the application launches, the output will appear as shown below:
 
 ![Blazor Spreadsheet](images/getting-started-maui.png)
 
@@ -127,7 +127,7 @@ After the application launches, the Spreadsheet renders the workbook.
 
 To run the Spreadsheet on Android using the Android emulator, follow these steps:
 
-Refer [here]((https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows)) to install and launch Android emulator.
+Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
 
 N> If any errors occur while using the Android Emulator, see [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
