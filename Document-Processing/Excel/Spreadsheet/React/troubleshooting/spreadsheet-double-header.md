@@ -17,7 +17,7 @@ In some scenarios, the Spreadsheet header appears twice or is rendered below the
 
 Follow these steps in order to diagnose and fix the double-header issue:
 
-1. **Ensure only one refresh/resize at a time:** Ensure only one `refresh()` or `resize()` action is triggered at a time before the previous render completes.
+1. **Ensure only one refresh/resize at a time:** Ensure only one `refresh()` or `resize()` action is triggered at a time. Avoid initiating a new render before the previous one completes.
 
 2. **Avoid refresh in rapid UI updates:** Do not call `refresh()` during frequent UI updates, loops, or multiple event triggers.
 
