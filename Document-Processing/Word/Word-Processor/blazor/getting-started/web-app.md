@@ -8,10 +8,10 @@ documentation: ug
 
 # Getting Started with Blazor DOCX Editor in Web App
 
-Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application.
+Syncfusion® Blazor DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application.
 
 ## Steps to create a Blazor Web App DOCX Editor
-This section explains about how to include the [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
+This section explains about how to include the [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -30,8 +30,8 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Nuget packages
 
 To add **Blazor Document Editor** component in the application, follow the steps below.
- - open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
- - search and install the following packages
+ - Open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
+ - Search and install the following packages
     - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
     
@@ -45,8 +45,6 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DOCX Editor are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 {% endtabcontent %}
 
@@ -98,13 +96,12 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DOCX Editor are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the complete list of packages and component details.
-
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Services
+
+### Add import namespaces
 
 | Interactive Render Mode | Description |
 | -- | -- |
@@ -122,62 +119,25 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DocumentEditor` namespaces
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of your Blazor Web App.
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Services
 
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of the Blazor Web App.
+Register the Syncfusion® Blazor service in the **Program.cs** file of your Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
+{% highlight c# tabtitle="Program.cs" %}
 
-...
-...
+....
 using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents()
-    .AddInteractiveWebAssemblyComponents();
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
 ....
 
-{% endhighlight %}
-{% highlight c# tabtitle="Client(~/_Program.cs)" hl_lines="2 5" %}
-
-...
-using Syncfusion.Blazor;
-
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.Services.AddSyncfusionBlazor();
 
-await builder.Build().RunAsync();
-
-{% endhighlight %}
-{% endtabs %}
-
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
-
-{% tabs %}
-{% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
-
-...
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
 ....
 
 {% endhighlight %}
 {% endtabs %}
+
+N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 ### Add Themes and Script References
 
@@ -199,7 +159,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor component in the `~/Components/Pages/*.razor` file. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -208,21 +168,17 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor 
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
 
+N> Supported render modes are `@rendermode InteractiveAuto`, `@rendermode InteractiveServer`, `@rendermode InteractiveWebAssembly`. If an interactivity location as Global no need to mention render mode. Set the interactivity mode for whole sample. Check out the [Blazor Render Modes](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0) for other Render Modes.
+
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @* desired render mode define here *@
 @rendermode InteractiveAuto
 
-{% endhighlight %}
-{% endtabs %}
+@using Syncfusion.Blazor.DocumentEditor
 
-N> Supported render modes are `@rendermode InteractiveAuto`, `@rendermode InteractiveServer`, `@rendermode InteractiveWebAssembly`. If an interactivity location as Global no need to mention render mode. Set the interactivity mode for whole sample. Check out the [Blazor Render Modes](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0) for other Render Modes.
-
-{% tabs %}
-{% highlight razor %}
-
-<SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
+<SfDocumentEditorContainer EnableToolbar=true Height="590px"></SfDocumentEditorContainer>
 
 {% endhighlight %}
 {% endtabs %}
@@ -230,46 +186,20 @@ N> Supported render modes are `@rendermode InteractiveAuto`, `@rendermode Intera
 
 ### Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DocumentEditor component in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DocumentEditor component in your default web browser. The output will appear as follows:
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBpDiLugARSruZb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DocumentEditor](../images/blazor-document-editor.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBpDiLugARSruZb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Load an Existing document
-
-To load an existing document during control initialization, use the following code example, which opens a Word document. Convert it to SFDT and load in the editor.
-
-{% tabs %}
-{% highlight razor %}
-
-@using System.IO;
-@using Syncfusion.Blazor.DocumentEditor;
-
-<SfDocumentEditorContainer @ref="container" EnableToolbar=true>
-    <DocumentEditorContainerEvents Created="OnCreated"></DocumentEditorContainerEvents>
-</SfDocumentEditorContainer>
-
-@code {
-    SfDocumentEditorContainer container;
-
-    public void OnCreated(object args)
-    {
-        string filePath = "wwwroot/data/GettingStarted.docx";
-        using (FileStream fileStream = new FileStream(filePath, System.IO.FileMode.Open, System.IO.FileAccess.Read))
-        {
-            WordDocument document = WordDocument.Load(fileStream, ImportFormatType.Docx);
-            string json = JsonSerializer.Serialize(document);
-            document.Dispose();
-            //To observe the memory go down, null out the reference of document variable.
-            document = null;
-            SfDocumentEditor editor = container.DocumentEditor;
-            editor.OpenAsync(json);
-            //To observe the memory go down, null out the reference of json variable.
-            json = null;
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
+![Blazor DOCX Editor in Web app](../images/blazor-docx-editor.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
+
+## See also
+
+- [Getting started in Blazor WASM app](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/client-side-application)
+- [Open a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/opening-a-document)
+- [Save a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/saving-document)
+
+
+
+
