@@ -9,7 +9,7 @@ keywords: getting started
 
 # Getting Started with WPF RichTextBox (SfRichTextBoxAdv)
 
-Syncfusion® [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a RichTextBox in a WPF application.
+Syncfusion® [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a RichTextBox in a WPF application.
 
 ## Create a RichTextBox in WPF using SfRichTextBoxAdv
 
