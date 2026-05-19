@@ -21,7 +21,7 @@ This section briefly explains how to include [ASP.NET Core DOCX Editor](https://
 
 ### Create ASP.NET Core web application with Razor pages
 
-Create a new ASP.NET Core web application using one of the following methods:
+Create a new ASP.NET Core web application using the following method:
 
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio#create-a-razor-pages-web-app)
 
