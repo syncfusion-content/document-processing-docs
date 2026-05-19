@@ -13,8 +13,6 @@ Documents are held as live objects in an in-memory dictionary. Each tool accesse
 
 The example below uses the Microsoft Agents Framework with OpenAI. The same steps apply to any [provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) that implements `IChatClient`.
 
-![In-Memory Mode integration steps](in-memory-steps.png)
-
 ## Prerequisites
 
 | Requirement | Details |

@@ -13,8 +13,6 @@ Documents are read from and written to storage (Azure Blob, S3, local disk, etc.
 
 The example below uses Azure Blob Storage. The same pattern works with any storage backend by implementing the `IDocumentStorage` interface.
 
-![Storage Mode integration steps](storage-steps.png)
-
 ## Prerequisites
 
 | Requirement | Details |
