@@ -433,10 +433,6 @@ In a PowerPoint slide, if you add a text more than a shape can hold, the text wi
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//The Essential Presentation Library does not provides support to FitTextOption in C# [Cross-platform] platforms.
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
 // Create a new PowerPoint file.
 using (IPresentation ppDoc = Presentation.Create())
 {
