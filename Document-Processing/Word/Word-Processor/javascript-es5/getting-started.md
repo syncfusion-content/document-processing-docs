@@ -124,7 +124,7 @@ documenteditorContainer.appendTo('#DocumentEditor');
 {% endhighlight %}
 {% endtabs %}
 
-> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 ### Run the application
 
@@ -213,7 +213,7 @@ The Document Editor component requires server-side interactions for the followin
 * Spell check
 * Save as file formats other than SFDT and DOCX
 
-> Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
 
