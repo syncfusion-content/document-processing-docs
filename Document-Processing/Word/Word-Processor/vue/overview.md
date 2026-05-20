@@ -49,6 +49,7 @@ The Document Editor component requires server-side interactions for the followin
 * Spell check 
 
 * Save as file formats other than SFDT and DOCX 
+ 
 
 You can deploy web APIs for server-side dependencies of Document Editor component in the following platforms.
 
