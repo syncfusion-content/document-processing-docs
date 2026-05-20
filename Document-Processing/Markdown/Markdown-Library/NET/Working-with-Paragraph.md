@@ -57,7 +57,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+A complete working sample is available on GitHub.
 
 ## Modifying an existing paragraph
 	
@@ -133,7 +133,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+A complete working sample is available on GitHub.
 
 ## Removing an existing paragraph
 	
@@ -193,7 +193,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+A complete working sample is available on GitHub.
 
 ## Applying paragraph styles
 
@@ -294,7 +294,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+A complete working sample is available on GitHub.
 
 ## Working with text
 
@@ -344,7 +344,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+A complete working sample is available on GitHub.
 
 ### Appending a line break
 
@@ -404,7 +404,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+A complete working sample is available on GitHub.
 
 ## Applying text formatting
 
@@ -536,7 +536,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+A complete working sample is available on GitHub.
 
 
 ## Working with hyperlinks
@@ -596,7 +596,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+A complete working sample is available on GitHub.
 
 ### Link with screen tip
 
@@ -652,7 +652,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+A complete working sample is available on GitHub.
 
 ### Applying formatting for the display text
 
@@ -708,4 +708,4 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+A complete working sample is available on GitHub.
