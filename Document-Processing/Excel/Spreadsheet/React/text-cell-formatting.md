@@ -20,8 +20,6 @@ You can set formats in the following ways:
 
 The Syncfusion React Spreadsheet component provides comprehensive font formatting options to customize text appearance in cells. You can apply various font styles to enhance the readability and visual hierarchy of your data.
 
-#### Font Format Options
-
 The Spreadsheet supports the following font formatting options:
 
 | Format | Description |
@@ -34,17 +32,9 @@ The Spreadsheet supports the following font formatting options:
 | **Strike-through** | Draws a line through text to indicate deleted or outdated content. |
 | **Font Color** | Specifies the color of the text. |
 
-Font formatting can be applied in the following ways:
-
-- Using the `style` property with [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontfamily), [`fontSize`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontsize), [`fontWeight`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontweight), [`fontStyle`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontstyle), [`textDecoration`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textdecoration), and [`color`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#color) properties at initial load.
-- Using the [`cellFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#cellformat) method to apply font formatting to a cell or range of cells dynamically.
-- Selecting font options from the ribbon toolbar under the Home tab.
+You can apply font formatting using [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontfamily), [`fontSize`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontsize), [`fontWeight`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontweight), [`fontStyle`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontstyle), [`textDecoration`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textdecoration), and [`color`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#color) property.
 
 ### Text Alignment
-
-The Syncfusion React Spreadsheet allows you to align text both horizontally and vertically within cells to organize and present your data effectively.
-
-#### Alignment Options
 
 You can align text in cells using the following options:
 
@@ -53,36 +43,23 @@ You can align text in cells using the following options:
 | **Horizontal Align** | Left, Center, Right | Aligns text from left to right within the cell. |
 | **Vertical Align** | Top, Middle, Bottom | Aligns text from top to bottom within the cell. |
 
-Text alignment can be applied in the following ways:
-
-- Using the [`textAlign`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/textalign) property to set horizontal alignment (left, center, right).
-- Using the [`verticalAlign`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/verticalalign) property to set vertical alignment (top, middle, bottom).
-- Using the [`cellFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#cellformat) method for dynamic alignment changes.
-- Selecting alignment options from the alignment buttons in the ribbon toolbar.
+You can align text in a cell either vertically or horizontally using the  [`textAlign`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/textalign) and [verticalAlign](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/verticalalign) property.
 
 ### Indents
 
-Indentation helps enhance the visual appearance of text in cells by adding space before the text content. This is particularly useful for creating hierarchical data layouts or improving readability.
+Indentation helps enhance the visual appearance of text in cells by adding space before the text content.
 
-#### Indent Customization
-
-You can customize cell text indentation using the following property:
+You can apply cell text indentation using the following Way:
 
 | Property | Type | Description |
 |----------|------|-------------|
 | **Text Indent** | String | Specifies the indentation of text within a cell, adding left margin to the text content. |
 
-Text indentation can be applied in the following ways:
-
-- Using the [`textIndent`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textindent) property in the cell's `style` object at initial load.
-- Using the [`cellFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#cellformat) method to apply indentation to a cell or range of cells dynamically.
-- Adjusting indent levels through the increase/decrease indent options in the ribbon toolbar.
+You can apply text indentation in a cell using the [`textIndent`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textindent) property.
 
 ### Fill Color
 
-Fill color (background color) is used to highlight cells or ranges of cells across the workbook. Applying background colors helps distinguish important data sections and improves visual organization.
-
-#### Fill Color Options
+Fill color (background color) is used to highlight cells or ranges of cells across the workbook.
 
 You can apply background colors to cells using the following approach:
 
@@ -90,11 +67,7 @@ You can apply background colors to cells using the following approach:
 |----------|------|-------------|
 | **Background Color** | String | Specifies the background color of a cell using color codes or named colors. |
 
-Background color can be applied in the following ways:
-
-- Using the [`backgroundColor`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#backgroundcolor) property in the cell's `style` object at initial load.
-- Using the [`cellFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#cellformat) method to apply background color to a cell or range of cells dynamically.
-- Selecting the fill color option from the ribbon toolbar under the Home tab and choosing from the color palette.
+You can apply background color in a cell using the [`backgroundColor`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#backgroundcolor) property.
 
 The following code example shows the style formatting in text and cells of the spreadsheet.
 
