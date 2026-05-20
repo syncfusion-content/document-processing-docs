@@ -1075,28 +1075,6 @@ You can convert a presentation slide to image with Essential<sup>&reg;</sup> Pre
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"  %}
-//Load the PowerPoint presentation into a stream.
-using (FileStream fileStreamInput = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
-{
-    //Open the existing PowerPoint presentation with stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
-    {
-        //Initialize the PresentationRenderer to perform image conversion.
-        pptxDoc.PresentationRenderer = new PresentationRenderer();
-        //Convert PowerPoint slide to image as stream.
-        using (Stream stream = pptxDoc.Slides[0].ConvertToImage(Syncfusion.Presentation.ExportImageFormat.Png))
-        {
-            //Save the image stream to a file.
-            using (FileStream fileStreamOutput = File.Create("slide1.png"))
-            {
-                stream.CopyTo(fileStreamOutput);
-            }
-        }
-    }
-}
-{% endhighlight %}
-
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens a PowerPoint presentation file
 IPresentation pptxDoc = Presentation.Open(fileName); 
@@ -1121,6 +1099,10 @@ Dim image As Image = pptxDoc.Slides(0).ConvertToImage(Syncfusion.Drawing.ImageT
 image.Save("slide1.png")
 'Closes the Presentation instance
 pptxDoc.Close()
+{% endhighlight %}
+
+{% highlight c# tabtitle="Xamarin" %}
+//PowerPoint Presentation to image conversion is not supported for Xamarin platforms.
 {% endhighlight %}
 
 {% endtabs %}

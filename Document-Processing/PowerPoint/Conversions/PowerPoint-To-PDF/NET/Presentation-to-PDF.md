@@ -233,30 +233,6 @@ The following code sample demonstrates how to convert a PowerPoint presentation 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//Open the PowerPoint file stream. 
-using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-{
-    //Load an existing PowerPoint Presentation. 
-    using (IPresentation pptxDoc = Presentation.Open(fileStream))
-    {
-        //Enable the handouts and number of pages per slide options in converter settings.
-        PresentationToPdfConverterSettings pdfConverterSettings = new PresentationToPdfConverterSettings();
-        pdfConverterSettings.PublishOptions = PublishOptions.Handouts;
-        pdfConverterSettings.SlidesPerPage = SlidesPerPage.Nine;
-        //Convert the documents by passing the PDF conversion settings as parameter. 
-        using (PdfDocument pdfDoc = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
-        {
-            //Save the PDF file to file system. 
-            using (FileStream outputStream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-            {
-                pdfDoc.Save(outputStream);
-            }
-        }
-    }
-}
-{% endhighlight %}
-
 {% highlight C# tabtitle="C# [Windows-specific]" %}
 //Load the PowerPoint presentation to convert.
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
@@ -303,29 +279,6 @@ The following code sample demonstrates how to convert a PowerPoint presentation 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//Open the PowerPoint file stream. 
-using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-{
-    //Load an existing PowerPoint Presentation. 
-    using (IPresentation pptxDoc = Presentation.Open(fileStream))
-    {
-        //Enable the include hidden slides option in converter settings.
-        PresentationToPdfConverterSettings pdfConverterSettings = new PresentationToPdfConverterSettings();
-        pdfConverterSettings.PublishOptions = PublishOptions.NotesPages;
-        //Convert the documents by passing the PDF conversion settings as parameter. 
-        using (PdfDocument pdfDoc = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
-        {
-            //Save the PDF file to file system. 
-            using (FileStream outputStream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-            {
-                pdfDoc.Save(outputStream);
-            }
-        }
-    }
-}
-{% endhighlight %}
-
 {% highlight C# tabtitle="C# [Windows-specific]" %}
 //Load the PowerPoint presentation to convert.
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
@@ -370,29 +323,6 @@ The following code sample demonstrates how to include the hidden slides while co
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//Open the PowerPoint file stream. 
-using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-{
-    //Load an existing PowerPoint Presentation. 
-    using (IPresentation pptxDoc = Presentation.Open(fileStream))
-    {
-        //Enable or disable including the hidden slides option in converter settings.
-        PresentationToPdfConverterSettings pdfConverterSettings = new PresentationToPdfConverterSettings();
-        pdfConverterSettings.ShowHiddenSlides = true;
-        //Convert the documents by passing the PDF conversion settings as parameter. 
-        using (PdfDocument pdfDoc = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
-        {
-            //Save the PDF file to file system. 
-            using (FileStream outputStream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-            {
-                pdfDoc.Save(outputStream);
-            }
-        }
-    }
-}
-{% endhighlight %}
-
 {% highlight C# tabtitle="C# [Windows-specific]" %}
 //Load the PowerPoint presentation to convert.
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
@@ -436,10 +366,6 @@ This setting allows you to regenerate the nested EMF images in the PowerPoint pr
 The following code sample shows how to use this property to regenerate the nested EMF images in the PowerPoint presentation document during PDF conversion.
 
 {% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-//The Essential Presentation Library supports to Recreate Nested Metafile in Windows forms, WPF, ASP.NET and ASP.NET MVC platform alone, and it's also supported in .NET Core 3.0, but it requires PresentationToPDFConverter assembly instead of PresentationRenderer.
-{% endhighlight %}
 
 {% highlight C# tabtitle="C# [Windows-specific]" %}
 //Open a PowerPoint Presentation.
@@ -494,30 +420,6 @@ N> 2. To know more details about PDF/X standard refer [https://en.wikipedia.org/
 The following code sample demonstrates how to set the PDF conformance level while PowerPoint presentation to PDF conversion.
 
 {% tabs %}
-
-{% highlight C# tabtitle="C# [Cross-platform]" %}
-//Load the PowerPoint presentation into a stream.
-using (FileStream fileStreamInput = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
-{
-    //Open the existing PowerPoint presentation with the loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
-    {
-        //Initialize the conversion settings
-        PresentationToPdfConverterSettings pdfConverterSettings = new PresentationToPdfConverterSettings();
-        //Set the Pdf conformance level to A1B
-        pdfConverterSettings.PdfConformanceLevel = PdfConformanceLevel.Pdf_A1B;
-        //Convert the PowerPoint document to PDF
-        using (PdfDocument pdfDoc = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
-        {
-            //Save the converted PDF document to the fileStream.
-            using (FileStream fileStreamOutput = File.Create("Sample.pdf"))
-            {
-                pdfDoc.Save(fileStreamOutput);
-            }
-        }
-    }
-}
-{% endhighlight %}
 
 {% highlight C# tabtitle="C# [Windows-specific]" %}
 //Load the PowerPoint document
@@ -713,11 +615,6 @@ The following code sample demonstrates how to set the quality of the charts whil
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]" %}
-// Creating an instance of the ChartToImageConverter class is not necessary in C# [Cross-platform], 
-// as it is initialized internally in the Syncfusion.PresentationRenderer.Portable assembly.
-{% endhighlight %}
-
 {% highlight C# tabtitle="C# [Windows-specific]" %}
 //Load the PowerPoint presentation to convert.
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
@@ -766,30 +663,6 @@ The following code sample demonstrates how to optimize the duplicate images whil
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]" %}
-//Load the PowerPoint presentation into a stream.
-using (FileStream fileStreamInput = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
-{
-    //Open the existing PowerPoint presentation with the loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
-    {
-        //Initialize the conversion settings
-        PresentationToPdfConverterSettings pdfConverterSettings = new PresentationToPdfConverterSettings();
-        //Set the flag to optimize the identical images
-        pdfConverterSettings.OptimizeIdenticalImages = true;
-        //Convert the PowerPoint document to PDF
-        using (PdfDocument pdfDoc = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
-        {
-            //Save the converted PDF document to the fileStream.
-            using (FileStream fileStreamOutput = File.Create("Sample.pdf"))
-            {
-                pdfDoc.Save(fileStreamOutput);
-            }
-        }
-    }
-}
-{% endhighlight %}
-
 {% highlight C# tabtitle="C# [Windows-specific]" %}
 //Load the PowerPoint presentation to convert.
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
@@ -835,32 +708,6 @@ You may have high resolution images in the PowerPoint slides which will impact t
 The following code sample demonstrates how to optimize the image quality and resolution while converting a PowerPoint presentation to PDF document. 
 
 {% tabs %}
-
-{% highlight C# tabtitle="C# [Cross-platform]" %}
-//Load the PowerPoint presentation into a stream.
-using (FileStream fileStreamInput = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
-{
-    //Open the existing PowerPoint presentation with the loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
-    {
-        //Initialize the conversion settings
-        PresentationToPdfConverterSettings pdfConverterSettings = new PresentationToPdfConverterSettings();
-        //Set the image resolution
-        pdfConverterSettings.ImageResolution = 100;
-        //Set the image quality
-        pdfConverterSettings.ImageQuality = 100;
-        //Convert the PowerPoint document to PDF
-        using (PdfDocument pdfDoc = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
-        {
-            //Save the converted PDF document to the fileStream.
-            using (FileStream fileStreamOutput = File.Create("Sample.pdf"))
-            {
-                pdfDoc.Save(fileStreamOutput);
-            }
-        }
-    }
-}
-{% endhighlight %}
 
 {% highlight C# tabtitle="C# [Windows-specific]" %}
 //Load the PowerPoint presentation to convert.
