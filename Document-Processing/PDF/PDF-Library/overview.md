@@ -9,5 +9,31 @@ keywords: PDF, SDK, Automation, API, create, read, write
 
 # Welcome to Syncfusion PDF Document Processing Library
 
+{% doccards %}
+
+{% doccard text="ASP.NET Core" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core" icon="./NET/images/ASP.NET-Core.png" %}
+
+{% doccard text="ASP.NET MVC" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc" icon="./NET/images/ASP.NET-MVC.png" %}
+
+{% doccard text="Blazor" link="/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor" icon="./NET/images/Blazor.svg" %}
+
+{% doccard text="UWP" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-uwp" icon="./NET/images/UWP.svg" %}
+
+{% doccard text="Windows Forms" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms" icon="./NET/images/Windows-Forms.svg" %}
+
+{% doccard text="WPF" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf" icon="./NET/images/WPF.svg" %}
+
+{% doccard text=".NET MAUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui" icon="./NET/images/.NET-MAUI.svg" %}
+
+{% doccard text="WinUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui" icon="./NET/images/WinUI.png" %}
+
+{% doccard text="Flutter" link="/document-processing/pdf/pdf-library/flutter/getting-started" icon="./NET/images/Flutter.svg" %}
+
+{% doccard text="Linux" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-linux" icon="./NET/images/Linux.png" %}
+
+{% doccard text="Mac" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-mac-os" icon="./NET/images/Apple.png" %}
+
+{% enddoccards %}
+
 Syncfusion PDF Document Processing library is a class library used to create, read, and write PDF files through code in .NET [Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, MAUI] and Flutter applications without Adobe dependencies. It eases you developers to just integrate this library to achieve the required PDF document processing functionalities and concentrate on core logics of your application.
 
