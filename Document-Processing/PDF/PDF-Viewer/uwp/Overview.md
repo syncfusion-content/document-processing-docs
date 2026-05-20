@@ -23,6 +23,10 @@ The [PDF viewer](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer
 | [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-page-navigation) | Navigate between pages in the PDF using methods, built‑in commands, and events to track page changes.|
 | [Printing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/printing-pdf) | Print PDF documents from the viewer using built‑in printing support and customization options.|
 | [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations) | Add, edit, and manage various PDF annotations (like text, shapes, ink, and stamps) with customization and interaction support.|
+| [Exporting Pages As Image](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/exporting-pages-as-image) | Export PDF pages as images programmatically with options to customize output and save them in image formats.|
+| [Custom Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar) | Create and customize a toolbar in the PDF Viewer by replacing or extending default toolbar items with custom UI elements and actions.|
+| [Bookmark Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/bookmark-navigation) | Navigate PDF bookmarks interactively to jump between sections quickly within the document.|
+| [Hyperlink](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/hyperlink) | Interact with hyperlinks in the PDF to navigate to web URLs or different locations within the document directly.|
 | [Localization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/localization) | Configure the PDF Viewer to support multiple languages by adding resource files and setting the app’s culture for localized UI elements like the context menu.|
 
 
