@@ -9,7 +9,11 @@ documentation: ug
 
 # Getting Started with Syncfusion Document SDK AI Agent Tool Library
 
-The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) exposes Word, Excel, PDF, PowerPoint, and Smart Data Extractor operations as AI-callable tools. It integrates with the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp) and works with any [providers](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) like OpenAI, Claude, Gemini, etc.
+The [Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) library exposes Word, Excel, PDF, PowerPoint, and Smart Data Extractor operations as AI-callable tools. It integrates with the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp) and works with any [providers](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) like OpenAI, Claude, Gemini, etc.
+
+## Document Manager Modes
+
+The library supports two modes for managing document state during agent tool invocations. Both modes expose the same AI tools-the difference is in how and where documents are stored between tool calls.
 
 ![Mode selection flowchart](getting-started-mode-flowchart.png)
 
