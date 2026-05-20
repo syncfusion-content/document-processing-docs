@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with JavaScript (ES5) DOCX Editor
+# Getting Started with Syncfusion<sup>&reg;</sup> JavaScript (ES5) DOCX Editor
 
-Syncfusion® JavaScript DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a JavaScript (ES5) application.
+Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a Document Editor in a JavaScript (ES5) application.
 
-## Steps to create a DOCX Editor using JavaScript (ES5)
+## Steps to create a Document Editor using JavaScript (ES5)
 
 Create a folder named `documenteditor-app` with `index.html` and `index.js` files. Your application structure should look like this:
 
@@ -83,7 +83,7 @@ Add the following CDN references inside the `<head>` section of your `index.html
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
+### Add the Document Editor component
 
 Add a container element for the Document Editor in the `index.html` file and then initialize the control in the `<script>` tag.
 

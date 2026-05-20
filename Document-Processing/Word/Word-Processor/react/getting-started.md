@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Getting started with Syncfusion<sup>&reg;</sup> React DOCX Editor
 
-Syncfusion® [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a Document Editor in a React application. 
+Syncfusion<sup style="font-size:70%">&reg;</sup> [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a Document Editor in a React application. 
 
-## Steps to create a React Document Editor
+## Steps to create a Document Editor
 
 {% tabcontents %}
 
