@@ -1,6 +1,6 @@
 ---
 title: Word Document Processing Library | Syncfusion
-description: Syncfusion® Word document processing library allows you create, read and write Word documents through code in .NET and Java applications without Microsoft Office dependencies.
+description: Syncfusion® Word library allows you create, read and write Word documents through code in .NET and Java applications without Microsoft Office dependencies.
 platform: document-processing
 control: general
 documentation: UG
@@ -15,11 +15,9 @@ keywords: Word, SDK, Automation, API, create, read, write
 
 {% doccard text="ASP.NET MVC" link="/document-processing/word/word-library/net/Create-Word-document-in-ASP-NET-MVC" icon="/document-processing/word/word-library/net/images/ASP.NET MVC.svg" %}
 
-{% doccard text="ASP.NET" link="/document-processing/word/word-library/net/Create-Word-document-in-ASP-NET" icon="/document-processing/word/word-library/net/images/Word Library.svg" %}
+{% doccard text="ASP.NET" link="/document-processing/word/word-library/net/Create-Word-document-in-ASP-NET" icon="/document-processing/word/word-library/net/images/NET.svg" %}
 
 {% doccard text="Blazor" link="/document-processing/word/word-library/net/Create-Word-document-in-Blazor" icon="/document-processing/word/word-library/net/images/Blazor.svg" %}
-
-{% doccard text="Xamarin" link="/document-processing/word/word-library/net/Create-Word-document-in-Xamarin" icon="/document-processing/word/word-library/net/images/Xamarin.svg" %}
 
 {% doccard text="Windows Forms" link="/document-processing/word/word-library/net/Create-Word-document-in-Windows-Forms" icon="/document-processing/word/word-library/net/images/Windows Forms.svg" %}
 
@@ -35,9 +33,9 @@ keywords: Word, SDK, Automation, API, create, read, write
 
 {% doccard text="Mac" link="/document-processing/word/word-library/net/Create-Word-document-in-Mac" icon="/document-processing/word/word-library/net/images/Word Library.svg" %}
 
-{% doccard text="Console" link="/document-processing/word/word-library/net/Create-Word-document-in-Console-application" icon="/document-processing/word/word-library/net/images/Word Library.svg" %}
+{% doccard text="Console" link="/document-processing/word/word-library/net/Create-Word-document-in-Console-application" icon="/document-processing/word/word-library/net/images/NET.svg" %}
 
-{% doccard text="ASP.NET Core Web API" link="/document-processing/word/word-library/net/Create-Word-Document-in-ASP-NET-Core-WEB-API" icon="/document-processing/word/word-library/net/images/Word Library.svg" %}
+{% doccard text="ASP.NET Core Web API" link="/document-processing/word/word-library/net/Create-Word-Document-in-ASP-NET-Core-WEB-API" icon="/document-processing/word/word-library/net/images/NET.svg" %}
 
 {% doccard text="Azure" link="/document-processing/word/word-library/net/Create-Word-Document-in-Azure" icon="/document-processing/word/word-library/net/images/Word Library.svg" %}
 

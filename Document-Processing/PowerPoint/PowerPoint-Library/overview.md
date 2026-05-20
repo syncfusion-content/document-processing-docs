@@ -1,6 +1,6 @@
 ---
 title: PowerPoint Presentation Processing Library | Syncfusion
-description: Syncfusion® PowerPoint Presentation processing library allows you create, read and write PowerPoint presentations through code in .NET applications without Microsoft Office dependencies.
+description: Syncfusion® PowerPoint library allows you create, read and write PowerPoint presentations through code in .NET applications without Microsoft Office dependencies.
 platform: document-processing
 control: general
 documentation: UG
@@ -15,11 +15,9 @@ keywords: PowerPoint, Presentation, slides, SDK, Automation, API, create, read, 
 
 {% doccard text="ASP.NET MVC" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc" icon="/document-processing/powerpoint/powerpoint-library/net/images/ASP.NET MVC.svg" %}
 
-{% doccard text="ASP.NET" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-web-forms" icon="/document-processing/powerpoint/powerpoint-library/net/images/PowerPoint Library.svg" %}
+{% doccard text="ASP.NET" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-web-forms" icon="/document-processing/powerpoint/powerpoint-library/net/images/NET.svg" %}
 
 {% doccard text="Blazor" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-blazor" icon="/document-processing/powerpoint/powerpoint-library/net/images/Blazor.svg" %}
-
-{% doccard text="Xamarin" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-xamarin" icon="/document-processing/powerpoint/powerpoint-library/net/images/Xamarin.svg" %}
 
 {% doccard text="Windows Forms" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-windows-forms" icon="/document-processing/powerpoint/powerpoint-library/net/images/Windows Forms.svg" %}
 
@@ -35,9 +33,9 @@ keywords: PowerPoint, Presentation, slides, SDK, Automation, API, create, read, 
 
 {% doccard text="Mac" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-mac" icon="/document-processing/powerpoint/powerpoint-library/net/images/PowerPoint Library.svg" %}
 
-{% doccard text="Console" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-in-Console-application" icon="/document-processing/powerpoint/powerpoint-library/net/images/PowerPoint Library.svg" %}
+{% doccard text="Console" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-in-Console-application" icon="/document-processing/powerpoint/powerpoint-library/net/images/NET.svg" %}
 
-{% doccard text="ASP.NET Core Web API" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-ASP-NET-Core-WEB-API" icon="/document-processing/powerpoint/powerpoint-library/net/images/PowerPoint Library.svg" %}
+{% doccard text="ASP.NET Core Web API" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-ASP-NET-Core-WEB-API" icon="/document-processing/powerpoint/powerpoint-library/net/images/NET.svg" %}
 
 {% doccard text="Azure" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-Azure" icon="/document-processing/powerpoint/powerpoint-library/net/images/PowerPoint Library.svg" %}
 
