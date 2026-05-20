@@ -18,21 +18,18 @@ You can set formats in the following ways:
 
 ### Fonts
 
-The Syncfusion React Spreadsheet component provides comprehensive font formatting options to customize text appearance in cells. You can apply various font styles to enhance the readability and visual hierarchy of your data.
+The Syncfusion React Spreadsheet component provides comprehensive font formatting options to customize text appearance in cells. These options help improve readability and establish a clear visual hierarchy in your data.
 
 The Spreadsheet supports the following font formatting options:
 
 | Format | Description |
 |--------|-------------|
-| **Font Family** | Specifies the typeface of the text (e.g., Arial, Calibri, Times New Roman, Verdana). |
-| **Font Size** | Specifies the size of the text in points (e.g., 10pt, 12pt, 14pt). |
-| **Bold** | Applies bold formatting to make text heavier and more prominent. |
-| **Italic** | Applies italic formatting to slant text for emphasis. |
-| **Underline** | Underlines text to highlight important information. |
-| **Strike-through** | Draws a line through text to indicate deleted or outdated content. |
-| **Font Color** | Specifies the color of the text. |
-
-You can apply font formatting using [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontfamily), [`fontSize`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontsize), [`fontWeight`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontweight), [`fontStyle`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontstyle), [`textDecoration`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textdecoration), and [`color`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#color) property.
+| [`fontFamily`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontfamily) | Specifies the typeface of the text (e.g., Arial, Calibri, Times New Roman, Verdana). |
+| [`fontSize`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontsize) | Specifies the size of the text in points (e.g., 10pt, 12pt, 14pt). |
+| [`fontWeight`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontweight) | Specifies the thickness of the text. Supports values such as normal, bold, and numeric weights (e.g., 100–900) to control the emphasis level of the text. |
+| [`fontStyle`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#fontstyle) | Specifies the style of the text. Supports values such as normal, italic, and oblique to adjust the appearance and emphasis of the content. |
+| [`textDecoration`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textdecoration) | Specifies decorative styling applied to the text. Supports values such as underline, overline, and line-through (strikethrough) to highlight, cross out, or distinguish content within a cell. |
+| [`color`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#color) | Specifies the color of the text. |
 
 ### Text Alignment
 
@@ -40,34 +37,16 @@ You can align text in cells using the following options:
 
 | Alignment Type | Options | Description |
 |----------------|---------|-------------|
-| **Horizontal Align** | Left, Center, Right | Aligns text from left to right within the cell. |
-| **Vertical Align** | Top, Middle, Bottom | Aligns text from top to bottom within the cell. |
-
-You can align text in a cell either vertically or horizontally using the  [`textAlign`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/textalign) and [verticalAlign](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/verticalalign) property.
+| [`textAlign`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/textalign) | Left, Center, Right | Aligns text horizontally from left to right within the cell. |
+| [verticalAlign](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/verticalalign) | Top, Middle, Bottom | Aligns text from top to bottom within the cell. |
 
 ### Indents
 
-Indentation helps enhance the visual appearance of text in cells by adding space before the text content.
-
-You can apply cell text indentation using the following property:
-
-| Property | Type | Description |
-|----------|------|-------------|
-| **Text Indent** | String | Specifies the indentation of text within a cell, adding left margin to the text content. |
-
-You can apply text indentation in a cell using the [`textIndent`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textindent) property.
+Indentation helps enhance the visual appearance of text in cells by adding space before the text content. You can apply cell text indentation using the [`textIndent`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textindent) property.
 
 ### Fill Color
 
-Fill color (background color) is used to highlight cells or ranges of cells across the workbook.
-
-You can apply background colors to cells using the following property:
-
-| Property | Type | Description |
-|----------|------|-------------|
-| **Background Color** | String | Specifies the background color of a cell using color codes or named colors. |
-
-You can apply background color in a cell using the [`backgroundColor`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#backgroundcolor) property.
+Fill color (background color) is used to highlight cells or ranges of cells across the workbook. You can apply background colors to cells using the [`backgroundColor`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#backgroundcolor) property.
 
 The following code example shows the style formatting in text and cells of the spreadsheet.
 
@@ -146,14 +125,7 @@ The following code sample shows how to apply different typed border, colors and 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/border-cs1" %}
-
-#### Remove Borders
-
-To remove the border style on the target cells, use the UI "No Border" option in the ribbon.
-
-![Remove borders in spreadsheet](./images/spreadsheet_remove_borders.png) 
-
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/border-cs1" %} 
 
 ### Limitations of Formatting
 

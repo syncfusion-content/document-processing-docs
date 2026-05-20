@@ -145,11 +145,11 @@ The following code example shows the three types of sheet visibility state.
 
 The Spreadsheet component allows you to create a copy of an existing worksheet along with its data, formatting, and configurations. Duplicating a sheet is useful when you want to reuse the same structure or data without manually recreating it.
 
+While duplicating the worksheet, a new worksheet is created as an exact copy of the selected sheet and is placed next to it. The duplicated sheet will automatically be assigned a unique name to avoid conflicts with existing sheet names.
+
 You can duplicate a worksheet in the following way,
 
 * Right-click on the sheet tab, and then select the `Duplicate` option from the context menu.
-
-    * When the `Duplicate` option is selected, a new worksheet is created as an exact copy of the selected sheet and is placed next to it. The duplicated sheet will automatically be assigned a unique name to avoid conflicts with existing sheet names.
 
 * Duplicate a sheet programmatically using the [duplicateSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#duplicatesheet) method; it copies the specified worksheet (including data, formatting and settings) and places the copy next to the original so you can reuse or edit it without affecting the source.
 
@@ -161,18 +161,13 @@ The Spreadsheet component provides options to rearrange worksheets by moving the
 
 You can move a worksheet using the following way,
 
-* Right-click on the sheet tab, and then select either `Move Left` or `Move Right` option from the context menu.
+* Right-click on the sheet tab, and then select either `Move Left`(moves the sheet one position to the left) or `Move Right`(moves the sheet one position to the right) option from the context menu.
 
-    * Move sheet options
-
-        * `Move Left` – Moves the selected worksheet one position to the left.
-        * `Move Right` – Moves the selected worksheet one position to the right.
-
-    * The Move Left and Move Right options are enabled only when there are two or more worksheets available in the Spreadsheet. These options are automatically disabled when the selected sheet is already at the first or last position.
-
-* Move sheets programmatically using the [moveSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#movesheet) method, which moves a worksheet from one index to another and updates the tab order; after moving you can make the moved sheet active if needed.
+* Move sheets programmatically using the [moveSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#movesheet) method, which moves a worksheet from one position to another based on the position passed in the method and updates the sheet tab order.
     
 ![Move sheet tabs](./images/spreadsheet-move-tab.png)
+
+>**Note:** The Move Left and Move Right options are enabled only when there are two or more worksheets available in the Spreadsheet. These options are automatically disabled when the selected sheet is already at the first or last position.
 
 ## Note
 
