@@ -31,6 +31,18 @@ syncfusion_flutter_pdfviewer: ^xx.x.xx
 
 N> Here **xx.x.xx** denotes the current version of the [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package.
 
+Add the asset path to your `pubspec.yaml` file under the flutter section.
+
+{% highlight dart %}
+
+flutter:
+
+assets:
+
+   - assets/
+
+{% endhighlight %}
+
 For the web platform, we have used [PdfJs](https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js) for rendering the PDF pages, so the script file must be referred to in your `web/index.html` file.
 
 In your `web/index.html` file, add the following `script` tags, somewhere in the `head` or `body` of the document:
