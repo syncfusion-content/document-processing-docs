@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with JavaScript (ES5) DOCX Editor
 
-Syncfusion® JavaScript DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a JavaScript (ES5) application.
+Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a JavaScript (ES5) application.
 
 ## Steps to create a DOCX Editor using JavaScript (ES5)
 
