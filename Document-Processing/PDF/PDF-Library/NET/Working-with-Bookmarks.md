@@ -34,10 +34,9 @@ bookmark.Destination.Location = new PointF(20, 20);
 bookmark.TextStyle = PdfTextStyle.Bold;
 bookmark.Color = Syncfusion.Drawing.Color.Red;
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-//Closes the document
+//Save the document.
+document.Save("Output.pdf");
+//Closes the document.
 document.Close(true);
 
 {% endhighlight %}
@@ -99,8 +98,7 @@ To add bookmarks to an existing PDF document, use the following code example.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Adding-bookmarks-in-an-existing-PDF-document/.NET/Adding-bookmarks-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Creates document bookmarks.
 PdfBookmark bookmark = document.Bookmarks.Add("Page 1");
 //Sets the destination page.
@@ -111,9 +109,8 @@ bookmark.Color = Color.Red;
 //Sets the destination location.
 bookmark.Destination.Location = new PointF(20, 20);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Closes the document.
 document.Close(true);
 
@@ -190,9 +187,8 @@ childBookmark.Destination.Zoom = 2F;
 bookmark.TextStyle = PdfTextStyle.Bold;
 bookmark.Color = Syncfusion.Drawing.Color.Red;
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Closes the document.
 document.Close(true);
 
@@ -267,17 +263,15 @@ Each loaded bookmark is represented by the [PdfLoadedBookmark](https://help.sync
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Inserting-bookmarks-in-an-existing-PDF/.NET/Inserting-bookmarks-in-an-existing-PDF/Program.cs" %}
 
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Inserts a new bookmark in the existing bookmark collection.
 PdfBookmark bookmark = document.Bookmarks.Insert(1, "New Page 2");
 //Sets the destination page and location.
 bookmark.Destination = new PdfDestination(document.Pages[1]);
 bookmark.Destination.Location = new PointF(0, 300);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Closes the document.
 document.Close(true);
 
@@ -326,8 +320,7 @@ You can also remove bookmarks from the existing PDF document by using [Remove](h
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Remove-bookmarks-from-an-existing-PDF-document/.NET/Remove-bookmarks-from-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Gets all the bookmarks.
 PdfBookmarkBase bookmarks = document.Bookmarks;
 //Removes bookmark by bookmark name.
@@ -335,9 +328,8 @@ bookmarks.Remove("Page 1");
 //Removes bookmark by index.
 bookmarks.RemoveAt(1);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("output.pdf");
 //Closes the document.
 document.Close(true);
 
@@ -397,8 +389,7 @@ The following code example shows how to modify the [Destination](https://help.sy
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Modify-the-bookmarks-in-an-existing-PDF-document/.NET/Modify-the-bookmarks-in-an-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Gets all the bookmarks.
 PdfBookmarkBase bookmarks = document.Bookmarks;
 //Gets the first bookmark and changes the properties of the bookmark.
@@ -408,9 +399,8 @@ bookmark.Color = Syncfusion.Drawing.Color.Green;
 bookmark.TextStyle = PdfTextStyle.Bold;
 bookmark.Title = "Changed title";
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("output.pdf");
 //Closes the document.
 document.Close(true);
 
@@ -468,16 +458,14 @@ You can get bookmark page index from the existing PDF document using [PageIndex]
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Get-bookmark-page-index-from-the-existing-PDF-document/.NET/Get-bookmark-page-index-from-the-existing-PDF-document/Program.cs" %}
 
 //Load the PDF document.
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
 //Gets all the bookmarks.
 PdfBookmarkBase bookmark = loadedDocument.Bookmarks;
 //Get the bookmark page index. 
 int index = bookmark[0].Destination.PageIndex;
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
