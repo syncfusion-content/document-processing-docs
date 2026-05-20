@@ -85,7 +85,7 @@ To add the control manually in XAML, follow these steps:
 2.	Declare SfRichTextBoxAdv control in the XAML page.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainWindow.xaml" %}
 
 <Page
     x:Class="SfRichTextBoxAdv.MainPage"
@@ -112,7 +112,7 @@ To add the control manually in XAML, follow these steps:
 To add the control manually in C#, add the following code in *.xaml.cs
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.UI.Xaml.RichTextBoxAdv;
 
@@ -150,7 +150,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox
 Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainWindow.xaml" %}
 <Page
     x:Class="Standard_RichTextBox.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"

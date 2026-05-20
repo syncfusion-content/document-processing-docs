@@ -89,7 +89,7 @@ To add the control manually in XAML, follow these steps:
 
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainWindow.xaml" %}
 
 <Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -111,7 +111,7 @@ To add the control manually in XAML, follow these steps:
 To add the control manually in C#, add the following code in *.xaml.cs
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" %}
 
 using Syncfusion.Windows.Controls.RichTextBoxAdv;
 
@@ -162,7 +162,7 @@ If you need a ribbon-based user interface, you can add **SfRichTextRibbon** with
 **Using Package Manager Console**
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.SfRichTextRibbon.WPF
 
@@ -210,7 +210,7 @@ To add the control manually in XAML, follow these steps:
 4.  To make an interaction between SfRichTextRibbon and SfRichTextBoxAdv, bind the SfRichTextBoxAdv as DataContext to the SfRichTextRibbon.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainWindow.xaml" %}
 
 <Syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -237,7 +237,7 @@ To add the control manually in XAML, follow these steps:
 To add the control manually in C#, add the below code in *.xaml.cs
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" %}
 
 using Syncfusion.Windows.Controls.RichTextBoxAdv;
 using Syncfusion.Windows.Tools.Controls;
@@ -315,7 +315,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox
 Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainWindow.xaml" %}
 <Window x:Class="Standard_RichTextBox.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
