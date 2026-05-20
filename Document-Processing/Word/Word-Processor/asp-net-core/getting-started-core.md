@@ -98,7 +98,7 @@ Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document Editor tag helper in `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
+{% highlight cshtml tabtitle="~/Index.cshtml" %}
 
 <ejs-documenteditorcontainer id="container" height="620px"></ejs-documenteditorcontainer>
 
