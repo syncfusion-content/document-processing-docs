@@ -869,64 +869,6 @@ document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//"App" is the class of Portable project
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-//Opens an existing wod document
-WordDocument document = new WordDocument(assembly.GetManifestResourceStream("Sample.Assets.Template.docx"), FormatType.Automatic);
-//Finds all the image placeholder text in the Word document
-TextSelection[] textSelections = document.FindAll(new Regex("^//(.*)"));
-for (int i = 0; i < textSelections.Length; i++)
-{
-    //Replaces the image placeholder text with desired image
-    WParagraph paragraph = new WParagraph(document);
-    Stream imageStream = assembly.GetManifestResourceStream("Sample.Assets."+ textSelections[i].SelectedText.Trim('/') + ".png");
-    WPicture picture = paragraph.AppendPicture(imageStream) as WPicture;
-    TextSelection newSelection = new TextSelection(paragraph, 0, 1);
-    TextBodyPart bodyPart = new TextBodyPart(document);
-    bodyPart.BodyItems.Add(paragraph);
-    document.Replace(textSelections[i].SelectedText, bodyPart, true, true);
-}
-//Saves the Word document to MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream, FormatType.Docx);
-//Save the stream as a file in the device and invoke it for viewing
-Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Sample.docx", "application/msword", stream);
-//Closes the document instance
-document.Close();
-//Please download the helper files from the below link to save the stream as file and open the file for viewing in Xamarin platform
-//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//"App" is the class of Portable project
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-//Opens an existing word document 
-WordDocument document = new WordDocument(assembly.GetManifestResourceStream("Sample.Assets.Template.docx"), FormatType.Docx);
-//Finds all the image placeholder text in the Word document
-TextSelection[] textSelections = document.FindAll(new Regex("^//(.*)"));
-for (int i = 0; i < textSelections.Length; i++)
-{
-    //Replaces the image placeholder text with desired image
-    WParagraph paragraph = new WParagraph(document);
-    Stream imageStream = assembly.GetManifestResourceStream("Sample.Assets." + textSelections[i].SelectedText.Trim('/') + ".png");
-    WPicture picture = paragraph.AppendPicture(imageStream) as WPicture;
-    TextSelection newSelection = new TextSelection(paragraph, 0, 1);
-    TextBodyPart bodyPart = new TextBodyPart(document);
-    bodyPart.BodyItems.Add(paragraph);
-    document.Replace(textSelections[i].SelectedText, bodyPart, true, true);
-}
-//Saves the Word file to MemoryStream
-MemoryStream stream = new MemoryStream();
-await document.SaveAsync(stream, FormatType.Docx);
-//Saves the stream as Word document file in local machine
-Save(stream, "Sample.docx");
-//Closes the document instance
-document.Close();
-//Please refer the below link to save Word document in UWP platform
-//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp#save-word-document-in-uwp
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-with-image).

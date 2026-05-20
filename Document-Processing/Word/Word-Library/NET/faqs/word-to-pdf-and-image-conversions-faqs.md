@@ -78,6 +78,11 @@ The following code example illustrates how to initialize [ChartToImageConverter]
 //Initializes the ChartToImageConverter for converting charts during Word to pdf conversion
 wordDocument.ChartToImageConverter = new ChartToImageConverter();
 {% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Initializes the ChartToImageConverter for converting charts during Word to pdf conversion
+wordDocument.ChartToImageConverter = New ChartToImageConverter()
+{% endhighlight %}
 {% endtabs %}
 
 For more details about the conversion, refer [here]( https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/overview?cs-save-lang=1&cs-lang=csharp#convert-word-to-pdf).

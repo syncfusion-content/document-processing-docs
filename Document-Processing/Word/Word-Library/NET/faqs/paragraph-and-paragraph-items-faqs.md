@@ -13,7 +13,32 @@ The frequently asked questions about working with paragraph and paragraph items 
 
 The following code illustrates how to modify the built-in style while creating new Word document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a new Word document 
+WordDocument document = new WordDocument();
+//Adds new section to the document
+IWSection section = document.AddSection();
+//Creates built-in style and modifies its properties
+Style style = Style.CreateBuiltinStyle(BuiltinStyle.Heading1, document) as Style;
+style.CharacterFormat.Italic = true;
+style.CharacterFormat.TextColor = Color.DarkGreen;
+//Adds it to the styles collection
+document.Styles.Add(style);
+//Adds new paragraph to the section
+IWParagraph paragraph = section.AddParagraph();
+IWTextRange text = paragraph.AppendText("A built-in style is modified and is applied to this paragraph.");
+//Applies the new style to paragraph
+paragraph.ApplyStyle(style.Name);
+//Saves the Word document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document 
@@ -79,6 +104,32 @@ The following code illustrates how to set ligature types for text.
 
 {% tabs %}  
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a new Word document 
+WordDocument document = new WordDocument();
+//Adds new section to the document
+IWSection section = document.AddSection();
+//Adds new paragraph to the section
+IWParagraph paragraph = section.AddParagraph();
+//Adds new text
+IWTextRange text = paragraph.AppendText("Text to describe discretional ligatures");
+//Sets ligature type
+text.CharacterFormat.Ligatures = LigatureType.Discretional;
+text.CharacterFormat.FontName = "Arial";
+paragraph = section.AddParagraph();
+text = paragraph.AppendText("Text to describe contextual ligatures");
+text.CharacterFormat.Ligatures = LigatureType.Contextual;
+text.CharacterFormat.FontName = "Arial";
+paragraph = section.AddParagraph();
+text = paragraph.AppendText("Text to describe historical ligatures");
+text.CharacterFormat.Ligatures = LigatureType.Historical;
+text.CharacterFormat.FontName = "Arial";
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
@@ -139,6 +190,25 @@ The following code example illustrates how to set contextual alternates.
 
 {% tabs %} 
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a new Word document 
+WordDocument document = new WordDocument();
+//Adds new section to the document
+IWSection section = document.AddSection();
+//Adds new paragraph to the section
+IWParagraph paragraph = section.AddParagraph();
+//Adds new text
+IWTextRange text = paragraph.AppendText("Text to describe contextual alternates");
+text.CharacterFormat.FontName = "Segoe Script";
+//Sets contextual alternates
+text.CharacterFormat.UseContextualAlternates = true;
+paragraph = section.AddParagraph();
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
@@ -182,6 +252,29 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code example illustrates how to set number spacing.
 
 {% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a new Word document 
+WordDocument document = new WordDocument();
+//Adds new section to the document
+IWSection section = document.AddSection();
+//Adds new paragraph to the section
+IWParagraph paragraph = section.AddParagraph();
+//Adds new text
+IWTextRange text = paragraph.AppendText("Numbers to describe tabular number spacing 0123456789");
+text.CharacterFormat.FontName = "Calibri";
+//Sets number spacing
+text.CharacterFormat.NumberSpacing = NumberSpacingType.Tabular;
+paragraph = section.AddParagraph();
+text = paragraph.AppendText("Numbers to describe proportional number spacing 0123456789");
+text.CharacterFormat.FontName = "Calibri";
+//Sets number spacing
+text.CharacterFormat.NumberSpacing = NumberSpacingType.Proportional;
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document 
@@ -235,6 +328,29 @@ The following code example illustrates how to set number style.
 
 {% tabs %} 
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a new Word document 
+WordDocument document = new WordDocument();
+//Adds new section to the document
+IWSection section = document.AddSection();
+//Adds new paragraph to the section
+IWParagraph paragraph = section.AddParagraph();
+//Adds new text
+IWTextRange text = paragraph.AppendText("Numbers to describe oldstyle number form 0123456789");
+text.CharacterFormat.FontName = "Calibri";
+//Sets number style
+text.CharacterFormat.NumberForm = NumberFormType.OldStyle;
+paragraph = section.AddParagraph();
+text = paragraph.AppendText("Numbers to describe lining number form 0123456789");
+text.CharacterFormat.FontName = "Calibri";
+//Sets number style
+text.CharacterFormat.NumberForm = NumberFormType.Lining;
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
@@ -286,6 +402,30 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code example illustrates how to set different styles for the text.
 
 {% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a new Word document 
+WordDocument document = new WordDocument();
+//Adds new section to the document
+IWSection section = document.AddSection();
+//Adds new paragraph to the section
+IWParagraph paragraph = section.AddParagraph();
+//Adds new text
+IWTextRange text = paragraph.AppendText("Text to describe stylistic sets");
+text.CharacterFormat.FontName = "Gabriola";
+//Sets stylistic set
+text.CharacterFormat.StylisticSet = StylisticSetType.StylisticSet06;
+paragraph = section.AddParagraph();
+//Adds new text
+text = paragraph.AppendText("Text to describe stylistic sets");
+text.CharacterFormat.FontName = "Gabriola";
+//Sets stylistic set
+text.CharacterFormat.StylisticSet = StylisticSetType.StylisticSet15;
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document 
@@ -342,6 +482,37 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code illustrates how to extract the images in the document.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads the template document
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx);
+WTextBody textbody = document.Sections[0].Body;
+Image image;
+int i = 1;
+//Iterates through the paragraphs
+foreach (WParagraph paragraph in textbody.Paragraphs)
+{
+    //Iterates through the paragraph items 
+    foreach (ParagraphItem item in paragraph.ChildEntities)
+    {
+        //Gets the picture and saves it into specified location
+        switch (item.EntityType)
+        {
+            case EntityType.Picture:
+                WPicture picture = item as WPicture;
+                image = picture.Image;
+                image.Save(@"D:/Data/Image" + i + ".jpeg", ImageFormat.Jpeg);
+                i++;
+                break;
+            default:
+                break;
+        }
+    }
+}
+//Closes the document
+document.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
@@ -406,6 +577,21 @@ The images in the document can be extracted into a specific location when export
 
 {% tabs %}  
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads the template document
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx);
+//Sets the location to extract images
+document.SaveOptions.HtmlExportImagesFolder = @"D:/Data/";
+//Saves the document as html file
+HTMLExport export = new HTMLExport();
+export.SaveAsXhtml(document, "Template.html");
+MemoryStream stream = new MemoryStream();
+export.SaveAsXhtml(document, stream);
+//Closes the document
+document.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
 WordDocument document = new WordDocument("Template.docx");
@@ -444,7 +630,7 @@ To detect the type of a shape in a Word document, you can use the [AutoShapeType
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 // Get the last paragraph from the document
 WParagraph paragraph = document.LastParagraph;
 // Access the shape from the paragraph's child entities
@@ -453,7 +639,16 @@ Shape shape = paragraph.ChildEntities[i] as Shape;
 AutoShapeType shapeType = shape.AutoShapeType;
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Get the last paragraph from the document
+WParagraph paragraph = document.LastParagraph;
+// Access the shape from the paragraph's child entities
+Shape shape = paragraph.ChildEntities[i] as Shape;
+// Get the type of the shape
+AutoShapeType shapeType = shape.AutoShapeType;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 ' Get the last paragraph from the document
 Dim paragraph As WParagraph = document.LastParagraph
 ' Access the shape from the paragraph's child entities
@@ -500,7 +695,7 @@ The following code illustrates how to enable the "Don't add space between paragr
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
  // Find the "Normal" paragraph style in the document's styles collection
  WParagraphStyle normalStyle = document.Styles.FindByName("Normal") as WParagraphStyle;
 // Check if the "Normal" style is found, and if so, enable contextual spacing
@@ -511,7 +706,18 @@ if (normalStyle != null)
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+ // Find the "Normal" paragraph style in the document's styles collection
+ WParagraphStyle normalStyle = document.Styles.FindByName("Normal") as WParagraphStyle;
+// Check if the "Normal" style is found, and if so, enable contextual spacing
+if (normalStyle != null)
+{
+    // Enable contextual spacing to avoid adding extra space between paragraphs with the same style
+    normalStyle.ParagraphFormat.ContextualSpacing = true;
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 ' Find the "Normal" paragraph style in the document's styles collection
 Dim normalStyle As WParagraphStyle = TryCast(document.Styles.FindByName("Normal"), WParagraphStyle)
 ' Check if the "Normal" style is found, and if so, enable contextual spacing
@@ -562,10 +768,8 @@ using (FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/Template.
             }
         }
         // Save the modified document.
-        using (FileStream outputStream = new FileStream(Path.GetFullPath(@"Output/Result.docx"), FileMode.Create, FileAccess.Write))
-        {
-            document.Save(outputStream, FormatType.Docx);
-        }
+		MemoryStream stream = new MemoryStream();
+        document.Save(stream, FormatType.Docx);
     }
 }
 {% endhighlight %}
@@ -682,14 +886,21 @@ The following code illustrates how to hide the chart legend.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
  // To hide
 chart.Legend.LegendEntries[3].IsDeleted = true;
 // To restore
 chart.Legend.LegendEntries[3].IsDeleted = false;
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+ // To hide
+chart.Legend.LegendEntries[3].IsDeleted = true;
+// To restore
+chart.Legend.LegendEntries[3].IsDeleted = false;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 ' To hide
 chart.Legend.LegendEntries(3).IsDeleted = True
 ' To restore
@@ -708,7 +919,47 @@ The following code illustrates how to apply formatting to a field while creating
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+ // Create a new Word document
+ WordDocument document = new WordDocument();
+ // Add a new section to the document
+ IWSection section = document.AddSection();
+ // Add a paragraph to the header with center alignment
+ IWParagraph headerParagraph = section.HeadersFooters.Header.AddParagraph();
+ headerParagraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+ // Add text and format it
+ IWTextRange text = headerParagraph.AppendText("Page Number: ");
+ text.CharacterFormat.FontSize = 8;
+ text.CharacterFormat.FontName = "Calibri";
+ // Append a page number field to the header
+ IWField pageField = headerParagraph.AppendField("Page No:", FieldType.FieldPage);
+ // Initialize entity to iterate through field components
+ IEntity entity = pageField;
+ while (entity.NextSibling != null)
+ {
+     // Check if the current entity is a text range
+     if (entity is WTextRange)
+     {
+         // Cast the entity to a WTextRange type
+         WTextRange textRange = entity as WTextRange;
+         // Set character format for text ranges
+         textRange.CharacterFormat.FontSize = 8;
+         textRange.CharacterFormat.FontName = "Calibri";
+         textRange.CharacterFormat.Bold = true;
+     }
+     // Break the loop at the end of the field
+     else if ((entity is WFieldMark) && (entity as WFieldMark).Type == FieldMarkType.FieldEnd)
+         break;
+     // Move to the next sibling item
+     entity = entity.NextSibling;
+ }
+ // Save and Close the document
+ MemoryStream stream = new MemoryStream();
+ document.Save(stream, FormatType.Docx);
+ document.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
  // Create a new Word document
  WordDocument document = new WordDocument();
  // Add a new section to the document
@@ -747,7 +998,7 @@ The following code illustrates how to apply formatting to a field while creating
  document.Close();
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 ' Create a new Word document
 Dim document As New WordDocument()
 ' Add a new section to the document
@@ -799,7 +1050,29 @@ To ensure that tabs are preserved, it is necessary to clear the tab settings in 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Loads the template document
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx);
+// Loop through TOC styles from TOC 1 to TOC 9
+for (int i = 1; i <= 9; i++)
+{
+    // Find the style by name (e.g., "TOC 1", "TOC 2", ..., "TOC 9")
+    Style style = (Style)document.Styles.FindByName("TOC " + i);
+    // If the style exists and is a paragraph style, clear its tab stops
+    if (style != null)
+        (style as WParagraphStyle).ParagraphFormat.Tabs.Clear();
+}
+// Updates the table of contents
+document.UpdateTableOfContents();
+// Save the Word document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+// Close the Word document
+document.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 // Loads the template document
 WordDocument document = new WordDocument("Template.docx");
 // Loop through TOC styles from TOC 1 to TOC 9
@@ -819,7 +1092,7 @@ document.Save("Output.docx");
 document.Close();
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 ' Loads the template document
 Dim document As New WordDocument("Template.docx")
 ' Loop through TOC styles from TOC 1 to TOC 9
@@ -894,13 +1167,34 @@ For more details, refer [Working with styles](https://help.syncfusion.com/docume
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 PointF[] triangle = {
     new PointF(0f, 300f),
     new PointF(200f, 0f),
     new PointF(400f, 300f),
     new PointF(0f, 300f)
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+PointF[] triangle = {
+    new PointF(0f, 300f),
+    new PointF(200f, 0f),
+    new PointF(400f, 300f),
+    new PointF(0f, 300f)
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim triangle As PointF() = {
+    New PointF(0.0F, 300.0F),
+    New PointF(200.0F, 0.0F),
+    New PointF(400.0F, 300.0F),
+    New PointF(0.0F, 300.0F)
 }
 
 {% endhighlight %}

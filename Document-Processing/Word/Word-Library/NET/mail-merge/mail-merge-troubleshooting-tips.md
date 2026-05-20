@@ -36,6 +36,24 @@ public class Employee
    public string LastName { get; set; }   // Matches merge field name
 }
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+public class Employee
+{
+   public string FirstName { get; set; }  // Matches merge field name
+   public string LastName { get; set; }   // Matches merge field name
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Public Class Employee
+    'Matches merge field name
+    Public Property FirstName As String
+    'Matches merge field name
+    Public Property LastName As String
+End Class
+{% endhighlight %}
+
 {% endtabs %}
 *  **Show Field Codes:** Press Alt + F9 in Microsoft Word to reveal field codes and verify they are correct.
 
