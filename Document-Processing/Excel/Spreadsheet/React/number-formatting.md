@@ -164,7 +164,6 @@ You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-
 
 ## See Also
 
-* [Formatting Cells](./formatting)
 * [Text & Cell Formatting](./text-cell-formatting)
 * [Conditional Formatting](./conditional-formatting)
 * [Cell Range](./cell-range)

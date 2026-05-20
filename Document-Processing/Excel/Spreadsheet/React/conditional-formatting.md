@@ -86,6 +86,8 @@ You can clear the defined rules by using one of the following ways,
 * Using the `Clear Rules` option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
 * Using the [`clearConditionalFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
 
+The following code sample shows how to apply different types of conditional formatting, colors, and styles in the Spreadsheet
+
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/spreadsheet/react/conditional-formatting-cs1/app/app.jsx %}
@@ -117,7 +119,7 @@ The following features have some limitations in Conditional Formatting:
 You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to learn how to present and manipulate data.
 
 ## See Also
-* [Formatting Cells](./formatting)
+
 * [Number Formatting](./number-formatting)
 * [Text & Cell Formatting](./text-cell-formatting)
 * [Cell Range](./cell-range)
