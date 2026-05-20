@@ -149,11 +149,12 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of Angular Document Editor](./images/angular_getting_started.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-angular-word-processor).
-
 You can also explore the Document Editor interactively using the live sample below.
 
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Getting-started-angular-word-processor).
+
 
 ## Video tutorial
 

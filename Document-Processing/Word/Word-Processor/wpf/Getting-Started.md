@@ -140,7 +140,7 @@ public partial class MainWindow : Window
 
 ![WPF SfRichTextBoxAdv Control](Getting-Started_images/wpf-sfrichtextboxadv-control.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
 
 ## Add ribbon UI to SfRichTextBoxAdv
 
@@ -306,10 +306,9 @@ N> Prefer using `SfRichTextRibbon` within `RibbonWindow` in your application, si
 2. The application will launch with the **SfRichTextRibbon** and **SfRichTextBoxAdv** controls.  
 3. Press **Ctrl + O** or use the **Open** option in the **SfRichTextRibbon** to open a document, which will be displayed in the **SfRichTextBoxAdv** control, with ribbon options available for editing and formatting, as shown below
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv%20with%20SfRichTextRibbon).
-
 ![WPF SfRichTextBoxAdv Control along with its SfRichTextRibbon](Getting-Started_images/wpf-sfrichtextboxadv-with-sfrichtextribbon.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv%20with%20SfRichTextRibbon).
 
 ## Use SfRichTextBoxAdv as a standard RichTextBox
 
@@ -413,10 +412,10 @@ Use the following code to configure the SfRichTextBoxAdv control as a standard R
 
 {% endtabs %}
 
-You can download a standard RichTextBox example from [GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
-
 When the application is executed, the standard RichTextBox control is displayed as illustrated below.
 ![WPF Standard RichTextBox](Getting-Started_images/wpf-standard-sfrichtextboxadv.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
 
 ## Theme
 

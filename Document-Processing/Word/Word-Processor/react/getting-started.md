@@ -199,11 +199,11 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of React Document Editor](./images/react_getting_started.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-document-editor-component).
-
 You can also explore the Document Editor interactively using the live sample below.
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs3" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-document-editor-component).
 
 ## Video tutorial
 

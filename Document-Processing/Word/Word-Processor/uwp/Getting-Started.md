@@ -143,7 +143,7 @@ public sealed partial class MainPage : Page
 
 ![UWP SfRichTextBoxAdv Control](Getting-Started_images/uwp-sfrichtextboxadv-control.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
 
 ## Use SfRichTextBoxAdv as a standard RichTextBox
 
@@ -249,10 +249,10 @@ Use the following code to configure the SfRichTextBoxAdv control as a standard R
 
 {% endtabs %}
 
-You can download a standard RichTextBox example from [GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
-
 When the application is executed, the standard RichTextBox control is displayed as illustrated below.
 ![UWP Standard RichTextBox](Getting-Started_images/uwp-standard-sfrichtextboxadv.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
 
 
 ## See also
