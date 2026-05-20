@@ -104,7 +104,7 @@ The following CSS files are available in the `node_modules/@syncfusion` package 
 
 ### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
-Modify the `src/app/app.ts` file to render the Document Editor component. Add the Angular Document Editor by using the <ejs-documenteditorcontainer> selector in the template section of the `src/app/app.ts` file.
+Modify `src/app/app.ts` to render the Document Editor component by adding the Angular Document Editor selector in its template section.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
