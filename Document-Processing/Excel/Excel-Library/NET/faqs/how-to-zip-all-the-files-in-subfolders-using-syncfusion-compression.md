@@ -11,7 +11,7 @@ documentation: UG
 You can compress and decompress the files with our Compression library. The following code example illustrates this. Additionally, it shows how to delete the source files from the given path after compression.
 
 {% tabs %} 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 using System;
 using System.Collections.Generic;
 using System.IO;
