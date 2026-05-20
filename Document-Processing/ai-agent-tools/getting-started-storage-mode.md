@@ -22,8 +22,6 @@ The example below uses Azure Blob Storage. The same pattern works with any stora
 | Azure Storage Account | Create from [Azure Portal](https://portal.azure.com) with a blob container |
 | NuGet Packages | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI), [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs) |
 
-N> Any [supported provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) works - just swap in that provider's API key or endpoint credentials.
-
 ## Integration
 
 **Step 1: Install and License**

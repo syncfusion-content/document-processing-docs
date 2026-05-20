@@ -150,13 +150,11 @@ AIAgent aiAgent = chatClient.AsIChatClient().AsAIAgent(
 
 Once the agent is running, enter a topic at the console prompt to start the blog generation workflow:
 
-> *"Write a blog post about the future of AI in healthcare."*
+> *"Write a blog post about the future of AI in health care."*
 
 The agent will draft a title and outline for your review before generating the full content and images.
 
 ### Complete Example
-
-For the full runnable example, refer to:
 
 You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs).
 
