@@ -15,7 +15,7 @@ The following code shows how to set Excel worksheet background image with Intero
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void SetWorksheetBackground()
 {
   //Instantiate the application object
@@ -38,7 +38,30 @@ private void SetWorksheetBackground()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void SetWorksheetBackground()
+{
+  //Instantiate the application object
+  var excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+  //Add a workbook
+  Workbook workbook = excelApp.Workbooks.Add(System.Reflection.Missing.Value);
+
+  //Get the first sheet
+  Worksheet worksheet = (Worksheet)workbook.Sheets["Sheet1"];
+
+  //Set a background picture for the sheet
+  worksheet.SetBackgroundPicture("Syncfusion.png");
+
+  //Save the Excel file
+  workbook.SaveCopyAs("InteropOutput_BackgroundPicture.xlsx");
+
+  //Quit the application
+  excelApp.Quit();
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub SetWorksheetBackground()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -64,7 +87,7 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void SetWorksheetBackground()
 {
   using (ExcelEngine excelEngine = new ExcelEngine())
@@ -87,7 +110,30 @@ private void SetWorksheetBackground()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void SetWorksheetBackground()
+{
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    //Instantiate the application object
+    IApplication application = excelEngine.Excel;
+
+    //Create a workbook
+    IWorkbook workbook = application.Workbooks.Create(1);
+
+    //Get the first sheet
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Set a background picture for the sheet
+    worksheet.PageSetup.BackgoundImage = new Bitmap("Syncfusion.png");
+
+    //Save the workbook
+    workbook.SaveAs("XlsIOOutput_BackgroundPicture.xlsx");
+  }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub SetWorksheetBackground()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object
