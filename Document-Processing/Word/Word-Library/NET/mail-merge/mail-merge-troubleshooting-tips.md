@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Troubleshooting Mail Merge Issues in .NET Word Library
+# Troubleshooting Mail merge Issues in .NET Word Library
 
 ## Why is mail merge not working correctly in DocIO?
 
