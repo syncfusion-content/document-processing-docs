@@ -26,11 +26,11 @@ keywords: Excel, SDK, view, edit, read, Spreadsheet
 
 {% doccard text="JavaScript (ES6)" link="/document-processing/excel/spreadsheet/javascript-es6/getting-started" icon="/document-processing/excel/spreadsheet/javascript-es6/images/JavaScript(ES6).svg" %}
 
-{% doccard text="UMP" link="/document-processing/excel/spreadsheet/uwp/getting-started" icon="/document-processing/excel/spreadsheet/uwp/images/UWP.svg" %}
+{% doccard text="UWP" link="/document-processing/excel/spreadsheet/uwp/getting-started" icon="/document-processing/excel/spreadsheet/uwp/images/UWP.svg" %}
 
 {% doccard text="Windows Forms" link="/document-processing/excel/spreadsheet/winforms/getting-started" icon="/document-processing/excel/spreadsheet/winforms/images/WindowsForms.svg" %}
 
-{% doccard text="WPF" link="/document-processing/excel/spreadsheet/wpf/getting-started" icon="/document-processing/excel/spreadsheet/winforms/images/WPF.svg" %}
+{% doccard text="WPF" link="/document-processing/excel/spreadsheet/wpf/getting-started" icon="/document-processing/excel/spreadsheet/wpf/images/WPF.svg" %}
 
 {% enddoccards %}
 
