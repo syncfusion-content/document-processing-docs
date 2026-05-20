@@ -26,7 +26,7 @@ Syncfusion.DocIO.Base<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart
 Syncfusion.DocIO.ClientProfile<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart.Base<br/></td></tr>
 <tr>
 <td>
-{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-blazor)' | markdownify}}<br/></td><td>
+{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-asp-net-core)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-blazor)' | markdownify}}<br/></td><td>
 Syncfusion.DocIO.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.OfficeChart.Portable<br/>Syncfusion.Pdf.Portable<br/>Syncfusion.DocIORenderer.Portable<br/>Syncfusion.Pdf.Imaging.Portable<br/>Syncfusion.MetafileRenderer.Portable<br/>SkiaSharp.HarfBuzz<br/>Syncfusion.SkiaSharpHelper.Portable</td></tr>
 <tr>
 <td>
@@ -57,6 +57,10 @@ Assembly<br/></th></tr></thead>
 <td>
 {{'[ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-asp-net)' | markdownify}}<br/></td><td>
 Syncfusion.DocIO.Base<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart.Base<br/></td></tr>
+<tr>
+<td>
+{{'[Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-xamarin)' | markdownify}}<br/></td><td>
+Syncfusion.DocIO.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.OfficeChart.Portable<br/>Syncfusion.Pdf.Portable<br/>Syncfusion.DocIORenderer.Portable<br/>Syncfusion.Pdf.Imaging.Portable<br/>Syncfusion.MetafileRenderer.Portable<br/>SkiaSharp.HarfBuzz<br/>Syncfusion.SkiaSharpHelper.Portable<br/></td></tr>
 </table>
 
 N> 1. Starting with the v24.1.x, if you reference "Syncfusion.DocIORenderer", you have to add the "Syncfusion.Pdf.Imaging" assembly reference in your projects to perform Word to Image conversion.
