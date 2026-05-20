@@ -36,5 +36,5 @@ The [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-edi
 * [Getting Started](getting-started-webapp)
 * [API Reference](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.spreadsheet.sfspreadsheet.html)
 * [Online Demos](https://document.syncfusion.com/demos/spreadsheet-editor/blazor-server/spreadsheet/overview)
-* [GitHub Samples](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples)
+* [GitHub Samples](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet)
 * [Release Notes](https://help.syncfusion.com/document-processing/release-notes)
