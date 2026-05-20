@@ -43,5 +43,5 @@ N> Starting with v20.1.0.x, if you reference Syncfusion<sup>&reg;</sup> OCR proc
 * Image into searchable PDF or PDF/A.
 * Improved accessibility.
 * Post-processing.
-* Compatible with .NET Framework 4.5 and above.
+* Compatible with .NET Framework 4.6.2 and above.
 * Compatible with .NET Core 2.0 and above.
