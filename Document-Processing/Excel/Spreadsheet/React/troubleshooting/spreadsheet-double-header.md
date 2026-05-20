@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Double header issue in React Spreadsheet
-description: Fix duplicate or misplaced header caused by multiple refresh/resize actions in React Spreadsheet.
+title: Double header issue in React Spreadsheet component | Syncfusion
+description: Resolve duplicate or misplaced header caused by multiple refresh/resize actions in React Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
