@@ -13,6 +13,39 @@ Essential&reg; XlsIO allows you to convert an Excel worksheet to a high-resoluti
 The following code example illustrates how to convert an Excel worksheet to a high-resolution image.
 
 {% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Excel2013;
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Convert the worksheet to EMF
+    Image image = worksheet.ConvertToImage(1, 1, 22, 9,
+    ImageType.Metafile, null);
+
+    //Reset the resolution of the image
+    image = ResetResolution(image as Metafile, 300);
+
+    //Save the image
+    image.Save("Output.jpg", ImageFormat.Jpeg);
+}
+
+//Helper method to reset the resolution of the image
+private static Bitmap ResetResolution(Image metaFile, float resolution)
+{
+    int newWidth = (int)(metaFile.Width * resolution / metaFile.HorizontalResolution);
+    int newHeight = (int)(metaFile.Height * resolution / metaFile.VerticalResolution);
+    Bitmap bitmap = new Bitmap(newWidth, newHeight);
+    bitmap.SetResolution(resolution, resolution);
+    Graphics graphics = Graphics.FromImage(bitmap);
+    graphics.DrawImage(metaFile, 0, 0);
+    graphics.Dispose();
+    return bitmap;
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
