@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started with ASP.NET Core DOCX Editor
 
-Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET Core application. 
+Syncfusion® ASP.NET Core DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET Core application. 
 
 ## Steps to create an ASP.NET Core DOCX Editor
 
-This section briefly explains about how to include [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) control in your ASP.NET Core application using Visual Studio.
+This section briefly explains how to include [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) control in your ASP.NET Core application using Visual Studio.
 
 ### Prerequisites
 
@@ -21,16 +21,16 @@ This section briefly explains about how to include [ASP.NET Core DOCX Editor](ht
 
 ### Create ASP.NET Core web application with Razor pages
 
-Create a new ASP.NET Core web application using one of the following methods:
+Create a new ASP.NET Core web application using the following method:
 
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio#create-a-razor-pages-web-app)
-* [Create a Project using Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Extension](https://ej2.syncfusion.com/aspnetcore/documentation/getting-started/razor-pages)
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Nuget packages
+
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core NuGet packages
 
 To add **ASP.NET Core Document Editor** component in the application, follow the steps below.
- - open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
- - search and install the following package
+ - Open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
+ - Search and install the following package
     - [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/)
     
 Alternatively, you can utilize the following package manager command to achieve the same.
@@ -43,11 +43,11 @@ Install-Package Syncfusion.EJ2.AspNet.Core -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for license validation.”
+N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for license validation.
 
 ### Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Tag Helper
 
-Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelper.
+Open `~/Views/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelper.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_ViewImports.cshtml" %}
@@ -59,7 +59,7 @@ Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 
 ### Add Themes and Script References
 
-Here, the theme and script is referred using CDN inside the `<head>` of `~/Pages/Shared/_Layout.cshtml` file as follows,
+Here, the theme and scripts are referenced using CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` file as follows,
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -79,7 +79,7 @@ N> Refer the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/
 
 ### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
 
-Also, register the script manager `<ejs-script>` at the end of `<body>` in the ASP.NET Core application as follows.
+Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the `~/Views/Shared/_Layout.cshtml` file as follows.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -95,18 +95,26 @@ Also, register the script manager `<ejs-script>` at the end of `<body>` in the A
 
 ### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document Editor tag helper in `~/Pages/Index.cshtml` page.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document Editor tag helper in `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/document-editor-container/getting-started/tagHelper %}
+
+<ejs-documenteditorcontainer id="container" height="620px"></ejs-documenteditorcontainer>
+
 {% endhighlight %}
 {% endtabs %}
 
 ### Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document Editor control will be rendered in the default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document Editor control will be rendered in the default web browser as shown below.
 
-![ASP.NET Core DocumentEditor Control](images/documenteditor-control.png)
+![Output of ASP.NET Core DOCX Editor](./images/aspnetcore-docx-editor.png)
 
 N> You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/DocumentEditor/ASP.NET%20Core%20Tag%20Helper%20Examples).
+
+## See also
+
+- [Open a document](./import)
+- [Save a document](./export)
+- [Collaborative Editing](./collaborative-editing/overview)
