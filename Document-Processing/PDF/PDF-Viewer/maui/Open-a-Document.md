@@ -59,6 +59,18 @@ PdfViewer.DocumentSource = await response.Content.ReadAsByteArrayAsync();
 {% endhighlight %}
 {% endtabs %}
 
+## Loading a PDF in code-behind/programmatically
+
+In code-behind a PDF can be loaded to [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) just by using the [LoadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_LoadDocument_System_IO_Stream_System_String_System_Nullable_Syncfusion_Maui_PdfViewer_FlattenOptions__) method without the need of the “PdfViewerViewModel” class described in the previous section. Use the following code snippet in the code-behind of the XAML page.
+
+{% tabs %}
+{% highlight c# %}
+//Load the document tp the PDF viewer.
+Stream pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("GettingStarted.Assets.PDF_Succinctly.pdf");
+PdfViewer.LoadDocument(pdfDocumentStream);
+{% endhighlight %}
+{% endtabs %}
+
 ## Unload a document
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to unload and clear the resources occupied by the PDF document loaded using the [UnloadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method, as shown below.
@@ -73,9 +85,9 @@ PdfViewer.UnloadDocument();
 {% endhighlight %}
 {% endtabs %}
 
-## Opening a PDF document with annotations
+## Opening a unsupported annotations
 
-The .NET MAUI PDF Viewer does not currently support annotations comparable to Xamarin.Forms. However, it is possible to view the unsupported annotations in a non-interactive manner. To achieve this, provide the [flattenOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FlattenOptions.html) (an optional parameter) as [Unsupported](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FlattenOptions.html#Syncfusion_Maui_PdfViewer_FlattenOptions_Unsupported) in the [LoadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_LoadDocument_System_IO_Stream_System_String_System_Nullable_Syncfusion_Maui_PdfViewer_FlattenOptions__) methods. See the following code example:
+The .NET MAUI PDF Viewer it is possible to view the unsupported annotations like 3D, rich media and sount annotations in a non-interactive manner. To achieve this, provide the [flattenOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FlattenOptions.html) (an optional parameter) as [Unsupported](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FlattenOptions.html#Syncfusion_Maui_PdfViewer_FlattenOptions_Unsupported) in the [LoadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_LoadDocument_System_IO_Stream_System_String_System_Nullable_Syncfusion_Maui_PdfViewer_FlattenOptions__) methods. See the following code example:
 
 {% tabs %}
 {% highlight c# hl_lines="2" %}
