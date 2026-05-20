@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Fix double header issue in React Spreadsheet
-description: Fix duplicate or misplaced header caused by multiple refresh/resize actions and redundant lifecycle calls.
+title: Double header issue in React Spreadsheet
+description: Fix duplicate or misplaced header caused by multiple refresh/resize actions in React Spreadsheet.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -12,7 +12,7 @@ documentation: ug
 In some scenarios, the Spreadsheet header appears twice or is rendered below the data instead of at the top. This typically occurs when multiple refresh or resize actions are triggered simultaneously or in rapid succession.
 
 **Common cause:**
-```javascript
+```js
   this.spreadsheet.refresh();
   this.spreadsheet.resize(); // Multiple operations queued without waiting
 ```
