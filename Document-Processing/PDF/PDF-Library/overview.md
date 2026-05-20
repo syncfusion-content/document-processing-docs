@@ -11,7 +11,7 @@ keywords: PDF, SDK, Automation, API, create, read, write
 
 {% doccards %}
 
-{% doccard text="ASP.NET Core" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core" icon="./NET/images/ASP.NET-Core.svg" %}
+{% doccard text="ASP.NET Core" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core" icon="./NET/images/ASP.NET-Core.png" %}
 
 {% doccard text="ASP.NET MVC" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc" icon="./NET/images/ASP.NET-Mvc.svg" %}
 
@@ -25,11 +25,11 @@ keywords: PDF, SDK, Automation, API, create, read, write
 
 {% doccard text=".NET MAUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui" icon="./NET/images/.NET-MAUI.svg" %}
 
-{% doccard text="WinUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui" icon="./NET/images/WinUI.svg" %}
+{% doccard text="WinUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui" icon="./NET/images/WinUI.png" %}
 
 {% doccard text="Flutter" link="/document-processing/pdf/pdf-library/flutter/getting-started" icon="./NET/images/Flutter.svg" %}
 
-{% doccard text="Linux" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-linux" icon="./NET/images/Linux.svg" %}
+{% doccard text="Linux" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-linux" icon="./NET/images/Linux.png" %}
 
 {% doccard text="Mac" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-mac-os" icon="./NET/images/Mac.svg" %}
 
