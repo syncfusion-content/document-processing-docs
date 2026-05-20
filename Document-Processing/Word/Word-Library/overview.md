@@ -1,6 +1,6 @@
 ---
 title: Word Document Processing Library | Syncfusion
-description:  Syncfusion<sup>&reg;</sup> Word document processing library allows you create, read and write Word documents through code in .NET and Java applications without Microsoft Office dependencies.
+description: Syncfusion® Word document processing library allows you create, read and write Word documents through code in .NET and Java applications without Microsoft Office dependencies.
 platform: document-processing
 control: general
 documentation: UG

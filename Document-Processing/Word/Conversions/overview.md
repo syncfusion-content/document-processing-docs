@@ -1,6 +1,6 @@
 ---
 title: Word Document Conversion Library | Syncfusion
-description:  Syncfusion<sup>&reg;</sup> Word Conversion Library converts Word to several file formats like PDF, image, HTML, RTF, ODT, Markdown, Text without Microsoft Office dependencies.
+description: Syncfusion® Word Conversion Library converts Word to several file formats like PDF, image, HTML, RTF, ODT, Markdown, Text without Microsoft Office dependencies.
 platform: document-processing
 control: general
 documentation: UG
