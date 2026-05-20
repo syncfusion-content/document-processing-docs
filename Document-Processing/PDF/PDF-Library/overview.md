@@ -11,9 +11,9 @@ keywords: PDF, SDK, Automation, API, create, read, write
 
 {% doccards %}
 
-{% doccard text="ASP.NET Core" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core" icon="./NET/images/ASP.NET-Core.png" %}
+{% doccard text="ASP.NET Core" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core" icon="./NET/images/ASP.NET-Core.svg" %}
 
-{% doccard text="ASP.NET MVC" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc" icon="./NET/images/ASP.NET-MVC.png" %}
+{% doccard text="ASP.NET MVC" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc" icon="./NET/images/ASP.NET-Mvc.svg" %}
 
 {% doccard text="Blazor" link="/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor" icon="./NET/images/Blazor.svg" %}
 
@@ -25,13 +25,19 @@ keywords: PDF, SDK, Automation, API, create, read, write
 
 {% doccard text=".NET MAUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui" icon="./NET/images/.NET-MAUI.svg" %}
 
-{% doccard text="WinUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui" icon="./NET/images/WinUI.png" %}
+{% doccard text="WinUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui" icon="./NET/images/WinUI.svg" %}
 
 {% doccard text="Flutter" link="/document-processing/pdf/pdf-library/flutter/getting-started" icon="./NET/images/Flutter.svg" %}
 
-{% doccard text="Linux" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-linux" icon="./NET/images/Linux.png" %}
+{% doccard text="Linux" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-linux" icon="./NET/images/Linux.svg" %}
 
-{% doccard text="Mac" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-mac-os" icon="./NET/images/Apple.png" %}
+{% doccard text="Mac" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-mac-os" icon="./NET/images/Mac.svg" %}
+
+{% doccard text="Azure" link="/document-processing/pdf/pdf-library/net/create-pdf-document-in-azure" icon="./NET/images/Azure.svg" %}
+
+{% doccard text="AWS" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-aws" icon="./NET/images/AWS.svg" %}
+
+{% doccard text="GCP" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-gcp" icon="./NET/images/Google-Cloud.svg" %}
 
 {% enddoccards %}
 
