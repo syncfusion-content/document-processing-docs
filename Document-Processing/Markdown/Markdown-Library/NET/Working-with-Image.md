@@ -6,7 +6,7 @@ control: Markdown
 documentation: UG
 ---
 
-# Working with Images
+# Working with Images in Markdown Library
 
 Images are essential elements of Markdown documents that enhance visual communication and documentation. The Syncfusion<sup>&reg;</sup> Markdown library facilitates adding, modifying, and managing images in a Markdown document. Images in Markdown are represented by the `MdPicture` class, which is an inline element that can be added to a `MdParagraph`. The library supports both URL-based and byte array-based images, allowing you to reference external image files or embed images directly into the document.
 
