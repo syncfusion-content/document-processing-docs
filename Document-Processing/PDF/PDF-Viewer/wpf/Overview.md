@@ -41,7 +41,7 @@ The PDF Viewer control supports viewing, reviewing, and printing PDF files in th
 * [Organize pages](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/organize-pages)
 * [Pdf layers](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/working-with-pdf-layers)
 * [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/forms/overview)
-* [Customize contextmenu](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/customizing-context-menu)
+* [Customize context menu](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/customizing-context-menu)
 * [Localization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/localization)
 * [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/handwritten-signature)
 * Right to left (RTL)
