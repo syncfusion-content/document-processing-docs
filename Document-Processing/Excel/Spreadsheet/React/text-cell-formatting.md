@@ -49,7 +49,7 @@ You can align text in a cell either vertically or horizontally using the  [`text
 
 Indentation helps enhance the visual appearance of text in cells by adding space before the text content.
 
-You can apply cell text indentation using the following Way:
+You can apply cell text indentation using the following property:
 
 | Property | Type | Description |
 |----------|------|-------------|
@@ -61,7 +61,7 @@ You can apply text indentation in a cell using the [`textIndent`](https://ej2.sy
 
 Fill color (background color) is used to highlight cells or ranges of cells across the workbook.
 
-You can apply background colors to cells using the following approach:
+You can apply background colors to cells using the following property:
 
 | Property | Type | Description |
 |----------|------|-------------|
