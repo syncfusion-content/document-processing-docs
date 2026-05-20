@@ -8,15 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Angular DOCX Editor
+# Getting Started with Syncfusion<sup>&reg;</sup> Angular DOCX Editor
 
-Syncfusion® Angular DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in an Angular application. 
+Syncfusion<sup style="font-size:70%">&reg;</sup> [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a Document Editor in an Angular application. 
 
-## Steps to create an Angular DOCX Editor
+## Steps to create a Document Editor
 
 ### Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
+[System requirements for Angular Document Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
 
 ### Setup Angular environment
 
@@ -72,9 +72,9 @@ In this guide, CSS is selected as the stylesheet format.
 cd documenteditor-app
 ```
 
-### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
+### Install the Document Editor packages
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
+The Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
 
 To install the Document Editor component, use the following command:
 
@@ -102,9 +102,9 @@ The following CSS files are available in the `node_modules/@syncfusion` package 
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
+### Add the Document Editor component
 
-Modify the `src/app/app.ts` file to render the Document Editor component. Add the Angular Document Editor by using the <ejs-documenteditorcontainer> selector in the template section of the `src/app/app.ts` file.
+Modify the `src/app/app.ts` file to render the Document Editor component. Add the Document Editor by using the <ejs-documenteditorcontainer> selector in the template section of the `src/app/app.ts` file.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -145,7 +145,7 @@ Run the application using the following command:
 ng serve --open
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The Angular Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+After the application starts, open the localhost URL shown in the terminal. The Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
 ![Output of Angular Document Editor](./images/angular_getting_started.png)
 
