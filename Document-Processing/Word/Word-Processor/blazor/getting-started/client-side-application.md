@@ -14,7 +14,7 @@ Syncfusion® Blazor DOCX Editor (Document Editor) enables you to create, edit, v
 
 ## Steps to create a Blazor WASM DOCX Editor
 
-This section explains how to include the [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in a Blazor WebAssembly (WASM) application using Visual Studio and Visual Studio Code.
+This section explains how to include the [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component in a Blazor WebAssembly (WASM) application using Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -163,7 +163,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor 
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Document Editor component in your default web browser. The output will appear as follows:
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBpDiLugARSruZb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DocumentEditor](../images/blazor-document-editor.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBpDiLugARSruZb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor DOCX Editor in WASM](../images/blazor-docx-editor.png)
 
