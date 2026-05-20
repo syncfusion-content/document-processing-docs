@@ -1,6 +1,6 @@
 ---
 title: PowerPoint Presentation Processing Library | Syncfusion
-description: Syncfusion® PowerPoint library allows you create, read and write PowerPoint presentations through code in .NET applications without Microsoft Office dependencies.
+description: Syncfusion PowerPoint library allows you create, read and write PowerPoint presentations through code in .NET apps without Microsoft Office dependencies.
 platform: document-processing
 control: general
 documentation: UG
@@ -11,7 +11,7 @@ keywords: PowerPoint, Presentation, slides, SDK, Automation, API, create, read, 
 
 {% doccards %}
 
-{% doccard text="ASP.NET Core" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp" icon="/document-processing/powerpoint/powerpoint-library/net/images/ASP.NET Core.svg" %}
+{% doccard text="ASP.NET Core" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp" icon="/document-processing/powerpoint/powerpoint-library/net/images/ASP.NET Core.png" %}
 
 {% doccard text="ASP.NET MVC" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc" icon="/document-processing/powerpoint/powerpoint-library/net/images/ASP.NET MVC.svg" %}
 
@@ -37,11 +37,11 @@ keywords: PowerPoint, Presentation, slides, SDK, Automation, API, create, read, 
 
 {% doccard text="ASP.NET Core Web API" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-ASP-NET-Core-WEB-API" icon="/document-processing/powerpoint/powerpoint-library/net/images/NET.svg" %}
 
-{% doccard text="Azure" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-Azure" icon="/document-processing/powerpoint/powerpoint-library/net/images/PowerPoint Library.svg" %}
+{% doccard text="Azure" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-Azure" icon="/document-processing/powerpoint/powerpoint-library/net/images/Azure.svg" %}
 
-{% doccard text="Amazon Web Service (AWS)" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-AWS" icon="/document-processing/powerpoint/powerpoint-library/net/images/PowerPoint Library.svg" %}
+{% doccard text="Amazon Web Service (AWS)" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-AWS" icon="/document-processing/powerpoint/powerpoint-library/net/images/AWS.svg" %}
 
-{% doccard text="Google Cloud Platform (GCP)" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-Google-Cloud-Platform" icon="/document-processing/powerpoint/powerpoint-library/net/images/PowerPoint Library.svg" %}
+{% doccard text="Google Cloud Platform (GCP)" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-Google-Cloud-Platform" icon="/document-processing/powerpoint/powerpoint-library/net/images/Google Cloud.svg" %}
 
 {% enddoccards %}
 
