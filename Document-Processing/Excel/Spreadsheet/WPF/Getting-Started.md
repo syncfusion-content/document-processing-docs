@@ -8,9 +8,29 @@ documentation: ug
 ---
 
 # Getting Started with WPF Spreadsheet (SfSpreadsheet)
-This section helps you to get started with the SfSpreadsheet
+This section briefly explains how to include the Syncfusion<sup>®</sup> WPF SfSpreadsheet component in WPF App using Visual Studio
+
+## Prerequisites
+* [System requirements for WPF components](https://help.syncfusion.com/wpf/system-requirements)
+
+## Create a new WPF App in Visual Studio
+
+You can create a **Spreadsheet WPF Application** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/get-started/create-app-visual-studio) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> WPF](https://help.syncfusion.com/wpf/visual-studio-integration/template-studio).
 
 ## Assemblies Deployment
+
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> WPF SfSpreadsheet and Themes NuGet in the App (Recommended)
+
+To add **WPF SfSpreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install 
+
+•	[Syncfusion.SfSpreadsheet.WPF](https://www.nuget.org/packages/Syncfusion.SfSpreadsheet.WPF)
+
+To ensure the control is styled correctly, install the theme package:
+
+•	[Syncfusion.Themes.Windows11Light.WPF](https://www.nuget.org/packages/Syncfusion.Themes.Windows11Light.WPF)
+
+### Alternate Approach: Add Dependencies
+
 Below table describes, list of assemblies required to be added in project when the SfSpreadsheet control is used in your application.
 
 <table>
@@ -44,6 +64,13 @@ Syncfusion.XlsIO.Base.dll</td><td>
 Contains the base classes which is responsible for read and write in Excel files, Worksheet Manipulations, Formula calculations etc.</td></tr>
 </table>
 
+Below are the additional DLLs required for applying themes and skinning to the SfSpreadsheet control:
+
+<table> <tr> <th>Assembly</th> <th>Description</th> </tr> <tr> <td>Syncfusion.Themes.Windows11Light.WPF.dll</td> <td>Contains the Windows 11 Light theme style for Syncfusion WPF controls.</td> </tr> <tr> <td>Syncfusion.SfSkinManager.WPF.dll</td> <td>Contains the SfSkinManager which helps to apply different themes to Syncfusion WPF controls.</td> </tr> </table>
+
+N> You need to add these references to your project to use the skinning and theming capabilities of the SfSpreadshee
+
+
 Below are the assemblies list that can be added when you want to enable certain features in SfSpreadsheet control. 
 
 <table>
@@ -73,194 +100,75 @@ Syncfusion.Pdf.Base.dll</td><td>
 Contains the base and fundamental classes for creating PDF.</td></tr>
 </table>
 
-## Create a Simple Application with Spreadsheet
+## Add WPF SfSpreadsheet component
 
 SfSpreadsheet control can be added into the application either via designer or via coding. 
 
 ### Adding a Control via Designer
 
-1.Create new WPF application in Visual Studio.
+1. Add theme and skin manager namespace to style the control correctly, add the Skin Manager namespace in the XAML code and apply the theme 
 
-2.Open the Visual Studio **Tool** **box**. Navigate to “Syncfusion<sup>®</sup> Controls” tab, and find the  SfSpreadsheet/SfSpreadsheetRibbon toolbox items 
+
+```Xaml
+  xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF" syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}"
+```
+
+2.Open the Visual Studio **Tool** **box**. Navigate to Syncfusion<sup>®</sup> Controls tab, and find the  SfSpreadsheet/SfSpreadsheetRibbon toolbox items 
 
 ![WPF Spreadsheet Getting-Started](Getting-Started_images/wpf-spreadsheet-getting-started.jpeg)
 
-Syncfusion<sup>®</sup> Control tab
-   {:.caption}
-
-3.Drag `SfSpreadsheet` and drop in the Designer area from the Toolbox
-
-![WPF Spreadsheet Drag and Drop](Getting-Started_images/wpf-spreadsheet-dragdrop.jpeg)
-
-_For_ _Spreadsheet_
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfSpreadsheet x:Name = spreadsheet />
-{% endhighlight %}
-{% endtabs %}
-
-4.Ribbon can be added to the application by dragging `SfSpreadsheetRibbon` to the Designer area.
-
-5.To make an interaction between Ribbon items and `SfSpreadsheet`, bind the `SfSpreadsheet` as DataContext to the `SfSpreadsheetRibbon`.
-
-_For_ _Ribbon_
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfSpreadsheetRibbon DataContext= "{Binding ElementName=spreadsheet}"  />
-{% endhighlight %}
-{% endtabs %}
+3.Drag `SfSpreadsheetRibbon` and drop in the Designer area from the Toolbox
 
 ![WPF Spreadsheet Interaction with Ribbon](Getting-Started_images/wpf-spreadsheet-interaction-with-ribbon.jpeg)
 
+```Xaml
+<syncfusion:SfSpreadsheetRibbon />
+```
+
+4.Spreadsheet can be added to the application by dragging `SfSpreadsheet` to the Designer area.
+
+```Xaml
+<syncfusion:SfSpreadsheet x:Name = spreadsheet />
+```
+
+N> Declare a name for the Spreadsheet component as shown above for reference.
+
+![WPF Spreadsheet Drag and Drop](Getting-Started_images/wpf-spreadsheet-dragdrop.jpeg)
+
+5.To make an interaction between Ribbon items and `SfSpreadsheet`, bind the `SfSpreadsheet` as DataContext to the `SfSpreadsheetRibbon`.
+
+```Xaml
+<syncfusion:SfSpreadsheetRibbon DataContext= "{Binding ElementName=spreadsheet}"  />
+<syncfusion:SfSpreadsheet x:Name = spreadsheet />
+```
+
+
 ### Adding Control via Coding
 
-Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_._Spreadsheet_” and it can be created programmatically either by using XAML or C# code. 
+Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_._Spreadsheet_” and it can be created programmatically by using XAML  
 
-_For_ _Spreadsheet_
-
-{% tabs %}
-{% highlight xaml %}
-<Window x:Class="SpreadsheetDemo.MainWindow"
-xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-xmlns:mc="http://schemas.openxmlformats.org/markup- compatibility/2006"
-xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
-syncfusion:SkinStorage.VisualStyle="Office2013"
-mc:Ignorable="d">
-<syncfusion:SfSpreadsheet x:Name="spreadsheet" FormulaBarVisibility="Visible"/>
+```Xaml
+<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}"
+        mc:Ignorable="d">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <syncfusion:SfSpreadsheetRibbon Grid.Row="0" DataContext="{Binding ElementName=spreadsheet}"  />
+        <syncfusion:SfSpreadsheet Name="spreadsheet" Grid.Row="1" />
+    </Grid>
 </Window>
-{% endhighlight %}
-{% highlight c# %}
-SfSpreadsheet spreadsheet = new SfSpreadsheet();
-this.grid.Children.Add(spreadsheet);
-{% endhighlight %}
-{% endtabs %}
-
-N> To add the `SfSpreadsheetRibbon` in your application, use the `RibbonWindow` since the backstage of Ribbon will be opened only when the ribbon is loaded under the `RibbonWindow`
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:RibbonWindow x:Class="SpreadsheetDemo.MainWindow"
-xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
-syncfusion:SkinStorage.VisualStyle="Office2013"
-mc:Ignorable="d">
-</syncfusion:RibbonWindow>
-{% endhighlight %}
-{% endtabs %}
-
-_You_ _can_ _get_ _the_ _following_ _output_ _when_ _execute_ _the_ _application_.
+```
 
 ![WPF Spreadsheet Control](Getting-Started_images/wpf-spreadsheet-control.jpeg)
 
-## Creating a new Excel Workbook
-
-A new workbook can be created by using a [Create](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Create_System_Int32_) method with specified number of worksheets. By default, a workbook will be created with single worksheet.
-
-{% tabs %}
-{% highlight c# %}
-spreadsheet.Create(2);
-{% endhighlight %}
-{% endtabs %}
-
-## Opening an existing Excel Workbook
-
-The Excel Workbook can be opened in SfSpreadsheet using the [Open](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Open_Syncfusion_XlsIO_IWorkbook_) method in various ways,
-
-{% tabs %}
-{% highlight c# %}
-//Using Stream,
-spreadsheet.Open (Stream file);
-
-//Using String,
-spreadsheet.Open (string file);
-
-//Using Workbook,
-spreadsheet.Open(IWorkbook workbook);
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
-spreadsheet.Open (@"..\..\Data\Outline.xlsx");
-{% endhighlight %}
-{% endtabs %}
-
-![WPF Spreadsheet Excel File Opening](Getting-Started_images/wpf-spreadsheet-excel-file-opening.jpeg)
-
-Opening Excel File in SfSpreadsheet
-   {:.caption}
-
-## Saving the Excel Workbook
-
-The Excel workbook can be saved in SfSpreadsheet using [Save](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Save) method. If the workbook already exists in the system drive, it will be saved in the same location, otherwise Save Dialog box opens to save the workbook in user specified location. 
-
-{% tabs %}
-{% highlight c# %}
-spreadsheet.Save();
-{% endhighlight %}
-{% endtabs %}
-
-You can also use [SaveAs](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SfSpreadsheet.html#Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_SaveAs) method directly to save the existing excel file with modifications.
-
-The `SaveAs` method in SfSpreadsheet can be used in various ways,
-
-{% tabs %}
-{% highlight c# %}
-//Using Stream,
-spreadsheet.SaveAs (Stream file);
-
-//Using String,
-spreadsheet.SaveAs (string file);
-
-//For Dialog box,
-spreadsheet.SaveAs();
-{% endhighlight %}
-{% endtabs %}
-
-## Displaying Charts and Sparklines
-
-For importing charts and sparklines in SfSpreadsheet, add the following assembly as reference into the application.
- 
-Assembly: **Syncfusion.SfSpreadsheetHelper.WPF.dll**  
-
-### Charts
- 
-Create an instance of Syncfusion.UI.Xaml.SpreadsheetHelper.[GraphicChartCellRenderer](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.SpreadsheetHelper.GraphicChartCellRenderer.html) and add that renderer into [GraphicCellRenderers](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicModel.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicModel_GraphicCellRenderers) collection by using the helper method [AddGraphicChartCellRenderer](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicCellHelper_AddGraphicChartCellRenderer_Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_IGraphicCellRenderer_) which is available under the namespace `Syncfusion.UI.Xaml.Spreadsheet.GraphicCells`. 
-
-{% tabs %}
-{% highlight c# %}
-public MainWindow()
-{
-  InitializeComponent();
-  
-  //For importing charts,
-  this.spreadsheet.AddGraphicChartCellRenderer(new GraphicChartCellRenderer());
-}
-{% endhighlight %}
-{% endtabs %}
-
-### Sparklines
-
-Create an instance of Syncfusion.UI.Xaml.SpreadsheetHelper.[SparklineCellRenderer](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.SpreadsheetHelper.SparklineCellRenderer.html) and add that renderer into the Spreadsheet by using the helper method [AddSparklineCellRenderer](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicCellHelper_AddSparklineCellRenderer_Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Syncfusion_UI_Xaml_Spreadsheet_CellRenderer_ISpreadsheetCellRenderer_) which is available under the namespace `Syncfusion.UI.Xaml.Spreadsheet.GraphicCells`.
-
-{% tabs %}
-{% highlight c# %}
-public MainWindow()
-{
-  InitializeComponent();
-      
-  //For importing sparklines,
-  this.spreadsheet.AddSparklineCellRenderer(new SparklineCellRenderer());
-}
-{% endhighlight %}
-{% endtabs %}
-
-
-N> You can refer to our [WPF Spreadsheet](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+## See Also
+- [Workbook operations such as creating, opening, and saving a workbook](Workbook-Operations)
