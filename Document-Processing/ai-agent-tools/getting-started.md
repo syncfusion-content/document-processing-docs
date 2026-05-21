@@ -61,8 +61,6 @@ Use the table below to pick the right mode for your application, then follow the
 
 Both modes expose the same AI tools. The difference is only in how documents are stored between tool calls.
 
-![Mode selection flowchart](getting-started-mode-flowchart.png)
-
 ## See Also
 
 - [In-Memory Mode](./getting-started-in-memory-mode)
