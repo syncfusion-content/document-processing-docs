@@ -44,11 +44,15 @@ By default, the `ej2‑quickstart` repository is preconfigured with the [@syncfu
  
 To install only the Document Editor component, replace the dependency with [@syncfusion/ej2-documenteditor](https://www.npmjs.com/package/@syncfusion/ej2-documenteditor), as shown below:
 
-```bash
+{% tabs %}
+{% highlight json tabtitle="~/package.json" %}
+
 "dependencies": {
   "@syncfusion/ej2-documenteditor": "*"
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Install the dependent npm packages using the following command.
 
