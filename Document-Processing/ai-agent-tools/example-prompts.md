@@ -13,9 +13,11 @@ Speed up your document automation using these example prompts for Syncfusion Doc
 
 ## Document Processing Prompts
 
+You can test the following prompts in this [demo](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Examples/WPF).
+
 ### PDF
 
-The following prompts demonstrate PDF security, text extraction, and manipulation.
+The following prompts allow users to test the security, text extraction, and manipulation functionalities of PDF tools.
 
 {% promptcards %}
 {% promptcard Find Text and Its Coordinates %}
@@ -37,7 +39,7 @@ Load the sensitive HR performance review document 'performance_review_Q4.pdf' fr
 
 ### Word
 
-The following prompts demonstrate Word document merging, form filling, and template management.
+The following prompts allow users to test the merging, form filling, and template management functionalities of Word tools.
 
 {% promptcards %}
 {% promptcard Merge Word Documents %}
@@ -62,7 +64,7 @@ Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {
 
 ### Excel
 
-The following prompts demonstrate Excel pivot tables, formatting, and worksheet security.
+The following prompts allow users to test the pivot table, formatting, and worksheet security functionalities of Excel tools.
 
 {% promptcards %}
 {% promptcard Add Dropdown List for a Specific Range %}
@@ -84,7 +86,7 @@ Load a sales performance dashboard workbook ‘car_brands.xlsx’ from {InputDir
 
 ### PowerPoint
 
-The following prompts demonstrate PowerPoint merging, text replacement, and slide security.
+The following prompts allow users to test the merging, text replacement, and slide security functionalities of PowerPoint tools.
 
 {% promptcards %}
 {% promptcard Find and Replace Text %}
@@ -106,7 +108,7 @@ Load the investor pitch deck 'investor_pitch_Q1_2026.pptx' from {InputDir}. Get 
 
 ### Conversions
 
-The following prompts demonstrate document conversion with encryption, watermarking, and merging.
+The following prompts allow users to test document conversion functionalities with encryption, watermarking, and merging of Conversions tool.
 
 {% promptcards %}
 {% promptcard Convert Word to PDF and Add Watermark %}
@@ -122,7 +124,7 @@ Convert the sales conference presentation 'sales_conference_2026.pptx' from {Inp
 
 ### Data Extraction
 
-The following prompts demonstrate table, form, and JSON data extraction.
+The following prompts allow users to test table, form, and JSON data extraction features of the Data Extraction tool.
 
 {% promptcards %}
 {% promptcard Extract All Data from PDF as JSON %}
