@@ -191,7 +191,12 @@ Tools are organized into the following categories:
 </table>
 
 
-I> The following tool classes are not supported in Storage mode: `WordDocumentAgentTools`, `ExcelWorkbookAgentTools`, `PdfDocumentAgentTools`, `PresentationDocumentAgentTools`. All other tool classes work identically in both modes.
+I> 1. The following tool classes are not supported in Storage mode:
+I>    * WordDocumentAgentTools
+I>    * ExcelWorkbookAgentTools
+I>    * PdfDocumentAgentTools
+I>    * PresentationDocumentAgentTools   
+I> 2. All other tool classes work identically in both modes.
 
 ## See Also
 
