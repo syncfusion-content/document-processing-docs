@@ -122,9 +122,9 @@ Windows UI (WinUI) <br/>
 </table>
 
 
-## NuGet Packages Required for SmartFormRecognizer
+## NuGet Packages Required for Smart Form Recognizer
 
-To work with SmartFormRecognizer, the following NuGet packages need to be installed in your application.
+To work with Smart Form Recognizer, the following NuGet packages need to be installed in your application from [nuget.org](https://www.nuget.org/).
 
 <table>
 <tr>
@@ -146,7 +146,7 @@ Windows Forms
 WPF
 </td>
 <td>
-{{'[Syncfusion.SmartFormRecognizer.WPF.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.wpf)'| markdownify }}
+{{'[Syncfusion.SmartFormRecognizer.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.SmartFormRecognizer.Wpf)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -170,4 +170,3 @@ ASP.NET MVC5
 </tr>
 </table>
 
-N> The above mentioned NuGet packages are available in [nuget.org](https://www.nuget.org/).
