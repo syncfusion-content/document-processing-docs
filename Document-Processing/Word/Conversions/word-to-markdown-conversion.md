@@ -26,6 +26,8 @@ Convert an existing Word document or document that is created from scratch into 
 
 The following code example shows how to convert a Word document to a Markdown.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Markdown-conversion/Convert-Word-to-Markdown/.NET/Convert-Word-to-Markdown/Program.cs" %}
@@ -57,56 +59,6 @@ Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
     'Save the document as a Markdown file.
     document.Save("WordtoMd.md", FormatType.Markdown)
 End Using
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//Open the file as Stream.
-using (Stream docStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.Input.docx"))
-{
-    //Load the file stream into a Word document.
-    using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Save as a Markdown file into the MemoryStream.
-        MemoryStream stream = new MemoryStream();
-        await document.SaveAsync(stream, FormatType.Markdown);
-        //Save the stream as a Markdown file in the local machine.
-        Save(stream, "WordtoMd.md");
-    }
-}
-//Saves a Word document.
-async void Save(MemoryStream streams, string filename)
-{
-    streams.Position = 0;
-    StorageFile stFile;
-    if (!(Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons")))
-    {
-        FileSavePicker savePicker = new FileSavePicker();
-        savePicker.DefaultFileExtension = ".md";
-        savePicker.SuggestedFileName = filename;
-        savePicker.FileTypeChoices.Add("Word Documents", new List<string>() { ".md" });
-        stFile = await savePicker.PickSaveFileAsync();
-    }
-    else
-    {
-        StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-        stFile = await local.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
-    }
-    if (stFile != null)
-    {
-        using (IRandomAccessStream zipStream = await stFile.OpenAsync(FileAccessMode.ReadWrite))
-        {
-            //Write the compressed data from the memory to a file.
-            using (Stream outstream = zipStream.AsStreamForWrite())
-            {
-                byte[] buffer = streams.ToArray();
-                outstream.Write(buffer, 0, buffer.Length);
-                outstream.Flush();
-            }
-        }
-    }
-    //Launch the saved Word file.
-    await Windows.System.Launcher.LaunchFileAsync(stFile);
-}
 {% endhighlight %}
 
 {% endtabs %}
@@ -179,8 +131,6 @@ The Essential<sup>&reg;</sup> DocIO supports two types of code blocks in Word to
 * Fenced code block: Set the paragraph style as “FencedCode.”
 
 The following code example shows how to create code blocks in a Word document using DocIO.
-
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 
@@ -410,12 +360,8 @@ Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
 End Using
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//DocIO doesn’t support the MarkdownExportImagesFolder API in UWP and Xamarin platforms.
-{% endhighlight %}
-
 {% highlight c# tabtitle="UWP" %}
-//DocIO doesn’t support the MarkdownExportImagesFolder API in UWP and Xamarin platforms.
+//DocIO doesn’t support the MarkdownExportImagesFolder API in UWP platform.
 {% endhighlight %}
 
 {% endtabs %}
@@ -473,30 +419,6 @@ Using document As WordDocument = New WordDocument("Input.docx")
 End Using
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//Open the file as a Stream.
-using (Stream docStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.Input.docx"))
-{
-    //Load the file stream into a Word document.
-    using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Hook the event to customize the image. 
-        document.SaveOptions.ImageNodeVisited += SaveImage;
-        //Save a Markdown file to the MemoryStream.
-        MemoryStream outputStream = new MemoryStream();
-        document.Save(outputStream, FormatType.Markdown);
-        //Save the stream as a file in the device and invoke it for viewing. 
-        Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("WordtoMd.md", "application/msword", outputStream);
-    }
-    //Please download the helper files from the following link to save the stream as a file and open the file for viewing in the Xamarin platform.
-    //https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin
-}
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//DocIO doesn’t support the ImageNodeVisitedEventArgs in UWP platform.
-{% endhighlight %}
-
 {% endtabs %}
 
 The following code examples show the event handler to customize the image path and save the image in an external folder.
@@ -539,13 +461,11 @@ Private Shared Sub SaveImage(ByVal sender As Object, ByVal args As ImageNodeVisi
 End Sub
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//DocIO doesn’t support the ImageNodeVisitedEventArgs in UWP platform.
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Customize-image-path).
+
+N> The [MarkdownExportImagesFolder](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_MarkdownExportImagesFolder) property and [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event are not supported on the UWP platform.
 
 ## Supported Word document elements
 

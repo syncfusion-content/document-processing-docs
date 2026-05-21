@@ -97,17 +97,6 @@ Install-Package Syncfusion.DocIORenderer.Net.Core
 </tr>
 <tr>
 <td>
-{{'[Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-xamarin)'|  markdownify }}
-</td>
-<td>
-Syncfusion.Xamarin.DocIORenderer.nupkg
-</td>
-<td>
-Install-Package Syncfusion.Xamarin.DocIORenderer
-</td>
-</tr>
-<tr>
-<td>
 {{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-winui)'|  markdownify }}<br/> {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-maui)'|  markdownify }}
 </td>
 <td>
@@ -148,6 +137,17 @@ Syncfusion.DocToPdfConverter.AspNet.nupkg
 </td>
 <td>
 Install-Package Syncfusion.DocToPdfConverter.AspNet
+</td>
+</tr>
+<tr>
+<td>
+{{'[Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-xamarin)'|  markdownify }}<br/>
+</td>
+<td>
+Syncfusion.DocIORenderer.NET
+</td>
+<td>
+Install-Package Syncfusion.Xamarin.DocIORenderer
 </td>
 </tr>
 </table>
@@ -425,20 +425,6 @@ Install-Package Syncfusion.DocIORenderer.Net.Core
 ~~~
 // Uninstall package
 Uninstall-Package Syncfusion.DocIORenderer.Net.Core -RemoveDependencies 
-~~~
-
-### Xamarin
-**NuGet Package:** Syncfusion.Xamarin.DocIORenderer
-
-The package contains the DocIORenderer .NET portable library that allows you to convert the Word documents to PDF.
-
-~~~
-// Install package
-Install-Package Syncfusion.Xamarin.DocIORenderer
-~~~
-~~~
-// Uninstall package
-Uninstall-Package Syncfusion.Xamarin.DocIORenderer -RemoveDependencies 
 ~~~
 
 ### Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
