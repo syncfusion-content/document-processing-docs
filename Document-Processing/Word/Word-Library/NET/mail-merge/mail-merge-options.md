@@ -803,13 +803,11 @@ document.Save("Sample.docx")
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//ADO.NET object is supported in Windows Forms, WPF, ASP.NET, ASP.NET MVC, ASP.NET Core, and Xamarin platforms alone.
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Insert-as-new-row).
+
+N> The [ExecuteGroup(DataTable)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_) method is not supported on the UWP platform.
 
 ## Skip to merge image
 
