@@ -201,8 +201,6 @@ using Syncfusion.HtmlConverter;
 
 Step 4: Use the following code sample to convert the URL to PDF in the program.cs.
 
-{% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 //Initialize HTML to PDF converter.
@@ -221,8 +219,6 @@ document.Save(fileStream);
 document.Close(true);
 
 {% endhighlight %}
-
-{% endtabs %}
 
 By executing the program, you will get the PDF document as follows.
 <img src="htmlconversion_overview_images/htmltopdfoutput.png" alt="htmltopdfoutput" width="100%" Height="Auto"/>
