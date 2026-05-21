@@ -36,7 +36,7 @@ using Dropbox.Api;
 {% endtabs %}
 
 
-Step 5: Add the below code example to load a PDF ifrom Dropbox cloud file storage.
+Step 5: Add the below code example to load a PDF from Dropbox cloud file storage.
 
 {% tabs %}
 
