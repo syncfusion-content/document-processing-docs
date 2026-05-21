@@ -144,7 +144,7 @@ N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, registe
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" %}
+{% highlight razor tabtitle="~/App.razor" %}
 
 <head>
     ....
