@@ -203,7 +203,7 @@ You can also explore the Document Editor interactively using the live sample bel
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs3" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-document-editor-component).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started).
 
 ## Video tutorial
 
