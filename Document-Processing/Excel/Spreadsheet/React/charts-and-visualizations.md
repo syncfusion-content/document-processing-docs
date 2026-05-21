@@ -262,7 +262,7 @@ Enables or disables chart functionality in the Spreadsheet.
 
 **See:** [allowChart API Documentation](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowchart)
 
-### Limitations of Chart
+## Limitations of Chart
 
 The following features have some limitations in the Chart:
 
