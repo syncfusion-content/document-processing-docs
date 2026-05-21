@@ -23,4 +23,4 @@ The Syncfusion <sup style="font-size:70%">&reg;</sup> [WPF RichTextBox](https://
 * Enables [cut](./Clipboard), [copy](./Clipboard), and [paste](./Clipboard) operations, including rich text content via the clipboard. 
 * Supports loading encrypted Word documents with valid password. 
 
->Note: Currently, the SfRichTextBoxAdv cannot edit rich text in headers and footers.
+N> Currently, the SfRichTextBoxAdv cannot edit rich text in headers and footers. 
