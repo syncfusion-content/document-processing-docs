@@ -203,6 +203,8 @@ You can also explore the Document Editor interactively using the live sample bel
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/es5-getting-started-cs2" %}
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES5-DOCX-Editor-Examples/tree/master/getting-started).
+
 ## Server-side dependencies
 
 The Document Editor component requires server-side interactions for the following operations:

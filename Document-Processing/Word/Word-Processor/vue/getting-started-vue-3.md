@@ -140,6 +140,8 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of Vue 3 Document Editor](./images/vue_3_getting_started.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_3).
+
 ## Server-side dependencies
 
 The Document Editor component requires server-side interactions for the following operations:
