@@ -26,7 +26,7 @@ Syncfusion.DocIO.Base<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart
 Syncfusion.DocIO.ClientProfile<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart.Base<br/></td></tr>
 <tr>
 <td>
-{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-blazor)' | markdownify}}<br/></td><td>
+{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net-core)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-blazor)' | markdownify}}<br/></td><td>
 Syncfusion.DocIO.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.OfficeChart.Portable<br/></td></tr>
 <tr>
 <td>
@@ -93,6 +93,10 @@ Syncfusion.DocIO.Universal<br/></td></tr>
 <td>
 {{'[ASP.NET](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net)' | markdownify}}<br/></td><td>
 Syncfusion.DocIO.Base<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart.Base<br/></td></tr>
+<tr>
+<td>
+{{'[Xamarin](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin)' | markdownify}}<br/></td><td>
+Syncfusion.DocIO.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.OfficeChart.Portable<br/></td></tr>
 </table>
 
 N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
@@ -119,7 +123,7 @@ Syncfusion.DocIO.Base<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart
 Syncfusion.DocIO.ClientProfile<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart.Base<br/>Syncfusion.Pdf.ClientProfile<br/>Syncfusion.DocToPdfConverter.ClientProfile<br/></td></tr>
 <tr>
 <td>
-{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-blazor)' | markdownify}}<br/></td><td>
+{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-core)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-blazor)' | markdownify}}<br/></td><td>
 Syncfusion.DocIO.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.OfficeChart.Portable<br/>Syncfusion.Pdf.Portable<br/>Syncfusion.DocIORenderer.Portable<br/>Syncfusion.Pdf.Imaging.Portable<br/>Syncfusion.MetafileRenderer.Portable<br/>SkiaSharp.HarfBuzz<br/>Syncfusion.SkiaSharpHelper.Portable</td></tr>
 <tr>
 <td>
@@ -142,6 +146,10 @@ Assembly<br/></th></tr></thead>
 <td>
 {{'[ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net)' | markdownify}}<br/></td><td>
 Syncfusion.DocIO.Base<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart.Base<br/>Syncfusion.Pdf.Base<br/>Syncfusion.DocToPdfConverter.Base<br/></td></tr>
+<tr>
+<td>
+{{'[Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-xamarin)' | markdownify}}<br/></td><td>
+Syncfusion.DocIO.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.OfficeChart.Portable<br/>Syncfusion.Pdf.Portable<br/>Syncfusion.DocIORenderer.Portable<br/>Syncfusion.Pdf.Imaging.Portable<br/>Syncfusion.MetafileRenderer.Portable<br/>SkiaSharp.HarfBuzz<br/>Syncfusion.SkiaSharpHelper.Portable<br/></td></tr>
 </table>
 
 N> 1. Word to PDF conversion is supported in ASP.NET Core and Xamarin from 2018 Volume 1 release (v16.1.0.24) using SkiaSharp graphics library.
@@ -168,7 +176,7 @@ Syncfusion.DocIO.Base<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart
 Syncfusion.DocIO.ClientProfile<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart.Base<br/></td></tr>
 <tr>
 <td>
-{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-blazor)' | markdownify}}<br/></td><td>
+{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-asp-net-core)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-blazor)' | markdownify}}<br/></td><td>
 Syncfusion.DocIO.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.OfficeChart.Portable<br/>Syncfusion.Pdf.Portable<br/>Syncfusion.DocIORenderer.Portable<br/>Syncfusion.Pdf.Imaging.Portable<br/>Syncfusion.MetafileRenderer.NET<br/>SkiaSharp.HarfBuzz<br/>Syncfusion.SkiaSharpHelper.Portable</td></tr>
 <tr>
 <td>
@@ -191,6 +199,10 @@ Assembly<br/></th></tr></thead>
 <td>
 {{'[ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-asp-net)' | markdownify}}<br/></td><td>
 Syncfusion.DocIO.Base<br/>Syncfusion.Compression.Base<br/>Syncfusion.OfficeChart.Base<br/></td></tr>
+<tr>
+<td>
+{{'[Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-xamarin)' | markdownify}}<br/></td><td>
+Syncfusion.DocIO.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.OfficeChart.Portable<br/>Syncfusion.Pdf.Portable<br/>Syncfusion.DocIORenderer.Portable<br/>Syncfusion.Pdf.Imaging.Portable<br/>Syncfusion.MetafileRenderer.NET<br/>SkiaSharp.HarfBuzz<br/>Syncfusion.SkiaSharpHelper.Portable<br/></td></tr>
 </table>
 
 ## Converting Charts
