@@ -1,1 +1,1 @@
-@Html.EJS().Spreadsheet("spreadsheet").Render()
+@Html.EJS().Spreadsheet("spreadsheet").OpenUrl("https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open").SaveUrl("https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save").Render()

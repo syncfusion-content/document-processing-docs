@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with ASP.NET MVC DOCX Editor
 
-Syncfusion® DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET MVC application. 
+Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET MVC application. 
 
 ## Steps to create an ASP.NET MVC DOCX Editor
 
@@ -22,14 +22,17 @@ This section briefly explains about how to include [ASP.NET MVC DOCX Editor](htt
 ### Create ASP.NET MVC application with HTML helper
 
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started#create-your-first-app)
-* [Create a Project using Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Extension](https://ej2.syncfusion.com/aspnetmvc/documentation/getting-started/project-template)
+
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Nuget packages
 
 To add **ASP.NET MVC Document Editor** component in the application, follow the steps below.
-- open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
-- search and install the following package
+- Open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
+- Search and install the following package
     - [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5)
+
+
+Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -39,17 +42,21 @@ Install-Package Syncfusion.EJ2.MVC5 -Version {{ site.ej2version }}
 {% endhighlight %}
 {% endtabs %}
 
-N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for license validation.”
+N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for license validation.
 
 ### Add namespace
 
 Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 
-```
+{% tabs %}
+{% highlight C# tabtitle="Web.config" %}
+
 <namespaces>
     <add namespace="Syncfusion.EJ2"/>
 </namespaces>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Add Themes and Script References
 
@@ -92,14 +99,22 @@ Also, register the script manager `EJS().ScriptManager()` at the end of `<body>`
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Document Editor control in `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/getting-started/razor %}
+{% highlight cshtml tabtitle="~/Index.cshtml" %}
+@Html.EJS().DocumentEditorContainer("container").Height("590px").Render()
 {% endhighlight %}
 {% endtabs %}
 
 
 ### Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Document Editor control will be rendered in the default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Document Editor control will be rendered in the default web browser as shown below.
 
-N> You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/tree/main/DocumentEditor/ASP.NET%20MVC%20Razor%20Examples).
+![Output of ASP.NET MVC DOCX Editor](./images/aspnetmvc-docx-editor.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-DOCX-Editor-Examples/tree/master/getting-started).
+
+## See also
+
+- [Open a document](./import)
+- [Save a document](./export)
+- [Collaborative Editing](./collaborative-editing/overview)
