@@ -48,11 +48,15 @@ N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nug
 
 Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 
-```
+{% tabs %}
+{% highlight C# tabtitle="Web.config" %}
+
 <namespaces>
     <add namespace="Syncfusion.EJ2"/>
 </namespaces>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Add Themes and Script References
 
@@ -95,7 +99,7 @@ Also, register the script manager `EJS().ScriptManager()` at the end of `<body>`
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Document Editor control in `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
+{% highlight cshtml tabtitle="~/Index.cshtml" %}
 @Html.EJS().DocumentEditorContainer("container").Height("590px").Render()
 {% endhighlight %}
 {% endtabs %}
