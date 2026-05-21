@@ -187,9 +187,9 @@ You can also experiment directly using the interactive playground below for a qu
 
 {% playground "https://blazorplayground.syncfusion.com/embed/BtLHDSMIxNVhqnlu?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
 
-N> To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save.md). For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet).
+N> To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save). For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet).
 
 ## See Also
 
-- [Getting started with the Blazor Spreadsheet in a Blazor WebAssembly App](./getting-started.md)
-- [Getting Started with .NET MAUI Blazor Hybrid App](./blazor-hybrid-maui-app.md)
+- [Getting started with the Blazor Spreadsheet in a Blazor WebAssembly App](./getting-started)
+- [Getting Started with .NET MAUI Blazor Hybrid App](./blazor-hybrid-maui-app)
