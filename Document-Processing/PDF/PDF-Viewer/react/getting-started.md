@@ -14,31 +14,25 @@ This section explains the steps to create a standalone React PDF Viewer and demo
 
 ## Prerequisites
 
-To get started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components, ensure the compatible version of React.
-* React supported version >= `15.5.4+`.
-* Required node version >= `14.0.0+`(NPM Package Manager).
+[System requirements for Syncfusion® React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
-## Create a React app
+## Create a React application
 
-To set up a React application, use Vite (for example, `npm create vite@latest`), which provides a fast development environment, smaller bundle sizes, and optimized production builds compared to tools such as `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/).
+Use [`Vite`](https://vitejs.dev/guide/) to create a new React application, as it provides a faster development environment, smaller bundle sizes, and optimized production builds.
 
-N> To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
-
-To create a new React application, run the following command.
+To create a new React application, run one of the following commands based on your preferred environment.
 
 {% tabs %}
 {% highlight bash tabtitle="JavaScript" %}
 
-npm create vite@latest my-app -- --template react
-cd my-app
-npm run dev
+npm create vite@latest pdf-viewer-app -- --template react
+cd pdf-viewer-app
 
 {% endhighlight %}
 {% highlight bash tabtitle="TypeScript" %}
 
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
+npm create vite@latest pdf-viewer-app -- --template react-ts
+cd pdf-viewer-app
 
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +40,7 @@ npm run dev
 
 ## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+Install the [React PDF Viewer](https://www.npmjs.com/package/@syncfusion/ej2-react-pdfviewer) package from npm using the following command:
 
 ```
 npm install @syncfusion/ej2-react-pdfviewer --save
@@ -56,7 +50,8 @@ npm install @syncfusion/ej2-react-pdfviewer --save
 
 Add the React PDF Viewer component’s CSS reference as given below in `src/index.css` file.
 
-```css
+{% tabs %}
+{% highlight css tabtitle="src/index.css" %}
    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
@@ -65,7 +60,9 @@ Add the React PDF Viewer component’s CSS reference as given below in `src/inde
    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
    @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
    @import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
-```
+{% endhighlight %}
+{% endtabs %}
+
 
 Add the following import statements for the PDF Viewer along with the default imports in the file (src/index.js when using JavaScript/JSX, or src/app.tsx when using TypeScript/TSX), and include the PDF Viewer initialization code inside the function to render the PDF Viewer component.
 
@@ -142,93 +139,22 @@ npm run dev
 
 Output appears as follows.
 
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% raw %}
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-         BookmarkView,ThumbnailView, Print, TextSelection, Annotation, TextSearch, 
-         FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
-export function App() {
-return (<div>
-    <div className='control-section'>
-        <PdfViewerComponent
-            id="container"
-            // Defines the source of the PDF to load in the PDF Viewer.
-            // Accepts either a public URL or a Base64-encoded PDF string.
-            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            // Specifies the location of the PDFium dependency files required
-            // for rendering and processing PDFs in the PDF Viewer.
-            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-            style={{ 'height': '640px' }}>
-               // Specifies the modules required for the PDF Viewer
-               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-               BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
-        </PdfViewerComponent>
-    </div>
-</div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-{% endraw %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% raw %}
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-         BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
-         FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
-export function App() {
-return (<div>
-    <div className='control-section'>
-        <PdfViewerComponent
-            id="container"
-            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-            style={{ 'height': '640px' }}>
-               // Specifies the modules required for the PDF Viewer
-               <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-               BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
-        </PdfViewerComponent>
-    </div>
-</div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% raw %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Syncfusion React PDF Viewer</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Essential JS 2 for React Components" />
-    <meta name="author" content="Syncfusion" />
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
-    <script src="systemjs.config.js"></script>
-</head>
-<body>
-        <div id='sample'>
-            <div id='loader'>Loading....</div>
-            <script type="module" src="/src/main.tsx"></script>
-        </div>
-</body>
-</html>
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
+![React PDF Viewer Control](images/pdfviewer-control.png)
+
+You can also explore the PDF Viewer interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/react/base-cs1-standalone" %}
 
-**See also**
+[View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Getting%20Started).
 
-- [PDF Viewer Annotations](./annotation/overview)
-- [PDF Viewer Form Designer](./forms/overview#form-designer)
-- [Organize PDF pages](./organize-pages/overview)
+## Video tutorial
+
+To get started quickly with React PDF Viewer, you can watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=VJibluQFWns" %}
+
+## See also
+
+- [Getting started with Server-Backed React PDF Viewer](./getting-started-with-server-backed)
+- [Open PDF Files](./open-pdf-files)
+- [Save PDF Files](./save-pdf-files)
