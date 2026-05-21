@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with TypeScript DOCX Editor
 
-Syncfusion® TypeScript DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a TypeScript application. 
+Syncfusion<sup style="font-size:70%">&reg;</sup> [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a TypeScript application. 
 
 ## Steps to create a DOCX Editor using TypeScript
 
@@ -24,7 +24,7 @@ Ensure the following tools are installed on your machine:
 
 Create a simple TypeScript application using the Essential<sup style="font-size:70%">&reg;</sup> JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
 
-> This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
+N> This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
 
 **Step 1:** Open the command prompt from the required directory and clone the quickstart project from GitHub.
 
@@ -77,7 +77,7 @@ Add the following Document Editor and dependent component style references to `~
 {% endtabs %}
 
 
-## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
+### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
 Add an HTML `div` element to act as the Document Editor element in the `index.html` file:
 
@@ -124,7 +124,7 @@ documenteditor.appendTo('#DocumentEditor');
 {% endhighlight %}
 {% endtabs %}
 
-> Note: The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 
 ### Run the application
@@ -157,7 +157,7 @@ The Document Editor component requires server-side interactions for the followin
 * Spell check
 * Save as file formats other than SFDT and DOCX
 
-> Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
 

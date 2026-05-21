@@ -9,7 +9,7 @@ keywords: getting started
 
 # Getting Started with WPF RichTextBox (SfRichTextBoxAdv)
 
-Syncfusion® [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a RichTextBox in a WPF application.
+Syncfusion <sup style="font-size:70%">&reg;</sup> [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a RichTextBox in a WPF application.
 
 ## Create a RichTextBox in WPF using SfRichTextBoxAdv
 
@@ -89,7 +89,7 @@ To add the control manually in XAML, follow these steps:
 
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainWindow.xaml" %}
 
 <Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -111,7 +111,7 @@ To add the control manually in XAML, follow these steps:
 To add the control manually in C#, add the following code in *.xaml.cs
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" %}
 
 using Syncfusion.Windows.Controls.RichTextBoxAdv;
 
@@ -140,7 +140,7 @@ public partial class MainWindow : Window
 
 ![WPF SfRichTextBoxAdv Control](Getting-Started_images/wpf-sfrichtextboxadv-control.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
 
 ## Add ribbon UI to SfRichTextBoxAdv
 
@@ -162,7 +162,7 @@ If you need a ribbon-based user interface, you can add **SfRichTextRibbon** with
 **Using Package Manager Console**
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.SfRichTextRibbon.WPF
 
@@ -210,7 +210,7 @@ To add the control manually in XAML, follow these steps:
 4.  To make an interaction between SfRichTextRibbon and SfRichTextBoxAdv, bind the SfRichTextBoxAdv as DataContext to the SfRichTextRibbon.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainWindow.xaml" %}
 
 <Syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -237,7 +237,7 @@ To add the control manually in XAML, follow these steps:
 To add the control manually in C#, add the below code in *.xaml.cs
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" %}
 
 using Syncfusion.Windows.Controls.RichTextBoxAdv;
 using Syncfusion.Windows.Tools.Controls;
@@ -306,17 +306,16 @@ N> Prefer using `SfRichTextRibbon` within `RibbonWindow` in your application, si
 2. The application will launch with the **SfRichTextRibbon** and **SfRichTextBoxAdv** controls.  
 3. Press **Ctrl + O** or use the **Open** option in the **SfRichTextRibbon** to open a document, which will be displayed in the **SfRichTextBoxAdv** control, with ribbon options available for editing and formatting, as shown below
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv%20with%20SfRichTextRibbon).
-
 ![WPF SfRichTextBoxAdv Control along with its SfRichTextRibbon](Getting-Started_images/wpf-sfrichtextboxadv-with-sfrichtextribbon.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv%20with%20SfRichTextRibbon).
 
 ## Use SfRichTextBoxAdv as a standard RichTextBox
 
 Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainWindow.xaml" %}
 <Window x:Class="Standard_RichTextBox.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -413,10 +412,10 @@ Use the following code to configure the SfRichTextBoxAdv control as a standard R
 
 {% endtabs %}
 
-You can download a standard RichTextBox example from [GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
-
 When the application is executed, the standard RichTextBox control is displayed as illustrated below.
 ![WPF Standard RichTextBox](Getting-Started_images/wpf-standard-sfrichtextboxadv.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
 
 ## Theme
 
