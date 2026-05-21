@@ -137,7 +137,7 @@ Use the following command to run the application in browser.
 npm run dev
 ```
 
-Output will be appears as follows.
+After the application starts, open the localhost URL shown in the terminal to view the React PDF Viewer in the browser. The output will appear as follows:
 
 ![React PDF Viewer Control](images/pdfviewer-control.png)
 

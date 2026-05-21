@@ -137,7 +137,7 @@ Now run the `npm run dev` command in the console to start the development server
 npm run dev
 ```
 
-Output appears as follows.
+After the application starts, open the localhost URL shown in the terminal to view the React PDF Viewer in the browser. The output will appear as follows:
 
 ![React PDF Viewer Control](images/pdfviewer-control.png)
 
