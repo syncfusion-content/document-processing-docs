@@ -476,6 +476,83 @@ Create a chart in a Word document using the .NET Word Library by utilizing the v
 The following code example illustrates how to create a chart in a Word document from a database.
 
 {% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Create a new instance of WordDocument.
+using (WordDocument document = new WordDocument())
+{
+    document.EnsureMinimal();
+    //Get the data table.
+    DataTable dataTable = GetDataTable();
+    //Create and append the chart to the paragraph.
+    WChart chart = document.LastParagraph.AppendChart(446, 270);
+    chart.ChartType = OfficeChartType.Pie;
+    //Assign the data.
+    AddChartData(chart, dataTable);
+    //Set a chart title.
+    chart.ChartTitle = "Best Selling Products";
+    IOfficeChartSerie pieSeries = chart.Series.Add("Sales");
+    pieSeries.Values = chart.ChartData[2, 2, 11, 2];
+    //Set the data label.
+    pieSeries.DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
+    pieSeries.DataPoints.DefaultDataPoint.DataLabels.Position = OfficeDataLabelPosition.Outside;
+    //Set the category labels.
+    chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData[2, 1, 11, 1];
+    //Set the legend.
+    chart.HasLegend = true;
+    //Save a Word document.
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
+}
+
+// Get the data to create a pie chart.
+private static DataTable GetDataTable()
+{
+    string path = Path.GetFullPath(@"../../Data/DataBase.mdb");
+    //Create a new instance of OleDbConnection.
+    OleDbConnection connection = new OleDbConnection();
+    //Set the string to open a Database.
+    connection.ConnectionString = "Provider=Microsoft.JET.OLEDB.4.0;Password=\"\";User ID=Admin;Data Source=" + path;
+    //Open the Database connection.
+    connection.Open();
+    //Get all the data from the Database.
+    OleDbCommand query = new OleDbCommand("select * from Products", connection);
+    //Create a new instance of OleDbDataAdapter.
+    OleDbDataAdapter adapter = new OleDbDataAdapter(query);
+    //Create a new instance of DataSet.
+    DataSet dataSet = new DataSet();
+    //Add rows in the Dataset.
+    adapter.Fill(dataSet);
+    //Create a DataTable from the Dataset.
+    DataTable table = dataSet.Tables[0];
+    table.TableName = "Products";
+    return table;
+}
+
+// Set the value for the chart.
+private static void AddChartData(WChart chart, DataTable dataTable)
+{
+    //Set the value for the chart data.
+    chart.ChartData.SetValue(1, 1, "Names");
+    chart.ChartData.SetValue(1, 2, "Product");
+
+    int rowIndex = 2;
+    int colIndex = 1;
+    //Get the value from the DataTable and set the value for the chart data
+    foreach (DataRow row in dataTable.Rows)
+    {
+        foreach (object val in row.ItemArray)
+        {
+            string value = val.ToString();
+            chart.ChartData.SetValue(rowIndex, colIndex, value);
+            colIndex++;
+            if (colIndex == 3)
+                break;
+        }
+        colIndex = 1;
+        rowIndex++;
+    }
+}
+{% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 //Create a new instance of WordDocument.
@@ -654,7 +731,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
     // or false to refresh only the data without evaluating formulas.
     chart.Refresh(false);
     MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.docx);
+    document.Save(stream, FormatType.Docx);
     //Closes the Word document
     document.Close();
 }
@@ -716,7 +793,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
     //Refreshes chart data to set the modified values
     chart.Refresh();
     MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.docx);
+    document.Save(stream, FormatType.Docx);
     //Closes the Word document
     document.Close();
 }
@@ -921,6 +998,66 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Essential<sup>&reg;</sup> DocIO allows to modify the side wall, back wall, floor of the 3D chart. The following code snippet illustrates how to apply properties for side wall, floor and back wall of a 3D chart.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a new Word document
+WordDocument document = new WordDocument();
+//Adds section to the document
+IWSection sec = document.AddSection();
+//Adds paragraph to the section
+IWParagraph paragraph = sec.AddParagraph();
+//Loads the excel file as stream
+Stream excelStream = File.OpenRead("Excel_Template.xlsx");
+//Creates and Appends chart to the paragraph with excel stream as parameter
+WChart chart = paragraph.AppendChart(excelStream, 1, "B2:C6", 470, 300);
+//Sets chart type and title
+chart.ChartType = OfficeChartType.Column_Clustered_3D;
+chart.ChartTitle = "Purchase Details";
+chart.ChartTitleArea.FontName = "Calibri";
+chart.ChartTitleArea.Size = 14;
+chart.ChartArea.Border.LinePattern = OfficeChartLinePattern.None;          
+//Sets name to chart series            
+chart.Series[0].Name = "Sum of Purchases";
+chart.Series[1].Name = "Sum of Future Expenses";
+chart.PrimaryCategoryAxis.Title = "Products";
+chart.PrimaryValueAxis.Title = "In Dollars";
+//Sets position of legend
+chart.Legend.Position = OfficeLegendPosition.Bottom;
+//Sets rotation and elevation values
+chart.Rotation = 20;
+chart.Elevation = 15;
+//Sets side wall properties
+chart.SideWall.Fill.FillType = OfficeFillType.SolidColor;
+chart.SideWall.Fill.ForeColor = Color.White;
+chart.SideWall.Fill.BackColor = Color.White;
+chart.SideWall.Border.LineColor = Syncfusion.Drawing.Color.Beige;
+//Sets floor fill option.
+chart.Floor.Fill.FillType = OfficeFillType.Pattern;
+//Sets the floor pattern Type.
+chart.Floor.Fill.Pattern = OfficeGradientPattern.Pat_Divot;
+//Sets the floor fore and Back ground color.
+chart.Floor.Fill.ForeColor = Syncfusion.Drawing.Color.Blue;
+chart.Floor.Fill.BackColor = Syncfusion.Drawing.Color.White;
+//Sets the floor thickness.
+chart.Floor.Thickness = 3;
+//Sets the back wall fill option.
+chart.BackWall.Fill.FillType = OfficeFillType.Gradient;
+//Sets the Texture Type.
+chart.BackWall.Fill.GradientColorType = OfficeGradientColor.TwoColor;
+chart.BackWall.Fill.GradientStyle = OfficeGradientStyle.Diagonl_Down;
+chart.BackWall.Fill.ForeColor = Color.WhiteSmoke;
+chart.BackWall.Fill.BackColor = Color.LightBlue;
+//Sets the Border Line color.
+chart.BackWall.Border.LineColor = Syncfusion.Drawing.Color.Wheat;
+//Sets the Picture Type.
+chart.BackWall.PictureUnit = OfficeChartPictureType.stretch;
+//Sets the back wall thickness.
+chart.BackWall.Thickness = 10;
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document
@@ -1246,92 +1383,6 @@ stream.Close()
 image.Save("ChartToImage.jpeg", ImageFormat.Jpeg)
 'Closes the document.
 wordDocument.Close()
-{% endhighlight %}
-
-{% highlight c# tabtitle="Xamarin" %}
-//Open the file as Stream.
-using (Stream docStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.TemplateWithChart.docx"))
-{
-    //Load file stream into Word document.
-    using (WordDocument wordDocument = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Get the first paragraph from the section.. 
-        WParagraph paragraph = wordDocument.LastSection.Paragraphs[0];
-        //Get the chart element from the paragraph.
-        WChart chart = paragraph.ChildEntities[0] as WChart;
-        //Create a new instance of DocIORenderer class.
-        using (DocIORenderer render = new DocIORenderer())
-        {
-            //Convert chart to an image.
-            using (Stream stream = chart.SaveAsImage())
-            {
-                //Save the stream as file in the device and invoke it for viewing.
-                Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("ChartToImage.jpeg", "image/jpeg", stream as MemoryStream);
-            }
-        }
-    }
-}
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-// You can convert a chart to images in UWP using DocIORenderer, by using cross-platform NuGets or assemblies in a UWP application.
-//Open the file as Stream.
-using (Stream docStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.TemplateWithChart.docx"))
-{
-    //Load file stream into Word document.
-    using (WordDocument wordDocument = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Get the first paragraph from the section.
-        WParagraph paragraph = wordDocument.LastSection.Paragraphs[0];
-        //Get the chart element from the paragraph.
-        WChart chart = paragraph.ChildEntities[0] as WChart;
-        //Create a new instance of DocIORenderer class.
-        using (DocIORenderer render = new DocIORenderer())
-        {
-            //Convert chart to an image.
-            using (Stream stream = chart.SaveAsImage())
-            {
-                //Save the memory stream as file.
-                Save(stream as MemoryStream, "ChartToImage.jpeg");
-            }
-        }
-    }
-}
-
-//Save the image.
-async void Save(MemoryStream streams, string filename)
-{
-    streams.Position = 0;
-    StorageFile stFile;
-    if (!(Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons")))
-    {
-        FileSavePicker savePicker = new FileSavePicker();
-        savePicker.DefaultFileExtension = ".jpeg";
-        savePicker.SuggestedFileName = filename;
-        savePicker.FileTypeChoices.Add("Image", new List<string>() { ".jpeg" });
-        stFile = await savePicker.PickSaveFileAsync();
-    }
-    else
-    {
-        StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-        stFile = await local.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
-    }
-    if (stFile != null)
-    {
-        using (IRandomAccessStream zipStream = await stFile.OpenAsync(FileAccessMode.ReadWrite))
-        {
-            //Write compressed data from memory to file.
-            using (Stream outstream = zipStream.AsStreamForWrite())
-            {
-                byte[] buffer = streams.ToArray();
-                outstream.Write(buffer, 0, buffer.Length);
-                outstream.Flush();
-            }
-        }
-    }
-    //Launch the saved image file.
-    await Windows.System.Launcher.LaunchFileAsync(stFile);
-}
 {% endhighlight %}
 
 {% endtabs %}
