@@ -38,7 +38,7 @@ if (!string.IsNullOrEmpty(licenseKey))
 
 **Step 2: Implement Storage**
 
-Implement `IDocumentStorage` for your storage backend. Below is the class signature and method placeholders for Azure Blob Storage - You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/ASP.NET-Core/AgentChatWeb/):
+Implement `IDocumentStorage` for your storage backend. Below is the class signature and method placeholders for Azure Blob Storage - You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/ASP.NET-Core/AgentChatWeb/).
 
 ```csharp
 using Azure.Storage.Blobs;
@@ -130,8 +130,8 @@ N>    * WordDocumentAgentTools
 N>    * ExcelWorkbookAgentTools
 N>    * PdfDocumentAgentTools
 N>    * PresentationDocumentAgentTools   
-N>    All other tool classes work identically in both modes
-N> 2. Register only the tool classes your app needs. See the full list in the [Tools Reference](./tools#available-tools).  
+N> 2. All other tool classes work identically in both modes
+N> 3. Register only the tool classes your app needs. See the full list in the [Tools Reference](./tools#available-tools).  
 
 **Step 5: Convert and Register Tools**
 

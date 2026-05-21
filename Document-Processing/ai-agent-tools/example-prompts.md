@@ -124,7 +124,7 @@ Convert the sales conference presentation 'sales_conference_2026.pptx' from {Inp
 
 ### Data Extraction
 
-The following prompts allow users to test table, form, and JSON data extraction features of the Data Extraction tool.
+The following prompts allow users to test table, form, and JSON data extraction functionalities of the Data Extraction tool.
 
 {% promptcards %}
 {% promptcard Extract All Data from PDF as JSON %}
