@@ -47,7 +47,7 @@ using Syncfusion.PdfToImageConverter;
 Step 5: Add a new button in index.cshtml as shown below.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="~/Index.cshtml" %}
 
 @{Html.BeginForm("ExportToImage", "Home", FormMethod.Post);
     {
@@ -135,7 +135,7 @@ using Syncfusion.PdfToImageConverter;
 Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="~/Index.cshtml" %}
 
 @{Html.BeginForm("ExportToImage", "Home", FormMethod.Get);
     {
