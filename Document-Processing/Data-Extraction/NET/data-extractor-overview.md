@@ -1,6 +1,6 @@
 ---
 title: Data Extraction and Conversion in .NET | Syncfusion
-description: Syncfusion Data Extraction is a .NET library that extracts tables, forms, text, and images from PDF and image files, and produces outputs such as JSON and Markdown for seamless integration.
+description: Syncfusion Data Extraction is a .NET library that extracts tables, forms, text, and images from PDF or image files, and outputs JSON or Markdown.
 platform: document-processing
 control: DataExtraction
 documentation: UG
