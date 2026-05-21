@@ -7,7 +7,7 @@ documentation: UG
 keywords: Excel, SDK, Automation, API, convert
 ---
 
-# Welcome to Syncfusion<sup>&reg;</sup> Excel Document Conversion Library
+# Welcome to Syncfusion<sup>®</sup> Excel Document Conversion Library
 
 {% doccards %}
 
