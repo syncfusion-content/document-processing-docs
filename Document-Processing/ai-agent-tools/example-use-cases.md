@@ -27,14 +27,14 @@ This example demonstrates an **Automated PDF Redaction Agent** that uses the [Mi
 At runtime the application performs the following steps:
 
 1. **Load PDF:** The agent loads the specified PDF document into memory.
-2. **Extract text:** All text content is extracted from the PDF, including layout and position information.
+2. **Extract text:** All text content is extracted from the PDF.
 3. **Detect sensitive data:** The AI identifies and categorizes sensitive information such as personal information, financial data, and other identifiers.
 4. **Locate and redact:** All identified items are located using bounding box coordinates and permanently redacted with black boxes.
 5. **Export:** The redacted PDF is saved to the output folder with a `_redacted.pdf` suffix. The original file remains unchanged.
 
 ### Syncfusion setup
 
-The snippet below shows only the Syncfusion-specific configuration. You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AutomatedPDFRedaction/Program.cs).
+The snippet below shows only the Syncfusion-specific configuration. You can find the complete code snippet [here](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AutomatedPDFRedaction/Program.cs).
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -79,7 +79,7 @@ Once the agent is running, use natural language prompt to trigger redaction:
 
 ### Complete Example
 
-You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AutomatedPDFRedaction/Program.cs).
+You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AutomatedPDFRedaction/).
 
 ## Blog Generator Agent
 
@@ -111,7 +111,7 @@ At runtime the application performs the following steps:
 
 ### Syncfusion setup
 
-The snippet below shows only the Syncfusion-specific configuration. You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs).
+The snippet below shows only the Syncfusion-specific configuration. You can find the complete code snippet [here](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs).
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -156,7 +156,7 @@ The agent will draft a title and outline for your review before generating the f
 
 ### Complete Example
 
-You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs).
+You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/).
 
 ## See Also
 

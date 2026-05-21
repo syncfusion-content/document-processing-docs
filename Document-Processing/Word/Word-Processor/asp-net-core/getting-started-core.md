@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with ASP.NET Core DOCX Editor
 
-Syncfusion® ASP.NET Core DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET Core application. 
+Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET Core application. 
 
 ## Steps to create an ASP.NET Core DOCX Editor
 
@@ -98,7 +98,7 @@ Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document Editor tag helper in `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
+{% highlight cshtml tabtitle="~/Index.cshtml" %}
 
 <ejs-documenteditorcontainer id="container" height="620px"></ejs-documenteditorcontainer>
 
@@ -111,7 +111,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![Output of ASP.NET Core DOCX Editor](./images/aspnetcore-docx-editor.png)
 
-N> You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/DocumentEditor/ASP.NET%20Core%20Tag%20Helper%20Examples).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-DOCX-Editor-Examples/tree/master/getting-started).
 
 ## See also
 
