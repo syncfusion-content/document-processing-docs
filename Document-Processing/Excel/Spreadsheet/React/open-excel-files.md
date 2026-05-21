@@ -9,11 +9,51 @@ documentation: ug
 
 # Open Excel Files in Syncfusion React Spreadsheet
 
-The React Spreadsheet component uses a server‑assisted workflow to import Excel files accurately and efficiently. When a user uploads an Excel file, the component sends the file to the server for parsing, ensuring smooth performance because the heavy processing workload is handled on the server side.
+The Syncfusion React Spreadsheet component uses a server-assisted workflow to open Excel files efficiently and accurately. When a user uploads an Excel file, the file is sent to a server endpoint for processing. This keeps the browser fast and responsive, as all heavy parsing and conversion are handled on the server.
 
-On the server, the [`Syncfusion.EJ2.Spreadsheet library`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), reads the Excel file and extracts all relevant details, including data, styles, formulas, formatting, and sheet structure. The server then converts this information into a Spreadsheet‑compatible JSON workbook.
+On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to process the uploaded Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET Frameworks**. The server extracts all data, styles, formulas, formatting, and sheet structure, then converts everything into a Spreadsheet-compatible JSON format. This JSON is sent back to the client, where the React Spreadsheet component renders the workbook in the browser, preserving the original Excel layout and content.
 
-Once processing is complete, the JSON workbook is returned to the client, where the React Spreadsheet component renders it in the browser. This workflow preserves the original Excel layout and ensures the imported content appears with full fidelity.
+In the code samples and demos, you may see **Syncfusion-hosted service URLs** used for the `openUrl` and `saveUrl` properties. These URLs point to Syncfusion’s own WebAPI services (built with **ASP.NET Core**) that handle opening and saving Excel files. These hosted URLs are provided only for demonstration and evaluation purposes:
+
+**Hosted Syncfusion Service URLs**
+```
+openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
+saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
+```
+
+For your own development and production, you must set up your own web service for open/save operations. This ensures your data remains private, secure, and fully under your control. Using your own service also allows you to customize processing, apply business logic, and comply with your organization’s security requirements.
+
+**Server Configuration**
+
+Below is an example of a server-side `Open` endpoint using ASP.NET Core WebAPI, which is the same approach used for building the hosted Syncfusion URLs. This endpoint receives the uploaded Excel file, processes it with the Syncfusion Spreadsheet library, and returns the workbook JSON to the client:
+
+```csharp
+// Open action
+[HttpPost]
+[Route("Open")]
+public IActionResult Open([FromForm] IFormCollection openRequest)
+{
+    OpenRequest open = new OpenRequest();
+    if (openRequest.Files && openRequest.Files.Count > 0) {
+        open.File = openRequest.Files[0];
+        return Content(Workbook.Open(open));
+    }
+    return BadRequest("No file uploaded.");
+}
+```
+
+> **Note:** For details on how to set up your own web service for open/save operations, refer to the [web service](./web-services/webservice-overview) section of this documentation.
+
+**Install Required Dependencies**
+
+For spreadsheet open and save operations, install the following NuGet packages based on your server platform:
+
+| Platform      | Assembly                                 | NuGet Package |
+|---------------|------------------------------------------|---------------|
+| ASP.NET Core  | Syncfusion.EJ2.Spreadsheet.AspNet.Core <br> Syncfusion.EJ2.AspNet.Core <br/> Syncfusion.XlsIORenderer.Net.Core | [Syncfusion.EJ2.Spreadsheet.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) <br>[Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) <br/> [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) |
+| ASP.NET MVC5  | Syncfusion.XlsIO.AspNet.Mvc5<br/>Syncfusion.ExcelToPdfConverter.AspNet.Mvc5<br/>Syncfusion.Pdf.AspNet.Mvc5<br/>Syncfusion.ExcelChartToImageConverter.AspNet.Mvc5<br/>Syncfusion.EJ2.MVC5 | [Syncfusion.XlsIO.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.XlsIO.AspNet.Mvc5)<br/>[Syncfusion.ExcelToPdfConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.ExcelToPdfConverter.AspNet.Mvc5)<br/>[Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/)<br/>[Syncfusion.ExcelChartToImageConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.AspNet.Mvc5)<br/>[Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5) |
+
+For more details, see the [dependencies section on nuget.org](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core#dependencies-body-tab).
 
 To enable opening Excel files, set the [`allowOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowopen) property to **true** and specify the service url using the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property. The control will send the uploaded file to this endpoint, where it is processed and returned as JSON for the Spreadsheet to render.
 
@@ -534,43 +574,3 @@ public IActionResult Open(IFormCollection openRequest)
 > This feature is only applicable when importing an Excel file and not when loading JSON data or binding cell data.
 
 ![External workbook confirmation dialog](./images/external-reference-dialog-alert.png)
-
-## Server configuration
-
-In the Spreadsheet component, Excel import processing is handled on the `server‑side`. Therefore, to enable Excel importing in your application, you need to configure a server using any of the following web service technologies:
-
-* WebAPI
-* WCF Service
-* ASP.NET MVC Controller Action
-
-The following code example demonstrates how to configure the server using a `WebAPI` service.
-
-```csharp
-
-    [Route("api/[controller]")]
-    public class SpreadsheetController : Controller
-    {
-        //To open Excel file
-        [AcceptVerbs("Post")]
-        [HttpPost]
-        [EnableCors("AllowAllOrigins")]
-        [Route("Open")]
-        public IActionResult Open(IFormCollection openRequest)
-        {
-            OpenRequest open = new OpenRequest();
-            open.File = openRequest.Files[0];
-            return Content(Workbook.Open(open));
-        }
-    }
-```
-
-## Server dependencies
-
-Open helper functions are shipped in the Syncfusion.EJ2.Spreadsheet package, which is available in Essential Studio<sup style="font-size:70%">&reg;</sup> and [`nuget.org`](https://www.nuget.org/). Following list of dependencies required for Spreadsheet open and save operations.
-
-* Syncfusion.EJ2
-* Syncfusion.EJ2.Spreadsheet
-* Syncfusion.Compression.Base
-* Syncfusion.XlsIO.Base
-
-And also refer [this](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/open-save#server-dependencies) for more information.
