@@ -20,7 +20,7 @@ Use the table below to pick the right mode for your application, then follow the
 <table>
   <thead>
     <tr>
-      <th>Application Type</th>
+      <th>Use Cases</th>
       <th>Execution Mode</th>
       <th>Guide</th>
     </tr>
@@ -29,9 +29,9 @@ Use the table below to pick the right mode for your application, then follow the
     <tr>
       <td>
         <ul>
-          <li>Desktop</li>
-          <li>Console</li>
-          <li>Single-instance</li>
+          <li>Desktop applications</li>
+          <li>Console applications</li>
+          <li>Single-instance (non-scalable)</li>
         </ul>
       </td>
       <td>In-Memory</td>
@@ -44,9 +44,9 @@ Use the table below to pick the right mode for your application, then follow the
     <tr>
       <td>
         <ul>
-          <li>Web API</li>
-          <li>Scalable</li>
-          <li>Stateless</li>
+          <li>Web APIs</li>
+          <li>Scalable applications</li>
+          <li>Stateless services</li>
         </ul>
       </td>
       <td>Storage</td>
@@ -60,6 +60,8 @@ Use the table below to pick the right mode for your application, then follow the
 </table>
 
 Both modes expose the same AI tools. The difference is only in how documents are stored between tool calls.
+
+![Application workflow](application-workflow.png)
 
 ## See Also
 
