@@ -130,7 +130,7 @@ N>    * WordDocumentAgentTools
 N>    * ExcelWorkbookAgentTools
 N>    * PdfDocumentAgentTools
 N>    * PresentationDocumentAgentTools   
-N> 2. All other tool classes work identically in both modes
+N> 2. All other tool classes work identically in both modes.
 N> 3. Register only the tool classes your app needs. See the full list in the [Tools Reference](./tools#available-tools).  
 
 **Step 5: Convert and Register Tools**
