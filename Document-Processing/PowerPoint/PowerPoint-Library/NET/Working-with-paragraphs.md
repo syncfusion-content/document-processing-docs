@@ -11,7 +11,7 @@ documentation: UG
 
 All the textual contents in a Presentation document is represented by Paragraphs. You can have any number of paragraphs within a [TextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextBody.html) of a textbox or shape in a PowerPoint presentation. 
 
-The following code example demonstrates how to add a paragraph in a slide.
+The following code example demonstrates how to add a paragraph in a slide. 
 
 {% tabs %}
 
