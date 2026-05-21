@@ -1,13 +1,13 @@
 ---
 title: Excel Document Processing Library | Syncfusion
-description:  Syncfusion Excel document processing library allows you create, read and write Excel files through code in .NET and Flutter applications without Microsoft Office dependencies.
+description: Syncfusion Excel document processing library lets you create, read, and write Excel files programmatically in .NET and Flutter apps without Microsoft Office.
 platform: document-processing
 control: general
 documentation: UG
 keywords: Excel, SDK, Automation, API, create, read, write
 ---
 
-# Welcome to Syncfusion<sup>&reg;</sup> Excel Document Processing Library
+# Welcome to Syncfusion<sup>®</sup> Excel Document Processing Library
 
 {% doccards %}
 
