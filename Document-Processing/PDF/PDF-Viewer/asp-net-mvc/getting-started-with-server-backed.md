@@ -21,7 +21,7 @@ This guide shows how to integrate the [ASP.NET MVC PDF Viewer](https://www.syncf
 
 - [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started)
 
-## Install NuGet packages
+## Install Syncfusion ASP.NET MVC Package in the application 
 
 Install the following NuGet packages to add the PDF Viewer to the ASP.NET MVC application.
 
@@ -32,15 +32,17 @@ Install the following NuGet packages to add the PDF Viewer to the ASP.NET MVC ap
 
 Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
 
-```
+{% tabs %}
+{% highlight c# tabtitle="~/Views/web.config" %}
 <namespaces>
     <add namespace="Syncfusion.EJ2"/>
 </namespaces>
-```
+{% endhighlight %}
+{% endtabs %}
 
-## Add the style sheet
+## Add the style sheet and script reference
 
-Reference a theme from the CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
+Reference a theme and the required scripts from the CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Layout.cshtml" %}
@@ -49,28 +51,14 @@ Reference a theme from the CDN inside the `<head>` of `~/Views/Shared/_Layout.cs
     ...
     <!-- Syncfusion ASP.NET MVC controls styles -->
     <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Check out the [Themes topic](https://ej2.syncfusion.com/aspnetmvc/documentation/appearance/theme) to learn different ways (CDN, NPM package, and [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)) to reference styles in an ASP.NET MVC application and ensure consistent appearance for Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls.
-
-## Add the script reference
-
-Add the required scripts from the CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
-
-{% tabs %}
-{% highlight c# tabtitle="~/_Layout.cshtml" %}
-
-<head>
-    ...
     <!-- Syncfusion ASP.NET MVC controls scripts -->
     <script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
 </head>
 
 {% endhighlight %}
 {% endtabs %}
+
+N> To learn other ways to load themes or scripts (such as [NPM packages](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#node-package-manager-npm) or [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)), see the [Themes topic](https://ej2.syncfusion.com/aspnetmvc/documentation/appearance/theme) and [Adding Script Reference](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references) documentation. To configure PDF Viewer with locally available script and style resources, follow these [instructions](./how-to/local-resources#configuring-pdf-viewer-with-local-styles-and-scripts).
 
 ## Register the Syncfusion<sup style="font-size:70%">&reg;</sup> script manager
 
@@ -123,6 +111,8 @@ An implementation example can be found in [Github](https://github.com/Syncfusion
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer will render in the default web browser.
 
 ![ASP.NET MVC PDF Viewer Control](AspNetMVC_Images/pdfviewer-control.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-Getting-Started-Examples/blob/main/PDFViewer/ASP.NET%20MVC%20Razor%20Examples/Controllers/HomeController.cs)
 
 ## Deployment notes
 
