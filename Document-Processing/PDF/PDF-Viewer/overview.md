@@ -27,7 +27,7 @@ keywords: PDF, SDK, view, edit, read
 
 {% doccard text="JavaScript(ES6)" link="/document-processing/pdf/pdf-viewer/javascript-es6/getting-started"  icon="/document-processing/pdf/pdf-viewer/javascript-es6/images/JavaScript (ES6).svg" %}
 
-{% doccard text=".NET MAUI" link="/document-processing/pdf/pdf-viewer/maui/getting-started" icon="/document-processing/pdf/pdf-viewer/maui/Images/.NET MAUI.svg" %}
+{% doccard text=".NET MAUI" link="/document-processing/pdf/pdf-viewer/maui/getting-started" icon="/document-processing/pdf/pdf-viewer/maui/Images/dotnet_maui.svg" %}
 
 {% doccard text="Xamarin.Forms" link="/document-processing/pdf/pdf-viewer/xamarin/getting-started" icon="/document-processing/pdf/pdf-viewer/xamarin/pdfviewer_images/Xamarin.Forms.svg" %}
 
