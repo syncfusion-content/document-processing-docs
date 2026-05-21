@@ -142,7 +142,7 @@ Tools are organized into the following categories:
 </tr>
 <tr>
 <td>ExcelConditionalFormattingAgentTools</td>
-<td>Add or remove conditional formatting rules in Excel workbooks.</td>
+<td>Add conditional formatting rules in Excel workbooks.</td>
 </tr>
 <tr>
 <td>ExcelConversionAgentTools</td>
@@ -154,7 +154,7 @@ Tools are organized into the following categories:
 </tr>
 <tr>
 <td>ExcelPivotTableAgentTools</td>
-<td>Create and edit pivot tables in Excel workbooks.</td>
+<td>Create pivot tables in Excel workbooks.</td>
 </tr>
 <tr>
 <td rowspan="5"><strong>PowerPoint</strong></td>
