@@ -969,7 +969,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;
 using Syncfusion.Pdf;
