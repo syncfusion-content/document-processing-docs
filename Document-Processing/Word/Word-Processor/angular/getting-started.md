@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Angular DOCX Editor
 
-Syncfusion® Angular DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in an Angular application. 
+Syncfusion<sup style="font-size:70%">&reg;</sup> [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in an Angular application. 
 
 ## Steps to create an Angular DOCX Editor
 
@@ -104,7 +104,7 @@ The following CSS files are available in the `node_modules/@syncfusion` package 
 
 ### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
 
-Modify the `src/app/app.ts` file to render the Document Editor component. Add the Angular Document Editor by using the <ejs-documenteditorcontainer> selector in the template section of the `src/app/app.ts` file.
+Modify `src/app/app.ts` to render the Document Editor component by adding the Angular Document Editor selector in its template section.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -149,11 +149,12 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of Angular Document Editor](./images/angular_getting_started.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-angular-word-processor).
-
 You can also explore the Document Editor interactively using the live sample below.
 
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Getting-started-angular-word-processor).
+
 
 ## Video tutorial
 
