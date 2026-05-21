@@ -11,6 +11,39 @@ documentation: UG
 You can extract all images from the worksheet using XlsIO. The following code example demonstrates how to retrieve images from a worksheet and save them to a specified directory.
 
 {% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Define the directory name
+string directoryName = "directory_name";
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Open("../../Data/InputTemplate.xlsx");
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    // Get the count of pictures in the worksheet
+    int count = worksheet.Pictures.Count;
+    IPictureShape[] picture = new IPictureShape[count];
+
+    // Loop through all pictures in the worksheet
+    for (int i = 0; i < count; i++)
+    {
+        // Get the picture
+        picture[i] = worksheet.Pictures[i];
+        Image image = picture[i].Picture;
+        string name = picture[i].Name + ".jpg";
+        string imagefile = Path.Combine(directoryName, name);
+
+        // Save the image to a file
+        FileStream stream = new FileStream(imagefile, FileMode.Create, FileAccess.Write);
+        image.Save(stream, image.RawFormat);
+
+        //Dispose stream
+        stream.Dispose();
+    }
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 // Define the directory name
 string directoryName = "directory_name";

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with React DOCX Editor in Next.js
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Document Editor component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component.
 
 ## Steps to create a React DOCX Editor in Next.js
 
@@ -56,8 +56,6 @@ Using one of the above commands will prompt you to configure additional settings
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-√ What is your project named? ... ej2-nextjs-documenteditor
-√ What is your project named? ... ej2-nextjs-grid
 ? Would you like to use the recommended Next.js defaults?
 >   Yes, use recommended defaults - TypeScript, ESLint, Tailwind CSS, App Router
     No, reuse previous settings
@@ -117,7 +115,7 @@ Add the Document Editor component and its dependent component styles available i
 {% endhighlight %}
 {% endtabs %}
 
-> To learn more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
+N> To learn more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
 
 ### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
@@ -148,7 +146,7 @@ export default function Home() {
 {% endhighlight %}
 {% endtabs %}
 
-> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 ### Run the application
 
@@ -171,7 +169,7 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of React Document Editor in Next.js](./images/react_getting_started.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/ej2-nextjs-documenteditor).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started-nextjs).
 
 ## Server-side dependencies
 
@@ -183,6 +181,6 @@ The Document Editor component requires server-side interactions for the followin
 * Spell check
 * Save as file formats other than SFDT and DOCX
 
-> Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
