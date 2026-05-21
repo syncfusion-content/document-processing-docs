@@ -11,7 +11,7 @@ documentation: ug
 
 The [Syncfusion® React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) is an user interactive component to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with XLSX, XLS, CSV and PDF formats.
 
-![React Spreadsheet Component](images/overview-banner.PNG)
+![React Spreadsheet Component](images/overview-banner.png)
 
 ## Key features
 
@@ -42,8 +42,8 @@ The [Syncfusion® React Spreadsheet](https://www.syncfusion.com/spreadsheet-edit
 * [Autofill](cell-range#auto-fill): Provides the option to fill or copy a series or pattern of values and formats into adjacent cells in any direction.
 * [Clear](cell-range#clear): Provides the option to clear the content, formats, and hyperlinks applied to a cell or range of cells in a Spreadsheet.
 * [Aggregates](formulas): Provides the option to check the sum, average, count, and more for the selected cells or range in the sheet.
-* [Picture](illustrations#image): Allows you to view, insert, and modify a picture in a Spreadsheet with customizing options.
-* [Chart](illustrations#chart): Transforms your Spreadsheet data to an intuitive overview for better understanding and to make smart business decisions.
+* [Picture](images-and-illustrations): Allows you to view, insert, and modify a picture in a Spreadsheet with customizing options.
+* [Chart](charts-and-visualizations): Transforms your Spreadsheet data to an intuitive overview for better understanding and to make smart business decisions.
 * [Freeze panes](freeze-pane): Allows you to keep the specified rows and columns always visible at the top and left side of the sheet while scrolling through the sheet.
 * [Password protection](protect-sheet#protect-workbook): Allows you to protect the workbook with a password.
 * [Multi-line editing](editing): Allows you to insert a line break between paragraphs of the text within a cell in a Spreadsheet.
