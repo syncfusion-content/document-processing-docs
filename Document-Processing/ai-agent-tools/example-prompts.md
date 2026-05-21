@@ -13,7 +13,7 @@ Speed up your document automation using these example prompts for Syncfusion Doc
 
 ## Document Processing Prompts
 
-You can test the following prompts in this [demo](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Examples/WPF).
+You can try the following prompts in this [demo](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Examples/WPF).
 
 ### PDF
 
@@ -124,7 +124,7 @@ Convert the sales conference presentation 'sales_conference_2026.pptx' from {Inp
 
 ### Data Extraction
 
-The following prompts allow users to test table, form, and JSON data extraction features of the Data Extraction tool.
+The following prompts allow users to test table, form, and JSON data extraction functionalities of the Data Extraction tool.
 
 {% promptcards %}
 {% promptcard Extract All Data from PDF as JSON %}

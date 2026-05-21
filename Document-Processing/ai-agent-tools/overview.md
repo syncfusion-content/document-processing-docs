@@ -46,7 +46,7 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
           <li>Image to PDF</li>
         </ul>
       </td>
-      <td><code>.pdf</code>
+      <td><code>.pdf</code></td>
     </tr>
     <tr>
       <td><strong>Word</strong></td>

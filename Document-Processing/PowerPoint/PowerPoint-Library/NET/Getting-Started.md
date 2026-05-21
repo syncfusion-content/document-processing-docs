@@ -73,14 +73,6 @@ using Syncfusion.Presentation;
 Imports Syncfusion.Presentation
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-using Syncfusion.Presentation;
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-using Syncfusion.Presentation;
-{% endhighlight %}
-
 {% endtabs %}
 
 An entire PowerPoint Presentation is represented by an instance of [IPresentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html) interface and it is the root element of Essential<sup>&reg;</sup> Presentation’s DOM.
@@ -476,15 +468,12 @@ pdfDocument.Close(True)
 pptxDoc.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//Essential Presentation Library does not support presentation to Pdf conversion in UWP platform.
-{% endhighlight %}
-
 {% endtabs %}
 
 
 N> * Creating an instance of [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts in the PowerPoint presentation to PDF/Image format. Otherwise, the charts are not exported to the converted PDF/Image.
-N> * [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards
+N> * [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards.
+N> * The Essential Presentation Library supports PowerPoint presentation to PDF conversion in UWP applications using PresentationRenderer. For further information, please refer [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-uwp).
 
 [PresentationToPdfConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.PresentationToPdfConverter.PresentationToPdfConverterSettings.html) can be used to customize the conversion of Presentation to PDF document. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class can be further used to improve the quality of converted charts in the PDF/Image. For more information about this, see [Conversion](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/getting-started).
 
