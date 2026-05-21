@@ -42,3 +42,7 @@ The following screenshot shows the localization of context menu in SfPdfViewerCo
 
 ![Output](Localization_images/Localization_img4.png)
 
+## See Also
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [Customize Scrollbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/customize-the-scrollbar)
+- [Get Number of Pages](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/acquire-number-of-pages-in-the-document-being-displayed)

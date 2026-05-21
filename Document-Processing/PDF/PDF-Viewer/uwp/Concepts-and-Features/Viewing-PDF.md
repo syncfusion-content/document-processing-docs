@@ -149,3 +149,8 @@ Await pdfViewer.LoadDocument(file, cancellationTokenSource.Token);
 {% endtabs %}
 
 In the above code sample, the [`CancellationToken`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-5.0) enables you to cancel the asynchronous loading of a PDF document when it is in progress.
+
+## See Also
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/bookmark-navigation)

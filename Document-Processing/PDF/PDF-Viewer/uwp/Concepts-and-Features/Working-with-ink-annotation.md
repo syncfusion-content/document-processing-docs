@@ -146,3 +146,8 @@ pdfViewer.InkAnnotationSettings.UseWindowsInkCanvas = true;
 {% endhighlight %}
 
 N> When `UseWindowsInkCanvas` is set to true, other annotations (except ink) cannot be selected in ink mode and the cursor will be changed to hand tool when it is hovered on any existing ink strokes.
+
+## See Also
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/enable-disable-undo-redo)
+- [Print PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/printing-pdf)

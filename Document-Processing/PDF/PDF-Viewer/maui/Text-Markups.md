@@ -30,6 +30,18 @@ The following image shows the appearance of the text markup annotation types.
 
 This section will go through how to add text markup annotations to a PDF document interactively as well as programmatically to a PDF document.
 
+## Add text markup using the toolbar
+
+A text markup annotation tool with four different sorts of annotations (highlight, strike out, underline, squiggly) is accessible on the built-in toolbar. Users are able to select any of these markups and draw them on the page at any desired location. Additionally, the toolbar allows modification of properties for both existing and new annotations of the selected text markup.
+
+The following image represents how to add the highlight annotations using the toolbar on the desktop.
+
+![Desktop Text markup](Images/TextMarkupDesktop.gif)
+
+The following image represents how to add the highlight annotations using the toolbar on mobile.
+
+![Mobile Text markup](Images/TextMarkupMobile.gif)
+
 ### Add text markups from annotation mode
 
 You can add text markup annotations to a PDF document by touch (or mouse down) and drag using the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following steps explain how to add text markup  annotation on a text in a PDF.

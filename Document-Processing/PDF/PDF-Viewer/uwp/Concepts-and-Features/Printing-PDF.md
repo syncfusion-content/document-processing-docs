@@ -205,3 +205,8 @@ pdfViewerControl.PrintTaskRequested+= PrintTaskRequested;
 {% endtabs %}
 
 N>Though if you specify any print options to be displayed, only those that are supported by the selected printer are shown in the print preview UI. The print UI won't show options that the selected printer doesn't support. The print options will appear in the order in which they are added.
+
+## See Also
+- [Export Pages](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/exporting-pages-as-image)
+- [Custom Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [Check loaded pdfdocument is edited or not](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/check-whether-the-loaded-pdf-document-is-edited-or-not)
