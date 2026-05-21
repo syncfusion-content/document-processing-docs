@@ -49,6 +49,7 @@ The Document Editor component requires server-side interactions for the followin
 
 * Save as file formats other than SFDT and DOCX 
 
+
 You can deploy web APIs for server-side dependencies of Document Editor component in the following platforms.
 
 * [ASP.NET Core](./web-services/core)
@@ -57,4 +58,4 @@ You can deploy web APIs for server-side dependencies of Document Editor componen
 
 To know more about server-side dependencies, refer this [page](./web-services-overview).
 
->Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
+N> If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
