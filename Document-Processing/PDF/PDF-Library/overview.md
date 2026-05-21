@@ -29,6 +29,8 @@ keywords: PDF, SDK, Automation, API, create, read, write
 
 {% doccard text="Flutter" link="/document-processing/pdf/pdf-library/flutter/getting-started" icon="./NET/images/Flutter.svg" %}
 
+{% doccard text="JavaScript" link="/document-processing/pdf/pdf-library/javascript/create-pdf-document-javascript" icon="./NET/images/Javascript.svg" %}
+
 {% doccard text="Linux" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-linux" icon="./NET/images/Linux.png" %}
 
 {% doccard text="Mac" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-mac-os" icon="./NET/images/Mac.svg" %}
