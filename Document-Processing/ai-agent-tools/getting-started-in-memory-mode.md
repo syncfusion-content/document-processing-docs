@@ -21,8 +21,6 @@ The example below uses the Microsoft Agents Framework with OpenAI. The same step
 | AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI.|
 | NuGet Package | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
-> **Note:** Any [supported provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) works — just swap in that provider's API key or endpoint credentials.
-
 ## Integration
 
 **Step 1: Install and License**
@@ -61,7 +59,7 @@ repoCollection.AddManager(DocumentType.PDF,        pdfManager);
 repoCollection.AddManager(DocumentType.PowerPoint, presentationManager);
 ```
 
-> **Note:** Tools that operate on a single document type are initialized directly with their own manager. Only cross-format tools like `OfficeToPdfAgentTools` require the `DocumentManagerCollection`.
+N> Tools that operate on a single document type are initialized directly with their own manager. Only cross-format tools like `OfficeToPdfAgentTools` require the `DocumentManagerCollection`.
 
 **Step 3: Instantiate Tools**
 
@@ -102,11 +100,11 @@ allTools.AddRange(new OfficeToPdfAgentTools(repoCollection, outputDir).GetTools(
 allTools.AddRange(new DataExtractionAgentTools(outputDir).GetTools());
 ```
 
-> **Note:** Register only the tool classes your app needs. See the full list in the [Tools Reference](./tools).
+N> Register only the tool classes your app needs. See the full list in the [Tools Reference](./tools#available-tools).
 
 **Step 4: Convert and Register Tools**
 
-Wrap each `AITool` into a framework-compatible function using `AIFunctionFactory.Create`:
+Wrap each [AITool](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.ai.aitool) into a framework-compatible function using [AIFunctionFactory.Create](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.ai.aifunctionfactory.create):
 
 ```csharp
 using Microsoft.Extensions.AI;
@@ -120,7 +118,7 @@ var aiTools = allTools
     .ToList();
 ```
 
-> **Note:** AI agents support a maximum of 128 tools. Register only the tools relevant to your scenario.
+N> AI agents support a maximum of 128 tools. Register only the tools relevant to your scenario.
 
 **Step 5: Build the Agent**
 
@@ -143,11 +141,11 @@ AIAgent agent = new OpenAIClient(apiKey)
         tools: aiTools);
 ```
 
-The system prompt sets the rules for how the agent works. For the full system prompt, see the [GitHub console example](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AgentChatConsole/Program.cs).
+The system prompt sets the rules for how the agent works. For the full system prompt, see [here](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AgentChatConsole/Program.cs#L343).
 
 ## Complete Example
 
-For the full interactive chat loop, see the [GitHub console example](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AgentChatConsole/Program.cs).
+You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AgentChatConsole/Program.cs).
 
 ## See Also
 

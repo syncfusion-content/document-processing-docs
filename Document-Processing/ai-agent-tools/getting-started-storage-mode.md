@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started - Storage Mode
 
-Documents are read from and written to storage (Azure Blob, S3, local disk, etc.) on each tool invocation. No in-memory objects are maintained between tool calls — each operation opens the document from storage, processes it, and saves it back. This mode is ideal for distributed systems, serverless architectures, and scenarios where document persistence is required.
+Documents are read from and written to storage (Azure Blob, S3, local disk, etc.) on each tool invocation. No in-memory objects are maintained between tool calls - each operation opens the document from storage, processes it, and saves it back. This mode is ideal for distributed systems, serverless architectures, and scenarios where document persistence is required.
 
 The example below uses Azure Blob Storage. The same pattern works with any storage backend by implementing the `IDocumentStorage` interface.
 
@@ -21,8 +21,6 @@ The example below uses Azure Blob Storage. The same pattern works with any stora
 | AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI.|
 | Azure Storage Account | Create from [Azure Portal](https://portal.azure.com) with a blob container |
 | NuGet Packages | [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI), [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs) |
-
-> **Note:** Any [supported provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) works — just swap in that provider's API key or endpoint credentials.
 
 ## Integration
 
@@ -40,7 +38,7 @@ if (!string.IsNullOrEmpty(licenseKey))
 
 **Step 2: Implement Storage**
 
-Implement `IDocumentStorage` for your storage backend. Below is the class signature and method stubs for Azure Blob Storage — see the [full implementation on GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/ASP.NET-Core/AgentChatWeb/):
+Implement `IDocumentStorage` for your storage backend. Below is the class signature and method placeholders for Azure Blob Storage - You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/ASP.NET-Core/AgentChatWeb/):
 
 ```csharp
 using Azure.Storage.Blobs;
@@ -74,7 +72,7 @@ string containerName    = Environment.GetEnvironmentVariable("AZURE_BLOB_CONTAIN
 IDocumentStorage storage = new AzureBlobStorage(connectionString, containerName);
 ```
 
-> **Note:** For other storage providers (AWS S3, local disk, etc.), implement the same `IDocumentStorage` interface with the appropriate SDK or file system operations.
+N> For other storage providers (AWS S3, local disk, etc.), implement the same `IDocumentStorage` interface with the appropriate SDK or file system operations.
 
 **Step 3: Create DocumentStorageManager**
 
@@ -88,7 +86,7 @@ var storageManager = new DocumentStorageManager(storage);
 
 **Step 4: Instantiate Tools**
 
-Initialize each tool class with the storage manager and collect `AITool` objects:
+Initialize each tool class with the storage manager and collect [AITool](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.ai.aitool) objects:
 
 ```csharp
 using Syncfusion.AI.AgentTools.Word;
@@ -127,9 +125,13 @@ allTools.AddRange(new OfficeToPdfAgentTools(storageManager).GetTools());
 allTools.AddRange(new DataExtractionAgentTools().GetTools());
 ```
 
-> **Important:** The following tool classes are not supported in Storage mode: `WordDocumentAgentTools`, `ExcelWorkbookAgentTools`, `PdfDocumentAgentTools`, `PresentationDocumentAgentTools`. All other tool classes work identically in both modes.
-
-> **Note:** Register only the tool classes your app needs. See the full list in the [Tools Reference](./tools).
+N> 1. The following tool classes are not supported in Storage mode:
+N>    * WordDocumentAgentTools
+N>    * ExcelWorkbookAgentTools
+N>    * PdfDocumentAgentTools
+N>    * PresentationDocumentAgentTools   
+N>    All other tool classes work identically in both modes
+N> 2. Register only the tool classes your app needs. See the full list in the [Tools Reference](./tools#available-tools).  
 
 **Step 5: Convert and Register Tools**
 
@@ -147,7 +149,7 @@ var aiTools = allTools
     .ToList();
 ```
 
-> **Note:** AI agents support a maximum of 128 tools. Register only the tools relevant to your scenario.
+N> AI agents support a maximum of 128 tools. Register only the tools relevant to your scenario.
 
 **Step 6: Build the Agent**
 
@@ -168,11 +170,11 @@ AIAgent agent = new OpenAIClient(apiKey)
         tools: aiTools);
 ```
 
-The system prompt sets the rules for how the agent works. For the full system prompt, See the [GitHub example](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Examples/ASP.NET-Core/AgentChatWeb).
+The system prompt sets the rules for how the agent works. For the full system prompt, see [here](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/ASP.NET-Core/AgentChatWeb/Services/AgentService.cs#L228).
 
 ## Complete Example
 
-For the full interactive chat loop, see the [GitHub web example](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Examples/ASP.NET-Core/AgentChatWeb).
+You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Examples/ASP.NET-Core/AgentChatWeb).
 
 ## See Also
 
