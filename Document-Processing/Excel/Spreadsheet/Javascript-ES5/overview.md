@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Overview of the EJ2 Javascript Spreadsheet control | Syncfusion
+title: Overview of the JavaScript (ES5) Spreadsheet Control | Syncfusion
 description: Learn here all about Overview of the Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Index 
 documentation: ug
 ---
 
-# Overview of the EJ2 Javascript Spreadsheet control
+# Overview of the JavaScript (ES5) Spreadsheet Control
 
-The Spreadsheet is an user interactive control to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with xlsx, xls, CSV and PDF formats.
+The [Javascript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) is an user interactive control to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with xlsx, xls, CSV and PDF formats.
+
+![JavaScript ES5 Spreadsheet Control](./images/overview-banner.png)
 
 ## Key features
 
