@@ -138,7 +138,7 @@ Tools are organized into the following categories:
 </tr>
 <tr>
 <td>ExcelChartAgentTools</td>
-<td>Create, modify, and remove charts in Excel workbooks.</td>
+<td>Create charts in Excel workbooks.</td>
 </tr>
 <tr>
 <td>ExcelConditionalFormattingAgentTools</td>
