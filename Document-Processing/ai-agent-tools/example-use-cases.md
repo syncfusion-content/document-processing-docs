@@ -12,32 +12,29 @@ documentation: ug
 
 ### Overview
 
-This example demonstrates an **Automated PDF Redaction Agent** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp), OpenAI, and Syncfusion PDF Agent Tools to automatically detect and permanently redact sensitive information from PDF documents. The agent accepts a natural language request, identifies all sensitive data, and outputs a clean redacted PDF — with no manual intervention required. This sample runs using [In-Memory Mode](./getting-started-in-memory-mode).
+This example demonstrates an **Automated PDF Redaction Agent** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp), OpenAI, and Syncfusion PDF Tools to automatically detect and permanently redact sensitive information from PDF documents. The agent accepts a natural language request, identifies all sensitive data, and outputs a clean redacted PDF - with no manual intervention required. This sample runs using [In-Memory Mode](./getting-started-in-memory-mode).
 
 ### Prerequisites
 
 | Requirement | Details |
 |---|---|
 | .NET SDK | .NET 8.0, 9.0, or 10.0 |
-| AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI — generate a key at <a href="https://platform.openai.com">platform.openai.com</a>|
+| AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI. |
 | NuGet Packages | [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
 ### How it works
 
 At runtime the application performs the following steps:
 
-1. **Load PDF.** The agent loads the specified PDF document into memory.
-2. **Extract text.** All text content is extracted from the PDF, including layout and position information.
-3. **Detect sensitive data.** The AI identifies and categorizes sensitive information, including:
-   - **Personal Information (PII):** Names, email addresses, phone numbers, physical addresses, dates of birth.
-   - **Financial Data:** Social Security numbers, credit card numbers, bank account numbers, employee IDs.
-   - **Other Identifiers:** Passport numbers, driver's license numbers, IP addresses.
-4. **Locate and redact.** All identified items are located using bounding box coordinates and permanently redacted with black boxes.
-5. **Export.** The redacted PDF is saved to the output folder with a `_redacted.pdf` suffix. The original file remains unchanged.
+1. **Load PDF:** The agent loads the specified PDF document into memory.
+2. **Extract text:** All text content is extracted from the PDF, including layout and position information.
+3. **Detect sensitive data:** The AI identifies and categorizes sensitive information such as personal information, financial data, and other identifiers.
+4. **Locate and redact:** All identified items are located using bounding box coordinates and permanently redacted with black boxes.
+5. **Export:** The redacted PDF is saved to the output folder with a `_redacted.pdf` suffix. The original file remains unchanged.
 
 ### Syncfusion setup
 
-The snippet below shows only the Syncfusion-specific configuration. For the full setup and the interactive chat loop, see [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AutomatedPDFRedaction/Program.cs).
+The snippet below shows only the Syncfusion-specific configuration. You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AutomatedPDFRedaction/Program.cs).
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -53,7 +50,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(
 
 // Set up PDF Document Manager and tools
 var pdfManager = new PdfDocumentManager(TimeSpan.FromMinutes(5));
-var outputDir  = @"Data\Output";
+var outputDir  = Path.GetFullPath(Environment.CurrentDirectory + @"..\..\..\..\Data\Output\");
 
 var allTools = new List<AITool>();
 allTools.AddRange(new PdfDocumentAgentTools(pdfManager, outputDir).GetTools());
@@ -76,19 +73,13 @@ AIAgent agent = new OpenAIClient(Environment.GetEnvironmentVariable("OPENAI_API_
 
 ### Example Prompts
 
-Once the agent is running, use natural language to trigger redaction:
+Once the agent is running, use natural language prompt to trigger redaction:
 
 > *"Load 'case_filing.pdf' from the input folder and redact all sensitive information including names, addresses, and ID numbers. Save the result as 'case_filing_redacted.pdf'."*
 
-> *"Load 'financial_data.pdf' and automatically redact all PII and financial information, then save the redacted file to the output folder."*
-
 ### Complete Example
 
-For the full runnable example, refer to:
-
-[Examples/Console/AutomatedPDFRedaction/Program.cs](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AutomatedPDFRedaction/Program.cs)
-
----
+You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AutomatedPDFRedaction/Program.cs).
 
 ## Blog Generator Agent
 
@@ -101,9 +92,9 @@ This example demonstrates a **Blog Generator** that uses the [Microsoft Agent Fr
 | Requirement | Details |
 |---|---|
 | .NET SDK | .NET 8.0, 9.0, or 10.0 |
-| AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI — generate a key at <a href="https://platform.openai.com">platform.openai.com</a>. |
-| OpenAI Models | A text model (default `gpt-4o`) and an image model (default `gpt-image-1.5`) |
-| NuGet Packages | [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI), [OpenAI](https://www.nuget.org/packages/OpenAI) |
+| AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI. |
+| OpenAI Models | A text model (default **gpt-4o**) and an image model (default **gpt-image-1.5**) |
+| NuGet Packages | [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
 ### How it works
 
@@ -114,13 +105,13 @@ At runtime the application performs the following steps:
 1. **Ask blog topic.** The user enters a topic from the console.
 2. **Generate title and outline.** The agent drafts a title and 6–10 section outline for user confirmation (`[Y/n/r]`).
 3. **Draft blog content as HTML.** For each section the agent generates structured HTML with consistent styling.
-4. **Generate images.** For sections that need visuals, the `gpt-image-1.5` model generates PNG images embedded as Base64.
+4. **Generate images.** For sections that need visuals, the **gpt-image-1.5** model generates PNG images embedded as Base64.
 5. **Convert HTML to Word.** The AI agent autonomously chains `CreateDocument` → `ImportHtml` → `ExportDocument` using `WordDocumentAgentTools` and `WordImportExportAgentTools`.
 6. **Save output.** Both the assembled HTML and the converted Word document are saved to the output folder.
 
 ### Syncfusion setup
 
-The snippet below shows only the Syncfusion-specific configuration. For the full credential setup and the blog generation loop, see [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs).
+The snippet below shows only the Syncfusion-specific configuration. You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs).
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -159,19 +150,13 @@ AIAgent aiAgent = chatClient.AsIChatClient().AsAIAgent(
 
 Once the agent is running, enter a topic at the console prompt to start the blog generation workflow:
 
-> *"Write a blog post about the future of AI in healthcare."*
-
-> *"Generate a blog post on best practices for cloud security in enterprise applications."*
+> *"Write a blog post about the future of AI in health care."*
 
 The agent will draft a title and outline for your review before generating the full content and images.
 
 ### Complete Example
 
-For the full runnable example, refer to:
-
-[Examples/Console/BlogGenerator/Program.cs](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs)
-
----
+You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs).
 
 ## See Also
 
@@ -180,4 +165,3 @@ For the full runnable example, refer to:
 - [Tools](./tools)
 - [Customization](./customization)
 - [Example Prompts](./example-prompts)
-- [Microsoft Agent Framework – C# Providers](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp)

@@ -9,10 +9,12 @@ documentation: ug
 
 # Customize the AI Agent Tool Library
 
-The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) is designed to be extensible. This guide walks you through creating a custom agent tool class and registering the tools with an AI agent so they are callable alongside the built-in tools.
+The [Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) library is designed to be extensible. This guide walks you through creating a custom agent tool class and registering the tools with an AI agent so they are callable alongside the built-in tools.
 
 
 ## Creating a Custom AI Agent Tool Class
+
+Follow these steps to enable new document operations to the [AI agent tool library](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools).
 
 **Step 1: Clone the repository**
 
@@ -42,7 +44,7 @@ namespace Syncfusion.AI.AgentTools.Word
         public WordWatermarkAgentTools(DocumentStorageManager manager)
             : base(manager, DocumentType.Word) { }
 
-        // Step: Decorate each method with [Tool] — name and description guide the AI
+        // Step: Decorate each method with [Tool] - name and description guide the AI
         [Tool(
             Name = "AddTextWatermark",
             Description = "Adds a text watermark to the specified Word document.")]
@@ -137,7 +139,7 @@ Your custom tool methods are now callable by the AI agent the same way as all bu
 
 Once the custom watermark tools are registered, you can interact with the agent using natural language:
 
-> *"Open the file at C:\report.docx and add a 'CONFIDENTIAL' watermark to it, then save it."*
+> *"Open the file ‘report.docx’ and add a 'CONFIDENTIAL' watermark to it, then save it."*
 
 The agent will call `Word_CreateDocument` to load the file, then `Word_AddTextWatermark` with `watermarkText = "CONFIDENTIAL"`, and finally `Word_ExportDocument` to save the result.
 
