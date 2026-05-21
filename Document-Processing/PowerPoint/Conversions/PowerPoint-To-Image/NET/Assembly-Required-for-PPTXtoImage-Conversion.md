@@ -35,7 +35,7 @@ Syncfusion.SfChart.WPF<br/>
 </tr>
 <tr>
 <td>
-{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-core)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-blazor)' | markdownify}}<br/></td><td>
+{{'[ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-blazor)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.Portable<br/>
 Syncfusion.Compression.Portable<br/>
 Syncfusion.OfficeChart.Portable<br/>
@@ -93,18 +93,6 @@ Syncfusion.Pdf.Base<br/>
 Syncfusion.PresentationToPDFConverter.Base<br/>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>
 Syncfusion.SfChart.WPF<br/></td></tr>
-<tr>
-<td>
-{{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-xamarin)' | markdownify}}<br/></td><td>
-Syncfusion.Presentation.Portable<br/>
-Syncfusion.Compression.Portable<br/>
-Syncfusion.OfficeChart.Portable<br/>
-Syncfusion.Pdf.Portable<br/>
-Syncfusion.Pdf.Imaging.Portable<br/>
-Syncfusion.PresentationRenderer.Portable<br/>
-Syncfusion.MetafileRenderer.Portable<br/>
-Syncfusion.SkiaSharpHelper.Portable<br/>
-SkiaSharp<br/></td></tr>
 </table>
 
 N> 1. Starting with the v24.1.x, if you reference "Syncfusion.PresentationRenderer", you have to add the "Syncfusion.Pdf.Imaging" assembly reference in your projects to perform PowerPoint Presentation to Image conversion.

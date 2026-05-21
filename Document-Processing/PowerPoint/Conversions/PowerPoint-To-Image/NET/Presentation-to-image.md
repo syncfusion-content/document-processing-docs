@@ -221,10 +221,6 @@ The following code snippet demonstrates how to convert a PowerPoint slide to ima
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"  %}
-//The Essential Presentation Library does not provides support to custom image resolution in C# [Cross-platform] platforms.
-{% endhighlight %}
-
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the PowerPoint presentation
 IPresentation pptxDoc = Presentation.Open("Output.pptx");
