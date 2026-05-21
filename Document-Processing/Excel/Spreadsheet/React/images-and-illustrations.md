@@ -196,6 +196,6 @@ Enables or disables image functionality in the Spreadsheet.
 * Corner resizing option is not available in the image element.
 
 ## See Also
-* [Charts](./charts-and-visualizations.md)
+* [Charts](./charts-and-visualizations)
 * [Formatting](./formatting)
 * [Rows and columns](./rows-and-columns)
