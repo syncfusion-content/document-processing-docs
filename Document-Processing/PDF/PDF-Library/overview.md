@@ -23,7 +23,7 @@ keywords: PDF, SDK, Automation, API, create, read, write
 
 {% doccard text="WPF" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf" icon="./NET/images/WPF.svg" %}
 
-{% doccard text=".NET MAUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui" icon="./NET/images/.NET-MAUI.svg" %}
+{% doccard text=".NET MAUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui" icon="./NET/images/MAUI.svg" %}
 
 {% doccard text="WinUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui" icon="./NET/images/WinUI.png" %}
 
