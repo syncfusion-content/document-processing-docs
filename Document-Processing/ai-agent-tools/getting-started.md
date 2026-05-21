@@ -20,7 +20,7 @@ Use the table below to pick the right mode for your application, then follow the
 <table>
   <thead>
     <tr>
-      <th>My Application Type</th>
+      <th>Application Type</th>
       <th>Execution Mode</th>
       <th>Guide</th>
     </tr>
