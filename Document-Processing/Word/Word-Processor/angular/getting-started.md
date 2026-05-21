@@ -153,7 +153,7 @@ You can also explore the Document Editor interactively using the live sample bel
 
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Getting-started-angular-word-processor).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/getting-started).
 
 
 ## Video tutorial
