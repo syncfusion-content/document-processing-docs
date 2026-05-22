@@ -184,9 +184,9 @@ Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 
 Button form fields will be rendered in the PDF viewer. But the PDF viewer supports only the `GoTo` actions that navigates to a particular location in the PDF document alone. Other types of button actions are not supported.
 
-# Flatten form fields on save
+# Flatten form fields only on save
 
-The FlattenOnSave property allows you to convert form fields into non-editable content when the PDF document is saved. This ensures that the form field values become part of the document and cannot be modified further.
+The [FlattenOnSave](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_FlattenOnSave) property converts form fields into non-editable content only when the PDF document is saved. This means the form fields remain editable while the document is open, and are flattened (made part of the document content) during the save operation, preventing any further modification afterward.
 
 ## Flatten specific form fields
 

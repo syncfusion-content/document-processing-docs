@@ -30,7 +30,7 @@ The following image shows the appearance of the text markup annotation types.
 
 This section will go through how to add text markup annotations to a PDF document interactively as well as programmatically to a PDF document.
 
-## Add text markup using the toolbar
+### Add text markup using the toolbar
 
 A text markup annotation tool with four different sorts of annotations (highlight, strike out, underline, squiggly) is accessible on the built-in toolbar. Users are able to select any of these markups and draw them on the page at any desired location. Additionally, the toolbar allows modification of properties for both existing and new annotations of the selected text markup.
 

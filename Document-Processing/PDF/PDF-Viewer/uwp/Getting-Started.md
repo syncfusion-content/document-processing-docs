@@ -8,39 +8,65 @@ documentation: ug
 ---
 
 # Getting Started with UWP PDF Viewer (SfPdfViewer)
-This section explains about the assemblies required for the deployment of SfPdfViewer and how to create simple application using the SfPdfViewer control.
+This section explains about the assemblies required for the deployment of [UWP PDF Viewer]() (SfPdfViewer) and how to create simple application using the SfPdfViewer control.
 
 ## Required Assemblies
 
 The following list of assemblies are required for adding a PDF viewer control to the Universal Windows Platform application.
 
-* Syncfusion.SfPdfViewer.UWP
-* Syncfusion.Pdf.UWP
-* Syncfusion.SfColorPickers.UWP
-* Syncfusion.SfInput.UWP
-* Syncfusion.SfRadialMenu.UWP
-* Syncfusion.SfShared.UWP
+<table>
+<tr>
+<th>Assembly</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Syncfusion.SfPdfViewer.UWP</td>
+<td>This component contains the rendering area and other related UI elements.</td>
+</tr>
+<tr>
+<td>Syncfusion.Pdf.UWP</td>
+<td>This library contains the PDF reader and creator that supports the PDF Viewer.</td>
+</tr>
+<tr>
+<td>Syncfusion.SfColorPickers.UWP</td>
+<td>This component contains UI controls for Color Picker that are used in the PDF Viewer.</td>
+</tr>
+<tr>
+<td>Syncfusion.SfInput.UWP</td>
+<td>This component contains input controls like combobox, range slider and text boxes used in the PDF Viewer</td>
+</tr>
+<tr>
+<td>Syncfusion.SfRadialMenu.UWP</td>
+<td>This component contains UI controls for context menu that are used in the PDF Viewer.</td>
+</tr>
+<tr>
+<td>Syncfusion.SfShared.UWP</td>
+<td>This component contains various UI controls (Numeric UpDown) that are used in the PDF Viewer.</td>
+</tr>
+<table>
 
-Each of these assemblies always needs to be in parallel with its associated resource files as shown in the screenshot below. However, it is not necessary to have all these assemblies in a single folder as long as the resource files are along with the assemblies in their respective folders. The screenshot shows only the SfPdfViewer assembly for brevity.
+Each assembly must be placed together with its corresponding resource files (i.e., the resource files for an assembly should reside in the same folder as that assembly). The assemblies do not all have to be in a single folder — each assembly may live in its own folder so long as its resource files are kept alongside it. The screenshot shows only the SfPdfViewer assembly for brevity.
 
 ![Dependent assemblies needed for SfPdfViewerControl](Getting-Started_images/Getting-Started_img3.jpeg)
 
-The aforementioned placement of the assemblies and the resource files in the same folder becomes important only when the assemblies need to be moved from the installed location of the assemblies to somewhere else. When the assemblies are moved the resource files must also be moved and placed in the same folder as the assemblies.
+This co-location matters only if you move assemblies out of their installed location. If you relocate an assembly, be sure to move its resource files with it and place them in the same folder as that assembly.
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>®</sup> license key in your UWP application to use our components.
 
 
 ## Create a simple application with the SfPdfViewer
 
-Follow the below steps to create a simple application with the SfPdfViewer and load a PDF document.
+Follow the below steps to create a simple application with the SfPdfViewer.
 
 1. Create a new UWP application in the Visual Studio.
 
-2. Open the Visual Studio tool box and drag the SfPdfViewerControl toolbox item to the designer window. Name the SfPdfViewerControl as pdfViewer.
+2. Open the Visual Studio tool box and drag the [SfPdfViewerControl](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) toolbox item to the designer window. Name the [SfPdfViewerControl](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) as pdfViewer.
 
 ![SfPdfViewerControl in visual studio toolbox](Getting-Started_images/Getting-Started_img1.jpeg)
 
 When you drag the SfPdfViewer toolbox item to the window, it automatically adds the required assembly references to the current application.
+
+### Add PDF Viewer using code
 
 To add the SfPdfViewer by using code, add the required assemblies mentioned previously as reference to the project.
 
@@ -68,7 +94,7 @@ Add the following code in XAML to make use of the SfPdfViewer.
 
 The following steps explains how to load a PDF document through binding.
 
-1. The SfPdfViewer’s ItemSource property allows you to bind PDF documents in XAML. The ItemsSource property accepts a stream input that can be bound to the viewer during initialization.
+1. The SfPdfViewer’s [ItemSource](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html#Syncfusion_Windows_PdfViewer_SfPdfViewerControl_ItemsSource) property allows you to bind PDF documents in XAML. The ItemsSource property accepts a stream input that can be bound to the viewer during initialization.
 
 2. To bind the PDF file, add the PDF file to the project as an asset. Right Click the PDF file and open the properties window. In the properties window, set the Build Action as Embedded Resource.
 
@@ -144,7 +170,7 @@ End Class
 {% endhighlight %}
 {% endtabs %}
 
-In order to bind the DocumentStream property of the PdfReport class, the DataContext needs to be set for the page. To add the DataContext in XAML, use the following code example.
+In order to bind the [DocumentStream](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html#Syncfusion_Windows_PdfViewer_SfPdfViewerControl_DocumentStream) property of the PdfReport class, the [DataContext](https://learn.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.datacontext?view=winrt-28000) needs to be set for the page. To add the [DataContext](https://learn.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.datacontext?view=winrt-28000) in XAML, use the following code example.
 
 {% tabs %}
 {% highlight xaml %}

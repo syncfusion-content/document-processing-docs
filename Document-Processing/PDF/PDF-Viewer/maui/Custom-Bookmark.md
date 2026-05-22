@@ -269,6 +269,7 @@ To navigate using the UI:
 2. Once the outline view is displayed, tap on any custom bookmark to navigate to the corresponding page. 
 
 ![Custom bookmark in .NET MAUI PDF Viewer](Images\custom-bookmark.png)
+
 N>A custom bookmark currently stores only the target page information. It does not support storing or navigating to a specific position within the page, such as coordinates or a particular content region.
 ### Navigate Programmatically
 
