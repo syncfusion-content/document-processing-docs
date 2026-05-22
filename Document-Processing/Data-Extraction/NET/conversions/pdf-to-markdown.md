@@ -28,7 +28,6 @@ To extract form fields across a PDF document using the **ExtractDataAsMarkdown**
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
 //Open the input PDF file as a stream.
@@ -48,7 +47,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
 //Open the input PDF file as a stream.
@@ -139,13 +137,10 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
     //Initialize the Smart Data Extractor.
     DataExtractor extractor = new DataExtractor();
-
     //Set the page range for extraction (pages 1 to 3).
     extractor.PageRange = new int[,] { { 1, 3 } };
-
     //Extract data as Markdown using the API.
     string data = extractor.ExtractDataAsMarkdown(stream);
-
     //Save the extracted Markdown data into an output file.
     File.WriteAllText("Output.md", data, Encoding.UTF8);
 }
