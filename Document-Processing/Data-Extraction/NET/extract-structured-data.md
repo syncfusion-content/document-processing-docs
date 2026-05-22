@@ -19,7 +19,7 @@ This section covers two scenarios:
 
 ### Extract Data as JSON from PDF
 
-To extract form fields across a PDF document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code example:
+To extract structured data from an PDF document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code example:
 
 {% tabs %} 
 
@@ -111,7 +111,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extract Data as Markdown from PDF or Image
 
-To extract form fields across a PDF document using the **ExtractDataAsMarkdown** method of the **DataExtractor** class, refer to the following code example:
+To extract structured data from an PDF document using the **ExtractDataAsMarkdown** method of the **DataExtractor** class, refer to the following code example:
 
 {% tabs %} 
 
@@ -153,7 +153,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
-N>> **Note:** To convert an image instead of a PDF, replace the input stream with the image file (for example, *Input.jpg* or *Input.png*). The rest of the code remains unchanged.
+N>>To convert an image instead of a PDF, replace the input stream with the image file (for example, *Input.jpg* or *Input.png*). The rest of the code remains unchanged.
 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-MD-from-PDF/.NET).
