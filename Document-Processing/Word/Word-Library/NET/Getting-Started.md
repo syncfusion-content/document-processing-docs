@@ -76,8 +76,7 @@ The following code example explains how to create a new Word document with few l
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-document/.NET/Create-Word-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-document/.NET/Create-Word-document/Program.cs" %}
 //Creates a new instance of WordDocument (Empty Word Document)
 WordDocument document = new WordDocument();
 //Adds a section and a paragraph to the document
