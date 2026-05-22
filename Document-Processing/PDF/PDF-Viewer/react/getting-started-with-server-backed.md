@@ -14,40 +14,32 @@ This section explains the steps to create a server-backed React PDF Viewer and d
 
 ## Prerequisites
 
-To get started with Syncfusion<sup style="font-size:70%">&reg;</sup> React UI components, ensure the compatible version of React.
-* React supported version >= `15.5.4+`.
-* Required node version >= `14.0.0+`(NPM Package Manager).
+[System requirements for Syncfusion® React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
-## Create a React app
+## Create a React application
 
-To set up a React application, use Vite (for example, `npm create vite@latest`), which provides a fast development environment, smaller bundle sizes, and optimized production builds compared to traditional tools such as `create-react-app`. For detailed steps, refer to the Vite [installation instructions](https://vitejs.dev/guide/).
+Use [`Vite`](https://vitejs.dev/guide/) to create a new React application, as it provides a faster development environment, smaller bundle sizes, and optimized production builds.
 
-N> To create a React application using `create-react-app`, refer to this [documentation](https://ej2.syncfusion.com/react/documentation/getting-started/create-app) for more details.
-
-To create a new React application, run the following command.
+To create a new React application, run one of the following commands based on your preferred environment.
 
 {% tabs %}
-{% highlight bash tabtitle="TypeScript" %}
-
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm run dev
-
-{% endhighlight %}
 {% highlight bash tabtitle="JavaScript" %}
 
 npm create vite@latest my-app -- --template react
 cd my-app
-npm run dev
+
+{% endhighlight %}
+{% highlight bash tabtitle="TypeScript" %}
+
+npm create vite@latest my-app -- --template react-ts
+cd my-app
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer packages
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
-
-To install PDF Viewer component, use the following command:
+Install the [React PDF Viewer](https://www.npmjs.com/package/@syncfusion/ej2-react-pdfviewer) package from npm using the following command:
 
 ```
 npm install @syncfusion/ej2-react-pdfviewer --save
@@ -57,7 +49,8 @@ npm install @syncfusion/ej2-react-pdfviewer --save
 
 Add the React PDF Viewer component’s CSS reference as given below in `src/index.css` file.
 
-```css
+{% tabs %}
+{% highlight css tabtitle="src/index.css" %}
    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
@@ -66,7 +59,9 @@ Add the React PDF Viewer component’s CSS reference as given below in `src/inde
    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
    @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
    @import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
-```
+{% endhighlight %}
+{% endtabs %}
+
 
 Add the following import statements for the PDF Viewer along with the default imports in the file (src/index.js when using JavaScript/JSX, or src/app.tsx when using TypeScript/TSX), and include the PDF Viewer initialization code inside the function to render the PDF Viewer component.
 
@@ -142,19 +137,11 @@ Use the following command to run the application in browser.
 npm run dev
 ```
 
-Output will be appears as follows.
+After the application starts, open the localhost URL shown in the terminal to view the React PDF Viewer in the browser. The output will appear as follows:
 
-{% tabs %}
-{% highlight js tabtitle="index.jsx" %}
-{% include code-snippet/pdfviewer/react/base-cs1/app/index.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="index.tsx" %}
-{% include code-snippet/pdfviewer/react/base-cs1/app/index.tsx %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/react/base-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
+![React PDF Viewer Control](images/pdfviewer-control.png)
+
+You can also explore the PDF Viewer interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/react/base-cs1" %}
 
@@ -171,6 +158,6 @@ N> For hosting the web service on the Linux platform, ensure to include the [Ski
 
 **See also**
 
-- [Annotations in PDF Viewer](./annotation/overview)
-- [Form Designer in PDF Viewer](./forms/overview#form-designer)
-- [Organize PDF pages](./organize-pages/overview)
+- [Getting started with Standalone React PDF Viewer](./getting-started-with-server-backed)
+- [Open PDF Files](./open-pdf-files)
+- [Save PDF Files](./save-pdf-files)
