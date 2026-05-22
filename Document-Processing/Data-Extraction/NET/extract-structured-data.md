@@ -10,11 +10,6 @@ keywords: Assemblies
 
 # Working with Data Extraction
 
-Refer to the following links for the assemblies and NuGet packages required on different platforms to perform data extraction with the Smart Data Extractor library.
-
-* [Assemblies required to perform data extraction]()
-* [NuGet packages required to perform data extraction]()
-
 ## Extract Data as JSON from PDF or Image
 
 The **Smart Data Extractor** enables you to process PDF documents or scanned images and export the structured content as JSON.  
