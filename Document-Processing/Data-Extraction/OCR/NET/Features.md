@@ -30,7 +30,26 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Perform OCR with input document and tessdata (Language packs).
+    processor.PerformOCR(document);
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -51,7 +70,7 @@ Using processor As OCRProcessor = New OCRProcessor()
     'Perform OCR with input document and tessdata (Language packs). 
     processor.PerformOCR(document)
     'Save the PDF document.
-    document.Save("Output.pdf)
+    document.Save("Output.pdf")
     'Close the document
     document.Close(True)
 End Using
@@ -71,6 +90,44 @@ To perform OCR on a particular region or several regions of a PDF page with the 
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-on-particular-region-of-PDF-document/Perform-OCR-on-particular-region-of-PDF-document/Program.cs, 300" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Assign rectangles to the page.
+    RectangleF rect = new RectangleF(0, 100, 950, 150);
+    List<PageRegion> pageRegions = new List<PageRegion>();
+    //Create page region.
+    PageRegion region = new PageRegion();
+    //Set page index.
+    region.PageIndex = 0;
+    //Set page region.
+    region.PageRegions = new RectangleF[] { rect };
+    //Add region to page region.
+    pageRegions.Add(region);
+    //Set page regions.
+    processor.Settings.Regions = pageRegions;
+
+    //Perform OCR with input document and tessdata (Language packs).
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
@@ -179,7 +236,33 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.PerformOCR(document);
 
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set tesseract OCR Engine.
+    processor.Settings.TesseractVersion = TesseractVersion.Version3_05;
+    //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -241,7 +324,33 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.PerformOCR(document);
 
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set tesseract OCR Engine.
+    processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
+    //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -302,7 +411,33 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.PerformOCR(document);
 
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set tesseract OCR Engine.
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+    //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -355,7 +490,25 @@ using (OCRProcessor processor = new OCRProcessor())
     //Set OCR language.
     processor.Settings.Language = Languages.English;
     //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
-    String OCRText = processor.PerformOCR(imageStream);
+    String OCRText = processor.PerformOCR(imageStream, processor.TessDataPath);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load the input image. 
+    Bitmap bitmap =  new Bitmap("Input.jpg");
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
+    string ocrText=processor.PerformOCR(bitmap,processor.TessDataPath);
 }
 
 {% endhighlight %}
@@ -448,10 +601,33 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.PerformOCR(document);
 
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Perform OCR with input document, tessdata (Language packs) and enable isMemoryOptimized property.
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -503,7 +679,32 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.PerformOCR(document);
 
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set OCR page auto detection rotation.
+    processor.Settings.PageSegment = PageSegmentMode.AutoOsd;
+    //Perform OCR with input document and tessdata (Language packs).
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -549,6 +750,32 @@ For more details, refer to the following code sample.
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+// Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+
+    // Load an existing PDF document.
+    PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
+
+    // Set the path to the tessdata folder.
+    processor.TessDataPath = @"/path/to/tessdata-fast/or/tessdata-best";
+
+    // Perform OCR on the loaded PDF document.
+    processor.PerformOCR(pdfLoadedDocument);
+
+    // Save the processed PDF document.
+    pdfLoadedDocument.Save("Output.pdf");
+    // Close the loaded PDF document.
+    pdfLoadedDocument.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
@@ -636,7 +863,41 @@ using (OCRProcessor processor = new OCRProcessor())
     }
 
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Create the layout result. 
+    OCRLayoutResult layoutResult = new OCRLayoutResult();
+    //Perform OCR with input document and tessdata (Language packs).
+    processor.PerformOCR(document, @"Tessdata/", out layoutResult);
+    //Get OCRed line collection from first page.
+    OCRLineCollection lines = layoutResult.Pages[0].Lines;
+    //Get each OCR'ed line and its bounds.
+    foreach (Line line in lines)
+    {
+        string text = line.Text;
+        RectangleF bounds = line.Rectangle;
+    }
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -713,7 +974,32 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.PerformOCR(document);
 
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set tesseract OCR Engine.
+    processor.Settings.TesseractVersion = TesseractVersion.Version3_02;
+    //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -775,7 +1061,61 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.PerformOCR(document);
 
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set tesseract OCR Engine.
+    processor.Settings.TesseractVersion = TesseractVersion.Version3_05;
+    //Set enable native call.
+    processor.Settings.EnableNativeCall = true;
+    //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set tesseract OCR Engine.
+    processor.Settings.TesseractVersion = TesseractVersion.Version3_05;
+    //Set enable native call.
+    processor.Settings.EnableNativeCall = true;
+    //Perform OCR with input document, tessdata (Language packs) and enabling isMemoryOptimized property.
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -839,7 +1179,31 @@ using (OCRProcessor processor = new OCRProcessor())
     //Perform OCR with input document and tessdata (Language packs).
     processor.PerformOCR(document);
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set custom temp file path location.
+    processor.Settings.TempFolder = "D:/Temp/";
+    //Perform OCR with input document and tessdata (Language packs).
+    processor.PerformOCR(document);
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -964,7 +1328,34 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.PerformOCR(document);
 
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //** For .NET Framework only **.
+    //processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
+    //Set OCR Page segment mode to process.
+    processor.Settings.PageSegment = PageSegmentMode.AutoOsd;
+    //Perform OCR with input document and tessdata (Language packs).
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -1026,13 +1417,38 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.PerformOCR(document);
 
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
 
 {% endhighlight %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set tesseract version. ** For .NET Framework only. **
+    //processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
+    //Set OCR engine mode to process.
+    processor.Settings.OCREngineMode = OCREngineMode.LSTMOnly;
+    //Perform OCR with input document and tessdata (Language packs).
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.OCRProcessor
@@ -1096,6 +1512,30 @@ No image enhancement is performed. The original image is used for OCR processing
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+// Initialize the OCR processor
+using (OCRProcessor processor = new OCRProcessor())
+{
+    // Load an existing PDF document
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    // Set the OCR language to English for text recognition.
+    processor.Settings.Language = Languages.English;
+    // Set the OCR image enhancement mode to improve recognition accuracy.
+    processor.ImageEnhancementMode = OcrImageEnhancementMode.EnhanceForRecognitionOnly;
+    // Perform OCR with input document and tessdata (Language packs)
+    processor.PerformOCR(document);
+    // Save the processed PDF document
+    document.Save("Output.pdf");
+    // Close the document 
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
@@ -1210,6 +1650,32 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+// Initialize the OCR processor
+using (OCRProcessor processor = new OCRProcessor())
+{
+    // Load an existing PDF document
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    // Set the OCR language to English for text recognition.
+    processor.Settings.Language = Languages.English;
+    // Set the options for image enhancement during the OCR process.
+    OcrImageEnhancementOptions options = new OcrImageEnhancementOptions();
+    // Enable grayscale conversion to improve OCR accuracy by reducing color noise.
+    options.IsGrayscaleEnabled = true;
+    // Perform OCR with input document and tessdata (Language packs)
+    processor.PerformOCR(document);
+    // Save the processed PDF document
+    document.Save("Output.pdf");
+    // Close the document 
+    document.Close(true);
+}
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.OCRProcessor
@@ -1264,7 +1730,36 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.PerformOCR(document);
 
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set tesseract version. ** For .NET Framework only. **
+    //processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
+    //Set OCR engine mode to process.
+    processor.Settings.OCREngineMode = OCREngineMode.LSTMOnly;
+    //Set WhiteList Property.
+    processor.Settings.WhiteList = "PDF";
+    //Perform OCR with input document and tessdata (Language packs).
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -1329,7 +1824,36 @@ using (OCRProcessor processor = new OCRProcessor())
     processor.PerformOCR(document);
 
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set tesseract version. ** For .NET Framework only. **
+    //processor.Settings.TesseractVersion = TesseractVersion.Version4_0;
+    //Set OCR engine mode to process.
+    processor.Settings.OCREngineMode = OCREngineMode.LSTMOnly;
+    //Set BlackList Property.
+    processor.Settings.BlackList = "PDF";
+    //Perform OCR with input document and tessdata (Language packs).
+    processor.PerformOCR(document);
+
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -1404,6 +1928,41 @@ using (OCRProcessor processor = new OCRProcessor())
 }
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Get stream from an image file. 
+    FileStream imageStream = new FileStream(@"Input.jpg", FileMode.Open);    
+    //Set OCR language to process.
+    processor.Settings.Language = Languages.English;
+    //Sets Unicode font to preserve the Unicode characters in a PDF document.
+    FileStream fontStream = new FileStream(@"ARIALUNI.ttf", FileMode.Open);
+    //Set the unicode font. 
+    processor.UnicodeFont = new PdfTrueTypeFont(fontStream, true, PdfFontStyle.Regular, 10);
+    //Set the PDF conformance level.
+    processor.Settings.Conformance = PdfConformanceLevel.Pdf_A1B;
+    //Process OCR by providing the bitmap image.  
+    PdfDocument document = processor.PerformOCR(imageStream);
+
+    //Save the PDF document to file stream.
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.OCRProcessor
@@ -1426,7 +1985,7 @@ Using processor As OCRProcessor = New OCRProcessor()
     Dim document As PdfDocument = processor.PerformOCR(imageStream)
 
     'Save the PDF document.
-    document.Save("Output.pdf))
+    document.Save("Output.pdf")
     'Close the document.
     document.Close(True)
 End Using
@@ -1465,6 +2024,12 @@ using (OCRProcessor processor = new OCRProcessor())
     //Close the document.
     document.Close(true);
 }
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+
 
 {% endhighlight %}
 
@@ -1553,7 +2118,30 @@ using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\"))
     processor.PerformOCR(document, @"TessData\");
     
     //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+    //Close the document.
+    document.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor by providing the path of the tesseract binaries (SyncfusionTesseract.dll and liblept168.dll)
+using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\"))
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set OCR language to process.
+    processor.Settings.Language = Languages.English;
+    //Perform OCR with input document and tessdata (Language packs).
+    processor.PerformOCR(document, @"TessData\");
+    
+    //Save the PDF document.
+    document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
 }
@@ -1576,7 +2164,7 @@ Using processor As OCRProcessor = New OCRProcessor("TesseractBinaries\")
     processor.PerformOCR(document, "TessData\")
 
       'Save the PDF document.
-        document.Save("Output.pdf))
+        document.Save("Output.pdf")
     'Close the document.
     document.Close(True)
 End Using
@@ -1596,7 +2184,7 @@ To get the Image rotation angle, you can rotate the image with 4 angles (0,90,18
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
-//Initialize the OCR processor.@
+//Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
 {
     //Load an existing PDF document.
@@ -1619,7 +2207,40 @@ using (OCRProcessor processor = new OCRProcessor())
         }
     }    
    //Save the PDF document.
-    document.Save("Output.pdf);
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+//Initialize the OCR processor.
+using (OCRProcessor processor = new OCRProcessor())
+{
+    //Load an existing PDF document.
+    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+    //Set the OCR language.
+    processor.Settings.Language = Languages.English;
+    //Set the Unicode font to preserve the Unicode characters in a PDF document.
+    processor.TesseractPath = @"D:\Tesseractbinaries_core\Windows\x64";
+    processor.PerformOCR(document, 0, 0, @"D:\tessdata", out OCRLayoutResult result);
+    float angle = 0;
+    if (result != null)
+    {
+        foreach (var page in result.Pages)
+        {
+            angle = page.ImageRotation;
+            if (angle == 180)
+            {
+                document.Pages[0].Rotation = PdfPageRotateAngle.RotateAngle180;
+            }
+        }
+    }    
+   //Save the PDF document.
+    document.Save("Output.pdf");
 }
 
 {% endhighlight %}
@@ -1692,6 +2313,15 @@ using (OCRProcessor processor = new OCRProcessor())
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.OCRProcessor
@@ -1746,77 +2376,82 @@ Here is a basic example of using Syncfusion<sup>&reg;</sup> OCR processor with m
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/OCR/.NET/Perform-OCR-on-PDF-with-multiple-languages/Perform-OCR-on-PDF-with-multiple-languages/Program.cs, 300" %}
 
-    using Syncfusion.OCRProcessor;
-    using Syncfusion.Pdf.Parsing;
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
 
-    // Initialize the OCR processor within a using block to ensure resources are properly disposed
-    using (OCRProcessor ocrProcessor = new OCRProcessor())
-    {
-        // Set the Unicode font for the OCR processor using a TrueType font file
-        ocrProcessor.UnicodeFont = new Syncfusion.Pdf.Graphics.PdfTrueTypeFont(
+// Initialize the OCR processor within a using block to ensure resources are properly disposed
+using (OCRProcessor ocrProcessor = new OCRProcessor())
+{
+    // Set the Unicode font for the OCR processor using a TrueType font file
+    ocrProcessor.UnicodeFont = new Syncfusion.Pdf.Graphics.PdfTrueTypeFont(
             new FileStream("arialuni.ttf", FileMode.Open), // Path to the TrueType font file
             12 // Font size
-        );
+    );
 
-        // Load the PDF document
-        PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+    // Load the PDF document
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
-        // Configure OCR settings
-        OCRSettings ocrSettings = new OCRSettings();
+    // Configure OCR settings
+    OCRSettings ocrSettings = new OCRSettings();
 
-        // Specify the languages to be used for OCR
-        ocrSettings.Language = "eng+deu+ara+ell+fra"; // English, German, Arabic, Greek, French
+    // Specify the languages to be used for OCR
+    ocrSettings.Language = "eng+deu+ara+ell+fra"; // English, German, Arabic, Greek, French
 
-        // Apply the OCR settings to the OCR processor
-        ocrProcessor.Settings = ocrSettings;
+    // Apply the OCR settings to the OCR processor
+    ocrProcessor.Settings = ocrSettings;
 
-        // Perform OCR on the loaded PDF document, providing the path to the tessdata directory
-        ocrProcessor.PerformOCR(loadedDocument, "tessdata");
+    // Perform OCR on the loaded PDF document, providing the path to the tessdata directory
+    ocrProcessor.PerformOCR(loadedDocument, "tessdata");
 
-        // Save the OCR-processed document
-        loadedDocument.Save("Output.pdf");
+    // Save the OCR-processed document
+    loadedDocument.Save("Output.pdf");
 
-        // Close the loaded document and commit changes
-        loadedDocument.Close(true);
-    }
+    // Close the loaded document
+    loadedDocument.Close(true);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    Imports Syncfusion.OCRProcessor
-    Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.Pdf.Parsing
 
-    ' Initialize the OCR processor within a Using block to ensure resources are properly disposed
-    Using ocrProcessor As New OCRProcessor()
-        ' Set the Unicode font for the OCR processor using a TrueType font file
-        ocrProcessor.UnicodeFont = New Syncfusion.Pdf.Graphics.PdfTrueTypeFont(
+' Initialize the OCR processor within a Using block to ensure resources are properly disposed
+Using ocrProcessor As New OCRProcessor()
+    ' Set the Unicode font for the OCR processor using a TrueType font file
+    ocrProcessor.UnicodeFont = New Syncfusion.Pdf.Graphics.PdfTrueTypeFont(
             New FileStream("arialuni.ttf", FileMode.Open), ' Path to the TrueType font file
             12 ' Font size
-        )
-            ' Load the PDF document from the file stream
-            Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+    )
+    ' Load the PDF document from the file stream
+    Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 
-            ' Configure OCR settings
-            Dim ocrSettings As New OCRSettings()
+    ' Configure OCR settings
+    Dim ocrSettings As New OCRSettings()
 
-            ' Specify the languages to be used for OCR
-            ocrSettings.Language = "eng+deu+ara+ell+fra" ' English, German, Arabic, Greek, French
+    ' Specify the languages to be used for OCR
+    ocrSettings.Language = "eng+deu+ara+ell+fra" ' English, German, Arabic, Greek, French
 
-            ' Apply the OCR settings to the OCR processor
-            ocrProcessor.Settings = ocrSettings
+    ' Apply the OCR settings to the OCR processor
+    ocrProcessor.Settings = ocrSettings
 
-            ' Perform OCR on the loaded PDF document, providing the path to the tessdata directory
-            ocrProcessor.PerformOCR(loadedDocument, "tessdata")
+    ' Perform OCR on the loaded PDF document, providing the path to the tessdata directory
+    ocrProcessor.PerformOCR(loadedDocument, "tessdata")
 
-            ' Save the OCR-processed document
-            loadedDocument.Save("Output.pdf")
+    ' Save the OCR-processed document
+    loadedDocument.Save("Output.pdf")
 
-            ' Close the loaded document and commit changes
-            loadedDocument.Close(True)
-        End Using
-    End Using
-
+    ' Close the loaded document and commit changes
+    loadedDocument.Close(True)
+    
+End Using
 
 {% endhighlight %}
 
@@ -1848,6 +2483,40 @@ using (OCRProcessor processor = new OCRProcessor())
 
     // Set the page segmentation mode to process sparse text with orientation and script detection
     processor.Settings.PageSegment = PageSegMode.SparseTextOsd;
+
+    // Perform OCR on the loaded PDF document to extract text
+    processor.PerformOCR(pdfLoadedDocument, processor.TessDataPath, out OCRLayoutResult layoutResult);
+
+    // Extract the OCRed text from the first page and join lines with newline characters
+    string ocrText = string.Join("\n", layoutResult.Pages[0].Lines.Select(line => line.Text));
+
+    // Save the PDF document to the file stream
+    pdfLoadedDocument.Save("Output.pdf");
+    // Close the PDF document
+    pdfLoadedDocument.Close(true);
+
+    // Write the extracted OCR text to an output text file
+    File.WriteAllText("Output.txt", ocrText);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.OCRProcessor;
+using Syncfusion.Pdf.Parsing;
+
+// Initialize the OCR processor
+using (OCRProcessor processor = new OCRProcessor())
+{
+    // Load the PDF document from the file stream
+    PdfLoadedDocument pdfLoadedDocument = new PdfLoadedDocument("Input.pdf");
+
+    // Set OCR language to English
+    processor.Settings.Language = Languages.English;
+
+    // Set the page segmentation mode to process sparse text with orientation and script detection
+    processor.Settings.PageSegment = PageSegmentMode.SparseTextOsd;
 
     // Perform OCR on the loaded PDF document to extract text
     processor.PerformOCR(pdfLoadedDocument, processor.TessDataPath, out OCRLayoutResult layoutResult);
@@ -2076,4 +2745,4 @@ File.WriteAllText("Output.txt", output.ToString())
 
 {% endtabs %}  
 
-You can downloaded a complete working sample from GitHub.
+You can downloaded a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/OCR/.NET/Perform-OCR-on-tiff-image).
