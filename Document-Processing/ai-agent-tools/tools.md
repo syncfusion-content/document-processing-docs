@@ -44,7 +44,7 @@ Document Storage Manager reads documents from and writes them back to storage (s
 
 ## Available Tools
 
-![Syncfusion AI Agent Tools Categories](tools-categories.png)
+![Available tools](available-tools.png)
 
 Tools are organized into the following categories:
 
