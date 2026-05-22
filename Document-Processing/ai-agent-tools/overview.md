@@ -13,10 +13,6 @@ documentation: ug
 
 You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). If you want to add new functionality or customize any existing functionalities, then you can use our source code available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools). Compatible with .NET 8.0, 9.0, and 10.0.
 
-## How it works
-
-![How AI Agent Tool Execution Works](how-it-works.png)
-
 ## Key Capabilities
 
 <table>
@@ -37,16 +33,16 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
           <li>Watermarking</li>
           <li>OCR</li>
           <li>Encryption</li>
-          <li>Merge/split</li>
+          <li>Merge or split</li>
           <li>Compression</li>
           <li>Page reordering</li>
-          <li>Text/image extraction</li>
-          <li>Annotation and form field import/export</li>
+          <li>Text and image extraction</li>
+          <li>Annotation and form field import or export</li>
           <li>PDF/A conversion</li>
           <li>Image to PDF</li>
         </ul>
       </td>
-      <td><code>.pdf</code></td>
+      <td><b>.pdf</b></td>
     </tr>
     <tr>
       <td><strong>Word</strong></td>
@@ -56,18 +52,19 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
           <li>Bookmarks</li>
           <li>Form fields</li>
           <li>Find &amp; replace</li>
-          <li>Merge/split</li>
+          <li>Merge or split</li>
           <li>Compare</li>
           <li>Track changes</li>
-          <li>HTML/Markdown import/export</li>
-          <li>Conversion to PDF/image/RTF</li>
+          <li>HTML import or export</li>
+          <li>Markdown import or export</li>
+          <li>Conversion to PDF, image, and RTF</li>
           <li>Field management</li>
           <li>Table of contents</li>
           <li>Security</li>
           <li>Clone</li>
         </ul>
       </td>
-      <td><code>.docx</code>, <code>.doc</code>, <code>.rtf</code>, <code>.html</code>, <code>.txt</code>, <code>.md</code></td>
+      <td><b>.docx</b>, <b>.doc</b>, <b>.rtf</b>, <b>.html</b>, <b>.txt</b>, <b>.md</b></td>
     </tr>
     <tr>
       <td><strong>Excel</strong></td>
@@ -79,11 +76,11 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
           <li>Pivot tables</li>
           <li>Encryption &amp; protection</li>
           <li>Worksheet management</li>
-          <li>Conversion to image/CSV/HTML/JSON</li>
+          <li>Conversion to image, CSV, HTML and JSON</li>
           <li>Workbook format conversion</li>
         </ul>
       </td>
-      <td><code>.xlsx</code>, <code>.xls</code>, <code>.xlsm</code>, <code>.csv</code></td>
+      <td><b>.xlsx</b>, <b>.xls</b>, <b>.xlsm</b>, <b>.csv</b></td>
     </tr>
     <tr>
       <td><strong>PowerPoint</strong></td>
@@ -91,13 +88,13 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
         <ul>
           <li>Text extraction</li>
           <li>Find &amp; replace</li>
-          <li>Merge/split</li>
+          <li>Merge or split</li>
           <li>Encryption</li>
           <li>Write protection</li>
           <li>Export as image</li>
         </ul>
       </td>
-      <td><code>.pptx</code></td>
+      <td><b>.pptx</b></td>
     </tr>
     <tr>
       <td><strong>Office to PDF</strong></td>
@@ -106,7 +103,7 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
           <li>Convert Word, Excel, or PowerPoint to PDF in a single tool call</li>
         </ul>
       </td>
-      <td><code>.docx</code>, <code>.xlsx</code>, <code>.pptx</code> → <code>.pdf</code></td>
+      <td><b>.docx</b>, <b>.xlsx</b>, <b>.pptx</b> to <b>.pdf</b></td>
     </tr>
     <tr>
       <td><strong>Data Extraction</strong></td>
@@ -114,11 +111,11 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
         <ul>
           <li>Structured data</li>
           <li>Table</li>
-          <li>Form extraction from PDFs/images</li>
+          <li>Form extraction from PDFs and images</li>
           <li>PDF and table to Markdown conversion</li>
         </ul>
       </td>
-      <td><code>.pdf</code>, <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code></td>
+      <td><b>.pdf</b>, <b>.png</b>, <b>.jpg</b>, <b>.jpeg</b></td>
     </tr>
   </tbody>
 </table>
