@@ -2,7 +2,7 @@
 layout: post
 title: Workbook Operations in WPF Spreadsheet control | Syncfusion®
 description: Learn how to create, open, and save Excel workbooks, as well as how to display charts and sparklines in Syncfusion® WPF Spreadsheet (SfSpreadsheet).
-platform: wpf
+platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
