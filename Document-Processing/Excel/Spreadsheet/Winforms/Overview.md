@@ -66,4 +66,4 @@ Spreadsheet includes several advanced features like
 - [API Reference](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.html)
 - [Online Demos](https://github.com/syncfusion/spreadsheet-editor-sdk-winforms-demos)
 - [GitHub Samples](https://github.com/SyncfusionExamples/winforms-spreadsheet-examples)
-- [Release Notes](https://help.syncfusion.com/wpf/release-notes/v33.1.46?type=all)
+- [Release Notes](https://help.syncfusion.com/wpf/release-notes/v33.1.46)
