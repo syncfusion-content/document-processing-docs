@@ -6,6 +6,7 @@ platform: wpf
 control: SfSpreadsheet
 documentation: ug
 ---
+# Workbook Operations in WPF Spreadsheet
 
 ## Creating a new Excel Workbook
 

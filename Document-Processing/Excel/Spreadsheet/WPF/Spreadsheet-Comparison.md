@@ -6,6 +6,7 @@ platform: wpf
 control: SfSpreadsheet
 documentation: ug
 ---
+# Spreadsheet Comparison in WPF Spreadsheet
 
 ## Choose between SfSpreadsheet and Spreadsheet control
 

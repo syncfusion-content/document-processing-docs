@@ -68,7 +68,7 @@ Below are the additional DLLs required for applying themes and skinning to the S
 
 <table> <tr> <th>Assembly</th> <th>Description</th> </tr> <tr> <td>Syncfusion.Themes.Windows11Light.WPF.dll</td> <td>Contains the Windows 11 Light theme style for Syncfusion WPF controls.</td> </tr> <tr> <td>Syncfusion.SfSkinManager.WPF.dll</td> <td>Contains the SfSkinManager which helps to apply different themes to Syncfusion WPF controls.</td> </tr> </table>
 
-N> You need to add these references to your project to use the skinning and theming capabilities of the SfSpreadshee
+N> You need to add these references to your project to use the skinning and theming capabilities of the SfSpreadsheet
 
 
 Below are the assemblies list that can be added when you want to enable certain features in SfSpreadsheet control. 
