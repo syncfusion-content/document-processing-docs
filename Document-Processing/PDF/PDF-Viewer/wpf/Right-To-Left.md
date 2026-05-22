@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Right to Left (RTL) in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
+title: RTL Support in WPF PDF Viewer | Syncfusion<sup>&reg;</sup>;
 description: Learn about Right to Left (RTL) support in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
 platform: document-processing
 control: PDF Viewer
