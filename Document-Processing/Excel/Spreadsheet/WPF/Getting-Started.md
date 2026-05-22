@@ -147,7 +147,9 @@ N> Declare a name for the Spreadsheet component as shown above for reference.
 
 Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_._Spreadsheet_” and it can be created programmatically by using XAML  
 
-```Xaml
+
+{% tabs %}
+{% highlight xaml %}
 <Window x:Class="WpfApp1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -166,7 +168,38 @@ Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_.
         <syncfusion:SfSpreadsheet Name="spreadsheet" Grid.Row="1" />
     </Grid>
 </Window>
-```
+{% endhighlight %}
+{% highlight c# %}
+public MainWindow()
+{
+    InitializeComponent();
+
+    SfSkinManager.ApplyThemeAsDefaultStyle = true;
+
+    SfSkinManager.SetTheme(this, new Theme("Windows11Light"));
+
+    Grid grid = new Grid();
+
+    grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+
+    grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+
+    SfSpreadsheet spreadsheet = new SfSpreadsheet();
+
+    SfSpreadsheetRibbon ribbon = new SfSpreadsheetRibbon() { SfSpreadsheet = spreadsheet };
+
+    Grid.SetRow(ribbon, 0);
+
+    Grid.SetRow(spreadsheet, 1);
+
+    grid.Children.Add(ribbon);
+
+    grid.Children.Add(spreadsheet);
+
+    this.Content = grid;
+}
+{% endhighlight %}
+{% endtabs %}
 
 ![WPF Spreadsheet Control](Getting-Started_images/wpf-spreadsheet-control.jpeg)
 
