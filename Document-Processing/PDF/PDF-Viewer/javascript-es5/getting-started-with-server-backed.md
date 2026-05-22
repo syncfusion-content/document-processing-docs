@@ -20,7 +20,15 @@ This example uses a simple HTML-based setup with CDN links for Syncfusion compon
 
 ### Create application folder
 
-Create an app folder `my-app` for the Essential JS 2 JavaScript components.
+Create an app folder `pdf-viewer-app` for the Essential JS 2 JavaScript components.
+
+Your application structure should look like this:
+
+```text
+pdf-viewer-app/
+├── index.html
+├── index.js
+```
 
 ### Add style and script references
 
@@ -36,7 +44,7 @@ The Essential JS 2 component's global scripts and styles are hosted at the follo
 >
 > Styles: [`https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/material.css`](https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/material.css)
 
-Create an HTML page (index.html) in `my-app` location and add the CDN link references.
+Create an HTML page (index.html) in `pdf-viewer-app` location and add the CDN link references.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" hl_lines="8 9 10 11 12 13 14 15 16 17 19" %}
@@ -67,27 +75,42 @@ Create an HTML page (index.html) in `my-app` location and add the CDN link refer
 
 ## Adding the PDF Viewer component
 
-Add the `Div` element and initiate the **PDF Viewer** component in the index.html by using the following code.
+Add a container element for the PDF Viewer control in the `index.html` file and then initialize the control.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>EJ2 PDF Viewer</title>
+    <!-- Add your style references here -->
+</head>
 <body>
-    
+    <!-- Element which will render as PDF Viewer -->
     <div id="container">
-        <div id="PdfViewer" style="height:500px;width:100%;"></div>        
+        <div id="PdfViewer" style="height:500px;width:100%;"></div>
     </div>
-
-    <script>
-        // Initialize PDF Viewer component
-        var pdfviewer = new ej.pdfviewer.PdfViewer({
-            documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-            serviceUrl:'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
-        });
-        // PDF Viewer control rendering starts
-        pdfviewer.appendTo('#PdfViewer');
-    </script>
+    <script src="index.js" type="text/javascript"></script>
 </body>
+</html>
+
+{% endhighlight %}
+{% endtabs %}
+
+Now, initialize the PDF Viewer component in the `index.js` file:
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+
+// Initialize PDF Viewer component
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+});
+
+// PDF Viewer control rendering starts
+pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,13 +121,19 @@ For creating a new PDF Viewer serviceUrl, follow the steps provided in the [link
 
 ## Run the application
 
-Run the `index.html` in a web browser using a local web server. The PDF document will be rendered in the browser.
+Now run the following command in the console to start the development server. This command serves the application locally on your machine:
 
 ```bash
 npx serve .
 ```
 
+After the application starts, open the localhost URL displayed in the terminal in your web browser. The PDF document will be rendered in the browser. The output will appear as follows:
+
+![Rendered PDF Viewer in browser](images/pdfviewer-control.png)
+
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs1" %}
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20URL)
 
 ## Deployment notes
 
