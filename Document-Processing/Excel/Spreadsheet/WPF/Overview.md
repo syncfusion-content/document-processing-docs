@@ -68,4 +68,4 @@ The [Syncfusion<sup>®</sup> WPF Spreadsheet(SfSpreadsheet)](https://www.syncfus
 - [API Reference](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.html)
 - [Online Demos](https://github.com/syncfusion/spreadsheet-editor-sdk-wpf-demos)
 - [GitHub Samples](https://github.com/SyncfusionExamples/create-view-edit-excel-files-using-wpf-spreadsheet)
-- [Release Notes](https://help.syncfusion.com/document-processing/release-notes)
+- [Release Notes](https://help.syncfusion.com/wpf/release-notes/v33.1.46?type=all)
