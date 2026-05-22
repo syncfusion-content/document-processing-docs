@@ -27,7 +27,7 @@ The [Syncfusion<sup>®</sup> WPF Spreadsheet(SfSpreadsheet)](https://www.syncfus
 
 * **[Data validation](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/editing#data-validation)** – Provides support to ensure the data integrity by enforcing end users to enter valid data into the cells and if entered data does not meet the specified criteria, and error message is displayed.
 
-* **[Floating Cells](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/formatting#wrap-text)**- Provides support for floating cell mode that is when the text exceeds the length of the cell, it will float the text to the adjacent cell.
+* **Floating Cells**- Provides support for floating cell mode that is when the text exceeds the length of the cell, it will float the text to the adjacent cell.
 
 * **[Merge Cells](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/formatting#merge-cells)** - Merge two or more adjacent cells into a single cell and display the contents of one cell in the merged cell.
 
@@ -62,3 +62,10 @@ The [Syncfusion<sup>®</sup> WPF Spreadsheet(SfSpreadsheet)](https://www.syncfus
 * **[Localization](Localization)** - Provides support to localize all the static text in a Ribbon and all dialogs to any desired language.
 
 * **Supported file types** - Ability to import the different types of excel which are XLS, XLSX, XLSM, XLT, XLTX, CSV(Comma delimited) respectively.
+
+## Related Link
+- [Getting Started](Getting-Started)
+- [API Reference](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.html)
+- [Online Demos](https://github.com/syncfusion/spreadsheet-editor-sdk-wpf-demos)
+- [GitHub Samples](https://github.com/SyncfusionExamples/create-view-edit-excel-files-using-wpf-spreadsheet)
+- [Release Notes]()
