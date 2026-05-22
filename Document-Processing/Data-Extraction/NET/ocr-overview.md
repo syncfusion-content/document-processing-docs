@@ -1,6 +1,6 @@
 ---
 title: Intro to OCR Processor | Syncfusion
-description: This page introduces the Syncfusion OCR Processor, describing its purpose, key capabilities, and how to get started with optical character recognition in .NET applications.
+description: This page introduces the Syncfusion OCR Processor, highlighting its purpose, main features, and how to begin optical character recognition in .NET apps.
 platform: document-processing
 control: OCRProcessor
 documentation: UG
