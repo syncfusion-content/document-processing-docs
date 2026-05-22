@@ -52,4 +52,5 @@ The UI design of the application for desktop and mobile is illustrated in the fo
 
 ## See Also
 - [Localization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/localization)
-- [Disable thumbnail view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/disable-thumbnail-view)
+- [UI design for desktop](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/ui-design-for-desktop)
+- [Customizing progress ring](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/customizing-progress-ring)

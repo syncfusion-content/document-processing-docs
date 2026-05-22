@@ -148,4 +148,4 @@ Dim listOfImageStream As List(Of Stream) = pdfViewer.ExportAsImage(0, 5, 200)
 ## See Also
 - [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
 - [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-magnification)
-- [Customize Scrollbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/customize-the-scrollbar)
+- [Viewing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)

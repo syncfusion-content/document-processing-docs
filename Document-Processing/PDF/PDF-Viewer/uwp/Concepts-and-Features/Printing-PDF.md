@@ -209,4 +209,4 @@ N>Though if you specify any print options to be displayed, only those that are s
 ## See Also
 - [Export Pages](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/exporting-pages-as-image)
 - [Custom Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
-- [Check loaded pdfdocument is edited or not](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/check-whether-the-loaded-pdf-document-is-edited-or-not)
+- [Viewing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)

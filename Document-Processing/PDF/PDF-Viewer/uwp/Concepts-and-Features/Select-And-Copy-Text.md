@@ -107,6 +107,6 @@ private void PdfViewer_TextSelectionCompleted(object sender, TextSelectionComple
 {% endtabs %}
 
 ## See Also
-- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [Viewing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)
 - [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-text-search)
 - [Enable and disable text selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/enable-and-disable-text-selection)

@@ -277,4 +277,6 @@ End Sub
 
 ## See Also
 - [Viewing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)
+- [UWP PDF Viewer Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/overview)
+- [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-magnification)
 

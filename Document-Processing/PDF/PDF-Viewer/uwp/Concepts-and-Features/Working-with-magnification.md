@@ -158,4 +158,4 @@ N> The accepted minimum zoom percentage ranges from 10% to 100%. Values less tha
 ## See Also
 - [Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-page-navigation)
 - [Pdfium rendering](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/render-pdf-pages-using-pdfium-rendering-engine)
-- [Get coordinates of a text](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/get-coordinates-of-a-text-in-a-pdf-document)
+- [Viewing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)
