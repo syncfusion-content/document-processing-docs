@@ -21,10 +21,10 @@ The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to ex
 **Prerequisites**:
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* Install Visual Studio: Download and install Visual Studio from the [official website](https://code.visualstudio.com/download).
 
 
-Step 1: Create a new C# Blazor Web app project.
+Step 1: Create a new C# Blazor Web App project.
 *   Select "Blazor Web App" from the template and click **Next**.
 
 ![Create Blazor Web App application in Visual Studio](GettingStarted_images/Blazor_ProjectCreation.png)
@@ -45,7 +45,7 @@ To **Extract Data from PDF in a Blazor Web App Server**, install [Syncfusion.Sma
 
 Step 3: Create a Razor file named `Home.razor` in the `Pages` folder, which is located inside the `Components` folder.
 
-Include the following namespaces in the file:
+Add the following directives and service injections in the file
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -180,7 +180,7 @@ public static class FileUtils
 
 Step 10: Add JavaScript function to `App.razor`.
 
-Add the following JavaScript function in the `App.razor` file located in the `Pages` folder.
+Add the following JavaScript function in the `App.razor` file located in the root of the project.
 
 {% tabs %}
 
@@ -241,7 +241,7 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the applicati
 
 Upon executing the program, the **JSON document** will be generated as follows.
 
-![Data Extraction in Blazor Web App Server](GettingStarted_images/JSON_Output.png)
+![Blazor Web App Server output JSON document](GettingStarted_images/JSON_Output.png)
 
 {% endtabcontent %}
 
@@ -254,7 +254,7 @@ Upon executing the program, the **JSON document** will be generated as follows.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 
-Step 1: Create a new C# Blazor Web app project.
+Step 1: Create a new C# Blazor Web App project.
 * Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
 * Choose the **Blazor Web App** template.
 
@@ -275,7 +275,7 @@ dotnet add package Syncfusion.SmartDataExtractor.NET.Core
 
 Step 3: Create a Razor file named `Home.razor` in the `Pages` folder, which is located inside the `Components` folder.
 
-Include the following namespaces in the file:
+Add the following directives and service injections in the file
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -415,7 +415,7 @@ public static class FileUtils
 
 Step 10: Add JavaScript function to `App.razor`.
 
-Add the following JavaScript function in the `App.razor` file located in the `Pages` folder.
+Add the following JavaScript function in the `App.razor` file located in the root of the project.
 
 {% tabs %}
 
@@ -484,7 +484,7 @@ dotnet run
 
 Upon executing the program, the **JSON document** will be generated as follows.
 
-![Data Extraction in Blazor Web App Server](GettingStarted_images/JSON_Output.png)
+![Blazor Web App Server output JSON document](GettingStarted_images/JSON_Output.png)
 
 {% endtabcontent %}
 

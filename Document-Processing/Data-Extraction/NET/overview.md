@@ -1,5 +1,5 @@
 ---
-title: Extract Structured Data from PDF and Image Files in .NET | Syncfusion
+title: Extract Structured Data in .NET | Syncfusion
 description: Syncfusion Data Extraction is a .NET library that extracts tables, forms, text, and images from documents, and recognizes form data to produce outputs such as PDFs and JSON.
 platform: document-processing
 control: DataExtraction
@@ -11,9 +11,10 @@ keywords: Assemblies
 
 Syncfusion® Smart Data Extractor is a high performance, deterministic C# library that extracts complete document structures from PDFs and images. Designed for .NET workflows, it analyzes visual layout lines, boxes, labels, and alignment to locate and extract elements such as table structure, text elements, images, headers, footers, and form fields with per field confidence scores for immediate review, export, or integration.
 
-## Key Features of Essential<sup>&reg;</sup> Smart Data Extractor
 
-The following list shows the key features available in the Essential<sup>&reg;</sup> SmartDataExtractor.
+## Key Features of Syncfusion<sup>&reg;</sup> Smart Data Extractor
+
+The following list shows the key features available in the Syncfusion<sup>&reg;</sup> Smart Data Extractor.
 
 * **Document structure extraction:** Detects text elements, images, headers/footers, and complete table structure (regions, header rows, columns, cell boundaries, merged cells).
 * **File format support:** Works with PDF and common image formats (JPEG, PNG).
@@ -23,45 +24,9 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * **Confidence thresholding:** Results are filtered based on a configurable confidence score (0.0–1.0).
 * **Deterministic performance:** Designed for predictable, repeatable extraction across environments (Windows, Linux, Azure, Docker).
 
-# Overview of Smart Table Extractor
-
-Syncfusion® Smart Table Extractor is a high accuracy, deterministic C# library that detects and extracts tabular data from PDFs and scanned images for .NET workflows, It detects table regions, header rows, columns, and cell spans (merged cells) and provides per-cell confidence scores and structured exports ready for downstream processing.
-
-## Key Features of Essential<sup>&reg;</sup> Smart Table Extractor
-
-The following list shows the key features available in the Essential<sup>&reg;</sup> SmartTableExtractor.
-
-* **Table structure extraction:** Identifies table regions, header rows, columns, row and column spans, and cell boundaries.
-* **File format support:** Works with PDF and common image formats (JPEG, PNG).
-* **Border type handling:** Extract both bordered and border-less tables.
-* **Page-level control:** Extract tables from specific pages or defined page ranges.
-* **Confidence thresholding:** Results are filtered based on a configurable confidence score (0.0–1.0).
-* **Deterministic performance:** Designed for predictable, repeatable extraction across environments (Windows, Linux, Azure, Docker).
-
-# Overview of Smart Form Recognizer Library
-
-Smart Form Recognizer is a deterministic, on premise C# library for .NET designed to reliably detect form data from PDFs and scanned images. Unlike AI‑based approaches, this library uses visual layout heuristics including lines, boxes, and circular markers to identify form structures with high consistency and predictability.It supports to identify the common form controls such as text fields, checkboxes, radio buttons, and signature regions, producing clean, structured JSON that can be fed directly into review and workflow systems.
-
-
-## Core Capabilities
-
-* **Form layout detection**: Locate form regions using graphical heuristics (lines, boxes, circles) for consistent field discovery. 
-
-* **Fillable PDF export**: Create a PDF with detected form fields added so documents are immediately usable in form workflows. 
-
-* **Page-level control**: Process specific pages or page ranges for targeted extraction. 
-
-* **Multi-format support**: Works with PDF, JPEG, PNG and other common image formats. 
-
-* **Confidence filtering**: Per-field confidence scores with configurable thresholds to control output quality and drive review logic. 
-
-* **Ready for .NET integration**: Deterministic, on premise library that outputs JSON and integrates into existing .NET pipelines and review UIs. 
-
-
 ## JSON Output Structure and Attributes
 
 The Syncfusion® Data Extraction libraries process PDFs and scanned images to extract structured document data—including tables, form fields, text elements, images, headers, and footers—by analyzing layout patterns, table regions, borders, alignment patterns, and cell structures. The extracted output is returned as structured JSON with per‑field and per‑cell confidence scores, along with complete document and table hierarchies, making it ready for immediate review, export, or integration into downstream workflows.
-
 
 ### Root Structure
 
@@ -88,7 +53,6 @@ Below is the root structure of the JSON result:
 {% endtabs %}
 
 N> In the Smart Table Extractor root structure, the **form** object will not be present.
-
 
 ### JSON Attributes
 
@@ -128,13 +92,12 @@ The Page Object represents the metadata of a page along with all the detected el
 <tr>
 <td>FormObjects</td>
 <td>Array</td>
-<td>List of detected form fields (checkboxes, text boxes, radio button, signature etc..)</td>
+<td>List of detected form fields (checkboxes, text boxes, radio buttons, signatures etc.)</td>
 </tr>
 </tbody>
 </table>
 
 N> The **FormObjects** array is not included in the Smart Table Extractor output structure, as it is specific to Smart Data Extractor and Smart Form Recognizer.
-
 
 #### PageObjects
 

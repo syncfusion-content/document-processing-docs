@@ -49,7 +49,7 @@ using Syncfusion.SmartDataExtractor;
 
 {% endtabs %}
 
-Step 5: Add a new button in **Form1.Designer.cs** to create Word file as follows.
+Step 5: Add a new button in **Form1.Designer.cs** to extract data from PDF as follows.
 
 {% tabs %}
 
@@ -85,7 +85,7 @@ Text = "Extract Data from PDF";
 
 {% endtabs %}
 
-Step 6: Add the following code in **btnExtract_Click** to **Extract data PDF** with simple text.
+Step 6: Add the following code in **btnExtract_Click** to extract data from PDF.
 
 {% tabs %}
 
@@ -116,7 +116,7 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
 By executing the program, you will get the **JSON** as follows.
 
-![Word to PDF in Windows Forms](GettingStarted_images/JSON_Output.png)
+![Windows Forms output JSON document](GettingStarted_images/JSON_Output.png)
 
 {% endtabcontent %}
 
