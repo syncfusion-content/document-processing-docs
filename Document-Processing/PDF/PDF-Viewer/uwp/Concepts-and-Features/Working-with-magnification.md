@@ -112,6 +112,33 @@ N>
 * In Desktop view, when the zoom value is reduced below 100 percentage, the view will be automatically changes to show the thumbnails for easier navigation.
 * One page view mode is supported only in mobile view, where the view will be changed to Flip View for easier navigation.
 
+## Magnification using commands
+
+The SfPdfViewer provides the following commands to perform magnification.
+
+* IncreaseZoomCommand
+* DecreaseZoomCommand
+
+The following XAML code shows how to bind the `IncreaseZoomCommand` to a button.
+
+{% tabs %}
+{% highlight xaml %}
+<Button Content="ZoomIn" Command="{Binding ElementName=pdfViewer, Path=IncreaseZoomCommand}" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+{% endhighlight %}
+{% endtabs %}
+
+The following XAML code shows how to bind the `DecreaseZoomCommand` to a button.
+
+{% tabs %}
+{% highlight xaml %}
+<Button Content="ZoomOut" Command="{Binding ElementName=pdfViewer, Path=DecreaseZoomCommand}" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+{% endhighlight %}
+{% endtabs %}
+
+N>
+* By default, the SfPdfViewer also supports the Ctrl + scroll key combination for performing magnification using the keyboard and mouse.
+* When the PDF viewer zoom value is decreased below 100%, the view is automatically changed to show thumbnails.
+
 ## Set minimum zoom percentage for PDF Viewer
 
 The PDF Viewer control allows you to set the minimum zoom percentage value for the PDF document being displayed. The following code example will set minimum zoom percentage of PDF Viewer instance to 30.
