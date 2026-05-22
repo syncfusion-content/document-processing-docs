@@ -42,10 +42,8 @@ pdfLightTable.DataSource = table;
 //Draw PdfLightTable.
 pdfLightTable.Draw(page, new Syncfusion.Drawing.PointF(0, 0));
 
-//Create the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -144,10 +142,8 @@ pdfLightTable.Rows.Add(new object[] { "111", "Maxim", "III" });
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -225,10 +221,8 @@ Create a table using the [PdfLightTable](https://help.syncfusion.com/cr/document
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Creating-the-table-in-an-existing-PDF-document/.NET/Creating-the-table-in-an-existing-PDF-document/Program.cs" %} 
 
-//Get stream from an existing PDF document. 
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
 //Load the PDF document. 
-PdfLoadedDocument doc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
 //Get the first page from the document
 PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
 //Create PDF graphics for the page
@@ -248,10 +242,8 @@ pdfLightTable.DataSource = table;
 //Draw PdfLightTable.
 pdfLightTable.Draw(graphics, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -365,10 +357,8 @@ pdfLightTable.Style.ShowHeader = true;
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -498,10 +488,8 @@ pdfLightTable.Style.ShowHeader = true;
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -657,10 +645,8 @@ pdfLightTable.EndRowLayout += pdfLightTable_EndRowLayout;
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Create the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to the stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -847,10 +833,8 @@ pdfLightTable.Style.ShowHeader = true;
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to the stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -983,10 +967,8 @@ pdfLightTable.Style = lightTableStyle;
 //Draw PdfLightTable.
 pdfLightTable.Draw(page, new PointF(0, 0));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as a stream.
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 {% endhighlight %}
@@ -1125,10 +1107,8 @@ pdfLightTable.ApplyBuiltinStyle(PdfLightTableBuiltinStyle.GridTable4Accent2);
 //Draw the grid to the page of a PDF document.
 pdfLightTable.Draw(page, new Syncfusion.Drawing.PointF(10, 10));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as a stream.
-doc.Save(stream);
+//Save the document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -1243,10 +1223,8 @@ layoutFormat.Layout = PdfLayoutType.Paginate;
 //Draw PdfLightTable.
 pdfLightTable.Draw(page, new Syncfusion.Drawing.PointF(0, 0), layoutFormat);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as a stream.
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 {% endhighlight %}
@@ -1369,9 +1347,8 @@ for (int i = 0; i < lightTable.Columns.Count; i++)
 //Draw the PdfLightTable on the page.
 lightTable.Draw(page, new PointF(10, 10));
 
-//Save a PDF to the MemoryStream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save a PDF document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
@@ -1500,9 +1477,8 @@ lightTable.Columns[1].StringFormat = stringFormat;
 //Draw the PdfLightTable on the page.
 lightTable.Draw(page, new PointF(10, 10));
 
-//Save the PDF to the MemoryStream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the PDF document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}

@@ -17,15 +17,11 @@ The following code example illustrates how to converting XPS document to PDF usi
 
 //Initialize XPS to PDF converter.
 XPSToPdfConverter converter = new XPSToPdfConverter();
-//Open the XPS file as stream.
-FileStream fileStream = new FileStream("Input.xps", FileMode.Open, FileAccess.ReadWrite);
 //Convert the XPS to PDF.
-PdfDocument document = converter.Convert(fileStream);
+PdfDocument document = converter.Convert("Input.xps");
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream(); 
-//Save the document into stream.
-document.Save(stream); 
+//Save the document.
+document.Save("Output.pdf"); 
 //Close the documents.
 document.Close(true); 
 
