@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Trigger Formula Calculations in Manual Mode in Spreadsheet | Syncfusion
+title: Trigger Formula Calculations in Manual Mode in React Spreadsheet | Syncfusion
 description: Learn how to trigger formula calculations when the Syncfusion Spreadsheet React component is rendered in manual calculation mode.
 control: Spreadsheet
 platform: document-processing
@@ -9,13 +9,13 @@ documentation: ug
 
 # Triggering Formula Calculations in Manual Calculation Mode
 
-Manually trigger formula calculations in the Syncfusion Spreadsheet React component when it is set to manual calculation mode. This approach ensures formulas are recalculated as needed for accurate results, and you have full control over when calculations occur.
+The Syncfusion Spreadsheet React component allows you to control when formulas are recalculated by enabling manual calculation mode. This flexibility ensures that formula results are always accurate and up to date, while giving you complete control over when calculations are performed—either through the UI or programmatically.
 
 ## Steps to Trigger Formula Calculations in Manual Mode
 
 1. Configure the Spreadsheet component to use manual calculation mode by setting the [`calculationMode`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#calculationmode) property to `'Manual'`.
 
-2. Trigger formula calculations as needed using either of the following approaches:
+2. Trigger formula calculations as needed using either of the following methods:
 	- **Via the UI:** Use the **Calculate Sheet** and **Calculate Workbook** options under the **Formulas** tab in the Ribbon to manually recalculate formulas for the active sheet or the entire workbook.
 	- **Programmatically:** Call the [`calculateNow()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#calculatenow) method on the Spreadsheet instance. This method allows you to:
 		- Recalculate all formulas in the spreadsheet.
@@ -23,7 +23,7 @@ Manually trigger formula calculations in the Syncfusion Spreadsheet React compon
 		- Trigger calculations across the entire workbook by passing `'Workbook'` as the scope.
 
 ```js
-// Set calculation mode to manual
+// Set calculation mode to 'Manual'
 <SpreadsheetComponent calculationMode='Manual' ref={spreadsheetRef} />
 
 // Trigger formula calculation for a specific sheet by name

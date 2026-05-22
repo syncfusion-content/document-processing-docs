@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Add Custom Translations for Missing Strings in Syncfusion Spreadsheet | Syncfusion
-description: Learn how to add or override custom translations for missing strings in your current locale in the Syncfusion Spreadsheet React component. Improve localization easily.
+title: Add Custom Translations for any Spreadsheet text in React Spreadsheet | Syncfusion
+description: Add or customize translations for any Spreadsheet text in your current locale in the React Spreadsheet Component.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
@@ -14,7 +14,7 @@ You can add or override custom translations for any built-in or default text dis
 ## Steps to Add Custom Translations
 
 1. Review the Spreadsheet UI and identify any built-in or default text you want to customize for your selected locale.
-2. Create a JavaScript object with key-value pairs, where each key is the string identifier (for any built-in text) and the value is your custom translation.
+2. Create a JavaScript object with key-value pairs, where each key is a string identifier (for any built-in text) and each value is your custom translation.
 
 ```js
 const customLocale = {
@@ -40,7 +40,7 @@ L10n.load({
 });
 ```
 
-4. When initializing the Spreadsheet, set the [`locale`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#locale) property to your desired locale.
+4. When initializing the Spreadsheet, set the [`locale`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#locale) property to your desired locale code (e.g., 'es' for Spanish, 'en-US' for English).
 
 ```js
 <SpreadsheetComponent locale='es' />

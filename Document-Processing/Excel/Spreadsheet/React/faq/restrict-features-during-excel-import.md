@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Restrict Features During Server-Side Excel Import in Syncfusion Spreadsheet | Syncfusion
+title: Restrict Features During Server-Side Excel Import in React Spreadsheet | Syncfusion
 description: Learn how to restrict certain features from being processed on the server when importing large Excel files into the Syncfusion Spreadsheet React component.
 control: Spreadsheet
 platform: document-processing
@@ -9,13 +9,12 @@ documentation: ug
 
 # Restricting Features During Server-Side Excel Import
 
-You can control which features are processed on the server when importing large Excel files into the Syncfusion Spreadsheet React component. By configuring import options, you can optimize both performance and resource usage during the import process.
-
+You can control which features are processed on the server when importing large Excel files into the Syncfusion Spreadsheet React component. By configuring `parseOptions`, you can optimize both performance and resource usage during the import process.
 
 ## Steps to Restrict Features During Server-Side Excel Import
 
-1. Use the server-side API or import options provided by Syncfusion to specify which features should be included or excluded during Excel file import.
-2. Configure the import settings to skip processing of features such as formulas, formatting, images, charts, validations, merged cells, and other elements based on your requirements.
+1. Use the server-side API and the `parseOptions` parameter provided by Syncfusion to specify which features should be excluded during Excel file import.
+2. Configure `parseOptions` to skip processing of features such as formulas, formatting, images, charts, validations, merged cells, and other elements as needed.
 
 ```csharp
 public IActionResult Open(IFormCollection openRequest) 
