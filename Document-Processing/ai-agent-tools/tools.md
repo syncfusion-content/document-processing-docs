@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion Document SDK AI Agent Tools
 
-[Agent Tools](https://learn.microsoft.com/en-us/agent-framework/get-started/add-tools?pivots=programming-language-csharp) are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager. 
+[Agent Tools](https://learn.microsoft.com/en-us/agent-framework/get-started/add-tools?pivots=programming-language-csharp) are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager. You can find the available tools in the section [below](#available-tools).
 
 The operational mode is determined by the manager used when initializing the tool.
 
@@ -25,10 +25,10 @@ Document Managers are in-memory containers that manage document life cycles duri
 
 | Document Manager | Description |
 |---|---|
-| WordDocumentManager | Manages Word documents in memory. Supports `.docx`, `.doc`, `.rtf`, `.html`,  and `.txt` formats with auto-detection on import. |
-| ExcelWorkbookManager | Manages Excel workbooks in memory. Owns an `ExcelEngine` instance and implements `IDisposable` for proper resource cleanup. Supports `.xlsx`, `.xls`, `.xlsm`, and `.csv` on export. |
+| WordDocumentManager | Manages Word documents in memory. Supports **.docx**, **.doc**, **.rtf**, **.html**,  and **.txt** formats with auto-detection on import. |
+| ExcelWorkbookManager | Manages Excel workbooks in memory. Owns an `ExcelEngine` instance and implements `IDisposable` for proper resource cleanup. Supports **.xlsx**, **.xls**, **.xlsm**, and **.csv** on export. |
 | PdfDocumentManager | Manages PDF documents in memory. Supports both new `PdfDocument` instances and loaded `PdfLoadedDocument` instances, including password-protected files. |
-| PresentationManager | Manages PowerPoint presentations in memory. Supports creating new empty presentations and loading existing `.pptx` files, including password-protected ones. |
+| PresentationManager | Manages PowerPoint presentations in memory. Supports creating new empty presentations and loading existing **.pptx** files, including password-protected ones. |
 
 **DocumentManagerCollection**
 
@@ -36,7 +36,7 @@ Document Managers are in-memory containers that manage document life cycles duri
 
 **Why it is needed:** Consider a Word-to-PDF conversion. The source Word document lives in `WordDocumentManager`, but the resulting PDF must be stored in `PdfDocumentManager`. Rather than hard coding both document managers into the tool class, `OfficeToPdfAgentTools` accepts a `DocumentManagerCollection` and detects the correct manager dynamically at runtime based on the `sourceType` argument.
 
-> **Note:** Tools that operate on a single document type (e.g., `WordDocumentAgentTools`, `PdfAnnotationAgentTools`) are initialized directly with their own manager. Only cross-format tools such as `OfficeToPdfAgentTools` require a `DocumentManagerCollection`.
+N> Tools that operate on a single document type (e.g., `WordDocumentAgentTools`, `PdfAnnotationAgentTools`) are initialized directly with their own manager. Only cross-format tools such as `OfficeToPdfAgentTools` require a `DocumentManagerCollection`.
 
 ## Document Storage Manager
 
@@ -60,7 +60,7 @@ Tools are organized into the following categories:
 <tr>
 <td rowspan="7"><strong>PDF</strong></td>
 <td>PdfDocumentAgentTools</td>
-<td>Core life cycle operations for PDF documents — creating, loading, exporting, and managing PDF documents in memory.</td>
+<td>Core life cycle operations for PDF documents - creating, loading, exporting, and managing PDF documents in memory.</td>
 </tr>
 <tr>
 <td>PdfOperationsAgentTools</td>
@@ -89,7 +89,7 @@ Tools are organized into the following categories:
 <tr>
 <td rowspan="9"><strong>Word</strong></td>
 <td>WordDocumentAgentTools</td>
-<td>Core life cycle operations for Word documents — creating, loading, exporting, and managing Word documents in memory.</td>
+<td>Core life cycle operations for Word documents - creating, loading, exporting, and managing Word documents in memory.</td>
 </tr>
 <tr>
 <td>WordOperationsAgentTools</td>
@@ -124,9 +124,9 @@ Tools are organized into the following categories:
 <td>Manage bookmarks and bookmark content within Word documents.</td>
 </tr>
 <tr>
-<td rowspan="9"><strong>Excel</strong></td>
+<td rowspan="8"><strong>Excel</strong></td>
 <td>ExcelWorkbookAgentTools</td>
-<td>Core life cycle operations for Excel workbooks — creating, loading, exporting, and managing workbooks in memory.</td>
+<td>Core life cycle operations for Excel workbooks - creating, loading, exporting, and managing workbooks in memory.</td>
 </tr>
 <tr>
 <td>ExcelWorksheetAgentTools</td>
@@ -137,16 +137,12 @@ Tools are organized into the following categories:
 <td>Encryption, decryption, and protection management for Excel workbooks and worksheets.</td>
 </tr>
 <tr>
-<td>ExcelFormulaAgentTools</td>
-<td>Apply and manage formulas within Excel workbooks.</td>
-</tr>
-<tr>
 <td>ExcelChartAgentTools</td>
-<td>Create, modify, and remove charts in Excel workbooks.</td>
+<td>Create charts in Excel workbooks.</td>
 </tr>
 <tr>
 <td>ExcelConditionalFormattingAgentTools</td>
-<td>Add or remove conditional formatting rules in Excel workbooks.</td>
+<td>Add conditional formatting rules in Excel workbooks.</td>
 </tr>
 <tr>
 <td>ExcelConversionAgentTools</td>
@@ -158,12 +154,12 @@ Tools are organized into the following categories:
 </tr>
 <tr>
 <td>ExcelPivotTableAgentTools</td>
-<td>Create and edit pivot tables in Excel workbooks.</td>
+<td>Create pivot tables in Excel workbooks.</td>
 </tr>
 <tr>
 <td rowspan="5"><strong>PowerPoint</strong></td>
 <td>PresentationDocumentAgentTools</td>
-<td>Core life cycle operations for PowerPoint presentations — creating, loading, exporting, and managing presentations in memory.</td>
+<td>Core life cycle operations for PowerPoint presentations - creating, loading, exporting, and managing presentations in memory.</td>
 </tr>
 <tr>
 <td>PresentationOperationsAgentTools</td>
@@ -194,6 +190,13 @@ Tools are organized into the following categories:
 </tbody>
 </table>
 
+
+I> 1. The following tool classes are not supported in Storage mode:
+I>    * WordDocumentAgentTools
+I>    * ExcelWorkbookAgentTools
+I>    * PdfDocumentAgentTools
+I>    * PresentationDocumentAgentTools   
+I> 2. All other tool classes work identically in both modes.
 
 ## See Also
 

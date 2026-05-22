@@ -11,7 +11,7 @@ keywords: PDF Viewer, Smart PDF, AI PDF, Summarization, Redaction, Form Fill, Bl
 
 {% doccards %}
 
-{% doccard text="Blazor" link="/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/web-app" icon="/document-processing/pdf/smart-pdf-viewer/blazor/blazor/getting-started/gettingstarted-images/Blazor.svg" %}
+{% doccard text="Blazor" link="/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/web-app" icon="/document-processing/pdf/smart-pdf-viewer/blazor/getting-started/gettingstarted-images/Blazor.svg" %}
 
 {% enddoccards %}
 
