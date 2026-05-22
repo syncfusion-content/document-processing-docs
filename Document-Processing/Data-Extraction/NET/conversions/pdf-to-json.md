@@ -18,7 +18,7 @@ Refer to the following links for the assemblies and NuGet packages required on d
 * [Assemblies required for PDF to JSON Extraction](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/assemblies-required)
 * [NuGet packages required for PDF to JSON Extraction](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/nuget-packages-required)
 
-## Extract Data as JSON from PDF Document
+## Extract Data as JSON from PDF or Image
 
 To extract form fields across a PDF document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code example:
 
@@ -65,6 +65,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {% endhighlight %}
 
 {% endtabs %}
+
+N> If you want to extract data from an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-PDF/.NET).
 

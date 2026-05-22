@@ -5,9 +5,9 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# NuGet Packages Required for OCR processor
+## NuGet Packages Required for OCR Processor
 
-Directly install the NuGet package to your application from [nuget.org](https://www.nuget.org/).
+To work with the OCR Processor, the following NuGet packages need to be installed in your application from [nuget.org](https://www.nuget.org/).
 
 <table>
 <tr>
@@ -48,7 +48,7 @@ Console Application (Targeting .NET Core) <br/>
 Blazor
 </td>
 <td>
-{{'[Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core)'| markdownify }}
+{{'[Syncfusion.Pdf.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.Net.Core)'| markdownify }}
 </td>
 </tr>
 </table>

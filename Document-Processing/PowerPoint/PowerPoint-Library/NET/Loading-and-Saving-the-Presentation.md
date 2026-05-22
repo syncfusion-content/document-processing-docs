@@ -30,25 +30,6 @@ IPresentation pptxDoc = Presentation.Open(fileName);
 Dim pptxDoc As IPresentation = Presentation.Open(fileName)
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//"App" is the class of Portable project
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-Stream inputStream = assembly.GetManifestResourceStream("Sample.pptx");
-//Loads or open an existing PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open(inputStream);
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//Instantiates the File Picker
-FileOpenPicker openPicker = new FileOpenPicker();
-openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
-openPicker.FileTypeFilter.Add(".pptx");
-//Creates a storage file from FileOpenPicker
-StorageFile inputStorageFile = await openPicker.PickSingleFileAsync();
-//Loads or open an PowerPoint Presentation
-IPresentation pptxDoc = await Presentation.OpenAsync(inputStorageFile);
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint).
@@ -74,22 +55,6 @@ IPresentation pptxDoc = Presentation.Open(presentationStream);
 Dim pptxDoc As IPresentation = Presentation.Open(presentationStream)
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//Create new Presentation without slides.
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-Stream inputStream = assembly.GetManifestResourceStream(inputFilePath);
-//Loads or open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open(inputStream);
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//Create new Presentation without slides.
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-Stream inputStream = assembly.GetManifestResourceStream(inputFilePath);
-//Loads or open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open(inputStream);
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint).
@@ -101,7 +66,8 @@ You can open an encrypted PowerPoint presentation from either file path or strea
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Essential Presentation Library does not provides support to Encryption and Decryption in C# [Cross-platform] platforms. 
+//Opens an existing encrypted Presentation from stream 
+IPresentation pptxDoc = Presentation.Open(presentationStream, password);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -114,21 +80,12 @@ IPresentation pptxDoc = Presentation.Open(presentationStream, password);
 Dim pptxDoc As IPresentation = Presentation.Open(presentationStream, password)
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//Essential Presentation Library does not provides support to Encryption and Decryption in C# [Cross-platform] platforms.
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//Opens an existing encrypted Presentation from stream 
-IPresentation pptxDoc = Presentation.OpenAsync(presentationStream, password);
-{% endhighlight %}
-
 {% endtabs %}
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Essential Presentation Library does not provides support to Encryption and Decryption in C# [Cross-platform] platforms.
+IPresentation pptxDoc = Presentation.Open(fileName, password);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -139,15 +96,6 @@ IPresentation pptxDoc = Presentation.Open(fileName, password);
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens an existing encrypted Presentation from file system 
 Dim pptxDoc As IPresentation = Presentation.Open(fileName, password)
-{% endhighlight %}
-
-{% highlight c# tabtitle="Xamarin" %}
-//Essential Presentation Library does not provides support to Encryption and Decryption in C# [Cross-platform] platforms.
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//Opens an existing encrypted Presentation from file system 
-IPresentation pptxDoc = Presentation.OpenAsync(fileName, password);
 {% endhighlight %}
 
 {% endtabs %}
@@ -163,9 +111,10 @@ You can save the created or manipulated PowerPoint Presentation to file system b
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/.NET/Open-and-save-PowerPoint/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(fileName, FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //To-Do some manipulation
 FileStream outputStream = new FileStream("output.pptx", FileMode.Create);
-pptxDoc.SaveAs(outputStream);
+pptxDoc.Save(outputStream);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -184,48 +133,6 @@ Dim pptxDoc As IPresentation = Presentation.Open(fileName)
 pptxDoc.Save("Output.pptx")
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//"App" is the class of Portable project
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-Stream inputStream = assembly.GetManifestResourceStream(inputFilePath);
-//Loads or open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//To-Do some manipulation
-//Create new memory stream to save Presentation.
-MemoryStream stream = new MemoryStream();
-//Save Presentation in stream format.
-pptxDoc.Save(stream);
-//Close the presentation
-pptxDoc.Close();
-stream.Position = 0;
-//The operation in Save under Xamarin varies between Windows Phone, Android and iOS platforms. Please refer presentation/xamarin section for respective code samples.
-if (Device.OS == TargetPlatform.WinPhone || Device.OS == TargetPlatform.Windows)
-    Xamarin.Forms.DependencyService.Get<ISaveWindowsPhone>().Save("Output.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation", stream);
-else
-    Xamarin.Forms.DependencyService.Get<ISave>().Save("Output.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation", stream);
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//Instantiates the File Picker
-FileOpenPicker openPicker = new FileOpenPicker();
-openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
-openPicker.FileTypeFilter.Add(".pptx");
-//Creates a storage file from FileOpenPicker
-StorageFile inputStorageFile = await openPicker.PickSingleFileAsync();
-//Loads or open an PowerPoint Presentation
-IPresentation pptxDoc = await Presentation.OpenAsync(inputStorageFile);
-//To-Do some manipulation
-//Initializes FileSavePicker
-FileSavePicker savePicker = new FileSavePicker();
-savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
-savePicker.SuggestedFileName = "Sample";
-savePicker.FileTypeChoices.Add("PowerPoint Files", new List<string>() { ".pptx" });
-//Creates a storage file from FileSavePicker
-StorageFile storageFile = await savePicker.PickSaveFileAsync();
-//Saves changes to the specified storage file
-await pptxDoc.SaveAsync(storageFile);
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint).
@@ -239,9 +146,10 @@ You can save the created or manipulated PowerPoint Presentation to stream by usi
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/.NET/Open-and-save-PowerPoint/Program.cs" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName, FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //To-Do some manipulation
-FileStream outputStream = new FileStream(outputFileName, FileMode.Create);
-pptxDoc.SaveAs(outputStream);
+MemoryStream stream = new MemoryStream();
+pptxDoc.Save(stream);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -264,32 +172,6 @@ Dim stream As New MemoryStream()
 pptxDoc.Save(stream)
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//"App" is the class of Portable project
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-Stream inputStream = assembly.GetManifestResourceStream(inputFilePath);
-//Loads or open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//To-Do some manipulation
-MemoryStream outputStream = new MemoryStream();
-pptxDoc.Save(outputStream);
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//Instantiates the File Picker
-FileOpenPicker openPicker = new FileOpenPicker();
-openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
-openPicker.FileTypeFilter.Add(".pptx");
-//Creates a storage file from FileOpenPicker
-StorageFile inputStorageFile = await openPicker.PickSingleFileAsync();
-//Loads or open an PowerPoint Presentation
-IPresentation pptxDoc = await Presentation.OpenAsync(inputStorageFile);
-//To-Do some manipulation
-//Saves changes to the specified storage file
-MemoryStream outputStream = new MemoryStream();
-await pptxDoc.SaveAsync(outputStream);
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint).
@@ -303,6 +185,7 @@ You can save and send the Presentation to a client browser from a website or web
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Loads or open an PowerPoint Presentation
 FileStream inputStream = new FileStream(inputFileName, FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
 //To-Do some manipulation
 //Initialize content type
 string ContentType = null;
@@ -328,14 +211,6 @@ Dim pptxDoc As IPresentation = Presentation.Open(fileName)
 'To-Do some manipulation
 'Saves the Presentation to the client browser
 pptxDoc.Save("Output.pptx", FormatType.Pptx, Response)
-{% endhighlight %}
-
-{% highlight c# tabtitle="Xamarin" %}
-//Saving and sending the workbook to a client browser from a web site is suitable for web applications alone.
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//Saving and sending the workbook to a client browser from a web site is suitable for web applications alone.
 {% endhighlight %}
 
 {% endtabs %}
@@ -382,52 +257,6 @@ Dim stream As New MemoryStream()
 pptxDoc.Save(stream)
 'Closes the Presentation instance and free the memory consumed.
 pptxDoc.Close()
-{% endhighlight %}
-
-{% highlight c# tabtitle="Xamarin" %}
-//"App" is the class of Portable project
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-Stream inputStream = assembly.GetManifestResourceStream(inputFilePath);
-//Loads or open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//To-Do some manipulation
-//Create new memory stream to save Presentation.
-MemoryStream stream = new MemoryStream();
-//Save Presentation in stream format.
-pptxDoc.Save(stream);
-//Close the presentation
-pptxDoc.Close();
-
-stream.Position = 0;
-//The operation in Save under Xamarin varies between Windows Phone, Android and iOS platforms. Please refer presentation/xamarin section for respective code samples.
-if (Device.OS == TargetPlatform.WinPhone || Device.OS == TargetPlatform.Windows)
-    Xamarin.Forms.DependencyService.Get<ISaveWindowsPhone>().Save("Sample.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation", stream);
-else
-    Xamarin.Forms.DependencyService.Get<ISave>().Save("Sample.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation", stream);
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//Instantiates the File Picker
-FileOpenPicker openPicker = new FileOpenPicker();
-openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
-openPicker.FileTypeFilter.Add(".pptx");
-//Creates a storage file from FileOpenPicker
-StorageFile inputStorageFile = await openPicker.PickSingleFileAsync();
-//Loads or open an PowerPoint Presentation
-IPresentation pptxDoc = await Presentation.OpenAsync(inputStorageFile);
-//MemoryStream outputStream = new MemoryStream();
-//await pptxDoc.SaveAsync(outputStream);
-//Initializes FileSavePicker
-FileSavePicker savePicker = new FileSavePicker();
-savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
-savePicker.SuggestedFileName = "Sample";
-savePicker.FileTypeChoices.Add("PowerPoint Files", new List<string>() { ".pptx" });
-//Creates a storage file from FileSavePicker
-StorageFile storageFile = await savePicker.PickSaveFileAsync();
-//Saves changes to the specified storage file
-await pptxDoc.SaveAsync(storageFile);
-//Close the instance of PowerPoint Presentation
-pptxDoc.Close();
 {% endhighlight %}
 
 {% endtabs %}
