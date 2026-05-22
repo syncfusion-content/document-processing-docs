@@ -154,6 +154,6 @@ For older Angular versions, refer to the respective Angular PDF Viewer guides.
 
 ## See also
 
-- [Getting started Angular PDF Viewer](./getting-started-with-server-backed)
+- [Getting started Angular PDF Viewer](./getting-started)
 - [Open PDF Files](./open-pdf-files)
 - [Save PDF Files](./save-pdf-files)
