@@ -11,46 +11,28 @@ domainurl: ##DomainURL##
 
 This guide explains how to create and run the **Angular PDF Viewer in server-backed mode**. In this mode, PDF rendering is handled by a server-side web service, while the Angular application acts as the client.
 
-> **Note:** This guide supports **Angular 21** and other recent Angular versions. From Angular 19 onwards, standalone components are the default, and this documentation follows that architecture.
-
----
-
 ## Prerequisites
 
 Ensure that your development environment meets the [Syncfusion Angular system requirements](https://ej2.syncfusion.com/angular/documentation/system-requirement).
 
----
+## Create an Angular application
 
-## Setup Angular Environment
+Use [Angular CLI](https://angular.dev/installation) to create a new Angular application, as it provides a standardized project structure, built-in testing tools, and simplified deployment.
 
-### Install Angular CLI
+Install Angular CLI globally, using the following command:
 
-Install the latest Angular CLI globally:
-
-```bash
+```
 npm install -g @angular/cli
 ```
 
-To install a specific version:
+Create a new Angular application using the following commands:
 
-```bash
-npm install -g @angular/cli@21.0.0
+```
+ng new pdfviewer-app
+cd pdfviewer-app
 ```
 
----
-
-## Create an Angular application
-
-Create a new Angular application using the CLI:
-
-```bash
-ng new my-app
-cd my-app
-```
-
-> **Note:** In Angular 20 and later, the CLI generates `app.ts`, `app.html`, and `app.css` instead of `app.component.*` files.
-
----
+> **Note:** When prompted during project creation, select the default options: **CSS** for stylesheet, **No** for SSR/SSG, and **None** for AI tools.
 
 ## Installing Syncfusion® PDF Viewer package
 
@@ -60,13 +42,12 @@ Install the Syncfusion Angular PDF Viewer package from npm:
 npm install @syncfusion/ej2-angular-pdfviewer --save
 ```
 
----
-
 ## Adding CSS references
 
 Add the required Syncfusion styles to the `src/styles.css` file:
 
-```css
+{% tabs %}
+{% highlight css tabtitle="~/src/styles/styles.css" %}
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
@@ -76,17 +57,19 @@ Add the required Syncfusion styles to the `src/styles.css` file:
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
-```
+{% endhighlight %}
+{% endtabs %}
 
----
+> **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/angular/documentation/appearance/overview) to learn more about built-in themes and different ways to refer to themes in an Angular project.
 
 ## Add the PDF Viewer component
 
-To load and display a PDF using server-backed mode, only the **PdfViewerModule** is required. The PDF Viewer communicates with a server-side web service through the `serviceUrl` property.
+Add the PDF Viewer component to your Angular application in server-backed mode. In this mode, the PDF Viewer communicates with a server-side web service through the `serviceUrl` property.
 
 Update `src/app/app.ts` as shown below:
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="~/src/app/app.ts" %}
 import { Component } from '@angular/core';
 import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
          MagnificationService, ThumbnailViewService, ToolbarService,
@@ -112,37 +95,32 @@ import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
   `
 })
 export class App {
-
-  // Specifies the URL of the server-side PDF Viewer web service.
-  // This endpoint handles PDF rendering and processing.
   public serviceUrl: string =
     'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 
-  // Specifies the path or name of the PDF document to be loaded.
   public documentPath: string =
     'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
-> **Note:** The service URL shown above is for evaluation purposes only. For production, host your own PDF Viewer web service.
-
----
+N> The `documentPath` property sets the PDF file path to be loaded. You can provide a remote URL, Base64 string, or local file path (e.g., `'assets/sample.pdf'`) and the `serviceUrl` property specifies the server-side PDF Viewer web service endpoint for PDF rendering. The service URL shown above is for evaluation purposes only. For production, host your own PDF Viewer web service. 
 
 ## Run the application
 
-Run the Angular application using the CLI:
+Run the following command to start the Angular application:
 
 ```bash
 ng serve --open
 ```
 
-The application will start and connect to the configured PDF Viewer web service.
+After the application starts, open the localhost URL shown in the terminal to view the Angular PDF Viewer component in the browser. The output will appear as follows:
 
----
+![Rendered PDF Viewer in browser](images/pdfviewer-control.png)
 
 {% previewsample "/document-processing/samples/pdfviewer/angular/getting-started-cs1" %}
 
----
+[View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Getting%20started%20-%20Server-Back)
 
 ## Run the PDF Viewer web service
 
@@ -164,8 +142,6 @@ The service will run at `https://localhost:7255/pdfviewer`. Configure this URL i
 
 > **Note:** In server-backed mode, `pdfium.js` and `pdfium.wasm` are not required because all PDF rendering happens on the server.
 
----
-
 ## Angular version compatibility and older versions
 
 For detailed compatibility information, refer to the [Angular version support matrix](https://ej2.syncfusion.com/angular/documentation/system-requirement#angular-version-compatibility).
@@ -176,6 +152,8 @@ For detailed compatibility information, refer to the [Angular version support ma
 
 For older Angular versions, refer to the respective Angular PDF Viewer guides.
 
----
+## See also
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Getting%20started%20-%20Server-Back)
+- [Getting started Angular PDF Viewer](./getting-started-with-server-backed)
+- [Open PDF Files](./open-pdf-files)
+- [Save PDF Files](./save-pdf-files)
