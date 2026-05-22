@@ -17,7 +17,7 @@ The library supports two modes for managing document state during agent tool inv
 
 ![Application workflow](application-workflow.png)
 
-Use the table below to pick the right mode for your application, then follow the linked guide.
+Refer to the table below to choose the appropriate mode for your application and follow the corresponding guide.
 
 <table>
   <thead>
@@ -35,7 +35,7 @@ Use the table below to pick the right mode for your application, then follow the
           <li>Single-instance (non-scalable)</li>
         </ul>
       </td>
-      <td><a href = "#getting-started---in-memory-mode">In-Memory</a></td>
+      <td><a href = "#in-memory-mode">In-Memory</a></td>
     </tr>
     <tr>
       <td>
@@ -45,12 +45,12 @@ Use the table below to pick the right mode for your application, then follow the
           <li>Stateless services</li>
         </ul>
       </td>
-      <td><a href = "#getting-started---storage-mode">Storage</a></td>
+      <td><a href = "#storage-mode">Storage</a></td>
     </tr>
   </tbody>
 </table>
 
-## Getting Started - In-Memory Mode
+## In-Memory Mode
 
 Documents are held as live objects in an in-memory dictionary. Each tool accesses and modifies the object directly without opening or saving files on each call. Unused documents are cleaned up automatically after a configurable timeout (default: 10 minutes).
 
@@ -190,11 +190,11 @@ The system prompt sets the rules for how the agent works. For the full system pr
 
 You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AgentChatConsole/Program.cs).
 
-## Getting Started - Storage Mode
+## Storage Mode
 
 Documents are read from and written to storage (Azure Blob, S3, local disk, etc.) on each tool invocation. No in-memory objects are maintained between tool calls - each operation opens the document from storage, processes it, and saves it back. This mode is ideal for distributed systems, serverless architectures, and scenarios where document persistence is required.
 
-The example below uses Azure Blob Storage. The same pattern works with any storage backend by implementing the `IDocumentStorage` interface.
+The example below uses Azure Blob Storage. The same pattern works with any storage back end by implementing the `IDocumentStorage` interface.
 
 ### Prerequisites
 
@@ -221,7 +221,7 @@ if (!string.IsNullOrEmpty(licenseKey))
 
 **Step 2: Implement Storage**
 
-Implement `IDocumentStorage` for your storage backend. Below is the class signature and method placeholders for Azure Blob Storage - You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/ASP.NET-Core/AgentChatWeb/).
+Implement `IDocumentStorage` for your storage back end. Below is the class signature and method placeholders for Azure Blob Storage - You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/ASP.NET-Core/AgentChatWeb/).
 
 ```csharp
 using Azure.Storage.Blobs;
