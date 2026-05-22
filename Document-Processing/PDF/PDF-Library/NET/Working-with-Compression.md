@@ -56,20 +56,10 @@ options.ImageQuality = 50;
 //Assign the compression option to the document.
 loadedDocument.Compress(options);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Output.pdf");
 //Close the documents.
 loadedDocument.Close(true);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name. 
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name. 
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
@@ -144,20 +134,10 @@ options.OptimizeFont = true;
 //Assign the compression option to the document.
 loadedDocument.Compress(options);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Output.pdf");
 //Close the documents.
 loadedDocument.Close(true);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name. 
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name. 
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
@@ -230,20 +210,10 @@ options.OptimizePageContents = true;
 //Assign the compression option to the document.
 loadedDocument.Compress(options);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Output.pdf");
 //Close the documents.
 loadedDocument.Close(true);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
@@ -314,20 +284,10 @@ options.RemoveMetadata = true;
 //Assign the compression option to the document.
 loadedDocument.Compress(options);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-loadedDocument.Save(stream);
+//Save the document.
+loadedDocument.Save("Output.pdf");
 //Close the documents.
 loadedDocument.Close(true);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name. 
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name. 
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
@@ -409,20 +369,10 @@ for (int i = 0; i < 1000; i++)
     result = textElement.Draw(result.Page, new RectangleF(0, result.Bounds.Bottom + 10, font.MeasureString(text).Width, page.GetClientSize().Height));
 }
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document into stream.
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the documents.
 document.Close(true);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name. 
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name. 
-return File(stream, contentType, fileName);
 
 {% endhighlight %}
 
