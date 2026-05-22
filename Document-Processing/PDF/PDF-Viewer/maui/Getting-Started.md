@@ -73,7 +73,8 @@ namespace PdfViewerExample
 
 Open the `MainPage.xaml` file and follow the steps below. 
 
-1.  Import the control namespace `Syncfusion.Maui.PdfViewer`, and then add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag as follows.
+1.  Import the control namespace `Syncfusion.Maui.PdfViewer`,
+2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag.
 2.  Name the PDF viewer control as `pdfViewer`.
 
 {% tabs %}
@@ -183,7 +184,7 @@ namespace PdfViewerExample
 {% endtabs %}
 
 N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
-N> 2. And, if you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
+N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
 
 ## Step 6: Running the Application
 
@@ -251,7 +252,7 @@ namespace PdfViewerExample
 Open the `MainPage.xaml` file and follow the steps below. 
 
 1.  Import the control namespace `Syncfusion.Maui.PdfViewer`,
-2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>`.
+2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag.
 3.  Name the PDF viewer control as `pdfViewer`.
 
 {% tabs %}
@@ -403,7 +404,15 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run: `dotnet restore`.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run the following code.
+
+{% tabs %}
+{% highlight c# tabtitle="terminal" %}
+
+dotnet restore
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Step 3: Register the Syncfusion<sup>®</sup> Core Handler
 
@@ -440,7 +449,8 @@ namespace PdfViewerExample
 
 Open the `MainPage.xaml` file and follow the steps below. 
 
-1.  Import the control namespace `Syncfusion.Maui.PdfViewer`, and then add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag as follows.
+1.  Import the control namespace `Syncfusion.Maui.PdfViewer`.
+2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag.
 2.  Name the PDF viewer control as `pdfViewer`.
 
 {% tabs %}
@@ -561,7 +571,7 @@ namespace PdfViewerExample
 {% endtabs %}
 
 N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
-N> 2. And, if you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
+N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
 
 ## Step 6: Running the Application
 
@@ -591,5 +601,4 @@ Now that the PDF Viewer is running, here is a suggested learning path to explore
 | 6 | **Customize the toolbar** | Show, hide, add, or remove toolbar items to match your app's workflow. → [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization) |
 | 7 | **Redact sensitive content** | Permanently remove confidential text or images before sharing. → [Redaction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/redaction) |
 
-* For migration scenarios, refer to the Xamarin to .NET MAUI migration guide.
-* [Migration Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/migration)
+* For migration from Xamarin to .NET MAUI, please follow the [Migration Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/migration).
