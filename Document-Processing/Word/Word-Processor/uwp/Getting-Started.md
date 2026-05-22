@@ -8,7 +8,7 @@ keywords: getting-started
 ---
 # Getting Started with UWP RichTextBox (SfRichTextBoxAdv)
 
-Syncfusion® UWP RichTextBox (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in UWP applications. This section guides you through the steps to get started and create a RichTextBox in a UWP application.
+Syncfusion<sup style="font-size:70%">&reg;</sup> [UWP RichTextBox](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in UWP applications. This section guides you through the steps to get started and create a RichTextBox in a UWP application.
 
 ## Create a RichTextBox in UWP using SfRichTextBoxAdv
 
@@ -85,7 +85,7 @@ To add the control manually in XAML, follow these steps:
 2.	Declare SfRichTextBoxAdv control in the XAML page.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="MainWindow.xaml" %}
 
 <Page
     x:Class="SfRichTextBoxAdv.MainPage"
@@ -112,7 +112,7 @@ To add the control manually in XAML, follow these steps:
 To add the control manually in C#, add the following code in *.xaml.cs
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.UI.Xaml.RichTextBoxAdv;
 
@@ -143,14 +143,14 @@ public sealed partial class MainPage : Page
 
 ![UWP SfRichTextBoxAdv Control](Getting-Started_images/uwp-sfrichtextboxadv-control.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/SfRichTextBoxAdv).
 
 ## Use SfRichTextBoxAdv as a standard RichTextBox
 
 Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainWindow.xaml" %}
 <Page
     x:Class="Standard_RichTextBox.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -249,10 +249,10 @@ Use the following code to configure the SfRichTextBoxAdv control as a standard R
 
 {% endtabs %}
 
-You can download a standard RichTextBox example from [GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
-
 When the application is executed, the standard RichTextBox control is displayed as illustrated below.
 ![UWP Standard RichTextBox](Getting-Started_images/uwp-standard-sfrichtextboxadv.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
 
 
 ## See also

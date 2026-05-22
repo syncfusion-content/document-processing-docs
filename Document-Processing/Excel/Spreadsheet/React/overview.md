@@ -11,6 +11,8 @@ documentation: ug
 
 The React Spreadsheet is an user interactive component to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with xlsx, xls, CSV and PDF formats.
 
+![React Spreadsheet Component](./images/overview-banner.png)
+
 ## Key features
 
 * [Data sources](data-binding): Bind the Spreadsheet component with an array of objects or data from a web service using `DataManager`.
