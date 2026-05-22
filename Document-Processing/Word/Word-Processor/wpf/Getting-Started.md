@@ -214,7 +214,7 @@ To add the control manually in XAML, follow these steps:
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
 
-<Syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+<syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                          xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
                          x:Class="DocumentEditor.MainWindow"
@@ -227,7 +227,7 @@ To add the control manually in XAML, follow these steps:
      <syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"  DataContext="{Binding ElementName=richTextBoxAdv}"/>
      <syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1"/>
  </Grid>
-</Syncfusion:RibbonWindow>
+</syncfusion:RibbonWindow>
 
 
 {% endhighlight %}
@@ -467,7 +467,7 @@ The following assemblies are required to enable theme support:
 - Syncfusion.Shared.WPF
 - Syncfusion.Tools.WPF
 - Syncfusion.DocIO.Base
-- Syncfusion.Themes.Windows11Light
+- Syncfusion.Themes.Windows11Light.WPF
 - Syncfusion.SfSkinManager.WPF
 
 {% endtabcontent %}
@@ -504,7 +504,7 @@ To add the controls and apply a theme manually in XAML, follow these steps:
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
 
-<Syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+<syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                          xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
                          x:Class="Theme.MainWindow"
@@ -517,7 +517,7 @@ To add the controls and apply a theme manually in XAML, follow these steps:
      <syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"  DataContext="{Binding ElementName=richTextBoxAdv}"/>
      <syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1"/>
  </Grid>
-</Syncfusion:RibbonWindow>
+</syncfusion:RibbonWindow>
 
 
 {% endhighlight %}
@@ -533,7 +533,7 @@ To add the controls and apply a theme manually in XAML, follow these steps:
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
 
-<Syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+<syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                          xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
                          x:Class="Theme.MainWindow"
@@ -548,7 +548,7 @@ To add the controls and apply a theme manually in XAML, follow these steps:
      <syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"  DataContext="{Binding ElementName=richTextBoxAdv}"/>
      <syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1"/>
  </Grid>
-</Syncfusion:RibbonWindow>
+</syncfusion:RibbonWindow>
 
 
 {% endhighlight %}
