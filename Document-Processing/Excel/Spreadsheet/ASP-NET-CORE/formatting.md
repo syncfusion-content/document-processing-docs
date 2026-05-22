@@ -7,13 +7,16 @@ control: Formatting
 documentation: ug
 ---
 
-
 # Formatting in ASP.NET Core Spreadsheet Control
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
 * Number Formatting
 * Text Formatting
 * Cell Formatting
+
+To get start quickly with Formatting, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=AyHLgzNq6_w" %}
 
 ## Number Formatting
 
@@ -34,13 +37,13 @@ Number formatting provides a type for your data in the Spreadsheet. Use the [`al
 | Text | `@` | 49 |
 
 Number formatting can be applied in following ways,
-* Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
-* Using the `numberFormat` method, you can set the number format to a cell or range of cells.
+* Using the [format](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/cell#format) property in `cell`, you can set the desired format to each cell at initial load.
+* Using the [`numberFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#numberformat) method, you can set the number format to a cell or range of cells.
 * Selecting the number format option from ribbon toolbar.
 
 ### Custom Number Formatting
 
-Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the pre-defined number formats do not meet your needs, you can set your own custom formats using custom number formats dialog or `numberFormat` method.
+Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the pre-defined number formats do not meet your needs, you can set your own custom formats using custom number formats dialog or [`numberFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#numberformat) method.
 
 The different types of custom number format populated in the custom number format dialog are,
 
@@ -84,7 +87,7 @@ The different types of custom number format populated in the custom number forma
 | Accounting | `_(* #,##0.00_);_(* (#,##0.00);_(* "-"??_);_(@_)` | 43 |
 
 Custom Number formatting can be applied in following ways,
-* Using the `numberFormat` method, you can set your own custom number format to a cell or range of cells.
+* Using the [`numberFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#numberformat) method, you can set your own custom number format to a cell or range of cells.
 * Selecting the custom number format option from custom number formats dialog or type your own format in dialog input and then click apply button. It will apply the custom format for selected cells.
 
 The following code example shows the number formatting in cell data.
@@ -98,11 +101,11 @@ The following code example shows the number formatting in cell data.
 {% endhighlight %}
 {% endtabs %}
 
-## Configure culture-based custom format
+## Configure Culture-specific Custom format
 
-Previously, the custom format dialog always displayed formats using the English settings (group separator, decimal separator, and currency symbol were not updated based on the applied culture). Starting from version `27.1.*`, the custom format dialog will now display formats according to the applied culture. You can select a culture-based number format from the dialog or enter your own format using the culture-specific decimal separator, group separator, and currency symbol. Then, click "Apply" to apply the culture-specific custom format to the selected cells.
+Earlier, the custom format dialog always showed formats using English settings (group separator, decimal separator, and currency symbol were not updated based on the applied culture). Starting from version **27.1.\***, the dialog now displays formats according to the applied culture. You can select a culture-based number format or enter your own format using the culture-specific decimal separator, group separator, and currency symbol. After that, click **Apply** to apply the culture-specific custom format to the selected cells.
 
-The spreadsheet allows customization of formats in the custom format dialog using the `configureLocalizedFormat` method. In this method, you need to pass a collection containing the default number format IDs and their corresponding format codes as arguments. Based on this collection, the custom format dialog will display the customized formats. You can refer to the [default number format IDs](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.numberingformat?view=openxml-2.8.1) from the Excel built-in number format reference.
+The Spreadsheet supports customizing formats in the dialog using the `configureLocalizedFormat` method. In this method, you pass a collection of default number format IDs along with their corresponding format codes. The dialog will then display the customized formats. You can refer to the [default number format IDs](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.numberingformat?view=openxml-2.8.1) from the Excel built-in number format reference.
 
 Compared to Excel, the date, time, currency, and accounting formats vary across different cultures. For example, when an Excel file with the date format `'m/d/yyyy'` is imported in the `en-US` culture, the spreadsheet displays the date in that format. However, when the same file is imported in the German culture, the date format changes to `'dd.MM.yyyy'`, which is the default for that region. The default number format ID for the date is 14. To customize the date format based on the culture, you should map the default number format ID to the appropriate culture-specific format code, like this: `{ id: 14, code: 'dd.MM.yyyy' }` in the `configureLocalizedFormat` method.
 
@@ -110,36 +113,47 @@ Compared to Excel, the date, time, currency, and accounting formats vary across 
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German` culture.
 
-```csharp
-List<object> deLocaleFormats = new List<object>()
-{
-    new { id = 37, code = @"#,##0;-#,##0" },
-    new { id = 38, code = @"#,##0;[Red]-#,##0" },
-    new { id = 39, code = @"#,##0.00;-#,##0.00" },
-    new { id = 40, code = @"#,##0.00;[Red]-#,##0.00" },
-    new { id = 5, code = @"#,##0 ""€"";-#,##0 ""€""" },
-    new { id = 6, code = @"#,##0 ""€"";[Red]-#,##0 ""€""" },
-    new { id = 7, code = @"#,##0.00 ""€"";-#,##0.00 ""€""" },
-    new { id = 8, code = @"#,##0.00 ""€"";[Red]-#,##0.00 ""€""" },
-    new { id = 41, code = @"_-* #,##0_-;-* #,##0_-;_-* ""-""_-;_-@_-" },
-    new { id = 42, code = @"_-* #,##0 ""€""_-;-* #,##0 ""€""_-;_-* ""-"" ""€""_-;_-@_-" },
-    new { id = 43, code = @"_-* #,##0.00_-;-* #,##0.00_-;_-* ""-""??_-;_-@_-" },
-    new { id = 44, code = @"_-* #,##0.00 ""€""_-;-* #,##0.00 ""€""_-;_-* ""-""?? ""€""_-;_-@_-" },
-    new { id = 14, code = @"dd.MM.yyyy" },
-    new { id = 15, code = @"dd. MMM yy" },
-    new { id = 16, code = @"dd. MMM" },
-    new { id = 17, code = @"MMM yy" },
-    new { id = 20, code = @"hh:mm" },
-    new { id = 21, code = @"hh:mm:ss" },
-    new { id = 22, code = @"dd.MM.yyyy hh:mm" }
-};
-ViewBag.deLocaleFormats = deLocaleFormats;
+```js
+@using Syncfusion.EJ2.Spreadsheet
+
+@{
+    // Culture-specific formats for "de" locale
+    List<object> deLocaleFormats = new List<object>()
+    {
+        new { id = 14, code = @"dd.MM.yyyy" },
+        new { id = 15, code = @"dd. MMM yy" },
+        new { id = 16, code = @"dd. MMM" },
+        new { id = 17, code = @"MMM yy" },
+        new { id = 20, code = @"hh:mm" },
+        new { id = 21, code = @"hh:mm:ss" },
+        new { id = 22, code = @"dd.MM.yyyy hh:mm" },
+        new { id = 37, code = @"#,##0;-#,##0" },
+        new { id = 38, code = @"#,##0;[Red]-#,##0" },
+        new { id = 39, code = @"#,##0.00;-#,##0.00" },
+        new { id = 40, code = @"#,##0.00;[Red]-#,##0.00" },
+        new { id = 5, code = @"#,##0 ""€"";-#,##0 ""€""" },
+        new { id = 6, code = @"#,##0 ""€"";[Red]-#,##0 ""€""" },
+        new { id = 7, code = @"#,##0.00 ""€"";-#,##0.00 ""€""" },
+        new { id = 8, code = @"#,##0.00 ""€"";[Red]-#,##0.00 ""€""" },
+        new { id = 41, code = @"_-* #,##0_-;-* #,##0_-;_-* ""-""_-;_-@_-" },
+        new { id = 42, code = @"_-* #,##0 ""€""_-;-* #,##0 ""€""_-;_-* ""-"" ""€""_-;_-@_-" },
+        new { id = 43, code = @"_-* #,##0.00_-;-* #,##0.00_-;_-* ""-""??_-;_-@_-" },
+        new { id = 44, code = @"_-* #,##0.00 ""€""_-;-* #,##0.00 ""€""_-;_-* ""-""?? ""€""_-;_-@_-" }
+    };
+
+    ViewBag.deLocaleFormats = deLocaleFormats;
+}
 
 <script>
-    var deLocaleFormats = @Html.Raw(Json.Serialize(deLocaleFormats));
-    // Mapping culture-based number formats for the "de" culture: The "spreadsheet" parameter is an instance of the spreadsheet component, and the "deLocaleFormats" parameter is an array containing format codes and their corresponding format IDs for the "de" culture.
+    var deLocaleFormats = @Html.Raw(Json.Serialize(ViewBag.deLocaleFormats));
+    // Mapping culture-based number formats for the "de" culture: 
+    // The "spreadsheet" parameter is an instance of the spreadsheet component, 
+    // and the "deLocaleFormats" parameter is an array containing format codes 
+    // and their corresponding format IDs for the "de" culture.
     ej.spreadsheet.configureLocalizedFormat(spreadsheet, deLocaleFormats);
 </script>
+
+
 ```
 
 The following code example demonstrates how to configure culture-based formats for different cultures in the spreadsheet.
@@ -153,12 +167,14 @@ The following code example demonstrates how to configure culture-based formats f
 {% endhighlight %}
 {% endtabs %}
 
-## Text and cell formatting
+## Cell Styling and Text Formatting
 
-Text and cell formatting enhances the look and feel of your cell. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowCellFormatting) property to enable or disable the text and cell formatting option in Spreadsheet. You can set the formats in following ways,
-* Using the `style` property, you can set formats to each cell at initial load.
-* Using the `cellFormat` method, you can set formats to a cell or range of cells.
-* You can also apply by clicking the desired format option from the ribbon toolbar.
+Text and cell formatting improves the appearance of your spreadsheet and helps highlight specific cells or ranges. You can apply formats such as font size, font family, font color, text alignment, borders, and more. Use the [`allowCellFormatting`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowCellFormatting) property to enable or disable text and cell formatting in the Spreadsheet.  
+
+You can set formats in the following ways:  
+* Use the [style](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Cell.html#Syncfusion_EJ2_Spreadsheet_Cell_Style) property to apply formats to each cell during the initial load.
+* Use the [`cellFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#cellformat) method to apply formats to a cell or range of cells dynamically.  
+* Apply formatting directly by clicking the desired format option from the ribbon toolbar.
 
 ### Fonts
 
@@ -166,15 +182,15 @@ Various font formats supported in the spreadsheet are font-family, font-size, bo
 
 ### Text Alignment
 
-You can align text in a cell either vertically or horizontally using the  `textAlign` and `verticalAlign` property.
+You can align text in a cell either vertically or horizontally using the  [`textAlign`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.TextAlign.html) and [verticalAlign](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.VerticalAlign.html) property.
 
 ### Indents
 
-To enhance the appearance of text in a cell, you can change the indentation of a cell content using `textIndent` property.
+To enhance the appearance of text in a cell, you can change the indentation of a cell content using [textIndent](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.CellStyleModel.html#Syncfusion_EJ2_Spreadsheet_CellStyleModel_TextIndent) property.
 
 ### Fill color
 
-To highlight cell or range of cells from whole workbook you can apply background color for a cell using `backgroundColor` property.
+To highlight cell or range of cells from whole workbook you can apply background color for a cell using [backgroundColor](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.CellStyleModel.html#Syncfusion_EJ2_Spreadsheet_CellStyleModel_BackgroundColor) property.
 
 ### Borders
 
@@ -182,32 +198,32 @@ You can add borders around a cell or range of cells to define a section of works
 
 | Types | Actions |
 |-------|---------|
-| Top Border | Specifies the top border of a cell or range of cells.|
-| Left Border | Specifies the left border of a cell or range of cells.|
-| Right Border | Specifies the right border of a cell or range of cells.|
-| Bottom Border | Specifies the bottom border of a cell or range of cells.|
-| No Border | Used to clear the border from a cell or range of cells.|
-| All Border | Specifies all border of a cell or range of cells.|
-| Horizontal Border | Specifies the top and bottom border of a cell or range of cells.|
-| Vertical Border | Specifies the left and right border of a cell or range of cells.|
-| Outside Border | Specifies the outside border of a range of cells.|
-| Inside Border | Specifies the inside border of a range of cells.|
+| **Top Border** | Specifies the top border of a cell or range of cells.|
+| **Left Border** | Specifies the left border of a cell or range of cells.|
+| **Right Border** | Specifies the right border of a cell or range of cells.|
+| **Bottom Border** | Specifies the bottom border of a cell or range of cells.|
+| **No Border** | Used to clear the border from a cell or range of cells.|
+| **All Border** | Specifies all border of a cell or range of cells.|
+| **Horizontal Border** | Specifies the top and bottom border of a cell or range of cells.|
+| **Vertical Border** | Specifies the left and right border of a cell or range of cells.|
+| **Outside Border** | Specifies the outside border of a range of cells.|
+| **Inside Border** | Specifies the inside border of a range of cells.|
 
 You can also change the color, size, and style of the border. The size and style supported in the spreadsheet are,
 
 | Types | Actions |
 |-------|---------|
-| Thin | Specifies the `1px` border size (default).|
-| Medium | Specifies the `2px` border size.|
-| Thick | Specifies the `3px` border size.|
-| Solid | Used to create the `solid` border (default).|
-| Dashed | Used to create the `dashed` border.|
-| Dotted | Used to create the `dotted` border.|
-| Double | Used to create the `double` border.|
+| **Thin** | Specifies the `1px` border size (default).|
+| **Medium** | Specifies the `2px` border size.|
+| **Thick** | Specifies the `3px` border size.|
+| **Solid** | Used to create the `solid` border (default).|
+| **Dashed** | Used to create the `dashed` border.|
+| **Dotted** | Used to create the `dotted` border.|
+| **Double** | Used to create the `double` border.|
 
 Borders can be applied in the following ways,
 * Using the  `border`, `borderLeft`, `borderRight`, `borderBottom` properties, you can set the desired border to each cell at initial load.
-* Using the `setBorder` method, you can set various border options to a cell or range of cells.
+* Using the [setBorder](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#setborder) method, you can set various border options to a cell or range of cells.
 * Selecting the border options from ribbon toolbar.
 
 The following code example shows the style formatting in text and cells of the spreadsheet.
@@ -221,8 +237,6 @@ The following code example shows the style formatting in text and cells of the s
 {% endhighlight %}
 {% endtabs %}
 
-
-
 ### Limitations of Formatting
 
 The following features are not supported in Formatting:
@@ -232,16 +246,16 @@ The following features are not supported in Formatting:
 
 ## Conditional Formatting
 
-Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the `allowConditionalFormat` property.
+Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowConditionalFormat) property.
 
-N> * The default value for the `allowConditionalFormat` property is `true`.
+> * The default value for the `allowConditionalFormat` property is `true`.
 
 ### Apply Conditional Formatting
 
 You can apply conditional formatting by using one of the following ways,
 
 * Select the conditional formatting icon in the Ribbon toolbar under the Home Tab.
-* Using the `conditionalFormat` method to define the condition.
+* Using the [`conditionalFormat()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#conditionalformat) method to define the condition.
 * Using the `conditionalFormats` in sheets model.
 
 Conditional formatting has the following types in the spreadsheet,
@@ -252,15 +266,15 @@ Highlight cells rules option in the conditional formatting enables you to highli
 
 The following options can be given for the highlight cells rules as type,
 
-N>* 'GreaterThan', 'LessThan', 'Between', 'EqualTo', 'ContainsText', 'DateOccur', 'Duplicate', 'Unique'.
+>* `GreaterThan`, `LessThan`, `Between`, `EqualTo`, `ContainsText`, `DateOccur`, `Duplicate`, `Unique`.
 
 The following preset colors can be used for formatting styles,
 
-N>* `"RedFT"` - Light Red Fill with Dark Red Text,
-<br/>* `"YellowFT"` - Yellow Fill with Dark Yellow Text,
-<br/>* `"GreenFT"` - Green Fill with Dark Green Tex/t,
-<br/>* `"RedF"` - Red Fill,
-<br/>* `"RedT"` - Red Text.
+>* `"RedFT"` - Light Red Fill with Dark Red Text,
+>* `"YellowFT"` - Yellow Fill with Dark Yellow Text,
+>* `"GreenFT"` - Green Fill with Dark Green Text,
+>* `"RedF"` - Red Fill,
+>* `"RedT"` - Red Text.
 
 ### Top bottom rules
 
@@ -268,7 +282,7 @@ Top bottom rules option in the conditional formatting allows you to apply format
 
 The following options can be given for the top bottom rules as type,
 
-N>* 'Top10Items', 'Bottom10Items', 'Top10Percentage', 'Bottom10Percentage', 'BelowAverage', 'AboveAverage'.
+>* `Top10Items`, `Bottom10Items`, `Top10Percentage`, `Bottom10Percentage`, `BelowAverage`, `AboveAverage`.
 
 ### Data Bars
 
@@ -276,7 +290,7 @@ You can apply data bars to represent the data graphically inside a cell. The lon
 
 The following options can be given for the data bars as type,
 
-N>* 'BlueDataBar', 'GreenDataBar', 'RedDataBar', 'OrangeDataBar', 'LightBlueDataBar', 'PurpleDataBar'.
+>* `BlueDataBar`, `GreenDataBar`, `RedDataBar`, `OrangeDataBar`, `LightBlueDataBar`, `PurpleDataBar`.
 
 ### Color Scales
 
@@ -284,7 +298,7 @@ Using color scales, you can format your cells with two or three colors, where di
 
 The following options can be given for the color scales as type,
 
-N>* 'GYRColorScale', 'RYGColorScale', 'GWRColorScale', 'RWGColorScale', 'BWRColorScale', 'RWBColorScale', 'WRColorScale', 'RWColorScale', 'GWColorScale', 'WGColorScale', 'GYColorScale', 'YGColorScale'.
+>* `GYRColorScale`, `RYGColorScale`, `GWRColorScale`, `RWGColorScale`, `BWRColorScale`, `RWBColorScale`, `WRColorScale`, `RWColorScale`, `GWColorScale`, `WGColorScale`, `GYColorScale`, `YGColorScale`.
 
 ### Icon Sets
 
@@ -292,22 +306,22 @@ Icon sets will help you to visually represent your data with icons. Every icon r
 
 The following options can be given for the icon sets as type,
 
-N>* 'ThreeArrows', 'ThreeArrowsGray', 'FourArrowsGray', 'FourArrows', 'FiveArrowsGray', 'FiveArrows', 'ThreeTrafficLights1', 'ThreeTrafficLights2', 'ThreeSigns', 'FourTrafficLights', 'FourRedToBlack', 'ThreeSymbols', 'ThreeSymbols2', 'ThreeFlags', 'FourRating', 'FiveQuarters', 'FiveRating', 'ThreeTriangles', 'ThreeStars', 'FiveBoxes'.
+>* `ThreeArrows`, `ThreeArrowsGray`, `FourArrowsGray`, `FourArrows`, `FiveArrowsGray`, `FiveArrows`, `ThreeTrafficLights1`, `ThreeTrafficLights2`, `ThreeSigns`, `FourTrafficLights`, `FourRedToBlack`, `ThreeSymbols`, `ThreeSymbols2`, `ThreeFlags`, `FourRating`, `FiveQuarters`, `FiveRating`, `ThreeTriangles`, `ThreeStars`, `FiveBoxes`.
 
 ### Custom Format
 
-Using custom format for conditional formatting you can set cell styles like color, background color, font style, font weight and underline.
+Using the custom format for conditional formatting you can set cell styles like color, background color, font style, font weight, and underline.
 
 In the MAY and JUN columns, we have applied conditional formatting custom format.
 
-N> * In the Conditional format, custom format supported for Highlight cells rules and Top bottom rules.
+>* In the Conditional format, custom format supported for **Highlight cell rules** and **Top bottom rules**.
 
 ### Clear Rules
 
 You can clear the defined rules by using one of the following ways,
 
-* Using the “Clear Rules” option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
-* Using the `clearConditionalFormat` method to clear the defined rules.
+* Using the `Clear Rules` option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
+* Using the [`clearConditionalFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -318,8 +332,6 @@ You can clear the defined rules by using one of the following ways,
 {% endhighlight %}
 {% endtabs %}
 
-
-
 ### Limitations of Conditional formatting
 
 The following features have some limitations in Conditional Formatting:
@@ -328,6 +340,10 @@ The following features have some limitations in Conditional Formatting:
 * Conditional formatting with formula support.
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
+
+## Note
+
+You can refer to our [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

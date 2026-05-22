@@ -1,13 +1,13 @@
----
 layout: post
-title: Formulas in React Spreadsheet component | Syncfusion
-description: Learn here all about Formulas in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Formulas 
+title: Formulas in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
+description: Learn here all about Formulas in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
+control: Formulas
 documentation: ug
 ---
 
-# Formulas in React Spreadsheet component
+
+# Formulas in ASP.NET Core Spreadsheet control
 
 Formulas are used to perform calculations on data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
 
@@ -15,10 +15,10 @@ Formulas are used to perform calculations on data in a worksheet. You can refer 
 
 You can set a formula for a cell in the following ways,
 
-* Using the [formula](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cell#formula) property from `cell`, you can set the formula or expression to each cell at initial load.
+* Using the [formula](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Cell.html#Syncfusion_EJ2_Spreadsheet_Cell_Formula) property from `cell`, you can set the formula or expression to each cell at initial load.
 * Set the formula or expression through data binding.
 * You can set formula for a cell by [`editing`](./editing).
-* Using the [`updateCell`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updatecell) method, you can set or update the cell formula.
+* Using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#updatecell) method, you can set or update the cell formula.
 
 ## Culture-Specific Formula Separators
 
@@ -26,108 +26,73 @@ In earlier versions, even though culture-based Excel files could be imported int
 
 > Before importing culture-based Excel files, make sure the Spreadsheet component is rendered with the matching culture. Also, start the import/export services with the same culture to ensure compatibility.
 
-When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [listSeparator](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#listseparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#listseparator) property will be updated based on the culture of the launched import/export service.
+When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [listSeparator](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ListSeparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [listSeparator](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ListSeparator) property will be updated based on the culture of the launched import/export service.
 
 In the example below, the Spreadsheet component is rendered with the **German culture[de]**. The example also shows how to set the culture-based argument separator and use culture-based formatted numeric values as arguments in formulas.
 
 {% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% include code-snippet/spreadsheet/react/formula-cs3/app/App.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/formula-cs3/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="App.tsx" %}
-{% include code-snippet/spreadsheet/react/formula-cs3/app/App.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="locale.json" %}
-{% include code-snippet/spreadsheet/react/formula-cs3/app/locale.json %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/formula-cs3/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/formula-cs3/app/datasource.tsx %}
+{% highlight c# tabtitle="FormulaController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/formula-cs3/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/formula-cs3" %}
-
 ## Create User Defined Functions / Custom Functions
 
-The Spreadsheet includes a set of built-in formulas. For convenience, you can find the list of supported formulas [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/formulas#supported-formulas).
+The Spreadsheet includes a set of built-in formulas. For convenience, you can find the list of supported formulas [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/formulas#supported-formulas).
 
-You can also define and use formulas that are not supported by default, known as **user defined/custom formulas**, by using the [addCustomFunction](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#addcustomfunction) function. Keep in mind that a user defined/custom formula should return only a single value. If the formula returns an array, updating adjacent cell values will take more time and may affect performance.
+You can also define and use formulas that are not supported by default, known as **user defined/custom formulas**, by using the [addCustomFunction](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#addcustomfunction) function. Keep in mind that a user defined/custom formula should return only a single value. If the formula returns an array, updating adjacent cell values will take more time and may affect performance.
 
 The following code example shows how to use an unsupported formula in the Spreadsheet.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/formula-cs1/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/formula/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/formula-cs1/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/formula-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/formula-cs1/app/datasource.tsx %}
+{% highlight c# tabtitle="FormulaController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/formula/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/formula-cs1" %}
-
-To directly compute a formula or expression, use the [computeExpression](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
+To directly compute a formula or expression, use the [computeExpression](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
 
 The following code example shows how to use `computeExpression` method in the spreadsheet.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/formula-cs2/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/formula-cs2/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/formula-cs2/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/formula-cs2/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/formula-cs2/app/datasource.tsx %}
+{% highlight c# tabtitle="FormulaController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/formula-cs2/formulaController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/formula-cs2" %}
-
 ## Formula Bar
 
-The formula bar is used to enter or edit cell data more easily. By default, the formula bar is enabled in the spreadsheet. Use the [`showFormulaBar`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#showformulabar) property to enable or disable the formula bar.
+The formula bar is used to enter or edit cell data more easily. By default, the formula bar is enabled in the spreadsheet. Use the [`showFormulaBar`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ShowFormulaBar) property to enable or disable the formula bar.
 
 ## Named Ranges
 
 You can assign a meaningful name to a cell range and then use that name in formulas for calculation. This makes formulas easier to read, understand, and maintain. Named ranges can be added to the Spreadsheet in several ways:
 
-* Use the [`definedNames`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#definednames) collection to add multiple named ranges during the initial load.  
-* Use the [`addDefinedName`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#adddefinedname) method to add a named range dynamically at runtime.  
-* Remove a named range dynamically using the [`removeDefinedName`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#removedefinedname) method.  
+* Use the [`definedNames`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_DefinedNames) collection to add multiple named ranges during the initial load.  
+* Use the [`addDefinedName`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#adddefinedname) method to add a named range dynamically at runtime.  
+* Remove a named range dynamically using the [`removeDefinedName`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#removedefinedname) method.  
 * Select a range of cells and enter a name for the selected range directly in the **Name Box**.  
 
 The following code example demonstrates how named ranges can be defined and used in formulas within the Spreadsheet.
 
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/defined-name-cs1/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/defined-names/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/defined-name-cs1/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/defined-name-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/defined-name-cs1/app/datasource.tsx %}
+{% highlight c# tabtitle="DefinedNameController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/defined-names/definedNameController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/defined-name-cs1" %}
 
 ## Calculation Mode
 
@@ -136,7 +101,7 @@ The Spreadsheet provides a **Calculation Mode** feature similar to the calculati
 * **Automatic**: Formulas recalculate instantly whenever a change is made in dependent cells.  
 * **Manual**: Formulas recalculate only when explicitly triggered by the user using options like **Calculate Sheet** or **Calculate Workbook**.
 
-You can configure the calculation mode using the [`calculationMode`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#calculationmode) property of the Spreadsheet. These modes give flexibility to balance real-time updates with performance optimization.
+You can configure the calculation mode using the [`calculationMode`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_CalculationMode) property of the Spreadsheet. These modes give flexibility to balance real-time updates with performance optimization.
 
 ### Automatic Mode
 
@@ -144,26 +109,18 @@ In **Automatic Mode**, formulas are recalculated immediately whenever a dependen
 
 For example, if cell `C1` contains the formula `=A1+B1`, any change in `A1` or `B1` will instantly update the value in `C1`. No manual action is required.  
 
-You can enable this mode by setting the [`calculationMode`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#calculationmode) property to `Automatic`.
+You can enable this mode by setting the [`calculationMode`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_CalculationMode) property to `Automatic`.
 
 The following code example demonstrates how to set the Automatic calculation mode in a Spreadsheet.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/calculation-cs1/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/calculation-cs1/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/calculation-cs1/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/calculation-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/calculation-cs1/app/datasource.tsx %}
+{% highlight c# tabtitle="CalculationModeController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/calculation-cs1/calculationModeController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/calculation-cs1" %}
 
 ### Manual Mode
 
@@ -178,21 +135,13 @@ The Spreadsheet provides two manual recalculation options:
 The following code example demonstrates how to set the Manual calculation mode in a Spreadsheet.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/calculation-cs2/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/calculation-cs2/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/calculation-cs2/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/calculation-cs2/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/calculation-cs2/app/datasource.tsx %}
+{% highlight c# tabtitle="CalculationModeController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/calculation-cs2/calculationModeController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/calculation-cs2" %}
 
 ## Supported Formulas
 
@@ -345,7 +294,7 @@ If you enter an invalid formula in a cell, an error dialog with an error message
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 
