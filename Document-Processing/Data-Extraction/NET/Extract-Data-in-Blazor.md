@@ -239,7 +239,7 @@ Step 13: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
-Upon executing the program, the **JSON document** will be generated as follows.
+Upon executing the program, the JSON file will be generated as follows.
 
 ![Blazor Web App Server output JSON document](GettingStarted_images/JSON_Output.png)
 
@@ -482,7 +482,7 @@ Run the following command in terminal to run the project.
 dotnet run
 ```
 
-Upon executing the program, the **JSON document** will be generated as follows.
+Upon executing the program, the JSON file will be generated as follows.
 
 ![Blazor Web App Server output JSON document](GettingStarted_images/JSON_Output.png)
 

@@ -114,7 +114,7 @@ Step 8: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
-By executing the program, you will get the **JSON** as follows.
+By executing the program, you will get the JSON file as follows.
 
 ![Windows Forms output JSON document](GettingStarted_images/JSON_Output.png)
 

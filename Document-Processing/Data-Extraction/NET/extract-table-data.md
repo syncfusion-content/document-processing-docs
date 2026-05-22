@@ -57,10 +57,6 @@ N> To convert an image instead of a PDF, replace the input stream with the image
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-tables-from-pdf-document/.NET).
 
-
-
-
-
 ## Extract Table Data as Markdown from PDF or Image
 
 To extract structured table data from a PDF document using the **ExtractTableAsMarkdown** method of the **TableExtractor** class, refer to the following code 
@@ -391,10 +387,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {% endtabs %}  
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Apply-confidence-threshold/.NET).
-
-
-
-
 
 ## PDF to Markdown Preservation Mapping
 
