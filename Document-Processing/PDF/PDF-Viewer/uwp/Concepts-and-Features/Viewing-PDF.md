@@ -149,3 +149,75 @@ Await pdfViewer.LoadDocument(file, cancellationTokenSource.Token);
 {% endtabs %}
 
 In the above code sample, the [`CancellationToken`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-5.0) enables you to cancel the asynchronous loading of a PDF document when it is in progress.
+
+## Unloading PDF document from the viewer
+
+The SfPdfViewer control allows you to unload the PDF document from the viewer when the control is no longer in use. This releases the PDF document and all its associated resources.
+
+{% tabs %}
+{% highlight c# %}
+private void Unload_Click(object sender, RoutedEventArgs e)
+{
+	//Unloads the PDF document displayed in the PDF Viewer Control.
+	pdfViewer.Unload();
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Saving a PDF document
+
+The `Save` method returns the PDF document along with the changes made (annotations addition and modification) as a stream, which can be saved as a file.
+
+{% tabs %}
+{% highlight c# %}
+//Save the PDF document.
+Stream pdfDocumentStream = pdfViewerControl.Save();
+{% endhighlight %}
+{% endtabs %}
+
+N> The `Save` method does not save stamp annotations in the PDF document. Use the `SaveAsync` method to save them.
+
+## Saving a PDF document asynchronously
+
+The PDF Viewer also allows you to save and return the PDF document with the changes as a stream asynchronously using the `SaveAsync` method.
+
+{% tabs %}
+{% highlight c# %}
+//Save the PDF document asynchronously.
+Task<Stream> pdfDocumentStream = pdfViewerControl.SaveAsync();
+{% endhighlight %}
+{% endtabs %}
+
+## Events to track PDF loading
+
+The PDF Viewer control allows you to track PDF loading by using the `DocumentLoaded` event. This event is triggered after the document is properly loaded in the SfPdfViewer.
+
+{% tabs %}
+{% highlight c# %}
+SfPdfViewerControl pdfViewer = new SfPdfViewerControl();
+
+pdfViewer.DocumentLoaded += PdfViewer_DocumentLoaded;
+
+private void PdfViewer_DocumentLoaded(object sender, DocumentLoadedEventArgs args)
+{
+	//Gets the total page count of the loaded PDF document.
+	int pageCount = pdfViewer.PageCount;
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Disposing the managed resources of PDF Viewer
+
+The PDF Viewer control allows you to dispose the managed resources associated with the viewer. To do this, call the `Dispose` method of the PDF Viewer control as shown in the following code sample.
+
+{% tabs %}
+{% highlight c# %}
+//Disposes all managed resources of SfPdfViewer.
+pdfViewer.Dispose();
+{% endhighlight %}
+{% endtabs %}
+
+## See Also
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/bookmark-navigation)
