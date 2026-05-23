@@ -15,7 +15,7 @@ To recognize form data from a PDF or image and get the output as a JSON string u
 Example (synchronous):
 
 {% tabs %}
-{% highlight c# tabtitle="C#" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-JSON/.NET/Recognize-forms-using-JSON/Program.cs %}
+{% highlight c# tabtitle="C#" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-JSON/.NET/Recognize-forms-using-JSON/Program.cs" %}
 
 
 using Syncfusion.SmartFormRecognizer;

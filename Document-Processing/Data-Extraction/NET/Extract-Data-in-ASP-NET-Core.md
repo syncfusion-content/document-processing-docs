@@ -64,7 +64,7 @@ Step 5: A default action method named Index will be present in HomeController.cs
 
 {% endhighlight %}
 
-Step 6: Add a new action method named `ExportToJson` in HomeController.cs and include the following code example to extract data as JSON using the DataExtractor (help.syncfusion.com in Bing) class. Then use the **ExtractDataAsJson** method of the DataExtractor object to process the input and export the results in JSON format.
+Step 6: Add a new action method named `ExtractData` in HomeController.cs and include the following code example to extract data as JSON using the **DataExtractor** class. Then use the **ExtractDataAsJson** method of the DataExtractor object to process the input and export the results in JSON format.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -191,5 +191,5 @@ dotnet run
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/ASP.NETCore/Extract_Data_as_JSON).
 
-By executing the program, you will get the PDF document as follows.
+By executing the program, you will get the JSON file as follows.
 ![ASP.Net Core output JSON document](GettingStarted_images/JSON_Output.png)
