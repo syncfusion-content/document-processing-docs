@@ -87,7 +87,7 @@ PdfViewer.UnloadDocument();
 
 ## Opening a unsupported annotations
 
-The .NET MAUI PDF Viewer it is possible to view the unsupported annotations like 3D, rich media and sount annotations in a non-interactive manner. To achieve this, provide the [flattenOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FlattenOptions.html) (an optional parameter) as [Unsupported](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FlattenOptions.html#Syncfusion_Maui_PdfViewer_FlattenOptions_Unsupported) in the [LoadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_LoadDocument_System_IO_Stream_System_String_System_Nullable_Syncfusion_Maui_PdfViewer_FlattenOptions__) methods. See the following code example:
+The .NET MAUI PDF Viewer it is possible to view the unsupported annotations like 3D, rich media and sound annotations in a non-interactive manner. To achieve this, provide the [flattenOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FlattenOptions.html) (an optional parameter) as [Unsupported](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FlattenOptions.html#Syncfusion_Maui_PdfViewer_FlattenOptions_Unsupported) in the [LoadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_LoadDocument_System_IO_Stream_System_String_System_Nullable_Syncfusion_Maui_PdfViewer_FlattenOptions__) methods. See the following code example:
 
 {% tabs %}
 {% highlight c# hl_lines="2" %}

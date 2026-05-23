@@ -451,7 +451,7 @@ Open the `MainPage.xaml` file and follow the steps below.
 
 1.  Import the control namespace `Syncfusion.Maui.PdfViewer`.
 2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag.
-2.  Name the PDF viewer control as `pdfViewer`.
+3.  Name the PDF viewer control as `pdfViewer`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
