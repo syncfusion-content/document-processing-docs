@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with Windows Forms Spreadsheet
-This section briefly explains how to include the Syncfusion<sup>®</sup> WinForms Spreadsheet component in Windows Forms App using Visual Studio
+This section briefly explains how to include the Syncfusion<sup>®</sup> WinForms Spreadsheet component in Windows Forms App using Visual Studio.
 
 ## Prerequisites
 * [System requirements for WinForms components](https://help.syncfusion.com/windowsforms/system-requirements)
@@ -19,11 +19,19 @@ You can create a **Spreadsheet Windows Forms Application** using Visual Studio v
 
 ## Assemblies Deployment
 
+{% tabcontents %}
+ 
+{% tabcontent Via NuGet Package %}
+
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Windows Forms Spreadsheet NuGet in the App (Recommended)
 
-To add **Windows Forms Spreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install 
+To add **Windows Forms Spreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
 •	[Syncfusion.Spreadsheet.Windows](https://www.nuget.org/packages/Syncfusion.Spreadsheet.Windows)
+
+{% endtabcontent %}
+ 
+{% tabcontent Via Dependencies %}
 
 ### Alternate Approach: Add Dependencies
 
@@ -84,17 +92,25 @@ Syncfusion.Pdf.Base.dll</td><td>
 Contains the base and fundamental classes for creating PDF.</td></tr>
 </table>
 
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
 ## Add Windows Forms Spreadsheet component
 
 WinForms Spreadsheet control can be added into the application either via designer or via coding. 
 
+{% tabcontents %}
+ 
+{% tabcontent Via Designer %}
+
 ### Adding a control via designer
 
-1.Open the Visual Studio **Tool** **box**. Navigate to Syncfusion<sup>®</sup> Controls tab, and find the  Spreadsheet/SpreadsheetRibbon toolbox items 
+1.Open the Visual Studio **Tool** **box**. Navigate to Syncfusion<sup>®</sup> Controls tab, and find the  Spreadsheet/SpreadsheetRibbon toolbox items.
 
 ![Toolbox in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-toolbox.jpg)
 
-2.Drag `Spreadsheet` and drop in the Designer area from the Toolbox
+2.Drag `Spreadsheet` and drop in the Designer area from the Toolbox.
 
 ```C#
 Spreadsheet spreadsheet = new Spreadsheet();
@@ -112,6 +128,10 @@ SpreadsheetRibbon spreadsheetRibbon = new SpreadsheetRibbon();
 spreadsheetRibbon.Spreadsheet = spreadsheet
 ```
 
+{% endtabcontent %}
+ 
+{% tabcontent Via Coding %}
+
 ### Adding control via coding
 
 Spreadsheet is available in the following namespace `Syncfusion.Windows.Forms.Spreadsheet` and it can be created programmatically by using below code. 
@@ -128,9 +148,15 @@ this.Controls.Add(spreadsheet);
 this.Controls.Add(ribbon);
 ```
 
-_You_ _can_ _get_ _the_ _following_ _output_ _when_ _execute_ _the_ _application_.
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.The output will appear as follows:
 
 ![Adding control via coding in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-coding.png)
+
+N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/winforms-spreadsheet-getting-started)
 
 ## See Also
 - [Workbook operations such as creating, opening, and saving a workbook](Workbook-Operations)
