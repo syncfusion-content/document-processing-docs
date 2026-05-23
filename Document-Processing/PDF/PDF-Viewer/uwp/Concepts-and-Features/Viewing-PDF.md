@@ -162,11 +162,6 @@ private void Unload_Click(object sender, RoutedEventArgs e)
 	pdfViewer.Unload();
 }
 {% endhighlight %}
-{% highlight vbnet %}
-Private Sub Unload_Click(sender As Object, e As RoutedEventArgs)
-	pdfViewer.Unload()
-End Sub
-{% endhighlight %}
 {% endtabs %}
 
 ## Saving a PDF document
