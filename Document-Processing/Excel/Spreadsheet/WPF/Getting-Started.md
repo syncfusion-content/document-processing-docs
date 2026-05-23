@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with WPF Spreadsheet (SfSpreadsheet)
-This section briefly explains how to include the Syncfusion<sup>®</sup> WPF SfSpreadsheet component in WPF App using Visual Studio
+This section briefly explains how to include the Syncfusion<sup>®</sup> WPF SfSpreadsheet component in WPF App using Visual Studio.
 
 ## Prerequisites
 * [System requirements for WPF components](https://help.syncfusion.com/wpf/system-requirements)
@@ -19,15 +19,23 @@ You can create a **Spreadsheet WPF Application** using Visual Studio via [Micros
 
 ## Assemblies Deployment
 
+{% tabcontents %}
+
+{% tabcontent Via NuGet Package %}
+
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> WPF SfSpreadsheet and Themes NuGet in the App (Recommended)
 
-To add **WPF SfSpreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install 
+To add **WPF SfSpreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
 •	[Syncfusion.SfSpreadsheet.WPF](https://www.nuget.org/packages/Syncfusion.SfSpreadsheet.WPF)
 
 To ensure the control is styled correctly, install the theme package:
 
 •	[Syncfusion.Themes.Windows11Light.WPF](https://www.nuget.org/packages/Syncfusion.Themes.Windows11Light.WPF)
+
+{% endtabcontent %}
+ 
+{% tabcontent Via Dependencies %}
 
 ### Alternate Approach: Add Dependencies
 
@@ -68,7 +76,7 @@ Below are the additional DLLs required for applying themes and skinning to the S
 
 <table> <tr> <th>Assembly</th> <th>Description</th> </tr> <tr> <td>Syncfusion.Themes.Windows11Light.WPF.dll</td> <td>Contains the Windows 11 Light theme style for Syncfusion WPF controls.</td> </tr> <tr> <td>Syncfusion.SfSkinManager.WPF.dll</td> <td>Contains the SfSkinManager which helps to apply different themes to Syncfusion WPF controls.</td> </tr> </table>
 
-N> You need to add these references to your project to use the skinning and theming capabilities of the SfSpreadsheet
+N> You need to add these references to your project to use the skinning and theming capabilities of the SfSpreadsheet.
 
 
 Below are the assemblies list that can be added when you want to enable certain features in SfSpreadsheet control. 
@@ -100,24 +108,32 @@ Syncfusion.Pdf.Base.dll</td><td>
 Contains the base and fundamental classes for creating PDF.</td></tr>
 </table>
 
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
 ## Add WPF SfSpreadsheet component
 
 SfSpreadsheet control can be added into the application either via designer or via coding. 
 
+{% tabcontents %}
+ 
+{% tabcontent Via Designer %}
+
 ### Adding a Control via Designer
 
-1. Add theme and skin manager namespace to style the control correctly, add the Skin Manager namespace in the XAML code and apply the theme 
+1. Add theme and skin manager namespace to style the control correctly, add the [Skin Manager](https://www.nuget.org/packages/Syncfusion.SfSkinManager.WPF) namespace in the XAML code and apply the theme.
 
 
 ```Xaml
   xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF" syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}"
 ```
 
-2.Open the Visual Studio **Tool** **box**. Navigate to Syncfusion<sup>®</sup> Controls tab, and find the  SfSpreadsheet/SfSpreadsheetRibbon toolbox items 
+2.Open the Visual Studio **Tool** **box**. Navigate to Syncfusion<sup>®</sup> Controls tab, and find the  SfSpreadsheet/SfSpreadsheetRibbon toolbox items.
 
 ![WPF Spreadsheet Getting-Started](Getting-Started_images/wpf-spreadsheet-getting-started.jpeg)
 
-3.Drag `SfSpreadsheetRibbon` and drop in the Designer area from the Toolbox
+3.Drag `SfSpreadsheetRibbon` and drop in the Designer area from the Toolbox.
 
 ![WPF Spreadsheet Interaction with Ribbon](Getting-Started_images/wpf-spreadsheet-interaction-with-ribbon.jpeg)
 
@@ -141,7 +157,9 @@ N> Declare a name for the Spreadsheet component as shown above for reference.
 <syncfusion:SfSpreadsheetRibbon DataContext= "{Binding ElementName=spreadsheet}"  />
 <syncfusion:SfSpreadsheet x:Name = spreadsheet />
 ```
-
+{% endtabcontent %}
+ 
+{% tabcontent Via Coding %}
 
 ### Adding Control via Coding
 
@@ -201,7 +219,15 @@ public MainWindow()
 {% endhighlight %}
 {% endtabs %}
 
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.The output will appear as follows:
+
 ![WPF Spreadsheet Control](Getting-Started_images/wpf-spreadsheet-control.jpeg)
+
+N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/create-view-edit-excel-files-using-wpf-spreadsheet)
 
 ## See Also
 - [Workbook operations such as creating, opening, and saving a workbook](Workbook-Operations)
