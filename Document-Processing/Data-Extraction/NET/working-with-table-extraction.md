@@ -9,6 +9,11 @@ keywords: Table Extraction, PDF, Image, Smart Table Extractor, Assemblies, NuGet
 
 # Working with Table Extraction
 
+The Syncfusion<sup>&reg;</sup> Smart Table Extractor is a .NET library used to extract structured table data from PDF and image files.
+
+To quickly get started with extracting table data from PDF and image files in ASP.NET Core using the Smart Table Extractor library, refer to this video tutorial:
+{% youtube "https://www.youtube.com/watch?v=q1rs_8nTG5M" %}
+
 ## Extract Table Data as JSON from PDF or Image
 
 To extract structured table data from a PDF document using the [ExtractTableAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html#Syncfusion_SmartTableExtractor_TableExtractor_ExtractTableAsJson_System_IO_Stream_) method of the [TableExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html) class, refer to the following code 
