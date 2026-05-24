@@ -11,7 +11,7 @@ keywords: Table Extraction, PDF, Image, Smart Table Extractor, Assemblies, NuGet
 
 ## Extract Table Data as JSON from PDF or Image
 
-To extract structured table data from a PDF document using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code 
+To extract structured table data from a PDF document using the [ExtractTableAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html#Syncfusion_SmartTableExtractor_TableExtractor_ExtractTableAsJson_System_IO_Stream_) method of the [TableExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html) class, refer to the following code 
 
 {% tabs %}   
 
@@ -23,7 +23,7 @@ using Syncfusion.SmartTableExtractor;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Table Extractor
+    // Initialize the Table Extractor
     TableExtractor extractor = new TableExtractor();
     //Extract table data from the PDF document as JSON string.
     string data = extractor.ExtractTableAsJson(stream);
@@ -59,7 +59,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extract Table Data as Markdown from PDF or Image
 
-To extract structured table data from a PDF document using the **ExtractTableAsMarkdown** method of the **TableExtractor** class, refer to the following code 
+To extract structured table data from a PDF document using the [ExtractTableAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html#Syncfusion_SmartTableExtractor_TableExtractor_ExtractTableAsMarkdown_System_IO_Stream_) method of the [TableExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html) class, refer to the following code 
 
 {% tabs %}   
 
@@ -71,7 +71,7 @@ using Syncfusion.SmartTableExtractor;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Table Extractor
+    // Initialize the Table Extractor
     TableExtractor extractor = new TableExtractor();
     //Extract table data from the PDF document as markdown.
     string data = extractor.ExtractTableAsMarkdown(stream);
@@ -89,7 +89,7 @@ using Syncfusion.SmartTableExtractor;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Table Extractor
+    // Initialize the Table Extractor
     TableExtractor extractor = new TableExtractor();
     //Extract table data from the PDF document as markdown.
     string data = extractor.ExtractTableAsMarkdown(stream);
@@ -109,7 +109,7 @@ N> To convert an image instead of a PDF, replace the input stream with the image
 
 ### Extract as JSON 
 
-To extract structured table data from a specific range of pages in a PDF document using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code example: 
+To extract structured table data from a specific range of pages in a PDF document using the [ExtractTableAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html#Syncfusion_SmartTableExtractor_TableExtractor_ExtractTableAsJson_System_IO_Stream_) method of the [TableExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html) class, refer to the following code example: 
 
 {% tabs %} 
 
@@ -165,7 +165,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Extract as Markdown 
 
-To extract structured table data from a specific range of pages in a PDF document or Image using the **ExtractTableAsMarkdown** method of the **TableExtractor** class, refer to the following code example:
+To extract structured table data from a specific range of pages in a PDF document or Image using the [ExtractTableAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html#Syncfusion_SmartTableExtractor_TableExtractor_ExtractTableAsMarkdown_System_IO_Stream_) method of the [TableExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html) class, refer to the following code example:
 
 {% tabs %} 
 
@@ -177,19 +177,19 @@ using Syncfusion.SmartTableExtractor;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-	//Initialize the Smart Table Extractor.
-	TableExtractor extractor = new TableExtractor();
+    //Initialize the Smart Table Extractor.
+    TableExtractor extractor = new TableExtractor();
 
-	//Set the page range for extraction (pages 1 to 3).
-	TableExtractionOptions options = new TableExtractionOptions();
-	options.PageRange = new int[,] { { 1, 3 } };
-	extractor.TableExtractionOptions = options;
+    //Set the page range for extraction (pages 1 to 3).
+    TableExtractionOptions options = new TableExtractionOptions();
+    options.PageRange = new int[,] { { 1, 3 } };
+    extractor.TableExtractionOptions = options;
 
-	//Extract table data from the specified page range as a Markdown string.
-	string data = extractor.ExtractTableAsMarkdown(stream);
+    //Extract table data from the specified page range as a Markdown string.
+    string data = extractor.ExtractTableAsMarkdown(stream);
 
-	//Save the extracted output as a new Markdown file.
-	File.WriteAllText("Output.md", data, Encoding.UTF8);
+    //Save the extracted output as a new Markdown file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
 }
 		
 {% endhighlight %}
@@ -223,7 +223,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 ## Extract Table Data Asynchronously from PDF or Image
 
-To extract table data asynchronously with cancellation support using the **ExtractTableAsJsonAsync** method of the **TableExtractor** class, refer to the following code example:
+To extract table data asynchronously with cancellation support using the [ExtractTableAsJsonAsync](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html#Syncfusion_SmartTableExtractor_TableExtractor_ExtractTableAsJsonAsync_System_IO_Stream_System_Threading_CancellationToken_) method of the [TableExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html) class, refer to the following code example:
  
 {% tabs %} 
 
@@ -276,7 +276,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Disable Border-less Table Detection
 
-To disable detection of tables without visible borders in a PDF document or Image using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code examples.
+To disable detection of tables without visible borders in a PDF document or Image using the [ExtractTableAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html#Syncfusion_SmartTableExtractor_TableExtractor_ExtractTableAsJson_System_IO_Stream_) method of the [TableExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html) class, refer to the following code examples.
 
 {% tabs %} 
 
@@ -334,7 +334,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Apply Confidence Threshold for Table Data Extraction
 
-To apply confidence thresholding when extracting table data from a PDF document using the **ExtractTableAsJson** method of the **TableExtractor** class, refer to the following code example:
+To apply confidence thresholding when extracting table data from a PDF document using the [ExtractTableAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html#Syncfusion_SmartTableExtractor_TableExtractor_ExtractTableAsJson_System_IO_Stream_) method of the [TableExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartTableExtractor.TableExtractor.html) class, refer to the following code example:
 
 {% tabs %} 
 

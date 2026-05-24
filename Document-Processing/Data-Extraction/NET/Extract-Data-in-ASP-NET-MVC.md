@@ -28,9 +28,9 @@ Step 4: Include the following namespaces in the HomeController.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.SmartDataExtractor;
 using System.IO;
 using System.Text;
+using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
 
@@ -39,19 +39,19 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 {% highlight c# tabtitle="C#" %}
 
 @{
-	ViewBag.Title = "Home Page";
+   ViewBag.Title = "Home Page";
 }
 
 <div style="margin-top:20px;">
-	@using (Html.BeginForm("ExtractData", "Home", FormMethod.Get))
-	{
-		<input type="submit" value="Extract Data from PDF" style="width:220px;height:30px" />
-	}
+    @using (Html.BeginForm("ExtractData", "Home", FormMethod.Get))
+    {
+        <input type="submit" value="Extract Data from PDF" style="width:220px;height:30px" />
+    }
 </div>
 
 {% endhighlight %}
 
-Step 6: Add a new action method named ExtractData in `HomeController.cs` and include the following code example to extract data from a PDF document using the **ExtractDataAsJson** method in the **DataExtractor** class. 
+Step 6: Add a new action method named ExtractData in `HomeController.cs` and include the following code example to extract data from a PDF document using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method in the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class. 
 
 {% highlight c# tabtitle="C#" %}
 

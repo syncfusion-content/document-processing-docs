@@ -48,7 +48,7 @@ Step 5: Include the following code snippet in *Program.cs* to Extract data from 
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Extract data as JSON.
     string data = extractor.ExtractDataAsJson(stream);
@@ -114,7 +114,7 @@ Step 6: Include the following code snippet in *Program.cs* to Extract data from 
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Extract data as JSON.
     string data = extractor.ExtractDataAsJson(stream);
@@ -186,7 +186,7 @@ Step 5: Include the following code sample in *Program.cs* to Extract data from a
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Extract data as JSON.
     string data = extractor.ExtractDataAsJson(stream);

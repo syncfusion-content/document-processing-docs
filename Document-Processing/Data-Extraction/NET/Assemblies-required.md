@@ -8,9 +8,9 @@ keywords: Assemblies
 ---
 # Assemblies required for Data Extraction
 
-## Assemblies for Smart Data Extractor
+## Smart Data Extractor
 
-The following assemblies need to be referenced in your application based on the platform.
+The following assemblies need to be referenced in your application to extract data from PDF documents or images, based on the platform.
 
 <table>
   <thead>
@@ -75,9 +75,9 @@ The following assemblies need to be referenced in your application based on the 
   </tbody>
 </table>
 
-## Assemblies for Smart Table Extractor 
+## Smart Table Extractor
 
-The following assemblies need to be referenced in your application based on the platform.
+The following assemblies need to be referenced in your application to extract table data from PDF documents or images, based on the platform.
 
 <table>
   <thead>
@@ -138,9 +138,9 @@ The following assemblies need to be referenced in your application based on the 
 </table>
 
 
-## Assemblies for Smart Form Recognizer
+## Smart Form Recognizer
 
-The following assemblies need to be referenced in your application based on the platform.
+The following assemblies need to be referenced in your application to recognize and extract form fields from PDF documents or images, based on the platform.
 
 <table>
   <thead>
