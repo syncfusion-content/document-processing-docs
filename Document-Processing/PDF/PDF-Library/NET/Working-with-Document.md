@@ -1657,118 +1657,118 @@ Essential<sup>&reg;</sup> PDF enables you to track the save progress through the
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Document/Create-a-PDF-document-with-save-progress/.NET/PDF-document-with-save-progress/Program.cs" %}
 
-   using Syncfusion.Pdf.Graphics;
-   using Syncfusion.Pdf;
-   using Syncfusion.Drawing;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using Syncfusion.Drawing;
 
-      // Create a new PDF document.
-      PdfDocument document = new PdfDocument();
+// Create a new PDF document.
+PdfDocument document = new PdfDocument();
 
-      // Add multiple pages to the document.
-      for (int i = 0; i < 10; i++)
-      {
-         // Add a new page.
-         PdfPage page = document.Pages.Add();
+// Add multiple pages to the document.
+for (int i = 0; i < 10; i++)
+{
+   // Add a new page.
+   PdfPage page = document.Pages.Add();
 
-         // Create PDF graphics for the page.
-         PdfGraphics graphics = page.Graphics;
+   // Create PDF graphics for the page.
+   PdfGraphics graphics = page.Graphics;
 
-         // Set the font to Helvetica with size 20.
-         PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+   // Set the font to Helvetica with size 20.
+   PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 
-         // Draw text on the page.
-         graphics.DrawString($"This is page {i + 1}", font, PdfBrushes.Black, new PointF(0, 0));
-      }
+   // Draw text on the page.
+   graphics.DrawString($"This is page {i + 1}", font, PdfBrushes.Black, new PointF(0, 0));
+}
 
-      // Subscribe to the SaveProgress event.
-      document.SaveProgress += new PdfDocument.ProgressEventHandler(document_SaveProgress);
+// Subscribe to the SaveProgress event.
+document.SaveProgress += new PdfDocument.ProgressEventHandler(document_SaveProgress);
 
-      //Save the document.
-      document.Save("Output.pdf");
-      // Close the document.
-      document.Close(true);
+//Save the document.
+document.Save("Output.pdf");
+// Close the document.
+document.Close(true);
 
-      // Event handler for the SaveProgress event.
-      void document_SaveProgress(object sender, ProgressEventArgs arguments)
-      {
-         // Output the current progress of the save operation.
-         Console.WriteLine(String.Format("Current: {0}, Progress: {1}, Total: {2}", arguments.Current, arguments.Progress, arguments.Total));
-      }
+// Event handler for the SaveProgress event.
+void document_SaveProgress(object sender, ProgressEventArgs arguments)
+{
+   // Output the current progress of the save operation.
+   Console.WriteLine(String.Format("Current: {0}, Progress: {1}, Total: {2}", arguments.Current, arguments.Progress, arguments.Total));
+}
 
 {% endhighlight %}
 
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-   using Syncfusion.Pdf.Graphics;
-   using Syncfusion.Pdf;
-   using System.Drawing;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using System.Drawing;
 
-      // Create a new PDF document.
-      PdfDocument document = new PdfDocument();
-      // Add multiple pages to the document.
-      for (int i = 0; i < 10; i++)
-      {
-         // Add a new page.
-         PdfPage page = document.Pages.Add();
-         // Create PDF graphics for the page.
-         PdfGraphics graphics = page.Graphics;
-         // Set the font to Helvetica with size 20.
-         PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-         // Draw text on the page.
-         graphics.DrawString($"This is page {i + 1}", font, PdfBrushes.Black, new PointF(0, 0));
-      }
-      // Subscribe to the SaveProgress event.
-      document.SaveProgress += new PdfDocument.ProgressEventHandler(document_SaveProgress);
-      //Save the document.
-      document.Save("Output.pdf");
-      // Close the document.
-      document.Close(true);
+// Create a new PDF document.
+PdfDocument document = new PdfDocument();
+// Add multiple pages to the document.
+for (int i = 0; i < 10; i++)
+{
+   // Add a new page.
+   PdfPage page = document.Pages.Add();
+   // Create PDF graphics for the page.
+   PdfGraphics graphics = page.Graphics;
+   // Set the font to Helvetica with size 20.
+   PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+   // Draw text on the page.
+   graphics.DrawString($"This is page {i + 1}", font, PdfBrushes.Black, new PointF(0, 0));
+}
+// Subscribe to the SaveProgress event.
+document.SaveProgress += new PdfDocument.ProgressEventHandler(document_SaveProgress);
+//Save the document.
+document.Save("Output.pdf");
+// Close the document.
+document.Close(true);
 
-      // Event handler for the SaveProgress event.
-      void document_SaveProgress(object sender, ProgressEventArgs arguments)
-      {
-         // Output the current progress of the save operation.
-         Console.WriteLine(String.Format("Current: {0}, Progress: {1}, Total: {2}", arguments.Current, arguments.Progress, arguments.Total));
-      }      
+// Event handler for the SaveProgress event.
+void document_SaveProgress(object sender, ProgressEventArgs arguments)
+{
+   // Output the current progress of the save operation.
+   Console.WriteLine(String.Format("Current: {0}, Progress: {1}, Total: {2}", arguments.Current, arguments.Progress, arguments.Total));
+}      
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-   Imports Syncfusion.Pdf.Graphics
-   Imports Syncfusion.Pdf
-   Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf
+Imports Syncfusion.Drawing
 
-      Module Program
-         Sub Main()
-            ' Create a new PDF document.
-            Dim document As New PdfDocument()
-            ' Add multiple pages to the document.
-            For i As Integer = 0 To 9
-                  ' Add a new page.
-                  Dim page As PdfPage = document.Pages.Add()
-                  ' Create PDF graphics for the page.
-                  Dim graphics As PdfGraphics = page.Graphics
-                  ' Set the font to Helvetica with size 20.
-                  Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 20)
-                  ' Draw text on the page.
-                  graphics.DrawString(String.Format("This is page {0}", i + 1), font, PdfBrushes.Black, New PointF(0, 0))
-            Next
-            ' Subscribe to the SaveProgress event.
-            AddHandler document.SaveProgress, AddressOf document_SaveProgress
-            ' Save the document.
-            document.Save("Output.pdf")
-            ' Close the document.
-            document.Close(True)
-         End Sub
+Module Program
+   Sub Main()
+      ' Create a new PDF document.
+      Dim document As New PdfDocument()
+      ' Add multiple pages to the document.
+      For i As Integer = 0 To 9
+         ' Add a new page.
+         Dim page As PdfPage = document.Pages.Add()
+         ' Create PDF graphics for the page.
+         Dim graphics As PdfGraphics = page.Graphics
+         ' Set the font to Helvetica with size 20.
+         Dim font As PdfFont = New PdfStandardFont(PdfFontFamily.Helvetica, 20)
+         ' Draw text on the page.
+         graphics.DrawString(String.Format("This is page {0}", i + 1), font, PdfBrushes.Black, New PointF(0, 0))
+      Next
+      ' Subscribe to the SaveProgress event.
+      AddHandler document.SaveProgress, AddressOf document_SaveProgress
+      ' Save the document.
+      document.Save("Output.pdf")
+      ' Close the document.
+      document.Close(True)
+   End Sub
 
-         ' Event handler for the SaveProgress event.
-         Private Sub document_SaveProgress(ByVal sender As Object, ByVal arguments As ProgressEventArgs)
-            ' Output the current progress of the save operation.
-            Console.WriteLine(String.Format("Current: {0}, Progress: {1}, Total: {2}", arguments.Current, arguments.Progress, arguments.Total))
-         End Sub
-      End Module
+   ' Event handler for the SaveProgress event.
+   Private Sub document_SaveProgress(ByVal sender As Object, ByVal arguments As ProgressEventArgs)
+      ' Output the current progress of the save operation.
+      Console.WriteLine(String.Format("Current: {0}, Progress: {1}, Total: {2}", arguments.Current, arguments.Progress, arguments.Total))
+   End Sub
+End Module
 
 {% endhighlight %}
 

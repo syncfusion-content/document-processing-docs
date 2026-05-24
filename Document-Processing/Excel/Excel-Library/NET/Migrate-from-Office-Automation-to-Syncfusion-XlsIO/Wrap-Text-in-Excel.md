@@ -15,7 +15,36 @@ The following code shows the comparison of some lengthy text in a cell with and 
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+private void WrapText()
+{
+    //Instantiate the application object
+    var excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+    //Add a workbook
+    Workbook workbook = excelApp.Workbooks.Add(System.Reflection.Missing.Value);
+
+    //Get the first sheet
+    Worksheet sheet = (Worksheet)workbook.Sheets["Sheet1"];
+
+    //Place some text in cell A1 without wrapping
+    Microsoft.Office.Interop.Excel.Range cellA1 = sheet.Cells.get_Range("A1");
+    cellA1.Value = "Sample Text Unwrapped";
+
+    //Place some text in cell A2 with wrapping
+    Microsoft.Office.Interop.Excel.Range cellA2 = sheet.Cells.get_Range("A2");
+    cellA2.Value = "Sample Text Wrapped";
+    cellA2.WrapText = true;
+
+    //Save the Excel file
+    workbook.SaveCopyAs("InteropOutput_WrapText.xlsx");
+
+    //Quit the application
+    excelApp.Quit();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 private void WrapText()
 {
   //Instantiate the application object
@@ -44,7 +73,7 @@ private void WrapText()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub WrapText()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -76,34 +105,61 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void WrapText()
 {
-  using (ExcelEngine excelEngine = new ExcelEngine())
-  {
-    //Instantiate the application object
-    IApplication application = excelEngine.Excel;
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+        //Instantiate the application object
+        IApplication application = excelEngine.Excel;
 
-    //Create a workbook
-    IWorkbook workbook = application.Workbooks.Create(1);
+        //Create a workbook
+        IWorkbook workbook = application.Workbooks.Create(1);
 
-    //Get the first sheet
-    IWorksheet worksheet = workbook.Worksheets[0];
+        //Get the first sheet
+        IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Place some text in cell A1 without wrapping
-    worksheet.SetValue(1, 1, "Sample Text Unwrapped");
+        //Place some text in cell A1 without wrapping
+        worksheet.SetValue(1, 1, "Sample Text Unwrapped");
 
-    //Place some text in cell A2 with wrapping
-    worksheet.SetValue(2, 1, "Sample Text Wrapped");
-    cellA2.WrapText = true;
+        //Place some text in cell A2 with wrapping
+        worksheet.SetValue(2, 1, "Sample Text Wrapped");
+        worksheet[2, 1].WrapText = true;
 
-    //Save the workbook
-    workbook.SaveAs("XlsIOOutput_WrapText.xlsx");
-  }
+        //Save the workbook
+        workbook.SaveAs("XlsIOOutput_WrapText.xlsx");
+    }
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void WrapText()
+{
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+        //Instantiate the application object
+        IApplication application = excelEngine.Excel;
+
+        //Create a workbook
+        IWorkbook workbook = application.Workbooks.Create(1);
+
+        //Get the first sheet
+        IWorksheet worksheet = workbook.Worksheets[0];
+
+        //Place some text in cell A1 without wrapping
+        worksheet.SetValue(1, 1, "Sample Text Unwrapped");
+
+        //Place some text in cell A2 with wrapping
+        worksheet.SetValue(2, 1, "Sample Text Wrapped");
+        worksheet[2, 1].WrapText = true;
+
+        //Save the workbook
+        workbook.SaveAs("XlsIOOutput_WrapText.xlsx");
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub WrapText()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object
@@ -120,7 +176,7 @@ Private Sub WrapText()
 
     'Place some text in cell A2 with wrapping
     worksheet.SetValue(2, 1, "Sample Text Wrapped")
-    cellA2.WrapText = True
+    worksheet(2,1).WrapText = True
 
     'Save as Excel file
     workbook.SaveAs("XlsIOOutput_WrapText.xlsx")

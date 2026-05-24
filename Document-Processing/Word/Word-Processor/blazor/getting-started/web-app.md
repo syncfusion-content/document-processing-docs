@@ -8,10 +8,10 @@ documentation: ug
 
 # Getting Started with Blazor DOCX Editor in Web App
 
-Syncfusion® Blazor DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application.
+Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor WebAssembly (WASM) application.
 
 ## Steps to create a Blazor Web App DOCX Editor
-This section explains about how to include the [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
+This section explains about how to include the [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 {% tabcontents %}
 
@@ -143,7 +143,9 @@ N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, registe
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
 
-```html
+{% tabs %}
+{% highlight razor tabtitle="~/App.razor" %}
+
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
@@ -153,7 +155,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     ....
     <script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
 </body>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
@@ -188,15 +192,15 @@ N> Supported render modes are `@rendermode InteractiveAuto`, `@rendermode Intera
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DocumentEditor component in your default web browser. The output will appear as follows:
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBpDiLugARSruZb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor DOCX Editor in Web app](../images/blazor-docx-editor.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBpDiLugARSruZb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
 
 ## See also
 
-- [Getting started in Blazor WASM app](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/server-side-application)
+- [Getting started in Blazor WASM app](https://help.syncfusion.com/document-processing/word/word-processor/blazor/getting-started/client-side-application)
 - [Open a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/opening-a-document)
 - [Save a document](https://help.syncfusion.com/document-processing/word/word-processor/blazor/saving-document)
 
