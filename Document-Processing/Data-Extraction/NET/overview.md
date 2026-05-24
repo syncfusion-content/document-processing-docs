@@ -1,6 +1,6 @@
 ---
 title: Extract Structured Data in .NET | Syncfusion
-description: Syncfusion Data Extraction is a .NET library that extracts tables, forms, text, and images from documents, and recognizes form data to produce outputs such as PDFs and JSON.
+description: Syncfusion® Data Extraction is a .NET library that extracts tables, forms, text, and images from documents, outputting PDFs and JSON.
 platform: document-processing
 control: DataExtraction
 documentation: UG
