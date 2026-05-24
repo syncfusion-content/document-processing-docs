@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unsupported features in JavaScript (ES5) DOCX Editor component | Syncfusion
+title: Unsupported features in JavaScript (ES5) DOCX Editor | Syncfusion
 description: Learn about the unsupported features in the JavaScript (ES5) Docx Editor to understand its limitations.
 control: Unsupported features
 platform: document-processing

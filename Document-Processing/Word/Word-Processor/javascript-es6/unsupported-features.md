@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unsupported features in JavaScript (ES6) DOCX Editor component | Syncfusion
+title: Unsupported features in JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn about the list of unsupported features in the JavaScript (ES6) Document Editor to understand its limitations.
 control: Unsupported features
 platform: document-processing
@@ -50,7 +50,7 @@ This section describes the unsupported elements in Syncfusion® JavaScript (ES6)
 | Ink/Draw | No |
 | Video or audio files | No |
 | Macros | No |
-| Models, Smart-Art, and Charts | [Supported Charts](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/charts) |
+| Models, Smart-Art, and Charts | [Supported Charts](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/chart) |
 | Shapes, Textboxes, and WordArt | [Supported shapes](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/shapes#supported-shapes) *(Shape Properties: Fill types, borders, rotation and effects are not supported) |
 | Signature line | No |
 | Special Characters, Symbols, Equations | No |

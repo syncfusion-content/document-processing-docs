@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unsupported features in ASP.NET Core DOCX Editor component | Syncfusion
+title: Unsupported features in ASP.NET Core DOCX Editor | Syncfusion
 description: Learn about the list of unsupported features in the ASP.NET Core Docx Editor to understand its limitations
 control: Unsupported features
 platform: document-processing
