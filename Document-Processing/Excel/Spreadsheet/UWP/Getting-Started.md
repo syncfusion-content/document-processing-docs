@@ -20,13 +20,21 @@ You can create a **Spreadsheet UWP Application** using Visual Studio via [Micros
 
 ## Assemblies Deployment
 
+{% tabcontents %}
+
+{% tabcontent Via NuGet Package %}
+
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> UWP SfSpreadsheet NuGet in the App (Recommended)
 
 To add **UWP SfSpreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install 
 
 •	[Syncfusion.SfSpreadsheet.UWP](https://www.nuget.org/packages/Syncfusion.SfSpreadsheet.UWP)
 
-### Alternate Approach: Add Dependencies
+{% endtabcontent %}
+
+{% tabcontent Via Dependencies %}
+
+### Add Dependencies
 
 Below table describes, list of assemblies required to be added in project when the SfSpreadsheet control is used in your application.
 
@@ -89,21 +97,27 @@ Syncfusion.SfChart.UWP.dll</td><td>
 Contains the classes which is responsible for importing charts like Line charts, Pie charts, Sparklines etc.</td></tr>
 </table>
 
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Add UWP SfSpreadsheet component
 
 SfSpreadsheet control can be added into the application either via designer or via coding. 
 
+{% tabcontents %}
+
+{% tabcontent Via Designer %}
 
 ### Adding a Control via Designer
 
-1.Click and open the MainPage.Xaml file
+1.Click and open the MainPage.Xaml file.
 
-2.Open the Visual Studio **Tool** **box**. Navigate to “Syncfusion<sup>®</sup> Controls for UWP” tab, and find the  SfSpreadsheet/SfSpreadsheetRibbon toolbox items
+2.Open the Visual Studio **Tool** **box**. Navigate to “Syncfusion<sup>®</sup> Controls for UWP” tab, and find the  SfSpreadsheet/SfSpreadsheetRibbon toolbox items.
 
 ![Getting-Started_img1](Getting-Started_images/Getting-Started_img1.jpg)
 
-3.Drag `SfSpreadsheet` and drop in to the Designer area from the Toolbox
+3.Drag `SfSpreadsheet` and drop in to the Designer area from the Toolbox.
 
 _For_ _Spreadsheet:_
 
@@ -131,7 +145,7 @@ _For_ _Ribbon:_
 {% endhighlight %}
 {% endtabs %}
 
-6.Align the SfSpreadsheet and SfSpreadsheetRibbon components using Row Definition
+6.Align the SfSpreadsheet and SfSpreadsheetRibbon components using Row Definition.
 
 {% tabs %}
 {% highlight xaml %}
@@ -146,6 +160,11 @@ _For_ _Ribbon:_
 {% endhighlight %}
 {% endtabs %}
 
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
+
+{% endtabcontent %}
+
+{% tabcontent Via Coding %}
 
 ### Adding Control Via Coding
 
@@ -200,11 +219,19 @@ this.Content = grid;
 
 {% endtabs %}
 
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
+
+N> To load the SfSpreadsheet in Windows Mobile, add the above code in MainPage.xaml file in DeviceFamily-Mobile folder.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 _You_ _can_ _get_ _the_ _following_ _output_ _when_ _execute_ _the_ _application._
 
 ![Getting-Started_img2](Getting-Started_images/Getting-Started_img2.jpg)
 
-N> To load the SfSpreadsheet in Windows Mobile, add the above code in MainPage.xaml file in DeviceFamily-Mobile folder.
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/uwp-spreadsheet-examples).
 
 ## See Also
 - [Workbook operations such as creating, opening, and saving a workbook](Workbook-Operations)
