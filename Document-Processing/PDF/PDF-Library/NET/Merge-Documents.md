@@ -29,9 +29,8 @@ string[] source = { "file1.pdf", "file2.pdf" };
 //Merges PDFDocument.
 PdfDocumentBase.Merge(finalDoc, source);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-finalDoc.Save(stream);
+//Save the document.
+finalDoc.Save("Output.pdf");
 //Close the document.
 finalDoc.Close(true);
 
@@ -85,9 +84,8 @@ Stream[] streams = { stream1, stream2 };
 //Merges PDFDocument.
 PdfDocumentBase.Merge(finalDoc, streams);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-finalDoc.Save(stream);
+//Save the document.
+finalDoc.Save("Output.pdf");
 //Close the document.
 finalDoc.Close(true);
 //Disposes the streams.
@@ -147,17 +145,14 @@ Essential<sup>&reg;</sup> PDF provides support for importing the pages from one 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Importing-pages-from-one-document-another-document/.NET/Importing-pages-from-one-document-another-document/Program.cs" %} 
 
 //Load the PDF document.
-FileStream docStream = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
 //Create a new document.
 PdfDocument document = new PdfDocument();
 //Imports the page at 1 from the lDoc.
 document.ImportPage(lDoc, 1);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Closes the document.
 document.Close(true);
 lDoc.Close(true);
@@ -208,17 +203,14 @@ You can import multiple pages from an existing document by using [ImportPageRang
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Import-multiple-pages-from-an-existing-PDF/.NET/Import-multiple-pages-from-an-existing-PDF/Program.cs" %} 
 
 //Load the PDF document.
-FileStream docStream = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
 //Create a new document.
 PdfDocument document = new PdfDocument();
 //Imports the page at 1 from the lDoc.
 document.ImportPageRange(lDoc, 0, lDoc.Pages.Count - 1);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Closes the document.
 document.Close(true);
 lDoc.Close(true);
@@ -269,22 +261,17 @@ You can also import pages from multiple documents and arrange the pages by using
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Import-pages-from-multiple-documents-and-arrange-pages/.NET/Import-pages-from-multiple-documents-and-arrange-pages/Program.cs" %} 
 
 //Load the PDF document.
-FileStream docStream1 = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
 //Load the PDF document.
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream1);
-//Load the PDF document.
-FileStream docStream2 = new FileStream("file2.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument lDoc2 = new PdfLoadedDocument(docStream2);
+PdfLoadedDocument lDoc2 = new PdfLoadedDocument("file2.pdf");
 //Create the new document.
 PdfDocument document = new PdfDocument();
 //Imports and arranges the pages.
 document.ImportPage(lDoc, 1);
 document.ImportPage(lDoc2, 0);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Closes the documents.
 document.Close(true);
 lDoc.Close(true);
@@ -392,9 +379,8 @@ string[] source = { "file1.pdf", "file2.pdf" };
 //Merges PDFDocument.
 PdfDocumentBase.Merge(finalDoc, source);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-finalDoc.Save(stream);
+//Save the document.
+finalDoc.Save("Output.pdf");
 //Close the document.
 finalDoc.Close(true);
 
@@ -454,9 +440,8 @@ mergeOptions.OptimizeResources = true;
 //Merges PDFDocument.
 PdfDocumentBase.Merge(finalDoc, mergeOptions, source);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-finalDoc.Save(stream);
+//Save the document.
+finalDoc.Save("output.pdf");
 //Close the document.
 finalDoc.Close(true);
 
@@ -529,9 +514,8 @@ mergeOptions.ExtendMargin = true;
 //Merge PDFDocument.
 PdfDocumentBase.Merge(finalDoc, mergeOptions, source);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-finalDoc.Save(stream);
+//Save the document.
+finalDoc.Save("Output.pdf");
 //Close the document.
 finalDoc.Close(true);
 
@@ -609,9 +593,8 @@ PdfMergeOptions mergeOptions = new PdfMergeOptions();
 mergeOptions.MergeAccessibilityTags = true; 
 //Merge PDFDocument. 
 PdfDocumentBase.Merge(finalDoc, mergeOptions, source); 
-//Save the document into stream. 
-MemoryStream stream = new MemoryStream(); 
-finalDoc.Save(stream); 
+//Save the document.
+finalDoc.Save("Output.pdf");
 //Close the document. 
 finalDoc.Close(true);
 

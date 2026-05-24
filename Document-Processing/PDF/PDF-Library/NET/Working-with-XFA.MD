@@ -1729,7 +1729,7 @@ loadedDocument.Close();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Windows-specific]" %} 
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf.Xfa;
@@ -3491,13 +3491,13 @@ mainForm.Fields.Add(numericField);
 document.XfaForm = mainForm;
 
 //Save the document.
-document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
+document.Save("XfaForm.pdf", PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf.Xfa;
@@ -3527,7 +3527,7 @@ document.Close();
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()

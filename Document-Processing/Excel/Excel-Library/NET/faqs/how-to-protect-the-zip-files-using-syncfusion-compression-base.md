@@ -15,6 +15,30 @@ Syncfusion.Compression.Base supports AES-128 bits, AES-192 bits, AES-256 bits an
 The following complete code snippet explains how to protect a zip file with password using AES-256 bits encryption algorithm.
 
 {% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.Compression.Zip;
+
+class Program
+{
+  static void Main(string[] args)
+  {
+    //Initialize ZipArchive
+    ZipArchive zipArchive = new ZipArchive();
+
+    //Add files into ZipArchive
+    zipArchive.AddFile("../../Data/Template1.txt");
+    zipArchive.AddFile("../../Data/Template2.txt");
+    zipArchive.AddFile("../../Data/Template3.txt");
+
+    //Protect the ZipArchive with password
+    zipArchive.Protect("password", EncryptionAlgorithm.AES256);
+
+    //Save the ZipArchive
+    zipArchive.Save("WithPassword256Bit.zip");
+  }
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using Syncfusion.Compression.Zip;
 
