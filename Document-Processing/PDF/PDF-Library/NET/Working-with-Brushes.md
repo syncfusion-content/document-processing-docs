@@ -36,9 +36,8 @@ PdfSolidBrush brush = new PdfSolidBrush(Color.Red);
 //Draw ellipse on the page
 graphics.DrawEllipse(brush, new RectangleF(0, 0, 200, 100));
 
-//Save the PDF document to stream
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
+//Save the PDF document
+doc.Save("output.pdf");
 //Close the Pdf Document
 doc.Close(true);
 {% endhighlight %}
@@ -105,9 +104,8 @@ PdfLinearGradientBrush brush = new PdfLinearGradientBrush(new PointF(0, 0), new 
 //Draw ellipse on the page
 graphics.DrawEllipse(brush, new RectangleF(0, 0, 200, 100));
 
-//Save the PDF document to stream
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
+//Save the PDF document
+doc.Save("Output.pdf");
 //Close the Pdf Document
 doc.Close(true);
 {% endhighlight %}
@@ -204,12 +202,9 @@ using (PdfDocument document = new PdfDocument())
     // Draw a rectangle filled with the gradient
     graphics.DrawRectangle(brush, new RectangleF(0, 0, 200, 100));
 
-    //Create file stream.
-    using (FileStream outputFileStream = new FileStream(@"Output/Output.pdf", FileMode.Create, FileAccess.ReadWrite))
-    {
-        //Save the PDF document to file stream.
-        document.Save(outputFileStream);
-    }
+    //Save the PDF document to file stream.
+    document.Save("Output.pdf");
+    
 }
 {% endhighlight %}
 
@@ -317,9 +312,8 @@ PdfRadialGradientBrush brush = new PdfRadialGradientBrush(new PointF(50, 50), 0,
 //Draw ellipse on the page
 graphics.DrawEllipse(brush, new RectangleF(0, 0, 100, 100));
 
-//Save the PDF document stream
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
+//Save the PDF document 
+doc.Save("Output.pdf");
 //Close the Pdf Document
 doc.Close(true);
 {% endhighlight %}
@@ -388,9 +382,8 @@ brush.Graphics.DrawEllipse(PdfPens.Red, new RectangleF(0, 0, 10, 10));
 //Draw ellipse
 graphics.DrawEllipse(brush, new RectangleF(0, 0, 200, 100));
 
-//Save the PDF document to stream
-MemoryStream stream = new MemoryStream();
-doc.Save(stream);
+//Save the PDF document
+doc.Save("Output.pdf");
 //Close the Pdf Document
 doc.Close(true);
 {% endhighlight %}
@@ -464,11 +457,10 @@ PdfHatchBrush pdfHatchBrush = new PdfHatchBrush(PdfHatchStyle.Plaid, new PdfColo
 //Draw rectangle on the page 
 graphics.DrawRectangle(PdfPens.Black, pdfHatchBrush, new Rectangle(100, 100, 300, 200)); 
 
-//Save the PDF document to stream 
-MemoryStream stream = new MemoryStream(); 
-doc.Save(stream); 
+//Save the PDF document
+doc.Save("Output.pdf"); 
 //Close the Pdf Document 
-doc.Close(true); 
+doc.Close(true);
 
 {% endhighlight %}
 

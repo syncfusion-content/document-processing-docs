@@ -115,6 +115,8 @@ You can also explore the Spreadsheet interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/getting-started-cs1" %}
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component).
+
 ## See also
 
 * [Data Binding](./data-binding)
