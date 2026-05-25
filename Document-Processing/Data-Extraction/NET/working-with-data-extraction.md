@@ -111,6 +111,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extract Data as Markdown from PDF or Image
 
+The **Smart Data Extractor** enables you to process PDF documents or scanned images and export the structured content as Markdown (MD).
+
+This section covers two scenarios:
+- Extracting data as Markdown from a PDF document.
+- Extracting data as Markdown from an image.
+
+### Extract Data as Markdown from PDF
+
 To extract structured data from a PDF document using the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
 
 {% tabs %} 
@@ -153,9 +161,53 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
-N>>To convert an image instead of a PDF, replace the input stream with the image file (for example, *Input.jpg* or *Input.png*). The rest of the code remains unchanged.
-
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-MD-from-PDF/.NET).
+
+### Extract Data as Markdown from Image
+
+To extract structured data from an image file using the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.Text;
+using Syncfusion.SmartDataExtractor;
+
+//Open the input image file as a stream.
+using (FileStream stream = new FileStream("Input.png", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Extract data as Markdown.
+    string data = extractor.ExtractDataAsMarkdown(stream);
+    //Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Text;
+using Syncfusion.SmartDataExtractor;
+
+//Open the input image file as a stream.
+using (FileStream stream = new FileStream("Input.png", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Extract data as Markdown.
+    string data = extractor.ExtractDataAsMarkdown(stream);
+    //Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8);
+}
+
+			
+{% endhighlight %}
+
+{% endtabs %}
 
 
 ## Extract Data from PDF or Image and Save as Digital PDF
