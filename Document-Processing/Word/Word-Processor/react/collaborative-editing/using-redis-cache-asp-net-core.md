@@ -74,7 +74,7 @@ The configuration and store size of the Redis cache can be adjusted based on the
     - *Pasted content*: Depends on the size of the SFDT content.
 - *Connection Limits*: Redis has a limit on concurrent connections. Choose the Redis configuration based on your user base to ensure optimal performance.
 
-> For better performance, we recommend to have minimum `SaveThreshold` limit of 100.
+N> For better performance, we recommend to have minimum `SaveThreshold` limit of 100.
 
 ## How to enable collaborative editing in client side
 

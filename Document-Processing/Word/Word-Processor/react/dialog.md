@@ -16,8 +16,8 @@ Document Editor provides dialog support to major operations such as insert or ed
 
 Font dialog allows you to modify all text properties for selected contents at once such as bold, italic, underline, font size, font color, strikethrough, subscript and superscript.
 
->Document Editor features are segregated into individual feature-wise modules. To use font Dialog, inject ‘FontDialog’ module using the ‘DocumentEditor.Inject(Selection, SfdtExport, Editor, FontDialog)’.
->To enable font dialog for a document editor instance, set ‘enableFontDialog’ to true.
+N> Document Editor features are segregated into individual feature-wise modules. To use font Dialog, inject ‘FontDialog’ module using the ‘DocumentEditor.Inject(Selection, SfdtExport, Editor, FontDialog)’.
+To enable font dialog for a document editor instance, set ‘enableFontDialog’ to true.
 
 Refer to the following example.
 

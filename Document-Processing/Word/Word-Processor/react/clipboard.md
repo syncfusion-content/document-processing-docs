@@ -32,7 +32,7 @@ documentEditor.editor.cut();
 
 Due to limitations, you can paste contents from system clipboard in document editor only using the ‘CTRL + V’ keyboard shortcut.
 
->Note: Due to browser limitation of getting content from system clipboard, paste using API and context menu option doesn't work.
+N> Due to browser limitation of getting content from system clipboard, paste using API and context menu option doesn't work.
 
 ## Local paste (copy/paste within control)
 
@@ -92,7 +92,7 @@ documentEditor.editor.paste();
 
 In Document editor, paste options in context menu will be in disabled state if you were try to copy/paste content from outside of Document editor. It gets enabled when **enableLocalPaste** is true and trying to copy/paste content inside Document editor.
 
->Note: Due to browser limitation of getting content from system clipboard, paste using API and context menu option doesn't work. Hence, the paste option is disabled in context menu.
+N> Due to browser limitation of getting content from system clipboard, paste using API and context menu option doesn't work. Hence, the paste option is disabled in context menu.
 
 Alternatively, you can use the keyboard shortcuts,
 

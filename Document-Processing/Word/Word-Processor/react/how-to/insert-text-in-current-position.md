@@ -54,7 +54,7 @@ export class Default extends React.Component {
 ReactDOM.render(<Default />, document.getElementById('sample'));
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 Please check below gif which illustrates how to insert text in current cursor position on button click:
 
@@ -75,7 +75,7 @@ this.container.documentEditor.editor.insertText('\n');
 
 To insert the HTML content, you have to convert the HTML content to SFDT Format using [`web service`](../web-services-overview). Then use [`paste`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#paste) API to insert the sfdt at current cursor position.
 
->Note: Html string should be well formatted html. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
+N> Html string should be well formatted html. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
 
 The following example illustrates how to insert the HTML content at current cursor position.
 
@@ -136,7 +136,7 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 * Please refer the following code example for server-side web implementation for HTML conversion using DocumentEditor.
 
@@ -158,4 +158,4 @@ public class InputParameter
 }
 ```
 
->Note: The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.
+N> The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.

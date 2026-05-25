@@ -18,7 +18,7 @@ DocumentEditor depends on server side interaction for below listed operations ca
 * Spell Check
 * Save as file formats other than SFDT and DOCX
 
->Note: Syncfusion<sup style="font-size:70%">&reg;</sup> provides a predefined [Word Processor server docker image](https://hub.docker.com/r/syncfusion/word-processor-server) targeting ASP.NET Core 2.1 framework. You can directly pull this docker image and deploy it in server on the go. You can also create own docker image by customizing the existing [docker project from GitHub](https://github.com/SyncfusionExamples/Word-Processor-Server-Docker). To know more, refer this link.[Word Processor Server Docker Image Overview](../server-deployment/word-processor-server-docker-image-overview)
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> provides a predefined [Word Processor server docker image](https://hub.docker.com/r/syncfusion/word-processor-server) targeting ASP.NET Core 2.1 framework. You can directly pull this docker image and deploy it in server on the go. You can also create own docker image by customizing the existing [docker project from GitHub](https://github.com/SyncfusionExamples/Word-Processor-Server-Docker). To know more, refer this link.[Word Processor Server Docker Image Overview](../server-deployment/word-processor-server-docker-image-overview)
 
 This section explains how to create the service for DocumentEditor in ASP.NET Core.
 
@@ -56,7 +56,7 @@ The following example code illustrates how to write a Web API for importing Word
 
 The web browsers do not support to display metafile images like EMF and WMF and also TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
 
->Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image  is meta file images(WMF,EMF) or Tiff format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using `Bitmiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
+N> In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image  is meta file images(WMF,EMF) or Tiff format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using `Bitmiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
 
 The following example code illustrates how to use `MetafileImageParsed` event for creating fallback raster image for metafile present in a Word document.
 
@@ -214,7 +214,7 @@ The following example code illustrates how to write a Web API for paste with for
     }
 ```
 
->Note: The web browsers do not support to display metafile images like EMF and WMF. As a fallback approach, you can convert the metafile to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
+N> The web browsers do not support to display metafile images like EMF and WMF. As a fallback approach, you can convert the metafile to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
 
 ## Restrict editing
 
@@ -516,4 +516,4 @@ The following example code illustrates how to write a Web API for export.
     }
 ```
 
->Note: Please refer the [ASP.NET Core Web API sample](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/ASP.NET%20Core).
+N> Please refer the [ASP.NET Core Web API sample](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/ASP.NET%20Core).

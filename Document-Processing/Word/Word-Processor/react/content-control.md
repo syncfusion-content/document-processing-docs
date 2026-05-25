@@ -98,4 +98,4 @@ data.push(contentControlData);
 this.container.documentEditor.resetContentControlData(data);
 {% endhighlight %}
 
->Note: Content control with custom XML mapping of file type WordML is converted as normal Rich Text Content Control to provide lossless round-tripping upon saving.
+N> Content control with custom XML mapping of file type WordML is converted as normal Rich Text Content Control to provide lossless round-tripping upon saving.
