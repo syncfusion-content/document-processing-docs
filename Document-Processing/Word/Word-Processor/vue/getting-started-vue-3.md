@@ -8,12 +8,12 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue DOCX Editor (Vue 3)
+# Getting Started with Syncfusion<sup>&reg;</sup> Vue DOCX Editor (Vue 3)
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 
-## Steps to create a DOCX Editor in Vue 3
+## Steps to create a Document Editor in Vue 3
 
 ### Prerequisites
 
@@ -33,9 +33,9 @@ Next, you will be prompted with "Install with npm and start now?". Select **Yes*
 cd documenteditor-app  
 ```
 
-### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Document Editor packages
+### Install the Document Editor packages
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor).
+The Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor).
 
 To install the Document Editor component, use the following command:
 
@@ -67,7 +67,7 @@ Add the following Document Editor and dependent component style references to th
 
 N> Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Document Editor component
+### Add Document Editor component
 
 Import and register the Document Editor component in the `<script>` section of `src/App.vue`. If you use the `Composition API`, add the `setup` attribute to the `<script>` tag. Then, define the component in the `<template>` section.
 
