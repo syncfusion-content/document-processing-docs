@@ -226,7 +226,10 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![WPF Spreadsheet Control](Getting-Started_images/wpf-spreadsheet-control.jpeg)
 
+To learn how to create, open, and save files in the WPF Spreadsheet Component, see [Workbook Operations.](Workbook-Operations)
+
 N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/create-view-edit-excel-files-using-wpf-spreadsheet)
 
 ## See Also
-- [Workbook operations such as creating, opening, and saving a workbook](Workbook-Operations)
+- [Data Management](Data-Management)
+- [Display Charts and Sparklines ](Shapes)
