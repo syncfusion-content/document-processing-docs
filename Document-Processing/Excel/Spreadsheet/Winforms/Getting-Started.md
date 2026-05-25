@@ -152,6 +152,8 @@ this.Controls.Add(ribbon);
  
 {% endtabcontents %}
 
+## Run the application
+
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.The output will appear as follows:
 
 ![Adding control via coding in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-coding.png)
