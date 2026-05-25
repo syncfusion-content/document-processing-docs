@@ -11,17 +11,17 @@ keywords: Assemblies
 
 {% doccards %}
 
-{% doccard text="ASP.NET Core" link="/document-processing/data-extraction/net/Extract-Data-in-ASP-NET-Core" icon="./NET/images/ASP.NET-Core.png" %}
+{% doccard text="ASP.NET Core" link="/document-processing/data-extraction/net/Extract-Data-in-ASP-NET-Core" icon="/document-processing/data-extraction/net/images/ASP.NET-Core.png" %}
 
-{% doccard text="ASP.NET MVC" link="/document-processing/data-extraction/net/Extract-Data-in-ASP-NET-MVC" icon="./NET/images/ASP.NET-Mvc.svg" %}
+{% doccard text="ASP.NET MVC" link="/document-processing/data-extraction/net/Extract-Data-in-ASP-NET-MVC" icon="/document-processing/data-extraction/net/images/ASP.NET-Mvc.svg" %}
 
-{% doccard text="Blazor" link="/document-processing/data-extraction/net/Extract-Data-in-Blazor" icon="./NET/images/Blazor.svg" %}
+{% doccard text="Blazor" link="/document-processing/data-extraction/net/Extract-Data-in-Blazor" icon="/document-processing/data-extraction/net/images/Blazor.svg" %}
 
-{% doccard text="Windows Forms" link="/document-processing/data-extraction/net/Extract-Data-in-Windows-Forms" icon="./NET/images/Windows-Forms.svg" %}
+{% doccard text="Windows Forms" link="/document-processing/data-extraction/net/Extract-Data-in-Windows-Forms" icon="/document-processing/data-extraction/net/images/Windows-Forms.svg" %}
 
-{% doccard text="WPF" link="/document-processing/data-extraction/net/Extract-Data-in-WPF" icon="./NET/images/WPF.svg" %}
+{% doccard text="WPF" link="/document-processing/data-extraction/net/Extract-Data-in-WPF" icon="/document-processing/data-extraction/net/images/WPF.svg" %}
 
-{% doccard text=".NET MAUI" link="/document-processing/data-extraction/net/Extract-Data-in-MAUI" icon="./NET/images/MAUI.svg" %}
+{% doccard text=".NET MAUI" link="/document-processing/data-extraction/net/Extract-Data-in-MAUI" icon="/document-processing/data-extraction/net/images/MAUI.svg" %}
 
 {% enddoccards %}
 
