@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Choose between SfSpreadsheet and Spreadsheet control | Syncfusion®
+title: Choose between SfSpreadsheet and Spreadsheet control (Classic) | Syncfusion®
 description: Learn about the differences and feature enhancements of SfSpreadsheet over the classic Spreadsheet control in Syncfusion® WPF.
 platform: document-processing
 control: SfSpreadsheet
@@ -8,11 +8,11 @@ documentation: ug
 ---
 # Spreadsheet Comparison in WPF Spreadsheet
 
-## Choose between SfSpreadsheet and Spreadsheet(Classic) control
+## Choose between SfSpreadsheet and Spreadsheet (Classic) control
 
-WPF suite contains **SfSpreadsheet** and **Spreadsheet(Classic)** control for viewing and editing the excel files. SfSpreadsheet is an alternate for Spreadsheet(Classic) control which is marked as classic control. Hence it is recommended to use SfSpreadsheet which provides better performance and rich set features over Spreadsheet(Classic) control. 
+WPF suite contains **SfSpreadsheet** and **Spreadsheet (Classic)** control for viewing and editing the excel files. SfSpreadsheet is an alternate for Spreadsheet (Classic) control which is marked as classic control. Hence it is recommended to use SfSpreadsheet which provides better performance and rich set features over Spreadsheet (Classic) control. 
 
-Below are the features that SfSpreadsheet have over Spreadsheet(Classic) control,
+Below are the features that SfSpreadsheet have over Spreadsheet (Classic) control,
 
 <table>
 <tr>
@@ -22,19 +22,19 @@ SfSpreadsheet</th></tr>
 <tr>
 <td>
 Scrolling performance</td><td>
-Supports fast and fluid scrolling even if the excel has a huge set of data .Thus its  performance is high compared to Spreadsheet(Classic) control.</td></tr>
+Supports fast and fluid scrolling even if the excel has a huge set of data .Thus its  performance is high compared to Spreadsheet (Classic) control.</td></tr>
 <tr>
 <td>
 Copy Paste</td><td>
-Supports various paste options similar to excel options like Paste, Formulas, Values, Formula and Source Formatting, Values and Source Formatting and Formatting alone. It also provides a good performance compared to Spreadsheet(Classic) control.</td></tr>
+Supports various paste options similar to excel options like Paste, Formulas, Values, Formula and Source Formatting, Values and Source Formatting and Formatting alone. It also provides a good performance compared to Spreadsheet (Classic) control.</td></tr>
 <tr>
 <td>
 Undo/Redo</td><td>
-Supports undo/redo functionalities similar to those achieved with Microsoft Office-type applications. This operation records the changes in the whole workbook while Spreadsheet(Classic) Control records the changes in sheet level only.</td></tr>
+Supports undo/redo functionalities similar to those achieved with Microsoft Office-type applications. This operation records the changes in the whole workbook while Spreadsheet (Classic) Control records the changes in sheet level only.</td></tr>
 <tr>
 <td>
 Formula calculation</td><td>
-Provides support for 400+ most widely used formulas and uses Multi-threading concept So, the calculation speed is also high compared to Spreadsheet(Classic) control.</td></tr>
+Provides support for 400+ most widely used formulas and uses Multi-threading concept So, the calculation speed is also high compared to Spreadsheet (Classic) control.</td></tr>
 <tr>
 <td>
 Floating Cells</td><td>
@@ -50,18 +50,18 @@ Provides support to define and import the conditional formatting rules such as D
 <tr>
 <td>
 Data validation</td><td>
-Provides support for validation for cross sheet references and list validation with formula/cell references compared to Spreadsheet(Classic) control.</td></tr>
+Provides support for validation for cross sheet references and list validation with formula/cell references compared to Spreadsheet (Classic) control.</td></tr>
 </table>
 
 ### Properties table
 
-Below are the properties difference between SfSpreadsheet and Spreadsheet(Classic) control,
+Below are the properties difference between SfSpreadsheet and Spreadsheet (Classic) control,
 
 <table>
 <tr>
 <th>
 SfSpreadsheet</th><th>
-Spreadsheet</th><th>
+Spreadsheet (Classic)</th><th>
 Description</th></tr>
 <tr>
 <td>
