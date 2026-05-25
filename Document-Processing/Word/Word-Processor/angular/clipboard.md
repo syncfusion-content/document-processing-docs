@@ -134,7 +134,7 @@ This paste option appears as follows.
 
 ![Image](images/paste.png)
 
-N> When you paste content from an external source into the Document Editor, some formatting or elements may not appear as expected because certain elements are not supported. Refer [here](https://help.syncfusion.com/document-processing/word/word-processor/angular/unsupported-features) to learn more about unsupported elements.
+N> When you paste content from an external source into the Document Editor, some formatting or elements may not appear as expected because certain elements are not supported. Refer [here](./unsupported-features) to learn more about unsupported elements.
 
 ## See Also
 
