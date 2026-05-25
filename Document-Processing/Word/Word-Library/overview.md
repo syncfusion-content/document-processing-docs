@@ -25,13 +25,13 @@ keywords: Word, SDK, Automation, API, create, read, write
 
 {% doccard text="UWP" link="/document-processing/word/word-library/net/Create-Word-document-in-UWP" icon="/document-processing/word/word-library/net/images/UWP.svg" %}
 
-{% doccard text="WinUI" link="/document-processing/word/word-library/net/Create-Word-document-in-WinUI" icon="/document-processing/word/word-library/net/images/Word Library.svg" %}
+{% doccard text="WinUI" link="/document-processing/word/word-library/net/Create-Word-document-in-WinUI" icon="/document-processing/word/word-library/net/images/WinUI.png" %}
 
-{% doccard text=".NET MAUI" link="/document-processing/word/word-library/net/Create-Word-document-in-MAUI" icon="/document-processing/word/word-library/net/images/.NET MAUI.svg" %}
+{% doccard text=".NET MAUI" link="/document-processing/word/word-library/net/Create-Word-document-in-MAUI" icon="/document-processing/word/word-library/net/images/MAUI.svg" %}
 
-{% doccard text="Linux" link="/document-processing/word/word-library/net/Create-Word-document-in-Linux" icon="/document-processing/word/word-library/net/images/Word Library.svg" %}
+{% doccard text="Linux" link="/document-processing/word/word-library/net/Create-Word-document-in-Linux" icon="/document-processing/word/word-library/net/images/Linux.png" %}
 
-{% doccard text="Mac" link="/document-processing/word/word-library/net/Create-Word-document-in-Mac" icon="/document-processing/word/word-library/net/images/Word Library.svg" %}
+{% doccard text="Mac" link="/document-processing/word/word-library/net/Create-Word-document-in-Mac" icon="/document-processing/word/word-library/net/images/Mac.svg" %}
 
 {% doccard text="Console" link="/document-processing/word/word-library/net/Create-Word-document-in-Console-application" icon="/document-processing/word/word-library/net/images/NET.svg" %}
 
