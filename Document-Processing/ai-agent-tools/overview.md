@@ -13,6 +13,10 @@ documentation: ug
 
 You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). If you want to add new functionality or customize any existing functionalities, then you can use our source code available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools). Compatible with .NET 8.0, 9.0, and 10.0.
 
+## How it works
+
+![How AI Agent Tool Execution Works](how-it-works.png)
+
 ## Key Capabilities
 
 <table>
