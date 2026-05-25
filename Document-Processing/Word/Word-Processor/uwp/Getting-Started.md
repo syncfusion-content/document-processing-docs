@@ -80,7 +80,7 @@ Open the Toolbox window and drag the **SfRichTextBoxAdv** control onto the Desig
 
 To add the control manually in XAML, follow these steps:
 
-1.	Import Syncfusion<sup style="font-size:70%">&reg;</sup> UWP SfRichTextBoxAdv control namespace Syncfusion.UI.Xaml.RichTextBoxAdv in the XAML page.
+1.	Import SfRichTextBoxAdv control namespace Syncfusion.UI.Xaml.RichTextBoxAdv in the XAML page.
 
 2.	Declare SfRichTextBoxAdv control in the XAML page.
 
