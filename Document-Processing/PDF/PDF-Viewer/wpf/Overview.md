@@ -44,7 +44,7 @@ The PDF Viewer control supports viewing, reviewing, and printing PDF files in th
 * [Customize context menu](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/customizing-context-menu)
 * [Localization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/localization)
 * [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/handwritten-signature)
-* [Right to left (RTL)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/right-to-left)
+* Right to left (RTL)
 
 
 N> You can refer to our [WPF PDF Viewer](https://www.syncfusion.com/wpf-controls/pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [WPF PDF Viewer example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the pdfviewer.

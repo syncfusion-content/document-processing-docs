@@ -23,7 +23,7 @@ The [WinForms PDF Viewer](https://www.syncfusion.com/winforms-ui-controls/pdf-vi
 * Easy page navigation with:
     * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/bookmark-navigation)
     * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/working-with-hyperlinks)
-    * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/toc-navigation)
+    * Table of contents navigation
 * Core interactions:
     * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/magnifying-pdf-documents) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/interaction-modes#panning-mode)
     * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/searching-text)
@@ -34,6 +34,6 @@ The [WinForms PDF Viewer](https://www.syncfusion.com/winforms-ui-controls/pdf-vi
 * Customization 
 	* [built-in themes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/working-with-themes)
 	* [custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/how-to/hide-or-disabling-toolbar-buttons) 
-* [Right to left (RTL)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/right-to-left)
+* Right to left (RTL)
 
 N> You can also explore our [WinForms PDF Viewer example](https://github.com/syncfusion/winforms-demos/tree/master/pdfviewer) that shows you how to render and configure the PDF Viewer.
