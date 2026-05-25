@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion Document SDK AI Agent Tools
 
-[Agent Tools](https://learn.microsoft.com/en-us/agent-framework/get-started/add-tools?pivots=programming-language-csharp) are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager. You can find the available tools in the section below.
+[Agent Tools](https://learn.microsoft.com/en-us/agent-framework/get-started/add-tools?pivots=programming-language-csharp) are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager. You can find the available toots below.
 
 ![Available tools](available-tools.png)
 
@@ -167,9 +167,7 @@ I> 2. All other tool classes work identically in both modes.
 
 ## Available Document Managers
 
-The library supports two modes for managing document state during agent tool invocations, namely [in-memory](./getting-started#in-memory-mode) mode and [storage](./getting-started#storage-mode) mode.
-
-The operational mode is determined based on the manager used during tool initialization.
+The library supports two modes for managing document state during agent tool invocations, including [in-memory](./getting-started#in-memory-mode) mode and [storage](./getting-started#storage-mode) mode, where the operational mode is determined based on the manager used during tool initialization.
 
 - [Document Managers](#document-managers) (In‑Memory Mode)
 - [Document Storage Manager](#document-storage-manager) (Storage Mode)
@@ -178,8 +176,6 @@ The operational mode is determined based on the manager used during tool initial
 ### Document Managers
 
 Document Managers are in-memory containers that manage document life cycles during AI agent operations. They provide common functionality including document creation, import/export, active document tracking, and automatic expiration-based cleanup.
-
-**Available Document Managers**
 
 | Document Manager | Description |
 |---|---|

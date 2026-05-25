@@ -103,7 +103,7 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
           <li>Convert Word, Excel, or PowerPoint to PDF in a single tool call</li>
         </ul>
       </td>
-      <td><b>.docx</b>, <b>.doc</b>, <b>.rtf</b>, <b>.html</b>, <b>.txt</b>, <b>.md</b>, <b>.xlsx</b>, <b>.xls</b>, <b>.xlsm</b>, <b>.csv</b>, <b>.pptx</b> to <b>.pdf</b></td>
+      <td>Office (Word, Excel, PowerPoint) to <b>.pdf</b></td>
     </tr>
     <tr>
       <td><strong>Data Extraction</strong></td>
