@@ -27,7 +27,7 @@ keywords: Word, SDK, Automation, API, create, read, write
 
 {% doccard text="WinUI" link="/document-processing/word/word-library/net/Create-Word-document-in-WinUI" icon="/document-processing/word/word-library/net/images/WinUI.png" %}
 
-{% doccard text=".NET MAUI" link="/document-processing/word/word-library/net/Create-Word-document-in-MAUI" icon="/document-processing/word/word-library/net/images/.NET MAUI.svg" %}
+{% doccard text=".NET MAUI" link="/document-processing/word/word-library/net/Create-Word-document-in-MAUI" icon="/document-processing/word/word-library/net/images/MAUI.svg" %}
 
 {% doccard text="Linux" link="/document-processing/word/word-library/net/Create-Word-document-in-Linux" icon="/document-processing/word/word-library/net/images/Linux.png" %}
 
