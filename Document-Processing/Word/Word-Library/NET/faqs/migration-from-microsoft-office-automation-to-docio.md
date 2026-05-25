@@ -81,7 +81,31 @@ DocIO performs Mail merge by using the following methods:
 
 The following code example performs Mail merge by using the [Execute](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_Data_DataTable_) method.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+string dataBase = "Northwind.mdb";
+//Opens existing template.
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument doc = new WordDocument(docStream, FormatType.Docx);
+//Gets Data from the Database.
+OleDbConnection conn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + dataBase);
+conn.Open();
+//Populates the data table.
+DataTable table = new DataTable();
+OleDbDataAdapter adapter = new OleDbDataAdapter("select * from employees", conn);
+adapter.Fill(table);
+adapter.Dispose();
+//Performs Mail Merge.
+doc.MailMerge.Execute(table);
+//Saves the document.
+MemoryStream stream = new MemoryStream();
+doc.Save(stream, FormatType.Docx);
+//Closes the document.
+doc.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 string dataBase = "Northwind.mdb";
@@ -221,6 +245,21 @@ The following code example illustrates how to perform a simple find and replace 
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Opens the Word document.
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx);
+//Defines replacement text.
+string replaceText = "World";
+//Performs replace.
+document.Replace(new Regex("Hello"), replaceText);
+//Saves the document.
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document.
+document.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens the Word document.
 WordDocument document = new WordDocument("Template.docx",FormatType.Docx);
@@ -332,6 +371,28 @@ wordApp.Quit()
 The following code example illustrates how to insert the bookmark by using DocIO. Here, the [AppendBookmarkStart()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendBookmarkStart_System_String_) and [AppendBookmarkEnd()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendBookmarkEnd_System_String_) methods are used to add the bookmark.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a new Word document.
+WordDocument doc = new WordDocument();
+//Adds new section
+IWSection section = doc.AddSection();
+//Adds new paragraph
+IWParagraph paragraph = section.AddParagraph();
+paragraph.AppendText("Simple Bookmark");
+paragraph = section.AddParagraph();
+paragraph.AppendText("Bookmark with one ");
+//Inserts bookmark.
+paragraph.AppendBookmarkStart("one_word");
+paragraph.AppendText("word");
+paragraph.AppendBookmarkEnd("one_word");
+paragraph.AppendText(" selected");
+//Saves the document.
+MemoryStream stream = new MemoryStream();
+doc.Save(stream, FormatType.Docx);
+//Closes the document.
+doc.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document.
@@ -460,6 +521,28 @@ The following code example illustrates how page numbers are inserted to the foot
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Opens the Word document.
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument doc = new WordDocument(docStream, FormatType.Docx);
+//Iterates through sections
+foreach (WSection sec in doc.Sections)
+{
+    IWParagraph para = sec.AddParagraph();
+    //Appends page field to the paragraph
+    para.AppendField("footer", FieldType.FieldPage);
+    para.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
+    sec.PageSetup.PageNumberStyle = PageNumberStyle.Arabic;
+    //Adds paragraph to footer
+    sec.HeadersFooters.Footer.Paragraphs.Add(para);
+}
+//Saves the document.
+MemoryStream stream = new MemoryStream();
+doc.Save(stream, FormatType.Docx);
+//Closes the document.
+doc.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens the Word document.
 WordDocument doc = new WordDocument("Template.docx", FormatType.Docx);
@@ -582,6 +665,23 @@ wordApp.Quit()
 DocIO enables you to add a text watermark and a picture watermark to a Word document. The following code example shows how to insert the picture watermark to the Word document.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a new Word document.
+WordDocument doc = new WordDocument();
+doc.EnsureMinimal();
+//Adds picture watermark to the document.
+PictureWatermark picWatermark = new PictureWatermark();
+picWatermark.Scaling = 120f;
+picWatermark.Washout = true;
+doc.Watermark = picWatermark;
+picWatermark.Picture = Image.FromFile(ImagesPath + "Water lilies.jpg");
+//Saves the document.
+MemoryStream stream = new MemoryStream();
+doc.Save(stream, FormatType.Docx);
+//Closes the document.
+doc.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document.
@@ -712,6 +812,31 @@ You can set the header and footer by using the [HeadersFooters](https://help.syn
 * [EvenFooter](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WHeadersFooters.html#Syncfusion_DocIO_DLS_WHeadersFooters_EvenFooter)
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Opens a Word document.
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument doc = new WordDocument(docStream, FormatType.Docx);
+//Adds header and footer to each section in the document.
+foreach (WSection sec in doc.Sections)
+{
+    //Header.
+    WParagraph para = new WParagraph(doc);
+    para.AppendField("page", FieldType.FieldPage);
+    para.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Right;
+    sec.HeadersFooters.Header.Paragraphs.Add(para);
+    /Footer.
+    WParagraph para1 = new WParagraph(doc);
+    para1.AppendText("Internal");
+    para1.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Left;
+    sec.HeadersFooters.Footer.Paragraphs.Add(para1);
+}
+//Saves the document.
+MemoryStream stream = new MemoryStream();
+doc.Save(stream, FormatType.Docx);
+//Closes the document.
+doc.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens a Word document.
@@ -902,6 +1027,20 @@ The following code example shows how to insert an empty table to a Word document
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a new Word document.
+WordDocument document = new WordDocument();
+IWSection section = document.AddSection();
+//Adds a table to the document.
+IWTable table = section.AddTable();
+table.ResetCells(3, 2);
+//Saves the document.
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document.
+document.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
@@ -1010,6 +1149,20 @@ You can insert comments to a paragraph or text in a Word document by using DocIO
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates a new Word document.
+WordDocument doc = new WordDocument();
+IWSection section = doc.AddSection();
+//Adds a paragraph to the document.
+IWParagraph para = section.AddParagraph();
+para.AppendText("New Text");
+//Adds comment to the paragraph.
+para.AppendComment("Comment goes here");
+//Saves the document.
+MemoryStream stream = new MemoryStream();
+doc.Save(stream, FormatType.Doc);
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document.
 WordDocument doc = new WordDocument();
@@ -1113,6 +1266,18 @@ DocIO uses [ProtectionType](https://help.syncfusion.com/cr/document-processing/S
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+//Loads the existing Word document by using DocIO instance
+WordDocument document = new WordDocument(docStream, FormatType.Docx);
+//Sets "Allow only Comments" protection to Word document.
+document.ProtectionType = Syncfusion.DocIO.ProtectionType.AllowOnlyComments;
+//Saves and closes the document.
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the existing Word document by using DocIO instance
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
@@ -1211,6 +1376,23 @@ wordApp.Quit(nullobject, nullobject, nullobject)
 The following code example illustrates how to insert and update the table of contents in a Word document by using DocIO.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads the existing Word document by using DocIO instance
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx);
+IWSection section = document.Sections[0];
+//Appends TOC to the first paragraph of the document.
+WParagraph paragraph = new WParagraph(document);
+TableOfContent tableOfContents = paragraph.AppendTOC(1, 3);
+section.Paragraphs.Insert(0, paragraph);
+//Updates table of contents.
+document.UpdateTableOfContents();
+//Saves and closes the document.
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the existing Word document by using DocIO instance
