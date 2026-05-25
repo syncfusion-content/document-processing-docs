@@ -10,12 +10,12 @@ documentation: UG
 
 ## Recognize Forms as JSON
 
-To recognize form data from a PDF or image and get the output as a JSON string using the **RecognizeFormAsJson** (synchronous) and **RecognizeFormAsJsonAsync** (asynchronous) methods of the **FormRecognizer** class, refer to the following code examples.
+To recognize form data from a PDF or image and get the output as a JSON string using the [RecognizeFormAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_RecognizeFormAsJson_System_IO_Stream_) (synchronous) and [RecognizeFormAsJsonAsync](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_RecognizeFormAsJsonAsync_System_IO_Stream_System_Threading_CancellationToken_) (asynchronous) methods of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code examples.
 
 Example (synchronous):
 
 {% tabs %}
-{% highlight c# tabtitle="C#" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-JSON/.NET/Recognize-forms-using-JSON/Program.cs %}
+{% highlight c# tabtitle="C#" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Form-Recognizer/Recognize-forms-using-JSON/.NET/Recognize-forms-using-JSON/Program.cs" %}
 
 
 using Syncfusion.SmartFormRecognizer;
@@ -64,7 +64,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Recognize forms as PDF
 
-To recognize form data from a PDF or image and get the output as a `PdfLoadedDocument` using the **RecognizeFormAsPdfDocument** (synchronous) and **RecognizeFormAsPdfDocumentAsync** (asynchronous) methods of the **FormRecognizer** class, refer to the following code examples.
+To recognize form data from a PDF or image and get the output as a `PdfLoadedDocument` using the [RecognizeFormAsPdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_RecognizeFormAsPdfDocument_System_IO_Stream_) (synchronous) and [RecognizeFormAsPdfDocumentAsync](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_RecognizeFormAsPdfDocumentAsync_System_IO_Stream_System_Threading_CancellationToken_) (asynchronous) methods of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code examples.
 
 Example (synchronous):
 
@@ -83,8 +83,8 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 	PdfLoadedDocument document = recognizer.RecognizeFormAsPdfDocument(inputStream);
 	// Save the recognized document.
 	document.Save("Output.pdf");
-    // Close the document to release resources.
-    document.Close();
+	// Close the document to release resources.
+	document.Close();
 }
 
 {% endhighlight %}
@@ -121,7 +121,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Recognize forms as Stream
 
-To recognize form data from a PDF or image and get the output as a `Stream` using the **RecognizeFormAsPdfStream** (synchronous) and **RecognizeFormAsPdfStreamAsync** (asynchronous) methods of the **FormRecognizer** class, refer to the following code examples.
+To recognize form data from a PDF or image and get the output as a `Stream` using the [RecognizeFormAsPdfStream](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_RecognizeFormAsPdfStream_System_IO_Stream_) (synchronous) and [RecognizeFormAsPdfStreamAsync](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_RecognizeFormAsPdfStreamAsync_System_IO_Stream_System_Threading_CancellationToken_) (asynchronous) methods of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code examples.
 
 Example (synchronous):
 
@@ -183,7 +183,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Async variants with CancellationToken
 
-To recognize form data asynchronously with cancellation support using the **RecognizeFormAsPdfStreamAsync** method of the **FormRecognizer** class, refer to the following code example.
+To recognize form data asynchronously with cancellation support using the [RecognizeFormAsPdfStreamAsync](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_RecognizeFormAsPdfStreamAsync_System_IO_Stream_System_Threading_CancellationToken_) method of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 Example with cancellation token (PDF stream):
 
@@ -218,7 +218,7 @@ Additionally, it supports restricting processing to specific pages through an op
 
 ### Disable Textbox Detection
 
-To disable textbox field detection in the **FormRecognizeOptions** of the **FormRecognizer** class, refer to the following code example.
+To disable textbox field detection in the [FormRecognizeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_FormRecognizeOptions) of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -231,7 +231,7 @@ recognizer.FormRecognizeOptions.DetectTextboxes = false;
 {% endtabs %}
 
 ### Disable Checkbox Detection
-To disable checkbox detection in the **FormRecognizeOptions** of the **FormRecognizer** class, refer to the following code example.
+To disable checkbox detection in the [FormRecognizeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_FormRecognizeOptions) of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -244,7 +244,7 @@ recognizer.FormRecognizeOptions.DetectCheckboxes = false;
 {% endtabs %}
 
 ### Disable RadioButtons Detection
-To disable radio button detection in the **FormRecognizeOptions** of the **FormRecognizer** class, refer to the following code example.
+To disable radio button detection in the [FormRecognizeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_FormRecognizeOptions) of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -257,7 +257,7 @@ recognizer.FormRecognizeOptions.DetectRadioButtons = false;
 {% endtabs %}
 
 ### Disable Signature Detection
-To disable signature field detection in the **FormRecognizeOptions** of the **FormRecognizer** class, refer to the following code example.
+To disable signature field detection in the [FormRecognizeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_FormRecognizeOptions) of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -271,7 +271,7 @@ recognizer.FormRecognizeOptions.DetectSignatures = false;
 
 ### Set Confidence Threshold
 
-To set a minimum confidence score for detected form elements using the **ConfidenceThreshold** in the **FormRecognizeOptions** of the **FormRecognizer** class, refer to the following code example.
+To set a minimum confidence score for detected form elements using the [ConfidenceThreshold](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizeOptions.html#Syncfusion_SmartFormRecognizer_FormRecognizeOptions_ConfidenceThreshold) in the [FormRecognizeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_FormRecognizeOptions) of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -285,7 +285,7 @@ recognizer.FormRecognizeOptions.ConfidenceThreshold = 0.9;
 
 ### Set Page Range
 
-To specify which pages to process using the **PageRange** in the **FormRecognizeOptions** of the **FormRecognizer** class, refer to the following code example.
+To specify which pages to process using the **PageRange** in the [FormRecognizeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html#Syncfusion_SmartFormRecognizer_FormRecognizer_FormRecognizeOptions) of the [FormRecognizer](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartFormRecognizer.FormRecognizer.html) class, refer to the following code example.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}

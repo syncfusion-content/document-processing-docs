@@ -1,6 +1,6 @@
 ---
 title: Extract Structured Data in .NET | Syncfusion
-description: Syncfusion Data Extraction is a .NET library that extracts tables, forms, text, and images from documents, and recognizes form data to produce outputs such as PDFs and JSON.
+description: Syncfusion® Data Extraction is a .NET library that extracts tables, forms, text, and images from documents, outputing PDFs and JSON.
 platform: document-processing
 control: DataExtraction
 documentation: UG
@@ -9,24 +9,23 @@ keywords: Assemblies
 
 # Overview of Smart Data Extractor
 
-Syncfusion® Smart Data Extractor is a high performance, deterministic C# library that extracts complete document structures from PDFs and images. Designed for .NET workflows, it analyzes visual layout lines, boxes, labels, and alignment to locate and extract elements such as table structure, text elements, images, headers, footers, and form fields with per field confidence scores for immediate review, export, or integration.
-
+Syncfusion® **Smart Data Extractor** is a high‑performance, deterministic C# library for extracting structured document content from **PDFs** and **images**. Tailored for modern .NET workflows, it interprets visual layout patterns—lines, boxes, labels, and alignment—to accurately identify and extract **tables**, **text elements**, **images**, **headers**, **footers**, and **form fields**. Each extracted element includes per‑field confidence scores, ensuring reliable validation, seamless export, and smooth integration into applications.
 
 ## Key Features of Syncfusion<sup>&reg;</sup> Smart Data Extractor
 
-The following list shows the key features available in the Syncfusion<sup>&reg;</sup> Smart Data Extractor.
+The following list highlights the core capabilities of the Syncfusion<sup>&reg;</sup> Smart Data Extractor:
 
-* **Document structure extraction:** Detects text elements, images, headers/footers, and complete table structure (regions, header rows, columns, cell boundaries, merged cells).
-* **File format support:** Works with PDF and common image formats (JPEG, PNG).
-* **Table extraction:** Specialized parsing to recover table rows, columns, header detection and cell spans.
-* **Form recognition:** Detects and extracts form fields (text inputs, checkboxes, radio buttons) with field types and values.
-* **Page-level control:** Extract data from specific pages or defined page ranges.
-* **Confidence thresholding:** Results are filtered based on a configurable confidence score (0.0–1.0).
-* **Deterministic performance:** Designed for predictable, repeatable extraction across environments (Windows, Linux, Azure, Docker).
-
+* **Document structure extraction:** detects text elements, images, headers/footers, and complete table structures (regions, header rows, columns, cell boundaries, merged cells).  
+* **File format support:** works with PDF and common image formats such as JPEG and PNG.  
+* **Table extraction:** specialized parsing to recover table rows, columns, header detection, and cell spans.  
+* **Form recognition:** detects and extracts form fields (text inputs, checkboxes, radio buttons) with field types and values.  
+* **Page‑level control:** extract data from specific pages or defined page ranges.  
+* **Confidence thresholding:** filters results based on a configurable confidence score (0.0–1.0).  
+* **Deterministic performance:** ensures predictable, repeatable extraction across environments including Windows, Linux, Azure, and Docker.  
+ 
 ## JSON Output Structure and Attributes
 
-The Syncfusion® Data Extraction libraries process PDFs and scanned images to extract structured document data—including tables, form fields, text elements, images, headers, and footers—by analyzing layout patterns, table regions, borders, alignment patterns, and cell structures. The extracted output is returned as structured JSON with per‑field and per‑cell confidence scores, along with complete document and table hierarchies, making it ready for immediate review, export, or integration into downstream workflows.
+The Syncfusion® Data Extraction libraries process PDFs and scanned images to extract structured document data—including tables, form fields, text elements, images, headers, and footers—by analyzing layout patterns, table regions, borders, alignment cues, and cell structures. The extracted output is returned as structured JSON with per‑field and per‑cell confidence scores, along with complete document and table hierarchies, making it ready for immediate review, export, or integration into downstream workflows.
 
 ### Root Structure
 
@@ -52,13 +51,13 @@ Below is the root structure of the JSON result:
 
 {% endtabs %}
 
-N> In the Smart Table Extractor root structure, the **form** object will not be present.
+N> In the Smart Table Extractor root structure, the **FormObjects** element will not be present.
 
 ### JSON Attributes
 
 #### Page Object
 
-The Page Object represents the metadata of a page along with all the detected elements it contains in Smart Data Extractor, and with the table elements it contains in Smart Table Extractor.
+The Page Object represents the metadata of a page along with all the detected elements it contains in the **Smart Data Extractor**, and the table elements it contains in the **Smart Table Extractor.**
 
 <table>
 <thead>
@@ -97,11 +96,11 @@ The Page Object represents the metadata of a page along with all the detected el
 </tbody>
 </table>
 
-N> The **FormObjects** array is not included in the Smart Table Extractor output structure, as it is specific to Smart Data Extractor and Smart Form Recognizer.
+N> The **FormObjects** array is not included in the **Smart Table Extractor** output structure, as it is specific to the **Smart Data Extractor** and **Smart Form Recognizer**.
 
 #### PageObjects
 
-PageObjects represent the metadata of a page along with the detected elements it contains—such as text, headers, footers, tables, images, and numbers—in Smart Data Extractor, while in Smart Table Extractor they represent the detected table elements on a page.
+PageObjects represent the metadata of a page along with the detected elements it contains—such as text, headers, footers, tables, images, and numbers—in the Smart Data Extractor, while in the Smart Table Extractor they represent the detected table elements on a page.
 
 <table>
 <thead>
@@ -161,7 +160,7 @@ The Row Object represents a single horizontal group of cells within a table, alo
 <tr>
 <td>Type</td>
 <td>String</td>
-<td>Row type (e.g., tr).</td>
+<td>Specifies the row type (for example, tr).</td>
 </tr>
 <tr>
 <td>Rect</td>
@@ -219,7 +218,7 @@ The Cell Object represents an individual table entry, containing text values, sp
 
 #### FormObjects
 
-FormObjects represent interactive form fields detected on the page, such as text boxes, checkboxes, radio buttons, and signature regions. Each object includes positional data, field dimensions, field type, and a confidence score that reflects the reliability of the detection.
+FormObjects represent interactive form fields detected on the page, such as text boxes, checkboxes, radio buttons, and signature regions.Each object includes positional data, dimensions, field type, and a confidence score that indicates detection reliability.
 
 <table>
 <thead>
@@ -243,7 +242,7 @@ FormObjects represent interactive form fields detected on the page, such as text
 <tr>
 <td>Type</td>
 <td>Integer</td>
-<td>Numeric identifier for the form field type (e.g., 0 = TextArea, 1 = Checkbox, 2 = Radio Button, 3 = Signature).</td>
+<td>Numeric identifier for the form field type (for example, 0 = TextArea, 1 = Checkbox, 2 = Radio Button, 3 = Signature).</td>
 </tr>
 <tr>
 <td>Confidence</td>
