@@ -19,15 +19,15 @@ keywords: Word, SDK, Automation, API, convert
 
 {% doccard text="Markdown to Word" link="/document-processing/word/conversions/markdown-to-word-conversion" icon="/document-processing/word/conversions/images/Markdown to Word.svg" %}
 
-{% doccard text="Word to Markdown" link="/document-processing/word/conversions/Word Document to Markdown" icon="/document-processing/word/conversions/images/Word to Markdown.svg" %}
+{% doccard text="Word to Markdown" link="/document-processing/word/conversions/word-to-markdown-conversion" icon="/document-processing/word/conversions/images/Word to Markdown.svg" %}
 
-{% doccard text="RTF Conversion" link="/document-processing/word/conversions/RTF Conversions" icon="/document-processing/word/conversions/images/RTF conversion.svg" %}
+{% doccard text="RTF Conversion" link="/document-processing/word/conversions/rtf-conversions" icon="/document-processing/word/conversions/images/RTF conversion.svg" %}
 
-{% doccard text="Text Conversion" link="/document-processing/word/conversions/Text Conversions" icon="/document-processing/word/conversions/images/Text conversion.svg" %}
+{% doccard text="Text Conversion" link="/document-processing/word/conversions/text-conversions" icon="/document-processing/word/conversions/images/Text conversion.svg" %}
 
-{% doccard text="Word to ODT" link="/document-processing/word/conversions/Word Document to ODT Conversion" icon="/document-processing/word/conversions/images/Word to ODT.svg" %}
+{% doccard text="Word to ODT" link="/document-processing/word/conversions/word-to-odt-conversion" icon="/document-processing/word/conversions/images/Word to ODT.svg" %}
 
-{% doccard text="Word to EPUB" link="/document-processing/word/conversions/Word Document to EPUB Conversion" icon="/document-processing/word/conversions/images/Word to EPUB.svg" %}
+{% doccard text="Word to EPUB" link="/document-processing/word/conversions/word-to-epub-conversion" icon="/document-processing/word/conversions/images/Word to EPUB.svg" %}
 
 {% doccard text="Word File Formats Conversions" link="/document-processing/word/conversions/word-file-formats-conversions" icon="/document-processing/word/conversions/images/Conversions.svg" %}
 
