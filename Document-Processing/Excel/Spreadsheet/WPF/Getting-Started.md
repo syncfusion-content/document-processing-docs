@@ -39,7 +39,7 @@ To ensure the control is styled correctly, install the theme package:
  
 {% tabcontent Assemblies(.dll) %}
 
-### Add Assemblies
+### Add Syncfusion® WPF Spreadsheet Assemblies
 
 Below table describes, list of assemblies required to be added in project when the WPF Spreadsheet control is used in your application.
 
