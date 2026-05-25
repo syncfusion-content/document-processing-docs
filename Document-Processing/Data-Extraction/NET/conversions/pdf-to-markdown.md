@@ -33,7 +33,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Extract data as Markdown.
     string data = extractor.ExtractDataAsMarkdown(stream);
@@ -52,7 +52,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Extract data as Markdown.
     string data = extractor.ExtractDataAsMarkdown(stream);
@@ -83,7 +83,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Set the page index for extraction (example: page 2).
     extractor.PageRange = new int[,] { { 2, 2 } };
@@ -104,7 +104,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Set the page index for extraction (example: page 2).
     extractor.PageRange = new int[,] { { 2, 2 } };
@@ -135,7 +135,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Set the page range for extraction (pages 1 to 3).
     extractor.PageRange = new int[,] { { 1, 3 } };
@@ -156,7 +156,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Set the page range for extraction (pages 1 to 3).
     extractor.PageRange = new int[,] { { 1, 3 } };
