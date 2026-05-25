@@ -48,7 +48,7 @@ Step 5: Include the following code snippet in *Program.cs* to Extract data from 
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Extract data as JSON.
     string data = extractor.ExtractDataAsJson(stream);
@@ -114,7 +114,7 @@ Step 6: Include the following code snippet in *Program.cs* to Extract data from 
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Extract data as JSON.
     string data = extractor.ExtractDataAsJson(stream);
@@ -146,7 +146,7 @@ dotnet run
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/Console/.NET/Extract_Data_as_JSON).
 
-By executing the program, you will get the PDF document as follows.
+By executing the program, you will get the JSON file as follows.
 ![Console output PDF document](GettingStarted_images/JSON_Output.png)
 
 ## Extract Data from PDF using .NET Framework
@@ -186,7 +186,7 @@ Step 5: Include the following code sample in *Program.cs* to Extract data from a
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Extract data as JSON.
     string data = extractor.ExtractDataAsJson(stream);
@@ -206,7 +206,7 @@ Click the Start button (green arrow) or press F5 to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/Console/.NETFramework/Extract_Data).
 
-By executing the program, you will get the PDF document as follows.
+By executing the program, you will get the JSON file as follows.
 ![Console output JSON document](GettingStarted_images/JSON_Output.png)
 
 
