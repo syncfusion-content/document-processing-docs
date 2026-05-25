@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with SfPdfViewer in a Blazor WASM app | Syncfusion
+title: Getting Started with Blazor PDF Viewer Component in WASM | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor SfPdfViewer component in a Blazor WebAssembly (WASM) app.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with the Blazor PDF Viewer in Blazor WebAssembly (WASM) app
+# Getting Started with the PDF Viewer in Blazor WebAssembly (WASM) app
 
 This section briefly explains how to include the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -19,8 +19,9 @@ This section briefly explains how to include the [Blazor PDF Viewer](https://www
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> To use the PDF Viewer with SkiaSharp, install the required .NET workloads: `dotnet workload install wasm-tools`
-* For specific .NET versions, use `wasm-tools-net8`, `wasm-tools-net9`, or `wasm-tools-net10`
+N> If using interactive render modes (WebAssembly or Auto), install the required .NET workloads for SkiaSharp: `dotnet workload install wasm-tools`
+* Installs the latest SDK workload (e.g., .NET 10)
+* For specific versions, use wasm-tools-net8 or wasm-tools-net9
 
 ## Create a new Blazor App in Visual Studio    
 
@@ -53,8 +54,9 @@ N> Syncfusion&reg; Blazor components are available in [nuget.org](https://www.nu
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> To use the PDF Viewer with SkiaSharp, install the required .NET workloads: `dotnet workload install wasm-tools`
-* For specific .NET versions, use `wasm-tools-net8`, `wasm-tools-net9`, or `wasm-tools-net10`
+N> If using interactive render modes (WebAssembly or Auto), install the required .NET workloads for SkiaSharp: `dotnet workload install wasm-tools`
+* Installs the latest SDK workload (e.g., .NET 10)
+* For specific versions, use wasm-tools-net8 or wasm-tools-net9
 
 ## Create a new Blazor App in Visual Studio Code
 
