@@ -57,7 +57,7 @@ Step 5: Add the following code in `ExtractButton_Click` to extract data from a P
 // Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Data Extractor.
+    // Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     // Extract form data as JSON.
     string data = extractor.ExtractDataAsJson(stream);
@@ -67,9 +67,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endhighlight %}
 
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/WPF/Extract_Data).
+
 By executing the program, you will get the JSON file as follows.
 ![WPF output JSON document](GettingStarted_images/JSON_Output.png) 
-
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/WPF/Extract_Data).
-   
+ 
  Click [here](https://www.syncfusion.com/document-sdk/net-pdf-data-extraction) to explore the rich set of Syncfusion<sup>&reg;</sup>Data Extraction library features.
