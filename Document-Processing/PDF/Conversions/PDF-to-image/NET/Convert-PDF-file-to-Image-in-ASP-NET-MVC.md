@@ -37,7 +37,7 @@ using System.IO;
 Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="~/Index.cshtml" %}
 
 @{Html.BeginForm("ExportToImage", "Home", FormMethod.Post);
     {
