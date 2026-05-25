@@ -8,24 +8,26 @@ documentation: ug
 ---
 
 # Getting Started with WPF Spreadsheet (SfSpreadsheet)
-This section briefly explains how to include the Syncfusion<sup>®</sup> WPF SfSpreadsheet component in WPF App using Visual Studio.
+This section briefly explains how to include the [Syncfusion<sup>®</sup> WPF Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) component in WPF App using Visual Studio.
 
 ## Prerequisites
 * [System requirements for WPF components](https://help.syncfusion.com/wpf/system-requirements)
 
 ## Create a new WPF App in Visual Studio
 
-You can create a **Spreadsheet WPF Application** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/get-started/create-app-visual-studio) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> WPF](https://help.syncfusion.com/wpf/visual-studio-integration/template-studio).
+You can create a **WPF Application** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/get-started/create-app-visual-studio) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> WPF](https://help.syncfusion.com/wpf/visual-studio-integration/template-studio).
 
 ## Assemblies Deployment
 
+To add a WPF spreadsheet component to your application by installing it via NuGet packages(Recommended) or by manually adding the required assemblies to the project.
+
 {% tabcontents %}
 
-{% tabcontent Via NuGet Package %}
+{% tabcontent NuGet Package %}
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> WPF SfSpreadsheet and Themes NuGet in the App (Recommended)
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> WPF Spreadsheet NuGet packages
 
-To add **WPF SfSpreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
+To add **WPF Spreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
 •	[Syncfusion.SfSpreadsheet.WPF](https://www.nuget.org/packages/Syncfusion.SfSpreadsheet.WPF)
 
@@ -35,11 +37,11 @@ To ensure the control is styled correctly, install the theme package:
 
 {% endtabcontent %}
  
-{% tabcontent Via Dependencies %}
+{% tabcontent Assemblies(.dll) %}
 
-### Alternate Approach: Add Dependencies
+### Add Assemblies
 
-Below table describes, list of assemblies required to be added in project when the SfSpreadsheet control is used in your application.
+Below table describes, list of assemblies required to be added in project when the WPF Spreadsheet control is used in your application.
 
 <table>
 <tr>
@@ -112,15 +114,13 @@ Contains the base and fundamental classes for creating PDF.</td></tr>
  
 {% endtabcontents %}
 
-## Add WPF SfSpreadsheet component
+## Add WPF Spreadsheet component
 
-SfSpreadsheet control can be added into the application either via designer or via coding. 
+WPF Spreadsheet control can be added to an application either through the designer (XAML) or programmatically using code. 
 
 {% tabcontents %}
  
 {% tabcontent Via Designer %}
-
-### Adding a Control via Designer
 
 1. Add the theme and the [SfSkinManager](https://help.syncfusion.com/cr/wpf/Syncfusion.SfSkinManager.html) namespace to style the control correctly. Then, include the SfSkinManager namespace in the XAML code and apply the desired theme.
 
@@ -159,8 +159,6 @@ N> Declare a name for the Spreadsheet component as shown above for reference.
 {% endtabcontent %}
  
 {% tabcontent Via Coding %}
-
-### Adding Control via Coding
 
 Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_._Spreadsheet_” and it can be created programmatically by using XAML  
 

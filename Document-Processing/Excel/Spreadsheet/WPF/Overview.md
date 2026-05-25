@@ -9,7 +9,7 @@ documentation: ug
 
 # WPF Spreadsheet (SfSpreadsheet) Overview
 
-The [Syncfusion<sup>®</sup> WPF Spreadsheet(SfSpreadsheet)](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) is excel inspired control that allows you to create, edit, view and format the Microsoft Excel files without excel installed. It provides absolute ease of use UI experience with integrated ribbon to cover any possible business scenario. SfSpreadsheet comes with built-in calculation engine with support for 400+ most widely used formulas. 
+The [Syncfusion<sup>®</sup> WPF Spreadsheet (SfSpreadsheet)](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) is excel inspired control that allows you to create, edit, view and format the Microsoft Excel files without excel installed. It provides absolute ease of use UI experience with integrated ribbon to cover any possible business scenario. SfSpreadsheet comes with built-in calculation engine with support for 400+ most widely used formulas. 
 
 
 ![SfSpreadsheet](Overview-image\wpf-spreadsheet-overview-image.png)
