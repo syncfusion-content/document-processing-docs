@@ -27,7 +27,7 @@ keywords: PowerPoint, Presentation, slides, SDK, Automation, API, create, read, 
 
 {% doccard text="WinUI" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-winui" icon="/document-processing/powerpoint/powerpoint-library/net/images/WinUI.png" %}
 
-{% doccard text=".NET MAUI" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-maui" icon="/document-processing/powerpoint/powerpoint-library/net/images/.NET MAUI.svg" %}
+{% doccard text=".NET MAUI" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-maui" icon="/document-processing/powerpoint/powerpoint-library/net/images/MAUI.svg" %}
 
 {% doccard text="Linux" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-linux" icon="/document-processing/powerpoint/powerpoint-library/net/images/Linux.png" %}
 

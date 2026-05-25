@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # NuGet Packages Required for Data Extraction
 
-## NuGet Packages Required for Smart Data Extractor
+## Smart Data Extractor
 
 To work with Smart Data Extractor, the following NuGet packages need to be installed in your application from [nuget.org](https://www.nuget.org/).
 
@@ -65,7 +65,7 @@ Windows UI (WinUI) <br/>
 </tr>
 </table>
 
-## NuGet Packages Required for Smart Table Extractor
+## Smart Table Extractor
 
 To work with Smart Table Extractor, the following NuGet packages need to be installed in your application from [nuget.org](https://www.nuget.org/).
 
@@ -122,7 +122,7 @@ Windows UI (WinUI) <br/>
 </table>
 
 
-## NuGet Packages Required for Smart Form Recognizer
+## Smart Form Recognizer
 
 To work with Smart Form Recognizer, the following NuGet packages need to be installed in your application from [nuget.org](https://www.nuget.org/).
 

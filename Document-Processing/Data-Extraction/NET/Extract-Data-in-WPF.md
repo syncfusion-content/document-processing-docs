@@ -28,11 +28,11 @@ Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.SmartDataExtractor;
 using System;
 using System.IO;
 using System.Text;
 using System.Windows;
+using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
 
@@ -40,13 +40,13 @@ Step 4: Add a new button in MainWindow.xaml to extract data from a PDF document 
 
 {% highlight c# tabtitle="C#" %}
 
-	<Grid>
-		<Button Content="Extract Data"
-                Width="150" Height="40"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Click="ExtractButton_Click"/>
-	</Grid>
+<Grid>
+    <Button Content="Extract Data"
+            Width="150" Height="40"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="ExtractButton_Click"/>
+</Grid>
 
 {% endhighlight %}
 
