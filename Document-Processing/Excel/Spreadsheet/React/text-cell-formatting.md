@@ -44,6 +44,62 @@ You can align text in cells using the following options:
 
 Indentation helps enhance the visual appearance of text in cells by adding space before the text content. You can apply cell text indentation using the [`textIndent`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textindent) property.
 
+### Subscript and Superscript
+
+You can apply subscript and superscript formatting to specific parts of the text within a cell to improve readability and presentation.
+
+In the Syncfusion React Spreadsheet, this formatting is achieved using the [`richText`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#richtext) property of the cell model. The `richText` property allows you to define multiple text segments within a single cell, where each segment can be formatted independently.
+
+Each richText segment contains:
+
+`text` – the content of the segment.
+`style` – a [`CellStyleModel`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel) object used to apply formatting. Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
+
+#### How to Apply Subscript and Superscript
+
+You can apply subscript and superscript formatting in following ways:
+
+1. Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
+
+2. You can define the richText property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
+
+```
+    cells: [
+        {
+            value: 'H2O',
+            richText: [
+                { text: 'H' },
+                { text: '2', style: { verticalAlign: 'sub' } },
+                { text: 'O' }
+            ]
+        }
+    ]
+```
+
+3. You can also apply subscript and superscript dynamically using the updateCell method.
+
+```
+    spreadsheet.updateCell({ value: 'X2', richText: [
+                    { text: 'X' },
+                    { text: '2', style: { verticalAlign: 'super' } }
+                ] }, 'A5');
+```
+
+The following code example shows the subscript and superscript formatting in cells of the spreadsheet.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/richtext-format-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/richtext-format-cs1/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/richtext-format-cs1" %}
+
+> **Note:** Subscript and superscript formatting is applied only to the selected text, and this is supported only in edit mode.
+
 ### Fill Color
 
 Fill color (background color) is used to highlight cells or ranges of cells across the workbook. You can apply background colors to cells using the [`backgroundColor`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#backgroundcolor) property.
