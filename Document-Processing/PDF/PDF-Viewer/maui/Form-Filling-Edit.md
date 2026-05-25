@@ -184,7 +184,7 @@ Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 
 Button form fields will be rendered in the PDF viewer. But the PDF viewer supports only the `GoTo` actions that navigates to a particular location in the PDF document alone. Other types of button actions are not supported.
 
-### Controlling Form Field Editability in Viewer level 
+### Controlling form field editing at the viewer Level
 
 The `AllowEditFormFields` property is used to control form field editing at the viewer level. By default, editing is enabled, allowing users to interact with all supported form fields. When this property is set to false, all form fields become non-editable, making the document effectively read-only without modifying individual field properties. This behavior applies to all form field types and takes effect immediately on the loaded document.
 
