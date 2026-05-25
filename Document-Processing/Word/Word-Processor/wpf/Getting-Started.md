@@ -119,8 +119,6 @@ public partial class MainWindow : Window
 {
     public MainWindow()
     {
-        InitializeComponent();
-
         // Create an instance of SfRichTextBoxAdv control
         SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
 
@@ -214,7 +212,7 @@ To add the control manually in XAML, follow these steps:
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
 
-<syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+<Syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                          xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
                          x:Class="DocumentEditor.MainWindow"
@@ -227,7 +225,7 @@ To add the control manually in XAML, follow these steps:
      <syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"  DataContext="{Binding ElementName=richTextBoxAdv}"/>
      <syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1"/>
  </Grid>
-</syncfusion:RibbonWindow>
+</Syncfusion:RibbonWindow>
 
 
 {% endhighlight %}
@@ -248,8 +246,6 @@ public partial class MainWindow : RibbonWindow
 {
     public MainWindow()
     {
-        InitializeComponent();
-
         // Create the root Grid container for layout
         Grid rootGrid = new Grid();
 
@@ -266,13 +262,13 @@ public partial class MainWindow : RibbonWindow
         rootGrid.RowDefinitions.Add(row2);
 
         // Instantiate the rich text editor control
-        SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
+        richTextBoxAdv = new SfRichTextBoxAdv();
 
         // Set background color for better UI appearance
         richTextBoxAdv.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F1F1F1"));
 
         // Instantiate the ribbon control
-        SfRichTextRibbon richTextRibbon = new SfRichTextRibbon();
+        richTextRibbon = new SfRichTextRibbon();
 
         // Enable pixel snapping for sharper rendering
         richTextRibbon.SnapsToDevicePixels = true;
@@ -423,223 +419,16 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox
 
 ## Theme
 
-In this walkthrough, you will apply a theme to the Syncfusion® WPF **SfRichTextBoxAdv** and **SfRichTextRibbon** controls.
-
-The steps below outline the essential tasks required to configure and apply themes in a WPF application.
-
-### Add Theme Dependencies
-
-{% tabcontents %}
-
-{% tabcontent NuGet packages %}
-
-**Using NuGet Package Manager (UI)**
-
-1. In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
-2. In the **Browse** tab, search for and install the latest version of the following packages:
-   - [Syncfusion.SfRichTextBoxAdv.Wpf](https://www.nuget.org/packages/Syncfusion.SfRichTextBoxAdv.WPF) – Rich text editor control  
-   - [Syncfusion.SfRichTextRibbon.Wpf](https://www.nuget.org/packages/Syncfusion.SfRichTextRibbon.WPF) – Ribbon UI for the editor  
-   - [Syncfusion.Themes.Windows11Light.WPF](https://www.nuget.org/packages/Syncfusion.Themes.Windows11Light.WPF) – Windows 11 Light theme
-3. Ensure all dependencies are installed successfully and the project is restored without errors.
-
-
-**Using Package Manager Console**
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.SfRichTextBoxAdv.WPF
-Install-Package Syncfusion.SfRichTextRibbon.WPF
-Install-Package Syncfusion.Themes.Windows11Light.WPF
-
-{% endhighlight %}
-{% endtabs %}
-{% endtabcontent %}
-
-{% tabcontent Assemblies %}
-
-The following assemblies are required to enable theme support:
-
-- Syncfusion.SfRichTextBoxAdv.WPF
-- Syncfusion.SfRichTextRibbon.WPF
-- Syncfusion.Compression.Base
-- Syncfusion.OfficeChart.Base
-- Syncfusion.Shared.WPF
-- Syncfusion.Tools.WPF
-- Syncfusion.DocIO.Base
-- Syncfusion.Themes.Windows11Light.WPF
-- Syncfusion.SfSkinManager.WPF
-
-{% endtabcontent %}
-
-{% endtabcontents %}
-
-### Available Themes
-
-Syncfusion provides multiple built-in themes that can be applied based on application requirements.
-
-In this section, the **Windows 11 Light** theme is used as an example to demonstrate how to apply a theme to the **SfRichTextBoxAdv** and **SfRichTextRibbon** controls.  
-
-To explore the complete list of available themes and learn how to create custom themes, refer to:
+SfRichTextBoxAdv supports various built-in themes. Refer to the following links to apply themes for the SfRichTextBoxAdv,
 
   * [Apply theme using SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager)
 	
   * [Create a custom theme using ThemeStudio](https://help.syncfusion.com/wpf/themes/theme-studio#creating-custom-theme)
 
-### Apply Themes to SfRichTextBoxAdv and SfRichTextRibbon
+![Applying Theme to WPF RichTextBox](Getting-Started_images/wpf-richtextbox-theme.png)
 
-{% tabcontents %}
+N> You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
 
-{% tabcontent Via XAML %}
-
-To add the controls and apply a theme manually in XAML, follow these steps:
-
-**Add SfRichTextBoxAdv and SfRichTextRibbon in XAML**
-
-1.	Import the Syncfusion® WPF schema http://schemas.syncfusion.com/wpf or SfRichTextBoxAdv control namespace Syncfusion.Windows.Controls.RichTextBoxAdv in XAML page.
-2.	To use the SfRichTextRibbon use the Syncfusion® RibbonWindow instead of Window.
-3.	Declare the SfRichTextRibbon and SfRichTextBoxAdv controls in XAML page.
-4.	To make an interaction between SfRichTextRibbon and SfRichTextBoxAdv, bind the SfRichTextBoxAdv as DataContext to SfRichTextRibbon.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" %}
-
-<syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
-                         x:Class="Theme.MainWindow"
-                         Title="MainWindow" Height="450" Width="800">
-<Grid>
-     <Grid.RowDefinitions>
-         <RowDefinition Height="Auto"/>
-         <RowDefinition Height="*"/>
-     </Grid.RowDefinitions>
-     <syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"  DataContext="{Binding ElementName=richTextBoxAdv}"/>
-     <syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1"/>
- </Grid>
-</syncfusion:RibbonWindow>
-
-
-{% endhighlight %}
-{% endtabs %}
-
-**Apply Theme in XAML**
-
-1. Import Syncfusion® WPF schema http://schemas.syncfusion.com/wpf or the **SfSkinManager** namespace Syncfusion.SfSkinManager into a XAML page. 
-2. Define the theme using the `SfSkinManager.Theme` property.  
-3. Set the `ThemeName` value to **Windows11Light** or any preferred theme.  
-4. Ensure the theme is applied at the `Window` level so that it is inherited by all child controls.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" %}
-
-<syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
-                         x:Class="Theme.MainWindow"
-                         Title="MainWindow" Height="450" Width="800"
-                         xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
-                         syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
-<Grid>
-     <Grid.RowDefinitions>
-         <RowDefinition Height="Auto"/>
-         <RowDefinition Height="*"/>
-     </Grid.RowDefinitions>
-     <syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"  DataContext="{Binding ElementName=richTextBoxAdv}"/>
-     <syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1"/>
- </Grid>
-</syncfusion:RibbonWindow>
-
-
-{% endhighlight %}
-{% endtabs %}
-
-N> - The **Windows 11 Light** theme is used as the default theme. You can change the `ThemeName` based on your requirements.  
-N> - The applied theme is automatically inherited by all child controls.
-
-{% endtabcontent %}
-
-{% tabcontent Via C# %}
-To apply a theme programmatically in C#, add the below code in *.xaml.cs
-
-{% tabs %}
-{% highlight c# tabtitle="MainWindow.xaml.cs" %}
-
-using Syncfusion.Windows.Controls.RichTextBoxAdv;
-using Syncfusion.Windows.Tools.Controls;
-using Syncfusion.SfSkinManager;
-
-public partial class MainWindow : RibbonWindow
-{
-    public MainWindow()
-    {
-        InitializeComponent();
-
-        // Create the root Grid container for layout
-        Grid rootGrid = new Grid();
-
-        // Define the first row (auto-sized for ribbon)
-        RowDefinition row1 = new RowDefinition();
-        row1.Height = GridLength.Auto;
-
-        // Define the second row (fills remaining space for editor)
-        RowDefinition row2 = new RowDefinition();
-        row2.Height = new GridLength(1, GridUnitType.Star);
-
-        // Add row definitions to the grid
-        rootGrid.RowDefinitions.Add(row1);
-        rootGrid.RowDefinitions.Add(row2);
-
-        // Instantiate the rich text editor control
-        SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
-
-        // Set background color for better UI appearance
-        richTextBoxAdv.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F1F1F1"));
-
-        // Instantiate the ribbon control
-        SfRichTextRibbon richTextRibbon = new SfRichTextRibbon();
-
-        // Enable pixel snapping for sharper rendering
-        richTextRibbon.SnapsToDevicePixels = true;
-
-        // Set the DataContext of the ribbon to the editor
-        // This allows the ribbon to interact with the editor (binding commands)
-        richTextRibbon.DataContext = richTextBoxAdv;
-
-        // Position the ribbon in the first row
-        Grid.SetRow(richTextRibbon, 0);
-
-        // Position the editor in the second row
-        Grid.SetRow(richTextBoxAdv, 1);
-
-        // Add controls to the grid
-        rootGrid.Children.Add(richTextRibbon);
-        rootGrid.Children.Add(richTextBoxAdv);
-
-        // Set the constructed grid as the content of the UserControl
-        this.Content = rootGrid;
-
-        // Applies the Windows 11 Light theme to the window
-        SfSkinManager.SetTheme(this, new Theme() { ThemeName = "Windows11Light" });
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-{% endtabcontent %}
-
-{% endtabcontents %}
-
-### Run the Application with Theme Applied
-
-1. Press **F5** or click **Start** in Visual Studio.  
-2. The application will launch with the **SfRichTextRibbon** and **SfRichTextBoxAdv** controls using the **Windows 11 Light theme**.  
-3. Press **Ctrl + O** or use the **Open** option in the **SfRichTextRibbon** to open a document.
-4. The document is displayed in the editor, along with the themed ribbon and editor interface, as shown below.
-
-![WPF SfRichTextBoxAdv with SfRichTextRibbon using a Windows11 theme](Getting-Started_images/wpf-richtextbox-windows11theme.png)
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Theme).
 
 ## See also
 

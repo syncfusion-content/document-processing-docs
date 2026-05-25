@@ -120,8 +120,6 @@ public sealed partial class MainPage : Page
 {
     public MainPage()
     {
-        this.InitializeComponent();
-        
         // Create an instance of SfRichTextBoxAdv control
         SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
 
