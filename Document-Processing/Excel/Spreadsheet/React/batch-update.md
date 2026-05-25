@@ -1,14 +1,13 @@
 ---
 layout: post
 title: Batch Update in React Spreadsheet component | Syncfusion
-description: Learn how to use batch updates with suspendRefresh and resumeRefresh methods to improve performance when performing multiple actions in the Syncfusion React Spreadsheet component.
+description: Improve performance in Syncfusion React Spreadsheet by using suspendRefresh and resumeRefresh to batch multiple updates and avoid repeated rendering.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
 # Batch Update in React Spreadsheet
-
 
 The Spreadsheet refreshes its UI after each operation, such as updating a cell, applying formatting, or inserting rows. This immediate rendering works well for a few actions, but it can lead to performance issues when many operations are executed one after another.
 
