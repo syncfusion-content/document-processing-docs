@@ -122,8 +122,7 @@ SfSpreadsheet control can be added into the application either via designer or v
 
 ### Adding a Control via Designer
 
-1. Add theme and skin manager namespace to style the control correctly, add the [Skin Manager](https://www.nuget.org/packages/Syncfusion.SfSkinManager.WPF) namespace in the XAML code and apply the theme.
-
+1. Add the theme and the [SfSkinManager](https://help.syncfusion.com/cr/wpf/Syncfusion.SfSkinManager.html) namespace to style the control correctly. Then, include the SfSkinManager namespace in the XAML code and apply the desired theme.
 
 ```Xaml
   xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF" syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}"
@@ -222,6 +221,8 @@ public MainWindow()
 {% endtabcontent %}
  
 {% endtabcontents %}
+
+## Run the application
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.The output will appear as follows:
 
