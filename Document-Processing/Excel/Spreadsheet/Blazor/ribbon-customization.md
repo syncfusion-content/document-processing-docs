@@ -13,13 +13,13 @@ The Blazor Spreadsheet component provides a comprehensive ribbon interface that 
 
 ## Overview
 
-The ribbon in the Spreadsheet component is organized hierarchically with tabs at the top level, groups as related containers within tabs, and items as individual controls within groups. Ribbon customization can be achieved either declaratively using property binding or dynamically using methods, depending on your application requirements.
+The Spreadsheet ribbon component is organized hierarchically, with tabs at the top level, groups as related containers within tabs, and items as individual controls within groups. Ribbon customization can be performed either declaratively using property binding or dynamically using methods, based on your application requirements.
 
-## Ribbon Customization Through Property Binding
+## Customizing the Ribbon Using Property Binding
 
 Property binding enables declarative customization of the ribbon during component initialization, making it ideal for defining static configurations in advance.
 
-### Customize Built-in Ribbon Tabs
+### Customizing Built-in Ribbon Tabs
 
 Built-in tabs can be customized using the [RibbonTabItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RibbonTabItems) property. Tabs can be hidden, reordered, and their display text changed.
 
@@ -36,8 +36,8 @@ Built-in tabs can be customized using the [RibbonTabItems](https://help.syncfusi
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet RibbonTabItems="@GetTabCustomizations()">
-    <SpreadsheetRibbon></SpreadsheetRibbon>
+<SfSpreadsheet>
+    <SpreadsheetRibbon RibbonTabItems="@GetTabCustomizations()"></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
@@ -61,7 +61,7 @@ Built-in tabs can be customized using the [RibbonTabItems](https://help.syncfusi
 {% endhighlight %}
 {% endtabs %}
 
-### Customize Built-in Ribbon Groups
+### Customizing Built-in Ribbon Groups
 
 Built-in groups within tabs can be customized using the [RibbonGroupItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RibbonGroupItems) property. Groups can be hidden and reordered within their parent tab.
 
@@ -78,8 +78,8 @@ Built-in groups within tabs can be customized using the [RibbonGroupItems](https
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet RibbonGroupItems="@GetGroupCustomizations()">
-    <SpreadsheetRibbon></SpreadsheetRibbon>
+<SfSpreadsheet>
+    <SpreadsheetRibbon RibbonGroupItems="@GetGroupCustomizations()"></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
@@ -100,7 +100,7 @@ Built-in groups within tabs can be customized using the [RibbonGroupItems](https
 {% endhighlight %}
 {% endtabs %}
 
-### Customize Built-in Ribbon Items
+### Customizing Built-in Ribbon Items
 
 Individual ribbon items can be customized using the [RibbonItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RibbonItems) property. Items can be hidden, disabled, and reordered within their group.
 
@@ -109,7 +109,7 @@ Individual ribbon items can be customized using the [RibbonItems](https://help.s
 | ItemId | string | The unique identifier of the ribbon item (e.g., "bold", "italic").|
 | GroupId | string | The ID of the parent group containing this item |
 | IsVisible | bool | Controls whether the item is visible. Default is **true** |
-| IsEnabled | bool? | Controls whether the item is enabled (clickable). Default is **null** |
+| IsEnabled | bool? | Controls whether the item is enabled. Default is **null** |
 | Order | int? | Sets the item's display order within its group. Lower values appear first. Default is **null** |
 
 {% tabs %}
@@ -118,8 +118,8 @@ Individual ribbon items can be customized using the [RibbonItems](https://help.s
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
-<SfSpreadsheet RibbonItems="@GetItemCustomizations()">
-    <SpreadsheetRibbon></SpreadsheetRibbon>
+<SfSpreadsheet>
+    <SpreadsheetRibbon RibbonItems="@GetItemCustomizations()"></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
@@ -131,8 +131,8 @@ Individual ribbon items can be customized using the [RibbonItems](https://help.s
             // Hide the Strikethrough button
             new SpreadsheetRibbonItem { ItemId = "strikethrough", IsVisible = false },
             
-            // Always disable the Protect Sheet button (still visible but grayed out)
-            new SpreadsheetRibbonItem { ItemId = "protectSheet", IsEnabled = false },
+            // Always disable the Link button (still visible but grayed out)
+            new SpreadsheetRibbonItem { ItemId = "link", IsEnabled = false },
             
             // Reorder Italic button to appear first in Font Style group
             new SpreadsheetRibbonItem { ItemId = "italic", Order = 0 }
@@ -143,13 +143,13 @@ Individual ribbon items can be customized using the [RibbonItems](https://help.s
 {% endhighlight %}
 {% endtabs %}
 
-### Add Custom Ribbon Tabs
+### Adding Custom Ribbon Tabs
 
 The ribbon can be extended with completely new tabs using the [CustomRibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CustomRibbonTabs) property. Custom tabs are rendered using Blazor components.
 
 | Property | Type | Description |
 |--|--|--|
-| Index | int | The position where the tab will be inserted. Use **-1** to append at the end. Default is **-1** |
+| Index | int | The position where the tab will be inserted. |
 | Template | RenderFragment | The Blazor markup defining the tab's content and layout |
 
 {% tabs %}
@@ -159,8 +159,8 @@ The ribbon can be extended with completely new tabs using the [CustomRibbonTabs]
 @using Syncfusion.Blazor.Spreadsheet
 @using Syncfusion.Blazor.Ribbon
 
-<SfSpreadsheet CustomRibbonTabs="@GetCustomTabs()">
-    <SpreadsheetRibbon></SpreadsheetRibbon>
+<SfSpreadsheet>
+    <SpreadsheetRibbon CustomRibbonTabs="@GetCustomTabs()"></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
@@ -206,14 +206,14 @@ The ribbon can be extended with completely new tabs using the [CustomRibbonTabs]
 {% endhighlight %}
 {% endtabs %}
 
-### Add Custom Ribbon Groups
+### Adding Custom Ribbon Groups
 
 Custom groups can be added to existing tabs using the [CustomRibbonGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CustomRibbonGroups) property.
 
 | Property | Type | Description |
 |--|--|--|
 | TabId | string | The ID of the parent tab where the group will be added |
-| Index | int | The position where the group will be inserted within the tab. Use **-1** to append at the end |
+| Index | int | The position where the group will be inserted within the tab. |
 | Template | RenderFragment | The Blazor markup defining the group's content |
 
 {% tabs %}
@@ -223,8 +223,8 @@ Custom groups can be added to existing tabs using the [CustomRibbonGroups](https
 @using Syncfusion.Blazor.Spreadsheet
 @using Syncfusion.Blazor.Ribbon
 
-<SfSpreadsheet CustomRibbonGroups="@GetCustomGroups()">
-    <SpreadsheetRibbon></SpreadsheetRibbon>
+<SfSpreadsheet>
+    <SpreadsheetRibbon CustomRibbonGroups="@GetCustomGroups()"></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
@@ -267,14 +267,14 @@ Custom groups can be added to existing tabs using the [CustomRibbonGroups](https
 {% endhighlight %}
 {% endtabs %}
 
-### Add Custom Ribbon Items
+### Adding Custom Ribbon Items
 
 Custom items can be added to existing groups using the [CustomRibbonItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CustomRibbonItems) property.
 
 | Property | Type | Description |
 |--|--|--|
 | GroupId | string | The ID of the parent group where the item will be added |
-| Index | int | The position where the item will be inserted within the group. Use **-1** to append at the end |
+| Index | int | The position where the item will be inserted within the group. |
 | Template | RenderFragment | The Blazor markup defining the item's content |
 
 {% tabs %}
@@ -284,8 +284,8 @@ Custom items can be added to existing groups using the [CustomRibbonItems](https
 @using Syncfusion.Blazor.Spreadsheet
 @using Syncfusion.Blazor.Ribbon
 
-<SfSpreadsheet CustomRibbonItems="@GetCustomItems()">
-    <SpreadsheetRibbon></SpreadsheetRibbon>
+<SfSpreadsheet>
+    <SpreadsheetRibbon CustomRibbonItems="@GetCustomItems()"></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
@@ -296,8 +296,8 @@ Custom items can be added to existing groups using the [CustomRibbonItems](https
         {
             new SpreadsheetCustomRibbonItem
             {
-                GroupId = "clipboardGroup",
-                Index = 3,  // Insert after Paste item
+                GroupId = "fontStyleGroup",
+                Index = 4,  // Insert after existing formatting items
                 Template = CreateCustomItemTemplate()
             }
         };
@@ -306,25 +306,28 @@ Custom items can be added to existing groups using the [CustomRibbonItems](https
     private RenderFragment CreateCustomItemTemplate()
     {
         return @<RibbonItem Type="RibbonItemType.Button">
-            <RibbonButtonSettings Content="Paste Special" IconCss="e-icons e-paste-special" @onclick="OnPasteSpecial"></RibbonButtonSettings>
+            <RibbonButtonSettings Content="Highlight Text"
+                                  IconCss="e-icons e-highlight"
+                                  @onclick="OnHighlightText">
+            </RibbonButtonSettings>
         </RibbonItem>;
     }
 
-    private void OnPasteSpecial()
+    private void OnHighlightText()
     {
-        // Paste special logic
-        Console.WriteLine("Paste Special clicked");
+        // Highlight logic
+        Console.WriteLine("Highlight Text clicked");
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Ribbon Customization Through Methods
+## Customizing the Ribbon Using Methods
 
 Methods provide programmatic control over ribbon elements during the component lifecycle. This approach is ideal for dynamic customizations based on user actions or application state.
 
-### Show and Hide Tabs
+### Showing and Hiding Tabs
 
 Tab visibility can be controlled using the [ShowRibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowRibbonTabs_System_Collections_Generic_List_System_String__) and [HideRibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideRibbonTabs_System_Collections_Generic_List_System_String__) methods.
 
@@ -359,7 +362,7 @@ Tab visibility can be controlled using the [ShowRibbonTabs](https://help.syncfus
 {% endhighlight %}
 {% endtabs %}
 
-### Enable and Disable Tabs
+### Enabling and Disabling Tabs
 
 Tab interactivity can be controlled using the [EnableRibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableRibbonTabs_System_Collections_Generic_List_System_String__) and [DisableRibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableRibbonTabs_System_Collections_Generic_List_System_String__) methods. Disabled tabs appear grayed out but remain visible.
 
@@ -394,7 +397,7 @@ Tab interactivity can be controlled using the [EnableRibbonTabs](https://help.sy
 {% endhighlight %}
 {% endtabs %}
 
-### Show and Hide Items
+### Showing and Hiding Items
 
 Item visibility can be controlled using the [ShowRibbonItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowRibbonItems_System_Collections_Generic_List_System_String__) and [HideRibbonItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideRibbonItems_System_Collections_Generic_List_System_String__) methods. Hidden items are completely removed from the ribbon interface.
 
@@ -408,13 +411,12 @@ Item visibility can be controlled using the [ShowRibbonItems](https://help.syncf
 <SfButton OnClick="HideItems" Content="Hide Items"></SfButton>
 <SfButton OnClick="ShowItems" Content="Show Items"></SfButton>
 
-<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public SfSpreadsheet SpreadsheetInstance { get; set; }
-    public byte[] DataSourceBytes { get; set; } = File.ReadAllBytes("wwwroot/Sample.xlsx");
 
     private void HideItems()
     {
@@ -423,14 +425,14 @@ Item visibility can be controlled using the [ShowRibbonItems](https://help.syncf
 
     private void ShowItems()
     {
-        SpreadsheetInstance.ShowRibbonItems(new List<string> { "cut", "paste", "strikethrough" });
+        SpreadsheetInstance.ShowRibbonItems(new List<string> { "cut", "paste" });
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-### Enable and Disable Items
+### Enabling and Disabling Items
 
 Item interactivity can be controlled using the [EnableRibbonItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableRibbonItems_System_Collections_Generic_List_System_String__) and [DisableRibbonItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableRibbonItems_System_Collections_Generic_List_System_String__) methods. Disabled items appear grayed out but remain visible.
 
@@ -444,13 +446,12 @@ Item interactivity can be controlled using the [EnableRibbonItems](https://help.
 <SfButton OnClick="DisableItems" Content="Disable Items"></SfButton>
 <SfButton OnClick="EnableItems" Content="Enable Items"></SfButton>
 
-<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
     public SfSpreadsheet SpreadsheetInstance { get; set; }
-    public byte[] DataSourceBytes { get; set; } = File.ReadAllBytes("wwwroot/Sample.xlsx");
 
     private void DisableItems()
     {
@@ -466,7 +467,7 @@ Item interactivity can be controlled using the [EnableRibbonItems](https://help.
 {% endhighlight %}
 {% endtabs %}
 
-### Add Ribbon Tabs 
+### Adding Ribbon Tabs
 
 Custom tabs can be added dynamically using the [AddRibbonTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddRibbonTab_Syncfusion_Blazor_Navigations_RibbonTab_System_Int32_) method.
 
@@ -475,8 +476,8 @@ Custom tabs can be added dynamically using the [AddRibbonTab](https://help.syncf
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Ribbon
 
 <SfButton OnClick="AddTab" Content="Add Custom Tab"></SfButton>
 
@@ -503,7 +504,7 @@ Custom tabs can be added dynamically using the [AddRibbonTab](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-### Add Ribbon Items
+### Adding Ribbon Items
 
 Custom items can be added to existing groups using the [AddRibbonItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddRibbonItems_System_String_System_Collections_Generic_List_Syncfusion_Blazor_Navigations_RibbonItem__System_Int32_Syncfusion_Blazor_Navigations_RibbonGroup_) method.
 
@@ -512,8 +513,8 @@ Custom items can be added to existing groups using the [AddRibbonItems](https://
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Ribbon
 
 <SfButton OnClick="AddButton" Content="Add Custom Button"></SfButton>
 
@@ -550,11 +551,11 @@ Custom items can be added to existing groups using the [AddRibbonItems](https://
 {% endhighlight %}
 {% endtabs %}
 
-## File Menu Customization
+## Customizing the File Menu
 
-The File menu provides customization through adding, hiding, showing, enabling, and disabling menu items.
+The File menu in the Spreadsheet component can be customized to add, show or hide, and enable or disable menu items, allowing dynamic control over its functionality based on application requirements.
 
-### Add File Menu Items
+### Adding File Menu Items
 
 Custom menu items can be added to the File menu using the [AddFileMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddFileMenuItems_System_Collections_Generic_List_Syncfusion_Blazor_Navigations_MenuItem__System_Int32_) method.
 
@@ -602,7 +603,7 @@ Custom menu items can be added to the File menu using the [AddFileMenuItems](htt
 {% endhighlight %}
 {% endtabs %}
 
-### Show and Hide File Menu Items
+### Showing and Hiding File Menu Items
 
 Menu item visibility can be controlled using the [ShowFileMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFileMenuItems_System_Collections_Generic_List_System_String__) and [HideFileMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_HideFileMenuItems_System_Collections_Generic_List_System_String__) methods.
 
@@ -639,7 +640,7 @@ Menu item visibility can be controlled using the [ShowFileMenuItems](https://hel
 {% endhighlight %}
 {% endtabs %}
 
-### Enable and Disable File Menu Items
+### Enabling and Disabling File Menu Items
 
 Menu item interactivity can be controlled using the [EnableFileMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableFileMenuItems_System_Collections_Generic_List_System_String__) and [DisableFileMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DisableFileMenuItems_System_Collections_Generic_List_System_String__) methods.
 
@@ -688,7 +689,7 @@ The following section contains identifier references for customizing the ribbon 
 | `insertTab` | Insert | Contains commands for inserting images, hyperlinks, and functions |
 | `formulasTab` | Formulas | Contains calculation options and named range management commands |
 | `reviewTab` | Review | Contains worksheet protection and name manager commands |
-| `viewTab` | View | Contains view options such as gridlines and display settings |
+| `viewTab` | View | Contains view options such as gridlines |
 
 ### Ribbon Group
 
@@ -699,7 +700,7 @@ The following section contains identifier references for customizing the ribbon 
 | `numberFormatGroup` | Home | Number format selection and application |
 | `fontFamilyGroup` | Home | Font family selection |
 | `fontSizeGroup` | Home | Font size adjustment |
-| `fontStyleGroup` | Home | Text formatting options: bold, italic, underline, strikethrough |
+| `fontStyleGroup` | Home | Text formatting options: bold, italic, underline, strikethrough, fontcolor |
 | `bordersGroup` | Home | Border styling and color application |
 | `backgroundColorGroup` | Home | Cell background color and cell merge operations |
 | `fontAlignmentGroup` | Home | Text alignment and wrap options |
@@ -736,8 +737,8 @@ The following section contains identifier references for customizing the ribbon 
 | `horizontalAlignment` | Set horizontal text alignment |
 | `verticalAlignment` | Set vertical text alignment |
 | `wrapText` | Enable or disable text wrapping in cells |
-| `clear` | Clear contents from selected cells |
 | `conditionalFormat` | Create and apply conditional formatting rules |
+| `clear` | Clear contents from selected cells |
 | `sort` | Sort data in ascending or descending order |
 | `link` | Insert or edit a hyperlink |
 | `image` | Insert an image into the worksheet |
