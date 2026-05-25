@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Deploy SfPdfViewer in Blazor .NET MAUI on Windows | Syncfusion
+title: Getting Started with PDF Viewer in .NET MAUI Blazor Hybrid App | Syncfusion
 description: Learn how to deploy the Syncfusion Blazor SfPdfViewer component in a Blazor .NET MAUI application on Windows.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with the Blazor PDF Viewer in .NET MAUI Blazor Hybrid App
+# Getting Started with the PDF Viewer in .NET MAUI Blazor Hybrid App
 
 This section explains how to create and run a .NET MAUI Blazor Hybrid application using the [Syncfusion® Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component.
 
