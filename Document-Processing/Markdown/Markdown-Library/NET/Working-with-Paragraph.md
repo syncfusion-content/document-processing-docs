@@ -346,7 +346,7 @@ markdownDocument.Dispose();
 
 A complete working sample is available on GitHub.
 
-### Appending a line break
+## Appending a line break
 
 The following code example demonstrates how to add a line break to a paragraph.
 
@@ -358,16 +358,15 @@ The following code example demonstrates how to add a line break to a paragraph.
 MarkdownDocument markdownDocument = new MarkdownDocument();
 // Adds a new paragraph to the document
 MdParagraph paragraph = markdownDocument.AddParagraph();
-// Adds the first text range with bold formatting
+// Adds the first text range
 MdTextRange firstText = paragraph.AddTextRange();
 firstText.Text = "A first text range is added to the paragraph";
-firstText.TextFormat.Bold = true;
 // Adds the text range for line break and enable the line break
 MdTextRange lineBreak = paragraph.AddTextRange();
 lineBreak.IsLineBreak = true;
+// Adds the second text range
 MdTextRange secondText = paragraph.AddTextRange();
 secondText.Text = "A second text range is added to the paragraph";
-secondText.TextFormat.Bold = true;
 // Gets the Markdown text of the document
 string markdownText = markdownDocument.GetMarkdownText();
 // Saves the Markdown document to the file system
@@ -383,16 +382,15 @@ markdownDocument.Dispose();
 Dim markdownDocument As New MarkdownDocument()
 ' Adds a new paragraph to the document
 Dim paragraph As MdParagraph = markdownDocument.AddParagraph()
-' Adds the first text range with bold formatting
+' Adds the first text range
 Dim firstText As MdTextRange = paragraph.AddTextRange()
 firstText.Text = "A first text range is added to the paragraph"
-firstText.TextFormat.Bold = True
 ' Adds the text range for line break and enable the line break
 Dim lineBreak = paragraph.AddTextRange()
 lineBreak.IsLineBreak = True
+' Adds the second text range
 Dim secondText As MdTextRange = paragraph.AddTextRange()
 secondText.Text = "A second text range is added to the paragraph"
-secondText.TextFormat.Bold = True
 ' Gets the Markdown text of the document
 Dim markdownText As String = markdownDocument.GetMarkdownText()
 ' Saves the Markdown document to the file system
@@ -543,7 +541,6 @@ A complete working sample is available on GitHub.
 
 Hyperlink is a reference to data that can link to external content like images, files, webpage, and more. In a Markdown document, a hyperlink may target to any one of the following sources:
 
-...
 * Webpage: Represents the web content.
 * File: Represents the file in some location.
 * Email: Represents an Email.

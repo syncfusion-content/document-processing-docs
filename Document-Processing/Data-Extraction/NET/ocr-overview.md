@@ -1,6 +1,6 @@
 ---
 title: Intro to OCR Processor | Syncfusion
-description: This page introduces the Syncfusion OCR Processor, describing its purpose, key capabilities, and how to get started with optical character recognition in .NET applications.
+description: This page introduces the Syncfusion OCR Processor, highlighting its purpose, main features, and how to begin optical character recognition in .NET apps.
 platform: document-processing
 control: OCRProcessor
 documentation: UG
@@ -11,23 +11,23 @@ keywords: OCR, Optical Character Recognition, Text Recognition
 
 {% doccards %}
 
-{% doccard text="ASP.NET Core" link="/document-processing/data-extraction/net/ocr-processor/net-core" icon="./NET/images/ASP.NET-Core.png" %}
+{% doccard text="ASP.NET Core" link="/document-processing/data-extraction/net/ocr-processor/net-core" icon="/document-processing/data-extraction/net/images/ASP.NET-Core.png" %}
 
-{% doccard text="ASP.NET MVC" link="/document-processing/data-extraction/net/ocr-processor/aspnet-mvc" icon="./NET/images/ASP.NET-Mvc.svg" %}
+{% doccard text="ASP.NET MVC" link="/document-processing/data-extraction/net/ocr-processor/aspnet-mvc" icon="/document-processing/data-extraction/net/images/ASP.NET-Mvc.svg" %}
 
-{% doccard text="Blazor" link="/document-processing/data-extraction/net/ocr-processor/blazor" icon="./NET/images/Blazor.svg" %}
+{% doccard text="Blazor" link="/document-processing/data-extraction/net/ocr-processor/blazor" icon="/document-processing/data-extraction/net/images/Blazor.svg" %}
 
-{% doccard text="Windows Forms" link="/document-processing/data-extraction/net/ocr-processor/Windows-Forms" icon="./NET/images/Windows-Forms.svg" %}
+{% doccard text="Windows Forms" link="/document-processing/data-extraction/net/ocr-processor/Windows-Forms" icon="/document-processing/data-extraction/net/images/Windows-Forms.svg" %}
 
-{% doccard text="WPF" link="/document-processing/data-extraction/net/ocr-processor/WPF" icon="./NET/images/WPF.svg" %}
+{% doccard text="WPF" link="/document-processing/data-extraction/net/ocr-processor/WPF" icon="/document-processing/data-extraction/net/images/WPF.svg" %}
 
-{% doccard text="Linux" link="/document-processing/data-extraction/net/ocr-processor/Linux" icon="./NET/images/Linux.png" %}
+{% doccard text="Linux" link="/document-processing/data-extraction/net/ocr-processor/Linux" icon="/document-processing/data-extraction/net/images/Linux.png" %}
 
-{% doccard text="Mac" link="/document-processing/data-extraction/net/ocr-processor/MAC" icon="./NET/images/Mac.svg" %}
+{% doccard text="Mac" link="/document-processing/data-extraction/net/ocr-processor/MAC" icon="/document-processing/data-extraction/net/images/Mac.svg" %}
 
-{% doccard text="Azure" link="/document-processing/data-extraction/net/ocr-processor/azure" icon="./NET/images/Azure.svg" %}
+{% doccard text="Azure" link="/document-processing/data-extraction/net/ocr-processor/azure" icon="/document-processing/data-extraction/net/images/Azure.svg" %}
 
-{% doccard text="AWS" link="/document-processing/data-extraction/net/ocr-processor/AWS-Textract" icon="./NET/images/AWS.svg" %}
+{% doccard text="AWS" link="/document-processing/data-extraction/net/ocr-processor/AWS-Textract" icon="/document-processing/data-extraction/net/images/AWS.svg" %}
 
 {% enddoccards %}
 

@@ -75,7 +75,7 @@ using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.R
 
 {% endhighlight %}
 
-By executing the program, you will get the PDF document as follows.
+By executing the program, you will get the JSON file as follows.
 ![ASP.NET MVC output JSON document](GettingStarted_images/JSON_Output.png)  
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/ASP.NETMVC/Extract_Data).
