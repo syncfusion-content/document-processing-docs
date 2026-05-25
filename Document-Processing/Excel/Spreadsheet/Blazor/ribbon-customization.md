@@ -700,7 +700,7 @@ The following section contains identifier references for customizing the ribbon 
 | `numberFormatGroup` | Home | Number format selection and application |
 | `fontFamilyGroup` | Home | Font family selection |
 | `fontSizeGroup` | Home | Font size adjustment |
-| `fontStyleGroup` | Home | Text formatting options: bold, italic, underline, strikethrough, fontcolor |
+| `fontStyleGroup` | Home | Text formatting options: bold, italic, underline, strikethrough, font color |
 | `bordersGroup` | Home | Border styling and color application |
 | `backgroundColorGroup` | Home | Cell background color and cell merge operations |
 | `fontAlignmentGroup` | Home | Text alignment and wrap options |
