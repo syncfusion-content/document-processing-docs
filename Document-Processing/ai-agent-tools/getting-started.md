@@ -9,60 +9,64 @@ documentation: ug
 
 # Getting Started with Syncfusion Document SDK AI Agent Tool Library
 
-The [Syncfusion Document SDK AI Agent Tool library](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) exposes Word, Excel, PDF, PowerPoint, and Smart Data Extraction operations as AI-callable tools. These tools integrate seamlessly with the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp), enabling [AI agents](https://learn.microsoft.com/en-us/agent-framework/agents/?pivots=programming-language-csharp) to perform document operations autonomously.
-
-Before you begin, make two key decisions:
-
-1. **Document Manager Mode** - How documents are stored and managed between tool calls
-2. **AI Provider** - Which inference service powers your agent
-
-This guide helps you choose the right configuration for your application.
+The [Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) library exposes Word, Excel, PDF, PowerPoint, and Smart Data Extractor operations as AI-callable tools. It integrates with the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp) and works with any [providers](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) like OpenAI, Claude, Gemini, etc.
 
 ## Document Manager Modes
 
 The library supports two modes for managing document state during agent tool invocations. Both modes expose the same AI tools-the difference is in how and where documents are stored between tool calls.
 
-### In-Memory Mode
+![Application workflow](application-workflow.png)
 
-**How it works:** Documents are held as live objects in an in-memory dictionary. Each tool accesses and modifies the object directly rather than opening and saving files on each call. Objects are automatically cleaned up after 10 minutes (default) of inactivity. This expiration time is customizable.
+Use the table below to pick the right mode for your application, then follow the linked guide.
 
-**When to use:**  
-Choose in-memory Mode for single-instance applications (desktop apps, console tools, or non-scalable environments) where in-memory state won't be lost. It provides the simplest and fastest experience.
-
-For further details, please refer to the [Getting Started In-Memory Mode documentation](./getting-started-in-memory-mode).
-
-### Storage Mode
-
-**How it works:** Documents are read from and written to storage (Azure Blob, S3, local disk, etc.) on each tool invocation. No in-memory objects are maintained, so each tool call opens and saves document instances.
-
-**When to use:**  
-Choose Storage Mode for web APIs or applications that need horizontal scaling, work with large documents, or require state persistence across sessions.
-
-For further details, please refer to the [Getting Started Storage Mode documentation](./getting-started-storage-mode).
-
-## AI Providers
-
-The library works with Microsoft Agent Framework which supports multiple AI inference providers through the `Microsoft.Extensions.AI` abstraction layer. You can use any supported provider without changing Syncfusion tool code-only the client initialization changes.
-
-### Supported Providers
-
-The Microsoft Agent Framework supports the following providers for .NET:
-
-- **[Azure OpenAI](https://learn.microsoft.com/en-us/agent-framework/agents/providers/azure-openai)**
-- **[OpenAI](https://learn.microsoft.com/en-us/agent-framework/agents/providers/openai)**
-
-For more details, see the [Microsoft Agent Framework Providers documentation](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp).
-
-> **Note:** Microsoft AI agents understand prompts in any natural language and invoke Agent library tools accordingly. Agent responses are returned in the same language as the prompt.
+<table>
+  <thead>
+    <tr>
+      <th>Use Cases</th>
+      <th>Execution Mode</th>
+      <th>Guide</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li>Desktop applications</li>
+          <li>Console applications</li>
+          <li>Single-instance (non-scalable)</li>
+        </ul>
+      </td>
+      <td>In-Memory</td>
+      <td>
+        <a href="./getting-started-in-memory-mode">
+          Getting Started - In-Memory Mode
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>Web APIs</li>
+          <li>Scalable applications</li>
+          <li>Stateless services</li>
+        </ul>
+      </td>
+      <td>Storage</td>
+      <td>
+        <a href="./getting-started-storage-mode">
+          Getting Started - Storage Mode
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## See Also
 
 - [In-Memory Mode](./getting-started-in-memory-mode)
 - [Storage Mode](./getting-started-storage-mode)
-- [Syncfusion AI Agent Tools Overview](./overview)
-- [Available Tools Reference](./tools)
-- [Customization Guide](./customization)
+- [Overview](./overview)
+- [Tools Reference](./tools)
+- [Customization](./customization)
 - [Example Prompts](./example-prompts)
 - [Example Use Cases](./example-use-cases)
-- [Syncfusion Document Processing](https://help.syncfusion.com/document-processing)
-- [Microsoft Agents Framework](https://github.com/microsoft/agents)
