@@ -16,7 +16,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> [Angular DOCX Editor](https://w
 
 ### Prerequisites
 
-[System requirements for Angular Document Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
+[System requirements for Document Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
 
 ### Setup Angular environment
 
