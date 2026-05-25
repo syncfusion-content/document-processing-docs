@@ -360,10 +360,6 @@ Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
 End Using
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//DocIO doesn’t support the MarkdownExportImagesFolder API in UWP platform.
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Export-images-to-folder).

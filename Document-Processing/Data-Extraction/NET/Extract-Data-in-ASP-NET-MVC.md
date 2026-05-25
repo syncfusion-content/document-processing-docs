@@ -1,6 +1,6 @@
 ---
 title: Extract Data in ASP.NET MVC Application | Syncfusion
-description: Learn how to extract data in an ASP.NET MVC application with easy steps using the Syncfusion Data Extraction library.
+description: Learn how to extract data in an ASP.NET MVC application with step‑by‑step guidance using the Syncfusion Data Extraction library.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
@@ -8,7 +8,7 @@ keywords: Assemblies
 
 ---
 
-# Extracting Data in ASP.NET MVC
+# Extract Data in ASP.NET MVC
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in ASP.NET MVC applications.
 
@@ -17,11 +17,11 @@ The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to ex
 Step 1: Create a new C# ASP.NET Web Application (.NET Framework) project.
 ![Create ASP.NET MVC application](GettingStarted_images/MVC_ProjectCreation.png)   
 
-Step 2: In the project configuration windows, name your project and select Create.
+Step 2: In the project configuration window, name your project and select Create.
 ![Configuration window1](GettingStarted_images/MVC_Data_ProjectCreation.png)   
 ![Configuration window2](GettingStarted_images/CreateASPNetMVCProject_DataExtractor.png)   
 
-Step 3: Install [Syncfusion.SmartDataExtractor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.AspNet.Mvc5)  NuGet package as reference to your .NET applications from [NuGet.org](https://www.nuget.org/).
+Step 3: Install [Syncfusion.SmartDataExtractor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.AspNet.Mvc5)  NuGet package as reference to your .NET application from [NuGet.org](https://www.nuget.org/).
 ![NuGet package installation](GettingStarted_images/MVC_DataExtractorNuget.png)  
 
 Step 4: Include the following namespaces in the HomeController.cs file.
@@ -51,7 +51,7 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% endhighlight %}
 
-Step 6: Add a new action method named ExtractData in `HomeController.cs` and include the below code example to extract data from a PDF document using the **ExtractDataAsJson** method in the **DataExtractor** class. 
+Step 6: Add a new action method named ExtractData in `HomeController.cs` and include the following code example to extract data from a PDF document using the **ExtractDataAsJson** method in the **DataExtractor** class. 
 
 {% highlight c# tabtitle="C#" %}
 
@@ -75,10 +75,10 @@ using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.R
 
 {% endhighlight %}
 
-By executing the program, you will get the PDF document as follows.
-![HTML to PDF output document](GettingStarted_images/JSON_Output.png)  
+By executing the program, you will get the JSON file as follows.
+![ASP.NET MVC output JSON document](GettingStarted_images/JSON_Output.png)  
 
-A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/ASP.NETMVC/Extract_Data).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/ASP.NETMVC/Extract_Data).
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-data-extraction) to explore the rich set of Syncfusion<sup>&reg;</sup> Data Extraction library features. 
  
