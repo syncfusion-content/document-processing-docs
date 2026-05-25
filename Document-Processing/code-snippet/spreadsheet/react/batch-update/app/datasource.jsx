@@ -1,77 +1,12 @@
-/**
- * Formula data source
- */
 export let data = [
-    {
-        'Category': 'Household Utilities',
-        'Monthly Spend': '=C3/12',
-        'Annual Spend': 3000,
-        'Last Year Spend': 3000,
-        'Percentage Change': '=C3/D3', // You can set the expression or formula as string
-        'Average Change': '=7.9/E3',
-    },
-    {
-        'Category': 'Food',
-        'Monthly Spend': '=C4/12',
-        'Annual Spend': 2500,
-        'Last Year Spend': 2250,
-        'Percentage Change': { formula: '=C4/D4' }, // You can also set as object with formula field
-        'Average Change': '=7.9/E4',
-    },
-    {
-        'Category': 'Gasoline',
-        'Monthly Spend': '=C5/12',
-        'Annual Spend': 1500,
-        'Last Year Spend': 1200,
-        'Percentage Change': { formula: '=C5/D5' },
-        'Average Change': '=7.9/E5',
-    },
-    {
-        'Category': 'Clothes',
-        'Monthly Spend': '=C6/12',
-        'Annual Spend': 1200,
-        'Last Year Spend': 1000,
-        'Percentage Change': '=C6/D6',
-        'Average Change': '=7.9/E6',
-    },
-    {
-        'Category': 'Insurance',
-        'Monthly Spend': '=C7/12',
-        'Annual Spend': 1500,
-        'Last Year Spend': 1500,
-        'Percentage Change': '=C7/D7',
-        'Average Change': '=7.9/E7',
-    },
-    {
-        'Category': 'Taxes',
-        'Monthly Spend': '=C8/12',
-        'Annual Spend': 3500,
-        'Last Year Spend': 3500,
-        'Percentage Change': '=C8/D8',
-        'Average Change': '=7.9/E8',
-    },
-    {
-        'Category': 'Entertainment',
-        'Monthly Spend': '=C9/12',
-        'Annual Spend': 2000,
-        'Last Year Spend': 2250,
-        'Percentage Change': '=C9/D9',
-        'Average Change': '=7.9/E9',
-    },
-    {
-        'Category': 'Vacation',
-        'Monthly Spend': '=C10/12',
-        'Annual Spend': 1500,
-        'Last Year Spend': 2000,
-        'Percentage Change': '=C10/D10',
-        'Average Change': '=7.9/E10',
-    },
-    {
-        'Category': 'Miscellaneous',
-        'Monthly Spend': '=C11/12',
-        'Annual Spend': 1250,
-        'Last Year Spend': 1558,
-        'Percentage Change': '=C11/D11',
-        'Average Change': '=7.9/E11',
-    }
+    { 'Item Name': 'Casual Shoes', Date: '02/14/2014', Time: '11:34:32 AM', Quantity: 10, Price: 20, Amount: 200, Discount: 1, Profit: 10 },
+    { 'Item Name': 'Sports Shoes', Date: '06/11/2014', Time: '05:56:32 AM', Quantity: 20, Price: 30, Amount: 600, Discount: 5, Profit: 50 },
+    { 'Item Name': 'Formal Shoes', Date: '07/27/2014', Time: '03:32:44 AM', Quantity: 20, Price: 15, Amount: 300, Discount: 7, Profit: 27 },
+    { 'Item Name': 'Sandals & Floaters', Date: '11/21/2014', Time: '06:23:54 AM', Quantity: 15, Price: 20, Amount: 300, Discount: 11, Profit: 67 },
+    { 'Item Name': 'Flip- Flops & Slippers', Date: '06/23/2014', Time: '12:43:59 AM', Quantity: 30, Price: 10, Amount: 300, Discount: 10, Profit: 70 },
+    { 'Item Name': 'Sneakers', Date: '07/22/2014', Time: '10:55:53 AM', Quantity: 40, Price: 20, Amount: 800, Discount: 13, Profit: 66 },
+    { 'Item Name': 'Running Shoes', Date: '02/04/2014', Time: '03:44:34 AM', Quantity: 20, Price: 10, Amount: 200, Discount: 3, Profit: 14 },
+    { 'Item Name': 'Loafers', Date: '11/30/2014', Time: '03:12:52 AM', Quantity: 31, Price: 10, Amount: 310, Discount: 6, Profit: 29 },
+    { 'Item Name': 'Cricket Shoes', Date: '07/09/2014', Time: '11:32:14 AM', Quantity: 41, Price: 30, Amount: 1210, Discount: 12, Profit: 166 },
+    { 'Item Name': 'T-Shirts', Date: '10/31/2014', Time: '12:01:44 AM', Quantity: 50, Price: 10, Amount: 500, Discount: 9, Profit: 55 },
 ];
