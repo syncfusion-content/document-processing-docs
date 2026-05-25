@@ -15,6 +15,8 @@ The [Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncf
 
 The library supports two modes for managing document state during agent tool invocations. Both modes expose the same AI tools-the difference is in how and where documents are stored between tool calls.
 
+![Application workflow](application-workflow.png)
+
 Use the table below to pick the right mode for your application, then follow the linked guide.
 
 <table>
@@ -58,10 +60,6 @@ Use the table below to pick the right mode for your application, then follow the
     </tr>
   </tbody>
 </table>
-
-Both modes expose the same AI tools. The difference is only in how documents are stored between tool calls.
-
-![Application workflow](application-workflow.png)
 
 ## See Also
 
