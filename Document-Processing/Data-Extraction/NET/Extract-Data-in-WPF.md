@@ -8,7 +8,7 @@ keywords: Assemblies
 
 ---
 
-# Extract Data from PDF in WPF Application
+# Extract Data from PDF in WPF
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in WPF applications.
 
@@ -67,7 +67,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endhighlight %}
 
-By executing the program, you will get the JSON document as follows.
+By executing the program, you will get the JSON file as follows.
 ![WPF output JSON document](GettingStarted_images/JSON_Output.png) 
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/WPF/Extract_Data).

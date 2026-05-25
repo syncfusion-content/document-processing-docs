@@ -25,13 +25,13 @@ keywords: PowerPoint, Presentation, slides, SDK, Automation, API, create, read, 
 
 {% doccard text="UWP" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-uwp" icon="/document-processing/powerpoint/powerpoint-library/net/images/UWP.svg" %}
 
-{% doccard text="WinUI" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-winui" icon="/document-processing/powerpoint/powerpoint-library/net/images/PowerPoint Library.svg" %}
+{% doccard text="WinUI" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-winui" icon="/document-processing/powerpoint/powerpoint-library/net/images/WinUI.png" %}
 
-{% doccard text=".NET MAUI" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-maui" icon="/document-processing/powerpoint/powerpoint-library/net/images/.NET MAUI.svg" %}
+{% doccard text=".NET MAUI" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-maui" icon="/document-processing/powerpoint/powerpoint-library/net/images/MAUI.svg" %}
 
-{% doccard text="Linux" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-linux" icon="/document-processing/powerpoint/powerpoint-library/net/images/PowerPoint Library.svg" %}
+{% doccard text="Linux" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-linux" icon="/document-processing/powerpoint/powerpoint-library/net/images/Linux.png" %}
 
-{% doccard text="Mac" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-mac" icon="/document-processing/powerpoint/powerpoint-library/net/images/PowerPoint Library.svg" %}
+{% doccard text="Mac" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-mac" icon="/document-processing/powerpoint/powerpoint-library/net/images/Mac.svg" %}
 
 {% doccard text="Console" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-in-Console-application" icon="/document-processing/powerpoint/powerpoint-library/net/images/NET.svg" %}
 

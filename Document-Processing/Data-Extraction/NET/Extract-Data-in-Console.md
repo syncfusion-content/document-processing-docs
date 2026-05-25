@@ -146,7 +146,7 @@ dotnet run
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/Console/.NET/Extract_Data_as_JSON).
 
-By executing the program, you will get the PDF document as follows.
+By executing the program, you will get the JSON file as follows.
 ![Console output PDF document](GettingStarted_images/JSON_Output.png)
 
 ## Extract Data from PDF using .NET Framework
@@ -206,7 +206,7 @@ Click the Start button (green arrow) or press F5 to run the app.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/Console/.NETFramework/Extract_Data).
 
-By executing the program, you will get the PDF document as follows.
+By executing the program, you will get the JSON file as follows.
 ![Console output JSON document](GettingStarted_images/JSON_Output.png)
 
 
