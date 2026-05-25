@@ -19,7 +19,7 @@ This section briefly explains how to include the [Blazor PDF Viewer](https://www
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> If using interactive render modes (WebAssembly or Auto), install the required .NET workloads for SkiaSharp: `dotnet workload install wasm-tools`
+N> For WebAssembly Application, install the required .NET workloads for SkiaSharp: `dotnet workload install wasm-tools`
 * Installs the latest SDK workload (e.g., .NET 10)
 * For specific versions, use wasm-tools-net8 or wasm-tools-net9
 
@@ -54,7 +54,7 @@ N> Syncfusion&reg; Blazor components are available in [nuget.org](https://www.nu
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> If using interactive render modes (WebAssembly or Auto), install the required .NET workloads for SkiaSharp: `dotnet workload install wasm-tools`
+N> For WebAssembly Application, install the required .NET workloads for SkiaSharp: `dotnet workload install wasm-tools`
 * Installs the latest SDK workload (e.g., .NET 10)
 * For specific versions, use wasm-tools-net8 or wasm-tools-net9
 
