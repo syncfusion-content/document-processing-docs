@@ -70,7 +70,7 @@ Step 6: Add a new action method named `ExtractData` in HomeController.cs and inc
 // Open the input PDF file as a stream.
 using (FileStream stream = new FileStream(Path.GetFullPath("Input.pdf"), FileMode.Open, FileAccess.Read))
 {
-   // Initialize the Smart Data Extractor.
+   // Initialize the  Data Extractor.
    DataExtractor extractor = new DataExtractor();
    // Extract form data as JSON.
    string data = extractor.ExtractDataAsJson(stream);
@@ -87,10 +87,12 @@ using (FileStream stream = new FileStream(Path.GetFullPath("Input.pdf"), FileMod
 {% endhighlight %}
 
 Step 7: Build the project.
-   Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+Click on **Build** → **Build Solution** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 8: Run the project.
-   Click the Start button (green arrow) or press F5 to run the app.
+
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
 {% endtabcontent %}
  
@@ -153,7 +155,7 @@ Step 7: Add a new action method named `ExportToJson` in HomeController.cs and in
 // Open the input PDF file as a stream.
 using (FileStream stream = new FileStream(Path.GetFullPath("Input.pdf"), FileMode.Open, FileAccess.Read))
 {
-   // Initialize the Smart Data Extractor.
+   // Initialize the Data Extractor.
    DataExtractor extractor = new DataExtractor();
    // Extract form data as JSON.
    string data = extractor.ExtractDataAsJson(stream);

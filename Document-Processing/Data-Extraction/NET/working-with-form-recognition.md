@@ -23,7 +23,7 @@ using Syncfusion.SmartFormRecognizer;
 // Open the input PDF file as a stream.
 using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite))
 {
-	// Initialize the Smart Form Recognizer.
+	// Initialize the Form Recognizer.
 	FormRecognizer recognizer = new FormRecognizer();
 	// Recognize the form and get the output as a JSON string.
 	string outputJson = recognizer.RecognizeFormAsJson(inputStream);
@@ -46,7 +46,7 @@ using Syncfusion.SmartFormRecognizer;
 // Open the input PDF file as a stream.
 using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite))
 {
-	// Initialize the Smart Form Recognizer.
+	// Initialize the Form Recognizer.
 	FormRecognizer recognizer = new FormRecognizer();
 	// Recognize the form asynchronously and get the output as a JSON string.
 	string outputJson = await recognizer.RecognizeFormAsJsonAsync(inputStream);
@@ -77,13 +77,13 @@ using Syncfusion.Pdf.Parsing;
 // Open the input PDF file as a stream.
 using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite))
 {
-	// Initialize the Smart Form Recognizer.
+	// Initialize the Form Recognizer.
 	FormRecognizer recognizer = new FormRecognizer();
 	// Recognize the form and get the output as a PDF document.
 	PdfLoadedDocument document = recognizer.RecognizeFormAsPdfDocument(inputStream);
 	// Save the recognized document.
 	document.Save("Output.pdf");
-	// Close the document to release resources.
+	// Close the document.
 	document.Close();
 }
 
@@ -103,13 +103,13 @@ using Syncfusion.SmartFormRecognizer;
 // Open the input PDF file as a stream.
 using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite))
 {
-	// Initialize the Smart Form Recognizer.
+	// Initialize the Form Recognizer.
 	FormRecognizer recognizer = new FormRecognizer();
 	// Recognize the form asynchronously and get the output as a PDF document.
 	PdfLoadedDocument document = await recognizer.RecognizeFormAsPdfDocumentAsync(inputStream);
 	// Save the recognized document.
 	document.Save("Output.pdf");
-	// Close the document to release resources.
+	// Close the document.
 	document.Close();
 }
 
@@ -133,7 +133,7 @@ using Syncfusion.SmartFormRecognizer;
 // Open the input PDF file as a stream.
 using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite))
 {
-	// Initialize the Smart Form Recognizer.
+	// Initialize the Form Recognizer.
 	FormRecognizer recognizer = new FormRecognizer();
 	// Recognize the form and get the output as a PDF stream.
 	using (Stream outputStream = recognizer.RecognizeFormAsPdfStream(inputStream))
@@ -162,19 +162,21 @@ using Syncfusion.SmartFormRecognizer;
 // Open the input PDF file as a stream.
 using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite))
 {
-	// Initialize the Smart Form Recognizer.
-	FormRecognizer recognizer = new FormRecognizer();
-	// Recognize the form asynchronously and get the output as a PDF stream.
-	using (Stream outputStream = await recognizer.RecognizeFormAsPdfStreamAsync(inputStream))
-	{
-		// Save the output PDF stream to a file.
-		using (FileStream fileStream = File.Create("Output.pdf"))
-		{
-			outputStream.Seek(0, SeekOrigin.Begin);
-			outputStream.CopyTo(fileStream);
-		}
-	}
+    // Initialize the Form Recognizer.
+    FormRecognizer recognizer = new FormRecognizer();
+    // Recognize the form asynchronously and get the output as a PDF stream.
+    using (Stream outputStream = await recognizer.RecognizeFormAsPdfStreamAsync(inputStream))
+    {
+        // Save the output PDF stream to a file.
+        using (FileStream fileStream = File.Create("Output.pdf"))
+        {
+            outputStream.Seek(0, SeekOrigin.Begin);
+            outputStream.CopyTo(fileStream);
+        }
+    }
 }
+
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -194,7 +196,7 @@ using Syncfusion.SmartFormRecognizer;
 
 // Open the input PDF file as a stream.
 using FileStream inputStream = new FileStream(Path.GetFullPath("Input.pdf"), FileMode.Open, FileAccess.Read);
-// Initialize the Smart Form Recognizer.
+// Initialize the Form Recognizer.
 FormRecognizer recognizer = new FormRecognizer();
 // Create a cancellation token that cancels after 5 seconds.
 using CancellationTokenSource cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
