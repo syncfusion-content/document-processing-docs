@@ -29,7 +29,7 @@ keywords: Excel, SDK, Automation, API, create, read, write
 
 {% doccard text="WinUI" link="/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-winui-c-sharp" icon="/document-processing/excel/excel-library/net/images/WinUI.svg" %}
 
-{% doccard text=".NET MAUI" link="/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-maui-c-sharp" icon="/document-processing/excel/excel-library/net/images/.NET MAUI.svg" %}
+{% doccard text=".NET MAUI" link="/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-maui-c-sharp" icon="/document-processing/excel/excel-library/net/images/.NET_MAUI.svg" %}
 
 {% doccard text="Linux" link="/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-linux-c-sharp" icon="/document-processing/excel/excel-library/net/images/Linux.svg" %}
 
