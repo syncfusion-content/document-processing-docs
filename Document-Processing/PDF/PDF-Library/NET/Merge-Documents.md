@@ -58,7 +58,7 @@ finalDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Import Syncfusion.Pdf
+Imports Syncfusion.Pdf
 
 'Creates a new PDF document.
 Dim finalDoc As New PdfDocument()
@@ -126,7 +126,7 @@ stream2.Dispose();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Import Syncfusion.Pdf
+Imports Syncfusion.Pdf
 
 'Creates a PDF document.
 Dim finalDoc As New PdfDocument()
@@ -197,8 +197,8 @@ lDoc.Close(true)
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Import Syncfusion.Pdf
-Import Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document
 Dim lDoc As New PdfLoadedDocument("file1.pdf")
@@ -264,8 +264,8 @@ lDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Import Syncfusion.Pdf
-Import Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Loads PDF document
 Dim lDoc As New PdfLoadedDocument("file1.pdf")
@@ -339,8 +339,8 @@ lDoc2.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Import Syncfusion.Pdf
-Import Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Loads a document
 Dim lDoc As New PdfLoadedDocument("file1.pdf")
@@ -394,7 +394,7 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Import Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Parsing
 
 'Loads the PDF document
 Dim loadedDocument As New PdfLoadedDocument("large.pdf")
@@ -451,7 +451,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Import Syncfusion.Pdf
+Imports Syncfusion.Pdf
 
 'Input documents
 Dim inputDocuments As String() = Directory.GetFiles("../../Data/Split")
@@ -523,7 +523,7 @@ finalDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Import Syncfusion.Pdf
+Imports Syncfusion.Pdf
 
 'Create a new PDF document
 Dim finalDoc As New PdfDocument()
@@ -611,8 +611,8 @@ finalDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Import Syncfusion.Pdf
-Import Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim finalDoc As New PdfDocument()
@@ -691,7 +691,7 @@ finalDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Import Syncfusion.Pdf
+Imports Syncfusion.Pdf
 
 'Create a new PDF document 
 Dim finalDoc As New PdfDocument() 

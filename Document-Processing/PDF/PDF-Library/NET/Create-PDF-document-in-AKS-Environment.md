@@ -181,7 +181,7 @@ Step 3: You can review the credentials with the following command:
 
 {% endtabs %}
 
-Note: If you forgot to attach the ACR when creating the AKS resource (like I did the first time), you can attach it after. I had to use the following command: `az aks update -n aks-uk-demo-msdn -g CreatePdfDocument --attach-acr createpdfdocument20240918103106`
+N> If you forgot to attach the ACR when creating the AKS resource (Like I did the first time), you can attach it after. I had to use the following command: `az aks update -n aks-uk-demo-msdn -g CreatePdfDocument --attach-acr createpdfdocument20240918103106`
 
 Step 4: Now in the Cloud Shell, create a new file called deploy.yaml as follows:
 {% tabs %}

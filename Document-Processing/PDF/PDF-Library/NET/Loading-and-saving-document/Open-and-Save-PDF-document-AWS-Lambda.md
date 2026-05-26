@@ -165,7 +165,7 @@ InvokeResponse response = await client.InvokeAsync(invoke);
 var stream = new StreamReader(response.Payload);
 JsonReader reader = new JsonTextReader(stream);
 var serializer = new JsonSerializer();
-var responseText = serilizer.Deserialize(reader);
+var responseText = serializer.Deserialize(reader);
 //Convert Base64String into PDF document
 byte[] bytes = Convert.FromBase64String(responseText.ToString());
 FileStream fileStream = new FileStream("Sample.pdf", FileMode.Create);
