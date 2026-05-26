@@ -1,12 +1,12 @@
 export let data: Object[] = [
-    { 'Item Name': 'Casual Shoes', Date: '02/14/2014', Time: '11:34:32 AM', Quantity: 10, Price: 20, Amount: 200, Discount: 1, Profit: 10 },
-    { 'Item Name': 'Sports Shoes', Date: '06/11/2014', Time: '05:56:32 AM', Quantity: 20, Price: 30, Amount: 600, Discount: 5, Profit: 50 },
-    { 'Item Name': 'Formal Shoes', Date: '07/27/2014', Time: '03:32:44 AM', Quantity: 20, Price: 15, Amount: 300, Discount: 7, Profit: 27 },
-    { 'Item Name': 'Sandals & Floaters', Date: '11/21/2014', Time: '06:23:54 AM', Quantity: 15, Price: 20, Amount: 300, Discount: 11, Profit: 67 },
-    { 'Item Name': 'Flip- Flops & Slippers', Date: '06/23/2014', Time: '12:43:59 AM', Quantity: 30, Price: 10, Amount: 300, Discount: 10, Profit: 70 },
-    { 'Item Name': 'Sneakers', Date: '07/22/2014', Time: '10:55:53 AM', Quantity: 40, Price: 20, Amount: 800, Discount: 13, Profit: 66 },
-    { 'Item Name': 'Running Shoes', Date: '02/04/2014', Time: '03:44:34 AM', Quantity: 20, Price: 10, Amount: 200, Discount: 3, Profit: 14 },
-    { 'Item Name': 'Loafers', Date: '11/30/2014', Time: '03:12:52 AM', Quantity: 31, Price: 10, Amount: 310, Discount: 6, Profit: 29 },
-    { 'Item Name': 'Cricket Shoes', Date: '07/09/2014', Time: '11:32:14 AM', Quantity: 41, Price: 30, Amount: 1210, Discount: 12, Profit: 166 },
-    { 'Item Name': 'T-Shirts', Date: '10/31/2014', Time: '12:01:44 AM', Quantity: 50, Price: 10, Amount: 500, Discount: 9, Profit: 55 },
+    { 'Project Name': 'Website Redesign', Manager: 'Anita', Department: 'Marketing', 'Start Date': '04/01/2026', 'End Date': '06/20/2026', Budget: 25000, Spent: 18000, Variance: 7000, Status: 'In Progress', Priority: 2 },
+    { 'Project Name': 'Mobile App Upgrade', Manager: 'David', Department: 'Engineering', 'Start Date': '04/05/2026', 'End Date': '07/15/2026', Budget: 42000, Spent: 26500, Variance: 15500, Status: 'In Progress', Priority: 1 },
+    { 'Project Name': 'CRM Migration', Manager: 'Priya', Department: 'Sales', 'Start Date': '03/18/2026', 'End Date': '08/10/2026', Budget: 38000, Spent: 31000, Variance: 7000, Status: 'On Hold', Priority: 2 },
+    { 'Project Name': 'HR Portal Refresh', Manager: 'Kumar', Department: 'HR', 'Start Date': '04/12/2026', 'End Date': '05/30/2026', Budget: 12000, Spent: 9500, Variance: 2500, Status: 'Completed', Priority: 3 },
+    { 'Project Name': 'Finance Dashboard', Manager: 'Meera', Department: 'Finance', 'Start Date': '05/01/2026', 'End Date': '07/28/2026', Budget: 30000, Spent: 14250, Variance: 15750, Status: 'In Progress', Priority: 1 },
+    { 'Project Name': 'Vendor Portal Integration', Manager: 'John', Department: 'Procurement', 'Start Date': '04/22/2026', 'End Date': '08/05/2026', Budget: 27000, Spent: 11000, Variance: 16000, Status: 'Not Started', Priority: 4 },
+    { 'Project Name': 'Security Audit Remediation', Manager: 'Sara', Department: 'IT', 'Start Date': '03/25/2026', 'End Date': '06/18/2026', Budget: 16000, Spent: 13200, Variance: 2800, Status: 'In Progress', Priority: 1 },
+    { 'Project Name': 'Customer Support Automation', Manager: 'Rahul', Department: 'Support', 'Start Date': '04/08/2026', 'End Date': '07/01/2026', Budget: 21000, Spent: 8000, Variance: 13000, Status: 'In Progress', Priority: 2 },
+    { 'Project Name': 'Inventory Sync Improvement', Manager: 'Latha', Department: 'Operations', 'Start Date': '05/10/2026', 'End Date': '08/22/2026', Budget: 19500, Spent: 6200, Variance: 13300, Status: 'Not Started', Priority: 3 },
+    { 'Project Name': 'Analytics Reporting Pack', Manager: 'Arun', Department: 'Business Intelligence', 'Start Date': '04/15/2026', 'End Date': '06/30/2026', Budget: 17500, Spent: 12400, Variance: 5100, Status: 'Completed', Priority: 2 }
 ];
