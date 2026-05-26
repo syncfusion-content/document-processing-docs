@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Choose between SfSpreadsheet and Spreadsheet control (Classic) | Syncfusion®
+title: Compare SfSpreadsheet and Spreadsheet (Classic) Control
 description: Learn about the differences and feature enhancements of SfSpreadsheet over the classic Spreadsheet control in Syncfusion® WPF.
 platform: document-processing
 control: SfSpreadsheet
