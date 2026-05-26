@@ -83,7 +83,7 @@ Add the following CDN references inside the `<head>` section of your `index.html
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
+### Add the Document Editor component
 
 Add a container element for the Document Editor in the `index.html` file and then initialize the control in the `<script>` tag.
 
