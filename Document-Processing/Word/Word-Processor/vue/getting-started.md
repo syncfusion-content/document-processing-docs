@@ -67,7 +67,7 @@ Add the following Document Editor and dependent component style references to th
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-documenteditor/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css';
 
 {% endhighlight %}
 {% endtabs %}
