@@ -207,24 +207,28 @@ foreach (var item in pdfViewer.FormFields)
 {% endhighlight %} 
 {% endtabs %}
 
-### Flatten all form fields
+### Controlling form field editing at the viewer Level
 
-To flatten all form fields in the document, set the FlattenOnSave property for each field:
+The `AllowEditFormFields` property is used to control form field editing at the viewer level. By default, editing is enabled, allowing users to interact with all supported form fields. When this property is set to false, all form fields become non-editable, making the document effectively read-only without modifying individual field properties. This behavior applies to all form field types and takes effect immediately on the loaded document.
+
+You can disable editing programmatically using the following:
 
 {% tabs %}
+{% highlight xaml %}
+<syncfusion:SfPdfViewer 
+    x:Name="PdfViewer"
+    AllowEditFormFields="False" />
+{% endhighlight %}
+
 {% highlight c# %}
-
-//Iterate all the form fields and set flatten
-foreach (var item in pdfViewer.FormFields)
-{
-    item.FlattenOnSave = true;
-}
-
-{% endhighlight %} 
+// Disable form field editing
+pdfViewer.AllowEditFormFields = false;
+{% endhighlight %}
 {% endtabs %}
 
-N>This property does not immediately change the UI; it is applied during the save operation.
+This property supports dynamic changes at runtime, meaning you can enable or disable form field editing at the viewer level based on requirements, and the changes will be applied instantly.
 
+N>Setting AllowEditFormFields to false does not modify the ReadOnly property of individual form fields. It acts as an additional layer of control, and a field remains non-editable if either its ReadOnly property is true or viewer-level editing is disabled
 ## See Also
 - [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview)
 - [Form Fields Collection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-collection)
