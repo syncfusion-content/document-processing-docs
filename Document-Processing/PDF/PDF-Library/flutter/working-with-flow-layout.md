@@ -15,7 +15,8 @@ The Syncfusion<sup>&reg;</sup> Flutter PDF supports creating a PDF document with
 
 The following code snippet explains how to create a PDF document with image, paragraph text, header text, and a table using flow model with the help of [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -85,3 +86,4 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
