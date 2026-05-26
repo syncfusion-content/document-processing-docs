@@ -24,15 +24,14 @@ You can use the [contextmenuItemSelect](https://ej2.syncfusion.com/angular/docum
 The following code sample shows how to handle custom actions in the `contextmenuItemSelect` event.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/angular/context-menu-cs1/app/app.jsx %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/context-menu-cs1/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/angular/context-menu-cs1/app/app.tsx %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/context-menu-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/angular/context-menu-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/angular/context-menu-cs1" %}
 
 ## Remove Context Menu Items
 
@@ -41,15 +40,14 @@ You can remove the items in context menu using the [`removeContextMenuItems`](ht
 The following code sample removes the Insert Column item from the row/column header context menu.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/angular/context-menu-cs2/app/app.jsx %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/context-menu-cs2/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/angular/context-menu-cs2/app/app.tsx %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/context-menu-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/angular/context-menu-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/angular/context-menu-cs2" %}
 
 ## Enable/Disable Context Menu Items
 
@@ -58,12 +56,12 @@ You can enable/disable the items in context menu using the [`enableContextMenuIt
 The following code sample disables the Rename item in the pager context menu.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/angular/context-menu-cs3/app/app.jsx %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/context-menu-cs3/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/angular/context-menu-cs3/app/app.tsx %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/context-menu-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "/document-processing/code-snippet/spreadsheet/angular/context-menu-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/angular/context-menu-cs3" %}

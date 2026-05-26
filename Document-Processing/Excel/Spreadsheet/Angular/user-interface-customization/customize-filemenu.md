@@ -24,11 +24,11 @@ A custom item can have its own text, icon, and sub‑items, and its click action
 The following code sample shows how to add custom items in file menu:
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/angular/custom-filemenu-cs1/app/app.jsx %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/custom-filemenu-cs1/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/angular/custom-filemenu-cs1/app/app.tsx %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/custom-filemenu-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,11 +41,11 @@ You can show or hide File menu items using the [hideFileMenuItems](https://ej2.s
 The following code sample shows how to hide or show file menu items:
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/angular/show-or-hide-filemenu-cs1/app/app.jsx %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/show-or-hide-filemenu-cs1/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/angular/show-or-hide-filemenu-cs1/app/app.tsx %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/show-or-hide-filemenu-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -58,11 +58,11 @@ You can use the [enableFileMenuItems](https://ej2.syncfusion.com/angular/documen
 The following code sample shows how to enable or disable file menu items
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/angular/enable-or-disable-filemenu-cs1/app/app.jsx %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/enable-or-disable-filemenu-cs1/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/angular/enable-or-disable-filemenu-cs1/app/app.tsx %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/enable-or-disable-filemenu-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 

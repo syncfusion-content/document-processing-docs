@@ -45,17 +45,16 @@ Clear highlight feature is used to remove the highlight from invalid cells.
 * **Ribbon UI:** Select the **Data** tab, then choose **Clear Highlight**.
 * **Programmatically:** Use the [`removeInvalidHighlight`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#removeinvalidhighlight) method.
 
-
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/angular/data-validation-cs1/app/app.jsx %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/data-validation-cs1/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/angular/data-validation-cs1/app/app.tsx %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/data-validation-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "/document-processing/code-snippet/spreadsheet/angular/data-validation-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/angular/data-validation-cs1" %}
 
 ## Custom Data validation
 
@@ -73,15 +72,15 @@ You can apply custom data validation using two methods.
 The following code example demonstrates how to add custom data validation with a formula in a Spreadsheet.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/angular/data-validation-cs2/app/app.jsx %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/data-validation-cs2/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/angular/data-validation-cs2/app/app.tsx %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/data-validation-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "/document-processing/code-snippet/spreadsheet/angular/data-validation-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/angular/data-validation-cs2" %}
 
 ## Limitations of Data validation
 

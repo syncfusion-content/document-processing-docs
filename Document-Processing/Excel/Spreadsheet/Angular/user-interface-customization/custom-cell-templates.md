@@ -16,11 +16,12 @@ The following sample demonstrates how to insert a [Syncfusion Dropdown component
 The following code sample shows how to create custom cell templates.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/angular/dynamic-cell-template-cs1/app/app.jsx %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/dynamic-cell-template-cs1/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/angular/dynamic-cell-template-cs1/app/app.tsx %}
+
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/dynamic-cell-template-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
