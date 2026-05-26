@@ -67,6 +67,14 @@ Document editor provides option to spellcheck page by page when loading the docu
 this.container.documentEditor.spellChecker.enableOptimizedSpellCheck = true;
 ```
 
+### EnableUserDictionary
+
+By default, Document Editor maintains a shared custom dictionary for all users. You can enable user-specific dictionary support using the `enableUserDictionary` API, which stores and retrieves error words based on the `currentUser` property.
+
+```typescript
+this.container.documentEditor.spellChecker.enableUserDictionary = true;
+```
+
 ### Spell check dictionary cache
 
 Starting from `v20.1.0.xx`, the performance and memory usage of spell checker has been optimized by adding a static method to initialize the dictionaries with specified cache count.
