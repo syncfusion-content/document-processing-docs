@@ -93,3 +93,8 @@ pdfViewer.HighlightAnnotationSettings.Opacity = 0.5f;
 You can change the properties of a selected text markup annotation or remove it by right clicking it and choosing the desired property from the displayed options.
 
 ![customtoolbarimage](images/image3.png)
+
+## See Also
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/enable-disable-undo-redo)
+- [Print PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/printing-pdf)

@@ -750,3 +750,7 @@ Sample:
 
 Note that this sample is common to both mobile design and desktop design. 
 
+## See Also
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Localization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/localization)

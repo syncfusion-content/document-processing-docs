@@ -81,7 +81,7 @@ Add the following Document Editor and dependent component style references to `~
 {% endtabs %}
 
 
-### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
+### Add the Document Editor component
 
 Add an HTML `div` element to act as the Document Editor element in the `index.html` file:
 
