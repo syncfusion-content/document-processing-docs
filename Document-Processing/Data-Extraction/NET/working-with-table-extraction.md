@@ -184,15 +184,12 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
     //Initialize the Smart Table Extractor.
     TableExtractor extractor = new TableExtractor();
-
     //Set the page range for extraction (pages 1 to 3).
     TableExtractionOptions options = new TableExtractionOptions();
     options.PageRange = new int[,] { { 1, 3 } };
     extractor.TableExtractionOptions = options;
-
     //Extract table data from the specified page range as a Markdown string.
     string data = extractor.ExtractTableAsMarkdown(stream);
-
     //Save the extracted output as a new Markdown file.
     File.WriteAllText("Output.md", data, Encoding.UTF8);
 }
@@ -209,15 +206,12 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
 	//Initialize the Smart Table Extractor.
 	TableExtractor extractor = new TableExtractor();
-
 	//Set the page range for extraction (pages 1 to 3).
 	TableExtractionOptions options = new TableExtractionOptions();
 	options.PageRange = new int[,] { { 1, 3 } };
 	extractor.TableExtractionOptions = options;
-
 	//Extract table data from the specified page range as a Markdown string.
 	string data = extractor.ExtractTableAsMarkdown(stream);
-
 	//Save the extracted output as a new Markdown file.
 	File.WriteAllText("Output.md", data, Encoding.UTF8);
 }
@@ -299,7 +293,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     TableExtractionOptions options = new TableExtractionOptions();
     //By default *DetectBorderlessTables is true*
     options.DetectBorderlessTables = false;
-
     //Assign the configured options to the extractor.
     extractor.TableExtractionOptions = options;
     //Extract table data from the PDF document as a JSON string.
