@@ -153,6 +153,25 @@ PdfViewer.PersistZoomOnPageChange = false;
 {% endhighlight %}
 {% endtabs %}
 
+### Enable or Disable Double-Tap Zoom
+
+The PDF Viewer allows users to zoom in and out of the document using a double-tap gesture. This behavior can be controlled programmatically using the `AllowDoubleTapZoom` property.
+
+By default, double-tap zoom is enabled, allowing users to quickly zoom into a specific area of the document. You can disable this feature to prevent accidental zooming or to provide a controlled zooming experience.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfPdfViewer 
+    x:Name="PdfViewer"
+    AllowDoubleTapZoom="False" />
+{% endhighlight %}
+
+{% highlight c# %}
+// Disable double tap zoom
+pdfViewer.AllowDoubleTapZoom = false;
+{% endhighlight %}
+{% endtabs %}
+
 ## See Also
 - [Scrolling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/scrolling)
 - [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/page-navigation)
