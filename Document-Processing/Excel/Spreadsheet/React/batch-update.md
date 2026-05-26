@@ -9,7 +9,7 @@ documentation: ug
 
 # Batch Update in React Spreadsheet
 
-The Spreadsheet refreshes its UI after each operation, such as updating a cell, applying formatting, or inserting rows. This immediate rendering works well for a few actions, but it can lead to performance issues when many operations are executed one after another.
+The Spreadsheet refreshes its UI after each operation performed through public methods, such as updating a cell, applying formatting, or inserting rows. This immediate rendering works well for a few actions, but it can lead to performance issues when many operations are executed one after another.
 
 The **batch update** feature lets you temporarily pause UI rendering, perform multiple operations, and then refresh the UI only once at the end. This helps reduce unnecessary re-rendering and improves the overall performance of bulk updates.
 
