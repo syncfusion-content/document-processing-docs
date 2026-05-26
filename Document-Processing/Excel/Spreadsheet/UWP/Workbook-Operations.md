@@ -47,7 +47,11 @@ this.spreadsheet.Open(fileStream);
 {% endhighlight %}
 {% endtabs %}
 
-N> Place the **Excel file** inside the **Assets** folder of the UWP application. Then, right-click the file, select Properties, and set the Build Action to **Embedded Resource**. This configuration ensures that the above code can correctly access and load the Excel file into the spreadsheet.
+> **Note:** Follow the steps below to ensure the above code properly loads and displays the Excel file:
+> 
+> 1. Add the Excel file inside the **Assets** folder of your UWP application
+> 2. Right-click the file and select **Properties**
+> 3. Set the **Build Action** to **Embedded Resource**
 
 ![Getting-Started_img4](Getting-Started_images/Getting-Started_img4.jpg)
 

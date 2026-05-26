@@ -9,34 +9,36 @@ documentation: ug
 
 # Getting Started with UWP Spreadsheet (SfSpreadsheet)
 
-This section briefly explains how to include the Syncfusion<sup>®</sup> UWP SfSpreadsheet component in UWP App using Visual Studio
+This section briefly explains how to include the [Syncfusion<sup>®</sup> UWP Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) component in UWP App using Visual Studio
 
 ## Prerequisites
 * [System requirements for UWP components](https://help.syncfusion.com/uwp/system-requirements)
 
 ## Create a new UWP App in Visual Studio
 
-You can create a **Spreadsheet UWP Application** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-uwp?view=visualstudio&tabs=vs-2022-17-10) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> UWP](https://help.syncfusion.com/uwp/visual-studio-integration/create-project).
+You can create a **UWP Application** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-uwp?view=visualstudio&tabs=vs-2022-17-10) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> UWP](https://help.syncfusion.com/uwp/visual-studio-integration/create-project).
 
 ## Assemblies Deployment
 
+You can add a UWP spreadsheet component to your application by installing it via NuGet packages (recommended) or by manually adding the required assemblies to the project.
+
 {% tabcontents %}
 
-{% tabcontent Via NuGet Package %}
+{% tabcontent NuGet Package %}
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> UWP SfSpreadsheet NuGet in the App (Recommended)
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> UWP Spreadsheet NuGet Package
 
-To add **UWP SfSpreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install 
+To add **UWP Spreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install 
 
 •	[Syncfusion.SfSpreadsheet.UWP](https://www.nuget.org/packages/Syncfusion.SfSpreadsheet.UWP)
 
 {% endtabcontent %}
 
-{% tabcontent Via Dependencies %}
+{% tabcontent Assemblies(.dll) %}
 
-### Add Dependencies
+### Add Syncfusion® UWP Spreadsheet Assemblies
 
-Below table describes, list of assemblies required to be added in project when the SfSpreadsheet control is used in your application.
+Below table describes, list of assemblies required to be added in project when the UWP Spreadsheet control is used in your application.
 
 <table>
 <tr>
@@ -101,15 +103,13 @@ Contains the classes which is responsible for importing charts like Line charts,
 
 {% endtabcontents %}
 
-## Add UWP SfSpreadsheet component
+## Add UWP Spreadsheet component
 
-SfSpreadsheet control can be added into the application either via designer or via coding. 
+UWP Spreadsheet control can be added to an application either through the designer (XAML) or programmatically using code.
 
 {% tabcontents %}
 
 {% tabcontent Via Designer %}
-
-### Adding a Control via Designer
 
 1.Click and open the MainPage.Xaml file.
 
@@ -160,13 +160,9 @@ _For_ _Ribbon:_
 {% endhighlight %}
 {% endtabs %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
-
 {% endtabcontent %}
 
 {% tabcontent Via Coding %}
-
-### Adding Control Via Coding
 
 Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_._Spreadsheet_” and it can be created programmatically either by using XAML or C# code.
 
@@ -219,19 +215,21 @@ this.Content = grid;
 
 {% endtabs %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
-
 N> To load the SfSpreadsheet in Windows Mobile, add the above code in MainPage.xaml file in DeviceFamily-Mobile folder.
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-_You_ _can_ _get_ _the_ _following_ _output_ _when_ _execute_ _the_ _application._
+## Run the application
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The output will appear as follows:
 
 ![Getting-Started_img2](Getting-Started_images/Getting-Started_img2.jpg)
+
+To learn how to create, open, and save files in the UWP Spreadsheet Component, see [Workbook Operations.](Workbook-Operations)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/uwp-spreadsheet-examples).
 
 ## See Also
-- [Workbook operations such as creating, opening, and saving a workbook](Workbook-Operations)
+- [Display Charts and Sparklines ](Shapes)

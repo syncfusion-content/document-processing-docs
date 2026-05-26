@@ -13,7 +13,7 @@ The [Syncfusion® UWP Spreadsheet(SfSpreadsheet)](https://www.syncfusion.com/spr
 
 ## Key Features
 
-`SfSpreadsheet` includes several advanced features like 
+`UWP Spreadsheet` includes several advanced features like 
 
 * [Ribbon](Ribbon-Customization) – Ribbon integrated with organically enhanced UI experience.
 
@@ -67,4 +67,4 @@ The [Syncfusion® UWP Spreadsheet(SfSpreadsheet)](https://www.syncfusion.com/spr
 * [API Reference](https://help.syncfusion.com/cr/UWP/Syncfusion.UI.Xaml.Spreadsheet.html)
 * [UWP Demos](https://github.com/syncfusion/spreadsheet-editor-sdk-uwp-demos)
 * [GitHub Samples](https://github.com/SyncfusionExamples/uwp-spreadsheet-examples)
-* [Release Notes](https://help.syncfusion.com/document-processing/release-notes)
+* [Release Notes](https://help.syncfusion.com/uwp/release-notes)
