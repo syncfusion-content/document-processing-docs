@@ -9,7 +9,7 @@ keywords: aws lambda save pdf, aws load pdf, c# save pdf, c# load pdf
 
 # Open and save PDF document in AWS Lambda
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, **open and save PDF document in AWS Lambda**. 
+The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can open and save PDF documents in AWS Lambda. 
 
 ## Steps to open and save PDF document in AWS Lambda
 
@@ -50,7 +50,7 @@ step 7: Add the following code sample in **Function.cs** to **open a PDF documen
 {% highlight c# tabtitle="C#" %}
 
 //Open an existing PDF document.
-FileStream document = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
 PdfLoadedDocument document = new PdfLoadedDocument(stream);
 
 {% endhighlight %}
@@ -124,7 +124,7 @@ Step 14: Edit the Memory size and Timeout as maximum in Basic settings of the AW
 Step 1: Create a new console project.
 ![Create a console project](AWS_Images/Console-APP.png)
 
-step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
 * [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)
@@ -164,7 +164,7 @@ InvokeResponse response = await client.InvokeAsync(invoke);
 //Read the response stream
 var stream = new StreamReader(response.Payload);
 JsonReader reader = new JsonTextReader(stream);
-var serilizer = new JsonSerializer();
+var serializer = new JsonSerializer();
 var responseText = serilizer.Deserialize(reader);
 //Convert Base64String into PDF document
 byte[] bytes = Convert.FromBase64String(responseText.ToString());
@@ -177,7 +177,7 @@ System.Diagnostics.Process.Start("Sample.pdf");
 {% endhighlight %}
 {% endtabs %}
 
-By executing the program, you will get the a **PDF document** as follows.
+By executing the program, you will get the PDF document as follows.
 
 ![Open and save a PDF document in AWS Lambda](AWS_Images/Output.png)
 

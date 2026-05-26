@@ -7,11 +7,11 @@ documentation: UG
 ---
 # Create or Generate PDF file in ASP.NET Web Forms
 
-The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms and secure PDF files. 
+The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
 To include the .NET PDF library into your ASP.NET Web application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
-N> This ASP.NET Web Form platform is Deprecated; you can use the same product from [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core) platform.
+N> This ASP.NET Web Forms platform is deprecated; you can use the same product from the [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core) platform.
 
 ## Steps to create PDF document in ASP.NET Web Forms
 
@@ -22,14 +22,14 @@ Step 2: Select the Empty project.
 ![Select the empty project](Asp.Net_images/Creation2.png)
 
 
-Step 2: Install the [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/) NuGet package as reference to your .NET Framework applications from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/) NuGet package as a reference to your .NET Framework applications from [NuGet.org](https://www.nuget.org/).
 ![PDF ASP.NET NuGet package installation](Asp.Net_images/NuGet-package.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the `Syncfusion.Licensing` assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Add a new Web Form in ASP .NET project. Right-click on the project and select **Add > New Item** and add a Web Form from the list. Name it as *MainPage*.
+Step 4: Add a new Web Form in the ASP.NET project. Right-click the project, select **Add > New Item**, and add a Web Form from the list. Name it `MainPage`.
 
-Step 4: Add a new button in the *MainPage.aspx* as follows.
+Step 5: Add a new button in the `MainPage.aspx` as follows.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -48,7 +48,7 @@ Step 4: Add a new button in the *MainPage.aspx* as follows.
 
 {% endhighlight %} 
 
-Step 5: Include the following namespaces in your *MainPage.aspx.cs* file.
+Step 6: Include the following namespaces in your `MainPage.aspx.cs` file.
    
 {% highlight c# tabtitle="C#" %}
 
@@ -58,7 +58,7 @@ using System.Drawing;
 
 {% endhighlight %}
 
-Step 6: Include the following code example in the click event of the button in *MainPage.aspx.cs* to generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. Then use the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object to draw the text on the PDF page.
+Step 7: Include the following code example in the click event of the button in `MainPage.aspx.cs` to generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. Then use the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object to draw text on the PDF page.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -79,7 +79,7 @@ document.Save("Output.pdf", HttpContext.Current.Response, HttpReadType.Save);
 
 {% endhighlight %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET/Create-a-new-DPF-document).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET/Create-a-new-PDF-document).
 
 By executing the program, you will get the PDF document as follows.
 ![Getting started PDF output document](GettingStarted_images/pdf-generation-output.png)
@@ -89,6 +89,9 @@ By executing the program, you will get the PDF document as follows.
 Load image stream from the local files on disk and draw the images through the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Single_System_Single_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The following code example shows how to create a PDF document with an image.
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -117,6 +120,11 @@ By executing the program, you will get the PDF document as follows.
 The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create a table from a [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_DataSource) (data set, data table, arrays, or IEnumerable object) in a PDF document.The following code example shows how to create a PDF document with a simple table.
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Grid;
+using System.Data;
+using Syncfusion.Drawing;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -169,10 +177,10 @@ PdfGraphics graphics = page.Graphics;
 
 {% endhighlight %}
 
-1. Essential<sup>&reg;</sup> PDF has APIs similar to the .NET GDI plus which helps to draw elements to the PDF page just like 2D drawing in .NET. 
-2. Unlike System.Drawing APIs all the units are measured in point instead of pixel. 
-3. In PDF, all the elements are placed in absolute positions and has the possibility for content overlapping if misplaced. 
-4. Essential<sup>&reg;</sup> PDF provides the rendered bounds for each and every elements added through [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) objects. This can be used to add successive elements and prevent content overlap.
+1. Essential<sup>&reg;</sup> PDF has APIs similar to the .NET GDI+ which help draw elements to the PDF page just like 2D drawing in .NET.
+2. Unlike System.Drawing APIs, all units are measured in points instead of pixels.
+3. In PDF, all elements are placed at absolute positions and may overlap if misplaced.
+4. Essential<sup>&reg;</sup> PDF provides the rendered bounds for elements added through [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) objects. These bounds can be used to add successive elements and prevent content overlap.
 
 The following code example explains how to add an image from disk to a PDF document, by providing the rectangle coordinates. 
 
@@ -191,7 +199,7 @@ The following methods can be used to add text to a PDF document.
 1. [DrawString()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html)
 2. [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) class.
 
-The ```PdfTextElement``` provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. This is not available in the ```DrawString``` method. 
+The `PdfTextElement` provides the layout result of the added text by using the location of the next element to prevent content overlapping. This is not available in the `DrawString` method.
 
 The following code example adds the necessary text such as address, invoice number and date to create a basic invoice application. 
  
@@ -285,7 +293,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET/Create-PDF-document-with-basic-elemets).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET/Create-PDF-document-with-basic-elements).
 
 The following screenshot shows the invoice PDF document created by using Essential<sup>&reg;</sup> PDF.
 ![Invoice PDF document](GettingStarted_images/pdf-invoice.png)
@@ -302,9 +310,12 @@ Essential<sup>&reg;</sup> PDF allows you to create and manipulate existing form 
 The following guide shows how to fill out a sample PDF form.
 ![Sample PDF form](GettingStarted_images/fill-pdf-forms.png)
 
-The Essential<sup>&reg;</sup> PDF allows you to fill the form fields by using [PdfLoadedField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedField.html) class. Get the form field either by using its field name or field index.
+The Essential<sup>&reg;</sup> PDF allows you to fill the form fields by using the [PdfLoadedField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedField.html) class. Get the form field either by using its field name or field index.
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Loads the PDF form.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(@"JobApplication.pdf");
@@ -331,7 +342,7 @@ loadedDocument.Close(true);
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET/Fill-form-in-an-existing-PDF-document).
 
-The filled form is shown in adobe reader application as follows.
+The filled form is shown in Adobe Reader as follows.
 ![Filled PDF form](GettingStarted_images/filled-form-in-pdf.jpeg)
 
 ## Merge PDF Documents
@@ -341,6 +352,8 @@ The Essential<sup>&reg;</sup> PDF supports [merging multiple PDF documents](http
 Refer to the following code example to merge multiple documents from disk.
  
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Pdf;
 
 //Creates the new PDF document.
 PdfDocument finalDoc = new PdfDocument();
