@@ -210,3 +210,8 @@ private void PdfViewer_FreeTextCalloutAnnotationResized (object sender, FreeText
 }
 
 {% endhighlight %}
+
+## See Also
+- [Text Selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/select-and-copy-text)
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/enable-disable-undo-redo)

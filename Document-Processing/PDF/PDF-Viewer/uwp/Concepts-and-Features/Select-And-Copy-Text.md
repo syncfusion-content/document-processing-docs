@@ -105,3 +105,8 @@ private void PdfViewer_TextSelectionCompleted(object sender, TextSelectionComple
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Viewing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)
+- [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-text-search)
+- [Enable and disable text selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/enable-and-disable-text-selection)

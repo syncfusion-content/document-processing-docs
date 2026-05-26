@@ -11,21 +11,21 @@ keywords: Excel, SDK, Automation, API, convert
 
 {% doccards %}
 
-{% doccard text="Excel to PDF" link="/document-processing/excel/conversions/excel-to-pdf/overview" icon="/document-processing-docs/Document-Processing/excel/conversions/Images/Conversions.svg" %}
+{% doccard text="Excel to PDF" link="/document-processing/excel/conversions/excel-to-pdf/overview" icon="/document-processing/excel/conversions/images/Conversions.svg" %}
 
-{% doccard text="Excel to Image" link="/document-processing/excel/conversions/excel-to-image/overview" icon="/document-processing-docs/Document-Processing/excel/conversions/Images/Conversions.svg" %}
+{% doccard text="Excel to Image" link="/document-processing/excel/conversions/excel-to-image/overview" icon="/document-processing/excel/conversions/images/Conversions.svg" %}
 
-{% doccard text="Chart to Image" link="/document-processing/excel/conversions/chart-to-image/overview" icon="/document-processing-docs/Document-Processing/excel/conversions/Images/Conversions.svg" %}
+{% doccard text="Chart to Image" link="/document-processing/excel/conversions/chart-to-image/overview" icon="/document-processing/excel/conversions/images/Conversions.svg" %}
 
-{% doccard text="Excel to CSV" link="/document-processing/excel/conversions/excel-to-csv/overview" icon="/document-processing-docs/Document-Processing/excel/conversions/Images/Conversions.svg" %}
+{% doccard text="Excel to CSV" link="/document-processing/excel/conversions/excel-to-csv/overview" icon="/document-processing/excel/conversions/images/Conversions.svg" %}
 
-{% doccard text="CSV to Excel" link="/document-processing/excel/conversions/csv-to-excel/overview" icon="/document-processing-docs/Document-Processing/excel/conversions/Images/Conversions.svg" %}
+{% doccard text="CSV to Excel" link="/document-processing/excel/conversions/csv-to-excel/overview" icon="/document-processing/excel/conversions/images/Conversions.svg" %}
 
-{% doccard text="Excel to HTML" link="/document-processing/excel/conversions/excel-to-html/overview" icon="/document-processing-docs/Document-Processing/excel/conversions/Images/" %}
+{% doccard text="Excel to HTML" link="/document-processing/excel/conversions/excel-to-html/overview" icon="/document-processing/excel/conversions/images/Conversions.svg" %}
 
-{% doccard text="Excel to ODS" link="/document-processing/excel/conversions/excel-to-ods/overview" icon="/document-processing-docs/Document-Processing/excel/conversions/Images/Conversions.svg" %}
+{% doccard text="Excel to ODS" link="/document-processing/excel/conversions/excel-to-ods/overview" icon="/document-processing/excel/conversions/images/Conversions.svg" %}
 
-{% doccard text="Excel to JSON" link="/document-processing/excel/conversions/excel-to-json/overview" icon="/document-processing-docs/Document-Processing/excel/conversions/Images/Conversions.svg" %}
+{% doccard text="Excel to JSON" link="/document-processing/excel/conversions/excel-to-json/overview" icon="/document-processing/excel/conversions/images/Conversions.svg" %}
 
 {% enddoccards %}
 

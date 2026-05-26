@@ -1,5 +1,5 @@
 ---
-title: Working with Table Extraction | Syncfusion
+title: Working with Data Extraction | Syncfusion
 description: Syncfusion® Smart Data Extractor is a .NET library that extracts text, tables, forms, and images from PDF and image files with structured outputs.
 platform: document-processing
 control: SmartDataExtractor
@@ -184,7 +184,6 @@ using (FileStream stream = new FileStream("Input.png", FileMode.Open, FileAccess
     //Save the extracted Markdown data into an output file.
     File.WriteAllText("Output.md", data, Encoding.UTF8);
 }
-
 
 {% endhighlight %}
 
@@ -392,7 +391,7 @@ using Syncfusion.SmartDataExtractor;
 // Load the input PDF file.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Data Extractor.
+    // Initialize the Data Extractor.
 	DataExtractor extractor = new DataExtractor();
 	// Disable table detection.
 	//By default - true
@@ -416,7 +415,7 @@ using Syncfusion.SmartDataExtractor;
 // Load the input PDF file.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Data Extractor.
+    // Initialize the  Data Extractor.
     DataExtractor extractor = new DataExtractor();
     // Disable table detection.
     //By default - true
@@ -425,7 +424,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
     // Save the extracted output as a new json file.
     pdf.Save("Output.json");
-    // Close the document to release resources.
+    // Close the document.
     pdf.Close(true);
 }
 
@@ -452,10 +451,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
     //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
-
     //Enable form detection in the document to identify form fields.
     extractor.EnableFormDetection = true;
-    
     //Configure form recognition options for advanced detection.
     FormRecognizeOptions formOptions = new FormRecognizeOptions();
     //Recognize forms across pages 1 to 5 in the document.
@@ -472,10 +469,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     formOptions.DetectRadioButtons = true;
     //Assign the configured form recognition options to the extractor.
     extractor.FormRecognizeOptions = formOptions;
-
     //Extract form data and return as a loaded json file.
     PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-
     //Save the extracted output as a new json file.
     pdf.Save("Output.json");
     //Close the document.
@@ -495,10 +490,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
 	//Initialize the Data Extractor.
 	DataExtractor extractor = new DataExtractor();
-
 	//Enable form detection in the document to identify form fields.
 	extractor.EnableFormDetection = true;
-	
 	//Configure form recognition options for advanced detection.
 	FormRecognizeOptions formOptions = new FormRecognizeOptions();
 	//Recognize forms across pages 1 to 5 in the document.
@@ -515,10 +508,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 	formOptions.DetectRadioButtons = true;
 	//Assign the configured form recognition options to the extractor.
 	extractor.FormRecognizeOptions = formOptions;
-
 	//Extract form data and return as a loaded json document.
 	PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-
 	//Save the extracted output as a new json file.
 	pdf.Save("Output.json");
 	//Close the document.
@@ -546,12 +537,10 @@ using Syncfusion.SmartTableExtractor;
 // Load the input PDF file.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-	// Initialize the Smart Data Extractor.
+	// Initialize the Data Extractor.
 	DataExtractor extractor = new DataExtractor();
-
 	// Enable table detection and set confidence threshold.
 	extractor.EnableTableDetection = true;
-
 	// Configure table extraction options.
 	TableExtractionOptions tableOptions = new TableExtractionOptions();
 	// Extract tables across pages 1 to 5.
@@ -581,7 +570,7 @@ using Syncfusion.SmartTableExtractor;
 // Load the input PDF file.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-	// Initialize the Smart Data Extractor.
+	// Initialize the Data Extractor.
 	DataExtractor extractor = new DataExtractor();
 	// Enable table detection and set confidence threshold.
 	extractor.EnableTableDetection = true;
@@ -623,7 +612,7 @@ using Syncfusion.SmartDataExtractor;
 //  Load the input PDF file.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Data Extractor.
+    // Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //  Apply confidence threshold to extract the data.
     // Only elements with confidence >= 0.75 will be included in the results.
@@ -647,7 +636,7 @@ using Syncfusion.SmartDataExtractor;
 //  Load the input PDF file.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Data Extractor.
+    // Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //  Apply confidence threshold to extract the data.
     // Only elements with confidence >= 0.75 will be included in the results.

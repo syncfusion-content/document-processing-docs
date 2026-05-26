@@ -48,24 +48,24 @@ Step 4: Add a new button to the **MainPage.xaml** as shown below.
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Extract_Data_MAUI.MainPage">
 
-	<ScrollView>
-		<VerticalStackLayout
+    <ScrollView>
+        <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
 
-			<Label
+            <Label
                 Text="Smart Data Extractor Demo"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-			<Button
+            <Button
                 Text="Extract Data from PDF"
                 SemanticProperties.Hint="Extract structured data from PDF"
                 Clicked="OnExtractDataClicked"
                 HorizontalOptions="Fill" /> 
 
-		</VerticalStackLayout>
-	</ScrollView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
 
 {% endhighlight %}
