@@ -12,6 +12,8 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 This section walks you through the UI customization options supported in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
+N>The PDF Viewer currently does not support system text auto scaling. Changing the device or accessibility font size settings will not automatically scale the built-in toolbar, other built-in text elements, or the PDF document content. Use the built-in zoom features to adjust document readability.
+
 ## Customize the loading indicator
 
 You can customize the loading indicator’s properties by applying a style with the `TargetType` property to `ActivityIndicator`. You may also need to set the [ApplyToDerivedTypes](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/styles/xaml?view=net-maui-7.0#apply-a-style-to-derived-types) property to `True` to get the style applied to the derived classes. See the following code example to customize the color of the loading indicator.
