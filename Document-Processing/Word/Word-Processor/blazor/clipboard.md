@@ -71,4 +71,6 @@ The [`PasteAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Docum
 *   If `true` (default), it pastes from the editor's local clipboard.
 *   If `false`, it pastes from the system clipboard.
 
+N> When you paste content from an external source into the Document Editor, some formatting or elements may not appear as expected because certain elements are not supported. Refer [here](./unsupported-features) to learn more about unsupported elements.
+
 Explore the [Blazor Word Processor example](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) to see how to render and configure the Document Editor.

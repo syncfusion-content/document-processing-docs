@@ -44,7 +44,6 @@ This section describes the unsupported elements in Syncfusion® JavaScript (ES6)
 | Feature | Supported |
 |--------|----------------|
 | ActiveX Controls | No |
-| Cover Page | No |
 | Embedded Objects | No |
 | Images | Bitmap images only |
 | Ink/Draw | No |
