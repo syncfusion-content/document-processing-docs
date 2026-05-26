@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Supported File Formats in React DOCX Editor | Syncfusion
-description: Learn about the file formats supported by React DOCX Editor (Document Editor).
+description: Learn more about the supported file formats in Syncfusion® React DOCX Editor (Document Editor) for opening and exporting documents.
 control: Supported File Formats
 platform: document-processing
 documentation: ug
