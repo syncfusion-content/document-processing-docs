@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET Core application. 
 
-## Steps to create a Document Editor
+## Steps to create an ASP.NET Core DOCX Editor
 
 This section briefly explains how to include [Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) control in your ASP.NET Core application using Visual Studio.
 

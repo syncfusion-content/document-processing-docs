@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a ASP.NET MVC application. 
 
-## Steps to create a Document Editor
+## Steps to create an ASP.NET MVC DOCX Editor
 
 This section briefly explains about how to include [Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) control in your ASP.NET MVC application using Visual Studio.
 

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a JavaScript (ES5) application.
 
-## Steps to create a Document Editor using JavaScript (ES5)
+## Steps to create a DOCX Editor using JavaScript (ES5)
 
 Create a folder named `documenteditor-app` with `index.html` and `index.js` files. Your application structure should look like this:
 
