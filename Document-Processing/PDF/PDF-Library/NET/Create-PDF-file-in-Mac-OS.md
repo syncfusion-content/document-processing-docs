@@ -7,11 +7,11 @@ documentation: UG
 keywords: mac os save pdf, mac os load pdf, c# save pdf, c# load pdf
 ---
 
-# Create PDF document on Mac OS
+# Create PDF document on macOS
 
-The [Syncfusion .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **Create PDF document on Mac OS**. 
+The [Syncfusion .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can create a PDF document on macOS.
 
-## Steps to Create PDF document programmatically in .NET Core application on MacOS
+## Steps to create PDF document programmatically in .NET Core application on macOS
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -23,10 +23,10 @@ The [Syncfusion .NET Core PDF library](https://www.syncfusion.com/document-proce
 {% endtabcontent %}
 {% endtabcontents %}
 
-A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Mac).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Mac).
 
-By executing the program, you will get the **PDF document** as follows.
-![Mac OS output PDF document](GettingStarted_images/Open_and_save_output.png)
+By executing the program, you will get the PDF document as follows.
+![macOS output PDF document](GettingStarted_images/Open_and_save_output.png)
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 

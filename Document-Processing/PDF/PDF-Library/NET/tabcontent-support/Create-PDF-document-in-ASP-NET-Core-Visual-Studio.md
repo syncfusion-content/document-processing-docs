@@ -20,11 +20,10 @@ Step 4: A default controller with name HomeController.cs gets added on creation 
 
 {% highlight c# tabtitle="C#" %}
 
-   using Syncfusion.Pdf;
-   using Syncfusion.Pdf.Graphics;
-   using Syncfusion.Drawing;
-   using System.IO;
-
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+using System.IO;
 {% endhighlight %}
 
 Step 5: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.

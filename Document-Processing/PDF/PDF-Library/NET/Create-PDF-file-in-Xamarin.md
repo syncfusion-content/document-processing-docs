@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Create or Generate PDF file in Xamarin
 
-The Syncfusion<sup>&reg;</sup> [Xamarin PDF library](https://www.syncfusion.com/document-processing/pdf-framework/xamarin/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
+The Syncfusion<sup>&reg;</sup> [Xamarin PDF library](https://www.syncfusion.com/document-processing/pdf-framework/xamarin/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
 To include the Syncfusion<sup>&reg;</sup> Xamarin PDF library into your Xamarin application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
@@ -25,7 +25,7 @@ N> If .NET Standard is not available in the code sharing strategy, the Portable 
 Step 3: Install the [Syncfusion.Xamarin.PDF](https://www.nuget.org/packages/Syncfusion.Xamarin.PDF/) NuGet package as a reference to your Xamarin.Forms applications from [NuGet.org](https://www.nuget.org/).
 ![Install Xamarin PDF NuGet package](Xamarin_images/NuGet_package.jpg)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the `Syncfusion.Licensing` assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Add new Forms XAML page in portable project if there is no XAML page is defined in the App class. Otherwise, proceed to the next step.
 
@@ -48,10 +48,10 @@ Step 5: In the *MainXamlPage.xaml*, add new button as follows.
 {% highlight c# tabtitle="C#" %}
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GettingStarted. MainXamlPage">
-<StackLayout VerticalOptions="Center">
-<Button Text="Generate Document" Clicked="OnButtonClicked" HorizontalOptions="Center"/>
-</StackLayout>
+             x:Class="GettingStarted.MainXamlPage">
+  <StackLayout VerticalOptions="Center">
+    <Button Text="Generate Document" Clicked="OnButtonClicked" HorizontalOptions="Center"/>
+  </StackLayout>
 </ContentPage>
 {% endhighlight %}
 
@@ -86,7 +86,7 @@ document.Save(stream);
 //Close the document.
 document.Close(true);
 //Save the stream as a file in the device and invoke it for viewing.
-Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Output.pdf", "application / pdf", stream);
+Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Output.pdf", "application/pdf", stream);
 
 {% endhighlight %}
 
@@ -134,7 +134,7 @@ Step 8: Download the helper files from this [link](https://www.syncfusion.com/do
   </tr>     
 </table>
 
-N> Introduced a new runtime permission model for the Android SDK version 23 and above. So, include the following code for enabling the Android file provider to save and view the generated PDF document.
+N> Android introduced a new runtime permission model for SDK version 23 and above. Include the following code to enable the Android file provider to save and view the generated PDF document.
 
 Step 9(i): Create a new XML file with the name of provider_paths.xml under the Android project Resources folder and add the following code in it.
 Eg: Resources/xml/provider_paths.xml
@@ -164,9 +164,9 @@ android:resource="@xml/provider_paths" />
 </manifest>
 {% endhighlight %}
 
-### Please include the changes if you deploy the application in Android 11:
+### Please include the following changes if you deploy the application on Android 11:
 
-* Enabled the androidLegacyExternalStorage in the AndroidManifest.xml file.
+* Enable the `android:requestLegacyExternalStorage` attribute in the AndroidManifest.xml file when required.
 
 {% highlight c# tabtitle="C#" %}
 
@@ -184,7 +184,7 @@ android:resource="@xml/provider_paths" />
 
 {% endhighlight %}
 
-Step 10: Compile and execute the application. This will creates a simple PDF document.
+Step 10: Compile and execute the application. This will create a simple PDF document.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Xamarin/CreatePDFDocument).
 
@@ -196,6 +196,9 @@ By executing the program, you will get the PDF document as follows.
 Load image stream from the local files on disk and draw the images through the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Single_System_Single_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The following code example shows how to create a PDF document with an image.
 
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -230,6 +233,10 @@ By executing the program, you will get the PDF document as follows.
 The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create a table from a [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_DataSource) (data set, data table, arrays, or IEnumerable object) in a PDF document.The following code example shows how to create a PDF document with a simple table.
  
 {% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Grid;
+using System.Data;
 
 //Create a new PDF document.
 PdfDocument doc = new PdfDocument();
@@ -288,10 +295,10 @@ PdfGraphics graphics = page.Graphics;
 
 {% endhighlight %}
 
-1. Essential<sup>&reg;</sup> PDF has APIs similar to the .NET GDI plus which helps to draw elements to the PDF page just like 2D drawing in .NET. 
-2. Unlike System.Drawing APIs all the units are measured in point instead of pixel. 
-3. In PDF, all the elements are placed in absolute positions and has the possibility for content overlapping if misplaced. 
-4. Essential<sup>&reg;</sup> PDF provides the rendered bounds for each and every elements added through [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) objects. This can be used to add successive elements and prevent content overlap.
+1. Essential<sup>&reg;</sup> PDF has APIs similar to the .NET GDI+ which help draw elements to the PDF page like 2D drawing in .NET.
+2. Unlike System.Drawing APIs, all units are measured in points instead of pixels.
+3. In PDF, elements are placed at absolute positions and may overlap if misplaced.
+4. Essential<sup>&reg;</sup> PDF provides the rendered bounds for elements added through [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) objects. These bounds can be used to add successive elements and prevent content overlap.
 
 The following code example explains how to add an image from disk to a PDF document, by providing the rectangle coordinates. 
  
@@ -348,7 +355,7 @@ graphics.DrawLine(linePen, startPoint, endPoint);
 
 {% endhighlight %}
 
-Essential<sup>&reg;</sup> PDF provides two types of table models. The difference between both the table models can be referred from the link 
+Essential<sup>&reg;</sup> PDF provides two types of table models. The difference between the two table models can be found at the following link:
 [Difference between PdfLightTable and PdfGrid](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-tables)
 
 Since the invoice document requires only simple cell customizations, the given code example explains how to create a simple invoice table by using [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html).
@@ -459,7 +466,7 @@ Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Output.pdf", "applicat
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Xamarin/PDFFormFilling).
 
-The filled form is shown in adobe reader application as follows.
+The filled form is shown in Adobe Reader as follows.
 ![Filled PDF form](GettingStarted_images/filled-form-in-pdf.jpeg)
 
 ## Merge PDF Documents

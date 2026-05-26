@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Open PDF document from Azure Blob Storage
 
-To load a PDF file from Azure blob storage, you can follow the steps below
+To load a PDF file from Azure Blob Storage, follow these steps:
 
 
 Step 1: Create a simple console application

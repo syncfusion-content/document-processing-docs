@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PDF document in AKS Environment 
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in AKS Environment**.
+The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in AKS Environment**.
 
 ## Steps to create PDF document in AKS Environment 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
@@ -132,14 +132,14 @@ Step 7: Add a new action method named CreatePDFDocument in HomeController.cs fil
 Step 1: Right-click the project and select Publish option.
 ![Right-click the project and select the Publish option](AKS_images/Click_publish_button.png)
 
-Step 2: Select the publish target as **Docker Contain Registry**.
+Step 2: Select the publish target as **Docker Container Registry**.
 ![Select the publish target as Azure](AKS_images/Target.png)
 
-Step 3: Select the Specific target as **Azure Contain Registry**.
+Step 3: Select the Specific target as **Azure Container Registry**.
 ![Select the publish target](AKS_images/Specific_target.png)
 
 Step 4: Once you select your Subscription, The registry we created earlier and the resource group it is in should be detected. Select it and click Finish. 
-![Select the Resourse_group_name](AKS_images/Resourse_group_name.png)
+![Select the Resource_group_name](AKS_images/Resource_group_name.png)
 
 Step 5: Select the container build option and click Finish. 
 ![Select the Container build option](AKS_images/Container_build_option.png)
@@ -153,8 +153,8 @@ Step 7: Click the **Publish** button.
 Step 8: It will push the docker image to the Azure container registry and deploy it to the Azure container instance.
 ![Push the docker image to the Azure container](AKS_images/Push_the_docker_image.png) 
 
-Step 9: Now, Publish has been succeeded.
-![Publish has been succeeded](AKS_images/Publish_link.png)
+Step 9: Publish succeeded.
+![Publish succeeded](AKS_images/Publish_link.png)
 
 ## Deploy Container Image to AKS
 Step 1: Now we can deploy container to the AKS cluster. Start by opening the Azure portal, browsing to the Subscription and opening the Cloud Shell (BASH). We will use the kubectl tool to manage the cluster.
@@ -294,6 +294,6 @@ If you want to clean up the cluster, you can run the following commands:
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Create%20PDF%20document%20in%20AKS%20environment/createpdfdocument).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
 
 An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core. 
