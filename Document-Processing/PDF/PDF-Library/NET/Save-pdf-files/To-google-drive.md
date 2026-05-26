@@ -42,8 +42,7 @@ Step 4: Include the following namespaces in the Program.cs file.
 
 {% endtabs %}
 
-
-Step 5: Add the below code example to create a simple PDF and save in google drive.
+Step 5: Add the below code example to create a simple PDF and save in Google Drive.
 
 {% tabs %}
 

@@ -9,7 +9,7 @@ keywords: google app engine save pdf, app engine load pdf, c# save pdf, c# load 
 
 # Open and save PDF document in Google App Engine
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programatically without the dependency on Adobe Acrobat. Using this library, you can **open and save PDF document in Google App Engine**. 
+The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save PDF document in Google App Engine**. 
 
 ## Set up App Engine
 
@@ -93,7 +93,7 @@ PdfLoadedDocument document = new PdfLoadedDocument(docStream);
 {% endhighlight %}
 {% endtabs %}
 
-step 9: Add the following code example to add paragraph and table to the PDF document.
+Step 9: Add the following code example to add paragraph and table to the PDF document.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -139,7 +139,7 @@ document.Save(stream);
 stream.Position = 0;
 //Close the document.
 document.Close(true);
-//Download Word document in the browser.
+//Download PDF document in the browser.
 return File(stream, "application/pdf", "Sample.pdf");
 
 {% endhighlight %}
@@ -149,7 +149,7 @@ return File(stream, "application/pdf", "Sample.pdf");
 
 Step 1: Open the **Cloud Shell editor**.
 
-![Cloud Sell editor](GCP_Images/Cloud_Shell_Editor.png)
+![Cloud Shell editor](GCP_Images/Cloud_Shell_Editor.png)
 
 Step 2: Drag and drop the sample from your local machine to **Workspace**.
 ![Add Project](GCP_Images/Add_Project.png)
