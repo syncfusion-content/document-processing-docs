@@ -213,9 +213,191 @@ Borders can be applied programmatically to a specific cell or range of cells usi
 {% endhighlight %}
 {% endtabs %}
 
+# Conditional Formatting
 
+Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`AllowConditionalFormat`](#allowconditionalformat) property.
+
+> The default value for the `AllowConditionalFormat` property is `true`.
+
+## Apply Conditional Formatting
+
+You can apply conditional formatting by using one of the following ways:
+
+* Select the conditional formatting icon in the Ribbon toolbar under the Home Tab.
+
+* Using the [`ConditionalFormatAsync()`](#conditionalformatasync) method to define the condition.
+
+Conditional formatting has the following types in the spreadsheet:
+
+## Highlight Cells Rules
+
+Highlight cells rules option in the conditional formatting enables you to highlight cells with a preset color depending on the cell's value.
+
+The following options can be given for the highlight cells rules as type:
+
+### ConditionalFormatType - Highlight Cells Rules
+
+| Enum | Value | Purpose |
+|------|-------|---------|
+| `GreaterThan` | GreaterThan | Highlights cells with values greater than a specified threshold |
+| `LessThan` | LessThan | Highlights cells with values less than a specified threshold |
+| `Between` | Between | Highlights cells with values falling within a specified range |
+| `EqualTo` | EqualTo | Highlights cells with values equal to a specified value |
+| `ContainsText` | ContainsText | Highlights cells containing specified text |
+| `DateOccur` | DateOccur | Highlights cells containing dates matching a specified time period |
+| `Duplicate` | Duplicate | Highlights cells with duplicate values within the evaluated range |
+| `Unique` | Unique | Highlights cells with unique values within the evaluated range |
+
+The following preset colors can be used for formatting styles:
+
+### ConditionalFormatColor - Preset Colors
+
+| Enum | Value | Purpose |
+|------|-------|---------|
+| `RedFillWithDarkRedText` | RedFillWithDarkRedText | Light Red Fill with Dark Red Text |
+| `YellowFillWithDarkYellowText` | YellowFillWithDarkYellowText | Yellow Fill with Dark Yellow Text |
+| `GreenFillWithDarkGreenText` | GreenFillWithDarkGreenText | Green Fill with Dark Green Text |
+| `RedFill` | RedFill | Red Fill |
+| `RedText` | RedText | Red Text |
+
+## Top Bottom Rules
+
+Top bottom rules option in the conditional formatting allows you to apply formatting to the cells that satisfy a statistical condition with other cells in the range.
+
+The following options can be given for the top bottom rules as type:
+
+### ConditionalFormatType - Top/Bottom Rules
+
+| Enum | Value | Purpose |
+|------|-------|---------|
+| `Top10Items` | Top10Items | Highlights the top N items in the range by value rank |
+| `Bottom10Items` | Bottom10Items | Highlights the bottom N items in the range by value rank |
+| `Top10Percentage` | Top10Percentage | Highlights the top N percent of items in the range by value |
+| `Bottom10Percentage` | Bottom10Percentage | Highlights the bottom N percent of items in the range by value |
+| `BelowAverage` | BelowAverage | Highlights cells with values below the average of the range |
+| `AboveAverage` | AboveAverage | Highlights cells with values above the average of the range |
+
+## Data Bars
+
+You can apply data bars to represent the data graphically inside a cell. The longest bar represents the highest value and the shorter bars represent the smaller values.
+
+The following options can be given for the data bars as type:
+
+### ConditionalFormatType - Data Bars
+
+| Enum | Value | Purpose |
+|------|-------|---------|
+| `BlueDataBar` | BlueDataBar | Data bar visualization with blue fill color |
+| `GreenDataBar` | GreenDataBar | Data bar visualization with green fill color |
+| `RedDataBar` | RedDataBar | Data bar visualization with red fill color |
+| `OrangeDataBar` | OrangeDataBar | Data bar visualization with orange fill color |
+| `LightBlueDataBar` | LightBlueDataBar | Data bar visualization with light blue fill color |
+| `PurpleDataBar` | PurpleDataBar | Data bar visualization with purple fill color |
+
+## Color Scales
+
+Using color scales, you can format your cells with two or three colors, where different color shades represent the different cell values. In the Green-Yellow-Red (GYR) Color Scale, the cell that holds the minimum value is colored as red. The cell that holds the median is colored as yellow, and the cell that holds the maximum value is colored as green. All other cells are colored proportionally.
+
+The following options can be given for the color scales as type:
+
+### ConditionalFormatType - Color Scales
+
+| Enum | Value | Purpose |
+|------|-------|---------|
+| `GreenYellowRedColorScale` | GreenYellowRedColorScale | Three-color scale (Green → Yellow → Red) |
+| `RedYellowGreenColorScale` | RedYellowGreenColorScale | Three-color scale (Red → Yellow → Green) |
+| `GreenWhiteRedColorScale` | GreenWhiteRedColorScale | Three-color scale (Green → White → Red) |
+| `RedWhiteGreenColorScale` | RedWhiteGreenColorScale | Three-color scale (Red → White → Green) |
+| `BlueWhiteRedColorScale` | BlueWhiteRedColorScale | Two-color scale (Blue → White → Red) |
+| `RedWhiteBlueColorScale` | RedWhiteBlueColorScale | Two-color scale (Red → White → Blue) |
+| `WhiteRedColorScale` | WhiteRedColorScale | Two-color scale (White → Red) |
+| `RedWhiteColorScale` | RedWhiteColorScale | Two-color scale (Red → White) |
+| `GreenWhiteColorScale` | GreenWhiteColorScale | Two-color scale (Green → White) |
+| `WhiteGreenColorScale` | WhiteGreenColorScale | Two-color scale (White → Green) |
+| `GreenYellowColorScale` | GreenYellowColorScale | Two-color scale (Green → Yellow) |
+| `YellowGreenColorScale` | YellowGreenColorScale | Two-color scale (Yellow → Green) |
+
+## Icon Sets
+
+Icon sets will help you to visually represent your data with icons. Every icon represents a range of values. In the Three Arrows (colored) icon, the green arrow icon represents the values greater than 67%, the yellow arrow icon represents the values between 33% to 67%, and the red arrow icon represents the values less than 33%.
+
+The following options can be given for the icon sets as type:
+
+### ConditionalFormatType - Icon Sets
+
+| Enum | Value | Purpose |
+|------|-------|---------|
+| `ThreeArrows` | ThreeArrows | Three-arrow icon set with colored indicators |
+| `ThreeArrowsGray` | ThreeArrowsGray | Three-arrow icon set with grayscale coloring |
+| `FourArrowsGray` | FourArrowsGray | Four-arrow icon set with grayscale coloring |
+| `FourArrows` | FourArrows | Four-arrow icon set with colored indicators |
+| `FiveArrowsGray` | FiveArrowsGray | Five-arrow icon set with grayscale coloring |
+| `FiveArrows` | FiveArrows | Five-arrow icon set with colored indicators |
+| `ThreeTrafficLights1` | ThreeTrafficLights1 | Three traffic light icon set with standard coloring |
+| `ThreeTrafficLights2` | ThreeTrafficLights2 | Three traffic light icon set with alternate coloring |
+| `ThreeSigns` | ThreeSigns | Three-sign icon set with caution-style icons |
+| `FourTrafficLights` | FourTrafficLights | Four traffic light icon set |
+| `FourRedToBlack` | FourRedToBlack | Four-icon set progressing from red to black |
+| `ThreeSymbols` | ThreeSymbols | Three-symbol icon set with colored symbols |
+| `ThreeSymbols2` | ThreeSymbols2 | Alternative three-symbol icon set with colored symbols |
+| `ThreeFlags` | ThreeFlags | Three-flag icon set for categorization |
+| `FourRating` | FourRating | Four-star rating icon set |
+| `FiveQuarters` | FiveQuarters | Five-quarters icon set for fractional representation |
+| `FiveRating` | FiveRating | Five-star rating icon set |
+| `ThreeTriangles` | ThreeTriangles | Three-triangle icon set for direction or trend indication |
+| `ThreeStars` | ThreeStars | Three-star icon set for rating representation |
+| `FiveBoxes` | FiveBoxes | Five-box icon set for level or stage representation |
+
+## Custom Format
+
+Using the custom format for conditional formatting you can set cell styles like color, background color, font style, font weight, and underline.
+
+In the MAY and JUN columns, we have applied conditional formatting custom format.
+
+> In the Conditional format, custom format is supported for Highlight cell rules and Top bottom rules.
+
+## Clear Rules
+
+You can clear the defined rules by using one of the following ways:
+
+* Using the "Clear Rules" option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
+
+* Using the [`ClearConditionalFormatsAsync()`](#clearconditionalformatsasync) method to clear the defined rules.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+<SfButton OnClick="ApplyConditionalRule">Apply Rule</SfButton>
+<SfSpreadsheet @ref="SpreadsheetInstance"></SfSpreadsheet>
+
+@code {
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    private async Task ApplyConditionalRule()
+    {
+        var rule = new ConditionalFormatRule
+        {
+            ConditionalFormatType = ConditionalFormatType.GreaterThan,
+            PrimaryValue = "100",
+            Range = "A1:A10",
+            ConditionalFormatColor = ConditionalFormatColor.GreenFillWithDarkGreenText
+        };
+
+        await SpreadsheetInstance.ConditionalFormatAsync(rule);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Limitations of Conditional Formatting
+
+The following features have some limitations in Conditional Formatting:
+
+* Insert row/column between the conditional formatting.
+* Conditional formatting with formula support.
+* Copy and paste the conditional formatting applied cells.
+* Custom rule support.
+ 
 ### Limitations
 
-*   `Conditional formatting` is currently not supported in the Blazor Spreadsheet component.
 *   A custom number format UI dialog is not available, custom formats must be applied using the API.
 *  After inserting a row or column, border expansion is not currently supported.
