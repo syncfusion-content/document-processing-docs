@@ -10,7 +10,7 @@ keywords: getting-started
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> [UWP RichTextBox](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in UWP applications. This section guides you through the steps to get started and create a RichTextBox in a UWP application.
 
-## Create an SfRichTextBoxAdv in UWP 
+## Create a RichTextBox in UWP using SfRichTextBoxAdv 
 
 In this walkthrough, you will create a UWP application that uses the SfRichTextBoxAdv control.
 

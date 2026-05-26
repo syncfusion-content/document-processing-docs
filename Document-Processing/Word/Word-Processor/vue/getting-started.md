@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Vue application.
 
-## Steps to create a Document Editor in Vue 2
+## Steps to create a DOCX Editor in Vue 2
 
 ### Prerequisites
 
