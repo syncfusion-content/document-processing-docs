@@ -112,21 +112,60 @@ WinForms Spreadsheet control can be added to an application either through the d
 
 2.Drag `Spreadsheet` and drop in the Designer area from the Toolbox.
 
-```C#
+{% tabs %}
+{% highlight c# tabtitle="Form1.Designer.cs" %}
+....
+public Form1()
+{
+....
+private void InitializeComponent()
+{
 Spreadsheet spreadsheet = new Spreadsheet();
-```
+}
+....
+}
+....
+{% endhighlight %}
+{% endtabs %}
 
 3.Ribbon can be added to the application by dragging `SpreadsheetRibbon` to the Designer area.
 
-```C#
+{% tabs %}
+{% highlight c# tabtitle="Form1.Designer.cs" %}
+....
+public Form1()
+{
+....
+private void InitializeComponent()
+{
+Spreadsheet spreadsheet = new Spreadsheet();
 SpreadsheetRibbon spreadsheetRibbon = new SpreadsheetRibbon();
-```
+}
+....
+}
+....
+{% endhighlight %}
+{% endtabs %}
 
 4.To make an interaction between Ribbon items and `Spreadsheet`, bind the Spreadsheet as DataContext to the `SpreadsheetRibbon`.
 
-```C#
-spreadsheetRibbon.Spreadsheet = spreadsheet
-```
+{% tabs %}
+{% highlight c# tabtitle="Form1.Designer.cs" %}
+....
+public Form1()
+{
+....
+private void InitializeComponent()
+{
+Spreadsheet spreadsheet = new Spreadsheet();
+SpreadsheetRibbon spreadsheetRibbon = new SpreadsheetRibbon();
+spreadsheetRibbon.Spreadsheet = spreadsheet;
+}
+....
+}
+....
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
  
@@ -137,15 +176,25 @@ Spreadsheet is available in the following namespace **[Syncfusion.Windows.Forms.
 
 _For_ _Spreadsheet_
 
-```C#
-Spreadsheet spreadsheet = new Spreadsheet();
-SpreadsheetRibbon ribbon = new SpreadsheetRibbon() { Spreadsheet = spreadsheet };
-spreadsheet.Dock = DockStyle.Fill;
-spreadsheet.Anchor = AnchorStyles.Left | AnchorStyles.Top;
-          
-this.Controls.Add(spreadsheet);
-this.Controls.Add(ribbon);
-```
+{% tabs %}
+{% highlight c# tabtitle="Form1.cs" %}
+
+....
+    public Form1()
+    {
+        InitializeComponent();
+        Spreadsheet spreadsheet = new Spreadsheet();
+        SpreadsheetRibbon ribbon = new SpreadsheetRibbon() { Spreadsheet = spreadsheet };
+        spreadsheet.Dock = DockStyle.Fill;
+        spreadsheet.Anchor = AnchorStyles.Left | AnchorStyles.Top;
+        this.Controls.Add(spreadsheet);
+        this.Controls.Add(ribbon);
+    }
+....
+
+{% endhighlight %}
+{% endtabs %}
+
 
 {% endtabcontent %}
  
