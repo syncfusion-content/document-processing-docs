@@ -13,6 +13,10 @@ documentation: ug
 
 You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). If you want to add new functionality or customize any existing functionalities, then you can use our source code available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools). Compatible with .NET 8.0, 9.0, and 10.0.
 
+## How it works
+
+![How AI Agent Tool Execution Works](how-it-works.png)
+
 ## Key Capabilities
 
 <table>
@@ -103,7 +107,7 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
           <li>Convert Word, Excel, or PowerPoint to PDF in a single tool call</li>
         </ul>
       </td>
-      <td><b>.docx</b>, <b>.xlsx</b>, <b>.pptx</b> to <b>.pdf</b></td>
+      <td>Office (Word, Excel, PowerPoint) to <b>.pdf</b></td>
     </tr>
     <tr>
       <td><strong>Data Extraction</strong></td>

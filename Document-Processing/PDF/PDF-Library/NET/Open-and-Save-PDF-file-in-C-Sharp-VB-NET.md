@@ -295,19 +295,8 @@ You can save the manipulated PDF document to file system using [Save](https://he
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //To-Do some manipulation
 //To-Do some manipulation
-//Save the PDF document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Close the document.
-loadedDocument.Close(true);
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
+//Save the document in file system.
+loadedDocument.Save("Output.pdf"); 
 
 {% endhighlight %}
 
