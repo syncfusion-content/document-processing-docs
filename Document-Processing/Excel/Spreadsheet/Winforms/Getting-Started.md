@@ -8,22 +8,24 @@ documentation: ug
 ---
 
 # Getting Started with Windows Forms Spreadsheet
-This section briefly explains how to include the Syncfusion<sup>®</sup> WinForms Spreadsheet component in Windows Forms App using Visual Studio.
+This section briefly explains how to include the [Syncfusion<sup>®</sup> WinForms Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) component in Windows Forms App using Visual Studio.
 
 ## Prerequisites
 * [System requirements for WinForms components](https://help.syncfusion.com/windowsforms/system-requirements)
 
 ## Create a new Windows Forms App in Visual Studio
 
-You can create a **Spreadsheet Windows Forms Application** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/get-started/create-app-visual-studio) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Windows Forms](https://help.syncfusion.com/windowsforms/visual-studio-integration/template-studio).
+You can create a **Windows Forms Application** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/get-started/create-app-visual-studio) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Windows Forms](https://help.syncfusion.com/windowsforms/visual-studio-integration/template-studio).
 
 ## Assemblies Deployment
 
+To add a WinForms spreadsheet component to your application by installing it via NuGet packages(Recommended) or by manually adding the required assemblies to the project.
+
 {% tabcontents %}
  
-{% tabcontent Via NuGet Package %}
+{% tabcontent NuGet Package %}
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Windows Forms Spreadsheet NuGet in the App (Recommended)
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Windows Forms Spreadsheet NuGet packages
 
 To add **Windows Forms Spreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
@@ -31,9 +33,9 @@ To add **Windows Forms Spreadsheet** component in the application, open the NuGe
 
 {% endtabcontent %}
  
-{% tabcontent Via Dependencies %}
+{% tabcontent Assemblies(.dll)  %}
 
-### Alternate Approach: Add Dependencies
+### Add Syncfusion® WinForms Spreadsheet Assemblies
 
 Below table describes, list of assemblies required to be added in project when the [WinForms Spreadsheet](https://www.syncfusion.com/winforms-ui-controls/spreadsheet) control is used in your application.
 
@@ -98,13 +100,11 @@ Contains the base and fundamental classes for creating PDF.</td></tr>
 
 ## Add Windows Forms Spreadsheet component
 
-WinForms Spreadsheet control can be added into the application either via designer or via coding. 
+WinForms Spreadsheet control can be added to an application either through the designer (XAML) or programmatically using code.
 
 {% tabcontents %}
  
 {% tabcontent Via Designer %}
-
-### Adding a control via designer
 
 1.Open the Visual Studio **Tool** **box**. Navigate to Syncfusion<sup>®</sup> Controls tab, and find the  Spreadsheet/SpreadsheetRibbon toolbox items.
 
@@ -132,9 +132,8 @@ spreadsheetRibbon.Spreadsheet = spreadsheet
  
 {% tabcontent Via Coding %}
 
-### Adding control via coding
 
-Spreadsheet is available in the following namespace `Syncfusion.Windows.Forms.Spreadsheet` and it can be created programmatically by using below code. 
+Spreadsheet is available in the following namespace **[Syncfusion.Windows.Forms.Spreadsheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.html)** and it can be created programmatically by using below code. 
 
 _For_ _Spreadsheet_
 
@@ -158,7 +157,10 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![Adding control via coding in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-coding.png)
 
+To learn how to create, open, and save files in the WPF Spreadsheet Component, see [Workbook Operations](Workbook-Operations).
+
 N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/winforms-spreadsheet-getting-started)
 
 ## See Also
-- [Workbook operations such as creating, opening, and saving a workbook](Workbook-Operations)
+- [Data Management](Data-Management)
+- [Display Charts and Sparklines](Shapes)
