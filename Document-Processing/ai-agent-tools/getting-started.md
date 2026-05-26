@@ -143,7 +143,7 @@ allTools.AddRange(new OfficeToPdfAgentTools(repoCollection, outputDir).GetTools(
 allTools.AddRange(new DataExtractionAgentTools(outputDir).GetTools());
 ```
 
-N> Register only the tool classes your app needs. See the full list in the [Tools Reference](./tools#available-tools).
+N> Register only the tool classes your app needs. See the full list in the [Tools Reference](./tools).
 
 **Step 4: Convert and Register Tools**
 
@@ -314,7 +314,7 @@ N>    * ExcelWorkbookAgentTools
 N>    * PdfDocumentAgentTools
 N>    * PresentationDocumentAgentTools   
 N> 2. All other tool classes work identically in both modes.
-N> 3. Register only the tool classes your app needs. See the full list in the [Tools Reference](./tools#available-tools).  
+N> 3. Register only the tool classes your app needs. See the full list in the [Tools Reference](./tools).  
 
 **Step 5: Convert and Register Tools**
 
