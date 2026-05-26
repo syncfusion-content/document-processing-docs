@@ -7,7 +7,6 @@ control: Print
 documentation: ug
 ---
 
-
 # Print in ASP.NET Core Spreadsheet control
 
 The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet or entire workbook in the Spreadsheet. You can enable or disable print functionality by using the `allowPrint` property, which defaults to **true**.
