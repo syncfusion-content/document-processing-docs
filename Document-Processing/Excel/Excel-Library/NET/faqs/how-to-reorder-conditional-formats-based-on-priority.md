@@ -1,6 +1,6 @@
 ---
-title: How to reorder conditional formats based on priority value? | Syncfusion
-description: This page explains how to reorder conditional formatting rules in XlsIO based on their internal Priority attribute to achieve consistent behavior with Microsoft Excel.
+title: Reorder conditional formats by priority value | Syncfusion
+description: This page explains reordering conditional formatting rules in XlsIO using the internal Priority attribute to match Microsoft Excel behavior consistently.
 platform: document-processing
 control: XlsIO
 documentation: UG
