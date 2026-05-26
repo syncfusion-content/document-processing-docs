@@ -81,6 +81,8 @@ This paste option appears as follows.
 
 ![Image](images/paste.png)
 
+N> When you paste content from an external source into the Document Editor, some formatting or elements may not appear as expected because certain elements are not supported. Refer [here](./unsupported-features) to learn more about unsupported elements.
+
 ## See Also
 
 * [Keyboard shortcuts](./keyboard-shortcut)
