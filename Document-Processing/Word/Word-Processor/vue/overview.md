@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview of the Syncfusion<sup>&reg;</sup> Vue DOCX Editor
+# Overview of the Vue DOCX Editor
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats. 
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion<sup>&reg;</sup> TypeScript DOCX Editor
+# Getting Started with TypeScript DOCX Editor
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a TypeScript application. 
 
