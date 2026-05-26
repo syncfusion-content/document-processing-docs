@@ -13,14 +13,6 @@ Rich text formatting allows you to apply different styles to specific portions o
 
 In the **Syncfusion React Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#richtext) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
 
-You can apply rich text formatting in the following ways:
-
-- Define rich text during initialization using the `richText` property.
-- Update rich text dynamically using the [`updateCell`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#index-default#updatecell) method.
-- Apply formatting directly from the ribbon while editing a cell.
-
----
-
 ## Rich Text Structure
 
 Each `richText` segment contains:
@@ -41,6 +33,8 @@ Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subs
 You can apply subscript and superscript formatting in following ways:
 
 1. Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
+
+![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
 
 2. You can define the richText property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
 
