@@ -1,5 +1,5 @@
 ---
-title: How to work with ordered and unordered list in Excel using XlsIO? | Syncfusion
+title: Ordered and unordered list in Excel using XlsIO | Syncfusion
 description: This page explains how to create ordered and unordered lists in Excel cells using Syncfusion XlsIO's rich text formatting features.
 platform: document-processing
 control: XlsIO
