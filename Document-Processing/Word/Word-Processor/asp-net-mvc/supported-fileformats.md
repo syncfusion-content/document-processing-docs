@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Supported File Formats in ASP.NET MVC DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC DOCX Editor (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting, with both client-side and server-side capabilities.
+Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC DOCX Editor (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting.
 
 ## Supported File Formats 
 
