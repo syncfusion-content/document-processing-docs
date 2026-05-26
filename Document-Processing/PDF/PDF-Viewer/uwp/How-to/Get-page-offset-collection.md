@@ -37,3 +37,8 @@ End Sub
 {% endtabs %}
 
 N> The page offset collection will be generated only at the time of display of the PDF document in the viewer, when tried before the display of the document this would return a dictionary of count 0.
+
+## See Also
+- [Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-page-navigation)
+- [Get vertical and horizontal offset](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/get-current-vertical-and-horizontal-offsets)
+- [Bookmark Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/bookmark-navigation)
