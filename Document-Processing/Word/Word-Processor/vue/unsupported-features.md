@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Unsupported features in Angular DOCX Editor component | Syncfusion
-description: Learn about the list of unsupported features in the Angular Document Editor to understand its limitations.
+title: Unsupported features in Vue DOCX Editor component | Syncfusion
+description: Learn about the list of unsupported features in the Vue Document Editor to understand its limitations.
 control: Unsupported features
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unsupported Features in Angular DOCX Editor
+# Unsupported Features in Vue DOCX Editor
 
-This section describes the unsupported elements in Syncfusion® Angular DOCX Editor (Document Editor) 
+This section describes the unsupported elements in Syncfusion® Vue DOCX Editor (Document Editor) 
 
 ## Document formatting
 
@@ -49,9 +49,9 @@ This section describes the unsupported elements in Syncfusion® Angular DOCX Edi
 | Ink/Draw | No |
 | Video or audio files | No |
 | Macros | No |
-| Models, Smart-Art, and Charts | [Supported Charts](https://help.syncfusion.com/document-processing/word/word-processor/angular/chart) |
-| Shapes, Textboxes, and WordArt | [Supported shapes](https://help.syncfusion.com/document-processing/word/word-processor/angular/shapes#supported-shapes) *(Shape Properties: Fill types, borders, rotation and effects are not supported) |
+| Models, Smart-Art, and Charts | [Supported Charts](https://help.syncfusion.com/document-processing/word/word-processor/vue/chart) |
+| Shapes, Textboxes, and WordArt | [Supported shapes](https://help.syncfusion.com/document-processing/word/word-processor/vue/shapes#supported-shapes) *(Shape Properties: Fill types, borders, rotation and effects are not supported) |
 | Signature line | No |
 | Special Characters, Symbols, Equations | No |
 | Built-in and custom document properties | No |
-| Comment reactions | No |
+| Comment reactions | No 
