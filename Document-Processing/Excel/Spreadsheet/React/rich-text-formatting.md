@@ -73,4 +73,6 @@ The following code example shows the subscript and superscript formatting in cel
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/richtext-format-cs1" %}
 
-> **Note:** Subscript and superscript formatting is applied only to the selected text, and this is supported only in edit mode.
+## Limitations
+* **Limited formatting support:** Only subscript and superscript formatting are supported within rich text. Other formatting options such as font size, font color, and font weight are not supported.
+* **Edit mode requirement:** Formatting can be applied only while the cell is in edit mode. Selecting text outside of edit mode does not support subscript or superscript formatting.
