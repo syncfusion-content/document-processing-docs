@@ -13,17 +13,25 @@ function App() {
             spreadsheet.suspendRefresh();
 
             // Perform multiple operations
-            spreadsheet.addHyperlink('www.google.com', 'H1:H11', 'Google');
-            spreadsheet.cellFormat({ textDecoration: 'underline line-through', fontStyle: 'italic', fontWeight: 'bold', fontFamily: 'Arial Black', fontSize: '14pt', color: 'green', textAlign: 'center', verticalAlign: 'middle', backgroundColor: '#FFFF00' }, 'Price Details!H2:H3');
-            spreadsheet.merge('F1:G1', 'Horizontally');
-            spreadsheet.numberFormat('$#,##0.00', 'D3');
-            spreadsheet.addDataValidation({ type: 'TextLength', operator: 'LessThanOrEqualTo', value1: '1', isHighlighted: true }, 'E1:E11');
-            spreadsheet.wrap('A6', true);
-            spreadsheet.setBorder({ border: '1px solid red' }, 'D1:E11', 'Outer');
-            spreadsheet.setColWidth(130, 1);
-            spreadsheet.setRowHeight(50, 1);
-            spreadsheet.insertRow(3, 5);
-            spreadsheet.insertColumn(3, 5);
+            spreadsheet.insertRow(0, 0);
+            spreadsheet.updateCell({ value: 'Project Budget Tracker - Q2 2026' }, 'A1');
+            spreadsheet.merge('A1:K1');
+            spreadsheet.updateCell({ value: 'Reference' }, 'K2');
+            spreadsheet.updateCell({ value: 'Total Budget' }, 'A13');
+            spreadsheet.updateCell({ formula: '=SUM(F3:F12)' }, 'F13');
+            spreadsheet.updateCell({ formula: '=SUM(G3:G12)' }, 'G13');
+            spreadsheet.updateCell({ formula: '=SUM(H3:H12)' }, 'H13');
+            spreadsheet.addHyperlink('https://help.syncfusion.com/document-processing/excel/spreadsheet/react/overview', 'K3:K12', 'Open Guide');
+            spreadsheet.cellFormat({ fontWeight: 'bold', fontSize: '14pt', textAlign: 'center', verticalAlign: 'middle', backgroundColor: '#4472C4', color: '#FFFFFF' }, 'A1:K1');
+            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', backgroundColor: '#EAEAEA' }, 'A2:K2');
+            spreadsheet.numberFormat('$#,##0.00', 'F3:H13');
+            spreadsheet.addDataValidation({ type: 'WholeNumber', operator: 'Between', value1: '1', value2: '5', isHighlighted: true }, 'J3:J12');
+            spreadsheet.wrap('A3:A12', true);
+            spreadsheet.setBorder({ border: '1px solid #C8C8C8' }, 'A2:K13', 'Outer');
+            spreadsheet.setRowHeight(50, 0);
+            spreadsheet.setRowsHeight(30, ['1:13']);
+            spreadsheet.setColWidth(220, 0);
+            spreadsheet.setColumnsWidth(90, ['B:K']);
 
             // Resume and apply all changes
             spreadsheet.resumeRefresh();
@@ -34,14 +42,21 @@ function App() {
         <div>
             <SpreadsheetComponent ref={spreadsheetRef} allowOpen={true} allowSave={true} openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save' created={onCreated.bind(this)}>
                 <SheetsDirective>
-                    <SheetDirective name="Price Details">
+                    <SheetDirective name="Project Budget">
                         <RangesDirective>
                             <RangeDirective dataSource={data}></RangeDirective>
                         </RangesDirective>
                         <ColumnsDirective>
-                            <ColumnDirective width={130}></ColumnDirective>
-                            <ColumnDirective width={92}></ColumnDirective>
-                            <ColumnDirective width={96}></ColumnDirective>
+                            <ColumnDirective></ColumnDirective>
+                            <ColumnDirective></ColumnDirective>
+                            <ColumnDirective></ColumnDirective>
+                            <ColumnDirective></ColumnDirective>
+                            <ColumnDirective></ColumnDirective>
+                            <ColumnDirective></ColumnDirective>
+                            <ColumnDirective></ColumnDirective>
+                            <ColumnDirective></ColumnDirective>
+                            <ColumnDirective></ColumnDirective>
+                            <ColumnDirective></ColumnDirective>
                         </ColumnsDirective>
                     </SheetDirective>
                 </SheetsDirective>
