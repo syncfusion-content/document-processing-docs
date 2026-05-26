@@ -8,12 +8,12 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Steps to create a DOCX Editor in Vue 3
+# Getting Started with Vue DOCX Editor (Vue 3)
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 
-## Steps to create a Document Editor in Vue 3
+## Steps to create a DOCX Editor in Vue 3
 
 ### Prerequisites
 
