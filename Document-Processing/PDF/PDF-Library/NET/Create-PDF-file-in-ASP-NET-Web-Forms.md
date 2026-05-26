@@ -79,7 +79,7 @@ document.Save("Output.pdf", HttpContext.Current.Response, HttpReadType.Save);
 
 {% endhighlight %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET/Create-a-new-PDF-document).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET).
 
 By executing the program, you will get the PDF document as follows.
 ![Getting started PDF output document](GettingStarted_images/pdf-generation-output.png)
@@ -293,7 +293,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET/Create-PDF-document-with-basic-elements).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET).
 
 The following screenshot shows the invoice PDF document created by using Essential<sup>&reg;</sup> PDF.
 ![Invoice PDF document](GettingStarted_images/pdf-invoice.png)

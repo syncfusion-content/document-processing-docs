@@ -14,7 +14,7 @@ N> If this is your first time working with the Google Cloud Platform (GCP), plea
 
 ## Prerequisites 
 
-* A [Google Cloud Platform (GCP)](https://console.cloud.google.com/getting-started) account with access to the App Engine service.
+* A [Google Cloud Platform (GCP)](https://cloud.google.com/) account with access to the App Engine service.
 
 ## Google Cloud Platform (GCP)
 

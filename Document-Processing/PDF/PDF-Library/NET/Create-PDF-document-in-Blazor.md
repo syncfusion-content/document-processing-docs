@@ -43,7 +43,7 @@ N> We recommend using Blazor Server (server-side) applications to reduce payload
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor.
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in Blazor.
 
 ## Steps to create PDF document in Blazor WASM application
 
@@ -71,7 +71,7 @@ Click the Export to PDF button and you will get the PDF document with the follow
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://blazor.syncfusion.com/demos/pdf/hello-world?theme=fluent) in Blazor. 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in Blazor. 
 
 ## Steps to create PDF documents in .NET MAUI Blazor application
 
@@ -245,7 +245,7 @@ N> Android introduced a new runtime permission model for SDK version 23 and abov
 
 {% endtabs %}
 
-#### IOS
+#### iOS
 Create a new class file named `SaveIOS.cs` within the iOS folder and include the following code to enable file saving on the iOS platform.
 
 {% tabs %}
