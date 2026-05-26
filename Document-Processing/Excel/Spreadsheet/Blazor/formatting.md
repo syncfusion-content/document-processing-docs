@@ -215,7 +215,7 @@ Borders can be applied programmatically to a specific cell or range of cells usi
 
 # Conditional Formatting
 
-Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`AllowConditionalFormat`](#allowconditionalformat) property.
+Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the `AllowConditionalFormat` property.
 
 > The default value for the `AllowConditionalFormat` property is `true`.
 
@@ -225,7 +225,7 @@ You can apply conditional formatting by using one of the following ways:
 
 * Select the conditional formatting icon in the Ribbon toolbar under the Home Tab.
 
-* Using the [`ConditionalFormatAsync()`](#conditionalformatasync) method to define the condition.
+* Using the `ConditionalFormatAsync()` method to define the condition.
 
 Conditional formatting has the following types in the spreadsheet:
 
@@ -362,7 +362,7 @@ You can clear the defined rules by using one of the following ways:
 
 * Using the "Clear Rules" option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
 
-* Using the [`ClearConditionalFormatsAsync()`](#clearconditionalformatsasync) method to clear the defined rules.
+* Using the `ClearConditionalFormatsAsync()` method to clear the defined rules.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

@@ -103,6 +103,25 @@ N> Deleting a Named Range used in formulas may cause formula errors. Ensure the 
 
 ![Edit and Delete - Named Range](./images/edit-and-delete.png)
 
+## Aggregates
+
+The **Aggregates** feature provides a quick way to view calculations for selected cells or ranges in the sheet, such as sum, average, count, and more. This is useful for gaining insights into your data without writing formulas.
+
+The `ShowAggregate` property is used to enable or disable the **Aggregates** display. The default value of the `ShowAggregate` property is **true**.
+
+### Using Aggregates
+
+When you select a range of cells containing numeric data, the Spreadsheet automatically displays aggregate calculations in the status bar at the bottom. The following aggregate functions are supported:
+
+*   **Sum**: Returns the total of all selected numeric values.
+*   **Average**: Returns the arithmetic mean of all selected numeric values.
+*   **Count**: Returns the number of cells containing numeric values in the selection.
+*   **Min**: Returns the smallest value in the selection.
+*   **Max**: Returns the largest value in the selection.
+
+Simply select any range of cells to see these aggregate values instantly displayed in the status bar.
+
+
 ## Supported Formulas
 
 The Spreadsheet component supports a wide range of built-in formulas, enabling powerful data analysis and manipulation. Below is the list of formulas supported in the Spreadsheet component:
