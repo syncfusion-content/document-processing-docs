@@ -18,8 +18,8 @@ The following table describes supported formats and their conversion capabilitie
 
 | Operation | Formats | Server-Side Required | Details |
 |-----------|---------|---------------------|---------|
-| **Open** | **Word formats:**<br>• Word Document (.docx)<br>• Word 97-2003 Document (.doc)<br>• Word Template (.dotx)<br>• Word 97-2003 Template (.dot)<br>• Rich Text Format (.rtf)<br>• Word XML Document (.xml)<br><br>**Other formats:**<br>• HyperText Markup Language (.html)<br>• Plain Text (.txt) | Yes | Uses .NET Word Library (DocIO) for parsing documents |
-| **Internal Format** | • Syncfusion Document Text (.sfdt) | No | Native JSON-based document format |
+| **Open (Server-side)** | **Word formats:**<br>• Word Document (.docx)<br>• Word 97-2003 Document (.doc)<br>• Word Template (.dotx)<br>• Word 97-2003 Template (.dot)<br>• Rich Text Format (.rtf)<br>• Word XML Document (.xml)<br><br>**Other formats:**<br>• HyperText Markup Language (.html)<br>• Plain Text (.txt) | Yes | Uses .NET Word Library (DocIO) for parsing documents |
+| **Open (Client-side)** | • Syncfusion Document Text (.sfdt) | No | Native JSON-based document format |
 | **Export (Client-side)** | • Word Document (.docx)<br>• Syncfusion Document Text (.sfdt)<br>• Word Template (.dotx)<br>• Plain Text (.txt) | No | Export handled directly in the browser |
 | **Export (Server-side)** | **Word formats:**<br>• Word Document (.doc)<br>• Word 97-2003 Template (.dot)<br>• Rich Text Format (.rtf)<br>• Word XML Document (.xml)<br><br>**Other formats:**<br>• HyperText Markup Language (.html)<br>• OpenDocument Text (.odt)<br>• Portable Document Format (.pdf) | Yes | Uses .NET Word (DocIO) for document conversion, and both DocIO and .NET PDF libraries for PDF conversion. |
 
