@@ -392,6 +392,101 @@ Dim textWordCollection As List(Of TextWord) = line.WordCollection
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-collection-of-words-from-PDF-document/). 
 
+#### Get the word bounds for each word in a line
+ 
+You can get the word bounds for each word in a line using the [TextLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html) [WordCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLine.html#Syncfusion_Pdf_TextLine_WordCollection) property.Refer to the following code sample.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+int iPage = 0;
+
+// Get the page
+PdfPageBase pdfPage = loadedDocument.Pages[iPage];
+TextLines listPageLines = new TextLines();
+string lineContent;
+string wordContent;
+RectangleF lineBounds;
+RectangleF wordBounds;
+
+// Get all the text from this page
+string extracted_text = pdfPage.ExtractText(out listPageLines);
+
+foreach (TextLine textLine in listPageLines)
+{
+    lineBounds = textLine.Bounds;
+    lineContent = textLine.Text;
+    
+    // Get the word bounds for each word in a line
+    foreach (TextWord textWord in textLine.WordCollection)
+    {
+        wordContent = textWord.Text;
+        wordBounds = textWord.Bounds;
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileName);
+// Get the first page of the loaded PDF document
+PdfPageBase page = loadedDocument.Pages[0];
+TextLines lineCollection = new TextLines();
+
+// Extract text from the first page
+string extractedText = page.ExtractText(out lineCollection);
+// Gets specific line from the collection
+TextLine line = lineCollection[0];
+// Gets bounds of the line
+RectangleF lineBounds = line.Bounds;
+// Gets text in the line
+string lineText = line.Text;
+// Gets collection of the words in the line
+List<TextWord> textWordCollection = line.WordCollection;
+//Gets word from the collection using index
+TextWord textWord = textWordCollection[0];
+// Gets bounds of the word
+RectangleF wordBounds = textWord.Bounds;
+// Gets text in the word
+string wordText = textWord.Text;
+
+{% endhighlight %}
+
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Load the existing PDF document
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(fileName)
+' Get the first page of the loaded PDF document
+Dim page As PdfPageBase = loadedDocument.Pages(0)
+Dim lineCollection As TextLines = New TextLines()
+
+' Extract text from the first page
+Dim extractedText As String = page.ExtractText(lineCollection)
+' Gets specific line from the collection
+Dim line As TextLine = lineCollection(0)
+' Gets bounds of the line
+Dim lineBounds As RectangleF = line.Bounds
+' Gets text in the line
+Dim lineText As String = line.Text
+' Gets collection of the words in the line
+Dim textWordCollection As List(Of TextWord) = line.WordCollection
+' Get a word from the collection using an index 
+Dim textWord As TextWord = textWordCollection(0) 
+' Gets bounds of the word
+Dim wordBounds As RectangleF = textWord.Bounds
+' Gets text in the word
+Dim wordText As String =textWord .Text
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Working with characters
 
 You can retrieve a single character and its properties, including bounds, font name, font size, and text color, using the instance. Refer to the code sample below.  
