@@ -115,7 +115,7 @@ WinForms Spreadsheet control can be added to an application either through the d
 {% tabs %}
 {% highlight c# tabtitle="Form1.Designer.cs" %}
 ....
-public Form1()
+partial class Form1
 {
 ....
 private void InitializeComponent()
@@ -133,7 +133,7 @@ Spreadsheet spreadsheet = new Spreadsheet();
 {% tabs %}
 {% highlight c# tabtitle="Form1.Designer.cs" %}
 ....
-public Form1()
+partial class Form1
 {
 ....
 private void InitializeComponent()
@@ -152,7 +152,7 @@ SpreadsheetRibbon spreadsheetRibbon = new SpreadsheetRibbon();
 {% tabs %}
 {% highlight c# tabtitle="Form1.Designer.cs" %}
 ....
-public Form1()
+partial class Form1
 {
 ....
 private void InitializeComponent()
