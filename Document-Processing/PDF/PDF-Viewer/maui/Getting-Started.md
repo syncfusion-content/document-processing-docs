@@ -69,7 +69,7 @@ namespace PdfViewerExample
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Add PDF Viewer to the Project
+## Step 4: Add PDF Viewer
 
 Open the `MainPage.xaml` file and follow the steps below. 
 
@@ -445,7 +445,7 @@ namespace PdfViewerExample
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Add PDF Viewer to the Project
+## Step 4: Add PDF Viewer
 
 Open the `MainPage.xaml` file and follow the steps below. 
 
