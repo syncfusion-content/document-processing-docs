@@ -389,7 +389,7 @@ To load an Excel file from `Google Drive` in the Blazor Spreadsheet, follow the 
 - [Google Cloud project](https://developers.google.com/workspace/guides/create-project) in the Google Cloud Console.
 - [Service account](https://cloud.google.com/iam/docs/service-accounts-create) within the GCP project.
 - [Service account key](https://cloud.google.com/iam/docs/keys-create-delete) (JSON) available on disk.
-- [Google Drive API enabled](https://console.cloud.google.com/apis/library/drive.googleapis.com) for the project.
+- [Google Drive API enabled](https://developers.cloud.google.com/apis/library/drive.googleapis.com) for the project.
 - [Google Drive account](https://drive.google.com/) with access to the file to download.
 - [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3) NuGet package installed in your project to access Google Drive API.
 
