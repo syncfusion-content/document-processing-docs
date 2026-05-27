@@ -104,7 +104,7 @@ export class AppComponent {
 
 ## Modify the XMLHttpRequest before request send
 
-Document editor component provides an option to modify the XMLHttpRequest object (setting additional headers, if needed) using [`beforeXmlHttpRequestSend`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#beforexmlhttprequestsend) event and it gets triggered before a server request.
+Document editor component provides an option to modify the XMLHttpRequest object (setting additional headers, if needed) using [`beforeXmlHttpRequestSend`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#beforexmlhttprequestsend) event and it gets triggered before a server request.
 
 You can customize the required [`XMLHttpRequest`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/xmlHttpRequestEventArgs) properties.
 
