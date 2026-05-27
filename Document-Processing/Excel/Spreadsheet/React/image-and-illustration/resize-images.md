@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Resize images
+# Resize images in React Spreadsheet
 
 After inserting an image into the spreadsheet, you can resize it to fit the layout or align it with surrounding content.
 

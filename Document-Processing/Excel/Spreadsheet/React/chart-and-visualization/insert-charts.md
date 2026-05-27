@@ -7,13 +7,13 @@ platform: document-processing
 documentation: ug
 ---
 
-## Insert Charts in React Spreadsheet
+# Insert Charts in React Spreadsheet
 
-### Insert a Chart Using the UI
+## Insert a Chart Using the UI
 
 You can insert a chart by selecting the chart icon in the Ribbon toolbar under the Insert Tab. The chart will be inserted based on the selected range of cells in the Spreadsheet.
 
-### Insert a Chart Programmatically
+## Insert a Chart Programmatically
 
 Use the [insertChart](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#insertchart) method to insert the chart programmatically.
 

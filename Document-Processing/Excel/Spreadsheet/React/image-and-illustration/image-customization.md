@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Image Customization
+# Image Customization in React Spreadsheet
 
 Image feature allows you to view and insert an image in a spreadsheet, and you can change the height and width of the image by resizing and moving it to another position.
 

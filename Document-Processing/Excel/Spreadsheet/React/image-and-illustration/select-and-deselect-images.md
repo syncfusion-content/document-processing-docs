@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Select and deselect images
+# Select and deselect images in React Spreadsheet
 
 You can select images in the spreadsheet either by clicking them in the UI or programmatically using methods.
 

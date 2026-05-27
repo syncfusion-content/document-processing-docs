@@ -7,11 +7,11 @@ platform: document-processing
 documentation: ug
 ---
 
-## Remove Charts in React Spreadsheet
+# Remove Charts in React Spreadsheet
 
 You can remove a chart from your worksheet either through the user interface or programmatically.
 
-### Remove a Chart Using the UI
+## Remove a Chart Using the UI
 
 To delete a chart:
 
@@ -21,7 +21,7 @@ To delete a chart:
 **Alternative method:**
 - **Select the chart** and choose **Clear All** from the ribbon (this clears the selected chart)
 
-### Remove a Chart Programmatically
+## Remove a Chart Programmatically
 
 Use the [deleteChart](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#deletechart) method to remove charts through code:
 
