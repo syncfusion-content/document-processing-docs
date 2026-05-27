@@ -105,21 +105,75 @@ N> Deleting a Named Range used in formulas may cause formula errors. Ensure the 
 
 ## Aggregates
 
-The **Aggregates** feature provides a quick way to view calculations for selected cells or ranges in the sheet, such as sum, average, count, and more. This is useful for gaining insights into your data without writing formulas.
+The **Aggregates** feature provides instant statistical summaries of selected cell ranges without requiring formula creation. This functionality enables quick data analysis by automatically calculating statistics such as sum, average, count, minimum, and maximum values. Aggregate calculations appear in the footer at the bottom of the Spreadsheet component, providing at-a-glance insights into selected data.
 
-The `ShowAggregate` property is used to enable or disable the **Aggregates** display. The default value of the `ShowAggregate` property is **true**.
+### Enabling and Disabling Aggregates
 
-### Using Aggregates
+The aggregate calculations display is controlled by the `ShowAggregate` property on the `SfSpreadsheet` component. By default, this property is set to **true**, enabling automatic aggregate calculations.
 
-When you select a range of cells containing numeric data, the Spreadsheet automatically displays aggregate calculations in the status bar at the bottom. The following aggregate functions are supported:
+**To disable aggregates programmatically:**
 
-*   **Sum**: Returns the total of all selected numeric values.
-*   **Average**: Returns the arithmetic mean of all selected numeric values.
-*   **Count**: Returns the number of cells containing numeric values in the selection.
-*   **Min**: Returns the smallest value in the selection.
-*   **Max**: Returns the largest value in the selection.
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Spreadsheet
 
-Simply select any range of cells to see these aggregate values instantly displayed in the status bar.
+<SfSpreadsheet ShowAggregate="false" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Supported Aggregate Functions
+
+The Blazor Spreadsheet component calculates five key aggregate statistics for numeric data in selected ranges. These functions are automatically computed based on the active selection and displayed in the footer.
+
+| Aggregate Function | Description | Use Case |
+|---|---|---|
+| **Sum** | Calculates the total of all selected numeric values | Revenue totals, combined quantities, cumulative expenses |
+| **Average** | Computes the arithmetic mean of all selected numeric values | Average sales, mean performance metrics, typical values |
+| **Count** | Counts the number of cells containing numeric values in the selection | Data point validation, sample size determination, completion tracking |
+| **Min** | Identifies the smallest value in the selected range | Minimum inventory levels, lowest prices, threshold analysis |
+| **Max** | Identifies the largest value in the selected range | Peak sales, maximum capacity, outlier detection |
+
+### Viewing Aggregates
+
+Aggregate calculations are displayed automatically in the footer when a range of cells containing numeric data is selected. The footer at the bottom of the Spreadsheet component updates dynamically as selections change.
+
+**Footer Display:**
+When selecting cells A2:A10 containing numeric values, the footer displays:
+- **Sum**: Total of all values
+- **Average**: Mean of all values
+- **Count**: Number of numeric cells
+- **Min**: Smallest value
+- **Max**: Largest value
+
+![Blazor Spreadsheet displaying aggregate calculations in the footer when numeric range is selected](./images/aggregates-status-bar.gif)
+
+N> Aggregate calculations only include numeric values. Cells containing text, logical values, or empty cells are excluded from sum and average calculations but are counted if the **Count** includes them based on their data type.
+
+### Aggregates and Selection Behavior
+
+**Multi-Range Selections:**
+When multiple non-contiguous ranges are selected, aggregates are calculated based on all selected cells combined.
+
+**Cross-Sheet References:**
+Aggregates only calculate values within the currently active worksheet. Cross-sheet selections do not contribute to aggregate calculations.
+
+**Dynamic Updates:**
+As selections are expanded, contracted, or changed, aggregate values update instantaneously to reflect the new selection.
+
+**Empty and Non-Numeric Handling:**
+Empty cells and cells containing text or formulas are excluded from Sum and Average calculations. The Count function may include or exclude these depending on the cell content type.
 
 
 ## Supported Formulas

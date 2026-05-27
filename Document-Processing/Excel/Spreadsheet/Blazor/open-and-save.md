@@ -601,9 +601,22 @@ The [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ### Save in different file formats
 
-The Spreadsheet component supports saving files in multiple formats. You can specify the desired file format using the [SaveType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveType.html) property in the [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) parameter.
+The Blazor Spreadsheet component supports exporting spreadsheet data to multiple file formats, enabling flexibility in how data is shared and consumed. Each format has specific use cases and compatibility considerations, allowing developers to choose the optimal format based on downstream processing requirements or distribution needs.
 
-The following code example shows how to save the spreadsheet in different formats:
+**Supported Save Formats:**
+
+| SaveType | File Extension | Description |
+|---|---|---|---|
+| `Xlsx` | `.xlsx` | Microsoft Excel 2007 and later format |
+| `Xls` | `.xls` | Microsoft Excel 97-2003 format |
+| `Csv` | `.csv` | Comma Separated Values format |
+| `Pdf` | `.pdf` | Portable Document Format |
+
+**Configuring File Format:**
+
+Specify the desired export format using the `SaveType` property within the [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) parameter. The format determines how the spreadsheet content is transformed and exported. Optional layout settings such as page orientation and scaling can be configured for PDF exports.
+
+The following code example demonstrates saving the spreadsheet in different formats:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -653,16 +666,27 @@ The following code example shows how to save the spreadsheet in different format
 
 ### Save as PDF with layout settings
 
-By default, the PDF document is created in **Portrait** orientation. You can customize the PDF output by using the [PdfLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PdfLayoutSettings.html) property within [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html).
+PDF export from the Blazor Spreadsheet component supports customization of layout and presentation through the [PdfLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PdfLayoutSettings.html) property. These settings control how spreadsheet content is rendered on PDF pages, including page orientation, scaling behavior, and content distribution. By default, PDF documents are created in portrait orientation with standard scaling.
 
-The following properties can be configured:
+**Available PDF Layout Settings:**
 
-| Property | Type | Description |
-| --- | --- | --- |
-| `Orientation` | PdfPageOrientation` | Gets or sets the page orientation. Possible values: `Portrait` (default), `Landscape` |
-| `FitSheetOnOnePage `| bool | Gets or sets whether the sheet content should be scaled to fit on a single PDF page. When `true`, content is scaled proportionally. When `false` (default), the sheet may span multiple pages. |
+| Property | Type | Default | Description |
+|---|---|---|---|
+| `Orientation` | `PdfPageOrientation` | `Portrait` | Controls page orientation: `Portrait` (8.5" × 11") or `Landscape` (11" × 8.5"). Choose Portrait for standard letter-sized documents or Landscape for wide data ranges. |
+| `FitSheetOnOnePage` | `bool` | `false` | Determines content scaling behavior: `true` scales content proportionally to fit entire sheet on single page; `false` allows content to span multiple pages using normal printing pagination. |
 
-The following code example shows how to save the spreadsheet as PDF with different layout settings:
+**Layout Configuration Guide:**
+
+**Orientation Selection:**
+- **Portrait**: Default orientation, ideal for documents with standard column counts. Maximizes vertical space for data rows.
+- **Landscape**: Recommended for spreadsheets with many columns or wide data ranges. Provides additional horizontal space.
+
+**Scaling Behavior:**
+- **FitSheetOnOnePage = true**: All spreadsheet content scales to fit on a single PDF page. Useful for summaries, executive reports, or when a one-page document is required. Text and content size may reduce.
+- **FitSheetOnOnePage = false**: Content uses standard print scaling and may span multiple pages. Preserves readability and data size at the cost of multiple pages.
+
+
+The following code example demonstrates saving the spreadsheet as PDF with different layout configurations:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
