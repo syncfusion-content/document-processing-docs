@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Rename Sheet in React Spreadsheet
+# Rename Worksheet in React Spreadsheet
 
 Renaming a worksheet helps you organize your workbook by giving each sheet a meaningful name. This makes it easier to identify the purpose or content of each sheet, especially when working with multiple worksheets.
 

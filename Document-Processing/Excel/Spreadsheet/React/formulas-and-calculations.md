@@ -25,11 +25,11 @@ Formulas in the Spreadsheet component are automatically recalculated whenever re
 The React Spreadsheet component provides a variety of features for working with formulas and calculations. Below is a quick overview of each feature, with links to their respective documentation sections:
 
 - **[Built-in Formulas](./formula-and-calculation/built-in-formulas)**: Use a wide range of standard formulas for common calculations.
-- **[Create Custom Formulas](./formula-and-calculation/create-custom-formulas)**: Define your own formulas to meet specific calculation needs.
+- **[Custom Formula Creation](./formula-and-calculation/create-custom-formulas)**: Define your own formulas to meet specific calculation needs.
 - **[Named Ranges](./formula-and-calculation/named-ranges)**: Assign names to cell ranges for easier reference in formulas.
 - **[Formula Bar](./formula-and-calculation/formula-bar)**: Enter and edit formulas using the formula bar interface.
 - **[Formula Error Handling](./formula-and-calculation/formula-error-handling)**: Manage and troubleshoot errors that occur in formulas.
-- **[Calculation Mode](./formula-and-calculation/calculation-mode)**: Control when and how formulas are recalculated in the worksheet.
+- **[Calculation Modes](./formula-and-calculation/calculation-mode)**: Control when and how formulas are recalculated in the worksheet.
 - **[Culture-Specific Formula Separators](./formula-and-calculation/culture-specific-formula-separators)**: Use separators that match your locale for formulas.
 
 ## Note

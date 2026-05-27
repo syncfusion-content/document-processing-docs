@@ -7,11 +7,11 @@ platform: document-processing
 documentation: ug
 ---
 
-# Insert Sheet in React Spreadsheet
+# Insert Worksheet in React Spreadsheet
 
 In the React Spreadsheet component, you can insert new worksheets to organize and manage your data more effectively. Sheets can be added either through the user interface or programmatically, allowing you to expand your workbook as needed. You can choose to add a sheet next to the current sheet, at a specific position, or make the newly inserted sheet active.
 
-## Ways to Insert a Sheet
+## Ways to Insert a Worksheet
 
 You can dynamically add or insert a sheet by one of the following ways,
 

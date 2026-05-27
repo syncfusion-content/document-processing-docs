@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Duplicate sheet
+# Duplicate Worksheet
 
 The Spreadsheet component allows you to create a copy of an existing worksheet along with its data, formatting, and configurations. Duplicating a sheet is useful when you want to reuse the same structure or data without manually recreating it.
 

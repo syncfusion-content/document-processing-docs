@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Functions in React Spreadsheet component | Syncfusion
+title: Custom Function Creation in React Spreadsheet | Syncfusion
 description: Learn here all about custom functions in React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Formulas 
 platform: document-processing

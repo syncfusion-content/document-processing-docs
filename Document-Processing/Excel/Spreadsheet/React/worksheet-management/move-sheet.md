@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Move sheet in React Spreadsheet
+# Move Worksheet in React Spreadsheet
 
 The Spreadsheet component provides options to rearrange worksheets by moving them to the left or right within the sheet tab panel. This helps you organize worksheets in the required order.
 

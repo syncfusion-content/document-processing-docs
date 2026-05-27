@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Delete Sheet in React Spreadsheet
+# Delete Worksheet in React Spreadsheet
 
 ## Overview
 
