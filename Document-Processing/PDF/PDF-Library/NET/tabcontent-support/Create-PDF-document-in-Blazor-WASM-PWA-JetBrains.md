@@ -1,16 +1,34 @@
-**Prerequisites**:
+**Prerequisites:**
 
-* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
+* JetBrains Rider.
+* Install .NET 8 SDK or later.
 
-Step 1: Create a new C# Blazor client-side application project. Select Blazor Web App from the template and click the Next button.
-![Blazor client project creation step1](Create-PDF-Blazor/Blazor-web-app.png)
+Step 1. Open JetBrains Rider and create a new Blazor WASM PWA app project.
+* Launch JetBrains Rider.
+* Click New Solution on the welcome screen.
 
-Step 2: In the **Interactive Render Mode section**, choose `WebAssembly` as the render mode. Then, click the `Create` button to generate a new Blazor client-Side Application.
-![Select Blazor WASM app](Create-PDF-Blazor/Blazor-Web-Assembly.png)
+![Launch JetBrains Rider](JetBrains_Images/Launch-JetBrains-Rider.png)
 
-Step 4: Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org).
-![Blazor WASM NuGet package installation](Create-PDF-Blazor/Blazor_server_NuGet.png)
+* In the new Solution dialog, select Project Type as Web.
+* Enter a project name and specify the location.
+* Choose template as **Blazor WebAssembly Standalone App**.
+* Select the target framework (e.g., .NET 8.0, .NET 9.0).
+* Enable the **Progressive Web Application (PWA)** checkbox.
+* Click create.
+
+![Launch JetBrains Rider](JetBrains_Images/JetBrains-PWA.png)
+
+Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+* Click the NuGet icon in the Rider toolbar and type [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) in the search bar.
+* Ensure that "nuget.org" is selected as the package source.
+* Select the latest Syncfusion.Pdf.Net.Core NuGet package from the list.
+* Click the + (Add) button to add the package.
+
+![Select the Syncfusion.Pdf.Net.Core package](JetBrains_Images/Core-Package.png)
+
+* Click the Install button to complete the installation.
+
+![Install the package](JetBrains_Images/Install-Core-BlazorWeb-Package.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -36,7 +54,7 @@ Step 6: Create a button in the ``FetchData.razor`` using the following code.
 Step 7: Define the ``@ExportToPdf`` click function on ``FetchData.razor`` file.
 
 The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created and add a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) to it. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
- 
+
 {% highlight c# tabtitle="C#" %}
 
 @functions {
@@ -131,8 +149,8 @@ Step 9: Add the following JavaScript function in the ``index.html`` available un
 
 Step 10: Build the project.
 
-Click on **Build** → **Build Solution** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 11: Run the project.
 
-Click the Start button (green arrow) or press F5 to run the app.
+Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
