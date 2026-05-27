@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # .NET MAUI PDF Viewer (SfPdfViewer) Overview
 
-Build powerful PDF experiences into your .NET MAUI app with the [SfPdfViewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) control. Whether you need to display documents for review, let users fill out forms, redact sensitive data, or annotate content — the PDF Viewer gives you a full-featured, cross-platform solution that works on Android, iOS, macOS, and Windows from a single codebase.
+Build powerful PDF experiences into your .NET MAUI app with the [SfPdfViewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) control. Whether you need to display documents for review, let users fill out forms, redact sensitive data, or annotate content — the PDF Viewer gives you a full-featured, cross-platform solution that works on Android, iOS, macOS, and Windows from a single code base.
 
 ## In This Section
 
