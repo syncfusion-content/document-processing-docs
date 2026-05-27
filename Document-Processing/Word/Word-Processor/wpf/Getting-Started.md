@@ -501,28 +501,6 @@ To add the controls and apply a theme manually in XAML, follow these steps:
 3.	Declare the SfRichTextRibbon and SfRichTextBoxAdv controls in XAML page.
 4.	To make an interaction between SfRichTextRibbon and SfRichTextBoxAdv, bind the SfRichTextBoxAdv as DataContext to SfRichTextRibbon.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" %}
-
-<syncfusion:RibbonWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
-                         x:Class="Theme.MainWindow"
-                         Title="MainWindow" Height="450" Width="800">
-<Grid>
-     <Grid.RowDefinitions>
-         <RowDefinition Height="Auto"/>
-         <RowDefinition Height="*"/>
-     </Grid.RowDefinitions>
-     <syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"  DataContext="{Binding ElementName=richTextBoxAdv}"/>
-     <syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1"/>
- </Grid>
-</syncfusion:RibbonWindow>
-
-
-{% endhighlight %}
-{% endtabs %}
-
 **Apply Theme in XAML**
 
 1. Import Syncfusion® WPF schema http://schemas.syncfusion.com/wpf or the **SfSkinManager** namespace Syncfusion.SfSkinManager into a XAML page. 
