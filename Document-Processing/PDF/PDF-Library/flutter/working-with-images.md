@@ -22,7 +22,8 @@ You can load image data in [`PdfBitmap`](https://pub.dev/documentation/syncfusio
 
 The following code snippet shows how to draw an image to the PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -43,12 +44,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
   
 {% endhighlight %}
+{% endtabs %}
 
 ## Applying transparency and rotation to the image
 
 You can add transparency and rotation to the image using the [`setTransparency`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/setTransparency.html) and [`rotateTransform`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/rotateTransform.html) methods of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html) respectively. This is explained in the following code snippet.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -84,6 +87,7 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
+{% endtabs %}
 
 ## Inserting image to PDF using a web URL
 
@@ -103,7 +107,8 @@ import 'package:http/http.dart' show get;
 
 This is explained in the following code snippet.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     //Create a PDF document.
     PdfDocument document = PdfDocument();
@@ -135,3 +140,4 @@ This is explained in the following code snippet.
 
 	
 {% endhighlight %}
+{% endtabs %}
