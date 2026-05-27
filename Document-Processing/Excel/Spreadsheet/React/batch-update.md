@@ -15,8 +15,6 @@ The **batch update** feature lets you temporarily pause UI rendering, perform mu
 
 This is especially useful when the Spreadsheet is updated programmatically during initialization, data processing, or large-scale scenarios.
 
----
-
 ## When to use batch update
 
 Use batch update when you need to perform several actions in sequence, such as:
@@ -28,8 +26,6 @@ Use batch update when you need to perform several actions in sequence, such as:
 - Working with large datasets
 
 For a few operations, batch update is usually not required.
-
----
 
 ## How to use batch update
 
@@ -52,7 +48,7 @@ Call `resumeRefresh()` after all operations are complete. The Spreadsheet then r
 
 ### Pattern for batch update
 
-```tsx
+```js
 let spreadsheet;
 
 function onCreated() = {
@@ -65,8 +61,6 @@ function onCreated() = {
     spreadsheet.resumeRefresh();
 };
 ```
-
----
 
 ## API reference
 
@@ -91,8 +85,6 @@ Resumes visual updates and applies all pending changes.
 - Refreshes the Spreadsheet UI once
 - Improves rendering efficiency for bulk operations
 
----
-
 ## Code example
 
 {% tabs %}
@@ -105,8 +97,6 @@ Resumes visual updates and applies all pending changes.
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/batch-update" %}
-
----
 
 ## Common operations supported in batch update
 
@@ -129,16 +119,12 @@ The following types of operations can be performed between `suspendRefresh()` an
 - **Filtering:** `applyFilter`, `clearFilter`
 - **Other actions:** `sort`, `calculateNow`, `addDefinedName`, `updateRange`
 
----
-
 ## Notes
 
 - Use batch update only when multiple operations are executed together
 - Avoid using it for few, simple actions
 - It is most useful for initialization logic and programmatic bulk updates
 - Data and model changes are processed during the suspended state; only visual refresh is delayed
-
----
 
 ## See Also
 
