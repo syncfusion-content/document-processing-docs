@@ -71,6 +71,7 @@ The following table shows the features available in our Syncfusion EJ2 Spreadshe
 | Theme and style options | Yes | - |
 | Accessibility | Yes | - |
 | Touch-Friendly Interactions | Yes | - |
+| AI Assist | Yes | - |
 
 ## See Also
 
