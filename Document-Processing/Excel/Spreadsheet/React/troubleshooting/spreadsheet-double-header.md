@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Double header rendering issue in React Spreadsheet component
+# Double Header Rendering Issue in React Spreadsheet Component
 
 In some scenarios, the Spreadsheet header appears twice or is rendered below the data instead of at the top. This typically occurs when multiple refresh or resize actions are triggered simultaneously or in rapid succession.
 
