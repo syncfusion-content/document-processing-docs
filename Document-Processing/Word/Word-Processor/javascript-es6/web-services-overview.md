@@ -29,7 +29,7 @@ You can deploy web APIs for server-side dependencies of Document Editor componen
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
 
-Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/document-editor-container#serviceurl).
+Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/).
 
 If your running web service Url is `http://localhost:62869/`, set the serviceUrl like below:
 
@@ -90,7 +90,7 @@ Document editor component provides an an option to add custom headers of XMLHttp
 
 Document editor component provides an option to modify the XMLHttpRequest object (setting additional headers, if needed) using [`beforeXmlHttpRequestSend`](https://ej2.syncfusion.com/documentation/api/document-editor-container#beforexmlhttprequestsend) event and it gets triggered before a server request.
 
-You can customize the required [`XMLHttpRequest`](https://ej2.syncfusion.com/documentation/api/document-editor/xmlHttpRequestEventArgs/) properties.
+You can customize the required [`XMLHttpRequest`](https://ej2.syncfusion.com/documentation/api/document-editor/xmlHttpRequestEventArgs) properties.
 
 The following example code illustrates how to modify the XMLHttpRequest using beforeXmlHttpRequestSend.
 
