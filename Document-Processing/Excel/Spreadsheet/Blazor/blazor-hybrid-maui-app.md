@@ -133,7 +133,9 @@ N> If any errors occur while using the Android Emulator, see [Troubleshooting An
 
 ![Blazor Spreadsheet running in the Android emulator](images/android-emulator.png)
 
-N> To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save). For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/syncfusion-maui-blazor-spreadsheet-integration).
+To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save).
+
+N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/syncfusion-maui-blazor-spreadsheet-integration).
 
 ## See Also
 
