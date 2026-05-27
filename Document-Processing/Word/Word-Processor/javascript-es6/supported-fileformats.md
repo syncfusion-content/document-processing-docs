@@ -16,12 +16,21 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> TypeScript DOCX Editor (Documen
 
 The following table describes supported formats and their conversion capabilities in the Document Editor.
 
-| Operation | Formats | Server-Side Required | Details |
-|-----------|---------|---------------------|---------|
-| **Open (Server-side)** | **Word formats:**<br>• Word Document (.docx)<br>• Word 97-2003 Document (.doc)<br>• Word Template (.dotx)<br>• Word 97-2003 Template (.dot)<br>• Rich Text Format (.rtf)<br>• Word XML Document (.xml)<br><br>**Other formats:**<br>• HyperText Markup Language (.html)<br>• Plain Text (.txt) | Yes | Uses .NET Word Library (DocIO) for parsing documents |
-| **Open (Client-side)** | • Syncfusion Document Text (.sfdt) | No | Native JSON-based document format |
-| **Export (Client-side)** | • Word Document (.docx)<br>• Syncfusion Document Text (.sfdt)<br>• Word Template (.dotx)<br>• Plain Text (.txt) | No | Export handled directly in the browser |
-| **Export (Server-side)** | **Word formats:**<br>• Word Document (.doc)<br>• Word 97-2003 Template (.dot)<br>• Rich Text Format (.rtf)<br>• Word XML Document (.xml)<br><br>**Other formats:**<br>• HyperText Markup Language (.html)<br>• OpenDocument Text (.odt)<br>• Portable Document Format (.pdf) | Yes | Uses .NET Word (DocIO) for document conversion, and both DocIO and .NET PDF libraries for PDF conversion. |
+| File Format                          | Open   | Export |
+|--------------------------------------|--------|--------|
+| Word Document (.docx)                | Yes*   | Yes    |
+| Word 97-2003 Document (.doc)         | Yes*   | Yes*   |
+| Word Template (.dotx)                | Yes*   | Yes    |
+| Word 97-2003 Template (.dot)         | Yes*   | Yes*   |
+| Rich Text Format (.rtf)              | Yes*   | Yes*   |
+| Word XML Document (.xml)             | Yes*   | Yes*   |
+| HyperText Markup Language (.html)    | Yes*   | Yes*   |
+| Plain Text (.txt)                    | Yes*   | Yes    |
+| Syncfusion Document Text (.sfdt)     | Yes    | Yes    |
+| OpenDocument Text (.odt)             | No     | Yes*   |
+| Portable Document Format (.pdf)      | No     | Yes*   |
+
+N> * Requires server-side interactions for the operations.
 
 ## Supported platforms for server-side dependencies
 
@@ -32,5 +41,3 @@ You can deploy web APIs for the server-side dependencies of the Document Editor 
 - 	[Java](./web-services/java)
 
 To know more about server-side dependencies, refer to this [page](./web-services-overview).
-
-N> If you do not require these functionalities, you can deploy the component as a pure client-side solution without any server-side interaction.
