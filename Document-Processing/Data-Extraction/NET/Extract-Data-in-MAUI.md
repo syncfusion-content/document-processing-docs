@@ -8,7 +8,7 @@ keywords: Assemblies
 
 ---
 
-# Extract Data from PDF in .NET MAUI Application
+# Extract Data from PDF in .NET MAUI
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in .NET MAUI applications.
 
@@ -48,24 +48,24 @@ Step 4: Add a new button to the **MainPage.xaml** as shown below.
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Extract_Data_MAUI.MainPage">
 
-	<ScrollView>
-		<VerticalStackLayout
+    <ScrollView>
+        <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
 
-			<Label
+            <Label
                 Text="Smart Data Extractor Demo"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-			<Button
+            <Button
                 Text="Extract Data from PDF"
                 SemanticProperties.Hint="Extract structured data from PDF"
                 Clicked="OnExtractDataClicked"
                 HorizontalOptions="Fill" /> 
 
-		</VerticalStackLayout>
-	</ScrollView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
 
 {% endhighlight %}
@@ -113,7 +113,7 @@ Step 7: Run the Application.
 1. Select the target framework, device or emulator.
 2. Press <kbd>F5</kbd> to run the application.
 
-By executing the program, you will get the **JSON file** as follows.
+By executing the program, you will get the JSON file as follows.
 
 ![.NET MAUI output JSON document](GettingStarted_images/JSON_Output.png)
 
@@ -224,7 +224,7 @@ Step 6: Run the Application.
 1. Select the target framework, device or emulator.
 2. Press <kbd>F5</kbd> to run the application.
 
-By executing the program, you will get the **JSON file** as follows.
+By executing the program, you will get the JSON file as follows.
 
 ![.NET MAUI output JSON document](GettingStarted_images/JSON_Output.png)
 

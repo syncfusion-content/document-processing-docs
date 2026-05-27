@@ -15,7 +15,8 @@ Flutter PDF supports various page setting options to control the page display, u
 
 You can choose the standard or custom page size when you add a page to the PDF document. The following sample explains how to create a PDF document with standard page size.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF documentation
 PdfDocument document = PdfDocument();
@@ -34,10 +35,12 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
+{% endtabs %}
 
 You can create a PDF document with custom page size by using the following code snippet.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF documentation
 PdfDocument document = PdfDocument();
@@ -55,10 +58,12 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
+{% endtabs %}
 
 You can change the page [`orientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html) from [`portrait`] to landscape using the [`PdfPageOrientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageOrientation.html) enum by the following code snippet.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF documentation
 PdfDocument document = PdfDocument();
@@ -80,10 +85,12 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
+{% endtabs %}
 
 You can also change the [`orientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html) by setting the [`rotation angle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/rotate.html) using the [`PdfPageRotateAngle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageRotateAngle.html) enum. The following code snippet explains the same.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF documentation
 PdfDocument document = PdfDocument();
@@ -105,12 +112,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
+{% endtabs %}
 
 ## Creating sections in a PDF
 
 PDF [`sections`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/sections.html) are parts of a PDF document, which may contain one or more pages with their unique page settings. The following code snippet explains how to create a [`PdfSection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSection-class.html) in a PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF documentation
 PdfDocument document = PdfDocument();
@@ -129,12 +138,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
+{% endtabs %}
 
 ## Performing incremental update for the PDF document
 
 The Syncfusion<sup>&reg;</sup> Flutter PDF supports incremental update for the PDF document. The content of a PDF file can be updated incrementally without rewriting the entire file. The changes are appended to the end of the file, leaving its original contents intact. The main benefit is small changes to a large PDF document can be saved quickly but the resultant document size gets increased compared with the original PDF document. Disabling the incrementalUpdate of [`PdfFileStructure`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFileStructure-class.html) will rewrite the entire file, which results in a smaller PDF. This is explained in the following code sample.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -153,3 +164,4 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

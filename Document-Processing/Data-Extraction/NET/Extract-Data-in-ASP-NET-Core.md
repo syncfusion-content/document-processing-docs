@@ -8,12 +8,12 @@ documentation: UG
 
 # Extract Data in ASP.NET Core
 
-The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in ASP.NET Core applications.
+The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDF and image files in ASP.NET Core applications.
 
-To quickly get started with extracting structured data from PDF and image files in ASP.NET Core using the Syncfusion<sup>&reg;</sup> Smart Data Extractor library, refer to this video tutorial:
+To quickly get started with extracting structured data from PDF and image files in ASP.NET Core using the Smart Data Extractor library, refer to this video tutorial:
 {% youtube "https://www.youtube.com/watch?v=fxijc3BgDTY" %}
 
-To include the .NET Core Smart Data Extractor library into your ASP.NET Core application, please refer to the [NuGet Packages Required](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/assemblies-required) documentation.
+To include the Smart Data Extractor library in your ASP.NET Core application, please refer to the  [NuGet Packages Required](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/assemblies-required) documentation.
 
 
 ## Steps to Extract Data from PDF in ASP.NET Core application
@@ -25,8 +25,6 @@ To include the .NET Core Smart Data Extractor library into your ASP.NET Core app
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio: Download and install Visual Studio from the [official website](https://visualstudio.microsoft.com/downloads/).
-
-
 
 Step 1: Create a new C# ASP.NET Core Web Application project.
    ![Create ASP.NET Core Web application in Visual Studio](GettingStarted_images/ASPNETCoreProjectCreation.png)
@@ -43,13 +41,14 @@ Step 4: A default controller named HomeController.cs is added on creation of ASP
 
 {% highlight c# tabtitle="C#" %}
 
-   using Syncfusion.SmartDataExtractor;
-   using System.Diagnostics;
-   using System.Text;
+using System.Text;
+using System.Diagnostics;
+using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
 
-Step 5: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
+Step 5: Add a new button in the Index.cshtml as shown below.
+
 {% highlight c# tabtitle="C#" %}
 
 @{
@@ -64,14 +63,14 @@ Step 5: A default action method named Index will be present in HomeController.cs
 
 {% endhighlight %}
 
-Step 6: Add a new action method named `ExportToJson` in HomeController.cs and include the following code example to extract data as JSON using the DataExtractor (help.syncfusion.com in Bing) class. Then use the **ExtractDataAsJson** method of the DataExtractor object to process the input and export the results in JSON format.
+Step 6: Add a new action method named `ExtractData` in HomeController.cs and include the following code example to extract data as JSON using the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class. Then use the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method of the DataExtractor object to process the input and export the results in JSON format.
 
 {% highlight c# tabtitle="C#" %}
 
 // Open the input PDF file as a stream.
 using (FileStream stream = new FileStream(Path.GetFullPath("Input.pdf"), FileMode.Open, FileAccess.Read))
 {
-   // Initialize the Smart Data Extractor.
+   // Initialize the  Data Extractor.
    DataExtractor extractor = new DataExtractor();
    // Extract form data as JSON.
    string data = extractor.ExtractDataAsJson(stream);
@@ -88,10 +87,12 @@ using (FileStream stream = new FileStream(Path.GetFullPath("Input.pdf"), FileMod
 {% endhighlight %}
 
 Step 7: Build the project.
-   Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+
+Click on **Build** → **Build Solution** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 8: Run the project.
-   Click the Start button (green arrow) or press F5 to run the app.
+
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
 {% endtabcontent %}
  
@@ -125,9 +126,9 @@ Step 5: A default controller named HomeController.cs gets added on creation of A
 
 {% highlight c# tabtitle="C#" %}
 
-   using Syncfusion.SmartDataExtractor;
-   using System.Diagnostics;
-   using System.Text;
+using Syncfusion.SmartDataExtractor;
+using System.Diagnostics;
+using System.Text;
 
 {% endhighlight %}
 
@@ -154,7 +155,7 @@ Step 7: Add a new action method named `ExportToJson` in HomeController.cs and in
 // Open the input PDF file as a stream.
 using (FileStream stream = new FileStream(Path.GetFullPath("Input.pdf"), FileMode.Open, FileAccess.Read))
 {
-   // Initialize the Smart Data Extractor.
+   // Initialize the Data Extractor.
    DataExtractor extractor = new DataExtractor();
    // Extract form data as JSON.
    string data = extractor.ExtractDataAsJson(stream);
@@ -191,5 +192,5 @@ dotnet run
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/ASP.NETCore/Extract_Data_as_JSON).
 
-By executing the program, you will get the PDF document as follows.
+By executing the program, you will get the JSON file as follows.
 ![ASP.Net Core output JSON document](GettingStarted_images/JSON_Output.png)
