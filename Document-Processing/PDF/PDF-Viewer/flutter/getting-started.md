@@ -21,35 +21,58 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 Add the Syncfusion<sup>&reg;</sup> Flutter PDF Viewer dependency to your `pubspec.yaml` file.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight yaml tabtitle="pubspec.yaml" %}
 
 dependencies:
 
 syncfusion_flutter_pdfviewer: ^xx.x.xx
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Here **xx.x.xx** denotes the current version of the [Syncfusion<sup>&reg;</sup> Flutter PDF Viewer](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package.
+
+Add the asset path to your `pubspec.yaml` file under the flutter section.
+
+{% tabs %}
+{% highlight yaml tabtitle="pubspec.yaml" %}
+
+flutter:
+
+assets:
+   - assets/
+
+{% endhighlight %}
+{% endtabs %}
 
 For the web platform, we have used [PdfJs](https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js) for rendering the PDF pages, so the script file must be referred to in your `web/index.html` file.
 
 In your `web/index.html` file, add the following `script` tags, somewhere in the `head` or `body` of the document:
 
 For PdfJs library version 4.0 and above:
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" hl_lines="8 9 10 11 12 13 14 15 16 17 19" %}
+
 <script type="module" async>
   import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs';
   pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 For PdfJs library versions below 4.0:
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" hl_lines="8 9 10 11 12 13 14 15 16 17 19" %}
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
 <script type="text/javascript">
   pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js";
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> A version above **2.11.338** is recommended for using annotation support. This will not flatten the unsupported annotations while rendering the pages.
 
