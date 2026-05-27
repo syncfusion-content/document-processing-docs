@@ -79,6 +79,6 @@ if (outlineElement != null)
 {% endtabs %}
 
 ## See Also
-- [Page Navigation](../page-navigation)
-- [Document Link Annotations](../document-link-annotations)
-- [Custom Bookmark](../custom-bookmark)
+- [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/page-navigation)
+- [Document Link Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/document-link-annotations)
+- [Custom Bookmark](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/custom-bookmark)
