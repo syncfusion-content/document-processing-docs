@@ -9,11 +9,9 @@ documentation: ug
 
 # Rich Text Formatting
 
-Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, only subscript and superscript formatting are supported, and other style formats through richText are not available.
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
 
 In the **Syncfusion React Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#richtext) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
-
-## Rich Text Structure
 
 Each `richText` segment contains:
 
@@ -24,7 +22,7 @@ Each `richText` segment contains:
 
 Subscript and superscript formatting are supported as part of rich text formatting and can be applied to specific portions of text within a cell.
 
-To apply these formats, use the verticalAlign property within the style of a rich text segment:
+To apply these formats, use the `verticalAlign` property within the style of a rich text segment:
 
 Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
 
@@ -36,7 +34,7 @@ You can apply subscript and superscript formatting in following ways:
 
 ![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
 
-2. You can define the richText property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
+2. You can define the [`richText`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
 
 ```javascript
     cells: [
@@ -51,7 +49,7 @@ You can apply subscript and superscript formatting in following ways:
     ]
 ```
 
-3. You can also apply subscript and superscript dynamically using the updateCell method.
+3. You can also apply subscript and superscript dynamically using the [`updateCell`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method.
 
 ```javascript
     spreadsheet.updateCell({ value: 'X2', richText: [
