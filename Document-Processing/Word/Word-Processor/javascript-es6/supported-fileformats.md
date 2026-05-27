@@ -27,7 +27,7 @@ The following table describes supported formats and their conversion capabilitie
 
 You can deploy web APIs for the server-side dependencies of the Document Editor component on the following platforms.
 
-- 	[ASP.NET Core[MJ2.1]](./web-services/core)
+- 	[ASP.NET Core](./web-services/core)
 - 	[ASP.NET MVC](./web-services/mvc)
 - 	[Java](./web-services/java)
 
