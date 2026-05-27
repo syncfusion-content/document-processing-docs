@@ -513,8 +513,8 @@ When a protected sheet or workbook is saved or downloaded, all associated settin
 
 ### Supported file formats
 The Spreadsheet component supports saving files in the following formats:
-* MS Excel (.xlsx)
-* MS Excel 97-2003 (.xls)
+* Microsoft Excel (.xlsx)
+* Microsoft Excel 97-2003 (.xls)
 * Comma Separated Values (.csv)
 * Portable Document Format (.pdf)
 

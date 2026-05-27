@@ -310,7 +310,7 @@ Top/Bottom rules apply formatting based on statistical rankings and averages wit
 | `Top10Items` | Highlights the top N items in the range by value rank | Identify top 10 sales, scores, or performers |
 | `Bottom10Items` | Highlights the bottom N items in the range by value rank | Flag lowest performers or smallest values |
 | `Top10Percentage` | Highlights the top N percent of items in the range by value | Identify highest-performing percentile |
-| `Bottom10Percentage` | Highlights the bottom N percent of items in the range by value | Flag underperforming percentile |
+| `Bottom10Percentage` | Highlights the bottom N percent of items in the range by value | Flag under performing percentile |
 | `AboveAverage` | Highlights cells with values above the average of the range | Identify above-trend values |
 | `BelowAverage` | Highlights cells with values below the average of the range | Identify below-trend values |
 
