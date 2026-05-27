@@ -25,6 +25,8 @@ To open an Excel document using the interface, select the **File > Open** option
 ### Open an Excel file from a local path
 To load Excel files programmatically, they can be converted into byte arrays. This approach is particularly effective when files are retrieved from a backend service.
 
+N> In Blazor WebAssembly, File.ReadAllBytes is not supported due to browser security limitations. To work with Excel files, use a [Base64-encoded Excel files](#open-an-excel-file-from-a-base64-string) instead.
+
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
