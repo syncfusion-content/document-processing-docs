@@ -33,7 +33,7 @@ To add **Windows Forms Spreadsheet** component in the application, open the NuGe
 
 {% endtabcontent %}
  
-{% tabcontent Assemblies(.dll)  %}
+{% tabcontent Assemblies (.dll)  %}
 
 ### Add Syncfusion® WinForms Spreadsheet Assemblies
 
@@ -106,11 +106,11 @@ WinForms Spreadsheet control can be added to an application either through the d
  
 {% tabcontent Via Designer %}
 
-1.Open the Visual Studio **Tool** **box**. Navigate to Syncfusion<sup>®</sup> Controls tab, and find the  Spreadsheet/SpreadsheetRibbon toolbox items.
+1. Open the Visual Studio **Tool** **box**. Navigate to Syncfusion<sup>®</sup> Controls tab and find the  Spreadsheet/SpreadsheetRibbon toolbox items.
 
 ![Toolbox in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-toolbox.jpg)
 
-2.Drag `Spreadsheet` and drop in the Designer area from the Toolbox.
+2. Drag `Spreadsheet` and drop in the Designer area from the Toolbox.
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.Designer.cs" %}
@@ -128,7 +128,7 @@ Spreadsheet spreadsheet = new Spreadsheet();
 {% endhighlight %}
 {% endtabs %}
 
-3.Ribbon can be added to the application by dragging `SpreadsheetRibbon` to the Designer area.
+3. Ribbon can be added to the application by dragging `SpreadsheetRibbon` to the Designer area.
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.Designer.cs" %}
@@ -147,7 +147,7 @@ SpreadsheetRibbon spreadsheetRibbon = new SpreadsheetRibbon();
 {% endhighlight %}
 {% endtabs %}
 
-4.To make an interaction between Ribbon items and `Spreadsheet`, bind the Spreadsheet as DataContext to the `SpreadsheetRibbon`.
+4. To make an interaction between Ribbon items and `Spreadsheet`, bind the Spreadsheet as DataContext to the `SpreadsheetRibbon`.
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.Designer.cs" %}
