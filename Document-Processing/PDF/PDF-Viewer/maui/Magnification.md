@@ -115,12 +115,12 @@ N> When the `ZoomFactor` is manually changed, the `ZoomMode` resets to `Default`
 
 ## Maintain Zoom Level in Single Page View Mode
 
-In single-page view mode, the zoom level resets to default each time you navigate to a new page. To maintain a consistent zoom factor throughout the document, enable the PersistZoomOnPageChange property. This applies whether navigation is triggered by the built-in toolbar controls or programmatic APIs.
-The default value of `PersistZoomOnPageChange` is `False`.
+In single-page view mode, the zoom level resets to default each time you navigate to a new page. To maintain a consistent zoom factor throughout the document, enable the [PersistZoomOnPageChange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PersistZoomOnPageChange) property. This applies whether navigation is triggered by the built-in toolbar controls or programmatic APIs.
+The default value of [PersistZoomOnPageChange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PersistZoomOnPageChange) is `False`.
 
 ### Enable PersistZoomOnPageChange
 
-You can enable persistent zoom by setting the `PersistZoomOnPageChange` property to `True`. When enabled, the viewer preserves the numeric `ZoomFactor` when switching pages in `SinglePage` layout and applies that same zoom to the destination page. Refer to the following code example:
+You can enable persistent zoom by setting the [PersistZoomOnPageChange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PersistZoomOnPageChange) property to `True`. When enabled, the viewer preserves the numeric [ZoomFactor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ZoomFactor) when switching pages in `SinglePage` layout and applies that same zoom to the destination page. Refer to the following code example:
 
 {% tabs %}
 {% highlight xaml %}
@@ -138,7 +138,7 @@ PdfViewer.PersistZoomOnPageChange = true;
 
 ### Disable PersistZoomOnPageChange
 
-Set `PersistZoomOnPageChange` to `False` to keep the viewer's default behavior. When disabled, navigating to a different page resets the viewer to the default zoom level unless you explicitly set a zoom after navigation. Refer to the following example:
+Set [PersistZoomOnPageChange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PersistZoomOnPageChange) to `False` to keep the viewer's default behavior. When disabled, navigating to a different page resets the viewer to the default zoom level unless you explicitly set a zoom after navigation. Refer to the following example:
 
 {% tabs %}
 {% highlight xaml %}
@@ -150,6 +150,25 @@ Set `PersistZoomOnPageChange` to `False` to keep the viewer's default behavior. 
 {% highlight c# %}
 // Disable persistence
 PdfViewer.PersistZoomOnPageChange = false;
+{% endhighlight %}
+{% endtabs %}
+
+### Enable or Disable Double-Tap Zoom
+
+The PDF Viewer allows users to zoom in and out of the document using a double-tap gesture. This behavior can be controlled programmatically using the `AllowDoubleTapZoom` property.
+
+By default, double-tap zoom is enabled, allowing users to quickly zoom into a specific area of the document. You can disable this feature to prevent accidental zooming or to provide a controlled zooming experience.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfPdfViewer 
+    x:Name="PdfViewer"
+    AllowDoubleTapZoom="False" />
+{% endhighlight %}
+
+{% highlight c# %}
+// Disable double tap zoom
+pdfViewer.AllowDoubleTapZoom = false;
 {% endhighlight %}
 {% endtabs %}
 
