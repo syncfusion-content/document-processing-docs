@@ -4310,7 +4310,7 @@ loadedDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;

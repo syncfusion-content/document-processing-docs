@@ -184,6 +184,47 @@ Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 
 Button form fields will be rendered in the PDF viewer. But the PDF viewer supports only the `GoTo` actions that navigates to a particular location in the PDF document alone. Other types of button actions are not supported.
 
+## Flatten form fields only on save
+
+The [FlattenOnSave](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_FlattenOnSave) property converts form fields into non-editable content only when the PDF document is saved. This means the form fields remain editable while the document is open, and are flattened (made part of the document content) during the save operation, preventing any further modification afterward.
+
+### Flatten specific form fields
+
+You can selectively flatten specific form fields, such as signature fields, by iterating through the form field collection.
+
+{% tabs %}
+{% highlight c# %}
+
+foreach (var item in pdfViewer.FormFields)
+{
+    //Iterate Only signature form field and flatten it
+    if (item is SignatureFormField signature)
+    {
+        item.FlattenOnSave = true;
+    }
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+### Flatten all form fields
+
+To flatten all form fields in the document, set the FlattenOnSave property for each field:
+
+{% tabs %}
+{% highlight c# %}
+
+//Iterate all the form fields and set flatten
+foreach (var item in pdfViewer.FormFields)
+{
+    item.FlattenOnSave = true;
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+N>This property does not immediately change the UI; it is applied during the save operation.
+
 ## See Also
 - [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview)
 - [Form Fields Collection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-collection)
