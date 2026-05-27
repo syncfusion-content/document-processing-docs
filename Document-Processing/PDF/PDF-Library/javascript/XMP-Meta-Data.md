@@ -10,7 +10,7 @@ documentation: UG
 
 XMP (Extensible Metadata Platform) is a standardized framework for embedding structured metadata inside documents such as PDF. It uses RDF-based XML to store information like title, author, keywords, creation date, and rights.
 
-In PDF documents, XMP metadata improves searchability, interoperability, and consistency across different tools by storing metadata in a structured and extensible format.
+In PDF files, XMP metadata helps make content easier to find, works well across different tools, and keeps information consistent by storing details in a clear and flexible format.
 
 ## Adding Metadata to a New PDF Document
 

@@ -117,7 +117,7 @@ document.destroy();
 
 ## Applying header and footer template to the PDF section
 
-Header and footer templates can also be assigned through the template property of the PdfSection class, allowing them to be applied only to the pages within that specific section rather than across the entire document.
+Header and footer templates can also be assigned through the `template` property of the `PdfSection` class, allowing them to be applied only to the pages within that specific section rather than across the entire document.
 
 This sample demonstrates how to apply templates across multiple pages.
 
