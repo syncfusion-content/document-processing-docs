@@ -28,9 +28,9 @@ Step 4: Include the following namespaces in the HomeController.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.SmartDataExtractor;
 using System.IO;
 using System.Text;
+using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
 
@@ -39,19 +39,19 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 {% highlight c# tabtitle="C#" %}
 
 @{
-	ViewBag.Title = "Home Page";
+   ViewBag.Title = "Home Page";
 }
 
 <div style="margin-top:20px;">
-	@using (Html.BeginForm("ExtractData", "Home", FormMethod.Get))
-	{
-		<input type="submit" value="Extract Data from PDF" style="width:220px;height:30px" />
-	}
+    @using (Html.BeginForm("ExtractData", "Home", FormMethod.Get))
+    {
+        <input type="submit" value="Extract Data from PDF" style="width:220px;height:30px" />
+    }
 </div>
 
 {% endhighlight %}
 
-Step 6: Add a new action method named ExtractData in `HomeController.cs` and include the following code example to extract data from a PDF document using the **ExtractDataAsJson** method in the **DataExtractor** class. 
+Step 6: Add a new action method named `ExtractData` in HomeController.cs and include the following code example to extract data from a PDF document using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method in the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class. 
 
 {% highlight c# tabtitle="C#" %}
 
@@ -61,7 +61,7 @@ string inputPath = Server.MapPath("~/App_Data/Input.pdf");
 // Open the input PDF file as a stream.
 using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.ReadWrite))
 {
-    // Initialize the Smart Data Extractor.
+    // Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     // Extract form data as JSON.
     string data = extractor.ExtractDataAsJson(stream);
@@ -75,10 +75,10 @@ using (FileStream stream = new FileStream(inputPath, FileMode.Open, FileAccess.R
 
 {% endhighlight %}
 
-By executing the program, you will get the PDF document as follows.
-![ASP.NET MVC output JSON document](GettingStarted_images/JSON_Output.png)  
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Getting-Started/ASP.NETMVC/Extract_Data).
+
+By executing the program, you will get the JSON file as follows.
+![ASP.NET MVC output JSON document](GettingStarted_images/JSON_Output.png)  
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-data-extraction) to explore the rich set of Syncfusion<sup>&reg;</sup> Data Extraction library features. 
  

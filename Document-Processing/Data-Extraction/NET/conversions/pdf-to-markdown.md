@@ -15,12 +15,12 @@ Markdown is a lightweight markup language that adds formatting elements to plain
 
 Refer to the following links for assemblies and NuGet packages required based on platforms to Extract data as Markdown file  using the .NET Word Library (DocIO).
 
-* [PDF to Markdown Extraction assemblies](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/assemblies-required)
-* [PDF to Markdown Extraction NuGet packages](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/nuget-packages-required)
+* [PDF to Markdown Extraction assemblies](/document-processing/data-extraction/net/Assemblies-required)
+* [PDF to Markdown Extraction NuGet packages](/document-processing/data-extraction/net/Nuget-packages-required)
 
 ## Extract Data as Markdown from PDF or Image
 
-To extract form fields across a PDF document using the **ExtractDataAsMarkdown** method of the **DataExtractor** class, refer to the following code example:
+To extract form fields across a PDF document using the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
 
 {% tabs %} 
 
@@ -28,13 +28,12 @@ To extract form fields across a PDF document using the **ExtractDataAsMarkdown**
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Extract data as Markdown.
     string data = extractor.ExtractDataAsMarkdown(stream);
@@ -48,13 +47,12 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Extract data as Markdown.
     string data = extractor.ExtractDataAsMarkdown(stream);
@@ -72,7 +70,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extract a specific page to Markdown
 
-The following code demonstrates how to use the **ExtractDataAsMarkdown** method of the **DataExtractor** class to extract content from a selected page in a PDF and save it as a Markdown file by specifying its page index.
+The following code demonstrates how to use the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class to extract content from a selected page in a PDF and save it as a Markdown file by specifying its page index.
 
 {% tabs %} 
 
@@ -85,7 +83,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Set the page index for extraction (example: page 2).
     extractor.PageRange = new int[,] { { 2, 2 } };
@@ -106,7 +104,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Set the page index for extraction (example: page 2).
     extractor.PageRange = new int[,] { { 2, 2 } };
@@ -121,10 +119,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
-
 ## Extract a range of pages to Markdown
 
-The following code demonstrates how to use the **ExtractDataAsMarkdown** method of the **DataExtractor** class to extract content from a range of pages in a PDF and save it as a Markdown file by specifying the page range.
+The following code demonstrates how to use the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class to extract content from a range of pages in a PDF and save it as a Markdown file by specifying the page range.
 
 {% tabs %} 
 
@@ -137,15 +134,12 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
-
     //Set the page range for extraction (pages 1 to 3).
     extractor.PageRange = new int[,] { { 1, 3 } };
-
     //Extract data as Markdown using the API.
     string data = extractor.ExtractDataAsMarkdown(stream);
-
     //Save the extracted Markdown data into an output file.
     File.WriteAllText("Output.md", data, Encoding.UTF8);
 }
@@ -161,7 +155,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Set the page range for extraction (pages 1 to 3).
     extractor.PageRange = new int[,] { { 1, 3 } };

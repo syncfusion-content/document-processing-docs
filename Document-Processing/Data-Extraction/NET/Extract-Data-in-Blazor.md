@@ -8,7 +8,7 @@ keywords: Assemblies
 
 ---
 
-# Extract Data from PDF in Blazor Application
+# Extract Data from PDF in Blazor
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in Blazor applications.
 
@@ -66,13 +66,10 @@ Include the following code snippet to add a button in your Blazor application th
 {% tabs %}
 {% highlight CSHTML %}
 <h1>Run Extraction</h1>
-
 <button @onclick="RunExtraction" class="btn btn-primary">
     Run Extractor
 </button>
-
 <p>@message</p>
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -85,12 +82,10 @@ Add the following code snippet to extract data from a PDF and download the file 
 {% highlight c# tabtitle="C#" %}
 @code {
     string message = "Waiting...";
-
     async Task RunExtraction()
     {
         message = "Processing...";
         StateHasChanged(); // force UI update immediately
-
         message = await extractor.RunExtraction();
     }
 }
@@ -122,10 +117,8 @@ using (FileStream stream = new FileStream(@"wwwroot/Input.pdf", FileMode.Open, F
 {
 	// Initialize the Smart Data Extractor
 	DataExtractor extractor = new DataExtractor();
-
 	// Extract data as JSON string
 	string data = extractor.ExtractDataAsJson(stream);
-
 	// Return the JSON string
 	return data;
 }
@@ -239,7 +232,7 @@ Step 13: Run the project.
 
 Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
-Upon executing the program, the **JSON document** will be generated as follows.
+Upon executing the program, the JSON file will be generated as follows.
 
 ![Blazor Web App Server output JSON document](GettingStarted_images/JSON_Output.png)
 
@@ -482,7 +475,7 @@ Run the following command in terminal to run the project.
 dotnet run
 ```
 
-Upon executing the program, the **JSON document** will be generated as follows.
+Upon executing the program, the JSON file will be generated as follows.
 
 ![Blazor Web App Server output JSON document](GettingStarted_images/JSON_Output.png)
 

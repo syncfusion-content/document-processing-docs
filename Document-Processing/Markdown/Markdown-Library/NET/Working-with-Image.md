@@ -64,7 +64,7 @@ markdownDocument.Dispose()
 
 A complete working sample is available on GitHub.
 
-### Adding image from relative path
+## Adding image from relative path
 
 Images can also be add images using relative file paths, which is useful for organizing documentation with local image resources. The following code example demonstrates how to add an image from a relative path.
 
@@ -116,7 +116,7 @@ markdownDocument.Dispose();
 
 A complete working sample is available on GitHub.
 
-### Adding image from local file path
+## Adding image from local file path
 
 The Syncfusion Markdown library supports adding images from absolute local file paths. The following code example demonstrates how to add an image from a local file path.
 
@@ -168,7 +168,7 @@ markdownDocument.Dispose()
 
 A complete working sample is available on GitHub.
 
-### Adding image from image bytes
+## Adding image from image bytes
 
 The Syncfusion Markdown library allows embedding images directly into a Markdown document using byte arrays. This is particularly useful when you need to include images that are dynamically generated, retrieved from a database, or loaded from memory. When using image bytes, the library **automatically encodes the image data as a base64 data URI in the Markdown output**.
 

@@ -19,3 +19,8 @@ PdfViewer.IsUndoEnabled = false;
 {% endtabs %}
      
 N>Redo can be performed only if undo is enabled. So, enabling or disabling undo, effectively enables and disables redo as well.
+
+## See Also
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Text selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/select-and-copy-text)
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)

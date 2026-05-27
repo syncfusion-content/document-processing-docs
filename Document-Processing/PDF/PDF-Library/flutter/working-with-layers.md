@@ -17,7 +17,8 @@ Syncfusion<sup>&reg;</sup> Flutter PDF provides support to create, add, update, 
 
 You can create a layer in a PDF page using the [`PdfPageLayer`](#) class. The following code sample shows how to add the multiple layers in a new PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -62,10 +63,12 @@ graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
 File('output.pdf').writeAsBytes(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 The following code shows how to add the multiple layers in an existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Load the existing PDF document.
 PdfDocument document =
@@ -94,6 +97,7 @@ graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
 File('output.pdf').writeAsBytes(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Toggling the visibility of layers
 
@@ -101,7 +105,8 @@ The visibility of a layer can be mentioned while creating a new page layer.
 
 The following code shows how to toggle the visibility of layers in a new PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -127,12 +132,14 @@ graphics.drawEllipse(Rect.fromLTWH(0, 0, 50, 50),
 File('output.pdf').writeAsBytes(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Removing layers from an existing PDF document
 
 You can remove the layers from the layer collection represented by the [`PdfPageLayerCollection`](#) of the loaded page. This is showed in the following code sample.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Load the existing PDF document and remove the layer on the first page.
 PdfDocument document =
@@ -143,12 +150,14 @@ PdfDocument document =
 File('output.pdf').writeAsBytes(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Nested Layers
 
 Syncfusion<sup>&reg;</sup> Flutter PDF allows users to add nested layers in the PDF document. Refer to the following code sample.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -170,12 +179,14 @@ layer.layers.add(name: 'Nested Layer1', visible: true)
 File('output.pdf').writeAsBytes(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Flattening the layers in an existing PDF document
 
 You can flatten a layer in a PDF document by removing it from the [`PdfLayerCollection`](#). The following code sample explains this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Load the existing PDF document and flatten the layer.
 PdfDocument document =
@@ -186,3 +197,4 @@ File('output.pdf').writeAsBytes(await document.save());
 
 
 {% endhighlight %}
+{% endtabs %}

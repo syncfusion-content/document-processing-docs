@@ -67,3 +67,8 @@ private async void Button_Clicked(object sender, RoutedEventArgs e)
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/enable-disable-undo-redo)
