@@ -106,7 +106,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 Register the Syncfusion Blazor service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" hl_lines="3 11" %}
+{% highlight C# tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
@@ -137,7 +137,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor Spreadsheet component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet component in the **~/Pages/Home.razor** file.
 
@@ -162,10 +162,10 @@ You can also experiment directly using the interactive playground below for a qu
 
 {% playground "https://blazorplayground.syncfusion.com/embed/BtLHDSMIxNVhqnlu?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
 
-N> To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save.md). For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet).
+N> To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save). For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet).
 
 ## See Also
 
-- [Getting started with the Blazor Spreadsheet in a Blazor Web app Server app](./getting-started-webapp.md)
-- [Getting Started with .NET MAUI Blazor Hybrid App](./blazor-hybrid-maui-app.md)
+- [Getting started with the Blazor Spreadsheet in a Blazor Web app Server app](./getting-started-webapp)
+- [Getting Started with .NET MAUI Blazor Hybrid App](./blazor-hybrid-maui-app)
 

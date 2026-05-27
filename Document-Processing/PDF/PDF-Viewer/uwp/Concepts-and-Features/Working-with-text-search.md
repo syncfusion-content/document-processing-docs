@@ -192,3 +192,8 @@ private void CancelButton_Click(object sender, RoutedEventArgs e)
 {% endtabs %}
 
 N> The text search operations can only be performed after the display of the PDF document in the viewer control and this cannot be initiated immediately after loading the PDF document.
+
+## See Also
+- [Text Selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/select-and-copy-text)
+- [Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-page-navigation)
+- [Enable and disable text selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/enable-and-disable-text-selection)

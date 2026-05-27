@@ -31,7 +31,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [Vue DOCX Editor](https://w
 * Provides support to perform [spell checking](./spell-check) for any input text
 * Allows user interactions like [zoom](./scrolling-zooming#zooming), [scroll](./scrolling-zooming), select contents through touch, mouse, and keyboard.
 * Provides intuitive UI options like context menu, [dialogs](./dialog), and [navigation pane](./find-and-replace#options-pane).
-* Provides a [ribbon interface](./ribbon.md) similar to Microsoft Word, with tab-based commands for quick and intuitive access to features. 
+* Provides a [ribbon interface](./ribbon) similar to Microsoft Word, with tab-based commands for quick and intuitive access to features. 
 * [Localizes](./global-local) all the static text to any desired language.
 * Allows to create a lightweight Word viewer using module injection to view and [prints](./print) Word documents.
 * Provides a [server-side helper library](./web-services-overview) to open the Word documents like DOCX, DOC, WordML, RTF, and Text, by converting it to SFDT file format.
@@ -40,15 +40,16 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [Vue DOCX Editor](https://w
 ## Supported platforms for server-side dependencies
 The Document Editor component requires server-side interactions for the following operations: 
 
-•	Open file formats other than SFDT 
+* Open file formats other than SFDT 
 
-•	Paste with formatting 
+* Paste with formatting 
 
-•	Restrict editing 
+* Restrict editing 
 
-•	Spell check 
+* Spell check 
 
-•	Save as file formats other than SFDT and DOCX 
+* Save as file formats other than SFDT and DOCX 
+ 
 
 You can deploy web APIs for server-side dependencies of Document Editor component in the following platforms.
 
@@ -58,4 +59,4 @@ You can deploy web APIs for server-side dependencies of Document Editor componen
 
 To know more about server-side dependencies, refer this [page](./web-services-overview).
 
->Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
+N> If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.

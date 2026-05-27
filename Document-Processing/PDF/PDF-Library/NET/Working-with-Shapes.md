@@ -969,7 +969,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;
 using Syncfusion.Pdf;
@@ -996,7 +996,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports System.Drawing
 Imports Syncfusion.Pdf
@@ -1025,7 +1025,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Shapes/Draw-a-pie-in-new-PDF-document/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Shapes/Draw-a-pie-in-new-PDF-document/)
 
 The following code snippet explains how to draw a pie in an existing PDF document.
 
