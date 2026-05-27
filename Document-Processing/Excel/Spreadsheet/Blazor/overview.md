@@ -9,13 +9,13 @@ documentation: ug
 
 # Overview of the Blazor Spreadsheet Control
 
-The Syncfusion Blazor Spreadsheet is a user-interactive component designed to organize and analyze data in a tabular format with configuration options for customization. It will load data by importing an Excel file or from local file paths and Base64 string data. The populated data can be exported as Excel files in `.xlsx` format.
+The Syncfusion Blazor Spreadsheet is a user-interactive component designed to organize and analyze data in a tabular format with configuration options for customization. It will load data by importing an Excel file or from local file paths and Base64 string data. The populated data can be exported as Excel with xlsx, xls, CSV and PDF formats.
 
 ## Key features
 
 *   [**Editing**](editing): Provides the option to dynamically edit a cell with support for direct cell editing and formula bar editing capabilities.
 *   [**Selection**](selection): Provides comprehensive selection options including individual cells, rows, columns, and ranges with support for both mouse and keyboard interactions.
-*   [**Open and Save**](open-and-save): Provides the option to open Excel files (.xlsx and .xls formats) in Spreadsheet and save data as Excel files (.xlsx format) with support for Base64 string loading and local file operations.
+*   [**Open and Save**](open-and-save): Provides the option to open Excel files (.xlsx and .xls formats) in Spreadsheet and save data as xlsx, xls, CSV, and PDF documents with support for Base64 string loading and local file operations.
 *   [**Clipboard**](clipboard): Provides comprehensive clipboard operations including cut, copy, and paste functionality with support for external clipboard data from applications like Excel and Google Sheets.
 *   [**Formulas**](formulas): Provides built-in calculation library with pre-defined formulas, named range support, and automatic/manual calculation modes.
 *   [**Cell formatting**](cell-range#cell-formatting): Provides extensive cell formatting options including font properties, colors, borders, alignment, and text styling to enhance data presentation.
