@@ -755,6 +755,21 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Convert URL to PDF document. 
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -799,9 +814,26 @@ string htmlText = "<html><body><img src=\"syncfusion_logo.gif\" alt=\"Syncfusion
 string baseUrl = @"C:/Temp/HTMLFiles/";
 //Convert URL to PDF.
 PdfDocument document = htmlConverter.Convert(htmlText, baseUrl);
-FileStream fileStream = new FileStream("HTML-to-PDF.pdf", FileMode.CreateNew, FileAccess.ReadWrite);
 //Save and close the PDF document.
-document.Save(fileStream);
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.HtmlConverter;
+
+//Initialize HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//HTML string and Base URL.
+string htmlText = "<html><body><img src=\"syncfusion_logo.gif\" alt=\"Syncfusion_logo\" width=\"200\" height=\"70\"><p> Hello World</p></body></html>";
+string baseUrl = @"C:/Temp/HTMLFiles/";
+//Convert URL to PDF.
+PdfDocument document = htmlConverter.Convert(htmlText, baseUrl);
+//Save and close the PDF document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
