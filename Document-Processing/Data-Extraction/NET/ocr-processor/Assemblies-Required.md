@@ -10,7 +10,7 @@ keywords: Assemblies
 
 Get the following required assemblies by downloading the OCR library installer. Download and install the OCR library for Windows, Linux, and Mac respectively. Please refer to the advanced installation steps for more details.
 
-#### Syncfusion<sup>&reg;</sup> assemblies
+#### Syncfusion<sup>&reg;</sup> OCR Processor Assemblies
 
 <table>
   <thead>

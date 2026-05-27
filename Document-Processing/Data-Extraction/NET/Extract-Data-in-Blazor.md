@@ -66,13 +66,10 @@ Include the following code snippet to add a button in your Blazor application th
 {% tabs %}
 {% highlight CSHTML %}
 <h1>Run Extraction</h1>
-
 <button @onclick="RunExtraction" class="btn btn-primary">
     Run Extractor
 </button>
-
 <p>@message</p>
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -85,12 +82,10 @@ Add the following code snippet to extract data from a PDF and download the file 
 {% highlight c# tabtitle="C#" %}
 @code {
     string message = "Waiting...";
-
     async Task RunExtraction()
     {
         message = "Processing...";
         StateHasChanged(); // force UI update immediately
-
         message = await extractor.RunExtraction();
     }
 }
@@ -122,10 +117,8 @@ using (FileStream stream = new FileStream(@"wwwroot/Input.pdf", FileMode.Open, F
 {
 	// Initialize the Smart Data Extractor
 	DataExtractor extractor = new DataExtractor();
-
 	// Extract data as JSON string
 	string data = extractor.ExtractDataAsJson(stream);
-
 	// Return the JSON string
 	return data;
 }
