@@ -8,13 +8,14 @@ documentation: UG
 
 # Working with .NET PDF Tables using PdfLightTable model
 
-The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from data sources or directly binding data in a tabular format. Here, you will see the creation of a PDF table using the **LightTable** model.  
+The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from data sources or by directly binding data in a tabular format. Here, you will see the creation of a PDF table using the `PdfLightTable` model.
 
 ## Creating a simple table 
 
-The Syncfusion<sup>&reg;</sup> .NET PDF library allows you to create the table with [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_DataSource) from DataSet, DataTable, arrays and IEnumerable objects using [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html) class. It allows you to perform simple formatting. 
 
-N> In Silverlight, Windows store apps and Xamarin only strongly typed IEnumerable objects are supported.
+The Syncfusion<sup>&reg;</sup> .NET PDF library allows you to create a table with a [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_DataSource) from a DataSet, DataTable, arrays, or IEnumerable objects using the `PdfLightTable` class. It supports simple formatting.
+
+N> In Silverlight, Windows Store apps, and Xamarin, only strongly-typed IEnumerable objects are supported.
 
 ### Create a simple table from a data source 
 
@@ -42,10 +43,8 @@ pdfLightTable.DataSource = table;
 //Draw PdfLightTable.
 pdfLightTable.Draw(page, new Syncfusion.Drawing.PointF(0, 0));
 
-//Create the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -60,7 +59,7 @@ PdfPage page = doc.Pages.Add();
 
 //Create a PdfLightTable.
 PdfLightTable pdfLightTable = new PdfLightTable();
-//Initialize DataTable to assign as DateSource to the light table.
+//Initialize DataTable to assign as DataSource to the light table.
 DataTable table = new DataTable();
 //Include columns in the DataTable.
 table.Columns.Add("Name");
@@ -127,7 +126,7 @@ The following code illustrates how to add the data directly into the [PdfLightTa
 PdfDocument doc = new PdfDocument();
 //Add a page.
 PdfPage page = doc.Pages.Add();
-//Acquire page's graphics.
+//Acquire the page's graphics.
 PdfGraphics graphics = page.Graphics;
 
 //Declare a PdfLightTable.
@@ -144,10 +143,8 @@ pdfLightTable.Rows.Add(new object[] { "111", "Maxim", "III" });
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -225,10 +222,8 @@ Create a table using the [PdfLightTable](https://help.syncfusion.com/cr/document
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Table/PdfLightTable/Creating-the-table-in-an-existing-PDF-document/.NET/Creating-the-table-in-an-existing-PDF-document/Program.cs" %} 
 
-//Get stream from an existing PDF document. 
-FileStream docStream = new FileStream("input.pdf", FileMode.Open, FileAccess.Read);
 //Load the PDF document. 
-PdfLoadedDocument doc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
 //Get the first page from the document
 PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
 //Create PDF graphics for the page
@@ -248,10 +243,8 @@ pdfLightTable.DataSource = table;
 //Draw PdfLightTable.
 pdfLightTable.Draw(graphics, new Syncfusion.Drawing.PointF(0, 0));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -365,10 +358,8 @@ pdfLightTable.Style.ShowHeader = true;
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -498,10 +489,8 @@ pdfLightTable.Style.ShowHeader = true;
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -657,10 +646,8 @@ pdfLightTable.EndRowLayout += pdfLightTable_EndRowLayout;
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Create the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to the stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -847,10 +834,8 @@ pdfLightTable.Style.ShowHeader = true;
 //Draw the PdfLightTable.
 pdfLightTable.Draw(page, Syncfusion.Drawing.PointF.Empty);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the PDF document to the stream.
-doc.Save(stream);
+//Save the PDF document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -983,10 +968,8 @@ pdfLightTable.Style = lightTableStyle;
 //Draw PdfLightTable.
 pdfLightTable.Draw(page, new PointF(0, 0));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as a stream.
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 {% endhighlight %}
@@ -1081,7 +1064,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Built-in table styles 
 
-In-built table styles can be applied to [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html), and the appearance is made similar to Microsoft Word’s built-in table styles. You can also apply in-built table styles with the following additional table style options.
+Built-in table styles can be applied to [PdfLightTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html), and the appearance is made similar to Microsoft Word’s built-in table styles. You can also apply built-in table styles with the following additional table style options.
 
 * Banded columns
 * Banded rows
@@ -1125,10 +1108,8 @@ pdfLightTable.ApplyBuiltinStyle(PdfLightTableBuiltinStyle.GridTable4Accent2);
 //Draw the grid to the page of a PDF document.
 pdfLightTable.Draw(page, new Syncfusion.Drawing.PointF(10, 10));
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as a stream.
-doc.Save(stream);
+//Save the document.
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
 
@@ -1206,7 +1187,7 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Table/PdfLightTable/Create-table-with-built-in-style).
 
-The following image shows the PDF document with ```PdfGridBuiltinStyle.Gridtable4Accent2```.
+The following image shows the PDF document with PdfLightTableBuiltinStyle.GridTable4Accent2.
 <img src="Table_images/Gridtable4Accent2.png" alt="Gridtable4Accent2 image" width="100%" Height="Auto"/>
 
 ## Pagination 
@@ -1243,10 +1224,8 @@ layoutFormat.Layout = PdfLayoutType.Paginate;
 //Draw PdfLightTable.
 pdfLightTable.Draw(page, new Syncfusion.Drawing.PointF(0, 0), layoutFormat);
 
-//Creating the stream object.
-MemoryStream stream = new MemoryStream();
-//Save the document as a stream.
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 {% endhighlight %}
@@ -1369,9 +1348,8 @@ for (int i = 0; i < lightTable.Columns.Count; i++)
 //Draw the PdfLightTable on the page.
 lightTable.Draw(page, new PointF(10, 10));
 
-//Save a PDF to the MemoryStream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save a PDF document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
@@ -1500,9 +1478,8 @@ lightTable.Columns[1].StringFormat = stringFormat;
 //Draw the PdfLightTable on the page.
 lightTable.Draw(page, new PointF(10, 10));
 
-//Save the PDF to the MemoryStream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the PDF document.
+document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}

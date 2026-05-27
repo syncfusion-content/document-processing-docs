@@ -50,8 +50,8 @@ Step 4: Add the following code sample to the Program.cs file to **open an existi
 
 {% highlight c# tabtitle="C#" %}
 //Open an existing PDF document.
-FileStream document = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(stream);
+FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
 {% endhighlight %}
 
 {% endtabs %}
@@ -123,7 +123,7 @@ dotnet run
 
 ![Linux Run](Images/Linux_Run.png)
 
-A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Linux/Open_and_Save_PDF_Linux).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Linux/Open_and_Save_PDF_Linux).
 
 By executing the program, you will get the **PDF document** as follows. The output will be saved in parallel to program.cs file.
 ![Linux output PDF document](Images/Open_and_save_output.png)

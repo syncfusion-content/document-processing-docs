@@ -42,9 +42,9 @@ Move into the created project using the following command:
 ```bash
 cd quickstart
 ```
-### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Document Editor packages
+### Install the Document Editor packages
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor).
+The Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor).
 
 To install the Document Editor component, use the following command:
 
@@ -67,16 +67,16 @@ Add the following Document Editor and dependent component style references to th
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-documenteditor/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css';
 
 {% endhighlight %}
 {% endtabs %}
 
 N> Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Document Editor component
+### Add the Document Editor component
 
-Modify the `src/App.vue` file to render the Document Editor. Add the Vue Document Editor in the `<template>` section using the `<ejs-documenteditorcontainer>` selector and configure it in the `<script>` section.
+Modify the `src/App.vue` file to render the Document Editor. Add the Document Editor in the `<template>` section using the `<ejs-documenteditorcontainer>` selector and configure it in the `<script>` section.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -128,9 +128,11 @@ Run the application using the following command:
 npm run serve
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The Vue Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+After the application starts, open the localhost URL shown in the terminal. The Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
 ![Output of Vue Document Editor](./images/vue_2_getting_started.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_2).
 
 ## Video tutorial
 

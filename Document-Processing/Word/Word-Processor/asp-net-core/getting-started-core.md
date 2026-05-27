@@ -13,7 +13,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET Core DOCX Editor](http
 
 ## Steps to create an ASP.NET Core DOCX Editor
 
-This section briefly explains how to include [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) control in your ASP.NET Core application using Visual Studio.
+This section briefly explains how to include [Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) control in your ASP.NET Core application using Visual Studio.
 
 ### Prerequisites
 
@@ -26,9 +26,9 @@ Create a new ASP.NET Core web application using the following method:
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio#create-a-razor-pages-web-app)
 
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core NuGet packages
+### Install Document Editor NuGet packages
 
-To add **ASP.NET Core Document Editor** component in the application, follow the steps below.
+To add **Document Editor** component in the application, follow the steps below.
  - Open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
  - Search and install the following package
     - [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/)
@@ -75,7 +75,7 @@ Here, the theme and scripts are referenced using CDN inside the `<head>` of `~/V
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/appearance/theme) to learn the different ways to include Syncfusion styles (using [CDN](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#cdn-reference), [NPM package](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm), or [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)) and ensure the expected appearance of Syncfusion® ASP.NET Core controls, and check the [Adding Script Reference](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references) documentation to understand the various approaches for adding required script references in your ASP.NET Core application.
+N> Refer the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/appearance/theme) to learn the different ways to include Syncfusion styles (using [CDN](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#cdn-reference), [NPM package](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references#node-package-manager-npm), or [CRG](https://ej2.syncfusion.com/aspnetcore/documentation/common/custom-resource-generator)) and ensure the expected appearance of Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core controls, and check the [Adding Script Reference](https://ej2.syncfusion.com/aspnetcore/documentation/common/adding-script-references) documentation to understand the various approaches for adding required script references in your ASP.NET Core application.
 
 ### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
 
@@ -93,9 +93,9 @@ Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the 
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
+### Add the Document Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document Editor tag helper in `~/Views/Home/Index.cshtml` page.
+Add the Document Editor tag helper in `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/Index.cshtml" %}
@@ -107,11 +107,11 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document E
 
 ### Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Document Editor control will be rendered in the default web browser as shown below.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Document Editor control will be rendered in the default web browser as shown below.
 
 ![Output of ASP.NET Core DOCX Editor](./images/aspnetcore-docx-editor.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/DocumentEditor/ASP.NET%20Core%20Tag%20Helper%20Examples).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-DOCX-Editor-Examples/tree/master/getting-started).
 
 ## See also
 

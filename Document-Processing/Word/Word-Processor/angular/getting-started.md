@@ -16,7 +16,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> [Angular DOCX Editor](https://w
 
 ### Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
+[System requirements for Document Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
 
 ### Setup Angular environment
 
@@ -72,9 +72,9 @@ In this guide, CSS is selected as the stylesheet format.
 cd documenteditor-app
 ```
 
-### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
+### Install the Document Editor packages
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
+The Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
 
 To install the Document Editor component, use the following command:
 
@@ -102,7 +102,7 @@ The following CSS files are available in the `node_modules/@syncfusion` package 
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
+### Add the Document Editor component
 
 Modify `src/app/app.ts` to render the Document Editor component by adding the Angular Document Editor selector in its template section.
 
@@ -145,7 +145,7 @@ Run the application using the following command:
 ng serve --open
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The Angular Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+After the application starts, open the localhost URL shown in the terminal. The Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
 ![Output of Angular Document Editor](./images/angular_getting_started.png)
 
@@ -153,7 +153,7 @@ You can also explore the Document Editor interactively using the live sample bel
 
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Getting-started-angular-word-processor).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/getting-started).
 
 
 ## Video tutorial

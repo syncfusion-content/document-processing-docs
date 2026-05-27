@@ -13,7 +13,11 @@ Speed up your document automation using these example prompts for Syncfusion Doc
 
 ## Document Processing Prompts
 
+You can try the following prompts in this [demo](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Examples/WPF).
+
 ### PDF
+
+The following prompts allow users to test the security, text extraction, and manipulation functionalities of PDF tools.
 
 {% promptcards %}
 {% promptcard Find Text and Its Coordinates %}
@@ -34,6 +38,8 @@ Load the sensitive HR performance review document 'performance_review_Q4.pdf' fr
 {% endpromptcards %}
 
 ### Word
+
+The following prompts allow users to test the merging, form filling, and template management functionalities of Word tools.
 
 {% promptcards %}
 {% promptcard Merge Word Documents %}
@@ -58,6 +64,8 @@ Load the comprehensive legal contract bundle 'master_contracts_2026.docx' from {
 
 ### Excel
 
+The following prompts allow users to test the pivot table, formatting, and worksheet security functionalities of Excel tools.
+
 {% promptcards %}
 {% promptcard Add Dropdown List for a Specific Range %}
 Load a sales performance dashboard workbook ‘sales_dashboard_Q1_2026.xlsx’ from {InputDir}. Add a worksheet named ‘DataValidation’ and create the List validation in the A1:B3 range and the list names "Excel", "Presentation", "Word", "PDF". Export the workbook to {OutputDir}.
@@ -77,6 +85,8 @@ Load a sales performance dashboard workbook ‘car_brands.xlsx’ from {InputDir
 {% endpromptcards %}
 
 ### PowerPoint
+
+The following prompts allow users to test the merging, text replacement, and slide security functionalities of PowerPoint tools.
 
 {% promptcards %}
 {% promptcard Find and Replace Text %}
@@ -98,6 +108,8 @@ Load the investor pitch deck 'investor_pitch_Q1_2026.pptx' from {InputDir}. Get 
 
 ### Conversions
 
+The following prompts allow users to test document conversion functionalities with encryption, watermarking, and merging of Conversions tool.
+
 {% promptcards %}
 {% promptcard Convert Word to PDF and Add Watermark %}
 Load the signed vendor contract 'vendor_contract_final.docx' from {InputDir}, convert it to PDF for archiving purposes, and then apply a 'ARCHIVED' watermark with 30% opacity across all pages of the resulting PDF. Export the archived PDF as 'vendor_contract_final_archived.pdf' to {OutputDir}.
@@ -111,6 +123,8 @@ Convert the sales conference presentation 'sales_conference_2026.pptx' from {Inp
 {% endpromptcards %}
 
 ### Data Extraction
+
+The following prompts allow users to test table, form, and JSON data extraction functionalities of the Data Extraction tool.
 
 {% promptcards %}
 {% promptcard Extract All Data from PDF as JSON %}

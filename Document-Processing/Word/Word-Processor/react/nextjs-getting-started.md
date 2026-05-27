@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with React DOCX Editor in Next.js
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Document Editor component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component.
 
 ## Steps to create a React DOCX Editor in Next.js
 
@@ -169,7 +169,7 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of React Document Editor in Next.js](./images/react_getting_started.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/ej2-nextjs-documenteditor).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started-nextjs).
 
 ## Server-side dependencies
 
