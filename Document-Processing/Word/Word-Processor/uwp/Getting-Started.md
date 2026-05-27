@@ -6,13 +6,13 @@ control: SfRichTextBoxAdv
 documentation: ug
 keywords: getting-started
 ---
-# Getting Started with UWP RichTextBox (SfRichTextBoxAdv)
+# Getting started with Syncfusion<sup>&reg;</sup> UWP RichTextBox
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> [UWP RichTextBox](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in UWP applications. This section guides you through the steps to get started and create a RichTextBox in a UWP application.
 
-## Create a RichTextBox in UWP using SfRichTextBoxAdv
+## Create a RichTextBox in UWP using SfRichTextBoxAdv 
 
-In this walkthrough, you will create a UWP application that uses the Syncfusion® UWP SfRichTextBoxAdv control.
+In this walkthrough, you will create a UWP application that uses the SfRichTextBoxAdv control.
 
 The steps below cover the essential tasks required to add and use the SfRichTextBoxAdv control in a UWP project. 
 
@@ -80,7 +80,7 @@ Open the Toolbox window and drag the **SfRichTextBoxAdv** control onto the Desig
 
 To add the control manually in XAML, follow these steps:
 
-1.	Import Syncfusion® UWP SfRichTextBoxAdv control namespace Syncfusion.UI.Xaml.RichTextBoxAdv in the XAML page.
+1.	Import SfRichTextBoxAdv control namespace Syncfusion.UI.Xaml.RichTextBoxAdv in the XAML page.
 
 2.	Declare SfRichTextBoxAdv control in the XAML page.
 

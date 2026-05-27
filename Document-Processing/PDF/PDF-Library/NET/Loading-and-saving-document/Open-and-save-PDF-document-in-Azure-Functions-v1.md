@@ -120,7 +120,7 @@ Step 13: After creating app service then click **Finish** button.
 Step 14: Click the **Publish** button.
 ![Click Publish Button](Azure_Images/Azure-functions-v1/Ready_for_publish.png)
 
-Step 15: Publish has been succeed.
+Step 15: Publish has been succeeded.
 ![Publish succeeded](Azure_Images/Azure-functions-v1/Published_link.png)
 
 Step 16: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get the PDF document as follows. 

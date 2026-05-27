@@ -20,6 +20,10 @@ To quickly get started with adding, modifying, and removing PDF bookmarks in .NE
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Adding-bookmarks-in-a-PDF-document/.NET/Adding-bookmarks-in-a-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Creates a new document.
 PdfDocument document = new PdfDocument();
 //Adds a page.
@@ -43,6 +47,10 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Creates a new document.
 PdfDocument document = new PdfDocument();
 //Adds a page.
@@ -64,6 +72,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Creates a new document.
 Dim document As New PdfDocument()
@@ -97,6 +109,10 @@ To add bookmarks to an existing PDF document, use the following code example.
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Adding-bookmarks-in-an-existing-PDF-document/.NET/Adding-bookmarks-in-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Creates document bookmarks.
@@ -118,6 +134,10 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Loads the document.                       
 PdfLoadedDocument document = new PdfLoadedDocument("input.pdf");
 //Creates document bookmarks.
@@ -137,6 +157,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Loads the document.
 Dim document As New PdfLoadedDocument("input.pdf")
@@ -168,6 +192,10 @@ You can add a child bookmark by using [Insert](https://help.syncfusion.com/cr/do
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Adding-a-child-to-the-bookmarks-in-a-PDF/.NET/Adding-a-child-to-the-bookmarks-in-a-PDF/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
 //Creates a new document.
 PdfDocument document = new PdfDocument();
 //Adds a page.
@@ -185,7 +213,7 @@ childBookmark.Destination.Location = new PointF(400, 300);
 childBookmark.Destination.Zoom = 2F;
 //Sets the text style and color.
 bookmark.TextStyle = PdfTextStyle.Bold;
-bookmark.Color = Syncfusion.Drawing.Color.Red;
+bookmark.Color = Color.Red;
 
 //Save the document.
 document.Save("Output.pdf");
@@ -195,6 +223,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
 
 //Creates a new document.
 PdfDocument document = new PdfDocument();
@@ -222,6 +254,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
 
 'Creates a new document.
 Dim document As New PdfDocument()
@@ -262,6 +298,10 @@ Each loaded bookmark is represented by the [PdfLoadedBookmark](https://help.sync
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Inserting-bookmarks-in-an-existing-PDF/.NET/Inserting-bookmarks-in-an-existing-PDF/Program.cs" %}
 
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Inserts a new bookmark in the existing bookmark collection.
@@ -279,6 +319,10 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Creates a new document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Inserts a new bookmark in the existing bookmark collection.
@@ -293,6 +337,10 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Creates a new document.
 Dim document As New PdfLoadedDocument("Input.pdf")
@@ -319,6 +367,9 @@ You can also remove bookmarks from the existing PDF document by using [Remove](h
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Remove-bookmarks-from-an-existing-PDF-document/.NET/Remove-bookmarks-from-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Gets all the bookmarks.
@@ -337,6 +388,9 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Loads the PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Gets all the bookmarks.
@@ -353,6 +407,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Loads the PDF document.
 Dim document As New PdfLoadedDocument("Input.pdf")
@@ -388,6 +445,9 @@ The following code example shows how to modify the [Destination](https://help.sy
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Modify-the-bookmarks-in-an-existing-PDF-document/.NET/Modify-the-bookmarks-in-an-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Gets all the bookmarks.
@@ -408,6 +468,9 @@ document.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Loads the PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 //Gets all the bookmarks.
@@ -427,6 +490,9 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Import Syncfusion.Pdf.Interactive
+Import Syncfusion.Pdf.Parsing
 
 'Loads the PDF document.
 Dim document As New PdfLoadedDocument("Input.pdf")
@@ -457,6 +523,9 @@ You can get bookmark page index from the existing PDF document using [PageIndex]
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Bookmarks/Get-bookmark-page-index-from-the-existing-PDF-document/.NET/Get-bookmark-page-index-from-the-existing-PDF-document/Program.cs" %}
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
 //Gets all the bookmarks.
@@ -473,6 +542,9 @@ loadedDocument.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
 //Gets all the bookmarks.
@@ -488,6 +560,9 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document.
  Dim loadedDocument As New PdfLoadedDocument("input.pdf") 
