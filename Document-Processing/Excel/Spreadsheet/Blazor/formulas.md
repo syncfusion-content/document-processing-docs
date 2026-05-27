@@ -157,8 +157,6 @@ When selecting cells A2:A10 containing numeric values, the footer displays:
 - **Min**: Smallest value
 - **Max**: Largest value
 
-![Blazor Spreadsheet displaying aggregate calculations in the footer when numeric range is selected](./images/aggregates-status-bar.gif)
-
 N> Aggregate calculations only include numeric values. Cells containing text, logical values, or empty cells are excluded from sum and average calculations but are counted if the **Count** includes them based on their data type.
 
 ### Aggregates and Selection Behavior
