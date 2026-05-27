@@ -110,7 +110,10 @@ document.template.bottom = { template: footer };
 // Save the document 
 document.save('Output.pdf'); 
 // Destroy the document 
-document.destroy(); 
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Applying header and footer template to the PDF section
 
