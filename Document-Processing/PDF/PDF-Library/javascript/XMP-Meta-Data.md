@@ -14,7 +14,7 @@ In PDF documents, XMP metadata improves searchability, interoperability, and con
 
 ## Adding Metadata to a New PDF Document
 
-XMP metadata can be added to a newly created PDF document using the xmpMetadata property in `PdfDocumentInformation`. By assigning values through relevant schema objects, the metadata is automatically serialized and embedded into the PDF when the document is saved.
+XMP metadata can be added to a newly created PDF document using the `xmpMetadata` property in `PdfDocumentInformation`. By assigning values through relevant schema objects, the metadata is automatically serialized and embedded into the PDF when the document is saved.
 
 This example illustrates how to generate a new PDF and include XMP metadata by utilizing the Basic and Dublin Core schemas.
 
