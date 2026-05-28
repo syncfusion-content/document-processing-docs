@@ -111,7 +111,7 @@ UWP Spreadsheet control can be added to an application either through the design
 
 {% tabcontent Via Designer %}
 
-1.Click and open the MainPage.Xaml file.
+1.Click and open the MainPage.xaml file.
 
 2.Open the Visual Studio **Tool** **box**. Navigate to “Syncfusion<sup>®</sup> Controls for UWP” tab, and find the  SfSpreadsheet/SfSpreadsheetRibbon toolbox items.
 
@@ -122,40 +122,76 @@ UWP Spreadsheet control can be added to an application either through the design
 _For_ _Spreadsheet:_
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <syncfusion:SfSpreadsheet  x:Name="spreadsheet"  />
+<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:YourNamespace"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+    x:Class="YourNamespace.MainPage"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" />
+    </Grid>
+</Page>
 
 {% endhighlight %}
 {% endtabs %}
 
-Declare a name for the Spreadsheet component as shown above for reference.
+N> Declare a name for the Spreadsheet component as shown above for reference.
 
 4.Ribbon can be added to the application by dragging and dropping `SfSpreadsheetRibbon` to the Designer area.
-
-5.To make an interaction between Ribbon items and SfSpreadsheet, need to bind the `SfSpreadsheet` as DataContext to the `SfSpreadsheetRibbon`.
 
 _For_ _Ribbon:_
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <syncfusion:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}"  />
+<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:YourNamespace"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+    x:Class="YourNamespace.MainPage"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Spreadsheet:SfSpreadsheetRibbon />
+    </Grid>
+</Page>
 
 {% endhighlight %}
 {% endtabs %}
 
-6.Align the SfSpreadsheet and SfSpreadsheetRibbon components using Row Definition.
+5.To make an interaction between Ribbon items and SfSpreadsheet, need to bind the `SfSpreadsheet` as DataContext to the `SfSpreadsheetRibbon`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <Grid.RowDefinitions>
-        <RowDefinition Height="Auto"/>
-        <RowDefinition Height="*"/>
-    </Grid.RowDefinitions>
-    <Spreadsheet:SfSpreadsheet Name="spreadsheet" Grid.Row="1" />
-    <Spreadsheet:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}" Grid.Row="0" />
+<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:YourNamespace"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+    x:Class="YourNamespace.MainPage"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" Margin="0,85,0,0" />
+        <Spreadsheet:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}" />
+    </Grid>
+</Page>
 
 {% endhighlight %}
 {% endtabs %}
@@ -168,7 +204,7 @@ Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <Page
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -193,23 +229,32 @@ Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_.
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-Grid grid = new Grid();
+....
+using Syncfusion.UI.Xaml.Spreadsheet;
+....
 
-grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
-grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+public MainPage()
+{
+    this.InitializeComponent();
 
-SfSpreadsheet spreadsheet = new SfSpreadsheet();
-SfSpreadsheetRibbon ribbon = new SfSpreadsheetRibbon() { SfSpreadsheet = spreadsheet };
+    Grid grid = new Grid();
 
-Grid.SetRow(ribbon, 0);
-Grid.SetRow(spreadsheet, 1);
+    grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+    grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
 
-grid.Children.Add(ribbon);
-grid.Children.Add(spreadsheet);
+    SfSpreadsheet spreadsheet = new SfSpreadsheet();
+    SfSpreadsheetRibbon ribbon = new SfSpreadsheetRibbon() { SfSpreadsheet = spreadsheet };
 
-this.Content = grid;
+    Grid.SetRow(ribbon, 0);
+    Grid.SetRow(spreadsheet, 1);
+
+    grid.Children.Add(ribbon);
+    grid.Children.Add(spreadsheet);
+
+    this.Content = grid;
+}
 
 {% endhighlight %}
 

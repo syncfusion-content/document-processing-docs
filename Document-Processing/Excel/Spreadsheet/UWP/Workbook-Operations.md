@@ -7,12 +7,16 @@ control: SfSpreadsheet
 documentation: ug
 ---
 
+# Workbook Operations in UWP Spreadsheet
+
+This section explains how to manage Excel workbooks in SfSpreadsheet, including creating new files, opening existing workbooks from various sources, and saving changes efficiently.
+
 ## Creating a new Excel Workbook
 
 A new workbook can be created by using a `Create` method with specified number of worksheets. By default, a workbook will be created with single worksheet.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     spreadsheet.Create(2);
 
@@ -24,7 +28,7 @@ A new workbook can be created by using a `Create` method with specified number o
 The Excel Workbook can be opened in SfSpreadsheet using the `Open` method in various ways,
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 //Using Stream, 
 spreadsheet.Open (Stream file)
@@ -35,11 +39,7 @@ spreadsheet.Open (StorageFile file)
 //Using Workbook,
 spreadsheet.Open(IWorkbook workbook)
 
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
+// Example: Open Excel file from Embedded Resource
 
 Stream fileStream = typeof(MainPage).GetTypeInfo().Assembly.GetManifestResourceStream("SfSpreadsheetDemo.Assets.BidDetails.xlsx");
 this.spreadsheet.Open(fileStream);
@@ -61,7 +61,7 @@ this.spreadsheet.Open(fileStream);
 The Excel workbook can be saved in SfSpreadsheet using `Save` method. If the workbook already exists in the system drive, it will be saved in the same location, otherwise Save Dialog box opens to save the workbook in user specified location.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     spreadsheet.Save();
 
@@ -73,7 +73,7 @@ You can also use `SaveAs` method directly to save the existing excel file with m
 The `SaveAs` method in SfSpreadsheet can be used in various ways,
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 //Using Storage File,
 spreadsheet.SaveAs (StorageFile file);
@@ -98,9 +98,9 @@ Assembly: **Syncfusion.SfSpreadsheetHelper.UWP.dll**
 Create an instance of `Syncfusion.UI.Xaml.SpreadsheetHelper.GraphicChartCellRenderer` and add that renderer into `GraphicCellRenderers` collection by using the helper method `AddGraphicChartCellRenderer` which is available under the namespace `Syncfusion.UI.Xaml.Spreadsheet.GraphicCells`. 
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-public MainWindow()
+public MainPage()
 {
   InitializeComponent();
   
@@ -116,9 +116,9 @@ public MainWindow()
 Create an instance of `Syncfusion.UI.Xaml.SpreadsheetHelper.SparklineCellRenderer` and add that renderer into the Spreadsheet by using the helper method `AddSparklineCellRenderer` which is available under the namespace `Syncfusion.UI.Xaml.Spreadsheet.GraphicCells`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-public MainWindow()
+public MainPage()
 {
   InitializeComponent();
       
