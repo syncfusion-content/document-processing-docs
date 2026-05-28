@@ -124,21 +124,21 @@ _For_ _Spreadsheet:_
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Page
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:YourNamespace"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
-    x:Class="YourNamespace.MainPage"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:YourNamespace"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+        x:Class="YourNamespace.MainPage"
+        mc:Ignorable="d"
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" />
-    </Grid>
-</Page>
+        <Grid>
+            <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" />
+        </Grid>
+    </Page>
 
 {% endhighlight %}
 {% endtabs %}
@@ -152,21 +152,21 @@ _For_ _Ribbon:_
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Page
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:YourNamespace"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
-    x:Class="YourNamespace.MainPage"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:YourNamespace"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+        x:Class="YourNamespace.MainPage"
+        mc:Ignorable="d"
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Spreadsheet:SfSpreadsheetRibbon />
-    </Grid>
-</Page>
+        <Grid>
+            <Spreadsheet:SfSpreadsheetRibbon />
+        </Grid>
+    </Page>
 
 {% endhighlight %}
 {% endtabs %}
@@ -176,22 +176,22 @@ _For_ _Ribbon:_
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Page
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:YourNamespace"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
-    x:Class="YourNamespace.MainPage"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:YourNamespace"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+        x:Class="YourNamespace.MainPage"
+        mc:Ignorable="d"
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" Margin="0,85,0,0" />
-        <Spreadsheet:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}" />
-    </Grid>
-</Page>
+        <Grid>
+            <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" Margin="0,85,0,0" />
+            <Spreadsheet:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}" />
+        </Grid>
+    </Page>
 
 {% endhighlight %}
 {% endtabs %}
@@ -206,26 +206,26 @@ Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_.
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Page
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:App1"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
-    x:Class="App1.MainPage"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:App1"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+        x:Class="App1.MainPage"
+        mc:Ignorable="d"
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Spreadsheet:SfSpreadsheet Name="spreadsheet" Grid.Row="1" />
-        <Spreadsheet:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}" Grid.Row="0" />
-    </Grid>
-</Page>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Spreadsheet:SfSpreadsheet Name="spreadsheet" Grid.Row="1" />
+            <Spreadsheet:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}" Grid.Row="0" />
+        </Grid>
+    </Page>
 
 {% endhighlight %}
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # UWP Spreadsheet (SfSpreadsheet) Overview
 
-The [Syncfusion® UWP Spreadsheet(SfSpreadsheet)](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) is an Excel inspired control that allows you to create, edit, view and format the Microsoft Excel files without Excel installed. It provides absolute ease of use UI experience with integrated ribbon to cover any possible business scenario. SfSpreadsheet comes with built-in calculation engine with support for 400+ most widely used formulas. 
+The [Syncfusion® UWP Spreadsheet (SfSpreadsheet)](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) is an Excel inspired control that allows you to create, edit, view and format the Microsoft Excel files without Excel installed. It provides absolute ease of use UI experience with integrated ribbon to cover any possible business scenario. SfSpreadsheet comes with built-in calculation engine with support for 400+ most widely used formulas. 
 
 ## Key Features
 
@@ -17,7 +17,7 @@ The [Syncfusion® UWP Spreadsheet(SfSpreadsheet)](https://www.syncfusion.com/spr
 
 * [Ribbon](Ribbon-Customization) – Ribbon integrated with organically enhanced UI experience.
 
-* [Editing](Editing) and [Selection](Selection) – Interactive support for editing and cell selection in workbook.
+* [Editing](Editing) **and** [Selection](Selection) – Interactive support for editing and cell selection in workbook.
 
 * [Formulas](Formulas) - Provides support for 400+ most widely used formulas which any business user needs and allows you to add, remove and edit the formulas like in excel.
 
