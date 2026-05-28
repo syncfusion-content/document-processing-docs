@@ -215,54 +215,84 @@ Borders can be applied programmatically to a specific cell or range of cells usi
 
 ## Conditional Formatting
 
-Conditional formatting enables automatic visual formatting of cells based on specified conditions, helping to highlight data patterns, identify outliers, and improve data interpretation. The Blazor Spreadsheet component provides comprehensive conditional formatting capabilities including color scales, data bars, icon sets, and custom formatting rules. These formats are Excel-compatible, respect worksheet protection settings, and integrate seamlessly with undo/redo operations.
-
-### Enabling Conditional Formatting
-
-The entire conditional formatting functionality can be globally enabled or disabled using the `AllowConditionalFormat` property. By default, this property is set to **true**.
+Conditional formatting enables automatic visual formatting of cells based on specified conditions, helping to highlight data patterns, identify outliers, and improve data interpretation. The Blazor Spreadsheet component provides comprehensive conditional formatting capabilities including color scales, data bars, icon sets, and custom formatting rules. These formats are Excel-compatible, respect worksheet protection settings, and integrate seamlessly with undo/redo operations. To control this functionality, use the `AllowConditionalFormat` property, which enables or disables conditioanl formatting support in the Spreadsheet. The default value of the `AllowConditionalFormat` property is **true**.
 
 ### Applying Conditional Formatting
 
 Conditional formatting can be applied through the UI or programmatically:
 
-**UI Method:**
-1. Select the target cell range
-2. Click the **Conditional Formatting** button in the **Home** tab of the Ribbon
-3. Choose the desired formatting rule type and configure the conditions
+**Conditional formatting via UI**
+- Select the target cell range
+- Click the **Conditional Formatting** button in the **Home** tab of the Ribbon
+- Choose the desired formatting rule type and configure the conditions
 
-**Programmatic Method:**
+**Conditional formatting programmatically**
 Apply conditional formatting using the `ConditionalFormatAsync()` method with a `ConditionalFormatRule` object to define the condition, format type, range, and styling.
 
-The Blazor Spreadsheet component supports the following conditional formatting rule types:
+**Code Example**
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/StudentScores.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    private async Task HighlightHighScores()
+    {
+        var rule = new ConditionalFormatRule
+        {
+            ConditionalFormatType = ConditionalFormatType.GreaterThan,
+            PrimaryValue = "80",
+            Range = "B2:B50",
+            ConditionalFormatColor = ConditionalFormatColor.GreenFillWithDarkGreenText
+        };
+
+        await SpreadsheetInstance.ConditionalFormatAsync(rule);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 ### Highlight Cells Rules
 
 Highlight cells rules apply preset color formatting based on cell values or text content. This rule type is ideal for quickly identifying cells that meet specific value-based conditions. The highlighting uses combinations of fill colors and text colors to ensure visibility while maintaining readability.
 
-**Supported Highlight Cell Rule Types:**
+**Supported Highlight Cell Rule Types**
 
-| ConditionalFormatType | Description | Use Case |
+| ConditionalFormatType | Description |
+|---|---|
+| `GreaterThan` | Highlights cells with values greater than a specified threshold |
+| `LessThan` | Highlights cells with values less than a specified threshold |
+| `Between` | Highlights cells with values falling within a specified range |
+| `EqualTo` | Highlights cells with values equal to a specified value |
+| `ContainsText` | Highlights cells containing specified text |
+| `DateOccur` | Highlights cells containing dates matching a specified time period |
+| `Duplicate` | Highlights cells with duplicate values within the evaluated range |
+| `Unique` | Highlights cells with unique values within the evaluated range |
+
+**Available Preset Color Styles**
+
+| ConditionalFormatColor | Background Color | Text Color |
 |---|---|---|
-| `GreaterThan` | Highlights cells with values greater than a specified threshold | Flag high values (e.g., sales above quota) |
-| `LessThan` | Highlights cells with values less than a specified threshold | Flag low values (e.g., inventory below minimum) |
-| `Between` | Highlights cells with values falling within a specified range | Identify acceptable ranges (e.g., target performance zones) |
-| `EqualTo` | Highlights cells with values equal to a specified value | Highlight exact matches (e.g., specific status codes) |
-| `ContainsText` | Highlights cells containing specified text | Flag entries with keywords (e.g., "Pending") |
-| `DateOccur` | Highlights cells containing dates matching a specified time period | Emphasize dates (e.g., dates this month or year) |
-| `Duplicate` | Highlights cells with duplicate values within the evaluated range | Identify repeated entries |
-| `Unique` | Highlights cells with unique values within the evaluated range | Flag non-duplicate entries |
+| `GreenFillWithDarkGreenText` | Green | Dark Green |
+| `YellowFillWithDarkYellowText` | Yellow | Dark Yellow |
+| `RedFillWithDarkRedText` | Red | Dark Red |
+| `RedFill` | Red | Default |
+| `RedText` | Default | Red |
 
-**Available Preset Color Styles:**
-
-| ConditionalFormatColor | Background Color | Text Color | Use Case |
-|---|---|---|---|
-| `GreenFillWithDarkGreenText` | Green | Dark Green | Positive results, success indicators |
-| `YellowFillWithDarkYellowText` | Yellow | Dark Yellow | Warnings, caution indicators |
-| `RedFillWithDarkRedText` | Red | Dark Red | Errors, negative results, alerts |
-| `RedFill` | Red | Default | Highlighter effect with red background |
-| `RedText` | Default | Red | Text-only highlighting for critical values |
-
-**Example: Highlight Cells Greater Than a Threshold**
+**Code Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -303,18 +333,18 @@ Highlight cells rules apply preset color formatting based on cell values or text
 
 Top/Bottom rules apply formatting based on statistical rankings and averages within a range. This rule type is beneficial for identifying performance outliers, top performers, or values that deviate from the average. These rules are particularly useful for large datasets where manual identification would be time-consuming.
 
-**Supported Top/Bottom Rule Types:**
+**Supported Top/Bottom Rule Types**
 
-| ConditionalFormatType | Description | Use Case |
-|---|---|---|
-| `Top10Items` | Highlights the top N items in the range by value rank | Identify top 10 sales, scores, or performers |
-| `Bottom10Items` | Highlights the bottom N items in the range by value rank | Flag lowest performers or smallest values |
-| `Top10Percentage` | Highlights the top N percent of items in the range by value | Identify highest-performing percentile |
-| `Bottom10Percentage` | Highlights the bottom N percent of items in the range by value | Flag under performing percentile |
-| `AboveAverage` | Highlights cells with values above the average of the range | Identify above-trend values |
-| `BelowAverage` | Highlights cells with values below the average of the range | Identify below-trend values |
+| ConditionalFormatType | Description |
+|---|---|
+| `Top10Items` | Highlights the top N items in the range by value rank |
+| `Bottom10Items` | Highlights the bottom N items in the range by value rank |
+| `Top10Percentage` | Highlights the top N percent of items in the range by value |
+| `Bottom10Percentage` | Highlights the bottom N percent of items in the range by value |
+| `AboveAverage` | Highlights cells with values above the average of the range |
+| `BelowAverage` | Highlights cells with values below the average of the range |
 
-**Example: Highlight Top 10 Sales Performers**
+**Code Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -354,18 +384,18 @@ Top/Bottom rules apply formatting based on statistical rankings and averages wit
 
 Data bars provide in-cell graphical representation of values, where the bar length corresponds to the cell value relative to the range. The longest bar represents the highest value, while shorter bars represent lower values. Data bars are particularly effective for visualizing trends and comparing values across a large dataset without requiring separate chart elements.
 
-**Supported Data Bar Types:**
+**Supported Data Bar Types**
 
-| ConditionalFormatType | Bar Color | Best Used For |
-|---|---|---|
-| `BlueDataBar` | Blue | Neutral, technical data |
-| `GreenDataBar` | Green | Positive performance, growth indicators |
-| `RedDataBar` | Red | Negative performance, risk indicators |
-| `OrangeDataBar` | Orange | Warnings, moderate values |
-| `LightBlueDataBar` | Light Blue | Soft visualization, secondary metrics |
-| `PurpleDataBar` | Purple | Custom analytics, specialized metrics |
+| ConditionalFormatType | Bar Color |
+|---|---|
+| `BlueDataBar` | Blue |
+| `GreenDataBar` | Green |
+| `RedDataBar` | Red |
+| `OrangeDataBar` | Orange |
+| `LightBlueDataBar` | Light Blue |
+| `PurpleDataBar` | Purple |
 
-**Example: Visualize Revenue Data with Data Bars**
+**Code Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -404,31 +434,31 @@ Data bars provide in-cell graphical representation of values, where the bar leng
 
 Color scales apply a gradient of colors to cells based on their values within the range. The color intensity corresponds to the cell value: minimum values receive one color, maximum values receive another color, and intermediate values receive proportional color blends. This approach provides intuitive visual representation of value distributions across a dataset.
 
-**Supported Color Scale Formats:**
+**Supported Color Scale Formats**
 
-**Three-Color Scales (Min → Mid → Max):**
+**Three-Color Scales (Min → Mid → Max)**
 
-| ConditionalFormatType | Scale | Use Case |
-|---|---|---|
-| `GreenYellowRedColorScale` | Green → Yellow → Red | Performance analysis (good to poor) |
-| `RedYellowGreenColorScale` | Red → Yellow → Green | Inverse performance (poor to good) |
-| `GreenWhiteRedColorScale` | Green → White → Red | Diverging scale with neutral center |
-| `RedWhiteGreenColorScale` | Red → White → Green | Inverse diverging scale |
+| ConditionalFormatType | Scale |
+|---|---|
+| `GreenYellowRedColorScale` | Green → Yellow → Red |
+| `RedYellowGreenColorScale` | Red → Yellow → Green |
+| `GreenWhiteRedColorScale` | Green → White → Red |
+| `RedWhiteGreenColorScale` | Red → White → Green |
 
-**Two-Color Scales (Min → Max):**
+**Two-Color Scales (Min → Max)**
 
-| ConditionalFormatType | Scale | Use Case |
-|---|---|---|
-| `BlueWhiteRedColorScale` | Blue → White → Red | Temperature or intensity mapping |
-| `RedWhiteBlueColorScale` | Red → White → Blue | Inverse temperature/intensity |
-| `GreenWhiteColorScale` | Green → White | Positive trend visualization |
-| `WhiteGreenColorScale` | White → Green | Inverse positive trend |
-| `RedWhiteColorScale` | Red → White | Negative trend visualization |
-| `WhiteRedColorScale` | White → Red | Inverse negative trend |
-| `GreenYellowColorScale` | Green → Yellow | Range-based analysis |
-| `YellowGreenColorScale` | Yellow → Green | Inverse range analysis |
+| ConditionalFormatType | Scale |
+|---|---|
+| `BlueWhiteRedColorScale` | Blue → White → Red |
+| `RedWhiteBlueColorScale` | Red → White → Blue |
+| `GreenWhiteColorScale` | Green → White |
+| `WhiteGreenColorScale` | White → Green |
+| `RedWhiteColorScale` | Red → White |
+| `WhiteRedColorScale` | White → Red |
+| `GreenYellowColorScale` | Green → Yellow |
+| `YellowGreenColorScale` | Yellow → Green |
 
-**Example: Apply Temperature-Based Color Scale**
+**Code Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -467,54 +497,54 @@ Color scales apply a gradient of colors to cells based on their values within th
 
 Icon sets display symbolic representations of cell values, where different icons or icon variations indicate value ranges or performance levels. Each icon represents a percentile range or performance tier, making it easy to quickly identify value categories at a glance. Icon sets are effective for status reporting, performance ratings, and categorical analysis.
 
-**Supported Icon Sets by Category:**
+**Supported Icon Sets by Category**
 
-**Arrow Icons (Directional Indicators):**
+**Arrow Icons (Directional Indicators)**
 
-| ConditionalFormatType | Color | Levels | Use Case |
-|---|---|---|---|
-| `ThreeArrows` | Colored (↑ ↔ ↓) | 3 | Upward/stable/downward trend indication |
-| `ThreeArrowsGray` | Grayscale (↑ ↔ ↓) | 3 | Neutral trend visualization |
-| `FourArrows` | Colored (↑↑ ↑ ↓ ↓↓) | 4 | Detailed performance rankings |
-| `FourArrowsGray` | Grayscale (↑↑ ↑ ↓ ↓↓) | 4 | Neutral detailed rankings |
-| `FiveArrows` | Colored (↑↑ ↑ ↔ ↓ ↓↓) | 5 | Five-level performance scale |
-| `FiveArrowsGray` | Grayscale (↑↑ ↑ ↔ ↓ ↓↓) | 5 | Neutral five-level scale |
+| ConditionalFormatType | Color | Levels |
+|---|---|---|
+| `ThreeArrows` | Colored (↑ ↔ ↓) | 3 |
+| `ThreeArrowsGray` | Grayscale (↑ ↔ ↓) | 3 |
+| `FourArrows` | Colored (↑↑ ↑ ↓ ↓↓) | 4 |
+| `FourArrowsGray` | Grayscale (↑↑ ↑ ↓ ↓↓) | 4 |
+| `FiveArrows` | Colored (↑↑ ↑ ↔ ↓ ↓↓) | 5 |
+| `FiveArrowsGray` | Grayscale (↑↑ ↑ ↔ ↓ ↓↓) | 5 |
 
-**Traffic Light Icons (Status Indicators):**
+**Traffic Light Icons (Status Indicators)**
 
-| ConditionalFormatType | Style | Levels | Use Case |
-|---|---|---|---|
-| `ThreeTrafficLights1` | Standard Lights | 3 | Stop/caution/go status (Red/Yellow/Green) |
-| `ThreeTrafficLights2` | Alternate Lights | 3 | Alternative traffic light coloring |
-| `FourTrafficLights` | Four Lights | 4 | Detailed status with additional state |
+| ConditionalFormatType | Style | Levels |
+|---|---|---|
+| `ThreeTrafficLights1` | Standard Lights | 3 |
+| `ThreeTrafficLights2` | Alternate Lights | 3 |
+| `FourTrafficLights` | Four Lights | 4 |
 
-**Symbol and Sign Icons (Status and Warning):**
+**Symbol and Sign Icons (Status and Warning)**
 
-| ConditionalFormatType | Icon Type | Levels | Use Case |
-|---|---|---|---|
-| `ThreeSigns` | Caution Signs | 3 | Warning levels and alerts |
-| `ThreeSymbols` | Colored Symbols (✓ ○ ✗) | 3 | Pass/neutral/fail indicators |
-| `ThreeSymbols2` | Alternative Symbols | 3 | Alternative symbol representation |
+| ConditionalFormatType | Icon Type | Levels |
+|---|---|---|
+| `ThreeSigns` | Caution Signs | 3 |
+| `ThreeSymbols` | Colored Symbols (✓ ○ ✗) | 3 |
+| `ThreeSymbols2` | Alternative Symbols | 3 |
 
-**Rating and Quality Icons:**
+**Rating and Quality Icons**
 
-| ConditionalFormatType | Icon Type | Levels | Use Case |
-|---|---|---|---|
-| `FourRating` | Stars (☆☆☆☆ to ★★★★) | 4 | Four-star rating scale |
-| `FiveRating` | Stars (☆☆☆☆☆ to ★★★★★) | 5 | Five-star rating scale |
-| `FiveBoxes` | Boxes/Quarters | 5 | Completion or fill level |
-| `FiveQuarters` | Quarter Blocks | 5 | Fractional or percentage representation |
+| ConditionalFormatType | Icon Type | Levels |
+|---|---|---|
+| `FourRating` | Stars (☆☆☆☆ to ★★★★) | 4 |
+| `FiveRating` | Stars (☆☆☆☆☆ to ★★★★★) | 5 |
+| `FiveBoxes` | Boxes/Quarters | 5 |
+| `FiveQuarters` | Quarter Blocks | 5 |
 
-**Categorical Icons:**
+**Categorical Icons**
 
-| ConditionalFormatType | Icon Type | Levels | Use Case |
-|---|---|---|---|
-| `ThreeFlags` | Flag Symbols | 3 | Flagging, categorization, priority marking |
-| `ThreeTriangles` | Triangles | 3 | Direction or trend triangles |
-| `ThreeStars` | Stars | 3 | Star rating or importance indicators |
-| `FourRedToBlack` | Progressive Colors | 4 | Severity scale from red to black |
+| ConditionalFormatType | Icon Type | Levels |
+|---|---|---|
+| `ThreeFlags` | Flag Symbols | 3 |
+| `ThreeTriangles` | Triangles | 3 |
+| `ThreeStars` | Stars | 3 |
+| `FourRedToBlack` | Progressive Colors | 4 |
 
-**Example: Apply Performance Rating Icons**
+**Code Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -553,7 +583,8 @@ Icon sets display symbolic representations of cell values, where different icons
 
 Custom formatting allows advanced styling of cells that meet specific conditions by directly setting properties such as font color, background color, font style (bold/italic), font weight, and underline effects. This provides fine-grained control over visual appearance beyond preset color schemes.
 
-**Supported Custom Format Properties:**
+**Supported Custom Format Properties**
+
 - **Color**: Font/text color
 - **Background Color**: Cell background fill color
 - **Font Style**: Italic styling
@@ -562,7 +593,7 @@ Custom formatting allows advanced styling of cells that meet specific conditions
 
 N> Custom format styling is supported only for **Highlight Cells Rules** and **Top/Bottom Rules** conditional format types. Data bars, color scales, and icon sets do not support custom formatting.
 
-**Example: Custom Format for Conditional Highlighting**
+**Code Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -605,25 +636,25 @@ N> Custom format styling is supported only for **Highlight Cells Rules** and **T
 
 Conditional formatting rules can be removed from cells when no longer needed. This allows for dynamic rule management and prevents formatting conflicts when rules need to be updated or replaced.
 
-**Clearing Conditional Formats:**
-
 Conditional formatting can be cleared through the UI or programmatically:
 
-**UI Method:**
-1. Select the cell range containing the conditional formats to remove
-2. Click the **Conditional Formatting** button in the **Home** tab
-3. Select **Clear Rules** and choose:
+**Clearing conditional formats via UI**
+
+- Select the cell range containing the conditional formats to remove
+- Click the **Conditional Formatting** button in the **Home** tab
+- Select **Clear Rules** and choose:
    - **Clear Rules from Selected Cells** - Remove rules only from the selected range
    - **Clear Rules from Entire Sheet** - Remove all conditional formatting from the worksheet
 
-**Programmatic Method:**
+**Clearing conditional format programmatically**
+
 Use the `ClearConditionalFormatsAsync()` method to remove conditional formatting rules from specific cells or ranges.
 
 | Parameter | Type | Description |
 | -- | -- | -- |
 | cellAddress | string (Optional) | The address of the target cell or range (e.g., `"A1:B10"`). If omitted, rules are cleared from the current selection. |
 
-**Example: Apply and Clear Conditional Formatting**
+**Code Example**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -671,12 +702,12 @@ Use the `ClearConditionalFormatsAsync()` method to remove conditional formatting
 
 The following operations have limitations when working with conditional formatting in the Blazor Spreadsheet component:
 
-**Conditional Formatting Constraints:**
 - **Row/Column Insertion**: Inserting rows or columns within a range containing conditional formatting may not automatically expand the formatting to include the new rows/columns
 - **Formula-Based Rules**: Formula-based conditional formatting rules are not currently supported; rules must be based on static values or built-in rule types
 - **Cut and Paste**: Conditional formatting rules applied to cells are not copied when performing cut and paste operations on those cells
 - **Custom Rule Definitions**: Creating fully custom rule types beyond the predefined rule types is not supported
 
-**General Formatting Limitations:**
-- **Custom Number Format UI**: A custom number format dialog is not available in the UI; custom format patterns must be applied programmatically using the `NumberFormatAsync()` method
-- **Border Expansion**: After inserting a row or column, borders do not automatically expand to include the newly inserted rows or columns
+### Limitations
+
+*  A custom number format UI dialog is not available, custom formats must be applied using the API.
+*  After inserting a row or column, border expansion is not currently supported.
