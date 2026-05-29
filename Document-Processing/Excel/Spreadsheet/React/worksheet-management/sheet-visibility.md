@@ -1,3 +1,12 @@
+---
+layout: post
+title: Sheet Visibility in React Spreadsheet component | Syncfusion
+description: Learn here all about sheet visibility in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+control: Worksheet 
+platform: document-processing
+documentation: ug
+---
+
 # Sheet visibility
 
 Hiding a worksheet can help prevent unauthorized or accidental changes to your file.
