@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Workbook Operations in Windows Forms Spreadsheet control | Syncfusion®
+title: Workbook Operations in UWP Spreadsheet control | Syncfusion®
 description: Learn how to create, open, and save Excel workbooks, as well as how to display charts and sparklines in Syncfusion® UWP Spreadsheet.
 platform: document-processing
 control: SfSpreadsheet
