@@ -3,9 +3,9 @@
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new Blazor WASM app project.
+Step 1. Open JetBrains Rider and create a new Blazor WASM PWA app project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click New Solution on the welcome screen.
 
 ![Launch JetBrains Rider](JetBrains_Images/Launch-JetBrains-Rider.png)
 
@@ -13,9 +13,10 @@ Step 1. Open JetBrains Rider and create a new Blazor WASM app project.
 * Enter a project name and specify the location.
 * Choose template as **Blazor WebAssembly Standalone App**.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
+* Enable the **Progressive Web Application (PWA)** checkbox.
 * Click create.
 
-![Launch JetBrains Rider](JetBrains_Images/create-blazor-wasm-application.png)
+![Launch JetBrains Rider](JetBrains_Images/JetBrains-PWA.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) in the search bar.
