@@ -17,7 +17,8 @@ You can navigate to a specified URL from a PDF document by using the [`PdfTextWe
 
 Refer to the following code snippet for navigating to the webpage.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new Pdf document
 PdfDocument document = PdfDocument();
@@ -41,6 +42,7 @@ File('Hyperlink.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Working with internal document navigation
 
@@ -48,7 +50,8 @@ To allow the users navigate to any other part of the same document, the [`PdfDoc
 
 The following code explains how to add the hyperlink for internal document navigation.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new Pdf document
 PdfDocument document = PdfDocument();
@@ -74,3 +77,4 @@ File('Hyperlink.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

@@ -91,58 +91,6 @@ document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//"App" is the class of Portable project.
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-using (WordDocument document = new WordDocument())
-{
-    //Loads or opens an existing Word document from stream
-    Stream inputStream = assembly.GetManifestResourceStream("CreateWordSample.Assets.Test.doc");
-    //Loads or opens an existing Word document through Open method of WordDocument class
-    document.Open(inputStream, FormatType.Automatic, "password");
-    MemoryStream stream = new MemoryStream();
-    //Saves the Word file to MemoryStream
-    await document.SaveAsync(stream, FormatType.Doc);
-    //Saves the stream as Word file in local machine
-    Save(stream, "Result.doc");
-    document.Close();
-}
-//Saves the Word document
-async void Save(MemoryStream streams, string filename)
-{
-    streams.Position = 0;
-    StorageFile stFile;
-    if (!(Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons")))
-    {
-        FileSavePicker savePicker = new FileSavePicker();
-        savePicker.DefaultFileExtension = ".doc";
-        savePicker.SuggestedFileName = filename;
-        savePicker.FileTypeChoices.Add("Word Documents", new List<string>() {".doc"});
-        stFile = await savePicker.PickSaveFileAsync();
-    }
-    else
-    {
-        StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-        stFile = await local.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
-    }
-    if (stFile != null)
-    {
-    using (IRandomAccessStream zipStream = await stFile.OpenAsync(FileAccessMode.ReadWrite))
-    {
-        //Write compressed data from memory to file
-        using (Stream outstream = zipStream.AsStreamForWrite())
-        {
-            byte[] buffer = streams.ToArray();
-            outstream.Write(buffer, 0, buffer.Length);
-            outstream.Flush();
-        }
-    }
-}
-//Launch the saved Word file
-await Windows.System.Launcher.LaunchFileAsync(stFile);
-}
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Security/Open-encrypted-Word-document).
@@ -185,30 +133,6 @@ document.RemoveEncryption()
 ‘Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//"App" is the class of Portable project
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-//Create new Word document instance
-using (WordDocument document = new WordDocument())
-{
-    //Loads or opens an existing Word document from stream
-    Stream inputStream = assembly.GetManifestResourceStream("Sample.Assets.Template.docx");
-    //Loads or opens an existing Word document using the Open method of WordDocument class
-    document.Open(inputStream, FormatType.Docx, "password");
-    //Removes encryption in Word document
-    document.RemoveEncryption();
-    MemoryStream stream = new MemoryStream();
-    //Saves the Word file to MemoryStream
-    document.Save(stream, FormatType.Docx);
-    //Closes the Word document instance
-    document.Close();
-    //Saves the stream as Word file in local machine
-    Save(stream, "Sample.Docx");
-}
-//Refer to the following link to save Word document in UWP platform
-//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp#save-word-document-in-uwp
 {% endhighlight %}
 
 {% endtabs %}
