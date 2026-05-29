@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Theme and style in Angular Spreadsheet component | Syncfusion
-description: Learn here how to use built‑in themes and apply custom styles in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+description: Learn here how to use built‑in themes and apply custom styles in Syncfusion Angular Spreadsheet component of Sync fusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
