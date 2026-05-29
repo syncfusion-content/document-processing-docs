@@ -15,7 +15,7 @@ Starting from version v21.1.x, the SFDT file generated in Word Processor compone
 * The new optimized SFDT files require less storage space than the old SFDT files.
 Hence, the optimized SFDT file can't be directly manipulated as JSON string.
 
-> This feature comes with a public API to switch between the old and new optimized SFDT format, allowing backward compatibility.
+N> This feature comes with a public API to switch between the old and new optimized SFDT format, allowing backward compatibility.
 
 As a backward compatibility to create older format SFDT files, refer the following code changes,
 

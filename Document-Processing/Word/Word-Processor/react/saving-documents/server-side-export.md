@@ -71,4 +71,4 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-> DocumentEditor object is available in DocumentEditorContainer component(DocumentEditor packaged with toolbar, status bar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#documenteditor-code-classlanguage-textdocumenteditorcode/)
+N> DocumentEditor object is available in DocumentEditorContainer component(DocumentEditor packaged with toolbar, status bar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#documenteditor-code-classlanguage-textdocumenteditorcode/)

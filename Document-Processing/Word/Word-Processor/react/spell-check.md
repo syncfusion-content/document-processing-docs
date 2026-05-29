@@ -149,7 +149,7 @@ Previously on every `SpellChecker.GetSuggestion()` method call, the `.aff` and d
 
 If you find any root word is missing in the dictionary file, then you can add that new root word and the rule to form the possible words to dictionary file using `AddNewWord` API in the server-side Spell check library.
 
->Note:
+N>
 >1. The rules are framed automatically using the root word, the possible words and affix file.
 >2. If you pass null for the parameters `affPath` and `possibleWords`, then it will add a single root word to dictionary.
 >3. This API is included starting from `v20.2.0.xx`.

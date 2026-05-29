@@ -141,7 +141,7 @@ kubectl apply -f deployment.yaml
 kubectl port-forward pod-name local-port:container-port
 ```
 
-> Get the pod names in AWS Console or using the below AWS CLI command
+N> Get the pod names in AWS Console or using the below AWS CLI command
 
 ```   
 kubectl get pods

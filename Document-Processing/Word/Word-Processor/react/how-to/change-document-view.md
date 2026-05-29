@@ -18,7 +18,7 @@ Document Editor allows you to change the view to web layout and print using the 
  <DocumentEditorComponent id="container" layoutType={'Continuous'} />
 ```
 
->Note: Default value of [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor#layouttype) in Document Editor component is [`Pages`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType/).
+N> Default value of [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor#layouttype) in Document Editor component is [`Pages`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType/).
 
 ## How to change the document view in DocumentEditorContainer component
 
@@ -28,4 +28,4 @@ Document Editor Container component allows you to change the view to web layout 
 <DocumentEditorContainerComponent id="container" layoutType={'Continuous'} enableToolbar={true}/>
 ```
 
->Note: Default value of [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#layouttype) in Document Editor Container component is [`Pages`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType/).
+N> Default value of [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#layouttype) in Document Editor Container component is [`Pages`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType/).

@@ -51,17 +51,16 @@ The following example shows how to export documents in document editor as Syncfu
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/export-container-cs1" %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
->Document Editor features are segregated into individual feature-wise modules. To use SFDT export, inject the `SfdtExport` module using `DocumentEditor.Inject( SfdtExport)`.
->
->To enable SFDT export for a document editor instance, set `enableSfdtExport` to true.
+N>Document Editor features are segregated into individual feature-wise modules. To use SFDT export, inject the `SfdtExport` module using `DocumentEditor.Inject( SfdtExport)`.
+To enable SFDT export for a document editor instance, set `enableSfdtExport` to true.
 
 ## Word export
 
 The following example shows how to export the document as Word document (.docx).  
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -91,17 +90,16 @@ The following example shows how to export the document as Word document (.docx).
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/export-container-cs2" %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
->Document Editor features are segregated into individual feature-wise modules. To use word export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
->
->To enable word export for a document editor instance, set `enableWordExport` to true.
+N> Document Editor features are segregated into individual feature-wise modules. To use word export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
+To enable word export for a document editor instance, set `enableWordExport` to true.
 
 ## Template export
 
 The following example shows how to export the document as Word Template (.dotx).
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -131,11 +129,10 @@ The following example shows how to export the document as Word Template (.dotx).
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/export-container-cs4" %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
->Document Editor features are segregated into individual feature-wise modules. To use word template export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
->
->To enable word template export for a document editor instance, set `enableWordExport` to true.
+N> Document Editor features are segregated into individual feature-wise modules. To use word template export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
+To enable word template export for a document editor instance, set `enableWordExport` to true.
 
 ## Text export
 
@@ -167,13 +164,12 @@ The following example shows how to export document as text document (.txt).
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/export-container-cs3" %}
 
->Document Editor features are segregated into individual feature-wise modules. To use text export, inject the `TextExport` and `SfdtExport` modules using the `DocumentEditor.Inject(TextExport, SfdtExport)`.
->
->To enable text export for a document editor instance, set `enableTextExport` to true.
+N> Document Editor features are segregated into individual feature-wise modules. To use text export, inject the `TextExport` and `SfdtExport` modules using the `DocumentEditor.Inject(TextExport, SfdtExport)`.
+To enable text export for a document editor instance, set `enableTextExport` to true.
 
 ## Export as blob
 
