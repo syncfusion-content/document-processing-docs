@@ -34,7 +34,7 @@ To add **UWP Spreadsheet** component in the application, open the NuGet package 
 
 {% endtabcontent %}
 
-{% tabcontent Assemblies(.dll) %}
+{% tabcontent Assemblies (.dll) %}
 
 ### Add Syncfusion® UWP Spreadsheet Assemblies
 
@@ -48,35 +48,35 @@ Description</th></tr>
 <tr>
 <td>
 Syncfusion.SfCellGrid.UWP.dll</td><td>
-Contains the base and fundamental classes which holds the underlying architecture for displaying cells with virtualized behavior and selection/interaction of cells.</td></tr>
+Contains the base and fundamental classes which hold the underlying architecture for displaying cells with virtualized behavior and selection/interaction of cells. </td></tr>
 <tr>
 <td>
 Syncfusion.SfGridCommon.UWP.dll</td><td>
-Covers the classes which holds the properties of scroll viewer and disposable elements</td></tr>
+Covers the classes which hold the properties of scroll viewer and disposable elements</td></tr>
 <tr>
 <td>
 Syncfusion.SfSpreadsheet.UWP.dll</td><td>
-Contains the classes that handles all the UI Operations of SfSpreadsheet such as importing of sheets, applying formulas/styles etc.</td></tr>
+Contains the classes that handle all the UI Operations of SfSpreadsheet such as importing of sheets, applying formulas/styles etc.</td></tr>
 <tr>
 <td>
 Syncfusion.SfShared.UWP.dll</td><td>
-Contains the classes which holds the properties and operations of the controls like SfUpDown, SfNavigator, Looping control etc</td></tr>
+Contains the classes which hold the properties and operations of the controls like SfUpDown, SfNavigator, Looping control etc</td></tr>
 <tr>
 <td>
 Syncfusion.SfInput.UWP.dll</td><td>
-Contains the classes which holds the controls like SfDropDownButton, SfTextBoxExt,SfMaskedEdit etc.</td></tr>
+Contains the classes which hold the controls like SfDropDownButton, SfTextBoxExt,SfMaskedEdit etc.</td></tr>
 <tr>
 <td>
 Syncfusion.SfRibbon.UWP.dll</td><td>
-Covers the classes which holds the Ribbon controls such as SfRibbon, SfRibbonMenu, SfRibbonGalleryItem etc.</td></tr>
+Covers the classes which hold the Ribbon controls such as SfRibbon, SfRibbonMenu, SfRibbonGalleryItem etc.</td></tr>
 <tr>
 <td>
 Syncfusion.SfTabControl.UWP.dll</td><td>
-Covers the classes which holds the controls like SfTabControl, SfTabItem etc</td></tr>
+Covers the classes which hold the controls like SfTabControl, SfTabItem etc</td></tr>
 <tr>
 <td>
 Syncfusion.XlsIO.UWP.dll</td><td>
-Contains the base classes which is responsible for read and write in Excel files, Worksheet Manipulations, Formula calculations etc.</td></tr>
+Contains the base classes which are responsible for reading and writing in Excel files, Worksheet Manipulations, Formula calculations etc.</td></tr>
 </table>
 Below are the assemblies list that can be added when you want to enable certain features in SfSpreadsheet control. 
 
@@ -88,15 +88,15 @@ Description</th></tr>
 <tr>
 <td>
 Syncfusion.SfSpreadsheetHelper.UWP.dll</td><td>
-Contains the classes which is responsible for importing charts and sparklines into SfSpreadsheet</td></tr>
+Contains the classes which are responsible for importing charts and sparklines into SfSpreadsheet</td></tr>
 <tr>
 <td>
 Syncfusion.ExcelChartToImageConverter.UWP.dll</td><td>
-Contains the classes which is responsible for converting charts as image</td></tr>
+Contains the classes which are responsible for converting charts as image</td></tr>
 <tr>
 <td>
 Syncfusion.SfChart.UWP.dll</td><td>
-Contains the classes which is responsible for importing charts like Line charts, Pie charts, Sparklines etc.</td></tr>
+Contains the classes which are responsible for importing charts like Line charts, Pie charts, Sparklines etc.</td></tr>
 </table>
 
 {% endtabcontent %}
@@ -113,7 +113,7 @@ UWP Spreadsheet control can be added to an application either through the design
 
 1.Click and open the MainPage.xaml file.
 
-2.Open the Visual Studio **Tool** **box**. Navigate to “Syncfusion<sup>®</sup> Controls for UWP” tab, and find the  SfSpreadsheet/SfSpreadsheetRibbon toolbox items.
+2.Open the Visual Studio **Tool** **box**. Navigate to “Syncfusion<sup>®</sup> Controls for UWP” tab and find the  SfSpreadsheet/SfSpreadsheetRibbon toolbox items.
 
 ![Getting-Started_img1](Getting-Started_images/Getting-Started_img1.jpg)
 

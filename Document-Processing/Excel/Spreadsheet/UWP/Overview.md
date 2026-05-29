@@ -27,7 +27,7 @@ The [Syncfusion® UWP Spreadsheet (SfSpreadsheet)](https://www.syncfusion.com/sp
 
 * [Merge Cells](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/formatting#merge-cells) - Merge two or more adjacent cells into a single cell and display the contents of one cell in the merged cell.
 
-* [Conditional Formatting](Conditional-Formatting) - Provides support for excel compatible conditional formatting and allows you to apply formats to a cell or range of cells depending on the value of cells or formula that meet specific criteria. Also provides support to define and import the conditional formatting rules such as Data Bars, Icon Sets and Color Scales options which are used to visualize the data.
+* [Conditional Formatting](Conditional-Formatting) - Provides support for excel compatible conditional formatting and allows you to apply formats to a cell or range of cells depending on the value of cells or formulas that meet specific criteria. Also provides support to define and import the conditional formatting rules such as Data Bars, Icon Sets and Color Scales options which are used to visualize the data.
 
 * [Data Validation](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/editing#data-validation) – Provides support to ensure the data integrity by enforcing end users to enter valid data into the cells and if entered data does not meet the specified criteria, and error message is displayed. 
 
@@ -59,7 +59,7 @@ The [Syncfusion® UWP Spreadsheet (SfSpreadsheet)](https://www.syncfusion.com/sp
 
 * [Localization](Localization) - Provides support to localize all the static text in a Ribbon and all dialogs to any desired language.
 
-* **Supported File Types** - Ability to import the different types of excel which are XLS, XLSX, XLSM, XLT, XLTX, CSV(Comma delimited) respectively.
+* **Supported File Types** - Ability to import the different types of excel which are XLS, XLSX, XLSM, XLT, XLTX, CSV (Comma delimited) respectively.
 
 ## Related Links
 
