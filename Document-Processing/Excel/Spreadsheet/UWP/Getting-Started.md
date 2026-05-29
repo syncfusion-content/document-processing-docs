@@ -28,7 +28,7 @@ You can add a UWP spreadsheet component to your application by installing it via
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> UWP Spreadsheet NuGet Package
 
-To add **UWP Spreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install 
+To add **UWP Spreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
 •	[Syncfusion.SfSpreadsheet.UWP](https://www.nuget.org/packages/Syncfusion.SfSpreadsheet.UWP)
 
@@ -188,7 +188,7 @@ _For_ _Ribbon:_
         Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid>
-            <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" Margin="0,85,0,0" />
+            <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" />
             <Spreadsheet:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}" />
         </Grid>
     </Page>
@@ -200,7 +200,7 @@ _For_ _Ribbon:_
 
 {% tabcontent Via Coding %}
 
-Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_._Spreadsheet_” and it can be created programmatically either by using XAML or C# code.
+Spreadsheet is available in the following namespace [_Syncfusion_._UI_._Xaml_._Spreadsheet_](https://help.syncfusion.com/cr/UWP/Syncfusion.UI.Xaml.Spreadsheet.html) and it can be created programmatically either by using XAML or C# code.
 
 {% tabs %}
 
