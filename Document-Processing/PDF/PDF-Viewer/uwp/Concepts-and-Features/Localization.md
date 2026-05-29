@@ -42,3 +42,7 @@ The following screenshot shows the localization of context menu in SfPdfViewerCo
 
 ![Output](Localization_images/Localization_img4.png)
 
+## See Also
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [UI design for desktop](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/ui-design-for-desktop)
+- [UI design for mobile](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/ui-design-for-mobile)

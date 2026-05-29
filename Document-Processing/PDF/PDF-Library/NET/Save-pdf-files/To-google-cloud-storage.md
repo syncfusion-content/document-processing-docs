@@ -5,9 +5,9 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Save PDF file to Google Cloud storage
+# Save PDF file to Google Cloud Storage
 
-To save a PDF file to Google cloud storage, you can follow the steps below
+To save a PDF file to Google Cloud Storage, you can follow the steps below
 
 
 Step 1: Create a simple console application
@@ -38,7 +38,7 @@ Step 4: Include the following namespaces in the Program.cs file.
 {% endtabs %}
 
 
-Step 5: Add the below code example to create a simple PDF and save in Google cloud storage.
+Step 5: Add the below code example to create a simple PDF and save in Google Cloud Storage.
 
 {% tabs %}
 

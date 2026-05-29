@@ -1,47 +1,117 @@
 ---
 title: Example Use Cases | Syncfusion AI Agent Tools
-description: Explore example use cases for building a Blog Generator agent using Syncfusion Word tools, the Microsoft Agent Framework, and OpenAI.
+description: Explore example use cases for building document automation agents using Syncfusion AI Agent Tools, the Microsoft Agent Framework, and OpenAI.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
 ---
 
-# Create Custom Blog Generator Agent
+# Example Use Cases with AI Agent Tools
 
-## Overview
+## Automated PDF Redaction Agent
 
-This example use case demonstrates building a **Blog Generator** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview?pivots=programming-language-csharp), OpenAI (text and image generation), and Syncfusion Word Agent Tools to convert a single user‑provided topic into a fully formatted blog ebook. The agent generates a title and structured outline, creates detailed content with relevant images, and outputs the final result in **HTML** and **Word (.docx)** formats. This sample application runs using [in‑memory mode](./getting-started-in-memory-mode) for document processing.
+### Overview
 
-## Prerequisites
+This example demonstrates an **Automated PDF Redaction Agent** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp), OpenAI, and Syncfusion PDF Tools to automatically detect and permanently redact sensitive information from PDF documents. The agent accepts a natural language request, identifies all sensitive data, and outputs a clean redacted PDF - with no manual intervention required. This sample runs using [In-Memory Mode](./getting-started#in-memory-mode).
 
-<table>
-<tr>
-<td>.NET SDK</td>
-<td>.NET 8.0 or .NET 9.0 or .NET 10.0</td>
-</tr>
-<tr>
-<td>OpenAI API Key</td>
-<td>Obtain from <a href="https://platform.openai.com">platform.openai.com</a></td>
-</tr>
-<tr>
-<td>OpenAI Models</td>
-<td>A text model (default <code>gpt-4o</code>) and an image model (default <code>gpt-image-1.5</code>)</td>
-</tr>
-<tr>
-<td>NuGet Packages</td>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools">Syncfusion.DocumentSDK.AI.AgentTools</a><br/>
-<a href="https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI">Microsoft.Agents.AI.OpenAI</a><br/>
-<a href="https://www.nuget.org/packages/OpenAI">OpenAI</a>
-</td>
-</tr>
-</table>
+### Prerequisites
 
->**Note:** The OpenAI API key is mandatory for this sample because the guide demonstrates the integration using the **Microsoft Agents Framework with OpenAI**. The same integration steps work with any other [provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp) (Azure OpenAI, Anthropic, Google Gemini, Ollama, etc.) — just swap in that provider’s API key or endpoint credentials.
+| Requirement | Details |
+|---|---|
+| .NET SDK | .NET 8.0, 9.0, or 10.0 |
+| AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI. |
+| NuGet Packages | [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
 
-## Configure OpenAI Credentials and Syncfusion Document SDK AI Agent Tools
+### How it works
 
-Integrating the Blog Generator agent into a console application involves the following step: configuring OpenAI credentials, registering the Syncfusion license, initializing the OpenAI client, setting up the Word Document Manager, and enabling Syncfusion Document SDK AI Agent tools for document creation and export.
+At runtime the application performs the following steps:
+
+1. **Load PDF:** The agent loads the specified PDF document into memory.
+2. **Extract text:** All text content is extracted from the PDF.
+3. **Detect sensitive data:** The AI identifies and categorizes sensitive information such as personal information, financial data, and other identifiers.
+4. **Locate and redact:** All identified items are located using bounding box coordinates and permanently redacted with black boxes.
+5. **Export:** The redacted PDF is saved to the output folder with a `_redacted.pdf` suffix. The original file remains unchanged.
+
+### Syncfusion setup
+
+The snippet below shows only the Syncfusion-specific configuration. You can find the complete code snippet [here](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AutomatedPDFRedaction/Program.cs).
+
+```csharp
+using Syncfusion.AI.AgentTools.Core;
+using Syncfusion.AI.AgentTools.PDF;
+using Microsoft.Extensions.AI;
+using Microsoft.Agents.AI;
+using OpenAI;
+using AITool = Syncfusion.AI.AgentTools.Core.AITool;
+
+// Register Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(
+    Environment.GetEnvironmentVariable("SYNCFUSION_LICENSE_KEY")!);
+
+// Set up PDF Document Manager and tools
+var pdfManager = new PdfDocumentManager(TimeSpan.FromMinutes(5));
+var outputDir  = Path.GetFullPath(Environment.CurrentDirectory + @"..\..\..\..\Data\Output\");
+
+var allTools = new List<AITool>();
+allTools.AddRange(new PdfDocumentAgentTools(pdfManager, outputDir).GetTools());
+allTools.AddRange(new PdfContentExtractionAgentTools(pdfManager).GetTools());
+allTools.AddRange(new PdfSecurityAgentTools(pdfManager).GetTools());
+
+// Convert to Microsoft.Extensions.AI functions
+var aiTools = allTools
+    .Select(t => AIFunctionFactory.Create(t.Method, t.Instance,
+        new AIFunctionFactoryOptions { Name = t.Name, Description = t.Description }))
+    .Cast<Microsoft.Extensions.AI.AITool>()
+    .ToList();
+
+// Build the agent
+AIAgent agent = new OpenAIClient(Environment.GetEnvironmentVariable("OPENAI_API_KEY")!)
+    .GetChatClient(Environment.GetEnvironmentVariable("OPENAI_MODEL") ?? "gpt-4o")
+    .AsIChatClient()
+    .AsAIAgent(instructions: BuildSystemMessage(inputDir, outputDir), tools: aiTools);
+```
+
+### Example Prompts
+
+Once the agent is running, use natural language prompt to trigger redaction:
+
+> *"Load 'case_filing.pdf' from the input folder and redact all sensitive information including names, addresses, and ID numbers. Save the result as 'case_filing_redacted.pdf'."*
+
+### Complete Example
+
+You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/AutomatedPDFRedaction/).
+
+## Blog Generator Agent
+
+### Overview
+
+This example demonstrates a **Blog Generator** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview?pivots=programming-language-csharp), OpenAI (text and image generation), and Syncfusion Word Agent Tools to convert a single user-provided topic into a fully formatted blog ebook. The agent generates a title and structured outline, creates detailed content with relevant images, and outputs the final result in **HTML** and **Word (.docx)** formats. This sample runs using [In-Memory Mode](./getting-started#in-memory-mode).
+
+### Prerequisites
+
+| Requirement | Details |
+|---|---|
+| .NET SDK | .NET 8.0, 9.0, or 10.0 |
+| AI Provider API Key | Required to authenticate requests to the AI provider. This page uses OpenAI. |
+| OpenAI Models | A text model (default **gpt-4o**) and an image model (default **gpt-image-1.5**) |
+| NuGet Packages | [Syncfusion.DocumentSDK.AI.AgentTools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), [Microsoft.Agents.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Agents.AI.OpenAI) |
+
+### How it works
+
+
+
+At runtime the application performs the following steps:
+
+1. **Ask blog topic.** The user enters a topic from the console.
+2. **Generate title and outline.** The agent drafts a title and 6–10 section outline for user confirmation (`[Y/n/r]`).
+3. **Draft blog content as HTML.** For each section the agent generates structured HTML with consistent styling.
+4. **Generate images.** For sections that need visuals, the **gpt-image-1.5** model generates PNG images embedded as Base64.
+5. **Convert HTML to Word.** The AI agent autonomously chains `CreateDocument` → `ImportHtml` → `ExportDocument` using `WordDocumentAgentTools` and `WordImportExportAgentTools`.
+6. **Save output.** Both the assembled HTML and the converted Word document are saved to the output folder.
+
+### Syncfusion setup
+
+The snippet below shows only the Syncfusion-specific configuration. You can find the complete code snippet [here](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs).
 
 ```csharp
 using Syncfusion.AI.AgentTools.Core;
@@ -49,154 +119,57 @@ using Syncfusion.AI.AgentTools.Word;
 using Microsoft.Extensions.AI;
 using Microsoft.Agents.AI;
 using AITool = Syncfusion.AI.AgentTools.Core.AITool;
-using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
-using ChatRole    = Microsoft.Extensions.AI.ChatRole;
 
 // Register Syncfusion license
-string? licenseKey = Environment.GetEnvironmentVariable("SYNCFUSION_LICENSE_KEY");
-if (!string.IsNullOrEmpty(licenseKey))
-{
-    Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(licenseKey);
-}
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(
+    Environment.GetEnvironmentVariable("SYNCFUSION_LICENSE_KEY")!);
 
-// Read OpenAI credentials and model configuration
+// Word Document Manager and tools
+var wordManager = new WordDocumentManager(TimeSpan.FromMinutes(10));
+var outputDir   = Path.GetFullPath(Environment.CurrentDirectory + @"..\..\..\..\Data\Output\");
+
+var allSyncfusionTools = new List<AITool>();
+allSyncfusionTools.AddRange(new WordDocumentAgentTools(wordManager, outputDir).GetTools());
+allSyncfusionTools.AddRange(new WordImportExportAgentTools(wordManager).GetTools());
+
+// Convert to Microsoft.Extensions.AI functions
+var aiTools = allSyncfusionTools
+    .Select(t => AIFunctionFactory.Create(t.Method, t.Instance,
+        new AIFunctionFactoryOptions { Name = t.Name, Description = t.Description }))
+    .Cast<Microsoft.Extensions.AI.AITool>()
+    .ToList();
+
+// Configure AI API key and model
 var apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY")
           ?? PromptRequired("OpenAI API key");
+var textModel = Environment.GetEnvironmentVariable("OPENAI_TEXT_MODEL") ?? "gpt-4o";
 
-var textModel  = Environment.GetEnvironmentVariable("OPENAI_TEXT_MODEL")  ?? "gpt-4o";
-var imageModel = Environment.GetEnvironmentVariable("OPENAI_IMAGE_MODEL") ?? "gpt-image-1.5";
-
-// Create OpenAI client and chat client
+// Build the AIAgent (Microsoft Agent Framework)
 var openAiClient = new OpenAIClient(new System.ClientModel.ApiKeyCredential(apiKey));
 var chatClient   = openAiClient.GetChatClient(textModel);
 
-// Create Word Document Manager (in-memory with timeout)
-var wordManager = new WordDocumentManager(TimeSpan.FromMinutes(10));
-var outputDir = Path.GetFullPath(Environment.CurrentDirectory + @"..\..\..\..\Data\Output\");
-
-var allSyncfusionTools = new List<AITool>();
-allSyncfusionTools.AddRange(new WordDocumentAgentTools(wordManager, outputDirectory: outputDir).GetTools());
-allSyncfusionTools.AddRange(new WordImportExportAgentTools(wordManager).GetTools());
-
-// Convert Syncfusion tools to Microsoft.Extensions.AI compatible tools
-var aiTools = allSyncfusionTools
-    .Select(t => AIFunctionFactory.Create(
-        t.Method,
-        t.Instance,
-        new AIFunctionFactoryOptions
-        {
-            Name        = t.Name,
-            Description = t.Description
-        }))
-    .Cast<Microsoft.Extensions.AI.AITool>()
-    .ToList();
-```
-
-## Build Blog Generator Custom AI Agent Workflow
-
-This step builds the custom Blog Generator AI agent, generates blog content and images from a single topic, assembles the content into HTML, and finally converts the HTML into a Word document using Syncfusion Word AI Agent tools-all through a single agent‑driven workflow.
-
-```csharp
-// Build the AI agent with strict JSON output and Word tool execution rules
+// Build agent with Word document rules
 AIAgent aiAgent = chatClient.AsIChatClient().AsAIAgent(
-    instructions: """
-        You are an expert technical blogger and document designer.
-        You always return only valid JSON when asked, with no markdown fences,
-        no extra commentary, and no trailing text outside the JSON object.
-
-        You also have access to Syncfusion Word document tools.
-        When asked to create a Word document:
-        1. Call CreateDocument to create a new Word document (filePath=null).
-        2. Call ImportHtml with the HTML content or file path and the documentId.
-        3. Call ExportDocument with the documentId and the output file path (format "Docx").
-        Always follow this sequence and wait for each result before proceeding.
-        """,
+    instructions: BuildSystemMessage(),
     name: "BlogGenerationAgent",
     tools: aiTools);
-
-// Initialize content and image generation helpers
-var blogAgent      = new BlogGenerationAgent(aiAgent);
-var imageGenerator = new ImageGenerator(openAiClient, imageModel);
-
-// Generate blog sections, images (if required), and assemble HTML
-var blogSections = new List<BlogSection>();
-for (int idx = 0; idx < sections.Count; idx++)
-{
-    var plan = sections[idx];
-
-    var htmlFragment = await blogAgent.GenerateSectionHtmlAsync(
-        outline.Title, plan, idx, sections.Count);
-
-    string? imageBase64 = null;
-    if (plan.NeedsImage)
-    {
-        var imagePrompt = await blogAgent.GenerateImagePromptAsync(outline.Title, plan);
-        imageBase64 = await imageGenerator.GenerateBase64Async(imagePrompt);
-    }
-
-    blogSections.Add(new BlogSection
-    {
-        Plan         = plan,
-        HtmlFragment = htmlFragment,
-        ImageBase64  = imageBase64,
-        ImageCaption = plan.ImagePurpose
-    });
-}
-
-// Save assembled HTML blog
-var html     = HtmlAssembler.Assemble(outline.Title, blogSections);
-var filename = HtmlAssembler.DeriveFilename(outline.Title) + ".html";
-var filePath = Path.Combine(outputDir, filename);
-HtmlAssembler.SaveToFile(filePath, html);
-
-var wordFilePath = Path.Combine(outputDir,
-    HtmlAssembler.DeriveFilename(outline.Title) + ".docx");
-
-var history = new List<ChatMessage>();
-var userPrompt =
-    $"Create a new Word document, import the HTML from the file '{filePath}' " +
-    $"into it, and then export/save it as '{wordFilePath}' in Docx format.";
-history.Add(new ChatMessage(ChatRole.User, userPrompt));
-
-var response = await aiAgent.RunAsync(history).ConfigureAwait(false);
-
-foreach (var message in response.Messages)
-{
-    foreach (var content in message.Contents)
-    {
-        if (content is TextContent text && !string.IsNullOrEmpty(text.Text))
-            Console.WriteLine($"    AI: {text.Text}");
-        else if (content is FunctionCallContent call)
-            Console.WriteLine($"    [Tool call : {call.Name}]");
-        else if (content is FunctionResultContent result)
-            Console.WriteLine($"    [Tool result: {result.Result}]");
-    }
-}
 ```
 
-## How it works
+### Example Prompts
 
-At runtime, the console application performs the following actions:
+Once the agent is running, enter a topic at the console prompt to start the blog generation workflow:
 
-1. **Ask blog topic.** Request the user to enter a blog topic from the console.
-2. **Provide the blog title and outline for confirmation.** The agent drafts a title and 6–10 section outline which is displayed for the user to approve, regenerate, or cancel (`[Y/n/r]`).
-3. **Draft blog content as HTML.** For each section, the agent generates structured HTML content with consistent styling.
-4. **Generate images for this blog using the `gpt-image-1.5` model.**  For the required sections, the AI generates PNG images and embeds the generated images as Base64.
-5. **Convert the HTML to Word by using the Syncfusion AI Agent Tools library.** The AI agent autonomously chains `CreateDocument` → `ImportHtml` → `ExportDocument` from `WordDocumentAgentTools` and `WordImportExportAgentTools`.
-6. **Save both HTML and DOCX files.** The assembled self-contained HTML and the converted Word document are saved to the output folder.
+> *"Write a blog post about the future of AI in health care."*
 
-## Complete Startup Code
+The agent will draft a title and outline for your review before generating the full content and images.
 
-For a complete, runnable example combining all steps, refer to the console
-application in this repository:
+### Complete Example
 
-[Examples/Console/BlogGenerator/Program.cs](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/Program.cs)
+You can download a complete working sample from [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/blob/master/Examples/Console/BlogGenerator/).
 
 ## See Also
 
-* [Getting Started - In-Memory Mode](./getting-started-in-memory-mode)
-* [AI Agent Tools Overview](./overview)
-* [Tools](./tools)
-* [Customization](./customization)
-* [Example Prompts](./example-prompts)
-* [Microsoft Agent Framework – C# Providers](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp)
+- [AI Agent Tools Overview](./overview)
+- [Tools](./tools)
+- [Customization](./customization)
+- [Example Prompts](./example-prompts)

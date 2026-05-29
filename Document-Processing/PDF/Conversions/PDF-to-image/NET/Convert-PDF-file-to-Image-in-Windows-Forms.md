@@ -23,16 +23,19 @@ Step 2: Install the [Syncfusion.PdfToImageConverter.WinForms](https://www.nuget.
 
 Step 3: Add the following namespaces into Form1.Designer.cs file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 using System;
 using System.Windows.Forms;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Add a new button in Form1.Designer.cs to convert PDF document to Image as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 private Button btnCreate;
 private Label label;
@@ -61,19 +64,23 @@ private void InitializeComponent()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Include the following namespaces in the Form1.cs file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 using Syncfusion.PdfToImageConverter;
 using System.Drawing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Create the btnCreate_Click event and add the following code in btnCreate_Click to convert PDF document to Image using Convert method in PdfToImageConverter class.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
@@ -85,6 +92,7 @@ Stream outputStream = imageConverter.Convert(0, false, false);
 Bitmap image = new Bitmap(outputStream);
 image.Save("sample.png");
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get the PDF document as follows.
 ![Convert PDFToImage Windows Forms output](GettingStarted_images/pdftoimageoutput.png)

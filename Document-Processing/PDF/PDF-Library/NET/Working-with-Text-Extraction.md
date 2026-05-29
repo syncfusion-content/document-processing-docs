@@ -438,6 +438,44 @@ Color glyphColor = textGlyph.TextColor;
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using System.Drawing;
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// Get the first page of the loaded PDF document
+PdfPageBase page = loadedDocument.Pages[0];
+TextLines lineCollection = new TextLines();
+
+// Extract text from the first page
+string extractedText = page.ExtractText(out lineCollection);
+// Get a specific line from the collection
+TextLine line = lineCollection[0];
+// Get the collection of words in the line
+List<TextWord> textWordCollection = line.WordCollection;
+// Get a word from the collection using an index
+TextWord textWord = textWordCollection[0];
+// Get Glyph details of the word
+List<TextGlyph> textGlyphCollection = textWord.Glyphs;
+
+// Get a character from the word
+TextGlyph textGlyph = textGlyphCollection[0];
+// Get bounds of the character
+RectangleF glyphBounds = textGlyph.Bounds;
+// Get font name of the character
+string glyphFontName = textGlyph.FontName;
+// Get font size of the character
+float glyphFontSize = textGlyph.FontSize;
+// Get font style of the character
+FontStyle glyphFontStyle = textGlyph.FontStyle;
+// Get the character in the word
+char glyphText = textGlyph.Text;
+// Get the color of the character
+Color glyphColor = textGlyph.TextColor;
+
+{% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
@@ -446,16 +484,16 @@ Imports Syncfusion.Pdf.Parsing
 Imports System.Drawing
 
 ' Load the existing PDF document
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 ' Get the first page of the loaded PDF document
 Dim page As PdfPageBase = loadedDocument.Pages(0)
-Dim lineCollection As New TextLineCollection()
+Dim lineCollection As New TextLines()
 
 ' Extract text from the first page
 Dim extractedText As String = page.ExtractText(lineCollection)
 ' Get a specific line from the collection
-Dim line As TextLine = lineCollection.TextLine(0)
-' Get a collection of words in the line
+Dim line As TextLine = lineCollection(0)
+' Get the collection of words in the line
 Dim textWordCollection As List(Of TextWord) = line.WordCollection
 ' Get a word from the collection using an index
 Dim textWord As TextWord = textWordCollection(0)
@@ -476,6 +514,7 @@ Dim glyphFontStyle As FontStyle = textGlyph.FontStyle
 Dim glyphText As Char = textGlyph.Text
 ' Get the color of the character
 Dim glyphColor As Color = textGlyph.TextColor
+
 {% endhighlight %}
 
 {% endtabs %}
