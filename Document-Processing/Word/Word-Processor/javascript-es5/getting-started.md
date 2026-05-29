@@ -37,7 +37,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential JS 2 components' 
 
   ```text
   Script: https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js 
-  Style: https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/material.css
+  Style: https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css
   ```
 
 Add the following CDN references inside the `<head>` section of your `index.html` file, as shown below.
@@ -49,16 +49,16 @@ Add the following CDN references inside the `<head>` section of your `index.html
 <head>
     <title>Syncfusion JavaScript Document Editor</title>
 	<!-- EJ2 Document Editor dependent theme -->
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <!-- EJ2 Document Editor theme -->
-    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-documenteditor/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+    <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-documenteditor/styles/tailwind3.css" rel="stylesheet" type="text/css" rel='nofollow' />
     <!-- EJ2 Document Editor dependent scripts -->
     <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
