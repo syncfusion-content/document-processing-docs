@@ -118,7 +118,7 @@ Step 7: Inject ``ExportService`` in-to ``FetchData.razor`` using the following c
 Create a button in the ``FetchData.razor`` using the following code.
 
 {% highlight CSHTML %}
-<button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
+<button class="btn btn-primary" @onclick="@ExportToPdf">Export PDF</button>
 {% endhighlight %}
 
 Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export service.

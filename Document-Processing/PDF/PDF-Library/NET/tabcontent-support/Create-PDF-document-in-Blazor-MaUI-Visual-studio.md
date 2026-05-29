@@ -25,7 +25,7 @@ Step 4: Create a button in the ``Weather.razor`` using the following code.
 
 {% highlight CSHTML %}
 
-<button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
+<button class="btn btn-primary" @onclick="@ExportToPdf">Export PDF</button>
 
 {% endhighlight %}
 

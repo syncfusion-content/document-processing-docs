@@ -92,7 +92,7 @@ An online sample link to [create PDF document](https://document.syncfusion.com/d
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/BlazorMauiAppCreatePdfSample).
 
 By running the program, you will see the output in the browser when you click the "Weather" option in the left-side menu.
-![Blazor client browser window](Create-PDF-Blazor/Maui_Blazor_browser_output.png)
+![Blazor client browser window](Create-PDF-Blazor/Blazor_browser_output.png)
 
 Click the `Export to PDF` button to get the PDF document with the following output.
 ![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)

@@ -48,7 +48,7 @@ Step 5: Next, include the following namespaces in that  ``FetchData.razor`` file
 Step 6: Create a button in the ``FetchData.razor`` using the following code.
 
 {% highlight CSHTML %}
-<button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
+<button class="btn btn-primary" @onclick="@ExportToPdf">Export PDF</button>
 {% endhighlight %}
 
 Step 7: Define the ``@ExportToPdf`` click function on ``FetchData.razor`` file.

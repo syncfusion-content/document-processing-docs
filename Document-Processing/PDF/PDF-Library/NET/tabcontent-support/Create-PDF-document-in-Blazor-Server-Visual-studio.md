@@ -106,7 +106,7 @@ Step 7: Inject ``ExportService`` in-to ``Weather.razor`` using the following cod
 Create a button in the ``Weather.razor`` using the following code.
 
 {% highlight CSHTML %}
-<button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
+<button class="btn btn-primary" @onclick="@ExportToPdf">Export PDF</button>
 {% endhighlight %}
 
 Add the ``ExportToPdf`` method in ``Weather.razor`` page to call the export service.
