@@ -295,12 +295,12 @@ N> 1. In Markdown to Presentation conversion, invalid images are replaced with a
 <td style="width: 16%;">
 <p>Table</p>
 </td>
-<td style="width: 26%;"><img src="MarkdownToWord_images/Created_Table.png" alt="Table Syntax in Markdown"></td>
+<td style="width: 26%;"><img src="Images/Created_Table.png" alt="Table Syntax in Markdown"></td>
 <td style="width: 41.7072%;">
 <p>Create a table using the pipes and underscores as given in the syntax to create 2 x 2 table.</p>
 <p></p>
 <p>You can also set column alignments using the syntax below, default it is left aligned.</p>
-<p>Right alignment:<br/><img src="MarkdownToWord_images/RightAligned_Table.png" alt="Right aligned table Syntax in Markdown"><br /> <br /> Center alignment:<br/><img src="MarkdownToWord_images/CenterAligned_Table.png" alt="Center aligned table Syntax in Markdown"></p>
+<p>Right alignment:<br/><img src="Images/RightAligned_Table.png" alt="Right aligned table Syntax in Markdown"><br /> <br /> Center alignment:<br/><img src="Images/CenterAligned_Table.png" alt="Center aligned table Syntax in Markdown"></p>
 </td>
 </tr>
 <tr>
