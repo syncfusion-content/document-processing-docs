@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Syncfusion® MAUI PDF Viewer UI Builder Skill | Syncfusion®
-description: Install Syncfusion® MAUI UI Builder with PDF Viewer to generate production-ready MAUI components from natural-language prompts.
-control: Skills
-platform: maui
+title: MAUI UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion®
+description: Install Syncfusion® MAUI UI Builder to generate production-ready React components with PDF Viewer from natural-language prompts.
+control: PDF Viewer
+platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+keywords: MAUI UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 ---
 
-# Syncfusion® MAUI PDF Viewer UI Builder Skill
+# Syncfusion® MAUI UI Builder Skill with PDF Viewer for AI Assistants
 
-**Syncfusion® MAUI UI Builder with PDF Viewer** is an AI-powered skill and companion agent that accelerates cross-platform application development by transforming natural-language UI requirements into production-ready components using Syncfusion® MAUI libraries.
+**Syncfusion® MAUI UI Builder Skill** is an AI-powered agent skill that accelerates MAUI PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® MAUI components.
 
 Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® MAUI components** to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, MAUI UI Builder helps you rapidly build scalable mobile and desktop applications for iOS, Android, macOS, and Windows without leaving your development workflow.
@@ -160,11 +160,11 @@ To start using the skill:
 Examples Prompts:
 
 {% promptcards %}
-{% promptcard Custom toolbar %}
-Create a MAUI UI for a PDF document viewer with the following requirements: Implement SfPdfViewer control to display PDF documents. Add a custom toolbar with buttons for: Open File, Previous Page, Next Page, Zoom In, Zoom Out, and Search. Include a page number indicator showing current page and total pages. Add a document title header. Apply Material Design 3 theme with light/dark mode support. Make the layout responsive for mobile and desktop screens.
+{% promptcard Knowledge Base Article Viewer %}
+Build a knowledge base article page where the PDF viewer is embedded as the main reading area. Add a left navigation sidebar for article categories and a top search bar. Include bookmarking and quick navigation within the document. Use a clean, documentation-style layout.
 {% endpromptcard %}
-{% promptcard Text search and navigation%}
-Create a MAUI search and navigation interface for PDFs: SfPdfViewer control displaying the document. Search bar at the top with real-time search functionality. Search results panel showing all matches with page numbers and context snippets. Previous/Next result navigation buttons. Highlight matches in yellow within the PDF document. Page thumbnail navigator on the left side. Document outline/bookmarks panel. Zoom controls and fit-to-page options. Ensure responsive design for mobile and desktop.Support dark mode
+{% promptcard Invoice Viewer with Details Panel%}
+Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
 {% endpromptcard %}
 {% endpromptcards %}
 
