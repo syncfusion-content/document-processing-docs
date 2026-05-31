@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion® WPF UI Builder Skill for AI Assistants | Syncfusion®
-description: Install Syncfusion® WPF UI Builder to generate production-ready WPF controls from natural-language prompts.
+description: Install Syncfusion® WPF UI Builder to generate production-ready WPF controls with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -32,7 +32,7 @@ Before installing WPF UI Builder, ensure the following:
 
 ### **AI-Driven UI Generation**
 - Converts prompts into complete WPF components—not just snippets
-- Automatically selects appropriate Syncfusion® controls and features
+- Automatically selects appropriate Syncfusion® controls and features including PDF Viewer
 - Produces structured, maintainable code
 
 ### **Control Usage & API Accuracy**
