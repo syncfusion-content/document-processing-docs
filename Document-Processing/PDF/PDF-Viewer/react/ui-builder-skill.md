@@ -102,7 +102,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For Syncfusion® Code Studio, use the Copilot command above to install the React UI Builder.
 
-## How the Syncfusion® React UI Builder Skill Works
+## How the Syncfusion® React UI Builder Skill Works with PDF Viewer
 
 1. **Intent Analysis:** Parse the user's prompt to identify component types and high-level layout intent.
 2. **Project Detection:** Automatically detects project framework, package manager, existing themes, and PDF Viewer configuration.
@@ -151,10 +151,6 @@ To start using the skill:
 {% promptcard PDF Viewer with Toolbar %}
 Create a React PDF Viewer with the Bootstrap 5 theme that displays a PDF file with a full toolbar including zoom controls, search, and navigation buttons. Add page count display and ensure responsive behavior on different screen sizes.
 {% endpromptcard %}
-{% promptcard Document Management Dashboard %}
-Build a document management dashboard using Syncfusion® React components with a sidebar navigation, main content area displaying a PDF Viewer for document preview, and a file list on the right showing recent documents. Include search and filter functionality for documents.
-{% endpromptcard %}
-{% endpromptcards %}
 
 
 Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of embedded secrets.
