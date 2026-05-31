@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Syncfusion® WinForms UI Builder PDFViewer Skill for AI Assistants | Syncfusion®
-description: Install Syncfusion® Windows Forms UI Builder to generate production-ready Windows Forms controls with PDF Viewer from natural-language prompts.
+title: WinForms UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion®
+description: Install Syncfusion® WinForms UI Builder to generate production-ready Windows Forms controls with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 keywords: WinForms UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 ---
 
-# Syncfusion® Windows Forms UI Builder Skill for AI Assistants
+# Syncfusion® WinForms UI Builder Skill with PDF Viewer for AI Assistants
 
-**Syncfusion® Windows Forms UI Builder** is an AI-powered skill and companion agent that accelerates Windows Forms PDF Viewer development by transforming natural-language UI requirements into production-ready controls using Syncfusion® Windows Forms libraries. 
+**Syncfusion® WinForms UI Builder Skill** is an AI-powered agent skill that accelerates WinForms PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® WinForms components. 
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® controls** to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Windows Forms UI Builder helps you rapidly build scalable dashboards and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** and other WinForms components to deliver accurate and ready-to-use code.By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WinForms UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing Windows Forms UI Builder, ensure the following:
+Before installing WinForms UI Builder Skill with PDF Viewer, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [.NET SDK](https://dotnet.microsoft.com/en-us/download) version ≥ 6
@@ -31,15 +30,14 @@ Before installing Windows Forms UI Builder, ensure the following:
 ## Key Benefits
 
 ### **AI-Driven UI Generation**
-- Converts prompts into complete Windows Forms components—not just snippets
-- Automatically selects appropriate Syncfusion® controls and features including PDF Viewer
-- Produces structured, maintainable C# code
+- Transforms prompts into fully developed WinForms components rather than just partial code snippets.
+- Automatically selects appropriate Syncfusion® components and features
+- Produces structured, maintainable code
 
 ### **Control Usage & API Accuracy**
 - Uses correct Syncfusion® control APIs and properties
-- Injects required feature controls and behaviors (paging, sorting, filtering, etc.)
-- Ensures proper assembly references and control initialization
-- Avoids unsupported or deprecated patterns for Windows Forms
+- Injects required feature modules (paging, sorting, filtering, etc.)
+- Avoids unsupported or deprecated patterns
 
 ### **Patterns & Best Practices**
 - Recommended control composition and data-binding patterns
@@ -70,7 +68,7 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® Windows Forms UI Builder package using APM
+### Install the Syncfusion® WinForms UI Builder package using APM
 
 Use the APM CLI to install the WinForms UI Builder skill for your preferred environment:
 
@@ -106,7 +104,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the WinForms UI Builder.
 
-## How the Syncfusion® Windows Forms UI Builder Skill Works with PDF Viewer
+## How the Syncfusion® WinForms UI Builder Skill Works with PDF Viewer
 
 1. **Intent Analysis** — Parse the user's prompt to identify control types and high-level form layout intent.
 2. **Project Detection** — Automatically detects .NET framework (Framework, Core, or .NET 5+) and existing Syncfusion® configurations.
@@ -147,6 +145,8 @@ To start using the skill:
 ![Set Agent](images/UI-Builder-Agent.png)
 
 3. Start prompting the agent with a clear description of your UI requirements.
+
+> For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
 Examples Prompts:
 
