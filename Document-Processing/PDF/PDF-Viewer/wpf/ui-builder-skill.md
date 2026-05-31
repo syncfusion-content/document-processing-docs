@@ -100,7 +100,7 @@ After installation, the following artifacts are added to your project for the Gi
 
 Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals) for details about supported deployment targets.
 
-> For Syncfusion® Code Studio, use the Copilot command above to install the WPF UI Builder.
+> For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the WPF UI Builder.
 
 ## How the Syncfusion® WPF UI Builder Skill Works with PDF Viewer
 
