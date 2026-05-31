@@ -1,27 +1,27 @@
 ---
 layout: post
-title: React UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion®
-description: Install Syncfusion® React UI Builder to generate production-ready React components with PDF Viewer from natural-language prompts.
+title: Angular UI Builder Skill with PDF Viewer | Syncfusion®
+description: Install Syncfusion® Angular UI Builder to generate production-ready Angular components with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-keywords: React UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: Angular UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 ---
 
-# Syncfusion® React UI Builder Skill with PDF Viewer for AI Assistants
+# Syncfusion® Angular UI Builder Skill with PDF Viewer for AI Assistants
 
-**Syncfusion® React UI Builder Skill** is an AI-powered agent skill that accelerates React PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® React components.
+**Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates Angular PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** and other React components to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, React UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** and other Angular components to deliver accurate and ready-to-use code.
+By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Angular UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing React UI Builder Skill with PDF Viewer, ensure the following:
+Before installing Angular UI Builder Skill with PDF Viewer, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
-- React application (existing or new); see [Quick Start](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)
+- Angular application (existing or new); see [Quick Start](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-cli)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
 - Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
@@ -30,35 +30,35 @@ Before installing React UI Builder Skill with PDF Viewer, ensure the following:
 
 ## Key Benefits
 
-### **AI-Driven UI Generation**
-- Transforms prompts into fully developed React components rather than just partial code snippets.
+**AI-Driven UI Generation**
+- Transforms prompts into fully developed Angular components rather than just partial code snippets.
 - Automatically selects appropriate Syncfusion® components and features
 - Produces structured, maintainable code
 
-### **Component Usage & API Accuracy**
+**Component Usage & API Accuracy**
 - Uses correct Syncfusion® component APIs
 - Injects required feature modules (paging, sorting, filtering, etc.)
 - Avoids unsupported or deprecated patterns
 
-### **Patterns & Best Practices**
+**Patterns & Best Practices**
 - Recommended component composition and state management
-- Event handling aligned with React standards
+- Event handling aligned with Angular standards
 - Secure and scalable coding patterns
 
-### **Accessibility & Responsiveness**
+**Accessibility & Responsiveness**
 - WCAG 2.1 AA–aligned output
 - Semantic HTML with ARIA support
 - Mobile-first responsive layouts
 
-### **Design-System Integration**
+**Design-System Integration**
 - Supports Tailwind, Bootstrap, Material, or custom themes
 - Ensures consistent Syncfusion® styling and theme usage
 
 ## Installation
 
-Before installing React UI Builder Skill with PDF Viewer, ensure that APM (Agent Package Manager) is installed and available in your environment.
+Before installing Angular UI Builder Skill with PDF Viewer, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
-### Verify APM Installation
+**Verify APM Installation**
 
 Run the following command to confirm APM is installed:
 
@@ -66,29 +66,29 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® React UI Builder Skill with PDF Viewer package using APM
+### Install the Syncfusion® Angular UI Builder Skill with PDF Viewer package using APM
 
-Use the APM CLI to install the React UI Builder Skill with PDF Viewer for your preferred environment:
+Use the APM CLI to install the Angular UI Builder skill with PDF Viewer for your preferred environment:
 
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
 
-apm install syncfusion/react-ui-builder -t copilot
+apm install syncfusion/angular-ui-builder -t copilot
 
 {% endhighlight  %}
 {% highlight bash tabtitle="Cursor" %}
 
-apm install syncfusion/react-ui-builder -t cursor
+apm install syncfusion/angular-ui-builder -t cursor
 
 {% endhighlight  %}
 {% highlight bash tabtitle="Codex" %}
 
-apm install syncfusion/react-ui-builder -t codex
+apm install syncfusion/angular-ui-builder -t codex
 
 {% endhighlight  %}
 {% highlight bash tabtitle="Claude" %}
 
-apm install syncfusion/react-ui-builder -t claude
+apm install syncfusion/angular-ui-builder -t claude
 
 {% endhighlight  %}
 {% endtabs %}
@@ -100,20 +100,20 @@ After installation, the following artifacts are added to your project for the Gi
 
 Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals) for details about supported deployment targets.
 
-> For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the React UI Builder.
+> For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the Angular UI Builder.
 
-## How the Syncfusion® React UI Builder Skill Works with PDF Viewer
+## How the Syncfusion® Angular UI Builder Skill Works with PDF Viewer
 
 1. **Intent Analysis:** Parse the user's prompt to identify component types and high-level layout intent.
 2. **Project Detection:** Automatically detects project framework, package manager, existing themes, and PDF Viewer configuration.
-3. **Component Mapping:** Map intent to Syncfusion® PDF Viewer and React components, including required modules.
+3. **Component Mapping:** Map intent to Syncfusion® PDF Viewer and Angular components, including required modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
    - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option, which can be used as is or changed based on preference.
    - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
-	 - Light and Dark Mode
+     - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
-5. **Code Generation:** Produce TypeScript React components with PDF Viewer integration, props interfaces, and CSS/styling scaffolding.
+5. **Code Generation:** Produce TypeScript Angular components with PDF Viewer integration, props interfaces, and CSS/styling scaffolding.
 6. **Dependency Management:** Recommend or install required Syncfusion® packages and peer dependencies.
 7. **Validation:** Run accessibility and basic security checks, request confirmation for changes.
 8. **Code Insertion:** Create files or patch existing files following project structure and conventions.
@@ -129,15 +129,15 @@ Key enforcement points:
 
 ## Using the AI Assistant
 
-After installing React UI Builder Skill with PDF Viewer and APM, the relevant agent and skill files are added to your project under:
+After installing Angular UI Builder Skill with PDF Viewer and APM,, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
-- `.github/agents/` (React UI builder agent configuration, based on the selected target)
+- `.github/agents/` (Angular UI builder agent configuration, based on the selected target)
 
 To start using the skill:
 
 1.Open your supported IDE.
-2.In the chat panel, select the `syncfusion-react-ui-builder` agent from the **Agent dropdown**.
+2.In the chat panel, select the `syncfusion-angular-ui-builder` agent from the **Agent dropdown**.
 
 ![Set Agent](./images/UI-Builder-Agent.png)
 
@@ -149,10 +149,10 @@ To start using the skill:
 
 {% promptcards %}
 {% promptcard Invoice Viewer with Details Panel %}
-Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
+Design a resume review interface using the PDF viewer for candidate CVs. Add a right panel with candidate details, ratings, tags, and action buttons (shortlist, reject, schedule interview). Include quick notes functionality. Focus on fast scanning and decision-making UX.
 {% endpromptcard %}
 {% promptcard Course Material Viewer %}
-Create a learning interface with the PDF viewer displaying course material. Add a collapsible sidebar with lesson navigation and progress tracking. Include a top progress bar, next/previous lesson buttons, and a notes section below or beside the viewer. Focus on student-friendly, distraction-free design.
+Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
 {% endpromptcard %}
 {% endpromptcards %}
 
