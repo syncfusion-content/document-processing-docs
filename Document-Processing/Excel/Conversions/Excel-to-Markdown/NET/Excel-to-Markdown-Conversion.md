@@ -21,7 +21,7 @@ Refer to the following links for assemblies and NuGet packages required based on
 
 Convert an existing Excel file to Markdown using the .NET Excel (XlsIO) library.
 
-The following code example shows how to convert an Excel to Markdown file.
+The following code example shows how to convert an Excel document to a Markdown file.
 
 {% tabs %}  
 
@@ -136,9 +136,9 @@ You can download a complete working sample from <a href="https://github.com/Sync
 
 ### Customize the image path
 
-XlsIO provides an **ImageNodeVisited** event, which is used to customize the image path to set in the output Markdown file and save images externally while converting an Excel document to a Markdown.
+XlsIO provides an **ImageNodeVisited** event, which is used to customize the image path in the output Markdown file and save images externally while converting an Excel document to a Markdown file.
 
-The following code example illustrates how to save Image files during Excel to Markdown Conversion.
+The following code example illustrates how to save image files during Excel to Markdown Conversion.
 
 {% tabs %}  
  
@@ -238,3 +238,77 @@ End Sub
 {% endtabs %}
 
 You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Customize-image-path/.NET/Customize-image-path">this GitHub page</a>.
+
+## Markdown Export Options
+
+### PreserveEmptyRow
+
+This property ensures that blank rows in the Excel worksheet are retained in the Markdown output, preserving layout and spacing.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Preserve empty rows during export
+MarkdownExportOptions exportOptions = new MarkdownExportOptions();
+exportOptions.PreserveEmptyRow = true;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Preserve empty rows during export
+MarkdownExportOptions exportOptions = new MarkdownExportOptions();
+exportOptions.PreserveEmptyRow = true;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Preserve empty rows during export
+Dim exportOptions As New MarkdownExportOptions()
+exportOptions.PreserveEmptyRow = True
+{% endhighlight %}
+{% endtabs %}
+
+### LineSeparator
+
+This property sets the newline style in the Markdown file. For example, `"\r\n"` uses Windows line endings (CRLF) for better compatibility with editors like Notepad and VS Code.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Use Windows-style line endings
+MarkdownExportOptions exportOptions = new MarkdownExportOptions();
+exportOptions.LineSeparator = "\r\n";
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Use Windows-style line endings
+MarkdownExportOptions exportOptions = new MarkdownExportOptions();
+exportOptions.LineSeparator = "\r\n";
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Use Windows-style line endings
+Dim exportOptions As New MarkdownExportOptions()
+exportOptions.LineSeparator = vbCrLf
+{% endhighlight %}
+{% endtabs %}
+
+### UseDisplayText
+
+This property exports the formatted display text of cells (e.g., dates or formatted numbers) instead of raw values, making the Markdown output more user‑friendly.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Export formatted display text
+MarkdownExportOptions exportOptions = new MarkdownExportOptions();
+exportOptions.UseDisplayText = true;
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Export formatted display text
+MarkdownExportOptions exportOptions = new MarkdownExportOptions();
+exportOptions.UseDisplayText = true;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Export formatted display text
+Dim exportOptions As New MarkdownExportOptions()
+exportOptions.UseDisplayText = True
+{% endhighlight %}
+{% endtabs %}
