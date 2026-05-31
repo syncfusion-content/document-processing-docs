@@ -148,9 +148,13 @@ To start using the skill:
 **Examples Prompts:**
 
 {% promptcards %}
-{% promptcard PDF Viewer with Toolbar %}
-Create a React PDF Viewer with the Bootstrap 5 theme that displays a PDF file with a full toolbar including zoom controls, search, and navigation buttons. Add page count display and ensure responsive behavior on different screen sizes.
+{% promptcard Invoice Viewer with Details Panel %}
+Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
 {% endpromptcard %}
+{% promptcard Course Material Viewer %}
+Create a learning interface with the PDF viewer displaying course material. Add a collapsible sidebar with lesson navigation and progress tracking. Include a top progress bar, next/previous lesson buttons, and a notes section below or beside the viewer. Focus on student-friendly, distraction-free design.
+{% endpromptcard %}
+{% endpromptcards %}
 
 
 Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of embedded secrets.

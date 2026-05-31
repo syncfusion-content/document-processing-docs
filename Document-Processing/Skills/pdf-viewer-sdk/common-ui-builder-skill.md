@@ -18,20 +18,15 @@ By leveraging deep knowledge of Syncfusion® component libraries, it enables dev
 
 With intelligent UI generation across both general UI components and PDF Viewer capabilities, developers can rapidly design and implement modern applications without leaving their development workflow. 
 
-Supported Platforms for PDF Viewer UI Builder Skill:
-
-- React
-- Angular
-- Blazor
-- .NET MAUI
-- WPF
-- WinForms
-- WinUI
-
-## Supported Platforms 
+## Supported Platforms for PDF Viewer UI Builder Skill
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> UI Builder Skill for AI Assistants with PDF Viewer SDK provide guidance for the following platforms:
 
 | Framework | Skills |
 |---|---|
 | [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview) | [syncfusion-react-pdf-viewer](../../PDF/PDF-Viewer/react/ui-builder-skill) |
+
+## See also
+
+- [Agent Skills Standards](https://agentskills.io/home)
+- [Agent Package Manager](https://microsoft.github.io/apm/getting-started/quick-start/)
