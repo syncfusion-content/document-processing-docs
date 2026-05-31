@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Syncfusion® WPF UI Builder Skill for AI Assistants | Syncfusion®
+title: Syncfusion® WPF UI Builder PDF Viewer Skill for AI Assistants | Syncfusion®
 description: Install Syncfusion® WPF UI Builder to generate production-ready WPF controls with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+keywords: WPF UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 ---
 
 # Syncfusion® WPF UI Builder with PDF Viewer Skill for AI Assistants
@@ -144,11 +144,11 @@ To start using the skill:
 Examples Prompts:
 
 {% promptcards %}
-{% promptcard PDFViewer Document Management %}
-Create a document management interface with a SplitView layout. Left panel: TreeView with document categories (Reports, Invoices, Contracts, Archives). Right panel: PDFViewer control (full height) with toolbar containing buttons for First Page, Previous, Next, Last Page, Zoom In, Zoom Out, Fit to Page, and Page Search. Include a CommandBar header showing the current document name and page count. Add a status bar at the bottom displaying current zoom level and document info. Use the FluentLight theme.
+{% promptcard PDFViewer Annotation Tools %}
+Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
 {% endpromptcard %}
-{% promptcard Admin Dashboard %}
-Create a CMS Admin Dashboard UI featuring a collapsible NavigationView with items for Dashboard, Content, Users, Analytics, and Settings; a CommandBar header showing the title "CMS Admin Dashboard" with a user profile section; and a main content area with a Grid layout including three compact summary cards displaying Total Content, Total Users, and Active Sessions (each with label, icon, count value, and percentage change), followed by a "Content Management" section with a DataGrid with columns for Title, Author, Status, Date, and Actions (with Edit and Delete buttons), and finally two charts displayed side by side—a Bar chart titled "Content Over Time" and a Pie chart titled "Content by Category"—using realistic sample data.
+{% promptcard PDFViewer Multi-Document Viewer %}
+Create a multi-tab document viewer using TabControl with Material3Light theme. Each tab contains a PDFViewer instance with individual toolbars (zoom, search, navigation). Add a TabBar at the bottom showing thumbnail previews of open documents. Include a side panel with search functionality that highlights results across all open PDFViewer instances. Add buttons to open, close, and rearrange document tabs.
 {% endpromptcard %}
 {% endpromptcards %}
 
