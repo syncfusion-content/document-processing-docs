@@ -1,10 +1,11 @@
 ---
 layout: post
-title: React UI Builder skill with PDF Viewer for AI Assistants | Syncfusion®
+title: React UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion®
 description: Install Syncfusion® React UI Builder to generate production-ready React components with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+keywords: React UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 ---
 
 # Syncfusion® React UI Builder Skill with PDF Viewer for AI Assistants
@@ -16,7 +17,7 @@ By combining intelligent code generation with best practices, accessibility stan
 
 ## Prerequisites
 
-Before installing React UI Builder, ensure the following:
+Before installing React UI Builder Skill with PDF Viewer, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
