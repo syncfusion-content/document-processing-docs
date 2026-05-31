@@ -150,8 +150,8 @@ To start using the skill:
 **Examples Prompts:**
 
 {% promptcards %}
-{% promptcard Knowledge Base Article Viewer %}
-Build a knowledge base article page where the PDF viewer is embedded as the main reading area. Add a left navigation sidebar for article categories and a top search bar. Include bookmarking and quick navigation within the document. Use a clean, documentation-style layout.
+{% promptcard Legal Document Review Interface %}
+Build a legal document review interface using the PDF viewer as the central workspace. Add a right-side comments panel with threaded discussions, timestamps, and user avatars. Include filters for resolved and unresolved comments. Overlay inline comment markers on the PDF viewer. Use a professional, structured layout with clear hierarchy and subtle borders.
 {% endpromptcard %}
 {% promptcard HR Resume Review Screen %}
 Design a resume review interface using the PDF viewer for candidate CVs. Add a right panel with candidate details, ratings, tags, and action buttons (shortlist, reject, schedule interview). Include quick notes functionality. Focus on fast scanning and decision-making UX.
