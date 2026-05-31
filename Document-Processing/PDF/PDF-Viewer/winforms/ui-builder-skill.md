@@ -1,6 +1,6 @@
 ---
 layout: post
-title:WinForms UI Builder Skill with PDFViewer for AI Assistant| Syncfusion®
+title: WinForms UI Builder Skill with PDFViewer for AI Assistant|Syncfusion®
 description: Install Syncfusion® WinForms UI Builder to generate production-ready Windows Forms controls with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
