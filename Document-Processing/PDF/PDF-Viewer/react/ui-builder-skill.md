@@ -30,27 +30,27 @@ Before installing React UI Builder Skill with PDF Viewer, ensure the following:
 
 ## Key Benefits
 
-**AI-Driven UI Generation**
+### **AI-Driven UI Generation**
 - Transforms prompts into fully developed React components rather than just partial code snippets.
 - Automatically selects appropriate Syncfusion® components and features
 - Produces structured, maintainable code
 
-**Component Usage & API Accuracy**
+### **Component Usage & API Accuracy**
 - Uses correct Syncfusion® component APIs
 - Injects required feature modules (paging, sorting, filtering, etc.)
 - Avoids unsupported or deprecated patterns
 
-**Patterns & Best Practices**
+### **Patterns & Best Practices**
 - Recommended component composition and state management
 - Event handling aligned with React standards
 - Secure and scalable coding patterns
 
-**Accessibility & Responsiveness**
+### **Accessibility & Responsiveness**
 - WCAG 2.1 AA–aligned output
 - Semantic HTML with ARIA support
 - Mobile-first responsive layouts
 
-**Design-System Integration**
+### **Design-System Integration**
 - Supports Tailwind, Bootstrap, Material, or custom themes
 - Ensures consistent Syncfusion® styling and theme usage
 
@@ -58,7 +58,7 @@ Before installing React UI Builder Skill with PDF Viewer, ensure the following:
 
 Before installing React UI Builder Skill with PDF Viewer, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
-**Verify APM Installation**
+### Verify APM Installation
 
 Run the following command to confirm APM is installed:
 
@@ -66,7 +66,7 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-**Install the Syncfusion® React UI Builder Skill with PDF Viewer package using APM**
+### Install the Syncfusion® React UI Builder Skill with PDF Viewer package using APM
 
 Use the APM CLI to install the React UI Builder Skill with PDF Viewer for your preferred environment:
 

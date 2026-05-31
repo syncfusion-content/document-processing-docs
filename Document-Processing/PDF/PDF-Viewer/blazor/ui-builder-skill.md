@@ -145,7 +145,9 @@ To start using the skill:
   ![Set Agent](./images/blazor-ui-builder.png)
 3. Start prompting the agent with a clear description of your UI requirements.
 
-Examples Prompts:
+> For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
+
+**Examples Prompts:**
 
 {% promptcards %}
 {% promptcard Knowledge Base Article Viewer %}
