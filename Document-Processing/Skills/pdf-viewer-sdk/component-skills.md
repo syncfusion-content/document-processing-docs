@@ -1,13 +1,13 @@
 ---
-title: Syncfusion PDF Viewer SDK Agent Skills for AI Assistant | Syncfusion
-description: Learn how to install and use Syncfusion PDF Viewer SDK Agent Skills to help AI assistant generate accurate PDF Viewer code using PDF Viewer SDK libraries
+title: Syncfusion PDF Viewer SDK Agent Skills for AI Assistants | Syncfusion
+description: Learn how to install and use Syncfusion PDF Viewer SDK Agent Skills to help AI assistants generate accurate PDF Viewer code using PDF Viewer SDK libraries
 platform: document-processing
 control: PDF Viewer SDK
 documentation: ug
 keywords: Skills, AI Assistants, PdfViewer SDK, Agent Skills
 ---
 
-# Syncfusion PDF Viewer SDK Agent Skills for AI Assistant
+# Syncfusion PDF Viewer SDK Agent Skills for AI Assistants
 
 This guide introduces **Syncfusion PDF Viewer SDK Skills**, a curated skill package that enables AI assistants (GitHub Copilot, Code Studio, Cursor, Claude, etc.) to generate accurate, production ready PDF Viewer integration code using the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer components across supported platforms. 
 
