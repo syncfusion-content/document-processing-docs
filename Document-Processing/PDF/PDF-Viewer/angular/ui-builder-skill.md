@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion®
+title: Angular UI Builder Skill with PDF Viewer | Syncfusion®
 description: Install Syncfusion® Angular UI Builder to generate production-ready Angular components with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
@@ -56,7 +56,7 @@ Before installing Angular UI Builder Skill with PDF Viewer, ensure the following
 
 ## Installation
 
-Before installing Angular UI Builder, ensure that APM (Agent Package Manager) is installed and available in your environment.
+Before installing Angular UI Builder Skill with PDF Viewer, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
 **Verify APM Installation**
 
@@ -66,9 +66,9 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-**Install the Syncfusion® Angular UI Builder package using APM**
+### Install the Syncfusion® Angular UI Builder Skill with PDF Viewer package using APM
 
-Use the APM CLI to install the Angular UI Builder skill for your preferred environment:
+Use the APM CLI to install the Angular UI Builder skill with PDF Viewer for your preferred environment:
 
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
@@ -129,7 +129,7 @@ Key enforcement points:
 
 ## Using the AI Assistant
 
-After installing Angular UI Builder with APM, the relevant agent and skill files are added to your project under:
+After installing Angular UI Builder Skill with PDF Viewer and APM,, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
 - `.github/agents/` (Angular UI builder agent configuration, based on the selected target)
