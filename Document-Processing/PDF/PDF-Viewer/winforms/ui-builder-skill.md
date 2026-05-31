@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion® WinForms UI Builder PDF Viewer Skill for AI Assistants | Syncfusion®
+title: Syncfusion® WinForms UI Builder PDFViewer Skill for AI Assistants | Syncfusion®
 description: Install Syncfusion® Windows Forms UI Builder to generate production-ready Windows Forms controls with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
@@ -151,11 +151,11 @@ To start using the skill:
 Examples Prompts:
 
 {% promptcards %}
-{% promptcard PDFViewer Document Management %}
-Create a document management interface with a SplitContainer layout. Left panel: TreeView with document categories (Reports, Invoices, Contracts, Archives) with collapsible nodes. Right panel: PdfViewerDocumentView control (full height) with built-in toolbar containing buttons for First Page, Previous, Next, Last Page, Zoom In, Zoom Out, Fit to Page, and Page Search. Include a CommandBar header showing the current document name and page count. Add a status bar at the bottom displaying current zoom level and document info. Use the Office2019Colorful theme with proper SkinManager configuration.
+{% promptcard Invoice Viewer with Details Panel %}
+Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
 {% endpromptcard %}
-{% promptcard Admin Dashboard %}
-Create a CMS Admin Dashboard UI featuring a collapsible TreeView in a left panel (docked) with navigation items for Dashboard, Content, Users, Analytics, and Settings; a top StatusBar showing the title "CMS Admin Dashboard" and user name; and a main content area with a SplitContainer containing three compact summary panels in a FlowLayoutPanel displaying Total Content, Total Users, and Active Sessions (each showing a label, count value, and percentage change), followed by a "Content Management" section with a DataGrid containing columns for Title, Author, Status, Date, and Actions, and finally two charts displayed side by side—a column chart titled "Content Over Time" and a pie chart titled "Content by Category"—using realistic sample data.
+{% promptcard Course Material Viewer %}
+Create a learning interface with the PDF viewer displaying course material. Add a collapsible sidebar with lesson navigation and progress tracking. Include a top progress bar, next/previous lesson buttons, and a notes section below or beside the viewer. Focus on student-friendly, distraction-free design.
 {% endpromptcard %}
 {% endpromptcards %}
 

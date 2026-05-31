@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion® WPF UI Builder PDF Viewer Skill for AI Assistants | Syncfusion®
+title: Syncfusion® WPF UI Builder PDFViewer Skill for AI Assistants | Syncfusion®
 description: Install Syncfusion® WPF UI Builder to generate production-ready WPF controls with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
@@ -144,11 +144,11 @@ To start using the skill:
 Examples Prompts:
 
 {% promptcards %}
-{% promptcard PDFViewer Annotation Tools %}
+{% promptcard Invoice Viewer with Details Panel %}
 Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
 {% endpromptcard %}
-{% promptcard PDFViewer Multi-Document Viewer %}
-Create a multi-tab document viewer using TabControl with Material3Light theme. Each tab contains a PDFViewer instance with individual toolbars (zoom, search, navigation). Add a TabBar at the bottom showing thumbnail previews of open documents. Include a side panel with search functionality that highlights results across all open PDFViewer instances. Add buttons to open, close, and rearrange document tabs.
+{% promptcard Course Material Viewer %}
+Create a learning interface with the PDF viewer displaying course material. Add a collapsible sidebar with lesson navigation and progress tracking. Include a top progress bar, next/previous lesson buttons, and a notes section below or beside the viewer. Focus on student-friendly, distraction-free design.
 {% endpromptcard %}
 {% endpromptcards %}
 
