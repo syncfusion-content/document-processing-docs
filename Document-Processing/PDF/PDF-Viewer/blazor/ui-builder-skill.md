@@ -17,16 +17,17 @@ By combining intelligent code generation with best practices, accessibility stan
 
 ## Prerequisites
 
-Before installing Blazor UI Builder , ensure the following:
+Before installing Blazor UI Builder Skill with PDF Viewer, ensure the following:
 
-| Requirement | Description |
-|-------------|-------------|
-| **Blazor Project** | Active Blazor WebAssembly or Blazor Server project (.NET 8+) |
-| **Microsoft .NET SDK 8.0 or later** | .NET CLI tools installed |
-| **Node.js version 18 or later** | npm package manager installed |
-| **Agent Package Manager (APM)** | Agent Package Manager installed. [Installation Guidelines](https://microsoft.github.io/apm/quickstart/#1-install-apm) |
-| **Syncfusion License** | [Commercial](https://www.syncfusion.com/sales/unlimitedlicense), [Free Community](https://www.syncfusion.com/products/communitylicense), or [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials) |
-| **Supported AI Agent / IDE** | A supported AI agent or IDE that integrates with Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.) 
+- Active **Blazor Project** (Blazor WebAssembly or Blazor Server) using .NET 8 or later
+- Microsoft **.NET SDK 8.0 or later** with .NET CLI tools installed
+- Required [Node.js](https://nodejs.org/en) version ≥ 18
+- **Agent Package Manager** (APM) installed — follow [Installation Guidelines](https://microsoft.github.io/apm/quickstart/#1-install-apm)
+- A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
+- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
+  - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
+  - [Community License](https://www.syncfusion.com/products/communitylicense)  
+  - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 
 ## Key Benefits
 
@@ -56,7 +57,7 @@ Before installing Blazor UI Builder , ensure the following:
 
 ## Installation
 
-Before installing Blazor UI Builder, ensure that APM (Agent Package Manager) is installed and available in your environment.
+Before installing Blazor UI Builder Skill with PDF Viewer, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
 ### Verify APM Installation
 
@@ -66,9 +67,9 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® Blazor UI Builder package using APM
+### Install the Syncfusion® Blazor UI Builder Skill with PDF Viewer package using APM
 
-Use the APM CLI to install the Blazor UI Builder skill for your preferred environment:
+Use the APM CLI to install the Blazor UI Builder Skill with PDF Viewer for your preferred environment:
 
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
@@ -109,7 +110,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 1. **Intent Analysis** - Parse the user's prompt to identify component types and high-level layout intent.
 2. **Project Detection** - Automatically detects project framework, package manager, existing themes, and PDF Viewer configuration.
-3. **Component Mapping** - Map intent to Syncfusion®  PDF Viewer and components and required feature modules.
+3. **Component Mapping** - Map intent to Syncfusion® PDF Viewer and components and required feature modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
    - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option-proceed with this or change the theme as preferred.
@@ -132,7 +133,7 @@ Key enforcement points:
 
 ## Using the AI Assistant
 
-After installing Blazor UI Builder with APM, the relevant agent and skill files are added to your project under:
+After installing Blazor UI Builder Skill with PDF Viewer and APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
 - `.github/agents/` (Blazor UI builder agent configuration, based on the selected target)

@@ -56,7 +56,7 @@ Before installing React UI Builder Skill with PDF Viewer, ensure the following:
 
 ## Installation
 
-Before installing React UI Builder, ensure that APM (Agent Package Manager) is installed and available in your environment.
+Before installing React UI Builder Skill with PDF Viewer, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
 **Verify APM Installation**
 
@@ -66,9 +66,9 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-**Install the Syncfusion® React UI Builder package using APM**
+**Install the Syncfusion® React UI Builder Skill with PDF Viewer package using APM**
 
-Use the APM CLI to install the React UI Builder skill for your preferred environment:
+Use the APM CLI to install the React UI Builder Skill with PDF Viewer for your preferred environment:
 
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
@@ -129,7 +129,7 @@ Key enforcement points:
 
 ## Using the AI Assistant
 
-After installing React UI Builder with APM, the relevant agent and skill files are added to your project under:
+After installing React UI Builder Skill with PDF Viewer and APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
 - `.github/agents/` (React UI builder agent configuration, based on the selected target)
