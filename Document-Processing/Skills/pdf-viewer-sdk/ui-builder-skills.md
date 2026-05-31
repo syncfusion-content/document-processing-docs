@@ -23,7 +23,7 @@ With intelligent UI generation across both general UI components and PDF Viewer 
 You can refer to the platform-specific guidance on how to use Syncfusion<sup style="font-size:70%">&reg;</sup> UI Builder Skill for AI Assistants with PDF Viewer SDK products from the following:
 
 - [UI Builder Skill for React PDF Viewer](../../PDF/PDF-Viewer/react/ui-builder-skill)
-- [UI Builder Skill for Angular PDF Viewer]()
+- [UI Builder Skill for Angular PDF Viewer](../../PDF/PDF-Viewer/angular/ui-builder-skill)
 - [UI Builder Skill for Blazor PDF Viewer](../../PDF/PDF-Viewer/blazor/ui-builder-skill)
 - [UI Builder Skill for .NET MAUI PDF Viewer]()
 - [UI Builder Skill for WPF PDF Viewer]()
