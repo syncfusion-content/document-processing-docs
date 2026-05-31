@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion® WPF UI Builder PDFViewer Skill for AI Assistants | Syncfusion®
+title:  WPF UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion®
 description: Install Syncfusion® WPF UI Builder to generate production-ready WPF controls with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
@@ -8,16 +8,16 @@ documentation: ug
 keywords: WPF UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 ---
 
-# Syncfusion® WPF UI Builder with PDF Viewer Skill for AI Assistants
+# Syncfusion® WPF UI Builder Skill with PDF Viewer for AI Assistants
 
-**Syncfusion® WPF UI Builder** is an AI-powered skill and companion agent that accelerates WPF PDF Viewer development by transforming natural-language UI requirements into production-ready controls using Syncfusion® WPF libraries. 
+**Syncfusion® WPF UI Builder Skill** is an AI-powered agent skill that accelerates WPF PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® WPF components.
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® controls** to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WPF UI Builder helps you rapidly build scalable dashboards and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** and other WPF components to deliver accurate and ready-to-use code.
+By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WPF UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing WPF UI Builder, ensure the following:
+Before installing WPF UI Builder Skill with PDF Viewer, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [.NET SDK](https://dotnet.microsoft.com/en-us/download) version ≥ 6
@@ -31,8 +31,8 @@ Before installing WPF UI Builder, ensure the following:
 ## Key Benefits
 
 ### **AI-Driven UI Generation**
-- Converts prompts into complete WPF components—not just snippets
-- Automatically selects appropriate Syncfusion® controls and features including PDF Viewer
+- Transforms prompts into fully developed React components rather than just partial code snippets.
+- Automatically selects appropriate Syncfusion® components and features
 - Produces structured, maintainable code
 
 ### **Control Usage & API Accuracy**
@@ -140,6 +140,8 @@ To start using the skill:
 ![Set Agent](images/UI-Builder-Agent.png)
 
 3. Start prompting the agent with a clear description of your UI requirements.
+
+> For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
 Examples Prompts:
 
