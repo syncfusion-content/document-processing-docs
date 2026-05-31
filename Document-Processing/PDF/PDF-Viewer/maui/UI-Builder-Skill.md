@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion® .NET MAUI UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion®
+title: Syncfusion® MAUI PDF Viewer UI Builder Skill | Syncfusion®
 description: Install Syncfusion® MAUI UI Builder with PDF Viewer to generate production-ready MAUI components from natural-language prompts.
 control: Skills
 platform: maui
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion® .NET MAUI UI Builder Skill with PDF Viewer for AI Assistants
+# Syncfusion® MAUI PDF Viewer UI Builder Skill
 
 **Syncfusion® MAUI UI Builder with PDF Viewer** is an AI-powered skill and companion agent that accelerates cross-platform application development by transforming natural-language UI requirements into production-ready components using Syncfusion® MAUI libraries.
 
