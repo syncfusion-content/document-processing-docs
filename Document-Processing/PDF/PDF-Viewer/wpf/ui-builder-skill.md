@@ -127,19 +127,19 @@ Key enforcement points:
 
 ## Using the AI Assistant
 
-After installing WPF UI Builder with APM, the relevant agent and skill files are added to your project under:
+After installing WPF UI Builder Skill with PDF Viewer and APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
 - `.github/agents/` (WPF UI builder agent configuration, based on the selected target)
 
 To start using the skill:
 
-1. Open your supported IDE.
-2. In the chat panel, select the `syncfusion-wpf-ui-builder` agent from the **Agent dropdown**.
+1.Open your supported IDE.
+2.In the chat panel, select the `syncfusion-wpf-ui-builder` agent from the **Agent dropdown**.
 
 ![Set Agent](images/UI-Builder-Agent.png)
 
-3. Start prompting the agent with a clear description of your UI requirements.
+3.Start prompting the agent with a clear description of your UI requirements.
 
 > For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
