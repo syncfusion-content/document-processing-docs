@@ -147,7 +147,10 @@ Examples Prompts:
 
 {% promptcards %}
 {% promptcard Spreadsheet with Multiple Sheets %}
-Create a spreadsheet with three sheets and set the second sheet as an active sheet.
+Create a WPF application using Syncfusion Spreadsheet with three worksheets and configure the second worksheet as the active sheet when the application loads, ensuring a simple and properly initialized workbook setup.
+{% endpromptcard %}
+{% promptcard Spreadsheet with Sample Data and Formulas %}
+Create a WPF application using Syncfusion Spreadsheet that initializes a worksheet with sample data (such as sales or invoice details) and applies formulas like SUM and AVERAGE to calculate totals and summaries, ensuring proper data formatting and a clean, user-friendly layout.
 {% endpromptcard %}
 {% endpromptcards %}
 
