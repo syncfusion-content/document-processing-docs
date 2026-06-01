@@ -17,9 +17,9 @@ keywords: Excel, SDK, view, edit, read, Spreadsheet
 
 {% doccard text="Blazor" link="/document-processing/excel/spreadsheet/blazor/getting-started" icon="/document-processing/excel/spreadsheet/blazor/images/Blazor.svg" %}
 
-{% doccard text="JavaScript (ES5)" link="/document-processing/excel/spreadsheet/javascript-es5/getting-started" icon="/document-processing/excel/spreadsheet/javascript-es5/images/JavaScript(ES5).svg" %}
-
 {% doccard text="JavaScript (ES6)" link="/document-processing/excel/spreadsheet/javascript-es6/getting-started" icon="/document-processing/excel/spreadsheet/javascript-es6/images/JavaScript(ES6).svg" %}
+
+{% doccard text="JavaScript (ES5)" link="/document-processing/excel/spreadsheet/javascript-es5/getting-started" icon="/document-processing/excel/spreadsheet/javascript-es5/images/JavaScript(ES5).svg" %}
 
 {% doccard text="Vue" link="/document-processing/excel/spreadsheet/vue/getting-started" icon="/document-processing/excel/spreadsheet/vue/images/Vue.svg" %}
 
