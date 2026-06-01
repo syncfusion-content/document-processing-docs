@@ -48,10 +48,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
     IWorkbook workbook = application.Workbooks.Open(@"Data/Markdown.xlsx");
 
-    using (FileStream fileStream = new FileStream(@"Output/ExcelToMarkdown.md", FileMode.Create, FileAccess.Write))
-    {
-        workbook.SaveAs(fileStream, ExcelSaveType.Markdown);
-    }
+    workbook.SaveAs("ExcelToMarkdown.md");
 }
 {% endhighlight %}
 
@@ -109,10 +106,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     MarkdownExportOptions exportOptions = new MarkdownExportOptions();
     exportOptions.SaveOptions.ImageNodeVisited += MdExportSettings_ImageNodeVisited;
 
-    using (FileStream fileStream = new FileStream(@"ExcelToMarkdown.md", FileMode.Create, FileAccess.Write))
-    {
-        workbook.SaveAs(fileStream, exportOptions);
-    }
+    workbook.SaveAs("ExcelToMarkdown.md", exportOptions);
 }
 {% endhighlight %}
 
