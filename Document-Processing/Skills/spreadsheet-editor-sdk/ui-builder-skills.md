@@ -25,8 +25,8 @@ You can refer to the platform-specific guidance on how to use Syncfusion<sup sty
 - [UI Builder Skill for React Spreadsheet Editor](../../Excel/Spreadsheet/react/ui-builder-skill)
 - [UI Builder Skill for Angular Spreadsheet Editor](../../Excel/Spreadsheet/angular/ui-builder-skill)
 - [UI Builder Skill for Blazor Spreadsheet Editor](../../Excel/Spreadsheet/blazor/ui-builder-skill)
-- [UI Builder Skill for WPF Spreadsheet Editor]()
-- [UI Builder Skill for WinForms Spreadsheet Editor]()
+- [UI Builder Skill for WPF Spreadsheet Editor](../../Excel/Spreadsheet/WPF/ui-builder-skill)
+- [UI Builder Skill for WinForms Spreadsheet Editor](../../Excel/Spreadsheet/Winforms/ui-builder-skill)
 
 ## See also
 
