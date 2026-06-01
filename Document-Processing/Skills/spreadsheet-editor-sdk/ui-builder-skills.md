@@ -1,6 +1,6 @@
 ---
 layout: post
-title: UI Builder Skill with Spreadsheet Editor SDK for AI Assistants | Syncfusion®
+title: UI Builder Skill with Spreadsheet Editor SDK | Syncfusion®
 description: Learn to use Syncfusion® UI Builder Skill with Spreadsheet Editor SDK to help AI assistants create accurate, production-ready UIs using Spreadsheet components.
 control: Spreadsheet Editor SDK
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 keywords: UI Builder, Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skills
 ---
 
-# Syncfusion® UI Builder Skill with Spreadsheet Editor SDK for AI Assistants
+# Syncfusion® UI Builder Skill with Spreadsheet Editor SDK
 
 Syncfusion® UI Builder Skill with Spreadsheet Editor SDK for AI Assistants is an AI-powered companion that accelerates application development by transforming natural-language UI requirements into production-ready implementations using Syncfusion® UI components and Spreadsheet Editor components.
 
