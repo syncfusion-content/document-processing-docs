@@ -48,7 +48,6 @@ Before installing Angular UI Builder Skill with DOCX Editor, ensure the followin
 **Accessibility & Responsiveness**
 - WCAG 2.1 AA–aligned output
 - Semantic HTML with ARIA support
-- Mobile-first responsive layouts
 
 **Design-System Integration**
 - Supports Tailwind, Bootstrap, Material, or custom themes
