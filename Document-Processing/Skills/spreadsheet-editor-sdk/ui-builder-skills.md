@@ -12,7 +12,7 @@ keywords: UI Builder, Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skill
 
 Syncfusion® UI Builder Skill with Spreadsheet Editor SDK for AI Assistants is an AI-powered companion that accelerates application development by transforming natural-language UI requirements into production-ready implementations using Syncfusion® UI components and Spreadsheet Editor components.
 
-It supports multiple platforms—including React, Angular, Blazor, WPF and WinForms—and integrates seamlessly with AI-powered IDEs to generate accurate, platform-specific code.
+It supports multiple platforms—including React, Angular, Blazor, WPF and WinForms integrates seamlessly with AI-powered IDEs to generate accurate, platform-specific code.
 
 By leveraging deep knowledge of Syncfusion® component libraries, it enables developers to build complete user interfaces that combine data visualization, navigation, input controls, and spreadsheet editing experiences. It follows best practices, accessibility standards, and consistent design principles to help create scalable and high-quality applications.
 
