@@ -132,17 +132,17 @@ Key enforcement points:
 
 ## Using the AI Assistant
 
-After installing Windows Forms UI Builder with APM, the relevant agent and skill files are added to your project under:
+After installing WinForms UI Builder Skill with PDF Viewer and APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
-- `.github/agents/` (Windows Forms UI builder agent configuration, based on the selected target)
+- `.github/agents/` (WinForms UI builder agent configuration, based on the selected target)
 
 To start using the skill:
 
 1. Open your supported IDE.
 2. In the chat panel, select the `syncfusion-winforms-ui-builder` agent from the **Agent dropdown**.
 
-![Set Agent](images/UI-Builder-Agent.png)
+   ![Set Agent](images/UI-Builder-Agent.png)
 
 3. Start prompting the agent with a clear description of your UI requirements.
 

@@ -1,23 +1,23 @@
 ---
 layout: post
-title: WPF UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion®
-description: Install Syncfusion® WPF UI Builder to generate production-ready WPF controls with PDF Viewer from natural-language prompts.
-control: PDF Viewer
+title: WPF UI Builder Skill with DOCX Editor for AI Assistants | Syncfusion®
+description: Install Syncfusion® WPF UI Builder to generate production-ready WPF controls with DOCX Editor from natural-language prompts.
+control: DOCX Editor
 platform: document-processing
 documentation: ug
-keywords: WPF UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: WPF UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
 ---
 
-# Syncfusion® WPF UI Builder Skill with PDF Viewer for AI Assistants
+# Syncfusion® WPF UI Builder Skill with DOCX Editor for AI Assistants
 
-**Syncfusion® WPF UI Builder Skill** is an AI-powered agent skill that accelerates WPF PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® WPF components.
+**Syncfusion® WPF UI Builder Skill** is an AI-powered agent skill that accelerates WPF DOCX Editor development by transforming natural-language UI requirements into production-ready code using Syncfusion® WPF components.
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** and other WPF components to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WPF UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® DOCX Editor** and other WPF components to deliver accurate and ready-to-use code.
+By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WPF UI Builder helps you rapidly build scalable Document viewing applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing WPF UI Builder Skill with PDF Viewer, ensure the following:
+Before installing WPF UI Builder Skill with DOCX Editor, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [.NET SDK](https://dotnet.microsoft.com/en-us/download) version ≥ 6
@@ -102,7 +102,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the WPF UI Builder.
 
-## How the Syncfusion® WPF UI Builder Skill Works with PDF Viewer
+## How the Syncfusion® WPF UI Builder Skill Works with DOCX Editor
 
 1. **Intent Analysis** — Parse the user's prompt to identify control types and high-level layout intent.
 2. **Project Detection** — Automatically detects project framework and existing themes.
@@ -127,7 +127,7 @@ Key enforcement points:
 
 ## Using the AI Assistant
 
-After installing WPF UI Builder Skill with PDF Viewer and APM, the relevant agent and skill files are added to your project under:
+After installing WPF UI Builder with APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
 - `.github/agents/` (WPF UI builder agent configuration, based on the selected target)
@@ -137,7 +137,7 @@ To start using the skill:
 1. Open your supported IDE.
 2. In the chat panel, select the `syncfusion-wpf-ui-builder` agent from the **Agent dropdown**.
 
-   ![Set Agent](images/UI-Builder-Agent.png)
+![Set Agent](Image_images/UI-Builder-Agent.png)
 
 3. Start prompting the agent with a clear description of your UI requirements.
 
@@ -146,12 +146,24 @@ To start using the skill:
 Examples Prompts:
 
 {% promptcards %}
-{% promptcard Invoice Viewer with Details Panel %}
-Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
+
+{% promptcard Interactive Spell Check Editor %}
+
+Design a **RichTextBox control** as the main editing area. Place a toggle switch at the top-left corner of the application to control the spell check feature. When the toggle is turned **on**, enable spell checking in the RichTextBox. When the toggle is turned **off**, disable spell checking. Ensure the toggle reflects the current spell check state and updates the editor behavior in real time. 
+
 {% endpromptcard %}
-{% promptcard Course Material Viewer %}
-Create a learning interface with the PDF viewer displaying course material. Add a collapsible sidebar with lesson navigation and progress tracking. Include a top progress bar, next/previous lesson buttons, and a notes section below or beside the viewer. Focus on student-friendly, distraction-free design.
+
+{% promptcard Document Viewer Dashboard %}
+
+Design a document dashboard interface using a DataGrid and a RichTextBox control.
+Create a DataGrid with two columns:
+- The first column should display document names (e.g., Document1.docx, Document2.docx).
+- The second column should contain a **View** button for each row.
+When the **View** button is clicked, load the corresponding document from the application's local assets folder into the RichTextBox for viewing.
+Ensure the interaction between the DataGrid and editor is seamless, and maintain a clean, simple layout suitable for browsing and viewing documents efficiently.
+
 {% endpromptcard %}
+
 {% endpromptcards %}
 
 Generated code follows best practices with well-structured XAML markup, proper event wiring and binding setup, strong C# typing, DPI awareness, and built-in security measures such as input validation and safe data handling.
