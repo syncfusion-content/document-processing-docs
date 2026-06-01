@@ -145,7 +145,7 @@ If required fields are empty, validation can prevent further actions.
 
 Changes are reflected immediately in the viewer.
 
-![Applying form field flags using the UI](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-flags.png)
+![Applying form field flags using the UI](./form-designer-images/blazor-pdfviewer-form-constraint.png)
 
 ## Apply PDF Form Field Flags Programmatically
 
