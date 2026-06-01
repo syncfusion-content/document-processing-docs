@@ -150,6 +150,7 @@ To start using the skill:
 {% promptcards %}
 {% promptcard Project Task Planner %}
 Create a spreadsheet for managing project tasks with columns for task ID, task name, assignee, priority, status, start date, due date, and progress. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight overdue tasks and high-priority items. Include formulas to calculate completion percentages and a summary section showing total tasks, completed tasks, and pending tasks. Adjust column widths for readability and make the layout suitable for team tracking.
+{% endpromptcard %}
 {% promptcard Customer Support Ticket Dashboard %}
 Create a spreadsheet for managing customer support tickets with columns for ticket ID, customer name, issue category, priority, assigned agent, created date, resolution status, and resolution notes. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight urgent and unresolved tickets. Adjust column widths for readability and make the layout suitable for daily support operations.
 {% endpromptcard %}
