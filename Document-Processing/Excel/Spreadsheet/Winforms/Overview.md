@@ -15,7 +15,6 @@ The [Syncfusion<sup>®</sup> WinForms Spreadsheet](https://www.syncfusion.com/sp
 
 Spreadsheet includes several advanced features like 
 
-* **Ribbon** – Ribbon integrated with organically enhanced UI experience.
 
 * **[Editing](Editing) and [Selection](Selection)**-Interactive support for editing and cell selection in workbook.
 
@@ -40,6 +39,8 @@ Spreadsheet includes several advanced features like
 * **[Clipboard Operations](Interactive-Features)** – Provides support for Cut/Copy/Paste Operations in Spreadsheet.
 
 * **Fill Series** – Provides support to automatically fill cells with data that follows or completes a pattern.
+
+* **Ribbon** – Ribbon integrated with organically enhanced UI experience.
 
 * **[Freeze panes](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/rows-and-columns#freezing-rows-and-columns)** – Provides support to freeze rows/columns.
 

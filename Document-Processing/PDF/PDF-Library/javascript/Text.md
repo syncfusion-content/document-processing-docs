@@ -463,3 +463,121 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+## Drawing Text with Pagination Using PdfTextElement
+
+The `PdfTextElement` provides a structured and flexible way to render text in PDF documents with layout-aware capabilities. It supports essential properties such as font, brush, pen, and formatting, enabling consistent and customizable text rendering. 
+
+With built-in features like automatic pagination, alignment, and formatting, `PdfTextElement` simplifies the process of creating well-structured, multi-page documents. Text can be drawn using coordinates or defined bounds, ensuring precise placement and predictable layout behavior. 
+
+When rendering large blocks of text, the content can seamlessly flow across multiple pages. The `PdfLayoutResult` plays a key role in returning layout information such as the rendered bounds and page details. This allows developers to accurately position subsequent elements without overlap, maintaining proper spacing and continuity throughout the document.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfPage, PdfStandardFont, PdfFontFamily, PdfBrush, PdfPen, PdfLayoutFormat, PdfStringFormat, PdfFont, PdfLayoutResult, PdfTextElement } from '@syncfusion/ej2-pdf'; 
+ 
+// Create a new PDF document 
+let document: PdfDocument = new PdfDocument(); 
+// Add a page to the document 
+let page: PdfPage = document.addPage(); 
+// Define font for text rendering 
+let font: PdfStandardFont = new PdfStandardFont(PdfFontFamily.Helvetica, 14); 
+// Define brush for text color (blue) 
+let brush: PdfBrush = new PdfBrush([0, 0, 255]); 
+// Define pen for text outline 
+let pen: PdfPen = new PdfPen([0, 0, 0], 1); 
+// Define string formatting (alignment) 
+let format: PdfStringFormat = new PdfStringFormat(); 
+format.alignment = 1; // Center alignment 
+// Define layout format for pagination 
+let layoutFormat: PdfLayoutFormat = new PdfLayoutFormat(); 
+// Enables layout and pagination 
+LayoutFormat.layout = PdfLayoutType.paginate; 
+// Create a text element with all supported properties 
+let element: PdfTextElement = { 
+    text: 'This is a large text block demonstrating layout-aware rendering. '.repeat(25), // Large text for pagination 
+    font: font, 
+    pen: pen, 
+    brush: brush, 
+    stringFormat: format, 
+    layoutFormat: layoutFormat 
+}; 
+// Draw the text element within specified bounds 
+// Width constraint enables automatic wrapping and multi-page flow 
+let result: PdfLayoutResult = page.drawTextElement( 
+    element, 
+    { x: 40, y: 60, width: 400 } 
+); 
+// Retrieve the last page from layout result 
+let nextPage: PdfPage = result.page; 
+// Create continuation text element 
+let continuation: PdfTextElement = { 
+    text: 'This is the continuation of the content on the second page.', 
+    font: font, 
+    brush: brush 
+}; 
+// Draw continuation text below the previous content using layout bounds 
+nextPage.drawTextElement(continuation, { 
+    x: 40, 
+    y: result.bounds.y + 10 // Offset to avoid overlap 
+}); 
+// Save the document 
+document.save('Output.pdf'); 
+// Destroy the document to release resources 
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document 
+var document = new ej.pdf.PdfDocument(); 
+// Add a page to the document 
+var page = document.addPage(); 
+// Define font for text 
+var font = new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.Helvetica, 14); 
+// Define brush for text color (blue) 
+var brush = new ej.pdf.PdfBrush([0, 0, 255]); 
+// Define pen for text outline 
+var pen = new ej.pdf.PdfPen([0, 0, 0], 1); 
+// Define string format (alignment) 
+var format = new ej.pdf.PdfStringFormat(); 
+format.alignment = 1; 
+// Define layout format 
+Var layoutFormat = new ej.pdf.PdfLayoutFormat(); 
+// Enables layout and pagination 
+layoutFormat.layout = ej.pdf.PdfLayoutType.paginate; 
+// Create text element with all properties 
+var element = { 
+    text: 'This is a large text block demonstrating layout-aware rendering. '.repeat(25), // Large text 
+    font: font, 
+    pen: pen, 
+    brush: brush, 
+    stringFormat: format, 
+    layoutFormat: layoutFormat 
+}; 
+// Draw text with layout and wrapping 
+var result = page.drawTextElement( 
+    element, 
+    { x: 40, y: 60, width: 400 } 
+); 
+// Access last page from layout result 
+var nextPage = result.page; 
+// Create continuation text 
+var continuation = { 
+    text: 'This is the continuation of the content on the second page.', 
+    font: font, 
+    brush: brush 
+}; 
+// Draw continuation text below previous content 
+nextPage.drawTextElement(continuation, { 
+    x: 40, 
+    y: result.bounds.y + 10 // Prevent overlapping 
+}); 
+// Save the document 
+document.save('Output.pdf'); 
+// Destroy the document 
+document.destroy(); 
+
+{% endhighlight %}
+{% endtabs %}

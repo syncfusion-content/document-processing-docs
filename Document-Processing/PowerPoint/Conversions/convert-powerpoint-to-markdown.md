@@ -34,7 +34,7 @@ using (FileStream fileStream = new FileStream("Input.pptx", FileMode.Open, FileA
     using (IPresentation presentation = Presentation.Open(fileStream))
     {
         //Save as a PPTX document into the Markdown FileStream.
-        using (FileStream outputStream = new FileStream("MarkdownToPPTX.pptx", FileMode.Create))
+        using (FileStream outputStream = new FileStream("PPTXToMarkdown.md", FileMode.Create))
         {
             presentation.Save(outputStream);
         }
