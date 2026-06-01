@@ -21,7 +21,7 @@ Before installing Angular UI Builder Skill with Spreadsheet, ensure the followin
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
-- Angular application (existing or new); see [Quick Start](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)
+- Angular application (existing or new); see [Quick Start](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-cli)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
 - Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
@@ -148,11 +148,10 @@ To start using the skill:
 **Examples Prompts:**
 
 {% promptcards %}
-{% promptcard Financial Planning Spreadsheet Workspace %}
-Design a financial planning screen with the Spreadsheet as the main area. Add a collapsible left panel for workbook templates, a top toolbar for import/export and formatting actions, and a right summary panel showing totals, budget status, and alerts. Use a clean business layout with clear visual hierarchy.
-{% endpromptcard %}
-{% promptcard Academic Gradebook Interface %}
-Create a gradebook management interface using the Spreadsheet component. Include a top header with class selector and term filter, a sidebar for student groups, and a bottom insights panel with average score, attendance summary, and performance trends. Focus on usability for teachers and large datasets.
+{% promptcard Project Task Planner %}
+Create a spreadsheet for managing project tasks with columns for task ID, task name, assignee, priority, status, start date, due date, and progress. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight overdue tasks and high-priority items. Include formulas to calculate completion percentages and a summary section showing total tasks, completed tasks, and pending tasks. Adjust column widths for readability and make the layout suitable for team tracking.
+{% promptcard Customer Support Ticket Dashboard %}
+Create a spreadsheet for managing customer support tickets with columns for ticket ID, customer name, issue category, priority, assigned agent, created date, resolution status, and resolution notes. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight urgent and unresolved tickets. Adjust column widths for readability and make the layout suitable for daily support operations.
 {% endpromptcard %}
 {% endpromptcards %}
 
