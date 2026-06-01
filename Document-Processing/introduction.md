@@ -103,7 +103,7 @@ Ground your AI coding assistant (GitHub Copilot, Cursor, Claude, and others) in 
 
 ## Web APIs
 
-The Syncfusion Document Processing API is now available as a Docker-based solution, enabling developers to quickly deploy web services for document conversion, data extraction, and file manipulation. A ready-to-deploy Docker image for creating document processing Web APIs provides a streamlined and standardized approach, allowing rapid setup and deployment of these services. 
+The [Syncfusion Document Processing API](https://hub.docker.com/r/syncfusion/document-processing-apis) is now available as a Docker-based solution, enabling developers to quickly deploy web services for document conversion, data extraction, and file manipulation. A ready-to-deploy Docker image for creating document processing Web APIs provides a streamlined and standardized approach, allowing rapid setup and deployment of these services. 
 
 [Learn more](https://help.syncfusion.com/document-processing/web-apis/overview).
 
