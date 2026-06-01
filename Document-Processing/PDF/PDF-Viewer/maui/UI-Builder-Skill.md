@@ -153,7 +153,7 @@ To start using the skill:
 1. Open your supported IDE (Visual Studio, VS Code, or Code Studio).
 2. In the chat panel, select the `syncfusion-maui-ui-builder` agent from the **Agent dropdown**.
 
-![Set Agent](images/MAUI-Builder-Agent.png)
+ ![Set Agent](images/MAUI-Builder-Agent.png)
 
 3. Start prompting the agent with a clear description of your UI requirements.
 
