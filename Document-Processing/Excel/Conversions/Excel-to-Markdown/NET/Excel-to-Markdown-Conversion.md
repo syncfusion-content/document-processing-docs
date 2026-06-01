@@ -74,66 +74,6 @@ You can download a complete working sample from <a href="https://github.com/Sync
 
 ## Customize image saving
 
-### Export images to folder
-
-Specify the folder location to export the images using the **MarkdownExportImagesFolder** API.
-
-The following code example demonstrates how to set the images folder for exporting images while converting an Excel document to a Markdown file.
-
-{% tabs %}  
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20Markdown/Export_images_to_folder/.NET/Export_images_to_folder/Export_images_to_folder/Program.cs,180" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
-{
-    IApplication application = excelEngine.Excel;
-
-    IWorkbook workbook = application.Workbooks.Open(@"Data/Markdown.xlsx");
-
-    MarkdownExportOptions exportOptions = new MarkdownExportOptions();
-    exportOptions.SaveOptions.MarkdownExportImagesFolder = @"D:/Temp/Image1.png";
-
-    using (FileStream fileStream = new FileStream(@"Output/ExcelToMarkdown.md", FileMode.Create, FileAccess.Write))
-    {
-        workbook.SaveAs(fileStream, exportOptions);
-    }
-}
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
-{
-    IApplication application = excelEngine.Excel;
-
-    IWorkbook workbook = application.Workbooks.Open(@"Data/Markdown.xlsx");
-
-    MarkdownExportOptions exportOptions = new MarkdownExportOptions();
-    exportOptions.SaveOptions.MarkdownExportImagesFolder = @"D:/Temp/Image1.png";
-
-    using (FileStream fileStream = new FileStream(@"Output/ExcelToMarkdown.md", FileMode.Create, FileAccess.Write))
-    {
-        workbook.SaveAs(fileStream, exportOptions);
-    }
-}
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As New ExcelEngine()
-    Dim application As IApplication = excelEngine.Excel
-    Dim workbook As IWorkbook = application.Workbooks.Open("Markdown.xlsx")
-
-    Dim exportOptions As New MarkdownExportOptions()
-    exportOptions.SaveOptions.MarkdownExportImagesFolder = "D:/Temp/Image1.png"
-
-    Using fileStream As New FileStream("ExcelToMarkdown.md", FileMode.Create, FileAccess.Write)
-        workbook.SaveAs(fileStream, exportOptions)
-    End Using
-End Using
-{% endhighlight %}
-
-{% endtabs %}
-
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Export_images_to_folder/.NET/Export_images_to_folder">this GitHub page</a>.
-
 ### Customize the image path
 
 XlsIO provides an **ImageNodeVisited** event, which is used to customize the image path in the output Markdown file and save images externally while converting an Excel document to a Markdown file.
