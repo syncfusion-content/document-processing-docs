@@ -29,6 +29,11 @@ Show or hide the bookmark panel by setting the [EnableBookmarkPanel](https://hel
 
 ```
 
+N> Blazor PDF Viewer supports rendering bookmark text in view-only mode with the formatting styles defined in the source document. This enhancement ensures that bookmarks are displayed exactly as authored, preserving their original styling and structure while improving readability and navigation.
+
+![Bookmark panel with styles](../images/bookmark_style_formatting.png)
+
+
 ## See also
 
 * [Page thumbnail navigation in Blazor SfPdfViewer](./page-thumbnail)
