@@ -118,7 +118,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 7. **Validation:** Run accessibility and basic security checks, request confirmation for changes.
 8. **Code Insertion:** Create files or patch existing files following project structure and conventions.
 
-Key enforcement points:
+**Key enforcement points:**
 
 - Adds correct theme and CSS imports for chosen Syncfusion® themes
 - Injects only the feature modules required by generated components
@@ -136,12 +136,12 @@ After installing Angular UI Builder Skill with PDF Viewer and APM,, the relevant
 
 To start using the skill:
 
-1.Open your supported IDE.
-2.In the chat panel, select the `syncfusion-angular-ui-builder` agent from the **Agent dropdown**.
+1. Open your supported IDE.
+2. In the chat panel, select the `syncfusion-angular-ui-builder` agent from the **Agent dropdown**.
 
 ![Set Agent](./images/UI-Builder-Agent.png)
 
-3.Start prompting the agent with a clear description of your UI requirements.
+3. Start prompting the agent with a clear description of your UI requirements.
 
 > For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
