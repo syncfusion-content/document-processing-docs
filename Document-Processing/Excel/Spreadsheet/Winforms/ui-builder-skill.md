@@ -5,7 +5,7 @@ description: Install Syncfusion® WinForms UI Builder to generate production-rea
 control: Spreadsheet
 platform: document-processing
 documentation: ug
-keywords: WinForms UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: WinForms UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
 # Syncfusion® WinForms UI Builder Skill with Spreadsheet for AI Assistant
@@ -16,7 +16,7 @@ Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion
 
 ## Prerequisites
 
-Before installing WinForms UI Builder Skill with PDF Viewer, ensure the following:
+Before installing WinForms UI Builder Skill with Spreadsheet, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [.NET SDK](https://dotnet.microsoft.com/en-us/download) version ≥ 6
