@@ -110,7 +110,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 1. **Intent Analysis** - Parse the user's prompt to identify Spreadsheet features, data sources, and high-level layout intent.
 2. **Project Detection** - Automatically detects project framework, package manager, existing themes, and Spreadsheet configuration.
-3. **Component Mapping** - Map intent to Syncfusion® Spreadsheet features and components, including data binding, formulas, formatting, and collaboration modules.
+3. **Component Mapping** - Map intent to Syncfusion® Spreadsheet and components and required feature modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
    - CSS framework (Tailwind, Bootstrap, Material, or Greenfield (custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option—proceed with this or change the theme as preferred.
