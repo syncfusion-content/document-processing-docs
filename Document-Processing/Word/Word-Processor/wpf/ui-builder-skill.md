@@ -31,7 +31,7 @@ Before installing WPF UI Builder Skill with DOCX Editor, ensure the following:
 ## Key Benefits
 
 ### **AI-Driven UI Generation**
-- Transforms prompts into fully developed React components rather than just partial code snippets.
+- Transforms prompts into fully developed WPF components rather than just partial code snippets.
 - Automatically selects appropriate Syncfusion® components and features
 - Produces structured, maintainable code
 
