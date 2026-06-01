@@ -45,7 +45,7 @@ Document SDK
 PDF Viewer SDK
 </td>
 <td>
-The <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview">PDF Viewer SDK</a> is a .NET library used to view, review, and annotate PDF documents within web, desktop, and mobile applications. It provides rich features such as text search, form filling, annotations, and real-time collaboration for seamless PDF interaction. It supports integration across platforms including ASP.NET, Blazor, JavaScript, Angular, React, and mobile frameworks without requiring external dependencies.
+The <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview">PDF Viewer</a> is a viewer component used to view, review, and annotate PDF documents within web, desktop, and mobile applications. It provides rich features such as text search, form filling, annotations, and real-time collaboration for seamless PDF interaction. It supports integration across platforms including ASP.NET, Blazor, JavaScript, Angular, React, and mobile frameworks without requiring external dependencies.
 </td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@ The <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/over
 DOCX Editor SDK
 </td>
 <td>
-The <a href="https://help.syncfusion.com/document-processing/word/word-processor/overview">DOCX Editor SDK</a> is a .NET library used to create, edit, view, and format Microsoft Word documents directly within web applications. It offers rich editing capabilities such as text formatting, styles, tables, images, track changes, and real-time collaboration. It supports modern frameworks like ASP.NET Core, Blazor, Angular, React, and JavaScript without requiring Microsoft Word or external dependencies.
+The <a href="https://help.syncfusion.com/document-processing/word/word-processor/overview">DOCX Editor</a> is a viewer component used to create, edit, view, and format Microsoft Word documents directly within web applications. It offers rich editing capabilities such as text formatting, styles, tables, images, track changes, and real-time collaboration. It supports modern frameworks like ASP.NET Core, Blazor, Angular, React, and JavaScript without requiring Microsoft Word or external dependencies.
 </td>
 </tr>
 <tr>
@@ -61,7 +61,7 @@ The <a href="https://help.syncfusion.com/document-processing/word/word-processor
 Spreadsheet Editor SDK
 </td>
 <td>
-The <a href="https://help.syncfusion.com/document-processing/excel/spreadsheet/overview">Spreadsheet Editor SDK</a> is a .NET library used to create, view, edit, and format Microsoft Excel files directly within web applications. It provides advanced features such as formulas, charts, sorting, filtering, and data validation along with real-time collaboration. It supports modern frameworks including ASP.NET Core, Blazor, Angular, React, and JavaScript without requiring Microsoft Excel or external dependencies.
+The <a href="https://help.syncfusion.com/document-processing/excel/spreadsheet/overview">Spreadsheet Editor SDK</a> is a viewer component used to create, view, edit, and format Microsoft Excel files directly within web applications. It provides advanced features such as formulas, charts, sorting, filtering, and data validation along with real-time collaboration. It supports modern frameworks including ASP.NET Core, Blazor, Angular, React, and JavaScript without requiring Microsoft Excel or external dependencies.
 </td>
 </tr>
 </table>
@@ -107,9 +107,9 @@ Ground your AI coding assistant (GitHub Copilot, Cursor, Claude, and others) in 
 
 ## How to best read this user guide
 
-* Getting Started - The best way to get started would be to read the “Getting Started” section for the component you would like to start first. The “Getting Started” and “NuGet Packages required” sections gives enough information, so it is recommended to read these sections end-to-end before starting to write a code. All other information can be referred as needed. 
-* Demo - After learning the basics about the component, integrate the component into your application. A good starting point is to refer to the code examples in the sample browser and in this user guide. It is very likely that you can find a code example that resembles your intended usage scenario. 
-* API Reference - Another valuable resource is available in the [API reference](https://help.syncfusion.com/cr/document-processing) that provides detailed information on the object hierarchy as well as the settings available on every object.
+* **Getting Started** - The best way to get started would be to read the “Getting Started” section for the component you would like to start first. The “Getting Started” and “NuGet Packages required” sections gives enough information, so it is recommended to read these sections end-to-end before starting to write a code. All other information can be referred as needed. 
+* **Demo** - After learning the basics about the component, integrate the component into your application. A good starting point is to refer to the code examples in the sample browser and in this user guide. It is very likely that you can find a code example that resembles your intended usage scenario. 
+* **API Reference** - Another valuable resource is available in the [API reference](https://help.syncfusion.com/cr/document-processing) that provides detailed information on the object hierarchy as well as the settings available on every object.
 
 ## Additional help resources
 
