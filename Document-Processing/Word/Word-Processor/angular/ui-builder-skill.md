@@ -149,17 +149,21 @@ To start using the skill:
 
 {% promptcards %}
 
-{% promptcard <<Add Prompt Heading>> %}
-<<Add Prompt details>>
+{% promptcard Dynamic Toolbar Customization Editor %}
+
+Build a new angular application with Docx Editor Include a sidebar panel on the right side that displays a list of toolbar options with checkboxes for New, Open, Undo and Redo. Add a button at the bottom of the panel labeled "Apply Changes". When users select or deselect the checkboxes and click the button, the toolbar at the top of the Docx Editor should dynamically show or hide the corresponding items in real time, providing a customizable editing experience similar to advanced document editors.
+
 {% endpromptcard %}
 
-{% promptcard <<Add Prompt Heading>> %}
-<<Add Prompt details>>
+{% promptcard Track Changes Toggle Editor %}
+
+Build a new angular application with the DOCX Editor. Include a toggle switch button at the top-left corner to control track changes. The editor should support real-time change tracking, and the toggle must properly enable or disable this feature.
+
 {% endpromptcard %}
 
 {% endpromptcards %}
 
-<<Add details about generated codes>>
+Generated code follows best practices with accessible, semantic HTML, strong TypeScript typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
 ## Best Practices
 
