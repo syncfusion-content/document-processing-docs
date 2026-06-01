@@ -160,7 +160,7 @@ To start using the skill:
 
 {% endpromptcards %}
 
-* Generated code follows best practices with accessible, semantic HTML, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
+Generated code follows best practices with accessible, semantic HTML, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
 ## Best Practices
 
