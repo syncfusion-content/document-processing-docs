@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Angular UI Builder Skill with PDF Viewer | Syncfusion®
-description: Install Syncfusion® Angular UI Builder to generate production-ready Angular components with PDF Viewer from natural-language prompts.
-control: PDF Viewer
+title: Angular UI Builder Skill with Spreadsheet | Syncfusion®
+description: Install Syncfusion® Angular UI Builder to generate production-ready Angular components with Spreadsheet from natural-language prompts.
+control: Spreadsheet
 platform: document-processing
 documentation: ug
-keywords: Angular UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: Angular UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® Angular UI Builder Skill with PDF Viewer for AI Assistants
+# Syncfusion® Angular UI Builder Skill with Spreadsheet
 
-**Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates Angular PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
+**Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates Angular Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** and other Angular components to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Angular UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® Spreadsheet** and other Angular components to deliver accurate and ready-to-use code.
+By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Angular UI Builder helps you rapidly build scalable spreadsheet applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing Angular UI Builder Skill with PDF Viewer, ensure the following:
+Before installing Angular UI Builder Skill with Spreadsheet, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
@@ -30,35 +30,35 @@ Before installing Angular UI Builder Skill with PDF Viewer, ensure the following
 
 ## Key Benefits
 
-**AI-Driven UI Generation**
+### **AI-Driven UI Generation**
 - Transforms prompts into fully developed Angular components rather than just partial code snippets.
-- Automatically selects appropriate Syncfusion® components and features
-- Produces structured, maintainable code
+- Automatically selects appropriate Syncfusion® components and Spreadsheet features.
+- Produces structured, maintainable code.
 
-**Component Usage & API Accuracy**
-- Uses correct Syncfusion® component APIs
-- Injects required feature modules (paging, sorting, filtering, etc.)
-- Avoids unsupported or deprecated patterns
+### **Component Usage & API Accuracy**
+- Uses correct Syncfusion® component APIs.
+- Adds required Spreadsheet modules (sorting, filtering, charts etc.)
+- Avoids unsupported or deprecated patterns.
 
-**Patterns & Best Practices**
-- Recommended component composition and state management
-- Event handling aligned with Angular standards
-- Secure and scalable coding patterns
+### **Patterns & Best Practices**
+- Recommended Angular component composition and state management.
+- Event handling aligned with Angular standards.
+- Secure and scalable coding patterns.
 
-**Accessibility & Responsiveness**
-- WCAG 2.1 AA–aligned output
-- Semantic HTML with ARIA support
-- Mobile-first responsive layouts
+### **Accessibility & Responsiveness**
+- WCAG 2.1 AA–aligned output.
+- Semantic HTML with ARIA support.
+- Mobile-first responsive layouts.
 
-**Design-System Integration**
-- Supports Tailwind, Bootstrap, Material, or custom themes
-- Ensures consistent Syncfusion® styling and theme usage
+### **Design-System Integration**
+- Supports Tailwind, Bootstrap, Material, or custom themes.
+- Ensures consistent Syncfusion® styling and theme usage.
 
 ## Installation
 
-Before installing Angular UI Builder Skill with PDF Viewer, ensure that APM (Agent Package Manager) is installed and available in your environment.
+Before installing Angular UI Builder Skill with Spreadsheet, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
-**Verify APM Installation**
+### Verify APM Installation
 
 Run the following command to confirm APM is installed:
 
@@ -66,9 +66,9 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® Angular UI Builder Skill with PDF Viewer package using APM
+### Install the Syncfusion® Angular UI Builder Skill with Spreadsheet package using APM
 
-Use the APM CLI to install the Angular UI Builder skill with PDF Viewer for your preferred environment:
+Use the APM CLI to install the Angular UI Builder Skill with Spreadsheet for your preferred environment:
 
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
@@ -102,58 +102,58 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the Angular UI Builder.
 
-## How the Syncfusion® Angular UI Builder Skill Works with PDF Viewer
+## How the Syncfusion® Angular UI Builder Skill Works with Spreadsheet
 
-1. **Intent Analysis:** Parse the user's prompt to identify component types and high-level layout intent.
-2. **Project Detection:** Automatically detects project framework, package manager, existing themes, and PDF Viewer configuration.
-3. **Component Mapping:** Map intent to Syncfusion® PDF Viewer and Angular components, including required modules.
+1. **Intent Analysis:** Parse the user’s prompt to identify component types and high-level layout intent.
+2. **Project Detection:** Automatically detects project framework, package manager, existing themes, and Spreadsheet configuration.
+3. **Component Mapping:** Map intent to Syncfusion® Spreadsheet and Angular components, including required services and features.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
    - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option, which can be used as is or changed based on preference.
    - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
-     - Light and Dark Mode
+   - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
-5. **Code Generation:** Produce TypeScript Angular components with PDF Viewer integration, props interfaces, and CSS/styling scaffolding.
+5. **Code Generation:** Produce TypeScript Angular components, templates, and styling scaffolding with Spreadsheet integration.
 6. **Dependency Management:** Recommend or install required Syncfusion® packages and peer dependencies.
 7. **Validation:** Run accessibility and basic security checks, request confirmation for changes.
 8. **Code Insertion:** Create files or patch existing files following project structure and conventions.
 
-**Key enforcement points:**
+Key enforcement points:
 
-- Adds correct theme and CSS imports for chosen Syncfusion® themes
-- Injects only the feature modules required by generated components
-- Generates semantic HTML with ARIA attributes and keyboard support
-- Avoids unsupported or deprecated API usages for Syncfusion® components
+- Adds correct theme and CSS imports for chosen Syncfusion® themes.
+- Injects only the modules and services required by generated Spreadsheet features.
+- Generates semantic HTML with ARIA attributes and keyboard support.
+- Avoids unsupported or deprecated API usages for Syncfusion® components.
 
 > The assistant handles most stages automatically and may request confirmation where required.
 
 ## Using the AI Assistant
 
-After installing Angular UI Builder Skill with PDF Viewer and APM,, the relevant agent and skill files are added to your project under:
+After installing Angular UI Builder Skill with Spreadsheet and APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
 - `.github/agents/` (Angular UI builder agent configuration, based on the selected target)
 
 To start using the skill:
 
-1. Open your supported IDE.
-2. In the chat panel, select the `syncfusion-angular-ui-builder` agent from the **Agent dropdown**.
-  ![Set Agent](./images/UI-Builder-Agent.png)
-3. Start prompting the agent with a clear description of your UI requirements.
+1.Open your supported IDE.  
+2.In the chat panel, select the `syncfusion-angular-ui-builder` agent from the **Agent dropdown**.
+
+![Set Agent](./images/UI-Builder-Agent.png)
+
+3.Start prompting the agent with a clear description of your UI requirements.
 
 > For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
 **Examples Prompts:**
 
 {% promptcards %}
-{% promptcard Invoice Viewer with Details Panel %}
-Design a resume review interface using the PDF viewer for candidate CVs. Add a right panel with candidate details, ratings, tags, and action buttons (shortlist, reject, schedule interview). Include quick notes functionality. Focus on fast scanning and decision-making UX.
-{% endpromptcard %}
-{% promptcard Course Material Viewer %}
-Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
+{% promptcard Project Task Planner %}
+Create a spreadsheet for managing project tasks with columns for task ID, task name, assignee, priority, status, start date, due date, and progress. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight overdue tasks and high-priority items. Include formulas to calculate completion percentages and a summary section showing total tasks, completed tasks, and pending tasks. Adjust column widths for readability and make the layout suitable for team tracking.
+{% promptcard Customer Support Ticket Dashboard %}
+Create a spreadsheet for managing customer support tickets with columns for ticket ID, customer name, issue category, priority, assigned agent, created date, resolution status, and resolution notes. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight urgent and unresolved tickets. Adjust column widths for readability and make the layout suitable for daily support operations.
 {% endpromptcard %}
 {% endpromptcards %}
-
 
 Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
@@ -163,7 +163,7 @@ Follow these guidelines to get the most out of UI Builder and ensure high-qualit
 
 - **Stay consistent:** Maintain consistent file organization, naming conventions, and coding standards throughout your project.
 - **Use advanced AI models:** For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
-- **Review all content and assets before production:** Replace any placeholder images or icons (e.g., stock images or emoji sets) with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
+- **Review all content and assets before production:** Replace any placeholder images or icons with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
 
 ## Troubleshooting
 
@@ -171,23 +171,22 @@ Follow these guidelines to get the most out of UI Builder and ensure high-qualit
 
 - **Skills not loading**: Ensure the **.agent/** and **.github/agents/** folders exist in your project and that the skill was installed successfully using APM. Verify that the correct agent is selected from the Agent dropdown in your IDE.
 
-- **Component not rendering**: Retry generation using the specific component skill to resolve the issue, and ensure required Syncfusion® packages and themes are properly configured.
+- **Component not rendering**: Retry generation using the specific component skill to resolve the issue, and ensure required Syncfusion® packages, Spreadsheet services, and themes are properly configured.
 
 - **Syncfusion license banner appears**: Use the licensing skill to correctly register and validate your Syncfusion® license key in the application.
 
-
 ## FAQ
 
-**Which agents/IDEs are supported?**
+**Which agents/IDEs are supported?**  
 Any Skills-compatible agent that reads local skill files (Code Studio, VS Code, Cursor, etc.).
 
 **Are skills loaded automatically?**  
 Yes. Supported agents automatically load relevant skills based on your query.
 
-**Can I customize the generated styles?**
+**Can I customize the generated styles?**  
 Yes. The skill supports choosing Tailwind, Bootstrap, Material, or a custom theme; generated components include clear integration points for style adjustments.
 
-**Does it modify files automatically?**
+**Does it modify files automatically?**  
 The skill proposes changes and requires confirmation for insertion; automatic dependency installation may be offered depending on agent permissions.
 
 ## See also
