@@ -716,5 +716,6 @@ The event provides [FormFieldsImportFailedEventArgs](https://help.syncfusion.com
 ## See also
 
 * [Events in Blazor SfPdfviewer](../events)
-* [Programmatic Support in Form Designer](./create-programmatically)
-* [UI Interactions in Form Designer](./ui-interactions)
+- [Form Designer overview](./overview)
+- [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
+- [Create](./manage-form-fields/create-form-fields)

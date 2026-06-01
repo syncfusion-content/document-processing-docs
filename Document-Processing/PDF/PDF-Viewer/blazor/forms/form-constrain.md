@@ -1,0 +1,263 @@
+---
+layout: post
+title: Form constraints in the Blazor SfPdfViewer component | Syncfusion
+description: Learn how to configure form field constraints such as IsReadOnly and IsRequired in the Syncfusion Blazor SfPdfViewer.
+platform: document-processing
+control: SfPdfViewer
+documentation: ug
+---
+
+# PDF form field flags in Blazor SfPdfViewer
+
+The **Syncfusion Blazor SfPdfViewer** allows you to control how users interact with form fields and how those fields behave during validation by applying **form field flags**. These flags define whether a form field can be modified and whether it is mandatory.
+
+This topic explains:
+- [Supported form field flags](#supported-pdf-form-field-flags)
+- [How each constraint affects field behavior](#key-actions)
+- [How to apply flags during field creation](#apply-pdf-form-field-flags-using-the-ui)
+- [How to update flags on existing fields](#update-flags-on-existing-fields-programmatically)
+
+## Supported PDF Form Field Flags
+
+The following flags are supported in the PDF Viewer:
+
+- [IsReadOnly](#make-fields-read-only)  
+  Prevents users from modifying the form field in the UI while still allowing updates through APIs.
+
+- [IsRequired](#mark-fields-as-required)  
+  Marks the form field as mandatory and includes it in form field validation.
+
+## Key Actions
+
+### Make Fields Read Only
+Use the **IsReadOnly** property to prevent users from modifying a form field through the UI. This is useful for displaying pre-filled or calculated values that should not be changed by the user.
+
+```cshtml
+@page "/"
+@using Syncfusion.Blazor.SfPdfViewer
+
+<!-- PDF Viewer component with reference binding and document loading -->
+<SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents DocumentLoaded="@OnDocumentLoaded"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    // Reference to the PDF Viewer instance
+    private SfPdfViewer2? viewer;
+
+    // Path to the PDF document to be loaded in the viewer
+    private string DocumentPath = "wwwroot/data/form-designer.pdf";
+
+    // Method triggered when the document is loaded
+    private async Task OnDocumentLoaded()
+    {
+        if (viewer == null) return;
+
+        var formFields = new List<FormFieldInfo>
+        {
+            // Read-only Textbox
+            new TextBoxField
+            {
+                Name = "EmployeeId",
+                Bounds = new Bound { X = 146, Y = 229, Width = 150, Height = 24 },
+                IsReadOnly = true,
+                Value = "EMP-0001"
+            },
+            // Read-only Signature field
+            new SignatureField
+            {
+                Name = "ApplicantSign",
+                Bounds = new Bound { X = 57, Y = 923, Width = 200, Height = 43 },
+                IsReadOnly = true,
+                TooltipText = "Sign to accept the terms"
+            }
+        };
+
+        await viewer.AddFormFieldsAsync(formFields);
+    }
+}
+```
+
+### Mark Fields as Required
+Use the **IsRequired** property to mark form fields as mandatory. To enforce this constraint, enable form field validation and validate fields before allowing actions such as printing or downloading.
+
+- Enable validation using [EnableFormFieldsValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableFormFieldsValidation)
+- [Validate fields](./form-validation) using [ValidateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ValidateFormFieldsAsync)
+
+If required fields are empty, validation can prevent further actions.
+
+```cshtml
+@page "/"
+@using Syncfusion.Blazor.SfPdfViewer
+
+<!-- PDF Viewer component with reference binding and document loading -->
+<SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableFormFieldsValidation="true">
+    <PdfViewerEvents DocumentLoaded="@OnDocumentLoaded" ValidateFormFields="@OnValidateFormFields"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    // Reference to the PDF Viewer instance
+    private SfPdfViewer2? viewer;
+
+    // Path to the PDF document to be loaded in the viewer
+    private string DocumentPath = "wwwroot/data/form-designer.pdf";
+
+    // Method triggered when the document is loaded
+    private async Task OnDocumentLoaded()
+    {
+        if (viewer == null) return;
+
+        var formFields = new List<FormFieldInfo>
+        {
+            new TextBoxField
+            {
+                Name = "Email",
+                Bounds = new Bound { X = 146, Y = 260, Width = 220, Height = 24 },
+                IsRequired = true,
+                TooltipText = "Email is required"
+            }
+        };
+
+        await viewer.AddFormFieldsAsync(formFields);
+    }
+
+    // Validation event handler
+    private void OnValidateFormFields(ValidateFormFieldsArgs args)
+    {
+        Dictionary<string, object> unfilledFields = args.UnfilledFields;
+        foreach (var field in unfilledFields)
+        {
+            Console.WriteLine($"Field Name: {field.Key}, Default Value: {field.Value}");
+            // Further processing of unfilled fields
+        }
+    }
+}
+```
+
+## Apply PDF Form Field Flags Using the UI
+
+**Steps**
+1. Enable **Form Designer** mode in the SfPdfViewer.  
+2. Select an existing form field on the PDF page.  
+3. Right-click the field, open the context menu, and select Properties.  
+4. Configure the required constraint options.  
+5. Click OK to apply changes and close the properties popover.  
+
+Changes are reflected immediately in the viewer.
+
+![Applying form field flags using the UI](../form-designer/form-designer-images/blazor-pdfviewer-form-designer-flags.png)
+
+## Apply PDF Form Field Flags Programmatically
+
+You can apply or modify form field flags in the following ways.
+
+### Apply flags when creating fields
+Pass the flags properties when creating form fields using [AddFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__).
+
+```cshtml
+@page "/"
+@using Syncfusion.Blazor.SfPdfViewer
+
+<!-- PDF Viewer component with reference binding and document loading -->
+<SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents DocumentLoaded="@OnDocumentLoaded"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    // Reference to the PDF Viewer instance
+    private SfPdfViewer2? viewer;
+
+    // Path to the PDF document to be loaded in the viewer
+    private string DocumentPath = "wwwroot/data/form-designer.pdf";
+
+    // Method triggered when the document is loaded
+    private async Task OnDocumentLoaded()
+    {
+        if (viewer == null) return;
+
+        var formFields = new List<FormFieldInfo>
+        {
+            // Read-only Textbox that is not required
+            new TextBoxField
+            {
+                Name = "EmployeeId",
+                Bounds = new Bound { X = 146, Y = 229, Width = 150, Height = 24 },
+                IsReadOnly = true,
+                IsRequired = false,
+                Value = "EMP-0001"
+            },
+            // Required Signature field
+            new SignatureField
+            {
+                Name = "ApplicantSign",
+                Bounds = new Bound { X = 57, Y = 923, Width = 200, Height = 43 },
+                IsReadOnly = false,
+                IsRequired = true,
+                TooltipText = "Sign to accept the terms"
+            }
+        };
+
+        await viewer.AddFormFieldsAsync(formFields);
+    }
+}
+```
+
+### Update flags on existing fields programmatically
+Use the [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormField_) method to modify constraint values on existing form fields.
+
+```cshtml
+@page "/"
+@using Syncfusion.Blazor.SfPdfViewer
+
+<!-- PDF Viewer component with reference binding and document loading -->
+<SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents DocumentLoaded="@OnDocumentLoaded"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    // Reference to the PDF Viewer instance
+    private SfPdfViewer2? viewer;
+
+    // Path to the PDF document to be loaded in the viewer
+    private string DocumentPath = "wwwroot/data/form-designer.pdf";
+
+    // Method triggered when the document is loaded
+    private async Task OnDocumentLoaded()
+    {
+        if (viewer == null) return;
+
+        // 1) Add a sample textbox
+        var formFields = new List<FormFieldInfo>
+        {
+            new TextBoxField
+            {
+                Name = "Email",
+                Bounds = new Bound { X = 146, Y = 260, Width = 220, Height = 24 }
+            }
+        };
+
+        await viewer.AddFormFieldsAsync(formFields);
+
+        // 2) Retrieve and update constraint flags
+        var allFields = await viewer.GetFormFieldsAsync();
+        var field = allFields.FirstOrDefault(f => f.Name == "Email");
+        
+        if (field is TextBoxField emailField)
+        {
+            emailField.IsReadOnly = false;
+            emailField.IsRequired = true;
+            emailField.TooltipText = "Enter a valid email";
+            
+            await viewer.UpdateFormFieldsAsync(new List<FormFieldInfo> { emailField });
+        }
+    }
+}
+```
+
+## See Also
+
+- [Form Designer overview](./overview)   
+- [Create form fields](./create-form-fields)  
+- [Modify form fields](./modify-form-fields)  
+- [Group form fields](./group-form-fields)  
+- [Add custom data to PDF form fields](./custom-data)  
