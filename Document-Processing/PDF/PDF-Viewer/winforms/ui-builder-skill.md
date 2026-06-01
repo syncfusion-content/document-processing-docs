@@ -68,7 +68,7 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® WinForms UI Builder package using APM
+### Install the Syncfusion® WinForms UI Builder package using APM 
 
 Use the APM CLI to install the WinForms UI Builder skill for your preferred environment:
 
