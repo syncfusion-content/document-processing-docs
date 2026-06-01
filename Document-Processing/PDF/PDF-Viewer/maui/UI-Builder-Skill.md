@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MAUI UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion®
-description: Install Syncfusion® MAUI UI Builder to generate production-ready React components with PDF Viewer from natural-language prompts.
+description: Install Syncfusion® MAUI UI Builder to generate production-ready MAUI components with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -216,5 +216,3 @@ Yes — the skill automatically generates ViewModels with proper INotifyProperty
 
 - [Agent Skills Standards](https://agentskills.io/home)
 - [Agent Package Manager](https://microsoft.github.io/apm/getting-started/quick-start/)
-- [MAUI Documentation](https://learn.microsoft.com/en-us/dotnet/maui)
-- [Syncfusion MAUI Components](https://www.syncfusion.com/maui-controls)
