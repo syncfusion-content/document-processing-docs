@@ -1,23 +1,23 @@
 ---
 layout: post
-title: React UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion®
-description: Install Syncfusion® React UI Builder to generate production-ready React components with PDF Viewer from natural-language prompts.
-control: PDF Viewer
+title: React UI Builder Skill with Spreadsheet | Syncfusion®
+description: Install Syncfusion® React UI Builder to generate production-ready React components with Spreadsheet from natural-language prompts.
+control: Spreadsheet
 platform: document-processing
 documentation: ug
-keywords: React UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: React UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® React UI Builder Skill with PDF Viewer for AI Assistants
+# Syncfusion® React UI Builder Skill with Spreadsheet for AI Assistants
 
-**Syncfusion® React UI Builder Skill** is an AI-powered agent skill that accelerates React PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® React components.
+**Syncfusion® React UI Builder Skill** is an AI-powered agent skill that accelerates React Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® React Spreadsheet components.
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** and other React components to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, React UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® Spreadsheet (Spreadsheet component)** and other React components to deliver accurate and ready-to-use code.
+By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, React UI Builder helps you rapidly build scalable spreadsheet-driven applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing React UI Builder Skill with PDF Viewer, ensure the following:
+Before installing React UI Builder Skill with Spreadsheet, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
@@ -32,12 +32,12 @@ Before installing React UI Builder Skill with PDF Viewer, ensure the following:
 
 ### **AI-Driven UI Generation**
 - Transforms prompts into fully developed React components rather than just partial code snippets.
-- Automatically selects appropriate Syncfusion® components and features
-- Produces structured, maintainable code
+- Automatically selects appropriate Syncfusion® components and Spreadsheet features.
+- Produces structured, maintainable code.
 
 ### **Component Usage & API Accuracy**
-- Uses correct Syncfusion® component APIs
-- Injects required feature modules (paging, sorting, filtering, etc.)
+- Uses correct Syncfusion® Spreadsheet APIs
+- Injects required feature modules (editing, formulas, data binding, charting, etc.)
 - Avoids unsupported or deprecated patterns
 
 ### **Patterns & Best Practices**
@@ -47,8 +47,8 @@ Before installing React UI Builder Skill with PDF Viewer, ensure the following:
 
 ### **Accessibility & Responsiveness**
 - WCAG 2.1 AA–aligned output
-- Semantic HTML with ARIA support
-- Mobile-first responsive layouts
+- Semantic HTML with ARIA support where applicable
+- Mobile-first responsive layouts and graceful degradation for small screens
 
 ### **Design-System Integration**
 - Supports Tailwind, Bootstrap, Material, or custom themes
@@ -56,7 +56,7 @@ Before installing React UI Builder Skill with PDF Viewer, ensure the following:
 
 ## Installation
 
-Before installing React UI Builder Skill with PDF Viewer, ensure that APM (Agent Package Manager) is installed and available in your environment.
+Before installing React UI Builder Skill with Spreadsheet, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
 ### Verify APM Installation
 
@@ -66,9 +66,9 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® React UI Builder Skill with PDF Viewer package using APM
+### Install the Syncfusion® React UI Builder Skill with Spreadsheet package using APM
 
-Use the APM CLI to install the React UI Builder Skill with PDF Viewer for your preferred environment:
+Use the APM CLI to install the React UI Builder Skill with Spreadsheet for your preferred environment:
 
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
@@ -102,58 +102,59 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the React UI Builder.
 
-## How the Syncfusion® React UI Builder Skill Works with PDF Viewer
+## How the Syncfusion® React UI Builder Skill Works with Spreadsheet
 
-1. **Intent Analysis:** Parse the user's prompt to identify component types and high-level layout intent.
-2. **Project Detection:** Automatically detects project framework, package manager, existing themes, and PDF Viewer configuration.
-3. **Component Mapping:** Map intent to Syncfusion® PDF Viewer and React components, including required modules.
+1. **Intent Analysis:** Parse the user's prompt to identify component types and high-level layout intent (grid, editor, data inspector, dashboard).
+2. **Project Detection:** Automatically detects project framework, package manager, existing themes, and Spreadsheet configuration.
+3. **Component Mapping:** Map intent to Syncfusion® Spreadsheet and React components, including required modules (ribbon, formula, import/export, cell-formatting).
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
-   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option, which can be used as is or changed based on preference.
+   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option.
    - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
-	 - Light and Dark Mode
+    - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
-5. **Code Generation:** Produce TypeScript React components with PDF Viewer integration, props interfaces, and CSS/styling scaffolding.
+5. **Code Generation:** Produce TypeScript React components with Spreadsheet integration, props interfaces, and CSS/styling scaffolding.
 6. **Dependency Management:** Recommend or install required Syncfusion® packages and peer dependencies.
 7. **Validation:** Run accessibility and basic security checks, request confirmation for changes.
 8. **Code Insertion:** Create files or patch existing files following project structure and conventions.
 
-**Key enforcement points:**
+Key enforcement points:
 
 - Adds correct theme and CSS imports for chosen Syncfusion® themes
-- Injects only the feature modules required by generated components
-- Generates semantic HTML with ARIA attributes and keyboard support
+- Injects only the feature modules required by generated components (e.g., Formula, CellFormatting, DataValidation)
+- Generates semantic HTML with keyboard and ARIA support where appropriate
 - Avoids unsupported or deprecated API usages for Syncfusion® components
 
 > The assistant handles most stages automatically and may request confirmation where required.
 
 ## Using the AI Assistant
 
-After installing React UI Builder Skill with PDF Viewer and APM, the relevant agent and skill files are added to your project under:
+After installing React UI Builder Skill with Spreadsheet and APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
 - `.github/agents/` (React UI builder agent configuration, based on the selected target)
 
 To start using the skill:
 
-1. Open your supported IDE.
-2. In the chat panel, select the `syncfusion-react-ui-builder` agent from the **Agent dropdown**.
-  ![Set Agent](./images/UI-Builder-Agent.png)
-3. Start prompting the agent with a clear description of your UI requirements.
+1.Open your supported IDE.
+2.In the chat panel, select the `syncfusion-react-ui-builder` agent from the **Agent dropdown**.
+
+![Set Agent](./images/UI-Builder-Agent.png)
+
+3.Start prompting the agent with a clear description of your UI requirements.
 
 > For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
-**Examples Prompts:**
+**Example Prompts:**
 
 {% promptcards %}
-{% promptcard Invoice Viewer with Details Panel %}
-Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
+{% promptcard Project Task Planner %}
+Create a spreadsheet for managing project tasks with columns for task ID, task name, assignee, priority, status, start date, due date, and progress. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight overdue tasks and high-priority items. Include formulas to calculate completion percentages and a summary section showing total tasks, completed tasks, and pending tasks. Adjust column widths for readability and make the layout suitable for team tracking.
 {% endpromptcard %}
-{% promptcard Course Material Viewer %}
-Create a learning interface with the PDF viewer displaying course material. Add a collapsible sidebar with lesson navigation and progress tracking. Include a top progress bar, next/previous lesson buttons, and a notes section below or beside the viewer. Focus on student-friendly, distraction-free design.
+{% promptcard Customer Support Ticket Dashboard %}
+Create a spreadsheet for managing customer support tickets with columns for ticket ID, customer name, issue category, priority, assigned agent, created date, resolution status, and resolution notes. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight urgent and unresolved tickets. Adjust column widths for readability and make the layout suitable for daily support operations.
 {% endpromptcard %}
 {% endpromptcards %}
-
 
 Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
@@ -163,7 +164,7 @@ Follow these guidelines to get the most out of UI Builder and ensure high-qualit
 
 - **Stay consistent:** Maintain consistent file organization, naming conventions, and coding standards throughout your project.
 - **Use advanced AI models:** For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
-- **Review all content and assets before production:** Replace any placeholder images or icons (e.g., stock images or emoji sets) with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
+- **Review all content and assets before production:** Replace any placeholder images or icons with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
 
 ## Troubleshooting
 
