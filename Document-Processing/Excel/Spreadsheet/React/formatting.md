@@ -14,6 +14,7 @@ Formatting options make your data easier to view and understand. The different t
 * [Number Formatting](./number-formatting)
 * [Text & Cell Formatting](./text-cell-formatting)
 * [Conditional Formatting](./conditional-formatting)
+* [Rich Text Formatting](./rich-text-formatting)
 
 To get started quickly with Formatting, you can check this video:
 
