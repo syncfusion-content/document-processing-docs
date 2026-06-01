@@ -34,9 +34,9 @@ Document SDK
 <li><a href="https://www.syncfusion.com/document-sdk/net-word-library">Word(DocIO) Library</a> is a .NET class library used to create, read, edit, and convert Microsoft Word files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, Java, and Blazor applications.</li>
 <li><a href="https://www.syncfusion.com/document-sdk/net-excel-library">Excel(XlsIO) Library</a> is a .NET class library  used to create, read, edit, write, and convert Microsoft Excel files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, Flutter, and Blazor applications.</li>
 <li><a href="https://www.syncfusion.com/document-sdk/net-powerpoint-library">PowerPoint Library</a> is a .NET class library used to create, read, edit, and convert Microsoft PowerPoint (PPTX) files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
-<li><a href="https://help.syncfusion.com/document-processing/pdf/conversions/overview">PDF Converter</a> is a .NET class library that converts several file formats such as HTML, Word, Excel, PowerPoint, and images to PDF documents. It also supports conversion of PDF documents to images in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
+<li><a href="https://help.syncfusion.com/document-processing/pdf/conversions/overview">PDF Converter</a> is a .NET class library that converts several file formats such as HTML, Word, Excel, PowerPoint, Markdown, and images to PDF documents. It also supports conversion of PDF documents to images in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
 <li><a href="https://help.syncfusion.com/document-processing/data-extraction/overview">Smart Data Extraction Library</a> is a .NET class library used to extract structured and unstructured data (such as text, tables, key-value pairs, and layout information) from various document formats including PDFs and images. Enables automated data capture and processing in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
-<li>Markdown Library is a .NET class library  used to create, read, edit, and convert Markdown files to other formats such as HTML. Enables seamless Markdown processing and rendering in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
+<li>Markdown Library is a .NET class library  used to create, read, edit, and convert Markdown files to other formats. Enables seamless Markdown processing in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
 </ul>
 </td>
 </tr>
@@ -67,7 +67,7 @@ The <a href="https://help.syncfusion.com/document-processing/excel/spreadsheet/o
 </table>
 
 
-## AI-Driven Features
+## AI-Driven Solutions
 
 <table>
 <tr>
@@ -103,7 +103,9 @@ Ground your AI coding assistant (GitHub Copilot, Cursor, Claude, and others) in 
 
 ## Web APIs
 
-[Syncfusion Document Processing Web APIs](https://hub.docker.com/r/syncfusion/document-processing-apis) provide RESTful services to create, edit, convert, and extract data from documents such as Word, Excel, PDF, and PowerPoint. These APIs enable seamless integration of document processing capabilities into any application without requiring local dependencies. They support a wide range of operations, including format conversion, content manipulation, and data extraction. Designed for scalability and flexibility, the Web APIs help automate document workflows efficiently. Overall, they simplify document processing and improve productivity across platforms.
+The Syncfusion Document Processing API is now available as a Docker-based solution, enabling developers to quickly deploy web services for document conversion, data extraction, and file manipulation. A ready-to-deploy Docker image for creating document processing Web APIs provides a streamlined and standardized approach, allowing rapid setup and deployment of these services. 
+
+[Learn more](https://help.syncfusion.com/document-processing/web-apis/overview).
 
 ## How to best read this user guide
 
@@ -127,7 +129,7 @@ Syncfusion<sup>&reg;</sup> products are used in some of the most sensitive appli
 
 We prioritized security when developing our products.  Each control is self-contained and does not require outside server or Syncfusion<sup>&reg;</sup> API.  Our products exist as defined by the developer and only do the commands defined by the developer.  We built them to work with any security paradigms that our customers can utilize.
 
-Our customers cannot use any hosted Web APIs provided by syncfusion.  We provide the necessary libraries and code examples for our customers to build their own APIs by allowing them to customize the functionality and manage their own security. Additionally, these APIs can be packaged and deployed using Docker images for easier setup and consistent deployment across different environments.
+Our customers cannot use any hosted Web APIs provided by Syncfusion.  We provide the necessary libraries and code examples for our customers to build their own APIs by allowing them to customize the functionality and manage their own security. Additionally, these APIs can be packaged and deployed using [Docker images](https://hub.docker.com/r/syncfusion/document-processing-apis) for easier setup and consistent deployment across different environments.
 
 ![Document Processing Security Information](introductionpage_images/securityinfo.png)
 	
