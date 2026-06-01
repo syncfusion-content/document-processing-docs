@@ -12,12 +12,12 @@ keywords: MAUI UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 
 **Syncfusion® MAUI UI Builder Skill** is an AI-powered agent skill that accelerates MAUI PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® MAUI components.
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® MAUI components** to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, MAUI UI Builder helps you rapidly build scalable mobile and desktop applications for iOS, Android, macOS, and Windows without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer and other MAUI components** to deliver accurate and ready-to-use code.
+By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, MAUI UI Builder with PDF Viewer helps you rapidly build scalable mobile and desktop applications for iOS, Android, macOS, and Windows without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing MAUI UI Builder, ensure the following:
+Before installing MAUI UI Builder with PDF Viewer, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
@@ -59,7 +59,7 @@ Before installing MAUI UI Builder, ensure the following:
 
 ## Installation
 
-Before installing MAUI UI Builder, ensure that APM (Agent Package Manager) is installed and available in your environment.
+Before installing MAUI UI Builder with PDF Viewer, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
 ### Verify APM Installation
 
@@ -69,9 +69,9 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® MAUI UI Builder package using APM
+### Install the Syncfusion® MAUI UI Builder with PDF Viewer package using APM
 
-Use the APM CLI to install the MAUI UI Builder skill for your preferred environment:
+Use the APM CLI to install the MAUI UI Builder with PDF Viewer skill for your preferred environment:
 
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
@@ -119,11 +119,11 @@ For details on supported deployment targets, refer to the [documentation](https:
 
 > For Syncfusion® Code Studio, users must explicitly configure the agent location to use it in the chat. Refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations).
 
-## How the Syncfusion® MAUI UI Builder Skill Works
+## How the Syncfusion® MAUI UI Builder Skill Works with PDF Viewer
 
 1. **Intent Analysis** — Parse the user's prompt to identify control types, layouts, and high-level UI structure intent.
-2. **Project Detection** — Automatically detects project framework, platform targets, package manager, and existing themes.
-3. **Component Mapping** — Map intent to Syncfusion® MAUI controls and required feature modules.
+2. **Project Detection** — Automatically detects project framework, platform targets, package manager, existing themes and PDF Viewer configuration.
+3. **Component Mapping** — Map intent to Syncfusion® PDF Viewer and  MAUI controls, including required feature modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
    - Design system (Material Design 3, or Custom theme). If no themes detected in the existing project, Material Design 3 is shown as the default option—proceed with this or change the theme as preferred.
@@ -131,7 +131,7 @@ For details on supported deployment targets, refer to the [documentation](https:
    - Light and Dark Mode support
    - Platform-specific adaptations (iOS, Android, macOS, Windows)
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
-5. **Code Generation** — Produce C# MAUI components, ViewModel classes, and XAML markup with proper data binding.
+5. **Code Generation** — Produce C# MAUI components with PDF Viewer, ViewModel classes, and XAML markup with proper data binding.
 6. **Dependency Management** — Recommend or install required Syncfusion® MAUI NuGet packages and peer dependencies.
 7. **Validation** — Run accessibility and basic security checks, request confirmation for changes.
 8. **Code Insertion** — Create files or patch existing files following MAUI project structure and conventions.
