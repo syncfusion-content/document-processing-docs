@@ -122,7 +122,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 7. **Validation** - Run accessibility and basic security checks, request confirmation for changes.
 8. **Code Insertion** - Create files or patch existing files following project structure and conventions.
 
-Key enforcement points:
+**Key enforcement points:**
 
 - Adds correct theme and CSS imports for chosen Syncfusion® themes
 - Injects only the feature modules required by generated components
