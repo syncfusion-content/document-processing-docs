@@ -30,7 +30,7 @@ Number formatting can be applied in following ways,
 * Using the [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method, you can set the number format to a cell or range of cells.
 * Selecting the number format option from ribbon toolbar.
 
-### Custom Number Formatting
+## Custom Number Formatting
 
 Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the pre-defined number formats do not meet your needs, you can set your own custom formats using custom number formats dialog or [`numberFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#numberformat) method.
 

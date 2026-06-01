@@ -191,11 +191,11 @@ Enables or disables image functionality in the Spreadsheet.
 
 **See:** [allowImage API Documentation](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowimage)
 
-### Limitations of Image
+## Limitations of Image
 
 * Corner resizing option is not available in the image element.
 
 ## See Also
-* [Charts](./charts-and-visualizations.md)
+* [Charts](./charts-and-visualizations)
 * [Formatting](./formatting)
 * [Rows and columns](./rows-and-columns)

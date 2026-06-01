@@ -30,4 +30,4 @@ You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-
 - [Hyperlink](./link)
 - [Sorting](./sort)
 - [Filtering](./filter)
-- [`Ribbon customization`](./ribbon#ribbon-customization)
+- [Ribbon customization](./ui-customization)
