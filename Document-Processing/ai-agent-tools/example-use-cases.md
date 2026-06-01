@@ -12,7 +12,7 @@ documentation: ug
 
 ### Overview
 
-This example demonstrates an **Automated PDF Redaction Agent** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp), OpenAI, and Syncfusion PDF Tools to automatically detect and permanently redact sensitive information from PDF documents. The agent accepts a natural language request, identifies all sensitive data, and outputs a clean redacted PDF - with no manual intervention required. This sample runs using [In-Memory Mode](./getting-started-in-memory-mode).
+This example demonstrates an **Automated PDF Redaction Agent** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp), OpenAI, and Syncfusion PDF Tools to automatically detect and permanently redact sensitive information from PDF documents. The agent accepts a natural language request, identifies all sensitive data, and outputs a clean redacted PDF - with no manual intervention required. This sample runs using [In-Memory Mode](./getting-started#in-memory-mode).
 
 ### Prerequisites
 
@@ -85,7 +85,7 @@ You can download a complete working sample from [GitHub](https://github.com/sync
 
 ### Overview
 
-This example demonstrates a **Blog Generator** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview?pivots=programming-language-csharp), OpenAI (text and image generation), and Syncfusion Word Agent Tools to convert a single user-provided topic into a fully formatted blog ebook. The agent generates a title and structured outline, creates detailed content with relevant images, and outputs the final result in **HTML** and **Word (.docx)** formats. This sample runs using [In-Memory Mode](./getting-started-in-memory-mode).
+This example demonstrates a **Blog Generator** that uses the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview?pivots=programming-language-csharp), OpenAI (text and image generation), and Syncfusion Word Agent Tools to convert a single user-provided topic into a fully formatted blog ebook. The agent generates a title and structured outline, creates detailed content with relevant images, and outputs the final result in **HTML** and **Word (.docx)** formats. This sample runs using [In-Memory Mode](./getting-started#in-memory-mode).
 
 ### Prerequisites
 
@@ -169,7 +169,6 @@ You can download a complete working sample from [GitHub](https://github.com/sync
 
 ## See Also
 
-- [Getting Started - In-Memory Mode](./getting-started-in-memory-mode)
 - [AI Agent Tools Overview](./overview)
 - [Tools](./tools)
 - [Customization](./customization)

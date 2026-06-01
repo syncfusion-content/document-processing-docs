@@ -76,11 +76,11 @@ cd ej2-nextjs-documenteditor
 
 The application is ready to run with default settings. The next steps will add the Syncfusion Document Editor component to the project.
 
-### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
+### Install Document Editor packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React Document Editor package is available at [npmjs.com](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
+The Document Editor package is available at [npmjs.com](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
 
-To install the React Document Editor component, use the following command:
+To install the Document Editor component, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -102,15 +102,15 @@ Add the Document Editor component and its dependent component styles available i
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-react-documenteditor/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-react-documenteditor/styles/tailwind3.css';
 
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +118,7 @@ Add the Document Editor component and its dependent component styles available i
 N> To learn more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
 
-### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
+### Add the Document Editor component
 
 Add the Document Editor component to your application. In the `app/page.tsx` file, add the following code to initialize the component:
 
@@ -165,7 +165,7 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-After the application starts, open the localhost URL shown in the terminal. The React Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+After the application starts, open the localhost URL shown in the terminal. The Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
 ![Output of React Document Editor in Next.js](./images/react_getting_started.png)
 

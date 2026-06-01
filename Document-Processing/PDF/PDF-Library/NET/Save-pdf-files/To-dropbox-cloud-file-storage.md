@@ -5,9 +5,9 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Save PDF file to Dropbox cloud file storage
+# Save PDF file to Dropbox Cloud Storage
 
-To save a PDF file to Dropbox cloud file storage, you can follow the steps below
+To save a PDF file to Dropbox Cloud Storage, you can follow the steps below
 
 Step 1: Create a Dropbox API
 
@@ -41,7 +41,7 @@ Step 4: Include the following namespaces in the Program.cs file.
 {% endtabs %}
 
 
-Step 5: Add the below code example to create a simple PDF and save in Dropbox cloud file storage.
+Step 5: Add the below code example to create a simple PDF and save in Dropbox Cloud Storage.
 
 {% tabs %}
 

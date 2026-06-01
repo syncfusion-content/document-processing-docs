@@ -7,11 +7,11 @@ documentation: UG
 keywords: save pdf in mvc, load pdf in mvc, c# save pdf, c# load pdf
 ---
 
-# Open and save PDF document in ASP.NET MVC 
+# Open and save PDF document in ASP.NET MVC
 
-The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET MVC**. 
+The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET MVC**.
 
-## Steps to open and save PDF document programatically:
+## Steps to open and save PDF document programmatically:
 
 Step 1: Create a new ASP.NET MVC application project.
 ![Create ASP.NET MVC application in Visual Studio](Images/Create_MVC_application.png)
@@ -38,7 +38,7 @@ using Syncfusion.Pdf.Parsing;
 
 Step 4: A default action method named **Index** will be present in the HomeController.cs. Right click on this action method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
-Step 5: Add a new button in the Index.cshtml as shown in the follwoing.
+Step 5: Add a new button in the Index.cshtml as shown in the following.
 
 {% tabs %}
 

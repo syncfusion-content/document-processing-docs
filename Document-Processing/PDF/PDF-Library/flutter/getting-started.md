@@ -20,15 +20,16 @@ Create a simple project using the instructions given in the [`Getting Started wi
 
 **Add dependency**
 
-Add the Syncfusion<sup>&reg;</sup>
-  Flutter PDF dependency to your pub spec file.
+Add the Syncfusion<sup>&reg;</sup> Flutter PDF dependency to your pub spec file.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 dependencies:
   syncfusion_flutter_pdf: ^xx.x.xx
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter PDF`](https://pub.dev/packages/syncfusion_flutter_pdf/versions) package.
 
@@ -36,43 +37,50 @@ N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter PDF`](ht
 
 Run the following command to get the required packages.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 $ flutter pub get
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
 Import the following package in your Dart code.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 import 'package:syncfusion_flutter_pdf/pdf.dart';
 
 {% endhighlight %}
+{% endtabs %}
 
 Add a new button widget as a child of your container widget.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-	body: Center(
-	  child: TextButton(
-		onPressed: _createPDF,
-		  child: Text('Create PDF')
-		)
-	 )
+    body: Center(
+      child: TextButton(
+        onPressed: _createPDF, 
+        child: Text('Create PDF')
+      ),
+    ),
   );
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Include the following code snippet in the button click event to create a PDF file.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 Future<void> _createPDF() async {
   //Create a new PDF document
@@ -80,9 +88,11 @@ Future<void> _createPDF() async {
 
   //Add a new page and draw text
   document.pages.add().graphics.drawString(
-      'Hello World!', PdfStandardFont(PdfFontFamily.helvetica, 20),
-      brush: PdfSolidBrush(PdfColor(0, 0, 0)),
-      bounds: Rect.fromLTWH(0, 0, 500, 50));
+    'Hello World!',
+    PdfStandardFont(PdfFontFamily.helvetica, 20),
+    brush: PdfSolidBrush(PdfColor(0, 0, 0)),
+    bounds: Rect.fromLTWH(0, 0, 500, 50),
+  );
 
   //Save the document
   List<int> bytes = await document.save();
@@ -92,6 +102,7 @@ Future<void> _createPDF() async {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Save and open a PDF document in desktop
 
@@ -101,11 +112,13 @@ You can save and open a PDF document in desktop by using the following steps:
 
 Configure and enable the desktop support to run the app.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart tabtitle="dart" %} 
 
 flutter config --enable-<platform>-desktop
 
 {% endhighlight %}
+{% endtabs %}
 
 N> You only need to execute `flutter config --enable-<platform>-desktop` once. You can always check the status of your configuration using the no-argument flutter config command.
 
@@ -115,26 +128,31 @@ Here you can get more details about [`How to add desktop support in the app`](ht
 
 Add the following packages to your pub spec file.
 
-{% highlight dart %} 
+{% tabs %}
+{% highlight dart tabtitle="dart" %} 
 
 path_provider: ^1.6.5
 open_file: ^3.0.1
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 import 'dart:io';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 
 {% endhighlight %}
+{% endtabs %}
 
 Include the following code snippet in _createPDF method to open the PDF document in mobile after saving it.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Get external storage directory
 final directory = await getExternalStorageDirectory();
@@ -152,6 +170,7 @@ await file.writeAsBytes(bytes, flush: true);
 OpenFile.open('$path/Output.pdf');
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Save and open a PDF document in mobile
 
@@ -161,26 +180,31 @@ You can save and open a PDF document in mobile by using the following steps:
 
 Add the following packages to your pub spec file.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 path_provider: ^2.0.7
 open_file: ^3.2.1
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 import 'dart:io';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
 
 {% endhighlight %}
+{% endtabs %}
 
 Include the following code snippet in _createPDF method to open the PDF document in mobile after saving it.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Get external storage directory
 final directory = await getApplicationSupportDirectory();
@@ -198,6 +222,7 @@ await file.writeAsBytes(bytes, flush: true);
 OpenFile.open('$path/Output.pdf');
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Save and download a PDF document in web
 
@@ -205,17 +230,20 @@ You can save and download a PDF document in web by using the following steps.
 
 **Import package**
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 import 'dart:async';
 import 'dart:convert';
 import 'dart:js' as js;
 
 {% endhighlight %}
+{% endtabs %}
 
 Include the following code snippet in _createPDF method to open the document in web after saving it.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 js.context['pdfData'] = base64.encode(bytes);
 js.context['filename'] = 'Output.pdf';
@@ -224,10 +252,12 @@ Timer.run(() {
 });
 
 {% endhighlight %}
+{% endtabs %}
 
 Add the following code in the header section of index.html file under the web folder.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 <script>
     async function download() {
@@ -241,6 +271,7 @@ Add the following code in the header section of index.html file under the web fo
 </script>
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Save and download a PDF document in WASM
 
@@ -252,16 +283,19 @@ step 3:	Add the following code:
 
 **Import package**
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 import 'dart:convert';
 import 'package:web/web.dart' as web;
 
 {% endhighlight %}
+{% endtabs %}
 
 To enable file saving and launching for download in a web environment, include the following code snippet within the **saveAndLaunchFile** method.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 // Function to save and launch a file for download in a web environment
 Future<void> saveAndLaunchFile(List<int> bytes, String fileName) async {
@@ -271,16 +305,17 @@ Future<void> saveAndLaunchFile(List<int> bytes, String fileName) async {
         ..style.display = 'none'
         ..download = fileName;
 
-// Insert the new element into the DOM
-web.document.body!.appendChild(anchor);
+  // Insert the new element into the DOM
+  web.document.body!.appendChild(anchor);
 
-// Initiate the download
-anchor.click();
-// Clean up the DOM by removing the anchor element
-web.document.body!.removeChild(anchor);
+  // Initiate the download
+  anchor.click();
+  // Clean up the DOM by removing the anchor element
+  web.document.body!.removeChild(anchor);
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the above code sample, you will get the PDF document as follows.
 
@@ -290,27 +325,35 @@ By executing the above code sample, you will get the PDF document as follows.
 
 The following code example shows how to create a PDF document with an image.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
-//Creates a new PDF document
+// Create a new PDF document
 PdfDocument document = PdfDocument();
 
-//Draw the image
+// Draw the image
 document.pages.add().graphics.drawImage(
-    PdfBitmap(File('image.jpg').readAsBytesSync()),
-   Rect.fromLTWH(0, 0, 100, 100));
+  PdfBitmap(
+    File('image.jpg').readAsBytesSync(),
+  ),
+  Rect.fromLTWH(0, 0, 100, 100),
+);
 
-//Saves the document
-File('Output.pdf').writeAsBytes(await document.save());
+// Save the document
+File('Output.pdf').writeAsBytes(
+  await document.save(),
+);
 
-//Dispose the document
+// Dispose the document
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Creating a PDF document with table
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -335,10 +378,12 @@ PdfGridRow row = grid.rows.add();
 row.cells[0].value = '1';
 row.cells[1].value = 'Arya';
 row.cells[2].value = '6';
+
 row = grid.rows.add();
 row.cells[0].value = '12';
 row.cells[1].value = 'John';
 row.cells[2].value = '9';
+
 row = grid.rows.add();
 row.cells[0].value = '42';
 row.cells[1].value = 'Tony';
@@ -346,7 +391,9 @@ row.cells[2].value = '8';
 
 //Draw grid to the page of the PDF document
 grid.draw(
-    page: document.pages.add(), bounds: Rect.fromLTWH(0, 0, 0, 0));
+  page: document.pages.add(),
+  bounds: Rect.fromLTWH(0, 0, 0, 0),
+);
 
 //Saves the document
 File('Output.pdf').writeAsBytes(await document.save());
@@ -355,12 +402,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Creating a simple PDF document with basic elements
 
 The [`PdfDocument`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html) object represents an entire PDF document that is being created. The following code example shows how to create a PDF document and add a [`PdfPage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage-class.html) to it along with the [`PdfPageSettings`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings-class.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -374,15 +423,16 @@ PdfPage page = document.pages.add();
 PdfGraphics graphics = page.graphics;
 
 {% endhighlight %}
+{% endtabs %}
 
 * All the units are measured in point instead of pixel.
 * In PDF, all the elements are placed in absolute positions and has the possibility for content overlapping if misplaced.
-* Syncfusion<sup>&reg;</sup>
-  PDF provides the rendered bounds for each and every element added through [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html) objects. This can be used to add successive elements and prevent content overlap.
+* Syncfusion<sup>&reg;</sup> PDF provides the rendered bounds for each and every element added through [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html) objects. This can be used to add successive elements and prevent content overlap.
 
 The following code example explains how to add an image from base64 string to a PDF document, by providing the rectangle coordinates.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads the image from base64 string
 PdfImage image = PdfBitmap.fromBase64String(
@@ -392,6 +442,7 @@ PdfImage image = PdfBitmap.fromBase64String(
 page.graphics.drawImage(image, Rect.fromLTWH(176, 0, 390, 130));
 
 {% endhighlight %}
+{% endtabs %}
 
 The following methods can be used to add text to a PDF document.
 
@@ -402,16 +453,21 @@ The [`PdfTextElement`](https://pub.dev/documentation/syncfusion_flutter_pdf/late
 
 The following code example adds the necessary text such as address, invoice number and date to create a basic invoice application.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 PdfBrush solidBrush = PdfSolidBrush(PdfColor(126, 151, 173));
 Rect bounds = Rect.fromLTWH(0, 160, graphics.clientSize.width, 30);
 
 //Draws a rectangle to place the heading in that region
-graphics.drawRectangle(brush: solidBrush, bounds: bounds);
+graphics.drawRectangle(
+  brush: solidBrush,
+  bounds: bounds,
+);
 
 //Creates a font for adding the heading in the page
-PdfFont subHeadingFont = PdfStandardFont(PdfFontFamily.timesRoman, 14);
+PdfFont subHeadingFont =
+    PdfStandardFont(PdfFontFamily.timesRoman, 14);
 
 //Creates a text element to add the invoice number
 PdfTextElement element =
@@ -420,56 +476,94 @@ element.brush = PdfBrushes.white;
 
 //Draws the heading on the page
 PdfLayoutResult result = element.draw(
-    page: page, bounds: Rect.fromLTWH(10, bounds.top + 8, 0, 0))!;
+  page: page,
+  bounds: Rect.fromLTWH(10, bounds.top + 8, 0, 0),
+)!;
 
 //Use 'intl' package for date format.
-String currentDate = 'DATE ' + DateFormat.yMMMd().format(DateTime.now());
+String currentDate =
+    'DATE ' + DateFormat.yMMMd().format(DateTime.now());
 
 //Measures the width of the text to place it in the correct location
 Size textSize = subHeadingFont.measureString(currentDate);
 Offset textPosition = Offset(
-    graphics.clientSize.width - textSize.width - 10, result.bounds.top);
+  graphics.clientSize.width - textSize.width - 10,
+  result.bounds.top,
+);
 
 //Draws the date by using drawString method
-graphics.drawString(currentDate, subHeadingFont,
-    brush: element.brush,
-    bounds: Offset(graphics.clientSize.width - textSize.width - 10,
-            result.bounds.top) &
-        Size(textSize.width + 2, 20));
+graphics.drawString(
+  currentDate,
+  subHeadingFont,
+  brush: element.brush,
+  bounds: Offset(
+        graphics.clientSize.width - textSize.width - 10,
+        result.bounds.top,
+      ) &
+      Size(textSize.width + 2, 20),
+);
 
 //Creates text elements to add the address and draw it to the page
 element = PdfTextElement(
-    text: 'BILL TO ',
-    font: PdfStandardFont(PdfFontFamily.timesRoman, 10,
-        style: PdfFontStyle.bold));
+  text: 'BILL TO ',
+  font: PdfStandardFont(
+    PdfFontFamily.timesRoman,
+    10,
+    style: PdfFontStyle.bold,
+  ),
+);
 element.brush = PdfSolidBrush(PdfColor(126, 155, 203));
-result = element.draw(
-    page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 25, 0, 0))!;
 
-PdfFont timesRoman = PdfStandardFont(PdfFontFamily.timesRoman, 10);
-
-element = PdfTextElement(text: 'Victuailles en stock ', font: timesRoman);
-element.brush = PdfBrushes.black;
 result = element.draw(
-    page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0))!;
+  page: page,
+  bounds:
+      Rect.fromLTWH(10, result.bounds.bottom + 25, 0, 0),
+)!;
+
+PdfFont timesRoman =
+    PdfStandardFont(PdfFontFamily.timesRoman, 10);
 
 element = PdfTextElement(
-    text: '2, rue du Commerce, Lyon, France ', font: timesRoman);
+  text: 'Victuailles en stock ',
+  font: timesRoman,
+);
 element.brush = PdfBrushes.black;
+
 result = element.draw(
-    page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0))!;
+  page: page,
+  bounds:
+      Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0),
+)!;
+
+element = PdfTextElement(
+  text: '2, rue du Commerce, Lyon, France ',
+  font: timesRoman,
+);
+element.brush = PdfBrushes.black;
+
+result = element.draw(
+  page: page,
+  bounds:
+      Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0),
+)!;
 
 //Draws a line at the bottom of the address
 graphics.drawLine(
-    PdfPen(PdfColor(126, 151, 173), width: 0.7),
-    Offset(0, result.bounds.bottom + 3),
-    Offset(graphics.clientSize.width, result.bounds.bottom + 3));
+  PdfPen(PdfColor(126, 151, 173), width: 0.7),
+  Offset(0, result.bounds.bottom + 3),
+  Offset(
+    graphics.clientSize.width,
+    result.bounds.bottom + 3,
+  ),
+);
 
 {% endhighlight %}
+{% endtabs %}
 
 Since the invoice document requires only simple cell customizations, the given code example explains how to create a simple invoice table by using [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a PDF grid
 PdfGrid grid = PdfGrid();
@@ -490,25 +584,33 @@ header.cells[4].value = 'Total';
 
 //Creates the header style
 PdfGridCellStyle headerStyle = PdfGridCellStyle();
-headerStyle.borders.all = PdfPen(PdfColor(126, 151, 173));
-headerStyle.backgroundBrush = PdfSolidBrush(PdfColor(126, 151, 173));
+headerStyle.borders.all =
+    PdfPen(PdfColor(126, 151, 173));
+headerStyle.backgroundBrush =
+    PdfSolidBrush(PdfColor(126, 151, 173));
 headerStyle.textBrush = PdfBrushes.white;
-headerStyle.font = PdfStandardFont(PdfFontFamily.timesRoman, 14,
-    style: PdfFontStyle.regular);
+headerStyle.font = PdfStandardFont(
+  PdfFontFamily.timesRoman,
+  14,
+  style: PdfFontStyle.regular,
+);
 
 //Adds cell customizations
 for (int i = 0; i < header.cells.count; i++) {
   if (i == 0 || i == 1) {
     header.cells[i].stringFormat = PdfStringFormat(
-        alignment: PdfTextAlignment.left,
-        lineAlignment: PdfVerticalAlignment.middle);
+      alignment: PdfTextAlignment.left,
+      lineAlignment: PdfVerticalAlignment.middle,
+    );
   } else {
     header.cells[i].stringFormat = PdfStringFormat(
-        alignment: PdfTextAlignment.right,
-        lineAlignment: PdfVerticalAlignment.middle);
+      alignment: PdfTextAlignment.right,
+      lineAlignment: PdfVerticalAlignment.middle,
+    );
   }
   header.cells[i].style = headerStyle;
 }
+
 
 //Add rows to grid
 PdfGridRow row = grid.rows.add();
@@ -517,18 +619,21 @@ row.cells[1].value = 'AWC Logo Cap';
 row.cells[2].value = '\$8.99';
 row.cells[3].value = '2';
 row.cells[4].value = '\$17.98';
+
 row = grid.rows.add();
 row.cells[0].value = 'LJ-0192';
 row.cells[1].value = 'Long-Sleeve Logo Jersey,M';
 row.cells[2].value = '\$49.99';
 row.cells[3].value = '3';
 row.cells[4].value = '\$149.97';
+
 row = grid.rows.add();
 row.cells[0].value = 'So-B909-M';
 row.cells[1].value = 'Mountain Bike Socks,M';
 row.cells[2].value = '\$9.5';
 row.cells[3].value = '2';
 row.cells[4].value = '\$19';
+
 row = grid.rows.add();
 row.cells[0].value = 'LJ-0192';
 row.cells[1].value = 'Long-Sleeve Logo Jersey,M';
@@ -537,27 +642,35 @@ row.cells[3].value = '4';
 row.cells[4].value = '\$199.96';
 
 //Set padding for grid cells
-grid.style.cellPadding = PdfPaddings(left: 2, right: 2, top: 2, bottom: 2);
+grid.style.cellPadding =
+    PdfPaddings(left: 2, right: 2, top: 2, bottom: 2);
 
 //Creates the grid cell styles
 PdfGridCellStyle cellStyle = PdfGridCellStyle();
 cellStyle.borders.all = PdfPens.white;
-cellStyle.borders.bottom = PdfPen(PdfColor(217, 217, 217), width: 0.70);
-cellStyle.font = PdfStandardFont(PdfFontFamily.timesRoman, 12);
-cellStyle.textBrush = PdfSolidBrush(PdfColor(131, 130, 136));
+cellStyle.borders.bottom =
+    PdfPen(PdfColor(217, 217, 217), width: 0.70);
+cellStyle.font =
+    PdfStandardFont(PdfFontFamily.timesRoman, 12);
+cellStyle.textBrush =
+    PdfSolidBrush(PdfColor(131, 130, 136));
+
 //Adds cell customizations
 for (int i = 0; i < grid.rows.count; i++) {
   PdfGridRow row = grid.rows[i];
   for (int j = 0; j < row.cells.count; j++) {
     row.cells[j].style = cellStyle;
+
     if (j == 0 || j == 1) {
       row.cells[j].stringFormat = PdfStringFormat(
-          alignment: PdfTextAlignment.left,
-          lineAlignment: PdfVerticalAlignment.middle);
+        alignment: PdfTextAlignment.left,
+        lineAlignment: PdfVerticalAlignment.middle,
+      );
     } else {
       row.cells[j].stringFormat = PdfStringFormat(
-          alignment: PdfTextAlignment.right,
-          lineAlignment: PdfVerticalAlignment.middle);
+        alignment: PdfTextAlignment.right,
+        lineAlignment: PdfVerticalAlignment.middle,
+      );
     }
   }
 }
@@ -568,26 +681,39 @@ PdfLayoutFormat layoutFormat =
 
 //Draws the grid to the PDF page
 PdfLayoutResult gridResult = grid.draw(
-    page: page,
-    bounds: Rect.fromLTWH(0, result.bounds.bottom + 20,
-        graphics.clientSize.width, graphics.clientSize.height - 100),
-    format: layoutFormat)!;
+  page: page,
+  bounds: Rect.fromLTWH(
+    0,
+    result.bounds.bottom + 20,
+    graphics.clientSize.width,
+    graphics.clientSize.height - 100,
+  ),
+  format: layoutFormat,
+)!;
 
 gridResult.page.graphics.drawString(
-    'Grand Total :                             \$386.91', subHeadingFont,
-    brush: PdfSolidBrush(PdfColor(126, 155, 203)),
-    bounds: Rect.fromLTWH(520, gridResult.bounds.bottom + 30, 0, 0));
+  'Grand Total :                             \$386.91',
+  subHeadingFont,
+  brush: PdfSolidBrush(PdfColor(126, 155, 203)),
+  bounds:
+      Rect.fromLTWH(520, gridResult.bounds.bottom + 30, 0, 0),
+);
 
 gridResult.page.graphics.drawString(
-    'Thank you for your business !', subHeadingFont,
-    brush: PdfBrushes.black,
-    bounds: Rect.fromLTWH(520, gridResult.bounds.bottom + 60, 0, 0));
+  'Thank you for your business !',
+  subHeadingFont,
+  brush: PdfBrushes.black,
+  bounds:
+      Rect.fromLTWH(520, gridResult.bounds.bottom + 60, 0, 0),
+);
 
 {% endhighlight %}
+{% endtabs %}
 
 The following code example shows how to save the invoice document and dispose the [`PdfDocument`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html) object.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Saves the document
 File('Output.pdf').writeAsBytes(await document.save());
@@ -596,6 +722,7 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 The following screenshot shows the invoice PDF document created by the Syncfusion<sup>&reg;</sup>
   Flutter PDF.
