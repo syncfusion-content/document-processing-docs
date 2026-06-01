@@ -8,7 +8,7 @@ documentation: ug
 keywords: Angular UI Builder, Skills, AI Assistants, DOCX Editor, Agent Skills
 ---
 
-# Syncfusion® Angular UI Builder Skill with DOCX Editor for AI Assistants
+# Angular UI Builder Skill with DOCX Editor for AI Assistants
 
 **Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates Angular DOCX Editor development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
 
