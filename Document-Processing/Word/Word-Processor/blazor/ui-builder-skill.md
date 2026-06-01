@@ -49,7 +49,6 @@ Before installing Blazor UI Builder Skill with DOCX Editor, ensure the following
 ### **Accessibility & Responsiveness**
 - WCAG 2.1 AA–aligned output
 - Semantic HTML with ARIA support
-- Mobile-first responsive layouts
 
 ### **Design-System Integration**
 - Supports Tailwind, Bootstrap, Material, or custom themes
@@ -161,7 +160,7 @@ To start using the skill:
 
 {% endpromptcards %}
 
-<<Add details about generated codes>>
+Generated code follows best practices with accessible, semantic HTML, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
 ## Best Practices
 
