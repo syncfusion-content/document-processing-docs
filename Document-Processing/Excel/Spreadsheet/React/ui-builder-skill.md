@@ -148,14 +148,13 @@ To start using the skill:
 **Example Prompts:**
 
 {% promptcards %}
-{% promptcard Data Grid with Inline Editing %}
-Create a financial data entry screen using a Spreadsheet where users can edit rows inline, apply data validation rules (date and currency), and show row-level errors. Include save/undo buttons and server-side sync hooks.
+{% promptcard Project Task Planner %}
+Create a spreadsheet for managing project tasks with columns for task ID, task name, assignee, priority, status, start date, due date, and progress. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight overdue tasks and high-priority items. Include formulas to calculate completion percentages and a summary section showing total tasks, completed tasks, and pending tasks. Adjust column widths for readability and make the layout suitable for team tracking.
 {% endpromptcard %}
-{% promptcard Dashboard with Multiple Sheets %}
-Design a dashboard with multiple sheets: an input sheet for raw data, a calculated sheet with formulas and pivot-like summaries, and a chart sheet showing sales trends. Add a header ribbon with import/export and template buttons.
+{% promptcard Customer Support Ticket Dashboard %}
+Create a spreadsheet for managing customer support tickets with columns for ticket ID, customer name, issue category, priority, assigned agent, created date, resolution status, and resolution notes. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight urgent and unresolved tickets. Adjust column widths for readability and make the layout suitable for daily support operations.
 {% endpromptcard %}
 {% endpromptcards %}
-
 
 Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
