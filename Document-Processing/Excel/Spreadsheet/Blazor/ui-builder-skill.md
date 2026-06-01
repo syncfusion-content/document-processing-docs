@@ -74,25 +74,25 @@ Use the APM CLI to install the Blazor UI Builder Skill with Spreadsheet for your
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
 
-apm install syncfusion/blazor-ui-builder-spreadsheet -t copilot
+apm install syncfusion/blazor-ui-builder -t copilot
 
 {% endhighlight %} 
 
 {% highlight bash tabtitle="Cursor" %}
 
-apm install syncfusion/blazor-ui-builder-spreadsheet -t cursor
+apm install syncfusion/blazor-ui-builder -t cursor
 
 {% endhighlight %}
 
 {% highlight bash tabtitle="Codex" %}
 
-apm install syncfusion/blazor-ui-builder-spreadsheet -t codex
+apm install syncfusion/blazor-ui-builder -t codex
 
 {% endhighlight %}
 
 {% highlight bash tabtitle="Claude" %}
 
-apm install syncfusion/blazor-ui-builder-spreadsheet -t claude
+apm install syncfusion/blazor-ui-builder -t claude
 
 {% endhighlight %}
 {% endtabs %}
@@ -128,7 +128,6 @@ Key enforcement points:
 - Injects only the feature modules required by generated components
 - Generates semantic HTML with ARIA attributes and keyboard support
 - Avoids unsupported or deprecated API usages for Syncfusion® Spreadsheet
-- Properly configures data binding, formulas, and cell formatting
 
 > The assistant handles most stages automatically and may request confirmation where required.
 
