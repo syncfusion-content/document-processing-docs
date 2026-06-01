@@ -22,10 +22,10 @@ With intelligent UI generation across both general UI components and DOCX Editor
 
 You can refer to the platform-specific guidance on how to use Syncfusion<sup style="font-size:70%">&reg;</sup> UI Builder Skill for AI Assistants with DOCX Editor SDK products from the following:
 
-- UI Builder Skill for React DOCX Editor
-- UI Builder Skill for Angular DOCX Editor
-- UI Builder Skill for Blazor DOCX Editor
-- UI Builder Skill for WPF DOCX Editor
+- [UI Builder Skill for React DOCX Editor](../../Word/Word-Processor/react/ui-builder-skill)
+- [UI Builder Skill for Angular DOCX Editor](../../Word/Word-Processor/angular/ui-builder-skill)
+- [UI Builder Skill for Blazor DOCX Editor](../../Word/Word-Processor/blazor/ui-builder-skill)
+- [UI Builder Skill for WPF DOCX Editor](../../Word/Word-Processor/wpf/ui-builder-skill)
 
 ## See also
 
