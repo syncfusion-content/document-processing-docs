@@ -170,6 +170,14 @@ Create a learning interface with the PDF viewer displaying course material. Add 
 
 Generated code follows best practices with accessible UI, responsive mobile-first layouts, strong C# typing, MVVM pattern implementation, and built-in security measures such as input validation and secure data handling.
 
+## Best Practices
+
+Follow these guidelines to get the most out of UI Builder with PDF Viewer and ensure high-quality production-ready result:
+
+- **Stay consistent:** Maintain consistent file organization, naming conventions, and coding standards throughout your project.
+- **Use advanced AI models:** For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
+- **Review all content and assets before production:** Replace any placeholder images or icons (e.g., stock images or emoji sets) with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
+
 ## Troubleshooting
 
 - **APM installation failure**: Refer to this [documentation](https://microsoft.github.io/apm/getting-started/installation/#troubleshooting)
