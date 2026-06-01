@@ -8,7 +8,7 @@ documentation: ug
 keywords: WPF UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
 ---
 
-# Syncfusion® WPF UI Builder Skill with DOCX Editor for AI Assistants
+# WPF UI Builder Skill with DOCX Editor for AI Assistants
 
 **Syncfusion® WPF UI Builder Skill** is an AI-powered agent skill that accelerates WPF DOCX Editor development by transforming natural-language UI requirements into production-ready code using Syncfusion® WPF components.
 
