@@ -1,5 +1,5 @@
 ---
-title: Does VBA code behave dynamically when the sheet is protected? | Syncfusion
+title: Does VBA Work on Protected Sheets? | Syncfusion
 description: This page explains why VBA code does not function dynamically when sheet protection is applied in Excel.
 platform: document-processing
 control: XlsIO
