@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WPF UI Builder Skill with Spreadsheet for AI Assistants | Syncfusion®
+title: WPF UI Builder Skills with Spreadsheet for AI Assistants | Syncfusion®
 description: Install Syncfusion® WPF UI Builder to generate production-ready WPF controls with Spreadsheet from natural-language prompts.
 control: SfSpreadsheet
 platform: document-processing
@@ -8,9 +8,9 @@ documentation: ug
 keywords: WPF UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® WPF UI Builder Skill with Spreadsheet for AI Assistants
+# Syncfusion® WPF UI Builder Skills with Spreadsheet for AI Assistants
 
-**Syncfusion® WPF UI Builder Skill** is an AI-powered agent skill that accelerates WPF Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® WPF components.
+**Syncfusion® WPF UI Builder Skills** is an AI-powered agent skill that accelerates WPF Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® WPF components.
 
 Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® Spreadsheet** and other WPF components to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WPF UI Builder helps you rapidly build scalable spreadsheet applications and user interfaces without leaving your development workflow.
@@ -102,7 +102,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the WPF UI Builder.
 
-## How the Syncfusion® WPF UI Builder Skill Works with Spreadsheet
+## How the Syncfusion® WPF UI Builder Skills Works with Spreadsheet
 
 1. **Intent Analysis** — Parse the user's prompt to identify control types and high-level layout intent.
 2. **Project Detection** — Automatically detects project framework and existing themes.
@@ -127,7 +127,7 @@ Key enforcement points:
 
 ## Using the AI Assistant
 
-After installing WPF UI Builder with APM, the relevant agent and skill files are added to your project under:
+After installing WPF UI Builder Skill with Spreadsheet and APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
 - `.github/agents/` (WPF UI builder agent configuration, based on the selected target)
@@ -137,7 +137,7 @@ To start using the skill:
 1. Open your supported IDE.
 2. In the chat panel, select the `syncfusion-wpf-ui-builder` agent from the **Agent dropdown**.
 
-![Set Agent](images/UI-Builder-Agent.png)
+   ![Set Agent](images/UI-Builder-Agent.png)
 
 3. Start prompting the agent with a clear description of your UI requirements.
 
