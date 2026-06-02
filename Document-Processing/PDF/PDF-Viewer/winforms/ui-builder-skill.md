@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WinForms UI Builder Skill with PDFViewer for AI Assistant|Syncfusion®
+title: WinForms UI Builder Skill with PDF Viewer | Syncfusion®
 description: Install Syncfusion® WinForms UI Builder to generate production-ready Windows Forms controls with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
@@ -8,11 +8,12 @@ documentation: ug
 keywords: WinForms UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 ---
 
-# Syncfusion® WinForms UI Builder Skill with PDFViewer for AI Assistant
+# Syncfusion® WinForms UI Builder Skill with PDF Viewer
 
 **Syncfusion® WinForms UI Builder Skill** is an AI-powered agent skill that accelerates WinForms PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® WinForms components. 
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** and other WinForms components to deliver accurate and ready-to-use code.By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WinForms UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** and other WinForms components to deliver accurate and ready-to-use code.
+By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WinForms UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
@@ -22,7 +23,7 @@ Before installing WinForms UI Builder Skill with PDF Viewer, ensure the followin
 - Required [.NET SDK](https://dotnet.microsoft.com/en-us/download) version ≥ 6
 - Windows Forms application (existing or new); see [Overview](https://help.syncfusion.com/windowsforms/overview)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
+- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
@@ -68,7 +69,7 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® WinForms UI Builder package using APM 
+### Install the Syncfusion® WinForms UI Builder package using APM
 
 Use the APM CLI to install the WinForms UI Builder skill for your preferred environment:
 
@@ -148,7 +149,7 @@ To start using the skill:
 
 > For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
-Examples Prompts:
+Example Prompts:
 
 {% promptcards %}
 {% promptcard Invoice Viewer with Details Panel %}
@@ -159,7 +160,7 @@ Create a learning interface with the PDF viewer displaying course material. Add 
 {% endpromptcard %}
 {% endpromptcards %}
 
-Generated code follows Windows Forms best practices with proper control layout, event handling, data bindings, strong C# typing, and built-in security measures such as input validation and avoidance of hardcore secrets. The code is fully compatible with Visual Studio designer and Windows Forms conventions.
+Generated code follows Windows Forms best practices with proper control layout, event handling, data bindings, strong C# typing, and built-in security measures such as input validation and avoidance of hard-coded secrets. The code is fully compatible with Visual Studio designer and Windows Forms conventions.
 
 ## Best Practices
 
