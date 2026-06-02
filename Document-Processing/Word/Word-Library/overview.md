@@ -17,7 +17,7 @@ keywords: Word, SDK, Automation, API, create, read, write
 
 {% doccard text="ASP.NET" link="/document-processing/word/word-library/net/Create-Word-document-in-ASP-NET" icon="/document-processing/word/word-library/net/images/NET.svg" %}
 
-{% doccard text="ASP.NET Core Web API" link="/document-processing/word/word-library/net/Create-Word-Document-in-ASP-NET-Core-WEB-API" icon="/document-processing/word/word-library/net/images/NET.svg" %}
+{% doccard text="Web API" link="/document-processing/word/word-library/net/Create-Word-Document-in-ASP-NET-Core-WEB-API" icon="/document-processing/word/word-library/net/images/NET.svg" %}
 
 {% doccard text="ASP.NET MVC" link="/document-processing/word/word-library/net/Create-Word-document-in-ASP-NET-MVC" icon="/document-processing/word/word-library/net/images/ASP.NET MVC.svg" %}
 
@@ -39,9 +39,9 @@ keywords: Word, SDK, Automation, API, create, read, write
 
 {% doccard text="Azure" link="/document-processing/word/word-library/net/Create-Word-Document-in-Azure" icon="/document-processing/word/word-library/net/images/Azure.svg" %}
 
-{% doccard text="Amazon Web Service (AWS)" link="/document-processing/word/word-library/net/Create-Word-Document-in-AWS" icon="/document-processing/word/word-library/net/images/AWS.svg" %}
+{% doccard text="AWS" link="/document-processing/word/word-library/net/Create-Word-Document-in-AWS" icon="/document-processing/word/word-library/net/images/AWS.svg" %}
 
-{% doccard text="Google Cloud Platform (GCP)" link="/document-processing/word/word-library/net/Create-Word-Document-in-Google-Cloud-Platform" icon="/document-processing/word/word-library/net/images/Google Cloud.svg" %}
+{% doccard text="GCP" link="/document-processing/word/word-library/net/Create-Word-Document-in-Google-Cloud-Platform" icon="/document-processing/word/word-library/net/images/Google Cloud.svg" %}
 
 {% enddoccards %}
 
