@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React UI Builder Skill with Spreadsheet | Syncfusion®
+title: React UI Builder Skills with Spreadsheet | Syncfusion®
 description: Install Syncfusion® React UI Builder to generate production-ready React components with Spreadsheet from natural-language prompts.
 control: Spreadsheet
 platform: document-processing
@@ -8,16 +8,16 @@ documentation: ug
 keywords: React UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® React UI Builder Skill with Spreadsheet for AI Assistants
+# Syncfusion® React UI Builder Skills with Spreadsheet for AI Assistants
 
-**Syncfusion® React UI Builder Skill** is an AI-powered agent skill that accelerates React Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® React Spreadsheet components.
+**Syncfusion® React UI Builder Skills** is an AI-powered agent skills that accelerates React Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® React Spreadsheet components.
 
 Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® Spreadsheet (Spreadsheet component)** and other React components to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, React UI Builder helps you rapidly build scalable spreadsheet-driven applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing React UI Builder Skill with Spreadsheet, ensure the following:
+Before installing React UI Builder Skills with Spreadsheet, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
@@ -56,7 +56,7 @@ Before installing React UI Builder Skill with Spreadsheet, ensure the following:
 
 ## Installation
 
-Before installing React UI Builder Skill with Spreadsheet, ensure that APM (Agent Package Manager) is installed and available in your environment.
+Before installing React UI Builder Skills with Spreadsheet, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
 ### Verify APM Installation
 
@@ -66,9 +66,9 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® React UI Builder Skill with Spreadsheet package using APM
+### Install the Syncfusion® React UI Builder Skills with Spreadsheet package using APM
 
-Use the APM CLI to install the React UI Builder Skill with Spreadsheet for your preferred environment:
+Use the APM CLI to install the React UI Builder Skills with Spreadsheet for your preferred environment:
 
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
@@ -95,14 +95,14 @@ apm install syncfusion/react-ui-builder -t claude
 
 After installation, the following artifacts are added to your project for the GitHub Copilot target:
 
-- `.agent/skills/` – contains the skill files
+- `.agent/skills/` – contains the skills files
 - `.github/agents/` – contains the agent configuration
 
 Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals) for details about supported deployment targets.
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the React UI Builder.
 
-## How the Syncfusion® React UI Builder Skill Works with Spreadsheet
+## How the Syncfusion® React UI Builder Skills Works with Spreadsheet
 
 1. **Intent Analysis:** Parse the user's prompt to identify component types and high-level layout intent (grid, editor, data inspector, dashboard).
 2. **Project Detection:** Automatically detects project framework, package manager, existing themes, and Spreadsheet configuration.
@@ -129,12 +129,12 @@ Key enforcement points:
 
 ## Using the AI Assistant
 
-After installing React UI Builder Skill with Spreadsheet and APM, the relevant agent and skill files are added to your project under:
+After installing React UI Builder Skills with Spreadsheet and APM, the relevant agent and skills files are added to your project under:
 
-- `.agent/skills/` (skill files)
+- `.agent/skills/` (skills files)
 - `.github/agents/` (React UI builder agent configuration, based on the selected target)
 
-To start using the skill:
+To start using the skills:
 
 1.Open your supported IDE.
 2.In the chat panel, select the `syncfusion-react-ui-builder` agent from the **Agent dropdown**.
@@ -152,7 +152,7 @@ To start using the skill:
 Create a spreadsheet for managing project tasks with columns for task ID, task name, assignee, priority, status, start date, due date, and progress. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight overdue tasks and high-priority items. Include formulas to calculate completion percentages and a summary section showing total tasks, completed tasks, and pending tasks. Adjust column widths for readability and make the layout suitable for team tracking.
 {% endpromptcard %}
 {% promptcard Customer Support Ticket Dashboard %}
-Create a spreadsheet for managing customer support tickets with columns for ticket ID, customer name, issue category, priority, assigned agent, created date, resolution status, and resolution notes. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight urgent and unresolved tickets. Adjust column widths for readability and make the layout suitable for daily support operations.
+Create a spreadsheet for managing customer support tickets with columns for ticket ID, customer name, issue category, priority, assigned agent, created date, resolution status, and resolution notes. Format the sheet with clear headers, readable alignment, and spacing so users can quickly scan and understand the data. Allow users to add notes or comments to individual cells to capture additional details for each ticket. Include charts to show how tickets are distributed based on their status, helping teams monitor workload at a glance. Keep the layout simple, structured, and easy to use for day-to-day support operations.
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -170,26 +170,26 @@ Follow these guidelines to get the most out of UI Builder and ensure high-qualit
 
 - **APM installation failure**: Refer to this [documentation](https://microsoft.github.io/apm/getting-started/installation/#troubleshooting)
 
-- **Skills not loading**: Ensure the **.agent/** and **.github/agents/** folders exist in your project and that the skill was installed successfully using APM. Verify that the correct agent is selected from the Agent dropdown in your IDE.
+- **Skills not loading**: Ensure the **.agent/** and **.github/agents/** folders exist in your project and that the skills was installed successfully using APM. Verify that the correct agent is selected from the Agent dropdown in your IDE.
 
-- **Component not rendering**: Retry generation using the specific component skill to resolve the issue, and ensure required Syncfusion® packages and themes are properly configured.
+- **Component not rendering**: Retry generation using the specific component skills to resolve the issue, and ensure required Syncfusion® packages and themes are properly configured.
 
-- **Syncfusion license banner appears**: Use the licensing skill to correctly register and validate your Syncfusion® license key in the application.
+- **Syncfusion license banner appears**: Use the licensing skills to correctly register and validate your Syncfusion® license key in the application.
 
 
 ## FAQ
 
 **Which agents/IDEs are supported?**
-Any Skills-compatible agent that reads local skill files (Code Studio, VS Code, Cursor, etc.).
+Any Skills-compatible agent that reads local skills files (Code Studio, VS Code, Cursor, etc.).
 
 **Are skills loaded automatically?**  
 Yes. Supported agents automatically load relevant skills based on your query.
 
 **Can I customize the generated styles?**
-Yes. The skill supports choosing Tailwind, Bootstrap, Material, or a custom theme; generated components include clear integration points for style adjustments.
+Yes. The skills supports choosing Tailwind, Bootstrap, Material, or a custom theme; generated components include clear integration points for style adjustments.
 
 **Does it modify files automatically?**
-The skill proposes changes and requires confirmation for insertion; automatic dependency installation may be offered depending on agent permissions.
+The skills proposes changes and requires confirmation for insertion; automatic dependency installation may be offered depending on agent permissions.
 
 ## See also
 
