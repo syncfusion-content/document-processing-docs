@@ -23,34 +23,34 @@ Before installing Angular UI Builder Skill with PDF Viewer, ensure the following
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
 - Angular application (existing or new); see [Quick Start](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-cli)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
+- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 
 ## Key Benefits
 
-**AI-Driven UI Generation**
+### **AI-Driven UI Generation**
 - Transforms prompts into fully developed Angular components rather than just partial code snippets.
 - Automatically selects appropriate Syncfusion® components and features
 - Produces structured, maintainable code
 
-**Component Usage & API Accuracy**
+### **Component Usage & API Accuracy**
 - Uses correct Syncfusion® component APIs
 - Injects required feature modules (paging, sorting, filtering, etc.)
 - Avoids unsupported or deprecated patterns
 
-**Patterns & Best Practices**
+### **Patterns & Best Practices**
 - Recommended component composition and state management
 - Event handling aligned with Angular standards
 - Secure and scalable coding patterns
 
-**Accessibility & Responsiveness**
+### **Accessibility & Responsiveness**
 - WCAG 2.1 AA–aligned output
 - Semantic HTML with ARIA support
 - Mobile-first responsive layouts
 
-**Design-System Integration**
+### **Design-System Integration**
 - Supports Tailwind, Bootstrap, Material, or custom themes
 - Ensures consistent Syncfusion® styling and theme usage
 
@@ -58,7 +58,7 @@ Before installing Angular UI Builder Skill with PDF Viewer, ensure the following
 
 Before installing Angular UI Builder Skill with PDF Viewer, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
-**Verify APM Installation**
+### Verify APM Installation
 
 Run the following command to confirm APM is installed:
 
@@ -111,7 +111,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
    Load required theming guidelines and confirm key design choices:
    - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option, which can be used as is or changed based on preference.
    - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
-     - Light and Dark Mode
+   - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
 5. **Code Generation:** Produce TypeScript Angular components with PDF Viewer integration, props interfaces, and CSS/styling scaffolding.
 6. **Dependency Management:** Recommend or install required Syncfusion® packages and peer dependencies.
@@ -129,7 +129,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 ## Using the AI Assistant
 
-After installing Angular UI Builder Skill with PDF Viewer and APM,, the relevant agent and skill files are added to your project under:
+After installing Angular UI Builder Skill with PDF Viewer and APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
 - `.github/agents/` (Angular UI builder agent configuration, based on the selected target)
@@ -143,7 +143,7 @@ To start using the skill:
 
 > For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
-**Examples Prompts:**
+**Example Prompts:**
 
 {% promptcards %}
 {% promptcard Invoice Viewer with Details Panel %}
@@ -159,7 +159,7 @@ Generated code follows best practices with accessible, semantic HTML, responsive
 
 ## Best Practices
 
-Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready result:
+Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready results:
 
 - **Stay consistent:** Maintain consistent file organization, naming conventions, and coding standards throughout your project.
 - **Use advanced AI models:** For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
