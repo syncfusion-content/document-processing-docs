@@ -67,10 +67,6 @@ The following example shows `Protect Sheet` functionality in the Spreadsheet con
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/protect-sheet-cs1" %}
 
-#### Limitations of Protect sheet
-
-* Password encryption is not supported
-
 ### Unprotect Sheet
 
 The **Unprotect Sheet** feature restores all functionalities that were disabled in a protected spreadsheet.  

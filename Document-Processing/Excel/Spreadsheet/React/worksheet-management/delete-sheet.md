@@ -10,9 +10,7 @@ documentation: ug
 
 # Delete Worksheet in React Spreadsheet
 
-## Overview
-
-Deleting a worksheet in the React Spreadsheet component allows you to remove sheets that are no longer needed, helping you keep your workbook organized and relevant. You can delete a sheet using the user interface or programmatically, but at least one worksheet must always remain in the workbook.
+Our React Spreadsheet component allows you to remove sheets that are no longer needed, helping you keep your workbook organized and relevant. You can delete a sheet using the user interface or programmatically, but at least one worksheet must always remain in the workbook.
 
 You can delete an existing worksheet in the Spreadsheet component using the following methods:
 

@@ -22,6 +22,4 @@ The [selectImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet
 
 **Deselect an image programmatically:**
 
-The [deselectImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#deselectimage) method removes the current image selection. Call this method to deselect any selected image without specifying an image ID.
-
-Selected overlays receive the `.e-ss-overlay-active` class and show eight resize handles; selection can be controlled by `selectImage` (by id or address) and cleared with `deselectImage`.
+The [deselectImage](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#deselectimage) method removes the selection from the currently active image. Use this method to deselect any selected image without needing to specify an image ID.
