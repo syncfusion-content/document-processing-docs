@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MAUI UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion®
-description: Install Syncfusion® MAUI UI Builder to generate production-ready MAUI components with PDF Viewer from natural-language prompts.
+description: Install Syncfusion® MAUI UI Builder to generate production-ready .NET MAUI controls with PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
