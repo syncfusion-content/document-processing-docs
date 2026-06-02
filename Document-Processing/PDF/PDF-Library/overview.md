@@ -29,6 +29,8 @@ keywords: PDF, SDK, Automation, API, create, read, write
 
 {% doccard text="UWP" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-uwp" icon="./NET/images/UWP.svg" %}
 
+{% doccard text="Console" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-console" icon="./NET/images/NET.svg" %}
+
 {% doccard text="Flutter" link="/document-processing/pdf/pdf-library/flutter/getting-started" icon="./NET/images/Flutter.svg" %}
 
 {% doccard text="Linux" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-linux" icon="./NET/images/Linux.png" %}
