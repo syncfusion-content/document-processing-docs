@@ -213,9 +213,501 @@ Borders can be applied programmatically to a specific cell or range of cells usi
 {% endhighlight %}
 {% endtabs %}
 
+## Conditional Formatting
+
+Conditional formatting enables automatic visual formatting of cells based on specified conditions, helping to highlight data patterns, identify outliers, and improve data interpretation. The Blazor Spreadsheet component provides comprehensive conditional formatting capabilities including color scales, data bars, icon sets, and custom formatting rules. These formats are Excel-compatible, respect worksheet protection settings, and integrate seamlessly with undo/redo operations. To control this functionality, use the `AllowConditionalFormat` property, which enables or disables conditioanl formatting support in the Spreadsheet. The default value of the `AllowConditionalFormat` property is **true**.
+
+### Applying Conditional Formatting
+
+Conditional formatting can be applied through the UI or programmatically:
+
+**Conditional formatting via UI**
+- Select the target cell range
+- Click the **Conditional Formatting** button in the **Home** tab of the Ribbon
+- Choose the desired formatting rule type and configure the conditions
+
+**Conditional formatting programmatically**
+Apply conditional formatting using the `ConditionalFormatAsync()` method with a `ConditionalFormatRule` object to define the condition, format type, range, and styling.
+
+**Code Example**
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/StudentScores.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    private async Task HighlightHighScores()
+    {
+        var rule = new ConditionalFormatRule
+        {
+            ConditionalFormatType = ConditionalFormatType.GreaterThan,
+            PrimaryValue = "80",
+            Range = "B2:B50",
+            ConditionalFormatColor = ConditionalFormatColor.GreenFillWithDarkGreenText
+        };
+
+        await SpreadsheetInstance.ConditionalFormatAsync(rule);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Highlight Cells Rules
+
+Highlight cells rules apply preset color formatting based on cell values or text content. This rule type is ideal for quickly identifying cells that meet specific value-based conditions. The highlighting uses combinations of fill colors and text colors to ensure visibility while maintaining readability.
+
+**Supported Highlight Cell Rule Types**
+
+| ConditionalFormatType | Description |
+|---|---|
+| `GreaterThan` | Highlights cells with values greater than a specified threshold |
+| `LessThan` | Highlights cells with values less than a specified threshold |
+| `Between` | Highlights cells with values falling within a specified range |
+| `EqualTo` | Highlights cells with values equal to a specified value |
+| `ContainsText` | Highlights cells containing specified text |
+| `DateOccur` | Highlights cells containing dates matching a specified time period |
+| `Duplicate` | Highlights cells with duplicate values within the evaluated range |
+| `Unique` | Highlights cells with unique values within the evaluated range |
+
+**Available Preset Color Styles**
+
+| ConditionalFormatColor | Background Color | Text Color |
+|---|---|---|
+| `GreenFillWithDarkGreenText` | Green | Dark Green |
+| `YellowFillWithDarkYellowText` | Yellow | Dark Yellow |
+| `RedFillWithDarkRedText` | Red | Dark Red |
+| `RedFill` | Red | Default |
+| `RedText` | Default | Red |
+
+**Code Example**
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="HighlightHighScores">Highlight Scores > 80</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/StudentScores.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    private async Task HighlightHighScores()
+    {
+        var rule = new ConditionalFormatRule
+        {
+            ConditionalFormatType = ConditionalFormatType.GreaterThan,
+            PrimaryValue = "80",
+            Range = "B2:B50",
+            ConditionalFormatColor = ConditionalFormatColor.GreenFillWithDarkGreenText
+        };
+
+        await SpreadsheetInstance.ConditionalFormatAsync(rule);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Top/Bottom Rules
+
+Top/Bottom rules apply formatting based on statistical rankings and averages within a range. This rule type is beneficial for identifying performance outliers, top performers, or values that deviate from the average. These rules are particularly useful for large datasets where manual identification would be time-consuming.
+
+**Supported Top/Bottom Rule Types**
+
+| ConditionalFormatType | Description |
+|---|---|
+| `Top10Items` | Highlights the top N items in the range by value rank |
+| `Bottom10Items` | Highlights the bottom N items in the range by value rank |
+| `Top10Percentage` | Highlights the top N percent of items in the range by value |
+| `Bottom10Percentage` | Highlights the bottom N percent of items in the range by value |
+| `AboveAverage` | Highlights cells with values above the average of the range |
+| `BelowAverage` | Highlights cells with values below the average of the range |
+
+**Code Example**
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="HighlightTopPerformers">Highlight Top 10 Sales</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/SalesData.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    private async Task HighlightTopPerformers()
+    {
+        var rule = new ConditionalFormatRule
+        {
+            ConditionalFormatType = ConditionalFormatType.Top10Items,
+            Range = "C2:C100",
+            ConditionalFormatColor = ConditionalFormatColor.GreenFillWithDarkGreenText
+        };
+
+        await SpreadsheetInstance.ConditionalFormatAsync(rule);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Data Bars
+
+Data bars provide in-cell graphical representation of values, where the bar length corresponds to the cell value relative to the range. The longest bar represents the highest value, while shorter bars represent lower values. Data bars are particularly effective for visualizing trends and comparing values across a large dataset without requiring separate chart elements.
+
+**Supported Data Bar Types**
+
+| ConditionalFormatType | Bar Color |
+|---|---|
+| `BlueDataBar` | Blue |
+| `GreenDataBar` | Green |
+| `RedDataBar` | Red |
+| `OrangeDataBar` | Orange |
+| `LightBlueDataBar` | Light Blue |
+| `PurpleDataBar` | Purple |
+
+**Code Example**
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="ApplyRevenueDataBars">Visualize Revenue</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/FinancialData.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    private async Task ApplyRevenueDataBars()
+    {
+        var rule = new ConditionalFormatRule
+        {
+            ConditionalFormatType = ConditionalFormatType.GreenDataBar,
+            Range = "D2:D25"
+        };
+
+        await SpreadsheetInstance.ConditionalFormatAsync(rule);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Color Scales
+
+Color scales apply a gradient of colors to cells based on their values within the range. The color intensity corresponds to the cell value: minimum values receive one color, maximum values receive another color, and intermediate values receive proportional color blends. This approach provides intuitive visual representation of value distributions across a dataset.
+
+**Supported Color Scale Formats**
+
+**Three-Color Scales (Min → Mid → Max)**
+
+| ConditionalFormatType | Scale |
+|---|---|
+| `GreenYellowRedColorScale` | Green → Yellow → Red |
+| `RedYellowGreenColorScale` | Red → Yellow → Green |
+| `GreenWhiteRedColorScale` | Green → White → Red |
+| `RedWhiteGreenColorScale` | Red → White → Green |
+
+**Two-Color Scales (Min → Max)**
+
+| ConditionalFormatType | Scale |
+|---|---|
+| `BlueWhiteRedColorScale` | Blue → White → Red |
+| `RedWhiteBlueColorScale` | Red → White → Blue |
+| `GreenWhiteColorScale` | Green → White |
+| `WhiteGreenColorScale` | White → Green |
+| `RedWhiteColorScale` | Red → White |
+| `WhiteRedColorScale` | White → Red |
+| `GreenYellowColorScale` | Green → Yellow |
+| `YellowGreenColorScale` | Yellow → Green |
+
+**Code Example**
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="ApplyTemperatureScale">Apply Temperature Color Scale</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/TemperatureData.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    private async Task ApplyTemperatureScale()
+    {
+        var rule = new ConditionalFormatRule
+        {
+            ConditionalFormatType = ConditionalFormatType.BlueWhiteRedColorScale,
+            Range = "B2:B30"
+        };
+
+        await SpreadsheetInstance.ConditionalFormatAsync(rule);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Icon Sets
+
+Icon sets display symbolic representations of cell values, where different icons or icon variations indicate value ranges or performance levels. Each icon represents a percentile range or performance tier, making it easy to quickly identify value categories at a glance. Icon sets are effective for status reporting, performance ratings, and categorical analysis.
+
+**Supported Icon Sets by Category**
+
+**Arrow Icons (Directional Indicators)**
+
+| ConditionalFormatType | Color | Levels |
+|---|---|---|
+| `ThreeArrows` | Colored (↑ ↔ ↓) | 3 |
+| `ThreeArrowsGray` | Grayscale (↑ ↔ ↓) | 3 |
+| `FourArrows` | Colored (↑↑ ↑ ↓ ↓↓) | 4 |
+| `FourArrowsGray` | Grayscale (↑↑ ↑ ↓ ↓↓) | 4 |
+| `FiveArrows` | Colored (↑↑ ↑ ↔ ↓ ↓↓) | 5 |
+| `FiveArrowsGray` | Grayscale (↑↑ ↑ ↔ ↓ ↓↓) | 5 |
+
+**Traffic Light Icons (Status Indicators)**
+
+| ConditionalFormatType | Style | Levels |
+|---|---|---|
+| `ThreeTrafficLights1` | Standard Lights | 3 |
+| `ThreeTrafficLights2` | Alternate Lights | 3 |
+| `FourTrafficLights` | Four Lights | 4 |
+
+**Symbol and Sign Icons (Status and Warning)**
+
+| ConditionalFormatType | Icon Type | Levels |
+|---|---|---|
+| `ThreeSigns` | Caution Signs | 3 |
+| `ThreeSymbols` | Colored Symbols (✓ ○ ✗) | 3 |
+| `ThreeSymbols2` | Alternative Symbols | 3 |
+
+**Rating and Quality Icons**
+
+| ConditionalFormatType | Icon Type | Levels |
+|---|---|---|
+| `FourRating` | Stars (☆☆☆☆ to ★★★★) | 4 |
+| `FiveRating` | Stars (☆☆☆☆☆ to ★★★★★) | 5 |
+| `FiveBoxes` | Boxes/Quarters | 5 |
+| `FiveQuarters` | Quarter Blocks | 5 |
+
+**Categorical Icons**
+
+| ConditionalFormatType | Icon Type | Levels |
+|---|---|---|
+| `ThreeFlags` | Flag Symbols | 3 |
+| `ThreeTriangles` | Triangles | 3 |
+| `ThreeStars` | Stars | 3 |
+| `FourRedToBlack` | Progressive Colors | 4 |
+
+**Code Example**
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="ApplyPerformanceRating">Apply Performance Icons</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/EmployeePerformance.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    private async Task ApplyPerformanceRating()
+    {
+        var rule = new ConditionalFormatRule
+        {
+            ConditionalFormatType = ConditionalFormatType.FiveRating,
+            Range = "E2:E50"
+        };
+
+        await SpreadsheetInstance.ConditionalFormatAsync(rule);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Custom Format
+
+Custom formatting allows advanced styling of cells that meet specific conditions by directly setting properties such as font color, background color, font style (bold/italic), font weight, and underline effects. This provides fine-grained control over visual appearance beyond preset color schemes.
+
+**Supported Custom Format Properties**
+
+- **Color**: Font/text color
+- **Background Color**: Cell background fill color
+- **Font Style**: Italic styling
+- **Font Weight**: Bold styling
+- **Underline**: Text underline decoration
+
+N> Custom format styling is supported only for **Highlight Cells Rules** and **Top/Bottom Rules** conditional format types. Data bars, color scales, and icon sets do not support custom formatting.
+
+**Code Example**
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="ApplyCustomFormat">Apply Custom Format Rule</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/SalesData.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    private async Task ApplyCustomFormat()
+    {
+        var rule = new ConditionalFormatRule
+        {
+            ConditionalFormatType = ConditionalFormatType.GreaterThan,
+            PrimaryValue = "50000",
+            Range = "B2:B100",
+            // Custom styling properties
+            FontColor = "#FFFFFF",         // White text
+            BackgroundColor = "#0070C0"    // Blue background
+        };
+
+        await SpreadsheetInstance.ConditionalFormatAsync(rule);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Clearing Conditional Formats
+
+Conditional formatting rules can be removed from cells when no longer needed. This allows for dynamic rule management and prevents formatting conflicts when rules need to be updated or replaced.
+
+Conditional formatting can be cleared through the UI or programmatically:
+
+**Clearing conditional formats via UI**
+
+- Select the cell range containing the conditional formats to remove
+- Click the **Conditional Formatting** button in the **Home** tab
+- Select **Clear Rules** and choose:
+   - **Clear Rules from Selected Cells** - Remove rules only from the selected range
+   - **Clear Rules from Entire Sheet** - Remove all conditional formatting from the worksheet
+
+**Clearing conditional format programmatically**
+
+Use the `ClearConditionalFormatsAsync()` method to remove conditional formatting rules from specific cells or ranges.
+
+| Parameter | Type | Description |
+| -- | -- | -- |
+| cellAddress | string (Optional) | The address of the target cell or range (e.g., `"A1:B10"`). If omitted, rules are cleared from the current selection. |
+
+**Code Example**
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="ApplyHighlightRule">Highlight Values</button>
+<button @onclick="ClearFormatting">Clear Formatting</button>
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    private async Task ApplyHighlightRule()
+    {
+        var rule = new ConditionalFormatRule
+        {
+            ConditionalFormatType = ConditionalFormatType.GreaterThan,
+            PrimaryValue = "100",
+            Range = "A1:A10",
+            ConditionalFormatColor = ConditionalFormatColor.GreenFillWithDarkGreenText
+        };
+
+        await SpreadsheetInstance.ConditionalFormatAsync(rule);
+    }
+
+    private async Task ClearFormatting()
+    {
+        // Clear conditional formatting from the specified range
+        await SpreadsheetInstance.ClearConditionalFormatsAsync("A1:A10");
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Conditional Formatting Limitations
+
+The following operations have limitations when working with conditional formatting in the Blazor Spreadsheet component:
+
+- **Row/Column Insertion**: Inserting rows or columns within a range containing conditional formatting may not automatically expand the formatting to include the new rows/columns
+- **Formula-Based Rules**: Formula-based conditional formatting rules are not currently supported; rules must be based on static values or built-in rule types
+- **Cut and Paste**: Conditional formatting rules applied to cells are not copied when performing cut and paste operations on those cells
+- **Custom Rule Definitions**: Creating fully custom rule types beyond the predefined rule types is not supported
 
 ### Limitations
 
-*   `Conditional formatting` is currently not supported in the Blazor Spreadsheet component.
-*   A custom number format UI dialog is not available, custom formats must be applied using the API.
+*  A custom number format UI dialog is not available, custom formats must be applied using the API.
 *  After inserting a row or column, border expansion is not currently supported.

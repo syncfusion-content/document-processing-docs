@@ -184,6 +184,51 @@ Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 
 Button form fields will be rendered in the PDF viewer. But the PDF viewer supports only the `GoTo` actions that navigates to a particular location in the PDF document alone. Other types of button actions are not supported.
 
+## Flatten form fields only on save
+
+The [FlattenOnSave](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_FlattenOnSave) property converts form fields into non-editable content only when the PDF document is saved. This means the form fields remain editable while the document is open, and are flattened (made part of the document content) during the save operation, preventing any further modification afterward.
+
+### Flatten specific form fields
+
+You can selectively flatten specific form fields, such as signature fields, by iterating through the form field collection.
+
+{% tabs %}
+{% highlight c# %}
+
+foreach (var item in pdfViewer.FormFields)
+{
+    //Iterate Only signature form field and flatten it
+    if (item is SignatureFormField signature)
+    {
+        item.FlattenOnSave = true;
+    }
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+### Controlling form field editing at the viewer Level
+
+The `AllowEditFormFields` property is used to control form field editing at the viewer level. By default, editing is enabled, allowing users to interact with all supported form fields. When this property is set to false, all form fields become non-editable, making the document effectively read-only without modifying individual field properties. This behavior applies to all form field types and takes effect immediately on the loaded document.
+
+You can disable editing programmatically using the following:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfPdfViewer 
+    x:Name="PdfViewer"
+    AllowEditFormFields="False" />
+{% endhighlight %}
+
+{% highlight c# %}
+// Disable form field editing
+pdfViewer.AllowEditFormFields = false;
+{% endhighlight %}
+{% endtabs %}
+
+This property supports dynamic changes at runtime, meaning you can enable or disable form field editing at the viewer level based on requirements, and the changes will be applied instantly.
+
+N>Setting AllowEditFormFields to false does not modify the ReadOnly property of individual form fields. It acts as an additional layer of control, and a field remains non-editable if either its ReadOnly property is true or viewer-level editing is disabled
 ## See Also
 - [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview)
 - [Form Fields Collection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-collection)
