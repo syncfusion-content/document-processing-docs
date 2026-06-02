@@ -24,7 +24,7 @@ Before installing Blazor UI Builder Skill with PDF Viewer, ensure the following:
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
 - **Agent Package Manager** (APM) installed — follow [Installation Guidelines](https://microsoft.github.io/apm/quickstart/#1-install-apm)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
+- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
@@ -147,7 +147,7 @@ To start using the skill:
 
 > For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
-**Examples Prompts:**
+**Example Prompts:**
 
 {% promptcards %}
 {% promptcard Legal Document Review Interface %}
@@ -158,11 +158,11 @@ Design a resume review interface using the PDF viewer for candidate CVs. Add a r
 {% endpromptcard %}
 {% endpromptcards %}
 
-* Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
+Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
 ## Best Practices
 
-Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready result:
+Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready results:
 
 - **Stay consistent** - Maintain consistent file organization, naming conventions, and coding standards throughout your project.
 - **Use advanced AI models** - For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.

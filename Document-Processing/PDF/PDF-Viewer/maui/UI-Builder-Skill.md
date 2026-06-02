@@ -123,7 +123,7 @@ For details on supported deployment targets, refer to the [documentation](https:
 
 1. **Intent Analysis** — Parse the user's prompt to identify control types, layouts, and high-level UI structure intent.
 2. **Project Detection** — Automatically detects project framework, platform targets, package manager, existing themes and PDF Viewer configuration.
-3. **Component Mapping** — Map intent to Syncfusion® PDF Viewer and  MAUI controls, including required feature modules.
+3. **Component Mapping** — Map intent to Syncfusion® PDF Viewer and MAUI controls, including required feature modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
    - Design system (Material Design 3, or Custom theme). If no themes detected in the existing project, Material Design 3 is shown as the default option—proceed with this or change the theme as preferred.
@@ -157,7 +157,7 @@ To start using the skill:
 
 3. Start prompting the agent with a clear description of your UI requirements.
 
-Examples Prompts:
+Example Prompts:
 
 {% promptcards %}
 {% promptcard Knowledge Base Article Viewer %}
@@ -172,7 +172,7 @@ Generated code follows best practices with accessible UI, responsive mobile-firs
 
 ## Best Practices
 
-Follow these guidelines to get the most out of UI Builder with PDF Viewer and ensure high-quality production-ready result:
+Follow these guidelines to get the most out of UI Builder with PDF Viewer and ensure high-quality production-ready results:
 
 - **Stay consistent:** Maintain consistent file organization, naming conventions, and coding standards throughout your project.
 - **Use advanced AI models:** For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
