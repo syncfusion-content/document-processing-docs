@@ -13,7 +13,49 @@ The frequently asked questions about working with tables in Word documents using
 
 You can create new table in a Word document and copy the contents from data table. The following code illustrates how to insert a data table as table in a Word document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates new Word document
+WordDocument document = new WordDocument();
+//Creates new data set and data table
+DataSet dataset = new DataSet();
+GetDataTable(dataset);
+DataTable datatable = new DataTable();
+datatable = dataset.Tables[0];
+//Adds new section
+IWSection section = document.AddSection();
+//Adds new table
+IWTable table = section.AddTable();
+//Adds new row to the table
+WTableRow row = table.AddRow();
+foreach (DataColumn datacolumn in datatable.Columns)
+{
+    //Sets the column names for the table from the data table column names and cell width
+    WTableCell cell = row.AddCell();
+    cell.AddParagraph().AppendText(datacolumn.ColumnName);
+    cell.Width = 150;
+}
+//Iterates through data table rows
+foreach (DataRow datarow in datatable.Rows)
+{
+    //Adds new row to the table
+    row = table.AddRow(true, false);
+    foreach (object datacolumn in datarow.ItemArray)
+    {
+        //Adds new cell
+        WTableCell cell = row.AddCell();
+        //Adds contents from the data table to the table cell
+        cell.AddParagraph().AppendText(datacolumn.ToString());
+    }
+}
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates new Word document
@@ -96,6 +138,31 @@ The following code illustrates the method to get data table.
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+private void GetDataTable(DataSet dataset)
+{
+    // List of syncfusion products.
+    string[] products = { "DocIO", "PDF", "XlsIO" };
+    // Adds new Tables to the data set.
+    DataRow row;
+    dataset.Tables.Add();
+    // Adds fields to the Products table.
+    dataset.Tables[0].TableName = "Products";
+    dataset.Tables[0].Columns.Add("ProductName");
+    dataset.Tables[0].Columns.Add("Binary");
+    dataset.Tables[0].Columns.Add("Source");
+    // Inserts values to the tables.
+    foreach (string product in products)
+    {
+        row = dataset.Tables["Products"].NewRow();
+        row["ProductName"] = string.Concat("Essential ", product);
+        row["Binary"] = "$895.00";
+        row["Source"] = "$1,295.00";
+        dataset.Tables["Products"].Rows.Add(row);
+    }
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 private void GetDataTable(DataSet dataset)
 {
@@ -154,6 +221,22 @@ An HTML string can be inserted to the Word document at text body or paragraph. T
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads the template document
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx);
+//Gets the text body
+WTextBody textbody = document.Sections[0].Body;
+//Html string that represents table with two rows and two columns
+string htmlString = " <table border='1'><tr><td><p>First Row First Cell</p></td><td><p>First Row Second Cell</p></td></tr><tr><td><p>Second Row First Cell</p></td><td><p>Second Row Second Cell</p></td></tr></table> ";
+//Inserts the string to the text body
+textbody.InsertXHTML(htmlString);
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
 WordDocument document = new WordDocument("Template.docx");
@@ -191,6 +274,35 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Each cell in the table can have its own width. The following code illustrates how to set the width of the cell.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates new word document
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx);
+//Gets the text body of first section
+WTextBody textbody = document.Sections[0].Body;
+//Gets the table
+IWTable table = textbody.Tables[0];
+//Iterates through table rows
+foreach (WTableRow row in table.Rows)
+{
+    //Sets width for cells
+    for (int i = 0; i < row.Cells.Count; i++)
+    {
+        WTableCell cell = row.Cells[i];
+        if (i % 2 == 0)
+            //Sets width as 100 for cells in even column
+            cell.Width = 100;
+        else
+            //Sets width as 150 for cell in odd column
+            cell.Width = 150;
+    }
+}
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates new word document
@@ -255,6 +367,23 @@ You can position a table in a Word document by setting position properties. The 
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads the template document
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx);
+//Gets the text body of first section
+WTextBody textbody = document.Sections[0].Body;
+//Gets the table
+IWTable table = textbody.Tables[0];
+//Sets the horizontal and vertical position for table
+table.TableFormat.Positioning.HorizPosition = 40;
+table.TableFormat.Positioning.VertPosition = 100;
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
 WordDocument document = new WordDocument("Template.docx");
@@ -294,6 +423,29 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The contents of the table cell can be in vertical or horizontal direction. Each cell content can have different text direction. The following code illustrates how to set the text direction for the text in the table.
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads the template document
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx);
+//Gets the text body of first section
+WTextBody textbody = document.Sections[0].Body;
+//Gets the table
+IWTable table = textbody.Tables[0];
+//Iterates through table rows
+foreach (WTableRow row in table.Rows)
+{
+    foreach (WTableCell cell in row.Cells)
+    {
+        //Sets the text direction for the contents
+        cell.CellFormat.TextDirection = Syncfusion.DocIO.DLS.TextDirection.Vertical;
+    }
+}
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
@@ -349,7 +501,7 @@ The following code demonstrates how to get the row height and height type from a
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 // Access the instance of the first row in the table
 WTableRow row = table.Rows[0];
 // Get the row height 
@@ -358,7 +510,16 @@ float rowHeight = row.Height;
 TableRowHeightType rowHeightType = row.HeightType;
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Access the instance of the first row in the table
+WTableRow row = table.Rows[0];
+// Get the row height 
+float rowHeight = row.Height;
+// Get the row height type
+TableRowHeightType rowHeightType = row.HeightType;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 ' Access the instance of the first row in the table
 Dim row As WTableRow = table.Rows(0)
 ' Get the row height 
@@ -495,9 +656,19 @@ Yes, you can access and edit the content of tables in a Word document using seve
 You can access a table by its index in the document. Use the get(index) method to retrieve the table from the collection based on its position. Here’s an example:
 
 {% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Access the second table in the last section
+IWTable table = document.LastSection.Tables[1];
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 // Access the second table in the last section
 IWTable table = document.LastSection.Tables[1];
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Access the second table in the last section
+Dim table As IWTable = document.LastSection.Tables(1)
 {% endhighlight %}
 {% endtabs %}
 
@@ -506,8 +677,9 @@ IWTable table = document.LastSection.Tables[1];
 To work with all tables in the document, you can use the [FindAllItemsByProperty](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAllItemsByProperty_Syncfusion_DocIO_DLS_EntityType_System_String_System_String_) API to retrieve all tables, then iterate through them:
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-WordDocument document = new WordDocument("Data\\Input.docx");
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx);
 // Find all tables in the document
 List<Entity> tables = document.FindAllItemsByProperty(EntityType.Table, null, null);
 foreach (Entity entity in tables)
@@ -525,6 +697,43 @@ foreach (Entity entity in tables)
     }
 }
 {% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+WordDocument document = new WordDocument("Input.docx");
+// Find all tables in the document
+List<Entity> tables = document.FindAllItemsByProperty(EntityType.Table, null, null);
+foreach (Entity entity in tables)
+{
+    WTable table = (WTable)entity;
+    foreach (WTableRow row in table.Rows)
+    {
+        foreach (WTableCell cell in row.Cells)
+        {
+            foreach (WParagraph paragraph in cell.Paragraphs)
+            {
+                // Perform your manipulation here
+            }
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Load the Word document
+Dim document As New WordDocument("Input.docx")
+' Find all tables in the document
+Dim tables As List(Of Entity) = document.FindAllItemsByProperty(EntityType.Table, Nothing, Nothing)
+For Each entity As Entity In tables
+    Dim table As WTable = CType(entity, WTable)
+    For Each row As WTableRow In table.Rows
+        For Each cell As WTableCell In row.Cells
+            For Each paragraph As WParagraph In cell.Paragraphs
+                ' Perform your manipulation here
+            Next
+        Next
+    Next
+Next
+{% endhighlight %}
 {% endtabs %} 
 
 **Approach 3: Access a Table by Alternate Text**
@@ -532,9 +741,19 @@ foreach (Entity entity in tables)
 If your table has a unique Alternate Text (Title), you can access it directly using FindItemByProperty API:
 
 {% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Find the first table in the document with the title "Table1"
+WTable table = document.FindItemByProperty(EntityType.Table, "Title", "Table1") as WTable;
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 // Find the first table in the document with the title "Table1"
 WTable table = document.FindItemByProperty(EntityType.Table, "Title", "Table1") as WTable;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Find the first table in the document with the title "Table1"
+Dim table As WTable = TryCast(document.FindItemByProperty(EntityType.Table, "Title", "Table1"), WTable)
 {% endhighlight %}
 {% endtabs %}
  

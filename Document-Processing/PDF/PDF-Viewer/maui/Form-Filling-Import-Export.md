@@ -62,12 +62,22 @@ The following example exports form data to an XFDF file in the application's dat
 
 {% tabs %}
 {% highlight C# %}
-void ExportFormData()
-{
-    string targetFile = Path.Combine(FileSystem.Current.AppDataDirectory, "ExportedFormData.xfdf");
-    FileStream fileStream = File.Create(targetFile);
 
-    pdfViewer.ExportFormData(fileStream, Syncfusion.Pdf.Parsing.DataFormat.XFdf);
+SfPdfViewer PdfViewer = new SfPdfViewer();
+ PdfViewer.LoadDocumentAsync(PdfStream);
+
+// Add the SfPdfViewer instance to the grid's children collection to ensure it's part of the visual tree.
+ myGrid.Children.Add(PdfViewer);
+ 
+// Subscribe to the DocumentLoaded event to handle operations once the PDF document is fully loaded.
+ PdfViewer.DocumentLoaded += PdfViewer_DocumentLoaded;
+private void PdfViewer_DocumentLoaded(object? sender, EventArgs? e)
+{
+    using (var fileStream = File.Create("D://SavedForm.json"))
+    {
+        if(sender is SfPdfViewer pdfViewer)
+            pdfViewer.ExportFormData(fileStream, Syncfusion.Pdf.Parsing.DataFormat.Json);
+    }
 }
 {% endhighlight %}
 {% endtabs %}

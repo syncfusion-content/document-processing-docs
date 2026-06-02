@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # .NET MAUI PDF Viewer (SfPdfViewer) Overview
 
-Build powerful PDF experiences into your .NET MAUI app with the [SfPdfViewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) control. Whether you need to display documents for review, let users fill out forms, redact sensitive data, or annotate content — the PDF Viewer gives you a full-featured, cross-platform solution that works on Android, iOS, macOS, and Windows from a single codebase.
+Build powerful PDF experiences into your .NET MAUI app with the [SfPdfViewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) control. Whether you need to display documents for review, let users fill out forms, redact sensitive data, or annotate content — the PDF Viewer gives you a full-featured, cross-platform solution that works on Android, iOS, macOS, and Windows from a single code base.
 
 ## In This Section
 
@@ -19,13 +19,13 @@ Build powerful PDF experiences into your .NET MAUI app with the [SfPdfViewer](ht
 | [Getting Started](https://help.syncfusion.com/maui/pdf-viewer/getting-started) | Install the package, configure the handler, and load your first PDF document. |
 | [Open a Document](https://help.syncfusion.com/maui/pdf-viewer/open-a-document) | Load documents from streams, local storage, URLs, Base64 strings, or password-protected files. |
 | [Annotations Overview](https://help.syncfusion.com/maui/pdf-viewer/annotations-overview) | Add, edit, import, and export highlights, shapes, ink, stamps, sticky notes, and more. |
-| [Form Filling Overview](https://help.syncfusion.com/maui/pdf-viewer/form-filling-overview) | Fill, edit, import, and export PDF form fields including text boxes, checkboxes, and signatures. |
+| [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview) | Fill, edit, import, and export PDF form fields including text boxes, checkboxes, and signatures. |
 | [Text Search](https://help.syncfusion.com/maui/pdf-viewer/text-search) | Search for text and navigate all occurrences in a document. |
 | [Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document) | Save modified documents to a file stream, with optional annotation flattening. |
 | [Toolbar](https://help.syncfusion.com/maui/pdf-viewer/toolbar) | Reference guide to all built-in toolbar names and toolbar item names. |
-| [Toolbar Customization](https://help.syncfusion.com/maui/pdf-viewer/toolbar-customization) | Show, hide, add, remove, and reorder toolbar items. |
+| [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization) | Show, hide, add, remove, and reorder toolbar items. |
 | [UI Customization](https://help.syncfusion.com/maui/pdf-viewer/ui-customization) | Customize the appearance of the PDF Viewer control. |
-| [Redaction](https://help.syncfusion.com/maui/pdf-viewer/redaction) | Permanently remove sensitive content from PDF documents. |
+| [Redaction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/redaction) | Permanently remove sensitive content from PDF documents. |
 | [Electronic Signature](https://help.syncfusion.com/maui/pdf-viewer/signature) | Add handwritten, typed, or image-based signatures. |
 | [Keyboard Shortcuts](https://help.syncfusion.com/maui/pdf-viewer/keyboard-shortcuts) | Keyboard shortcuts available on desktop platforms. |
 | [Localization](https://help.syncfusion.com/maui/pdf-viewer/localization) | Translate all built-in strings into any supported language. |
@@ -62,6 +62,6 @@ Build powerful PDF experiences into your .NET MAUI app with the [SfPdfViewer](ht
 * **Localization** - All static text within the PDF Viewer can be localized to any supported language.
 
 ## See Also
-- [Getting Started](../getting-started)
-- [Annotations Overview](../annotations-overview)
-- [Form Filling Overview](../form-filling-overview)
+- [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/getting-started)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview)

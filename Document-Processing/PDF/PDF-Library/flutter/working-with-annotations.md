@@ -18,7 +18,8 @@ You can [`add`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/
 
 You can add a rectangle annotation to the page using the PdfRectangleAnnotation class. The following code example explains this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -44,10 +45,12 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 To add annotations to an existing PDF document, use the following code example.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -74,6 +77,7 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Supported annotation types
 
@@ -83,7 +87,8 @@ This annotation displays a rectangle/square on the page based on the input bound
 
 The PdfRectangleAnnotation is used to create and set the properties of the Rectangle annotation.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -111,6 +116,7 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Ellipse Annotation
 
@@ -118,7 +124,8 @@ This annotation displays an ellipse/circle on the page based on the input bounds
 
 The PdfEllipseAnnotation is used to create and set the properties of the Ellipse annotation.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -146,6 +153,7 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Line Annotation
 
@@ -153,7 +161,8 @@ This annotation displays a single straight line on the page. When you open it, i
 
 The PdfLineAnnotation is used to create and set the properties of the Line annotation.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -189,6 +198,7 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Polygon Annotation
 
@@ -196,7 +206,8 @@ This annotation displays a polygon on the page based on the input coordinate poi
 
 The PdfPolygonAnnotation is used to create and set the properties of the Polygon annotation.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -223,6 +234,7 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Document Link Annotation
 
@@ -230,7 +242,8 @@ This annotation is used to navigate to a specific destination within the documen
 
 The [`PdfDocumentLinkAnnotation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocumentLinkAnnotation-class.html) is used to add a document link annotation in the PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -254,6 +267,7 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ### URI Annotation
 
@@ -261,7 +275,8 @@ The URI annotation is used to navigate to a particular web URI.
 
 The following code example explains how to add URI annotation in a PDF document using the [`PdfUriAnnotation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfUriAnnotation-class.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -284,14 +299,15 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Text Web Link Annotation
 
 This annotation is used to navigate to a particular web URI while clicking on the link text.
 
 The following code example explains how to add the Text Web Link annotation in a PDF document using the PdfTextWebLinkAnnotation.
-
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -319,12 +335,14 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Text Markup Annotation
 
 The PdfTextMarkupAnnotation class is used to annotate the text in a PDF document with various formats, including highlight, squiggly, strikeout, and underline. The following code demonstrates how to highlight text in a PDF document. 
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 PdfDocument document = PdfDocument();
@@ -356,10 +374,12 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 To add text markup annotation to an existing PDF document, use the following code example.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Load the PDF document.
 PdfDocument document =
@@ -387,6 +407,7 @@ File('output.pdf').writeAsBytesSync(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Pop-up Annotation
 
@@ -396,7 +417,8 @@ It typically does not appear alone but is associated with markup annotation, its
 
 PdfPopupAnnotation is used to add pop-up annotation in a PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 PdfDocument document = PdfDocument();
@@ -418,10 +440,12 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 To add popup annotation to an existing PDF document, use the following code example.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Load the PDF document.
 PdfDocument document =
@@ -443,6 +467,7 @@ File('output.pdf').writeAsBytesSync(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Flatten annotation
 
@@ -450,7 +475,8 @@ Annotations can be flattened by removing the existing annotation and replacing i
 
 This can be achieved by enabling the flattenAllAnnotations method . Please refer to the sample for flattening all the annotations in the PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -476,10 +502,12 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 To flatten the specific annotation in the PDF document, use the following code example.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -516,13 +544,15 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Modifying the annotations
 
 The Syncfusion<sup>&reg;</sup>
   Flutter PDF allows you to modify the annotation of an existing document. The following code explains this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -550,12 +580,14 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Removing annotations from an existing PDF
 
 You can remove the annotation from the annotation collection, represented by the [`PdfAnnotationCollection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfAnnotationCollection-class.html) of the page. The following code explains this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -577,6 +609,7 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Annotation Flags
 
@@ -633,7 +666,8 @@ If set, invert the interpretation of the noView flat for certain events.<br/><br
 
 The following code example illustrates how to set annotation flags in the PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 PdfDocument document = PdfDocument();
@@ -661,10 +695,12 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 To add annotation flags to an existing annotation, use the following code example.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Load the PDF document.
 PdfDocument document =
@@ -682,12 +718,14 @@ File('output.pdf').writeAsBytesSync(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
  
 ## Importing annotations from FDF file
 
 FDF stands for Forms Data Format. FDF is a file format for representing annotations present in a PDF document. You can import annotation data from the FDF file to PDF using the importAnnotation method in the PdfDocument class.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     //Load an existing PDF document.
     PdfDocument document =
@@ -701,12 +739,14 @@ FDF stands for Forms Data Format. FDF is a file format for representing annotati
     document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Importing annotations from XFDF file
 
 XFDF stands for XML Forms Data Format. XFDF is the XML version of FDF for representing annotations that are contained in a PDF document. You can import annotation data from the XFDF file to PDF using the importAnnotation method in PdfDocument class.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     //Load an existing PDF document.
     PdfDocument document =
@@ -720,12 +760,14 @@ XFDF stands for XML Forms Data Format. XFDF is the XML version of FDF for repres
     document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Importing annotations from JSON file
 
 JSON stands for JavaScript Object Notation. It is a collection of key or value pairs, and it is used for serializing and transmitting the structured data over a network connection. You can import the annotation data from the JSON file to PDF using the importAnnotation method in PdfDocument class.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     //Load an existing PDF document.
     PdfDocument document =
@@ -739,12 +781,14 @@ JSON stands for JavaScript Object Notation. It is a collection of key or value p
     document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Exporting annotations to FDF file
 
 To export annotation data to the FDF file from the PDF document, you can use the exportAnnotation method in PdfDocument class.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     //Load an existing PDF document.
     PdfDocument document =
@@ -757,12 +801,14 @@ To export annotation data to the FDF file from the PDF document, you can use the
     document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Exporting annotations to XFDF file
 
 To export annotation data to the XFDF file from the PDF document, you can use the exportAnnotation method in PdfDocument class.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     //Load an existing PDF document.
     PdfDocument document =
@@ -775,12 +821,14 @@ To export annotation data to the XFDF file from the PDF document, you can use th
     document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Exporting annotations to JSON file
 
 To export annotation data to the JSON file from the PDF document, you can use the exportAnnotation method in PdfDocument class.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     //Load an existing PDF document.
     PdfDocument document =
@@ -793,3 +841,4 @@ To export annotation data to the JSON file from the PDF document, you can use th
     document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

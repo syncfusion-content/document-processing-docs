@@ -15,12 +15,12 @@ JavaScript Object Notation (JSON) is a lightweight data‑interchange format tha
 
 Refer to the following links for the assemblies and NuGet packages required on different platforms to extract data as a JSON file using the Smart Data Extractor library.
 
-* [Assemblies required for PDF to JSON Extraction](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/assemblies-required)
-* [NuGet packages required for PDF to JSON Extraction](https://help.syncfusion.com/document-processing/data-extraction/smart-data-extractor/net/nuget-packages-required)
+* [Assemblies required for PDF to JSON Extraction](/document-processing/data-extraction/net/Assemblies-required)
+* [NuGet packages required for PDF to JSON Extraction](/document-processing/data-extraction/net/Nuget-packages-required)
 
-## Extract Data as JSON from PDF Document
+## Extract Data as JSON from PDF or Image
 
-To extract form fields across a PDF document using the **ExtractDataAsJson** method of the **DataExtractor** class, refer to the following code example:
+To extract form fields across a PDF document using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
 
 {% tabs %} 
 
@@ -34,7 +34,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Extract data as JSON.
     string data = extractor.ExtractDataAsJson(stream);
@@ -54,7 +54,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();    
     //Extract data as JSON.
     string data = extractor.ExtractDataAsJson(stream);
@@ -66,12 +66,14 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
+N> If you want to extract data from an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-PDF/.NET).
 
 
 ## Extract Data from a Customized Page Range
 
-To extract data from a specific range of pages in a PDF document using the ExtractDataAsJson method of the DataExtractor class, refer to the following code example:
+To extract data from a specific range of pages in a PDF document using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
  
 {% tabs %} 
 
@@ -84,7 +86,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Set the page range for extraction (pages 1 to 3).
     extractor.PageRange = new int[,] { { 1, 3 } };
@@ -106,7 +108,7 @@ using System.Text;
 //Open the input PDF file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    //Initialize the Smart Data Extractor.
+    //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();  
     //Set the page range for extraction (pages 1 to 3).
     extractor.PageRange = new int[,] { { 1, 3 } };

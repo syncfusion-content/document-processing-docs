@@ -149,3 +149,8 @@ Private Sub PdfViewer_PageChanged(sender As Object, e As PageChangedEventArgs) H
 End Sub
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Toggle display of Page number](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/toggle-the-display-of-the-page-number)
+- [Disable thumbnail view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/disable-thumbnail-view)
+- [Customize the scrollbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/customize-the-scrollbar)
