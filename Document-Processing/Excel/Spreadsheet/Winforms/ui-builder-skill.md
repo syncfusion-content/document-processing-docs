@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WinForms UI Builder Skills with Spreadsheet AI Assistant|Syncfusion®
+title: WinForms UI Builder Skill with Spreadsheet AI Assistants | Syncfusion®
 description: Install Syncfusion® WinForms UI Builder to generate production-ready Windows Forms controls with Spreadsheet from natural-language prompts.
 control: Spreadsheet
 platform: document-processing
@@ -8,9 +8,9 @@ documentation: ug
 keywords: WinForms UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® WinForms UI Builder Skills with Spreadsheet AI Assistant
+# Syncfusion® WinForms UI Builder Skill with Spreadsheet AI Assistants
 
-**Syncfusion® WinForms UI Builder Skills** is an AI-powered agent skill that accelerates WinForms Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® WinForms components. 
+**Syncfusion® WinForms UI Builder Skill** is an AI-powered agent skill that accelerates WinForms Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® WinForms components. 
 
 Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® Spreadsheet** and other WinForms components to deliver accurate and ready-to-use code.By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WinForms UI Builder helps you rapidly build scalable spreadsheet applications and user interfaces without leaving your development workflow.
 
@@ -104,7 +104,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the WinForms UI Builder.
 
-## How the Syncfusion® WinForms UI Builder Skills Works with Spreadsheet
+## How the Syncfusion® WinForms UI Builder Skill Works with Spreadsheet
 
 1. **Intent Analysis** — Parse the user's prompt to identify control types and high-level form layout intent.
 2. **Project Detection** — Automatically detects .NET framework (Framework, Core, or .NET 5+) and existing Syncfusion® configurations.
