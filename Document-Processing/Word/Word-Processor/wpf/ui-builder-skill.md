@@ -13,7 +13,7 @@ keywords: WPF UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
 **Syncfusion® WPF UI Builder Skill** is an AI-powered agent skill that accelerates WPF DOCX Editor development by transforming natural-language UI requirements into production-ready code using Syncfusion® WPF components.
 
 Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® DOCX Editor** and other WPF components to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WPF UI Builder helps you rapidly build scalable Document viewing applications and user interfaces without leaving your development workflow.
+By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WPF UI Builder helps you rapidly build scalable Document editing applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
@@ -159,6 +159,7 @@ Design a document dashboard interface using a DataGrid and a RichTextBox control
 Create a DataGrid with two columns:
 - The first column should display document names (e.g., Document1.docx, Document2.docx).
 - The second column should contain a **View** button for each row.
+
 When the **View** button is clicked, load the corresponding document from the application's local assets folder into the RichTextBox for viewing.
 Ensure the interaction between the DataGrid and editor is seamless, and maintain a clean, simple layout suitable for browsing and viewing documents efficiently.
 
