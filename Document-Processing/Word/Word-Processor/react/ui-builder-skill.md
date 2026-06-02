@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React UI Builder Skill with DOCX Editor for AI Assistants | Syncfusion®
+title: React UI Builder Skill with DOCX Editor | Syncfusion®
 description: Install Syncfusion® React UI Builder to generate production-ready React components with DOCX Editor from natural-language prompts.
 control: DOCX Editor
 platform: document-processing
