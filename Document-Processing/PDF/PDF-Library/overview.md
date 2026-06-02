@@ -11,25 +11,27 @@ keywords: PDF, SDK, Automation, API, create, read, write
 
 {% doccards %}
 
+{% doccard text="Blazor" link="/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor" icon="./NET/images/Blazor.svg" %}
+
+{% doccard text="JavaScript" link="/document-processing/pdf/pdf-library/javascript/create-pdf-document-javascript" icon="./NET/images/Javascript.svg" %}
+
 {% doccard text="ASP.NET Core" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core" icon="./NET/images/ASP.NET-Core.png" %}
 
 {% doccard text="ASP.NET MVC" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc" icon="./NET/images/ASP.NET-Mvc.svg" %}
 
-{% doccard text="Blazor" link="/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor" icon="./NET/images/Blazor.svg" %}
-
-{% doccard text="UWP" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-uwp" icon="./NET/images/UWP.svg" %}
-
-{% doccard text="Windows Forms" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms" icon="./NET/images/Windows-Forms.svg" %}
+{% doccard text=".NET MAUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui" icon="./NET/images/MAUI.svg" %}
 
 {% doccard text="WPF" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf" icon="./NET/images/WPF.svg" %}
 
-{% doccard text=".NET MAUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui" icon="./NET/images/MAUI.svg" %}
+{% doccard text="Windows Forms" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms" icon="./NET/images/Windows-Forms.svg" %}
 
 {% doccard text="WinUI" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui" icon="./NET/images/WinUI.png" %}
 
-{% doccard text="Flutter" link="/document-processing/pdf/pdf-library/flutter/getting-started" icon="./NET/images/Flutter.svg" %}
+{% doccard text="UWP" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-uwp" icon="./NET/images/UWP.svg" %}
 
-{% doccard text="JavaScript" link="/document-processing/pdf/pdf-library/javascript/create-pdf-document-javascript" icon="./NET/images/Javascript.svg" %}
+{% doccard text="Console" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-console" icon="./NET/images/NET.svg" %}
+
+{% doccard text="Flutter" link="/document-processing/pdf/pdf-library/flutter/getting-started" icon="./NET/images/Flutter.svg" %}
 
 {% doccard text="Linux" link="/document-processing/pdf/pdf-library/net/create-pdf-file-in-linux" icon="./NET/images/Linux.png" %}
 

@@ -389,7 +389,7 @@ To load an Excel file from `Google Drive` in the Blazor Spreadsheet, follow the 
 - [Google Cloud project](https://developers.google.com/workspace/guides/create-project) in the Google Cloud Console.
 - [Service account](https://cloud.google.com/iam/docs/service-accounts-create) within the GCP project.
 - [Service account key](https://cloud.google.com/iam/docs/keys-create-delete) (JSON) available on disk.
-- [Google Drive API enabled](https://console.cloud.google.com/apis/library/drive.googleapis.com) for the project.
+- [Google Drive API enabled](https://developers.google.com/drive/api/guides/enable-drive-api) for the project.
 - [Google Drive account](https://drive.google.com/) with access to the file to download.
 - [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3) NuGet package installed in your project to access Google Drive API.
 
@@ -512,7 +512,11 @@ To save the Spreadsheet content through the user interface, select the **File > 
 When a protected sheet or workbook is saved or downloaded, all associated settings - such as the protection password, unlocked cell ranges, and sheet options - are preserved in the Excel file. These settings remain active and are consistently maintained when the file is opened in other viewers like **Microsoft Excel** or **Google Sheets**, ensuring seamless protection across viewers. To know more about protection, refer [here](./protection#protect-sheet).
 
 ### Supported file formats
-The Spreadsheet component supports saving files in the Microsoft Excel (.xlsx) format.
+The Spreadsheet component supports saving files in the following formats:
+* Microsoft Excel (.xlsx)
+* Microsoft Excel 97-2003 (.xls)
+* Comma Separated Values (.csv)
+* Portable Document Format (.pdf)
 
 ### Save an Excel file programmatically
 
@@ -592,6 +596,151 @@ The [SaveAsStreamAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
         stream.CopyTo(fileStream);
     }
 }
+{% endhighlight %}
+{% endtabs %}
+
+### Save in different file formats
+
+The Blazor Spreadsheet component supports exporting spreadsheet data to multiple file formats, enabling flexibility in how data is shared and consumed. Each format has specific use cases and compatibility considerations, allowing developers to choose the optimal format based on downstream processing requirements or distribution needs.
+
+**Supported Save Formats:**
+
+| SaveType | File Extension | Description |
+|---|---|---|---|
+| `Xlsx` | `.xlsx` | Microsoft Excel 2007 and later format |
+| `Xls` | `.xls` | Microsoft Excel 97-2003 format |
+| `Csv` | `.csv` | Comma Separated Values format |
+| `Pdf` | `.pdf` | Portable Document Format |
+
+**Configuring File Format:**
+
+Specify the desired export format using the `SaveType` property within the [SaveOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SaveOptions.html) parameter. The format determines how the spreadsheet content is transformed and exported. Optional layout settings such as page orientation and scaling can be configured for PDF exports.
+
+The following code example demonstrates saving the spreadsheet in different formats:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button OnClick="SaveAsXlsx">Save as XLSX</button>
+<button OnClick="SaveAsCsv">Save as CSV</button>
+
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    // Save as Excel 2007 and later format (.xlsx)
+    public async Task SaveAsXlsx()
+    {
+        await SpreadsheetInstance.SaveAsync(new SaveOptions
+        {
+            SaveType = SaveType.Xlsx,
+            FileName = "Spreadsheet"
+        });
+    }
+
+    // Save as Comma Separated Values format (.csv)
+    public async Task SaveAsCsv()
+    {
+        await SpreadsheetInstance.SaveAsync(new SaveOptions
+        {
+            SaveType = SaveType.Csv,
+            FileName = "Spreadsheet"
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Save as PDF with layout settings
+
+PDF export from the Blazor Spreadsheet component supports customization of layout and presentation through the [PdfLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PdfLayoutSettings.html) property. These settings control how spreadsheet content is rendered on PDF pages, including page orientation, scaling behavior, and content distribution. By default, PDF documents are created in portrait orientation with standard scaling.
+
+**Available PDF Layout Settings:**
+
+| Property | Type | Default | Description |
+|---|---|---|---|
+| `Orientation` | `PdfPageOrientation` | `Portrait` | Controls page orientation: `Portrait` (8.5" × 11") or `Landscape` (11" × 8.5"). Choose Portrait for standard letter-sized documents or Landscape for wide data ranges. |
+| `FitSheetOnOnePage` | `bool` | `false` | Determines content scaling behavior: `true` scales content proportionally to fit entire sheet on single page; `false` allows content to span multiple pages using normal printing pagination. |
+
+**Layout Configuration Guide:**
+
+**Orientation Selection:**
+- **Portrait**: Default orientation, ideal for documents with standard column counts. Maximizes vertical space for data rows.
+- **Landscape**: Recommended for spreadsheets with many columns or wide data ranges. Provides additional horizontal space.
+
+**Scaling Behavior:**
+- **FitSheetOnOnePage = true**: All spreadsheet content scales to fit on a single PDF page. Useful for summaries, executive reports, or when a one-page document is required. Text and content size may reduce.
+- **FitSheetOnOnePage = false**: Content uses standard print scaling and may span multiple pages. Preserves readability and data size at the cost of multiple pages.
+
+
+The following code example demonstrates saving the spreadsheet as PDF with different layout configurations:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button OnClick="SavePdfPortrait">Save as PDF (Portrait)</button>
+<button OnClick="SavePdfLandscape">Save as PDF (Landscape)</button>
+
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    // Save as PDF in Portrait orientation
+    public async Task SavePdfPortrait()
+    {
+        await SpreadsheetInstance.SaveAsync(new SaveOptions
+        {
+            SaveType = SaveType.Pdf,
+            FileName = "Spreadsheet",
+            PdfLayoutSettings = new PdfLayoutSettings 
+            { 
+                Orientation = PdfPageOrientation.Portrait,
+                FitSheetOnOnePage = false
+            }
+        });
+    }
+
+    // Save as PDF in Landscape orientation
+    public async Task SavePdfLandscape()
+    {
+        await SpreadsheetInstance.SaveAsync(new SaveOptions
+        {
+            SaveType = SaveType.Pdf,
+            FileName = "Spreadsheet",
+            PdfLayoutSettings = new PdfLayoutSettings 
+            { 
+                Orientation = PdfPageOrientation.Landscape,
+                FitSheetOnOnePage = false
+            }
+        });
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
