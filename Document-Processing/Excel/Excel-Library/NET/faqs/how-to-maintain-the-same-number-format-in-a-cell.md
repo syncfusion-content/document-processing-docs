@@ -1,6 +1,6 @@
 ---
 title: How to maintain the same number format in a cell? | Syncfusion
-description: This page explains how to maintain the same number format in a cell using Syncfusion XlsIO Library.
+description: This page explains how to preserve consistent number formatting in a cell using the Syncfusion XlsIO library.
 platform: document-processing
 control: XlsIO
 documentation: UG
