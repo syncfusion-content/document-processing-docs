@@ -198,9 +198,7 @@ using (PdfDocument pdfDocument = new PdfDocument())
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](PDF-Examples/Text/Saving-and-Restoring-the-PdfGraphics/.NET/Saving-and-Restoring-the-PdfGraphics/Saving-and-Restoring-the-PdfGraphics/Program.cs). 
-
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Saving-and-Restoring-the-PdfGraphics/.NET/Saving-and-Restoring-the-PdfGraphics). 
 
 ## Drawing text in an existing document
 
@@ -3182,7 +3180,3 @@ PdfTrueTypeFont ttf = new PdfTrueTypeFont("Arial.ttf", 20);
 
 {% endhighlight %}
 {% endtabs %}
-
-</td>
-</tr>
-</table>

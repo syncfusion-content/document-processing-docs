@@ -21,7 +21,8 @@ N> To know more details about PDF/A standard refer [`https://en.wikipedia.org/wi
 
 You can create a PDF/A-1b document by specifying the conformance level as a1b through PdfConformanceLevel enum when creating the new PDF document as follows.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new document with the PDF/A-1b standard
 PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a1b)
@@ -36,12 +37,14 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## PDF/A-2b conformance
 
 You can create a PDF/A-2b document by specifying the conformance level as a2b through PdfConformanceLevel enum when creating the new PDF document as follows.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new document with the PDF/A-2b standard
 PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a2b)
@@ -56,6 +59,7 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## PDF/A-3b conformance
 
@@ -63,7 +67,8 @@ The PDF/A-3b conformance supports the external files as attachment to the PDF do
 
 You can create a PDF/A-3b document by specifying the conformance level as a3b through PdfConformanceLevel enum when creating the new PDF document as follows.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new document with the PDF/A-3b standard
 PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a3b)
@@ -88,3 +93,4 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

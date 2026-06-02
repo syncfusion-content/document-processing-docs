@@ -29,7 +29,7 @@ This guide shows how to prevent users from copying text or printing documents in
 ### 3. Hide/disable UI elements in the viewer
 
 - Print, download and copy options can be disabled or hidden in the viewer regardless of the PDF's permissions.
-- Print and download options can be hidden in the viewer's primary toolbar. See [primary toolbar customization](../toolbar-customization/primary-toolbar).
+- Print and download options can be hidden in the viewer's primary toolbar. See [primary toolbar customization](../toolbar-customization/primary-toolbar#3-show-or-hide-primary-toolbar-items).
 - Copy option in the context menu can be disabled in the PDF Viewer. See [customize context menu](../context-menu/custom-context-menu).
 
 ### 4. Disable print programmatically in the viewer

@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Custom Bookmarks in .NET MAUI PDF Viewer Control | Syncfusion
-description: Discover how to navigate using custom bookmark navigation in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+title: Custom Bookmarks in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to add, remove, and navigate using custom bookmarks in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Custom Bookmarks in .NET MAUI PDF Viewer
@@ -269,6 +270,7 @@ To navigate using the UI:
 
 ![Custom bookmark in .NET MAUI PDF Viewer](Images\custom-bookmark.png)
 
+N>A custom bookmark currently stores only the target page information. It does not support storing or navigating to a specific position within the page, such as coordinates or a particular content region.
 ### Navigate Programmatically
 
 To navigate to a custom bookmark programmatically, use the [GoToBookmark](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToBookmark_Syncfusion_Maui_PdfViewer_Bookmark_) method. This method accepts a `Bookmark` object and navigates to the page associated with it.
@@ -284,3 +286,8 @@ if (customBookmark != null)
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Document Outline](../document-outline)
+- [Page Navigation](../page-navigation)
+- [Hyperlink Navigation](../hyperlink-navigation)

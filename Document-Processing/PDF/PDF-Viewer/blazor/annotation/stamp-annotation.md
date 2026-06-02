@@ -33,7 +33,7 @@ Stamp annotations can be added using the annotation toolbar.
 
 * Place the annotation on the desired page in the PDF document.
 
-When entering stamp mode while in pan mode, the SfPdfViewer automatically switches to text selection mode to enable annotation placement.
+When entering stamp mode while in Pan mode, the viewer switches to Text Select mode to enable annotation placement.
 
 ## Adding custom stamp to the PDF document through interaction
 
@@ -59,7 +59,7 @@ After changing the default opacity using the Edit Opacity tool, the currently se
 
 <SfPdfViewer2 @ref="viewer"
               DocumentPath="@DocumentPath"
-              Height="100"
+              Height="100%"
               Width="100%"
               StampSettings=@StampSettings>
 </SfPdfViewer2>

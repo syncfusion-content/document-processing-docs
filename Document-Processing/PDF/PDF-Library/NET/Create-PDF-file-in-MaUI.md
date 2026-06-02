@@ -8,9 +8,9 @@ documentation: UG
 
 # Create PDF file in .NET MAUI
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI PDF library](https://www.syncfusion.com/document-processing/pdf-framework/maui/pdf-library) is used to create, read, and edit **PDF** documents. This library also includes functions for merging, splitting, stamping, forms, and securing PDF files and more. Using this library, you can **create a PDF document in the .NET MAUI application.**
+The Syncfusion<sup>&reg;</sup> [.NET MAUI PDF library](https://www.syncfusion.com/document-processing/pdf-framework/maui/pdf-library) is used to create, read, and edit **PDF** documents. This library also includes functions for merging, splitting, stamping, working with forms, and securing PDF files and more. Using this library, you can create a PDF document in a .NET MAUI application.
 
-N> Our PDF library is currently supported in .NET MAUI applications on the Android, iOS, and Windows platform. Currently, the PDF library is not supported in the Mac Catalyst platform.
+N> Our PDF library is currently supported in .NET MAUI applications on Android, iOS, and Windows platforms. It is not supported on the Mac Catalyst platform.
 
 ## Steps to create PDF document programmatically in .NET MAUI
 
@@ -28,17 +28,15 @@ N> Our PDF library is currently supported in .NET MAUI applications on the Andro
 {% endtabcontent %}
 {% endtabcontents %}
 
-A complete working example of creating a PDF document in the .NET MAUI Desktop app can be downloaded from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfSampleMaUI-1356433164887362210.zip).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/MAUI/CreateMAUIPDFSample).
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/MAUI/CreatePdfDemoSample).
-
-By executing the program in windows, you will get the PDF document as follows.
+By executing the program on Windows, you will get the PDF document as follows.
 ![.NET MAUI output image](MAUI_images/invoice.png)  
 
-By executing the program in android, you will get the **PDF document** as follows,
+By executing the program on Android, you will get the PDF document as follows.
 ![.NET MAUI invoice android image](MAUI_images/invoice_android.png)  
 
-By executing the program in iOS, you will get the **PDF document** as follows,
+By executing the program on iOS, you will get the PDF document as follows.
 ![.NET MAUI invoice iOS image](MAUI_images/invoice_ios.png)  
 
 N> You can also explore our [MAUI PDF library demo](https://www.syncfusion.com/demos/fileformats/pdf-library) that shows how to create and modify PDF files from C# with just five lines of code.
@@ -115,11 +113,11 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
     PreviewControllerDS.cs<br/>QLPreviewItemFileSystem.cs
   </td>
   <td>
-    Helper classes for viewing the <b>Pdf document</b> in iOS device
+    Helper classes for viewing the <b>PDF document</b> in iOS device
   </td>
   </tr>
 </table>
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HelloWorld#/bootstrap5) in ASP.NET Core. 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core. 

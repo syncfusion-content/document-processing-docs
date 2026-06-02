@@ -1239,7 +1239,7 @@ FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Re
 //Set the font.
 PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text.
-graphics.DrawString("Hello world!", pdfFont, brush, new PointF(20, 20));
+graphics.DrawString("Hello world!", font, brush, new PointF(20, 20));
 
 //Save and close the document.
 document.Save("Output.pdf");
@@ -1296,7 +1296,7 @@ Dim brush As PdfBrush = New PdfSolidBrush(Color.Black)
 Dim font As New Font("Arial", 20.0F, FontStyle.Regular)
 Dim pdfFont As PdfFont = New PdfTrueTypeFont(font, FontStyle.Regular, 12, False, True)
 'Draw the text.
-graphics.DrawString("Hello world!", font, brush, New PointF(20, 20))
+graphics.DrawString("Hello world!", pdfFont, brush, New PointF(20, 20))
 
 'Save and close the document.
 document.Save("Output.pdf")

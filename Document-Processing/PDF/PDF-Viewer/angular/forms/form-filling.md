@@ -8,28 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filling PDF Forms in Angular PDF Viewer
+# Fill PDF form fields in Angular PDF Viewer
 
-The Syncfusion PDF Viewer supports three types of form-filling:
+This guide shows how to update, import, and validate PDF form fields in the Angular PDF Viewer so you can pre-fill forms or accept user input.
 
-1.	[Filling Form Fields Programmatically](#fill-pdf-forms-programmatically)
+**Outcome** Programmatically set field values, allow UI-driven filling, import form data, and validate fields on submit.
 
-    You can fill or update PDF form fields programmatically using the [updateFormFieldsValue](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfieldsvalue) APIs. This approach is useful when form data needs to be set dynamically based on application logic.
+## Steps to fill forms
 
-2.	[Form Filling Through User Interface](#fill-pdf-forms-through-the-user-interface)
+### 1. Fill form fields programmatically 
 
-    Users can fill in PDF form fields directly through the PDF Viewer user interface by typing text, selecting options, or interacting with supported form elements.
+Update form field values programmatically with [`updateFormFieldsValue`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfieldsvalue).
 
-3.	[Importing Form Field Data](#fill-pdf-forms-through-import-data)
-
-    The PDF Viewer allows you to import form field data into an existing PDF document. This enables pre filled forms using external data sources.
-
-## Fill PDF forms programmatically 
-
-You can update the values of PDF form fields programmatically using the [updateFormFieldsValue](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfieldsvalue) API. This method allows you to set or modify form field values dynamically based on application logic, without user interaction.
-
-The following example demonstrates how to update PDF form field values programmatically:
- 
+Use the example below as a complete, runnable example for your Angular app. It retrieves form fields and updates a named field or the first available field.
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -97,21 +88,17 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-## Fill PDF forms through the User Interface
+**Expected result:** Clicking the *Fill Form Fields* button sets the first or named field's value to *John Doe* in the viewer.
 
-The Syncfusion PDF Viewer allows users to fill PDF form fields directly through the user interface without using code. Users can click on form fields and enter or select values based on the field type.
+### 2. Fill form fields via UI
+
+Users can click form controls and enter/select values. Supported field types include textboxes, checkboxes, radio buttons, dropdowns, list boxes, and signature fields. Edits are retained during the viewing session.
 
 ![Form Filling](../../javascript-es6/images/FormFields.gif)
 
-The PDF Viewer supports common form fields such as text boxes, check boxes, radio buttons, drop-down lists, list boxes, and signature fields. Filled values can be edited at any time, and the entered data is retained during the viewing session.
+### 3. Fill form fields through imported data
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
-
-## Fill PDF forms through Import Data 
-
-The Syncfusion PDF Viewer allows you to import form field data into an existing PDF document using the [importFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#importformfields) API. This feature enables you to pre-fill form fields using data from an external source without requiring manual user input.
-
-Imported form field data is automatically mapped to the corresponding form fields in the PDF document based on the field names. Once the data is imported, the populated values are displayed in the PDF Viewer and can be edited through the user interface if required.
+Use [`importFormFields`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#importformfields) to map external data into PDF fields by name. The example below shows how to trigger import from a button handler.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -165,6 +152,11 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {}
 
   importJson(): void {
+    // NOTE:
+    // The first parameter can be:
+    //  - a file path/url (in server mode),
+    //  - or a base64 encoded File/Blob stream from an <input type="file"> in real apps.
+    // Replace 'File' with your actual file or path as per your integration.
     this.pdfviewer.importFormFields('File', FormFieldDataFormat.Json);
   }
 }
@@ -173,21 +165,12 @@ export class AppComponent implements OnInit {
 
 For more details, see [Import Form Data](./import-export-form-fields/import-form-fields).
 
-## How to get the filled data and store it to a backing system
+### 4. Validate form fields on submit
 
-You can export the filled form field data from the PDF Viewer and store it in a backing system such as a database or file storage. The exported data can later be imported to restore the form state.
-
-For more details, see [Export Form Data](./import-export-form-fields/export-form-fields).
-
-## How to Validate Form Fields using `validateFormFields` Event
-
-The [validateFormFields](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#validateformfields) event in the Syncfusion PDF Viewer is triggered when a user tries to download or submit a form while validation is enabled. You can use the [retrieveFormFields()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#retrieveformfields) API to get all the form fields and check them one by one to see if any form fields values are empty.
-
-This validation applies to all form field types in the PDF Viewer. A textbox is empty if no text is entered, a list box or dropdown is empty if no item is selected, a signature or initial field is empty if the user has not signed, and radio buttons or checkboxes are empty if none are chosen. 
-By enabling [enableFormFieldsValidation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) and wiring the event, you can go through each field and stop the action if required fields are not filled.
+Enable [`enableFormFieldsValidation`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) and handle [`validateFormFields`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#validateformfields) to check required fields and cancel submission when necessary. Example below shows adding required fields and validating them.
 
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight ts tabtitle="app.component.ts" %}
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {
   ToolbarService,
@@ -239,7 +222,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  // Runs after the document is loaded into the viewer
   onDocumentLoad(): void {
+    // Add a required Email field
     this.pdfviewer.formDesignerModule.addFormField('Textbox', {
       name: 'Email',
       bounds: { X: 146, Y: 260, Width: 220, Height: 24 },
@@ -247,6 +232,7 @@ export class AppComponent implements OnInit {
       tooltip: 'Email is required',
     } as TextFieldSettings);
 
+    // Add a required Phone field
     this.pdfviewer.formDesignerModule.addFormField('Textbox', {
       name: 'Phone',
       bounds: { X: 146, Y: 300, Width: 220, Height: 24 },
@@ -255,6 +241,7 @@ export class AppComponent implements OnInit {
     } as TextFieldSettings);
   }
 
+  // Validates the added fields on form submit/validate trigger
   onValidateFormFields(args: any): void {
     const fields = this.pdfviewer.retrieveFormFields();
 
@@ -268,6 +255,12 @@ export class AppComponent implements OnInit {
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Troubleshooting
+
+- If fields are not editable, confirm `FormFields` module is injected into PDF Viewer.
+- If examples fail to load, verify your [`resourceUrl`](https://helpej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) matches the installed PDF Viewer version.
+- For import issues, ensure JSON keys match the PDF field `name` values.
 
 ## See also
 

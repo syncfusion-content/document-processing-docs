@@ -41,8 +41,7 @@ You can open an existing PDF document by using the [PdfLoadedDocument](https://h
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Open an existing PDF document from stream through constructor of `PdfLoadedDocument` class. 
-FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(@"Input.pdf");
 
 {% endhighlight %}
 
@@ -129,9 +128,8 @@ You can open an existing encrypted PDF document from either the file system or t
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Open an encrypted PDF document from stream through constructor of `PdfLoadedDocument` class. 
-FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream, "password");
+//Open an encrypted PDF document from stream through constructor of `PdfLoadedDocument` class.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(@"Input.pdf", "password");
 
 {% endhighlight %}
 
@@ -210,9 +208,8 @@ You can open a corrupted PDF document from either the file system or the stream 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Open an existing corrupted PDF document from stream through constructor of `PdfLoadedDocument` class. 
-FileStream inputPDFStream = new FileStream(@"Input.pdf", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream, true);
+//Open an existing corrupted PDF document from stream through constructor of `PdfLoadedDocument` class.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(@"Input.pdf", true);
 
 {% endhighlight %}
 
@@ -295,23 +292,11 @@ You can save the manipulated PDF document to file system using [Save](https://he
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //To-Do some manipulation
 //To-Do some manipulation
-//Save the PDF document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-//If the position is not set to '0' then the PDF will be empty.
-stream.Position = 0;
-//Close the document.
-loadedDocument.Close(true);
-//Defining the content type for PDF file.
-string contentType = "application/pdf";
-//Define the file name.
-string fileName = "Output.pdf";
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, contentType, fileName);
+//Save the document in file system.
+loadedDocument.Save("Output.pdf"); 
 
 {% endhighlight %}
 
@@ -392,13 +377,13 @@ You can also resave the manipulated PDF document to the same file using overload
 
 {% tabs %}
 
-{% highlight c# tabtitle="ASP.NET Core" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //PDF doesn't supports saving a PDF document into the same file on the C#/.NET Cross platforms. 
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -463,8 +448,7 @@ After the document manipulation and save operation are completed, you should clo
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //To-Do some manipulation
 //To-Do some manipulation
 //Save the document into stream.
@@ -515,12 +499,11 @@ You can catch the secured document exception by opening an existing encrypted PD
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Load an existing PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
 PdfLoadedDocument document = null;
 try
 {
     //Open an existing PDF document from a stream.
-    document = new PdfLoadedDocument(docStream, "password");
+    document = new PdfLoadedDocument("Input.pdf", "password");
 }
 catch (Syncfusion.Pdf.PdfInvalidPasswordException exception)
 {
@@ -590,12 +573,11 @@ II.	Please find  some of the possible offset error messages that may be repairab
 {% highlight c# tabtitle="C# [Cross-platform]" %}	
 
 //Load a PDF document.
-FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
 PdfLoadedDocument document = null;
 try
 {
     //Open an existing PDF document from the stream.
-    document = new PdfLoadedDocument(docStream, true);
+    document = new PdfLoadedDocument("Input.pdf", true);
 }
 catch (PdfException exception)
 {

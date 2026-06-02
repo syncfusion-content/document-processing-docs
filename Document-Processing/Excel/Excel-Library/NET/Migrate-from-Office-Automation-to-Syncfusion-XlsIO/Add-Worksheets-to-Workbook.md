@@ -15,46 +15,85 @@ The following code shows how to add five worksheets within a workbook with Inter
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void AddWorksheet()
 {
-  //Instantiate the application object
-  var excelApp = new Microsoft.Office.Interop.Excel.Application();
+    //Instantiate the application object
+    var excelApp = new Microsoft.Office.Interop.Excel.Application();
 
-  //Specify the template Excel file path
-  string myPath = "Sample.xlsx";
+    //Specify the template Excel file path
+    string myPath = "Sample.xlsx";
 
-  //Open the Excel file
-  Workbook workbook = excelApp.Workbooks.Open(myPath);
+    //Open the Excel file
+    Workbook workbook = excelApp.Workbooks.Open(myPath);
 
-  //Declare a worksheet object
-  Worksheet newWorksheet;
+    //Declare a worksheet object
+    Worksheet newWorksheet;
 
-  //Add five new worksheets to the workbook and fill some data into the cells
-  for (int i = 1; i <= 5; i++)
-  {
-    //Add a worksheet to the workbook
-    newWorksheet = excelApp.Worksheets.Add(Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+    //Add five new worksheets to the workbook and fill some data into the cells
+    for (int i = 1; i <= 5; i++)
+    {
+        //Add a worksheet to the workbook
+        newWorksheet = (Worksheet)excelApp.Worksheets.Add(Missing.Value, Missing.Value, Missing.Value, Missing.Value);
 
-    //Name the sheet
-    newWorksheet.Name = "New_Sheet" + i.ToString();
+        //Name the sheet
+        newWorksheet.Name = "New_Sheet" + i.ToString();
 
-    //Get the cells collection
-    Range cells = newWorksheet.Cells;
+        //Get the cells collection
+        Range cells = newWorksheet.Cells;
 
-    //Input a string value to a cell of the sheet
-    cells.set_Item(i, i, "New_Sheet" + i.ToString());
-  }
+        //Input a string value to a cell of the sheet
+        cells.set_Item(i, i, "New_Sheet" + i.ToString());
+    }
 
-  //Save as Excel file
-  workbook.SaveCopyAs("InteropOutput_AddWorksheet.xlsx");
+    //Save as Excel file
+    workbook.SaveCopyAs("InteropOutput_AddWorksheet.xlsx");
 
-  //Quit the application
-  excelApp.Quit();
+    //Quit the application
+    excelApp.Quit();
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void AddWorksheet()
+{
+    //Instantiate the application object
+    var excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+    //Specify the template Excel file path
+    string myPath = "Sample.xlsx";
+
+    //Open the Excel file
+    Workbook workbook = excelApp.Workbooks.Open(myPath);
+
+    //Declare a worksheet object
+    Worksheet newWorksheet;
+
+    //Add five new worksheets to the workbook and fill some data into the cells
+    for (int i = 1; i <= 5; i++)
+    {
+        //Add a worksheet to the workbook
+        newWorksheet = (Worksheet)excelApp.Worksheets.Add(Missing.Value, Missing.Value, Missing.Value, Missing.Value);
+
+        //Name the sheet
+        newWorksheet.Name = "New_Sheet" + i.ToString();
+
+        //Get the cells collection
+        Range cells = newWorksheet.Cells;
+
+        //Input a string value to a cell of the sheet
+        cells.set_Item(i, i, "New_Sheet" + i.ToString());
+    }
+
+    //Save as Excel file
+    workbook.SaveCopyAs("InteropOutput_AddWorksheet.xlsx");
+
+    //Quit the application
+    excelApp.Quit();
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub AddWorksheet()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -95,7 +134,7 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void AddWorksheet()
 {
   using (ExcelEngine excelEngine = new ExcelEngine())
@@ -132,7 +171,44 @@ private void AddWorksheet()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void AddWorksheet()
+{
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    //Instantiate the application object        
+    IApplication application = excelEngine.Excel;
+
+    //Specify the template Excel file path
+    string myPath = "Sample.xlsx";
+
+    //Instantiate a new workbook
+    //Open the Excel file
+    IWorkbook workbook = application.Workbooks.Open(myPath);
+
+    //Declare a worksheet object
+    IWorksheet newWorksheet;
+
+    //Add five new worksheets to the workbook and fill some data into the cells
+    for (int i = 1; i <= 5; i++)
+    {
+      //Add a worksheet to the workbook
+      newWorksheet = workbook.Worksheets.Create("New_Sheet" + (i).ToString());
+
+      //Get the cells collection
+      IRange cells = newWorksheet.Range;
+
+      //Input a string value to a cell of the sheet
+      cells[i, i].Value = "New_Sheet" + (i).ToString();
+    }
+
+    //Save as Excel file
+    workbook.SaveAs("XlsIOOutput_AddWorksheet.xlsx");
+  }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub AddWorksheet()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object

@@ -17,7 +17,8 @@ The [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/
 
 The following code example explains how to add contents to the [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) and render into the new PDF page.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 PdfDocument document = PdfDocument();
@@ -42,6 +43,7 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Creating templates from existing PDF document
 
@@ -49,7 +51,8 @@ Essential<sup>&reg;</sup> PDF supports template creation using the [`CreateTempl
 
 The below code illustrates how to create the template from an existing page and draw it in a new PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     //Load the PDF document.
     PdfDocument loadedDocument =
@@ -71,6 +74,7 @@ The below code illustrates how to create the template from an existing page and 
     document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Working with PdfPageTemplateElement
 
@@ -78,7 +82,8 @@ The [`PdfPageTemplateElement`](https://pub.dev/documentation/syncfusion_flutter_
 
 The following code example explains how to add the page template elements to a PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -130,6 +135,7 @@ File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Adding stamp to the PDF document
 
@@ -137,7 +143,8 @@ The Syncfusion<sup>&reg;</sup> Flutter PDF allows you add stamp to the PDF docum
 
 The following code example explains how to draw text as a stamp to the PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -174,3 +181,4 @@ final List<int> bytes = await document.save();
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

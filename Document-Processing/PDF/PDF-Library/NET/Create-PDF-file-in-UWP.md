@@ -6,21 +6,21 @@ control: PDF
 documentation: UG
 ---
 
-# Create of Generate PDF file in UWP
+# Create or Generate PDF file in UWP
 
-The Syncfusion<sup>&reg;</sup> [UWP PDF library](https://www.syncfusion.com/document-processing/pdf-framework/uwp/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
+The Syncfusion<sup>&reg;</sup> [UWP PDF library](https://www.syncfusion.com/document-processing/pdf-framework/uwp/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
 To include the Syncfusion<sup>&reg;</sup> UWP PDF library into your UWP application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
 ## Steps to create PDF document in UWP
 
 Step 1: Create a new UWP application project. 
-![UWP sample creation](UWP_images/UWP_sample_creation.jpg)
+![UWP sample creation](GettingStarted_images/UWP_sample_creation.png)
 
-Step 2: Install the [Syncfusion.Pdf.UWP](https://www.nuget.org/packages/Syncfusion.Pdf.UWP/) NuGet package as reference to your UWP applications from [NuGet.org](https://www.nuget.org/).
-![PDF UWP Nuget package](UWP_images/NuGet-pakcage.jpeg)
+Step 2: Install the [Syncfusion.Pdf.UWP](https://www.nuget.org/packages/Syncfusion.Pdf.UWP/) NuGet package as a reference to your UWP applications from [NuGet.org](https://www.nuget.org/).
+![PDF UWP Nuget package](GettingStarted_images/NuGet-package-UWP.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the `Syncfusion.Licensing` assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Create button in *MainPage.Xaml* page using below code example and create *Button_Click* event.
 {% highlight c# tabtitle="C#" %}
@@ -220,10 +220,10 @@ PdfGraphics graphics = page.Graphics;
 
 {% endhighlight %}
 
-1. Essential<sup>&reg;</sup> PDF has APIs similar to the .NET GDI plus which helps to draw elements to the PDF page just like 2D drawing in .NET. 
-2. Unlike System.Drawing APIs all the units are measured in point instead of pixel. 
-3. In PDF, all the elements are placed in absolute positions and has the possibility for content overlapping if misplaced. 
-4. Essential<sup>&reg;</sup> PDF provides the rendered bounds for each and every elements added through [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) objects. This can be used to add successive elements and prevent content overlap.
+1. Essential<sup>&reg;</sup> PDF has APIs similar to the .NET GDI+ which help draw elements to the PDF page like 2D drawing in .NET.
+2. Unlike System.Drawing APIs, all units are measured in points instead of pixels.
+3. In PDF, elements are placed at absolute positions and may overlap if misplaced.
+4. Essential<sup>&reg;</sup> PDF provides the rendered bounds for elements added through [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) objects. These bounds can be used to add successive elements and prevent content overlap.
 
 The following code example explains how to add an image from disk to a PDF document, by providing the rectangle coordinates. 
 {% highlight c# tabtitle="C#" %}
@@ -333,7 +333,7 @@ MemoryStream stream = new MemoryStream();
 await document.SaveAsync(stream);
 //Close the document.
 document.Close(true);
-//Save the stream as PDF document file in local machine. Refer to PDF/UWP section for respected code samples.
+//Save the stream as a PDF document file on the local machine. Refer to the PDF/UWP section for respective code samples.
 Save(stream, "Sample.pdf");
 {% endhighlight %}
 
@@ -373,7 +373,7 @@ PdfLoadedForm form = loadedDocument.Form;
 (form.Fields[0] as PdfLoadedTextBoxField).Text = "John";
 //Fills the textbox fields by using field name.
 (form.Fields["LastName"] as PdfLoadedTextBoxField).Text = "Doe";
-(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Anytown, USA";
+(form.Fields["Address"] as PdfLoadedTextBoxField).Text = " John Doe \n 123 Main St \n Any town, USA";
 //Loads the radio button group.
 PdfLoadedRadioButtonItemCollection radioButtonCollection = (form.Fields["Gender"] as PdfLoadedRadioButtonListField).Items;
 //Checks the 'Male' option.
@@ -394,9 +394,9 @@ Save(stream, "output.pdf");
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/UWP/Fill-form-in-a-PDF-document).
 
-The filled form is shown in adobe reader application as follows.
+The filled form is shown in Adobe Reader as follows.
 ![Filled PDF form](GettingStarted_images/filled-form-in-pdf.jpeg)
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/uwp) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HelloWorld#/material3) in ASP.NET Core. 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core. 

@@ -5,9 +5,9 @@ platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Protecting PDFs Using Syncfusion API
+# Protect PDF Using Syncfusion Web API
 
-This feature enables you to protect a PDF document. To use this functionality, you need to provide a PDF document as input to the Protect PDF API.
+The Syncfusion Protect PDF Web API secures PDF documents by applying password protection and usage restrictions. You can control permissions such as editing, copying, and printing while preserving the original document quality. This ensures sensitive information remains protected during secure sharing.
 
 ## Protecting PDF Document
 
@@ -76,6 +76,18 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
+## Protect PDF settings
+
+**File** 
+
+Specifies the unique identifier of the uploaded PDF document that needs to be protected. 
+
+**Password** 
+
+Defines the user password used to protect the PDF document and restrict unauthorized access.
+
+## Protect PDF Job Response
+
 Once the request is sent, it will create a protect job to protect the PDF and return the job details as follows:
 
 ```
@@ -86,7 +98,7 @@ Once the request is sent, it will create a protect job to protect the PDF and re
 }
 ```
 
-## Poll the status of the Protect Job
+## Check Protect PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
@@ -94,7 +106,7 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+curl --location 'http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 --header 'Authorization: Bearer {{Placeholder for token}}'
 
 {% endhighlight %}
@@ -116,7 +128,7 @@ fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df");
 request.Headers.Add("Authorization", "Bearer {{Placeholder for token}}");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();

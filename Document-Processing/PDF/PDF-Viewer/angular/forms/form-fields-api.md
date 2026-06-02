@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form Fields API in Angular PDF Viewer
 
-The PDF Viewer provides comprehensive APIs to create, edit, validate, navigate, and manage form fields programmatically. The following APIs are available:
+The Angular PDF Viewer provides APIs to create, edit, validate, navigate, and manage form fields programmatically. The following APIs are available:
 
 | API | Description |
 |---|---|
@@ -443,8 +443,7 @@ export class AppComponent {
 
 ## isFormDesignerToolbarVisible
 
-Opens the form designer toolbar when the PDF document is loaded in the PDF Viewer control initially
-and get the form designer Toolbar Visible status.
+Opens the Form Designer toolbar and returns its visibility status.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

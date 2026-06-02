@@ -17,7 +17,7 @@ The following code example demonstrates how to extract text from a PDF document 
 
 ```cshtml
 @page "/"
-@using Microsoft.Extensions.Caching.Memory
+@using Microsoft.Extensions.Caching.Memory;
 @using Syncfusion.Blazor.Popups;
 @using Syncfusion.Blazor.Buttons;
 @using Syncfusion.Blazor.Navigations;

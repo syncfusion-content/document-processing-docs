@@ -12,7 +12,7 @@ The PDF library supports splitting PDF file into single-page or multiple-page PD
 
 ## Splitting a PDF file into individual 
 
-The PDF library allows splitting the pages of an existing PDF document into multiple individual PDF documents using `split` method of the `PdfDocument` class.
+The PDF library allows splitting the pages of an existing PDF document into multiple individual PDF documents using [split](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#split) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -26,7 +26,7 @@ document.splitEvent = documentSplitEvent;
 document.split();
 // Event to invoke while splitting PDF document data
 function documentSplitEvent(sender: PdfDocument, args: PdfDocumentSplitEventArgs): void {
-  Save.save('output_' + args.splitIndex + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
+  Save.save('output_' + args.index + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
 }
 // Destroy the document
 document.destroy();
@@ -41,7 +41,7 @@ document.splitEvent = documentSplitEvent;
 document.split();
 // Event to invoke while splitting PDF document data
 function documentSplitEvent(sender, args): void {
-  Save.save('output_' + args.splitIndex + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
+  Save.save('output_' + args.index + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
 }
 // Destroy the document
 document.destroy();
@@ -51,7 +51,7 @@ document.destroy();
 
 ## Split a range of pages into a separate PDF document
 
-The PDF library allows splitting a certain range of pages into a separate PDF document using the `splitByPageRanges` method of the `PdfDocument` class.
+The PDF library allows splitting a certain range of pages into a separate PDF document using the [splitByPageRanges](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#splitbypageranges) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -65,7 +65,7 @@ document.splitEvent = documentSplitEvent;
 document.splitByPageRanges([[0, 4], [5, 9]]);
 // Event to invoke while splitting PDF document data
 function documentSplitEvent(sender: PdfDocument, args: PdfDocumentSplitEventArgs): void {
-  Save.save('output_' + args.splitIndex + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
+  Save.save('output_' + args.index + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
 }
 // Destroy the document
 document.destroy();
@@ -80,7 +80,7 @@ document.splitEvent = documentSplitEvent;
 document.splitByPageRanges([[0, 4], [5, 9]]);
 // Event to invoke while splitting PDF document data
 function documentSplitEvent(sender, args): void {
-  Save.save('output_' + args.splitIndex + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
+  Save.save('output_' + args.index + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
 }
 // Destroy the document
 document.destroy();
@@ -90,7 +90,7 @@ document.destroy();
 
 ## Split by a fixed number of pages into a PDF document
 
-The PDF library allows splitting by fixed number of pages of an existing PDF document using the `splitByFixedNumber` method of the `PdfDocument` class.
+The PDF library allows splitting by fixed number of pages of an existing PDF document using the [splitByFixedNumber](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#splitbyfixednumber) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -104,7 +104,7 @@ document.splitEvent = documentSplitEvent;
 document.splitByFixedNumber(1);
 // Event to invoke while splitting PDF document data
 function documentSplitEvent(sender: PdfDocument, args: PdfDocumentSplitEventArgs): void {
-  Save.save('output_' + args.splitIndex + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
+  Save.save('output_' + args.index + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
 }
 // Destroy the document
 document.destroy();
@@ -119,7 +119,7 @@ document.splitEvent = documentSplitEvent;
 document.splitByFixedNumber(1);
 // Event to invoke while splitting PDF document data
 function documentSplitEvent(sender, args): void {
-  Save.save('output_' + args.splitIndex + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
+  Save.save('output_' + args.index + '.pdf', new Blob([args.pdfData], { type: 'application/pdf' }));
 }
 // Destroy the document
 document.destroy();

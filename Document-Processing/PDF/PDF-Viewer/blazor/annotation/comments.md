@@ -9,7 +9,7 @@ documentation: ug
 
 # Comments in Blazor SfPdfViewer Component
 
-The SfPdfViewer component provides options to add, edit, and delete comments for the following annotation types in PDF documents:
+The `SfPdfViewer` component provides options to add, edit, and delete comments for the following annotation types in PDF documents:
 
 * Shape annotation
 * Stamp annotation
@@ -20,7 +20,7 @@ The SfPdfViewer component provides options to add, edit, and delete comments for
 
 ![Comments in Blazor SfPdfViewer](../images/blazor-pdfviewer-comments.png)
 
-## Adding a comment to the annotation
+## Add a comment to an annotation
 
 Comments, replies, and status can be added to a PDF document using the comment panel.
 
@@ -28,17 +28,17 @@ Comments, replies, and status can be added to a PDF document using the comment p
 
 Annotation comments can be added using the comment panel. Open the comment panel in any of the following ways:
 
-1. Using the annotation menu.
+1. From the annotation menu
 
-    * Click the Edit Annotation button in the SfPdfViewer toolbar. A toolbar appears below it.
+    * Click the Edit Annotation button in the `SfPdfViewer` toolbar. A toolbar appears below it.
     * Click the Comment panel button. The comment panel opens.
 
-2. Using the context menu.
+2. From the context menu
 
     * Select an annotation in the PDF document and right-click it.
     * Select the Comment option in the context menu.
 
-3. Using mouse click.
+3. Using double-click
 
     * Select an annotation in the PDF document and double-click it to open the comment panel.
 
@@ -52,12 +52,12 @@ If the comment panel is already open, select an annotation and add a comment usi
 
 ![Adding Comments in Blazor SfPdfViewer](../images/blazor-pdfviewer-add-new-comment.png)
 
-### Adding Comment Replies
+### Adding comment replies
 
-* The SfPdfViewer supports adding multiple replies to a comment.
+* The `SfPdfViewer` supports adding multiple replies to a comment.
 * After adding an annotation comment, add one or more replies as needed.
 
-### Adding Comment or Reply Status
+### Adding comment or reply status
 
 * Select the annotation comment in the comment panel.
 * Click the More options button in the comment or reply container.
@@ -66,38 +66,38 @@ If the comment panel is already open, select an annotation and add a comment usi
 
 ![Blazor PDFViewer with Comment Status](../images/blazor-pdfviewer-comment-status.png)
 
-### Editing the comments and comments replies of the annotations
+### Edit comments and replies
 
 Edit the comment, its replies, and the status of an annotation using the comment panel.
 
-### Editing Comment or Comment Replies
+### Editing comments or replies
 
 Edit comments and replies in the following ways:
 
-1. Using the context menu.
+1. From the context menu
 
     * Select the annotation comment in the comment panel.
     * Click the More options button in the comment or reply container.
     * Select Edit in the context menu.
     * An editable text box appears to change the content of the comment or reply.
 
-2. Using mouse click.
+2. Using double-click
 
     * Select the annotation comment in the comment panel.
     * Double-click the comment or reply content.
     * An editable text box appears to change the content of the comment or reply.
 
-### Editing Comment or Reply Status
+### Editing comment or reply status
 
 * Select the annotation comment in the comment panel.
 * Click the More options button in the comment or reply container.
 * Select Set status in the context menu.
 * Choose the required status for the annotation comment.
-* Status 'None' is the default. Choosing 'None' removes the status indicator from the comment or reply.
+* Status `None` is the default. Choosing `None` removes the status indicator from the comment or reply.
 
 ![Editing Comment in Blazor SfPdfViewer](../images/blazor-pdfviewer-comment-editing.png)
 
-### Delete Comment or Comment Replies
+### Delete a comment or reply
 
 * Select the annotation comment in the comment panel.
 * Click the More options button in the comment or reply container.
@@ -150,11 +150,11 @@ The following code snippet explains how to show the comment panel.
 ```
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Show%20or%20hide%20comment%20panel).
 
-## Add Comments and Reply Comments Programmatically
+## Add comments and replies programmatically
 
-The Blazor SfPdfViewer supports programmatically adding a line annotation with a comment and reply comments using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+The `SfPdfViewer` supports programmatically adding a line annotation with a comment and replies using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-The following example demonstrates how to add a line annotation with a comment and reply comments to a PDF document:
+The following example demonstrates how to add a line annotation with a comment and replies to a PDF document:
 
 ```cshtml
 
@@ -242,17 +242,17 @@ The following example demonstrates how to add a line annotation with a comment a
 
 ```
 
-This code adds a line annotation with a comment and reply comments to the first page of the PDF document.
+This code adds a line annotation with a comment and replies to the first page of the PDF document.
 
 ![Programmatically Added Comment and Reply Comment in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-comment-reply-comment.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Comment/Add).
 
-## Edit Comments and Reply Comments Programmatically
+## Edit comments and replies programmatically
 
-The Blazor SfPdfViewer supports programmatically editing the comment and reply comments of an annotation using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+The `SfPdfViewer` supports programmatically editing the comment and replies of an annotation using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-The following example demonstrates how to edit the comment and reply comments programmatically:
+The following example demonstrates how to edit the comment and replies programmatically:
 
 ```cshtml
 
@@ -296,13 +296,13 @@ The following example demonstrates how to edit the comment and reply comments pr
 }
 
 ```
-This code edits the comment and reply comments programmatically within the SfPdfViewer control.
+This code edits the comment and replies programmatically within the `SfPdfViewer` control.
 
 ![Programmatically Edit Comment and Reply Comment in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-comment-reply-comment.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Comment/Edit).
 
-## Customizing DateTime Format
+## Customizing date and time format
 
 The PDF Viewer supports customizing the date and time format displayed in the comment panel using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html). This feature tailors the appearance of date and time according to preferences or regional standards.
 
@@ -358,7 +358,7 @@ This code implements date and time formatting for the comment panel of the PDF V
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Customize%20DateTimeFormat).
 
-## Enabling Multiline Support 
+## Enabling multiline support
 
 Multiline support in the comment panel allows users to input and display comments that span multiple lines. Enable multiline support using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html).
 

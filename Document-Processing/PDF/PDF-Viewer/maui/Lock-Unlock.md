@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Locking and Unlocking annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here all about locking and unlocking annotations using Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to lock and unlock annotations using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -28,6 +28,9 @@ void LockAllAnnotations()
 
 * Similarly, to unlock all the annotations, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked) property value to `false`.
 
+N>Setting AnnotationSettings.IsLocked to true locks annotations from being edited or deleted, but it does not prevent users from adding new annotations.
+If an annotation read-only experience is required, hide the annotation buttons by using toolbar customization. When the annotation buttons are not available, users cannot add annotations through the built-in UI, and the PDF Viewer behaves like it is in annotation read-only mode.
+For more details on customizing the built-in toolbar, refer to the toolbar [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization).
 
 ## Lock specific annotation
 
@@ -91,3 +94,8 @@ void LockSelectedAnnotation(Annotation selectedAnnotation)
 {% endtabs %}
 
 * Similarly, to unlock the selected annotation, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_IsLocked) property value to `false`.
+
+## See Also
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Select and Deselect Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/select-deselect-annotations)
+- [Show and Hide Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/show-hide)

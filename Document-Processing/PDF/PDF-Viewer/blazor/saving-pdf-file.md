@@ -9,11 +9,11 @@ documentation: ug
 
 # Saving PDF file in Blazor SfPdfViewer Component
 
-After editing a PDF with annotations and form fields, the updated document can be saved to a server, a database, or downloaded to the local file system. The examples below illustrate common approaches.
+After editing a PDF with annotations or form fields, the updated document can be saved to a server, persisted to a database, or downloaded to the local file system. Examples below illustrate common approaches and recommended practices.
 
 ## Save PDF file to Server
 
-Use this approach to persist the modified PDF to a server-side folder. Ensure the application has write permissions to the target directory and consider using framework services (for example, IWebHostEnvironment) to resolve application paths.
+Use this approach to persist the modified PDF to a server-side folder. Ensure the application has write permissions to the target directory and use framework services (for example, `IWebHostEnvironment`) to resolve application paths.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -45,11 +45,11 @@ Use this approach to persist the modified PDF to a server-side folder. Ensure th
 }
 ```
 
-N> For production scenarios, prefer using using statements for stream disposal, handle I/O exceptions, and validate input. Avoid writing to wwwroot at runtime unless the behavior is intentional.
+N> For production scenarios, prefer `using` statements for stream disposal, handle I/O exceptions, and validate input. Avoid writing files to `wwwroot` at runtime unless the behavior is intentional and secure.
 
 ## Save PDF file to Database
 
-Use this method to update the PDF content stored in a relational database. This is useful when documents are managed centrally and retrieved by name or identifier.
+Use this method to update PDF content stored in a relational database when documents are managed centrally and retrieved by name or identifier.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -89,11 +89,11 @@ Use this method to update the PDF content stored in a relational database. This 
 }
 ```
 
-N> Use parameterized queries for all user or variable input to prevent SQL injection. Wrap database operations with error handling and transactions as appropriate for your data layer.
+N> Use parameterized queries for all user or variable input to prevent SQL injection. Wrap database operations with error handling, transactions, and appropriate connection disposal patterns.
 
 ## Download
 
-The SfPdfViewer includes a built-in toolbar button to download the loaded or modified PDF. Control this behavior with the [EnableDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDownload) API.
+The `SfPdfViewer` includes a built-in toolbar button to download the loaded or modified PDF. Control this behavior with the [EnableDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDownload) API.
 
 ```cshtml
 
@@ -110,7 +110,7 @@ The SfPdfViewer includes a built-in toolbar button to download the loaded or mod
 
 ![Blazor SfPdfViewer with Download Option](../blazor-classic/images/blazor-pdfviewer-download-option.png)
 
-Programmatic download can also be triggered from application UI, such as a button click.
+Programmatic download can also be triggered from application UI, for example by calling `DownloadAsync()` from a button click handler.
 
 ```cshtml
 
@@ -134,7 +134,7 @@ Programmatic download can also be triggered from application UI, such as a butto
 
 ```
 
-### Download Filename
+### Download filename
 
 Use the [DownloadFileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DownloadFileName) property to set the default file name for the downloaded PDF.
 
@@ -165,7 +165,7 @@ The following example shows how to specify a custom file name.
 
 ### Download PDF file as a copy
 
-Use the built-in toolbar option or programmatic API to download the updated PDF as a copy to the local file system.
+Use the built-in toolbar option or the programmatic API to download the updated PDF as a copy to the local file system.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

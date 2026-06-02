@@ -7,9 +7,9 @@ documentation: UG
 keywords: mac os save pdf, mac os load pdf, c# save pdf, c# load pdf
 ---
 
-# Open and Save PDF document on Mac OS
+# Open and Save PDF document on macOS
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programatically without the dependency on Adobe Acrobat. Using this library, you can **open and save PDF document on Mac OS**. 
+The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save PDF document on macOS**. 
 
 ## Steps to open and save the PDF documents programmatically:
 
@@ -43,8 +43,8 @@ Step 5: Add the following code sample to the Program.cs file to **open an existi
 
 {% highlight c# tabtitle="C#" %}
 //Open an existing PDF document.
-FileStream document = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
-PdfLoadedDocument document = new PdfLoadedDocument(stream);
+FileStream fileStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(fileStream);
 {% endhighlight %}
 
 {% endtabs %}
@@ -97,7 +97,7 @@ document.Save(outputStream);
 
 {% endtabs %}
 
-A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Mac/Open_and_Save_PDF_Mac).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Mac/Open_and_Save_PDF_Mac).
 
 By executing the program, you will get the **PDF document** as follows.
 ![Mac OS output PDF document](Images/Open_and_save_output.png)

@@ -91,7 +91,7 @@ iii. Obtain the server’s IP address after adding the website in the local IIS 
 iv. From your local computer, browse the website using the server’s IP address and port number. Once the site loads successfully, export the webpage to PDF.
 ![IIS Browser](htmlconversion_images/IIS-RunBrowser.png)
 
-A complete working sample is available for download from GitHub.
+A complete working sample is available for download from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/ASP.NET%20Core).
 
 Click the button to convert the Syncfusion<sup>&reg;</sup> webpage into a PDF document. The generated PDF will appear as shown below.
 ![IIS Output document](htmlconversion_images/IIS-Output.png)

@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Showing and Hiding Annotations in PDF Viewer
+# Show and hide annotations in PDF Viewer
 
 ## Overview
 
-This guide demonstrates how to show and hide annotations in the Syncfusion PDF Viewer for Angular. This functionality is useful when you want to temporarily remove annotations from view and restore them later without permanently deleting them.
+This guide shows how to temporarily hide annotations and restore them later in the Angular PDF Viewer. This is useful for presenting a clean view of the document while preserving annotation data for later use.
 
-## How to Show and Hide Annotations
+## How to show and hide annotations
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Create a basic Angular PDF Viewer sample using the getting started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started
 
-**Step 2:** Set Up Your Angular Component
+**Step 2:** Set up the Angular component and template
 
-Create an Angular component and update the template to include buttons that trigger the hide and unhide functionality for annotations.
+Add UI controls (for example, buttons) that trigger hide and unhide behaviors. The sample below exports annotations to an object, removes them from the viewer, and later imports them back to restore the annotations.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
