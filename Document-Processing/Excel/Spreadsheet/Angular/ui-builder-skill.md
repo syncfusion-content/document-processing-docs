@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular UI Builder Skills with Spreadsheet | Syncfusion®
+title: Angular UI Builder Skill with Spreadsheet | Syncfusion®
 description: Install Syncfusion® Angular UI Builder to generate production-ready Angular components with Spreadsheet from natural-language prompts.
 control: Spreadsheet
 platform: document-processing
@@ -8,16 +8,16 @@ documentation: ug
 keywords: Angular UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® Angular UI Builder Skills with Spreadsheet
+# Syncfusion® Angular UI Builder Skill with Spreadsheet for AI Assistants
 
-**Syncfusion® Angular UI Builder Skills** is an AI-powered agent skills that accelerates Angular Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
+**Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates Angular Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
 
 Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® Spreadsheet** and other Angular components to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Angular UI Builder helps you rapidly build scalable spreadsheet applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing Angular UI Builder Skills with Spreadsheet, ensure the following:
+Before installing Angular UI Builder Skill with Spreadsheet, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
@@ -56,7 +56,7 @@ Before installing Angular UI Builder Skills with Spreadsheet, ensure the followi
 
 ## Installation
 
-Before installing Angular UI Builder Skills with Spreadsheet, ensure that APM (Agent Package Manager) is installed and available in your environment.
+Before installing Angular UI Builder Skill with Spreadsheet, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
 ### Verify APM Installation
 
@@ -66,9 +66,9 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® Angular UI Builder Skills with Spreadsheet package using APM
+### Install the Syncfusion® Angular UI Builder Skill with Spreadsheet package using APM
 
-Use the APM CLI to install the Angular UI Builder Skills with Spreadsheet for your preferred environment:
+Use the APM CLI to install the Angular UI Builder Skill with Spreadsheet for your preferred environment:
 
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
@@ -95,14 +95,14 @@ apm install syncfusion/angular-ui-builder -t claude
 
 After installation, the following artifacts are added to your project for the GitHub Copilot target:
 
-- `.agent/skills/` – contains the skills files
+- `.agent/skills/` – contains the skill files
 - `.github/agents/` – contains the agent configuration
 
 Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals) for details about supported deployment targets.
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the Angular UI Builder.
 
-## How the Syncfusion® Angular UI Builder Skills Works with Spreadsheet
+## How the Syncfusion® Angular UI Builder Skill Works with Spreadsheet
 
 1. **Intent Analysis:** Parse the user’s prompt to identify component types and high-level layout intent.
 2. **Project Detection:** Automatically detects project framework, package manager, existing themes, and Spreadsheet configuration.
@@ -129,12 +129,12 @@ Key enforcement points:
 
 ## Using the AI Assistant
 
-After installing Angular UI Builder Skills with Spreadsheet and APM, the relevant agent and skills files are added to your project under:
+After installing Angular UI Builder Skill with Spreadsheet and APM, the relevant agent and skill files are added to your project under:
 
-- `.agent/skills/` (skills files)
+- `.agent/skills/` (skill files)
 - `.github/agents/` (Angular UI builder agent configuration, based on the selected target)
 
-To start using the skills:
+To start using the skill:
 
 1.Open your supported IDE.  
 2.In the chat panel, select the `syncfusion-angular-ui-builder` agent from the **Agent dropdown**.
@@ -170,25 +170,25 @@ Follow these guidelines to get the most out of UI Builder and ensure high-qualit
 
 - **APM installation failure**: Refer to this [documentation](https://microsoft.github.io/apm/getting-started/installation/#troubleshooting)
 
-- **Skills not loading**: Ensure the **.agent/** and **.github/agents/** folders exist in your project and that the skills was installed successfully using APM. Verify that the correct agent is selected from the Agent dropdown in your IDE.
+- **Skills not loading**: Ensure the **.agent/** and **.github/agents/** folders exist in your project and that the skill was installed successfully using APM. Verify that the correct agent is selected from the Agent dropdown in your IDE.
 
-- **Component not rendering**: Retry generation using the specific component skills to resolve the issue, and ensure required Syncfusion® packages, Spreadsheet services, and themes are properly configured.
+- **Component not rendering**: Retry generation using the specific component skill to resolve the issue, and ensure required Syncfusion® packages, Spreadsheet services, and themes are properly configured.
 
-- **Syncfusion license banner appears**: Use the licensing skills to correctly register and validate your Syncfusion® license key in the application.
+- **Syncfusion license banner appears**: Use the licensing skill to correctly register and validate your Syncfusion® license key in the application.
 
 ## FAQ
 
 **Which agents/IDEs are supported?**  
-Any Skills-compatible agent that reads local skills files (Code Studio, VS Code, Cursor, etc.).
+Any Skills-compatible agent that reads local skill files (Code Studio, VS Code, Cursor, etc.).
 
 **Are skills loaded automatically?**  
 Yes. Supported agents automatically load relevant skills based on your query.
 
 **Can I customize the generated styles?**  
-Yes. The skills supports choosing Tailwind, Bootstrap, Material, or a custom theme; generated components include clear integration points for style adjustments.
+Yes. The skill supports choosing Tailwind, Bootstrap, Material, or a custom theme; generated components include clear integration points for style adjustments.
 
 **Does it modify files automatically?**  
-The skills proposes changes and requires confirmation for insertion; automatic dependency installation may be offered depending on agent permissions.
+The skill proposes changes and requires confirmation for insertion; automatic dependency installation may be offered depending on agent permissions.
 
 ## See also
 
