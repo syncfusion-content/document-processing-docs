@@ -8,7 +8,7 @@ documentation: UG
 
 # Markdown to Excel Conversion
 
-Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Excel (XlsIO) library supports the conversion of Markdown to Excel document and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
+Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Excel (XlsIO) library supports the conversion of Markdown to an Excel document and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
 ## Assemblies and NuGet packages required
 
@@ -21,7 +21,7 @@ Refer to the following links for assemblies and NuGet packages required based on
 
 Convert an existing Markdown file to an Excel document using the .NET Excel (XlsIO) library.
 
-The following code example shows how to convert Markdown to Excel document.
+The following code example shows how to convert Markdown to an Excel document.
 
 {% tabs %}  
 
@@ -66,9 +66,9 @@ You can download a complete working sample from <a href="https://github.com/Sync
 
 ## Customize image data
 
-The .NET Excel (XlsIO) library provides a **ImageNodeVisited** event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this **ImageNodeVisited** event.
+The .NET Excel (XlsIO) library provides an **ImageNodeVisited** event, which allows you to customize image data while importing a Markdown file. Implement the logic to customize the image data by using this **ImageNodeVisited** event.
 
-The following code example shows how to load image data based on the image source path when importing the Markdown files.
+The following code example shows how to load image data based on the image source path when importing a Markdown file.
 
 {% tabs %}  
 
@@ -112,7 +112,7 @@ Using excelEngine As New ExcelEngine()
     Dim settings As New MdImportSettings()
     AddHandler settings.ImageNodeVisited, AddressOf MdImportSettings_ImageNodeVisited
 
-    Dim workbook As IWorkbook = application.Workbooks.Open("Sample.md", settings)
+    Dim workbook As IWorkbook = application.Workbooks.Open("Sample1.md", settings)
 
     workbook.SaveAs("MarkdownToExcel.xlsx")
 End Using
@@ -132,7 +132,7 @@ private static void MdImportSettings_ImageNodeVisited(object sender, MdImageNode
         args.ImageStream = new FileStream(Path.GetFullPath("Data/Image_1.png"), FileMode.Open);
     else if (args.Uri == "Image_2.png")
         args.ImageStream = new FileStream(Path.GetFullPath("Data/Image_2.png"), FileMode.Open);
-    //Retrive the image from the website and use it.
+    //Retrieve the image from the website and use it.
     else if (args.Uri.StartsWith("https://"))
     {
         WebClient client = new WebClient();
@@ -151,7 +151,7 @@ private static void MdImportSettings_ImageNodeVisited(object sender, MdImageNode
         args.ImageStream = new FileStream(Path.GetFullPath("Data/Image_1.png"), FileMode.Open);
     else if (args.Uri == "Image_2.png")
         args.ImageStream = new FileStream(Path.GetFullPath("Data/Image_2.png"), FileMode.Open);
-    //Retrive the image from the website and use it.
+    //Retrieve the image from the website and use it.
     else if (args.Uri.StartsWith("https://"))
     {
         WebClient client = new WebClient();
@@ -166,9 +166,9 @@ private static void MdImportSettings_ImageNodeVisited(object sender, MdImageNode
 Private Sub MdImportSettings_ImageNodeVisited(sender As Object, args As MdImageNodeVisitedEventArgs)
     ' Set the image stream based on the image name from the input Markdown.
     If args.Uri = "Image_1.png" Then
-        args.ImageStream = New FileStream(Path.GetFullPath("D:\UG Branch\1029061-MarkdownExample\Markdown to Excel\Markdown-to-Excel\.NET\Markdown-to-Excel\Markdown-to-Excel\Data\Image_1.png"), FileMode.Open)
+        args.ImageStream = New FileStream(Path.GetFullPath("Data/Image_1.png"), FileMode.Open)
     ElseIf args.Uri = "Image_2.png" Then
-        args.ImageStream = New FileStream(Path.GetFullPath("D:\UG Branch\1029061-MarkdownExample\Markdown to Excel\Markdown-to-Excel\.NET\Markdown-to-Excel\Markdown-to-Excel\Data\.png"), FileMode.Open)
+        args.ImageStream = New FileStream(Path.GetFullPath("Data/Image_2.png"), FileMode.Open)
     ElseIf args.Uri.StartsWith("https://") Then
         Dim client As New WebClient()
         Dim imageBytes As Byte() = client.DownloadData(args.Uri)
@@ -182,4 +182,4 @@ End Sub
 
 You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Markdown%20to%20Excel/Customize-Image/.NET/Customize-Image">this GitHub page</a>.
 
-N> Hook the event handler before opening Excel document as per the above code example.
+N> Hook the event handler before opening the Markdown document as per the above code example.
