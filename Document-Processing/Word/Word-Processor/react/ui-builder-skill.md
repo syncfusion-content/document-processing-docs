@@ -110,7 +110,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
    Load required theming guidelines and confirm key design choices:
    - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option, which can be used as is or changed based on preference.
    - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
-	 - Light and Dark Mode
+   - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
 5. **Code Generation:** Produce TypeScript React components with DOCX Editor integration, props interfaces, and CSS/styling scaffolding.
 6. **Dependency Management:** Recommend or install required Syncfusion® packages and peer dependencies.

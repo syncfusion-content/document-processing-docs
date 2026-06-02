@@ -159,6 +159,7 @@ Design a document dashboard interface using a DataGrid and a RichTextBox control
 Create a DataGrid with two columns:
 - The first column should display document names (e.g., Document1.docx, Document2.docx).
 - The second column should contain a **View** button for each row.
+
 When the **View** button is clicked, load the corresponding document from the application's local assets folder into the RichTextBox for viewing.
 Ensure the interaction between the DataGrid and editor is seamless, and maintain a clean, simple layout suitable for browsing and viewing documents efficiently.
 
