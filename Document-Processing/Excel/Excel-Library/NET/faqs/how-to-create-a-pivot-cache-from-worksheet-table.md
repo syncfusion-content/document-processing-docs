@@ -1,12 +1,12 @@
 ---
-title: How to create a Pivot Cache when the worksheet data is stored as a table? | Syncfusion
+title: Create Pivot Cache from Excel Table Data | Syncfusion
 description: This page explains how to create a Pivot Cache when the worksheet data is stored as a table using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to create a Pivot Cache when the worksheet data is stored as a table?
+# How to Create a Pivot Cache from Excel Table Data?
 
 You can create a Pivot Cache from a worksheet's ListObject (table) by accessing the table's location and passing it to the PivotCaches.Add method. The following code illustrates this.
 
