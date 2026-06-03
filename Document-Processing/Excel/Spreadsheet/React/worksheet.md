@@ -9,7 +9,15 @@ documentation: ug
 
 # Worksheet in React Spreadsheet component
 
-Worksheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data.
+A **Worksheet** is a collection of cells organized in rows and columns. It allows you to store, format, and manipulate data efficiently within the Spreadsheet. Each worksheet provides a structured grid where you can enter values, apply formulas, and customize formatting to manage your data.  
+
+Worksheets are part of the **Spreadsheet component**, and you can configure them using the [`sheets`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sheets) property. This property lets you define multiple worksheets, each with its own settings such as rows, columns, data, and formatting options.  
+
+By using worksheets, you can:  
+* Organize data into separate tabs for better clarity.  
+* Apply different formatting styles to each sheet.  
+* Manage formulas and calculations independently across sheets.  
+* Import or export data while maintaining sheet-level configurations.
 
 ## Add sheet
 
@@ -38,7 +46,7 @@ The following code example shows the insert sheet operation in spreadsheet.
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/insert-sheet-cs1" %}
 
-### Insert a sheet programmatically and make it active sheet 
+### Insert a sheet programmatically and make it active sheet
 
 A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#goto) method.
 
@@ -57,10 +65,11 @@ The following code example shows how to insert a sheet programmatically and make
 
 ## Delete sheet
 
-The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet by the following way,
+The Spreadsheet supports removing an existing worksheet. You can delete a sheet in the following ways:
 
-* Right-click on the sheet tab, and then select `Delete` option from context menu.
-* Using [`delete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete ) method to delete the sheets.
+* Right-click on the sheet tab, and then select the **Delete** option from the context menu.
+* Use the [`delete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete) method to remove sheets programmatically.  
+* Note: You cannot delete a worksheet if only one sheet exists in the workbook.
 
 ## Rename sheet
 
@@ -80,7 +89,7 @@ By default, the row and column headers are visible in worksheets. You can dynami
 Gridlines act as a border like appearance of cells. They are used to distinguish cells on the worksheet. You can dynamically show or hide gridlines by using one of the following ways,
 
 * Switch to `View` tab, and then select `Hide Gridlines` option to hide the gridlines in worksheet.
-* Set `showGridLines` property in `sheets` as `true` or `false` to show or hide the gridlines at initial load. By default, the `showGridLines` property is enabled in each worksheet.
+* Set `showGridLines` property in `sheets` as `true` or `false` to show or hide the gridlines at initial load. By default, the [showGridLines](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sheet#showgridlines) property is enabled in each worksheet.
 
 The following code example shows the headers and gridlines operation in spreadsheet.
 
@@ -131,6 +140,34 @@ The following code example shows the three types of sheet visibility state.
 {% endtabs %}
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/sheet-visiblity-cs1" %}
+
+## Duplicate sheet
+
+The Spreadsheet component allows you to create a copy of an existing worksheet along with its data, formatting, and configurations. Duplicating a sheet is useful when you want to reuse the same structure or data without manually recreating it.
+
+While duplicating the worksheet, a new worksheet is created as an exact copy of the selected sheet and is placed next to it. The duplicated sheet will automatically be assigned a unique name to avoid conflicts with existing sheet names.
+
+You can duplicate a worksheet in the following way,
+
+* Right-click on the sheet tab, and then select the `Duplicate` option from the context menu.
+
+* Duplicate a sheet programmatically using the [duplicateSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#duplicatesheet) method; it copies the specified worksheet (including data, formatting and settings) and places the copy next to the original so you can reuse or edit it without affecting the source.
+
+![Duplicate sheet](./images/spreadsheet-duplicate.png)
+
+## Move sheet
+
+The Spreadsheet component provides options to rearrange worksheets by moving them to the left or right within the sheet tab panel. This helps you organize worksheets in the required order.
+
+You can move a worksheet using the following way,
+
+* Right-click on the sheet tab, and then select either `Move Left`(moves the sheet one position to the left) or `Move Right`(moves the sheet one position to the right) option from the context menu.
+
+* Move sheets programmatically using the [moveSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#movesheet) method, which moves a worksheet from one position to another based on the position passed in the method and updates the sheet tab order.
+    
+![Move sheet tabs](./images/spreadsheet-move-tab.png)
+
+>**Note:** The Move Left and Move Right options are enabled only when there are two or more worksheets available in the Spreadsheet. These options are automatically disabled when the selected sheet is already at the first or last position.
 
 ## Note
 
