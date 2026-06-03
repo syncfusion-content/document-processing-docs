@@ -54,7 +54,7 @@ The <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/over
 DOCX Editor SDK
 </td>
 <td>
-The <a href="https://help.syncfusion.com/document-processing/word/word-processor/overview">DOCX Editor</a> is a Microsoft Word–like component for viewing, editing, and printing documents across WPF, JavaScript, Angular, React, Vue, ASP.NET MVC, ASP.NET Core, and Blazor applications-without requiring Microsoft Office. It offers rich features such as formatting, tables, images, track changes, and real-time collaboration, with easy integration so developers can focus on core application logic.
+The <a href="https://help.syncfusion.com/document-processing/word/word-processor/overview">DOCX Editor</a> is a Microsoft Word-like component for viewing, editing, and printing documents across WPF, JavaScript, Angular, React, Vue, ASP.NET MVC, ASP.NET Core, and Blazor applications-without requiring Microsoft Office. It offers rich features such as formatting, tables, images, track changes, and real-time collaboration, with easy integration so developers can focus on core application logic.
 </td>
 </tr>
 <tr>
