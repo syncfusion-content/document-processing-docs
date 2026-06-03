@@ -1,29 +1,28 @@
 ---
 layout: post
-title: WinForms UI Builder Skill with PDF Viewer | Syncfusion®
-description: Install Syncfusion® WinForms UI Builder to generate production-ready Windows Forms controls with PDF Viewer from natural-language prompts.
-control: PDF Viewer
+title: WinForms UI Builder Skill with Spreadsheet AI Assistants | Syncfusion®
+description: Install Syncfusion® WinForms UI Builder to generate production-ready Windows Forms controls with Spreadsheet from natural-language prompts.
+control: Spreadsheet
 platform: document-processing
 documentation: ug
-keywords: WinForms UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: WinForms UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® WinForms UI Builder Skill with PDF Viewer
+# Syncfusion® WinForms UI Builder Skill with Spreadsheet AI Assistants
 
-**Syncfusion® WinForms UI Builder Skill** is an AI-powered agent skill that accelerates WinForms PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® WinForms components. 
+**Syncfusion® WinForms UI Builder Skill** is an AI-powered agent skill that accelerates WinForms Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® WinForms components. 
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** and other WinForms components to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WinForms UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® Spreadsheet** and other WinForms components to deliver accurate and ready-to-use code.By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, WinForms UI Builder helps you rapidly build scalable spreadsheet applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing WinForms UI Builder Skill with PDF Viewer, ensure the following:
+Before installing WinForms UI Builder Skill with Spreadsheet, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [.NET SDK](https://dotnet.microsoft.com/en-us/download) version ≥ 6
 - Windows Forms application (existing or new); see [Overview](https://help.syncfusion.com/windowsforms/overview)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
+- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
@@ -37,7 +36,7 @@ Before installing WinForms UI Builder Skill with PDF Viewer, ensure the followin
 
 ### **Control Usage & API Accuracy**
 - Uses correct Syncfusion® control APIs and properties
-- Injects required feature modules (paging, sorting, filtering, etc.)
+- Injects required feature modules (sorting, filtering, etc.)
 - Avoids unsupported or deprecated patterns
 
 ### **Patterns & Best Practices**
@@ -105,7 +104,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the WinForms UI Builder.
 
-## How the Syncfusion® WinForms UI Builder Skill Works with PDF Viewer
+## How the Syncfusion® WinForms UI Builder Skill Works with Spreadsheet
 
 1. **Intent Analysis** — Parse the user's prompt to identify control types and high-level form layout intent.
 2. **Project Detection** — Automatically detects .NET framework (Framework, Core, or .NET 5+) and existing Syncfusion® configurations.
@@ -133,7 +132,7 @@ Key enforcement points:
 
 ## Using the AI Assistant
 
-After installing WinForms UI Builder Skill with PDF Viewer and APM, the relevant agent and skill files are added to your project under:
+After installing WinForms UI Builder Skill with Spreadsheet and APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
 - `.github/agents/` (WinForms UI builder agent configuration, based on the selected target)
@@ -149,18 +148,18 @@ To start using the skill:
 
 > For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
-Example Prompts:
+Examples Prompts:
 
 {% promptcards %}
-{% promptcard Invoice Viewer with Details Panel %}
-Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
+{% promptcard Spreadsheet with Multiple Sheets %}
+Create a WinForms application using Syncfusion Spreadsheet with three worksheets and configure the second worksheet as the active sheet when the application loads, ensuring a simple and properly initialized workbook setup.
 {% endpromptcard %}
-{% promptcard Course Material Viewer %}
-Create a learning interface with the PDF viewer displaying course material. Add a collapsible sidebar with lesson navigation and progress tracking. Include a top progress bar, next/previous lesson buttons, and a notes section below or beside the viewer. Focus on student-friendly, distraction-free design.
+{% promptcard Spreadsheet with Sample Data and Formulas %}
+Create a WinForms application using Syncfusion Spreadsheet that initializes a worksheet with sample data (such as sales or invoice details) and applies formulas like SUM and AVERAGE to calculate totals and summaries, ensuring proper data formatting and a clean, user-friendly layout.
 {% endpromptcard %}
 {% endpromptcards %}
 
-Generated code follows Windows Forms best practices with proper control layout, event handling, data bindings, strong C# typing, and built-in security measures such as input validation and avoidance of hard-coded secrets. The code is fully compatible with Visual Studio designer and Windows Forms conventions.
+Generated code follows Windows Forms best practices with proper control layout, event handling, data bindings, strong C# typing, and built-in security measures such as input validation and avoidance of hardcore secrets. The code is fully compatible with Visual Studio designer and Windows Forms conventions.
 
 ## Best Practices
 

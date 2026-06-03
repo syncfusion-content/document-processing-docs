@@ -1,64 +1,63 @@
 ---
 layout: post
-title: Angular UI Builder Skill with PDF Viewer | Syncfusion®
-description: Install Syncfusion® Angular UI Builder to generate production-ready Angular components with PDF Viewer from natural-language prompts.
-control: PDF Viewer
+title: Angular UI Builder Skill with DOCX Editor | Syncfusion®
+description: Install Syncfusion® Angular UI Builder to generate production-ready Angular components with DOCX Editor from natural-language prompts.
+control: DOCX Editor
 platform: document-processing
 documentation: ug
-keywords: Angular UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: Angular UI Builder, Skills, AI Assistants, DOCX Editor, Agent Skills
 ---
 
-# Syncfusion® Angular UI Builder Skill with PDF Viewer for AI Assistants
+# Angular UI Builder Skill with DOCX Editor for AI Assistants
 
-**Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates Angular PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
+**Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates Angular DOCX Editor development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** and other Angular components to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Angular UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® DOCX Editor** and other Angular components to deliver accurate and ready-to-use code.
+By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Angular UI Builder helps you rapidly build scalable Document editing applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing Angular UI Builder Skill with PDF Viewer, ensure the following:
+Before installing Angular UI Builder Skill with DOCX Editor, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
 - Angular application (existing or new); see [Quick Start](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-cli)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
+- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 
 ## Key Benefits
 
-### **AI-Driven UI Generation**
+**AI-Driven UI Generation**
 - Transforms prompts into fully developed Angular components rather than just partial code snippets.
 - Automatically selects appropriate Syncfusion® components and features
 - Produces structured, maintainable code
 
-### **Component Usage & API Accuracy**
+**Component Usage & API Accuracy**
 - Uses correct Syncfusion® component APIs
 - Injects required feature modules (paging, sorting, filtering, etc.)
 - Avoids unsupported or deprecated patterns
 
-### **Patterns & Best Practices**
+**Patterns & Best Practices**
 - Recommended component composition and state management
 - Event handling aligned with Angular standards
 - Secure and scalable coding patterns
 
-### **Accessibility & Responsiveness**
+**Accessibility & Responsiveness**
 - WCAG 2.1 AA–aligned output
 - Semantic HTML with ARIA support
-- Mobile-first responsive layouts
 
-### **Design-System Integration**
+**Design-System Integration**
 - Supports Tailwind, Bootstrap, Material, or custom themes
 - Ensures consistent Syncfusion® styling and theme usage
 
 ## Installation
 
-Before installing Angular UI Builder Skill with PDF Viewer, ensure that APM (Agent Package Manager) is installed and available in your environment.
+Before installing Angular UI Builder Skill with DOCX Editor, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
-### Verify APM Installation
+**Verify APM Installation**
 
 Run the following command to confirm APM is installed:
 
@@ -66,9 +65,9 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® Angular UI Builder Skill with PDF Viewer package using APM
+### Install the Syncfusion® Angular UI Builder Skill with DOCX Editor package using APM
 
-Use the APM CLI to install the Angular UI Builder skill with PDF Viewer for your preferred environment:
+Use the APM CLI to install the Angular UI Builder skill with DOCX Editor for your preferred environment:
 
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
@@ -102,23 +101,23 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the Angular UI Builder.
 
-## How the Syncfusion® Angular UI Builder Skill Works with PDF Viewer
+## How the Syncfusion® Angular UI Builder Skill Works with DOCX Editor
 
 1. **Intent Analysis:** Parse the user's prompt to identify component types and high-level layout intent.
-2. **Project Detection:** Automatically detects project framework, package manager, existing themes, and PDF Viewer configuration.
-3. **Component Mapping:** Map intent to Syncfusion® PDF Viewer and Angular components, including required modules.
+2. **Project Detection:** Automatically detects project framework, package manager, existing themes, and DOCX Editor configuration.
+3. **Component Mapping:** Map intent to Syncfusion® DOCX Editor and Angular components, including required modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
    - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option, which can be used as is or changed based on preference.
    - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
    - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
-5. **Code Generation:** Produce TypeScript Angular components with PDF Viewer integration, props interfaces, and CSS/styling scaffolding.
+5. **Code Generation:** Produce TypeScript Angular components with DOCX Editor integration, props interfaces, and CSS/styling scaffolding.
 6. **Dependency Management:** Recommend or install required Syncfusion® packages and peer dependencies.
 7. **Validation:** Run accessibility and basic security checks, request confirmation for changes.
 8. **Code Insertion:** Create files or patch existing files following project structure and conventions.
 
-**Key enforcement points:**
+Key enforcement points:
 
 - Adds correct theme and CSS imports for chosen Syncfusion® themes
 - Injects only the feature modules required by generated components
@@ -129,37 +128,45 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 ## Using the AI Assistant
 
-After installing Angular UI Builder Skill with PDF Viewer and APM, the relevant agent and skill files are added to your project under:
+After installing Angular UI Builder Skill with DOCX Editor and APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
 - `.github/agents/` (Angular UI builder agent configuration, based on the selected target)
 
 To start using the skill:
 
-1. Open your supported IDE.
-2. In the chat panel, select the `syncfusion-angular-ui-builder` agent from the **Agent dropdown**.
-  ![Set Agent](./images/UI-Builder-Agent.png)
-3. Start prompting the agent with a clear description of your UI requirements.
+1.Open your supported IDE.
+2.In the chat panel, select the `syncfusion-angular-ui-builder` agent from the **Agent dropdown**.
+
+![Set Agent](images/UI-Builder-Agent.png)
+
+3.Start prompting the agent with a clear description of your UI requirements.
 
 > For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
-**Example Prompts:**
+**Examples Prompts:**
 
 {% promptcards %}
-{% promptcard Invoice Viewer with Details Panel %}
-Design a resume review interface using the PDF viewer for candidate CVs. Add a right panel with candidate details, ratings, tags, and action buttons (shortlist, reject, schedule interview). Include quick notes functionality. Focus on fast scanning and decision-making UX.
+
+{% promptcard Dynamic Toolbar Customization Editor %}
+
+Build a new angular application with DOCX Editor Include a sidebar panel on the right side that displays a list of toolbar options with checkboxes for New, Open, Undo and Redo. Add a button at the bottom of the panel labeled "Apply Changes". When users select or deselect the checkboxes and click the button, the toolbar at the top of the DOCX Editor should dynamically show or hide the corresponding items in real time, providing a customizable editing experience similar to advanced document editors.
+
 {% endpromptcard %}
-{% promptcard Course Material Viewer %}
-Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
+
+{% promptcard Track Changes Toggle Editor %}
+
+Build a new angular application with the DOCX Editor. Include a toggle switch button at the top-left corner to control track changes. The editor should support real-time change tracking, and the toggle must properly enable or disable this feature.
+
 {% endpromptcard %}
+
 {% endpromptcards %}
 
-
-Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong TypeScript typing, and built-in security measures such as input validation and avoidance of embedded secrets.
+Generated code follows best practices with accessible, semantic HTML, strong TypeScript typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
 ## Best Practices
 
-Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready results:
+Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready result:
 
 - **Stay consistent:** Maintain consistent file organization, naming conventions, and coding standards throughout your project.
 - **Use advanced AI models:** For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.

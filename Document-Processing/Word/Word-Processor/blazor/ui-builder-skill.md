@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Blazor UI Builder Skill with PDF Viewer | Syncfusion®
-description: Install Syncfusion® Blazor UI Builder to generate production-ready Blazor components with PDF Viewer from natural-language prompts.
-control: PDF Viewer
+title: Blazor UI Builder Skill with DOCX Editor | Syncfusion®
+description: Install Blazor UI Builder to generate production-ready Blazor components with DOCX Editor from natural-language prompts.
+control: DOCX Editor
 platform: document-processing
 documentation: ug
-keywords: Blazor UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: Blazor UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
 ---
 
-# Syncfusion® Blazor UI Builder Skill with PDF Viewer for AI Assistants
+# Blazor UI Builder Skill with DOCX Editor for AI Assistants
 
-**Syncfusion® Blazor UI Builder Skill** is an AI-powered skill and companion agent that accelerates Blazor PDF Viewer application development by transforming natural-language UI requirements into production-ready components using Syncfusion® Blazor UI libraries. 
+**Syncfusion® Blazor UI Builder Skill** is an AI-powered skill and companion agent that accelerates Blazor DOCX Editor application development by transforming natural-language UI requirements into production-ready components using Syncfusion® Blazor UI libraries. 
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® PDF Viewer** to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Blazor UI Builder helps you rapidly build scalable PDF viewing applications and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® DOCX Editor** to deliver accurate and ready-to-use code.
+By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Blazor UI Builder helps you rapidly build scalable Document editing applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
-Before installing Blazor UI Builder Skill with PDF Viewer, ensure the following:
+Before installing Blazor UI Builder Skill with DOCX Editor, ensure the following:
 
 - Active **Blazor Project** (Blazor WebAssembly or Blazor Server) using .NET 8 or later
 - Microsoft **.NET SDK 8.0 or later** with .NET CLI tools installed
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
 - **Agent Package Manager** (APM) installed — follow [Installation Guidelines](https://microsoft.github.io/apm/quickstart/#1-install-apm)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
+- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
@@ -49,7 +49,6 @@ Before installing Blazor UI Builder Skill with PDF Viewer, ensure the following:
 ### **Accessibility & Responsiveness**
 - WCAG 2.1 AA–aligned output
 - Semantic HTML with ARIA support
-- Mobile-first responsive layouts
 
 ### **Design-System Integration**
 - Supports Tailwind, Bootstrap, Material, or custom themes
@@ -57,7 +56,7 @@ Before installing Blazor UI Builder Skill with PDF Viewer, ensure the following:
 
 ## Installation
 
-Before installing Blazor UI Builder Skill with PDF Viewer, ensure that APM (Agent Package Manager) is installed and available in your environment.
+Before installing Blazor UI Builder Skill with DOCX Editor, ensure that APM (Agent Package Manager) is installed and available in your environment.
 
 ### Verify APM Installation
 
@@ -67,9 +66,9 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® Blazor UI Builder Skill with PDF Viewer package using APM
+### Install the Syncfusion® Blazor UI Builder Skill with DOCX Editor package using APM
 
-Use the APM CLI to install the Blazor UI Builder Skill with PDF Viewer for your preferred environment:
+Use the APM CLI to install the Blazor UI Builder Skill with DOCX Editor for your preferred environment:
 
 {% tabs %}
 {% highlight bash tabtitle="Copilot" %}
@@ -106,23 +105,23 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the Blazor UI Builder.
 
-## How the Syncfusion® Blazor UI Builder Skill Works with PDF Viewer
+## How the Syncfusion® Blazor UI Builder Skill Works with DOCX Editor
 
 1. **Intent Analysis** - Parse the user's prompt to identify component types and high-level layout intent.
-2. **Project Detection** - Automatically detects project framework, package manager, existing themes, and PDF Viewer configuration.
-3. **Component Mapping** - Map intent to Syncfusion® PDF Viewer and components and required feature modules.
+2. **Project Detection** - Automatically detects project framework, package manager, existing themes, and DOCX Editor configuration.
+3. **Component Mapping** - Map intent to Syncfusion® DOCX Editor and components and required feature modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
    - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option-proceed with this or change the theme as preferred.
    - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
    - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
-5. **Code Generation** - Produce C# Blazor components with PDF Viewer, parameter interfaces, and CSS/styling scaffolding.
+5. **Code Generation** - Produce C# Blazor components with DOCX Editor, parameter interfaces, and CSS/styling scaffolding.
 6. **Dependency Management** - Recommend or install required Syncfusion® packages and peer dependencies.
 7. **Validation** - Run accessibility and basic security checks, request confirmation for changes.
 8. **Code Insertion** - Create files or patch existing files following project structure and conventions.
 
-**Key enforcement points:**
+Key enforcement points:
 
 - Adds correct theme and CSS imports for chosen Syncfusion® themes
 - Injects only the feature modules required by generated components
@@ -133,7 +132,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 ## Using the AI Assistant
 
-After installing Blazor UI Builder Skill with PDF Viewer and APM, the relevant agent and skill files are added to your project under:
+After installing Blazor UI Builder Skill with DOCX Editor and APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
 - `.github/agents/` (Blazor UI builder agent configuration, based on the selected target)
@@ -142,27 +141,34 @@ To start using the skill:
 
 1. Open your supported IDE.
 2. In the chat panel, select the `syncfusion-blazor-ui-builder` agent from the **Agent dropdown**.
-  ![Set Agent](./images/blazor-ui-builder.png)
+  ![Set Agent](images/blazor-ui-builder.png)
 3. Start prompting the agent with a clear description of your UI requirements.
 
 > For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
-**Example Prompts:**
+**Examples Prompts:**
 
 {% promptcards %}
-{% promptcard Legal Document Review Interface %}
-Build a legal document review interface using the PDF viewer as the central workspace. Add a right-side comments panel with threaded discussions, timestamps, and user avatars. Include filters for resolved and unresolved comments. Overlay inline comment markers on the PDF viewer. Use a professional, structured layout with clear hierarchy and subtle borders.
+
+{% promptcard Dynamic Toolbar Customization Editor %}
+
+Build a new Blazor application with DOCX Editor. Include a sidebar panel on the right side that displays a list of toolbar options with checkboxes for New, Open, Undo and Redo. Add a button at the bottom of the panel labeled "Apply Changes". When users select or deselect the checkboxes and click the button, the toolbar at the top of the DOCX Editor should dynamically show or hide the corresponding items in real time, providing a customizable editing experience similar to advanced document editors. 
+
 {% endpromptcard %}
-{% promptcard HR Resume Review Screen %}
-Design a resume review interface using the PDF viewer for candidate CVs. Add a right panel with candidate details, ratings, tags, and action buttons (shortlist, reject, schedule interview). Include quick notes functionality. Focus on fast scanning and decision-making UX.
+
+{% promptcard Track Changes Toggle Editor %}
+
+Build a Blazor application with the DOCX Editor. Include a toggle switch button at the top-left corner to control track changes. The editor should support real-time change tracking, and the toggle must properly enable or disable this feature. 
+
 {% endpromptcard %}
+
 {% endpromptcards %}
 
-Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
+Generated code follows best practices with accessible, semantic HTML, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
 ## Best Practices
 
-Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready results:
+Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready result:
 
 - **Stay consistent** - Maintain consistent file organization, naming conventions, and coding standards throughout your project.
 - **Use advanced AI models** - For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
