@@ -39,7 +39,7 @@ const azureDeploymentName   = 'Your_Deployment_Name';
 
 ### Runtime environment
 
-* [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later
+* .NET 8 SDK or later
 * Visual Studio 2022 or the .NET CLI
 
 ---
@@ -76,7 +76,6 @@ Open `appsettings.json` and add your Azure OpenAI credentials under the `AI` sec
 }
 ```
 
-> **Important:** For production, store secrets using [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/) or [.NET Secret Manager](https://learn.microsoft.com/aspnet/core/security/app-secrets) instead of `appsettings.json`.
 
 ---
 

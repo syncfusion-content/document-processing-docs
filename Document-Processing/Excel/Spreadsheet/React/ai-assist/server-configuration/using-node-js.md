@@ -39,7 +39,7 @@ const azureDeploymentName   = 'Your_Deployment_Name';
 
 ### Runtime environment
 
-* [Node.js](https://nodejs.org/) v18 or later
+* Node.js v18 or later
 * npm v9 or later
 
 ---
