@@ -15,8 +15,6 @@ keywords: PowerPoint, Presentation, slides, SDK, Automation, API, create, read, 
 
 {% doccard text="ASP.NET Core" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp" icon="/document-processing/powerpoint/powerpoint-library/net/images/ASP.NET Core.png" %}
 
-{% doccard text="ASP.NET" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-web-forms" icon="/document-processing/powerpoint/powerpoint-library/net/images/NET.svg" %}
-
 {% doccard text="Web API" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-ASP-NET-Core-WEB-API" icon="/document-processing/powerpoint/powerpoint-library/net/images/NET.svg" %}
 
 {% doccard text="ASP.NET MVC" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc" icon="/document-processing/powerpoint/powerpoint-library/net/images/ASP.NET MVC.svg" %}
