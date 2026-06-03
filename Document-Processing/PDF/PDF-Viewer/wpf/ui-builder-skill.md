@@ -23,7 +23,7 @@ Before installing WPF UI Builder Skill with PDF Viewer, ensure the following:
 - Required [.NET SDK](https://dotnet.microsoft.com/en-us/download) version ≥ 6
 - WPF application (existing or new); see [Overview](https://help.syncfusion.com/wpf/welcome-to-syncfusion-essential-wpf)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
+- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
@@ -31,7 +31,7 @@ Before installing WPF UI Builder Skill with PDF Viewer, ensure the following:
 ## Key Benefits
 
 ### **AI-Driven UI Generation**
-- Transforms prompts into fully developed React components rather than just partial code snippets.
+- Transforms prompts into fully developed WPF components rather than just partial code snippets.
 - Automatically selects appropriate Syncfusion® components and features
 - Produces structured, maintainable code
 
@@ -143,7 +143,7 @@ To start using the skill:
 
 > For Syncfusion® Code Studio, if the UI Builder agent is not shown, ensure that the agent location is configured to use it in the chat, and refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations) to configure the agent location properly.
 
-Examples Prompts:
+Example Prompts:
 
 {% promptcards %}
 {% promptcard Invoice Viewer with Details Panel %}
@@ -158,7 +158,7 @@ Generated code follows best practices with well-structured XAML markup, proper e
 
 ## Best Practices
 
-Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready result:
+Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready results:
 
 - **Stay consistent** — Maintain consistent naming conventions (PascalCase for classes, camelCase for variables), control hierarchies, and XAML patterns throughout your project.
 - **Use advanced AI models** — For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
