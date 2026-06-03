@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Annotation Comment Filter in TypeScript PDF Viewer | Syncfusion
-description: Learn here all about how to filter comments and annotations in Syncfusion TypeScript PDF Viewer using the comment filter panel and programmatic APIs.
+title: Annotation Comment Filter in JavaScript PDF Viewer | Syncfusion
+description: Learn here all about how to filter comments and annotations in Syncfusion JavaScript PDF Viewer using the comment filter panel and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation comment filter in TypeScript
+# Annotation comment filter in JavaScript
 
 ## Overview
 
-The comment filter feature in TypeScript PDF Viewer allows you to efficiently manage and view annotations by filtering comments and annotations based on various criteria. Access the filter options through the filter icon in the comments panel to display only the annotations that match your filter criteria.
+The comment filter feature in JavaScript PDF Viewer allows you to efficiently manage and view annotations by filtering comments and annotations based on various criteria. Access the filter options through the filter icon in the comments panel to display only the annotations that match your filter criteria.
 
 Imagine reviewing a PDF document with feedback from 5 team members, resulting in 100+ annotations across different pages. Without filtering, finding all comments from your manager or locating all rejected items becomes a tedious task. The comment filter feature solves this by letting you instantly focus on the annotations that matter to you.
 
@@ -31,7 +31,7 @@ Comment filtering is most useful in these scenarios:
 
 ## UI-based filtering
 
-The TypeScript PDF Viewer provides a comment filter dialog in the comments panel that allows you to filter annotations by the following criteria.
+The JavaScript PDF Viewer provides a comment filter dialog in the comments panel that allows you to filter annotations by the following criteria.
 
 ### Filter options
 
@@ -47,7 +47,7 @@ The TypeScript PDF Viewer provides a comment filter dialog in the comments panel
 
 Follow these steps to filter and display only annotations created by a specific author:
 
-1. Open the PDF document in the TypeScript PDF Viewer
+1. Open the PDF document in the JavaScript PDF Viewer
 2. Click the **filter icon** in the comments panel toolbar (top-right corner of the comments panel)
 3. Click the **Author** dropdown menu
 4. Select the author(s) you want to filter by from the list
@@ -128,26 +128,23 @@ This approach is useful when you want to:
 
 Use the `applyCommentFilter` method to apply filters with specific criteria:
 
+
 ```html
 <button id="applyFilterBtn">Apply Filter</button>
 <button id="clearFilterBtn">Clear Filter</button>
-<div id="PdfViewer"></div>
+<div id="PdfViewer" style="height: 650px;"></div>
 ```
-```ts
-import { PdfViewer, Toolbar, Annotation, TextSelection } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Annotation, TextSelection);
-
-let viewer: PdfViewer = new PdfViewer({
+```js
+var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/programmatical-annotations.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
-    height: '650px'
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
 });
-viewer.appendTo('#PdfViewer');
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Annotation, ej.pdfviewer.TextSelection);
+pdfviewer.appendTo('#PdfViewer');
 
 // Apply Filter
-document.getElementById('applyFilterBtn')?.addEventListener('click', () => {
-    viewer.annotation.applyCommentFilter({
+document.getElementById('applyFilterBtn').addEventListener('click', function() {
+    pdfviewer.annotation.applyCommentFilter({
         type: ['Highlight', 'Underline'],
         // color: ['#ffff00', '#00ffff'],
         // status: 'Accepted',
@@ -159,8 +156,8 @@ document.getElementById('applyFilterBtn')?.addEventListener('click', () => {
 });
 
 // Clear Filter
-document.getElementById('clearFilterBtn')?.addEventListener('click', () => {
-    viewer.annotation.applyCommentFilter(null);
+document.getElementById('clearFilterBtn').addEventListener('click', function() {
+    pdfviewer.annotation.applyCommentFilter(null);
 });
 ```
 
@@ -182,21 +179,21 @@ The following table describes the filter configuration options available in the 
 
 Here's a real-world scenario where you filter annotations based on the current user's role:
 
-```ts
-// Pseudo-code showing the concept
-const userRole = getCurrentUserRole(); // Returns: 'manager', 'reviewer', 'viewer'
+```js
+// Pseudo-code showing role-based filtering
+var userRole = getCurrentUserRole(); // Returns: 'manager', 'reviewer', 'viewer'
 
-function applyRoleBasedFilter(): void {
+function applyRoleBasedFilter() {
   if (userRole === 'manager') {
     // Managers see only their own annotations and status-flagged items
-    viewer.annotation.applyCommentFilter({
+    pdfviewer.annotation.applyCommentFilter({
       author: ['John Smith'], // Current user
       status: 'Accepted',
       applyToDocument: true
     });
   } else if (userRole === 'reviewer') {
     // Reviewers see all review-type annotations
-    viewer.annotation.applyCommentFilter({
+    pdfviewer.annotation.applyCommentFilter({
       type: ['Highlight', 'Underline'],
       applyToDocument: false // See all in document, but filtered in panel
     });
@@ -209,26 +206,22 @@ function applyRoleBasedFilter(): void {
 You can combine multiple filter criteria to create more specific filters:
 
 ```html
-<button id="complexFilterBtn">Complex Filter</button>
+<button id="complexFilterBtn">Apply Multi-Criteria Filter</button>
 <button id="clearFilterBtn">Clear Filter</button>
-<div id="PdfViewer"></div>
+<div id="PdfViewer" style="height: 650px;"></div>
 ```
-```ts
-import { PdfViewer, Toolbar, Annotation, TextSelection } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Annotation, TextSelection);
-
-let viewer: PdfViewer = new PdfViewer({
+```js
+var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/programmatical-annotations.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
-    height: '650px'
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
 });
-viewer.appendTo('#PdfViewer');
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Annotation, ej.pdfviewer.TextSelection);
+pdfviewer.appendTo('#PdfViewer');
 
 // Apply Multi-Criteria Filter
-document.getElementById('complexFilterBtn')?.addEventListener('click', () => {
+document.getElementById('complexFilterBtn').addEventListener('click', function() {
     // Filter for all Highlight and Underline annotations in red color created by Guest user
-    viewer.annotation.applyCommentFilter({
+    pdfviewer.annotation.applyCommentFilter({
         type: ['Highlight', 'Underline'],
         color: ['#ff0000'],
         author: ['Guest'],
@@ -238,8 +231,8 @@ document.getElementById('complexFilterBtn')?.addEventListener('click', () => {
 });
 
 // Clear Filter
-document.getElementById('clearFilterBtn')?.addEventListener('click', () => {
-    viewer.annotation.applyCommentFilter(null);
+document.getElementById('clearFilterBtn').addEventListener('click', function() {
+    pdfviewer.annotation.applyCommentFilter(null);
 });
 ```
 
