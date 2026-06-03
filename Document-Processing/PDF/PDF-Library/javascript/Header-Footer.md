@@ -14,7 +14,7 @@ The feature supports static elements such as text, images, shapes, and dynamic a
 
 ## Adding a header and footer template to the PDF document
 
-Header and footer templates in a PDF document are created using the `PdfPageTemplateElement` class and assigned through the `template` property of the `PdfDocument` class. These templates help in maintaining a consistent layout across all pages by allowing the addition of elements such as images, text, shapes, and automatic fields. Users can also control the appearance of these templates by applying them to all pages or specifically to odd or even pages. 
+Header and footer templates in a PDF document are created using the `PdfPageTemplateElement` class and assigned through the `template` property of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) class. These templates help in maintaining a consistent layout across all pages by allowing the addition of elements such as images, text, shapes, and automatic fields. Users can also control the appearance of these templates by applying them to all pages or specifically to odd or even pages. 
 
 This sample demonstrates how to create header and footer templates with static elements and a date-time automatic field.
 
@@ -34,7 +34,7 @@ const center: PdfStringFormat = new PdfStringFormat();
 center.alignment = PdfTextAlignment.center; 
 center.lineAlignment = PdfVerticalAlignment.middle; 
 // Draw logo image on the right side of header 
-header.graphics.drawImage(new PdfBitmap('logo.png’), { x: 515 - 130, y: 5, width: 110, height: 35 }); 
+header.graphics.drawImage(new PdfBitmap('logo.png'), { x: 515 - 130, y: 5, width: 110, height: 35 }); 
 // Draw title text in the center of header 
 header.graphics.drawString('Syncfusion Essential PDF', titleFont, { x: 0, y: 0, width: 515, height: 50 }, new PdfBrush({ r: 44, g: 71, b: 120 }), center); 
 // Draw top border line of header 
@@ -117,7 +117,7 @@ document.destroy();
 
 ## Applying header and footer template to the PDF section
 
-Header and footer templates can also be assigned through the `template` property of the `PdfSection` class, allowing them to be applied only to the pages within that specific section rather than across the entire document.
+Header and footer templates can also be assigned through the `template` property of the [PdfSection](https://ej2.syncfusion.com/documentation/api/pdf/pdfsection) class, allowing them to be applied only to the pages within that specific section rather than across the entire document.
 
 This sample demonstrates how to apply templates across multiple pages.
 
@@ -277,7 +277,7 @@ Displays the total number of pages dynamically in a PDF document.
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfPage, PdfPageCountField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfNumberStyle } from '@syncfusion/ej2-pdf; 
+import { PdfDocument, PdfPage, PdfPageCountField, PdfStandardFont, PdfFontFamily, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfNumberStyle } from '@syncfusion/ej2-pdf'; 
  
 // Create a new PDF document 
 let document: PdfDocument = new PdfDocument(); 
