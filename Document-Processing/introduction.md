@@ -34,8 +34,9 @@ Document SDK
 <li><a href="https://help.syncfusion.com/document-processing/word/word-library/overview">Word(DocIO) Library</a> is a class library used to create, read, edit, and convert Microsoft Word files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, Java, and Blazor applications.</li>
 <li><a href="https://help.syncfusion.com/document-processing/excel/excel-library/overview">Excel(XlsIO) Library</a> is a class library  used to create, read, edit, write, and convert Microsoft Excel files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, Flutter, and Blazor applications.</li>
 <li><a href="https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/overview">PowerPoint Library</a> is a .NET class library used to create, read, edit, and convert Microsoft PowerPoint (PPTX) files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
-<li><a href="https://help.syncfusion.com/document-processing/pdf/conversions/overview">PDF Converter</a> is a .NET class library that converts several file formats such as HTML, Word, Excel, PowerPoint, Markdown, and images to PDF documents. It also supports conversion of PDF documents to images in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
-<li><a href="https://help.syncfusion.com/document-processing/data-extraction/overview">Smart Data Extraction Library</a> is a .NET class library used to extract structured and unstructured data (such as text, tables, key-value pairs, and layout information) from various document formats including PDFs and images. It enables automated data capture and processing in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
+<li><a href="https://help.syncfusion.com/document-processing/pdf/conversions/overview">PDF Converter</a> is a .NET class library that converts several file formats such as HTML, Word, Excel, PowerPoint, Markdown, and images to PDF documents. It also supports conversion of PDF documents to images in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, WinUI, .NET MAUI, and Blazor applications.</li>
+<li><a href="https://help.syncfusion.com/document-processing/data-extraction/overview">Smart Data Extraction Library</a> is a .NET class library used to extract structured and unstructured data (such as text, tables, key-value pairs, and layout information) from various document formats including PDFs and scanned images. It also supports conversion of PDF documents to Markdown in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
+<li>The <a href="https://help.syncfusion.com/document-processing/data-extraction/net/ocr-processor/overview">OCR (Optical Character Recognition)</a> Processor extracts text from scanned PDF documents and images, making the content searchable and editable. It uses advanced image processing techniques to improve recognition accuracy and convert image-based content into reliable, machine-readable text.</li>
 <li>Markdown Library is a .NET class library  used to create, read, edit, and convert Markdown files to other formats. It enables seamless Markdown processing in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
 </ul>
 </td>
@@ -45,7 +46,7 @@ Document SDK
 PDF Viewer SDK
 </td>
 <td>
-The <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview">PDF Viewer</a> is a viewer component used to view, review, and annotate PDF documents within web, desktop, and mobile applications. It provides rich features such as text search, form filling, annotations, and real-time collaboration for seamless PDF interaction. It supports integration across platforms including ASP.NET, Blazor, JavaScript, Angular, React, and mobile frameworks without requiring external dependencies.
+The <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview">PDF Viewer</a> component designed for viewing, reviewing, and annotating PDF documents across web, desktop, and mobile applications. It offers advanced capabilities such as text search, form filling, and annotations for smooth and interactive PDF handling. The component can be easily integrated with platforms like ASP.NET Core, Blazor, JavaScript, Angular, React, WinForms, WPF, and various mobile frameworks, all without the need for external dependencies.
 </td>
 </tr>
 <tr>
@@ -53,7 +54,7 @@ The <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/over
 DOCX Editor SDK
 </td>
 <td>
-The <a href="https://help.syncfusion.com/document-processing/word/word-processor/overview">DOCX Editor</a> is an editor component used to create, edit, view, and format Microsoft Word documents directly within web applications. It offers rich editing capabilities such as text formatting, styles, tables, images, track changes, and real-time collaboration. It supports modern frameworks like ASP.NET Core, Blazor, Angular, React, and JavaScript without requiring Microsoft Word or external dependencies.
+The <a href="https://help.syncfusion.com/document-processing/word/word-processor/overview">DOCX Editor</a> is a Microsoft Word–like component for viewing, editing, and printing documents across WPF, JavaScript, Angular, React, Vue, ASP.NET MVC, ASP.NET Core, and Blazor applications—without requiring Microsoft Office. It offers rich features such as formatting, tables, images, track changes, and real-time collaboration, with easy integration so developers can focus on core application logic.
 </td>
 </tr>
 <tr>
@@ -61,7 +62,7 @@ The <a href="https://help.syncfusion.com/document-processing/word/word-processor
 Spreadsheet Editor SDK
 </td>
 <td>
-The <a href="https://help.syncfusion.com/document-processing/excel/spreadsheet/overview">Spreadsheet Editor</a> is an editor component used to create, view, edit, and format Microsoft Excel files directly within web applications. It provides advanced features such as formulas, charts, sorting, filtering, and data validation along with real-time collaboration. It supports modern frameworks including ASP.NET Core, Blazor, Angular, React, and JavaScript without requiring Microsoft Excel or external dependencies.
+The <a href="https://help.syncfusion.com/document-processing/excel/spreadsheet/overview">Spreadsheet Editor</a> is a powerful, Excel‑like component for creating, viewing, editing, and formatting Microsoft Excel files directly within web applications. It offers a wide range of advanced features, including formulas, charts, sorting, filtering, data validation, and worksheet protection, enabling users to work with data efficiently. Designed for versatility, it supports integration across modern frameworks and platforms such as ASP.NET Core, Blazor, Angular, React, JavaScript, Vue, ASP.NET MVC, WinForms, WPF, and UWP, all without requiring external dependencies, making it a lightweight and flexible solution for delivering rich spreadsheet functionality.
 </td>
 </tr>
 </table>
