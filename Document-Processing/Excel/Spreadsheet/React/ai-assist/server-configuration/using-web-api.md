@@ -1,15 +1,15 @@
 ---
 layout: post
-title: AI Assist Server Connection in React Spreadsheet | Syncfusion
-description: Learn how to set up and connect a Web API or Node.js server for the AI Assist feature in the Syncfusion React Spreadsheet component.
+title: AI Assist Web API Server Setup in React Spreadsheet | Syncfusion
+description: Learn how to set up and connect an ASP.NET Core Web API server for the AI Assist feature in the Syncfusion React Spreadsheet component.
 platform: document-processing
-control: AI Assist Server Connection
+control: AI Assist Web API Server Setup
 documentation: ug
 ---
 
-# AI Assist — Server Connection
+# AI Assist — Web API (.NET) Server Setup
 
-The AI Assist feature requires a backend server to process prompts and return AI-generated responses. This page explains how to set up that server using either an **ASP.NET Core Web API** or a **Node.js + Express** service, both backed by **Azure OpenAI**.
+The AI Assist feature requires a backend server to process prompts and return AI-generated responses. This page explains how to set up that server using an **ASP.NET Core Web API** service backed by **Azure OpenAI**.
 
 ---
 
@@ -39,64 +39,12 @@ const azureDeploymentName   = 'Your_Deployment_Name';
 
 ### Runtime environment
 
-{% tabs %}
-{% highlight js tabtitle="Node.js" %}
-
-* [Node.js](https://nodejs.org/) v18 or later
-* npm v9 or later
-
-{% endhighlight %}
-{% highlight cs tabtitle="Web API (.NET)" %}
-
 * [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later
 * Visual Studio 2022 or the .NET CLI
-
-{% endhighlight %}
-{% endtabs %}
 
 ---
 
 ## Step 1 — Install dependencies
-
-{% tabs %}
-{% highlight js tabtitle="Node.js" %}
-
-Inside your server project folder, install the required npm packages:
-
-```
-npm install express cors dotenv openai date-fns
-```
-
-| Package | Purpose |
-|---|---|
-| `express` | HTTP server framework |
-| `cors` | Cross-Origin Resource Sharing middleware |
-| `dotenv` | Loads credentials from a `.env` file |
-| `openai` | Official Azure OpenAI client SDK |
-| `date-fns` | Date formatting for token-reset messages |
-
-Ensure your `package.json` includes `"type": "module"` to support ES module imports:
-
-```json
-{
-  "name": "service",
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "date-fns": "^4.1.0",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.0",
-    "openai": "4.50.0"
-  }
-}
-```
-
-{% endhighlight %}
-{% highlight cs tabtitle="Web API (.NET)" %}
 
 Inside your Web API project folder, install the required NuGet packages:
 
@@ -112,29 +60,9 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 | `Microsoft.Extensions.AI` | Abstractions for AI services in .NET |
 | `Microsoft.Extensions.AI.OpenAI` | Bridges `IChatClient` with the Azure OpenAI client |
 
-{% endhighlight %}
-{% endtabs %}
-
 ---
 
 ## Step 2 — Configure credentials
-
-{% tabs %}
-{% highlight js tabtitle="Node.js" %}
-
-Create a `.env` file at the root of your server project and add your Azure OpenAI credentials:
-
-```dotenv
-apiKey      = Your_Azure_OpenAI_API_Key
-endpoint    = https://your-resource.openai.azure.com/
-deployment  = Your_Deployment_Name
-apiVersion  = Your_Azure_OpenAI_API_Version
-```
-
-> **Important:** Add `.env` to your `.gitignore` to avoid committing secrets to source control.
-
-{% endhighlight %}
-{% highlight cs tabtitle="Web API (.NET)" %}
 
 Open `appsettings.json` and add your Azure OpenAI credentials under the `AI` section:
 
@@ -150,82 +78,9 @@ Open `appsettings.json` and add your Azure OpenAI credentials under the `AI` sec
 
 > **Important:** For production, store secrets using [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/) or [.NET Secret Manager](https://learn.microsoft.com/aspnet/core/security/app-secrets) instead of `appsettings.json`.
 
-{% endhighlight %}
-{% endtabs %}
-
 ---
 
 ## Step 3 — Configure required modules
-
-{% tabs %}
-{% highlight js tabtitle="Node.js" %}
-
-Create `ai-model.js` to initialize the Azure OpenAI client using the credentials from `.env`:
-
-```javascript
-import { AzureOpenAI } from "openai";
-import dotenv from 'dotenv';
-
-dotenv.config();
-
-const endpoint   = process.env.endpoint;
-const apiKey     = process.env.apiKey;
-const deployment = process.env.deployment;
-const apiVersion = process.env.apiVersion;
-
-const client = new AzureOpenAI({
-    endpoint,
-    apiKey,
-    apiVersion,
-    deployment
-});
-
-export async function getAzureChatAIRequest(options) {
-    const result = await client.chat.completions.create({
-        messages:          options.messages,
-        model:             "",
-        top_p:             options.topP,
-        temperature:       options.temperature,
-        max_tokens:        options.maxTokens,
-        frequency_penalty: options.frequencyPenalty,
-        presence_penalty:  options.presencePenalty,
-        stop:              options.stopSequences
-    });
-    return result;
-}
-```
-
-Then create `server.js` to expose the `/api/AIAssist/Chat` endpoint:
-
-```javascript
-import express from 'express';
-import cors from 'cors';
-import { getAzureChatAIRequest } from './ai-model.js';
-
-const app  = express();
-const PORT = process.env.PORT || 3000;
-
-app.use(cors());
-app.use(express.json());
-
-app.post('/api/AIAssist/Chat', async (req, res) => {
-    const { visitorId, ...chatData } = req.body;
-    const responseText = await getAzureChatAIRequest(chatData);
-    if (responseText) {
-        return res.status(200).json({
-            response: responseText.choices[0].message.content
-        });
-    }
-    return res.status(500).json({ error: 'Failed to generate response' });
-});
-
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
-```
-
-{% endhighlight %}
-{% highlight cs tabtitle="Web API (.NET)" %}
 
 Open `Program.cs` and register the Azure OpenAI client and the chat controller:
 
@@ -338,30 +193,9 @@ namespace WebService.Controllers
 }
 ```
 
-{% endhighlight %}
-{% endtabs %}
-
 ---
 
 ## Step 4 — Start the server
-
-{% tabs %}
-{% highlight js tabtitle="Node.js" %}
-
-Run the following command from your server project folder:
-
-```
-npm start
-```
-
-The server starts on `http://localhost:3000`. The AI Assist panel should point to:
-
-```
-http://localhost:3000/api/chat
-```
-
-{% endhighlight %}
-{% highlight cs tabtitle="Web API (.NET)" %}
 
 Run the following command from your Web API project folder:
 
@@ -375,39 +209,15 @@ The server starts on `https://localhost:{port}` (as defined in `launchSettings.j
 https://localhost:{port}/api/AIAssist/Chat
 ```
 
-{% endhighlight %}
-{% endtabs %}
-
 ---
 
 ## Connect the server to the React Spreadsheet
 
 Once the server is running, set the `requestUrl` inside `aiAssistSettings` to point to your server's chat endpoint:
 
-{% tabs %}
-{% highlight js tabtitle="Node.js (app.jsx / app.tsx)" %}
 {% raw %}
 
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-export default function App() {
-  return (
-    <SpreadsheetComponent
-      enableAIAssist={true}
-      aiAssistSettings={{
-        requestUrl: 'http://localhost:3000/api/chat'
-      }}
-      openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
-      saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
-    />
-  );
-}
-
-{% endraw %}
-{% endhighlight %}
-{% highlight cs tabtitle="Web API (.NET) (app.jsx / app.tsx)" %}
-{% raw %}
-
+```jsx
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 export default function App() {
@@ -422,25 +232,15 @@ export default function App() {
     />
   );
 }
+```
 
 {% endraw %}
-{% endhighlight %}
-{% endtabs %}
 
 ---
 
 ## Reference
 
-### Node.js environment variables (`.env`)
-
-| Variable | Description |
-|---|---|
-| `apiKey` | Your Azure OpenAI API key |
-| `endpoint` | Your Azure OpenAI resource URL |
-| `deployment` | Your model deployment name |
-| `apiVersion` | The Azure OpenAI REST API version |
-
-### .NET configuration keys (`appsettings.json`)
+### Configuration keys (`appsettings.json`)
 
 | Key | Description |
 |---|---|
@@ -450,7 +250,7 @@ export default function App() {
 
 ### Chat endpoint contract
 
-Both servers accept a `POST` request with the following JSON body:
+The server accepts a `POST` request with the following JSON body:
 
 ```json
 {
@@ -461,7 +261,7 @@ Both servers accept a `POST` request with the following JSON body:
 }
 ```
 
-And return:
+And returns:
 
 ```json
 {
@@ -475,5 +275,6 @@ And return:
 ## See also
 
 * [AI Assist overview](./getting-started)
+* [Node.js server setup](./using-node-js)
 * [Web Services overview](../web-services/webservice-overview)
 * [Getting Started with React Spreadsheet](../getting-started)

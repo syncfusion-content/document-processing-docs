@@ -13,6 +13,7 @@ The following table shows the features available in our Syncfusion EJ2 Spreadshe
 
 | **Features** | **Available in EJ2 Spreadsheet** | **Comments** |
 | --- | --- | --- |
+| AI Assist | Yes | - |
 | Ribbon | Yes | - |
 | Formula bar | Yes | - |
 | Sheet tab | Yes | - |
@@ -71,7 +72,6 @@ The following table shows the features available in our Syncfusion EJ2 Spreadshe
 | Theme and style options | Yes | - |
 | Accessibility | Yes | - |
 | Touch-Friendly Interactions | Yes | - |
-| AI Assist | Yes | - |
 
 ## See Also
 

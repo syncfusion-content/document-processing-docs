@@ -17,34 +17,42 @@ The **AI Assist** feature brings the power of AI directly into your spreadsheet.
 
 ## Server Connection
 
-For server connection kindly refer this page - [AI-Assist Server Connection](./ai-assist-server-connection.md)
+For server connection, refer to the - [AI-Assist Server Connection](./server-configuration)
 
 ---
 
-## Tutorial — Set Up AI Assist for the First Time
+## Integration
 
-This tutorial walks you through enabling AI Assist in your spreadsheet from scratch. By the end, you will have a working AI panel connected to your server.
+AI Assist integrates seamlessly into your React Spreadsheet application, enabling AI-powered capabilities with minimal configuration. This section covers the key integration points and prerequisites.
 
-### Step 1 — Inject the AI Assist Module
+### Prerequisites
+
+Before integrating AI Assist, ensure:
+
+* Backend Server: A running AI server (Node.js or Web API) with Azure OpenAI credentials configured. See [AI-Assist Server Connection](./server-configuration) for setup instructions.
+
+### Inject the AI Assist Module
 
 Before using AI Assist, inject the `AIAssist` module into the Spreadsheet. This registers the feature and makes it available in your application.
 
 ```tsx
 import * as React from 'react';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+import { Spreadsheet, SpreadsheetComponent, AIAssist } from '@syncfusion/ej2-react-spreadsheet';
+
+Spreadsheet.Inject(AIAssist);
 ```
 
-> **Note:** In the React wrapper, the `AIAssist` module is automatically injected when `enableAIAssist` is set to `true`. There is no need to call `Spreadsheet.Inject(AIAssist)` manually.
 
----
 
-### Step 2 — Enable AI Assist
+### Enable AI Assist
 
-Set the `enableAIAssist` property to `true` when creating the Spreadsheet.
+To enable AI Assist in the Spreadsheet component, set the `enableAIAssist` property to `true`.
 
 ```tsx
 import * as React from 'react';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+import { Spreadsheet, SpreadsheetComponent, AIAssist } from '@syncfusion/ej2-react-spreadsheet';
+
+Spreadsheet.Inject(AIAssist);
 
 function App() {
     return (
@@ -54,19 +62,19 @@ function App() {
 }
 ```
 
-This adds the **AI** button to the ribbon toolbar. Clicking it opens the AI Assist side panel.
+This inject the AI Assist into the spreadsheet.
 
 ---
 
-### Step 3 — Connect to Your AI Server
+### Configure AI Assist Settings
 
-Use the `aiAssistSettings` property to point the panel to your server and personalize the experience with a placeholder and prompt suggestions.
+Use the `aiAssistSettings` property to connect your Spreadsheet to the backend server and customize the AI Assist.
 
 ```tsx
 import * as React from 'react';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { AIAssistSettingsModel } from '@syncfusion/ej2-spreadsheet';
-import { grossPay } from './datasource';
+import { Spreadsheet, SpreadsheetComponent, AIAssistSettingsModel } from '@syncfusion/ej2-react-spreadsheet';
+
+Spreadsheet.Inject(AIAssist);
 
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
@@ -74,49 +82,16 @@ function App() {
     const aiAssistSettings: AIAssistSettingsModel = {
         requestUrl: 'https://localhost:{port}/api/AIAssist/Chat',
         placeholder: 'Ask the AI about this sheet...',
-        promptSuggestions: [
-            'Generate report',
-            'Analyze this dataset and summarize',
-            'Sort the data',
-            'Format this sheet for better readability'
-        ]
+        promptSuggestions: [ 'Your suggestions',... ]
     };
 
-    function onCreated(): void {
-        const spreadsheet = spreadsheetRef.current;
-        if (spreadsheet) {
-            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'Gross Pay!A1:I1');
-        }
-    }
-
     return (
-        <SpreadsheetComponent ref={spreadsheetRef} enableAIAssist={true} aiAssistSettings={aiAssistSettings}
-            openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
-            saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
-            created={onCreated}>
-            <SheetsDirective>
-                <SheetDirective name="Gross Pay">
-                    <RangesDirective>
-                        <RangeDirective dataSource={grossPay}></RangeDirective>
-                    </RangesDirective>
-                </SheetDirective>
-            </SheetsDirective>
-        </SpreadsheetComponent>
+        <SpreadsheetComponent ref={spreadsheetRef} enableAIAssist={true} aiAssistSettings={aiAssistSettings}></SpreadsheetComponent>
     );
 }
 ```
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/ai-assist-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/ai-assist-cs1/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/ai-assist-cs1" %}
 
-You now have a fully working AI Assist panel in your spreadsheet.
+Your Spreadsheet is now integrated with AI Assist and ready to use.
 
 ---
 
@@ -124,10 +99,13 @@ You now have a fully working AI Assist panel in your spreadsheet.
 
 ### How to Open and Close the AI Panel
 
-* **Open**: Click the **AI** button in the ribbon toolbar.
-* **Close**: Click the **✕** button inside the panel header, or click the **AI** ribbon button again.
-* **Clear the conversation**: Click the **↺ (Refresh)** button in the panel header to start fresh.
+* **Open**: Click the **AI Assist** button in the ribbon toolbar.
+* **Close**: Click the **✕** button inside the panel header, or click the **AI Assist** ribbon button again.
+* **Start fresh conversation.**: Click the **↺ (Refresh)** button in the panel header to start fresh.
 * **Resize the panel**: Drag the left edge of the panel to make it wider or narrower.
+
+### How to Undo an AI Action
+All actions performed by AI Assist are recorded in the spreadsheet's undo/redo history. Press Ctrl+Z to revert any change made by the AI, just like a manual edit.
 
 ---
 
@@ -137,8 +115,9 @@ Use the `promptRequest` event to add custom data — such as a user ID or sessio
 
 ```tsx
 import * as React from 'react';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-import { PromptRequestEventArgs } from '@syncfusion/ej2-spreadsheet';
+import { Spreadsheet, SpreadsheetComponent, AIAssistSettingsModel, PromptRequestEventArgs } from '@syncfusion/ej2-react-spreadsheet';
+
+Spreadsheet.Inject(AIAssist);
 
 function App() {
     const aiAssistSettings = { requestUrl: 'https://localhost:{port}/api/AIAssist/Chat' };
@@ -161,14 +140,15 @@ You can also prevent the request entirely by setting `args.cancel = true`.
 
 ---
 
-### How to React When the AI Finishes an Action
+### How to Handle AI Responses
 
 Use the `promptResponse` event to run custom logic after the AI completes its task — for example, logging results or showing a notification.
 
 ```tsx
 import * as React from 'react';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-import { PromptResponseEventArgs } from '@syncfusion/ej2-spreadsheet';
+import { Spreadsheet, SpreadsheetComponent, AIAssistSettingsModel, PromptResponseEventArgs } from '@syncfusion/ej2-react-spreadsheet';
+
+Spreadsheet.Inject(AIAssist);
 
 function App() {
     const aiAssistSettings = { requestUrl: 'https://localhost:{port}/api/AIAssist/Chat' };
@@ -187,13 +167,32 @@ function App() {
 
 ---
 
-### How to Undo an AI Action
+### How to Handle Server Connection Errors
 
-All actions performed by AI Assist are recorded in the spreadsheet's undo/redo history. Press **Ctrl+Z** to revert any change made by the AI, just like a manual edit.
+If the AI panel displays an error message:
+
+1. Verify the server is running
+    * Confirm your Node.js or Web API server is active
+    * Check the console for startup messages
+2. Check the requestUrl
+    * Ensure the URL matches your server's exact address and port
+    * For local development:
+        * Node.js: http://localhost:3000/api/chat
+        * Web API (.NET): https://localhost:5001/api/AIAssist/Chat
+3. Verify CORS is enabled
+    * Your React app origin must be allowed in the server's CORS policy
+    * Default React dev server: http://localhost:5173 (Vite) or http://localhost:3000 (Create React App)
+4. Use browser DevTools
+    * Open the Network tab to inspect failed requests
+    * Check for 404, 500, or CORS errors
+    * Look at the response body for error details
+5. Check server logs
+    * Review the terminal/console where your server is running
+    * Look for connection or authentication errors
 
 ---
 
-## Reference
+## API Refernces
 
 ### AI Assist Settings
 
@@ -315,9 +314,10 @@ AI Assist only operates on the **currently active sheet**. It cannot read from o
 
 ## Limitations
 
-* A valid `requestUrl` is required. Without a running AI server, prompts cannot be processed.
-* AI Assist operates on the **active sheet only** — cross-sheet operations in a single prompt are not supported.
-* Very broad or ambiguous prompts may produce unexpected results. Use specific language for best outcomes.
+* **Server Required**: A valid `requestUrl` must point to a running backend service. AI Assist cannot function offline.
+* **Active Sheet Only**: AI operations apply only to the currently selected sheet. To apply the same action to multiple sheets, repeat the prompt for each sheet.
+* **Prompt Specificity**: Vague prompts like "fix this" produce unreliable results. Use specific language such as "bold the header row and add a blue background" for best outcomes.
+* **Scope**: AI Assist cannot read or write across different Excel/CSV files. It operates within the current spreadsheet only.
 
 ---
 
