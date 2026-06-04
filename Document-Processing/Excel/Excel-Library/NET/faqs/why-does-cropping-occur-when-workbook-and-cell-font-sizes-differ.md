@@ -1,6 +1,6 @@
 ---
 title: Why cropping occurs with differing font sizes? | Syncfusion 
-description: The page explains why picture cropping occurs when the workbook standard font size differs from cell text font size, and how to resolve it using AutofitRows or consistent font sizes.
+description: This page explains why picture cropping occurs when workbook and cell font sizes differ, and how to resolve it using AutofitRows or consistent font settings.
 platform: document-processing
 control: XlsIO
 documentation: UG
