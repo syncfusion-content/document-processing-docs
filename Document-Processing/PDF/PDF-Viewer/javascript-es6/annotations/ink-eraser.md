@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ink Eraser in React PDF Viewer Component | Syncfusion
-description: Learn how to use the Ink Eraser tool to remove or correct freehand drawing strokes in the Syncfusion React PDF Viewer with UI and programmatic control.
+title: Ink Eraser in TypeScript PDF Viewer Component | Syncfusion
+description: Learn how to use the Ink Eraser tool to remove or correct freehand drawing strokes in the Syncfusion TypeScript PDF Viewer with UI and programmatic control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ink Eraser in React PDF Viewer
+# Ink Eraser in TypeScript PDF Viewer
 
 ## Overview
 
@@ -31,35 +31,23 @@ The Ink Eraser is most useful in these scenarios:
 
 ## Enable Ink Eraser
 
-To enable the Ink Eraser feature, inject the following modules into the React PDF Viewer:
+To enable the Ink Eraser feature, inject the following modules into the TypeScript PDF Viewer:
 
-- [**Annotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation)
-- [**Toolbar**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbar)
+- [**Annotation**](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotation)
+- [**Toolbar**](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#toolbar)
 
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { PdfViewerComponent, Inject, Toolbar, Annotation } from '@syncfusion/ej2-react-pdfviewer';
+```ts
+import { PdfViewer, Toolbar, Annotation } from '@syncfusion/ej2-pdfviewer';
 
-function App() {
-  return (
-    <PdfViewerComponent
-      id="container"
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      style={{ height: '650px' }}
-    >
-      <Inject services={[Toolbar, Annotation]} />
-    </PdfViewerComponent>
-  );
-}
+PdfViewer.Inject(Toolbar, Annotation);
 
-ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
+let viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+    height: '650px'
+});
+viewer.appendTo('#PdfViewer');
+```
 
 ## UI-based erasing
 
@@ -115,118 +103,81 @@ You can programmatically enable or disable the Ink Eraser and control its size t
 
 Use the `enableInkEraser` property to control whether the Ink Eraser is active:
 
-{% tabs %}
-{% highlight js tabtitle="React" %}
-{% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import {
-  PdfViewerComponent, Inject,
-  Toolbar, Annotation
-} from '@syncfusion/ej2-react-pdfviewer';
+```html
+<button id="enableBtn">Enable Ink Eraser</button>
+<button id="disableBtn">Disable Ink Eraser</button>
+<div id="PdfViewer"></div>
+```
+```ts
+import { PdfViewer, Toolbar, Annotation } from '@syncfusion/ej2-pdfviewer';
 
-function App() {
-  const viewerRef = React.useRef(null);
+PdfViewer.Inject(Toolbar, Annotation);
 
-  const handleEnableEraser = () => {
-    if (viewerRef.current) {
-      viewerRef.current.enableInkEraser = true;
-    }
-  };
+let viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+    height: '650px'
+});
+viewer.appendTo('#PdfViewer');
 
-  const handleDisableEraser = () => {
-    if (viewerRef.current) {
-      viewerRef.current.enableInkEraser = false;
-    }
-  };
+// Enable Eraser
+document.getElementById('enableBtn')?.addEventListener('click', () => {
+    viewer.enableInkEraser = true;
+});
 
-  return (
-    <div>
-      <div style={{ marginBottom: '10px' }}>
-        <button onClick={handleEnableEraser}>Enable Eraser</button>
-        <button onClick={handleDisableEraser} style={{ marginLeft: '10px' }}>
-          Disable Eraser
-        </button>
-      </div>
-      <PdfViewerComponent
-        ref={viewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        style={{ height: '650px' }}
-      >
-        <Inject services={[Toolbar, Annotation]} />
-      </PdfViewerComponent>
-    </div>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
+// Disable Eraser
+document.getElementById('disableBtn')?.addEventListener('click', () => {
+    viewer.enableInkEraser = false;
+});
+```
 
 ### Set eraser size programmatically
 
 Use the `inkEraserSize` property to control the width of the eraser:
 
-{% tabs %}
-{% highlight js tabtitle="React" %}
-{% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import {
-  PdfViewerComponent, Inject,
-  Toolbar, Annotation
-} from '@syncfusion/ej2-react-pdfviewer';
+```html
+<button id="smallBtn">Small Ink </button>
+<button id="mediumBtn">Medium Ink </button>
+<button id="largeBtn">Large Ink </button>
+<div id="PdfViewer"></div>
+```
+```ts
+import { PdfViewer, Toolbar, Annotation } from '@syncfusion/ej2-pdfviewer';
 
-function App() {
-  const viewerRef = React.useRef(null);
+PdfViewer.Inject(Toolbar, Annotation);
 
-  const handleSetEraserSize = (size) => {
-    if (viewerRef.current) {
-      viewerRef.current.inkEraserSize = size;
-    }
-  };
+let viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+    height: '650px'
+});
+viewer.appendTo('#PdfViewer');
 
-  return (
-    <div>
-      <div style={{ marginBottom: '10px' }}>
-        <button onClick={() => handleSetEraserSize(10)}>Small (10px)</button>
-        <button onClick={() => handleSetEraserSize(15)} style={{ marginLeft: '10px' }}>
-          Medium (15px)
-        </button>
-        <button onClick={() => handleSetEraserSize(20)} style={{ marginLeft: '10px' }}>
-          Large (20px)
-        </button>
-      </div>
-      <PdfViewerComponent
-        ref={viewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        style={{ height: '650px' }}
-      >
-        <Inject services={[Toolbar, Annotation]} />
-      </PdfViewerComponent>
-    </div>
-  );
-}
+// Set Small Size (10px)
+document.getElementById('smallBtn')?.addEventListener('click', () => {
+    viewer.inkEraserSize = 10;
+});
 
-ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
+// Set Medium Size (15px)
+document.getElementById('mediumBtn')?.addEventListener('click', () => {
+    viewer.inkEraserSize = 15;
+});
+
+// Set Large Size (20px)
+document.getElementById('largeBtn')?.addEventListener('click', () => {
+    viewer.inkEraserSize = 20;
+});
+```
 
 ### Practical example: Role-based eraser control
 
 Here's a real-world scenario where eraser accessibility is controlled based on user roles:
 
-```javascript
+```ts
 // Pseudo-code showing role-based eraser control
 const userRole = getCurrentUserRole(); // Returns: 'editor', 'reviewer', 'viewer'
 
-function applyRoleBasedEraserSettings() {
+function applyRoleBasedEraserSettings(): void {
   if (userRole === 'editor') {
     // Editors get full eraser control with large size default
     viewer.enableInkEraser = true;
@@ -246,68 +197,46 @@ function applyRoleBasedEraserSettings() {
 
 You can programmatically switch between Ink drawing mode and Eraser mode for a seamless workflow:
 
-{% tabs %}
-{% highlight js tabtitle="React" %}
-{% raw %}
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import {
-  PdfViewerComponent, Inject,
-  Toolbar, Annotation
-} from '@syncfusion/ej2-react-pdfviewer';
+```html
+<button id="drawModeBtn">Draw Ink</button>
+<button id="eraseModeBtn">Erase Ink</button>
+<div id="PdfViewer"></div>
+```
+```ts
+import { PdfViewer, Toolbar, Annotation } from '@syncfusion/ej2-pdfviewer';
 
-function App() {
-  const viewerRef = React.useRef(null);
-  const [mode, setMode] = React.useState('draw');
+PdfViewer.Inject(Toolbar, Annotation);
 
-  const handleSwitchToDrawing = () => {
-    if (viewerRef.current) {
-      viewerRef.current.enableInkEraser = false;
-      viewerRef.current.annotation.setAnnotationMode('Ink');
-      setMode('draw');
-    }
-  };
+let viewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+    height: '650px'
+});
+viewer.appendTo('#PdfViewer');
 
-  const handleSwitchToEraser = () => {
-    if (viewerRef.current) {
-      viewerRef.current.enableInkEraser = true;
-      setMode('erase');
-    }
-  };
+let mode: string = 'draw';
 
-  return (
-    <div>
-      <div style={{ marginBottom: '10px' }}>
-        <button 
-          onClick={handleSwitchToDrawing}
-          style={{ backgroundColor: mode === 'draw' ? '#007bff' : '#e9ecef', cursor: 'pointer' }}
-        >
-          Draw Mode
-        </button>
-        <button 
-          onClick={handleSwitchToEraser}
-          style={{ marginLeft: '10px', backgroundColor: mode === 'erase' ? '#dc3545' : '#e9ecef', cursor: 'pointer' }}
-        >
-          Erase Mode
-        </button>
-      </div>
-      <PdfViewerComponent
-        ref={viewerRef}
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        style={{ height: '650px' }}
-      >
-        <Inject services={[Toolbar, Annotation]} />
-      </PdfViewerComponent>
-    </div>
-  );
-}
+// Switch to Drawing Mode
+document.getElementById('drawModeBtn')?.addEventListener('click', () => {
+    viewer.enableInkEraser = false;
+    viewer.annotation.setAnnotationMode('Ink');
+    mode = 'draw';
+    const drawBtn = document.getElementById('drawModeBtn') as HTMLButtonElement;
+    const eraseBtn = document.getElementById('eraseModeBtn') as HTMLButtonElement;
+    if (drawBtn) drawBtn.style.backgroundColor = '#007bff';
+    if (eraseBtn) eraseBtn.style.backgroundColor = '#e9ecef';
+});
 
-ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
+// Switch to Eraser Mode
+document.getElementById('eraseModeBtn')?.addEventListener('click', () => {
+    viewer.enableInkEraser = true;
+    mode = 'erase';
+    const drawBtn = document.getElementById('drawModeBtn') as HTMLButtonElement;
+    const eraseBtn = document.getElementById('eraseModeBtn') as HTMLButtonElement;
+    if (drawBtn) drawBtn.style.backgroundColor = '#e9ecef';
+    if (eraseBtn) eraseBtn.style.backgroundColor = '#dc3545';
+});
+```
 
 ## Behavior notes
 
@@ -341,6 +270,6 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Annotation Events](./annotation-event)
 - [Undo and Redo Annotations](./annotations-undo-redo)
-- [Export and Import Annotation](./export-import/export-annotation)
+- [Export and Import Annotation](./export-import-annotations)
 - [Delete Annotation](./delete-annotation)
 - [Annotation API](./annotations-api)
