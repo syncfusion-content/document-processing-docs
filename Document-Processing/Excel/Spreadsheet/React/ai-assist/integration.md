@@ -37,7 +37,7 @@ Before using AI Assist, inject the `AIAssist` module into the Spreadsheet. This 
 
 ```tsx
 import * as React from 'react';
-import { Spreadsheet, SpreadsheetComponent, AIAssist } from '@syncfusion/ej2-react-spreadsheet';
+import { Spreadsheet, AIAssist } from '@syncfusion/ej2-react-spreadsheet';
 
 Spreadsheet.Inject(AIAssist);
 ```
@@ -72,7 +72,7 @@ Use the `aiAssistSettings` property to connect your Spreadsheet to the backend s
 
 ```tsx
 import * as React from 'react';
-import { Spreadsheet, SpreadsheetComponent, AIAssistSettingsModel } from '@syncfusion/ej2-react-spreadsheet';
+import { Spreadsheet, SpreadsheetComponent, AIAssist, AIAssistSettingsModel } from '@syncfusion/ej2-react-spreadsheet';
 
 Spreadsheet.Inject(AIAssist);
 
@@ -115,7 +115,7 @@ Use the `promptRequest` event to add custom data — such as a user ID or sessio
 
 ```tsx
 import * as React from 'react';
-import { Spreadsheet, SpreadsheetComponent, AIAssistSettingsModel, PromptRequestEventArgs } from '@syncfusion/ej2-react-spreadsheet';
+import { Spreadsheet, SpreadsheetComponent, AIAssist, AIAssistSettingsModel, PromptRequestEventArgs } from '@syncfusion/ej2-react-spreadsheet';
 
 Spreadsheet.Inject(AIAssist);
 
@@ -146,7 +146,7 @@ Use the `promptResponse` event to run custom logic after the AI completes its ta
 
 ```tsx
 import * as React from 'react';
-import { Spreadsheet, SpreadsheetComponent, AIAssistSettingsModel, PromptResponseEventArgs } from '@syncfusion/ej2-react-spreadsheet';
+import { Spreadsheet, SpreadsheetComponent, AIAssist, AIAssistSettingsModel, PromptResponseEventArgs } from '@syncfusion/ej2-react-spreadsheet';
 
 Spreadsheet.Inject(AIAssist);
 
