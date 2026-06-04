@@ -1,12 +1,12 @@
 ---
-title: Convert Markdown to Presentation in C# | Presentation | Syncfusion
-description: Convert Markdown to Presentation document in C# using Syncfusion<sup>&reg;</sup> .NET PowerPoint library without Microsoft PowerPoint or interop dependencies
+title: Markdown to PowerPoint in C# | PowerPoint | Syncfusion
+description: Convert Markdown to PowerPoint document in C# using Syncfusion<sup>&reg;</sup> .NET PowerPoint library without Microsoft PowerPoint or interop dependencies
 platform: document-processing
-control: Presentation
+control: PowerPoint
 documentation: UG
 ---
 
-# Markdown to Presentation Conversion
+# Markdown to PowerPoint Conversion
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET PowerPoint library supports the conversion of Markdown to PowerPoint Presentation document  (.PPTX, .PPTM, .POTX, .POTM) and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
@@ -15,10 +15,10 @@ Markdown is a lightweight markup language that adds formatting elements to plain
 
 Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Markdown file to a PowerPoint Presentation document using the .NET PowerPoint Library.
 
-* [Markdown to Presentation assemblies](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
-* [Markdown to Presentation NuGet packages](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required)
+* [Markdown to PowerPoint assemblies](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
+* [Markdown to PowerPoint NuGet packages](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required)
 
-## Convert Markdown to Presentation
+## Convert Markdown to PowerPoint
 
 Convert an existing markdown file to a PowerPoint Presentation document using the .NET PowerPoint library.
 
@@ -28,7 +28,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/main/Markdown-to-Presentation-conversion/Convert-Markdown-to-Presentation/.NET/Convert-Markdown-to-Presentation/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/main/Markdown-to-PowerPoint-conversion/Convert-Markdown-to-PowerPoint/.NET/Convert-Markdown-to-PowerPoint/Program.cs" %}
 //Open the file as a Stream.
 using (FileStream fileStream = new FileStream("Input.md", FileMode.Open, FileAccess.Read))
 {
@@ -65,7 +65,7 @@ End Using
 
 T> You can also save the markdown file as [HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html), [PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf), [Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image), and [Word](https://help.syncfusion.com/document-processing/word/conversions/markdown-to-word-conversion)
 
-N> 1. In Markdown to Presentation conversion, invalid images are replaced with a red "X" image instead of the original image.
+N> 1. In Markdown to PowerPoint Presentation conversion, invalid images are replaced with a red "X" image instead of the original image.
 
 ## Supported Markdown Syntax
 

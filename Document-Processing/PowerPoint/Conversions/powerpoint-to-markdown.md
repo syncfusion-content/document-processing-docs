@@ -1,24 +1,24 @@
 ---
-title: Convert Presentation to Markdown in C# | Presentation | Syncfusion
-description: Learn how to convert a Presentation to Markdown using the .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
+title: PowerPoint to Markdown in C# | PowerPoint | Syncfusion
+description: Learn how to convert a PowerPoint to Markdown using the .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
-control: Presentation
+control: PowerPoint
 documentation: UG
 ---
 
-# Presentation to Markdown Conversion
+# PowerPoint to Markdown Conversion
 
-Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET PowerPoint library supports the conversion of a Word document to a Markdown file, which mostly follows the CommonMark specification and GitHub-flavored syntax.
+Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET PowerPoint library supports the conversion of a PowerPoint Presentation to a Markdown file, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
 
 ## Assemblies and NuGet packages required
 
 Refer to the following links for assemblies and NuGet packages required based on platforms to convert a PowerPoint Presentation document to a Markdown file using the .NET PowerPoint Library.
 
-* [Markdown to Presentation assemblies](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
-* [Markdown to Presentation NuGet packages](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required)
+* [Markdown to PowerPoint assemblies](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
+* [Markdown to PowerPoint NuGet packages](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required)
 
-## Convert Presentation to Markdown
+## Convert PowerPoint to Markdown
 
 Convert an existing PowerPoint Presentation document that is created from scratch into a Markdown file using the .NET PowerPoint library.
 
@@ -26,7 +26,7 @@ The following code example shows how to convert a PowerPoint Presentation docume
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/Presentation-Examples/main/Presentation-to-Markdown-conversion/Convert-Presentation-to-Markdown/.NET/Convert-Presentation-to-Markdown/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/main/PowerPoint-to-Markdown-conversion/Convert-PowerPoint-to-Markdown/.NET/Convert-PowerPoint-to-Markdown/Program.cs" %}
 //Open the file as a Stream.
 using (FileStream fileStream = new FileStream("Input.pptx", FileMode.Open, FileAccess.Read))
 {
@@ -34,7 +34,7 @@ using (FileStream fileStream = new FileStream("Input.pptx", FileMode.Open, FileA
     using (IPresentation presentation = Presentation.Open(fileStream))
     {
         //Save as a PPTX document into the Markdown FileStream.
-        using (FileStream outputStream = new FileStream("PPTXToMarkdown.md", FileMode.Create))
+        using (FileStream outputStream = new FileStream("PPTXtoMd.md", FileMode.Create))
         {
             presentation.Save(outputStream);
         }
@@ -46,8 +46,8 @@ using (FileStream fileStream = new FileStream("Input.pptx", FileMode.Open, FileA
 //Open an existing Presentation document.
 using (IPresentation presentation = Presentation.Open("Input.pptx", FormatType.Docx))
 {
-    //Save the Presentation document as a Markdown file.
-    presentation.Save("WordtoMd.md");
+    //Save the PowerPoint Presentation as a Markdown file.
+    presentation.Save("PPTXtoMd.md");
 }
 {% endhighlight %}
 
@@ -55,7 +55,7 @@ using (IPresentation presentation = Presentation.Open("Input.pptx", FormatType.D
 ' Open an existing Presentation document
 Using presentation As IPresentation = Presentation.Open("Input.pptx", FormatType.Docx)
     ' Save the Presentation document as a Markdown file
-    presentation.Save("PresentationtoMd.md")
+    presentation.Save("PPTXtoMd.md")
 End Using
 {% endhighlight %}
 
@@ -71,7 +71,7 @@ using (Stream pptStream = typeof(App).GetTypeInfo().Assembly.GetManifestResource
         presentation.Save(stream);
 
         // Save the stream as a Markdown file locally
-        Save(stream, "PresentationToMd.md");
+        Save(stream, "PPTXtoMd.md");
     }
 }
 
