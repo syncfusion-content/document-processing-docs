@@ -14,7 +14,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 ## Editing form fields programmatically
 
-All form field edits shown below should be placed in your page's code-behind (`MainPage.xaml.cs`). The document must be fully loaded before accessing `FormFields` — call these from the `DocumentLoaded` event handler or a button click after the document is open.
+All form field edits shown below should be placed in your page's code-behind (`MainPage.xaml.cs`). The document must be fully loaded before accessing [FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) — call these from the [DocumentLoaded](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded") event handler or a button click after the document is open.
 
 ### Editing text form fields
 
@@ -147,7 +147,7 @@ The [Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Si
 
 #### Suppressing the signature modal view
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the [SignatureModalViewAppearing](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FormFieldModalViewAppearingEventArgs.html") event handler. 
 
 The below code snippet illustrates suppressing the signature modal view and using a UI implemented in the app in its place. In this illustration, it is assumed that the signature is produced in the form of an image stream when the user completes drawing the signature in the custom dialog. When the signing is completed using the custom dialog, a stamp annotation is created and assigned as the signature of the form field.   
 
