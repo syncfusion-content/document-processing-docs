@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Annotation Comment Filter in Vue PDF Viewer | Syncfusion
-description: Learn here all about how to filter comments and annotations in Syncfusion Vue PDF Viewer using the comment filter panel and programmatic APIs.
+title: Annotation Comment Filter in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn here all about how to filter comments and annotations in Syncfusion ASP.NET MVC PDF Viewer using the comment filter panel and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation comment filter in Vue
+# Annotation comment filter in ASP.NET MVC
 
 ## Overview
 
-The comment filter feature in Vue PDF Viewer allows you to efficiently manage and view annotations by filtering comments and annotations based on various criteria. Access the filter options through the filter icon in the comments panel to display only the annotations that match your filter criteria.
+The comment filter feature in ASP.NET MVC PDF Viewer allows you to efficiently manage and view annotations by filtering comments and annotations based on various criteria. Access the filter options through the filter icon in the comments panel to display only the annotations that match your filter criteria.
 
 Imagine reviewing a PDF document with feedback from 5 team members, resulting in 100+ annotations across different pages. Without filtering, finding all comments from your manager or locating all rejected items becomes a tedious task. The comment filter feature solves this by letting you instantly focus on the annotations that matter to you.
 
@@ -31,7 +31,7 @@ Comment filtering is most useful in these scenarios:
 
 ## UI-based filtering
 
-The Vue PDF Viewer provides a comment filter dialog in the comments panel that allows you to filter annotations by the following criteria.
+The ASP.NET MVC PDF Viewer provides a comment filter dialog in the comments panel that allows you to filter annotations by the following criteria.
 
 ### Filter options
 
@@ -47,7 +47,7 @@ The Vue PDF Viewer provides a comment filter dialog in the comments panel that a
 
 Follow these steps to filter and display only annotations created by a specific author:
 
-1. Open the PDF document in the Vue PDF Viewer
+1. Open the PDF document in the ASP.NET MVC PDF Viewer
 2. Click the **filter icon** in the comments panel toolbar (top-right corner of the comments panel)
 3. Click the **Author** dropdown menu
 4. Select the author(s) you want to filter by from the list
@@ -129,68 +129,34 @@ This approach is useful when you want to:
 Use the `applyCommentFilter` method to apply filters with specific criteria:
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
-<template>
-  <div id="app">
-    <div style="margin-bottom: 10px;">
-      <button @click="applyFilter">Apply Filter</button>
-      <button @click="clearFilter" style="margin-left: 10px;">Clear Filter</button>
-    </div>
-    <ejs-pdfviewer 
-      ref="pdfViewer"
-      id="pdfViewer" 
-      :documentPath="documentPath" 
-      :resourceUrl="resourceUrl"
-      style="height: 650px;">
-    </ejs-pdfviewer>
-  </div>
-</template>
+<button onclick="applyFilter()">Apply Filter</button>
+<button onclick="clearFilter()" style="margin-left: 10px;">Clear Filter</button>
+<div style="width:100%;height:650px">
+    @Html.EJS().PdfViewer("pdfviewer")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/programmatical-annotations.pdf")
+        .Render()
+</div>
 
 <script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
-  Annotation, FormDesigner, FormFields, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: "App",
-  components: {
-    "ejs-pdfviewer": PdfViewerComponent
-  },
-  data() {
-    return {
-      documentPath: "https://cdn.syncfusion.com/content/pdf/programmatical-annotations.pdf",
-      resourceUrl: "https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
-    };
-  },
-  methods: {
-    applyFilter() {
-      const pdfViewer = this.$refs.pdfViewer.ej2Instances;
-      pdfViewer.annotation.applyCommentFilter({
-        type: ['Highlight', 'Underline'],
-        // color: ['#ffff00', '#00ffff'],
-        // status: 'Accepted',
-        // author: ['Guest', 'Admin'],
-        // modifiedDate: ['1/1/2024'],
-        // includereplies: true,
-        applyToDocument: true
-      });
+    function applyFilter() {
+        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
+        pdfViewer.annotation.applyCommentFilter({
+            type: ['Highlight', 'Underline'],
+            // color: ['#ffff00', '#00ffff'],
+            // status: 'Accepted',
+            // author: ['Guest', 'Admin'],
+            // modifiedDate: ['1/1/2024'],
+            // includereplies: true,
+            applyToDocument: true
+        });
     }
-  },
 
-  handleClearFilter() {
-    if (viewerRef.current) {
-      viewerRef.current.annotation.applyCommentFilter(null);
+    function clearFilter() {
+        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
+        pdfViewer.annotation.applyCommentFilter(null);
     }
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-      ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, 
-      FormDesigner, PageOrganizer]
-  }
-}
 </script>
 
 {% endhighlight %}
@@ -214,101 +180,75 @@ The following table describes the filter configuration options available in the 
 
 Here's a real-world scenario where you filter annotations based on the current user's role:
 
-```vue
-// Role-based filtering in Vue
-export default {
-  data() {
-    return {
-      userRole: 'manager' // Returns: 'manager', 'reviewer', 'viewer'
-    };
-  },
-  methods: {
-    applyRoleBasedFilter() {
-      const pdfViewer = this.$refs.pdfViewer.ej2Instances;
-      
-      if (this.userRole === 'manager') {
-        // Managers see only their own annotations and status-flagged items
-        pdfViewer.annotation.applyCommentFilter({
-          author: ['John Smith'], // Current user
-          status: 'Accepted',
-          applyToDocument: true
-        });
-      } else if (this.userRole === 'reviewer') {
-        // Reviewers see all review-type annotations
-        pdfViewer.annotation.applyCommentFilter({
-          type: ['Highlight', 'Underline'],
-          applyToDocument: false // See all in document, but filtered in panel
-        });
-      }
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+
+<button onclick="applyRoleBasedFilter()">Apply Role-Based Filter</button>
+<div style="width:100%;height:650px">
+    @Html.EJS().PdfViewer("pdfviewer")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/programmatical-annotations.pdf")
+        .Render()
+</div>
+
+<script>
+    var userRole = 'manager'; // This would typically come from your authentication system
+    // Returns: 'manager', 'reviewer', 'viewer'
+
+    function applyRoleBasedFilter() {
+        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
+
+        if (userRole === 'manager') {
+            // Managers see only their own annotations and status-flagged items
+            pdfViewer.annotation.applyCommentFilter({
+                author: ['John Smith'], // Current user
+                status: 'Accepted',
+                applyToDocument: true
+            });
+        } else if (userRole === 'reviewer') {
+            // Reviewers see all review-type annotations
+            pdfViewer.annotation.applyCommentFilter({
+                type: ['Highlight', 'Underline'],
+                applyToDocument: false // See all in document, but filtered in panel
+            });
+        }
     }
-  }
-}
-```
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Filter with multiple criteria
 
 You can combine multiple filter criteria to create more specific filters:
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
-<template>
-  <div id="app">
-    <div style="margin-bottom: 10px;">
-      <button @click="applyComplexFilter">Apply Multi-Criteria Filter</button>
-      <button @click="clearFilter" style="margin-left: 10px;">Clear Filter</button>
-    </div>
-    <ejs-pdfviewer 
-      ref="pdfViewer"
-      id="pdfViewer" 
-      :documentPath="documentPath" 
-      :resourceUrl="resourceUrl"
-      style="height: 650px;">
-    </ejs-pdfviewer>
-  </div>
-</template>
+<button onclick="applyComplexFilter()">Apply Multi-Criteria Filter</button>
+<button onclick="clearFilter()" style="margin-left: 10px;">Clear Filter</button>
+<div style="width:100%;height:650px">
+    @Html.EJS().PdfViewer("pdfviewer")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/programmatical-annotations.pdf")
+        .Render()
+</div>
 
 <script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
-  Annotation, FormDesigner, FormFields, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: "App",
-  components: {
-    "ejs-pdfviewer": PdfViewerComponent
-  },
-  data() {
-    return {
-      documentPath: "https://cdn.syncfusion.com/content/pdf/programmatical-annotations.pdf",
-      resourceUrl: "https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
-    };
-  },
-  methods: {
-    applyComplexFilter() {
-      const pdfViewer = this.$refs.pdfViewer.ej2Instances;
-      // Filter for all Highlight and Underline annotations in red color created by Guest user
-      pdfViewer.annotation.applyCommentFilter({
-        type: ['Highlight', 'Underline'],
-        color: ['#ff0000'],
-        author: ['Guest'],
-        includereplies: true,
-        applyToDocument: true
-      });
-    },
-    clearFilter() {
-      const pdfViewer = this.$refs.pdfViewer.ej2Instances;
-      pdfViewer.annotation.applyCommentFilter(null);
+    function applyComplexFilter() {
+        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
+        // Filter for all Highlight and Underline annotations in red color created by Guest user
+        pdfViewer.annotation.applyCommentFilter({
+            type: ['Highlight', 'Underline'],
+            color: ['#ff0000'],
+            author: ['Guest'],
+            includereplies: true,
+            applyToDocument: true
+        });
     }
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-      ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, 
-      FormDesigner, PageOrganizer]
-  }
-}
+
+    function clearFilter() {
+        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
+        pdfViewer.annotation.applyCommentFilter(null);
+    }
 </script>
 
 {% endhighlight %}
