@@ -25,9 +25,9 @@ You can refer to the platform-specific guidance on how to use Syncfusion<sup sty
 - [UI Builder Skill for React PDF Viewer](../../PDF/PDF-Viewer/react/ui-builder-skill)
 - [UI Builder Skill for Angular PDF Viewer](../../PDF/PDF-Viewer/angular/ui-builder-skill)
 - [UI Builder Skill for Blazor PDF Viewer](../../PDF/PDF-Viewer/blazor/ui-builder-skill)
-- [UI Builder Skill for .NET MAUI PDF Viewer]((../../PDF/PDF-Viewer/maui/UI-Builder-Skill))
+- [UI Builder Skill for .NET MAUI PDF Viewer](../../PDF/PDF-Viewer/maui/ui-builder-skill)
 - [UI Builder Skill for WPF PDF Viewer](../../PDF/PDF-Viewer/wpf/ui-builder-skill)
-- [UI Builder Skill for WinForms Viewer](../../PDF/PDF-Viewer/winforms/ui-builder-skill)
+- [UI Builder Skill for WinForms PDF Viewer](../../PDF/PDF-Viewer/winforms/ui-builder-skill)
 
 ## See also
 

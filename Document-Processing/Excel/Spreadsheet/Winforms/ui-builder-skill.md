@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WinForms UI Builder Skill with Spreadsheet AI Assistant|Syncfusion®
+title: WinForms UI Builder Skill with Spreadsheet AI Assistants | Syncfusion®
 description: Install Syncfusion® WinForms UI Builder to generate production-ready Windows Forms controls with Spreadsheet from natural-language prompts.
 control: Spreadsheet
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 keywords: WinForms UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® WinForms UI Builder Skill with Spreadsheet AI Assistant
+# Syncfusion® WinForms UI Builder Skill with Spreadsheet AI Assistants
 
 **Syncfusion® WinForms UI Builder Skill** is an AI-powered agent skill that accelerates WinForms Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® WinForms components. 
 
@@ -132,17 +132,17 @@ Key enforcement points:
 
 ## Using the AI Assistant
 
-After installing Windows Forms UI Builder with APM, the relevant agent and skill files are added to your project under:
+After installing WinForms UI Builder Skill with Spreadsheet and APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
-- `.github/agents/` (Windows Forms UI builder agent configuration, based on the selected target)
+- `.github/agents/` (WinForms UI builder agent configuration, based on the selected target)
 
 To start using the skill:
 
 1. Open your supported IDE.
 2. In the chat panel, select the `syncfusion-winforms-ui-builder` agent from the **Agent dropdown**.
 
-![Set Agent](images/UI-Builder-Agent.png)
+   ![Set Agent](images/UI-Builder-Agent.png)
 
 3. Start prompting the agent with a clear description of your UI requirements.
 

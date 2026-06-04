@@ -10,10 +10,10 @@ keywords: React UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 
 # Syncfusion® React UI Builder Skill with Spreadsheet for AI Assistants
 
-**Syncfusion® React UI Builder Skill** is an AI-powered agent skill that accelerates React Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® React Spreadsheet components.
+**Syncfusion® React UI Builder Skill** is an AI-powered agent skill that accelerates React Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® React components.
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® Spreadsheet (Spreadsheet component)** and other React components to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, React UI Builder helps you rapidly build scalable spreadsheet-driven applications and user interfaces without leaving your development workflow.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® Spreadsheet** and other React components to deliver accurate and ready-to-use code.
+By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, React UI Builder helps you rapidly build scalable spreadsheet applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
 
@@ -152,7 +152,7 @@ To start using the skill:
 Create a spreadsheet for managing project tasks with columns for task ID, task name, assignee, priority, status, start date, due date, and progress. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight overdue tasks and high-priority items. Include formulas to calculate completion percentages and a summary section showing total tasks, completed tasks, and pending tasks. Adjust column widths for readability and make the layout suitable for team tracking.
 {% endpromptcard %}
 {% promptcard Customer Support Ticket Dashboard %}
-Create a spreadsheet for managing customer support tickets with columns for ticket ID, customer name, issue category, priority, assigned agent, created date, resolution status, and resolution notes. Apply clear formatting with readable headers, aligned values, and date formatting. Add dropdown validation for priority and status fields. Use conditional formatting to highlight urgent and unresolved tickets. Adjust column widths for readability and make the layout suitable for daily support operations.
+Create a spreadsheet for managing customer support tickets with columns for ticket ID, customer name, issue category, priority, assigned agent, created date, resolution status, and resolution notes. Format the sheet with clear headers, readable alignment, and spacing so users can quickly scan and understand the data. Allow users to add notes or comments to individual cells to capture additional details for each ticket. Include charts to show how tickets are distributed based on their status, helping teams monitor workload at a glance. Keep the layout simple, structured, and easy to use for day-to-day support operations.
 {% endpromptcard %}
 {% endpromptcards %}
 
