@@ -9,26 +9,26 @@ documentation: ug
 
 # AI Assist — Web API (.NET) Server Setup
 
-The AI Assist feature requires a backend server to process prompts and return AI-generated responses. This page explains how to set up that server using an **ASP.NET Core Web API** service backed by **Azure OpenAI**.
+AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create an **ASP.NET Core Web API** using **Azure OpenAI**.
 
 ---
 
 ## Prerequisites
 
-Before you begin, ensure the following are in place.
+Ensure the following are available before you begin.
 
 ### Azure OpenAI credentials
 
-You need an active Azure OpenAI resource. Collect the following four values from the [Azure Portal](https://portal.azure.com):
+You must have an Azure OpenAI resource. Collect the following values from the [Azure Portal](https://portal.azure.com):
 
 | Credential | Description |
 |---|---|
-| **API Key** | Your Azure OpenAI service key |
+| **API Key** | Azure OpenAI service key |
 | **Endpoint** | The base URL of your Azure OpenAI resource (e.g., `https://your-resource.openai.azure.com/`) |
-| **API Version** | The REST API version to target (e.g., `2024-02-01`) |
-| **Deployment Name** | The name of the model deployment (e.g., `gpt-4o`) |
+| **API Version** | REST API version (e.g., `2024-02-01`) |
+| **Deployment Name** | Model deployment name (e.g., `gpt-4o`) |
 
-These values map directly to the variables you will configure:
+These values correspond to the configuration used in the application:
 
 ```
 const azureOpenAIApiKey     = 'Your_Azure_OpenAI_API_Key';
@@ -44,9 +44,9 @@ const azureDeploymentName   = 'Your_Deployment_Name';
 
 ---
 
-## Step 1 — Install dependencies
+## Install dependencies
 
-Inside your Web API project folder, install the required NuGet packages:
+Run the following commands in your Web API project to install the required NuGet packages:
 
 ```
 dotnet add package Azure.AI.OpenAI
@@ -62,9 +62,9 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 
 ---
 
-## Step 2 — Configure credentials
+## Configure credentials
 
-Open `appsettings.json` and add your Azure OpenAI credentials under the `AI` section:
+Add the Azure OpenAI credentials in `appsettings.json` under `AI` section:
 
 ```json
 {
@@ -76,12 +76,11 @@ Open `appsettings.json` and add your Azure OpenAI credentials under the `AI` sec
 }
 ```
 
-
 ---
 
-## Step 3 — Configure required modules
+## Configure required modules
 
-Open `Program.cs` and register the Azure OpenAI client and the chat controller:
+Update `Program.cs` to register the Azure OpenAI client and required services:
 
 ```csharp
 using Azure.AI.OpenAI;
@@ -128,7 +127,9 @@ app.MapControllers();
 app.Run();
 ```
 
-Then add `AIAssistController.cs` under the `Controllers` folder to handle the `/api/AIAssist/Chat` route:
+## Create the AI Assist controller
+
+Add `AIAssistController.cs` under the `Controllers` folder to handle the `/api/AIAssist/Chat` route:
 
 ```csharp
 using Microsoft.AspNetCore.Cors;
@@ -194,15 +195,16 @@ namespace WebService.Controllers
 
 ---
 
-## Step 4 — Start the server
+## Run the application
 
-Run the following command from your Web API project folder:
+Run the following command to start the Web API:
 
 ```
 dotnet run
 ```
 
-The server starts on `https://localhost:{port}` (as defined in `launchSettings.json`). The AI Assist panel should point to:
+The server runs on `https://localhost:{port}` (as defined in `launchSettings.json`).
+AI Assist endpoint:
 
 ```
 https://localhost:{port}/api/AIAssist/Chat
@@ -210,9 +212,9 @@ https://localhost:{port}/api/AIAssist/Chat
 
 ---
 
-## Connect the server to the React Spreadsheet
+## Connect to the React Spreadsheet
 
-Once the server is running, set the `requestUrl` inside `aiAssistSettings` to point to your server's chat endpoint:
+Once the server is listening, set the `requestUrl` in `aiAssistSettings` to point to your server's chat endpoint:
 
 {% raw %}
 

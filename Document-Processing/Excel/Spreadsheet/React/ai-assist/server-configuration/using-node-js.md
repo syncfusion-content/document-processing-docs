@@ -9,26 +9,26 @@ documentation: ug
 
 # AI Assist — Node.js Server Setup
 
-The AI Assist feature requires a backend server to process prompts and return AI-generated responses. This page explains how to set up that server using a **Node.js + Express** service backed by **Azure OpenAI**.
+AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create a **Node.js + Express** service using **Azure OpenAI**.
 
 ---
 
 ## Prerequisites
 
-Before you begin, ensure the following are in place.
+Ensure the following are available before you begin.
 
 ### Azure OpenAI credentials
 
-You need an active Azure OpenAI resource. Collect the following four values from the [Azure Portal](https://portal.azure.com):
+You must have an Azure OpenAI resource. Collect these values from the [Azure Portal](https://portal.azure.com):
 
 | Credential | Description |
 |---|---|
-| **API Key** | Your Azure OpenAI service key |
+| **API Key** | Azure OpenAI service key |
 | **Endpoint** | The base URL of your Azure OpenAI resource (e.g., `https://your-resource.openai.azure.com/`) |
-| **API Version** | The REST API version to target (e.g., `2024-02-01`) |
-| **Deployment Name** | The name of the model deployment (e.g., `gpt-4o`) |
+| **API Version** | REST API version (e.g., `2024-02-01`) |
+| **Deployment Name** | Model deployment name (e.g., `gpt-4o`) |
 
-These values map directly to the variables you will configure:
+These values map to the following variables:
 
 ```
 const azureOpenAIApiKey     = 'Your_Azure_OpenAI_API_Key';
@@ -44,9 +44,9 @@ const azureDeploymentName   = 'Your_Deployment_Name';
 
 ---
 
-## Step 1 — Install dependencies
+## Install dependencies
 
-Inside your server project folder, install the required npm packages:
+Run the following command in your server project:
 
 ```
 npm install express cors dotenv openai date-fns
@@ -82,9 +82,9 @@ Ensure your `package.json` includes `"type": "module"` to support ES module impo
 
 ---
 
-## Step 2 — Configure credentials
+## Configure credentials
 
-Create a `.env` file at the root of your server project and add your Azure OpenAI credentials:
+Create a `.env` file in the project root and add your Azure OpenAI credentials:
 
 ```dotenv
 apiKey      = Your_Azure_OpenAI_API_Key
@@ -93,11 +93,11 @@ deployment  = Your_Deployment_Name
 apiVersion  = Your_Azure_OpenAI_API_Version
 ```
 
-> **Important:** Add `.env` to your `.gitignore` to avoid committing secrets to source control.
+> **Important:** Add `.env` to `.gitignore` to prevent exposing secrets.
 
 ---
 
-## Step 3 — Configure required modules
+## Configure required modules
 
 Create `ai-model.js` to initialize the Azure OpenAI client using the credentials from `.env`:
 
@@ -134,7 +134,7 @@ export async function getAzureChatAIRequest(options) {
 }
 ```
 
-Then create `server.js` to expose the `/api/AIAssist/Chat` endpoint:
+Create `server.js` to expose the AI Assist API:
 
 ```javascript
 import express from 'express';
@@ -165,25 +165,25 @@ app.listen(PORT, () => {
 
 ---
 
-## Step 4 — Start the server
+## Run the server
 
-Run the following command from your server project folder:
+Run the following command to start the server:
 
 ```
 npm start
 ```
 
-The server starts on `http://localhost:3000`. The AI Assist panel should point to:
+The server runs on `http://localhost:3000`. The AI Assist endpoint:
 
 ```
-http://localhost:3000/api/chat
+http://localhost:3000/api/AIAssistchat
 ```
 
 ---
 
-## Connect the server to the React Spreadsheet
+## Connect to the React Spreadsheet
 
-Once the server is running, set the `requestUrl` inside `aiAssistSettings` to point to your server's chat endpoint:
+Once the server is listening, Configure the `requestUrl` inside `aiAssistSettings` to point to the server endpoint:
 
 {% raw %}
 
@@ -197,7 +197,7 @@ export default function App() {
     <SpreadsheetComponent
       enableAIAssist={true}
       aiAssistSettings={{
-        requestUrl: 'http://localhost:3000/api/chat'
+        requestUrl: 'http://localhost:3000/api/AIAssist/chat'
       }}
       openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
       saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
@@ -219,7 +219,7 @@ export default function App() {
 | `apiKey` | Your Azure OpenAI API key |
 | `endpoint` | Your Azure OpenAI resource URL |
 | `deployment` | Your model deployment name |
-| `apiVersion` | The Azure OpenAI REST API version |
+| `apiVersion` | Azure OpenAI REST API version |
 
 ### Chat endpoint contract
 
