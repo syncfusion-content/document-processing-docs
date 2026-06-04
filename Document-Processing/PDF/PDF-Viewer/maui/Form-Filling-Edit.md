@@ -29,7 +29,7 @@ FormField formField = pdfViewer.FormFields.Where(x => x.Name == "name").FirstOrD
 if (formField is TextFormField nameTextBox)
 {
     // Set the value of the "name" text field.
-
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -207,7 +207,23 @@ foreach (var item in pdfViewer.FormFields)
 {% endhighlight %} 
 {% endtabs %}
 
-### Controlling form field editing at the viewer Level
+### Flatten all form fields
+
+To flatten all form fields in the document, set the FlattenOnSave property for each field:
+
+{% tabs %}
+{% highlight c# %}
+
+//Iterate all the form fields and set flatten
+foreach (var item in pdfViewer.FormFields)
+{
+    item.FlattenOnSave = true;
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+## Controlling form field editing at the viewer Level
 
 The `AllowEditFormFields` property is used to control form field editing at the viewer level. By default, editing is enabled, allowing users to interact with all supported form fields. When this property is set to false, all form fields become non-editable, making the document effectively read-only without modifying individual field properties. This behavior applies to all form field types and takes effect immediately on the loaded document.
 

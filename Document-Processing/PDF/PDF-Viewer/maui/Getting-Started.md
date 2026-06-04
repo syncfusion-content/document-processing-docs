@@ -101,61 +101,61 @@ Open the `MainPage.xaml` file and follow the steps below.
 2.  In Visual Studio, right-click the added PDF document and set its `Build Action` as `Embedded Resource`. 
 3.  In this example, we will load the PDF document through MVVM binding. Create a new C# file named `PdfViewerViewModel.cs` and add the following code snippet.
 
-{% tabs %}
-{% highlight c# tabtitle="PdfViewerViewModel.cs" %}
-
-using System.Reflection;
-using System.ComponentModel;
-
-namespace PdfViewerExample
-{
-    class PdfViewerViewModel : INotifyPropertyChanged
+    {% tabs %}
+    {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
+    
+    using System.Reflection;
+    using System.ComponentModel;
+    
+    namespace PdfViewerExample
     {
-        private Stream pdfDocumentStream;
-
-        /// <summary>
-        /// Occurs when a property value changes.
-        /// </summary>
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        /// <summary>
-        /// Gets or sets the stream of the currently loaded PDF document.
-        /// </summary>
-        public Stream PdfDocumentStream
+        class PdfViewerViewModel : INotifyPropertyChanged
         {
-            get
+            private Stream pdfDocumentStream;
+
+            /// <summary>
+            /// Occurs when a property value changes.
+            /// </summary>
+            public event PropertyChangedEventHandler? PropertyChanged;
+
+            /// <summary>
+            /// Gets or sets the stream of the currently loaded PDF document.
+            /// </summary>
+            public Stream PdfDocumentStream
             {
-                return pdfDocumentStream;
+                get
+                {
+                    return pdfDocumentStream;
+                }
+                set
+                {
+                    pdfDocumentStream = value;
+                    OnPropertyChanged(nameof(PdfDocumentStream));
+                }
             }
-            set
+            
+            /// <summary>
+            /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
+            /// </summary>
+            public PdfViewerViewModel()
             {
-                pdfDocumentStream = value;
-                OnPropertyChanged(nameof(PdfDocumentStream));
+                // Load the embedded PDF document stream.
+                pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
             }
-        }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
-        /// </summary>
-        public PdfViewerViewModel()
-        {
-            // Load the embedded PDF document stream.
-            pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
+            /// <summary>
+            /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
+            /// </summary>
+            /// <param name="name">The name of the property that changed.</param>
+            public void OnPropertyChanged(string name)
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+            } 
         }
-
-        /// <summary>
-        /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
-        /// </summary>
-        /// <param name="name">The name of the property that changed.</param>
-        public void OnPropertyChanged(string name)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        } 
     }
-}
 
-{% endhighlight %} 
-{% endtabs %}
+    {% endhighlight %} 
+    {% endtabs %}
 
 4.  Open the `MainPage.xaml` file again and add the default namespace of the created .NET MAUI project and name it as `local`. Here the default namespace of the demo sample `PdfViewerExample` is used.
 5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext` of the `ContentPage`.
