@@ -168,6 +168,7 @@ Open the `MainPage.xaml` file and follow the steps below.
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
+	         xmlns:local="clr-namespace:PdfViewerExample"
              x:Class="PdfViewerExample.MainPage">
 
     <ContentPage.BindingContext>
