@@ -169,6 +169,105 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
+## Customize Image saving using Event
+
+The ImageNodeVisited event in the Syncfusion® Smart Data Extractor allows users to customize how images are saved during data extraction. With this event, you can:
+
+* Save images externally (e.g., to disk or cloud storage).
+* Replace Base64 content with a file path for optimized storage.
+* Control image naming and storage location to meet application requirements.
+
+### Extract Markdown with external Image saving
+
+The following code shows how to use the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class with the ImageNodeVisited event to customize image saving while exporting content as Markdown.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Office.Markdown;
+using Syncfusion.SmartDataExtractor;
+
+//Open the input PDF or Image file as a stream.
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Hook the event to customize image handling.
+    extractor.SaveOptions.ImageNodeVisited += SaveImage;
+    //Extract Markdown content as string.
+    string data = extractor.ExtractDataAsMarkdown(inputStream);
+    //Save the extracted Markdown data into an output file.
+    File.WriteAllText("DataToMarkdown.md", data);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Office.Markdown;
+using Syncfusion.SmartDataExtractor;
+
+//Open the input PDF or Image file as a stream.
+using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Hook the event to customize image handling.
+    extractor.SaveOptions.ImageNodeVisited += SaveImage;
+    //Extract Markdown content as string.
+    string data = extractor.ExtractDataAsMarkdown(inputStream);
+    //Save the extracted Markdown data into an output file.
+    File.WriteAllText("DataToMarkdown.md", data);
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code shows how to implement the event handler to customize the image path and save images externally.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Event handler to save images externally
+static void SaveImage(object sender, MdImageNodeVisitedEventArgs args)
+{
+    //Define output image path (customize naming logic as needed)
+    string imagePath = @"D:\Temp\Image1.png";
+    //Save the image stream to file
+    using (FileStream fileStreamOutput = File.Create(imagePath))
+    {
+        args.ImageStream.CopyTo(fileStreamOutput);
+    }
+    //Set the URI to be used in the Markdown output
+    args.Uri = imagePath;
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Event handler to save images externally
+static void SaveImage(object sender, MdImageNodeVisitedEventArgs args)
+{
+    //Define output image path (customize naming logic as needed)
+    string imagePath = @"D:\Temp\Image1.png";
+    //Save the image stream to file
+    using (FileStream fileStreamOutput = File.Create(imagePath))
+    {
+        args.ImageStream.CopyTo(fileStreamOutput);
+    }
+    //Set the URI to be used in the Markdown output
+    args.Uri = imagePath;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
 ## PDF to Markdown Preservation Mapping
 
 This section explains how common PDF elements are converted and preserved in Markdown format, ensuring that document structure and formatting remain consistent during the PDF to Markdown conversion process.
