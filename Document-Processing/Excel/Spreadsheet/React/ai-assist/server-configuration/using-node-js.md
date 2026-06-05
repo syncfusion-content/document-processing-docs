@@ -176,7 +176,7 @@ npm start
 The server runs on `http://localhost:3000`. The AI Assist endpoint:
 
 ```
-http://localhost:3000/api/AIAssist/chat
+http://localhost:3000/api/AIAssist/Chat
 ```
 
 ---
@@ -197,7 +197,7 @@ export default function App() {
     <SpreadsheetComponent
       enableAIAssist={true}
       aiAssistSettings={{
-        requestUrl: 'http://localhost:3000/api/AIAssist/chat'
+        requestUrl: 'http://localhost:3000/api/AIAssist/Chat'
       }}
       openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
       saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'

@@ -177,7 +177,7 @@ If the AI panel displays an error message:
 2. Check the requestUrl
     * Ensure the URL matches your server's exact address and port
     * For local development:
-        * Node.js: http://localhost:3000/api/AIAssist/chat
+        * Node.js: http://localhost:3000/api/AIAssist/Chat
         * Web API (.NET): https://localhost:5001/api/AIAssist/Chat
 3. Verify CORS is enabled
     * Your React app origin must be allowed in the server's CORS policy
