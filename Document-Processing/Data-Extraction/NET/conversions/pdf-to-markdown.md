@@ -169,17 +169,16 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
-## Customize Image saving using Event
+## Customize image saving
 
-The ImageNodeVisited event in the Syncfusion® Smart Data Extractor allows users to customize how images are saved during data extraction. With this event, you can:
+The [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event in the Syncfusion® Smart Data Extractor allows users to customize how images are saved during data extraction. With this event, you can:
 
-* Save images externally (e.g., to disk or cloud storage).
+* Customize image names and storage paths, and save images externally.
 * Replace Base64 content with a file path for optimized storage.
-* Control image naming and storage location to meet application requirements.
 
-### Extract Markdown with external Image saving
+### Extract Markdown with external image saving
 
-The following code shows how to use the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class with the ImageNodeVisited event to customize image saving while exporting content as Markdown.
+The following code shows how to use the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class with the [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event to customize image saving while exporting content as Markdown.
 
 {% tabs %} 
 

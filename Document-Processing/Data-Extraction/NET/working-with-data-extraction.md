@@ -687,7 +687,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Configure OCR Processing Settings
 
-To configure OCR settings in .NET using the OCRProcessor property of the [DataExtractor]( https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class use the following C# example to set a page range and extract structured data from a PDF document as JSON output with the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method.
+To configure OCR settings in .NET using the **OCRProcessor** property of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, use the following C# example to initialize the OCR processor, set language and Tesseract version, and extract structured data from a PDF document with the [ExtractDataAsPdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsPdfDocument_System_IO_Stream_) method.
+
 
 {% tabs %} 
 
@@ -702,11 +703,15 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
     //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
+    //Initialize the OCR processor.
+    OCRProcessor processor = new OCRProcessor();
     //Set OCR language.
-    extractor.OCRProcessor.Settings.Language = Languages.English;
-    //Set tesseract OCR Engine.
-    extractor.OCRProcessor.Settings.TesseractVersion = TesseractVersion.Version5_0;
-    //Extract data and return as a loaded json document.
+    processor.Settings.Language = Languages.English;
+    //Set Tesseract OCR engine version.
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+    //Assign the configured OCR processor to the Data Extractor.
+    extractor.OCRProcessor = processor;
+    //Extract data and return as a loaded PDF document.
     PdfLoadedDocument pdf = extractor.ExtractDataAsPdfDocument(stream);
     //Save the extracted output as a new PDF file.
     pdf.Save("Output.pdf");
@@ -727,11 +732,15 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
     //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
+    //Initialize the OCR processor.
+    OCRProcessor processor = new OCRProcessor();
     //Set OCR language.
-    extractor.OCRProcessor.Settings.Language = Languages.English;
-    //Set tesseract OCR Engine.
-    extractor.OCRProcessor.Settings.TesseractVersion = TesseractVersion.Version5_0;
-    //Extract data and return as a loaded json document.
+    processor.Settings.Language = Languages.English;
+    //Set Tesseract OCR engine version.
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+    //Assign the configured OCR processor to the Data Extractor.
+    extractor.OCRProcessor = processor;
+    //Extract data and return as a loaded PDF document.
     PdfLoadedDocument pdf = extractor.ExtractDataAsPdfDocument(stream);
     //Save the extracted output as a new PDF file.
     pdf.Save("Output.pdf");

@@ -8,8 +8,7 @@ documentation: UG
 
 # Working with Form Recognition
 
-The Syncfusion<sup>&reg;</sup> Smart Form Recognizer is a .NET library that detects and extracts form fields such as text inputs, checkboxes, and radio buttons along with their types and values.
-
+The Syncfusion<sup>&reg;</sup> Smart Form Recognizer is a C# library for .NET that reliably extracts form data from PDFs and scanned images. It detects text fields, checkboxes, radio buttons, and signature regions.
 To quickly get started with recognizing form data from PDF and image files using the Smart Form Recognizer library, refer to this video tutorial:
 {% youtube "https://www.youtube.com/watch?v=1F1jRW3JIB4" %}
 
