@@ -337,10 +337,10 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 ## See also
 
-- [Ink Annotation](../annotation-types/ink-annotation)
-- [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
-- [Annotation Events](../annotation-event)
-- [Undo and Redo Annotations](../annotations-undo-redo)
-- [Export and Import Annotation](../export-import-annotations)
-- [Delete Annotation](../delete-annotation)
-- [Annotation API](../annotations-api)
+- [Ink Annotation](./annotation-types/ink-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Annotation Events](./annotation-event)
+- [Undo and Redo Annotations](./annotations-undo-redo)
+- [Export and Import Annotation](./export-import/export-annotation)
+- [Delete Annotation](./delete-annotation)
+- [Annotation API](./annotations-api)
