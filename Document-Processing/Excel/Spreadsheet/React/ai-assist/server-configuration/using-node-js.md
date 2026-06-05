@@ -176,7 +176,7 @@ npm start
 The server runs on `http://localhost:3000`. The AI Assist endpoint:
 
 ```
-http://localhost:3000/api/AIAssistchat
+http://localhost:3000/api/AIAssist/chat
 ```
 
 ---
