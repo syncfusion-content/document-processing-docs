@@ -9,7 +9,7 @@ documentation: ug
 
 # AI Assist — Web API (.NET) Server Setup
 
-AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create an **ASP.NET Core Web API** using **Azure OpenAI**.
+AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create an **ASP.NET Core Web API** using **Azure OpenAI** credentials.
 
 ---
 
@@ -24,7 +24,7 @@ You must have an Azure OpenAI resource. Collect the following values from the [A
 | Credential | Description |
 |---|---|
 | **API Key** | Azure OpenAI service key |
-| **Endpoint** | The base URL of your Azure OpenAI resource (e.g., `https://your-resource.openai.azure.com/`) |
+| **Endpoint** | Base URL of your Azure OpenAI resource (e.g., `https://your-resource.openai.azure.com/`) |
 | **API Version** | REST API version (e.g., `2024-02-01`) |
 | **Deployment Name** | Model deployment name (e.g., `gpt-4o`) |
 
@@ -197,14 +197,13 @@ namespace WebService.Controllers
 
 ## Run the application
 
-Run the following command to start the Web API:
+Run the following command to start the Web API server:
 
 ```
 dotnet run
 ```
 
-The server runs on `https://localhost:{port}` (as defined in `launchSettings.json`).
-AI Assist endpoint:
+The server runs on `https://localhost:{port}` (as defined in `launchSettings.json`). Update the AI Assist endpoint like below:
 
 ```
 https://localhost:{port}/api/AIAssist/Chat
@@ -214,7 +213,7 @@ https://localhost:{port}/api/AIAssist/Chat
 
 ## Connect to the React Spreadsheet
 
-Once the server is listening, set the `requestUrl` in [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) to point to your server's chat endpoint:
+Once the server is listening, Configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
 
 {% raw %}
 
@@ -275,9 +274,13 @@ And returns:
 
 ## Sample
 
-A ready-to-use Web API project is available for download. Extract the folder, update your Azure OpenAI credentials in `appsettings.json`, and start the server using the `dotnet run` command.
+A Web API server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in `appsettings.json`, and start the server using the following command:
 
-* [Download Web API Server](https://drive.google.com/file/d/13K7a89Vk4Xt7dgd4wt49q272bSVSVuz3/view?usp=drive_link)
+```
+dotnet run
+```
+
+* [Web API Server](https://drive.google.com/file/d/13K7a89Vk4Xt7dgd4wt49q272bSVSVuz3/view?usp=drive_link)
 * [Live Demo](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/ai-smart-spreadsheets)
 
 ---

@@ -9,7 +9,7 @@ documentation: ug
 
 # AI Assist — Node.js Server Setup
 
-AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create a **Node.js + Express** service using **Azure OpenAI**.
+AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create a **Node.js** server with **Azure OpenAI** credentials.
 
 ---
 
@@ -24,11 +24,11 @@ You must have an Azure OpenAI resource. Collect these values from the [Azure Por
 | Credential | Description |
 |---|---|
 | **API Key** | Azure OpenAI service key |
-| **Endpoint** | The base URL of your Azure OpenAI resource (e.g., `https://your-resource.openai.azure.com/`) |
+| **Endpoint** | Base URL of your Azure OpenAI resource (e.g., `https://your-resource.openai.azure.com/`) |
 | **API Version** | REST API version (e.g., `2024-02-01`) |
 | **Deployment Name** | Model deployment name (e.g., `gpt-4o`) |
 
-These values map to the following variables:
+These values correspond to the configuration used in the application:
 
 ```
 const azureOpenAIApiKey     = 'Your_Azure_OpenAI_API_Key';
@@ -173,7 +173,7 @@ Run the following command to start the server:
 npm start
 ```
 
-The server runs on `http://localhost:3000`. The AI Assist endpoint:
+The server runs on `http://localhost:3000`. Update the AI Assist endpoint like below:
 
 ```
 http://localhost:3000/api/AIAssist/Chat
@@ -247,7 +247,11 @@ And returns:
 
 ## Sample
 
-A ready-to-use Node.js server project is available for download. Extract the folder, replace the credentials in the `.env` file with your own Azure OpenAI values, and start the server using the `npm start` command.
+A Node.js server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in the `.env` file, and start the server using the following command
+
+```
+npm start
+```
 
 [Download Node.js Server](https://drive.google.com/file/d/1V3TlO_6GS3dV986I7sDizmE9kwojkOrx/view?usp=drive_link)
 

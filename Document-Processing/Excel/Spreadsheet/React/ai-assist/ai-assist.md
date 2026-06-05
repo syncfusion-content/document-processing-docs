@@ -9,7 +9,7 @@ documentation: ug
 
 # AI Assist in React Spreadsheet control
 
-**AI Assist** AI-powered capabilities directly into the spreadsheet. Instead of manually applying formatting, writing formulas, or organizing data, you can describe what you want in plain English — and the AI performs the action for you.
+**AI Assist** brings AI-powered capabilities directly into the spreadsheet. Instead of manually applying formatting, writing formulas, or organizing data, you can describe what you want in plain English — and the AI Assist performs the action for you.
 
 ![Spreadsheet AI Assist panel](../images/spreadsheet_ai_assist.gif)
 
@@ -17,7 +17,7 @@ documentation: ug
 
 ## Server Connection
 
-To configure the backend service, refer - [Web API](./server-configuration/using-web-api.md)/[Node.js](./server-configuration/using-web-api.md)
+To configure the backend service, refer - [Web API Server](./server-configuration/using-web-api.md)/[Node.js Server](./server-configuration/using-web-api.md)
 
 ---
 
@@ -29,11 +29,11 @@ AI Assist integrates seamlessly into your React Spreadsheet application, enablin
 
 Ensure the following before integrating AI Assist:
 
-* Backend Server: A running backend AI service (Node.js or ASP.NET Web API) with Azure OpenAI credentials configured on the server. For setup instructions, see [Web API](./server-configuration/using-web-api.md)/[Node.js](./server-configuration/using-web-api.md) for setup instructions.
+* Backend Server: A running backend AI service (Node.js or Web API) with Azure OpenAI credentials configured on the server. For setup instructions, see [Web API Server](./server-configuration/using-web-api.md)/[Node.js Server](./server-configuration/using-web-api.md) for setup instructions.
 
 ### Inject the AI Assist Module
 
-Inject the `AIAssist` module into the React Spreadsheet. This registers the feature and makes it available in your application.
+Inject the `AIAssist` module into the React Spreadsheet. This registers the AI Assist feature and makes it available in your application.
 
 ```tsx
 import * as React from 'react';
@@ -42,11 +42,9 @@ import { Spreadsheet, AIAssist } from '@syncfusion/ej2-react-spreadsheet';
 Spreadsheet.Inject(AIAssist);
 ```
 
-
-
 ### Enable AI Assist
 
-To enable `AI Assist` in the Spreadsheet component, set the [`enableAIAssist`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enableaiassist) property to `true`.
+To enable `AIAssist` in the Spreadsheet component, set the [`enableAIAssist`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enableaiassist) property to `true`.
 
 ```tsx
 import * as React from 'react';
@@ -55,10 +53,7 @@ import { Spreadsheet, SpreadsheetComponent, AIAssist } from '@syncfusion/ej2-rea
 Spreadsheet.Inject(AIAssist);
 
 function App() {
-    return (
-        <SpreadsheetComponent enableAIAssist={true}>
-        </SpreadsheetComponent>
-    );
+    return (<SpreadsheetComponent enableAIAssist={true}></SpreadsheetComponent> );
 }
 ```
 
@@ -68,7 +63,7 @@ This enables the AI Assist into the spreadsheet.
 
 ### Configure AI Assist Settings
 
-Use the [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect spreadsheet to the backend service and customize the AI Assist.
+Use the [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect spreadsheet to the backend server and customize the AI Assist.
 
 ```tsx
 import * as React from 'react';
@@ -78,7 +73,6 @@ Spreadsheet.Inject(AIAssist);
 
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
-
     const aiAssistSettings: AIAssistSettingsModel = {
         requestUrl: 'https://localhost:{port}/api/AIAssist/Chat',
         placeholder: 'Ask the AI about this sheet...',
@@ -105,6 +99,7 @@ Your Spreadsheet is now integrated with AI Assist and ready to use.
 * **Resize the panel**: Drag the left edge of the panel to make it wider or narrower.
 
 ### Undo an AI Action
+
 All actions performed by AI Assist are recorded in the spreadsheet's undo/redo history. Press Ctrl+Z to revert any change made by the AI, just like a manual edit.
 
 ---
