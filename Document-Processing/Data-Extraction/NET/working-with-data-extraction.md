@@ -320,6 +320,107 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-stream/.NET).
 
 
+## Convert PDF/Image to Markdown
+
+The **Smart Data Extractor** enables you to process PDF documents or scanned images and export the structured content as a MarkdownDocument (MD DOM).
+
+This section covers two scenarios:
+* Extracting from PDF 
+* Extracting from Image
+
+### Extracting from PDF
+
+To extract structured data from a PDF document and save it as a Markdown document using the **ExtractDataAsMarkdownDocument** method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.Office.Markdown;
+
+// Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    // Extract data as MarkdownDocument.
+    MarkdownDocument markdownDocument = extractor.ExtractDataAsMarkdownDocument(stream);
+    // Save the extracted Markdown data into an output file.
+    markdownDocument.Save("Output.md");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.Office.Markdown;
+
+// Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    // Extract data as MarkdownDocument.
+    MarkdownDocument markdownDocument = extractor.ExtractDataAsMarkdownDocument(stream);
+    // Save the extracted Markdown data into an output file.
+    markdownDocument.Save("Output.md");
+}
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+### Extracting from Image
+
+To extract structured data from an image file and save it as a Markdown document using the **ExtractDataAsMarkdownDocument** method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following C# code example.
+
+{% tabs %} 
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.Office.Markdown;
+
+// Open the input image file as a stream.
+using (FileStream stream = new FileStream("Input.png", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    // Extract data as MarkdownDocument.
+    MarkdownDocument markdownDocument = extractor.ExtractDataAsMarkdownDocument(stream);
+    // Save the extracted Markdown data into an output file.
+    markdownDocument.Save("Output.md");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.Office.Markdown;
+
+// Open the input image file as a stream.
+using (FileStream stream = new FileStream("Input.png", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    // Extract data as MarkdownDocument.
+    MarkdownDocument markdownDocument = extractor.ExtractDataAsMarkdownDocument(stream);
+    // Save the extracted Markdown data into an output file.
+    markdownDocument.Save("Output.md");
+}
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+
 ## Disable Form Detection
 
 To disable form field detection while extracting structured data from a PDF document using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
@@ -751,4 +852,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {% endhighlight %}
 
 {% endtabs %}  
+
+
 
