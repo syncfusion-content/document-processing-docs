@@ -21,7 +21,8 @@ Use the **Properties** panel to adjust:
 ## Customize appearance of form fields programmatically
 Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) to apply styles:
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -58,12 +59,14 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Set Default Styles for New Form Fields
 Define defaults so fields added from the toolbar inherit styles:
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -81,7 +84,8 @@ Define defaults so fields added from the toolbar inherit styles:
     private SfPdfViewer2? viewer;
     private string DocumentPath = "wwwroot/data/form-designer.pdf";
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples)
 

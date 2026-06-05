@@ -29,7 +29,8 @@ N> Setting [FormFieldDataFormat](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 The following code shows how to export the form fields as an XML data stream and import that data from the stream into the current PDF document via a button click.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer;
 @using Syncfusion.Blazor.Buttons;
 
@@ -76,7 +77,8 @@ The following code shows how to export the form fields as an XML data stream and
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Export and Import XML Format](form-designer-images/Export_Import_XML_Format.gif)
 
@@ -90,7 +92,8 @@ N> Setting [FormFieldDataFormat](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 The following code demonstrates exporting form fields as FDF to a stream and importing the data back into the current PDF document through a button click.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer;
 @using Syncfusion.Blazor.Buttons;
 
@@ -134,7 +137,8 @@ The following code demonstrates exporting form fields as FDF to a stream and imp
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Export and Import FDF Format](form-designer-images/Export_Import_FDF_Format.png)
 
@@ -148,7 +152,8 @@ N> Setting [FormFieldDataFormat](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 The following code shows how to export the form fields as an XFDF data stream and import that data from the stream into the current PDF document via a button click.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer;
 @using Syncfusion.Blazor.Buttons;
 
@@ -191,7 +196,8 @@ The following code shows how to export the form fields as an XFDF data stream an
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Export and Import XFDF Format](form-designer-images/Export_Import_XFDF_Format.png)
 
@@ -205,7 +211,8 @@ N> Setting [FormFieldDataFormat](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 The following code demonstrates exporting form fields as JSON to a stream and importing the data back into the current PDF document through a button click.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer;
 @using Syncfusion.Blazor.Buttons;
 
@@ -249,7 +256,8 @@ The following code demonstrates exporting form fields as JSON to a stream and im
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Export and Import JSON Format](form-designer-images/Export_Import_JSON_Format.png)
 
@@ -263,7 +271,8 @@ The [ExportFormFieldsAsObjectAsync](https://help.syncfusion.com/cr/blazor/Syncfu
 
 The following code shows how to export form fields as an object and import that data into the current PDF document via a button click.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer;
 @using Syncfusion.Blazor.Buttons;
 
@@ -307,7 +316,8 @@ The following code shows how to export form fields as an object and import that 
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Export and Import Object Format](form-designer-images/Export_Import_Object_Format.png)
 
@@ -319,7 +329,8 @@ This method allows exporting the form field data and saving it as a JSON file, w
 
 N> If [ExportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportFormFieldsAsync_System_String_) is called with a string path (file name or path), the form field data is exported in JSON file format.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer;
 @using Syncfusion.Blazor.Buttons;
 
@@ -341,7 +352,8 @@ N> If [ExportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         await PdfViewerInstance.ExportFormFieldsAsync(""); 
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Export and Import JSON File](form-designer-images/Export_JSON_File.png)
 

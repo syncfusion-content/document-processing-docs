@@ -22,7 +22,8 @@ Update form field values programmatically with [`UpdateFormFieldsAsync`](https:/
 
 Use the example below as a complete, runnable example for a Blazor app. It retrieves form fields and updates a named field or the first available field.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -66,7 +67,8 @@ Use the example below as a complete, runnable example for a Blazor app. It retri
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 **Expected result:** Clicking the *Fill Form Fields* button sets the first or named field's value to *John Doe* in the viewer.
 
@@ -80,7 +82,8 @@ Users can click form controls and enter/select values. Supported field types inc
 
 Use [`ImportFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportFormFieldsAsync_System_IO_Stream_Syncfusion_Blazor_SfPdfViewer_FormFieldDataFormat_) to map external data into PDF fields by name. The example below shows how to trigger import from a button handler.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer;
 @using Syncfusion.Blazor.Buttons;
 
@@ -124,7 +127,8 @@ Use [`ImportFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 For more details, see [Import and Export Form Data](./form-filling#export-and-import-form-fields).
 
@@ -132,7 +136,8 @@ For more details, see [Import and Export Form Data](./form-filling#export-and-im
 
 Enable form field validation and handle the validation event to check required fields and cancel submission when necessary. Example below shows adding required fields programmatically and validating them.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer;
 @using Syncfusion.Blazor.Buttons;
 
@@ -170,7 +175,8 @@ Enable form field validation and handle the validation event to check required f
        }
    }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Troubleshooting
 

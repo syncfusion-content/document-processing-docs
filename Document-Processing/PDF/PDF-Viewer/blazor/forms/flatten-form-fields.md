@@ -30,7 +30,8 @@ Flattening PDF forms converts interactive fields such as textboxes, dropdowns, c
 
 ## Complete example
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -87,7 +88,8 @@ Flattening PDF forms converts interactive fields such as textboxes, dropdowns, c
         await Viewer.DownloadAsync();
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Expected result
 

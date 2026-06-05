@@ -34,7 +34,8 @@ Use the [AddFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 Use this approach to generate form fields dynamically based on data or application logic.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -59,7 +60,8 @@ Use this approach to generate form fields dynamically based on data or applicati
         await viewer.AddFormFieldsAsync(new List<FormFieldInfo> { textBoxField });
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 **Use programmatic creation when:**
 
@@ -79,7 +81,8 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 **Add Programmatically (API)**:
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -107,7 +110,8 @@ Below are concise UI steps and the programmatic examples for each common field t
         await viewer.AddFormFieldsAsync(new List<FormFieldInfo> { textBoxField });
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Button
 
@@ -117,7 +121,8 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 **Add Programmatically (API)**:
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -143,7 +148,8 @@ Below are concise UI steps and the programmatic examples for each common field t
         await viewer.AddFormFieldsAsync(new List<FormFieldInfo> { buttonField });
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Password
 
@@ -153,7 +159,8 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 **Add Programmatically (API)**:
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -181,7 +188,8 @@ Below are concise UI steps and the programmatic examples for each common field t
         await viewer.AddFormFieldsAsync(new List<FormFieldInfo> { passwordField });
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### CheckBox
 
@@ -191,7 +199,8 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 **Add Programmatically (API)**:
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -218,7 +227,8 @@ Below are concise UI steps and the programmatic examples for each common field t
         await viewer.AddFormFieldsAsync(new List<FormFieldInfo> { checkBoxField });
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### RadioButton
 
@@ -228,7 +238,8 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 **Add Programmatically (API)**:
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -261,7 +272,8 @@ Below are concise UI steps and the programmatic examples for each common field t
         await viewer.AddFormFieldsAsync(new List<FormFieldInfo> { maleRadioButton, femaleRadioButton });
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### ListBox
 
@@ -271,7 +283,8 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 **Add Programmatically (API)**:
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -305,7 +318,8 @@ Below are concise UI steps and the programmatic examples for each common field t
         await viewer.AddFormFieldsAsync(new List<FormFieldInfo> { listBoxField });
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### DropDown
 
@@ -315,7 +329,8 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 **Add Programmatically (API)**:
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -349,7 +364,8 @@ Below are concise UI steps and the programmatic examples for each common field t
         await viewer.AddFormFieldsAsync(new List<FormFieldInfo> { dropDownField });
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Signature Field
 
@@ -359,7 +375,8 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 **Add Programmatically (API)**:
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -386,7 +403,8 @@ Below are concise UI steps and the programmatic examples for each common field t
         await viewer.AddFormFieldsAsync(new List<FormFieldInfo> { signatureField });
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Add fields dynamically with SetFormDrawingModeAsync
 
@@ -403,7 +421,8 @@ You can edit form fields using the UI or API.
 
 #### Edit Programmatically
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -481,7 +500,8 @@ You can edit form fields using the UI or API.
         await viewer.SetFormDrawingModeAsync(FormFieldType.Password);
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples)
 

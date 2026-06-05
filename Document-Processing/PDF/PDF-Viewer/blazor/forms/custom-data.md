@@ -28,7 +28,8 @@ This article explains how to:
 
 Attach custom data at field creation by passing a `CustomData` object to the form field when using [`AddFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__).
 
-```cshtml
+{% tabs %}
+{% highlight razor %} 
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using System.Collections.Generic
@@ -65,7 +66,8 @@ Attach custom data at field creation by passing a `CustomData` object to the for
         await viewer.AddFormFieldsAsync(new List<FormFieldInfo> { textField });
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 
 
@@ -74,7 +76,8 @@ Attach custom data at field creation by passing a `CustomData` object to the for
 
 Modify an existing field's `CustomData` by using the [`UpdateFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormField_) method. Retrieve fields using [`GetFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetFormFieldsAsync) and update the CustomData property.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -114,7 +117,8 @@ Modify an existing field's `CustomData` by using the [`UpdateFormFieldsAsync()`]
         await viewer.UpdateFormFieldsAsync(targetField);
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 **Tip:**
 Merge new values into the existing `CustomData` object before calling [`UpdateFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormField_) to avoid unintentionally overwriting existing metadata.
@@ -126,7 +130,8 @@ Access the `CustomData` property from any form field at any point in the applica
 - during save or submit operations
 - while performing validation or conditional routing
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -156,7 +161,8 @@ Access the `CustomData` property from any form field at any point in the applica
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Best Practices
 

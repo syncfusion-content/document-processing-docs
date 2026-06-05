@@ -21,7 +21,8 @@ The API supports setting absolute bounds or moving fields by a delta.
 
 ### Set absolute bounds
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -85,7 +86,8 @@ The API supports setting absolute bounds or moving fields by a delta.
     }
 
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## See also
 

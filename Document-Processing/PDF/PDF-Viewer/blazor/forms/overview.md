@@ -21,7 +21,8 @@ See the [Filling PDF Forms](./form-filling) page for full details.
 
 Use the following code-snippet to configure form-filling in Blazor. Form-filling is enabled by default.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 Height="100%"
@@ -32,7 +33,8 @@ Use the following code-snippet to configure form-filling in Blazor. Form-filling
 @code{
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Form filling in Blazor SfPdfViewer](../images/blazor-pdfviewer-form-filling.png)
 
@@ -48,7 +50,8 @@ See the [Form Designer](./form-designer) page for full details.
 
 Use the following code-snippet to configure form-designer in Blazor. Form-designer is enabled by default.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 Height="100%"
@@ -59,7 +62,8 @@ Use the following code-snippet to configure form-designer in Blazor. Form-design
 @code{
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Form Designer in Blazor SfPdfViewer](../images/blazor-form-deigner-toolbar.png)
 

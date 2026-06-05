@@ -55,7 +55,8 @@ For more information about creating and editing form fields in the PDF Viewer, r
 
 Form design features are enabled by setting the [EnableFormDesigner](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_EnableFormDesigner) property to `true`. This property controls whether the Form Designer option appears in the main toolbar.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -65,7 +66,8 @@ Form design features are enabled by setting the [EnableFormDesigner](https://hel
     Height="680px" 
     Width="100%">
 </SfPdfViewer2>
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Form Designer Toolbar
 

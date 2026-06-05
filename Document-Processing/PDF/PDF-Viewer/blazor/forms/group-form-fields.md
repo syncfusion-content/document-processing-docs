@@ -52,7 +52,8 @@ You can also group form fields during creation by assigning the same **Name** th
 - A radio button group named **Gender** allows single selection.
 - Two checkboxes named **Subscribe** share the checked state.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -116,7 +117,8 @@ You can also group form fields during creation by assigning the same **Name** th
         await viewer.AddFormFieldsAsync(formFields);
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## See also
 

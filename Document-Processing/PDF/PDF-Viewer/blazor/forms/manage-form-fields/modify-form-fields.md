@@ -20,7 +20,8 @@ Modify form fields using the UI or programmatically via the API.
 ## Modify PDF form field properties programmatically
 Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) to change behavior or data (including position and size):
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -57,7 +58,8 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Modify PDF Form Field Properties by Field type
 
@@ -66,7 +68,8 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 ![Textbox properties panel showing value and typography settings](../../../javascript-es6/images/ui-textbox-edit.png)
 - API: [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) for value, typography, alignment, colors, borders.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -103,14 +106,16 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Button
 - UI: Update appearance, tooltip, font, colors, borders.
 ![Button properties panel showing label and appearance settings](../../../javascript-es6/images/ui-button-edit.png)
 - API: [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) for tooltip, typography, colors, borders.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -146,7 +151,8 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Password
 
@@ -154,7 +160,8 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 ![Password properties panel showing tooltip and validation settings](../../../javascript-es6/images/ui-password-edit.png)
 - API: [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) for tooltip, validation flags, typography, colors, alignment, borders.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -193,14 +200,16 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### CheckBox
 - UI: Toggle checked state.
 ![CheckBox properties panel showing checked state](../../../javascript-es6/images/ui-checkbox-edit.png)
 - API: [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) for isChecked, tooltip, colors, borders.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -234,14 +243,16 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### RadioButton
 - UI: Set selected item in a group (same Name).
 ![RadioButton properties panel showing grouped options](../../../javascript-es6/images/ui-radiobutton-edit.png)
 - API: [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) to set selected value and border appearance.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -274,14 +285,16 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### ListBox
 - UI: Add/remove items, set selection, adjust fonts/colors.
 ![ListBox properties panel showing items and selection](../../../javascript-es6/images/ui-listbox-edit.png)
 - API: [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) for items, selection, borders.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -316,14 +329,16 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### DropDown
 - UI: Add/remove items, default value, appearance.
 ![DropDown properties panel showing list items and default value](../../../javascript-es6/images/ui-dropdown-edit.png)
 - API: [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) for items, value, borders.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -358,14 +373,16 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Signature Field
 - UI: Tooltip, thickness, indicator text, required/visibility.
 ![Signature field properties panel showing indicator and appearance](../../../javascript-es6/images/ui-signature-edit.png)
 - API: [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__) for tooltip, required, colors, borders.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -399,7 +416,8 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples)
 

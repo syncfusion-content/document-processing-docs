@@ -32,7 +32,8 @@ The following flags are supported in the PDF Viewer:
 ### Make Fields Read Only
 Use the **IsReadOnly** property to prevent users from modifying a form field through the UI. This is useful for displaying pre-filled or calculated values that should not be changed by the user.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -76,7 +77,8 @@ Use the **IsReadOnly** property to prevent users from modifying a form field thr
         await viewer.AddFormFieldsAsync(formFields);
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Mark Fields as Required
 Use the **IsRequired** property to mark form fields as mandatory. To enforce this constraint, enable form field validation and validate fields before allowing actions such as printing or downloading.
@@ -86,7 +88,8 @@ Use the **IsRequired** property to mark form fields as mandatory. To enforce thi
 
 If required fields are empty, validation can prevent further actions.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -132,7 +135,8 @@ If required fields are empty, validation can prevent further actions.
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Apply PDF Form Field Flags Using the UI
 
@@ -154,7 +158,8 @@ You can apply or modify form field flags in the following ways.
 ### Apply flags when creating fields
 Pass the flags properties when creating form fields using [AddFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddFormFieldsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo__).
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -200,12 +205,14 @@ Pass the flags properties when creating form fields using [AddFormFieldsAsync()]
         await viewer.AddFormFieldsAsync(formFields);
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Update flags on existing fields programmatically
 Use the [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormField_) method to modify constraint values on existing form fields.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
@@ -252,7 +259,8 @@ Use the [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusi
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## See Also
 
