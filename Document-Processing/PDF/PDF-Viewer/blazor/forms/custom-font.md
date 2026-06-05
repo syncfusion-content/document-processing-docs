@@ -17,7 +17,7 @@ To ensure correct rendering and saving of form fields that use custom fonts (esp
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 
 <SfPdfViewer2 @ref="pdfViewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" FontFamilies="@FontFamilies">
     <PdfViewerEvents Created="@Created"></PdfViewerEvents>
@@ -58,7 +58,7 @@ To ensure correct rendering and saving of signatures that use custom fonts (espe
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 
 <SfPdfViewer2 @ref="Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
     <PdfViewerEvents Created="@Created"></PdfViewerEvents>

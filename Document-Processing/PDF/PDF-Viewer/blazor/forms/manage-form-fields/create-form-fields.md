@@ -36,7 +36,7 @@ Use this approach to generate form fields dynamically based on data or applicati
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
@@ -83,7 +83,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
@@ -123,7 +123,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
@@ -161,7 +161,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
@@ -201,7 +201,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
@@ -240,7 +240,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
@@ -285,7 +285,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
@@ -331,7 +331,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
@@ -377,7 +377,7 @@ Below are concise UI steps and the programmatic examples for each common field t
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
@@ -423,7 +423,7 @@ You can edit form fields using the UI or API.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 

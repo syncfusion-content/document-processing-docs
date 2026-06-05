@@ -29,7 +29,7 @@ Removes all form fields from the document using [DeleteFormFieldsAsync()](https:
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.Buttons
 
 <!-- Button to delete all form fields -->
@@ -65,7 +65,7 @@ Deletes only the currently selected form field using [DeleteFormFieldsAsync()](h
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.Buttons
 
 <!-- Button to delete the selected form fields -->
@@ -101,7 +101,7 @@ Removes specific form fields using [DeleteFormFieldsAsync()](https://help.syncfu
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.Buttons
 
 <!-- Delete form fields by ID -->

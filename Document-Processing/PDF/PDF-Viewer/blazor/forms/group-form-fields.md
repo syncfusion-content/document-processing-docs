@@ -54,7 +54,7 @@ You can also group form fields during creation by assigning the same **Name** th
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">

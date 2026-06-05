@@ -23,7 +23,7 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
@@ -67,7 +67,7 @@ Define defaults so fields added from the toolbar inherit styles:
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">

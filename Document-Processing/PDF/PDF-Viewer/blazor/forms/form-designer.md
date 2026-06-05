@@ -57,7 +57,7 @@ Form design features are enabled by setting the [EnableFormDesigner](https://hel
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 

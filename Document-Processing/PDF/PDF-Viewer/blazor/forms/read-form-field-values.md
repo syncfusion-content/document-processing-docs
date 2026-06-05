@@ -20,7 +20,7 @@ Get all available form field data by using the [GetFormFieldsAsync()](https://he
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
@@ -49,7 +49,7 @@ Find the text field by name and read its value property.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
@@ -80,7 +80,7 @@ Check whether a checkbox or radio button is selected by reading its `IsChecked` 
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
@@ -112,7 +112,7 @@ Read the dropdown's selected option by accessing the `Value` property.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
@@ -175,7 +175,7 @@ This reads the signature path data stored in a signature field so it can be late
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
@@ -206,7 +206,7 @@ This iterates every field in the collection and logs each field's name and value
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
@@ -259,7 +259,7 @@ Place your form-reading logic inside the `DocumentLoaded` event handler, so valu
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">

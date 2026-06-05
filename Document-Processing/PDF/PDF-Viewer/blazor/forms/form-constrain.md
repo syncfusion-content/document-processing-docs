@@ -34,7 +34,7 @@ Use the **IsReadOnly** property to prevent users from modifying a form field thr
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <!-- PDF Viewer component with reference binding and document loading -->
@@ -90,7 +90,7 @@ If required fields are empty, validation can prevent further actions.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <!-- PDF Viewer component with reference binding and document loading -->
@@ -160,7 +160,7 @@ Pass the flags properties when creating form fields using [AddFormFieldsAsync()]
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <!-- PDF Viewer component with reference binding and document loading -->
@@ -213,7 +213,7 @@ Use the [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <!-- PDF Viewer component with reference binding and document loading -->

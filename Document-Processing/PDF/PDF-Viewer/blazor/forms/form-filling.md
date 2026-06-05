@@ -24,7 +24,7 @@ Use the example below as a complete, runnable example for a Blazor app. It retri
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="pdfViewer"

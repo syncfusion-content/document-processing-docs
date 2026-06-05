@@ -30,7 +30,7 @@ Attach custom data at field creation by passing a `CustomData` object to the for
 
 {% tabs %}
 {% highlight razor %} 
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 @using System.Collections.Generic
 
@@ -78,7 +78,7 @@ Modify an existing field's `CustomData` by using the [`UpdateFormFieldsAsync()`]
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 @using System.Collections.Generic
@@ -132,7 +132,7 @@ Access the `CustomData` property from any form field at any point in the applica
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">

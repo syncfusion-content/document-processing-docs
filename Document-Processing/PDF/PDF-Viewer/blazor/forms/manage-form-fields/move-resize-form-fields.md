@@ -23,7 +23,7 @@ The API supports setting absolute bounds or moving fields by a delta.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
+
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
