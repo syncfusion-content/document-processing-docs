@@ -46,7 +46,7 @@ Spreadsheet.Inject(AIAssist);
 
 ### Enable AI Assist
 
-To enable `AI Assist` in the Spreadsheet component, set the `enableAIAssist` property to `true`.
+To enable `AI Assist` in the Spreadsheet component, set the [`enableAIAssist`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enableaiassist) property to `true`.
 
 ```tsx
 import * as React from 'react';
@@ -68,7 +68,7 @@ This enables the AI Assist into the spreadsheet.
 
 ### Configure AI Assist Settings
 
-Use the `aiAssistSettings` property to connect spreadsheet to the backend service and customize the AI Assist.
+Use the [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect spreadsheet to the backend service and customize the AI Assist.
 
 ```tsx
 import * as React from 'react';
@@ -111,7 +111,7 @@ All actions performed by AI Assist are recorded in the spreadsheet's undo/redo h
 
 ### How to Attach Extra Data Before a Request is Sent
 
-Use the `promptRequest` event to add custom data — such as a user ID or session token — to the request before it reaches your server.
+Use the [`promptRequest`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#promptrequest) event to add custom data — such as a user ID or session token — to the request before it reaches your server.
 
 ```tsx
 import * as React from 'react';
@@ -142,7 +142,7 @@ You can also prevent the request entirely by setting `args.cancel = true`.
 
 ### How to Handle AI Responses
 
-Use the `promptResponse` event to run custom logic after the AI completes its task — for example, logging results or showing a notification.
+Use the [`promptResponse`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#promptresponse) event to run custom logic after the AI completes its task — for example, logging results or showing a notification.
 
 ```tsx
 import * as React from 'react';
@@ -208,8 +208,8 @@ If the AI panel displays an error message:
 
 | Event | When it fires | Common use |
 |---|---|---|
-| `promptRequest` | Before the prompt is sent to the server | Attach extra data or cancel the request |
-| `promptResponse` | After the AI completes and responds | Log results or trigger custom UI updates |
+| [`promptRequest`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#promptrequest) | Before the prompt is sent to the server | Attach extra data or cancel the request |
+| [`promptResponse`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#promptresponse) | After the AI completes and responds | Log results or trigger custom UI updates |
 
 ---
 

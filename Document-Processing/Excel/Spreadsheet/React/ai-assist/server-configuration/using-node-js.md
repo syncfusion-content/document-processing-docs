@@ -183,7 +183,7 @@ http://localhost:3000/api/AIAssistchat
 
 ## Connect to the React Spreadsheet
 
-Once the server is listening, Configure the `requestUrl` inside `aiAssistSettings` to point to the server endpoint:
+Once the server is listening, Configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
 
 {% raw %}
 
