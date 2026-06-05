@@ -273,9 +273,16 @@ And returns:
 
 ---
 
+## Sample
+
+A ready-to-use Web API project is available for download. Extract the folder, update your Azure OpenAI credentials in `appsettings.json`, and start the server using the `dotnet run` command.
+
+* [Download Web API Server](https://drive.google.com/file/d/13K7a89Vk4Xt7dgd4wt49q272bSVSVuz3/view?usp=drive_link)
+* [Live Demo](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/ai-smart-spreadsheets)
+
+---
+
 ## See also
 
-* [AI Assist overview](./getting-started)
+* [AI Assist overview](../ai-assist)
 * [Node.js server setup](./using-node-js)
-* [Web Services overview](../web-services/webservice-overview)
-* [Getting Started with React Spreadsheet](../getting-started)

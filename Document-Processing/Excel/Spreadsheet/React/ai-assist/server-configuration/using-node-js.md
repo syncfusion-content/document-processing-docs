@@ -245,9 +245,15 @@ And returns:
 
 ---
 
+## Sample
+
+A ready-to-use Node.js server project is available for download. Extract the folder, replace the credentials in the `.env` file with your own Azure OpenAI values, and start the server using the `npm start` command.
+
+[Download Node.js Server](https://drive.google.com/file/d/1V3TlO_6GS3dV986I7sDizmE9kwojkOrx/view?usp=drive_link)
+
+---
+
 ## See also
 
-* [AI Assist overview](./getting-started)
+* [AI Assist overview](../ai-assist)
 * [Web API (.NET) server setup](./using-web-api)
-* [Web Services overview](../web-services/webservice-overview)
-* [Getting Started with React Spreadsheet](../getting-started)
