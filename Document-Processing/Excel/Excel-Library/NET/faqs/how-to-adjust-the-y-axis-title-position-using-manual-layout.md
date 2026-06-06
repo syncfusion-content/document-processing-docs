@@ -1,5 +1,5 @@
 ---
-title: How to adjust the Y axis title position using manual layout? | Syncfusion
+title: Adjust Y axis title using manual layout | Syncfusion
 description: This page explains with an example how to adjust the Y axis title position using manual layout in Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
