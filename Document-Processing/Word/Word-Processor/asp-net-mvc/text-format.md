@@ -159,17 +159,6 @@ The highlight color of the selected text can be get or set using the following s
 documenteditor.selection.characterFormat.highlightColor= 'Pink';
 ```
 
-## Bidirectional (Bidi)
-
-The Bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
-
-```typescript
-// Get Bidi value of selected text
-
-// Set Bidi for selected text
-
-```
-
 ## Toolbar with options for text formatting
 
 
