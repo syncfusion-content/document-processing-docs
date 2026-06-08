@@ -100,6 +100,19 @@ Ground your AI coding assistant (GitHub Copilot, Cursor, Claude, and others) in 
 </td>
 </tr>
 
+<tr>
+<td>Agentic UI Builder </td>
+<td>
+Transforms natural-language prompts into production-ready UIs using real Syncfusion<sup>&reg;</sup> components. Generates structured, responsive layouts with maintainable architecture by default. Integrates with AI-powered IDEs to produce accurate code while following best practices, accessibility guidelines, and enterprise UI standards. Helps developers quickly move from idea to fully functional interfaces within their workflow.
+<br><br>Learn more about: 
+<ul>
+<li><a href="https://help.syncfusion.com/document-processing/skills/pdf-viewer-sdk/ui-builder-skills">PDF Viewer UI Builder</a></li>
+<li><a href="https://help.syncfusion.com/document-processing/skills/docx-editor-sdk/ui-builder-skills">DOCX Editor UI Builder</a></li>
+<li><a href="https://help.syncfusion.com/document-processing/skills/spreadsheet-editor-sdk/ui-builder-skills">Spreadsheet UI Builder</a></li>
+</ul>
+</td>
+</tr>
+
 </table>
 
 ## Web APIs
