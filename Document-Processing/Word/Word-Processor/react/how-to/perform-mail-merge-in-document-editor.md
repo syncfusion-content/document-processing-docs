@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mail Merge in React DOCX Editor | Syncfusion
-description: Learn how to perform mail merge in the React DOCX Editor using the Word Library as a dependency.
+description: Learn here to perform mail merge in Syncfusion React DOCX Editor component using the Word Library as a dependency
 control: Perform mail merge
 platform: document-processing
 documentation: ug
@@ -20,7 +20,7 @@ You can perform mail merge in the React DOCX Editor (Document Editor) using the 
 
 ## Insert merge field
 
-A field can be added to the document by using the [insertField](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#insertfield)method in the [Editor](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor) module.
+A field can be added to the document by using the [insertField](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#insertfield) method in the [Editor](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor) module.
 
 The following example demonstrates how to insert a merge field programmatically by providing the field code and field result.
 
