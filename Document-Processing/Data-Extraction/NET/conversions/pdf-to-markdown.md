@@ -171,14 +171,15 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 ## Customize image saving
 
-The [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event in the Syncfusion® Smart Data Extractor allows users to customize how images are saved during data extraction. With this event, you can:
+The [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event in the [SaveOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html) class (from the Syncfusion® DocIO library, used within Smart Data Extractor) allows control over how images are handled when generating a Markdown string. With this event, you can:
 
-* Customize image names and storage paths, and save images externally.
-* Replace Base64 content with a file path for optimized storage.
+* Customize image names and storage paths, and save images externally using a FileStream.
+* Replace Base64 content with a file path or URL for optimized storage and cloud reference.
+* Generate a basic inbuilt report as a Markdown string, which can be directly consumed by LLMs or stored for further processing.
 
 ### Extract Markdown with external image saving
 
-The following code shows how to use the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class with the [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event to customize image saving while exporting content as Markdown.
+The following code shows how to use the [ExtractDataAsMarkdown](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsMarkdown_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class with the [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event to customize image saving while exporting PDF or image files as Markdown.
 
 {% tabs %} 
 
