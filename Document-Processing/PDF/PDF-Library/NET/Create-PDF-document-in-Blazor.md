@@ -126,6 +126,7 @@ Click the `Create PDF document` button, and you will get the PDF document with t
 
 Create a folder named `Services`, then add a class called `SaveService.cs` within this folder, and insert the following code into it.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public partial class SaveService
@@ -135,12 +136,14 @@ public partial class SaveService
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Now, we need to implement platform-specific code to save the PDF document.
 
 #### Android
 Create a new class file named `SaveAndroid.cs` within the Android folder and add the following code to enable file saving on the Android platform.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public partial void SaveAndView(string filename, string contentType, MemoryStream stream)
@@ -202,14 +205,15 @@ public partial void SaveAndView(string filename, string contentType, MemoryStrea
     }
 }
 
-
 {% endhighlight %}
+{% endtabs %}
 
 N> Android introduced a new runtime permission model for SDK version 23 and above. Include the following code to enable the Android file provider to save and view the generated PDF document.
 
 1.	Create a new XML file with the name of `file_paths.xml` under the Android project Resources/xml folder and add the following code in it.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight XAML %}
 
 <?xml version="1.0" encoding="utf-8"?>
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
@@ -231,10 +235,12 @@ N> Android introduced a new runtime permission model for SDK version 23 and abov
 </paths>
 
 {% endhighlight %}
+{% endtabs %}
 
 2.	Add the following code to the `AndroidManifest.xml` file located under Properties/AndroidManifest.xml.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight XAML %}
 
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
@@ -254,10 +260,12 @@ N> Android introduced a new runtime permission model for SDK version 23 and abov
 </manifest>
 
 {% endhighlight %}
+{% endtabs %}
 
 #### iOS
 Create a new class file named `SaveIOS.cs` within the iOS folder and include the following code to enable file saving on the iOS platform.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public partial void SaveAndView(string filename, string contentType, MemoryStream stream)
@@ -291,10 +299,12 @@ public partial void SaveAndView(string filename, string contentType, MemoryStrea
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 #### MacOS
 Create a new class file named `SaveMac.cs` within the MacCatalyst folder and include the following code to enable file saving on the macOS platform.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public partial void SaveAndView(string filename, string contentType, MemoryStream stream)
@@ -342,10 +352,12 @@ public UIWindow? GetKeyWindow()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 #### Windows
 Create a new class file named `SaveWindows.cs` within the Windows folder and include the following code to enable file saving on the Windows platform.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public async partial void SaveAndView(string filename, string contentType, MemoryStream stream)
@@ -448,6 +460,7 @@ public async partial void SaveAndView(string filename, string contentType, Memor
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 The helper files mentioned above are available on [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page. You can refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page for more details. 
 

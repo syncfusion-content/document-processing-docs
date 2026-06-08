@@ -31,7 +31,8 @@ Step 4: Add a new Web Form in the ASP.NET project. Right-click the project, sele
 
 Step 5: Add a new button in the `MainPage.aspx` as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight HTML %}
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -46,10 +47,12 @@ Step 5: Add a new button in the `MainPage.aspx` as follows.
 </body>
 </html>
 
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 Step 6: Include the following namespaces in your `MainPage.aspx.cs` file.
    
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -57,9 +60,11 @@ using Syncfusion.Pdf.Graphics;
 using System.Drawing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Include the following code example in the click event of the button in `MainPage.aspx.cs` to generate a PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. Then use the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object to draw text on the PDF page.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Create a new PDF document. 
@@ -78,6 +83,7 @@ document.Save("Output.pdf", HttpContext.Current.Response, HttpReadType.Save);
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET).
 
@@ -88,6 +94,7 @@ By executing the program, you will get the PDF document as follows.
 
 Load image stream from the local files on disk and draw the images through the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Single_System_Single_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The following code example shows how to create a PDF document with an image.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -109,6 +116,7 @@ doc.Save("Output.pdf", HttpContext.Current.Response, HttpReadType.Save);
 doc.Close(true);
 
 {% endhighlight %}
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET/Creating-a-PDF-document-with-image).
 
@@ -119,6 +127,7 @@ By executing the program, you will get the PDF document as follows.
 
 The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create a table from a [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_DataSource) (data set, data table, arrays, or IEnumerable object) in a PDF document.The following code example shows how to create a PDF document with a simple table.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -155,6 +164,7 @@ doc.Save("Output.pdf", HttpContext.Current.Response, HttpReadType.Save);
 doc.Close(true);
 
 {% endhighlight %}
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET/Creating-a-PDF-document-with-table).
 
@@ -164,6 +174,7 @@ By executing the program, you will get the PDF document as follows.
 ## Creating a simple PDF document with basic elements
 The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The following code example shows how to create a PDF document and add a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) to it along with the [PdfPageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html).
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Creates a new PDF document.
@@ -176,6 +187,7 @@ PdfPage page = document.Pages.Add();
 PdfGraphics graphics = page.Graphics;
 
 {% endhighlight %}
+{% endtabs %}
 
 1. Essential<sup>&reg;</sup> PDF has APIs similar to the .NET GDI+ which help draw elements to the PDF page just like 2D drawing in .NET.
 2. Unlike System.Drawing APIs, all units are measured in points instead of pixels.
@@ -184,6 +196,7 @@ PdfGraphics graphics = page.Graphics;
 
 The following code example explains how to add an image from disk to a PDF document, by providing the rectangle coordinates. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Loads the image from disk.
@@ -193,6 +206,7 @@ RectangleF bounds = new RectangleF(176, 0, 390, 130);
 page.Graphics.DrawImage(image, bounds);
 
 {% endhighlight %}
+{% endtabs %}
 
 The following methods can be used to add text to a PDF document.
 
@@ -203,6 +217,7 @@ The `PdfTextElement` provides the layout result of the added text by using the l
 
 The following code example adds the necessary text such as address, invoice number and date to create a basic invoice application. 
  
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 PdfBrush solidBrush = new PdfSolidBrush(new PdfColor(126, 151, 173));
@@ -235,12 +250,14 @@ PointF endPoint = new PointF(graphics.ClientSize.Width, result.Bounds.Bottom + 3
 graphics.DrawLine(linePen, startPoint, endPoint);
 
 {% endhighlight %}
+{% endtabs %}
 
 Essential<sup>&reg;</sup> PDF provides two types of table models. The difference between both the table models can be referred from the link 
 [Difference between PdfLightTable and PdfGrid](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-tables)
 
 Since the invoice document requires only simple cell customizations, the given code example explains how to create a simple invoice table by using [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html).
  
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Creates the datasource for the table.
@@ -282,9 +299,11 @@ layoutFormat.Layout = PdfLayoutType.Paginate;
 PdfGridLayoutResult gridResult = grid.Draw(page, new RectangleF(new PointF(0, result.Bounds.Bottom + 40), new SizeF(graphics.ClientSize.Width, graphics.ClientSize.Height - 100)), layoutFormat);
 
 {% endhighlight %}
+{% endtabs %}
 
 The following code example shows how to save the invoice document to disk and dispose the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object.
  
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Save and closes the PDF document. 
@@ -292,6 +311,7 @@ document.Save("Output.pdf", HttpContext.Current.Response, HttpReadType.Save);
 document.Close(true);
 
 {% endhighlight %}
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET).
 
@@ -312,6 +332,7 @@ The following guide shows how to fill out a sample PDF form.
 
 The Essential<sup>&reg;</sup> PDF allows you to fill the form fields by using the [PdfLoadedField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedField.html) class. Get the form field either by using its field name or field index.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -339,6 +360,7 @@ loadedDocument.Save("Output.pdf", HttpContext.Current.Response, HttpReadType.Sav
 loadedDocument.Close(true);
 
 {% endhighlight %}
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET/Fill-form-in-an-existing-PDF-document).
 
@@ -351,6 +373,7 @@ The Essential<sup>&reg;</sup> PDF supports [merging multiple PDF documents](http
 
 Refer to the following code example to merge multiple documents from disk.
  
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -367,6 +390,7 @@ finalDoc.Save("Output.pdf", HttpContext.Current.Response, HttpReadType.Save);
 finalDoc.Close(true);
 
 {% endhighlight %}
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/ASP.NET/Merge-multiple-PDF-documents).
 

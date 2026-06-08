@@ -35,7 +35,7 @@ Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 {% capture codesnippet1 %}
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight XAML %}
 
 <Window
     x:Class="CreatePdfDemoSample.MainWindow"
@@ -45,7 +45,6 @@ Step 5: Add a new button to the **MainWindow.xaml** as shown below.
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button x:Name="button" Click="createPdf_Click">Create PDF</Button>
     </StackPanel>
