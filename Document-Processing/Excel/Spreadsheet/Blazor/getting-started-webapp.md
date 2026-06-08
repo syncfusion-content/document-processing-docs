@@ -19,9 +19,9 @@ This section briefly explains how to include the [Blazor Spreadsheet](https://ww
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> If using interactive render modes (WebAssembly or Auto), install the required .NET workloads for SkiaSharp: `dotnet workload install wasm-tools`
-* Installs the latest SDK workload (e.g., .NET 10)
-* For specific versions, use wasm-tools-net8 or wasm-tools-net9
+N> If using an interactive render mode such as **WebAssembly** or **Auto**, ensure the required .NET workloads are installed for SkiaSharp usage in a Blazor Web App. Run the following command:
+* `dotnet workload install wasm-tools`
+* The above command will only install the latest available workload on the machine, such as .NET 10. If you need to install a specific .NET version like .NET 9 or .NET 8, please use a command such as `dotnet workload install wasm-tools-net8` and `dotnet workload install wasm-tools-net9`.
 
 ## Create a New Blazor Web App in Visual Studio
 
@@ -47,7 +47,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endtabs %}
 
 N> Syncfusion® Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
-Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
+
+N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 {% endtabcontent %}
@@ -58,9 +59,9 @@ Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> If using interactive render modes (WebAssembly or Auto), install the required .NET workloads for SkiaSharp: `dotnet workload install wasm-tools`
-* Installs the latest SDK workload (e.g., .NET 10)
-* For specific versions, use wasm-tools-net8 or wasm-tools-net9
+N> If using an interactive render mode such as **WebAssembly** or **Auto**, ensure the required .NET workloads are installed for SkiaSharp usage in a Blazor Web App. Run the following command:
+* `dotnet workload install wasm-tools`
+* The above command will only install the latest available workload on the machine, such as .NET 10. If you need to install a specific .NET version like .NET 9 or .NET 8, please use a command such as `dotnet workload install wasm-tools-net8` and `dotnet workload install wasm-tools-net9`.
 
 ## Create a New Blazor Web App in Visual Studio Code
 
