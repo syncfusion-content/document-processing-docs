@@ -79,10 +79,6 @@ For more information on configuring the spell check service, refer to the follow
 
 - [Web Service for Spell Check in Java](https://help.syncfusion.com/document-processing/word/word-processor/react/web-services/java#spell-check)
 
-<<screenshot>> [Spell check in React DOCX Editor]
-
-<<GitHub sample>>
-
 ## Spell check settings
 
 ### Allow suggestions
@@ -206,8 +202,6 @@ container.documentEditor.spellChecker.enableOptimizedSpellCheck = true;
 
 Right-click on an error word to open the context menu with spell check options. See the screenshot below for reference.
 
-<<screenshot>> [Spell check context menu in React DOCX Editor]
-
 ### More suggestions
 
 The context menu shows suggestions for misspelled words. By clicking the required word from the suggestions, the error word is replaced automatically.
@@ -228,13 +222,9 @@ If the word should not be added to the dictionary and should not be marked as an
 
 This option allows the spell check dialog to be opened. Refer to the following screenshot for additional details.
 
-<<screenshot>> [Spelling dialog in React DOCX Editor]
-
 ## Spelling in status bar
 
 The Spelling option is available in the status bar once spell check is enabled. It allows you to enable or disable spell check and control underline behavior directly from the status bar.
-
-<<screenshot along with drop down>> [Spelling in status bar of React DOCX Editor]
 
 ## Online demo
 
