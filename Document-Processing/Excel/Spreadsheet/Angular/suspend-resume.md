@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Batch Update in EJ2 JavaScript Spreadsheet control | Syncfusion
-description: Improve performance in Syncfusion EJ2 JavaScript Spreadsheet by using suspendRefresh and resumeRefresh to batch multiple updates and avoid repeated rendering.
+title: Suspend and Resume UI Refresh in Angular Spreadsheet | Syncfusion
+description: Improve performance in Syncfusion Angular Spreadsheet by using suspendRefresh and resumeRefresh to group multiple updates and avoid repeated rendering.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Suspend and Resume UI Refresh in TypeScript Spreadsheet
+# Suspend and Resume UI Refresh in Angular Spreadsheet
 
 The Spreadsheet refreshes its UI after each operation performed through public methods, such as updating a cell, applying formatting, or inserting rows. This immediate rendering works well for a few actions, but it can lead to performance issues when many operations are executed one after another.
 
-The **batch update** feature lets you temporarily pause UI rendering, perform multiple operations, and then refresh the UI only once at the end. This helps reduce unnecessary re-rendering and improves the overall performance of bulk updates.
+The **suspend and resume refresh** feature lets you temporarily pause UI rendering, perform multiple operations, and then refresh the UI only once at the end. This helps reduce unnecessary re-rendering and improves the overall performance of bulk updates.
 
 This is especially useful when the Spreadsheet is updated programmatically during initialization, data processing, or large-scale scenarios.
 
-## When to use batch update
+## When to use
 
-Use batch update when you need to perform several actions in sequence, such as:
+Use this feature when you need to perform several actions in sequence, such as:
 
 - Updating many cells at once
 - Applying formatting to a large range
@@ -25,18 +25,18 @@ Use batch update when you need to perform several actions in sequence, such as:
 - Running repeated operations inside a loop
 - Working with large datasets
 
-For a few operations, batch update is usually not required.
+For a few operations, this feature is usually not required.
 
-## How to use batch update
+## How to use
 
-Batch update is performed with two methods:
+Use the following methods:
 
-- `suspendRefresh()` — pauses UI rendering
-- `resumeRefresh()` — applies all pending visual updates
+- `suspendRefresh` — pauses UI rendering
+- `resumeRefresh` — applies all pending visual updates
 
 ### Step 1: Suspend UI refresh
 
-Call `suspendRefresh()` before starting multiple Spreadsheet operations.
+Call `suspendRefresh` before starting multiple Spreadsheet operations.
 
 ### Step 2: Perform the required operations
 
@@ -44,63 +44,61 @@ Execute the actions you want to apply. The Spreadsheet model is updated, but the
 
 ### Step 3: Resume UI refresh
 
-Call `resumeRefresh()` after all operations are complete. The Spreadsheet then renders all accumulated changes in a single refresh.
+Call `resumeRefresh` after all operations are complete. The Spreadsheet then renders all accumulated changes in a single refresh.
 
-### Pattern for batch update
+#### Example pattern
 
 ```js
 let spreadsheet;
 
 function onCreated() {
-	spreadsheet.suspendRefresh();
-	spreadsheet.updateCell({ value: 'Total' }, 'A1');
-	spreadsheet.updateCell({ value: '1200' }, 'B1');
-	spreadsheet.cellFormat({ fontWeight: 'bold' }, 'A1:B1');
-	spreadsheet.numberFormat('$#,##0.00', 'B1');
-	spreadsheet.setRowsHeight(28, 0);
-	spreadsheet.resumeRefresh();
+    spreadsheet.suspendRefresh();
+    spreadsheet.updateCell({ value: 'Total' }, 'A1');
+    spreadsheet.updateCell({ value: '1200' }, 'B1');
+    spreadsheet.cellFormat({ fontWeight: 'bold' }, 'A1:B1');
+    spreadsheet.numberFormat('$#,##0.00', 'B1');
+    spreadsheet.setRowsHeight(28, 0);
+    spreadsheet.resumeRefresh();
 };
 ```
 
 ## API reference
 
-### suspendRefresh()
+### suspendRefresh
 
 Suspends visual updates in the Spreadsheet.
 
-#### Behavior
-
+**Behavior:**
 - Prevents the UI from refreshing after each operation
 - Allows multiple actions to be grouped together
 - Keeps internal model updates running
-- Must be paired with `resumeRefresh()`
+- Must be paired with `resumeRefresh`
 
-### resumeRefresh()
+### resumeRefresh
 
 Resumes visual updates and applies all pending changes.
 
-#### Behavior
-
-- Applies all operations performed after `suspendRefresh()`
+**Behavior:**
+- Applies all operations performed after `suspendRefresh`
 - Refreshes the Spreadsheet UI once
 - Improves rendering efficiency for bulk operations
 
 ## Code example
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/batch-update-cs1/index.ts %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/angular/suspend-resume-cs1/src/app.ts %}
 {% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/batch-update-cs1/index.html %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/suspend-resume-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/batch-update-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/angular/suspend-resume-cs1" %}
 
-## Common operations supported in batch update
+## Supported operations
 
-The following types of operations can be performed between `suspendRefresh()` and `resumeRefresh()`:
+The following types of operations can be performed between `suspendRefresh` and `resumeRefresh`:
 
 - **Cell operations:** `updateCell`, `autoFill`, `clear`
 - **Row and column operations:** `insertRow`, `insertColumn`, `hideRow`, `hideColumn`, `setRowsHeight`, `setRowHeight`, `setColWidth`, `setColumnsWidth`, `autoFit`
@@ -121,12 +119,12 @@ The following types of operations can be performed between `suspendRefresh()` an
 
 ## Notes
 
-- Use batch update only when multiple operations are executed together
-- Avoid using it for few, simple actions
-- It is most useful for initialization logic and programmatic bulk updates
-- Data and model changes are processed during the suspended state; only visual refresh is delayed
+- Use suspend and resume UI refresh when multiple operations are executed together.
+- Avoid using it for few or simple operations.
+- Useful during initialization and large data updates.
+- Data and model changes are processed during the suspended state; only visual refresh is delayed.
 
 ## See Also
 
-* [Data Binding](./data-binding)
-* [Worksheet](./worksheet)
+* [Data Binding](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/data-binding)
+* [Worksheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/worksheet)
