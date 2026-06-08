@@ -195,6 +195,7 @@ The Bidi property controls whether selected text is displayed as right-to-left (
 ```typescript
 // Get Bidi value of selected text
 let bidi: boolean = documenteditor.selection.characterFormat.bidi;
+
 // Set Bidi for selected text
 documenteditor.selection.characterFormat.bidi= true;
 ```
