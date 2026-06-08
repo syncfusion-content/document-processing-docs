@@ -6,7 +6,7 @@ control: Markdown
 documentation: UG
 ---
 
-# Working with Lists
+# Working with Lists in Markdown Library
 
 Lists are essential elements in Markdown documents that organize and present information in a hierarchical and structured manner. The Syncfusion<sup>&reg;</sup> Markdown library supports creating, modifying, and managing both numbered (ordered) and bulleted (unordered) lists in a Markdown document. Lists are represented by the `MdListFormat` class, which can be applied to a `MdParagraph`. The library supports up to nine nesting levels (level 0 to level 8), allowing for complex hierarchical structures.
 
