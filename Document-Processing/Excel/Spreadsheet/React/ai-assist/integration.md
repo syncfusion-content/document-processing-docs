@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Assist Integration in React Spreadsheet control | Syncfusion
-description: Learn how to integrate AI Assist into the Syncfusion React Spreadsheet control, including setup, configuration, how-to guides, API references, and supported prompt examples.
+description: Learn how to integrate AI Assist into the Syncfusion React Spreadsheet control.
 platform: document-processing
 control: AI Assist
 documentation: ug
