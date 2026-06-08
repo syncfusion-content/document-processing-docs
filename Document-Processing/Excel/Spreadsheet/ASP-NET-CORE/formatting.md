@@ -14,6 +14,7 @@ Formatting options make your data easier to view and understand. The different t
 * Number Formatting
 * Text Formatting
 * Cell Formatting
+* Rich Text Formatting
 
 ## Number Formatting
 
@@ -328,6 +329,80 @@ The following features have some limitations in Conditional Formatting:
 * Conditional formatting with formula support.
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
+
+## Rich Text Formatting
+
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
+
+In the **ASP.NET Core Spreadsheet**, rich text formatting is supported through the `richText` property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
+
+Each `richText` segment contains:
+
+- `text` – Specifies the content of the segment  
+- `style` – Defines formatting using the cell style model  
+
+## Subscript and Superscript
+
+Subscript and superscript formatting are supported as part of rich text formatting and can be applied to specific portions of text within a cell.
+
+To apply these formats, use the `verticalAlign` property within the style of a rich text segment:
+
+Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
+
+#### How to Apply Subscript and Superscript
+
+You can apply subscript and superscript formatting in the following ways:
+
+1. Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
+
+![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
+
+2. You can define the `richText` property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
+
+```csharp
+cells: new List<object>()
+{
+    new {
+        value = "H2O",
+        richText = new List<object>()
+        {
+            new { text = "H" },
+            new { text = "2", style = new { verticalAlign = "sub" } },
+            new { text = "O" }
+        }
+    }
+}
+```
+
+3. You can also apply subscript and superscript dynamically using the `updateCell` method.
+
+```csharp
+spreadsheet.updateCell(
+{
+    value: 'X2',
+    richText: [
+        { text: 'X' },
+        { text: '2', style: { verticalAlign: 'super' } }
+    ]
+},
+'A5'
+);
+```
+
+The following code example shows the subscript and superscript formatting in cells of the spreadsheet.
+
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/richtext-format/tagHelper %}
+{% endhighlight %}
+{% highlight c# tabtitle="RichTextController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/richtext-format/richTextController.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+## Limitations
+* **Limited formatting support:** Only subscript and superscript formatting are supported within rich text. Other formatting options such as font size, font color, and font weight are not supported.
+* **Edit mode requirement:** Formatting can be applied only while the cell is in edit mode. Selecting text outside of edit mode does not support subscript or superscript formatting.
 
 ## See Also
 
