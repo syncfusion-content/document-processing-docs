@@ -54,7 +54,7 @@ Use the **IsReadOnly** property to prevent users from modifying a form field thr
     {
         if (viewer == null) return;
 
-        var formFields = new List<FormFieldInfo>
+        List<FormFieldInfo> formFields = new List<FormFieldInfo>
         {
             // Read-only Textbox
             new TextBoxField

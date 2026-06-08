@@ -222,9 +222,9 @@ This iterates every field in the collection and logs each field's name and value
     private async Task ExtractAllFieldValues()
     {
         if (viewer == null) return;
-        var formFields = await viewer.GetFormFieldsAsync();
+        List<FormFieldInfo> formFields = await viewer.GetFormFieldsAsync();
 
-        foreach (var field in formFields)
+        foreach (FormFieldInfo field in formFields)
         {
             if (field is CheckBoxField checkBoxField)
             {

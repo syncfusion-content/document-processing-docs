@@ -49,7 +49,7 @@ Use the example below as a complete, runnable example for a Blazor app. It retri
             return;
 
         // Find textbox safely
-        var textField = formFields
+        TextBoxField? textField = formFields
             .OfType<TextBoxField>()
             .FirstOrDefault(f => f.Name == "name") 
             ?? formFields.OfType<TextBoxField>().FirstOrDefault();
