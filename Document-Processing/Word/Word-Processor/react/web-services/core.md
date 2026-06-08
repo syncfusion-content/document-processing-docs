@@ -250,7 +250,7 @@ Document Editor supports spell checking for input text. It identifies misspelled
 
 The Document Editor performs spell checking using [Hunspell dictionary files](https://github.com/wooorm/dictionaries). These dictionaries can be obtained from their respective sources. 
 
-To set up spell checking, place the required dictionary files, including the .dic, .aff, and JSON configuration file, inside the `App_Data` folder in your project. To support a personal dictionary, place an empty .dic file (for example, `customDict.dic`) in the same `App_Data` folder.
+To set up spell checking, place the required dictionary files, including the .dic, .aff, and JSON configuration file, inside the `App_Data` folder in your project. To support a personal dictionary, place an empty .dic file in the same `App_Data` folder.
 
 Refer to the following screenshot for the folder structure.
 

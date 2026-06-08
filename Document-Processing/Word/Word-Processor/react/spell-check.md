@@ -162,6 +162,8 @@ SpellChecker.InitializeDictionaries(spellDictCollection, personalDictPath, cache
 
 If dictionaries are initialized using the InitializeDictionaries method, the default constructor of the SpellChecker should be used to perform spell checks and retrieve suggestions. This approach prevents the reinitialization of already loaded dictionaries.
 
+To write a Web API for word-by-word spell checking, refer to the [link](https://help.syncfusion.com/document-processing/word/word-processor/react/web-services/core#spell-check-word-by-word).
+
 Previously, on every SpellChecker.GetSuggestion() method call, the .aff and dictionary data will be parsed to generate suggestion for misspelled words. But, starting from v20.1.0.xx, the .aff and dictionary data will be parsed only for the first time while calling the SpellChecker.GetSuggestion() method.
 
 ### Optimized spell check
