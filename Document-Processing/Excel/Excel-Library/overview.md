@@ -19,7 +19,7 @@ keywords: Excel, SDK, Automation, API, create, read, write
 
 {% doccard text="ASP.NET MVC" link="/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-asp-net-mvc-c-sharp" icon="/document-processing/excel/excel-library/net/images/ASP.NET MVC.svg" %}
 
-{% doccard text=".NET MAUI" link="/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-maui-c-sharp" icon="/document-processing/excel/excel-library/net/images/.NET_MAUI.svg" %}
+{% doccard text=".NET MAUI" link="/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-maui-c-sharp" icon="/document-processing/excel/excel-library/net/images/MAUI.svg" %}
 
 {% doccard text="WPF" link="/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-wpf-c-sharp" icon="/document-processing/excel/excel-library/net/images/WPF.svg" %}
 

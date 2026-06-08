@@ -43,7 +43,7 @@ The following list of assemblies are required for adding a PDF viewer control to
 <td>Syncfusion.SfShared.UWP</td>
 <td>This component contains various UI controls (Numeric UpDown) that are used in the PDF Viewer.</td>
 </tr>
-<table>
+</table>
 
 Each assembly must be placed together with its corresponding resource files (i.e., the resource files for an assembly should reside in the same folder as that assembly). The assemblies do not all have to be in a single folder — each assembly may live in its own folder so long as its resource files are kept alongside it. The screenshot shows only the SfPdfViewer assembly for brevity.
 
