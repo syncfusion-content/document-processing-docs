@@ -56,7 +56,7 @@ The following example code illustrates how to write a Web API for importing Word
 
 The web browsers do not support to display metafile images like EMF and WMF and also TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
 
->Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image  is meta file images(WMF,EMF) or Tiff format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using `Bitmiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
+>Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image  is meta file images(WMF,EMF) or TIFF format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using `Bitmiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
 
 The following example code illustrates how to use `MetafileImageParsed` event for creating fallback raster image for metafile present in a Word document.
 
@@ -242,15 +242,15 @@ The following example code illustrates how to write a Web API for restrict editi
     }
 ```
 
-# Spell Check
+## Spell Check
 
 Document Editor supports spell checking for input text. It identifies misspelled words and provides suggestions through a dialog and the context menu. The Document Editor client-side script requires this Web API to display error words and suggestions. This Web API returns a JSON response containing details about misspelled words and their suggestions.
 
-## Dictionary setup
+### Dictionary setup
 
 The Document Editor performs spell checking using [Hunspell dictionary files](https://github.com/wooorm/dictionaries). These dictionaries can be obtained from their respective sources. 
 
-To set up spell checking, place the required dictionary files, including the .dic, .aff, and JSON configuration file, inside the *App_Data* folder in your project. To support a personal dictionary, place an empty .dic file (for example, *customDict.dic*) in the same *App_Data* folder.
+To set up spell checking, place the required dictionary files, including the .dic, .aff, and JSON configuration file, inside the `App_Data` folder in your project. To support a personal dictionary, place an empty .dic file (for example, `customDict.dic`) in the same `App_Data` folder.
 
 Refer to the following screenshot for the folder structure.
 
@@ -273,7 +273,7 @@ The JSON file should contain the configuration details in the following format:
 {% endhighlight %}
 {% endtabs %}
 
-## Configure spell check service
+### Configure spell check service
 
 - Add the [Syncfusion.EJ2.SpellChecker.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.SpellChecker.AspNet.Core/) NuGet package to your project.
 
@@ -321,7 +321,7 @@ public Startup(IConfiguration configuration, IWebHostEnvironment env)
 {% endhighlight %}
 {% endtabs %}
 
-### Web API end points
+#### Web API end points
 
 Document Editor provides options to perform spell checking word-by-word and page-by-page when loading documents.
 
@@ -335,7 +335,7 @@ Spell checking is performed based on the following parameters received from the 
 
 - **AddWord** – Indicates whether the word needs to be added to the personal dictionary.
 
-### Word-by-word spell check
+#### Word-by-word spell check
 
 This Web API performs spell checking word by word and returns a JSON response containing information about error words and suggestions, if any. By default, word-by-word spell checking is performed in the Document Editor when spell check is enabled on the client side.
 
@@ -373,7 +373,7 @@ public class SpellCheckJsonData
 {% endhighlight %}
 {% endtabs %}
 
-### Page-by-page spell check
+#### Page-by-page spell check
 
 This Web API performs spell checking page by page and returns a JSON response containing information about error words and suggestions, if any. By [enabling optimized spell check](https://help.syncfusion.com/document-processing/word/word-processor/react/spell-check#enableoptimizedspellcheck) on the client side, you can perform page-by-page spell checking when loading documents.
 
