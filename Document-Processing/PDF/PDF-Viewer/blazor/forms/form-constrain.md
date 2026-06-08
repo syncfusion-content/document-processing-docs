@@ -262,6 +262,8 @@ Use the [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusi
 {% endhighlight %}
 {% endtabs %}
 
+N> For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Form%20Designer/Components/Pages).
+
 ## See Also
 
 - [Form Designer overview](./overview)   

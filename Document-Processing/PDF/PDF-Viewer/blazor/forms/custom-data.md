@@ -69,9 +69,6 @@ Attach custom data at field creation by passing a `CustomData` object to the for
 {% endhighlight %}
 {% endtabs %}
 
-
-
-
 ## Update or Replace PDF Form Field Custom Data
 
 Modify an existing field's `CustomData` by using the [`UpdateFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormField_) method. Retrieve fields using [`GetFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetFormFieldsAsync) and update the CustomData property.
@@ -171,7 +168,7 @@ Access the `CustomData` property from any form field at any point in the applica
 - Keep the data minimal and structured for easy processing.
 - When cloning or copying form fields, ensure `CustomData` is copied or updated as required.
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples)
+N> For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Form%20Designer/Components/Pages).
 
 ## See Also
 

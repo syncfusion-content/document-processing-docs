@@ -37,27 +37,38 @@ Use this approach to generate form fields dynamically based on data or applicati
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.SfPdfViewer
-
+<!-- PDF Viewer component with reference binding and document loading -->
 <SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
     <PdfViewerEvents DocumentLoaded="@AddFormFields"></PdfViewerEvents>
 </SfPdfViewer2>
 
 @code {
+    // Reference to the PDF Viewer instance
     private SfPdfViewer2 viewer;
-    private string DocumentPath = "wwwroot/data/form-filling-document.pdf";
+    
+    // Path to the PDF document
+    private string DocumentPath = "wwwroot/data/formDesigner_Empty.pdf";
 
+    // Method triggered when the document is loaded
     private async Task AddFormFields()
     {
-        // Create a text box form field
-        TextBoxField textBoxField = new TextBoxField()
+        // Define various form fields with their properties and positions
+        List<FormFieldInfo> formFields = new List<FormFieldInfo>
         {
-            Name = "FirstName",
-            Bounds = new Bound() { X = 146, Y = 229, Width = 150, Height = 24 }
+            new ButtonField { Name = "Button Field", Bounds = new Bound { X = 278, Y = 157, Width = 150, Height = 40 } },
+            new TextBoxField { Name = "TextBox Field", Bounds = new Bound { X = 278, Y = 247, Width = 200, Height = 24 } },
+            new PasswordField { Name = "Password Field", Bounds = new Bound { X = 278, Y = 323, Width = 200, Height = 24 } },
+            new CheckBoxField { Name = "CheckBox Field1", IsChecked = false, Bounds = new Bound { X = 278, Y = 398, Width = 20, Height = 20 } },
+            new CheckBoxField { Name = "CheckBox Field2", IsChecked = false, Bounds = new Bound { X = 386, Y = 398, Width = 20, Height = 20 } },
+            new RadioButtonField { Name = "RadioButton", Value = "Value1", IsSelected = false, Bounds = new Bound { X = 278, Y = 470, Width = 20, Height = 20 } },
+            new RadioButtonField { Name = "RadioButton", Value = "Value2", IsSelected = false, Bounds = new Bound { X = 386, Y = 470, Width = 20, Height = 20 } },
+            new DropDownField { Name = "DropDown Field", Bounds = new Bound { X = 278, Y = 536, Width = 200, Height = 24 } },
+            new ListBoxField { Name = "ListBox Field", Bounds = new Bound { X = 278, Y = 593, Width = 198, Height = 66 } },
+            new SignatureField { Name = "Signature Field", Bounds = new Bound { X = 278, Y = 686, Width = 200, Height = 63 } }
         };
-
-        // Add the form field to the PDF document
-        await viewer.AddFormFieldsAsync(new List<FormFieldInfo> { textBoxField });
+        
+        // Add form fields asynchronously to the PDF Viewer
+        await viewer.AddFormFieldsAsync(formFields);
     }
 }
 {% endhighlight %}
@@ -503,7 +514,7 @@ You can edit form fields using the UI or API.
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples)
+N> For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Form%20Designer/Components/Pages).
 
 ## Troubleshooting
 

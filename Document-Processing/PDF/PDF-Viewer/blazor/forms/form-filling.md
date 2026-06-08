@@ -184,6 +184,8 @@ Enable form field validation and handle the validation event to check required f
 - If form fields don't display, verify your `DocumentPath` points to a PDF with form fields.
 - For import issues, ensure JSON keys match the PDF field `Name` property values.
 
+N> For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Form%20Designer/Components/Pages).
+
 ## See also
 
 - [Form Designer overview](./overview)

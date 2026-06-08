@@ -120,6 +120,8 @@ You can also group form fields during creation by assigning the same **Name** th
 {% endhighlight %}
 {% endtabs %}
 
+N> For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Form%20Designer/Components/Pages).
+
 ## See also
 
 - [Form Designer overview](../overview)
