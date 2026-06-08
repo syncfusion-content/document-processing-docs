@@ -19,6 +19,10 @@ This section briefly explains how to include the [Blazor Spreadsheet](https://ww
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
+N> If using interactive render modes (WebAssembly or Auto), install the required .NET workloads for SkiaSharp: `dotnet workload install wasm-tools`
+* Installs the latest SDK workload (e.g., .NET 10)
+* For specific versions, use wasm-tools-net8 or wasm-tools-net9
+
 ## Create a New Blazor Web App in Visual Studio
 
 Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
@@ -43,6 +47,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endtabs %}
 
 N> Syncfusion® Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
+* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 {% endtabcontent %}
 
@@ -51,6 +57,10 @@ N> Syncfusion® Blazor components are available in [nuget.org](https://www.nuget
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+N> If using interactive render modes (WebAssembly or Auto), install the required .NET workloads for SkiaSharp: `dotnet workload install wasm-tools`
+* Installs the latest SDK workload (e.g., .NET 10)
+* For specific versions, use wasm-tools-net8 or wasm-tools-net9
 
 ## Create a New Blazor Web App in Visual Studio Code
 
@@ -93,6 +103,9 @@ dotnet restore
 {% endtabs %}
 
 N> Syncfusion® Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
+* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 {% endtabcontent %}
 
