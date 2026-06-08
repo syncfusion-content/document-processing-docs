@@ -27,7 +27,8 @@ Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syn
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Include the following namespaces in that `WeatherForecastController.cs` file.
- 
+
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Drawing;
@@ -36,11 +37,13 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
 
 Add the following code sample in ``WeatherForecastController`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 [HttpGet("/api/Pdf")]
@@ -109,7 +112,8 @@ private MemoryStream ExportWeatherForecastToPdf()
     }
 }
 
-{% endhighlight %} 
+{% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get the PDF document as follows.
 ![ASP.Net Core output PDF document](MVC_images/Output.png)
