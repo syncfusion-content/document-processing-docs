@@ -441,9 +441,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //By default - true
     extractor.EnableFormDetection = false;
     //Extract form data and return as a loaded json file.
-    string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
+    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
+    //Save the extracted output as a new json file.
+    pdf.Save("Output.json");
+    //Close the document.
+    pdf.Close(true);
 }
 
 {% endhighlight %}
@@ -462,9 +464,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //By default - true
     extractor.EnableFormDetection = false;
     //Extract form data and return as a loaded json file.
-    string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
+    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
+    //Save the extracted output as a new json file.
+    pdf.Save("Output.json");
+    //Close the document.
+    pdf.Close(true);
 }
 
 {% endhighlight %}
@@ -493,9 +497,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 	//By default - true
 	extractor.EnableTableDetection = false;
 	// Extract data and return as a loaded json document.
-	string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
+	PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
+	// Save the extracted output as a new json file.
+	pdf.Save("Output.json");
+	// Close the document.
+	pdf.Close(true);
 }
 
 {% endhighlight %}
@@ -514,9 +520,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //By default - true
     extractor.EnableTableDetection = false;
     // Extract data and return as a loaded json file.
-    string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
+	PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
+	// Save the extracted output as a new json file.
+	pdf.Save("Output.json");
+	// Close the document.
+	pdf.Close(true);
 }
 
 {% endhighlight %}
@@ -561,9 +569,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Assign the configured form recognition options to the extractor.
     extractor.FormRecognizeOptions = formOptions;
     //Extract form data and return as a loaded json file.
-    string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
+    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
+    //Save the extracted output as a new json file.
+    pdf.Save("Output.json");
+    //Close the document.
+    pdf.Close(true);
 }
 
 {% endhighlight %}
@@ -598,9 +608,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 	//Assign the configured form recognition options to the extractor.
 	extractor.FormRecognizeOptions = formOptions;
 	//Extract form data and return as a loaded json document.
-	string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
+    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
+    //Save the extracted output as a new json file.
+    pdf.Save("Output.json");
+    //Close the document.
+    pdf.Close(true);
 }
 
 {% endhighlight %}
@@ -638,10 +650,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 	tableOptions.DetectBorderlessTables = true;
 	// Assign the table extraction options to the extractor.
 	extractor.TableExtractionOptions = tableOptions;
-	// Extract data and return as a loaded json file.
-	string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
+	PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
+	// Save the extracted output as a new json file.
+	pdf.Save("Output.json");
+	// Close the document.
+	pdf.Close(true);
 }
 
 {% endhighlight %}
@@ -670,9 +683,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 	// Assign the table extraction options to the extractor.
 	extractor.TableExtractionOptions = tableOptions;
 	// Extract data and return as a loaded json document.
-	string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
+	PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
+	// Save the extracted output as a new json file.
+	pdf.Save("Output.json");
+	// Close the document.
+	pdf.Close(true);
 }
 
 {% endhighlight %}
@@ -702,9 +717,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //default confidence threshold value is 0.6
     extractor.ConfidenceThreshold = 0.75;
     //  Extract data and return as a loaded json document.
-    string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
+    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
+    // Save the extracted output as a new json file.
+    pdf.Save("Output.json");
+    // Close the document.
+    pdf.Close(true);
 }
 
 {% endhighlight %}
@@ -724,9 +741,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //default confidence threshold value is 0.6
     extractor.ConfidenceThreshold = 0.75;
     //  Extract data and return as a loaded json file.
-    string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
+    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
+    // Save the extracted output as a new json file.
+    pdf.Save("Output.json");
+    // Close the document.
+    pdf.Close(true);
 }
 
 {% endhighlight %}
@@ -754,9 +773,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Set the page range for extraction (pages 1 to 3).
     extractor.PageRange = new int[,] { { 1, 3 } };
     //Extract data and return as a loaded json document.
-    string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
+    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
+    //Save the extracted output as a new json file.
+    pdf.Save("Output.json");
+    //Close the document.
+    pdf.Close(true);
 }
 
 {% endhighlight %}
@@ -774,9 +795,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Set the page range for extraction (pages 1 to 3).
     extractor.PageRange = new int[,] { { 1, 3 } };
     //Extract data and return as a loaded json document.
-    string data = extractor.ExtractDataAsJson(stream);
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
+    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
+    //Save the extracted output as a new json file.
+    pdf.Save("Output.json");
+    //Close the document.
+    pdf.Close(true);
 }
 
 {% endhighlight %}
