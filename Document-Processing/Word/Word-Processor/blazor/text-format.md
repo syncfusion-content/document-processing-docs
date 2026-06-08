@@ -162,4 +162,15 @@ The highlight color of the selected text can be get or set using the following s
 await documentEditor.Selection.CharacterFormat.SetHighlightColorAsync(HighlightColor.Pink);
 ```
 
+## Bidirectional (Bidi)
+
+The Bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
+
+```csharp
+// Get Bidi value of selected text
+
+// Set Bidi for selected text
+
+```
+
 You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.
