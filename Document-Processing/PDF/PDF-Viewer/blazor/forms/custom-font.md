@@ -15,8 +15,9 @@ The Blazor SfPdfViewer supports loading, using, and saving custom fonts for form
 
 To ensure correct rendering and saving of form fields that use custom fonts (especially when fonts are not installed on the host system), set the `FallbackFontCollection` property and load the TTF files the application can access. Add those font family names to the `FontFamilies` (string[]) property so the fonts appear in the Font Family dropdown in the property dialog. Ensure TTF files are available at the configured path (for example, `wwwroot/Data`) and that font licenses permit distribution with the application.
 
-```cshtml
-@page "/"
+{% tabs %}
+{% highlight razor %}
+
 
 <SfPdfViewer2 @ref="pdfViewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" FontFamilies="@FontFamilies">
     <PdfViewerEvents Created="@Created"></PdfViewerEvents>
@@ -39,8 +40,9 @@ To ensure correct rendering and saving of form fields that use custom fonts (esp
         pdfViewer!.FallbackFontCollection.Add("Ojuju", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Ojuju-Regular.ttf")));
     }
 }
-```
-![Custom Font Support for Form Fields in Blazor SfPdfViewer](../form-designer/form-designer-images/custom_font_support_for_form_fields.png)
+{% endhighlight %}
+{% endtabs %}
+![Custom Font Support for Form Fields in Blazor SfPdfViewer](../forms/form-designer-images/custom_font_support_for_form_fields.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20FormFields).
 
@@ -54,8 +56,9 @@ The Blazor SfPdfViewer allows loading, editing, and saving custom fonts for sign
 
 To ensure correct rendering and saving of signatures that use custom fonts (especially when those fonts are not installed on the host system), set the `FallbackFontCollection` property and load the TTF files the application can access. Add the font family names to the `SignatureFonts` (string[]) property so they appear in the signature dialog. Verify that the font files are reachable at the configured path (for example, `wwwroot/Data`) and that licensing allows distribution.
 
-```cshtml
-@page "/"
+{% tabs %}
+{% highlight razor %}
+
 
 <SfPdfViewer2 @ref="Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
     <PdfViewerEvents Created="@Created"></PdfViewerEvents>
@@ -80,8 +83,9 @@ To ensure correct rendering and saving of signatures that use custom fonts (espe
         pdfViewer!.FallbackFontCollection.Add("Inspiration", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Data/Inspiration-Regular.ttf")));
     }
 }
-```
-![Custom Font Support for Signature Field in Blazor SfPdfViewer](../form-designer/form-designer-images/custom_font_support_signature_fields.png)
+{% endhighlight %}
+{% endtabs %}
+![Custom Font Support for Signature Field in Blazor SfPdfViewer](../forms/form-designer-images/custom_font_support_signature_fields.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Custom%20Font%20Support%20For%20Signature%20Field).
 
@@ -89,7 +93,8 @@ When using Google Fonts or other externally hosted fonts with the PDF Viewer, lo
 
 The following example illustrates how to load custom fonts in FreeText annotations using fonts from Google Fonts or other external sources.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 <script>
     window.addEventListener('DOMContentLoaded', () => {
         var fontFamily = ["Allura, Tangerine, Sacramento, Inspiration"];
@@ -103,7 +108,8 @@ The following example illustrates how to load custom fonts in FreeText annotatio
         }
     });
 </script>
-```
+{% endhighlight %}
+{% endtabs %}
 
 N> If external fonts are not loaded in the environment, importing and rendering FreeText annotations that reference those fonts may show minor differences. This typically occurs only with fonts referenced from web-based sources.
 
