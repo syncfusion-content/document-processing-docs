@@ -168,7 +168,7 @@ Enable form field validation and handle the validation event to check required f
    void OnValidateFormFields(ValidateFormFieldsArgs args)
    {
        Dictionary<string, object> unfilledFields = args.UnfilledFields;
-       foreach (var field in unfilledFields)
+       foreach (KeyValuePair<string, object> field in unfilledFields)
        {
            Console.WriteLine($"Field Name: {field.Key}, Default Value: {field.Value}");
            // Further processing of unfilled fields
