@@ -103,6 +103,8 @@ Flattening PDF forms converts interactive fields such as textboxes, dropdowns, c
 - Ensure the Syncfusion.Pdf NuGet package is installed for `PdfLoadedDocument` and flattening functionality.
 - After flattening, use [`LoadAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_LoadAsync_System_Byte___) to reload the flattened PDF into the viewer.
 
+N> For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Form%20Designer/Components/Pages).
+
 ## Related topics
 
 - [GetDocumentAsync API reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetDocumentAsync)

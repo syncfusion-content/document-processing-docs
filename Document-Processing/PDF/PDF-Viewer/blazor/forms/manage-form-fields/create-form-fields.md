@@ -469,7 +469,7 @@ You can edit form fields using the UI or API.
         List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
         
         // Find and update the first name field
-        var field = fields?.FirstOrDefault(f => f.Name == "FirstName");
+        FormFieldInfo? field = fields?.FirstOrDefault(f => f.Name == "FirstName");
         if (field != null)
         {
             (field as TextBoxField).Value = "John";
@@ -491,7 +491,7 @@ You can edit form fields using the UI or API.
         List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
         
         // Find and update the submit button field
-        var field = fields?.FirstOrDefault(f => f.Name == "SubmitButton");
+        FormFieldInfo? field = fields?.FirstOrDefault(f => f.Name == "SubmitButton");
         if (field != null)
         {
             field.BackgroundColor = "#008000";

@@ -42,7 +42,7 @@ The API supports setting absolute bounds or moving fields by a delta.
         if (viewer == null) return;
 
         // Create form fields with initial bounds
-        var formFields = new List<FormFieldInfo>
+        List<FormFieldInfo> formFields = new List<FormFieldInfo>
         {
             new TextBoxField
             {
@@ -73,7 +73,7 @@ The API supports setting absolute bounds or moving fields by a delta.
         List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
         
         // Find the "First Name" field
-        var field = fields?.FirstOrDefault(f => f.Name == "FirstName");
+        FormFieldInfo? field = fields?.FirstOrDefault(f => f.Name == "FirstName");
         
         if (field != null)
         {

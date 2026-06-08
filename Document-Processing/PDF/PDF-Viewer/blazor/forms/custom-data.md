@@ -47,7 +47,7 @@ Attach custom data at field creation by passing a `CustomData` object to the for
         if (viewer == null) return;
 
         // Define custom metadata
-        var customMetadata = new Dictionary<string, object>
+        Dictionary<string, object> customMetadata = new Dictionary<string, object>
         {
             { "businessId", "C-1024" },
             { "tags", new[] { "profile", "kiosk" } },
@@ -55,7 +55,7 @@ Attach custom data at field creation by passing a `CustomData` object to the for
         };
 
         // Create a TextBox field with custom data
-        var textField = new TextBoxField
+        TextBoxField textField = new TextBoxField
         {
             Name = "Email",
             CustomData = customMetadata,
@@ -94,14 +94,14 @@ Modify an existing field's `CustomData` by using the [`UpdateFormFieldsAsync()`]
         if (viewer == null) return;
 
         // Get all form fields
-        var fields = await viewer.GetFormFieldsAsync();
+        List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
         if (fields.Count == 0) return;
 
         // Get the first field
-        var targetField = fields[0];
+        FormFieldInfo targetField = fields[0];
 
         // Update custom data
-        var updatedCustomData = new Dictionary<string, object>
+        Dictionary<string, object> updatedCustomData = new Dictionary<string, object>
         {
             { "group", "profile" },
             { "flags", new[] { "pii", "masked" } },
@@ -145,10 +145,10 @@ Access the `CustomData` property from any form field at any point in the applica
         if (viewer == null) return;
 
         // Get all form fields
-        var fields = await viewer.GetFormFieldsAsync();
+        List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
 
         // Access custom data from each field
-        foreach (var field in fields)
+        foreach (FormFieldInfo field in fields)
         {
             Console.WriteLine($"Field: {field.Name}");
             if (field.CustomData != null)

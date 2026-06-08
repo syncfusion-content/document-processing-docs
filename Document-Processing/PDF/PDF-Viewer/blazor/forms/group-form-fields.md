@@ -70,7 +70,7 @@ You can also group form fields during creation by assigning the same **Name** th
         if (viewer == null) return;
 
         // Create grouped form fields with the same name
-        var formFields = new List<FormFieldInfo>
+        List<FormFieldInfo> formFields = new List<FormFieldInfo>
         {
             // Textbox group: same name => mirrored value
             new TextBoxField

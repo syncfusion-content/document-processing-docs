@@ -42,7 +42,7 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
         List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
         
-        var field = fields?.FirstOrDefault(f => f.Name == "FirstName");
+        FormFieldInfo? field = fields?.FirstOrDefault(f => f.Name == "FirstName");
         
         if (field != null)
         {

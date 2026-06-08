@@ -36,7 +36,7 @@ Get all available form field data by using the [GetFormFieldsAsync()](https://he
     private async Task GetAllFormFields()
     {
         if (viewer == null) return;
-        var formFields = await viewer.GetFormFieldsAsync();
+        List<FormFieldInfo> formFields = await viewer.GetFormFieldsAsync();
         Console.WriteLine($"Total form fields: {formFields.Count}");
     }
 }
@@ -65,8 +65,8 @@ Find the text field by name and read its value property.
     private async Task ReadTextFields()
     {
         if (viewer == null) return;
-        var formFields = await viewer.GetFormFieldsAsync();
-        var nameField = formFields.FirstOrDefault(field => field is TextBoxField && field.Name == "name") as TextBoxField;
+        List<FormFieldInfo> formFields = await viewer.GetFormFieldsAsync();
+        TextBoxField? nameField = formFields.FirstOrDefault(field => field is TextBoxField && field.Name == "name") as TextBoxField;
         string nameValue = nameField?.Value ?? string.Empty;
         Console.WriteLine($"Name field value: {nameValue}");
     }
@@ -96,9 +96,9 @@ Check whether a checkbox or radio button is selected by reading its `IsChecked` 
     private async Task ReadCheckboxValues()
     {
         if (viewer == null) return;
-        var formFields = await viewer.GetFormFieldsAsync();
-        var radioButtons = formFields.OfType<RadioButtonField>().Where(field => field.Name == "gender").ToList();
-        var checkedField = radioButtons.FirstOrDefault(field => field.IsSelected);
+        List<FormFieldInfo> formFields = await viewer.GetFormFieldsAsync();
+        List<RadioButtonField> radioButtons = formFields.OfType<RadioButtonField>().Where(field => field.Name == "gender").ToList();
+        RadioButtonField? checkedField = radioButtons.FirstOrDefault(field => field.IsSelected);
         string fieldName = checkedField?.Name ?? string.Empty;
         Console.WriteLine($"Selected radio button: {fieldName}");
     }
@@ -131,8 +131,8 @@ Read the dropdown's selected option by accessing the `Value` property.
 
         try
         {
-            var formFields = await viewer.GetFormFieldsAsync();
-            var dropdownField = formFields?.FirstOrDefault(field => field is DropDownField && field.Name == "state") as DropDownField;
+            List<FormFieldInfo> formFields = await viewer.GetFormFieldsAsync();
+            DropDownField? dropdownField = formFields?.FirstOrDefault(field => field is DropDownField && field.Name == "state") as DropDownField;
 
             if (dropdownField != null && dropdownField.Items != null && dropdownField.Items.Count > 0)
             {
@@ -191,8 +191,8 @@ This reads the signature path data stored in a signature field so it can be late
     private async Task ReadSignatureData()
     {
         if (viewer == null) return;
-        var formFields = await viewer.GetFormFieldsAsync();
-        var signatureField = formFields.FirstOrDefault(field => field is SignatureField && field.Name == "signature") as SignatureField;
+        List<FormFieldInfo> formFields = await viewer.GetFormFieldsAsync();
+        SignatureField? signatureField = formFields.FirstOrDefault(field => field is SignatureField && field.Name == "signature") as SignatureField;
         string signatureData = signatureField?.Value ?? string.Empty;
         Console.WriteLine($"Signature data: {signatureData}");
     }
@@ -240,7 +240,7 @@ This iterates every field in the collection and logs each field's name and value
             }
             else if (field is DropDownField dropDownField)
             {
-                var selectedItem = dropDownField.Items.ElementAtOrDefault(dropDownField.SelectedIndex);
+                ListItem? selectedItem = dropDownField.Items.ElementAtOrDefault(dropDownField.SelectedIndex);
                 Console.WriteLine($"{field.Name}: {selectedItem?.Value}");
             }
             else
@@ -275,8 +275,8 @@ Place your form-reading logic inside the `DocumentLoaded` event handler, so valu
         if (viewer == null) return;
 
         // Access form data right after the PDF loads
-        var formFields = await viewer.GetFormFieldsAsync();
-        var emailField = formFields.FirstOrDefault(field => field is TextBoxField && field.Name == "email") as TextBoxField;
+        List<FormFieldInfo> formFields = await viewer.GetFormFieldsAsync();
+        TextBoxField? emailField = formFields.FirstOrDefault(field => field is TextBoxField && field.Name == "email") as TextBoxField;
         string email = emailField?.Value ?? string.Empty;
         
         Console.WriteLine($"Email: {email}");

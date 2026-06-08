@@ -41,7 +41,7 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
         List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
         
-        var field = fields?.FirstOrDefault(f => f.Name == "FirstName");
+        FormFieldInfo? field = fields?.FirstOrDefault(f => f.Name == "FirstName");
         
         if (field != null)
         {
@@ -135,7 +135,7 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
         List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
         
-        var field = fields?.FirstOrDefault(f => f.Name == "SubmitButton");
+        FormFieldInfo? field = fields?.FirstOrDefault(f => f.Name == "SubmitButton");
         
         if (field != null)
         {
@@ -181,7 +181,7 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
         List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
         
-        var field = fields?.FirstOrDefault(f => f.Name == "Password");
+        FormFieldInfo? field = fields?.FirstOrDefault(f => f.Name == "Password");
         
         if (field != null)
         {
@@ -229,7 +229,7 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
         List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
         
-        var cb = fields?.FirstOrDefault(f => f.Name == "Subscribe");
+        FormFieldInfo? cb = fields?.FirstOrDefault(f => f.Name == "Subscribe");
         
         if (cb != null)
         {
@@ -272,7 +272,7 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
         List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
         
-        var genderRadios = fields?.Where(f => f.Name == "Gender").ToList();
+        List<FormFieldInfo>? genderRadios = fields?.Where(f => f.Name == "Gender").ToList();
         
         if (genderRadios?.Count > 1)
         {
@@ -312,7 +312,7 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     if (viewer == null) return;
     List<FormFieldInfo> formFields = await viewer.GetFormFieldsAsync();
         // Find and update ListBoxField
-        var listBox = formFields?.FirstOrDefault(f => f.Name == "InterestListBox" && f is ListBoxField) as ListBoxField;
+        ListBoxField? listBox = formFields?.FirstOrDefault(f => f.Name == "InterestListBox" && f is ListBoxField) as ListBoxField;
         if (listBox != null)
         {
             listBox.Items = new List<ListItem> {
@@ -356,7 +356,7 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         if (viewer == null) return;
         List<FormFieldInfo> formFields = await viewer.GetFormFieldsAsync();
         // Find only the specific dropdown by name
-        var dropDown = formFields?.FirstOrDefault(f => f.Name == "CountryDropdown" && f is DropDownField) as DropDownField;
+        DropDownField? dropDown = formFields?.FirstOrDefault(f => f.Name == "CountryDropdown" && f is DropDownField) as DropDownField;
         if (dropDown !=null)
         {
             dropDown.Items = new List<ListItem> {
@@ -402,7 +402,7 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
         List<FormFieldInfo> fields = await viewer.GetFormFieldsAsync();
         
-        var sig = fields?.FirstOrDefault(f => f.Name == "Sign");
+        FormFieldInfo? sig = fields?.FirstOrDefault(f => f.Name == "Sign");
         
         if (sig != null)
         {

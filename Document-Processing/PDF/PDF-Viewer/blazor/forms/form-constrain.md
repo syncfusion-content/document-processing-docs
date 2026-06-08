@@ -110,7 +110,7 @@ If required fields are empty, validation can prevent further actions.
     {
         if (viewer == null) return;
 
-        var formFields = new List<FormFieldInfo>
+        List<FormFieldInfo> formFields = new List<FormFieldInfo>
         {
             new TextBoxField
             {
@@ -128,7 +128,7 @@ If required fields are empty, validation can prevent further actions.
     private void OnValidateFormFields(ValidateFormFieldsArgs args)
     {
         Dictionary<string, object> unfilledFields = args.UnfilledFields;
-        foreach (var field in unfilledFields)
+        foreach (FormFieldInfo field in unfilledFields)
         {
             Console.WriteLine($"Field Name: {field.Key}, Default Value: {field.Value}");
             // Further processing of unfilled fields
@@ -180,7 +180,7 @@ Pass the flags properties when creating form fields using [AddFormFieldsAsync()]
     {
         if (viewer == null) return;
 
-        var formFields = new List<FormFieldInfo>
+        List<FormFieldInfo> formFields = new List<FormFieldInfo>
         {
             // Read-only Textbox that is not required
             new TextBoxField
@@ -234,7 +234,7 @@ Use the [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusi
         if (viewer == null) return;
 
         // 1) Add a sample textbox
-        var formFields = new List<FormFieldInfo>
+        List<FormFieldInfo> formFields = new List<FormFieldInfo>
         {
             new TextBoxField
             {
@@ -246,8 +246,8 @@ Use the [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusi
         await viewer.AddFormFieldsAsync(formFields);
 
         // 2) Retrieve and update constraint flags
-        var allFields = await viewer.GetFormFieldsAsync();
-        var field = allFields.FirstOrDefault(f => f.Name == "Email");
+        List<FormFieldInfo> allFields = await viewer.GetFormFieldsAsync();
+        FormFieldInfo? field = allFields.FirstOrDefault(f => f.Name == "Email");
         
         if (field is TextBoxField emailField)
         {
