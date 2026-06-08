@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Batch Update in Vue Spreadsheet
+# Suspend and Resume UI Refresh in Vue Spreadsheet
 
 The Spreadsheet refreshes its UI after each operation performed through public methods, such as updating a cell, applying formatting, or inserting rows. This immediate rendering works well for a few actions, but it can lead to performance issues when many operations are executed one after another.
 
