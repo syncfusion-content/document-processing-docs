@@ -327,13 +327,13 @@ Document Editor provides options to perform spell checking word-by-word and page
 
 Spell checking is performed based on the following parameters received from the client-side, which are passed to the GetSuggestions API.
 
-- `TexttoCheck` – The text to be processed for spell checking.
+- **TexttoCheck** – The text to be processed for spell checking.
 
-- `CheckSpelling` – Indicates whether spell checking needs to be performed for the given text.
+- **CheckSpelling** – Indicates whether spell checking needs to be performed for the given text.
 
-- `CheckSuggestion` – Indicates whether suggestions should be provided for misspelled words.
+- **CheckSuggestion** – Indicates whether suggestions should be provided for misspelled words.
 
-- `AddWord` – Indicates whether the word needs to be added to the personal dictionary.
+- **AddWord** – Indicates whether the word needs to be added to the personal dictionary.
 
 #### Word-by-word spell check
 
