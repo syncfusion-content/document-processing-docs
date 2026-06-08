@@ -214,7 +214,9 @@ The following table describes the filter configuration options available in the 
 
 Here's a real-world scenario where you filter annotations based on the current user's role:
 
-```vue
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 // Role-based filtering in Vue
 export default {
   data() {
@@ -243,7 +245,8 @@ export default {
     }
   }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Filter with multiple criteria
 
