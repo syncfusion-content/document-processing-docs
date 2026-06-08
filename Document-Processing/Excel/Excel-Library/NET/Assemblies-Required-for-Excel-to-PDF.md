@@ -33,17 +33,6 @@ Syncfusion.ExcelToPDFConverter.Base
 </tr>
 <tr>
 <td>
-Windows Forms and WPF (Client Profile)
-</td>
-<td>
-Syncfusion.XlsIO.ClientProfile<br/>
-Syncfusion.Compression.Base<br/>
-Syncfusion.Pdf.ClientProfile<br/>
-Syncfusion.ExcelToPDFConverter.ClientProfile
-</td>
-</tr>
-<tr>
-<td>
 UWP, .NET Core, Xamarin, and Blazor
 </td>
 <td>
