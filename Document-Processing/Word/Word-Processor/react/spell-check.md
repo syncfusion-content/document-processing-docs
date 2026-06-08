@@ -162,26 +162,6 @@ SpellChecker.InitializeDictionaries(spellDictCollection, personalDictPath, cache
 
 If dictionaries are initialized using the InitializeDictionaries method, the default constructor of the SpellChecker should be used to perform spell checks and retrieve suggestions. This approach prevents the reinitialization of already loaded dictionaries.
 
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-public string SpellCheck([FromBody] SpellCheckJsonData spellChecker)
-{
-      try
-      {
-            SpellChecker spellCheck = new SpellChecker();
-            spellCheck.GetSuggestions(spellChecker.LanguageID, spellChecker.TexttoCheck, spellChecker.CheckSpelling, spellChecker.CheckSuggestion, spellChecker.AddWord);
-            return Newtonsoft.Json.JsonConvert.SerializeObject(spellCheck);
-      }
-      catch
-      {
-            return "{\"SpellCollection\":[],\"HasSpellingError\":false,\"Suggestions\":null}";
-      }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 Previously, on every SpellChecker.GetSuggestion() method call, the .aff and dictionary data will be parsed to generate suggestion for misspelled words. But, starting from v20.1.0.xx, the .aff and dictionary data will be parsed only for the first time while calling the SpellChecker.GetSuggestion() method.
 
 ### Optimized spell check
