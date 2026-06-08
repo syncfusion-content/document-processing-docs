@@ -19,6 +19,10 @@ This section briefly explains how to include the [Blazor Spreadsheet](https://ww
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
+N> If using an interactive render mode such as **WebAssembly** or **Auto**, ensure the required .NET workloads are installed for SkiaSharp usage in a Blazor Web App. Run the following command:
+* `dotnet workload install wasm-tools`
+* The above command will only install the latest available workload on the machine, such as .NET 10. If you need to install a specific .NET version like .NET 9 or .NET 8, please use a command such as `dotnet workload install wasm-tools-net8` and `dotnet workload install wasm-tools-net9`.
+
 ## Create a New Blazor Web App in Visual Studio
 
 Create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
@@ -44,6 +48,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> Syncfusion® Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
+N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
+* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
+
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -51,6 +58,10 @@ N> Syncfusion® Blazor components are available in [nuget.org](https://www.nuget
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+N> If using an interactive render mode such as **WebAssembly** or **Auto**, ensure the required .NET workloads are installed for SkiaSharp usage in a Blazor Web App. Run the following command:
+* `dotnet workload install wasm-tools`
+* The above command will only install the latest available workload on the machine, such as .NET 10. If you need to install a specific .NET version like .NET 9 or .NET 8, please use a command such as `dotnet workload install wasm-tools-net8` and `dotnet workload install wasm-tools-net9`.
 
 ## Create a New Blazor Web App in Visual Studio Code
 
@@ -93,6 +104,9 @@ dotnet restore
 {% endtabs %}
 
 N> Syncfusion® Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
+* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
 {% endtabcontent %}
 
