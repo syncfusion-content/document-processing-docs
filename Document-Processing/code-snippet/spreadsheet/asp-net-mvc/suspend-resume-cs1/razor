@@ -1,0 +1,48 @@
+@Html.EJS().Spreadsheet("spreadsheet").Created("created").AllowOpen(true).AllowSave(true).OpenUrl("https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open").SaveUrl("https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save").Sheets(sheet =>
+{
+	 sheet.Name("Project Budget").Ranges(ranges =>
+	 {
+		 ranges.DataSource((IEnumerable<object>)ViewBag.DefaultData).StartCell("A1").Add();
+	 }).Columns(column =>
+	 {
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+	 }).Add();
+   }).Render()
+
+<script>
+
+	function created() {
+		var spreadsheetObj = ej.base.getComponent(document.getElementById('spreadsheet'), 'spreadsheet');
+		spreadsheetObj.suspendRefresh();
+		spreadsheetObj.insertRow(0, 0);
+		spreadsheetObj.updateCell({ value: 'Project Budget Tracker - Q2 2026' }, 'A1');
+		spreadsheetObj.merge('A1:K1');
+		spreadsheetObj.updateCell({ value: 'Reference' }, 'K2');
+		spreadsheetObj.updateCell({ value: 'Total Budget' }, 'A13');
+		spreadsheetObj.updateCell({ formula: '=SUM(F3:F12)' }, 'F13');
+		spreadsheetObj.updateCell({ formula: '=SUM(G3:G12)' }, 'G13');
+		spreadsheetObj.updateCell({ formula: '=SUM(H3:H12)' }, 'H13');
+		spreadsheetObj.addHyperlink('https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/overview', 'K3:K12', 'Open Guide');
+		spreadsheetObj.cellFormat({ fontWeight: 'bold', fontSize: '14pt', textAlign: 'center', verticalAlign: 'middle', backgroundColor: '#4472C4', color: '#FFFFFF' }, 'A1:K1');
+		spreadsheetObj.cellFormat({ fontWeight: 'bold', textAlign: 'center', backgroundColor: '#EAEAEA' }, 'A2:K2');
+		spreadsheetObj.numberFormat('$#,##0.00', 'F3:H13');
+		spreadsheetObj.addDataValidation({ type: 'WholeNumber', operator: 'Between', value1: '1', value2: '5', isHighlighted: true }, 'J3:J12');
+		spreadsheetObj.wrap('A3:A12', true);
+		spreadsheetObj.setBorder({ border: '1px solid #C8C8C8' }, 'A2:K13', 'Outer');
+		spreadsheetObj.setRowHeight(50, 0);
+		spreadsheetObj.setRowsHeight(30, ['1:13']);
+		spreadsheetObj.setColWidth(220, 0);
+		spreadsheetObj.setColumnsWidth(90, ['B:K']);
+		spreadsheetObj.resumeRefresh();
+	}
+
+</script>

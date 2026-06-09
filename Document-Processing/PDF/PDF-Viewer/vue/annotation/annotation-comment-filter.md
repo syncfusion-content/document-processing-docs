@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-The comment filter feature in React PDF Viewer allows you to efficiently manage and view annotations by filtering comments and annotations based on various criteria. Access the filter options through the filter icon in the comments panel to display only the annotations that match your filter criteria.
+The comment filter feature in Vue PDF Viewer allows you to efficiently manage and view annotations by filtering comments and annotations based on various criteria. Access the filter options through the filter icon in the comments panel to display only the annotations that match your filter criteria.
 
 Imagine reviewing a PDF document with feedback from 5 team members, resulting in 100+ annotations across different pages. Without filtering, finding all comments from your manager or locating all rejected items becomes a tedious task. The comment filter feature solves this by letting you instantly focus on the annotations that matter to you.
 
@@ -214,7 +214,9 @@ The following table describes the filter configuration options available in the 
 
 Here's a real-world scenario where you filter annotations based on the current user's role:
 
-```vue
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 // Role-based filtering in Vue
 export default {
   data() {
@@ -243,7 +245,8 @@ export default {
     }
   }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Filter with multiple criteria
 
