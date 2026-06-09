@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Open PDF file from AWS S3
 
-To load a PDF file from AWS S3, you can follow the steps below
+To load a PDF file from AWS S3, follow these steps:
 
 
 Step 1: Create a simple console application

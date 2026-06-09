@@ -25,6 +25,8 @@ To open an Excel document using the interface, select the **File > Open** option
 ### Open an Excel file from a local path
 To load Excel files programmatically, they can be converted into byte arrays. This approach is particularly effective when files are retrieved from a backend service.
 
+N> In Blazor WebAssembly, File.ReadAllBytes is not supported due to browser security limitations. To work with Excel files, use a [Base64-encoded Excel files](#open-an-excel-file-from-a-base64-string) instead.
+
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -389,7 +391,7 @@ To load an Excel file from `Google Drive` in the Blazor Spreadsheet, follow the 
 - [Google Cloud project](https://developers.google.com/workspace/guides/create-project) in the Google Cloud Console.
 - [Service account](https://cloud.google.com/iam/docs/service-accounts-create) within the GCP project.
 - [Service account key](https://cloud.google.com/iam/docs/keys-create-delete) (JSON) available on disk.
-- [Google Drive API enabled](https://console.cloud.google.com/apis/library/drive.googleapis.com) for the project.
+- [Google Drive API enabled](https://developers.google.com/drive/api/guides/enable-drive-api) for the project.
 - [Google Drive account](https://drive.google.com/) with access to the file to download.
 - [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3) NuGet package installed in your project to access Google Drive API.
 

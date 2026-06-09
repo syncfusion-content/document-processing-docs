@@ -97,7 +97,7 @@ Step 6: Add a new action method named CreatePDF in HomeController.cs file and in
         MemoryStream stream = new MemoryStream();
         //Save the document to the memory stream.
         document.Save(stream);
-        //Close the documet
+        //Close the document
 	    document.Close(true); 
 	    //Return the PDF file as a download
         return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Output.pdf");
