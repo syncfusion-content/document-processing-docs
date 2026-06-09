@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Clipboard in React Spreadsheet component
+# Clipboard Operations in React Spreadsheet component
 
 The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#enableclipboard) property in Spreadsheet.
 

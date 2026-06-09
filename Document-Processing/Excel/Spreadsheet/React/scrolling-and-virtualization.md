@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scrolling in React Spreadsheet component | Syncfusion
-description: Learn here all about Scrolling in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Scrolling and Virtualization in React Spreadsheet component | Syncfusion
+description: Learn here all about Scrolling and Virtualization in React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Scrolling 
 platform: document-processing
 documentation: ug
 ---
 
-# Scrolling in React Spreadsheet component
+# Scrolling and Virtualization in React Spreadsheet component
 
 Scrolling helps you to move quickly to different areas of the worksheet. It moves faster if we use horizontal and vertical scroll bars. Scrolling can be enabled by setting the [`allowScrolling`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowscrolling) as true.
 

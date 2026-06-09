@@ -2,7 +2,7 @@
 layout: post
 title: Freeze pane in React Spreadsheet component | Syncfusion
 description: Learn here all about Freeze pane in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Freeze pane 
+control: Rows and Columns 
 platform: document-processing
 documentation: ug
 ---
