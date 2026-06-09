@@ -17,7 +17,7 @@ documentation: ug
 
 ## Server Connection
 
-To configure the backend service, refer - [Web API Server](./ai-service/using-web-api.md)/[Node.js Server](./ai-service/using-web-api.md)
+To configure the backend service, refer - [Web API Server](./ai-service/using-web-api.md)/[Node.js Server](./ai-service/using-node-js.md)
 
 ---
 

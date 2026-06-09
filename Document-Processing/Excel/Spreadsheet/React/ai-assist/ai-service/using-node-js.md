@@ -259,5 +259,5 @@ npm start
 
 ## See also
 
-* [AI Assist overview](../ai-assist)
+* [AI Assist overview](../overview)
 * [Web API (.NET) server setup](./using-web-api)

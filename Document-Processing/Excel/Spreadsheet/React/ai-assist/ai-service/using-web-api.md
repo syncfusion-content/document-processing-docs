@@ -287,5 +287,5 @@ dotnet run
 
 ## See also
 
-* [AI Assist overview](../ai-assist)
+* [AI Assist overview](../overview)
 * [Node.js server setup](./using-node-js)

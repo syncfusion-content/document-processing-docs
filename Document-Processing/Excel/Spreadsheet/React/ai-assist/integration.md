@@ -17,7 +17,7 @@ AI Assist integrates seamlessly into your React Spreadsheet application, enablin
 
 Ensure the following before integrating AI Assist:
 
-* Backend Server: A running backend AI service (Node.js or Web API) with Azure OpenAI credentials configured on the server. For setup instructions, see [Web API Server](./ai-service/using-web-api.md)/[Node.js Server](./ai-service/using-web-api.md) for setup instructions.
+* Backend Server: A running backend AI service (Node.js or Web API) with Azure OpenAI credentials configured on the server. For setup instructions, see [Web API Server](./ai-service/using-web-api.md)/[Node.js Server](./ai-service/using-node-js.md) for setup instructions.
 
 ### Inject the AI Assist Module
 
