@@ -29,22 +29,7 @@ Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syn
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Include the following commands in the Docker file to install the dependent packages in the docker container.
-
-{% tabs %}
-{% highlight Dockerfile %}
-
-RUN apt-get update && \
-apt-get install -yq --no-install-recommends \
-libgdiplus && \
-rm -rf /var/lib/apt/lists/*
-
-{% endhighlight %}
-{% endtabs %}
-
-![Docker package](GettingStarted_images/Docker-Image5.png)
-
-Step 6: A default action method named Index will be present in `HomeController.cs`. Right-click on this Index method and select Go To View where you will be directed to its associated view page `Index.cshtml`. Add a new button in the `Index.cshtml` as follows.
+Step 5: A default action method named Index will be present in `HomeController.cs`. Right-click on this Index method and select Go To View where you will be directed to its associated view page `Index.cshtml`. Add a new button in the `Index.cshtml` as follows.
 
 {% tabs %}
 {% highlight HTML %}
@@ -61,7 +46,7 @@ Step 6: A default action method named Index will be present in `HomeController.c
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
+Step 6: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
 
 Add the following code sample in ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``.
 
@@ -116,7 +101,7 @@ Add the following code sample in ``ExportService`` class which illustrates how t
 {% endhighlight %}
 {% endtabs %}
 
-Step 10: Build and run the sample in Docker. It will pull the Linux Docker image from the Docker hub and run the project. Now, the webpage will open in the browser. Click the button to convert the webpage to a PDF.
+Step 7: Build and run the sample in Docker. It will pull the Linux Docker image from the Docker hub and run the project. Now, the webpage will open in the browser. Click the button to convert the webpage to a PDF.
 
 You can download a complete working sample from GitHub.
 
