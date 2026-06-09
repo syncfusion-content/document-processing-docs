@@ -11,37 +11,37 @@ keywords: Word, SDK, Automation, API, create, read, write
 
 {% doccards %}
 
+{% doccard text="Blazor" link="/document-processing/word/word-library/net/Create-Word-document-in-Blazor" icon="/document-processing/word/word-library/net/images/Blazor.svg" %}
+
 {% doccard text="ASP.NET Core" link="/document-processing/word/word-library/net/Create-Word-document-in-ASP-NET-Core" icon="/document-processing/word/word-library/net/images/ASP.NET Core.png" %}
+
+{% doccard text="Web API" link="/document-processing/word/word-library/net/Create-Word-Document-in-ASP-NET-Core-WEB-API" icon="/document-processing/word/word-library/net/images/NET.svg" %}
 
 {% doccard text="ASP.NET MVC" link="/document-processing/word/word-library/net/Create-Word-document-in-ASP-NET-MVC" icon="/document-processing/word/word-library/net/images/ASP.NET MVC.svg" %}
 
-{% doccard text="ASP.NET" link="/document-processing/word/word-library/net/Create-Word-document-in-ASP-NET" icon="/document-processing/word/word-library/net/images/NET.svg" %}
-
-{% doccard text="Blazor" link="/document-processing/word/word-library/net/Create-Word-document-in-Blazor" icon="/document-processing/word/word-library/net/images/Blazor.svg" %}
-
-{% doccard text="Windows Forms" link="/document-processing/word/word-library/net/Create-Word-document-in-Windows-Forms" icon="/document-processing/word/word-library/net/images/Windows Forms.svg" %}
+{% doccard text=".NET MAUI" link="/document-processing/word/word-library/net/Create-Word-document-in-MAUI" icon="/document-processing/word/word-library/net/images/MAUI.svg" %}
 
 {% doccard text="WPF" link="/document-processing/word/word-library/net/Create-Word-document-in-WPF" icon="/document-processing/word/word-library/net/images/WPF.svg" %}
 
-{% doccard text="UWP" link="/document-processing/word/word-library/net/Create-Word-document-in-UWP" icon="/document-processing/word/word-library/net/images/UWP.svg" %}
+{% doccard text="Windows Forms" link="/document-processing/word/word-library/net/Create-Word-document-in-Windows-Forms" icon="/document-processing/word/word-library/net/images/Windows Forms.svg" %}
 
 {% doccard text="WinUI" link="/document-processing/word/word-library/net/Create-Word-document-in-WinUI" icon="/document-processing/word/word-library/net/images/WinUI.png" %}
 
-{% doccard text=".NET MAUI" link="/document-processing/word/word-library/net/Create-Word-document-in-MAUI" icon="/document-processing/word/word-library/net/images/MAUI.svg" %}
+{% doccard text="UWP" link="/document-processing/word/word-library/net/Create-Word-document-in-UWP" icon="/document-processing/word/word-library/net/images/UWP.svg" %}
+
+{% doccard text="Console" link="/document-processing/word/word-library/net/Create-Word-document-in-Console-application" icon="/document-processing/word/word-library/net/images/NET.svg" %}
 
 {% doccard text="Linux" link="/document-processing/word/word-library/net/Create-Word-document-in-Linux" icon="/document-processing/word/word-library/net/images/Linux.png" %}
 
 {% doccard text="Mac" link="/document-processing/word/word-library/net/Create-Word-document-in-Mac" icon="/document-processing/word/word-library/net/images/Mac.svg" %}
 
-{% doccard text="Console" link="/document-processing/word/word-library/net/Create-Word-document-in-Console-application" icon="/document-processing/word/word-library/net/images/NET.svg" %}
-
-{% doccard text="ASP.NET Core Web API" link="/document-processing/word/word-library/net/Create-Word-Document-in-ASP-NET-Core-WEB-API" icon="/document-processing/word/word-library/net/images/NET.svg" %}
-
 {% doccard text="Azure" link="/document-processing/word/word-library/net/Create-Word-Document-in-Azure" icon="/document-processing/word/word-library/net/images/Azure.svg" %}
 
-{% doccard text="Amazon Web Service (AWS)" link="/document-processing/word/word-library/net/Create-Word-Document-in-AWS" icon="/document-processing/word/word-library/net/images/AWS.svg" %}
+{% doccard text="AWS" link="/document-processing/word/word-library/net/Create-Word-Document-in-AWS" icon="/document-processing/word/word-library/net/images/AWS.svg" %}
 
-{% doccard text="Google Cloud Platform (GCP)" link="/document-processing/word/word-library/net/Create-Word-Document-in-Google-Cloud-Platform" icon="/document-processing/word/word-library/net/images/Google Cloud.svg" %}
+{% doccard text="GCP" link="/document-processing/word/word-library/net/Create-Word-Document-in-Google-Cloud-Platform" icon="/document-processing/word/word-library/net/images/Google Cloud.svg" %}
+
+{% doccard text="Java" link="/document-processing/word/word-library/java/overview" icon="/document-processing/word/word-library/net/images/Java.svg" %}
 
 {% enddoccards %}
 

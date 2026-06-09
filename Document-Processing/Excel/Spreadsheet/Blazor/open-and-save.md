@@ -693,51 +693,34 @@ The following code example demonstrates saving the spreadsheet as PDF with diffe
 
 @using Syncfusion.Blazor.Spreadsheet
 
-<button OnClick="SavePdfPortrait">Save as PDF (Portrait)</button>
-<button OnClick="SavePdfLandscape">Save as PDF (Landscape)</button>
+<button OnClick="SaveAsPdf">Save as PDF</button>
 
-<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+<SfSpreadsheet @ref="SpreadsheetInstance" BeforeSave="OnBeforesave">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 
 @code {
-    public byte[] DataSourceBytes { get; set; }
     public SfSpreadsheet SpreadsheetInstance { get; set; }
 
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-
-    // Save as PDF in Portrait orientation
-    public async Task SavePdfPortrait()
+    public async Task SaveAsPdf()
     {
         await SpreadsheetInstance.SaveAsync(new SaveOptions
         {
             SaveType = SaveType.Pdf,
-            FileName = "Spreadsheet",
-            PdfLayoutSettings = new PdfLayoutSettings 
-            { 
-                Orientation = PdfPageOrientation.Portrait,
-                FitSheetOnOnePage = false
-            }
+            FileName = "Spreadsheet"
         });
     }
 
-    // Save as PDF in Landscape orientation
-    public async Task SavePdfLandscape()
+    public void OnBeforesave(BeforeSaveEventArgs args)
     {
-        await SpreadsheetInstance.SaveAsync(new SaveOptions
+        if (args.SaveType == SaveType.Pdf)
         {
-            SaveType = SaveType.Pdf,
-            FileName = "Spreadsheet",
-            PdfLayoutSettings = new PdfLayoutSettings 
-            { 
-                Orientation = PdfPageOrientation.Landscape,
-                FitSheetOnOnePage = false
-            }
-        });
+            args.PdfLayoutSettings = new PdfLayoutSettings
+            {
+                FitSheetOnOnePage = true,
+                Orientation = PdfPageOrientation.Landscape
+            };
+        }
     }
 }
 

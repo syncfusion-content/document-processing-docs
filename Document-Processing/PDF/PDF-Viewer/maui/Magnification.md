@@ -153,7 +153,7 @@ PdfViewer.PersistZoomOnPageChange = false;
 {% endhighlight %}
 {% endtabs %}
 
-### Enable or Disable Double-Tap Zoom
+## Enable or Disable Double-Tap Zoom
 
 The PDF Viewer allows users to zoom in and out of the document using a double-tap gesture. This behavior can be controlled programmatically using the `AllowDoubleTapZoom` property.
 

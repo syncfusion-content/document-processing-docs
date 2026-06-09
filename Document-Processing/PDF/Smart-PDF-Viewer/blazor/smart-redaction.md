@@ -15,6 +15,9 @@ The [Smart PDF Viewer](https://help.syncfusion.com//cr/blazor/Syncfusion.Blazor.
 
 Smart Redaction allows selecting detection patterns (emails, names, phone numbers, and more) and automatically identifies matching content throughout the document. Users can activate the Smart Redaction feature by selecting the **Smart Redaction** button in the side toolbar, review detected items, and apply redaction selectively.
 
+Check out the following video to learn how to implement Smart Redaction in Blazor Smart PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=lDlqpNviKEw" %}
+
 ## Component Usage
 Add the following code to the **~Pages/Home.razor** file to enable and evaluate Smart Redaction in the Smart PDF Viewer. Ensure the SfSmartPdfViewer package is installed and the component is added to the page.
 

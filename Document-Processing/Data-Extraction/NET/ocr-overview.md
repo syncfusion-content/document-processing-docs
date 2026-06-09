@@ -11,15 +11,15 @@ keywords: OCR, Optical Character Recognition, Text Recognition
 
 {% doccards %}
 
+{% doccard text="Blazor" link="/document-processing/data-extraction/net/ocr-processor/blazor" icon="/document-processing/data-extraction/net/images/Blazor.svg" %}
+
 {% doccard text="ASP.NET Core" link="/document-processing/data-extraction/net/ocr-processor/net-core" icon="/document-processing/data-extraction/net/images/ASP.NET-Core.png" %}
 
 {% doccard text="ASP.NET MVC" link="/document-processing/data-extraction/net/ocr-processor/aspnet-mvc" icon="/document-processing/data-extraction/net/images/ASP.NET-Mvc.svg" %}
 
-{% doccard text="Blazor" link="/document-processing/data-extraction/net/ocr-processor/blazor" icon="/document-processing/data-extraction/net/images/Blazor.svg" %}
+{% doccard text="WPF" link="/document-processing/data-extraction/net/ocr-processor/WPF" icon="/document-processing/data-extraction/net/images/WPF.svg" %}
 
 {% doccard text="Windows Forms" link="/document-processing/data-extraction/net/ocr-processor/Windows-Forms" icon="/document-processing/data-extraction/net/images/Windows-Forms.svg" %}
-
-{% doccard text="WPF" link="/document-processing/data-extraction/net/ocr-processor/WPF" icon="/document-processing/data-extraction/net/images/WPF.svg" %}
 
 {% doccard text="Linux" link="/document-processing/data-extraction/net/ocr-processor/Linux" icon="/document-processing/data-extraction/net/images/Linux.png" %}
 
