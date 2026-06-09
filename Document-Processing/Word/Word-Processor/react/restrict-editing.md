@@ -281,3 +281,31 @@ container.documentEditor.documentEditorSettings.highlightEditableRanges = true;
 
 {% endhighlight %}
 {% endtabs %}
+
+## Restrict Editing Pane
+
+Restrict Editing Pane provides the following options to manage the document:
+* To apply formatting restrictions to the current document, select the allow formatting check box.
+* To apply editing restrictions to the current document, select the read only check box.
+* To add users to the current document, select more users option and add user from the popup dialog.
+* To include range permission to the current document, select parts of the document and choose users who are allowed to freely edit them from the listed check box.
+* To apply the chosen editing restrictions, click the **YES,START ENFORCING PROTECTION** button. A dialog box displays asking for a   password to protect.
+* To stop protection, select **STOP PROTECTION** button. A dialog box displays asking for a password to stop protection.
+
+The following code shows Restrict Editing Pane. To unprotect the document, use password '123'.
+
+{% tabs %}
+{% highlight js tabtitle="index.jsx" %}
+{% include code-snippet/document-editor/react/base-cs6/app/index.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.tsx" %}
+{% include code-snippet/document-editor/react/base-cs6/app/index.tsx %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/document-editor/react/base-cs6/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "/document-processing/code-snippet/document-editor/react/base-cs6" %}
+
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
