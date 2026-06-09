@@ -118,7 +118,7 @@ private MemoryStream ExportWeatherForecastToPdf()
 By executing the program, you will get the PDF document as follows.
 ![ASP.Net Core output PDF document](MVC_images/Output.png)
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Web-API/Web-API-Project).
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
