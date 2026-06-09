@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Spreadsheet Component | Syncfusion
+title: Getting Started with Blazor Spreadsheet Component in WASM | Syncfusion
 description: Checkout and learn about getting started with Blazor Spreadsheet component in Blazor WebAssembly Application.
 platform: document-processing
 control: Spreadsheet
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Spreadsheet Component
 
-This section briefly explains how to include [Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in your Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This section briefly explains how to include [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in your Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/) , [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -93,9 +93,57 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
+N> Syncfusion&reg; uses SkiaSharp.Views.Blazor version 3.119.1. Ensure this version is referenced.
+* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+## Prerequisites
+
+Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet --version
+
+{% endhighlight %}
+{% endtabs %}
+
+## Create a Blazor WebAssembly App using .NET CLI
+
+Run the following command to create a new Blazor WebAssembly App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli) documentation.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet and Themes NuGet in the App
+
+After creating the Blazor WebAssembly App, install the required Syncfusion NuGet packages using the .NET CLI.
+
+* Open a command prompt, terminal, or shell.
+* Ensure you’re in the project root directory where your `.csproj` file is located.
+* Run the following command to install a [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+
+{% tabs %}
+
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Syncfusion.Blazor.Spreadsheet -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
+
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -143,7 +191,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor Spreadsheet component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet component in the **~/Pages/Index.razor** file.
 
@@ -170,9 +218,19 @@ Note: Due to WebAssembly (WASM) browser restrictions, File.ReadAllBytes is not s
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spreadsheet in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spreadsheet in your default web browser. The output will appear as follows:
+
+![Blazor Spreadsheet](images/getting-started.png)
+
+You can also experiment directly using the interactive playground below for a quick demo:
+
+{% playground "https://blazorplayground.syncfusion.com/embed/BtLHDSMIxNVhqnlu?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
+
+To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save).
+
+N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet).
 
 ## See Also
 
-* [Blazor Spreadsheet Overview](overview.md)
-* [Open and Save](open-and-save.md)
+- [Getting started with the Blazor Spreadsheet in a Blazor Web app Server app](./getting-started-webapp)
+- [Getting Started with .NET MAUI Blazor Hybrid App](./blazor-hybrid-maui-app)
