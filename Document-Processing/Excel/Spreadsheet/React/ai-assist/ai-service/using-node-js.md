@@ -11,8 +11,6 @@ documentation: ug
 
 AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create a **Node.js** server with **Azure OpenAI** credentials.
 
----
-
 ## Prerequisites
 
 Ensure the following are available before you begin.
@@ -41,8 +39,6 @@ const azureDeploymentName   = 'Your_Deployment_Name';
 
 * Node.js v18 or later
 * npm v9 or later
-
----
 
 ## Install dependencies
 
@@ -80,8 +76,6 @@ Ensure your `package.json` includes `"type": "module"` to support ES module impo
 }
 ```
 
----
-
 ## Configure credentials
 
 Create a `.env` file in the project root and add your Azure OpenAI credentials:
@@ -94,8 +88,6 @@ apiVersion  = Your_Azure_OpenAI_API_Version
 ```
 
 > **Important:** Add `.env` to `.gitignore` to prevent exposing secrets.
-
----
 
 ## Configure required modules
 
@@ -163,8 +155,6 @@ app.listen(PORT, () => {
 });
 ```
 
----
-
 ## Run the server
 
 Run the following command to start the server:
@@ -178,8 +168,6 @@ The server runs on `http://localhost:3000`. Update the AI Assist endpoint like b
 ```
 http://localhost:3000/api/AIAssist/Chat
 ```
-
----
 
 ## Connect to the React Spreadsheet
 
@@ -207,8 +195,6 @@ export default function App() {
 ```
 
 {% endraw %}
-
----
 
 ## Reference
 
@@ -243,8 +229,6 @@ And returns:
 }
 ```
 
----
-
 ## Sample
 
 A Node.js server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in the `.env` file, and start the server using the following command
@@ -255,9 +239,6 @@ npm start
 
 [Download Node.js Server](https://drive.google.com/file/d/1V3TlO_6GS3dV986I7sDizmE9kwojkOrx/view?usp=drive_link)
 
----
-
 ## See also
 
-* [AI Assist overview](../overview)
 * [Web API (.NET) server setup](./using-web-api)
