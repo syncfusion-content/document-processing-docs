@@ -1,6 +1,6 @@
 ---
 title: How to resolve minor text differences in XlsIO PDF? | Syncfusion
-description: Learn how to resolve minor visual differences in PDF files generated using Syncfusion XlsIO by enabling the EmbedFonts property in ExcelToPdfConverterSettings.
+description: Thia page explains how to resolve minor visual differences in PDF files generated using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
