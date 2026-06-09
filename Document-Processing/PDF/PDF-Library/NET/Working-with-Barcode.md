@@ -643,8 +643,8 @@ Stream imageStream = barcode.ToImage(new SizeF(300, 300));
 //Create file stream to save the image file
 using (FileStream outputFileStream = new FileStream(@"Image.png", FileMode.Create, FileAccess.ReadWrite))
 {
-    //Save the image to disk
-    imageStream.CopyTo(outputFileStream);
+  //Save the image to disk
+  imageStream.CopyTo(outputFileStream);
 }    
 
 {% endhighlight %}
@@ -709,8 +709,8 @@ Stream imageStream = barcode.ToImage(new Syncfusion.Drawing.SizeF(300, 300));
 //Create file stream to save the image file
 using (FileStream outputFileStream = new FileStream("Output.png", FileMode.Create, FileAccess.ReadWrite))
 {
-    //Save the image to disk
-    imageStream.CopyTo(outputFileStream);
+  //Save the image to disk
+  imageStream.CopyTo(outputFileStream);
 }
 
 {% endhighlight %}

@@ -21,11 +21,9 @@ Step 3: Install the [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google
 
 ![NuGet package installation](Open-PDF-Images/Google.Apis.Drive.V3-nuget.png)
 
-
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Google.Apis.Auth.OAuth2;
@@ -34,14 +32,11 @@ using Google.Apis.Services;
 using Google.Apis.Util.Store;
 
 {% endhighlight %}
-
 {% endtabs %}
-
 
 Step 5: Add the below code example to open a PDF from google drive.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 UserCredential credential;
@@ -89,7 +84,6 @@ using (FileStream fileStream = new FileStream("output.pdf", FileMode.Create, Fil
 }
    
 {% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open-PDF-file/To%20Google%20Drive).

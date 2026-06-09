@@ -294,7 +294,6 @@ You can save the manipulated PDF document to file system using [Save](https://he
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //To-Do some manipulation
-//To-Do some manipulation
 //Save the document in file system.
 loadedDocument.Save("Output.pdf"); 
 
@@ -305,7 +304,6 @@ loadedDocument.Save("Output.pdf");
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //To-Do some manipulation
-//To-Do some manipulation
 //Save the document in file system.
 loadedDocument.Save("Output.pdf"); 
 
@@ -315,7 +313,6 @@ loadedDocument.Save("Output.pdf");
 
 'Load an existing PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-'To-Do some manipulation
 'To-Do some manipulation
 'Save the document in file system.
 loadedDocument.Save("Output.pdf")
@@ -336,7 +333,6 @@ You can also save the manipulated PDF document to stream using overloads of [Sav
 FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
 //To-Do some manipulation
-//To-Do some manipulation
 //Save the document into stream.
 MemoryStream stream = new MemoryStream();
 loadedDocument.Save(stream);
@@ -347,7 +343,6 @@ loadedDocument.Save(stream);
 
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//To-Do some manipulation
 //To-Do some manipulation
 //Creates an instance of memory stream.
 MemoryStream stream = new MemoryStream();
@@ -360,7 +355,6 @@ loadedDocument.Save(stream) ;
 
 'Load an existing PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-'To-Do some manipulation
 'To-Do some manipulation
 'Creates an instance of memory stream.
 Dim stream As New MemoryStream()
@@ -379,7 +373,11 @@ You can also resave the manipulated PDF document to the same file using overload
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//PDF doesn't supports saving a PDF document into the same file on the C#/.NET Cross platforms. 
+//Load an existing PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//To-Do some manipulation
+//Resave the document to the same file.
+loadedDocument.Save();
 
 {% endhighlight %}
 
@@ -388,9 +386,8 @@ You can also resave the manipulated PDF document to the same file using overload
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //To-Do some manipulation
-//To-Do some manipulation
 //Resave the document to the same file.
-loadedDocument.Save() ;
+loadedDocument.Save();
 
 {% endhighlight %}
 
@@ -398,7 +395,6 @@ loadedDocument.Save() ;
 
 'Load an existing PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-'To-Do some manipulation
 'To-Do some manipulation
 'Resave the document to the same file.
 loadedDocument.Save()
@@ -411,7 +407,11 @@ loadedDocument.Save()
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}	
 
-//PDF doesn't supports saving a PDF document into the same file on the C#/.NET Cross platforms. 
+//Load an existing PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
+//To-Do some manipulation
+//Resave the document to the same stream.
+loadedDocument.Save();
 
 {% endhighlight %}
 
@@ -419,7 +419,6 @@ loadedDocument.Save()
 
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
-//To-Do some manipulation
 //To-Do some manipulation
 //Resave the document to the same stream.
 loadedDocument.Save();
@@ -430,7 +429,6 @@ loadedDocument.Save();
 
 'Load an existing PDF document.
 Dim loadedDocument As New PdfLoadedDocument(stream)
-'To-Do some manipulation
 'To-Do some manipulation
 'Resave the document to the same stream.
 loadedDocument.Save()
@@ -450,7 +448,6 @@ After the document manipulation and save operation are completed, you should clo
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //To-Do some manipulation
-//To-Do some manipulation
 //Save the document into stream.
 MemoryStream stream = new MemoryStream();
 loadedDocument.Save(stream);
@@ -464,7 +461,6 @@ loadedDocument.Close(true);
 //Load an existing PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //To-Do some manipulation
-//To-Do some manipulation
 //Save the document in file system.
 loadedDocument.Save("Output.pdf"); 
 //Close the document.
@@ -476,7 +472,6 @@ loadedDocument.Close(true);
 
 'Load an existing PDF document.
 Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-'To-Do some manipulation
 'To-Do some manipulation
 'Save the document in file system.
 loadedDocument.Save("Output.pdf")
