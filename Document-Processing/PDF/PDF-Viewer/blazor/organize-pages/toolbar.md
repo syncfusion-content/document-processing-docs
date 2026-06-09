@@ -9,16 +9,14 @@ documentation: ug
 
 # Organize page toolbar
 
-Customize which tools appear in the Organize Pages toolbar using `PageOrganizerSettings`. Toggle features to match your application's needs.
+The PDF Viewer lets applications customize the Organize Pages toolbar to enable or disable tools according to project requirements. Use the [PageOrganizerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PageOrganizerSettings)  to control each tool's interactivity and behavior.
 
-## Hide insert
+## Enable or disable the insert option
 
-The `CanInsert` property controls the visibility of the insert tool. When set to `false`, the insert tool will be hidden from the toolbar.
+The `CanInsert` property controls the insert tool visibility. Set it to `false` to disable the insert tool.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
-
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
@@ -28,16 +26,12 @@ The `CanInsert` property controls the visibility of the insert tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Insert disabled](./images/organize-insert-disable.png)
+## Enable or disable the delete option
 
-## Hide delete
-
-The `CanDelete` property controls the visibility of the delete tool. When set to `false`, the delete tool will be hidden.
+The `CanDelete` property controls the delete tool visibility. Set it to `false` to disable the delete tool.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
-
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
@@ -47,16 +41,12 @@ The `CanDelete` property controls the visibility of the delete tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Delete disabled](./images/organize-delete-disable.png)
+## Enable or disable the rotate option
 
-## Hide rotate
-
-The `CanRotate` property controls the visibility of the rotate tool. When set to `false`, the rotate tool will be hidden.
+The `CanRotate` property controls the rotate tool visibility. Set it to `false` to disable the rotate tool.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
-
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
@@ -66,15 +56,12 @@ The `CanRotate` property controls the visibility of the rotate tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Rotate disabled](./images/organize-rotate-disable.png)
+## Enable or disable the copy option
 
-## Hide duplicate
-
-The `CanDuplicate` property controls the visibility of the copy tool. When set to `false`, the copy tool will be hidden.
+The `CanDuplicate` property controls the copy tool visibility. Set it to `false` to disable the copy tool.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
@@ -85,15 +72,12 @@ The `CanDuplicate` property controls the visibility of the copy tool. When set t
 {% endhighlight %}
 {% endtabs %}
 
-![Duplicate disabled](./images/organize-copy-disable.png)
+## Enable or disable the import option
 
-## Hide import
-
-The `CanImport` property controls the visibility of the import tool. When set to `false`, the import tool will be hidden.
+The `CanImport` property controls the import tool visibility. Set it to `false` to disable the import tool.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
@@ -104,15 +88,12 @@ The `CanImport` property controls the visibility of the import tool. When set to
 {% endhighlight %}
 {% endtabs %}
 
-![Import disabled](./images/organize-import-disable.png)
+## Enable or disable the extract option
 
-## Hide extract
-
-The `CanExtractPages` property controls the visibility of the extract tool. When set to `false`, the extract tool will be hidden.
+The `CanExtractPages` property controls the extract tool visibility. Set it to `false` to disable the extract tool.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
@@ -123,15 +104,12 @@ The `CanExtractPages` property controls the visibility of the extract tool. When
 {% endhighlight %}
 {% endtabs %}
 
-![Extract disabled](./images/organize-extract-disable.png)
+## Enable or disable the rearrange option
 
-## Disable rearrange
-
-The `CanRearrange` property controls the ability to rearrange pages. When set to `false`, pages cannot be rearranged.
+The `CanRearrange` property controls whether pages can be rearranged. Set it to `false` to disable page reordering.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
