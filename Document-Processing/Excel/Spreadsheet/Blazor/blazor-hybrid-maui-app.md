@@ -11,12 +11,6 @@ documentation: ug
 
 This section explains how to create and run a .NET MAUI Blazor Hybrid application using the [Syncfusion® Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component.
 
-## What is a .NET MAUI Blazor Hybrid App?
-
-A .NET MAUI Blazor Hybrid App is a .NET MAUI application where a Blazor Web App is hosted in the .NET MAUI app using the BlazorWebView control. This enables a Blazor Web App to integrate with platform features and UI controls. The BlazorWebView can be added to any page of a .NET MAUI app and pointed to the root of the Blazor app. The Blazor components run in the .NET process and render the web UI to an embedded web view control. .NET MAUI Blazor apps can run on all platforms supported by .NET MAUI.
-
-Visual Studio provides the **.NET MAUI Blazor Hybrid App** template to create .NET MAUI Blazor Hybrid Apps.
-
 ## Prerequisites
 
 To use the .NET MAUI project templates, install the Mobile development with .NET workload for Visual Studio. For installation details, see the Microsoft documentation: [Install .NET MAUI](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin).
