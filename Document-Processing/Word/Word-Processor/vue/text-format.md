@@ -187,6 +187,18 @@ let highlightColor : HighlightColor = this.$refs.documenteditor.ej2instances.sel
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.highlightColor= 'Pink';
 ```
 
+## Bidirectional (Bidi)
+
+The Bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
+
+```ts
+// Get Bidi value of selected text
+let bidi: boolean = this.$refs.documenteditor.ej2Instances.selection.characterFormat.bidi;
+
+// Set Bidi for selected text
+this.$refs.documenteditor.ej2Instances.selection.characterFormat.bidi= true;
+```
+
 ## Toolbar with options for text formatting
 
 Refer to the following example.
