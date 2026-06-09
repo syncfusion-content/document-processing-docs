@@ -340,7 +340,7 @@ The following features have some limitations in Conditional Formatting:
 
 Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
 
-In the **Syncfusion EJ2 JavaScript Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#cells) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
+In the **Syncfusion EJ2 JavaScript Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#cells) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
 
 Each `richText` segment contains:
 
@@ -363,7 +363,7 @@ You can apply subscript and superscript formatting in following ways,
 
 ![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
 
-2. You can define the [`richText`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
+2. You can define the [`richText`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
 
 ```js
 cells: [
@@ -378,7 +378,7 @@ cells: [
 ]
 ```
 
-3. You can also apply subscript and superscript dynamically using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#updatecell) method.
+3. You can also apply subscript and superscript dynamically using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#updatecell) method.
 
 ```js
     spreadsheet.updateCell({ value: 'X2', richText: [

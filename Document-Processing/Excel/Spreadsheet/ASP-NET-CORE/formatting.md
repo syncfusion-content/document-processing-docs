@@ -396,7 +396,7 @@ The following code example shows the subscript and superscript formatting in cel
 {% include code-snippet/spreadsheet/asp-net-core/richtext-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="RichTextController.cs" %}
-{% include code-snippet/spreadsheet/asp-net-core/richtext-format/richTextController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/richtext-format/richTextFormat.cs %}
 {% endhighlight %}
 {% endtabs %}
 
