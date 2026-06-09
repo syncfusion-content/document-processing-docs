@@ -56,9 +56,9 @@ The `CanRotate` property controls the rotate tool visibility. Set it to `false` 
 {% endhighlight %}
 {% endtabs %}
 
-## Enable or disable the copy option
+## Enable or disable the Duplicate option
 
-The `CanDuplicate` property controls the copy tool visibility. Set it to `false` to disable the copy tool.
+The `CanDuplicate` property controls the Duplicate tool visibility. Set it to `false` to disable the Duplicate tool.
 
 {% tabs %}
 {% highlight razor %}

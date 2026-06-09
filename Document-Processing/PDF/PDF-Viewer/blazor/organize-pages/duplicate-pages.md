@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Copy pages in Organize Pages in Blazor PDF Viewer | Syncfusion
+title: Duplicate pages in Organize Pages in Blazor PDF Viewer | Syncfusion
 description: Learn how to duplicate pages using the Organize Pages UI in the Blazor PDF Viewer of Syncfusion and more.
 platform: document-processing
 control: SfPdfViewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Copy Pages in Blazor PDF Viewer
+# Duplicate Pages in Blazor PDF Viewer
 
 ## Overview
 
@@ -33,7 +33,7 @@ This guide explains how to duplicate pages within the current PDF using the Orga
 
 3. Duplicate selected pages
 
-	- Click the **Copy Pages** button in the Organize Pages toolbar; duplicated pages are inserted to the right of the selected thumbnails.
+	- Click the **Duplicate Pages** button in the Organize Pages toolbar; duplicated pages are inserted to the right of the selected thumbnails.
 
 4. Duplicate multiple pages at once
 
@@ -82,9 +82,9 @@ You can also duplicate pages programmatically using the Blazor PDF Viewer's `Dup
 
 For more details, see [Programmatic support for Organize Pages](./programmatic-support).
 
-## Enable or disable Copy Pages button
+## Enable or disable Duplicate Pages button
 
-To enable or disable the **Copy Pages** button in the Organize Pages toolbar, update the toolbar settings. See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-copy-option) for the guidelines.
+To enable or disable the **Duplicate Pages** button in the Organize Pages toolbar, update the toolbar settings. See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-duplicate-option) for the guidelines.
 
 ## Troubleshooting
 

@@ -51,7 +51,8 @@ This guide describes inserting new blank pages into a PDF using the **Organize P
 
 You can also insert blank pages programmatically using the `InsertBlankPagesAsync` method.
 
-```razor
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="InsertBlankMethod">Insert</SfButton>
@@ -67,7 +68,8 @@ You can also insert blank pages programmatically using the `InsertBlankPagesAsyn
         await Viewer?.InsertBlankPagesAsync(2, 3);
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 In this example, `InsertBlankPagesAsync(2, 3)` inserts 3 blank pages starting at index 2.
 

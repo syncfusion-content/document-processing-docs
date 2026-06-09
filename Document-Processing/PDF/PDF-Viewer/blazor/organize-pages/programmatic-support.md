@@ -29,15 +29,23 @@ The page organizer feature can be enabled or disabled using the `EnablePageOrgan
 
 ## Open the page organizer on document load
 
-Use the `IsPageOrganizerOpen` property to control whether the page organizer opens automatically when a document loads. The default value is `false`.
+Use the `PageOrganizerVisibility` property to control whether the page organizer opens automatically when a document loads. By binding this property to a state variable and updating it in the `DocumentLoaded` event, you can ensure the page organizer appears once the document has been fully loaded. The default value is `false`.
 
 {% tabs %}
 {% highlight razor %}
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%"
-              IsPageOrganizerOpen="true">
+              PageOrganizerVisibility="isVisible">
+<PdfViewerEvents DocumentLoaded="OnDocumentLoaded"></PdfViewerEvents>
 </SfPdfViewer2>
+@code {
+    private bool isVisible = false;
+    private void OnDocumentLoaded()
+    {
+        isVisible = true;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -64,51 +72,31 @@ The `PageOrganizerSettings` API customizes page-management capabilities. Use it 
 {% endhighlight %}
 {% endtabs %}
 
-## Open the page organizer panel
+## Open and close the page organizer panel
 
-The `OpenPageOrganizerAsync` method programmatically opens the page organizer panel, providing access to page management tools.
+The page organizer panel can be opened or closed programmatically by binding the `PageOrganizerVisibility` property to a state variable. Set it to `true` to open the page organizer panel and `false` to close it. This approach provides easy control over the visibility of page management tools through button clicks or other user interactions.
 
 {% tabs %}
 {% highlight razor %}
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="OpenPageOrganizer">Open PageOrganizer Pane</SfButton>
-<SfPdfViewer2 @ref="Viewer" DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-              Height="100%"
-              Width="100%">
-</SfPdfViewer2>
-
-@code {
-    SfPdfViewer2? Viewer;
-
-    private async Task OpenPageOrganizer() {
-        await Viewer?.OpenPageOrganizerAsync();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Close the page organizer panel
-
-The `ClosePageOrganizerAsync` method programmatically closes the page organizer panel.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Buttons
-
 <SfButton OnClick="ClosePageOrganizer">Close PageOrganizer Pane</SfButton>
-<SfPdfViewer2 @ref="Viewer" DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
-              Width="100%">
+              Width="100%"
+              PageOrganizerVisibility="isVisible">
 </SfPdfViewer2>
 
 @code {
-    SfPdfViewer2? Viewer;
+    private bool isVisible = false;
 
-    private async Task ClosePageOrganizer() {
-        await Viewer?.ClosePageOrganizerAsync();
+    private void OpenPageOrganizer() {
+        isVisible = true;
+    }
+
+    private void ClosePageOrganizer() {
+        isVisible = false;
     }
 }
 
