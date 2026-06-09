@@ -14,6 +14,7 @@ Formatting options make your data easier to view and understand. The different t
 * Number Formatting
 * Text Formatting
 * Cell Formatting
+* Conditional Formatting
 * Rich Text Formatting
 
 ## Number Formatting
