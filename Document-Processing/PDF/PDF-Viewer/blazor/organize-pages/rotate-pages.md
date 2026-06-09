@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rotate pages using the Organize Pages view
+# Rotate pages using the Organize Pages view in Blazor
 
 ## Overview
 
@@ -67,6 +67,8 @@ To enable or disable the **Rotate Pages** button in the Organize Pages toolbar, 
 
 - **Rotate controls disabled**: Ensure `PageOrganizerSettings.canRotate` is not set to `false`.
 - **Changes not saved**: Verify that the server-side PDF processing is configured correctly.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Page%20Organizer/Page-Organizer-Settings)
 
 ## Related topics
 

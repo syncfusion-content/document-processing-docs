@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Zoom pages using the Organize Pages tool
+# Zoom pages using the Organize Pages tool in Blazor
 
 ## Overview
 
@@ -74,6 +74,8 @@ To enable or disable the **Zoom Pages** button in the Organize Pages toolbar, se
 
 - **Zoom control not visible**: Confirm `ShowImageZoomingSlider` is set to `true` in the `PageOrganizerSettings`.
 - **Zoom slider not responding**: Ensure `ImageZoomMin` is less than or equal to `ImageZoomMax`.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Page%20Organizer/Page-Organizer-Settings)
 
 ## Related topics
 

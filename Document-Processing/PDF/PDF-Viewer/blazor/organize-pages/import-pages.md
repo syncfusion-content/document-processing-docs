@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import pages using the Organize Pages tool
+# Import pages using the Organize Pages tool in Blazor
 
 ## Overview
 
@@ -52,7 +52,6 @@ You can also import pages from another PDF programmatically using the `InsertPag
 ### Import pages from byte array
 
 ```chstml
-@page "/"
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="ImportMethod">Import</SfButton>
@@ -74,7 +73,6 @@ You can also import pages from another PDF programmatically using the `InsertPag
 ### Import pages from stream
 
 ```cshtml
-@page "/"
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="ImportMethodStream">Import Stream</SfButton>
@@ -98,6 +96,8 @@ You can also import pages from another PDF programmatically using the `InsertPag
 
 - **Import fails**: Ensure the selected file is a valid PDF and the browser file picker is permitted.
 - **Imported pages not visible**: Confirm that the changes are persisted using **Save** or **Save As**.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Page%20Organizer/Organize-API-Support/Components/Pages/Home.razor)
 
 ## Related topics
 

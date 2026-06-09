@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remove pages using the Organize Pages tool
+# Remove pages using the Organize Pages tool in Blazor
 
 ## Overview
 
@@ -111,6 +111,9 @@ You can delete pages programmatically using the `DeletePagesAsync` method. This 
 
 - **Delete button disabled**: Ensure `PageOrganizerSettings.CanDelete` is not set to `false`.
 - **Selection not working**: Verify that the Organize Pages dialog has focus; use Shift+click for range selection.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Page%20Organizer/Organize-API-Support/Components/Pages/Home.razor)
+
 
 ## Related topics
 

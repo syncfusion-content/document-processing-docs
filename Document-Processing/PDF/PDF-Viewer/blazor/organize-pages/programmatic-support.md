@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Programmatic Support for Organize Pages in Blazor PDF Viewer control | Syncfusion
+title: Programmatic Support Organize Pages in Blazor PDF Viewer | Syncfusion
 description: Learn here all about Programmatic Support for Organize Pages in Syncfusion Blazor PDF Viewer control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Programmatic support for Organize Pages
+# Programmatic support for Organize Pages in Blazor
 
 The Blazor PDF Viewer exposes programmatic APIs for organizing pages so applications can integrate page-management workflows (for example: enable/disable organizer, open/close the organizer, and customize behavior). This section documents the available properties, methods, and settings used to control the Organize Pages experience.
 
@@ -17,8 +17,6 @@ The page organizer feature can be enabled or disabled using the `EnablePageOrgan
 
 {% tabs %}
 {% highlight razor %}
-
-@page "/"
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
@@ -35,9 +33,6 @@ Use the `IsPageOrganizerOpen` property to control whether the page organizer ope
 
 {% tabs %}
 {% highlight razor %}
-
-@page "/"
-
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%"
@@ -53,8 +48,6 @@ The `PageOrganizerSettings` API customizes page-management capabilities. Use it 
 
 {% tabs %}
 {% highlight razor %}
-
-@page "/"
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
@@ -75,8 +68,8 @@ The `PageOrganizerSettings` API customizes page-management capabilities. Use it 
 
 The `OpenPageOrganizerAsync` method programmatically opens the page organizer panel, providing access to page management tools.
 
-```cshtml
-@page "/"
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="OpenPageOrganizer">Open PageOrganizer Pane</SfButton>
@@ -92,14 +85,17 @@ The `OpenPageOrganizerAsync` method programmatically opens the page organizer pa
         await Viewer?.OpenPageOrganizerAsync();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Close the page organizer panel
 
 The `ClosePageOrganizerAsync` method programmatically closes the page organizer panel.
 
-```cshtml
-@page "/"
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="ClosePageOrganizer">Close PageOrganizer Pane</SfButton>
@@ -115,4 +111,8 @@ The `ClosePageOrganizerAsync` method programmatically closes the page organizer 
         await Viewer?.ClosePageOrganizerAsync();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Page%20Organizer/Organize-API-Support/Components/Pages/Home.razor)

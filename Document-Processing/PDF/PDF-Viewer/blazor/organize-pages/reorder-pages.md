@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Reorder pages using the Organize Pages view
+# Reorder pages using the Organize Pages view in Blazor
 
 ## Overview
 
@@ -60,6 +60,9 @@ To enable or disable the **Reorder pages** option in the Organize Pages, update 
 - **Thumbnails won't move**: Confirm `PageOrganizerSettings.CanRearrange` is not set to `false`.
 - **Changes not saved**: Verify that the server-side PDF processing is configured correctly.
 - **Page organizer not visible**: Ensure `EnablePageOrganizer` is set to `true`.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Page%20Organizer/Page-Organizer-Settings)
+
 
 ## Related topics
 

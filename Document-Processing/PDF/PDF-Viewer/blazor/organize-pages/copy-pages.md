@@ -64,7 +64,8 @@ You can also duplicate pages programmatically using the Blazor PDF Viewer's `Dup
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="DuplicateMethod">Duplicate</SfButton>
-<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+<SfPdfViewer2 @ref=Viewer
+			  DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
 </SfPdfViewer2>

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert blank pages using the Organize Pages tool
+# Insert blank pages using the Organize Pages tool in Blazor
 
 ## Overview
 
@@ -52,7 +52,6 @@ This guide describes inserting new blank pages into a PDF using the **Organize P
 You can also insert blank pages programmatically using the `InsertBlankPagesAsync` method.
 
 ```razor
-@page "/"
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="InsertBlankMethod">Insert</SfButton>
@@ -78,6 +77,8 @@ For more details on programmatic support, see [Programmatic support for Organize
 
 - **Organize Pages button missing**: Verify that Organize Pages is enabled in the toolbar.
 - **Inserted pages not saved**: Confirm that the changes are persisted using **Save** or **Save As**.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Page%20Organizer/Organize-API-Support/Components/Pages/Home.razor)
 
 ## Related topics
 
