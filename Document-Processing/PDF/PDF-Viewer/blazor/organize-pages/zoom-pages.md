@@ -47,7 +47,7 @@ This guide explains how to change the thumbnail zoom level in the **Organize Pag
 
 ## Configure thumbnail zoom settings
 
-To customize the thumbnail zoom behavior, use the [`PageOrganizerSettings`](https://help.syncfusion.com/document-processing/blazor/pdfviewer/organize-pages#page-organizer-settings) property with the following options:
+To customize the thumbnail zoom behavior, use the [`PageOrganizerSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PageOrganizerSettings) property with the following options:
 
 | Property | Type | Description |
 |---|---|---|
