@@ -30,3 +30,4 @@ The text search functionality allows you to retrieve and locate content within P
 
 - [Text Search Features](./text-search-features)
 - [Text Search Events](./text-search-events)
+- [Extract and Highlight Text in Blazor PDF Viewer Component](../faqs/how-to-extract-particular-text-and-highlight)

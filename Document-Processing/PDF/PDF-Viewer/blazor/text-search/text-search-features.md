@@ -167,3 +167,4 @@ Use the [PdfViewerTextSearchColorSettings](https://help.syncfusion.com/cr/blazor
 
 - [Text Search Events](./text-search-events)
 - [Text Selection](../text-selection/overview)
+- [Extract and Highlight Text in Blazor PDF Viewer Component](../faqs/how-to-extract-particular-text-and-highlight)

@@ -98,3 +98,4 @@ The [OnTextSearchComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 - [Text Search Features](./text-search-features)
 - [Text Selection](../text-selection/overview)
+- [Extract and Highlight Text in Blazor PDF Viewer Component](../faqs/how-to-extract-particular-text-and-highlight)
