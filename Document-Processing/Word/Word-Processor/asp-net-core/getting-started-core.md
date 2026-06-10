@@ -47,7 +47,7 @@ N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nug
 
 ### Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core Tag Helper
 
-Open `~/Views/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelper.
+Open `~/Pages/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelper.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_ViewImports.cshtml" %}
@@ -59,7 +59,7 @@ Open `~/Views/_ViewImports.cshtml` file and import the `Syncfusion.EJ2` TagHelpe
 
 ### Add Themes and Script References
 
-Here, the theme and scripts are referenced using CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` file as follows,
+Here, the theme and scripts are referenced using CDN inside the `<head>` of `~/Pages/Shared/_Layout.cshtml` file as follows,
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -79,7 +79,7 @@ N> Refer the [Themes topic](https://ej2.syncfusion.com/aspnetcore/documentation/
 
 ### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Script Manager
 
-Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the `~/Views/Shared/_Layout.cshtml` file as follows.
+Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the `~/Pages/Shared/_Layout.cshtml` file as follows.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -95,7 +95,7 @@ Also, register the script manager `<ejs-scripts>` at the end of `<body>` in the 
 
 ### Add the Document Editor component
 
-Add the Document Editor tag helper in `~/Views/Home/Index.cshtml` page.
+Add the Document Editor control in `~/Pages/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/Index.cshtml" %}
