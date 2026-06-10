@@ -580,12 +580,12 @@ PdfGrid childPdfGrid = new PdfGrid();
 childPdfGrid.Columns.Add(5);
 for (int i = 0; i < 5; i++)
 {
-PdfGridRow row = childPdfGrid.Rows.Add();
+    PdfGridRow row = childPdfGrid.Rows.Add();
 
-for (int j = 0; j < 5; j++)
-{
-row.Cells[j].Value = String.Format("Cell [{0} {1}]", j, i);
-}
+    for (int j = 0; j < 5; j++)
+    {
+        row.Cells[j].Value = String.Format("Cell [{0} {1}]", j, i);
+    }
 }
 //Set the value as another PdfGrid in a cell.
 parentPdfGrid.Rows[0].Cells[1].Value = childPdfGrid;

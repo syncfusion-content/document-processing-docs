@@ -76,7 +76,6 @@ loadedDocument.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-the-texts-from-a-page-in-the-PDF-document/). 
 
 N> In this method, the text is extracted in the order in which it is written in the document stream and it may not be in the order in which it is viewed in the PDF reader application.
-
 N> Extracting text from the PDF document pages will not load the entire document content into memory.
 
 The below code illustrates how to extract the text from entire PDF document:
@@ -247,10 +246,10 @@ string extractedText = page.ExtractText(out lineCollection);
 // Gets each line from the collection
 foreach (var line in lineCollection.TextLine)
 {
-    // Gets bounds of the line
-    RectangleF lineBounds = line.Bounds;
-    // Gets text in the line
-    string text = line.Text;
+  // Gets bounds of the line
+  RectangleF lineBounds = line.Bounds;
+  // Gets text in the line
+  string text = line.Text;
 }
 
 {% endhighlight %}
@@ -328,12 +327,12 @@ string extractedText = page.ExtractText(out lineCollection);
 // Gets each line from the collection
 foreach (var line in lineCollection.TextLine)
 {   
-    // Gets bounds of the line
-    RectangleF lineBounds = line.Bounds;
-    // Gets text in the line
-    string text = line.Text;
-    // Gets collection of the words in the line
-    List<TextWord> textWordCollection = line.WordCollection;
+  // Gets bounds of the line
+  RectangleF lineBounds = line.Bounds;
+  // Gets text in the line
+  string text = line.Text;
+  // Gets collection of the words in the line
+  List<TextWord> textWordCollection = line.WordCollection;
 }
 
 {% endhighlight %}

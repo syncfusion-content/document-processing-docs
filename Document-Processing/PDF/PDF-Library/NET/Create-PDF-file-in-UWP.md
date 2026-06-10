@@ -23,16 +23,19 @@ Step 2: Install the [Syncfusion.Pdf.UWP](https://www.nuget.org/packages/Syncfusi
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the `Syncfusion.Licensing` assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Create button in *MainPage.Xaml* page using below code example and create *Button_Click* event.
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight HTML %}
 
 <Grid>
   <Button Content="CreatePDF" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="150" Height="100" Click="Button_Click" />
 </Grid>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Include the following namespaces in the *MainPage.xaml.cs* file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -48,34 +51,38 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Include the following code example in the click event of the button in *MainPage.xaml.cs* file to create PDF document using the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. Then use the [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) object to draw the text on the PDF page.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Create a PDF document. 
 using (PdfDocument document = new PdfDocument())
 {
-//Add a page to the document.
-PdfPage page = document.Pages.Add();
-//Create PDF graphics for the page
-PdfGraphics graphics = page.Graphics;
-//Set the standard font.
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-//Draw the text.
-graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-//Create memory stream.
-MemoryStream ms = new MemoryStream();
-//Open the document in browser after saving it.
-document.Save(ms);
-//Close the document.
-document.Close(true);
-Save(ms, "Sample.pdf");
+    //Add a page to the document.
+    PdfPage page = document.Pages.Add();
+    //Create PDF graphics for the page
+    PdfGraphics graphics = page.Graphics;
+    //Set the standard font.
+    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+    //Draw the text.
+    graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+    //Create memory stream.
+    MemoryStream ms = new MemoryStream();
+    //Open the document in browser after saving it.
+    document.Save(ms);
+    //Close the document.
+    document.Close(true);
+    Save(ms, "Sample.pdf");
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Use the following helper method to save the stream as a physical file and open the file for viewing.
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 #region Helper Methods
@@ -122,6 +129,7 @@ if (stFile != null)
 #endregion
 
 {% endhighlight %}
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/UWP/Create-a-new-PDF-document).
 
@@ -132,6 +140,7 @@ By executing the program, you will get the PDF document as follows.
 
 Load image stream from the local files on disk and draw the images through the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Single_System_Single_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The following code example shows how to create a PDF document with an image.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Create a new PDF document.
@@ -155,12 +164,14 @@ doc.Close(true);
 Save(ms, "Sample.pdf");
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get the PDF document as follows.
 ![PDF generation output](GettingStarted_images/PDF_with_image.png)
 
 
 ## Creating a PDF document with table
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Create a new PDF document.
@@ -198,6 +209,7 @@ doc.Close(true);
 Save(stream, "Output.pdf");
 
 {% endhighlight %}
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/UWP/Create-PDF-document-with-image).
 
@@ -207,6 +219,7 @@ By executing the program, you will get the PDF document as follows.
 ## Creating a simple PDF document with basic elements
 The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The following code example shows how to create a PDF document and add a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) to it along with the [PdfPageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageSettings.html).
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Creates a new PDF document.
@@ -219,6 +232,7 @@ PdfPage page = document.Pages.Add();
 PdfGraphics graphics = page.Graphics;
 
 {% endhighlight %}
+{% endtabs %}
 
 1. Essential<sup>&reg;</sup> PDF has APIs similar to the .NET GDI+ which help draw elements to the PDF page like 2D drawing in .NET.
 2. Unlike System.Drawing APIs, all units are measured in points instead of pixels.
@@ -226,6 +240,7 @@ PdfGraphics graphics = page.Graphics;
 4. Essential<sup>&reg;</sup> PDF provides the rendered bounds for elements added through [PdfLayoutResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutResult.html) objects. These bounds can be used to add successive elements and prevent content overlap.
 
 The following code example explains how to add an image from disk to a PDF document, by providing the rectangle coordinates. 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Load the image as stream.
@@ -237,6 +252,7 @@ RectangleF bounds = new RectangleF(176, 0, 390, 130);
 page.Graphics.DrawImage(image, bounds);
 
 {% endhighlight %}
+{% endtabs %}
 
 The following methods can be used to add text to a PDF document.
 
@@ -246,6 +262,7 @@ The following methods can be used to add text to a PDF document.
 The ```PdfTextElement``` provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. This is not available in the ```DrawString``` method. 
 
 The following code example adds the necessary text such as address, invoice number and date to create a basic invoice application. 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 PdfBrush solidBrush = new PdfSolidBrush(new PdfColor(126, 151, 173));
@@ -278,12 +295,14 @@ PointF endPoint = new PointF(graphics.ClientSize.Width, result.Bounds.Bottom + 3
 graphics.DrawLine(linePen, startPoint, endPoint);
 
 {% endhighlight %}
+{% endtabs %}
 
 Essential<sup>&reg;</sup> PDF provides two types of table models. The difference between both the table models can be referred from the link 
 [Difference between PdfLightTable and PdfGrid](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-tables)
 
 Since the invoice document requires only simple cell customizations, the given code example explains how to create a simple invoice table by using [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html).
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Creates the datasource for the table.
@@ -325,8 +344,10 @@ layoutFormat.Layout = PdfLayoutType.Paginate;
 PdfGridLayoutResult gridResult = grid.Draw(page, new RectangleF(new PointF(0, result.Bounds.Bottom + 40), new SizeF(graphics.ClientSize.Width, graphics.ClientSize.Height - 100)), layoutFormat);
 
 {% endhighlight %}
+{% endtabs %}
 
 The following code example shows how to save the invoice document to disk and dispose the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object.
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 //Save the PDF document to stream.
 MemoryStream stream = new MemoryStream();
@@ -336,6 +357,7 @@ document.Close(true);
 //Save the stream as a PDF document file on the local machine. Refer to the PDF/UWP section for respective code samples.
 Save(stream, "Sample.pdf");
 {% endhighlight %}
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/UWP/Create-PDF-document-with-basic-elements).
 
@@ -356,6 +378,7 @@ The following guide shows how to fill out a sample PDF form.
 
 Essential<sup>&reg;</sup> PDF allows you to fill the form fields by using [PdfLoadedField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedField.html) class. You can get the form field either by using its field name or field index.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Create the file open picker.
@@ -391,6 +414,7 @@ loadedDocument.Close(true);
 Save(stream, "output.pdf");
 
 {% endhighlight %}
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/UWP/Fill-form-in-a-PDF-document).
 

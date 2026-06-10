@@ -30,7 +30,7 @@ Step 5: A default action method named Index will be present in *HomeController.c
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @{
     Html.BeginForm("CreatePDFDocument", "Home", FormMethod.Get);

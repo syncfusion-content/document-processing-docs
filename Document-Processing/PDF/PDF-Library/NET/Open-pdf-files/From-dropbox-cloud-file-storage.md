@@ -11,10 +11,7 @@ To Open a PDF file from Dropbox cloud file storage, you can follow the steps bel
 
 Step 1: Create a Dropbox API
 
-
 To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
-
-
 
 Step 2: Create a simple console application
 ![Project configuration window](Open-PDF-Images/Console-Application.png)
@@ -26,27 +23,25 @@ Step 3: Install the and [Dropbox.Api](https://www.nuget.org/packages/Dropbox.Api
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Dropbox.Api;
 
 {% endhighlight %}
-
 {% endtabs %}
-
 
 Step 5: Add the below code example to load a PDF from Dropbox cloud file storage.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 // Define the access token for authentication with the Dropbox API
-var accessToken = "YOUR_ACCESS_TOKEN";// Replace with your actual access token
+// Replace with your actual access token
+var accessToken = "YOUR_ACCESS_TOKEN";
     
 // Define the file path in Dropbox where the PDF file is located
-var filePathInDropbox = "/path/to/save/Sample.pdf"; // Replace with the actual file path in Dropbox
+// Replace with the actual file path in Dropbox
+var filePathInDropbox = "/path/to/save/Sample.pdf";
 // Create a new DropboxClient instance using the provided access token
 using (var dbx = new DropboxClient(accessToken))
 {
@@ -67,7 +62,6 @@ using (var dbx = new DropboxClient(accessToken))
 }    
 
 {% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open-PDF-file/To%20Dropbox%20Cloud%20Storage).

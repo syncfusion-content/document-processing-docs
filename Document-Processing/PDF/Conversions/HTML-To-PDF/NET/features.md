@@ -2027,7 +2027,6 @@ document.Close(True)
 Windows status can be used instead of additional delay. In additional delay, the amount of time required for loading the resources is unpredictable. This behavior can be avoided by using [WindowStatus ](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_WindowStatus) property.
 
 N> This feature requires changes in the HTML file.
-
 N> If windows status does not match in code and HTML, then the converter will meet with deadlock.
 
 Refer to the following code snippet.

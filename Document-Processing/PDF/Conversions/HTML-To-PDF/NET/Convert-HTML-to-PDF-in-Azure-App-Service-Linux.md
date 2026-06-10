@@ -36,11 +36,13 @@ There are two ways to install the dependency packages to Azure server,
 
 2. From the terminal window, you can install the dependency packages. Use the following single command to install all dependencies packages.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight dockerfile %}
 
 apt-get update && apt-get install -yq --no-install-recommends  libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
 
 {% endhighlight %}
+{% endtabs %}
 
 N> By following the above steps 3.1, we need to install dependencies through SSH all the time after publishing the web application.
 
@@ -54,6 +56,7 @@ N> By following the above steps 3.1, we need to install dependencies through SSH
 
 3. Include the following code snippet to install the dependencies code in Configure method in *startup.cs* file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Install the dependencies packages for HTML to PDF conversion in Linux
@@ -61,7 +64,9 @@ string shellFilePath = System.IO.Path.Combine(env.ContentRootPath, "dependencies
 InstallDependecies(shellFilePath);
 
 {% endhighlight %}
+{% endtabs %}
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 private void InstallDependecies(string shellFilePath) 
@@ -81,12 +86,14 @@ private void InstallDependecies(string shellFilePath)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 N>  By following the above steps 3.2, we can deploy application in Azure app service Linux and no need to install dependencies through SSH.
 
 Step 4: Add an Export to the PDF button in the index.cshtml.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 <div class="btn">
     @{ Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
@@ -97,9 +104,11 @@ Step 4: Add an Export to the PDF button in the index.cshtml.
 </div>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Include the following namespaces.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
@@ -107,9 +116,11 @@ using Syncfusion.Pdf;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add the code samples in the controller to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class. .
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public ActionResult ExportToPDF()
@@ -156,6 +167,7 @@ private void InstallDependecies(string shellFilePath)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
 N> ```csharp

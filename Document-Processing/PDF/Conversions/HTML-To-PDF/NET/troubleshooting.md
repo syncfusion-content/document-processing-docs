@@ -946,44 +946,44 @@ We can install the required dependencies using the dependencies vis shell script
 
 {% highlight C# %}
 
-	private static void InstallLinuxPackages(FileInfo functionAppDirectory)
+private static void InstallLinuxPackages(FileInfo functionAppDirectory)
+{
+	if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
 	{
-		if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-		{
-			return;
-		}
-		FileAccessPermissions ExecutableFilePermissions = FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute |
-		FileAccessPermissions.GroupRead | FileAccessPermissions.GroupExecute | FileAccessPermissions.OtherRead | FileAccessPermissions.OtherExecute;
-		//Install the dependencies packages for HTML to PDF conversion in Linux
-		string shellFilePath = Path.Combine(functionAppDirectory.Directory.Parent.FullName, @"wwwroot/data");
-		string tempBlinkDir = Path.GetTempPath();
-		string dependenciesPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
-		if (!File.Exists(dependenciesPath))
-		{
-			CopyFilesRecursively(shellFilePath, tempBlinkDir);
-			var execPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
-			if (File.Exists(execPath))
-			{
-				var code = Function1.Chmod(execPath, ExecutableFilePermissions);
-				if (code != 0)
-				{
-					throw new Exception("Chmod operation failed");
-				}
-			}
-			Process process = new Process
-			{
-				StartInfo = new ProcessStartInfo
-				{
-					FileName = "/bin/bash",
-					Arguments = "-c " + execPath,
-					CreateNoWindow = true,
-					UseShellExecute = false,
-				}
-			};
-			process.Start();
-			process.WaitForExit();
-		}
+		return;
 	}
+	FileAccessPermissions ExecutableFilePermissions = FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute |
+	FileAccessPermissions.GroupRead | FileAccessPermissions.GroupExecute | FileAccessPermissions.OtherRead | FileAccessPermissions.OtherExecute;
+	//Install the dependencies packages for HTML to PDF conversion in Linux
+	string shellFilePath = Path.Combine(functionAppDirectory.Directory.Parent.FullName, @"wwwroot/data");
+	string tempBlinkDir = Path.GetTempPath();
+	string dependenciesPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
+	if (!File.Exists(dependenciesPath))
+	{
+		CopyFilesRecursively(shellFilePath, tempBlinkDir);
+		var execPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
+		if (File.Exists(execPath))
+		{
+			var code = Function1.Chmod(execPath, ExecutableFilePermissions);
+			if (code != 0)
+			{
+				throw new Exception("Chmod operation failed");
+			}
+		}
+		Process process = new Process
+		{
+			StartInfo = new ProcessStartInfo
+			{
+				FileName = "/bin/bash",
+				Arguments = "-c " + execPath,
+				CreateNoWindow = true,
+				UseShellExecute = false,
+			}
+		};
+		process.Start();
+		process.WaitForExit();
+	}
+}
 
 {% endhighlight %}
 

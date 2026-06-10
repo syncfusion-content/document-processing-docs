@@ -9,7 +9,6 @@ documentation: UG
 
 To load a PDF file from Azure Blob Storage, follow these steps:
 
-
 Step 1: Create a simple console application
 
 ![Project configuration window](Open-PDF-Images/Console-Application.png)

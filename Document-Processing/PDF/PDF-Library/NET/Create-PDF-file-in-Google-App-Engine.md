@@ -67,7 +67,7 @@ Step 6: A default action method named Index will be present in HomeController.cs
 Step 7: Add a new button in the Index.cshtml as shown in the following.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("CreateDocument", "Home", FormMethod.Get);
     {
@@ -143,7 +143,7 @@ N> If you have your sample application in your local machine, drag and drop it i
 Step 3: Open the Cloud Shell Terminal and run the following **command** to view the files and directories within your **current Workspace**.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CLI %}
 
 ls
 
@@ -155,7 +155,7 @@ ls
 Step 4: Run the following **command** to navigate which sample you want to run.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CLI %}
 
 cd Web_Application
 
@@ -167,7 +167,7 @@ cd Web_Application
 Step 5: To ensure that the sample is working correctly, please run the application using the following command.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CLI %}
 
 dotnet run --urls=http://localhost:8080
 
@@ -193,7 +193,7 @@ Step 8: Close the preview page and return to the terminal then press **Ctrl+C** 
 Step 1: Run the following command in the **Cloud Shell Terminal** to publish the application.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CLI %}
 
 dotnet publish -c Release
 
@@ -205,7 +205,7 @@ dotnet publish -c Release
 Step 2: Run the following command in the **Cloud Shell Terminal** to navigate to the publish folder.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CLI %}
 
 cd bin/Release/net8.0/publish/
 
@@ -219,7 +219,7 @@ cd bin/Release/net8.0/publish/
 Step 1: Add the app.yaml file to the publish folder with the following contents.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CLI %}
 
 cat <<EOT >> app.yaml
 env: flex
@@ -235,7 +235,7 @@ EOT
 Step 2: Add the Docker file to the publish folder with the following contents.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CLI %}
 
 cat <<EOT >> Dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
@@ -261,7 +261,7 @@ Step 3: You can ensure **Docker** and **app.yaml** files are added in **Workspac
 Step 1: To deploy the application to the App Engine, run the following command in Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CLI %}
 
 gcloud app deploy --version v0
 
