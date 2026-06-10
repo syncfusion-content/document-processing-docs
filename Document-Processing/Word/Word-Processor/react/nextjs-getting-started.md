@@ -103,16 +103,6 @@ Add the Document Editor component and its dependent component styles available i
 {% highlight css tabtitle="globals.css" %}
 
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-<<<<<<< .mine
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-react-documenteditor/styles/material.css';
-=======
 @import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
@@ -121,7 +111,6 @@ Add the Document Editor component and its dependent component styles available i
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
 @import '../node_modules/@syncfusion/ej2-react-documenteditor/styles/tailwind3.css';
->>>>>>> .theirs
 
 {% endhighlight %}
 {% endtabs %}
