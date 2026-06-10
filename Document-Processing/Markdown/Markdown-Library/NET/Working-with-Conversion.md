@@ -1,6 +1,6 @@
 ---
 title: Working with Conversion in .NET Markdown Library | Syncfusion
-description: Learn how to convert Markdown documents to various formats using the .NET Markdown library.
+description: Learn how to convert Markdown documents to various formats using the .NET Markdown library without any third-party dependencies.
 platform: document-processing
 control: Markdown
 documentation: UG
