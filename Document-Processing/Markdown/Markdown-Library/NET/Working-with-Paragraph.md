@@ -731,3 +731,52 @@ markdownDocument.Dispose()
 
 A complete working sample is available on GitHub.
 
+## Adding a thematic break
+
+A thematic break (horizontal rule) is used to create a visual separation between sections in a Markdown document. The Syncfusion Markdown library allows you to add a thematic break by using the `AddThematicBreak` method of the `MarkdownDocument` class.
+
+The following code example demonstrates how to add a thematic break to a Markdown document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+// Creates a new MarkdownDocument instance
+MarkdownDocument markdownDocument = new MarkdownDocument();
+// Adds a new paragraph to the document
+MdParagraph firstParagraph = markdownDocument.AddParagraph();
+firstParagraph.AddTextRange().Text = "This is the first section content.";
+// Adds a thematic break to the document
+MdThematicBreak thematicBreak = markdownDocument.AddThematicBreak();
+// Adds another paragraph after the thematic break
+MdParagraph secondParagraph = markdownDocument.AddParagraph();
+secondParagraph.AddTextRange().Text = "This is the second section content.";
+// Saves the Markdown document to the file system
+markdownDocument.Save("Output.md");
+// Disposes the document
+markdownDocument.Dispose();
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+// Creates a new MarkdownDocument instance
+Dim markdownDocument As New MarkdownDocument()
+// Adds a new paragraph to the document
+Dim firstParagraph As MdParagraph = markdownDocument.AddParagraph()
+firstParagraph.AddTextRange().Text = "This is the first section content."
+// Adds a thematic break to the document
+Dim thematicBreak As MdThematicBreak = markdownDocument.AddThematicBreak()
+// Adds another paragraph after the thematic break
+Dim secondParagraph As MdParagraph = markdownDocument.AddParagraph()
+secondParagraph.AddTextRange().Text = "This is the second section content."
+// Saves the Markdown document to the file system
+markdownDocument.Save("Output.md")
+// Disposes the document
+markdownDocument.Dispose()
+
+{% endhighlight %}
+
+{% endtabs %}
+
+A complete working sample is available on GitHub.
