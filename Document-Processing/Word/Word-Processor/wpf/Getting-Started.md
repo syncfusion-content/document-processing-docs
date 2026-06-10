@@ -429,7 +429,7 @@ To add the controls and apply a theme manually in XAML, follow these steps:
 
 Refer to the following link for detailed instructions:
 
-[Add SfRichTextBoxAdv and SfRichTextRibbon in XAML](https://help.syncfusion.com/document-processing/word/word-processor/wpf/getting-started?tabcontent=via-xaml#add-sfrichtextribbon-dependencies)
+[Add SfRichTextBoxAdv and SfRichTextRibbon in XAML](https://help.syncfusion.com/document-processing/word/word-processor/wpf/getting-started?tabcontent=via-xaml#add-ribbon-ui-to-sfrichtextboxadv)
 
 **Apply Theme in XAML**
 
@@ -473,62 +473,68 @@ To apply a theme programmatically in C#, add the below code in MainWindow.xaml.c
 {% tabs %}
 {% highlight c# tabtitle="MainWindow.xaml.cs" %}
 
+using Syncfusion.SfSkinManager;
 using Syncfusion.Windows.Controls.RichTextBoxAdv;
 using Syncfusion.Windows.Tools.Controls;
-using Syncfusion.SfSkinManager;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 
-public partial class MainWindow : RibbonWindow
+namespace DocumentEditor
 {
-    public MainWindow()
+    public partial class MainWindow : RibbonWindow
     {
-        InitializeComponent();
+        public MainWindow()
+        {
+            InitializeComponent();
 
-        // Create the root Grid container for layout
-        Grid rootGrid = new Grid();
+            // Create the root Grid container for layout
+            Grid rootGrid = new Grid();
 
-        // Define the first row (auto-sized for ribbon)
-        RowDefinition row1 = new RowDefinition();
-        row1.Height = GridLength.Auto;
+            // Define the first row (auto-sized for ribbon)
+            RowDefinition row1 = new RowDefinition();
+            row1.Height = GridLength.Auto;
 
-        // Define the second row (fills remaining space for editor)
-        RowDefinition row2 = new RowDefinition();
-        row2.Height = new GridLength(1, GridUnitType.Star);
+            // Define the second row (fills remaining space for editor)
+            RowDefinition row2 = new RowDefinition();
+            row2.Height = new GridLength(1, GridUnitType.Star);
 
-        // Add row definitions to the grid
-        rootGrid.RowDefinitions.Add(row1);
-        rootGrid.RowDefinitions.Add(row2);
+            // Add row definitions to the grid
+            rootGrid.RowDefinitions.Add(row1);
+            rootGrid.RowDefinitions.Add(row2);
 
-        // Instantiate the rich text editor control
-        SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
+            // Instantiate the rich text editor control
+            SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
 
-        // Set background color for better UI appearance
-        richTextBoxAdv.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F1F1F1"));
+            // Set background color for better UI appearance
+            richTextBoxAdv.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F1F1F1"));
 
-        // Instantiate the ribbon control
-        SfRichTextRibbon richTextRibbon = new SfRichTextRibbon();
+            // Instantiate the ribbon control
+            SfRichTextRibbon richTextRibbon = new SfRichTextRibbon();
 
-        // Enable pixel snapping for sharper rendering
-        richTextRibbon.SnapsToDevicePixels = true;
+            // Enable pixel snapping for sharper rendering
+            richTextRibbon.SnapsToDevicePixels = true;
 
-        // Set the DataContext of the ribbon to the editor
-        // This allows the ribbon to interact with the editor (binding commands)
-        richTextRibbon.DataContext = richTextBoxAdv;
+            // Set the DataContext of the ribbon to the editor
+            // This allows the ribbon to interact with the editor (binding commands)
+            richTextRibbon.DataContext = richTextBoxAdv;
 
-        // Position the ribbon in the first row
-        Grid.SetRow(richTextRibbon, 0);
+            // Position the ribbon in the first row
+            Grid.SetRow(richTextRibbon, 0);
 
-        // Position the editor in the second row
-        Grid.SetRow(richTextBoxAdv, 1);
+            // Position the editor in the second row
+            Grid.SetRow(richTextBoxAdv, 1);
 
-        // Add controls to the grid
-        rootGrid.Children.Add(richTextRibbon);
-        rootGrid.Children.Add(richTextBoxAdv);
+            // Add controls to the grid
+            rootGrid.Children.Add(richTextRibbon);
+            rootGrid.Children.Add(richTextBoxAdv);
 
-        // Set the constructed grid as the content of the UserControl
-        this.Content = rootGrid;
+            // Set the constructed grid as the content of the UserControl
+            this.Content = rootGrid;
 
-        // Applies the Windows 11 Light theme to the window
-        SfSkinManager.SetTheme(this, new Theme() { ThemeName = "Windows11Light" });
+            // Applies the Windows 11 Light theme to the window
+            SfSkinManager.SetTheme(this, new Theme() { ThemeName = "Windows11Light" });
+        }
     }
 }
 
