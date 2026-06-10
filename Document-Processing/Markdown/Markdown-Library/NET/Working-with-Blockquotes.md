@@ -28,10 +28,8 @@ The following code example demonstrates how to add a simple blockquote to a Mark
  paragraph.BlockQuoteLevel = 1;
  // Adds text to the blockquote paragraph.
  paragraph.AddTextRange().Text = "This is a simple blockquote in a Markdown document.";
- // Gets the Markdown text of the document
- string markdownText = markdownDocument.GetMarkdownText();
  // Saves the Markdown document to the file system
- File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+ markdownDocument.Save("Output.md");
  // Disposes the document
  markdownDocument.Dispose();
 
@@ -49,10 +47,8 @@ paragraph.HasBlockquote = True
 paragraph.BlockQuoteLevel = 1
 ' Adds text to the blockquote paragraph.
 paragraph.AddTextRange().Text = "This is a simple blockquote in a Markdown document."
-' Gets the Markdown text of the document
-Dim markdownText As String = markdownDocument.GetMarkdownText()
 ' Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+markdownDocument.Save("Output.md")
 ' Disposes the document
 markdownDocument.Dispose()
 
@@ -80,11 +76,9 @@ The following code example demonstrates how to create a blockquote using the `Ap
  paragraph.ApplyParagraphStyle("Quote");
  // Adds text to the blockquote paragraph.
  paragraph.AddTextRange().Text = "This blockquote is created using paragraph style.";
- // Gets the Markdown text of the document.
- string markdownText = markdownDocument.GetMarkdownText();
- // Saves the Markdown document to the file system.
- File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
- // Disposes the document to release all memory.
+ // Saves the Markdown document to the file system
+ markdownDocument.Save("Output.md");
+ // Disposes the document
  markdownDocument.Dispose();
 
 {% endhighlight %}
@@ -99,11 +93,9 @@ The following code example demonstrates how to create a blockquote using the `Ap
  paragraph.ApplyParagraphStyle("Quote")
  ' Adds text to the blockquote paragraph.
  paragraph.AddTextRange().Text = "This blockquote is created using paragraph style."
- ' Gets the Markdown text of the document.
- Dim markdownText As String = markdownDocument.GetMarkdownText()
- ' Saves the Markdown document to the file system.
- File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
- ' Disposes the document to release all memory.
+ ' Saves the Markdown document to the file system
+ markdownDocument.Save("Output.md")
+ ' Disposes the document
  markdownDocument.Dispose()
 
 {% endhighlight %}
@@ -148,9 +140,9 @@ thirdParagraph.BlockQuoteLevel = 1;
 thirdParagraph.BlockQuoteHasLeadingSpace = false;
 // Adds text to the blockquote paragraph.
 thirdParagraph.AddTextRange().Text = "This quote has no leading space.";
-// Gets the Markdown text of the document
-string markdownText = markdownDocument.GetMarkdownText();
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+// Saves the Markdown document to the file system
+markdownDocument.Save("Output.md");
+// Disposes the document
 markdownDocument.Dispose();
 
 {% endhighlight %}
@@ -183,9 +175,9 @@ thirdParagraph.BlockQuoteLevel = 1
 thirdParagraph.BlockQuoteHasLeadingSpace = False
 ' Adds text to the blockquote paragraph.
 thirdParagraph.AddTextRange().Text = "This quote has no leading space."
-' Gets the Markdown text of the document
-Dim markdownText As String = markdownDocument.GetMarkdownText()
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+' Saves the Markdown document to the file system
+markdownDocument.Save("Output.md")
+' Disposes the document
 markdownDocument.Dispose()
 
 {% endhighlight %}
@@ -231,10 +223,8 @@ blockLevel3.HasBlockquote = true;
 blockLevel3.BlockQuoteLevel = 3;
 // Adds text to the blockquote paragraph.
 blockLevel3.AddTextRange().Text = "This is the third level blockquote.";
-// Gets the Markdown text of the document
-string markdownText = markdownDocument.GetMarkdownText();
 // Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+markdownDocument.Save("Output.md");
 // Disposes the document
 markdownDocument.Dispose();
 
@@ -272,10 +262,8 @@ blockLevel3.BlockQuoteLevel = 3
 blockLevel3.BlockQuoteHasLeadingSpace = True
 ' Adds text to the blockquote paragraph.
 blockLevel3.AddTextRange().Text = "This is the third level blockquote."
-' Gets the Markdown text of the document
-Dim markdownText As String = markdownDocument.GetMarkdownText()
 ' Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+markdownDocument.Save("Output.md")
 ' Disposes the document
 markdownDocument.Dispose()
 
@@ -339,11 +327,9 @@ thirdQuote.AddTextRange().Text = "This is the ";
 MdTextRange codespanText = thirdQuote.AddTextRange();
 codespanText.Text = "first level";
 codespanText.TextFormat.CodeSpan = true;
-// Gets the Markdown text of the document.
-string markdownText = markdownDocument.GetMarkdownText();
-// Saves the Markdown document to the file system.
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
-// Disposes the document to release all memory.
+// Saves the Markdown document to the file system
+markdownDocument.Save("Output.md");
+// Disposes the document
 markdownDocument.Dispose();
 
 {% endhighlight %}
@@ -394,11 +380,9 @@ thirdQuote.AddTextRange().Text = "This is the "
 Dim codespanText As MdTextRange = thirdQuote.AddTextRange()
 codespanText.Text = "first level"
 codespanText.TextFormat.CodeSpan = True
-' Gets the Markdown text of the document.
-Dim markdownText As String = markdownDocument.GetMarkdownText()
-' Saves the Markdown document to the file system.
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
-' Disposes the document to release all memory.
+' Saves the Markdown document to the file system
+markdownDocument.Save("Output.md")
+' Disposes the document
 markdownDocument.Dispose()
 
 {% endhighlight %}
@@ -417,10 +401,8 @@ The following code example demonstrates how to modify an existing blockquote.
 
 {% highlight c# tabtitle="C#" %}
 
- FileStream fileStream = new FileStream(Path.GetFullPath(@"Data\Input.md"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
- MdImportSettings settings = new MdImportSettings();
- // Opens an existing document
- MarkdownDocument markdownDocument = new MarkdownDocument(fileStream, settings);
+ // Opens an existing Markdown document
+ MarkdownDocument markdownDocument = new MarkdownDocument(Path.GetFullPath("Input.md"));
  // Iterates through the blocks of the document
  foreach (IMdBlock block in markdownDocument.Blocks)
  {
@@ -447,10 +429,8 @@ The following code example demonstrates how to modify an existing blockquote.
          }
      }
  }
- // Gets the Markdown text of the document
- string markdownText = markdownDocument.GetMarkdownText();
  // Saves the Markdown document to the file system
- File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+ markdownDocument.Save("Output.md");
  // Disposes the document
  markdownDocument.Dispose();
 
@@ -458,10 +438,8 @@ The following code example demonstrates how to modify an existing blockquote.
 
 {% highlight vb.net tabtitle="VB.NET" %}
 
-Dim fileStream As New FileStream(Path.GetFullPath("Data\Input.md"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
-Dim settings As New MdImportSettings()
-' Opens an existing document
-Dim markdownDocument As New MarkdownDocument(fileStream, settings)
+' Opens an existing Markdown document
+Dim markdownDocument As MarkdownDocument = New MarkdownDocument(Path.GetFullPath("Input.md"))
 ' Iterates through the blocks of the document
 For Each block As IMdBlock In markdownDocument.Blocks
     ' Checks whether the block is a paragraph
@@ -484,10 +462,8 @@ For Each block As IMdBlock In markdownDocument.Blocks
         End If
     End If
 Next
-' Gets the Markdown text of the document
-Dim markdownText As String = markdownDocument.GetMarkdownText()
 ' Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+markdownDocument.Save("Output.md")
 ' Disposes the document
 markdownDocument.Dispose()
 
@@ -505,10 +481,8 @@ The following code example demonstrates how to remove blockquote from paragraphs
 
 {% highlight c# tabtitle="C#" %}
 
-// Opens an existing Markdown document.
-FileStream fileStream = new FileStream(Path.GetFullPath(@"Data\Input.md"), FileMode.Open, FileAccess.Read);
-MdImportSettings settings = new MdImportSettings();
-MarkdownDocument markdownDocument = new MarkdownDocument(fileStream, settings);
+ // Opens an existing Markdown document
+ MarkdownDocument markdownDocument = new MarkdownDocument(Path.GetFullPath("Input.md"));
  // Iterates through the blocks of the document.
  foreach (IMdBlock block in markdownDocument.Blocks)
  {
@@ -526,21 +500,17 @@ MarkdownDocument markdownDocument = new MarkdownDocument(fileStream, settings);
          }                       
      }
  }
-// Gets the Markdown text of the document.
-string markdownText = markdownDocument.GetMarkdownText();
-// Saves the Markdown document to the file system.
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
-// Disposes the document to release all memory.
+// Saves the Markdown document to the file system
+markdownDocument.Save("Output.md");
+// Disposes the document
 markdownDocument.Dispose();
 
 {% endhighlight %} 
 
 {% highlight vb.net tabtitle="VB.NET" %}
 
-' Opens an existing Markdown document.
-Dim fileStream As New FileStream(Path.GetFullPath("Data\Input.md"), FileMode.Open, FileAccess.Read)
-Dim settings As New MdImportSettings()
-Dim markdownDocument As New MarkdownDocument(fileStream, settings)
+' Opens an existing Markdown document
+Dim markdownDocument As MarkdownDocument = New MarkdownDocument(Path.GetFullPath("Input.md"))
 ' Iterates through the blocks of the document.
 For Each block As IMdBlock In markdownDocument.Blocks
     ' Checks whether the block is a paragraph
@@ -555,11 +525,9 @@ For Each block As IMdBlock In markdownDocument.Blocks
         End If
     End If
 Next
-' Gets the Markdown text of the document.
-Dim markdownText As String = markdownDocument.GetMarkdownText()
-' Saves the Markdown document to the file system.
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
-' Disposes the document to release all memory.
+' Saves the Markdown document to the file system
+markdownDocument.Save("Output.md")
+' Disposes the document
 markdownDocument.Dispose()
 
 {% endhighlight %}

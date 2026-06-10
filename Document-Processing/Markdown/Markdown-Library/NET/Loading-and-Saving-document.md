@@ -9,7 +9,7 @@ documentation: UG
 
 # Loading and Saving a Markdown Document
 
-The Syncfusion<sup>&reg;</sup> Markdown library allows you to load an existing Markdown document and save it to the file system programmatically.
+The Syncfusion<sup>&reg;</sup> Markdown library allows you to load an existing Markdown document and save it to the file system or stream programmatically.
 
 ## Namespaces required
 
@@ -20,15 +20,11 @@ The following namespaces of Essential<sup>&reg;</sup> Markdown need to be includ
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Office.Markdown;
-using System.Text;
-using System.IO;
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET" %}
 
-Imports System.IO
-Imports System.Text
 Imports Syncfusion.Office.Markdown
 
 {% endhighlight %}
@@ -41,7 +37,7 @@ You can open an existing Markdown document by using either the **Open** method o
 
 ### Opening using constructor
 
-The `MarkdownDocument` class allows you to open an existing Markdown document by passing the stream and import settings as constructor parameters.
+The `MarkdownDocument` class allows you to open an existing Markdown document by passing the stream or string as constructor parameters.
 
 The following code example demonstrates how to open an existing Markdown document using the constructor.
 
@@ -52,8 +48,7 @@ The following code example demonstrates how to open an existing Markdown documen
 
 // Opens an existing Markdown document using constructor.
 FileStream fileStream = new FileStream("Input.md", FileMode.Open, FileAccess.Read);
-MdImportSettings mdImportSettings = new MdImportSettings();
-MarkdownDocument markdownDocument = new MarkdownDocument(fileStream, mdImportSettings);
+MarkdownDocument markdownDocument = new MarkdownDocument(fileStream);
 
 {% endhighlight %}
 
@@ -61,8 +56,25 @@ MarkdownDocument markdownDocument = new MarkdownDocument(fileStream, mdImportSet
 
 ' Opens an existing Markdown document using constructor.
 Dim fileStream As New FileStream("Input.md", FileMode.Open, FileAccess.Read)
-Dim mdImportSettings As New MdImportSettings()
-Dim markdownDocument As New MarkdownDocument(fileStream, mdImportSettings)
+Dim markdownDocument As New MarkdownDocument(fileStream)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+// Opens an existing Markdown document using constructor.
+MarkdownDocument markdownDocument = new MarkdownDocument(Path.GetFullPath("Input.md"));
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+' Opens an existing Markdown document using constructor.
+Dim markdownDocument As New MarkdownDocument(Path.GetFullPath("Input.md"))
 
 {% endhighlight %}
 
@@ -70,7 +82,7 @@ Dim markdownDocument As New MarkdownDocument(fileStream, mdImportSettings)
 
 ### Opening using Open Method
 
-The `MarkdownDocument` class also provides the `Open` method to open an existing Markdown document from a stream.
+The `MarkdownDocument` class also provides the `Open` method to open an existing Markdown document from a stream or string.
 
 The following code example demonstrates how to open an existing Markdown document using the `Open` method.
 
@@ -82,8 +94,7 @@ The following code example demonstrates how to open an existing Markdown documen
 MarkdownDocument markdownDocument = new MarkdownDocument();
 // Opens an existing Markdown document using the Open method.
 FileStream fileStream = new FileStream("Input.md", FileMode.Open, FileAccess.Read);
-MdImportSettings settings = new MdImportSettings();
-markdownDocument.Open(fileStream, settings);
+markdownDocument.Open(fileStream);
 
 {% endhighlight %}
 
@@ -93,8 +104,29 @@ markdownDocument.Open(fileStream, settings);
 Dim markdownDocument As New MarkdownDocument()
 ' Opens an existing Markdown document using the Open method.
 Dim fileStream As New FileStream("Input.md", FileMode.Open, FileAccess.Read)
-Dim mdImportSettings As New MdImportSettings()
-markdownDocument.Open(fileStream, mdImportSettings)
+markdownDocument.Open(fileStream)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+// Creates an empty MarkdownDocument instance
+MarkdownDocument markdownDocument = new MarkdownDocument();
+// Opens an existing Markdown document using the Open method.
+markdownDocument.Open("Input.md");
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+' Creates a new instance of MarkdownDocument.
+Dim markdownDocument As New MarkdownDocument()
+' Opens an existing Markdown document using the Open method.
+markdownDocument.Open("Input.md")
 
 {% endhighlight %}
 
@@ -102,9 +134,9 @@ markdownDocument.Open(fileStream, mdImportSettings)
 
 You can download a complete working sample from GitHub.
 
-## Saving a Markdown Document
+## Saving a Markdown Document to file system
 
-After modifying a Markdown document, you can save it to the file system using the `GetMarkdownText` method, which retrieves the Markdown content as a string, and then write the content to a file using the `File.WriteAllText` method.
+You can save the created or manipulated Markdown document to file system using `Save` method of `MarkdownDocument` class.
 
 The following code example demonstrates how to save a Markdown document to the file system.
 
@@ -115,15 +147,11 @@ The following code example demonstrates how to save a Markdown document to the f
 // Creates an empty MarkdownDocument instance
 MarkdownDocument markdownDocument = new MarkdownDocument();
 // Opens an existing Markdown document using the Open method.
-FileStream fileStream = new FileStream("Input.md", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-MdImportSettings settings = new MdImportSettings();
-markdownDocument.Open(fileStream, settings);
+markdownDocument.Open("Input.md");
 // To-Do some manipulation
 // To-Do some manipulation
-// Retrieves the Markdown document content.
-string mdContent = markdownDocument.GetMarkdownText();
-// Saves the Markdown document to the file system.
-File.WriteAllText("Output.md", mdContent, Encoding.UTF8);
+// Saves the Markdown document to the file system
+markdownDocument.Save("Output.md");
 
 {% endhighlight %}
 
@@ -132,15 +160,51 @@ File.WriteAllText("Output.md", mdContent, Encoding.UTF8);
 ' Creates a new instance of MarkdownDocument.
 Dim markdownDocument As New MarkdownDocument()
 ' Opens an existing Markdown document using the Open method.
-Dim fileStream As New FileStream("Input.md", FileMode.Open, FileAccess.Read)
-Dim mdImportSettings As New MdImportSettings()
-markdownDocument.Open(fileStream, mdImportSettings)
+markdownDocument.Open("Input.md")
 'To-Do some manipulation
 'To-Do some manipulation
-' Retrieves the Markdown document content.
-Dim mdContent As String = markdownDocument.GetMarkdownText()
-' Saves the Markdown document to the file system.
-File.WriteAllText("Output.md", mdContent, Encoding.UTF8)
+' Saves the Markdown document to the file system
+markdownDocument.Save("Output.md")
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Saving a Markdown Document to stream
+
+You can also save the created or manipulated Markdown document to stream by using overloads of `Save` methods.
+
+The following code example demonstrates how to save a Markdown document to the file system.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+// Creates an empty MarkdownDocument instance
+MarkdownDocument markdownDocument = new MarkdownDocument();
+// Opens an existing Markdown document using the Open method.
+markdownDocument.Open("Input.md");
+// To-Do some manipulation
+// To-Do some manipulation
+// Creates an instance of memory stream
+MemoryStream stream = new MemoryStream();
+// Saves the Markdown document to the stream
+markdownDocument.Save(stream);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+' Creates a new instance of MarkdownDocument.
+Dim markdownDocument As New MarkdownDocument()
+' Opens an existing Markdown document using the Open method.
+markdownDocument.Open("Input.md")
+'To-Do some manipulation
+'To-Do some manipulation
+'Creates an instance of memory stream
+Dim stream As New MemoryStream()
+' Saves the Markdown document to the stream
+markdownDocument.Save(stream)
 
 {% endhighlight %}
 
@@ -155,17 +219,13 @@ Once the document manipulation and save operations are completed, you should clo
 {% highlight c# tabtitle="C#" %}
 
 // Opens, saves and closes a Markdown document.
-FileStream fileStream = new FileStream("Input.md", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-MdImportSettings settings = new MdImportSettings();
-MarkdownDocument markdownDocument = new MarkdownDocument(fileStream, settings);
+MarkdownDocument markdownDocument = new MarkdownDocument("Input.md");
 
 // To-Do some manipulation
 // To-Do some manipulation
 
-// Retrieves the Markdown document content.
-string markdownText = markdownDocument.GetMarkdownText();
-//Save the Markdown content to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+// Saves the Markdown document to the file system
+markdownDocument.Save("Output.md");
 
 //Dispose the document to release all memory
 markdownDocument.Dispose();
@@ -175,17 +235,13 @@ markdownDocument.Dispose();
 {% highlight vb.net tabtitle="VB.NET" %}
 
 ' Opens, saves and closes a Markdown document.
-Dim fileStream As New FileStream("Input.md", FileMode.Open, FileAccess.Read)
-Dim settings As New MdImportSettings()
-Dim markdownDocument As New MarkdownDocument(fileStream, settings)
+Dim markdownDocument As New MarkdownDocument("Input.md")
 
 'To-Do some manipulation
 'To-Do some manipulation
 
-' Retrieves the Markdown document content.
-Dim markdownText As String = markdownDocument.GetMarkdownText()
-' Saves the Markdown document to the file system.
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+' Saves the Markdown document to the file system
+markdownDocument.Save("Output.md")
 
 ' Disposes the document to release all memory.
 markdownDocument.Dispose()
