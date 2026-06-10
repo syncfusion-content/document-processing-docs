@@ -475,6 +475,12 @@ The following code snippet illustrates how to print a PDF document.
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// PDF doesn't support direct cross-platform printing; it requires platform-specific handling.
+
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.PdfViewer;
@@ -1060,6 +1066,42 @@ The following code sample illustrates how to create a PDF document in multi-thre
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+IEnumerable<int> works = Enumerable.Range(0, 100);
+
+Parallel.ForEach(works, index => GeneratePDF(index));
+
+private void GeneratePDF(int index)
+{
+   //Enable the thread safe in PDF document.
+   PdfDocument.EnableThreadSafe = true;
+
+   //Create a new PDF document.
+   PdfDocument document = new PdfDocument();
+   //Add a page to the document.
+   PdfPage page = document.Pages.Add();
+
+   //Create PDF graphics for the page.
+   PdfGraphics graphics = page.Graphics;
+   //Set the standard font.
+   PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+   //Draw the text.
+   graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+   string name = Guid.NewGuid().ToString();
+
+   //Save the document.
+   document.Save(name+".pdf");
+   //Close the document.
+   document.Close(true);
+}
+
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;
@@ -1072,26 +1114,26 @@ Parallel.ForEach(works, index => GeneratePDF(index));
 
 private void GeneratePDF(int index)
 {
-//Enable the thread safe in PDF document.
-PdfDocument.EnableThreadSafe = true;
+   //Enable the thread safe in PDF document.
+   PdfDocument.EnableThreadSafe = true;
 
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-//Add a page to the document.
-PdfPage page = document.Pages.Add();
+   //Create a new PDF document.
+   PdfDocument document = new PdfDocument();
+   //Add a page to the document.
+   PdfPage page = document.Pages.Add();
 
-//Create PDF graphics for the page.
-PdfGraphics graphics = page.Graphics;
-//Set the standard font.
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-//Draw the text.
-graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-string name = Guid.NewGuid().ToString();
+   //Create PDF graphics for the page.
+   PdfGraphics graphics = page.Graphics;
+   //Set the standard font.
+   PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+   //Draw the text.
+   graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+   string name = Guid.NewGuid().ToString();
 
-//Save the document.
-document.Save(name+".pdf");
-//Close the document.
-document.Close(true);
+   //Save the document.
+   document.Save(name+".pdf");
+   //Close the document.
+   document.Close(true);
 }
 
 {% endhighlight %}
@@ -1135,7 +1177,42 @@ End Sub
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Document/Create-a-PDF-in-multi-threading-environment). 
 
 To modify the existing PDF document in multi-threading environment [EnableThreadSafe](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_EnableThreadSafe) property to an existing PDF document using [PDFLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following code example explain this.
+
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+
+IEnumerable<int> works = Enumerable.Range(0, 100);
+Parallel.ForEach(works, index => GeneratePDF(index));
+
+private void GeneratePDF(int index)
+{
+   //Enable the thread safe in PDF document.
+   PdfDocument.EnableThreadSafe = true;
+   //Load a PDF document.
+   PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
+   //Get first page from document
+   PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
+
+   //Create PDF graphics for the page
+   PdfGraphics graphics = page.Graphics;
+   //Set the standard font.
+   PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+   //Draw the text.
+   graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+   string name = Guid.NewGuid().ToString();
+
+   //Save the document.
+   doc.Save(name + ".pdf");
+   //Close the document.
+   doc.Close(true);
+}
+{% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;
@@ -1148,25 +1225,25 @@ Parallel.ForEach(works, index => GeneratePDF(index));
 
 private void GeneratePDF(int index)
 {
-//Enable the thread safe in PDF document.
-PdfDocument.EnableThreadSafe = true;
-//Load a PDF document.
-PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
-//Get first page from document
-PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
+   //Enable the thread safe in PDF document.
+   PdfDocument.EnableThreadSafe = true;
+   //Load a PDF document.
+   PdfLoadedDocument doc = new PdfLoadedDocument("input.pdf");
+   //Get first page from document
+   PdfLoadedPage page = doc.Pages[0] as PdfLoadedPage;
 
-//Create PDF graphics for the page
-PdfGraphics graphics = page.Graphics;
-//Set the standard font.
-PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
-//Draw the text.
-graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
-string name = Guid.NewGuid().ToString();
+   //Create PDF graphics for the page
+   PdfGraphics graphics = page.Graphics;
+   //Set the standard font.
+   PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+   //Draw the text.
+   graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));
+   string name = Guid.NewGuid().ToString();
 
-//Save the document.
-doc.Save(name+".pdf");
-//Close the document.
-doc.Close(true);
+   //Save the document.
+   doc.Save(name+".pdf");
+   //Close the document.
+   doc.Close(true);
 }
 
 {% endhighlight %}
@@ -1426,14 +1503,14 @@ SyntaxAnalyzerResult result = analyzer.AnalyzeSyntax();
 //Check whether the document is corrupted or not
 if (result.IsCorrupted)
 {
-    //Get syntax error details from results.error
-    StringBuilder builder = new StringBuilder();
-    builder.AppendLine("The PDF document is corrupted.");
-    int count = 1;
-    foreach (PdfException exception in result.Errors)
-    {
-       builder.AppendLine(count++.ToString() + ": " + exception.Message);
-    }              
+   //Get syntax error details from results.error
+   StringBuilder builder = new StringBuilder();
+   builder.AppendLine("The PDF document is corrupted.");
+   int count = 1;
+   foreach (PdfException exception in result.Errors)
+   {
+      builder.AppendLine(count++.ToString() + ": " + exception.Message);
+   }              
 }
 else               
 {
@@ -1509,6 +1586,13 @@ You can embed all the non-embedded fonts in the existing PDF document using the 
 Refer to the following code sample to achieve the same,
 
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Embedding all fonts is not directly supported across platforms.
+
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf.Parsing;
@@ -1517,8 +1601,8 @@ using Syncfusion.Pdf.Parsing;
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
 //Embed all the non-embedded fonts.
 if (loadedDocument.IsAllFontsEmbedded == false)
-{.
-     loadedDocument.EmbedFonts();
+{
+   loadedDocument.EmbedFonts();
 }
 //Save the document.
 loadedDocument.Save("Output.pdf");

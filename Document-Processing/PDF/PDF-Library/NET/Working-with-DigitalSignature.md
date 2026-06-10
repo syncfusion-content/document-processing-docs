@@ -1233,72 +1233,72 @@ class ExternalSigner : IPdfExternalSigner
   // Gets the hash algorithm used for signing.
   public string HashAlgorithm
   {
-      get { return _hashAlgorithm; }
+    get { return _hashAlgorithm; }
   }
 
   // Constructor that sets the hash algorithm for the signer.
   public ExternalSigner(string hashAlgorithm)
   {
-      _hashAlgorithm = hashAlgorithm;
+    _hashAlgorithm = hashAlgorithm;
   }
 
   // Sign the document hash and return the timestamp response.
   public byte[] Sign(byte[] message, out byte[] timeStampResponse)
   {
-      byte[] signedBytes = null;
-      X509Certificate2 digitalID = new X509Certificate2(new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "password123"));
+    byte[] signedBytes = null;
+    X509Certificate2 digitalID = new X509Certificate2(new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "password123"));
 
-      // Use the appropriate signing algorithm based on the private key type.
-      if (digitalID.PrivateKey is System.Security.Cryptography.RSACryptoServiceProvider)
-      {
-          System.Security.Cryptography.RSACryptoServiceProvider rsa = (System.Security.Cryptography.RSACryptoServiceProvider)digitalID.PrivateKey;
-          signedBytes = rsa.SignData(message, HashAlgorithm);
-      }
-      else if (digitalID.PrivateKey is RSACng)
-      {
-          RSACng rsa = (RSACng)digitalID.PrivateKey;
-          signedBytes = rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
-      }
+    // Use the appropriate signing algorithm based on the private key type.
+    if (digitalID.PrivateKey is System.Security.Cryptography.RSACryptoServiceProvider)
+    {
+        System.Security.Cryptography.RSACryptoServiceProvider rsa = (System.Security.Cryptography.RSACryptoServiceProvider)digitalID.PrivateKey;
+        signedBytes = rsa.SignData(message, HashAlgorithm);
+    }
+    else if (digitalID.PrivateKey is RSACng)
+    {
+        RSACng rsa = (RSACng)digitalID.PrivateKey;
+        signedBytes = rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
+    }
 
-      // Generate an RFC3161 timestamp token for the signed data.
-      timeStampResponse = GetRFC3161TimeStampToken(signedBytes);
-      return signedBytes;
+    // Generate an RFC3161 timestamp token for the signed data.
+    timeStampResponse = GetRFC3161TimeStampToken(signedBytes);
+    return signedBytes;
   }
 
   // Generate the RFC3161 timestamp token using the provided signed data.
   public byte[] GetRFC3161TimeStampToken(byte[] bytes)
   {
-      SHA1 sha1 = SHA1CryptoServiceProvider.Create();
-      byte[] hash = sha1.ComputeHash(bytes);
+    SHA1 sha1 = SHA1CryptoServiceProvider.Create();
+    byte[] hash = sha1.ComputeHash(bytes);
 
-      // Create a timestamp request using the SHA1 hash.
-      TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
-      reqGen.SetCertReq(true);
-      TimeStampRequest tsReq = reqGen.Generate(TspAlgorithms.Sha1, hash, BigInteger.ValueOf(100));
-      byte[] tsData = tsReq.GetEncoded();
+    // Create a timestamp request using the SHA1 hash.
+    TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
+    reqGen.SetCertReq(true);
+    TimeStampRequest tsReq = reqGen.Generate(TspAlgorithms.Sha1, hash, BigInteger.ValueOf(100));
+    byte[] tsData = tsReq.GetEncoded();
 
-      // Send the timestamp request to the server.
-      HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://rfc3161.ai.moda"); // Update your timestamp URI here
-      req.Method = "POST";
-      req.ContentType = "application/timestamp-query";
-      req.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes("9024:yourPass")));
-      req.ContentLength = tsData.Length;
+    // Send the timestamp request to the server.
+    HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://rfc3161.ai.moda"); // Update your timestamp URI here
+    req.Method = "POST";
+    req.ContentType = "application/timestamp-query";
+    req.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes("9024:yourPass")));
+    req.ContentLength = tsData.Length;
 
-      // Write the request data to the stream.
-      Stream reqStream = req.GetRequestStream();
-      reqStream.Write(tsData, 0, tsData.Length);
-      reqStream.Close();
+    // Write the request data to the stream.
+    Stream reqStream = req.GetRequestStream();
+    reqStream.Write(tsData, 0, tsData.Length);
+    reqStream.Close();
 
-      // Get the timestamp response from the server.
-      HttpWebResponse res = (HttpWebResponse)req.GetResponse();
-      if (res != null)
-      {
-          Stream resStream = new BufferedStream(res.GetResponseStream());
-          TimeStampResponse tsRes = new TimeStampResponse(resStream);
-          return tsRes.TimeStampToken.GetEncoded();
-      }
+    // Get the timestamp response from the server.
+    HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+    if (res != null)
+    {
+        Stream resStream = new BufferedStream(res.GetResponseStream());
+        TimeStampResponse tsRes = new TimeStampResponse(resStream);
+        return tsRes.TimeStampToken.GetEncoded();
+    }
 
-      return null;
+    return null;
   }
 }
 
@@ -1314,72 +1314,72 @@ class ExternalSigner : IPdfExternalSigner
   // Gets the hash algorithm used for signing.
   public string HashAlgorithm
   {
-      get { return _hashAlgorithm; }
+    get { return _hashAlgorithm; }
   }
 
   // Constructor that sets the hash algorithm for the signer.
   public ExternalSigner(string hashAlgorithm)
   {
-      _hashAlgorithm = hashAlgorithm;
+    _hashAlgorithm = hashAlgorithm;
   }
 
   // Sign the document hash and return the timestamp response.
   public byte[] Sign(byte[] message, out byte[] timeStampResponse)
   {
-      byte[] signedBytes = null;
-      X509Certificate2 digitalID = new X509Certificate2(new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "password123"));
+    byte[] signedBytes = null;
+    X509Certificate2 digitalID = new X509Certificate2(new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "password123"));
 
-      // Use the appropriate signing algorithm based on the private key type.
-      if (digitalID.PrivateKey is System.Security.Cryptography.RSACryptoServiceProvider)
-      {
-          System.Security.Cryptography.RSACryptoServiceProvider rsa = (System.Security.Cryptography.RSACryptoServiceProvider)digitalID.PrivateKey;
-          signedBytes = rsa.SignData(message, HashAlgorithm);
-      }
-      else if (digitalID.PrivateKey is RSACng)
-      {
-          RSACng rsa = (RSACng)digitalID.PrivateKey;
-          signedBytes = rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
-      }
+    // Use the appropriate signing algorithm based on the private key type.
+    if (digitalID.PrivateKey is System.Security.Cryptography.RSACryptoServiceProvider)
+    {
+        System.Security.Cryptography.RSACryptoServiceProvider rsa = (System.Security.Cryptography.RSACryptoServiceProvider)digitalID.PrivateKey;
+        signedBytes = rsa.SignData(message, HashAlgorithm);
+    }
+    else if (digitalID.PrivateKey is RSACng)
+    {
+        RSACng rsa = (RSACng)digitalID.PrivateKey;
+        signedBytes = rsa.SignData(message, System.Security.Cryptography.HashAlgorithmName.SHA1, RSASignaturePadding.Pkcs1);
+    }
 
-      // Generate an RFC3161 timestamp token for the signed data.
-      timeStampResponse = GetRFC3161TimeStampToken(signedBytes);
-      return signedBytes;
+    // Generate an RFC3161 timestamp token for the signed data.
+    timeStampResponse = GetRFC3161TimeStampToken(signedBytes);
+    return signedBytes;
   }
 
   // Generate the RFC3161 timestamp token using the provided signed data.
   public byte[] GetRFC3161TimeStampToken(byte[] bytes)
   {
-      SHA1 sha1 = SHA1CryptoServiceProvider.Create();
-      byte[] hash = sha1.ComputeHash(bytes);
+    SHA1 sha1 = SHA1CryptoServiceProvider.Create();
+    byte[] hash = sha1.ComputeHash(bytes);
 
-      // Create a timestamp request using the SHA1 hash.
-      TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
-      reqGen.SetCertReq(true);
-      TimeStampRequest tsReq = reqGen.Generate(TspAlgorithms.Sha1, hash, BigInteger.ValueOf(100));
-      byte[] tsData = tsReq.GetEncoded();
+    // Create a timestamp request using the SHA1 hash.
+    TimeStampRequestGenerator reqGen = new TimeStampRequestGenerator();
+    reqGen.SetCertReq(true);
+    TimeStampRequest tsReq = reqGen.Generate(TspAlgorithms.Sha1, hash, BigInteger.ValueOf(100));
+    byte[] tsData = tsReq.GetEncoded();
 
-      // Send the timestamp request to the server.
-      HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://rfc3161.ai.moda"); // Update your timestamp URI here
-      req.Method = "POST";
-      req.ContentType = "application/timestamp-query";
-      req.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes("9024:yourPass")));
-      req.ContentLength = tsData.Length;
+    // Send the timestamp request to the server.
+    HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://rfc3161.ai.moda"); // Update your timestamp URI here
+    req.Method = "POST";
+    req.ContentType = "application/timestamp-query";
+    req.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes("9024:yourPass")));
+    req.ContentLength = tsData.Length;
 
-      // Write the request data to the stream.
-      Stream reqStream = req.GetRequestStream();
-      reqStream.Write(tsData, 0, tsData.Length);
-      reqStream.Close();
+    // Write the request data to the stream.
+    Stream reqStream = req.GetRequestStream();
+    reqStream.Write(tsData, 0, tsData.Length);
+    reqStream.Close();
 
-      // Get the timestamp response from the server.
-      HttpWebResponse res = (HttpWebResponse)req.GetResponse();
-      if (res != null)
-      {
-          Stream resStream = new BufferedStream(res.GetResponseStream());
-          TimeStampResponse tsRes = new TimeStampResponse(resStream);
-          return tsRes.TimeStampToken.GetEncoded();
-      }
+    // Get the timestamp response from the server.
+    HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+    if (res != null)
+    {
+        Stream resStream = new BufferedStream(res.GetResponseStream());
+        TimeStampResponse tsRes = new TimeStampResponse(resStream);
+        return tsRes.TimeStampToken.GetEncoded();
+    }
 
-      return null;
+    return null;
   }
 }
 
@@ -1484,196 +1484,196 @@ You can create a Long Term validation (LTV) when signing PDF documents externall
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Create-LTV-when-signing-PDF-documents-externally/.NET/Create-LTV-when-signing-PDF-documents-externally/Program.cs" %}
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Parsing;
-    using Syncfusion.Pdf.Security;
-    using System.Security.Cryptography;
-    using System.Security.Cryptography.Pkcs;
-    using System.Security.Cryptography.X509Certificates;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography;
+using System.Security.Cryptography.Pkcs;
+using System.Security.Cryptography.X509Certificates;
 
-    //Load the PDF document
-    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+//Load the PDF document
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
-    //Get the page of the existing PDF document.
-    PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
+//Get the page of the existing PDF document.
+PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
 
-    //Create a new PDF signature without PdfCertificate instance.
-    PdfSignature signature = new PdfSignature(document, loadedPage, null, "Signature1");
+//Create a new PDF signature without PdfCertificate instance.
+PdfSignature signature = new PdfSignature(document, loadedPage, null, "Signature1");
 
-    //Hook up the ComputeHash event.
-    signature.ComputeHash += Signature_ComputeHash;
+//Hook up the ComputeHash event.
+signature.ComputeHash += Signature_ComputeHash;
 
-    //Save the document.
-    document.Save("SignedDocument.pdf");
-    //Close the document
-    document.Close(true);
+//Save the document.
+document.Save("SignedDocument.pdf");
+//Close the document
+document.Close(true);
 
-    //Load an existing PDF stream.
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument.pdf");
+//Load an existing PDF stream.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument.pdf");
 
-    //Gets the first signature field of the PDF document
-    PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
-    PdfSignature pdfSignature = signatureField.Signature;
+//Gets the first signature field of the PDF document
+PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
+PdfSignature pdfSignature = signatureField.Signature;
 
-    //Create X509Certificate2 from your certificate to create a long-term validity.
-    X509Certificate2 x509 = new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "syncfusion");
+//Create X509Certificate2 from your certificate to create a long-term validity.
+X509Certificate2 x509 = new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "syncfusion");
 
-    //Create LTV with your public certificates.
-    pdfSignature.CreateLongTermValidity(new List<X509Certificate2> { x509 });
+//Create LTV with your public certificates.
+pdfSignature.CreateLongTermValidity(new List<X509Certificate2> { x509 });
 
-    //Save the document
-    loadedDocument.Save("Output.pdf");
-    //Close the document.
-    loadedDocument.Close(true);
+//Save the document
+loadedDocument.Save("Output.pdf");
+//Close the document.
+loadedDocument.Close(true);
 
-    void Signature_ComputeHash(object sender, PdfSignatureEventArgs ars)
-    {
-        //Get the document bytes
-        byte[] documentBytes = ars.Data;
+void Signature_ComputeHash(object sender, PdfSignatureEventArgs ars)
+{
+    //Get the document bytes
+    byte[] documentBytes = ars.Data;
 
-        SignedCms signedCms = new SignedCms(new ContentInfo(documentBytes), detached: true);
+    SignedCms signedCms = new SignedCms(new ContentInfo(documentBytes), detached: true);
 
-        //Compute the signature using the specified digital ID file and the password
-        X509Certificate2 certificate = new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "syncfusion");
-        CmsSigner cmsSigner = new CmsSigner(certificate);
+    //Compute the signature using the specified digital ID file and the password
+    X509Certificate2 certificate = new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "syncfusion");
+    CmsSigner cmsSigner = new CmsSigner(certificate);
 
-        //Set the digest algorithm SHA256
-        cmsSigner.DigestAlgorithm = new Oid("2.16.840.1.101.3.4.2.1");
+    //Set the digest algorithm SHA256
+    cmsSigner.DigestAlgorithm = new Oid("2.16.840.1.101.3.4.2.1");
 
-        signedCms.ComputeSignature(cmsSigner);
+    signedCms.ComputeSignature(cmsSigner);
 
-        //Embed the encoded digital signature to the PDF document
-        ars.SignedData = signedCms.Encode();
-    }
+    //Embed the encoded digital signature to the PDF document
+    ars.SignedData = signedCms.Encode();
+}
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Parsing;
-    using Syncfusion.Pdf.Security;
-    using System.Security.Cryptography;
-    using System.Security.Cryptography.Pkcs;
-    using System.Security.Cryptography.X509Certificates;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+using System.Security.Cryptography;
+using System.Security.Cryptography.Pkcs;
+using System.Security.Cryptography.X509Certificates;
 
-    //Load an existing PDF document.
-    PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
+//Load an existing PDF document.
+PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf");
 
-    //Get the page of the existing PDF document.
-    PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
+//Get the page of the existing PDF document.
+PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
 
-    //Create a new PDF signature without PdfCertificate instance.
-    PdfSignature signature = new PdfSignature(document, loadedPage, null, "Signature1");
+//Create a new PDF signature without PdfCertificate instance.
+PdfSignature signature = new PdfSignature(document, loadedPage, null, "Signature1");
 
-    //Hook up the ComputeHash event.
-    signature.ComputeHash += Signature_ComputeHash;
+//Hook up the ComputeHash event.
+signature.ComputeHash += Signature_ComputeHash;
 
-    //Save the document.
-    document.Save("SignedDocument.pdf");
-    //Close the document
-    document.Close(true);
+//Save the document.
+document.Save("SignedDocument.pdf");
+//Close the document
+document.Close(true);
 
-    //Load an existing PDF stream..
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument.pdf");
+//Load an existing PDF stream..
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument.pdf");
 
-    //Gets the first signature field of the PDF document
-    PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
-    PdfSignature pdfSignature = signatureField.Signature;
+//Gets the first signature field of the PDF document
+PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
+PdfSignature pdfSignature = signatureField.Signature;
 
-    //Create X509Certificate2 from your certificate to create a long-term validity.
-    X509Certificate2 x509 = new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "syncfusion");
+//Create X509Certificate2 from your certificate to create a long-term validity.
+X509Certificate2 x509 = new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "syncfusion");
 
-    //Create LTV with your public certificates.
-    pdfSignature.CreateLongTermValidity(new List<X509Certificate2> { x509 });
-    
-    //Save and close the PDF document
-    loadedDocument.Save("Output.pdf");
-    loadedDocument.Close(true);
+//Create LTV with your public certificates.
+pdfSignature.CreateLongTermValidity(new List<X509Certificate2> { x509 });
 
-    void Signature_ComputeHash(object sender, PdfSignatureEventArgs ars)
-    {
-        //Get the document bytes
-        byte[] documentBytes = ars.Data;
+//Save and close the PDF document
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
 
-        SignedCms signedCms = new SignedCms(new ContentInfo(documentBytes), detached: true);
+void Signature_ComputeHash(object sender, PdfSignatureEventArgs ars)
+{
+    //Get the document bytes
+    byte[] documentBytes = ars.Data;
 
-        //Compute the signature using the specified digital ID file and the password
-        X509Certificate2 certificate = new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "syncfusion");
-        CmsSigner cmsSigner = new CmsSigner(certificate);
+    SignedCms signedCms = new SignedCms(new ContentInfo(documentBytes), detached: true);
 
-        //Set the digest algorithm SHA256
-        cmsSigner.DigestAlgorithm = new Oid("2.16.840.1.101.3.4.2.1");
+    //Compute the signature using the specified digital ID file and the password
+    X509Certificate2 certificate = new X509Certificate2(Path.GetFullPath(@"Data/PDF.pfx"), "syncfusion");
+    CmsSigner cmsSigner = new CmsSigner(certificate);
 
-        signedCms.ComputeSignature(cmsSigner);
+    //Set the digest algorithm SHA256
+    cmsSigner.DigestAlgorithm = new Oid("2.16.840.1.101.3.4.2.1");
 
-        //Embed the encoded digital signature to the PDF document
-        ars.SignedData = signedCms.Encode();
-    }
+    signedCms.ComputeSignature(cmsSigner);
+
+    //Embed the encoded digital signature to the PDF document
+    ars.SignedData = signedCms.Encode();
+}
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    Imports Syncfusion.Pdf
-    Imports Syncfusion.Pdf.Parsing
-    Imports Syncfusion.Pdf.Security
-    Imports System.Security.Cryptography
-    Imports System.Security.Cryptography.Pkcs
-    Imports System.Security.Cryptography.X509Certificates
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+Imports System.Security.Cryptography
+Imports System.Security.Cryptography.Pkcs
+Imports System.Security.Cryptography.X509Certificates
 
-    ' Load an existing PDF document.
-    Dim document As New PdfLoadedDocument("Input.pdf")
+' Load an existing PDF document.
+Dim document As New PdfLoadedDocument("Input.pdf")
 
-    ' Get the page of the existing PDF document.
-    Dim loadedPage As PdfLoadedPage = TryCast(document.Pages(0), PdfLoadedPage)
+' Get the page of the existing PDF document.
+Dim loadedPage As PdfLoadedPage = TryCast(document.Pages(0), PdfLoadedPage)
 
-    ' Create a new PDF signature without PdfCertificate instance.
-    Dim signature As New PdfSignature(document, loadedPage, Nothing, "Signature1")
+' Create a new PDF signature without PdfCertificate instance.
+Dim signature As New PdfSignature(document, loadedPage, Nothing, "Signature1")
 
-    ' Hook up the ComputeHash event.
-    AddHandler signature.ComputeHash, AddressOf Signature_ComputeHash
+' Hook up the ComputeHash event.
+AddHandler signature.ComputeHash, AddressOf Signature_ComputeHash
 
-    ' Save the document.
-    document.Save("SignedDocument")
-    ' Close the document
-    document.Close(True)
+' Save the document.
+document.Save("SignedDocument")
+' Close the document
+document.Close(True)
 
-    ' Load an existing PDF stream.
-    Dim loadedDocument As New PdfLoadedDocument("SignedDocument")
+' Load an existing PDF stream.
+Dim loadedDocument As New PdfLoadedDocument("SignedDocument")
 
-    ' Gets the first signature field of the PDF document
-    Dim signatureField As PdfLoadedSignatureField = TryCast(loadedDocument.Form.Fields(0), PdfLoadedSignatureField)
-    Dim pdfSignature As PdfSignature = signatureField.Signature
+' Gets the first signature field of the PDF document
+Dim signatureField As PdfLoadedSignatureField = TryCast(loadedDocument.Form.Fields(0), PdfLoadedSignatureField)
+Dim pdfSignature As PdfSignature = signatureField.Signature
 
-    ' Create X509Certificate2 from your certificate to create a long-term validity.
-    Dim x509 As New X509Certificate2(Path.GetFullPath("Data/PDF.pfx"), "syncfusion")
+' Create X509Certificate2 from your certificate to create a long-term validity.
+Dim x509 As New X509Certificate2(Path.GetFullPath("Data/PDF.pfx"), "syncfusion")
 
-    ' Create LTV with your public certificates.
-    pdfSignature.CreateLongTermValidity(New List(Of X509Certificate2) From {x509})
+' Create LTV with your public certificates.
+pdfSignature.CreateLongTermValidity(New List(Of X509Certificate2) From {x509})
 
-    ' Save and close the PDF document
-    loadedDocument.Save("Output.pdf")
-    loadedDocument.Close(True)
+' Save and close the PDF document
+loadedDocument.Save("Output.pdf")
+loadedDocument.Close(True)
 
-    Private Sub Signature_ComputeHash(sender As Object, ars As PdfSignatureEventArgs)
-        ' Get the document bytes
-        Dim documentBytes As Byte() = ars.Data
+Private Sub Signature_ComputeHash(sender As Object, ars As PdfSignatureEventArgs)
+    ' Get the document bytes
+    Dim documentBytes As Byte() = ars.Data
 
-        Dim signedCms As New SignedCms(New ContentInfo(documentBytes), True)
+    Dim signedCms As New SignedCms(New ContentInfo(documentBytes), True)
 
-        ' Compute the signature using the specified digital ID file and the password
-        Dim certificate As New X509Certificate2(Path.GetFullPath("Data/PDF.pfx"), "syncfusion")
-        Dim cmsSigner As New CmsSigner(certificate)
+    ' Compute the signature using the specified digital ID file and the password
+    Dim certificate As New X509Certificate2(Path.GetFullPath("Data/PDF.pfx"), "syncfusion")
+    Dim cmsSigner As New CmsSigner(certificate)
 
-        ' Set the digest algorithm SHA256
-        cmsSigner.DigestAlgorithm = New Oid("2.16.840.1.101.3.4.2.1")
+    ' Set the digest algorithm SHA256
+    cmsSigner.DigestAlgorithm = New Oid("2.16.840.1.101.3.4.2.1")
 
-        signedCms.ComputeSignature(cmsSigner)
+    signedCms.ComputeSignature(cmsSigner)
 
-        ' Embed the encoded digital signature to the PDF document
-        ars.SignedData = signedCms.Encode()
-    End Sub
+    ' Embed the encoded digital signature to the PDF document
+    ars.SignedData = signedCms.Encode()
+End Sub
 
 {% endhighlight %}
 
@@ -1816,7 +1816,6 @@ ltDocument.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Sign_PDF_with_LTA/).
 
 N> When using a custom timestamp server for digital signatures with LTA, you may encounter  `OverflowException`  if the estimated signature size is too small.
-
 N> To avoid this, increase the [EstimatedSignatureSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EstimatedSignatureSize) property to allocate enough space for the timestamp and LTV data returned by the server.
 
 ## Digitally sign a PDF document using the Windows certificate store
@@ -2467,143 +2466,143 @@ The following code example explains how to create LTV PDF using [EnableLtv](http
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Enable-LTV-PDF-signature/.NET/Enable-LTV-PDF-signature/Program.cs" %}
 
-    using Syncfusion.Drawing;
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Graphics;
-    using Syncfusion.Pdf.Parsing;
-    using Syncfusion.Pdf.Security;
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
-    //Creates a new PDF document.
-    PdfDocument document = new PdfDocument();
+//Creates a new PDF document.
+PdfDocument document = new PdfDocument();
 
-    //Adds a new page.
-    PdfPageBase page = document.Pages.Add();
+//Adds a new page.
+PdfPageBase page = document.Pages.Add();
 
-    //Create graphics for the page. 
-    PdfGraphics graphics = page.Graphics;
+//Create graphics for the page. 
+PdfGraphics graphics = page.Graphics;
 
-    //Creates a certificate instance from PFX file with private key.
-    FileStream certificateStream = new FileStream(Path.GetFullPath(@"Data/PDF.pfx"), FileMode.Open, FileAccess.Read);
-    PdfCertificate pdfCert = new PdfCertificate(certificateStream, "DigitalPass123");
+//Creates a certificate instance from PFX file with private key.
+FileStream certificateStream = new FileStream(Path.GetFullPath(@"Data/PDF.pfx"), FileMode.Open, FileAccess.Read);
+PdfCertificate pdfCert = new PdfCertificate(certificateStream, "DigitalPass123");
 
-    //Creates a digital signature.
-    PdfSignature signature = new PdfSignature(document, page, pdfCert, "Signature");
-    signature.Settings.CryptographicStandard = CryptographicStandard.CADES;
-    signature.Settings.DigestAlgorithm = DigestAlgorithm.SHA256;
+//Creates a digital signature.
+PdfSignature signature = new PdfSignature(document, page, pdfCert, "Signature");
+signature.Settings.CryptographicStandard = CryptographicStandard.CADES;
+signature.Settings.DigestAlgorithm = DigestAlgorithm.SHA256;
 
-    document.Save("SignedDocument.pdf");
-    //Close the document
-    document.Close(true);
+document.Save("SignedDocument.pdf");
+//Close the document
+document.Close(true);
 
-    //Load an existing PDF stream.
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument.pdf");
+//Load an existing PDF stream.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument.pdf");
 
-    //Gets the first signature field of the PDF document
-    PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
-    PdfSignature pdfSignature = signatureField.Signature;
+//Gets the first signature field of the PDF document
+PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
+PdfSignature pdfSignature = signatureField.Signature;
 
-    //Enable LTV on Signature.
-    pdfSignature.EnableLtv = true;
+//Enable LTV on Signature.
+pdfSignature.EnableLtv = true;
 
-    //Save the document
-    loadedDocument.Save("Output.pdf");
-    //Close the document.
-    loadedDocument.Close(true);
+//Save the document
+loadedDocument.Save("Output.pdf");
+//Close the document.
+loadedDocument.Close(true);
 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-    using System.Drawing;
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Graphics;
-    using Syncfusion.Pdf.Parsing;
-    using Syncfusion.Pdf.Security;
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
 
-    //Creates a new PDF document.
-    PdfDocument document = new PdfDocument();
+//Creates a new PDF document.
+PdfDocument document = new PdfDocument();
 
-    //Adds a new page.
-    PdfPageBase page = document.Pages.Add();
+//Adds a new page.
+PdfPageBase page = document.Pages.Add();
 
-    //Create graphics for the page. 
-    PdfGraphics graphics = page.Graphics;
+//Create graphics for the page. 
+PdfGraphics graphics = page.Graphics;
 
-    //Creates a certificate instance from PFX file with private key.
-    PdfCertificate pdfCert = new PdfCertificate(Path.GetFullPath(@"Data/PDF.pfx"), "DigitalPass123");
+//Creates a certificate instance from PFX file with private key.
+PdfCertificate pdfCert = new PdfCertificate(Path.GetFullPath(@"Data/PDF.pfx"), "DigitalPass123");
 
-    //Creates a digital signature.
-    PdfSignature signature = new PdfSignature(document, page, pdfCert, "Signature");
-    signature.Settings.CryptographicStandard = CryptographicStandard.CADES;
-    signature.Settings.DigestAlgorithm = DigestAlgorithm.SHA256;
+//Creates a digital signature.
+PdfSignature signature = new PdfSignature(document, page, pdfCert, "Signature");
+signature.Settings.CryptographicStandard = CryptographicStandard.CADES;
+signature.Settings.DigestAlgorithm = DigestAlgorithm.SHA256;
 
-    //Save the document.
+//Save the document.
 
-    document.Save("SignedDocument.pdf");
-    //Close the document
-    document.Close(true);
+document.Save("SignedDocument.pdf");
+//Close the document
+document.Close(true);
 
-    //Load an existing PDF stream.
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument.pdf");
+//Load an existing PDF stream.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("SignedDocument.pdf");
 
-    //Gets the first signature field of the PDF document
-    PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
-    PdfSignature pdfSignature = signatureField.Signature;
+//Gets the first signature field of the PDF document
+PdfLoadedSignatureField signatureField = loadedDocument.Form.Fields[0] as PdfLoadedSignatureField;
+PdfSignature pdfSignature = signatureField.Signature;
 
-    //Enable LTV on Signature.
-    pdfSignature.EnableLtv = true;
+//Enable LTV on Signature.
+pdfSignature.EnableLtv = true;
 
-    //Save and close the document
-    loadedDocument.Save("Output.pdf");
-    loadedDocument.Close(true);
+//Save and close the document
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    Imports System.Drawing
-    Imports Syncfusion.Pdf
-    Imports Syncfusion.Pdf.Graphics
-    Imports Syncfusion.Pdf.Parsing
-    Imports Syncfusion.Pdf.Security
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
 
-    ' Creates a new PDF document.
-    Dim document As New PdfDocument()
+' Creates a new PDF document.
+Dim document As New PdfDocument()
 
-    ' Adds a new page.
-    Dim page As PdfPageBase = document.Pages.Add()
+' Adds a new page.
+Dim page As PdfPageBase = document.Pages.Add()
 
-    ' Create graphics for the page.
-    Dim graphics As PdfGraphics = page.Graphics
+' Create graphics for the page.
+Dim graphics As PdfGraphics = page.Graphics
 
-    ' Creates a certificate instance from PFX file with private key.
-    Dim pdfCert As New PdfCertificate(Path.GetFullPath("Data/PDF.pfx"), "DigitalPass123")
+' Creates a certificate instance from PFX file with private key.
+Dim pdfCert As New PdfCertificate(Path.GetFullPath("Data/PDF.pfx"), "DigitalPass123")
 
-    ' Creates a digital signature.
-    Dim signature As New PdfSignature(document, page, pdfCert, "Signature")
-    signature.Settings.CryptographicStandard = CryptographicStandard.CADES
-    signature.Settings.DigestAlgorithm = DigestAlgorithm.SHA256
+' Creates a digital signature.
+Dim signature As New PdfSignature(document, page, pdfCert, "Signature")
+signature.Settings.CryptographicStandard = CryptographicStandard.CADES
+signature.Settings.DigestAlgorithm = DigestAlgorithm.SHA256
 
-    ' Save the document.
-    document.Save("SignedDocument.pdf")
+' Save the document.
+document.Save("SignedDocument.pdf")
 
-    ' Close the document.
-    document.Close(True)
+' Close the document.
+document.Close(True)
 
-    ' Load an existing PDF stream.
-    Dim loadedDocument As New PdfLoadedDocument("SignedDocument.pdf")
+' Load an existing PDF stream.
+Dim loadedDocument As New PdfLoadedDocument("SignedDocument.pdf")
 
-    ' Gets the first signature field of the PDF document.
-    Dim signatureField As PdfLoadedSignatureField = TryCast(loadedDocument.Form.Fields(0), PdfLoadedSignatureField)
-    Dim pdfSignature As PdfSignature = signatureField.Signature
+' Gets the first signature field of the PDF document.
+Dim signatureField As PdfLoadedSignatureField = TryCast(loadedDocument.Form.Fields(0), PdfLoadedSignatureField)
+Dim pdfSignature As PdfSignature = signatureField.Signature
 
-    ' Enable LTV on Signature.
-    pdfSignature.EnableLtv = True
+' Enable LTV on Signature.
+pdfSignature.EnableLtv = True
 
-    ' Save and close the document.
-    loadedDocument.Save("Output.pdf")
-    loadedDocument.Close(True)
+' Save and close the document.
+loadedDocument.Save("Output.pdf")
+loadedDocument.Close(True)
 
 {% endhighlight %}
 

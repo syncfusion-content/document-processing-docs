@@ -807,7 +807,7 @@ loadedDocument.Close(true);
 //Event handler for Track redaction process
 void redaction_TrackProgress(object sender, RedactionProgressEventArgs arguments)
 {
- MessageBox.Show(String.Format("Redaction Process " + arguments.Progress + " % completed"));
+    MessageBox.Show(String.Format("Redaction Process " + arguments.Progress + " % completed"));
 }
 
 {% endhighlight %}
@@ -838,7 +838,7 @@ loadedDocument.Close(true);
 //Event handler for Track redaction process
 void redaction_TrackProgress(object sender, RedactionProgressEventArgs arguments)
 {
-MessageBox.Show(String.Format("Redaction Process " + arguments.Progress + " % completed"));
+    MessageBox.Show(String.Format("Redaction Process " + arguments.Progress + " % completed"));
 }
 
 {% endhighlight %}
@@ -903,12 +903,11 @@ page.AddRedaction(redaction);
 List<PdfRedactionResult> results = loadedDocument.Redact();
 foreach(PdfRedactionResult result in redactionResults)
 {
-if (result.IsRedactionSuccess)
-Console.WriteLine("Content redacted successfully...");
-else
-Console.WriteLine("Content not redacted properly...");
+    if (result.IsRedactionSuccess)
+        Console.WriteLine("Content redacted successfully...");
+    else
+        Console.WriteLine("Content not redacted properly...");
 }
-
 //Save and close the PDF document
 loadedDocument.Save("Output.pdf");
 loadedDocument.Close(true);
@@ -936,10 +935,10 @@ page.Redactions.Add(redaction);
 List<PdfRedactionResult> redactionResults = lDoc.Redact();
 foreach(PdfRedactionResult result in redactionResults)
 {
-if (result.IsRedactionSuccess)
-Console.WriteLine("Content redacted successfully...");
-else
-Console.WriteLine("Content not redacted properly...");
+    if (result.IsRedactionSuccess)
+        Console.WriteLine("Content redacted successfully...");
+    else
+        Console.WriteLine("Content not redacted properly...");
 }
 
 //Save the document
@@ -969,11 +968,11 @@ page.Redactions.Add(redaction)
 'Redact the contents from PDF document
 Dim results As List<PdfRedactionResult> = loadedDocument.Redact();
 For Each result As PdfRedactionResult In redactionResults
-If result.IsRedactionSuccess Then 
-Console.WriteLine("Content redacted successfully...")
-Else
-Console.WriteLine("Content not redacted properly...")
-End If
+    If result.IsRedactionSuccess Then 
+        Console.WriteLine("Content redacted successfully...")
+    Else
+        Console.WriteLine("Content not redacted properly...")
+    End If
 Next
 
 'Save the document

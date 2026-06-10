@@ -34,21 +34,20 @@ Step 4: Add a new button to the **MainPage.xaml** as shown in the following.
 
 {% tabs %}
 
-{% highlight XML %}
+{% highlight XAML %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Load_and_Save_PDF_MAUI.MainPage">
-
-    <ScrollView>
-        <Button
-                x:Name="Btn"
-                Text="Create PDF"
-                FontAttributes="Bold"
-                Grid.Row="3"
-                Clicked="ButtonClick"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
-    </ScrollView>
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Load_and_Save_PDF_MAUI.MainPage">
+  <ScrollView>
+      <Button
+              x:Name="Btn"
+              Text="Create PDF"
+              FontAttributes="Bold"
+              Grid.Row="3"
+              Clicked="ButtonClick"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"/>
+  </ScrollView>
 
 </ContentPage>
 {% endhighlight %}

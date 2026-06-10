@@ -1250,14 +1250,14 @@ using Syncfusion.Pdf.Parsing;
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 for (int i = 0; i < loadedDocument.PageCount; i++)
 {
-//Creates a new document
-PdfDocument document = new PdfDocument();
-//Imports the pages from the loaded document
-document.ImportPage(loadedDocument, i);
+    //Creates a new document
+    PdfDocument document = new PdfDocument();
+    //Imports the pages from the loaded document
+    document.ImportPage(loadedDocument, i);
 
-//Save and close the document.
-loadedDocument.Save("Output.pdf");
-loadedDocument.Close(true);
+    //Save and close the document.
+    loadedDocument.Save("Output.pdf");
+    loadedDocument.Close(true);
 }
 
 {% endhighlight %}
@@ -1344,8 +1344,8 @@ document.Close(true);
 //Event handler for PageAdded event.
 void Pages_PageAdded(object sender, PageAddedEventArgs args)
 {
-PdfPage page = args.Page;
-page.Graphics.DrawRectangle(PdfPens.Black, new RectangleF(0, 0, page.GetClientSize().Width, page.GetClientSize().Height));
+    PdfPage page = args.Page;
+    page.Graphics.DrawRectangle(PdfPens.Black, new RectangleF(0, 0, page.GetClientSize().Width, page.GetClientSize().Height));
 }
 
 {% endhighlight %}
@@ -1388,8 +1388,8 @@ document.Close(true);
 //Event handler for PageAdded event.
 void Pages_PageAdded(object sender, PageAddedEventArgs args)
 {
-PdfPage page = args.Page;
-page.Graphics.DrawRectangle(PdfPens.Black, new RectangleF(0, 0, page.GetClientSize().Width, page.GetClientSize().Height));
+    PdfPage page = args.Page;
+    page.Graphics.DrawRectangle(PdfPens.Black, new RectangleF(0, 0, page.GetClientSize().Width, page.GetClientSize().Height));
 }
 
 {% endhighlight %}
@@ -1431,8 +1431,8 @@ document.Close(True)
 
 'Event handler for PageAdded event.
 Private Sub Pages_PageAdded(sender As Object, args As PageAddedEventArgs)
-Dim page As PdfPage = args.Page
-page.Graphics.DrawRectangle(PdfPens.Black, New RectangleF(0, 0, page.GetClientSize().Width, page.GetClientSize().Height))
+    Dim page As PdfPage = args.Page
+    page.Graphics.DrawRectangle(PdfPens.Black, New RectangleF(0, 0, page.GetClientSize().Width, page.GetClientSize().Height))
 End Sub
 
 {% endhighlight %}

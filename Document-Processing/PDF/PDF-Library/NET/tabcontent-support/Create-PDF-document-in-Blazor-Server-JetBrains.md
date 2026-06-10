@@ -31,6 +31,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 Step 5: Create a new cs file named **ExportService.cs** under **Data** folder and include the following namespaces in the file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -39,11 +40,13 @@ using Syncfusion.Pdf.Grid;
 using Syncfusion.Drawing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
 
 Add the following code sample in ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Export weather data to PDF document.
@@ -98,10 +101,13 @@ public static MemoryStream CreatePdf(WeatherForecast[] forecasts)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Register your service in the ``ConfigureServices`` method available in the ``Startup.cs`` class as follows.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
+
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddRazorPages();
@@ -109,10 +115,13 @@ public void ConfigureServices(IServiceCollection services)
     services.AddSingleton<WeatherForecastService>();
     services.AddSingleton<ExportService>();
 }
+
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Inject ``ExportService`` in-to ``FetchData.razor`` using the following code.
 
+{% tabs %}
 {% highlight CSHTML %}
 
 @inject ExportToFileService exportService
@@ -120,16 +129,23 @@ Step 7: Inject ``ExportService`` in-to ``FetchData.razor`` using the following c
 @using  System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Create a button in the ``FetchData.razor`` using the following code.
 
+{% tabs %}
 {% highlight CSHTML %}
+
 <button class="btn btn-primary" @onclick="@ExportToPdf">Export PDF</button>
+
 {% endhighlight %}
+{% endtabs %}
 
 Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export service.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
+
 @functions
 {
     protected async Task ExportToPdf()
@@ -140,10 +156,13 @@ Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export se
         }
     }
 }
+
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Create a class file with  ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -156,9 +175,11 @@ public static class FileUtil
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available under the ``Pages`` folder.
 
+{% tabs %}
 {% highlight HTML %}
 
 <script type="text/javascript">
@@ -185,6 +206,7 @@ Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available
 </script>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 10: Build the project.
 
