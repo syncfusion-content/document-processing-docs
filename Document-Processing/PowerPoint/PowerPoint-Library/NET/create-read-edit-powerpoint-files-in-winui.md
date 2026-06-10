@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in WinUI |Syncfusion<sup>&reg;</sup>|
+title: Create and edit PowerPoint files in WinUI | Syncfusion
 description: A .NET Core PowerPoint library to create, read and edit PowerPoint files in WinUI applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
