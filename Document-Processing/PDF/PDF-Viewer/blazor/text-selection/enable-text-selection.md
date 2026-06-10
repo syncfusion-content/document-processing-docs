@@ -32,7 +32,7 @@ Use the [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 @code {
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 ### 2. Toggle text selection at runtime
@@ -73,7 +73,7 @@ The [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
         Viewer.LoadAsync(DocumentPath,null);
     }
 }
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 ## Use cases and considerations

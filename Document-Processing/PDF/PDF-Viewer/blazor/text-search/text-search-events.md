@@ -21,7 +21,7 @@ The [OnTextSearchStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
   - `MatchCase`: indicates whether case-sensitive search is enabled.
 
 {% tabs %}
-{% highlight razor}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
              Height="100%"
@@ -47,7 +47,7 @@ The [OnTextSearchHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
   - `PageNumber`: page index where the match is highlighted.
 
 {% tabs %}
-{% highlight razor}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
              Height="100%"
@@ -77,7 +77,7 @@ The [OnTextSearchComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
   - `MatchCase`: indicates whether case-sensitive search was used.
 
 {% tabs %}
-{% highlight razor}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
              Height="100%"

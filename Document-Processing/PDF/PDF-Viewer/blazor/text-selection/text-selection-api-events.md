@@ -97,7 +97,7 @@ ClearTextSelectionAsync(): Task
         await Viewer.ClearTextSelectionAsync();
     }
 }
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 ## Events
@@ -122,7 +122,7 @@ Triggered when the user begins selecting text.
         Console.WriteLine(pageNumber);
     }
 }
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 **Arguments include:**
@@ -154,7 +154,7 @@ Triggered when the selection operation completes.
         Console.WriteLine(textBounds);
     }
 }
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 **Arguments include:**
