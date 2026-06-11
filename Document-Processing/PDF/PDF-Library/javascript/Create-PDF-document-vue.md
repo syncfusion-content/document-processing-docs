@@ -10,13 +10,13 @@ keywords: pdf, script, vue, javascript
 
 # Create or Generate PDF file in Vue application
 
-The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The Syncfusion<sup>&reg;</sup> [JavaScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
 This guide explains how to integrate the JavaScript PDF library into an Vue application.
 
-## Setting up the Vue 2 project
+## Integrate the PDF library into an Vue application
 
-To generate a Vue 2 project using Vue-CLI, use the [Vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Step1: To generate a Vue 2 project using Vue-CLI, use the [Vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -38,9 +38,7 @@ When creating a new project, choose the option `Default ([Vue 2] babel, es-lint)
 
 Once the `quick start` project is set up with default settings, proceed to add Syncfusion<sup>&reg;</sup> components to the project.
 
-* **Installing Syncfusion<sup>&reg;</sup> JavaScript PDF package**
-
-All Syncfusion JS 2 packages are published in `npmjs.com` registry.
+Step2: All Syncfusion JS 2 packages are published in `npmjs.com` registry.
 
 * To install the PDF library, use the following command.
 
@@ -58,7 +56,7 @@ N> For image and data extraction features, you need to install the `@syncfusion/
 * Ensure your server serves .wasm files with the **Content-Type: application/wasm** MIME type.
 * This setup is not required for **basic PDF creation**.
 
-* **Create a PDF document**: Add the script in `App.vue` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
+Step3: To Create a PDF document, Add the script in `App.vue` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
 {% highlight html tabtitle="~/App.vue" %}
@@ -91,9 +89,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Run the project
-
-To run the project, use the following command:
+Step4: To run the project, use the following command:
 
 ```bash
 npm run serve
@@ -107,3 +103,7 @@ yarn run serve
 By executing the program, you will generate the following PDF document.
 
 ![Vue PDF output](Getting_started_images/Output.png)
+
+Click [here](https://www.syncfusion.com/document-sdk/javascript-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/vue/#/tailwind3/pdf/default.html) in Vue.

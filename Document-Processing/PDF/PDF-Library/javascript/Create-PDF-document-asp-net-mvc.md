@@ -10,7 +10,7 @@ keywords: MVC, javascript, pdf
 
 # Create or Generate PDF file in ASP.NET Core MVC
 
-The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The Syncfusion<sup>&reg;</sup> [JavaScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
 This guide explains how to integrate the JavaScript PDF library into an ASP.NET Core MVC application.
 
@@ -31,7 +31,7 @@ Step 5: **Add script reference**: Add the required scripts using the CDN inside 
 <head>
     ...
     <!-- Syncfusion JavaScript PDF Library (CDN) -->
-    <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.12/dist/ej2.min.js"></script>
 </head>
 {% endhighlight %}
 {% endtabs %}
@@ -84,3 +84,5 @@ Step 8: **Run the project**: Click the Start button (green arrow) or press F5 to
 When you run the application and click the button, it generates the following PDF document.
 
 ![ASP.NET Core MVC PDF output](Getting_started_images/Output.png)
+
+Click [here](https://www.syncfusion.com/document-sdk/javascript-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
