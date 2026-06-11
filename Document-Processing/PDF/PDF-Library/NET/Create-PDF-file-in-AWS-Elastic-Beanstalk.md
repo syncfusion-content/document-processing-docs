@@ -7,9 +7,9 @@ documentation: UG
 keywords: aws elastic beanstalk create pdf, aws edit pdf, merge, pdf form, fill form, digital sign, table, c#, dotnet core pdf, asp generate pdf, aspx generate pdf
 ---
 
-# Steps to create PDF document in AWS Elastic Beanstalk
+# Create PDF document in AWS Elastic Beanstalk
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, open and save PDF documents in AWS Elastic Beanstalk. 
+The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, open and save PDF documents in AWS Elastic Beanstalk. 
 
 ## Steps to create a PDF document in AWS Elastic Beanstalk
 
@@ -130,6 +130,6 @@ By executing the program, you will get the PDF document as follows.
 
 Users can download the [AWS Elastic Beanstalk](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/AWS/AWSElasticBeanstalk) project from GitHub.
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core?_gl=1*7czwz1*_ga*OTcwNzc5NDkuMTY4MTEwMjEwNA..*_ga_WC4JKKPHH0*MTY4OTg0NTE0Ni4zMzguMC4xNjg5ODQ1MTQ2LjYwLjAuMA..) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core
+An online sample link to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind).

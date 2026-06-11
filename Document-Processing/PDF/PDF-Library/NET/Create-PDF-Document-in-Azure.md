@@ -24,10 +24,6 @@ Azure Services<br/></th><th>
 NuGet package name<br/></th></tr></thead>
 <tr>
 <td>
-App Service (Windows)<br/></td><td>
+Azure App Service (Windows & Linux)<br/></td><td>
 {{'[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)' | markdownify}}</td></tr>
-<tr>
-<td>
-App Service (Linux)<br/></td><td>
-{{'[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)' | markdownify}}<br/></td></tr>
 </table>
