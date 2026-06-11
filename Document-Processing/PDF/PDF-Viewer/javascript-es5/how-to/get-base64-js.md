@@ -8,20 +8,22 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get Base64 value from a loaded PDF in JavaScript
+# Retrieve Base64 from a PDF in JavaScript PDF Viewer
 
 ### Overview
 
-This guide shows how to get the base64-encoded value of a PDF loaded in the Syncfusion PDF Viewer using JavaScript. This is useful for sending the PDF as a base64 string or processing it on the client.
+This guide shows how to obtain the Base64-encoded value of a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using JavaScript. Producing a Base64 string is useful for sending the PDF to a server, embedding it in JSON payloads, or client-side processing.
 
-### How to Retrieve Base64 Value
+### How to retrieve the Base64 value
 
-**Step 1:** Follow the steps in the [Get started with JavaScript ES5 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) guide to create a sample.
+**Step 1:**  Create the PDF Viewer sample**
+
+Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) guide for the JavaScript PDF Viewer.
 
 
-**Step 2:** Create a Button in Your HTML File
+**Step 2:** Set up the JavaScript component**
 
-Add a button element in your HTML file that will trigger the conversion to a base64 string.
+Create an JavaScript component and update the template to include a button that triggers conversion to a Base64 string. The samples below show both standalone and server-backed viewer configurations.
 
 ```html
 <button id="getBase64">Get Base64</button>
@@ -57,6 +59,6 @@ function base64ofloadedDocument() {
 ```
 ### Conclusion
 
-By following these steps, a loaded PDF can be converted to a Base64 string on button click for transfer or processing.
+By implementing these steps in the JavaScript component, a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer can be converted into a Base64-encoded data URL when a button is clicked. This facilitates the manipulation or transfer of PDF data as needed
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to)

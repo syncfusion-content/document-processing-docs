@@ -7,30 +7,32 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Open PDF file from Azure Blob Storage in Blazor SfPdfViewer
+# Open PDF from Azure Blob Storage in SfPdfViewer
 
-To load a PDF file from Azure Blob Storage in the SfPdfViewer component, follow the steps below.
+This article shows how to load a PDF stored in Azure Blob Storage into the Syncfusion Blazor `SfPdfViewer` component.
 
-**Step 1:** Create the Azure Blob Storage account
+## Step 1 — Create the storage account and container
 
 Sign in to the Azure portal and create a Storage account with the required settings. Record the access keys or prepare a SAS token for secure access. Within the Storage Account, create a Blob Container following the steps in this [link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
 
-**Step 2:** Create a simple SfPdfViewer sample in Blazor
+## Step 2 — Create a minimal SfPdfViewer sample
 
 Create a basic Blazor Server application and integrate the SfPdfViewer component by following [Getting started with the Blazor PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app). This provides the required project configuration and a working viewer scaffold.
 
-**Step 3:** Include the following namespaces in the  **Index.razor**  file.
+## Step 3 — Add required namespaces
 
 1. Add the required namespaces at the top of Index.razor:
 
 ```csharp
-@using System.IO;
-@using Azure.Storage.Blobs;
-@using Azure.Storage.Blobs.Specialized;
-@using Syncfusion.Blazor.SfPdfViewer;
+@using System.IO
+@using Azure.Storage.Blobs
+@using Azure.Storage.Blobs.Specialized
+@using Syncfusion.Blazor.SfPdfViewer
 ```
 
-**Step 4:** Add the below code example to load a PDF from `Azure blob storage` container.
+## Step 4 — Example: load a PDF from Azure Blob Storage
+
+The example below downloads the blob to memory, converts it to a Base64 data URL, and assigns it to `DocumentPath`.
 
 ```csharp
 
@@ -66,7 +68,7 @@ N> Replace the placeholder values as follows:
 • **Your container name in Azure**: the name of the Blob container that stores the PDF.  
 • **File Name to be Loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer**: the file name to load from the Azure container to the SfPdfViewer.
 
-N> Ensure the **Azure.Storage.Blobs** NuGet package is installed in the application to compile the preceding code. The example converts the blob to a Base64 data URL and assigns it to the `DocumentPath` property.
+N> Ensure the `Azure.Storage.Blobs` NuGet package is installed. Prefer server-side retrieval or managed identities to avoid exposing secrets.
 
 [View the Azure Blob Storage sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Azure%20blob%20storage).
 

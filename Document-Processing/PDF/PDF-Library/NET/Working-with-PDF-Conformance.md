@@ -112,7 +112,6 @@ The Essential<sup>&reg;</sup> PDF currently supports the following PDF conforman
 
 N> 1. To know more details about PDF/A standard refer [https://en.wikipedia.org/wiki/PDF/A#Description](https://en.wikipedia.org/wiki/PDF/A#Description )
 N> 2. To know more details about PDF/X standard refer [https://en.wikipedia.org/wiki/PDF/X](https://en.wikipedia.org/wiki/PDF/X)
-
 N> Essential<sup>&reg;</sup> PDF supports PDF conformances only in Windows Forms, WPF, ASP.NET Core, ASP.NET MVC and Xamarin platforms.
 
 ## PDF/A-1b conformance
@@ -1239,7 +1238,7 @@ FileStream fontStream = new FileStream("Arial.ttf", FileMode.Open, FileAccess.Re
 //Set the font.
 PdfFont font = new PdfTrueTypeFont(fontStream, 14);
 //Draw the text.
-graphics.DrawString("Hello world!", pdfFont, brush, new PointF(20, 20));
+graphics.DrawString("Hello world!", font, brush, new PointF(20, 20));
 
 //Save and close the document.
 document.Save("Output.pdf");
@@ -1296,7 +1295,7 @@ Dim brush As PdfBrush = New PdfSolidBrush(Color.Black)
 Dim font As New Font("Arial", 20.0F, FontStyle.Regular)
 Dim pdfFont As PdfFont = New PdfTrueTypeFont(font, FontStyle.Regular, 12, False, True)
 'Draw the text.
-graphics.DrawString("Hello world!", font, brush, New PointF(20, 20))
+graphics.DrawString("Hello world!", pdfFont, brush, New PointF(20, 20))
 
 'Save and close the document.
 document.Save("Output.pdf")
@@ -1406,15 +1405,15 @@ static void LoadedDocument_SubstituteFont(object sender, PdfFontEventArgs args)
      {
          if (fontStyle == PdfFontStyle.Bold)
          {
-             sKFontStyle = SKFontStyle.Bold;
+            sKFontStyle = SKFontStyle.Bold;
          }
          else if (fontStyle == PdfFontStyle.Italic)
          {
-             sKFontStyle = SKFontStyle.Italic;
+            sKFontStyle = SKFontStyle.Italic;
          }
          else if (fontStyle == (PdfFontStyle.Italic | PdfFontStyle.Bold))
          {
-             sKFontStyle = SKFontStyle.BoldItalic;
+            sKFontStyle = SKFontStyle.BoldItalic;
          }
     }
 	
@@ -1423,12 +1422,12 @@ static void LoadedDocument_SubstituteFont(object sender, PdfFontEventArgs args)
     MemoryStream memoryStream = null;
     if (typeFaceStream != null && typeFaceStream.Length > 0)
     {
-         //Create the fontData from the type face stream.	 
-         byte[] fontData = new byte[typeFaceStream.Length - 1];	 
-         typeFaceStream.Read(fontData, typeFaceStream.Length);	 
-         typeFaceStream.Dispose();	 
-         //Create the new memory stream from the font data.	 
-         memoryStream = new MemoryStream(fontData);
+      //Create the fontData from the type face stream.	 
+      byte[] fontData = new byte[typeFaceStream.Length - 1];	 
+      typeFaceStream.Read(fontData, typeFaceStream.Length);	 
+      typeFaceStream.Dispose();	 
+      //Create the new memory stream from the font data.	 
+      memoryStream = new MemoryStream(fontData);
     }	
     //set the font stream to the event args.	
     args.FontStream = memoryStream;
@@ -1564,15 +1563,15 @@ static void LoadedDocument_SubstituteFont(object sender, PdfFontEventArgs args)
      { 
          if (fontStyle == PdfFontStyle.Bold) 
          { 
-             sKFontStyle = SKFontStyle.Bold; 
+            sKFontStyle = SKFontStyle.Bold; 
          } 
          else if (fontStyle == PdfFontStyle.Italic) 
          { 
-             sKFontStyle = SKFontStyle.Italic; 
+            sKFontStyle = SKFontStyle.Italic; 
          } 
          else if (fontStyle == (PdfFontStyle.Italic | PdfFontStyle.Bold)) 
          { 
-             sKFontStyle = SKFontStyle.BoldItalic; 
+            sKFontStyle = SKFontStyle.BoldItalic; 
          } 
      } 
 
@@ -1581,13 +1580,13 @@ static void LoadedDocument_SubstituteFont(object sender, PdfFontEventArgs args)
     MemoryStream memoryStream = null; 
     if (typeFaceStream != null && typeFaceStream.Length > 0) 
     { 
-         //Create the fontData from the type face stream.	  
-         byte[] fontData = new byte[typeFaceStream.Length];	  
-         typeFaceStream.Read(fontData, typeFaceStream.Length);	  
-         typeFaceStream.Dispose();	  
+      //Create the fontData from the type face stream.	  
+      byte[] fontData = new byte[typeFaceStream.Length];	  
+      typeFaceStream.Read(fontData, typeFaceStream.Length);	  
+      typeFaceStream.Dispose();	  
 
-         //Create the new memory stream from the font data.	  
-         memoryStream = new MemoryStream(fontData); 
+      //Create the new memory stream from the font data.	  
+      memoryStream = new MemoryStream(fontData); 
     }	 
 
     //set the font stream to the event args.	 
@@ -1685,7 +1684,7 @@ loadedDocument.Close(true);
 //Event handler for Track PDF to PDF/A conversion process
 void pdfAConversion_TrackProgress(object sender, PdfAConversionProgressEventArgs arguments)
 {
-    Console.WriteLine(String.Format("PDF to PDF/A conversion process " + arguments.ProgressValue + "% completed"));
+  Console.WriteLine(String.Format("PDF to PDF/A conversion process " + arguments.ProgressValue + "% completed"));
 }
  
 
@@ -1712,7 +1711,7 @@ loadedDocument.Close(true);
 //Event handler for Track PDF to PDF/A conversion process
 void pdfAConversion_TrackProgress(object sender, PdfAConversionProgressEventArgs arguments)
 {
-Console.WriteLine(String.Format("PDF to PDF/A conversion Process " + arguments. ProgressValue + " % completed"));
+  Console.WriteLine(String.Format("PDF to PDF/A conversion Process " + arguments. ProgressValue + " % completed"));
 }
 
 {% endhighlight %}

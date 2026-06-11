@@ -30,21 +30,24 @@ Step 2:  In configuration windows, name your project and select Next.
 ![Configuration window1](Asp.Net.Core_images/aspnetcore2.png)
 ![Configuration window2](Asp.Net.Core_images/aspnetcore3.png)
 
-Step 3:  Install [Syncfusion.PdfToImageConverter.Net](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 3:  Install [Syncfusion.PdfToImageConverter.Net.Core](https://www.nuget.org/packages/Syncfusion.PdfToImageConverter.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
 
 N> If you want to use the PdfToImageConverter in the Linux environment, you need to install the [SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1) NuGet package as reference to your applications from [NuGet.org](https://www.nuget.org/).
 
 Step 4: A default controller with name HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 using Syncfusion.PdfToImageConverter;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add a new button in index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# tabtitle="~/Index.cshtml" %}
 
 @{Html.BeginForm("ExportToImage", "Home", FormMethod.Post);
     {
@@ -56,10 +59,12 @@ Step 5: Add a new button in index.cshtml as shown below.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new action method named ExportToImage in HomeController.cs and include the below code example to convert PDF document to Image using Convert method in PdfToImageConverter class.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
@@ -76,6 +81,7 @@ using (FileStream output = new FileStream("output.png", FileMode.OpenOrCreate, F
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Build the project.
 
@@ -118,15 +124,18 @@ N> If you want to use the PdfToImageConverter in the Linux environment, you need
 
 Step 5: A default controller with name HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 using Syncfusion.PdfToImageConverter;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# tabtitle="~/Index.cshtml" %}
 
 @{Html.BeginForm("ExportToImage", "Home", FormMethod.Get);
     {
@@ -138,10 +147,12 @@ Step 6: A default action method named Index will be present in HomeController.cs
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add a new action method named ExportToImage in HomeController.cs and include the below code example to convert PDF document to Image using Convert method in PdfToImageConverter class.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
@@ -158,6 +169,7 @@ using (FileStream output = new FileStream("output.png", FileMode.OpenOrCreate, F
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Build the project.
 

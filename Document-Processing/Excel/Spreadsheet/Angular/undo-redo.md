@@ -38,8 +38,8 @@ You can update your own custom actions in UndoRedo collection, by using the [`up
 The following code example shows `How to update and customize your own actions for undo redo` functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/undo-redo-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/undo-redo-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

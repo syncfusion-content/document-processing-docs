@@ -21,7 +21,7 @@ Log in to the Azure Portal. Create a new Storage Account with preferred settings
 
 **Step 2:** Create an ASP.NET Core PDF Viewer sample
 
-Follow the instructions in this Getting Started [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core. This sets up the basic structure of the PDF Viewer application.
+Follow the instructions in this Getting Started [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core. This establishes the basic structure of the PDF Viewer application.
 
 **Step 3:** Modify the `Index.cshtml.cs` file in the project
 

@@ -1,294 +1,336 @@
 ---
 layout: post
-title: Free text annotation in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn about free text annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+title: "Free text annotation in ASP.NET Core PDF Viewer control"
+description: "Learn about free text annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2): add, edit, delete, and default settings."
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Free text annotation in ASP.NET Core PDF Viewer control
+# Free text annotation in ASP.NET Core PDF Viewer component
 
-The PDF Viewer control provides options to add, edit, and delete free text annotations.
+The PDF Viewer provides tools to add, edit, and remove free-text annotations.
 
-## Add a free text annotation to the PDF document
+## Add a free-text annotation
 
-Free text annotations can be added to the PDF document using the annotation toolbar.
+To add a free-text annotation:
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
-* Select the **Free Text Annotation** button to enable free text annotation mode.
-* Add text anywhere on the pages of the PDF document.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar to reveal the annotation toolbar.
+* Select the **Free Text Annotation** button to enter free*text annotation mode.
+* Tap or click anywhere on the page to add text.
 
-When in pan mode, selecting free text annotation switches the PDF Viewer to text select mode.
+When the viewer is in pan mode, selecting the Free Text annotation switches the viewer to text-selection mode.
 
-![Free text tool in the annotation toolbar](../images/freetext_tool.png)
+![Free Text tool in the annotation toolbar](../images/freetext_tool.png)
 
-The following example switches to free text annotation mode using a button click.
-
-{% tabs %}
-{% highlight cshtml tabtitle="Standalone" %}
-
-<!--Element to set free text annotation mode-->
-<button id="set" onclick="addAnnot()">FreeText</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-<script>
-    function addAnnot() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.annotation.setAnnotationMode('FreeText');
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<!--Element to set free text annotation mode-->
-<button id="set" onclick="addAnnot()">FreeText</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-<script>
-    function addAnnot() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.annotation.setAnnotationMode('FreeText');
-    }
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add a free text annotation programmatically to the PDF document
-
-The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
-
-Here is an example of adding a free text annotation programmatically using addAnnotation():
+The example below shows switching to free-text annotation mode via a button click.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-
-<button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:680px">
+  <button onclick="freetextMode()">FreeText</button>
+  <ejs-pdfviewer id="container" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"></ejs-pdfviewer>
 </div>
 <script>
-    function addAnnotation() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.annotation.addAnnotation("FreeText", {
-            offset: { x: 100, y: 150 },
-            fontSize: 16,
-            fontFamily: "Helvetica",
-            pageNumber: 1,
-            width: 200,
-            height: 40,
-            isLock: false,
-            textAlignment: 'Center',
-            borderStyle: 'solid',
-            borderWidth: 2,
-            borderColor: 'red',
-            fillColor: 'blue',
-            fontColor: 'white',
-            defaultText: "Syncfusion"
-        });
-    }
-</script>
+window.onload = function() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+};
 
+function freetextMode() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+  if (viewer) {
+    viewer.annotation.setAnnotationMode('FreeText');
+  }
+}
+</script>
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:680px">
+  <button onclick="freetextMode()">FreeText</button>
+  <ejs-pdfviewer id="container" style="height:600px" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"></ejs-pdfviewer>
 </div>
 <script>
-    function addAnnotation() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.annotation.addAnnotation("FreeText", {
-            offset: { x: 100, y: 150 },
-            fontSize: 16,
-            fontFamily: "Helvetica",
-            pageNumber: 1,
-            width: 200,
-            height: 40,
-            isLock: false,
-            textAlignment: 'Center',
-            borderStyle: 'solid',
-            borderWidth: 2,
-            borderColor: 'red',
-            fillColor: 'blue',
-            fontColor: 'white',
-            defaultText: "Syncfusion"
-        });
-    }
-</script>
+window.onload = function() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+};
 
+function freetextMode() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+  if (viewer) {
+    viewer.annotation.setAnnotationMode('FreeText');
+  }
+}
+</script>
 {% endhighlight %}
 {% endtabs %}
 
-## Change the content of an existing free text annotation programmatically
+## Add a free-text annotation programmatically
 
-To change the content of an existing free text annotation programmatically, use the **editAnnotation()** method.
+You can add a free-text annotation programmatically using the `addAnnotation()` method.
 
-Here is an example of changing the content of a free text annotation using **editAnnotation()**:
+Example: add a free-text annotation using `addAnnotation()`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-
-<button id="set" onclick="editAnnotation()">Edit annotation programmatically</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:680px">
+  <button onclick="addAnnotation()">Add Annotation programmatically</button>
+  <ejs-pdfviewer id="container" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"></ejs-pdfviewer>
 </div>
 <script>
-    function editAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < viewer.annotationCollection.length; i++) {
-            if (viewer.annotationCollection[i].subject === "Text Box") {
-                var width = viewer.annotationCollection[i].bounds.width;
-                var height = viewer.annotationCollection[i].bounds.height;
-                viewer.annotationCollection[i].bounds = { x: 100, y: 100, width: width, height: height };
-                viewer.annotationCollection[i].dynamicText = 'syncfusion';
-                viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
-            }
-        }
-    }
-</script>
+window.onload = function() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+};
 
+function addAnnotation() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+  if (viewer) {
+    viewer.annotation.addAnnotation("FreeText", {
+      offset: { x: 100, y: 150 },
+      fontSize: 16,
+      fontFamily: "Helvetica",
+      pageNumber: 1,
+      width: 200,
+      height: 40,
+      isLock: false,
+      textAlignment: 'Center',
+      borderStyle: 'solid',
+      borderWidth: 2,
+      borderColor: 'red',
+      fillColor: 'blue',
+      fontColor: 'white',
+      defaultText: "Syncfusion"
+    });
+  }
+}
+</script>
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="set" onclick="editAnnotation()">Edit annotation programmatically</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:680px">
+  <button onclick="addAnnotation()">Add Annotation programmatically</button>
+  <ejs-pdfviewer id="container" style="height:600px" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"></ejs-pdfviewer>
 </div>
 <script>
-    function editAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < viewer.annotationCollection.length; i++) {
-            if (viewer.annotationCollection[i].subject === "Text Box") {
-                var width = viewer.annotationCollection[i].bounds.width;
-                var height = viewer.annotationCollection[i].bounds.height;
-                viewer.annotationCollection[i].bounds = { x: 100, y: 100, width: width, height: height };
-                viewer.annotationCollection[i].dynamicText = 'syncfusion';
-                viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
-            }
-        }
-    }
-</script>
+window.onload = function() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+};
 
+function addAnnotation() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+  if (viewer) {
+    viewer.annotation.addAnnotation("FreeText", {
+      offset: { x: 100, y: 150 },
+      fontSize: 16,
+      fontFamily: "Helvetica",
+      pageNumber: 1,
+      width: 200,
+      height: 40,
+      isLock: false,
+      textAlignment: 'Center',
+      borderStyle: 'solid',
+      borderWidth: 2,
+      borderColor: 'red',
+      fillColor: 'blue',
+      fontColor: 'white',
+      defaultText: "Syncfusion"
+    });
+  }
+}
+</script>
 {% endhighlight %}
 {% endtabs %}
 
-N> The current version of the PDF Viewer does not edit existing document text. New free text annotations can be added and modified within the document.
+## Change the content of an existing free-text annotation programmatically
 
-## Edit the properties of free text annotations
+To update the content of an existing free-text annotation, use the `editAnnotation()` method. Example below demonstrates editing an annotation's bounds and text.
 
-Font family, font size, styles, font color, text alignment, fill color, stroke color, border thickness, and opacity can be edited using the Font Family, Font Size, Font Color, Text Align, Font Style, Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:680px">
+  <button onclick="editAnnotation()">Edit Annotation programmatically</button>
+  <ejs-pdfviewer id="container" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"></ejs-pdfviewer>
+</div>
+<script>
+window.onload = function() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+};
 
-### Edit font family
+function editAnnotation() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+  if (viewer && viewer.annotationCollection) {
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Text Box") {
+        var width = viewer.annotationCollection[i].bounds.width;
+        var height = viewer.annotationCollection[i].bounds.height;
+        viewer.annotationCollection[i].bounds = { x: 100, y: 100, width: width, height: height };
+        viewer.annotationCollection[i].dynamicText = 'syncfusion';
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+}
+</script>
+{% endhighlight %}
+{% highlight cshtml tabtitle="Server-Backed" %}
+<div style="width:100%;height:680px">
+  <button onclick="editAnnotation()">Edit Annotation programmatically</button>
+  <ejs-pdfviewer id="container" style="height:600px" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"></ejs-pdfviewer>
+</div>
+<script>
+window.onload = function() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+};
 
-Edit the font family by selecting a font in the Font Family tool.
+function editAnnotation() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+  if (viewer && viewer.annotationCollection) {
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Text Box") {
+        var width = viewer.annotationCollection[i].bounds.width;
+        var height = viewer.annotationCollection[i].bounds.height;
+        viewer.annotationCollection[i].bounds = { x: 100, y: 100, width: width, height: height };
+        viewer.annotationCollection[i].dynamicText = 'syncfusion';
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
+    }
+  }
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
 
-![Change font family](../images/fontfamily.png)
+N> The PDF Viewer does not edit original document text. You can add and modify free-text annotations only.
 
-### Edit font size
+## Edit free-text annotation properties
 
-Edit the font size by selecting a size in the Font Size tool.
+Use the annotation toolbar to configure font family, size, style, font color, text alignment, fill color, stroke color, border thickness, and opacity.
 
-![Change font size](../images/fontsize.png)
+### Font family
 
-### Edit font color
+Choose a font from the Font Family tool.
 
-Edit the font color using the color palette in the Font Color tool.
+![Font family selection](../images/fontfamily.png)
 
-![Change font color](../images/fontcolor.png)
+### Font size
 
-### Edit text alignment
+Select a size in the Font Size tool.
 
-Align text by selecting an option from the Text Align tool.
+![Font size selection](../images/fontsize.png)
 
-![Set text alignment](../images/textalign.png)
+### Font color
 
-### Edit text styles
+Pick a color from the Font Color palette.
 
-Edit text styles by selecting options in the Font Style tool.
+![Font color picker](../images/fontcolor.png)
 
-![Change text styles](../images/fontstyle.png)
+### Text alignment
 
-### Edit fill color
+Set alignment using the Text Align tool.
 
-Edit the fill color using the color palette in the Edit Color tool.
+![Text alignment options](../images/textalign.png)
 
-![Change fill color](../images/fillcolor.png)
+### Text styles
 
-### Edit stroke color
+Toggle styles in the Font Style tool.
 
-Edit the stroke color using the color palette in the Edit Stroke Color tool.
+![Text style options](../images/fontstyle.png)
 
-![Change stroke color](../images/fontstroke.png)
+### Fill color
 
-### Edit thickness
+Set the annotation's fill color with the Edit Color tool.
 
-Edit border thickness using the range slider in the Edit Thickness tool.
+![Fill color picker](../images/fillcolor.png)
 
-![Change border thickness](../images/fontthickness.png)
+### Stroke color
 
-### Edit opacity
+Set the stroke color with the Edit Stroke Color tool.
 
-Edit opacity using the range slider in the Edit Opacity tool.
+![Stroke color picker](../images/fontstroke.png)
 
-![Change opacity](../images/fontopacity.png)
+### Thickness
+
+Adjust border thickness with the Edit Thickness slider.
+
+![Border thickness slider](../images/fontthickness.png)
+
+### Opacity
+
+Adjust opacity with the Edit Opacity slider.
+
+![Opacity slider](../images/fontopacity.png)
 
 ## Set default properties during control initialization
 
-Default properties for free text annotations can be set before creating the control using FreeTextSettings.
-
-After changing default values, the selected values are applied. The following example sets default free text annotation settings.
+Set default properties for free-text annotations using `freeTextSettings` when initializing the control. The selected defaults are applied when annotations are created. The example below sets default values.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   freeTextSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerFreeTextSettings
-            {FillColor="green", BorderColor="blue", FontColor="yellow"})">
-    </ejs-pdfviewer>
+<div style="width:100%;height:680px">
+  <ejs-pdfviewer id="container" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"></ejs-pdfviewer>
 </div>
-
+<script>
+window.onload = function() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+  if (viewer) {
+    viewer.freeTextSettings = {
+      fillColor: 'green',
+      borderColor: 'blue',
+      fontColor: 'yellow'
+    };
+  }
+};
+</script>
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   freeTextSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerFreeTextSettings
-            {FillColor="green", BorderColor="blue", FontColor="yellow"})">
-    </ejs-pdfviewer>
+<div style="width:100%;height:680px">
+  <ejs-pdfviewer id="container" style="height:600px" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"></ejs-pdfviewer>
 </div>
+<script>
+window.onload = function() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+  if (viewer) {
+    viewer.freeTextSettings = {
+      fillColor: 'green',
+      borderColor: 'blue',
+      fontColor: 'yellow'
+    };
+  }
+};
+</script>
+{% endhighlight %}
+{% endtabs %}
 
+You can also enable the autofit support for free text annotation by using the enableAutoFit boolean property in freeTextSettings as below. The width of the free text rectangle box will be increased based on the text added to it.
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:680px">
+  <ejs-pdfviewer id="container" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"></ejs-pdfviewer>
+</div>
+<script>
+window.onload = function() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+  if (viewer) {
+    viewer.freeTextSettings = {
+      enableAutoFit: true
+    };
+  }
+};
+</script>
+{% endhighlight %}
+{% highlight cshtml tabtitle="Server-Backed" %}
+<div style="width:100%;height:680px">
+  <ejs-pdfviewer id="container" style="height:600px" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"></ejs-pdfviewer>
+</div>
+<script>
+window.onload = function() {
+  var viewer = document.getElementById('container').ej2_instances[0];
+  if (viewer) {
+    viewer.freeTextSettings = {
+      enableAutoFit: true
+    };
+  }
+};
+</script>
 {% endhighlight %}
 {% endtabs %}

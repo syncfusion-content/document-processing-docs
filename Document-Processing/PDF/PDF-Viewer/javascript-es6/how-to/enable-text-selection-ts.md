@@ -14,7 +14,7 @@ Use the `enableTextSelection` property to control whether users can select text 
 
 ## Configure on initialization
 
-Set initial behavior when instantiating the PDF Viewer.
+Set initial behavior when instantiating the PDF Viewer. Set this property on the viewer configuration before calling `appendTo` so the initial state is applied when the viewer is rendered.
 
 ```ts
 import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
@@ -32,7 +32,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Toggle dynamically
 
-Change the behavior at runtime using buttons or other UI.
+Change the behavior at runtime using buttons or other UI. Update the property on the viewer instance and the viewer will reflect the change without reinitialization.
 
 ```html
 <!-- HTML buttons to control text selection -->

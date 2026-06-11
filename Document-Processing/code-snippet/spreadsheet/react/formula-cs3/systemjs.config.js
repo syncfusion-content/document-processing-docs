@@ -17,7 +17,7 @@ System.config({
         '*.json': { loader: 'plugin-json' }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/28.1.33/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/33.1.44/"
     },
     map: {
         app: 'app',

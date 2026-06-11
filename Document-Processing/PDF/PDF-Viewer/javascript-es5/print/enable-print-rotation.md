@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable print rotation in the JavaScript
+# Enable print rotation in JavaScript PDF Viewer
 
-Set the `enablePrintRotation` property to control whether landscape pages are rotated automatically to fit the paper orientation. Keep it enabled to minimize clipping, or disable it to preserve the original orientation.
+Use the `enablePrintRotation` property to enable automatic rotation of landscape pages during printing so they match the paper orientation. Enable this setting to reduce clipping of landscape pages; disable it to preserve the document's original orientation. Ensure the `Print` module is injected before using this property — see the PdfViewer API reference: [PdfViewer API Reference](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default).
 
-![Print Rotate](../../javascript-es6/images/print-rotate.gif)
+![Print rotation demo showing landscape pages rotated for printing](../../javascript-es6/images/print-rotate.gif)
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

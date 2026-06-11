@@ -18,16 +18,16 @@ Ink is a freehand drawing annotation used to sketch, sign, or mark up content.
 
 ### Add ink annotation via UI
 
-Use the annotation toolbar:
-- Click the Edit Annotation button in the PDF Viewer toolbar.
-- Click the Draw Ink button to enable ink mode.
+Use the annotation toolbar to:
+- Click the **Edit Annotation** button in the PDF Viewer toolbar.
+- Click the **Draw Ink** button to enable ink mode.
 - Draw on any page of the PDF document.
 
 ![Ink tool in the annotation toolbar](../../images/ink_tool.png)
 
 ### Enable ink mode
 
-The PDF Viewer component allows add ink annotations programmatically after enabling ink mode in button clicks.
+The PDF Viewer component allows adding ink annotations programmatically after enabling ink mode via button clicks.
 
 ```html
 <button id="addInkAnnotation">Ink Annotation</button>
@@ -157,7 +157,7 @@ document.getElementById('addInkAnnotationProgram').addEventListener('click', fun
 
 ### Edit ink annotation in UI
 
-You can select, move, and resize Ink annotations directly in the viewer:
+Select, move, and resize ink annotations directly in the viewer:
 - Select an Ink annotation to show its handles.
 - Move: drag inside the stroke to reposition it on the page.
 - Resize: drag the selector handles to adjust its bounds.
@@ -323,9 +323,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `InkSettings`.
+Set properties for individual annotations before creating the control using `InkSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default Ink settings.
 

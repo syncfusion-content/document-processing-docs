@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Enable or disable text selection in PDF Viewer
 
-Use the `enableTextSelection` property to control whether users can select text in the displayed PDF. This setting can be configured at initialization and toggled at runtime.
+The Syncfusion PDF Viewer exposes the `enableTextSelection` property to control whether users can select text within the displayed PDF document. This setting can be configured at initialization and toggled programmatically at runtime.
 
-## Configure on initialization
+## Configure text selection on initialization
 
-Set initial behavior when instantiating the PDF Viewer.
+Set the initial text-selection behavior by configuring the `enableTextSelection` property in the component template. The example below shows a complete component that initializes the viewer with text selection disabled.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -78,7 +78,7 @@ export default {
 
 ## Toggle dynamically
 
-Change the behavior at runtime using buttons or other UI.
+To toggle text selection at runtime:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}

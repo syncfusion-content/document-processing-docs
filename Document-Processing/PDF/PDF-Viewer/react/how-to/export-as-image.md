@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export pages as images in PDF Viewer
 
-Export a single page as a Base64-encoded image using `exportAsImage()` or export a range of pages using `exportAsImages()`.
+The PDF Viewer component can export pages as Base64-encoded image strings using the `exportAsImage()` method (single page) and `exportAsImages()` method (page range). The examples below demonstrate single-page export, range export, and how to specify a custom image size.
 
 Steps to export pages as images
 

@@ -7,11 +7,13 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Use extractTextCompleted to extract text in ASP.NET Core PDF Viewer
+# Extract text using extractTextCompleted in ASP.NET Core PDF Viewer
 
-Use the **isExtractText** property and the [**extractTextCompleted**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ExtractTextCompleted) event to extract page text along with bounds.
+The PDF Viewer provides the **isExtractText** property and the [**extractTextCompleted**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ExtractTextCompleted) event to retrieve all text content and its corresponding bounding box coordinates from a document.
 
-The following example shows how to enable text extraction and handle the completion event:
+## Enable text extraction
+
+To extract text, set the **isExtractText** property to `true`. Once the text extraction process finishes, the **extractTextCompleted** event is triggered, providing access to the `documentTextCollection`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

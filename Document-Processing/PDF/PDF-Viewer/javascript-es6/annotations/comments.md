@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in TypeScript PDF Viewer control
+# Comments in TypeScript PDF Viewer
 
-The PDF Viewer control provides options to add, edit, and delete comments for the following annotations in PDF documents:
+The PDF Viewer provides options to add, edit, and delete comments for the following annotation types in PDF documents:
 
 * Shape annotation
 * Stamp annotation
@@ -32,39 +32,39 @@ Annotation comments can be added to the PDF using the comment panel. The comment
 
 1. Using the annotation menu
 
-    * Click the Edit Annotation button in the PDF Viewer toolbar. A toolbar appears below it.
-    * Click the Comment Panel button. The comment panel opens.
+      * Select the Edit Annotation button in the PDF Viewer toolbar. A toolbar appears below it.
+      * Select the Comment Panel button to open the comment panel.
 
-2. Using Context menu
+2. Using the context menu
 
     * Select the annotation in the PDF document and right-click it.
     * Select Comment from the context menu.
 
-3. Using the Mouse click
+3. Using a mouse click
 
-    * Select the annotation in the PDF document and double-click it. The comment panel opens.
+    * Select the annotation in the PDF document and double-click it to open the comment panel.
 
 If the comment panel is already open, select the annotation and add comments using the panel.
 
 ### Adding comments
 
-* Select the annotation in the PDF document.
-* The corresponding comment thread is highlighted in the comment panel.
-* Add comments and replies using the comment panel.
+- Select an annotation in the PDF document.
+- The corresponding comment thread is highlighted in the comment panel.
+- Add comments and replies using the comment panel.
 
 ![Adding comments to a sticky note annotation](../images/stickycomment.png)
 
-### Adding Comment Replies
+### Adding comment replies
 
-* Multiple replies can be added to a comment.
-* After adding a comment, add replies as needed.
+- Multiple replies can be added to a comment.
+- After adding a comment, add replies as needed.
 
-### Adding Comment or Reply Status
+### Adding comment or reply status
 
-* Select the annotation comment in the comment panel.
-* Click More options in the comment or reply container.
-* Select Set Status from the context menu.
-* Choose a status for the comment.
+- Select the annotation comment in the comment panel.
+- Click More options in the comment or reply container.
+- Select Set Status from the context menu.
+- Choose a status for the comment.
 
 ![Set status for a comment](../images/commentstatus.png)
 

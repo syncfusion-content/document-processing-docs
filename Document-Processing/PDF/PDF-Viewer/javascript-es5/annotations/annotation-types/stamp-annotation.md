@@ -21,11 +21,11 @@ The PDF Viewer control provides options to add, edit, delete, and rotate the fol
 
 ## Add Stamp Annotation
 
-### Add Stamp Annotation in UI
+### Add Stamp annotations in UI
 
-Use the annotation toolbar:
-- Click the Edit Annotation button.
-- Open the Stamp Annotation dropdown.
+Use the annotation toolbar to:
+- Click the **Edit Annotation** button.
+- Open the **Stamp Annotation** dropdown.
 ![Stamp tool](../../images/stamp_tool.png)
 - Choose a stamp type and place it on the page.
 ![Select stamp type](../../images/selectstamp_annot.png)
@@ -99,9 +99,9 @@ document.getElementById('standardBusinessStamp') && document.getElementById('sta
 {% endhighlight %}
 {% endtabs %}
 
-### Add Stamp Annotation programmatically
+### Add Stamp annotations programmatically
 
-Create stamps via addAnnotation.
+Create stamps programmatically using the `addAnnotation` method.
 
 ```html
 <button id="addDynamic">Add Dynamic Stamp</button>
@@ -183,9 +183,9 @@ document.getElementById('addCustom') && document.getElementById('addCustom').add
 
 ## Edit Stamp Annotation
 
-### Edit Stamp Annotation in UI
+### Edit Stamp annotations in UI
 
-You can select, move, resize, rotate, and delete Stamp annotations directly in the viewer:
+Use the viewer to select, move, resize, rotate, and delete Stamp annotations:
 - Select a Stamp to show its resize and rotation handles.
 - Move: drag inside the stamp to reposition it on the page.
 - Resize: drag any corner or side handle to adjust the size.

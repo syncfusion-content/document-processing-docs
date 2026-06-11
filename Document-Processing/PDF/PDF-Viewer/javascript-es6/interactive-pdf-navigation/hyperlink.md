@@ -10,29 +10,29 @@ domainurl: ##DomainURL##
 
 # Hyperlink navigation in TypeScript PDF Viewer
 
-The PDF Viewer consolidates hyperlink-driven experiences, including inline links and table-of-contents (TOC) entries that target in-document destinations. These elements surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
+The PDF Viewer supports hyperlink navigation for inline links and table-of-contents (TOC) entries that target destinations inside a document. These elements let users jump directly to relevant sections.
 
-> **Note:** The table of contents pane and hyperlink interactions rely on the same navigation infrastructure. When these capabilities are enabled, the PDF Viewer automatically surfaces TOC entries and clickable links defined in the PDF.
+N> The table of contents pane and hyperlink interactions share the same navigation infrastructure. When enabled, the PDF Viewer surfaces TOC entries and clickable links defined in the PDF.
 
 ## Required modules
 
-Inject the following modules to enable both navigation experiences: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, and optionally `Annotation`.
+Inject the following modules to enable navigation: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, and optionally `Annotation`.
 
 ## Table of contents navigation
 
-Use the table of contents to navigate to headings and sections defined in the PDF. When the document contains a bookmarks or outline structure, the viewer exposes those entries in the table of contents (Bookmarks) pane. Selecting an entry navigates directly to the mapped destination. If the PDF does not include a table of contents, the pane will not list any entries.
+Use the table of contents to navigate to headings and sections defined in the PDF. When a document includes a bookmarks/outline structure, the viewer exposes those entries in the table of contents (bookmarks) pane. Selecting an entry navigates directly to the mapped destination. If the PDF does not include a table of contents, the pane remains empty.
 
 ![Table of contents pane in PDF Viewer](../images/toc.png)
 
 ## Hyperlink navigation
 
-The PDF Viewer provides robust support for hyperlink navigation within PDF documents. This allows users to interact with embedded links, which can point to external websites or other locations within the same document. This section covers how to configure hyperlink behavior, including enabling or disabling links, controlling how they open, and responding to hyperlink-related events.
+The PDF Viewer supports embedded links that point to external websites or to destinations inside the same document. This section explains how to enable or disable links, control how they open, and handle hyperlink-related events.
 
-![Hyperlink Navigation in PDF Viewer](../images/link.png)
+![Hyperlink navigation in PDF Viewer](../images/link.png)
 
 ### Enable or disable hyperlinks
 
-By default, the PDF Viewer automatically detects and enables all hyperlinks present in a loaded document. This behavior can be controlled using the `enableHyperlink` property.
+By default, the PDF Viewer detects and enables hyperlinks present in a loaded document. Use the `enableHyperlink` property to control this behavior.
 
 - **Property**: `enableHyperlink`
 - **Type**: `boolean`
@@ -68,16 +68,17 @@ viewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
+N> Disabling hyperlinks affects only the viewer's behavior and does not modify the original PDF document.
+
 ### Control link behavior
 
-The `hyperlinkOpenState` property determines how external URLs are opened when a hyperlink is clicked.
+The `hyperlinkOpenState` property determines how external URLs open when a hyperlink is clicked.
 
 - **Property**: `hyperlinkOpenState`
 - **Type**: `'CurrentTab' | 'NewTab'`
 - **Default**: `'CurrentTab'`
 
-By default, links open in the same browser tab (`CurrentTab`). To open links in a new tab, set this property to `'NewTab'`. This is useful for preserving the user's current viewing session.
+By default, links open in the same browser tab (`CurrentTab`). To open links in a new tab, set this property to `'NewTab'`.
 
 The following example configures hyperlinks to open in a new tab:
 
@@ -113,17 +114,17 @@ The PDF Viewer exposes events that allow for monitoring and customizing hyperlin
 
 #### hyperlinkClick
 
-The `hyperlinkClick` event is triggered when a user clicks a hyperlink. This event can be used to implement custom logic, such as validating a URL or preventing the default navigation behavior.
+The `hyperlinkClick` event is triggered when a user clicks a hyperlink. Use this event to validate a URL or prevent default navigation.
 
-The event arguments provide the following information:
+Event arguments:
 - `hyperlink`: The URL of the clicked hyperlink.
-- `cancel`: A boolean that, when set to `true`, prevents the default navigation action.
+- `cancel`: Boolean; set to `true` to prevent the default navigation action.
 
 #### hyperlinkMouseOver
 
-The `hyperlinkMouseOver` event is triggered when the mouse pointer hovers over a hyperlink. This can be used to display custom tooltips or other visual feedback.
+The `hyperlinkMouseOver` event is triggered when the mouse pointer hovers over a hyperlink and can be used to display custom tooltips or other visual feedback.
 
-The event arguments include:
+Event arguments:
 - `hyperlinkElement`: The HTML anchor element (`<a>`) corresponding to the hyperlink.
 
 The following example demonstrates how to use these events:

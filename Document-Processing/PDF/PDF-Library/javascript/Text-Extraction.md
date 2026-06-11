@@ -13,7 +13,7 @@ N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-ext
 
 ## Working with basic text extraction
 
-This example demonstrates how to extract text from a PDF page using the `PdfDataExtractor` class. Basic text extraction allows retrieving plain text content from a PDF document.
+This example demonstrates how to extract text from a PDF page using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class. Basic text extraction allows retrieving plain text content from a PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -87,7 +87,7 @@ document.destroy();
 
 ## Working with layout based text extraction
 
-This example demonstrates how to extract text from a PDF page using the `PdfDataExtractor` class with layout-based options.
+This example demonstrates how to extract text from a PDF page using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class with layout-based options.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -128,7 +128,7 @@ N> Layout based text extraction may take additional processing time when compare
 
 ### Working with lines
 
-This example demonstrates how to extract text from a PDF page based on individual lines using the `extractTextLines` method. This approach provides a collection of `TextLine` objects, allowing precise access to text content line by line.
+This example demonstrates how to extract text from a PDF page based on individual lines using the [extractTextLines](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlines) method. This approach provides a collection of [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline) objects, allowing precise access to text content line by line.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -199,7 +199,7 @@ document.destroy();
 
 ### Working with words
 
-This example demonstrates how to extract words from a PDF document using the `extractTextLines` method. Each line contains a collection of `TextWord` objects. 
+This example demonstrates how to extract words from a PDF document using the [extractTextLines](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlines) method. Each line contains a collection of [TextWord](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textword) objects. 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -268,7 +268,7 @@ document.destroy();
 
 ### Working with characters
 
-You can retrieve a single character and its properties, including bounds, font name, font size, and text color, using the `extractTextLines` method. Refer to the code sample below.
+You can retrieve a single character and its properties, including bounds, font name, font size, and text color, using the [extractTextLines](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlines) method. Refer to the code sample below.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

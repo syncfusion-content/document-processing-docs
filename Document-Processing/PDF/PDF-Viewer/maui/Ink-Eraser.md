@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ink Eraser in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about Ink Eraser in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its functionalities.
+title: Ink Eraser in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to erase ink (freehand drawing) annotations using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -84,3 +84,7 @@ PdfViewer.AnnotationSettings.InkEraser.Thickness = 50;
 N> When the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) is [InkEraser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_InkEraser)., only the ink annotations will be erased. Other types of annotations will not be erased. 
 
 
+
+## See Also
+- [Ink Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ink)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)

@@ -18,7 +18,7 @@ Line is a shape annotation used to mark straight connections or callouts. Common
 
 ### Add line annotation via UI
 
-Use the annotation toolbar:
+Use the annotation toolbar to:
 - Click the **Edit Annotation** button in the PDF Viewer toolbar.
 - Open the **Shape Annotation** dropdown.
 - Choose **Line**, then draw on the page.
@@ -29,7 +29,7 @@ N> When in pan mode, selecting a shape annotation switches the viewer to text se
 
 ### Enable line mode
 
-The PDF Viewer component allows to add line annotations programmatically after enabling line mode in button clicks.
+The PDF Viewer component allows adding line annotations programmatically after enabling line mode via button clicks.
 
 ```html
 <button id="lineMode">Line</button>
@@ -175,8 +175,8 @@ document.getElementById('addLineAnnotation').addEventListener('click', function(
 
 ### Edit Line Annotation in UI
 
-You can select, move, and resize Line annotations directly in the viewer:
-- Select a Line to show its end-point handles.
+Select, move, and resize line annotations directly in the viewer:
+- Select a line to show its end-point handles.
 - Move: drag the line to reposition it on the page.
 - Resize/reshape: drag either end-point to adjust the line.
 - Delete or access more options from the context menu.
@@ -348,13 +348,13 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-N> In both [Arrow](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#arrowsettings) and [Line](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#linesettings) annotations Settings, the Fill Color option is available only when an arrowhead style is applied at the Start or End. If both Start and End arrowhead styles are set to None, lines do not support fill rendering and the Fill Color option remains disabled.
+N> In both [Arrow](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#arrowsettings) and [Line](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#linesettings) annotation settings, the Fill Color option is available only when an arrowhead style is applied at the Start or End. If both Start and End arrowhead styles are set to None, lines do not support fill rendering and the Fill Color option remains disabled.
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `lineSettings`.
+Set properties for individual annotations before creating the control using `lineSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default line settings.
 

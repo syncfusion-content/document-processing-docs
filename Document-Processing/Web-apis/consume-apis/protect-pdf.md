@@ -1,13 +1,13 @@
 ---
-title: Syncfusion PDF Protecting Service Guide
-description: Protect PDF documents seamlessly using Syncfusion's API. Ensure document integrity and security by protecting.
+title: Protect PDF Files Using Syncfusion Web API
+description: Apply passwords and permission restrictions to safeguard sensitive PDFs using Syncfusion strong encryption and protection Web API.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Protecting PDFs Using Syncfusion API
+# Protect PDF Using Syncfusion Web API
 
-This feature enables you to protect a PDF document. To use this functionality, you need to provide a PDF document as input to the Protect PDF API.
+The Syncfusion Protect PDF Web API secures PDF documents by applying password protection and usage restrictions. You can control permissions such as editing, copying, and printing while preserving the original document quality. This ensures sensitive information remains protected during secure sharing.
 
 ## Protecting PDF Document
 
@@ -18,19 +18,25 @@ To protect a PDF document, send a request to the /v1/edit-pdf/protect-pdf endpoi
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/protect-pdf' \
---form 'file=@"invoice.pdf"' \
---form 'settings="{
-  \"File\": \"file\",
-  \"Password\": \"12345678\"
-}"'
+--form 'file=@Input1.pdf' \
+--form 'settings={
+  "File": "file",
+  "Password": "12345678"
+}'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file", fileInput.files[0], "invoice.pdf");
-formdata.append("settings", "{\n  \"File\": \"file\",\n    \"Password\": \"12345678\"\n}");
+formdata.append("file", fileInput.files[0], "Input1.pdf");
+formdata.append(
+  "settings",
+  JSON.stringify({
+    File: "file",
+    Password: "12345678"
+  })
+);
 
 const requestOptions = {
   method: "POST",
@@ -38,7 +44,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/protect-pdf", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/protect-pdf", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -50,12 +56,18 @@ fetch("http://localhost:4000/v1/edit-pdf/protect-pdf", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/protect-pdf");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("invoice.pdf")), "file", "invoice.pdf");
-content.Add(new StringContent("{
-  \"File\": \"file\",
-  \"Password\": \"12345678\"
-}"), "settings");
+content.Add(new StreamContent(File.OpenRead("Image1.pdf")), "file", "Image1.pdf");
+var settings = new
+{
+  File = "file",
+  Password = "12345678",    
+};
+
+var json = JsonSerializer.Serialize(settings);
+var settingsContent = new StringContent(json, Encoding.UTF8, "application/json");
+content.Add(settingsContent, "settings");
 request.Content = content;
+
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
@@ -63,6 +75,18 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endhighlight %} 
 
 {% endtabs %}
+
+## Protect PDF settings
+
+**File** 
+
+Specifies the unique identifier of the uploaded PDF document that needs to be protected. 
+
+**Password** 
+
+Defines the user password used to protect the PDF document and restrict unauthorized access.
+
+## Protect PDF Job Response
 
 Once the request is sent, it will create a protect job to protect the PDF and return the job details as follows:
 
@@ -74,7 +98,7 @@ Once the request is sent, it will create a protect job to protect the PDF and re
 }
 ```
 
-## Poll the status of the Protect Job
+## Check Protect PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
@@ -82,7 +106,7 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+curl --location 'http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df' \
 --header 'Authorization: Bearer {{Placeholder for token}}'
 
 {% endhighlight %}
@@ -94,7 +118,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -104,7 +128,7 @@ fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df");
 request.Headers.Add("Authorization", "Bearer {{Placeholder for token}}");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();

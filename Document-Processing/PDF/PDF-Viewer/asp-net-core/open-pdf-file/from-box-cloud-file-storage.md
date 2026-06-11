@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from Box cloud storage in ASP.NET Core
+# Open PDF from Box Cloud Storage
 
 Follow these steps to load a PDF from Box cloud storage using the server-backed PDF Viewer.
 
@@ -117,7 +117,7 @@ public async Task<IActionResult> OnPostLoadAsync([FromBody] jsonObjects response
 }
 ```
 
-N> replace **Your_Box_Storage_Access_Token** with your actual box access token, and **Your_Folder_ID** with the ID of the folder in your box storage where you want to perform specific operations. Remember to use your valid box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret"** are placeholders for your application's API key and secret.
+N> Replace **Your_Box_Storage_Access_Token** with the actual Box access token, and **Your_Folder_ID** with the ID of the folder in Box storage where the specific operations will be performed. Valid Box API credentials must be used. **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret** are placeholders for the application's API key and secret.
 
 **Step 4:** Configure the PDF Viewer component
 
@@ -137,8 +137,8 @@ Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serv
 </div>
 
 ```
-N> The **Box.V2.Core** NuGet package must be installed in your application to use the previous code example.
+N> The **Box.V2.Core** NuGet package must be installed in the application to use the previous code example.
 
-N> Replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the `documentPath` property of the PDF viewer component
+N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud file storage. The document name from the Box folder must be passed to the `documentPath` property of the PDF Viewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-box-cloud-file-storage)

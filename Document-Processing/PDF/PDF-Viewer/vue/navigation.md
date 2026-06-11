@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Navigation in Vue PDF viewer control
 
-The PDF Viewer supports different internal and external navigations.
+The Vue PDF Viewer supports several internal and external navigation methods.
 
 ## Toolbar page navigation option
 
@@ -22,7 +22,7 @@ The default toolbar of PDF Viewer contains the following navigation options
 * [**Show first page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
 * [**Show last page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
 
-You can enable/disable page navigation option in PDF Viewer using the `EnableNavigation` property and use the following code snippet,
+You can enable or disable page navigation in the PDF Viewer using the following code snippet.
 
 
 {% tabs %}
@@ -151,7 +151,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/navigation.png)
+![Toolbar navigation showing go-to-page and next/previous page buttons](./images/navigation.png)
 
 Also, you can programmatically perform page navigation options as follows.
 
@@ -395,7 +395,7 @@ Find the [here](https://www.syncfusion.com/downloads/support/directtrac/general/
 
 ## Bookmark navigation
 
-The Bookmarks saved in PDF files are loaded and made ready for easy navigation. You can enable/disable bookmark navigation by using the following code snippet.
+Bookmarks stored in a PDF are loaded for quick navigation to document sections. You can enable or disable bookmark navigation using the following code snippet.
 
 
 {% tabs %}
@@ -523,11 +523,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/bookmark.png)
+![Bookmark panel open with document outline links](./images/bookmark.png)
 
 ## Thumbnail navigation
 
-Thumbnails is the miniature representation of actual pages in PDF files. This feature displays thumbnails of the pages and allows navigation. You can enable/disable thumbnail navigation by using the following code snippet.
+Thumbnails are miniature representations of PDF pages. This feature displays page thumbnails to help users jump directly to a page. You can enable or disable thumbnail navigation using the following code snippet.
 
 
 {% tabs %}
@@ -784,19 +784,17 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/thumbnail.png)
+![Thumbnail panel showing miniature page previews](./images/thumbnail.png)
 
 ## Hyperlink navigation
 
-Hyperlink navigation features enables navigation to the URLs (website links) in a PDF file.
+Hyperlink navigation enables opening external URLs embedded in a PDF file.
 
-![Alt text](./images/link.png)
+![Example of a clickable hyperlink inside a PDF document](./images/link.png)
 
-## Table of content navigation
+## Table of contents navigation
 
-Table of contents navigation allows users to navigate to different parts of a PDF file that are listed in the table of contents section.
-
-You can enable/disable link navigation by using the following code snippet.
+Table of contents navigation allows users to jump to sections listed in the PDF's table of contents. You can enable or disable link navigation using the following code snippet.
 
 
 {% tabs %}
@@ -925,7 +923,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-You can change the open state of the hyperlink in the PDF Viewer by using the following code snippet.
+You can change how hyperlinks open in the PDF Viewer (for example, in a new tab) using the following code snippet.
 
 
 {% tabs %}

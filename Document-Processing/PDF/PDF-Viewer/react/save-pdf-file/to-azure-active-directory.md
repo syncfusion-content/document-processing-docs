@@ -11,7 +11,7 @@ documentation: ug
 
 ### Overview
 
-The React PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps describe how to securely load and store PDF documents using a server-backed web service.
+The React PDF Viewer component supports loading and saving PDF files using Azure Active Directory (AAD). This article describes a server-backed pattern to securely load and store PDF documents. It is intended for developers implementing a server-client integration that avoids exposing secrets or long-lived credentials in the browser.
 
 ### Steps to open the PDF file from Azure Active Directory
 
@@ -26,7 +26,7 @@ The React PDF Viewer component supports loading and saving PDF files with Azure 
    - In the Azure portal, go to **Azure Active Directory** > **App registrations** > **New registration**.
    - Register your application and note down the **Application (client) ID** and **Directory (tenant) ID**.
 
-   ![app-registration](../images/app-registration.png)
+   ![Register an application in Azure AD](../images/app-registration.png)
 
 3. Create a client secret:
    - In the registered application, go to **Certificates & secrets**.
@@ -35,7 +35,7 @@ The React PDF Viewer component supports loading and saving PDF files with Azure 
    - Click **Add**.
    - Copy the client secret value immediately, as it will be hidden later. Store it securely.
 
-   ![client-secret](../images/client-secret.png)
+   ![Create a client secret in Azure AD](../images/client-secret.png)
 
 ---
 
@@ -45,7 +45,7 @@ The React PDF Viewer component supports loading and saving PDF files with Azure 
    - In the Azure portal, use the search bar to search for **Storage accounts**.
    - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
 
-    ![storage-account](../images/storage-account.png)
+    ![Create an Azure Storage account](../images/storage-account.png)
 
 ---
 
@@ -61,7 +61,7 @@ The React PDF Viewer component supports loading and saving PDF files with Azure 
    - Select your application and click **Select**.
    - Click **Review + assign** to finalize the role assignment.
 
-    ![add-role](../images/add-role.png)
+    ![Assign Storage Blob Data Contributor role to the application](../images/add-role.png)
 ---
 
 ### Step 4: Upload the PDF document to Azure Storage
@@ -72,7 +72,7 @@ The React PDF Viewer component supports loading and saving PDF files with Azure 
 2. Upload the PDF file:
    - Create a new container and upload the PDF document you want to access in the PDF Viewer.
 
-    ![upload-pdf](../images/upload-pdf.png)
+    ![Upload a PDF file to an Azure Blob container](../images/upload-pdf.png)
 ---
 
 ### Step 5: Server-side configuration

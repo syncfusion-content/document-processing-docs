@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Programmatic Support for Organize Pages in Vue PDF Viewer component
 
-The PDF Viewer provides comprehensive programmatic support for organizing pages, allowing you to integrate and manage PDF functionalities directly within your Vue application. This section details the available APIs to enable, control, and interact with the page organization features.
+The PDF Viewer exposes programmatic APIs to manage page organization. Use these APIs to enable the page organizer, open or close the organizer dialog, and customize page-management behaviors from application code.
 
 ## Enable or disable the page organizer
 
-Enable or disable the page organizer using the `enablePageOrganizer` property. By default, this feature is enabled.
+Enable the page organizer using the `enablePageOrganizer` property. The default value is `true`.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -95,7 +95,7 @@ export default {
 
 ## Open the page organizer on document load
 
-Control whether the page organizer opens automatically when a document is loaded using the `isPageOrganizerOpen` property. Default is `false`.
+Control whether the page organizer opens automatically when a document loads using the `isPageOrganizerOpen` property. The default value is `false`.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -176,7 +176,7 @@ export default {
 
 ## Customize page organizer settings
 
-Use the `pageOrganizerSettings` API to customize page management, such as deleting, inserting, rotating, copying, importing, and rearranging pages, and to configure thumbnail zoom settings.
+Use the `pageOrganizerSettings` property to configure page-management actions and thumbnail zoom behavior. Settings include toggles for deleting, inserting, rotating, copying, importing, and rearranging pages, and controls for thumbnail zoom. By default, all actions are enabled, and standard zoom settings are applied.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -259,7 +259,7 @@ export default {
 
 ## Open the page organizer dialog
 
-Use `openPageOrganizer()` to open the page organizer dialog.
+Call the `openPageOrganizer` method on the viewer's `pageOrganizer` API to programmatically open the organizer dialog and access page-management tools.
 
 ```html
 <button v-on:click="openPageOrganizer">Open PageOrganizer Pane</button>
@@ -275,7 +275,7 @@ openPageOrganizer: function () {
 
 ## Close the page organizer dialog
 
-Use `closePageOrganizer()` to close the page organizer dialog.
+Call the `closePageOrganizer` method on the viewer's `pageOrganizer` API to programmatically close the organizer dialog.
 
 ```html
  <button v-on:click="closePageOrganizer">Close PageOrganizer Pane</button>

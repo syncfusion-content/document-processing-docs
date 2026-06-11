@@ -10,10 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Change the Font Family in the Type Signature
 
-Change the font family in the Type Signature of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer by adding a custom CSS stylesheet to the document, and then apply the desired font family to the Type Signature element. Include the Google Font link in the HTML head section to apply the Google Font.
-
-use the [handWrittenSignatureSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/handWrittenSignatureSettings/) property of the PDF Viewer component and modify the fontFamily property.
-
+Use the PDF Viewer's [handWrittenSignatureSettings.typeSignatureFonts](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/handwrittensignaturesettings#typesignaturefonts) property to supply an array of font-family names that the Type Signature control can use. Ensure fonts are loaded before applying them to the viewer (for example, call `changeFontFamily()` after the viewer instance is available, such as in `ngAfterViewInit` or after the component finishes initializing).
 ```html
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura" >
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">

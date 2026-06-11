@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Extract pages in TypeScript PDF Viewer
 
-The PDF Viewer component lets you extract pages from a document using the Extract Pages option in the Organize Pages UI, and also control extraction programmatically.
-The Extract Pages tool is available by default in Organize Pages.
+The PDF Viewer component enables users to extract pages from a document using the Extract Pages option in the Organize Pages UI and to control extraction programmatically. The Extract Pages tool is available by default in Organize Pages.
 
 ## Extract Pages in Organize Pages
 

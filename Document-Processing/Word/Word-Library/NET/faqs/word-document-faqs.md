@@ -677,3 +677,6 @@ No, Sensitivity labels are organization-level settings and are not stored within
 
 ## Can DocIO Open a Document with Sensitivity Labels Applied?
 If a document is encrypted due to its sensitivity label configuration, DocIO cannot open it because the content is stored in an encrypted format and requires an authorized Microsoft account for access.
+
+## Does the DocIO library support asynchronous methods for opening or saving Word documents?
+No, the Syncfusion DocIO library does not currently provide asynchronous APIs for opening or saving Word documents. However, the library is highly optimized for performance and is thread‑safe, allowing you to safely execute document processing operations.

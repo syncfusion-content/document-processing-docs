@@ -1,15 +1,15 @@
 ---
-title: Syncfusion PDF Merge Service Guide
-description: Seamlessly combine one or multiple PDF documents into a unified PDF file with the PDF Merge Service.
+title: Merge PDF Files Using Syncfusion Web API
+description: Merge multiple PDF files into a single structured document with preserved bookmarks, metadata, and ordering using Syncfusion PDF merge Web API.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Guide to Merging PDFs Using Syncfusion API
+# Merging PDFs Using Syncfusion WEB API 
 
-You can effortlessly merge one or more PDF documents into a single PDF file. To perform this merge, you need to supply one or more PDF documents as input to the merge PDF document service.
+The Syncfusion Merge PDF Web API allows you to seamlessly combine multiple PDF documents into a single, unified PDF file using a simple and efficient process. By providing the required PDF files as input to the merge PDF document service, the engine preserves the original content, layout, and formatting of each document while arranging them in the specified order. 
 
-## Merge PDF Document
+## Merge PDF Documents
 
 To merge PDF documents, send a request to the /v1/edit-pdf/merge endpoint, including both the PDF files as input and the settings as follows:
 
@@ -18,29 +18,36 @@ To merge PDF documents, send a request to the /v1/edit-pdf/merge endpoint, inclu
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/merge' \
---form 'file1=@"merge/example.pdf"' \
---form 'file2=@"merge/example1.pdf"' \
---form 'settings="{
-  \"Files\": [
-    {
-      \"File\": \"file1\",
-    },
-    {
-      \"File\": \"file2\",
-    }
+--form 'file1=@Input1.pdf' \
+--form 'file2=@Input2.pdf' \
+--form 'settings={
+  "Files": [
+    { "File": "file1" },
+    { "File": "file2" }
   ],
-  \"PreserveBookmarks\": true,
-  \"FolderPath\": ""
-}"'
+  "PreserveBookmarks": true,
+  "FolderPath": ""
+}'
 
 {% endhighlight %}
 
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
-formdata.append("file1", fileInput.files[0], "merge/example.pdf");
-formdata.append("file2", fileInput.files[0], "merge/example1.pdf");
-formdata.append("settings", "{\n  \"Files\": [\n    {\n      \"File\": \"file1\",\n    },\n    {\n      \"File\": \"file2\",\n    }\n  ],\n  \"PreserveBookmarks\": true,\n \"FolderPath\": ""\n}");
+
+formdata.append("files", fileInput.files[0], "Input1.pdf");
+formdata.append("files", fileInput.files[0], "Input2.pdf");
+formdata.append(
+  "settings",
+  JSON.stringify({
+    Files: [
+      { File: "file1" },
+      { File: "file2" }
+    ],
+    PreserveBookmarks: true,
+    FolderPath: ""
+  })
+);
 
 const requestOptions = {
   method: "POST",
@@ -48,7 +55,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/merge", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/merge", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -60,21 +67,27 @@ fetch("http://localhost:4000/v1/edit-pdf/merge", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/merge");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("merge/example.pdf")), "file1", "merge/example.pdf");
-content.Add(new StreamContent(File.OpenRead("merge/example1.pdf")), "file2", "merge/example1.pdf");
-content.Add(new StringContent("{
-  \"Files\": [
+content.Add(new StreamContent(File.OpenRead("Input1.pdf")), "file1", "Input1.pdf");
+content.Add(new StreamContent(File.OpenRead("Input2.pdf")), "file2", "Input2.pdf");
+var settings = new
+{
+    Files = new[]
     {
-      \"File\": \"file1\",
+        new { File = "file1" },
+        new { File = "file2" }
     },
-    {
-      \"File\": \"file2\",
-    }
-  ],
-  \"PreserveBookmarks\": true,
-  \"FolderPath\": ""
-}"), "settings");
+    PreserveBookmarks = true,
+    FolderPath = "",
+    Password = (string?)null,
+    PdfCompliance = "PDF/A-1B",
+    EnableAccessibility = false
+};
+
+var json = JsonSerializer.Serialize(settings);
+var settingsContent = new StringContent(json, Encoding.UTF8, "application/json");
+content.Add(settingsContent, "settings");
 request.Content = content;
+
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
@@ -82,6 +95,22 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endhighlight %} 
 
 {% endtabs %}
+
+## Merge PDFs settings
+
+**Files** 
+
+Specifies the list of PDF files to be merged into a single document. At least two PDF files are required. 
+
+**PreserveBookmarks** 
+
+Preserves the original bookmarks from the input PDF files in the merged output document. 
+
+**FolderPath** 
+
+Specifies the destination folder where the merged PDF file will be saved. If not provided, the output is stored in the default location. 
+
+## Merge PDF Job Response 
 
 Once the request is sent, it will create a job to merge PDF documents and return the job details as follows:
 
@@ -93,7 +122,7 @@ Once the request is sent, it will create a job to merge PDF documents and return
 }
 ```
 
-## Poll the status of the Merge Job
+## Check Merge PDF Job Status 
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
@@ -101,7 +130,8 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df' \
+curl --location 'http://localhost:8003/v1/edit-pdf/status/f58c9739-622e-41d4-9dd2-57a901dc13c3' \
+  --output Output.pdf
 
 {% endhighlight %}
 
@@ -112,7 +142,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -122,7 +152,7 @@ fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());

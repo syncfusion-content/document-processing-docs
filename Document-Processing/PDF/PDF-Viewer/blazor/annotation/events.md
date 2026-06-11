@@ -13,38 +13,38 @@ Annotation events notify the application when annotations are added, selected, m
 
 |Name|Description|
 |---|---|
-|AddSignature|Triggers when a signature is added to a page in the PDF document.|
-|AnnotationAdded|Triggers when an annotation is added to a page in the PDF document.|
-|AnnotationMouseover|Triggers when the mouse pointer moves over an annotation object.|
-|AnnotationMoved|Triggers when an annotation is moved on a page in the PDF document.|
-|AnnotationPropertiesChanged|Triggers when annotation properties are modified on a PDF page.|
-|AnnotationRemoved|Triggers when an annotation is removed from a page in the PDF document.|
-|AnnotationResized|Triggers when an annotation is resized on a page in the PDF document.|
-|AnnotationSelected|Triggers when an annotation is selected on a page in the PDF document.|
-|AnnotationUnselected|Triggers when an annotation is unselected on a page in the PDF document.|
-|ExportFailed|Triggers when exporting annotations fails in the SfPdfViewer.|
-|ExportStarted|Triggers when exporting annotations starts in the SfPdfViewer.|
-|ExportSucceed|Triggers when exporting annotations succeeds in the SfPdfViewer.|
-|ImportFailed|Triggers when importing annotations fails in the PDF document.|
-|ImportStarted|Triggers when importing annotations starts in the PDF document.|
-|ImportSucceed|Triggers when importing annotations succeeds in the PDF document.|
-|MoveSignature|Triggers when a signature is moved on a page in the PDF document.|
-|OnAnnotationDoubleClick|Triggers when an annotation is double-clicked.|
-|RemoveSignature|Triggers when a signature is removed from a page in the PDF document.|
-|ResizeSignature|Triggers when a signature is resized on a page in the PDF document.|
-|SignaturePropertiesChange|Triggers when the properties of a signature are changed on a page in the PDF document.|
-|SignatureSelected|Triggers when a signature is selected on a page in the PDF document.|
-|SignatureUnselected|Triggers when a signature is unselected on a page in the PDF document.|
+|AddSignature|Triggers when a signature is added to a page.| 
+|AnnotationAdded|Triggers when an annotation is added to a page.| 
+|AnnotationMouseover|Triggers when the mouse pointer moves over an annotation.| 
+|AnnotationMoved|Triggers when an annotation is moved on a page.| 
+|AnnotationPropertiesChanged|Triggers when annotation properties are modified.| 
+|AnnotationRemoved|Triggers when an annotation is removed from a page.| 
+|AnnotationResized|Triggers when an annotation is resized on a page.| 
+|AnnotationSelected|Triggers when an annotation is selected on a page.| 
+|AnnotationUnselected|Triggers when an annotation is unselected on a page.| 
+|ExportFailed|Triggers when an annotation export fails.| 
+|ExportStarted|Triggers when annotation export starts.| 
+|ExportSucceed|Triggers when annotation export succeeds.| 
+|ImportFailed|Triggers when an annotation import fails.| 
+|ImportStarted|Triggers when annotation import starts.| 
+|ImportSucceed|Triggers when annotation import succeeds.| 
+|MoveSignature|Triggers when a signature is moved on a page.| 
+|OnAnnotationDoubleClick|Triggers when an annotation is double-clicked.| 
+|RemoveSignature|Triggers when a signature is removed from a page.| 
+|ResizeSignature|Triggers when a signature is resized on a page.| 
+|SignaturePropertiesChange|Triggers when signature properties are changed on a page.| 
+|SignatureSelected|Triggers when a signature is selected on a page.| 
+|SignatureUnselected|Triggers when a signature is unselected on a page.| 
 
-## AddSignature Event
+## AddSignature event
 
-The [AddSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AddSignature) event triggers when a signature is added to a page in the PDF document.
+The [AddSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AddSignature) event triggers when a signature is added to a page.
 
-#### Event Arguments
+#### Event arguments
 
-For event data, see [AddSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AddSignatureEventArgs.html) for properties such as Id, PageNumber, and Bounds.
+See [AddSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AddSignatureEventArgs.html) for properties such as `Id`, `PageNumber`, and `Bounds`.
 
-The following example illustrates how to handle the AddSignature event.
+The following example illustrates handling the `AddSignature` event.
 
 ```cshtml
 
@@ -64,15 +64,15 @@ The following example illustrates how to handle the AddSignature event.
 
 ```
 
-## AnnotationAdded Event
+## AnnotationAdded event
 
-The [AnnotationAdded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationAdded) event triggers when an annotation is added to a page in the PDF document.
+The [AnnotationAdded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationAdded) event triggers when an annotation is added to a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [AnnotationAddedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationAddedEventArgs.html) for details such as AnnotationId, AnnotationType, PageNumber, and Bounds.
+See [AnnotationAddedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationAddedEventArgs.html) for details such as `AnnotationId`, `AnnotationType`, `PageNumber`, and `Bounds`.
 
-The following example illustrates how to handle the AnnotationAdded event.
+The following example illustrates handling the `AnnotationAdded` event.
 
 ```cshtml
 
@@ -92,15 +92,15 @@ The following example illustrates how to handle the AnnotationAdded event.
 
 ```
 
-## AnnotationMouseover Event
+## AnnotationMouseover event
 
-The [AnnotationMouseover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationMouseover) event triggers when the mouse pointer moves over an annotation object.
+The [AnnotationMouseover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationMouseover) event triggers when the mouse pointer moves over an annotation.
 
-#### Event Arguments
+#### Event arguments
 
-See [AnnotationMouseoverEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMouseoverEventArgs.html) for details such as AnnotationId, AnnotationType, PageNumber, and cursor position.
+See [AnnotationMouseoverEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMouseoverEventArgs.html) for details such as `AnnotationId`, `AnnotationType`, `PageNumber`, and cursor position.
 
-The following example illustrates how to handle the AnnotationMouseover event.
+The following example illustrates handling the `AnnotationMouseover` event.
 
 ```cshtml
 
@@ -120,15 +120,15 @@ The following example illustrates how to handle the AnnotationMouseover event.
 
 ```
 
-## AnnotationMoved Event
+## AnnotationMoved event
 
-The [AnnotationMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationMoved) event triggers when an annotation is moved on a page in the PDF document.
+The [AnnotationMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationMoved) event triggers when an annotation is moved on a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [AnnotationMovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMovedEventArgs.html) for details such as AnnotationId, PageNumber, PreviousBounds, and Bounds.
+See [AnnotationMovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMovedEventArgs.html) for details such as `AnnotationId`, `PageNumber`, `PreviousBounds`, and `Bounds`.
 
-The following example illustrates how to handle the AnnotationMoved event.
+The following example illustrates handling the `AnnotationMoved` event.
 
 ```cshtml
 
@@ -148,15 +148,15 @@ The following example illustrates how to handle the AnnotationMoved event.
 
 ```
 
-## AnnotationPropertiesChanged Event
+## AnnotationPropertiesChanged event
 
-The [AnnotationPropertiesChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationPropertiesChanged) event triggers when annotation properties are modified on a PDF page.
+The [AnnotationPropertiesChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationPropertiesChanged) event triggers when annotation properties are modified on a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [AnnotationPropertiesChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationPropertiesChangedEventArgs.html) for details such as AnnotationId, PageNumber, changed property names, and old/new values.
+See [AnnotationPropertiesChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationPropertiesChangedEventArgs.html) for details such as `AnnotationId`, `PageNumber`, changed property names, and old/new values.
 
-The following example illustrates how to handle the AnnotationPropertiesChanged event.
+The following example illustrates handling the `AnnotationPropertiesChanged` event.
 
 ```cshtml
 
@@ -176,15 +176,15 @@ The following example illustrates how to handle the AnnotationPropertiesChanged 
 
 ```
 
-## AnnotationRemoved Event
+## AnnotationRemoved event
 
-The [AnnotationRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationRemoved) event triggers when an annotation is removed from a page in the PDF document.
+The [AnnotationRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationRemoved) event triggers when an annotation is removed from a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [AnnotationRemovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationRemovedEventArgs.html) for details such as AnnotationId, AnnotationType, and PageNumber.
+See [AnnotationRemovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationRemovedEventArgs.html) for details such as `AnnotationId`, `AnnotationType`, and `PageNumber`.
 
-The following example illustrates how to handle the AnnotationRemoved event.
+The following example illustrates handling the `AnnotationRemoved` event.
 
 ```cshtml
 
@@ -204,15 +204,15 @@ The following example illustrates how to handle the AnnotationRemoved event.
 
 ```
 
-## AnnotationResized Event
+## AnnotationResized event
 
-The [AnnotationResized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationResized) event triggers when an annotation is resized on a page in the PDF document.
+The [AnnotationResized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationResized) event triggers when an annotation is resized on a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [AnnotationResizedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationResizedEventArgs.html) for details such as AnnotationId, PageNumber, PreviousBounds, and Bounds.
+See [AnnotationResizedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationResizedEventArgs.html) for details such as `AnnotationId`, `PageNumber`, `PreviousBounds`, and `Bounds`.
 
-The following example illustrates how to handle the AnnotationResized event.
+The following example illustrates handling the `AnnotationResized` event.
 
 ```cshtml
 
@@ -232,15 +232,15 @@ The following example illustrates how to handle the AnnotationResized event.
 
 ```
 
-## AnnotationSelected Event
+## AnnotationSelected event
 
-The [AnnotationSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationSelected) event triggers when an annotation is selected on a page in the PDF document.
+The [AnnotationSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationSelected) event triggers when an annotation is selected on a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [AnnotationSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationSelectedEventArgs.html) for details such as AnnotationId, AnnotationType, and PageNumber.
+See [AnnotationSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationSelectedEventArgs.html) for details such as `AnnotationId`, `AnnotationType`, and `PageNumber`.
 
-The following example illustrates how to handle the AnnotationSelected event.
+The following example illustrates handling the `AnnotationSelected` event.
 
 ```cshtml
 
@@ -260,15 +260,15 @@ The following example illustrates how to handle the AnnotationSelected event.
 
 ```
 
-## AnnotationUnselected Event
+## AnnotationUnselected event
 
-The [AnnotationUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationUnselected) event triggers when an annotation is unselected on a page in the PDF document.
+The [AnnotationUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationUnselected) event triggers when an annotation is unselected on a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [AnnotationUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationUnselectedEventArgs.html) for details such as AnnotationId, AnnotationType, and PageNumber.
+See [AnnotationUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationUnselectedEventArgs.html) for details such as `AnnotationId`, `AnnotationType`, and `PageNumber`.
 
-The following example illustrates how to handle the AnnotationUnselected event.
+The following example illustrates handling the `AnnotationUnselected` event.
 
 ```cshtml
 
@@ -288,15 +288,15 @@ The following example illustrates how to handle the AnnotationUnselected event.
 
 ```
 
-## ExportFailed Event
+## ExportFailed event
 
-The [ExportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportFailed) event triggers when an export annotations failed in the PDF Viewer.
+The [ExportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportFailed) event triggers when annotation export fails.
 
-#### Event Arguments
+#### Event arguments
 
-See [ExportFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportFailureEventArgs.html) for details such as ErrorDetails.
+See [ExportFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportFailureEventArgs.html) for details such as `ErrorDetails`.
 
-The following example illustrates how to handle the ExportFailed event.
+The following example illustrates handling the `ExportFailed` event.
 
 ```cshtml
 
@@ -316,15 +316,15 @@ The following example illustrates how to handle the ExportFailed event.
 
 ```
 
-## ExportStarted Event
+## ExportStarted event
 
-The [ExportStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportStarted) event triggers  when an exported annotations started in the PDF Viewer.
+The [ExportStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportStarted) event triggers when annotation export starts.
 
-#### Event Arguments
+#### Event arguments
 
-See [ExportStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportStartEventArgs.html) triggers when an exported annotations started in the PDF Viewer.
+See [ExportStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportStartEventArgs.html) for details about the export start event.
 
-The following example illustrates how to handle the ExportStarted event.
+The following example illustrates handling the `ExportStarted` event.
 
 ```cshtml
 
@@ -344,15 +344,15 @@ The following example illustrates how to handle the ExportStarted event.
 
 ```
 
-## ExportSucceed Event
+## ExportSucceed event
 
-The [ExportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportSucceed) event triggers when an export annotations succeed in the PDF Viewer.
+The [ExportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportSucceed) event triggers when annotation export succeeds.
 
-#### Event Arguments
+#### Event arguments
 
-See [ExportSuccessEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportSuccessEventArgs.html) for details such as FileName.
+See [ExportSuccessEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportSuccessEventArgs.html) for details such as `FileName`.
 
-The following example illustrates how to handle the ExportSucceed event.
+The following example illustrates handling the `ExportSucceed` event.
 
 ```cshtml
 
@@ -372,15 +372,15 @@ The following example illustrates how to handle the ExportSucceed event.
 
 ```
 
-## ImportFailed Event
+## ImportFailed event
 
-The [ImportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportFailed) event triggers when an imports annotations failed in the PDF document.
+The [ImportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportFailed) event triggers when annotation import fails.
 
-#### Event Arguments
+#### Event arguments
 
-See [ImportFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportFailureEventArgs.html) for details such as ErrorDetails.
+See [ImportFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportFailureEventArgs.html) for details such as `ErrorDetails`.
 
-The following example illustrates how to handle the ImportFailed event.
+The following example illustrates handling the `ImportFailed` event.
 
 ```cshtml
 
@@ -400,15 +400,15 @@ The following example illustrates how to handle the ImportFailed event.
 
 ```
 
-## ImportStarted Event
+## ImportStarted event
 
-The [ImportStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportStarted) event triggers when an imported annotations started in the PDF document.
+The [ImportStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportStarted) event triggers when annotation import starts.
 
-#### Event Arguments
+#### Event arguments
 
-See [ImportStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportStartEventArgs.html) triggers when an imported annotations started in the PDF document.
+See [ImportStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportStartEventArgs.html) for details about the import start event.
 
-The following example illustrates how to handle the ImportStarted event.
+The following example illustrates handling the `ImportStarted` event.
 
 ```cshtml
 
@@ -428,15 +428,15 @@ The following example illustrates how to handle the ImportStarted event.
 
 ```
 
-## ImportSucceed Event
+## ImportSucceed event
 
-The [ImportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportSucceed) event triggers when an imports annotations succeed in the PDF document.
+The [ImportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportSucceed) event triggers when annotation import succeeds.
 
-#### Event Arguments
+#### Event arguments
 
-See [ImportSuccessEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportSuccessEventArgs.html) triggers when an imports annotations succeed in the PDF document.
+See [ImportSuccessEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportSuccessEventArgs.html) for details about successful import.
 
-The following example illustrates how to handle the ImportSucceed event.
+The following example illustrates handling the `ImportSucceed` event.
 
 ```cshtml
 
@@ -456,15 +456,15 @@ The following example illustrates how to handle the ImportSucceed event.
 
 ```
 
-## MoveSignature Event
+## MoveSignature event
 
-The [MoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_MoveSignature) event triggers when a signature is moved on a page in the PDF document.
+The [MoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_MoveSignature) event triggers when a signature is moved on a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [MoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MoveSignatureEventArgs.html) for details such as Id, PageNumber, PreviousBounds, and Bounds.
+See [MoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MoveSignatureEventArgs.html) for details such as `Id`, `PageNumber`, `PreviousBounds`, and `Bounds`.
 
-The following example illustrates how to handle the MoveSignature event.
+The following example illustrates handling the `MoveSignature` event.
 
 ```cshtml
 
@@ -484,15 +484,15 @@ The following example illustrates how to handle the MoveSignature event.
 
 ```
 
-## OnAnnotationDoubleClick Event
+## OnAnnotationDoubleClick event
 
 The [OnAnnotationDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnAnnotationDoubleClick) event triggers when an annotation is double-clicked.
 
-#### Event Arguments
+#### Event arguments
 
-See [AnnotationDoubleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDoubleClickEventArgs.html) for details such as AnnotationId, AnnotationType, PageNumber, and mouse position.
+See [AnnotationDoubleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDoubleClickEventArgs.html) for details such as `AnnotationId`, `AnnotationType`, `PageNumber`, and mouse position.
 
-The following example illustrates how to handle the OnAnnotationDoubleClick event.
+The following example illustrates handling the `OnAnnotationDoubleClick` event.
 
 ```cshtml
 
@@ -512,15 +512,15 @@ The following example illustrates how to handle the OnAnnotationDoubleClick even
 
 ```
 
-## RemoveSignature Event
+## RemoveSignature event
 
-The [RemoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_RemoveSignature) event triggers when a signature is removed from a page in the PDF document.
+The [RemoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_RemoveSignature) event triggers when a signature is removed from a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [RemoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.RemoveSignatureEventArgs.html) for details such as Id and PageNumber.
+See [RemoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.RemoveSignatureEventArgs.html) for details such as `Id` and `PageNumber`.
 
-The following example illustrates how to handle the RemoveSignature event.
+The following example illustrates handling the `RemoveSignature` event.
 
 ```cshtml
 
@@ -540,15 +540,15 @@ The following example illustrates how to handle the RemoveSignature event.
 
 ```
 
-## ResizeSignature Event
+## ResizeSignature event
 
-The [ResizeSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ResizeSignature) event triggers when a signature is resized on a page in the PDF document.
+The [ResizeSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ResizeSignature) event triggers when a signature is resized on a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [ResizeSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ResizeSignatureEventArgs.html) for details such as Id, PageNumber, PreviousBounds, and Bounds.
+See [ResizeSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ResizeSignatureEventArgs.html) for details such as `Id`, `PageNumber`, `PreviousBounds`, and `Bounds`.
 
-The following example illustrates how to handle the ResizeSignature event.
+The following example illustrates handling the `ResizeSignature` event.
 
 ```cshtml
 
@@ -568,15 +568,15 @@ The following example illustrates how to handle the ResizeSignature event.
 
 ```
 
-## SignaturePropertiesChange Event
+## SignaturePropertiesChange event
 
-The [SignaturePropertiesChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignaturePropertiesChange) event triggers when the properties of a signature are changed on a page in the PDF document.
+The [SignaturePropertiesChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignaturePropertiesChange) event triggers when signature properties are changed on a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [SignaturePropertiesChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignaturePropertiesChangeEventArgs.html) for details such as Id, PageNumber, and changed property values.
+See [SignaturePropertiesChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignaturePropertiesChangeEventArgs.html) for details such as `Id`, `PageNumber`, and changed property values.
 
-The following example illustrates how to handle the SignaturePropertiesChange event.
+The following example illustrates handling the `SignaturePropertiesChange` event.
 
 ```cshtml
 
@@ -596,15 +596,15 @@ The following example illustrates how to handle the SignaturePropertiesChange ev
 
 ```
 
-## SignatureSelected Event
+## SignatureSelected event
 
-The [SignatureSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignatureSelected) event triggers when a signature is selected on a page in the PDF document.
+The [SignatureSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignatureSelected) event triggers when a signature is selected on a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [SignatureSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureSelectedEventArgs.html) for details such as Id and PageNumber.
+See [SignatureSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureSelectedEventArgs.html) for details such as `Id` and `PageNumber`.
 
-The following example illustrates how to handle the SignatureSelected event.
+The following example illustrates handling the `SignatureSelected` event.
 
 ```cshtml
 
@@ -624,15 +624,15 @@ The following example illustrates how to handle the SignatureSelected event.
 
 ```
 
-## SignatureUnselected Event
+## SignatureUnselected event
 
-The [SignatureUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignatureUnselected) event triggers when a signature is unselected on a page in the PDF document.
+The [SignatureUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignatureUnselected) event triggers when a signature is unselected on a page.
 
-#### Event Arguments
+#### Event arguments
 
-See [SignatureUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureUnselectedEventArgs.html) for details such as Id and PageNumber.
+See [SignatureUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureUnselectedEventArgs.html) for details such as `Id` and `PageNumber`.
 
-The following example illustrates how to handle the SignatureUnselected event.
+The following example illustrates handling the `SignatureUnselected` event.
 
 ```cshtml
 

@@ -9,19 +9,19 @@ documentation: ug
 
 # Page navigation in SfPdfViewer
 
-Move between pages using the built-in toolbar or programmatic APIs.
+Navigate pages using the toolbar or programmatic APIs.
 
-The built-in toolbar of SfPdfViewer contains the following page navigation tools:
+SfPdfViewer's toolbar includes these page navigation tools:
 
-* **First page**: Navigates to the first page in the document.
-* **Previous page**: Scrolls backward one page at a time.
-* **Next page**: Scrolls forward one page at a time.
-* **Last page**: Navigates to the last page in the document.
-* **Go to page**: Jumps to a specified page number.
+* **First page**: Navigate to the first page.
+* **Previous page**: Scroll backward one page.
+* **Next page**: Scroll forward one page.
+* **Last page**: Navigate to the last page.
+* **Go to page**: Jump to a specified page number.
 
 ![Page navigation tools in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-page-navigation.png)
 
-The navigation tools appear in the primary toolbar. Enable or disable these buttons by setting the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigation) property. This setting affects only the toolbar buttons; programmatic navigation APIs remain available regardless of this value.
+These toolbar buttons are controlled by the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigation) property. Programmatic navigation APIs remain available regardless.
 
 ```cshtml
 
@@ -38,9 +38,9 @@ The navigation tools appear in the primary toolbar. Enable or disable these butt
 
 ```
 
-Page navigation can also be performed programmatically. The following example shows how to navigate between pages using APIs. 
+Navigate pages programmatically using the APIs shown in the example below.
 
-N> GoToPageAsync expects a 1-based page number.
+N> `GoToPageAsync` expects a 1‑based page number.
 
 ```cshtml
 
@@ -108,7 +108,7 @@ N> GoToPageAsync expects a 1-based page number.
 
 ```
 
-## See Also
+## See also
 
 * [Magnification in Blazor SfPdfViewer](../magnification)
 

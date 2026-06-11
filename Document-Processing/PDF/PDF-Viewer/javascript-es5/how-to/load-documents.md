@@ -10,14 +10,13 @@ domainurl: ##DomainURL##
 
 # Load documents dynamically in JavaScript PDF Viewer
 
-Load or switch PDF documents dynamically after the initial load. Use the [load](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#load) method to load a PDF by Base64 string or file name.
+The PDF Viewer supports loading or switching PDF documents at runtime after the initial viewer initialization. Use the [load](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#load) method to open a document from a URL or a Base64 string.
 
-The following steps show how to load a PDF dynamically.
+The following steps show common approaches for loading documents dynamically.
 
-**Step 1:** Follow the steps in the [Get started with JavaScript ES5 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) guide to create a sample.
+**Step 1:** Follow the getting started guide to create a basic JavaScript PDF Viewer sample: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript/getting-started
 
-**Step 2:** Use the following code to load a PDF using a Base64 string.
-
+**Step 2:** Use the following code snippet to load the document from a Base64 string.
 ```
 <button id='load1'>LoadDocumentFromBase64</button>
 ```
@@ -30,7 +29,7 @@ document.getElementById('load1').addEventListener('click', () => {
 }
 ```
 
-**Step 3:** Use the following code to load a PDF by document name.
+**Step 3:** Use the following code snippet to load a PDF document from a URL (document name)
 
 ```
 <button id='load2'>LoadDocument</button>

@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Text Markup Annotations in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about Text Markup Annotations in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its types.
+title: Text Markup Annotations in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to add and manage text markup annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Text Markup Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -29,6 +29,18 @@ The following image shows the appearance of the text markup annotation types.
 ## Add text markups
 
 This section will go through how to add text markup annotations to a PDF document interactively as well as programmatically to a PDF document.
+
+### Add text markup using the toolbar
+
+A text markup annotation tool with four different sorts of annotations (highlight, strike out, underline, squiggly) is accessible on the built-in toolbar. Users are able to select any of these markups and draw them on the page at any desired location. Additionally, the toolbar allows modification of properties for both existing and new annotations of the selected text markup.
+
+The following image represents how to add the highlight annotations using the toolbar on the desktop.
+
+![Desktop Text markup](Images/TextMarkupDesktop.gif)
+
+The following image represents how to add the highlight annotations using the toolbar on mobile.
+
+![Mobile Text markup](Images/TextMarkupMobile.gif)
 
 ### Add text markups from annotation mode
 
@@ -157,3 +169,8 @@ void EditSelectedHighlightAnnotation(Annotation selectedAnnotation)
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Text Selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-selection)
+- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)

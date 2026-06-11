@@ -29,13 +29,15 @@ The TypeScript PDF Viewer component supports loading and saving PDF files with A
    ![app-registration](../images/app-registration.png)
 
 3. **Create a Client Secret**:
-   - In the registered application, go to **Certificates & secrets**.
-   - Click **New client secret**.
-   - Provide a description and set an expiration period.
-   - Click **Add**.
-   - Copy the client secret value immediately, as it will be hidden later. Store it securely.
+    - In the registered application, go to **Certificates & secrets**.
+    - Click **New client secret**.
+    - Provide a description and set an expiration period.
+    - Click **Add**.
+    - Copy the client secret value immediately, as it will be hidden later. Store it securely.
 
    ![client-secret](../images/client-secret.png)
+
+N> Avoid embedding client secrets directly in source control or client-side code. For production deployments prefer managed identities or use `DefaultAzureCredential` on the server to obtain tokens securely. Rotate and protect secrets via a secure secrets store.
 
 ---
 
@@ -78,12 +80,14 @@ The TypeScript PDF Viewer component supports loading and saving PDF files with A
 ### Step 5: Server-side configuration
 
 1. **Configure Server-Side Code**:
-   - Open the server-side application (e.g., ASP.NET Core) and configure the following details in the `PdfViewerController` file:
-     - `tenantId` (your Azure AD tenant ID),
-     - `clientId` (your registered application client ID),
-     - `clientSecret` (your registered application client secret),
-     - `blobServiceEndpoint` (your storage account blob service URL),
-     - `containerName` (your container name in Azure Blob Storage).
+     - Open the server-side application (e.g., ASP.NET Core) and configure the following details in the `PdfViewerController` file:
+         - `tenantId` (your Azure AD tenant ID),
+         - `clientId` (your registered application client ID),
+         - `clientSecret` (your registered application client secret),
+         - `blobServiceEndpoint` (your storage account blob service URL),
+         - `containerName` (your container name in Azure Blob Storage).
+
+N> Prefer `DefaultAzureCredential` or a managed identity for server authentication instead of storing client secrets. Store any required secrets in a secure configuration store (Key Vault, environment variables) and avoid committing them to source control.
 
 2. **Run the Web Service**:
    - After configuring the necessary details, run the web service to make it accessible.
@@ -96,8 +100,10 @@ The TypeScript PDF Viewer component supports loading and saving PDF files with A
    - Start the TypeScript sample that includes the Syncfusion PDF Viewer.
 
 2. **Load PDF from AAD**:
-   - When the user clicks the **Load from AAD** button, the JS client will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
-   - The server will retrieve the PDF from Azure, convert it to a base64 string, and return it to the client.
+    - When the user clicks the **Load from AAD** button, the JS client makes an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
+    - The server retrieves the PDF from Azure, converts it to a Base64 string, and returns it to the client.
+
+N> For security, the client should not access Azure Blob Storage directly with application-level credentials. Use the server as a proxy or provide limited-time pre-signed URLs for direct client access.
 
 3. **Display PDF in the PDF Viewer**:
    - Once the base64 string is received, the PDF Viewer will load the PDF using the `viewer.load()` method.

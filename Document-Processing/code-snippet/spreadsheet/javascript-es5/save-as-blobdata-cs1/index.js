@@ -13,12 +13,12 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
     ]
   }],
 
-  beforeSave: (args) => {
+  beforeSave: function (args) {
     args.needBlobData = true; // To trigger the saveComplete event.
     args.isFullPost = false; // Get the spreadsheet data as blob data in the saveComplete event.
   },
 
-  saveComplete: (args) => {
+  saveComplete: function (args) {
     // To obtain the blob data
     console.log('Spreadsheet BlobData : ', args.blobData)
   }

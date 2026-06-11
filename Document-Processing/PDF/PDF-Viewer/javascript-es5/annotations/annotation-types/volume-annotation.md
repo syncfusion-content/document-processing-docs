@@ -18,18 +18,18 @@ Volume is a measurement annotation used to calculate the volume of a rectangular
 
 ### Add volume annotation via UI
 
-Use the annotation toolbar:
-- Click the Edit Annotation button in the PDF Viewer toolbar.
-- Open the Measurement Annotation dropdown.
-- Choose Volume, then draw on the page.
+Use the annotation toolbar to:
+- Click the **Edit Annotation** button in the PDF Viewer toolbar.
+- Open the **Measurement Annotation** dropdown.
+- Choose **Volume**, then draw on the page.
 
-N> When in pan mode, selecting a measurement annotation switches the viewer to text select mode.
+N> When in pan mode, selecting measurement annotations switches the viewer to text select mode.
 
 ![Measurement toolbar](../../images/calibrate_tool.png)
 
 ### Enable volume mode
 
-The PDF Viewer component allows drawing Volume annotations programmatically after enabling Volume mode in button clicks.
+The PDF Viewer component allows drawing volume annotations programmatically after enabling volume mode via button clicks.
 
 ```html
 <button id="volumeMode">Volume</button>
@@ -113,9 +113,9 @@ if (setNoneBtn) {
 {% endhighlight %}
 {% endtabs %}
 
-### Add a volume annotation programmatically
+### Add volume annotations programmatically
 
-Add measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
+Add volume annotations programmatically using the `addAnnotation` method.
 
 ```html
 <button id="addVolumeAnnotation">Add Volume annotation programmatically</button>
@@ -198,7 +198,7 @@ if (addVolBtn) {
 
 ### Edit volume annotation in UI
 
-You can select, move, and resize Volume annotations directly in the viewer:
+Use the viewer to select, move, and resize Volume annotations:
 - Select a Volume measurement to show its handles.
 - Move: drag the shape to reposition it on the page.
 - Resize: drag the handles to adjust its size.

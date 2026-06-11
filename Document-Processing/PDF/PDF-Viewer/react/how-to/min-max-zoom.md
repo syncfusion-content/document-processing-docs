@@ -9,15 +9,15 @@ documentation: ug
 
 # Configure minZoom and maxZoom in the PDF Viewer
 
-Control zoom levels in the PDF Viewer using the [minZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#minzoom) and [maxZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#maxzoom) properties to ensure a consistent viewing experience.
+The PDF Viewer exposes [minZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#minzoom) and [maxZoom](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#maxzoom) to control the allowable zoom range for document viewing. Setting these properties helps maintain readability, performance, and a consistent experience across devices.
 
 ### minZoom
 
-Specifies the minimum zoom percentage allowed. Prevents zooming out beyond a set limit to maintain readability and performance.
+`minZoom` sets the minimum zoom percentage the viewer supports. Use this to prevent users from zooming out to levels that make content unreadable or negatively affect layout.
 
 ### maxZoom
 
-Defines the maximum zoom percentage allowed. Prevents excessive zooming that could affect performance and usability.
+`maxZoom` sets the maximum zoom percentage the viewer supports. Restricting the maximum helps avoid excessive memory use and degraded rendering performance when users zoom in very far.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

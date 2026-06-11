@@ -9,7 +9,7 @@ documentation: ug
 
 # Programmatic support for redaction in Vue PdfViewer
 
-The Syncfusion Vue PDF Viewer provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
+The Syncfusion Vue `PdfViewer` control provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
 
 ## Enable the redaction toolbar
 
@@ -216,7 +216,7 @@ export default {
 
 ## Delete redaction annotations programmatically
 
-Redaction annotations can be removed using the `deleteAnnotationById` event or by selecting and deleting them through code.
+Redaction annotations can be removed using the `deleteAnnotationById` method or by selecting and deleting them through code.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -621,7 +621,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> Applying redaction is irreversible. Once applied, the original content cannot be recovered.
+N> Applying redaction is irreversible. Before calling `redact()`, save or export a backup copy of the document; the original content cannot be recovered.
 
 ## Configure default redaction annotation properties
 
@@ -729,7 +729,7 @@ export default {
 
 The redaction property panel allows users to update annotation properties through the UI. Programmatically, you can invoke the property panel by selecting an annotation and calling the relevant APIs. Properties such as overlay text, font style, and fill color can be updated directly in the panel.
 
-![Redaction Property Panel](../redaction/redaction-annotations-images/redaction-property-panel-icon.png)
+![Redaction property panel showing overlay text and color options](../redaction/redaction-annotations-images/redaction-property-panel-icon.png)
 
 ## See also
 

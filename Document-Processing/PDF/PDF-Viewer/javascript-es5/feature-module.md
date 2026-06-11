@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Feature module in JavaScript PDF Viewer Control
 
-The PDF Viewer features are segregated into individual feature-wise modules to enable selectively referencing in the application. The required modules should be injected to extend its functionality. The following are the selective modules of PDF Viewer that can be included as required:
-
-The available PDF Viewer modules are:
+The PDF Viewer features are organized into discrete modules so applications can include only the functionality they require. Inject the necessary modules to extend the viewer's behavior and reduce bundle size. The modules listed below are available for selective inclusion:
 
 * [**Toolbar**](./toolbar-customization/primary-toolbar):- Built-in toolbar for better user interaction.
 * [**Magnification**](./magnification):- Perform zooming operation for better viewing experience.

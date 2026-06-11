@@ -7,17 +7,17 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Show bookmark
+# Display the bookmark pane in ASP.NET Core PDF Viewer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer can display the bookmark pane automatically by setting the [`enableBookmark`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#enablebookmark) property to `true`. Use this option when documents rely on bookmark navigation for quick access to chapters or tagged sections.
+Enable automatic display of the bookmark navigation pane by setting the [`enableBookmark`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#enablebookmark) property to `true`. Use bookmarks to provide quick navigation for documents with chapters, sections, or hierarchical content organization.
 
-N> The default value of `enableBookmark` is `true`, so the bookmark pane remains available unless it is explicitly disabled.
+N> By default, `enableBookmark` is set to `true`, so the bookmark pane is visible unless explicitly disabled.
 
-Follow these steps to show the bookmark pane:
+Follow these steps to enable the bookmark pane:
 
-**Step 1:** Create a PDF Viewer sample by using the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) so that the required scripts, styles, and controller endpoints are configured.
+**Step 1:** Follow the [ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up the required scripts, styles, and controller endpoints.
 
-**Step 2:** Enable the bookmark pane in the Razor markup, as shown in the following samples.
+**Step 2:** Set `enableBookmark` to `true` in the Razor markup:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -43,4 +43,4 @@ Follow these steps to show the bookmark pane:
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Show%20Bookmark)
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Show%20Bookmark)

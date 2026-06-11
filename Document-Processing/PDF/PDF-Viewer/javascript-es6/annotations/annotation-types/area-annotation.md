@@ -18,7 +18,7 @@ Area is a measurement annotation used to measure the surface of a closed region 
 
 ### Add area annotation via UI
 
-Use the annotation toolbar:
+Use the annotation toolbar to:
 - Click the **Edit Annotation** button in the PDF Viewer toolbar.
 - Click the **Measurement Annotation** dropdown.
 - Choose **Area**, then draw the region on the page.
@@ -264,9 +264,9 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `AreaSettings`.
+Set properties for individual annotations before creating the control using `AreaSettings`.
 
-> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
+N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
 Refer to the following code snippet to set the default Area settings.
 
@@ -324,7 +324,7 @@ The scale ratio and unit of measurement can be modified using the scale ratio op
 
   ![CalibrateScaleRatio](../../images/calibrate_scaleratio.png)
 
-The Units of measurements support for the measurement annotations in the PDF Viewer are
+Supported units of measurements support for the measurement annotations in the PDF Viewer are
 
 * Inch
 * Millimeter

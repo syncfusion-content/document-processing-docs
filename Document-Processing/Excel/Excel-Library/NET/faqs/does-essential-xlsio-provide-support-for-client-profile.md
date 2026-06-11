@@ -15,8 +15,8 @@ Yes, Essential&reg; XlsIO provides support for Client Profile. In order to use E
 
 ## See Also
 
-* [What are the assemblies required for working with XlsIO?](https://help.syncfusion.com/file-formats/xlsio/assemblies-required)
-* [What are the NuGet packages required to work with XlsIO?](https://help.syncfusion.com/file-formats/xlsio/nuget-packages-required)
-* [What are the supported features by Document Processing?](https://help.syncfusion.com/file-formats/xlsio/supported-features-by-file-formats)
-* [What are the features support platform wise?](https://help.syncfusion.com/file-formats/xlsio/supported-features-by-platforms)
-* [How to create an Excel file in C# and VB.NET?](https://help.syncfusion.com/file-formats/xlsio/getting-started-create-excel-file-csharp-vbnet)
+* [What are the assemblies required for working with XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required)
+* [What are the NuGet packages required to work with XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required)
+* [What are the supported features by Document Processing?](https://help.syncfusion.com/document-processing/excel/excel-library/net/supported-features-by-file-formats)
+* [What are the features support platform wise?](https://help.syncfusion.com/document-processing/excel/excel-library/net/supported-features-by-platforms)
+* [How to create an Excel file in C# and VB.NET?](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
