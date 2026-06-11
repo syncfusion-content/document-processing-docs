@@ -162,7 +162,7 @@ Step 2: You need to gather the credentials in order to interact with the cluster
  use the following command:
 {% tabs %}
 
-{% highlight CLI %}
+{% highlight bash %}
 
 az aks get-credentials --resource-group CreatePdfDocument --name aks-uk-demo-msdn
 
@@ -172,7 +172,7 @@ az aks get-credentials --resource-group CreatePdfDocument --name aks-uk-demo-msd
 
 Step 3: You can review the credentials with the following command:
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 cat .kube/config
 
@@ -184,7 +184,7 @@ N> If you forgot to attach the ACR when creating the AKS resource (Like I did th
 
 Step 4: Now in the Cloud Shell, create a new file called deploy.yaml as follows:
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 code deploy.yaml
 
@@ -194,7 +194,7 @@ code deploy.yaml
 
 Step 5: Then we pasted in the following Kubernetes Deployment and Service configurations. Note, change yours to match your app name, container name, registry, etc.
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 apiVersion: apps/v1
 kind: Deployment
@@ -233,7 +233,7 @@ selector:
 
 Step 6: Once you save and close the code editor, it’s finally time to apply the configuration:
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 kubectl apply -f deploy.yaml
 
@@ -247,7 +247,7 @@ Step 7: Notice the deployment and service shows as created.
 
 Step 8: You can run the following commands:
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 kubectl get pods
 kubectl get nodes
@@ -259,7 +259,7 @@ kubectl describe deployment
 
 or
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 kubectl get all
 
@@ -284,7 +284,7 @@ Select the PDF document and Click **Create PDF document** to generate the PDF do
 
 If you want to clean up the cluster, you can run the following commands:
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 kubectl delete -f deploy.yaml
 kubectl delete svc asp-docker-app --namespace=default
