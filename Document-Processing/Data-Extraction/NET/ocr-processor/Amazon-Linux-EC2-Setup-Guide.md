@@ -1,6 +1,7 @@
 ---
 title: .NET 8 & Tesseract OCR on Amazon Linux 2023 EC2 | Syncfusion 
 description: Install & configure .NET 8, Tesseract OCR on Amazon Linux 2023 EC2 to perform OCR on PDFs & images using Syncfusion .NET OCR library.
+platform: document-processing
 control: PDF  
 documentation: UG  
 keywords: Assemblies
@@ -154,7 +155,7 @@ sudo ln -s /usr/local/lib/liblept.so.5 /lib64/liblept.so.5
 
 {% endhighlight %}
 
-Step 11: **Implement the Project Code** : To set up your project's OCR functionality, consult the comprehensive guide on [Perform OCR in Linux](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/linux).
+Step 11: **Implement the Project Code** : To set up your project's OCR functionality, consult the comprehensive guide on [Perform OCR in Linux](https://help.syncfusion.com/document-processing/data-extraction/net/ocr-processor/linux).
 
 Step 12: **Set Permissions for Tesseract Binaries** : Navigate to your application's Tesseract binaries directory and set read, write, and execute permissions. This is crucial for the OCR process to function correctly. Important: You need to change `bin/Debug/net8.0/runtimes/linux/native` to the actual path where your Syncfusion Tesseract binaries (e.g., `libSyncfusionTesseract.so, liblept1753.so`) are located within your published application.
 
