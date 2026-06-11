@@ -8,12 +8,12 @@ documentation: UG
 
 # Create or Generate a PDF file in a Console application
 
-The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
+The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
 To quickly get started with the .NET PDF library, watch this video:
 {% youtube "https://youtu.be/PvUdu1hpRLQ?si=xFFjpsJZv3s8AonV" %}
 
-## Steps to create PDF document in Console App
+**Steps to create PDF document in Console App**
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -104,6 +104,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the PDF document as follows.
 ![Console output PDF document](GettingStarted_images/pdf-generation-output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core.
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind).
