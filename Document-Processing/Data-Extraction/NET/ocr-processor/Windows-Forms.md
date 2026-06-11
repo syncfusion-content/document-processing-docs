@@ -1,7 +1,7 @@
 ---
 title: Perform OCR on PDF and image files in Windows Forms | Syncfusion
 description: Learn how to perform OCR on scanned PDF documents and images in Windows Forms with different tesseract versions using Syncfusion .NET OCR library. 
-platform: document-processingDF
+platform: document-processing
 documentation: UG
 keywords: Assemblies
 --- 
@@ -89,7 +89,7 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endhighlight %}
 
 By executing the program, you will get a PDF document as follows.
-![OCR output screenshot](OCR-Images/Output.png)
+![OCR output](OCR-Images/Output.png)
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Windows%20Forms).
 
