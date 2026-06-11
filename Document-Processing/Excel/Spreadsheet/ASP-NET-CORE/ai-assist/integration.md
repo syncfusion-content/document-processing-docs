@@ -58,7 +58,7 @@ Inject the `AIAssist` module into the Spreadsheet using JavaScript. Add the foll
 
 ### Enable AI Assist
 
-To enable `AIAssist` in the Spreadsheet tag helper, set the [`enableAIAssist`](https://ej2.syncfusion.com/aspnetcore/documentation/api/spreadsheet/index-default#enableaiassist) property to `true`.
+To enable `AIAssist` in the Spreadsheet tag helper, set the [`enableAIAssist`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableAiAssist) property to `true`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -77,7 +77,7 @@ This enables the AI Assist into the spreadsheet.
 
 ### Configure AI Assist Settings
 
-Use the [`aiAssistSettings`](https://ej2.syncfusion.com/aspnetcore/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect the spreadsheet to the backend server and customize the AI Assist.
+Use the [`aiAssistSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AiAssistSettings) property to connect the spreadsheet to the backend server and customize the AI Assist.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -114,7 +114,7 @@ All actions performed by AI Assist are recorded in the spreadsheet's undo/redo h
 
 ### How to Customize the Request Before Sending
 
-Use the [`promptRequest`](https://ej2.syncfusion.com/aspnetcore/documentation/api/spreadsheet/index-default#promptrequest) event to add custom data — such as a user ID or session token — to the request before it reaches your server.
+Use the [`promptRequest`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_PromptRequest) event to add custom data — such as a user ID or session token — to the request before it reaches your server.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -143,7 +143,7 @@ You can also prevent the request entirely by setting `args.cancel = true`.
 
 ### How to Handle AI Responses
 
-Use the [`promptResponse`](https://ej2.syncfusion.com/aspnetcore/documentation/api/spreadsheet/index-default#promptresponse) event to run custom logic after the AI completes its task — for example, logging results or showing a notification.
+Use the [`promptResponse`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_PromptResponse) event to run custom logic after the AI completes its task — for example, logging results or showing a notification.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -203,8 +203,8 @@ If the AI panel displays an error message:
 
 | Event | When it fires | Common use |
 |---|---|---|
-| [`promptRequest`](https://ej2.syncfusion.com/aspnetcore/documentation/api/spreadsheet/index-default#promptrequest) | Before the prompt is sent to the server | Attach extra data or cancel the request |
-| [`promptResponse`](https://ej2.syncfusion.com/aspnetcore/documentation/api/spreadsheet/index-default#promptresponse) | After the AI completes and responds | Log results or trigger custom UI updates |
+| [`promptRequest`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_PromptRequest) | Before the prompt is sent to the server | Attach extra data or cancel the request |
+| [`promptResponse`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_PromptResponse) | After the AI completes and responds | Log results or trigger custom UI updates |
 
 ### What Can You Ask the AI?
 

@@ -7,7 +7,7 @@ control: AI Assist Node.js Server Setup
 documentation: ug
 ---
 
-# AI Assist — Node.js Server Setup
+# AI Assist Node.js Server Setup in ASP.NET Core Spreadsheet
 
 AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create a **Node.js** server with **Azure OpenAI** credentials.
 
@@ -171,7 +171,7 @@ http://localhost:3000/api/AIAssist/Chat
 
 ## Connect to the ASP.NET Core Spreadsheet
 
-Once the server is listening, configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/aspnetcore/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
+Once the server is listening, configure the `requestUrl` inside [`aiAssistSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AiAssistSettings) to point to the server endpoint:
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}

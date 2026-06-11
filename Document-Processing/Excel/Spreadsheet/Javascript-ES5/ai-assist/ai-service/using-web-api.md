@@ -7,7 +7,7 @@ control: AI Assist Web API Server Setup
 documentation: ug
 ---
 
-# AI Assist — Web API (.NET) Server Setup
+# AI Assist Web API Server Setup in JavaScript Spreadsheet
 
 AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create an **ASP.NET Core Web API** using **Azure OpenAI** credentials.
 

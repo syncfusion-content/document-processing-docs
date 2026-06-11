@@ -7,7 +7,7 @@ control: AI Assist Node.js Server Setup
 documentation: ug
 ---
 
-# AI Assist — Node.js Server Setup
+# AI Assist Node.js Server Setup in JavaScript Spreadsheet
 
 AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create a **Node.js** server with **Azure OpenAI** credentials.
 

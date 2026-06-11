@@ -7,7 +7,7 @@ control: AI Assist Web API Server Setup
 documentation: ug
 ---
 
-# AI Assist — Web API (.NET) Server Setup
+# AI Assist Web API Server Setup in ASP.NET MVC Spreadsheet
 
 AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create an **ASP.NET Core Web API** using **Azure OpenAI** credentials.
 
@@ -255,7 +255,6 @@ dotnet run
 ```
 
 * [Web API Server](https://drive.google.com/file/d/13K7a89Vk4Xt7dgd4wt49q272bSVSVuz3/view?usp=drive_link)
-* [Live Demo](https://document.syncfusion.com/demos/spreadsheet-editor/aspnetmvc/#/tailwind3/spreadsheet/ai-smart-spreadsheets)
 
 ## See also
 
