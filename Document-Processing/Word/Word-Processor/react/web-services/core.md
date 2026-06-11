@@ -402,7 +402,7 @@ public class SpellCheckJsonData
 {% endhighlight %}
 {% endtabs %}
 
-You can find the GitHub web service example or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) to host your own web service.
+You can find the GitHub web service example then configure the dictionary set up  to make use for spell check or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) to host your own web service.
 
 ## Save as file formats other than SFDT and DOCX
 
