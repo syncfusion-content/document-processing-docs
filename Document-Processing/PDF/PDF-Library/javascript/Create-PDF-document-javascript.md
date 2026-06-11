@@ -78,4 +78,4 @@ By executing the program, you will get the PDF document as follows.
 
 Click [here](https://www.syncfusion.com/document-sdk/javascript-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html) in Javascript.
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html) in JavaScript.
