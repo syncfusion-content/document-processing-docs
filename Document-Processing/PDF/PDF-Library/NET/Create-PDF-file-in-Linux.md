@@ -15,26 +15,29 @@ The Syncfusion<sup>&reg;</sup> [.NET Core PDF library](https://www.syncfusion.co
 
 Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application project.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet new console
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 2: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet add package Syncfusion.Pdf.Net.Core -v xx.x.x.xx -s https://www.nuget.org/
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in the *Program.cs* file.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -43,13 +46,11 @@ using Syncfusion.Drawing;
 using System.IO;
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 4: Add the following code sample to the *Program.cs* file to **create a PDF document in the .NET Core application on Linux**.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 //Create a new PDF document.
@@ -104,25 +105,28 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pd
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 5: Execute the following command to restore the NuGet packages.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet restore
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Linux Build](GettingStarted_images/Linux_Build.png)
 
 Step 6: Execute the following command in terminal to run the application.
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet run
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Linux Run](GettingStarted_images/Linux_Run.png)
 

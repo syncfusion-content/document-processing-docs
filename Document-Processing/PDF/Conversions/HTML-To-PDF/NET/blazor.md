@@ -37,6 +37,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 3: Create a new class file named ExportService under Data folder and include the following namespaces in the file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
@@ -44,9 +45,11 @@ using Syncfusion.Pdf;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Add the following code to convert HTML to PDF document in ExportService class using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public MemoryStream CreatePdf(string url)
@@ -63,9 +66,11 @@ public MemoryStream CreatePdf(string url)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Register your service in the ConfigureServices method available in the Startup.cs class as follows.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 /// <summary>
@@ -80,9 +85,11 @@ public void ConfigureServices(IServiceCollection services)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Inject ExportService into FetchData.razor using the following code.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 @inject ExportService exportService
@@ -91,17 +98,21 @@ Step 6: Inject ExportService into FetchData.razor using the following code.
 @using  System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Create a button in the FetchData.razor using the following code.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight HTML %}
 
 <button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Add the ExportToPdf method in FetchData.razor page to call the export service.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 @code {
@@ -131,9 +142,11 @@ Step 8: Add the ExportToPdf method in FetchData.razor page to call the export se
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 9: Create a class file with FileUtil name and add the following code to invoke the JavaScript action to download the file in the browser.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -146,10 +159,12 @@ public static class FileUtil
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 10: Add the following JavaScript function in the _Host.cshtml available under the Pages folder.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight HTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64)
@@ -179,6 +194,7 @@ Step 10: Add the following JavaScript function in the _Host.cshtml available und
 </script>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 11: Build the project.
 
@@ -219,6 +235,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 5: Create a new class file named ExportService under Data folder and include the following namespaces in the file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
@@ -226,9 +243,11 @@ using Syncfusion.Pdf;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add the following code to convert HTML to PDF document in ExportService class using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public MemoryStream CreatePdf(string url)
@@ -245,9 +264,11 @@ public MemoryStream CreatePdf(string url)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Register your service in the ConfigureServices method available in the Startup.cs class as follows.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 /// <summary>
@@ -262,9 +283,11 @@ public void ConfigureServices(IServiceCollection services)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Inject ExportService into FetchData.razor using the following code.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 @inject ExportService exportService
@@ -273,17 +296,21 @@ Step 8: Inject ExportService into FetchData.razor using the following code.
 @using  System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 9: Create a button in the FetchData.razor using the following code.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight HTML %}
 
 <button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 10: Add the ExportToPdf method in FetchData.razor page to call the export service.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 @code {
@@ -313,9 +340,11 @@ Step 10: Add the ExportToPdf method in FetchData.razor page to call the export s
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 11: Create a class file with FileUtil name and add the following code to invoke the JavaScript action to download the file in the browser.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -328,10 +357,12 @@ public static class FileUtil
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 12: Add the following JavaScript function in the _Host.cshtml available under the Pages folder.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight HTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64)
@@ -361,6 +392,7 @@ Step 12: Add the following JavaScript function in the _Host.cshtml available und
 </script>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 13: Build the project.
 
@@ -416,6 +448,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 3: Create a new class file named ExportService under Data folder and include the following namespaces in the file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
@@ -423,9 +456,11 @@ using Syncfusion.Pdf;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Add the following code to convert HTML to PDF document in ExportService class using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public MemoryStream CreatePdf(string url)
@@ -442,9 +477,11 @@ public MemoryStream CreatePdf(string url)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Register your service in the ConfigureServices method available in the Startup.cs class as follows.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 /// <summary>
@@ -459,9 +496,11 @@ public void ConfigureServices(IServiceCollection services)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Inject ExportService into FetchData.razor using the following code.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 @inject ExportService exportService
@@ -470,17 +509,21 @@ Step 6: Inject ExportService into FetchData.razor using the following code.
 @using  System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Create a button in the FetchData.razor using the following code.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight HTML %}
 
 <button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Add the ExportToPdf method in FetchData.razor page to call the export service.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 @code {
@@ -510,9 +553,11 @@ Step 8: Add the ExportToPdf method in FetchData.razor page to call the export se
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 9: Create a class file with FileUtil name and add the following code to invoke the JavaScript action to download the file in the browser.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -525,10 +570,12 @@ public static class FileUtil
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 10: Add the following JavaScript function in the _Host.cshtml available under the Pages folder.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight HTML %}
 
 <script type="text/javascript">
     function saveAsFile(filename, bytesBase64)
@@ -558,6 +605,7 @@ Step 10: Add the following JavaScript function in the _Host.cshtml available und
 </script>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 11: Build the project.
 

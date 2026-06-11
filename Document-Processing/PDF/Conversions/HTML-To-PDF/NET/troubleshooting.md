@@ -275,15 +275,15 @@ Add the following code to the <b>.csproj</b> file to ensure the <b>locale</b> fo
 
 {% highlight C# tabtitle="C#" %}
 
-<ItemGroup>
+	<ItemGroup>
 
-  <None Include="bin\Release\net9.0\runtimes\linux\native\locales\**\*"
+	<None Include="bin\Release\net9.0\runtimes\linux\native\locales\**\*"
 
-        CopyToOutputDirectory="Always"
+		CopyToOutputDirectory="Always"
 
-        Link="runtimes/linux/native/locales/%(RecursiveDir)%(Filename)%(Extension)"/>
+		Link="runtimes/linux/native/locales/%(RecursiveDir)%(Filename)%(Extension)"/>
 
-</ItemGroup>
+	</ItemGroup>
 
 {% endhighlight %}
 
@@ -800,25 +800,25 @@ To resolve this issue, we can install the chromium using the docker file and set
 
 {% highlight C# tabtitle="C#" %}
 
-	FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base 
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base 
 
-	RUN apt-get update && apt-get install -y \ 
+RUN apt-get update && apt-get install -y \ 
 
-    libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \ 
+libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \ 
 
-    libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \ 
+libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \ 
 
-    libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 \ 
+libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 \ 
 
-    libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 \ 
+libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 \ 
 
-    libnss3 libgbm1 chromium 
+libnss3 libgbm1 chromium 
 
-	WORKDIR /app 
+WORKDIR /app 
 
-	EXPOSE 80 
+EXPOSE 80 
 
-	EXPOSE 443 
+EXPOSE 443 
 
 {% endhighlight %}
 
@@ -826,11 +826,11 @@ To resolve this issue, we can install the chromium using the docker file and set
 
 {% highlight C# tabtitle="C#" %}
 
-	BlinkConverterSettings settings = new BlinkConverterSettings();  
+BlinkConverterSettings settings = new BlinkConverterSettings();  
 
-	//To utilize the Blink binaries from the arm64-based chromium installed using the docker file, execute the following command.   
+//To utilize the Blink binaries from the arm64-based chromium installed using the docker file, execute the following command.   
 
-	settings.BlinkPath = @"/usr/lib/chromium/chromium";
+settings.BlinkPath = @"/usr/lib/chromium/chromium";
 
 {% endhighlight %}
 
@@ -946,44 +946,44 @@ We can install the required dependencies using the dependencies vis shell script
 
 {% highlight C# %}
 
-	private static void InstallLinuxPackages(FileInfo functionAppDirectory)
+private static void InstallLinuxPackages(FileInfo functionAppDirectory)
+{
+	if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
 	{
-		if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-		{
-			return;
-		}
-		FileAccessPermissions ExecutableFilePermissions = FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute |
-		FileAccessPermissions.GroupRead | FileAccessPermissions.GroupExecute | FileAccessPermissions.OtherRead | FileAccessPermissions.OtherExecute;
-		//Install the dependencies packages for HTML to PDF conversion in Linux
-		string shellFilePath = Path.Combine(functionAppDirectory.Directory.Parent.FullName, @"wwwroot/data");
-		string tempBlinkDir = Path.GetTempPath();
-		string dependenciesPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
-		if (!File.Exists(dependenciesPath))
-		{
-			CopyFilesRecursively(shellFilePath, tempBlinkDir);
-			var execPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
-			if (File.Exists(execPath))
-			{
-				var code = Function1.Chmod(execPath, ExecutableFilePermissions);
-				if (code != 0)
-				{
-					throw new Exception("Chmod operation failed");
-				}
-			}
-			Process process = new Process
-			{
-				StartInfo = new ProcessStartInfo
-				{
-					FileName = "/bin/bash",
-					Arguments = "-c " + execPath,
-					CreateNoWindow = true,
-					UseShellExecute = false,
-				}
-			};
-			process.Start();
-			process.WaitForExit();
-		}
+		return;
 	}
+	FileAccessPermissions ExecutableFilePermissions = FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute |
+	FileAccessPermissions.GroupRead | FileAccessPermissions.GroupExecute | FileAccessPermissions.OtherRead | FileAccessPermissions.OtherExecute;
+	//Install the dependencies packages for HTML to PDF conversion in Linux
+	string shellFilePath = Path.Combine(functionAppDirectory.Directory.Parent.FullName, @"wwwroot/data");
+	string tempBlinkDir = Path.GetTempPath();
+	string dependenciesPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
+	if (!File.Exists(dependenciesPath))
+	{
+		CopyFilesRecursively(shellFilePath, tempBlinkDir);
+		var execPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
+		if (File.Exists(execPath))
+		{
+			var code = Function1.Chmod(execPath, ExecutableFilePermissions);
+			if (code != 0)
+			{
+				throw new Exception("Chmod operation failed");
+			}
+		}
+		Process process = new Process
+		{
+			StartInfo = new ProcessStartInfo
+			{
+				FileName = "/bin/bash",
+				Arguments = "-c " + execPath,
+				CreateNoWindow = true,
+				UseShellExecute = false,
+			}
+		};
+		process.Start();
+		process.WaitForExit();
+	}
+}
 
 {% endhighlight %}
 
@@ -1023,7 +1023,6 @@ Blink binaries (Version 109.0.5414.75),
 </tr>
 
 </table>
-
 
 ## There was an error opening this document. This file is already open or in use by another application.
 

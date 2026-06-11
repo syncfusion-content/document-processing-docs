@@ -37,7 +37,7 @@ Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
 {% tabs %}
 
-{% highlight XML %}
+{% highlight XAML %}
 <Window
     x:Class="Load_and_Save_PDF_WinUI_Desktop.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -46,7 +46,6 @@ Step 5: Add a new button to the **MainWindow.xaml** as shown below.
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button x:Name="button" Click="myButton_Click">Create PDF</Button>
     </StackPanel>
@@ -130,8 +129,8 @@ filePath = "D://Result.pdf";
 //Create a FileStream to save the PDF document.
 using (FileStream outputStream = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite))
 {
-//Save the PDF file.
-document.Save(outputStream);
+    //Save the PDF file.
+    document.Save(outputStream);
 }
 {% endhighlight %}
 

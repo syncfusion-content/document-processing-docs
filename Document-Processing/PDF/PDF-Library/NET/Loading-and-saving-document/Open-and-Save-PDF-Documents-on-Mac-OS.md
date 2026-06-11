@@ -90,8 +90,8 @@ Step 7: Add the following code example to **save the PDF document in the .NET Co
 //Create a FileStream to save the PDF document.
 using(FileStream outputStream = new FileStream("Result.pdf", FileMode.Create, FileAccess.ReadWrite))
 {
-//Save the PDF file.
-document.Save(outputStream);
+    //Save the PDF file.
+    document.Save(outputStream);
 }
 {% endhighlight %}
 

@@ -14,6 +14,7 @@ Step 3: To create a PDF document in a Blazor Server app, install the [Syncfusion
 
 Step 4: Create a new cs file named **ExportService.cs** under **Data** folder and include the following namespaces in the file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -22,11 +23,13 @@ using Syncfusion.Pdf.Grid;
 using Syncfusion.Drawing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
 
 Add the following code sample in ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Export weather data to PDF document.
@@ -81,9 +84,11 @@ public static MemoryStream CreatePdf(WeatherForecast[] forecasts)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Register your service in the ``Program.cs`` class as follows.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 services.AddRazorPages();
@@ -92,9 +97,11 @@ services.AddSingleton<WeatherForecastService>();
 services.AddSingleton<ExportService>();
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Inject ``ExportService`` in-to ``Weather.razor`` using the following code.
 
+{% tabs %}
 {% highlight CSHTML %}
 
 @inject ExportToFileService exportService
@@ -102,15 +109,19 @@ Step 7: Inject ``ExportService`` in-to ``Weather.razor`` using the following cod
 @using  System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Create a button in the ``Weather.razor`` using the following code.
 
+{% tabs %}
 {% highlight CSHTML %}
 <button class="btn btn-primary" @onclick="@ExportToPdf">Export PDF</button>
 {% endhighlight %}
+{% endtabs %}
 
 Add the ``ExportToPdf`` method in ``Weather.razor`` page to call the export service.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 @functions
 {
@@ -123,9 +134,11 @@ Add the ``ExportToPdf`` method in ``Weather.razor`` page to call the export serv
     }
 }
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Include the ``FileUtil`` class within the ``ExportService.cs`` file to enable file-related operations as part of the export functionality.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -138,9 +151,11 @@ public static class FileUtil
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 9: Add the following JavaScript function in the  ``App.razor`` available under the ``Components`` folder.
 
+{% tabs %}
 {% highlight HTML %}
 
 <script type="text/javascript">
@@ -167,6 +182,7 @@ Step 9: Add the following JavaScript function in the  ``App.razor`` available un
 </script>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 10: Build the project.
 

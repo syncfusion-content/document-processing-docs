@@ -27,21 +27,19 @@ Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syn
 Step 5: A default action method named Index will be present in *HomeController.cs*. Right click on Index method and select Go To View where you will be directed to its associated view page *Index.cshtml*. Add a new button in the *Index.cshtml* as shown below.
 
 {% tabs %}
+{% highlight CSHTML %}
 
-{% highlight c# tabtitle="C#" %}
-
-    @{
-        Html.BeginForm("CreatePDFDocument", "Home", FormMethod.Get);
-        {
-            <div>
-                <input type="submit" value="Create PDF Document" style="width:200px;height:27px" />
-            </div>
-        }
-        Html.EndForm();
+@{
+    Html.BeginForm("CreatePDFDocument", "Home", FormMethod.Get);
+    {
+        <div>
+            <input type="submit" value="Create PDF Document" style="width:200px;height:27px" />
+        </div>
     }
+    Html.EndForm();
+}
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 6: Include the following namespaces in *HomeController.cs*.
@@ -50,10 +48,10 @@ Step 6: Include the following namespaces in *HomeController.cs*.
 
 {% highlight c# tabtitle="C#" %}
 
-    using Syncfusion.Pdf.Graphics;
-    using Syncfusion.Pdf;
-    using System.Diagnostics;
-    using Syncfusion.Drawing;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using System.Diagnostics;
+using Syncfusion.Drawing;
 
 {% endhighlight %}
 
@@ -65,7 +63,7 @@ Step 7: Add a new action method named CreatePDFDocument in HomeController.cs fil
 
 {% highlight c# tabtitle="C#" %}
 
-    public IActionResult CreatePDFDocument()
+public IActionResult CreatePDFDocument()
 {
     //Create a new PDF document.
     PdfDocument document = new PdfDocument();
@@ -157,15 +155,16 @@ Step 9: Publish succeeded.
 ![Publish succeeded](AKS_images/Publish_link.png)
 
 ## Deploy Container Image to AKS
+
 Step 1: Now we can deploy container to the AKS cluster. Start by opening the Azure portal, browsing to the Subscription and opening the Cloud Shell (BASH). We will use the kubectl tool to manage the cluster.
 
 Step 2: You need to gather the credentials in order to interact with the cluster using kubectl in Azure Cloud Shell.
  use the following command:
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
-    az aks get-credentials --resource-group CreatePdfDocument --name aks-uk-demo-msdn
+az aks get-credentials --resource-group CreatePdfDocument --name aks-uk-demo-msdn
 
 {% endhighlight %}
 
@@ -173,9 +172,9 @@ Step 2: You need to gather the credentials in order to interact with the cluster
 
 Step 3: You can review the credentials with the following command:
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
-     cat .kube/config
+cat .kube/config
 
 {% endhighlight %}
 
@@ -185,9 +184,9 @@ N> If you forgot to attach the ACR when creating the AKS resource (Like I did th
 
 Step 4: Now in the Cloud Shell, create a new file called deploy.yaml as follows:
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
-     code deploy.yaml
+code deploy.yaml
 
 {% endhighlight %}
 
@@ -195,38 +194,38 @@ Step 4: Now in the Cloud Shell, create a new file called deploy.yaml as follows:
 
 Step 5: Then we pasted in the following Kubernetes Deployment and Service configurations. Note, change yours to match your app name, container name, registry, etc.
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
-    apiVersion: apps/v1
-    kind: Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+name: createpdfdocument
+spec:
+replicas: 2
+selector:
+    matchLabels:
+    app: createpdfdocument
+template:
     metadata:
-    name: createpdfdocument
-    spec:
-    replicas: 2
-    selector:
-        matchLabels:
+    labels:
         app: createpdfdocument
-    template:
-        metadata:
-        labels:
-            app: createpdfdocument
-        spec:
-        containers:
-        - name: createpdfdocument
-            image: createpdfdocument20240918103106.azurecr.io/createpdfdocument:latest
-    ---
-    apiVersion: v1
-    kind: Service
-    metadata:
-    name: createpdfdocument
     spec:
-    type: LoadBalancer
-    ports:
-        - port: 80
-        targetPort: 80
-        protocol: TCP
-    selector:
-        app: createpdfdocument
+    containers:
+    - name: createpdfdocument
+        image: createpdfdocument20240918103106.azurecr.io/createpdfdocument:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+name: createpdfdocument
+spec:
+type: LoadBalancer
+ports:
+    - port: 80
+    targetPort: 80
+    protocol: TCP
+selector:
+    app: createpdfdocument
 
 {% endhighlight %}
 
@@ -234,9 +233,9 @@ Step 5: Then we pasted in the following Kubernetes Deployment and Service config
 
 Step 6: Once you save and close the code editor, it’s finally time to apply the configuration:
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
-     kubectl apply -f deploy.yaml
+kubectl apply -f deploy.yaml
 
 {% endhighlight %}
 
@@ -248,21 +247,21 @@ Step 7: Notice the deployment and service shows as created.
 
 Step 8: You can run the following commands:
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
-    kubectl get pods
-    kubectl get nodes
-    kubectl get service
-    kubectl describe deployment
+kubectl get pods
+kubectl get nodes
+kubectl get service
+kubectl describe deployment
 
 {% endhighlight %}
 {% endtabs %}
 
 or
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
-    kubectl get all
+kubectl get all
 
 {% endhighlight %}
 {% endtabs %}
@@ -282,12 +281,13 @@ Select the PDF document and Click **Create PDF document** to generate the PDF do
 ![Create PDF document in Azure App Service on Linux](AKS_images/Output.png)
 
 ## Delete deployment
+
 If you want to clean up the cluster, you can run the following commands:
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
-    kubectl delete -f deploy.yaml
-    kubectl delete svc asp-docker-app --namespace=default
+kubectl delete -f deploy.yaml
+kubectl delete svc asp-docker-app --namespace=default
 
 {% endhighlight %}
 {% endtabs %}

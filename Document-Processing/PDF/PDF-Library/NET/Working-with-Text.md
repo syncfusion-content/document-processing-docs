@@ -133,7 +133,6 @@ using (PdfDocument pdfDocument = new PdfDocument())
     pdfDocument.Save("Output.pdf");
 }
 
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -168,12 +167,12 @@ using (PdfDocument pdfDocument = new PdfDocument())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    Imports Syncfusion.Pdf
-    Imports Syncfusion.Pdf.Graphics
-    Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
-    ' Create a PDF document
-    Using pdfDocument As New PdfDocument()
+' Create a PDF document
+Using pdfDocument As New PdfDocument()
     ' Add Pages to the document
     Dim page As PdfPage = pdfDocument.Pages.Add()
     ' Create PDF graphics
@@ -192,7 +191,7 @@ using (PdfDocument pdfDocument = new PdfDocument())
     graphics.DrawString("This text is not rotated.", font, PdfBrushes.Black, New PointF(0, 100))
     ' Save and close the document to a file
     pdfDocument.Save("Output.pdf")
-    pdfDocument.Close(True)
+End Using
 
 {% endhighlight %}
 
@@ -391,6 +390,9 @@ You can add text using TrueType fonts either installed on the system or provided
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -2893,122 +2895,122 @@ The following code example illustrates this.
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Graphics;
-    using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
 
-    // Create a new PdfStringFormat and set its properties
-    PdfStringFormat format = new PdfStringFormat();
-    //Set no clip
-    format.NoClip = true;
-    //Set line limit
-    format.LineLimit = false;
+// Create a new PdfStringFormat and set its properties
+PdfStringFormat format = new PdfStringFormat();
+//Set no clip
+format.NoClip = true;
+//Set line limit
+format.LineLimit = false;
 
-    // Create a new PdfFont using the Helvetica font family
-    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+// Create a new PdfFont using the Helvetica font family
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
 
-    // Create a new PdfDocument
-    PdfDocument document = new PdfDocument();
-    // Set the page margins to zero
-    document.PageSettings.Margins.All = 0;
+// Create a new PdfDocument
+PdfDocument document = new PdfDocument();
+// Set the page margins to zero
+document.PageSettings.Margins.All = 0;
 
-    // Add a new page to the document
-    PdfPage page = document.Pages.Add();
+// Add a new page to the document
+PdfPage page = document.Pages.Add();
 
-    // Get the graphics object of the page
-    PdfGraphics graphics = page.Graphics;
+// Get the graphics object of the page
+PdfGraphics graphics = page.Graphics;
 
-    // Draw a red rectangle at the specified position and size
-    graphics.DrawRectangle(PdfPens.Red, new RectangleF(100, 100, 100, 20));
+// Draw a red rectangle at the specified position and size
+graphics.DrawRectangle(PdfPens.Red, new RectangleF(100, 100, 100, 20));
 
-    // Draw the string inside the rectangle with the specified font, brush, and format
-    graphics.DrawString("PDF text line 1 \r\nPDF text line 3", font, PdfBrushes.Black, new RectangleF(100, 100, 100, 20), format);
+// Draw the string inside the rectangle with the specified font, brush, and format
+graphics.DrawString("PDF text line 1 \r\nPDF text line 3", font, PdfBrushes.Black, new RectangleF(100, 100, 100, 20), format);
 
-    //Save the document.
-    document.Save("Output.pdf");
-    //Close the document.
-    document.Close(true);
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
 
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Graphics;
-    using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
 
-    // Create a new PdfStringFormat and set its properties
-    PdfStringFormat format = new PdfStringFormat();
-    //Set no clip
-    format.NoClip = true;
-    //Set line limit
-    format.LineLimit = false;
+// Create a new PdfStringFormat and set its properties
+PdfStringFormat format = new PdfStringFormat();
+//Set no clip
+format.NoClip = true;
+//Set line limit
+format.LineLimit = false;
 
-    // Create a new PdfFont using the Helvetica font family
-    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+// Create a new PdfFont using the Helvetica font family
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
 
-    // Create a new PdfDocument
-    PdfDocument document = new PdfDocument();
-    // Set the page margins to zero
-    document.PageSettings.Margins.All = 0;
+// Create a new PdfDocument
+PdfDocument document = new PdfDocument();
+// Set the page margins to zero
+document.PageSettings.Margins.All = 0;
 
-    // Add a new page to the document
-    PdfPage page = document.Pages.Add();
+// Add a new page to the document
+PdfPage page = document.Pages.Add();
 
-    // Get the graphics object of the page
-    PdfGraphics graphics = page.Graphics;
+// Get the graphics object of the page
+PdfGraphics graphics = page.Graphics;
 
-    // Draw a red rectangle at the specified position and size
-    graphics.DrawRectangle(PdfPens.Red, new RectangleF(100, 100, 100, 20));
+// Draw a red rectangle at the specified position and size
+graphics.DrawRectangle(PdfPens.Red, new RectangleF(100, 100, 100, 20));
 
-    // Draw the string inside the rectangle with the specified font, brush, and format
-    graphics.DrawString("PDF text line 1 \r\nPDF text line 3", font, PdfBrushes.Black, new RectangleF(100, 100, 100, 20), format);
+// Draw the string inside the rectangle with the specified font, brush, and format
+graphics.DrawString("PDF text line 1 \r\nPDF text line 3", font, PdfBrushes.Black, new RectangleF(100, 100, 100, 20), format);
 
-    //Save the document. 
-    document.Save("Output.pdf"); 
-    //Close the document.
-    document.Close(true);
+//Save the document. 
+document.Save("Output.pdf"); 
+//Close the document.
+document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    Imports Syncfusion.Pdf
-    Imports Syncfusion.Pdf.Graphics
-    Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports System.Drawing
 
-    ' Create a new PdfStringFormat and set its properties
-    Dim format As New PdfStringFormat()
-    ' Set no clip
-    format.NoClip = True
-    ' Set line limit
-    format.LineLimit = False
+' Create a new PdfStringFormat and set its properties
+Dim format As New PdfStringFormat()
+' Set no clip
+format.NoClip = True
+' Set line limit
+format.LineLimit = False
 
-    ' Create a new PdfFont using the Helvetica font family
-    Dim font As New PdfStandardFont(PdfFontFamily.Helvetica, 12)
+' Create a new PdfFont using the Helvetica font family
+Dim font As New PdfStandardFont(PdfFontFamily.Helvetica, 12)
 
-    ' Create a new PdfDocument
-    Dim document As New PdfDocument()
-    ' Set the page margins to zero
-    document.PageSettings.Margins.All = 0
+' Create a new PdfDocument
+Dim document As New PdfDocument()
+' Set the page margins to zero
+document.PageSettings.Margins.All = 0
 
-    ' Add a new page to the document
-    Dim page As PdfPage = document.Pages.Add()
+' Add a new page to the document
+Dim page As PdfPage = document.Pages.Add()
 
-    ' Get the graphics object of the page
-    Dim graphics As PdfGraphics = page.Graphics
+' Get the graphics object of the page
+Dim graphics As PdfGraphics = page.Graphics
 
-    ' Draw a red rectangle at the specified position and size
-    graphics.DrawRectangle(PdfPens.Red, New RectangleF(100, 100, 100, 20))
+' Draw a red rectangle at the specified position and size
+graphics.DrawRectangle(PdfPens.Red, New RectangleF(100, 100, 100, 20))
 
-    ' Draw the string inside the rectangle with the specified font, brush, and format
-    graphics.DrawString("PDF text line 1" & vbCrLf & "PDF text line 3", font, PdfBrushes.Black, New RectangleF(100, 100, 100, 20), format)
+' Draw the string inside the rectangle with the specified font, brush, and format
+graphics.DrawString("PDF text line 1" & vbCrLf & "PDF text line 3", font, PdfBrushes.Black, New RectangleF(100, 100, 100, 20), format)
 
-    ' Save the document
-    document.Save("Output.pdf")
-    ' Close the document
-    document.Close(True)
+' Save the document
+document.Save("Output.pdf")
+' Close the document
+document.Close(True)
 
 {% endhighlight %}
 

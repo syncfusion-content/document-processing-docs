@@ -33,6 +33,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 5: Next, include the following namespaces in that  ``FetchData.razor`` file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 @using Syncfusion.Pdf
@@ -116,6 +117,8 @@ public static class FileUtil
 }
 
 {% endhighlight %}
+
+{% endtabs %}
 
 Step 9: Add the following JavaScript function in the ``index.html`` available under the ``wwwroot`` folder.
 
