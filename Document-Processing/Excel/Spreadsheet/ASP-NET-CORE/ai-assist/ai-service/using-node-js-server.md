@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AI Assist Node.js Server Setup in ASP.NET Core Spreadsheet | Syncfusion
+title: AI Assist Node.js Server Setup in ASP.NET Core Spreadsheet
 description: Learn how to set up and connect a Node.js + Express server for the AI Assist feature in the Syncfusion ASP.NET Core Spreadsheet component.
 platform: document-processing
 control: AI Assist Node.js Server Setup
