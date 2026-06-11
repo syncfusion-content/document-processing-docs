@@ -10,7 +10,7 @@ keywords: .net core create pdf, edit pdf, merge, pdf form, fill form, digital si
 
 # Create or Generate PDF in ASP.NET Core
 
-The Syncfusion<sup>&reg;</sup> JavaScript PDF library is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
+The Syncfusion<sup>&reg;</sup> [JavaScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 
 This guide explains how to integrate the JavaScript PDF library into an ASP.NET Core application.
 
@@ -26,11 +26,17 @@ Step 4: In the **Additional information** dialog, select a .NET LTS version (for
 
 Step 5: **Add script reference**: Add the required scripts using the CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` as follows:
 
+**Syntax:**
+> Script: `https://cdn.syncfusion.com/ej2/{Version}/dist/{PACKAGE_NAME}.min.js`
+
+**Example:**
+> Script: [`https://cdn.syncfusion.com/ej2/33.2.12/dist/ej2.min.js`](https://cdn.syncfusion.com/ej2/33.2.12/dist/ej2.min.js)
+
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 <head>
     <!-- Syncfusion JavaScript PDF Library (CDN) -->
-    <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.2.12/dist/ej2.min.js"></script>
 </head>
 {% endhighlight %}
 {% endtabs %}
@@ -76,10 +82,14 @@ Step 6: **Create a PDF document**: Add the script in `~/Views/Home/Index.cshtml`
 {% endhighlight %}
 {% endtabs %}
 
-step 7: **Build the project**: Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
+Step 7: **Build the project**: Click on Build > Build Solution or press Ctrl + Shift + B to build the project.
 
 Step 8: **Run the project**: Click the Start button (green arrow) or press F5 to run the app.
 
 By executing the program, you will generate the following PDF document.
 
 ![ASP.NET Core PDF output](Getting_started_images/Output.png)
+
+Click [here](https://www.syncfusion.com/document-sdk/javascript-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind3) in ASP.NET Core.

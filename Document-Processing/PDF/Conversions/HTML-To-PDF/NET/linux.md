@@ -15,7 +15,7 @@ The Syncfusion<sup>&reg;</sup> HTML to PDF converter is a .NET library that conv
 The following Linux dependencies should be installed where the conversion takes place. 
 
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 $ sudo apt-get update
 
@@ -30,7 +30,7 @@ $ sudo apt-get install libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1
 Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application.
 
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 dotnet new console
 
@@ -42,7 +42,7 @@ dotnet new console
 Step 2: Install the [Syncfusion.HtmlToPdfConverter.Net.Linux](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
 
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 dotnet add package Syncfusion.HtmlToPdfConverter.Net.Linux -v xx.x.x.xx -s https://www.nuget.org/
 
@@ -95,7 +95,7 @@ N> These arguments are only required when using **older versions** of the librar
 Step 5: Execute the following command to restore the NuGet packages.
 
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 dotnet restore
 
@@ -106,7 +106,7 @@ dotnet restore
 Step 6: Execute the following command in the terminal to run the application.
 
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 dotnet run
 

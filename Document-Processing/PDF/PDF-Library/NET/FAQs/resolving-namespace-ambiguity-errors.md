@@ -128,7 +128,7 @@ If your project already contains conflicting packages, you can follow these step
 First, remove any conflicting packages from your project. For example:
 
 {% tabs %}
-{% highlight CLI %} 
+{% highlight bash %} 
 dotnet remove package Syncfusion.Pdf.Net.Core
 dotnet remove package Syncfusion.Pdf.WinForms
 {% endhighlight %}
