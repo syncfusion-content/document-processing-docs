@@ -402,7 +402,7 @@ public class SpellCheckJsonData
 {% endhighlight %}
 {% endtabs %}
 
-You can find the GitHub web service example then configure the dictionary set up  to make use for spell check or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) to host your own web service.
+>N You can find the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) then configure the dictionary set up  to make use for spell check or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) to host your own web service.
 
 ## Save as file formats other than SFDT and DOCX
 
@@ -562,4 +562,4 @@ The following example code illustrates how to write a Web API for export.
     }
 ```
 
->Note: Please refer the [ASP.NET Core Web API sample](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/ASP.NET%20Core).
+>N[View ASP.NET Core Web AI sample in GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/ASP.NET%20Core).
