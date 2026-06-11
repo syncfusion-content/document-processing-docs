@@ -122,7 +122,7 @@ N> The hosted Web API URL is for demo and evaluation purposes only. For producti
 
 ## Get all tracked revisions
 
-Retrieves all tracked revisions from the current document using the revisions collection in the Document Editor.
+Retrieves all tracked revisions from the current document using the [revision collection](https://ej2.syncfusion.com/documentation/api/document-editor/revisioncollection) in the Document Editor.
 
 The following example demonstrates how to get all tracked revisions from the current document.
 
