@@ -4,8 +4,6 @@
 * Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 * Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
-
-
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a .NET Core console application.
 
 ```
@@ -36,13 +34,11 @@ using Syncfusion.Drawing;
 using System.IO;
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 6: Add the following code sample to the *Program.cs* file to **create PDF document in .NET Core application on Mac OS**.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 //Create a new PDF document.
@@ -97,21 +93,20 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pd
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 7: Build the project.
 
 Run the following command in terminal to build the project.
 
-   ```
-   dotnet build
-   ```
+```
+dotnet build
+```
 
 Step 8: Run the project.
 
 Run the following command in terminal to build the project.
 
-   ```
-   dotnet run
+```
+dotnet run
 ```

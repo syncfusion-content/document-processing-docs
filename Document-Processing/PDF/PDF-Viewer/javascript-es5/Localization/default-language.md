@@ -8,11 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization support in JavaScript PDF Viewer
+# Localization in the JavaScript PDF Viewer
 
-The PDF Viewer fully supports localization, allowing all UI text, tooltips, and messages to be replaced with culture-specific strings so the interface matches users’ language and regional settings.
+The PDF Viewer supports localization of UI text, tooltips, and messages using culture-specific string collections so the interface matches users' language and regional settings.
 
 ![Default Locale](../../javascript-es6/images/locale-us.gif)
+
+N> Change the viewer locale by setting the `locale` property in the viewer options during initialization or by assigning `pdfviewer.locale` before rendering.
 
 ## Default language (en-US)
 

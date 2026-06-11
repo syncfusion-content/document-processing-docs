@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hyperlink navigation in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for ASP.NET Core.
+title: Hyperlink Navigation in ASP.NET Core PDF Viewer | Syncfusion
+description: Configure hyperlink and table-of-contents navigation in ASP.NET Core PDF Viewer. Learn how to enable/disable links and handle hyperlink events.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF Viewer consolidates hyperlink-driven experiences, including inline links and table-of-contents (TOC) entries that target in-document destinations. These elements surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
 
-> **Note:** The table of contents pane and hyperlink interactions rely on the same navigation infrastructure. When these capabilities are enabled, the PDF Viewer automatically surfaces TOC entries and clickable links defined in the PDF.
+N> The table of contents pane and hyperlink interactions rely on the same navigation infrastructure. When these capabilities are enabled, the PDF Viewer automatically surfaces TOC entries and clickable links defined in the PDF.
 
 ## Required modules
 
@@ -43,7 +43,7 @@ By default, the PDF Viewer automatically detects and enables all hyperlinks pres
 
 When `enableHyperlink` is set to `false`, all hyperlinks in the document become non-interactive. This means that users cannot click them, and no hyperlink-related events will be triggered.
 
-The following example demonstrates how to disable hyperlink navigation:
+**Example: Disable hyperlinks**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -69,7 +69,8 @@ The following example demonstrates how to disable hyperlink navigation:
 {% endhighlight %}
 {% endtabs %}
 
-> Note: Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
+N> Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
+
 ### Controlling Link Behavior
 
 The `hyperlinkOpenState` property determines how external URLs are opened when a hyperlink is clicked.
@@ -80,7 +81,7 @@ The `hyperlinkOpenState` property determines how external URLs are opened when a
 
 By default, links open in the same browser tab (`CurrentTab`). To open links in a new tab, set this property to `'NewTab'`. This is useful for preserving the user's current viewing session.
 
-The following example configures hyperlinks to open in a new tab:
+**Example: Open links in a new tab**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -125,7 +126,7 @@ The `hyperlinkMouseOver` event is triggered when the mouse pointer hovers over a
 The event arguments include:
 - `hyperlinkElement`: The HTML anchor element (`<a>`) corresponding to the hyperlink.
 
-The following example demonstrates how to use these events:
+**Example: Hyperlink event handlers**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

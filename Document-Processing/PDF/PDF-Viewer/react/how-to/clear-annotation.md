@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Clear annotations in React PDF Viewer
 
-Use the [deleteAnnotations](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#deleteannotations) method to clear all annotations in the currently loaded document.
+Use the [deleteAnnotations](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#deleteannotations) method to clear all annotations in the currently loaded document.
 
 Example: Clear all annotations in the loaded document
 
@@ -37,10 +37,11 @@ Example: Delete a specific annotation by id
 // Delete an annotation by id
 function deleteAnnotationbyId() {
     var viewer = document.getElementById("container").ej2_instances[0];
-    viewer.annotationModule.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
+    if (viewer.annotationCollection && viewer.annotationCollection.length > 0) {
+        viewer.annotationModule.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
+    }
 }
 </script>
 ```
 
-Sample: How to clear annotations using deleteAnnotations
-(https://stackblitz.com/edit/react-xlvqkm?file=public%2Findex.html)
+[How to clear annotations using deleteAnnotations](https://stackblitz.com/edit/react-xlvqkm?file=public%2Findex.html)

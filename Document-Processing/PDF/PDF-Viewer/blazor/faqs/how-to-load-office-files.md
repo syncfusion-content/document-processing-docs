@@ -19,8 +19,8 @@ In the following example, a Word document is converted to a PDF and then loaded 
 ```cshtml
 
 @page "/"
-@using Syncfusion.Blazor.SfPdfViewer
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer;
+@using Syncfusion.Blazor.Buttons;
 @using Syncfusion.Pdf;
 @using Syncfusion.Pdf.Graphics;
 @using Syncfusion.Pdf.Interactive;
@@ -32,7 +32,7 @@ In the following example, a Word document is converted to a PDF and then loaded 
 @using Syncfusion.Presentation;
 @using Syncfusion.PresentationRenderer;
 @using Syncfusion.XlsIO;
-@using Syncfusion.XlsIORenderer
+@using Syncfusion.XlsIORenderer;
 @using Syncfusion.DocIORenderer;
 @using System.IO;
 

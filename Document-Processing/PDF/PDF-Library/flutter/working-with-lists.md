@@ -2,7 +2,7 @@
 layout: post
 title: Bullets and Lists in Flutter PDF library | Syncfusion
 description: Learn here all about add ordered and unordered lists feature of Syncfusion Flutter PDF non-UI library and more.
-platform: flutter
+platform: document-processing
 control: PDF
 documentation: ug
 ---
@@ -15,7 +15,8 @@ The Syncfusion<sup>&reg;</sup> Flutter PDF allows you list the content in ordere
 
 The Syncfusion<sup>&reg;</sup> Flutter PDF allows you to create an ordered list in the document. An ordered list is represented by the [`PdfOrderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfOrderedList-class.html) class. The following code snippet explains the same.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -42,12 +43,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
+{% endtabs %}
 
 ## Adding an unordered list
 
 The Syncfusion<sup>&reg;</sup> Flutter PDF also provides support to create an unordered list that is represented by the [`PdfUnorderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfUnorderedList-class.html) class. The following code snippet explains the same.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -69,12 +72,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Adding a sub list
 
 The Syncfusion<sup>&reg;</sup> Flutter PDF also provides support to create a sub list to a [`PdfList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfList-class.html). A sub list can be created under both [`PdfOrderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfOrderedList-class.html) and [`PdfUnorderedList`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfUnorderedList-class.html). The following code snippet explains the same.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -155,3 +160,4 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
   
 {% endhighlight %}
+{% endtabs %}

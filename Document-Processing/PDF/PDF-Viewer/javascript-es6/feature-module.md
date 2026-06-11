@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Feature modules in TypeScript PDF Viewer
 
-The PDF Viewer features are provided as individual modules, allowing applications to include only what is needed. Inject the required modules to enable functionality, then configure the corresponding properties on the PDF Viewer instance.
-
-Available PDF Viewer modules:
+The PDF Viewer features are organized into discrete modules so applications can include only the functionality they require. Inject the necessary modules to extend the viewer's behavior and reduce bundle size. The modules listed below are available for selective inclusion:
 
 * [**Toolbar**](./toolbar-customization/primary-toolbar): Built-in toolbar for user interaction.
 * [**Magnification**](./magnification): Perform zoom operations for a better viewing experience.

@@ -107,6 +107,8 @@ Edit comments and replies in the following ways:
 
 ![CommentDelete](../images/commentsdelete.png)
 
+N> Deleting the root comment from the comment panel also deletes the associated annotation.
+
 ## How to check the comments added by the user
 
 Comments added to the PDF document can be read using the annotation's `comments` property.

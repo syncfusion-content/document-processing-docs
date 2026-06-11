@@ -698,7 +698,7 @@ graphics.DrawString("Encrypted with AES 256bit", font, brush, new PointF(0, 40))
 
 //Save and close the document
 document.Save("Output.pdf");
-document.Close();
+document.Close(true);
 
 {% endhighlight %}
 
@@ -733,7 +733,7 @@ graphics.DrawString("Encrypted with AES 256bit", font, brush, New PointF(0, 40))
 
 'Save and close the document
 document.Save("Output.pdf")
-document.Close()
+document.Close(True)
 
 {% endhighlight %}
 
@@ -782,7 +782,7 @@ graphics.DrawString("Encrypted all contents except metadata with AES 256bit", fo
 
 //Save and close the document.
 document.Save("Output.pdf");
-document.Close();
+document.Close(true);
 
 {% endhighlight %}
 
@@ -817,7 +817,7 @@ graphics.DrawString("Encrypted all contents except metadata with AES 256bit", fo
 
 //Save and close the document.
 document.Save("Output.pdf");
-document.Close();
+document.Close(true);
 
 {% endhighlight %}
 
@@ -851,8 +851,8 @@ security.UserPassword = "password"
 graphics.DrawString("Encrypted all contents except metadata with AES 256bit", font, brush, New PointF(0, 40))        
 
 'Save and close the document.
-document.Save("Output.pdf"
-document.Close()
+document.Save("Output.pdf")
+document.Close(True)
 
 {% endhighlight %}
 
@@ -952,7 +952,7 @@ document.Attachments.Add(attachment);
 
 //Save and close the document.
 document.Save("Output.pdf");
-document.Close();
+document.Close(true);
 
 {% endhighlight %}
 
@@ -995,7 +995,7 @@ document.Attachments.Add(attachment)
 
 'Save and close the document.
 document.Save("Output.pdf")
-document.Close()
+document.Close(True)
 
 {% endhighlight %}
 
@@ -1019,19 +1019,19 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Security;
 
-  // Load the encrypted PDF document from the input stream
-  PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "syncfusion");
+// Load the encrypted PDF document from the input stream
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "syncfusion");
 
-  // Set the document permissions to default (removes any restrictions)
-  loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
+// Set the document permissions to default (removes any restrictions)
+loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
 
-  // Clear the owner and user passwords to decrypt the document
-  loadedDocument.Security.OwnerPassword = string.Empty;
-  loadedDocument.Security.UserPassword = string.Empty;
+// Clear the owner and user passwords to decrypt the document
+loadedDocument.Security.OwnerPassword = string.Empty;
+loadedDocument.Security.UserPassword = string.Empty;
 
-  //Save and close the document.
-  loadedDocument.Save("Output.pdf");
-  loadedDocument.Close(true);
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
@@ -1043,19 +1043,19 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Security;
 
-  // Load the encrypted PDF document from the input stream
-  PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "syncfusion");
+// Load the encrypted PDF document from the input stream
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "syncfusion");
 
-  // Set the document permissions to default (removes any restrictions)
-  loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
+// Set the document permissions to default (removes any restrictions)
+loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
 
-  // Clear the owner and user passwords to decrypt the document
-  loadedDocument.Security.OwnerPassword = string.Empty;
-  loadedDocument.Security.UserPassword = string.Empty;
+// Clear the owner and user passwords to decrypt the document
+loadedDocument.Security.OwnerPassword = string.Empty;
+loadedDocument.Security.UserPassword = string.Empty;
 
-  //Save and close the document.
-  loadedDocument.Save("Output.pdf");
-  loadedDocument.Close(true);
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
@@ -1067,21 +1067,21 @@ Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Parsing
 Imports Syncfusion.Pdf.Security
 
-    ' Load the encrypted PDF document from the input stream with password
-    Dim loadedDocument As New PdfLoadedDocument("Input.pdf", "syncfusion")
+' Load the encrypted PDF document from the input stream with password
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf", "syncfusion")
 
-    ' Set the document permissions to default (removes any restrictions)
-    loadedDocument.Security.Permissions = PdfPermissionsFlags.Default
+' Set the document permissions to default (removes any restrictions)
+loadedDocument.Security.Permissions = PdfPermissionsFlags.Default
 
-    ' Clear the owner and user passwords to decrypt the document
-    loadedDocument.Security.OwnerPassword = String.Empty
-    loadedDocument.Security.UserPassword = String.Empty
+' Clear the owner and user passwords to decrypt the document
+loadedDocument.Security.OwnerPassword = String.Empty
+loadedDocument.Security.UserPassword = String.Empty
 
-    ' Save the decrypted PDF document to the specified file
-    loadedDocument.Save("Output.pdf")
+' Save the decrypted PDF document to the specified file
+loadedDocument.Save("Output.pdf")
 
-    ' Close the loaded PDF document and release resources
-    loadedDocument.Close(True)
+' Close the loaded PDF document and release resources
+loadedDocument.Close(True)
 
 {% endhighlight %}
 
@@ -1114,9 +1114,9 @@ PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf", "password");
 //Accessing the attachments.
 foreach (PdfAttachment attachment in document.Attachments)
 {
-    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
-    stream.Write(attachment.Data, 0, attachment.Data.Length);
-    stream.Dispose();
+  FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+  stream.Write(attachment.Data, 0, attachment.Data.Length);
+  stream.Dispose();
 }
     
 //Close the document.
@@ -1135,9 +1135,9 @@ PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf", "password");
 //Accessing the attachments.
 foreach (PdfAttachment attachment in document.Attachments)
 {
-    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
-    stream.Write(attachment.Data, 0, attachment.Data.Length);
-    stream.Dispose();
+  FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+  stream.Write(attachment.Data, 0, attachment.Data.Length);
+  stream.Dispose();
 }
     
 //Close the document.
@@ -1155,9 +1155,9 @@ Dim document As New PdfLoadedDocument("Input.pdf", "password")
 
 ' Accessing the attachments.
 For Each attachment As PdfAttachment In document.Attachments
-    Dim stream As New FileStream("Output/" & attachment.FileName, FileMode.Create)
-    stream.Write(attachment.Data, 0, attachment.Data.Length)
-    stream.Dispose()
+  Dim stream As New FileStream("Output/" & attachment.FileName, FileMode.Create)
+  stream.Write(attachment.Data, 0, attachment.Data.Length)
+  stream.Dispose()
 Next
 
 ' Close the document.
@@ -1188,11 +1188,11 @@ document.OnPdfPassword += Document_OnPdfPassword;
 //Accessing the attachments.
 foreach (PdfAttachment attachment in document.Attachments)
 {
-    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+  FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
 
-    stream.Write(attachment.Data, 0, attachment.Data.Length);
+  stream.Write(attachment.Data, 0, attachment.Data.Length);
 
-    stream.Dispose();
+  stream.Dispose();
 }
 
 //Close the document.
@@ -1219,11 +1219,11 @@ document.OnPdfPassword += Document_OnPdfPassword;
 //Accessing the attachments.
 foreach (PdfAttachment attachment in document.Attachments)
 {
-    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+  FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
 
-    stream.Write(attachment.Data, 0, attachment.Data.Length);
+  stream.Write(attachment.Data, 0, attachment.Data.Length);
 
-    stream.Dispose();
+  stream.Dispose();
 }
 
 //Close the document.
@@ -1232,7 +1232,7 @@ document.Close(true);
 //Provide the user password in event. 
 void Document_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
 {
-    args.UserPassword = "syncfusion";
+  args.UserPassword = "syncfusion";
 }
 
 {% endhighlight %}
@@ -1260,7 +1260,7 @@ document.Close(True)
 
 ' Provide the user password in event.
 Private Sub Document_OnPdfPassword(sender As Object, args As OnPdfPasswordEventArgs)
-    args.UserPassword = "syncfusion"
+  args.UserPassword = "syncfusion"
 End Sub
 
 {% endhighlight %}
@@ -1602,6 +1602,94 @@ loadedDocument.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/Change-the-permission-of-the-PDF-document/).
+
+## View document permission flags
+
+Read a PDF document permission flags via the [Security.Permissions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Permissions) property, which returns a bitwise combination of values from the [PdfPermissionsFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfPermissionsFlags.html) enumeration.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/PDF-permission-viewer/.NET/PDF-permission-viewer/Program.cs" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
+// Load an existing PDF
+using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
+{
+    // Access the document security settings
+    PdfSecurity security = loadedDocument.Security;
+    // Get the permission flags (bitwise enum)
+    PdfPermissionsFlags permissions = security.Permissions;
+    Console.WriteLine("Permissions in the document:");
+    // Enumerate all flags and print the enabled ones
+    foreach (PdfPermissionsFlags flag in Enum.GetValues(typeof(PdfPermissionsFlags)))
+    {
+      // Skip None (0)
+      if (flag == 0) continue; 
+      // Check whether the specific flag is set
+      if (permissions.HasFlag(flag))
+      {
+        Console.WriteLine($"- {flag}");
+      }
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
+// Load an existing PDF
+using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
+{
+    // Access the document security settings
+    PdfSecurity security = loadedDocument.Security;
+    // Get the permission flags (bitwise enum)
+    PdfPermissionsFlags permissions = security.Permissions;
+    Console.WriteLine("Permissions in the document:");
+    // Enumerate all flags and print the enabled ones
+    foreach (PdfPermissionsFlags flag in Enum.GetValues(typeof(PdfPermissionsFlags)))
+    {
+      // Skip None (0)
+      if (flag == 0) continue; 
+      // Check whether the specific flag is set
+      if (permissions.HasFlag(flag))
+      {
+        Console.WriteLine($"- {flag}");
+      }
+    }
+}
+
+{% endhighlight %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+
+' Load an existing PDF
+Using loadedDocument As New PdfLoadedDocument("Input.pdf")
+    ' Access the document security settings
+    Dim security As PdfSecurity = loadedDocument.Security
+    ' Get the permission flags (bitwise enum)
+    Dim permissions As PdfPermissionsFlags = security.Permissions
+    Console.WriteLine("Permissions in the document:")
+    ' Enumerate all flags and print the enabled ones
+    For Each flag As PdfPermissionsFlags In [Enum].GetValues(GetType(PdfPermissionsFlags))
+        If flag = 0 Then
+            Continue For ' Skip None (0)
+        End If
+        ' Check whether the specific flag is set
+        If permissions.HasFlag(flag) Then
+          Console.WriteLine($"- {flag}")
+        End If
+    Next
+End Using
+
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/PDF-permission-viewer/.NET).
 
 ## Remove password from the user password PDF document
 

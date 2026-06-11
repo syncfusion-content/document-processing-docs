@@ -17,20 +17,20 @@ Spreadsheet is a tabular format consisting of rows and columns. The intersection
 
 ## Insert
 
-You can insert rows or columns anywhere in a spreadsheet. Use the [`allowInsert`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowinsert) property to enable or disable the insert option in Spreadsheet.
+You can insert rows or columns anywhere in a spreadsheet. Use the [`allowInsert`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowinsert) property to enable or disable the insert option in Spreadsheet.
 
 ### Row
 
 The rows can be inserted in the following ways,
 
-* Using [`insertRow`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#insertrow) method, you can insert the rows once the component is loaded.
+* Using [`insertRow`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#insertrow) method, you can insert the rows once the component is loaded.
 * Using context menu, insert the empty rows in the desired position.
 
 The following code example shows the options for inserting rows in the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/insert/row-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/insert/row-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -44,14 +44,14 @@ The following code example shows the options for inserting rows in the spreadshe
 
 The columns can be inserted in the following ways,
 
-* Using [`insertColumn`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#insertcolumn) method, you can insert the columns once the component is loaded.
+* Using [`insertColumn`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#insertcolumn) method, you can insert the columns once the component is loaded.
 * Using context menu, insert the empty columns in the desired position.
 
 The following code example shows the options for inserting columns in the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/insert/column-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/insert/column-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -63,18 +63,18 @@ The following code example shows the options for inserting columns in the spread
 
 ## Delete
 
-Delete support provides an option for deleting the rows and columns in the spreadsheet. Use [`allowDelete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowdelete) property to enable or disable the delete option in Spreadsheet.
+Delete support provides an option for deleting the rows and columns in the spreadsheet. Use [`allowDelete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowdelete) property to enable or disable the delete option in Spreadsheet.
 
 The rows and columns can be deleted dynamically in the following ways,
 
-* Using [`delete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#delete) method, you can delete the loaded rows and columns.
+* Using [`delete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#delete) method, you can delete the loaded rows and columns.
 * Using context menu, you can delete the selected rows and columns.
 
 The following code example shows the delete operation of rows and columns in the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/delete/row-column-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/delete/row-column-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -116,8 +116,8 @@ The columns can be hidden or shown through following ways,
 The following code example shows the hide/show rows and columns operation in the spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/hide-show-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/hide-show-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
@@ -129,13 +129,13 @@ The following code example shows the hide/show rows and columns operation in the
 
 ## Changing text in column headers
 
-Using the [`beforeCellRender`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#beforecellrender) event, you can change the text in the column headers. In that event, you can use the `e-header-cell` class to identify the header cell element and update its text value.
+Using the [`beforeCellRender`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforecellrender) event, you can change the text in the column headers. In that event, you can use the `e-header-cell` class to identify the header cell element and update its text value.
 
 The following code example shows how to change the text in the column headers.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/column-header-change-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/column-header-change-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

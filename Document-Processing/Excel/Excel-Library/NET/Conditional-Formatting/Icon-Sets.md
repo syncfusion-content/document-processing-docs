@@ -10,7 +10,7 @@ documentation: UG
 
 Icon sets present data in three to five categories that are distinguished by a threshold value. Each icon represents a range of values and each cell is annotated with the icon that represents that range.
 
-The following code example illustrates how to apply Icon sets using [IconSet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IIconSet.html) interface in XlsIO.
+The following code example illustrates how to apply Icon sets using [IconSet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconSet.html) interface in XlsIO.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Icon%20Sets/.NET/Icon%20Sets/Icon%20Sets/Program.cs,180" %}
@@ -100,7 +100,7 @@ A complete working example to apply Icon sets in C# is present on [this GitHub p
 
 ## Custom Icon Sets
 
-You can customize the icon set by changing the [IconSet](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_IconSet) and [Index](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_Index) properties for each icon criteria.
+You can customize the icon set by changing the [IconSet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_IconSet) and [Index](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_Index) properties for each icon criteria.
 
 Custom Icon sets can be created and customized in XlsIO as follows.
 

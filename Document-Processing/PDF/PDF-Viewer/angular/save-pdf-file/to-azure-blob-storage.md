@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # Save PDF files to Azure Blob Storage in Angular
 
-The TypeScript PDF Viewer component supports saving PDF files to Azure Blob Storage using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
+The Angular PDF Viewer component supports saving PDF files to Azure Blob Storage using either a standalone (browser) configuration or a server-backed configuration. The following steps demonstrate both approaches and include prerequisites and security guidance for production deployments.
 
 ## Using Standalone PDF Viewer
 
-To save a PDF file to Azure Blob Storage, follow these steps:
+Follow the steps below to save a PDF file to Azure Blob Storage from an Angular PDF Viewer.
 
 **Step 1:** Create a Simple PDF Viewer Sample in Angular
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF viewer sample in Angular. This will give you a basic setup of the PDF viewer component.
 
-**Step 2:** Modify the `src/app/app.component.ts` File in the Angular Project
+**Step 2:** Modify the `src/app/app.ts` File in the Angular Project
 
 1. Import the required namespaces at the top of the file:
 
@@ -30,7 +30,7 @@ import { BlockBlobClient } from "@azure/storage-blob";
 
 2. Add the following private properties to the `AppComponent` class, and assign the values from the configuration to the corresponding properties
 
-N> Replace **Your SAS Url in Azure** with the actual SAS url for your Azure Blob Storage account.
+N> Replace **Your SAS Url in Azure** with the SAS URL generated for the target blob. For production, generate short-lived SAS tokens on the server rather than embedding SAS URLs in client code.
 
 ```typescript
 private SASUrl: string = "*Your SAS Url in Azure*";
@@ -101,7 +101,7 @@ SavePdfToBlob() {
 }
 ```
 
-N> Install the @azure/storage-blob package in the application to use the previous code example: npm install @azure/storage-blob
+N> Install the Azure Storage Blob client package for browser use: `npm install @azure/storage-blob`.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
@@ -194,7 +194,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace the placeholders with the actual Azure Storage connection string and container name.
+N> Replace the placeholders with the actual Azure Storage connection string and container name. For enhanced security, avoid storing connection strings in source-controlled files; use environment variables, managed identities, or a secret store such as Azure Key Vault.
 
 **Step 3:** Modify the web service project to save the downloaded document to Azure Blob Storage
 
@@ -237,7 +237,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-**Step 4:**   Set the PDF Viewer Properties in Angular PDF viewer component
+**Step 4:**   Set the PDF Viewer properties in the Angular PDF Viewer component
 
 Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Azure Blob Storage, and ensure that the document exists in the target container.
 
@@ -269,6 +269,6 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 ```
 
-N> Install the Azure.Storage.Blobs NuGet package in the web service application to use the previous code example.
+N> Install the `Azure.Storage.Blobs` NuGet package in the web service project to use the server example. For security, avoid committing connection strings to source control and prefer environment variables, managed identities, or Azure Key Vault for secret management.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Server-Backend).

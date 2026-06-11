@@ -9,15 +9,15 @@ documentation: ug
 
 # Open PDF from Google Drive in React
 
-Follow these steps to load a PDF from Google Drive using the server-backed PDF Viewer.
+These steps describe how to load a PDF stored in Google Drive into the Syncfusion React PDF Viewer using a server-backed web service.
 
-**Step 1** Set up Google Drive API
+**Step 1** Set up Google Drive API and credentials
 
-You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
+Create a project in the Google Developers Console and enable the Google Drive API. Obtain OAuth 2.0 client credentials (OAuth client ID) or configure a service account depending on the chosen authentication flow. Register an appropriate redirect URI for OAuth flows and grant only the least-privilege scopes required to read files from the target Drive folder. See the official [Google Drive guide](https://developers.google.com/drive/api/guides/enable-sdk) for details.
 
-**Step 2:** Create a Simple PDF Viewer Sample in React
+**Step 2:** Create a PDF Viewer sample in React
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF viewer sample in React. This will give you a basic setup of the PDF viewer component.
+Start by following the Syncfusion React PDF Viewer 'Getting started' guide to create a basic PDF viewer sample. This establishes the client-side component that will request document data from the server-backed service.
 
 **Step 3:** Modify the PdfViewerController.cs file in the web service project
 
@@ -125,7 +125,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open appsettings.json in the web service project and add the following keys below the existing AllowedHosts configuration
+6. Open `appsettings.json` in the web service project and add the following keys below the existing `AllowedHosts` configuration
 
 ```json
 {
@@ -144,7 +144,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 
 N> Replace the placeholders with your actual values: Google Drive Folder ID, Application name, and the path to the OAuth 2.0 client IDs JSON file.
 
-N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+N> The `FolderId` is the unique identifier for a Drive folder (for example, in the URL `https://drive.google.com/drive/folders/abc123xyz456`, the folder ID is `abc123xyz456`).
 
 **Step 4:** Configure the PDF Viewer component
 
@@ -183,6 +183,6 @@ root.render(<App />);
 ```
 {% endraw %}
 
-N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the previous code example.
+N> Install the `Google.Apis.Drive.v3` NuGet package in the web service project to use the Drive API client.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-drive)

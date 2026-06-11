@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Download in JavaScript PDF Viewer control
 
-The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
+The PDF Viewer supports downloading the currently loaded PDF document. Use the `enableDownload` option to enable or disable download functionality. The examples below demonstrate standalone and server-backed configurations.
 
 ```html
 {% raw %}
@@ -61,7 +61,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ![Alt text](./images/download.png)
 
-You can invoke download action using following code snippet.,
+Invoke the download action programmatically with a simple button example:
 
 ```
 <button id="download">Download</button>
@@ -101,7 +101,7 @@ document.getElementById('download').addEventListener('click', function () {
 
 ## How to get the base64 string while downloading the PDF document
 
-The [downloadEnd](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadend) event of the PDF viewer allows you to get the downloaded document as a base64 string.
+The [downloadEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#downloadend) event fires after a download completes and exposes the downloaded document as a base64 string.
 
 The following code illustrates how to get the downloaded document as a base64 string.
 

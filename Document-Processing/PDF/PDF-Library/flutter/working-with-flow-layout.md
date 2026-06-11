@@ -2,7 +2,7 @@
 layout: post
 title: Flow layout in Flutter PDF library | Syncfusion
 description: Learn here all about drawing images, paragraph text, header text and tables using Flow layout feature of Syncfusion Flutter non-UI PDF library and more.
-platform: flutter
+platform: document-processing
 control: PDF
 documentation: ug
 ---
@@ -15,7 +15,8 @@ The Syncfusion<sup>&reg;</sup> Flutter PDF supports creating a PDF document with
 
 The following code snippet explains how to create a PDF document with image, paragraph text, header text, and a table using flow model with the help of [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -85,3 +86,4 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

@@ -10,7 +10,7 @@ documentation: UG
 
 **Creating** **Excel** **Template** **Files**
 
-Excel template files (XLT or XLTX) can be created in XlsIO by saving a file as **Template** using [ExcelSaveType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelSaveType.html) enumeration. The following code snippet illustrates this.
+Excel template files (XLT or XLTX) can be created in XlsIO by saving a file as **Template** using [ExcelSaveType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelSaveType.html) enumeration. The following code snippet illustrates this.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -123,7 +123,7 @@ excelEngine.Dispose()
 * [How to open an Excel file from stream?](how-to-open-an-excel-file-from-stream)
 * [How to open an existing XLSX workbook and save it as XLS?](how-to-open-an-existing-xlsx-workbook-and-save-it-as-xls)
 * [Does XlsIO support Excel files with macros that are digitally signed?](does-xlsio-support-excel-files-with-macros-that-are-digitally-signed)
-* [How to create a simple Excel file?](https://help.syncfusion.com/file-formats/xlsio/getting-started-create-excel-file-csharp-vbnet#create-a-simple-excel-file)
-* [How to fill template based data Template Markers](https://help.syncfusion.com/file-formats/xlsio/getting-started-create-excel-file-csharp-vbnet#template-based-data-filling-using-template-markers)
-* [How to open an existing workbook?](https://help.syncfusion.com/file-formats/xlsio/loading-and-saving-workbook#opening-an-existing-workbook)
-* [How to open a CSV file?](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#open-a-csv-file)
+* [How to create a simple Excel file?](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview#create-a-simple-excel-file)
+* [How to fill template based data Template Markers](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview#template-based-data-filling-using-template-markers)
+* [How to open an existing workbook?](https://help.syncfusion.com/document-processing/excel/excel-library/net/loading-and-saving-workbook#opening-an-existing-workbook)
+* [How to open a CSV file?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet#open-a-csv-file)

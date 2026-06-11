@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize the context menu in JavaScript PDF Viewer
 
-PDF Viewer supports adding custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/documentation/api/pdfviewer#addcustommenu) method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/documentation/api/pdfviewer#customcontextMenuselect) method.
+The PDF Viewer supports adding custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/documentation/api/pdfviewer#addcustommenu) method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/documentation/api/pdfviewer#customcontextMenuselect) method.
 
 ### Add a custom option
 
@@ -272,10 +272,10 @@ The following is the output of the custom context menu with customization.
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) in the `index.ts` file
+N> To set up the server-backed PDF Viewer, add the following `serviceUrl` in the `index.ts` file:
+
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';`
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/custom-context-menu" %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Custom%20Context%20Menu)
+[Custom context menu sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Custom%20Context%20Menu)

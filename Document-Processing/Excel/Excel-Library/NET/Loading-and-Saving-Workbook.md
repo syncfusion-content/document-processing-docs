@@ -44,6 +44,14 @@ workbook.Close();
 //Dispose the instance of ExcelEngine
 excelEngine.Dispose();
 {% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Close the instance of IWorkbook
+workbook.Close();
+
+'Dispose the instance of ExcelEngine
+excelEngine.Dispose();
+{% endhighlight %}
 {% endtabs %}
 
 T>You can use [ThrowNotSavedOnDestroy](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelEngine.html#Syncfusion_XlsIO_ExcelEngine_ThrowNotSavedOnDestroy) property of [ExcelEngine](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelEngine.html) object to prevent the data loss while unfortunately closing the workbook or disposing excel engine without saving contents. If it is set to true, then **ExcelWorkbookNotSavedException** will be thrown when you forgot to save the workbook before closing them. Following code illustrates how to set [ThrowNotSavedOnDestroy](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelEngine.html#Syncfusion_XlsIO_ExcelEngine_ThrowNotSavedOnDestroy) property of [ExcelEngine](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelEngine.html) object.
@@ -61,6 +69,13 @@ ExcelEngine excelEngine = new ExcelEngine();
 
 //No exception will be thrown if there are unsaved workbooks
 excelEngine.ThrowNotSavedOnDestroy = true;
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim excelEngine As New ExcelEngine()
+
+'No exception will be thrown if there are unsaved workbooks
+excelEngine.ThrowNotSavedOnDestroy = True
 {% endhighlight %}
 {% endtabs %} 
 
@@ -114,5 +129,27 @@ workbook.Version = ExcelVersion.Xlsx;
 
 //Save the workbook to disk in xlsx format
 workbook.SaveAs("Output.xlsx", Response, ExcelDownloadType.Open, ExcelHttpContentType.Excel2016);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Creates a new instance for ExcelEngine
+Dim excelEngine As New ExcelEngine()
+
+'Initialize IApplication
+Dim application As IApplication = excelEngine.Excel
+
+'Loads or open an existing workbook through Open method of IWorkbooks
+Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
+
+'To-Do some manipulation
+'To-Do some manipulation
+
+'Set the version of the workbook
+workbook.Version = ExcelVersion.Xlsx
+
+'Save the workbook to stream
+Dim outputStream As New MemoryStream()
+workbook.SaveAs(outputStream)
+outputStream.Position = 0
 {% endhighlight %}
 {% endtabs %}  

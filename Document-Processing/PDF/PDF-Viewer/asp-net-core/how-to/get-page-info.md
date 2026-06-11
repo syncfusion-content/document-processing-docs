@@ -7,15 +7,17 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Get page info in the ASP.NET Core PDF Viewer
+# Retrieve page information in ASP.NET Core PDF Viewer
 
-Use the `getPageInfo()` method to retrieve information for a specified page, including height, width, and rotation.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer provides the `getPageInfo()` method to programmatically retrieve metadata for a specific page. This metadata includes the page height, width, and current rotation angle.
 
-The following steps show how to use `getPageInfo`.
+Follow these steps to integrate the page information API into your application:
 
-**Step 1:** Follow the steps in the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a sample.
+**Step 1:** Initialize your PDF Viewer project by following the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started).
 
-**Step 2:** Use the following code to get the height, width, and rotation for a specified page.
+**Step 2:** Invoke the `getPageInfo()` method using the page index (zero-based) to retrieve the required metadata.
+
+The following example demonstrates how to retrieve and log page details when a button is clicked:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -59,6 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, the page info API can be integrated and used in the ASP.NET Core PDF Viewer.
+The `getPageInfo()` method returns an object containing the spatial dimensions and orientation of the specified page, which is essential for custom layout calculations or rendering overlays.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

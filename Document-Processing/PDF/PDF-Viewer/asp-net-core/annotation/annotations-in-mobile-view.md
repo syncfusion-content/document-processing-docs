@@ -1,121 +1,160 @@
 ---
 layout: post
-title: Annotations in mobile view in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Annotations in mobile view in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Mobile Annotations in ASP.NET Core PDF Viewer | Syncfusion
+description: Master touch-based annotation workflows in mobile PDF Viewer. Add various types of annotations on mobile devices with step-by-step guides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
-# Annotations in mobile view in ASP.NET Core PDF Viewer control
 
-## To Open the Annotation Toolbar
+# Mobile Annotations in ASP.NET Core PDF Viewer
 
-**Step 1:** To enable the annotation toolbar, click the editAnnotation toolbar.
+Comprehensive guide for adding and managing annotations using the touch-optimized mobile interface. The PDF Viewer provides intuitive annotation tools designed specifically for mobile devices with streamlined workflows and accessible touch gestures.
+
+## Annotation toolbar in mobile view
+
+The annotation toolbar provides access to all annotation tools on mobile devices. Enabling it displays the full range of annotation options in an optimized touch interface.
+
+### Opening the toolbar
+
+1. **Tap the Edit Annotation button** in the main toolbar at the top of the PDF Viewer
+2. The annotation toolbar appears below with all available annotation tools
+3. Each icon represents a different annotation type
+
+**Step 1:** Tap the Edit Annotation toolbar button to enable annotations
 
 ![Alt text](../images/edit-annotation.png)
 
-**Step 2:** After enabling the annotation toolbar.
+**Step 2:** Annotation toolbar is now active with all annotation options visible
 
 ![Alt text](../images/after-enabling-annotation-toolbar.png)
 
+### Annotation toolbar icons
+
+The toolbar displays icon buttons for quick access to each annotation type. Tap any icon to activate that annotation mode.
+
 ## To add sticky notes annotation
 
-**Step 1:** click sticky notes icon and then click in the page where you want to add this.
+Sticky notes provide quick annotation markers with optional comment text.
+
+### Adding sticky notes on mobile
+
+**Step 1:** Tap the sticky note icon to activate sticky note mode
 
 ![Alt text](../images/add-sticky-notes.png)
 
-**Step 2:** Click in the page to add the sticky notes annotation.
+**Step 2:** Tap on the page location to add the sticky note annotation
 
 ![Alt text](../images/sticky-notes-in-page.png)
 
 ## To add text markup annotation
 
-**Step 1:** click any one of the text markup icon, then select the text you want to mark, then touch the selected text to apply the markup annotation.
+Text markup annotations highlight, underline, or strikethrough important text content.
+
+**Step 1:** Tap a text markup icon, then select text on the page to mark
 
 ![Alt text](../images/select-text.png)
 
-**Step 2:** Add the text markup annotation in the PDF page
+**Step 2:** Text markup annotation is applied to the selected text.
 
 ![Alt text](../images/add-text-markup.png)
 
 ## To add shape and measure annotations
 
-**Step 1:** click the shape/measure icon in the toolbar. It will show the toolbar with shape/measure types.
+Shape and measurement annotations provide visual drawing and dimensional analysis tools. They are useful for highlighting regions, measurements, and geometric markups.
+
+**Step 1:** Tap the shape/measure icon to display available shape and measurement types
 
 ![Alt text](../images/add-shapes.png)
 
-**Step 2:** Click the shape/measure type and add annotation to the page.
+**Step 2:** Select a measurement type from the toolbar options
 
 ![Alt text](../images/open-radius.png)
 
-**Step 3:** Add the annotation in the PDF page.
+**Step 3:** Draw the annotation on the PDF page with touch gestures
 
 ![Alt text](../images/radius-annotation.png)
 
 ## To add the stamp annotation
 
-**Step 1:** click the stamp icon and select the stamp type from the menu items.
+Stamp annotations display predefined visual marks indicating document status or approval. They communicate document state without requiring text.
+
+**Step 1:** Tap the stamp icon and select the desired stamp type from menu
 
 ![Alt text](../images/open-stamp.png)
 
-**Step 2:** Add the stamp annotation in the page.
+**Step 2:** Stamp annotation is added to the PDF page
 
 ![Alt text](../images/add-revised.png)
 
 ## To add signature
 
-**Step 1:** click the signature icon. This will open the signature canvas to draw signature. After drawn the sign, should click the create button and touch the viewer to add the signature.
+Digital signatures provide authentication and approval marks on PDF documents. They are captured through freehand drawing on a dedicated canvas.
+
+**Step 1:** Tap the signature icon to open the signature drawing canvas
 
 ![Alt text](../images/add-signature.png)
 
-**Step 2:** Add the signature in the page.
+**Step 2:** Signature annotation is added to the PDF page
 
 ![Alt text](../images/adding-signature.png)
 
 ## To add ink annotation
 
-**Step 1:** Click the ink icon tool and draw in the page.
+Ink annotations allow freehand drawing directly on PDF pages. They capture handwritten notes, sketches, and artistic marks.
+
+**Step 1:** Tap the ink icon tool to activate freehand drawing mode
 
 ![Alt text](../images/open-ink.png)
 
-**Step 2:** Add the ink annotation in the page.
+**Step 2:** Ink annotation is added to the PDF page via freehand drawing
 
 ![Alt text](../images/ink-annotation.png)
 
-## Change Annotation Change (Before adding)
+## Change annotation properties
 
-**Step 1:** We can change the properties before adding the annotation.
+Mobile PDF Viewer provides two approaches for customizing annotation appearance: before creation or after placement.
 
-**Step 2:** Click the annotation icon, this will show the toolbar with corresponding properties. We can change the property and add the annotation in the page.
+### Change properties before adding
+
+Customize annotation appearance before placing it on the page:
+
+**Method 1:** Access the property toolbar to customize annotation before adding
 
 ![Alt text](../images/open-fillcolor.png)
 
-## Change Annotation Property (After Adding)
+### Change properties after adding
 
-**Step 1:** We can change the annotation property after adding the annotation.
+Modify an annotation after it has been placed on the page:
 
-**Step 2:** Select the added annotation, it will show the corresponding property tool. This will help us to change the property of the annotation.
+**Method 2:** Tap annotation to select and modify its properties
 
 ![Alt text](../images/change-property.png)
 
-## Delete Annotation
+## Delete annotation
 
-**Step 1:** To delete the annotation, first select the annotation, it will show the property toolbar. In the property tool there is an icon to delete the annotation.
+Remove unwanted annotations from the PDF page using the delete tool:
+
+**Step 1:** Select annotation and tap the delete icon in the property toolbar
 
 ![Alt text](../images/delete-icon.png)
 
-## Open Comment Panel
+## Open comment panel
 
-**Step 1:** We can open the comment panel through the icon in the property tool or through the annotation toolbar.
+The comment panel allows adding notes, discussions, and threaded comments to annotations:
+
+**Step 1:** Tap the comment icon to open the comment panel
 
 ![Alt text](../images/open-comment.png)
 
-**Step 1:** After opening the comment panel
+**Step 2:** Comment panel is now open and ready for text input
 
 ![Alt text](../images/comment-panel.png)
 
 ## Close the comment panel
 
-**Step 1:** To close the comment panel, click the close button.
+Close the comment panel when finished adding notes:
+
+**Step 1:** Tap the close button to hide the comment panel
 
 ![Alt text](../images/close-comment-panel.png)

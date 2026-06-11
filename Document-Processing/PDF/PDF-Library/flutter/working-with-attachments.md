@@ -2,15 +2,14 @@
 layout: post
 title: Attachments in Flutter PDF library | Syncfusion
 description: Learn here all about add, remove, and load the properties of file Attachments feature of Syncfusion Flutter PDF non-UI library and more.
-platform: flutter
+platform: document-processing
 control: PDF
 documentation: ug
 ---
 
 # Attachments in Flutter PDF
 
-The Syncfusion<sup>&reg;</sup>
-  Flutter PDF provides support for file attachments in PDF documents.
+The Syncfusion<sup>&reg;</sup> Flutter PDF provides support for file attachments in PDF documents.
 
 Attachments can contain any kind of file with detailed information.
 
@@ -18,7 +17,8 @@ Attachments can contain any kind of file with detailed information.
 
 You can add a file attachment to a PDF document using the PdfAttachment class. The following code example shows this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -35,10 +35,12 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 You can also add file attachment as a base 64 string using the PdfAttachment class. The following code example shows this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
@@ -55,11 +57,12 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
-The Syncfusion<sup>&reg;</sup>
-  Flutter PDF also provides support for adding the attachments to an existing PDF document. The following code example shows the same.
+The Syncfusion<sup>&reg;</sup> Flutter PDF also provides support for adding the attachments to an existing PDF document. The following code example shows the same.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -77,12 +80,14 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Removing attachments from an existing PDF
 
 You can remove the attachments from the existing document by using the remove method, as shown in the following code example.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -104,13 +109,14 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Extracting and saving an attachment to the disc
 
-The <sup>&reg;</sup>
-  Flutter PDF provides support for extracting the attachments and saving them to the disk. The following code example explains how to extract and save an attachment.
+The Syncfusion<sup>&reg;</sup> Flutter PDF provides support for extracting the attachments and saving them to the disk. The following code example explains how to extract and save an attachment.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -133,3 +139,4 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

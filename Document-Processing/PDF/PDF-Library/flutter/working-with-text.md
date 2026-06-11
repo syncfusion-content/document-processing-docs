@@ -2,7 +2,7 @@
 layout: post
 title: Text drawing in Flutter PDF library | Syncfusion
 description: Learn here all about Text extraction and find text feature of Syncfusion Flutter PDF non-UI library and more.
-platform: flutter
+platform: document-processing
 control: PDF
 documentation: ug
 ---
@@ -13,7 +13,8 @@ documentation: ug
 
 You can add text to the PDF document by using the [`drawString`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawString.html) method of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html) class as shown in the following code sample.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -30,12 +31,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Drawing text in an existing document
 
 The following code sample explains how to add text in the existing PDF document by using the [`drawString`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawString.html) method.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -56,6 +59,7 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Drawing text using different fonts
 
@@ -73,7 +77,8 @@ PDF has fourteen base fonts also known as standard fonts, which has special sign
 
 You can add text using the standard PDF fonts, by initializing the [`PdfFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFont-class.html) class as [`PdfStandardFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStandardFont-class.html) class. The following code snippet explains this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -90,12 +95,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Draw text using TrueType fonts
 
 You can add text using the font data, by initializing [`PdfFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFont-class.html) class as [`PdfTrueTypeFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTrueTypeFont-class.html) class. The font data can be loaded from the disk. The font data can be initialized to [`PdfTrueTypeFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTrueTypeFont-class.html) as a list of bytes or base64 string format. The following code snippet explains this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -112,12 +119,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Draw text using CJK fonts
 
 The Syncfusion<sup>&reg;</sup> Flutter PDF provides support to draw a CJK (Chinese, Japanese, Korean) text using some of the standard CJK fonts. The font data can be initialized by initializing [`PdfFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFont-class.html) class as PDF CJK StandardFont. The following code sample explains this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -134,12 +143,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Measuring a string
 
 The Syncfusion<sup>&reg;</sup> Flutter PDF allows you to measure the size of a string which uses the [`PdfFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFont-class.html) using the [`measureString`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFont/measureString.html) method of it and returns the size. Refer to the following code sample.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -164,12 +175,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Drawing Right-To-Left text
 
 The Syncfusion<sup>&reg;</sup> Flutter PDF allows you to draw the right-to-left language text in a PDF document. To draw RTL scripts such as Arabic, Hebrew, Persian, and Urdu, set the value of [`textDirection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStringFormat/textDirection.html) property in the [`PdfStringFormat`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStringFormat-class.html) class to rightToLeft using [`PdfTextDirection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTextDirection.html) enum. The languages (e.g., Sindhi and Kurdish) that have more than one script and can be written in either right-to-left or left-to-right format. The leftToRight value of the [`textDirection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStringFormat/textDirection.html) property is used to draw RTL text in the left-to-right format. Refer to the following code sample.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -198,12 +211,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
   
 {% endhighlight %}
+{% endtabs %}
 
 ## Creating a multicolumn PDF document
 
 Syncfusion<sup>&reg;</sup> Flutter PDF allows you to create a multi-column text in PDF document by using [`PdfTextElement`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTextElement-class.html) class. The following code example explains the same.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -239,12 +254,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 The [`PdfLayoutFormat`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutFormat-class.html) class helps to allow the text to flow across pages. The [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html) class provides the rendered bounds of the previously added text, which can be used to place successive elements without overlapping.
 
 The following code snippet explains how to add elements relatively and also allow the text to flow across multiple pages.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -285,12 +302,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
+{% endtabs %}
 
 ## Draw text with Pens and Brushes
 
 Pens and brushes are used to draw the content on PDF document with specific color and style.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 final PdfDocument document = PdfDocument();
@@ -309,5 +328,6 @@ final List<int> bytes =await document.save();
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 The Syncfusion<sup>&reg;</sup> Flutter PDF has [`Pens`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPens-class.html) and [`Brushes`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBrushes-class.html) with various built-in colors to draw the content on PDF document.

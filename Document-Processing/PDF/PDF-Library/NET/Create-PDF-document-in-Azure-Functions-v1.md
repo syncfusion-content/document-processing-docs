@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PDF document in Azure Functions v1
 
-The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure Functions v4**.
+The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure Functions v1**.
 
 ## Steps to create a PDF document in Azure Functions v1
 
@@ -134,4 +134,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create a PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HelloWorld#/material3) in ASP.NET Core.
+An online sample link to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core.

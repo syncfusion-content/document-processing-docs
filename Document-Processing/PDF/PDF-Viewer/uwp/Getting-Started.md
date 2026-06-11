@@ -8,39 +8,65 @@ documentation: ug
 ---
 
 # Getting Started with UWP PDF Viewer (SfPdfViewer)
-This section explains about the assemblies required for the deployment of SfPdfViewer and how to create simple application using the SfPdfViewer control.
+This section explains about the assemblies required for the deployment of [UWP PDF Viewer](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) (SfPdfViewer) and how to create simple application using the SfPdfViewer control.
 
 ## Required Assemblies
 
 The following list of assemblies are required for adding a PDF viewer control to the Universal Windows Platform application.
 
-* Syncfusion.SfPdfViewer.UWP
-* Syncfusion.Pdf.UWP
-* Syncfusion.SfColorPickers.UWP
-* Syncfusion.SfInput.UWP
-* Syncfusion.SfRadialMenu.UWP
-* Syncfusion.SfShared.UWP
+<table>
+<tr>
+<th>Assembly</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Syncfusion.SfPdfViewer.UWP</td>
+<td>This component contains the rendering area and other related UI elements.</td>
+</tr>
+<tr>
+<td>Syncfusion.Pdf.UWP</td>
+<td>This library contains the PDF reader and creator that supports the PDF Viewer.</td>
+</tr>
+<tr>
+<td>Syncfusion.SfColorPickers.UWP</td>
+<td>This component contains UI controls for Color Picker that are used in the PDF Viewer.</td>
+</tr>
+<tr>
+<td>Syncfusion.SfInput.UWP</td>
+<td>This component contains input controls like combobox, range slider and text boxes used in the PDF Viewer</td>
+</tr>
+<tr>
+<td>Syncfusion.SfRadialMenu.UWP</td>
+<td>This component contains UI controls for context menu that are used in the PDF Viewer.</td>
+</tr>
+<tr>
+<td>Syncfusion.SfShared.UWP</td>
+<td>This component contains various UI controls (Numeric UpDown) that are used in the PDF Viewer.</td>
+</tr>
+</table>
 
-Each of these assemblies always needs to be in parallel with its associated resource files as shown in the screenshot below. However, it is not necessary to have all these assemblies in a single folder as long as the resource files are along with the assemblies in their respective folders. The screenshot shows only the SfPdfViewer assembly for brevity.
+Each assembly must be placed together with its corresponding resource files (i.e., the resource files for an assembly should reside in the same folder as that assembly). The assemblies do not all have to be in a single folder — each assembly may live in its own folder so long as its resource files are kept alongside it. The screenshot shows only the SfPdfViewer assembly for brevity.
 
 ![Dependent assemblies needed for SfPdfViewerControl](Getting-Started_images/Getting-Started_img3.jpeg)
 
-The aforementioned placement of the assemblies and the resource files in the same folder becomes important only when the assemblies need to be moved from the installed location of the assemblies to somewhere else. When the assemblies are moved the resource files must also be moved and placed in the same folder as the assemblies.
+This co-location matters only if you move assemblies out of their installed location. If you relocate an assembly, be sure to move its resource files with it and place them in the same folder as that assembly.
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>®</sup> assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>®</sup> license key in your UWP application to use our components.
 
 
 ## Create a simple application with the SfPdfViewer
 
-Follow the below steps to create a simple application with the SfPdfViewer and load a PDF document.
+Follow the below steps to create a simple application with the SfPdfViewer.
 
 1. Create a new UWP application in the Visual Studio.
 
-2. Open the Visual Studio tool box and drag the SfPdfViewerControl toolbox item to the designer window. Name the SfPdfViewerControl as pdfViewer.
+2. Open the Visual Studio tool box and drag the [SfPdfViewerControl](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) toolbox item to the designer window. Name the [SfPdfViewerControl](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) as pdfViewer.
 
 ![SfPdfViewerControl in visual studio toolbox](Getting-Started_images/Getting-Started_img1.jpeg)
 
 When you drag the SfPdfViewer toolbox item to the window, it automatically adds the required assembly references to the current application.
+
+### Add PDF Viewer using code
 
 To add the SfPdfViewer by using code, add the required assemblies mentioned previously as reference to the project.
 
@@ -68,7 +94,7 @@ Add the following code in XAML to make use of the SfPdfViewer.
 
 The following steps explains how to load a PDF document through binding.
 
-1. The SfPdfViewer’s ItemSource property allows you to bind PDF documents in XAML. The ItemsSource property accepts a stream input that can be bound to the viewer during initialization.
+1. The SfPdfViewer’s [ItemSource](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html#Syncfusion_Windows_PdfViewer_SfPdfViewerControl_ItemsSource) property allows you to bind PDF documents in XAML. The ItemsSource property accepts a stream input that can be bound to the viewer during initialization.
 
 2. To bind the PDF file, add the PDF file to the project as an asset. Right Click the PDF file and open the properties window. In the properties window, set the Build Action as Embedded Resource.
 
@@ -144,7 +170,7 @@ End Class
 {% endhighlight %}
 {% endtabs %}
 
-In order to bind the DocumentStream property of the PdfReport class, the DataContext needs to be set for the page. To add the DataContext in XAML, use the following code example.
+In order to bind the [DocumentStream](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html#Syncfusion_Windows_PdfViewer_SfPdfViewerControl_DocumentStream) property of the PdfReport class, the [DataContext](https://learn.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.datacontext?view=winrt-28000) needs to be set for the page. To add the [DataContext](https://learn.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.datacontext?view=winrt-28000) in XAML, use the following code example.
 
 {% tabs %}
 {% highlight xaml %}
@@ -249,228 +275,8 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-## Magnification operations
-
-The SfPdfViewer provides the following set of commands to perform magnification.
-
-* IncreaseZoomCommand
-* DecreaseZoomCommand
-
-The following XAML code shows how to bind the IncreaseZoomCommand to a button
-{% tabs %}
-{% highlight xaml %}
-<Button Content="ZoomIn" Command="{Binding ElementName=pdfViewer, Path=IncreaseZoomCommand}" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
-{% endhighlight %}
-{% endtabs %}
-
-The following XAML code shows how to bind the DecreaseZoomCommand to a button
-
-{% tabs %}
-{% highlight xaml %}
-<Button Content="ZoomOut" Command="{Binding ElementName=pdfViewer, Path=DecreaseZoomCommand}" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
-{% endhighlight %}
-{% endtabs %}
-
-N>
-* By default, the SfPdfViewer also supports the Ctrl + scroll key combination for performing magnification by using the keyboard and mouse.
-* When the PDF viewer zoom value is decreased below 100%, the view will be automatically changed to show the thumbnails.
-
-## Printing a document
-
-The following XAML code shows how to bind the PrintCommand to a Button
-{% tabs %}
-{% highlight xaml %}
-<Button Content="Print" Command="{Binding ElementName=pdfViewer, Path=PrintCommand}" ></Button>
-{% endhighlight %}
-{% endtabs %}
-
-## Search Operations
-
-The SearchText method can be used to search a text in the document. In addition to the current match, the method also highlights all the possible matches in the current page with a different color.
-
-The following commands can be used for performing the Search-Next and Search-Previous operations.
-
-* SearchNextCommand
-* SearchPreviousCommand
-
-Code example to initiate text search
-
-{% tabs %}
-{% highlight c# %}
-private void searchButton_Click(object sender, RoutedEventArgs e)
-        {
-            pdfViewer.SearchText((searchTxtBx.Text));
-        }
-{% endhighlight %}
-{% highlight vbnet %}
-Private Sub searchButton_Click(sender As Object, e As RoutedEventArgs)
-    pdfViewer.SearchText((searchTxtBx.Text))
-End Sub
-{% endhighlight %}
-{% endtabs %}
-
-Binding SearchNextCommand and SearchPreviousCommand to buttons
-
-{% tabs %}
-{% highlight xaml %}
-<Button Content="Search Next" Command="{Binding ElementName=pdfViewer, Path=SearchNextCommand}" ></Button>
-
-<Button Content="Search Previous" Command="{Binding ElementName=pdfViewer, Path=SearchPreviousCommand}" ></Button>
-{% endhighlight %}
-{% endtabs %}
-
-## Page Navigations
-
-The below list of commands are helpful for performing the page navigation operations.
-
-* FirstPageCommand
-* LastPageCommand
-* PreviousPageCommand
-* NextPageCommand
-
-## Unloading PDF document from the viewer
-
-The SfPdfViewer control allows you to unload the PDF document from the viewer when the control is not in use anymore. This releases the PDF document and all its associated resources. To achieve this include a button in the application.
-
-{% tabs %}
-{% highlight xaml %}
-<Button Name="Unload" Click="Unload_Click" Content="Open"/>
-{% endhighlight %}
-{% endtabs %}
-
-Include the below code in the click event of the button.
-
-{% tabs %}
-{% highlight c# %}
-private void Unload_Click(object sender, RoutedEventArgs e)
-        {
-            //Unloads the PDF Document displayed in the PDF Viewer Control.
-            pdfViewer.Unload();
-        }
-{% endhighlight %}
-{% highlight vbnet %}
-Private Sub Unload_Click(sender As Object, e As RoutedEventArgs)
-    pdfViewer.Unload()
-End Sub
-{% endhighlight %}
-{% endtabs %}
-
-## Saving a PDF document
-
-The `Save` method returns the PDF document along with the changes made (annotations addition and modification) as a stream, which can be saved as a file.
-
-{% tabs %}
-{% highlight c# %}
-
-//Save the PDF document
-Stream pdfDocumentStream = pdfViewerControl.Save();
-
-{% endhighlight %}
-{% endtabs %}
-
-N> The Save method does not save the stamp annotations in the PDF document. Instead, use the `SaveAsync` method to save them.
-
-## Saving a PDF document asynchronously
-
-The PDF Viewer also allows you to save and return the PDF document with the changes as a stream asynchronously using the `SaveAsync` method.
-
-{% tabs %}
-{% highlight c# %}
-
-//Save the PDF document asynchronously 
-Task<Stream> pdfDocumentStream = pdfViewerControl.SaveAsync();
-
-{% endhighlight %}
-{% endtabs %}
-
-## Events to track the loading of PDFs
-
-The PDFViewer control allows you to track the loading of PDFs using the following events. The `DocumentLoaded`` event triggers after the document is properly loaded in the SfPdfViewer. The following code example explains the same.
-
-{% tabs %}
-{% highlight c# %}
-
-SfPdfViewerControl pdfViewer = new SfPdfViewerControl();
-
-pdfViewer.DocumentLoaded += PdfViewer_DocumentLoaded;
-
-private void PdfViewer_DocumentLoaded(object sender, DocumentLoadedEventArgs args)  
-{  
-        // Get the total page count of the loaded PDF document. 
-        int pageCount = pdfViewer.PageCount; 
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Dispose the managed resources of PDFViewer
-
-The PDF Viewer control allows you to dispose the managed resources which are associated with the viewer. You need to call the `Dispose` method of the PDFViewer control as shown in the following code sample to achieve the same.
-
-{% tabs %}
-{% highlight c# %}
-
-//Disposes all the managed resources of SfPdfViewer
-pdfViewer.Dispose();
-
-{% endhighlight %}
-{% endtabs %}
-
-## Supported input interactions
-
-The SfPdfViewerControl supports the following input interactions to be performed in the PDF document:
-
-* Mouse or Touch pad
-* Touch
-* Stylus or pen
-
-The following is the list of possible operations to be performed with the supported input interactions in the SfPdfViewerControl:
-
-<table>
-
-<tr>
-<th>Operations</th>
-<th>Mouse or Touch pad</th>
-<th>Touch</th>
-<th>Stylus or Pen</th>
-</tr>
-
-<tr>
-<td>Scrolling</td>
-<td>Supported</td>
-<td>Supported</td>
-<td>Supported</td>
-</tr>
-
-<tr>
-<td>Zooming</td>
-<td>Supported</td>
-<td>Supported</td>
-<td>Not supported</td>
-</tr>
-
-<tr>
-<td>Adding annotations</td>
-<td>Supported</td>
-<td>Supported</td>
-<td>Supported</td>
-</tr>
-
-<tr>
-<td>Moving and resizing the annotations</td>
-<td>Supported</td>
-<td>Supported</td>
-<td>Supported</td>
-</tr>
-
-<tr>
-<td>Editing the annotations</td>
-<td>Supported</td>
-<td>Supported</td>
-<td>Supported</td>
-</tr>
-
-</table>
-The following image shows the final SfPdfViewer with all the features being implemented.
-![Getting started image of SfPdfViewerControl](Getting-Started_images/Getting-Started_img2.jpeg)
+## See Also
+- [Viewing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)
+- [UWP PDF Viewer Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/overview)
+- [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-magnification)
 

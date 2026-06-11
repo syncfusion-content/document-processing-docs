@@ -9,15 +9,15 @@ documentation: ug
 
 # Annotation Toolbar Customization in ASP.NET Core
 
-The annotation toolbar can be customized by showing or hiding default items and by controlling the order in which they appear.
+Customize the annotation toolbar by showing or hiding default items and controlling their order.
 
 ## Show or hide the annotation toolbar
 
-Show or hide the annotation toolbar programmatically during initialization or at runtime.
+Toggle the annotation toolbar programmatically during initialization or at runtime.
 
-Use the [EnableAnnotationToolbar](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableAnnotationToolbar) property or the [showAnnotationToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar#showannotationtoolbar) method to toggle visibility.
+Use the [EnableAnnotationToolbar](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableAnnotationToolbar) property or the [showAnnotationToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar#showannotationtoolbar) method to change visibility.
 
-The following code snippet explains how to show or hide the annotation toolbar using the `showAnnotationToolbar` method.
+The following code snippet shows how to show or hide the annotation toolbar using the `showAnnotationToolbar` method.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -61,13 +61,13 @@ The following code snippet explains how to show or hide the annotation toolbar u
 
 ## How to customize the annotation toolbar
 
-Choose which tools appear and control their order in the annotation toolbar.
+Select which tools appear and set their order in the annotation toolbar.
 
-Use [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) with the [`AnnotationToolbarItems`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_AnnotationToolbarItems) property to choose which tools are displayed in the annotation toolbar. The property accepts a list of [`AnnotationToolbarItem`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_AnnotationToolbarItems) values. Only the items included in this list are shown; any item not listed is hidden. The rendered order follows the sequence of items in the list.
+Configure the [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) with the [`AnnotationToolbarItems`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_AnnotationToolbarItems) property to specify which tools appear. The property accepts a list of `AnnotationToolbarItem` values. Only listed items are displayed and the render order follows the list sequence.
 
-The annotation toolbar is presented when entering annotation mode in PdfViewer and adapts responsively based on the available width. Include the Close tool to allow users to exit the annotation toolbar when needed.
+The annotation toolbar appears when entering annotation mode in the PdfViewer and adapts responsively to available width. Include the Close tool to enable exiting the annotation toolbar.
 
-The following example demonstrates how to customize the annotation toolbar by specifying a selected set of tools using `AnnotationToolbarItem`.
+The following example demonstrates how to customize the annotation toolbar by specifying a set of tools using `AnnotationToolbarItem`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

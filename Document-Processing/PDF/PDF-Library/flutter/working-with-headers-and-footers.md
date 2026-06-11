@@ -2,7 +2,7 @@
 layout: post
 title: Headers and Footers in Flutter PDF library | Syncfusion
 description: Learn here all about drawing Headers and Footers feature of Syncfusion Flutter PDF non-UI library and more.
-platform: flutter
+platform: document-processing
 control: PDF
 documentation: ug
 ---
@@ -17,7 +17,8 @@ This package supports to add page count, page numbers, date and time using autom
 
 The following code snippet explains how to use the graphics and automatic fields in header and footer.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new pdf document
 PdfDocument document = PdfDocument();
@@ -107,6 +108,7 @@ File('HeaderAndFooter.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the above code sample, you will get the PDF document as follows.
 

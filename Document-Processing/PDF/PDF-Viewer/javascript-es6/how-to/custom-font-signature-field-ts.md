@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Change the font family for type signatures in TypeScript
 
-Change the font family for Type Signature and Initial fields by adding a stylesheet to load fonts and assigning them via the PDF Viewer settings. Include Google Font links in the HTML head to use those fonts.
+Change the font family for Type Signature and Initial fields by loading the desired fonts and assigning them in the PDF Viewer configuration. Include font stylesheet links (for example, Google Fonts) in the HTML head before initializing the viewer.
 
 ### Signature field property
 
 The PDF Viewer supports changing fonts for Signature and Initial fields using the `typeSignatureFonts` and `typeInitialFonts` properties.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the getting-started guide for the JavaScript PDF Viewer to create a simple sample: [Getting started with JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started).
 
-**Step 2:** Use the following code to apply custom fonts to the Signature field.
+**Step 2:** Use the following configuration to apply custom fonts to the Signature field.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -45,7 +45,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ### Initial field property
 
-Use the following code to apply custom fonts to the Initial field.
+Use the following configuration to apply custom fonts to the Initial field.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -70,4 +70,4 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-By implementing this configuration, custom fonts can be used for both Signature and Initial form fields.
+After implementing this configuration, the specified custom fonts are available for both Signature and Initial form fields.

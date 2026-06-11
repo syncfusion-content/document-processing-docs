@@ -42,7 +42,7 @@ Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</
 
 1. Configures AWS SDK with the region, access key, and secret access key. This configuration allows the application to interact with AWS services like S3.
 
-N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
+N> Replace **Your Region** with the actual Region of the AWS S3 account and **Your Access Key** with the actual Access Key of the AWS S3 account and **Your Security Access Key** with the actual Security Access Key of the AWS S3 account.
 
 ```csharp
 AWS.config.update({
@@ -85,7 +85,7 @@ AWS.config.update({
 
 3. Retrieve the PDF viewer instance and save the current PDF as a Blob. Then, read the Blob using a FileReader to convert it into an ArrayBuffer, and upload the ArrayBuffer to AWS S3 using the putObject method of the S3 instance.
 
-N> Replace **Your Bucket Name** with the actual Bucket name of your AWS S3 account and **Your Key** with the actual File Key of your AWS S3 account.
+N> Replace **Your Bucket Name** with the actual bucket name of the AWS S3 account and **Your Key** with the actual file key of the AWS S3 account.
 
 ```csharp
 function saveDocument() {

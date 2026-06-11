@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Annotations overview
 
-Annotations in PDFViewer are interactive elements that allow users to add notes, highlights, or text boxes directly to a PDF document. These annotations can be used to add context or feedback directly to PDF files, simplifying collaboration during document reviews.
+Annotations in the PDF Viewer are interactive elements that allow users to add notes, highlights, or text boxes directly to a PDF document. These annotations add context and feedback to PDF files, simplifying collaboration during document reviews.
 
-The PDF Viewer component provides a complete set of annotation tools for reviewing, measuring, and marking up PDFs in JavaScript (ES6).
+The PDF Viewer provides a complete set of annotation tools for reviewing, measuring, and marking up PDFs in JavaScript (ES5).
 
 ## Supported annotations
 
 - Text markup: [Highlight](../annotations/annotation-types/highlight-annotation), [Underline](../annotations/annotation-types/underline-annotation), [Squiggly](../annotations/annotation-types/Squiggly-annotation), [Strikethrough](../annotations/annotation-types/strikethrough-annotation)
-- Shapes: [Line](../annotations/annotation-types/line-annotation), p[Arrow](../annotations/annotation-types/arrow-annotation), [Rectangle](../annotations/annotation-types/rectangle-annotation), [Circle](../annotations/annotation-types/circle-annotation), [Polygon](../annotations/annotation-types/polygon-annotation)
+- Shapes: [Line](../annotations/annotation-types/line-annotation), [Arrow](../annotations/annotation-types/arrow-annotation), [Rectangle](../annotations/annotation-types/rectangle-annotation), [Circle](../annotations/annotation-types/circle-annotation), [Polygon](../annotations/annotation-types/polygon-annotation)
 - Text boxes: [Free Text](../annotations/annotation-types/free-text-annotation)
 - Drawing: [Ink](../annotations/annotation-types/ink-annotation) (freehand)
 - Stamps: [Standard and custom stamps](../annotations/annotation-types/stamp-annotation)

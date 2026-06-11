@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in Syncfusion PDF Viewer components React
 
-The PDF Viewer component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
-
-The accessibility compliance for the PDF Viewer component is outlined below.
+The PDF Viewer component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and the WCAG ARIA roles specified by WAI-ARIA. The component's accessibility compliance is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,7 +38,7 @@ The accessibility compliance for the PDF Viewer component is outlined below.
 
 ## WAI-ARIA attributes
 
-[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript,and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Accessible Rich Internet Applications) provides semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used by the PDF Viewer component.
 
 | Attributes | Purpose |
 | --- | --- |
@@ -60,7 +58,7 @@ The accessibility compliance for the PDF Viewer component is outlined below.
 
 ## Keyboard interaction
 
-The PDF Viewer component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Message component.
+The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline to support users of assistive technologies and users who rely on keyboard navigation. The following keyboard shortcuts are supported by the PDF Viewer component.
 
 | **Press (Windows)** |**Press (Macintosh)** | **To do this** |
 | --- | --- | --- |
@@ -95,15 +93,13 @@ The PDF Viewer component followed the [keyboard interaction](https://www.w3.org/
 |<kbd>Shift + H</kbd> |<kbd>Shift + H</kbd> |Enable pan mode|
 |<kbd>Shift + V</kbd> |<kbd>Shift + V</kbd> |Enable text selection mode|
 
-The current implementation of our PDF Viewer includes keyboard shortcuts for various functions like scrolling, zooming, text search, printing, and annotation deletion.
+The current implementation of the PDF Viewer includes keyboard shortcuts for scrolling, zooming, text search, printing, annotation deletion, and other common actions.
 
-To enhance user experience, we're adding additional keyboard shortcuts for actions such as navigating between pages, accessing specific pages, toggling annotation tools, and displaying PDF elements like outlines, annotations, bookmarks, and thumbnails.
+Additional keyboard shortcuts support navigation between pages, direct access to specific pages, toggling annotation tools, and displaying PDF elements such as outlines, annotations, bookmarks, and thumbnails.
 
-To support this, we're introducing a new class called **commandManager**, which handles custom commands triggered by specific key gestures. These custom commands will be defined by users and executed accordingly.
+To support custom keyboard actions, the implementation includes a `commandManager` construct that handles commands triggered by specific key gestures. The `commandManager` exposes a `Commands` parameter that contains a collection of custom keyboard commands. Each custom command is represented by a `KeyboardCommand` object containing a `name` and an associated `gesture` description.
 
-The **commandManager** will have a parameter called Commands, which will hold the collection of custom keyboard commands specified by users. Each custom command will be represented by a KeyboardCommand class, containing the `command name` and associated `keyboard combination`.
-
-Additionally, we're introducing the **keyboardCustomCommands** parameter for the CommandManager, which will utilize the EventCallback to handle keyboard events and trigger appropriate methods when specific key combinations are pressed.
+A `keyboardCustomCommands` callback is available to handle keyboard events and trigger custom behavior when a defined key combination is detected.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -237,18 +233,18 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-Each `keyboardCommand` object consists of a name property, specifying the `name` of the `custom command`, and a `gesture property`, defining the key gesture associated with the command.
+Each `keyboardCommand` object includes a `name` property that identifies the command and a `gesture` property that defines the key gesture associated with the command.
 
-For example, the first command named `customCopy` is associated with the **G** key and requires both the **Shift** and **Alt** modifier keys to be pressed simultaneously.
+For example, a command named `customCopy` can be associated with the **G** key together with the **Shift** and **Alt** modifiers.
 
-Additionally, there's an explanation of the key modifiers used in the gestures:
+Key modifier encodings used in gesture definitions are as follows:
 
-* Ctrl corresponds to the Control key, represented by the value `1`.
-* Alt corresponds to the Alt key, represented by the value `2`.
-* Shift corresponds to the Shift key, represented by the value `4`.
-* Meta corresponds to the Command key on macOS or the Windows key on Windows, represented by the value `8`.
+- Control (Ctrl): `1`
+- Alt: `2`
+- Shift: `4`
+- Meta (Command on macOS or Windows key on Windows): `8`
 
-This setup allows users to perform custom actions within the PDF viewer by pressing specific key combinations, enhancing the user experience and providing more efficient navigation and interaction options.
+These gesture definitions enable users to invoke custom actions in the PDF Viewer by pressing specified key combinations, improving navigation and interaction efficiency.
 
 ## Ensuring accessibility
 

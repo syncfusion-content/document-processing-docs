@@ -28,6 +28,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 5: Using the following namespaces in the Function.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
@@ -35,9 +36,11 @@ using Syncfusion.Pdf;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add the following code sample in the Function.cs to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public string FunctionHandler(string input, ILambdaContext context)
@@ -78,9 +81,11 @@ public static string PathToFile()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Create a new folder as Helper and add a class file as AWSHelper.cs. Add the following namespaces and code samples in the AWSHelper class to invoke the published AWS Lambda function using the function name and access keys.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 Using Amazon.Lambda;
@@ -127,6 +132,7 @@ public class AWSHelper
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Right-click the project and select **Publish to AWS Lambda**.
 
@@ -149,6 +155,7 @@ Step 11: After deploying the application, Sign in to your AWS account, and you c
 
 Step 12: Add the following code to invoke the AWS lambda function with the HTML string from the Function Test.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public class FunctionTest
@@ -172,6 +179,7 @@ public class FunctionTest
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 13: Right click the test application and select **Run Tests**.
 

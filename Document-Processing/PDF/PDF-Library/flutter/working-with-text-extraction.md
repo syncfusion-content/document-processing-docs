@@ -2,7 +2,7 @@
 layout: post
 title: Text extraction in Flutter PDF library | Syncfusion
 description: Learn here all about different types of fonts and draw Text feature of Syncfusion Flutter PDF non-UI library and more.
-platform: flutter
+platform: document-processing
 control: PDF
 documentation: ug
 ---
@@ -17,7 +17,8 @@ You can extract the text from pages using the extractText method in the PdfTextE
 
 The following code explains how to extract the text from the entire PDF document:
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -30,10 +31,12 @@ String text = PdfTextExtractor(document).extractText();
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 The following code sample explains how to extract the texts from a  specific page:
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -46,10 +49,12 @@ String text = PdfTextExtractor(document).extractText(startPageIndex: 0);
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 The following code sample explains how to extract the texts from a particular page range:
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -63,6 +68,7 @@ String text = PdfTextExtractor(document)
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Text Extraction with Bounds
 
@@ -70,7 +76,8 @@ document.dispose();
 
 You can get the line and its properties that contains texts by using the TextLine. Refer to the following code sample.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -105,12 +112,14 @@ List<TextWord> textWordCollection = line.wordCollection;
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Working with words
 
 You can get a single word and its properties by using the TextWord. Refer to the following code sample.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -151,12 +160,14 @@ List<TextGlyph> textGlyphCollection = textWord.glyphs;
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Working with characters
 
 You can get a single character and its properties by using the TextGlyph. Refer to the following code sample.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -200,6 +211,7 @@ String glyphText = textGlyph.text;
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Working with find text
 
@@ -207,7 +219,8 @@ You can find a collection of text from pages using the findText method in the Pd
 
 The following code sample explains how to find the text from an entire PDF document:
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -233,10 +246,12 @@ String text = matchedText.text;
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 The following code sample explains how to find the text from a specific page.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -250,10 +265,12 @@ List<MatchedItem> textCollection = PdfTextExtractor(document)
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 The TextSearchOption is used to specify the option for text search. The following code snippet explains how to find text using the search option from a particular page range.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -270,3 +287,4 @@ List<MatchedItem> textCollection = PdfTextExtractor(document).findText(
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

@@ -34,9 +34,9 @@ This generates and downloads the selected format containing all annotations in t
 
 ## Export programmatically
 
-You can export annotations from code using [exportAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportannotation) ,[exportAnnotationsAsObject](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportannotationsasobject) and [exportAnnotationsAsBase64String](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportannotationsasbase64string) APIs.
+You can export annotations from code using [exportAnnotation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportannotation) ,[exportAnnotationsAsObject](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportannotationsasobject) and [exportAnnotationsAsBase64String](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportannotationsasbase64string) APIs.
 
-Use the following end-to-end example to initialize the viewer and export annotations as JSON, XFDF, or as an object.
+Use the following example to initialize the viewer and export annotations as JSON, XFDF, or as an object.
 
 ```html
 <!-- Container and action buttons -->

@@ -8,7 +8,7 @@ documentation: UG
 
 # How to copy a range from one workbook to another?
 
-You can copy the range from source workbook to the destination workbook through [CopyTo](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_ExcelCopyRangeOptions_) method. 
+You can copy the range from source workbook to the destination workbook through [CopyTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_ExcelCopyRangeOptions_) method. 
 
 The following code snippet illustrates this.
 
@@ -92,8 +92,8 @@ End Using
 
 ## See Also
 
-* [How to copy/paste the cell values that contain only formula?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-copy-paste-the-cell-values-that-contain-only-formula)
-* [How to copy or move a range?](https://help.syncfusion.com/file-formats/xlsio/worksheet-cells-manipulation#copy-or-move-a-range)
-* [How to copy and paste as link?](https://help.syncfusion.com/file-formats/xlsio/worksheet-cells-manipulation#copy-and-paste-as-link)
-* [How to skip blanks while copying?](https://help.syncfusion.com/file-formats/xlsio/worksheet-cells-manipulation#skip-blanks-while-copying)
-* [How to open an existing XLSX workbook and save it as XLS?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-open-an-existing-xlsx-workbook-and-save-it-as-xls)
+* [How to copy/paste the cell values that contain only formula?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-copy-paste-the-cell-values-that-contain-only-formula)
+* [How to copy or move a range?](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-cells-manipulation#copy-or-move-a-range)
+* [How to copy and paste as link?](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-cells-manipulation#copy-and-paste-as-link)
+* [How to skip blanks while copying?](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-cells-manipulation#skip-blanks-while-copying)
+* [How to open an existing XLSX workbook and save it as XLS?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-open-an-existing-xlsx-workbook-and-save-it-as-xls)

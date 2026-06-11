@@ -1,61 +1,65 @@
 ---
 layout: post
-title: Getting started with server-backed TypeScript PDF Viewer | Syncfusion
-description: Learn how to set up and use the Syncfusion TypeScript PDF Viewer in server-backed mode, including module injection and web service configuration.
+title: Setup for Server-Backed TypeScript PDF Viewer | Syncfusion
+description: Learn how to set up and run the Syncfusion TypeScript PDF Viewer in server-backed mode using a PDF Viewer web service.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with TypeScript PDF Viewer (server-backed)
+# Getting started with TypeScript PDF Viewer (Server-Backed)
 
-This guide explains how to create the PDF Viewer component and configure its features in TypeScript using the Essential JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack) seed repository in server-backed mode.
+This guide explains how to create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
 
-> This application is integrated with a webpack configuration (`webpack.config.js`) and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli#commands). It requires Node.js `v14.15.0` or higher. For more information, refer to the [webpack getting started guide](https://webpack.js.org/guides/getting-started).
+## Prerequisites
 
-## Set up the development environment
+To get started, ensure the following software is installed on your machine:
 
-Open a command prompt in the target directory and run the following command to clone the Syncfusion JavaScript (Essential JS 2) quickstart project from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack).
+- [Git](https://git-scm.com/downloads)
+- [Node.js (`v14.15.0` or later)](https://nodejs.org/en/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
+## Create a TypeScript application
 
-git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quickstart
+Create a simple TypeScript application using the Essential® JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack) seed repository.
 
-{% endhighlight %}
-{% endtabs %}
+> This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
 
-After cloning, run the following command to navigate to the `ej2-quickstart` folder.
+**Step 1:** Open the command prompt from the required directory and clone the quickstart project from GitHub.
 
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
+```bash
+git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack ej2-quickstart
+```
 
+**Step 2:** Navigate to the `ej2-quickstart` folder.
+
+```bash
 cd ej2-quickstart
+```
 
-{% endhighlight %}
-{% endtabs %}
+**Step 3:** By default, the `ej2-quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 components, including the PDF Viewer and other EJ2 controls.
 
-## Add Syncfusion JavaScript packages
+To install **only the PDF Viewer component**, replace the dependency with [@syncfusion/ej2-pdfviewer](https://www.npmjs.com/package/@syncfusion/ej2-pdfviewer) in `package.json`:
 
-Syncfusion JavaScript (Essential JS 2) packages are available on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. Install all EJ2 controls with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) meta package or install individual control packages.
+```json
+"dependencies": {
+  "@syncfusion/ej2-pdfviewer": "*"
+}
+```
 
-The quickstart application is preconfigured with [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) in `~/package.json`. Use the following command to install dependencies:
+**Step 4:** Install the dependent npm packages.
 
-{% tabs %}
-{% highlight bash tabtitle="NPM" %}
-
+```bash
 npm install
+```
 
-{% endhighlight %}
-{% endtabs %}
+## Add CSS references
 
-## Import Syncfusion CSS styles
-
-Add the component CSS in the `~/src/styles/styles.css` file, as shown below:
+Add the required Syncfusion styles to `src/styles/styles.css`:
 
 {% tabs %}
-{% highlight css tabtitle="style.css" %}
+{% highlight css tabtitle="~/src/styles/styles.css" %}
 
 @import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -64,160 +68,103 @@ Add the component CSS in the `~/src/styles/styles.css` file, as shown below:
 @import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-notifications/styles/material.css";
+@import '../../node_modules/@syncfusion/ej2-notifications/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Refer to the [Themes topic](https://ej2.syncfusion.com/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a TypeScript project.
 
 ## Add the PDF Viewer component
 
-* Add the PDF Viewer component in `app.ts`:
+To load and display a PDF in server-backed mode, configure the PDF Viewer with the `serviceUrl` property.
+
+Update `src/app.ts` as shown below:
 
 {% tabs %}
-{% highlight ts tabtitle="app.ts" %}
+{% highlight ts tabtitle="~/src/app.ts" %}
+import { PdfViewer, Toolbar, Magnification, 
+         Navigation, Annotation, LinkAnnotation,
+         ThumbnailView, BookmarkView, TextSelection, 
+         TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
 
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner} from '@syncfusion/ej2-pdfviewer';
+PdfViewer.Inject(Toolbar, Magnification, Navigation,
+               Annotation, LinkAnnotation, ThumbnailView,
+               BookmarkView, TextSelection, TextSearch,
+               FormFields, FormDesigner);
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+const pdfviewer: PdfViewer = new PdfViewer({
+  // Specifies the URL of the server-side PDF Viewer web service
+  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+});
 
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
-pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 
+// Load a PDF document through the server
+pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', '');
 {% endhighlight %}
 {% endtabs %}
 
-N> Starting with version 23.1, it is required to call **pdfviewer.dataBind();** before invoking the `load` function. Refer to [document loading issues](./troubleshooting/document-loading-issues) for details.
-
-* Add an HTML div element to act as the PDF Viewer element in `index.html`:
+Add a container element in `index.html`:
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Essential JS 2</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Essential JS 2" />
-    <meta name="author" content="Syncfusion" />
-    <link rel="shortcut icon" href="resources/favicon.ico" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-
-<body>
-    <!--Element which will render as PDF Viewer -->
-    <div id="PdfViewer"></div>
-</body>
-
-</html>
-
+<div id="PdfViewer" style="height: 640px"></div>
 {% endhighlight %}
 {% endtabs %}
+
+> **Note:** The Web API service URL shown above is provided for evaluation only. For production, host your own PDF Viewer web service.
 
 ## Run the application
 
-The quickstart project is configured to compile and run in the browser. Use the following command to start the application:
+Run the application using the following command:
 
-{% tabs %}
-{% highlight bash tabtitle="NPM" %}
-
+```bash
 npm start
+```
 
-{% endhighlight %}
-{% endtabs %}
+The application will connect to the configured PDF Viewer web service and render the document in the browser. The image below shows how the PDF Viewer is rendered in the browser:
 
-Output:
+![Rendered PDF Viewer in browser](images/pdfviewer-control.png)
 
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/pdfviewer/javascript-es6/getting-started-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es6/getting-started-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-N> The `serviceUrl` can be changed dynamically. After updating `serviceUrl`, invoke `pdfViewer.dataBind()` to apply the change, then call `load`. This behavior requires version 23.1.36 or later.
-document.getElementById('load').addEventListener('click', function () {
-   pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-   pdfViewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-   pdfViewer.dataBind();
-   pdfViewer.load(pdfViewer.documentPath, null);
-});
-
-N> The Web API link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/ used in the `serviceUrl` property is intended for demonstration and evaluation only. For production, host your own web service with the required server configuration. You can reuse the [GitHub web service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server). **Standalone mode is strongly recommended.**
-
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/getting-started-cs1" %}
-
-## Module injection
-
-To enable additional features, inject the required modules. The following modules extend the PDF Viewer's functionality:
-
-* `LinkAnnotation`: Enables hyperlink navigation.
-* `BookmarkView`: Displays and navigates document bookmarks.
-* `Magnification`: Provides zoom in/out operations.
-* `Navigation`: Enables page navigation.
-* `TextSelection`: Enables text selection.
-* `ThumbnailView`: Displays page thumbnails for navigation.
-* `Toolbar`: Enables the built-in toolbar UI.
-* `Print`: Enables printing.
-* `Annotation`: Enables annotation features.
-* `TextSearch`: Enables text search.
-* `FormFields`: Enables form field support.
-* `FormDesigner`: Enables designing and editing of form fields.
-
-Inject modules using the `PdfViewer.Inject` method.
-
-> To create a PDF Viewer `serviceUrl`, follow the steps in [Create PDF Viewer service](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service).
+[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20URL)
 
 ## Run the PDF Viewer web service
 
-1. Download the sample from the [web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices).
+To host your own PDF Viewer web service:
 
-2. Navigate to the `ASP.NET Core` folder and open it in a command prompt.
+1. Download the web service sample from GitHub:
+   [GitHub Web service sample](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices)
+2. Navigate to the appropriate folder based on your .NET version:
+   - .NET 6.0 → [PdfViewerWebService_6.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_6.0)
+   - .NET 8.0 → [PdfViewerWebService_8.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_8.0)
+3. Restore and run the service:
 
-3. Navigate to the appropriate subfolder based on your .NET version:
-
-   - .NET 6.0 → `PdfViewerWebService_6.0`
-   - .NET 8.0 → `PdfViewerWebService_8.0`
-
-4. Restore packages:
-
-```
- dotnet restore
-```
-
-5. Run the web service:
-
-```
- dotnet run
+```bash
+dotnet restore
+dotnet run
 ```
 
-6. The PDF Viewer server instance runs at `https://localhost:5001`. Navigate to `https://localhost:5001/pdfviewer` to see the default GET response. Bind this URL to the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) property of the PDF Viewer as shown below.
+The service will run at:
 
-{% tabs %}
-{% highlight ts tabtitle="app.ts" %}
+```
+https://localhost:7255/pdfviewer
+```
 
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://localhost:5001/pdfviewer';
-pdfviewer.appendTo('#PdfViewer');
-pdfviewer.load('PDF_Succinctly.pdf', null);
+Configure this URL in the `serviceUrl` property of the PDF Viewer.
 
-{% endhighlight %}
-{% endtabs %}
+> **Important:** In server-backed mode, do **not** include `pdfium.js` or `pdfium.wasm`. All rendering is performed on the server.
 
-N> In server-backed mode, do not include `pdfium.js` and `pdfium.wasm`. Unlike standalone mode, the server-backed PDF Viewer renders PDFs on the server. These files and their copy steps are not required for deployment in this context.
-
-> Refer to the [JavaScript PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk) for an overview of capabilities. Explore the [JavaScript PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/default.html) to see core features in action.
-
-N> For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1). For AWS environments, use the following packages:
+N> For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1). For AWS environments, use the following packages:
 
 | **Amazon Web Services (AWS)** |**NuGet package name** |
 | --- | --- |
-| AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)|
-| AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.116.1)|
+| AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
+| AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
+
+## See also
+
+- [Getting started in TypeScript PDF Viewer](./getting-started)
+- [Open PDF Files](./open-pdf-files)
+- [Save PDF Files](./save-pdf-files)

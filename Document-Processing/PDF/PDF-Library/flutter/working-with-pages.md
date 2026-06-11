@@ -2,7 +2,7 @@
 layout: post
 title: Pages in Flutter PDF library | Syncfusion
 description: Learn here all about add, rotate pages and customize page settings feature of Syncfusion Flutter PDF non-UI library and more.
-platform: flutter
+platform: document-processing
 control: PDF
 documentation: ug
 ---
@@ -13,7 +13,8 @@ documentation: ug
 
 The following code sample explains how to add a [`PdfPage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage-class.html) to a PDF document. When multiple pages are added, the new page will always be added to the end of the document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF documentation
 PdfDocument document = PdfDocument();
@@ -28,12 +29,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
+{% endtabs %}
 
 ## Inserting pages in an existing document
 
 You can insert an empty page at any location in the existing PDF document using the insert method. The following code sample explains the same.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -49,13 +52,15 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ## Adding margin to the PDF pages
 
 You can add [`margin`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/margins.html) to all the PDF pages of a PDF document using the [`pageSettings`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/pageSettings.html) property. The following code snippet explains the same.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF documentation
 PdfDocument document = PdfDocument();
@@ -73,6 +78,7 @@ List<int> bytes =await document.save();
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Adding sections with different page settings
 
@@ -80,7 +86,8 @@ Flutter PDF supports adding sections with different page settings such as [`marg
 
 The following code snippet explains how to add more sections to a PDF document with different page settings.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a PDF document
 PdfDocument document = PdfDocument();
@@ -141,12 +148,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Get the number of pages from a PDF document
 
 You can get the page count from the existing PDF document as shown in the following code sample.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -159,12 +168,14 @@ int pageCount = document.pages.count;
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Rotating a PDF page
 
 You can [`rotate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/rotate.html) a PDF page in the PDF document using the [`PdfPageRotateAngle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageRotateAngle.html) enum as shown in the following code snippet.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a PDF document
 PdfDocument document = PdfDocument();
@@ -198,12 +209,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 	
 {% endhighlight %}
+{% endtabs %}
 
 ## Removing pages from a document
 
 You can remove the pages from the existing PDF document using the remove or removeAt method as shown in the following code sample.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -225,3 +238,4 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

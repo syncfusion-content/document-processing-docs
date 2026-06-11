@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interaction modes in TypeScript PDF Viewer
+# Interaction mode in TypeScript PDF Viewer control
 
-The PDF Viewer provides two interaction modes for working with the loaded PDF document: selection mode and panning mode. Use these modes to control whether users select text or pan/scroll the document.
+The PDF Viewer provides interaction modes to control how users interact with the loaded PDF document. Two primary interaction modes are available: selection mode and panning mode.
 
 ## Selection mode
 

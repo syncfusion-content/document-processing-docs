@@ -8,34 +8,33 @@ documentation: ug
 ---
 
 # Organize Pages in Mobile PDF Viewer Blazor
+The PDF Viewer provides a mobile-responsive experience for the Organize Pages feature so users can manage pages comfortably on small screens.
 
-The PDF Viewer offers a mobile-responsive layout for the `Organize Pages` feature, ensuring a seamless experience on smaller devices. When viewed on a mobile device, the toolbar and navigation elements adapt to the screen size, providing easy access to all page management tools.
+![Organize pages mobile view](./images/organize-mobile-view.png)
 
-![Organize Mobile View](./images/organize-mobile-view.png)
+## Mobile toolbar
 
-## Mobile-Friendly Toolbar
+On mobile, the `Organize Pages` toolbar appears in a bottom-anchored layout for easy one-handed use. It exposes the same core tools as desktop (insert, delete, rotate, etc.) with mobile-optimized spacing and icons.
 
-In the mobile view, the `Organize Pages` toolbar is displayed at the bottom of the screen for easy one-handed access. The toolbar includes the same set of tools as the desktop version, such as insert, delete, and rotate, but with a mobile-optimized layout.
+## Context menu
 
-## Context Menu for Page Operations
+Tap-and-hold a page thumbnail to open the context menu. Available actions include:
 
-To perform actions on a page thumbnail, tap and hold on the thumbnail to open a context menu. This menu contains all the available page operations:
+* **Rotate clockwise** — rotate the page 90° clockwise.
+* **Rotate counter-clockwise** — rotate the page 90° counter-clockwise.
+* **Rearrange pages** — drag thumbnails to update order.
+* **Insert page** — insert a new page at the selected position.
+* **Duplicate page** — create a copy of the selected page.
+* **Delete page** — remove the selected page.
+* **Select all** — select all pages in the document.
+* **Import a PDF** — merge pages from another PDF file.
+* **Extract pages** — export selected pages as a new PDF.
+* **Save updates** — apply changes and use **Save** or **Save as** to download the modified PDF.
 
-*   **Rotate Clockwise**: Rotate the selected page 90 degrees clockwise.
-*   **Rotate Counter-Clockwise**: Rotate the selected page 90 degrees counter-clockwise.
-*   **Rearrange pages**: Drag and drop pages to update the reading order.
-*   **Insert Page**: Insert a new page.
-*   **Duplicate Page**: Duplicate the selected page.
-*   **Delete Page**: Remove the selected page.
-*   **Select All**: Select all pages in the document.
-*   **Import a PDF document**: Merge the current document with pages from another PDF file.
-*   **Extract Pages**: Extract the current document pages as a PDF file.
-*   **Save updates**: Review changes in real time and use **Save** or **Save As** to download the revised document.
+![Organize mobile options](./images/organize-mobile-options.png)
 
-![Alt text](./images/organize-mobile-options.png)
+## Rearranging pages
 
-## Rearranging Pages on Mobile
+To rearrange pages on mobile, tap-and-hold a thumbnail to select it, then drag it to the target position. A drop indicator shows the insertion point.
 
-To rearrange pages, tap and hold a page thumbnail to select it, then drag it to the desired position. A blue line will indicate the drop location.
-
-By providing a mobile-friendly interface, the PDF Viewer ensures that users can efficiently manage their PDF documents from any device, anywhere.
+The mobile UI ensures users can manage document pages efficiently from any device.

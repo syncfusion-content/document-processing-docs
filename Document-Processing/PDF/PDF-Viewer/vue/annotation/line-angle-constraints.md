@@ -9,7 +9,7 @@ documentation: ug
 
 # Line angle constraints in Vue PDF Viewer
 
-The PDF Viewer control provides robust **line angle constraints** functionality. This allows users to draw line type annotations with controlled angle snapping, improving accuracy and consistency across technical drawings and measurements across your PDF documents.
+The PDF Viewer control provides angle-constraint functionality for line-type annotations. When enabled, drawing operations snap to configured angle increments, improving accuracy and consistency for technical drawings and measurements.
 
 ## Enable line angle constraints
 Configure the `enableLineAngleConstraints` property within `annotationDrawingOptions`. When enabled, supported line-type annotations snap to fixed angles.
@@ -81,7 +81,7 @@ export default {
 
 ### enableLineAngleConstraints
 
-The `enableLineAngleConstraints` property activates angle snapping for line-based annotations. When set to `true`, the following annotation types will snap to fixed angles as defined by the `restrictLineAngleTo` property:
+The `enableLineAngleConstraints` property activates angle snapping for line-based annotations. When set to `true`, the following annotation types snap to fixed angles as defined by `restrictLineAngleTo`:
 
 - Lines
 - Arrows
@@ -91,51 +91,51 @@ The `enableLineAngleConstraints` property activates angle snapping for line-base
 - Area measurements
 - Volume measurements
 
-**Key Benefits:**
+**Key benefits:**
 
-- Automatic angle snapping during the drawing
-- Enhanced precision for technical drawings and measurements
-- Desktop behavior: hold Shift while drawing to toggle constraints (when disabled, Shift temporarily enables; when enabled, Shift enforces snapping)
-- Real-time visual feedback showing angle snapping behavior
+- Automatic angle snapping while drawing
+- Improved precision for technical drawings and measurements
+- Desktop behavior: hold Shift while drawing to toggle constraints (if constraints are disabled, Shift temporarily enables snapping; if enabled, Shift enforces snapping)
+- Real-time visual feedback during drawing
 
 ### restrictLineAngleTo
 
-Defines the angle increment (in degrees) used to constrain supported annotations. The default is 45.
+Specifies the angle increment (in degrees) used for snapping. The default increment is 45°.
 
-Angle snapping rules:
+Angle snapping behavior:
 
-- The initial drawing direction is treated as the 0° reference point
-- Snapped angles are calculated based on the increment
-- If the increment doesn’t divide 360 evenly, angles reset after 360°
+- The initial drawing direction is treated as the 0° reference point.
+- Snapped angles are calculated by adding the increment to the reference direction.
+- If the increment does not divide 360 evenly, angles continue wrapping after 360°.
 
 Examples:
 
-- restrictLineAngleTo: 45 → Snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
-- restrictLineAngleTo: 100 → Snapped angles: 0°, 100°, 200°, 300°, 360°
+- `restrictLineAngleTo: 45` → snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
+- `restrictLineAngleTo: 100` → snapped angles: 0°, 100°, 200°, 300°, 360°
 
 ## Work with constrained annotations
 
-### Drawing Behavior
+### Drawing behavior
 
-When line angle constraints are enabled:
+When angle constraints are enabled:
 
-- Start drawing a supported annotation (Line, Arrow, Polyline, Distance, or Perimeter).
-- The segment snaps to the nearest allowed angle.
-- A visual indicator reflects snapping in real time.
-- Release to complete the annotation.
+- Begin drawing a supported annotation (Line, Arrow, Polyline, Distance, or Perimeter).
+- The segment snaps to the nearest allowed angle according to `restrictLineAngleTo`.
+- A visual indicator displays the current snapping angle in real time.
+- Release to finalize the annotation.
 
-### Keyboard Shortcuts
+### Keyboard shortcuts
 
 Desktop platforms:
-- Shift + drag: toggles snapping. If constraints are disabled, Shift temporarily enables them; if enabled, Shift enforces snapping.
 
-### Selector-Based Modifications
+- `Shift` + drag: toggles snapping during the drag operation. If constraints are disabled, `Shift` temporarily enables snapping; if enabled, `Shift` enforces snapping.
 
-When modifying existing line annotations using selectors:
+### Modifying constrained annotations
 
-- Constraints apply based on the original line direction.
-- The reference angle (0°) is determined by the line’s current orientation.
-- Constraint snapping during modification is supported for Line and Arrow.
-- Adjustments snap to the configured angle increment.
+When editing existing line annotations with selectors:
 
-N> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer examples](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples) to learn how to render and configure the PDF Viewer.
+- Constraints apply relative to the annotation's current orientation (the line's direction is the 0° reference).
+- Constraint snapping during modification is supported for Line and Arrow annotations.
+- Adjustments snap according to the configured `restrictLineAngleTo` increment.
+
+N> Refer to the Vue PDF Viewer [feature tour](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer) for highlights. See additional [Vue PDF Viewer examples](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)

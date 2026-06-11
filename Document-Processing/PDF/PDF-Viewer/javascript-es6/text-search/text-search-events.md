@@ -14,7 +14,7 @@ The PDF Viewer triggers events during text search operations, allowing you to cu
 
 ## textSearchStart
 
-The [textSearchStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#textsearchstartevent) event fires as soon as a search begins from the toolbar interface or through the `textSearch.searchText` method. Use it to reset UI state, log analytics, or cancel the default search flow before results are processed.
+The [textSearchStart](https://ej2.syncfusion.com/documentation/api/pdfviewer#textsearchstartevent) event fires as soon as a search begins from the toolbar interface or through the `textSearch.searchText` method. Use to reset UI state, log analytics, or cancel the default search flow before results are processed.
 
 - Event arguments: [TextSearchStartEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchStartEventArgs) exposes:
   - `searchText`: the term being searched.
@@ -37,7 +37,7 @@ viewer.appendTo('#pdfViewer');
 
 ## textSearchHighlight
 
-The [textSearchHighlight](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#textsearchhighlightevent) event triggers whenever a search result is brought into view, including navigation between matches. Use it to draw custom overlays or synchronize adjacent UI elements when a match is highlighted.
+The [textSearchHighlight](https://ej2.syncfusion.com/documentation/api/pdfviewer#textsearchhighlightevent) event triggers whenever a search result is brought into view, including navigation between matches. Use to draw custom overlays or synchronize adjacent UI elements when a match is highlighted.
 
 - Event arguments: [TextSearchHighlightEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/textSearchHighlightEventArgs) exposes:
   - `bounds`: `RectangleBoundsModel | RectangleBoundsModel[]` representing the highlighted match.
@@ -59,7 +59,7 @@ viewer.appendTo('#pdfViewer');
 
 ## textSearchComplete
 
-The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#textsearchcompleteevent) event runs after the search engine finishes scanning the document for the current query. Use it to update match counts, toggle navigation controls, or notify users when no results were found.
+The [textSearchComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer#textsearchcompleteevent) event runs after the search engine finishes scanning the document for the current query. Use to update match counts, toggle navigation controls, or notify users when no results were found.
 
 - Typical uses:
   - Update UI with the total number of matches and enable navigation controls.

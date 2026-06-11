@@ -19,7 +19,7 @@ Show or hide the annotation toolbar programmatically during initialization or at
 
 Use the [EnableAnnotationToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/pdfViewerModel/#enableannotationtoolbar) property or the [showAnnotationToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showannotationtoolbar) method to toggle visibility.
 
-The following code snippet explains how to show or hide the annotation toolbar using the `showAnnotationToolbar` method.
+The following example shows how to show or hide the annotation toolbar using the `showAnnotationToolbar` method.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

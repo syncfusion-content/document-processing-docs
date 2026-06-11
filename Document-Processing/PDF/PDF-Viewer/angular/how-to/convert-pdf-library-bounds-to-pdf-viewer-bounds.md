@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Convert PDF Library bounds to PDF Viewer bounds
 
-When exporting annotations from the PDF Library, convert the bounds values into the PDF Viewer format to ensure accurate placement.
+When exporting annotations from the PDF Library, convert the annotation bounds into the PDF Viewer coordinate system so exported annotations appear at the correct position and scale in the viewer.
 
 Steps to convert bounds values
 
@@ -86,8 +86,8 @@ Fetch the blob data and convert it into a JSON object.
   }
 ```
 
-Conclusion
+**Conclusion**
 
-These steps convert PDF Library bounds values into PDF Viewer bounds values when exporting annotations as JSON, maintaining accurate annotation placement.
+These steps convert PDF Library bounds values into PDF Viewer bounds values when exporting annotations as JSON, helping maintain accurate annotation placement.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

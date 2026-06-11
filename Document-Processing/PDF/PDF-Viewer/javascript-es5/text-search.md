@@ -132,14 +132,14 @@ pdfviewer.textSearch.searchText('pdf', false, true);
 
 **Note on Match Any Word:** The Match Any Word checkbox in the toolbar splits the input into multiple words and searches for each term individually. This differs from the `isMatchWholeWord` parameter, which enforces a whole-word match on the entire query string.
 
-The following text search methods are available in the PDF Viewer,
+The following text search methods are available in the PDF Viewer:
 
 * [**Search text**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchtext): Searches the target text in the PDF document and highlights each occurrence in the pages.
 * [**Search next**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchnext): Searches the next occurrence of the current query from the active match.
 * [**Search previous**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#searchprevious): Searches the previous occurrence of the current query from the active match.
 * [**Cancel text search**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch/#canceltextsearch): Cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
 
-![Alt text](./images/search.png)
+![Text search panel showing highlighted matches and navigation controls](./images/search.png)
 
 ## Find text method
 Use the `findText` method to locate a string or an array of strings and return the bounding rectangles for each match. Optional parameters support case-sensitive comparisons and page scoping so you can retrieve coordinates for a single page or the entire document.

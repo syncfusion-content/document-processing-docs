@@ -46,7 +46,7 @@ document.getElementById('findTexts').addEventListener('click', function () {
 
 ### Description
 
-The `findTextAsync` method is designed for performing an asynchronous text search within a PDF document. You can use it to search for a single string or multiple strings, with the ability to control case sensitivity. By default, the search is applied to all pages of the document. However, you can adjust this behavior by specifying the page number (pageIndex), which allows you to search only a specific page if needed.
+The `findTextAsync` method performs an asynchronous text search within a PDF document. It returns a Promise that resolves with an array of result objects describing each match. Each match object contains information such as the page index and the bounding rectangles for the matched text, which can be used to highlight or navigate to occurrences. By default, the search runs across all pages; supply the optional `pageIndex` parameter to limit the search to a specific page.
 
 ### Parameters
 

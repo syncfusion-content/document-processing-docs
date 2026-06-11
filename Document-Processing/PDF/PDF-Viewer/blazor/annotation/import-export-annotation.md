@@ -80,7 +80,7 @@ Supported formats:
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Import-Export/Annotations%20as%20JSON%20object).
 
-N> Ensure that the JSON file used for importing annotations is available at the specified path. Paths are case-sensitive in some hosting environments.
+N> Ensure that the JSON file used for importing annotations is available at the specified path. Paths can be case-sensitive in some hosting environments.
 
 ## Exporting annotation from the PDF document
 

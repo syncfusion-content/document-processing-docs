@@ -1,246 +1,183 @@
 ---
 layout: post
-title: Getting started with Angular Document editor component | Syncfusion
-description:  Checkout and learn about Getting started with Angular Document editor component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Angular DOCX Editor | Syncfusion
+description: Learn how to create a DOCX Editor in an Angular application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
 platform: document-processing
 control: Getting started 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Angular Document editor component
+# Getting Started with Angular DOCX Editor
 
-This section explains the steps to create a Word document editor within your application and demonstrates the basic usage of the Document Editor component.
+Syncfusion<sup style="font-size:70%">&reg;</sup> [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in an Angular application. 
 
-To get started quickly with DocumentEditor component using CLI, you can check the video below.
+## Steps to create an Angular DOCX Editor
 
-{% youtube "https://www.youtube.com/watch?v=UHdjjR_BbQY" %}
+### Prerequisites
 
-## Prerequisites
+[System requirements for Document Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
+### Setup Angular environment
 
-## Dependencies
-
-The list of dependencies required to use the Document Editor component in your application is given below:
-
-```javascript
-|-- @syncfusion/ej2-angular-documenteditor
-    |-- @syncfusion/ej2-angular-base
-    |-- @syncfusion/ej2-documenteditor
-    |-- @syncfusion/ej2-base
-    |-- @syncfusion/ej2-buttons
-    |-- @syncfusion/ej2-compression
-    |-- @syncfusion/ej2-data
-    |-- @syncfusion/ej2-dropdowns
-    |-- @syncfusion/ej2-file-utils
-    |-- @syncfusion/ej2-inputs
-    |-- @syncfusion/ej2-lists
-    |-- @syncfusion/ej2-navigations
-    |-- @syncfusion/ej2-popups
-    |-- @syncfusion/ej2-splitbuttons
-    |-- @syncfusion/ej2-charts
-```
-
-### Server side dependencies
-
-The Document Editor component requires server-side interactions for the following operations:
-
-* [Open file formats other than SFDT](./import#convert-word-documents-into-sfdt)
-* [Paste with formatting](./clipboard#paste-with-formatting)
-* [Restrict editing](./document-management)
-* [SpellCheck](./spell-check)
-* [Save as file formats other than SFDT and DOCX](./saving-documents/server-side-export)
-
->Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
-
-To know about server-side dependencies, please refer this [page](./web-services-overview).
-
-## Setup Angular Environment
-
-You can use [Angular CLI](https://github.com/angular/angular-cli) to setup your Angular applications. To install Angular CLI use the following command.
+You can use [Angular CLI](https://github.com/angular/angular-cli) to set up your Angular application. To install Angular CLI, use the following command:
 
 ```bash
-npm install -g @angular/cli@16.0.1
+npm install -g @angular/cli
 ```
 
-## Create an Angular Application
+### Create an Angular application
 
-Start a new Angular application using below Angular CLI command.
+**Step 1:** Start a new Angular application using the Angular CLI command below:
 
 ```bash
-ng new my-app
+ng new documenteditor-app
 ```
 
-This command will prompt you for a few settings for the new project, such as whether to add Angular routing and which stylesheet format to use.
+**Step 2:** This command will prompt you to configure settings like enabling Angular routing and choosing a stylesheet format.
 
-![Initial_setup](images/Initial-setup.png)
-
-By default, it will create a CSS-based application.
-
-Next, navigate to the created project folder:
-
+```text
+? Which stylesheet system would you like to use?
+❯ CSS             [ https://developer.mozilla.org/docs/Web/CSS                     ]
+  Tailwind CSS    [ https://tailwindcss.com                                        ]
+  Sass (SCSS)     [ https://sass-lang.com/documentation/syntax#scss                ]
+  Sass (Indented) [ https://sass-lang.com/documentation/syntax#the-indented-syntax ]
+  Less            [ http://lesscss.org                                             ]
 ```
-cd my-app
+
+In this guide, CSS is selected as the stylesheet format.
+
+**Step 3:** During project setup, when prompted for the server-side rendering (SSR) option, choose the appropriate configuration.
+
+```text
+? Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? (y/N) N
 ```
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor package
+**Step 4:** Select the required AI tool or 'none' if you do not need any AI tool.
 
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in [`npmJs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+```text
+? Which AI tools do you want to configure with Angular best practices? https://angular.dev/ai/develop-with-ai
+❯ None
+  Agents.md      [ https://agents.md/                                               ]
+  Claude         [ https://docs.anthropic.com/en/docs/claude-code/memory            ]
+  Cursor         [ https://docs.cursor.com/en/context/rules                         ]
+  Gemini         [ https://ai.google.dev/gemini-api/docs                            ]
+  GitHub Copilot [ https://code.visualstudio.com/docs/copilot/copilot-customization ]
+  JetBrains AI   [ https://www.jetbrains.com/help/junie/customize-guidelines.html   ]
+```
 
-To install Document Editor component, use the following command.
+**Step 5:** Next, navigate to the created project folder
+
+```bash
+cd documenteditor-app
+```
+
+### Install the Document Editor packages
+
+The Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
+
+To install the Document Editor component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-angular-documenteditor --save
 ```
 
-> The **--save** will instruct NPM to include the grid package inside of the **dependencies** section of the **package.json**.
+### Add CSS reference
 
-## Adding CSS reference
+The following CSS files are available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/styles.css` file using the following code:
 
-The following CSS files are available in **../node_modules/@syncfusion** package folder.
-This can be referenced in [src/styles.css] using following code.
+{% tabs %}
+{% highlight css tabtitle="styles.css" %}
 
-```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-angular-documenteditor/styles/material.css';
-```
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-angular-documenteditor/styles/tailwind3.css';
 
-## Adding Component
+{% endhighlight %}
+{% endtabs %}
 
-You can add `DocumentEditorContainer` Component with  predefined toolbar and properties pane options or `DocumentEditor` component with customize options.
+### Add the Document Editor component
 
->Note: Starting from `v19.3.0.x`, we have optimized the accuracy of text size measurements such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [to disable it and retain the document pagination behavior of older versions](./how-to/disable-optimized-text-measuring).
+Modify `src/app/app.ts` to render the Document Editor component by adding the Angular Document Editor selector in its template section.
 
-### DocumentEditorContainer Component
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
 
-DocumentEditorContainer is a predefined component which wraps DocumentEditor, Toolbar, Properties pane, and Status bar into a single component. And the toolbar and properties pane is used to view and modify the document in DocumentEditor thought public APIs available in it.
+import { Component } from '@angular/core';
+import {
+  DocumentEditorContainerModule,
+  ToolbarService
+} from '@syncfusion/ej2-angular-documenteditor';
 
-#### Adding DocumentEditorContainer component
-
-Modify the template in [src/app/app.component.ts] file to render the Document Editor Container component.
-Add the Angular Document Editor Container by using `<ejs-documenteditor>` selector in **template** section of the app.component.ts file.
-
-```typescript
-
-import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documenteditor'
-import { Component, OnInit } from '@angular/core';
-import { ToolbarService } from '@syncfusion/ej2-angular-documenteditor';
 @Component({
-imports: [        
-      DocumentEditorContainerModule
-    ],
-    standalone: true,
-    selector: 'app-root',
-    // specifies the template string for the DocumentEditorContainer component
-    template: `<ejs-documenteditorcontainer serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
-    providers: [ToolbarService]
+  selector: 'app-root',
+  standalone: true,
+  imports: [DocumentEditorContainerModule],
+  providers: [ToolbarService],
+  template: `
+    <!-- Use the following service URL only for demo purposes -->
+    <ejs-documenteditorcontainer
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+      height="600px"
+      style="display: block"
+      [enableToolbar]="true">
+    </ejs-documenteditorcontainer>
+  `
 })
-export class AppComponent implements OnInit {
+export class App {}
 
-    ngOnInit(): void {
-    }
-}
+{% endhighlight %}
+{% endtabs %}
 
-```
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+### Run the application
 
-#### Run the DocumentEditorContainer application
+Run the application using the following command:
 
-The quick-start project is configured to compile and run the application in a browser. Use the following command to run the application.
-
-```javascript
+```bash
 ng serve --open
 ```
 
-DocumentEditorContainer output will be displayed as follows.
+After the application starts, open the localhost URL shown in the terminal. The Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
-{% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/document-editor-container-cs2/src/app.component.ts %}
-{% endhighlight %}
+![Output of Angular Document Editor](./images/angular_getting_started.png)
 
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/document-editor-container-cs2/src/main.ts %}
-{% endhighlight %}
-{% endtabs %}
-  
+You can also explore the Document Editor interactively using the live sample below.
+
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
-
->Note: If you see a license banner when running your application, it means that you need to obtain a license key and register it within the application in order to use Syncfusion components. You can find more information on how to obtain and register a license key on our [Licensing overview](https://ej2.syncfusion.com/angular/documentation/licensing/overview) page.
-
-### DocumentEditor Component
-
-DocumentEditor Component is used to create , view and edit word documents. In this , you can customize the UI options based on your requirements to modify the document.
-
-#### Adding DocumentEditor component
-
-Modify the template in [src/app/app.component.ts] file to render the Document Editor component.
-Add the Angular Document Editor by using `<ejs-documenteditor>` selector in `template` section of the app.component.ts file.
-
-```typescript
-
-import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documenteditor'
-import { Component, OnInit } from '@angular/core';
-@Component({
-imports: [        
-      DocumentEditorContainerModule
-    ],
-    standalone: true,
-    selector: 'app-root',
-    // specifies the template string for the DocumentEditorContainer component
-    template: `<ejs-documenteditorcontainer serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"> </ejs-documenteditorcontainer>`
-})
-export class AppComponent implements OnInit {
-
-    ngOnInit(): void {
-    }
-}
-
-```
-
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
-
-#### Run the  DocumentEditor application
-
-The quick start project is configured to compile and run the application in a browser. Use the following command to run the application.
-
-```javascript
-ng serve --open
-```
-
-Output will be displayed as follows.
-
-{% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/getting-started-cs1/src/app.component.ts %}
-{% endhighlight %}
-
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/getting-started-cs1/src/main.ts %}
-{% endhighlight %}
-{% endtabs %}
-  
-{% previewsample "/document-processing/samples/document-editor/angular/getting-started-cs1" %}
-
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/getting-started).
 
 
+## Video tutorial
 
-## Frequently Asked Questions
+To get started quickly with the Document Editor component using the Angular CLI, you can check the video below.
 
-* [How to localize the Document Editor container](./global-local).
-* [How to load the document by default](./how-to/open-default-document).
-* [How to customize tool bar](./how-to/customize-tool-bar).
-* [How to resize Document editor component?](./how-to/resize-document-editor)
-* [How to add a save button to the DocumentEditorContainer component toolbar](./how-to/add-save-button-in-toolbar).
+{% youtube "https://www.youtube.com/watch?v=UHdjjR_BbQY" %}
+
+## Server-side dependencies
+
+The Document Editor component requires server-side interactions for the following operations:
+
+* Open file formats other than SFDT
+* Paste with formatting
+* Restrict editing
+* Spell check
+* Save as file formats other than SFDT and DOCX
+
+N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+
+For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
+
+## See also
+
+- [Open a document](./import)
+- [Save a document](./export)
+- [Collaborative Editing](./collaborative-editing/overview)

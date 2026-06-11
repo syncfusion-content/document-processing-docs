@@ -255,6 +255,7 @@ Field updating engine calculates the resultant value based on the field code inf
 * TITLE
 * Cross-Reference
 * SEQ
+* CreateDate
 
 The following are the known limitations:
 

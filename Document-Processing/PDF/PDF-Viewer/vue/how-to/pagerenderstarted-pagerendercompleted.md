@@ -8,17 +8,12 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PageRenderInitiate and pageRenderComplete event
+# Page render initiate and complete events in Vue PDF Viewer
 
-In the Syncfusion PDF Viewer, the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events occur during page rendering.
+In the PDF Viewer, the `pageRenderInitiate` and `pageRenderComplete` events fire during the page rendering lifecycle:
 
-**PageRenderInitiate**
-
-The `pageRenderInitiate` event is triggered when the rendering of a page in the PDF document begins. This event provides developers with an opportunity to perform any necessary initialization or setup before the rendering of the page content commences. It can be utilized to prepare resources, set up rendering parameters, or execute any other actions required before the page rendering process starts.
-
-**PageRenderComplete**
-
-The `pageRenderComplete` event is triggered when the rendering of a page in the PDF document is completed. This event allows developers to perform cleanup tasks or finalize rendering-related processes after the rendering of the page content finishes. It can be used to release resources, finalize rendering settings, or handle any post-rendering tasks necessary for the application.
+- `pageRenderInitiate`: fired when the rendering of a page begins. Use this event to initialize resources, show loading indicators, or set up rendering parameters before the page content is drawn.
+- `pageRenderComplete`: fired when the rendering of a page finishes. Use this event to hide loading indicators, record render timing, or run post-render processing.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}

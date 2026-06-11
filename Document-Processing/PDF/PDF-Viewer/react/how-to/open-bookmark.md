@@ -7,15 +7,15 @@ platform: document-processing
 documentation: ug
 ---
 
-# Open or close the Bookmark pane programmatically
+# Open and close the bookmark pane programmatically
 
-Open the Bookmark pane programmatically using the `openBookmarkPane()` method.
+The PDF Viewer exposes APIs to open and close the bookmark pane programmatically. Use `openBookmarkPane()` and `closeBookmarkPane()` to control the bookmark pane from application code.
 
-The following steps are used to open the Bookmark.
+Follow these steps to call the bookmark APIs from the application.
 
-**Step 1:** Follow the steps in the [Get started with React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/React/getting-started) guide to create a sample.
+**Step 1:** Create a basic PDF Viewer sample using the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide.
 
-**Step 2:** Insert the following code snippet to implement the functionality for opening the Bookmark pane:
+**Step 2:** Insert the following code snippet to implement opening the bookmark pane:
 
 ```
 <button onClick={openBookmark}>Open Bookmark Pane</button>

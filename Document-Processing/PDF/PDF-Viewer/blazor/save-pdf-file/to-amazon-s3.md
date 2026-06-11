@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Save PDF file to AWS S3 in Blazor SfPdfViewer
+# Save PDF to AWS S3 in Blazor SfPdfViewer
 
 To save a PDF file to AWS S3, you can follow the steps below
 
@@ -28,7 +28,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 @using Amazon.S3;
 @using Amazon.S3.Model;
 @using Syncfusion.Blazor.SfPdfViewer;
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Buttons;
 
 ```
 

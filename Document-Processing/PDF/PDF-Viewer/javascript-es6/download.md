@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Download in TypeScript PDF Viewer
 
-The PDF Viewer supports downloading the loaded PDF document. Use the enableDownload property to enable or disable the download option, as shown below.
+The PDF Viewer supports downloading the currently loaded PDF document. Use the `enableDownload` option to enable or disable download functionality. The examples below demonstrate standalone and server-backed configurations.
 
 ```html
 <!DOCTYPE html>
@@ -74,7 +74,7 @@ pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null
 
 ![PDF Viewer toolbar showing the download button](./images/download.png)
 
-You can invoke the download action using the following code snippet:
+Invoke the download action programmatically with a simple button example:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -107,7 +107,7 @@ pdfviewer.download();
 
 ## How to get the base64 string while downloading the PDF document
 
-The [downloadEnd](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadend) event of the PDF Viewer is raised after the file is prepared for download and provides the document as a base64 string.
+The [downloadEnd](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadend) event fires after a download completes and exposes the downloaded document as a base64 string.
 
 The following example illustrates how to access the downloaded document as a base64 string. Note: Handling very large base64 strings may impact memory usage; consider using a stream when possible.
 
