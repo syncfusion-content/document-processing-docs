@@ -144,15 +144,15 @@ DocumentEditorComponent.Inject(CollaborativeEditingHandler);
 // initialization of variables
 public collaborativeEditingHandler ?: CollaborativeEditingHandler;
 
- 
 public componentDidMount(): void {
-  if(this.container) {
-  this.container.documentEditor.enableCollaborativeEditing = true;
-}
-if (!this.connection) {
-  this.initializeSignalR();
-  this.loadDocumentFromServer();
-}
+    if (this.container) {
+        this.container.documentEditor.enableCollaborativeEditing = true;
+        this.collaborativeEditingHandler = this.container.documentEditor.collaborativeEditingHandlerModule;
+    }
+    if (!this.connection) {
+        this.initializeSignalR();
+        this.loadDocumentFromServer();
+    }
 }
 
 // Other code snippets
@@ -162,7 +162,7 @@ render() {
     <div>
       <div id='documenteditor_titlebar' className="e-de-ctn-title"></div>
       <div id="documenteditor_container_body">
-        <DocumentEditorContainerComponent id="container" created={this.onCreated.bind(this)} ref={(scope: DocumentEditorContainerComponent) => { this.container = scope; }} style={{ display: 'block' }}
+        <DocumentEditorContainerComponent id="container" created={this.onCreated.bind(this)} ref={(scope: DocumentEditorContainerComponent) => { this.container = scope; }}
           height={'590px'} currentUser={this.currentUser} serviceUrl={this.serviceUrl + 'api/documenteditor'} enableToolbar={true} locale='en-US' >
           <Inject services={[Toolbar]} />
         </DocumentEditorContainerComponent>
