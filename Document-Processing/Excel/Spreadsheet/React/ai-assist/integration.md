@@ -17,7 +17,10 @@ AI Assist integrates seamlessly into your React Spreadsheet application, enablin
 
 Ensure the following before integrating AI Assist:
 
-* Backend Server: A running backend AI service (Node.js or Web API) with Azure OpenAI credentials configured on the server. For setup instructions, see [Web API Server](./ai-service/using-web-api.md)/[Node.js Server](./ai-service/using-web-api.md) for setup instructions.
+* Backend Server: A running backend AI service (Node.js or Web API) with AI credentials configured on the server.
+* For setup instructions, see the:
+    * [ASP.NET Web API Server](./ai-service/using-web-api)
+    * [Node.js Server](./ai-service/using-node-js)
 
 ### Inject the AI Assist Module
 
@@ -47,8 +50,6 @@ function App() {
 
 This enables the AI Assist into the spreadsheet.
 
----
-
 ### Configure AI Assist Settings
 
 Use the [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect spreadsheet to the backend server and customize the AI Assist.
@@ -75,8 +76,6 @@ function App() {
 
 Your Spreadsheet is now integrated with AI Assist and ready to use.
 
----
-
 ## How-To Guides
 
 ### Open and Close the AI Panel
@@ -90,9 +89,7 @@ Your Spreadsheet is now integrated with AI Assist and ready to use.
 
 All actions performed by AI Assist are recorded in the spreadsheet's undo/redo history. Press Ctrl+Z to revert any change made by the AI, just like a manual edit.
 
----
-
-### How to Attach Extra Data Before a Request is Sent
+### How to Customize the Request Before Sending
 
 Use the [`promptRequest`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#promptrequest) event to add custom data — such as a user ID or session token — to the request before it reaches your server.
 
@@ -121,8 +118,6 @@ function App() {
 
 You can also prevent the request entirely by setting `args.cancel = true`.
 
----
-
 ### How to Handle AI Responses
 
 Use the [`promptResponse`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#promptresponse) event to run custom logic after the AI completes its task — for example, logging results or showing a notification.
@@ -148,8 +143,6 @@ function App() {
 }
 ```
 
----
-
 ### Troubleshoot server connection issues
 
 If the AI panel displays an error message:
@@ -173,8 +166,6 @@ If the AI panel displays an error message:
     * Review the terminal/console where your server is running
     * Look for connection or authentication errors
 
----
-
 ## API References
 
 ### AI Assist Settings
@@ -185,16 +176,12 @@ If the AI panel displays an error message:
 | `placeholder` | `string` | The hint text shown inside the prompt input box. |
 | `promptSuggestions` | `string[]` | A list of quick-start prompts shown to the user as clickable suggestions. |
 
----
-
 ### Events
 
 | Event | When it fires | Common use |
 |---|---|---|
 | [`promptRequest`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#promptrequest) | Before the prompt is sent to the server | Attach extra data or cancel the request |
 | [`promptResponse`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#promptresponse) | After the AI completes and responds | Log results or trigger custom UI updates |
-
----
 
 ### What Can You Ask the AI?
 
@@ -265,8 +252,6 @@ Type your request in plain English — no formulas or technical knowledge needed
 | *"Create a bar chart from my sales data"* | Inserts a bar chart based on the selected data range |
 | *"Add a line chart showing the monthly trend"* | Creates a line chart to visualize changes over time |
 | *"Insert a pie chart with a title called 'Revenue Split'"* | Creates a pie chart with a custom title |
-
----
 
 ## See also
 
