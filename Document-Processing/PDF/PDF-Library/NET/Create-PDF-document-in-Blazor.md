@@ -97,32 +97,7 @@ By running the program, you will see the output in the browser when you click th
 Click the `Export to PDF` button to get the PDF document with the following output.
 ![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
 
-## Steps to create PDF documents in Blazor WebAssembly PWA
-
-{% tabcontents %}
-{% tabcontent Visual Studio %}
-{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-WASM-PWA-Visual-Studio.md %}
-{% endtabcontent %}
- 
-{% tabcontent Visual Studio Code %}
-{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-WASM-PWA-VS-Code.md %}
-{% endtabcontent %}
-
-{% tabcontent JetBrains Rider %}
-{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-WASM-PWA-JetBrains.md %}
-{% endtabcontent %}
-
-{% endtabcontents %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/BlazorWASMPWA).
-
-By executing the program, you will get the following output in the browser.
-![Blazor WASM PWA browser](Create-PDF-Blazor/Blazor-PWA-4.png)
-
-Click the `Create PDF document` button, and you will get the PDF document with the following output.
-![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
-
-### Save the PDF document on different platforms
+**Save the PDF document on different platforms**
 
 Create a folder named `Services`, then add a class called `SaveService.cs` within this folder, and insert the following code into it.
 
@@ -140,7 +115,8 @@ public partial class SaveService
 
 Now, we need to implement platform-specific code to save the PDF document.
 
-#### Android
+**Android**
+
 Create a new class file named `SaveAndroid.cs` within the Android folder and add the following code to enable file saving on the Android platform.
 
 {% tabs %}
@@ -262,7 +238,8 @@ N> Android introduced a new runtime permission model for SDK version 23 and abov
 {% endhighlight %}
 {% endtabs %}
 
-#### iOS
+**iOS**
+
 Create a new class file named `SaveIOS.cs` within the iOS folder and include the following code to enable file saving on the iOS platform.
 
 {% tabs %}
@@ -301,7 +278,8 @@ public partial void SaveAndView(string filename, string contentType, MemoryStrea
 {% endhighlight %}
 {% endtabs %}
 
-#### MacOS
+**MacOS**
+
 Create a new class file named `SaveMac.cs` within the MacCatalyst folder and include the following code to enable file saving on the macOS platform.
 
 {% tabs %}
@@ -354,7 +332,7 @@ public UIWindow? GetKeyWindow()
 {% endhighlight %}
 {% endtabs %}
 
-#### Windows
+**Windows**
 Create a new class file named `SaveWindows.cs` within the Windows folder and include the following code to enable file saving on the Windows platform.
 
 {% tabs %}
@@ -462,6 +440,31 @@ public async partial void SaveAndView(string filename, string contentType, Memor
 {% endhighlight %}
 {% endtabs %}
 
-The helper files mentioned above are available on [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page. You can refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page for more details. 
+The helper files mentioned above are available on [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page. You can refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui#helper-files-for-net-maui) page for more details.
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+## Steps to create PDF documents in Blazor WebAssembly PWA
+
+{% tabcontents %}
+{% tabcontent Visual Studio %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-WASM-PWA-Visual-Studio.md %}
+{% endtabcontent %}
+ 
+{% tabcontent Visual Studio Code %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-WASM-PWA-VS-Code.md %}
+{% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+{% include_relative tabcontent-support/Create-PDF-document-in-Blazor-WASM-PWA-JetBrains.md %}
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Blazor/BlazorWASMPWA).
+
+By executing the program, you will get the following output in the browser.
+![Blazor WASM PWA browser](Create-PDF-Blazor/Blazor-PWA-4.png)
+
+Click the `Create PDF document` button, and you will get the PDF document with the following output.
+![Blazor getting started output PDF document](Create-PDF-Blazor/Blazor_PDF_output.png)
+
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

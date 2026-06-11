@@ -8,9 +8,9 @@ documentation: UG
 
 # Create PDF document in Azure App Service on Linux
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure App Service on Linux**.
+The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure App Service on Linux**.
 
-## Steps to create PDF document in Azure App Service on Linux
+**Steps to create PDF document in Azure App Service on Linux**
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
 ![Create a ASP.NET Core Web App project](Azure_images/Azure-app-service-Linux/Create-net-core-web-app.png)
@@ -136,7 +136,7 @@ public IActionResult CreatePDFDocument()
 
 {% endtabs %}
 
-## Steps to publish as Azure App Service on Linux
+**Steps to publish as Azure App Service on Linux**
 
 Step 1: Right-click the project and select Publish option.
 ![Right-click the project and select the Publish option](Azure_images/Azure-app-service-Linux/Click_publish_button.png)
@@ -179,6 +179,6 @@ Step 13: Select the PDF document and Click **Create PDF document** to generate t
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Azure%20App%20Service).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core. 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind). 

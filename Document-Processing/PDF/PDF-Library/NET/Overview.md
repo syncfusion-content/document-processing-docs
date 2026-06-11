@@ -6,9 +6,9 @@ control: PDF
 documentation: UG
 ---
 
-# Overview of PDF Framework
+# Overview of PDF Library
 
-The PDF framework is a feature rich [.NET PDF class library](https://www.syncfusion.com/document-sdk/net-pdf-library) developed with 100% managed C# code that can be used to create, read and write PDF. The library can be used in [Windows Forms](https://www.syncfusion.com/document-sdk/net-pdf-library), [WPF](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET Web Forms](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET MVC](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET Core](https://www.syncfusion.com/document-sdk/net-pdf-library), [Blazor](https://www.syncfusion.com/document-sdk/net-pdf-library), [UWP](https://www.syncfusion.com/document-sdk/net-pdf-library), [Flutter](https://www.syncfusion.com/document-sdk/flutter-pdf-library), [WinUI](https://www.syncfusion.com/document-sdk/net-pdf-library) and [.NET MAUI](https://www.syncfusion.com/document-sdk/net-pdf-library) applications and Unity platform without the dependency of Adobe Acrobat. The creation of PDF follows the most popular PDF 1.7 (ISO 32000-1) and latest PDF 2.0 (ISO 32000-2) specifications.
+Syncfusion PDF Document Processing library is a class library used to create, read, and write PDF files through code in .NET [Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, MAUI, WinUI], JavaScript, and Flutter applications without Adobe dependencies. It eases developers to integrate this library to achieve the required PDF document processing functionalities and concentrate on the core logic of your application.
 
 ## Key Features of Essential<sup>&reg;</sup> PDF
 
