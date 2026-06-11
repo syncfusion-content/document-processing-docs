@@ -30,9 +30,7 @@ Step2: Create a new Angular application using the Angular CLI command as follows
 ng new my-app
 cd my-app
 ```
-Step3: All Syncfusion<sup>&reg;</sup> JS 2 packages are published in `npmjs.com` registry.
-
-* To install PDF component, use the following command.
+Step3: All Syncfusion<sup>&reg;</sup> JS 2 packages are published in `npmjs.com` registry.To install the PDF component, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pdf --save

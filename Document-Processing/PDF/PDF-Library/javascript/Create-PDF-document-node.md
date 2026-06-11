@@ -16,9 +16,7 @@ This guide explains how to integrate the Syncfusion TypeScript PDF library into 
 
 ## Integrate the PDF library into a Node.js Server Environment
 
-Step1: All Syncfusion JS 2 packages are published in `npmjs.com` registry.
-
-* To install the PDF library, use the following command.
+Step1: All Syncfusion JS 2 packages are published in `npmjs.com` registry.To install the PDF library, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pdf --save
