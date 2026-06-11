@@ -14,17 +14,17 @@ Syncfusion® React DOCX Editor (Document Editor) supports spell checking for doc
 
 ## Features
 
-Supports context menu suggestions for misspelled words.
+* Supports context menu suggestions for misspelled words.
 
-Provides options such as Ignore, Ignore All, Change, and Change All in the spell check dialog.
+* Provides options such as Ignore, Ignore All, Change, and Change All in the spell check dialog.
 
 ## Configure spell check in React DOCX Editor
 
-Spell checking is enabled using the enableSpellCheck property and by configuring the spellChecker settings. A server-side service is required to process text, detect misspelled words, and provide suggestions for display in the editor.
+Spell checking is enabled using the [enableSpellCheck](https://ej2.syncfusion.com/documentation/api/document-editor-container/index-default#enablespellcheck) property and by configuring the spellChecker settings. A server-side service is required to process text, detect misspelled words, and provide suggestions for display in the editor.
 
 ### Client-side configuration
 
-Spell check can be enabled in the Document Editor using the enableSpellCheck property. Configure the spellCheckSettings with a valid service URL and language ID to activate spelling validation and suggestions.
+Spell check can be enabled in the Document Editor using the [enableSpellCheck](https://ej2.syncfusion.com/documentation/api/document-editor-container/index-default#enablespellcheck) property. Configure the spell check settings with a valid service URL and language ID to enable spelling validation and suggestions.
 
 The following code example demonstrates how to enable spell check and configure basic spell checker settings:
 
@@ -87,47 +87,44 @@ By default, the Document Editor retrieves both spelling errors and suggestions f
 
 The following code example demonstrates how to enable spell check suggestions.
 
-{% tabs %}
-{% highlight ts tabtitle="TS" %}
+```ts
 
 container.documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
+
+```
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Remove underline
 
-By default, misspelled words are marked with a squiggly line. This behavior can be disabled using the removeUnderline API, which prevents squiggly lines from being rendered for misspelled words.
+By default, misspelled words are marked with a squiggly line. This behavior can be disabled using the [removeUnderline](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellchecker#get-removeunderline-boolean) API, which prevents squiggly lines from being rendered for misspelled words.
 
 The following code example demonstrates how to configure this behavior.
 
-{% tabs %}
-{% highlight ts tabtitle="TS" %}
+```ts
 
 container.documentEditor.spellChecker.removeUnderline = false;
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ### Language configuration
 
-The Document Editor supports multi-language spell checking. Multiple languages (dictionaries) can be added on the server side, and the language used for spell checking must match the languageID specified in the Document Editor.
+The Document Editor supports multi-language spell checking. Multiple languages (dictionaries) can be added on the server side, and the language used for spell checking must match the [languageID](https://ej2.syncfusion.com/documentation/api/document-editor/spellchecker#get-languageid-number) specified in the Document Editor.
 
 The following code example demonstrates how to configure the languageID.
 
-{% tabs %}
-{% highlight ts tabtitle="TS" %}
+```ts
 
 container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ### Add new word to dictionary
 
 If a root word is missing from the dictionary file, it can be added along with rules to generate possible word forms using the AddNewWord API in the server-side spell check library.
 
-N> Rules are automatically generated based on the root word, possible words, and affix file. Passing null for the affPath and possibleWords parameters adds only the root word to the dictionary. This API is available starting from v20.2.0.xx.
+N> Rules are automatically generated based on the root word, possible words, and affix file. Passing null for the affPath and possibleWords parameters adds only the root word to the dictionary.
 
 The following server-side example demonstrates how to add a new root word along with rules to generate possible word forms:
 
@@ -164,21 +161,18 @@ If dictionaries are initialized using the InitializeDictionaries method, the def
 
 To write a Web API for word-by-word spell checking, refer to the [link](https://help.syncfusion.com/document-processing/word/word-processor/react/web-services/core#spell-check-word-by-word).
 
-Previously, on every SpellChecker.GetSuggestion() method call, the .aff and dictionary data will be parsed to generate suggestion for misspelled words. But, starting from v20.1.0.xx, the .aff and dictionary data will be parsed only for the first time while calling the SpellChecker.GetSuggestion() method.
 
 ### Optimized spell check
 
-The Document Editor provides an option to perform spell checking page by page when loading documents. By default, this property is set to false, so the spell check web API is called for each word in the document. To optimize the frequency of spell check API calls, you can enable this property.
+The Document Editor provides an option to perform spell checking page by page when loading documents. By default, this property is set to false, so the spell check web API is called for each word in the document. To optimize the frequency of spell check API calls, you can enable the [enableOptimizedSpellCheck](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellchecker#get-enableoptimizedspellcheck-boolean)property.
 
 The following code example illustrates how to enable optimized spell checking.
 
-{% tabs %}
-{% highlight ts tabtitle="TS" %}
+```ts
 
 container.documentEditor.spellChecker.enableOptimizedSpellCheck = true;
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Context menu
 
