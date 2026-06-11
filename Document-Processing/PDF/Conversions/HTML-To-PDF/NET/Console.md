@@ -1,6 +1,6 @@
 ---
 title: Convert HTML to PDF Using a Console Application | Syncfusion
-description: Learn how to convert HTML to PDF using a simple console application with clear and concise steps.
+description: Learn how to convert HTML to PDF using a simple console application with clear, structured, and easy-to-follow step-by-step guidance.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -232,6 +232,6 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 By executing the program, you will get the PDF document as follows.
 ![HTML to PDF output document](htmlconversion_images/IIS-Output.png)
  
-A complete working sample can be downloaded from Github.
+A complete working sample can be downloaded from GitHub.
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) to explore the rich set of Syncfusion® HTML to PDF converter library features.
