@@ -28,20 +28,13 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/main/Markdown-to-PowerPoint-conversion/Convert-Markdown-to-PowerPoint/.NET/Convert-Markdown-to-PowerPoint/Program.cs" %}
-//Open the file as a Stream.
-using (FileStream fileStream = new FileStream("Input.md", FileMode.Open, FileAccess.Read))
-{
-    //Load the file stream.
-    using (IPresentation presentation = Presentation.Open(fileStream))
-    {
-        //Save as a Markdown document into the PPTX FileStream.
-        using (FileStream outputStream = new FileStream("MarkdownToPPTX.pptx", FileMode.Create))
-        {
-            presentation.Save(outputStream);
-        }
-    } 
-}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+ // Open an existing Markdown file.
+ using (IPresentation presentation = Presentation.Open("Input.md"))
+ {
+     //Save as a PowerPoint document.
+     presentation.Save("MarkdownToPPTX.pptx");
+ }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -65,7 +58,263 @@ End Using
 
 T> You can also save the markdown file as [HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html), [PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf), [Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image), and [Word](https://help.syncfusion.com/document-processing/word/conversions/markdown-to-word-conversion)
 
-N> 1. In Markdown to PowerPoint Presentation conversion, invalid images are replaced with a red "X" image instead of the original image.
+N> 1. Hook the event handler before opening a PowerPoint presentation as per the below code example.
+N> 2. In Markdown to PowerPoint Presentation conversion, invalid images are replaced with a red "X" image instead of the original image.
+
+## Load Options
+
+When opening an existing Markdown document, the .NET PowerPoint library provides custom import settings through the **LoadOptions** class. This allows you to customize how the Markdown content is parsed and imported into a PowerPoint Presentation.
+
+### Customize image data
+
+The .NET PowerPoint library provides an `ImageNodeVisited` event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this `ImageNodeVisited` event.
+
+The following code example shows how to load image data based on the image source path when importing the Markdown files.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Create load options.
+LoadOptions loadOptions = new LoadOptions();
+// Specify the format type as Markdown.
+loadOptions.FormatType = FormatType.Markdown;
+// Initialize Markdown import settings for the LoadOptions instance.
+loadOptions.MdImportSettings = new Syncfusion.Office.Markdown.MdImportSettings();
+// Hook the event to customize the image while importing Markdown document.
+loadOptions.MdImportSettings.ImageNodeVisited += MdImportSettings_ImageNodeVisited;
+// Open the Markdown file with load options.
+using (IPresentation presentation = Presentation.Open(Path.GetFullPath("Data/Input.md"), loadOptions))
+{
+	// Save as a PowerPoint document.
+    presentation.Save(Path.GetFullPath(@"Output/Output.pptx"));
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Create load options.
+LoadOptions loadOptions = new LoadOptions();
+// Specify the format type as Markdown.
+loadOptions.FormatType = FormatType.Markdown;
+// Initialize Markdown import settings for the LoadOptions instance.
+loadOptions.MdImportSettings = new Syncfusion.Office.Markdown.MdImportSettings();
+// Hook the event to customize the image while importing Markdown document.
+loadOptions.MdImportSettings.ImageNodeVisited += MdImportSettings_ImageNodeVisited;
+// Open the Markdown file with load options.
+using (IPresentation presentation = Presentation.Open("Input.md", loadOptions))
+{
+    // Save as a PowerPoint document.
+    presentation.Save("MarkdownToPPTX.pptx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Create load options.
+Dim loadOptions As New LoadOptions()
+' Specify the format type as Markdown.
+loadOptions.FormatType = FormatType.Markdown
+' Initialize Markdown import settings for the LoadOptions instance.
+loadOptions.MdImportSettings = New Syncfusion.Office.Markdown.MdImportSettings()
+' Hook the event to customize the image while importing Markdown document.
+AddHandler loadOptions.MdImportSettings.ImageNodeVisited, AddressOf MdImportSettings_ImageNodeVisited
+'Open the Markdown file with load options.
+Using presentation As IPresentation = Presentation.Open("Input.md", loadOptions)
+    'Save as a PowerPoint document.
+    presentation.Save("MarkdownToPPTX.pptx")
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code examples show the event handler to customize the image based on the source path.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+private static void MdImportSettings_ImageNodeVisited(object sender, Syncfusion.Office.Markdown.MdImageNodeVisitedEventArgs args)
+{
+    //Set the image stream based on the image name from the input Markdown.
+    if (args.Uri == "Image_1.png")
+        args.ImageStream = new FileStream("Image_1.png", FileMode.Open);
+    else if (args.Uri == "Image_2.png")
+        args.ImageStream = new FileStream("Image_2.png", FileMode.Open);
+    //Retrieve the image from the website and use it.
+    else if (args.Uri.StartsWith("https://"))
+    {
+        WebClient client = new WebClient();
+        //Download the image as a stream.
+        byte[] image = client.DownloadData(args.Uri);
+        Stream stream = new MemoryStream(image);
+        //Set the retrieved image from the input Markdown.
+        args.ImageStream = stream;
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private static void MdImportSettings_ImageNodeVisited(object sender, Syncfusion.Office.Markdown.MdImageNodeVisitedEventArgs args)
+{
+    //Set the image stream based on the image name from the input Markdown.
+    if (args.Uri == "Image_1.png")
+        args.ImageStream = new FileStream("Image_1.png", FileMode.Open);
+    else if (args.Uri == "Image_2.png")
+        args.ImageStream = new FileStream("Image_2.png", FileMode.Open);
+    //Retrieve the image from the website and use it.
+    else if (args.Uri.StartsWith("https://"))
+    {
+        WebClient client = new WebClient();
+        //Download the image as a stream.
+        byte[] image = client.DownloadData(args.Uri);
+        Stream stream = new MemoryStream(image);
+        //Set the retrieved image from the input Markdown.
+        args.ImageStream = stream;
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Private Shared Sub MdImportSettings_ImageNodeVisited(ByVal sender As Object, ByVal args As Syncfusion.Office.Markdown.MdImageNodeVisitedEventArgs)
+    'Set the image stream based on the image name from the input Markdown.
+    If args.Uri Is "Image_1.png" Then
+        args.ImageStream = New FileStream("Image_1.png", FileMode.Open)
+    ElseIf args.Uri Is "Image_2.png" Then
+        args.ImageStream = New FileStream("Image_2.png", FileMode.Open)
+    'Retrieve the image from the website and use it.
+    ElseIf args.Uri.StartsWith("https://") Then
+        Dim client As WebClient = New WebClient()
+        'Download the image as a stream.
+        Dim image As Byte() = client.DownloadData(args.Uri)
+        Dim stream As Stream = New MemoryStream(image)
+        'Set the retrieved image from the input Markdown.
+        args.ImageStream = stream
+    End If
+End Sub
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Hook the event handler before opening a PowerPoint Presentation as per the above code example.
+ 
+### Encoding
+
+The .NET PowerPoint library provides an `Encoding` property to specify the character encoding to use when opening a Markdown file. This property is useful when you need to open Markdown files that are saved with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
+
+The following code example shows how to open a Markdown file with a specific encoding.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Create load options.
+LoadOptions loadOptions = new LoadOptions();
+// Specify the format type as Markdown.
+loadOptions.FormatType = FormatType.Markdown;
+// Initialize Markdown import settings for the LoadOptions instance.
+loadOptions.MdImportSettings = new Syncfusion.Office.Markdown.MdImportSettings();
+//Set the encoding for the Markdown file.
+loadOptions.MdImportSettings.Encoding = Encoding.UTF8;
+// Open the Markdown file with load options.
+using (IPresentation presentation = Presentation.Open("Input.md", loadOptions))
+{
+    //Save as a PowerPoint document.
+    presentation.Save("MarkdownToPPTX.pptx");
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Create load options.
+LoadOptions loadOptions = new LoadOptions();
+// Specify the format type as Markdown.
+loadOptions.FormatType = FormatType.Markdown;
+// Initialize Markdown import settings for the LoadOptions instance.
+loadOptions.MdImportSettings = new Syncfusion.Office.Markdown.MdImportSettings();
+// Set the encoding for the Markdown file.
+loadOptions.MdImportSettings.Encoding = Encoding.UTF8;
+// Open the Markdown file with load options.
+using (IPresentation presentation = Presentation.Open("Input.md", loadOptions))
+{
+    //Save as a PowerPoint document.
+    presentation.Save("MarkdownToPPTX.pptx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Create load options.
+Dim loadOptions As New LoadOptions()
+'Specify the format type as Markdown.
+loadOptions.FormatType = FormatType.Markdown
+' Initialize Markdown import settings for the LoadOptions instance.
+loadOptions.MdImportSettings = New Syncfusion.Office.Markdown.MdImportSettings()
+'Set the encoding for the Markdown file.
+loadOptions.MdImportSettings.Encoding = Encoding.UTF8
+' Open the Markdown file with load options.
+Using presentation As IPresentation = Presentation.Open("Input.md", loadOptions)
+    'Save as a PowerPoint document.
+    presentation.Save("MarkdownToPPTX.pptx")
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Provide the encoding values before opening a PowerPoint Presentation as per the above code example.
+
+### Use Thematic Break As ContentBreak
+
+The .NET PowerPoint library provides a `UseThematicBreakAsContentBreak` property to control how thematic breaks (horizontal lines) in Markdown are handled during conversion. When set to `true`, each thematic break is treated as a content boundary that splits the Markdown content into separate slides in the PowerPoint Presentation.
+
+The following code example shows how to use thematic breaks to split content into multiple slides.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Create load options.
+LoadOptions loadOptions = new LoadOptions();
+// Specify the format type as Markdown.
+loadOptions.FormatType = FormatType.Markdown;
+// Initialize Markdown import settings for the LoadOptions instance.
+loadOptions.MdImportSettings = new Syncfusion.Office.Markdown.MdImportSettings();
+// Set UseThematicBreakAsContentBreak to split slides based on thematic breaks.
+loadOptions.MdImportSettings.UseThematicBreakAsContentBreak = true;
+// Open the Markdown file with load options.
+using (IPresentation presentation = Presentation.Open(Path.GetFullPath("Data/Input.md"), loadOptions))
+{
+    // Save as a PowerPoint document.
+    presentation.Save(Path.GetFullPath("Output/MarkdownToPPTX.pptx"));
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Create load options.
+LoadOptions loadOptions = new LoadOptions();
+// Specify the format type as Markdown.
+loadOptions.FormatType = FormatType.Markdown;
+// Initialize Markdown import settings for the LoadOptions instance.
+loadOptions.MdImportSettings = new Syncfusion.Office.Markdown.MdImportSettings();
+// Set UseThematicBreakAsContentBreak to split slides based on thematic breaks.
+loadOptions.MdImportSettings.UseThematicBreakAsContentBreak = true;
+// Open the Markdown file with load options.
+using (IPresentation presentation = Presentation.Open("Input.md", loadOptions))
+{
+    // Save as a PowerPoint document.
+    presentation.Save("MarkdownToPPTX.pptx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Create load options.
+Dim loadOptions As New LoadOptions()
+'Specify the format type as Markdown.
+loadOptions.FormatType = FormatType.Markdown
+' Initialize Markdown import settings for the LoadOptions instance.
+loadOptions.MdImportSettings = New Syncfusion.Office.Markdown.MdImportSettings()
+' Set UseThematicBreakAsContentBreak to split slides based on thematic breaks.
+loadOptions.MdImportSettings.UseThematicBreakAsContentBreak = True
+' Open the Markdown file with load options.
+Using presentation As IPresentation = Presentation.Open("Input.md", loadOptions)
+    ' Save as a PowerPoint document.
+    presentation.Save("MarkdownToPPTX.pptx")
+End Using
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Supported Markdown Syntax
 
