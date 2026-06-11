@@ -127,7 +127,7 @@ Refer to the following documentation to get started with the [React Document Edi
 
 ### Step 2: Enable collaborative editing
 
-To enable collaborative editing, inject `CollaborativeEditingHandler` and set the `enableCollaborativeEditing` property to true in the Document Editor.
+To enable collaborative editing, inject [CollaborativeEditingHandler](https://ej2.syncfusion.com/documentation/api/document-editor/collaborativeeditinghandler) and set the [enableCollaborativeEditing](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#enablecollaborativeediting) property to true in the Document Editor.
 
 The following code snippet demonstrates how to enable collaborative editing in the Document Editor.
 
@@ -176,7 +176,7 @@ render() {
 
 ### Step 3: Configure SignalR to send and receive changes
 
-To broadcast changes and receive updates from remote users, install the [Microsoft SignalR npm](https://www.npmjs.com/package/@microsoft/signalr) package in your React application
+To broadcast changes and receive updates from remote users, install the [Microsoft SignalR npm](https://www.npmjs.com/package/@microsoft/signalr) package in your React application.
 
 The following code snippet demonstrates how to configure SignalR in the Document Editor.
 
@@ -318,7 +318,7 @@ public openDocument(responseText: string, roomName: string): void {
 
 Changes made on the client side must be transmitted to the server to be broadcast to other connected users. 
 
-The following code snippet demonstrates how to send changes to the server using the `contentChange` event in the Document Editor.
+The following code snippet demonstrates how to send changes to the server using the [contentChange](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#contentchange) event in the Document Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
