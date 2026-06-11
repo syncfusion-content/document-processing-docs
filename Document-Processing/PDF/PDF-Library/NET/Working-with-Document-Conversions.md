@@ -161,10 +161,10 @@ wordDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Word-to-PDF/Converting-Word-to-PDF-document).
 
-Note:
-* Initializing the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is mandatory to convert the charts present in the Word document to PDF. Otherwise the charts will not be exported to the converted PDF.
-* [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards.
-* Total number of pages may vary  based on unsupported elements in the converted PDF document when compare to Word document.
+
+N> 1. Initializing the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is mandatory to convert the charts present in the Word document to PDF. Otherwise the charts will not be exported to the converted PDF.
+N> 2. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards.
+N> 3. Total number of pages may vary  based on unsupported elements in the converted PDF document when compare to Word document.
 
 ### Customizing the Word document to PDF conversion
 
@@ -258,7 +258,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Converting Excel documents to PDF
 
-[ExcelToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPDFConverter.Base~Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html) is responsible for converting an Excel document into PDF. Essential<sup>&reg;</sup> PDF allows you to convert an entire workbook or a single worksheet into PDF document. Refer to the following links for assemblies/nuget packages required based on platforms to convert Excel document into PDF. 
+[ExcelToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html) is responsible for converting an Excel document into PDF. Essential<sup>&reg;</sup> PDF allows you to convert an entire workbook or a single worksheet into PDF document. Refer to the following links for assemblies/nuget packages required based on platforms to convert Excel document into PDF. 
 
 * [Assemblies Information](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required#converting-excel-document-to-pdf)
 * [NuGet Information](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required#converting-excel-document-to-pdf)
@@ -524,7 +524,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Excel with Chart to PDF
 
-To preserve the charts during Excel to PDF conversion, you should initialize the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_ChartToImageConverter) of [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Base~Syncfusion.XlsIO.IApplication.html) interface, otherwise the charts present in worksheet will get skipped. The following code illustrate how to convert an Excel with chart to PDF document.
+To preserve the charts during Excel to PDF conversion, you should initialize the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_ChartToImageConverter) of [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html) interface, otherwise the charts present in worksheet will get skipped. The following code illustrate how to convert an Excel with chart to PDF document.
 
 {% tabs %}
 
@@ -698,7 +698,7 @@ For ASP.NET Core and Xamarin applications
 * using Syncfusion.DocIORenderer
 * using Syncfusion.Pdf
 
-[DocToPDFConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.Base~Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class is responsible for converting a RTF to PDF. The following code snippet illustrates how to convert a RTF to PDF document.
+[DocToPDFConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class is responsible for converting a RTF to PDF. The following code snippet illustrates how to convert a RTF to PDF document.
 
 {% tabs %}
 

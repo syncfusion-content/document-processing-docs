@@ -73,6 +73,132 @@ doc.annotations.flattenAllAnnotations();
 const bytes = await doc.save();
 ```
 
+### Flatten on Load
+
+Use the following code-snippet, when you want uploaded PDFs to be flattened before they are loaded into the viewer.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import * as React from 'react';
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Annotation,
+  FormFields,
+  Inject,
+  Magnification,
+} from '@syncfusion/ej2-react-pdfviewer';
+import { PdfDocument, _encode } from '@syncfusion/ej2-pdf';
+import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
+function Default() {
+  let viewer;
+  const openFile = {
+    prefixIcon: 'e-icons e-folder',
+    id: 'openPdf',
+    tooltipText: 'Open File',
+    align: 'left',
+  };
+  const extensions = '.pdf';
+  const toolbarSettings = {
+    showTooltip: true,
+    toolbarItems: [
+      openFile,
+      'PageNavigationTool',
+      'MagnificationTool',
+      'PanTool',
+      'SelectionTool',
+      'SearchOption',
+      'PrintOption',
+      'UndoRedoTool',
+      'AnnotationEditTool',
+      'FormDesignerEditTool',
+      'CommentTool',
+      'SubmitForm',
+      'DownloadOption',
+    ],
+  };
+ 
+  function toolbarClick(args) {
+    if (args.item && args.item.id === 'openPdf') {
+      document
+        .getElementsByClassName('e-file-select-wrap')[0]
+        .querySelector('button')
+        .click();
+    }
+  }
+  function onSelect(args) {
+    let validFiles = args.filesData;
+    if (validFiles.length === 0) {
+      args.cancel = true;
+      return;
+    }
+    if (!extensions.includes(validFiles[0].type)) {
+      args.cancel = true;
+      return;
+    }
+ 
+    let file = validFiles[0].rawFile;
+    let reader = new FileReader();
+ 
+    reader.addEventListener('load', () => {
+      let base64Data = reader.result;
+      let pdf = base64Data.split(',')[1];
+      const document = new PdfDocument(pdf);
+ 
+      //flatten the annotation and form fields
+      document.flatten = true;
+ 
+      var flattened = document.save();
+      //laod the flattened PDF in PDF Viewer
+      viewer.load(flattened, null);
+    });
+ 
+    reader.readAsDataURL(file);
+  }
+  return (
+    <div>
+      <div className="control-section">
+        <div style={{ display: 'none' }}>
+          <UploaderComponent
+            id="fileUpload"
+            type="file"
+            allowedExtensions=".pdf"
+            selected={onSelect}
+          ></UploaderComponent>
+        </div>
+        {/* Render the PDF Viewer */}
+        <PdfViewerComponent
+          ref={(scope) => {
+            viewer = scope;
+          }}
+          id="container"
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          resourceUrl="https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib"
+          enableAnnotation={true}
+          enableFormFields={true}
+          toolbarSettings={toolbarSettings}
+          toolbarClick={toolbarClick}
+          style={{ height: '640px' }}
+        >
+          <Inject services={[Toolbar, Annotation, FormFields, Magnification]} />
+        </PdfViewerComponent>
+      </div>
+    </div>
+  );
+}
+export default Default;
+ 
+const root = createRoot(document.getElementById('sample'));
+root.render(<Default />);
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+N> Refer to the [Flatten on Download](../annotation/flatten-annotation#how-to-flatten-annotations) section for more information about flattening documents on download.
+
 ## Add Watermark or Stamp
 ### UI-Level Stamps
 The PDF Viewer toolbar allows users to:

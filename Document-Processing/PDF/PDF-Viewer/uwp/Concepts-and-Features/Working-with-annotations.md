@@ -187,3 +187,8 @@ Use the [`AnnotationVisibility`](https://help.syncfusion.com/cr/uwp/Syncfusion.W
 pdfViewer.AnnotationVisibility = Visibility.Collapsed;
 
 {% endhighlight %}
+
+## See Also
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [Printing](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/printing-pdf)
+- [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/enable-disable-undo-redo)

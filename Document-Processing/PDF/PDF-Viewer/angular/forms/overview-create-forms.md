@@ -9,10 +9,9 @@ documentation: ug
 
 # Create, Edit, Style, and Remove Form Fields in Angular PDF Viewer
 
-The [Angular PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/overview) allows you to create interactive PDF form fields, update their behavior and appearance, and remove them when they are no longer needed.
-All form field operations can be performed using either the [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/angular/#/tailwind3/pdfviewer/form-designer) or [Angular APIs.](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/overview)
+The [Angular PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/overview) enables the creation, editing, styling, and removal of interactive PDF form fields. These operations are available through the [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/angular/#/tailwind3/pdfviewer/form-designer) or programmatically via the Angular APIs.
 
-This section explains how to:
+This section links to step-by-step guidance for each operation:
 
 - [Create PDF form fields](./manage-form-fields/create-form-fields)
 - [Edit form field behavior and values](./manage-form-fields/modify-form-fields)

@@ -44,21 +44,17 @@ Step 5: Next, include the following namespaces in that  ``FetchData.razor`` file
 @using System.IO;
 
 {% endhighlight %}
-{% endtabs %}
 
 Step 6: Create a button in the ``FetchData.razor`` using the following code.
 
-{% tabs %}
 {% highlight CSHTML %}
-<button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
+<button class="btn btn-primary" @onclick="@ExportToPdf">Export PDF</button>
 {% endhighlight %}
-{% endtabs %}
 
 Step 7: Define the ``@ExportToPdf`` click function on ``FetchData.razor`` file.
 
 The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created and add a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) to it. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
- 
-{% tabs %}
+
 {% highlight c# tabtitle="C#" %}
 
 @functions {
@@ -106,11 +102,8 @@ JS.SaveAs("Sample.pdf", memoryStream.ToArray());
 }
 
 {% endhighlight %}
-{% endtabs %}
 
 Step 8: Create a class file with ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
-
-{% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 
@@ -128,8 +121,6 @@ public static class FileUtil
 {% endtabs %}
 
 Step 9: Add the following JavaScript function in the ``index.html`` available under the ``wwwroot`` folder.
-
-{% tabs %}
 
 {% highlight HTML %}
 
@@ -157,8 +148,6 @@ Step 9: Add the following JavaScript function in the ``index.html`` available un
 </script>
 
 {% endhighlight %}
-
-{% endtabs %}
 
 Step 10: Build the project.
 

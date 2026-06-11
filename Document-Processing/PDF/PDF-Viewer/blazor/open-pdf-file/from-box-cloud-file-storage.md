@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Open PDF file from Box cloud file storage in Blazor SfPdfViewer
+# Open PDF from Box cloud storage in SfPdfViewer
 
 To load a PDF file from Box cloud file storage in the Blazor SfPdfViewer, follow the steps below.
 
@@ -36,7 +36,9 @@ Import the required namespaces at the top of your `Index.razor` file:
 @using Syncfusion.Blazor.SfPdfViewer;
 ```
 
-### Step 2: Add Code to Load a PDF from Box Storage
+## Step 4 — Example: download a file and load into the viewer
+
+The example below locates a file in a Box folder, downloads it, converts it to a Base64 data URI, and assigns it to `DocumentPath`.
 
 ```csharp
 

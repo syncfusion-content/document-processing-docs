@@ -21,11 +21,11 @@ Flattening PDF forms converts interactive fields such as textboxes, dropdowns, c
 
 ## Flatten forms before downloading PDF
 
-1. Add a ref to the `PdfViewerComponent` so you can access viewer APIs from event handlers.
-2. Intercept the download flow using `downloadStart` and cancel the default flow.
-3. Retrieve the viewer's blob via `saveAsBlob()` and convert the blob to base64.
+1. Add a ref to the [`PdfViewerComponent`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer) so you can access viewer APIs from event handlers.
+2. Intercept the download flow using [`downloadStart`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#downloadstart) and cancel the default flow.
+3. Retrieve the viewer's blob via [`saveAsBlob()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#saveasblob) and convert the blob to base64.
 4. Use `PdfDocument` from Syncfusion PDF Library to open the document, set `field.flatten = true` for each form field, then save.
-5. For the flattening the form fields when downloading through *Save As* option in Page Organizer, repeat steps 2–4 by using `pageOrganizerSaveAs` event.
+5. For the flattening the form fields when downloading through *Save As* option in Page Organizer, repeat steps 2–4 by using [`pageOrganizerSaveAs`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#pageorganizersaveas) event.
 
 ## Complete example
 
@@ -111,8 +111,8 @@ export default function App() {
 
 ## Troubleshooting
 
-- If viewerRef is null, ensure `ref={viewerRef}` is present and the component has mounted before invoking `saveAsBlob()`.
-- Missing `resourceUrl`: If viewer resources are not reachable, set `resourceUrl` to the correct CDN or local path for the ej2-pdfviewer-lib.
+- If viewerRef is null, ensure `ref={viewerRef}` is present and the component has mounted before invoking [`saveAsBlob()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#saveasblob).
+- Missing [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl): If viewer resources are not reachable, set [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) to the correct CDN or local path for the ej2-pdfviewer-lib.
 
 ## Related topics
 

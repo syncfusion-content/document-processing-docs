@@ -7,9 +7,9 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Save PDF file to Google Cloud Storage in Blazor SfPdfViewer
+# Save PDF to Google Cloud Storage in Blazor SfPdfViewer
 
-To save a PDF file to Google Cloud Storage from the SfPdfViewer, follow the steps below.
+Follow these steps to save a PDF from the SfPdfViewer to Google Cloud Storage (GCS).
 
 **Step 1** Create a service account
 
@@ -27,7 +27,7 @@ Start by following the steps in this guide to create a [basic SfPdfViewer](https
 @using Google.Cloud.Storage.V1;
 @using Google.Apis.Auth.OAuth2;
 @using Syncfusion.Blazor.SfPdfViewer;
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Buttons;
 ```
 
 **Step 4:** Add the below code example to the Index.razor file to upload the currently loaded document to GCS.

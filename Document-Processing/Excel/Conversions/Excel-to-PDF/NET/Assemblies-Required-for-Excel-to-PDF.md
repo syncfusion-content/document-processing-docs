@@ -32,16 +32,6 @@ Syncfusion.ExcelToPDFConverter.Base
 </td>
 </tr>
 <tr>
-<td>
-{{'[Windows Forms](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-windows-forms)' | markdownify}} and {{'[WPF (Client Profile)](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-wpf)' | markdownify}}    
-</td>
-<td>
-Syncfusion.XlsIO.ClientProfile<br/>
-Syncfusion.Compression.Base<br/>
-Syncfusion.Pdf.ClientProfile<br/>
-Syncfusion.ExcelToPDFConverter.ClientProfile
-</td>
-</tr>
 <tr>
 <td>
 {{'[ASP.NET Core](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-blazor)' | markdownify}}

@@ -8,21 +8,21 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import and export annotation
+# Import and export annotations
 
-The PDF Viewer control provides the support to import and export annotations using JSON object in the PDF document.
+The PDF Viewer control supports importing and exporting annotations as JSON or XFDF. Use the annotation toolbar to add, edit, import, or export annotations for the loaded PDF document.
+
+Using the annotation toolbar:
 
 * Click the Add or Edit annotation button in the PDF Viewer toolbar.
 
 ![EditButton](../images/edittool.png)
 
-* The annotation toolbar will appear.
-* Click the Comment Panel button in the annotation toolbar.
+* In the annotation toolbar, open the Comment Panel.
 
 ![CommentPanel](../images/commentPanel.png)
 
-* The comments panel will displayed.
-* Click the **More Option** button in the comment panel container.
+* In the Comment Panel, use the More Options menu to choose import or export actions.
 
 ![MoreOption](../images/Importandexport.png)
 

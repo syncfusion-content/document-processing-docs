@@ -77,7 +77,7 @@ When [Form Designer mode](https://ej2.syncfusion.com/javascript/documentation/ap
 
 ![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/prefilledforms-cs1" %}
 
 For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation](./manage-form-fields/create-form-fields) in JavaScript PDF Viewer documentation.
 

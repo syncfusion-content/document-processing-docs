@@ -165,7 +165,7 @@ IPivotField pageField = pivotTable.Fields[4];
 
 //Select multiple items in page field to filter
 pageField.Items[1].Visible = false;
-pageField.Items[2].Visible = false; 
+pageField.Items[2].Visible = false;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}

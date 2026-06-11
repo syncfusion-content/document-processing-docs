@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation Collection in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about annotation collection in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its uses.
+description: Learn how to access and manage the annotation collection in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -61,3 +61,8 @@ private void OnAnnotationsLoaded(object? sender, EventArgs e)
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Add, Remove, and Modify Annotations](../add-remove-modify-annotations)
+- [Annotations Overview](../annotations-overview)
+- [Select and Deselect Annotations](../select-deselect-annotations)

@@ -12,68 +12,61 @@ domainurl: ##DomainURL##
 
 ### Overview
 
-The TypeScript PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps explain how to securely load and store PDFs using AAD.
-
-### Steps to open a PDF from Azure Active Directory
+This article explains how to load and save PDF files from Azure Active Directory (AAD) into the Syncfusion Angular PDF Viewer using a secure server-side component. It covers application registration, storage configuration, server and client setup, common pitfalls, and recommended security practices.
 
 ---
 
 ### Step 1: Register an application in Azure Active Directory (AAD)
 
-1. **Go to the Azure Portal**:
-   - Navigate to [Azure Portal](https://portal.azure.com).
+1. **Go to the Azure Portal**
+  - Navigate to the Azure Portal (https://portal.azure.com).
 
-2. **Register your Application**:
-   - In the Azure portal, go to **Azure Active Directory** > **App registrations** > **New registration**.
-   - Register your application and note down the **Application (client) ID** and **Directory (tenant) ID**.
+2. **Register the application**
+  - In **Azure Active Directory**, open **App registrations** and create a **New registration**.
+  - Note the **Application (client) ID** and **Directory (tenant) ID** for the server-side configuration.
 
-   ![app-registration](../images/app-registration.png)
+  ![Azure app registration screen](../images/app-registration.png)
 
-3. **Create a Client Secret**:
-   - In the registered application, go to **Certificates & secrets**.
-   - Click **New client secret**.
-   - Provide a description and set an expiration period.
-   - Click **Add**.
-   - Copy the client secret value immediately, as it will be hidden later. Store it securely.
+3. **Create a client secret (if not using Managed Identity)**
+  - In the registered application, open **Certificates & secrets** and create a **New client secret**.
+  - Copy and store the client secret securely; it will be hidden after creation.
 
-   ![client-secret](../images/client-secret.png)
+  ![Create client secret in Azure AD](../images/client-secret.png)
 
 ---
 
 ### Step 2: Create the Azure Storage account
 
-1. **Create a Storage Account**:
-   - In the Azure portal, use the search bar to search for **Storage accounts**.
-   - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
+1. **Create a Storage Account**
+  - In the Azure portal, create a Storage account and configure name, region, and redundancy options.
 
-    ![storage-account](../images/storage-account.png)
+  ![Azure storage account overview](../images/storage-account.png)
 
 ---
 
 ### Step 3: Assign a role to the application
 
-1. **Go to your Storage Account**:
-   - Navigate to **Access control (IAM)** > **Add role assignment** in your Azure Storage Account.
+1. **Assign the Storage Blob Data Contributor role**
+  - In the Storage account, open **Access control (IAM)** → **Add role assignment**.
+  - Select **Storage Blob Data Contributor**, choose **User, group, or service principal**, and add the registered application as a member.
+  - Click on **Select members** and search for your registered application by name or client ID.
+  - Select your application and click **Select**.
+  - Click **Review + assign** to finalize the role assignment.
 
-2. **Assign Role**:
-   - Assign the **Storage Blob Data Contributor** role to your registered application.
-   - In the **Assign access to** dropdown, select **User, group, or service principal**.
-   - Click on **Select members** and search for your registered application by name or client ID.
-   - Select your application and click **Select**.
-   - Click **Review + assign** to finalize the role assignment.
+  ![Assign role to application in Azure](../images/add-role.png)
 
-    ![add-role](../images/add-role.png)
 ---
 
 ### Step 4: Upload the PDF to Azure Storage
 
-1. **Navigate to Data Storage**:
-   - In the Azure portal, go to **Data storage** > **Containers**.
+1. **Upload the PDF file to a container**
+  - In the Storage account, open **Containers**, create or select a container, and upload the PDF document intended for viewing.
 
 2. **Upload the PDF File**:
-   - Create a new container and upload the PDF document you want to access in the PDF Viewer.
+  - Create a new container and upload the PDF document you want to access in the PDF Viewer.
 
-    ![upload-pdf](../images/upload-pdf.png)
+  ![Upload PDF to Azure Blob container](../images/upload-pdf.png)
+
 ---
 
 ### Step 5: Server-side configuration

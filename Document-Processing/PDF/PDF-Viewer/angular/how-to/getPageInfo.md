@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Get Page Info in Angular PDF Viewer component
 
-The PDF Viewer library allows you to retrieves the information of a specified page in the viewer using the **getPageInfo()** method.This provides Essential<sup style="font-size:70%">&reg;</sup> information such as the dimensions, and rotation.
+The `getPageInfo()` method returns metadata for a specified page in the viewer, such as `height`, `width`, and `rotation`. `pageIndex` is zero-based. Call `getPageInfo()` after the viewer is ready to ensure page data is available (for example, in `ngAfterViewInit` or after the document has been loaded).
 
-The following steps are used to getPageInfo.
+The following example retrieves and logs the page dimensions and rotation for a specified page.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** The following code snippet to implement the functionality for retrieving height, width and roration of a specified page in the viewer.
+**Step 2:** The following code snippet implements retrieval of height, width, and rotation for a specified page in the viewer.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -78,10 +78,10 @@ export class AppComponent implements OnInit {
     // To Retrieve and log the page information
     console.log(viewer.getPageInfo(pageIndex));
 
-    // To Log the specific page information details to the console
+    // To log the specific page information details to the console
     const pageInfo = viewer.getPageInfo(pageIndex);
     if (pageInfo) {
-      console.log(`Page Info for Page Index ${pageIndex}:`);
+      console.log(`Page Info for page index ${pageIndex}:`);
       console.log(`Height: ${pageInfo.height}`);
       console.log(`Width: ${pageInfo.width}`);
       console.log(`Rotation: ${pageInfo.rotation}`);
