@@ -10,180 +10,241 @@ domainurl: ##DomainURL##
 
 # Bookmark navigation in React PDF Viewer
 
-Bookmarks embedded in a PDF are loaded and presented for easy navigation. Enable bookmark navigation using the snippet below.
+## Overview
+
+This guide shows how to enable and use bookmark navigation in the EJ2 React PDF Viewer. You will enable bookmarks, navigate programmatically using [`goToBookmark`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#gotobookmark), and retrieve the document's bookmark list with [`getBookmarks`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#getbookmarks).
+
+## Steps
+
+### 1. Enable bookmark
+
+Add [`enableBookmark={true}`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablebookmark) to [`PdfViewerComponent`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer) and inject [`BookmarkView`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview) into the viewer.
 
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
 import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  Annotation,
-  ThumbnailView,
-  BookmarkView,
-  TextSelection,
-  Inject
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject
 } from '@syncfusion/ej2-react-pdfviewer';
+import { useRef, RefObject } from 'react';
 
-function App() {
-  let pdfviewer;
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      enableBookmark={true}
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-      style={{ height: '500px', width: '100%' }}
-    >
-      <Inject services={[
-        Toolbar,
-        Magnification,
-        Navigation,
-        Annotation,
-        LinkAnnotation,
-        ThumbnailView,
-        BookmarkView,
-        TextSelection
-      ]} />
-    </PdfViewerComponent>
-  );
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent | null> = useRef<PdfViewerComponent>(null);
+    return (
+        <div style={{ height: '100vh' }}>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={viewerRef}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+                style={{ height: '100%' }}
+                enableBookmark={true}
+            >
+                <Inject
+                    services={[
+                        Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                        ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
+    );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  Annotation,
-  ThumbnailView,
-  BookmarkView,
-  TextSelection,
-  Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-
-function App() {
-  let pdfviewer;
-  return (
-    <PdfViewerComponent
-      id="PdfViewer"
-      ref={(scope) => { pdfviewer = scope; }}
-      enableBookmark={true}
-      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/"
-      style={{ height: '500px', width: '100%' }}
-    >
-      <Inject services={[
-        Toolbar,
-        Magnification,
-        Navigation,
-        Annotation,
-        LinkAnnotation,
-        ThumbnailView,
-        BookmarkView,
-        TextSelection
-      ]} />
-    </PdfViewerComponent>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-![Bookmarks panel in the PDF Viewer](../images/bookmark.png)
+**Expected result**: The **Bookmarks** button on the left navigation toolbar is enabled.
 
-To perform bookmark navigation, use the `goToBookmark` method. The method throws an error if the specified bookmark does not exist in the document.
+### 2. Toggle bookmark view programmatically
 
-Here is an example of how to use the `goToBookmark` method:
+Toggle bookmark view programmatically using the [`openBookmarkPane`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#openbookmarkpane) and [`closeBookmarkPane`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#closebookmarkpane) APIs.
 
-```
-  <button id="gotobookmark">Specfic Page</button>
-```
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+import { useRef, RefObject } from 'react';
 
-```ts
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { PdfViewerComponent, BookmarkView, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-let pdfviewer;
-
-function App() {
-  const onGoToBookmark = () => {
-    // x - pageIndex, y - Y coordinate
-    pdfviewer && pdfviewer.bookmark.goToBookmark(x, y);
-  };
-
-  return (
-    <div>
-      <button id="gotobookmark" onClick={onGoToBookmark}>Specfic Page</button>
-      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }} style={{ height: '500px', width: '100%' }}>
-        <Inject services={[BookmarkView]} />
-      </PdfViewerComponent>
-    </div>
-  );
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent | null> = useRef<PdfViewerComponent>(null);
+    return (
+        <div style={{ height: '100vh' }}>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={viewerRef}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+                style={{ height: '100%' }}
+                enableBookmark={true}
+            >
+                <Inject
+                    services={[
+                        Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                        ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
+    );
 }
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-```
+**Expected result**: The viewer shows a Bookmarks panel and users can click entries to navigate.
 
-x — the zero-based page index to navigate to.
+### 3. Navigate programmatically
 
-y — the vertical Y coordinate on the target page to position the viewport.
+Call [`goToBookmark(x, y)`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#gotobookmark) where `x` is the zero-based page index and `y` is the vertical coordinate.
 
-Also, you can use the **getBookmarks** method to retrieve a list of all the bookmarks in a PDF document. This method returns a List of Bookmark objects, which contain information about each bookmark.
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+import { useRef, RefObject } from 'react';
 
-Here is an example of how to use the getBookmarks method:
-
-```
-  <button id="getBookmarks">retrieve bookmark</button>
-```
-
-```ts
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { PdfViewerComponent, BookmarkView, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-let pdfviewer;
-
-function App() {
-  const onGetBookmarks = () => {
-    var getBookmarks = pdfviewer && pdfviewer.bookmark.getBookmarks();
-    console.log(getBookmarks);
-  };
-
-  return (
-    <div>
-      <button id="getBookmarks" onClick={onGetBookmarks}>retrieve bookmark</button>
-      <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }} style={{ height: '500px', width: '100%' }}>
-        <Inject services={[BookmarkView]} />
-      </PdfViewerComponent>
-    </div>
-  );
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent | null> = useRef<PdfViewerComponent>(null);
+    const goTo = () => {
+        viewerRef.current?.bookmark.goToBookmark(1, 0);
+    }
+    return (
+        <div style={{ height: '100vh' }}>
+            <button onClick={goTo}>Go To Page 2</button>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={viewerRef}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+                style={{ height: '100%' }}
+            >
+                <Inject
+                    services={[
+                        Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                        ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
+    );
 }
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
-const root = ReactDOM.createRoot(document.getElementById('PdfViewer'));
-root.render(<App />);
-```
+### 4. Retrieve the bookmarks list
 
-## See also
+Use [`getBookmarks()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#getbookmarks) to obtain the bookmark tree.
 
-* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar/)
-* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/feature-module/)
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+import { useRef, RefObject } from 'react';
+
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent | null> = useRef<PdfViewerComponent>(null);
+    const getBookmarks = () => {
+        const bookMarks: any = viewerRef.current?.bookmark.getBookmarks();
+        console.log('Bookmarks:', bookMarks);
+    }
+    return (
+        <div style={{ height: '100vh' }}>
+            <button onClick={getBookmarks}>List bookmarks</button>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={viewerRef}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+                style={{ height: '100%' }}
+            >
+                <Inject
+                    services={[
+                        Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                        ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
+    );
+}
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Complete example
+
+The following is a self-contained example demonstrating enabling bookmarks, navigating to a bookmark programmatically, and listing bookmarks.
+
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+{% raw %}
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+import { useRef, RefObject } from 'react';
+
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent | null> = useRef<PdfViewerComponent>(null);
+    const getBookmarks = () => {
+        const bookMarks: any = viewerRef.current?.bookmark.getBookmarks();
+        console.log('Bookmarks:', bookMarks);
+    }
+    const goTo = () => {
+        viewerRef.current?.bookmark.goToBookmark(1, 0);
+    }
+    return (
+        <div style={{ height: '100vh' }}>
+            <button onClick={getBookmarks}>List bookmarks</button>
+            <button onClick={goTo} style={{ marginLeft: 8 }}>Go to Page 2</button>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={viewerRef}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+                style={{ height: '100%' }}
+                enableBookmark={true}
+            >
+                <Inject
+                    services={[
+                        Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                        ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
+    );
+}
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+**Expected result**: The Bookmarks button on the navigation toolbar is enabled and clicking it opens the Bookmarks panel (when the PDF contains bookmarks). Clicking a bookmark navigates to the target location; the buttons demonstrate programmatic navigation and retrieving the bookmark list in the console.
+
+## Troubleshooting
+
+- **Bookmarks button is not enabled**: confirm the PDF actually contains bookmarks and [`enableBookmark={true}`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablebookmark) is set.
+- **[`goToBookmark`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview#gotobookmark) throws an error**: ensure the target page index and coordinates exist; validate values before calling.
+- **Missing features**: add [`BookmarkView`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/bookmarkview) to the `<Inject services={[BookmarkView]} />` list and include [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) or [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) when required.
+
+## Related topics
+
+- [React PDF Viewer toolbar](../toolbar-customization/overview)
+- [Feature Modules](../feature-module)

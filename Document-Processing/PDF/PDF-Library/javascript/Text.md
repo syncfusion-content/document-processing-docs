@@ -11,7 +11,7 @@ The PDF provides support to add and format text in PDF documents using various f
 
 ## Drawing text in a new document
 
-This example demonstrates how to draw text in a new PDF document using the `drawString` method of the `PdfGraphics` class. The method allows you to specify the text content, font, brush, and position to render the text on a page within the document.
+This example demonstrates how to draw text in a new PDF document using the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. The method allows you to specify the text content, font, brush, and position to render the text on a page within the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -54,7 +54,7 @@ N>  Due to the inherent limitations of the PDF specification and the rendering c
 
 ## The importance of saving and restoring graphics state in PDF content rendering
 
-This example demonstrates the importance of saving and restoring the graphics state when rendering PDF content using the `save` and `restore` methods of the `PdfGraphics` class. These methods ensure that any transformations, such as scaling, rotation, or color changes, applied to the graphics context do not affect subsequent drawing operations, maintaining consistent layout and design.
+This example demonstrates the importance of saving and restoring the graphics state when rendering PDF content using the [save](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_Save) and [restore](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_Restore_Syncfusion_Pdf_Graphics_PdfGraphicsState_) methods of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. These methods ensure that any transformations, such as scaling, rotation, or color changes, applied to the graphics context do not affect subsequent drawing operations, maintaining consistent layout and design.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -107,7 +107,7 @@ document.destroy();
 
 ## Drawing text in an existing document
 
-This example demonstrates how to draw text in an existing PDF document using the `drawString` method of the `PdfGraphics` class. The method allows you to specify the text content, font, brush, and position to render the text on a selected page within the document.
+This example demonstrates how to draw text in an existing PDF document using the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. The method allows you to specify the text content, font, brush, and position to render the text on a selected page within the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -152,7 +152,7 @@ JavaScript PDF allows you to add text to the PDF document using the following ty
 
 ### Draw text using standard fonts
 
-This example demonstrates how to draw text using standard fonts in a PDF document by utilizing the `drawString` method of the `PdfGraphics` class along with predefined font types from the `PdfStandardFont` class. Standard fonts such as Helvetica, TimesRoman, or Courier can be specified to render text with consistent and widely supported typography.
+This example demonstrates how to draw text using standard fonts in a PDF document by utilizing the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class along with predefined font types from the [PdfStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfstandardfont) class. Standard fonts such as Helvetica, TimesRoman, or Courier can be specified to render text with consistent and widely supported typography.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -189,7 +189,7 @@ document.destroy();
 
 ### Draw text using TrueType fonts
 
-This example demonstrates how to draw text using TrueType fonts in a PDF document by utilizing the `drawString` method of the `PdfGraphics` class along with a `PdfTrueTypeFont` instance. The TrueType font provides enhanced text rendering with support for custom font styles.
+This example demonstrates how to draw text using TrueType fonts in a PDF document by utilizing the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class along with a [PdfTrueTypeFont](https://ej2.syncfusion.com/documentation/api/pdf/pdftruetypefont) instance. The TrueType font provides enhanced text rendering with support for custom font styles.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -226,7 +226,7 @@ document.destroy();
 
 ### Draw text using CJK fonts
 
-This example demonstrates how to draw text using fonts in a PDF document by utilizing the `drawString` method of the `PdfGraphics` class. The fonts provide support for Chinese, Japanese, and Korean characters, ensuring accurate rendering of multilingual text in the document.
+This example demonstrates how to draw text using fonts in a PDF document by utilizing the [drawString](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. The fonts provide support for Chinese, Japanese, and Korean characters, ensuring accurate rendering of multilingual text in the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -263,7 +263,7 @@ document.destroy();
 
 ## Drawing text using different text alignment
 
-This example demonstrates how to draw text in a PDF document using different text alignment options by utilizing the `PdfStringFormat` class. The alignment can be set through the alignment property, which supports values such as Left, Center, and Right, allowing precise control over the positioning of text within the page or a defined rectangle.
+This example demonstrates how to draw text in a PDF document using different text alignment options by utilizing the [PdfStringFormat](https://ej2.syncfusion.com/documentation/api/pdf/pdfstringformat) class. The alignment can be set through the alignment property, which supports values such as Left, Center, and Right, allowing precise control over the positioning of text within the page or a defined rectangle.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -401,6 +401,61 @@ format.alignment = PdfTextAlignment.right;
 format.textDirection = PdfTextDirection.rightToLeft;
 // Draw RTL text
 page.graphics.drawString(`שלום עולם!!!`, font, { x: 0, y: 200, width: 100, height: 100 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }), format);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Embedded font
+
+This example shows how to embed fonts using [embedFont()](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#embedfont) method of the [PdfDocument](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument) to ensure consistent text rendering across all platforms. The library supports embedding [PdfStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfstandardfont), [PdfCjkStandardFont](https://ej2.syncfusion.com/documentation/api/pdf/pdfcjkstandardfont), and [PdfTrueTypeFont](https://ej2.syncfusion.com/documentation/api/pdf/pdftruetypefont) for reliable Unicode text display. Additionally, using embedded fonts helps reduce overall PDF size, since the font dictionary is not duplicated for each usage—ensuring cleaner and more efficient output.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfFont, PdfStandardFont, PdfCjkStandardFont, PdfFontFamily, PdfFontStyle, PdfCjkFontFamily, PdfBrush } from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a page
+let page: PdfPage = document.addPage();
+// Embed a standard font into the PDF document.
+const embedded1: PdfStandardFont = document.embedFont(PdfFontFamily.timesRoman, 12,  PdfFontStyle.regular);
+// Gets a font variant from the base font with the given size and style
+const embedded2: PdfFont = embedded1.getFont(14, PdfFontStyle.bold);
+const embedded3: PdfFont = embedded1.getFont(14, PdfFontStyle.italic);
+// Embed a CJK font into the PDF document.
+const embedded4: PdfCjkStandardFont = document.embedFont(PdfCjkFontFamily.hanyangSystemsGothicMedium, 12,  PdfFontStyle.regular , true);
+// Draw string using embed font.
+page.graphics.drawString('timesRoman with regular', embedded1, {x: 10, y: 10, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('timesRoman with bold', embedded2, {x: 10, y: 50, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('timesRoman with italic', embedded3, {x: 200, y: 50, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('Cjkfont with regular', embedded4, {x: 200, y: 10, width: 300, height: 24}, new PdfBrush({r: 0, g: 0, b: 255}));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Embed a font into the PDF document.
+const embedded1 = document.embedFont(new ej.pdf.PdfFontFamily.timesRoman, 12,  new ej.pdf.PdfFontStyle.regular);
+const embedded2 = document.embedFont(new ej.pdf.PdfCjkFontFamily.hanyangSystemsGothicMedium, 12,  new ej.pdf.PdfFontStyle.regular , true);
+// Gets a font variant from the base font with the given size and style
+const embedded3 = embedded1.getFont(14, new ej.pdf.PdfFontStyle.bold);
+const embedded4 = embedded4.getFont(14, new ej.pdf.PdfFontStyle.bold);
+// Draw string using embed font.
+page.graphics.drawString('timesRoman with regular', embedded1, {x: 10, y: 10, width: 300, height: 24}, new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('timesRoman with bold', embedded3, {x: 10, y: 50, width: 300, height: 24}, new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('Cjkfont with regular', embedded2, {x: 200, y: 10, width: 300, height: 24}, new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
+page.graphics.drawString('Cjkfont with bold', embedded4, {x: 200, y: 50, width: 300, height: 24}, new ej.pdf.PdfBrush({r: 0, g: 0, b: 255}));
 // Save the document
 document.save('Output.pdf');
 // Close the document

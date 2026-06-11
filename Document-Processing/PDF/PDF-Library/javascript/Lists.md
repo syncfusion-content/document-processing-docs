@@ -12,7 +12,7 @@ The PDF allows you list the content in ordered and unordered list. The ordered l
 
 ## Adding an ordered list
 
-This example demonstrates how to create an ordered list in a PDF document using the `PdfOrderedList` class. Ordered lists allow you to present items in a structured, sequential format, typically numbered or lettered, enhancing readability and organization within the PDF content.
+This example demonstrates how to create an ordered list in a PDF document using the [PdfOrderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdforderedlist) class. Ordered lists allow you to present items in a structured, sequential format, typically numbered or lettered, enhancing readability and organization within the PDF content.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -35,7 +35,7 @@ let list: PdfOrderedList = new PdfOrderedList(items, {
     indent: 30,
     textIndent: 50,
     style: PdfNumberStyle.numeric,
-    delimiter:  ')'
+    delimiter: ')'
 });
 // Draw the ordered list on the page
 list.draw(page, { x: 0, y: 20, width: 500, height: 700 });
@@ -62,7 +62,7 @@ var list: PdfOrderedList = new PdfOrderedList(items, {
     indent: 30,
     textIndent: 50,
     style: ej.pdf.PdfNumberStyle.numeric,
-    delimiter:  ')'
+    delimiter: ')'
 });
 // Draw the ordered list on the page
 list.draw(page, { x: 0, y: 20, width: 500, height: 700 });
@@ -76,7 +76,7 @@ document.destroy();
 
 ## Adding an unordered list
 
-This example demonstrates how to create an unordered list in a PDF document using the `PdfUnorderedList` class. Unordered lists display items with bullet points instead of numbers, making them ideal for presenting non-sequential information in a clear and organized manner.
+This example demonstrates how to create an unordered list in a PDF document using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist) class. Unordered lists display items with bullet points instead of numbers, making them ideal for presenting non-sequential information in a clear and organized manner.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -140,7 +140,7 @@ document.destroy();
 
 ## Customize list markers
 
-This example demonstrates how to customize the marker style of an unordered list in a PDF document using the `PdfUnorderedList` class. The marker defines the symbol that appears before each list item. You can choose from four predefined marker styles: disk, square, asterisk, and circle. These options allow you to visually distinguish different list types or emphasize specific content, enhancing readability and structure within the document.
+This example demonstrates how to customize the marker style of an unordered list in a PDF document using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist) class. The marker defines the symbol that appears before each list item. You can choose from four predefined marker styles: disk, square, asterisk, and circle. These options allow you to visually distinguish different list types or emphasize specific content, enhancing readability and structure within the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -244,7 +244,7 @@ document.destroy();
 
 ## Creating nested list structures
 
-This example demonstrates how to create nested list structures in a PDF document using the `PdfUnorderedList` and `PdfOrderedList` classes. Nested lists allow you to organize information hierarchically by placing one list inside another. This is useful when representing multi‑level data, outlining topics with sub points, or grouping related items clearly.
+This example demonstrates how to create nested list structures in a PDF document using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist) and [PdfOrderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdforderedlist) classes. Nested lists allow you to organize information hierarchically by placing one list inside another. This is useful when representing multi‑level data, outlining topics with sub points, or grouping related items clearly.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -292,7 +292,7 @@ document.destroy();
 
 ## List pagination
 
-This example shows how long lists automatically continue onto the next page when drawn using the `PdfUnorderedList` class. By applying a `PdfLayoutFormat`, the layout engine handles page breaks smoothly while preserving markers, indentation, and nested levels. This ensures consistent rendering of multi‑page or dynamically generated list content.
+This example shows how long lists automatically continue onto the next page when drawn using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist) class. By applying a [PdfLayoutFormat](https://ej2.syncfusion.com/documentation/api/pdf/pdflayoutformat), the layout engine handles page breaks smoothly while preserving markers, indentation, and nested levels. This ensures consistent rendering of multi‑page or dynamically generated list content.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

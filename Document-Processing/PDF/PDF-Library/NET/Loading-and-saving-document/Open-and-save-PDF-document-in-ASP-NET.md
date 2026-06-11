@@ -26,7 +26,7 @@ Step 3: Add a new button in the **Default.aspx** as shown in the following.
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight CSHTML %}
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Button ID="Button1" runat="server" Text="Load and save PDF document" OnClick="OpenAndSaveDocument" />  

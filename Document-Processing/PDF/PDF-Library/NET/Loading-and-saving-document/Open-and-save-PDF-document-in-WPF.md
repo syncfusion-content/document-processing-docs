@@ -9,7 +9,7 @@ keywords: wpf save pdf, wpf load pdf, c# save pdf, c# load pdf
 
 # Open and save PDF document in WPF
 
-The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in WPF**. 
+The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in WPF**. 
 
 ## Steps to open and save PDF document programmatically:
 
@@ -40,7 +40,7 @@ Step 4: Add a new button in the **MainWindow.xaml** to open and save the PDF doc
 
 {% tabs %}
 
-{% highlight XML %}
+{% highlight XAML %}
 
 <Button Click="btnOpenAndSave_Click" Margin="0,187,0,0" VerticalAlignment="Top" Height="30" BorderBrush="LightBlue" HorizontalAlignment="Center" Width="256">
     <Button.Background>

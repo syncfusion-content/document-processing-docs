@@ -4,14 +4,12 @@
 * Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 * Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
-
-
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
 
 ```
 dotnet new blazorwasm -o CreatePdfBlazorWASMApp
 ```
-Step 2: Replace ****CreatePdfBlazorWASMApp** with your desired project name.
+Step 2: Replace **CreatePdfBlazorWASMApp** with your desired project name.
 
 Step 3: Navigate to the project directory using the following command
 
@@ -127,7 +125,7 @@ Create a button in the ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
-<button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
+<button class="btn btn-primary" @onclick="@ExportToPdf">Export PDF</button>
 {% endhighlight %}
 {% endtabs %}
 
@@ -151,7 +149,6 @@ Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export se
 Step 8: Create a class file with  ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -164,13 +161,11 @@ public static class FileUtil
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available under the ``Pages`` folder.
 
 {% tabs %}
-
 {% highlight HTML %}
 
 <script type="text/javascript">
@@ -197,21 +192,18 @@ Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available
 </script>
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 10: Build the project.
+Run the following command in terminal to build the project.
 
-    Run the following command in terminal to build the project.
+```
+dotnet build
+```
 
-    ```
-    dotnet build
-    ```
+Step 11: Run the project:
+Run the following command in terminal to run the project.
 
-12. Run the project:
-
-    Run the following command in terminal to run the project.
-
-    ```
-    dotnet run
+```
+dotnet run
 ```

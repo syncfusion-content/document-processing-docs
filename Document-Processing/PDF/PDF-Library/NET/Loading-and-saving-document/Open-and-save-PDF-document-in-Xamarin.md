@@ -9,7 +9,7 @@ keywords: c# save pdf, c# load pdf
 
 # Open and Save PDF document in Xamarin
 
-The [Syncfusion<sup>&reg;</sup> Xamarin PDF library](https://www.syncfusion.com/document-processing/pdf-framework/xamarin) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in Xamarin**.
+The [Syncfusion<sup>&reg;</sup> Xamarin PDF library](https://www.syncfusion.com/document-processing/pdf-framework/xamarin) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in Xamarin**.
 
 ## Steps to open and save PDF document programmatically:
 
@@ -42,8 +42,8 @@ In App class of <b>portable project</b> (App.cs), replace the existing construct
 {% highlight c# tabtitle="C#" %}
 public App()
 {
-    //The root page of your application.
-    MainPage = new MainXamlPage();
+  //The root page of your application.
+  MainPage = new MainXamlPage();
 }
 {% endhighlight %}
 
@@ -53,7 +53,7 @@ Step 5: In the *MainXamlPage.xaml*, add new button as shown below.
 
 {% tabs %}
 
-{% highlight XML %}
+{% highlight XAML %}
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -92,15 +92,15 @@ Step 7: Include the below code sample in the click event of the button in MainXa
 
 void OnButtonClicked(object sender, EventArgs args)
 {
-    //Load an existing PDF document. 
-    Stream inputPDFStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.Input.pdf");
+  //Load an existing PDF document. 
+  Stream inputPDFStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.Input.pdf");
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 8:  Add below code example to add a tabe in the PDF document.
+Step 8: Add below code example to add a table in the PDF document.
 
 {% tabs %}
 
@@ -198,16 +198,19 @@ N> Introduced a new runtime permission model for the Android SDK version 23 and 
 Step 9(i): Create a new XML file with the name of provider_paths.xml under the Android project Resources folder and add the following code in it.
 Eg: Resources/xml/provider_paths.xml
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight XAML %}
 <?xml version="1.0" encoding="UTF-8" ?>
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
 <external-path name="external_files" path="."/>
 </paths>
 {% endhighlight %}
+{% endtabs %}
 
 Step 9(ii): Add the following code to the AndroidManifest.xml file located under Properties/AndroidManifest.xml.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight XAML %}
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname. GettingStarted ">
 <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27" />
@@ -222,26 +225,31 @@ android:resource="@xml/provider_paths" />
 </application>
 </manifest>
 {% endhighlight %}
+{% endtabs %}
 
-### Please include the changes if you deploy the application in Android 11:
+N> If you deploy the application in Android 11 or later, include the following changes:
 
 * Enabled the androidLegacyExtranalStorage in the AndroidManifest.xml file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight XAML %}
 
 <application android:label=" PDFXamarinSample.Android" android:requestLegacyExternalStorage="true">
 
 {% endhighlight %}
+{% endtabs %}
 
 * User permission for read or write external storage.Add the following code to the AndroidManifest.xml file located under Properties/AndroidManifest.xml.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight XAML %}
 
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
 </uses-permission>
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 10: Compile and execute the application. This will creates a PDF document.
 

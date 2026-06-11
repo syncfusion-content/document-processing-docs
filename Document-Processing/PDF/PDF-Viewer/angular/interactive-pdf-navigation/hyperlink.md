@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer consolidates hyperlink-driven experiences, including inline links and table-of-contents (TOC) entries that target in-document destinations. These elements surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
 
-> **Note:** The table of contents pane and hyperlink interactions rely on the same navigation infrastructure. When these capabilities are enabled, the PDF Viewer automatically surfaces TOC entries and clickable links defined in the PDF.
+N> The table of contents pane and hyperlink interactions rely on the same navigation infrastructure. When these capabilities are enabled, the PDF Viewer automatically surfaces TOC entries and clickable links defined in the PDF.
 
 ## Required modules
 
@@ -20,7 +20,7 @@ Inject the following modules to enable both navigation experiences: `Toolbar`, `
 
 ## Table of contents navigation
 
-Use the table of contents to navigate to headings and sections defined in the PDF. When the document contains a bookmarks or outline structure, the viewer exposes those entries in the table of contents (Bookmarks) pane. Selecting an entry navigates directly to the mapped destination. If the PDF does not include a table of contents, the pane will not list any entries.
+Use the table of contents to navigate to headings and sections defined in the PDF. When the document contains bookmarks or an outline structure, the viewer exposes those entries in the table of contents (Bookmarks) pane. Selecting an entry navigates directly to the mapped destination. If the PDF does not include a table of contents, the pane will not list any entries.
 
 ![Table of contents pane in PDF Viewer](../images/toc.png)
 
@@ -28,7 +28,7 @@ Use the table of contents to navigate to headings and sections defined in the PD
 
 The PDF Viewer provides robust support for hyperlink navigation within PDF documents. This allows users to interact with embedded links, which can point to external websites or other locations within the same document. This section covers how to configure hyperlink behavior, including enabling or disabling links, controlling how they open, and responding to hyperlink-related events.
 
-![Hyperlink Navigation in PDF Viewer](../images/link.png)
+![Hyperlink navigation example in PDF Viewer showing clickable links](../images/link.png)
 
 ### Enable or disable hyperlinks
 
@@ -104,7 +104,8 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
+N> Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
+
 ### Control link behavior
 
 The `hyperlinkOpenState` property determines how external URLs are opened when a hyperlink is clicked.

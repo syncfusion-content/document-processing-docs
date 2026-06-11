@@ -33,3 +33,8 @@ progressRing.Height = 100
 pdfViewer.PdfProgressRing = progressRing
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [Localization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/localization)
+- [Customize Scrollbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/customize-the-scrollbar)

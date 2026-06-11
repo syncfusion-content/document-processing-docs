@@ -9,11 +9,11 @@ documentation: ug
 
 # Redaction toolbar customization in Angular
 
-The redaction toolbar in the Syncfusion Angular PDF Viewer can be customized by rearranging existing items, hiding default items, or adding new ones. You can also place custom items at specific index positions among the existing toolbar items.
+The redaction toolbar in the Syncfusion Angular PDF Viewer can be customized by rearranging items, hiding default items, or adding custom items. Custom items can be inserted at specific index positions within the existing toolbar.
 
 ## Enable the redaction toolbar
 
-To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
+To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the `RedactionEditTool`.
 
 The following example shows how to enable the redaction toolbar:
 
@@ -106,17 +106,17 @@ Refer to the following image for the toolbar view:
 
 ## Show or hide the redaction toolbar
 
-You can toggle the redaction toolbar either using the built‑in toolbar icon or programmatically with the `showRedactionToolbar` method.
+The redaction toolbar can be toggled using the built‑in toolbar icon or programmatically with the `showRedactionToolbar` method.
 
 ### Display the redaction toolbar using the toolbar icon
 
-When **RedactionEditTool** is included in the toolbar settings, clicking the redaction icon in the primary toolbar will show or hide the redaction toolbar.
+When `RedactionEditTool` is included in the toolbar settings, clicking the redaction icon in the primary toolbar will show or hide the redaction toolbar.
 
 ![Show redaction toolbar from the primary toolbar](../redaction/redaction-annotations-images/redaction-icon-toolbar.png)
 
 ### Display the redaction toolbar programmatically
 
-You can also control visibility through code by calling `viewer.toolbar.showRedactionToolbar(true/false)`.
+Programmatic control is available via the viewer instance. For example, call `this.pdfViewer.toolbar.showRedactionToolbar(true)` to display the redaction toolbar, or `this.pdfViewer.toolbar.showRedactionToolbar(false)` to hide it.
 
 The following example demonstrates toggling the redaction toolbar programmatically:
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # supported PDF conformance in Anglar PDF Viewer component
 
-The PDF Viewer supports the following conformance levels:
+The Angular PDF Viewer supports the following PDF/A and PDF/X conformance levels:
 
 * PDF/A-1a
 * PDF/A-1b

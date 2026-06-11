@@ -9,9 +9,9 @@ documentation: ug
 
 # Toolbar in Blazor SfPdfViewer Component
 
-The SfPdfViewer includes a built-in, responsive toolbar that surfaces common PDF actions and provides entry points to feature-specific toolbars. It adapts across desktop, tablet, and mobile, and can be customized to show or hide items, reorder commands, add custom items, and handle toolbar events.
+The `SfPdfViewer` provides a built-in, responsive toolbar that surfaces common PDF actions and exposes feature-specific toolbars. The toolbar adapts to desktop, tablet, and mobile layouts and supports customization to show or hide items, reorder commands, add custom items, and handle toolbar events.
 
-There are four toolbars in the SfPdfViewer:
+There are four toolbar groups in `SfPdfViewer`:
 * Primary toolbar
 * Annotation toolbar
 * Form designer toolbar
@@ -19,11 +19,11 @@ There are four toolbars in the SfPdfViewer:
 
 ## Primary Toolbar in Blazor SfPdfViewer Component
 
-The SfPdfViewer includes a built-in, responsive primary toolbar that provides quick access to common viewer actions and feature-specific toolbars. It adapts to the available width for desktop, tablet, and mobile layouts.
+The primary toolbar provides quick access to common viewer actions and entry points to feature-specific toolbars. It adapts to available width and presents controls appropriate for the current device and layout.
 
-The primary toolbar includes the following options:
+Primary toolbar options include:
 
-* Open PDF file
+* Open file
 * Page navigation
 * Magnification
 * Pan tool
@@ -42,29 +42,33 @@ The primary toolbar includes the following options:
 
 ![Blazor PDF Viewer primary toolbar with customized items](../blazor-classic/images/blazor-pdfviewer-custom-toolbar.png)
 
-* [Get more info about primary toolbar customization](./toolbar-customization/primary-toolbar)
+See [Primary toolbar customization](./toolbar-customization/primary-toolbar) for configuration options and examples.
 
 ## Annotation toolbar in Blazor SfPdfViewer Component
 
-The Annotation toolbar appears below the primary toolbar when annotation features are enabled. It provides tools to create and edit annotations.
+The annotation toolbar appears below the primary toolbar when annotation features are enabled. It provides tools to create and edit annotations.
+
+Annotation toolbar options include:
 
 * Text markup: Highlight, Underline, Strikethrough, Squiggly
 * Shapes: Line, Arrow, Rectangle, Circle, Polygon
 * Measurement: Distance, Perimeter, Area, Radius, Volume
 * Freehand: Ink, Signature
 * Text: Free text
-* Stamp: Predefined and custom stamps
+* Stamp: Built-in and custom stamps
 * Properties: Color, opacity, thickness, font
 * Edit helpers: Comments panel, Delete
 * Close
 
 ![Blazor PDF Viewer annotation toolbar](./images/blazor-annotation-toolbar.png)
 
-* [Get more info about annotation toolbar customization](./toolbar-customization/annotation-toolbar)
+See [Annotation toolbar customization](./toolbar-customization/annotation-toolbar) for configuration and examples.
 
 ## Form Designer toolbar in Blazor SfPdfViewer Component
 
-Use the Form Designer toolbar to add and configure interactive form fields in the PDF. It appears below the primary toolbar when form designer is enabled.
+The form designer toolbar appears when form designer mode is enabled and provides tools to add and configure interactive form fields.
+
+Form designer toolbar options include:
 
 * Field types: Button, Text box, Password, Checkbox, Radio button, Drop-down, List box, Signature, Initial
 * Edit helpers: Delete
@@ -72,11 +76,13 @@ Use the Form Designer toolbar to add and configure interactive form fields in th
 
 ![Blazor PDF Viewer form designer toolbar](./images/blazor-form-deigner-toolbar.png)
 
-* [Get more info about form designer toolbar customization](./toolbar-customization/form-designer-toolbar)
+See [Form designer toolbar customization](./toolbar-customization/form-designer-toolbar) for configuration details.
 
 ## Redaction toolbar in Blazor SfPdfViewer Component
 
-The Redaction toolbar provides tools to mark and permanently remove sensitive content from the document. It appears below the primary toolbar when redaction is enabled.
+The redaction toolbar provides tools to mark and permanently remove sensitive content. It appears below the primary toolbar when redaction is enabled.
+
+Redaction toolbar options include:
 
 * Redaction marks: Mark for redaction, Redact page
 * Apply redactions: Permanently remove marked content
@@ -86,7 +92,7 @@ The Redaction toolbar provides tools to mark and permanently remove sensitive co
 
 ![Blazor PDF Viewer redaction toolbar](./images/blazor-redaction-toolbar.png)
 
-* [Get more info about redaction toolbar customization](./toolbar-customization/redaction-toolbar)
+See [Redaction toolbar customization](./toolbar-customization/redaction-toolbar) for configuration and examples.
 
 ## See also
 

@@ -157,6 +157,43 @@ private void PdfViewer_DocumentLoaded(object sender, EventArgs args)
 {% endhighlight %}
 {% endtabs %}
 
+### Find and get the bounds of the list of text on multiple lines
+
+The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) method provides an overload with an `enableMultilineSearch` parameter that allows detection of matches spanning line breaks or multiple pages. When enabled, results are returned as line‑based TextSearchResult entries grouped by page, including the matched text and corresponding RectangleF bounds. The default value of enableMultilineSearch is false.
+
+{% tabs %}
+{% highlight c# %}
+ 
+private void PdfViewer_DocumentLoaded(object sender, EventArgs args)
+{
+    //Get the occurrences of the target text and location.
+    Dictionary<int, List<TextSearchResult>> searchResult = new Dictionary<int, List<TextSearchResult>>();
+    //List of text need to be found
+    List<string> findText = new List<string>() {"Find the text that spans across multiple lines and pages"};
+
+    //Enable multiline search to detect line and page breaks and return line-wise results.
+    //Return true, if the given text is found across lines/pages
+    bool isMatchFound = pdfViewer.FindText(findText, out searchResult, true);
+    if (isMatchFound)
+    {
+        foreach (var Index in searchResult)
+        {
+            int pageIndex = Index.Key;
+            List<TextSearchResult> results = Index.Value;
+            foreach (TextSearchResult result in results)
+            {
+                //The Bounds contains the line-wise rectangle for the matched text.
+                RectangleF bounds = result.Bounds;
+                //The Text property contains the matched text for this line.
+                string matchedText = result.Text;
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Find and get the bounds of the list of text on the desired page
 
 The [FindText](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_FindText_System_Collections_Generic_List_System_String__System_Int32_System_Collections_Generic_List_Syncfusion_Pdf_Parsing_MatchedItem___) method takes the input argument as the list of text to be found along with the desired page index and provides the list of [MatchedItem](https://help.syncfusion.com/cr/wpf/Syncfusion.Pdf.Parsing.MatchedItem.html), which contains the matched text, and its rectangular coordinates(bounds). The below code snippet illustrates how to get the bounds of the text from the matched item:

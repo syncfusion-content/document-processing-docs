@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Add signature in React PDF Viewer component
+# Add signature in React PDF Viewer component
 
 The PDF Viewer library allows adding a signature to a signature field in a loaded PDF document programmatically by handling the `formFieldClick` event.
 

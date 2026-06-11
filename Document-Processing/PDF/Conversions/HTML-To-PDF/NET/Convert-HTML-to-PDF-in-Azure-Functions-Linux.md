@@ -31,10 +31,10 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 5: Create a shell file with the below commands in the project and name it as dependenciesInstall.sh. In this article, these steps have been followed to install dependencies packages.
 
+{% tabs %}
 {% highlight bash tabtitle="Shell" %}
 
 echo "Starting dependencies installation script..."
-
 
 if ! command -v rsync &> /dev/null; then
     echo "rsync could not be found, installing..."
@@ -72,6 +72,7 @@ fi
 echo "Dependencies installation script completed."
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Convert HTMLToPDF Azure Functions Step5](htmlconversion_images\ShellCommand.png)
 
@@ -81,45 +82,50 @@ Step 6: Set Copy to Output Directory as “Copy if newer” to the dependenciesI
 
 Step 7: Include the following namespaces in Function1.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-    using Syncfusion.HtmlConverter;
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Graphics;
-    using System.Runtime.InteropServices;
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Runtime.InteropServices;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: This Azure Function converts HTML to PDF using HTTP triggers. It handles GET/POST requests, processes the HTML, and returns a PDF response.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-    [Function("Function1")]
-    public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log, FunctionContext executionContext)
+[Function("Function1")]
+public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log, FunctionContext executionContext)
+{
+    _logger.LogInformation("C# HTTP trigger function processed a request.");
+    try
     {
-        _logger.LogInformation("C# HTTP trigger function processed a request.");
-        try
-        {
-            byte[] pdfBytes = HtmlToPdfConvert("<p>Hello world</p>");
-            return new FileStreamResult(new MemoryStream(pdfBytes), "application/pdf");
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex.Message.ToString(), "An error occurred while converting HTML to PDF.");
-            return new ContentResult
-            {
-                Content = $"Error: {ex.Message}",
-                ContentType = "text/plain",
-                StatusCode = StatusCodes.Status500InternalServerError
-            };
-
-        }
+        byte[] pdfBytes = HtmlToPdfConvert("<p>Hello world</p>");
+        return new FileStreamResult(new MemoryStream(pdfBytes), "application/pdf");
     }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex.Message.ToString(), "An error occurred while converting HTML to PDF.");
+        return new ContentResult
+        {
+            Content = $"Error: {ex.Message}",
+            ContentType = "text/plain",
+            StatusCode = StatusCodes.Status500InternalServerError
+        };
+
+    }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
 step 9: Use the following code example in the HtmlToPdfConvert method to convert HTML to a PDF document using the [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in the [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The Blink command line arguments are configured based on the given [CommandLineArguments](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_CommandLineArguments) property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public byte[] HtmlToPdfConvert(string htmlText)
@@ -171,6 +177,7 @@ public byte[] HtmlToPdfConvert(string htmlText)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
 N> ```csharp
@@ -181,6 +188,7 @@ N> These arguments are only required when using **older versions** of the librar
 
 Step 10: This code is designed to ensure that the necessary Linux packages for HTML to PDF conversion are installed if the operating system is Linux. It adjusts file permissions and executes a shell script to carry out the installation.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 // This method checks if the current operating system is Linux and installs necessary package 
@@ -245,10 +253,11 @@ private static void InstallLinuxPackages()
 }
 
 {% endhighlight %}
-
+{% endtabs %}
 
 Step 11: Add the following helper methods to copy and set permission to the BlinkBinariesLinux folder.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 private static string SetupBlinkBinaries()
@@ -308,9 +317,11 @@ private static void SetExecutablePermission(string tempBlinkDir)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 12: Include the below enum in the Function1.cs file. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
     [Flags]
@@ -328,6 +339,7 @@ Step 12: Include the below enum in the Function1.cs file.
     }      
 
 {% endhighlight %}
+{% endtabs %}
 
 **Publish to Azure Functions Linux**
 
