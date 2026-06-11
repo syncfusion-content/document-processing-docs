@@ -30,7 +30,7 @@ Step 5: **Add script reference**: Add the required scripts using the CDN inside 
 > Script: `https://cdn.syncfusion.com/ej2/{Version}/dist/{PACKAGE_NAME}.min.js`
 
 **Example:**
-> Script: [`https://cdn.syncfusion.com/ej2/33.2.12/dist/ej2.min.js`](https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js)
+> Script: [`https://cdn.syncfusion.com/ej2/33.2.12/dist/ej2.min.js`](https://cdn.syncfusion.com/ej2/33.2.12/dist/ej2.min.js)
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
