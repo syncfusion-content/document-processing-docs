@@ -22,6 +22,15 @@ Ensure the following before integrating AI Assist:
     * [ASP.NET Web API Server](./ai-service/using-web-api)
     * [Node.js Server](./ai-service/using-node-js)
 
+### Add CSS references
+
+Add the following AI Assist dependent style references to the `src/index.css` file.
+
+```css
+@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css';
+```
+
 ### Inject the AI Assist Module
 
 Inject the `AIAssist` module into the React Spreadsheet. This registers the AI Assist feature and makes it available in your application.
