@@ -1,16 +1,21 @@
 ---
 layout: post
-title: Navigation in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Navigation in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Bookmark Navigation in ASP.NET Core PDF Viewer | Syncfusion
+description: Configure and use bookmark navigation in ASP.NET Core PDF Viewer. Learn how to enable bookmarks, navigate programmatically and retrieve bookmarks.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Bookmark navigation in ASP.NET Core PDF Viewer control
+# Bookmark navigation in ASP.NET Core PDF Viewer
 
-The Bookmarks saved in PDF files are loaded and made ready for easy navigation.
-You can enable/disable bookmark navigation by using the following code snippet.,
+Bookmarks embedded in PDF documents provide quick navigation points. The PDF Viewer loads PDF bookmarks and exposes APIs to navigate to bookmarks or retrieve the bookmark list programmatically.
+
+## Enable bookmark navigation
+
+Enable or disable bookmark navigation using the `enableBookmark` property on the PDF Viewer. When enabled, the bookmark panel shows the document outline for quick access.
+
+**Example: Enable bookmark navigation**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -38,9 +43,11 @@ You can enable/disable bookmark navigation by using the following code snippet.,
 
 ![Alt text](../images/bookmark.png)
 
-To perform bookmark navigation, you can use the **goToBookmark** method. It's important to note that the **goToBookmark** method will throw an error if the specified bookmark does not exist in the PDF document.
+## Navigate to a bookmark programmatically
 
-Here is an example of how to use the **goToBookmark** method:
+To perform bookmark navigation, you can use the `goToBookmark` method. It's important to note that `goToBookmark` will throw an error if the specified bookmark destination does not exist in the PDF document.
+
+Here is an example of how to use the `goToBookmark` method:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -88,9 +95,11 @@ x - Specifies the pageIndex for Navigate.
 
 y - Specifies the Y coordinates value of the Page.
 
-Also, you can use the **getBookmarks** method to retrieve a list of all the bookmarks in a PDF document. This method returns a List of Bookmark objects, which contain information about each bookmark.
+## Retrieve all bookmarks
 
-Here is an example of how to use the getBookmarks method:
+You can use the `getBookmarks` method to retrieve the document's bookmark structure. The method returns an array of bookmark objects containing title and destination information.
+
+**Example: get all bookmarks**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

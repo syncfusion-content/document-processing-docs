@@ -10,26 +10,23 @@ domainurl: ##DomainURL##
 
 # Feature modules in Vue PDF viewer Control
 
-The PDF Viewer features are provided as individual modules, allowing applications to include only what is needed. Inject the required modules to enable functionality, then configure the corresponding properties on the PDF Viewer instance.
+The [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) exposes functionality as feature modules that can be imported selectively. Import and register only the modules required by an application to keep bundle sizes small and enable specific capabilities on demand. The following feature modules are available:
 
-Available PDF Viewer modules:
+* **Toolbar**: Built-in toolbar for user interaction.
+* **Magnification**: Zoom and fit options for improved viewing.
+* **Navigation**: Page navigation controls and page jump support.
+* **LinkAnnotation**: Support for hyperlinks within and outside the PDF.
+* **ThumbnailView**: Page thumbnails for rapid navigation within the document.
+* **BookmarkView**: Navigation based on document bookmarks.
+* **TextSelection**: Select and copy text from the PDF.
+* **TextSearch**: Find text across the document.
+* **Print**: Print the document or individual pages from the browser.
+* **Annotation**: Create and edit annotations on the PDF.
+* **FormFields**: Preserve and interact with form fields in the document.
+* **FormDesigner**: Add and edit form fields in design mode.
+* **StickyNotesAnnotation**: Add sticky notes to the PDF.
 
-* [**Toolbar**](./toolbar-customization/annotation-toolbar-customization): Built-in toolbar for user interaction.
-* [**Magnification**](./magnification): Perform zoom operations for a better viewing experience.
-* [**Navigation**](./interactive-pdf-navigation/page-navigation): Navigate across pages.
-* [**LinkAnnotation**](./interactive-pdf-navigation/table-of-content-navigation): Navigate within the document or to external destinations via hyperlinks.
-* [**ThumbnailView**](./interactive-pdf-navigation/page-thumbnail-navigation): Navigate within the document using page thumbnails.
-* [**BookmarkView**](./interactive-pdf-navigation/bookmark-navigation): Navigate using document bookmarks (table of contents).
-* [**TextSelection**](./textselection): Select and copy text from the document.
-* [**TextSearch**](./text-search): Search for text across the document.
-* [**Print**](./print): Print the entire document or specific pages directly from the browser.
-* [**Annotation**](./annotations/text-markup-annotation): Add and edit annotations.
-* [**FormFields**](./form-designer/create-programmatically): Work with form fields in the document.
-* [**FormDesigner**](./form-designer/create-programmatically): Add or edit form fields in the document.
-
-> In addition to injecting the required modules in an application, enable the corresponding properties to activate features on a PDF Viewer instance.
-
-Refer to the following table:
+N> In addition to registering the required modules, enable the corresponding component properties to activate each capability on a PDF Viewer instance. Refer to the following table for example attribute usage.
 
 | Module | Property to enable the functionality for a PDF Viewer instance |
 |---|---|

@@ -170,14 +170,14 @@ In the below sample, comments are added to a specific cell using cell data bindi
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/comemnt-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/comment-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/comemnt-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/comment-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/comemnt-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/comment-cs1" %}
 
 ### Important Notes
 * **One thread per cell**: Attach a single `comment` object per cell. New remarks should be added as replies inside the existing thread.

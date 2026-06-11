@@ -7,26 +7,25 @@ control: PDF Viewer
 documentation: ug
 ---
 
+# Extract text using TextLineCollection in ASP.NET Core
 
-# Extract text using TextLineCollection in ASP.NET Core PDF Viewer
-
-The PDF Viewer server library can extract text and its bounding information from a PDF page by using the **ExtractText()** method. The `TextLineCollection` output contains each line of text along with coordinates that help map the content back to the page.
+The Syncfusion PDF Viewer server Library extracts text and its precise bounding coordinates from a PDF page using the **ExtractText** method. The output **TextLineCollection** contains detailed layout information for each line of text.
 
 ## Prerequisites
 
-Add the following dependency to your application by using the NuGet Package Manager:
+Ensure the following NuGet package is installed in the project:
 
-* Syncfusion.EJ2.PdfViewer.AspNet.Core
+* **Syncfusion.EJ2.PdfViewer.AspNet.Core**
 
-N> From the Volume 2 2019 release, the Syncfusion.Pdf.Net.Core and Syncfusion.Compression.Net.Core packages are added as dependencies for the PDF Viewer control. Ensure these packages are referenced correctly in your project.
+N> The **Syncfusion.Pdf.Net.Core** and **Syncfusion.Compression.Net.Core** packages are required dependencies and are typically installed automatically with the PDF Viewer package.
 
-## Steps to extract text from a PDF page
+## Implementation steps
+
+Follow these steps to extract text and layout coordinates from a PDF:
 
 1. Load the PDF document into a `PdfLoadedDocument` instance.
-2. Retrieve the target page as a `PdfLoadedPage` object.
-3. Call `ExtractText` to obtain the text and the corresponding `TextLineCollection`.
-
-The following code snippet demonstrates the extraction workflow:
+2. Access the desired page as a `PdfLoadedPage` object.
+3. Call the `ExtractText` method, passing the `TextLineCollection` as an output parameter.
 
 ```cs
 

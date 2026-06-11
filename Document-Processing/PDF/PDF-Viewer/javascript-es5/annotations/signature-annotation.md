@@ -12,25 +12,26 @@ domainurl: ##DomainURL##
 
 The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
 
-## Adding a handwritten signature to the PDF document
+## Add signature annotation
+
+### Adding a handwritten signature in UI
 
 The handwritten signature can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **HandWritten Signature** button in the annotation toolbar. The signature panel appears.
+- Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
+- Select the **Handwritten signature** button in the annotation toolbar. The signature panel appears.
 
 ![Open the handwritten signature panel](../images/select_sign.png)
 
-* Draw the signature in the panel.
+- Draw the signature in the panel.
 
 ![Draw the handwritten signature](../images/add_sign.png)
 
-* Click **Create**, move the signature, and place it at the desired location.
+- Click **Create**, move the signature, and place it at the desired location.
 
 ![Place the handwritten signature on the page](../images/create_sign.png)
 
 Refer to the following code sample to switch to the handwritten signature mode programmatically.
-
 ```html
 <button id="handWrittenSignature">HandWritten Signature mode</button>
 ```
@@ -74,44 +75,11 @@ if (handWrittenSignature) {
 {% endhighlight %}
 {% endtabs %}
 
-
-## Enable the handwritten signature
-
-The following example enables or disables the handwritten signature in the PDF Viewer. Setting the value to `false` disables the feature.
-
-{% tabs %}
-{% highlight ts tabtitle="Standalone" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
-                    enableHandwrittenSignature : false,
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-                    enableHandwrittenSignature : false
-                });
-ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
-                              ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add a handwritten signature programmatically to the PDF document
+### Add a handwritten signature programmatically
 
 With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
 
-Here is an example of adding a handwritten signature programmatically using addAnnotation():
-
+Here is an example of adding a handwritten signature programmatically using the `addAnnotation()` method:
 ```html
 <button id="addHandwrittenSignature "> Add HandWritten signature Programmatically</button>
 ```
@@ -233,24 +201,158 @@ if(addHandwrittenSignature){
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
 
-## Edit the properties of handwritten signatures
+## Edit signature annotation
+
+### Edit signature annotation in UI
 
 Stroke color, border thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-### Edit stroke color
+#### Edit stroke color
 
 Edit the stroke color using the color palette in the Edit Stroke Color tool.
 
 ![Change signature stroke color](../images/change_stroke.png)
 
-### Edit thickness
+#### Edit thickness
 
 Edit border thickness using the range slider in the Edit Thickness tool.
 
 ![Change signature border thickness](../images/change_thickness.png)
 
-### Edit opacity
+#### Edit opacity
 
 Edit opacity using the range slider in the Edit Opacity tool.
 
 ![Change signature opacity](../images/change_opacity.png)
+
+### Edit signature annotation programmatically
+
+With the PDF Viewer library, you can programmatically edit a handwritten signature in the PDF Viewer control using the `editSignature()` method.
+
+Here is an example of editing a handwritten signature programmatically using the `editSignature()` method:
+```html
+<button id="Signature">Add Signature Annotation</button>
+<button id="editSignatureAnnotation">Edit Signature Annotation</button>
+```
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+//Add Signature annotation
+document.getElementById('Signature')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation("HandWrittenSignature", {
+                offset: { x: 200, y: 310 },
+                pageNumber: 1,
+                width: 200,
+                height: 65,
+                signatureItem: ['Signature'],
+                signatureDialogSettings: {
+                    displayMode: DisplayMode.Text, hideSaveSignature: false
+                },
+                canSave: false,
+                path: 'Syncfusion',
+                fontFamily: "Helvetica",
+            });
+});
+
+//Edit Signature annotation
+document.getElementById('editSignatureAnnotation')?.addEventListener('click', () => {
+    for (let i = 0; i < pdfviewer.signatureCollection.length; i++) {
+        if (pdfviewer.signatureCollection[i].shapeAnnotationType === 'SignatureText') {
+            pdfviewer.signatureCollection[i].fontSize = 12;
+            pdfviewer.signatureCollection[i].thickness = 2;
+            pdfviewer.signatureCollection[i].strokeColor = '#0000FF';
+            pdfviewer.signatureCollection[i].opacity = 0.8;
+            pdfviewer.annotationModule.editSignature(pdfviewer.signatureCollection[i]);
+        }
+    }
+});
+{% endhighlight %}
+{% highlight ts tabtitle="Server-Backed" %}
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+
+//Add Signature annotation
+document.getElementById('Signature')?.addEventListener('click', function () {
+    pdfviewer.annotation.addAnnotation("HandWrittenSignature", {
+                offset: { x: 200, y: 310 },
+                pageNumber: 1,
+                width: 200,
+                height: 65,
+                signatureItem: ['Signature'],
+                signatureDialogSettings: {
+                    displayMode: DisplayMode.Text, hideSaveSignature: false
+                },
+                canSave: false,
+                path: 'Syncfusion',
+                fontFamily: "Helvetica",
+            });
+});
+
+//Edit Signature annotation
+document.getElementById('editSignatureAnnotation')?.addEventListener('click', () => {
+    for (let i = 0; i < pdfviewer.signatureCollection.length; i++) {
+        if (pdfviewer.signatureCollection[i].shapeAnnotationType === 'SignatureText') {
+            pdfviewer.signatureCollection[i].fontSize = 12;
+            pdfviewer.signatureCollection[i].thickness = 2;
+            pdfviewer.signatureCollection[i].strokeColor = '#0000FF';
+            pdfviewer.signatureCollection[i].opacity = 0.8;
+            pdfviewer.annotationModule.editSignature(pdfviewer.signatureCollection[i]);
+        }
+    }
+});
+{% endhighlight %}
+{% endtabs %}
+
+## Enable or disable handwritten signature
+
+The following example enables or disables the handwritten signature in the PDF Viewer. Setting the value to `false` disables the feature.
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+pdfviewer.enableHandwrittenSignature  = false;
+
+{% endhighlight %}
+{% highlight js tabtitle="Server-Backed" %}
+
+ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.appendTo('#PdfViewer');
+pdfviewer.enableHandwrittenSignature  = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> When `enableHandwrittenSignature` is set to `false`, the handwritten signature toolbar and related UI are disabled; existing handwritten signature annotations remain in the document unless removed. The `canSave` option in annotation examples controls whether a signature can be saved for reuse; when `canSave` is `false`, signatures are not persisted in the signature collection for later reuse.
+
+## See also
+
+- [Annotation Overview](../overview)
+- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](../annotations/create-modify-annotation)
+- [Customize Annotation](../annotations/customize-annotation)
+- [Remove Annotation](../annotations/delete-annotation)
+- [Export and Import Annotation](../annotations/export-import/export-annotation)
+- [Annotation Permission](../annotations/annotation-permission)
+- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
+- [Annotation Events](../annotations/annotation-event)
+- [Annotation API](../annotations/annotations-api)

@@ -174,8 +174,8 @@ You can bind **comment thread** to cells at initial load by providing a `comment
 In the below sample, comments are added to a specific cell using cell data binding. The "Comments" review pane is shown initially by enabling the `showCommentsPane` property, and comments are added using `updateCell` method in the `created` event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/comment-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/comment-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}

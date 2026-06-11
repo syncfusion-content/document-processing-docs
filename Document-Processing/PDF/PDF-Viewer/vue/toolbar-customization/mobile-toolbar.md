@@ -9,10 +9,11 @@ domainurl: ##DomainURL##
 ---
 # Mobile Toolbar Interface in Vue PDF Viewer component
 
-The mobile PDF Viewer offers a variety of features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools like search, download, bookmarking, annotation, and page organization. Users can also enable desktop toolbar features in mobile mode to access a more extensive set of actions.
+The Mobile PDF Viewer provides features for viewing, searching, annotating, and managing PDF documents on mobile devices. It exposes core tools such as search, download, bookmarking, annotation, and page organization. The desktop toolbar can also be enabled in mobile mode to expose additional actions when required.
 
 ## Mobile Mode Toolbar Configuration
-In mobile mode, the toolbar is optimized for small screens, presenting the most common actions for interacting with a PDF document. Below are the key features available in mobile mode:
+
+In mobile mode, the toolbar is optimized for small screens and presents the most common actions for interacting with a PDF document. The following key features are available in mobile mode:
 
 ![Mobile toolbar with primary PDF interaction options](../images/mobileToolbar.png)
 
@@ -44,12 +45,12 @@ When you open the more options menu, you will see additional actions such as:
 
 ## Enable desktop mode in mobile
 
-The desktop version of the toolbar can be enabled on mobile devices by using the `enableDesktopMode` API. This allows you to bring desktop-like features to the mobile PDF Viewer, providing access to additional toolbar actions typically available on desktop platforms.
+The desktop toolbar can be enabled on mobile devices by setting the `enableDesktopMode` option. Enabling this option exposes desktop-style toolbar actions in the mobile PDF Viewer.
 
 ### Steps to enable desktop mode
 
-- Set `enableDesktopMode` to true in the configuration.
-- This will replace the mobile toolbar with the desktop toolbar layout, allowing access to more actions and controls.
+**Step 1:** Set `enableDesktopMode` to true in the component configuration.
+**Step 2:** The viewer will use the desktop toolbar layout, granting access to additional actions and controls.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -168,7 +169,7 @@ export default {
 
 ## Enable scrolling in desktop mode with touch gestures
 
-To ensure smooth scrolling of PDF documents on a mobile device in desktop mode, enable touch gesture scrolling by setting `enableTextSelection` to false.
+To ensure smooth touch scrolling of documents on mobile devices when the desktop toolbar is enabled, set the `enableTextSelection` option to **false**. This disables text-selection interactions that can interfere with touch-based scrolling.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -287,12 +288,14 @@ export default {
 
 ## Print option not available in mobile mode
 
-The Print option is not available in mobile mode by default. If you need to use the print functionality on mobile devices, enable the desktop toolbar using the `enableDesktopMode` API.
+The Print option is not available in mobile mode by default. Enabling the desktop toolbar on mobile via `enableDesktopMode` makes the Print option available.
 
-- Enable Desktop Mode: Set `enableDesktopMode` to true to load the desktop version of the toolbar on your mobile device.
-- Print Option: Once desktop mode is enabled, the print option will be available, allowing you to print the document directly from your mobile device.
+### How to use Print on mobile:
 
-N> In mobile mode, the print functionality will not be available unless desktop mode is enabled.
+- Set `enableDesktopMode` to true to load the desktop toolbar on mobile.
+- After enabling desktop mode, the Print option appears in the toolbar and can be used to print the document from the mobile device.
+
+N> Print functionality remains unavailable in the default mobile toolbar unless desktop mode is enabled.
 
 ## See also
 

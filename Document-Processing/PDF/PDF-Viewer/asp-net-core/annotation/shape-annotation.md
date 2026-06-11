@@ -2,14 +2,15 @@
 layout: post
 title: Shape annotation in ASP.NET Core PDF Viewer control | Syncfusion
 description: Learn about shape annotations in the Syncfusion ASP.NET Core PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
-platform: document-processing
 control: PDF Viewer
+platform: document-processing
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Shape annotation in ASP.NET Core PDF Viewer control
+# Shape annotation in ASP.NET Core PDF Viewer
 
-The PDF Viewer control provides options to add, edit, and delete shape annotations. The supported shape annotation types are:
+The PDF Viewer provides tools to add, edit, and delete shape annotations. Supported shape types:
 
 * Line
 * Arrow
@@ -19,430 +20,433 @@ The PDF Viewer control provides options to add, edit, and delete shape annotatio
 
 ![Shape annotations overview](../images/shape_annot.png)
 
-## Adding a shape annotation to the PDF document
+## Add a shape annotation
 
-Shape annotations can be added to the PDF document using the annotation toolbar.
+Shape annotations are available from the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Shape Annotation** drop-down button. The pop-up lists available shape annotation types.
-* Select a shape type to enable its annotation mode.
-* Draw the shape on the pages of the PDF document.
+- Open the annotation toolbar with the **Edit Annotation** button in the PDF Viewer toolbar.
+- Use the **Shape Annotation** drop-down to choose the desired shape type.
+- Select a shape type to enable its annotation mode, then draw the shape on the page.
 
-N> When in pan mode and a shape annotation tool is selected, the PDF Viewer switches to text select mode automatically to ensure a smooth interaction experience.
+N> When the viewer is in pan mode and a shape tool is selected, the viewer switches to text selection mode where applicable to ensure a smooth interaction.
 
 ![Shape annotation toolbar](../images/shape_toolbar.png)
 
-Refer to the following code sample to switch to the circle annotation mode.
+The following sample shows how to switch the viewer to circle annotation mode.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-
-<!--Element to set shape annotation mode-->
-<button id="set" onclick="addAnnot()">Circle</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"></ejs-pdfviewer>
+</div>
+<div style="margin-top:8px">
+  <button onclick="circleMode()">Circle</button>
 </div>
 <script>
-    function addAnnot() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.annotation.setAnnotationMode('Circle');
-    }
+  function circleMode() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Circle');
+  }
 </script>
-
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
-
-<!--Element to set shape annotation mode-->
-<button id="set" onclick="addAnnot()">Circle</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"></ejs-pdfviewer>
+</div>
+<div style="margin-top:8px">
+  <button onclick="circleMode()">Circle</button>
 </div>
 <script>
-    function addAnnot() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.annotation.setAnnotationMode('Circle');
-    }
+  function circleMode() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    viewer.annotation.setAnnotationMode('Circle');
+  }
 </script>
-
 {% endhighlight %}
 {% endtabs %}
 
 ## Add a shape annotation to the PDF document programmatically
 
-The PDF Viewer library allows adding a shape annotation programmatically using the **addAnnotation()** method.
+The PDF Viewer library allows adding an ink annotation programmatically using the `addAnnotation()` method.
 
-Here is an example showing how to add shape annotations programmatically using addAnnotation():
+The following examples show how to add shape annotations programmatically using `addAnnotation()`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-
-<button onclick="addLineAnnotation()">add Line Annotation programatically</button>
-<button onclick="addArrowAnnotation()">add Arrow Annotation programatically</button>
-<button onclick="addRectangleAnnotation()">add Rectangle Annotation programatically</button>
-<button onclick="addCircleAnnotation()">add Circle Annotation programatically</button>
-<button onclick="addPolygonAnnotation()">add Polygon Annotation programatically</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"></ejs-pdfviewer>
+</div>
+<div style="margin-top:8px">
+  <button onclick="addLineAnnotation()">Add Line Annotation</button>
+  <button onclick="addArrowAnnotation()">Add Arrow Annotation</button>
+  <button onclick="addRectangleAnnotation()">Add Rectangle Annotation</button>
+  <button onclick="addCircleAnnotation()">Add Circle Annotation</button>
+  <button onclick="addPolygonAnnotation()">Add Polygon Annotation</button>
 </div>
 <script>
-    function addLineAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfviewer.annotation.addAnnotation("Line", {
-            offset: { x: 200, y: 230 },
-            pageNumber: 1,
-            vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
-        });
-    }
-    function addArrowAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfviewer.annotation.addAnnotation("Arrow", {
-            offset: { x: 200, y: 370 },
-            pageNumber: 1,
-            vertexPoints: [{ x: 200, y: 370 }, { x: 350, y: 370 }]
-        });
-    }
-    function addRectangleAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfviewer.annotation.addAnnotation("Rectangle", {
-            offset: { x: 200, y: 500 },
-            pageNumber: 1,
-            vertexPoints: [{ x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }]
-        });
-    }
-    function addCircleAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfviewer.annotation.addAnnotation("Circle", {
-            offset: { x: 200, y: 630 },
-            pageNumber: 1,
-            width: 90,
-            height: 90
-        });
-    }
-    function addPolygonAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfviewer.annotation.addAnnotation("Polygon", {
-            offset: { x: 200, y: 800 },
-            pageNumber: 1,
-            vertexPoints: [{ x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }]
-        });
-    }
+  function addLineAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    viewer.annotation.addAnnotation("Line", {
+      offset: { x: 200, y: 230 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
+    });
+  }
+  function addArrowAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    viewer.annotation.addAnnotation("Arrow", {
+      offset: { x: 200, y: 370 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 370 }, { x: 350, y: 370 }]
+    });
+  }
+  function addRectangleAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    viewer.annotation.addAnnotation("Rectangle", {
+      offset: { x: 200, y: 500 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }]
+    });
+  }
+  function addCircleAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    viewer.annotation.addAnnotation("Circle", {
+      offset: { x: 200, y: 630 },
+      pageNumber: 1,
+      width: 90,
+      height: 90
+    });
+  }
+  function addPolygonAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    viewer.annotation.addAnnotation("Polygon", {
+      offset: { x: 200, y: 800 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }]
+    });
+  }
 </script>
-
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
-
-<button onclick="addLineAnnotation()">add Line Annotation programatically</button>
-<button onclick="addArrowAnnotation()">add Arrow Annotation programatically</button>
-<button onclick="addRectangleAnnotation()">add Rectangle Annotation programatically</button>
-<button onclick="addCircleAnnotation()">add Circle Annotation programatically</button>
-<button onclick="addPolygonAnnotation()">add Polygon Annotation programatically</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"></ejs-pdfviewer>
+</div>
+<div style="margin-top:8px">
+  <button onclick="addLineAnnotation()">Add Line Annotation</button>
+  <button onclick="addArrowAnnotation()">Add Arrow Annotation</button>
+  <button onclick="addRectangleAnnotation()">Add Rectangle Annotation</button>
+  <button onclick="addCircleAnnotation()">Add Circle Annotation</button>
+  <button onclick="addPolygonAnnotation()">Add Polygon Annotation</button>
 </div>
 <script>
-    function addLineAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfviewer.annotation.addAnnotation("Line", {
-            offset: { x: 200, y: 230 },
-            pageNumber: 1,
-            vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
-        });
-    }
-    function addArrowAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfviewer.annotation.addAnnotation("Arrow", {
-            offset: { x: 200, y: 370 },
-            pageNumber: 1,
-            vertexPoints: [{ x: 200, y: 370 }, { x: 350, y: 370 }]
-        });
-    }
-    function addRectangleAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfviewer.annotation.addAnnotation("Rectangle", {
-            offset: { x: 200, y: 500 },
-            pageNumber: 1,
-            vertexPoints: [{ x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }]
-        });
-    }
-    function addCircleAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfviewer.annotation.addAnnotation("Circle", {
-            offset: { x: 200, y: 630 },
-            pageNumber: 1,
-            width: 90,
-            height: 90
-        });
-    }
-    function addPolygonAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfviewer.annotation.addAnnotation("Polygon", {
-            offset: { x: 200, y: 800 },
-            pageNumber: 1,
-            vertexPoints: [{ x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }]
-        });
-    }
+  function addLineAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    viewer.annotation.addAnnotation("Line", {
+      offset: { x: 200, y: 230 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
+    });
+  }
+  function addArrowAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    viewer.annotation.addAnnotation("Arrow", {
+      offset: { x: 200, y: 370 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 370 }, { x: 350, y: 370 }]
+    });
+  }
+  function addRectangleAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    viewer.annotation.addAnnotation("Rectangle", {
+      offset: { x: 200, y: 500 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }]
+    });
+  }
+  function addCircleAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    viewer.annotation.addAnnotation("Circle", {
+      offset: { x: 200, y: 630 },
+      pageNumber: 1,
+      width: 90,
+      height: 90
+    });
+  }
+  function addPolygonAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    viewer.annotation.addAnnotation("Polygon", {
+      offset: { x: 200, y: 800 },
+      pageNumber: 1,
+      vertexPoints: [{ x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }]
+    });
+  }
 </script>
-
 {% endhighlight %}
 {% endtabs %}
 
 ## Edit an existing shape annotation programmatically
 
-To modify an existing shape annotation programmatically, use the **editAnnotation()** method.
+Use the `editAnnotation()` method to modify existing shape annotations programmatically.
 
-Here is an example of using editAnnotation():
+The following example demonstrates `editAnnotation()`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-
-<button onclick="editLineAnnotation()">edit Line Annotation programatically</button>
-<button onclick="editArrowAnnotation()">edit Arrow Annotation programatically</button>
-<button onclick="editRectangleAnnotation()">edit Rectangle Annotation programatically</button>
-<button onclick="editCircleAnnotation()">edit Circle Annotation programatically</button>
-<button onclick="editPolygonAnnotation()">edit Polygon Annotation programatically</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"></ejs-pdfviewer>
+</div>
+<div style="margin-top:8px">
+  <button onclick="editLineAnnotation()">Edit Line Annotation</button>
+  <button onclick="editArrowAnnotation()">Edit Arrow Annotation</button>
+  <button onclick="editRectangleAnnotation()">Edit Rectangle Annotation</button>
+  <button onclick="editCircleAnnotation()">Edit Circle Annotation</button>
+  <button onclick="editPolygonAnnotation()">Edit Polygon Annotation</button>
 </div>
 <script>
-    function editLineAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].subject === "Line") {
-                pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                pdfviewer.annotationCollection[i].thickness = 2;
-                pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-            }
-        }
+  function editLineAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Line") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2;
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
     }
-    function editArrowAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].subject === "Arrow") {
-                pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                pdfviewer.annotationCollection[i].thickness = 2;
-                pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-            }
-        }
+  }
+  function editArrowAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Arrow") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
     }
-    function editRectangleAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].subject === "Rectangle") {
-                pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                pdfviewer.annotationCollection[i].thickness = 2;
-                pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-            }
-        }
+  }
+  function editRectangleAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Rectangle") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
     }
-    function editCircleAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].subject === "Circle") {
-                pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                pdfviewer.annotationCollection[i].thickness = 2;
-                pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-            }
-        }
+  }
+  function editCircleAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Circle") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
     }
-    function editPolygonAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].subject === "Polygon") {
-                pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                pdfviewer.annotationCollection[i].thickness = 2;
-                pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-            }
-        }
+  }
+  function editPolygonAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Polygon") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
     }
+  }
 </script>
-
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
-
-<button onclick="editLineAnnotation()">edit Line Annotation programatically</button>
-<button onclick="editArrowAnnotation()">edit Arrow Annotation programatically</button>
-<button onclick="editRectangleAnnotation()">edit Rectangle Annotation programatically</button>
-<button onclick="editCircleAnnotation()">edit Circle Annotation programatically</button>
-<button onclick="editPolygonAnnotation()">edit Polygon Annotation programatically</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"></ejs-pdfviewer>
+</div>
+<div style="margin-top:8px">
+  <button onclick="editLineAnnotation()">Edit Line Annotation</button>
+  <button onclick="editArrowAnnotation()">Edit Arrow Annotation</button>
+  <button onclick="editRectangleAnnotation()">Edit Rectangle Annotation</button>
+  <button onclick="editCircleAnnotation()">Edit Circle Annotation</button>
+  <button onclick="editPolygonAnnotation()">Edit Polygon Annotation</button>
 </div>
 <script>
-    function editLineAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].subject === "Line") {
-                pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                pdfviewer.annotationCollection[i].thickness = 2;
-                pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-            }
-        }
+  function editLineAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Line") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2;
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
     }
-    function editArrowAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].subject === "Arrow") {
-                pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                pdfviewer.annotationCollection[i].thickness = 2;
-                pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-            }
-        }
+  }
+  function editArrowAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Arrow") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
     }
-    function editRectangleAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].subject === "Rectangle") {
-                pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                pdfviewer.annotationCollection[i].thickness = 2;
-                pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-            }
-        }
+  }
+  function editRectangleAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Rectangle") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
     }
-    function editCircleAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].subject === "Circle") {
-                pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                pdfviewer.annotationCollection[i].thickness = 2;
-                pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-            }
-        }
+  }
+  function editCircleAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Circle") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
     }
-    function editPolygonAnnotation() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i = pdfviewer.annotationCollection.length; i++) {
-            if (pdfviewer.annotationCollection[i].subject === "Polygon") {
-                pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                pdfviewer.annotationCollection[i].thickness = 2;
-                pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
-                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-            }
-        }
+  }
+  function editPolygonAnnotation() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    for (var i = 0; i < viewer.annotationCollection.length; i++) {
+      if (viewer.annotationCollection[i].subject === "Polygon") {
+        viewer.annotationCollection[i].strokeColor = "#0000FF";
+        viewer.annotationCollection[i].thickness = 2;
+        viewer.annotationCollection[i].fillColor = "#FFFF00";
+        viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
+        viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+      }
     }
+  }
 </script>
-
 {% endhighlight %}
 {% endtabs %}
 
 ## Editing the properties of the shape annotation
 
-The fill color, stroke color, thickness, and opacity of shape annotations can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
+## Edit properties of shape annotations
 
-### Editing fill color
+Change fill color, stroke color, thickness, and opacity using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
+### Edit fill color
 
-![Edit fill color for shapes](../images/shape_fillcolor.png)
+Change the fill color using the color palette in the Edit Color tool.
 
-### Editing stroke color
+![Edit fill color for shapes](../images/shape_fillColor.png)
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+### Edit stroke color
+
+Change the stroke color using the Edit Stroke Color tool.
 
 ![Edit stroke color for shapes](../images/shape_strokecolor.png)
 
-### Editing thickness
+### Edit thickness
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+Adjust border thickness using the Edit Thickness range slider.
 
 ![Edit thickness for shapes](../images/shape_thickness.png)
 
-### Editing opacity
+### Edit opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Adjust opacity using the Edit Opacity range slider.
 
 ![Edit opacity for shapes](../images/shape_opacity.png)
 
-### Editing the line properties
+### Line properties
 
-Line and arrow annotations have additional options in the Line Properties window. Open it by right-clicking a line or arrow annotation and selecting Properties from the context menu.
-
-Refer to the following code sample to set the default annotation settings.
+Line and arrow annotations include additional options in the Line Properties dialog. Open it by right-clicking a line or arrow annotation and choosing Properties.
 
 ![Line properties dialog](../images/shape_lineproperty.png)
 
-## Set default properties during control initialization
+### Edit annotation programmatically
 
-Default properties for shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
+Modify annotations programmatically using the `editAnnotation()` method. The example below demonstrates selecting and editing an annotation.
+```
+<button onclick="editAnnotation()()">Edit Annotation</button>
+
+<script>
+
+//Edit Annotation
+function editAnnotation(){
+var pdfviewer = document.getElementById('container').ej2_instances[0];
+  pdfviewer.annotationModule.selectAnnotation(pdfviewer.annotationCollection[0].annotationId);
+  pdfviewer.annotationCollection[0].opacity ="0.5";
+  pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[0]);
+}
+</script>
+```
+### Delete annotation programmatically
+
+Delete a specific annotation with `deleteAnnotationById()` by providing the annotation's id. The example below demonstrates usage.
+
+```
+<button onclick="deleteAnnotationbyId()">Delete Annotation by ID</button>
+
+<script>
+  //Delete Annotation by id.
+  function deleteAnnotationbyId() {
+    var viewer = document.getElementById('container').ej2_instances[0];
+    viewer.annotationModule.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
+  }
+</script>
+```
+
+## Set default properties during initialization
+
+Default properties for shape annotations can be configured before creating the viewer using `lineSettings`, `arrowSettings`, `rectangleSettings`, `circleSettings`, and `polygonSettings`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   lineSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerLineSettings
-            {FillColor="blue", Opacity=0.6, StrokeColor="green"})"
-                   arrowSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerArrowSettings
-            {FillColor="green", Opacity=0.6, StrokeColor="blue"})"
-                   rectangleSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerRectangleSettings
-            {FillColor="yellow", Opacity=0.6, StrokeColor="orange"})"
-                   circleSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerCircleSettings
-            {FillColor="orange", Opacity=0.6, StrokeColor="pink"})"
-                   polygonSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerPolygonSettings
-            {FillColor="pink", Opacity=0.6, StrokeColor="yellow"})">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"></ejs-pdfviewer>
 </div>
-
+<script>
+  window.onload = function() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    if (viewer) {
+      viewer.lineSettings = { fillColor: 'blue', opacity: 0.6, strokeColor: 'green' };
+      viewer.arrowSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };
+      viewer.rectangleSettings = { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' };
+      viewer.circleSettings = { fillColor: 'orange', opacity: 0.6, strokeColor: 'pink' };
+      viewer.polygonSettings = { fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow' };
+    }
+  };
+</script>
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   lineSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerLineSettings
-            {FillColor="blue", Opacity=0.6, StrokeColor="green"})"
-                   arrowSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerArrowSettings
-            {FillColor="green", Opacity=0.6, StrokeColor="blue"})"
-                   rectangleSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerRectangleSettings
-            {FillColor="yellow", Opacity=0.6, StrokeColor="orange"})"
-                   circleSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerCircleSettings
-            {FillColor="orange", Opacity=0.6, StrokeColor="pink"})"
-                   polygonSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerPolygonSettings
-            {FillColor="pink", Opacity=0.6, StrokeColor="yellow"})">
-    </ejs-pdfviewer>
+<div style="width:100%;height:640px">
+  <ejs-pdfviewer id="pdfviewer" style="height:640px" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"></ejs-pdfviewer>
 </div>
-
+<script>
+  window.onload = function() {
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+    if (viewer) {
+      viewer.lineSettings = { fillColor: 'blue', opacity: 0.6, strokeColor: 'green' };
+      viewer.arrowSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };
+      viewer.rectangleSettings = { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' };
+      viewer.circleSettings = { fillColor: 'orange', opacity: 0.6, strokeColor: 'pink' };
+      viewer.polygonSettings = { fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow' };
+    }
+  };
+</script>
 {% endhighlight %}
 {% endtabs %}
+
+N> In both the Arrow and Line settings, the Fill Color option is available only when an arrowhead style is applied at the Start or End. If both Start and End arrowhead styles are set to `None`, lines do not support fill rendering and the Fill Color option is disabled. See Arrow settings and Line settings for API details.

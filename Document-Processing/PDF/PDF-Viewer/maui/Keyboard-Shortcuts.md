@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Keyboard shortcuts in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here about performing actions using keyboard shortcuts in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+title: Keyboard Shortcuts in .NET MAUI PDF Viewer | Syncfusion
+description: Learn the keyboard shortcuts available in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Keyboard shortcuts in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -148,3 +148,8 @@ The [.NET MAUI PDF viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 * In Windows, it is the default behavior of UI elements to receive notification of the key pressed event only when they are focused. So, while using keyboard shortcuts in Windows, please make sure that the PDF viewer control is focused by either tapping or clicking on it. 
 
 N> Use the `Command` key instead of the `Ctrl` key in macOS.
+
+## See Also
+- [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization)
+- [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-search)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)

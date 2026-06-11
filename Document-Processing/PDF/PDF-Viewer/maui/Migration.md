@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Migrate from Xamarin SfPdfViewer to .NET MAUI SfPdfViewer | Syncfusion
-description: Learn here all about migrating from Syncfusion<sup>®</sup> Xamarin SfPdfViewer to Syncfusion<sup>®</sup> .NET MAUI SfPdfViewer control and more.
+description: Learn how to migrate from the Syncfusion<sup>®</sup> Xamarin SfPdfViewer to the Syncfusion<sup>®</sup> .NET MAUI SfPdfViewer control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Migrate from Xamarin.Forms SfPdfViewer to .NET MAUI SfPdfViewer
 
-To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) to [.NET MAUI SfPdfViewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) easier, we kept most of the APIs from Xamarin SfPdfViewer in MAUI SfPdfViewer. However, to maintain the consistency of API naming in MAUI SfPdfViewer, we renamed some of the APIs. The APIs that have been changed in MAUI SfPdfViewer from Xamarin SfPdfViewer are detailed as follows.
+To simplify migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) to [.NET MAUI SfPdfViewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer), most APIs from Xamarin SfPdfViewer are retained in the MAUI SfPdfViewer. However, some APIs have been renamed to maintain consistency with MAUI API naming conventions. The APIs that have changed are listed below.
 
 ## Namespaces 
 
@@ -242,7 +242,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
   <td>API Unavailable</td> 
   <td>In .NET MAUI PDF Viewer, there is no API to configure common settings for handwritten signatures. However, you can achieve this by handling the {{'[SignatureCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SignatureCreated)'| markdownify }} event, which allows you to access and customize each handwritten signature when it is created using the built-in signature dialog.
   <br>
-  Refer to the {{'[Signature Created Event user guide](https://help.syncfusion.com/maui/pdf-viewer/signature#signature-created-event)'| markdownify }} for instructions on accessing the handwritten signature and setting values like color and border width.
+  Refer to the {{'[Signature Created Event user guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/signature#signature-created-event)'| markdownify }} for instructions on accessing the handwritten signature and setting values like color and border width.
   </td>
 </tr>
 </table>
@@ -367,9 +367,9 @@ private void PdfViewer_PropertyChanged(object? sender, PropertyChangedEventArgs 
 {{'[DocumentSaveInitiated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_DocumentSaveInitiated)'| markdownify }}
 </td>
 <td>API Unavailable</td>
-<td> In Xamarin, clicking the Save button in the built-in toolbar raises the {{'[DocumentSaveInitiated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_DocumentSaveInitiated)'| markdownify }} event. However, in .NET MAUI, a Save button is not provided in the built-in toolbar, so the {{'[DocumentSaveInitiated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_DocumentSaveInitiated)'| markdownify }} event is not available. To save documents from the PDF viewer in .NET MAUI, you can use the {{'[SaveDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocument_System_IO_Stream_)'| markdownify }} method. The PdfViewer control exposes this method as an API, which can be easily integrated into your application. For more details on using the SaveDocument method, refer to the relevant UG Documentation {{'[Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document)'| markdownify }}.
+<td> In Xamarin, clicking the Save button in the built-in toolbar raises the {{'[DocumentSaveInitiated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_DocumentSaveInitiated)'| markdownify }} event. However, in .NET MAUI, a Save button is not provided in the built-in toolbar, so the {{'[DocumentSaveInitiated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_DocumentSaveInitiated)'| markdownify }} event is not available. To save documents from the PDF viewer in .NET MAUI, you can use the {{'[SaveDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocument_System_IO_Stream_)'| markdownify }} method. The PdfViewer control exposes this method as an API, which can be easily integrated into your application. For more details on using the SaveDocument method, refer to the relevant UG Documentation {{'[Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document)'| markdownify }}.
 <br>
-In .NET MAUI PDF Viewer, you can implement custom save logic at the application level. If you would like to include a Save button in the built-in toolbar, this can be achieved by customizing the toolbar items. Refer to the {{'[Customize toolbar items user guide](https://help.syncfusion.com/maui/pdf-viewer/toolbar#customize-toolbar-items)'| markdownify }} for instructions on adding a custom Save button.
+In .NET MAUI PDF Viewer, you can implement custom save logic at the application level. If you would like to include a Save button in the built-in toolbar, this can be achieved by customizing the toolbar items. Refer to the {{'[Customize toolbar items user guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar#customize-toolbar-items)'| markdownify }} for instructions on adding a custom Save button.
 </td>
 </tr>
 <tr>
@@ -587,3 +587,7 @@ For detailed implementation guidance, please refer to the following API document
 <td>Provides data for the {{'[AnnotationAdded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationAdded)'| markdownify}}, {{'[AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected)'| markdownify}}, {{'[AnnotationDeselected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationDeselected)'| markdownify}}, {{'[AnnotationEdited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationEdited)'| markdownify}}, {{'[AnnotationRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationRemoved)'| markdownify}} events.</td>
 </tr>
 </table>
+
+## See Also
+- [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/getting-started)
+- [Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/overview)

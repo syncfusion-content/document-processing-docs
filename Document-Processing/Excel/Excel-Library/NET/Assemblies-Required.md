@@ -30,15 +30,6 @@ Syncfusion.Compression.Base
 </tr>
 <tr>
 <td>
-{{'[Windows Forms](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-windows-forms-c-sharp)' | markdownify}} and {{'[WPF (Client Profile)](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-wpf-c-sharp)' | markdownify}}
-</td>
-<td>
-Syncfusion.XlsIO.ClientProfile<br/>
-Syncfusion.Compression.Base
-</td>
-</tr>
-<tr>
-<td>
 {{'[ASP.NET Core](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-asp-net-core-c-sharp)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-xamarin-c-sharp)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp)' | markdownify}}
 </td>
 <td>
@@ -199,17 +190,6 @@ Syncfusion.ExcelToPDFConverter.Base
 </tr>
 <tr>
 <td>
-{{'[Windows Forms](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-windows-forms)' | markdownify}} and {{'[WPF (Client Profile)](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-wpf)' | markdownify}}    
-</td>
-<td>
-Syncfusion.XlsIO.ClientProfile<br/>
-Syncfusion.Compression.Base<br/>
-Syncfusion.Pdf.ClientProfile<br/>
-Syncfusion.ExcelToPDFConverter.ClientProfile
-</td>
-</tr>
-<tr>
-<td>
 {{'[ASP.NET Core](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-blazor)' | markdownify}}
 </td>
 <td>
@@ -288,15 +268,6 @@ Windows Forms, WPF and ASP.NET MVC
 <td>
 Syncfusion.Compression.Base<br/>
 Syncfusion.XlsIO.Base
-</td>
-</tr>
-<tr>
-<td>
-Windows Forms and WPF (Client Profile) 
-</td>
-<td>
-Syncfusion.XlsIO.ClientProfile<br/>
-Syncfusion.Compression.Base
 </td>
 </tr>
 <tr>

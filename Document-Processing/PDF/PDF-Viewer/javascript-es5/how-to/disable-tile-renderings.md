@@ -10,21 +10,20 @@ domainurl: ##DomainURL##
 
 # Disable tile rendering in JavaScript PDF Viewer
 
-Use the `enableTileRendering` property to enable or disable tile rendering, which affects performance based on document size.
+Use the `enableTileRendering` property to enable or disable tile rendering. Tile rendering is enabled by default and typically improves performance for large documents. Set `enableTileRendering` to `false` to disable tile rendering when it is not required.
 
-Set `enableTileRendering` to `false` to disable tile rendering. It is enabled by default and typically benefits large documents.
+- Include the JavaScript PDF Viewer script and the `ThumbnailView`/`Navigation` modules if using related features.
+- Initialize the viewer instance before changing tile rendering settings at runtime.
 
-Example: Disable tile rendering
+Example: disable tile rendering with a button
 
 ```
-
-<button id="disable">disable tile rendering</button>
+<button id="disable">Disable tile rendering</button>
 
 ```
 
 ```javascript
-
-// Disable tile rendering.
+// Disable tile rendering at runtime
 document.getElementById('disable').addEventListener('click', () => {
   viewer.tileRenderingSettings.enableTileRendering = false;
 });

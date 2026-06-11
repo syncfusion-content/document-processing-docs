@@ -1,15 +1,14 @@
 ---
-title: Syncfusion PDF Compression Service Guide
-description: Use the Syncfusion Compress PDF API to reduce PDF file size efficiently by providing the PDF and compression options to the compress endpoint.
-platform: document-processing
+title: Compress PDF Files Using Syncfusion Web API
+description: Reduce PDF file size with image optimization and structural compression while maintaining visual quality using Syncfusion compression Web API. 
 control: general
 documentation: UG
 ---
-# Guide to Compressing PDF Files with Syncfusion API 
+# Compressing PDF Files Using Syncfusion Web API
 
-The Compress PDF API allows you to reduce the size of a PDF document with various compression options.
+The Syncfusion Compress PDF Web API reduces the file size of PDF documents while maintaining acceptable visual quality. It optimizes images, fonts, metadata, and internal structures, producing smaller PDFs that are easier to store, share, and distribute. This is especially useful for email sharing, web delivery, and document archiving.
 
-## Flatten PDF Document
+## Compress PDF Document
 
 To compress a PDF document, send a request to the /v1/edit-pdf/compress endpoint with the input PDF file and compression options as shown below.
 
@@ -18,7 +17,7 @@ To compress a PDF document, send a request to the /v1/edit-pdf/compress endpoint
 {% highlight c# tabtitle="Curl" %}
 
 curl --location 'http://localhost:8003/v1/edit-pdf/compress' \
---form 'file=@"4mb.pdf"' \
+--form 'file=@"Input.pdf"' \
 --form 'settings="{
   \"File\": \"file\",
   \"Password\": null,
@@ -36,7 +35,19 @@ curl --location 'http://localhost:8003/v1/edit-pdf/compress' \
 
 const formdata = new FormData();
 formdata.append("file", fileInput.files[0], "4mb.pdf");
-formdata.append("settings", "{\n  \"File\": \"file\",\n  \"Password\": null,\n  \"ImageQuality\": 50,\n  \"OptimizeFont\": true,\n  \"RemoveMetadata\": false,\n  \"OptimizePageContents\": true,\n  \"FlattenFormFields\": true,\n  \"FlattenAnnotations\": true\n}");
+formdata.append(
+  "settings",
+  JSON.stringify({
+    File: "file",
+    Password: null,
+    ImageQuality: 50,
+    OptimizeFont: true,
+    RemoveMetadata: false,
+    OptimizePageContents: true,
+    FlattenFormFields: true,
+    FlattenAnnotations: true
+  })
+);
 
 const requestOptions = {
   method: "POST",
@@ -44,7 +55,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:4000/v1/edit-pdf/compress", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/compress", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -56,25 +67,64 @@ fetch("http://localhost:4000/v1/edit-pdf/compress", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/edit-pdf/compress");
 var content = new MultipartFormDataContent();
-content.Add(new StreamContent(File.OpenRead("4mb.pdf")), "file", "4mb.pdf");
-content.Add(new StringContent("{
-  \"File\": \"file\",
-  \"Password\": null,
-  \"ImageQuality\": 50,
-  \"OptimizeFont\": true,
-  \"RemoveMetadata\": false,
-  \"OptimizePageContents\": true,
-  \"FlattenFormFields\": true,
-  \"FlattenAnnotations\": true
-}"), "settings");
+content.Add(new StreamContent(File.OpenRead("Sample.pdf")), "file1", "Sample.pdf");
+
+var settings = new
+{
+    File = "file",
+    Password = (string?)null,
+    ImageQuality = 50,
+    OptimizeFont = true,
+    RemoveMetadata = false,
+    OptimizePageContents = true,
+    FlattenFormFields = true,
+    FlattenAnnotations = true
+};
+
+var json = JsonSerializer.Serialize(settings);
+var settingsContent = new StringContent(json, Encoding.UTF8, "application/json");
+content.Add(settingsContent, "settings");
 request.Content = content;
-var response = await client.SendAsync(request);
+
+using var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endhighlight %} 
 
 {% endtabs %}
+
+## Compress PDF settings
+
+**Password** 
+
+Specifies the password required to open and process a protected PDF file. 
+
+**ImageQuality** 
+
+Controls image compression quality. Lower values reduce file size.  
+
+**OptimizeFont** 
+
+Optimizes and subsets embedded fonts to reduce overall PDF size without affecting text appearance. 
+
+**RemoveMetadata** 
+
+Removes document metadata such as author, title, and creation details to reduce file size and improve privacy. 
+
+**OptimizePageContents** 
+
+Optimizes page content by removing unnecessary objects and streamlining internal PDF structures. 
+
+**FlattenFormFields** 
+
+Converts interactive form fields into static content to further reduce file size. 
+
+**FlattenAnnotations** 
+
+Converts annotations (such as comments and highlights) into static content to minimize PDF size. 
+
+## Compress PDF Job Response
 
 Once the request is sent, it will create a compression job to compress the PDF and return the job details as follows:
 
@@ -86,7 +136,7 @@ Once the request is sent, it will create a compression job to compress the PDF a
 }
 ```
 
-## Poll the status of the Compress PDF Job
+## Check Compress PDF Job Status
 
 Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/status/{jobID} endpoint with the job ID.
 
@@ -94,7 +144,8 @@ Next, you can retrieve the job status by sending a request to the /v1/edit-pdf/s
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df'
+curl --location 'http://localhost:8003/v1/edit-pdf/status/9b131bfe-d4eb-4f1d-b946-46443a363eb5' \
+  --output Output.pdf
 
 {% endhighlight %}
 
@@ -104,7 +155,7 @@ const requestOptions = {
   method: "GET",
   redirect: "follow"
 };
-fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
+fetch("http://localhost:8003/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c42fe3", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
@@ -114,7 +165,7 @@ fetch("http://localhost:4000/v1/edit-pdf/status/4413bbb5-6b26-4c07-9af2-c26cd2c4
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/conversion/status/ef0766ab-bc74-456c-8143-782e730a89df");
+var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8003/v1/edit-pdf/status/ef0766ab-bc74-456c-8143-782e730a89df");
 var response = await client.SendAsync(request);
 response.EnsureSuccessStatusCode();
 Console.WriteLine(await response.Content.ReadAsStringAsync());

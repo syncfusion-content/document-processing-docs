@@ -3,15 +3,19 @@ layout: post
 title: Overlapped annotation in ASP.NET Core PDF Viewer control | Syncfusion
 description: Learn here all about Overlapped annotation in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Overlapped annotation
+control: PDF Viewer
 documentation: ug
 ---
 
-# Overlapped annotation in ASP.NET Core PDF Viewer control
+# Retrieve overlapped annotations in ASP.NET Core PDF Viewer
 
-To get the overlapped annotations on a mouse click in a Syncfusion PDF Viewer, you can use the **annotationCollection** property of [**annotationSelect**](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationSelect) event.This event is triggered when the user clicks on an annotation in the PDF document.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer allows you to identify all annotations that occupy the same spatial coordinates when a user clicks or taps the document. This is particularly useful for managing stacked or closely grouped highlights, notes, or shapes.
 
-Here is an example of how you can use the **annotationSelect** event to get the overlapped annotations on a mouse click in a Syncfusion PDF Viewer:
+## Accessing overlapped annotations
+
+Collection of overlapping annotations can be retrieved by inspecting the `annotationCollection` property within the [`annotationSelect`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationSelect) event arguments. This event triggers automatically whenever an annotation is selected in the viewer.
+
+The following example demonstrates how to capture and log the IDs of all overlapping annotations during a selection event:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

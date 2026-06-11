@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Lock annotation in React Pdfviewer component
 
-The PDF Viewer library allows you to lock the rectangle or square annotations using the **isLock** property in the **rectangleSettings**.
+The PDF Viewer supports locking annotations to prevent users from moving, resizing, or removing them. Locking can be applied via annotation settings or by handling viewer events and updating annotation metadata.
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create simple PDF Viewer sample in React.
 

@@ -3,15 +3,19 @@ layout: post
 title: Select multi page annotations in ASP.NET Core PDF Viewer control | Syncfusion
 description: Learn here all about Select multi page annotations in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Select multi page annotations
+control: PDF Viewer
 documentation: ug
 ---
 
-# Select multi page annotations in ASP.NET Core PDF Viewer control
+# Select multi-page annotations in ASP.NET Core PDF Viewer
 
-To select a multi-page TextMarkup annotation as a single annotation in a Syncfusion PDF viewer, you can use by enabling the [**enableMultiPageAnnotation**](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableMultiPageAnnotation) property. By default it is `false`.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer allows you to treat TextMarkup annotations that span multiple pages as a single, unified annotation entity. This feature simplifies the interaction, selection, and management of highlights or underlines that cross page boundaries.
 
-Here is an example of how you can use the [**enableMultiPageAnnotation**](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableMultiPageAnnotation) property to select the multi page TextMarkup annotation as a single annotation, export and import multi page annotation:
+## Enable multi-page selection
+
+Set the [`enableMultiPageAnnotation`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableMultiPageAnnotation) property to `true` to activate this behavior. When enabled, selecting any part of the multi-page annotation highlights the entire sequence across all pages. You can also export and import these unified annotations as a single record.
+
+The following example demonstrates how to configure the `enableMultiPageAnnotation` property in both standalone and server-backed viewer setups.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

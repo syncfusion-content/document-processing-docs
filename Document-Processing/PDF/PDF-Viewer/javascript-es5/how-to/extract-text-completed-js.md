@@ -9,7 +9,7 @@ documentation: ug
 
 # Use extractTextCompleted to extract text in JavaScript PDF Viewer
 
-Use the [isExtractText](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isextracttext) property and the [extractTextCompleted](https://ej2.syncfusion.com/documentation/api/pdfviewer/#extracttextcompleted) event to extract page text along with bounds.
+Use the [isExtractText](https://ej2.syncfusion.com/documentation/api/pdfviewer/#isextracttext) property together with the [extractTextCompleted](https://ej2.syncfusion.com/documentation/api/pdfviewer/#extracttextcompleted) event to extract page text and its positional bounds from a loaded PDF document.
 
 The following example shows how to enable text extraction and handle the completion event:
 
@@ -31,3 +31,11 @@ viewer.extractTextCompleted = args => {
 ```
 
 Find the sample: [How to extract text](https://stackblitz.com/edit/kzd4jd-dcser9?file=index.js)
+
+## See Also
+
+[Find Text](../text-search/find-text)
+[Text Search Events](../text-search/text-search-events)
+[Text Search Features](../text-search/text-search-features)
+[Extract Text](../how-to/extract-text-js)
+[Extract Text Options](../how-to/extract-text-option-js)

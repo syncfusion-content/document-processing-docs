@@ -76,7 +76,6 @@ loadedDocument.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-the-texts-from-a-page-in-the-PDF-document/). 
 
 N> In this method, the text is extracted in the order in which it is written in the document stream and it may not be in the order in which it is viewed in the PDF reader application.
-
 N> Extracting text from the PDF document pages will not load the entire document content into memory.
 
 The below code illustrates how to extract the text from entire PDF document:
@@ -247,10 +246,10 @@ string extractedText = page.ExtractText(out lineCollection);
 // Gets each line from the collection
 foreach (var line in lineCollection.TextLine)
 {
-    // Gets bounds of the line
-    RectangleF lineBounds = line.Bounds;
-    // Gets text in the line
-    string text = line.Text;
+  // Gets bounds of the line
+  RectangleF lineBounds = line.Bounds;
+  // Gets text in the line
+  string text = line.Text;
 }
 
 {% endhighlight %}
@@ -328,12 +327,12 @@ string extractedText = page.ExtractText(out lineCollection);
 // Gets each line from the collection
 foreach (var line in lineCollection.TextLine)
 {   
-    // Gets bounds of the line
-    RectangleF lineBounds = line.Bounds;
-    // Gets text in the line
-    string text = line.Text;
-    // Gets collection of the words in the line
-    List<TextWord> textWordCollection = line.WordCollection;
+  // Gets bounds of the line
+  RectangleF lineBounds = line.Bounds;
+  // Gets text in the line
+  string text = line.Text;
+  // Gets collection of the words in the line
+  List<TextWord> textWordCollection = line.WordCollection;
 }
 
 {% endhighlight %}
@@ -438,6 +437,44 @@ Color glyphColor = textGlyph.TextColor;
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using System.Drawing;
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+// Get the first page of the loaded PDF document
+PdfPageBase page = loadedDocument.Pages[0];
+TextLines lineCollection = new TextLines();
+
+// Extract text from the first page
+string extractedText = page.ExtractText(out lineCollection);
+// Get a specific line from the collection
+TextLine line = lineCollection[0];
+// Get the collection of words in the line
+List<TextWord> textWordCollection = line.WordCollection;
+// Get a word from the collection using an index
+TextWord textWord = textWordCollection[0];
+// Get Glyph details of the word
+List<TextGlyph> textGlyphCollection = textWord.Glyphs;
+
+// Get a character from the word
+TextGlyph textGlyph = textGlyphCollection[0];
+// Get bounds of the character
+RectangleF glyphBounds = textGlyph.Bounds;
+// Get font name of the character
+string glyphFontName = textGlyph.FontName;
+// Get font size of the character
+float glyphFontSize = textGlyph.FontSize;
+// Get font style of the character
+FontStyle glyphFontStyle = textGlyph.FontStyle;
+// Get the character in the word
+char glyphText = textGlyph.Text;
+// Get the color of the character
+Color glyphColor = textGlyph.TextColor;
+
+{% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
@@ -446,16 +483,16 @@ Imports Syncfusion.Pdf.Parsing
 Imports System.Drawing
 
 ' Load the existing PDF document
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 ' Get the first page of the loaded PDF document
 Dim page As PdfPageBase = loadedDocument.Pages(0)
-Dim lineCollection As New TextLineCollection()
+Dim lineCollection As New TextLines()
 
 ' Extract text from the first page
 Dim extractedText As String = page.ExtractText(lineCollection)
 ' Get a specific line from the collection
-Dim line As TextLine = lineCollection.TextLine(0)
-' Get a collection of words in the line
+Dim line As TextLine = lineCollection(0)
+' Get the collection of words in the line
 Dim textWordCollection As List(Of TextWord) = line.WordCollection
 ' Get a word from the collection using an index
 Dim textWord As TextWord = textWordCollection(0)
@@ -476,6 +513,7 @@ Dim glyphFontStyle As FontStyle = textGlyph.FontStyle
 Dim glyphText As Char = textGlyph.Text
 ' Get the color of the character
 Dim glyphColor As Color = textGlyph.TextColor
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -652,3 +690,17 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     </tr>
   </tbody>
 </table>
+
+## Troubleshooting and FAQ’s
+
+### What is the recommended way to extract form field values from a PDF document?
+
+The [ExtractText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractText) API retrieves only the text that is visibly rendered on the page’s graphics layer. It does not extract the values contained in interactive form fields such as text boxes, combo boxes, or buttons. This is because form field data resides in the PDF’s interactive form (AcroForm) structure, separate from the page’s content stream.
+
+To retrieve form field values, you have two recommended options:
+
+1. [Flatten form fields](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms#flattening-form-fields-in-a-pdf): Converts interactive form fields into static page content, embedding their values directly into the PDF’s text stream. After flattening, any text extraction process (such as ExtractText) will include these values.
+
+Refer to the text extraction section of the PDF [UG documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text-extraction) for more details.
+
+2. [Iterate through form fields directly](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-forms#enumerate-the-form-fields): Access each form field in the PDF’s form collection and read its value programmatically. This approach provides the most accurate and structured method for extracting form data.

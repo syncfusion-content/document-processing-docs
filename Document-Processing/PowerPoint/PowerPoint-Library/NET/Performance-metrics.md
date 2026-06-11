@@ -18,7 +18,7 @@ The following system configurations were used for benchmarking:
 * **Processor:** 12th Gen Intel(R) Core(TM) i5-1235U (1.30 GHz)
 * **RAM:** 24GB
 * **.NET Version:** .NET 8.0
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.Presentation.Net.Core v32.1.19](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/32.1.19)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.Presentation.Net.Core v33.1.44](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/33.1.44)
 
 ## Open and save Presentation 
 
@@ -46,7 +46,7 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>500</td>
     <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Open-and-save/.NET/Open-and-save-PowerPoint/Data/PowerPoint-500.pptx)'| markdownify }}</td>
-    <td>1.06</td>
+    <td>1.04</td>
 </tr>
 </table>
 
@@ -85,3 +85,5 @@ You can find the sample used for this performance evaluation on [GitHub](https:/
 You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Clone-and-merge-slides/).
 
 You can find the performance benchmark report for [PowerPoint to PDF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/performance-metrics) and [PowerPoint to Image](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/performance-metrics) conversion.
+
+N> Execution times are based on the sample documents and may vary with different content or environments.

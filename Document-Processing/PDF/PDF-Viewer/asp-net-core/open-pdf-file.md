@@ -8,17 +8,20 @@ documentation: ug
 ---
 
 # Opening a PDF from Base64 data in PDF Viewer
-### Overview
+
+## Overview
 
 This article explains how to load a PDF document from a Base64 string in the Syncfusion ASP.NET Core PDF Viewer. This approach is useful when PDF data is received from an API, database, or other sources where the document is provided as Base64.
 
-### Opening PDF from Base64 data
+## Opening PDF from Base64 data
 
 **Step 1:** Set up the PDF Viewer in an ASP.NET Core project
 
-Follow the steps in the ASP.NET Core getting started [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) for the PDF Viewer to create a sample
+Follow the steps in the ASP.NET Core getting started [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a sample.
 
-**Step 2:** Use the following code snippet to load a PDF document from a Base64 string
+**Step 2:** Load a PDF document from a Base64 string
+
+Use the following code snippet:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}

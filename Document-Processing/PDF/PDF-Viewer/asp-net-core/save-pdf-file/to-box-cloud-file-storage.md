@@ -124,6 +124,6 @@ Set the `documentPath` property of the PDF Viewer component to the desired PDF f
 
 N> Install the **Box.V2.Core** NuGet package in the application to use the previous code example.
 
-N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the PDF Viewer component.
+N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the `React PDF Viewer` component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-box-cloud-file-storage)

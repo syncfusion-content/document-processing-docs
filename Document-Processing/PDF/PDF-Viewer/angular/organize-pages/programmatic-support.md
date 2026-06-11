@@ -10,199 +10,379 @@ domainurl: ##DomainURL##
 
 # Programmatic Support for Organize Pages in Angular PDF Viewer control
 
-The PDF Viewer provides comprehensive programmatic support for organizing pages, allowing you to integrate and manage PDF functionalities directly within your application. This section details the available APIs to enable, control, and interact with the page organization features.
+The PDF Viewer exposes programmatic APIs for organizing pages so applications can integrate page-management workflows (for example: enable/disable organizer, open/close the organizer, and customize behavior). This section documents the available properties, methods, and settings used to control the Organize Pages experience.
 
 ## Enable or disable the page organizer
 
-The page organizer feature can be enabled or disabled using the `enablePageOrganizer` property. By default, this feature is enabled.
+The page organizer feature can be enabled or disabled using the `enablePageOrganizer` property. By default, the page organizer is enabled.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
 import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         FormFieldsService, FormDesignerService, PageOrganizerService, PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
+import {
+  PdfViewerModule,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  AnnotationService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService,
+} from '@syncfusion/ej2-angular-pdfviewer';
+
 @Component({
-  selector: 'app-container',
-  template: `<div class="content-wrapper">
-               <ejs-pdfviewer id="pdfViewer"
-                        [documentPath]="document"
-                        [resourceUrl]="resource"
-                        [enablePageOrganizer]="true"
-                        style="height:640px;display:block">
-               </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               FormFieldsService, FormDesignerService, PageOrganizerService, PrintService]
-  })
-  export class AppComponent implements OnInit {
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-      public resource = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-  }
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    AnnotationService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService,
+  ],
+  template: `
+    <div class="content-wrapper">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        [enablePageOrganizer]="true"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
+    </div>
+  `,
+})
+export class AppComponent implements OnInit {
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+  ngOnInit(): void { }
+}
 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
 
 import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         FormFieldsService, FormDesignerService, PageOrganizerService, PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
+import {
+  PdfViewerModule,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  AnnotationService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService,
+} from '@syncfusion/ej2-angular-pdfviewer';
+
 @Component({
-  selector: 'app-container',
-  template: `<div class="content-wrapper">
-               <ejs-pdfviewer id="pdfViewer"
-                        [serviceUrl]="service"
-                        [documentPath]="document"
-                        [enablePageOrganizer]="true"
-                        style="height:640px;display:block">
-               </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               FormFieldsService, FormDesignerService, PageOrganizerService, PrintService]
-  })
-  export class AppComponent implements OnInit {
-      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  }
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    AnnotationService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService,
+  ],
+  template: `
+    <div class="content-wrapper">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        [serviceUrl]="service"
+        [documentPath]="document"
+        [enablePageOrganizer]="true"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
+    </div>
+  `,
+})
+export class AppComponent implements OnInit {
+  public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+
+  ngOnInit(): void { }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Open the page organizer on document load
 
-You can control whether the page organizer dialog opens automatically when a document is loaded using the `isPageOrganizerOpen` property. The default value is `false`.
+Use the `isPageOrganizerOpen` property to control whether the page organizer opens automatically when a document loads. The default value is `false`.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
 import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         FormFieldsService, FormDesignerService, PageOrganizerService, PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
+import {
+  PdfViewerModule,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  AnnotationService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService,
+} from '@syncfusion/ej2-angular-pdfviewer';
+
 @Component({
-  selector: 'app-container',
-  template: `<div class="content-wrapper">
-               <ejs-pdfviewer id="pdfViewer"
-                        [documentPath]="document"
-                        [resourceUrl]="resource"
-                        [isPageOrganizerOpen]="true"
-                        style="height:640px;display:block">
-               </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               FormFieldsService, FormDesignerService, PageOrganizerService, PrintService]
-  })
-  export class AppComponent implements OnInit {
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-      public resource = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-  }
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    AnnotationService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService,
+  ],
+  template: `
+    <div class="content-wrapper">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        [isPageOrganizerOpen]="true"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
+    </div>
+  `,
+})
+export class AppComponent implements OnInit {
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+  ngOnInit(): void { }
+}
 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
 
 import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         FormFieldsService, FormDesignerService, PageOrganizerService, PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
+import {
+  PdfViewerModule,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  AnnotationService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService,
+} from '@syncfusion/ej2-angular-pdfviewer';
+
 @Component({
-  selector: 'app-container',
-  template: `<div class="content-wrapper">
-               <ejs-pdfviewer id="pdfViewer"
-                        [serviceUrl]="service"
-                        [documentPath]="document"
-                        [isPageOrganizerOpen]="true"
-                        style="height:640px;display:block">
-               </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               FormFieldsService, FormDesignerService, PageOrganizerService, PrintService]
-  })
-  export class AppComponent implements OnInit {
-      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  }
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    AnnotationService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService,
+  ],
+  template: `
+    <div class="content-wrapper">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        [serviceUrl]="service"
+        [documentPath]="document"
+        [isPageOrganizerOpen]="true"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
+    </div>
+  `,
+})
+export class AppComponent implements OnInit {
+  public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+
+  ngOnInit(): void { }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Customize page organizer settings
 
-The `pageOrganizerSettings` API allows you to customize the page management functionalities. You can enable or disable actions such as deleting, inserting, rotating, copying, importing, and rearranging pages, as well as configure thumbnail zoom settings. By default, all actions are enabled, and standard zoom settings are applied.
+The `pageOrganizerSettings` API customizes page-management capabilities. Use it to enable or disable actions (delete, insert, rotate, copy, import, rearrange) and to configure thumbnail zoom settings. By default, actions are enabled and standard zoom settings apply.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
 import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         FormFieldsService, FormDesignerService, PageOrganizerService, PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
+import {
+  PdfViewerModule,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  AnnotationService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService,
+} from '@syncfusion/ej2-angular-pdfviewer';
+
 @Component({
-  selector: 'app-container',
-  template: `<div class="content-wrapper">
-               <ejs-pdfviewer id="pdfViewer"
-                        [documentPath]="document"
-                        [resourceUrl]="resource"
-                        [pageOrganizerSettings]="{canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5}"
-                        style="height:640px;display:block">
-               </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               FormFieldsService, FormDesignerService, PageOrganizerService, PrintService]
-  })
-  export class AppComponent implements OnInit {
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-      public resource = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
-  }
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    AnnotationService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService,
+  ],
+  template: `
+    <div class="content-wrapper">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        [pageOrganizerSettings]="{ canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5 }"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
+    </div>
+  `,
+})
+export class AppComponent implements OnInit {
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+  ngOnInit(): void { }
+}
 
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
 
 import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         FormFieldsService, FormDesignerService, PageOrganizerService, PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
+import {
+  PdfViewerModule,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  AnnotationService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService,
+} from '@syncfusion/ej2-angular-pdfviewer';
+
 @Component({
-  selector: 'app-container',
-  template: `<div class="content-wrapper">
-               <ejs-pdfviewer id="pdfViewer"
-                        [serviceUrl]="service"
-                        [documentPath]="document"
-                        [pageOrganizerSettings]="{canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5}"
-                        style="height:640px;display:block">
-               </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               FormFieldsService, FormDesignerService, PageOrganizerService, PrintService]
-  })
-  export class AppComponent implements OnInit {
-      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  }
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    AnnotationService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService,
+  ],
+  template: `
+    <div class="content-wrapper">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        [serviceUrl]="service"
+        [documentPath]="document"
+        [pageOrganizerSettings]="{ canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5 }"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
+    </div>
+  `,
+})
+export class AppComponent implements OnInit {
+  public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+
+  ngOnInit(): void { }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -211,56 +391,148 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 The `openPageOrganizer` method programmatically opens the page organizer dialog, providing access to page management tools.
 
-```html
-<button id="openPageOrganizer">Open PageOrganizer Pane</button>
-```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
 
-```ts
-import { Component, ViewChild } from '@angular/core';
-import { PdfViewerComponent } from '@syncfusion/ej2-angular-pdfviewer';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import {
+  PdfViewerComponent,
+  PdfViewerModule,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  AnnotationService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService,
+} from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
-  selector: 'app-container',
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    AnnotationService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService,
+  ],
   template: `
     <div class="content-wrapper">
-      <button id="openPageOrganizer" (click)="openPageOrganizer()">Open PageOrganizer Pane</button>
-      <ejs-pdfviewer #pdfViewer id="pdfViewer" style="height:640px;display:block"></ejs-pdfviewer>
+      <button (click)="openPageOrganizer()">Open PageOrganizer Pane</button>
+      <ejs-pdfviewer
+        #pdfViewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
     </div>
-  `
+  `,
 })
-export class AppComponent {
-  @ViewChild('pdfViewer', { static: false }) public viewer!: PdfViewerComponent;
+export class AppComponent implements OnInit {
+  @ViewChild('pdfViewer')
+  public pdfviewerControl!: PdfViewerComponent;
+
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+  ngOnInit(): void { }
+
   public openPageOrganizer(): void {
-    this.viewer.pageOrganizer.openPageOrganizer();
+    (this.pdfviewerControl as any).pageOrganizer.openPageOrganizer();
   }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Close the page organizer dialog
 
 The `closePageOrganizer` method programmatically closes the page organizer dialog.
 
-```html
-<button id="closePageOrganizer">Close PageOrganizer Pane</button>
-```
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
 
-```ts
-import { Component, ViewChild } from '@angular/core';
-import { PdfViewerComponent } from '@syncfusion/ej2-angular-pdfviewer';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import {
+  PdfViewerComponent,
+  PdfViewerModule,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  AnnotationService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService,
+} from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
-  selector: 'app-container',
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    AnnotationService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService,
+  ],
   template: `
     <div class="content-wrapper">
-      <button id="closePageOrganizer" (click)="closePageOrganizer()">Close PageOrganizer Pane</button>
-      <ejs-pdfviewer #pdfViewer id="pdfViewer" style="height:640px;display:block"></ejs-pdfviewer>
+      <button (click)="closePageOrganizer()">Close PageOrganizer Pane</button>
+      <ejs-pdfviewer
+        #pdfViewer
+        id="pdfViewer"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
     </div>
-  `
+  `,
 })
-export class AppComponent {
-  @ViewChild('pdfViewer', { static: false }) public viewer!: PdfViewerComponent;
+export class AppComponent implements OnInit {
+  @ViewChild('pdfViewer')
+  public pdfviewerControl!: PdfViewerComponent;
+
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resource: string = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+  ngOnInit(): void { }
+
   public closePageOrganizer(): void {
-    this.viewer.pageOrganizer.closePageOrganizer();
+    (this.pdfviewerControl as any).pageOrganizer.closePageOrganizer();
   }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}

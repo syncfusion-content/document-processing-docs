@@ -23,7 +23,7 @@ To install the latest Angular CLI globally use the following command.
 npm install -g @angular/cli
 ```
 
-N> Use the command **npm install --save @angular/cli@12.0.2** to install the Angular CLI version 12.0.2
+N> To install a specific Angular CLI version, use: **npm install --save @angular/cli@12.0.2**
 
 ## Create an Angular Application
 
@@ -36,16 +36,21 @@ cd my-app
 
 ## Installing Syncfusion<sup>&reg;</sup> JavaScript PDF package
 
-All the available JS 2 packages are published in `npmjs.com` registry.
+All Syncfusion<sup>&reg;</sup> JS 2 packages are published in `npmjs.com` registry.
 
 * To install PDF component, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pdf --save
 ```
-N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+N> For image and data extraction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
+* Copy the `ej2-pdf-lib` folder from the @syncfusion/ej2-pdf-data-extract package into your project's **public, dist, or assets** directory (where your static files are served).
+* Make sure the `ej2-pdf-lib` folder exists in your final build output if you need to extract images or data from PDF files.
+* Ensure your server serves .wasm files with the **Content-Type: application/wasm** MIME type.
+(Angular’s development server already handles this; configure production servers manually.)
+* This setup is not required for **basic PDF creation**.
 
-## Create a PDF document using TypeScript
+## Create a PDF document
 
 * Add a simple button to `app.component.html` and attach a click handler that uses the TypeScript PDF API to create a new PDF document.
 
@@ -66,7 +71,7 @@ N> For data extraction features, you need to install the `@syncfusion/ej2-pdf-da
 
 {% tabs %}
 {% highlight ts tabtitle="~/app.component.ts" %}
-import { PdfDocument, PdfPage, PdfStandardFont, PdfBrush } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfGraphics, PdfPage, PdfFontFamily, PdfFontStyle, PdfFont, PdfBrush } from '@syncfusion/ej2-pdf';
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,7 +87,7 @@ document.getElementById('normalButton').onclick = (): void => {
     // Get graphics from the page
     const graphics: PdfGraphics = page.graphics;
     // Set font
-    const font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular);
+    const font: PdfFont = document.embedFont(PdfFontFamily.helvetica, 36, PdfFontStyle.regular);
     // Create a new black brush
     const brush = new PdfBrush({r: 0, g: 0, b: 0});
     // Draw text
@@ -99,7 +104,7 @@ document.getElementById('normalButton').onclick = (): void => {
 
 Use the following command to run the application in browser.
 
-```javascript
+```bash
 ng serve --open
 ```
 

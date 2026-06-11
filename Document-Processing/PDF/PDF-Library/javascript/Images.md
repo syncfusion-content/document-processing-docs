@@ -10,11 +10,11 @@ documentation: UG
 
 The JavaScript PDF supports JPEG and PNG images.
 
-Images are supported through the `PdfImage` class, which is an abstract base class that provides the common functionality for `PdfBitmap` class.
+Images are supported through the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class, which is an abstract base class that provides the common functionality for [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class.
 
 ## Adding image in PDF document
 
-This example demonstrates how to add an image to a PDF document using the `PdfBitmap` class and the `draw` method of the `PdfImage` class. The image is loaded from a file and drawn at the specified coordinates on the page.
+This example demonstrates how to add an image to a PDF document using the [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class and the [draw](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage#draw) method of the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class. The image is loaded from a file and drawn at the specified coordinates on the page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -26,7 +26,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image(base64 / uint8array)
+// Load the image(base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image.
 image.draw(graphics, { x: 10, y: 10});
@@ -34,15 +34,17 @@ image.draw(graphics, { x: 10, y: 10});
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
 // Get graphics from the page
 var graphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image
 image.draw(graphics, { x: 10, y: 10 });
@@ -50,12 +52,13 @@ image.draw(graphics, { x: 10, y: 10 });
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ## Inserting an image in an existing document
 
-This example demonstrates how to insert an image into an existing PDF document using the `PdfBitmap` class and the `draw` method of the `PdfImage` class. The image is loaded from a file and rendered at the specified position on the selected page.
+This example demonstrates how to insert an image into an existing PDF document using the [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class and the [draw](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage#draw) method of the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class. The image is loaded from a file and rendered at the specified position on the selected page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -67,7 +70,7 @@ let document: PdfDocument = new PdfDocument(data);
 let page: PdfPage = document.getPage(0);
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image.
 image.draw(graphics, { x: 10, y: 10});
@@ -75,15 +78,17 @@ image.draw(graphics, { x: 10, y: 10});
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Access first page
 var page = document.getPage(0);
 // Get graphics from the page
 var graphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image.
 image.draw(graphics, {x: 10, y: 10});
@@ -91,12 +96,13 @@ image.draw(graphics, {x: 10, y: 10});
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ## Clipping and graphics state
 
-This example demonstrates how to apply clipping and manage graphics state in a PDF document using the `PdfGraphics` class. The `save` and `restore` methods preserve the current graphics state, while the `setClip` method defines a clipping region to restrict drawing operations, ensuring precise control over rendering.
+This example demonstrates how to apply clipping and manage graphics state in a PDF document using the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. The [save](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#save) and [restore](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#restore) methods preserve the current graphics state, while the [setClip](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#setclip) method defines a clipping region to restrict drawing operations, ensuring precise control over rendering.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -108,7 +114,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 let state: PdfGraphicsState = graphics.save();
@@ -121,15 +127,17 @@ graphics.restore(state);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
 // Get graphics from the page
 var graphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 var state = graphics.save();
@@ -142,12 +150,13 @@ graphics.restore(state);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ## Applying transparency and rotation to the image
 
-This example demonstrates how to apply transparency and rotation to an image in a PDF document using the `PdfGraphics` class. Transparency can be controlled through the graphics state, while rotation is applied by transforming the graphics context before drawing the image, enabling advanced visual effects in the document.
+This example demonstrates how to apply transparency and rotation to an image in a PDF document using the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. Transparency can be controlled through the graphics state, while rotation is applied by transforming the graphics context before drawing the image, enabling advanced visual effects in the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -159,7 +168,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Get graphics from the page
 let graphics: PdfGraphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 let state: PdfGraphicsState = graphics.save();
@@ -177,15 +186,17 @@ graphics.restore(state);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
 var page = document.addPage();
 // Get graphics from the page
 var graphics = page.graphics;
-// Load the image (base64 / uint8array)
+// Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 var state = graphics.save();
@@ -203,5 +214,6 @@ graphics.restore(state);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}

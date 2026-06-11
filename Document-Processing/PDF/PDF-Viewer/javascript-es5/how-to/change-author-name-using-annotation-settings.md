@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Change author name using annotation settings in JavaScript PDF Viewer
 
-The PDF Viewer allows customizing individual annotation settings using the annotationSettings API, which exposes properties common to all annotations.
+The PDF Viewer allows customizing individual annotation settings through the `annotationSettings` API, which exposes properties common to all annotations. See the annotationSettings API reference for full details.
 
-API name: annotationSettings
+API: `annotationSettings` (refer to the API reference)
 
 | Property Name | Data type & Default Value | Description |
 |---|---|---|
@@ -27,7 +27,7 @@ API name: annotationSettings
 | Free Text Settings |
 | allowOnlyTextInput | Boolean (false) | Specifies text-only mode for free text annotations. If true, moving or resizing is disabled. |
 
-Change the author name and other properties using the annotationSettings API as shown below.
+Change the author name and other properties using the `annotationSettings` API as shown below.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

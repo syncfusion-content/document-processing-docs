@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Organize Pages Events in Vue PDF Viewer
 
-The PDF Viewer provides events to track and respond to actions within the page organizer, allowing you to customize page manipulation workflows.
+The PDF Viewer exposes events for tracking and responding to actions within the page organizer, enabling customization of page manipulation workflows.
 
 ## pageOrganizerSaveAs
 
@@ -18,7 +18,7 @@ The `pageOrganizerSaveAs` event is triggered when a save action is performed in 
 
 - Occurs when the Save as button in the page organizer toolbar is clicked after modifying the document structure.
 
-Event arguments:
+The event arguments provide information about the save event:
 
 - `fileName`: Name of the currently loaded PDF document.
 - `downloadDocument`: Base64 string of the modified PDF document data.
@@ -109,8 +109,8 @@ The `pageOrganizerZoomChanged` event is triggered when the zoom level of the pag
 
 Event arguments:
 
-- `previousZoomValue`: Previous zoom value.
-- `currentZoomValue`: Current zoom value.
+- `previousZoom`: Previous zoom value.
+- `currentZoom`: Current zoom value.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

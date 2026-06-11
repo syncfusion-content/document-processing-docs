@@ -28,5 +28,8 @@ document.getElementById('annotationSelector').addEventListener('click', () => {
 
 ```
 
-Sample: How to customize the annotation selector
-https://stackblitz.com/edit/typescript-u7xjdv?file=index.ts
+The `resizerShape` property accepts values such as `Circle` or `Square` to change the appearance of the annotation resize handles. The example assumes at least one annotation exists; to avoid errors, verify `viewer.annotationCollection.length > 0` before calling `editAnnotation`.
+
+Sample: [How to customize the annotation selector](https://stackblitz.com/edit/typescript-u7xjdv?file=index.ts)
+
+Accessibility: Use descriptive button labels and add an `aria-label` when a button uses an icon-only label. Ensure the toolbar or control used to trigger selector changes is reachable by keyboard navigation.

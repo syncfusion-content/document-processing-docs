@@ -16,7 +16,7 @@ The following code example shows how to obtain the review status of each annotat
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
-@inject IJSRuntime JsRuntime;
+@inject IJSRuntime JsRuntime
 
 <SfButton OnClick="reviewStatus">Review Status</SfButton>
 <SfPdfViewer2 @ref="pdfviewer"
@@ -42,7 +42,7 @@ The following code example shows how to obtain the review status of each annotat
             Review review = annotation.Review;
             var reviewState = review.State;
             var reviewStateModel = review.StateModel;
-            await this.JsRuntime.InvokeVoidAsync("console.log",reviewState.ToString());
+            await this.JsRuntime.InvokeVoidAsync("console.log", reviewState.ToString());
         }
     }
 }

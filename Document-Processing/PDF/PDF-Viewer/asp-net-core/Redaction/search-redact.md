@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Search text and redact in ASP.NET Core PdfViewer
 
-You can search for a keyword in the loaded PDF and automatically add redaction annotations over each match. The example below wires the extractTextCompleted event, triggers text extraction, performs a search, and places redaction annotations for every result.
+Search for a keyword in the loaded PDF and automatically add redaction annotations for each match. The example below wires the `extractTextCompleted` event, triggers text extraction, performs a search, and adds redaction annotations for every result.
 
-N> Prerequisites: Add the PdfViewer control to your ASP.NET Core application and ensure a document is loaded. Make sure the redaction feature is available in the version you are using. Once applied, redaction permanently removes the selected content.
+N> Prerequisites: Add the PdfViewer control to the ASP.NET Core application and ensure a document is loaded. Confirm the redaction feature is available in the used product version. Applying redaction permanently removes the selected content.
 
 ## Steps to add Redaction annotations on search Text Bounds
 
@@ -111,7 +111,7 @@ N> Prerequisites: Add the PdfViewer control to your ASP.NET Core application and
 - Ensure the PDF is fully loaded before triggering extraction and search.
 - Bounds from search are in points (72 DPI). Convert to pixels (96 DPI) to align with annotation coordinates.
 - Customize overlay text, colors, and typography as needed.
-- Adding a redaction annotation covers the content visually. To permanently remove sensitive data, use the viewer's Apply Redaction action or equivalent API if available in your version.
+- Adding a redaction annotation covers the content visually. To permanently remove sensitive data, use the viewer's Apply Redaction action or equivalent API if available in the used product version.
 
 ## See also
 

@@ -23,7 +23,7 @@ To create a Dropbox API App, you should follow the official documentation provid
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample in React. This sets up the basic structure of the PDF Viewer application.
 
-**Step 3:** Modify the `src/app/app.ts` file in the Angular project
+**Step 3:** Modify the `src/app/app.ts` file in the React project
 
 1. Import the required namespaces at the top of the file:
 
@@ -75,9 +75,9 @@ return (<div>
 {% endhighlight %}
 {% endtabs %}
 
-3. Retrieve the PDF Viewer instance and save the current PDF as a Blob. Then, read the Blob using a FileReader to convert it into an ArrayBuffer, and upload the ArrayBuffer to Dropbox using the `filesUpload` method.
+3. Retrieve the PDF viewer instance and save the current PDF as a Blob. Then read the Blob using a FileReader to convert it into an ArrayBuffer, and upload the ArrayBuffer to Dropbox using the `filesUpload` method of the Dropbox instance.
 
-N> Replace **Your Access Token** with the actual Access Token of your Drop Box account.
+N> Replace **Your Access Token** with the actual access token for the Dropbox app.
 
 ```typescript
  function saveDocument() {
@@ -101,7 +101,7 @@ N> Replace **Your Access Token** with the actual Access Token of your Drop Box a
   };
 ```
 
-N> Install the dropbox package in the application to use the previous code example: npm install dropbox
+N> Install the `dropbox` package in the React project before running the sample: `npm install dropbox`.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Standalone)
 
@@ -111,15 +111,15 @@ To save a PDF file to Dropbox cloud file storage, you can follow the steps below
 
 **Step 1:** Create a Dropbox API app
 
-To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+To create a Dropbox API app, follow the Dropbox .NET tutorial: [Dropbox .NET tutorial](https://www.dropbox.com/developers/documentation/dotnet#tutorial). Use the Dropbox App Console to register an app and obtain the necessary access token and permissions.
 
 **Step 2:** Create a PDF Viewer sample in React
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample in React. This sets up the basic structure of the PDF Viewer application.
+Follow the Syncfusion getting-started instructions for the React PDF Viewer: [React PDF Viewer getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). This sets up the basic PDF Viewer application structure.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. Refer to the Syncfusion knowledge base article on creating a PDF Viewer web service: [Create a PDF Viewer web service in .NET Core 3.0 and above](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above).
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -149,7 +149,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Dropbox folder.
+5. Modify the `Download()` method to save the downloaded PDF files to Dropbox cloud storage
 
 ```csharp
 
@@ -187,7 +187,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 ```
 
-6. Open the `appsettings.json` file in the web service project and add the following lines below the existing `"AllowedHosts"` configuration.
+6. Open the `appsettings.json` file in the web service project and add the following entries below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -203,7 +203,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-N> Replace the placeholders with the actual Dropbox access token and target folder name.
+N> Replace the placeholders with the actual Dropbox access token and folder name.
 
 **Step 4:** Set the PDF Viewer properties in the React PDF Viewer component
 
@@ -225,7 +225,7 @@ function App() {
         <PdfViewerComponent
           id="container"
           documentPath="PDF_Succinctly.pdf"
-          // Replace the "localhost:44396" with the actual URL of your server
+          // Replace the "localhost:44396" with the actual URL of the server
           serviceUrl="https://localhost:44396/pdfviewer"
           style={{ 'height': '640px' }}>
 
@@ -242,6 +242,8 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> Install the Dropbox.Api NuGet package in the web service application to use the previous code example.
+N> Install the `Dropbox.Api` NuGet package in the web service application to use the previous code example.
+
+N> Replace `PDF_Succinctly.pdf` with the actual document name stored in Dropbox and pass that name to the `documentPath` property of the PDF Viewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-dropbox-cloud-file-storage/tree/master/Open%20and%20Save%20PDF%20in%20Drop%20Box%20using%20Server-Backed)

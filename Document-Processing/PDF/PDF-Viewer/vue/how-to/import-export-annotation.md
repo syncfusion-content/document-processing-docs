@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Import export annotation in Vue PDF Viewer control
 
-Import annotations from objects or streams instead of files. To import such objects, first export annotations as objects using the [exportAnnotationsAsObject()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#exportannotationsasobject) method. Only objects exported from the PDF Viewer can be imported.
+The PDF Viewer control supports exporting and importing annotations in multiple formats: JSON, XFDF, or as native annotation objects. Use `exportAnnotation('Json')` or `exportAnnotation('Xfdf')` for serialized formats, and `exportAnnotationsAsObject()` to obtain the in-memory annotation objects that can be re-imported with `importAnnotation()`.
 
-Use the following steps to import and export annotations as objects, JSON, or XFDF.
+The following steps show how to export annotations in different formats and import annotation objects back into the viewer.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code to perform import and export operations.
 

@@ -46,15 +46,6 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-      {{'[Xamarin](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-xamarin)'| markdownify }}
-      </td>
-      <td>
-        Syncfusion.Pdf.Portable<br/>
-        Syncfusion.Compression.Portable
-      </td>
-    </tr>
-    <tr>
-      <td>
       {{'[Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor)'| markdownify }},
       {{'[.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)'| markdownify }}
       and {{'[.NET Platforms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}
@@ -138,6 +129,15 @@ The following assemblies need to be referenced in your application based on the 
       <td>
         Syncfusion.Pdf.MVC<br/>
         Syncfusion.Compression.Base
+      </td>
+    </tr>
+    <tr>
+      <td>
+      {{'[Xamarin](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-xamarin)'| markdownify }}
+      </td>
+      <td>
+        Syncfusion.Pdf.Portable<br/>
+        Syncfusion.Compression.Portable
       </td>
     </tr>
   </tbody>
@@ -254,7 +254,7 @@ For converting a Word document to PDF, the following assemblies need to be refer
       </td>
     </tr>
     <tr>
-      <td>ASP.NET Core, Xamarin and Blazor</td>
+      <td>ASP.NET Core and Blazor</td>
       <td>
         Syncfusion.DocIO.Portable<br/>
         Syncfusion.Compression.Portable<br/>
@@ -305,6 +305,18 @@ For converting a Word document to PDF, the following assemblies need to be refer
         Syncfusion.DocToPdfConverter.Base
       </td>
     </tr>
+    <tr>
+      <td>Xamarin</td>
+      <td>
+        Syncfusion.DocIO.Portable<br/>
+        Syncfusion.Compression.Portable<br/>
+        Syncfusion.OfficeChart.Portable<br/>
+        Syncfusion.Pdf.Portable<br/>
+        Syncfusion.DocIORenderer.Portable<br/>
+        SkiaSharp.HarfBuzz<br/>
+        Syncfusion.SkiaSharpHelper.Portable
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -344,7 +356,7 @@ For converting an Excel document to PDF, the following assemblies need to be ref
       </td>
     </tr>
     <tr>
-      <td>UWP, .NET Core, Xamarin, and Blazor (Server-Side)</td>
+      <td>UWP, .NET Core, and Blazor (Server-Side)</td>
       <td>
         Syncfusion.Compression.Portable<br/>
         Syncfusion.XlsIO.Portable<br/>
@@ -387,6 +399,16 @@ For converting an Excel document to PDF, the following assemblies need to be ref
         Syncfusion.ExcelToPDFConverter.Base
       </td>
     </tr>
+    <tr>
+      <td>Xamarin</td>
+      <td>
+        Syncfusion.Compression.Portable<br/>
+        Syncfusion.XlsIO.Portable<br/>
+        Syncfusion.Pdf.Portable<br/>
+        Syncfusion.SkiaSharpHelper.Portable<br/>
+        Syncfusion.XlsIORenderer.Portable
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -413,7 +435,7 @@ For converting a PowerPoint Presentation to PDF, the following assemblies needed
       </td>
     </tr>
     <tr>
-      <td>ASP.NET Core, Xamarin, and Blazor</td>
+      <td>ASP.NET Core, and Blazor</td>
       <td>
         Syncfusion.Presentation.Portable<br/>
         Syncfusion.Compression.Portable<br/>
@@ -478,6 +500,18 @@ The following assemblies are required to be referred in addition to the above me
         Syncfusion.OfficeChart.Base<br/>
         Syncfusion.Pdf.Base<br/>
         Syncfusion.PresentationToPDFConverter.Base
+      </td>
+    </tr>
+    <tr>
+      <td>Xamarin</td>
+      <td>
+        Syncfusion.Presentation.Portable<br/>
+        Syncfusion.Compression.Portable<br/>
+        Syncfusion.OfficeChart.Portable<br/>
+        Syncfusion.Pdf.Portable<br/>
+        Syncfusion.PresentationRenderer.Portable<br/>
+        Syncfusion.SkiaSharpHelper.Portable<br/>
+        SkiaSharp
       </td>
     </tr>
   </tbody>

@@ -1515,6 +1515,8 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Apply-base-style-for-table).
 
+To know more about the Built‑in table styles supported by Essential® DocIO, refer the [documentation](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BuiltInTableStyle.html#fields), which also includes the visual appearance of each Built‑in table style.
+
 ## Merging cells vertically and horizontally
 
 You can combine two or more table cells located in the same row or column into a single cell.
@@ -2159,11 +2161,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to extract tables and add to a new Document in ASP.NETCore Word?](https://support.syncfusion.com/kb/article/19585/how-to-extract-tables-and-add-to-a-new-document-in-aspnetcore-word?)
 * [How to remove multiple rows from a table in a Word Document?](https://support.syncfusion.com/kb/article/19642/how-to-remove-multiple-rows-from-a-table-in-a-word-document)
 * [How to set table row height in a Word document?](https://support.syncfusion.com/kb/article/19688/how-to-set-table-row-height-in-a-word-document)
-* [How to Find and Remove a Table by Title in .Net Core Word document?](https://support.syncfusion.com/kb/article/19677/how-to-find-and-remove-a-table-by-title-in-a-word-document)
+* [How to Find and Remove a Table by Title in .NET Core Word document?](https://support.syncfusion.com/kb/article/19677/how-to-find-and-remove-a-table-by-title-in-a-word-document)
 * [How to adjust the first column to fill remaining space in a Word table?](https://support.syncfusion.com/kb/article/19652/how-to-adjust-the-first-column-to-fill-remaining-space-in-a-word-table)
 * [How to Keep Paragraphs Inside a Table in ASP.NET Core Word?](https://support.syncfusion.com/kb/article/19678/how-to-keep-paragraphs-inside-a-table-in-aspnet-core-word)
 * [How to copy rows from one table to another while preserving formatting in a Word document?](https://support.syncfusion.com/kb/article/20307/how-to-copy-rows-from-one-table-to-another-while-preserving-formatting-in-a-word-document)
 * [How to Remove Empty Tables from .NET Core Word Document?](https://support.syncfusion.com/kb/article/20090/how-to-remove-empty-tables-from-net-core-word-document)
+* [How to Find and Modify Table Content by Title in .NET Core Word?](https://support.syncfusion.com/kb/article/22375/how-to-find-and-modify-table-content-by-title-in-net-core-word)
+* [How to Add Table Row with Restarted Numbered List in .NET Core DocIO?](https://support.syncfusion.com/kb/article/22420/how-to-add-table-row-with-restarted-numbered-list-in-net-core-docio)
+* [How to convert word file to excel file by extract table data from a Word document and add those data into a worksheet in .NET?](https://support.syncfusion.com/kb/article/22815/how-to-convert-word-file-to-excel-file-by-extract-table-data-from-a-word-document-and-add-those-data-into-a-worksheet-in-net)
 
 ## Frequently Asked Questions
 

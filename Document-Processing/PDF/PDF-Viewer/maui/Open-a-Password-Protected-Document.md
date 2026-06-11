@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Open a Password-Protected PDF in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here about opening a password-protected document in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and more.
+description: Learn how to open a password-protected PDF document in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Open a Password-Protected PDF in .NET MAUI PDF Viewer (SfPdfViewer)
@@ -384,7 +384,11 @@ private void PdfViewer_DocumentLoadFailed(object sender, Syncfusion.Maui.PdfView
 {% endtabs %}
 
 ### Handling the correct password
-If the entered password is correct, the document will be loaded into the PDF Viewer. At this moment, the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event will be triggered. You can handle this event to show a message indicating that the password is correct or to close the custom dialog. Refer to this [link](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications#document-loaded-event) for more details.
+If the entered password is correct, the document will be loaded into the PDF Viewer. At this moment, the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event will be triggered. You can handle this event to show a message indicating that the password is correct or to close the custom dialog. Refer to this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/documentloadnotifications#document-loaded-event) for more details.
 
 ## GitHub example
 The example project to open a password-protected document with a customized password request view can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples).
+
+## See Also
+- [Open a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document)
+- [Document Load Notifications](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/documentloadnotifications)

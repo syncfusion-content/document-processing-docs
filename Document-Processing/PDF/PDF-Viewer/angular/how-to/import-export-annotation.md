@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Import Export annotation in Angular PDF Viewer component
 
-The PDF Viewer library allows you to import annotations from objects or streams instead of loading it as a file. To import such annotation objects, the PDF Viewer control must export the PDF annotations as objects by using the [**ExportAnnotationsAsObject()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#exportannotationsasobject) method. Only the annotation objects that are exported from the PDF Viewer can be imported.
+The PDF Viewer control supports exporting and importing annotations in multiple formats: JSON, XFDF, or as native annotation objects. Use `exportAnnotation('Json')` or `exportAnnotation('Xfdf')` for serialized formats, and `exportAnnotationsAsObject()` to obtain the in-memory annotation objects that can be re-imported with `importAnnotation()`.
 
-The following steps are used to import and export annotations in various formats such as objects, JSON, and XFDF.
+The following steps show how to export annotations in different formats and import annotation objects back into the viewer.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to perform import and export annotation.
 
@@ -41,13 +41,17 @@ The following steps are used to import and export annotations in various formats
     ExportAsObject(): void {
       var viewer = (<any>document.getElementById('pdfViewer')).ej2_instances[0];
       return viewer.exportAnnotationsAsObject().then((value: any) => {
-        exportObject = value;
+        // Store the exported object in a local variable or persist it remotely.
+        // `value` is the annotation object (not a serialized JSON string).
+        this.exportedAnnotations = value;
       });
     }
-    //Import annotation that are exported as object.
+    // Import annotations that were exported as object.
     Import(): void {
       var viewer = (<any>document.getElementById('pdfViewer')).ej2_instances[0];
-        viewer.importAnnotation(JSON.parse(exportObject));
+        // Pass the annotation object directly to importAnnotation.
+        // If the annotations were serialized, parse them back into an object first.
+        viewer.importAnnotation(this.exportedAnnotations);
     }
 
 ```

@@ -21,7 +21,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above (NET 6 LTS or later recommended). You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -138,7 +138,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 
 ```
 
-N> Replace the placeholders with your actual values: Tenant ID, Application ID, and OneDrive folder name.
+N> Replace the placeholders with your actual values: Tenant ID, Application ID, and OneDrive folder name. Store these values and any credentials securely (for example, using environment variables or a secrets manager).
 
 **Step 4:** Configure the PDF Viewer component
 
@@ -146,27 +146,35 @@ Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#ser
 
 ```javascript
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,
-         BookmarkView, TextSelection, Annotation, FormFields, FormDesigner} from '@syncfusion/ej2-pdfviewer';
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.FormDesigner
+);
 
-PdfViewer.Inject( Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,
-                  BookmarkView, TextSelection, Annotation, FormFields, FormDesigner);
-
-let viewer: PdfViewer = new PdfViewer();
-// Replace the "localhost:44309" with the actual URL of your server
+var viewer = new ej.pdfviewer.PdfViewer();
+// Replace the "localhost:44396" with the actual URL of your server
 viewer.serviceUrl = 'https://localhost:44396/pdfviewer';
 viewer.appendTo('#pdfViewer');
 viewer.load('PDF_Succinctly.pdf', null);
 
 ```
 
-N> The following NuGet packages are required to use the previous code example
+N> Install the following NuGet packages in the server project to use the previous code example:
 * **Microsoft.Identity.Client**
 * **Microsoft.Graph**
 * **Microsoft.Extensions.Configuration**
 * **Microsoft.Extensions.Configuration.FileExtensions**
 * **Microsoft.Extensions.Configuration.Json**
 
-You can install these packages using the NuGet Package Manager in Visual Studio or Visual Studio Code.
+You can install these packages using the NuGet Package Manager in Visual Studio or via the `dotnet` CLI.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-one-drive)

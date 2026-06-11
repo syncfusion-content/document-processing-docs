@@ -9,7 +9,7 @@ documentation: ug
 
 # View PDF files using the PDF Viewer in a WinForms Blazor Hybrid App
 
-This article explains how to add the Syncfusion&reg; Blazor PDF Viewer component to a WinForms Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop application (WinForms) that hosts Blazor UI inside a BlazorWebView control.
+This article shows how to add the Syncfusion&reg; Blazor PDF Viewer to a WinForms Blazor Hybrid app using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop (WinForms) application that hosts Blazor UI inside a BlazorWebView control.
 
 {% tabcontents %}
 
@@ -21,17 +21,17 @@ This article explains how to add the Syncfusion&reg; Blazor PDF Viewer component
 
 ## Create a new WinForms app in Visual Studio
 
-Create a WinForms application using Visual Studio 2022 with the WinForms project template. The app will later host Blazor components via BlazorWebView. For reference, see [Microsoft Blazor tooling](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a WinForms app using Visual Studio 2022 with the WinForms project template. The app hosts Blazor components via BlazorWebView. For reference, see [Microsoft Blazor tooling](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Blazor PDF Viewer NuGet package in WinForms App
+## Install Blazor PDF Viewer NuGet packages
 
-To add **Blazor PDF Viewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install
+To add the Blazor PDF Viewer component, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then install:
 
-* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
+* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 * [Microsoft.AspNetCore.Components.WebView.WindowsForms](https://www.nuget.org/packages/Microsoft.AspNetCore.Components.WebView.WindowsForms)
 
-N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.WindowsForms` updated to version `8.0.16`.
+N> Ensure the package `Microsoft.AspNetCore.Components.WebView.WindowsForms` is updated to version `8.0.16`.
 
 ![WinForms Blazor App SfPdfViewer NuGet package reference](../images/winforms-sfpdfviewer-package.png)
 
@@ -45,7 +45,7 @@ N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.WindowsForms
 
 ## Create a new WinForms app in Visual Studio Code
 
-Create a WinForms desktop project (not a WinForms Blazor HybridApp) using the .NET CLI in Visual Studio Code. This WinForms project will host Blazor UI through BlazorWebView. For guidance, see [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a WinForms desktop project (not a WinForms Blazor HybridApp) using the .NET CLI in Visual Studio Code. This WinForms project hosts Blazor UI through BlazorWebView. For guidance, see [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 {% tabs %}
 {% highlight c# tabtitle="WinForms Blazor HybridApp" %}
@@ -77,15 +77,15 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for the list of available packages and component details.
+N> Syncfusion&reg; Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for package details.
 
-N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.WindowsForms` updated to version `8.0.16`.
+N> Ensure the package `Microsoft.AspNetCore.Components.WebView.WindowsForms` is updated to version `8.0.16`.
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Syncfusion Blazor service
 
 The WinForms project must target Windows and enable WinForms. A typical project file looks like the following.
 
@@ -114,9 +114,9 @@ Create a **Component** folder, add an **_Imports.razor** file in it, and include
 
 ## Create wwwroot folder and index.html file 
 
-* Create a new folder named wwwroot in the WinForms project root.
+* Create a new folder named `wwwroot` in the WinForms project root.
 
-* Inside wwwroot, create an index.html host page for the Blazor UI. This host page is required by BlazorWebView to initialize the Blazor runtime and load static assets (themes and scripts). A basic index.html might look like the following:
+* Inside `wwwroot`, create an `index.html` host page for the Blazor UI. This host page initializes the Blazor runtime and loads static assets (themes and scripts). A basic `index.html` might look like the following:
 
 {% tabs %} 
 {% highlight html tabtitle="index.html" hl_lines="8 13" %}
@@ -142,7 +142,7 @@ Create a **Component** folder, add an **_Imports.razor** file in it, and include
 
 N> Ensure that the PDF Viewer static assets (themes and scripts) are loaded properly.
 
-Register Syncfusion Blazor services and BlazorWebView in **~/Form1.cs** so that the WinForms window can host Blazor components.
+Register Syncfusion Blazor services and BlazorWebView in **~/Form1.cs** so the WinForms window can host Blazor components.
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs (WinForms host)" hl_lines="2 3 4 5 9 10 11 12 13 14 15 16 17 18 19 21" %}
@@ -175,7 +175,7 @@ using WinFormsBlazorHybridApp.Components;
 
 ## Adding Blazor PDF Viewer component
 
-Create a Razor component (for example, PDFViewer.razor) in the project and add the Syncfusion&reg; PDF Viewer component to it within the **Component** folder
+Create a Razor component (for example, PDFViewer.razor) in the project and add the Syncfusion® PDF Viewer component to it within the **Component** folder.
 
 {% tabs %}
 {% highlight razor %}
@@ -192,13 +192,13 @@ Create a Razor component (for example, PDFViewer.razor) in the project and add t
 
 N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property is not set, the PDF Viewer renders without loading a document. Users can use the **Open** toolbar option to browse and open a PDF.
 
-## Run the application
+## Run the app
 
-Run the WinForms application. The Syncfusion&reg; Blazor PDF Viewer renders inside the WinForms window.
+Run the WinForms app. The Syncfusion&reg; Blazor PDF Viewer renders inside the WinForms window.
 
 ![WinForms Blazor HybridApp SfPdfViewer rendering in browser](../images/blazor-hybrid-winforms-sfpdfviewer.png)
 
->[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/WinForms%20Blazor%20App).
+N> [View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Hybrid%20-%20WinForms).
 
 ## See also
 

@@ -48,46 +48,55 @@ You can convert word documents into SFDT format using the .NET Standard library 
 
 Please refer the following example for converting word documents into SFDT.
 
-```ts
-import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
-
+```js
 // Initialize the Document Editor component.
-let documenteditor: DocumentEditor = new DocumentEditor();
-
+var documenteditor = new ej.documenteditor.DocumentEditor();
 documenteditor.appendTo('#DocumentEditor');
 
-document.getElementById('file_upload').setAttribute('accept', '.dotx,.docx,.docm,.dot,.doc,.rtf,.txt,.xml,.sfdt');
+// Limit accepted file types.
+document.getElementById('file_upload').setAttribute(
+  'accept',
+  '.dotx,.docx,.docm,.dot,.doc,.rtf,.txt,.xml,.sfdt'
+);
 
-//Open file picker.
-document.getElementById("import").addEventListener("click", (): void => {
-    document.getElementById('file_upload').click();
+// Open file picker on button click.
+document.getElementById('import').addEventListener('click', function () {
+  document.getElementById('file_upload').click();
 });
 
-document.getElementById('file_upload').addEventListener("change", (e: any): void => {
-    if (e.target.files[0]) {
-        //Get the selected file.
-        let file = e.target.files[0];
-        if (file.name.substr(file.name.lastIndexOf('.')) !== '.sfdt') {
-            loadFile(file);
-        }
+// Handle file selection.
+document.getElementById('file_upload').addEventListener('change', function (e) {
+  if (e.target.files && e.target.files[0]) {
+    var file = e.target.files[0];
+    // If not already SFDT, send to server to convert.
+    if (file.name.substr(file.name.lastIndexOf('.')) !== '.sfdt') {
+      loadFile(file);
+    } else {
+      // If it's already SFDT, read and open directly.
+      var reader = new FileReader();
+      reader.onload = function () {
+        documenteditor.open(reader.result);
+      };
+      reader.readAsText(file);
     }
+  }
 });
 
-function loadFile(file: File): void {
-    let ajax: XMLHttpRequest = new XMLHttpRequest();
-    ajax.open('POST', 'https://localhost:4000/api/documenteditor/Import', true);
-    ajax.onreadystatechange = () => {
-        if (ajax.readyState === 4) {
-            if (ajax.status === 200 || ajax.status === 304) {
-                //Open SFDT text in Document Editor
-                documenteditor.open(ajax.responseText);
-            }
-        }
+// Send file to server to convert into SFDT and open the response.
+function loadFile(file) {
+  var ajax = new XMLHttpRequest();
+  ajax.open('POST', 'https://localhost:4000/api/documenteditor/Import', true);
+  ajax.onreadystatechange = function () {
+    if (ajax.readyState === 4) {
+      if (ajax.status === 200 || ajax.status === 304) {
+        // Open SFDT text in DocumentEditor.
+        documenteditor.open(ajax.responseText);
+      }
     }
-    let formData: FormData = new FormData();
-    formData.append('files', file);
-    //Send the selected file to web api for converting it into sfdt.
-    ajax.send(formData);
+  };
+  var formData = new FormData();
+  formData.append('files', file);
+  ajax.send(formData);
 }
 ```
 

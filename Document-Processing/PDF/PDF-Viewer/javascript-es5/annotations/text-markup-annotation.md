@@ -47,7 +47,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-mode-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-mode-cs1" %}
 
 Refer to the following code snippet to switch back to normal mode from highlight mode.
 
@@ -61,11 +61,11 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-normal-mode-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/highlight-normal-mode-cs1" %}
 
 ## Highlight text programmatically
 
-Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -152,7 +152,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-mode-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-mode-cs1" %}
 
 
 Refer to the following code snippet to switch back to normal mode from underline mode.
@@ -167,11 +167,11 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-normal-mode-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/underline-normal-mode-cs1" %}
 
 ## Underline text programmatically
 
-Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -259,7 +259,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-mode-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-mode-cs1" %}
 
 Refer to the following code snippet to switch back to normal mode from strikethrough mode.
 
@@ -273,11 +273,11 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-normal-mode-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/strikethrough-normal-mode-cs1" %}
 
 ## Strikethrough text programmatically
 
-Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -363,7 +363,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-mode-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-mode-cs1" %}
 
 Refer to the following code snippet to switch back to normal mode from squiggly mode.
 
@@ -377,11 +377,11 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-normal-mode-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/squiggly-normal-mode-cs1" %}
 
 ## Add squiggly to text programmatically
 
-Programmatically add squiggly using the [addAnnotation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add squiggly using the [addAnnotation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -531,7 +531,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.html` file
 `serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/undo-redo-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-text-markup-annotation/undo-redo-cs1" %}
 
 ## Save text markup annotations
 

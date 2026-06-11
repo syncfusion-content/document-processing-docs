@@ -9,7 +9,7 @@ keywords: google app engine save pdf, app engine load pdf, c# save pdf, c# load 
 
 # Create a PDF document in Google App Engine
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programatically without the dependency on Adobe Acrobat. Using this library, you can **open and save PDF document in Google App Engine**.
+The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can open and save PDF documents in Google App Engine.
 
 ## Set up App Engine
 
@@ -44,8 +44,8 @@ Step 2: Configure your new project according to your requirements.
 Step 3: Click the **Create** button.
 ![Create ASP.NET Core Web application in Visual Studio](GettingStarted_images/Additional-Information.png)
 
-Step 4:Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
-![Install Syncfusion.DocIO.Net.Core NuGet package](GettingStarted_images/Google-NuGet-Package.png)
+Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+![Install Syncfusion.Pdf.Net.Core NuGet package](GettingStarted_images/Google-NuGet-Package.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -67,7 +67,7 @@ Step 6: A default action method named Index will be present in HomeController.cs
 Step 7: Add a new button in the Index.cshtml as shown in the following.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("CreateDocument", "Home", FormMethod.Get);
     {
@@ -122,7 +122,7 @@ document.Save(stream);
 stream.Position = 0;
 //Close the document.
 document.Close(true);
-//Download Word document in the browser.
+//Download PDF document in the browser.
 return File(stream, "application/pdf", "Sample.pdf");
 
 {% endhighlight %}
@@ -132,7 +132,7 @@ return File(stream, "application/pdf", "Sample.pdf");
 
 Step 1: Open the **Cloud Shell editor**.
 
-![Cloud Sell editor](GettingStarted_images/Cloud_Shell_Editor.png)
+![Cloud Shell editor](GettingStarted_images/Cloud_Shell_Editor.png)
 
 Step 2: Drag and drop the sample from your local machine to **Workspace**.
 
@@ -143,7 +143,7 @@ N> If you have your sample application in your local machine, drag and drop it i
 Step 3: Open the Cloud Shell Terminal and run the following **command** to view the files and directories within your **current Workspace**.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 ls
 
@@ -155,7 +155,7 @@ ls
 Step 4: Run the following **command** to navigate which sample you want to run.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 cd Web_Application
 
@@ -167,7 +167,7 @@ cd Web_Application
 Step 5: To ensure that the sample is working correctly, please run the application using the following command.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 dotnet run --urls=http://localhost:8080
 
@@ -193,7 +193,7 @@ Step 8: Close the preview page and return to the terminal then press **Ctrl+C** 
 Step 1: Run the following command in the **Cloud Shell Terminal** to publish the application.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 dotnet publish -c Release
 
@@ -205,7 +205,7 @@ dotnet publish -c Release
 Step 2: Run the following command in the **Cloud Shell Terminal** to navigate to the publish folder.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 cd bin/Release/net8.0/publish/
 
@@ -219,7 +219,7 @@ cd bin/Release/net8.0/publish/
 Step 1: Add the app.yaml file to the publish folder with the following contents.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 cat <<EOT >> app.yaml
 env: flex
@@ -235,7 +235,7 @@ EOT
 Step 2: Add the Docker file to the publish folder with the following contents.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 cat <<EOT >> Dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
@@ -261,7 +261,7 @@ Step 3: You can ensure **Docker** and **app.yaml** files are added in **Workspac
 Step 1: To deploy the application to the App Engine, run the following command in Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 gcloud app deploy --version v0
 

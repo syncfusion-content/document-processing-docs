@@ -28,6 +28,21 @@ PdfDocument document = htmlConverter.Convert("https://www.google.com");
 document.Save("Output.pdf");
 document.Close(true);
 
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
 
 {% endhighlight %}
 
@@ -69,8 +84,29 @@ To convert the HTML string to PDF using [Convert](https://help.syncfusion.com/cr
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-the-HTML-string-to-PDF-document/.NET/Convert-the-HTML-string-to-PDF-document/Program.cs, 300" %}
 
-using Syncfusion.Drawing;
+using Syncfusion.Pdf;
 using Syncfusion.HtmlConverter;
+
+//Initialize HTML to PDF converter
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+//HTML string and Base URL 
+string htmlText = "<html><body><img src=\"syncfusion_logo.gif\" alt=\"Syncfusion_logo\" width=\"200\" height=\"70\"><p> Hello World</p></body></html>";
+string baseUrl = @"C:/Temp/HTMLFiles/";
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert(htmlText, baseUrl);
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
 
 //Initialize HTML to PDF converter
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -105,16 +141,6 @@ Dim document As PdfDocument = htmlConverter.Convert(htmlText, baseUrl)
 'Save and close the PDF document
 document.Save("Output.pdf")
 document.Close(True)
-
-{% endhighlight %}
-
-{% highlight html %}
-<html>
-<body>
-<img src="syncfusion_logo.gif" alt="Syncfusion_logo" width="200" height="70">
-<p> Hello World</p>
-</body>
-</html>
 
 {% endhighlight %}
 
@@ -247,17 +273,6 @@ File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData)
 
 {% endhighlight %}
 
-{% highlight html %}
-
-<html>
-<body>
-    <img src="syncfusion_logo.gif" alt="Syncfusion_logo" width="200" height="70">
-    <p> Hello World</p>
-</body>
-</html>
-
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Convert-the-HTML-string-to-image-file).
@@ -286,7 +301,29 @@ Image image = htmlConverter.ConvertToImage(svg, "");
 byte[] imageBytes = image.ImageData;
 
 // Save the image data to a file in JPEG format
-File.WriteAllBytes("Output.jpg"), imageBytes);
+File.WriteAllBytes("Output.jpg", imageBytes);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.HtmlConverter;
+
+// Create an instance of the Syncfusion HtmlToPdfConverter
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+// Read the SVG content from a file
+string svg = File.ReadAllText("sample.svg");
+
+// Convert the SVG content to an image using the converter
+Image[] image = htmlConverter.ConvertToImage(svg, "");
+
+// Save the image data to a file in JPEG format
+for (int i = 0; i < image.Length; i++)
+{
+    image[i].Save($"Output_{i}.jpg", ImageFormat.Jpeg);
+}
 
 {% endhighlight %}
 
@@ -323,6 +360,29 @@ The Blink HTML converter supports enabling or disabling the JavaScript using [En
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Disable-JavaScript-when-convert-HTML-to-PDF/.NET/Disable-JavaScript-when-convert-HTML-to-PDF/Program.cs, 300" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Disable JavaScript; By default, true
+blinkConverterSettings.EnableJavaScript = false;
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -402,6 +462,29 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+// Set additional delay; units in milliseconds
+blinkConverterSettings.AdditionalDelay = 3000;
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -436,6 +519,29 @@ The Blink HTML converter support preserving URL links from HTML to PDF using [En
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Disable-URL-links-while-converting-HTML-to-PDF/.NET/Disable-URL-links-while-converting-HTML-to-PDF/Program.cs, 300" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Enable hyperlinks; By default - true
+blinkConverterSettings.EnableHyperLink = false;
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -516,6 +622,29 @@ document.Save("Output.pdf");
 document.Close(true);
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings settings = new BlinkConverterSettings();
+//Set enable bookmarks
+settings.EnableBookmarks = true;
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = settings;
+
+//Convert HTML to PDF
+PdfDocument document = htmlConverter.Convert("input.html"); 
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -537,50 +666,6 @@ document.Save("Output.pdf")
 document.Close(True)
 
 {% endhighlight %}
-
-{% highlight html %}
-
-<html>
-<head>
-<style>
-body
-{
-text-align: left;
-font-size: large;
-padding-left: 5px;
-}
-</style>
-</head>
-<body>
-
-<h1>Syncfusion<sup>&reg;</sup></h1>
-
-<h2>Introduction</h2>
-	Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
-<h2>Products</h2>
-	<h4>WEB</h4>
-		The most comprehensive suite for enterprise web development.
-	<h4>Desktop</h4>
-		Comprehensive suite of over 115 components including the fastest chart and grid components.
-	<h4>Mobile</h4>
-		Comprehensive suite of components for Xamarin.iOS, Xamarin.Android and Xamarin.Forms including the fastest chart and grid.
-<h2>Consulting</h2>
-	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
-<h2>Company</h2>
-	<h4>About us</h4>
-		Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
-	<h4>contact us</h4>
-		Morrisville Office
-		Company Headquarters
-		2501 Aerial Center Parkway
-		Suite 200
-		Morrisville, NC 27560
-		USA
-</body>
-</html>
-
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Creating-bookmarks-while-converting-HTML-to-PDF).
@@ -596,6 +681,29 @@ Refer to the following code snippet.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Create-TOC-while-converting-HTML-to-PDF/.NET/Create-TOC-while-converting-HTML-to-PDF/Program.cs, 300" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings settings = new BlinkConverterSettings();
+//Set enable table of contents
+settings.EnableToc = true;
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = settings;
+
+//Convert HTML to PDF
+PdfDocument document = htmlConverter.Convert("input.html");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -640,49 +748,6 @@ document.Close(True)
 
 {% endhighlight %}
 
-{% highlight html %}
-
-<html>
-<head>
-<style>
-body
-{
-text-align: left;
-font-size: large;
-padding-left: 5px;
-}
-</style>
-</head>
-<body>
-
-<h1>Syncfusion<sup>&reg;</sup></h1>
-
-<h2>Introduction</h2>
-	Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
-<h2>Products</h2>
-	<h4>WEB</h4>
-		The most comprehensive suite for enterprise web development.
-	<h4>Desktop</h4>
-		Comprehensive suite of over 115 components including the fastest chart and grid components.
-	<h4>Mobile</h4>
-		Comprehensive suite of components for Xamarin.iOS, Xamarin.Android and Xamarin.Forms including the fastest chart and grid.
-<h2>Consulting</h2>
-	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
-<h2>Company</h2>
-	<h4>About us</h4>
-		Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
-	<h4>contact us</h4>
-		Morrisville Office
-		Company Headquarters
-		2501 Aerial Center Parkway
-		Suite 200
-		Morrisville, NC 27560
-		USA
-</body>
-</html>
-
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Create-TOC-while-converting-HTML-to-PDF).
@@ -698,6 +763,39 @@ Refer to the following code snippet.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Create-custom-style-TOC-when-converting-HTML-to-PDF/.NET/Create-custom-style-TOC-when-converting-HTML-to-PDF/Program.cs, 300" %}
 
 using Syncfusion.Drawing;
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.HtmlToPdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings settings = new BlinkConverterSettings();
+//Set enable table of contents
+settings.EnableToc = true;
+//Set the style for level 1(H1) items in table of contents
+HtmlToPdfTocStyle tocstyleH1 = new HtmlToPdfTocStyle();
+tocstyleH1.Font = new PdfStandardFont(PdfFontFamily.TimesRoman, 10, PdfFontStyle.Regular);
+tocstyleH1.BackgroundColor = new PdfSolidBrush(new PdfColor(Color.FromArgb(68, 114, 196)));
+tocstyleH1.ForeColor = PdfBrushes.White;
+tocstyleH1.Padding = new PdfPaddings(5, 5, 3, 3);
+settings.Toc.SetItemStyle(1, tocstyleH1);
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = settings;
+
+//Convert HTML to PDF
+PdfDocument document = htmlConverter.Convert("input.html");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -759,53 +857,140 @@ document.Save("Output.pdf")
 document.Close(True)
 
 {% endhighlight %}
+{% endtabs %}
 
-{% highlight html %}
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Create-custom-style-TOC-when-converting-HTML-to-PDF).
 
-<html>
-<head>
-<style>
-body
+## Exclude cover page from TOC
+
+This code snippet shows how to configure the Table of Contents (TOC) to skip the cover page by setting the starting page number. In this example, the cover page is a single page, so the TOC begins at page 1. For documents with multiple cover pages, adjust the starting page number as needed.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Skip-cover-page-in-TOC-page-numbering/.NET/Skip-cover-page-in-TOC-page-numbering/Program.cs, 300" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+// Create an instance of HTML-to-PDF converter
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+// Configure Blink converter settings
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings()
 {
-text-align: left;
-font-size: large;
-padding-left: 5px;
+    ViewPortSize = new Size(1280, 0), // Set viewport width for rendering
+    EnableToc = true,                 // Enable Table of Contents (TOC)
+};
+// Set TOC starting page number to skip the cover page
+blinkConverterSettings.Toc.StartingPageNumber = 1;
+// Apply the settings to the converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+// Read the main HTML content and convert it to PDF
+string inputhtml = File.ReadAllText("input.html");
+PdfDocument document = htmlConverter.Convert(inputhtml, "");
+//Create cover page and insert to the 0th index.
+// Apply scaling settings for the cover page
+htmlConverter.ConverterSettings = new BlinkConverterSettings()
+{
+    Scale = 1.5f
+};
+// Convert the cover page HTML to PDF
+string coverimage = File.ReadAllText("coverpage.html");
+PdfDocument coverPage = htmlConverter.Convert(coverimage, "");
+// Insert the cover page at the beginning of the main document
+document.Pages.Insert(0, coverPage.Pages[0]);
+// Save the PDF document
+document.Save("Output.pdf");
+//Dispose the document
+coverPage.Close(true);
+document.Close(true);
+htmlConverter.Close();
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+// Create an instance of HTML-to-PDF converter
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+// Configure Blink converter settings
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings()
+{
+    ViewPortSize = new Size(1280, 0), // Set viewport width for rendering
+    EnableToc = true,                 // Enable Table of Contents (TOC)
+};
+// Set TOC starting page number to skip the cover page
+blinkConverterSettings.Toc.StartingPageNumber = 1;
+// Apply the settings to the converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+// Read the main HTML content and convert it to PDF
+string inputhtml = File.ReadAllText("input.html");
+PdfDocument document = htmlConverter.Convert(inputhtml, "");
+//Create cover page and insert to the 0th index.
+// Apply scaling settings for the cover page
+htmlConverter.ConverterSettings = new BlinkConverterSettings()
+{
+    Scale = 1.5f
+};
+// Convert the cover page HTML to PDF
+string coverimage = File.ReadAllText("coverpage.html");
+PdfDocument coverPage = htmlConverter.Convert(coverimage, "");
+// Insert the cover page at the beginning of the main document
+document.Pages.Insert(0, coverPage.Pages[0]);
+// Save the PDF document
+document.Save("Output.pdf");
+//Dispose the document
+coverPage.Close(true);
+document.Close(true);
+htmlConverter.Close();
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.HtmlConverter
+Imports Syncfusion.Pdf
+
+' Create an instance of HTML-to-PDF converter
+Dim htmlConverter As New HtmlToPdfConverter()
+' Configure Blink converter settings
+Dim blinkConverterSettings As New BlinkConverterSettings() With {
+    .ViewPortSize = New Size(1280, 0), ' Set viewport width for rendering
+    .EnableToc = True                  ' Enable Table of Contents (TOC)
 }
-</style>
-</head>
-<body>
-
-<h1>Syncfusion<sup>&reg;</sup></h1>
-
-<h2>Introduction</h2>
-	Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
-<h2>Products</h2>
-	<h4>WEB</h4>
-		The most comprehensive suite for enterprise web development.
-	<h4>Desktop</h4>
-		Comprehensive suite of over 115 components including the fastest chart and grid components.
-	<h4>Mobile</h4>
-		Comprehensive suite of components for Xamarin.iOS, Xamarin.Android and Xamarin.Forms including the fastest chart and grid.
-<h2>Consulting</h2>
-	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
-<h2>Company</h2>
-	<h4>About us</h4>
-		Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
-	<h4>contact us</h4>
-		Morrisville Office
-		Company Headquarters
-		2501 Aerial Center Parkway
-		Suite 200
-		Morrisville, NC 27560
-		USA
-</body>
-</html>
+' Set TOC starting page number to skip the cover page
+blinkConverterSettings.Toc.StartingPageNumber = 1
+' Apply the settings to the converter
+htmlConverter.ConverterSettings = blinkConverterSettings
+' Read the main HTML content and convert it to PDF
+Dim inputhtml As String = File.ReadAllText("input.html")
+Dim document As PdfDocument = htmlConverter.Convert(inputhtml, "")
+' Create cover page and insert to the 0th index.
+' Apply scaling settings for the cover page
+htmlConverter.ConverterSettings = New BlinkConverterSettings() With {
+    .Scale = 1.5F
+}
+' Convert the cover page HTML to PDF
+Dim coverimage As String = File.ReadAllText("coverpage.html")
+Dim coverPage As PdfDocument = htmlConverter.Convert(coverimage, "")
+' Insert the cover page at the beginning of the main document
+document.Pages.Insert(0, coverPage.Pages(0))
+' Save the PDF document
+document.Save("Output.pdf")
+' Dispose the documents
+coverPage.Close(True)
+document.Close(True)
+htmlConverter.Close()
 
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Create-custom-style-TOC-when-converting-HTML-to-PDF).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Skip-cover-page-in-TOC-page-numbering/.NET).
 
 ## Media Type
 
@@ -814,6 +999,29 @@ The Blink HTML Converter allows selection of media type while converting HTML to
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Selection-of-media-type-while-converting-HTML-to-PDF/.NET/Selection-of-media-type-while-converting-HTML-to-PDF/Program.cs, 300" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set print media type
+blinkConverterSettings.MediaType = MediaType.Print;
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -893,6 +1101,29 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings settings = new BlinkConverterSettings();
+//Set enable form
+settings.EnableForm = true;
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = settings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com"); 
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -948,6 +1179,29 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+// Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+blinkConverterSettings.Username = "username";
+blinkConverterSettings.Password = "password";
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.example.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -981,6 +1235,30 @@ The Blink HTML converter provides support for form authentication by using [Cook
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-form-authenticated-webpage-to-PDF-document/.NET/Convert-form-authenticated-webpage-to-PDF-document/Program.cs, 300" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+// Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+// Add cookies as name and value pair
+blinkConverterSettings.Cookies.Add("CookieName1", " CookieValue1");
+blinkConverterSettings.Cookies.Add("CookieName2", " CookieValue2");
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.example.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -1060,6 +1338,30 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize HTML to PDF converter 
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings settings = new BlinkConverterSettings();
+//Add a bearer token to login a webpage
+settings.HttpRequestHeaders.Add("Authorization", "bearer <<token value here>>");
+//Assign Blink settings to HTML converter
+htmlConverter.ConverterSettings = settings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.example.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -1097,6 +1399,29 @@ Refer to the following code snippet.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Convert-HTML-to-PDF-in-offline-mode/.NET/Convert-HTML-to-PDF-in-offline-mode/Program.cs, 300" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+
+//Enable offline mode
+blinkConverterSettings.EnableOfflineMode = true;
+
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+string inputHTML = Path.GetFullPath("input.html");
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert(inputHTML);
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -1177,6 +1502,30 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings settings = new BlinkConverterSettings();
+//Add HTTP post parameters to HttpPostFields
+settings.HttpPostFields.Add("firstName", "Andrew");
+settings.HttpPostFields.Add("lastName", "Fuller");
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = settings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.example.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -1209,6 +1558,29 @@ Use the following code snippet to access a webpage using HTTP GET.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Access-a-webpage-using-HTTP-GET/.NET/Access-a-webpage-using-HTTP-GET/Program.cs, 300" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+string url = "https://www.example.com";
+Uri getMethodUri = new Uri(url);
+string httpGetData = getMethodUri.Query.Length > 0 ? "&" : "?" + String.Format("{0}={1}", "firstName", "Andrew");
+httpGetData += String.Format("&{0}={1}", "lastName", "Fuller");
+string urlToConvert = url + httpGetData;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert(urlToConvert);
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -1302,6 +1674,31 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings settings = new BlinkConverterSettings();
+//Set manual proxy settings
+settings.ProxySettings.HostName = "127.0.0.1";
+settings.ProxySettings.PortNumber = 8080;
+settings.ProxySettings.Type = BlinkProxyType.Http;
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = settings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -1338,6 +1735,30 @@ N> The HTML converter internally uses the viewport size in points.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Adjusting-the-HTML-content-size-in-PDF-document/.NET/Adjusting-the-HTML-content-size-in-PDF-document/Program.cs, 300" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set Blink viewport size
+blinkConverterSettings.ViewPortSize = new Size(800, 0);
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Drawing;
 using Syncfusion.HtmlConverter;
@@ -1411,6 +1832,23 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+//Convert Partial webpage to PDF
+PdfDocument document = htmlConverter.ConvertPartialHtml("input.html", "pic");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -1426,26 +1864,6 @@ document.Save("Output.pdf")
 document.Close(True)
 
 {% endhighlight %}
-
-{% highlight html %}
-
-<html>
-<head>
-</head>
-<body>
-Hello world
-	<div id="pic">
-		<img src=" syncfusion_logo.gif" alt="Smiley face" width="42" height="42"><br>
-		This is a Syncfusion Logo
-	</div>
-	<div>
-		Hello world
-	</div>
-</body>
-</html>
-
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Convert-partial-webpage-to-PDF-document).
@@ -1465,6 +1883,29 @@ Refer to the following code snippet.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings settings = new BlinkConverterSettings();
+//Set singlePageLayout option to render the whole HTML content in a single PDF page
+settings.SinglePageLayout = SinglePageLayout.FitWidth;
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = settings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -1538,6 +1979,27 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+PdfLayoutResult layoutResult = null;
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com", out layoutResult); 
+//Draw the text at the end of HTML content
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 11);
+document.Pages[document.Pages.Count - 1].Graphics.DrawString("End of HTML content", font, PdfBrushes.Red, new PointF(0, layoutResult.Bounds.Bottom));
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -1565,7 +2027,6 @@ document.Close(True)
 Windows status can be used instead of additional delay. In additional delay, the amount of time required for loading the resources is unpredictable. This behavior can be avoided by using [WindowStatus ](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_WindowStatus) property.
 
 N> This feature requires changes in the HTML file.
-
 N> If windows status does not match in code and HTML, then the converter will meet with deadlock.
 
 Refer to the following code snippet.
@@ -1573,6 +2034,29 @@ Refer to the following code snippet.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Set-windows-status-while-converting-HTML-to-PDF/.NET/Set-windows-status-while-converting-HTML-to-PDF/Program.cs, 300" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+// Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set windows status
+blinkConverterSettings.WindowStatus = "completed";
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("input.html");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -1617,26 +2101,6 @@ document.Close(True)
 
 {% endhighlight %}
 
-{% highlight html %}
-
-<html>
-<head>
-</head>
-<body>
-    <div id="message">
-        Wait for 2 Seconds
-    </div>
-    <script type="text/javascript">
-        setTimeout(function () {
-            document.getElementById("message").innerHTML = "Hello World!!";
-            window.status = "completed";
-        }, 2000);
-    </script>
-</body>
-</html>
-
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Set-windows-status-while-converting-HTML-to-PDF).
@@ -1664,6 +2128,29 @@ htmlConverter.ConverterSettings = blinkConverterSettings;
 PdfDocument document = htmlConverter.Convert("https://www.google.com");
 
 //Save the PDF document
+document.Save("Output.pdf");	
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Initialize blink converter settings. 
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set the page size.
+blinkConverterSettings.PdfPageSize = PdfPageSize.A4;      
+//Assign Blink converter settings to HTML converter.
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert URL to PDF document.  
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save the PDF document.
 document.Save("Output.pdf");	
 //Close the document.
 document.Close(true);
@@ -1724,6 +2211,29 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Initialize blink converter settings. 
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set the margin.
+blinkConverterSettings.Margin.All = 50;      
+//Assign Blink converter settings to HTML converter.
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert URL to PDF document.  
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save the PDF document
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -1756,6 +2266,50 @@ To set the header and footer when converting HTML to PDF, utilize the [PdfHeader
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-Header-and-footer/.NET/HTML-to-PDF-Header-and-footer/Program.cs, 300" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf;
+using Syncfusion.Drawing;
+
+//Initialize HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Create PDF page template element for header with bounds.
+PdfPageTemplateElement header = new PdfPageTemplateElement(new RectangleF(0, 0, blinkConverterSettings.PdfPageSize.Width, 50));
+//Create font and brush for header element.
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 7);
+PdfBrush brush = new PdfSolidBrush(Color.Black);
+//Draw the header string in header template element. 
+header.Graphics.DrawString("This is header", font, brush, PointF.Empty);
+//Assign the header element to PdfHeader of Blink converter settings.
+blinkConverterSettings.PdfHeader = header;
+//Create PDF page template element for footer with bounds.
+PdfPageTemplateElement footer = new PdfPageTemplateElement(new RectangleF(0, 0, blinkConverterSettings.PdfPageSize.Width, 50));
+//Create page number field.
+PdfPageNumberField pageNumber = new PdfPageNumberField(font, PdfBrushes.Black);
+//Create page count field.
+PdfPageCountField count = new PdfPageCountField(font, PdfBrushes.Black);
+//Add the fields in composite fields.
+PdfCompositeField compositeField = new PdfCompositeField(font, PdfBrushes.Black, "Page {0} of {1}", pageNumber, count);
+//Draw the composite field in footer
+compositeField.Draw(footer.Graphics, PointF.Empty);
+//Assign the footer element to PdfFooter of Blink converter settings.
+blinkConverterSettings.PdfFooter = footer;
+//Set Blink viewport size.
+blinkConverterSettings.ViewPortSize = new Size(1024, 0);
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert URL to PDF.
+PdfDocument document = htmlConverter.Convert("https://www.google.com/");
+
+//Save a PDF document
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf.Graphics;
@@ -1876,6 +2430,29 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Initialize blink converter settings. 
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set the Orientation.
+blinkConverterSettings.Orientation = PdfPageOrientation.Landscape;
+//Assign Blink converter settings to HTML converter.
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert URL to PDF document.  
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save a PDF document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -1908,6 +2485,29 @@ To set the page rotation when converting HTML to PDF, utilize the [PageRotateAng
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-rotate-page/.NET/HTML-to-PDF-rotate-page/Program.cs, 300" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Initialize blink converter settings. 
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set the page rotate.
+blinkConverterSettings.PageRotateAngle = PdfPageRotateAngle.RotateAngle90;
+//Assign Blink converter settings to the HTML converter.
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert URL to PDF document.  
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save a PDF document
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -1964,6 +2564,37 @@ When converting HTML to PDF, you can set an HTML file as header and footer. Use 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-Header-and-Footer/.NET/HTML-Header-and-Footer/Program.cs, 300" %}
 
 using Syncfusion.Drawing;
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Initialize blink converter settings. 
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set the Blink viewport size.
+blinkConverterSettings.ViewPortSize = new Size(1280, 0);
+//Set the html margin-top value based on the html header height and margin-top value.
+blinkConverterSettings.Margin.Top = 70;
+//Set the html margin-bottom value based on the html footer height and margin-bottom value.
+blinkConverterSettings.Margin.Bottom = 40;
+//Set the custom HTML header to add at the top of each page.
+blinkConverterSettings.HtmlHeader = File.ReadAllText("header.html"); 
+//Set the custom HTML footer to add at the bottom of each page.
+blinkConverterSettings.HtmlFooter = File.ReadAllText("footer.html");
+//Assign Blink converter settings to the HTML converter.
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert the URL to a PDF document.
+PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
+
+//Save and close a PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
 
@@ -2061,6 +2692,30 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set the Blink viewport size.
+blinkConverterSettings.ViewPortSize = new Size(1280, 0);
+blinkConverterSettings.Margin.All = 30;
+//Set the custom CSS
+blinkConverterSettings.Css = "body {\r\n background-color: red; \r\n}";
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert the URL to PDF document.
+PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -2121,6 +2776,30 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set the Blink viewport size.
+blinkConverterSettings.ViewPortSize = new Size(1280, 0);
+blinkConverterSettings.Margin.All = 30;
+//Set the Custom JavaScript
+blinkConverterSettings.JavaScript = "document.querySelectorAll('img').forEach((node)=>{node.remove();})";
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert the URL to PDF document.
+PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -2158,6 +2837,37 @@ The Blink rendering engine provides support for reusing the browser process to o
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/Optimize-HTML-to-PDF-performance/.NET/Optimize-HTML-to-PDF-performance/Program.cs, 300" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Reuse the browser instance.           
+htmlConverter.ReuseBrowserProcess = true;
+//Create PDF document. 
+PdfDocument document = new PdfDocument();
+
+for (int i = 0; i < 10; i++)
+{
+    //Initialize the blink converter settings. 
+    BlinkConverterSettings settings = new BlinkConverterSettings();
+    settings.AdditionalDelay = 1000;
+    settings.EnableJavaScript = true;
+    //Assign the settings to HTML converter.
+    htmlConverter.ConverterSettings = settings;  
+    //Convert the URL to PDF document.
+    document = htmlConverter.Convert("https://www.google.com");
+    //Save and close the PDF document.
+    document.Save("Output.pdf");
+    document.Close(true);
+}
+//Close HTML converter.
+htmlConverter.Close();
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -2257,6 +2967,29 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set Temporary Path to generate temporary files
+blinkConverterSettings.TempPath = @"C:/HtmlConversion/Temp/";
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -2312,6 +3045,27 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set Blink binaries path.
+blinkConverterSettings.BlinkPath = @"C:/HtmlConversion/BlinkBinaries/";
+//Assign Blink converter settings to HTML converter.
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert URL to PDF document.
+PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -2347,6 +3101,29 @@ Refer to the following code snippet to resize the page content size.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/HTML%20to%20PDF/Blink/HTML-to-PDF-scale-property/.NET/Scale_property_in_HTML_converter/Program.cs, 300" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Initialize the blink converter settings.
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+//Set the Scale.
+blinkConverterSettings.Scale = 1.0f;
+//Assign the Blink converter settings to the HTML converter.
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert the URL to a PDF document. 
+PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
+
+//Save a PDF document
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -2427,6 +3204,30 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+// Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+// Initialize BlinkConverterSettings to configure the Blink rendering engine.
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+
+// Enables automatic scaling to adjust the HTML content to fit the PDF's dimensions.
+blinkConverterSettings.EnableAutoScaling = true;
+
+// Assigns the Blink settings to the HTML to PDF converter.
+htmlConverter.ConverterSettings = blinkConverterSettings;
+// Converts the HTML file to a PDF document, using the path of the HTML file.
+PdfDocument document = htmlConverter.Convert(Path.GetFullPath("../../../Input.html"));
+// Save the PDF document.
+document.Save("Output.pdf");
+// Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -2483,6 +3284,28 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize the HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Initialize the blink converter settings.
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+// Set the conversion timeout to 5000 milliseconds 
+blinkConverterSettings.ConversionTimeout = 5000;
+//Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+//Convert URL to PDF
+PdfDocument document = htmlConverter.Convert("https://www.google.com");
+
+//Save and close the PDF document.
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -2516,6 +3339,30 @@ The [WaitForExternalFonts](https://help.syncfusion.com/cr/document-processing/Sy
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+// Initialize HTML to PDF converter
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+// Initialize Blink converter settings
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+// Set the converter to wait for external fonts to be loaded before converting
+blinkConverterSettings.WaitForExternalFonts = true;
+
+// Assign Blink converter settings to HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+// Convert URL (or file path) to PDF
+PdfDocument document = htmlConverter.Convert(Path.GetFullPath("Input.html"));
+
+// Save the PDF document.
+document.Save("Output.pdf");
+// Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
@@ -2594,6 +3441,27 @@ document.Close(true);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+//Initialize HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Initialize the BlinkConverterSettings.
+BlinkConverterSettings settings = new BlinkConverterSettings();
+//Set true to enable the accessibility tags in PDF generation.
+settings.EnableAccessibilityTags= true;
+//Assign the BlinkConverterSettings to the ConverterSettings property of HtmlToPdfConverter.
+htmlConverter.ConverterSettings = settings;
+//Convert URL to PDF.
+PdfDocument document = htmlConverter.Convert("Input.html");
+//Save and close the PDF document.   
+document.Save("Output.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -2643,6 +3511,29 @@ htmlConverter.ConverterSettings = settings;
 Image image = htmlConverter.ConvertToImage("Input.html");
 //Save the image.
 File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using System.Drawing.Imaging;
+using Syncfusion.HtmlConverter;
+
+//Initialize HTML to PDF converter.
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+//Initialize the BlinkConverterSettings.
+BlinkConverterSettings settings = new BlinkConverterSettings();
+//Set the Image Background color.
+settings.ImageBackgroundColor = Color.Transparent;
+//Assign the BlinkConverterSettings to the ConverterSettings property of HtmlToPdfConverter.
+htmlConverter.ConverterSettings = settings;
+//Convert HTML to Image.
+Image[] image = htmlConverter.ConvertToImage("Input.html");
+for (int i = 0; i < image.Length; i++)
+{
+    image[i].Save($"Output_{i}.jpg", ImageFormat.Jpeg);
+}
 
 {% endhighlight %}
 
@@ -2700,6 +3591,32 @@ File.WriteAllBytes(Path.GetFullPath(@"Output/Output.jpg"), image.ImageData);
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using System.Drawing.Imaging;
+using Syncfusion.HtmlConverter;
+
+// Initialize HTML to PDF converter
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+// Initialize Blink converter settings
+BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+
+// Set the crop region for the HTML conversion based on the bounds of the HTML file
+blinkConverterSettings.CropRegion = htmlConverter.GetHtmlBounds(Path.GetFullPath("Input.html"));
+
+// Assign Blink converter settings to the HTML converter
+htmlConverter.ConverterSettings = blinkConverterSettings;
+// Convert the HTML file to an image
+Image[] image = htmlConverter.ConvertToImage(Path.GetFullPath("Input.html"));
+//Save the image.
+for (int i = 0; i < image.Length; i++)
+{
+    image[i].Save($"Output_{i}.jpg", ImageFormat.Jpeg);
+}
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.HtmlConverter
@@ -2742,6 +3659,37 @@ using Syncfusion.Pdf;
 
 // Initialize HTML to PDF converter with a using statement to ensure disposal
 using (HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter())
+{
+    // Initialize Blink converter settings
+    BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
+    // Set Blink viewport size
+    blinkConverterSettings.ViewPortSize = new Size(1280, 0);
+
+    // Restricts external CSS and images in local HTML content
+    blinkConverterSettings.EnableLocalFileAccess = false;
+
+    // Assign Blink converter settings to HTML converter
+    htmlConverter.ConverterSettings = blinkConverterSettings;
+    // Read HTML content from file
+    string html = File.ReadAllText("sample.html");
+    // Convert HTML to PDF document
+    using (PdfDocument document = htmlConverter.Convert(html, ""))
+    {
+        // Save the PDF document.
+        document.Save("Output.pdf");
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+// Initialize HTML to PDF converter
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
 {
     // Initialize Blink converter settings
     BlinkConverterSettings blinkConverterSettings = new BlinkConverterSettings();
@@ -2813,6 +3761,80 @@ The following code examples demonstrate how to convert HTML to PDF and programma
 using Syncfusion.Drawing;
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
+
+// Initialize the HTML to PDF converter using the Blink rendering engine
+HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+
+// Configure the converter to preserve form fields in the PDF
+BlinkConverterSettings settings = new BlinkConverterSettings
+{
+    EnableForm = true // Ensures form elements like <input>, <textarea> are converted to PDF fields
+};
+htmlConverter.ConverterSettings = settings;
+
+// Convert the HTML file to a PDF document
+PdfDocument document = htmlConverter.Convert("Test.html");
+
+// Optional: Remove default appearances for form fields to match the page style
+document.Form.SetDefaultAppearance(false);
+
+// Save the PDF to a memory stream for further processing
+using (MemoryStream stream = new MemoryStream())
+{
+    document.Save(stream);
+    stream.Position = 0;
+    document.Close(true);             
+
+    // Replace the "signature" textarea with an actual signature field
+    AddPdfSignatureField(stream);     
+}
+
+/// <summary>
+/// Finds the "signature" field in the form, removes it, and replaces it with a true PDF signature field.
+/// </summary>
+/// <param name="stream">MemoryStream containing the PDF document</param>
+public void AddPdfSignatureField(MemoryStream stream)
+{
+    // Load the PDF document from memory stream
+    using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream))
+    {
+        PdfLoadedForm loadedForm = loadedDocument.Form;
+
+        // Check for a field named "signature"
+        if (loadedForm.Fields["signature"] is PdfLoadedTextBoxField signatureTextBox)
+        {
+            // Get the original field's position and page
+            RectangleF bounds = signatureTextBox.Bounds;
+            PdfPageBase page = signatureTextBox.Page;
+
+            // Remove the original textbox field
+            loadedForm.Fields.Remove(signatureTextBox);
+
+            // Create a new signature field at the same location
+            PdfSignatureField signatureField = new PdfSignatureField(page, "ClientSignature")
+            {
+                Bounds = bounds
+            };
+
+            // Add the new signature field to the form
+            loadedForm.Fields.Add(signatureField);
+        }
+        // Save the modified document.
+        loadedDocument.Save("Output.pdf");
+        // Close the document and release resources
+        loadedDocument.Close(true);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
 
 // Initialize the HTML to PDF converter using the Blink rendering engine
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -2972,6 +3994,31 @@ Refer to the following code sample to wait until browser navigation completes.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+
+// Initialize HTML to PDF converter.
+HtmlToPdfConverter htmlToPdfConverter = new HtmlToPdfConverter();
+// Initialize BlinkConverterSettings.
+BlinkConverterSettings settings = new BlinkConverterSettings();
+ 
+// Set the navigation wait event.
+settings.WaitForNavigation = WaitOption.DomContentLoaded;
+ 
+// Assign settings to the converter.
+htmlToPdfConverter.ConverterSettings = settings;
+// Convert HTML to PDF.
+PdfDocument document = htmlToPdfConverter.Convert("input.html");
+ 
+// Save the document.
+document.Save("Output.pdf");
+// Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;

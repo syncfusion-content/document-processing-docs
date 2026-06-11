@@ -110,7 +110,7 @@ N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and
 
 **Step 3:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor/#open) method.
+In the client-side, the document is returned from the web service is opening using `open` method.
 
 
 {% tabs %}

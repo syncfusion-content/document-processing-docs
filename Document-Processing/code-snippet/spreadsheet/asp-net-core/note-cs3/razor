@@ -7,12 +7,8 @@
         {
             row.Index(2).Cells(cell =>
             {
-                cell.Index(0).Notes("These shoes have the highest sales in terms of quantity this month.").Add();
+                cell.Index(0).Notes(new SpreadsheetNotes(){ Text = "These shoes have the highest sales in terms of quantity this month.", IsVisible = True}).Add();
             }).Add();
-            row.Index(5).Cells(cell =>
-                {
-                    cell.Index(0).Notes("These shoes have been the most profitable this month.").Add();
-                }).Add();
         }).Columns(column =>
         {
             column.Width(130).Add();
@@ -26,6 +22,7 @@
     function created() {
         this.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:H1');
         this.cellFormat({ verticalAlign: 'middle' }, 'A1:H1');
+        this.updateCell({ notes: { text: 'These shoes have been the most profitable this month.' } }, 'A10:A10');
     }
 
 </script>

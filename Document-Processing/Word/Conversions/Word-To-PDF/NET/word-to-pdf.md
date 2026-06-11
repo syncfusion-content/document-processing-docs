@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Convert Word to PDF using Syncfusion® Word (DocIO) library
+# Convert Word to PDF in .NET using Syncfusion® Word (DocIO) library
 
 Syncfusion<sup>&reg;</sup> Word library (DocIO) allows you to convert Word document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft Word application to be installed in the machine. Using this, you can create an input Word document from scratch or load an existing Word document and then easily convert to PDF.  
 
@@ -254,7 +254,7 @@ During Word to PDF conversions, if a glyph of the input text is unavailable in t
 
 ## Unsupported elements in Word to PDF conversion
 
-Refer [here](document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#detailed-limitations) to know about unsupported elements in Word to PDF conversion.
+Refer [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#detailed-limitations) to know about unsupported elements in Word to PDF conversion.
 
 ## Show Warning for Unsupported Elements
 

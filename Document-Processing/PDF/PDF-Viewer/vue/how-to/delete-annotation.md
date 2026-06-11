@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Delete annotation in Vue PDF Viewer control
 
-Use the `deleteAnnotationById()` method to remove a specific annotation from a PDF document by its id.
+This article shows how to remove a specific annotation from a PDF document using the `deleteAnnotationById()` method. The example below demonstrates a simple delete flow.
 
-Steps to delete a specific annotation.
+The following steps are used to delete a specific annotation from PDF Document:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Create a basic PDF Viewer sample by following the [getting-started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide.
 
-**Step 2:** Use the following code to delete a specific annotation using `deleteAnnotationById()`.
+**Step 2:** Use the following snippet to trigger deletion using `deleteAnnotationById()`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}

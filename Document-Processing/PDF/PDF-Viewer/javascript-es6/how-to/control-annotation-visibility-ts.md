@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Overview
 
-This guide explains how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion PDF Viewer in TypeScript, so annotations are visible only in the viewer when required.
+This guide explains how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion PDF Viewer in JavaScript, so annotations remain visible in the viewer but can be hidden or omitted in saved/downloaded files
 
 Steps to control annotation visibility
 

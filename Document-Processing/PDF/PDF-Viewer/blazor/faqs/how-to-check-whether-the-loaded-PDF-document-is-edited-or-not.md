@@ -9,9 +9,9 @@ documentation: ug
 
 # Check document editing status in Blazor SfPdfViewer Component
 
-Use the [IsDocumentEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_IsDocumentEdited) property to determine whether the loaded PDF has unsaved changes. A document is considered edited when users modify annotations, fill form fields, add or update signatures, apply redactions, or make other in-viewer changes. The property becomes true.
+Use the [IsDocumentEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_IsDocumentEdited) property to determine whether the loaded PDF has unsaved changes. A document is considered edited when users modify annotations, fill form fields, add or update signatures, apply redactions, or perform other in-viewer changes. The property returns `true` when the document has unsaved edits.
 
-The following example shows how to check the document's editing status.
+The following example shows how to check the document's edited status and log it.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -25,10 +25,10 @@ The following example shows how to check the document's editing status.
 </SfPdfViewer2>
 
 @code{
-    public SfPdfViewer Viewer { get; set; }
+    public SfPdfViewer2 Viewer { get; set; }
     private string DocumentPath { get; set; } = "Data/PDF_Succinctly.pdf";
 
-    //Prints the document's edited status in console window.
+    // Logs the document's edited status to the console (null-safe).
     public void OnClick(MouseEventArgs args)
     {
         Console.WriteLine(Viewer.IsDocumentEdited);

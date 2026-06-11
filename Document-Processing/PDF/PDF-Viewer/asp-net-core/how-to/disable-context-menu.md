@@ -3,15 +3,15 @@ layout: post
 title: Disable context menu in ASP.NET Core PDF Viewer control | Syncfusion
 description: Learn here all about Disable context menu in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Disable context menu
+control: PDF Viewer
 documentation: ug
 ---
 
-# Disable context menu in ASP.NET Core PDF Viewer control
+# Disable the context menu in ASP.NET Core PDF Viewer
 
-To disable the context menu in the Syncfusion PDF viewer control, you can use the [**ContextMenuOption**](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ContextMenuOption) property as `'None'` to hide all context menu options. Default value of the **ContextMenuOption** is `'RightClick'`.
+Prevent users from accessing the context menu by setting the [**ContextMenuOption**](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ContextMenuOption) property to `'None'`. This hides all context menu options on right-click. The default value is `'RightClick'`.
 
-Here is an example of how you can use the **ContextMenuOption** to disable context menu in the PDF Viewer:
+Use the following example to disable the context menu in the PDF Viewer:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -40,4 +40,4 @@ Here is an example of how you can use the **ContextMenuOption** to disable conte
 {% endhighlight %}
 {% endtabs %}
 
-This will hide the context menu and prevent the user from right-clicking on the PDF viewer.
+This configuration hides the context menu entirely, preventing users from accessing it when right-clicking on the PDF document.

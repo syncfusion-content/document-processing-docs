@@ -9,7 +9,7 @@ documentation: ug
 
 # Frequently Asked Questions Section in ASP.NET Core PDF Viewer
 
-The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
+The following frequently asked questions address common ASP.NET Core PDF Viewer topics:
 
 * [How to add annotation in text search in ASP.NET Core ?](./how-to/add-annotation-in-text-search)
 * [How to add custom header to the PDF Viewer ajax request?](./how-to/authorization-token)
@@ -64,3 +64,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [How to get the annotation when it is overlapped with another annotation on its selection?](./how-to/overlapped-annotation)
 * [How to print the PDF document silently?](./how-to/print-document)
 * [Load Document after resources Loaded](./how-to/load-document-after-resources-loaded)
+* [How to use local resources to configure PDF Viewer](./how-to/local-resources)

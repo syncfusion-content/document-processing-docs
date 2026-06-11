@@ -304,6 +304,11 @@ Add or modify the JavaScript action in a [PdfLoadedDocument](https://help.syncfu
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// PDF does not support JavaScript actions in C#/.NET cross-platform environments.
+
+{% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;

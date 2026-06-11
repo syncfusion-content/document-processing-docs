@@ -33,22 +33,21 @@ const width1 = 180;
 const width2 = 130;
 const width3 = 120;
 const rowIndex= 2;
-const rowIndex1 = 5;
-const cells = [{ index: 0, notes: 'These shoes have the highest sales in terms of quantity this month.'}];
-const cells1= [{index: 0, notes: 'These shoes have been the most profitable this month.'}];
+const cells: [{index: 0, notes: { text: 'These shoes have the highest sales in terms of quantity this month.', isVisible: true } }];
 const created = function () {
   spreadsheet.value.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:H1');
   spreadsheet.value.cellFormat({ verticalAlign: 'middle' }, 'A1:H11');
+  spreadsheet.updateCell({ notes: { text: 'These shoes have been the most profitable this month.' } }, 'A10:A10');
 }
 </script>
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
+@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
 </style>

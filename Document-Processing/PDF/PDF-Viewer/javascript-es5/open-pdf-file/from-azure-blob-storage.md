@@ -26,64 +26,62 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account and **Your container name in Azure** with the actual container name and **Your Blob name in Azure** with the actual container name.
 
-```typescript
-private accountName: string = "*Your account name in Azure*";
-private containerName: string = "*Your container name in Azure*";
-private blobName: string = "*Your Blob name in Azure*";
+```javascript
+var accountName = "*Your account name in Azure*";
+var containerName = "*Your container name in Azure*";
+var blobName = "*Your Blob name in Azure*";
 ```
 
 2. Construct the URL to the PDF in Azure Blob Storage. Call `fetchAndConvertToBase64` to fetch the PDF and convert it to a base64 string. Then load the base64 string into the PDF Viewer.
 
-```typescript
+```javascript
 pdfviewer.created = function () {
-  const url = 'https://'+accountName+'.blob.core.windows.net/'+containerName+'/'+blobName;
-  fetchAndConvertToBase64(url).then(base64String => {
+  var url = 'https://' + accountName + '.blob.core.windows.net/' + containerName + '/' + blobName;
+  fetchAndConvertToBase64(url).then(function (base64String) {
     if (base64String) {
-        setTimeout(() => {
-          pdfviewer.load("data:application/pdf;base64,"+base64String, "");
-        }, 2000);
+      setTimeout(function () {
+        pdfviewer.load('data:application/pdf;base64,' + base64String, '');
+      }, 2000);
     } else {
-        console.error('Failed to fetch and convert file to base64.');
+      console.error('Failed to fetch and convert file to base64.');
     }
-  }).catch(error => console.error('Error:', error));
-}
+  }).catch(function (error) { console.error('Error:', error); });
+};
 ```
 
 3. Retrieve the PDF from the URL and convert the fetched Blob to a base64 string using blobToBase64.
 
-```typescript
-function fetchAndConvertToBase64(url : any) {
-  return new Promise(function(resolve, reject) {
-      fetch(url).then(function(response) {
-          if (!response.ok) {
-              throw new Error('HTTP error! Status: ' + response.status);
-          }
-          return response.blob();
-      }).then(function(blob) {
-          blobToBase64(blob).then(function(base64String) {
-              resolve(base64String);
-          });
-      }).catch(function(error) {
-          console.error('Error fetching file:', error);
-          reject(null);
+```javascript
+function fetchAndConvertToBase64(url) {
+  return new Promise(function (resolve, reject) {
+    fetch(url).then(function (response) {
+      if (!response.ok) {
+        throw new Error('HTTP error! Status: ' + response.status);
+      }
+      return response.blob();
+    }).then(function (blob) {
+      blobToBase64(blob).then(function (base64String) {
+        resolve(base64String);
       });
+    }).catch(function (error) {
+      console.error('Error fetching file:', error);
+      reject(null);
+    });
   });
 }
 ```
 
 4. Use FileReader to convert a Blob to a base64 string. Resolve the promise with the base64 string or reject it in case of an error.
 
-```typescript
-function blobToBase64(blob : any) {
-  return new Promise(function(resolve, reject) {
+```javascript
+function blobToBase64(blob) {
+  return new Promise(function (resolve, reject) {
     var reader = new FileReader();
-    reader.onload = function() {
+    reader.onload = function () {
       var base64String = reader.result ? reader.result.toString().split(',')[1] : '';
       resolve(base64String);
     };
-    reader.onerror = function(error) {
-      reject(error);
-    };
+    reader.onerror = function (error) { reject(error); };
     reader.readAsDataURL(blob);
   });
 }
@@ -187,14 +185,21 @@ N> Replace the placeholders with your actual values: Azure storage connection st
 Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Azure Blob Storage. Ensure the document name exists in your Azure container.
 
 ```javascript
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.FormDesigner
+);
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,
-         BookmarkView, TextSelection, Annotation, FormFields, FormDesigner} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject( Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,
-                  BookmarkView, TextSelection, Annotation, FormFields, FormDesigner);
-
-let viewer: PdfViewer = new PdfViewer();
+var viewer = new ej.pdfviewer.PdfViewer();
 // Replace the "localhost:44396" with the actual URL of your server
 viewer.serviceUrl = 'https://localhost:44396/pdfviewer';
 viewer.appendTo('#pdfViewer');

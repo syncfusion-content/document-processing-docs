@@ -8,11 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in React PDF Viewer Control
+# Feature modules in React PDF Viewer component
 
-The PDF Viewer features are segregated into individual feature-wise modules to enable selectively referencing in the application. The required modules should be injected to extend its functionality. The following are the selective modules of PDF Viewer that can be included as required:
-
-The available PDF Viewer modules are:
+The PDF Viewer features are organized into discrete modules so applications can include only the functionality they require. Inject the required modules to extend the viewer. The following modules are available:
 
 * [**Toolbar**](./toolbar-customization/annotation-toolbar-customization): Built-in toolbar for user interaction.
 * [**Magnification**](./magnification): Perform zoom operations for a better viewing experience.
@@ -27,7 +25,8 @@ The available PDF Viewer modules are:
 * [**FormFields**](./form-designer/create-programmatically): Work with form fields in the document.
 * [**FormDesigner**](./form-designer/create-programmatically): Add or edit form fields in the document.
 
->In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a PDF Viewer instance.
+N> In addition to injecting required modules in an application, enable the corresponding properties to extend functionality for a PDF Viewer instance.
+
 Refer to the following table.
 
 | Module | Property to enable the functionality for a PDF Viewer instance |

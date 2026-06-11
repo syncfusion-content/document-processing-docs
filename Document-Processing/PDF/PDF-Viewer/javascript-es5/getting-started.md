@@ -8,63 +8,243 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in JavaScript Standalone PDF Viewer control
+# Getting started with Standalone JavaScript PDF Viewer
 
-The Essential JS 2 for JavaScript (global script) is an ES5 formatted pure JavaScript framework which can be directly used in latest web browsers.
+This guide explains how to create and run a **JavaScript (ES5) PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
 
-## Component Initialization with CDN link for script and style reference
+## Setup the development environment
 
-**Step 1:** Create an app folder `my-app` for the Essential JS 2 JavaScript components.
+This example uses a simple HTML-based setup with CDN links for Syncfusion components.
 
-**Step 2:** The Essential JS 2 component's global scripts and styles are already hosted in the below CDN link formats.
+### Create application folder
+
+Create an app folder `pdf-viewer-app` for the Essential JS 2 JavaScript components.
+
+Your application structure should look like this:
+
+```text
+pdf-viewer-app/
+├── index.html
+├── index.js
+```
+
+### Add style and script references
+
+Add the required Syncfusion® PDF Viewer style and script references to the `index.html` file using one of the following methods:
+
+{% tabcontents %}
+
+{% tabcontent Using Local Resources %}
+
+To use local scripts and styles for the Syncfusion® PDF Viewer, follow these steps:
+
+1. Download the global scripts and styles from the [Essential Studio JavaScript (Essential JS 2) build](https://www.syncfusion.com/downloads/essential-js2/) installed on your machine.
 
 **Syntax:**
-> Script: `https://cdn.syncfusion.com/ej2/{Version}/dist/{PACKAGE_NAME}.min.js`
+> Script: `**(installed location)**/Syncfusion/Essential Studio/JavaScript - EJ2/{RELEASE_VERSION}/Web(Essential JS 2)/JavaScript/{PACKAGE_NAME}/dist/{PACKAGE_NAME}.min.js`
 >
-> Styles: `https://cdn.syncfusion.com/ej2/{Version}/{PACKAGE_NAME}/styles/material.css`
+> Styles: `**(installed location)**/Syncfusion/Essential Studio/JavaScript - EJ2/{RELEASE_VERSION}/Web(Essential JS 2)/JavaScript/{PACKAGE_NAME}/styles/material.css`
 
 **Example:**
-> Script: [`https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2.min.js`](https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2.min.js)
+> Script: `C:/Program Files (x86)/Syncfusion/Essential Studio/JavaScript - EJ2/19.3.53/Web(Essential JS 2)/JavaScript/ej2/dist/ej2.min.js`
 >
-> Styles: [`https://cdn.syncfusion.com/ej2/26.2.11/ej2-base/styles/material.css`](https://cdn.syncfusion.com/ej2/26.2.11/ej2-base/styles/material.css)
+> Styles: `C:/Program Files (x86)/Syncfusion/Essential Studio/JavaScript - EJ2/19.3.53/Web(Essential JS 2)/JavaScript/ej2-js-es5/styles/material.css`
 
+Alternatively, clone the [`Essential JS 2 quickstart`](https://github.com/syncfusion/ej2-quickstart.git) project and install the required packages by running the following commands.
 
-**Step 3:** Create a HTML page (index.html) in `my-app` location and add the CDN link references. Now, add the `Div` element and initiate the `Essential JS 2 PDF Viewer` component in the index.html by using following code.
+```
+git clone https://github.com/syncfusion/ej2-quickstart.git quickstart
+cd quickstart
+npm install
+```
+
+2. Download the `pdfium.js` and `pdfium.wasm` files from the following links:
+
+**Syntax:**
+> `pdfium.js`: `https://cdn.syncfusion.com/ej2/{Version}/dist/ej2-pdfviewer-lib/pdfium.js`
+>
+> `pdfium.wasm`: `https://cdn.syncfusion.com/ej2/{Version}/dist/ej2-pdfviewer-lib/pdfium.wasm`
+
+**Example:**
+> `pdfium.js`: [`https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib/pdfium.js`](https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib/pdfium.js)
+>
+> `pdfium.wasm`: [`https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib/pdfium.wasm`](https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib/pdfium.wasm)
+
+3. Create a folder named `pdf-viewer-app/resources` and copy the EJ2 scripts and styles from the installed location into the `pdf-viewer-app/resources` directory. Include the `ej2-pdfviewer-lib` folder and PDF documents in the same location. The `ej2-pdfviewer-lib` folder should contain `pdfium.js` and `pdfium.wasm` files.
+
+4. Add the PDF Viewer and its dependent control style and script references inside the `<head>` section of your `index.html` file using local resources.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs2/index.html %}
+
+<head>
+    <title>EJ2 PDF Viewer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript PDF Viewer Control">
+    <meta name="author" content="Syncfusion">
+    <!-- PDF Viewer dependency styles -->
+    <link href="resources/ej2-base/styles/material.css" rel="stylesheet" type="text/css" />
+    <link href="resources/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" />
+    <link href="resources/ej2-popups/styles/material.css" rel="stylesheet" type="text/css" />
+    <link href="resources/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css" />
+    <link href="resources/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css" />
+    <link href="resources/ej2-lists/styles/material.css" rel="stylesheet" type="text/css" />
+    <link href="resources/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css" />
+    <link href="resources/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css" />
+    <link href="resources/ej2-notifications/styles/material.css" rel="stylesheet" type="text/css" />
+    <!-- PDF Viewer styles -->
+    <link href="resources/ej2-pdfviewer/styles/material.css" rel="stylesheet" type="text/css" />
+    <!-- PDF Viewer dependency scripts -->
+    <script src="resources/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
+    <script src="resources/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
+    <script src="resources/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
+    <script src="resources/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
+    <script src="resources/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
+    <script src="resources/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
+    <script src="resources/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
+    <script src="resources/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
+    <!-- PDF Viewer scripts -->
+    <script src="resources/ej2-pdfviewer/dist/global/ej2-pdfviewer.min.js" type="text/javascript"></script>
+</head>
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs2/index.html" %}
+{% endtabcontent %}
 
+{% tabcontent Using CDN Links %}
 
-### Steps to Load PDF Viewer with Local Resources
+Reference the scripts and styles directly from the CDN.
 
-To use local resources with your PDF Viewer, follow these steps:
+```text
+Script: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js
+Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAME}.css
+```
 
-**Step 1:** Ensure that your application includes the `ej2-pdfviewer-lib` folder. This folder must contain the `pdfium.js`, `pdfium.wasm` files, and the PDF file that you intend to display. These should reside in the same location as the `ej2.min.js` script and its related styles.
+Create an HTML page (index.html) in `pdf-viewer-app` location and add the CDN link references.
 
-**Step 2:** Assign local file paths to the `documentPath` and `resourceUrl` properties within the PDF Viewer setup. The `documentPath` should refer to your PDF file, while the `resourceUrl` should point to the directory containing the supporting resources.
+{% tabs %}
+{% highlight html tabtitle="index.html" hl_lines="8 9 10 11 12 13 14 15 16 17 19" %}
 
-**Step 3:** Insert the necessary script and style references within the `<head>` section of your HTML file. Make sure these point to your local copies of the files instead of CDN links.
+<head>
+    <title>EJ2 PDF Viewer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript PDF Viewer Control">
+    <meta name="author" content="Syncfusion">
+    <link href="index.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/material.css" rel="stylesheet">    
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-buttons/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-popups/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-navigations/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-dropdowns/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-lists/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-inputs/styles/material.css" rel="stylesheet">    
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-splitbuttons/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-notifications/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-pdfviewer/styles/material.css" rel="stylesheet">
+    <!-- Essential JS 2 PDF Viewer's script --> 
+    <script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2.min.js" type="text/javascript"></script>
+</head>
 
-By following these steps, you will configure your PDF Viewer to load the required resources locally. See the code snippet below for reference.
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+## Adding the PDF Viewer component
+
+Add a container element for the PDF Viewer control in the `index.html` file and then initialize the control.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
-<script>
 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>EJ2 PDF Viewer</title>
+    <!-- Add your style references here -->
+</head>
+<body>
+    <!-- Element which will render as PDF Viewer -->
+    <div id="container">
+        <div id="PdfViewer" style="height:500px;width:100%;"></div>
+    </div>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
+
+{% endhighlight %}
+{% endtabs %}
+
+Now, initialize the PDF Viewer component in the `index.js` file:
+
+{% tabcontents %}
+
+{% tabcontent Using Local Resources %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+
+// Initialize PDF Viewer component
 var pdfviewer = new ej.pdfviewer.PdfViewer({
-    documentPath:window.location.origin +'/resources/pdfsuccinctly.pdf',
-    resourceUrl:window.location.origin +'/resources/ej2-pdfviewer-lib'
+    documentPath: window.location.origin + '/resources/pdfsuccinctly.pdf',
+    resourceUrl: window.location.origin + '/resources/ej2-pdfviewer-lib'
 });
 
-</script>
+// PDF Viewer control rendering starts
+pdfviewer.appendTo('#PdfViewer');
+
 {% endhighlight %}
 {% endtabs %}
 
-View the sample in GitHub to [load PDF Viewer with local resources](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
+{% endtabcontent %}
 
-**Step 4:** Now, run the `index.html` in web browser, it will render the `Essential JS 2 PDF Viewer` component.
+{% tabcontent Using CDN Links %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+
+// Initialize PDF Viewer component
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib'
+});
+
+// PDF Viewer control rendering starts
+pdfviewer.appendTo('#PdfViewer');
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+N> The `documentPath` property is used to set the path of the PDF file to be loaded in the PDF Viewer. The `resourceUrl` property is used to set the path of the PDF Viewer library resources required for PDF rendering. For local resources, ensure the `ej2-pdfviewer-lib` folder contains the required `pdfium.js` and `pdfium.wasm` files.
+
+## Run the application
+
+Now run the following command in the console to start the development server. This command serves the application locally on your machine:
+
+```bash
+npx serve .
+```
+
+After the application starts, open the localhost URL displayed in the terminal in your web browser. The PDF document will be rendered in the browser. The output will appear as follows:
+
+![Rendered PDF Viewer in browser](images/pdfviewer-control.png)
+
+You can also explore the PDF Viewer interactively using the live sample below.
+
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs2" %}
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
+
+## See also
+
+- [Getting started with Server-Backed JavaScript PDF Viewer](./getting-started)
+- [Feature modules](./feature-module)
