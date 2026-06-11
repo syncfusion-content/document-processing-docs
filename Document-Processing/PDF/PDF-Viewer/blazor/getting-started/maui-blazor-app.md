@@ -122,7 +122,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) c
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
-@page "/"
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 DocumentPath="@DocumentPath"
