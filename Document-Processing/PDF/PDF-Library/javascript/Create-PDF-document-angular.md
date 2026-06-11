@@ -24,7 +24,7 @@ npm install -g @angular/cli
 ```
 
 N> To install a specific Angular CLI version, use: **npm install --save @angular/cli@12.0.2**
-Step2: Start a new Angular application using the Angular CLI command as follows.
+Step2: Create a new Angular application using the Angular CLI command as follows.
 
 ```bash
 ng new my-app

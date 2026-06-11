@@ -43,3 +43,4 @@ The following are the key features of this library.
 * [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-vue)
 * [JavaScript](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-javascript)
 * [TypeScript](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-typescript)
+* [Node.js](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-node)

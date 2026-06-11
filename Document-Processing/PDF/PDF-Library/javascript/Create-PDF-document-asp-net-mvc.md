@@ -84,5 +84,3 @@ Step 8: **Run the project**: Click the Start button (green arrow) or press F5 to
 When you run the application and click the button, it generates the following PDF document.
 
 ![ASP.NET Core MVC PDF output](Getting_started_images/Output.png)
-
-Click [here](https://www.syncfusion.com/document-sdk/javascript-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
