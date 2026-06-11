@@ -1,0 +1,48 @@
+<div style="padding: 12px;">
+    <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <button onclick="showInsertTab()">Show Insert Tab</button>
+        <button onclick="hideInsertTab()">Hide Insert Tab</button>
+        <button onclick="showHomeItems()">Show Home Items</button>
+        <button onclick="hideHomeItems()">Hide Home Items</button>
+    </div>
+
+    <ejs-spreadsheet id="spreadsheet" created="handleCreated">
+    </ejs-spreadsheet>
+</div>
+
+<script>
+    var spreadsheet;
+    
+    // Items in the Home tab to hide/show (by index)
+    // Adjust these indices based on your app's ribbon layout
+    var homeItemsToToggle = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15];
+
+    function hideInsertTab() {
+        if (!spreadsheet) return;
+        spreadsheet.hideRibbonTabs(['Insert']);
+    }
+
+    function showInsertTab() {
+        if (!spreadsheet) return;
+        spreadsheet.hideRibbonTabs(['Insert'], false);
+    }
+
+    function hideHomeItems() {
+        if (!spreadsheet) return;
+        spreadsheet.hideToolbarItems('Home', homeItemsToToggle);
+    }
+
+    function showHomeItems() {
+        if (!spreadsheet) return;
+        spreadsheet.hideToolbarItems('Home', homeItemsToToggle, false);
+    }
+
+    function handleCreated() {
+        spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        if (!spreadsheet) return;
+
+        // Initial state: hide the "Insert" tab and selected "Home" items
+        spreadsheet.hideRibbonTabs(['Insert']);
+        spreadsheet.hideToolbarItems('Home', homeItemsToToggle);
+    }
+</script>

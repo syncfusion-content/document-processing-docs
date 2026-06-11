@@ -1,0 +1,25 @@
+<div class="control-pane">
+    <div class="control-section spreadsheet-control">
+        <div style="padding: 8px 0">
+            <button class="e-btn e-primary" onclick="handleOpenFromJson()">
+                Load workbook JSON
+            </button>
+        </div>
+        <div>
+            <ejs-spreadsheet id="spreadsheet"></ejs-spreadsheet>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JSON data for the workbook (imported from datasource)
+    var jsonData = @Html.Raw(ViewBag.jsonData);
+
+    function handleOpenFromJson() {
+        // Get the Spreadsheet instance
+        var spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        if (!spreadsheet) return;
+        // Load the workbook JSON into Spreadsheet
+        spreadsheet.openFromJson({ file: jsonData });
+    }
+</script>

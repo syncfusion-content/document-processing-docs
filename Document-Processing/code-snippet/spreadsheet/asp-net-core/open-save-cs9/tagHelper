@@ -1,0 +1,26 @@
+<div style="padding: 12px">
+    <h5>Upload an Excel file to open in Spreadsheet</h5>
+    <ejs-uploader id="fileUploader" asyncSettings="ViewBag.asyncSettings" success="onSuccess" allowedExtensions=".xlsx, .xls, .csv"></ejs-uploader>
+</div>
+
+<ejs-spreadsheet id="spreadsheet" openUrl="Open" allowOpen="true" saveUrl="Save" allowSave="true"></ejs-spreadsheet>
+
+<script>
+    // Async settings for the uploader component
+    var asyncSettings = {
+        saveUrl: 'https://services.syncfusion.com/aspnet-core/production/api/FileUploader/Save',
+        removeUrl: 'https://services.syncfusion.com/aspnet-core/production/api/FileUploader/Remove'
+    };
+
+    // Handle successful file upload
+    function onSuccess(args) {
+        if (args.operation == 'upload') {
+            // Get the Spreadsheet instance
+            var spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+            if (spreadsheet) {
+                // Open the uploaded file into Spreadsheet
+                spreadsheet.open({ file: args.file.rawFile });
+            }
+        }
+    }
+</script>

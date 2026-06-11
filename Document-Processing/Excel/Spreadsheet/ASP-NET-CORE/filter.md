@@ -12,27 +12,27 @@ documentation: ug
 
 Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFiltering) property to enable or disable filtering functionality.
 
-N> * The default value for `allowFiltering` property is `true`.
+> * The default value for `allowFiltering` property is `true`.
 
-By default, the `filter` module is injected internally into Spreadsheet to perform filtering.
+By default, the `Filter` module is injected internally into Spreadsheet to perform filtering.
 
 ## Apply filter on UI
 
-In the active Spreadsheet, select a range of cells to filter by value of the cell. The filtering can be done by any of the following ways:
+In the active sheet, select a range of cells to filter by value of the cell. The filtering can be done by any of the following ways:
 
 * Select the filter item in the Ribbon toolbar.
 * Right-click the sheet, select the filter item in the context menu.
-* Use the `applyFilter()` method programmatically.
+* Use the [`applyFilter`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#applyfilter) method programmatically.
 * Use `Ctrl + Shift + L` keyboard shortcut to apply the filter.
 
-N> * Use `Alt + Up/Down` keyboard shortcut to open the filter dialog.
+> * Use `Alt + Up/Down` keyboard shortcut to open the filter dialog.
 
 ## Filter by criteria
 
-The `applyFilter()` method will apply the filter UI, based on the predicate and range given in the arguments.
+The [`applyFilter`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#applyfilter) method will apply the filter UI, based on the predicate and range given in the arguments.
 
-N> * The `beforeFilter` event will be triggered before filtering the specified range.
-<br/> * The `filterComplete` event will be triggered after the filter action is completed successfully.
+> * The [`beforeFilter`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#beforefilter) event will be triggered before filtering the specified range.
+> * The [`filterComplete`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#filtercomplete) event will be triggered after the filter action is completed successfully.
 
 The following code example shows `filter` functionality in the Spreadsheet control.
 
@@ -45,8 +45,6 @@ The following code example shows `filter` functionality in the Spreadsheet contr
 {% endhighlight %}
 {% endtabs %}
 
-
-
 ## Filter by cell value
 
 To apply a filter for a cell value, right-click the cell and choose filter -> `Filter By Selected Cell's Value` option from the menu. It applies the filter based on the value of the selected cell in the current sheet.
@@ -57,7 +55,7 @@ After applying filter to a certain column, you may want to clear it to make all 
 
 * Choose `Clear` option in ribbon toolbar under `Filter and Sort`. It clears the filters applied in the spreadsheet for all fields.
 
-* Use the `clearFilter()` method programmatically, to clear the applied filters in spreadsheet for all fields.
+* Use the [`clearFilter`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#clearfilter) method programmatically, to clear the applied filters in spreadsheet for all fields.
 
 ## Clear filter on a field
 
@@ -65,7 +63,7 @@ After filtering, you can clear/reset the filter for a field alone. It can be don
 
 * Click filter icon in the column’s header and then choose `Clear Filter` option from the filter dialog.
 * You can right-click on a filtered column cell and choose `Clear Filter from <Column Name>.` option from the context menu.
-* Use the `clearFilter(field)` method programmatically, to clear the filter in a particular column.
+* Use the [`clearFilter(field)`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#clearfilter) method programmatically, to clear the filter in a particular column.
 
 ## Reapply filter
 
@@ -81,7 +79,7 @@ The following errors have been handled for filtering,
 
 ## Get data from filtered rows
 
-Filtering allows you to view specific rows in a spreadsheet while hiding the others. The [allowFiltering](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFiltering) property allows you to enable or disable filtering functionality through the UI. You can also use the [allowFiltering](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFiltering) property and `applyFilter` method combination to filter data via code behind. The filtered rows can be identified by iterating through the row collection on the sheet and using the `isFiltered` property available in each row object.
+Filtering allows you to view specific rows in a spreadsheet while hiding the others. The [`allowFiltering`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFiltering) property allows you to enable or disable filtering functionality through the UI. You can also use the [`allowFiltering`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFiltering) property and [`applyFilter`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#applyfilter) method combination to filter data via code behind. The filtered rows can be identified by iterating through the row collection on the sheet and using the `isFiltered` property available in each row object.
 
 The following code example shows how to get the filtered rows.
 
@@ -101,6 +99,11 @@ The following features have some limitations in Filter:
 * Insert/delete row/column between the filter applied cells.
 * Merge cells with filter.
 * Copy/cut paste the filter applied cells.
+* Filter by color is not supported.
+
+## Note
+
+You can refer to our [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 
