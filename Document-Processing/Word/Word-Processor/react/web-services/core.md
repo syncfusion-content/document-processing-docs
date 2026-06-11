@@ -365,7 +365,7 @@ public class SpellCheckJsonData
 
 #### Page-by-page spell check
 
-This Web API performs spell checking page by page and returns a JSON response containing information about error words and suggestions, if any. By [enabling optimized spell check](https://help.syncfusion.com/document-processing/word/word-processor/react/spell-check#enableoptimizedspellcheck) on the client side, you can perform page-by-page spell checking when loading documents.
+This Web API performs spell checking page by page and returns a JSON response containing information about error words and suggestions, if any. By [enabling optimized spell check](https://help.syncfusion.com/document-processing/word/word-processor/react/spell-check#optimized-spell-check) on the client side, you can perform page-by-page spell checking when loading documents.
 
 The following example code illustrates how to write a Web API for page-by-page spell checking.
 
