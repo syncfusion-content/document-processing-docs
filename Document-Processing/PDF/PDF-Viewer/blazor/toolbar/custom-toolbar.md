@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a custom toolbar in Blazor PDF Viewer Component | Syncfusion
-description: Learn here all about custom toolbar in Syncfusion Blazor PDF Viewer component of Syncfusion and more.
+description: Check out and learn about the primary, annotation, form designer, and redaction toolbars in the Syncfusion Blazor SfPdfViewer component.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -305,7 +305,6 @@ Here's the complete code combining all steps into one component:
 ## Troubleshooting
 
 **Toolbar methods not responding**: Ensure you have a reference to the PDF Viewer component using `@ref`. For async methods, use `await` properly or call them without await if the method is `void`.
-**Icons not displaying correctly**: Verify that icon classes from the [Syncfusion icon library](https://ej2.syncfusion.com/documentation/icon/) are correctly specified. Use `e-icons e-icon-name` format.
 **Custom toolbar not appearing**: Confirm that both `EnableToolbar` and `EnableNavigationToolbar` are set to `false` in the `SfPdfViewer2` component.
 **Buttons not calling event handlers**: Check that the method name in `OnClick` matches exactly with the method defined in your `@code` block. Method names are case-sensitive.
 **PDF changes not being saved**: Use `GetDocumentAsync()` to retrieve the modified PDF and `LoadAsync()` to reload it after saving.

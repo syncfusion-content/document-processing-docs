@@ -29,8 +29,6 @@ Show the redaction toolbar on desktop by including the required [ToolbarItem.Red
 {% highlight razor tabtitle="Toolbar.razor" %}
 @using Syncfusion.Blazor.SfPdfViewer
 
-@page "/"
-
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="Annotations.pdf">
     <PdfViewerToolbarSettings ToolbarItems="ToolbarItems"></PdfViewerToolbarSettings>
 </SfPdfViewer2>
@@ -65,8 +63,6 @@ Refer to the image below for the desktop view.
 
 ![Enable redaction toolbar for desktop](../redaction/redaction-annotations-images/enable-redaction-toolbar-for-desktop.png)
 
-[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Redaction%20Toolbar)
-
 ## Enable the redaction toolbar on mobile
 
 Show the redaction toolbar on mobile by configuring the [MobileToolbarItem.Redaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MobileToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_MobileToolbarItem_Redaction) in the [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html).
@@ -74,8 +70,6 @@ Show the redaction toolbar on mobile by configuring the [MobileToolbarItem.Redac
 {% tabs %}
 {% highlight razor tabtitle="Toolbar.razor" %}
 @using Syncfusion.Blazor.SfPdfViewer
-
-@page "/"
 
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="Annotations.pdf">
     <PdfViewerToolbarSettings MobileToolbarItems="MobileToolbarItems"></PdfViewerToolbarSettings>
@@ -102,8 +96,6 @@ Show the redaction toolbar on mobile by configuring the [MobileToolbarItem.Redac
 Refer to the image below for the mobile view.
 
 ![Enable redaction toolbar for mobile](../redaction/redaction-annotations-images/mobile-redaction-toolbar.png)
-
-[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Redaction%20Toolbar)
 
 ## Show or hide the redaction toolbar
 
@@ -165,8 +157,6 @@ Control visibility through application logic by invoking the `ShowRedactionToolb
 Refer to the image below for details.
 
 ![Programmatically show the Redaction toolbar](../redaction/redaction-annotations-images/show-redaction-toolbar.png)
-
-[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Redaction%20Toolbar)
 
 ## Complete example with redaction toolbar customization
 
