@@ -20,7 +20,7 @@ Ensure the following before integrating AI Assist:
 * Backend Server: A running backend AI service (Node.js or Web API) with AI credentials configured on the server.
 * For setup instructions, see the:
     * [ASP.NET Web API Server](./ai-service/using-web-api)
-    * [Node.js Server](./ai-service/using-node-js)
+    * [Node.js Server](./ai-service/using-node-js-server)
 
 ### Add CSS references
 
@@ -264,5 +264,5 @@ Type your request in plain English — no formulas or technical knowledge needed
 
 ## See also
 
-* [Node.js server setup](./using-node-js)
-* [Web API (.NET) server setup](./using-web-api)
+* [Node.js server setup](./ai-service/using-node-js-server)
+* [Web API (.NET) server setup](./ai-service/using-web-api)
