@@ -161,7 +161,7 @@ To write a Web API for word-by-word spell checking, refer to the [link](https://
 
 ### Optimized spell check
 
-The Document Editor provides an option to perform spell checking page by page when loading documents. By default, this property is set to false, so the spell check web API is called for each word in the document. To optimize the frequency of spell check API calls, you can enable the [enableOptimizedSpellCheck](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellchecker#get-enableoptimizedspellcheck-boolean)property.
+The Document Editor provides an option to perform spell checking page by page when loading documents. By default, this property is set to false, so the spell check web API is called for each word in the document. To optimize the frequency of spell check API calls, you can enable the [enableOptimizedSpellCheck](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellchecker#get-enableoptimizedspellcheck-boolean) property.
 
 The following code example illustrates how to enable optimized spell checking.
 
