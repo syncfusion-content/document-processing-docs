@@ -16,7 +16,7 @@ The Syncfusion<sup>&reg;</sup> [.NET Core PDF library](https://www.syncfusion.co
 Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application project.
 
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 dotnet new console
 
@@ -26,7 +26,7 @@ dotnet new console
 Step 2: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
 
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 dotnet add package Syncfusion.Pdf.Net.Core -v xx.x.x.xx -s https://www.nuget.org/
 
@@ -110,7 +110,7 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pd
 Step 5: Execute the following command to restore the NuGet packages.
 
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 dotnet restore
 
@@ -121,7 +121,7 @@ dotnet restore
 
 Step 6: Execute the following command in terminal to run the application.
 {% tabs %}
-{% highlight CLI %}
+{% highlight bash %}
 
 dotnet run
 
