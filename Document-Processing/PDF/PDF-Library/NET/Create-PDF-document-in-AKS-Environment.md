@@ -10,7 +10,8 @@ documentation: UG
 
 The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in AKS Environment**.
 
-## Steps to create PDF document in AKS Environment 
+**Steps to create PDF document in AKS Environment**
+
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
 ![Create a ASP.NET Core Web App project](AKS_images/Create_net_core_web_app.png)
 
@@ -125,7 +126,7 @@ public IActionResult CreatePDFDocument()
 
 {% endtabs %}
 
-## Publish Container to ACR
+**Publish Container to ACR**
 
 Step 1: Right-click the project and select Publish option.
 ![Right-click the project and select the Publish option](AKS_images/Click_publish_button.png)
@@ -154,7 +155,7 @@ Step 8: It will push the docker image to the Azure container registry and deploy
 Step 9: Publish succeeded.
 ![Publish succeeded](AKS_images/Publish_link.png)
 
-## Deploy Container Image to AKS
+**Deploy Container Image to AKS**
 
 Step 1: Now we can deploy container to the AKS cluster. Start by opening the Azure portal, browsing to the Subscription and opening the Cloud Shell (BASH). We will use the kubectl tool to manage the cluster.
 
@@ -280,7 +281,7 @@ And that’s it, the containerised ASP.NET Core Web App is running on the AKS cl
 Select the PDF document and Click **Create PDF document** to generate the PDF document.You will get the output **PDF document** as follows.
 ![Create PDF document in Azure App Service on Linux](AKS_images/Output.png)
 
-## Delete deployment
+**Delete deployment**
 
 If you want to clean up the cluster, you can run the following commands:
 {% tabs %}
@@ -296,4 +297,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core. 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind). 
