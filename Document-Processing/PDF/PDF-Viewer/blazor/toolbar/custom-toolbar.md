@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a custom toolbar in Blazor PDF Viewer Component | Syncfusion
-description: Check out and learn about the primary, annotation, form designer, and redaction toolbars in the Syncfusion Blazor SfPdfViewer component.
+description: Learn here all about custom toolbar in Syncfusion Blazor PDF Viewer component of Syncfusion and more.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
