@@ -93,9 +93,6 @@ container.documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
 
 ```
 
-{% endhighlight %}
-{% endtabs %}
-
 ### Remove underline
 
 By default, misspelled words are marked with a squiggly line. This behavior can be disabled using the [removeUnderline](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellchecker#get-removeunderline-boolean) API, which prevents squiggly lines from being rendered for misspelled words.
