@@ -1,55 +1,63 @@
 ---
 layout: post
-title: Line Angle Constraints ASP.NET Core PDF Viewer Control | Syncfusion
-description: Learn how to enable Line Angle Constraints the PDF Viewer component in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Line angle constraints in ASP.NET Core PDF Viewer
+Syncfusion description: Learn how to enable and configure line angle constraints for line-type annotations in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
-control: Line Angle Constraints
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
+## Line angle constraints in ASP.NET Core PDF Viewer
 
-# Line Angle Constraints in ASP.NET Core PDF Viewer
+The PDF Viewer provides line angle constraints functionality that allows drawing line-type annotations with controlled angle snapping. This improves precision for technical drawings and measurements in PDF documents.
 
-The PDF Viewer control provides robust **line angle constraints** functionality. This allows users to draw line type annotations with controlled angle snapping, improving accuracy and consistency across technical drawings and measurements across your PDF documents.
+![Line angle constraint](../../javascript-es6/annotations/annotation-images/line-angle-constraint.gif)
 
-## Enabling Line Angle Constraints
-To enable line angle constraints, configure the `enableLineAngleConstraints` property within the `annotationDrawingOptions` of the PDF Viewer. When enabled, line-type annotations are automatically restricted to fixed angles.
+### Enable line angle constraints
 
-The following code demonstrates how to enable line angle constraints:
+Set the `enableLineAngleConstraints` property within `annotationDrawingOptions` to enable angle snapping for supported line-type annotations.
 
-{% tabs %}
-{% highlight cshtml tabtitle="Standalone" %}
+The following code demonstrates enabling line angle constraints.
 
-@page "{handler?}"
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
-
-<div style="width:100%;height:600px">
-    <!-- To configure the server-backed PDF Viewer, include the "serviceUrl='/Index'" attribute -->
-    <ejs-pdfviewer id="pdfviewer"
+{% tabs %}{% highlight cshtml tabtitle="Standalone" %}
+<div style="height:650px">
+    <ejs-pdfviewer id="container"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"
-                   style="height:641px;">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+                   annotationDrawingOptions="new { enableLineAngleConstraints = true, restrictLineAngleTo = 90 }"
+                   style="height:650px">
     </ejs-pdfviewer>
 </div>
+{% endhighlight %}{% endtabs %}
 
-<script type="text/javascript">
-    window.onload = function () {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.annotationDrawingOptions.enableLineAngleConstraints = true;
-        viewer.annotationDrawingOptions.restrictLineAngleTo = 90;
-    };
-</script>
+### Work with constrained annotations
 
-{% endhighlight %}
-{% endtabs %}
+#### Drawing behavior
 
-## Configuration Properties
+When line angle constraints are enabled:
+- Start drawing a supported annotation (Line, Arrow, Polyline, Distance, or Perimeter).
+- The segment snaps to the nearest allowed angle.
+- A visual indicator reflects snapping in real time.
+- Release to complete the annotation.
 
-### enableLineAngleConstraints
+#### Keyboard shortcuts
+
+- `Shift` + drag: toggles snapping. If constraints are disabled, `Shift` temporarily enables them; if enabled, `Shift` enforces snapping.
+
+#### Selector-based modifications
+
+When modifying existing line annotations using selectors:
+- Constraints apply based on the original line direction.
+- The reference angle (0°) is determined by the line’s current orientation.
+- Constraint snapping during modification is supported for Line and Arrow.
+- Adjustments snap to the configured angle increment.
+
+[View a sample in GitHub](https://github.com/SyncfusionExamples/aspnetcore-pdf-viewer-examples)
+
+### Configuration properties
+
+#### enableLineAngleConstraints
 
 The `enableLineAngleConstraints` property activates angle snapping for line-based annotations. When set to `true`, the following annotation types will snap to fixed angles as defined by the `restrictLineAngleTo` property:
 
@@ -61,54 +69,38 @@ The `enableLineAngleConstraints` property activates angle snapping for line-base
 - Area measurements
 - Volume measurements
 
-**Key Benefits:**
-
-- Automatic angle snapping during the drawing
+Key Benefits:
+- Automatic angle snapping during drawing
 - Enhanced precision for technical drawings and measurements
-- Desktop support: Hold **Shift** while drawing to activate constraints
+- Desktop behavior: hold Shift while drawing to toggle constraints (when disabled, Shift temporarily enables; when enabled, Shift enforces snapping)
 - Real-time visual feedback showing angle snapping behavior
 
-### restrictLineAngleTo
+#### restrictLineAngleTo
 
-The `restrictLineAngleTo` property defines the angle increment (in degrees) that constrains line-based annotations. The default value is **45 degrees**.
+Defines the angle increment (in degrees) used to constrain supported annotations. The default value is `45`.
 
-**Angle Snapping Rules:**
+Angle snapping rules:
+- The initial drawing direction is treated as the 0° reference point.
+- Snapped angles are calculated based on the increment.
+- If the increment does not divide 360 evenly, angles reset after 360°.
 
-- The initial drawing direction is treated as the 0° reference point
-- Snapped angles are calculated based on the increment
-- If the increment doesn’t divide 360 evenly, angles reset after 360°
+Examples:
+- `restrictLineAngleTo: 45` → Snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
+- `restrictLineAngleTo: 100` → Snapped angles: 0°, 100°, 200°, 300°, 360°
 
-**Examples:**
+> Refer to the ASP.NET Core PDF Viewer [feature tour](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/default) for feature highlights, and to the [ASP.NET Core PDF Viewer examples]((https://github.com/SyncfusionExamples/aspnet-core-pdf-viewer-examples)) for rendering and configuration examples.
 
-- restrictLineAngleTo: 45 → Snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
-- restrictLineAngleTo: 100 → Snapped angles: 0°, 100°, 200°, 300°, 360°
+### See also
 
-## Working with Constrained Annotations
-
-### Drawing Behavior
-
-When line angle constraints are enabled:
-
-**Initial Drawing:** Start drawing a line, arrow, polygon, distance, perimeter, area, or volume as usual.
-**Angle Snapping:** The line snaps to the nearest allowed angle.
-**Visual Feedback:** Snapped angle is shown in real time.
-**Completion:** Release to complete the annotation.
-
-### Keyboard Shortcuts
-
-**Desktop Platforms:**
-
-**Shift + Drag:** Enables angle snapping even when `enableLineAngleConstraints` is false.
-
-### Selector-Based Modifications
-
-When modifying existing line annotations using selectors:
-
-- Constraints apply based on the original line direction.
-- The reference angle (0°) is determined by the lines current orientation.
-- Only lines and arrows support constraint snapping during modification.
-- Adjustments snap to the configured angle increment relative to the original direction.
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)
-
-N> You can refer to our [ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core PDF Viewer example](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples) to know how to render and configure the PDF Viewer.
+- [Annotation Overview](../overview)
+- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](../annotations/create-modify-annotation)
+- [Customize Annotation](../annotations/customize-annotation)
+- [Remove Annotation](../annotations/delete-annotation)
+- [Handwritten Signature](../annotations/signature-annotation)
+- [Export and Import Annotation](../annotations/export-import/export-annotation)
+- [Annotation Permission](../annotations/annotation-permission)
+- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
+- [Annotation Events](../annotations/annotation-event)
+- [Annotation API](../annotations/annotations-api)

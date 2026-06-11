@@ -18,7 +18,7 @@ The following code shows how to protect Excel workbook with password using Inter
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void ProtectWorkbook()
 {
   //Instantiate the application object
@@ -38,7 +38,27 @@ private void ProtectWorkbook()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void ProtectWorkbook()
+{
+  //Instantiate the application object
+  var excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+  //Add a workbook
+  Workbook workbook = excelApp.Workbooks.Add(System.Reflection.Missing.Value);
+
+  //Protect the workbook specifying a password with Boolean attributes for structure and windows protection
+  workbook.Protect("007", true, true);
+
+  //Save the file
+  workbook.SaveAs("InteropOutput_ProtectedWorkbook.xlsx");
+
+  //Quit the application
+  excelApp.Quit();
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub ProtectWorkbook()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -61,7 +81,7 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void ProtectWorkbook()
 {
   using (ExcelEngine excelEngine = new ExcelEngine())
@@ -83,7 +103,29 @@ private void ProtectWorkbook()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void ProtectWorkbook()
+{
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    //Instantiate the application object
+    IApplication application = excelEngine.Excel;
+
+    //Create a workbook
+    IWorkbook workbook = application.Workbooks.Create(1);
+
+    //Protect the workbook specifying a password with Boolean attributes for structure and windows protection
+    bool isProtectWindow = true;
+    bool isProtectContent = true;
+    workbook.Protect(isProtectWindow, isProtectContent, "password");
+
+    //Save the Excel file
+    workbook.SaveAs("XlsIOOutput_ProtectedWorkbook.xlsx");
+  }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub ProtectWorkbook()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object

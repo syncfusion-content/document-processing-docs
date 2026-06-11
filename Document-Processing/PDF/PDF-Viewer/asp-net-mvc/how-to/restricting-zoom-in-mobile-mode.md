@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Restrict Zoom Percentage in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all how to restrict zoom percentage in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Restrict zoom percentage on mobile in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to limit the maxZoom and minZoom values in the Syncfusion ASP.NET MVC PDF Viewer to control zoom levels on mobile devices.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# How to Restrict Zoom Percentage on Mobile Devices
+# Restrict zoom percentage on mobile devices
 
-In Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you can easily restrict the zoom percentage on mobile devices using the **maxZoom** and **minZoom** property. This feature allows you to set specific limits for zooming, ensuring smoother scrolling performance and efficient document loading, on mobile devices.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer allows developers tqo cap zoom ranges on phones and tablets by adjusting the `maxZoom` and `minZoom` properties after the `documentLoad` event fires. Setting device-specific limits prevents excessive pinch-zooming, keeps pages readable, and avoids stuttering caused by rendering at extreme scales.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -54,6 +54,6 @@ In Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you can easily r
 {% endhighlight %}
 {% endtabs %}
 
-By implementing this, you ensure that the maximum zoom percentage on mobile devices is limited to 200% and the minimum zoom percentage is set to 10%. This prevents performance issues that may arise from excessive zooming on mobile platforms.
+By enforcing these limits, mobile users can zoom between 10% and 200%, which avoids blurry rendering or performance drops caused by extreme zoom levels. Adjust the thresholds to suit the document content but keep `minZoom` less than or equal to `maxZoom` so the viewer maintains a valid range.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to/Restrict%20Zoom%20Percentage%20on%20Mobile%20Devices/PDFViewerSample)

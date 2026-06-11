@@ -38,12 +38,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Setting sheet view to see the page breaks
     worksheet.View = SheetView.PageBreakPreview;
 
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(outputStream);
-
-    //Dispose streams
-    outputStream.Dispose();
+    //Saving the workbook 
+    workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

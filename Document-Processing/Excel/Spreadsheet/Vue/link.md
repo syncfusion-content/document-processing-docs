@@ -55,14 +55,14 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/link-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/link-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/link-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/link-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/link-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/link-cs2" %}
 
 ## Limitations
 

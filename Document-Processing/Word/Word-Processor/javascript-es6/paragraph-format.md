@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Paragraph format in JavaScript (ES6) Document editor control | Syncfusion
+title: Paragraph format in JavaScript (ES6) Document editor | Syncfusion
 description: Learn here all about Paragraph format in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Paragraph format 
@@ -74,8 +74,11 @@ documenteditor.editor.toggleTextAlignment('Center' | 'Left' | 'Right' | 'Justify
 You can define the line spacing and its type for selected paragraphs using the following sample code.
 
 ```ts
+// Set line spacing type
 documenteditor.selection.paragraphFormat.lineSpacingType = 'AtLeast';
-documenteditor.selection.paragraphFormat.lineSpacing = 6;
+// Set line spacing value (supports both integer and float)
+documenteditor.selection.paragraphFormat.lineSpacing = 6; // Integer value
+documenteditor.selection.paragraphFormat.lineSpacing = 6.5; // Float value
 ```
 
 ## Paragraph spacing

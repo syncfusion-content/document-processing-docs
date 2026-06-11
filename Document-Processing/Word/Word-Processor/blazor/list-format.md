@@ -9,11 +9,11 @@ documentation: ug
 
 # Working with Lists in Blazor DocumentEditor Component
 
-[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports both the single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply list to the paragraph using supported APIs.
+Lists are a fundamental feature for organizing content in a document, making it easier for readers to follow step-by-step instructions or grasp key points. The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) provides comprehensive support for single-level and multilevel lists, which can be either ordered (numbered) or unordered (bulleted).
 
-## Create bullet list
+## Create a Bulleted List
 
-Bullets are usually used for unordered lists. To apply bulleted list for selected paragraphs, use [`ApplyBulletAsync(bullet, fontFamily)`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_ApplyBulletAsync_System_String_System_String_) method of [`Editor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html) instance.
+Bulleted (unordered) lists are ideal for items that do not need to be in a specific sequence. Use the [`ApplyBulletAsync(bullet, fontFamily)`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_ApplyBulletAsync_System_String_System_String_) method to apply a bullet format to the selected paragraphs. The method accepts a bullet character and its font family.
 
 |Parameter|Type|Description|
 |---------|----|-----------|
@@ -23,34 +23,41 @@ Bullets are usually used for unordered lists. To apply bulleted list for selecte
 Refer to the following sample code.
 
 ```csharp
-await container.DocumentEditor.Editor.ApplyBulletAsync("\uf0b7", "Symbol");
+@* The following code example demonstrates how to apply a standard circular bullet. *@
+await container.DocumentEditor.Editor.ApplyBulletAsync("\u00B7", "Symbol");
 ```
 
-## Create numbered list
+## Create a Numbered List
 
-Numbered lists are usually used for ordered lists. To apply numbered list for selected paragraphs, use [`ApplyNumberingAsync(numberFormat,listLevelPattern)`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_ApplyNumberingAsync_System_String_System_Nullable_Syncfusion_Blazor_DocumentEditor_ListLevelPattern__) method of [`Editor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html) instance.
+Numbered (ordered) lists are used for sequential items. Use the [`ApplyNumberingAsync(numberFormat,listLevelPattern)`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_ApplyNumberingAsync_System_String_System_Nullable_Syncfusion_Blazor_DocumentEditor_ListLevelPattern__) method to apply a numbering format. This method allows you to define the number format and the character style for the list level.
 
-|Parameter|Type|Description|
-|---------|----|-----------|
-|numberFormat|string|“%n” representations in ‘numberFormat’ parameter will be replaced by respective list level’s value. “%1” will be displayed as “1”|
-|listLevelPattern(optional)|string|Default value is 'Arabic'.|
+The `numberFormat` parameter uses placeholders like `%1`, `%2`, etc., which correspond to the value of each list level. The `ListLevelPattern` specifies the character style for the number (e.g., Arabic numerals, Roman numerals, or letters).
 
-Refer to the following example.
+| Parameter | Type | Description |
+|---|---|---|
+| `numberFormat` | `string` | Defines the pattern for the list number. For example, `"%1."` will produce "1.", "2.", etc. |
+| `listLevelPattern` | `ListLevelPattern` | (Optional) Specifies the character style for the list numbers. Defaults to `Arabic`. Options include `UpRoman`, `LowRoman`, `UpLetter`, `LowLetter`, etc. |
 
 ```csharp
-await container.DocumentEditor.Editor.ApplyNumberingAsync("%1)", ListLevelPattern.UpRoman);
+@* The following code example applies an uppercase Roman numeral format to the selected list. *@
+await container.DocumentEditor.Editor.ApplyNumberingAsync("%1.", ListLevelPattern.UpRoman);
 ```
 
 ## Clear list
 
-You can also clear the list formatting applied for selected paragraphs. Refer to the following sample code.
+To remove all list formatting from a selection of paragraphs and revert them to normal text, use the [`ClearListAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_ClearListAsync) method.
 
 ```csharp
+@* The following code example removes list formatting from the current selection. *@
 await container.DocumentEditor.Editor.ClearListAsync();
 ```
 
-## Editing numbered list
+## Editing Numbered Lists
 
-Document editor restarts the numbering or continue numbering for a numbered list. These options are found in the built-in context menu, if the list value is selected. Refer to the following screenshot.
+The Document Editor provides options for controlling the sequence of numbered lists.
 
-![Blazor DocumentEditor with List](images/blazor-document-editor-list.jpeg)
+### Restarting and Continuing Numbering
+
+When working with numbered lists, you can choose to restart numbering at "1" or continue the sequence from a previous list. These options are available in the context menu when you right-click on a list number.
+
+![Context menu in Blazor Document Editor showing options to restart or continue list numbering.](images/blazor-document-editor-list.jpeg)

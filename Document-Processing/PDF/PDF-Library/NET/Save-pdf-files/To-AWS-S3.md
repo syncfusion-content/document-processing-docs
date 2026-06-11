@@ -1,11 +1,11 @@
 ---
 title: Save PDF file to AWS S3 | Syncfusion
-description: This page describes how to save PDF file to file AWS S3 bucket in C#  using Syncfusion .NET PDF library.
+description: This page describes how to save PDF file to file AWS S3 in C#  using Syncfusion .NET PDF library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Save PDF to an AWS S3 bucket
+# Save PDF file to AWS S3
 
 To save a PDF file to AWS S3, you can follow the steps below
 
@@ -22,7 +22,6 @@ Step 2: Install the [Syncfusion.Pdf.Net.Core ](https://www.nuget.org/packages/Sy
 Step 3: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.Pdf.Graphics;
@@ -33,13 +32,11 @@ using Amazon.S3.Transfer;
 using Amazon;
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 4: Add the below code example to create a simple PDF and save in AWS S3.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 // Create a new PDF document
@@ -66,7 +63,8 @@ using (PdfDocument document = new PdfDocument())
     // Set your AWS credentials and region
     string accessKey = "YOUR_ACCESS_KEY";
     string secretKey = "YOUR_SECRET_KEY";
-    RegionEndpoint region = RegionEndpoint.YOUR_REGION; // Change to your desired region
+    // Change to your desired region
+    RegionEndpoint region = RegionEndpoint.YOUR_REGION; 
 
     // Create an Amazon S3 client
     using (var s3Client = new AmazonS3Client(accessKey, secretKey, region))
@@ -84,7 +82,6 @@ using (PdfDocument document = new PdfDocument())
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Save-PDF-file/To%20AWS%20S3).

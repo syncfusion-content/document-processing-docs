@@ -1,22 +1,23 @@
 ---
 layout: post
-title: How to change the font family in Syncfusion ASP .NETCORE.
-description: Learn how to change the font family in Form Field's Type Signature in Syncfusion ASP .NETCORE Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Change font family in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to change the font family for form field type signatures and initials in the ASP.NET Core PDF Viewer using typeSignatureFonts and typeInitialFonts.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# To Change the Font Family
-Change the Font Family in Type Signature of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer by adding a custom css stylesheet to the document , and then apply the desired font family to the type signature element. Include the Google font link in the HTML head section to apply the Google Font.
+# Change font family for type signatures in ASP.NET Core
 
-### Signature Field property
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides the ability to change the font family for Signature and Initial Field using `typeSignatureFonts` and `typeInitialFonts` property.
+Customize the font options available for Type Signature and Initial fields. By adding custom stylesheets and configuring the PDF Viewer settings, you can provide users with various professional or decorative font choices for their digital signatures.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+## Custom font configuration
 
-**Step 2:** Insert the following code snippet to implement the functionality for using custom fonts in Signature field.
+The PDF Viewer supports changing fonts for Signature and Initial fields using the `typeSignatureFonts` and `typeInitialFonts` properties.
+
+**Step 1:** Follow the [Getting Started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer instance.
+
+**Step 2:** Define the signature and initial field settings in your application:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -50,8 +51,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides the abi
 {% endhighlight %}
 {% endtabs %}
 
-### Initial Field property
-Insert the following code snippet to implement the functionality for using custom fonts in Initial field.
+### Initial field property
+
+Use the following code to apply custom fonts to the Initial field.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -85,4 +87,8 @@ Insert the following code snippet to implement the functionality for using custo
 {% endhighlight %}
 {% endtabs %}
 
-By implementing this , you can use custom fonts in form field's signature in both `signature` and `initial` field
+## Applying custom fonts to form fields
+
+By implementing this configuration, users can select from the defined custom fonts when signing or initialing document form fields. Ensure the external font resources are accessible from the client browser.
+
+N> Any number of custom fonts can be added to the array. The fonts will appear in the signature/initial dialog dropdown in the order they are defined.

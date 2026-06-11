@@ -24,6 +24,7 @@ Step 3: Install the [Syncfusion.HtmlToPdfConverter.Net.Aws](https://www.nuget.or
 ![AWS Elastic Beanstalk Step3](htmlconversion_images/AWS_Elastic_Beanstalk4.png)
 
 Step 4: A default controller named HomeController.cs gets added to create the ASP.NET Core MVC project. Include the following namespaces in that HomeController.cs file.<br>
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -31,10 +32,12 @@ using Syncfusion.HtmlConverter;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add a new button in index.cshtml as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{
     Html.BeginForm("BlinkToPDF", "Home", FormMethod.Get);
@@ -51,9 +54,11 @@ Step 5: Add a new button in index.cshtml as follows.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new action method named BlinkToPDF in HomeController.cs and include the following code example to convert HTML to PDF document using the Convert method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The HTML content will be scaled based on the given [ViewPortSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of the [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public IActionResult BlinkToPDF()
@@ -71,12 +76,11 @@ public IActionResult BlinkToPDF()
     MemoryStream stream = new MemoryStream();
     //Save the document to the memory stream.
     document.Save(stream);
-    //Close the document
-    document.Close(true); 
     return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "BlinkLinuxDockerAWSBeanstalk.pdf");
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
  N> ```csharp

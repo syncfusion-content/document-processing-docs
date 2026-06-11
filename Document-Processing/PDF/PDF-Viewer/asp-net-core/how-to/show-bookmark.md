@@ -1,24 +1,23 @@
 ---
 layout: post
-title: Show Bookmark in ASP.NET Core Pdfviewer Component
-description: Learn here all about Show Bookmark in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Show the bookmark pane in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to display the bookmark pane programmatically in the Syncfusion ASP.NET Core PDF Viewer by enabling the enableBookmark property.
 platform: document-processing
-control: Show Bookmark
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
-# Show Bookmark
+# Display the bookmark pane in ASP.NET Core PDF Viewer
 
-The PDF Viewer server library allows you to show the bookmark programmatically by setting the [**enableBookmark**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#enablebookmark) property to `true`. We can also disable the bookmark by setting the property to `false`.
+Enable automatic display of the bookmark navigation pane by setting the [`enableBookmark`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#enablebookmark) property to `true`. Use bookmarks to provide quick navigation for documents with chapters, sections, or hierarchical content organization.
 
-N>Default value of `enableBookmark` property is true.
+N> By default, `enableBookmark` is set to `true`, so the bookmark pane is visible unless explicitly disabled.
 
-The following steps are used to show the bookmark.
+Follow these steps to enable the bookmark pane:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the [ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up the required scripts, styles, and controller endpoints.
 
-**Step 2:** Use the following code snippet to Show the Bookmark.
+**Step 2:** Set `enableBookmark` to `true` in the Razor markup:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -44,4 +43,4 @@ The following steps are used to show the bookmark.
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Show%20Bookmark)
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Show%20Bookmark)

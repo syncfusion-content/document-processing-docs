@@ -1,67 +1,62 @@
 ---
 layout: post
 title: Getting started with Vue PDF Viewer component | Syncfusion
-description:  Checkout and learn about Getting started with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
+description: Checkout and learn about Getting started with Server-backed Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue PDF Viewer Component in Vue 2
+# Getting started with server-backed Vue PDF Viewer Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component
+This section explains how to create the **PDF Viewer** component and configure its functionalities in a Vue 2 application using Vue CLI with a server-backed architecture. In this mode, PDF rendering and processing are handled by a web service.
 
 ## Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion® Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Setting up the Vue 2 project
+## Create a Vue Application
 
-To generate a Vue 2 project using Vue-CLI, use the [Vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+Create a Vue application using Vue CLI.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 npm install -g @vue/cli
 vue create quickstart
 cd quickstart
-```
+{% endhighlight %}
 
-or
-
-```bash
+{% highlight bash tabtitle="yarn" %}
 yarn global add @vue/cli
 vue create quickstart
 cd quickstart
-```
+{% endhighlight %}
+{% endtabs %}
 
-When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+When prompted, select **Default ([Vue 2] babel, eslint)**.
 
-![Vue 2 project](./images/vue2-terminal.png)
+> For Vue 3 application setup, see [Create a Vue 3 app](./getting-started-application).
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer packages
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue packages
+Install the [Vue PDF Viewer](https://www.npmjs.com/package/@syncfusion/ej2-vue-pdfviewer) package from npm using the following command:
 
-Install Syncfusion<sup style="font-size:70%">&reg;</sup> `PDF Viewer` packages using below command.
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
-
-This article uses the [Vue PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk) as an example. Install the `@syncfusion/ej2-vue-pdfviewer` package by running the following command:
-
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 npm install @syncfusion/ej2-vue-pdfviewer --save
-```
-or
+{% endhighlight %}
 
-```bash
+{% highlight bash tabtitle="yarn" %}
 yarn add @syncfusion/ej2-vue-pdfviewer
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-You can import themes for the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+Add the required CSS styles for the PDF Viewer component and its dependencies to your `App.vue` file.
 
-In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the PDF Viewer component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this example, the `Material` theme is applied using CSS styles available in the installed packages. The required `Material` CSS styles are imported into the `<style>` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -81,110 +76,11 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 {% endhighlight %}
 {% endtabs %}
 
+N> You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator), or [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
-> PDF Viewer has different themes, please refer to [Supported themes](../appearance/theme) section.
+## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
-
-Follow the below steps to add the Vue PDF Viewer component:
-
-1. First, import and register the PDF Viewer component in the `script` section of the **src/App.vue** file
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
-         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch,
-         Annotation, FormDesigner, FormFields, PageOrganizer} from '@syncfusion/ej2-vue-pdfviewer';
-
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<script>
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch,
-         Annotation, FormDesigner, FormFields, PageOrganizer} from '@syncfusion/ej2-vue-pdfviewer';
-
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-2. In the `template` section, define the PDF Viewer component with [documentPath](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#documentpath) and [serviceUrl](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#serviceurl) property.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer
-      id="pdfViewer"
-      :serviceUrl="serviceUrl"
-      :documentPath="documentPath">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-{% endhighlight %}
-{% endtabs %}
-
-3. Declare the bound properties `serviceUrl` and `documentPath` in the `script` section.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-import { provide } from "vue";
-
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
-  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
-  Annotation, FormDesigner, FormFields, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-
-provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer]);
-
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
-<script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
-  Annotation, FormDesigner, FormFields, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: 'App',
-  components: {
-    "ejs-pdfviewer": PdfViewerComponent
-  },
-  data() {
-    return {
-      serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-      Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer]
-  }
-}
-
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Here is the summarized code for the above steps in the **src/App.vue** file:
+Import and register the PDF Viewer component directives in the `script` section of **src/App.vue**. Then, define the component in the `template` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -242,7 +138,14 @@ export default {
   },
   data() {
     return {
+       <!--
+          Specifies the backend service URL that processes and streams PDF data
+      --> 
       serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
+      <!--
+          Defines the source of the PDF to load in the PDF Viewer.
+          Accepts either a public URL or a Base64-encoded PDF string.
+      --> 
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -268,82 +171,45 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
+N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF Viewer's `serviceUrl` property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with your required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use it for the `serviceUrl` property. **We strongly recommend using the standalone mode.**
 
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/pdfviewer/vue/getting-started-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/pdfviewer/vue/getting-started-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-
-N> The Web API hosted link https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer utilized in the PDF viewer's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/pdfviewer-server) for hosting your own web service and use for the serviceUrl property. **We strongly recommend using the standalone mode.**
+[How to Create and Run a Custom PDF Viewer Web Service](./how-to/create-and-run-custom-pdf-viewer-web-service)
 
 ## Run the project
 
-To run the project, use the following command:
+Run the following command to start the application.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 npm run serve
-```
+{% endhighlight %}
 
-or
+{% highlight bash tabtitle="yarn" %}
+yarn serve
+{% endhighlight %}
+{% endtabs %}
 
-```bash
-yarn run serve
-```
+After the application starts, open the localhost URL shown in the terminal to view the Vue PDF Viewer in the browser. The output will appear as follows:
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/getting-started-cs1/index.html" %}
+![Vue PDF Viewer control](images/pdfviewer-control.png)
 
-> For PDF Viewer serviceUrl creation, follow the steps provided in the [link]https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service)
+You can also explore the PDF Viewer interactively using the live sample below.
 
-## How to run the PDF Viewer web service
+{% previewsample "/document-processing/code-snippet/pdfviewer/vue/getting-started-cs1" %}
 
-1.Download the sample from the [Web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) link.
-
-2.Navigate to the `ASP.NET Core` folder and open it in the command prompt.
-
-3.Navigate to the appropriate subfolder based on your .NET version:
-
-   - .NET 6.0 → `PdfViewerWebService_6.0`
-   - .NET 8.0 → `PdfViewerWebService_8.0`
-
-4.Use the below command to restore the required packages.
-
-```
-  dotnet restore
-```
-
-5.Use the below command to run the web service.
-
-```
-  dotnet run
-```
-
-6.You can see that the PDF Viewer server instance runs in the local host with the port number `localhost:5001` and navigate to the PDF Viewer Web control `localhost:5001/pdfviewer` which returns the default get response method. We can bind the link to the `serviceUrl` property of PDF Viewer as below.
-
-  ```js
-  export default {
-    name: 'app',
-    data () {
-      return {
-        serviceUrl:"https://localhost:5001/pdfviewer",
-        documentPath:"PDF_Succinctly.pdf"
-      };
-    }}
-  ```
-
-N> When configuring the server-backed PDF viewer, it's Essential<sup style="font-size:70%">&reg;</sup> to understand that there is no need to include the pdfium.js and pdfium.wasm files. Unlike the standalone PDF viewer, which relies on these files for local rendering, the server-backed PDF viewer fetches and renders PDFs directly from the server. Consequently, you can exclude the copy command for deployment process, as they are not required to load and display PDFs in this context.
+N> When configuring the server-backed PDF Viewer, there is no need to include the `pdfium.js` and `pdfium.wasm` files. Unlike the standalone PDF Viewer, which relies on these files for local rendering, the server-backed PDF Viewer fetches and renders PDFs directly from the server. Consequently, these files are not required for deployment, and you can exclude the copy command for the deployment process.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20-%20server-back).
 
-> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
-
-N> For hosting the web service on the Linux platform, ensure to include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1). Additionally, for AWS environments, utilize the following packages:
+N> For hosting the web service on Linux, ensure you include the [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1) package. Additionally, for AWS environments, use the following packages:
 
 | **Amazon Web Services (AWS)** |**NuGet package name** |
 | --- | --- |
-| AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)|
-| AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.116.1)|
+| AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
+| AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
+
+## See also
+
+- [Getting started Vue PDF Viewer](./getting-started)
+- [Open PDF Files](./open-pdf-files)
+- [Save PDF Files](./save-pdf-files)

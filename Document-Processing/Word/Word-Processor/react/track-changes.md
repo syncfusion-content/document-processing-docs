@@ -1,114 +1,113 @@
 ---
 layout: post
-title: Track changes in React Document editor component | Syncfusion
-description: Learn here all about Track changes in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Track Changes in React DOCX Editor | Syncfusion
+description: Learn how to enable Track Changes in React DOCX Editor and manage document revisions by accepting or rejecting edits made by multiple reviewers.
 control: Track changes 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Track changes in React Document editor component
+# Track Change in React DOCX Editor
 
-Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If track changes option is enabled, all editing operations are preserved as revisions in Document Editor.
+Syncfusion® React DOCX Editor (Document Editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions in the Document Editor.
 
-To know more about the track changes in DocumentEditor component, you can check the video below.
+## Enable Track changes
 
-{% youtube "https://www.youtube.com/watch?v=Ke27Mip4bN0" %}
-
-## Enable track changes in Document Editor
+Track Changes can be enabled using the [enableTrackChanges](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/index-default#enabletrackchanges) property. When enabled, all editing operations are recorded and preserved as revisions in the Document Editor.
 
 The following example demonstrates how to enable track changes.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import * as React from 'react';
-import {
-  DocumentEditorComponent,
-  SfdtExport,
-  Selection,
-  Editor,
-} from '@syncfusion/ej2-react-documenteditor';
-DocumentEditorComponent.Inject(SfdtExport, Selection, Editor);
+
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
+
+DocumentEditorContainerComponent.Inject(Toolbar);
 let documenteditor;
 function App() {
-  return (
-    <div>
-      <DocumentEditorComponent
-        id="container"
-        height={'330px'}
-        ref={(scope) => {
-          documenteditor = scope;
-        }}
-        isReadOnly={false}
-        enableSelection={true}
-        enableEditor={true}
-        enableSfdtExport={true}
-        enableTrackChanges={true}
-      />
-    </div>
-  );
+    return (
+        <DocumentEditorContainerComponent
+            id="container"
+            height="590px"
+            ref={(scope) => {
+                documenteditor = scope;
+            }}
+            // Use the following service URL only for demo purposes
+            serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+            enableToolbar={true}
+            enableTrackChanges={true}
+        />
+    );
 }
 export default App;
 createRoot(document.getElementById('sample')).render(<App />);
 
-```
+{% endhighlight %}
+{% endtabs %}
 
->Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set enableTrackChanges={true} in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes during the document change event. The following example demonstrates how to enable Track changes for the all the Document while Opening.
+N> Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set enableTrackChanges: true in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes in documentChange event. 
 
-```ts
+The following example demonstrates how to enable track changes for the all the document while opening.
+
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+
 container.current.documentChange = () => {
       if (container.current !== null) {
         container.current.documentEditor.enableTrackChanges = true;
       }
     };
-```
 
-## Show/Hide Revisions Pane
- 
-The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
- 
-The following example code illustrates how to show/hide the revisions pane.
+{% endhighlight %}
+{% endtabs %}
 
-```ts
+## Show or hide revisions pane
+
+The Show or Hide Revisions Pane in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
+
+The following example code illustrates how to show or hide the revisions pane.
+
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
 
 import { createRoot } from 'react-dom/client';
 import * as React from 'react';
 import {
-  DocumentEditorContainerComponent,
-  Toolbar,
-  Selection,
-  Editor,
+    DocumentEditorContainerComponent,
+    Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
 
 // Inject the required modules
-DocumentEditorContainerComponent.Inject(Toolbar, Selection, Editor);
+DocumentEditorContainerComponent.Inject(Toolbar);
 
 function App() {
-  let container = null;
+    let container = null;
 
-  React.useEffect(() => {
-    container.documentEditor.showRevisions = true; // To show revisions pane
-    container.documentEditor.showRevisions = false; // To hide revisions pane
-  }, [container]); // Re-run the effect when the container is initialized
+    React.useEffect(() => {
+        container.documentEditor.showRevisions = true; // To show revisions pane
+        container.documentEditor.showRevisions = false; // To hide revisions pane
+    }, [container]); // Re-run the effect when the container is initialized
 
-  return (
-    <div>
-      <DocumentEditorContainerComponent
-        id="container"
-        ref={(scope) => {
-          container = scope; // Assign the container ref
-        }}
-        height={'590px'}
-        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
-        enableToolbar={true}
-        enableSelection={true}
-        enableEditor={true}
-        enableTrackChanges={true}
-      />
-    </div>
-  );
+    return (
+        <div>
+            <DocumentEditorContainerComponent
+                id="container"
+                ref={(scope) => {
+                    container = scope; // Assign the container ref
+                }}
+                height={'590px'}
+                // Use the following service URL only for demo purposes
+                serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+                enableToolbar={true}
+                enableTrackChanges={true}
+            />
+        </div>
+    );
 }
 
 export default App;
@@ -116,33 +115,43 @@ export default App;
 // Render the App component into the sample div
 createRoot(document.getElementById('sample')).render(<App />);
 
+{% endhighlight %}
+{% endtabs %}
 
-```
-
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 ## Get all tracked revisions
 
-The following example demonstrate how to get all tracked revision from current document.
+Retrieves all tracked revisions from the current document using the revisions collection in the Document Editor.
 
-```ts
+The following example demonstrates how to get all tracked revisions from the current document.
+
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+
 <DocumentEditorComponent id="container" ref={(scope) => { documenteditor = scope; }} enableTrackChanges={true}/>
 /**
  * Get revisions from the current document
  */
 let revisions : RevisionCollection = documentEditor.revisions;
-```
 
-## Accept or Reject all changes programmatically
+{% endhighlight %}
+{% endtabs %}
 
-The following example demonstrates how to accept/reject all changes.
+## Accept or reject all changes
 
-```ts
-<DocumentEditorComponent id="container" ref={(scope) => { documenteditor = scope; }} enableTrackChanges={true}/>
+Handles all tracked changes in the document at once, either by accepting or rejecting them. This helps quickly finalize or discard edits without reviewing each change individually.
+
+The following example demonstrates how to accept or reject all changes.
+
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+
+<DocumentEditorComponent id="container" ref={(scope) => { documenteditor = scope; }} enableTrackChanges={true} />
 /**
  * Get revisions from the current document
  */
-let revisions : RevisionCollection = documentEditor.revisions;
+let revisions: RevisionCollection = documentEditor.revisions;
 /**
  * Accept all tracked changes
  */
@@ -151,17 +160,23 @@ revisions.acceptAll();
  * Reject all tracked changes
  */
 revisions.rejectAll();
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Accept or reject a specific revision
 
-The following example demonstrates how to accept/reject specific revision in the document editor.
+Applies changes to a specific tracked revision in the document, allowing precise control to accept or reject individual edits.
 
-```ts
+The following example demonstrates how to accept or reject a specific revision in the Document Editor.
+
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+
 /**
  * Get revisions from the current document
  */
-let revisions : RevisionCollection = documentEditor.revisions;
+let revisions: RevisionCollection = documentEditor.revisions;
 /**
  * Accept specific changes
  */
@@ -170,13 +185,19 @@ revisions.get(0).accept();
  * Reject specific changes
  */
 revisions.get(1).reject();
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Navigate between the tracked changes
 
-The following example demonstrates how to navigate tracked revision programmatically.
+Navigates through tracked changes in the document programmatically, enabling easy movement to the next or previous revision from the current selection.
 
-```ts
+The following example demonstrates how to navigate through tracked revisions programmatically.
+
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+
 /**
  * Navigate to next tracked change from the current selection.
  */
@@ -185,114 +206,111 @@ this.container.documentEditor.selection.navigateNextRevision();
  * Navigate to previous tracked change from the current selection.
  */
 this.container.documentEditor.selection.navigatePreviousRevision();
-```
 
-## Filtering changes based on user
+{% endhighlight %}
+{% endtabs %}
 
-In DocumentEditor, we have built-in review panel in which we have provided support for filtering changes based on the user.
+## Custom metadata along with author
 
-![Track changes](images/track-changes.png)
+The Document Editor allows customizing revisions using [revisionSettings](https://ej2.syncfusion.com/react/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [customData](https://ej2.syncfusion.com/react/documentation/api/document-editor/revisionsettings#customdata) property allows attaching additional metadata to tracked revisions. This metadata can represent roles, tags, or any custom identifier for a revision. To display this metadata along with the author name in the Track Changes pane, the [showCustomDataWithAuthor](https://ej2.syncfusion.com/react/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property must be enabled.
 
-## Protect the document in track changes only mode
+The following example illustrates how to enable and update custom metadata for track changes revisions.
 
-Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#stopprotection) API.
-
-The following example code illustrates how to enforce and stop protection in Document editor container.
-
-```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-  DocumentEditorContainerComponent,
-  Toolbar,
+    DocumentEditorContainerComponent,
+    Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
 
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-  let container: DocumentEditorContainerComponent;
-  React.useEffect(() => {
-    EnforceProtection();
-    StopProtection();
-  }, []);
-  function EnforceProtection() {
-    //enforce protection
-    container.documentEditor.editor.enforceProtection('123', 'RevisionsOnly');
-  }
-  function StopProtection() {
-    //stop the document protection
-    container.documentEditor.editor.stopProtection('123');
-  }
-  return (
-    <div>
-      <button onClick={EnforceProtection}>enforceProtection</button>
-      <button onClick={StopProtection}>stopProtection</button>
-      <DocumentEditorContainerComponent
-        id="container"
-        ref={(scope) => {
-          container = scope;
-        }}
-        height={'590px'}
-        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
-        enableToolbar={true}
-        enableTrackChanges={true}
-      />
-    </div>
-
-  );
+    let container;
+    let settings = { revisionSettings: { customData: 'Developer', showCustomDataWithAuthor: true } };
+    return (
+        <DocumentEditorContainerComponent
+            id="container"
+            ref={(scope) => {
+                container = scope;
+            }}
+            height={'590px'}
+            serviceUrl="HostUrl"
+            enableTrackChanges={true}
+            documentEditorSettings={settings}
+        />
+    );
 }
 export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+The Track Changes pane will display the author name along with the custom metadata, as shown in the screenshot below.
 
-Tracked changes only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
+![Custom metadata along with author in track changes pane](./images/custom-metadata-author-trackchanges.png)
 
-![Enable track changes only protection](images/tracked-changes.png)
+N> When the document is exported as SFDT, the customData value is stored in the revision collection. Upon reopening the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.In formats other than SFDT (such as DOCX and others), the customData is not preserved, as it is specific to the Document Editor component
 
->Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly |RevisionsOnly`. In stop protection method, parameter denotes the password.
+## Restrict accept or reject by author
 
-## Event
+Accepting or rejecting changes can be restricted based on the author’s name.
 
-You can restrict the accept and reject changes based on the author name. The following example demonstrates how to restrict an author from accept/reject changes.
+The following example demonstrates how to restrict an author from accept or reject changes.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+
 import { createRoot } from 'react-dom/client';
 import * as React from 'react';
 import {
-  DocumentEditorContainerComponent,
-  Toolbar,
+    DocumentEditorContainerComponent,
+    Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-  let container = DocumentEditorContainerComponent;
-  // Event gets triggered before accepting/rejecting changes
-  const beforeAcceptRejectChanges = (args) => {
-    // Check the author of the revision
-    if (args.author !== 'Hary') {
-      // Cancel the accept/reject action
-      args.cancel = true;
-    }
-  };
-  return (
-    <div>
-      <DocumentEditorContainerComponent
-        id="container"
-        ref={(scope) => {
-          container = scope;
-        }}
-        height={'590px'}
-        serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/"
-        enableToolbar={true}
-        enableTrackChanges={true}
-        beforeAcceptRejectChanges={beforeAcceptRejectChanges}
-      />
-    </div>
-  );
+    let container = DocumentEditorContainerComponent;
+    // Event gets triggered before accepting/rejecting changes
+    const beforeAcceptRejectChanges = (args) => {
+        // Check the author of the revision
+        if (args.author !== 'Hary') {
+            // Cancel the accept/reject action
+            args.cancel = true;
+        }
+    };
+    return (
+        <div>
+            <DocumentEditorContainerComponent
+                id="container"
+                ref={(scope) => {
+                    container = scope;
+                }}
+                height={'590px'}
+                serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+                enableToolbar={true}
+                enableTrackChanges={true}
+                beforeAcceptRejectChanges={beforeAcceptRejectChanges}
+            />
+        </div>
+    );
 }
 export default App;
 createRoot(document.getElementById('sample')).render(<App />);
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+## Filter Changes by User
+
+In the Document Editor, a built-in review panel is available that supports filtering changes based on the user.
+
+![Filter changes by user in review panel](./images/filter-changes-by-user.png)
+
+## Video tutorial 
+
+To learn more about Track Changes in the Document Editor component, refer to the video below.
+
+{% youtube "https://www.youtube.com/watch?v=Ke27Mip4bN0" %}

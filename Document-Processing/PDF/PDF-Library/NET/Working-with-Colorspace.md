@@ -158,7 +158,7 @@ using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
-//Loads the existing PDF document.
+//Load the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Loads the page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
@@ -314,9 +314,9 @@ RectangleF bounds = new RectangleF(0, 0, 300, 300);
 //Draws rectangle by using the PdfBrush.
 graphics.DrawRectangle(brush, bounds);
 
-//Save the document 
+//Saves the document.
 pdfDocument.Save("Output.pdf");
-//Closes the document
+//Closes the document.
 pdfDocument.Close(true);
 
 {% endhighlight %}
@@ -429,7 +429,7 @@ using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
-//Loads the existing PDF document.
+//Load PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Loads the page.
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
@@ -519,14 +519,14 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Drawing
+Imports Syncfusion.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.ColorSpace
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Parsing
 
 'Loads the existing PDF document.
-Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument(fileName)
+Dim loadedDocument As PdfLoadedDocument = New PdfLoadedDocument("Input.pdf")
 'Loads the page.
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
 'Acquires graphics of the page.
@@ -590,8 +590,10 @@ PdfPage page = document.Pages.Add();
 //Creates exponential interpolation function
 PdfExponentialInterpolationFunction function = new PdfExponentialInterpolationFunction(true);
 float[] numberArray = new float[4];
-numberArray[0] = 0.38f;
-numberArray[1] = 0.88f;
+numberArray[0] = 0f;
+numberArray[1] = 0.44f;
+numberArray[2] = 0.87f;
+numberArray[3] = 0.10f;
 function.C1 = numberArray;
 
 //Creates SeparationColorSpace
@@ -619,7 +621,7 @@ using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.ColorSpace;
 using Syncfusion.Pdf.Functions;
-using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Graphics;        
 
 //Creates a new document
 PdfDocument document = new PdfDocument();
@@ -654,7 +656,7 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Drawing
+Imports Syncfusion.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.ColorSpace
 Imports Syncfusion.Pdf.Functions
@@ -708,9 +710,9 @@ using Syncfusion.Pdf.Functions;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
-//Loads the document
+//Load the PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-//Load the page
+//Load the page 
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
 
 //Creates exponential interpolation function 
@@ -722,7 +724,7 @@ function.C1 = numberArray;
 
 //Creates SeparationColorSpace
 PdfSeparationColorSpace colorSpace = new PdfSeparationColorSpace();
-colorSpace.TintTransform = function
+colorSpace.TintTransform = function;
 colorSpace.Colorant = "PANTONE Orange 021 C";
 PdfSeparationColor color = new PdfSeparationColor(colorSpace);
 color.Tint = 0.7;
@@ -733,7 +735,7 @@ PdfPen pen = new PdfPen(color);
 loadedPage.Graphics.DrawRectangle(pen, bounds);
 
 //Saves the document
-loadedDocument.Save("SeparationColor.pdf")
+loadedDocument.Save("SeparationColor.pdf");
 //Closes the document
 loadedDocument.Close(true);
 
@@ -773,7 +775,7 @@ PdfPen pen = new PdfPen(color);
 loadedPage.Graphics.DrawRectangle(pen, bounds);
 
 //Saves the document
-loadedDocument.Save("SeparationColor.pdf")
+loadedDocument.Save("SeparationColor.pdf");
 //Closes the document
 loadedDocument.Close(true);
 
@@ -781,7 +783,7 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.Drawing
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.ColorSpace
 Imports Syncfusion.Pdf.Functions
@@ -847,7 +849,7 @@ PdfGraphics graphics = pdfPage.Graphics;
 PdfPen pen = new PdfPen(Color.Red);
 PdfBrush brush = new PdfSolidBrush(Color.Blue);
 RectangleF rectangle = new RectangleF(0, 0, 100, 100);
-//Default color space.
+//Default color space
 graphics.DrawRectangle(pen, brush, rectangle);
 graphics.Save();
 
@@ -915,7 +917,7 @@ pdfDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Drawing
+Imports Syncfusion.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 
@@ -969,7 +971,7 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 
-//Loads the existing PDF document.
+//Load the PDF document
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 //Loads the page
 PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
@@ -1048,13 +1050,13 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports System.Drawing
+Imports Syncfusion.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Parsing
 
 'Loads the existing PDF document.
-Dim loadedDocument As New PdfLoadedDocument(fileName)
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 'Loads the page
 Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
 

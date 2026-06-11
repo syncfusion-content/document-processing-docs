@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Free text annotation in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Free text annotation in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Free text annotation in Vue PDF viewer component | Syncfusion
+description: Learn about free text annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 control: Free text annotation
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Free text annotation in Vue Pdfviewer component
+# Free text annotation in Vue PDF Viewer control
 
-The PDF Viewer control provides the options to add, edit, and delete the free text annotations.
+The PDF Viewer control supports adding, editing, and deleting free text annotations. This article explains how to add free text annotations using the toolbar and programmatically, modify their properties, and manage selection and focus.
 
-## Adding a free text annotation to the PDF document
+## Add a free text annotation to the PDF document
 
-The Free text annotations can be added to the PDF document using the annotation toolbar.
+Free text annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **Free Text Annotation** button in the annotation toolbar. It enables the Free Text annotation mode.
-* You can add the text over the pages of the PDF document.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
+* Select the **Free Text Annotation** button to enable free text annotation mode.
+* Add text anywhere on the pages of the PDF document.
 
-In the pan mode, if the free text annotation mode is entered, the PDF Viewer control will switch to text select mode.
+When in pan mode, selecting free text annotation switches the PDF Viewer to text-selection mode.
 
-![FreeTextAnnotation](../images/freetext_tool.png)
+![Free text tool in the annotation toolbar](../images/freetext_tool.png)
 
-Refer to the following code sample to switch to the Free Text annotation mode.
+The following example switches to free text annotation mode using a button click.
 
 
 {% tabs %}
@@ -45,17 +45,18 @@ import {
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
   TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
+import { provide, ref } from 'vue';
 
+const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
 
 const documentLoad = () => {
   document.getElementById('set').addEventListener('click', () => {
-    this.$refs.pdfviewer.ej2Instances.annotation.setAnnotationMode('FreeText');
+    pdfviewer.value.ej2Instances.annotation.setAnnotationMode('FreeText');
   });
 }
 
@@ -89,7 +90,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -125,8 +126,9 @@ import {
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
   TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
+import { provide, ref } from 'vue';
 
+const pdfviewer = ref(null);
 const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
@@ -135,7 +137,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
 
 const documentLoad = () => {
   document.getElementById('set').addEventListener('click', () => {
-    this.$refs.pdfviewer.ej2Instances.annotation.setAnnotationMode('FreeText');
+    pdfviewer.value.ej2Instances.annotation.setAnnotationMode('FreeText');
   });
 }
 
@@ -188,11 +190,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a free text annotation programmatically to the PDF document
+## Add a free text annotation programmatically to the PDF document
 
-The PDF Viewer library allows you to add the free text annotation in the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#annotation) method.
 
-Here is an example of how you can use the **addAnnotation()** method to move the free text annotation programmatically:
+Here is an example of adding a free text annotation programmatically using addAnnotation():
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -216,7 +218,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
@@ -268,7 +270,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -406,11 +408,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Change the content of an existing Free text annotation programmatically
+## Change the content of an existing free text annotation programmatically
 
-To change the content of an existing free text annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer programmatically, you can use the **editAnnotation()** method.
+To change the content of an existing free text annotation programmatically, use the editAnnotation() method.
 
-Here is an example of how you can use the **editAnnotation()** method to change the content of a free text annotation:
+Here is an example of changing the content of a free text annotation using editAnnotation():
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -434,7 +436,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
@@ -480,7 +482,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -597,69 +599,71 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Editing the properties of free text annotation
+N> The current version of the PDF Viewer does not edit existing document text. New free text annotations can be added and modified within the document.
 
-The font family, font size, font styles, font color, text alignment, fill color, the border stroke color, border thickness, and opacity of the free text annotation can be edited using the Font Family tool, Font Size tool, Font Color tool, Text Align tool, Font Style tool  Edit Color tool, Edit Stroke Color tool, Edit Thickness tool, and Edit Opacity tool in the annotation toolbar.
+## Edit free text annotation properties
 
-### Editing font family
+Free text annotation properties that can be modified using the annotation toolbar include font family, font size, font styles, font color, text alignment, fill color, stroke color, border thickness, and opacity. The toolbar provides dedicated controls for each of these settings.
 
-The font family of the annotation can be edited by selecting the desired font in the Font Family tool.
+## Font family
 
-![FontFamily](../images/fontfamily.png)
+Choose a font family from the Font Family tool to update the annotation text.
 
-### Editing font size
+![Change font family](../images/fontfamily.png)
 
-The font size of the annotation can be edited by selecting the desired size in the Font Size tool.
+### Font size
 
-![FontSize](../images/fontsize.png)
+Choose a size from the Font Size tool to update the annotation text size.
 
-### Editing font color
+![Change font size](../images/fontsize.png)
 
-The font color of the annotation can be edited using the color palette provided in the Font Color tool.
+### Font color
 
-![FontColor](../images/fontcolor.png)
+Select a color from the Font Color palette to change the font color.
 
-### Editing the text alignment
+![Change font color](../images/fontcolor.png)
 
-The text in the annotation can be aligned by selecting the desired styles in the drop-down pop-up in the Text Align tool.
+### Text alignment
+
+Use the Text Align tool to set the annotation text alignment.
 
 ![FreeTextAnnotation](../images/textalign.png)
 
-### Editing text styles
+### Font styles
 
-The style of the text in the annotation can be edited by selecting the desired styles in the drop-down pop-up in the Font Style tool.
+Enable bold, italic, or underline using the Font Style tool.
 
-![FontStyle](../images/fontstyle.png)
+![Change text styles](../images/fontstyle.png)
 
-### Editing fill color
+### Fill color
 
-The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
+Set the annotation background using the Edit Color tool.
 
-![FillColor](../images/fillcolor.png)
+![Change fill color](../images/fillcolor.png)
 
-### Editing stroke color
+### Stroke color
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+Set the annotation border color using the Edit Stroke Color tool.
 
-![StrokeColor](../images/fontstroke.png)
+![Change stroke color](../images/fontstroke.png)
 
-### Editing thickness
+### Thickness
 
-The border thickness of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+Adjust border thickness with the Edit Thickness slider.
 
-![FontThickness](../images/fontthickness.png)
+![Change border thickness](../images/fontthickness.png)
 
-### Editing opacity
+### Opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Adjust annotation opacity with the Edit Opacity slider.
 
-![FontOpacity](../images/fontopacity.png)
+![Change opacity](../images/fontopacity.png)
 
-## Setting default properties during control initialization
+## Set default properties during control initialization
 
-The properties of the free text annotation can be set before creating the control using the FreeTextSettings.
+Default properties for free text annotations can be set before creating the control using FreeTextSettings.
 
-After editing the default values, they will be changed to the selected values. Refer to the following code sample to set the default free text annotation settings.
+After changing default values, the selected values are applied. The following example sets default free text annotation settings.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -681,7 +685,7 @@ import {
 import { provide } from 'vue';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 const freetextSettings = { fillColor: 'green', borderColor: 'blue', fontColor: 'yellow' };
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -716,7 +720,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       freetextSettings: { fillColor: 'green', borderColor: 'blue', fontColor: 'yellow' }
     };
   },

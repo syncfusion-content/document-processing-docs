@@ -1,30 +1,31 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in ASP.NET Core Pdfviewer Component| Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Mobile toolbar interface in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn about the mobile toolbar interface in the Syncfusion ASP.NET Core PDF Viewer, including main options, more menu actions, and enabling desktop mode on mobile.
 platform: document-processing
-control: Mobile Toolbar Interface
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
-# Mobile Toolbar Interface in ASP.NET Core PDF Viewer control
 
-The Mobile PDF Viewer offers a variety of features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools like search, download, bookmarking, annotation, and page organization. Users also have the option to enable desktop toolbar features in mobile mode, providing a more extensive set of actions.
+# Mobile Toolbar Interface in ASP.NET Core PDF Viewer
+
+The mobile PDF Viewer provides various features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools such as search, download, bookmarking, annotation, and page organization. Users can enable desktop toolbar features in mobile mode to access a more extensive set of actions.
 
 ## Mobile Mode Toolbar Configuration
-In mobile mode, the toolbar is optimized for ease of use on small screens, presenting users with the most common actions for interacting with a PDF document. Below are the key features available in mobile mode:
+
+In mobile mode, the toolbar is optimized for small screens and presents the most common actions for working with PDF documents. Key features available in mobile mode include:
 
 ![Mobile toolbar with primary PDF interaction options](./images/mobileToolbar.png)
 
-### Main Toolbar Options:
+### Main Toolbar Options
 
 **OpenOption:** Tap to load a PDF document.
 
 **SearchOption:** Access the search bar to find text within the document.
 
-![Search bar displayed for finding text within a PDF](./images/searchOption.png)
+![Search bar for finding text within a PDF](./images/searchOption.png)
 
-**UndoRedoTool:** Quickly undo or redo any annotations made.
+**UndoRedoTool:** Quickly undo or redo annotations.
 
 **OrganizePagesTool:** Enable or disable page organization features to modify document pages.
 
@@ -32,30 +33,28 @@ In mobile mode, the toolbar is optimized for ease of use on small screens, prese
 
 **AnnotationEditTool:** Activate or deactivate annotation editing to add or modify annotations.
 
-![Annotation editing toolbar allowing users to add, edit, or delete annotations on a PDF](./images/editAnnotation.png)
+![Annotation editing toolbar for adding, editing, or deleting PDF annotations](./images/editAnnotation.png)
 
+N> In mobile mode, the annotation toolbar is displayed at the bottom of the viewer.
 
-N> In mobile mode, the annotation toolbar is conveniently displayed at the bottom of the viewer.
+### More Options Menu
 
-### More Options Menu:
-
-When you open the "more options" menu, you will see additional actions such as:
+The More options menu provides additional actions such as:
 
 **DownloadOption:** Tap to download the currently opened PDF document.
 
-**BookmarkOption:** Allows you to view bookmarks within the document.
+**BookmarkOption:** View bookmarks within the document.
 
 ![More options menu showing additional actions like download and bookmark](./images/more-options.png)
 
-## Enabling Desktop Mode in Mobile
+## Enable Desktop Mode on Mobile
 
-The desktop version of the toolbar can be enabled on mobile devices by using the `enableDesktopMode` API. This API allows you to bring desktop-like features to the mobile PDF viewer, providing access to additional toolbar actions that are typically available on desktop platforms.
+The desktop toolbar can be enabled on mobile devices using the `enableDesktopMode` API. This brings desktop-like features to the mobile PDF Viewer, providing access to additional toolbar actions typically available on desktop platforms.
 
-### Steps to Enable Desktop Mode:
+### Steps to Enable Desktop Mode
 
-**Step 1:** Set `enableDesktopMode` to true in the API configuration.
-
-**Step 2:** This will replace the mobile toolbar with the desktop toolbar layout, allowing access to more actions and controls.
+- Set `enableDesktopMode` to true in the configuration.
+- The desktop toolbar layout replaces the mobile toolbar, allowing access to more actions and controls.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -81,7 +80,7 @@ The desktop version of the toolbar can be enabled on mobile devices by using the
 
 ## Enable Scrolling in Desktop Mode with Touch Gestures
 
-To ensure smooth scrolling of PDF documents on a mobile device in desktop mode, it is important to enable touch gesture scrolling. You can achieve this by setting the `enableTextSelection` option to **false**.
+Smooth scrolling of PDF documents on mobile devices in desktop mode can be enabled by setting `enableTextSelection` to false.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -107,14 +106,13 @@ To ensure smooth scrolling of PDF documents on a mobile device in desktop mode, 
 {% endhighlight %}
 {% endtabs %}
 
-## Print Option Not Available
+## Print Option Availability
 
-The Print option is not available in mobile mode by default. However, if you need to use the print functionality on mobile devices, we recommend enabling the desktop toolbar on mobile using the `enableDesktopMode` API.
+The Print option is not available in mobile mode by default. To use print on mobile devices, enable the desktop toolbar using the `enableDesktopMode` API.
 
-### How to Use Print on Mobile:
+### How to Use Print on Mobile
 
-**Enable Desktop Mode:** Set `enableDesktopMode` to true to load the desktop version of the toolbar on your mobile device.
+- Enable desktop mode: Set `enableDesktopMode` to true to load the desktop toolbar on a mobile device.
+- **Print option**: Once desktop mode is enabled, the print option becomes available.
 
-**Print Option:** Once desktop mode is enabled, the print option will be available, allowing you to print the document directly from your mobile device.
-
-N> In mobile mode, the print functionality will not be available unless desktop mode is enabled.
+N> Print is unavailable in mobile mode unless desktop mode is enabled.

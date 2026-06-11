@@ -1,38 +1,38 @@
 ---
 layout: post
-title: Toolbar in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Toolbar in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Toolbar
+title: Toolbar in Vue PDF Viewer component | Syncfusion
+description: Learn how to customize the PDF Viewer toolbar, add custom items, manage visibility, and respond to toolbar actions in the Syncfusion Vue PDF Viewer component.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Built-In Toolbar in Vue Pdfviewer component
+# Toolbar in Vue PDF Viewer
 
-The PDF Viewer comes with a powerful built-in toolbar to execute important actions such as page navigation, text search,view mode,download,print,bookmark, and thumbnails.
+The built-in toolbar provides quick access to essential PDF viewing features including page navigation, text search, zoom controls, printing, and downloading. You can customize the toolbar by showing/hiding items, adding custom buttons, or creating a completely custom interface.
 
-The following table shows built-in toolbar items and its actions:-
+The following table shows the available built-in toolbar items:
 
 | Option | Description |
 |---|---|
-| OpenOption | This option provides an action to load the PDF documents to the PDF Viewer.|
-| PageNavigationTool | This option provides an action to navigate the pages in the PDF Viewer. It contains GoToFirstPage,GoToLastPage,GotoPage,GoToNext, and GoToLast tools.|
-| MagnificationTool |This option provides an action to magnify the pages either with predefined or user defined zoom factors in the PDF Viewer. Contains ZoomIn, ZoomOut, Zoom, FitPage and FitWidth tools|
-| PanTool | This option provides an action for panning the pages in the PDF Viewer.|
-| SelectionTool | This option provides an action to enable/disable the text selection in the PDF Viewer.|
-| SearchOption | This option provides an action to search a word in the PDF documents.|
-| PrintOption | This option provides an action to print the PDF document being loaded in the PDF Viewer.|
-| DownloadOption |This Download option provides an action to download the PDF document that has been loaded in the PDF Viewer.|
-| UndoRedoTool | This tool provides options to undo and redo the annotation actions performed in the PDF Viewer.|
-| AnnotationEditTool | This tool provides options to enable or disable the edit mode of annotation in the PDF Viewer.|
-| FormDesignerEditTool | This tool provides options to enable or disable the edit mode of form fields in the PDF Viewer.|
+| **OpenOption** | Open and load PDF documents from local or remote sources |
+| **PageNavigationTool** | Navigate between pages (first, last, next, previous, go to specific page) |
+| **MagnificationTool** | Zoom controls (zoom in, zoom out, fit to page, fit to width, custom zoom) |
+| **PanTool** | Pan/move the PDF page when zoomed in |
+| **SelectionTool** | Enable text selection mode for copying content |
+| **SearchOption** | Search for text within the PDF document |
+| **PrintOption** | Print the current PDF document |
+| **DownloadOption** | Download the PDF document to the local file system |
+| **UndoRedoTool** | Undo and redo annotation changes |
+| **AnnotationEditTool** | Toggle annotation editing mode |
+| **FormDesignerEditTool** | Toggle form field design/editing mode |
 
-## Show/Hide the built-in toolbar
+## Control toolbar visibility
 
-The PDF Viewer has an option to show or hide the complete built-in toolbar. You can achieve this by using following two ways.,
+Control whether the toolbar is displayed using the `enableToolbar` property or the `showToolbar()` method. You can disable the toolbar initially or toggle it programmatically based on user interactions.
 
-* **Show/Hide toolbar using enableToolbar API as in the following code snippet**
+### Using the enableToolbar property
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -102,9 +102,11 @@ N> To set up the **server-backed PDF Viewer** in the app.vue file, include the f
 **serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/toolbar/toolbar-hide-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/vue/toolbar/toolbar-hide-cs1" %}
 
-* **Show/Hide toolbar using showToolbar as in the following code snippet**
+### Using the showToolbar() method
+
+Programmatically show or hide the toolbar at runtime using the `showToolbar()` method:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -128,20 +130,15 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib;;
-
+const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
-
 const showToolbarClicked = function (args) {
   pdfviewer.value.ej2Instances.toolbar.showToolbar(false);
 }
-
 </script>
-
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
 <template>
   <div id="app">
     <button v-on:click="showToolbarClicked">showToolbarClicked</button>
@@ -150,14 +147,12 @@ const showToolbarClicked = function (args) {
     </ejs-pdfviewer>
   </div>
 </template>
-
 <script>
 import {
   PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
   Annotation, FormDesigner, FormFields
 } from '@syncfusion/ej2-vue-pdfviewer';
-
 export default {
   name: "App",
   components: {
@@ -188,13 +183,13 @@ N> To set up the **server-backed PDF Viewer** in the app.vue file, include the f
 **serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/toolbar/toolbar-method-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/vue/toolbar/toolbar-method-cs1" %}
 
-## Show/Hide the built-in toolbaritem
+## Customize toolbar items
 
-The PDF Viewer has an option to show or hide these grouped items in the built-in toolbar.
+Control which toolbar items are displayed using the `toolbarSettings` property or manage individual items at runtime with the `showToolbarItem()` method.
 
-* **Show/Hide toolbaritem using toolbarSettings as in the following code snippet.**
+### Using toolbarSettings to configure items
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -268,9 +263,11 @@ N> To set up the **server-backed PDF Viewer** in the app.vue file, include the f
 **serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/vue/toolbar/toolbar-items-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/vue/toolbar/toolbar-items-cs1" %}
 
-* **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
+### Using showToolbarItem() to toggle items
+
+Show or hide specific toolbar items at runtime after the toolbar is initialized:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -353,18 +350,18 @@ N> To set up the **server-backed PDF Viewer** in the app.vue file, include the f
 **serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-  {% previewsample "Document-Processing/code-snippet/pdfviewer/vue/toolbar/toolbar-items-method-cs1/index.html" %}
+  {% previewsample "/document-processing/code-snippet/pdfviewer/vue/toolbar/toolbar-items-method-cs1" %}
 
 
 ## Customize Built-In Toolbar
 
 PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs/).
+* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/customToolbarItemModel) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs).
 
-* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarItem/).
+* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarItem).
 
-* Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
+* Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar#enabletoolbaritem)
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -679,7 +676,6 @@ export default {
 {% endtabs %}
 
 >Note : Default value of toolbar items is ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
-
 ### Align Property
 
 The align property is used to specify the alignment of a toolbar item within the toolbar.
@@ -860,11 +856,9 @@ export default Vue.extend({
    #pdfviewer {
         height: 640px;
     }
-
     .control-section {
         padding-top: 0px !important;
     }
-
     #magnificationToolbar {
         background: transparent;
         height: auto;
@@ -877,67 +871,54 @@ export default Vue.extend({
         left: calc(100% - 120px);
         transform: rotate(90deg);
     }
-
     div#magnificationToolbar.e-toolbar .e-toolbar-items {
         background: transparent;
         padding: 2px 3px 2px 2px;
     }
-
     #magnificationToolbar.e-toolbar .e-tbar-btn {
         border-radius: 50%;
         min-height: 30px;
         min-width: 30px;
         border: 1px solid #c8c8c8;
     }
-
     #customToolbar {
         top: 0px;
         z-index: 900;
     }
-
     .e-bookmark-popup {
         height: 300px;
         max-width: 300px;
     }
-
     .e-text-search-popup {
         height: 104px;
         max-width: 348px;
     }
-
     .e-custom-search-input {
         width: 234px;
     }
-
     .e-text-search-popup .e-footer-content, .e-bookmark-popup .e-footer-content {
         padding: 0;
         height: 0;
     }
-
     .search-button, .search-button:disabled, .search-button:focus, .search-button:hover {
         background: transparent;
         box-shadow: none;
     }
-
     #popup .e-dlg-content {
         padding-left: 0;
         padding-bottom: 0;
     }
-
     .e-pv-bookmarks {
         min-width: 234px;
     }
-
     .e-pv-current-page-number {
         width: 46px;
         height: 28px;
         text-align: center;
     }
-
     .material .e-pv-current-page-number {
         border-width: 1px;
     }
-
     .e-icons {
         font-family: "e-icons";
         font-style: normal;
@@ -946,47 +927,36 @@ export default Vue.extend({
         line-height: 1;
         text-transform: none;
     }
-
     .e-pv-icon::before {
         font-family: 'e-icons';
     }
-
     .e-pv-open-document-icon::before  {
         content: '\e91c';
     }
-
     .e-pv-download-document-icon::before {
         content: '\e914';
     }
-
     .e-pv-print-document-icon::before {
         content: '\e917';
     }
-
     .e-pv-previous-page-navigation-icon::before {
         content: '\e910';
     }
-
     .e-pv-next-page-navigation-icon::before {
         content: '\e911';
     }
-
     .e-pv-zoom-out-icon::before {
         content: '\e912';
     }
-
     .e-pv-zoom-in-icon::before {
         content: '\e91d';
     }
-
     .e-pv-fit-page-icon::before {
         content: '\e91b';
     }
-
     .e-btn-icon.e-pv-zoom-out-icon.e-icons {
         transform: rotate(90deg);
     }
-
     @font-face {
         font-family: "e-icons";
         font-style: normal;
@@ -997,7 +967,6 @@ export default Vue.extend({
 ```
 
 >The icons are embedded in the font file used in above code snippet.
-
 **Step 8:** Add the following scripts for performing user interaction in PDF Viewer in code behind
 
 

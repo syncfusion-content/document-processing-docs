@@ -1,19 +1,22 @@
 ---
 layout: post
-title: Display custom tool tip for annotations in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Display custom tool tip for annotations in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Display a custom tooltip for annotations in JavaScript PDF Viewer | Syncfusion
+description: Learn how to display a custom tooltip for annotations in the JavaScript PDF Viewer using the annotationMouseover and annotationMouseLeave events.
 platform: document-processing
-control: Display custom tool tip for annotations
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display custom tool tip for annotations in Javascript Pdfviewer control
+# Display a custom tooltip for annotations in JavaScript PDF Viewer
 
-To display a custom tooltip for annotations using the mouseover event in the Syncfusion PDF Viewer, you can use the [**annotationMouseOver**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationmouseover) and **annotationMouseLeave** events .
+Display custom tooltips for annotations by handling the [annotationMouseover](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationmouseover) and `annotationMouseLeave` events.
 
-Here is an example that demonstrates how to display a custom tooltip for annotations using the mouseover event in the Syncfusion PDF Viewer:
+- Include the JavaScript PDF Viewer script and the `Annotation` module on the page.
+- Include the `ej.popups` module or equivalent tooltip library used in the example.
+- Ensure the viewer instance is initialized before attaching the event handlers.
+
+Example: show a tooltip on mouse over
 
 ```javascript
 
@@ -36,4 +39,4 @@ viewer.annotationMouseLeave = function(args) {
 
 ```
 
-Find the Sample [how to display custom tooltip for annotations using MouseOver event](https://stackblitz.com/edit/ztmvjx-byzwvq?file=index.js)
+Sample: [Display a custom tooltip for annotations sample on GitHub/StackBlitz](https://stackblitz.com/edit/ztmvjx-byzwvq?file=index.js)

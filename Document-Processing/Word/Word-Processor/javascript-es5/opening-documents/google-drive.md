@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open document from Google Drive in JavaScript (ES5) Document editor control | Syncfusion
+title: Open Google Drive Files in JavaScript (ES5) Document editor | Syncfusion
 description: Learn about how to Open document from Google Drive in JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Google Drive
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Google Drive
+# Open document from Google Drive in JavaScript (ES5) Document editor
 
 To load a document from Google Drive in a Document editor, you can follow the steps below
 
@@ -16,9 +16,9 @@ To load a document from Google Drive in a Document editor, you can follow the st
 
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
-**Step 2:** Create a Simple Document Editor Sample in Javascript
+**Step 2:** Create a Simple Document Editor Sample in JavaScript
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in Javascript. This will give you a basic setup of the Document Editor component.
+Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in JavaScript. This will give you a basic setup of the Document Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 

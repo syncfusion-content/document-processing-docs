@@ -46,14 +46,14 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/freezepane-cs1/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/freezepane-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es5/freezepane-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es5/freezepane-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es5/freezepane-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/freezepane-cs1" %}
 
 ## Limitations
 

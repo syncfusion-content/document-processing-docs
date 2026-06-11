@@ -16,8 +16,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx", ExcelOpenType.Automatic);
     IWorksheet sheet = workbook.Worksheets[0];
 
     //Create a Chart
@@ -37,12 +36,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     valueAxis.LogBase = 10;
 
     //Saving the workbook
-    FileStream outputStream = new FileStream("Chart.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
+    workbook.SaveAs("Chart.xlsx");
 }
 {% endhighlight %}
 

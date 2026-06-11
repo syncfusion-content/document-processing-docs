@@ -23,14 +23,14 @@ The following sample shows the `Open` option by using the [`openUrl`](https://ej
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/open-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/open-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/open-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-cs1" %}
 
 Please find the below table for the beforeOpen event arguments.
 
@@ -51,14 +51,14 @@ The following code example shows how to import an excel document using file uplo
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-uploader-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/open-uploader-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-uploader-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/open-uploader-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/open-uploader-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-uploader-cs1" %}
 
 ### Open an external URL excel file while initial load
 
@@ -66,14 +66,14 @@ You can achieve to access the remote excel file by using the [`created`](https:/
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/open-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/open-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/open-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-cs2" %}
 
 ### Open an excel file from blob data
 
@@ -83,14 +83,14 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-from-blobdata-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/open-from-blobdata-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-from-blobdata-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/open-from-blobdata-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/open-from-blobdata-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-from-blobdata-cs1" %}
 
 ### Open an Excel file located on a server
 
@@ -362,14 +362,14 @@ The following code example shows how to save the spreadsheet data as base64 stri
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/base-64-string/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/base-64-string/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/base-64-string/app.vue %}
+{% include code-snippet/spreadsheet/vue/base-64-string/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/base-64-string" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/base-64-string" %}
 
 ### Open excel file into a read-only mode
 
@@ -377,14 +377,14 @@ You can open excel file into a read-only mode by using the [`openComplete`](http
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-readonly-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/open-readonly-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-readonly-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/open-readonly-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/open-readonly-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-readonly-cs1" %}
 
 ### Configure JSON deserialization options
 
@@ -414,14 +414,14 @@ The following code snippet demonstrates how to configure the deserialization opt
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-from-json/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/open-from-json/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-from-json/app.vue %}
+{% include code-snippet/spreadsheet/vue/open-from-json/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/open-from-json" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-from-json" %}
 
 ### Improving Excel file open performance with parsing options
 
@@ -597,14 +597,14 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/custom-header-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/custom-header-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/custom-header-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/custom-header-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/custom-header-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/custom-header-cs1" %}
 
 ### External workbook confirmation dialog
 
@@ -646,14 +646,14 @@ The following sample shows the `Save` option by using the [`saveUrl`](https://ej
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-save-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/open-save-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-save-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/open-save-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/open-save-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs1" %}
 
 Please find the below table for the beforeSave event arguments.
 
@@ -679,14 +679,14 @@ Please find below the code to retrieve blob data from the Spreadsheet component 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/save-as-blobdata-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/save-as-blobdata-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/save-as-blobdata-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/save-as-blobdata-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/save-as-blobdata-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/save-as-blobdata-cs1" %}
 
 ### Save an Excel file to a server
 
@@ -1011,14 +1011,14 @@ The following code example shows how to save the spreadsheet data as base64 stri
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/base-64-string/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/base-64-string/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/base-64-string/app.vue %}
+{% include code-snippet/spreadsheet/vue/base-64-string/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/base-64-string" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/base-64-string" %}
 
 ### Configure JSON serialization options
 
@@ -1048,14 +1048,14 @@ The following code snippet demonstrates how to configure the serialization optio
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/save-as-json/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/save-as-json/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/save-as-json/app.vue %}
+{% include code-snippet/spreadsheet/vue/save-as-json/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/save-as-json" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/save-as-json" %}
 
 ### Send and receive custom params from client to server
 
@@ -1063,14 +1063,14 @@ Passing the custom parameters from client to server by using [`beforeSave`](http
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-save-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/open-save-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-save-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/open-save-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/open-save-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs2" %}
 
 Server side code snippets:
 
@@ -1089,14 +1089,14 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/custom-header-cs2/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/custom-header-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/custom-header-cs2/app.vue %}
+{% include code-snippet/spreadsheet/vue/custom-header-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/custom-header-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/custom-header-cs2" %}
 
 ### Change the PDF orientation
 
@@ -1109,14 +1109,14 @@ The possible values are:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-save-cs3/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/open-save-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/open-save-cs3/app.vue %}
+{% include code-snippet/spreadsheet/vue/open-save-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/open-save-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs3" %}
 
 ### Supported file formats
 
@@ -1133,14 +1133,14 @@ To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/save-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/save-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/save-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/save-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/save-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/save-cs1" %}
 
 ## Server Configuration
 

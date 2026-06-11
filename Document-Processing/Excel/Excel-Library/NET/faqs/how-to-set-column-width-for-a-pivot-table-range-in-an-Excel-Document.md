@@ -19,9 +19,7 @@ The following code examples demonstrate how to do this in C# (Cross-platform and
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
     IWorksheet worksheet = workbook.Worksheets[0];
     IWorksheet worksheet1 = workbook.Worksheets[1];
 
@@ -46,13 +44,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
     #region Save
     //Saving the workbook
-    FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
+    workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
     #endregion
-
-    //Dispose streams
-    outputStream.Dispose();
-    inputStream.Dispose();
 }
 {% endhighlight %}
 

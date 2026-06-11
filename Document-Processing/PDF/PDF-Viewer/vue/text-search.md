@@ -1,15 +1,19 @@
 ---
 layout: post
-title: Text search in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Text search in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Text search
+title: Text search in Vue PDF Viewer component | Syncfusion
+description: Learn how to configure text search, handle search events, and run programmatic searches in the Syncfusion Vue PDF Viewer component.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text search in Vue Pdfviewer component
+# Text search in Vue PDF Viewer
 
-The Text Search option in PDF Viewer is used to find and highlight the text content from the document. You can enable/disable the text search using the following code snippet.
+The text search feature enables users to locate and highlight matching content within PDF documents. The Vue PDF Viewer provides both interactive toolbar-based search and programmatic search capabilities through the `TextSearch` module.
+
+## Enable text search
+
+To use text search functionality, ensure the `TextSearch` module is provided to the PDF Viewer component and set `enableTextSearch` to `true`:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -30,7 +34,7 @@ import {
 import { provide } from 'vue';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
   Annotation, ThumbnailView, Print, TextSelection, TextSearch])
@@ -61,7 +65,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
@@ -134,47 +138,198 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Text search Features
+## Text search features
 
-### Real time search suggestion while typing
-Entering text into the search input dynamically displays search suggestions based on the provided input. The suggestions are updated in real-time as text is typed, offering relevant matches from the available content. This feature enhances the search experience by allowing quick access to potential results while typing.
+The PDF Viewer toolbar provides an intuitive search interface with the following capabilities:
 
-![Alt text](./images/SingleSearchPopup.png)
+### Real-time search suggestions
+Typing in the search box immediately displays suggestions matching the entered text. The suggestions list updates with each keystroke, allowing users to quickly jump to results without completing the full term.
 
-### Selecting Search Suggestions from the Popup
-Entering text into the search input triggers a popup displaying relevant suggestions based on the input. Selecting a suggestion from the popup enables direct navigation to its occurrences in the document.
+![Search suggestion popup](./images/SingleSearchPopup.png)
 
-![Alt text](./images/SearchResultFromPopup.png)
+### Select results from suggestions
+The suggestions popup displays relevant matches. Selecting a suggestion jumps directly to that occurrence in the PDF.
 
-### Search Text with enabling 'Match Case' checkbox
-By enabling the 'Match Case' option and entering text into the search input, only the exact case-sensitive matches in the document are highlighted. This feature allows navigation through each occurrence of the exact text match within the document.
+![Search results from popup](./images/SearchResultFromPopup.png)
 
-![Alt text](./images/SearchNavigationMatchCase.png)
+### Case-sensitive search
+Enable the **Match Case** checkbox to perform case-sensitive searches. Navigation controls step through exact matches only.
 
-### Search Text without enabling 'Match Case' checkbox
-When text is entered into the search input without enabling the 'Match Case' option, all instances of the text, regardless of case, are highlighted in the document. This allows easy navigation through every occurrence of the search term.
+![Match case navigation](./images/SearchNavigationMatchCase.png)
 
-![Alt text](./images/SearchNavigationNoMatchCase.png)
+### Case-insensitive search
+Leave **Match Case** unchecked to highlight all occurrences regardless of capitalization.
 
-### Search list of text by enabling 'Match Any Word' checkbox
-When the 'Match Any Word' option is enabled, the entered text in the search input is split into individual words based on spaces. As the text is typed, the popup dynamically displays search suggestions for each word in real time, highlighting potential matches within the document.
+![Search navigation without match case](./images/SearchNavigationNoMatchCase.png)
 
-![Alt text](./images/MultiSearchPopup.png)
+### Multi-word search with Match Any Word
+Enable **Match Any Word** to split the search term into separate words and find matches for any of them throughout the document.
 
-The following text search methods are available in the PDF Viewer,
+![Match any word search results](./images/MultiSearchPopup.png)
 
-* [**Search text**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchtext):- Searches the target text in the PDF document and highlights the occurrences in the pages.
-* [**Search next**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchnext):- Searches the next occurrence of the searched text from the current occurrence of the PdfViewer.
-* [**Search previous**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchprevious):- Searches the previous occurrence of the searched text from the current occurrence of the PdfViewer.
-* [**Cancel text search**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#canceltextsearch):- The text search can be canceled and the highlighted occurrences from the PDF Viewer can be removed .
+## Programmatic text search
 
-![Alt text](./images/search.png)
+Beyond the interactive toolbar, trigger searches programmatically using the `searchText` method with customizable options.
+
+### Using `searchText` method
+
+The `searchText` method initiates a search with optional filters for case sensitivity and whole-word matching. Call it on the PDF Viewer's `textSearch` instance:
+
+**Parameters:**
+- `text` (string): The term to search for
+- `isMatchCase` (optional boolean): Enable case-sensitive matching
+- `isMatchWholeWord` (optional boolean): Match only complete words
+
+{% highlight html %}
+<template>
+  <div id="app">
+    <div class="controls">
+      <button @click="searchBasic">Search Text</button>
+      <button @click="searchMatchCase">Match Case</button>
+      <button @click="searchWholeWord">Match Whole Word</button>
+    </div>
+    <ejs-pdfviewer ref="pdfViewer" id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :enableTextSearch="true">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const pdfViewer = ref(null);
+const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  Annotation, ThumbnailView, Print, TextSelection, TextSearch]);
+
+function searchBasic() {
+  pdfViewer.value.ej2Instances.textSearch.searchText('search text', false, false);
+}
+
+function searchMatchCase() {
+  pdfViewer.value.ej2Instances.textSearch.searchText('PDF', true);
+}
+
+function searchWholeWord() {
+  pdfViewer.value.ej2Instances.textSearch.searchText('pdf', false, true);
+}
+</script>
+{% endhighlight %}
+
+### Case-sensitive search
+
+Set `isMatchCase` to `true` for case-sensitive searches:
+
+```html
+<template>
+  <div id="app">
+    <button v-on:click="matchCase">Match Case</button>
+    <ejs-pdfviewer ref="pdfViewer" id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :enableTextSearch="true"></ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+      Annotation, ThumbnailView, Print, TextSelection, TextSearch]
+  },
+  methods: {
+    matchCase() {
+      const viewer = this.$refs.pdfViewer.ej2Instances;
+      viewer.textSearch.searchText('PDF', true);
+    }
+  }
+};
+</script>
+```
+### Whole-word search
+
+Set `isMatchWholeWord` to `true` to match only complete words:
+
+```html
+<template>
+  <div id="app">
+    <button v-on:click="wholeWord">Match Whole Word</button>
+    <ejs-pdfviewer ref="pdfViewer" id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :enableTextSearch="true"></ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+      Annotation, ThumbnailView, Print, TextSelection, TextSearch]
+  },
+  methods: {
+    wholeWord() {
+      const viewer = this.$refs.pdfViewer.ej2Instances;
+      viewer.textSearch.searchText('pdf', false, true);
+    }
+  }
+};
+</script>
+```
+> **Note**: The toolbar's **Match Any Word** option splits the search term into separate words and finds any of them. This differs from `isMatchWholeWord`, which matches the entire query as a single complete word.
+
+### Available search methods
+
+The `textSearch` module provides these methods for search navigation:
+
+| Method | Purpose |
+|--------|---------|
+| [**searchText()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchtext) | Search for text and highlight all occurrences in the document |
+| [**searchNext()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchnext) | Navigate to the next occurrence of the current search term |
+| [**searchPrevious()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#searchprevious) | Navigate to the previous occurrence of the current search term |
+| [**cancelTextSearch()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearch/#canceltextsearch) | Cancel the current search and clear all highlights |
+
+![Text search interface](./images/search.png)
 
 ## Find text method
-Searches for the specified text or an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. If a specific page index is provided, it returns the bounding rectangles for these search strings on that page; otherwise, it returns the bounding rectangles for all pages in the document where the strings were found.
 
-### Find and get the bounds of a text
-Searches for the specified text within the document and returns the bounding rectangles of the matched text. The search can be case-sensitive based on the provided parameter. It returns the bounding rectangles for all pages in the document where the text was found. The below code snippet shows how to get the bounds of the given text:
+Use the `findText` method to retrieve bounding coordinates of text matches. This is useful for programmatically locating text and accessing its position data for custom rendering or layout calculations.
+
+**Parameters:**
+- `text` (string | string[]): Text or array of text to find
+- `isMatchCase` (boolean): Enable case-sensitive matching
+- `pageNumber` (optional number): Limit search to a specific page
+
+**Returns:** Bounding rectangles for all matches
+
+### Find text on all pages
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -195,7 +350,7 @@ export default {
   name: 'app',
   data () {
 return {
-  resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
   documentPath:"PDF_Succinctly.pdf"
 };
   },
@@ -251,8 +406,9 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 {% endhighlight %}
 {% endtabs %}
 
-### Find and get the bounds of a text on the desired page
-Searches for the specified text within the document and returns the bounding rectangles of the matched text. The search can be case-sensitive based on the provided parameter. It returns the bounding rectangles for that page in the document where the text was found. The below code snippet shows how to get the bounds of the given text from the desired page:
+### Find text on a specific page
+
+Limit the search to a specific page by passing the page number as the third parameter:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -273,7 +429,7 @@ export default {
   name: 'app',
   data () {
 return {
-  resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
   documentPath:"PDF_Succinctly.pdf"
 };
   },
@@ -329,8 +485,9 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 {% endhighlight %}
 {% endtabs %}
 
-### Find and get the bounds of the list of text
-Searches for an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. It returns the bounding rectangles for all pages in the document where the strings were found.
+### Find multiple text strings
+
+Search for multiple terms by passing an array of strings:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -351,7 +508,7 @@ export default {
   name: 'app',
   data () {
 return {
-  resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
   documentPath:"PDF_Succinctly.pdf"
 };
   },
@@ -407,8 +564,9 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 {% endhighlight %}
 {% endtabs %}
 
-### Find and get the bounds of the list of text on desired page
-Searches for an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. It returns the bounding rectangles for these search strings on that particular page where the strings were found.
+### Find multiple text strings on a specific page
+
+Search for multiple terms on a specific page by providing the page number as the third parameter:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -429,7 +587,7 @@ export default {
   name: 'app',
   data () {
 return {
-  resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
   documentPath:"PDF_Succinctly.pdf"
 };
   },
@@ -484,10 +642,132 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 
 {% endhighlight %}
 {% endtabs %}
+
+## Text search events
+
+The PDF Viewer triggers events during text search operations, allowing you to customize behavior and respond to different stages of the search process.
+
+### textSearchStart
+
+The [textSearchStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#textsearchstartevent) event fires as soon as a search begins from the toolbar interface or through the `textSearch.searchText` method. Use it to reset UI state, log analytics, or cancel the default search flow before results are processed.
+
+- Event arguments: [TextSearchStartEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearchStartEventArgs/) exposes:
+  - `searchText`: the term being searched.
+  - `matchCase`: indicates whether case-sensitive search is enabled.
+- `isMatchWholeWord`: indicates whether whole-word matching is enabled.
+- `name`: event name.
+- `cancel`: set to `true` to stop the default search.
+
+{% highlight html %}
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :textSearchStart="handleTextSearchStart"></ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  Annotation, ThumbnailView, Print, TextSelection, TextSearch]);
+
+function handleTextSearchStart(args) {
+  console.log(`Text search started for: "${args.searchText}"`);
+}
+</script>
+{% endhighlight %}
+
+### textSearchHighlight
+
+The [textSearchHighlight](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#textsearchhighlightevent) event triggers whenever a search result is brought into view, including navigation between matches. Use it to draw custom overlays or synchronize adjacent UI elements when a match is highlighted.
+
+- Event arguments: [TextSearchHighlightEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearchHighlightEventArgs/) exposes:
+  - `bounds`: `RectangleBoundsModel | RectangleBoundsModel[]` representing the highlighted match.
+  - `pageNumber`: page index where the match is highlighted.
+  - `searchText`: the active search term.
+  - `matchCase`: indicates whether case-sensitive search was used.
+  - `name`: event name.
+
+{% highlight html %}
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :textSearchHighlight="handleTextSearchHighlight"></ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  Annotation, ThumbnailView, Print, TextSelection, TextSearch]);
+
+function handleTextSearchHighlight(args) {
+  console.log('Highlighted match bounds:', args.bounds);
+}
+</script>
+{% endhighlight %}
+
+### textSearchComplete
+
+The [textSearchComplete](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#textsearchcompleteevent) event runs after the search engine finishes scanning the document for the current query. Use it to update match counts, toggle navigation controls, or notify users when no results were found.
+
+- Typical uses:
+  - Update UI with the total number of matches and enable navigation controls.
+  - Hide loading indicators or show a "no results" message if none were found.
+  - Record analytics for search effectiveness.
+- Event arguments: [TextSearchCompleteEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearchCompleteEventArgs/) exposes:
+  - `totalMatches`: total number of occurrences found.
+  - `isMatchFound`: indicates whether at least one match was found.
+  - `searchText`: the searched term.
+  - `matchCase`: indicates whether case-sensitive search was used.
+  - `name`: event name.
+
+{% highlight html %}
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :textSearchComplete="handleTextSearchComplete"></ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  Annotation, ThumbnailView, Print, TextSelection, TextSearch]);
+
+function handleTextSearchComplete(args) {
+  console.log('Text search completed.', args);
+}
+</script>
+{% endhighlight %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to/TextSearch)
 
 ## See also
 
 * [Toolbar items](./toolbar)
-* [Feature Modules](./feature-module)
+* [Feature modules](./feature-module)

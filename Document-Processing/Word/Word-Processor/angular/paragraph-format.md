@@ -64,8 +64,11 @@ this.documentEditor.editor.toggleTextAlignment('Center' | 'Left' | 'Right' | 'Ju
 You can define the line spacing and its type for selected paragraphs using the following sample code.
 
 ```typescript
+// Set line spacing type
 this.documentEditor.selection.paragraphFormat.lineSpacingType='AtLeast';
-this.documentEditor.selection.paragraphFormat.lineSpacing= 6;
+// Set line spacing value (supports both integer and float)
+this.documentEditor.selection.paragraphFormat.lineSpacing= 6; // Integer value
+this.documentEditor.selection.paragraphFormat.lineSpacing= 6.5; // Float value
 ```
 
 ## Paragraph spacing

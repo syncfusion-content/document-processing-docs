@@ -1,129 +1,140 @@
 ---
 layout: post
-title: Enable Text Selection in React PdfViewer component | Syncfusion
-description: Learn how to Enable Text Selection in Syncfusion React PdfViewer component of Syncfusion Essential JS 2 and more.
+title: Enable or disable text selection in React PDF Viewer | Syncfusion
+description: Learn how to enable or disable text selection in the React PDF Viewer using the enableTextSelection property.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable or Disable Text Selection in Syncfusion PDF Viewer
+# Enable or disable text selection in React PDF Viewer
 
-The Syncfusion PDF Viewer provides the `enableTextSelection` property, which allows you to control whether users can select text within the displayed PDF document. This feature can be toggled programmatically during runtime.
+This guide explains how to enable or disable text selection in the Syncfusion React PDF Viewer using both initialization-time settings and runtime toggling.
 
-## Configure Text Selection on Initialization
+**Outcome:** By the end of this guide, you will be able to control whether users can select text in the PDF Viewer.
 
-You can set the initial text selection behavior when initializing the PDF Viewer control by configuring the `enableTextSelection` property.
+## Steps to toggle text selection
 
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
+### 1. Disable text selection at initialization
+
+Follow one of these steps to disable text selection when the viewer first loads:
+
+**Remove the text selection module**
+
+Remove the [`TextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textselection) module in the services array to disable text selection during initialization.
+
+{% highlight ts %}
 {% raw %}
-
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-  BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
-  FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-export function App() {
-  return (<div>
-    <div className='control-section'>
-      <PdfViewerComponent
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib"
-        enableTextSelection={false}
-        style={{ 'height': '680px' }}
-      >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields,
-          FormDesigner, PageOrganizer]} />
-      </PdfViewerComponent>
-    </div>
-  </div>);
-}
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
+<PdfViewerComponent
+    id="PdfViewer"
+    ref={viewerRef}
+    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+    style={{ height: '100%' }}
+>
+    <Inject
+        services={[
+            Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+            ThumbnailView, Print, TextSearch, FormFields, FormDesigner, PageOrganizer
+        ]}
+    />
+</PdfViewerComponent>
 {% endraw %}
 {% endhighlight %}
-{% endtabs %}
 
-## Toggle Text Selection Dynamically
+**Set `enableTextSelection` to false**
 
-You can change the text selection behavior at runtime using buttons, menu options, or other UI elements. The following example demonstrates how to toggle text selection with button clicks:
+Use the [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextselection) during initialization to disable or enable text selection. The following example disables the text selection during initialization
+
+{% highlight ts %}
+{% raw %}
+<PdfViewerComponent
+    id="PdfViewer"
+    ref={viewerRef}
+    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+    style={{ height: '100%' }}
+    enableTextSelection={false}
+>
+    <Inject
+        services={[
+            Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+            ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
+        ]}
+    />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+
+### 2. Toggle text selection at runtime
+
+The [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextselection) property can also be used to toggle the text selection at runtime.
 
 {% tabs %}
-{% highlight js tabtitle="Standalone" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% raw %}
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+import { useRef, RefObject } from 'react';
 
-import * as ReactDOM from 'react-dom';
-import * as React from 'react';
-import './index.css';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-  BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
-  FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
-
-export class App extends React.Component {
-  constructor() {
-    super();
-    this.pdfViewer = React.createRef();
-  }
-
-  enableTextSelection = () => {
-    if (this.pdfViewer.current) {
-      this.pdfViewer.current.enableTextSelection = true;
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent | null> = useRef<PdfViewerComponent>(null);
+    const enableTextSelection = () => {
+        if (viewerRef.current) {
+            viewerRef.current.enableTextSelection = true;
+        }
     }
-  }
-
-  disableTextSelection = () => {
-    if (this.pdfViewer.current) {
-      this.pdfViewer.current.enableTextSelection = false;
+    const disableTextSelection = () => {
+        if (viewerRef.current) {
+            viewerRef.current.enableTextSelection = false;
+        }
     }
-  }
-
-  render() {
     return (
-      <div id="app">
-        <button onClick={this.enableTextSelection} style={{ marginBottom: '20px' }}>
-          enableTextSelection
-        </button>
-        <button onClick={this.disableTextSelection} style={{ marginBottom: '20px' }}>
-          disableTextSelection
-        </button>
-        <PdfViewerComponent
-          id="pdfViewer"
-          ref={this.pdfViewer}
-          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          resourceUrl="https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib"
-          enableTextSelection={false}
-          style={{ height: '640px' }}
-        >
-          <Inject services={[Toolbar, Magnification, Navigation, Annotation, TextSelection,
-            TextSearch, FormFields, FormDesigner, PageOrganizer]} />
-        </PdfViewerComponent>
-      </div>
+        <div style={{ height: '100vh' }}>
+            <button onClick={enableTextSelection}>Enable Text Selection</button>
+            <button onClick={disableTextSelection}>Disable Text Selection</button>
+            <PdfViewerComponent
+                id="PdfViewer"
+                ref={viewerRef}
+                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                resourceUrl="https://cdn.syncfusion.com/ej2/32.2.3/dist/ej2-pdfviewer-lib"
+                style={{ height: '100%' }}
+            >
+                <Inject
+                    services={[
+                        Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+                        ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
+                    ]}
+                />
+            </PdfViewerComponent>
+        </div>
     );
-  }
 }
-
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-## Use Cases and Considerations
+N> When text selection is disabled, the viewer automatically switches to pan mode.
 
-- **Document Protection**: Disabling text selection helps prevent unauthorized copying of sensitive content.
-- **Read-only Documents**: In scenarios where documents are meant for viewing only, disabling text selection can provide a cleaner user experience.
-- **Interactive Applications**: Toggle text selection based on user roles or document states in complex applications.
+[View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)
 
-## Default Behavior
+## Use cases and considerations
 
-By default, text selection is enabled in the PDF Viewer. Set the `enableTextSelection` property to `false` explicitly if you want to disable this functionality.
+- Document protection: Disable text selection to help prevent copying sensitive content.
+- Read-only documents: Provide a cleaner viewing experience by preventing selection.
+- Interactive apps: Toggle selection based on user roles or document states.
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)
+N> Text selection is enabled by default. Set `enableTextSelection` to `false` to disable it.
+
+## Troubleshooting
+
+If text selection remains active, ensure that the [`TextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textselection) is removed in `Inject` or [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextselection) is set to `false`.
+
+## See also
+
+- [Text Selection API reference](../text-selection/reference)
+- [React PDF Viewer events](../events)

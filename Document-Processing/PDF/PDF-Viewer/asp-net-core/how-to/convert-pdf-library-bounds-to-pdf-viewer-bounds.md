@@ -1,32 +1,23 @@
 ---
 layout: post
-title: Converting Library Bounds in EJ2 ASP.NET Core PdfViewer | Syncfusion
-description: Learn how to convert Library bounds into Viewer bounds in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Map PDF Library Bounds to Viewer Bounds in ASP.NET Core | Syncfusion
+description: Learn how to convert PDF Library bounds into PDF Viewer bounds when exporting annotations, ensuring accurate placement in the ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Converting PDF Library Bounds to PDF Viewer Bounds
+# Convert PDF Library bounds to PDF Viewer bounds in ASP.NET Core
 
-### Overview
+Coordinate systems vary between the PDF Library and the PDF Viewer. When importing or exporting annotations, converting these bounds ensures that elements are rendered in the correct position relative to the document page.
 
-When exporting annotations from the PDF Library, you may need to convert the bounds values into the PDF Viewer format. This guide will help you achieve that using the Syncfusion PDF Viewer component.
+## Steps to convert bounds values
 
-### How to Convert Bounds Values
+**Step 1:** Initialize the PDF Viewer instance and configure the required services.
 
-**Step 1:** Initialize the PdfViewer Instance
+**Step 2:** Listen for the `exportSuccess` event to intercept the exported annotation data.
 
-Create an instance of the PdfViewer and configure it with the required services.
-
-**Step 2:** Handle Export Success
-
-Convert the exported blob URL to an object and then extract and convert the annotation bounds.
-
-**Step 3:** Create a Function to Convert Blob URL to Object
-
-This function fetches the blob data and converts it into a JSON object.
+**Step 3:** Convert the blob URL into a JSON object and calculate the new bounds using the page height and resolution scaling:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Server-Backed" %}
@@ -111,8 +102,8 @@ This function fetches the blob data and converts it into a JSON object.
 {% endhighlight %}
 {% endtabs %}
 
-### Conclusion
+## Performance considerations
 
-By following these steps, you can successfully convert PDF Library bounds values into PDF Viewer bounds values when exporting annotations as JSON. This will help maintain accuracy in the annotation placement and ensure a seamless user experience.
+These steps automatically transform PDF Library values into JSON-compatible PDF Viewer coordinates, maintaining layout integrity across different rendering environments. Ensure the `pageHeight` is retrieved dynamically for each page to account for varying document dimensions.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

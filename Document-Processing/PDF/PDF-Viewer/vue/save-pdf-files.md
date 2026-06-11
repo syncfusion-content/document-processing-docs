@@ -1,32 +1,42 @@
 ---
 layout: post
-title: Save PDF files in Vue Pdfviewer component | Syncfusion
-description: This page helps you to learn here all about savings PDF file in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Save PDF files
+title: Save PDF files in Vue PDF Viewer component | Syncfusion
+description: Learn how to save edited or annotated PDFs to a server, database, or local file system using the Syncfusion Vue PDF Viewer with server-backed architecture.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Saving PDF file
+# Save PDF files
 
-After editing the PDF file with various annotation tools, you will need to save the updated PDF to the server, database, or local file system.
+After annotating or editing a PDF document in the Vue PDF Viewer component, save the updated file to a server, database, or the local file system using the approaches outlined in this guide.
 
-## Save PDF file to Server
+## Prerequisites
 
-Need to save the modified PDF back to a server. To achieve this, proceed with the following steps
+Saving and downloading operations require server-side processing. Before implementing any save workflow:
 
-**Step 1:** Create a Simple PDF Viewer Sample in Vue
+* Configure a server-backed PDF Viewer web service (see [Web Service Setup Guide](../how-to/create-pdfviewer-service))
+* Ensure the Vue PDF Viewer is configured with the `serviceUrl` property pointing to your web service
+* Have appropriate file access permissions on your target storage location (server filesystem or database)
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF viewer component.
+## Save PDF files to server storage
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
+This approach persists edited PDF files back to your server's filesystem, making them available for retrieval and further processing.
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+### Step 1: Set up the Vue PDF Viewer component
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+Follow the [Getting started with server-backed PDF Viewer](getting-started-with-server-backed) guide to create a Vue application with the PDF Viewer component and configure the `serviceUrl` property.
 
-3. Modify the `Download()` method to open it in the viewer using URL
+### Step 2: Modify the server web service
+
+Configure your .NET Core web service to save edited PDFs to server storage:
+
+1. Create a web service project in .NET Core 3.0 or later by following the [Web Service Setup Guide](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above).
+
+2. Open the `PdfViewerController.cs` file and modify the `Download()` method to save the updated PDF to your server.
+
+3. Update the `serverFilePath` variable with the absolute path to your target folder. Ensure the application has write permissions to this location.
 
 ```csharp
 
@@ -57,9 +67,9 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 ```
 
-**Step 3:**  Set the PDF Viewer Properties in React PDF viewer component
+### Step 3: Configure the Vue PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
+Configure the PDF Viewer component with your web service URL:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -78,7 +88,7 @@ import {
   ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
 } from '@syncfusion/ej2-vue-pdfviewer';
 
-// Replace the "localhost:44396" with the actual URL of your server
+// Replace with your web service URL
 const serviceUrl = "https://localhost:44396/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf";
 
@@ -110,7 +120,7 @@ export default {
   },
   data() {
     return {
-      // Replace the "localhost:44396" with the actual URL of your server
+      // Replace with your web service URL
       serviceUrl: "https://localhost:44396/pdfviewer",
       documentPath: "https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf"
     };
@@ -127,9 +137,9 @@ export default {
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Save%20and%20Load/Save%20PDF%20file%20to%20server)
 
-## Download PDF file as a copy
+## Download PDF to local file system
 
-In the built-in toolbar, you have an option to download the updated PDF to the local file system, you can use it to download the PDF file.
+Export the edited PDF as a local copy to the user's device using the built-in download functionality or a custom button. This approach does not store the file on the server.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -209,28 +219,28 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Save PDF file to Database
+When using a custom download button, ensure the PDF Viewer component has a `ref` assigned so the handler can access the `ej2Instances.download()` method.
 
-If you have plenty of PDF files stored in database and you want to save the updated PDF file back to the database, use the following code example.
+## Save PDF files to database
 
-**Step 1:** Create a Simple PDF Viewer Sample in Vue
+Use this approach when you need to store edited PDFs in a database for versioning, archival, or complex query scenarios.
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This will give you a basic setup of the PDF viewer component.
+### Step 1: Set up the Vue PDF Viewer component
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
+Follow the [Getting started with server-backed PDF Viewer](getting-started-with-server-backed) guide to create a Vue application with the PDF Viewer component.
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+### Step 2: Configure the server web service to save to database
 
-2. Open the `PdfViewerController.cs` file in your web service project.
+1. Create a web service project in .NET Core 3.0 or later (see [Web Service Setup Guide](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above)).
 
-3. Import the required namespaces at the top of the file:
+2. Open the `PdfViewerController.cs` file and add the required namespaces:
 
 ```csharp
 using System.IO;
 using System.Data.SqlClient;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+3. Add configuration properties to the `PdfViewerController` class:
 
 ```csharp
 private IConfiguration _configuration;
@@ -245,7 +255,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the `Download()` method to open it in the viewer using URL
+4. Modify the `Download()` method to save the PDF to the database. Adjust the SQL command and table/column names to match your database schema:
 
 ```csharp
 
@@ -285,7 +295,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+5. Configure the database connection in your `appsettings.json` file:
 
 ```json
 {
@@ -300,8 +310,10 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-N> Replace **Your Connection string from SQL server** with the actual connection string for your SQL Server database
-
-N> The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString variable in the previous code example as per the connection string of your database.
+> Before running this example:
+> * Install the **System.Data.SqlClient** NuGet package in your web service project
+> * Update the connection string in `appsettings.json` with your SQL Server credentials
+> * Create the database table using the SQL script provided
+> * Ensure the application has read/write permissions to the database
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-database)

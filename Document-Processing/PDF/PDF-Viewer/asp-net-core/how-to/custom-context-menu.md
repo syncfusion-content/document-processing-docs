@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Customize context menu with EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Customize context menu in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Customize the context menu in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to add and customize context menu options in the ASP.NET Core PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Customize context menu in ASP.NET Core PDF Viewer control
+# Customize the context menu in ASP.NET Core PDF Viewer
 
-PDF Viewer allows you to add custom option in context menu. It can be achieved by using the `addCustomMenu()` method and custom action is defined using the `customContextMenuSelect()`method.
+Extend the PDF Viewer's context menu with custom options using the `addCustomMenu()` method. Handle custom menu item clicks through the `customContextMenuSelect()` event to implement custom functionality.
 
-### Add Custom Option
+## Add custom menu items
 
-The following code shows how to add custom option in context menu.
-```
+The following example demonstrates how to add custom options to the context menu:
+
+```javascript
 <script type="text/javascript">
 
     var menuItems = [
@@ -53,13 +53,15 @@ The following code shows how to add custom option in context menu.
 </script>
 ```
 
-### Customize custom option in context menu
+## Display custom or default menu items
 
-The PDF Viewer feature enables customization of custom options and the ability to toggle the display of the default context menu. When the addCustomMenu parameter is set to `true`, the default menu is hidden; conversely, when it is set to `false`, the default menu items are displayed.
+Control whether to show only custom menu items or combine them with the default context menu:
 
-```
+- When the second parameter of `addCustomMenu()` is `true`, only custom menu items are displayed.
+- When the second parameter is `false`, custom items appear alongside default menu options.
+
+```javascript
 <script type="text/javascript">
-
     var menuItems = [
         {
             text: 'Search In Google',
@@ -95,13 +97,12 @@ The PDF Viewer feature enables customization of custom options and the ability t
 </script>
 ```
 
-#### Customize added context menu items
+## Show or hide menu items dynamically
 
-The following code shows how to hide/show added custom option in context menu using the `customContextMenuBeforeOpen()` method.
+Use the `customContextMenuBeforeOpen()` event to conditionally display or hide menu items based on the current context before the menu opens. This allows menu items to appear only when relevant.
 
-```
+```javascript
 <script type="text/javascript">
-
     var menuItems = [
         {
             text: 'Search In Google',
@@ -205,12 +206,12 @@ The following code shows how to hide/show added custom option in context menu us
 </script>
 ```
 
-The following is the output of custom context menu with customization.
+## Sample: Custom context menu output
 
-```
+The following complete sample demonstrates a customized context menu with action handlers for all menu items:
 
+```javascript
 <script type="text/javascript">
-
     var menuItems = [
         {
             text: 'Search In Google',
@@ -372,4 +373,4 @@ The following is the output of custom context menu with customization.
 
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Custom%20Context%20Menu/PDFViewerSample)
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Custom%20Context%20Menu/PDFViewerSample)

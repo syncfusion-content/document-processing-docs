@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Minimum and Maximum Zoom in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about Minimum and Maximum Zoom in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Set min and max zoom levels in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to limit the minimum and maximum zoom percentages in the Syncfusion ASP.NET MVC PDF Viewer by using the minZoom and maxZoom properties for responsive, consistent viewing.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Minimum and Maximum Zoom Properties
+# Minimum and maximum zoom properties
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides the ability to control zoom levels for viewing PDF documents. The `minZoom` and `maxZoom` properties enable developers to set the minimum and maximum zoom levels, ensuring a consistent and controlled viewing experience.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer lets developers control zoom limits for every document view. Configure the `minZoom` and `maxZoom` properties to prevent users from zooming beyond the range that keeps content legible and maintains predictable performance.
 
 ### minZoom
 
-The `minZoom` property specifies the minimum zoom percentage allowed in the PDF Viewer. This ensures that users cannot zoom out beyond a certain limit, which helps maintain readability and performance. Developers can set the `minZoom` property programmatically, defining the minimum zoom level based on the application's requirements. This is particularly useful for preventing users from zooming out too much, which could make the content difficult to read.
+Use the [`minZoom`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_MinZoom) property to define the lowest zoom percentage that the viewer allows. Setting an appropriate minimum avoids unreadable pages when users zoom out. Assign the value that matches the smallest acceptable scale for the application, and keep it lower than or equal to `maxZoom`.
 
 ### maxZoom
 
-The `maxZoom` property defines the maximum zoom percentage allowed in the PDF Viewer. By setting this property, developers can prevent users from zooming in too much, helping to avoid performance issues and maintain a smooth viewing experience. The `maxZoom` property can be set programmatically to control the upper limit of the zoom level. This is useful for applications where extremely high zoom levels might degrade performance or user experience.
+Use the [`maxZoom`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_MaxZoom) property to cap the highest zoom percentage. Limiting the upper bound prevents excessive magnification that can slow rendering or introduce scrolling issues. Choose a value that balances detail visibility with responsiveness.
 
 ```cs
 
@@ -35,9 +35,10 @@ The `maxZoom` property defines the maximum zoom percentage allowed in the PDF Vi
 </div>
 ```
 
-#### Restrict Zoom Percentage on Mobile Devices
 
-You can easily restrict the zoom percentage on mobile devices using the `minZoom` and `maxZoom` properties. This feature allows you to set specific limits for zooming, ensuring smoother scrolling performance and efficient document loading on mobile devices. By controlling the zoom levels, you can provide a better user experience across different devices.
+#### Restrict zoom percentage on mobile devices
+
+You can restrict zoom percentages on mobile devices by updating the `minZoom` and `maxZoom` properties when the document load event fires. This ensures smoother scrolling performance and consistent page rendering on smaller screens. Attach the handler by wiring the `documentLoad` event to the `documentLoad` function in the PDF Viewer markup or initialization script.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -81,4 +82,4 @@ You can easily restrict the zoom percentage on mobile devices using the `minZoom
 {% endhighlight %}
 {% endtabs %}
 
-By implementing this, you ensure that the maximum zoom percentage on mobile devices is limited to 200% and the minimum zoom percentage is set to 10%. This prevents performance issues that may arise from excessive zooming on mobile platforms.
+When configuring zoom limits, keep `minZoom` less than or equal to `maxZoom`, and adjust the values to meet accessibility expectations across desktop and mobile experiences. Review the [`zoomMode`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ZoomMode) property if you need additional control over how the viewer interprets zoom operations.

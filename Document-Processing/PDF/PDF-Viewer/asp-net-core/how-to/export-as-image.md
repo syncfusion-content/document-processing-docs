@@ -1,20 +1,25 @@
 ---
 layout: post
-title: Export As Image with EJ2 ASP.NET Core PDF Viewer Control | Syncfusion
-description: Learn here all about Export As Image in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Export pages as images in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to export pages as Base64-encoded images in the Syncfusion ASP.NET Core PDF Viewer using the ExportAsImage method family.
 platform: document-processing
-control: Export As Image
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
-# Export as Image in ASP.NET Core PDF Viewer control
+# Export PDF pages as images in ASP.NET Core PDF Viewer
 
-The PDF Viewer server library allows the PDF document pages to be exported as raster images. Exporting can be done using the ExportAsImage() method. This option helps to convert a PDF into an image. The APIs available to export the PDF document pages as images are listed as follows:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer provides the `ExportAsImage` APIs to convert individual pages or a range of pages into raster images. These images can be saved to disk, processed in-memory, or served as downloads in your application.
 
-## ExportAsImage(int pageindex)
+## Steps to export pages as images
 
-Exports the specified page as image using the Pdfium rendering engine.
+**Step 1:** Create an ASP.NET Core PDF Viewer application by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started).
+
+**Step 2:** Use the `PdfRenderer` class to load the document and invoke the appropriate `ExportAsImage` overload based on the requirements.
+
+### Export a single page
+
+Convert a specific page to a `Bitmap` using the default rendering settings.
 
 ```cs
 
@@ -29,9 +34,9 @@ bitmapimage.Save(@"currentDirectory\..\..\..\..\Images\" + "bitmapImage" + i.ToS
 
 ```
 
-## ExportAsImage(int pageIndex, float dpiX, float dpiY)
+### Export with custom DPI or size
 
-Exports the specified page as image with respect to the specified DPI values.
+To control the resolution or dimensions of the exported image, use the overloads that accept DPI values or `SizeF` objects.
 
 ```cs
 
@@ -46,7 +51,7 @@ bitmapimage.Save(@"currentDirectory\..\..\..\..\Images\" + "bitmapImage" + i.ToS
 
 ```
 
-## ExportAsImage(int pageIndex, SizeF customSize, bool keepAspectRatio)
+### Export a page with custom size
 
 Exports the specified page as image with respect to the specified custom size.
 
@@ -63,7 +68,7 @@ bitmapimage.Save(@"currentDirectory\..\..\..\..\Images\" + "bitmapImage" + i.ToS
 
 ```
 
-## ExportAsImage(int pageIndex, SizeF customSize, float dpiX, float dpiY, bool keepAspectRatio)
+### Export a page with custom size and DPI
 
 Exports the specified page as image with respect to the custom size and the specified DPI values.
 
@@ -80,9 +85,9 @@ bitmapimage.Save(@"currentDirectory\..\..\..\..\Images\" + "bitmapImage" + i.ToS
 
 ```
 
-## ExportAsImage(int startIndex, int endIndex)
+### Export a range of pages
 
-Exports the specified pages as images using the Pdfium rendering engine.
+Retrieve an array of bitmaps for a specific page range.
 
 ```cs
 
@@ -100,7 +105,7 @@ for (int i = 0; i < pdfExportImage.PageCount; i++)
 
 ```
 
-## ExportAsImage(int startIndex, int endIndex, float dpiX, float dpiY)
+### Export a range with custom DPI
 
 Exports the specified pages as images with respect to the specified DPI values.
 
@@ -120,7 +125,7 @@ for (int i = 0; i < pdfExportImage.PageCount; i++)
 
 ```
 
-## ExportAsImage(int startIndex, int endIndex, SizeF customSize, bool keepAspectRatio)
+### Export a range with custom size
 
 Exports the specified pages as images with respect to the specified custom size.
 
@@ -140,7 +145,7 @@ for (int i = 0; i < pdfExportImage.PageCount; i++)
 
 ```
 
-## ExportAsImage(int startIndex, int endIndex, SizeF customSize, float dpiX, float dpiY, bool keepAspectRatio)
+### Export a range with custom size and DPI
 
 Exports the specified pages as images with respect to the custom size and the specified DPI values.
 
@@ -159,9 +164,10 @@ for (int i = 0; i < pdfExportImage.PageCount; i++)
 }
 
 ```
-## Export as Image in ASP.NET Core 6.0
 
-To export a PDF to image in ASP.NET Core 6.0 using Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer and Skia Bitmap, you can follow these steps:
+### Export pages as images in ASP.NET Core 6.0
+
+To export a PDF to image in ASP.NET Core 6.0 using PDF Viewer and Skia Bitmap, you can follow these steps:
 
 Create an instance of PdfRenderer in the controller, and create an instance of SKBitmap to get the bitmap representation of the page. Exporting can be done using the `ExportAsImage()` method. This method helps to convert a PDF into an image. Use the SKImage class to save the SKBitmap object as a PNG image, and use the `SaveTo` method of the SKBitmap to save the image to a file. Return the image file in the response.
 
@@ -186,6 +192,6 @@ using (var stream = new FileStream(Path.Combine(@"currentDirectory\..\..\..\..\D
 
 ```
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/Common/Export%20as%20Image%20in%20ASP.NET%20Core%206.0/ExportImageindotnet6)
+[View complete sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/Common/Export%20as%20Image%20in%20ASP.NET%20Core%206.0/ExportImageindotnet6)
 
-N> Ensure the provided document path and output image saved locations in your application level.
+N> Ensure the application has appropriate read/write permissions for the document and image directories. For cross-platform deployments, refer to the [PDFium resolution guide](./resolve-pdfium-issue) to configure native dependencies.

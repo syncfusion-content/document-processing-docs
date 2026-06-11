@@ -3005,27 +3005,27 @@ using Syncfusion.Pdf.Parsing;
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 foreach (PdfAnnotation annot in loadedDocument.Pages[0].Annotations)
 {
-//Check for the Redaction annotation
-if (annot is PdfLoadedRedactionAnnotation)
-{
-PdfLoadedRedactionAnnotation redactAnnot = annot as PdfLoadedRedactionAnnotation;
-//Assign the Bounds values
-redactAnnot.Bounds = new RectangleF(50, 50, 100, 100);
-//Assign the OverlayText
-redactAnnot.OverlayText = "Redaction";
-//Assign the InnerColor
-redactAnnot.InnerColor = Color.Yellow;
-//Assign the BorderColor
-redactAnnot.BorderColor = Color.Green;
-//Assign the TextColor
-redactAnnot.TextColor = Color.Red; 
-//Assign the TextAlignment
-redactAnnot.TextAlignment = PdfTextAlignment.Right;
-//Assign the RepeatText
-redactAnnot.RepeatText = true;
-//Flatten the annotations in the page
-redactAnnot.Flatten = true;
-}
+    //Check for the Redaction annotation
+    if (annot is PdfLoadedRedactionAnnotation)
+    {
+        PdfLoadedRedactionAnnotation redactAnnot = annot as PdfLoadedRedactionAnnotation;
+        //Assign the Bounds values
+        redactAnnot.Bounds = new RectangleF(50, 50, 100, 100);
+        //Assign the OverlayText
+        redactAnnot.OverlayText = "Redaction";
+        //Assign the InnerColor
+        redactAnnot.InnerColor = Color.Yellow;
+        //Assign the BorderColor
+        redactAnnot.BorderColor = Color.Green;
+        //Assign the TextColor
+        redactAnnot.TextColor = Color.Red; 
+        //Assign the TextAlignment
+        redactAnnot.TextAlignment = PdfTextAlignment.Right;
+        //Assign the RepeatText
+        redactAnnot.RepeatText = true;
+        //Flatten the annotations in the page
+        redactAnnot.Flatten = true;
+    }
 }
 loadedDocument.Redact();
 
@@ -3049,27 +3049,27 @@ PdfLoadedDocument ldoc = new PdfLoadedDocument("input.pdf");
 //Get the pages
 foreach (PdfAnnotation annot in ldoc.Pages[0].Annotations)
 {
-//Check for the Redaction annotation
-if (annot is PdfLoadedRedactionAnnotation)
-{
-PdfLoadedRedactionAnnotation redactAnnot = annot as PdfLoadedRedactionAnnotation;
-//Assign the Bounds values
-redactAnnot.Bounds = new RectangleF(50, 50, 100, 100);
-//Assign the OverlayText
-redactAnnot.OverlayText = "Redaction";
-//Assign the InnerColor
-redactAnnot.InnerColor = Color.Yellow;
-//Assign the BorderColor
-redactAnnot.BorderColor = Color.Green;
-//Assign the TextColor
-redactAnnot.TextColor = Color.Red;
-//Assign the TextAlignment
-redactAnnot.TextAlignment = PdfTextAlignment.Right;
-//Assign the RepeatText
-redactAnnot.RepeatText = true;
-//Flatten the annotations in the page
-redactAnnot.Flatten = true;  
-}
+    //Check for the Redaction annotation
+    if (annot is PdfLoadedRedactionAnnotation)
+    {
+        PdfLoadedRedactionAnnotation redactAnnot = annot as PdfLoadedRedactionAnnotation;
+        //Assign the Bounds values
+        redactAnnot.Bounds = new RectangleF(50, 50, 100, 100);
+        //Assign the OverlayText
+        redactAnnot.OverlayText = "Redaction";
+        //Assign the InnerColor
+        redactAnnot.InnerColor = Color.Yellow;
+        //Assign the BorderColor
+        redactAnnot.BorderColor = Color.Green;
+        //Assign the TextColor
+        redactAnnot.TextColor = Color.Red;
+        //Assign the TextAlignment
+        redactAnnot.TextAlignment = PdfTextAlignment.Right;
+        //Assign the RepeatText
+        redactAnnot.RepeatText = true;
+        //Flatten the annotations in the page
+        redactAnnot.Flatten = true;  
+    }
 }
 //save the document
 ldoc.Save("output.pdf");
@@ -3090,26 +3090,26 @@ Imports Syncfusion.Pdf.Parsing
 Dim ldoc As PdfLoadedDocument = New PdfLoadedDocument("output.pdf")	
 'Get the pages
 For Each annot As PdfAnnotation In ldoc.Pages(0).Annotations
-'Check for the Redaction annotation	
-If TypeOf annot Is PdfLoadedRedactionAnnotation Then	
-Dim redactAnnot As PdfLoadedRedactionAnnotation = TryCast(annot, PdfLoadedRedactionAnnotation)	
-'Assign the Bounds values			
-redactAnnot.Bounds = New RectangleF(50, 50, 100, 100)			
-'Assign the OverlayText				
-redactAnnot.OverlayText = "Redaction"		
-'Assign the InnerColor			
-redactAnnot.InnerColor = Color.Yellow			
-'Assign the BorderColor 			
-redactAnnot.BorderColor = Color.Green				
-'Assign the TextColor			
-redactAnnot.TextColor = Color.Red		
-'Assign the TextAlignment	
-redactAnnot.TextAlignment = PdfTextAlignment.Right		
-'Assign the RepeatText		
-redactAnnot.RepeatText = True			
-'Flatten the annotations in the page			
-redactAnnot.Flatten = True			
-End If		
+    'Check for the Redaction annotation	
+    If TypeOf annot Is PdfLoadedRedactionAnnotation Then	
+        Dim redactAnnot As PdfLoadedRedactionAnnotation = TryCast(annot, PdfLoadedRedactionAnnotation)	
+        'Assign the Bounds values			
+        redactAnnot.Bounds = New RectangleF(50, 50, 100, 100)			
+        'Assign the OverlayText				
+        redactAnnot.OverlayText = "Redaction"		
+        'Assign the InnerColor			
+        redactAnnot.InnerColor = Color.Yellow			
+        'Assign the BorderColor 			
+        redactAnnot.BorderColor = Color.Green				
+        'Assign the TextColor			
+        redactAnnot.TextColor = Color.Red		
+        'Assign the TextAlignment	
+        redactAnnot.TextAlignment = PdfTextAlignment.Right		
+        'Assign the RepeatText		
+        redactAnnot.RepeatText = True			
+        'Flatten the annotations in the page			
+        redactAnnot.Flatten = True			
+    End If		
 Next
 		
 'save the document
@@ -3627,16 +3627,16 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
 //Get all the pages
 foreach (PdfLoadedPage loadedPage in loadedDocument.Pages)
 {
-//Flatten all the annotations in the page
-foreach (PdfLoadedAnnotation annotation in loadedPage.Annotations)
-{
-//Check for the circle annotation
-if (annotation is PdfLoadedCircleAnnotation)
-{
-//Flatten the circle annotation
-annotation.Flatten = true;
-}
-}
+    //Flatten all the annotations in the page
+    foreach (PdfLoadedAnnotation annotation in loadedPage.Annotations)
+    {
+        //Check for the circle annotation
+        if (annotation is PdfLoadedCircleAnnotation)
+        {
+            //Flatten the circle annotation
+            annotation.Flatten = true;
+        }
+    }
 }
 //Save and close the PDF document instance
 loadedDocument.Save("Output.pdf");
@@ -4003,7 +4003,7 @@ using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
     // Specify the annotation types to flatten
     PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
     {
-                PdfLoadedAnnotationType.PolygonAnnotation
+        PdfLoadedAnnotationType.PolygonAnnotation
     };
 
     // Flatten the selected annotations
@@ -4026,7 +4026,7 @@ using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
     // Specify the annotation types to flatten
     PdfLoadedAnnotationType[] pdfLoadedAnnotationTypes = new PdfLoadedAnnotationType[]
     {
-                PdfLoadedAnnotationType.PolygonAnnotation
+        PdfLoadedAnnotationType.PolygonAnnotation
     };
 
     // Flatten the selected annotations
@@ -5068,6 +5068,132 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Adding-transparency-for-annotations/.NET).
 
+## Setting Annotation Intent in PdfFreeTextAnnotation
+
+The [PdfAnnotationIntent.FreeTextTypeWriter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAnnotationIntent.html#fields) value specifies that a `free text annotation` in a PDF should behave like a `typewriter-style input field`. This intent is especially useful for simulating manual typing on forms or documents, enabling users to add clear, typed comments or responses.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Annotation/Setting-Annotation-Intent/.NET/Setting-Annotation-Intent/Program.cs" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page
+    PdfPage page = document.Pages.Add();
+
+    // Define the bounds for the annotation
+    RectangleF bounds = new RectangleF(100, 100, 200, 50);
+
+    // Create a FreeText annotation
+    PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(bounds);
+    // Add content.
+    freeText.Text = "Add Free Text Annotation with Intent";
+    // Set the annotation intent to TypeWriter
+    freeText.AnnotationIntent = PdfAnnotationIntent.FreeTextTypeWriter;
+
+    // Customize appearance
+    freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+    freeText.TextMarkupColor = Color.Black;
+    freeText.BorderColor = Color.Gray;
+    freeText.Color = Color.LightYellow;
+
+    // Add the annotation to the page
+    page.Annotations.Add(freeText);
+
+    // Save the document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
+// Create a new PDF document
+using (PdfDocument document = new PdfDocument())
+{
+    // Add a page
+    PdfPage page = document.Pages.Add();
+
+    // Define the bounds for the annotation
+    RectangleF bounds = new RectangleF(100, 100, 200, 50);
+
+    // Create a FreeText annotation
+    PdfFreeTextAnnotation freeText = new PdfFreeTextAnnotation(bounds);
+    // Add content.
+    freeText.Text = "Add Free Text Annotation with Intent";
+    // Set the annotation intent to TypeWriter
+    freeText.AnnotationIntent = PdfAnnotationIntent.FreeTextTypeWriter;
+
+    // Customize appearance
+    freeText.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 12);
+    freeText.TextMarkupColor = Color.Black;
+    freeText.BorderColor = Color.Gray;
+    freeText.Color = Color.LightYellow;
+
+    // Add the annotation to the page
+    page.Annotations.Add(freeText);
+
+    // Save the document
+    document.Save("Output.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
+
+' Create a new PDF document
+Using document As New PdfDocument()
+
+    ' Add a page
+    Dim page As PdfPage = document.Pages.Add()
+
+    ' Define the bounds for the annotation
+    Dim bounds As New RectangleF(100, 100, 200, 50)
+
+    ' Create a FreeText annotation
+    Dim freeText As New PdfFreeTextAnnotation(bounds)
+
+    ' Add content
+    freeText.Text = "Add Free Text Annotation with Intent"
+
+    ' Set the annotation intent to TypeWriter
+    freeText.AnnotationIntent = PdfAnnotationIntent.FreeTextTypeWriter
+
+    ' Customize appearance
+    freeText.Font = New PdfStandardFont(PdfFontFamily.Helvetica, 12)
+    freeText.TextMarkupColor = Color.Black
+    freeText.BorderColor = Color.Gray
+    freeText.Color = Color.LightYellow
+
+    ' Add the annotation to the page
+    page.Annotations.Add(freeText)
+
+    ' Save the document
+    document.Save("Output.pdf")
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Annotation/Setting-Annotation-Intent/.NET).
+
 ## Adding comments and review status to the PDF annotation
 
 The PDF annotations may have an author-specific state associated with them. The state is not specified in the annotation itself, but it represents a separate text annotation ([Popup Annotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html)).
@@ -5616,7 +5742,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The Essential<sup>&reg;</sup> PDF supports removing comments and reviewing status from the PDF annotation.
 
-The following code example explains how to remove comments using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_RemoveAt_System_Int32_) method from the existing PDF annotation.
+The following code example explains how to remove comments using [RemoveAt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPopupAnnotationCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPopupAnnotationCollection_RemoveAt_System_Int32_) method from the existing PDF annotation.
 
 {% tabs %}
 
@@ -5640,7 +5766,7 @@ PdfLoadedPopupAnnotationCollection commentsCollection = loadedRectangleAnnotatio
 commentsCollection.RemoveAt(0);
 
 //Save the document
-lDoc.Save("Output.pdf");
+ldoc.Save("Output.pdf");
 //Closes the document
 ldoc.Close(true);
 {% endhighlight %}
@@ -7039,4 +7165,3 @@ lDoc.Close(True)
 </tr>
 
 </table>
-

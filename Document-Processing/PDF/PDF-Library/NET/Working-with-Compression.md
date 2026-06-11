@@ -29,7 +29,7 @@ You can compress the existing PDF document by using [PdfLoadedDocument](https://
 
 N> 1.To compress an existing PDF document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
 N> 2.To ensure compatibility on **Linux** when performing image-based operations such as compression or rendering using `Syncfusion.Pdf.Imaging.Net.Core`, you must include the `SkiaSharp` library along with the `SkiaSharp.NativeAssets.Linux` package in your project.
-N> 3.For Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) for detailed information on the additional NuGet packages required.
+N> 3. For Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) for detailed information on the additional NuGet packages required.
 
 ## Compressing images with image quality
 
@@ -44,8 +44,8 @@ The following example code snippet illustrates how to compress the images in exi
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
 
-//Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
+//Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Create a new compression option.
 PdfCompressionOptions options = new PdfCompressionOptions();
@@ -55,11 +55,11 @@ options.CompressImages = true;
 options.ImageQuality = 50;
 
 //Assign the compression option to the document.
-loadedDocument.CompressionOptions = options;
+loadedDocument.Compress(options);
 
-//Save the PDF document.
+//Save the document.
 loadedDocument.Save("Output.pdf");
-//Close the document.
+//Close the documents.
 loadedDocument.Close(true);
 
 {% endhighlight %}
@@ -132,7 +132,7 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
 
 //Load the existing PDF document.
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 //Create a new compression option.
 PdfCompressionOptions options = new PdfCompressionOptions();
@@ -140,11 +140,11 @@ PdfCompressionOptions options = new PdfCompressionOptions();
 options.OptimizeFont = true;
 
 //Assign the compression option to the document.
-loadedDocument.CompressionOptions = options;
+loadedDocument.Compress(options);
 
-//Save the PDF document.
+//Save the document.
 loadedDocument.Save("Output.pdf");
-//Close the document.
+//Close the documents.
 loadedDocument.Close(true);
 
 {% endhighlight %}
@@ -223,11 +223,11 @@ PdfCompressionOptions options = new PdfCompressionOptions();
 options.OptimizePageContents = true;
 
 //Assign the compression option to the document.
-loadedDocument.CompressionOptions = options;
+loadedDocument.Compress(options);
 
-//Save the PDF document.
+//Save the document.
 loadedDocument.Save("Output.pdf");
-//Close the document.
+//Close the documents.
 loadedDocument.Close(true);
 
 {% endhighlight %}
@@ -304,11 +304,11 @@ PdfCompressionOptions options = new PdfCompressionOptions();
 options.RemoveMetadata = true;
 
 //Assign the compression option to the document.
-loadedDocument.CompressionOptions = options;
+loadedDocument.Compress(options);
 
-//Save the PDF document.
+//Save the document.
 loadedDocument.Save("Output.pdf");
-//Close the document.
+//Close the documents.
 loadedDocument.Close(true);
 
 {% endhighlight %}
@@ -395,16 +395,15 @@ PdfGraphics graphics = page.Graphics;
 PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
 string text = "Hello World!!!";
 PdfTextElement textElement = new PdfTextElement(text, font);
-
 PdfLayoutResult result = textElement.Draw(page, new RectangleF(0, 0, font.MeasureString(text).Width, page.GetClientSize().Height));
 for (int i = 0; i < 1000; i++)
 {
-result = textElement.Draw(result.Page, new RectangleF(0, result.Bounds.Bottom +10, font.MeasureString(text).Width, page.GetClientSize().Height));
+    result = textElement.Draw(result.Page, new RectangleF(0, result.Bounds.Bottom + 10, font.MeasureString(text).Width, page.GetClientSize().Height));
 }
 
 //Save the document.
 document.Save("Output.pdf");
-//Close the document.
+//Close the documents.
 document.Close(true);
 
 {% endhighlight %}
@@ -444,9 +443,9 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Drawing
 Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Parsing
-Imports System.Drawing
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -479,6 +478,25 @@ You can compress the existing PDF document by specifying the [PdfCompressionLeve
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+//Disable the incremental update
+loadedDocument.FileStructure.IncrementalUpdate = false;
+
+//Set the compression level
+loadedDocument.Compression = PdfCompressionLevel.Best;
+
+//Save and close the document
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
+
+{% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf;
@@ -528,12 +546,16 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Essential<sup>&reg;</sup> PDF allows you to compress/change the quality of the image in the PDF document by assigning [Quality](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_Quality) property available in the [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class. 
 
 {% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
+//PDF doesn't support direct image compression in C#/.NET cross platforms.
+
+{% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
-using System.Drawing;
 
 //Create a new PDF document.
 PdfDocument document = new PdfDocument();
@@ -558,9 +580,9 @@ document.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports System.Drawing
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
-Imports System.Drawing
 
 'Create a new PDF document.
 Dim document As New PdfDocument()
@@ -591,12 +613,18 @@ You can compress the images in an existing PDF document by extract the images us
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//PDF doesn't support direct image compression in C#/.NET cross platforms.
+
+{% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.Drawing;
 using Syncfusion.Pdf;
+using Syncfusion.Pdf.Exporting;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
-using System.Drawing;
 
 //Load the PDF document with images
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
@@ -628,9 +656,10 @@ loadedDocument.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Drawing
 Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Exporting
 Imports Syncfusion.Pdf.Graphics
-Imports System.Drawing
 Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document which consist of images

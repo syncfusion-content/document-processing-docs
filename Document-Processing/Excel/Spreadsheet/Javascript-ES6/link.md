@@ -57,14 +57,14 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/link-cs1/index.ts %}
+{% include code-snippet/spreadsheet/javascript-es6/link-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/excel/spreadsheet/javascript-es6/link-cs1/index.html %}
+{% include code-snippet/spreadsheet/javascript-es6/link-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/javascript-es6/link-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/link-cs1" %}
 
 ## Limitations
 

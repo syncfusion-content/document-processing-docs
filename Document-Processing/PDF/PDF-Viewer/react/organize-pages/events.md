@@ -1,0 +1,155 @@
+---
+layout: post
+title: Organize Pages Events in PDF Viewer | Syncfusion
+description: Learn how to organize pages Events in the React PDF viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
+platform: document-processing
+control: PDF Viewer
+documentation: ug
+domainurl: ##DomainURL##
+---
+
+# Organize Pages Events in PDF Viewer
+
+The PDF Viewer exposes events for the page organizer to track and respond to page manipulation actions (for example: rotate, rearrange, insert, delete, and copy).
+
+## pageOrganizerSaveAs
+
+The `pageOrganizerSaveAs` event is triggered when a save action is performed in the page organizer.
+
+ - Fires when the **Save as** button in the page organizer toolbar is clicked after modifying the document structure.
+
+The event arguments provide the necessary information about the save event:
+
+ - `fileName`: The name of the currently loaded PDF document.
+ - `downloadDocument`: A base64-encoded string containing the modified PDF document.
+ - `cancel`: Boolean; set to `true` to prevent the default save action.
+
+```typescript
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  LinkAnnotation,
+  ThumbnailView,
+  BookmarkView,
+  TextSelection,
+  Annotation,
+  FormDesigner,
+  FormFields,
+  PageOrganizer,
+  Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  let pdfviewer;
+  return (
+    <div>
+        <PdfViewerComponent
+          id="PdfViewer"
+          ref={(scope) => { pdfviewer = scope; }}
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+          pageOrganizerSaveAs={(args) => {
+            console.log('File Name is' + args.fileName);
+            console.log('Document data' + args.downloadDocument);
+          }}
+          style={{ height: '640px' }}
+        >
+          <Inject services={[
+            Toolbar,
+            Magnification,
+            Navigation,
+            LinkAnnotation,
+            ThumbnailView,
+            BookmarkView,
+            TextSelection,
+            Annotation,
+            FormDesigner,
+            FormFields,
+            PageOrganizer
+          ]} />
+        </PdfViewerComponent>
+      </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+```
+
+## pageOrganizerZoomChanged
+
+The `pageOrganizerZoomChanged` event fires when the page organizer zoom level changes.
+
+- This event occurs when the user interacts with the zoom slider in the page organizer. The `showImageZoomingSlider` property in `pageOrganizerSettings` must be set to `true` for the slider to appear.
+
+Event arguments:
+
+- `previousZoom`: The previous zoom value.
+- `currentZoom`: The current zoom value.
+
+```typescript
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  LinkAnnotation,
+  ThumbnailView,
+  BookmarkView,
+  TextSelection,
+  Annotation,
+  FormDesigner,
+  FormFields,
+  PageOrganizer,
+  Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+  let pdfviewer;
+  return (
+    <div>
+        <PdfViewerComponent
+          id="PdfViewer"
+          ref={(scope) => { pdfviewer = scope; }}
+          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+          pageOrganizerZoomChanged={(args) => {
+            console.log('Previous Zoom Value is' + args.previousZoom);
+            console.log('Current Zoom Value is' + args.currentZoom);
+          }}
+          pageOrganizerSettings={{ showImageZoomingSlider: true }}
+          style={{ height: '640px' }}
+        >
+          <Inject services={[
+            Toolbar,
+            Magnification,
+            Navigation,
+            LinkAnnotation,
+            ThumbnailView,
+            BookmarkView,
+            TextSelection,
+            Annotation,
+            FormDesigner,
+            FormFields,
+            PageOrganizer
+          ]} />
+        </PdfViewerComponent>
+      </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+```
+
+## Related event documentation
+
+- Overall Viewer events: [Event](../events)
+- Annotation events: [Annotation events](../annotation/annotation-event)
+- Form designer events: [Form field events](../form-designer/form-field-events)

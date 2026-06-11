@@ -17,20 +17,20 @@ The SfPdfViewer provides options to add and work with measurement annotations. U
 * Radius
 * Volume
 
-![Calibrate Annotation in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-annotation.png)
+![Calibrate Annotation in Blazor SfPdfViewer](../images/blazor-pdfviewer-calibrate-annotation.png)
 
 ## Adding measurement annotations to the PDF document
 
 Measurement annotations can be added using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-* Click the **measurement Annotation** dropdown button. A dropdown pop-up appears with the available measurement annotation types.
+* Click the **measurement Annotation** dropdown button. A dropdown appears with the available measurement annotation types.
 * Select a measurement type to enable that annotation mode.
 * Click on the page to add and measure using the selected annotation.
 
-When a measurement mode is enabled while in Pan mode, the SfPdfViewer switches to Text Select mode.
+When a measurement mode is enabled while in Pan mode, the viewer automatically switches to Text Select mode.
 
-![Adding Calibrate in Blazor SfPdfViewer Toolbar](../../blazor-classic/images/blazor-pdfviewer-add-calibrate-in-toolbar.png)
+![Adding Calibrate in Blazor SfPdfViewer Toolbar](../images/blazor-pdfviewer-add-calibrate-in-toolbar.png)
 
 
 ```cshtml
@@ -65,31 +65,31 @@ The fill color, stroke color, thickness, and opacity of a measurement annotation
 
 Edit the fill color of the annotation using the color palette in the Edit Color tool.
 
-![Editing Calibrate FillColor in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-fillcolor.png)
+![Editing Calibrate FillColor in Blazor SfPdfViewer](../images/blazor-pdfviewer-calibrate-fillcolor.png)
 
 ### Editing stroke color
 
 Edit the stroke color of the annotation using the color palette in the Edit Stroke Color tool.
 
-![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-stroke-color.png)
+![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../images/blazor-pdfviewer-calibrate-stroke-color.png)
 
 ### Editing thickness
 
 Edit the border thickness of the annotation using the range slider in the Edit Thickness tool.
 
-![Editing Calibrate Thickness in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-thickness.png)
+![Editing Calibrate Thickness in Blazor SfPdfViewer](../images/blazor-pdfviewer-calibrate-thickness.png)
 
 ### Editing opacity
 
 Edit the opacity of the annotation using the range slider in the Edit Opacity tool.
 
-![Editing Calibrate Opacity in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-opacity.png)
+![Editing Calibrate Opacity in Blazor SfPdfViewer](../images/blazor-pdfviewer-calibrate-opacity.png)
 
 ### Editing the line properties
 
 The properties of line-based annotations such as Distance and Perimeter can be edited using the Line Properties window. Open it by selecting the Properties option from the context menu when right-clicking a distance or perimeter annotation.
 
-![Editing Calibrate Property in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-property.png)
+![Editing Calibrate Property in Blazor SfPdfViewer](../images/blazor-pdfviewer-calibrate-property.png)
 
 ## Setting default properties during control initialization
 
@@ -154,7 +154,7 @@ Set default properties for measurement annotations before initializing the contr
 
 Modify the scale ratio and unit of measurement using the Scale Ratio option in the context menu of the SfPdfViewer.
 
-![Editing Calibrate Scale Ratio in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-scaleratio.png)
+![Editing Calibrate Scale Ratio in Blazor SfPdfViewer](../images/blazor-pdfviewer-calibrate-scaleratio.png)
 
 The supported units of measurement for measurement annotations are:
 
@@ -165,7 +165,7 @@ The supported units of measurement for measurement annotations are:
 * Pica
 * Feet
 
-![Calibrate Scale Dialog in Blazor SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-calibrate-scale-dialog.png)
+![Calibrate Scale Dialog in Blazor SfPdfViewer](../images/blazor-pdfviewer-calibrate-scale-dialog.png)
 
 ## Setting default scale ratio settings during control initialization
 
@@ -219,7 +219,7 @@ The following example demonstrates adding a measurement annotation to a PDF docu
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type of measurement annotation like radius, distance, perimeter, area, volume
         annotation.Type = AnnotationType.Radius;
-        // Set the PageNumber starts from 0. So, if set 0 it represents the page 1.
+        // Page numbers start from 0. So, if set to 0 it represents page 1.
         annotation.PageNumber = 0;
 
         // Bound of the radius annotation

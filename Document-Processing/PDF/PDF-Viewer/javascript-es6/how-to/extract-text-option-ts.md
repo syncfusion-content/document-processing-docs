@@ -1,30 +1,22 @@
 ---
 layout: post
-title: Extract Text Option in Syncfusion Typescript Pdfviewer Control | Syncfusion
-description: Learn about the `extractTextOption` in Syncfusion #Platform_Name## Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Configure extractTextOption in TypeScript PDF Viewer | Syncfusion
+description: Learn how to use the extractTextOption property in the Syncfusion TypeScript PDF Viewer to control text extraction and memory usage.
 platform: document-processing
-control: Extract Text Option
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
+# Extract text option in the JavaScript PDF Viewer
 
-# Extract Text Option in Syncfusion Typescript Pdfviewer Control
-
-The `extractTextOption` property in the Syncfusion PdfViewer control allows you to optimize memory usage by controlling the level of text extraction. This setting influences the data returned in the `extractTextCompleted` event. You can select one of the following options to determine the kind of text extraction and layout information to retrieve.
+The `extractTextOption` property controls the amount of text and layout information returned by the viewer. Adjusting this value helps balance memory usage and the level of detail required for downstream processing. The viewer exposes four options:
 
 ### Available Options:
 
-**None:** No text information is extracted or returned. This is useful when you want to optimize memory usage and don't need any text data.
-
-**TextOnly:** Extracts only the plain text from the document. This option excludes any layout or positional information.
-
-**BoundsOnly:** Extracts layout information, such as bounds or coordinates, without including the plain text data.
-
-**TextAndBounds:** Extracts both the plain text and the layout (bounds) information, which is the default behavior.
-
-The following example demonstrates how to configure the `extractTextOption` property to control the level of text extraction:
+- **None** — Do not extract or return any text or layout data. Use this option to minimize memory usage when textual information is not required.
+- **TextOnly** — Return plain text only; layout and bounds are omitted. Note: using `TextOnly` may disable some viewer text features such as synchronous `findText`; use `findTextAsync` when asynchronous search is required.
+- **BoundsOnly** — Return layout and positional data (bounds) without the plain text content.
+- **TextAndBounds** — Return both plain text and its positional information (bounds). This is the default and is useful when both content and layout are required.
 
 ```ts
 
@@ -36,7 +28,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailVi
 
 let viewer: PdfViewer = new PdfViewer();
 viewer.documentPath= 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-viewer.resourceUrl= "https://cdn.syncfusion.com/ej2/29.1.33/dist/ej2-pdfviewer-lib";
+viewer.resourceUrl= "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
 viewer.extractTextOption = ExtractTextOption.None; // Options: 'None', 'TextOnly', 'BoundsOnly', 'TextAndBounds'
 viewer.appendTo("#PdfViewer");
 
@@ -51,6 +43,14 @@ viewer.appendTo("#PdfViewer");
 
 **extractTextOption.None:** This option does not extract or return any text or layout information. It is used to optimize memory usage when no text extraction is necessary. This setting is only relevant for the `extractTextCompleted` event and cannot be used with the `ExtractText` method.
 
-N> Text Search: When using the `extractTextOption.TextOnly` and `extractTextOption.None` option, the findText method will not work. Instead, you should use the findTextAsync method to perform text searches asynchronously.
+N> Text search: When using the `extractTextOption.TextOnly` or `extractTextOption.None` options, the `findText` method is unavailable. Use the `findTextAsync` method to perform text searches asynchronously.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/)
+[View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/Extract%20Text%20Option)
+
+## See Also
+
+[Text Search Features](../text-search/text-search-features)
+[Find Text](../text-search/find-text)
+[Text Search Events](../text-search/text-search-events)
+[Extract Text](../how-to/extract-text-ts.md)
+[Extract Text Completed](./extract-text-completed-ts)

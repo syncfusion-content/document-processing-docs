@@ -1,27 +1,21 @@
 ---
 layout: post
-title: Add Annotation in Text Search in ASP.NET Core | Syncfusion
-description: Learn how to add rectangle annotations using search text bounds in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Add Rectangle Annotation via Text Search in ASP.NET Core | Syncfusion
+description: Learn to add rectangle annotations using text search bounds in the Syncfusion ASP.NET Core PDF Viewer component, including initialization and search controls.
 platform: document-processing
-control: Retrieve Annotation Coordinates
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
-# Add Rectangle Annotations Using Search Text Bounds in PDF Viewer
+# Add rectangle annotations using text search in ASP.NET Core
 
-## Overview
+Highlight search results automatically by adding rectangle annotations at match locations. This guide explains how to use text search bounds to programmatically emphasize document content in the ASP.NET Core PDF Viewer.
 
-This guide demonstrates how to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer. This technique is useful for emphasizing search results with visual markers in annotation-supported applications.
+## Add rectangle annotations on search result highlights
 
-## Steps to Add Rectangle Annotations on Search Result Highlight
+**Step 1:** Follow the [Syncfusion PDF Viewer Getting Started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer sample.
 
-**Step 1:** Set Up the PDF Viewer in Your ASP.NET Core Project
-
-Follow the steps provided in the [Syncfusion PDF Viewer Getting Started Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a basic PDF Viewer sample.
-
-**Step 2:** Set Up the PdfViewer Component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
-
+**Step 2:** Configure the PDF Viewer to listen for the `textSearchHighlight` event and add annotations based on the provided bounds. Use the following code snippet in the Razor view:
 
 ```cs
 
@@ -80,6 +74,10 @@ Follow the steps provided in the [Syncfusion PDF Viewer Getting Started Guide](h
 
 ```
 
-By following this guide, you will enable the PDF Viewer to add rectangle annotations at search result locations, thus increasing the visibility of search results in your application.
+**Step 3:** The `handleTextSearchHighlight` callback retrieves search match bounds and adds a rectangle annotation using the `annotationModule.addAnnotation()` method.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)
+**Step 4:** Ensure the Razor markup includes UI controls for search operations, such as search, next, and cancel buttons.
+
+By following these steps, rectangle annotations can be automatically added to all search results, enhancing content discoverability in the application.
+
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

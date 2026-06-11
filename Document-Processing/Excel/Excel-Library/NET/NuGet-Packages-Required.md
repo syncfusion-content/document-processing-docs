@@ -48,17 +48,6 @@ Install-Package Syncfusion.XlsIO.Wpf
 </tr>
 <tr>
 <td>
-.NET Framework 4.0 Client Profile
-</td>
-<td>
-Syncfusion.XlsIO.ClientProfile.nupkg
-</td>
-<td>
-Install-Package Syncfusion.XlsIO.ClientProfile
-</td>
-</tr>
-<tr>
-<td>
 {{'[ASP.NET MVC4](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-asp-net-mvc-c-sharp)'| markdownify }}
 </td>
 <td>
@@ -204,17 +193,6 @@ Install-Package Syncfusion.ExcelToPdfConverter.Wpf
 </tr>
 <tr>
 <td>
-.NET Framework 3.5 or 4.0 Client Profile
-</td>
-<td>
-Syncfusion.ExcelToPdfConverter.ClientProfile.nupkg
-</td>
-<td>
-Install-Package Syncfusion.ExcelToPdfConverter.ClientProfile
-</td>
-</tr>
-<tr>
-<td>
 {{'[ASP.NET MVC4](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-asp-net-mvc)'|  markdownify }}
 </td>
 <td>
@@ -342,17 +320,6 @@ Syncfusion.XlsIO.Wpf.nupkg
 </td>
 <td>
 Install-Package Syncfusion.XlsIO.Wpf
-</td>
-</tr>
-<tr>
-<td>
-.NET Framework 3.5 or 4.0 Client Profile
-</td>
-<td>
-Syncfusion.XlsIO.ClientProfile.nupkg
-</td>
-<td>
-Install-Package Syncfusion.XlsIO.ClientProfile
 </td>
 </tr>
 <tr>
@@ -866,7 +833,7 @@ Applicable Linux environments
 </thead>
 <tr>
 <td>
-{{'[SkiaSharp.NativeAssets.Linux v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.116.1)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.0.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.1)' | markdownify}}
+{{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.0.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.0.1)' | markdownify}}
 </td>
 <td>
 Azure App Service<br/>
@@ -875,7 +842,7 @@ Google App Engine
 </tr>
 <tr>
 <td>
-{{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.116.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.116.1)' | markdownify}}
+{{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)' | markdownify}}
 </td>
 <td>
 AWS Lambda<br/>

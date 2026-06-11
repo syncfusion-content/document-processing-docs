@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Globalization in ASP.NET Core Pdfviewer Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Globalization and Localization in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to implement globalization and localization in the ASP.NET Core PDF Viewer component, including localization strings and culture settings.
 platform: document-processing
-control: Globalization
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
+# Globalization and Localization in ASP.NET Core PDF Viewer
 
-# Localization in ASP.NET Core PDF Viewer control
+The PDF Viewer component supports globalization, enabling users in different regions to view the interface in their native languages. Localization is achieved through a collection of culture-specific strings that translate all UI text, labels, messages, and tooltips. The component defaults to English (en-US), but you can configure it to display in any supported language by setting the `locale` property.
 
-The text contents provided in the PDF Viewer can be localized using the collection of localized strings for different cultures. By default, the PDF Viewer is localized in “__en-US__”.
+## Default localization strings
 
-The following table shows the default text values used in PDF Viewer in 'en-US' culture:
+The following table lists the default text values used by the PDF Viewer in the English (en-US) culture. These strings cover all UI elements including buttons, tooltips, dialogs, and messages:
 
 |Keywords|Values|
 |---|---|
@@ -267,7 +267,11 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 |Exact Matches|EXACT MATCHES|
 |Total Matches|TOTAL MATCHES|
 
-The different locale value for the PDF Viewer can be specified using the locale property.
+## Setting the locale
+
+The `locale` property enables you to specify the language and culture for the PDF Viewer interface. By setting this property, all UI elements automatically display in the selected language, provided the localization strings are defined for that locale.
+
+**Example: Setting locale to Arabic (ar-AE)**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -297,7 +301,15 @@ The different locale value for the PDF Viewer can be specified using the locale 
 {% endhighlight %}
 {% endtabs %}
 
-You have to map the text content based on locale like following script in sample level.,
+## Custom localization
+
+### Defining custom locale strings
+
+To use a locale other than the default en-US, or to customize the localization strings, map the text content for the selected locale using the `ej.base.L10n.load()` method. This method registers the localized strings for your chosen locale, and the PDF Viewer will use them when displaying the interface.
+
+**Example: Custom Arabic (ar-AE) localization**
+
+Add the following script to register custom localization strings for the Arabic (UAE) locale:
 
 ```html
 <script>

@@ -16,6 +16,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 4: Include the following namespaces in the *Program.cs* file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf.Graphics;
@@ -23,11 +24,11 @@ using Syncfusion.Pdf;
 using Syncfusion.Drawing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Include the below code snippet in *Program.cs* to create an PDF file.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Getting%20Started/Console/.NET/Create_PDF/Create_PDF/Program.cs" %}
  
 //Create a new PDF document.
@@ -47,12 +48,11 @@ document.Save(fileStream);
 document.Close(true);
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 6: Build the project.
 
-To build the project, go to the `Build` menu and select `Build Solution`, or simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>.
+Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> to build the project.
 
 Step 7: Run the project.
 

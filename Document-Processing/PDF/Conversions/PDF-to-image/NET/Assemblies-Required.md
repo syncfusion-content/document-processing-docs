@@ -27,13 +27,18 @@ Syncfusion.PdfToImageConverter.Base
 </tr>
 <tr>
 <tr>
+<td rowspan="2">Blazor, .NET Core and .NET Platforms</td>
 <td>
-ASP.NET Core and Blazor
+Syncfusion.PdfToImageConverter.Portable<br />
+SkiaSharp<br />
+Syncfusion.SkiaSharpHelper.Portable
 </td>
+</tr>
+<tr>
 <td>
-Syncfusion.PdfToImageConverter.Portable<br/>
-SkiaSharp<br/>
-Syncfusion.SkiaSharpHelper.Net.Core
+Syncfusion.PdfToImageConverter.NET<br />
+SkiaSharp<br />
+Syncfusion.SkiaSharpHelper.NET
 </td>
 </tr>
 </table>

@@ -4,30 +4,29 @@ title: Toolbar in Typescript Pdfviewer control | Syncfusion
 description: Learn here all about Toolbar in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Toolbar
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Built-In Toolbar in Typescript Pdfviewer control
+# Built-In Toolbar in TypeScript PDF Viewer
 
-The PDF Viewer comes with a powerful built-in toolbar to execute important actions such as page navigation, text search,view mode,download,print,bookmark, and thumbnails.
+The PDF Viewer includes a built-in toolbar for common actions such as page navigation, text search, view mode, download, print, bookmarks, and thumbnails.
 
 The following table shows built-in toolbar items and its actions:-
 
 | Option | Description |
 |---|---|
-| OpenOption | This option provides an action to load the PDF documents to the PDF Viewer.|
-| PageNavigationTool | This option provides an action to navigate the pages in the PDF Viewer. It contains GoToFirstPage,GoToLastPage,GotoPage,GoToNext, and GoToLast tools.|
-| MagnificationTool | This option provides an action to magnify the pages either with predefined or user defined zoom factors in the PDF Viewer. Contains ZoomIn, ZoomOut, Zoom, FitPage and FitWidth tools.|
-| PanTool | This option provides an action for panning the pages in the PDF Viewer.|
-| SelectionTool | This option provides an action to enable/disable the text selection in the PDF Viewer.|
-| SearchOption | This option provides an action to search a word in the PDF documents.|
-| PrintOption | This option provides an action to print the PDF document being loaded in the PDF Viewer.|
-| DownloadOption |This Download option provides an action to download the PDF document that has been loaded in the PDF Viewer.|
-| UndoRedoTool | This tool provides options to undo and redo the annotation actions performed in the PDF Viewer.|
-| AnnotationEditTool | This tool provides options to enable or disable the edit mode of annotation in the PDF Viewer.|
-| FormDesignerEditTool | This tool provides options to enable or disable the edit mode of form fields in the PDF Viewer.|
+| OpenOption | Loads PDF documents into the PDF Viewer. |
+| PageNavigationTool | Group of page navigation tools (GoToFirstPage, GoToLastPage, GoToPage, GoToNext, GoToPrevious). |
+| MagnificationTool | Provides zoom controls and fit options (ZoomIn, ZoomOut, Zoom, FitPage, FitWidth). |
+| PanTool | Enables panning of pages. |
+| SelectionTool | Enables or disables text selection. |
+| SearchOption | Opens the search panel to find text in the document. |
+| PrintOption | Prints the loaded PDF. |
+| DownloadOption | Downloads the current PDF document. |
+| UndoRedoTool | Provides undo and redo for annotation actions. |
+| AnnotationEditTool | Toggles annotation edit mode. |
+| FormDesignerEditTool | Toggles form designer/edit mode for form fields. |
 
 ## Show/Hide the default toolbar
 
@@ -115,11 +114,10 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.ts` file
+N> To set up the **server-backed PDF Viewer**, add the following `serviceUrl` in the `index.html` file:
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-hide-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-hide-cs1" %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
@@ -178,10 +176,10 @@ document.getElementById('set').addEventListener('click', ()=> {
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
-Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) in the `index.ts` file
+Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-method-cs1/index.html" %}
+{% previewsample "/document-Processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-method-cs1" %}
 
 ## Show/Hide the default toolbaritem
 
@@ -244,7 +242,7 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-items-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-items-cs1" %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
@@ -306,17 +304,17 @@ N> To set up the **server-backed PDF Viewer**,
 Add the below `serviceUrl` in the `index.ts` file
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
-{% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-items-method-cs1/index.html" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-items-method-cs1" %}
 
 ## Customize Built-In Toolbar
 
 PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/documentation/api/pdfviewer/customToolbarItemModel/) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbarSettings/) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/documentation/api/toolbar/clickEventArgs/).
+* Add - New items can defined by [**CustomToolbarItemModel**](https://ej2.syncfusion.com/documentation/api/pdfviewer/customToolbarItemModel) and with existing items in [**ToolbarSettings**](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbarSettings) property. Newly added item click action can be defined in [`toolbarclick`](https://ej2.syncfusion.com/documentation/api/toolbar/clickEventArgs).
 
-* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbarSettings/) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbarItem/).
+* Show, Hide - Existing items can be shown or hidden using the [`ToolbarSettings`](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbarSettings) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbarItem).
 
-* Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
+* Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbar#enabletoolbaritem)
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -1528,7 +1526,7 @@ Sample :
 
 ## How to customize the default toolbar with desired tools
 
-Customize the default toolbar with the required tools by using the [toolbarSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#toolbarsettings) class of the PDF viewer.
+Customize the default toolbar with the required tools by using the [toolbarSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer#toolbarsettings) class of the PDF viewer.
 
 The following code illustrates how to render the default toolbar with specific tools.
 

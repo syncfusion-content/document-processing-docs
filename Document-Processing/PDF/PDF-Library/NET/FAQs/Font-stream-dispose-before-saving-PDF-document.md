@@ -41,7 +41,10 @@ using (FileStream fontStream = new FileStream("path_to_custom_font.ttf", FileMod
         page.Graphics.DrawString("Hello, Syncfusion PDF!", font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(100, 100));
 
         // Save the document to a file
-        document.Save("Output.pdf");
+        using (FileStream fs = new FileStream("output.pdf", FileMode.Create, FileAccess.Write))
+        {
+            document.Save(fs);
+        }
     } // PdfDocument is disposed here
 } // Font stream is disposed here after saving
 

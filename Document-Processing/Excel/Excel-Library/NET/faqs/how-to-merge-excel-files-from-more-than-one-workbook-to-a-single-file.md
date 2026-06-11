@@ -26,14 +26,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Enumerates all the workbook files from the data folder and clone and merge it into new workbook
   foreach (string file in files)
   {
-    //Loads a template document from data folder
-    FileStream inputStream = new FileStream(file, FileMode.Open, FileAccess.Read);
-
-    //Opens the template workbook from stream
-    IWorkbook tempWorkbook = application.Workbooks.Open(inputStream);
-
-    //Disposes the stream
-    inputStream.Dispose();
+    IWorkbook tempWorkbook = application.Workbooks.Open(file);
 
     //Cloning all workbook's worksheets
     workbook.Worksheets.AddCopy(tempWorkbook.Worksheets);
@@ -42,8 +35,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Removing the first empty worksheet
   workbook.Worksheets.Remove(0);
 
-  FileStream outputStream = new FileStream("MergingFiles.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream);
+  workbook.SaveAs("MergingFiles.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }
@@ -64,14 +56,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Enumerates all the workbook files from the data folder and clone and merge it into new workbook
   foreach (string file in files)
   {
-    //Loads the all template document from data folder
-	FileStream inputStream = new FileStream(file, FileMode.Open, FileAccess.Read);
-
-	//Opens the template workbook from stream
-	IWorkbook tempWorkbook = application.Workbooks.Open(inputStream);
-
-	//Disposes the stream
-	inputStream.Dispose();
+    IWorkbook tempWorkbook = application.Workbooks.Open(file);
 
 	//Cloning all workbook's worksheets
 	workbook.Worksheets.AddCopy(tempWorkbook.Worksheets);

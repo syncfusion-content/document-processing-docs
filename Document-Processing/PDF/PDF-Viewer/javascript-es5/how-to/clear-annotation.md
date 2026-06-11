@@ -1,19 +1,18 @@
 ---
 layout: post
-title: Clear annotation in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Clear annotation in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Clear annotations in JavaScript PDF Viewer | Syncfusion
+description: Learn how to clear all annotations or delete specific annotations in the JavaScript PDF Viewer using deleteAnnotations and deleteAnnotationById.
 platform: document-processing
-control: Clear annotation
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clear annotation in Javascript Pdfviewer control
+# Clear annotations in JavaScript PDF Viewer
 
-To clear all the annotations in a PDF document using the Syncfusion PDF Viewer, you can use the [**deleteAnnotations**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#deleteannotations) method. This method is used to clear all the annotations present in the currently loaded document.
+Use the [deleteAnnotations](https://ej2.syncfusion.com/documentation/api/pdfviewer/#deleteannotations) method to remove all annotations from the currently loaded document.
 
-Here is an example of how you can clear all the annotations present in the currently loaded document:
+Example: clear all annotations in the loaded document
 
 ```
 
@@ -23,16 +22,16 @@ Here is an example of how you can clear all the annotations present in the curre
 
 ```javascript
 
-//clear Annotations.
-document.getElementById('deleteAnnotations').addEventListener('click',()=> {
+// Attach a click handler to clear annotations
+document.getElementById('deleteAnnotations').addEventListener('click', () => {
   viewer.deleteAnnotations();
-})
+});
 
 ```
 
-We can also delete specific annotations with the **deleteAnnotationById()** method. This method is used to delete a specific annotation using its id.
+To remove a specific annotation, use the `deleteAnnotationById` method and provide the target annotation's id.
 
-Here is an example of how you can delete specific annotations with the **deleteAnnotationById** method:
+Example: delete a specific annotation by id
 
 ```
 
@@ -42,7 +41,7 @@ Here is an example of how you can delete specific annotations with the **deleteA
 
 ```javascript
 
-//Delete Annotation by ID.
+// Delete a specific annotation by id
 document.getElementById('deleteAnnotationbyId').addEventListener('click', () => {
     viewer.annotationModule.deleteAnnotationById(
       viewer.annotationCollection[0].annotationId
@@ -51,4 +50,4 @@ document.getElementById('deleteAnnotationbyId').addEventListener('click', () => 
 
 ```
 
-Find the sample [how to clear annotations using deleteAnnotations](https://stackblitz.com/edit/js-mctbeq?file=index.js)
+Sample: [How to clear annotations using deleteAnnotations](https://stackblitz.com/edit/js-mctbeq?file=index.js)

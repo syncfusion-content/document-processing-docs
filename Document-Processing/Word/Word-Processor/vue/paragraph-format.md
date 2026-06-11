@@ -67,8 +67,9 @@ You can define the line spacing and its type for selected paragraphs using the f
 //Set line spacing type.
 this.$refs.documenteditor.ej2Instances.selection.paragraphFormat.lineSpacingType='AtLeast';
 
-//Set line spacing.
-this.$refs.documenteditor.ej2Instances.selection.paragraphFormat.lineSpacing= 6;
+// Set line spacing value (supports both integer and float)
+this.$refs.documenteditor.ej2Instances.selection.paragraphFormat.lineSpacing= 6; // Integer value
+this.$refs.documenteditor.ej2Instances.selection.paragraphFormat.lineSpacing= 6.5; // Float value
 ```
 
 ## Paragraph spacing

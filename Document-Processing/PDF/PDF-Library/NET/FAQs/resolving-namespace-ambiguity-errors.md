@@ -5,7 +5,7 @@ platform: document-processing
 documentation: UG
 ---
 
-# Resolving PDF Namespace Conflicts
+# Resolving Namespace Conflicts in Syncfusion® PDF Packages
 
 ## Conflict Scenario
 
@@ -107,7 +107,7 @@ Here are a few examples of how to properly reference Syncfusion packages in your
 **.NET 8 Web API (Headless Service)**
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight XAML %} 
 
 <!-- .NET 8 Web API -->
 <ItemGroup>
@@ -128,7 +128,7 @@ If your project already contains conflicting packages, you can follow these step
 First, remove any conflicting packages from your project. For example:
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %} 
 dotnet remove package Syncfusion.Pdf.Net.Core
 dotnet remove package Syncfusion.Pdf.WinForms
 {% endhighlight %}

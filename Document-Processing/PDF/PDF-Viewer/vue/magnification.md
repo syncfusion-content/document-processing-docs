@@ -1,19 +1,18 @@
 ---
 layout: post
-title: Magnification in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Magnification in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Magnification
+title: Magnification in Vue PDF Viewer | Syncfusion
+description: Learn how to enable and use magnification in the Syncfusion Vue PDF Viewer, including Zoom In, Zoom Out, Fit to Page, and Fit to Width options.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Magnification in Vue Pdfviewer component
+# Magnification in Vue PDF viewer control
 
-The magnification tools of the PDF Viewer contains ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth tools in the
-default toolbar. The PDF Viewer also has an option to show or hide the magnification tools in the default toolbar.
+The PDF Viewer includes magnification controls—ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth—in the default toolbar. The magnification controls can be shown or hidden in the toolbar.
 
-The following code snippet describes how to enable the magnification in PDF Viewer.
+The following examples show how to enable magnification in the PDF Viewer.
 
 
 {% tabs %}
@@ -35,7 +34,7 @@ import {
 import { provide } from 'vue';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
   Annotation, ThumbnailView, Print, TextSelection, TextSearch])
@@ -67,7 +66,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
@@ -140,17 +139,18 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-The following magnification options are available in the default toolbar of PDF Viewer,
+The following magnification options are available in the default toolbar:
 
-* [**ZoomIn**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#zoomin):- Zoom in from the current zoom value of PDF pages.
-* [**ZoomOut**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#zoomout):- Zoom out from the current zoom value of PDF pages.
-* [**Zoom**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#zoomto):- Zoom to specific zoom value of PDF pages.
-* [**FitPage**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#fittopage):- Fits the page width with in the available view port size.
-* [**FitWidth**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/magnification/#fittowidth):- Fits the view port width based on the page content size.
+* **ZoomIn**: Zoom in from the current zoom value.
+* **ZoomOut**: Zoom out from the current zoom value.
+* **Zoom**: Select a specific zoom level.
+* **FitPage**: Fit the page height within the available viewport.
+* **FitWidth**: Fit the page width to the viewport.
+* **Auto**: Automatically adjust zoom to fit content when the viewport size changes.
 
-![Alt text ](./images/zoom.png)
+![PDF Viewer magnification controls showing toolbar buttons](./images/zoom.png)
 
->PDF Viewer can support the zoom value ranges from 10 to 400.
+N> The PDF Viewer supports zoom values from 10% to 400%.
 
 ## See also
 

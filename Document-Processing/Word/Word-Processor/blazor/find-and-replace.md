@@ -9,15 +9,15 @@ documentation: ug
 
 # Find and Replace in Blazor DocumentEditor Component
 
-Documents can be long, and you might need to search through the text to find and select specific words, text sequences, sentences, or paragraphs and then replace them with the desired content. This Word processor (DocumentEditor) provides a built-in navigation pane like Microsoft Word on the left of the editor.
+In long documents, it may be necessary to search for specific text and replace it with the desired content. This Word processor (DocumentEditor) provides a built-in navigation pane like Microsoft Word on the left of the editor.
 
-You can use the search box at the top of this navigation pane to find all the instances of a specific word or phrase in the document. When you enter a word in the search box and perform search, it highlights all the occurrences of those words in the document and displays them below the search options in the pane. When you click on a search result, the cursor or selection move directly to that location in the document.
+The search box at the top of the navigation pane can be used to find all instances of a specific word or phrase. Entering a word in the search box and performing a search highlights all occurrences in the document, which are then displayed in the pane. Clicking a search result moves the cursor directly to that location in the document.
 
-You can open the navigation pane using the `Ctrl+F` shortcut key and close using the `ESC` key.
+The navigation pane can be opened using the `Ctrl+F` shortcut key and closed using the `ESC` key.
 
 ## Show or hide navigation pane
 
-You can programmatically toggle the visibility of navigation pane using the `ShowOptionsPane()` method.
+The visibility of the navigation pane can be toggled programmatically using the `ShowOptionsPane()` method.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor

@@ -1,27 +1,24 @@
 ---
 layout: post
-title: Retrieving Base64 Value in EJ2 ASP.NET MVC PdfViewer | Syncfusion
-description: Learn how to retrieve the Base64 value in the Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Get Base64 from loaded PDF in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to retrieve the Base64 value of a loaded PDF in the Syncfusion ASP.NET MVC PDF Viewer using saveAsBlob and FileReader.
 platform: document-processing
-control: How to retrieve Base64
+control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Retrieving Base64 Value from a PDF in PDF Viewer
+# Get Base64 value from a loaded PDF in ASP.NET MVC
+
 ### Overview
 
-This guide demonstrates how to fetch the base64-encoded value of a PDF document loaded in the Syncfusion PDF Viewer using ASP.NET MVC. This feature is beneficial for transferring the PDF data as a Base64 string or performing client-side processing.
+This guide shows how to get the base64-encoded value of a PDF loaded in the Syncfusion ASP.NET MVC PDF Viewer. Use this to send the PDF as a Base64 string or process it on the client.
 
-### How to Retrieve Base64 Value
+### How to retrieve Base64 value
 
-**Step 1:** Set Up the PdfViewer in Your ASP.NET MVC Project
+**Step 1:** Follow the steps in the [Syncfusion ASP.NET MVC PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a simple viewer sample.
 
- Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
-
-**Step 2:** Add Button and Function for Fetching Base64 Value
-
-Incorporate a button in your view to enable users to start the process of converting the loaded PDF document into a Base64 string.
+**Step 2:** Add a button to trigger the Base64 conversion.
 
 ```html
 <div>
@@ -33,7 +30,7 @@ Incorporate a button in your view to enable users to start the process of conver
 </div>
 
 <!-- Ensure necessary Syncfusion scripts and styles are included -->
-<script src="https://cdn.syncfusion.com/ej2/27.2.4/dist/ej2.min.js"></script>
+<script src="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2.min.js"></script>
 
 <script type="text/javascript">
     window.onload = function () {
@@ -61,8 +58,9 @@ Incorporate a button in your view to enable users to start the process of conver
 </script>
 
 ```
+
 ### Conclusion
 
-By following these steps, you can easily convert and retrieve a PDF document's Base64 string. This conversion is particularly useful for transmitting PDF data or integrating with systems that require Base64 encoding.
+With these steps, a loaded PDF can be converted to a Base64 string on button click for transfer or additional processing.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to)

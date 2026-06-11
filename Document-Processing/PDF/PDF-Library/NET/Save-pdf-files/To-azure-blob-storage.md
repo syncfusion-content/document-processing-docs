@@ -5,9 +5,9 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Save PDF to Azure Blob storage
+# Save PDF file to Azure Blob Storage
 
-To save a PDF file to Azure blob storage, you can follow the steps below
+To save a PDF file to Azure Blob Storage, you can follow the steps below
 
 Step 1: Create a simple console application
 
@@ -18,11 +18,9 @@ Step 3: Install the [Syncfusion.Pdf.Net.Core ](https://www.nuget.org/packages/Sy
 <br><br>
 ![NuGet package installation](Save-PDF-Images/Microsoft.Azure.Storage.Blob-nuget.png)
 
-
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.Pdf;
@@ -32,14 +30,11 @@ using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
 
 {% endhighlight %}
-
 {% endtabs %}
 
-
-Step 5: Add the below code example to create a simple PDF and save in Azure blob storage.
+Step 5: Add the below code example to create a simple PDF and save in Azure Blob Storage.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 // Create a new PDF document
@@ -58,8 +53,6 @@ using (PdfDocument doc = new PdfDocument())
     doc.Save(stream);
     // Write the contents of the memory stream to a file named "sample.pdf".
     File.WriteAllBytes("sample.pdf", stream.ToArray());
-    // Close the document
-    doc.Close(true);
 }
 // Parse the connection string for the Azure Storage Account.
 CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
@@ -78,7 +71,6 @@ using (var fileStream = File.OpenRead("sample.pdf"))
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Save-PDF-file/To%20Azure%20Blob%20Storage).

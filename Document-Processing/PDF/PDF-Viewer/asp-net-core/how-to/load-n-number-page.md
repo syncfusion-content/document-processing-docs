@@ -1,20 +1,25 @@
 ---
 layout: post
-title: Load N number of pages on initial loading in ASP.NET Core Pdfviewer Component
-description: Learn here all about Load N number of pages on initial loading in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Load N number of pages on initial load in PDF Viewer | Syncfusion
+description: Learn how to configure the ASP.NET Core PDF Viewer to load a defined number of pages during the initial render by using the initialRenderPages property.
 platform: document-processing
-control: Load N number of pages on initial loading
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
-# Load N number of pages on initial loading
+# Load specific number of pages on initial rendering in ASP.NET Core
 
-The initial rendering in a PDF viewer allows users to control the number of pages displayed when opening a PDF document. This improves the user experience by providing flexibility in loading a specific number of pages initially, while additional pages are dynamically rendered as the user scrolls through the document. This approach enhances the responsiveness of the PDF viewer and minimizes delays as users can access specific pages without waiting for the entire document to load.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer optimizes initialization performance by rendering only a subset of pages when a document first opens. This approach improves responsiveness for large documents by deferring the rendering of remaining pages until the user scrolls them into view.
 
-To utilize this capability in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, use the [initialRenderPages](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html?_ga=2.144520115.723518961.1687236178-1796867613.1686804317#:~:text=value%20is%20null-,InitialRenderPages,-Initially%20renders%20the) property. You can achieve the desired outcome by setting this property to the desired number of pages you want to load initially. However, it's important to exercise caution when setting a high value for the initialRenderPages in large documents with numerous pages. Rendering a large number of pages simultaneously can increase memory usage and slow down loading times, impacting the performance of the PDF viewer.
+## Enable initial page rendering
 
-Using the `initialRenderPages` property judiciously is advisable, especially when dealing with larger documents. It is more suitable for scenarios where a smaller range of pages, such as 10-20, can be loaded to provide a quick initial view of the document.
+To implement this optimization, use the [`initialRenderPages`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_InitialRenderPages) property. Assign an integer value representing the number of pages that should be rendered immediately upon document load.
+
+N> A typical optimization range is 5 to 20 pages. Rendering too many pages initially can increase memory consumption and delay the initial display of the viewer.
+
+### Examples
+
+The following examples demonstrate how to set the `initialRenderPages` property in both standalone and server-backed configurations.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -52,6 +57,5 @@ Using the `initialRenderPages` property judiciously is advisable, especially whe
 </div>
 {% endhighlight %}
 {% endtabs %}
-
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Load%20N%20no%20of%20pages)

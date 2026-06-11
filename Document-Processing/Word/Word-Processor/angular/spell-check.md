@@ -41,11 +41,11 @@ export class AppComponent {
 
 ## Enable SpellCheck
 
-To enable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#enablespellcheck) property as `true` and then configure SpellCheckSettings.
+To enable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property as `true` and then configure SpellCheckSettings.
 
 ## Disable SpellCheck
 
-To disable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#enablespellcheck) property initialization code. The default value of this property is false.
+To disable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property initialization code. The default value of this property is false.
 
 ## Spell check settings
 
@@ -72,8 +72,6 @@ Document Editor provides multi-language spell check support. You can add as many
 ```typescript
 this.container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
 ```
-
-* Refer to the [Spell checker](https://gitea.syncfusion.com/essential-studio/ej2-documenteditor-server/) link for configuring spell checker in server-side.
 
 ### EnableOptimizedSpellCheck
 
@@ -163,3 +161,5 @@ Ignore All: ignore all occurrence of a word from error in the entire document.
 Using this option, you can open spell check dialog. Please see below screenshot for your reference.
 
 ![Spell check dialog](images/spell-check-dialog.png)
+
+* Refer to the [Spell checker](https://help.syncfusion.com/document-processing/word/word-processor/angular/web-services/core#spell-check) link for configuring spell checker in server-side.

@@ -14,11 +14,11 @@ XFA stands for XML Forms Architecture, dynamic forms are based on a XML specific
 
 ## Creating a new XFA form
 
-Essential<sup>&reg;</sup> PDF allows you to create and manipulate the XFA form in PDF document by using [PdfXfaDocument](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaDocument.html) and [PdfXfaForm](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaForm.html) classes. The [PdfXfaFieldCollection](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaFieldCollection.html) class represents the entire field collection of the XFA form.
+Essential<sup>&reg;</sup> PDF allows you to create and manipulate the XFA form in PDF document by using [PdfXfaDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaDocument.html) and [PdfXfaForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaForm.html) classes. The [PdfXfaFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaFieldCollection.html) class represents the entire field collection of the XFA form.
 
 ### Adding a new page to the XFA document
 
-The following code example explains how to add a new page using [PdfXfaPage](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaPage.html) class in a PDF XFA document.
+The following code example explains how to add a new page using [PdfXfaPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaPage.html) class in a PDF XFA document.
 
 {% tabs %}  
 
@@ -101,12 +101,11 @@ document.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/XFA/Add-a-new-page-in-a-PDF-XFA-document).
 
 N> XFA documents are created based on the flow layout, so the pages are sequentially added if the doesn’t have space to fit the field it will automatically move on the next page, so we can’t specify the page and page numbers.
-
 N> PDF supports XFA forms only in Windows Forms, WPF, ASP.NET, ASP.NET MVC, UWP platforms, Xamarin (.NETStandard 2.0 and above), and ASP.NET Core (.NETStandard 2.0 and above).
 
 ### Adding the XFA document settings
 
-Essential<sup>&reg;</sup> PDF supports various XFA page setting options through [PdfXfaPageSettings](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaPageSettings.html) class, to control the page display.
+Essential<sup>&reg;</sup> PDF supports various XFA page setting options through [PdfXfaPageSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaPageSettings.html) class, to control the page display.
 
 The below sample illustrates how to create a new PDF document with XFA page size.
 
@@ -310,7 +309,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/XFA/Create-a-custom-page-size-to-the-PDF-document).
 
-You can change page orientation from portrait to landscape by using [PdfXfaPageOrientation](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaPageOrientation.html) Enum. The below code snippet explains this.
+You can change page orientation from portrait to landscape by using [PdfXfaPageOrientation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaPageOrientation.html) Enum. The below code snippet explains this.
 
 {% tabs %} 
 
@@ -419,7 +418,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating dynamic XFA forms
 
-To create a dynamic XFA forms using [PdfXfaType](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaType.html) Enum and save the dynamic form document using below example code.
+To create a dynamic XFA forms using [PdfXfaType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaType.html) Enum and save the dynamic form document using below example code.
 
 {% tabs %}  
 
@@ -522,7 +521,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating static XFA forms
 
-To create a static XFA forms using [PdfXfaType](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaType.html) Enum and save the static form document using below example code.
+To create a static XFA forms using [PdfXfaType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaType.html) Enum and save the static form document using below example code.
 
 {% tabs %} 
 
@@ -627,7 +626,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding the XFA text box field
 
-The below code snippet illustrates how to add a textbox field to a new PDF document using [PdfXfaTextBoxField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaTextBoxField.html) class.
+The below code snippet illustrates how to add a textbox field to a new PDF document using [PdfXfaTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaTextBoxField.html) class.
 
 {% tabs %}  
 
@@ -813,7 +812,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding the XFA numeric field
 
-The below code snippet illustrates how to add a numeric field to a new PDF document using [PdfXfaNumericField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaNumericField.html) class.
+The below code snippet illustrates how to add a numeric field to a new PDF document using [PdfXfaNumericField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaNumericField.html) class.
 
 {% tabs %}  
 
@@ -876,7 +875,7 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports System.Drawing
-Imports Syncfusion.Pdf.
+Imports Syncfusion.Pdf.Xfa
 
 'Create a new PDF XFA document.
 Dim document As New PdfXfaDocument()
@@ -987,7 +986,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding the XFA combo box field
 
-The below code snippet illustrates how to add a combo box field to a new PDF document using [PdfXfaComboBoxField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaComboBoxField.html) class.
+The below code snippet illustrates how to add a combo box field to a new PDF document using [PdfXfaComboBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaComboBoxField.html) class.
 
 {% tabs %} 
 
@@ -1186,7 +1185,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding the XFA list box field
 
-The below code snippet illustrates how to add a list box field to a new PDF document using [PdfXfaListBoxField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaListBoxField.html) class.
+The below code snippet illustrates how to add a list box field to a new PDF document using [PdfXfaListBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaListBoxField.html) class.
 
 {% tabs %}  
 
@@ -1262,6 +1261,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1395,7 +1395,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding XFA check box field
 
-The below code snippet illustrates how to add a check box field to a new PDF document using [PdfXfaCheckBoxField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaCheckBoxField.html) class.
+The below code snippet illustrates how to add a check box field to a new PDF document using [PdfXfaCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaCheckBoxField.html) class.
 
 {% tabs %}  
 
@@ -1461,6 +1461,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1564,7 +1565,7 @@ loadedForm.Fields.Add(checkBoxField)
 'Save the document
 loadedDocument.Save("XfaForm.pdf")
 'Close the document
-loadedDocument.Close()
+loadedDocument.Close(True)
 
 {% endhighlight %}
 
@@ -1574,7 +1575,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
  
 ### Adding the XFA radio button field
 
-The below code snippet illustrates how to add a radio button field to a new PDF document using [PdfXfaRadioButtonField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaRadioButtonField.html) class and add it into [PdfXfaRadioButtonGroup](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaRadioButtonGroup.html).
+The below code snippet illustrates how to add a radio button field to a new PDF document using [PdfXfaRadioButtonField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaRadioButtonField.html) class and add it into [PdfXfaRadioButtonGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaRadioButtonGroup.html).
 
 {% tabs %}  
 
@@ -1656,6 +1657,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1729,7 +1731,7 @@ loadedDocument.Close();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %} 
+{% highlight c# tabtitle="C# [Windows-specific]" %} 
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf.Xfa;
@@ -1801,7 +1803,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding the XFA date time field
 
-The below code snippet illustrates how to add a date time field to a new PDF document using [PdfXfaDateTimeField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaDateTimeField.html) class.
+The below code snippet illustrates how to add a date time field to a new PDF document using [PdfXfaDateTimeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaDateTimeField.html) class.
 
 {% tabs %}  
 
@@ -1868,6 +1870,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -1891,7 +1894,7 @@ document.Save("XfaForm.pdf",PdfXfaType.Dynamic)
 'Close the document
 document.Close()
 
-{% endhighlight %}s
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -1985,7 +1988,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding the XFA button field
 
-The below code snippet illustrates how to add a button field to a new PDF document using [PdfXfaButtonField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaButtonField.html) class.
+The below code snippet illustrates how to add a button field to a new PDF document using [PdfXfaButtonField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaButtonField.html) class.
 
 {% tabs %}  
 
@@ -2048,6 +2051,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2157,7 +2161,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding the XFA text element
 
-The below code snippet illustrates how to add a text element to a new PDF document using [PdfXfaTextElement](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaTextElement.html) class.
+The below code snippet illustrates how to add a text element to a new PDF document using [PdfXfaTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaTextElement.html) class.
 
 {% tabs %}  
 
@@ -2221,6 +2225,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2330,7 +2335,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding the XFA rectangle field
 
-The below code snippet illustrates how to add the rectangle field to a new PDF document using [PdfXfaRectangleField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaRectangleField.html) class.
+The below code snippet illustrates how to add the rectangle field to a new PDF document using [PdfXfaRectangleField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaRectangleField.html) class.
 
 {% tabs %}  
 
@@ -2393,6 +2398,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2502,7 +2508,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding the XFA circle field
 
-The below code snippet illustrates how to add the circle field to a new PDF document using [PdfXfaCircleField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaCircleField.html) class.
+The below code snippet illustrates how to add the circle field to a new PDF document using [PdfXfaCircleField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaCircleField.html) class.
 
 {% tabs %}  
 
@@ -2565,6 +2571,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2674,7 +2681,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding the XFA line
 
-The below code snippet illustrates how to add a line to a new PDF document using [PdfXfaLine](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaLine.html) class.
+The below code snippet illustrates how to add a line to a new PDF document using [PdfXfaLine](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaLine.html) class.
 
 {% tabs %}  
 
@@ -2737,6 +2744,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -2846,7 +2854,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding the XFA image
 
-The below code snippet illustrates how to add an image to a new PDF document using [PdfXfaImage](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaImage.html) class.
+The below code snippet illustrates how to add an image to a new PDF document using [PdfXfaImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaImage.html) class.
 
 {% tabs %}  
 
@@ -2907,6 +2915,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add a new XFA page
@@ -3017,7 +3026,7 @@ There are two types of flow directions available in XFA forms.
 
 ### Horizontal flow direction
 
-You can set the flow direction to an XFA form while creating, using [PdfXfaFlowDirection](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaFlowDirection.html) Enum. The below sample illustrate how to set the horizontal flow direction in XFA forms.
+You can set the flow direction to an XFA form while creating, using [PdfXfaFlowDirection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaFlowDirection.html) Enum. The below sample illustrate how to set the horizontal flow direction in XFA forms.
 
 {% tabs %}  
 
@@ -3097,6 +3106,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3134,7 +3144,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Vertical flow direction
 
-You can set the flow direction to an XFA form while creating, using [PdfXfaFlowDirection](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaFlowDirection.html) Enum. The below sample illustrate how to set the vertical flow direction in XFA forms.
+You can set the flow direction to an XFA form while creating, using [PdfXfaFlowDirection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaFlowDirection.html) Enum. The below sample illustrate how to set the vertical flow direction in XFA forms.
 
 {% tabs %}  
 
@@ -3177,7 +3187,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using System.Drawing;
-using Syncfusion.Pdf.Xfa;                                                                                            
+using Syncfusion.Pdf.Xfa;                                                                      
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3214,6 +3224,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3251,7 +3262,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Rotating XFA form fields
 
-You can rotate a form field in XFA document, using [PdfXfaRotateAngle](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaRotateAngle.html) Enum. The following code snippet explains this.
+You can rotate a form field in XFA document, using [PdfXfaRotateAngle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaRotateAngle.html) Enum. The following code snippet explains this.
 
 {% tabs %}  
 
@@ -3323,6 +3334,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3356,7 +3368,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Validating the date time field
 
-You can validate the date time fields of the input text by enabling the [RequireValidation](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaDateTimeField.html#Syncfusion_Pdf_Xfa_PdfXfaDateTimeField_RequireValidation) property of [PdfXfaDateTimeField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaDateTimeField.html). The following code snippet illustrates this.
+You can validate the date time fields of the input text by enabling the [RequireValidation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaDateTimeField.html#Syncfusion_Pdf_Xfa_PdfXfaDateTimeField_RequireValidation) property of [PdfXfaDateTimeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaDateTimeField.html). The following code snippet illustrates this.
 
 {% tabs %} 
 
@@ -3428,6 +3440,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3461,7 +3474,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Customizing the numeric field value
 
-You can customize the numeric field input value to the specific pattern through [PatternString](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaNumericField.html#Syncfusion_Pdf_Xfa_PdfXfaNumericField_PatternString) property of [PdfXfaNumericField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaNumericField.html) class. The following code snippet explains this.
+You can customize the numeric field input value to the specific pattern through [PatternString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaNumericField.html#Syncfusion_Pdf_Xfa_PdfXfaNumericField_PatternString) property of [PdfXfaNumericField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaNumericField.html) class. The following code snippet explains this.
 Please refer the below link for numeric pattern format in detail,
 [Numeric Pattern](http://help.adobe.com/en_US/livecycle/10.0/DesignerHelp/WS92d06802c76abadb-56c02439129b8b00ebc-7ecf.html).
 
@@ -3491,15 +3504,15 @@ mainForm.Fields.Add(numericField);
 document.XfaForm = mainForm;
 
 //Save the document.
-document.Save("XfaForm.pdf",PdfXfaType.Dynamic);
+document.Save("XfaForm.pdf", PdfXfaType.Dynamic);
 //Close the document.
 document.Close();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.Drawing;
+using System.Drawing;
 using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
@@ -3527,7 +3540,10 @@ document.Close();
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf.Xfa
 
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
@@ -3560,7 +3576,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding nested sub forms
 
-You can add the nested sub forms by using [PdfXfaForm](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaForm.html) class. The below code snippet explains this.
+You can add the nested sub forms by using [PdfXfaForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaForm.html) class. The below code snippet explains this.
 
 {% tabs %}  
 
@@ -3650,6 +3666,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3698,11 +3715,14 @@ XFA support both the horizontal and vertical alignments.
 
 ### Horizontal alignment
 
-You can add the horizontal alignments in XFA form fields through [HorizontalAlignment](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaStyledField.html#Syncfusion_Pdf_Xfa_PdfXfaStyledField_HorizontalAlignment) property by using [PdfXfaHorizontalAlignment](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaHorizontalAlignment.html) Enum. The below code snippet illustrates this.
+You can add the horizontal alignments in XFA form fields through [HorizontalAlignment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaStyledField.html#Syncfusion_Pdf_Xfa_PdfXfaStyledField_HorizontalAlignment) property by using [PdfXfaHorizontalAlignment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaHorizontalAlignment.html) Enum. The below code snippet illustrates this.
 
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/XFA/Add-the-horizontal-alignments-in-XFA-form-fields/.NET/Add-the-horizontal-alignments-in-XFA-form-fields/Program.cs" %} 
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf.Xfa;
 
 //Create a new PDF XFA document.
 PdfXfaDocument document = new PdfXfaDocument();
@@ -3763,6 +3783,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3794,7 +3815,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Vertical alignment
 
-You can add the vertical alignments in XFA form fields through [VerticalAlignment](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaStyledField.html#Syncfusion_Pdf_Xfa_PdfXfaStyledField_VerticalAlignment) property by using [PdfXfaVerticalAlignment](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaVerticalAlignment.html) Enum. The below code snippet explains this.
+You can add the vertical alignments in XFA form fields through [VerticalAlignment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaStyledField.html#Syncfusion_Pdf_Xfa_PdfXfaStyledField_VerticalAlignment) property by using [PdfXfaVerticalAlignment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaVerticalAlignment.html) Enum. The below code snippet explains this.
 
 {% tabs %}  
 
@@ -3862,6 +3883,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3893,7 +3915,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding margins to the XFA fields
 
-You can add margin to the XFA form fields by using [Margins](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaField.html#Syncfusion_Pdf_Xfa_PdfXfaField_Margins) property. The below code snippet explains this.
+You can add margin to the XFA form fields by using [Margins](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaField.html#Syncfusion_Pdf_Xfa_PdfXfaField_Margins) property. The below code snippet explains this.
 
 {% tabs %}  
 
@@ -3963,6 +3985,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -3995,7 +4018,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding padding to the XFA fields
 
-You can add padding to the XFA form fields by using [padding](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaTextBoxField.html#Syncfusion_Pdf_Xfa_PdfXfaTextBoxField_Padding) property. The below code snippet explains this.
+You can add padding to the XFA form fields by using [padding](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaTextBoxField.html#Syncfusion_Pdf_Xfa_PdfXfaTextBoxField_Padding) property. The below code snippet explains this.
 
 {% tabs %}  
 
@@ -4063,6 +4086,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -4094,7 +4118,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Adding border to the XFA fields
 
-You can add border to the XFA fields by using [Border](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaStyledField.html#Syncfusion_Pdf_Xfa_PdfXfaStyledField_Border) property. The below code snippet explains this.
+You can add border to the XFA fields by using [Border](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaStyledField.html#Syncfusion_Pdf_Xfa_PdfXfaStyledField_Border) property. The below code snippet explains this.
 
 {% tabs %}  
 
@@ -4164,6 +4188,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -4196,11 +4221,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Filling form fields in an existing XFA document
 
-Essential<sup>&reg;</sup> PDF allows you to fill the XFA form fields using [PdfLoadedXfaform](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaForm.html) class.
+Essential<sup>&reg;</sup> PDF allows you to fill the XFA form fields using [PdfLoadedXfaform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaForm.html) class.
 
 ### Filling the XFA text box field
 
-Please refer the below sample for filling the XFA text box field using [PdfLoadedXfaTextBoxField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaTextBoxField.html) class.
+Please refer the below sample for filling the XFA text box field using [PdfLoadedXfaTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaTextBoxField.html) class.
 
 {% tabs %}  
 
@@ -4252,6 +4277,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4275,7 +4301,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Filling the XFA numeric field
 
-You can fill the XFA numeric field by using [PdfLoadedXfaNumericField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaNumericField.html) class. The below code snippet illustrates this.
+You can fill the XFA numeric field by using [PdfLoadedXfaNumericField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaNumericField.html) class. The below code snippet illustrates this.
 
 {% tabs %}  
 
@@ -4327,6 +4353,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4350,7 +4377,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Filling the XFA combo box field
 
-You can fill the XFA combo box field by using [PdfLoadedXfaComboBoxField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaComboBoxField.html) class. The below code snippet explains this.
+You can fill the XFA combo box field by using [PdfLoadedXfaComboBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaComboBoxField.html) class. The below code snippet explains this.
 
 {% tabs %}  
 
@@ -4402,6 +4429,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4423,7 +4451,7 @@ loadedDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/XFA/Filling-the-XFA-combobox-field-in-an-existing-PDF-document).
 
-You can fill and save hidden items in XFA combo box field by using [HiddenItems](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaComboBoxField.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaComboBoxField_HiddenItems) property. The below code snippet explains this.
+You can fill and save hidden items in XFA combo box field by using [HiddenItems](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaComboBoxField.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaComboBoxField_HiddenItems) property. The below code snippet explains this.
 
 {% tabs %}  
 
@@ -4481,6 +4509,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("Input.pdf")
 'Load the existing XFA form
@@ -4507,7 +4536,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Filling the XFA list box field
 
-You can fill the XFA list box field by using [PdfLoadedXfaListBoxField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaListBoxField.html) class. The below code snippet illustrates this.
+You can fill the XFA list box field by using [PdfLoadedXfaListBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaListBoxField.html) class. The below code snippet illustrates this.
 
 {% tabs %}  
 
@@ -4559,6 +4588,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4580,7 +4610,7 @@ loadedDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/XFA/Fill-the-XFA-listbox-field-in-an-existing-PDF-document).
 
-You can also select the multiple values by using [SelectedItems](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaListBoxField.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaListBoxField_SelectedItems) property. The below code snippet explains this.
+You can also select the multiple values by using [SelectedItems](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaListBoxField.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaListBoxField_SelectedItems) property. The below code snippet explains this.
 
 {% tabs %}  
 
@@ -4632,6 +4662,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4655,7 +4686,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Filling the XFA date time field
 
-You can fill the XFA date time field by using [PdfLoadedXfaDateTimeField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDateTimeField.html) class. The below code snippet explains this.
+You can fill the XFA date time field by using [PdfLoadedXfaDateTimeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaDateTimeField.html) class. The below code snippet explains this.
 
 {% tabs %}  
 
@@ -4707,6 +4738,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4730,7 +4762,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Filling the XFA check box field
 
-You can fill the XFA check box field by using [PdfLoadedXfaCheckBoxField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaCheckBoxField.html) class. The below code snippet illustrates this.
+You can fill the XFA check box field by using [PdfLoadedXfaCheckBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaCheckBoxField.html) class. The below code snippet illustrates this.
 
 {% tabs %}  
 
@@ -4782,6 +4814,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4805,7 +4838,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Filling the XFA radio button field
 
-You can fill the XFA radio button field by using [PdfLoadedXfaRadioButtonField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaRadioButtonField.html) class. The below code snippet explains this.
+You can fill the XFA radio button field by using [PdfLoadedXfaRadioButtonField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaRadioButtonField.html) class. The below code snippet explains this.
 
 {% tabs %}  
 
@@ -4861,6 +4894,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -4886,9 +4920,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Removing editing capability of form fields
 
-The form field editing or filling capabilities can be removed by marking the form or field as read only. To prevent the user from changing the form field content, you can enable the [ReadOnly](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaForm.html#Syncfusion_Pdf_Xfa_PdfXfaForm_ReadOnly) property of [PdfXfaForm](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaForm.html).
+The form field editing or filling capabilities can be removed by marking the form or field as read only. To prevent the user from changing the form field content, you can enable the [ReadOnly](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaForm.html#Syncfusion_Pdf_Xfa_PdfXfaForm_ReadOnly) property of [PdfXfaForm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaForm.html).
 
-The below code snippet illustrates how to set the [ReadOnly](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfXfaForm.html#Syncfusion_Pdf_Xfa_PdfXfaForm_ReadOnly) property to a new PDF document.
+The below code snippet illustrates how to set the [ReadOnly](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfXfaForm.html#Syncfusion_Pdf_Xfa_PdfXfaForm_ReadOnly) property to a new PDF document.
 
 {% tabs %}  
 
@@ -4956,6 +4990,7 @@ document.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Create a new PDF XFA document
 Dim document As New PdfXfaDocument()
 'Add new XFA page
@@ -4985,7 +5020,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/XFA/Removing-editing-capability-of-form-fields-in-a-new-PDF).
 
-The below code snippet illustrates how to set the [ReadOnly](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaForm.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaForm_ReadOnly) property to an existing PDF document.
+The below code snippet illustrates how to set the [ReadOnly](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaForm.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaForm_ReadOnly) property to an existing PDF document.
 
 {% tabs %}  
 
@@ -5031,6 +5066,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document 
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -5052,7 +5088,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Flattening XFA Form fields
 
 The form field editing or filling capabilities can be removed by flattening the PDF document.
-The Essential<sup>&reg;</sup> PDF flattens a form field by removing the existing form field and replacing it with graphical objects that will resemble the form field and cannot be edited. This can be achieved by enabling the [Flatten](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDocument.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaDocument_Flatten) property of [PdfLoadedXfaDocument](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDocument.html).
+The Essential<sup>&reg;</sup> PDF flattens a form field by removing the existing form field and replacing it with graphical objects that will resemble the form field and cannot be edited. This can be achieved by enabling the [Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaDocument.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaDocument_Flatten) property of [PdfLoadedXfaDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaDocument.html).
 The following code snippet illustrates how to flatten the XFA form field.
 
 {% tabs %} 
@@ -5084,6 +5120,7 @@ ldoc.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing document
 Dim ldoc As New PdfLoadedXfaDocument("input.pdf")
 'Set flatten
@@ -5102,7 +5139,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing the dynamic form fields from an existing XFA document
 
-You can remove the dynamic XFA form fields by using [Remove](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaFieldCollection.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaFieldCollection_Remove_Syncfusion_Pdf_Xfa_PdfLoadedXfaField_) method of [PdfLoadedXfaFieldCollection](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaFieldCollection.html) class. The below code snippet explained this.
+You can remove the dynamic XFA form fields by using [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaFieldCollection.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaFieldCollection_Remove_Syncfusion_Pdf_Xfa_PdfLoadedXfaField_) method of [PdfLoadedXfaFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaFieldCollection.html) class. The below code snippet explained this.
 
 {% tabs %} 
 
@@ -5154,6 +5191,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document 
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -5177,7 +5215,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modifying the existing fields in XFA document
 
-You can modify the existing dynamic XFA fields like Width, Height and Text by using [PdfLoadedXfaTextBoxField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaTextBoxField.html) class. The below code snippet explains this.
+You can modify the existing dynamic XFA fields like Width, Height and Text by using [PdfLoadedXfaTextBoxField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaTextBoxField.html) class. The below code snippet explains this.
 
 {% tabs %}  
 
@@ -5235,6 +5273,7 @@ loadedDocument.Close();
 
 Imports System.Drawing
 Imports Syncfusion.Pdf.Xfa
+
 'Load the existing PDF document 
 Dim loadedDocument As New PdfLoadedXfaDocument("input.pdf")
 'Load the existing XFA form
@@ -5261,7 +5300,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Clear XFA date time field value
 
-The Essential<sup>&reg;</sup> PDF supports clearing XFA form date time fields values, you can clear the date time values by using the [ClearValue](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDateTimeField.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaDateTimeField_ClearValue) method available in the [PdfLoadedXfaDateTimeField](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Xfa.PdfLoadedXfaDateTimeField.html).
+The Essential<sup>&reg;</sup> PDF supports clearing XFA form date time fields values, you can clear the date time values by using the [ClearValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaDateTimeField.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaDateTimeField_ClearValue) method available in the [PdfLoadedXfaDateTimeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaDateTimeField.html).
 
 The following sample illustrates how to clear the date time field in an existing XFA document.
 
@@ -5307,7 +5346,9 @@ loadedXfaDocument.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports System.Drawing
-Imports Syncfusion.Pdf.Xfa'Load the existing XFA PDF document
+Imports Syncfusion.Pdf.Xfa
+
+'Load the existing XFA PDF document
 Dim loadedXfaDocument As PdfLoadedXfaDocument = New PdfLoadedXfaDocument("input.pdf")
 'Get the date time field
 Dim dateTimeField As PdfLoadedXfaDateTimeField = TryCast(loadedXfaDocument.XfaForm.TryGetFieldByCompleteName("form[0].subform[0].dateTime[0]"), PdfLoadedXfaDateTimeField)

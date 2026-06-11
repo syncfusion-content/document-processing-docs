@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Open thumbnail in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Open thumbnail in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Configure minZoom and maxZoom in Vue PDF Viewer | Syncfusion
+description: Learn how to configure minimum and maximum zoom levels using minZoom and maxZoom in the Syncfusion Vue PDF Viewer.
 control: Open thumbnail
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Minimum and Maximum Zoom Properties
+# Configure minimum and maximum zoom properties
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides the ability to control zoom levels for viewing PDF documents. The `minZoom` and `maxZoom` properties enable developers to set the minimum and maximum zoom levels, ensuring a consistent and controlled viewing experience.
+The PDF Viewer exposes `minZoom` and `maxZoom` to control the allowable zoom range for document viewing. Setting these properties helps maintain readability, performance, and a consistent experience across devices.
 
 ### minZoom
 
-The `minZoom` property specifies the minimum zoom percentage allowed in the PDF Viewer. This ensures that users cannot zoom out beyond a certain limit, which helps maintain readability and performance. Developers can set the `minZoom` property programmatically, defining the minimum zoom level based on the application's requirements. This is particularly useful for preventing users from zooming out too much, which could make the content difficult to read.
+`minZoom` sets the minimum zoom percentage the viewer supports. Use this to prevent users from zooming out to levels that make content unreadable or negatively affect layout.
 
 ### maxZoom
 
-The `maxZoom` property defines the maximum zoom percentage allowed in the PDF Viewer. By setting this property, developers can prevent users from zooming in too much, helping to avoid performance issues and maintain a smooth viewing experience. The `maxZoom` property can be set programmatically to control the upper limit of the zoom level. This is useful for applications where extremely high zoom levels might degrade performance or user experience.
+`maxZoom` sets the maximum zoom percentage the viewer supports. Restricting the maximum helps avoid excessive memory use and degraded rendering performance when users zoom in very far.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -39,7 +39,7 @@ import {
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide } from 'vue';
 
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 const maxZoom = 270,
 const minZoom = 45,
@@ -74,7 +74,7 @@ export default {
   },
   data() {
     return {
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       maxZoom : 270,
       minZoom : 45,
@@ -181,7 +181,7 @@ import {
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide } from 'vue';
 
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
@@ -227,7 +227,7 @@ export default {
   },
   data() {
     return {
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -342,4 +342,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-By implementing this, you ensure that the maximum zoom percentage on mobile devices is limited to 200% and the minimum zoom percentage is set to 10%. This prevents performance issues that may arise from excessive zooming on mobile platforms.
+This limits maximum zoom to 200% and minimum zoom to 10% on mobile devices, helping prevent performance issues from excessive zooming.

@@ -15,8 +15,7 @@ You can import data table with its data type using template markers by setting t
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("TemplateMarker_Formulas.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("TemplateMarker_Formulas.xlsx", ExcelOpenType.Automatic);
 
   //Create Template Marker Processor
   ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
@@ -27,8 +26,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Process the markers in the template and fill the values as it is in the DataTable
   marker.ApplyMarkers();
 
-  FileStream stream = new FileStream("TemplateMarkerFormulas.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("TemplateMarkerFormulas.xlsx");
 
   workbook.Close();
   excelEngine.Dispose();

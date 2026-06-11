@@ -8,7 +8,7 @@ documentation: UG
 
 # How to apply formatting to pivot table in Excel protected view?
 
-Syncfusion&reg; XlsIO supports applying formatting to pivot table during creation. But, in the protected view, to get the formatting applied to pivot table, [Layout](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_Layout) method of [IPivotTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTable.html) should be called. The following code snippet explains this.
+Syncfusion&reg; XlsIO supports applying formatting to pivot table during creation. But, in the protected view, to get the formatting applied to pivot table, [Layout](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_Layout) method of [IPivotTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html) should be called. The following code snippet explains this.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -16,8 +16,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
   IWorksheet pivotSheet = workbook.Worksheets[1];
 
@@ -40,10 +39,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   pivotTable.BuiltInStyle = PivotBuiltInStyles.PivotStyleDark15;
   pivotTable.Layout();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 }
 
 {% endhighlight %}

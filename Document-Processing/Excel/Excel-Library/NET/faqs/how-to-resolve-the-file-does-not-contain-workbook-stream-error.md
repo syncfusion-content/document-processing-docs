@@ -16,8 +16,7 @@ ExcelEngine excelEngine = new ExcelEngine();
 IApplication application = excelEngine.Excel;
 
 //To check whether the file is supported
-FileStream stream = new FileStream("Sample.xls", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-var isSupported = application.IsSupported(stream);
+var isSupported = application.IsSupported("Sample.xls");
 excelEngine.Dispose();
 {% endhighlight %}
 

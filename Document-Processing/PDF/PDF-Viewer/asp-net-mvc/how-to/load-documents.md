@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Load Documents in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about Load Documents in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Load documents dynamically in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to load or switch PDF documents dynamically in the Syncfusion ASP.NET MVC PDF Viewer using the load method.
 platform: document-processing
-control: Load Documents
-publishingplatform: document-processing
+control: PDF Viewer
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
+# Load documents dynamically in the ASP.NET MVC PDF Viewer
 
-# Load PDF documents dynamically
+Load or switch PDF documents dynamically after the initial load. Use the **load()** method to load a PDF by Base64 string or file name.
 
-The PDF Viewer server library allows to switch or load the PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or file name in PDF Viewer control using the **Load()** method dynamically.
+## Steps to load PDF documents dynamically
 
-The following steps are used to load the PDF document dynamically.
+**Step 1:** Follow the steps in the [Syncfusion ASP.NET MVC PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a sample.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
-
-**Step 2:** Use the following code snippet to load PDF document using base64 string.
+**Step 2:** Use the following code to load a PDF using a Base64 string.
 
 ```html
 <button type="button" onclick="load1()">LoadDocumentFromBase64</button>
@@ -60,6 +59,11 @@ public ActionResult GetDocument()
 
 ```html
 <button type="button" onclick="load2()">LoadDocumentFromBase64</button>
+
+<div id="e-pv-e-sign-pdfViewer-div">
+    @Html.EJS().PdfViewer("pdfviewer").Render()
+</div>
+
 <script>
     // load document using document name.
     function load2() {
@@ -69,6 +73,6 @@ public ActionResult GetDocument()
 </script>
 ```
 
-T> Also can add the base64 string directly in the `DocumentPath()` method.
+By following these steps, the load API can be used to switch documents dynamically in the ASP.NET MVC PDF Viewer.
 
-Download the sample, [how to load PDF documents dynamically](https://www.syncfusion.com/downloads/support/directtrac/general/ze/EJ2MvcSample-1778613339.zip)
+[how to load PDF documents dynamically](https://www.syncfusion.com/downloads/support/directtrac/general/ze/EJ2MvcSample-1778613339.zip)

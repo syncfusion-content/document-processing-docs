@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Open and Close Bookmark in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Open and Close Bookmark in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Open or close the bookmark pane in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to open or close the bookmark pane programmatically in the Syncfusion ASP.NET Core PDF Viewer by calling the bookmarkViewModule APIs.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Open and Close Bookmark pane programmatically
+# Open or close the bookmark pane in ASP.NET Core PDF Viewer
 
-The PDF Viewer library allows you to open the Bookmark pane programmatically using the **openBookmarkPane()** method.
+Toggle the bookmark sidebar at runtime using **openBookmarkPane()** and **closeBookmarkPane()** methods. These APIs allow flexible document navigation workflows where bookmarks appear only when needed.
 
-The following steps are used to open the Bookmark.
+Follow these steps to implement bookmark pane toggling:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the [Getting Started with ASP.NET Core PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer instance with required Syncfusion EJ2 script and style references.
 
-**Step 2:** Insert the following code snippet to implement the functionality for opening the Bookmark pane:
+**Step 2:** Add buttons to open and close the bookmark pane. Place the viewer and script blocks in the Razor page. Ensure the document contains bookmarks before invoking the API, otherwise the pane will appear empty.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -27,7 +26,7 @@ The following steps are used to open the Bookmark.
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
     </ejs-pdfviewer>
 </div>
 
@@ -37,6 +36,7 @@ The following steps are used to open the Bookmark.
         viewer.bookmarkViewModule.openBookmarkPane();
     }
 </script>
+
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
 
@@ -45,7 +45,7 @@ The following steps are used to open the Bookmark.
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   serviceUrl='/Index'
+                   serviceUrl="/Index"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     </ejs-pdfviewer>
 </div>
@@ -60,7 +60,9 @@ The following steps are used to open the Bookmark.
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, to close the Bookmark pane programmatically, employ the following code snippet:
+## Close the bookmark pane
+
+To hide the bookmark pane, call the `closeBookmarkPane()` method. Use the following code:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -71,7 +73,7 @@ Similarly, to close the Bookmark pane programmatically, employ the following cod
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
 
@@ -89,7 +91,7 @@ Similarly, to close the Bookmark pane programmatically, employ the following cod
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   serviceUrl='/Index'
+                   serviceUrl="/Index"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     </ejs-pdfviewer>
 </div>
@@ -104,4 +106,4 @@ Similarly, to close the Bookmark pane programmatically, employ the following cod
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Open%20and%20Close%20bookmark%20pane/PDFViewerSample)
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Open%20and%20Close%20bookmark%20pane/PDFViewerSample)

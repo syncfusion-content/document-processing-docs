@@ -14,7 +14,9 @@ To quickly get started, add Watermarks and Bookmarks to a PDF document in .NET u
 
 ## Adding text watermark in PDF document
 
-The below code illustrates how to draw the text watermark in new PDF document using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The transparency can be applied to the text or images using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) method and rotation can be applied using [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) method. 
+The below code illustrates how to draw the text watermark in new PDF document using [DrawString](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfPen_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The transparency can be applied to the text or images using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) method and rotation can be applied using [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) method.
+
+The [PdfGraphicsState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphicsState.html) class is used to save the current graphics context of a PdfGraphics object. This includes properties like transformations, transparency settings, clipping paths, and other graphical configurations. By calling `graphics.Save()`, you store the current state before applying changes such as rotation or transparency. Later, you can restore this state using `graphics.Restore(state)` to revert to the original settings, ensuring that temporary modifications do not affect subsequent drawing operations. This is especially useful when adding watermarks, as it allows you to isolate the watermark styling from other content on the page.
 
 {% tabs %}
 
@@ -205,7 +207,9 @@ The following screenshot shows the output of adding text watermark to an existin
 
 ## Adding image watermark in PDF document
 
-The below code sample illustrates how to add image watermark in PDF document, using [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_System_Drawing_SizeF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The transparency can be applied to the text or images using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) method and rotation can be applied using [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) method. 
+The below code sample illustrates how to add image watermark in PDF document, using [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_System_Drawing_SizeF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class. The transparency can be applied to the text or images using [SetTransparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_SetTransparency_System_Single_) method and rotation can be applied using [RotateTransform](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_RotateTransform_System_Single_) method.
+
+The [PdfGraphicsState](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphicsState.html) class is used to save the current graphics context of a PdfGraphics object. This includes properties like transformations, transparency settings, clipping paths, and other graphical configurations. By calling `graphics.Save()`, you store the current state before applying changes such as rotation or transparency. Later, you can restore this state using `graphics.Restore(state)` to revert to the original settings, ensuring that temporary modifications do not affect subsequent drawing operations. This is especially useful when adding watermarks, as it allows you to isolate the watermark styling from other content on the page.
 
 {% tabs %}
 
@@ -488,84 +492,84 @@ You can remove the Watermark annotation from the annotation collection, represen
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Watermark/Removing-watermark-annotation-in-PDF-document/.NET/Remove-watermark-annotation-in-the-PDF-document/Program.cs" %} 
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Graphics;
-    using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
-    //Load the PDF document
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-    // Iterate through the annotations collection and remove PdfLoadedWatermark annotations
-    foreach (PdfPageBase page in loadedDocument.Pages)
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Iterate through the annotations collection and remove PdfLoadedWatermark annotations
+foreach (PdfPageBase page in loadedDocument.Pages)
+{
+    for (int i = page.Annotations.Count - 1; i >= 0; i--)
     {
-        for (int i = page.Annotations.Count - 1; i >= 0; i--)
+        // Check if the annotation is a PdfLoadedWatermarkAnnotation
+        if (page.Annotations[i] is PdfLoadedWatermarkAnnotation)
         {
-            // Check if the annotation is a PdfLoadedWatermarkAnnotation
-            if (page.Annotations[i] is PdfLoadedWatermarkAnnotation)
-            {
-                // Remove the PdfLoadedWatermarkAnnotation
-                page.Annotations.RemoveAt(i);
-            }
+            // Remove the PdfLoadedWatermarkAnnotation
+            page.Annotations.RemoveAt(i);
         }
     }
+}    
 
-    //Saves the document to disk. 
-    loadedDocument.Save("WatermarkAnnotation.pdf"); 
-    loadedDocument.Close(true);
+//Saves the document to disk. 
+loadedDocument.Save("WatermarkAnnotation.pdf"); 
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Graphics;
-    using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Parsing;
 
-    //Load the existing PDF document
-    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
-    // Iterate through the annotations collection and remove PdfLoadedWatermark annotations
-    foreach (PdfPageBase page in loadedDocument.Pages)
+//Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("input.pdf");
+// Iterate through the annotations collection and remove PdfLoadedWatermark annotations
+foreach (PdfPageBase page in loadedDocument.Pages)
+{
+    for (int i = page.Annotations.Count - 1; i >= 0; i--)
     {
-        for (int i = page.Annotations.Count - 1; i >= 0; i--)
+        // Check if the annotation is a PdfLoadedWatermarkAnnotation
+        if (page.Annotations[i] is PdfLoadedWatermarkAnnotation)
         {
-            // Check if the annotation is a PdfLoadedWatermarkAnnotation
-            if (page.Annotations[i] is PdfLoadedWatermarkAnnotation)
-            {
-                // Remove the PdfLoadedWatermarkAnnotation
-                page.Annotations.RemoveAt(i);
-            }
+            // Remove the PdfLoadedWatermarkAnnotation
+            page.Annotations.RemoveAt(i);
         }
-    } 
+    }
+}
 
-    //Saves the document to disk. 
-    loadedDocument.Save("WatermarkAnnotation.pdf"); 
-    loadedDocument.Close(true);
+//Saves the document to disk. 
+loadedDocument.Save("WatermarkAnnotation.pdf"); 
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-    Imports Syncfusion.Pdf
-    Imports Syncfusion.Pdf.Graphics
-    Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Parsing
 
-    'Load the existing PDF document
-    Dim loadedDocument As New PdfLoadedDocument("input.pdf")
-    ' Iterate through the annotations collection and remove PdfLoadedWatermark annotations
-    For Each page As PdfPageBase In loadedDocument.Pages
-        Dim i As Integer = page.Annotations.Count - 1
-        While i >= 0
-            ' Check if the annotation is a PdfLoadedWatermarkAnnotation
-            If TypeOf page.Annotations(i) Is PdfLoadedWatermarkAnnotation Then
-                ' Remove the PdfLoadedWatermarkAnnotation
-                page.Annotations.RemoveAt(i)
-            End If
-            i -= 1
-        End While
-    Next
+'Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("input.pdf")
+'Iterate through the annotations collection and remove PdfLoadedWatermark annotations
+For Each page As PdfPageBase In loadedDocument.Pages
+    Dim i As Integer = page.Annotations.Count - 1
+    While i >= 0
+        'Check if the annotation is a PdfLoadedWatermarkAnnotation
+        If TypeOf page.Annotations(i) Is PdfLoadedWatermarkAnnotation Then
+            'Remove the PdfLoadedWatermarkAnnotation
+            page.Annotations.RemoveAt(i)
+        End If
+        i -= 1
+    End While
+Next
 
-    'Saves the document to disk. 
-    loadedDocument.Save("WatermarkAnnotation.pdf")
-    loadedDocument.Close(True)
+'Saves the document to disk. 
+loadedDocument.Save("WatermarkAnnotation.pdf")
+loadedDocument.Close(True)
 
 {% endhighlight %}
 

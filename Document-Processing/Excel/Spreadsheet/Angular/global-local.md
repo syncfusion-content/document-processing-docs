@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [`Localization`](https://helpej2.syncfusion.com/angular/documentation/common/globalization/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#locale) value and translation object.
+The [Localization](https://helpej2.syncfusion.com/angular/documentation/common/globalization/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`]https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#locale) value and translation object.
 
 The following list of properties and their values are used in the Spreadsheet.
 
@@ -381,16 +381,16 @@ To load translation object in an application, use [`load`](https://helpej2.syncf
 The following example demonstrates the Spreadsheet in `French` culture. In the below sample we have translated the ribbon tab names and Home tab content (clipboard, cell style).
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs2/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs2/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/local-data-binding-cs2" %}
 
 ## Internationalization
 
@@ -410,32 +410,32 @@ You need to load culture format files in **ngOnInit** function.
 The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture. In the below sample we have globalized the Date(Date column), Time(Time column), and Currency(Amount column) formats.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/internationalization-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/internationalization-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/internationalization-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/internationalization-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/internationalization-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/internationalization-cs1" %}
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#enablertl) to true.
+RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#enablertl) to true.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs3/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs3/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/local-data-binding-cs3/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/local-data-binding-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/local-data-binding-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/local-data-binding-cs3" %}
 
 ## Note
 

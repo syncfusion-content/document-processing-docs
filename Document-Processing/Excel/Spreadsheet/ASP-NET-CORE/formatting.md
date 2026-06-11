@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Formatting in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
-description: Learn here all about Formatting in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formatting in EJ2 ASP.NET Core Syncfusion Spreadsheet Control
+description: Learn here all about Formatting in Syncfusion EJ2 ASP.NET CORE Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Formatting
 documentation: ug
 ---
 
 
-# Formatting in Spreadsheet Component
+# Formatting in ASP.NET Core Spreadsheet Control
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
 * Number Formatting
@@ -91,10 +91,10 @@ The following code example shows the number formatting in cell data.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/number-format/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/number-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="NumberFormatController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/number-format/numberFormatController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/number-format/numberFormatController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -146,10 +146,10 @@ The following code example demonstrates how to configure culture-based formats f
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/globalization-cs1/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/globalization-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CultureController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/globalization-cs1/cultureController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/globalization-cs1/cultureController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -214,10 +214,10 @@ The following code example shows the style formatting in text and cells of the s
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/cell-format/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/cell-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="CellFormatController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/cell-format/cellFormatController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/cell-format/cellFormatController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -311,10 +311,10 @@ You can clear the defined rules by using one of the following ways,
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/conditional-formatting/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/conditional-formatting/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ConditionalFormattingController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/conditional-formatting/conditionalFormattingController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/conditional-formatting/conditionalFormattingController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

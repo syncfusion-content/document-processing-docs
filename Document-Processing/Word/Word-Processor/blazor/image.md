@@ -9,7 +9,7 @@ documentation: ug
 
 # Images in Blazor DocumentEditor Component
 
-[`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`InsertImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertImageAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__) method.
+The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) (Document Editor) component provides robust support for working with images in documents. It supports common raster image formats like PNG, BMP, and JPEG, as well as GIF and SVG images. You can insert an image file or online image in the document using the [`InsertImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertImageAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__) method.
 
 ```csharp
 await container.DocumentEditor.Editor.InsertImageAsync("<<base64String>>");
@@ -19,7 +19,7 @@ Image files will be internally converted to base64 string. Whereas, online image
 
 ## Image resizing
 
-Document editor provides built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
+Document editor provides built-in image resizer that can be injected into your application based on the requirements. This allows the image to be resized by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
 
 ![Image Resizing in Blazor DocumentEditor](images/blazor-document-editor-image-resizing.jpeg)
 

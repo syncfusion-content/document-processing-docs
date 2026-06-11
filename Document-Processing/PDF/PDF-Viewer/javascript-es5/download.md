@@ -1,16 +1,15 @@
 ---
 layout: post
-title: Download in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Download in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Download in Javascript PDF Viewer control | Syncfusion
+description: Learn here all about Download in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Download
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in Javascript Pdfviewer control
+# Download in JavaScript PDF Viewer control
 
-The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
+The PDF Viewer supports downloading the currently loaded PDF document. Use the `enableDownload` option to enable or disable download functionality. The examples below demonstrate standalone and server-backed configurations.
 
 ```html
 {% raw %}
@@ -62,7 +61,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ![Alt text](./images/download.png)
 
-You can invoke download action using following code snippet.,
+Invoke the download action programmatically with a simple button example:
 
 ```
 <button id="download">Download</button>
@@ -102,9 +101,9 @@ document.getElementById('download').addEventListener('click', function () {
 
 ## How to get the base64 string while downloading the PDF document
 
-The [downloadEnd](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadend) event of the PDF viewer allows you to get the downloaded document as a base64 string.
+The [downloadEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#downloadend) event fires after a download completes and exposes the downloaded document as a base64 string.
 
-The following code illustrates how to get the invoke the download action in a button click to get the downloaded document as a base64 string. And load the document from base64 string in another button click.
+The following code illustrates how to get the downloaded document as a base64 string.
 
 ```
 

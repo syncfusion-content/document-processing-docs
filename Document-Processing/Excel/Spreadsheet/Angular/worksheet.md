@@ -22,16 +22,16 @@ You can dynamically add or insert a sheet by one of the following ways,
 The following code example shows the insert sheet operation in spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/insert/sheet-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/insert/sheet-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/insert/sheet-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/insert/sheet-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/insert/sheet-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/insert/sheet-cs1" %}
 
 ### Insert a sheet programmatically and make it active sheet
 
@@ -40,16 +40,16 @@ A sheet is a collection of cells organized in the form of rows and columns that 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/insert-sheet-change-active-sheet-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/insert-sheet-change-active-sheet-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/insert-sheet-change-active-sheet-cs1" %}
 
 ## Delete sheet
 
@@ -81,16 +81,16 @@ Gridlines act as a border like appearance of cells. They are used to distinguish
 The following code example shows the headers and gridlines operation in spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/headers-gridlines-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/headers-gridlines-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/headers-gridlines-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/headers-gridlines-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/headers-gridlines-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/headers-gridlines-cs1" %}
 
 ## Sheet visibility
 
@@ -107,16 +107,16 @@ There are three visibility state as like Microsoft Excel,
 The following code example shows the three types of sheet visibility state.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/sheet-visibility-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/sheet-visibility-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/sheet-visibility-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/sheet-visibility-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/sheet-visibility-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/sheet-visibility-cs1" %}
 
 ## Note
 

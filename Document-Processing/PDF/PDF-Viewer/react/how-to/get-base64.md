@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Retrieving Base64 Value in React Pdfviewer component | Syncfusion
-description: Learn here all about how to retrieve the Base64 value in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Toolbar
+title: Get Base64 from loaded PDF in React PDF Viewer | Syncfusion
+description: Learn how to retrieve the Base64 value of a loaded PDF in the Syncfusion React PDF Viewer using saveAsBlob and FileReader.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Retrieving Base64 Value from a PDF in PDF Viewer
+# Retrieve Base64 from a PDF in PDF Viewer
 
 ### Overview
 
-This guide demonstrates how to fetch the base64-encoded value of a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using React. This is useful for sending the PDF as a base64 string or processing it in the front end.
+This guide shows how to obtain the Base64-encoded value of a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using React. Producing a Base64 string is useful for sending the PDF to a server, embedding it in JSON payloads, or client-side processing.
 
-### How to Retrieve Base64 Value
+### How to retrieve the Base64 value
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample.
+**Step 1: Create the PDF Viewer sample**
 
+Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide for the React PDF Viewer.
 
-**Step 2:** Set Up Your React Component
+**Step 2: Set up the React component**
 
-Create a React component and set up the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. Add a button to trigger the conversion to a base64 string.
+Create an React component and update the template to include a button that triggers conversion to a Base64 string. The samples below show both standalone and server-backed viewer configurations.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -178,6 +178,6 @@ root.render(<App />);
 
 ### Conclusion
 
-By implementing these steps in your React application, you can convert a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer to a base64 string upon button click. This facilitates the manipulation or transfer of PDF data as needed.
+By implementing these steps in the React component, a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer can be converted into a Base64-encoded data URL when a button is clicked. This facilitates the manipulation or transfer of PDF data as needed.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

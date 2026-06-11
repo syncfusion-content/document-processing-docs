@@ -10,7 +10,7 @@ documentation: UG
 
 ## Pivot Table Style
 
-XlsIO supports 85 built-in styles of Microsoft Excel used to create a table with rich formatting using the [PivotBuiltInStyles](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.PivotBuiltInStyles.html) property as follows.
+XlsIO supports 85 built-in styles of Microsoft Excel used to create a table with rich formatting using the [PivotBuiltInStyles](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.PivotBuiltInStyles.html) property as follows.
 
 The following code example illustrates how to apply built-in style to pivot table.
 
@@ -20,8 +20,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[1];
 	IPivotTable pivotTable = worksheet.PivotTables[0];
 
@@ -30,13 +29,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PivotTable.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/PivotTable.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -82,7 +76,7 @@ A complete working example to apply built-in style to pivot table in C# is prese
 
 ## Pivot Cell Formatting
 
-When you apply the cell formatting to pivot table cells, Microsoft Excel maintains the formatting information in pivot table and shows the cell formatting on pivot table cells from that pivot formats. XlsIO supports to apply cell formatting to pivot table range cells. You can apply all the cell formatting using [IPivotTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTable.html) [GetCellFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_GetCellFormat_System_String_) method and [IPivotCellFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotCellFormat.html) interface.
+When you apply the cell formatting to pivot table cells, Microsoft Excel maintains the formatting information in pivot table and shows the cell formatting on pivot table cells from that pivot formats. XlsIO supports to apply cell formatting to pivot table range cells. You can apply all the cell formatting using [IPivotTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html) [GetCellFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_GetCellFormat_System_String_) method and [IPivotCellFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotCellFormat.html) interface.
 
 The following code example illustrates how to apply cell formatting to pivot table cells.
 
@@ -92,8 +86,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[1];
 
 	IPivotTable pivotTable = worksheet.PivotTables[0];
@@ -103,13 +96,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/PivotCellFormat.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/PivotCellFormat.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 

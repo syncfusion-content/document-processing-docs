@@ -1,16 +1,18 @@
 ---
 layout: post
-title: Measurement annotation in React Pdfviewer component | Syncfusion
-description: Learn here all about Measurement annotation in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Measurement annotation
+title: Measurement annotation in React PDF Viewer control | Syncfusion
+description: Learn about measurement annotations in the Syncfusion React PDF Viewer (Essential JS 2): distance, perimeter, area, radius, and volume.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Measurement annotation in React Pdfviewer component
+# Measurement annotation in React PDF Viewer
 
-The PDF Viewer provides the options to add measurement annotations. You can measure the page annotations with the help of measurement annotation. The supported measurement annotations in the PDF Viewer control are:
+The PDF Viewer supports measurement annotations for capturing distances, perimeters, areas, radius, and volumes.
+
+Supported measurement annotations:
 
 * Distance
 * Perimeter
@@ -18,22 +20,21 @@ The PDF Viewer provides the options to add measurement annotations. You can meas
 * Radius
 * Volume
 
-![CalibrateAnnotation](../images/calibrate_annotation.png)
+![Measurement annotations overview](../images/calibrate_annotation.png)
 
-## Adding measurement annotations to the PDF document
+## Add measurement annotations
 
-The measurement annotations can be added to the PDF document using the annotation toolbar.
+Measurement annotations are available from the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Measurement Annotation** dropdown button. A dropdown pop-up will appear and shows the measurement annotations to be added.
-* Select the measurement type to be added to the page in the dropdown pop-up. It enables the selected measurement annotation mode.
-* You can measure and add the annotation over the pages of the PDF document.
+* Open the annotation toolbar using the **Edit Annotation** button in the PDF Viewer toolbar.
+* Use the **Measurement Annotation** drop-down to choose a measurement type.
+* Select a measurement type to enable its annotation mode, then place the measurement on the page.
 
-In the pan mode, if the measurement annotation mode is entered, the PDF Viewer control will switch to text select mode.
+If the viewer is in pan mode, selecting a measurement annotation activates text selection mode where applicable.
 
-  ![CalibrateTool](../images/calibrate_tool.png)
+![CalibrateTool](../images/calibrate_tool.png)
 
-Refer to the following code snippet to switch to distance annotation mode.
+The following example switches the viewer to distance annotation mode.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -57,7 +58,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
@@ -108,11 +109,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a measurement annotation to the PDF document Programmatically
+## Add a measurement annotation to the PDF document programmatically
 
-With the PDF Viewer library, you can add a measurement annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library allows adding measurement annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#annotation) method.
 
-Here's a example of how you can utilize the **addAnnotation()** method to include a measurement annotation programmatically:
+The following examples demonstrate how to add measurement annotations programmatically using `addAnnotation()`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -179,7 +180,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -272,11 +273,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the existing measurement annotation programmatically
+## Edit an existing measurement annotation programmatically
 
-To modify existing measurement annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer programmatically, you can use the **editAnnotation()** method.
+Use the `editAnnotation()` method to modify existing measurement annotations programmatically.
 
-Here is an example of how you can use the **editAnnotation()** method:
+The following example demonstrates `editAnnotation()`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -362,7 +363,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -474,45 +475,45 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Editing the properties of measurement annotation
+## Edit properties of measurement annotations
 
-The fill color, stroke color, thickness, and opacity of the measurement annotation can be edited using the Edit Color tool, Edit Stroke Color tool, Edit Thickness tool, and Edit Opacity tool in the annotation toolbar.
+Change fill color, stroke color, thickness, and opacity using the annotation toolbar tools: Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity.
 
-### Editing fill color
+### Edit fill color
 
-The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
+Change the fill color with the color palette in the Edit Color tool.
 
 ![CalibrateFillColor](../images/calibrate_fillcolor.png)
 
-### Editing stroke color
+### Edit stroke color
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+Change the stroke color with the Edit Stroke Color tool.
 
 ![CalibrateStrokeColor](../images/calibrate_stroke.png)
 
-### Editing thickness
+### Edit thickness
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit thickness tool.
+Adjust border thickness with the range slider in the Edit Thickness tool.
 
 ![CalibrateThickness](../images/calibrate_thickness.png)
 
-### Editing opacity
+### Edit opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Adjust annotation opacity with the range slider in the Edit Opacity tool.
 
 ![CalibrateOpacity](../images/calibrate_opacity.png)
 
-### Editing the line properties
+### Edit line properties
 
-The properties of the line shapes such as distance and perimeter annotations can be edited using the Line properties window. It can be opened by selecting the Properties option in the context menu that appears on right-clicking the distance and perimeter annotations.
+Line-based measurement annotations (distance and perimeter) include additional options in the Line Properties window. Open it by right-clicking the annotation and choosing Properties.
 
 ![CalibrateProperty](../images/calibrate_lineprop.png)
 
-## Setting default properties during control initialization
+## Set default properties during initialization
 
-The properties of the shape annotations can be set before creating the control using distanceSettings, perimeterSettings, areaSettings, radiusSettings and volumeSettings.
+Default properties for measurement annotations can be configured on the viewer before creation using the `distanceSettings`, `perimeterSettings`, `areaSettings`, `radiusSettings`, and `volumeSettings` properties.
 
-Refer to the following code snippet to set the default annotation settings.
+The following code snippet shows how to set default measurement annotation settings on initialization.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -531,7 +532,7 @@ export function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         distanceSettings={{fillColor: 'blue', opacity: 0.6, strokeColor: 'green'}}
         perimeterSettings={{fillColor: 'green', opacity: 0.6, strokeColor: 'blue'}}
         areaSettings={{fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'}}
@@ -587,13 +588,13 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Editing scale ratio and unit of the measurement annotation
+## Scale ratio and measurement units
 
-The scale ratio and unit of measurement can be modified using the scale ratio option provided in the context menu of the PDF Viewer control.
+Modify the scale ratio and measurement unit via the Scale Ratio option in the viewer's context menu.
 
-  ![CalibrateScaleRatio](../images/calibrate_scaleratio.png)
+![CalibrateScaleRatio](../images/calibrate_scaleratio.png)
 
-The Units of measurements support for the measurement annotations in the PDF Viewer are
+Supported units for measurement annotations:
 
 * Inch
 * Millimeter
@@ -604,10 +605,9 @@ The Units of measurements support for the measurement annotations in the PDF Vie
 
 ![CalibrateScaleDialog](../images/calibrate_scaledialog.png)
 
-## Setting default scale ratio settings during control initialization
+## Set default scale ratio during initialization
 
-The properties of scale ratio for measurement annotation can be set before creating the control using ScaleRatioSettings as shown in the following code snippet,
-
+Configure scale ratio defaults using `measurementSettings` (for example, `scaleRatio`, `conversionUnit`, and `displayUnit`) before creating the viewer. The following snippet demonstrates these settings.
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %}
@@ -625,7 +625,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         measurementSettings={{scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'}}
         style={{ 'height': '640px' }}>
 

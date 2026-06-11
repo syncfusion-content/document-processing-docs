@@ -1,22 +1,25 @@
 ---
 layout: post
-title: Set Author Name To Annotation in ASP.NET MVC Pdfviewer Component
-description: Learn here all about Set Author Name To Annotation in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Set Author Name to Annotation in PDF Viewer
+description: Learn how to set the author name for annotations in the Syncfusion ASP.NET MVC PDF Viewer component of Essential JS 2, enhancing collaboration and tracking.
 platform: document-processing
-control: Set Author Name To Annotation
-publishingplatform: ASP.NET MVC
+control: PDF Viewer
 documentation: ug
 ---
 
-# Set author name to annotation
+# Set Author Name to Annotations
 
-The PDF Viewer server library allows you to set author name to all annotations in the PDF document. Use the **author** property to set author name to all annotations.
+In the PDF Viewer, you can assign an author name to all annotations within a PDF document. This feature is particularly useful for collaboration and tracking changes made by different users. Use the `author` property within the annotation settings to specify the author's name.
 
-The following steps are used to set author name to all annotation for PDF Viewer,
+Follow these steps to set the author name for annotations in the PDF Viewer:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create simple PDF Viewer sample.
+**Step 1: Create a Basic PDF Viewer Sample**
 
-**Step 2:** Set author name to annotations using below code snippet.
+Start by following the instructions provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to set up a basic PDF Viewer application.
+
+**Step 2: Set the Author Name**
+
+Once your PDF Viewer is set up, you can set the author name for annotations using the following JavaScript code snippet. This typically goes within your view, often at the end of the `<body>` tag or in a dedicated script file, after the PDF Viewer component has been initialized.
 
 ```html
 

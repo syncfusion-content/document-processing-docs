@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Redirect To Home Page in Syncfusion ASP.NET MVC Pdfviewer Component
-description: Learn here all about Redirect To Home Page in Syncfusion ASP.NET MVC Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Redirect to home page after PDF form submit in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to redirect to a home page after submitting PDF forms using the ExportSuccess event in the Syncfusion ASP.NET MVC PDF Viewer.
 platform: document-processing
-control: Redirect To Home Page
+control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-
 # Redirect to a home page after submitting PDF forms
 
-The PDF Viewer library allows you to redirect to a home page after submitting PDF forms in the PDF Viewer control programmatically using the [**ExportSuccess**](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ExportSuccess) event. This event triggers once the form fields exporting is succeeded in the PDF Viewer.
+Use the Syncfusion ASP.NET MVC PDF Viewer’s [**ExportSuccess**](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ExportSuccess) event to redirect users to a home page after form submission. The **ExportSuccess** event fires when form field export completes successfully. In the handler, navigate to the target page (for example, the home page) using window.open with the _self target to replace the current page.
 
-The following example steps are used to redirect to a home page programmatically after submitting PDF forms.
+The following example shows how to redirect to a home page programmatically after submitting PDF forms.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Create a basic PDF Viewer sample by following the Getting Started guide: [Getting started with ASP.NET MVC PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/).
 
-**Step 2:** Add the following codes in new View pages HomePage.cshtml and FormFillingData.cshtml inside a folder(say FormFilling).
+**Step 2:** Add the following view pages inside a new folder (for example, Views/FormFilling): HomePage.cshtml and FormFillingData.cshtml. FormFillingData.cshtml wires the ExportSuccess event that performs the redirect.
 
 FormFillingData.cshtml:
 
@@ -94,7 +93,7 @@ HomePage.cshtml:
 <h2>HomePage</h2>
 ```
 
-**Step 3:** Create a new Controller file called FormFillingController.cs inside the Controllers and add the below code to it.
+**Step 3:** Create a controller named FormFillingController.cs under Controllers and add the following code. The ServiceUrl in the viewer points to this controller.
 
 FormFillingController.cs:
 
@@ -402,7 +401,7 @@ namespace EJ2PdfViewer.Controllers
 }
 ```
 
-**Step 4:** Modify the RegisterRoutes method in the RouteConfig.cs file inside the App_Start folder to map the default path.
+**Step 4:** Modify the RegisterRoutes method in App_Start/RouteConfig.cs to map the default path to the form-filling view.
 
 ```cs
 public static void RegisterRoutes(RouteCollection routes)
@@ -417,6 +416,6 @@ public static void RegisterRoutes(RouteCollection routes)
 }
 ```
 
-Now, run the sample, fill in the form fields, and click the Submit Form option. You will be redirected to the home page.
+Run the sample, fill the form fields, and select Submit Form. When export succeeds, the ExportSuccess event handler redirects to the home page. If using areas or custom routes, update the relative URL in the handler accordingly.
 
-Download the sample, [how to redirect to a home page programmatically after submitting PDF forms](https://www.syncfusion.com/downloads/support/directtrac/general/ze/MVC_SAMPLE-1729180476.zip).
+Download the sample: [how to redirect to a home page programmatically after submitting PDF forms](https://www.syncfusion.com/downloads/support/directtrac/general/ze/MVC_SAMPLE-1729180476.zip).

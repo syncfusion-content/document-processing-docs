@@ -1,24 +1,25 @@
 ---
 layout: post
-title: Rendering event in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Rendering event in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Handle pageRenderInitiate and pageRenderComplete events in ASP.NET Core PDF Viewer | Syncfusion
+description: Discover how to use the pageRenderInitiate and pageRenderComplete events in the Syncfusion ASP.NET Core PDF Viewer to monitor page rendering stages.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# PageRenderInitiate and pageRenderComplete event
+# Page rendering events in ASP.NET Core PDF Viewer
 
-In Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, `pageRenderInitiate` and `pageRenderComplete` actions are events that occur during the rendering process of PDF documents.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer provides the `pageRenderInitiate` and `pageRenderComplete` events to monitor and respond to each stage of the page rendering lifecycle. These events are essential for tracking progress, managing specialized UI overlays, or deferring computational tasks until a page is fully visible.
 
-**pageRenderInitiate**
+## pageRenderInitiate
 
-The `pageRenderInitiate` event is triggered when the rendering of a page in the PDF document begins. This event provides developers with an opportunity to perform any necessary initialization or setup before the rendering of the page content commences. It can be utilized to prepare resources, set up rendering parameters, or execute any other actions required before the page rendering process starts.
+The `pageRenderInitiate` event fires correctly before a page enters the rendering process. This is the ideal stage to initialize timers, allocate temporary resources, or log analytical data. The event arguments provide the specific page index and source details.
 
-**pageRenderComplete**
+## pageRenderComplete
 
-The `pageRenderComplete` event is triggered when the rendering of a page in the PDF document is completed. This event allows developers to perform cleanup tasks or finalize rendering-related processes after the rendering of the page content finishes. It can be used to release resources, finalize rendering settings, or handle any post-rendering tasks necessary for the application.
+The `pageRenderComplete` event fires after the viewer has finished drawing the page content. Use this callback to finalize custom overlays, update progress indicators, or trigger workflows that depend on a fully rendered page.
+
+The following example demonstrates how to subscribe to these events in both standalone and server-backed configurations:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -82,4 +83,4 @@ The `pageRenderComplete` event is triggered when the rendering of a page in the 
 {% endhighlight %}
 {% endtabs %}
 
-The provided code demonstrates how to subscribe to the `pageRenderInitiate` and `pageRenderComplete` events in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component.
+By leveraging these rendering events, developers can maintain granular control over the viewer's lifecycle and provide a more interactive documentation experience.

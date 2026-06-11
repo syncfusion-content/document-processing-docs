@@ -41,7 +41,7 @@ using Syncfusion.Drawing;
 Step 5: Add a new button in index.cshtml as follows
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @{
 Html.BeginForm("CreatePDF", "Home", FormMethod.Get);
@@ -97,9 +97,9 @@ public IActionResult CreatePDF()
     MemoryStream stream = new MemoryStream();
     //Save the document to the memory stream.
     document.Save(stream);
-    //Close the documet
-	document.Close(true); 
-	//Return the PDF file as a download
+    //Close the document
+    document.Close(true); 
+    //Return the PDF file as a download
     return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Output.pdf");
 }
 
@@ -124,7 +124,6 @@ Step 11: Click the URL link to launch the application once the Environment is up
 Step 12: Now, the webpage will open in the browser. Click the button to convert the webpage to a PDF document.
 ![Console Window](GettingStarted_images/Console-Page-AWS-Elastic-Beanstalk.png)
 
-
 By executing the program, you will get the PDF document as follows.
 
 ![Open and save a PDF document in AWS Lambda](GettingStarted_images/Output.png)
@@ -133,4 +132,4 @@ Users can download the [AWS Elastic Beanstalk](https://github.com/SyncfusionExam
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core?_gl=1*7czwz1*_ga*OTcwNzc5NDkuMTY4MTEwMjEwNA..*_ga_WC4JKKPHH0*MTY4OTg0NTE0Ni4zMzguMC4xNjg5ODQ1MTQ2LjYwLjAuMA..) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create a PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HelloWorld#/bootstrap5) in ASP.NET Core
+An online sample link to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core

@@ -15,8 +15,7 @@ The following code illustrates adding chart labels to the scatter points of the 
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Get the chart from the charts collection
@@ -30,9 +29,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Set the Value to the Data Labels through Data Points
   serieOne.DataPoints[0].DataLabels.IsValue = true;
-
-  FileStream stream = new FileStream("ChartLabels.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+ 
+  workbook.SaveAs("ChartLabels.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

@@ -18,8 +18,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     application.DefaultVersion = ExcelVersion.Xlsx;
 
     //Loads an existing file.
-    FileStream inputstream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputstream);
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
     IWorksheet sheet = workbook.Worksheets[0];
 
     //Find and Replace text in hyperlinks
@@ -34,9 +33,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     }
     
     // Saving the workbook
-    FileStream outputstream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(outputstream);
-    outputstream.Dispose();
+    workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

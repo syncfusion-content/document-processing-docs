@@ -26,7 +26,7 @@ N> The **Minimum** and **EN16931** conformance levels are only supported in **Zu
 N> The **XRechnung** conformance level is only supported in **Factur-X**. 
 N> A **PDF/A-3** file contains embedded XML data, making the invoice both **human-readable (PDF)** and **machine-readable (XML)** within the same document.  
 
-The ZUGFeRD invoice document can be created by specifying the conformance level as ``Pdf_A3B`` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document and set the [ZugferdConformanceLevel](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdConformanceLevel) property as *Basic* in [ZugferdConformanceLevel](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.ZugferdConformanceLevel.html) Enum. 
+The ZUGFeRD invoice document can be created by specifying the conformance level as ``Pdf_A3B`` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document and set the [ZugferdConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdConformanceLevel) property as *Basic* in [ZugferdConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ZugferdVersion.html) Enum. 
 
 {% tabs %} 
 
@@ -62,7 +62,7 @@ document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic
 
 {% endtabs %}  
 
-Using PDF/A-3b conformance, you can create a ZUGFeRD invoice PDF by specifying the [ZugferdVersion](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdVersion) property as *ZugferdVersion2_0* of [ZugferdVersion](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.ZugferdVersion.html) Enum. By default, ZugferdVersion1.0 used. 
+Using PDF/A-3b conformance, you can create a ZUGFeRD invoice PDF by specifying the [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdVersion) property as *ZugferdVersion2_0* of [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ZugferdVersion.html) Enum. By default, ZugferdVersion1.0 used. 
 
 {% tabs %} 
 
@@ -100,7 +100,7 @@ document.ZugferdVersion = ZugferdVersion.ZugferdVersion2_0
 
 ## Adding ZUGFeRD structured data as attachment
 
-The PDF/A-3b conformance supports the external files as attachment to the PDF document using [PdfAttachment](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. 
+The PDF/A-3b conformance supports the external files as attachment to the PDF document using [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. 
 
 {% tabs %} 
 
@@ -149,14 +149,12 @@ document.Attachments.Add(attachment)
 {% endtabs %}  
 
 N> **XML Naming Guidelines** 
-
 N> As per the ZUGFeRD standard guidelines, the XML file name must follow the specified format: 
-
 N> 1. **ZUGFeRD 1.0**: The file name should be "ZUGFeRD-invoice.xml". 
 N> 2. **ZUGFeRD 2.0**: The file name should be "zugferd-invoice.xml". 
 N> 3. **Factur-X**: The file name should be "factur-x.xml", except for **XRechnung**, where the file name must be "xrechnung.xml".
 
-Using **PDF/A-3b** conformance, you can create a **ZUGFeRD invoice PDF** by specifying the [ZugferdVersion](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdVersion) property as **Factur-X** in the [ZugferdVersion](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.ZugferdVersion.html) Enum.
+Using **PDF/A-3b** conformance, you can create a **ZUGFeRD invoice PDF** by specifying the [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdVersion) property as **Factur-X** in the [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ZugferdVersion.html) Enum.
 
 {% tabs %} 
 
@@ -282,7 +280,7 @@ PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
 document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic;
 
 //Creates an attachment 
-FileStream fontStream = new FileStream("../../ Data / ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
+FileStream fontStream = new FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
 PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream);
 attachment.Relationship = PdfAttachmentRelationship.Alternative;
 attachment.ModificationDate = DateTime.Now;
@@ -309,7 +307,7 @@ PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
 document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic;
 
 //Creates an attachment 
-FileStream invoiceStream = new FileStream("../../ Data / ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
+FileStream invoiceStream = new FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
 PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream);
 attachment.Relationship = PdfAttachmentRelationship.Alternative;
 attachment.ModificationDate = DateTime.Now;
@@ -335,7 +333,7 @@ Dim document As PdfDocument = New PdfDocument(PdfConformanceLevel.Pdf_A3B)
 document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic
 
 'Creates an attachment
-Dim invoiceStream As FileStream = New FileStream("../../ Data / ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read)
+Dim invoiceStream As FileStream = New FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read)
 Dim attachment As PdfAttachment = New PdfAttachment("ZUGFeRD-invoice.xml",invoiceStream)
 attachment.Relationship = PdfAttachmentRelationship.Alternative
 attachment.ModificationDate = DateTime.Now
@@ -356,7 +354,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extract ZUGFeRD invoice from PDF
 
-You can extract the ZUGFeRD invoice using [PdfAttachment](https://help.syncfusion.com/cr/document-processings/Syncfusion.Pdf.Interactive.PdfAttachment.html) class. 
+You can extract the ZUGFeRD invoice using [PdfAttachment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAttachment.html) class.
 
 {% tabs %}
 
@@ -371,10 +369,10 @@ PdfLoadedDocument document = new PdfLoadedDocument("Sample.pdf");
 //Iterates the attachments
 foreach (PdfAttachment attachment in document.Attachments)
 {
-//Extracts the ZUGFeRD invoice attachment and saves it to the disk
-FileStream s = new FileStream(attachment.FileName, FileMode.Create);
-s.Write(attachment.Data, 0, attachment.Data.Length);
-s.Dispose();
+    //Extracts the ZUGFeRD invoice attachment and saves it to the disk
+    FileStream s = new FileStream(attachment.FileName, FileMode.Create);
+    s.Write(attachment.Data, 0, attachment.Data.Length);
+    s.Dispose();
 }
 
 //Saves and closes the document
@@ -394,10 +392,10 @@ PdfLoadedDocument document = new PdfLoadedDocument("Sample.pdf");
 //Iterates the attachments
 foreach (PdfAttachment attachment in document.Attachments)
 {
-//Extracts the ZUGFeRD invoice attachment and saves it to the disk
-FileStream s = new FileStream(attachment.FileName, FileMode.Create);
-s.Write(attachment.Data, 0, attachment.Data.Length);
-s.Dispose();
+    //Extracts the ZUGFeRD invoice attachment and saves it to the disk
+    FileStream s = new FileStream(attachment.FileName, FileMode.Create);
+    s.Write(attachment.Data, 0, attachment.Data.Length);
+    s.Dispose();
 }
 
 //Saves and closes the document
@@ -416,10 +414,10 @@ Dim document As New PdfLoadedDocument("Sample.pdf")
 
 'Iterates the attachments
 For Each attachment As PdfAttachment In document.Attachments
-'Extracts the attachment and saves it to the disk
-Dim s As New FileStream(attachment.FileName, FileMode.Create)
-s.Write(attachment.Data, 0, attachment.Data.Length)
-s.Dispose()
+    'Extracts the attachment and saves it to the disk
+    Dim s As New FileStream(attachment.FileName, FileMode.Create)
+    s.Write(attachment.Data, 0, attachment.Data.Length)
+    s.Dispose()
 Next
 
 'Saves and closes the document

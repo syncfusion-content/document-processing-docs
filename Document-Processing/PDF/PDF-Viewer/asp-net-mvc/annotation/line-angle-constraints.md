@@ -1,20 +1,18 @@
 ---
 layout: post
-title: Line Angle Constraints in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to enable Line Angle Constraints in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Line angle constraints in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn to add, edit, delete, and configure highlight, underline, strikethrough, and squiggly text markup annotations programmatically in ASP.NET MVC
 platform: document-processing
-control:  Line Angle Constraints
-publishingplatform: ASP.NET MVC
+control: PDF Viewer
 documentation: ug
 ---
 
-
-# Line Angle Constraints in ASP.NET MVC PDF Viewer
+# Line angle constraints in ASP.NET MVC PDF Viewer
 
 The PDF Viewer control provides robust **line angle constraints** functionality. This allows users to draw line type annotations with controlled angle snapping, improving accuracy and consistency across technical drawings and measurements across your PDF documents.
 
-## Enabling Line Angle Constraints
-To enable line angle constraints, configure the `enableLineAngleConstraints` property within the `annotationDrawingOptions` of the PDF Viewer. When enabled, line-type annotations are automatically restricted to fixed angles.
+## Enable line angle constraints
+Configure the `enableLineAngleConstraints` property within `annotationDrawingOptions`. When enabled, supported line-type annotations snap to fixed angles.
 
 The following code demonstrates how to enable line angle constraints:
 
@@ -62,14 +60,14 @@ The `enableLineAngleConstraints` property activates angle snapping for line-base
 
 - Automatic angle snapping during the drawing
 - Enhanced precision for technical drawings and measurements
-- Desktop support: Hold **Shift** while drawing to activate constraints
+- Desktop behavior: hold Shift while drawing to toggle constraints (when disabled, Shift temporarily enables; when enabled, Shift enforces snapping)
 - Real-time visual feedback showing angle snapping behavior
 
 ### restrictLineAngleTo
 
-The `restrictLineAngleTo` property defines the angle increment (in degrees) that constrains line-based annotations. The default value is **45 degrees**.
+Defines the angle increment (in degrees) used to constrain supported annotations. The default is 45.
 
-**Angle Snapping Rules:**
+Angle snapping rules:
 
 - The initial drawing direction is treated as the 0° reference point
 - Snapped angles are calculated based on the increment
@@ -80,32 +78,32 @@ The `restrictLineAngleTo` property defines the angle increment (in degrees) that
 - restrictLineAngleTo: 45 → Snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
 - restrictLineAngleTo: 100 → Snapped angles: 0°, 100°, 200°, 300°, 360°
 
-## Working with Constrained Annotations
+## Work with constrained annotations
 
 ### Drawing Behavior
 
 When line angle constraints are enabled:
 
-**Initial Drawing:** Start drawing a line, arrow, polygon, distance, perimeter, area, or volume as usual.
-**Angle Snapping:** The line snaps to the nearest allowed angle.
-**Visual Feedback:** Snapped angle is shown in real time.
-**Completion:** Release to complete the annotation.
+- Start drawing a supported annotation (Line, Arrow, Polyline, Distance, or Perimeter).
+- The segment snaps to the nearest allowed angle.
+- A visual indicator reflects snapping in real time.
+- Release to complete the annotation.
 
 ### Keyboard Shortcuts
 
-**Desktop Platforms:**
+**Desktop platforms:**
 
-**Shift + Drag:** Enables angle snapping even when `enableLineAngleConstraints` is false.
+**Shift + drag:** toggles snapping. If constraints are disabled, Shift temporarily enables them; if enabled, Shift enforces snapping.
 
 ### Selector-Based Modifications
 
 When modifying existing line annotations using selectors:
 
 - Constraints apply based on the original line direction.
-- The reference angle (0°) is determined by the lines current orientation.
-- Only lines and arrows support constraint snapping during modification.
-- Adjustments snap to the configured angle increment relative to the original direction.
+- The reference angle (0°) is determined by the line’s current orientation.
+- Constraint snapping during modification is supported for Line and Arrow.
+- Adjustments snap to the configured angle increment.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to)
+[View a sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to)
 
-N> You can refer to our [ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-mvc-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core PDF Viewer example](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples) to know how to render and configure the PDF Viewer.
+N> Refer to the ASP.NET MVC PDF Viewer [feature tour](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-mvc-pdf-viewer) for feature highlights. Explore the [ASP.NET MVC PDF Viewer examples](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples) to learn how to render and configure the PDF Viewer.

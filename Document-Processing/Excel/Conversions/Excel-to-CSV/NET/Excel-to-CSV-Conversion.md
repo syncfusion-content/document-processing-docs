@@ -27,16 +27,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
-	//Saving the workbook as streams
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Sample.csv"), FileMode.Create, FileAccess.ReadWrite);
-	workbook.SaveAs(outputStream, ",");
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
+	//Saving the workbook 
+	workbook.SaveAs(Path.GetFullPath("Output/Sample.csv"), ",");
 }
 {% endhighlight %}
 
@@ -83,16 +77,14 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   application.MaximumRowsForCsv = 3000000;
   application.MaximumColumnsForCsv = 20000;
   
-  FileStream inputStream = new FileStream("Sample.csv", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("Sample.csv");
   IWorksheet sheet = workbook.Worksheets[0];
   
   sheet.Range[2000000, 1].Text = "Syncfusion";
   sheet.Range[20, 18000].Text = "Syncfusion";
   
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream("Output.csv", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream,",");
+  //Saving the workbook 
+  workbook.SaveAs("Output.csv",",");
 }
 {% endhighlight %}
 
@@ -149,12 +141,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 
 	//Save the workbook in CSV format with tab(\t) as delimiter
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.tsv"), FileMode.Create, FileAccess.ReadWrite);
-	workbook.SaveAs(outputStream, "\t");
+	workbook.SaveAs(Path.GetFullPath("Output/Output.tsv"), "\t");
 }
 {% endhighlight %}
 

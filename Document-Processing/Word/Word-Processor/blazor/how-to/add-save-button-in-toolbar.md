@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add save button in Blazor DocumentEditor Component | Syncfusion
-description: Learn how to add a save button to the toolbar in the Syncfusion Blazor DocumentEditor component and much more.
+description: Learn how to add a custom save button to the toolbar in the Syncfusion Blazor Document Editor component and much more.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
@@ -10,7 +10,7 @@ documentation: ug
 
 ## To add a save button to the existing toolbar in DocumentEditorContainer
 
-[`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) component  allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.CustomToolbarItemModel.html) and with existing items in [`toolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ToolbarItems) property. Newly added item click action can be defined in [`toolbarClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorContainerEvents.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorContainerEvents_OnToolbarClick).
+[`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (Document Editor) component  allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.CustomToolbarItemModel.html) and with existing items in [`toolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ToolbarItems) property. Newly added item click action can be defined in [`toolbarClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorContainerEvents.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorContainerEvents_OnToolbarClick).
 
 ```csharp
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true ToolbarItems="@Items">

@@ -5,11 +5,11 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Open PDF from Google Drive
+# Open PDF file from Google Drive
 
-To Open a PDF file from Google Drive, you can follow the steps below
+To open a PDF file from Google Drive, follow these steps:
 
-Step 1: Set up Google Drive API
+Step 1: Set up the Google Drive API
 
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
@@ -19,12 +19,11 @@ Step 2: Create a simple console application
 
 Step 3: Install the [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3) NuGet packages as a reference to your project from the [NuGet.org](https://www.nuget.org/).
 
-![NuGet package installation](open-PDF-Images/Google.Apis.Drive.V3-nuget.png)
+![NuGet package installation](Open-PDF-Images/Google.Apis.Drive.V3-nuget.png)
 
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Google.Apis.Auth.OAuth2;
@@ -33,13 +32,11 @@ using Google.Apis.Services;
 using Google.Apis.Util.Store;
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 5: Add the below code example to open a PDF from google drive.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 UserCredential credential;
@@ -87,7 +84,6 @@ using (FileStream fileStream = new FileStream("output.pdf", FileMode.Create, Fil
 }
    
 {% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open-PDF-file/To%20Google%20Drive).

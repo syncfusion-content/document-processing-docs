@@ -5,9 +5,9 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Save PDF to Dropbox cloud file storage
+# Save PDF file to Dropbox Cloud Storage
 
-To save a PDF file to Dropbox cloud file storage, you can follow the steps below
+To save a PDF file to Dropbox Cloud Storage, you can follow the steps below
 
 Step 1: Create a Dropbox API
 
@@ -24,7 +24,6 @@ Step 3: Install the [Syncfusion.Pdf.Net.Core ](https://www.nuget.org/packages/Sy
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.Pdf.Graphics;
@@ -34,13 +33,11 @@ using Dropbox.Api.Files;
 using Syncfusion.Drawing;
 
 {% endhighlight %}
-
 {% endtabs %}
 
-Step 5: Add the below code example to create a simple PDF and save in Dropbox cloud file storage.
+Step 5: Add the below code example to create a simple PDF and save in Dropbox Cloud Storage.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 // Create a new PDF document.
@@ -64,13 +61,12 @@ using (var dbx = new DropboxClient(accessToken))
 {
     // Upload the PDF to Dropbox.
     var uploadResult = await dbx.Files.UploadAsync(
-        "/path/to/save/Sample.pdf",
-        WriteMode.Overwrite.Instance,
-        body: new MemoryStream(stream.ToArray()));
+"/path/to/save/Sample.pdf",
+WriteMode.Overwrite.Instance,
+body: new MemoryStream(stream.ToArray()));
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Save-PDF-file/To%20Dropbox%20Cloud%20Storage).

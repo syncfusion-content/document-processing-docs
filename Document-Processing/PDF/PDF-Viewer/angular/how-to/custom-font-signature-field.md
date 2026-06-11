@@ -1,7 +1,7 @@
 ---
 Layout: post
-title: To change the font family in Syncfusion Angular Pdfviewer component
-description: Learn how to change the font family in Form Field's Type Signature in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: To change the font family in Syncfusion Angular PDF Viewer component
+description: Learn how to change the font family in Form Field's Type Signature in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 
 # To Change the Font Family
-Change the Font Family in Type Signature of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer by adding a custom css stylesheet to the document , and then apply the desired font family to the type signature element. Include the Google font link in the HTML head section to apply the Google Font.
+Change the font family in the type signature of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer by adding a custom CSS stylesheet to the document and applying the desired font family to the type signature element. Include the Google Fonts link in the HTML head section to apply the font.
 
 ### Signature Field
 
 The following steps are used to include custom fonts for signature and initial field using `typeSignatureFonts` property.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) guide to create a simple PDF Viewer sample.
 
 **Step 2:** Insert the following code snippet to implement the functionality for using custom fonts in Signature field.
 
@@ -61,4 +61,4 @@ changeFontFamily(){
    }
 ```
 
-By implementing this , you can use custom fonts in form field's signature in both `signature` and `initial` field
+Implementing this enables use of custom fonts in form-field signature and initial fields.

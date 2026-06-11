@@ -17,87 +17,87 @@ Spreadsheet is a tabular format consisting of rows and columns. The intersection
 
 ## Insert
 
-You can insert rows or columns anywhere in a spreadsheet. Use the [`allowInsert`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowinsert) property to enable or disable the insert option in Spreadsheet.
+You can insert rows or columns anywhere in a spreadsheet. Use the [`allowInsert`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowinsert) property to enable or disable the insert option in Spreadsheet.
 
 ### Row
 
 The rows can be inserted in the following ways,
 
-* Using [`insertRow`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#insertrow) method, you can insert the rows once the component is loaded.
+* Using [`insertRow`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertrow) method, you can insert the rows once the component is loaded.
 * Using context menu, insert the empty rows in the desired position.
 
 The following code example shows the options for inserting rows in the spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-row-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/insert-row-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-row-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/insert-row-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-row-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/insert-row-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-row-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/insert-row-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/insert-row-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/insert-row-cs1" %}
 
 ### Column
 
 The columns can be inserted in the following ways,
 
-* Using [`insertColumn`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#insertcolumn) method, you can insert the columns once the component is loaded.
+* Using [`insertColumn`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertcolumn) method, you can insert the columns once the component is loaded.
 * Using context menu, insert the empty columns in the desired position.
 
 The following code example shows the options for inserting columns in the spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-column-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/insert-column-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-column-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/insert-column-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-column-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/insert-column-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-column-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/insert-column-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/insert-column-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/insert-column-cs1" %}
 
 ## Delete
 
-Delete support provides an option for deleting the rows and columns in the spreadsheet. Use [`allowDelete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#allowdelete) property to enable or disable the delete option in Spreadsheet.
+Delete support provides an option for deleting the rows and columns in the spreadsheet. Use [`allowDelete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowdelete) property to enable or disable the delete option in Spreadsheet.
 
 The rows and columns can be deleted dynamically in the following ways,
 
-* Using [`delete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#delete) method, you can delete the loaded rows and columns.
+* Using [`delete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete) method, you can delete the loaded rows and columns.
 * Using context menu, you can delete the selected rows and columns.
 
 The following code example shows the delete operation of rows and columns in the spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/delete-row-column-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/delete-row-column-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/delete-row-column-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/delete-row-column-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/delete-row-column-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/delete-row-column-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/delete-row-column-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/delete-row-column-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/delete-row-column-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/delete-row-column-cs1" %}
 
 ## Limitations of insert and delete
 
@@ -132,28 +132,28 @@ The following code example shows the hide/show rows and columns operation in the
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/show-hide-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/show-hide-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/show-hide-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/show-hide-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/show-hide-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/show-hide-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/show-hide-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/show-hide-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/show-hide-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/show-hide-cs1" %}
 
 ## Size
 
-You can change the size of rows and columns in the spreadsheet by using [setRowsHeight](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#setrowsheight) and [setColumnsWidth](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#setcolumnswidth) methods.
+You can change the size of rows and columns in the spreadsheet by using [setRowsHeight](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#setrowsheight) and [setColumnsWidth](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#setcolumnswidth) methods.
 
 ### Row
 
-You can change the height of single or multiple rows by using the [setRowsHeight](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#setrowsheight) method.
+You can change the height of single or multiple rows by using the [setRowsHeight](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#setrowsheight) method.
 
 You can provide the following type of ranges to the method:
 
@@ -162,28 +162,30 @@ You can provide the following type of ranges to the method:
 * Multiple rows with discontinuous range: `['1:10', '15:25', '30:40']`
 * Multiple rows with different sheets: `[Sheet1!1:50, 'Sheet2!1:50', 'Sheet3!1:50']`
 
+Additionally, each row model includes a [customHeight](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rowmodel#customheight) property that indicates the row height was explicitly set either by manually adjusting the row header boundary or programmatically. When [customHeight](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/rowmodel#customheight) is true, the height is treated as manually defined and will not change automatically when enabling wrap text, increasing font size, or changing the font family; the height remains fixed until the user or code updates it.
+
 The following code example shows how to change the height for single/multiple rows in the spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/row-height-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/row-height-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/row-height-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/row-height-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/row-height-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/row-height-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/row-height-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/row-height-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/row-height-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/row-height-cs1" %}
 
 ### Column
 
-You can change the width of single or multiple columns by using the [setColumnsWidth](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#setcolumnswidth) method.
+You can change the width of single or multiple columns by using the [setColumnsWidth](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#setcolumnswidth) method.
 
 You can provide the following type of ranges to the method:
 
@@ -192,41 +194,43 @@ You can provide the following type of ranges to the method:
 * Multiple columns with discontinuous range: `['A:C', 'G:I', 'K:M']`
 * Multiple columns with different sheets: `[Sheet1!A:H, 'Sheet2!A:H', 'Sheet3!A:H']`
 
+Additionally, each column model includes a [customWidth](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/columnmodel#customwidth) property that indicates the column width was explicitly set either by manually adjusting the column header boundary or programmatically. When [customWidth](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/columnmodel#customwidth) is true, the width is treated as manually defined.
+
 The following code example shows how to change the width for single/multiple columns in the spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/column-width-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/column-width-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/column-width-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/column-width-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/column-width-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/column-width-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/column-width-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/column-width-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/column-width-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/column-width-cs1" %}
 
 ## Changing text in column headers
 
-Using the [`beforeCellRender`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#beforecellrender) event, you can change the text in the column headers. In that event, you can use the `e-header-cell` class to identify the header cell element and update its text value.
+Using the [`beforeCellRender`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#beforecellrender) event, you can change the text in the column headers. In that event, you can use the `e-header-cell` class to identify the header cell element and update its text value.
 
 The following code example shows how to change the text in the column headers.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/column-header-change-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/column-header-change-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/column-header-change-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/column-header-change-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/column-header-change-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/column-header-change-cs1" %}
 
 ## Note
 

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Selection in EJ2 ASP.NET MVC Spreadsheet Control | Syncfusion
-description: Learn here all about Selection in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Selection in Syncfusion EJ2 ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Selection
 documentation: ug
 ---
 
 
-# Selection in Spreadsheet Control
+# Selection in ASP.NET MVC Spreadsheet Control
 
 Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` or `Multiple` in [`selectionSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings). If you set `mode` to `None`, it disables the UI selection.
 
@@ -49,10 +49,10 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/row-selection/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/row-selection/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/row-selection/selectionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/row-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,10 +75,10 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/column-selection/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/column-selection/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/column-selection/selectionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/column-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -90,10 +90,10 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/selected-cell-values/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/selected-cell-values/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectedCellValuesController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/selected-cell-values/selectedCellValuesController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/selected-cell-values/selectedCellValuesController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,10 +103,10 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/disable-selection/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/disable-selection/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SelectionController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/disable-selection/selectionController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/disable-selection/selectionController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

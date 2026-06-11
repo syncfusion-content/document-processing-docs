@@ -39,14 +39,14 @@ The following code example shows `How to update and customize your own actions f
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/undo-redo-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/undo-redo-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/excel/spreadsheet/vue/undo-redo-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/undo-redo-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/vue/undo-redo-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/undo-redo-cs1" %}
 
 ## Note
 

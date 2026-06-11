@@ -86,27 +86,23 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
+    
+    // Open the workbook.
+    IWorkbook workbook = application.Workbooks.Open(@"wwwroot/InputTemplate.xlsx");
 
-    //Load an existing file
-    using (FileStream sourceStreamPath = new FileStream(@"wwwroot/InputTemplate.xlsx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-    {
-        // Open the workbook.
-        IWorkbook workbook = application.Workbooks.Open(sourceStreamPath);
+    // Instantiate the Excel to PDF renderer.
+    XlsIORenderer renderer = new XlsIORenderer();
 
-        // Instantiate the Excel to PDF renderer.
-        XlsIORenderer renderer = new XlsIORenderer();
+    //Convert Excel document into PDF document 
+    PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-        //Convert Excel document into PDF document 
-        PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+    //Create the MemoryStream to save the converted PDF.      
+    MemoryStream pdfStream = new MemoryStream();
 
-        //Create the MemoryStream to save the converted PDF.      
-        MemoryStream pdfStream = new MemoryStream();
-
-        //Save the converted PDF document to MemoryStream.
-        pdfDocument.Save(pdfStream);
-        pdfStream.Position = 0;
-        return pdfStream;
-    }
+    //Save the converted PDF document to MemoryStream.
+    pdfDocument.Save(pdfStream);
+    pdfStream.Position = 0;
+    return pdfStream;   
 }
 {% endhighlight %}
 {% endtabs %}
@@ -245,26 +241,22 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
 
-    //Load an existing file
-    using (FileStream sourceStreamPath = new FileStream(@"wwwroot/InputTemplate.xlsx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-    {
-        // Open the workbook.
-        IWorkbook workbook = application.Workbooks.Open(sourceStreamPath);
+    // Open the workbook.
+    IWorkbook workbook = application.Workbooks.Open(@"wwwroot/InputTemplate.xlsx");
 
-        // Instantiate the Excel to PDF renderer.
-        XlsIORenderer renderer = new XlsIORenderer();
+    // Instantiate the Excel to PDF renderer.
+    XlsIORenderer renderer = new XlsIORenderer();
 
-        //Convert Excel document into PDF document 
-        PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+    //Convert Excel document into PDF document 
+    PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-        //Create the MemoryStream to save the converted PDF.      
-        MemoryStream pdfStream = new MemoryStream();
+    //Create the MemoryStream to save the converted PDF.      
+    MemoryStream pdfStream = new MemoryStream();
 
-        //Save the converted PDF document to MemoryStream.
-        pdfDocument.Save(pdfStream);
-        pdfStream.Position = 0;
-        return pdfStream;
-    }
+    //Save the converted PDF document to MemoryStream.
+    pdfDocument.Save(pdfStream);
+    pdfStream.Position = 0;
+    return pdfStream;    
 }
 {% endhighlight %}
 {% endtabs %}
@@ -333,8 +325,8 @@ By executing the program, you will get the **PDF document** as follows.
 ![Output File in Blazor Server App](Blazor_images\Blazor_images_Server_and_Client_App_Output.png)
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
-
-An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.
+ 
+An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent">convert an Excel document to PDF</a> in Blazor.
 
 ## Excel to PDF in Blazor WASM app
 
@@ -663,8 +655,8 @@ By executing the program, you will get the **PDF document** as follows.
 N> To convert Excel to PDF, it is necessary to access the font stream internally. However, this cannot be done automatically in a Blazor WASM application. Therefore, we recommend using a Server app, even though Excel to PDF conversion works in a WASM app.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
-
-An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.
+ 
+An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent">convert an Excel document to PDF</a> in Blazor.
 
 ## Excel to PDF in .NET MAUI Blazor Hybrid App
 
@@ -886,4 +878,4 @@ By executing the program, you will get the **PDF document** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [convert an Excel document to PDF](https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent) in Blazor.
+An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent">convert an Excel document to PDF</a> in Blazor.

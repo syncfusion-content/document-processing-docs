@@ -178,6 +178,15 @@ NuGet packages to install
 </thead>
 <tr>
 <td>
+From v32.1.19
+</td>
+<td>
+{{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
+{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
 From v28.2.3
 </td>
 <td>
@@ -243,7 +252,7 @@ From v18.4.0.x to 19.4.0.x
 Before v18.4.0.x
 </td>
 <td>
-Install SkiaSharp.Linux NuGet package for .Net Core application in Linux OS. you can find the SkiaSharp.Linux NuGet package created by us from {{'[here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/SkiaSharp.Linux.1.59.3-2103435070)'| markdownify }}.<br/>
+Install SkiaSharp.Linux NuGet package for .NET Core application in Linux OS. you can find the SkiaSharp.Linux NuGet package created by us from {{'[here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/SkiaSharp.Linux.1.59.3-2103435070)'| markdownify }}.<br/>
 For more information, Please refer {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/faq#how-to-perform-word-to-pdf-in-linux-prior-to-v184-release)'| markdownify }}.
 </td>
 </tr>
@@ -266,6 +275,15 @@ NuGet packages to install
 </th>
 </tr>
 </thead>
+<tr>
+<td>
+From v32.1.19
+</td>
+<td>
+{{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
+{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)'| markdownify }}
+</td>
+</tr>
 <tr>
 <td>
 From v28.2.3

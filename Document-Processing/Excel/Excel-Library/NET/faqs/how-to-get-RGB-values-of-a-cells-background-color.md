@@ -32,11 +32,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     Console.WriteLine($"Red: {red}, Green: {green}, Blue: {blue}");
 
     //Save the workbook
-    FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-
-    //Dispose stream
-    outputStream.Dispose();
+    workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 

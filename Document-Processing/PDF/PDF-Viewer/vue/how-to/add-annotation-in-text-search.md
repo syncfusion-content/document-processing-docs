@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Add Annotation in Text Search in Vue Pdfviewer component | Syncfusion
-description: Learn how to add rectangle annotations using search text bounds in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Add Rectangle Annotation via TextSearch in Vue PDF Viewer | Syncfusion
+description: Learn to add rectangle annotations using text search bounds in the Vue PDF Viewer component, including initialization and search controls.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Rectangle Annotations Using Search Text Bounds in PDF Viewer
+# Add rectangle annotations using text search bounds in Vue
 
 ## Overview
 
-This guide demonstrates how to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer. This technique is useful for emphasizing search results with visual markers in annotation-supported applications.
+A concise guide that demonstrates how to add rectangle annotations at highlighted text search results in the Vue PDF Viewer. The guide explains where to wire the callback, required services, and quick troubleshooting steps.
 
-## Steps to Add Rectangle Annotations on Search Result Highlight
+## Steps to add rectangle annotations on search result highlight
 
 **Step 1:** Follow the steps provided in the [Vue PDF Viewer Getting Started documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** Set Up the PdfViewer Component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
+**Step 2:** Set up the PDF Viewer component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -67,7 +67,7 @@ export default {
   },
   data() {
     return {
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     };
   },
@@ -121,6 +121,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-By following this guide, you will enable the PDF Viewer to add rectangle annotations at search result locations, thus increasing the visibility of search results in your application.
+Following this guide enables the PDF Viewer to add rectangle annotations at text search result locations, improving visibility for users navigating search matches.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)

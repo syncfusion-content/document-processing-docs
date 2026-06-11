@@ -129,4 +129,4 @@ Continuous layout:
 ![Changing Background color of Continuous Layout in WPF RichTextBox](Image_images/wpf-richtextbox-continous-background.PNG)
 
 N> This API is supported starting from release version v17.4.0.X. 
-You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/wpf-demos/tree/master/richtextbox) to knows how to render and configure the editing tools.
+You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.

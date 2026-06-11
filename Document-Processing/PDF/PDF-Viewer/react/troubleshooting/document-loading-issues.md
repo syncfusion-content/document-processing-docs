@@ -1,18 +1,17 @@
 ---
 layout: post
-title: Document Loading Issues in Version 23.1 or Newer React Pdfviewer Component
-description: Learn here all about troubleshooting Document Loading Issues in Version 23.1 or newer in React Pdfviewer of Syncfusion Essential JS 2 and more.
+title: Fix document loading issues in v23.1+ for the React PDF Viewer component
+description: Resolve document rendering failures in v23.1 or newer by calling dataBind before load, verifying source URLs, checking CORS and CSP, and confirming network connectivity in the React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: React
 documentation: ug
 ---
 
-# Document Loading Issues in Version 23.1 or Newer
+# Document loading issues in version 23.1 or newer
 
-If you're experiencing problems with your document not rendering in the viewer, especially when using version 23.1 or a newer version, follow these troubleshooting steps to resolve the issue:
+If a PDF does not render in the viewer after upgrading to v23.1 or newer, use the checklist below to identify and resolve common causes. The most frequent fix is calling `dataBind()` before `load()` so data binding is initialized correctly in the newer lifecycle.
 
-1. **Check for `viewer.dataBind()` Requirement**: Ensure that you have called `viewer.dataBind()` as required in version 23.1 or newer. This explicit call is Essential<sup style="font-size:70%">&reg;</sup> for initializing data binding and document rendering correctly. It is must to call the dataBind() method before load.
+Example:
 
 {% raw %}
 ```ts
@@ -51,18 +50,20 @@ root.render(<App />);
 ```
 {% endraw %}
 
-2. **Verify Document Source**: Confirm that the document source or URL you're trying to display is valid and accessible. Incorrect URLs or document paths can lead to loading issues.
+Troubleshooting checklist (in order)
 
-3. **Network Connectivity**: Ensure that your application has a stable network connection. Document rendering may fail if the viewer can't fetch the document due to network issues.
+1. Initialization order: call `dataBind()` before `load()` (required in v23.1+). If using React refs, ensure the ref is available before calling these methods.
+2. Verify the document source: confirm the `documentPath`, `serviceUrl`, or `resourceUrl` is correct and returns the expected content.
+3. Network connectivity: confirm the browser can reach the document URL (check network tab for failed requests).
+4. Console errors: inspect the browser console for CORS errors, 4xx/5xx responses, or runtime exceptions.
+5. CORS configuration: for cross-origin `serviceUrl` or document URLs, ensure the server sets `Access-Control-Allow-Origin` and allows the `Authorization` header if used.
+6. Content Security Policy: confirm CSP allows loading resources from the target origins (scripts, fonts, and media).
+7. Version and cache: update to the latest PDF Viewer release and clear caches (browser/Service Worker) to rule out stale assets.
+8. Server behavior: if the viewer uses a backend service, verify the service is running and returns correct responses for PDF requests.
 
-4. **Console Errors**: Use your browser's developer tools to check for any error messages or warnings in the console. These messages can provide insights into what's causing the document not to load.
+React-specific notes
 
-5. **Loading Sequence**: Make sure that you're calling `viewer.dataBind()` and initiating document loading in the correct sequence. The viewer should be properly initialized before attempting to load a document.
+- Prefer using a React ref to access the `PdfViewerComponent` instance instead of `document.getElementById(...)` where possible: `const viewerRef = useRef(null);` then `<PdfViewerComponent ref={viewerRef} ... />` and call `viewerRef.current.dataBind()` / `viewerRef.current.load(...)` after the ref is initialized.
+- If calling `dataBind()` and `load()` from lifecycle methods or hooks, ensure they run after the component mounts (for example in `useEffect` with the correct dependencies).
 
-7. **Update Viewer**: Ensure that you're using the latest version of the viewer library or framework. Sometimes, issues related to document loading are resolved in newer releases.
-
-8. **Cross-Origin Resource Sharing (CORS)**: If you're loading documents from a different domain, ensure that CORS headers are correctly configured to allow cross-origin requests.
-
-9. **Content Security Policies (CSP)**: Check if your application's Content Security Policy allows the loading of external resources, as this can affect document loading. Refer [here](https://ej2.syncfusion.com/javascript/documentation/common/troubleshoot/content-security-policy) to troubleshoot.
-
-By following these troubleshooting steps, you should be able to address issues related to document loading in version 23.1 or newer, ensuring that your documents render correctly in the viewer.
+Following this checklist typically resolves document loading issues encountered after upgrading to v23.1 or newer.

@@ -9,6 +9,9 @@ documentation: UG
 
 In PDF, hyperlinks can be added to allow the users to navigate to another part of PDF file, web page or any other external content. Essential<sup>&reg;</sup> PDF provides support for all these types of hyperlink.
 
+To quickly get started with working with hyperlinks in PDF documents using the Syncfusion<sup>&reg;</sup> PDF library for .NET, refer to this video tutorial:
+{% youtube "https://youtu.be/g6HhVg2Fbd8?si=1WFL_6RCfRQvZhKb" %}
+
 ## Working with Web navigation
                                      
 You can navigate to specified URL from a PDF document by using the [PdfTextWebLink](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextWebLink.html) class.
@@ -559,7 +562,7 @@ To open a file in relative path, the [PdfLaunchAction](https://help.syncfusion.c
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#" [Windows-specific] %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
@@ -587,7 +590,7 @@ document.Close();
 
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" [Windows-specific] %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Interactive

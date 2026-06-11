@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Angular Spreadsheet component
 
-Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` | `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
+Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` | `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
 
 > * The default value for `mode` in  `selectionSettings` is `Multiple`.
 
@@ -21,7 +21,7 @@ You have the following options in Selection,
 
 ## Cell selection
 
-Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#selectrange) method.
+Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#selectrange) method.
 
 **User Interface**:
 
@@ -47,16 +47,16 @@ You can perform row selection in any of the following ways,
 The following sample shows the row selection in the spreadsheet, here selecting the 5th row using the `selectRange` method.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selection-cs1/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/selection-cs1/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selection-cs1/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/selection-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/selection-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/selection-cs1" %}
 
 ## Column selection
 
@@ -74,48 +74,48 @@ You can perform column selection in any of the following ways,
 The following sample shows the column selection in the spreadsheet, here selecting the 3rd column using the `selectRange` method.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selection-cs2/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/selection-cs2/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selection-cs2/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/selection-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/selection-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/selection-cs2" %}
 
 ## Get selected cell values
 
-You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://helpej2.syncfusion.com/angular/documentation/api/spreadsheet/#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://helpej2.syncfusion.com/angular/documentation/api/spreadsheet/#selectionsettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://helpej2.syncfusion.com/angular/documentation/api/spreadsheet/#getdata) method.
+You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#selectionsettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#getdata) method.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selected-cell-values/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/selected-cell-values/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selected-cell-values/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/selected-cell-values/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/selected-cell-values" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/selected-cell-values" %}
 
 ## Remove Selection
 
-The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#selectionsettings) to disable's the UI selection.
+The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#selectionsettings) to disable's the UI selection.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selection-cs3/src/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/selection-cs3/src/app.ts %}
 {% endhighlight %}
 
 {% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/excel/spreadsheet/angular/selection-cs3/src/main.ts %}
+{% include code-snippet/spreadsheet/angular/selection-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/samples/excel/spreadsheet/angular/selection-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/selection-cs3" %}
 
 ## Limitations
 

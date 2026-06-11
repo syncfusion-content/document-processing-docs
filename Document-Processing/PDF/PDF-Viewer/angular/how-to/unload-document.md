@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Unload document in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Unload document in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Unload document in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Unload document in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Unload document
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unload the PDF document programmatically
+## Unload the PDF document programmatically
 
-The PDF Viewer library allows you to unload the PDF document being displayed in the PDF Viewer control programmatically using the [**unload()**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#unload) method.
+The PDF Viewer provides the [unload()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#unload) method to remove the currently loaded PDF from the viewer instance. Use this API to free memory or reset the viewer when navigating between documents or closing the viewer.
 
 The following steps are used to unload the PDF document programmatically.
 

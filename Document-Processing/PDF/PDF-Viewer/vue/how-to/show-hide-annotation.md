@@ -1,22 +1,24 @@
 ---
 layout: post
-title: Show and Hide Annotations in Vue Pdfviewer component | Syncfusion
-description: Learn here about how to show and hide annotations in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Show or hide annotations in Vue PDF Viewer | Syncfusion
+description: Learn how to toggle annotation visibility in the Syncfusion Vue PDF Viewer by exporting and importing annotations.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show and Hide Annotations in PDF Viewer
+# Show or hide annotations in the Vue PDF Viewer
 
-This guide demonstrates how to toggle the visibility of annotations in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using Vue.js. This functionality is useful when you need to temporarily hide annotations for a cleaner view and restore them later when needed.
+This guide shows how to temporarily hide annotations and restore them later in the Vue PDF Viewer. This is useful for presenting a clean view of the document while preserving annotation data for later use.
 
-## Implementation Steps
+## How to show and hide annotations
 
-**Step 1:** Follow the steps provided in the [Vue PDF Viewer Getting Started documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer application.
+**Step 1:** Create a basic Vue PDF Viewer sample using the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started)
 
-**Step 2:** Set up your Vue component with a toggle button to control the visibility of annotations:
+**Step 2:** Set up the Vue component and template
+
+Add UI controls (for example, buttons) that trigger hide and unhide behaviors. The sample below exports annotations to an object, removes them from the viewer, and later imports them back to restore the annotations.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -59,7 +61,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: "https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       exportObject: "",
       annotationsVisible: true
     };
@@ -96,6 +98,6 @@ export default {
 
 ## Conclusion
 
-By implementing this solution in your Vue application, you can provide users with a convenient way to toggle the visibility of annotations in PDF documents. This enhances document readability while preserving the ability to quickly restore annotations when needed.
+These steps add the ability to toggle annotation visibility in a PDF Viewer application for selective viewing.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)

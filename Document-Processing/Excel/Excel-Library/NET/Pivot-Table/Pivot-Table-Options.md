@@ -224,20 +224,15 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("PivotTable.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
+  IWorkbook workbook = application.Workbooks.Open("PivotTable.xlsx");
   IWorksheet sheet = workbook.Worksheets[1];
   IPivotTable pivotTable = sheet.PivotTables[0];
 
   //Add calculated field to the first pivot table
   IPivotField field = pivotTable.CalculatedFields.Add("Percent", "Sales/Total*100");
 
-  string fileName = "PivotTableCalculate.xlsx";
-
-  //Saving the workbook as stream
-  FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("PivotTableCalculate.xlsx");
 }
 {% endhighlight %}
 
@@ -283,8 +278,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet sheet = workbook.Worksheets[1];
 	IPivotTable pivotTable = sheet.PivotTables[0];
 
@@ -296,13 +290,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CalculatedField.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/CalculatedField.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 

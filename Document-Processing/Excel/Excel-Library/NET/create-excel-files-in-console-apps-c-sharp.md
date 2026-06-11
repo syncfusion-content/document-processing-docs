@@ -224,9 +224,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;  
   
-  //Saving the Excel to the Stream 
-  FileStream stream = new FileStream("CreateExcel.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(stream);
+  //Saving the Excel 
+  workbook.SaveAs("CreateExcel.xlsx");
 }
 {% endhighlight %}
 
@@ -633,9 +632,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;  
   
-  //Saving the Excel to the Stream 
-  FileStream stream = new FileStream("CreateExcel.xlsx", FileMode.Create, FileAccess.Write);
-  workbook.SaveAs(stream);
+  //Saving the Excel
+  workbook.SaveAs("CreateExcel.xlsx");
 }
 {% endhighlight %}
 

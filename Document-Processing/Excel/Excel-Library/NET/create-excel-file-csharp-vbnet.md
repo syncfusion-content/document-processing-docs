@@ -86,12 +86,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Adding text to a cell
   worksheet.Range["A1"].Text = "Hello World";
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Sample.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-
-  //Dispose stream
-  stream.Dispose();
+  //Saving the workbook 
+  workbook.SaveAs("Sample.xlsx");
 }
 {% endhighlight %}
 
@@ -188,7 +184,7 @@ Dim application As IApplication = excelEngine.Excel
 {% endhighlight %}
 {% endtabs %}  
 
-By default, the Excel version 97 to 2003 (*.xls) is associated with application object. XlsIO writes the excel files in the respective format depending on this excel version. You can modify the default Excel version to Xlsx as shown as follows.
+By default, the Excel version 97 to 2003 (*.xls) is associated with application object. XlsIO writes the excel files in the respective format depending on this excel version. You can modify the default Excel version to XLSX as shown as follows.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -342,12 +338,8 @@ Finally, save the document in file system and close/dispose the instance of [IWo
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Save the workbook as stream
-FileStream stream = new FileStream("Sample.xlsx", FileMode.Create, FileAccess.ReadWrite);
-workbook.SaveAs(stream);
-
-//Disposing the stream
-stream.Dispose();
+//Save the workbook
+workbook.SaveAs("Sample.xlsx");
 
 //Closing the workbook
 workbook.Close();
@@ -436,11 +428,7 @@ namespace ExcelCreation
         worksheet.Pictures.AddPicture(10, 2, imageStream);
 
         //Saving the workbook to disk in XLSX format
-        FileStream stream = new FileStream("Sample.xlsx", FileMode.Create, FileAccess.ReadWrite);
-        workbook.SaveAs(stream);
-
-        //Dispose stream
-        stream.Dispose();
+        workbook.SaveAs("Sample.xlsx");
       }
     }
   }
@@ -595,10 +583,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Import data to worksheet
   worksheet.ImportData(employees, 2, 1, false);
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("Sample.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+  //Saving the workbook 
+  workbook.SaveAs("Sample.xlsx");
 }
 {% endhighlight %}
 
@@ -831,17 +817,14 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("WorkbookWithData.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("WorkbookWithData.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Export data from worksheet used range to a DataTable
   DataTable customersTable = worksheet.ExportDataTable(worksheet.UsedRange, ExcelExportDataTableOptions.ColumnNames | ExcelExportDataTableOptions.DetectColumnTypes);
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+  //Saving the workbook 
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -876,195 +859,6 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim fileName As String = "Output.xlsx"
   workbook.SaveAs(fileName)
 End Using
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//XlsIO supports exporting of data from worksheet to data table from .NET Standard 2.0 along with Windows Forms, WPF, ASP.NET and ASP.NET MVC platforms alone.
-
-//Exporting data from worksheet can be achieved using List as illustrated below.
-
-//To know more about exporting data from worksheet to various collection objects, please refer xlsio/working-with-data section.
-using (ExcelEngine excelEngine = new ExcelEngine())
-{
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-
-  //Instantiates the File Picker
-  FileOpenPicker openPicker = new FileOpenPicker();
-  openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
-  openPicker.FileTypeFilter.Add(".xlsx");
-  openPicker.FileTypeFilter.Add(".xls");
-  StorageFile openFile = await openPicker.PickSingleFileAsync();
-
-  //Opens the workbook
-  IWorkbook workbook = await application.Workbooks.OpenAsync(openFile);
-  IWorksheet worksheet = workbook.Worksheets[0];
-
-  //Export data
-  List<Sales> data = worksheet.ExportData<Sales>(1, 1, 41, 4);
-
-  //Initializes FileSavePicker
-  FileSavePicker savePicker = new FileSavePicker();
-  savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
-  savePicker.SuggestedFileName = "Output";
-  savePicker.FileTypeChoices.Add("Excel Files", new List<string>() { ".xlsx" });
-
-  //Creates a storage file from FileSavePicker
-  StorageFile storageFile = await savePicker.PickSaveFileAsync();
-
-  //Saves changes to the specified storage file
-  await workbook.SaveAsAsync(storageFile);
-}
-
-//Sales details
-public class Sales
-{
-  private string salesPerson;
-  private int salesJanJune;
-  private int salesJulyDec;
-  private int change;
-
-  public string SalesPerson
-  {
-    get
-    {
-      return salesPerson;
-    }
-    set
-    {
-      salesPerson = value;
-    }
-  }
-
-  public int SalesJanJune
-  {
-    get
-    {
-      return salesJanJune;
-    }
-    set
-    {
-      salesJanJune = value;
-    }
-  }
-
-  public int SalesJulyDec
-  {
-    get
-    {
-      return salesJulyDec;
-    }
-    set
-    {
-      salesJulyDec = value;
-    }
-  }
-
-  public int Change
-  {
-    get
-    {
-      return change;
-    }
-    set
-    {
-      change = value;
-    }
-  }
-}
-{% endhighlight %}
-
-{% highlight c# tabtitle="Xamarin" %}
-//XlsIO supports exporting of data from worksheet to data table from .NET Standard 2.0 along with Windows Forms, WPF, ASP.NET and ASP.NET MVC platforms alone.
-
-//Exporting data from worksheet can be achieved using List as illustrated below.
-
-//To know more about exporting data from worksheet to various collection objects, please refer xlsio/working-with-data section.
-
-using (ExcelEngine excelEngine = new ExcelEngine())
-{
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-  Stream fileStream = assembly.GetManifestResourceStream("ExportData.WorkbookWithData.xlsx");
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  IWorksheet sheet = workbook.Worksheets[0];
-
-  List<Sales> data = sheet.ExportData<Sales>(1, 1, 41, 4);
-
-  MemoryStream stream = new MemoryStream();
-  workbook.SaveAs(stream);
-
-  stream.Position = 0;
-
-  //Save the document as file and view the saved document
-  //The operation in SaveAndView under Xamarin varies between Windows Phone, Android and iOS platforms. Please refer xlsio/xamarin section for respective code samples.
-  if (Device.OS == TargetPlatform.WinPhone || Device.OS == TargetPlatform.Windows)
-  {
-    Xamarin.Forms.DependencyService.Get<ISaveWindowsPhone>().SaveAndView("Output.xlsx", "application/msexcel", stream);
-  }
-  else
-  {
-    Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Output.xlsx", "application/msexcel", stream);
-  }
-}
-
-//Sales details
-public class Sales
-{
-  private string salesPerson;
-  private int salesJanJune;
-  private int salesJulyDec;
-  private int change;
-
-  public string SalesPerson
-  {
-    get
-    {
-      return salesPerson;
-    }
-    set
-    {
-      salesPerson = value;
-    }
-  }
-
-  public int SalesJanJune
-  {
-    get
-    {
-      return salesJanJune;
-    }
-    set
-    {
-      salesJanJune = value;
-    }
-  }
-
-  public int SalesJulyDec
-  {
-    get
-    {
-      return salesJulyDec;
-    }
-    set
-    {
-      salesJulyDec = value;
-    }
-  }
-
-  public int Change
-  {
-    get
-    {
-      return change;
-    }
-    set
-    {
-      change = value;
-    }
-  }
-}
 {% endhighlight %}
 {% endtabs %}  
 
@@ -1115,8 +909,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("TemplateMarker.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream);
+  IWorkbook workbook = application.Workbooks.Open("TemplateMarker.xlsx");
 
   //Create template marker processor for the workbook
   ITemplateMarkersProcessor marker = workbook.CreateTemplateMarkersProcessor();
@@ -1131,10 +924,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Applying Markers
   marker.ApplyMarkers();
 
-  //Saving the workbook as stream
-  FileStream file = new FileStream("TemplateMarkerResult.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(file);
-  file.Dispose();
+  //Saving the workbook 
+  workbook.SaveAs("TemplateMarkerResult.xlsx");
 }
 {% endhighlight %}
 

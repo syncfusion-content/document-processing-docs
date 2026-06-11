@@ -9,7 +9,7 @@ documentation: ug
 
 # Form filling in Blazor SfPdfViewer Component
 
-The SfPdfViewer component displays existing form fields in a PDF document and enables filling and downloading filled data.
+The SfPdfViewer component displays existing form fields in a PDF document and enables filling and downloading filled form data.
 
 The form fields displayed in the SfPdfViewer are:
 
@@ -21,11 +21,11 @@ The form fields displayed in the SfPdfViewer are:
 * Signature field
 * List box
 
-![Form filling in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-form-filling.png)
+![Form filling in Blazor SfPdfViewer](images/blazor-pdfviewer-form-filling.png)
 
 ## Disabling form fields
 
-The SfPdfViewer control provides an option to disable interaction with form fields. Use the following configuration to disable form fields in the viewer.
+The SfPdfViewer component provides an option to disable interaction with form fields. Use the following configuration to disable form fields in the viewer.
 
 ```cshtml
 
@@ -48,32 +48,32 @@ Add a handwritten signature to a Signature field by following these steps:
 
 * Click the signature field in the PDF document to open the signature panel.
 
-![Signature field in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-signature-field.png)
+![Signature field in Blazor SfPdfViewer](images/blazor-pdfviewer-signature-field.png)
 
 * Draw the signature in the signature panel.
 
-![Displaying signature panel in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-signature-panel.png)
+![Displaying signature panel in Blazor SfPdfViewer](images/blazor-pdfviewer-signature-panel.png)
 
 * Click the **CREATE** button. The drawn signature is added to the signature field.
 
-![Displaying signature in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-signature.png)
+![Displaying signature in Blazor SfPdfViewer](images/blazor-pdfviewer-signature.png)
 
-## Delete the signature inside the signature field
+## Delete a signature from the signature field
 
-Delete a signature placed in a signature field by using the Delete option in the annotation toolbar.
+Remove a signature placed in a signature field using the Delete option in the annotation toolbar.
 
-![Deleting signature in Blazor SfPdfViewer](../blazor-classic/images/blazor-pdfviewer-delete-signature.png)
+![Deleting signature in Blazor SfPdfViewer](images/blazor-pdfviewer-delete-signature.png)
 
 ## Export and import form fields
 
-The SfPdfViewer control supports exporting and importing form field data in the following formats using the [ImportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportFormFieldsAsync_System_Collections_Generic_Dictionary_System_String_System_String__) and [ExportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormFieldDataFormat_) methods:
+The SfPdfViewer component supports exporting and importing form field data in the following formats using the [ImportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportFormFieldsAsync_System_Collections_Generic_Dictionary_System_String_System_String__) and [ExportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormFieldDataFormat_) methods:
 
 * XML
 * FDF
 * XFDF
 * JSON
 
-N> Form field data is exported as a stream, and that stream can be imported back into the current PDF document.
+Note: Form field data is exported as a stream, and that stream can be imported back into the current PDF document.
 
 ### Export and import as XML
 
@@ -155,7 +155,7 @@ The following example exports the form fields as an FDF data stream and imports 
 
 ```
 
-###  Export and import as XFDF
+### Export and import as XFDF
 
 The following example exports the form fields as an XFDF data stream and imports that data from the stream into the current PDF document via button clicks.
 
@@ -236,7 +236,7 @@ The following example exports the form fields as a JSON data stream and imports 
 
 ```
 
-### Export form fields as Json file
+### Export form fields as JSON file
 
 ```cshtml
 

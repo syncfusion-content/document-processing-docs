@@ -1,43 +1,47 @@
 ---
 layout: post
-title: How to deploy pdfviewer server app in azure app service from visual studio in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about How to deploy pdfviewer server app in azure app service from visual studio in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Deploy TypeScript PDF Viewer server app to Azure App Service from Visual Studio
+description: Publish the Syncfusion PDF Viewer Web API from Visual Studio to Azure App Service and connect it to the TypeScript PDF Viewer client.
 platform: document-processing
-control: How to deploy pdfviewer server app in azure app service from visual studio
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# How to deploy pdfviewer server app in azure app service from visual studio in Typescript Pdfviewer control
+# Deploy PDF Viewer server app to Azure App Service from Visual Studio
+
+Publish the Syncfusion PDF Viewer Web API from Visual Studio to Azure App Service to host the backend required by the TypeScript PDF Viewer client. This workflow packages the project, deploys it to Azure, and provides a public endpoint for the component’s `serviceUrl`.
 
 ## Prerequisites
 
-* Visual Studio 2017 or Visual Studio 2019.
-* An [`Azure subscription`](https://azure.microsoft.com/en-gb/).
-* Create the [`PDF Viewer Web API application`](https://www.syncfusion.com/kb/10346/how-to-create-pdf-viewer-web-service-application-in-asp-net-core).
-* Make sure you’ve built the project using the Build > Build Solution menu command before following the deployment steps.
+- Visual Studio 2017 or 2019 with the Azure development workload installed
+- Active Azure subscription. Sign up from the [Azure pricing page](https://azure.microsoft.com/pricing/)
+- Existing PDF Viewer Web API project. Follow the article [Create a PDF Viewer Web API application in ASP.NET Core](https://www.syncfusion.com/kb/10346/how-to-create-pdf-viewer-web-service-application-in-asp-net-core)
+- Build the project (Build > Build Solution) before publishing to catch compilation errors locally
 
 ## Publish to Azure App Service
 
-**Step 1:** In Solution Explorer, right-click the project and choose Publish (or use the Build > Publish menu item).
+Follow these steps to publish the Web API and generate the App Service endpoint that the TypeScript PDF Viewer client uses.
 
- ![azure publish ](../images/azure_publish.png)
+**Step 1:** In Solution Explorer, right-click the project and choose Publish (or use Build > Publish) to open the publishing wizard.
 
-**Step 2:** If you have previously configured any publishing profiles, the Publish pane appears, in which case, select Create new profile.
+![Visual Studio Publish dialog](../images/azure_publish.png)
 
-**Step 3:** In the Pick a publish target dialog box, choose App Service.
+**Step 2:** If no profile exists, select **Create new profile** to configure deployment settings.
 
-![azure target](../images/azure_target.png)
+**Step 3:** In **Pick a publish target**, choose **App Service** so Visual Studio provisions or reuses an Azure App Service instance.
 
-**Step 4:** Select Publish. The Create App Service dialog box appears. Sign in with your Azure account, if necessary, then the default app service settings populate the fields.
+![Pick a publish target dialog](../images/azure_target.png)
 
-![azure pdfviewer ](../images/azure_pdfviewer.png)
+**Step 4:** Select **Publish**. In **Create App Service**, sign in if prompted and review the default resource group, plan, and hosting settings.
 
-**Step 5:** Select Create. Visual Studio deploys the app to your Azure App Service, and the web app loads in your browser at `http://<app_name>.azurewebsites.net`. (i.e. `http:// ej2-pdfviewer-server20200513053326.azurewebsites.net`).
+![Create App Service settings dialog](../images/azure_pdfviewer.png)
 
-**Step 6:** Navigate to the PDF Viewer Web API control `http://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer`. It returns the default get method response.
+> **Security note:** Store the `SYNCFUSION_LICENSE_KEY` in Azure App Service application settings or Azure Key Vault references instead of embedding it in source code or publish profiles.
 
-Append the app service running the URL `http://ej2-pdfviewer-server20200513053326.azurewebsites.net./api/pdfviewer` to the service URL in the client-side PDF Viewer control. For more information about how to get started with the PDF Viewer control, refer to this [`getting started page`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/?).
+**Step 5:** Select Create. After deployment, the app is available at `https://<app_name>.azurewebsites.net` (for example, `https://ej2-pdfviewer-server20200513053326.azurewebsites.net`).
 
-For more information about the app container service, please look deeper into the [`Microsoft Azure App Service`](https://docs.microsoft.com/en-us/visualstudio/deployment/) for a production-ready setup.
+**Step 6:** Verify the API at `https://<app_name>.azurewebsites.net/api/pdfviewer`. A default GET response indicates the server is running.
+
+Update the TypeScript PDF Viewer client to use the secure service endpoint (for example, `https://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer`) as the `serviceUrl`. Refer to the [Getting started with the TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide for client configuration steps.
+
+For production deployment guidance, review the [Azure App Service deployment documentation](https://learn.microsoft.com/visualstudio/deployment/azure/app-service). An architecture diagram illustrating the Visual Studio deployment process and client-to-server communication can help onboarding teams understand the workflow.

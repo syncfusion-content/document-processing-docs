@@ -1,24 +1,23 @@
 ---
 layout: post
-title: Save PDF files to Google Cloud Storage in React Pdfviewer component | Syncfusion
-description: Learn here all about how to save PDF files to Google Cloud Storage in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Save PDF files to Google Cloud Storage
+title: Save PDF files to Google Cloud Storage in React PDF Viewer | Syncfusion
+description: Learn how to save PDF files to Google Cloud Storage using the Syncfusion React PDF Viewer component with a server-backed web service.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Save PDF file to Google Cloud Storage
+# Save PDF files to Google Cloud Storage
 
-To save a PDF file to Google Cloud Storage, you can follow the steps below
+To save a PDF file to Google Cloud Storage, follow the steps below.
 
 **Step 1:** Create a PDF Viewer sample in React
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample in React. This will set up the basic structure of your PDF Viewer application.
+Follow the Syncfusion getting-started instructions for the React PDF Viewer: [React PDF Viewer getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). This sets up the basic PDF Viewer application structure.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. Refer to the Syncfusion knowledge base article on creating a PDF Viewer web service: [Create a PDF Viewer web service in .NET Core 3.0 and above](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above).
 
 2. Open the `PdfViewerController.cs` file in your web service project.
 
@@ -30,7 +29,7 @@ using Google.Cloud.Storage.V1;
 using Google.Apis.Auth.OAuth2;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the configuration values to the corresponding fields.
 
 ```csharp
 // Private readonly object _storageClient
@@ -51,7 +50,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
   // Load the service account credentials from the key file.
   var credentials = GoogleCredential.FromFile(keyFilePath);
 
-  // Create a storage client with Application Default Credentials
+  // Create a storage client using the service account credentials.
   _storageClient = StorageClient.Create(credentials);
 
    _configuration = configuration;
@@ -60,7 +59,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the `Download()` method to save the downloaded PDF files to Google Cloud Storage bucket
+5. Modify the `Download()` method to save the downloaded PDF file to the Google Cloud Storage bucket.
 
 ```csharp
 [HttpPost("Download")]
@@ -88,7 +87,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in the web service project and add the following entries below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -103,13 +102,13 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace **Your Bucket name from Google Cloud Storage** with the actual name of your Google Cloud Storage bucket
+N> Replace **Your Bucket name from Google Cloud Storage** with the actual name of the Google Cloud Storage bucket.
 
-N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
+N> Replace **path/to/service-account-key.json** with the actual file path to the service account key JSON file. Provide the correct path and filename.
 
-**Step 3:**  Set the PDF Viewer Properties in React PDF viewer component
+**Step 3:** Set the PDF Viewer properties in the React PDF Viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Google Cloud Storage. Ensure that you correctly pass the document name from the files available in your bucket to the documentPath property.
+Modify the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Google Cloud Storage, and ensure that the document exists in the target bucket.
 
 {% raw %}
 
@@ -127,7 +126,7 @@ function App() {
         <PdfViewerComponent
           id="container"
           documentPath="PDF_Succinctly.pdf"
-          // Replace the "localhost:44396" with the actual URL of your server
+          // Replace the "localhost:44396" with the actual URL of the server
           serviceUrl="https://localhost:44396/pdfviewer"
           style={{ 'height': '640px' }}>
 
@@ -143,6 +142,6 @@ root.render(<App />);
 ```
 {% endraw %}
 
-N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your application to use the previous code example.
+N> Install the `Google.Cloud.Storage.V1` NuGet package in the web service application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-cloud-storage)

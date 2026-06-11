@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Globalization in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Globalization
+title: Globalization in Vue PDF Viewer | Syncfusion
+description: Learn how to localize the Syncfusion Vue PDF Viewer using culture-specific strings, configure the locale property, and load translations with L10n.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in Vue Pdfviewer component
+# Globalization in Vue PDF Viewer
 
-The text contents provided in the PDF Viewer can be localized using the collection of localized strings for different cultures. By default, the PDF Viewer is localized in “__en-US__”.
+The PDF Viewer supports localization using culture-specific string collections, enabling you to display the interface in different languages and adapt UI text to regional preferences. By default, the component uses the "en-US" culture. Use the `locale` property to switch between cultures, and use the `L10n` class to load custom translations for your target language.
 
-The following table shows the default text values used in PDF Viewer in 'en-US' culture:
+## Default locale strings
+
+The following table lists the default text values used by the PDF Viewer in the "en-US" culture:
 
 | Keywords                             | Values                                                                                                                           |
 | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -265,7 +267,11 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 |Exact Matches                         |EXACT MATCHES                                                                                                                  |
 |Total Matches                         |TOTAL MATCHES                                                                                                                  |
 
-The different locale value for the PDF Viewer can be specified using the locale property.
+## Configure locale and load translations
+
+Set the locale for the PDF Viewer using the `locale` property. Use the `L10n.load()` method to add custom translations for your target language. The locale string follows the standard BCP 47 format (e.g., 'ar-AE' for Arabic, 'fr-FR' for French, 'de-DE' for German).
+
+You can define translations directly in your Vue component or import them from a separate localization file. The L10n configuration applies globally to all PDF Viewer instances that use the specified locale.
 
 
 {% tabs %}
@@ -288,7 +294,7 @@ import {
 import { L10n } from '@syncfusion/ej2-base';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]);
@@ -577,7 +583,7 @@ export default {
   data: function () {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
     }
   },
   provide: {

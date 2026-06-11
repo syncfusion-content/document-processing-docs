@@ -1,24 +1,21 @@
 ---
 layout: post
-title: AnnotationSelector Setting in EJ2 ASP.NET CORE PDF Viewer | Syncfusion
-description: Learn here all about Configuring AnnotationSelector setting in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Annotation Selector Settings in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to customize annotation selector settings in the Syncfusion ASP.NET Core PDF Viewer component for Essential JS 2.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# How to Configure Annotation Selector Settings
+# Configure annotation selector settings in ASP.NET Core
 
-### Annotation Selector Settings
+The [**annotationSelectorSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerAnnotationSelectorSettings.html) property provides granular control over the appearance and behavior of the annotation selector. Customize border colors, thickness, resizer styles, and cursor types to enhance the annotation editing experience.
 
-The [**annotationSelectorSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerAnnotationSelectorSettings.html) property allows you to customize the appearance and behavior of the annotation selector in the UI. The AnnotationSelectorSettings defines the settings for the annotation selector, including border colors, sizes, and shapes. It provides fine-grained control over how annotations are displayed and interacted with.
+## Customize the annotation selector
 
-### How to Configure Annotation Selector Settings
+**Step 1:** Follow the [Getting Started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a basic PDF Viewer sample with the required EJ2 script and style assets.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create simple PDF Viewer sample.
-
-**Step 2:** Set Up PDF Viewer in Your View: Add the following code snippet to your view (e.g., Index.cshtml)
+**Step 2:** Define the PDF Viewer in the Razor view (e.g., `Index.cshtml`):
 
 ```
 @{
@@ -31,12 +28,12 @@ The [**annotationSelectorSettings**](https://help.syncfusion.com/cr/aspnetcore-j
 </div>
 ```
 
-**Step 3:**	 Add JavaScript for Annotation Selector Settings: Below the PDF Viewer in your view, include the following script to configure the annotationSelectorSettings
+**Step 3:** Include the following script to configure the `annotationSelectorSettings`. Ensure this runs after the PDF Viewer instance is initialized.
 
-```
- <script type="text/javascript" >
-window.onload = function () {
-    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+```html
+<script type="text/javascript">
+    window.onload = function () {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.annotationSelectorSettings = {
             selectionBorderColor: 'blue',
             resizerBorderColor: 'red',
@@ -48,27 +45,22 @@ window.onload = function () {
             resizerLocation: ej.pdfviewer.AnnotationResizerLocation.Corners | ej.pdfviewer.AnnotationResizerLocation.Edges,
             resizerCursorType: ej.pdfviewer.CursorType.grab
         };
-}
+    }
 </script>
 ```
-#### Key properties include:
 
-* **selectionBorderColor**: Sets the color for the border around selected annotations.
+## Property descriptions
 
-* **resizerBorderColor**: Sets the color for the border of the resizer handles.
+The following properties customize the annotation selector's visual feedback:
 
-* **resizerFillColor**: Defines the fill color for the resizer handles.
+* **selectionBorderColor**: Defines the color of the selection boundary.
+* **resizerBorderColor**: Sets the border color for the resizer handles.
+* **resizerFillColor**: Specifies the fill color for the resizer handles.
+* **resizerSize**: Controls the diameter or width of the resizer handles.
+* **selectionBorderThickness**: Sets the thickness of the selection border in pixels.
+* **resizerShape**: Sets the handle shape (e.g., `Circle` or `Square`).
+* **selectorLineDashArray**: Defines a dash pattern for the selection border.
+* **resizerLocation**: Specifies handle positioning (e.g., `Corners` or `Edges`).
+* **resizerCursorType**: Defines the mouse cursor style when hovering over handles.
 
-* **resizerSize**: Determines the size of the resizer handles.
-
-* **selectionBorderThickness**: Specifies how thick the selection border should be.
-
-* **resizerShape**: Allows you to choose the shape of the resizer handles (e.g., Circle or Square).
-
-* **selectorLineDashArray**: Specifies the dash pattern for the selector line to enhance visual cues.
-
-* **resizerLocation**: Determines where the resizer appear in relation to the annotation (e.g., Corners or Edges).
-
-* **resizerCursorType**: Sets the cursor style when hovering over the resizer, improving user interaction.
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

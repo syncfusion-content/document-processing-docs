@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Add Save Button in Built-In Toolbar | Syncfusion
-description: Learn here all about adding save button in built-in Toolbar in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Add Save Button in Toolbar ASP.NET Core | Syncfusion
+description: Learn here all about adding save button in built-in Toolbar in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Add Save Button in Built-In toolbar
+# Add a save button to the toolbar in ASP.NET Core
 
-PDF Viewer allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
+The PDF Viewer enables customization of toolbar items, including adding, showing, hiding, enabling, and disabling items. Create a custom save button that triggers the download functionality with a few configuration steps. The following approaches can be used to customize the toolbar:
 
-* Save button - New `save` button-item can be defined by **CustomToolbarItemModel** and with existing items in [**ToolbarSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) property. Save button-item click action can be defined in `toolbarclick`.
+- **Add a save button:** Define a custom `Save` button using **CustomToolbarItemModel** and include it with existing toolbar items via [**ToolbarSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html). Handle the button click using the `toolbarClick` event.
 
-* Show, Hide - `Save` button-item can be shown or hidden using the [`ToolbarSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_ToolbarItems).
+- **Show or hide items:** Control visibility of toolbar items using [**ToolbarSettings**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html). See the list of predefined toolbar items under [`ToolbarItem`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_ToolbarItems).
 
-* Enable, Disable - `Save` button-item can be enabled or disable using `enabletoolbaritem`.
+- **Enable or disable items:** Toggle the state of toolbar items using the `enableToolbarItem()` method.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -25,7 +24,7 @@ PDF Viewer allows you to customize(add, show, hide, enable, and disable) existin
     <ejs-pdfviewer id="pdfviewer"
                    style="width:1350px;height:100%"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl='https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib'
+                   resourceUrl='https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"'
                    toolbarClick="toolbarClick">
     </ejs-pdfviewer>
 </div>
@@ -105,34 +104,37 @@ PDF Viewer allows you to customize(add, show, hide, enable, and disable) existin
 {% endhighlight %}
 {% endtabs %}
 
-N> Default value of toolbar items is ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
+N> Default toolbar items: ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
 
-### Align Property
+## CustomToolbarItemModel properties
 
-The align property is used to specify the alignment of a `save` button-item within the toolbar.
+The following properties can be configured when creating a custom toolbar item:
 
-`Left`: Aligns the item to the left side of the toolbar.
-`Right`: Aligns the item to the right side of the toolbar.
+### Align property
 
-### Tooltip Property
+Specifies the alignment of the `Save` button within the toolbar.
 
-The tooltip property is used to set the tooltip text for a `save` button-item. Tooltip provides additional information when a user hovers over the item.
+- `Left`: Aligns the item to the left side of the toolbar.
+- `Right`: Aligns the item to the right side of the toolbar.
 
-### CssClass Property
+### Tooltip property
 
-The cssClass property is used to apply custom CSS classes to a `save` button-item. It allows custom styling of the save button-item.
+Sets the tooltip text for the Save button. The tooltip provides additional information on hover.
 
-### Prefix Property
+### CssClass property
 
-The prefix property is used to set the CSS class or icon that should be added as a prefix to the existing content of the toolbar item.
+Applies custom CSS classes to the Save button for styling.
 
-### ID Property
+### Prefix property
 
-The id property within a CustomToolbarItemModel is a compulsory attribute that plays a vital role in toolbar customization. It serves as a unique identifier for each toolbar item, facilitating distinct references and interactions.
+Sets the CSS class or icon to add as a prefix to the Save button content.
 
-When defining or customizing toolbar items, it is mandatory to assign a specific and descriptive id to each item.
-These properties are commonly used when defining custom toolbar items with the `CustomToolbarItemModel`` in the context of Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. When configuring the toolbar using the `ToolbarSettings`` property, you can include these properties to customize the appearance and behavior of each toolbar item.
+### ID property
 
-N> When customizing `save` button-item, you have the flexibility to include either icons or text based on your design preference.
+The id property within a CustomToolbarItemModel is required and uniquely identifies each toolbar item for configuration and interaction.
+
+When defining or customizing toolbar items, assign a specific, descriptive id to each item. These properties are commonly used when defining custom toolbar items with `CustomToolbarItemModel` in the context of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize appearance and behavior.
+
+N> You can use either text, icons, or both when customizing the save button based on your design requirements.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

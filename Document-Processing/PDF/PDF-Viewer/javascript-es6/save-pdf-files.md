@@ -1,33 +1,30 @@
 ---
 layout: post
-title: Saving PDF files Typescript Pdfviewer control | Syncfusion
-description: This page helps you to learn here all about saving PDF files in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Save PDF files in TypeScript PDF Viewer | Syncfusion
+description: Learn how to save updated documents from the Syncfusion TypeScript PDF Viewer component to a server, database, or local file system.
 platform: document-processing
 control: Saving PDF files
-publishingplatform: Typescript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Saving PDF file
+# Saving PDF files
 
-After editing the PDF file with various annotation tools, you will need to save the updated PDF to the server, database, or local file system.
+After annotating or editing a document, use the TypeScript PDF Viewer component to persist the updated PDF to a server, local storage, or a database.
 
-## Save PDF file to Server
+## Save a PDF file to a server
 
-Need to save the modified PDF back to a server. To achieve this, proceed with the following steps
+Follow these steps to upload the modified document to a server-side location.
 
-**Step 1:** Create a Simple PDF Viewer Sample in Typescript
+**Step 1:** Create a TypeScript PDF Viewer sample
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+Follow the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to configure a TypeScript PDF Viewer project. This provides the viewer instance required to submit downloads to a web service.
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
+**Step 2:** Modify the `PdfViewerController.cs` file in the web service project
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
-
-2. Open the `PdfViewerController.cs` file in your web service project.
-
-3. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to open it in the viewer using URL
+1. Create a web service in .NET Core 3.0 or later. Refer to [How to create PDF Viewer web service in .NET Core 3.0 and above](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for detailed instructions.
+2. Open the `PdfViewerController.cs` file in the service project.
+3. Update the [`Download`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) action to save the output file on the server.
 
 ```csharp
 
@@ -58,9 +55,11 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 ```
 
-**Step 3:**  Set the PDF Viewer Properties in React PDF viewer component
+N> Ensure the application pool identity or service account has write access to the destination directory before saving files.
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
+**Step 3:** Set PDF Viewer service properties
+
+Specify the [`serviceUrl`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) of your web service and the document to load.
 
 ```typescript
 
@@ -78,11 +77,13 @@ viewer.appendTo('#pdfViewer');
 
 ```
 
+N> Replace the placeholder service URL and document name with your deployment values. Configure CORS on the web service if the viewer runs on a different origin.
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20base64%20string)
 
-## Download PDF file as a copy
+## Download a PDF file as a copy
 
-In the built-in toolbar, you have an option to download the updated PDF to the local file system, you can use it to download the PDF file.
+The built-in toolbar includes a **Download** button that saves the current PDF to the local file system. You can also trigger the same behavior from custom UI by calling [`download`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download).
 
 ```html
 <button id="download">Download</button>
@@ -97,28 +98,28 @@ document.getElementById('download').addEventListener('click', function () {
 
 ```
 
-## Save PDF file to Database
+N> The `download` method returns the document after applying annotations, form edits, and other runtime changes.
 
-If you have plenty of PDF files stored in database and you want to save the updated PDF file back to the database, use the following code example.
+## Save a PDF file to a database
 
-**Step 1:** Create a Simple PDF Viewer Sample in Typescript
+Use the following steps to persist the generated PDF document to a SQL Server database.
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF viewer sample in Typescript. This will give you a basic setup of the PDF viewer component.
+**Step 1:** Create a TypeScript PDF Viewer sample
 
-**Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
+Follow the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to configure a TypeScript PDF Viewer project.
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for instructions on how to create a web service project.
+**Step 2:** Modify the `PdfViewerController.cs` file in the web service project
 
-2. Open the `PdfViewerController.cs` file in your web service project
-
-3. Import the required namespaces at the top of the file:
+1. Create a web service in .NET Core 3.0 or later.
+2. Open the `PdfViewerController.cs` file.
+3. Import the required namespaces at the top of the file.
 
 ```csharp
 using System.IO;
 using System.Data.SqlClient;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class, and map configuration values in the constructor.
 
 ```csharp
 private IConfiguration _configuration;
@@ -133,7 +134,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to open it in the viewer using URL
+5. Update the [`Download`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) action to insert the document into a database table.
 
 ```csharp
 
@@ -173,7 +174,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Update the `appsettings.json` file to include the connection string setting.
 
 ```json
 {
@@ -188,8 +189,8 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-N> Replace **Your Connection string from SQL server** with the actual connection string for your SQL Server database
+N> Replace **Your connection string for SQL server** with the actual value. Make sure the database table, columns, and permissions exist before inserting records.
 
-N> The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString variable in the previous code example as per the connection string of your database.
+N> Install the **System.Data.SqlClient** package in the application to execute SQL commands with the previous example. Update the connection string to match your environment.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-database)

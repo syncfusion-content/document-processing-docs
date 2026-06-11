@@ -1,39 +1,39 @@
 ---
 layout: post
-title: Text markup annotation in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Text markup annotation in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Text markup annotation
+title: Text markup annotation in Vue PDF Viewer | Syncfusion
+description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Syncfusion Vue PDF Viewer.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text markup annotation in Vue Pdfviewer component
+# Text markup annotation in Vue PDF Viewer
 
-The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, strikethrough and squiggly annotations in the PDF document.
+The PDF Viewer provides options to add, edit, and delete text markup annotations, including highlight, underline, strikethrough, and squiggly.
 
-![Alt text](../images/text_markup_annotation.png)
+![Text markup annotations](../images/text_markup_annotation.png)
 
-## Highlight a text
+## Highlight text
 
-There are two ways to highlight a text in the PDF document:
+There are two ways to highlight text:
 
 1.Using the context menu
-      * Select a text in the PDF document and right-click it.
-      * Select **Highlight** option in the context menu that appears.
+  * Select text in the PDF document and right-click it.
+  * Select **Highlight** in the context menu.
 
-  ![Alt text](../images/highlight_context.png)
+  ![Context menu option to highlight selected text](../images/highlight_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2.Using the annotation toolbar
-      * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-      * Select the **Highlight** button in the annotation toolbar. It enables the highlight mode.
-      * Select the text and the highlight annotation will be added.
-      * You can also select the text and apply the highlight annotation using the **Highlight** button.
+  * Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+  * Select **Highlight** to enable highlight mode.
+  * Select text to add the highlight annotation.
+  * Alternatively, select text first and then click **Highlight**.
 
-  ![Alt text](../images/highlight_button.png)
+  ![Highlight button in the annotation toolbar](../images/highlight_button.png)
 
-In the pan mode, if the highlight mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for highlighting the text.
+When pan mode is active and a text markup mode is entered, the PDF Viewer switches to text selection mode to enable selection.
 
 Refer to the following code snippet to switch to highlight mode.
 
@@ -60,7 +60,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
@@ -102,7 +102,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -233,13 +233,13 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
 
 const documentLoad = () => {
-  const viewer = this.$refs.pdfviewer.ej2Instances;
+  const viewer = pdfviewer.value.ej2Instances;
   document.getElementById('set').addEventListener('click', () => {
     viewer.annotation.setAnnotationMode('Highlight');
   });
@@ -279,7 +279,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -329,7 +329,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
 
 const documentLoad = () => {
-  const viewer = this.$refs.pdfviewer.ej2Instances;
+  const viewer = pdfviewer.value.ej2Instances;
   document.getElementById('set').addEventListener('click', () => {
     viewer.annotation.setAnnotationMode('Highlight');
   });
@@ -393,11 +393,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Highlight a text programmatically
+## Highlight text programmatically
 
-The PDF Viewer library enables you to programmatically highlight text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add highlights using the [addAnnotation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
-Here's an example of how you can use the **addAnnotation()** method to apply highlighting programmatically:
+Example:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -419,13 +419,13 @@ import {
 import { provide } from 'vue';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
 
 const addAnnotation = function () {
-  const viewer = this.$refs.pdfviewer.ej2Instances;
+  const viewer = pdfviewer.value.ej2Instances;
   viewer.annotation.addAnnotation("Highlight", {
     bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
     pageNumber: 1
@@ -460,7 +460,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -563,24 +563,24 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Underline a text
+## Underline text
 
-There are two ways to underline a text in the PDF document:
+There are two ways to underline text:
 
 1.Using the context menu
-      * Select a text in the PDF document and right-click it.
-      * Select **Underline** option in the context menu that appears.
+    * Select text in the PDF document and right-click it.
+    * Select **Underline** in the context menu.
 
-  ![Alt text](../images/underline_context.png)
+  ![Context menu option to underline selected text](../images/underline_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2.Using the annotation toolbar
-      * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-      * Select the **Underline** button in the annotation toolbar. It enables the underline mode.
-      * Select the text and the underline annotation will be added.
-      * You can also select the text and apply the underline annotation using the **Underline** button.
+    * Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+    * Select **Underline** to enable underline mode.
+    * Select text to add the underline annotation.
+    * Alternatively, select text first and then click **Underline**.
 
-  ![Alt text](../images/underline_button.png)
+  ![Underline button in the annotation toolbar](../images/underline_button.png)
 
 In the pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
 
@@ -610,7 +610,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]);
@@ -653,7 +653,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -781,7 +781,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
@@ -826,7 +826,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -942,12 +942,12 @@ export default {
 
 ## Underline a text programmatically
 
-The PDF Viewer library enables you to programmatically Underline text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add underlines using the [addAnnotation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
-Here's an example of how you can use the **addAnnotation()** method to apply Underline programmatically:
+Example:
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
 
 <template>
   <div id="app">
@@ -967,7 +967,7 @@ import { provide ,ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
@@ -983,7 +983,7 @@ const addAnnotation = function () {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Options API (Standalone)" %}
 
 <template>
   <div id="app">
@@ -1008,7 +1008,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1111,26 +1111,26 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Strikethrough a text
+## Strikethrough text
 
-There are two ways to strikethrough a text in the PDF document:
+There are two ways to strikethrough text:
 
 1.Using the context menu
-      * Select a text in the PDF document and right-click it.
-      * Select **Strikethrough** option in the context menu that appears.
+      * Select text in the PDF document and right-click it.
+      * Select **Strikethrough** in the context menu.
 
-  ![Alt text](../images/strikethrough_context.png)
+  ![Context menu option to strikethrough selected text](../images/strikethrough_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2.Using the annotation toolbar
-      * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-      * Select the **Strikethrough** button in the annotation toolbar. It enables the strikethrough mode.
-      * Select the text and the strikethrough annotation will be added.
-      * You can also select the text and apply the strikethrough annotation using the **Strikethrough** button.
+      * Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+      * Select **Strikethrough** to enable strikethrough mode.
+      * Select text to add the strikethrough annotation.
+      * Alternatively, select text first and then click **Strikethrough**.
 
-  ![Alt text](../images/strikethrough_button.png)
+  ![Strikethrough button in the annotation toolbar](../images/strikethrough_button.png)
 
-In the pan mode, if the strikethrough mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for striking through the text.
+N> While in pan mode, clicking the strikethrough button switches the viewer to text select mode so text can be selected for annotation.
 
 Refer to the following code snippet to switch to strikethrough mode.
 
@@ -1156,13 +1156,13 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
 
 const documentLoad = () => {
-  const viewer = this.$refs.pdfviewer.ej2Instances;
+  const viewer = pdfviewer.value.ej2Instances;
   document.getElementById('set').addEventListener('click', () => {
     viewer.annotation.setAnnotationMode('Strikethrough');
   });
@@ -1197,7 +1197,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1216,7 +1216,7 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
 
 <template>
   <div id="app">
@@ -1328,7 +1328,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
@@ -1374,7 +1374,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1489,9 +1489,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Strikethrough a text programmatically
+## Strikethrough text programmatically
 
-The PDF Viewer library enables you to programmatically Strikethrough text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Strikethrough programmatically:
 
@@ -1517,7 +1517,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
@@ -1559,7 +1559,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1662,15 +1662,15 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Squiggly a text
+## Add squiggly to text
 
-There are two ways to add squiggly to a text in the PDF document:
+There are two ways to add squiggly to text:
 
 1.Using the context menu
-      * Select a text in the PDF document and right-click it.
-      * Select **Squiggly** option in the context menu that appears.
+      * Select text in the PDF document and right-click it.
+      * Select **Squiggly** in the context menu.
 
-  ![Alt text](../images/squiggly_context.png)
+  ![Context menu option to add a squiggly underline to selected text](../images/squiggly_context.png)
 
 <!-- markdownlint-disable MD029 -->
 2.Using the annotation toolbar
@@ -1679,14 +1679,14 @@ There are two ways to add squiggly to a text in the PDF document:
       * Select the text and the squiggly annotation will be added.
       * You can also select the text and apply the squiggly annotation using the **Squiggly** button.
 
-  ![Alt text](../images/squiggly_button.png)
+  ![Squiggly button in the annotation toolbar](../images/squiggly_button.png)
 
-In the pan mode, if the squiggly mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for adding squiggly to the text.
+N> While in pan mode, clicking the squiggly button switches the viewer to text select mode so text can be selected for annotation.
 
 Refer to the following code snippet to switch to squiggly mode.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
 
 <template>
   <div id="app">
@@ -1707,13 +1707,13 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
 
 const documentLoad = () => {
-  const viewer = this.$refs.pdfviewer.ej2Instances;
+  const viewer = pdfviewer.value.ej2Instances;
   document.getElementById('set').addEventListener('click', () => {
     viewer.annotation.setAnnotationMode('Squiggly');
   });
@@ -1748,7 +1748,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -1767,7 +1767,7 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
 
 <template>
   <div id="app">
@@ -1879,7 +1879,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
@@ -1925,7 +1925,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2042,7 +2042,7 @@ export default {
 
 ## Squiggly a text programmatically
 
-The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library enables you to programmatically Squiggly text within the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here's an example of how you can use the **addAnnotation()** method to apply Squiggly programmatically:
 
@@ -2068,7 +2068,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
@@ -2110,7 +2110,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2225,29 +2225,29 @@ The selected annotation can be deleted by the following ways:
       * Select the annotation to be deleted.
       * Click the **Delete Annotation** button in the annotation toolbar. The selected annotation will be deleted.
 
-  ![Alt text](../images/delete_button.png)
+  ![Delete annotation button in the annotation toolbar](../images/delete_button.png)
 
-## Editing the properties of the text markup annotation
+## Edit text markup annotation properties
 
-The color and the opacity of the text markup annotation can be edited using the Edit Color tool and the Edit Opacity tool in the annotation toolbar.
+The color and opacity of text markup annotations can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
 
-### Editing color
+### Edit color
 
-The color of the annotation can be edited using the color palette provided in the Edit Color tool.
+Use the color palette in the Edit Color tool to change the annotation color.
 
-![Alt text](../images/edit_color.png)
+![Color palette in the Edit Color tool for text markup annotations](../images/edit_color.png)
 
-### Editing opacity
+### Edit opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Use the range slider in the Edit Opacity tool to change annotation opacity.
 
-![Alt text](../images/edit_opacity.png)
+![Range slider in the Edit Opacity tool for text markup annotations](../images/edit_opacity.png)
 
-## Setting default properties during control initialization
+## Set default properties during control initialization
 
 The properties of the text markup annotation can be set before creating the control using highlightSettings, underlineSettings,  strikethroughSettings, squigglySettings.
 
->After editing the default color and opacity using the Edit Color tool and Edit Opacity tool, they will be changed to the selected values.
+N> After editing default color and opacity with the Edit Color and Edit Opacity tools, the default values update to the selected settings.
 
 Refer to the following code snippet to set the default annotation settings.
 
@@ -2272,7 +2272,7 @@ import {
 import { provide } from 'vue';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 const highlightSettings = { author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: '' };
 const underlineSettings = { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9, modifiedDate: '' };
 const strikethroughSettings = { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' };
@@ -2310,7 +2310,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       highlightSettings: { author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: '' },
       underlineSettings: { author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9, modifiedDate: '' },
       strikethroughSettings: { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: '' },
@@ -2426,7 +2426,7 @@ Refer to the following code snippet for calling undo and redo actions from the c
     <button id="undo">Undo</button>
     <button id="redo">Redo</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
-      :documentLoad="documentLoad">
+      :documentLoad="documentLoad" :style="{ height: '800px', width: '1200px' }">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -2434,37 +2434,27 @@ Refer to the following code snippet for calling undo and redo actions from the c
 <script setup>
 
 import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
   TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
 
-export default {
-  name: "App",
-  components: {
-    "ejs-pdfviewer": PdfViewerComponent
-  },
-  data() {
-    return {
-      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]
-  },
-  methods: {
-    documentLoad() {
-      viewer = this.$refs.pdfviewer.ej2Instances;
-      document.getElementById('undo').addEventListener('click', () => {
-        viewer.undo();
-      });
-      document.getElementById('redo').addEventListener('click', () => {
-        viewer.redo();
-      });
-    }
-  }
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const pdfviewer = ref(null);
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
+
+const documentLoad = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  document.getElementById('undo').addEventListener('click', () => {
+    viewer.undo();
+  });
+  document.getElementById('redo').addEventListener('click', () => {
+    viewer.redo();
+  });
 }
 </script>
 
@@ -2497,7 +2487,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -2506,7 +2496,7 @@ export default {
   },
   methods: {
     documentLoad() {
-      viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       document.getElementById('undo').addEventListener('click', () => {
         viewer.undo();
       });
@@ -2519,7 +2509,7 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
 
 <template>
   <div id="app">
@@ -2538,16 +2528,17 @@ import {
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
   TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
+import { provide, ref } from 'vue';
 
 const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const pdfviewer = ref(null);
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
 
 const documentLoad = function () {
-  const viewer = this.$refs.pdfviewer.ej2Instances;
+  const viewer = pdfviewer.value.ej2Instances;
   document.getElementById('undo').addEventListener('click', () => {
     viewer.undo();
   });
@@ -2559,7 +2550,7 @@ const documentLoad = function () {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
 
 <template>
   <div id="app">
@@ -2644,7 +2635,7 @@ import {
 import { provide } from 'vue';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
@@ -2678,7 +2669,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {

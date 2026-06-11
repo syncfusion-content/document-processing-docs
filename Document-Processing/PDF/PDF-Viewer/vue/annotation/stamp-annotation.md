@@ -1,42 +1,42 @@
 ---
 layout: post
-title: Stamp annotation in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Stamp annotation in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Stamp annotation in Vue PDF Viewer control | Syncfusion
+description: Learn about stamp annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps.
 control: Stamp annotation
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stamp annotation in Vue Pdfviewer component
+# Stamp annotation in Vue PDF Viewer control
 
-The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotation in the PDF documents:
+The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotations in PDF documents:
 
 * Dynamic
 * Sign Here
 * Standard Business
 * Custom Stamp
 
-![StampAnnotation](../images/stamp_annot.png)
+![Stamp annotations example showing dynamic, sign here, standard business, and custom stamps](../images/stamp_annot.png)
 
-## Adding stamp annotations to the PDF document
+## Add stamp annotations to the PDF document
 
 The stamp annotations can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Stamp Annotation** drop-down button. A drop-down pop-up will appear and shows the stamp annotations to be added.
+* Click the **Stamp Annotation** drop-down button. The pop-up lists available stamp annotation types.
 
-![StampTool](../images/stamp_tool.png)
+![Stamp annotation tool in the PDF Viewer toolbar](../images/stamp_tool.png)
 
-* Select the annotation type to be added to the page in the pop-up.
+* Select a stamp type to enable its annotation mode.
 
-![StampPopup](../images/selectstamp_annot.png)
+![Stamp type popup listing available stamps](../images/selectstamp_annot.png)
 
-* You can add the annotation over the pages of the PDF document.
+* Place the stamp on the pages of the PDF document.
 
-In the pan mode, if the stamp annotation mode is entered, the PDF Viewer control will switch to text select mode.
+N> When in pan mode and a stamp annotation tool is selected, the PDF Viewer switches to text select mode automatically for a smooth interaction experience.
 
-Refer to the following code sample to switch to the stamp annotation mode.
+The following examples switch to stamp annotation modes.
 
 
 {% tabs %}
@@ -55,13 +55,13 @@ Refer to the following code sample to switch to the stamp annotation mode.
 import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-  TextSearch, FormFields, FormDesigner, PageOrganizer
+  TextSearch, FormFields, FormDesigner, PageOrganizer, SignStampItem
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
@@ -91,7 +91,7 @@ const documentLoad = () => {
 import {
   PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-  TextSearch, FormFields, FormDesigner, PageOrganizer
+  TextSearch, FormFields, FormDesigner, PageOrganizer, SignStampItem
 } from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
@@ -102,7 +102,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -137,7 +137,7 @@ export default {
 import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-  TextSearch, FormFields, FormDesigner, PageOrganizer
+  TextSearch, FormFields, FormDesigner, PageOrganizer, SignStampItem
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide, ref } from 'vue';
 
@@ -174,7 +174,7 @@ const documentLoad = () => {
 import {
   PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-  TextSearch, FormFields, FormDesigner, PageOrganizer
+  TextSearch, FormFields, FormDesigner, PageOrganizer, SignStampItem
 } from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
@@ -208,7 +208,7 @@ export default {
 
 ## Adding a Stamp annotation to the PDF document Programmatically
 
-With the PDF Viewer library, you can add a Stamp annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+With the PDF Viewer library, you can add a Stamp annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here's a example of how you can utilize the **addAnnotation()** method to include a Stamp annotation programmatically:
 
@@ -236,7 +236,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
@@ -315,7 +315,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -526,11 +526,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the existing sticky note annotation programmatically
+## Edit the existing stamp annotation programmatically
 
-To modify existing sticky note annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer programmatically, you can use the **editAnnotation()** method.
+To modify an existing stamp annotation in the Syncfusion® PDF Viewer programmatically, use the **editAnnotation()** method.
 
-Here is an example of how you can use the **editAnnotation()** method:
+Here is an example of using editAnnotation():
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -553,7 +553,7 @@ import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
@@ -599,7 +599,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
@@ -718,25 +718,23 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding custom stamp to the PDF document
+## Add a custom stamp to the PDF document
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Stamp Annotation** drop-down button. A drop-down pop-up will appear and shows the stamp annotations to be added.
+* Click the **Stamp Annotation** drop-down button. The pop-up lists available stamp annotation types.
 * Click the Custom Stamp button.
 
-![CustomStamp](../images/customStamp.png)
+![Add a custom stamp using the file picker dialog](../images/customStamp.png)
 
-* The file explorer dialog will appear, choose the image and then add the image to the PDF page.
+* In the file explorer dialog, choose an image and add it to the PDF page.
 
->The JPG and JPEG image format is only supported in the custom stamp annotations.
+N> Only JPG and JPEG image formats are supported for custom stamp annotations.
 
 ## Setting default properties during control initialization
 
-The properties of the stamp annotation can be set before creating the control using the StampSettings.
+Default properties for stamp annotations can be set before creating the control using StampSettings.
 
-After editing the default opacity using the Edit Opacity tool, they will be changed to the selected values.
-
-Refer to the following code sample to set the default sticky note annotation settings.
+After changing the default opacity using the Edit Opacity tool, the selected value is applied to subsequent stamps. The following example shows how to set default stamp annotation settings.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -758,7 +756,7 @@ import {
 import { provide } from 'vue';
 
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 const stampSettings = { opacity: 0.3, author: 'Guest User' };
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -791,7 +789,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
       stampSettings: { opacity: 0.3, author: 'Guest User' }
     };
   },

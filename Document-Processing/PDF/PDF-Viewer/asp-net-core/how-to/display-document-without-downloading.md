@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Display Document Without Downloading in ASP.NET Core Pdfviewer Component
-description: Learn here all about Display Document Without Downloading in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Display PDF without download in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to display PDF documents without triggering downloads by using the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
-control: Display Document Without Downloading
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
-# Display document without downloading
+# Display PDFs without downloading in ASP.NET Core PDF Viewer
 
-The PDF Viewer server library allows you to display the downloaded PDF document in the PDF Viewer control without downloading a document in the local machine using the **load** method.
+View PDF documents within the viewer without triggering a browser download by loading the PDF from memory using the **load()** method. This allows users to view documents directly in the viewer without saving files to their device.
 
-The following steps are used to display the downloaded without downloading in the local machine.
+Follow these steps to display documents without downloads:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the [Getting Started with ASP.NET Core PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic viewer with required EJ2 scripts, styles, and optionally a server controller.
 
-**Step 2:** Use the following code snippet to Display document without downloading.
+**Step 2:** Use the following code to reload the document from a saved blob. Place the script after the PDF Viewer markup so it executes once the viewer is initialized:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -37,7 +36,7 @@ The following steps are used to display the downloaded without downloading in th
             var data = value;
             var reader = new FileReader();
             reader.readAsDataURL(data);
-            reader.onload = () => {
+            reader.onload = function () {
                 var base64data = reader.result;
                 console.log(base64data);
                 viewer.load(base64data, null);
@@ -65,7 +64,7 @@ The following steps are used to display the downloaded without downloading in th
             var data = value;
             var reader = new FileReader();
             reader.readAsDataURL(data);
-            reader.onload = () => {
+            reader.onload = function () {
                 var base64data = reader.result;
                 console.log(base64data);
                 viewer.load(base64data, null);
@@ -77,4 +76,6 @@ The following steps are used to display the downloaded without downloading in th
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Display%20document%20without%20downloading)
+The client-side logic is identical in both **Standalone** and **Server-Backed** modes. In the server-backed scenario, configure the `serviceUrl` property so the viewer can delegate processing to your ASP.NET Core controller.
+
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Display%20document%20without%20downloading)

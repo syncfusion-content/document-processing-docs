@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Table of contents in Blazor DocumentEditor Component | Syncfusion
+title: Table of Contents in Blazor DocumentEditor Component | Syncfusion
 description: Checkout and learn here all about Table of contents in Syncfusion Blazor DocumentEditor component and more.
 platform: document-processing
 control: DocumentEditor
@@ -13,7 +13,7 @@ The table of contents in a document is same as the list of chapters at the begin
 
 ## Inserting table of contents
 
-[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
+[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) exposes an API to insert table of contents at cursor position programmatically. The settings for a table of contents can be specified explicitly. Otherwise, the default settings will be applied.
 
 [`TableOfContentsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.TableOfContentsSettings.html) contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.

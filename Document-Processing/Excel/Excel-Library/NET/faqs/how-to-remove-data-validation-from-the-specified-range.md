@@ -18,16 +18,14 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
-    FileStream inputStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+    IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Removes data validation from the specified range           
     worksheet.Range["A1:C5"].Clear(ExcelClearOptions.ClearDataValidations);
 
-    //Saving the workbook as stream
-    FileStream OutputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-    workbook.SaveAs(OutputStream);
+    //Saving the workbook 
+    workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

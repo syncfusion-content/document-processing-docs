@@ -17,50 +17,50 @@ You can dynamically add or insert a sheet by one of the following ways,
 
 * Click the `Add Sheet` button in the sheet tab. This will add a new empty sheet next to current active sheet.
 * Right-click on the sheet tab, and then select `Insert` option from the context menu to insert a new empty sheet before the current active sheet.
-* Using [`insertSheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at your desired index.
+* Using [`insertSheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at your desired index.
 
 The following code example shows the insert sheet operation in spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-sheet-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/insert-sheet-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-sheet-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/insert-sheet-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-sheet-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/insert-sheet-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-sheet-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/insert-sheet-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/insert-sheet-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/insert-sheet-cs1" %}
 
 ### Insert a sheet programmatically and make it active sheet 
 
-A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#goto) method.
+A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#goto) method.
 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-sheet-change-active-sheet-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/insert-sheet-change-active-sheet-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/insert-sheet-change-active-sheet-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/insert-sheet-change-active-sheet-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/insert-sheet-change-active-sheet-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/insert-sheet-change-active-sheet-cs1" %}
 
 ## Delete sheet
 
 The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet by the following way,
 
 * Right-click on the sheet tab, and then select `Delete` option from context menu.
-* Using [`delete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#delete ) method to delete the sheets.
+* Using [`delete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete ) method to delete the sheets.
 
 ## Rename sheet
 
@@ -86,20 +86,20 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/headers-gridlines-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/headers-gridlines-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/headers-gridlines-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/headers-gridlines-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/headers-gridlines-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/headers-gridlines-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/headers-gridlines-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/headers-gridlines-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/headers-gridlines-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/headers-gridlines-cs1" %}
 
 ## Sheet visibility
 
@@ -117,20 +117,20 @@ The following code example shows the three types of sheet visibility state.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/sheet-visiblity-cs1/app/app.jsx %}
+{% include code-snippet/spreadsheet/react/sheet-visiblity-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/sheet-visiblity-cs1/app/app.tsx %}
+{% include code-snippet/spreadsheet/react/sheet-visiblity-cs1/app/app.tsx %}
 {% endhighlight %}
 {% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/excel/spreadsheet/react/sheet-visiblity-cs1/app/datasource.jsx %}
+{% include code-snippet/spreadsheet/react/sheet-visiblity-cs1/app/datasource.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/excel/spreadsheet/react/sheet-visiblity-cs1/app/datasource.tsx %}
+{% include code-snippet/spreadsheet/react/sheet-visiblity-cs1/app/datasource.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://helpstaging.syncfusion.com/document-processing/code-snippet/excel/spreadsheet/react/sheet-visiblity-cs1" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/react/sheet-visiblity-cs1" %}
 
 ## Note
 

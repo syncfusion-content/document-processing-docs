@@ -5,11 +5,12 @@ description: Explore scrolling features in .NET MAUI PDF Viewer, including how t
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
 # Scrolling in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The .NET MAUI PDF Viewer provides built-in scrolling capabilities that allow users to navigate through PDF content smoothly. This guide covers how to control scroll positions programmatically, detect scroll changes, and manage scroll-related UI elements.
+Keep document navigation smooth and predictable by using the PDF Viewer's built-in scrolling features. This guide shows how to programmatically control scroll position, respond to scroll events, and implement performance-friendly patterns (for example, avoid nesting the viewer inside other scrollable containers).
 
 W> Since the PDF Viewer includes built-in scrolling, avoid placing it inside other scrollable containers like [ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0), as this may lead to unexpected behavior.
 
@@ -119,12 +120,6 @@ On Android and iOS platforms, the scroll head offers a quick way to move through
 
 ![Scroll Head](Images\ScrollHead.png)
 
-### Page Navigation via Scroll Head
-
-Tap the scroll head to open a page navigation dialog. Enter a valid page number and tap **OK** to jump directly to that page.
-
-![Page navigation by tapping scroll head](Images\PageNavigationUsingScrollHead.gif)
-
 ### Show or Hide the Scroll Head
 
 Use the [ShowScrollHead](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowScrollHead) property to control the visibility of the scroll head.
@@ -137,3 +132,36 @@ PdfViewer.ShowScrollHead = false;
 {% endtabs %}
 
 N> The scroll head is available only on **mobile platforms**. It is not supported on **Windows** or **macOS**.
+
+## Render multiple pages while scrolling
+
+When scrolling through large PDF documents, you may notice blank pages appearing temporarily while new pages are being rendered. This happens because the viewer renders pages on demand to optimize memory usage.
+
+To minimize this and provide a smoother scrolling experience, the SfPdfViewer control offers the `OverscanCount` property. This property defines how many pages should be pre-rendered and kept in memory on each side of the current viewport. Increasing this value reduces the chance of blank pages during fast scrolling but may increase memory usage. 
+
+The following example shows how to set `OverscanCount` property:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfPdfViewer  x:Name="PdfViewer"
+                         OverscanCount ="15" />
+{% endhighlight %}
+
+{% highlight c# %}
+SfPdfViewer PdfViewer = new SfPdfViewer();
+
+// Set the cache range (number of pages before and after the current viewport)
+PdfViewer.OverscanCount = 15;
+
+// Load a PDF document
+PdfViewer.LoadDocument("sample.pdf");
+{% endhighlight %}
+{% endtabs %} 
+
+N> - Use a reasonable OverscanCount value. Large values can cause memory spikes and app freezes.
+N> - Pages with very high resolution may still render slowly due to native rendering limitations.
+
+## See Also
+- [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/page-navigation)
+- [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/magnification)
+- [Gesture Events](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/gesture-events)

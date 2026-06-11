@@ -15,15 +15,13 @@ When there exists data that are of different formats, the error marker appears i
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Ignore Error Options
   worksheet.Range["B3"].IgnoreErrorOptions = ExcelIgnoreError.All;
 
-  FileStream stream = new FileStream("IgnoreGreenError.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("IgnoreGreenError.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }

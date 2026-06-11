@@ -8,15 +8,14 @@ documentation: UG
 
 # How to unfreeze the rows and columns in XlsIO?
 
-You can unfreeze rows and columns in XlsIO by using the [RemovePanes](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_RemovePanes) method. The following code snippet illustrates this.
+You can unfreeze rows and columns in XlsIO by using the [RemovePanes](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_RemovePanes) method. The following code snippet illustrates this.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Freeze the panes
@@ -25,8 +24,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Unfreeze the panes
   worksheet.RemovePanes();
 
-  FileStream stream = new FileStream("Unfreeze.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("Unfreeze.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }
@@ -73,6 +71,6 @@ End Using
 * [What is the maximum range of Rows and Columns?](what-is-the-maximum-range-of-rows-and-columns)
 * [How to hide the summary rows and columns using XlsIO?](how-to-hide-the-summary-rows-and-columns-using-xlsio)
 * [How to sort two or more columns in a pivot table?](how-to-sort-two-or-more-columns-in-a-pivot-table)
-* [How to freeze panes?](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#freeze-panes)
-* [How to unfreeze panes?](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#unfreeze-panes)
-* [How to split panes?](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#split-panes)
+* [How to freeze panes?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet#freeze-panes)
+* [How to unfreeze panes?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet#unfreeze-panes)
+* [How to split panes?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet#split-panes)

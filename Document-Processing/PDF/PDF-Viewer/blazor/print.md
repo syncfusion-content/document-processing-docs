@@ -9,7 +9,7 @@ documentation: ug
 
 # Print in Blazor SfPdfViewer Component
 
-The SfPdfViewer supports printing the loaded PDF by default. Enable or disable the toolbar Print option by setting the [EnablePrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrint) property.
+The `SfPdfViewer` component supports printing the loaded PDF by default. Enable or disable the toolbar Print option by setting the [EnablePrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrint) property. Code examples in this topic use the local component reference name shown in the snippets (for example, `SfPdfViewer2`); the component class is `SfPdfViewer`.
 
 ```cshtml
 
@@ -94,7 +94,7 @@ The SfPdfViewer supports printing the loaded PDF by default. Enable or disable t
 
 ## PrintScaleFactor
 
-[PrintScaleFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintScaleFactor) sets the scale used when rendering pages for printing. By default the scale factor set as 1.0 (prints at the on-screen scale). Valid range from 0.5 to 5.0. Higher values can improve output clarity for documents with smaller page dimensions and may increase print processing time.
+[PrintScaleFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintScaleFactor) sets the scale used when rendering pages for printing. By default, `PrintScaleFactor` is `1.0` (prints at the on-screen scale). The valid range is `0.5` to `5.0`. Increasing the scale can improve clarity for documents with small page dimensions but may increase print processing time and memory usage.
 
 ```cshtml
 
@@ -118,20 +118,20 @@ The following events are available for print in the SfPdfViewer component.
 |Name|Description|
 |---|---|
 |PrintStart|Triggers when a print action starts.|
-|PrintEnd|Triggers when a print action is completed.|
+|PrintEnd|Triggers when a print action completes.|
 
 ### PrintStart Event
 
-The [PrintStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_PrintStart) event triggers when the print action is started.
+The [PrintStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_PrintStart) event triggers when a print action begins.
 
-#### Event Arguments
+#### Event arguments
 
-See [PrintStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html) for details such as Filename, Cancel option.
+See [PrintStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html) for details such as `FileName` and the `Cancel` option.
 
-- If the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html#Syncfusion_Blazor_SfPdfViewer_PrintStartEventArgs_Cancel) property is set to true in the PrintStart event, the print operation is canceled and the print dialog will not open.
-- By default, Cancel is false. Set it to true to prevent printing.
+- If the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintStartEventArgs.html#Syncfusion_Blazor_SfPdfViewer_PrintStartEventArgs_Cancel) property is set to `true` in the `PrintStart` event handler, the print operation is canceled and the print dialog does not open.
+- By default, `Cancel` is `false`.
 
-The following example illustrates how to handle the PrintStart event.
+The following example illustrates how to handle the `PrintStart` event.
 
 ```cshtml
 
@@ -151,13 +151,13 @@ The following example illustrates how to handle the PrintStart event.
 
 ### PrintEnd Event
 
-The [PrintEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_PrintEnd) event triggers when an annotation is added to a page in the PDF document.
+The [PrintEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_PrintEnd) event triggers when a print action completes.
 
-#### Event Arguments
+#### Event arguments
 
-See [PrintEndEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintEndEventArgs.html) for details such as Filename.
+See [PrintEndEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintEndEventArgs.html) for details such as `FileName`.
 
-The following example illustrates how to handle the PrintEnd event.
+The following example illustrates how to handle the `PrintEnd` event.
 
 ```cshtml
 

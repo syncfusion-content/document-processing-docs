@@ -1,6 +1,6 @@
 ---
 title: Create, read, and edit Excel files in AWS Lambda | Syncfusion
-description: Explains how to create, read, and edit Excel files in AWS Lambda.
+description: This page explains how to create, read, and edit Excel files in AWS Lambda using the Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -222,17 +222,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;  
   
-  //Saving the Excel to the MemoryStream 
-  MemoryStream stream = new MemoryStream();  
+  MemoryStream stream = new MemoryStream();
   workbook.SaveAs(stream);
-  
-  //Set the position as '0'.
-  stream.Position = 0;
-  
-  //Download the Excel file in the browser
-  FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/excel");  
-  fileStreamResult.FileDownloadName = "Output.xlsx";  
-  return fileStreamResult;
+  return Convert.ToBase64String(stream.ToArray());
 }
 
 {% endhighlight %}
@@ -341,8 +333,7 @@ IApplication application = excelEngine.Excel;
 application.DefaultVersion = ExcelVersion.Xlsx;
 
 //A existing workbook is opened.             
-FileStream sampleFile = new FileStream("Sample.xlsx", FileMode.Open);
-IWorkbook workbook = application.Workbooks.Open(sampleFile);
+IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
 //Access first worksheet from the workbook.
 IWorksheet worksheet = workbook.Worksheets[0];

@@ -12,7 +12,7 @@ Top/Bottom Rules are powerful tools for data analysis and presentation, enhancin
 
 ## Format Top or Bottom Values
 
-Top/Bottom rule in conditional formatting is used to highlight the top or bottom ranked cells in a data range. Top/Bottom conditional formatting rule can be created and customized using the [ITopBottom](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITopBottom.html) interface in XlsIO.
+Top/Bottom rule in conditional formatting is used to highlight the top or bottom ranked cells in a data range. Top/Bottom conditional formatting rule can be created and customized using the [ITopBottom](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITopBottom.html) interface in XlsIO.
 
 The properties of **ITopBottom** interface are:
 
@@ -22,7 +22,7 @@ The properties of **ITopBottom** interface are:
 
 ### Top/Bottom ‘n’ rank values
 
-The following code example illustrates how to format top 10 rank values from the given data range using [ITopBottom](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITopBottom.html) [Type](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITopBottom.html#Syncfusion_XlsIO_ITopBottom_Type) and [Rank](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITopBottom.html#Syncfusion_XlsIO_ITopBottom_Rank) properties in XlsIO.
+The following code example illustrates how to format top 10 rank values from the given data range using [ITopBottom](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITopBottom.html) [Type](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITopBottom.html#Syncfusion_XlsIO_ITopBottom_Type) and [Rank](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITopBottom.html#Syncfusion_XlsIO_ITopBottom_Rank) properties in XlsIO.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]"  playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Top%20to%20Bottom%20Rank/.NET/Top%20to%20Bottom%20Rank/Top%20to%20Bottom%20Rank/Program.cs,180" %}
@@ -30,8 +30,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Applying conditional formatting to "N6:N35".
@@ -53,13 +52,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/TopToBottomRank.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/TopToBottomRank.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -181,7 +175,7 @@ N> **ITopBottom** **Rank** value should be in a range between 1 and 1000.
 
 ### Top/Bottom ‘n’% rank values
 
-The following code example illustrates how to format top 50 percentage rank values from the given data range using [ITopBottom](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITopBottom.html) [Type](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITopBottom.html#Syncfusion_XlsIO_ITopBottom_Type), [Rank](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITopBottom.html#Syncfusion_XlsIO_ITopBottom_Rank) and [Percent](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ITopBottom.html#Syncfusion_XlsIO_ITopBottom_Percent) properties in XlsIO
+The following code example illustrates how to format top 50 percentage rank values from the given data range using [ITopBottom](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITopBottom.html) [Type](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITopBottom.html#Syncfusion_XlsIO_ITopBottom_Type), [Rank](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITopBottom.html#Syncfusion_XlsIO_ITopBottom_Rank) and [Percent](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITopBottom.html#Syncfusion_XlsIO_ITopBottom_Percent) properties in XlsIO
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]"  playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Top%20To%20Bottom%20Percent/.NET/Top%20To%20Bottom%20Percent/Top%20To%20Bottom%20Percent/Program.cs,180" %}
@@ -189,8 +183,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Applying conditional formatting to "N6:N35".
@@ -215,13 +208,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Chart.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Chart.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -351,14 +339,14 @@ N> **ITopBottom** **Rank** value should be in a range between 1 and 100 when set
 
 ## Format Above or Below Average Values
 
-Above/Below average rule in conditional formatting is used to highlight the cells which contains above/below the average values in a data range. Top/Bottom conditional formatting rule can be created and customized using the [IAboveBelowAverage](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IAboveBelowAverage.html) interface in XlsIO.
+Above/Below average rule in conditional formatting is used to highlight the cells which contains above/below the average values in a data range. Top/Bottom conditional formatting rule can be created and customized using the [IAboveBelowAverage](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAboveBelowAverage.html) interface in XlsIO.
 
 The properties of **IAboveBelowAverage** are:
 
 * **AverageType** - Specifies whether the conditional formatting rule looks for cell values that are above average or below average or standard deviation.
 * **StdDevValue** - Specifies standard deviation number for **AboveBelowAverage** conditional formatting rule.
 
-The following code example illustrates shows how to format a range with values that are below average using **IAboveBelowAverage** [AverageType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IAboveBelowAverage.html#Syncfusion_XlsIO_IAboveBelowAverage_AverageType) property in XlsIO.
+The following code example illustrates shows how to format a range with values that are below average using **IAboveBelowAverage** [AverageType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAboveBelowAverage.html#Syncfusion_XlsIO_IAboveBelowAverage_AverageType) property in XlsIO.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]"  playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Above%20and%20Below%20Average/.NET/Above%20and%20Below%20Average/Above%20and%20Below%20Average/Program.cs,180" %}
@@ -366,8 +354,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Applying conditional formatting to "M6:M35"
@@ -387,13 +374,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AboveAndBelowAverage.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/AboveAndBelowAverage.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -461,7 +443,7 @@ By executing the program, you will get the Excel file as below
 
 ### Above or Below Standard Deviation values
 
-The following code example illustrates how to format a range with values above standard deviation, using [IAboveBelowAverage](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IAboveBelowAverage.html) [AverageType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IAboveBelowAverage.html#Syncfusion_XlsIO_IAboveBelowAverage_AverageType) and [StdDevValue](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IAboveBelowAverage.html#Syncfusion_XlsIO_IAboveBelowAverage_StdDevValue) properties in XlsIO.
+The following code example illustrates how to format a range with values above standard deviation, using [IAboveBelowAverage](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAboveBelowAverage.html) [AverageType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAboveBelowAverage.html#Syncfusion_XlsIO_IAboveBelowAverage_AverageType) and [StdDevValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAboveBelowAverage.html#Syncfusion_XlsIO_IAboveBelowAverage_StdDevValue) properties in XlsIO.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]"  playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Above%20and%20Below%20Standard%20Deviation/.NET/Above%20and%20Below%20Standard%20Deviation/Above%20and%20Below%20Standard%20Deviation/Program.cs,180" %}
@@ -469,8 +451,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Applying conditional formatting to "M6:M35"
@@ -493,13 +474,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AboveAndBelowStandardDeviation.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/AboveAndBelowStandardDeviation.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 

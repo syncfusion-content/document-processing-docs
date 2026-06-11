@@ -10,7 +10,7 @@ documentation: UG
 
 All the cells in an Excel worksheet have a **Locked** property, which determines if the cell will be editable. When a worksheet is protected, all the cells in the worksheet get locked, by default.
 
-However, there is often a need to protect only certain cells in a worksheet. In this scenario, you need to protect a worksheet, and set the [Locked](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Locked) property as false for the cells that need to be made editable. 
+However, there is often a need to protect only certain cells in a worksheet. In this scenario, you need to protect a worksheet, and set the [Locked](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Locked) property as false for the cells that need to be made editable. 
 
 The following code snippet illustrate this.
 
@@ -19,8 +19,7 @@ The following code snippet illustrate this.
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Sample data
@@ -31,8 +30,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A1:A10"].Text = "UnLocked";
   worksheet.Protect("syncfusion", ExcelSheetProtection.All);
 
-  FileStream stream = new FileStream("ProtectCells.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  workbook.SaveAs("ProtectCells.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }
@@ -80,7 +78,7 @@ N> Locking/Unlocking cells in an unprotected worksheet has no effect.
 
 ## See Also
 
-* [How to protect Excel workbook?](https://help.syncfusion.com/file-formats/xlsio/migrate-from-office-automation-to-syncfusion-xlsio/protect-excel-workbook)
-* [How to protect worksheet?](https://help.syncfusion.com/file-formats/xlsio/security#protect-worksheet)
-* [How to protect the zip files using Syncfusion.Compression.Base?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-protect-the-zip-files-using-syncfusion-compression-base)
-* [How to un-protect the zip files using Syncfusion.Compression.Base?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-un-protect-the-zip-files-using-syncfusion-compression-base)
+* [How to protect Excel workbook?](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/protect-excel-workbook)
+* [How to protect worksheet?](https://help.syncfusion.com/document-processing/excel/excel-library/net/security#protect-worksheet)
+* [How to protect the zip files using Syncfusion.Compression.Base?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-protect-the-zip-files-using-syncfusion-compression-base)
+* [How to un-protect the zip files using Syncfusion.Compression.Base?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-un-protect-the-zip-files-using-syncfusion-compression-base)

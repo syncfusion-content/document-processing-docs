@@ -1,27 +1,21 @@
 ---
 layout: post
-title: Annotations Visibility in EJ2 ASP.NET Core PdfViewer | Syncfusion
-description: Learn here how to Control PDF Annotations Visibility ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Control annotation visibility in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to control the visibility of PDF annotations in the ASP.NET Core PDF Viewer, ensuring annotations appear only in the viewer as needed.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Control PDF Annotations Visibility in PDF Viewer
+# Control annotation visibility in ASP.NET Core PDF Viewer
 
-### Overview
+Manage how annotations appear at different stages of the document workflow. This guide demonstrates how to keep annotations visible within the PDF Viewer while programmatically hiding them in the final downloaded PDF file.
 
-This guide demonstrates how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion PDF Viewer. This process allows the annotations to be visible only in the Syncfusion PDF Viewer.
+## Control annotation visibility on download
 
-### How to Control Annotation Visibility
+**Step 1:** Follow the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer sample.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
-
-**Step 2:** Set Up Your ASP.NET Core Component
-
-Create an ASP.NET Core component and update the template to include a button that triggers the download operation. Additionally, create a function to save the document with the PDF annotation flag set to `noView`.
-
+**Step 2:** Add a download button and configure the viewer markup. The following example includes logic to update annotation flags before the file is saved:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -109,6 +103,10 @@ Create an ASP.NET Core component and update the template to include a button tha
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, the annotations in a PDF document can be set to be visible in the Syncfusion PDF Viewer, providing control over annotation visibility based on different platforms.
+**Step 3:** The `documentLoaded` event handler programmatically adds highlight, underline, and strikethrough annotations for demonstration.
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)
+**Step 4:** When the **Download** button is clicked, the `save()` function is triggered.
+
+**Step 5:** Within the `save()` function, the script iterates through document annotations and applies the `noView` flag. This ensures annotations are omitted from the downloaded PDF while remaining interactive in the viewer UI.
+
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

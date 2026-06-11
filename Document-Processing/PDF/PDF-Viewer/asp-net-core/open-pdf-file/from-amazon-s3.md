@@ -1,20 +1,19 @@
 ---
 layout: post
-title: AWS S3 in ASP.NET Core Syncfusion PDF Viewer Component
-description: Learn here all about how to Open PDF files from AWS S3 in ASP.NET CORE PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Open PDF from AWS S3 in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to load PDFs from AWS S3 in the Syncfusion ASP.NET Core PDF Viewer component using standalone and server-backed approaches.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Open PDF file from AWS S3
+# Open PDF from AWS S3
 
-PDF Viewer allows to load PDF file from AWS S3 using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from AWS S3.
+The ASP.NET Core PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. Both approaches are demonstrated below.
 
-## Using Standalone PDF Viewer
+## Using the standalone PDF Viewer
 
-To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from AWS S3 in the standalone PDF Viewer.
 
 **Step 1:** Create AWS S3 account
 
@@ -43,7 +42,7 @@ Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</
 
 1. Configures AWS SDK with the region, access key, and secret access key. This configuration allows the application to interact with AWS services like S3.
 
-N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
+N> Replace **Your Region** with the actual region of your AWS S3 account, **Your Access Key** with the actual access key of your AWS S3 account, and **Your Security Access Key** with the actual security access key of your AWS S3 account.
 
 ```csharp
 AWS.config.update({
@@ -55,7 +54,7 @@ AWS.config.update({
 
 2. Sets the parameters for fetching the PDF document from S3, including the bucket name and file key. Then Uses the getObject method of the S3 instance to retrieve the document. Converts the document data to a Base64 string and loads it into the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer then load Base64 string generated into the viewer.load method.
 
-N> Replace **Your Bucket Name** with the actual Bucket name of your AWS S3 account and **Your Key** with the actual File Key of your AWS S3 account.
+N> Replace **Your Bucket Name** with the actual bucket name of your AWS S3 account and **Your Key** with the actual file key of your AWS S3 account.
 
 ```csharp
 loadDocument() {
@@ -88,9 +87,9 @@ N> The **AWSSDK.S3** NuGet package must be installed in your application to use 
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Standalone).
 
-## Using Server-Backed PDF Viewer
+## Using the server-backed PDF Viewer
 
-To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from AWS S3 using the server-backed PDF Viewer.
 
 **Step 1:** Create AWS S3 account
 
@@ -191,9 +190,9 @@ public async Task<IActionResult> OnPostLoadAsync([FromBody] jsonObjects response
 
 N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
 
-**Step 4:** Set the PDF Viewer Properties in ASP.NET Core PDF viewer component
+**Step 4:** Configure the PDF Viewer component
 
-Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from AWS S3. Ensure that you correctly pass the document name from the files available in your azure container to the documentPath property.
+Set the `documentPath` property of the PDF Viewer to the PDF file name to load from AWS S3. Ensure the document name matches an object in your bucket.
 
 ```csharp
 

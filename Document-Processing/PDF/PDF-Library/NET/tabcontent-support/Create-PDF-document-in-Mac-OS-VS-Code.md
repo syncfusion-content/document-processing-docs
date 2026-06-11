@@ -34,13 +34,11 @@ using Syncfusion.Drawing;
 using System.IO;
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 6: Add the following code sample to the *Program.cs* file to **create PDF document in .NET Core application on Mac OS**.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 //Create a new PDF document.
@@ -95,7 +93,6 @@ using (FileStream outputFileStream = new FileStream(Path.GetFullPath(@"Output.pd
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 7: Build the project.

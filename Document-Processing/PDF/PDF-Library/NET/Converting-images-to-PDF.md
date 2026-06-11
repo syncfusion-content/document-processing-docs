@@ -25,83 +25,75 @@ This includes a wide range of image formats for PDF conversion. These image form
 
 N> For using image formats other than PNG and JPEG in ASP.NET Core, you need to include the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package in your project. This package provides the necessary support for handling other raster image formats like BMP, GIF, TIFF, and ICO.
 
-You can load images from various sources, including image streams and files on disk using [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) class. Once you have loaded an image, you can draw it on a PDF document using the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_) method of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class.
+The [ImageToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ImageToPdfConverter.html) class is used to convert image files into PDF documents, with options to customize page size and image positioning.
 
 The following code example shows how to convert image to PDF document. 
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Insert-image-in-a-new-PDF-document/.NET/Insert-image-in-a-new-PDF-document/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Images/Convert_Image_to_PDF/.NET/Convert_Image_to_PDF/Program.cs" %}
 
-//Create a new PDF document
-PdfDocument doc = new PdfDocument();
-//Add a page to the document
-PdfPage page = doc.Pages.Add();
-
-//Create PDF graphics for the page
-PdfGraphics graphics = page.Graphics;
-//Load the image from the disk
-FileStream imageStream = new FileStream("Autumn Leaves.jpg", FileMode.Open, FileAccess.Read);
-PdfBitmap image = new PdfBitmap(imageStream);
-//Draw the image
-graphics.DrawImage(image, 0, 0);
-
-//Creating the stream object
-MemoryStream stream = new MemoryStream();
-//Save the document as stream
-doc.Save(stream);
-//If the position is not set to '0' then the PDF will be empty
-stream.Position = 0;
-//Close the document
-doc.Close(true);
+// Create an instance of the ImageToPdfConverter class 
+ImageToPdfConverter imageToPdfConverter = new ImageToPdfConverter();
+// Set the page size for the document
+imageToPdfConverter.PageSize = PdfPageSize.A4;
+// Set the position of the image in the document
+imageToPdfConverter.ImagePosition = PdfImagePosition.TopLeftCornerOfPage;
+// Create a file stream to read the image file 
+using (FileStream imageStream = new FileStream("Image.jpg", FileMode.Open, FileAccess.Read))
+// Convert the image to a PDF document using the ImageToPdfConverter 
+using (PdfDocument pdfDocument = imageToPdfConverter.Convert(imageStream))
+{
+    //Save the PDF document
+    pdfDocument.Save("Output.pdf");
+}
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Create a new PDF document
-PdfDocument doc = new PdfDocument();
-//Add a page to the document
-PdfPage page = doc.Pages.Add();
-
-//Create PDF graphics for the page
-PdfGraphics graphics = page.Graphics;
-//Load the image from the disk
-PdfBitmap image = new PdfBitmap("Autumn Leaves.jpg");
-//Draw the image
-graphics.DrawImage(image, 0, 0);
-
-//Save the document
-doc.Save("Output.pdf");
-//Close the document
-doc.Close(true);
+// Create an instance of the ImageToPdfConverter class 
+ImageToPdfConverter imageToPdfConverter = new ImageToPdfConverter();
+// Set the page size for the document
+imageToPdfConverter.PageSize = PdfPageSize.A4;
+// Set the position of the image in the document
+imageToPdfConverter.ImagePosition = PdfImagePosition.TopLeftCornerOfPage;
+// Create a file stream to read the image file 
+using (FileStream imageStream = new FileStream("Image.jpg", FileMode.Open, FileAccess.Read))
+// Convert the image to a PDF document using the ImageToPdfConverter 
+using (PdfDocument pdfDocument = imageToPdfConverter.Convert(imageStream))
+{
+    //Save the PDF document
+    pdfDocument.Save("Output.pdf");
+}
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Create a new PDF document
-Dim doc As New PdfDocument()
-'Add a page to the document
-Dim page As PdfPage = doc.Pages.Add()
+' Create an instance of the ImageToPdfConverter class
+Dim imageToPdfConverter As New ImageToPdfConverter()
 
-'Create PDF graphics for the page
-Dim graphics As PdfGraphics = page.Graphics
-'Load the image from the disk
-Dim image As New PdfBitmap("Autumn Leaves.jpg")
-'Draw the image
-graphics.DrawImage(image, 0, 0)
+' Set the page size for the document
+imageToPdfConverter.PageSize = PdfPageSize.A4
 
-'Save the document
-doc.Save("Output.pdf")
-'Close the document
-doc.Close(True)
+' Set the position of the image in the document
+imageToPdfConverter.ImagePosition = PdfImagePosition.TopLeftCornerOfPage
+
+' Create a file stream to read the image file
+Using imageStream As New FileStream("Image.jpg", FileMode.Open, FileAccess.Read)
+    ' Convert the image to a PDF document using the ImageToPdfConverter
+    Using pdfDocument As PdfDocument = imageToPdfConverter.Convert(imageStream)
+        ' Save the PDF document
+        pdfDocument.Save("Output.pdf")
+    End Using
+End Using
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Insert-image-in-a-new-PDF-document/). 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Convert_Image_to_PDF/.NET). 
 
 N> The Syncfusion<sup>&reg;</sup> .NET Core PDF library supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) NuGet package in ASP.NET Core platform. 
 

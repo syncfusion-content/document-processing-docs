@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Import export annotation in Angular Pdfviewer component | Syncfusion
-description: Learn here all about Import export annotation in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Import export annotation in Angular PDF Viewer component | Syncfusion
+description: Learn here all about Import export annotation in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import export annotation
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import and export annotation
+# Import and export annotations
 
-The PDF Viewer control provides the support to import and export annotations using JSON object in the PDF document.
+The PDF Viewer control supports importing and exporting annotations as JSON or XFDF. Use the annotation toolbar to add, edit, import, or export annotations for the loaded PDF document.
+
+Using the annotation toolbar:
 
 * Click the Add or Edit annotation button in the PDF Viewer toolbar.
 
 ![EditButton](../images/edittool.png)
 
-* The annotation toolbar will appear.
-* Click the Comment Panel button in the annotation toolbar.
+* In the annotation toolbar, open the Comment Panel.
 
 ![CommentPanel](../images/commentPanel.png)
 
-* The comments panel will displayed.
-* Click the **More Option** button in the comment panel container.
+* In the Comment Panel, use the More Options menu to choose import or export actions.
 
 ![MoreOption](../images/Importandexport.png)
 
@@ -542,7 +542,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 {% endhighlight %}
 {% endtabs %}
 
->Run the [web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_3.0) and then the angular code. Also note that, the JSON file for importing the annotation should be placed in the location as specified in the GetDocumentPath method of the PdfViewerController.
+>Run the [web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_8.0) and then the angular code. Also note that, the JSON file for importing the annotation should be placed in the location as specified in the GetDocumentPath method of the PdfViewerController.
 
 Refer to the following code snippet to import annotations from an XFDF file.
 
@@ -623,7 +623,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
 {% endhighlight %}
 {% endtabs %}
 
->Run the [web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_3.0) and then the angular code. Also note that, the XFDF file for importing the annotation should be placed in the location as specified in the GetDocumentPath method of the PdfViewerController.
+>Run the [web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_8.0) and then the angular code. Also note that, the XFDF file for importing the annotation should be placed in the location as specified in the GetDocumentPath method of the PdfViewerController.
 
 ## Importing Annotation Using Base64 Data
 

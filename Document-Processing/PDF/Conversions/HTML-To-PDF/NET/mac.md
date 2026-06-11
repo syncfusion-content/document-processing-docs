@@ -38,6 +38,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 5: A default controller with name HomeController.cs gets added on creation of ASP.NET MVC project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -46,10 +47,12 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
     {
@@ -61,9 +64,11 @@ Step 6: A default action method named Index will be present in HomeController.cs
  }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add a new action method ExportToPDF in HomeController.cs and include the below code example to convert HTML to PDF file using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public IActionResult ExportToPDF()
@@ -74,16 +79,17 @@ public IActionResult ExportToPDF()
     PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
     MemoryStream stream = new MemoryStream();
     document.Save(stream);
-    //Close the document
-    document.Close(true); 
     //Download the PDF document in the browser
     return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Right click the project and select Build.
 ![Build project](htmlconversion_images/mac_step5.png)
+
+N> Once the build succeeded, unzip the chromium.app file in bin folder `(bin-> Debug-> net6.0-> runtimes-> osx-> native-> Chromium.app)`
 
 Step 9: Run the application.
 ![Run application](htmlconversion_images/mac_step6.png)
@@ -119,6 +125,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 5: A default controller with name HomeController.cs gets added on creation of ASP.NET MVC project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -127,10 +134,12 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: A default action method named Index will be present in HomeController.cs. Right click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
     {
@@ -142,9 +151,11 @@ Step 6: A default action method named Index will be present in HomeController.cs
  }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add a new action method ExportToPDF in HomeController.cs and include the below code example to convert HTML to PDF file using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public IActionResult ExportToPDF()
@@ -155,13 +166,12 @@ public IActionResult ExportToPDF()
     PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
     MemoryStream stream = new MemoryStream();
     document.Save(stream);
-    //Close the document
-    document.Close(true); 
     //Download the PDF document in the browser
     return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Build the project.
 

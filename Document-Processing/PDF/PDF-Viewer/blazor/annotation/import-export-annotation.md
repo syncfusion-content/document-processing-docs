@@ -13,17 +13,17 @@ The SfPdfViewer component supports importing and exporting annotations as a JSON
 
 * Select Add or Edit annotation in the SfPdfViewer toolbar to enable the annotation tools.
 
-![SfPdfViewer toolbar with the Edit annotation button highlighted](../../blazor-classic/images/blazor-pdfviewer-edit-button.png)
+![SfPdfViewer toolbar with the Edit annotation button highlighted](../images/blazor-pdfviewer-edit-button.png)
 
 * The annotation toolbar appears.
 * Select Comment Panel in the annotation toolbar.
 
-![Comment panel button shown in the annotation toolbar of SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-edit-sticknotes-comment.png)
+![Comment panel button shown in the annotation toolbar of SfPdfViewer](../images/blazor-pdfviewer-edit-sticknotes-comment.png)
 
 * The comment panel is displayed.
 * Select **More Option** in the comment panel container.
 
-![More options menu opened in the comment panel of SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-show-more-option.png)
+![More options menu opened in the comment panel of SfPdfViewer](../images/blazor-pdfviewer-show-more-option.png)
 
 ## Importing annotation to the PDF document
 
@@ -34,11 +34,11 @@ The SfPdfViewer component supports importing and exporting annotations as a JSON
 * Select **More Option** in the comment panel container.
 * Choose Import Annotations.
 
-![Import annotations option selected in the comment panel of SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-import-annotation.png)
+![Import annotations option selected in the comment panel of SfPdfViewer](../images/blazor-pdfviewer-import-annotation.png)
 
 * A file explorer dialog opens. Choose the JSON file to import into the loaded PDF document.
 
-![PDF document in SfPdfViewer after annotations have been imported from JSON](../../blazor-classic/images/blazor-pdfviewer-imported-annotation.png)
+![PDF document in SfPdfViewer after annotations have been imported from JSON](../images/blazor-pdfviewer-imported-annotation.png)
 
 ## Importing annotation using SfPdfViewer API
 
@@ -80,7 +80,7 @@ Supported formats:
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Import-Export/Annotations%20as%20JSON%20object).
 
-N> Ensure that the JSON file used for importing annotations is available at the specified path. Paths are case-sensitive in some hosting environments.
+N> Ensure that the JSON file used for importing annotations is available at the specified path. Paths can be case-sensitive in some hosting environments.
 
 ## Exporting annotation from the PDF document
 
@@ -93,7 +93,7 @@ The SfPdfViewer component supports exporting annotations as a JSON file or JSON 
 * Select **More Option** in the comments panel container.
 * Choose Export Annotations.
 
-![Export annotations option selected in the comments panel of SfPdfViewer](../../blazor-classic/images/blazor-pdfviewer-export-annotation.png)
+![Export annotations option selected in the comments panel of SfPdfViewer](../images/blazor-pdfviewer-export-annotation.png)
 
 N> The Export Annotations option is disabled when the loaded PDF document does not contain any annotations.
 

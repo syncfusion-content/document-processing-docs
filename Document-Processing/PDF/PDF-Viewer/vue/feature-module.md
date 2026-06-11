@@ -1,35 +1,32 @@
 ---
 layout: post
-title: Feature module in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Feature module in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Feature module
+title: Feature modules in Vue PDF Viewer | Syncfusion
+description: Learn to inject feature modules in Syncfusion Vue PDF Viewer to enable toolbar, search, forms, annotations, and printing.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in Vue Pdfviewer component
+# Feature modules in Vue PDF viewer Control
 
-The PDF Viewer features are segregated into individual feature-wise modules to enable selectively referencing in the application. The required modules should be injected to extend its functionality. The following are the selective modules of PDF Viewer that can be included as required:
+The [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) exposes functionality as feature modules that can be imported selectively. Import and register only the modules required by an application to keep bundle sizes small and enable specific capabilities on demand. The following feature modules are available:
 
-The available PdfViewer modules are:
+* **Toolbar**: Built-in toolbar for user interaction.
+* **Magnification**: Zoom and fit options for improved viewing.
+* **Navigation**: Page navigation controls and page jump support.
+* **LinkAnnotation**: Support for hyperlinks within and outside the PDF.
+* **ThumbnailView**: Page thumbnails for rapid navigation within the document.
+* **BookmarkView**: Navigation based on document bookmarks.
+* **TextSelection**: Select and copy text from the PDF.
+* **TextSearch**: Find text across the document.
+* **Print**: Print the document or individual pages from the browser.
+* **Annotation**: Create and edit annotations on the PDF.
+* **FormFields**: Preserve and interact with form fields in the document.
+* **FormDesigner**: Add and edit form fields in design mode.
+* **StickyNotesAnnotation**: Add sticky notes to the PDF.
 
-* **Toolbar**:- Built-in toolbar for better user interaction.
-* **Magnification**:- Perform zooming operation for better viewing experience.
-* **Navigation**:- Easy navigation across the PDF pages.
-* **LinkAnnotation**:- Easy navigation within and outside of the PDF document.
-* **ThumbnailView**:- Easy navigation with in the PDF document.
-* **BookmarkView**:- Easy navigation based on the bookmark content of the PDF document.
-* **TextSelection**:- Select and copy text from a PDF file.
-* **TextSearch**:- Search a text easily across the PDF document.
-* **Print**:- Print the entire document or a specific page directly from the browser.
-* **Annotation**:- Annotations can be added or edited in the PDF document.
-* **FormFields**:- Preserve the form fields in the PDF document.
-* **FormDesigner**:- Form fields can be added or edited in the PDF document.
-
->In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a PDF Viewer instance.
-
-Refer to the following table.
+N> In addition to registering the required modules, enable the corresponding component properties to activate each capability on a PDF Viewer instance. Refer to the following table for example attribute usage.
 
 | Module | Property to enable the functionality for a PDF Viewer instance |
 |---|---|

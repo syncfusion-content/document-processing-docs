@@ -27,6 +27,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 4: Include the following namespaces in the HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -34,10 +35,12 @@ using Syncfusion.HtmlConverter;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add a new button in the Index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
     {
@@ -49,9 +52,11 @@ Step 5: Add a new button in the Index.cshtml as shown below.
  }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new action method named ExportToPDF in HomeController.cs and include the below code example to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The HTML content will be scaled based on the given [ViewPortSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize HTML to PDF converter.
@@ -67,11 +72,10 @@ PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
 MemoryStream stream = new MemoryStream();
 //Save the document to memory stream.
 document.Save(stream);
-//Close the document
-document.Close(true); 
 return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get the PDF document as follows.
 ![HTML to PDF output document](htmlconversion_images/htmltopdfoutput.png)  

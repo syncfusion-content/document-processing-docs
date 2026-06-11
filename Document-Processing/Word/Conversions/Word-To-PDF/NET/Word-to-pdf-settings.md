@@ -822,7 +822,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Essential<sup>&reg;</sup> DocIO now allows hyphenating text in a Word document while converting it to PDF format based on the given language dictionaries. These dictionaries prescribe where words of a specific language can be hyphenated. Use the dictionary files as OpenOffice format dictionary.
 
 N> 1. If automatic hyphenation is not enabled in the Word document, you can enable it by using [WordDocument.Properties.Hyphenation.AutoHyphenation](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyphenation.html#Syncfusion_DocIO_DLS_Hyphenation_AutoHyphenation) of DocIO.
-N> 2. After converting Word documents to PDF, release any dictionary file streams to avoid memory leaks. Call [Hyphenator.UnloadDictionaries()](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.Hyphenator.html#Syncfusion_DocIO_DLS_Hyphenator_UnloadDictionaries) to free hyphenation resources and optimize performance.
+N> 2. After converting Word documents to PDF, release any dictionary file streams to avoid memory leaks. Call [Hyphenator.UnloadDictionaries()](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyphenator.html#Syncfusion_DocIO_DLS_Hyphenator_UnloadDictionaries) to free hyphenation resources and optimize performance.
 
 The following code sample shows how to hyphenate text in a Word document while converting it to PDF format.
 
@@ -1350,3 +1350,79 @@ document.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Restrict-permission-in-PDF).
+
+## Apply Matte to Transparent Images
+
+This setting allows you to determine whether to **apply a matte color to transparent images** during Word to PDF conversion, ensuring they render cleanly without unwanted borders or artifacts in the final PDF.
+
+The following code sample shows how to apply a matte color to transparent images during Word to PDF conversion.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+FileStream fileStream = new FileStream("Template.docx", FileMode.Open);
+// Loads an existing Word document
+WordDocument wordDocument = new WordDocument(fileStream, FormatType.Docx);
+// Instantiates DocIORenderer instance for Word to PDF conversion
+DocIORenderer renderer = new DocIORenderer();
+// Set to true to apply a matte color to transparent images.
+renderer.Settings.ApplyMatteToTransparentImages = true;
+// Converts Word document into PDF document
+PdfDocument pdfDocument = renderer.ConvertToPDF(wordDocument);
+// Closes the instance of Word document object
+wordDocument.Close();
+// Releases the resources occupied by DocIORenderer instance
+renderer.Dispose();
+// Saves the PDF file  
+pdfDocument.Save(@"../../../Output/Result.pdf");
+// Closes the instance of PDF document object
+pdfDocument.Close();
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+ 
+// Loads an existing Word document
+WordDocument wordDocument = new WordDocument("Template.docx");
+// Creates an instance of the DocToPDFConverter - responsible for Word to PDF conversion
+DocToPDFConverter converter = new DocToPDFConverter();
+// Set to true to apply a matte color to transparent images.
+converter.Settings.ApplyMatteToTransparentImages = true;
+// Converts Word document into PDF document
+PdfDocument pdfDocument = converter.ConvertToPDF(wordDocument);
+// Closes the instance of Word document object
+wordDocument.Close();
+// Releases the resources occupied by DocToPDFConverter instance
+converter.Dispose();
+// Saves the PDF file  
+pdfDocument.Save(@"../../../Output/Result.pdf");
+// Closes the instance of PDF document object
+pdfDocument.Close();
+ 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Loads an existing Word document
+Dim wordDocument As New WordDocument("Template.docx")
+' Creates an instance of the DocToPDFConverter - responsible for Word to PDF conversion
+Dim converter As New DocToPDFConverter()
+' Set to true to apply a matte color to transparent images
+converter.Settings.ApplyMatteToTransparentImages = True
+' Converts Word document into PDF document
+Dim pdfDocument As PdfDocument = converter.ConvertToPDF(wordDocument)
+' Closes the instance of Word document object
+wordDocument.Close()
+' Releases the resources occupied by DocToPDFConverter instance
+converter.Dispose()
+' Saves the PDF file
+pdfDocument.Save("../../../Output/Result.pdf")
+' Closes the instance of PDF document object
+pdfDocument.Close()
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Apply-Matte-to-Transparent-Images).

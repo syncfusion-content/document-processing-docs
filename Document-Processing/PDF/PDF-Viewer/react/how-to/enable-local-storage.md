@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Managing Local Storage in React Pdfviewer component | Syncfusion
-description: Learn how to manage local storage in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Manage local storage in React PDF Viewer | Syncfusion
+description: Learn how to control session-specific data storage in the React PDF Viewer using the enableLocalStorage property.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Managing Local Storage in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer
+# Manage local storage in PDF Viewer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides the `enableLocalStorage` property, which allows you to control how session-specific data is stored. You can choose to store this data in an internal collection or rely on the default session storage.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer exposes the `enableLocalStorage` property to control how session-specific viewer data is stored. Configure this property to choose between the viewer's internal storage mechanism (in-memory collection) and the browser's session storage.
 
-### Using the enableLocalStorage Property
+### Using the `enableLocalStorage` property
 
-Set the `enableLocalStorage` property to manage whether the PDF Viewer uses session storage (default) or an internal collection. When set to `true`, session-specific data is kept in memory. Otherwise, session storage is used.
+Set `enableLocalStorage` to control whether the viewer preserves session data in an internal (in-memory) collection or uses browser session storage. When `enableLocalStorage` is `true`, the viewer keeps session data in memory for the current application session; when `false` (the default), session storage is used. Review memory implications before enabling in-memory storage for large documents or heavy interactive content.
 
 {% tabs %}
 {% highlight js tabtitle="Server-Backed" %}
@@ -48,14 +48,10 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-### Impact and Considerations
+### Considerations
 
-- **Increased Memory Usage**: Setting `enableLocalStorage` to `true` can increase memory usage, particularly with larger documents or those containing many interactive elements, such as form fields and annotations.
-- **Avoiding Memory Leaks**: It is crucial to properly dispose of the PDF Viewer instance when it's no longer needed to prevent memory leaks, especially when using in-memory storage.
-- **Default Behavior**: By default, this property is set to `false`, meaning the session storage mechanism is utilized unless explicitly changed.
-
-### Enhanced Control
-
-Leveraging the `enableLocalStorage` property provides greater flexibility in managing how data is stored during a session, allowing you to optimize performance and storage based on your application’s specific requirements.
+- **Increased memory usage**: Enabling in-memory storage can increase memory consumption, especially for large documents or when many interactive elements (form fields, annotations) are present.
+- **Dispose when unused**: Dispose or destroy the PDF Viewer instance when it is no longer required to avoid memory leaks, particularly when `enableLocalStorage` is `true`.
+- **Default behavior**: The default value is `false`, which uses the browser session storage unless explicitly changed.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/)

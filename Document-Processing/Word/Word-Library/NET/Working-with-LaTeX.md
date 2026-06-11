@@ -9,6 +9,9 @@ documentation: UG
 # Create Equation using LaTeX
 The .NET Word (DocIO) library allows to create mathematical equation in Word document using **LaTeX**.
 
+To quickly start working with LaTeX Equations, please check out this video:
+{% youtube "https://www.youtube.com/watch?v=pdN4HNlKTJs" %}
+
 ## Accent
 
 Add **accent** equation to a Word document using the LaTeX through [AppendMath](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WParagraph.html#Syncfusion_DocIO_DLS_WParagraph_AppendMath_System_String_) API.

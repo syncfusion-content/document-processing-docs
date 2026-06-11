@@ -1,22 +1,23 @@
 ---
 layout: post
-title: Import Export Annotation in ASP.NET Core Pdfviewer Component | Syncfusion
-description: Learn here all about Import Export Annotation Object in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Import and export annotations in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to import and export annotations as objects, JSON, or XFDF in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
-control: Import Export Annotation Object
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
-# Import and Export annotation
+# Import and export annotations in ASP.NET Core PDF Viewer
 
-The PDF Viewer library allows you to import annotations from objects or streams instead of loading it as a file. To import such annotation objects, the PDF Viewer control must export the PDF annotations as objects using the [**ExportAnnotationsAsObject()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#exportannotationsasobject) method. Only the annotations objects that are exported from the PDF Viewer can be imported.
+Save and restore PDF annotations by exporting them in various formats (JSON, XFDF, or object) and importing them back into the viewer. This enables scenarios such as saving user annotations to a database or transferring annotations between documents.
 
-The following steps are used to import and export annotations in various formats such as objects, JSON, and XFDF.
+Use the [**exportAnnotationsAsObject()**](https://ej2.syncfusion.com/documentation/api/pdfviewer#exportannotationsasobject) method to export annotations as objects, which can then be imported back. Only annotation objects exported from the PDF Viewer are compatible with the import function.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+Follow these steps to implement annotation import and export functionality:
 
-**Step 2:** Use the following code snippet to perform import and export annotation.
+**Step 1:** Follow the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a basic PDF Viewer instance.
+
+**Step 2:** Use the following code snippets to implement annotation import and export functionality:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -26,10 +27,10 @@ The following steps are used to import and export annotations in various formats
     ViewData["Title"] = "Home page";
 }
 
-<button type="button" onclick="exportAsJson()">Export Annoatation As Json</button>
-<button type="button" onclick="exportAsXfdf()">Export Annoatation As Xfdf</button>
-<button type="button" onclick="exportAnnotation()">Export Annoatation</button>
-<button type="button" onclick="importAnnotation()">Import Annoatation</button>
+<button type="button" onclick="exportAsJson()">Export Annotation As Json</button>
+<button type="button" onclick="exportAsXfdf()">Export Annotation As Xfdf</button>
+<button type="button" onclick="exportAnnotation()">Export Annotation</button>
+<button type="button" onclick="importAnnotation()">Import Annotation</button>
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
@@ -55,7 +56,7 @@ The following steps are used to import and export annotations in various formats
     function exportAnnotation() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.exportAnnotationsAsObject().then(function (value) {
-            exportObject = value
+            exportObject = value;
         });
     }
     //Import annotation that are exported as object.
@@ -74,40 +75,39 @@ The following steps are used to import and export annotations in various formats
     ViewData["Title"] = "Home page";
 }
 
-<button type="button" onclick="exportAsJson()">Export Annoatation As Json</button>
-<button type="button" onclick="exportAsXfdf()">Export Annoatation As Xfdf</button>
-<button type="button" onclick="exportAnnotation()">Export Annoatation</button>
-<button type="button" onclick="importAnnotation()">Import Annoatation</button>
+<button type="button" onclick="exportAsJson()">Export Annotation As Json</button>
+<button type="button" onclick="exportAsXfdf()">Export Annotation As Xfdf</button>
+<button type="button" onclick="exportAnnotation()">Export Annotation</button>
+<button type="button" onclick="importAnnotation()">Import Annotation</button>
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   serviceUrl= "/Index"
+                   serviceUrl="/Index"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
     </ejs-pdfviewer>
 </div>
 
-<script type ="text/javascript">
-
-     var exportObject;
-    //Export annotation as Json
-    function exportAsJson(){
+<script type="text/javascript">
+    var exportObject;
+    // Export annotations in JSON format
+    function exportAsJson() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.exportAnnotation('Json');
     }
-    //Export annotation as Xfdf
-    function exportAsXfdf(){
+    // Export annotations in XFDF format
+    function exportAsXfdf() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.exportAnnotation('Xfdf');
     }
-    //Export annotation as object.
+    // Export annotations as object
     function exportAnnotation() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.exportAnnotationsAsObject().then(function (value) {
-            exportObject = value
+            exportObject = value;
         });
     }
-    //Import annotation that are exported as object.
+    // Import previously exported annotation objects
     function importAnnotation() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.importAnnotation(JSON.parse(exportObject));

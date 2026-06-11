@@ -1,25 +1,24 @@
 ---
 layout: post
-title: Annotations Visibility in React Pdfviewer component | Syncfusion
-description: Learn how to Control PDF Annotations Visibility in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Control annotation visibility in React PDF Viewer | Syncfusion
+description: Learn how to control the visibility of PDF annotations in the React PDF Viewer, ensuring annotations appear only in the viewer as needed.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control PDF Annotations Visibility in PDF Viewer
+# Control annotation visibility in PDF Viewer
 
-### Overview
+## Overview
 
-This guide demonstrates how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. This process allows the annotations to be visible only in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
+This guide shows how to display annotations in the React PDF Viewer while preventing them from appearing in the saved/downloaded PDF.
 
-### How to Control Annotation Visibility
+## Steps to control annotation visibility
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in the getting-started guide (https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a basic PDF Viewer sample.
 
-
-**Step 2:**  Set Up Your React Component
+**Step 2:** Add controls for annotation modification and downloading
 
 Create an React component and update the template to include a button that triggers the download operation. Additionally, create a function to save the document with the PDF annotation flag set to `noView`.
 
@@ -41,7 +40,7 @@ function App() {
     <div className='control-section' style={{marginTop: '50px'}} >
     <button onClick={Save}>Download</button>
         <PdfViewerComponent id="container" documentPath="https://cdn.syncfusion.com/content/pdf/annotations-v1.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib" documentLoad={documentLoaded} style={{ 'height': '640px' }}>
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentLoad={documentLoaded} style={{ 'height': '640px' }}>
             <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner,PageOrganizer]}/>
         </PdfViewerComponent>
     </div>
@@ -114,6 +113,6 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, the annotations in a PDF document can be set to be visible in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, providing control over annotation visibility based on different platforms.
+After performing these steps, annotations remain visible in the viewer but are hidden in the downloaded PDF.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

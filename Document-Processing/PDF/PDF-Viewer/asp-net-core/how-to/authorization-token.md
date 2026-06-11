@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Authorization Token in ASP.NET Core Pdfviewer Component
-description: Learn here all about Authorization Token in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Authorization Token in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn here all about Authorization Token in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Authorization Token
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
-# Include the Authorization token
+# Add authorization tokens to PDF Viewer requests in ASP.NET Core
 
-The PDF Viewer library allows you to include the authorization token in the PDF viewer AJAX request using the properties of the ajaxRequest header available in `AjaxRequestSettings`, and it will be included in every AJAX request send from PDF Viewer.
+Secure PDF Viewer requests by automatically including authorization tokens in every AJAX call. Configure custom headers through the `AjaxRequestSettings` property to append authentication credentials to all viewer-initiated requests.
 
-The following steps are used to include the authorization token to the PDF viewer control.
+Follow these steps to configure authorization headers for your PDF Viewer instance.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create simple PDF Viewer sample in React.
+**Step 1:** Follow the [Getting Started with ASP.NET Core PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer instance in your ASP.NET Core project.
 
-**Step 2:** Add the following code snippet to include the authorization token.
+**Step 2:** Add the following script to configure the authorization token. This should be executed after the PDF Viewer instance is initialized (for example, in the Razor view or layout file).
 
 ```html
 <script>

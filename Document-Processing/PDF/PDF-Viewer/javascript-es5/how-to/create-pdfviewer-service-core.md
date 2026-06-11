@@ -1,52 +1,53 @@
 ---
 layout: post
-title: Create pdfviewer service in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Create pdfviewer service in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Create PDF Viewer service in JavaScript PDF Viewer | Syncfusion
+description: Learn how to create an ASP.NET Core Web API service for the JavaScript PDF Viewer to handle server-side processing for rendering, text extraction, thumbnails, and more.
 platform: document-processing
-control: Create pdfviewer service
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Create pdfviewer service in Javascript Pdfviewer control
+# Create a PDF Viewer service for the JavaScript PDF Viewer
 
-The Essential JavaScript PDF Viewer have server side dependency to get the details from PDF Documents for rendering. This section explains how to create the service for PDF Viewer to perform server-side preprocessing of the PDF document to be rendered in client side.
+The JavaScript PDF Viewer requires a server-side service to process PDF documents for rendering. This document explains how to create an ASP.NET Core Web API service that performs server-side preprocessing and operations used by the client.
+
+This guide shows how to implement rendering, text extraction, thumbnail generation, annotation handling, and other server-side features required by the viewer.
 
 ## Prerequisites
 
-To get started with ASP.NET CORE Web API service, refer [System requirements for ASP.NET Core controls](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements).
+To get started with an ASP.NET Core Web API service, refer to [System requirements for ASP.NET Core controls](https://ej2.syncfusion.com/aspnetcore/documentation/system-requirements).
 
-## Setup ASP.NET CORE application with Web API for PDF Viewer service
+## Set up an ASP.NET Core application with Web API for the PDF Viewer service
 
-The following steps are used to create PDF Viewer service
+Follow these steps to create the PDF Viewer service
 
-**Step 1:**  Select File > New > Project, in the Visual Studio menu bar.
+**Step 1:** In Visual Studio, choose File > New > Project to create a new application.
 
-![Alt text](./images/Start.png)
+![Visual Studio: New Project menu](./images/Start.png)
 
-**Step 2:** Select ASP.NET Core Web Application and then click **Next**.
+**Step 2:** Select the ASP.NET Core Web Application template and click **Next**.
 
-![Alt text](./images/Coreapp.png)
+![Select ASP.NET Core Web Application template](./images/Coreapp.png)
 
-**Step 3:** In the Configure your new project dialog, enter Project Name and select **Next**.
+**Step 3:** In the Configure your new project dialog, enter a project name and click **Next**.
 
-![Alt text](./images/Coreapp1.png)
+![Configure project name dialog](./images/Coreapp1.png)
 
-**Step 4:** In the Additional information dialog, select .NET 6.0 (Long-term Support) and then select **Create**.
+**Step 4:** In the Additional information dialog, choose .NET 6.0 (Long-term Support) and click **Create**.
 
-![Alt text](./images/CoreappCreate.png)
+![Choose .NET 6.0 in Additional information dialog](./images/CoreappCreate.png)
 
-**Step 5:** After creating the project, add the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core) dependency to your project by using 'NuGet Package Manager'.
+**Step 5:** After creating the project, add the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core) dependency using the NuGet Package Manager.
 
-Open the `NuGet` package manager.
-![Alt text](./images/Nugetpackage.png)
+Open the NuGet Package Manager and install the `Syncfusion.EJ2.PdfViewer.AspNet.Core` package.
 
 Install the **Syncfusion.EJ2.PdfViewer.AspNet.Core** package to the application.
 
 ![Alt text](./images/viewer-dependency.png)
 
-**Step 6:** Add the API Controller to the project and named it as `PdfViewerController` .
-![Alt text](./images/apicontroller.png)
+**Step 6:** Add an API controller to the project and name it `PdfViewerController`.
+
+![Add API Controller dialog](./images/apicontroller.png)
 
 **Step 7:** Add the following code to the `PdfViewerController.cs` controller.
 
@@ -345,7 +346,7 @@ namespace PdfViewerWebService
 
 ```
 
-**Step 8:** Change the launchUrl to pdfviewer (name of the controller) in the lauchSettings.json as follows.
+**Step 8:** Change the launchUrl to pdfviewer (the controller name) in launchSettings.json as follows.
 
 ```json
 {
@@ -380,9 +381,9 @@ namespace PdfViewerWebService
 }
 ```
 
-**Step 9:** Configuring CORS policy and add Newtonsoft.Json for JSON format support
-* Browser security prevents a webpage from making requests to a different domain than the one that served the webpage. This restriction is called the same-origin policy. Cross Origin Resource Sharing (CORS) allows a server to relax the same-origin policy. Using CORS, a server can explicitly allow some cross-origin. Configure a CORS policy at application Startup.ConfigureServices.
-* Prior to ASP.NET Core 3.0, the default JSON formatters implemented using the Newtonsoft.Json package. In ASP.NET Core 3.0 or later, the default JSON formatters are based on System.Text.Json. Support for Newtonsoft.Json based formatters and features is available by installing the Microsoft.AspNetCore.Mvc.NewtonsoftJson NuGet package and configuring it in Startup.ConfigureServices.
+**Step 9:** Configure CORS and add Newtonsoft.Json for JSON format support
+- Browsers restrict cross-origin requests by default (same-origin policy). Cross-Origin Resource Sharing (CORS) allows specific cross-origin requests. Configure a CORS policy during application startup.
+- In ASP.NET Core 3.0 or later, System.Text.Json is the default. To use Newtonsoft.Json-based formatters and features, install Microsoft.AspNetCore.Mvc.NewtonsoftJson and configure it at startup.
 
 ```cs
 using Microsoft.AspNetCore.ResponseCompression;
@@ -427,4 +428,6 @@ app.MapControllers();
 app.Run();
 ```
 
-View the sample in GitHub to [create PDF Viewer web service](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_6.0)
+Replace the empty `licenseKey` value with a valid Syncfusion license key before deploying this service; obtain license information from the Syncfusion account portal.
+
+View the sample in GitHub: [PDF Viewer web service sample on GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_6.0)

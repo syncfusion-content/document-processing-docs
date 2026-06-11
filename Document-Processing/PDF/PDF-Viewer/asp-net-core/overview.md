@@ -1,33 +1,45 @@
 ---
-title: Overview of ASP.NET CORE PDF Viewer Component | Syncfusion
-description: Checkout and learn about overview of the Syncfusion ASP.NET CORE PDF Viewer component and much more details.
+title: Overview of ASP.NET Core PDF Viewer | Syncfusion
+description: Learn here all about the Syncfusion ASP.NET Core PDF Viewer, its capabilities, and supported platforms.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
 ---
 
-# Overview of ASP.NET CORE PDF Viewer Component
+# Overview of ASP.NET Core PDF Viewer
 
-The [`ASP.NET CORE`](https://www.syncfusion.com/pdf-viewer-sdk) PDF Viewer component is a lightweight, modular control for viewing and printing PDF files in your web applications. It provides the best viewing experience available with core interactions such as zooming, scrolling, text searching, text selection, and text copying. Thumbnail, bookmark, hyperlink, and table of contents support provides easy navigation within and outside the PDF files.
+The [`ASP.NET Core`](https://www.syncfusion.com/pdf-viewer-sdk) PDF Viewer is a lightweight, modular component for viewing and printing PDF files in web applications. It provides core interactions such as zooming, scrolling, text search, text selection, and copying. Thumbnails, bookmarks, hyperlinks, and table of contents enable easy navigation within and across PDF files.
 
 ## Key Features
 
-*[`View PDF Document`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
-*[`Annotations`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/text-markup-annotation) - Annotate with text markup, shapes, stamps, ink, and sticky notes.Form filling and form designing can be done.
-*[`Form Fields`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/form-designer/create-programmatically) - Form filling and form designing can be done.
-*[`Signature`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/hand-written-signature) - Hand-written and digital signatures are allowed.
-*[`Toolbar`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/toolbar) - Built-in-toolbar and custom toolbars to perform user interaction of PDF Viewer functionalities.
-*[`Navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/navigation) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
-*[`Magnification`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/magnification) - Fit to page, fit to width, and automatic (fits to the visible area).
-*[`Search`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/text-search) - Search a text easily across the PDF document.
-*[`Core Interactions`](hhttps://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/interaction-mode) - Allows scrolling, zooming, panning, selection, and page navigation.
-*[`Print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/print) - Print the entire document or a specific page directly from the browser.
-*[`Globalization`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/globalization) - Provides inherent support to localize the UI.
+* Accurate, reliable rendering of PDF pages.
+* Easy page navigation with:
+    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/interactive-pdf-navigation/page-thumbnail)
+    * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/interactive-pdf-navigation/bookmark)
+    * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/interactive-pdf-navigation/hyperlink)
+    * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/interactive-pdf-navigation/hyperlink#table-of-contents-navigation-in-pdf-viewer)
+* Core interactions:
+    * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/magnification) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/interaction-mode)
+    * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/text-search)
+    * Text selection and copy
+* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/print) PDF files.
+* Annotate PDFs with:
+    * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/text-markup-annotation): highlight, underline, and strikethrough
+    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/shape-annotation): rectangle, circle, polygon, line, and arrow
+    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/stamp-annotation)
+    * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/free-text-annotation)
+    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/sticky-notes-annotation)
+* [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/forms/form-filling)
+* [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/forms/form-designer)
+* [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/signature-annotation)
+* [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/toolbar) - Built-in toolbar and custom toolbars for common viewer actions.
+* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/globalization) - Localize the UI.
+* Open and display [normal and protected PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) with AES and RC4 encryption.
 
 ## Supported Web platforms
 
-* [Javascript(ES5)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
-* [Javascript](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started)
+* [JavaScript (ES5)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
+* [JavaScript (ES6)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started)
 * [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
 * [React](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
 * [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started)

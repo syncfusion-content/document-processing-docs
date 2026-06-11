@@ -218,9 +218,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;
 
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create);
-  workbook.SaveAs(outputStream);
-  outputStream.Dispose();
+  workbook.SaveAs("Output.xlsx");
   imageStream.Dispose();
 }
 {% endhighlight %}
@@ -439,9 +437,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A9:A14"].RowHeight = 15;
   worksheet.Range["A15:A23"].RowHeight = 18;
 
-  FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create);
-  workbook.SaveAs(outputStream);
-  outputStream.Dispose();
+  workbook.SaveAs("Output.xlsx");
   imageStream.Dispose();
 }
 {% endhighlight %}
@@ -485,14 +481,10 @@ worksheet.Range["A3"].Text ="Hello World";
 //Access a cell value from Excel
 var value = worksheet.Range["A1"].Value;
 
-//Initialize stream
-FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create);
-
-//Save the workbook as stream
-workbook.SaveAs(outputStream);
+//Save the workbook 
+workbook.SaveAs("Output.xlsx");
 
 //Dispose the streams
-outputStream.Dispose();
 inputStream.Dispose();
 
 workbook.Close();

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open PDF Files in Angular PDF Viewer Component
 
-You might need to open and view the PDF files from various location. In this section, you can find the information about how to open PDF files from URL, database, local file system, and as base64 string.
+This article explains how to open and display PDF files in the Syncfusion Angular PDF Viewer from various sources. In this section, you can find the information about how to open PDF files from URL, database, local file system, and as base64 string.
 
 ## Opening a PDF from URL
 
@@ -74,7 +74,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 
 ```
 
-**Step 3:**  Set the PDF Viewer Properties in React PDF viewer component
+**Step 3:**  Set the PDF Viewer Properties in Angular PDF viewer component
 
 Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
 

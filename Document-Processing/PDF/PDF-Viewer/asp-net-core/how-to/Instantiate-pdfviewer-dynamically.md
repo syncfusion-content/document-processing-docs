@@ -1,20 +1,23 @@
 ---
 layout: post
-title: Instantiate with EJ2 ASP.NET Core PDF Viewer Control | Syncfusion
-description: Learn how to dynamically instantiate the PDF Viewer component in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Dynamically instantiate the ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to instantiate the Syncfusion ASP.NET Core PDF Viewer at runtime and load PDF documents on demand.
 platform: document-processing
-control: Instantiate the PDF Viewer component dynamically and load PDF documents
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
-# Instantiate the PDF Viewer component dynamically
+# Dynamically instantiate the ASP.NET Core PDF Viewer
 
-To instantiate a PDF Viewer component dynamically and load PDF documents in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, use the following steps:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer can be instantiated at runtime rather than during the initial page load. This dynamic approach is useful when the document to be displayed depends on user interaction or must be retrieved from a secure backend service.
 
-In your HTML file, create a div element that will act as a container for the PDF Viewer component, and use the jQuery $.ajax method to make an AJAX request to your server and retrieve a PDF document. Once the document is retrieved, use the PDF Viewer API to load the document into the PDF Viewer component.
+Follow these steps to instantiate the viewer component programmatically:
 
-Use the serviceUrl property of the PDF Viewer instance to set the URL of a PDF document you want to load.
+1. **Verify Prerequisites:** Ensure your application references the required Syncfusion EJ2 script and style assets. The backend PDF Viewer service must be correctly configured in your ASP.NET Core application.
+2. **Setup Container:** Add a target container element and a trigger (such as a button) to the Razor view.
+3. **Initialize Component:** To create the viewer instance, configure the [`serviceUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ServiceUrl) and [`documentPath`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_DocumentPath), and then mount it using the `appendTo` method.
+
+The following example demonstrates how to load the viewer dynamically after an AJAX request:
 
 ```html
 
@@ -41,6 +44,6 @@ Use the serviceUrl property of the PDF Viewer instance to set the URL of a PDF d
 
 ```
 
-In your controller, create an action method that returns a PDF document as an action result.
+Ensure the controller action returns a valid PDF file path, stream, or base64 string supported by the viewer. For optimal performance, properly dispose of the viewer instance using the `destroy()` method when the container is removed or the document is no longer required.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/Common/Instantiate%20PDF%20Viewer%20dynamically).

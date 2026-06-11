@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Comparision between EJ1 & EJ2 Spreadsheet features
+# Comparison between EJ1 & EJ2 ASP.NET MVC Spreadsheet features
 
 The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
 

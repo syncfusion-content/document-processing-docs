@@ -1,26 +1,32 @@
 ---
 layout: post
-title: Resolve unable to find an entry point error in ASP.NET CORE PDF Viewer component | Syncfusion
-description: Learn here how to resolve unable to find an entry point named error in ASP.NET CORE PDF Viewer component of Syncfusion Essential JS 2 and more.
-control: Resolve unable to find an entry point error
+title: Resolve “Unable to find an entry point named FPDFText_GetCharAngle” error in ASP.NET Core PDF Viewer | Syncfusion
+description: Resolve the “Unable to find an entry point named FPDFText_GetCharAngle” error in the Syncfusion ASP.NET Core PDF Viewer by updating the PDFium assemblies and republishing the service.
+control: PDF Viewer
 platform: document-processing
-publishingplatform: document-processing
 documentation: ug
 ---
 
 # Resolve "Unable to find an entry point named FPDFText_GetCharAngle" error
 
-From the release of version **21.1.0.35 (2023 Volume 1)** of Essential Studio<sup style="font-size:70%">&reg;</sup>, the Pdfium package has been upgraded to improve various functionalities like text search, text selection, rendering, and even performance. If you are updating your project to this version of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you may encounter the **"Web-Service is not listening"** error. The Network tab can help you identify the root cause of the issue, which is typically caused by an old version of pdfium assembly being referenced in the local web service project. Below are the assemblies to be referred to in the respective operating systems.
+Effective with Essential Studio<sup style="font-size:70%">&reg;</sup> version 21.1.0.35 (2023 Volume 1), the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer includes an updated PDFium engine to enhance text search, selection, and overall rendering performance. If an application continues to reference legacy native PDFium binaries after upgrading NuGet packages, it may trigger the exception: **"Unable to find an entry point named FPDFText_GetCharAngle"**.
 
-* Windows – pdfium.dll
-* Linux – libpdfium.so
-* OSX – libpdfium.dylib
+This error typically results in the client displaying a **"Web-Service is not listening"** status. This can be confirmed by inspecting the **Network** tab in the browser developer tools, where the service response will indicate a failure due to missing or mismatched PDFium assemblies.
 
-![Error information in the Network tab](../images/ErrorinformationuintheNetworkTab.png)
+## Troubleshooting steps
 
-## To solve this issue, you should follow the below steps:
+To resolve this issue, ensure the deployed environment contains the correct native libraries for the host operating system:
 
-1. Clear the bin and object files of the web-service project.
-2. Re-publish the web-service project.
+* **Windows:** `pdfium.dll`
+* **Linux:** `libpdfium.so`
+* **macOS:** `libpdfium.dylib`
 
-N> **Note:** If you are hosting your application in Azure, AWS, or in Linux environments, delete the older published files and republish the application.
+![Network tab error information](../images/ErrorinformationuintheNetworkTab.png)
+
+### Resolution procedure:
+
+1. **Clear Build Artifacts:** Remove the `bin`, `obj`, and published output folders of the web service. This ensures that stale PDFium binaries are deleted.
+2. **Rebuild Project:** Rebuild the solution to restore the native assemblies that correspond accurately with the upgraded Syncfusion NuGet packages.
+3. **Republish Service:** Deploy the updated web service and verify that the latest PDFium binaries are present alongside the updated `Syncfusion.EJ2.PdfViewer` assemblies.
+
+N> If hosting the application in cloud environments like Azure or AWS, or on Linux servers, manually delete the existing deployment files before publishing to ensure no legacy binaries remain. Confirm that the new PDFium binaries are correctly copied to the server's root or designated assembly folder.

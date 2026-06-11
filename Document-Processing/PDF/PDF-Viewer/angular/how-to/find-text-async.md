@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Find Text Async Angular Pdfviewer component | Syncfusion
-description: Learn about the `findTextAsync` in Syncfusion Angular Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Find Text Async Angular PDF Viewer component | Syncfusion
+description: Learn about the `findTextAsync` in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Find Text Async
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Find Text using findTextAsync Method in Syncfusion PdfViewer
 
-The findTextAsync method in the Syncfusion PdfViewer control allows you to search for specific text or an array of strings asynchronously within a PDF document. The method returns the bounding rectangles for each occurrence of the search term, allowing you to find and work with text positions in the document.
+The findTextAsync method in the Syncfusion PDF Viewer control allows you to search for specific text or an array of strings asynchronously within a PDF document. The method returns the bounding rectangles for each occurrence of the search term, allowing you to find and work with text positions in the document.
 
 Here is an example of how you can use the **findTextAsync** method:
 
@@ -87,7 +87,7 @@ findTexts(): void {
 
 ### Description:
 
-The `findTextAsync` method is designed for performing an asynchronous text search within a PDF document. You can use it to search for a single string or multiple strings, with the ability to control case sensitivity. By default, the search is applied to all pages of the document. However, you can adjust this behavior by specifying the page number (pageIndex), which allows you to search only a specific page if needed.
+The `findTextAsync` method performs an asynchronous text search within a PDF document. It returns a Promise that resolves with an array of result objects describing each match. Each match object contains information such as the page index and the bounding rectangles for the matched text, which can be used to highlight or navigate to occurrences. By default, the search runs across all pages; supply the optional `pageIndex` parameter to limit the search to a specific page.
 
 ### Parameters:
 
@@ -104,8 +104,8 @@ When set to false, the search will ignore case differences.
 **pageIndex (optional, number):**
 
 Specifies the page number (zero-based index) to search within the document.
-If not provided, the search will be performed across all pages in the document.
-For example, passing 0 would search only the first page of the document.
+If not provided, the search will be performed across all pages in the document. For example, passing `0` searches only the first page of the document.
+If the search finds no matches, the returned array will be empty; the Promise still resolves (it does not reject) in this case.
 
 ### Example Workflow:
 

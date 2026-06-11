@@ -68,7 +68,7 @@ using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Re
     data.Add(new { Product_ID = "1001", Product_Name = "Bicycle", Price = "10,000" });
     data.Add(new { Product_ID = "1002", Product_Name = "Head Light", Price = "3,000" });
     data.Add(new { Product_ID = "1003", Product_Name = "Break wire", Price = "1,500" });
-                
+            
     //Assign data source.
     pdfGrid.DataSource = data;
 
@@ -181,4 +181,4 @@ Users can download the [console application](https://github.com/SyncfusionExampl
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core?_gl=1*7czwz1*_ga*OTcwNzc5NDkuMTY4MTEwMjEwNA..*_ga_WC4JKKPHH0*MTY4OTg0NTE0Ni4zMzguMC4xNjg5ODQ1MTQ2LjYwLjAuMA..) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create a PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HelloWorld#/bootstrap5) in ASP.NET Core
+An online sample link to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core

@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Import export annotation in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Import export annotation in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Import and export annotations in Vue PDF Viewer | Syncfusion
+description: Learn how to import and export annotations as objects, JSON, or XFDF in the Syncfusion Vue PDF Viewer.
 control: Import export annotation object
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import export annotation in Vue Pdfviewer component
+# Import export annotation in Vue PDF Viewer control
 
-The PDF Viewer library allows you to import annotations from objects or streams instead of loading it as a file. To import such annotation objects, the PDF Viewer control must export the PDF annotations as objects using the [**ExportAnnotationsAsObject()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#exportannotationsasobject) method. Only the annotations objects that are exported from the PDF Viewer can be imported.
+The PDF Viewer control supports exporting and importing annotations in multiple formats: JSON, XFDF, or as native annotation objects. Use `exportAnnotation('Json')` or `exportAnnotation('Xfdf')` for serialized formats, and `exportAnnotationsAsObject()` to obtain the in-memory annotation objects that can be re-imported with `importAnnotation()`.
 
-The following steps are used to import and export annotations in various formats such as objects, JSON, and XFDF.
+The following steps show how to export annotations in different formats and import annotation objects back into the viewer.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** Use the following code snippet to perform import and export annotation.
+**Step 2:** Use the following code to perform import and export operations.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -50,7 +50,7 @@ export default {
   },
   data () {
     return {
-      resourceUrl: "https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },

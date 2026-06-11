@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Insert page number and Navigate in Blazor DocumentEditor | Syncfusion
+title: Page Numbers and Navigation in Blazor DocumentEditor | Syncfusion
 description: Learn how to Insert Page number and Navigate to specific page from the Syncfusion Blazor Document Editor component and much more.
 platform: document-processing
 control: DocumentEditor
@@ -13,7 +13,7 @@ You can insert page number and navigate to specific page in Blazor Document Edit
 
 ## Insert page number
 
-You can use [`InsertFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFieldAsync_System_String_System_String_) API in Editor module to insert the Page number in current position. By default, Page number will insert in Arabic number style.
+The [`InsertFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFieldAsync_System_String_System_String_) API in Editor module is used to insert the Page number in current position. By default, Page number will insert in Arabic number style.
 
 N> Currently, Document Editor have options to insert page number at current cursor position.
 
@@ -43,7 +43,7 @@ The following example code illustrates how to insert page number in header.
 
 ## Get page count
 
-You can use [`GetPageCountAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_GetPageCountAsync) API to gets the total number of pages in Document.
+The [`GetPageCountAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_GetPageCountAsync) API is used to get the total number of pages in Document.
 
 The following example code illustrates how to get the number of pages in Document.
 
@@ -69,7 +69,7 @@ The following example code illustrates how to get the number of pages in Documen
 
 ## Navigate to specific page
 
-You can use [`GoToPageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GoToPageAsync_System_Double_) API in Selection module to move selection to the start of the specified page number.
+Use the [`GoToPageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GoToPageAsync_System_Double_) API in the Selection module to move the selection to the start of the specified page number.
 
 The following example code illustrates how to move selection to specific page.
 

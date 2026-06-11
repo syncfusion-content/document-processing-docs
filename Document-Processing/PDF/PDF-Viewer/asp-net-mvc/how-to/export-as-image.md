@@ -1,18 +1,24 @@
 ---
 layout: post
-title: Export As Image in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to export as image in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Export pages as images in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to export pages as Base64-encoded images in the Syncfusion ASP.NET MVC PDF Viewer using the ExportAsImage method family.
 platform: document-processing
-control: Export As Image
-publishingplatform: document-processing
+control: PDF Viewer
+publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Exporting PDFs as raster images
+# Export pages as images in the ASP.NET MVC PDF Viewer
 
-The PDF Viewer server library allows the PDF document pages to be exported as raster images. Exporting can be done using the ExportAsImage() method. This option helps to convert a PDF into an image. The APIs available to export the PDF document pages as images are listed as follows:
+Export individual pages or a range of pages from a PDF document as raster images using the `ExportAsImage` APIs. These helpers convert pages to bitmaps that you can save, process, or serve for download.
 
-## ExportAsImage(int pageindex)
+## Steps to export pages as images
+
+**Step 1:** Follow the steps in the [Syncfusion ASP.NET MVC PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a simple PDF Viewer application.
+
+**Step 2:** Choose the appropriate `ExportAsImage` overload to export pages with the required DPI, size, or range settings. The following examples demonstrate each option.
+
+### Export a single page
 
 Exports the specified page as image using the Pdfium rendering engine.
 
@@ -29,7 +35,7 @@ bitmapimage.Save(@"currentDirectory/../../../../Images/" + "bitmapImage.png");
 
 ```
 
-## ExportAsImage(int pageIndex, float dpiX, float dpiY)
+### Export a page with custom DPI
 
 Exports the specified page as image with respect to the specified DPI values.
 
@@ -46,7 +52,7 @@ bitmapimage.Save(@"currentDirectory/../../../../Images/" + "bitmapImage.png");
 
 ```
 
-## ExportAsImage(int pageIndex, SizeF customSize, bool keepAspectRatio)
+### Export a page with custom size
 
 Exports the specified page as image with respect to the specified custom size.
 
@@ -63,7 +69,7 @@ bitmapimage.Save(@"currentDirectory/../../../../Images/" + "bitmapImage.png");
 
 ```
 
-## ExportAsImage(int pageIndex, SizeF customSize, float dpiX, float dpiY, bool keepAspectRatio)
+### Export a page with custom size and DPI
 
 Exports the specified page as image with respect to the custom size and the specified DPI values.
 
@@ -81,7 +87,7 @@ bitmapimage.Save(@"currentDirectory/../../../../Images/" + "bitmapImage.png");
 
 ```
 
-## ExportAsImage(int startIndex, int endIndex)
+### Export a range of pages
 
 Exports the specified pages as images using the Pdfium rendering engine.
 
@@ -101,7 +107,7 @@ for (int i =0; i < pdfExportImage.PageCount; i++)
 
 ```
 
-## ExportAsImage(int startIndex, int endIndex, float dpiX, float dpiY)
+### Export a range with custom DPI
 
 Exports the specified pages as images with respect to the specified DPI values.
 
@@ -121,7 +127,7 @@ for (int i =0; i < pdfExportImage.PageCount; i++)
 
 ```
 
-## ExportAsImage(int startIndex, int endIndex, SizeF customSize, bool keepAspectRatio)
+### Export a range with custom size
 
 Exports the specified pages as images with respect to the specified custom size.
 
@@ -141,7 +147,7 @@ for (int i =0; i < pdfExportImage.PageCount; i++)
 
 ```
 
-## ExportAsImage(int startIndex, int endIndex, SizeF customSize, float dpiX, float dpiY, bool keepAspectRatio)
+### Export a range with custom size and DPI
 
 Exports the specified pages as images with respect to the custom size and the specified DPI values.
 
@@ -161,4 +167,4 @@ for (int i = 0; i < pdfExportImage.PageCount; i++)
 
 ```
 
-N> Ensure the provided document path and output image saved locations in your application level.
+N> Ensure the provided document path and the output image save locations are updated to match your application.

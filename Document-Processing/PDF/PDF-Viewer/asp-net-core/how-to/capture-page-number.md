@@ -1,28 +1,27 @@
 ---
 layout: post
-title: Capture Page Number in ASP.NET Core Pdfviewer Component
-description: Learn here all about Capture Page Number in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Capture current page number in ASP.NET Core PDF Viewer | Syncfusion
+description: Discover how to read the current page number in the Syncfusion ASP.NET Core PDF Viewer using built-in properties.
 platform: document-processing
-control: Capture Page Number
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
-# Capture the current page number being viewed
+# Capture the current page number in ASP.NET Core PDF Viewer
 
-The PDF Viewer server library allows you to capture the page number that is currently being viewed in the load PDF document. Use the [**currentPageNumber**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#currentpagenumber) property to get the page number which is currently in view.
+Retrieve the page number of the currently displayed page using the [**currentPageNumber**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#currentpagenumber) property. This is useful for tracking navigation or implementing custom page navigation logic.
 
-The following steps are used to capture the current page number.
+Follow these steps to capture the current page number on demand.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the [Getting Started with ASP.NET Core PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer sample with required script and style references.
 
-**Step 2:** Use the following code snippet to Capture the current page number being viewed.
+**Step 2:** Add a button and script to retrieve and display the current page number. Place the following code in the Razor view after the PDF Viewer component:
 
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 
-<button onclick="currentPage()">currentpage</button>
+<button onclick="currentPage()">Get Current Page</button>
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer
@@ -35,20 +34,20 @@ The following steps are used to capture the current page number.
     function currentPage() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         var pageNumber = viewer.currentPageNumber;
-        alert("current page number is" + pageNumber);
+        alert('Current page number is ' + pageNumber);
     }
 </script>
 
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
 
-<button onclick="currentPage()">currentpage</button>
+<button onclick="currentPage()">Get Current Page</button>
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer
         id="pdfviewer"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl='/Index'>
+        serviceUrl="/Index">
     </ejs-pdfviewer>
 </div>
 
@@ -56,11 +55,13 @@ The following steps are used to capture the current page number.
     function currentPage() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         var pageNumber = viewer.currentPageNumber;
-        alert("current page number is" + pageNumber);
+        alert('Current page number is ' + pageNumber);
     }
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Capture%20the%20current%20page%20number)
+The script retrieves the PDF Viewer instance and accesses the `currentPageNumber` property to display the current page in an alert dialog when the button is clicked.
+
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Capture%20the%20current%20page%20number)

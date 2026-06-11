@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Hyperlink in Spreadsheet control
+# Hyperlink in ASP.NET MVC Spreadsheet control
 
 Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowHyperlink) property to enable or disable hyperlink functionality.
 
@@ -54,10 +54,10 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/link/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/link/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="HyperlinkController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/link/hyperlinkController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/link/hyperlinkController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

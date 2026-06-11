@@ -1,5 +1,5 @@
 ---
-title: Create, read, and edit Excel files in Azure App Service on Windows | Syncfusion
+title: Create, read, edit Excel in Azure App Service on Windows | Syncfusion
 description: Explains how to create, read, and edit Excel files in Azure App Service on Windows using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
@@ -510,8 +510,7 @@ IApplication application = excelEngine.Excel;
 application.DefaultVersion = ExcelVersion.Xlsx;
 
 //A existing workbook is opened.             
-FileStream sampleFile = new FileStream("Sample.xlsx", FileMode.Open);
-IWorkbook workbook = application.Workbooks.Open(sampleFile);
+IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
 //Access first worksheet from the workbook.
 IWorksheet worksheet = workbook.Worksheets[0];

@@ -2,7 +2,7 @@
 layout: post
 title: Unload document in React Pdfviewer component | Syncfusion
 description: Learn here all about Unload document in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Unload document
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unload document in React Pdfviewer component
 
-The PDF Viewer library allows you to unload the PDF document being displayed in the PDF Viewer control programmatically using the [**unload()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#unload) method.
+The PDF Viewer provides the [unload()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#unload) method to remove the currently loaded PDF from the viewer instance. Use this API to free memory or reset the viewer when navigating between documents or closing the viewer.
 
 The following steps are used to unload the PDF document programmatically.
 

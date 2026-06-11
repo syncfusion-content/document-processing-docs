@@ -22,7 +22,7 @@ XlsIO supports grouping pivot data based on the following categories.
 
 ## Group
 
-The pivot fields can be grouped by using the [GroupBy](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotFieldGroup.html#Syncfusion_XlsIO_IPivotFieldGroup_GroupBy) property in the IPivotField.FieldGroup.
+The pivot fields can be grouped by using the [GroupBy](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFieldGroup.html#Syncfusion_XlsIO_IPivotFieldGroup_GroupBy) property in the IPivotField.FieldGroup.
 
 The following code example illustrates how to group pivot fields based on a period.
 
@@ -32,8 +32,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
   IWorksheet pivotSheet = workbook.Worksheets.Create();
 
@@ -51,10 +50,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   pivotTable.Options.ShowFieldList = false;
   pivotTable.Options.RowLayout = PivotTableRowLayout.Tabular;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("PivotTableGrouping.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();                
+  //Saving the workbook
+  workbook.SaveAs("PivotTableGrouping.xlsx");             
 }
 {% endhighlight %}
 
@@ -119,7 +116,7 @@ By executing the program, you will get the Excel file as below
 
 ## Ungroup
 
-The grouping in the pivot table can be removed by making the [GroupBy](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotFieldGroup.html#Syncfusion_XlsIO_IPivotFieldGroup_GroupBy) property value None.
+The grouping in the pivot table can be removed by making the [GroupBy](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFieldGroup.html#Syncfusion_XlsIO_IPivotFieldGroup_GroupBy) property value None.
 
 The following code example illustrates how to remove grouping from the pivot table.
 
@@ -129,8 +126,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream fileStream = new FileStream("InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
+  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
   IWorksheet worksheet = workbook.Worksheets[0];
 
   IPivotTable pivotTable = worksheet.PivotTables[0];
@@ -141,10 +137,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Remove pivot table grouping
   field1.GroupBy = PivotFieldGroupType.None;
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("PivotTableUnGrouping.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();                
+  //Saving the workbook 
+  workbook.SaveAs("PivotTableUnGrouping.xlsx");             
 }
 {% endhighlight %}
 
@@ -192,7 +186,7 @@ End Using
 
 ## Expand or collapse
 
-XlsIO allows you to expand and collapse the [PivotFieldItems](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPivotFieldItems.html) or simply the pivot table rows using [IsHiddenDetails](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotItemOptions_IsHiddenDetails) of [PivotItemOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html).
+XlsIO allows you to expand and collapse the [PivotFieldItems](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFieldItems.html) or simply the pivot table rows using [IsHiddenDetails](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotItemOptions_IsHiddenDetails) of [PivotItemOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html).
 
 The following code example illustrates how to expand or collapse rows in the pivot table.
 
@@ -202,8 +196,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 	IWorksheet pivotSheet = workbook.Worksheets[1];
 
@@ -231,13 +224,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ExpandOrCollapse.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ExpandOrCollapse.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 

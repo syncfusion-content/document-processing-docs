@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Illustrations in EJ2 ASP.NET CORE Syncfusion Spreadsheet Component
+title: Illustrations in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
 description: Learn here all about Illustrations in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Illustrations
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Illustrations in Spreadsheet control
+# Illustrations in ASP.NET Core Spreadsheet control
 
 Illustrations helps you to insert a image, shapes and graphic objects in the Essential JS 2 spreadsheet.
 
@@ -71,10 +71,10 @@ Image feature allows you to view and insert a image in a spreadsheet and you can
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/image/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/image/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ImageController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/image/imageController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/image/imageController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -128,10 +128,10 @@ The available arguments in the `ChartModel` are:
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs1/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/chart-cs1/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ChartController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs1/chartController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/chart-cs1/chartController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -156,10 +156,10 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/chart/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/chart/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ChartController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/chart/chartController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/chart/chartController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -169,10 +169,10 @@ Using the [`actionBegin`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusi
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs2/tagHelper %}
+{% include code-snippet/spreadsheet/asp-net-core/chart-cs2/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="ChartController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-core/chart-cs2/chartController.cs %}
+{% include code-snippet/spreadsheet/asp-net-core/chart-cs2/chartController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,28 +1,29 @@
 ---
 layout: post
-title: Retrieving Base64 Value in JavaScript PdfViewer | Syncfusion
-description: Learn how to retrieve the Base64 value of a loaded PDF document in the Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Get Base64 from loaded PDF in JavaScript PDF Viewer | Syncfusion
+description: Learn how to retrieve the Base64 value of a loaded PDF in the Syncfusion JavaScript PDF Viewer using saveAsBlob and FileReader.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieving Base64 Value from a PDF in PDF Viewer
+# Retrieve Base64 from a PDF in JavaScript PDF Viewer
 
 ### Overview
 
-This guide demonstrates how to fetch the base64-encoded value of a PDF document loaded in the Syncfusion PDF Viewer using JavaScript. This is useful for sending the PDF as a base64 string or processing it in the front end.
+This guide shows how to obtain the Base64-encoded value of a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using JavaScript. Producing a Base64 string is useful for sending the PDF to a server, embedding it in JSON payloads, or client-side processing.
 
-### How to Retrieve Base64 Value
+### How to retrieve the Base64 value
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:**  Create the PDF Viewer sample**
+
+Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) guide for the JavaScript PDF Viewer.
 
 
-**Step 2:** Create a Button in Your HTML File
+**Step 2:** Set up the JavaScript component**
 
-Add a button element in your HTML file that will trigger the conversion to a base64 string.
+Create an JavaScript component and update the template to include a button that triggers conversion to a Base64 string. The samples below show both standalone and server-backed viewer configurations.
 
 ```html
 <button id="getBase64">Get Base64</button>
@@ -39,9 +40,9 @@ document.getElementById('getBase64').addEventListener('click', function() {
 });
 ```
 
-**Step 4:** Retrieve Base64 of the Loaded Document
+**Step 4:** Retrieve Base64 of the loaded document
 
-Create a function that uses saveAsBlob, and convert the blob to a base64 string.
+Create a function that uses `saveAsBlob`, and convert the blob to a Base64 string.
 
 ```js
 function base64ofloadedDocument() {
@@ -58,6 +59,6 @@ function base64ofloadedDocument() {
 ```
 ### Conclusion
 
-By implementing these steps, you can convert a PDF document loaded in the Syncfusion PDF Viewer to a base64 string on button click, facilitating the manipulation or transfer of PDF data as needed.
+By implementing these steps in the JavaScript component, a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer can be converted into a Base64-encoded data URL when a button is clicked. This facilitates the manipulation or transfer of PDF data as needed
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to)

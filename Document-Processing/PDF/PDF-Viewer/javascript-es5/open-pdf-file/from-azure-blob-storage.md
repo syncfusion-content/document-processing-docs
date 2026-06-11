@@ -1,90 +1,87 @@
 ---
 layout: post
-title: Open PDF from Azure Blob Storage in Javascript Pdfviewer | Syncfusion
-description:  Learn about how to Open PDF files from Azure Blob Storage in Javascript Pdfviewer control of Syncfusion Essential JS 2 and more details.
+title: Open PDF from Azure Blob Storage in JavaScript PDF Viewer | Syncfusion
+description: Learn how to load PDFs from Azure Blob Storage in the Syncfusion JavaScript PDF Viewer component using standalone and server-backed approaches.
 platform: document-processing
-control: Open PDF files from Azure Blob Storage
-publishingplatform: Javascript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF file from Azure Blob Storage
+# Open PDF from Azure Blob Storage
 
-PDF Viewer allows to load PDF file from Azure Blob Storage using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from Azure Blob Storage.
+The JavaScript PDF Viewer component supports loading PDF files from Azure Blob Storage using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
-## Using Standalone PDF Viewer
+## Using the standalone PDF Viewer
 
-To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from Azure Blob Storage in the standalone PDF Viewer.
 
-**Step 1:** Create a Simple PDF Viewer Sample in JavaScript
+**Step 1:** Create a PDF Viewer sample in JavaScript
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
 
-**Step 2:** Modify the `src/app/app.ts` File in the Angular Project
+**Step 2:** Modify the `src/app/app.ts` file in the JavaScript project
 
 1. Add the following private properties to the `app.ts`, and assign the values from the configuration to the corresponding properties
 
 N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account and **Your container name in Azure** with the actual container name and **Your Blob name in Azure** with the actual container name.
 
-```typescript
-private accountName: string = "*Your account name in Azure*";
-private containerName: string = "*Your container name in Azure*";
-private blobName: string = "*Your Blob name in Azure*";
+```javascript
+var accountName = "*Your account name in Azure*";
+var containerName = "*Your container name in Azure*";
+var blobName = "*Your Blob name in Azure*";
 ```
 
-2. Constructs the URL to the PDF in Azure Blob Storage. Calls fetchAndConvertToBase64 to fetch the PDF and convert it to a base64 string. Then Loads the base64 string into the PDF Viewer.
+2. Construct the URL to the PDF in Azure Blob Storage. Call `fetchAndConvertToBase64` to fetch the PDF and convert it to a base64 string. Then load the base64 string into the PDF Viewer.
 
-```typescript
+```javascript
 pdfviewer.created = function () {
-  const url = 'https://'+accountName+'.blob.core.windows.net/'+containerName+'/'+blobName;
-  fetchAndConvertToBase64(url).then(base64String => {
+  var url = 'https://' + accountName + '.blob.core.windows.net/' + containerName + '/' + blobName;
+  fetchAndConvertToBase64(url).then(function (base64String) {
     if (base64String) {
-        setTimeout(() => {
-          pdfviewer.load("data:application/pdf;base64,"+base64String, "");
-        }, 2000);
+      setTimeout(function () {
+        pdfviewer.load('data:application/pdf;base64,' + base64String, '');
+      }, 2000);
     } else {
-        console.error('Failed to fetch and convert file to base64.');
+      console.error('Failed to fetch and convert file to base64.');
     }
-  }).catch(error => console.error('Error:', error));
-}
+  }).catch(function (error) { console.error('Error:', error); });
+};
 ```
 
-3. Then it retrieves the PDF file from the given URL and converts the fetched Blob to a base64 string using blobToBase64.
+3. Retrieve the PDF from the URL and convert the fetched Blob to a base64 string using blobToBase64.
 
-```typescript
-function fetchAndConvertToBase64(url : any) {
-  return new Promise(function(resolve, reject) {
-      fetch(url).then(function(response) {
-          if (!response.ok) {
-              throw new Error('HTTP error! Status: ' + response.status);
-          }
-          return response.blob();
-      }).then(function(blob) {
-          blobToBase64(blob).then(function(base64String) {
-              resolve(base64String);
-          });
-      }).catch(function(error) {
-          console.error('Error fetching file:', error);
-          reject(null);
+```javascript
+function fetchAndConvertToBase64(url) {
+  return new Promise(function (resolve, reject) {
+    fetch(url).then(function (response) {
+      if (!response.ok) {
+        throw new Error('HTTP error! Status: ' + response.status);
+      }
+      return response.blob();
+    }).then(function (blob) {
+      blobToBase64(blob).then(function (base64String) {
+        resolve(base64String);
       });
+    }).catch(function (error) {
+      console.error('Error fetching file:', error);
+      reject(null);
+    });
   });
 }
 ```
 
-4. Uses FileReader to convert a Blob to a base64 string. Resolves the promise with the base64 string or rejects it in case of an error.
+4. Use FileReader to convert a Blob to a base64 string. Resolve the promise with the base64 string or reject it in case of an error.
 
-```typescript
-function blobToBase64(blob : any) {
-  return new Promise(function(resolve, reject) {
+```javascript
+function blobToBase64(blob) {
+  return new Promise(function (resolve, reject) {
     var reader = new FileReader();
-    reader.onload = function() {
+    reader.onload = function () {
       var base64String = reader.result ? reader.result.toString().split(',')[1] : '';
       resolve(base64String);
     };
-    reader.onerror = function(error) {
-      reject(error);
-    };
+    reader.onerror = function (error) { reject(error); };
     reader.readAsDataURL(blob);
   });
 }
@@ -92,11 +89,11 @@ function blobToBase64(blob : any) {
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
-## Using Server-Backed PDF Viewer
+## Using the server-backed PDF Viewer
 
-To load a PDF file from Azure Blob Storage in a PDF Viewer, you can follow the steps below
+Follow these steps to load a PDF from Azure Blob Storage using the server-backed PDF Viewer.
 
-**Step 1:** Create a Simple PDF Viewer Sample in JavaScript
+**Step 1:** Create a PDF Viewer sample in JavaScript
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
 
@@ -129,7 +126,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from  Azure Blob Storage
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load PDF files from Azure Blob Storage.
 
 ```csharp
 
@@ -181,21 +178,28 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name
+N> Replace the placeholders with your actual values: Azure storage connection string and container name.
 
-**Step 3:**  Set the PDF Viewer Properties in JavaScript PDF viewer component
+**Step 3:** Configure the PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from Azure Blob Storage. Ensure that you correctly pass the document name from the files available in your azure contanier to the documentPath property.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Azure Blob Storage. Ensure the document name exists in your Azure container.
 
 ```javascript
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.LinkAnnotation,
+  ej.pdfviewer.ThumbnailView,
+  ej.pdfviewer.BookmarkView,
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.FormDesigner
+);
 
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,
-         BookmarkView, TextSelection, Annotation, FormFields, FormDesigner} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject( Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,
-                  BookmarkView, TextSelection, Annotation, FormFields, FormDesigner);
-
-let viewer: PdfViewer = new PdfViewer();
+var viewer = new ej.pdfviewer.PdfViewer();
 // Replace the "localhost:44396" with the actual URL of your server
 viewer.serviceUrl = 'https://localhost:44396/pdfviewer';
 viewer.appendTo('#pdfViewer');

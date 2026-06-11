@@ -1,28 +1,21 @@
 ---
 layout: post
-title: Display Custom stamp Item in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to display custom stamp items in the custom stamp in the Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Display custom stamp items in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to configure custom stamp settings in the Syncfusion ASP.NET Core PDF Viewer so users can apply personalized stamps from the custom stamp dropdown.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Displaying Custom Items in Custom Stamp Dropdown
+# Display custom items in the custom stamp dropdown
 
-### Overview
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer supports custom stamp templates, allowing reviewers to use organization-specific seals or approval marks. Populate the custom stamp menu by configuring the [`PdfViewerCustomStampSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerCustomStampSettings.html) object during component initialization.
 
-This guide explains how to add and display custom items in the custom stamp dropdown menu of Syncfusion's PDF Viewer using ASP.NET CORE. This feature allows users to easily access and apply custom stamps to their PDF documents.
+Follow these steps to surface custom stamp items in the viewer:
 
-### Steps to Show Custom Items in Custom Stamp Dropdown
+**Step 1:** Create an ASP.NET Core PDF Viewer project by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started).
 
-**Step 1:** Set Up the PdfViewer in Your ASP.NET CORE Project
-
- Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
-
-**Step 2:** Configure Custom Stamp Settings
-
-Within the PDF Viewer setup, utilize `PdfViewerCustomStampSettings` to specify the custom stamps that should appear in the dropdown menu.
+**Step 2:** Define the custom stamp collection in the Razor Page and assign it to the `PdfViewerCustomStampSettings` property. The example below demonstrates how to add stamps using base64 strings or hosted image URLs.
 
 ```cs
 @page "{handler?}"
@@ -58,6 +51,6 @@ Within the PDF Viewer setup, utilize `PdfViewerCustomStampSettings` to specify t
     </ejs-pdfviewer>
 ```
 
-By following these instructions, you can successfully configure to display custom stamp items in the custom stamp dropdown, allowing users to easily apply personalized stamps to their documents.
+Once configured, the viewer automatically displays the specified items in the custom stamp dropdown menu, enabling users to place them directly onto the PDF document.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)

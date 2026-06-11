@@ -49,12 +49,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AccessCellorRange.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/AccessCellorRange.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -130,6 +126,8 @@ The following code example illustrates how to access the range relatively to the
 
 N> Here row and column indexes in the range are "one-based".
 
+N> When **ExcelRangeIndexerMode** is set to **Relative**, only numeric index access is relative to the specified range. In this mode, row and column indexes are one-based and reference cells within the range. Cell name based references (example A1, B5) always points to the worksheet and returns results from the worksheet origin rather than from the specified range.
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Relative%20Range/.NET/Access%20Relative%20Range/Access%20Relative%20Range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -160,12 +158,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AccessRelativeRange.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/AccessRelativeRange.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -256,12 +250,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/DiscontinuousRange.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/DiscontinuousRange.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -342,12 +332,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/MigrantRange.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/MigrantRange.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -418,8 +404,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	#region Precedents in Worksheet
@@ -517,9 +502,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	}
 	Console.WriteLine();
 	#endregion
-
-	//Dispose streams
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -569,8 +551,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	#region Precedents in Worksheet
@@ -668,9 +649,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	}
 	Console.WriteLine();
 	#endregion
-
-	//Dispose streams
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -724,8 +702,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	#region Precedents in Worksheet
@@ -823,9 +800,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	}
 	Console.WriteLine();
 	#endregion
-
-	//Dispose streams
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -875,8 +849,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	#region Precedents in Worksheet
@@ -974,9 +947,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	}
 	Console.WriteLine();
 	#endregion
-
-	//Dispose streams
-	inputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1055,8 +1025,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	#region Clear Content
@@ -1066,13 +1035,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ClearContent.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ClearContent.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
 }
 {% endhighlight %}
 

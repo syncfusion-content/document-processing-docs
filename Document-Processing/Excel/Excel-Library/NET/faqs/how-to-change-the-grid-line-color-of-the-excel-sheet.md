@@ -8,7 +8,7 @@ documentation: UG
 
 # How to change the grid line color of the Excel sheet?
 
-In Essential&reg; XlsIO, you can change the grid line color of the worksheet using [GridLineColor](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GridLineColor) property. The below code snippet illustrate this.
+In Essential&reg; XlsIO, you can change the grid line color of the worksheet using [GridLineColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GridLineColor) property. The below code snippet illustrate this.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -21,9 +21,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //To change the grid line color using ExcelKnownColors
   worksheet.GridLineColor = ExcelKnownColors.Blue;
-
-  FileStream stream = new FileStream("GridLineColor.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
+  
+  workbook.SaveAs("GridLineColor.xlsx");
   workbook.Close();
   excelEngine.Dispose();
 }
@@ -61,9 +60,9 @@ End Using
 
 ## See Also
 
-* [How to set a line break inside a cell?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-set-a-line-break-inside-a-cell)
-* [How to show or hide gridlines?](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#show-or-hide-grid-lines)
-* [How to hide chart gridlines?](https://help.syncfusion.com/file-formats/xlsio/working-with-charts#hide-chart-gridlines)
-* [How to highlight worksheet tabs?](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#highlight-worksheet-tabs)
-* [How to apply color settings?](https://help.syncfusion.com/file-formats/xlsio/working-with-cell-or-range-formatting#apply-color-settings)
-* [How to change data point label color of a Waterfall chart?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-change-data-point-label-color-of-a-waterfall-chart)
+* [How to set a line break inside a cell?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-set-a-line-break-inside-a-cell)
+* [How to show or hide gridlines?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet#show-or-hide-grid-lines)
+* [How to hide chart gridlines?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-charts#hide-chart-gridlines)
+* [How to highlight worksheet tabs?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet#highlight-worksheet-tabs)
+* [How to apply color settings?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-or-range-formatting#apply-color-settings)
+* [How to change data point label color of a Waterfall chart?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-change-data-point-label-color-of-a-waterfall-chart)

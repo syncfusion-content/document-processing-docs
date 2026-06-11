@@ -1,22 +1,19 @@
 ---
 layout: post
-title: Export As Image in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Export As Image in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Export PDF pages as images in Syncfusion ASP.NET Core PDF Viewer
+description: Learn how to export PDF pages as Base64-encoded images by using the Syncfusion ASP.NET Core PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# Export As Image from PDF document
+# Export PDF pages as images in ASP.NET Core PDF Viewer
 
-The PDF Viewer library allows you to export specified pages as a Base64-encoded image string using the **exportAsImage()** method and exporting a range of pages as Base64-encoded image strings using the **exportAsImages()** method.
+The PDF Viewer allows you to export individual pages or specific page ranges as Base64-encoded image strings directly from the client side.
 
-The following steps are used to exportAsImage.
+## Export a single page
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
-
-**Step 2:** The following code snippet to implement the functionality for exporting a specified page as a Base64-encoded image string or exporting a range of pages as Base64-encoded image strings.
+To export a specific page as a Base64-encoded image string, use the **exportAsImage()** method. This method returns a promise that resolves to the image data.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -41,7 +38,9 @@ The following steps are used to exportAsImage.
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, to code snippet for exports the specified page as a Base64-encoded image string, allowing for custom image size:
+### Export with custom size
+
+Custom size for the exported image can also be specified by passing a `Size` object as the second parameter:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -67,7 +66,9 @@ Similarly, to code snippet for exports the specified page as a Base64-encoded im
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, to code snippet for exports the range of pages as Base64-encoded image strings:
+## Export a range of pages
+
+To export multiple pages within a range, use the **exportAsImages()** method. This method returns a promise that resolves to an array of Base64-encoded strings.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -92,7 +93,7 @@ Similarly, to code snippet for exports the range of pages as Base64-encoded imag
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, to code snippet for exports the range of pages as Base64-encoded image strings, allowing for custom image size:
+Use this code snippet to export a range of pages as Base64-encoded image strings while specifying a custom image size:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -118,4 +119,4 @@ Similarly, to code snippet for exports the range of pages as Base64-encoded imag
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, you can successfully integrate and use the export as image API in the EJ2 PDF Viewer.
+By following these steps, you can integrate the export-as-image APIs into the EJ2 PDF Viewer. Store the generated Base64 data securely and consider optimizing image size when working with large documents.

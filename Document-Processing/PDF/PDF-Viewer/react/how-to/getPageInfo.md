@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Get Page Info in React PDF Viewer component | Syncfusion
-description: Learn here all about Get Page Info in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Get page info in React PDF Viewer | Syncfusion
+description: Learn how to retrieve page height, width, and rotation using getPageInfo in the Syncfusion React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get Page Info in React Pdfviewer component
+# Get page info in React PDF Viewer
 
-The PDF Viewer library allows you to retrieves the information of a specified page in the viewer using the **getPageInfo()** method.This provides Essential<sup style="font-size:70%">&reg;</sup> information such as the height, width and rotation.
+The `getPageInfo()` method returns metadata for a specified page in the viewer, such as `height`, `width`, and `rotation`. `pageIndex` is zero-based. Call `getPageInfo()` after the viewer is ready to ensure page data is available (for example, in `ngAfterViewInit` or after the document has been loaded).
 
-The following steps are used to getPageInfo.
+The following example retrieves and logs the page dimensions and rotation for a specified page.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** The following code snippet to implement the functionality for retrieving height, width and rotation of a specified page in the viewer.
+**Step 2:** The following code snippet implements retrieval of height, width, and rotation for a specified page in the viewer.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -103,6 +103,6 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, you can successfully integrate and use the get page info API in the EJ2 PDF Viewer.
+By following these steps, the page info API can be integrated and used in the EJ2 PDF Viewer.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

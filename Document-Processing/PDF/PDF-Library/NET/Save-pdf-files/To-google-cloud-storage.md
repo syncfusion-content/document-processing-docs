@@ -5,9 +5,9 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Save PDF to Google Cloud storage
+# Save PDF file to Google Cloud Storage
 
-To save a PDF file to Google cloud storage, you can follow the steps below
+To save a PDF file to Google Cloud Storage, you can follow the steps below
 
 Step 1: Create a simple console application
 
@@ -21,7 +21,6 @@ Step 3: Install the [Syncfusion.Pdf.Net.Core ](https://www.nuget.org/packages/Sy
 Step 4: Include the following namespaces in the Program.cs file.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.Pdf;
@@ -32,13 +31,11 @@ using Syncfusion.Drawing;
 using System.IO;
 
 {% endhighlight %}
-
 {% endtabs %}
 
-Step 5: Add the below code example to create a simple PDF and save in Google cloud storage.
+Step 5: Add the below code example to create a simple PDF and save in Google Cloud Storage.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 // Step 1: Create a PDF document
@@ -64,10 +61,9 @@ GoogleCredential credential = GoogleCredential.FromFile("credentials.json");//Re
 StorageClient storage = StorageClient.Create(credential);
 
 // Upload the PDF to the specified bucket and object name
-storage.UploadObject("bucketName", "Sample.pdf", null, stream);//
+storage.UploadObject("bucketName", "Sample.pdf", null, stream);
 
 {% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Save-PDF-file/To%20Google%20Cloud%20Storage).

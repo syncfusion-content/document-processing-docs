@@ -1,31 +1,30 @@
 ---
 layout: post
-title: Free text annotation in Javascript PDF Viewer control | Syncfusion
-description: Learn here all about Free text annotation in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Free text annotation in JavaScript PDF Viewer control | Syncfusion
+description: Learn about free text annotations in the Syncfusion JavaScript PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: Javascript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Free text annotation in Javascript PDF Viewer control
+# Free text annotation in JavaScript PDF Viewer control
 
-The PDF Viewer control provides the options to add, edit, and delete the free text annotations.
+The PDF Viewer control provides options to add, edit, and delete free text annotations.
 
-## Adding a free text annotation to the PDF document
+## Add a free text annotation to the PDF document
 
-The Free text annotations can be added to the PDF document using the annotation toolbar.
+Free text annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **Free Text Annotation** button in the annotation toolbar. It enables the Free Text annotation mode.
-* You can add the text over the pages of the PDF document.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. The annotation toolbar appears below it.
+* Select the **Free Text Annotation** button to enable free text annotation mode.
+* Add text anywhere on the pages of the PDF document.
 
-In the pan mode, if the free text annotation mode is entered, the PDF Viewer control will switch to text select mode.
+When in pan mode, selecting free text annotation switches the PDF Viewer to text select mode.
 
-![FreeTextAnnotation in TypeScript PDF Viewer](../images/freetext_tool.png)
+![Free text tool in the annotation toolbar](../images/freetext_tool.png)
 
-Refer to the following code sample to switch to the Free Text annotation mode using a button click.
+The following example switches to free text annotation mode using a button click.
 
 
 ```html
@@ -36,7 +35,7 @@ Refer to the following code sample to switch to the Free Text annotation mode us
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    resourceUrl : "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+                    resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -73,11 +72,11 @@ if (addFreeTextAnnotationButton) {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a free text annotation programatically to the PDF document
+## Add a free text annotation programmatically to the PDF document
 
-The PDF Viewer library allows you to add the free text annotation in the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation) method.
+The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#annotation) method.
 
-Here is an example of how you can use the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#addannotation) method to move the free text annotation programmatically:
+Here is an example of adding a free text annotation programmatically using addAnnotation():
 
 ```html
 <button id="addFreeTextAnnotation"> Add FreeText Programmatically</button>
@@ -88,7 +87,7 @@ Here is an example of how you can use the [**addAnnotation()**](https://ej2.sync
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    resourceUrl : "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+                    resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -143,11 +142,11 @@ if (addFreeTextAnnotation) {
 {% endhighlight %}
 {% endtabs %}
 
-## Change the content of an existing Free text annotation programmatically
+## Change the content of an existing free text annotation programmatically
 
-To change the content of an existing free text annotation in the Syncfusion PDF viewer programmatically, you can use the **editAnnotation()** method.
+To change the content of an existing free text annotation programmatically, use the editAnnotation() method.
 
-Here is an example of how you can use the **editAnnotation()** method to change the content of a free text annotation:
+Here is an example of changing the content of a free text annotation using editAnnotation():
 
 ```html
 <button id="changeContent">Change Contect</button>
@@ -157,7 +156,7 @@ Here is an example of how you can use the **editAnnotation()** method to change 
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    resourceUrl : "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+                    resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,
                               ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
@@ -205,78 +204,78 @@ if (changeContent) {
 {% endhighlight %}
 {% endtabs %}
 
-N> Please note that the current version of the PDF Viewer does not offer the functionality to edit existing text within a PDF document. However, you can add new free text annotations and modify existing free text annotations within the document.
+N> The current version of the PDF Viewer does not edit existing document text. New free text annotations can be added and modified within the document.
 
-## Editing the properties of free text annotation
+## Edit the properties of free text annotations
 
-The font family, font size, font styles, font color, text alignment, fill color, the border stroke color, border thickness, and opacity of the free text annotation can be edited using the Font Family tool, Font Size tool, Font Color tool, Text Align tool, Font Style tool  Edit Color tool, Edit Stroke Color tool, Edit Thickness tool, and Edit Opacity tool in the annotation toolbar.
+Font family, font size, styles, font color, text alignment, fill color, stroke color, border thickness, and opacity can be edited using the Font Family, Font Size, Font Color, Text Align, Font Style, Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-### Editing font family
+### Edit font family
 
-The font family of the annotation can be edited by selecting the desired font in the Font Family tool.
+Edit the font family by selecting a font in the Font Family tool.
 
-![FontFamily](../images/fontfamily.png)
+![Change font family](../images/fontfamily.png)
 
-### Editing font size
+### Edit font size
 
-The font size of the annotation can be edited by selecting the desired size in the Font Size tool.
+Edit the font size by selecting a size in the Font Size tool.
 
-![FontSize](../images/fontsize.png)
+![Change font size](../images/fontsize.png)
 
-### Editing font color
+### Edit font color
 
-The font color of the annotation can be edited using the color palette provided in the Font Color tool.
+Edit the font color using the color palette in the Font Color tool.
 
-![FontColor](../images/fontcolor.png)
+![Change font color](../images/fontcolor.png)
 
-### Editing the text alignment
+### Edit text alignment
 
-The text in the annotation can be aligned by selecting the desired styles in the drop-down pop-up in the Text Align tool.
+Align text by selecting an option from the Text Align tool.
 
-![FreeTextAnnotation](../images/textalign.png)
+![Set text alignment](../images/textalign.png)
 
-### Editing text styles
+### Edit text styles
 
-The style of the text in the annotation can be edited by selecting the desired styles in the drop-down pop-up in the Font Style tool.
+Edit text styles by selecting options in the Font Style tool.
 
-![FontStyle](../images/fontstyle.png)
+![Change text styles](../images/fontstyle.png)
 
-### Editing fill color
+### Edit fill color
 
-The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
+Edit the fill color using the color palette in the Edit Color tool.
 
-![FillColor](../images/fillcolor.png)
+![Change fill color](../images/fillcolor.png)
 
-### Editing stroke color
+### Edit stroke color
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+Edit the stroke color using the color palette in the Edit Stroke Color tool.
 
-![StrokeColor](../images/fontstroke.png)
+![Change stroke color](../images/fontstroke.png)
 
-### Editing thickness
+### Edit thickness
 
-The border thickness of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+Edit border thickness using the range slider in the Edit Thickness tool.
 
-![FontThickness](../images/fontthickness.png)
+![Change border thickness](../images/fontthickness.png)
 
-### Editing opacity
+### Edit opacity
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+Edit opacity using the range slider in the Edit Opacity tool.
 
-![FontOpacity](../images/fontopacity.png)
+![Change opacity](../images/fontopacity.png)
 
-## Setting default properties during control initialization
+## Set default properties during control initialization
 
-The properties of the free text annotation can be set before creating the control using the FreeTextSettings.
+Default properties for free text annotations can be set before creating the control using FreeTextSettings.
 
-After editing the default values, they will be changed to the selected values. Refer to the following code sample to set the default free text annotation settings.
+After changing default values, the selected values are applied. The following example sets default free text annotation settings.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-                    resourceUrl : "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib",
+                    resourceUrl : "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
                     freeTextSettings : { fillColor: 'green', borderColor: 'blue', fontColor: 'yellow' }
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,

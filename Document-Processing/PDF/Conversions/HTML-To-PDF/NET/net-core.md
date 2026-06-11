@@ -39,6 +39,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 4: A default controller with name HomeController.cs gets added on creation of ASP.NET Core MVC project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -46,10 +47,12 @@ using Syncfusion.HtmlConverter;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add a new button in index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
     {
@@ -61,9 +64,11 @@ Step 5: Add a new button in index.cshtml as shown below.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new action method named ExportToPDF in HomeController.cs and include the below code example to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The HTML content will be scaled based on the given [ViewPortSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize HTML to PDF converter.
@@ -79,10 +84,11 @@ PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
 MemoryStream stream = new MemoryStream();
 //Save and close the document. 
 document.Save(stream);
-document.Close(true); 
+document.Close(); 
 return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Build the project.
 
@@ -123,6 +129,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 5: A default controller with name HomeController.cs gets added on creation of ASP.NET Core MVC project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -130,10 +137,12 @@ using Syncfusion.HtmlConverter;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new button in index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
     {
@@ -145,9 +154,11 @@ Step 6: Add a new button in index.cshtml as shown below.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add a new action method named ExportToPDF in HomeController.cs and include the below code example to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The HTML content will be scaled based on the given [ViewPortSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize HTML to PDF converter.
@@ -163,10 +174,11 @@ PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
 MemoryStream stream = new MemoryStream();
 //Save and close the document. 
 document.Save(stream);
-document.Close(true); 
+document.Close(); 
 return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Build the project.
 
@@ -221,6 +233,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 4: A default controller with name HomeController.cs gets added on creation of ASP.NET Core MVC project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
@@ -228,10 +241,12 @@ using Syncfusion.HtmlConverter;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add a new button in index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
     {
@@ -243,9 +258,11 @@ Step 5: Add a new button in index.cshtml as shown below.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new action method named ExportToPDF in HomeController.cs and include the below code example to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The HTML content will be scaled based on the given [ViewPortSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize HTML to PDF converter.
@@ -261,10 +278,11 @@ PdfDocument document = htmlConverter.Convert("https://www.syncfusion.com");
 MemoryStream stream = new MemoryStream();
 //Save and close the document. 
 document.Save(stream);
-document.Close(true); 
+document.Close(); 
 return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "HTML-to-PDF.pdf");
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Build the project.
 
@@ -286,4 +304,3 @@ A complete working sample can be downloaded from [Github](https://github.com/Syn
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> HTML to PDF converter library features. 
 
 An online sample link to [convert HTML to PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HtmltoPDF#/bootstrap5) in ASP.NET Core. 
-   

@@ -1,19 +1,22 @@
 ---
 layout: post
-title: Display custom tool tip for annotation in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Display custom tool tip for annotation in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Display a custom tooltip for annotations in TypeScript PDF Viewer | Syncfusion
+description: Learn how to display a custom tooltip for annotations in the TypeScript PDF Viewer using the annotationMouseover and annotationMouseLeave events.
 platform: document-processing
-control: Display custom tool tip for annotation
-publishingplatform: Typescript
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display custom tool tip for annotation in Typescript Pdfviewer control
+# Display a custom tooltip for annotations
 
-To display a custom tooltip for annotations using the mouseover event in the Syncfusion PDF Viewer, you can use the [**annotationMouseover**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationmouseover) and **annotationMouseLeave** events .
+Display custom tooltips for annotations by handling the [annotationMouseover](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationmouseover) and `annotationMouseLeave` events.
 
-Here is an example that demonstrates how to display a custom tooltip for annotations using the mouseover event in the Syncfusion PDF Viewer:
+- Include the JavaScript PDF Viewer script and the `Annotation` module on the page.
+- Include the `ej.popups` module or equivalent tooltip library used in the example.
+- Ensure the viewer instance is initialized before attaching the event handlers.
+
+Example: show a tooltip on mouse over
 
 ```ts
 
@@ -39,4 +42,4 @@ viewer.annotationMouseLeave = args => {
 
 ```
 
-Find the sample [how to display custom tooltip for annotations using MouseOver event](https://stackblitz.com/edit/cervhy-s9fh48?file=index.ts)
+Sample: [Display a custom tooltip for annotations sample on GitHub/StackBlitz](https://stackblitz.com/edit/cervhy-s9fh48?file=index.ts)

@@ -14,11 +14,11 @@ The Syncfusion<sup>&reg;</sup> .NET PowerPoint library (Presentation) enables se
 
 The following system configurations were used for benchmarking: 
 
-* **Operating System:** Windows 10
-* **Processor:** 11th Gen Intel(R) Core(TM)
-* **RAM:** 16GB
+* **Operating System:** Windows 11
+* **Processor:** 12th Gen Intel(R) Core(TM) i5-1235U (1.30 GHz)
+* **RAM:** 24GB
 * **.NET Version:** .NET 8.0
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.PresentationRenderer.Net.Core v31.1.17](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/31.1.17)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.PresentationRenderer.Net.Core v33.1.44](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/33.1.44)
 
 ## PowerPoint to image conversion 
 
@@ -41,13 +41,15 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>100</td>
     <td>{{'[PowerPoint-100.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-100.pptx)'| markdownify }}</td>
-    <td>2.8</td>
+    <td>2.2</td>
 </tr>
 <tr>
     <td>500</td>
     <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-500.pptx)'| markdownify }}</td>
-    <td>32</td>
+    <td>23.4</td>
 </tr>
 </table>
 
 You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/).
+
+N> Execution times are based on the sample documents and may vary with different content or environments.

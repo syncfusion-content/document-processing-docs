@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Download in Vue Pdfviewer component | Syncfusion
-description: Learn here all about Download in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Download in Vue PDF Viewer | Syncfusion
+description: Learn how to enable, disable, and programmatically trigger download in the Syncfusion Vue PDF Viewer, including download events and base64 handling.
 control: Download
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in Vue Pdfviewer component
+# Download in Vue PDF viewer control
 
-The PDF Viewer supports downloading the loaded PDF file. You can enable/disable the download using the following code snippet.
+The Vue PDF Viewer lets users download the currently loaded PDF. Enable the download toolbar button with `enableDownload` for both standalone and server-backed viewers. The examples below demonstrate typical configurations and how to trigger a programmatic download.
 
-![Alt text](./images/download.png)
+![PDF Viewer toolbar with download button](./images/download.png)
 
-You can invoke download action using following code snippet.,
+N> When loading documents from other origins, ensure that CORS is correctly configured on the server. In server-backed mode, the document is streamed through the serviceUrl endpoint, which must allow download requests.
+
+To invoke download programmatically, use the following snippet:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -36,7 +38,7 @@ import {
 
 const pdfviewer = ref(null);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
 provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
   ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]);
@@ -73,7 +75,7 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
@@ -82,7 +84,7 @@ export default {
   },
 
   methods: {
-    downloadClicked: function (args) {
+    downloadClicked: function () {
       this.$refs.pdfviewer.ej2Instances.download();
     }
   }
@@ -156,7 +158,7 @@ export default {
   },
 
   methods: {
-    downloadClicked: function (args) {
+    downloadClicked: function () {
       this.$refs.pdfviewer.ej2Instances.download();
     }
   }

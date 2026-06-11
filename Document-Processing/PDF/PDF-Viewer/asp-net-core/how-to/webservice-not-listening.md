@@ -1,71 +1,67 @@
 ---
 layout: post
-title: Web-service is not listening to error in ASP.NET Core Pdfviewer Component
-description: Learn how to clear Web-service is not listening to error in Syncfusion ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Resolve “Web service is not listening” error in ASP.NET Core PDF Viewer | Syncfusion
+description: Troubleshoot the “Web service is not listening” error in the Syncfusion ASP.NET Core PDF Viewer by validating network requests, cache configuration, and server availability.
 platform: document-processing
-control: How to clear Web-service is not listening to error
-publishingplatform: ASP.NET Core
+control: PDF Viewer
 documentation: ug
 ---
 
-# How to clear the "Web-service is not listening" to error
+# Resolve “Web service is not listening” error
 
-![Alt text](../images/webservice.png)
+![Browser showing the Web service is not listening error](../images/webservice.png)
 
-If you are facing a **Web-service is not listening** to error in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, there could be several reasons for this. To troubleshoot the issue, you can use the Network tab in your browser's developer tools to gather more information. Here are the steps you can follow:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer displays the **Web service is not listening** message when the component cannot establish a connection with the backend service or the service encounters an unhandled exception. Follow these diagnostic steps to identify and resolve the issue.
 
-**Step 1:** Open the browser's developer tools by right-clicking on the page and selecting `Inspect` from the dropdown menu. Then Navigate to the `Network` tab. This will show you all of the requests that are being made by the page.
+## Diagnose the service response
 
-![Alt text](../images/networktab.png)
+**Step 1:** Open the browser developer tools (press **F12** or right-click and select **Inspect**) and navigate to the **Network** tab to monitor outgoing requests.
 
-**Step 2:** Try to request the web service. If the service is not listening, the request will fail, and you should see an error message in the Network tab. Click on the failing request to see the details of the error, such as the error message or stack trace. This can help you identify the root cause of the issue. Check the server logs for any errors or warnings that may indicate the cause of the issue and help you to troubleshoot the problem.
+![Developer tools Network tab displaying failed requests](../images/networktab.png)
 
-**Step 3:** Check the request URL and parameters to see if they are correct. If there is a type or an incorrect parameter, the web service may be unable to process the request.
+**Step 2:** Trigger the error again and select the failed request to inspect the response status, headers, and error payload. Record the stack trace or error message for detailed analysis.
 
-By following these steps and using the Network tab in your browser's developer tools, you can gather more information about the issue and troubleshoot the problem more effectively.
+**Step 3:** Verify that the request URL, HTTP method, and payload structure match the controller action signature. Routing mismatches or incorrect endpoint configurations prevent the service from processing document requests.
 
-N> Make sure you are connected to the internet and that your connection is stable. You can try accessing other websites or services to see if they are working, and make sure the URL you are using to access the web service is correct and properly formatted.
+N> Ensure the hosting environment has necessary network permissions, the PDF service endpoint URL is correctly configured, and all dependent resources—such as storage accounts or distributed caches—are accessible.
 
-## Here are some common exceptions
+## Common exceptions and resolutions
 
-* File not found.
-* Document cache not found.
-* Document pointer does not exist in the cache.
+### File not found errors
 
-## File not found
+* Confirm that the `documentPath` and server-side file references point to valid locations.
+* Ensure the deployment process includes all required PDF assets in the target directory.
+* Update connection strings or environment variables if the document storage moves (e.g., from local storage to Azure Blob Storage).
 
-If you are encountering an error message stating that the web service is not listening due to a file not being found in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer, you can try the following steps to resolve the issue:
+### Document cache exceptions
 
-### Check the file path
+The `Document cache not found` exception occurs when the cache directory for rendered PDF pages is missing, inaccessible, or deleted. This often happens after environment migrations or manual directory cleanup.
 
-Ensure that the file path you use to access the PDF file is correct and that the file exists in that location. You will need to update the file path if the file does not exist.
+* **Validate Cache Path:** Ensure the directory specified in the configuration exists and has write permissions.
+* **Persistent Storage:** Use a persistent storage provider if the application runs in a containerized or stateless environment.
 
-## Document cache not found
+### Multiple instances conflict
 
-The `Document cache not found` exception in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer typically occurs when the cache used to store the rendered pages of a PDF document is not found or has been deleted. This can happen if the cache directory is changed or deleted or if the application is running in a different environment than it was previously.
+Simultaneous instances of the PDF Viewer may compete for the same cache resources, leading to locking issues. 
 
-### Check for multiple instances
+* **Check Processes:** Review active processes in the Task Manager to ensure no orphaned instances are locking cache files.
+* **Distributed Caching:** Implement Redis or another distributed caching provider to manage document state across multiple instances or scaled environments safely.
 
-It's possible that you have multiple instances of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer running simultaneously, which can cause issues with the document cache. To check for this, open the Task Manager on your computer and look for any instances of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer running. If you find multiple instances, try closing them all and reopening the viewer.
+### Network and service stability
 
-We can use Redis cache and distributive cache for this issue.
+* Verify the stability of the network connection between the client and the server.
+* Restart the web service to clear transient state issues or blocked resources.
 
-### Check your network connection
+### Document pointer missing from cache
 
-Ensure that your network connection is stable and strong enough to support the web service you are trying to use. Sometimes, simply restarting the web service can resolve the issue. Try stopping and starting the service again to see if it resolves the problem.
+The `Document pointer does not exist in the cache` exception indicates a mismatch between the client's session state and the server's cached data.
 
-## The document pointer does not exist in the cache.
+To resolve this issue:
 
-The `Document pointer does not exist in the cache` exception in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer usually occurs when there is an issue with loading or caching the PDF document. This error can be caused by a variety of reasons, including:
-
-To clear this error in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you can try the following steps:
-
-**Step 1:** Clearing the cache may help resolve the issue. To clear the cache, navigate to the cache location, which can be found in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer's settings or configuration files. Once you locate the cache folder, delete its contents.
-
-**Step 2:** Try reloading the document to ensure it is loaded correctly. You can do this by calling the controller's Load() method. Ensure the document is not already loaded before attempting to load it again.
-
-**Step 3:** Restart the application. If clearing the cache does not work, you can try restarting the PDF Viewer application. This will reload all the necessary components and may resolve the error.
+1. **Clear the Cache:** Manually clear the contents of the cache directory specified in the PDF Viewer settings to remove corrupted or stale data.
+2. **Reload the Document:** Programmatically invoke the `Load()` method via the controller to re-initialize the document session.
+3. **App Restart:** Restart the application pool or service to refresh component states and clear memory-resident metadata.
 
 ## Internal server error
 
-Server-side exceptions happen for various use cases. We can't just define them if they are document-specific, provide the document, or you may need to contact Syncfusion<sup style="font-size:70%">&reg;</sup> support for further assistance.
+Unspecified server-side failures often stem from malformed document content, missing dependencies, or permission restrictions. Review the server-side logs to capture the full exception details. If the issue persists, provide the failing document and logs to Syncfusion support for further investigation.

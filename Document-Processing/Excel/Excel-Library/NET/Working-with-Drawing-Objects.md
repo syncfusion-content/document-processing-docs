@@ -57,12 +57,8 @@ The following code example illustrates how to add and manipulate a text box cont
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/TextBox.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/TextBox.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -140,8 +136,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Read the text 
@@ -157,10 +152,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   ITextBoxShape textbox = worksheet.Charts[0].TextBoxes.AddTextBox(2, 2, 80, 300);
   textbox.Text = "Text Box in the chart";
 
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream(Output.xlsx, FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -248,12 +241,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/CheckBox.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/CheckBox.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -363,12 +352,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ComboBox.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ComboBox.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -497,12 +482,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/OptionButton.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/OptionButton.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -616,12 +597,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Comment.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/Comment.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -724,12 +701,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   comment.Fill.ForeColorIndex = ExcelKnownColors.Red;
   comment.Fill.BackColorIndex = ExcelKnownColors.White;
 
-  //Saving the workbook as stream
-  FileStream outputStream = new FileStream(Path.GetFullPath("Output/Output.xlsx"), FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(outputStream);
-
-  //Dispose stream
-  outputStream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
 
@@ -807,7 +780,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for formatting comments in C# is present on [this GitHub page]().
+A complete working example for formatting comments in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20Shapes/Format%20Comment/.NET/Formatting%20Comment).
 
 ### Visibility
 
@@ -837,12 +810,8 @@ Comments in an Excel document can be shown or hidden using [IsVisible](https://h
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ShowOrHideComment.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ShowOrHideComment.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -906,8 +875,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	//Remove all the comments in worksheet
@@ -915,12 +883,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/RemoveComments.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/RemoveComments.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -960,6 +924,9 @@ A complete working example to remove comment in C# is present on [this GitHub pa
 
 Threaded comments are a way to add and organize annotations or discussions related to specific cells in a worksheet. [IThreadedComment](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IThreadedComment.html) object represents a threaded comment in a worksheet.
 
+To quickly learn how to add, reply to, resolve, delete, and clear threaded comments in Excel documents, check out this video.
+{% youtube "https://www.youtube.com/watch?v=h8x62gZLxng" %}
+
 ### Create
 
 The following code explains how to create a threaded comment for a specific cell using [AddThreadedComment](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AddThreadedComment_System_String_System_String_System_DateTime_) method.
@@ -971,8 +938,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/CommentsTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/CommentsTemplate.xlsx"), ExcelOpenType.Automatic);
 
 	IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -981,12 +947,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AddComment.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/AddComment.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1036,8 +998,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/CommentsTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/CommentsTemplate.xlsx"), ExcelOpenType.Automatic);
 
 	IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -1049,12 +1010,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ReplyComment.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ReplyComment.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1110,8 +1067,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/CommentsTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/CommentsTemplate.xlsx"), ExcelOpenType.Automatic);
 
 	IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -1123,12 +1079,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/ResolveComment.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/ResolveComment.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1183,8 +1135,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("CommentsTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("CommentsTemplate.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Get the collection of threaded comments in the worksheet
@@ -1193,10 +1144,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Delete the threaded comment
   threadedComments[0].Delete();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook  
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1249,8 +1198,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("CommentsTemplate.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("CommentsTemplate.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Get the collection of threaded comments in the worksheet
@@ -1259,10 +1207,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Clear all the threaded comments
   threadedComments.Clear();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 
@@ -1343,12 +1289,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/AutoShapes.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/AutoShapes.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1433,8 +1375,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	IShapes shapes = worksheet.Shapes;
@@ -1457,12 +1398,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/GroupShapes.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/GroupShapes.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1519,8 +1456,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	IShapes shapes = worksheet.Shapes;
@@ -1530,12 +1466,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/UngroupShapes.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/UngroupShapes.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1588,8 +1520,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
+	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
 
 	IShapes shapes = worksheet.Shapes;
@@ -1599,12 +1530,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Save
 	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/UngroupAllShapes.xlsx"), FileMode.Create, FileAccess.Write);
-	workbook.SaveAs(outputStream);
+	workbook.SaveAs(Path.GetFullPath("Output/UngroupAllShapes.xlsx"));
 	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
 }
 {% endhighlight %}
 
@@ -1679,10 +1606,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Add ole object
   IOleObject oleObject = worksheet.OleObjects.AddLink("../../Data/Document.docx", image);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("LinkedObjects.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("LinkedObjects.xlsx");
 }
 {% endhighlight %}
 
@@ -1743,10 +1668,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Add ole object
   IOleObject oleObject = worksheet.OleObjects.Add(inputStream, image, OleObjectType.PowerPointPresentation);
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("EmbeddedObjects.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("EmbeddedObjects.xlsx");
 }
 {% endhighlight %}
 
@@ -1824,10 +1747,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   oleObject2 = worksheet.OleObjects[1];
   oleObject2.Shape.Remove();
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("OleObjects.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("OleObjects.xlsx");
 }
 {% endhighlight %}
 
@@ -1921,8 +1842,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx; 
-    FileStream inputStream = new FileStream("Data/Input.xlsx", FileMode.Open, FileAccess.Read); 
-    IWorkbook workbook = application.Workbooks.Open(inputStream); 
+	IWorkbook workbook = application.Workbooks.Open("Data/Input.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
     IShapes shapes = worksheet.Shapes;
@@ -1936,11 +1856,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     //Set shape2 to be visible
     shape2.IsHidden = false;
 
-    //Saving the workbook as stream
-    FileStream outputStream = new FileStream("Output/Output.xlsx", FileMode.Create, FileAccess.Write);
-    workbook.SaveAs(outputStream);
-    outputStream.Dispose();
-    inputStream.Dispose();
+    //Saving the workbook
+	workbook.SaveAs("Output/Output.xlsx");
 } 
 {% endhighlight %}
 

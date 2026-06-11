@@ -1,26 +1,30 @@
 ---
 layout: post
-title: Signature selection events in EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about selection event in ASP.NET Core Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Handle signatureSelect and signatureUnselect events in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to respond to signatureSelect and signatureUnselect events in the Syncfusion ASP.NET Core PDF Viewer to track handwritten signature interactions.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET Core
 documentation: ug
 ---
 
-# SignatureSelect and SignatureUnselect event
+# Handle signatureSelect and signatureUnselect events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer provides event-handling capabilities for various actions, including selecting and unselecting handwritten signatures. The `signatureSelect` and `signatureUnselect` events enable developers to programmatically manage the selection state of signatures within the PDF Viewer component.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer triggers the `signatureSelect` and `signatureUnselect` events when a handwritten signature annotation gains or loses focus. These events enable applications to log reviewer actions, update contextual UI elements, or validate signatures before finalizing the document.
 
 **signatureSelect**
 
-The `signatureSelect` event triggers when a handwritten signature annotation is selected. This event allows developers to capture the signature selection and handle it programmatically, such as updating the UI or storing the selection data for further processing.
+This event fires when a user selects an existing handwritten signature or completes a new signature drawing. The event arguments provide metadata such as the annotation ID, bounds, and page index, allowing the application to synchronize the signature state with other UI components.
 
 **signatureUnselect**
 
-The `signatureUnselect` event triggers when a handwritten signature annotation is unselected. This event enables developers to manage the unselection programmatically, which can be useful for tasks like cleanup operations or updating the application's state to reflect that a signature is no longer selected.
+This event fires when focus moves away from a signature or the user deselects it. Use this callback to persist changes, disable signature-specific toolbar actions, or reset state that is only relevant while a signature is active.
 
-The code snippet demonstrates how to subscribe to the `signatureSelect` and `signatureUnselect` events in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component.
+Follow these steps to integrate signature event handling in an ASP.NET Core application:
+
+1. Create a PDF Viewer project by following the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started).
+2. Define the event handlers and assign them to the `signatureSelect` and `signatureUnselect` properties of the PDF Viewer component.
+
+The following example demonstrates how to subscribe to these events in both standalone and server-backed configurations.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -37,6 +41,7 @@ The code snippet demonstrates how to subscribe to the `signatureSelect` and `sig
                    signatureUnselect="signatureUnselect">
     </ejs-pdfviewer>
 </div>
+
 <script type="text/javascript">
 
     function signatureSelect(args) {
@@ -63,6 +68,7 @@ The code snippet demonstrates how to subscribe to the `signatureSelect` and `sig
                    signatureUnselect="signatureUnselect">
     </ejs-pdfviewer>
 </div>
+
 <script type="text/javascript">
 
     function signatureSelect(args) {
@@ -76,4 +82,4 @@ The code snippet demonstrates how to subscribe to the `signatureSelect` and `sig
 {% endhighlight %}
 {% endtabs %}
 
-The `signatureSelect` and `signatureUnselect` events in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer offer robust options for managing the state of handwritten signatures within your application. By handling these events, developers can create a more interactive and dynamic user experience, responding programmatically to signature selection and unselection.
+By implementing `signatureSelect` and `signatureUnselect`, developers can audit user interactions, manage toolbar states, and provide immediate visual feedback during the signing process.

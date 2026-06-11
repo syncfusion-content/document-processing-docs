@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Shape annotation in React Pdfviewer component | Syncfusion
-description: Learn here all about Shape annotation in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Shape annotation
+title: Shape annotation in React PDF Viewer control | Syncfusion
+description: Learn about shape annotations in the Syncfusion React PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shape annotation in React Pdfviewer component
+# Shape annotation in React PDF Viewer
 
-The PDF Viewer control provides the options to add, edit, and delete the shape annotations. The shape annotation types supported in the PDF Viewer control are:
+The PDF Viewer provides tools to add, edit, and delete shape annotations. Supported shape types:
 
 * Line
 * Arrow
@@ -18,22 +18,21 @@ The PDF Viewer control provides the options to add, edit, and delete the shape a
 * Circle
 * Polygon
 
-![ShapeAnnotation](../images/shape_annot.png)
+![Shape annotations overview](../images/shape_annot.png)
 
-## Adding a shape annotation to the PDF document
+## Add a shape annotation
 
-Shape annotations can be added to the PDF document using the annotation toolbar.
+Shape annotations are available from the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Click the **Shape Annotation** drop-down button. A drop-down pop-up will appear and shows the shape annotations to be added.
-* Select the shape types to be added to the page in the drop-down pop-up. It enables the selected shape annotation mode.
-* You can add the shapes over the pages of the PDF document.
+- Open the annotation toolbar with the **Edit Annotation** button in the PDF Viewer toolbar.
+- Use the **Shape Annotation** drop-down to choose the desired shape type.
+- Select a shape type to enable its annotation mode, then draw the shape on the page.
 
-In the pan mode, if the shape annotation mode is entered, the PDF Viewer control will switch to text select mode.
+N> When the viewer is in pan mode and a shape tool is selected, the viewer switches to text selection mode where applicable to ensure a smooth interaction.
 
-![ShapeTool](../images/shape_toolbar.png)
+![Shape annotation toolbar](../images/shape_toolbar.png)
 
-Refer to the following code sample to switch to the circle annotation mode.
+The following sample shows how to switch the viewer to circle annotation mode.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -57,7 +56,7 @@ function App() {
       <PdfViewerComponent ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -108,11 +107,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a shape annotation to the PDF document Programmatically
+## Add a shape annotation to the PDF document programmatically
 
-With the PDF Viewer library, you can add a shape annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation/#addannotationn) method.
+The PDF Viewer library allows adding shape annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#annotation) method.
 
-Here's a example of how you can utilize the **addAnnotation()** method to include a shape annotation programmatically:
+The following examples show how to add shape annotations programmatically using `addAnnotation()`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -179,7 +178,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -272,11 +271,11 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Edit the existing shape annotation programmatically
+## Edit an existing shape annotation programmatically
 
-To modify existing shape annotation in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer programmatically, you can use the **editAnnotation()** method.
+Use the `editAnnotation()` method to modify existing shape annotations programmatically.
 
-Here is an example of how you can use the **editAnnotation()** method:
+The following example demonstrates `editAnnotation()`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -361,7 +360,7 @@ function App() {
         ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         style={{ 'height': '640px' }}>
 
               <Inject services={[ Toolbar, Annotation, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
@@ -475,45 +474,43 @@ root.render(<App />);
 
 ## Editing the properties of the shape annotation
 
-The fill color, stroke color, thickness, and opacity of the shape annotation can be edited using the Edit color tool, Edit stroke color tool, Edit thickness tool, and Edit opacity tool in the annotation toolbar.
+## Edit properties of shape annotations
 
-### Editing fill color
+Change fill color, stroke color, thickness, and opacity using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
+### Edit fill color
 
-![ShapeFillColor](../images/shape_fillColor.png)
+Change the fill color using the color palette in the Edit Color tool.
 
-### Editing stroke color
+![Edit fill color for shapes](../images/shape_fillColor.png)
 
-The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
+### Edit stroke color
 
-![ShapeStrokeColor](../images/shape_strokecolor.png)
+Change the stroke color using the Edit Stroke Color tool.
 
-### Editing thickness
+![Edit stroke color for shapes](../images/shape_strokecolor.png)
 
-The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
+### Edit thickness
 
-![ShapeThickness](../images/shape_thickness.png)
+Adjust border thickness using the Edit Thickness range slider.
 
-### Editing opacity
+![Edit thickness for shapes](../images/shape_thickness.png)
 
-The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
+### Edit opacity
 
-![ShapeOpacity](../images/shape_opacity.png)
+Adjust opacity using the Edit Opacity range slider.
 
-### Editing the line properties
+![Edit opacity for shapes](../images/shape_opacity.png)
 
-The properties of the line shapes such as line and arrow annotations can be edited using the Line Properties window. It can be opened by selecting the Properties option in the context menu that appears on right-clicking the line and arrow annotations.
+### Line properties
 
-Refer to the following code sample to set the default annotation settings.
+Line and arrow annotations include additional options in the Line Properties dialog. Open it by right-clicking a line or arrow annotation and choosing Properties.
 
-![ShapeProperty](../images/shape_lineproperty.png)
+![Line properties dialog](../images/shape_lineproperty.png)
 
 ### Edit annotation programmatically
 
-We can edit the annotations programmatically using the **editAnnotation()** method.
-
-Here is an example of how you can use this method to modify an annotation:
+Modify annotations programmatically using the `editAnnotation()` method. The example below demonstrates selecting and editing an annotation.
 ```
 <button onclick="editAnnotation()()">Edit Annotation</button>
 
@@ -530,9 +527,7 @@ var pdfviewer = document.getElementById('container').ej2_instances[0];
 ```
 ### Delete annotation programmatically
 
-We can delete a specific annotation using the **deleteAnnotationById()** method. This method is used to delete a specific annotation using its id.
-
-Here is an example of how you can use this method to delete an annotation:
+Delete a specific annotation with `deleteAnnotationById()` by providing the annotation's id. The example below demonstrates usage.
 
 ```
 <button onclick="deleteAnnotationbyId()">Delete Annotation by ID</button>
@@ -546,9 +541,9 @@ Here is an example of how you can use this method to delete an annotation:
 </script>
 ```
 
-## Setting default properties during the control initialization
+## Set default properties during initialization
 
-The properties of the shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
+Default properties for shape annotations can be configured before creating the viewer using `lineSettings`, `arrowSettings`, `rectangleSettings`, `circleSettings`, and `polygonSettings`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -567,7 +562,7 @@ function App() {
       <PdfViewerComponent  ref={(scope) => { pdfviewer = scope; }}
         id="container"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
         lineSettings={{fillColor: 'blue', opacity: 0.6, strokeColor: 'green'}}
         arrowSettings={{fillColor: 'green', opacity: 0.6, strokeColor: 'blue'}}
         rectangleSettings={{fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'}}
@@ -622,3 +617,5 @@ root.render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
+
+N> In both the Arrow and Line settings, the Fill Color option is available only when an arrowhead style is applied at the Start or End. If both Start and End arrowhead styles are set to `None`, lines do not support fill rendering and the Fill Color option is disabled. See Arrow settings and Line settings for API details.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Searching in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
-description: Learn here all about Searching in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Searching in EJ2 ASP.NET MVC Syncfusion Spreadsheet Control
+description: Learn here all about Searching in Syncfusion EJ2 ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Searching
 documentation: ug
 ---
 
 
-# Find and Replace in Spreadsheet control
+# Find and Replace in ASP.NET MVC Spreadsheet Control
 
 Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFindAndReplace) property to enable or disable the Find and Replace functionality.
 
@@ -65,10 +65,10 @@ In the following sample, searching can be done by following ways:
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/search/razor %}
+{% include code-snippet/spreadsheet/asp-net-mvc/search/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="SearchController.cs" %}
-{% include code-snippet/excel/spreadsheet/asp-net-mvc/search/searchController.cs %}
+{% include code-snippet/spreadsheet/asp-net-mvc/search/searchController.cs %}
 {% endhighlight %}
 {% endtabs %}
 

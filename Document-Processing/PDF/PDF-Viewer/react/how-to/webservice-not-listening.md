@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to clear the "Web-service is not listening" to error
+# How to resolve the "Web-service is not listening" error
 
 ![Alt text](../images/webservice.png)
 
-If you are facing a **Web-service is not listening** to error in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, there could be several reasons for this. To troubleshoot the issue, you can use the Network tab in your browser's developer tools to gather more information. Here are the steps you can follow:
+If the React PDF Viewer reports a "Web-service is not listening" error, use the browser's developer tools to diagnose the request and the server behaviour. The steps below guide the most common troubleshooting paths and remediation actions.
 
 **Step 1:** Open the browser's developer tools by right-clicking on the page and selecting `Inspect` from the dropdown menu. Then Navigate to the `Network` tab. This will show you all of the requests that are being made by the page.
 

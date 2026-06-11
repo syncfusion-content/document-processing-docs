@@ -13,9 +13,9 @@ XlsIO provides following options to perform find and replace for text and number
 * Search for data in formulas, values or comments.
 * Search for case-sensitive data and to match entire cell contents of the cell.
 
-To know more about these options, please refer the [ExcelFindType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelFindType.html), [ExcelFindOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelFindOptions.html) in the API documentation section.
+To know more about these options, please refer the [ExcelFindType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelFindType.html), [ExcelFindOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelFindOptions.html) in the API documentation section.
 
-All the occurrences of a text in Excel worksheet can be found through [FindAll](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FindAll_System_String_Syncfusion_XlsIO_ExcelFindType_) method.
+All the occurrences of a text in Excel worksheet can be found through [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_FindAll_System_String_Syncfusion_XlsIO_ExcelFindType_) method.
 
 The following code illustrates how to find all the occurrences of a value in a worksheet and highlight that data.
 
@@ -25,8 +25,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Finds a value 1500 in a sheet and highlights the cell which contains the value
@@ -35,10 +34,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     range.CellStyle.Color = ExcelKnownColors.Green;
   }
 
-  //Saving the workbook as stream
-  FileStream stream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.ReadWrite);
-  workbook.SaveAs(stream);
-  stream.Dispose();
+  //Saving the workbook
+  workbook.SaveAs("Output.xlsx");
 }
 {% endhighlight %}
 

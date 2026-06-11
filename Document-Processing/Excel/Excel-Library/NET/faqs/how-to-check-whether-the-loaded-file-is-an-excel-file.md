@@ -25,10 +25,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
         //Open the workbook
         IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-        //Saving the workbook as stream
-        FileStream outputStream = new FileStream("Output.xlsx", FileMode.Create, FileAccess.Write);
-        workbook.SaveAs(outputStream);
-        outputStream.Dispose();
+        //Saving the workbook 
+        workbook.SaveAs("Output.xlsx");
     }
     else
     {
