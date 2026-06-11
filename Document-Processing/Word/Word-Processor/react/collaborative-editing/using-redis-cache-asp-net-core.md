@@ -176,7 +176,7 @@ render() {
 
 ### Step 3: Configure SignalR to send and receive changes
 
-To broadcast changes and receive updates from remote users, install the "@microsoft/signalr" package in the React application. 
+To broadcast changes and receive updates from remote users, install the `@microsoft/signalr` package in the React application. 
 
 The following code snippet demonstrates how to configure SignalR in the Document Editor.
 
