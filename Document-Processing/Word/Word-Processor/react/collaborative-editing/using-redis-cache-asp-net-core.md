@@ -127,7 +127,7 @@ Refer to the following documentation to get started with the [React Document Edi
 
 ### Step 2: Enable collaborative editing
 
-To enable collaborative editing, inject `CollaborativeEditingHandler` and set the `enableCollaborativeEditing` property to true in the Document Editor.
+To enable collaborative editing, inject [CollaborativeEditingHandler](https://ej2.syncfusion.com/documentation/api/document-editor/collaborativeeditinghandler) and set the [enableCollaborativeEditing](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#enablecollaborativeediting) property to true in the Document Editor.
 
 The following code snippet demonstrates how to enable collaborative editing in the Document Editor.
 
@@ -146,13 +146,14 @@ public collaborativeEditingHandler ?: CollaborativeEditingHandler;
 
  
 public componentDidMount(): void {
-  if(this.container) {
-  this.container.documentEditor.enableCollaborativeEditing = true;
-}
-if (!this.connection) {
-  this.initializeSignalR();
-  this.loadDocumentFromServer();
-}
+    if (this.container) {
+        this.container.documentEditor.enableCollaborativeEditing = true;
+        this.collaborativeEditingHandler = this.container.documentEditor.collaborativeEditingHandlerModule;
+    }
+    if (!this.connection) {
+        this.initializeSignalR();
+        this.loadDocumentFromServer();
+    }
 }
 
 // Other code snippets
@@ -162,7 +163,7 @@ render() {
     <div>
       <div id='documenteditor_titlebar' className="e-de-ctn-title"></div>
       <div id="documenteditor_container_body">
-        <DocumentEditorContainerComponent id="container" created={this.onCreated.bind(this)} ref={(scope: DocumentEditorContainerComponent) => { this.container = scope; }} style={{ display: 'block' }}
+        <DocumentEditorContainerComponent id="container" created={this.onCreated.bind(this)} ref={(scope: DocumentEditorContainerComponent) => { this.container = scope; }}
           height={'590px'} currentUser={this.currentUser} serviceUrl={this.serviceUrl + 'api/documenteditor'} enableToolbar={true} locale='en-US' >
           <Inject services={[Toolbar]} />
         </DocumentEditorContainerComponent>
@@ -176,7 +177,7 @@ render() {
 
 ### Step 3: Configure SignalR to send and receive changes
 
-To broadcast changes and receive updates from remote users, install the "@microsoft/signalr" package in the React application. 
+To broadcast changes and receive updates from remote users, install the [Microsoft SignalR npm](https://www.npmjs.com/package/@microsoft/signalr) package in your React application.
 
 The following code snippet demonstrates how to configure SignalR in the Document Editor.
 
@@ -318,7 +319,7 @@ public openDocument(responseText: string, roomName: string): void {
 
 Changes made on the client side must be transmitted to the server to be broadcast to other connected users. 
 
-The following code snippet demonstrates how to send changes to the server using the `contentChange` event in the Document Editor.
+The following code snippet demonstrates how to send changes to the server using the [contentChange](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#contentchange) event in the Document Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
