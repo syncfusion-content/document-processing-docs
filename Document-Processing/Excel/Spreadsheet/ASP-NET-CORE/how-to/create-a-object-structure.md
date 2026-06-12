@@ -9,7 +9,7 @@ documentation: ug
 
 # Create an object structure in ASP.NET Core Spreadsheet Control
 
-This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#properties) of the spreadsheet as value.
+This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#openfromjson/) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#properties/) of the spreadsheet as value.
 
 ```js
 { Workbook: {} }

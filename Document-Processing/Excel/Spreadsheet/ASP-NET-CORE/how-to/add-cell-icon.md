@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add icons inside cells in EJ2 ASP.NET Core Spreadsheet component | Syncfusion
-description: Learn here all about adding icon inside cells using a custom template in Syncfusion EJ2 ASP.NET Core Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Add icons inside cells in ASP.NET Core Spreadsheet component | Syncfusion
+description: Learn here all about adding icon inside cells using a custom template in Syncfusion ASP.NET Core Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Spreadsheet like a Grid in EJ2 ASP.NET Core Spreadsheet | Syncfusion
+title: Customize Spreadsheet like a Grid in ASP.NET Core Spreadsheet | Syncfusion
 description: Customize the EJ2 ASP.NET Core Spreadsheet to look and behave like a data grid by hiding UI elements and adding checkboxes for grid-like selection.
 control: Spreadsheet 
 platform: document-processing

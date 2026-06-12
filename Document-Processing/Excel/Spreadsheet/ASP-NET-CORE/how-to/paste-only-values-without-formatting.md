@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Paste Without Formatting in EJ2 ASP.NET Core Spreadsheet component | Syncfusion
-description: Learn here about Paste only values without formatting during copy and paste in Syncfusion EJ2 ASP.NET Core Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Paste Without Formatting in ASP.NET Core Spreadsheet Control | Syncfusion
+description: Learn here about Paste only values without formatting during copy and paste in Syncfusion ASP.NET Core Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug

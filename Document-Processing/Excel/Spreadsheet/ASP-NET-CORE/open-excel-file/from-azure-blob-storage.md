@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open excel from Azure Blob in EJ2 ASP.NET Core Spreadsheet control | Syncfusion
+title: Open excel from Azure Blob in ASP.NET Core Spreadsheet control | Syncfusion
 description: Learn about how to Open an Excel file from Azure Blob Storage in EJ2 ASP.NET Core Spreadsheet control of Syncfusion Essential JS 2.
 platform: document-processing
 control: Open file from Azure Blob Storage
 documentation: ug
 ---
 
-# Open file from Azure Blob Storage
+# Open file from Azure Blob Storage in ASP.NET Core
 
 To load a file from Azure Blob Storage in a Spreadsheet Component, you can follow the steps below
 

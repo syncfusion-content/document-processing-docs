@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Opening excel from AWS S3 in EJ2 ASP.NET Core Spreadsheet control | Syncfusion
+title: Opening excel from AWS S3 in ASP.NET Core Spreadsheet Control | Syncfusion
 description: Learn about how to Open an Excel file from AWS S3 in EJ2 ASP.NET Core Spreadsheet control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open file from AWS S3
 documentation: ug
 ---
 
-# Open file from AWS S3
+# Open file from AWS S3 in ASP.NET Core Spreadsheet
 
 To load a file from AWS S3 in a Spreadsheet Component, you can follow the steps below
 

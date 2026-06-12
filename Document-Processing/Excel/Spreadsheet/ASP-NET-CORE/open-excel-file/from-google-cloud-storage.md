@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open excel from Google Cloud in EJ2 ASP.NET Core Spreadsheet control | Syncfusion
+title: Open excel from Google Cloud in ASP.NET Core Spreadsheet control | Syncfusion
 description: Learn about how to Open an Excel file from Google Cloud Storage in EJ2 ASP.NET Core Spreadsheet control of Syncfusion Essential JS 2.
 platform: document-processing
 control: Open file from Google Cloud Storage
 documentation: ug
 ---
 
-# Open file from Google Cloud Storage
+# Open file from Google Cloud Storage in ASP.NET Core
 
 To load a file from Google Cloud Storage in a Spreadsheet Component, you can follow the steps below
 

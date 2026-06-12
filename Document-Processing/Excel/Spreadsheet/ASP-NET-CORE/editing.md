@@ -24,7 +24,7 @@ You can start editing by one of the following ways,
 * Press `F2` key to edit the active cell.
 * Use formula bar to perform editing.
 * Use `BACKSPACE` or `SPACE` key to clear the cell content and start the edit mode.
-* Using the [`startEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#startedit) method.
+* Using the [`startEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#startedit/) method.
 
 ## Save cell
 
@@ -39,9 +39,9 @@ If the cell is in editable state, you can save the edited cell by one of the fol
 To cancel the editing without saving the changes, you can use one of the following ways,
 
 * Press `ESCAPE` key, this will remove the editable state and update the unchanged cell content.
-* Using the [`closeEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#closeedit) method.
+* Using the [`closeEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#closeedit/) method.
 
-The following sample shows how to prevent the editing and cell save. Here `E` column prevent the editing by using cancel argument as true in [`cellEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#celledit) event. In `D` column, prevent saving the edited changes by using cancel argument as true in [`beforeCellSave`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#beforecellsave) and use [`closeEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#closeedit) method in spreadsheet.
+The following sample shows how to prevent the editing and cell save. Here `E` column prevent the editing by using cancel argument as true in [`cellEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#celledit/) event. In `D` column, prevent saving the edited changes by using cancel argument as true in [`beforeCellSave`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#beforecellsave/) and use [`closeEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#closeedit/) method in spreadsheet.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}

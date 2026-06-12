@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Create Dynamic Cell Templates with Dropdowns in ASP.NET Core Spreadsheet
+# Create Dynamic Cell Templates with Dropdowns
 
 You can add templates to cells in the Syncfusion Spreadsheet component by dynamically assigning a custom template property directly to individual cells. When a cell has this custom template property, you can use the [beforeCellRender](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeCellRender) event to append the desired template element to the cell.
 

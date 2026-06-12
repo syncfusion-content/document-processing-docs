@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Prevent actions without read-only and protection in ASP.NET Core Spreadsheet
+# Prevent actions without read-only and protection
 
 In Syncfusion ASP.NET Core Spreadsheet, the [**read-only**](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/protect-sheet#make-cells-read-only-without-protecting-worksheet) feature makes a range of cells, rows, or columns completely non-editable and restricts all spreadsheet actions on those cells. Similarly, the [**sheet protection**](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/protect-sheet#protect-sheet) feature locks the entire sheet and restricts all spreadsheet actions on the sheet. It does not allow actions such as formatting cells, rows, or columns, selecting cells, or inserting hyperlinks—unless these options are explicitly enabled in the [`protectSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.ProtectSettingsModel.html).
 
@@ -25,7 +25,7 @@ To prevent editing for specific cells, use the [`cellEdit`](https://help.syncfus
 
 ```js
 // Triggers when cell editing starts in the spreadsheet.
-    const cellEdit = (args: any) =>{
+    fucntion cellEdit(args) {
         var addressRange = getCellIndexes(args.address.split('!')[1]);
         // preventing cellEditing from the readOnly columns
         if (readOnlyColumns.includes(addressRange[1])) {
@@ -33,7 +33,7 @@ To prevent editing for specific cells, use the [`cellEdit`](https://help.syncfus
         }
     }
 
-    <SpreadsheetComponent ref={spreadsheetRef} cellEdit={cellEdit}>
+    <ejs-spreadsheet id="spreadsheet" cellEdit="cellEdit">
 ```
 
 ## Prevent specific spreadsheet actions

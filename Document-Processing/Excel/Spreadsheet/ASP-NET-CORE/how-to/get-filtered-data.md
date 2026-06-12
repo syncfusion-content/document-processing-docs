@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrieve filtered row data in EJ2 ASP.NET Core Spreadsheet component | Syncfusion
+title: Retrieve filtered row data in ASP.NET Core Spreadsheet Control | Syncfusion
 description: Learn here all about getting filtered row data in Syncfusion EJ2 ASP.NET Core Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing

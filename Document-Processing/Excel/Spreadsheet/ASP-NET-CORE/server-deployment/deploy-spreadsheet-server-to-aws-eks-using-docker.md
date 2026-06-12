@@ -119,9 +119,9 @@ Start by following the steps provided in this [link](../getting-started.md) to c
 
 ```js
 
-<SpreadsheetComponent
-	openUrl={`http://${serviceDNS}:5000/api/spreadsheet/open`}
-	saveUrl={`http://${serviceDNS}:5000/api/spreadsheet/save`}
+<ejs-spreadsheet
+	openUrl="http://${serviceDNS}:5000/api/spreadsheet/open"
+	saveUrl="http://${serviceDNS}:5000/api/spreadsheet/save"
 />
 
 ```
