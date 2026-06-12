@@ -176,7 +176,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Register the Syncfusion Blazor service in the **~/Program.cs** file of your Blazor WebAssembly App.
+Register the Syncfusion Blazor service in the **~/Program.cs** file of your Blazor WebAssembly App. After the builder is created.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -197,15 +197,13 @@ builder.Services.AddSyncfusionBlazor();
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the <head> section and the script reference at the end of the <body> in the **~/index.html** file as shown below.
 
 {% tabs %}
-{% highlight razor tabtitle="index.html" %}
+{% highlight html tabtitle="index.html" %}
 
 <head>
-    ....
     <!-- Syncfusion Blazor components theme -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 <body>
-    ....
     <!-- Syncfusion Blazor Spreadsheet Editor script -->
     <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
 </body>
