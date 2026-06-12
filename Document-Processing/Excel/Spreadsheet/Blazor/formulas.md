@@ -135,6 +135,8 @@ As selections are expanded, contracted, or changed, aggregate values update inst
 **Empty and Non-Numeric Handling:**
 Empty cells and cells containing text or formulas are excluded from Sum and Average calculations. The Count function may include or exclude these depending on the cell content type.
 
+![Aggregates](./images/aggregates-status-bar.gif)
+
 ## Supported Formulas
 
 The Spreadsheet component supports a wide range of built-in formulas, enabling powerful data analysis and manipulation. Below is the list of formulas supported in the Spreadsheet component:
