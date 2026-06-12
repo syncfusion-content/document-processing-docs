@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with React DOCX Editor
 
-Syncfusion® React DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a React application. 
+Syncfusion<sup style="font-size:70%">&reg;</sup> [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a React application. 
 
 ## Steps to create a React DOCX Editor
 
@@ -20,7 +20,7 @@ Syncfusion® React DOCX Editor (Document Editor) enables you to create, edit, vi
 
 ### Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for Document Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ### Create a new React application
 
@@ -31,9 +31,9 @@ npm create vite@latest documenteditor-app -- --template react-ts
 cd documenteditor-app
 ```
 
-### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
+### Install the Document Editor packages
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
+The Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
 
 
 To install the Document Editor component, use the following command:
@@ -57,12 +57,12 @@ Add the Document Editor component and its dependent component styles available i
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-documenteditor/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-react-documenteditor/styles/material.css';
 
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
+### Add the Document Editor component
 
 Add the Document Editor component to your application. In the `src/App.tsx` file, add the following code to initialize the component:
 
@@ -94,7 +94,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 ### Run the application
 
@@ -111,7 +111,7 @@ npm run dev
 
 ### Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
+[System requirements for Document Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
 ### Create a new React application
 
@@ -122,9 +122,9 @@ npm create vite@latest documenteditor-app -- --template react
 cd documenteditor-app
 ```
 
-### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
+### Install the Document Editor packages
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> React Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
+The Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
 
 
 To install the Document Editor component, use the following command:
@@ -148,12 +148,12 @@ Add the Document Editor component and its dependent component styles available i
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-documenteditor/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-react-documenteditor/styles/material.css';
 
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
+### Add the Document Editor component
 
 Add the Document Editor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
 
@@ -182,7 +182,7 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-> Note: The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 ### Run the  application
 
@@ -199,11 +199,11 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of React Document Editor](./images/react_getting_started.png)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-document-editor-component).
-
 You can also explore the Document Editor interactively using the live sample below.
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs3" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started).
 
 ## Video tutorial
 
@@ -221,7 +221,7 @@ The Document Editor component requires server-side interactions for the followin
 * Spell check
 * Save as file formats other than SFDT and DOCX
 
-> Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
 

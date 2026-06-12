@@ -23,6 +23,7 @@ The following table shows the features available in our Syncfusion EJ2 Spreadshe
 | Formulae | Partially | EJ2 supports limited number of [`most used formulas`](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/formulas#supported-formulas)  |
 | Named range | Yes | - |
 | Data Binding | Yes | - |
+| AI Assist | Yes | - |
 | Cell Formatting | Yes | - |
 | Number Formatting | Yes | - |
 | Context menu | Yes | - |

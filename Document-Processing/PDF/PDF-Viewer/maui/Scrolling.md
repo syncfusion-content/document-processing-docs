@@ -120,12 +120,6 @@ On Android and iOS platforms, the scroll head offers a quick way to move through
 
 ![Scroll Head](Images\ScrollHead.png)
 
-### Page Navigation via Scroll Head
-
-Tap the scroll head to open a page navigation dialog. Enter a valid page number and tap **OK** to jump directly to that page.
-
-![Page navigation by tapping scroll head](Images\PageNavigationUsingScrollHead.gif)
-
 ### Show or Hide the Scroll Head
 
 Use the [ShowScrollHead](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowScrollHead) property to control the visibility of the scroll head.

@@ -1103,58 +1103,6 @@ document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//Create a new Word document 
-WordDocument document = new WordDocument();
-//Add new section to the document
-IWSection section = document.AddSection();
-//Add new paragraph to the section
-IWParagraph firstParagraph = section.AddParagraph();
-//Add new text to the paragraph
-IWTextRange firstText = firstParagraph.AppendText("This is the first text range. ");
-//Apply formatting for first text range
-firstText.CharacterFormat.Bold = true;
-firstText.CharacterFormat.FontSize = 14;
-firstText.CharacterFormat.Shadow = true;
-firstText.CharacterFormat.SmallCaps = true;
-IWTextRange secondText = firstParagraph.AppendText("This the second text range");
-//Apply formatting for second text range
-secondText.CharacterFormat.HighlightColor = Syncfusion.Drawing.Color.GreenYellow;
-secondText.CharacterFormat.UnderlineStyle = Syncfusion.Drawing.UnderlineStyle.DotDash;
-secondText.CharacterFormat.Italic = true;
-secondText.CharacterFormat.FontName = "Times New Roman";
-secondText.CharacterFormat.TextColor = Syncfusion.Drawing.Color.Green;
-//Add new paragraph to the section
-IWParagraph secondParagraph = section.AddParagraph();
-//Add new text to the paragraph
-IWTextRange thirdText = secondParagraph.AppendText("שלום עולם");
-thirdText.CharacterFormat.Bidi = true;
-//Set language Identifier for right to left characters.
-thirdText.CharacterFormat.LocaleIdBidi = (short)LocaleIDs.he_IL;
-//Add third paragraph to the section.
-IWParagraph thirdParagraph = section.AddParagraph();
-//Add text to the third paragraph
-IWTextRange fourthText = thirdParagraph.AppendText("X");
-IWTextRange fifthText = thirdParagraph.AppendText("2");
-//Apply super script formatting for fifth text range.
-fifthText.CharacterFormat.SubSuperScript = SubSuperScript.SuperScript;
-IWParagraph fourthParagraph = section.AddParagraph();
-//Add text to the fourth paragraph
-IWTextRange sixthText = fourthParagraph.AppendText("m");
-IWTextRange seventhText = fourthParagraph.AppendText("3");
-//Apply sub script formatting for seventh text range
-seventhText.CharacterFormat.SubSuperScript = SubSuperScript.SubScript;
-//Save and close the Word document instance
-MemoryStream stream = new MemoryStream();
-//Save the Word file to MemoryStream
-document.Save(stream, FormatType.Docx);
-document.Close();
-//Save the stream as a file in the device and invoke it for viewing
-Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Result.docx", "application/msword", stream);
-//Download the helper files from the following link to save the stream as file and open the file for viewing in Xamarin platform
-//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Apply-formatting-to-text).

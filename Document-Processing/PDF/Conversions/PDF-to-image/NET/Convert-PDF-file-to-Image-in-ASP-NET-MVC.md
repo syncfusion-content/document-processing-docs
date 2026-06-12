@@ -24,17 +24,20 @@ Step 3: Install [Syncfusion.PdfToImageConverter.AspNet.Mvc5](https://www.nuget.o
 
 Step 4: Include the following namespaces in the HomeController.cs file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 using Syncfusion.PdfToImageConverter;
 using System.Drawing;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add a new button in the Index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# tabtitle="~/Index.cshtml" %}
 
 @{Html.BeginForm("ExportToImage", "Home", FormMethod.Post);
     {
@@ -46,10 +49,12 @@ Step 5: Add a new button in the Index.cshtml as shown below.
  }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new action method named ExportToImage in HomeController.cs and include the below code example to convert PDF document to Image using Convert method in PdfToImageConverter class.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
@@ -62,6 +67,7 @@ MemoryStream stream = outputStream as MemoryStream;
 return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Image.Jpeg, "sample.jpeg");
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get the image as follows.
 ![Convert PDFToImage MVC output](GettingStarted_images/pdftoimageoutput.png)

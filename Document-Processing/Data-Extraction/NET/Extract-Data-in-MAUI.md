@@ -8,9 +8,9 @@ keywords: Assemblies
 
 ---
 
-# Extract Data from PDF in MAUI Application
+# Extract Data from PDF in .NET MAUI
 
-The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in NET MAUI applications.
+The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in .NET MAUI applications.
 
 ## Steps to Extract Data from PDF in .NET MAUI
 
@@ -38,7 +38,7 @@ Step 3: Install the [Syncfusion.SmartDataExtractor.NET](https://www.nuget.org/pa
 
 N> If you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Add a new button to the **MainPage.xaml** as shown below.
+Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
 
@@ -48,31 +48,31 @@ Step 3: Add a new button to the **MainPage.xaml** as shown below.
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Extract_Data_MAUI.MainPage">
 
-	<ScrollView>
-		<VerticalStackLayout
+    <ScrollView>
+        <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
 
-			<Label
+            <Label
                 Text="Smart Data Extractor Demo"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-			<Button
+            <Button
                 Text="Extract Data from PDF"
                 SemanticProperties.Hint="Extract structured data from PDF"
                 Clicked="OnExtractDataClicked"
                 HorizontalOptions="Fill" /> 
 
-		</VerticalStackLayout>
-	</ScrollView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
 
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
+Step 5: Include the following namespaces in the **MainPage.xaml.cs** file.
 
 {% tabs %}
 
@@ -85,7 +85,7 @@ using Syncfusion.SmartDataExtractor;
 
 {% endtabs %}
 
-Step 5: Add a new action method **OnExtractDataClicked** in MainPage.xaml.cs and include the below code snippet to **Extract Data from PDF**.
+Step 6: Add a new action method **OnExtractDataClicked** in MainPage.xaml.cs and include the following code snippet to **Extract Data from PDF**.
 
 {% tabs %}
 
@@ -108,14 +108,14 @@ await DisplayAlert("Success", $"Extracted data saved to {outputPath}", "OK");
 
 {% endtabs %}
 
-Step 6: Run the Application.
+Step 7: Run the Application.
 
 1. Select the target framework, device or emulator.
 2. Press <kbd>F5</kbd> to run the application.
 
-By executing the program, you will get the **JSON File** as follows.
+By executing the program, you will get the JSON file as follows.
 
-![Extract Data in .NET MAUI](GettingStarted_images/JSON_Output.png)
+![.NET MAUI output JSON document](GettingStarted_images/JSON_Output.png)
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-data-extraction) to explore the rich set of Syncfusion<sup>&reg;</sup> Data Extraction library features. 
 
@@ -141,13 +141,13 @@ Step 1: Create a new C# .NET MAUI app project.
 * Select the project location, type the project name and press enter.
 * Then choose **Create project**.
 
-Step 2: To **Extract Data from PDF Document in .NET MAUI app**, install [Syncfusion.SmartDataExtractor.NET.Core](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.NET.Core) to the MAUI project.
+Step 2: To **Extract Data from PDF Document in .NET MAUI app**, install [Syncfusion.SmartDataExtractor.NET](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.NET) to the MAUI project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.SmartDataExtractor.NET.Core` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.SmartDataExtractor.NET` to install the NuGet package.
 
 ```
-dotnet add package Syncfusion.SmartDataExtractor.NET.Core
+dotnet add package Syncfusion.SmartDataExtractor.NET
 ```
 
 Step 3: Add a new button to the **MainPage.xaml** as shown below.
@@ -195,7 +195,7 @@ using Syncfusion.SmartDataExtractor;
 
 {% endtabs %}
 
-Step 5: Add a new action method **OnExtractDataClicked** in MainPage.xaml.cs and include the below code snippet to **Extract Data from PDF**.
+Step 5: Add a new action method **OnExtractDataClicked** in MainPage.xaml.cs and include the following code snippet to **Extract Data from PDF**.
 
 {% tabs %}
 
@@ -224,9 +224,9 @@ Step 6: Run the Application.
 1. Select the target framework, device or emulator.
 2. Press <kbd>F5</kbd> to run the application.
 
-By executing the program, you will get the **JSON File** as follows.
+By executing the program, you will get the JSON file as follows.
 
-![Extract Data in .NET MAUI](GettingStarted_images/JSON_Output.png)
+![.NET MAUI output JSON document](GettingStarted_images/JSON_Output.png)
 
 {% endtabcontent %}
 

@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Getting Started with Angular DOCX Editor
 
-Syncfusion® Angular DOCX Editor (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in an Angular application. 
+Syncfusion<sup style="font-size:70%">&reg;</sup> [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in an Angular application. 
 
 ## Steps to create an Angular DOCX Editor
 
 ### Prerequisites
 
-[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
+[System requirements for Document Editor](https://ej2.syncfusion.com/angular/documentation/system-requirement)
 
 ### Setup Angular environment
 
@@ -72,9 +72,9 @@ In this guide, CSS is selected as the stylesheet format.
 cd documenteditor-app
 ```
 
-### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor packages
+### Install the Document Editor packages
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
+The Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
 
 To install the Document Editor component, use the following command:
 
@@ -102,9 +102,9 @@ The following CSS files are available in the `node_modules/@syncfusion` package 
 {% endhighlight %}
 {% endtabs %}
 
-### Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component
+### Add the Document Editor component
 
-Modify the `src/app/app.ts` file to render the Document Editor component. Add the Angular Document Editor by using the <ejs-documenteditorcontainer> selector in the template section of the `src/app/app.ts` file.
+Modify `src/app/app.ts` to render the Document Editor component by adding the Angular Document Editor selector in its template section.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -135,7 +135,7 @@ export class App {}
 {% endhighlight %}
 {% endtabs %}
 
-> Note: The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 ### Run the application
 
@@ -145,15 +145,16 @@ Run the application using the following command:
 ng serve --open
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The Angular Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+After the application starts, open the localhost URL shown in the terminal. The Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
 ![Output of Angular Document Editor](./images/angular_getting_started.png)
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-angular-word-processor).
 
 You can also explore the Document Editor interactively using the live sample below.
 
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/getting-started).
+
 
 ## Video tutorial
 
@@ -171,7 +172,7 @@ The Document Editor component requires server-side interactions for the followin
 * Spell check
 * Save as file formats other than SFDT and DOCX
 
-> Note: If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
 

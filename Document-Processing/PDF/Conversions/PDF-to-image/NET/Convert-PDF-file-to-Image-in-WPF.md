@@ -23,7 +23,8 @@ Step 2: Install the [Syncfusion.PdfToImageConverter.WPF](https://www.nuget.org/p
 
 Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 using Syncfusion.PdfToImageConverter;
 using System.Drawing;
@@ -31,10 +32,12 @@ using System.IO;
 using System.Windows;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Add a new button in MainWindow.xaml to convert PDF document to Image file as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 <Grid HorizontalAlignment="Left" Margin="0,0,0,-0.333" Width="793">
 <Button Content="Convert PDF to Image" HorizontalAlignment="Left" Margin="318,210,0,0" VerticalAlignment="Top" Width="166" Click=" btnCreate_Click " Height="19"/>
@@ -43,10 +46,12 @@ Step 4: Add a new button in MainWindow.xaml to convert PDF document to Image fil
 </Grid>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add the following code in btnCreate_Click to convert PDF document to Image using Convert method in PdfToImageConverter class. 
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
@@ -59,6 +64,7 @@ Bitmap image = new Bitmap(outputStream);
 image.Save("sample.png");
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get the image as follows.
 ![Convert PDFToImage WPF output](GettingStarted_images/pdftoimageoutput.png)

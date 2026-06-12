@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Protect sheet in React Spreadsheet component
+# Protection in React Spreadsheet component
 
 Sheet protection allows you to prevent users from modifying data in the Spreadsheet.  
 When a sheet is protected, editing actions such as typing, formatting, or deleting content are restricted, ensuring that important data remains secure.
@@ -15,7 +15,9 @@ When a sheet is protected, editing actions such as typing, formatting, or deleti
 You can enable protection by using the [`protectSheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#protectsheet) method.  
 This locks the sheet and restricts user actions based on the protection settings you configure.
 
-## Protect Sheet
+## Sheet Protection
+
+### Protect Sheet
 
 Protect sheet feature helps you to prevent the unknown users from accidentally changing, editing, moving, or deleting data in a spreadsheet. And you can also protect the sheet with password. You can use the [`isProtected`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#isprotected) property to enable or disable the Protecting functionality.
 
@@ -65,11 +67,7 @@ The following example shows `Protect Sheet` functionality in the Spreadsheet con
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/protect-sheet-cs1" %}
 
-### Limitations of Protect sheet
-
-* Password encryption is not supported
-
-## Unprotect Sheet
+### Unprotect Sheet
 
 The **Unprotect Sheet** feature restores all functionalities that were disabled in a protected spreadsheet.  
 Once a sheet is unprotected, users can edit, format, insert, delete, and move data without restrictions.
@@ -82,7 +80,7 @@ In the active Spreadsheet, the sheet Unprotection can be done by any of the foll
 * Right-click the sheet tab, select the `Unprotect Sheet` item in the context menu.
 * Use the [`unprotectSheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#unprotectsheet) method programmatically.
 
-## Unlock the particular cells in the protected sheet
+### Unlock the particular cells in the protected sheet
 
 In protected spreadsheet, to make some particular cell or range of cells are editable, you can use [`lockCells`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#lockcells) method, with the parameter `range` and `isLocked` property as false.
 
@@ -103,7 +101,11 @@ In protected spreadsheet, to make some particular cell or range of cells are edi
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/unlock-cells-cs1" %}
 
-## Make cells read-only without protecting worksheet
+## Read-only
+
+The read-only feature allows you to restrict editing for specific rows, columns, or cell ranges without protecting the entire worksheet. This provides flexibility to safeguard important data while still allowing users to interact with other parts of the sheet as needed.
+
+### Make Cells Read-only Without Protecting the Worksheet
 
 Previously, you could make cells read-only by protecting the entire sheet using the [protectSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#protectsheet) method or through the UI option. Meanwhile, to make a specific range of cells editable within a protected sheet, you needed to use the [lockCells](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#lockcells) method, passing the `range` parameter and setting the `isLocked` property to **false**. 
 
@@ -172,7 +174,9 @@ The following example demonstrates how to make rows, columns, and cells read-onl
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/readonly-cs1" %}
 
-## Protect Workbook
+## Workbook Protection
+
+### Protect Workbook
 
 Protect workbook feature helps you to protect the workbook so that users cannot insert, delete, rename, hide the sheets in the spreadsheet. You can use the [`password`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#password) property to protect workbook with password. You can use the [`isProtected`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#isprotected) property to protect or unprotect the workbook without the password.
 
@@ -220,7 +224,7 @@ The following example shows `Protect Workbook` by using the [`password`](https:/
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/local-data-binding-cs4" %}
 
-## Unprotect Workbook
+### Unprotect Workbook
 
 The **Unprotect Workbook** feature restores full access to workbook-level operations such as inserting, deleting, renaming, moving, copying, hiding and unhiding sheets that were restricted when the workbook was protected.
 

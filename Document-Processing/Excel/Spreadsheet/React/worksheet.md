@@ -19,127 +19,17 @@ By using worksheets, you can:
 * Manage formulas and calculations independently across sheets.  
 * Import or export data while maintaining sheet-level configurations.
 
-## Add sheet
+## Overview of Worksheet Management Operations
 
-You can dynamically add or insert a sheet by one of the following ways,
+The React Spreadsheet component offers several worksheet management features to help you organize and customize your workbook. Here is a brief explanation of each feature, with links to their documentation:
 
-* Click the `Add Sheet` button in the sheet tab. This will add a new empty sheet next to current active sheet.
-* Right-click on the sheet tab, and then select `Insert` option from the context menu to insert a new empty sheet before the current active sheet.
-* Using [`insertSheet`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at your desired index.
-
-The following code example shows the insert sheet operation in spreadsheet.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/insert-sheet-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/insert-sheet-cs1/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/insert-sheet-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/insert-sheet-cs1/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/insert-sheet-cs1" %}
-
-### Insert a sheet programmatically and make it active sheet
-
-A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#goto) method.
-
-The following code example shows how to insert a sheet programmatically and make it the active sheet.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/insert-sheet-change-active-sheet-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/insert-sheet-change-active-sheet-cs1/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/insert-sheet-change-active-sheet-cs1" %}
-
-## Delete sheet
-
-The Spreadsheet supports removing an existing worksheet. You can delete a sheet in the following ways:
-
-* Right-click on the sheet tab, and then select the **Delete** option from the context menu.
-* Use the [`delete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete) method to remove sheets programmatically.  
-* Note: You cannot delete a worksheet if only one sheet exists in the workbook.
-
-## Rename sheet
-
-You can dynamically rename an existing worksheet in the following way,
-
-* Right-click on the sheet tab, and then select `Rename` option from the context menu.
-
-## Headers
-
-By default, the row and column headers are visible in worksheets. You can dynamically show or hide worksheet headers by using one of the following ways,
-
-* Switch to `View` tab, and then select `Hide Headers` option to hide both the row and column headers.
-* Set `showHeaders` property in `sheets` as `true` or `false` to show or hide the headers at initial load. By default, the `showHeaders` property is enabled in each worksheet.
-
-## Gridlines
-
-Gridlines act as a border like appearance of cells. They are used to distinguish cells on the worksheet. You can dynamically show or hide gridlines by using one of the following ways,
-
-* Switch to `View` tab, and then select `Hide Gridlines` option to hide the gridlines in worksheet.
-* Set `showGridLines` property in `sheets` as `true` or `false` to show or hide the gridlines at initial load. By default, the [showGridLines](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/sheet#showgridlines) property is enabled in each worksheet.
-
-The following code example shows the headers and gridlines operation in spreadsheet.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/headers-gridlines-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/headers-gridlines-cs1/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/headers-gridlines-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/headers-gridlines-cs1/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/headers-gridlines-cs1" %}
-
-## Sheet visibility
-
-Hiding a worksheet can help prevent unauthorized or accidental changes to your file.
-
-There are three visibility state as like Microsoft Excel,
-
-| State | Description |
-|-------|---------|
-| `Visible` | You can see the worksheet once the component is loaded. |
-| `Hidden` | This worksheet is not visible, but you can unhide by selecting the sheet from `List All Sheets` dropdown menu. |
-| `VeryHidden` | This worksheet is not visible and cannot be unhidden. Changing the state property to `Visible` is the only way to view this sheet. |
-
-The following code example shows the three types of sheet visibility state.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/sheet-visiblity-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/sheet-visiblity-cs1/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/sheet-visiblity-cs1/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/sheet-visiblity-cs1/app/datasource.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/sheet-visiblity-cs1" %}
+- **[Insert Sheet](./worksheet-management/insert-sheet)**: Add a new worksheet to your workbook, allowing you to expand and organize your data as needed.
+- **[Delete Sheet](./worksheet-management/delete-sheet)**: Remove an existing worksheet from your workbook when it is no longer required.
+- **[Rename Sheet](./worksheet-management/rename-sheet)**: Change the name of a worksheet to make it more descriptive or meaningful.
+- **[Duplicate Sheet](./worksheet-management/duplicate-sheet)**: Create an exact copy of a worksheet, including its data and formatting.
+- **[Move Sheet](./worksheet-management/move-sheet)**: Rearrange the order of worksheets within your workbook for better organization.
+- **[Sheet Visibility](./worksheet-management/sheet-visibility)**: Show or hide specific worksheets to control what is visible to users.
+- **[Headers and Gridlines](./worksheet-management/headers-and-gridlines)**: Display or hide row and column headers and gridlines to customize the worksheet view.
 
 ## Note
 

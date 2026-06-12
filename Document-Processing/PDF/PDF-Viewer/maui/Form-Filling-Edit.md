@@ -14,7 +14,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 ## Editing form fields programmatically
 
-All form field edits shown below should be placed in your page's code-behind (`MainPage.xaml.cs`). The document must be fully loaded before accessing `FormFields` — call these from the `DocumentLoaded` event handler or a button click after the document is open.
+All form field edits shown below should be placed in your page's code-behind (`MainPage.xaml.cs`). The document must be fully loaded before accessing [FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) — call these from the [DocumentLoaded](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded") event handler or a button click after the document is open.
 
 ### Editing text form fields
 
@@ -29,7 +29,7 @@ FormField formField = pdfViewer.FormFields.Where(x => x.Name == "name").FirstOrD
 if (formField is TextFormField nameTextBox)
 {
     // Set the value of the "name" text field.
-
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -147,7 +147,7 @@ The [Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Si
 
 #### Suppressing the signature modal view
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the [SignatureModalViewAppearing](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FormFieldModalViewAppearingEventArgs.html) event handler. 
 
 The below code snippet illustrates suppressing the signature modal view and using a UI implemented in the app in its place. In this illustration, it is assumed that the signature is produced in the form of an image stream when the user completes drawing the signature in the custom dialog. When the signing is completed using the custom dialog, a stamp annotation is created and assigned as the signature of the form field.   
 
@@ -183,6 +183,68 @@ Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 ### Button form fields
 
 Button form fields will be rendered in the PDF viewer. But the PDF viewer supports only the `GoTo` actions that navigates to a particular location in the PDF document alone. Other types of button actions are not supported.
+
+## Flatten form fields only on save
+
+The [FlattenOnSave](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_FlattenOnSave) property converts form fields into non-editable content only when the PDF document is saved. This means the form fields remain editable while the document is open, and are flattened (made part of the document content) during the save operation, preventing any further modification afterward.
+
+### Flatten specific form fields
+
+You can selectively flatten specific form fields, such as signature fields, by iterating through the form field collection.
+
+{% tabs %}
+{% highlight c# %}
+
+foreach (var item in pdfViewer.FormFields)
+{
+    //Iterate Only signature form field and flatten it
+    if (item is SignatureFormField signature)
+    {
+        item.FlattenOnSave = true;
+    }
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+### Flatten all form fields
+
+To flatten all form fields in the document, set the FlattenOnSave property for each field:
+
+{% tabs %}
+{% highlight c# %}
+
+//Iterate all the form fields and set flatten
+foreach (var item in pdfViewer.FormFields)
+{
+    item.FlattenOnSave = true;
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+## Controlling form field editing at the viewer Level
+
+The `AllowEditFormFields` property is used to control form field editing at the viewer level. By default, editing is enabled, allowing users to interact with all supported form fields. When this property is set to false, all form fields become non-editable, making the document effectively read-only without modifying individual field properties. This behavior applies to all form field types and takes effect immediately on the loaded document.
+
+You can disable editing programmatically using the following:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfPdfViewer 
+    x:Name="PdfViewer"
+    AllowEditFormFields="False" />
+{% endhighlight %}
+
+{% highlight c# %}
+// Disable form field editing
+pdfViewer.AllowEditFormFields = false;
+{% endhighlight %}
+{% endtabs %}
+
+This property supports dynamic changes at runtime, meaning you can enable or disable form field editing at the viewer level based on requirements, and the changes will be applied instantly.
+
+N>Setting AllowEditFormFields to false does not modify the ReadOnly property of individual form fields. It acts as an additional layer of control, and a field remains non-editable if either its ReadOnly property is true or viewer-level editing is disabled
 
 ## See Also
 - [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview)
