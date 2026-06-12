@@ -16,20 +16,9 @@ This document provides the reference details for text selection APIs and events 
 
 ### SelectTextRegionAsync
 
-Programmatically selects text within a specified page and bounds.
+The [SelectTextRegionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SelectTextRegionAsync_System_Int32_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_Bound__) method programmatically selects text within a specified page and bounds. Use to highlight specific text regions based on user interactions, search results, or application logic.
 
-**Method signature:**
-
-```cshtml
-SelectTextRegionAsync(pageNumber: int, bounds: List<Bound>): Task
-```
-
-**Parameters:**
-
-- pageNumber: `int` indicating the target page (1 based indexing)
-- bounds: `List<Bound>` array defining the selection region
-
-**Example:**
+The following example illustrates how to handle the SelectTextRegionAsync Method.
 
 {% tabs %}
 {% highlight razor %}
@@ -50,15 +39,14 @@ SelectTextRegionAsync(pageNumber: int, bounds: List<Bound>): Task
     {
         List<Bound> bounds = new List<Bound>() {
             new Bound() {              
-            X= 349.312,
-            Y= 372.32,
-            Height= 32.3104,
-            Width=100
-
+                X = 349.312,
+                Y = 372.32,
+                Height = 32.3104,
+                Width = 100
             }
         };
-        if(Viewer!=null)
-        await Viewer.SelectTextRegionAsync(2, bounds);
+        if(Viewer != null)
+            await Viewer.SelectTextRegionAsync(2, bounds);
     }
 }
 {% endhighlight %}
@@ -66,22 +54,16 @@ SelectTextRegionAsync(pageNumber: int, bounds: List<Bound>): Task
 
 ### ClearTextSelectionAsync
 
-Clears all text selection in the PDF document. Removes any highlighted or selected text regions.
+The [ClearTextSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ClearTextSelectionAsync) event clears all text selection in the PDF document. Removes any highlighted or selected text regions and resets the selection state. Use to reset the UI when users start a new operation or when clearing filtered results.
 
-**Method signature:**
-
-```cshtml
-ClearTextSelectionAsync(): Task
-```
-
-**Example:**
+The following example illustrates how to handle the ClearTextSelectionAsync Method.
 
 {% tabs %}
 {% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
-<SfButton OnClick="ClearTextSelection">ClearTextSelection</SfButton>
+<SfButton OnClick="ClearTextSelection">Clear Text Selection</SfButton>
 <SfPdfViewer2 Width="100%"
               Height="100%"
               DocumentPath="@DocumentPath"
@@ -93,8 +75,8 @@ ClearTextSelectionAsync(): Task
 
     public async Task ClearTextSelection()
     {
-        if(Viewer!=null)
-        await Viewer.ClearTextSelectionAsync();
+        if(Viewer != null)
+            await Viewer.ClearTextSelectionAsync();
     }
 }
 {% endhighlight %}
@@ -104,64 +86,66 @@ ClearTextSelectionAsync(): Task
 
 ### OnTextSelectionStart
 
-Triggered when the user begins selecting text.
+The [OnTextSlectionStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSelectionStart) event is triggered when the user begins selecting text. Use to perform actions when text selection starts, such as logging, updating UI elements, or starting data collection.
+
+- Event arguments: [TextSelectionStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextSelectionStartEventArgs.html) exposes:
+- `PageNumber` - The page where the selection started (1‑based indexing).
+
+The following example illustrates how to handle the OnTextSelectionStart event.
 
 {% tabs %}
 {% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
-<SfPdfViewer2 DocumentPath="@DocumentPath">
+
+<SfPdfViewer2 Width="100%"
+              Height="100%"
+              DocumentPath="@DocumentPath">
     <PdfViewerEvents OnTextSelectionStart="OnTextSelectionStart"></PdfViewerEvents>
 </SfPdfViewer2>
 
 @code {
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
     private void OnTextSelectionStart(TextSelectionStartEventArgs args)
     {
-        // PageNumber - The page where the selection started (1‑based indexing)
         int pageNumber = args.PageNumber;
-        Console.WriteLine(pageNumber);
+        Console.WriteLine($"Text selection started on page: {pageNumber}");
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-**Arguments include:**
-
-- `PageNumber` - The page where the selection started (1‑based indexing).
-
 ### OnTextSelectionEnd
 
-Triggered when the selection operation completes.
+The [OnTextSlectionEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnTextSelectionEnd) event is triggered when the selection operation completes. Use to capture and process selected text, update UI elements, or perform operations based on the selection bounds and content.
+
+- Event arguments: [TextSelectionEndEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextSelectionEndEventArgs.html) exposes:
+- `TextBounds` - Defines the bounds of the selected text in the page.
+- `TextContent` - Defines the text content selected in the page.
+
+The following example illustrates how to handle the OnTextSelectionEnd Event.
 
 {% tabs %}
 {% highlight razor %}
-<SfPdfViewer2 DocumentPath="@DocumentPath">
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 Width="100%"
+              Height="100%"
+              DocumentPath="@DocumentPath">
     <PdfViewerEvents OnTextSelectionEnd="OnTextSelectionEnd"></PdfViewerEvents>
 </SfPdfViewer2>
 
 @code {
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
     private void OnTextSelectionEnd(TextSelectionEndEventArgs args)
     {
-        // PageNumber - Page where the selection ended (1‑based indexing)
-        int pageNumber = args.PageNumber;
-        Console.WriteLine(pageNumber);
-        // TextContent - The full text extracted from the selection range
         string textContent = args.TextContent;
-        Console.WriteLine(textContent);
-        // TextBounds - Array of bounding rectangles that define the geometric region of the selected text
         List<TextBound> textBounds = args.TextBounds;
-        Console.WriteLine(textBounds);
     }
 }
 {% endhighlight %}
 {% endtabs %}
-
-**Arguments include:**
-
-- `PageNumber` - Page where the selection ended (1‑based indexing).
-- `TextContent` - The full text extracted from the selection range.
-- `TextBounds` - Array of bounding rectangles that define the geometric region of the selected text. Useful for custom UI overlays or programmatic re-selection.
 
 ## See also
 

@@ -28,11 +28,11 @@ The feature behaves consistently across single-page and multi-page documents.
 
 ## Copying text
 
-Copying is available through several user interaction methods.
+You can copy selected text using the following options:
 
 ### Using the context menu
 
-When text is selected, the built‑in context menu shows a Copy option. Selecting this option copies the highlighted text to the clipboard. See the [context menu](../context-menu/builtin-context-menu#text-menu-items) documentation for further explanation.
+When text is selected, the built‑in context menu shows a Copy option. Selecting this option copies the highlighted text to the clipboard. See the [context menu](../context-menu) documentation for further explanation.
 
 ### Using keyboard shortcuts
 

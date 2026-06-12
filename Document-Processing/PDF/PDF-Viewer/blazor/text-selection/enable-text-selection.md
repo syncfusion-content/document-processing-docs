@@ -12,11 +12,7 @@ domainurl: ##DomainURL##
 
 This guide explains how to enable or disable text selection in the Syncfusion Blazor PDF Viewer using both initialization-time settings and runtime toggling.
 
-**Outcome:** By the end of this guide, you will be able to control whether users can select text in the PDF Viewer.
-
-## Steps to toggle text selection
-
-### 1. Disable text selection at initialization
+### Disable text selection at initialization
 
 Use the [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) property during initialization to disable or enable text selection. The following example disables the text selection during initialization.
 
@@ -35,7 +31,7 @@ Use the [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 {% endhighlight %}
 {% endtabs %}
 
-### 2. Toggle text selection at runtime
+### Toggle text selection at runtime
 
 The [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) property can be toggled at runtime using buttons to enable or disable text selection dynamically. The following example demonstrates how to toggle text selection using button click events while also updating the [InteractionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_InteractionMode) and reloading the document.
 
@@ -83,10 +79,6 @@ The [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 - Interactive apps: Toggle selection based on user roles or document states.
 
 N> Text selection is enabled by default. Set `EnableTextSelection` to `false` to disable it.
-
-## Troubleshooting
-
-If text selection remains active, ensure that the [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) property is set to `false`.
 
 ## See also
 
