@@ -1,0 +1,53 @@
+@Html.EJS().Spreadsheet("spreadsheet").ShowSheetTabs(false).Created("created").BeforeCellRender("beforeCellRender").Render()
+
+<script>
+    function addDropDownlist(element, data) {
+        element.innerHTML = '';
+        var inputEle = document.createElement('input');
+        element.appendChild(inputEle);
+        new ej.dropdowns.DropDownList({
+            placeholder: 'Select a value',
+            dataSource: data,
+            cssClass: 'e-dropdown-list',
+            change: function (event) {
+                var spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+                spreadsheet.updateCell({ value: event.value ? event.value.toString() : '' }, spreadsheet.getActiveSheet().activeCell);
+            }
+        }, inputEle);
+    }
+
+    function created() {
+        var spreadsheet = this;
+        spreadsheet.addRibbonTabs([
+            {
+                header: { text: 'Template' },
+                content: [
+                    {
+                        text: 'DropDown List',
+                        tooltipText: 'Insert dropdown into active cell',
+                        click: function () {
+                            var sheet = spreadsheet.getActiveSheet();
+                            spreadsheet.updateCell({ template: 'dropdown-list' }, sheet.activeCell);
+                            spreadsheet.resize();
+                        }
+                    }
+                ]
+            }
+        ]);
+
+        spreadsheet.setRowsHeight(35, ['1:100']);
+        for (var colIdx = 0; colIdx <= 3; colIdx++) {
+            var colLetter = String.fromCharCode(65 + colIdx);
+            spreadsheet.updateCell({ template: 'dropdown-list' }, colLetter + '1');
+        }
+        spreadsheet.resize();
+    }
+
+    function beforeCellRender(args) {
+        if (args.rowIndex !== undefined && args.colIndex !== undefined) {
+            if (args.cell && args.cell.template === 'dropdown-list') {
+                addDropDownlist(args.element, [10, 20, 30, 40, 50, 60]);
+            }
+        }
+    }
+</script>

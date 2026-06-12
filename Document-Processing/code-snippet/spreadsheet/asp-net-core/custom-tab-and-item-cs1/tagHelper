@@ -1,0 +1,32 @@
+<div style="padding: 10px;">
+    <ejs-spreadsheet id="spreadsheet" created="handleCreated" showFormulaBar="true" showSheetTabs="true">
+    </ejs-spreadsheet>
+</div>
+
+<script>
+    var spreadsheet;
+
+    function handleCreated() {
+        spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        if (!spreadsheet) return;
+
+        spreadsheet.addRibbonTabs(
+            [
+                {
+                    header: { text: 'Custom tab' },
+                    content: [
+                        {
+                            text: 'Custom',
+                            tooltipText: 'Custom Btn',
+                            cssClass: 'e-custom-btn',
+                            click: function () {
+                                // Your custom action here
+                                spreadsheet.updateCell({ value: 'Custom action executed' }, 'A1');
+                            }
+                        }
+                    ]
+                }
+            ]
+        );
+    }
+</script>

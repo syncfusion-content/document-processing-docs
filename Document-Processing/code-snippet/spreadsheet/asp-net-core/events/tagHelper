@@ -1,0 +1,58 @@
+<div>
+    <div>
+        <ejs-spreadsheet id="spreadsheet" actionBegin="actionBegin" actionComplete="actionComplete">
+            <e-spreadsheet-sheets>
+                <e-spreadsheet-sheet>
+                    <e-spreadsheet-ranges>
+                        <e-spreadsheet-range dataSource="ViewBag.DefaultData"></e-spreadsheet-range>
+                    </e-spreadsheet-ranges>
+            <e-spreadsheet-columns>
+                <e-spreadsheet-column width="180"></e-spreadsheet-column>
+                <e-spreadsheet-column width="130"></e-spreadsheet-column>
+                <e-spreadsheet-column width="130"></e-spreadsheet-column>
+                <e-spreadsheet-column width="180"></e-spreadsheet-column>
+                <e-spreadsheet-column width="130"></e-spreadsheet-column>
+                <e-spreadsheet-column width="120"></e-spreadsheet-column>
+            </e-spreadsheet-columns>
+            </e-spreadsheet-sheet>
+            </e-spreadsheet-sheets>
+        </ejs-spreadsheet>
+    </div>
+    <div>
+        <h4><b>Event Trace</b></h4>
+        <div id="evt">
+            <div>
+                <span id="EventLog"></span>
+            </div>
+            <button id="clearBtn" class='e-btn' onclick="clearBtnClick()">Clear</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function actionBegin(args) {
+        appendElement(`actionBegin triggered for <b>&nbsp;${args.action}</b> action<hr>`);
+        console.log(args);
+    }
+
+    function actionComplete(args) {
+        appendElement(`actionComplete triggered for <b>&nbsp;${args.action}</b> action<hr>`);
+        console.log(args);
+    }
+
+    function clearBtnClick() {
+        const eventLog = document.getElementById('EventLog');
+        if (eventLog) {
+            eventLog.innerHTML = "";
+        }
+    }
+
+    function appendElement(html) {
+        const span = document.createElement("span");
+        span.innerHTML = html;
+        const log = document.getElementById('EventLog');
+        if (log) {
+            log.insertBefore(span, log.firstChild);
+        }
+    }
+</script>

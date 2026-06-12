@@ -1,0 +1,43 @@
+@Html.EJS().Spreadsheet("spreadsheet").ShowSheetTabs(false).Created("created").BeforeCellRender("beforeCellRender").Render()
+
+<script>
+    function createPlusIconWrapper() {
+        var wrapperDiv = document.createElement("div");
+        wrapperDiv.className = 'e-custom-wrapper';
+        var iconSpan = document.createElement("span");
+        iconSpan.className = 'e-icons e-plus e-custom-icon';
+        wrapperDiv.appendChild(iconSpan);
+        return wrapperDiv;
+    }
+
+    function created() {
+        var spreadsheet = this;
+        spreadsheet.updateCell({ template: 'plus-icon' }, 'A1');
+        spreadsheet.updateCell({ template: 'plus-icon' }, 'B1');
+        spreadsheet.updateCell({ template: 'plus-icon' }, 'C1');
+        spreadsheet.resize();
+        spreadsheet.addRibbonTabs([
+            {
+                header: { text: 'Template' },
+                content: [
+                    {
+                        text: 'Add Icon',
+                        tooltipText: 'Initialize',
+                        click: function () {
+                            var sheet = spreadsheet.getActiveSheet();
+                            spreadsheet.updateCell({ template: 'plus-icon' }, sheet.activeCell);
+                            spreadsheet.resize();
+                        }
+                    }
+                ]
+            }
+        ]);
+    }
+
+    function beforeCellRender(args) {
+        if (args.cell && args.cell.template === 'plus-icon') {
+            var wrapperDiv = createPlusIconWrapper();
+            args.element.insertBefore(wrapperDiv, args.element.firstChild);
+        }
+    }
+</script>

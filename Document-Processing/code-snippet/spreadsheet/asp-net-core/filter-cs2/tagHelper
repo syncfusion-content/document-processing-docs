@@ -1,0 +1,54 @@
+<div class='control-section spreadsheet-control'>
+    <button class="e-btn custom-btn" onclick="getFilteredData()"> Get Filtered Data </button>
+    <ejs-spreadsheet id="spreadsheet" created="created">
+        <e-spreadsheet-sheets>
+            <e-spreadsheet-sheet>
+                <e-spreadsheet-ranges>
+                    <e-spreadsheet-range dataSource="ViewBag.DefaultData"></e-spreadsheet-range>
+                </e-spreadsheet-ranges>
+                <e-spreadsheet-columns>
+                    <e-spreadsheet-column width="180"></e-spreadsheet-column>
+                    <e-spreadsheet-column width="130"></e-spreadsheet-column>
+                    <e-spreadsheet-column width="130"></e-spreadsheet-column>
+                    <e-spreadsheet-column width="180"></e-spreadsheet-column>
+                    <e-spreadsheet-column width="130"></e-spreadsheet-column>
+                    <e-spreadsheet-column width="120"></e-spreadsheet-column>
+                </e-spreadsheet-columns>
+            </e-spreadsheet-sheet>
+        </e-spreadsheet-sheets>
+    </ejs-spreadsheet>
+</div>
+
+<script>
+    var spreadsheet;
+
+    function created() {
+        spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
+        
+        // Construct the predicate model to be updated to the data.
+        var predicates = [{
+            field: 'C',
+            operator: 'equal',
+            value: 'Pink',
+            matchCase: false
+        }];
+        
+        // Apply filter to the specified range.
+        spreadsheet.applyFilter(predicates, 'A1:C7');
+    }
+
+    function getFilteredData() {
+        var activeSheet = spreadsheet.getActiveSheet();
+        var usedRange = activeSheet.usedRange;
+        
+        for (var i = 0; i <= usedRange.rowIndex; i++) {
+            // Get the filtered row using isFiltered property.
+            var filteredRow = activeSheet.rows[i] ? activeSheet.rows[i].isFiltered : false;
+            if (!filteredRow) {
+                var rowData = spreadsheet.getRowData(i);
+                console.log("Row:", i + 1, "Cells", rowData);
+            }
+        }
+    }
+</script>

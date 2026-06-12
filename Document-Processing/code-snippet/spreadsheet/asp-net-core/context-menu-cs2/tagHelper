@@ -1,0 +1,12 @@
+<ejs-spreadsheet id="spreadsheet" contextMenuBeforeOpen="onContextMenuBeforeOpen"></ejs-spreadsheet>
+
+<script>
+    function onContextMenuBeforeOpen() {
+        // Get the Spreadsheet instance
+        let spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        // To remove existing context menu items.
+        if (spreadsheet) {
+            spreadsheet.removeContextMenuItems(['Insert Column'], false);
+        }
+    }
+</script>
