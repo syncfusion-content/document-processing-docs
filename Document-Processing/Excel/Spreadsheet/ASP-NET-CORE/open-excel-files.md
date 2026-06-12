@@ -35,7 +35,7 @@ The following sample shows the `Open` option by using the [`openUrl`](https://he
 {% endhighlight %}
 {% endtabs %}
 
-Please find the below table for the [beforeOpen](The following sample shows the `Open` option by using the [`openUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenUrl) property in the Spreadsheet control. You can also use the [`beforeOpen`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeOpen) event to trigger before opening an Excel file.
+Please find the below table for the [beforeOpen](The following sample shows the `Open` option by using the [`openUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenUrl/) property in the Spreadsheet control. You can also use the [`beforeOpen`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeOpen/) event to trigger before opening an Excel file.
 ) event arguments.
 
 **BeforeOpenEventArgs – Properties**
@@ -50,18 +50,18 @@ Please find the below table for the [beforeOpen](The following sample shows the 
 | **requestType**   | `string`                        | Specifies the type of open request that triggered the **beforeOpen** event. Possible values:<br><br>• **initial** – The default request made when loading a workbook.<br>• **chunk** – A follow‑up request to load a portion of the workbook when chunking is enabled and the server provides a chunk plan.<br>• **thresholdLimitConfirmed** – A request made after the user confirms a threshold warning (such as *maximumDataLimit* or *maximumFileSizeLimit*) and chooses to proceed. |
 
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
-> * The default value of the [allowOpen](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowOpen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowOpen) property in previous code snippet.
+> * The default value of the [allowOpen](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowOpen/) property is `true`. For demonstration purpose, we have showcased the [allowOpen](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowOpen/) property in previous code snippet.
 
 ## Open Excel files programmatically
 
 To open Excel files programmatically in the Spreadsheet, you can use the [`open`](https://ej2.syncfusion.com/javascript
-/documentation/api/spreadsheet/index-default#open) method of the Spreadsheet component. Before invoking this method, ensure that the [`openUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenUrl) property is properly configured, as it is required for processing the file on the server.
+/documentation/api/spreadsheet/index-default#open/) method of the Spreadsheet component. Before invoking this method, ensure that the [`openUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenUrl/) property is properly configured, as it is required for processing the file on the server.
 
-Please find the table below for the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#open) method arguments.
+Please find the table below for the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#open/) method arguments.
 
 | **Parameter** | **Type**         | **Description**                       |
 |----------|--------------|-----------------------------------|
-| options  | [OpenOptions](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/openOptions)  | Options for opening the excel file. |
+| options  | [OpenOptions](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/openOptions/)  | Options for opening the excel file. |
 
 
 The following code example demonstrates how to open an Excel file programmatically in the Spreadsheet.
