@@ -7,7 +7,7 @@ control: Protect Sheet
 documentation: ug
 ---
 
-# Protect sheet in ASP.NET Core Spreadsheet Control
+# Protection in ASP.NET Core Spreadsheet Control
 
 Sheet protection allows you to prevent users from modifying data in the Spreadsheet.  
 When a sheet is protected, editing actions such as typing, formatting, or deleting content are restricted, ensuring that important data remains secure.
@@ -47,7 +47,7 @@ In the active Spreadsheet, the sheet protection can be done by any of the follow
 * Use the [`protectSheet`](https://ej2.syncfusion.com/javascript
 /documentation/api/spreadsheet#protectsheet) method programmatically.
 
-The following example shows `Protect Sheet` functionality in the Spreadsheet control.
+The following example shows `Protect Sheet` functionality with password in the Spreadsheet control.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}

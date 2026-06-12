@@ -156,7 +156,7 @@ public async Task<IActionResult> SaveExcelToGoogleDrive([FromForm] SaveSettings 
 
 N> Replace the **credential path**, **folderId** and **application name** in json file with your actual Google drive folder ID , your name for your application and the path for the JSON file.
 
-**Step 4:** Modify the index file in the Spreadsheet sample to save the Spreadsheet as JSON data using the [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method and send the saved JSON to the server via fetch call.
+**Step 4:** Modify the index file in the Spreadsheet sample to save the Spreadsheet as JSON data using the [`saveAsJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#saveasjson) method and send the saved JSON to the server via fetch call.
 
 ```typescript
 <button class="e-btn" onClick={saveToGoogleDrive}>

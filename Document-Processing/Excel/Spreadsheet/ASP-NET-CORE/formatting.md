@@ -113,10 +113,7 @@ Compared to Excel, the date, time, currency, and accounting formats vary across 
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German` culture.
 
-```js
-@using Syncfusion.EJ2.Spreadsheet
-
-@{
+```csharp
     // Culture-specific formats for "de" locale
     List<object> deLocaleFormats = new List<object>()
     {
@@ -142,14 +139,10 @@ The code below illustrates how culture-based format codes are mapped to their co
     };
 
     ViewBag.deLocaleFormats = deLocaleFormats;
-}
 
 <script>
-    var deLocaleFormats = @Html.Raw(Json.Serialize(ViewBag.deLocaleFormats));
-    // Mapping culture-based number formats for the "de" culture: 
-    // The "spreadsheet" parameter is an instance of the spreadsheet component, 
-    // and the "deLocaleFormats" parameter is an array containing format codes 
-    // and their corresponding format IDs for the "de" culture.
+    var deLocaleFormats = @Html.Raw(Json.Serialize(deLocaleFormats));
+    // Mapping culture-based number formats for the "de" culture: The "spreadsheet" parameter is an instance of the spreadsheet component, and the "deLocaleFormats" parameter is an array containing format codes and their corresponding format IDs for the "de" culture.
     ej.spreadsheet.configureLocalizedFormat(spreadsheet, deLocaleFormats);
 </script>
 

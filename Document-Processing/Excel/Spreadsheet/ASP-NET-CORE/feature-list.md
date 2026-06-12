@@ -7,9 +7,9 @@ control: Feature List
 documentation: ug
 ---
 
-# Feature list in EJ2 ASP.NET Core Spreadsheet component
+# Comparison between EJ1 & EJ2 ASP.NET Core Spreadsheet features
 
-The following table shows the features available in our Syncfusion EJ2 Spreadsheet.
+The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
 
 | **Features** | **Available in EJ2 Spreadsheet** | **Comments** |
 | --- | --- | --- |

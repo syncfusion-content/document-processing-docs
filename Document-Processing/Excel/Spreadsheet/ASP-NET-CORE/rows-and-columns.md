@@ -7,6 +7,7 @@ control: Rows And Columns
 documentation: ug
 ---
 
+
 # Rows and columns in ASP.NET Core Spreadsheet control
 
 A spreadsheet is organized in a tabular format consisting of **rows** and **columns**. The intersection of a row and a column is called a **cell**.

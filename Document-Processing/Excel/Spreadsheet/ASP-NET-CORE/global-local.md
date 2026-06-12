@@ -396,100 +396,14 @@ The Internationalization library is used to globalize number, date, and time val
 
 The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture. In the below sample we have globalized the Date(Date column), Time(Time column), and Currency(Amount column) formats.
 
-```ts
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { L10n, loadCldr, setCulture, setCurrencyCode } from '@syncfusion/ej2-base';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RangeDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
-import * as cagregorian from './ca-gregorian.json';
-import * as currencies from './currencies.json';
-import * as numberingSystems from './numberingSystems.json';
-import * as numbers from './numbers.json';
-import * as timeZoneNames from './timeZoneNames.json';
-import { data } from './datasource';
-loadCldr(currencies, cagregorian, numbers, timeZoneNames, numberingSystems);
-setCulture('fr-CH');
-setCurrencyCode('EUR');
-L10n.load({
-  'fr-CH': {
-    'spreadsheet': {
-      'File': 'Fichier',
-      'Home': 'Accueil',
-      'Insert': 'Insérer',
-      'Formulas': 'Formules',
-      'Data': 'Les données',
-      'View': 'Vue',
-      'Cut': 'Coupe',
-      'Copy': 'Copie',
-      'Paste': 'Pâte',
-      'PasteSpecial': 'Pâte spéciale',
-      'All': 'Tous les',
-      'Values': 'Valeurs',
-      'Formats': 'Les formats',
-      'Font': 'fonte',
-      'FontSize': 'Taille de police',
-      'Bold': 'Audacieux',
-      'Italic': 'Italique',
-      'Underline': 'Souligner',
-      'Strikethrough': 'Barré',
-      'TextColor': 'Couleur du texte',
-      'FillColor': 'La couleur de remplissage',
-      'HorizontalAlignment': 'Alignement horizontal',
-      'AlignLeft': 'Alignez à gauche',
-      'AlignCenter': 'centre',
-      'AlignRight': 'Aligner à droite',
-      'VerticalAlignment': 'Alignement vertical',
-      'AlignTop': 'Aligner en haut',
-      'AlignMiddle': 'Aligner le milieu',
-      'AlignBottom': 'Aligner le bas',
-      'InsertFunction': 'Insérer une fonction',
-      'Delete': 'Effacer',
-      'Rename': 'Rebaptiser',
-      'Hide': 'Cacher',
-      'Unhide': 'Démasquer',
-      'NumberFormat': 'Nombre Format',
-    }
-  }
-});
-
-function App() {
-  const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
-  React.useEffect(() => {
-    let spreadsheet = spreadsheetRef.current;
-    if (spreadsheet) {
-      //Applies cell and number formatting to specified range of the active sheet
-      spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
-      spreadsheet.numberFormat('$#,##0.00', 'F2:F11');
-    }
-  }, []);
-
-  return (
-    <SpreadsheetComponent ref={spreadsheetRef} locale='fr-CH' >
-      <SheetsDirective>
-        <SheetDirective>
-          <RangesDirective>
-            <RangeDirective dataSource={data}></RangeDirective>
-          </RangesDirective>
-          <ColumnsDirective>
-            <ColumnDirective width={100}></ColumnDirective>
-            <ColumnDirective width={110}></ColumnDirective>
-            <ColumnDirective width={100}></ColumnDirective>
-            <ColumnDirective width={180}></ColumnDirective>
-            <ColumnDirective width={130}></ColumnDirective>
-            <ColumnDirective width={130}></ColumnDirective>
-          </ColumnsDirective>
-        </SheetDirective>
-      </SheetsDirective>
-    </SpreadsheetComponent>
-  );
-};
-export default App;
-
-const root = createRoot(document.getElementById('root')!);
-root.render(<App />);
-```
-
-Internationalization [`sample link`](https://stackblitz.com/edit/react-5rhnwd-ujh6z5?file=index.js)
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/internationalization/tagHelper %}
+{% endhighlight %}
+{% highlight c# tabtitle="InternationalizationController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/internationalization/internationalizationController.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Right to left (RTL)
 
@@ -506,7 +420,7 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 
 ## Note
 
-You can refer to our [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

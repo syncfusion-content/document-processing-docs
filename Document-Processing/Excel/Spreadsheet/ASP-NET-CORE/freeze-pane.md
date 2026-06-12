@@ -7,13 +7,14 @@ control: Freeze Pane
 documentation: ug
 ---
 
-# Freeze pane in React Spreadsheet component
+
+# FreezePanes in ASP.NET Core Spreadsheet control
 
 **Freeze Panes** helps you keep specific rows or columns visible while scrolling through the sheet content. This makes it easier to work with large spreadsheets without losing track of important headers or labels.  
 
 You can set the number of frozen rows and columns using the [`frozenRows`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Sheet.html#Syncfusion_EJ2_Spreadsheet_Sheet_FrozenRows) and [`frozenColumns`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Sheet.html#Syncfusion_EJ2_Spreadsheet_Sheet_FrozenColumns) properties inside the [`Sheet`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Sheet.html) property.
 
-To quickly get started with Freeze Panes in React Spreadsheet, you can check out this video tutorial:
+To quickly get started with Freeze Panes in ASP.NET Core Spreadsheet, you can check out this video tutorial:
 
 {% youtube "https://www.youtube.com/watch?v=TX4P6gFymwo" %}
 
@@ -69,7 +70,7 @@ Here, we have listed out the limitations with Freeze Panes feature.
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [ASP.NET Core Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET Core Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) to knows how to present and manipulate data.
 
 ## See Also
 

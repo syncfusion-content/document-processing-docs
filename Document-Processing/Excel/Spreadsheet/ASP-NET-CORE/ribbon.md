@@ -7,6 +7,7 @@ control: Ribbon
 documentation: ug
 ---
 
+
 # Ribbon in ASP.NET Core Spreadsheet control
 
 It helps to organize a spreadsheet’s features into a series of tabs. By clicking the expand or collapse icon, you can expand or collapse the ribbon toolbar dynamically.

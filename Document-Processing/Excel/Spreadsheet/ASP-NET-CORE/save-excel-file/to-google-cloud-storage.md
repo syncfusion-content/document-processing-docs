@@ -79,7 +79,7 @@ public async Task<IActionResult> SaveToGoogleCloud([FromForm] SaveSettings saveS
 }
 ```
 
-**Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
+**Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
 
 ```js
 <button class="e-btn" onClick={saveToGoogleCloud}>

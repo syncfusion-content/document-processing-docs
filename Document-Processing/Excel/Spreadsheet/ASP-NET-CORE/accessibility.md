@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in React Spreadsheet component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in EJ2 ASP.NET CORE Spreadsheet Control
+description: "Documentation for the accessibility in the Essential JS2 Spreadsheet, featuring WAI-ARIA standards."
 platform: document-processing
+control: Accessibility
 documentation: ug
 ---
 
-# Accessibility in React Spreadsheet component
+# Accessibility in ASP.NET CORE Spreadsheet Control
 
-The Spreadsheet component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
+The Spreadsheet control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Spreadsheet component is outlined below.
+The accessibility compliance for the Spreadsheet control is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -31,15 +31,15 @@ The accessibility compliance for the Spreadsheet component is outlined below.
         margin: 0.5em 0;
     }
 </style>
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the control meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the control do not meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The control does not meet the requirement.</div>
 
 ## WAI-ARIA attributes
 
-The Spreadsheet component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Spreadsheet component:
+The Spreadsheet control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Spreadsheet control:
 
 | Attributes | Purpose |
 |-------|---------|
@@ -61,7 +61,7 @@ The Spreadsheet component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/ap
 
 ## Keyboard interaction
 
-The Spreadsheet component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet component.
+The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet control.
 
 | Press | To do this |
 |----------|-------------|
@@ -107,12 +107,12 @@ The Spreadsheet component followed the [keyboard interaction](https://www.w3.org
 
 ## Ensuring accessibility
 
-The Spreadsheet component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Spreadsheet control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Spreadsheet component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/spreadsheet.html) in a new window to evaluate the accessibility of the Spreadsheet component with accessibility tools.
+The accessibility compliance of the Spreadsheet control is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/spreadsheet.html) in a new window to evaluate the accessibility of the Spreadsheet control with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/spreadsheet.html" %}
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](https://ej2.syncfusion.com/react/documentation/common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core components](https://ej2.syncfusion.com/aspnetcore/documentation/common/accessibility)

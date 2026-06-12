@@ -7,7 +7,8 @@ control: Searching
 documentation: ug
 ---
 
-# Searching in React Spreadsheet component
+
+# Find and Replace in ASP.NET Core Spreadsheet control
 
 Find and Replace helps you to search for target text and replace the founded text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFindAndReplace) property to enable or disable Find and Replace functionality.
 
@@ -23,7 +24,7 @@ Find can be done by any of the following ways:
 
 * Select the Search icon in the Ribbon toolbar or using `Ctrl + F` key to open the Find dialog.
 * Using find Next and find Previous buttons to search the given value in workbook.
-* Select the option button in Find dialog to open the Find and Replace dialog then select the below          properties for enhanced searching.
+* Select the option button in Find dialog to open the Find and Replace dialog. Then, select the below properties for enhanced searching.
 
 > * `Search within`: To search the target in a sheet (default) or in an entire workbook.
 > * `Search by`: It enhance the search, either By Rows (default), or By Columns.

@@ -7,7 +7,8 @@ control: Sort
 documentation: ug
 ---
 
-# Sort in React Spreadsheet component
+
+# Sorting in ASP.NET Core Spreadsheet control
 
 Sorting helps arranging the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSorting) property to enable or disable sorting functionality.
 
@@ -31,7 +32,7 @@ When the `sort` method is called with empty arguments, the selected range is sor
 > * The [`beforeSort`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeSort) event will be triggered before sorting the specified range.
 > * The [`sortComplete`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SortComplete) event will be triggered after the sort action is completed successfully.
 
-The following code example demonstrates the `sort` functionality in the Spreadsheet control.
+The following code example shows `sort` functionality in the Spreadsheet control.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -50,12 +51,11 @@ You can specify whether the selected range of cells contains header. To specify,
 
 You can also enable or disable this property using `beforeSort` event arguments,
 
-```ts
+```javascript
 
-    const beforeSort = (args: BeforeSortEventArgs): void => {
+   function beforeSort(args) {
         args.sortOptions.containsHeader = true;
     }
-
 ```
 
 In the custom sort dialog, the `Data contains header` checkbox is checked on load. Thus, the default value for `containsHeader` is `true` in custom sort dialog.
@@ -70,10 +70,11 @@ By default, sorting in the Spreadsheet is **case insensitive**. To perform sorti
 
 You can also enable or disable this property using `beforeSort` event arguments,
 
-```ts
-   const beforeSort = (args: BeforeSortEventArgs): void => {
+```javascript
+
+    function beforeSort (args) {
         args.sortOptions.caseSensitive = true;
-        }
+    }
 
 ```
 

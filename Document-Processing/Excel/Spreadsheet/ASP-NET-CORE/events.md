@@ -79,15 +79,13 @@ The following table represents the action names for which the `actionBegin` and 
 The following code example demonstrates how to bind the `actionBegin` and `actionComplete` events in the Spreadsheet.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/events/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/events/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/events/app/app.tsx %}
+{% highlight c# tabtitle="EventsController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/events/EventsController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/events" %}
 
 ## Clipboard
 
