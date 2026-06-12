@@ -32,7 +32,7 @@ N> For image and data extraction features, you need to install the `@syncfusion/
 Step2: Add the script in `App.jsx` by creating a button and attaching a click event that uses the JavaScript PDF API to generate a PDF document.
 
 {% tabs %}
-{% highlight html tabtitle="App.jsx" %}
+{% highlight javascript tabtitle="App.jsx" %}
 import React from 'react';
 
 export default function App() {
