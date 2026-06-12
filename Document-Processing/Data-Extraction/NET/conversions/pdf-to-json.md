@@ -64,6 +64,24 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 			
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Extract data as JSON.
+    Dim data As String = extractor.ExtractDataAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 N> If you want to extract data from an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
@@ -117,6 +135,26 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Save the extracted JSON data into an output file.
     File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("D:/Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Set the page range for extraction (pages 1 to 3).
+    extractor.PageRange = New Integer(,) {{1, 3}}
+    ' Extract data as JSON string.
+    Dim data As String = extractor.ExtractDataAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("D:/Output.json", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 

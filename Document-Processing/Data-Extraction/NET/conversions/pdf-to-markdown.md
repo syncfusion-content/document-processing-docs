@@ -62,6 +62,24 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 			
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Extract data as Markdown.
+    Dim data As String = extractor.ExtractDataAsMarkdown(stream)
+    ' Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 N> If you want to extract data from an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
@@ -117,6 +135,26 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 			
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Set the page index for extraction (example: page 2).
+    extractor.PageRange = New Integer(,) {{2, 2}}
+    ' Extract data as Markdown using the API.
+    Dim data As String = extractor.ExtractDataAsMarkdown(stream)
+    ' Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ## Extract a range of pages to Markdown
@@ -164,6 +202,26 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Save the extracted Markdown data into an output file.
     File.WriteAllText("Output.md", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Set the page range for extraction (pages 1 to 3).
+    extractor.PageRange = New Integer(,) {{1, 3}}
+    ' Extract data as Markdown using the API.
+    Dim data As String = extractor.ExtractDataAsMarkdown(stream)
+    ' Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 
@@ -223,6 +281,25 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Office.Markdown
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF or Image file as a stream.
+Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Hook the event to customize image handling.
+    AddHandler extractor.SaveOptions.ImageNodeVisited, AddressOf SaveImage
+    ' Extract Markdown content as string.
+    Dim data As String = extractor.ExtractDataAsMarkdown(inputStream)
+    ' Save the extracted Markdown data into an output file.
+    File.WriteAllText("DataToMarkdown.md", data)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 The following code shows how to implement the event handler to customize the image path and save images externally.
@@ -262,6 +339,21 @@ static void SaveImage(object sender, MdImageNodeVisitedEventArgs args)
     //Set the URI to be used in the Markdown output
     args.Uri = imagePath;
 }
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Event handler to save images externally
+Private Sub SaveImage(sender As Object, args As MdImageNodeVisitedEventArgs)
+    ' Define output image path (customize naming logic as needed)
+    Dim imagePath As String = "D:\Temp\Image1.png"
+    ' Save the image stream to file
+    Using fileStreamOutput As FileStream = File.Create(imagePath)
+        args.ImageStream.CopyTo(fileStreamOutput)
+    End Using
+    ' Set the URI to be used in the Markdown output
+    args.Uri = imagePath
+End Sub
 
 {% endhighlight %}
 

@@ -59,6 +59,24 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 			
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("D:\Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Extract data as JSON.
+    Dim data As String = extractor.ExtractDataAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("D:\Output.json", data, Encoding.UTF8)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-JSON-from-PDF/.NET).
@@ -102,6 +120,24 @@ using (FileStream stream = new FileStream("Image.png", FileMode.Open, FileAccess
     //Save the extracted JSON data into an output file.
     File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input image file as a stream.
+Using stream As New FileStream("Image.png", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Extract data as JSON from the image stream.
+    Dim data As String = extractor.ExtractDataAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 
@@ -159,6 +195,24 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 			
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("D:\Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Extract data as Markdown.
+    Dim data As String = extractor.ExtractDataAsMarkdown(stream)
+    ' Save the extracted Markdown data into an output file.
+    File.WriteAllText("D:\Output.md", data, Encoding.UTF8)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-MD-from-PDF/.NET).
@@ -206,6 +260,24 @@ using (FileStream stream = new FileStream("Input.png", FileMode.Open, FileAccess
 			
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input image file as a stream.
+Using stream As New FileStream("Input.png", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Extract data as Markdown.
+    Dim data As String = extractor.ExtractDataAsMarkdown(stream)
+    ' Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ### Extract Data as MarkdownDocument Instance
@@ -245,6 +317,22 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     // Extract data as MarkdownDocument.
     MarkdownDocument markdownDocument = extractor.ExtractDataAsMarkdownDocument(stream);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports Syncfusion.Office.Markdown
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input image file as a stream.
+Using stream As New FileStream("D:\Image.png", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Extract data as Markdown.
+    Dim data As String = extractor.ExtractDataAsMarkdownDocument(stream)
+End Using
 
 {% endhighlight %}
 
@@ -305,6 +393,26 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
 
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using inputStream As New FileStream("D:\Input.pdf", FileMode.Open, FileAccess.Read, FileShare.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Extract data and return as a loaded PDF document.
+    Dim document As PdfLoadedDocument = extractor.ExtractDataAsPdfDocument(inputStream)
+    ' Save the extracted output as a new PDF file.
+    document.Save("D:\Output.pdf")
+    ' Close the document.
+    document.Close(True)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %} 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-from-PDF-document/.NET).
@@ -356,13 +464,28 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
  			
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using inputStream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read, FileShare.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Extract data and return as a PDF stream.
+    Dim pdfStream As Stream = extractor.ExtractDataAsPdfStream(inputStream)
+    ' Save the extracted PDF stream into an output file.
+    Using outputStream As New FileStream("Output.pdf", FileMode.Create, FileAccess.Write)
+        pdfStream.CopyTo(outputStream)
+    End Using
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-stream/.NET).
-
-
-
-
 
 ## Disable Form Detection
 
@@ -384,11 +507,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //By default - true
     extractor.EnableFormDetection = false;
     //Extract form data and return as a loaded json file.
-    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-    //Save the extracted output as a new json file.
-    pdf.Save("Output.json");
-    //Close the document.
-    pdf.Close(true);
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
 
 {% endhighlight %}
@@ -407,12 +528,31 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //By default - true
     extractor.EnableFormDetection = false;
     //Extract form data and return as a loaded json file.
-    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-    //Save the extracted output as a new json file.
-    pdf.Save("Output.json");
-    //Close the document.
-    pdf.Close(true);
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Disable form detection in the document to identify form fields.
+    ' By default - true
+    extractor.EnableFormDetection = False
+    ' Extract form data and return as JSON.
+    Dim data As String = extractor.ExtractDataAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 
@@ -440,11 +580,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 	//By default - true
 	extractor.EnableTableDetection = false;
 	// Extract data and return as a loaded json document.
-	PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-	// Save the extracted output as a new json file.
-	pdf.Save("Output.json");
-	// Close the document.
-	pdf.Close(true);
+	string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
 
 {% endhighlight %}
@@ -463,12 +601,31 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //By default - true
     extractor.EnableTableDetection = false;
     // Extract data and return as a loaded json file.
-	PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-	// Save the extracted output as a new json file.
-	pdf.Save("Output.json");
-	// Close the document.
-	pdf.Close(true);
+	string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Load the input PDF file.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Disable table detection.
+    ' By default - true
+    extractor.EnableTableDetection = False
+    ' Extract data and return as JSON string.
+    Dim data As String = extractor.ExtractDataAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 
@@ -512,11 +669,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Assign the configured form recognition options to the extractor.
     extractor.FormRecognizeOptions = formOptions;
     //Extract form data and return as a loaded json file.
-    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-    //Save the extracted output as a new json file.
-    pdf.Save("Output.json");
-    //Close the document.
-    pdf.Close(true);
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
 
 {% endhighlight %}
@@ -551,12 +706,47 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 	//Assign the configured form recognition options to the extractor.
 	extractor.FormRecognizeOptions = formOptions;
 	//Extract form data and return as a loaded json document.
-    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-    //Save the extracted output as a new json file.
-    pdf.Save("Output.json");
-    //Close the document.
-    pdf.Close(true);
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+Imports Syncfusion.SmartFormRecognizer
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("D:\Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Enable form detection in the document to identify form fields.
+    extractor.EnableFormDetection = True
+    ' Configure form recognition options for advanced detection.
+    Dim formOptions As New FormRecognizeOptions()
+    ' Recognize forms across pages 1 to 5 in the document.
+    formOptions.PageRange = New Integer(,) {{1, 5}}
+    ' Set confidence threshold for form recognition to filter results.
+    formOptions.ConfidenceThreshold = 0.6
+    ' Enable detection of signatures within the document.
+    formOptions.DetectSignatures = True
+    ' Enable detection of textboxes within the document.
+    formOptions.DetectTextboxes = True
+    ' Enable detection of checkboxes within the document.
+    formOptions.DetectCheckboxes = True
+    ' Enable detection of radio buttons within the document.
+    formOptions.DetectRadioButtons = True
+    ' Assign the configured form recognition options to the extractor.
+    extractor.FormRecognizeOptions = formOptions
+    ' Extract form data and return as JSON string.
+    Dim data As String = extractor.ExtractDataAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("D:\Output.json", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 
@@ -593,11 +783,10 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 	tableOptions.DetectBorderlessTables = true;
 	// Assign the table extraction options to the extractor.
 	extractor.TableExtractionOptions = tableOptions;
-	PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-	// Save the extracted output as a new json file.
-	pdf.Save("Output.json");
-	// Close the document.
-	pdf.Close(true);
+    // Extract data and return as a loaded json document.
+	string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
 
 {% endhighlight %}
@@ -626,12 +815,41 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 	// Assign the table extraction options to the extractor.
 	extractor.TableExtractionOptions = tableOptions;
 	// Extract data and return as a loaded json document.
-	PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-	// Save the extracted output as a new json file.
-	pdf.Save("Output.json");
-	// Close the document.
-	pdf.Close(true);
+	string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+Imports Syncfusion.SmartTableExtractor
+
+' Load the input PDF file.
+Using stream As New FileStream("D:\Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Enable table detection and set confidence threshold.
+    extractor.EnableTableDetection = True
+    ' Configure table extraction options.
+    Dim tableOptions As New TableExtractionOptions()
+    ' Extract tables across pages 1 to 5.
+    tableOptions.PageRange = New Integer(,) {{1, 5}}
+    ' Set confidence threshold for table extraction.
+    tableOptions.ConfidenceThreshold = 0.6
+    ' Enable detection of borderless tables.
+    tableOptions.DetectBorderlessTables = True
+    ' Assign the table extraction options to the extractor.
+    extractor.TableExtractionOptions = tableOptions
+    ' Extract data and return as JSON string.
+    Dim data As String = extractor.ExtractDataAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("D:\Output.json", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 
@@ -660,11 +878,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //default confidence threshold value is 0.6
     extractor.ConfidenceThreshold = 0.75;
     //  Extract data and return as a loaded json document.
-    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-    // Save the extracted output as a new json file.
-    pdf.Save("Output.json");
-    // Close the document.
-    pdf.Close(true);
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
 
 {% endhighlight %}
@@ -684,12 +900,32 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //default confidence threshold value is 0.6
     extractor.ConfidenceThreshold = 0.75;
     //  Extract data and return as a loaded json file.
-    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-    // Save the extracted output as a new json file.
-    pdf.Save("Output.json");
-    // Close the document.
-    pdf.Close(true);
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Load the input PDF file.
+Using stream As New FileStream("D:\Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Apply confidence threshold to extract the data.
+    ' Only elements with confidence >= 0.75 will be included in the results.
+    ' Default confidence threshold value is 0.6
+    extractor.ConfidenceThreshold = 0.75
+    ' Extract data and return as JSON string.
+    Dim data As String = extractor.ExtractDataAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("D:\Output.json", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 
@@ -716,11 +952,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Set the page range for extraction (pages 1 to 3).
     extractor.PageRange = new int[,] { { 1, 3 } };
     //Extract data and return as a loaded json document.
-    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-    //Save the extracted output as a new json file.
-    pdf.Save("Output.json");
-    //Close the document.
-    pdf.Close(true);
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
 
 {% endhighlight %}
@@ -738,12 +972,30 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Set the page range for extraction (pages 1 to 3).
     extractor.PageRange = new int[,] { { 1, 3 } };
     //Extract data and return as a loaded json document.
-    PdfLoadedDocument pdf = extractor.ExtractDataAsJson(stream);
-    //Save the extracted output as a new json file.
-    pdf.Save("Output.json");
-    //Close the document.
-    pdf.Close(true);
+    string data = extractor.ExtractDataAsJson(stream);
+    //Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("D:\Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Set the page range for extraction (pages 1 to 3).
+    extractor.PageRange = New Integer(,) {{1, 3}}
+    ' Extract data and return as JSON string.
+    Dim data As String = extractor.ExtractDataAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("D:\Output.json", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 
@@ -755,7 +1007,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Configure OCR Processing Settings
 
 To configure OCR settings in .NET using the **OCRProcessor** property of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, use the following C# example to initialize the OCR processor, set language and Tesseract version, and extract structured data from a PDF document with the [ExtractDataAsPdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsPdfDocument_System_IO_Stream_) method.
-
 
 {% tabs %} 
 
@@ -779,11 +1030,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Assign the configured OCR processor to the Data Extractor.
     extractor.OCRProcessor = processor;
     //Extract data and return as a loaded PDF document.
-    PdfLoadedDocument pdf = extractor.ExtractDataAsPdfDocument(stream);
+    PdfLoadedDocument doc = extractor.ExtractDataAsPdfDocument(stream);
     //Save the extracted output as a new PDF file.
-    pdf.Save("Output.pdf");
+    doc.Save("Output.pdf");
     //Close the document.
-    pdf.Close(true);
+    doc.Close(true);
 }
 
 {% endhighlight %}
@@ -808,12 +1059,41 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Assign the configured OCR processor to the Data Extractor.
     extractor.OCRProcessor = processor;
     //Extract data and return as a loaded PDF document.
-    PdfLoadedDocument pdf = extractor.ExtractDataAsPdfDocument(stream);
+    PdfLoadedDocument doc = extractor.ExtractDataAsPdfDocument(stream);
     //Save the extracted output as a new PDF file.
-    pdf.Save("Output.pdf");
+    doc.Save("Output.pdf");
     //Close the document.
-    pdf.Close(true);
+    doc.Close(true);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.OCRProcessor
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Initialize the OCR processor.
+    Dim processor As New OCRProcessor()
+    ' Set OCR language.
+    processor.Settings.Language = Languages.English
+    ' Set Tesseract OCR engine version.
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0
+    ' Assign the configured OCR processor to the Data Extractor.
+    extractor.OCRProcessor = processor
+    ' Extract data and return as a loaded PDF document.
+    Dim pdf As PdfLoadedDocument = extractor.ExtractDataAsPdfDocument(stream)
+    ' Save the extracted output as a new PDF file.
+    pdf.Save("Output.pdf")
+    ' Close the document.
+    pdf.Close(True)
+End Using
 
 {% endhighlight %}
 
