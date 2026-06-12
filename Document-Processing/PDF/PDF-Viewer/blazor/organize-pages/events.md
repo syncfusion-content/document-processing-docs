@@ -27,7 +27,6 @@ Raised when the user saves changes from the page organizer (for example, after c
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
@@ -56,7 +55,6 @@ Event args:
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
@@ -80,7 +78,6 @@ Raised when the page organizer dialog is opened or closed.
 
 {% tabs %}
 {% highlight razor %}
-@page "/"
 
 <SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
