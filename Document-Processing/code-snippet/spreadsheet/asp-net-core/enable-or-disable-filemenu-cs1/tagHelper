@@ -1,0 +1,34 @@
+
+<div style="padding: 12px">
+    <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <button class="e-btn e-primary" onclick="handleEnableNew()">Enable New</button>
+        <button class="e-btn e-primary" onclick="handleDisableNew()">Disable New</button>
+    </div>
+
+    <ejs-spreadsheet id="spreadsheet" fileMenuBeforeOpen="handleFileMenuBeforeOpen" openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open" saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save"></ejs-spreadsheet>
+</div>
+
+<script>
+    // Toggle this to control "New" item enable/disable by unique ID
+    let disableNew = true;
+
+    // Enable/disable items when the menu is about to open
+    function handleFileMenuBeforeOpen() {
+        // Get the Spreadsheet instance
+        const spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        if (!spreadsheet) return;
+
+        const newItemId = `${spreadsheet.element.id}_New`;
+
+        // Enable when false, disable when true
+        spreadsheet.enableFileMenuItems([newItemId], !disableNew, true);
+    }
+
+    function handleEnableNew() {
+        disableNew = false;
+    }
+
+    function handleDisableNew() {
+        disableNew = true;
+    }
+</script>

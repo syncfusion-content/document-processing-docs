@@ -1,0 +1,18 @@
+<ejs-spreadsheet id="spreadsheet" actionBegin="actionBegin">
+    <e-spreadsheet-sheets>
+        <e-spreadsheet-sheet name="Sheet1">
+            <e-spreadsheet-ranges>
+                <e-spreadsheet-range dataSource="ViewBag.DefaultData" startCell="A1"></e-spreadsheet-range>
+            </e-spreadsheet-ranges>
+        </e-spreadsheet-sheet>
+    </e-spreadsheet-sheets>
+</ejs-spreadsheet>
+
+<script>
+    // If the user is pasting, force paste to values only.
+    function actionBegin(args) {
+        if (args.action === "clipboard") {
+            args.args.eventArgs.type = 'Values';
+        }
+    }
+</script>

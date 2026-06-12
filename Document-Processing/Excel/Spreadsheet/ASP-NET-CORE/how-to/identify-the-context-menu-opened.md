@@ -27,4 +27,3 @@ The following code example shows how to identify the context menu opened.
 {% include code-snippet/spreadsheet/asp-net-core/find-target-context-menu/tagHelper %}
 {% endhighlight %}
 {% endtabs %}
-

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in EJ2 ASP.NET CORE Spreadsheet Control
-description: "Documentation for the accessibility in the Essential JS2 Spreadsheet, featuring WAI-ARIA standards."
+title: Accessibility in ASP.NET Core Syncfusion Spreadsheet Control
+description: "Learn here all about Accessibility in Syncfusion EJ2 ASP.NET Core Spreadsheet Component, featuring WAI-ARIA standards."
 platform: document-processing
 control: Accessibility
 documentation: ug
 ---
 
-# Accessibility in EJ2 ASP.NET CORE Spreadsheet Control
+# Accessibility in ASP.NET Core Spreadsheet Control
 
 The Spreadsheet control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -110,3 +110,9 @@ The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/W
 The Spreadsheet control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 The accessibility compliance of the Spreadsheet control is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/spreadsheet.html) in a new window to evaluate the accessibility of the Spreadsheet control with accessibility tools.
+
+{% previewsample "https://ej2.syncfusion.com/accessibility/spreadsheet.html" %}
+
+## See also
+
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core components](https://ej2.syncfusion.com/aspnetcore/documentation/common/accessibility)
