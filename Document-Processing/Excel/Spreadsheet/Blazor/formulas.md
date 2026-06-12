@@ -101,8 +101,6 @@ To delete a Named Range:
 
 N> Deleting a Named Range used in formulas may cause formula errors. Ensure the Named Range is not referenced before deleting it.
 
-![Edit and Delete - Named Range](./images/edit-and-delete.png)
-
 ## Aggregates
 
 The **Aggregates** feature provides instant statistical summaries of selected cell ranges without requiring formula creation. This functionality enables quick data analysis by automatically calculating statistics such as sum, average, count, minimum, and maximum values. Aggregate calculations appear in the footer at the bottom of the Spreadsheet component, providing at-a-glance insights into selected data. To control this functionality, use the `ShowAggregate` property, which enables or disables aggregate support in the Spreadsheet. The default value of the `ShowAggregate` property is true.
