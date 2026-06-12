@@ -56,6 +56,24 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartTableExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Smart Table Extractor.
+    Dim extractor As New TableExtractor()
+    ' Extract table data from the PDF document as JSON string.
+    Dim data As String = extractor.ExtractTableAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %} 
 
 N> To convert an image instead of a PDF, replace the input stream with the image file (for example, *Input.jpg* or *Input.png*). The rest of the code remains unchanged.
@@ -101,6 +119,24 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Save the extracted markdown data into an output file.
     File.WriteAllText("Output.md", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartTableExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Table Extractor.
+    Dim extractor As New TableExtractor()
+    ' Extract table data from the PDF document as markdown.
+    Dim data As String = extractor.ExtractTableAsMarkdown(stream)
+    ' Save the extracted markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 
@@ -164,6 +200,29 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartTableExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Smart Table Extractor.
+    Dim extractor As New TableExtractor()
+    ' Configure table extraction options to specify the page range for detection.
+    Dim options As New TableExtractionOptions()
+    options.PageRange = New Integer(,) {{2, 4}}
+    ' Assign the configured options to the extractor.
+    extractor.TableExtractionOptions = options
+    ' Extract table data from the specified page range as a JSON string.
+    Dim data As String = extractor.ExtractTableAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}   
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-tables-by-page-range/.NET).
@@ -218,6 +277,30 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endhighlight %}
 
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartTableExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Smart Table Extractor.
+    Dim extractor As New TableExtractor()
+    ' Configure table extraction options to specify the page range for detection.
+    Dim options As New TableExtractionOptions()
+    options.PageRange = New Integer(,) {{1, 3}}
+    ' Assign the configured options to the extractor.
+    extractor.TableExtractionOptions = options
+    ' Extract table data from the specified page range as a Markdown string.
+    Dim data As String = extractor.ExtractTableAsMarkdown(stream)
+    ' Save the extracted output as a new Markdown file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ## Extract Table Data Asynchronously from PDF or Image
@@ -263,6 +346,26 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Save the extracted JSON data into an output file.
     File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports System.Threading
+Imports Syncfusion.SmartTableExtractor
+
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Smart Table Extractor and assign the configured options.
+    Dim tableExtractor As New TableExtractor()
+    ' Create a cancellation token with a timeout of 30 seconds to control the async operation.
+    Dim cts As New CancellationTokenSource(TimeSpan.FromSeconds(30))
+    ' Call the asynchronous extraction API to extract table data as a JSON string.
+    Dim data As String = Await tableExtractor.ExtractTableAsJsonAsync(stream, cts.Token)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 
@@ -326,6 +429,29 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartTableExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Smart Table Extractor.
+    Dim extractor As New TableExtractor()
+    ' Configure the table extraction option to detect border-less tables in the document.
+    Dim options As New TableExtractionOptions()
+    options.DetectBorderlessTables = True
+    ' Assign the configured options to the extractor.
+    extractor.TableExtractionOptions = options
+    ' Extract table data from the PDF document as a JSON string.
+    Dim data As String = extractor.ExtractTableAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}  
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Table-Extractor/Extract-border-less-table-detection/.NET).
@@ -379,6 +505,29 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Save the extracted JSON data into an output file.
     File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartTableExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Smart Table Extractor.
+    Dim extractor As New TableExtractor()
+    ' Configure table extraction options to set the confidence threshold for detection.
+    Dim options As New TableExtractionOptions()
+    options.ConfidenceThreshold = 0.6
+    ' Assign the configured options to the extractor.
+    extractor.TableExtractionOptions = options
+    ' Extract table data from the PDF document as a JSON string.
+    Dim data As String = extractor.ExtractTableAsJson(stream)
+    ' Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 
