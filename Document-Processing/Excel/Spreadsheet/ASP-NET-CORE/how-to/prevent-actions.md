@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Prevent actions without read-only and sheet protection | Syncfusion
-description: Learn here all about to prevent actions without read-only and sheet protection in EJ2 ASP.NET Core Spreadsheet component of Syncfusion Essential JS 2 and more. 
+title: Restrict actions without read-only and sheet protection | Syncfusion
+description: Learn here all about to prevent actions without read-only and sheet protection in EJ2 ASP.NET Core Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Prevent actions without read-only and protection
+# Restrict actions without read-only and protection
 
 In Syncfusion ASP.NET Core Spreadsheet, the [**read-only**](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/protect-sheet#make-cells-read-only-without-protecting-worksheet) feature makes a range of cells, rows, or columns completely non-editable and restricts all spreadsheet actions on those cells. Similarly, the [**sheet protection**](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/protect-sheet#protect-sheet) feature locks the entire sheet and restricts all spreadsheet actions on the sheet. It does not allow actions such as formatting cells, rows, or columns, selecting cells, or inserting hyperlinks—unless these options are explicitly enabled in the [`protectSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.ProtectSettingsModel.html).
 

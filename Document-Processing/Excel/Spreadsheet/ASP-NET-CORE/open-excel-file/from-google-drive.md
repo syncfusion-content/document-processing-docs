@@ -7,7 +7,7 @@ control: Open file from Google Drive
 documentation: ug
 ---
 
-# Open file from Google Drive
+# Open file from Google Drive in ASP.NET Core Spreadsheet
 
 To load a file from Google Drive in a Spreadsheet Component, you can follow the steps below
 

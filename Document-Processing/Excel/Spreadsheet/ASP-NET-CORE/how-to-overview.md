@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview Section for How‑to Guides in ASP.NET Core Spreadsheet | Syncfusion
-description: In this section, you can find answers to frequently asked questions and solutions for common scenarios in the Spreadsheet control.
+description: In this section, you can find answers to frequently asked questions and solutions for common scenarios in the EJ2 AS.NET Core Spreadsheet control.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
