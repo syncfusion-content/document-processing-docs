@@ -20,7 +20,7 @@ In this section, we will see about the changes which need to be considered while
 </thead>
 </tr>
 <tr>
-<td>{{'[Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/#"")'| markdownify }}<br/>{{'[Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf/#"")'| markdownify }}<br/>{{'[Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/#"")'| markdownify }}</td>
+<td>{{'[Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/#"")'| markdownify }}<br/>{{'[Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf/#"")'| markdownify }}<br/>{{'[Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/#"")'| markdownify }}<br/>{{'[Syncfusion.Pdf.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc4/#"")'| markdownify }}<br/>{{'[Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/#"")'| markdownify }}</td>
 <td>{{'[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/#"")'| markdownify }}</td>
 </tr>
 </table>
@@ -820,7 +820,10 @@ Not supported
 
 ## Advantages 
 * *Cross-platform compatibility:* ASP.NET Core can run on Windows, MacOS, and Linux, making it a flexible option for developing web applications. 
-* *Integration with cloud services:* ASP.NET Core can be easily integrated with cloud services, such as Microsoft Azure, Amazon Web Services, Docker and Google Cloud Platform. 
+* *Integration with cloud services:* ASP.NET Core can be easily integrated with cloud services, such as Microsoft Azure, Amazon Web Services, Docker and Google Cloud Platform.  
+
+## Known limitations 
+* EMF and WMF images are not supported on the .NET Core platform.   
 
 ## Notable changes
 1. For text measuring and graphics operations in the .NET Framework, our library utilizes *System.Drawing*. In contrast, for similar graphics operations in .NET Core, our library employs *Syncfusion.Drawing*. 
@@ -834,7 +837,15 @@ Not supported
 * [Convert PDF to PDF/A](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pdf-conformance#pdf-to-pdfa-conversion)
 * [Replace images in an existing PDF document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-images#replacing-images-in-an-existing-pdf-document) 
 3. For converting XPS to PDF document, kindly utilize the [Syncfusion.XpsToPdfConverter.Net.Core](https://www.nuget.org/packages/Syncfusion.XpsToPdfConverter.Net.Core) NuGet package in your ASP.NET Core application.  
-4. To convert PDF to image, please use the [Syncfusion.EJ2.PdfViewer.AspNet.Core.Windows](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core.Windows/) NuGet package in your ASP.NET Core application.
+4. To convert PDF to image, please use the [Syncfusion.EJ2.PdfViewer.AspNet.Core.Windows](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core.Windows/) NuGet package in your ASP.NET Core application.  
+
+N> If you want to migrate without any code changes from [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet) NuGet in application targeting .NET Framework, you can consider using anyone of the following packages: 
+N> * [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms) 
+N> * [Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf)
+N> * [Syncfusion.Pdf.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc4) 
+N> * [Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5)
+N> * But this is not a recommended approach.  
+
 
 ## Migrate System.Drawing.Common to SkiaSharp package 
 
