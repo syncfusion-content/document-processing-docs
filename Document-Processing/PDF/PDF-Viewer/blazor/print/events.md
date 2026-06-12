@@ -79,6 +79,5 @@ The following example illustrates how to handle the `PrintEnd` event.
 ## See also
 
 - [Overview](./overview)
-- [Print quality](./print-quality)
 - [Enable print rotation](./enable-print-rotation)
 - [Print modes](./print-modes)

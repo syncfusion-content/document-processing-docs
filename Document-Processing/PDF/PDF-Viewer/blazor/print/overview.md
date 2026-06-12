@@ -68,21 +68,14 @@ To start printing from code, call the [PrintAsync()](https://help.syncfusion.com
 
 - Enable or disable printing with the [EnablePrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrint) property
 - Start printing from UI (toolbar Print) or programmatically using [PrintAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer_PrintAsync).
-- Control output quality with the [PrintScaleFactor](./print-quality) property (0.5–5)
 - Auto‑rotate pages during print using [EnablePrintRotation](./enable-print-rotation)
 - Choose where printing happens with [PrintMode](./print-modes) (Default or NewWindow)
 - Track the life cycle with [PrintStart and PrintEnd events](./events)
-
-## Troubleshooting
-
-- Ensure the resource URL value matches the deployed `ej2-pdfviewer-lib` version.
-- Calling [PrintAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer_PrintAsync) launches the browser print dialog; behavior varies by browser and may be affected by popup blockers or browser settings.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print)
 
 ## See Also
 
-- [Print quality](./print-quality)
 - [Enable print rotation](./enable-print-rotation)
 - [Print modes](./print-modes)
 - [Print events](./events)

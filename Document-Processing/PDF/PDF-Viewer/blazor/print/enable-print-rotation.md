@@ -10,18 +10,18 @@ domainurl: ##DomainURL##
 
 # Enable print rotation in Blazor PDF Viewer
 
-This guide shows how to enable automatic rotation of landscape pages during printing so they match the paper orientation and reduce clipping. Use [EnablePrintRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrintRotation) when printing documents that include landscape pages and you want them rotated to match the printer paper orientation.
+The [EnablePrintRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrintRotation) property in the Blazor PDF Viewer controls how landscape pages are handled during printing. When enabled, the viewer automatically rotates landscape-oriented pages to match the printer’s paper orientation. This ensures that content fits properly on the page and avoids clipping.
 
-## Prerequisites
+By default, this property is set to **true**, meaning landscape pages are automatically adjusted for optimal printing. If set to **false**, pages retain their original orientation and are printed without any automatic rotation.
 
-- A Blazor app with the Syncfusion PDF Viewer component integrated.
+## When to use print rotation
 
-## Steps to enable print rotation
+Enable this feature when printing documents that include landscape pages and you want them to align with the printer’s paper orientation. This helps improve readability and ensures that content is not cut off during printing.
 
-1. Configure the [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer.html) component in your Blazor application.
-2. Set [EnablePrintRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrintRotation)="true" in the PDF Viewer during initialization.
+## Enabling print rotation
 
-## Example
+You can enable print rotation during the initialization of the PDF Viewer component by setting the `EnablePrintRotation` property to **true**.
+
 
 {% tabs %}
 {% highlight razor %}
@@ -42,14 +42,8 @@ This guide shows how to enable automatic rotation of landscape pages during prin
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print)
 
-## Troubleshooting
-
-- If you need to preserve original page orientation for archival printing, set [EnablePrintRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrintRotation)="false".
-- Confirm that the PDF Viewer component is properly configured with the correct resource URL.
-
 ## See also
 
 - [Overview](./overview)
-- [Print quality](./print-quality)
 - [Print modes](./print-modes)
 - [Print events](./events)

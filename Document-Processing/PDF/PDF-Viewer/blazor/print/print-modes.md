@@ -8,24 +8,22 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print Modes in the Blazor PDF Viewer
+# Print Modes in Blazor PDF Viewer
 
-This guide shows how to set the PDF Viewer [`PrintMode`](https://ej2.syncfusion.com/blazor/documentation/api/pdfviewer/pdfviewer#printmode) so PDFs print from the current window or from a new window/tab.
+The  [`PrintMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintMode) property determines how the print dialog is opened in the PDF Viewer. By default, it is set to PrintMode.Default, which prints the document from the same browser window.
 
-## Prerequisites
+## Available print modes
 
-- A Blazor app with the Syncfusion PDF Viewer component integrated.
+- [PrintMode.Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintMode.html): Prints the document from the current browser window.
+- [PrintMode.NewWindow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PrintMode.html): Opens the print dialog in a new window or tab. This may be affected by browser pop-up blockers.
 
-## Steps to set print mode
+## Set print mode
 
-**Step 1:** Decide which [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintMode) you need:
-   - `PrintMode.Default` — print from the same browser window.
-   - `PrintMode.NewWindow` — print from a new window or tab (may be blocked by pop-up blockers).
-
-**Step 2:** Set [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_PrintMode) during viewer initialization (recommended):
+You can configure the print mode during the initialization of the PDF Viewer component by setting the `PrintMode` property.
 
 {% tabs %}
 {% highlight razor %}
+
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 Height="100%"
@@ -33,35 +31,21 @@ This guide shows how to set the PDF Viewer [`PrintMode`](https://ej2.syncfusion.
               DocumentPath="@DocumentPath"
               PrintMode="PrintMode.NewWindow" />
 
-@code{
+@code {
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
+
 {% endhighlight %}
 {% endtabs %}
 
 ![Print in New Window](../images/print-newwindow.gif)
 
-**Step 3:** Print mode can also be changed at runtime after the viewer is created:
-
-{% tabs %}
-{% highlight razor %}
-// switch to NewWindow at runtime
-pdfViewerRef.PrintMode = "NewWindow";
-{% endhighlight %}
-{% endtabs %}
-
-## Quick reference
-
-- `PrintMode.Default`: Print from the same window (default).
-- `PrintMode.NewWindow`: Print from a new window or tab.
-
-N> Browser pop-up blockers must allow new windows or tabs when using `PrintMode = PrintMode.NewWindow`.
+> **Note:** Ensure that browser pop-up blockers allow new windows or tabs when using `PrintMode.NewWindow`.
 
 [View samples on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print)
 
 ## See also
 
 - [Overview](./overview)
-- [Print quality](./print-quality)
 - [Enable print rotation](./enable-print-rotation)
 - [Print events](./events)
