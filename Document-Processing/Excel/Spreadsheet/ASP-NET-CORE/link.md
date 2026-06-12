@@ -51,8 +51,7 @@ This operation clears only the link itself, leaving the text in the cell unchang
 
 In the active spreadsheet, click the cell where you want to remove a hyperlink. remove hyperlink can be done by any of the following ways:
 * Right-click the cell and then click Remove Hyperlink item in the context menu.
-* Use the [`removeHyperlink`](https://ej2.syncfusion.com/javascript
-/documentation/api/spreadsheet#removehyperlink/) method programmatically.
+* Use the [`removeHyperlink`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#removehyperlink) method programmatically.
 
 ## How to change target attribute
 
