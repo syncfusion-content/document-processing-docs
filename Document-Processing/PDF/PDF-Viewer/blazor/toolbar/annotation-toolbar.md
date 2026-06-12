@@ -10,19 +10,12 @@ domainurl: ##DomainURL##
 
 # Customize the Annotation Toolbar in Blazor PDF Viewer
 
-## Overview
-
-This guide shows how to show or hide the annotation toolbar and how to choose which tools appear and their order.
-
-**Outcome:** A working Blazor example that toggles the annotation toolbar and uses [AnnotationToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_AnnotationToolbarItems) to customize the toolbar.
-
-## Prerequisites
-
-- Syncfusion Blazor PDF Viewer component installed and configured. See [getting started guide](../getting-started)
+This guide shows how to show or hide the annotation toolbar and how to
+Customize the annotation toolbar by selecting which tools to display, arranging their order, and controlling its visibility programmatically.
 
 ## Show or hide the annotation toolbar
 
-Use the [ShowAnnotationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowAnnotationToolbar_System_Boolean_) method on the viewer to control visibility.
+Use the [ShowAnnotationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowAnnotationToolbar_System_Boolean_) method on the viewer to control visibility. Toggle the annotation toolbar during initialization or at runtime using the [EnableAnnotationToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableAnnotationToolbar) property or the ShowAnnotationToolbar method.
 
 {% tabs %}
 {% highlight razor tabtitle="Toolbar.razor" %}
@@ -100,55 +93,6 @@ Refer to the image below for the mobile view (responsive layout adapts to width)
 N> Properties tools (color, opacity, thickness, font, etc.) now appear only after you select or add the related annotation. Until you select or add one, these tools are hidden.
 
 N> This change reduces clutter and shows options only when they're relevant to the selected annotation.
-
-## Complete example with annotation toolbar customization
-
-The following is a complete, runnable example. It wires a toggle button and a viewer with a custom annotation toolbar list.
-
-{% tabs %}
-{% highlight razor tabtitle="Toolbar.razor" %}
-@using Syncfusion.Blazor.SfPdfViewer
-@using Syncfusion.Blazor.Buttons
-
-<SfButton @onclick="HideToolbar">Hide Annotation Toolbar</SfButton>
-
-<SfPdfViewer2 @ref="viewer" 
-              DocumentPath="wwwroot/Data/PDF_Succinctly.pdf" 
-              Height="100%" 
-              Width="100%">
-    <PdfViewerToolbarSettings AnnotationToolbarItems="AnnotationToolbarItems"></PdfViewerToolbarSettings>
-</SfPdfViewer2>
-
-@code {
-    SfPdfViewer2 viewer;
-    private bool show = true;
-
-    List<AnnotationToolbarItem> AnnotationToolbarItems = new List<AnnotationToolbarItem>()
-    {
-        AnnotationToolbarItem.HighlightTool,
-        AnnotationToolbarItem.UnderlineTool,
-        AnnotationToolbarItem.StrikethroughTool,
-        AnnotationToolbarItem.ColorEditTool,
-        AnnotationToolbarItem.OpacityEditTool,
-        AnnotationToolbarItem.AnnotationDeleteTool,
-        AnnotationToolbarItem.CommentPanelTool,
-        AnnotationToolbarItem.CloseTool
-    };
-
-    public void HideToolbar()
-    {
-        viewer.ShowAnnotationToolbar(show);
-        show = !show;
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-## Troubleshooting
-
-- **Annotation toolbar tools do not appear**: Verify that the items are valid [AnnotationToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationToolbarItem.html) values and that the document has loaded successfully.
-- **AnnotationToolbarItems not recognized**: Ensure [AnnotationToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_AnnotationToolbarItems) is properly defined in the [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html).
-- **Toolbar methods not working**: Ensure you have a reference to the PDF Viewer component using `@ref`.
 
 ## Related topics
 

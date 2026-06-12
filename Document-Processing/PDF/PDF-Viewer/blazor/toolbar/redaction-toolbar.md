@@ -10,16 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize the Redaction Toolbar in Blazor PDF Viewer
 
-## Overview
-
 This guide shows how to show or hide the redaction toolbar and how to enable it on desktop and mobile devices.
-
-**Outcome:** A working Blazor example that enables the redaction toolbar, controls its visibility, and displays redaction tools on both desktop and mobile platforms.
-
-## Prerequisites
-
-- Syncfusion Blazor PDF Viewer component installed and configured. See [getting started guide](../getting-started)
-- Understanding of [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ToolbarItem.html) and [MobileToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MobileToolbarItem.html)
 
 ## Enable the redaction toolbar on desktop
 
@@ -211,12 +202,6 @@ The following is a complete, runnable example. It wires a toggle button and a vi
 }
 {% endhighlight %}
 {% endtabs %}
-
-## Troubleshooting
-
-- **Redaction toolbar does not appear**: Verify that [ToolbarItem.Redaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_ToolbarItem_Redaction) or [MobileToolbarItem.Redaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MobileToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_MobileToolbarItem_Redaction) is included in the toolbar items list and that the document has loaded successfully.
-- **ShowRedactionToolbar method not working**: Ensure you have a reference to the PDF Viewer component using `@ref` and that the method is called after the component is initialized.
-- **Toolbar visibility does not toggle**: Verify that the `ShowRedactionToolbar` method is properly invoked and the boolean state is correctly toggled.
 
 ## Related topics
 

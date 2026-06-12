@@ -10,15 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize Primary Toolbar in Blazor PDF Viewer
 
-## Overview
-
 This guide explains how to show or hide the primary toolbar, remove default items, reorder toolbar items, and add custom toolbar items.
-
-**Outcome**: Working Blazor example customizing the primary toolbar.
-
-## Prerequisites
-
-- Syncfusion Blazor PDF Viewer component installed. See [getting started guide](../getting-started)
 
 ## Show or hide primary toolbar at initialization
 
@@ -489,12 +481,6 @@ Control the sidebar that toggles bookmarks and thumbnails using the [EnableNavig
 </SfPdfViewer2>
 {% endhighlight %}
 {% endtabs %}
-
-## Troubleshooting
-
-- **Toolbar still shows all default items**: Ensure [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) is provided with the exact set of items you want to display.
-- **Custom toolbar items not appearing**: Verify that [CustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems) has correct [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_PdfToolbarItem_Index) values.
-- **Toolbar methods not working**: Ensure you have a reference to the PDF Viewer component using `@ref`.
 
 ## Related topics
 

@@ -10,15 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize the Form Designer Toolbar in Blazor PDF Viewer
 
-## Overview
-
 This guide shows how to show or hide the form designer toolbar, and how to configure which tools appear and their order.
-
-**Outcome**: A working Blazor example customizing the form designer toolbar.
-
-## Prerequisites
-
-- Syncfusion Blazor PDF Viewer component installed and configured. See [getting started guide](../getting-started)
 
 ## Show or hide Form Designer toolbar at initialization
 
@@ -152,12 +144,6 @@ The following is a complete, runnable example. It wires a toggle button and a vi
 }
 {% endhighlight %}
 {% endtabs %}
-
-## Troubleshooting
-
-- **Toolbar or form designer tools do not appear**: Ensure that [EnableFormDesigner](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableFormDesigner) is set to `true` and you have a valid form-enabled PDF document.
-- **FormDesignerToolbarItems not recognized**: Verify that [FormDesignerToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) is properly defined in the [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html).
-- **Items are valid but not showing**: Ensure the document path points to a valid PDF file.
 
 ## Related topics
 

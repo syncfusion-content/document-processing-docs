@@ -58,123 +58,11 @@ Common actions you can wire to custom toolbar buttons:
 | `LoadAsync()` | Load a PDF document | Yes |
 | `ShowAnnotationToolbar(bool)` | Show or hide annotation toolbar | No |
 
-## Tutorial: Create Your First Custom Toolbar
+## Create Your First Custom Toolbar
 
-Follow this step-by-step guide to create a custom toolbar from scratch.
+To create a custom toolbar for the PDF Viewer, disable the default toolbars and implement your own using the `SfToolbar` component. This allows you to customize toolbar items, their placement, and associated actions based on your application requirements.
 
-### Step 1: Import required namespaces
-
-In your Razor component, add the following using statements:
-
-{% tabs %}
-{% highlight razor %}
-@using Syncfusion.Blazor.Navigations
-@using Syncfusion.Blazor.SfPdfViewer
-{% endhighlight %}
-{% endtabs %}
-
-### Step 2: Disable default toolbars
-
-Add the PDF Viewer component with both toolbars disabled:
-
-{% tabs %}
-{% highlight razor %}
-<SfPdfViewer2 @ref="PDFViewer" 
-              DocumentPath="@DocumentPath" 
-              EnableNavigationToolbar="false" 
-              EnableToolbar="false" 
-              Height="100%" 
-              Width="100%">
-</SfPdfViewer2>
-
-@code {
-    SfPdfViewer2 PDFViewer;
-    private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-}
-{% endhighlight %}
-{% endtabs %}
-
-### Step 3: Add the custom toolbar
-
-Add the `SfToolbar` component with basic navigation items:
-
-{% tabs %}
-{% highlight razor %}
-<SfToolbar>
-    <ToolbarItems>
-        <ToolbarItem PrefixIcon="e-icons e-chevron-up" TooltipText="Previous Page" 
-                     Align=@ItemAlign.Left OnClick="@previousClicked"></ToolbarItem>
-
-        <ToolbarItem PrefixIcon="e-icons e-chevron-down" TooltipText="Next Page" 
-                     Align=@ItemAlign.Left OnClick="@nextClicked"></ToolbarItem>
-
-        <ToolbarItem PrefixIcon="e-icons e-circle-add" TooltipText="Zoom in" 
-                     OnClick="@zoomInClicked"></ToolbarItem>
-
-        <ToolbarItem PrefixIcon="e-icons e-circle-remove" TooltipText="Zoom out" 
-                     OnClick="@zoomoutClicked"></ToolbarItem>
-
-        <ToolbarItem PrefixIcon="e-icons e-print" TooltipText="Print" 
-                     Align=@ItemAlign.Right OnClick="@print"></ToolbarItem>
-
-        <ToolbarItem PrefixIcon="e-icons e-download" TooltipText="Download" 
-                     Align=@ItemAlign.Right OnClick="@download"></ToolbarItem>
-    </ToolbarItems>
-</SfToolbar>
-{% endhighlight %}
-{% endtabs %}
-
-### Step 4: Implement toolbar action methods
-
-Add the event handler methods to your component's `@code` block:
-
-{% tabs %}
-{% highlight razor %}
-@code {
-    public async void nextClicked(ClickEventArgs args)
-    {
-        await PDFViewer.GoToNextPageAsync();
-    }
-
-    public async void previousClicked(ClickEventArgs args)
-    {
-        await PDFViewer.GoToPreviousPageAsync();
-    }
-
-    public async void zoomInClicked(ClickEventArgs args)
-    {
-        await PDFViewer.ZoomInAsync();
-    }
-
-    public async void zoomoutClicked(ClickEventArgs args)
-    {
-        await PDFViewer.ZoomOutAsync();
-    }
-
-    public async void print(ClickEventArgs args)
-    {
-        await PDFViewer.PrintAsync();
-    }
-
-    public async void download(ClickEventArgs args)
-    {
-        await PDFViewer.DownloadAsync();
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-### Step 5: Test your toolbar
-
-Run your application and verify that:
-- All toolbar buttons are visible
-- Navigation buttons move between pages
-- Zoom buttons adjust the zoom level
-- Print and Download buttons work as expected
-
-## Complete Working Example
-
-Here's the complete code combining all steps into one component:
+Use the following code snippet to create a fully functional custom toolbar with navigation, zoom, and document management features:
 
 {% tabs %}
 {% highlight razor tabtitle="CustomToolbar.razor" %}
@@ -302,12 +190,9 @@ Here's the complete code combining all steps into one component:
 {% endhighlight %}
 {% endtabs %}
 
-## Troubleshooting
+Refer to the image below for the Custom Toolbar.
 
-**Toolbar methods not responding**: Ensure you have a reference to the PDF Viewer component using `@ref`. For async methods, use `await` properly or call them without await if the method is `void`.
-**Custom toolbar not appearing**: Confirm that both `EnableToolbar` and `EnableNavigationToolbar` are set to `false` in the `SfPdfViewer2` component.
-**Buttons not calling event handlers**: Check that the method name in `OnClick` matches exactly with the method defined in your `@code` block. Method names are case-sensitive.
-**PDF changes not being saved**: Use `GetDocumentAsync()` to retrieve the modified PDF and `LoadAsync()` to reload it after saving.
+![Custom toolbar](../images/custom-toolbar.png)
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar)
 

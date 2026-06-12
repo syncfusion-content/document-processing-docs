@@ -10,11 +10,7 @@ domainurl: ##DomainURL##
 
 # Toolbar overview in Blazor PDF Viewer
 
-## Overview
-
 This page provides a concise reference describing the toolbars available in the Blazor PDF Viewer component. It also explains what each toolbar is for and when it appears.
-
-**Scope**: covers available toolbars and their functions.
 
 ## List of Available Toolbars
 
@@ -52,6 +48,8 @@ Primary toolbar options include:
 
 ![primary desktop toolbar](../../blazor-classic/images/blazor-pdfviewer-custom-toolbar.png)
 
+See [Primary toolbar customization](./primary-toolbar) for configuration options and examples.
+
 ### Annotation toolbar
 
 The annotation toolbar appears below the primary toolbar when annotation features are enabled. It provides tools to create and edit annotations.
@@ -70,6 +68,8 @@ Annotation toolbar options include:
 
 ![annotation desktop toolbar](../images/blazor-annotation-toolbar.png)
 
+See [Annotation toolbar Customization](./annotation-toolbar) for configuration options and examples.
+
 ### Form Designer toolbar
 
 The form designer toolbar appears when form designer mode is enabled and provides tools to add and configure interactive form fields.
@@ -81,6 +81,8 @@ Form designer toolbar options include:
 * Close
 
 ![form designer toolbar](../images/blazor-form-deigner-toolbar.png)
+
+See [FormDesigner toolbar Customization](./form-designer-toolbar) for configuration options and examples.
 
 ### Mobile toolbar
 
@@ -105,6 +107,8 @@ Redaction toolbar options include:
 * Close
 
 ![redaction toolbar](../images/mobile-redaction-toolbar.png)
+
+See [Redaction toolbar Customization](./redaction-toolbar) for configuration options and examples.
 
 ## Show or hide toolbar items
 

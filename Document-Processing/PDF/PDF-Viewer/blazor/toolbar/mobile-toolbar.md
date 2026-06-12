@@ -12,13 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-This how-to explains how to customize the mobile toolbar in the Syncfusion Blazor PDF Viewer, enable the desktop toolbar on mobile devices, and ensure smooth touch interactions.
-
-## Prerequisites
-
-- Syncfusion Blazor PDF Viewer component installed and configured.
-- For standalone mode: a valid PDF document accessible via URL or local path.
-- For server-backed mode: appropriate service URL configuration.
+This guide explains how to customize the mobile toolbar in the Syncfusion Blazor PDF Viewer, enable the desktop toolbar on mobile devices, and ensure smooth touch interactions.
 
 ## Primary toolbar in mobile mode
 
@@ -266,12 +260,6 @@ To enable smooth scrolling of PDF documents on mobile while in desktop mode, dis
 ## Print option availability in mobile
 
 The Print option is not available in mobile mode by default. To use printing on mobile, enable the desktop toolbar with the [EnableDesktopMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) API. Availability and behavior may vary by mobile browser.
-
-## Troubleshooting
-
-- **Mobile toolbar items not appearing**: Verify that [MobileToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_MobileToolbarItems) is properly configured in [PdfViewerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html).
-- **Touch scrolling is jerky**: Set [EnableTextSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSelection) to `false` to avoid text-selection capturing touch events.
-- **Print not available in mobile mode**: Enable [EnableDesktopMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) to access desktop toolbar features.
 
 ## Related topics
 
