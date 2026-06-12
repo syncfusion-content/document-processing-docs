@@ -567,7 +567,7 @@ PDF Standards:
 <th>
 Features<br/><br/></th><th>
 .NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
+UWP<br/><br/></th>
 <th>Blazor Client-Side<br/><br/></th>
 <th>Blazor Server-Side & Hosted Application<br/><br/></th>
 <th>WinUI<br/><br/></th></tr>
@@ -625,7 +625,7 @@ Fonts:
 <th>
 Features<br/><br/></th><th>
 .NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
+UWP<br/><br/></th>
 <th>Blazor Client-Side<br/><br/></th>
 <th>Blazor Server-Side & Hosted Application<br/><br/></th>
 <th>WinUi<br/><br/></th></tr>
@@ -674,7 +674,7 @@ Images:
 <th>
 Features<br/><br/></th><th>
 .NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
+UWP<br/><br/></th>
 <th>Blazor Client-Side<br/><br/></th>
 <th>Blazor Server-Side & Hosted Application<br/><br/></th>
 <th>WinUI<br/><br/></th></tr>
@@ -724,7 +724,7 @@ Tables:
 <th>
 Features<br/><br/></th><th>
 .NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
+UWP<br/><br/></th>
 <th>Blazor Client-Side<br/><br/></th>
 <th>Blazor Server-Side & Hosted Application<br/><br/></th>
 <th>WinUI<br/><br/></th></tr>
@@ -810,7 +810,7 @@ Page Level Operations:
 <th>
 Features<br/><br/></th><th>
 .NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
+UWP<br/><br/></th>
 <th>Blazor Client-Side<br/><br/></th>
 <th>Blazor Server-Side & Hosted Application<br/><br/></th>
 <th>WinUI<br/><br/></th></tr>
@@ -851,7 +851,7 @@ Interactive Elements:
 <th>
 Features<br/><br/></th><th>
 .NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
+UWP<br/><br/></th>
 <th>Blazor Client-Side<br/><br/></th>
 <th>Blazor Server-Side & Hosted Application<br/><br/></th>
 <th>WinUI<br/><br/></th></tr>
