@@ -37,7 +37,7 @@ Alternatively, you can utilize the following package manager command to achieve 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.EJ2.MVC5 -Version {{ site.ej2version }}
+Install-Package Syncfusion.EJ2.MVC5
 
 {% endhighlight %}
 {% endtabs %}
@@ -46,14 +46,12 @@ N> This package includes dependencies such as  [Newtonsoft.Json](https://www.nug
 
 ### Add namespace
 
-Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
+Add the **Syncfusion.EJ2** namespace reference to the `<namespaces>` section in the `~/Views/Web.config` file.
 
 {% tabs %}
 {% highlight C# tabtitle="Web.config" %}
 
-<namespaces>
-    <add namespace="Syncfusion.EJ2"/>
-</namespaces>
+<add namespace="Syncfusion.EJ2"/>
 
 {% endhighlight %}
 {% endtabs %}
@@ -65,13 +63,10 @@ Here, the theme and script is referred using CDN inside the `<head>` of `~/Views
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-<head>
-    ...
-    <!-- Syncfusion ASP.NET MVC controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
-    <!-- Syncfusion ASP.NET MVC controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
-</head>
+<!-- Syncfusion ASP.NET MVC controls styles -->
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
+<!-- Syncfusion ASP.NET MVC controls scripts -->
+<script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -85,11 +80,8 @@ Also, register the script manager `EJS().ScriptManager()` at the end of `<body>`
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-<body>
-    ...
-    <!-- Syncfusion ASP.NET MVC Script Manager -->
-    @Html.EJS().ScriptManager()
-</body>
+<!-- Syncfusion ASP.NET MVC Script Manager -->
+@Html.EJS().ScriptManager()
 
 {% endhighlight %}
 {% endtabs %}
