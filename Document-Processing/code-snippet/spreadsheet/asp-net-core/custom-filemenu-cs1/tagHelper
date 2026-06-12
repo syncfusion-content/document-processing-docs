@@ -1,0 +1,32 @@
+
+<div style="padding: 12px">
+    <ejs-spreadsheet id="spreadsheet" created="handleCreated" fileMenuItemSelect="handleFileMenuItemSelect" openUrl="Home/Open" saveUrl="https://localhost:{{port number}}/Home/Save"></ejs-spreadsheet>
+</div>
+
+<script>
+    // Handle the created event
+    function handleCreated() {
+        // Get the Spreadsheet instance
+        const spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        if (!spreadsheet) return;
+
+        // Add a single custom item after "Print"
+        spreadsheet.addFileMenuItems(
+            [
+                { text: 'Quick Export (.csv)', iconCss: 'e-icons e-export' }
+            ],
+            'Print'
+        );
+    }
+
+    // Run the action for our custom item
+    function handleFileMenuItemSelect(args) {
+        // Get the Spreadsheet instance
+        const spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        if (!spreadsheet) return;
+
+        if (args.item.text === 'Quick Export (.csv)') {
+            spreadsheet.save({ saveType: 'Csv' });
+        }
+    }
+</script>

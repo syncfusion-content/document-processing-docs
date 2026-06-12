@@ -1,0 +1,46 @@
+<div style="padding: 12px;">
+    <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <button onclick="enableInsertTab()">Enable Insert Tab</button>
+        <button onclick="disableInsertTab()">Disable Insert Tab</button>
+        <button onclick="enableHomeItems()">Enable Home Items</button>
+        <button onclick="disableHomeItems()">Disable Home Items</button>
+    </div>
+
+    <ejs-spreadsheet id="spreadsheet" created="handleCreated">
+    </ejs-spreadsheet>
+</div>
+
+<script>
+    var spreadsheet;
+
+    // Example toolbar item indices inside Home tab to enable/disable
+    var homeItemsToToggle = [0, 1, 2, 3, 4, 5];
+
+    function disableInsertTab() {
+        if (!spreadsheet) return;
+        spreadsheet.enableRibbonTabs(['Insert'], false);
+    }
+
+    function enableInsertTab() {
+        if (!spreadsheet) return;
+        spreadsheet.enableRibbonTabs(['Insert'], true);
+    }
+
+    function disableHomeItems() {
+        if (!spreadsheet) return;
+        spreadsheet.enableToolbarItems('Home', homeItemsToToggle, false);
+    }
+
+    function enableHomeItems() {
+        if (!spreadsheet) return;
+        spreadsheet.enableToolbarItems('Home', homeItemsToToggle, true);
+    }
+
+    function handleCreated() {
+        spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+        if (!spreadsheet) return;
+        // Initial example state: disable Insert tab and a few Home items
+        spreadsheet.enableRibbonTabs(['Insert'], false);
+        spreadsheet.enableToolbarItems('Home', homeItemsToToggle, false);
+    }
+</script>
