@@ -11,7 +11,7 @@ The Syncfusion<sup>&reg;</sup> [Xamarin PDF library](https://www.syncfusion.com/
 
 To include the Syncfusion<sup>&reg;</sup> Xamarin PDF library into your Xamarin application, please refer to the [NuGet Package Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) documentation.
 
-**Steps to create PDF document in Xamarin**
+## Steps to create PDF document in Xamarin
 
 Step 1: Create a new C# Xamarin.Forms application project.
 ![Xamarin project creation](Xamarin_images/Xamarin_project_creation.jpg)
