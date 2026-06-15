@@ -131,7 +131,7 @@ markdownDocument.Open("Input.md")
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ### Opening a document with import settings
 
@@ -261,7 +261,7 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 ## Saving a Markdown Document
 
@@ -477,7 +477,7 @@ markdownDocument.Dispose()
 
 N> You can also retrieve the Markdown content with save options by passing the `SaveOptions` parameter to the `GetMarkdownText` method.
 
-You can download a complete working sample from GitHub.
+
 
 ## Closing a document
 
@@ -518,4 +518,4 @@ markdownDocument.Dispose()
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+

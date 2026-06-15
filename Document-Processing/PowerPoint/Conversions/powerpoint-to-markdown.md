@@ -26,29 +26,26 @@ The following code example shows how to convert a PowerPoint Presentation docume
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/main/PowerPoint-to-Markdown-conversion/Convert-PowerPoint-to-Markdown/.NET/Convert-PowerPoint-to-Markdown/Program.cs" %}
-//Open the file as a Stream.
-using (FileStream fileStream = new FileStream("Input.pptx", FileMode.Open, FileAccess.Read))
-{
-    //Load the file stream into a Markdown file.
-    using (IPresentation presentation = Presentation.Open(fileStream))
-    {
-        //Save as a PPTX document into the Markdown FileStream.
-        using (FileStream outputStream = new FileStream("PPTXtoMd.md", FileMode.Create))
-        {
-            presentation.Save(outputStream);
-        }
-    } 
-}
-{% endhighlight %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open an existing Presentation document.
 using (IPresentation presentation = Presentation.Open("Input.pptx", FormatType.Docx))
 {
     //Save the PowerPoint Presentation as a Markdown file.
     presentation.Save("PPTXtoMd.md");
 }
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Open an existing Presentation document.
+using (IPresentation presentation = Presentation.Open("Input.pptx", FormatType.Docx))
+{
+    //Save the PowerPoint Presentation as a Markdown file.
+    presentation.Save("PPTXtoMd.md");
+}
+
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -115,4 +112,154 @@ async void Save(MemoryStream streams, string filename)
 {% endhighlight %}
 
 {% endtabs %}
+
+## Save Options
+
+When converting a PowerPoint Presentation to Markdown, the .NET PowerPoint library provides various save options to customize the output Markdown file. These options allow you to customize image paths, set character encoding, and other export behaviors.
+
+When converting a PowerPoint Presentation to a Markdown using the [Save(fileName)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Save_System_String_) overloads, the library creates a new folder parallel to the output file name and exports all the images into it as default.
+
+When converting a PowerPoint Presentation to a Markdown using the [Save(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_Save_System_IO_Stream_) overloads, the library preserves the images as base64 format in the output Markdown file as default.
+
+You can customize the above default behaviors using the following options in the .NET PowerPoint library.
+
+### Customize the image path
+
+The .NET PowerPoint library provides an `ImageNodeVisited` event, which is used to customize the image path to set in the output Markdown file and save images externally while converting a PowerPoint Presentation to a Markdown.
+
+The following code example illustrates how to save image files during a PowerPoint to Markdown conversion.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Open an existing Presentation document.
+using (IPresentation presentation = Presentation.Open("Input.pptx"))
+{
+	// Hook the event to customize the image.
+    presentation.MdSaveOptions.ImageNodeVisited += SaveImage;
+    // Save the PowerPoint Presentation as a Markdown file.
+    presentation.Save(@"Output.md");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Open an existing Presentation document.
+using (IPresentation presentation = Presentation.Open("Input.pptx"))
+{
+	// Hook the event to customize the image.
+    presentation.MdSaveOptions.ImageNodeVisited += SaveImage;
+    // Save the PowerPoint Presentation as a Markdown file.
+    presentation.Save(@"Output.md");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Open an existing Presentation document.
+Using presentation As IPresentation = Presentation.Open("Input.pptx")
+    'Hook the event to customize the image.
+    AddHandler presentation.MdSaveOptions.ImageNodeVisited, AddressOf SaveImage
+    'Save the Presentation document as a Markdown file.
+    presentation.Save("Output.md")
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code examples show the event handler to customize the image path and save the image in an external folder.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+static void SaveImage(object sender, MdImageNodeVisitedEventArgs args)
+{
+    string imagepath = @"D:\Temp\Image1.png";
+	// Save the image stream as a file.
+	using (FileStream fileStreamOutput = File.Create(imagepath))
+		args.ImageStream.CopyTo(fileStreamOutput);
+	// Set the URI to be used for the image in the output Markdown. 
+	args.Uri = imagepath;
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+static void SaveImage(object sender, MdImageNodeVisitedEventArgs args)
+{
+    string imagepath = @"D:\Temp\Image1.png";
+	// Save the image stream as a file.
+	using (FileStream fileStreamOutput = File.Create(imagepath))
+		args.ImageStream.CopyTo(fileStreamOutput);
+	// Set the URI to be used for the image in the output Markdown. 
+	args.Uri = imagepath;
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Private Shared Sub SaveImage(ByVal sender As Object, ByVal args As MdImageNodeVisitedEventArgs)
+    Dim imagepath = "D:\Temp\Image1.png"
+    'Save the image stream as a file. 
+    Using fileStreamOutput = File.Create(imagepath)
+        args.ImageStream.CopyTo(fileStreamOutput)
+    End Using
+    'Set the URI to be used for the image in the output markdown. 
+    args.Uri = imagepath
+End Sub
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Encoding
+
+The .NET PowerPoint library provides an `Encoding` property to specify the character encoding to use when saving the Markdown file. This property is useful when you need to save the output Markdown file with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
+
+The following code example shows how to save a Markdown file with a specific encoding.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+ // Open an existing Presentation document.
+ using (IPresentation presentation = Presentation.Open("Input.pptx"))
+ {
+	 // Set the encoding for the Markdown file.
+     presentation.MdSaveOptions.Encoding = Encoding.ASCII;
+     // Save the PowerPoint Presentation as a Markdown file.
+     presentation.Save("Output.md");
+ }
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+ // Open an existing Presentation document.
+ using (IPresentation presentation = Presentation.Open("Input.pptx"))
+ {
+	 // Set the encoding for the Markdown file.
+     presentation.MdSaveOptions.Encoding = Encoding.ASCII;
+     // Save the PowerPoint Presentation as a Markdown file.
+     presentation.Save("Output.md");
+ }
+ 
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Open an existing Presentation document.
+Using presentation As IPresentation = Presentation.Open("Input.pptx")
+    'Set the encoding for the Markdown file.
+    presentation.MdSaveOptions.Encoding = Encoding.ASCII
+    'Save the PowerPoint Presentation as a Markdown file.
+    presentation.Save("Output.md")
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Set the encoding value before saving the document as per the above code example.
 
