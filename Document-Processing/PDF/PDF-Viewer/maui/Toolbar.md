@@ -24,6 +24,8 @@ The names of these toolbars and their description are listed in the following se
 
 ### Mobile toolbar names
 
+![Mobile Toolbar](Images/MobileToolbar.png)
+
 <table>
 <tr>
 <th>Key</th>
@@ -112,6 +114,10 @@ The names of these toolbars and their description are listed in the following se
 </table>
 
 ### Desktop toolbar names 
+
+![Desktop Primary Toolbar](Images/PrimaryToolbar.png)
+
+![Desktop Annotations Toolbar](Images/AnnotationsToolbar.png)
 
 <table>
 <tr>

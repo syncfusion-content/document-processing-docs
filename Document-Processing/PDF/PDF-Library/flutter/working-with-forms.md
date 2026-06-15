@@ -21,7 +21,8 @@ The [`PdfTextBoxField `](#) class is used to create a text box field in PDF form
 
 The following code sample explains how to add a textbox field to a new PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 final PdfDocument document = PdfDocument();
@@ -41,10 +42,12 @@ document.form.fields.add(PdfTextBoxField(
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 The following code sample explains how to add the textbox to an existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -65,6 +68,7 @@ document.form.fields.add(PdfTextBoxField(
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Adding the combo box field
 
@@ -72,7 +76,8 @@ The PdfComboBoxField class is used to create a combo box field in PDF forms. You
 
 Please refer to the following code sample for adding the combo box in a new PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 final PdfDocument document = PdfDocument();
@@ -94,10 +99,12 @@ document.form.fields.add(PdfComboBoxField(
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 Please refer to the following code sample for adding the combo box in an existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -120,6 +127,7 @@ document.form.fields.add(PdfComboBoxField(
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Adding the radio button field
 
@@ -127,7 +135,8 @@ To create the radio button in the PDF forms, you can use the PdfRadioButtonListF
 
 Please refer to the following code sample for adding the radio button in a new PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 final PdfDocument document = PdfDocument();
@@ -161,10 +170,12 @@ selectedIndex: 0,
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 The following code sample shows how to add the radio button in an existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.  
 final PdfDocument document =
@@ -199,6 +210,7 @@ selectedIndex: 0,
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Retrieving option values from the acroform radio button
 
@@ -206,7 +218,8 @@ The Flutter PDF supports retrieving values from the acroform radio button. The v
 
 The following code example shows how to get values from the acroform radio button.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -223,6 +236,7 @@ if (radioButtonListField is PdfRadioButtonListField &&
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Adding the list box field
 
@@ -230,7 +244,8 @@ You can create the list box field in PDF forms using the PdfListBoxField class.
 
 Please refer to the following code sample for adding the list box field in a new PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 final PdfDocument document = PdfDocument();
@@ -253,10 +268,12 @@ document.form.setDefaultAppearance(true);
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 Please refer to the following code sample for adding the list box field in an existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -280,6 +297,7 @@ document.form.setDefaultAppearance(true);
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Adding the check Box field
 
@@ -287,7 +305,8 @@ You can create the check box field in PDF forms using the PdfCheckBoxField class
 
 Please refer to the following code sample for adding the check box field in a new PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 final PdfDocument document = PdfDocument();
@@ -308,10 +327,12 @@ document.form.fields.add(PdfCheckBoxField(
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 Please refer to the following code sample for adding the check box field in an existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -333,6 +354,7 @@ document.form.fields.add(PdfCheckBoxField(
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Adding the signature field
 
@@ -340,7 +362,8 @@ You can add the signature field in PDF forms using the PdfSignatureField class.
 
 Please refer to the following code sample for adding the signature field in a new PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 final PdfDocument document = PdfDocument();
@@ -353,10 +376,12 @@ document.form.fields.add(PdfSignatureField(document.pages.add(), 'Sign',
 File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 Please refer to the following code sample for adding the signature field in an existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -370,6 +395,7 @@ document.form.fields.add(PdfSignatureField(document.pages[0], 'Sign',
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Adding the button field
 
@@ -377,7 +403,8 @@ To create button fields in PDF forms, you can use the PdfButtonField class.
 
 The following code explains how to add the button field in a new PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 final PdfDocument document = PdfDocument();
@@ -399,10 +426,12 @@ document.form.fields.add(PdfButtonField(
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 Please refer to the following code sample for adding the button field in an existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -425,6 +454,7 @@ document.form.fields.add(PdfButtonField(
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Set appearance to the PDF form fields
 
@@ -432,7 +462,8 @@ After filling the form fields in the PDF document, it may appear empty due to th
 
 The following code sample explains how to set appearance to the PDF form fields.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -448,6 +479,7 @@ document.form.setDefaultAppearance(true);
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Modifying the existing form field in a PDF document
 
@@ -455,7 +487,8 @@ You can modify an existing form field by getting the field from the PdfFormField
 
 The following code sample explains how to modify an existing form field in a PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -476,12 +509,14 @@ if (field is PdfTextBoxField) {
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(await document.save());
 {% endhighlight %}
+{% endtabs %}
 
 Retrieving or Modifying the fore, border, and back color of an existing form field
 
 You can retrieve or modify the fore, border, and background color of existing form fields in a PDF document by using the foreColor, borderColor, and backColor properties of the respective form fields. The following code sample explains this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -505,6 +540,7 @@ if (field is PdfTextBoxField) {
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Filling form fields in an existing PDF Document
 
@@ -514,7 +550,8 @@ Flutter PDF allows you to fill the form fields using the PdfField class.
 
 You can fill a text box field using the text property of PdfTextBoxField class. The following code sample explains this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -527,12 +564,14 @@ final PdfDocument document =
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Filling the combo box field
 
 You can fill a combo box field using the selectedValue or selectedIndex properties of PdfLoadedComboBoxField class. Please refer to the following code sample to fill the combo box field in an existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -548,12 +587,14 @@ if (comboBox is PdfComboBoxField && comboBox.selectedIndex != 1) {
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Filling the radio button field
 
 You can fill a radio button field using the selectedValue or selectedIndex properties of PdfRadioButtonListField class. Please refer to the following code sample to fill the radio button field in an existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -570,12 +611,14 @@ if (radioButtonListField is PdfRadioButtonListField &&
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Filling the list box field
 
 The following code sample explains how to fill the list box field in an existing PDF document using the selectedIndex property of PdfListBoxField class.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -588,12 +631,14 @@ final PdfDocument document =
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Filling the check box field
 
 You can fill a check box field by enabling the checked property of PdfCheckBoxField class. Please refer to the following code sample to fill the check box field.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -606,6 +651,7 @@ final PdfDocument document =
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Enumerate the form fields
 
@@ -613,7 +659,8 @@ All the form fields are maintained in the PdfFormFieldCollection class. You can 
 
 The following code example explains this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -631,6 +678,7 @@ for (int i = 0; i < document.form.fields.count; i++) {
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Removing editing capability of form fields
 
@@ -640,7 +688,8 @@ Flutter PDF provides the support to flatten a form field by removing the existin
 
 Please refer to the sample for flattening the form fields in a new PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 final PdfDocument document = PdfDocument();
@@ -657,10 +706,12 @@ document.form.fields.add(PdfTextBoxField(
 File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 Please refer to the sample for flattening the form fields in an existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -676,12 +727,14 @@ document.form.flattenAllFields();
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 To prevent the user from changing the form field content, you can also use the readOnly property.
 
 The following code sample explains how to set the readOnly property to a new PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 final PdfDocument document = PdfDocument();
@@ -698,10 +751,12 @@ document.form.fields.add(PdfTextBoxField(
 File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 The following code sample explains how to set the ReadOnly property to an existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document and set the form as read-only.
 PdfDocument document =
@@ -712,6 +767,7 @@ PdfDocument document =
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Removing the form fields from the existing PDF document
 
@@ -719,7 +775,8 @@ You can remove the form fields from an existing PDF document using the remove or
 
 The following code explains how to remove the form fields from the existing PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -738,6 +795,7 @@ collection.remove(collection[0]);
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Auto naming of form fields
 
@@ -749,7 +807,8 @@ While disabling this property, the field names are not auto naming, and the crea
 
 By default, the value is set to true. This is explained in the following code sample.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 final PdfDocument document = PdfDocument();
@@ -771,6 +830,7 @@ document.form.fields.add(PdfTextBoxField(
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Adding an action to the form field
 
@@ -778,7 +838,8 @@ Flutter PDF provides support to add various actions to the form fields. The PdfF
 
 The following code example explains this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document.
 final PdfDocument document = PdfDocument();
@@ -798,6 +859,7 @@ document.form.fields.add(PdfButtonField(document.pages.add(),
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Importing FDF file to PDF
 
@@ -805,7 +867,8 @@ FDF (Forms Data Format) is a file format for representing form data and annotati
 
 The following code sample explains how to import the FDF file to PDF.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -819,6 +882,7 @@ document.form
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Importing XFDF file to PDF
 
@@ -826,7 +890,8 @@ XFDF (XML Forms Data Format) is used to save the form data that can be imported 
 
 The following code sample explains how to import the XFDF file to PDF.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -840,6 +905,7 @@ document.form
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Importing JSON file to PDF
 
@@ -847,7 +913,8 @@ JSON (JavaScript Object Notation) file is used to save the form data that can be
 
 The following code sample explains how to import JSON files to PDF.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -864,6 +931,7 @@ document.form.setDefaultAppearance(true);
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Importing XML file to PDF
 
@@ -871,7 +939,8 @@ XML stands for an extensible markup language. The XML file is used to save the f
 
 The following code sample explains how to import XML files to PDF.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -885,6 +954,7 @@ document.form
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Export PDF file to FDF
 
@@ -892,7 +962,8 @@ To export the FDF file from a PDF document, you can use the exportData method av
 
 The following code sample explains how to export the FDF file from a PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Load the existing PDF document.
 PdfDocument document = PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
@@ -904,6 +975,7 @@ File('Export.fdf').writeAsBytesSync(document.form.exportData(DataFormat.fdf));
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Export PDF file to XFDF
 
@@ -911,7 +983,8 @@ To export the XFDF file from a PDF document, you can use the exportData method a
 
 The following code sample explains how to export the XFDF file from a PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Load the existing PDF document.
 PdfDocument document = PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
@@ -923,6 +996,7 @@ File('Export.xfdf').writeAsBytesSync(document.form.exportData(DataFormat.xfdf));
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Export PDF file to JSON
 
@@ -930,7 +1004,8 @@ To export the JSON file from a PDF document, you can use the exportData method a
 
 The following code sample explains how to export JSON files from a PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 //Load the existing PDF document.
 PdfDocument document = PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
@@ -941,6 +1016,7 @@ File('Export.json').writeAsBytesSync(document.form.exportData(DataFormat.json));
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Export PDF file to XML
 
@@ -948,7 +1024,8 @@ To export the XML file from a PDF document, you can use the exportData method av
 
 The following code sample explains how to export an XML file from a PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Load the existing PDF document.
 PdfDocument document = PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
@@ -960,6 +1037,7 @@ File('Export.xml').writeAsBytesSync(document.form.exportData(DataFormat.xml));
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ## Troubleshooting
@@ -968,7 +1046,8 @@ Sometimes, Form fields may appear empty in an adobe reader due to the absence of
 
 The following code explains how to enable the default appearance in a new PDF document. 
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 final PdfDocument document =
@@ -992,3 +1071,4 @@ document.form.setDefaultAppearance(true);
 File('output.pdf').writeAsBytesSync(await document.save());
 
 {% endhighlight %}
+{% endtabs %}

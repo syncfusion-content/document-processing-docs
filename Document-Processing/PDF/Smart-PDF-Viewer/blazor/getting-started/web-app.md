@@ -11,6 +11,9 @@ documentation: ug
 
 This article briefly explains how to include [Blazor Smart PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-smart-pdf-viewer) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
+Check out the following video to learn how to get started with the Blazor Smart PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=rIFsvla4144" %}
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
