@@ -210,7 +210,7 @@ Get the following required assemblies by downloading the HTML converter installe
 </table>
 
 
-N> HTML to PDF conversion is not supported in Silverlight, Windows Phone, WinRT, Universal, Xamarin and UWP applications
+N> HTML to PDF conversion is not supported in Xamarin, .NET MAUI, WinUI and UWP applications
 
 ## Converting Word document to PDF
 
