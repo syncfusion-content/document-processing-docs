@@ -95,7 +95,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 N> The `ListValue` property specifies the complete list prefix including the marker and spacing. For bulleted lists, typical values are "- ", "* ", or "+ ".
 
@@ -191,7 +191,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 N> The `ListValue` property contains the actual number and marker for each item.
 
@@ -327,7 +327,7 @@ The following code example demonstrates how to create a multilevel bulleted list
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 N> Each nesting level typically adds spaces of indentation. Level 0 has no indentation.
 
@@ -481,6 +481,6 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 N> Each nesting level typically adds spaces of indentation. Level 0 has no indentation.

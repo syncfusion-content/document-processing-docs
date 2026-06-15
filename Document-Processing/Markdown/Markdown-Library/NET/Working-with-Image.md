@@ -10,6 +10,12 @@ documentation: UG
 
 Images are essential elements of Markdown documents that enhance visual communication and documentation. The Syncfusion<sup>&reg;</sup> Markdown library facilitates adding, modifying, and managing images in a Markdown document. Images in Markdown are represented by the `MdPicture` class, which is an inline element that can be added to a `MdParagraph`. The library supports both URL-based and byte array-based images, allowing you to reference external image files or embed images directly into the document.
 
+When saving a Markdown document using the `Save(fileName)` overloads, the library creates a new folder parallel to the output file name and exports all the images into it as default. 
+
+When using the `Save(Stream)` overloads, the library preserves the images as base64 format in the output Markdown file as default. 
+
+If the image contains both a URL and stream values, or contains only a URL, the URL will be used in the output document.
+
 ## Adding image from URL
 
 An image can be added to a paragraph in a Markdown document by creating an instance of the `MdPicture` class and adding it to the paragraph's inline collection.
@@ -58,7 +64,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Adding image from relative path
 
@@ -106,7 +112,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Adding image from local file path
 
@@ -154,7 +160,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Adding image from image bytes
 
@@ -208,7 +214,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Replacing images
 
@@ -279,7 +285,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Removing images
 
@@ -344,7 +350,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 
 ## Working with alternative text
@@ -399,7 +405,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 
 
