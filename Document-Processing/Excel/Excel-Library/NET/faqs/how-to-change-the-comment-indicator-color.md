@@ -99,3 +99,5 @@ Using excelEngine As New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999921-Comment-Indicator/FAQ/Comment%20Indicator%20Color/.NET/Comment%20Indicator%20Color">this GitHub page</a>.
