@@ -27,7 +27,7 @@ Step 2: Name the project.
 
 Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
 
-![Install Syncfusion.XlsIO.Net.Core Nuget Package](Console-Apps-images/Console-Apps-images_img3.png)
+![Install Syncfusion.XlsIO.Net.Core Nuget Package](ASP-NET-Core_images/ASP-NET-Core_images_img3.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 

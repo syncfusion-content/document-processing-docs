@@ -55,7 +55,7 @@ Imports System.Windows
 {% endcapture %}
 {{ codesnippet2 | OrderList_Indent_Level_1 }}
 
-Step 5: Include the following code snippet in btnCreate_Click, the click event of the button to create the Excel document.
+Step 5: Include the following code snippet in Button_Click, the click event of the button to create the Excel document.
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
