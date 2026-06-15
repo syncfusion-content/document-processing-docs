@@ -191,15 +191,18 @@ Step 2: Install [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.or
 
 Step 3: Include the following namespace in your class file. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.HtmlConverter;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Use the following code sample to convert the URL to PDF in the program.cs.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize HTML to PDF converter.
@@ -218,6 +221,7 @@ document.Save(fileStream);
 document.Close(true);
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get the PDF document as follows.
 <img src="htmlconversion_images/htmltopdfoutput.png" alt="htmltopdfoutput" width="100%" Height="Auto"/>
@@ -267,6 +271,7 @@ By default, the PDF document generated with the IE rendering engine comes with t
 <img src="htmlconversion_images/IEWarning.png" alt="IEWarning" width="100%" Height="Auto"/>
 Please refer to the below code snippet to use the DisableIEWarning API to remove the default IE warning from the PDF document.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize the HTML to PDF converter 
@@ -284,5 +289,6 @@ document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
+{% endtabs %}
 
 N>Please try our [Blink](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/net-core) engine to improve the quality and accuracy of the HTML to PDF conversion.

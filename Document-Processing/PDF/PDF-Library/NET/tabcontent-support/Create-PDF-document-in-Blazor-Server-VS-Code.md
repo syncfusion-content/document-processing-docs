@@ -125,7 +125,7 @@ Create a button in the ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
-<button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
+<button class="btn btn-primary" @onclick="@ExportToPdf">Export PDF</button>
 {% endhighlight %}
 {% endtabs %}
 
@@ -149,7 +149,6 @@ Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export se
 Step 8: Create a class file with  ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -162,13 +161,11 @@ public static class FileUtil
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available under the ``Pages`` folder.
 
 {% tabs %}
-
 {% highlight HTML %}
 
 <script type="text/javascript">
@@ -195,7 +192,6 @@ Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available
 </script>
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Step 10: Build the project.

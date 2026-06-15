@@ -57,6 +57,34 @@ PdfViewer.PrintSettings.PrintQuality = PrintQuality.High;
 
 N> The [PrintQuality](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PrintSettings.html#Syncfusion_Maui_PdfViewer_PrintSettings_PrintQuality) API is only applicable to the Windows platform and does not affect printing on Android, iOS, or macOS.
 
+## Detecting Print Completion with PrintDocumentCompleted
+
+The `PrintDocumentCompleted` event occurs after a print operation has finished. The event provides a Status property that indicates whether the document was successfully submitted to the printer (PrintStatus.Success) or if the operation was cancelled by the user (PrintStatus.Cancelled). You can use this event to track print outcomes and manage the process accordingly.
+
+The following example explains how to wire and handle the event.
+
+{% tabs %}
+{% highlight c# %}
+void WirePrintDocumentCompletedEvent() 
+{ 
+    // Wire the PrintDocumentCompleted event of SfPdfViewer.
+    pdfViewer.PrintDocumentCompleted += OnPrintDocumentCompleted; 
+} 
+
+private void OnPrintDocumentCompleted(object? sender, PrintDocumentCompletedEventArgs e) 
+{ 
+    if (e.Status == PrintStatus.Success)
+    {
+        Debug.WriteLine("Document printed successfully."); 
+    }
+    else if (e.Status == PrintStatus.Cancelled)
+    {
+        Debug.WriteLine("Print operation was cancelled.");
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Limitations
 
 Currently, when printing a document that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the printed document.

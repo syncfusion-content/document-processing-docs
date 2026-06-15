@@ -72,7 +72,7 @@ Windows UI (WinUI) <br/>
 </tr>
 </table>
 
-### RETIRED PRODUCTS
+**RETIRED PRODUCTS**
 
 <table>
   <thead>
@@ -129,14 +129,6 @@ For advanced PDF features like compression, redaction, PDF/A conversion, image e
     </tr>
     <tr>
       <td>
-        Xamarin
-      </td>
-      <td>
-        {{'[Syncfusion.Xamarin.Pdf.Imaging.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Pdf.Imaging)'| markdownify }}
-      </td>
-    </tr>
-    <tr>
-      <td>
         Windows UI (WinUI)
         .NET Multi-platform App UI (.NET MAUI)
       </td>
@@ -145,6 +137,27 @@ For advanced PDF features like compression, redaction, PDF/A conversion, image e
       </td>
     </tr>
   </tbody>
+</table>
+
+**RETIRED PRODUCTS**
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>NuGet Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        {{'[Syncfusion.Xamarin.Pdf.Imaging.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Pdf.Imaging)'| markdownify }}
+      </td>
+    </tr>
+    </tbody>
 </table>
 
 ### Additional NuGet packages required for Linux
@@ -266,7 +279,7 @@ ASP.NET MVC
 </tr>
 </table>
 
-### RETIRED PRODUCTS
+**RETIRED PRODUCTS**
 
 <table>
   <thead>
@@ -337,7 +350,7 @@ Blazor
 </tr>
 </table>
 
-### RETIRED PRODUCTS
+**RETIRED PRODUCTS**
 
 <table>
   <thead>
@@ -406,7 +419,7 @@ Blazor
 </tr>
 </table>
 
-### RETIRED PRODUCTS
+**RETIRED PRODUCTS**
 
 <table>
   <thead>
@@ -491,7 +504,7 @@ Blazor (Server-App)
 </tr>
 </table>
 
-### RETIRED PRODUCTS
+**RETIRED PRODUCTS**
 
 <table>
   <thead>
@@ -568,7 +581,7 @@ Blazor
 </tr>
 </table>
 
-### RETIRED PRODUCTS
+**RETIRED PRODUCTS**
 
 <table>
   <thead>

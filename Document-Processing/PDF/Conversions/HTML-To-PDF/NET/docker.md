@@ -24,7 +24,8 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 3: Include the following commands in the Docker file to install the dependent packages in the docker container.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight dockerfile %}
 
 RUN apt-get update && \
 apt-get install -yq --no-install-recommends \ 
@@ -35,12 +36,14 @@ libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss
 libnss3 libgbm1
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Convert HTMLToPDF Docker Step4](htmlconversion_images/DockerStep4.png)
 
 Step 4: Add a new button in the index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 <div class="btn">
    @{ Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
@@ -51,11 +54,13 @@ Step 4: Add a new button in the index.cshtml as shown below.
 </div>
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Convert HTMLToPDF Docker Step5](htmlconversion_images/DockerStep5.png)
 
 Step 5: A default controller with name HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
@@ -63,9 +68,11 @@ using Syncfusion.Pdf;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new action method in HomeController.cs and include the below code snippet to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class. The HTML content will be scaled based on the given [ViewPortSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_ViewPortSize) property of [BlinkConverterSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public ActionResult ExportToPDF()
@@ -87,6 +94,7 @@ public ActionResult ExportToPDF()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
 N> ```csharp

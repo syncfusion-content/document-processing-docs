@@ -12,43 +12,55 @@ domainurl: ##DomainURL##
 
 This guide explains how to create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
 
-> **Note:** This guide supports recent versions of Essential JS 2. Server-backed mode is recommended for large files, restricted client environments, or server-side processing requirements.
+## Prerequisites
 
----
+To get started, ensure the following software is installed on your machine:
 
-## Setup the development environment
+- [Git](https://git-scm.com/downloads)
+- [Node.js (`v14.15.0` or later)](https://nodejs.org/en/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
+## Create a TypeScript application
 
-Open a command prompt in the target directory and run the following command to clone the Syncfusion JavaScript (Essential JS 2) quickstart project from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack).
+Create a simple TypeScript application using the Essential® JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack) seed repository.
 
-This example uses the Syncfusion Essential JS 2 **quickstart webpack project**.
+> This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
 
-### Clone the quickstart project
+**Step 1:** Open the command prompt from the required directory and clone the quickstart project from GitHub.
 
 ```bash
 git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack ej2-quickstart
+```
+
+**Step 2:** Navigate to the `ej2-quickstart` folder.
+
+```bash
 cd ej2-quickstart
 ```
 
-### Install dependencies
+**Step 3:** By default, the `ej2-quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 components, including the PDF Viewer and other EJ2 controls.
+
+To install **only the PDF Viewer component**, replace the dependency with [@syncfusion/ej2-pdfviewer](https://www.npmjs.com/package/@syncfusion/ej2-pdfviewer) in `package.json`:
+
+```json
+"dependencies": {
+  "@syncfusion/ej2-pdfviewer": "*"
+}
+```
+
+**Step 4:** Install the dependent npm packages.
 
 ```bash
 npm install
 ```
 
----
-
-## Installing Syncfusion® PDF Viewer package
-
-The quickstart project already includes the `@syncfusion/ej2` meta package. No additional installation is required if it is present.
-
----
-
-## Adding CSS references
+## Add CSS references
 
 Add the required Syncfusion styles to `src/styles/styles.css`:
 
-```css
+{% tabs %}
+{% highlight css tabtitle="~/src/styles/styles.css" %}
+
 @import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
@@ -58,9 +70,11 @@ Add the required Syncfusion styles to `src/styles/styles.css`:
 @import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-notifications/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
-```
 
----
+{% endhighlight %}
+{% endtabs %}
+
+N> Refer to the [Themes topic](https://ej2.syncfusion.com/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a TypeScript project.
 
 ## Add the PDF Viewer component
 
@@ -68,7 +82,8 @@ To load and display a PDF in server-backed mode, configure the PDF Viewer with t
 
 Update `src/app.ts` as shown below:
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="~/src/app.ts" %}
 import { PdfViewer, Toolbar, Magnification, 
          Navigation, Annotation, LinkAnnotation,
          ThumbnailView, BookmarkView, TextSelection, 
@@ -88,17 +103,18 @@ pdfviewer.appendTo('#PdfViewer');
 
 // Load a PDF document through the server
 pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', '');
-```
+{% endhighlight %}
+{% endtabs %}
 
 Add a container element in `index.html`:
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
 <div id="PdfViewer" style="height: 640px"></div>
-```
+{% endhighlight %}
+{% endtabs %}
 
 > **Note:** The Web API service URL shown above is provided for evaluation only. For production, host your own PDF Viewer web service.
-
----
 
 ## Run the application
 
@@ -108,9 +124,11 @@ Run the application using the following command:
 npm start
 ```
 
-The application will connect to the configured PDF Viewer web service and render the document in the browser.
+The application will connect to the configured PDF Viewer web service and render the document in the browser. The image below shows how the PDF Viewer is rendered in the browser:
 
----
+![Rendered PDF Viewer in browser](images/pdfviewer-control.png)
+
+[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20URL)
 
 ## Run the PDF Viewer web service
 
@@ -138,11 +156,15 @@ Configure this URL in the `serviceUrl` property of the PDF Viewer.
 
 > **Important:** In server-backed mode, do **not** include `pdfium.js` or `pdfium.wasm`. All rendering is performed on the server.
 
----
-
 N> For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1). For AWS environments, use the following packages:
 
 | **Amazon Web Services (AWS)** |**NuGet package name** |
 | --- | --- |
 | AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
 | AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
+
+## See also
+
+- [Getting started in TypeScript PDF Viewer](./getting-started)
+- [Open PDF Files](./open-pdf-files)
+- [Save PDF Files](./save-pdf-files)
