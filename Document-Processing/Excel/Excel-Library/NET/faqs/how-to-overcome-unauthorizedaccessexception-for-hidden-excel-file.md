@@ -79,8 +79,8 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/995570-Unauthorize-Exception/FAQ/Unathorize_Exception/.NET/Unauthorize_Exception">this GitHub page</a>.
 ## See Also
 
-* [How to overcome UnauthorizedAccessException?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-overcome-unauthorizedaccessexception)
 * [How to overcome StackOverflow exception with IWorksheet Calculate()?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-overcome-stackoverflow-exception-with-iworksheet-calculate)
 * [How to avoid exception when adding worksheets with same name?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-avoid-exception-when-adding-worksheets-with-same-name)
