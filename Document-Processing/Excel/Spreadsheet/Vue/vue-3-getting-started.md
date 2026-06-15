@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the Vue Spreadsheet Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the [Syncfusion® Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ cd spreadsheet-app
 
 ## Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue Spreadsheet package
 
-Install the [Vue Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet) package from npm using the following command:
+Install the [Syncfusion® Vue Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet) package from npm using the following command:
 
 ```
 npm install @syncfusion/ej2-vue-spreadsheet --save
@@ -34,12 +34,12 @@ npm install @syncfusion/ej2-vue-spreadsheet --save
 
 ## Add CSS references
 
-Add the following style references.
+Add the following Spreadsheet and dependent component style references.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="style.css" %}
 
-<style>
+```css
   @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
   @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
   @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
@@ -49,101 +49,57 @@ Add the following style references.
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
   @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
   @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
-</style>
+```
 
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+N> Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component to the application
 
 Import and register the Spreadsheet component directives in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (App.vue)" %}
 {% raw %}
 
 <template>
-  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl">
-    <e-sheets>
-      <e-sheet>
-        <e-ranges>
-          <e-range :dataSource="data"></e-range>
-        </e-ranges>
-      </e-sheet>
-    </e-sheets>
-  </ejs-spreadsheet>
+  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
 </template>
 
 <script setup>
-import { SpreadsheetComponent as EjsSpreadsheet, RangesDirective as ERanges, RangeDirective as ERange, SheetsDirective as ESheets, SheetDirective as ESheet} from "@syncfusion/ej2-vue-spreadsheet";
+import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spreadsheet";
 
 const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
 const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
 
-const data = [
-          {
-            OrderID: 10248,
-            Name: "VINET",
-            Country: "France",
-          },
-          {
-            OrderID: 10249,
-            Name: "TOMSP",
-            Country: "Germany",
-          }
-        ];
 </script>
 
 {% endraw %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (App.vue)" %}
 {% raw %}
 
 <template>
-  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl">
-    <e-sheets>
-      <e-sheet>
-        <e-ranges>
-          <e-range :dataSource="data"></e-range>
-        </e-ranges>
-      </e-sheet>
-    </e-sheets>
-  </ejs-spreadsheet>
+  <ejs-spreadsheet :openUrl="openUrl" :saveUrl="saveUrl"></ejs-spreadsheet>
 </template>
 
 <script>
-  import { SpreadsheetComponent, RangesDirective, RangeDirective, SheetsDirective, SheetDirective } from "@syncfusion/ej2-vue-spreadsheet";
+  import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
 
   export default {
     name: "App",
     // Declaring component and its directives
     components: {
-      "ejs-spreadsheet": SpreadsheetComponent,
-      "e-sheets": SheetsDirective,
-      "e-sheet": SheetDirective,
-      "e-ranges": RangesDirective,
-      "e-range": RangeDirective,
+      "ejs-spreadsheet": SpreadsheetComponent
     },
     // Bound properties declarations
     data() {
-       return {
-        data:[
-          {
-            OrderID: 10248,
-            Name: "VINET",
-            Country: "France",
-          },
-          {
-            OrderID: 10249,
-            Name: "TOMSP",
-            Country: "Germany",
-          }
-        ],
-      openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
-      saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
-    };
+      return {
+        openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+        saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
+      };
     },
   };
 </script>
@@ -152,7 +108,7 @@ const data = [
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** The [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
+N> The [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
 
 ## Run the project
 
@@ -162,11 +118,11 @@ To run the project, use the following command:
 npm run dev
 ```
 
-The output will appear as follows:
+After the application starts, open the localhost URL shown in the terminal to view the Vue Spreadsheet Editor in the browser. The output will appear as follows:
 
-![Output](images/Vue3-spreadsheet-demo.png)
+![Output](images/vue3-spreadsheet.png)
 
-After the application starts, open the local URL shown in the terminal to view the Vue Spreadsheet Editor in the browser.
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component).
 
 ## See also
 

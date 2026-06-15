@@ -15,7 +15,7 @@ The following code shows how to unprotect Excel workbook using Interop and XlsIO
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void UnprotectWorkbook()
 {
   //Instantiate the application object
@@ -38,7 +38,30 @@ private void UnprotectWorkbook()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void UnprotectWorkbook()
+{
+  //Instantiate the application object
+  var excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+  //Specify the protected Excel file path
+  string myPath = "InteropOutput_ProtectedWorkbook.xlsx";
+
+  //Open the Excel file
+  Workbook workbook = excelApp.Workbooks.Open(myPath);
+
+  //Unprotect the protected workbook using the password
+  workbook.Unprotect("007");
+
+  //Save the file
+  workbook.SaveAs("InteropOutput_UnprotectedWorkbook.xlsx");
+
+  //Quit the application
+  excelApp.Quit();
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub UnprotectWorkbook()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -64,7 +87,7 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void UnprotectWorkbook()
 {
   using (ExcelEngine excelEngine = new ExcelEngine())
@@ -84,7 +107,27 @@ private void UnprotectWorkbook()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void UnprotectWorkbook()
+{
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    //Instantiate the application object
+    IApplication application = excelEngine.Excel;
+
+    //Open the protected Excel file
+    IWorkbook workbook = application.Workbooks.Open("XlsIOOutput_ProtectedWorkbook.xlsx");
+
+    //Unprotect the protected workbook using the password
+    workbook.Unprotect("password");
+
+    //Save the file
+    workbook.SaveAs("XlsIOOutput_UnprotectedWorkbook.xlsx");
+  }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub UnprotectWorkbook()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object

@@ -41,3 +41,8 @@ End Sub
 {% endtabs %}
 
 N> Getting coordinates of a text will work only after the display of the PDF document in the viewer, when tried before the display of the PDF document the out value will be a list of count 0.
+
+## See Also
+- [Text search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-text-search)
+- [Text selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/select-and-copy-text)
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)

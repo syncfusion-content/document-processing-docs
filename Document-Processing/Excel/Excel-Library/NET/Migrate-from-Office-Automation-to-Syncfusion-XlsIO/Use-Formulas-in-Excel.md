@@ -15,47 +15,87 @@ The following code shows how to use formulas in Excel by adding values in a rang
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void ExcelFormulas()
 {
-  //Instantiate the application object
-  var excelApp = new Microsoft.Office.Interop.Excel.Application();
+    //Instantiate the application object
+    var excelApp = new Microsoft.Office.Interop.Excel.Application();
 
-  //Add a workbook
-  Workbook workbook = excelApp.Workbooks.Add(System.Reflection.Missing.Value);
+    //Add a workbook
+    Workbook workbook = excelApp.Workbooks.Add(System.Reflection.Missing.Value);
 
-  //Get the first sheet
-  Worksheet worksheet = workbook.Sheets["Sheet1"];
+    //Get the first sheet
+    Worksheet worksheet = (Worksheet)workbook.Sheets["Sheet1"];
 
-  //Access cells A1, A2, A3, and A4
-  Range cellA1 = worksheet.Range["A1"];
-  Range cellA2 = worksheet.Range["A2"];
-  Range cellA3 = worksheet.Range["A3"];
-  Range cellA4 = worksheet.Range["A4"];
+    //Access cells A1, A2, A3, and A4
+    Range cellA1 = worksheet.Range["A1"];
+    Range cellA2 = worksheet.Range["A2"];
+    Range cellA3 = worksheet.Range["A3"];
+    Range cellA4 = worksheet.Range["A4"];
 
-  //Set integer values in cells A1, A2, and A3
-  cellA1.Value = 10;
-  cellA2.Value = 20;
-  cellA3.Value = 30;
+    //Set integer values in cells A1, A2, and A3
+    cellA1.Value = 10;
+    cellA2.Value = 20;
+    cellA3.Value = 30;
 
-  //Add formula in cell A4
-  cellA4.Formula = "=Sum(A1:A3)";
+    //Add formula in cell A4
+    cellA4.Formula = "=Sum(A1:A3)";
 
-  //Set the font bold in cell A4
-  cellA4.Font.Bold = true;
+    //Set the font bold in cell A4
+    cellA4.Font.Bold = true;
 
-  //Set the background color to yellow in cell A4
-  cellA4.Interior.Color = XlRgbColor.rgbYellow;
+    //Set the background color to yellow in cell A4
+    cellA4.Interior.Color = XlRgbColor.rgbYellow;
 
-  //Save the Excel file
-  workbook.SaveCopyAs("InteropOutput_ExcelFormulas.xlsx");
+    //Save the Excel file
+    workbook.SaveCopyAs("InteropOutput_ExcelFormulas.xlsx");
 
-  //Quit the application
-  excelApp.Quit();
+    //Quit the application
+    excelApp.Quit();
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void ExcelFormulas()
+{
+    //Instantiate the application object
+    var excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+    //Add a workbook
+    Workbook workbook = excelApp.Workbooks.Add(System.Reflection.Missing.Value);
+
+    //Get the first sheet
+    Worksheet worksheet = (Worksheet)workbook.Sheets["Sheet1"];
+
+    //Access cells A1, A2, A3, and A4
+    Range cellA1 = worksheet.Range["A1"];
+    Range cellA2 = worksheet.Range["A2"];
+    Range cellA3 = worksheet.Range["A3"];
+    Range cellA4 = worksheet.Range["A4"];
+
+    //Set integer values in cells A1, A2, and A3
+    cellA1.Value = 10;
+    cellA2.Value = 20;
+    cellA3.Value = 30;
+
+    //Add formula in cell A4
+    cellA4.Formula = "=Sum(A1:A3)";
+
+    //Set the font bold in cell A4
+    cellA4.Font.Bold = true;
+
+    //Set the background color to yellow in cell A4
+    cellA4.Interior.Color = XlRgbColor.rgbYellow;
+
+    //Save the Excel file
+    workbook.SaveCopyAs("InteropOutput_ExcelFormulas.xlsx");
+
+    //Quit the application
+    excelApp.Quit();
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub ExcelFormulas()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -98,7 +138,7 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void ExcelFormulas()
 {
   using (ExcelEngine excelEngine = new ExcelEngine())
@@ -138,7 +178,47 @@ private void ExcelFormulas()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void ExcelFormulas()
+{
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    //Instantiate the application object
+    IApplication application = excelEngine.Excel;
+
+    //Create a workbook
+    IWorkbook workbook = application.Workbooks.Create(1);
+
+    //Get the first sheet
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Access cells A1, A2, A3, and A4
+    IRange cellA1 = worksheet.Range["A1"];
+    IRange cellA2 = worksheet.Range["A2"];
+    IRange cellA3 = worksheet.Range["A3"];
+    IRange cellA4 = worksheet.Range["A4"];
+
+    //Set integer values in cells A1, A2, and A3
+    cellA1.Value2 = 10;
+    cellA2.Value2 = 20;
+    cellA3.Value2 = 30;
+
+    //Add formula in cell A4
+    cellA4.Formula = "=Sum(A1:A3)";
+
+    //Set the font bold in cell A4
+    cellA4.CellStyle.Font.Bold = true;
+
+    //Set the background color to yellow in cell A4
+    cellA4.CellStyle.Interior.Color = Color.Yellow;
+
+    //Save the workbook
+    workbook.SaveAs("XlsIOOutput_ExcelFormulas.xlsx");
+  }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub ExcelFormulas()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object

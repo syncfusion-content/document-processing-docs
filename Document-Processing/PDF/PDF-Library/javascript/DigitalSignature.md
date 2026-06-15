@@ -952,7 +952,7 @@ document.destroy();
 
 ## Sign existing signature field
 
-This section explains how to sign an existing unsigned signature field in a PDF using the JavaScript PDF library. You can locate predefined signature fields and apply a digital signature directly by calling [setSignature()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield#setsignature) method of the [PdfSignatureField](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield) class, without altering the document layout. This is ideal for templates where signature placeholders already exist, allowing you to add digital signatures to the field using a certificate and signature settings.
+This section explains how to sign an existing unsigned signature field in a PDF using the [JavaScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library). You can locate predefined signature fields and apply a digital signature directly by calling [setSignature()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield#setsignature) method of the [PdfSignatureField](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignaturefield) class, without altering the document layout. This is ideal for templates where signature placeholders already exist, allowing you to add digital signatures to the field using a certificate and signature settings.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

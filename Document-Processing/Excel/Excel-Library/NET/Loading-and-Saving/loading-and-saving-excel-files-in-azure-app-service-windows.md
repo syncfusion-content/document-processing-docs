@@ -76,7 +76,35 @@ End Code
 Step 7: Include the below code snippet in **HomeController.cs** to **load and save an Excel file and download it**.
 
 {% tabs %}  
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Create an instance of ExcelEngine
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+
+    //Load an existing Excel document
+	IWorkbook workbook = application.Workbooks.Open("Data/InputTemplate.xlsx");
+
+    //Access first worksheet from the workbook.
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Set Text in cell A3.
+    worksheet.Range["A3"].Text = "Hello World";
+
+    //Save the Excel to MemoryStream 
+    MemoryStream outputStream = new MemoryStream();
+    workbook.SaveAs(outputStream);
+
+    //Set the position
+    outputStream.Position = 0;
+
+    //Download the Excel document in the browser.
+    return File(outputStream, "application/msexcel", "Output.xlsx");
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 //Create an instance of ExcelEngine
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
