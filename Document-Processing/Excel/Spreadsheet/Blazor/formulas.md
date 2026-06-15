@@ -133,7 +133,7 @@ As selections are expanded, contracted, or changed, aggregate values update inst
 **Empty and Non-Numeric Handling:**
 Empty cells and cells containing text or formulas are excluded from Sum and Average calculations. The Count function may include or exclude these depending on the cell content type.
 
-![Aggregates](./images/aggregates-status-bar.gif)
+![Aggregates](./images/aggregates-status-bar.png)
 
 ## Supported Formulas
 
