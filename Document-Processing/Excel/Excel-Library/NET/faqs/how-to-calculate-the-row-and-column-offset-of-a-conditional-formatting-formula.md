@@ -331,3 +331,5 @@ Shared Function ColToNum(col As String) As Integer
 End Function
 {% endhighlight %}
 {% endtabs %}
+
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1025703-offset-CF/FAQ/CF_Offset/.NET/CF_Offset">this GitHub page</a>.
