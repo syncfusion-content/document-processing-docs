@@ -255,3 +255,5 @@ Module Program
 End Module
 {% endhighlight %}
 {% endtabs %}
+
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1024021-Reorder-CF/FAQ/Conditional_Format_Reorder/.NET/Conditional_Format_Reorder">this GitHub page</a>.
