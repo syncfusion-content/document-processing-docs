@@ -20,7 +20,7 @@ In this section, we will see about the changes which need to be considered while
 </thead>
 </tr>
 <tr>
-<td>{{'[Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/#"")'| markdownify }}<br/>{{'[Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf/#"")'| markdownify }}<br/>{{'[Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/#"")'| markdownify }}<br/>{{'[Syncfusion.Pdf.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc4/#"")'| markdownify }}<br/>{{'[Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/#"")'| markdownify }}</td>
+<td>{{'[Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms/#"")'| markdownify }}<br/>{{'[Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf/#"")'| markdownify }}<br/>{{'[Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/#"")'| markdownify }}</td>
 <td>{{'[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/#"")'| markdownify }}</td>
 </tr>
 </table>
@@ -36,79 +36,79 @@ In this section, we will see about the changes which need to be considered while
 </tr>
 <tr>
 <td>
-{{'[PdfLoadedDocument(String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_String_/)'| markdownify }}
+{{'[PdfLoadedDocument(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_String_)'| markdownify }}
 </td>
 <td> 
-You can open the document as stream from the system file using {{'[PdfLoadedDocument(Stream)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_IO_Stream_/)'| markdownify }} API.  
+You can open the document as stream from the system file using {{'[PdfLoadedDocument(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_IO_Stream_)'| markdownify }} API.  
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfLoadedDocument(String, String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_String_System_String_/)'| markdownify }}
+{{'[PdfLoadedDocument(String, String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_String_System_String_)'| markdownify }}
 </td>
 <td> 
-You can open the encrypted document as stream or byte array with password from system file using {{'[PdfLoadedDocument(Stream, String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_IO_Stream_System_String_/)'| markdownify }} or {{'[PdfLoadedDocument(Byte[], String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_/)'| markdownify }} API. 
+You can open the encrypted document as stream or byte array with password from system file using {{'[PdfLoadedDocument(Stream, String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_IO_Stream_System_String_)'| markdownify }} or {{'[PdfLoadedDocument(Byte[], String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_String_)'| markdownify }} API. 
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfLoadedDocument(String, Boolean)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_String_System_Boolean_/)'| markdownify }}
+{{'[PdfLoadedDocument(String, Boolean)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_String_System_Boolean_)'| markdownify }}
 </td>
 <td> 
-You can open the corrupted PDF document as stream or byte array with Boolean from system file using {{'[PdfLoadedDocument(Stream, Boolean)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_IO_Stream_System_Boolean_)'| markdownify }} or {{'[PdfLoadedDocument(Byte[], Boolean)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_Boolean_)'| markdownify }} API. 
+You can open the corrupted PDF document as stream or byte array with Boolean from system file using {{'[PdfLoadedDocument(Stream, Boolean)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_IO_Stream_System_Boolean_)'| markdownify }} or {{'[PdfLoadedDocument(Byte[], Boolean)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument__ctor_System_Byte___System_Boolean_)'| markdownify }} API. 
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfBitmap(String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap__ctor_System_String_)'| markdownify }}
+{{'[PdfBitmap(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap__ctor_System_String_)'| markdownify }}
 </td>
 <td> 
-{{'[PdfBitmap(Stream)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap__ctor_System_IO_Stream_)'| markdownify }}
+{{'[PdfBitmap(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap__ctor_System_IO_Stream_)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfBitmap(String, Boolean)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap__ctor_System_String_System_Boolean_)'| markdownify }}
+{{'[PdfBitmap(String, Boolean)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap__ctor_System_String_System_Boolean_)'| markdownify }}
 </td>
 <td> 
-{{'[PdfBitmap(Steam, Boolean)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap__ctor_System_IO_Stream_System_Boolean_)'| markdownify }}
+{{'[PdfBitmap(Steam, Boolean)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap__ctor_System_IO_Stream_System_Boolean_)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[TextLines](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.TextLines.html#constructors)'| markdownify }}
+{{'[TextLines](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextLines.html#Syncfusion_Pdf_TextLines__ctor)'| markdownify }}
 </td>
 <td> 
-TextLineCollection <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document)'| markdownify }} 
+TextLineCollection <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document/.NET)'| markdownify }} 
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfBitmap](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html)'| markdownify }}
+{{'[PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#constructors)'| markdownify }}
 </td>
 <td> 
-PdfTiffImage <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/TIFF-to-PDF/Converting-multipage-TIFF-to-PDF-document](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/TIFF-to-PDF/Converting-multipage-TIFF-to-PDF-document)'| markdownify }}   
+PdfTiffImage <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/TIFF-to-PDF/Converting-multipage-TIFF-to-PDF-document/.NET)'| markdownify }}   
 </td>
 </tr>
 <tr>
 <td>
-{{'[XPSToPdfConverter](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Base~Syncfusion.XPS.XPSToPdfConverter.html)'| markdownify }}   
+{{'[XPSToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XPS.XPSToPdfConverter.html)'| markdownify }}   
 </td>
 <td> 
-XPSToPdfConverter <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Converting-XPS-to-PDF-document](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Converting-XPS-to-PDF-document)'| markdownify }}
+XPSToPdfConverter <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/Converting-XPS-to-PDF-document/.NET)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfCompressionOptions](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html)'| markdownify }}   
+{{'[PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html)'| markdownify }}   
 </td>
 <td> 
-PdfCompressionOptions <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Compression/Compress-the-images-in-an-existing-PDF-document](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Compression/Compress-the-images-in-an-existing-PDF-document)'| markdownify }}
+PdfCompressionOptions <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Compression/Compress-the-images-in-an-existing-PDF-document)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfFileLinkAnnotation](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Interactive.PdfFileLinkAnnotation.html)'| markdownify }}
+{{'[PdfFileLinkAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFileLinkAnnotation.html)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -116,7 +116,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[PdfLaunchAction](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Interactive.PdfLaunchAction.html)'| markdownify }}
+{{'[PdfLaunchAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLaunchAction.html)'| markdownify }}
 </td>
 <td> 
 Not supported  
@@ -124,7 +124,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[PdfJavaScriptAction](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html)'| markdownify }} - Add/modify JavaScript actions on existing PDF document 
+{{'[PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html)'| markdownify }} - Add/modify JavaScript actions on existing PDF document 
 </td>
 <td> 
 Not supported 
@@ -132,15 +132,15 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[PdfDocumentAnalyzer(String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentAnalyzer.html#Syncfusion_Pdf_Parsing_PdfDocumentAnalyzer__ctor_System_String_)'| markdownify }}
+{{'[PdfDocumentAnalyzer(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentAnalyzer.html#Syncfusion_Pdf_Parsing_PdfDocumentAnalyzer__ctor_System_String_)'| markdownify }}
 </td>
 <td> 
-You can check whether the existing PDF document is corrupted or not using {{'[PdfDocumentAnalyzer(Stream)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentAnalyzer.html#Syncfusion_Pdf_Parsing_PdfDocumentAnalyzer__ctor_System_IO_Stream_)'| markdownify }}.  
+You can check whether the existing PDF document is corrupted or not using {{'[PdfDocumentAnalyzer(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentAnalyzer.html#Syncfusion_Pdf_Parsing_PdfDocumentAnalyzer__ctor_System_IO_Stream_)'| markdownify }}.  
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfUsedFont](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.Fonts.PdfUsedFont.html)'| markdownify }}
+{{'[PdfUsedFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.Fonts.PdfUsedFont.html)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -148,7 +148,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[ImageExportSettings](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.ImageExportSettings.html)'| markdownify }}
+{{'[ImageExportSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.ImageExportSettings.html)'| markdownify }}
 </td>
 <td> 
 Not supported  
@@ -156,7 +156,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[PdfBarcodeException](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Barcode.PdfBarcodeException.html)'| markdownify }}
+{{'[PdfBarcodeException](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfBarcodeException.html)'| markdownify }}
 </td>
 <td> 
 BarcodeException 
@@ -164,7 +164,7 @@ BarcodeException
 </tr>
 <tr>
 <td>
-{{'[ImageExportSettings](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.ImageExportSettings.html)'| markdownify }}
+{{'[ImageExportSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.ImageExportSettings.html)'| markdownify }}
 </td>
 <td> 
 Not supported  
@@ -172,7 +172,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[HtmlToPdfResult](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.HtmlToPdf.HtmlToPdfResult.html)'| markdownify }}
+{{'[HtmlToPdfResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.HtmlToPdf.HtmlToPdfResult.html)'| markdownify }}
 </td>
 <td> 
 Not supported  
@@ -180,15 +180,15 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[PdfRichMediaContent(String, PdfRichMediaContentType)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Interactive.PdfRichMediaContent.html#Syncfusion_Pdf_Interactive_PdfRichMediaContent__ctor_System_String_Syncfusion_Pdf_Interactive_PdfRichMediaContentType_)'| markdownify }}
+{{'[PdfRichMediaContent(String, PdfRichMediaContentType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRichMediaContent.html#Syncfusion_Pdf_Interactive_PdfRichMediaContent__ctor_System_String_Syncfusion_Pdf_Interactive_PdfRichMediaContentType_)'| markdownify }}
 </td>
 <td> 
-{{'[PdfRichMediaContent(String, Stream, String, PdfRichMediaContentType)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Interactive.PdfRichMediaContent.html#Syncfusion_Pdf_Interactive_PdfRichMediaContent__ctor_System_String_System_IO_Stream_System_String_Syncfusion_Pdf_Interactive_PdfRichMediaContentType_)'| markdownify }}
+{{'[PdfRichMediaContent(String, Stream, String, PdfRichMediaContentType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfRichMediaContent.html#Syncfusion_Pdf_Interactive_PdfRichMediaContent__ctor_System_String_System_IO_Stream_System_String_Syncfusion_Pdf_Interactive_PdfRichMediaContentType_)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfAngleMeasurementAnnotation(PointF[])](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Interactive.PdfAngleMeasurementAnnotation.html#Syncfusion_Pdf_Interactive_PdfAngleMeasurementAnnotation__ctor_System_Drawing_PointF___)'| markdownify }}
+{{'[PdfAngleMeasurementAnnotation(PointF[])](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAngleMeasurementAnnotation.html#Syncfusion_Pdf_Interactive_PdfAngleMeasurementAnnotation__ctor_System_Drawing_PointF___)'| markdownify }}
 </td>
 <td> 
 Not supported
@@ -196,7 +196,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[PdfCertificateDistinguishedName](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Security.PdfCertificateDistinguishedName.html)'| markdownify }}
+{{'[PdfCertificateDistinguishedName](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificateDistinguishedName.html)'| markdownify }}
 </td>
 <td> 
 Not supported  
@@ -204,7 +204,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[GraphicsStateData](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.GraphicsStateData.html)'| markdownify }}
+{{'[GraphicsStateData](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.GraphicsStateData.html)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -212,7 +212,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[PdfConfig](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfConfig.html)'| markdownify }}
+{{'[PdfConfig](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConfig.html)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -220,23 +220,15 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[TextData](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.TextData.html)'| markdownify }}
+{{'[TextData](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.TextData.html)'| markdownify }}
 </td>
 <td> 
-TextLineCollection <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document)'| markdownify }}
+TextLineCollection <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[TextLines](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.TextLines.html)'| markdownify }}
-</td>
-<td> 
-TextLineCollection <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-{{'[PdfMetafile](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfMetafile.html)'| markdownify }}
+{{'[PdfMetafile](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafile.html)'| markdownify }}
 </td>
 <td> 
 Not supported
@@ -244,15 +236,15 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[PdfMetafileLayoutFormat](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html)'| markdownify }}
+{{'[PdfMetafileLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html)'| markdownify }}
 </td>
 <td> 
-PdfLayoutFormat <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Adding-HTML-styled-text-to-PDF-document/](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text/Adding-HTML-styled-text-to-PDF-document/)'| markdownify }}
+{{'[PdfLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfLayoutFormat.html)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[XFdfDocument](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.XFdfDocument.html)'| markdownify }}
+{{'[XFdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.XFdfDocument.html)'| markdownify }}
 </td>
 <td> 
 Not supported
@@ -260,7 +252,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[HtmlToPdfResult](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.HtmlToPdf.HtmlToPdfResult.html)'| markdownify }}
+{{'[HtmlToPdfResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.HtmlToPdf.HtmlToPdfResult.html)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -268,7 +260,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[PdfAngleMeasurementAnnotation](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Interactive.PdfAngleMeasurementAnnotation.html)'| markdownify }}
+{{'[PdfAngleMeasurementAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfAngleMeasurementAnnotation.html)'| markdownify }}
 </td>
 <td> 
 Not supported  
@@ -287,18 +279,18 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[ExtractText(out TextLines textLines)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractText_Syncfusion_Pdf_TextLines__)'| markdownify }}
+{{'[ExtractText(out TextLines textLines)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractText_Syncfusion_Pdf_TextLines__)'| markdownify }}
 </td>
 <td> 
-ExtractText(out TextLineCollection textLineCollection) <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document)'| markdownify }}
+ExtractText(out TextLineCollection textLineCollection) <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Text%20Extraction/Extract-each-lines-from-an-existing-PDF-document/.NET)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[ExtractImages()](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractImages().html)'| markdownify }}
+{{'[ExtractImages()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractImages)'| markdownify }}
 </td>
 <td> 
-ExtractImages <br/> *Sample link:* <br/> {{'[https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractImages().html](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractImages().html)'| markdownify }}
+{{'[ExtractImages](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractImages)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -306,22 +298,22 @@ ExtractImages <br/> *Sample link:* <br/> {{'[https://help.syncfusion.com/documen
 {{'[ExportAsImage()](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ExportAsImage_System_Int32_)'| markdownify }}
 </td>
 <td> 
-ExportAsImage() <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/PDF-to-Image/Convert-PDF-page-into-image](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/PDF-to-Image/Convert-PDF-page-into-image)'| markdownify }}
+ExportAsImage() <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Document%20conversion/PDF-to-Image/Convert-PDF-page-into-image)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[Redactions.Add(PdfRedaction)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfLoadedPage.html#Syncfusion_Pdf_PdfLoadedPage_Redactions)'| markdownify }}
+{{'[Redactions.Add(PdfRedaction)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLoadedPage.html#Syncfusion_Pdf_PdfLoadedPage_AddRedaction_Syncfusion_Pdf_Redaction_PdfRedaction_)'| markdownify }}
 </td>
 <td> 
 AddRedaction(PdfRedaction) - Additionally, call the following method to execute the redaction. <br/>
-PdfLoadedDocument.Redact(); <br/> *Sample link:* <br/>
-{{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Removing-sensitive-content-from-the-PDF-document/](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Removing-sensitive-content-from-the-PDF-document/)'| markdownify }}
+PdfLoadedDocument.Redact(); <br/> Sample link:
+{{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Removing-sensitive-content-from-the-PDF-document/)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[ToImage()](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_ToImage)'| markdownify }}
+{{'[ToImage()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_ToImage)'| markdownify }}
 </td>
 <td> 
 ToImage()  
@@ -329,15 +321,15 @@ ToImage()
 </tr>
 <tr>
 <td>
-{{'[Barcode.ToImage(SizeF size)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_ToImage)'| markdownify }}
+{{'[Barcode.ToImage(SizeF size)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Barcode.PdfUnidimensionalBarcode.html#Syncfusion_Pdf_Barcode_PdfUnidimensionalBarcode_ToImage_System_Drawing_SizeF_)'| markdownify }}
 </td>
 <td> 
-Barcode.ToImage(SizeF size) <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Barcode/Export-one-dimensional-barcode-as-image/](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Barcode/Export-one-dimensional-barcode-as-image/)'| markdownify }}
+Barcode.ToImage(SizeF size) <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Barcode/Export-one-dimensional-barcode-as-image/)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[Split()](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_)'| markdownify }}
+{{'[Split()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_)'| markdownify }}
 </td>
 <td> 
 Not supported due to .NET Core framework limitations. Alternatively, this can be achieved by {{'[importing pages from one document to another](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pages#importing-pages-from-an-existing-document)'| markdownify }}.
@@ -345,7 +337,7 @@ Not supported due to .NET Core framework limitations. Alternatively, this can be
 </tr>
 <tr>
 <td>
-{{'[FromRtf(String, Single, PdfImageType)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html#Syncfusion_Pdf_Graphics_PdfImage_FromRtf_System_String_System_Single_Syncfusion_Pdf_Graphics_PdfImageType_)'| markdownify }}
+{{'[FromRtf(String, Single, PdfImageType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html#Syncfusion_Pdf_Graphics_PdfImage_FromRtf_System_String_System_Single_Syncfusion_Pdf_Graphics_PdfImageType_)'| markdownify }}
 </td>
 <td> 
 Not supported due to .NET Core framework limitations. Alternatively, this can be achieved by using {{'[.NET Word library](https://help.syncfusion.com/document-processing/word/word-library/net/overview)'| markdownify }}. 
@@ -355,23 +347,23 @@ Not supported due to .NET Core framework limitations. Alternatively, this can be
 </tr>
 <tr>
 <td>
-{{'[Merge(PdfDocumentBase, object[])](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_System_Object___)'| markdownify }}
+{{'[Merge(PdfDocumentBase, object[])](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_System_Object___)'| markdownify }}
 </td>
 <td> 
-Merge(PdfDocumentBase, Stream[])  <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream/](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream/)'| markdownify }}
+Merge(PdfDocumentBase, Stream[])  <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream/)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[Merge(String[])](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_System_String___)'| markdownify }}
+{{'[Merge(String[])](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_System_String___)'| markdownify }}
 </td>
 <td> 
-Merge(PdfDocumentBase, Stream[]) <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream/](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream/)'| markdownify }}
+Merge(PdfDocumentBase, Stream[]) <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream/)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[Merge(String[], PdfMergeOptions)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_System_String___Syncfusion_Pdf_PdfMergeOptions_)'| markdownify }}
+{{'[Merge(String[], PdfMergeOptions)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_System_String___Syncfusion_Pdf_PdfMergeOptions_)'| markdownify }}
 </td>
 <td> 
 Merge(PdfDocumentBase, PdfMergeOptions, Object[]) - Object[] in the form of Stream[]. 
@@ -379,23 +371,23 @@ Merge(PdfDocumentBase, PdfMergeOptions, Object[]) - Object[] in the form of Stre
 </tr>
 <tr>
 <td>
-{{'[PdfImage.FromFile(String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html#Syncfusion_Pdf_Graphics_PdfImage_FromFile_System_String_)'| markdownify }}
+{{'[PdfImage.FromFile(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html#Syncfusion_Pdf_Graphics_PdfImage_FromFile_System_String_)'| markdownify }}
 </td>
 <td> 
-{{'[PdfImage.FromStream(Stream)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html#Syncfusion_Pdf_Graphics_PdfImage_FromStream_System_IO_Stream_)'| markdownify }}
+{{'[PdfImage.FromStream(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html#Syncfusion_Pdf_Graphics_PdfImage_FromStream_System_IO_Stream_)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[Image.FromFile(String)](https://help.syncfusion.com/document-processing/Syncfusion.Drawing.Image.html#Syncfusion_Drawing_Image_FromFile_System_String_)'| markdownify }}
+{{'[Image.FromFile(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Drawing.Image.html#Syncfusion_Drawing_Image_FromFile_System_String_)'| markdownify }}
 </td>
 <td> 
-{{'[Image.FromStream(Stream)](https://help.syncfusion.com/document-processing/Syncfusion.Drawing.Image.html#Syncfusion_Drawing_Image_FromStream_System_IO_Stream_)'| markdownify }}
+{{'[Image.FromStream(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Drawing.Image.html#Syncfusion_Drawing_Image_FromStream_System_IO_Stream_)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfSoundAction(String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Interactive.PdfSoundAction.html#Syncfusion_Pdf_Interactive_PdfSoundAction__ctor_System_String_)'| markdownify }}
+{{'[PdfSoundAction(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSoundAction.html#Syncfusion_Pdf_Interactive_PdfSoundAction__ctor_System_String_)'| markdownify }}
 </td>
 <td> 
 PdfSoundAction(Stream) 
@@ -403,7 +395,7 @@ PdfSoundAction(Stream)
 </tr>
 <tr>
 <td>
-{{'[PdfSoundAnnotation(RectangleF, String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Interactive.PdfSoundAnnotation.html#Syncfusion_Pdf_Interactive_PdfSoundAnnotation__ctor_System_Drawing_RectangleF_System_String_)'| markdownify }}
+{{'[PdfSoundAnnotation(RectangleF, String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfSoundAnnotation.html#constructors)'| markdownify }}
 </td>
 <td> 
 PdfSoundAnnotation(RectangleF, Stream)  
@@ -411,7 +403,7 @@ PdfSoundAnnotation(RectangleF, Stream)
 </tr>
 <tr>
 <td>
-{{'[PdfTrueTypeFont(Font)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html#Syncfusion_Pdf_Graphics_PdfTrueTypeFont__ctor_System_Drawing_Font_)'| markdownify }}
+{{'[PdfTrueTypeFont(Font)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html#Syncfusion_Pdf_Graphics_PdfTrueTypeFont__ctor_System_Drawing_Font_)'| markdownify }}
 </td>
 <td> 
 PdfTrueTypeFont(Stream) 
@@ -419,15 +411,15 @@ PdfTrueTypeFont(Stream)
 </tr>
 <tr>
 <td>
-{{'[PdfTrueTypeFont(Font, int)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html#Syncfusion_Pdf_Graphics_PdfTrueTypeFont__ctor_System_Drawing_Font_)'| markdownify }}
+{{'[PdfTrueTypeFont(Font, float)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html#Syncfusion_Pdf_Graphics_PdfTrueTypeFont__ctor_System_Drawing_Font_System_Single_)'| markdownify }}
 </td>
 <td> 
-PdfTrueTypeFont(Stream, int)  
+PdfTrueTypeFont(Stream, float)  
 </td>
 </tr>
 <tr>
 <td>
-{{'[Replace(PdfFont)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.Fonts.PdfUsedFont.html#Syncfusion_Pdf_Graphics_Fonts_PdfUsedFont_Replace_Syncfusion_Pdf_Graphics_PdfFont_)'| markdownify }}
+{{'[Replace(PdfFont)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.Fonts.PdfUsedFont.html#Syncfusion_Pdf_Graphics_Fonts_PdfUsedFont_Replace_Syncfusion_Pdf_Graphics_PdfFont_)'| markdownify }}
 </td>
 <td> 
 Not supported  
@@ -435,7 +427,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[EmbedFonts()](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_EmbedFonts)'| markdownify }}
+{{'[EmbedFonts()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_EmbedFonts)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -443,55 +435,55 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[ExportAnnotations(String, AnnotationDataFormat)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_String_Syncfusion_Pdf_Parsing_AnnotationDataFormat_)'| markdownify }}
+{{'[ExportAnnotations(String, AnnotationDataFormat)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_String_Syncfusion_Pdf_Parsing_AnnotationDataFormat_)'| markdownify }}
 </td>
 <td> 
-{{'[ExportAnnotations(Stream, AnnotationDataFormat)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_)'| markdownify }}
+{{'[ExportAnnotations(Stream, AnnotationDataFormat)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[ImportAnnotations(String, AnnotationDataFormat)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ImportAnnotations_System_String_Syncfusion_Pdf_Parsing_AnnotationDataFormat_)'| markdownify }}
+{{'[ImportAnnotations(String, AnnotationDataFormat)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ImportAnnotations_System_String_Syncfusion_Pdf_Parsing_AnnotationDataFormat_)'| markdownify }}
 </td>
 <td> 
-{{'[ImportAnnotations(Stream, AnnotationDataFormat)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ImportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_)'| markdownify }}
+{{'[ImportAnnotations(Stream, AnnotationDataFormat)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ImportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[ExportData(String, DataFormat, String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ExportData_System_String_Syncfusion_Pdf_Parsing_DataFormat_System_String_)'| markdownify }}
+{{'[ExportData(String, DataFormat, String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ExportData_System_String_Syncfusion_Pdf_Parsing_DataFormat_System_String_)'| markdownify }}
 </td>
 <td> 
-{{'[ExportData(Stream, DataFormat, String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ExportData_System_IO_Stream_Syncfusion_Pdf_Parsing_DataFormat_System_String_)'| markdownify }}
+{{'[ExportData(Stream, DataFormat, String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ExportData_System_IO_Stream_Syncfusion_Pdf_Parsing_DataFormat_System_String_)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[ImportData(String, DataFormat)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportData_System_String_Syncfusion_Pdf_Parsing_DataFormat_)'| markdownify }}
+{{'[ImportData(String, DataFormat)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportData_System_String_Syncfusion_Pdf_Parsing_DataFormat_)'| markdownify }}
 </td>
 <td> 
-{{'[ImportData(Byte[], DataFormat)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportData_System_Byte___Syncfusion_Pdf_Parsing_DataFormat_)'| markdownify }}
+{{'[ImportData(Byte[], DataFormat)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportData_System_Byte___Syncfusion_Pdf_Parsing_DataFormat_)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[ImportDataJson(String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportDataJson_System_String_)'| markdownify }}
+{{'[ImportDataJson(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportDataJson_System_String_)'| markdownify }}
 </td>
 <td> 
-{{'[ImportDataJson(Stream)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportDataJson_System_IO_Stream_)'| markdownify }}
+{{'[ImportDataJson(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportDataJson_System_IO_Stream_)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[ImportDataXFDF(String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportDataXFDF_System_String_)'| markdownify }}
+{{'[ImportDataXFDF(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportDataXFDF_System_String_)'| markdownify }}
 </td>
 <td> 
-{{'[ImportDataXFDF(Stream)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportDataXFDF_System_IO_Stream_)'| markdownify }}
+{{'[ImportDataXFDF(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedForm.html#Syncfusion_Pdf_Parsing_PdfLoadedForm_ImportDataXFDF_System_IO_Stream_)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[GetFontsFromAppearance()](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedFreeTextAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedFreeTextAnnotation_GetFontsFromAppearance)'| markdownify }}
+{{'[GetFontsFromAppearance()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfLoadedFreeTextAnnotation.html#Syncfusion_Pdf_Interactive_PdfLoadedFreeTextAnnotation_GetFontsFromAppearance)'| markdownify }}
 </td>
 <td> 
 Not supported  
@@ -499,23 +491,23 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[RemoveImage(PdfImageInfo)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_RemoveImage_Syncfusion_Pdf_Exporting_PdfImageInfo_)'| markdownify }}
+{{'[RemoveImage(PdfImageInfo)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_RemoveImage_Syncfusion_Pdf_Exporting_PdfImageInfo_)'| markdownify }}
 </td>
 <td> 
-RemoveImage(PdfImageInfo[]) <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Remove-images-from-PDF-document](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Remove-images-from-PDF-document)'| markdownify }}
+RemoveImage(PdfImageInfo[]) <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Remove-images-from-PDF-document)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[ReplaceImage(Int32, PdfImage)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ReplaceImage_System_Int32_Syncfusion_Pdf_Graphics_PdfImage_)'| markdownify }}
+{{'[ReplaceImage(Int32, PdfImage)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ReplaceImage_System_Int32_Syncfusion_Pdf_Graphics_PdfImage_)'| markdownify }}
 </td>
 <td> 
-ReplaceImage(Int32, PdfImage) <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Replace-image-in-an-existing-PDF-document/](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Replace-image-in-an-existing-PDF-document/)'| markdownify }}
+ReplaceImage(Int32, PdfImage) <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Replace-image-in-an-existing-PDF-document/)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[CreateBooklet(String, String, SizeF)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfBookletCreator.html#Syncfusion_Pdf_PdfBookletCreator_CreateBooklet_System_String_System_String_System_Drawing_SizeF_)'| markdownify }}
+{{'[CreateBooklet(String, String, SizeF)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfBookletCreator.html#Syncfusion_Pdf_PdfBookletCreator_CreateBooklet_System_String_System_String_System_Drawing_SizeF_)'| markdownify }}
 </td>
 <td> 
 CreateBooklet(PdfLoadedDocument, SizeF)  
@@ -523,7 +515,7 @@ CreateBooklet(PdfLoadedDocument, SizeF)
 </tr>
 <tr>
 <td>
-{{'[CreateBooklet(String, String, SizeF, Boolean)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfBookletCreator.html#Syncfusion_Pdf_PdfBookletCreator_CreateBooklet_System_String_System_String_System_Drawing_SizeF_System_Boolean_)'| markdownify }}
+{{'[CreateBooklet(String, String, SizeF, Boolean)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfBookletCreator.html#Syncfusion_Pdf_PdfBookletCreator_CreateBooklet_System_String_System_String_System_Drawing_SizeF_System_Boolean_)'| markdownify }}
 </td>
 <td> 
 CreateBooklet(PdfLoadedDocument, SizeF, Boolean) 
@@ -531,15 +523,15 @@ CreateBooklet(PdfLoadedDocument, SizeF, Boolean)
 </tr>
 <tr>
 <td>
-{{'[Save(String)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save)'| markdownify }}
+{{'[Save(String)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save)'| markdownify }}
 </td>
 <td> 
-You can save the document as stream to the file system using {{'[Save(Stream)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save_System_IO_Stream_)'| markdownify }} API.  
+You can save the document as stream to the file system using {{'[Save(Stream)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Save_System_IO_Stream_)'| markdownify }} API.  
 </td>
 </tr>
 <tr>
 <td>
-{{'[Save(String, HttpResponse, HttpReadType)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Save_System_String_System_Web_HttpResponse_Syncfusion_Pdf_HttpReadType_)'| markdownify }}
+{{'[Save(String, HttpResponse, HttpReadType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Save_System_String_System_Web_HttpResponse_Syncfusion_Pdf_HttpReadType_)'| markdownify }}
 </td>
 <td> 
 Not supported
@@ -547,7 +539,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[Save(Stream, HttpContext)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Save_System_IO_Stream_System_Web_HttpContext_)'| markdownify }}
+{{'[Save(Stream, HttpContext)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Save_System_IO_Stream_System_Web_HttpContext_)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -555,7 +547,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[Draw(PdfGraphics, PointF, Single, Single)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_Draw_Syncfusion_Pdf_Graphics_PdfGraphics_System_Drawing_PointF_System_Single_System_Single_)'| markdownify }}
+{{'[Draw(PdfGraphics, PointF, Single, Single)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_Draw_Syncfusion_Pdf_Graphics_PdfGraphics_System_Drawing_PointF_System_Single_System_Single_)'| markdownify }}
 </td>
 <td> 
 Draw(PdfPage, PointF, Single, Single, PdfLayoutFormat)  
@@ -563,7 +555,7 @@ Draw(PdfPage, PointF, Single, Single, PdfLayoutFormat)
 </tr>
 <tr>
 <td>
-{{'[Draw(PdfGraphics, RectangleF)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_Draw_Syncfusion_Pdf_Graphics_PdfGraphics_System_Drawing_RectangleF_)'| markdownify }}
+{{'[Draw(PdfGraphics, RectangleF)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_Draw_Syncfusion_Pdf_Graphics_PdfGraphics_System_Drawing_RectangleF_)'| markdownify }}
 </td>
 <td> 
 Draw(PdfPage, RectangleF, PdfLayoutFormat)  
@@ -571,7 +563,7 @@ Draw(PdfPage, RectangleF, PdfLayoutFormat)
 </tr>
 <tr>
 <td>
-{{'[Draw(PdfPage, PointF, Single, PdfMetafileLayoutFormat)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_Draw_Syncfusion_Pdf_PdfPage_System_Drawing_PointF_System_Single_Syncfusion_Pdf_Graphics_PdfMetafileLayoutFormat_)'| markdownify }}
+{{'[Draw(PdfPage, PointF, Single, PdfMetafileLayoutFormat)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_Draw_Syncfusion_Pdf_PdfPage_System_Drawing_PointF_System_Single_Syncfusion_Pdf_Graphics_PdfMetafileLayoutFormat_)'| markdownify }}
 </td>
 <td> 
 Draw(PdfPage, PointF, Single, PdfLayoutFormat)  
@@ -579,7 +571,7 @@ Draw(PdfPage, PointF, Single, PdfLayoutFormat)
 </tr>
 <tr>
 <td>
-{{'[Draw(PdfPage, PointF, Single, Single, PdfMetafileLayoutFormat)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_Draw_Syncfusion_Pdf_PdfPage_System_Drawing_PointF_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfMetafileLayoutFormat_)'| markdownify }}
+{{'[Draw(PdfPage, PointF, Single, Single, PdfMetafileLayoutFormat)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_Draw_Syncfusion_Pdf_PdfPage_System_Drawing_PointF_System_Single_System_Single_Syncfusion_Pdf_Graphics_PdfMetafileLayoutFormat_)'| markdownify }}
 </td>
 <td> 
 Draw(PdfPage, PointF, Single, Single, PdfLayoutFormat) 
@@ -587,7 +579,7 @@ Draw(PdfPage, PointF, Single, Single, PdfLayoutFormat)
 </tr>
 <tr>
 <td>
-{{'[Draw(PdfPage, RectangleF, PdfMetafileLayoutFormat)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_Draw_Syncfusion_Pdf_PdfPage_System_Drawing_RectangleF_Syncfusion_Pdf_Graphics_PdfMetafileLayoutFormat_)'| markdownify }}
+{{'[Draw(PdfPage, RectangleF, PdfMetafileLayoutFormat)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_Draw_Syncfusion_Pdf_PdfPage_System_Drawing_RectangleF_Syncfusion_Pdf_Graphics_PdfMetafileLayoutFormat_)'| markdownify }}
 </td>
 <td> 
 Draw(PdfPage, RectangleF, PdfLayoutFormat) 
@@ -595,7 +587,7 @@ Draw(PdfPage, RectangleF, PdfLayoutFormat)
 </tr>
 <tr>
 <td>
-{{'[Replace(PdfFont)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.Fonts.PdfUsedFont.html#Syncfusion_Pdf_Graphics_Fonts_PdfUsedFont_Replace_Syncfusion_Pdf_Graphics_PdfFont_)'| markdownify }}
+{{'[Replace(PdfFont)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.Fonts.PdfUsedFont.html#Syncfusion_Pdf_Graphics_Fonts_PdfUsedFont_Replace_Syncfusion_Pdf_Graphics_PdfFont_)'| markdownify }}
 </td>
 <td> 
 Not supported
@@ -613,23 +605,23 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[ImagesInfo](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ImagesInfo)'| markdownify }}
+{{'[ImagesInfo](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ImagesInfo)'| markdownify }}
 </td>
 <td> 
-GetImagesInfo() <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Image%20Extraction/Extract-the-image-info-from-a-PDF-page/](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Image%20Extraction/Extract-the-image-info-from-a-PDF-page/)'| markdownify }}
+GetImagesInfo() <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Image%20Extraction/Extract-the-image-info-from-a-PDF-page/)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[Conformance](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance)'| markdownify }}
+{{'[Conformance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Conformance)'| markdownify }}
 </td>
 <td> 
-ConvertToPDFA(PdfConformanceLevel.Pdf_A1B) <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress)'| markdownify }}
+ConvertToPDFA(PdfConformanceLevel.Pdf_A1B) <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Conformance/Get-PDF-to-PDFA-conversion-progress)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[XFA Flatten](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaDocument.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaDocument_Flatten)'| markdownify }}
+{{'[XFA Flatten](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Xfa.PdfLoadedXfaDocument.html#Syncfusion_Pdf_Xfa_PdfLoadedXfaDocument_Flatten)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -637,7 +629,7 @@ Not supported
 </tr>
 <tr>
 <td>
-Pdf_X1A2001 through {{'[PdfConformanceLevel](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html)'| markdownify }}
+Pdf_X1A2001 through {{'[PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html)'| markdownify }}
 </td>
 <td> 
 Not supported  
@@ -645,31 +637,23 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[PdfGrid.DataSource (DataTable)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_DataSource)'| markdownify }}
+{{'[PdfGrid.DataSource (DataTable)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_DataSource)'| markdownify }}
 </td>
 <td> 
-{{'[PdfGrid.DataSource (IEnumerable<object>)](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_DataSource)'| markdownify }} - In ASP.NET Core, only the strongly typed IEnumerable objects are supported. 
+{{'[PdfGrid.DataSource (IEnumerable<object>)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html#Syncfusion_Pdf_Grid_PdfGrid_DataSource)'| markdownify }} - In ASP.NET Core, only the strongly typed IEnumerable objects are supported. 
 </td>
 </tr>
 <tr>
 <td>
-{{'[PdfLoadedDocument.CompressionOptions = PdfCompressionOptions](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html)'| markdownify }}
+{{'[PdfLoadedDocument.CompressionOptions = PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html)'| markdownify }}
 </td>
 <td> 
-PdfLoadedDocument.Compress(PdfCompressionOptions) <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Compression/Compress-the-images-in-an-existing-PDF-document](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Compression/Compress-the-images-in-an-existing-PDF-document)'| markdownify }}
+PdfLoadedDocument.Compress(PdfCompressionOptions) <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Compression/Compress-the-images-in-an-existing-PDF-document)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[EncodingType](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.EncodingType.html)'| markdownify }} - Enum  
-</td>
-<td> 
-Not supported  
-</td>
-</tr>
-<tr>
-<td>
-{{'[ImageExportSettings](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ImageExportSettings)'| markdownify }}
+{{'[EncodingType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.EncodingType.html)'| markdownify }} - Enum  
 </td>
 <td> 
 Not supported  
@@ -677,7 +661,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[IsAllFontsEmbedded](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_IsAllFontsEmbedded)'| markdownify }}
+{{'[ImageExportSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_ImageExportSettings)'| markdownify }}
 </td>
 <td> 
 Not supported  
@@ -685,7 +669,15 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[ColorSpace](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfLoadedPage.html#Syncfusion_Pdf_PdfLoadedPage_ColorSpace)'| markdownify }}
+{{'[IsAllFontsEmbedded](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_IsAllFontsEmbedded)'| markdownify }}
+</td>
+<td> 
+Not supported  
+</td>
+</tr>
+<tr>
+<td>
+{{'[ColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLoadedPage.html#Syncfusion_Pdf_PdfLoadedPage_ColorSpace)'| markdownify }}
 </td>
 <td> 
 Not supported
@@ -693,25 +685,25 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[Redactions](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfLoadedPage.html#Syncfusion_Pdf_PdfLoadedPage_Redactions)'| markdownify }}
+{{'[Redactions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfLoadedPage.html#Syncfusion_Pdf_PdfLoadedPage_Redactions)'| markdownify }}
 </td>
 <td> 
 AddRedaction(PdfRedaction) - Additionally, call the following method to execute the redaction.<br/>
-PdfLoadedDocument.Redact(); <br/> *Sample link:* <br/>
-{{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Removing-sensitive-content-from-the-PDF-document/](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Removing-sensitive-content-from-the-PDF-document/)'| markdownify }}
+PdfLoadedDocument.Redact(); <br/> Sample link:
+{{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Redaction/Removing-sensitive-content-from-the-PDF-document/)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[ImagesInfo](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ImagesInfo)'| markdownify }}
+{{'[ImagesInfo](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ImagesInfo)'| markdownify }}
 </td>
 <td> 
-GetImagesInfo() <br/> *Sample link:* <br/> {{'[https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Image%20Extraction/Extract-the-image-info-from-a-PDF-page/](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Image%20Extraction/Extract-the-image-info-from-a-PDF-page/)'| markdownify }}
+GetImagesInfo() <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Image%20Extraction/Extract-the-image-info-from-a-PDF-page/)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[IsColored](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_IsColored)'| markdownify }}
+{{'[IsColored](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_IsColored)'| markdownify }}
 </td>
 <td> 
 Not supported  
@@ -719,7 +711,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[ActiveFrame](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_ActiveFrame)'| markdownify }}
+{{'[ActiveFrame](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_ActiveFrame)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -727,7 +719,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[Encoding](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_Encoding)'| markdownify }}
+{{'[Encoding](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_Encoding)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -735,7 +727,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[FrameCount](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_FrameCount)'| markdownify }}
+{{'[FrameCount](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_FrameCount)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -743,7 +735,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[Mask](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_Mask)'| markdownify }}
+{{'[Mask](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_Mask)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -751,7 +743,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[Quality](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_Quality)'| markdownify }}
+{{'[Quality](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html#Syncfusion_Pdf_Graphics_PdfBitmap_Quality)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -759,7 +751,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[IsNativeRenderingEnabled](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_IsNativeRenderingEnabled)'| markdownify }}
+{{'[IsNativeRenderingEnabled](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_IsNativeRenderingEnabled)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -767,7 +759,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[TextAlign](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_TextAlign)'| markdownify }}
+{{'[TextAlign](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfHTMLTextElement.html#Syncfusion_Pdf_Graphics_PdfHTMLTextElement_TextAlign)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -775,7 +767,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[RightToLeft](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html#Syncfusion_Pdf_Graphics_PdfStringFormat_RightToLeft)'| markdownify }}
+{{'[RightToLeft](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfStringFormat.html#Syncfusion_Pdf_Graphics_PdfStringFormat_RightToLeft)'| markdownify }}
 </td>
 <td> 
 Not supported
@@ -810,7 +802,7 @@ Not supported
 </tr>
 <tr>
 <td>
-{{'[ImagePreRenderEventArgs](https://help.syncfusion.com/document-processing/Syncfusion.Pdf.ImagePreRenderEventArgs.html)'| markdownify }}
+{{'[ImagePreRenderEventArgs](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ImagePreRenderEventArgs.html)'| markdownify }}
 </td>
 <td> 
 Not supported 
@@ -821,9 +813,6 @@ Not supported
 ## Advantages 
 * *Cross-platform compatibility:* ASP.NET Core can run on Windows, MacOS, and Linux, making it a flexible option for developing web applications. 
 * *Integration with cloud services:* ASP.NET Core can be easily integrated with cloud services, such as Microsoft Azure, Amazon Web Services, Docker and Google Cloud Platform.  
-
-## Known limitations 
-* EMF and WMF images are not supported on the .NET Core platform.   
 
 ## Notable changes
 1. For text measuring and graphics operations in the .NET Framework, our library utilizes *System.Drawing*. In contrast, for similar graphics operations in .NET Core, our library employs *Syncfusion.Drawing*. 
@@ -837,15 +826,7 @@ Not supported
 * [Convert PDF to PDF/A](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pdf-conformance#pdf-to-pdfa-conversion)
 * [Replace images in an existing PDF document](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-images#replacing-images-in-an-existing-pdf-document) 
 3. For converting XPS to PDF document, kindly utilize the [Syncfusion.XpsToPdfConverter.Net.Core](https://www.nuget.org/packages/Syncfusion.XpsToPdfConverter.Net.Core) NuGet package in your ASP.NET Core application.  
-4. To convert PDF to image, please use the [Syncfusion.EJ2.PdfViewer.AspNet.Core.Windows](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core.Windows/) NuGet package in your ASP.NET Core application.  
-
-N> If you want to migrate without any code changes from [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet) NuGet in application targeting .NET Framework, you can consider using anyone of the following packages: 
-N> * [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms) 
-N> * [Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf)
-N> * [Syncfusion.Pdf.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc4) 
-N> * [Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5)
-N> * But this is not a recommended approach.  
-
+4. To convert PDF to image, please use the [Syncfusion.EJ2.PdfViewer.AspNet.Core.Windows](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core.Windows/) NuGet package in your ASP.NET Core application.
 
 ## Migrate System.Drawing.Common to SkiaSharp package 
 
