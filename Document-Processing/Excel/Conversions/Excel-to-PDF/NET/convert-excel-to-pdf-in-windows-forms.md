@@ -69,23 +69,26 @@ using Syncfusion.ExcelToPdfConverter;
 Step 6: Include the below code snippet in **btnConvert_Click** to **convert an Excel document to PDF**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+private void btnConvert_Click(object sender, EventArgs e)
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
-  //Initialize ExcelToPdfConverter
-  ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
+    //Initialize ExcelToPdfConverter
+    ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
 
-  //Initialize PDF document
-  PdfDocument pdfDocument = new PdfDocument();
+    //Initialize PDF document
+    PdfDocument pdfDocument = new PdfDocument();
 
-  //Convert Excel document into PDF document
-  pdfDocument = converter.Convert();
+    //Convert Excel document into PDF document
+    pdfDocument = converter.Convert();
 
-  //Save the converted PDF document
-  pdfDocument.Save("Sample.pdf");
+    //Save the converted PDF document
+    pdfDocument.Save("Sample.pdf");
+  }
 }
 {% endhighlight %}
 {% endtabs %}
