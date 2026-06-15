@@ -28,6 +28,9 @@ void LockAllAnnotations()
 
 * Similarly, to unlock all the annotations, set the [IsLocked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.BaseAnnotationSettings.html#Syncfusion_Maui_PdfViewer_BaseAnnotationSettings_IsLocked) property value to `false`.
 
+N>Setting AnnotationSettings.IsLocked to true locks annotations from being edited or deleted, but it does not prevent users from adding new annotations.
+If an annotation read-only experience is required, hide the annotation buttons by using toolbar customization. When the annotation buttons are not available, users cannot add annotations through the built-in UI, and the PDF Viewer behaves like it is in annotation read-only mode.
+For more details on customizing the built-in toolbar, refer to the toolbar [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization).
 
 ## Lock specific annotation
 

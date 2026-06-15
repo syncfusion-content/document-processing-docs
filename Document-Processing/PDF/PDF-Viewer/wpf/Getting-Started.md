@@ -43,7 +43,7 @@ The following assemblies are required in your WPF application to use the PDF Vie
 </table>
 
 Rather than referencing the assemblies, you can utilize the [PdfViewer NuGet](https://www.nuget.org/packages/Syncfusion.PdfViewer.WPF) Packages. For more information on how to install the NuGet package in a WPF application, please follow the provided link.
-[How to install nuget packages in a WPF application](https://help.syncfusion.com/wpf/visual-studio-integration/nuget-packages)
+[How to install nuget packages in a WPF application](https://help.syncfusion.com/wpf/installation/install-nuget-packages)
 
 N> Starting with version 23.1.x, a reference to the Syncfusion.PdfToImageConverter.Base assembly is necessary for PdfViewer applications.
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup>; assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your WPF application to use our components.
@@ -130,7 +130,7 @@ To add control manually from code, follow these steps,
 
 The [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html)’s [ItemSource](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ItemSource) property allows you to bind PDF documents in XAML. This property accepts a stream input that can be bounded to the viewer during initialization. The following steps explain how to display a PDF file using the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html):
 
-N> From v16.3.0x onwards, PDF Viewer uses PDFium as a default rendering engine to render the PDF pages, which is a more robust and promising rendering engine. Refer to this [link](https://help.syncfusion.com/wpf/pdf-viewer/pdf-rendering-engines) for more details.
+N> From v16.3.0x onwards, PDF Viewer uses PDFium as a default rendering engine to render the PDF pages, which is a more robust and promising rendering engine. Refer to this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/pdf-rendering-engines) for more details.
 
 1.	Create a simple class in the application that implements [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netcore-3.1) and declare a file stream property in the class as shown in the following code sample.
 
@@ -189,7 +189,7 @@ N> From v16.3.0x onwards, PDF Viewer uses PDFium as a default rendering engine t
 
 The sample project for displaying PDF files using the PDF Viewer is available in the [GitHub](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/DisplayPDF).
 
-N> Alternatively, the Open button in the toolbar can also be used to load and display the PDF documents at runtime. Refer to this [link](https://help.syncfusion.com/wpf/pdf-viewer/viewing-pdf-files#open-pdf-file-from-the-local-disk-using-toolbar) for more details.
+N> Alternatively, the Open button in the toolbar can also be used to load and display the PDF documents at runtime. Refer to this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/viewing-pdf-files#open-pdf-file-from-the-local-disk-using-toolbar) for more details.
 
 ## Theme
 

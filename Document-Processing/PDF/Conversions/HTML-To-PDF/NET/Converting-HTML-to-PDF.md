@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Converting HTML to PDF
 
-The HTML to PDF converter is a .NET library for converting webpages, SVG, MHTML, and HTML files to PDF using C#. It uses popular rendering engines such as Blink (Google Chrome) and is reliable and accurate. The result preserves all graphics, images, text, fonts, and the layout of the original HTML document or webpage.
+The [HTML to PDF converter](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML files to PDF using C#. It uses popular rendering engines such as Blink (Google Chrome) and is reliable and accurate. The result preserves all graphics, images, text, fonts, and the layout of the original HTML document or webpage.
 
 Syncfusion<sup>&reg;</sup> HTML-to-PDF converter will work seamlessly in various platforms like Azure Cloud or web apps, Azure Functions, Amazon Web Service (AWS), Docker, WinForms, WPF, ASP.NET MVC, ASP.NET Core with Windows, Linux, and macOS.
 
@@ -191,17 +191,18 @@ Step 2: Install [Syncfusion.HtmlToPdfConverter.Net.Windows](https://www.nuget.or
 
 Step 3: Include the following namespace in your class file. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.HtmlConverter;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Use the following code sample to convert the URL to PDF in the program.cs.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 //Initialize HTML to PDF converter.
@@ -220,7 +221,6 @@ document.Save(fileStream);
 document.Close(true);
 
 {% endhighlight %}
-
 {% endtabs %}
 
 By executing the program, you will get the PDF document as follows.
@@ -272,7 +272,6 @@ By default, the PDF document generated with the IE rendering engine comes with t
 Please refer to the below code snippet to use the DisableIEWarning API to remove the default IE warning from the PDF document.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 //Initialize the HTML to PDF converter 
@@ -290,28 +289,6 @@ document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET" %}
-'Initialize the HTML to PDF converter 
-Dim htmlConverter As New HtmlToPdfConverter(HtmlRenderingEngine.IE)
-Dim settings As New IEConverterSettings()
-'Disable Default IE Warning Message
-settings.DisableIEWarning = true
-'Assign IE settings to HTML converter
-htmlConverter.ConverterSettings = settings
-'Convert URL to PDF
-Dim document As PdfDocument = htmlConverter.Convert("https://www.google.com")
-
-'Save and close the PDF document 
-document.Save("Output.pdf")
-document.Close(True)
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="ASP.NET Core" %}
-//Currently, IE rendering engine does not support conversion in .NET Core platform
-{% endhighlight %}
-
 {% endtabs %}
 
 N>Please try our [Blink](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/net-core) engine to improve the quality and accuracy of the HTML to PDF conversion.

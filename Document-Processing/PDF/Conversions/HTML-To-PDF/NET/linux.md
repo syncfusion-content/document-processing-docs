@@ -14,34 +14,40 @@ The Syncfusion<sup>&reg;</sup> HTML to PDF converter is a .NET library that conv
 
 The following Linux dependencies should be installed where the conversion takes place. 
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 $ sudo apt-get update
 
 $ sudo apt-get install libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ## Steps to convert HTML to PDF in .NET Core application on Linux
 
 Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet new console
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Convert HTMLToPDF Linux Step1](htmlconversion_images/LinuxStep1.png)  
 
 Step 2: Install the [Syncfusion.HtmlToPdfConverter.Net.Linux](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet add package Syncfusion.HtmlToPdfConverter.Net.Linux -v xx.x.x.xx -s https://www.nuget.org/
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Convert HTMLToPDF Linux Step2](htmlconversion_images/LinuxStep2.png)  
 
@@ -49,6 +55,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 3: Include the following namespaces.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.HtmlConverter;
@@ -56,9 +63,11 @@ using Syncfusion.Pdf;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 4:  Add code samples in Program.cs file to convert HTML to PDF document using [Convert](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html#Syncfusion_HtmlConverter_HtmlToPdfConverter_Convert_System_String_) method in [HtmlToPdfConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.HtmlToPdfConverter.html) class.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize HTML to PDF converter. 
@@ -74,6 +83,7 @@ document.Save(fileStream);
 document.Close(true);
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
 N> ```csharp
@@ -84,20 +94,24 @@ N> These arguments are only required when using **older versions** of the librar
 
 Step 5: Execute the following command to restore the NuGet packages.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet restore
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Convert HTMLToPDF Linux Step3](htmlconversion_images/LinuxStep3.png)  
 Step 6: Execute the following command in the terminal to run the application.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet run
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Convert HTMLToPDF Linux Step4](htmlconversion_images/LinuxStep4.png)  
 

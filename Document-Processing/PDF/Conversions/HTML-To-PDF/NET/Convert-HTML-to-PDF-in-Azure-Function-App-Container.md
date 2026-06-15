@@ -28,16 +28,19 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 Step 4: Include the following namespace in your Function1.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-    using Syncfusion.HtmlConverter;
-    using Syncfusion.Pdf;
-    using Syncfusion.Pdf.Graphics;
+using Syncfusion.HtmlConverter;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5:  Include the following code snippet in your function1.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 [Function("Function1")]
@@ -146,28 +149,29 @@ internal enum FileAccessPermissions : uint
 }
 
 {% endhighlight %}
-
-
+{% endtabs %}
 
 Step 6: Include the following prerequisites dependencies packages in your docker file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight dockerfile %}
 
-    RUN apt-get update && \
+RUN apt-get update && \
 
-    apt-get install -yq --no-install-recommends \
+apt-get install -yq --no-install-recommends \
 
-    libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
+libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
 
-    libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
+libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
 
-    libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 \
+libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 \
 
-    libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 \
+libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 \
 
-    libnss3 libgbm1
+libnss3 libgbm1
 
 {% endhighlight %}
+{% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Azure/HTML-to-PDF-AzureApp-container).
 

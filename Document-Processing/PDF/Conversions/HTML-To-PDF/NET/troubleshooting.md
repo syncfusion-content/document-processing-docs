@@ -34,7 +34,7 @@ You can set the runtimes folder path explicitly in BlinkPath property in BlinkCo
 <br/><br/>
 Ex path: <i>C:\HtmlConversion\HTMl-to-PDF\HTMl-to-PDF\bin\Debug\net7.0\runtimes\win-x64\native\</i>
 <br/><br/>
-{% tabs %}
+
 {% highlight C# %}
 
 //Initialize the HTML to PDF converter.
@@ -52,7 +52,7 @@ document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
-{% endtabs %}
+
 </td>
 </tr>
 
@@ -138,7 +138,7 @@ Also, please add the following command line arguments in our converter setting.
 <table>
 <tr>
 <td>
-{% tabs %}
+
 {% highlight C# tabtitle="C#" %}
 
 //Set command line arguments to run without sandbox.
@@ -146,7 +146,7 @@ blinkConverterSettings.CommandLineArguments.Add("--no-sandbox");
 blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 
 {% endhighlight %}
-{% endtabs %}
+
 </td>
 </tr>
 </table>
@@ -260,7 +260,7 @@ Step 2: To resolve this issue, we recommend copying the <b>runtimes</b> folder i
 
 Step 3: If manually copying the files doesn't meet your requirements, we recommend applying the following code changes in the <b>.csproj</b> file and updating the publish profile. This will ensure the necessary files are copied automatically during the publishing process.<br>
 Add the following code snippet to the <b>.pubxml</b> file to apply the necessary configuration.<br>
-{% tabs %}
+
 {% highlight C# tabtitle="C#" %}
 
 <PropertyGroup>
@@ -270,24 +270,23 @@ Add the following code snippet to the <b>.pubxml</b> file to apply the necessary
 </PropertyGroup>
 
 {% endhighlight %}
-{% endtabs %}
 
 Add the following code to the <b>.csproj</b> file to ensure the <b>locale</b> folder is copied to the publish directory during the build process.<br>
-{% tabs %}
+
 {% highlight C# tabtitle="C#" %}
 
-<ItemGroup>
+	<ItemGroup>
 
-  <None Include="bin\Release\net9.0\runtimes\linux\native\locales\**\*"
+	<None Include="bin\Release\net9.0\runtimes\linux\native\locales\**\*"
 
-        CopyToOutputDirectory="Always"
+		CopyToOutputDirectory="Always"
 
-        Link="runtimes/linux/native/locales/%(RecursiveDir)%(Filename)%(Extension)"/>
+		Link="runtimes/linux/native/locales/%(RecursiveDir)%(Filename)%(Extension)"/>
 
-</ItemGroup>
+	</ItemGroup>
 
 {% endhighlight %}
-{% endtabs %}
+
 </td>
 </tr>
 </table>
@@ -338,14 +337,14 @@ Add the following code to the <b>.csproj</b> file to ensure the <b>locale</b> fo
 </th>
 <td>To overcome the exception, you can add read, write, and execute permissions for the temporary folder. Refer to the following code sample to set the temp folder.
 <br><br/>
-{% tabs %}
+
 {% highlight C# tabtitle="C#" %}
 
 BlinkConverterSettings settings = new BlinkConverterSettings();
 settings.TempPath = "D://MyProject//bin";
 
 {% endhighlight %}
-{% endtabs %}
+
 </td>
 </tr>
 
@@ -423,14 +422,14 @@ Check the HTML file or URL is rendered properly in Chrome browser's print previe
 <br><br/>
 <img src="htmlconversion_images/Troubleshooting_webpage_exception_Linux.png" alt="ExcludeAssets">
 <br><br/>
-{% tabs %}
+
 {% highlight C# tabtitle="C#" %}
 
 RUN chmod +x /app/runtimes/linux/native/chrome && \
     chmod +x /app/runtimes/linux/native/chrome-wrapper
 
 {% endhighlight %}
-{% endtabs %}
+
 </td>
 </tr>
 </table>
@@ -454,14 +453,14 @@ RUN chmod +x /app/runtimes/linux/native/chrome && \
 </th>
 <td>To overcome this issue, add suitable delay for the conversion using the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_AdditionalDelay">AdditionalDelay</a> property of the HTMLConverter. 
 <br><br/>
-{% tabs %}
+
 {% highlight C# tabtitle="C#" %}
 
 BlinkConverterSettings settings = new BlinkConverterSettings();
 settings.AdditionalDelay = 4000;
 
 {% endhighlight %}
-{% endtabs %}
+
 </td>
 </tr>
 
@@ -560,14 +559,14 @@ These plans provide the necessary environment and permissions to support Chromiu
 </th>
 <td>You can able to bypass the invalid SSL certificate errors using the command line arguments property of Blink converter settings.
 <br><br/>
-{% tabs %}
+
 {% highlight C# tabtitle="C#" %}
 
 BlinkConverterSettings settings = new BlinkConverterSettings();
 settings.CommandLineArguments.Add("--ignore-certificate-errors");
 
 {% endhighlight %}
-{% endtabs %}
+
 </td>
 </tr>
 </table>
@@ -597,7 +596,7 @@ settings.CommandLineArguments.Add("--ignore-certificate-errors");
 <td>Use system-installed Chromium instead of bundled binaries:
 <br><br/>
 Step 1: Configure Blink Path
-{% tabs %}
+
 {% highlight C# tabtitle="C#" %}
 
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -615,7 +614,6 @@ document.Save("Output.pdf");
 document.Close(true);
 
 {% endhighlight %}
-{% endtabs %}
 
 Step 2: Verify Installation <br>
 Ensure Chrome exists at the specified path (standard locations): `C:\Program Files\Google\Chrome\Application`
@@ -644,7 +642,7 @@ Ensure Chrome exists at the specified path (standard locations): `C:\Program Fil
 </th>
 <td>We can resolve this permission related failure in the Blink rendering engine using below command line arguments in our converter settings. 
 <br><br/>
-{% tabs %}
+
 {% highlight C# tabtitle="C#" %}
 
 //Set command line arguments to run without sandbox.
@@ -652,7 +650,7 @@ blinkConverterSettings.CommandLineArguments.Add("--no-sandbox");
 blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 
 {% endhighlight %}
-{% endtabs %}
+
 </td>
 </tr>
 </table>
@@ -799,48 +797,42 @@ Refer to the following package reference:
 To resolve this issue, we can install the chromium using the docker file and set the Blink Path to the location where chromium is installed.
 <br><br>
 <b>Docker File:</b><br><br>
-{% tabs %}
 
 {% highlight C# tabtitle="C#" %}
 
-	FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base 
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base 
 
-	RUN apt-get update && apt-get install -y \ 
+RUN apt-get update && apt-get install -y \ 
 
-    libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \ 
+libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \ 
 
-    libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \ 
+libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \ 
 
-    libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 \ 
+libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 \ 
 
-    libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 \ 
+libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 \ 
 
-    libnss3 libgbm1 chromium 
+libnss3 libgbm1 chromium 
 
-	WORKDIR /app 
+WORKDIR /app 
 
-	EXPOSE 80 
+EXPOSE 80 
 
-	EXPOSE 443 
+EXPOSE 443 
 
 {% endhighlight %}
-
-{% endtabs %}
 
 <b>Code example</b>:
-{% tabs %}
 
 {% highlight C# tabtitle="C#" %}
 
-	BlinkConverterSettings settings = new BlinkConverterSettings();  
+BlinkConverterSettings settings = new BlinkConverterSettings();  
 
-	//To utilize the Blink binaries from the arm64-based chromium installed using the docker file, execute the following command.   
+//To utilize the Blink binaries from the arm64-based chromium installed using the docker file, execute the following command.   
 
-	settings.BlinkPath = @"/usr/lib/chromium/chromium";
+settings.BlinkPath = @"/usr/lib/chromium/chromium";
 
 {% endhighlight %}
-
-{% endtabs %}
 
 </td>
 </tr>
@@ -868,8 +860,6 @@ To resolve this issue, we can install the chromium using the docker file and set
 To resolve this issue, we can add inline styles in element. However, we have attached the sample and output documents for your reference.
 <br><br>
 
-{% tabs %}
-
 {% highlight C# tabtitle="C#" %}
 
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -896,8 +886,6 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% endtabs %}
-
 You can downloaded a complete working sample from <a href="https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTML-Footer-Background-Colour/.NET">GitHub</a>.
 
 </td>
@@ -907,8 +895,6 @@ You can downloaded a complete working sample from <a href="https://github.com/Sy
 ## Zombie process are not closed by default from chrome headless in Linux platform
 
  The zombie process are not closed by default from chrome headless in Linux. However, We can resolve the zombie process issue by using the below command line arguments in converter settings.
-
-{% tabs %}
 
 {% highlight C# %}
 
@@ -920,8 +906,6 @@ settings.CommandLineArguments.Add("--disable-dev-shm-usage");
 settings.CommandLineArguments.Add("--single-process");
 
 {% endhighlight %}
-
-{% endtabs %}
 
 ## Failed to launch chromium: Missing required dependent packages issue occurs in Azure function Linux with premium plans.
 
@@ -940,14 +924,11 @@ settings.CommandLineArguments.Add("--single-process");
 <td>
 To overcome this issue by installing the Linux dependencies package in SSH window. Please refer the below commands and screenshot,
 
-{% tabs %}
-
 {% highlight C# %}
 
 apt-get update && apt-get install -yq --no-install-recommends libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
 {% endhighlight %}
 
-{% endtabs %}
 <br/><br/>
 Please refer to the below screenshot,
 <br/><br/>
@@ -962,50 +943,50 @@ We can install the required dependencies using the dependencies vis shell script
 <br/><br/>
 <b>Code example</b>:
 <br/><br/>
-{% tabs %}
+
 {% highlight C# %}
 
-	private static void InstallLinuxPackages(FileInfo functionAppDirectory)
+private static void InstallLinuxPackages(FileInfo functionAppDirectory)
+{
+	if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
 	{
-		if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-		{
-			return;
-		}
-		FileAccessPermissions ExecutableFilePermissions = FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute |
-		FileAccessPermissions.GroupRead | FileAccessPermissions.GroupExecute | FileAccessPermissions.OtherRead | FileAccessPermissions.OtherExecute;
-		//Install the dependencies packages for HTML to PDF conversion in Linux
-		string shellFilePath = Path.Combine(functionAppDirectory.Directory.Parent.FullName, @"wwwroot/data");
-		string tempBlinkDir = Path.GetTempPath();
-		string dependenciesPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
-		if (!File.Exists(dependenciesPath))
-		{
-			CopyFilesRecursively(shellFilePath, tempBlinkDir);
-			var execPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
-			if (File.Exists(execPath))
-			{
-				var code = Function1.Chmod(execPath, ExecutableFilePermissions);
-				if (code != 0)
-				{
-					throw new Exception("Chmod operation failed");
-				}
-			}
-			Process process = new Process
-			{
-				StartInfo = new ProcessStartInfo
-				{
-					FileName = "/bin/bash",
-					Arguments = "-c " + execPath,
-					CreateNoWindow = true,
-					UseShellExecute = false,
-				}
-			};
-			process.Start();
-			process.WaitForExit();
-		}
+		return;
 	}
+	FileAccessPermissions ExecutableFilePermissions = FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute |
+	FileAccessPermissions.GroupRead | FileAccessPermissions.GroupExecute | FileAccessPermissions.OtherRead | FileAccessPermissions.OtherExecute;
+	//Install the dependencies packages for HTML to PDF conversion in Linux
+	string shellFilePath = Path.Combine(functionAppDirectory.Directory.Parent.FullName, @"wwwroot/data");
+	string tempBlinkDir = Path.GetTempPath();
+	string dependenciesPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
+	if (!File.Exists(dependenciesPath))
+	{
+		CopyFilesRecursively(shellFilePath, tempBlinkDir);
+		var execPath = Path.Combine(tempBlinkDir, "dependenciesInstall.sh");
+		if (File.Exists(execPath))
+		{
+			var code = Function1.Chmod(execPath, ExecutableFilePermissions);
+			if (code != 0)
+			{
+				throw new Exception("Chmod operation failed");
+			}
+		}
+		Process process = new Process
+		{
+			StartInfo = new ProcessStartInfo
+			{
+				FileName = "/bin/bash",
+				Arguments = "-c " + execPath,
+				CreateNoWindow = true,
+				UseShellExecute = false,
+			}
+		};
+		process.Start();
+		process.WaitForExit();
+	}
+}
 
 {% endhighlight %}
-{% endtabs %}
+
 </td>
 </tr>
 
@@ -1043,7 +1024,6 @@ Blink binaries (Version 109.0.5414.75),
 
 </table>
 
-
 ## There was an error opening this document. This file is already open or in use by another application.
 
 <table>
@@ -1061,7 +1041,7 @@ Blink binaries (Version 109.0.5414.75),
 <td>
 
 We can resolve the reported issue by using the FileStream within the "using" block.
-{% tabs %}
+
 {% highlight C# %}
 
 using (FileStream fs = new FileStream("path_to_file", FileMode.Open))
@@ -1070,12 +1050,12 @@ using (FileStream fs = new FileStream("path_to_file", FileMode.Open))
 } // File stream is automatically closed and disposed
 
 {% endhighlight %}
-{% endtabs %}
+
 
 Or
 
 Dispose of the FileStream at the end of the process and ensure that the file or document is not already open in another application.
-{% tabs %}
+
 {% highlight C# %}
 	
 PdfDocument document = htmlConverter.Convert(");
@@ -1088,7 +1068,7 @@ document.Dispose();
 fileStream.Dispose();
 
 {% endhighlight %}
-{% endtabs %}
+
 </td>
 </tr>
 
@@ -1140,7 +1120,6 @@ The exception may occur while performing HTML to PDF conversion with docker and 
 <td>
 To overcome the exception by making the root files as executable.  For making the root files as executable, you can find the code snippet below which will be added to your docker file.
 
-{% tabs %}
 {% highlight C# %}
 
 USER root
@@ -1148,7 +1127,7 @@ RUN chmod +x /app/runtimes/linux/native/chrome && \
 chmod +x /app/runtimes/linux/native/chrome-wrapper
 
 {% endhighlight %}
-{% endtabs %}
+
 <br/><br/>
 Please refer to the below screenshot,
 <br/><br/>
@@ -1180,13 +1159,12 @@ The issue occurs within Chromium specifically for Alpine.
 <td>
 We can resolve this issue by adding command-line arguments to the Blink converter settings. Please refer to the code snippet below.
 
-{% tabs %}
 {% highlight C# %}
 
 blinkConverterSettings.CommandLineArguments.Add("--disable-gpu");
 	
 {% endhighlight %}
-{% endtabs %}
+
 </td>
 </tr>
 
@@ -1214,7 +1192,6 @@ You can try the below solution steps to overcome the reported issue  'Failed to 
  
 Step 1: Kindly try the below docker file changes in your sample to resolve the chrome_crashpad_handler issue.<br>
 
-{% tabs %}
 {% highlight C# %}
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine
@@ -1256,7 +1233,6 @@ USER guest
 ENTRYPOINT ["dotnet", "Ops.PDFSearch.Web.dll"]
 	
 {% endhighlight %}
-{% endtabs %}
 
 We have attached the modified docker file for your reference <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Dockerfile-431990059">Docker file</a>.<br>
 
@@ -1264,18 +1240,15 @@ Step 2: From chromium version 128.x.x.x.x -database flag required for chrome Cra
  
 Add below commands in Docker file:<br>
 
-{% tabs %}
 {% highlight C# %}
 
 RUN mkdir -p /var/www/.config/google-chrome/Crashpad
 RUN chown -R www-data:www-data /var/www/.config
 	
 {% endhighlight %}
-{% endtabs %}
 
 Add below command-line arguments in conversion code<br>
 
-{% tabs %}
 {% highlight C# %}
 
 if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
@@ -1290,7 +1263,6 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
 }
 
 {% endhighlight %}
-{% endtabs %}
 
 Please refer the <a href="https://github.com/chrome-php/chrome/issues/649">Chromium forum link</a>. for more information about the reported issue
 
@@ -1357,38 +1329,32 @@ To resolve the issue and ensure successful HTML to PDF conversion in Azure App S
 
 Provide read, write, and execute permissions for the chrome and chrome-wrapper files located in the runtimes/linux/native directory. Use the following commands:
 
-{% tabs %}
 {% highlight C# %}
 
 chmod +rwx   chrome-wrapper
 chmod +rwx  chrome
 	
 {% endhighlight %}
-{% endtabs %}
 
 2: <b>Verify Chrome Dependency Packages</b><br>
 
 Check if the necessary dependencies for Chromium are installed by running the following command in the runtimes/linux/native directory:
 
-{% tabs %}
 {% highlight C# %}
 
 ldd chrome
 	
 {% endhighlight %}
-{% endtabs %}
 
 3: <b>Install Required Dependencies</b><br>
 
 We can also perform HTML to PDF conversion in Azure App Service (Linux) by installing the required dependencies directly through SSH terminal. Use the following command:
 
-{% tabs %}
 {% highlight C# %}
 
 apt-get update && apt-get install -yq --no-install-recommends  libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
 	
 {% endhighlight %}
-{% endtabs %}
 
 For more details to install the dependencies through SSH terminal window, refer to the documentation:
 <a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux">Convert HTML to PDF in Azure App Service on Linux| Syncfusion</a>
@@ -1427,13 +1393,13 @@ Publish your application to the Azure App Service.<br>
 3.<b>Configure Startup Command</b><br>
 After deployment, go to the Azure portal configuration for your app service.<br>
 In the Startup Command section, add:<br>
-{% tabs %}
+
 {% highlight C# %}
 
 /home/site/wwwroot/dependenciesInstall.sh && dotnet YourApplicationName.dll
 
 {% endhighlight %}
-{% endtabs %}
+
 <br>
 <img alt="Runtime folder" src="htmlconversion_images/Azurepath.png">
 <br>
@@ -1472,7 +1438,6 @@ After the service restarts, try the conversion or operation again to ensure the 
 <td>
 Update the dependency installation script to use t64 packages and omit libgconf-2-4. The following command installs the supported libraries on Ubuntu 24.04:
 
-{% tabs %}
 {% highlight C# %}
 
 Run apt-get update && apt-get install -yq --no-install-recommends \
@@ -1483,7 +1448,6 @@ Run apt-get update && apt-get install -yq --no-install-recommends \
   libxrender1 libxss1 libxtst6 libnss3 libgbm1
 
 {% endhighlight %}
-{% endtabs %}
 
 After applying this change, all required dependencies are installed successfully.
 </td>
@@ -1513,7 +1477,7 @@ After applying this change, all required dependencies are installed successfully
 <td><b>To ensure that the correct localized or culture-specific content appears in the generated PDF:</b><br>
 Set the required culture cookie explicitly using the Cookies property in BlinkConverterSettings before starting conversion.<br>
 Example for setting German culture:<br>
-{% tabs %}
+
 {% highlight C# %}
 
 HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -1524,7 +1488,7 @@ htmlConverter.ConverterSettings = settings;
 PdfDocument doc = htmlConverter.Convert(url);
 
 {% endhighlight %}
-{% endtabs %}
+
 </td>
 </tr>
 
@@ -1536,17 +1500,14 @@ The problem is limited to Azure Functions with premium plans in Net 8.0 version.
 
 <b>Prerequisites dependencies</b>:
 
-{% tabs %}
 {% highlight C# %}
 
 apt-get update && apt-get install -yq --no-install-recommends libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libgbm1
 
 {% endhighlight %}
-{% endtabs %}
 
 N> We have option to exclude the default Blink binaries from the installation package. This will reduce the size of your deployment package in azure. Please refer to the code example below.
 
-{% tabs %}
 {% highlight C# %}
 
 <PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Linux" Version="25.1.35" >
@@ -1556,7 +1517,6 @@ N> We have option to exclude the default Blink binaries from the installation pa
 </PackageReference>
 
 {% endhighlight %}
-{% endtabs %}
 
 ## How to Exclude BlinkBinaries or Runtime Files in Build or Deployment
 
@@ -1569,17 +1529,15 @@ You can prevent runtime files from being included by restricting the package to 
 
 Refer to the following package reference:
 
-{% tabs %}
 {% highlight C# %}
 
 <ItemGroup>
- 	<PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Windows" Version="32.1.21">
+    <PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Windows" Version="32.1.21">
         <IncludeAssets>compile;runtime</IncludeAssets>
     </PackageReference>
 </ItemGroup>
 
 {% endhighlight %}
-{% endtabs %}
 
 By using <b>IncludeAssets="compile"</b>, only the required compile-time metadata is included, and all runtime dependencies (BlinkBinaries) are excluded from the final build or publish output.
 
@@ -1590,13 +1548,11 @@ N> If you exclude runtime files, you must manually place BlinkBinaries on the se
 For .NET Framework applications, Blink runtime files are included through a .targets file referenced in the project.
 To exclude BlinkBinaries, simply remove this import entry.
 
-{% tabs %}
 {% highlight C# %}
 
 <Import Project="packages\Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.32.1.20\build\net462\Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.targets" Condition="Exists('packages\Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.32.1.20\build\net462\Syncfusion.HtmlToPdfConverter.AspNet.Mvc5.targets')" />
 
 {% endhighlight %}
-{% endtabs %}
 
 Removing this line prevents the Syncfusion<sup>&reg;</sup> build targets from copying BlinkBinaries and other runtime files into your bin folder during build or publish.
 
