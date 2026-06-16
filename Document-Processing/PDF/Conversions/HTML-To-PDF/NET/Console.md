@@ -88,7 +88,7 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Console Application project.
 
 ```
-dotnet new mvc -n CreatePdfConsole
+dotnet new console -n CreatePdfConsole
 ```
 Step 2: Replace ****CreatePdfConsole** with your desired project name.
 
@@ -232,6 +232,6 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 By executing the program, you will get the PDF document as follows.
 ![HTML to PDF output document](htmlconversion_images/IIS-Output.png)
  
-A complete working sample can be downloaded from GitHub.
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/Console).
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) to explore the rich set of Syncfusion® HTML to PDF converter library features.

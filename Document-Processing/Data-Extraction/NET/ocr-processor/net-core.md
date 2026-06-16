@@ -38,16 +38,19 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 
 Step 4: A default controller with the name HomeController.cs gets added to the creation of the ASP.NET Core MVC project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add a new button in index.cshtml as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("PerformOCR", "Home", FormMethod.Post);
    {
@@ -59,9 +62,11 @@ Step 5: Add a new button in index.cshtml as follows.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new action method named PerformOCR in the HomeController.cs and use the following code sample to perform OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize the OCR processor.
@@ -88,6 +93,7 @@ using (OCRProcessor processor = new OCRProcessor())
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Build the project.
 
@@ -129,16 +135,19 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 
 Step 5: A default controller with the name HomeController.cs gets added to the creation of the ASP.NET Core MVC project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new button in index.cshtml as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("PerformOCR", "Home", FormMethod.Post);
    {
@@ -150,9 +159,11 @@ Step 6: Add a new button in index.cshtml as follows.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add a new action method named PerformOCR in the HomeController.cs and use the following code sample to perform OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize the OCR processor.
@@ -179,6 +190,7 @@ using (OCRProcessor processor = new OCRProcessor())
 }
 
 {% endhighlight %}
+{% endtabs %}
 Step 8: Build the project.
 
 Run the following command in terminal to build the project.
@@ -233,16 +245,19 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 
 Step 4: A default controller with the name HomeController.cs gets added to the creation of the ASP.NET Core MVC project. Include the following namespaces in that HomeController.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add a new button in index.cshtml as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("PerformOCR", "Home", FormMethod.Post);
    {
@@ -254,9 +269,11 @@ Step 5: Add a new button in index.cshtml as follows.
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new action method named PerformOCR in the HomeController.cs and use the following code sample to perform OCR on the entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize the OCR processor.
@@ -283,6 +300,7 @@ using (OCRProcessor processor = new OCRProcessor())
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Build the project.
 
