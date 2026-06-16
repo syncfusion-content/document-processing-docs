@@ -52,3 +52,7 @@ Document editor exposes an API to insert endnotes at cursor position programmati
 You can update or edit the footnotes and endnotes using the built-in context menu shown up by right-clicking it. The footnote endnote dialog box popup and you can customize the number format and start at.
 
 ![Update or edit footnotes and endnotes](images/notes-option.jpg)
+
+## Online Demo
+
+Explore how to add and manage notes in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/notes#/tailwind3).

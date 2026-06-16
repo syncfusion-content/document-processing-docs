@@ -309,6 +309,10 @@ In the Document Editor, a built-in review panel is available that supports filte
 
 ![Filter changes by user in review panel](./images/filter-changes-by-user.png)
 
+## Online Demo
+
+Explore how to track and review changes in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/track-changes).
+
 ## Video tutorial 
 
 To learn more about Track Changes in the Document Editor component, refer to the video below.

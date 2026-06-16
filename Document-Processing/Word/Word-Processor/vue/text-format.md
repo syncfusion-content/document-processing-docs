@@ -464,6 +464,10 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+## Online Demo
+
+Explore how to apply text formatting in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/character-formatting.html).
+
 ## See Also
 
 * [Feature modules](./feature-module)

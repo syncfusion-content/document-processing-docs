@@ -85,6 +85,10 @@ Move the selection to the document body from header or footer region by double c
 documenteditor.selection.closeHeaderFooter()
 ```
 
+## Online Demo
+
+Explore how to add and customize headers and footers in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/headers-and-footers).
+
 ## See Also
 
 * [Working with Section Formatting](./section-format)
