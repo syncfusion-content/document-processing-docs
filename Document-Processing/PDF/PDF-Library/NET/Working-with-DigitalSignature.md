@@ -894,6 +894,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The following code example shows how to sign the PDF document from external signature using [IPdfExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.IPdfExternalSigner.html).
 
+N> When implementing `IPdfExternalSigner`, ensure that the hashing and signing algorithm used in the `Sign` method matches the `DigestAlgorithm` specified in `PdfSignature.Settings`; otherwise, the generated signature may be invalid or fail validation.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Externally-sign-the-PDF-document-using-IPdfExternalSigner/.NET/Externally-sign-the-PDF-document/Program.cs" %}
