@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrate from Server-backed to Standalone React PDF Viewer | Syncfusion
-description: Learn how to migrate your React PDF Viewer from server-backed to standalone mode. This guide shows step-by-step instructions and code examples.
+description: Learn how to migrate your React PDF Viewer from server-backed to standalone mode. This guide provides step-by-step instructions, code examples, and architectural insights for a smooth transition.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -10,62 +10,74 @@ domainurl: ##DomainURL##
 
 # Migrate from Server-backed to Standalone React PDF Viewer
 
-This guide shows you how to migrate your React PDF Viewer from server-backed mode to standalone mode.
+Migrating from server-backed to standalone mode transforms your PDF Viewer architecture by moving PDF rendering from the server to the client browser. This migration eliminates server dependencies, reduces infrastructure costs, and improves performance through instant client-side rendering.
 
 ## Prerequisites
 
-[System requirements for Syncfusion® React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
+Before starting the migration process, ensure you have:
 
-## Key Differences: Server-backed vs. Standalone
+- An existing [React PDF Viewer implementation using server-backed mode](./getting-started-with-server-backed)
+- [System requirements for Syncfusion® React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
-Understanding the architectural difference will help you plan your migration:
+## Architectural Overview: Server-backed vs. Standalone
+
+Server-backed and standalone modes represent fundamentally different architectural approaches to PDF rendering. Understanding these differences will guide your migration strategy and help you plan for deployment changes.
 
 | Aspect | Server-backed | Standalone |
 |--------|---------------|-----------|
-| **PDF Rendering** | Processed on the backend server using PDFium rendering engine | Processed entirely within the browser using PDFium rendering engine |
-| **Required Services** | Requires a running web service in .NET application (`serviceUrl`) | Not required |
-| **Resource Files** | handled by server using PDFium | Need to refer PDFium resources; loaded from `resourceUrl` (CDN or local) |
-| **Deployment** | Backend server configuration + frontend sample level deployment | No configuation required, simple sample level deployment |
-| **Performance** | Network latency for operations | Instant client-side rendering |
-| **Scalability** | Limited by server capacity | Scales with client hardware |
-| **New Features** | No new features after Vol 2 2026 | Receives ongoing updates |
+| **PDF Rendering** | Processed on the server using the PDFium rendering engine | Processed entirely within the browser using the PDFium rendering engine |
+| **Back-end Service** | Requires a running web service configured in the .NET application (via `serviceUrl`) | Not required; no server service dependencies |
+| **Resource Management** | PDFium resources are handled and managed by the server | PDFium resources must be referenced through `resourceUrl` (from CDN or local hosting) |
+| **Deployment Complexity** | Requires server configuration plus frontend-level deployment | Minimal deployment requirements; front-end only |
+| **Runtime Performance** | Operations involve network latency due to server round-trips | Rendering occurs instantly on the client with no network overhead |
+| **Scalability Model** | Limited by server capacity and concurrent connection limits | Scales horizontally based on client device hardware resources |
+| **Feature Updates** | No new features after Vol 2 2026; server-backed mode is in maintenance mode | Receives continuous updates and new features |
 
-## Migration Guide
+## How to Migrate: Step-by-Step Process
 
-### Replace the `serviceUrl` with `resourceUrl`
+### Step 1: Identify Your Current Configuration
 
-In your React component, remove or delete the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#serviceurl) property that points to your backend service.
+In your existing server-backed React component, locate the `serviceUrl` property. This property points to your server PDF Viewer web service.
 
-**Before:**
+### Step 2: Remove the `serviceUrl` Property
+
+Remove or delete the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#serviceurl) property that references your server service.
+
+**Current server-backed configuration:**
 ```js
 <PdfViewerComponent
   id="container"
-  //Remove the serviceUrl
-  serviceUrl="https://your-backend-server.com/api/pdfviewer"
+  serviceUrl="https://your-server.com/api/pdfviewer"
   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
   style={{ 'height': '640px' }}
->
+/>
 ```
 
-Add the [resourceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#resouceurl) property to point to the PDFium resource files. You can use the Syncfusion CDN or host the files locally.
+### Step 3: Add the `resourceUrl` Property
 
-**After:**
-**Using CDN (Recommended for Quick Migration):**
+Add the [resourceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#resouceurl) property to point to the PDFium resource files. You can choose between two approaches: CDN hosting (recommended for quick migration) or local hosting.
+
+#### Option A: Using CDN (Recommended for Quick Migration)
+
+Using the Syncfusion CDN provides the fastest path to migration with no local file management:
+
 ```js
 <PdfViewerComponent
   id="container"
-  //Add resourceUrl for Standalone mode.
   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
   style={{ 'height': '640px' }}
->
+/>
 ```
 
-No other sample level changes required for basic use cases.
+This is all the configuration you need for basic use cases. The viewer will immediately function in standalone mode.
 
-**Using Local Resources:**
+#### Option B: Using Local Resources
 
-If you prefer to host resources locally, copy the PDFium files to your `public` folder and reference them:
+If you prefer to host resources locally for better control or offline scenarios, follow these steps:
+
+1. Copy the PDFium resource files to your `public` folder (create the directory structure if it doesn't exist)
+2. Reference the local resources in your component:
 
 ```js
 <PdfViewerComponent
@@ -73,40 +85,47 @@ If you prefer to host resources locally, copy the PDFium files to your `public` 
   resourceUrl="/ej2-pdfviewer-lib"
   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
   style={{ 'height': '640px' }}
->
+/>
 ```
 
-Refer to [Load PDF Viewer with Local Resources](./how-to/load-pdf-viewer-with-local-resources) for complete setup instructions.
+For detailed local resource setup instructions, refer to [Load PDF Viewer with Local Resources](./how-to/load-pdf-viewer-with-local-resources).
 
-## Open PDF Document from Server
+### Step 4: Verify Your Migration
 
-In standalone mode, you can load PDF documents from your backend server using several methods. This approach works seamlessly without needing a dedicated PDF Viewer web service. The following subsections show how to load PDFs from different server-side sources using the viewer's [`load()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) API.
+After updating the configuration, test the following functionality:
+- PDF renders correctly in the viewer
+- All toolbar actions (zoom, navigation, search) work as expected
+- No console errors appear related to resource loading or PDF rendering
 
-### Open PDF from Server URL
+## How to: Load PDFs from Your Server
 
-Load a PDF directly from a public server URL using the [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentpath) property:
+After migrating to standalone mode, you can still load PDF documents from your server. Unlike server-backed mode, standalone mode does not require a dedicated PDF Viewer web service. Instead, you can use standard HTTP endpoints to serve PDFs to your client application.
+
+### Load PDFs Using Direct Server URLs
+
+To load a PDF directly from your server using a public URL, specify the URL in the `documentPath` property:
 
 ```js
 <PdfViewerComponent
   id="container"
   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-  documentPath="https://your-backend-server.com/api/pdf/get-document"
+  documentPath="https://your-server.com/api/pdf/get-document"
   style={{ 'height': '640px' }}
->
+/>
 ```
 
-N> The remote server must permit cross-origin requests (CORS); ensure CORS is properly configured if the server is on a different domain.
+**Important:** Ensure that your server permits cross-origin requests (CORS). If the PDF server is on a different domain, configure CORS headers on your server to allow requests from your client application domain.
 
-### Open PDF from Server as Blob
+### Load PDFs Using Blob Objects
 
-Fetch the PDF as a Blob from your backend server and load it into the viewer:
+For improved efficiency with large files or streaming scenarios, fetch the PDF as a Blob object from your server and load it into the viewer:
 
 ```js
 const viewerRef = useRef(null);
 
 const loadPdfAsBlob = async () => {
   try {
-    const response = await fetch('https://your-backend-server.com/api/pdf/get-document');
+    const response = await fetch('https://your-server.com/api/pdf/get-document');
     if (!response.ok) throw new Error('Failed to fetch PDF');
     
     const blob = await response.blob();
@@ -116,20 +135,32 @@ const loadPdfAsBlob = async () => {
     console.error('Error loading PDF:', error);
   }
 };
+
+return (
+  <>
+    <button onClick={loadPdfAsBlob}>Load PDF</button>
+    <PdfViewerComponent
+      id="container"
+      ref={viewerRef}
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      style={{ 'height': '640px' }}
+    />
+  </>
+);
 ```
 
-This is the recommended approach for most server scenarios, as it handles streaming efficiently.
+This approach is recommended for most server scenarios because it handles file streaming efficiently and provides better control over the loading process.
 
-### Open PDF from Server as Base64 String
+### Load PDFs from Base64-Encoded Strings
 
-If your backend server returns the PDF as a Base64-encoded string, you can load it as follows:
+When your server returns a PDF as a Base64-encoded string, convert it to a data URL and load it into the viewer:
 
 ```js
 const viewerRef = useRef(null);
 
 const loadPdfAsBase64 = async () => {
   try {
-    const response = await fetch('https://your-backend-server.com/api/pdf/get-document-base64');
+    const response = await fetch('https://your-server.com/api/pdf/get-document-base64');
     if (!response.ok) throw new Error('Failed to fetch PDF');
     
     const base64String = await response.text();
@@ -138,21 +169,33 @@ const loadPdfAsBase64 = async () => {
     console.error('Error loading PDF:', error);
   }
 };
+
+return (
+  <>
+    <button onClick={loadPdfAsBase64}>Load PDF</button>
+    <PdfViewerComponent
+      id="container"
+      ref={viewerRef}
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      style={{ 'height': '640px' }}
+    />
+  </>
+);
 ```
 
-### Open PDF from Server with Authentication
+### Load PDFs from Authenticated Endpoints
 
-If your backend server requires authentication (e.g., API key or Bearer token), include the necessary headers when fetching the PDF:
+When your server requires authentication (such as Bearer tokens or API keys), include the necessary authorization headers in your fetch request:
 
 ```js
 const viewerRef = useRef(null);
 
-const loadPdfWithAuth = async (token) => {
+const loadPdfWithAuth = async (authToken) => {
   try {
-    const response = await fetch('https://your-backend-server.com/api/pdf/get-document', {
+    const response = await fetch('https://your-server.com/api/pdf/get-document', {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${authToken}`,
         'Content-Type': 'application/pdf'
       }
     });
@@ -166,15 +209,25 @@ const loadPdfWithAuth = async (token) => {
     console.error('Error loading PDF:', error);
   }
 };
+
+return (
+  <>
+    <button onClick={() => loadPdfWithAuth('your-auth-token')}>Load Secure PDF</button>
+    <PdfViewerComponent
+      id="container"
+      ref={viewerRef}
+      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      style={{ 'height': '640px' }}
+    />
+  </>
+);
 ```
 
-This approach is useful when your PDF documents are protected by authentication mechanisms.
+This pattern is essential for protecting PDFs and ensuring only authorized users can access them.
 
-Refer to [Open PDF Files](./open-pdf-files) to learn more about loading PDFs from various sources.
+### Load PDFs from Cloud Storage Providers
 
-### Open PDF from Cloud Storage Services
-
-In standalone mode, you can also load PDFs directly from various cloud storage providers without requiring a dedicated PDF Viewer web service. The following links provide detailed step-by-step instructions and sample code for each cloud service:
+Standalone mode enables you to load PDFs directly from various cloud storage services without requiring a server-based PDF Viewer service. The following resources provide detailed instructions for each cloud provider:
 
 - [AWS S3](./open-pdf-file/from-amazon-s3)
 - [Azure Blob Storage](./open-pdf-file/from-azure-blob-storage)
@@ -184,48 +237,64 @@ In standalone mode, you can also load PDFs directly from various cloud storage p
 - [Dropbox](./open-pdf-file/from-dropbox-cloud-file-storage)
 - [Box](./open-pdf-file/from-box-cloud-file-storage)
 
-Each cloud storage guide includes authentication setup, API integration examples, and complete code snippets for seamless PDF loading.
+Each guide includes authentication setup, complete code examples, and API integration patterns for seamless PDF loading from your chosen cloud provider.
 
-N> Standalone mode simplifies your architecture — you only need a standard file-serving endpoint (no PDF Viewer-specific web service required). The PDF rendering happens entirely in the browser.
+For additional loading methods and scenarios, refer to [Open PDF Files](./open-pdf-files).
 
-## Modules Comparison and Working
+## Reference: How Modules Differ Between Architectures
 
-The following table describes how key modules operate in server-backed versus standalone mode:
+When you migrate to standalone mode, the processing location for various features changes from the server to the client browser. This table summarizes how each module operates in both architectures:
 
-| Aspect | Server-backed | Standalone |
-|--------|---------------|------------|
-| **Annotation** | Uses Syncfusion .NET PDF Library for add, edit, delete, import, and export | Uses Syncfusion EJ2 PDF Library for add, edit, delete, import, and export |
-| **Form Fields** | Uses Syncfusion .NET PDF Library for form field operations | Uses Syncfusion EJ2 PDF Library for form field operations |
-| **Text Selection** | Uses PDFium in server backend to extract text and create text selection elements | Uses PDFium in resource URL for text extraction |
-| **Magnification** | Page images converted from PDFium on the server | Uses PDFium in resource URL for page rendering |
-| **Navigation** | Bookmarks, links, and thumbnails processed on server | Handled client-side using PDFium resources |
-| **Text Search** | Search performed on server and results sent to client | Search performed client-side using PDFium resources |
-| **Printing** | Print requests processed on server | Print handled client-side |
-| **Toolbar** | Toolbar commands sent to server for processing | Toolbar commands executed client-side |
+| Feature | Server-backed Processing | Standalone Processing |
+|---------|--------------------------|----------------------|
+| **Annotations** | Server processes annotations using the Syncfusion .NET PDF Library; add, edit, delete, import, and export operations occur on the server | Client-side processing uses the Syncfusion EJ2 PDF Library; all annotation operations execute in the browser |
+| **Form Fields** | Server manages form field operations using the Syncfusion .NET PDF Library | Client processes form field operations using the Syncfusion EJ2 PDF Library in the browser |
+| **Text Selection** | Server extracts text using PDFium and creates text selection elements for transmission to the client | Client extracts text directly using PDFium resources loaded in the browser |
+| **Magnification** | Server generates page images at different zoom levels using PDFium and transmits the appropriately scaled images to the client | Client handles zoom operations dynamically using PDFium resources without generating pre-scaled images; scaling occurs in real-time as users adjust magnification |
+| **Page Rendering** | Server converts pages to images using PDFium and sends them to the client | Client renders pages directly using PDFium resources without intermediate image conversion |
+| **Navigation** | Server processes bookmarks, hyperlinks, and thumbnail generation; results sent to client for display | Client handles all navigation features (bookmarks, links, thumbnails) using PDFium resources locally |
+| **Text Search** | Server performs text search across the PDF and returns results to the client | Client executes text search locally using PDFium resources |
+| **Printing** | Server handles print requests and formatting before sending to the printer | Client manages the entire print workflow without server involvement |
+| **Toolbar Actions** | Server processes all toolbar commands (zoom, navigation, export) and returns results | Client executes all toolbar commands locally without server communication |
 
-N> **Advantage of Standalone:** All modules process PDFs directly in the browser, eliminating network latency and reducing server load. Your backend only needs to serve the PDF file as a static resource or via a simple API endpoint.
+**Key Insight:** In standalone mode, all PDF processing occurs in the browser, eliminating the need for server coordination. Your server only serves the PDF file as a static resource or through a simple API endpoint.
 
-## Performance Considerations
+## Understanding the Benefits: Why Migrate to Standalone Mode
 
-### Advantages of Standalone Mode
+Migrating to standalone mode provides several architectural and operational benefits:
 
-- **Scalability:** All PDF rendering and processing occurs within the browser itself, so there's no server bottleneck
-- **Offline Support:** Users can view PDFs without a network connection
-- **Reduced Latency:** No round-trip to server for rendering; PDFs process immediately in the browser
-- **Lower Server Load:** Eliminates server-side PDF processing, reducing infrastructure costs
-- **Decommission your PDF Viewer web service** — saving hosting costs
-- **Simplify your deployment pipeline** — no server-side PDF processing needed
-- **Benefit from upcoming features** — standalone mode receives ongoing updates
+**Performance and User Experience:**
+- **Instant Rendering:** PDF operations execute immediately in the browser without server round-trips
+- **Offline Capability:** Users can view PDFs without network connectivity
+- **Reduced Latency:** Eliminates network delays inherent in server-backed communication
 
-**Related resources:**
+**Operational Efficiency:**
+- **Lower Server Load:** Server no longer processes PDF operations, freeing resources for other tasks
+- **Reduced Infrastructure Costs:** Decommission your PDF Viewer web service and eliminate associated hosting expenses
+- **Simplified Deployment:** Remove server-backed PDF Viewer service from your deployment pipeline
 
-- [Getting started with Standalone React PDF Viewer](./getting-started)
-- [Load PDF Viewer with Local Resources](./how-to/load-pdf-viewer-with-local-resources)
-- [Annotations](./annotation/text-markup-annotation)
-- [Form Designer](./forms/form-designer)
+**Future-Proofing:**
+- **Continuous Updates:** Standalone mode receives ongoing feature enhancements and improvements
+- **Extended Support:** Server-backed mode stopped receiving new features after Vol 2 2026
+- **Modern Architecture:** Aligns with contemporary client-side processing patterns
 
-## See also
+## Next Steps
 
-- [Open PDF Files](./open-pdf-files)
-- [Save PDF Files](./save-pdf-files)
-- [PDF Viewer API Methods](./api-methods)
+Once you have completed the migration to standalone mode, explore these resources to extend functionality:
+
+**Getting Started:**
+- [Getting Started with Standalone React PDF Viewer](./getting-started) — Learn the fundamentals of standalone mode setup and configuration
+
+**Advanced Configuration:**
+- [Load PDF Viewer with Local Resources](./how-to/load-pdf-viewer-with-local-resources) — Host PDFium resources locally for better control and offline scenarios
+- [Open PDF Files](./open-pdf-files) — Explore multiple methods to load PDF documents
+- [Save PDF Files](./save-pdf-files) — Learn how to save and export modified PDFs
+
+**Feature Implementation:**
+- [Text Markup Annotations](./annotation/text-markup-annotation) — Add highlighting, comments, and markup to PDFs
+- [Form Designer](./forms/form-designer) — Work with interactive form fields in your PDFs
+- [PDF Viewer API Methods](./api-methods) — Reference all available API methods and properties
+
+**Related Topics:**
+- [System Requirements](https://ej2.syncfusion.com/react/documentation/system-requirement)
+- [Getting Started with Standalone React PDF Viewer](./getting-started)
