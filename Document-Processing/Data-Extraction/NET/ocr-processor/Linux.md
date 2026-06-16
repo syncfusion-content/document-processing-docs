@@ -14,7 +14,8 @@ The [Syncfusion<sup>&reg;</sup> .NET OCR library](https://www.syncfusion.com/doc
 
 The following Linux dependencies should be installed where the conversion takes place. 
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 sudo apt-get update
 sudo apt-get install libgdiplus
@@ -24,32 +25,38 @@ ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.s
 ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ## Steps to convert HTML to PDF in .NET Core application on Linux
 
 Step 1: Execute the following command in the Linux terminal to create a new .NET Core Console application.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet new console
 
 {% endhighlight %}
+{% endtabs %}
 
 ![OCR Linux Step1](OCR-Images/LinuxStep1.png)
 
 Step 2: Install the [Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core) NuGet package as a reference to your .NET Core application [NuGet.org](https://www.nuget.org/).
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet add package Syncfusion.PDF.OCR.Net.Core -v xx.x.x.xx -s https://www.nuget.org/
 
 {% endhighlight %}
+{% endtabs %}
 
 ![OCR Linux Step2](OCR-Images/LinuxStep2.png)
 
 Step 3: Include the following namespaces in Program.cs file.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
@@ -57,11 +64,13 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
+{% endtabs %}
 
 N> Beginning from version 21.1.x, the default configuration includes the addition of the TesseractBinaries and Tesseract language data folder paths, eliminating the requirement to explicitly provide these paths.
 
 Step 4: Add code sample to perform OCR on entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
  
 string docPath = ("input.pdf");
@@ -86,34 +95,41 @@ using (OCRProcessor processor = new OCRProcessor())
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Execute the following command to restore the NuGet packages.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet restore
 
 {% endhighlight %}
+{% endtabs %}
 
 ![OCR Linux Step3](OCR-Images/LinuxStep3.png)
 
 Step 6:  Execute the following command in the terminal to build the application.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet build
 
 {% endhighlight %}
+{% endtabs %}
 
 ![OCR Linux Step4](OCR-Images/LinuxStep4.png)
 
 Step 7: Execute the following command in the terminal to run the application.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight bash %}
 
 dotnet run
 
 {% endhighlight %}
+{% endtabs %}
 
 ![OCR Linux Step5](OCR-Images/LinuxStep5.png)
 
