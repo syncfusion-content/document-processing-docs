@@ -16,10 +16,9 @@ Migrating from server-backed to standalone mode transforms your PDF Viewer archi
 
 Before starting the migration process, ensure you have:
 
-- An existing [React PDF Viewer implementation using server-backed mode](./getting-started-with-server-backed)
 - [System requirements for Syncfusion® React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 
-## Architectural Overview: Server-backed vs. Standalone
+## Architectural Overview: Server-backed vs Standalone
 
 Server-backed and standalone modes represent fundamentally different architectural approaches to PDF rendering. Understanding these differences will guide your migration strategy and help you plan for deployment changes.
 
@@ -33,7 +32,50 @@ Server-backed and standalone modes represent fundamentally different architectur
 | **Scalability Model** | Limited by server capacity and concurrent connection limits | Scales horizontally based on client device hardware resources |
 | **Feature Updates** | No new features after Vol 2 2026; server-backed mode is in maintenance mode | Receives continuous updates and new features |
 
-## How to Migrate: Step-by-Step Process
+## How Modules Differ Between Architectures
+
+When you migrate to standalone mode, the processing location for various features changes from the server to the client browser. This table summarizes how each module operates in both architectures:
+
+| Feature | Server-backed Processing | Standalone Processing |
+|---------|--------------------------|----------------------|
+| **Annotation** | Server processes annotations using the Syncfusion .NET PDF Library; add, edit, delete, import, and export operations occur on the server | Client-side processing uses the Syncfusion EJ2 PDF Library; all annotation operations execute in the browser |
+| **FormDesigner** | Server manages form field designer operations using the Syncfusion .NET PDF Library | Client processes form designer operations using the Syncfusion EJ2 PDF Library in the browser |
+| **FormFields** | Server manages form field operations using the Syncfusion .NET PDF Library | Client processes form field operations using the Syncfusion EJ2 PDF Library in the browser |
+| **TextSelection** | Server extracts text using PDFium and creates text selection elements for transmission to the client | Client extracts text directly using PDFium resources loaded in the browser |
+| **Magnification** | Server generates page images at different zoom levels using PDFium and transmits the appropriately scaled images to the client | Client handles zoom operations dynamically using PDFium resources without generating pre-scaled images; scaling occurs in real-time as users adjust magnification |
+| **Navigation** | Server processes page navigation and sends results to the client for display | Client handles page navigation locally using PDFium resources |
+| **LinkAnnotation** | Server processes bookmarks, hyperlinks, and thumbnail generation; results sent to client for display | Client handles all link annotation features using PDFium resources locally |
+| **ThumbnailView** | Server generates thumbnail images of PDF pages and sends them to the client | Client renders thumbnail images locally without server involvement |
+| **BookmarkView** | Server processes bookmark data and sends it to the client for display | Client handles bookmark navigation using PDFium resources locally |
+| **TextSearch** | Server performs text search across the PDF and returns results to the client | Client executes text search locally using PDFium resources |
+| **Print** | Server handles print requests and formatting before sending to the printer | Client manages the entire print workflow without server involvement |
+| **Toolbar** | Server processes all toolbar commands (zoom, navigation, export) and returns results | Client executes all toolbar commands locally without server communication |
+
+**Key Insight:** In standalone mode, all PDF processing occurs in the browser, eliminating the need for server coordination. Your server only serves the PDF file as a static resource or through a simple API endpoint.
+
+## Why Migrate to Standalone Mode
+
+Migrating to standalone mode provides several architectural and operational benefits:
+
+**API Compatibility:**
+- **No API Breaks:** There are no API breaks from server-backed to standalone PDF Viewer migration. All the APIs used in server-backed mode except [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#serviceurl), [ajaxRequestSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#ajaxrequestssettings), [retryCount](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#retrycount), [retryTimeout](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#retrytimeout), and [retryStatusCodes](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#retrystatuscodes) are the same in standalone mode.
+
+**Performance and User Experience:**
+- **Instant Rendering:** PDF operations execute immediately in the browser without server round-trips
+- **Offline Capability:** Users can view PDFs without network connectivity
+- **Reduced Latency:** Eliminates network delays inherent in server-backed communication
+
+**Operational Efficiency:**
+- **Lower Server Load:** Server no longer processes PDF operations, freeing resources for other tasks
+- **Reduced Infrastructure Costs:** Decommission your PDF Viewer web service and eliminate associated hosting expenses
+- **Simplified Deployment:** Remove server-backed PDF Viewer service from your deployment pipeline
+
+**Future-Proofing:**
+- **Continuous Updates:** Standalone mode receives ongoing feature enhancements and improvements
+- **Extended Support:** Server-backed mode stopped receiving new features after Vol 2 2026
+- **Modern Architecture:** Aligns with contemporary client-side processing patterns
+
+## Step-by-Step Migration Guide
 
 ### Step 1: Identify Your Current Configuration
 
@@ -64,7 +106,7 @@ Using the Syncfusion CDN provides the fastest path to migration with no local fi
 ```js
 <PdfViewerComponent
   id="container"
-  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  resourceUrl="https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
   style={{ 'height': '640px' }}
 />
@@ -97,7 +139,7 @@ After updating the configuration, test the following functionality:
 - All toolbar actions (zoom, navigation, search) work as expected
 - No console errors appear related to resource loading or PDF rendering
 
-## How to: Load PDFs from Your Server
+## Load PDFs from Your Server
 
 After migrating to standalone mode, you can still load PDF documents from your server. Unlike server-backed mode, standalone mode does not require a dedicated PDF Viewer web service. Instead, you can use standard HTTP endpoints to serve PDFs to your client application.
 
@@ -108,7 +150,7 @@ To load a PDF directly from your server using a public URL, specify the URL in t
 ```js
 <PdfViewerComponent
   id="container"
-  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  resourceUrl="https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
   documentPath="https://your-server.com/api/pdf/get-document"
   style={{ 'height': '640px' }}
 />
@@ -142,7 +184,7 @@ return (
     <PdfViewerComponent
       id="container"
       ref={viewerRef}
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
       style={{ 'height': '640px' }}
     />
   </>
@@ -176,7 +218,7 @@ return (
     <PdfViewerComponent
       id="container"
       ref={viewerRef}
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
       style={{ 'height': '640px' }}
     />
   </>
@@ -216,7 +258,7 @@ return (
     <PdfViewerComponent
       id="container"
       ref={viewerRef}
-      resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+      resourceUrl="https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib"
       style={{ 'height': '640px' }}
     />
   </>
@@ -240,43 +282,6 @@ Standalone mode enables you to load PDFs directly from various cloud storage ser
 Each guide includes authentication setup, complete code examples, and API integration patterns for seamless PDF loading from your chosen cloud provider.
 
 For additional loading methods and scenarios, refer to [Open PDF Files](./open-pdf-files).
-
-## Reference: How Modules Differ Between Architectures
-
-When you migrate to standalone mode, the processing location for various features changes from the server to the client browser. This table summarizes how each module operates in both architectures:
-
-| Feature | Server-backed Processing | Standalone Processing |
-|---------|--------------------------|----------------------|
-| **Annotations** | Server processes annotations using the Syncfusion .NET PDF Library; add, edit, delete, import, and export operations occur on the server | Client-side processing uses the Syncfusion EJ2 PDF Library; all annotation operations execute in the browser |
-| **Form Fields** | Server manages form field operations using the Syncfusion .NET PDF Library | Client processes form field operations using the Syncfusion EJ2 PDF Library in the browser |
-| **Text Selection** | Server extracts text using PDFium and creates text selection elements for transmission to the client | Client extracts text directly using PDFium resources loaded in the browser |
-| **Magnification** | Server generates page images at different zoom levels using PDFium and transmits the appropriately scaled images to the client | Client handles zoom operations dynamically using PDFium resources without generating pre-scaled images; scaling occurs in real-time as users adjust magnification |
-| **Page Rendering** | Server converts pages to images using PDFium and sends them to the client | Client renders pages directly using PDFium resources without intermediate image conversion |
-| **Navigation** | Server processes bookmarks, hyperlinks, and thumbnail generation; results sent to client for display | Client handles all navigation features (bookmarks, links, thumbnails) using PDFium resources locally |
-| **Text Search** | Server performs text search across the PDF and returns results to the client | Client executes text search locally using PDFium resources |
-| **Printing** | Server handles print requests and formatting before sending to the printer | Client manages the entire print workflow without server involvement |
-| **Toolbar Actions** | Server processes all toolbar commands (zoom, navigation, export) and returns results | Client executes all toolbar commands locally without server communication |
-
-**Key Insight:** In standalone mode, all PDF processing occurs in the browser, eliminating the need for server coordination. Your server only serves the PDF file as a static resource or through a simple API endpoint.
-
-## Understanding the Benefits: Why Migrate to Standalone Mode
-
-Migrating to standalone mode provides several architectural and operational benefits:
-
-**Performance and User Experience:**
-- **Instant Rendering:** PDF operations execute immediately in the browser without server round-trips
-- **Offline Capability:** Users can view PDFs without network connectivity
-- **Reduced Latency:** Eliminates network delays inherent in server-backed communication
-
-**Operational Efficiency:**
-- **Lower Server Load:** Server no longer processes PDF operations, freeing resources for other tasks
-- **Reduced Infrastructure Costs:** Decommission your PDF Viewer web service and eliminate associated hosting expenses
-- **Simplified Deployment:** Remove server-backed PDF Viewer service from your deployment pipeline
-
-**Future-Proofing:**
-- **Continuous Updates:** Standalone mode receives ongoing feature enhancements and improvements
-- **Extended Support:** Server-backed mode stopped receiving new features after Vol 2 2026
-- **Modern Architecture:** Aligns with contemporary client-side processing patterns
 
 ## Next Steps
 
