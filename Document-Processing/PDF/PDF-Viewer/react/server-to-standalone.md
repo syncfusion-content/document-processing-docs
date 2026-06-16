@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrate from Server-backed to Standalone React PDF Viewer | Syncfusion
-description: Learn how to migrate your React PDF Viewer from server-backed to standalone mode. This guide provides step-by-step instructions, code examples, and architectural insights for a smooth transition.
+description: Learn how to migrate your React PDF Viewer from server-backed to standalone mode. This guide shows step-by-step instructions and code examples.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
