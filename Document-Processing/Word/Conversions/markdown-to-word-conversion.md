@@ -31,16 +31,11 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Markdown-to-Word-conversion/Convert-Markdown-to-Word/.NET/Convert-Markdown-to-Word/Program.cs" %}
-//Open the file as a Stream.
-using (FileStream docStream = new FileStream("Input.md", FileMode.Open, FileAccess.Read))
+// Open an existing Markdown file.
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.md")))
 {
-    //Load the file stream into a Markdown file.
-    using (WordDocument document = new WordDocument(docStream, FormatType.Markdown))
-    {
-        //Save as a Word document into the MemoryStream.
-        MemoryStream outputStream = new MemoryStream();
-        document.Save(outputStream, FormatType.Docx);
-    } 
+    // Save as a Word document.
+    document.Save(Path.GetFullPath(@"Output/MarkdownToWord.docx"), FormatType.Docx);
 }
 {% endhighlight %}
 
@@ -70,8 +65,11 @@ T> You can also save the markdown file as [HTML](https://help.syncfusion.com/doc
 N> 1. Hook the event handler before opening a Word document as per the above code example.
 N> 2. In Markdown to Word conversion, SVG or invalid images are replaced with a red "X" image instead of the original image.
 
-## Customize image data
+## MdImport Setting
 
+When opening an existing Markdown document, the .NET Word (DocIO) library provides custom import settings through the **MdImportSettings** property. This allows you to customize how the Markdown content is parsed and imported.
+
+### Customize image data
 The .NET Word (DocIO) library provides a [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event.
 
 The following code example shows how to load image data based on the image source path when importing the Markdown files.
@@ -82,14 +80,12 @@ The following code example shows how to load image data based on the image sourc
 //Create a Word document instance.
 using (WordDocument document = new WordDocument())
 {
-    //Hook the event to customize the image while importing Markdown.
+    // Hook the event to customize the image while importing Markdown.
     document.MdImportSettings.ImageNodeVisited += MdImportSettings_ImageNodeVisited;
-    //Open the Markdown file.
-    document.Open("Input.md");
-
-    //Save as a Word document to the MemoryStream.
-    MemoryStream outputStream = new MemoryStream();
-    document.Save(outputStream, FormatType.Docx);
+    // Open the Markdown file.
+    document.Open(Path.GetFullPath("Data/Input.md"));
+    // Save as a Word document.
+    document.Save(Path.GetFullPath(@"Output/Sample.docx"));
 }
 {% endhighlight %}
 
@@ -190,6 +186,56 @@ End Sub
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Markdown-to-Word-conversion/Customize-image).
 
 N> Hook the event handler before opening a Word document as per the above code example.
+
+### Encoding
+
+The .NET Word (DocIO) library provides an `Encoding` property to specify the character encoding to use when opening a Markdown file. This property is useful when you need to open Markdown files that are saved with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
+
+The following code example shows how to open a Markdown file with a specific encoding.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Create a Word document instance.
+using (WordDocument document = new WordDocument())
+{
+    //Set the encoding for the Markdown file.
+    document.MdImportSettings.Encoding = Encoding.UTF8;
+    //Open the Markdown file.
+    document.Open(Path.GetFullPath("Data/Input.md"));
+    //Save as a Word document.
+    document.Save(Path.GetFullPath(@"Output/Output.docx"), FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Create a Word document instance.
+using (WordDocument document = new WordDocument())
+{
+    //Set the encoding for the Markdown file.
+    document.MdImportSettings.Encoding = Encoding.UTF8;
+    //Open the Markdown file.
+    document.Open("Input.md");
+    //Save as a Word document.
+    document.Save("Output.docx", FormatType.Docx);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Create a Word document instance.
+Using document As WordDocument = New WordDocument()
+    'Set the encoding for the Markdown file.
+    document.MdImportSettings.Encoding = Encoding.UTF8
+    'Open the Markdown file.
+    document.Open("Input.md")
+    'Save as a Word document.
+    document.Save("Output.docx", FormatType.Docx)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Provide the encoding values before opening a Word document as per the above code example.
 
 ## Supported Markdown Syntax
 

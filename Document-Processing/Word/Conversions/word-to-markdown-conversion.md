@@ -31,17 +31,12 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Markdown-conversion/Convert-Word-to-Markdown/.NET/Convert-Word-to-Markdown/Program.cs" %}
-//Open the file as a Stream.
-using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
+// Open an existing Word document.
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.docx")))
 {
-    //Load the file stream into a Word document.
-    using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Save as a Markdown file into the MemoryStream.
-        MemoryStream outputStream = new MemoryStream();
-        document.Save(outputStream, FormatType.Markdown);
-    }
-}
+    // Save the document as a Markdown file.
+    document.Save(Path.GetFullPath(@"Output/Output.md"));
+}  
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -144,11 +139,11 @@ using (WordDocument document = new WordDocument())
     IWParagraph paragraph = section.AddParagraph();
     //Append text to the paragraph.
     IWTextRange textRange = paragraph.AppendText("Fenced Code");
-    /Add a new paragraph to the section.
+    //Add a new paragraph to the section.
     paragraph = section.AddParagraph();
     //Create a user-defined style as FencedCode.
     IWParagraphStyle style = document.AddParagraphStyle("FencedCode");
-    /Apply FencedCode style for the paragraph.
+    //Apply FencedCode style for the paragraph.
     paragraph.ApplyStyle("FencedCode");
     //Append text.
     textRange = paragraph.AppendText("class Hello\n{\n\tStatic void Main()\n\t{\n\t\tConsole.WriteLine(\"Fenced Code\")\n\t}\n}");
@@ -161,12 +156,9 @@ using (WordDocument document = new WordDocument())
     //Apply IndentedCode style for the paragraph.
     paragraph.ApplyStyle("IndentedCode");
     //Append text.
-    textRange = paragraph.AppendText("class Hello\n\t{\n\t\tStatic void Main()\n\t\t{\n\t\t\tConsole.WriteLine(\"Indented Code\")\n\t\t}\n\t}");
-    //Save as a Markdown file into the MemoryStream.
-    MemoryStream outputStream = new MemoryStream();
-    document.Save(outputStream, FormatType.Markdown);
-    outputStream.Position = 0;
-    return File(outputStream, "application/msword", "WordToMd.md");
+	textRange = paragraph.AppendText("class Hello\n\t{\n\t\tStatic void Main()\n\t\t{\n\t\t\tConsole.WriteLine(\"Indented Code\")\n\t\t}\n\t}");
+	//Save the document as a Markdown file.
+	document.Save(Path.GetFullPath(@"Output/Output.md"));
 }
 {% endhighlight %}
 
@@ -262,7 +254,7 @@ using (WordDocument document = new WordDocument())
     //Append text.
     IWTextRange textRange = paragraph.AppendText("Hello World");
     //Save the document as a Markdown file.
-    return File(outputStream, "application/msword", "WordToMd.md");
+	document.Save(Path.GetFullPath(@"Output/Output.md"));
 }
 {% endhighlight %}
 
@@ -307,7 +299,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> Nested block quotes are not supported in a Word to the Markdown conversion. To preserve nested block quotes, add the number of “>” characters at the beginning of the paragraph in a Word document as equivalent to the nth nested level of the block quote. For example, to insert the 2nd nested level block quote, add two “>” characters at the start of the sentence, and no need to apply the “Quote” style to the paragraph.
 
-## Customize image saving
+## Save Options
+
+When converting a Word document to Markdown, the .NET Word (DocIO) library provides various save options to customize the output Markdown file. These options allow you to control image export location, customize image paths, set character encoding, and other export behaviors.
 
 When converting a Word document to a Markdown using the [Save(fileName)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Save_System_String_) overloads, DocIO creates a new folder parallel to the output file name and exports all the images into it as default.
 
@@ -324,18 +318,13 @@ The following code example illustrates how set the images folder to export the i
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Open the file as a Stream.
-using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
+//Open an existing Word document.
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.docx")))
 {
-    //Load the file stream into a Word document.
-    using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Set images folder to export images. 
-        document.SaveOptions.MarkdownExportImagesFolder = "D:\\WordToMdConversion ";
-        //Save a Markdown file to the MemoryStream.
-        MemoryStream outputStream = new MemoryStream();
-        document.Save(outputStream, FormatType.Markdown);
-    }
+    //Set images folder to export images. 
+    document.SaveOptions.MarkdownExportImagesFolder = "D:\\WordToMdConversion";
+    //Save the document as a Markdown file.
+    document.Save(Path.GetFullPath(@"Output/Output.md"));  
 }
 {% endhighlight %}
 
@@ -352,11 +341,11 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open an existing Word document.
-Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+Using document As WordDocument = New WordDocument("Input.docx")
     'Set images folder to export images. 
     document.SaveOptions.MarkdownExportImagesFolder = "D:\\WordToMdConversion ";
     'Save a document as a Markdown file.
-    document.Save("WordtoMd.md", FormatType.Markdown)
+    document.Save("WordtoMd.md")
 End Using
 {% endhighlight %}
 
@@ -366,32 +355,21 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Customize the image path
 
-DocIO provides an [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event, which is used to customize the image path to set in the output Markdown file and save images externally while converting a Word document to a Markdown.
+DocIO provides an `ImageNodeVisited` event, which is used to customize the image path to set in the output Markdown file and save images externally while converting a Word document to a Markdown.
 
 The following code example illustrates how to save Image files during a Word to Markdown Conversion.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-Markdown-conversion/Customize-image-path/.NET/Customize-image-path/Program.cs" %}
-//Open the file as a Stream.
-using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read))
-{
-    //Load the file stream into a Word document.
-    using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
-    {
-        //Hook the event to customize the image. 
-        document.SaveOptions.ImageNodeVisited += SaveImage;
-        //Save a Markdown file to the MemoryStream.
-        MemoryStream outputStream = new MemoryStream();
-        document.Save(outputStream, FormatType.Markdown);
-        outputStream.Position = 0;
-        //Download as a Markdown file in the browser.
-        FileStream outStream = File.Create("WordToMd.md");
-        outputStream.CopyTo(outStream);
-        outputStream.Dispose();
-        outStream.Dispose();
-    }
-}
+ //Open an existing Word document.
+ using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.docx")))
+ {
+     //Hook the event to customize the image. 
+     document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage;
+     //Save the document as a Markdown file.
+     document.Save(Path.GetFullPath(@"Output/Output.md"));
+ }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -399,7 +377,7 @@ using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAc
 using (WordDocument document = new WordDocument(@"Input.docx"))
 {
     //Hook the event to customize the image. 
-    document.SaveOptions.ImageNodeVisited += SaveImage;
+    document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage;
     //Save a Word document as a Markdown file.
     document.Save("WordtoMd.md", FormatType.Markdown);
 }
@@ -409,7 +387,7 @@ using (WordDocument document = new WordDocument(@"Input.docx"))
 'Open an existing Word document. 
 Using document As WordDocument = New WordDocument("Input.docx")
     'Hook the event to customize the image. 
-    document.SaveOptions.ImageNodeVisited += SaveImage
+    document.SaveOptions.MarkdownSaveOptions.ImageNodeVisited += SaveImage
     'Save a Word document as a Markdown file.
     document.Save("WordtoMd.md", FormatType.Markdown)
 End Using
@@ -422,7 +400,7 @@ The following code examples show the event handler to customize the image path a
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-static void SaveImage(object sender, ImageNodeVisitedEventArgs args)
+static void SaveImage(object sender, MdImageNodeVisitedEventArgs args)
 {
     string imagepath = @"D:\Temp\Image1.png";
     //Save the image stream as a file.
@@ -434,7 +412,7 @@ static void SaveImage(object sender, ImageNodeVisitedEventArgs args)
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-static void SaveImage(object sender, ImageNodeVisitedEventArgs args)
+static void SaveImage(object sender, MdImageNodeVisitedEventArgs args)
 {
     string imagepath = @"D:\Temp\Image1.png";
     //Save the image stream as a file. 
@@ -446,7 +424,7 @@ static void SaveImage(object sender, ImageNodeVisitedEventArgs args)
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Private Shared Sub SaveImage(ByVal sender As Object, ByVal args As ImageNodeVisitedEventArgs)
+Private Shared Sub SaveImage(ByVal sender As Object, ByVal args As MdImageNodeVisitedEventArgs)
     Dim imagepath = "D:\Temp\Image1.png"
     'Save the image stream as a file. 
     Using fileStreamOutput = File.Create(imagepath)
@@ -461,7 +439,51 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Customize-image-path).
 
-N> The [MarkdownExportImagesFolder](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_MarkdownExportImagesFolder) property and [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event are not supported on the UWP platform.
+N> The `MarkdownExportImagesFolder`property and `MarkdownSaveOptions.ImageNodeVisited` event are not supported on the UWP platform.
+
+### Encoding
+
+The .NET Word (DocIO) library provides an `Encoding` property to specify the character encoding to use when saving the Markdown file. This property is useful when you need to save the output Markdown file with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
+
+The following code example shows how to save a Markdown file with a specific encoding.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Open an existing Word document.
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data/Input.docx")))
+{
+    //Set the encoding values.
+    document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII;
+    //Save the document as a Markdown file.
+    document.Save(Path.GetFullPath(@"Output/Output.md"));
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Open an existing Word document.
+using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
+{
+    //Set the encoding values.
+    document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII;
+    //Save the document as a Markdown file.
+    document.Save("WordtoMd.md", FormatType.Markdown);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Open an existing Word document.
+Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+    'Set the encoding values. 
+    document.SaveOptions.MarkdownSaveOptions.Encoding = Encoding.ASCII
+    'Save the document as a Markdown file.
+    document.Save("WordtoMd.md", FormatType.Markdown)
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Set the encoding value before saving the document as per the above code example.
 
 ## Supported Word document elements
 

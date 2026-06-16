@@ -29,11 +29,9 @@ MarkdownDocument markdownDocument = new MarkdownDocument();
 MdParagraph paragraph = markdownDocument.AddParagraph();
 // Adds a text range to the paragraph
 paragraph.AddTextRange().Text = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.";
-// Retrieves the Markdown document content
-string mdContent = markdownDocument.GetMarkdownText();
 // Saves the Markdown document to the file system
-File.WriteAllText("Output.md", mdContent, Encoding.UTF8);
-// Disposes the document to release all memory
+markdownDocument.Save("Output.md");
+// Disposes the document
 markdownDocument.Dispose();
 
 {% endhighlight %}
@@ -46,18 +44,16 @@ Dim markdownDocument As New MarkdownDocument()
 Dim paragraph As MdParagraph = markdownDocument.AddParagraph()
 ' Adds a text range to the paragraph
 paragraph.AddTextRange().Text = "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company."
-' Retrieves the Markdown document content
-Dim mdContent As String = markdownDocument.GetMarkdownText()
 ' Saves the Markdown document to the file system
-File.WriteAllText("Output.md", mdContent, Encoding.UTF8)
-' Disposes the document to release all memory
+markdownDocument.Save("Output.md")
+' Disposes the document
 markdownDocument.Dispose()
 
 {% endhighlight %}
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Modifying an existing paragraph
 	
@@ -68,9 +64,7 @@ Modify the content of an existing paragraph in a Markdown document by iterating 
 {% highlight c# tabtitle="C#" %}
 
  // Opens an existing Markdown document
- FileStream fileStream = new FileStream("Input.md", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
- MdImportSettings settings = new MdImportSettings();
- MarkdownDocument markdownDocument = new MarkdownDocument(fileStream, settings);
+ MarkdownDocument markdownDocument = new MarkdownDocument(Path.GetFullPath("Input.md"));
  // Iterates through the blocks of the document
  foreach (IMdBlock block in markdownDocument.Blocks)
  {
@@ -91,21 +85,17 @@ Modify the content of an existing paragraph in a Markdown document by iterating 
          break;
      }
  }
- // Gets the Markdown text of the document
- string markdownText = markdownDocument.GetMarkdownText();
- // Saves the Markdown document to the file system
- File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
- // Disposes the document
- markdownDocument.Dispose();
+// Saves the Markdown document to the file system
+markdownDocument.Save("Output.md");
+// Disposes the document
+markdownDocument.Dispose();
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET" %}
 
 ' Opens an existing Markdown document
-Dim fileStream As New FileStream("Input.md", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
-Dim settings As New MdImportSettings()
-Dim markdownDocument As New MarkdownDocument(fileStream, settings)
+Dim markdownDocument As MarkdownDocument = New MarkdownDocument(Path.GetFullPath("Input.md"))
 ' Iterates through the blocks of the document
 For Each block As IMdBlock In markdownDocument.Blocks
     If TypeOf block Is MdParagraph Then
@@ -122,10 +112,8 @@ For Each block As IMdBlock In markdownDocument.Blocks
         Exit For
     End If
 Next
-' Gets the Markdown text of the document
-Dim markdownText As String = markdownDocument.GetMarkdownText()
 ' Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+markdownDocument.Save("Output.md")
 ' Disposes the document
 markdownDocument.Dispose()
 
@@ -133,7 +121,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Removing an existing paragraph
 	
@@ -144,9 +132,7 @@ Remove the existing paragraph in a Markdown document by iterating over the `Bloc
 {% highlight c# tabtitle="C#" %}
 
 // Opens an existing Markdown document
-FileStream fileStream = new FileStream("Input.md", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-MdImportSettings settings = new MdImportSettings();
-MarkdownDocument markdownDocument = new MarkdownDocument(fileStream, settings);
+MarkdownDocument markdownDocument = new MarkdownDocument(Path.GetFullPath("Input.md"));
 // Iterates through the blocks of the document
 foreach (IMdBlock block in markdownDocument.Blocks)
 {
@@ -158,10 +144,8 @@ foreach (IMdBlock block in markdownDocument.Blocks)
         break;
     }
 }
-// Gets the Markdown text of the document
-string markdownText = markdownDocument.GetMarkdownText();
 // Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+markdownDocument.Save("Output.md");
 // Disposes the document
 markdownDocument.Dispose();
 
@@ -169,10 +153,8 @@ markdownDocument.Dispose();
 
 {% highlight vb.net tabtitle="VB.NET" %}
 
-' Opens an existing Markdown document
- Dim fileStream As New FileStream("Input.md", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
- Dim settings As New MdImportSettings()
- Dim markdownDocument As New MarkdownDocument(fileStream, settings)
+ ' Opens an existing Markdown document
+ Dim markdownDocument As MarkdownDocument = New MarkdownDocument(Path.GetFullPath("Input.md"))
  ' Iterates through the blocks of the document
  For Each block As IMdBlock In markdownDocument.Blocks
      ' Retrieves the first paragraph of the Blocks
@@ -182,10 +164,8 @@ markdownDocument.Dispose();
          Exit For
      End If
  Next
- ' Gets the Markdown text of the document
- Dim markdownText As String = markdownDocument.GetMarkdownText()
  ' Saves the Markdown document to the file system
- File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+ markdownDocument.Save("Output.md")
  ' Disposes the document
  markdownDocument.Dispose()
 
@@ -193,7 +173,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Applying paragraph styles
 
@@ -246,10 +226,8 @@ heading5.AddTextRange().Text = "Heading 5";
 MdParagraph heading6 = markdownDocument.AddParagraph();
 heading6.ApplyParagraphStyle("Heading 6");
 heading6.AddTextRange().Text = "Heading 6";
-// Gets the Markdown text of the document
-string markdownText = markdownDocument.GetMarkdownText();
 // Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+markdownDocument.Save("Output.md");
 // Disposes the document
 markdownDocument.Dispose();
 
@@ -283,10 +261,8 @@ heading5.AddTextRange().Text = "Heading 5"
 Dim heading6 As MdParagraph = markdownDocument.AddParagraph()
 heading6.ApplyParagraphStyle("Heading 6")
 heading6.AddTextRange().Text = "Heading 6"
-' Gets the Markdown text of the document
-Dim markdownText As String = markdownDocument.GetMarkdownText()
 ' Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+markdownDocument.Save("Output.md")
 ' Disposes the document
 markdownDocument.Dispose()
 
@@ -294,7 +270,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Working with text
 
@@ -314,10 +290,8 @@ MdParagraph paragraph = markdownDocument.AddParagraph();
 MdTextRange firstText = paragraph.AddTextRange();
 firstText.Text = "A new text is added to the paragraph";
 firstText.TextFormat.Bold = true;
-// Gets the Markdown text of the document
-string markdownText = markdownDocument.GetMarkdownText();
 // Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+markdownDocument.Save("Output.md");
 // Disposes the document
 markdownDocument.Dispose();
 
@@ -333,10 +307,8 @@ markdownDocument.Dispose();
  Dim firstText As MdTextRange = paragraph.AddTextRange()
  firstText.Text = "A new text is added to the paragraph"
  firstText.TextFormat.Bold = True
- ' Gets the Markdown text of the document
- Dim markdownText As String = markdownDocument.GetMarkdownText()
  ' Saves the Markdown document to the file system
- File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+ markdownDocument.Save("Output.md")
  ' Disposes the document
  markdownDocument.Dispose()
 
@@ -344,7 +316,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Appending a line break
 
@@ -367,10 +339,8 @@ lineBreak.IsLineBreak = true;
 // Adds the second text range
 MdTextRange secondText = paragraph.AddTextRange();
 secondText.Text = "A second text range is added to the paragraph";
-// Gets the Markdown text of the document
-string markdownText = markdownDocument.GetMarkdownText();
 // Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+markdownDocument.Save("Output.md");
 // Disposes the document
 markdownDocument.Dispose();
 
@@ -391,10 +361,8 @@ lineBreak.IsLineBreak = True
 ' Adds the second text range
 Dim secondText As MdTextRange = paragraph.AddTextRange()
 secondText.Text = "A second text range is added to the paragraph"
-' Gets the Markdown text of the document
-Dim markdownText As String = markdownDocument.GetMarkdownText()
 ' Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+markdownDocument.Save("Output.md")
 ' Disposes the document
 markdownDocument.Dispose()
 
@@ -402,7 +370,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Applying text formatting
 
@@ -463,10 +431,8 @@ eighthTextRange.TextFormat.CodeSpan = true;
 MdTextRange ninthTextRange = fourthParagraph.AddTextRange();
 ninthTextRange.Text = "It's a hidden text range";
 ninthTextRange.TextFormat.IsHidden = true;
-// Gets the Markdown text of the document
-string markdownText = markdownDocument.GetMarkdownText();
 // Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+markdownDocument.Save("Output.md");
 // Disposes the document
 markdownDocument.Dispose();
 
@@ -523,10 +489,8 @@ eighthTextRange.TextFormat.CodeSpan = True
 Dim ninthTextRange As MdTextRange = fourthParagraph.AddTextRange()
 ninthTextRange.Text = "It's a hidden text range"
 ninthTextRange.TextFormat.IsHidden = True
-' Gets the Markdown text of the document
-Dim markdownText As String = markdownDocument.GetMarkdownText()
 ' Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+markdownDocument.Save("Output.md")
 ' Disposes the document
 markdownDocument.Dispose()
 
@@ -534,7 +498,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 
 ## Working with hyperlinks
@@ -561,10 +525,8 @@ MdHyperlink hyperlink = firstParagraph.AddHyperlink();
 hyperlink.DisplayText = "Syncfusion";
 // Sets the URL of the hyperlink
 hyperlink.Url = "http://www.syncfusion.com";
-// Gets the Markdown text of the document
-string markdownText = markdownDocument.GetMarkdownText();
 // Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+markdownDocument.Save("Output.md");
 // Disposes the document
 markdownDocument.Dispose();
 
@@ -582,10 +544,8 @@ Dim hyperlink As MdHyperlink = firstParagraph.AddHyperlink()
 hyperlink.DisplayText = "Syncfusion"
 ' Sets the URL of the hyperlink
 hyperlink.Url = "http://www.syncfusion.com"
-' Gets the Markdown text of the document
-Dim markdownText As String = markdownDocument.GetMarkdownText()
 ' Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+markdownDocument.Save("Output.md")
 ' Disposes the document
 markdownDocument.Dispose()
 
@@ -593,7 +553,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ### Link with screen tip
 
@@ -615,10 +575,8 @@ hyperlink.DisplayText = "Syncfusion";
 hyperlink.Url = "http://www.syncfusion.com";
 // Sets the screen tip of the hyperlink
 hyperlink.ScreenTip = "Visit our site";
-// Gets the Markdown text of the document
-string markdownText = markdownDocument.GetMarkdownText();
 // Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+markdownDocument.Save("Output.md");
 // Disposes the document
 markdownDocument.Dispose();
 
@@ -638,10 +596,8 @@ hyperlink.DisplayText = "Syncfusion"
 hyperlink.Url = "http://www.syncfusion.com"
 ' Sets the screen tip of the hyperlink
 hyperlink.ScreenTip = "Visit our site"
-' Gets the Markdown text of the document
-Dim markdownText As String = markdownDocument.GetMarkdownText()
 ' Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+markdownDocument.Save("Output.md")
 ' Disposes the document
 markdownDocument.Dispose()
 
@@ -649,7 +605,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ### Applying formatting for the display text
 
@@ -671,10 +627,8 @@ MdParagraph secondParagraph = markdownDocument.AddParagraph();
 MdHyperlink italicHyperlink = secondParagraph.AddHyperlink();
 italicHyperlink.DisplayText = "*Syncfusion*";
 italicHyperlink.Url = "http://www.syncfusion.com";
-// Gets the Markdown text of the document
-string markdownText = markdownDocument.GetMarkdownText();
 // Saves the Markdown document to the file system
-File.WriteAllText("Output.md", markdownText, Encoding.UTF8);
+markdownDocument.Save("Output.md");
 // Disposes the document
 markdownDocument.Dispose();
 
@@ -694,10 +648,8 @@ markdownDocument.Dispose();
  Dim italicHyperlink As MdHyperlink = secondParagraph.AddHyperlink()
  italicHyperlink.DisplayText = "*Syncfusion*"
  italicHyperlink.Url = "http://www.syncfusion.com"
- ' Gets the Markdown text of the document
- Dim markdownText As String = markdownDocument.GetMarkdownText()
  ' Saves the Markdown document to the file system
- File.WriteAllText("Output.md", markdownText, Encoding.UTF8)
+ markdownDocument.Save("Output.md")
  ' Disposes the document
  markdownDocument.Dispose()
 
@@ -705,4 +657,125 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
+
+## Working with task lists
+
+Task lists are used to represent a list of tasks with checkboxes in a Markdown document. Each task can be marked as checked or unchecked. A task list item is represented by a paragraph with the `TaskItemProperties` property set to an instance of `MdTaskProperties`.
+
+The following code example demonstrates how to add a task list to a Markdown document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+// Creates a new MarkdownDocument instance
+MarkdownDocument markdownDocument = new MarkdownDocument();
+// Adds a heading for the task list
+MdParagraph heading = markdownDocument.AddParagraph();
+heading.ApplyParagraphStyle("Heading 2");
+heading.AddTextRange().Text = "Project Tasks";
+// Adds a checked task item
+MdParagraph firstTask = markdownDocument.AddParagraph();
+firstTask.TaskItemProperties = new MdTaskProperties();
+firstTask.TaskItemProperties.IsChecked = true;
+firstTask.AddTextRange().Text = "Initialize repository";
+// Adds an unchecked task item
+MdParagraph secondTask = markdownDocument.AddParagraph();
+secondTask.TaskItemProperties = new MdTaskProperties();
+secondTask.TaskItemProperties.IsChecked = false;
+secondTask.AddTextRange().Text = "Setup CI/CD pipeline";
+// Adds another unchecked task item
+MdParagraph thirdTask = markdownDocument.AddParagraph();
+thirdTask.TaskItemProperties = new MdTaskProperties();
+thirdTask.TaskItemProperties.IsChecked = false;
+thirdTask.AddTextRange().Text = "Configure environments";
+// Saves the Markdown document to the file system
+markdownDocument.Save("Output.md");
+// Disposes the document
+markdownDocument.Dispose();
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+' Creates a new MarkdownDocument instance
+Dim markdownDocument As MarkdownDocument = New MarkdownDocument()
+' Adds a heading for the task list
+Dim heading As MdParagraph = markdownDocument.AddParagraph()
+heading.ApplyParagraphStyle("Heading 2")
+heading.AddTextRange().Text = "Project Tasks"
+' Adds a checked task item
+Dim firstTask As MdParagraph = markdownDocument.AddParagraph()
+firstTask.TaskItemProperties = New MdTaskProperties()
+firstTask.TaskItemProperties.IsChecked = True
+firstTask.AddTextRange().Text = "Initialize repository"
+' Adds an unchecked task item
+Dim secondTask As MdParagraph = markdownDocument.AddParagraph()
+secondTask.TaskItemProperties = New MdTaskProperties()
+secondTask.TaskItemProperties.IsChecked = False
+secondTask.AddTextRange().Text = "Setup CI/CD pipeline"
+' Adds another unchecked task item
+Dim thirdTask As MdParagraph = markdownDocument.AddParagraph()
+thirdTask.TaskItemProperties = New MdTaskProperties()
+thirdTask.TaskItemProperties.IsChecked = False
+thirdTask.AddTextRange().Text = "Configure environments"
+' Saves the Markdown document to the file system
+markdownDocument.Save("Output.md")
+' Disposes the document
+markdownDocument.Dispose()
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
+
+## Adding a thematic break
+
+A thematic break (horizontal rule) is used to create a visual separation between sections in a Markdown document. The Syncfusion Markdown library allows you to add a thematic break by using the `AddThematicBreak` method of the `MarkdownDocument` class.
+
+The following code example demonstrates how to add a thematic break to a Markdown document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+// Creates a new MarkdownDocument instance
+MarkdownDocument markdownDocument = new MarkdownDocument();
+// Adds a new paragraph to the document
+MdParagraph firstParagraph = markdownDocument.AddParagraph();
+firstParagraph.AddTextRange().Text = "This is the first section content.";
+// Adds a thematic break to the document
+MdThematicBreak thematicBreak = markdownDocument.AddThematicBreak();
+// Adds another paragraph after the thematic break
+MdParagraph secondParagraph = markdownDocument.AddParagraph();
+secondParagraph.AddTextRange().Text = "This is the second section content.";
+// Saves the Markdown document to the file system
+markdownDocument.Save("Output.md");
+// Disposes the document
+markdownDocument.Dispose();
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+// Creates a new MarkdownDocument instance
+Dim markdownDocument As New MarkdownDocument()
+// Adds a new paragraph to the document
+Dim firstParagraph As MdParagraph = markdownDocument.AddParagraph()
+firstParagraph.AddTextRange().Text = "This is the first section content."
+// Adds a thematic break to the document
+Dim thematicBreak As MdThematicBreak = markdownDocument.AddThematicBreak()
+// Adds another paragraph after the thematic break
+Dim secondParagraph As MdParagraph = markdownDocument.AddParagraph()
+secondParagraph.AddTextRange().Text = "This is the second section content."
+// Saves the Markdown document to the file system
+markdownDocument.Save("Output.md")
+// Disposes the document
+markdownDocument.Dispose()
+
+{% endhighlight %}
+
+{% endtabs %}
+

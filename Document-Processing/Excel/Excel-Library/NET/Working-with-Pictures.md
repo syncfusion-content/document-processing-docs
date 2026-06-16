@@ -561,3 +561,69 @@ End Using
 
 A complete working example to add SVG images in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Add%20SVG%20Picture/.NET/Add%20SVG%20Picture).
 
+## Adding Place In Cell Images
+
+Pictures can be inserted directly into worksheet cells using the PlaceInCell option. In Excel, these images act as true cell content, staying anchored inside the cell rather than floating above it.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/Place%20In%20Cell%20Picture/.NET/Place%20In%20Cell%20Picture/Place%20In%20Cell%20Picture/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Adding place in cell picture
+  FileStream imageStream = new FileStream(Path.GetFullPath(@"Data/Image.png"), FileMode.Open, FileAccess.Read);
+  IPictureShape picture = worksheet.Pictures.AddPicture(1, 1, imageStream);
+
+  picture.PlaceInCell = true;
+
+  #region Save
+  //Saving the workbook
+  workbook.SaveAs(Path.GetFullPath("Output/PlaceInCellPicture.xlsx"));
+  #endregion
+
+  //Dispose streams
+  imageStream.Dispose();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Create(1);
+  IWorksheet worksheet = workbook.Worksheets[0];
+
+  //Adding place in cell picture
+  IPictureShape picture = worksheet.Pictures.AddPicture(1, 1, "Image.png");
+
+  picture.PlaceInCell = true;
+
+  //Saving the workbook
+  workbook.SaveAs("PlaceInCellPicture.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As ExcelEngine = New ExcelEngine()
+  Dim application As IApplication = excelEngine.Excel
+  application.DefaultVersion = ExcelVersion.Xlsx
+  Dim workbook As IWorkbook = application.Workbooks.Create(1)
+  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+  'Adding place in cell picture
+  Dim shape As IPictureShape = worksheet.Pictures.AddPicture(1, 1, "Image.png")
+
+  shape.PlaceInCell = True
+
+  'Save workbook
+  workbook.SaveAs("PlaceInCellPicture.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}    
+
+A complete working example to insert place in cell picture in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pictures%20in%20Excel/Place%20In%20Cell%20Picture/.NET/Place%20In%20Cell%20Picture">this GitHub page</a>.

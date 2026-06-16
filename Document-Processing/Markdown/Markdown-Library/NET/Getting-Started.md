@@ -32,15 +32,11 @@ Include the following namespace in your .cs or .vb code as shown below.
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Office.Markdown;
-using System.Text;
-using System.IO;
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET" %}
 
-Imports System.IO
-Imports System.Text
 Imports Syncfusion.Office.Markdown
 
 {% endhighlight %} 
@@ -251,25 +247,25 @@ After adding the required content, save the Markdown document to the file system
 
 {% highlight c# tabtitle="C#" %}
 
-// Retrieves the Markdown document content.
-string mdContent = markdownDocument.GetMarkdownText();
-// Saves the Markdown document to the file system.
-File.WriteAllText("Output.md", mdContent, Encoding.UTF8);
+// Saves the Markdown document to the file system
+markdownDocument.Save("Output.md");
+// Disposes the document
+markdownDocument.Dispose();
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET" %}
 
-  ' Retrieves the Markdown document content
-  Dim mdContent As String = markdownDocument.GetMarkdownText()
-  ' Saves the Markdown document to the file system.
-  File.WriteAllText("Output.md", mdContent, Encoding.UTF8)
+' Saves the Markdown document to the file system
+markdownDocument.Save("Output.md")
+' Disposes the document
+markdownDocument.Dispose()
 
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 The resultant Markdown document looks as follows.
 
