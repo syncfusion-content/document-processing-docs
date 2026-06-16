@@ -176,7 +176,7 @@ android:resource="@xml/provider_paths" />
 {% endhighlight %}
 {% endtabs %}
 
-### Please include the following changes if you deploy the application on Android 11:
+**Include the following changes when deploying the application on Android 11:**
 
 * Enable the `android:requestLegacyExternalStorage` attribute in the AndroidManifest.xml file when required.
 
