@@ -163,3 +163,7 @@ The following example shows how to customize layout options only for printing.
 {% endtabs %}
   
 {% previewsample "/document-processing/samples/document-editor/angular/link-cs7" %}
+
+## Online Demo
+
+Explore how to print Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/print).

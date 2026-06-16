@@ -69,6 +69,10 @@ You can also do it programmatically by using the exposed API. Refer to the follo
 
 >Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
 
+## Online Demo
+
+Explore how to insert and update table of contents in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/table-of-contents).
+
 ## See Also
 
 * [Table of contents dialog](./dialog#table-of-contents-dialog)

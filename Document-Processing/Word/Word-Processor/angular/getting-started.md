@@ -155,6 +155,9 @@ You can also explore the Document Editor interactively using the live sample bel
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/getting-started).
 
+## Online Demo
+
+Explore how to create, edit, and print Word documents in the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/default).
 
 ## Video tutorial
 

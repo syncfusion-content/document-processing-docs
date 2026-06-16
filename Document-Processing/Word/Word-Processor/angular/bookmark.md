@@ -102,6 +102,9 @@ The following example shows how to open bookmark dialog in document editor.
   
 {% previewsample "/document-processing/samples/document-editor/angular/bookmark-cs1" %}
 
+## Online Demo
+
+Explore how to insert and manage bookmarks in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/links-bookmarks).
 
 ## See Also
 

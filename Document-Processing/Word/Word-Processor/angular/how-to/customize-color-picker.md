@@ -64,3 +64,7 @@ export class AppComponent implements OnInit {
 
 
 >**Note**: According to the Word document specifications, it is not possible to modify the **`Predefined Highlight colors`**. This limitation means that the range of highlight colors provided by default cannot be customized or expanded upon by the user to suit individual preferences. Consequently, users must work within the confines of the existing color palette, as no functionality currently exists to modify or personalize these predefined highlighting options.
+
+## Online Demo
+
+Explore how to customize the color picker in the Angular Document Editor for formatting Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/color-picker-customization).
