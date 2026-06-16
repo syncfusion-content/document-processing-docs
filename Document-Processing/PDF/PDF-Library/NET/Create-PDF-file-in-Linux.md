@@ -9,7 +9,7 @@ Keywords: linux os save pdf, linux os load pdf, c# save pdf, c# load pdf
 
 # Create PDF document on Linux
 
-The Syncfusion<sup>&reg;</sup> [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can create a PDF document in a .NET Core application on Linux.
+The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can create a PDF document in a .NET Core application on Linux.
 
 ## Steps to create PDF document programmatically
 

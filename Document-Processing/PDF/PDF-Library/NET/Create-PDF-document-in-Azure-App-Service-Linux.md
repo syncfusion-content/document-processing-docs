@@ -10,7 +10,7 @@ documentation: UG
 
 The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure App Service on Linux**.
 
-**Steps to create PDF document in Azure App Service on Linux**
+## Steps to create PDF document in Azure App Service on Linux
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
 ![Create a ASP.NET Core Web App project](Azure_images/Azure-app-service-Linux/Create-net-core-web-app.png)

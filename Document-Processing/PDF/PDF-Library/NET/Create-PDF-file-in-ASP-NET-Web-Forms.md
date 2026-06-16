@@ -13,7 +13,7 @@ To include the .NET PDF library into your ASP.NET Web application, please refer 
 
 N> This ASP.NET Web Forms platform is deprecated; you can use the same product from the [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core) platform.
 
-**Steps to create PDF document in ASP.NET Web Forms**
+## Steps to create PDF document in ASP.NET Web Forms
 
 Step 1: Create a new ASP.NET Web application project.
 ![ASP.NET Web sample creation step1](Asp.Net_images/Creation1.png)

@@ -12,7 +12,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI PDF library](https://www.syncfusion.co
 
 N> Our PDF library is currently supported in .NET MAUI applications on Android, iOS, and Windows platforms. It is not supported on the Mac Catalyst platform.
 
-**Steps to create PDF document programmatically in .NET MAUI**
+## Steps to create PDF document programmatically in .NET MAUI
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
