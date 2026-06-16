@@ -183,3 +183,124 @@ End Sub
 You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Markdown%20to%20Excel/Customize-Image/.NET/Customize-Image">this GitHub page</a>.
 
 N> Hook the event handler before opening the Markdown document as per the above code example.
+
+## Markdown file opening options
+
+### Using MarkdownDocument object
+The following code examples shows the open method takes parameter as `MarkdownDocument` by providing filestream.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+FileStream fileStream = new FileStream(@"Data/ExcelToMarkdown.md", FileMode.Open, FileAccess.Write);
+MarkdownDocument markdownDocument = new MarkdownDocument(fileStream);
+
+IWorkbook workbook = application.Workbooks.Open(markdownDocument);
+{% endhighlight %}
+
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+FileStream fileStream = new FileStream(@"Data/ExcelToMarkdown.md", FileMode.Open, FileAccess.Write);
+MarkdownDocument markdownDocument = new MarkdownDocument(fileStream);
+
+IWorkbook workbook = application.Workbooks.Open(markdownDocument);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim fileStream As New FileStream("Data/ExcelToMarkdown.md", FileMode.Open, FileAccess.Write)
+Dim markdownDocument As New MarkdownDocument(fileStream)
+
+Dim workbook As IWorkbook = application.Workbooks.Open(markdownDocument)
+{% endhighlight %}
+{% endtabs %}
+
+The following code examples shows the open method takes parameter as `MarkdownDocument` by providing filepath directly.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+MarkdownDocument markdownDocument = new MarkdownDocument(@"Data/ExcelToMarkdown.md");
+
+IWorkbook workbook = application.Workbooks.Open(markdownDocument);
+{% endhighlight %}
+
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+MarkdownDocument markdownDocument = new MarkdownDocument("Data/ExcelToMarkdown.md");
+
+IWorkbook workbook = application.Workbooks.Open(markdownDocument);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim markdownDocument As New MarkdownDocument("Data/ExcelToMarkdown.md")
+
+Dim workbook As IWorkbook = application.Workbooks.Open(markdownDocument)
+{% endhighlight %}
+{% endtabs %}
+
+### Using MarkdownDocument object and MdImportSettings
+
+The following code examples shows the open method takes parameter as `MarkdownDocument` by providing filestream and `MdImportSettings`.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+FileStream fileStream = new FileStream(@"Data/ExcelToMarkdown.md", FileMode.Open, FileAccess.Write);
+MarkdownDocument markdownDocument = new MarkdownDocument(fileStream);
+
+MdImportSettings settings = new MdImportSettings();
+settings.ImageNodeVisited += MdImportSettings_ImageNodeVisited;
+
+IWorkbook workbook = application.Workbooks.Open(markdownDocument, settings);
+{% endhighlight %}
+
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+FileStream fileStream = new FileStream(@"Data/ExcelToMarkdown.md", FileMode.Open, FileAccess.Write);
+MarkdownDocument markdownDocument = new MarkdownDocument(fileStream);
+
+MdImportSettings settings = new MdImportSettings();
+settings.ImageNodeVisited += MdImportSettings_ImageNodeVisited;
+
+IWorkbook workbook = application.Workbooks.Open(markdownDocument, settings);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim fileStream As New FileStream("Data/ExcelToMarkdown.md", FileMode.Open, FileAccess.Write)
+Dim markdownDocument As New MarkdownDocument(fileStream)
+
+Dim settings As New MdImportSettings()
+AddHandler settings.ImageNodeVisited, AddressOf MdImportSettings_ImageNodeVisited
+
+Dim workbook As IWorkbook = application.Workbooks.Open(markdownDocument, settings)
+{% endhighlight %}
+{% endtabs %}
+
+The following code examples shows the open method takes parameter as `MarkdownDocument` by providing filepath and `MdImportSettings`.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+MarkdownDocument markdownDocument = new MarkdownDocument(@"Data/ExcelToMarkdown.md");
+
+MdImportSettings settings = new MdImportSettings();
+settings.ImageNodeVisited += MdImportSettings_ImageNodeVisited;
+
+IWorkbook workbook = application.Workbooks.Open(markdownDocument, settings);
+{% endhighlight %}
+
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+MarkdownDocument markdownDocument = new MarkdownDocument("Data/ExcelToMarkdown.md");
+
+MdImportSettings settings = new MdImportSettings();
+settings.ImageNodeVisited += MdImportSettings_ImageNodeVisited;
+
+IWorkbook workbook = application.Workbooks.Open(markdownDocument, settings);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim markdownDocument As New MarkdownDocument("Data/ExcelToMarkdown.md")
+
+Dim settings As New MdImportSettings()
+AddHandler settings.ImageNodeVisited, AddressOf MdImportSettings_ImageNodeVisited
+
+Dim workbook As IWorkbook = application.Workbooks.Open(markdownDocument, settings)
+{% endhighlight %}
+{% endtabs %}
