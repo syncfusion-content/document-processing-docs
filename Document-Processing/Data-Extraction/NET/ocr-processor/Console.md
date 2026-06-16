@@ -1,6 +1,6 @@
 ---
 title: Perform OCR on PDF and image files in Console | Syncfusion
-description: Learn how to perform OCR on scanned PDF documents and images with different tesseract versions in a Console Application by using the Syncfusion PDF library efficiently
+description: Learn how to perform OCR on scanned PDF documents and images with different tesseract versions in a Console App by using the Syncfusion PDF library efficiently
 platform: document-processing
 control: PDF
 documentation: UG
@@ -238,6 +238,6 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 By executing the program, you will get the PDF document as follows
 ![Console output PDF document](OCR-Images/OCR-output-image.png)
     
-A complete working sample can be downloaded from Github.
+A complete working sample can be downloaded from GitHub.
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

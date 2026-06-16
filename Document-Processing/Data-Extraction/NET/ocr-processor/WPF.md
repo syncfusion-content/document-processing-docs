@@ -73,7 +73,7 @@ using (OCRProcessor processor = new OCRProcessor())
 {% endtabs %}
 
 By executing the program, you will get a PDF document as follows. 
-![WPF OCR output screenshot](OCR-Images/Output.png)
+![WPF OCR output](OCR-Images/Output.png)
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/WPF).
 
