@@ -51,7 +51,8 @@ You can also import pages from another PDF programmatically using the `InsertPag
 
 ### Import pages from byte array
 
-```chstml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="ImportMethod">Import</SfButton>
@@ -68,11 +69,13 @@ You can also import pages from another PDF programmatically using the `InsertPag
         await Viewer?.InsertPagesAsync(2, byteArray, null);
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Import pages from stream
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="ImportMethodStream">Import Stream</SfButton>
@@ -90,7 +93,8 @@ You can also import pages from another PDF programmatically using the `InsertPag
         await Viewer?.InsertPagesAsync(2, stream, null);
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Troubleshooting
 

@@ -28,23 +28,24 @@ Assembly
 Syncfusion.Presentation.Base<br/>
 Syncfusion.Compression.Base<br/>
 Syncfusion.OfficeChart.Base<br/>
+Syncfusion.Markdown<br/>
 </td>
 </tr>
 <tr>
 <td>
 {{'[ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-blazor)' | markdownify}}<br/></td><td>
-Syncfusion.Presentation.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.OfficeChart.Portable<br/></td></tr>
+Syncfusion.Presentation.Portable<br/>Syncfusion.Compression.Portable<br/>Syncfusion.OfficeChart.Portable<br/>Syncfusion.Markdown<br/></td></tr>
 <tr>
 <td>
 {{'[Universal Windows Platform](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-uwp)' | markdownify}}<br/></td><td>
-Syncfusion.Presentation.UWP<br/>Syncfusion.OfficeChart.UWP<br/></td></tr>
+Syncfusion.Presentation.UWP<br/>Syncfusion.OfficeChart.UWP<br/>Syncfusion.Markdown<br/></td></tr>
 <tr>
 <td>
 {{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-winui)' | markdownify}} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-maui)' | markdownify}}<br/></td><td>
 	 
 		 
 Syncfusion.Presentation.NET<br/>Syncfusion.Compression.NET<br/>
-Syncfusion.OfficeChart.NET<br/>
+Syncfusion.OfficeChart.NET<br/>Syncfusion.Markdown<br/>
 </td></tr>
 </table>
 
@@ -102,6 +103,7 @@ Assembly
 Syncfusion.Presentation.Base<br/>
 Syncfusion.Compression.Base<br/>
 Syncfusion.OfficeChart.Base<br/>
+Syncfusion.Markdown<br/>
 Syncfusion.Pdf.Base<br/>
 Syncfusion.PresentationToPDFConverter.Base<br/>
 </td>
@@ -114,6 +116,7 @@ Syncfusion.PresentationToPDFConverter.Base<br/>
 Syncfusion.Presentation.Portable<br/>
 Syncfusion.Compression.Portable<br/>
 Syncfusion.OfficeChart.Portable<br/>
+Syncfusion.Markdown<br/>
 Syncfusion.Pdf.Portable<br/>
 Syncfusion.PresentationRenderer.Portable<br/>
 Syncfusion.Pdf.Imaging.Portable<br/>
@@ -126,7 +129,8 @@ SkiaSharp
 <td>
 {{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-winui)' | markdownify}} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-maui)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.NET<br/>Syncfusion.Compression.NET<br/>
-Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/>Syncfusion.MetafileRenderer.NET<br/> Syncfusion.SkiaSharpHelper.NET<br/>SkiaSharp
+Syncfusion.OfficeChart.NET<br/>Syncfusion.Markdown<br/>
+Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/>Syncfusion.MetafileRenderer.NET<br/> Syncfusion.SkiaSharpHelper.NET<br/>SkiaSharp
 </td>
 </tr>
 </table>
@@ -185,6 +189,7 @@ Assembly
 Syncfusion.Presentation.Base<br/>
 Syncfusion.Compression.Base<br/>
 Syncfusion.OfficeChart.Base<br/>
+Syncfusion.Markdown<br/>
 Syncfusion.Pdf.Base<br/>
 Syncfusion.PresentationToPDFConverter.Base<br/>
 Syncfusion.OfficeChartToImageConverter.WPF<br/>
@@ -197,6 +202,7 @@ Syncfusion.SfChart.WPF<br/>
 Syncfusion.Presentation.Portable<br/>
 Syncfusion.Compression.Portable<br/>
 Syncfusion.OfficeChart.Portable<br/>
+Syncfusion.Markdown<br/>
 Syncfusion.Pdf.Portable<br/>
 Syncfusion.Pdf.Imaging.Portable<br/>
 Syncfusion.MetafileRenderer.NET<br/>
@@ -209,7 +215,8 @@ SkiaSharp
 <td>
 {{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-winui)' | markdownify}} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-maui)' | markdownify}}<br/></td><td>
 Syncfusion.Presentation.NET<br/>Syncfusion.Compression.NET<br/>
-Syncfusion.OfficeChart.NET<br/>Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/> Syncfusion.Pdf.NET<br/>Syncfusion.MetafileRenderer.NET<br/>Syncfusion.SkiaSharpHelper.NET<br/>SkiaSharp
+Syncfusion.OfficeChart.NET<br/>Syncfusion.Markdown<br/>
+Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/> Syncfusion.Pdf.NET<br/>Syncfusion.MetafileRenderer.NET<br/>Syncfusion.SkiaSharpHelper.NET<br/>SkiaSharp
 </td>
 </tr>
 <tr>
