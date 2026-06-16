@@ -350,7 +350,7 @@ Not supported due to .NET Core framework limitations. Alternatively, this can be
 {{'[Merge(PdfDocumentBase, object[])](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_System_Object___)'| markdownify }}
 </td>
 <td> 
-Merge(PdfDocumentBase, Stream[])  <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream/)'| markdownify }}
+Merge(PdfDocumentBase, Stream[]) <br/> Sample link: {{[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream/)| markdownify }}
 </td>
 </tr>
 <tr>
@@ -358,7 +358,7 @@ Merge(PdfDocumentBase, Stream[])  <br/> Sample link: {{'[Here](https://github.co
 {{'[Merge(String[])](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_System_String___)'| markdownify }}
 </td>
 <td> 
-Merge(PdfDocumentBase, Stream[]) <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream/)'| markdownify }}
+Merge(PdfDocumentBase, Stream[]) <br/> Sample link: {{[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Merge-multiple-documents-from-stream/)| markdownify }}
 </td>
 </tr>
 <tr>
@@ -494,7 +494,7 @@ Not supported
 {{'[RemoveImage(PdfImageInfo)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_RemoveImage_Syncfusion_Pdf_Exporting_PdfImageInfo_)'| markdownify }}
 </td>
 <td> 
-RemoveImage(PdfImageInfo[]) <br/> Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Remove-images-from-PDF-document)'| markdownify }}
+RemoveImage(PdfImageInfo[]) <br/> Sample link: {{[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Remove-images-from-PDF-document)| markdownify }}
 </td>
 </tr>
 <tr>
