@@ -187,7 +187,7 @@ N> Hook the event handler before opening the Markdown document as per the above 
 ## Markdown file opening options
 
 ### Using MarkdownDocument object
-The following code examples shows the open method takes parameter as `MarkdownDocument` by providing filestream.
+The following code examples shows the open method takes parameter as `MarkdownDocument` by providing file stream.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -213,7 +213,7 @@ Dim workbook As IWorkbook = application.Workbooks.Open(markdownDocument)
 {% endhighlight %}
 {% endtabs %}
 
-The following code examples shows the open method takes parameter as `MarkdownDocument` by providing filepath directly.
+The following code examples shows the open method takes parameter as `MarkdownDocument` by providing file path directly.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -238,7 +238,7 @@ Dim workbook As IWorkbook = application.Workbooks.Open(markdownDocument)
 
 ### Using MarkdownDocument object and MdImportSettings
 
-The following code examples shows the open method takes parameter as `MarkdownDocument` by providing filestream and `MdImportSettings`.
+The following code examples shows the open method takes parameter as `MarkdownDocument` by providing file stream and `MdImportSettings`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -273,7 +273,7 @@ Dim workbook As IWorkbook = application.Workbooks.Open(markdownDocument, setting
 {% endhighlight %}
 {% endtabs %}
 
-The following code examples shows the open method takes parameter as `MarkdownDocument` by providing filepath and `MdImportSettings`.
+The following code examples shows the open method takes parameter as `MarkdownDocument` by providing file path and `MdImportSettings`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
