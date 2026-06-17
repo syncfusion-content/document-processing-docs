@@ -124,8 +124,10 @@ If you prefer to host resources locally for better control or offline scenarios,
 ```js
 <PdfViewerComponent
   id="container"
-  resourceUrl="/ej2-pdfviewer-lib"
-  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  // Path to the PDFium library files in the assets folder
+  resourceUrl={window.location.origin + "/assets/ej2-pdfviewer-lib"}
+  // Path to your PDF document in the assets folder
+  documentPath={window.location.origin + "/assets/pdfsuccinctly.pdf"}
   style={{ 'height': '640px' }}
 />
 ```
@@ -195,7 +197,7 @@ This approach is recommended for most server scenarios because it handles file s
 
 ### Load PDFs from Base64-Encoded Strings
 
-When your server returns a PDF as a Base64-encoded string, convert it to a data URL and load it into the viewer:
+When your server returns a PDF as a Base64-encoded string, it can be loaded directly into the viewer:
 
 ```js
 const viewerRef = useRef(null);
