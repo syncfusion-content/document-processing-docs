@@ -13,7 +13,7 @@ The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/doc
 To quickly get started with the .NET PDF library, watch this video:
 {% youtube "https://youtu.be/PvUdu1hpRLQ?si=xFFjpsJZv3s8AonV" %}
 
-**Steps to create PDF document in Console App**
+## Steps to Create a PDF Document in a .NET (Core) Console App
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -34,7 +34,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 By executing the program, you will get the PDF document as follows.
 ![Console output PDF document](GettingStarted_images/pdf-generation-output.png)
 
-## Create a simple PDF document using .NET Framework
+## Steps to Create a PDF Document in a .NET Framework Console App
 
 The following steps illustrates creating a simple Hello world PDF document in console application using .NET Framework.
 
@@ -42,8 +42,6 @@ The following steps illustrates creating a simple Hello world PDF document in co
 
 * Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
 * Install Visual Studio: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-
-**Steps to create PDF document using .NET Framework**
 
 Step 1: Create a new C# Console Application (.NET Framework) project.
 ![Console Application creation](Console_images/console-app-sample-creation.png)

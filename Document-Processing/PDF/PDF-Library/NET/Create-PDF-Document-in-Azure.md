@@ -13,17 +13,12 @@ The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/doc
 N> If this is your first time working with Azure, please refer to the dedicated Azure development resources. This section explains how to create a PDF document in C# using the .NET PDF library in Azure. 
 
 ## Prerequisites 
-* An active **Microsoft Azure subscription** is required. If you don't have one, please create a free account before starting.
 
-## Azure Services
-<table>
-<thead>
-<tr>
-<th>
-Azure Services<br/></th><th>
-NuGet package name<br/></th></tr></thead>
-<tr>
-<td>
-Azure App Service (Windows & Linux)<br/></td><td>
-{{'[Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/)' | markdownify}}</td></tr>
-</table>
+* An active **Microsoft Azure subscription** is required. If you don't have one, please create a free account before starting.
+* Install the required NuGet package: [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/).
+
+## Supported Azure Services
+
+* Azure App Service (Windows & Linux)
+* Azure Functions
+* Azure Functions in AKS (Azure Kubernetes Service)
