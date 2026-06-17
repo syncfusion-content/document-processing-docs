@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations Permission in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to use annotation permissions in Syncfusion Angular PDF Viewer using programmatic APIs.
+description: Learn here all about how to use annotation permissions in Angular PDF Viewer using programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

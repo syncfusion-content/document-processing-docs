@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Radius Measurement Annotations in Angular PDF Viewer \ Syncfusion
-description: Learn how to enable, draw, customize, and manage Radius measurement annotations in the Syncfusion Angular PDF Viewer.
+description: Learn how to enable, draw, customize, and manage Radius measurement annotations in the Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

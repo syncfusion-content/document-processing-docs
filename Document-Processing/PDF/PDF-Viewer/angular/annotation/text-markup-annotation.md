@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text markup annotation in Angular PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Syncfusion Angular PDF Viewer.
+description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Angular PDF Viewer.
 platform: document-processing
 control: Text Markup Annotation
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import form data in the Angular PDF Viewer component | Syncfusion
-description: Learn how to import PDF form field data (FDF, XFDF, JSON, and from an object) using the Syncfusion Angular PDF Viewer component.
+description: Learn how to import PDF form field data (FDF, XFDF, JSON, and from an object) using the Angular PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

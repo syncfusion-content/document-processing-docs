@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction UI interactions in Angular PDF Viewer | Syncfusion
-description: Learn about UI interactions in Redaction annotations of the Syncfusion Angular PDF Viewer component.
+description: Learn about UI interactions in Redaction annotations of the Angular PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

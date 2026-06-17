@@ -36,7 +36,7 @@ cd pdfviewer-app
 
 ## Installing Syncfusion® PDF Viewer package
 
-Install the Syncfusion Angular PDF Viewer package from npm:
+Install the Angular PDF Viewer package from npm:
 
 ```bash
 npm install @syncfusion/ej2-angular-pdfviewer --save
@@ -135,6 +135,8 @@ For older Angular versions, refer to the following guides:
 * [Create a Standalone PDF Viewer in Angular 17 and above with-no-standalone-flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-with-no-standalone-flag).
 * [Create a Standalone PDF Viewer in Angular 17 and above without --no-standalone flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-without-no-standalone-flag).
 * [Create a Standalone PDF Viewer in Angular 12](./how-to/create-a-standalone-pdf-viewer-in-angular-12)
+
+N> Looking for the full Angular PDF Viewer component overview, features, pricing, and documentation? Visit the [Angular PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) page.
 
 ## See also
 

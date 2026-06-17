@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stamp annotation in Angular PDF Viewer control | Syncfusion
-description: Learn about stamp annotations in the Syncfusion Angular PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps.
+description: Learn about stamp annotations in the Angular PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps.
 platform: document-processing
 control: Stamp annotation
 documentation: ug

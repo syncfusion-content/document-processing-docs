@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF form field flags in the Angular PDF Viewer | Syncfusion
-description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the Syncfusion Angular PDF Viewer.
+description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

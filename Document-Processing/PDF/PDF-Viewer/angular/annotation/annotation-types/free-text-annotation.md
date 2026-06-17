@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Free Text Annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, add, customize, and manage Free Text (text box) annotations in the Syncfusion Angular PDF Viewer.
+description: Learn how to enable, add, customize, and manage Free Text (text box) annotations in the Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

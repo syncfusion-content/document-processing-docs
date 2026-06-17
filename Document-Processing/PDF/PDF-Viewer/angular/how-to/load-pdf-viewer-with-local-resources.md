@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load PDF Viewer with Local Resources in Angular | Syncfusion
-description: Learn how to configure the Syncfusion Angular PDF Viewer to load PDF documents and PDFium resources locally instead of from CDN.
+description: Learn how to configure the Angular PDF Viewer to load PDF documents and PDFium resources locally instead of from CDN.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

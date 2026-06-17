@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to AWS S3 in Angular PDF Viewer Component | Syncfusion
-description: Learn here all about how to save PDF files to AWS S3 in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about how to save PDF files to AWS S3 in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save PDF files to AWS S3
 documentation: ug

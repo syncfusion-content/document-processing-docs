@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text selection API and events in Angular PDF Viewer | Syncfusion
-description: Reference documentation for text selection properties, methods, and events in the Syncfusion Angular PDF Viewer.
+description: Reference documentation for text selection properties, methods, and events in the Angular PDF Viewer.
 platform: document-processing
 control: Text selection
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Text selection API and events in Angular PDF Viewer
 
-This document provides the reference details for text selection APIs and events in the Syncfusion Angular PDF Viewer. It includes the available configuration property, programmatic methods, and event callbacks that allow applications to react to selection behavior.
+This document provides the reference details for text selection APIs and events in the Angular PDF Viewer. It includes the available configuration property, programmatic methods, and event callbacks that allow applications to react to selection behavior.
 
 ## Methods
 

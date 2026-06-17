@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu in Angular PDF Viewer | Syncfusion
-description: Learn about the contextual menu options in the Syncfusion Angular PDF Viewer, including default behavior and customization possibilities.
+description: Learn about the contextual menu options in the Angular PDF Viewer, including default behavior and customization possibilities.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

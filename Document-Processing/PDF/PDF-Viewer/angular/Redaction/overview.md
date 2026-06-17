@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction annotation in Angular PDF Viewer | Syncfusion
-description: Learn how to hide sensitive information with interactive and programmatic redaction using the Syncfusion Angular PDF Viewer.
+description: Learn how to hide sensitive information with interactive and programmatic redaction using the Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Redaction in Angular PdfViewer
 
-Redaction annotations hide confidential or sensitive information in a PDF. The Syncfusion Angular PDF Viewer (EJ2) enables marking regions or entire pages for redaction, customizing appearance, and permanently applying redaction with a single action.
+Redaction annotations hide confidential or sensitive information in a PDF. The Angular PDF Viewer (EJ2) enables marking regions or entire pages for redaction, customizing appearance, and permanently applying redaction with a single action.
 
 ## Enable the redaction toolbar
 

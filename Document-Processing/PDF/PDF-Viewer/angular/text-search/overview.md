@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text search and Extraction in Angular PDF Viewer | Syncfusion
-description: Overview of text search capabilities, UI features, programmatic APIs, events and text extraction in the Syncfusion Angular PDF Viewer.
+description: Overview of text search capabilities, UI features, programmatic APIs, events and text extraction in the Angular PDF Viewer.
 platform: document-processing
 control: Text search
 documentation: ug

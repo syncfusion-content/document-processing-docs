@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Programmatical Organize Pages in Angular PDF Viewer | Syncfusion
-description: Learn here all about Programmatic Support for Organize Pages in Syncfusion Angular PDF Viewer control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Programmatic Support for Organize Pages in Angular PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

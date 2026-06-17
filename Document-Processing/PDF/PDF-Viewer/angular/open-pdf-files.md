@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open PDF Files in Angular PDF Viewer Component | Syncfusion
-description: Learn here all about how to load PDF files from various locations in Syncfusion Angular PDF Viewer component, it's elements, and more.
+description: Learn here all about how to load PDF files from various locations in Angular PDF Viewer component, it's elements, and more.
 platform: document-processing
 control: Open PDF files
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open PDF Files in Angular PDF Viewer Component
 
-This article explains how to open and display PDF files in the Syncfusion Angular PDF Viewer from various sources. In this section, you can find the information about how to open PDF files from URL, database, local file system, and as base64 string.
+This article explains how to open and display PDF files in the Angular PDF Viewer from various sources. In this section, you can find the information about how to open PDF files from URL, database, local file system, and as base64 string.
 
 ## Opening a PDF from URL
 

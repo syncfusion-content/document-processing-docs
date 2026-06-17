@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Free text annotation in Angular PDF Viewer component | Syncfusion
-description: Learn about free text annotations in the Syncfusion Angular PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+description: Learn about free text annotations in the Angular PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 platform: document-processing
 control: Free text annotation
 documentation: ug

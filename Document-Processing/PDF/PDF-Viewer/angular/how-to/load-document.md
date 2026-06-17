@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load document in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Load document in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Load document in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Load document
 documentation: ug

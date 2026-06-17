@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Print Quality in Angular PDF Viewer | Syncfusion
-description: Learn how to customize print quality for PDF Documents in the Syncfusion Angular PDF Viewer component.
+description: Learn how to customize print quality for PDF Documents in the Angular PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug

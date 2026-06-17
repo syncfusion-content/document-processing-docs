@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Line Annotation (Shape) in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Line annotations in the Syncfusion Angular PDF Viewer.
+description: Learn how to enable, apply, customize, and manage Line annotations in the Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to import annotations in Syncfusion Angular PDF Viewer using UI options and programmatic APIs.
+description: Learn how to import annotations in Angular PDF Viewer using UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

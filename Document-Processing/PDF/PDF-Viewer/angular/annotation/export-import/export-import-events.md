@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import/Export events in Angular PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF Annotations in the Syncfusion Angular PDF Viewer component.
+description: Learn how to handle Import/Export events for PDF Annotations in the Angular PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

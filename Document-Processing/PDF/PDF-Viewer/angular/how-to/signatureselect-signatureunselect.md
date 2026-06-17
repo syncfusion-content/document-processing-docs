@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Signature selection events in Angular PDF Viewer component| Syncfusion
-description: Learn here all about signatureSelect and signatureUnselect event event in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about signatureSelect and signatureUnselect event event in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

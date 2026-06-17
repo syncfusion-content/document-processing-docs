@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the redaction toolbar in Angular PDF Viewer | Syncfusion
-description: Learn how to customize the redaction toolbar in the Syncfusion Angular PDF Viewer by showing or hiding default items.
+description: Learn how to customize the redaction toolbar in the Angular PDF Viewer by showing or hiding default items.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Redaction toolbar customization in Angular
 
-The redaction toolbar in the Syncfusion Angular PDF Viewer can be customized by rearranging items, hiding default items, or adding custom items. Custom items can be inserted at specific index positions within the existing toolbar.
+The redaction toolbar in the Angular PDF Viewer can be customized by rearranging items, hiding default items, or adding custom items. Custom items can be inserted at specific index positions within the existing toolbar.
 
 ## Enable the redaction toolbar
 

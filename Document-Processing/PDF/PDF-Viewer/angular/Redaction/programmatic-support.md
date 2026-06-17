@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction Programmatic support in Angular PDF Viewer | Syncfusion
-description: Learn how to add, delete, update, and apply redaction annotations programmatically in the Syncfusion Angular PDF Viewer.
+description: Learn how to add, delete, update, and apply redaction annotations programmatically in the Angular PDF Viewer.
 platform: document-processing
 control: PdfViewer
 documentation: ug

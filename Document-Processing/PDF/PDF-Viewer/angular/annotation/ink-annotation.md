@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ink annotation in Angular PDF Viewer component | Syncfusion
-description: Learn about ink annotations in the Syncfusion Angular PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+description: Learn about ink annotations in the Angular PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 platform: document-processing
 control: Ink annotation
 documentation: ug

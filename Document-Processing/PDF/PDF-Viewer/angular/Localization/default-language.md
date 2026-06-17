@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Angular PDF Viewer | Syncfusion
-description: Learn here all about the default language culture and localization in Syncfusion Angular PDF Viewer component.
+description: Learn here all about the default language culture and localization in Angular PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

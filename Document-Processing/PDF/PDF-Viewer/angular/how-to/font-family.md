@@ -1,7 +1,7 @@
 ---
 Layout: post
 title: Change the Font Family in Angular PDF Viewer component | Syncfusion
-description: Learn how to change the font family in the type signature in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn how to change the font family in the type signature in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change the Font Family in the Type Signature
 documentation: ug

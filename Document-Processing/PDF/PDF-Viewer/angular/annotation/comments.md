@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in Angular PDF Viewer | Syncfusion
-description: Learn how to add, reply to, edit, set status for, delete, and read comments for annotations in the Syncfusion Angular PDF Viewer.
+description: Learn how to add, reply to, edit, set status for, delete, and read comments for annotations in the Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

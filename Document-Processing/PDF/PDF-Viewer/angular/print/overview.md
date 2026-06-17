@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print PDF in Angular PDF Viewer | Syncfusion
-description: Enable and customize printing, configure print events, cancel print, and monitor printing in the Syncfusion Angular PDF Viewer component.
+description: Enable and customize printing, configure print events, cancel print, and monitor printing in the Angular PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug
@@ -19,7 +19,7 @@ Select **Print** in the built-in toolbar to open the browser print dialog.
 
 ## Enable or Disable Print in Angular PDF Viewer
 
-The Syncfusion Angular PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the [`enablePrint`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enableprint) property (`true` enables printing; `false` disables it).
+The Angular PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the [`enablePrint`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enableprint) property (`true` enables printing; `false` disables it).
 
 The following Angular example renders the PDF Viewer with printing disabled.
 

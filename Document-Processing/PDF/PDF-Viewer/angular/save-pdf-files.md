@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Saving PDF files in Angular PDF Viewer component | Syncfusion
-description: This page helps you to learn here all about saving PDF files in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: This page helps you to learn here all about saving PDF files in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Saving PDF files
 documentation: ug

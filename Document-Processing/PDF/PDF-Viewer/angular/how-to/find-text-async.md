@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Find Text Async Angular PDF Viewer component | Syncfusion
-description: Learn about the `findTextAsync` in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn about the `findTextAsync` in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Find Text Async
 documentation: ug

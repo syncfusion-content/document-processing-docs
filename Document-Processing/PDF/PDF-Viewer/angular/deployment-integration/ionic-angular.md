@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Syncfusion Angular PDF Viewer with Ionic | Syncfusion
-description: Short quickstart for integrating the Syncfusion Angular PDF Viewer into an Ionic Angular application for mobile and web deployment documentation.
+title: Angular PDF Viewer with Ionic | Syncfusion
+description: Short quickstart for integrating the Angular PDF Viewer into an Ionic Angular application for mobile and web deployment documentation.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion Angular PDF Viewer using Ionic Angular
+# Getting Started with Angular PDF Viewer using Ionic Angular
 
 ## Overview
 
-This guide covers integrating the Syncfusion Angular PDF Viewer into an Ionic Angular application. Ionic provides a cross-platform UI framework built on Angular.
+This guide covers integrating the Angular PDF Viewer into an Ionic Angular application. Ionic provides a cross-platform UI framework built on Angular.
 
 N> This guide assumes you have an existing Ionic Angular project (v8.0+) with Angular v20+. The PDF Viewer works seamlessly with Ionic's tab-based navigation and responsive design patterns.
 
@@ -43,7 +43,7 @@ ionic serve
 
 ### Step 3: Install Package
 
-Add the Syncfusion Angular PDF Viewer and its dependencies:
+Add the Angular PDF Viewer and its dependencies:
 
 ```bash
 npm install @syncfusion/ej2-angular-pdfviewer
@@ -129,7 +129,7 @@ ionic serve
 
 ## See Also
 
-- [Syncfusion Angular PDF Viewer Documentation](https://www.syncfusion.com/angular-components/angular-pdf-viewer)
+- [Angular PDF Viewer Documentation](https://www.syncfusion.com/angular-components/angular-pdf-viewer)
 - [Ionic Angular Documentation](https://ionicframework.com/docs/angular/overview)
 - [Angular Standalone Components](https://v17.angular.io/guide/standalone-components)
 - [Capacitor Documentation](https://capacitorjs.com/docs)

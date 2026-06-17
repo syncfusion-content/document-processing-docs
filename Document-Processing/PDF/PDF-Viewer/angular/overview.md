@@ -1,6 +1,6 @@
 ---
 title: Overview of Angular PDF Viewer Component | Syncfusion
-description: Learn here all about the Syncfusion Angular PDF Viewer, features, its capabilities, and supported platforms.
+description: Learn here all about the Angular PDF Viewer, features, its capabilities, and supported platforms.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
