@@ -559,4 +559,4 @@ The following example code illustrates how to write a Web API for export.
     }
 ```
 
->N[View ASP.NET Core Web AI sample in GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/ASP.NET%20Core).
+>N[View ASP.NET Core Web API sample in GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/ASP.NET%20Core).
