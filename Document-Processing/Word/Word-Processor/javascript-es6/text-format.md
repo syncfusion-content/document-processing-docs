@@ -219,7 +219,9 @@ Refer to the following example.
         
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/text-format-cs1" %}
 
+## Online Demo
 
+Explore how to apply text formatting in Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/character-formatting.html).
 
 ## See Also
 

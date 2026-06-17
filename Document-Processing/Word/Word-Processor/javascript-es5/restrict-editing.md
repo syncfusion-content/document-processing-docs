@@ -55,6 +55,10 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/data-protection-cs2" %}
 
+## Online Demo
+
+Explore how to restrict editing and protect Word documents using the JavaScript (ES5) Document Editor in this live demo https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/document-protection.html.
+
 ### See Also
 
 * [How to protect the document in form filling mode](./form-fields#protect-the-document-in-form-filling-mode)
