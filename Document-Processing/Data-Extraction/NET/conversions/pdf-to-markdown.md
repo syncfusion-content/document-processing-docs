@@ -229,7 +229,7 @@ End Using
 
 ## Customize image saving
 
-The [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event in the [SaveOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html) class (from the Syncfusion® DocIO library, used within Smart Data Extractor) allows control over how images are handled when generating a Markdown string. With this event, you can:
+The [ImageNodeVisited](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html#Syncfusion_DocIO_DLS_SaveOptions_ImageNodeVisited) event in the [SaveOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SaveOptions.html) class (from the Syncfusion® Markdown library, used within Smart Data Extractor) allows control over how images are handled when generating a Markdown string. With this event, you can:
 
 * Customize image names and storage paths, and save images externally using a FileStream.
 * Replace Base64 content with a file path or URL for optimized storage and cloud reference.
