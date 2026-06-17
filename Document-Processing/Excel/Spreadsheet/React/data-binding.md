@@ -9,7 +9,7 @@ documentation: ug
 
 # Data binding in React Spreadsheet component
 
-The Spreadsheet uses [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) or JavaScript object array collection.
+The [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) uses [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started) or JavaScript object array collection.
 
 To get start quickly with Data Binding, you can check on this video:
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in React Spreadsheet component
 
-The Spreadsheet component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Spreadsheet component is outlined below.
 
@@ -115,4 +115,4 @@ The accessibility compliance of the Spreadsheet component is shown in the follow
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](https://ej2.syncfusion.com/react/documentation/common/accessibility)
+* [Accessibility in React components](https://ej2.syncfusion.com/react/documentation/common/accessibility)
