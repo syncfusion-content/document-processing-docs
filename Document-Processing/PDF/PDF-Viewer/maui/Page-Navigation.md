@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Page Navigation in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to navigate pages in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control programmatically and through the UI.
+description: Learn how to navigate pages in the .NET MAUI PDF Viewer (SfPdfViewer) control programmatically and through the UI.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

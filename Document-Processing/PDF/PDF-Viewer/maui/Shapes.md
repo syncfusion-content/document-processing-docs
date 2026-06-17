@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shape Annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to add and manage shape annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to add and manage shape annotations in the .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import and Export Form Data in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to import and export PDF form data using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to import and export PDF form data using the .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -20,8 +20,8 @@ The following formats are supported for both import and export:
 |---|---|
 | XFDF | XML Forms Data Format — standard format compatible with most PDF viewers. |
 | FDF | Forms Data Format — standard format compatible with most PDF viewers. |
-| JSON | Custom format, compatible with Syncfusion PDF Viewers (WPF, Flutter, JavaScript, etc.). |
-| XML | Custom format, compatible with Syncfusion PDF Viewers (WPF, Flutter, JavaScript, etc.). |
+| JSON | Custom format, compatible with .NET MAUI PDF Viewers (WPF, Flutter, JavaScript, etc.). |
+| XML | Custom format, compatible with .NET MAUI PDF Viewers (WPF, Flutter, JavaScript, etc.). |
 
 The required format can be selected from the [DataFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.DataFormat.html) enumeration.
 

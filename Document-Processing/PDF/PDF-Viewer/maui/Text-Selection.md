@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text Selection in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to select text from a PDF document and copy it to the clipboard using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to select text from a PDF document and copy it to the clipboard using the .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

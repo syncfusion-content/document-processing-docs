@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open a Document from URL in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to open a PDF document from a URL in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to open a PDF document from a URL in the .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

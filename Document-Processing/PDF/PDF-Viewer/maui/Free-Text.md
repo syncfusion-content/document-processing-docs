@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Free Text Annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to add and manage free text annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn how to add and manage free text annotations in the .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

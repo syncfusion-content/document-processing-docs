@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Filling Overview in .NET MAUI PDF Viewer | Syncfusion
-description: Learn about the PDF form filling feature and supported form field types in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn about the PDF form filling feature and supported form field types in the .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

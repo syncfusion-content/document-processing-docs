@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn about the annotation types and functionalities available in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn about the annotation types and functionalities available in the .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

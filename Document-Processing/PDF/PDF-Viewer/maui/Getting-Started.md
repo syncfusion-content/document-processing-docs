@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to set up and configure the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control in your application.
+description: Learn how to set up and configure the .NET MAUI PDF Viewer (SfPdfViewer) control in your application.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -603,3 +603,5 @@ Now that the PDF Viewer is running, here is a suggested learning path to explore
 | 7 | **Redact sensitive content** | Permanently remove confidential text or images before sharing. → [Redaction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/redaction) |
 
 * For migration from Xamarin to .NET MAUI, please follow the [Migration Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/migration).
+
+N> Looking for the full .NET MAUI PDF Viewer component overview, features, pricing, and documentation? Visit the [.NET MAUI PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/getting-started) page
