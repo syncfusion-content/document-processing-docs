@@ -56,7 +56,7 @@ End Using
 
 {% endtabs %}
 
-T> You can also save the markdown file as [HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html), [PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf), [Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image), and [Word](https://help.syncfusion.com/document-processing/word/conversions/markdown-to-word-conversion)
+T> You can also save the markdown file as [PDF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/overview), [Image](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/overview), and [Word](https://help.syncfusion.com/document-processing/word/conversions/markdown-to-word-conversion)
 
 N> 1. Hook the event handler before opening a PowerPoint presentation as per the below code example.
 N> 2. In Markdown to PowerPoint Presentation conversion, invalid images are replaced with a red "X" image instead of the original image.

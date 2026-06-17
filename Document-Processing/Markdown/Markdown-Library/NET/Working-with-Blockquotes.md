@@ -56,7 +56,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Applying Blockquote Style Using ApplyParagraphStyle
 
@@ -102,7 +102,7 @@ The following code example demonstrates how to create a blockquote using the `Ap
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Adding Leading Space
 
@@ -184,7 +184,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 
 ## Creating Nested Blockquotes
@@ -271,7 +271,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Applying Text Formatting in a Blockquote
 
@@ -389,7 +389,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Modifying an Existing Blockquote
 
@@ -471,7 +471,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.
+
 
 ## Removing a Blockquote
 
@@ -534,4 +534,3 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on GitHub.

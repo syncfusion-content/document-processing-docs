@@ -316,6 +316,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-core/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-core/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/asp-net-core/feature-module">Feature Modules</a></li>
@@ -556,6 +557,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/asp-net-mvc/feature-module">Feature Modules</a></li>
@@ -761,6 +763,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/angular/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/angular/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/angular/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/angular/ui-builder-skill">Agentic UI Builder Skill</a></li>
@@ -1120,13 +1123,15 @@
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/document-handling/retrieve-viewer-instance">Retrieve the Viewer Instance </a></li>
 								</ul>
 							</li>
-							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization-overview">Toolbar Customization</a>
+							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/overview">Toolbar</a>
 								<ul>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization/primary-toolbar">Primary Toolbar</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization/annotation-toolbar">Annotation Toolbar</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization/form-designer-toolbar">Form Designer Toolbar</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization/redaction-toolbar">Redaction Toolbar</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization/mobile-toolbar">Mobile Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/primary-toolbar">Primary Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/annotation-toolbar">Annotation Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/form-designer-toolbar">Form Designer Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/organize-pages/toolbar">Organize Pages Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/redaction-toolbar">Redaction Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/mobile-toolbar">Mobile Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/custom-toolbar">Custom Toolbar</a></li>
 								</ul>
 							</li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/command-manager">Command Manager</a></li>
@@ -1141,7 +1146,18 @@
 								</ul>
 							</li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/magnification">Magnification</a></li>
-							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/text-search">Text Search</a></li>
+							<li><a href="/document-processing/pdf/pdf-viewer/blazor/text-search/overview">Text Search</a>
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/text-search/text-search-features">Text Search</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/text-search/text-search-events">Text Search Events</a></li>
+								</ul>
+							</li>
+							<li><a href="/document-processing/pdf/pdf-viewer/blazor/text-selection/overview">Text Selection</a>
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/text-selection/enable-text-selection">Toggle text selection</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/text-selection/text-selection-api-events">Text Selection API and Events</a></li>
+								</ul>
+							</li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/interaction">Interaction Mode</a></li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/hand-written-signature">Handwritten Signature</a></li>
 							<li>Annotations
@@ -1177,7 +1193,7 @@
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/sticky-notes-annotation">Sticky Notes</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/free-text-annotation">Free Text</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/ink-annotation">Ink</a></li>
-									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar-customization/annotation-toolbar">Toolbar</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/toolbar/annotation-toolbar">Toolbar</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/create-modify-annotation">Create and Modify Annotation</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/customize-annotation">Customize Annotation</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/annotation/delete-annotation">Remove Annotation</a></li>
@@ -1241,7 +1257,13 @@
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/organize-pages/events">Events</a></li>
 								</ul>
 							</li>
-							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/print">Print</a></li>
+							<li><a href="/document-processing/pdf/pdf-viewer/blazor/print/overview">Print</a>
+								<ul>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/print/print-modes">Print Modes</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/print/enable-print-rotation">Print rotation</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/blazor/print/events">Events</a></li>
+								</ul>
+							</li>
 							<li> <a href="/document-processing/pdf/pdf-viewer/blazor/document-security-overview">Document security</a>
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/blazor/document-security/password-protected">Password Protected</a></li>
@@ -1306,6 +1328,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/react/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/react/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/react/ui-builder-skill">Agentic UI Builder Skill</a></li>
@@ -1628,6 +1651,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/vue/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/vue/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/vue/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/vue/getting-started-application">Vue 3</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/vue/quasar">Quasar</a></li>
 								</ul>
@@ -1829,6 +1853,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es5/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es5/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es5/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/javascript-es5/feature-module">Feature Modules</a></li>
@@ -2098,6 +2123,7 @@
 								<ul>
 									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es6/getting-started">with Standalone PDF Viewer</a></li>
 									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es6/getting-started-with-server-backed">with Server-Backed PDF Viewer</a></li>
+									<li><a href="/document-processing/pdf/pdf-viewer/javascript-es6/server-to-standalone">Migrating from Server-Backed to Standalone</a></li>
 								</ul>
 							</li>
 							<li><a href="/document-processing/pdf/pdf-viewer/javascript-es6/module-injection">Module Injection</a></li>

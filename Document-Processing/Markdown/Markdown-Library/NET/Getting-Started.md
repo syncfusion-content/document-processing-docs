@@ -265,7 +265,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+
 
 The resultant Markdown document looks as follows.
 
