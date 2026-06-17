@@ -7,7 +7,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Angular PDF Viewer (Server-Backed)
+# Getting Started with Angular PDF Viewer (Server-Backed)
 
 This guide explains how to create and run the **Angular PDF Viewer in server-backed mode**. In this mode, PDF rendering is handled by a server-side web service, while the Angular application acts as the client.
 
@@ -38,8 +38,14 @@ cd pdfviewer-app
 
 Install the Syncfusion Angular PDF Viewer package from npm:
 
-```bash
+```
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install @syncfusion/ej2-angular-pdfviewer --save
+
+{% endhighlight %}
+{% endtabs %}
 ```
 
 ## Adding CSS references
@@ -84,7 +90,7 @@ import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
    providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
                ThumbnailViewService, ToolbarService, NavigationService,
                TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
+               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService],
   template: `
     <ejs-pdfviewer
       id="pdfViewer"

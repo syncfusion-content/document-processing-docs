@@ -7,7 +7,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Angular Standalone PDF Viewer
+# Getting Started with Angular Standalone PDF Viewer
 
 This guide explains how to create a simple **Angular Standalone PDF Viewer** application and demonstrates the basic usage of the Syncfusion PDF Viewer component.
 
@@ -22,7 +22,13 @@ Use [Angular CLI](https://angular.dev/installation) to create a new Angular appl
 Install Angular CLI globally, using the following command:
 
 ```
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install -g @angular/cli
+
+{% endhighlight %}
+{% endtabs %}
 ```
 
 Create a new Angular application using the following commands:

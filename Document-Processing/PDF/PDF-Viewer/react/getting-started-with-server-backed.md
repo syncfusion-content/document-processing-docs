@@ -44,7 +44,13 @@ cd my-app
 Install the [React PDF Viewer](https://www.npmjs.com/package/@syncfusion/ej2-react-pdfviewer) package from npm using the following command:
 
 ```
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install @syncfusion/ej2-react-pdfviewer --save
+
+{% endhighlight %}
+{% endtabs %}
 ```
 
 ## Adding PDF Viewer component and the CSS reference
@@ -53,14 +59,14 @@ Add the React PDF Viewer component’s CSS reference as given below in `src/inde
 
 {% tabs %}
 {% highlight css tabtitle="src/index.css" %}
-   @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-   @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-   @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-   @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-   @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-   @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-   @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-   @import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,7 +79,7 @@ Add the following import statements for the PDF Viewer along with the default im
 
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
       BookmarkView,ThumbnailView, Print, TextSelection, Annotation, TextSearch,
-      FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+      FormFields, FormDesigner, PageOrganizer, Inject} from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
     return (<div>
@@ -100,26 +106,20 @@ function App() {
 {% highlight js tabtitle="TSX" %}
 {% raw %}
 
-import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-         BookmarkView,ThumbnailView, Print, TextSelection, Annotation, TextSearch,
-         FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
-export function App() {
-return (<div>
- <div className='control-section'>
-     <PdfViewerComponent
-      id="container"
-      // Specifies the path or Base64 string of the PDF document to be loaded in the PDF Viewer.
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+         PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+ 
+export default function App() {
+  return (
+    <PdfViewerComponent id="container"
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      // Specifies the backend service URL that processes and streams PDF data
-      serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-      style={{ 'height': '640px' }}>
-          // Specifies the modules required for the PDF Viewer
-         <Inject services={[ Toolbar, Magnification, Navigation, Annotation,
-          LinkAnnotation, BookmarkView,ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields,FormDesigner ]}/>
-     </PdfViewerComponent>
- </div>
-</div>);
+      resourceUrl="https://cdn.syncfusion.com/ej2/dist/ej2-pdfviewer-lib">
+      <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+                          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+                          FormFields, FormDesigner, PageOrganizer]}/>
+    </PdfViewerComponent>
+  );
 }
 
 {% endraw %}
