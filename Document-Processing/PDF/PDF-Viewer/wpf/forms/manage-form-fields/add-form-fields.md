@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add form fields in the WPF PDF Viewer | Syncfusion
-description: Learn how to add various PDF form fields programmatically using the Syncfusion WPF PDF Viewer API to create interactive form fields and build dynamic PDF forms.
+description: Learn how to add various PDF form fields programmatically using the WPF PDF Viewer API to create interactive form fields and build dynamic PDF forms.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

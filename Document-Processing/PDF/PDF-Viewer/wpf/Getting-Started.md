@@ -239,3 +239,5 @@ public MainWindow()
 {% endtabs %}
 
 N> You can refer to our [WPF PDF Viewer](https://www.syncfusion.com/wpf-controls/pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [WPF PDF Viewer example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the pdfviewer.
+
+N> Looking for the full WPF PDF Viewer component overview, features, pricing, and documentation? Visit the [WPF PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/getting-started) page.
