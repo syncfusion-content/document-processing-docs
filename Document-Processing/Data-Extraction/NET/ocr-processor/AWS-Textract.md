@@ -28,13 +28,16 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assem
 
 Step 3: Include the following namespaces in the Program.cs file. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Use the following code sample to perform OCR on a PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class with AWS Textract.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 //Initialize the OCR processor.
 using (OCRProcessor processor = new OCRProcessor())
@@ -59,11 +62,13 @@ using (OCRProcessor processor = new OCRProcessor())
     fileStream.Dispose();
 }
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Create a new class named <b>AWSExternalOcrEngine</b> and implement the IOcrEngine interface. Get the image stream from the PerformOCR method and process it with an external OCR engine. This will return the OCRLayoutResult for the image.
 
 N> Provide a valid Secret Access Key to work with AWS Textract. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 class AWSExternalOcrEngine : IOcrEngine
@@ -146,6 +151,7 @@ class AWSExternalOcrEngine : IOcrEngine
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get a PDF document as follows. 
 ![Output PDF](OCR-Images/Output.png)
