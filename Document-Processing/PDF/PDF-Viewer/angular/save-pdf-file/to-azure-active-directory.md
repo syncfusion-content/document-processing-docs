@@ -94,7 +94,7 @@ The Angular PDF Viewer component supports loading and saving PDF files using Azu
 ### Step 6: Client-Side Configuration
 
 1. Run the Angular Sample:
-   - Start the Angular sample that includes the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
+   - Start the Angular sample that includes the Angular PDF Viewer.
 
 2. Load PDF from AAD:
    - When the user clicks the **Load from AAD** button, the Angular client will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
