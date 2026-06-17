@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Vue PDF Viewer | Syncfusion
-description: Learn how to localize the Syncfusion Vue PDF Viewer using culture-specific strings, configure the locale property, and load translations with L10n.
+description: Learn how to localize the Vue PDF Viewer using culture-specific strings, configure the locale property, and load translations with L10n.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

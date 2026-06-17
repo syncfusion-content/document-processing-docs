@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in Vue PDF Viewer | Syncfusion
-description: Learn how to enable, customize, and monitor printing functionality in the Syncfusion Vue PDF Viewer component.
+description: Learn how to enable, customize, and monitor printing functionality in the Vue PDF Viewer component.
 control: Print
 platform: document-processing
 documentation: ug

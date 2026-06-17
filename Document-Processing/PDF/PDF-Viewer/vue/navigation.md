@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Navigation in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Navigation in Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Navigation
 platform: document-processing
 documentation: ug

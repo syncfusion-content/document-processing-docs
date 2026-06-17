@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text selection in Vue PDF Viewer | Syncfusion
-description: Learn how to configure text selection, react to selection events, and manage copy workflows in the Syncfusion Vue PDF Viewer component.
+description: Learn how to configure text selection, react to selection events, and manage copy workflows in the Vue PDF Viewer component.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

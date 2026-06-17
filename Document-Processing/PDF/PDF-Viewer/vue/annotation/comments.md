@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in Vue PDF Viewer component | Syncfusion
-description: Learn about comments, replies, and status in the Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn about comments, replies, and status in the Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Comments
 platform: document-processing
 documentation: ug

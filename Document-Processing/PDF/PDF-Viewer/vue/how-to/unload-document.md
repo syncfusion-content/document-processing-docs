@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unload document in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Unload document in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Unload document in Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Unload document
 platform: document-processing
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to OneDrive in Vue PDF Viewer | Syncfusion
-description: Learn how to save PDF files to OneDrive using the Syncfusion Vue PDF Viewer component with a server-backed web service.
+description: Learn how to save PDF files to OneDrive using the Vue PDF Viewer component with a server-backed web service.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Save PDF file to One Drive
 
-This article describes how to save a PDF file to OneDrive from the Syncfusion Vue PDF Viewer using a server-side web service. Follow the steps below.
+This article describes how to save a PDF file to OneDrive from the Vue PDF Viewer using a server-side web service. Follow the steps below.
 
 **Step 1:** Create a Microsoft Graph API application
 
@@ -18,7 +18,7 @@ Create a Microsoft Graph API application, and obtain the application (client) ID
 
 **Step 2:** Create a PDF Viewer sample in Vue
 
-Create a simple PDF Viewer sample in Vue by following the Syncfusion PDF Viewer for Vue [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide. This establishes the application structure required for the integration.
+Create a simple PDF Viewer sample in Vue by following the Syncfusion PDF Viewer [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide. This establishes the application structure required for the integration.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 

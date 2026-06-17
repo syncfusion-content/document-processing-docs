@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Page navigation in Vue PDF Viewer | Syncfusion
-description: Learn how to configure page navigation in the Syncfusion Vue PDF Viewer component using toolbar commands and custom UI.
+description: Learn how to configure page navigation in the Vue PDF Viewer component using toolbar commands and custom UI.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

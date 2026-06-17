@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Organize pages in Vue PDF Viewer | Syncfusion
-description: Learn how to reorder, rotate, insert, delete, and save pages with the Syncfusion Vue PDF Viewer component.
+description: Learn how to reorder, rotate, insert, delete, and save pages with the Vue PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

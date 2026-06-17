@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get Base64 from loaded PDF in Vue PDF Viewer | Syncfusion
-description: Learn how to retrieve the Base64 value of a loaded PDF in the Syncfusion Vue PDF Viewer using saveAsBlob and FileReader.
+description: Learn how to retrieve the Base64 value of a loaded PDF in the Vue PDF Viewer using saveAsBlob and FileReader.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ### Overview
 
-This guide shows how to obtain the Base64-encoded value of a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using Vue. Producing a Base64 string is useful for sending the PDF to a server, embedding it in JSON payloads, or client-side processing.
+This guide shows how to obtain the Base64-encoded value of a PDF document loaded in the Vue PDF Viewer using Vue. Producing a Base64 string is useful for sending the PDF to a server, embedding it in JSON payloads, or client-side processing.
 
 ### How to retrieve the Base64 value
 
@@ -178,6 +178,6 @@ export default {
 
 ### Conclusion
 
-By implementing these steps in the Vue component, a PDF document loaded in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer can be converted into a Base64-encoded data URL when a button is clicked. This facilitates the manipulation or transfer of PDF data as needed.
+By implementing these steps in the Vue component, a PDF document loaded in the Vue PDF Viewer can be converted into a Base64-encoded data URL when a button is clicked. This facilitates the manipulation or transfer of PDF data as needed.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)

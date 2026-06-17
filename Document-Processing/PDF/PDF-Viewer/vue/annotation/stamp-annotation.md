@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stamp annotation in Vue PDF Viewer control | Syncfusion
-description: Learn about stamp annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps.
+description: Learn about stamp annotations in the Vue PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps.
 control: Stamp annotation
 platform: document-processing
 documentation: ug
@@ -528,7 +528,7 @@ export default {
 
 ## Edit the existing stamp annotation programmatically
 
-To modify an existing stamp annotation in the Syncfusion® PDF Viewer programmatically, use the **editAnnotation()** method.
+To modify an existing stamp annotation in the Vue PDF Viewer programmatically, use the **editAnnotation()** method.
 
 Here is an example of using editAnnotation():
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Feature modules in Vue PDF Viewer | Syncfusion
-description: Learn to inject feature modules in Syncfusion Vue PDF Viewer to enable toolbar, search, forms, annotations, and printing.
+description: Learn to inject feature modules in Vue PDF Viewer to enable toolbar, search, forms, annotations, and printing.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

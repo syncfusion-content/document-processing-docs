@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hyperlink navigation in Vue PDF Viewer | Syncfusion
-description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for Vue.
+description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Vue PDF Viewer control for Vue.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

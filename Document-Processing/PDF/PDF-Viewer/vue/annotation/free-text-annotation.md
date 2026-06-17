@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Free text annotation in Vue PDF viewer component | Syncfusion
-description: Learn about free text annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+description: Learn about free text annotations in the Vue PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 control: Free text annotation
 platform: document-processing
 documentation: ug

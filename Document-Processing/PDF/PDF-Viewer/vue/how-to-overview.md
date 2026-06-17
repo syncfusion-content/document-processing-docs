@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FAQs for Vue PDF Viewer Control | Syncfusion
-description: Find answers to common questions related to using and customizing the Syncfusion Vue PDF Viewer control.
+description: Find answers to common questions related to using and customizing the Vue PDF Viewer control.
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filling PDF Forms in Vue PDF Viewer
 
-The Syncfusion PDF Viewer supports three form-filling approaches:
+The Vue PDF Viewer supports three form-filling approaches:
 
 1.	[Filling Form Fields Programmatically](#fill-pdf-forms-programmatically)
 

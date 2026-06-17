@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Getting started with Vue PDF Viewer | Syncfusion
-description: Learn how to scaffold a Vite project and integrate the Syncfusion Vue PDF Viewer using the Composition or Options API.
+description: Learn how to scaffold a Vite project and integrate the Vue PDF Viewer using the Composition or Options API.
 control: Getting started application
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Syncfusion PDF Viewer in Vue 3
+# Getting started with Vue PDF Viewer in Vue 3
 
-This guide demonstrates how to create a Vue 3 application with Vite and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This guide demonstrates how to create a Vue 3 application with Vite and integrate the Vue PDF Viewer component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## API Approaches
 
@@ -21,7 +21,7 @@ This guide demonstrates how to create a Vue 3 application with Vite and integrat
 
 ## Prerequisites
 
-Install Node.js (version 18 or later recommended) along with npm or Yarn before creating the project. Review the [system requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements) to confirm supported platforms.
+Install Node.js (version 18 or later recommended) along with npm or Yarn before creating the project. Review the [system requirements for Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements) to confirm supported platforms.
 
 ## Set up the Vite project
 
@@ -289,7 +289,9 @@ yarn run dev
 
 The application renders the PDF Viewer as shown below:
 
-![Syncfusion Vue PDF Viewer running in a Vite app](./images/Vue3-pdf-viewer-demo.png)
+![Vue PDF Viewer running in a Vite app](./images/Vue3-pdf-viewer-demo.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20Vue-3%20-%20Standalone).
+
+N> Looking for the full Vue PDF Viewer component overview, features, pricing, and documentation? Visit the [Vue PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started-application) page.
 

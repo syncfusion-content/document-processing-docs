@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation Events in Vue PDF Viewer control | Syncfusion
-description: Learn here all about Annotation Events in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Annotation Events in Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Annotation Events
 platform: document-processing
 documentation: ug

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Enable or disable text selection in PDF Viewer
 
-The Syncfusion PDF Viewer exposes the `enableTextSelection` property to control whether users can select text within the displayed PDF document. This setting can be configured at initialization and toggled programmatically at runtime.
+The Vue PDF Viewer exposes the `enableTextSelection` property to control whether users can select text within the displayed PDF document. This setting can be configured at initialization and toggled programmatically at runtime.
 
 ## Configure text selection on initialization
 

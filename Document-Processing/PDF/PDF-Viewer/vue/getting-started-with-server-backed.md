@@ -14,7 +14,7 @@ This section explains how to create the **PDF Viewer** component and configure i
 
 ## Prerequisites
 
-[System requirements for Syncfusion® Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Create a Vue Application
 
@@ -207,6 +207,8 @@ N> For hosting the web service on Linux, ensure you include the [SkiaSharp.Nativ
 | --- | --- |
 | AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
 | AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
+
+N> Looking for the full Vue PDF Viewer component overview, features, pricing, and documentation? Visit the [Vue PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started-with-server-backed) page.
 
 ## See also
 

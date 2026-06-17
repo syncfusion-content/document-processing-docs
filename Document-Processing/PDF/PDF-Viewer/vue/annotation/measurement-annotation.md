@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Measurement annotation in Vue PDF Viewer control | Syncfusion
-description: Learn about measurement annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): distance, perimeter, area, radius, and volume.
+description: Learn about measurement annotations in the Vue PDF Viewer (Essential JS 2): distance, perimeter, area, radius, and volume.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

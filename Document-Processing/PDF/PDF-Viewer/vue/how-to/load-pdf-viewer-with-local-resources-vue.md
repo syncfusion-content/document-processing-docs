@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load PDF Viewer with Local Resources in Vue | Syncfusion
-description: Learn how to configure the Syncfusion Vue PDF Viewer to load PDF documents and resources locally instead of using CDN resources.
+description: Learn how to configure the Vue PDF Viewer to load PDF documents and resources locally instead of using CDN resources.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

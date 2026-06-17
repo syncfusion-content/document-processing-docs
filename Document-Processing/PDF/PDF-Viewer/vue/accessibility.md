@@ -386,4 +386,4 @@ The PDF Viewer component's accessibility levels are ensured through an [accessib
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components](../common/accessibility)
+* [Accessibility in Vue components](../common/accessibility)
