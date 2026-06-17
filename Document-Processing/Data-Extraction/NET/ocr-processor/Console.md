@@ -238,6 +238,6 @@ Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to 
 By executing the program, you will get the PDF document as follows
 ![Console output PDF document](OCR-Images/OCR-output-image.png)
     
-A complete working sample can be downloaded from GitHub.
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Console).
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
