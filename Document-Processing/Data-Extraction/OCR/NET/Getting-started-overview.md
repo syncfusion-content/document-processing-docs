@@ -1,173 +1,14 @@
 ---
-title: Perform OCR on PDF features | Syncfusion
-description: Learn how to perform OCR on scanned PDF documents and images with different tesseract versions using Syncfusion .NET OCR library.  
+title: Getting started with OCR processor | Syncfusion
+description: This section provides an introduction to getting started with the OCR processor and explains the basic concepts and workflow involved 
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: Assemblies 
 ---
+# Getting started with OCR processor
 
-# Working with Optical Character Recognition (OCR)
-
-Optical character recognition (OCR) is a technology used to convert scanned paper documents in the form of PDF files or images into searchable and editable data.  
-
-The [Syncfusion<sup>&reg;</sup> OCR processor library](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/ocr-process) has extended support to process OCR on scanned PDF documents and images with the help of Google’s [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
-
-An inbuilt `image preprocessor` has been added to the OCR to prepare images for optimal recognition. This step ensures cleaner input and reduces OCR errors. The preprocessor supports the following enhancements:
-
-* **Convert to Grayscale** – Simplifies image data by removing color information, making text easier to detect.
-* **Deskew** – Corrects tilted or rotated text for proper alignment.
-* **Denoise** – Removes speckles and artifacts that can interfere with character recognition.
-* **Apply Contrast Adjustment** – Enhances text visibility against the background.
-* **Apply Binarize** – Converts images to black-and-white for sharper text edges, using advanced thresholding methods
-
-The Syncfusion<sup>&reg;</sup> OCR processor library works seamlessly in various platforms: Azure App Services, Azure Functions, AWS Textract, Docker, WinForms, WPF, Blazor, ASP.NET MVC, ASP.NET Core with Windows, MacOS and Linux. 
-
-N> Starting with v20.1.0.x, if you reference Syncfusion<sup>&reg;</sup> OCR processor assemblies from the trial setup or the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn more about registering the Syncfusion<sup>&reg;</sup> license key in your application to use its components.
-
-## Key features 
-
-* Create a searchable PDF from scanned PDF.
-* Zonal text extraction from the scanned PDF.
-* Preserve Unicode characters.
-* Extract text from the image.
-* Create a searchable PDF from large scanned PDF documents. 
-* Create a searchable PDF from rotated scanned PDF.
-* Get OCRed text and its bounds from a scanned PDF document. 
-* Native call.
-* Customizing the temp folder.
-* Performing OCR with different Page Segmentation Mode.
-* Performing OCR with different OCR Engine Mode.
-* White List.
-* Black List.
-* Image into searchable PDF or PDF/A.
-* Improved accessibility.
-* Post-processing.
-* Compatible with .NET Framework 4.5 and above.
-* Compatible with .NET Core 2.0 and above.
-
-## Install .NET OCR library
-
-Include the OCR library in your project using two approaches.
-
-* NuGet Package Required (Recommended)
-* Assemblies Required 
-
-N> Starting with v21.1.x, If you reference the Syncfusion<sup>&reg;</sup> OCR processor library from the NuGet feed, the package structure has been changed. The TesseractBinaries and Tesseract language data paths has been automatically added and do not need to add it manually.
-
-### NuGet Package Required (Recommended)
-
-Directly install the NuGet package to your application from [nuget.org](https://www.nuget.org/).
-
-<table>
-<tr>
-<thead>
-<th><b>Platform(s)</b></th>
-<th><b>NuGet Package</b></th>
-</thead>
-</tr>
-<tr>
-<td>
-Windows Forms<br/>
-Console Application (Targeting .NET Framework)
-</td>
-<td>
-{{'[Syncfusion.Pdf.OCR.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.WinForms)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-WPF
-</td>
-<td>
-{{'[Syncfusion.Pdf.OCR.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.Wpf)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET
-</td>
-<td>
-{{'[Syncfusion.Pdf.OCR.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.AspNet)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET MVC5
-</td>
-<td>
-{{'[Syncfusion.Pdf.OCR.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.Pdf.OCR.AspNet.Mvc5)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET Core (Targeting NET Core) <br/>
-Console Application (Targeting .NET Core) <br/> 
-Blazor
-</td>
-<td>
-{{'[Syncfusion.PDF.OCR.Net.Core](https://www.nuget.org/packages/Syncfusion.PDF.OCR.Net.Core)'| markdownify }}
-</td>
-</tr>
-</table>
-
-### Assemblies Required
-
-Get the following required assemblies by downloading the OCR library installer. Download and install the OCR library for Windows, Linux, and Mac respectively. Please refer to the advanced installation steps for more details.
-
-#### Syncfusion<sup>&reg;</sup> assemblies
-
-<table>
-<tr>
-<thead>
-<th><b>Platform(s)</b></th>
-<th><b>Assemblies</b></th>
-</thead>
-</tr>
-<tr>
-<td>
-Windows Forms, WPF, ASP.NET, and ASP.NET MVC 
-</td>
-<td>
-<ul>
-<li>Syncfusion.OCRProcessor.Base.dll</li>
-<li>Syncfusion.Pdf.Base.dll</li>
-<li>Syncfusion.Compression.Base.dll</li>
-<li>Syncfusion.ImagePreProcessor.Base.dll</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-.NET Standard 2.0 
-</td>
-<td>
-<ul>
-<li>Syncfusion.OCRProcessor.Portable.dll</li>
-<li>Syncfusion.PdfImaging.Portable.dll</li>
-<li>Syncfusion.Pdf.Portable.dll</li>
-<li>Syncfusion.Compression.Portable.dll</li>
-<li>{{'[SkiaSharp](https://www.nuget.org/packages/SkiaSharp/3.119.1)'| markdownify }} package</li>
-<li>Syncfusion.ImagePreProcessor.Portable.dll</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-.NET 8/.NET 9/.NET 10
-</td>
-<td>
-<ul>
-<li>Syncfusion.OCRProcessor.NET.dll</li>
-<li>Syncfusion.PdfImaging.NET.dll</li>
-<li>Syncfusion.Pdf.NET.dll</li>
-<li>Syncfusion.Compression.NET.dll</li>
-<li>{{'[SkiaSharp](https://www.nuget.org/packages/SkiaSharp/3.119.1)'| markdownify }} package</li>
-<li>Syncfusion.ImagePreProcessor.NET.dll</li>
-</ul>
-</td>
-</tr>
-</table>
+To quickly get started with extracting text from scanned PDF documents in .NET using the Syncfusion<sup>&reg;</sup> OCR processor Library, refer to this video tutorial:
+{% youtube "https://www.youtube.com/watch?v=VhN7ETn0vyA" %}
 
 ## Prerequisites
 
@@ -246,11 +87,6 @@ OCRProcessor processor = new OCRProcessor();
 processor.PerformOCR(lDoc);
 
 {% endhighlight %}
-
-## Get Started with OCR 
-
-To quickly get started with extracting text from scanned PDF documents in .NET using the Syncfusion<sup>&reg;</sup> OCR processor Library, refer to this video tutorial:
-{% youtube "https://www.youtube.com/watch?v=VhN7ETn0vyA" %}
 
 ### Perform OCR using C# 
 
@@ -355,4 +191,3 @@ Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/
 ## Troubleshooting 
 
 Refer to [this](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/troubleshooting) section for troubleshooting PDF OCR failures. 
-
