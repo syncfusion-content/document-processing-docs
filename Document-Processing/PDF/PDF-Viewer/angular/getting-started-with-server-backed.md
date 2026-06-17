@@ -11,6 +11,8 @@ domainurl: ##DomainURL##
 
 This guide explains how to create and run the **Angular PDF Viewer in server-backed mode**. In this mode, PDF rendering is handled by a server-side web service, while the Angular application acts as the client.
 
+N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
+
 ## Prerequisites
 
 Ensure that your development environment meets the [Syncfusion Angular system requirements](https://ej2.syncfusion.com/angular/documentation/system-requirement).
