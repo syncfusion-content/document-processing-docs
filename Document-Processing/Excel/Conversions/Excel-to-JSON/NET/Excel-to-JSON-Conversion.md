@@ -1,5 +1,5 @@
 ---
-title: Syncfusion Excel to JSON File Conversion
+title: Syncfusion Excel to JSON Conversion
 description: In this section, you can learn how to Export Excel workbook, worksheet, and custom range Data as JSON
 platform: document-processing
 control: XlsIO
