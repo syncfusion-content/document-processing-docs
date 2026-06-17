@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load documents dynamically in JavaScript PDF Viewer | Syncfusion
-description: Learn how to load or switch PDF documents dynamically in the Syncfusion JavaScript PDF Viewer using the load method.
+description: Learn how to load or switch PDF documents dynamically in the JavaScript PDF Viewer using the load method.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

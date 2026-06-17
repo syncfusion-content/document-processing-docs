@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Thumbnail Navigation in JavaScript PDF Viewer control | Syncfusion
-description: Discover how to navigate PDF pages using thumbnails in the Syncfusion JavaScript PDF Viewer control for a visual and intuitive experience.
+description: Discover how to navigate PDF pages using thumbnails in the JavaScript PDF Viewer control for a visual and intuitive experience.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

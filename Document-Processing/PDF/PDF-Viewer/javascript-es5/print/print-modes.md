@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print Modes in JavaScript PDF Viewer | Syncfusion
-description: Learn how to configure print modes for PDF Documents in the Syncfusion JavaScript PDF Viewer component.
+description: Learn how to configure print modes for PDF Documents in the JavaScript PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug

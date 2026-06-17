@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to import annotations in the Syncfusion JavaScript PDF Viewer using the importAnnotations method.
+description: Learn how to import annotations in the JavaScript PDF Viewer using the importAnnotations method.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

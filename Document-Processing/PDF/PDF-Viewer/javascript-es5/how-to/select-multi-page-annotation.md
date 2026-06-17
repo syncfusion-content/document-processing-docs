@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Select multi-page annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to select multi-page TextMarkup annotations as a single annotation using enableMultiPageAnnotation in the Syncfusion JavaScript PDF Viewer.
+description: Learn how to select multi-page TextMarkup annotations as a single annotation using enableMultiPageAnnotation in the JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

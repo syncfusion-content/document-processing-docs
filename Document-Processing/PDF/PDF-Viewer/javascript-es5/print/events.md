@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print Events in JavaScript PDF Viewer | Syncfusion
-description: Configure print events, cancel print, and track print usage in the Syncfusion JavaScript PDF Viewer component.
+description: Configure print events, cancel print, and track print usage in the JavaScript PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug

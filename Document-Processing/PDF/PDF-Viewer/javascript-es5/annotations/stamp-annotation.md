@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stamp annotation in JavaScript PDF Viewer control | Syncfusion
-description: Learn about stamp annotations in the Syncfusion JavaScript PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps.
+description: Learn about stamp annotations in the JavaScript PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

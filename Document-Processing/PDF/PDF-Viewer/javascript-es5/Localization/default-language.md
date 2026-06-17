@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in JavaScript ES5 PDF Viewer | Syncfusion
-description: Learn about the default language culture and localization in Syncfusion JavaScript ES5 PDF Viewer component.
+description: Learn about the default language culture and localization in JavaScript ES5 PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

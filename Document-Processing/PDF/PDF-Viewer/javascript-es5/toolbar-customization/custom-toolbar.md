@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Toolbar in Javascript PDF Viewer | Syncfusion
-description: Learn here all about Custom Toolbar in Syncfusion Javascript PDF Viewer of Syncfusion Essential JS 2 and more.
+description: Learn here all about Custom Toolbar in JavaScript PDF Viewer of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

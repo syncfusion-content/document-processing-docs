@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Undo and Redo annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to undo and redo annotations changes in Syncfusion JavaScript PDF Viewer, with UI and programmatic examples.
+description: Learn to undo and redo annotations changes in JavaScript PDF Viewer, with UI and programmatic examples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

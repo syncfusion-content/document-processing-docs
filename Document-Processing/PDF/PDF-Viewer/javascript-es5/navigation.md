@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation in JavaScript PDF Viewer | Syncfusion
-description: Learn how to navigate PDF documents in the Syncfusion JavaScript PDF Viewer using toolbar controls, bookmarks, thumbnails, and hyperlinks.
+description: Learn how to navigate PDF documents in the JavaScript PDF Viewer using toolbar controls, bookmarks, thumbnails, and hyperlinks.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

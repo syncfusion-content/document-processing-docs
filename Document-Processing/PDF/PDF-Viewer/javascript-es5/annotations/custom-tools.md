@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom annotation tools in JavaScript PDF Viewer | Syncfusion
-description: Learn how to build a custom toolbar for Syncfusion JavaScript PDF Viewer and switch annotation tools programmatically using setAnnotationMode.
+description: Learn how to build a custom toolbar for JavaScript PDF Viewer and switch annotation tools programmatically using setAnnotationMode.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print a document in JavaScript PDF Viewer | Syncfusion
-description: Learn how to programmatically print a PDF document using the print method in the Syncfusion JavaScript PDF Viewer.
+description: Learn how to programmatically print a PDF document using the print method in the JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

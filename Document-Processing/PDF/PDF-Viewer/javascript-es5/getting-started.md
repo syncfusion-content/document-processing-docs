@@ -244,6 +244,8 @@ You can also explore the PDF Viewer interactively using the live sample below.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
 
+N> Looking for the full JavaScript PDF Viewer component overview, features, pricing, and documentation? Visit the [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) page.
+
 ## See also
 
 - [Getting started with Server-Backed JavaScript PDF Viewer](./getting-started)

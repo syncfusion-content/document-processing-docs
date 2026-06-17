@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Organize pages in JavaScript PDF Viewer | Syncfusion
-description: Learn how to reorder, rotate, insert, delete, and save pages with the Syncfusion JavaScript PDF Viewer component.
+description: Learn how to reorder, rotate, insert, delete, and save pages with the JavaScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

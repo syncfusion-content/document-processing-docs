@@ -1,6 +1,6 @@
 ---
 title: Overview of JavaScript (ES5) PDF Viewer | Syncfusion
-description: Learn here all about the Syncfusion JavaScript PDF Viewer, its capabilities, and supported platforms.
+description: Learn here all about the JavaScript PDF Viewer, its capabilities, and supported platforms.
 platform: document-processing
 control: PDF Viewer
 documentation: UG

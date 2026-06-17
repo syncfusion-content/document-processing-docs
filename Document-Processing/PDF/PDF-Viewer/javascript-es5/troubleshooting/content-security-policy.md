@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content Security Policy in JavaScript PDF Viewer control | Syncfusion
-description: Learn how to configure Content Security Policy directives for the Syncfusion JavaScript PDF Viewer control to allow required resources.
+description: Learn how to configure Content Security Policy directives for the JavaScript PDF Viewer control to allow required resources.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

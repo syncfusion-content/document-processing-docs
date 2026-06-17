@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Remove form fields in the JavaScript PDF Viewer component | Syncfusion
-description: Learn how to remove PDF form fields using the UI and programmatically in the Syncfusion JavaScript PDF Viewer component.
+description: Learn how to remove PDF form fields using the UI and programmatically in the JavaScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

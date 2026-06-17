@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print Overview in JavaScript PDF Viewer | Syncfusion
-description: Enable and customize printing, configure print events, cancel print, and monitor printing in the Syncfusion JavaScript PDF Viewer component.
+description: Enable and customize printing, configure print events, cancel print, and monitor printing in the JavaScript PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug
@@ -18,7 +18,7 @@ Select **Print** in the built-in toolbar to open the browser print dialog.
 
 ## Enable or Disable Print in JavaScript PDF Viewer
 
-The Syncfusion JavaScript PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the `enablePrint` property (`true` enables printing; `false` disables it).
+The JavaScript PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the `enablePrint` property (`true` enables printing; `false` disables it).
 
 The following JavaScript examples render the PDF Viewer with printing enabled in standalone and server-backed applications.
 

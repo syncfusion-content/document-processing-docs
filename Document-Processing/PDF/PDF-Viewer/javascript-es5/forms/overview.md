@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Forms in JavaScript PDF Viewer Control | Syncfusion
-description: Learn what the Form Designer in Syncfusion JavaScript PDF Viewer offers, supported field types, and how the topics are organized.
+description: Learn what the Form Designer in JavaScript PDF Viewer offers, supported field types, and how the topics are organized.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

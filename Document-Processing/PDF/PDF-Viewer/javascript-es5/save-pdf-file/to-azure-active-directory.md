@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to Azure Active Directory (AAD) in JavaScript PDF Viewer | Syncfusion
-description: Learn how to load and save PDF files with Azure Active Directory (AAD) using the Syncfusion JavaScript PDF Viewer component and a server-backed web service.
+description: Learn how to load and save PDF files with Azure Active Directory (AAD) using the JavaScript PDF Viewer component and a server-backed web service.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

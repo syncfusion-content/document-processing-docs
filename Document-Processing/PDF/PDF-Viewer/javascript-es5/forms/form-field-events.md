@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Field Events in JavaScript PDF Viewer control | Syncfusion
-description: Learn here all about different form field events in the Syncfusion JavaScript PDF Viewer component and more.
+description: Learn here all about different form field events in the JavaScript PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

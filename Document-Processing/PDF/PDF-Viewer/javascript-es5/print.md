@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in JavaScript PDF Viewer | Syncfusion
-description: Learn how to enable, customize, and monitor printing in the Syncfusion JavaScript PDF Viewer component.
+description: Learn how to enable, customize, and monitor printing in the JavaScript PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Print in JavaScript PDF Viewer
 
-The Syncfusion JavaScript PDF Viewer component allows users to print a loaded PDF document through the built-in toolbar or programmatic calls. Control printing availability by setting the `enablePrint` property.
+The JavaScript PDF Viewer component allows users to print a loaded PDF document through the built-in toolbar or programmatic calls. Control printing availability by setting the `enablePrint` property.
 
 The following HTML and JavaScript examples render the PDF Viewer with printing enabled in standalone and server-backed applications.
 

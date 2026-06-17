@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bookmark Navigation in JavaScript PDF Viewer control | Syncfusion
-description: Learn how to use bookmarks for quick navigation in the Syncfusion JavaScript PDF Viewer control, enhancing user experience and accessibility.
+description: Learn how to use bookmarks for quick navigation in the JavaScript PDF Viewer control, enhancing user experience and accessibility.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

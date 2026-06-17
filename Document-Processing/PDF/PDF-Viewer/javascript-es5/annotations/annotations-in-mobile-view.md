@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations mobileView in JavaScript PDF Viewer control | Syncfusion
-description: Learn how to use annotations in mobile view with the Syncfusion JavaScript PDF Viewer (Essential JS 2).
+description: Learn how to use annotations in mobile view with the JavaScript PDF Viewer (Essential JS 2).
 platform: document-processing
 control: PDF Viewer
 documentation: ug

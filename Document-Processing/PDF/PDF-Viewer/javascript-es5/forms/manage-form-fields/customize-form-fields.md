@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize form fields in the JavaScript PDF Viewer | Syncfusion
-description: Learn how to customize PDF form fields using the UI and programmatically with APIs in the Syncfusion JavaScript PDF Viewer.
+description: Learn how to customize PDF form fields using the UI and programmatically with APIs in the JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

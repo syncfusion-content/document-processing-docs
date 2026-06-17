@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Magnification in JavaScript PDF Viewer | Syncfusion
-description: Learn how to enable and use magnification in the Syncfusion JavaScript PDF Viewer, including Zoom In, Zoom Out, Fit to Page, and Fit to Width options.
+description: Learn how to enable and use magnification in the JavaScript PDF Viewer, including Zoom In, Zoom Out, Fit to Page, and Fit to Width options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

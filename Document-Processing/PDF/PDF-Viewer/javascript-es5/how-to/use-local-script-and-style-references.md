@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Use local resources in JavaScript PDF Viewer | Syncfusion
-description: Learn how to configure local script and style references for the Syncfusion JavaScript PDF Viewer control and reference them within your application.
+description: Learn how to configure local script and style references for the JavaScript PDF Viewer control and reference them within your application.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

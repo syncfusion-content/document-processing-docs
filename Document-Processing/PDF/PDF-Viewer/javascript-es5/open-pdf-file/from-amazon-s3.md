@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open PDF from AWS S3 in JavaScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from AWS S3 in the Syncfusion JavaScript PDF Viewer component using standalone and server-backed approaches.
+description: Learn how to load PDFs from AWS S3 in the JavaScript PDF Viewer component using standalone and server-backed approaches.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
