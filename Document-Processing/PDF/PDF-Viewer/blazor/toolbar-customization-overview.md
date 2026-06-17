@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of the toolbars in Blazor SfPdfViewer Component | Syncfusion
-description: Check out and learn about the primary, annotation, form designer, and redaction toolbars in the Syncfusion Blazor SfPdfViewer component.
+description: Check out and learn about the primary, annotation, form designer, and redaction toolbars in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

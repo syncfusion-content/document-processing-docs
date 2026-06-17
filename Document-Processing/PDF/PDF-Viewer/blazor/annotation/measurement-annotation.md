@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Measurement annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn all about measurement annotations in the Syncfusion Blazor SfPdfViewer component, including adding, editing, default settings.
+description: Learn all about measurement annotations in the Blazor SfPdfViewer component, including adding, editing, default settings.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

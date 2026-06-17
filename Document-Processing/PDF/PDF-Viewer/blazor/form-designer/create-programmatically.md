@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Programmatic Support for Form Designer in SfPdfViewer | Syncfusion
-description: Learn how to create, modify, and manage form fields programmatically in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to create, modify, and manage form fields programmatically in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

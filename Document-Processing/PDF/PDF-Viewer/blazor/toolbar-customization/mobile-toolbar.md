@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mobile toolbar overview in Blazor SfPdfViewer | Syncfusion
-description: Learn about the primary, annotation, form designer, and redaction toolbars in the Syncfusion Blazor SfPdfViewer component in mobile mode.
+description: Learn about the primary, annotation, form designer, and redaction toolbars in the Blazor SfPdfViewer component in mobile mode.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form filling in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to view, fill, export, and import PDF form fields in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to view, fill, export, and import PDF form fields in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

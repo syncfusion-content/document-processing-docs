@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text markup annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, and delete text markup annotations—highlight, underline, strikethrough, and squiggly—in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to add, edit, and delete text markup annotations—highlight, underline, strikethrough, and squiggly—in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -390,7 +390,7 @@ Below is an example demonstrating how to delete an annotation programmatically:
 }
 
 ```
-This example demonstrates how to programmatically delete an annotation within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer using the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+This example demonstrates how to programmatically delete an annotation within the Blazor SfPdfViewer using the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
 N> Alternatively, the annotation can be deleted using its annotation ID with the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_System_String_) method.
 

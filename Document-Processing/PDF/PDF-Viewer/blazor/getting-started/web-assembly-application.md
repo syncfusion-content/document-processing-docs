@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor PDF Viewer Component in WASM | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor SfPdfViewer component in a Blazor WebAssembly (WASM) app.
+description: Learn how to get started with the Blazor SfPdfViewer component in a Blazor WebAssembly (WASM) app.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -25,11 +25,11 @@ N> For WebAssembly Application, install the required .NET workloads for SkiaShar
 
 ## Create a new Blazor App in Visual Studio    
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet Packages
 
-To add **Syncfusion Blazor SfPdfViewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add **Blazor SfPdfViewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -60,7 +60,7 @@ N> For WebAssembly Application, install the required .NET workloads for SkiaShar
 
 ## Create a new Blazor App in Visual Studio Code
 
-Create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 Alternatively, create a WebAssembly application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
@@ -150,11 +150,11 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% highlight razor tabtitle="index.html" hl_lines="3 7" %}
 
 <head>
-    <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
+    <!-- Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
+    <!-- Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </body>
 
@@ -163,7 +163,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) component in **~/Pages/Home.razor**.
+Add the Blazor PDF Viewer (Next-Gen) component in **~/Pages/Home.razor**.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -180,7 +180,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) c
 
 N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property is not set, the PDF Viewer renders without loading a PDF. Use the **Open** toolbar option to browse and open a PDF.
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor PDF Viewer in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor PDF Viewer in your default web browser.
 
 ![Blazor Web App SfPdfViewer rendering in browser](gettingstarted-images/blazor-pdfviewer.png)
 
@@ -189,6 +189,8 @@ You can also experiment directly using the interactive playground below for a qu
 {% playground "https://blazorplayground.syncfusion.com/embed/hXhHtILIfHjHlTTE?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
 
 N> To learn how to open, view, or interact with PDF files in the PDF Viewer component, see [Open and Save](.././opening-pdf-file). For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer2/NET10/PDFViewer2_WasmStandalone).
+
+N> Looking for the full Blazor PDF Viewer component overview, features, pricing, and documentation? Visit the [Blazor PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application) page.
 
 ## See also
 

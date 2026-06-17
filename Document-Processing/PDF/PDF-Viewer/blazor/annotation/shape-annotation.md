@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shape annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, delete, and programmatically manage shape annotations in the Syncfusion Blazor SfPdfViewer.
+description: Learn how to add, edit, delete, and programmatically manage shape annotations in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

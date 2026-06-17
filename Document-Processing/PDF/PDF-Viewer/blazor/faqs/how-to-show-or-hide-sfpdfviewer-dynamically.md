@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show or hide the Blazor SfPdfViewer dynamically in Blazor | Syncfusion
-description: Learn how to dynamically show or hide the Syncfusion Blazor SfPdfViewer, toggle visibility with a button, and load PDFs from a local file.
+description: Learn how to dynamically show or hide the Blazor SfPdfViewer, toggle visibility with a button, and load PDFs from a local file.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

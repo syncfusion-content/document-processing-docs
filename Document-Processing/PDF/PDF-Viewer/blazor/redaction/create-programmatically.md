@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Programmatic redaction in Blazor SfPdfViewer | Syncfusion
-description: Learn how to add, edit, delete, and apply redaction annotations programmatically in the Syncfusion Blazor SfPdfViewer component.
+description: Learn how to add, edit, delete, and apply redaction annotations programmatically in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -202,7 +202,7 @@ The following example shows how to set default properties for redaction annotati
 ```cshtml
 @* 
     This component demonstrates how to configure default redaction annotation settings 
-    in the Syncfusion Blazor PDF Viewer.
+    in the Blazor PDF Viewer.
 *@
 <SfPdfViewer2 @ref="SfPdfViewer2" DocumentPath="@DocumentPath" Height="800px" Width="100%">
     <PdfViewerRedactionSettings OverlayText="Confidential" 

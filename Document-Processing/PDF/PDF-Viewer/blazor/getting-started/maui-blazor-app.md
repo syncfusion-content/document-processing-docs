@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started PDF Viewer .NET MAUI Blazor Hybrid App | Syncfusion
-description: Learn how to deploy the Syncfusion Blazor SfPdfViewer component in a Blazor .NET MAUI application on Windows.
+description: Learn how to deploy the Blazor SfPdfViewer component in a Blazor .NET MAUI application on Windows.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -23,7 +23,7 @@ N> The PDF Viewer supports .NET 8.0 and later.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer NuGet Packages
 
-To add **Syncfusion Blazor SfPdfViewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
+To add **Blazor SfPdfViewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -102,11 +102,11 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% highlight html tabtitle="index.html" hl_lines="3 7" %}
 
 <head>
-    <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
+    <!-- Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
+    <!-- Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </body>
 
@@ -115,9 +115,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to explore supported ways (such as static assets, CDN, and CRG) to apply themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer Component
+## Add Blazor PDF Viewer Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next-Gen) component to **~/Pages/Index.razor**.
+Add the Blazor PDF Viewer (Next-Gen) component to **~/Pages/Index.razor**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -162,6 +162,8 @@ N> If any errors occur while using the Android Emulator, see [Troubleshooting An
 ![Blazor SfPdfViewer running in the Android emulator](gettingstarted-images/android-emulator.png)
 
 N> To learn how to open, view, or interact with PDF files in the PDF Viewer component, see [Open and Save](.././opening-pdf-file). For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Blazor%20Hybrid%20-%20.NET%20MAUI/MauiBlazorWindow).
+
+N> Looking for the full Blazor PDF Viewer component overview, features, pricing, and documentation? Visit the [Blazor PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/maui-blazor-app) page.
 
 ## See Also
 

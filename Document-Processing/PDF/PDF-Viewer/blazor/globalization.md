@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization and RTL in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to localize UI text and enable RTL layout in the Syncfusion Blazor SfPdfViewer, including culture setup and API references.
+description: Learn how to localize UI text and enable RTL layout in the Blazor SfPdfViewer, including culture setup and API references.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
