@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Server-backed to Standalone JavaScript PDF Viewer | Syncfusion
+title: Migrate Server-backed to Standalone JS PDF Viewer | Syncfusion
 description: Learn how to migrate your JavaScript PDF Viewer from server-backed to standalone mode. This guide shows step-by-step instructions and code examples.
 control: PDF Viewer
 platform: document-processing
@@ -140,7 +140,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-For detailed local resource setup instructions, refer to [Load PDF Viewer with Local Resources](./getting-started/#adding-the-pdf-viewer-component).
+For detailed local resource setup instructions, refer to [Load PDF Viewer with Local Resources](./getting-started#adding-the-pdf-viewer-component).
 
 ### Step 4: Verify Your Migration
 
@@ -260,7 +260,7 @@ Once you have completed the migration to standalone mode, explore these resource
 - [Getting Started with Standalone JavaScript PDF Viewer](./getting-started) — Learn the fundamentals of standalone mode setup and configuration
 
 **Advanced Configuration:**
-- [Load PDF Viewer with Local Resources](./getting-started/#adding-the-pdf-viewer-component) — Host PDFium resources locally for better control and offline scenarios
+- [Load PDF Viewer with Local Resources](./getting-started#adding-the-pdf-viewer-component) — Host PDFium resources locally for better control and offline scenarios
 - [Open PDF Files](./open-pdf-files) — Explore multiple methods to load PDF documents
 - [Save PDF Files](./save-pdf-files) — Learn how to save and export modified PDFs
 

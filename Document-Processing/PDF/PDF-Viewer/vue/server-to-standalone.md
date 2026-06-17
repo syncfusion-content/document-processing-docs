@@ -376,5 +376,5 @@ Once you have completed the migration to standalone mode, explore these resource
 - [PDF Viewer API Methods](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default) — Reference all available API methods and properties
 
 **Related Topics:**
-- [System Requirements](https://ej2.syncfusion.com/vue/documentation/system-requirement)
+- [System Requirements](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 - [Getting Started with Standalone Vue PDF Viewer](./getting-started)
