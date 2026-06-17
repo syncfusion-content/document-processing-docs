@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Annotation in React PDF Viewer | Syncfusion
-description: Learn about Annotations and how to add, edit, delete, and configure Annotations in the Syncfusion React PDF Viewer.
+description: Learn about Annotations and how to add, edit, delete, and configure Annotations in the React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

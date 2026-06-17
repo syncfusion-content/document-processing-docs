@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Export form data in the React PDF Viewer component | Syncfusion
-description: Learn how to export PDF form field data (FDF, XFDF, JSON, and as an object) using the Syncfusion React PDF Viewer component.
+description: Learn how to export PDF form field data (FDF, XFDF, JSON, and as an object) using the React PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

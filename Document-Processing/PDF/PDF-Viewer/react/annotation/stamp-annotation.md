@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stamp annotation in React Pdfviewer component | Syncfusion
-description: Learn here all about Stamp annotation in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Stamp annotation in React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

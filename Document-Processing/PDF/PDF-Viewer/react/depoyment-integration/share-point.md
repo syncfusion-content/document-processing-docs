@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion React PDF Viewer in SharePoint
-description: Quickstart to integrate the Syncfusion React PDF Viewer into an SPFx React web part (standalone/client-side rendering).
+title: React PDF Viewer in SharePoint
+description: Quickstart to integrate the React PDF Viewer into an SPFx React web part (standalone/client-side rendering).
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Overview
 
-This quickstart shows how to integrate the Syncfusion React PDF Viewer into a SharePoint Framework (SPFx) React web part. It covers creating the web part, installing the `@syncfusion/ej2-react-pdfviewer` package, adding the required CSS, supplying runtime assets either from the Syncfusion CDN or from Site Assets, and a minimal TypeScript component that renders a PDF in the browser (client‑only).
+This quickstart shows how to integrate the React PDF Viewer into a SharePoint Framework (SPFx) React web part. It covers creating the web part, installing the `@syncfusion/ej2-react-pdfviewer` package, adding the required CSS, supplying runtime assets either from the Syncfusion CDN or from Site Assets, and a minimal TypeScript component that renders a PDF in the browser (client‑only).
 
 ## Prerequisites
 
@@ -164,9 +164,11 @@ gulp bundle --ship
 gulp package-solution --ship
 ```
 
+N> Looking for the full React PDF Viewer component overview, features, pricing, and documentation? Visit the [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/depoyment-integration/share-point) page.
+
 ## See also
 
 - [Getting started overview](../getting-started-overview)
-- [Creating a Next.js application using Syncfusion React PDF Viewer](./nextjs-getting-started)
-- [Getting started with Syncfusion React PDF Viewer in Preact](./nextjs-getting-started)
-- [Getting started with Syncfusion React PDF Viewer in Remix](./nextjs-getting-started)
+- [Creating a Next.js application using React PDF Viewer](./nextjs-getting-started)
+- [Getting started with React PDF Viewer in Preact](./nextjs-getting-started)
+- [Getting started with React PDF Viewer in Remix](./nextjs-getting-started)

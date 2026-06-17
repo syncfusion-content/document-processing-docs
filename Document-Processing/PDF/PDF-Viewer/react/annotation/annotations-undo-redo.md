@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Undo and Redo annotation in React PDF Viewer | Syncfusion
-description: Learn to undo and redo annotations changes in Syncfusion React PDF Viewer, with UI and programmatic examples.
+description: Learn to undo and redo annotations changes in React PDF Viewer, with UI and programmatic examples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

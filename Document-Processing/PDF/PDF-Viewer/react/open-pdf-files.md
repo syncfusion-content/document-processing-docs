@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load and Open PDF Files in the React PDF Viewer | Syncfusion
-description: How to load and display PDF documents in the Syncfusion React PDF Viewer from different sources (URL, Base64, Blob, file input, and cloud storage).
+description: How to load and display PDF documents in the React PDF Viewer from different sources (URL, Base64, Blob, file input, and cloud storage).
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Load and Open PDF Files in the React PDF Viewer
 
-This page shows how to load and display PDF documents in the Syncfusion React PDF Viewer. The first section gives a minimal "load and display" example you can try immediately; the second section shows how to open PDFs from different source types (URL, Base64, Blob and cloud storage).
+This page shows how to load and display PDF documents in the React PDF Viewer. The first section gives a minimal "load and display" example you can try immediately; the second section shows how to open PDFs from different source types (URL, Base64, Blob and cloud storage).
 
 ## Load and Display a PDF Document
 

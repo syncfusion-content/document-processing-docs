@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Magnification in React PDF Viewer | Syncfusion
-description: Learn about magnification controls in the Syncfusion React PDF Viewer component. Explore zoom and fit modes to enhance document viewing experience.
+description: Learn about magnification controls in the React PDF Viewer component. Explore zoom and fit modes to enhance document viewing experience.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

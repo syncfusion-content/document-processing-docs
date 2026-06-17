@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add custom data to form fields in React Pdf Viewer | Syncfusion
-description: Learn how to attach, update, and read custom Data on PDF form fields using the Form Designer UI and APIs in the Syncfusion React PDF Viewer.
+description: Learn how to attach, update, and read custom Data on PDF form fields using the Form Designer UI and APIs in the React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Add Custom Data to PDF Form Fields in React PDF Viewer
 
-The **Syncfusion React PDF Viewer** allows you to attach **custom application-specific data** to form fields by using the customData property. This enables you to associate business identifiers, tags, validation hints, or workflow metadata with form fields.
+The **React PDF Viewer** allows you to attach **custom application-specific data** to form fields by using the customData property. This enables you to associate business identifiers, tags, validation hints, or workflow metadata with form fields.
 
 Custom data remains associated with the form field for the duration of the viewer session and can be accessed or updated whenever the field is queried or modified.
 

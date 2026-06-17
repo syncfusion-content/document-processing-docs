@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion React PDF Viewer in Preact Application
-description: Provides a short overview and essential task links for integrating and using the Syncfusion React PDF Viewer within Preact.
+title: Getting started with React PDF Viewer in Preact Application
+description: Provides a short overview and essential task links for integrating and using the React PDF Viewer within Preact.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -9,9 +9,9 @@ domainurl: ##DomainURL##
 ---
 
 
-# Getting started with Syncfusion React PDF Viewer in Preact
+# Getting started with React PDF Viewer in Preact
 
-This page is a short, task-focused overview for integrating the Syncfusion React PDF Viewer into a [Preact](https://preactjs.com/) app. Use the short sections below for quick tasks; a minimal full example is provided as an optional reference.
+This page is a short, task-focused overview for integrating the React PDF Viewer into a [Preact](https://preactjs.com/) app. Use the short sections below for quick tasks; a minimal full example is provided as an optional reference.
 
 [Preact](https://preactjs.com/) is a lightweight React alternative that preserves the React-compatible API. Use Preact when you want smaller bundle size while reusing the React viewer components.
 ## Setup
@@ -76,5 +76,5 @@ render(<App />, document.getElementById('app'));
 
 **See also**
 
-- [Getting started with the Syncfusion React PDF Viewer](../getting-started-overview)
-- [System requirements for Syncfusion React PDF Viewer](../../../../System-Requirements)
+- [Getting started with the React PDF Viewer](../getting-started-overview)
+- [System requirements for React PDF Viewer](../../../../System-Requirements)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to OneDrive in React PDF Viewer | Syncfusion
-description: Learn how to save PDF files to OneDrive using the Syncfusion React PDF Viewer component with a server-backed web service.
+description: Learn how to save PDF files to OneDrive using the React PDF Viewer component with a server-backed web service.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Save PDF files to OneDrive
 
-This article describes how to save a PDF file to OneDrive from the Syncfusion React PDF Viewer using a server-side web service. Follow the steps below.
+This article describes how to save a PDF file to OneDrive from the React PDF Viewer using a server-side web service. Follow the steps below.
 
 **Step 1:** Create a Microsoft Graph API application
 
@@ -17,7 +17,7 @@ Create a Microsoft Graph API application, and obtain the application (client) ID
 
 **Step 2:** Create a PDF Viewer sample in React
 
-Create a simple PDF Viewer sample in React by following the Syncfusion PDF Viewer for React [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide. This establishes the application structure required for the integration
+Create a simple PDF Viewer sample in React by following the React PDF Viewer for React [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide. This establishes the application structure required for the integration
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 

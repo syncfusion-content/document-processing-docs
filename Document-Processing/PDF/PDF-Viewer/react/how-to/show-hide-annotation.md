@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show or hide annotations in React PDF Viewer | Syncfusion
-description: Learn how to toggle annotation visibility in the Syncfusion React PDF Viewer by exporting and importing annotations.
+description: Learn how to toggle annotation visibility in the React PDF Viewer by exporting and importing annotations.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

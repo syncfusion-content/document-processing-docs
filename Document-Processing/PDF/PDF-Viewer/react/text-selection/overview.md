@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text selection in React PDF Viewer | Syncfusion
-description: Learn the text selection concepts, copy behavior, and interaction capabilities of the Syncfusion React PDF Viewer.
+description: Learn the text selection concepts, copy behavior, and interaction capabilities of the React PDF Viewer.
 platform: document-processing
 control: Text selection
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Text selection in React PDF Viewer
 
-The Text Selection module in the Syncfusion React PDF Viewer enables users to select and copy text from a loaded PDF document. Text selection is available by default and gives users direct interaction with the content through dragging, keyboard shortcuts, and context menus.
+The Text Selection module in the React PDF Viewer enables users to select and copy text from a loaded PDF document. Text selection is available by default and gives users direct interaction with the content through dragging, keyboard shortcuts, and context menus.
 
 This overview explains the behavior of text selection, how copy actions work, and how it relates to other interaction features in the viewer.
 

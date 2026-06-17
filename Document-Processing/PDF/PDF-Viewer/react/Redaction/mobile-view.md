@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction in mobile view in React PDF Viewer | Syncfusion
-description: Learn how to apply redactions in mobile view using the Syncfusion React PDF Viewer with a complete toolbar setup and redaction workflow.
+description: Learn how to apply redactions in mobile view using the React PDF Viewer with a complete toolbar setup and redaction workflow.
 platform: document-processing
 control: PdfViewer
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-This tutorial teaches you how to enable and use the Redaction tools in the Syncfusion React PDF Viewer optimized for mobile (phone/tablet) screens. You will add a redaction button to the viewer toolbar, open the viewer on a small-screen layout, create selective and page-wide redactions, customize appearance, and apply redactions permanently.
+This tutorial teaches you how to enable and use the Redaction tools in the React PDF Viewer optimized for mobile (phone/tablet) screens. You will add a redaction button to the viewer toolbar, open the viewer on a small-screen layout, create selective and page-wide redactions, customize appearance, and apply redactions permanently.
 
 **Outcome**: a working React sample where users can mark content for redaction using touch, configure appearance, and apply redactions.
 
@@ -100,7 +100,7 @@ To remove a redaction annotation prior to applying it: enter Redaction Edit mode
 ## Troubleshooting
 
 - If toolbar or redaction controls don't appear: ensure your [`toolbarSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#toolbarsettings) includes [`RedactionEditTool`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbaritem) and that the `Inject` list contains [`Annotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation).
-- If the viewer is blank: confirm [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) points to the correct Syncfusion PDF Viewer resource package version.
+- If the viewer is blank: confirm [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) points to the correct React PDF Viewer resource package version.
 - For production builds, ensure your app serves the WASM and resource files from [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) or a hosted CDN.
 
 ## Related topics

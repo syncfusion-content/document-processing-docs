@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ink annotation in React PDF Viewer control | Syncfusion
-description: Learn about ink annotations in the Syncfusion React PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+description: Learn about ink annotations in the React PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

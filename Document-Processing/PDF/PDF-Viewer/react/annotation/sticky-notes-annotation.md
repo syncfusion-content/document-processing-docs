@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sticky notes in React PDF Viewer control | Syncfusion
-description: Learn about sticky note annotations in the Syncfusion React PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+description: Learn about sticky note annotations in the React PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

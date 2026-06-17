@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load N number of pages on initial loading | Syncfusion
-description: Learn how to Load N number of pages on initial loading in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn how to Load N number of pages on initial loading in React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Load N number of pages on initial loading
 platform: document-processing
 documentation: ug

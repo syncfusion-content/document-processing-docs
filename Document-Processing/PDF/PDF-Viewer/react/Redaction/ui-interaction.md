@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction UI interactions in React PDF Viewer | Syncfusion
-description: Learn about UI interactions like add, edit and modify in Redaction annotations of the Syncfusion React PDF Viewer component.
+description: Learn about UI interactions like add, edit and modify in Redaction annotations of the React PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-This guide explains how to use the Redaction UI in the Syncfusion React PDF Viewer: drawing redaction marks, customizing their appearance, deleting marks, redacting whole pages, and applying redaction. The page provides step-by-step UI instructions to redact a PDF.
+This guide explains how to use the Redaction UI in the React PDF Viewer: drawing redaction marks, customizing their appearance, deleting marks, redacting whole pages, and applying redaction. The page provides step-by-step UI instructions to redact a PDF.
 
 ## Prerequisites
 

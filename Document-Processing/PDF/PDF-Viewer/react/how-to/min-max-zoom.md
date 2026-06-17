@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configure minZoom and maxZoom in React PDF Viewer | Syncfusion
-description: Learn how to configure minimum and maximum zoom levels using minZoom and maxZoom in the Syncfusion React PDF Viewer.
+description: Learn how to configure minimum and maximum zoom levels using minZoom and maxZoom in the React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

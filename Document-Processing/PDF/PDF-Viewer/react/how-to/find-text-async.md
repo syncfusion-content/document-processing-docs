@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Use findTextAsync in React PDF Viewer | Syncfusion
-description: Learn how to search text asynchronously with findTextAsync in the Syncfusion React PDF Viewer and retrieve match bounds.
+description: Learn how to search text asynchronously with findTextAsync in the React PDF Viewer and retrieve match bounds.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Perform form field double click event in React Pdfviewer component | Syncfusion
-description: Learn here all about Perform form field double click event in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Perform form field double click event in React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Perform form field double click event
 platform: document-processing
 documentation: ug

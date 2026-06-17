@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add signature in React Pdfviewer component | Syncfusion
-description: Learn here all about Add signature in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Add signature in React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Add signature
 platform: document-processing
 documentation: ug

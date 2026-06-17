@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations Permission in React PDF Viewer | Syncfusion
-description: Learn here all about how to use annotation permissions in Syncfusion React PDF Viewer using programmatic APIs.
+description: Learn here all about how to use annotation permissions in React PDF Viewer using programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

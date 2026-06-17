@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Free text annotation in React PDF Viewer control | Syncfusion
-description: Learn about free text annotations in the Syncfusion React PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+description: Learn about free text annotations in the React PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open PDF from Google Drive in React PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Google Drive in the Syncfusion React PDF Viewer component using a server-backed approach.
+description: Learn how to load PDFs from Google Drive in the React PDF Viewer component using a server-backed approach.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Open PDF from Google Drive in React
 
-These steps describe how to load a PDF stored in Google Drive into the Syncfusion React PDF Viewer using a server-backed web service.
+These steps describe how to load a PDF stored in Google Drive into the React PDF Viewer using a server-backed web service.
 
 **Step 1** Set up Google Drive API and credentials
 
@@ -17,7 +17,7 @@ Create a project in the Google Developers Console and enable the Google Drive AP
 
 **Step 2:** Create a PDF Viewer sample in React
 
-Start by following the Syncfusion React PDF Viewer 'Getting started' guide to create a basic PDF viewer sample. This establishes the client-side component that will request document data from the server-backed service.
+Start by following the React PDF Viewer 'Getting started' guide to create a basic PDF viewer sample. This establishes the client-side component that will request document data from the server-backed service.
 
 **Step 3:** Modify the PdfViewerController.cs file in the web service project
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show custom items in the Custom Stamp dropdown | Syncfusion
-description: Learn how to display custom items in the Custom Stamp dropdown using customStampSettings in the Syncfusion React PDF Viewer.
+description: Learn how to display custom items in the Custom Stamp dropdown using customStampSettings in the React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

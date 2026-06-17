@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL Localization in React PDF Viewer | Syncfusion
-description: Learn about the Localization and Right to Left Lanugage Support in Syncfusion React PDF Viewer component.
+description: Learn about the Localization and Right to Left Lanugage Support in React PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reorder pages in Organize Pages in React PDF Viewer | Syncfusion
-description: How to rearrange pages using drag-and-drop and grouping in the Organize Pages UI of the Syncfusion React PDF Viewer.
+description: How to rearrange pages using drag-and-drop and grouping in the Organize Pages UI of the React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

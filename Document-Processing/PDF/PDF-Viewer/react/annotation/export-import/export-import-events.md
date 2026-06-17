@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import/Export events in React PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF Annotations in the Syncfusion React PDF Viewer component.
+description: Learn how to handle Import/Export events for PDF Annotations in the React PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

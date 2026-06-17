@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get page info in React PDF Viewer | Syncfusion
-description: Learn how to retrieve page height, width, and rotation using getPageInfo in the Syncfusion React PDF Viewer.
+description: Learn how to retrieve page height, width, and rotation using getPageInfo in the React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

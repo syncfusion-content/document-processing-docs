@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Restrict zoom percentage on mobile devices | Syncfusion
-description: Learn how to restrict zoom percentage on mobile devices using minZoom and maxZoom in the Syncfusion React PDF Viewer.
+description: Learn how to restrict zoom percentage on mobile devices using minZoom and maxZoom in the React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

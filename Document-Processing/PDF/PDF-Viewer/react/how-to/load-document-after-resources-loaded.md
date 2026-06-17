@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load document after resources Loaded React PDF Viewer | Syncfusion
-description: Learn how to load a PDF only after assets are ready in the Syncfusion React PDF Viewer (Standalone) using the resourcesLoaded event.
+description: Learn how to load a PDF only after assets are ready in the React PDF Viewer (Standalone) using the resourcesLoaded event.
 platform: document-processing
 control: PDF Viewer 
 documentation: ug

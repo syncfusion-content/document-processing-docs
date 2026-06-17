@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add Annotations via Text Search in Syncfusion React PDF Viewer
-description: Learn how to add annotations via text search events in the Syncfusion React PDF Viewer for a seamless mobile experience.
+title: Add Annotations via Text Search in React PDF Viewer
+description: Learn how to add annotations via text search events in the React PDF Viewer for a seamless mobile experience.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -17,7 +17,7 @@ A React PDF Viewer setup with [`Annotation`](https://ej2.syncfusion.com/react/do
 
 ## Steps to add rectangle or highlight annotations on search result highlight
 
-**Step 1:** Follow the steps provided in the [Syncfusion<sup style="font-size:70%">&reg;</sup> Getting Started Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to set up a basic PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [Getting Started Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to set up a basic PDF Viewer sample.
 
 **Step 2a:** Set up the PDF Viewer component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
 

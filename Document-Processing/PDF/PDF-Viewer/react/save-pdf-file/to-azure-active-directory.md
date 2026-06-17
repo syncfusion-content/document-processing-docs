@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save PDF files to Azure Active Directory (AAD) in React PDF Viewer | Syncfusion
-description: Learn how to load and save PDF files with Azure Active Directory (AAD) using the Syncfusion React PDF Viewer component and a server-backed web service.
+description: Learn how to load and save PDF files with Azure Active Directory (AAD) using the React PDF Viewer component and a server-backed web service.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -93,7 +93,7 @@ The React PDF Viewer component supports loading and saving PDF files using Azure
 ### Step 6: Client-side configuration
 
 1. Run the React sample:
-   - Start the React sample that includes the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
+   - Start the React sample that includes the React PDF Viewer.
 
 2. Load a PDF from AAD:
    - When the user clicks the **Load from AAD** button, the React client will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.

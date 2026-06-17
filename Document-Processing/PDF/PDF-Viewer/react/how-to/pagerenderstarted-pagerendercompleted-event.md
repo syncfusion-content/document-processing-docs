@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Handle pageRenderInitiate and pageRenderComplete | Syncfusion
-description: Learn how to use the pageRenderInitiate and pageRenderComplete events in the Syncfusion React PDF Viewer during page rendering.
+description: Learn how to use the pageRenderInitiate and pageRenderComplete events in the React PDF Viewer during page rendering.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -107,6 +107,6 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-The provided code demonstrates how to subscribe to the `pageRenderStart` and `pageRenderComplete` events in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component.
+The provided code demonstrates how to subscribe to the `pageRenderStart` and `pageRenderComplete` events in the React PDF Viewer component.
 
-The following code demonstrates how to subscribe to these events in the Syncfusion PDF Viewer component.
+The following code demonstrates how to subscribe to these events in the React PDF Viewer component.

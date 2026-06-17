@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interaction Mode in React PDF Viewer | Syncfusion
-description: Learn how to work with interaction modes (Pan and Text Selection) in the Syncfusion React PDF Viewer component.
+description: Learn how to work with interaction modes (Pan and Text Selection) in the React PDF Viewer component.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Digital Signature Workflows in React PDF Viewer | Syncfusion
-description: Learn how to add signature fields and apply digital (PKI) signatures in the Syncfusion React PDF Viewer.
+description: Learn how to add signature fields and apply digital (PKI) signatures in the React PDF Viewer.
 platform: document-processing
 control: PdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Digital Signature Workflows
 
-This guide shows how to design signature fields, collect handwritten/typed e‑signatures in the browser, and apply **digital certificate (PKI) signatures** to PDF forms using the Syncfusion React PDF Viewer and the JavaScript PDF Library. Digital signatures provide **authenticity** and **tamper detection**, making them suitable for legally binding scenarios.
+This guide shows how to design signature fields, collect handwritten/typed e‑signatures in the browser, and apply **digital certificate (PKI) signatures** to PDF forms using the React PDF Viewer and the JavaScript PDF Library. Digital signatures provide **authenticity** and **tamper detection**, making them suitable for legally binding scenarios.
 
 ## Overview
 

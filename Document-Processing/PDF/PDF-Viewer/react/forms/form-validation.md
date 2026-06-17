@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form validation in the React PDF Viewer component | Syncfusion
-description: Learn how to enable built-in form field validation and validate missing required fields in the Syncfusion React PDF Viewer.
+description: Learn how to enable built-in form field validation and validate missing required fields in the React PDF Viewer.
 platform: react
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Validate PDF Form Fields in React PDF Viewer
 
-The Syncfusion React PDF Viewer provides built-in support for validating form fields before users perform actions such as printing, downloading, or submitting a PDF document. Validation ensures that required form fields are completed before allowing these actions. This improves data completeness and reliability.
+The React PDF Viewer provides built-in support for validating form fields before users perform actions such as printing, downloading, or submitting a PDF document. Validation ensures that required form fields are completed before allowing these actions. This improves data completeness and reliability.
 
 ## How PDF Form Validation Works
 

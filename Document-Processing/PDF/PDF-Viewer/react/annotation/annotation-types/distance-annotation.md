@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Distance Annotations in React PDF Viewer \ Syncfusion
-description: Learn how to enable, measure, customize, and manage Distance annotations in the Syncfusion React PDF Viewer.
+description: Learn how to enable, measure, customize, and manage Distance annotations in the React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

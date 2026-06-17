@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Migrating from PDF.js to Syncfusion React PDF Viewer | Syncfusion
-description: Learn how to migrate from PDF.js to Syncfusion React PDF Viewer with this comprehensive guide covering architecture, features, and code changes.
+title: Migrating from PDF.js to React PDF Viewer | Syncfusion
+description: Learn how to migrate from PDF.js to React PDF Viewer with this comprehensive guide covering architecture, features, and code changes.
 platform: document-processing
 documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from PDF.js to Syncfusion React PDF Viewer
+# Migrating from PDF.js to React PDF Viewer
 
-This guide explains how to migrate an existing [PDF.js](https://mozilla.github.io/pdf.js/) implementation to the [Syncfusion React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started), covering architectural differences, feature mapping, and required code changes.
+This guide explains how to migrate an existing [PDF.js](https://mozilla.github.io/pdf.js/) implementation to the [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started), covering architectural differences, feature mapping, and required code changes.
 
 ## Overview
 
 PDF.js is a low-level JavaScript library that focuses on rendering PDF pages using HTML canvas and requires developers to manually implement navigation, zooming, text selection, annotations, and UI controls.
 
-Syncfusion React PDF Viewer is a **fully featured, high-level React component** that provides built-in rendering, UI, interaction tools, and performance optimizations out of the box.
+React PDF Viewer is a **fully featured, high-level React component** that provides built-in rendering, UI, interaction tools, and performance optimizations out of the box.
 
 ## Architecture notes
 
@@ -34,7 +34,7 @@ This guide shows a migration path from a low-level canvas-based renderer (PDF.js
 npm install pdfjs-dist
 ```
 
-### Syncfusion React PDF Viewer
+### React PDF Viewer
 
 ```bash
 npm install @syncfusion/ej2-react-pdfviewer
@@ -59,7 +59,7 @@ pdfjsLib.getDocument('sample.pdf').promise.then(pdf => {
 });
 ```
 
-### Syncfusion React PDF Viewer
+### React PDF Viewer
 
 {% tabs %}
 {% highlight js tabtitle="Syncfusion" %}
@@ -122,7 +122,7 @@ page.render().promise.then(() => console.log('Rendered'));
 
 ### Syncfusion Viewer
 
-Check [Syncfusion Events Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events#documentload) to know more about event handling in Syncfusion React PDF Viewer.
+Check [Syncfusion Events Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/events#documentload) to know more about event handling in React PDF Viewer.
 
 ```js
 <PdfViewerComponent
@@ -138,7 +138,7 @@ This minimal tutorial shows a focused migration path from a canvas-based PDF.js 
 1) Project preparations
 
 - Remove existing `pdf js-dist` usage from the components you will replace. Keep a working branch so you can compare behavior.
-- Install Syncfusion React PDF Viewer:
+- Install React PDF Viewer:
 
 ```bash
 npm install @syncfusion/ej2-react-pdfviewer
@@ -146,7 +146,7 @@ npm install @syncfusion/ej2-react-pdfviewer
 
 Add CSS references and local resources
 
-Syncfusion PDF Viewer requires several CSS packages and (for local hosting) the `ej2-pdfviewer-lib` resources. Add the CSS imports to `src/index.css` and copy the `ej2-pdfviewer-lib` folder into your `public` directory if you host resources locally.
+React PDF Viewer requires several CSS packages and (for local hosting) the `ej2-pdfviewer-lib` resources. Add the CSS imports to `src/index.css` and copy the `ej2-pdfviewer-lib` folder into your `public` directory if you host resources locally.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -284,7 +284,7 @@ root.render(<App />);
 - Test on target browsers and configurations; verify performance for large PDFs.
 - Remove stale code paths and unit tests specific to PDF.js implementation.
 
-N> To know more about available Features in Syncfusion React PDF Viewer. Check [PDF Viewer Key Features](../overview#key-features)
+N> To know more about available Features in React PDF Viewer. Check [PDF Viewer Key Features](../overview#key-features)
 
 ## Reference: key Syncfusion `PdfViewerComponent` methods & events
 
@@ -299,4 +299,4 @@ N> To know more about available Features in Syncfusion React PDF Viewer. Check [
 ## See Also
 
 - [PDF.js Getting Started](https://mozilla.github.io/pdf.js/getting_started/)
-- [Syncfusion React PDF Viewer Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
+- [React PDF Viewer Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)

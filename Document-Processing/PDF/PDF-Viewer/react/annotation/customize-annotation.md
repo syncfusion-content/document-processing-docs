@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize annotations in React PDF Viewer | Syncfusion
-description: Learn how to customize PDF annotations in Syncfusion React PDF Viewer using UI tools and programmatic settings (defaults and runtime edits).
+description: Learn how to customize PDF annotations in React PDF Viewer using UI tools and programmatic settings (defaults and runtime edits).
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Field Events in React Pdfviewer control | Syncfusion
-description: Learn here all about different form field in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about different form field in React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Form Field Events
 control: PDF Viewer
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # PDF Viewer Form Field Events in React
 
-The Syncfusion React PDF Viewer provides a set of form field events that report changes associated with creating, selecting, modifying, moving, resizing, or removing form fields. These events supply metadata related to the affected field and are raised during user interaction or programmatic updates.
+The React PDF Viewer provides a set of form field events that report changes associated with creating, selecting, modifying, moving, resizing, or removing form fields. These events supply metadata related to the affected field and are raised during user interaction or programmatic updates.
 
 Validation‑related events are emitted when the viewer performs operations that require confirmation of field completion, such as print or download actions.
 

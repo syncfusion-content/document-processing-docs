@@ -126,7 +126,7 @@ Custom fonts can be applied to the following form field types:
 
 ## Notes and Limitations
 - If text rendered using a custom font exceeds the form field’s bounds, the downloaded PDF may render incorrectly in some third party PDF viewers.
-- The same content displays correctly in the **Syncfusion PDF Viewer**.
+- The same content displays correctly in the **React PDF Viewer**.
 
 ## To avoid rendering issues:
 - Use an appropriate font size that fits within the form field.

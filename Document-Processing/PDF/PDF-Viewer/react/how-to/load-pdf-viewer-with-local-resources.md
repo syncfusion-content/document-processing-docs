@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load PDF Viewer with Local Resources in React | Syncfusion
-description: Learn how to configure the Syncfusion React PDF Viewer to load PDF documents and resources locally instead of from CDN.
+description: Learn how to configure the React PDF Viewer to load PDF documents and resources locally instead of from CDN.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

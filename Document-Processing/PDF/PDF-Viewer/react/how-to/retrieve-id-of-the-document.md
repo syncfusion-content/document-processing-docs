@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Retrieve id of the document in React Pdfviewer component | Syncfusion
-description: Learn here all about Retrieve id of the document in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Retrieve id of the document in React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Retrieve id of the document
 platform: document-processing
 documentation: ug

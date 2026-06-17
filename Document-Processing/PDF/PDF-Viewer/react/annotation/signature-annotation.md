@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Handwritten signature in React PDF Viewer control | Syncfusion
-description: Learn about handwritten signatures in the Syncfusion React PDF Viewer (Essential JS 2): add, enable/disable, and edit properties.
+description: Learn about handwritten signatures in the React PDF Viewer (Essential JS 2): add, enable/disable, and edit properties.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Digital Signature to PDF in React PDF Viewer | Syncfusion
-description: Learn how to add signature fields and apply PKI-based digital signatures using Syncfusion React PDF Viewer and JavaScript PDF Library.
+description: Learn how to add signature fields and apply PKI-based digital signatures using React PDF Viewer and JavaScript PDF Library.
 platform: document-processing
 control: PdfViewer
 documentation: ug

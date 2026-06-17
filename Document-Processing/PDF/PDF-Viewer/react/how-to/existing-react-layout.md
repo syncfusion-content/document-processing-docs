@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Integrating PDF Viewer into existing React layouts | Syncfusion
-description: Guidance and examples to embed the Syncfusion React PDF Viewer into tabs, dialogs, sidebars and responsive layouts.
+description: Guidance and examples to embed the React PDF Viewer into tabs, dialogs, sidebars and responsive layouts.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

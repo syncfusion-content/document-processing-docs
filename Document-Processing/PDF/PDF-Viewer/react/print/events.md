@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print Events in React PDF Viewer | Syncfusion
-description: Learn how to configure print events and track usage and implements workflows in the Syncfusion React PDF Viewer component.
+description: Learn how to configure print events and track usage and implements workflows in the React PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug

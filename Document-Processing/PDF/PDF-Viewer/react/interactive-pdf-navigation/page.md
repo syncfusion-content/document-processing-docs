@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Page Navigation in React PDF Viewer | Syncfusion
-description: Learn about the page navigation and its programmatic APIs in the Syncfusion React PDF Viewer component.
+description: Learn about the page navigation and its programmatic APIs in the React PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Page Navigation in React PDF Viewer
 
-This guide explains how to implement page navigation in the Syncfusion React PDF Viewer. You will learn how to enable toolbar navigation and programmatically navigate to specific pages using the PDF Viewer's navigation methods.
+This guide explains how to implement page navigation in the React PDF Viewer. You will learn how to enable toolbar navigation and programmatically navigate to specific pages using the PDF Viewer's navigation methods.
 
 ## Enable Page Navigation
 

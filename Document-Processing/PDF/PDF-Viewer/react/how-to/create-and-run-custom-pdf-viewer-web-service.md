@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create and Run a Custom PDF Viewer Web Service | Syncfusion
-description: Learn how to set up and run a custom PDF Viewer web service for the Syncfusion React PDF Viewer component.
+description: Learn how to set up and run a custom PDF Viewer web service for the React PDF Viewer component.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

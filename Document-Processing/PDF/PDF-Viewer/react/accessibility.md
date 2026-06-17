@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Accessibility in React PDF Viewer component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Accessibility in React PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Syncfusion PDF Viewer components React
+# Accessibility in React PDF Viewer components React
 
 The PDF Viewer component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and the WCAG ARIA roles specified by WAI-ARIA. The component's accessibility compliance is outlined below.
 
@@ -252,4 +252,4 @@ The PDF Viewer component's accessibility levels are ensured through an [accessib
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](../common/accessibility)
+* [Accessibility in  React components](../common/accessibility)
