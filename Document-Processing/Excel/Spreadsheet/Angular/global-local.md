@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [Localization](https://helpej2.syncfusion.com/angular/documentation/common/globalization/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`]https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#locale) value and translation object.
+The [Localization](https://helpej2.syncfusion.com/angular/documentation/common/globalization/localization) library allows you to localize the default text content of the Spreadsheet. The [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`]https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#locale) value and translation object.
 
 The following list of properties and their values are used in the Spreadsheet.
 

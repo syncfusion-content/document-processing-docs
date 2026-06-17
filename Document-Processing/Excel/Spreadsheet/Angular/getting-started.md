@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Angular Spreadsheet component
 
-This section explains how to create a simple Angular application and add the [Syncfusion® Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component with the minimum required setup.
+This section explains how to create a simple Angular application and add the [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component with the minimum required setup.
 
 ## Prerequisites
 
@@ -114,6 +114,8 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started
 To get started quickly with Angular Spreadsheet, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=2Ozwe37X-7Q" %}
+
+N> Looking for the full Angular Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) page.
 
 ## See also
 
