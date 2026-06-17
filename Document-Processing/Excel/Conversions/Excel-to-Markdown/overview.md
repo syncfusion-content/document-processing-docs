@@ -293,6 +293,7 @@ The following code examples shows how to get the `MarkdownDocument` object from 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+IWorkbook workbook = application.Workbooks.Open("Data/Markdown.xlsx");
 IWorksheet worksheet = workbook.Worksheets[0];
 
 MarkdownDocument markdownDocument = worksheet.GetMarkdownDocument();
@@ -300,12 +301,14 @@ MarkdownDocument markdownDocument = worksheet.GetMarkdownDocument();
 
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+IWorkbook workbook = application.Workbooks.Open("Data/Markdown.xlsx");
 IWorksheet worksheet = workbook.Worksheets[0];
 
 MarkdownDocument markdownDocument = worksheet.GetMarkdownDocument();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Dim workbook As IWorkbook = application.Workbooks.Open("Data/Markdown.xlsx")
 Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
 Dim markdownDocument As MarkdownDocument = worksheet.GetMarkdownDocument()
@@ -316,20 +319,20 @@ The following code examples shows how to get the `MarkdownDocument` object from 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
- IWorkbook workbook = application.Workbooks.Open("Data/ExcelToMarkdown.md");
+ IWorkbook workbook = application.Workbooks.Open("Data/Markdown.xlsx");
 
  MarkdownDocument markdownDocument = workbook.GetMarkdownDocument();
 {% endhighlight %}
 
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
- IWorkbook workbook = application.Workbooks.Open("Data/ExcelToMarkdown.md");
+ IWorkbook workbook = application.Workbooks.Open("Data/Markdown.xlsx");
 
  MarkdownDocument markdownDocument = workbook.GetMarkdownDocument();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Dim workbook As IWorkbook = application.Workbooks.Open("Data/ExcelToMarkdown.md")
+Dim workbook As IWorkbook = application.Workbooks.Open("Data/Markdown.xlsx")
 
 Dim markdownDocument As MarkdownDocument = workbook.GetMarkdownDocument()
 {% endhighlight %}
