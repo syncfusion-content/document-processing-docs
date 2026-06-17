@@ -108,7 +108,7 @@ pdfViewerControl1.Load("Sample.pdf")
 
 {% endtabcontent %}
 
-{% tabcontent Via Coding 
+{% tabcontent Via Coding %}
 
 1. Add Syncfusion.Windows.Forms.PdfViewer namespace.
 
@@ -170,4 +170,4 @@ N>[View Sample in GitHub.](https://github.com/syncfusion/pdf-viewer-sdk-winforms
 
 ## See Also
 - [Viewing PDF files](/windowsforms/pdf-viewer/working-with-pdf-viewer#viewing-pdf-files)
-- [Initialize PdfDocumentView] (./pdfdocumentview-getting-started)
+- [Initialize PdfDocumentView](./pdfdocumentview-getting-started)

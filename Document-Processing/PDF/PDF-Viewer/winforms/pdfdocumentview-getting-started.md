@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Initialize Windows Forms PDF Viewer using PdfDocumentView | Syncfusion&reg;
+title: Initialize Windows Forms PDF Viewer with PdfDocumentView | Syncfusion&reg;
 description: Learn here about getting started with Syncfusion<sup>&reg;</sup>; Windows Forms PDF Viewer control, its elements and more details.
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
 ---
 
-## Adding PdfDocumentView to an Application 
+# Adding PdfDocumentView to an Application 
 
 The [PdfDocumentView](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfDocumentView.html) control allows you to view PDF files without a toolbar. Other features are similar to the PdfViewerControl.
 
-### Adding in designer
+## Adding in designer
 
 1. Open your form in the designer. Add the Syncfusion<sup>&reg;</sup>; controls to your .NET toolbox in Visual Studio if you haven't done so already (the install would have automatically done this unless you selected not to complete toolbox integration during installation).
    
@@ -41,7 +41,7 @@ pdfDocumentView1.Load("Sample.pdf")
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 	
-### Adding manually in code
+## Adding manually in code
 
 1. Add Syncfusion.Windows.Forms.PdfViewer namespace.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Themes in WPF PdfViewer control | Syncfusion®
-description: Learn here all about Themes support in Syncfusion® WPF PdfViewer, its elements and more.
+description: Learn about theme support in Syncfusion® WPF PdfViewer, including available themes, UI elements, customization options, and usage details.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
