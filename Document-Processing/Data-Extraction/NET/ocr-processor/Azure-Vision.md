@@ -27,13 +27,16 @@ N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup><sup>&reg;</sup><
 
 Step 3: Include the following namespaces in the Program.cs file. 
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.OCRProcessor;
 using Syncfusion.Pdf.Parsing;
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Use the following code sample to perform OCR on a PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class with Azure Vision.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Initialize the OCR processor.
@@ -61,11 +64,13 @@ using (OCRProcessor processor = new OCRProcessor())
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Create a new class named <b>AzureExternalOcrEngine</b> to get the image stream from the PerformOCR method and process the image stream with an external engine. It returns the OCRLayoutResult for the image. 
 
 N> Provide a valid subscription key and endpoint to work with Azure computer vision.
 
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 class AzureExternalOcrEngine : IOcrEngine
@@ -182,6 +187,7 @@ class AzureExternalOcrEngine : IOcrEngine
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get a PDF document as follows. 
 ![Output PDF document](OCR-Images/Output.png)   

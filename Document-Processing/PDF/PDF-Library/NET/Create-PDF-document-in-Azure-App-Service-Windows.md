@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PDF document in Azure App Service on Windows
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure App Service on Windows**.
+The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure App Service on Windows**.
 
 Check the following video to learn how to create a PDF document and publish it as an Azure App Service on Windows using the .NET PDF Library.
 {% youtube "https://www.youtube.com/watch?v=PU8pVAHV_88" %}
@@ -139,7 +139,7 @@ public IActionResult CreatePDFDocument()
 
 {% endtabs %}
 
-## Steps to publish as Azure App Service on Windows 
+**Steps to publish as Azure App Service on Windows**
 
 Step 1: Right-click the project and select **Publish** option.
 ![Publish option Image](Azure_images/Azure-app-service-windows/Publish_button.png)
@@ -179,6 +179,6 @@ Step 12: Select the PDF document and Click **Create PDF document** to create a P
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Azure%20App%20Service).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features. 
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core. 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind). 

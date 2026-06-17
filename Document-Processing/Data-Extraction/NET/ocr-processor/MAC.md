@@ -37,7 +37,6 @@ Step 4: Include the following Namespaces in the Program.cs file.
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
-
 using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
@@ -118,7 +117,6 @@ Step 5: Include the following Namespaces in the Program.cs file.
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.OCRProcessor;
-
 using Syncfusion.Pdf.Parsing;
 
 {% endhighlight %}
@@ -182,4 +180,3 @@ By executing the program, you will get a PDF document as follows.
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/OCR-csharp-examples/tree/master/Mac).
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
-

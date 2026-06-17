@@ -29,15 +29,6 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-      {{'[Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms)'| markdownify }} and {{'[WPF (Client Profile)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)'| markdownify }}
-      </td>
-      <td>
-        Syncfusion.Pdf.ClientProfile<br/>
-        Syncfusion.Compression.Base
-      </td>
-    </tr>
-    <tr>
-      <td>
         {{'[Universal Windows Platform](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-uwp)'| markdownify }}
       </td>
       <td>
@@ -219,7 +210,7 @@ Get the following required assemblies by downloading the HTML converter installe
 </table>
 
 
-N> HTML to PDF conversion is not supported in Silverlight, Windows Phone, WinRT, Universal, Xamarin and UWP applications
+N> HTML to PDF conversion is not supported in Xamarin, .NET MAUI, WinUI and UWP applications
 
 ## Converting Word document to PDF
 
@@ -241,16 +232,6 @@ For converting a Word document to PDF, the following assemblies need to be refer
         Syncfusion.OfficeChart.Base<br/>
         Syncfusion.Pdf.Base<br/>
         Syncfusion.DocToPdfConverter.Base
-      </td>
-    </tr>
-    <tr>
-      <td>Windows Forms and WPF (Client Profile)</td>
-      <td>
-        Syncfusion.DocIO.ClientProfile<br/>
-        Syncfusion.Compression.Base<br/>
-        Syncfusion.OfficeChart.Base<br/>
-        Syncfusion.Pdf.ClientProfile<br/>
-        Syncfusion.DocToPdfConverter.ClientProfile
       </td>
     </tr>
     <tr>
@@ -344,15 +325,6 @@ For converting an Excel document to PDF, the following assemblies need to be ref
         Syncfusion.Compression.Base<br/>
         Syncfusion.Pdf.Base<br/>
         Syncfusion.ExcelToPDFConverter.Base
-      </td>
-    </tr>
-    <tr>
-      <td>Windows Forms and WPF (Client Profile)</td>
-      <td>
-        Syncfusion.XlsIO.ClientProfile<br/>
-        Syncfusion.Compression.Base<br/>
-        Syncfusion.Pdf.ClientProfile<br/>
-        Syncfusion.ExcelToPDFConverter.ClientProfile
       </td>
     </tr>
     <tr>
@@ -516,6 +488,3 @@ The following assemblies are required to be referred in addition to the above me
     </tr>
   </tbody>
 </table>
-
-N> The "Syncfusion.OfficeChartToImageConverter.WPF" assembly is supported from .NET Framework 4.0 onwards.
-

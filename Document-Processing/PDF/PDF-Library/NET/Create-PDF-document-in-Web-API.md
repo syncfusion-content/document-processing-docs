@@ -26,7 +26,10 @@ Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syn
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespaces in that `WeatherForecastController.cs` file.
+Step 4: Add a new API controller empty file in the project.
+![Add new class](MVC_images/Web-API-4.png)
+
+Step 5: Include the following namespaces in that `PdfController.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -39,9 +42,9 @@ using Syncfusion.Pdf.Grid;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
+Step 6: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
 
-Add the following code sample in ``WeatherForecastController`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``. 
+Add the following code sample in ``PdfController`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``. 
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -65,18 +68,19 @@ public IActionResult CreatePdfDocument()
 
 private MemoryStream ExportWeatherForecastToPdf()
 {
-    var forecasts = Get().ToList();
+    var forecasts = Enumerable.Range(1, 5).Select(index => new WeatherForecast
+    {
+        Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+        TemperatureC = Random.Shared.Next(-20, 55),
+        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+    }).ToList();
 
-    //Create a new PDF document.
     using (PdfDocument pdfDocument = new PdfDocument())
     {
         int paragraphAfterSpacing = 8;
         int cellMargin = 8;
-        //Add page to the PDF document.
         PdfPage page = pdfDocument.Pages.Add();
-        //Create a new font.
         PdfStandardFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 16);
-        //Create a text element to draw a text in PDF page.
         PdfTextElement title = new PdfTextElement("Weather Forecast", font, PdfBrushes.Black);
         PdfLayoutResult result = title.Draw(page, new PointF(0, 0));
         PdfStandardFont contentFont = new PdfStandardFont(PdfFontFamily.TimesRoman, 12);
@@ -85,28 +89,18 @@ private MemoryStream ExportWeatherForecastToPdf()
         {
             Layout = PdfLayoutType.Paginate
         };
-        //Draw a text to the PDF document.
         result = content.Draw(page, new RectangleF(0, result.Bounds.Bottom + paragraphAfterSpacing, page.GetClientSize().Width, page.GetClientSize().Height), format);
-        //Create a PdfGrid.
         PdfGrid pdfGrid = new PdfGrid();
         pdfGrid.Style.CellPadding.Left = cellMargin;
         pdfGrid.Style.CellPadding.Right = cellMargin;
-        //Applying built-in style to the PDF grid.
         pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent1);
-        //Assign data source.
         pdfGrid.DataSource = forecasts;
         pdfGrid.Style.Font = contentFont;
-        //Draw PDF grid into the PDF page.
         pdfGrid.Draw(page, new PointF(0, result.Bounds.Bottom + paragraphAfterSpacing));
 
         using (MemoryStream stream = new MemoryStream())
         {
-            //Saving the PDF document into the stream.
             pdfDocument.Save(stream);
-
-            //Closing the PDF document.
-            pdfDocument.Close(true);
-
             return new MemoryStream(stream.ToArray());
         }
     }
@@ -115,6 +109,9 @@ private MemoryStream ExportWeatherForecastToPdf()
 {% endhighlight %}
 {% endtabs %}
 
+Step 7: Navigate to the `Swagger UI`, expand the `GET /api/Pdf` API, click `Execute`, and then download the response output.
+![Swagger UI](MVC_images/Web-API-5.png)
+
 By executing the program, you will get the PDF document as follows.
 ![ASP.Net Core output PDF document](MVC_images/Output.png)
 
@@ -122,4 +119,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
-An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) in ASP.NET Core. 
+An online sample link to [create PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind).
