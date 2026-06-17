@@ -1095,6 +1095,8 @@ End Class
 
 {% endtabs %}
 
+N> When implementing `IPdfExternalSigner`, ensure that the hashing and signing algorithm used in the `Sign` method matches the `DigestAlgorithm` specified in `PdfSignature.Settings`; otherwise, the generated signature may be invalid or fail validation.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Externally-sign-the-PDF-document-using-IPdfExternalSigner/).
 
 ## Adding Timestamps to a PDF document using external signing
