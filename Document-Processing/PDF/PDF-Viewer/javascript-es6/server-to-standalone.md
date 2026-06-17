@@ -234,7 +234,7 @@ This approach is recommended for most server scenarios because it handles file s
 
 ### Load PDFs from Base64-Encoded Strings
 
-When your server returns a PDF as a Base64-encoded string, convert it to a data URL and load it into the viewer:
+When your server returns a PDF as a Base64-encoded string, it can be loaded directly into the viewer:
 
 ```js
 const loadPdfAsBase64 = async () => {
