@@ -138,7 +138,7 @@ This minimal tutorial shows a focused migration path from a canvas-based PDF.js 
 1) Project preparations
 
 - Remove existing `pdf js-dist` usage from the components you will replace. Keep a working branch so you can compare behavior.
-- Install React PDF Viewer:
+- Install Syncfusion React PDF Viewer:
 
 ```bash
 npm install @syncfusion/ej2-react-pdfviewer
