@@ -19,7 +19,7 @@ In this page, you can learn how to create a simple Markdown document programmati
 <tbody>  
 <tr>
 <td>
-Syncfusion.Markdown.Base
+Syncfusion.Markdown
 <br/><br/></td><td>
 This assembly contains the core features required for creating, reading, and manipulating a Markdown document.<br/><br/></td></tr>
 </tbody>
