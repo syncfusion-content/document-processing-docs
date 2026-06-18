@@ -9,7 +9,7 @@ documentation: ug
 
 # Clipboard in Vue Spreadsheet component
 
-The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#enableclipboard) property in Spreadsheet.
+The [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#enableclipboard) property in Spreadsheet.
 
 > By default, the `enableClipboard` property is true.
 

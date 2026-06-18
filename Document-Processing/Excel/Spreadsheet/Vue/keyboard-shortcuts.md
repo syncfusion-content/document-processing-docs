@@ -9,7 +9,7 @@ documentation: ug
 
 # Keyboard shortcuts in Vue Spreadsheet component
 
-The keyboard shortcuts supported in the spreadsheet are,
+The keyboard shortcuts supported in the [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) are,
 
 | Shortcut | Description |
 |-------|---------|

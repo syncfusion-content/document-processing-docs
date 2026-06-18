@@ -9,7 +9,7 @@ documentation: ug
 
 # Ribbon in Vue Spreadsheet component
 
-It helps to organize a spreadsheet’s features into a series of tabs. By clicking the expand or collapse icon, you can expand or collapse the ribbon toolbar dynamically.
+It helps to organize a [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) features into a series of tabs. By clicking the expand or collapse icon, you can expand or collapse the ribbon toolbar dynamically.
 
 ## Ribbon Customization
 

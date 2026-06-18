@@ -9,7 +9,7 @@ documentation: ug
 
 # Feature list in Vue Spreadsheet component
 
-The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
+The following table compares Excel functionality with the availability of EJ1 and EJ2 [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) features.
 
 | **Features** | **Available in EJ1 Spreadsheet** | **Available in EJ2 Spreadsheet** | **Comments** |
 | --- | --- | --- | --- |

@@ -9,7 +9,7 @@ documentation: ug
 
 # Link in Vue Spreadsheet component
 
-Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowHyperlink) property to enable or disable hyperlink functionality.
+Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor). You can use the [`allowHyperlink`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowHyperlink) property to enable or disable hyperlink functionality.
 
 > * The default value for `allowHyperlink` property is `true`.
 
