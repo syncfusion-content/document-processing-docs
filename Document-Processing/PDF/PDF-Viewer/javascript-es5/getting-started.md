@@ -224,7 +224,7 @@ You can also explore the PDF Viewer interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/es5-getting-started-cs2" %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
+> [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
 
 ## See also
 

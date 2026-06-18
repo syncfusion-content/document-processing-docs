@@ -130,7 +130,7 @@ The image below shows how the PDF Viewer is rendered in the browser:
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/getting-started-cs2" %}
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Save%20and%20Load)
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Save%20and%20Load)
 
 ## See also
 
