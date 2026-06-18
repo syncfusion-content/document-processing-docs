@@ -69,7 +69,7 @@ this.$refs.documenteditor.ej2Instances.editor.insertTableOfContents(tocSettings)
 
 ## Online Demo
 
-Explore how to insert and update table of contents in Word documents using the Vue Document Editor in this live demo https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/table-of-contents.html.
+Explore how to insert and update table of contents in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/table-of-contents.html).
 
 ## See Also
 

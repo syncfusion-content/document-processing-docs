@@ -363,7 +363,3 @@ export class AppComponent implements AfterViewInit {
 ## Online Demo
 
 Explore how to customize and use the ribbon interface in the Angular Document Editor to work with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/ribbon-customization).
-
-## Related Links
-
-- [File menu Customization Demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/ribbon-customization)

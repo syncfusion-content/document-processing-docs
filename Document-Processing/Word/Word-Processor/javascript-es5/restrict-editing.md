@@ -57,7 +57,7 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
 
 ## Online Demo
 
-Explore how to restrict editing and protect Word documents using the JavaScript (ES5) Document Editor in this live demo https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/document-protection.html.
+Explore how to restrict editing and protect Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/document-protection.html).
 
 ### See Also
 

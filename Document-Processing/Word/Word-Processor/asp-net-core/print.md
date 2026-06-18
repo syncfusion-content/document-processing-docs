@@ -96,7 +96,7 @@ By customizing margins, papers, and layouts, the layout of the document will be 
 
 ## Online Demo
 
-Explore how to print Word documents using the ASP.NET Core Document Editor in this live demo https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/print#/tailwind3.
+Explore how to print Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/print#/tailwind3).
 
 ## See Also
 
