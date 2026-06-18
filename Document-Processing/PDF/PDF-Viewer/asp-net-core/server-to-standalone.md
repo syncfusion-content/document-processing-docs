@@ -244,13 +244,11 @@ Standalone mode enables you to load PDFs directly from various cloud storage ser
 - [Azure Blob Storage](./open-pdf-file/from-azure-blob-storage)
 - [Google Cloud Storage](./open-pdf-file/from-google-cloud-storage)
 - [Google Drive](./open-pdf-file/from-google-drive)
-- [OneDrive](./open-pdf-file/from-one-drive)
-- [Dropbox](./open-pdf-file/from-dropbox-cloud-file-storage)
 - [Box](./open-pdf-file/from-box-cloud-file-storage)
 
 Each guide includes authentication setup, complete code examples, and API integration patterns for seamless PDF loading from your chosen cloud provider.
 
-For additional loading methods and scenarios, refer to [Open PDF Files](./open-pdf-files).
+For additional loading methods and scenarios, refer to [Open PDF Files](./open-pdf-file).
 
 ## Next Steps
 

@@ -137,7 +137,7 @@ If you prefer to host resources locally for better control or offline scenarios,
 {% endhighlight %}
 {% endtabs %}
 
-For detailed local resource setup instructions, refer to [Load PDF Viewer with Local Resources](./how-to/load-pdf-viewer-with-local-resources).
+For detailed local resource setup instructions, refer to [Load PDF Viewer with Local Resources](./how-to/local-resources).
 
 ### Step 4: Verify Your Migration
 
@@ -240,8 +240,6 @@ Standalone mode enables you to load PDFs directly from various cloud storage ser
 - [Azure Blob Storage](./open-pdf-file/from-azure-blob-storage)
 - [Google Cloud Storage](./open-pdf-file/from-google-cloud-storage)
 - [Google Drive](./open-pdf-file/from-google-drive)
-- [OneDrive](./open-pdf-file/from-one-drive)
-- [Dropbox](./open-pdf-file/from-dropbox-cloud-file-storage)
 - [Box](./open-pdf-file/from-box-cloud-file-storage)
 
 Each guide includes authentication setup, complete code examples, and API integration patterns for seamless PDF loading from your chosen cloud provider.
@@ -256,7 +254,7 @@ Once you have completed the migration to standalone mode, explore these resource
 - [Getting Started with Standalone ASP.NET MVC PDF Viewer](./getting-started) — Learn the fundamentals of standalone mode setup and configuration
 
 **Advanced Configuration:**
-- [Load PDF Viewer with Local Resources](./how-to/load-pdf-viewer-with-local-resources) — Host PDFium resources locally for better control and offline scenarios
+- [Load PDF Viewer with Local Resources](./how-to/local-resources) — Host PDFium resources locally for better control and offline scenarios
 - [Open PDF Files](./open-pdf-file) — Explore multiple methods to load PDF documents
 - [Save PDF Files](./save-pdf-file/to-amazon-s3) — Learn how to save and export modified PDFs
 

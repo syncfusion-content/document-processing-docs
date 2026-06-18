@@ -300,7 +300,7 @@ Once you have completed the migration to standalone mode, explore these resource
 **Feature Implementation:**
 - [Text Markup Annotations](./annotation/text-markup-annotation) — Add highlighting, comments, and markup to PDFs
 - [Form Designer](./forms/form-designer) — Work with interactive form fields in your PDFs
-- [PDF Viewer API Methods](./api-methods) — Reference all available API methods and properties
+- [PDF Viewer API Methods](https://ej2.syncfusion.com/react/documentation/api/pdfviewer) — Reference all available API methods and properties
 
 **Related Topics:**
 - [System Requirements](https://ej2.syncfusion.com/react/documentation/system-requirement)

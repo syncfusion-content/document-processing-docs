@@ -265,7 +265,7 @@ Once you have completed the migration to standalone mode, explore these resource
 - [Save PDF Files](./save-pdf-files) — Learn how to save and export modified PDFs
 
 **Feature Implementation:**
-- [Text Markup Annotations](./annotation/text-markup-annotation) — Add highlighting, comments, and markup to PDFs
+- [Text Markup Annotations](./annotations/annotation-types/highlight-annotation) — Add highlighting, comments, and markup to PDFs
 - [Form Designer](./forms/form-designer) — Work with interactive form fields in your PDFs
 - [PDF Viewer API Methods](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default) — Reference all available API methods and properties
 
