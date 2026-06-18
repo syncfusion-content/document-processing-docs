@@ -246,9 +246,6 @@ Add the stylesheet at the end of the `<head>` section in the `Components/App.raz
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight razor tabtitle="App.razor" %}
-
 ### Add script resource
 
 Add the required script at the end of the `<body>` section in the `Components/App.razor` file to enable component functionality.
