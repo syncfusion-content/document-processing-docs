@@ -176,7 +176,7 @@ End Class
 
 To bind the [DocumentStream](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html#Syncfusion_Windows_PdfViewer_SfPdfViewerControl_DocumentStream) property of the PdfReport class to the PDF viewer, you need to set the [DataContext](https://learn.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.datacontext?view=winrt-28000) of the page. After setting the DataContext, bind the [`ItemsSource`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html#Syncfusion_Windows_PdfViewer_SfPdfViewerControl_ItemsSource) property of the `SfPdfViewer` to the `DocumentStream` property.
 
-The following example shows how to set the `DataContext` and `ItemSource`property in XAML:
+The following example shows how to set the `DataContext` and `ItemsSource`property in XAML:
 
 {% tabs %}
 {% highlight xaml %}
