@@ -17,6 +17,6 @@ You can move a worksheet using the following way,
 
 * Move sheets programmatically using the [moveSheet](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#movesheet) method, which moves a worksheet from one position to another based on the position passed in the method and updates the sheet tab order.
     
-![Move sheet tabs](./images/spreadsheet-move-tab.png)
+![Move sheet tabs](../images/spreadsheet-move-tab.png)
 
 >**Note:** The Move Left and Move Right options are enabled only when there are two or more worksheets available in the Spreadsheet. These options are automatically disabled when the selected sheet is already at the first or last position.
