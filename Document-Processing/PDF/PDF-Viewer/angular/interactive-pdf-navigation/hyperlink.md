@@ -73,35 +73,6 @@ export class AppComponent {
 }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit } from '@angular/core';
-import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         PrintService } from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-container',
-  template: `<div class="content-wrapper">
-               <ejs-pdfviewer id="pdfViewer"
-                        [serviceUrl]='service'
-                        [enableHyperlink]='false'
-                        [documentPath]='document'
-                        style="height:640px;display:block">
-               </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               PrintService ]
-})
-export class AppComponent {
-  public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-  public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  ngOnInit(): void {}
-}
-{% endhighlight %}
 {% endtabs %}
 
 N> Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
@@ -145,34 +116,6 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, Magnifi
 export class AppComponent {
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public resource: string = 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib';
-  ngOnInit(): void {}
-}
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { Component, OnInit } from '@angular/core';
-import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         PrintService } from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-container',
-  template: `<div class="content-wrapper">
-               <ejs-pdfviewer id="pdfViewer"
-                        [serviceUrl]='service'
-                        [hyperlinkOpenState]='NewTab'
-                        [documentPath]='document'
-                        style="height:640px;display:block">
-               </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               PrintService ]
-})
-export class AppComponent {
-  public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-  public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   ngOnInit(): void {}
 }
 {% endhighlight %}
@@ -240,46 +183,6 @@ export class AppComponent {
   ngOnInit(): void {}
 }
 
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit } from '@angular/core';
-import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         PrintService } from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-container',
-  template: `<div class="content-wrapper">
-               <ejs-pdfviewer id="pdfViewer"
-                        [serviceUrl]='service'
-                        (hyperlinkClick)="onHyperlinkClick($event)"
-                        (hyperlinkMouseOver)="onHyperlinkMouseOver($event)"
-                        [documentPath]='document'
-                        style="height:640px;display:block">
-               </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               PrintService ]
-})
-export class AppComponent {
-  public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-  public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-
-  onHyperlinkClick(args: any): void {
-    console.log('Hyperlink Clicked:', args.hyperlink);
-    // To prevent default navigation, set: args.cancel = true;
-  }
-
-  onHyperlinkMouseOver(args: any): void {
-    console.log('Mouse is over hyperlink:', args.hyperlinkElement.href);
-  }
-
-  ngOnInit(): void {}
-}
 {% endhighlight %}
 {% endtabs %}
 

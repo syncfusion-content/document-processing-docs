@@ -52,44 +52,6 @@ import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
 }
 
 {% endhighlight %}
-
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit } from '@angular/core';
-import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
-         MagnificationService, ThumbnailViewService, ToolbarService,
-         NavigationService, TextSearchService, TextSelectionService,
-         PrintService, FormDesignerService, FormFieldsService,
-         AnnotationService, PageOrganizerService, DownloadStartEventArgs } from '@syncfusion/ej2-angular-pdfviewer';
-@Component({
-  selector: 'app-container',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-                  <ejs-pdfviewer id="pdfViewer"
-                            [serviceUrl]='service'
-                            [documentPath]='document'
-                            (downloadStart)="downloadStart($event)"
-                            style="height:640px;display:block">
-                  </ejs-pdfviewer>
-              </div>`,
-   providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
-  })
-  export class AppComponent implements OnInit {
-    public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-    public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-
-    ngOnInit(): void {
-    }
-  public downloadStart(args: DownloadStartEventArgs): void {
-    // Your custom logic here
-    args.cancel = true; // Prevent download action
-  }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 By default, the `cancel` argument is `false`, so the download proceeds unless the handler explicitly sets `args.cancel = true`.

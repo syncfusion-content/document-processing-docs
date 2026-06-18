@@ -28,19 +28,6 @@ Example:
 </ejs-pdfviewer>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<ejs-pdfviewer #pdfviewer id='pdfViewer'
-    [serviceUrl]='service'
-    [documentPath]='document'
-    [enableToolbar]=false
-    [enableNavigationToolbar]=false
-    (annotationSelect)="annotationSelect($event)"
-    (annotationUnSelect)="annotationUnSelect($event)"
-    style="height:640px; display: block">
-</ejs-pdfviewer>
-
-{% endhighlight %}
 {% endtabs %}
 
 ```html

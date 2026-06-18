@@ -41,7 +41,7 @@ import {
     <div class="content-wrapper">
       <ejs-pdfviewer
         id="pdfViewer"
-        [serviceUrl]="service"
+        [resouceUrl]="resource"
         [documentPath]="document"
         [enableLocalStorage]="true"
         style="height: 640px; display: block;">
@@ -65,7 +65,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public document: string = 'PDF_Succinctly.pdf';
-  public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
+  public resource: string='https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
   ngOnInit(): void { }
 

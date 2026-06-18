@@ -54,38 +54,6 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 
 {% endhighlight %}
-
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService,  NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-container',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-                <ejs-pdfviewer id="pdfViewer"
-                          [serviceUrl]='service'
-                          [documentPath]='document'
-                          [enableNavigation]='true'
-                          style="height:640px;display:block">
-                </ejs-pdfviewer>
-              </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               PrintService]
-  })
-  export class AppComponent implements OnInit {
-      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  }
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Toolbar navigation showing go-to-page and next/previous page buttons](images/navigation.png)
@@ -124,38 +92,6 @@ export class AppComponent implements OnInit {
 }
 
 {% endhighlight %}
-
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService,ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-container',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-                <ejs-pdfviewer id="pdfViewer"
-                            [serviceUrl]='service'
-                            [documentPath]='document'
-                            [enableBookmark]='true'
-                            style="height:640px;display:block">
-                </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               PrintService]
-})
-export class AppComponent implements OnInit {
-  public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-  public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Bookmark panel open with document outline links](images/bookmark.png)
@@ -189,37 +125,6 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  }
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
-@Component({
-  selector: 'app-container',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-                <ejs-pdfviewer id="pdfViewer"
-                            [serviceUrl]='service'
-                            [documentPath]='document'
-                            [enableThumbnail]='true'
-                            style="height:640px;display:block">
-                </ejs-pdfviewer>
-            </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService,TextSearchService,TextSelectionService,
-               PrintService]
-  })
-  export class AppComponent implements OnInit {
-      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   }
 
@@ -267,37 +172,6 @@ Table of contents navigation allows users to jump to sections listed in the PDF'
     }
 
 {% endhighlight %}
-
-{% highlight ts tabtitle="Server-Backed" %}
-
-  import { Component, OnInit } from '@angular/core';
-  import { LinkAnnotationService,BookmarkViewService, MagnificationService,
-           ThumbnailViewService, ToolbarService, NavigationService,
-           TextSearchService, AnnotationService, TextSelectionService,
-           PrintService
-         } from '@syncfusion/ej2-angular-pdfviewer';
-  @Component({
-    selector: 'app-container',
-    // specifies the template string for the PDF Viewer component
-    template: `<div class="content-wrapper">
-                 <ejs-pdfviewer id="pdfViewer"
-                         [serviceUrl]='service'
-                         [documentPath]='document'
-                         [enableHyperlink]='true'
-                         style="height:640px;display:block">
-                 </ejs-pdfviewer>
-               </div>`,
-    providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-                 ThumbnailViewService, ToolbarService, NavigationService,
-                 AnnotationService, TextSearchService, TextSelectionService,
-                 PrintService]
-    })
-    export class AppComponent implements OnInit {
-      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    }
-
-{% endhighlight %}
 {% endtabs %}
 
 You can change how hyperlinks open in the PDF Viewer (for example, in a new tab) using the following code snippet.
@@ -327,38 +201,6 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
                PrintService]
   })
   export class AppComponent implements OnInit {
-      public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-      public linkOpenState = 'NewTab';
-  }
-
-{% endhighlight %}
-
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
-         ThumbnailViewService, ToolbarService, NavigationService,
-         TextSearchService, AnnotationService, TextSelectionService,
-         PrintService
-       } from '@syncfusion/ej2-angular-pdfviewer';
-@Component({
-  selector: 'app-container',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-                <ejs-pdfviewer id="pdfViewer"
-                              [serviceUrl]='service'
-                              [documentPath]='document'
-                              [hyperlinkOpenState]='linkOpenState'
-                              style="height:640px;display:block">
-                </ejs-pdfviewer>
-              </div>`,
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               AnnotationService, TextSearchService, TextSelectionService,
-               PrintService]
-  })
-  export class AppComponent implements OnInit {
-      public service = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
       public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
       public linkOpenState = 'NewTab';
   }

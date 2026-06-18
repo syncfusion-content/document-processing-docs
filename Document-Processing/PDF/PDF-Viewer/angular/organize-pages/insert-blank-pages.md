@@ -20,7 +20,7 @@ This guide describes inserting new blank pages into a PDF using the **Organize P
 
 - EJ2 Angular PDF Viewer installed
 - `PageOrganizer` services injected into `PdfViewerComponent`
-- [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) for standalone mode or [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) for server-backed mode configured as required
+- [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) for standalone mode.
 
 ## Steps
 
@@ -57,7 +57,7 @@ To enable or disable the **Insert Pages** button in the page thumbnails, update 
 ## Troubleshooting
 
 - **Organize Pages button missing**: Verify `PageOrganizer` is included in `Inject` and `Toolbar` is enabled.
-- **Inserted page not saved**: Confirm [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) or [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) is configured for your selected processing mode.
+- **Inserted page not saved**: Confirm [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) is configured for your selected processing mode.
 - **Insert options disabled**: Ensure [`pageOrganizerSettings.canInsert`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageorganizersettingsmodel#caninsert) is set to `true` to enable insert option.
 
 ## Related topics

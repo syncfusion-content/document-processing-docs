@@ -24,7 +24,7 @@ The following snippet shows how to subscribe to `signatureSelect` and `signature
 
 ```html
 <ejs-pdfviewer #pdfViewer id="pdfViewer"
-               [serviceUrl]='service'
+               [resoureUrl]='resource'
                [documentPath]='document'
                (signatureSelect)='signatureSelect($event)'
                (signatureUnselect)='signatureUnselect($event)'

@@ -17,7 +17,7 @@ In the PDF Viewer, the `pageRenderInitiate` and `pageRenderComplete` events fire
 
 ```html
 <ejs-pdfviewer #pdfViewer id="pdfViewer"
-               [serviceUrl]='service'
+               [resourceUrl]='resource'
                [documentPath]='document'
                (pageRenderInitiate)='pageRenderInitiate($event)'
                (pageRenderComplete)='pageRenderComplete($event)'

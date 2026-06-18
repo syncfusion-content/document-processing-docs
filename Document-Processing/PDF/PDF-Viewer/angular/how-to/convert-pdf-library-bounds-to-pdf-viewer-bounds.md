@@ -22,7 +22,7 @@ Create an instance of the PDF Viewer and configure it with the required services
       <ejs-pdfviewer
         id="pdfViewer"
         [documentPath]="document"
-        [serviceUrl]="serviceUrl"
+        [resourceUrl]="resourceUrl"
         style="height: 640px; display: block;"
         (exportSuccess)="handleExportSuccess($event)">
       </ejs-pdfviewer>

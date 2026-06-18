@@ -20,7 +20,7 @@ The following steps are used to extract the text from the page.
 
 ```html
 <ejs-pdfviewer #pdfViewer id="pdfViewer"
-                             [serviceUrl]='service'
+                             [resourceUrl]='resource'
                              [documentPath]='document'
                              (extractTextCompleted)='extractTextCompleted($event)'
                              [isExtractText]=true

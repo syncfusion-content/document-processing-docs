@@ -19,7 +19,7 @@ This guide shows how to delete single or multiple pages from a PDF using the **O
 ## Prerequisites
 
 - EJ2 Angular PDF Viewer installed in your project
-- Basic PDF Viewer setup ([`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) for standalone mode or [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) for server-backed mode)
+- Basic PDF Viewer setup ([`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) for standalone mode)
 
 ## Steps
 
