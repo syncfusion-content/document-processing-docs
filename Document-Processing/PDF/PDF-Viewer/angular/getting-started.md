@@ -42,7 +42,7 @@ cd pdfviewer-app
 
 > **Note:** When prompted during project creation, select the default options: **CSS** for stylesheet, **No** for SSR/SSG, and **None** for AI tools.
 
-## Installing Syncfusion® Angular PDF Viewer package
+## Install the Syncfusion® Angular PDF Viewer package
 
 Install the Syncfusion [Angular PDF Viewer](https://www.npmjs.com/package/@syncfusion/ej2-angular-pdfviewer) package from npm:
 
@@ -84,6 +84,7 @@ Update `src/app/app.ts` as shown below:
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
+
 import { Component } from '@angular/core';
 import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
          MagnificationService, ThumbnailViewService, ToolbarService,
@@ -114,6 +115,7 @@ export class App {
   public resourcesUrl: string =
     'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -123,7 +125,6 @@ N> The `documentPath` property sets the PDF file path to be loaded. You can prov
 
 Run the following command to start the Angular application:
 
-
 {% tabs %}
 {% highlight bash tabtitle="CLI" %}
 
@@ -131,7 +132,6 @@ ng serve --open
 
 {% endhighlight %}
 {% endtabs %}
-
 
 After the application starts, open the localhost URL shown in the terminal to view the Angular PDF Viewer component in the browser. The output will appear as follows:
 
