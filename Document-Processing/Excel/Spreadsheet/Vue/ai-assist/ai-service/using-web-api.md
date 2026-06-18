@@ -44,7 +44,7 @@ const azureDeploymentName   = 'Your_Deployment_Name';
 
 Run the following commands in your Web API project to install the required NuGet packages:
 
-```
+```bash
 dotnet add package Azure.AI.OpenAI
 dotnet add package Microsoft.Extensions.AI
 dotnet add package Microsoft.Extensions.AI.OpenAI
@@ -189,7 +189,7 @@ namespace WebService.Controllers
 
 Run the following command to start the Web API server:
 
-```
+```bash
 dotnet run
 ```
 
@@ -276,7 +276,7 @@ And returns:
 
 A Web API server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in `appsettings.json`, and start the server using the following command:
 
-```
+```bash
 dotnet run
 ```
 
