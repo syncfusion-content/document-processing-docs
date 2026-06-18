@@ -9,20 +9,26 @@ documentation: ug
 
 # Overview of Forms in ASP.NET Core PDF Viewer
 
-The Syncfusion PDF Viewer provides a complete, easy-to-use PDF forms experience. Form fields can be read, filled, added, edited, and deleted directly within PDF documents through the intuitive UI and powerful programmatic APIs. The viewer includes smooth import and export support for form data, enabling effortless integration. Developers gain extensive API control while end users enjoy a clean interface for seamless form-filling.
+
+The Syncfusion ASP .Net Core PDF Viewer delivers a complete, easy-to-use PDF forms experience. Users can read, fill, add, edit, and delete form fields directly within PDF documents through the viewer UI or programmatically via the ASP .Net Core APIs.
+
+The viewer includes import and export support for form data, simplifying integration with backend systems. Developers have fine-grained API control while end users interact with a streamlined form-filling interface.
+
+Check out the following video to learn how to use the Form Fields in the ASP .Net Core PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=MUWTCg1MoAE" %}
 
 ## Filling PDF Forms
 
-PDF forms can be filled effortlessly through a clean, intuitive UI or automated workflows via powerful APIs. Flexible form data import and export support ensures smooth operations.
+Experience effortless PDF form filling through a clean, intuitive UI or automated workflows using powerful APIs. Flexible form data import and export support ensures smooth and efficient operations when working with PDF forms.
 
 See the [Filling PDF Forms](./form-filling) page for full details.
 
-Use the following code-snippet to enable form-filling by using the ASP.NET Core `ejs-pdfviewer` markup.
+Use the following code-snippet to enable form-filling by injecting `FormFields` Module.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
     </ejs-pdfviewer>
 </div>
 {% endhighlight %}
@@ -36,16 +42,15 @@ Use the following code-snippet to enable form-filling by using the ASP.NET Core 
 
 ## Form Designer
 
-A built-in Form Designer enables quick addition, editing, moving, and deletion of form fields. PDF forms can be designed interactively using built-in tools or customized form designer solutions.
+A built in Form Designer lets you quickly add, edit, move, and delete form fields in the PDF documents. This viewer allows you to design fillable PDF forms interactively either using the built-in form designer tools or building your own customized form designer tools.
 
 See the [Form Designer](./form-designer) page for full details.
 
-Use the following Code-snippet to enable Form Designer using the ASP.NET Core `ejs-pdfviewer` markup.
-
+Use the following Code-snippet to enable Form Designer by injecting `FormDesigner` Module.
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
     </ejs-pdfviewer>
 </div>
 {% endhighlight %}
@@ -53,12 +58,12 @@ Use the following Code-snippet to enable Form Designer using the ASP.NET Core `e
 
 ![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 
-Interactive fields can be created and customized directly on the PDF page.
+Create and customize interactive fields directly on the PDF page.
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), or [remove](./manage-form-fields/remove-form-fields) forms
-- [Add signature fields](./manage-form-fields/create-form-fields#add-signature-field)
-- [Edit form fields](./manage-form-fields/modify-form-fields)
-- [Remove form fields](./manage-form-fields/remove-form-fields)
-- [Form field constraints](./form-constrain) 
+- [Add a Signature Field](./manage-form-fields/create-form-fields#add-signature-field) 
+- [Edit Form Field](./manage-form-fields/modify-form-fields)
+- [Remove Form Field](./manage-form-fields/remove-form-fields) 
+- [Form Field Constraints](./form-constrain) 
 
 ## Supported form field types
 

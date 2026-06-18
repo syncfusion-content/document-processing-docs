@@ -10,32 +10,24 @@ domainurl: ##DomainURL##
 
 # Filling PDF Forms in ASP.NET Core PDF Viewer
 
-The Syncfusion PDF Viewer supports three form-filling methods:
+This guide shows how to update, import, and validate PDF form fields in the ASP .Net Core PDF Viewer so you can pre-fill forms or accept user input.
 
-1. [Filling form fields programmatically](#fill-pdf-forms-programmatically)
+**Outcome** Programmatically set field values, allow UI-driven filling, import form data, and validate fields on submit.
 
-  Form fields can be filled or updated programmatically using the [updateFormFieldsValue](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfieldsvalue) API. This approach is useful when form data must be set dynamically based on application logic.
+## Steps to fill forms
 
-2. [Form filling through the user interface](#fill-pdf-forms-through-the-user-interface)
+### Fill PDF forms programmatically 
 
-  Users can fill PDF form fields directly through the UI by typing, selecting, or interacting with supported form elements.
+Update form field values programmatically with [`updateFormFieldsValue`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfieldsvalue) API. 
 
-3. [Importing form field data](#fill-pdf-forms-through-import-data)
-
-  The PDF Viewer supports importing form field data into an existing document to prefill forms from external data sources.
-
-## Fill PDF forms programmatically 
-
-Form field values can be updated programmatically using the [updateFormFieldsValue](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfieldsvalue) API. This method allows setting or modifying values dynamically, without user interaction.
-
-The following example demonstrates how to update PDF form field values programmatically:
+Use the example below as a complete, runnable example for a small ASP .Net Core app. It retrieves form fields and updates a named field or the first available field.
  
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <button id="updateBtn">Fill Form Fields</button>
 
 <div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
     </ejs-pdfviewer>
 </div>
 
@@ -60,19 +52,19 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endhighlight %}
 {% endtabs %}
 
-## Fill PDF forms through the User Interface
+**Expected result:** Clicking the *Fill Form Fields* button sets the first or named field's value to *John Doe* in the viewer.
 
-Users can fill PDF form fields directly through the UI. Clicking a form field enables entering or selecting values according to the field type.
+### 2. Fill form fields via UI
+
+Users can click form controls and enter/select values. Supported field types include textboxes, checkboxes, radio buttons, dropdowns, list boxes, and signature fields. Edits are retained during the viewing session.
 
 ![Form Filling](../../javascript-es6/images/FormFields.gif)
 
-The PDF Viewer supports common form fields such as text boxes, check boxes, radio buttons, drop-down lists, list boxes, and signature fields. Filled values can be edited at any time, and the entered data is retained during the viewing session.
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
 
-## Fill PDF forms through Import Data 
+### 3. Fill form fields through imported data
 
-The PDF Viewer supports importing form field data into an existing document using the [importFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importformfields) API. Imported data is mapped to corresponding form fields by name and displayed in the viewer; values can be edited through the UI if required.
+Use [`importFormFields`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importformfields)  to map external data into PDF fields by name. The example below shows how to trigger import from a button handler.
 
 ```html
 <button id="importJson">Import JSON</button>
@@ -82,7 +74,7 @@ The PDF Viewer supports importing form field data into an existing document usin
 <button id="importJson">Import JSON</button>
 
 <div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
     </ejs-pdfviewer>
 </div>
 
@@ -102,24 +94,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 For more details, see [Import Form Data](./import-export-form-fields/import-form-fields).
 
-## How to get the filled data and store it to a backing system
-
-Export filled form data from the PDF Viewer and store it in a backing system such as a database or file storage. Exported data can be re-imported later to restore form state.
-
-For more details, see [Export Form Data](./import-export-form-fields/export-form-fields).
-
 ## How to Validate Form Fields using `validateFormFields` Event
 
-The [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event in the Syncfusion PDF Viewer is triggered when a user tries to download or submit a form while validation is enabled. You can use the [retrieveFormFields()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#retrieveformfields) API to get all the form fields and check them one by one to see if any form fields values are empty.
-
-Validation applies to all form field types. A textbox is empty if no text is entered, a list box or dropdown is empty if no item is selected, a signature or initial field is empty if not signed, and radio buttons or checkboxes are empty if none are chosen.
-
-Enable [enableFormFieldsValidation](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormFieldsValidation) and wire the event to inspect each field and cancel actions when required fields are not filled.
+Enable [`enableFormFieldsValidation`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormFieldsValidation) and handle [`validateFormFields`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) to check required fields and cancel submission when necessary. Example below shows adding required fields via `formDesignerModule`and validating them.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
     </ejs-pdfviewer>
 </div>
 
@@ -163,6 +145,12 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
+
+## Troubleshooting
+
+- If fields are not editable, confirm `FormFields` module is injected into PDF Viewer.
+- If examples fail to load, verify your [`resourceUrl`](https://helpej2.syncfusion.com/ASP .Net Core/documentation/api/pdfviewer#resourceurl) matches the installed PDF Viewer version.
+- For import issues, ensure JSON keys match the PDF field `name` values.
 
 ## See also
 

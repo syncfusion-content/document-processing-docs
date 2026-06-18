@@ -1,30 +1,38 @@
 ---
 layout: post
-title: Remove form fields in the Core PDF Viewer component | Syncfusion
-description: Learn how to remove PDF form fields using the UI and programmatically in the Syncfusion ASP.NET Core PDF Viewer component.
+title: Remove form fields in ASP.NET Core | Syncfusion
+Syncfusion description: Learn how to remove PDF form fields using the UI and programmatically in the Syncfusion ASP.NET Core PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Remove PDF Form Fields in ASP.NET Core PDF Viewer
+# Remove PDF Form Fields from a PDF in ASP.NET Core
 
-## Remove Form Fields Using the UI
+The PDF Viewer supports removing form fields using the Form Designer UI or programmatically via the API.
+
+### Remove form fields using the UI
+
 **Steps:**
-1.	Enable **Form Designer mode**.
-2.	Select the form field.
-3.	Click **Delete** in the toolbar or press the **Delete** key.
-![Form Designer toolbar with Delete icon](../../../javascript-es6/images/ui-del-formfields.png)
 
-## Remove Form Fields Programmatically
-Use **deleteFormField()** with a field reference or ID.
+- Enable **Form Designer** mode.
+- Select the form field.
+- Click **Delete** in the toolbar or press the **Delete** key.
 
-{% tabs %}
+![Form Designer toolbar showing Delete form field icon](../../../javascript-es6/images/ui-del-formfields.png)
+
+### Remove form fields programmatically
+
+Use `deleteFormField()` with a field reference or the field id. The method accepts either a field object returned by `retrieveFormFields()` or a numeric/string id.
+
+#### Example
+
+Liquid{% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <button id="deleteAllFields">Delete Form Fields</button>
 <button id="deleteById">Delete First Field By ID</button>
 <div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath=documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf">
     </ejs-pdfviewer>
 </div>
 <script type="text/javascript">

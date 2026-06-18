@@ -9,17 +9,17 @@ documentation: ug
 
 # Validate PDF Form Fields in ASP.NET Core PDF Viewer
 
-The Syncfusion **ASP.NET Core PDF Viewer** provides built-in support for validating form fields before printing, downloading, or submitting a PDF document. Validation ensures all required form fields are filled, helping enforce data completeness and improving the reliability of collected data.
+The Syncfusion ASP .Net Core PDF Viewer provides built-in support for validating form fields before users perform actions such as printing, downloading, or submitting a PDF document. Validation ensures that required form fields are completed before allowing these actions. This improves data completeness and reliability.
 
 ## How PDF Form Validation Works
 
 Form field validation follows this flow:
 - Enable validation using the [enableFormFieldsValidation](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormFieldsValidation) property.
-- Handle the [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event to determine which required fields remain unfilled.
-- When validation is enabled and the user attempts to print, download, or submit:
+- Handle the [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields)event to determine which required fields are not filled.
+- When validation is enabled and a user attempts to print, download, or submit the document:
   - The [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event is triggered.
-  - Unfilled required fields are listed in args.nonFillableFields.
-  - Cancel the action, show an error message, or focus an invalid field as needed.
+  - Unfilled required fields are provided in the event arguments (typically as `args.formField`; older versions may use `args.nonFillableFields`).
+  - You can cancel the action, show an error message, or move focus to an invalid field.
 
 ## Enable PDF Form Field Validation
 
@@ -28,7 +28,7 @@ To enable validation, set the [enableFormFieldsValidation](https://help.syncfusi
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf">
     </ejs-pdfviewer>
 </div>
 
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## Mark Fields as Required
 
-Only fields marked as required participate in validation. Use the **isRequired** property when creating or updating form fields.
+Only fields marked as **required** participate in validation. Use the **isRequired** property when creating or updating a form field.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -91,10 +91,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## Handle PDF Form Validation Results
 
-In the [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event, control the behavior when fields are missing. Typical actions include:
-- Cancel the print or download operation.
-- Display an error message to the user.
-- Focus the first unfilled required field.
+In the [validateFormFields](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ValidateFormFields) event, you can control the behavior when fields are missing. Typical actions include:
+- Cancel the print or download operation
+- Display an error message to the user
+- Set focus to the first unfilled required field
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

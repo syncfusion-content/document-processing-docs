@@ -7,96 +7,85 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Import PDF Form Data into ASP.NET Core PDF Viewer
+# Import PDF Form Data into the ASP.NET Core PDF Viewer
 
-The **PDF Viewer** lets you import values into interactive form fields in the currently loaded PDF. You can import data from these formats:
+This guide shows how to import form field values into an already loaded PDF in the EJ2 ASP.NET Core PDF Viewer. **Supported import formats**: FDF, XFDF, JSON, and importing from a JavaScript object.
 
-- [FDF](#import-as-fdf)
-- [XFDF](#import-xfdf)
-- [JSON](#import-json)
+## Steps to import data
 
-## API to use
-- [importFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format)
+1. Configure the PDF Viewer component in your ASP.NET Core Razor view using the `<ejs-pdfviewer>` tag.
 
-N>If you’re using a **server-backed viewer**, set serviceUrl before importing.
+2. Call the [importFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format)
+ method using JavaScript, where `format` is one of `FormFieldDataFormat.Fdf`, `FormFieldDataFormat.Xfdf`, or `FormFieldDataFormat.Json`. The `data` parameter may be a file path (for server-based imports), a base64 string, or a JavaScript object mapping field names to values.
 
-### Import FDF
+3. Verify the form fields are populated after the import completes. For server-backed imports, ensure [`serviceUrl`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) your ASP.NET Core backend is configured to handle the import file and is accessible.
 
-{% tabs %}
-{% highlight cshtml tabtitle="Standalone" %}
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:640px; width:100%" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+## Example
+
+The example below provides an ASP.NET Core Razor view with buttons to import FDF, XFDF, JSON, and from an object. Replace the import file identifiers with your file path or implement a file upload to pass the form data.
+
+{% tabs %}{% highlight cshtml tabtitle="Standalone" %}
+@{
+    ViewBag.Title = "PDF Viewer - Import Form Fields";
+}
+
+<div style="margin-bottom: 12px">
+    <button type="button" onclick="importFdf()" style="margin-right: 8px">Import FDF</button>
+    <button type="button" onclick="importXfdf()" style="margin-right: 8px">Import XFDF</button>
+    <button type="button" onclick="importJson()" style="margin-right: 8px">Import JSON</button>
+    <button type="button" onclick="importFromObject()">Import from Object</button>
+</div>
+
+<div style="width:100%;height:680px">
+    <ejs-pdfviewer id="pdfviewer"
+                    documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+                    resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+                    style="height:680px">
     </ejs-pdfviewer>
 </div>
 
-<button id="importFdf">Import FDF</button>
+<script>
+    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
 
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-  document.getElementById('importFdf').addEventListener('click', function () {
-    if (!pdfviewer) { console.warn('PDF Viewer not ready'); return; }
-    // The file for importing should be accessible at the given path or as a file stream depending on your integration
-    pdfviewer.importFormFields('File', 'Fdf');
-  });
-});
+    function importFdf() {
+        // Replace 'File' with your FDF file path or base64 string
+        viewer.importFormFields('File', window.ej2_formFieldDataFormat.Fdf);
+    }
+
+    function importXfdf() {
+        // Replace 'File' with your XFDF file path or base64 string
+        viewer.importFormFields('File', window.ej2_formFieldDataFormat.Xfdf);
+    }
+
+    function importJson() {
+        // Replace 'File' with your JSON file path or base64 string
+        viewer.importFormFields('File', window.ej2_formFieldDataFormat.Json);
+    }
+
+    function importFromObject() {
+        // Import from a JavaScript object (fieldName: value)
+        var formDataObject = {
+            'fullname': 'Jane Doe',
+            'email': 'jane.doe@example.com',
+            'agreeTerms': 'yes'
+        };
+        viewer.importFormFields(JSON.stringify(formDataObject), window.ej2_formFieldDataFormat.Json);
+    }
 </script>
-{% endhighlight %}
-{% endtabs %}
-
-### Import XFDF
-
-{% tabs %}
-{% highlight cshtml tabtitle="Standalone" %}
-<button id="importXfdf">Import XFDF</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:640px; width:100%" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
-    </ejs-pdfviewer>
-</div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-  document.getElementById('importXfdf').addEventListener('click', function () {
-    if (!pdfviewer) { console.warn('PDF Viewer not ready'); return; }
-    // The file for importing should be accessible at the given path or as a file stream depending on your integration
-    pdfviewer.importFormFields('File', 'Xfdf');
-  });
-});
-</script>
-{% endhighlight %}
-{% endtabs %}
-
-### Import JSON
-
-{% tabs %}
-{% highlight cshtml tabtitle="Standalone" %}
-<button id="importJson">Import JSON</button>
-<div class="text-center">
-    <ejs-pdfviewer id="pdfviewer" style="height:640px; width:100%" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
-    </ejs-pdfviewer>
-</div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-  document.getElementById('importJson').addEventListener('click', function () {
-    if (!pdfviewer) { console.warn('PDF Viewer not ready'); return; }
-    // The file for importing should be accessible at the given path or as a file stream depending on your integration
-    pdfviewer.importFormFields('File', 'Json');
-  });
-});
-</script>
-{% endhighlight %}
-{% endtabs %}
-
-## Common Use Cases
-
-- Pre-fill application forms from a database using JSON.
-- Migrate data from other PDF tools using FDF/XFDF.
-- Restore user progress saved locally or on the server.
-- Combine with validation to block print/download until required fields are completed.
+{% endhighlight %}{% endtabs %}
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples)
 
+**Expected result**: The loaded PDF's interactive form fields are populated with the values from the imported file/object. For object imports, fields matching the object keys receive the provided values.
+
+## Troubleshooting
+
+- If imports do not populate fields, confirm the field names in the source match the PDF form field names.
+- For file-based imports, ensure the import file is accessible to your ASP.NET Core application.
+- If using a base64 string, encode it properly before passing it to `importFormFields()`.
+- Check browser console for errors when the viewer attempts to fetch import files.
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples)
 ## See also
 
 - [Form Designer overview](../overview)
