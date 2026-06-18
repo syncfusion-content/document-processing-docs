@@ -40,32 +40,33 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the Syncfusion<sup>®</sup> Core Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependency for all MAUI Syncfusion controls. This package will be automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. Register the Syncfusion<sup>®</sup> core handler in the `MauiProgram.cs` file.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. 
 
+1. Add the following namespace in your `MauiProgram.cs` file.
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="1 17" %}
-
+{% highlight c# tabtitle="MauiProgram.cs" %}
 using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
+{% endtabs %}
 
-namespace PdfViewerExample
-{
-    public class MauiProgram 
+2. Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
+{% tabs %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="12" %}
+
+    public static MauiApp CreateMauiApp()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-           builder.ConfigureSyncfusionCore();
-           return builder.Build();
-        }
+       builder.ConfigureSyncfusionCore();
+       return builder.Build();
     }
-}
+
 {% endhighlight %} 
 {% endtabs %}
 
@@ -73,24 +74,22 @@ namespace PdfViewerExample
 
 Open the `MainPage.xaml` file and follow the steps below. 
 
-1.  Import the control namespace `Syncfusion.Maui.PdfViewer`,
-2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag.
-3.  Name the PDF viewer control as `pdfViewer`.
+1.  Add the following namespace in your MainPage.xaml file.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
+{% endhighlight %} 
+{% endtabs %}
+
+2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag. Name the PDF viewer control as `pdfViewer`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
-             x:Class="PdfViewerExample.MainPage">
-
-    <ContentPage.Content>
-        <syncfusion:SfPdfViewer x:Name="pdfViewer">
-        </syncfusion:SfPdfViewer>
-    </ContentPage.Content>
-</ContentPage>
+<ContentPage.Content>
+    <syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
+</ContentPage.Content>
 
 {% endhighlight %} 
 {% endtabs %}
@@ -105,52 +104,33 @@ Open the `MainPage.xaml` file and follow the steps below.
     {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
     
     using System.Reflection;
-    using System.ComponentModel;
     
-    namespace PdfViewerExample
+    class PdfViewerViewModel
     {
-        class PdfViewerViewModel : INotifyPropertyChanged
+        private Stream pdfDocumentStream;
+
+        /// <summary>
+        /// Gets or sets the stream of the currently loaded PDF document.
+        /// </summary>
+        public Stream PdfDocumentStream
         {
-            private Stream pdfDocumentStream;
-
-            /// <summary>
-            /// Occurs when a property value changes.
-            /// </summary>
-            public event PropertyChangedEventHandler? PropertyChanged;
-
-            /// <summary>
-            /// Gets or sets the stream of the currently loaded PDF document.
-            /// </summary>
-            public Stream PdfDocumentStream
+            get
             {
-                get
-                {
-                    return pdfDocumentStream;
-                }
-                set
-                {
-                    pdfDocumentStream = value;
-                    OnPropertyChanged(nameof(PdfDocumentStream));
-                }
+                return pdfDocumentStream;
             }
+            set
+            {
+                pdfDocumentStream = value;
+            }
+        }
             
-            /// <summary>
-            /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
-            /// </summary>
-            public PdfViewerViewModel()
-            {
-                // Load the embedded PDF document stream.
-                pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
-            }
-
-            /// <summary>
-            /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
-            /// </summary>
-            /// <param name="name">The name of the property that changed.</param>
-            public void OnPropertyChanged(string name)
-            {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-            } 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
+        /// </summary>
+        public PdfViewerViewModel()
+        {
+            // Load the embedded PDF document stream.
+            pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
     }
 
@@ -158,29 +138,21 @@ Open the `MainPage.xaml` file and follow the steps below.
     {% endtabs %}
 
 4.  Open the `MainPage.xaml` file again and add the default namespace of the created .NET MAUI project and name it as `local`. Here the default namespace of the demo sample `PdfViewerExample` is used.
-5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext` of the `ContentPage`.
-6.  Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
-
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
+ xmlns:local="clr-namespace:PdfViewerExample"
+{% endhighlight %} 
+{% endtabs %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
-	         xmlns:local="clr-namespace:PdfViewerExample"
-             x:Class="PdfViewerExample.MainPage">
-
+5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext` of the `ContentPage`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
     <ContentPage.BindingContext>
         <local:PdfViewerViewModel x:Name="viewModel" />
     </ContentPage.BindingContext>
-
     <ContentPage.Content>
-        <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}">
-        </syncfusion:SfPdfViewer>
+        <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
     </ContentPage.Content>
-</ContentPage>
-
 {% endhighlight %} 
 {% endtabs %}
 
@@ -219,32 +191,33 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the Syncfusion<sup>®</sup> Core Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependency for all MAUI Syncfusion controls. This package will be automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. Register the Syncfusion<sup>®</sup> core handler in the `MauiProgram.cs` file.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependency for all MAUI Syncfusion controls. This package will be automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. 
 
+1. Add the following namespace in your `MauiProgram.cs` file.
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="1 17" %}
-
+{% highlight c# tabtitle="MauiProgram.cs" %}
 using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
+{% endtabs %}
 
-namespace PdfViewerExample
-{
-    public class MauiProgram 
+2. Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
+{% tabs %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="12" %}
+
+    public static MauiApp CreateMauiApp()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-           builder.ConfigureSyncfusionCore();
-           return builder.Build();
-        }
+       builder.ConfigureSyncfusionCore();
+       return builder.Build();
     }
-}
+
 {% endhighlight %} 
 {% endtabs %}
 
@@ -252,24 +225,22 @@ namespace PdfViewerExample
 
 Open the `MainPage.xaml` file and follow the steps below. 
 
-1.  Import the control namespace `Syncfusion.Maui.PdfViewer`,
-2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag.
-3.  Name the PDF viewer control as `pdfViewer`.
+1.  Add the following namespace in your MainPage.xaml file.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
+{% endhighlight %} 
+{% endtabs %}
+
+2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag. Name the PDF viewer control as `pdfViewer`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
-             x:Class="PdfViewerExample.MainPage">
-
-    <ContentPage.Content>
-        <syncfusion:SfPdfViewer x:Name="pdfViewer">
-        </syncfusion:SfPdfViewer>
-    </ContentPage.Content>
-</ContentPage>
+<ContentPage.Content>
+    <syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
+</ContentPage.Content>
 
 {% endhighlight %} 
 {% endtabs %}
@@ -288,25 +259,16 @@ Open the `MainPage.xaml` file and follow the steps below.
 
 {% endhighlight %} 
 {% endtabs %}
-
 3.  In this example, we will load the PDF document through MVVM binding. Create a new C# file named `PdfViewerViewModel.cs` and add the following code snippet.
 
-{% tabs %}
-{% highlight c# tabtitle="PdfViewerViewModel.cs" %}
-
-using System.Reflection;
-using System.ComponentModel;
-
-namespace PdfViewerExample
-{
-    class PdfViewerViewModel : INotifyPropertyChanged
+    {% tabs %}
+    {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
+    
+    using System.Reflection;
+    
+    class PdfViewerViewModel
     {
         private Stream pdfDocumentStream;
-
-        /// <summary>
-        /// Occurs when a property value changes.
-        /// </summary>
-        public event PropertyChangedEventHandler? PropertyChanged;
 
         /// <summary>
         /// Gets or sets the stream of the currently loaded PDF document.
@@ -320,10 +282,9 @@ namespace PdfViewerExample
             set
             {
                 pdfDocumentStream = value;
-                OnPropertyChanged(nameof(PdfDocumentStream));
             }
         }
-
+            
         /// <summary>
         /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
         /// </summary>
@@ -332,45 +293,27 @@ namespace PdfViewerExample
             // Load the embedded PDF document stream.
             pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
-
-        /// <summary>
-        /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
-        /// </summary>
-        /// <param name="name">The name of the property that changed.</param>
-        public void OnPropertyChanged(string name)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        } 
     }
-}
 
+    {% endhighlight %} 
+    {% endtabs %}
+
+4.  Open the `MainPage.xaml` file again and add the default namespace of the created .NET MAUI project and name it as `local`. Here the default namespace of the demo sample `PdfViewerExample` is used.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+ xmlns:local="clr-namespace:PdfViewerExample"
 {% endhighlight %} 
 {% endtabs %}
 
-4.  Open the `MainPage.xaml` file again and add the default namespace of the created .NET MAUI project and name it as `local`. Here the default namespace of the demo sample `PdfViewerExample` is used.
-5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext` of the `ContentPage`.
-6.  Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
-
+5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext` of the `ContentPage`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
-             xmlns:local="clr-namespace:PdfViewerExample"
-             x:Class="PdfViewerExample.MainPage">
-
     <ContentPage.BindingContext>
         <local:PdfViewerViewModel x:Name="viewModel" />
     </ContentPage.BindingContext>
-
-    <ContentPage.Content>
-        <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}">
-        </syncfusion:SfPdfViewer>
+     <ContentPage.Content>
+        <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
     </ContentPage.Content>
-</ContentPage>
-
 {% endhighlight %} 
 {% endtabs %}
 
@@ -404,7 +347,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI PDF Viewer NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer/) and install the latest version.
+2. Search for [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run the following code.
 
 {% tabs %}
@@ -417,32 +360,33 @@ dotnet restore
 
 ## Step 3: Register the Syncfusion<sup>®</sup> Core Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependency for all MAUI Syncfusion controls. This package will be automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. Register the Syncfusion<sup>®</sup> core handler in the `MauiProgram.cs` file.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependency for all MAUI Syncfusion controls. This package will be automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. 
 
+1. Add the following namespace in your `MauiProgram.cs` file.
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="1 17" %}
-
+{% highlight c# tabtitle="MauiProgram.cs" %}
 using Syncfusion.Maui.Core.Hosting;
+{% endhighlight %} 
+{% endtabs %}
 
-namespace PdfViewerExample
-{
-    public class MauiProgram 
+2. Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
+{% tabs %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="12" %}
+
+    public static MauiApp CreateMauiApp()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-           builder.ConfigureSyncfusionCore();
-           return builder.Build();
-        }
+       builder.ConfigureSyncfusionCore();
+       return builder.Build();
     }
-}
+
 {% endhighlight %} 
 {% endtabs %}
 
@@ -450,24 +394,21 @@ namespace PdfViewerExample
 
 Open the `MainPage.xaml` file and follow the steps below. 
 
-1.  Import the control namespace `Syncfusion.Maui.PdfViewer`.
-2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag.
-3.  Name the PDF viewer control as `pdfViewer`.
+1.  Add the following namespace in your MainPage.xaml file.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
+{% endhighlight %} 
+{% endtabs %}
+
+2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag. Name the PDF viewer control as `pdfViewer`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
-             x:Class="PdfViewerExample.MainPage">
-
-    <ContentPage.Content>
-        <syncfusion:SfPdfViewer x:Name="pdfViewer">
-        </syncfusion:SfPdfViewer>
-    </ContentPage.Content>
-</ContentPage>
+<ContentPage.Content>
+    <syncfusion:SfPdfViewer x:Name="pdfViewer"></syncfusion:SfPdfViewer>
+</ContentPage.Content>
 
 {% endhighlight %} 
 {% endtabs %}
@@ -486,25 +427,16 @@ Open the `MainPage.xaml` file and follow the steps below.
 
 {% endhighlight %} 
 {% endtabs %}
-
 3.  In this example, we will load the PDF document through MVVM binding. Create a new C# file named `PdfViewerViewModel.cs` and add the following code snippet.
 
-{% tabs %}
-{% highlight c# tabtitle="PdfViewerViewModel.cs" %}
-
-using System.Reflection;
-using System.ComponentModel;
-
-namespace PdfViewerExample
-{
-    class PdfViewerViewModel : INotifyPropertyChanged
+    {% tabs %}
+    {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
+    
+    using System.Reflection;
+    
+    class PdfViewerViewModel
     {
         private Stream pdfDocumentStream;
-
-        /// <summary>
-        /// Occurs when a property value changes.
-        /// </summary>
-        public event PropertyChangedEventHandler? PropertyChanged;
 
         /// <summary>
         /// Gets or sets the stream of the currently loaded PDF document.
@@ -518,10 +450,9 @@ namespace PdfViewerExample
             set
             {
                 pdfDocumentStream = value;
-                OnPropertyChanged(nameof(PdfDocumentStream));
             }
         }
-
+            
         /// <summary>
         /// Initializes a new instance of the <see cref="PdfViewerViewModel"/> class.
         /// </summary>
@@ -530,44 +461,27 @@ namespace PdfViewerExample
             // Load the embedded PDF document stream.
             pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
-
-        /// <summary>
-        /// Raises the <see cref="PropertyChanged"/> event for the specified property name.
-        /// </summary>
-        /// <param name="name">The name of the property that changed.</param>
-        public void OnPropertyChanged(string name)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        } 
     }
-}
 
+    {% endhighlight %} 
+    {% endtabs %}
+
+4.  Open the `MainPage.xaml` file again and add the default namespace of the created .NET MAUI project and name it as `local`. Here the default namespace of the demo sample `PdfViewerExample` is used.
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+ xmlns:local="clr-namespace:PdfViewerExample"
 {% endhighlight %} 
 {% endtabs %}
 
-4.  Open the `MainPage.xaml` file again and add the default namespace of the created .NET MAUI project and name it as `local`. Here the default namespace of the demo sample `PdfViewerExample` is used.
-5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext` of the `ContentPage`.
-6.  Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
-
+5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext` of the `ContentPage`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
-             x:Class="PdfViewerExample.MainPage">
-
     <ContentPage.BindingContext>
         <local:PdfViewerViewModel x:Name="viewModel" />
     </ContentPage.BindingContext>
-
     <ContentPage.Content>
-        <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}">
-        </syncfusion:SfPdfViewer>
+        <syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"/>
     </ContentPage.Content>
-</ContentPage>
-
 {% endhighlight %} 
 {% endtabs %}
 
@@ -592,14 +506,14 @@ N> You can refer to our [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-c
 
 Now that the PDF Viewer is running, here is a suggested learning path to explore its capabilities:
 
-| Step | Goal | Topic |
-|---|---|---|
-| 1 | **Open documents from different sources** | Load a PDF from a URL, the device's file system, a Base64 string, or a password-protected file. → [Open a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document) |
-| 2 | **Navigate and read** | Jump to specific pages, control zoom levels, and search for text. → [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/page-navigation) · [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/magnification) · [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-search) |
-| 3 | **Add annotations** | Highlight text, draw shapes, add sticky notes, or use freehand ink. → [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview) |
-| 4 | **Fill form fields** | Read, edit, validate, import, and export PDF form data. → [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview) |
-| 5 | **Save and print** | Persist changes back to a file stream, optionally flattening annotations. → [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document) · [Print a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/print-a-document) |
-| 6 | **Customize the toolbar** | Show, hide, add, or remove toolbar items to match your app's workflow. → [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization) |
-| 7 | **Redact sensitive content** | Permanently remove confidential text or images before sharing. → [Redaction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/redaction) |
+| Topics | Resources |
+|---|---|
+| **Open documents from different sources** | Load a PDF from a URL, the device's file system, a Base64 string, or a password-protected file. → [Open a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document) |
+| **Navigate and read** | Jump to specific pages, control zoom levels, and search for text. → [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/page-navigation) · [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/magnification) · [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-search) |
+| **Add annotations** | Highlight text, draw shapes, add sticky notes, or use freehand ink. → [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview) |
+| **Fill form fields** | Read, edit, validate, import, and export PDF form data. → [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview) |
+| **Save and print** | Persist changes back to a file stream, optionally flattening annotations. → [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document) · [Print a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/print-a-document) |
+| **Customize the toolbar** | Show, hide, add, or remove toolbar items to match your app's workflow. → [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization) |
+| **Redact sensitive content** | Permanently remove confidential text or images before sharing. → [Redaction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/redaction) |
 
 * For migration from Xamarin to .NET MAUI, please follow the [Migration Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/migration).
