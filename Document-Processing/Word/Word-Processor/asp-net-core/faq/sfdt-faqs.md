@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # FAQs about SFDT in ASP.NET Core DOCX Editor
 
-The frequently asked questions about SFDT in Document Editor is listed below:
+The frequently asked questions about SFDT in [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) is listed below:
 
 ## What is SFDT format?
 
