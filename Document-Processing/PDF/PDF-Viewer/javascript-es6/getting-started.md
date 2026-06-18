@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the TypeScript PDF Viewer
+# Getting Started with the TypeScript PDF Viewer
 
 This section explains how to create and run a **TypeScript PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
 

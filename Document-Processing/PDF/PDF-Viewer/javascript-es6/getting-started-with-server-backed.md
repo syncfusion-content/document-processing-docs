@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with TypeScript PDF Viewer (Server-Backed)
+# Getting Started with TypeScript PDF Viewer (Server-Backed)
 
 This section explains how to create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
 

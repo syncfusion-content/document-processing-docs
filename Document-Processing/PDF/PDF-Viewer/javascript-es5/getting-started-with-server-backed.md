@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with JavaScript PDF Viewer (server-backed)
+# Getting Started with JavaScript PDF Viewer (server-backed)
 
 This section explains how to create the PDF Viewer component and configure its features in JavaScript (global script) using CDN-hosted resources in **server-backed mode**.
 
