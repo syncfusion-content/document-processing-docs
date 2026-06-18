@@ -185,7 +185,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 
 ## Register Syncfusion® Blazor Service
 
-Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor Web App.
+Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor Web App. After the builder is created.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -193,7 +193,7 @@ Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor
 ....
 using Syncfusion.Blazor;
 ....
-
+// Register Syncfusion Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 ....
@@ -211,11 +211,11 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% highlight razor tabtitle="App.razor" %}
 
 <head>
-    ....
+    <!-- Syncfusion Blazor components theme -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 <body>
-    ....
+    <!-- Syncfusion Blazor Spreadsheet Editor script -->
     <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js" type="text/javascript"></script>
 </body>
 
@@ -242,7 +242,6 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <SfSpreadsheet>
