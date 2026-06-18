@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Initialize Windows Forms PDF Viewer with PdfDocumentView | Syncfusion&reg;
+title: Initialize WinForms PDF Viewer with PdfDocumentView| Syncfusion&reg;
 description: Learn here about getting started with Syncfusion<sup>&reg;</sup>; Windows Forms PDF Viewer control, its elements and more details.
 platform: document-processing
 control: PdfViewerControl
