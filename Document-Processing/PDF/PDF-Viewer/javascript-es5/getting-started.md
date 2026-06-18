@@ -48,33 +48,21 @@ To use local scripts and styles for the Syncfusion® PDF Viewer, follow these st
 
 Alternatively, Run the following command to clone the [`Essential JS 2 quickstart`](https://github.com/syncfusion/ej2-quickstart.git) project from GitHub.
 
-{% tabs %}
-{% highlight html tabtitle="Clone Repository" %}
-
+```bash
 git clone https://github.com/syncfusion/ej2-quickstart.git quickstart
-
-{% endhighlight %}
-{% endtabs %}
+```
 
 Move into the cloned project directory:
 
-{% tabs %}
-{% highlight html tabtitle="Navigate to Folder" %}
-
+```bash
 cd quickstart
-
-{% endhighlight %}
-{% endtabs %}
+```
 
 Run the following command to install the required dependencies:
 
-{% tabs %}
-{% highlight html tabtitle="Install Dependencies" %}
-
+```bash
 npm install
-
-{% endhighlight %}
-{% endtabs %}
+```
 
 2. Download the `pdfium.js` and `pdfium.wasm` files from the following links:
 

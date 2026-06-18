@@ -42,12 +42,10 @@ cd ej2-quickstart
 
 **Step 3:** By default, the `ej2-quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 components, including the PDF Viewer and other EJ2 controls.
 
-To install **only the PDF Viewer component**, replace the dependency with [@syncfusion/ej2-pdfviewer](https://www.npmjs.com/package/@syncfusion/ej2-pdfviewer) in `package.json`:
+To install **only the PDF Viewer component**, replace the dependencies with [@syncfusion/ej2-pdfviewer](https://www.npmjs.com/package/@syncfusion/ej2-pdfviewer) in `package.json`:
 
 ```json
-"dependencies": {
-  "@syncfusion/ej2-pdfviewer": "*"
-}
+"@syncfusion/ej2-pdfviewer": "*"
 ```
 
 **Step 4:** Install the dependent npm packages.
@@ -141,10 +139,15 @@ To host your own PDF Viewer web service:
 2. Navigate to the appropriate folder based on your .NET version:
    - .NET 6.0 → [PdfViewerWebService_6.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_6.0)
    - .NET 8.0 → [PdfViewerWebService_8.0](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices/tree/main/ASP.NET%20Core/PdfViewerWebService_8.0)
-3. Restore and run the service:
+3. Restore all project dependencies using the following command:
 
 ```bash
 dotnet restore
+```
+
+4. Run the Service Using the Following Code:
+
+```bash
 dotnet run
 ```
 

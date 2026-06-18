@@ -40,12 +40,10 @@ cd ej2-quickstart
 
 **Step 3:** By default, the `ej2-quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 components, including the PDF Viewer and other EJ2 controls.
 
-To install **only the PDF Viewer component**, replace the dependency with [@syncfusion/ej2-pdfviewer](https://www.npmjs.com/package/@syncfusion/ej2-pdfviewer) in `package.json`:
+To install **only the PDF Viewer component**, replace the dependencies with [@syncfusion/ej2-pdfviewer](https://www.npmjs.com/package/@syncfusion/ej2-pdfviewer) in `package.json`:
 
 ```json
-"dependencies": {
-  "@syncfusion/ej2-pdfviewer": "*"
-}
+"@syncfusion/ej2-pdfviewer": "*"
 ```
 
 **Step 4:** Install the dependent npm packages.
