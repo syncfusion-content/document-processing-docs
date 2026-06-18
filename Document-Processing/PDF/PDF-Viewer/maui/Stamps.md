@@ -227,6 +227,55 @@ private void PdfViewer_AnnotationSelected_Customize(object? sender, AnnotationEv
 {% endhighlight %}
 {% endtabs %}
 
+## Access Custom Stamp Annotation Views
+
+The view associated with a custom stamp annotation can be accessed and modified using the `CustomStampView` API available on the `StampAnnotation` class. This allows developers to retrieve and update the MAUI `View` that was originally used to create the custom stamp.
+
+N> * `CustomStampView` is supported only for custom stamp annotations created from a MAUI `View`.
+N> * Standard (built-in) stamp annotations or stamps created from images/text do not expose a view and return `null` for `CustomStampView`.
+
+### Retrieve the custom stamp annotation view
+
+You can retrieve the view used to create a custom stamp annotation by accessing the `CustomStampView` property. This is useful for previewing the stamp, inspecting its contents, or applying programmatic visual changes. The following example demonstrates accessing the custom stamp view using the `AnnotationSelected` event:
+
+{% tabs %}
+{% highlight c# %}
+pdfViewer.AnnotationSelected += PdfViewer_AnnotationSelected;
+
+private void PdfViewer_AnnotationSelected(object? sender, AnnotationEventArgs e)
+{
+    if (e.Annotation != null && e.Annotation is StampAnnotation stamp)
+    {
+       // Retrieve the MAUI view that was used to create this custom stamp annotation.
+        View? stampView = stamp.CustomStampView;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the custom stamp annotation view
+
+Once you obtain the custom stamp's view you can modify its content or styling. In the example below, the custom stamp was originally created from a `Button`, and its `Text` is updated when the annotation is selected.
+
+{% tabs %}
+{% highlight c# %}
+pdfViewer.AnnotationSelected += PdfViewer_AnnotationSelected;
+
+private void PdfViewer_AnnotationSelected_Customize(object? sender, AnnotationEventArgs e)
+{
+    if (e.Annotation != null && e.Annotation is StampAnnotation stamp)
+    {
+        if (stamp.CustomStampView is Button button)
+        {
+            // Modify the original view used for the custom stamp.
+            // In this example, update the button text dynamically.
+            button.Text = "Button Clicked";
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Custom stamp modal view
 
 The custom stamp modal view appears when the user wants to create a custom stamp from a typed text. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
