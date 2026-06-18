@@ -12,6 +12,8 @@ domainurl: ##DomainURL##
 
 This section explains the steps to create a server-backed React PDF Viewer and demonstrates basic usage of the PDF Viewer component in a React application.
 
+N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
+
 ## Prerequisites
 
 [System requirements for Syncfusion® React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
